@@ -10,14 +10,11 @@ import {
   MapPin,
   Award,
   Users,
-  TrendingUp,
-  Globe,
   ChevronLeft,
   ChevronRight,
   Youtube,
 } from 'lucide-react'
 import { motion } from 'framer-motion'
-import Image from 'next/image'
 
 export function TestimonialsSection() {
   const [currentTestimonial, setCurrentTestimonial] = useState(0)

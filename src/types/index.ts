@@ -25,6 +25,8 @@ export interface Testimonial {
   comment: string
   image?: string
   result: string
+  location?: string
+  videoId?: string
 }
 
 export interface ContactForm {

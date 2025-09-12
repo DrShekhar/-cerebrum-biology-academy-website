@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
-import { StructuredData } from '@/components/SEO/StructuredData'
+import { StructuredData } from '@/components/seo/StructuredData'
+import { ErrorBoundary } from '@/components/ErrorBoundary'
 import './globals.css'
 
 const geistSans = Geist({
@@ -70,7 +71,9 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <meta name="theme-color" content="#2563eb" />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <ErrorBoundary>{children}</ErrorBoundary>
+      </body>
     </html>
   )
 }
