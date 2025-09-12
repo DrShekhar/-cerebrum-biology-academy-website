@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next'
 import { blogPosts } from '@/data/blog'
+import { detailedCourses } from '@/data/detailedCourses'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://cerebrumbiologyacademy.com'
@@ -13,6 +14,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.7,
     }))
+
+  // Course URLs
+  const courseUrls = detailedCourses.map((course) => ({
+    url: `${baseUrl}/courses/${course.slug}`,
+    lastModified: new Date(course.startDate),
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }))
 
   return [
     {
@@ -57,6 +66,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.6,
     },
+    ...courseUrls,
     ...blogUrls,
   ]
 }

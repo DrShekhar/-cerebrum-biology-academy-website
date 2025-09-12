@@ -1,6 +1,6 @@
-import { Course } from '@/types'
+import { BasicCourse } from '@/types'
 
-export const courses: Course[] = [
+export const courses: BasicCourse[] = [
   {
     id: 'neet-2025-11th',
     title: 'NEET 2025 - Class 11th',

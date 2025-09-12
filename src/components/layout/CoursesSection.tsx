@@ -2,6 +2,7 @@
 
 import { Button } from '@/components/ui/Button'
 import { courses, courseCategories } from '@/data/courses'
+import { detailedCourses } from '@/data/detailedCourses'
 import {
   Clock,
   IndianRupee,
@@ -31,8 +32,12 @@ export function CoursesSection() {
   }
 
   const handleViewDetails = (courseId: string) => {
-    console.log(`View details for course: ${courseId}`)
-    // TODO: Implement course details modal/page
+    const detailedCourse = detailedCourses.find((course) => course.id === courseId)
+    if (detailedCourse) {
+      window.location.href = `/courses/${detailedCourse.slug}`
+    } else {
+      console.log(`Course details not found for: ${courseId}`)
+    }
   }
 
   return (
