@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next'
 import { blogPosts } from '@/data/blog'
 import { detailedCourses } from '@/data/detailedCourses'
+import { delhiNCRAreas } from '@/data/localAreas'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://cerebrumbiologyacademy.com'
@@ -21,6 +22,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(course.startDate),
     changeFrequency: 'monthly' as const,
     priority: 0.8,
+  }))
+
+  // Local Area URLs
+  const localAreaUrls = delhiNCRAreas.map((area) => ({
+    url: `${baseUrl}/${area.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.9, // High priority for local SEO
   }))
 
   return [
@@ -66,6 +75,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.6,
     },
+    ...localAreaUrls,
     ...courseUrls,
     ...blogUrls,
   ]

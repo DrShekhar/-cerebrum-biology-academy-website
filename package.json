@@ -13,6 +13,7 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@instantdb/react": "^0.21.14",
     "@radix-ui/react-icons": "^1.3.2",
     "@radix-ui/react-slot": "^1.2.3",
     "class-variance-authority": "^0.7.1",
