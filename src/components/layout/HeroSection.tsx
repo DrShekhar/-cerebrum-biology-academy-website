@@ -3,6 +3,7 @@
 import { Button } from '@/components/ui/Button'
 import { Phone, Calendar, Star, Users, BookOpen, Trophy } from 'lucide-react'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 export function HeroSection() {
   const stats = [
@@ -33,16 +34,22 @@ export function HeroSection() {
           </div>
 
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">
+            <Link href="/" className="text-gray-600 hover:text-blue-600 transition-colors">
               Home
-            </a>
-            <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">
+            </Link>
+            <a href="#courses" className="text-gray-600 hover:text-blue-600 transition-colors">
               Courses
             </a>
-            <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">
+            <a href="#faculty" className="text-gray-600 hover:text-blue-600 transition-colors">
               Faculty
             </a>
-            <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">
+            <Link
+              href="/blog"
+              className="text-gray-600 hover:text-blue-600 transition-colors font-medium"
+            >
+              Blog
+            </Link>
+            <a href="#results" className="text-gray-600 hover:text-blue-600 transition-colors">
               Results
             </a>
           </div>
