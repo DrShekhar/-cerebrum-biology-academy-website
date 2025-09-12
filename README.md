@@ -1,36 +1,116 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Cerebrum Biology Academy Website
 
-## Getting Started
+Modern, responsive website for Biology coaching and NEET preparation with AI-powered SEO features.
 
-First, run the development server:
+## 🚀 Features
+
+- **Modern Tech Stack**: Next.js 15, TypeScript, Tailwind CSS
+- **AI-Powered SEO**: Automated content optimization and meta tag generation
+- **Responsive Design**: Mobile-first approach with beautiful UI
+- **Course Management**: Comprehensive course catalog and booking system
+- **Student Portal**: Authentication and progress tracking
+- **Contact Integration**: Multiple call-to-action options including calling and appointments
+- **Performance Optimized**: Built with Turbopack for fast development
+
+## 🛠️ Tech Stack
+
+- **Frontend**: Next.js 15 with App Router, TypeScript, Tailwind CSS
+- **UI Components**: Radix UI, Lucide React, Framer Motion
+- **Development**: ESLint, Prettier, Husky for code quality
+- **Deployment**: Vercel (recommended)
+
+## 🏗️ Project Structure
+
+```
+src/
+├── app/              # Next.js app router pages
+├── components/       # Reusable components
+│   ├── ui/          # Base UI components
+│   ├── layout/      # Layout components
+│   ├── forms/       # Form components
+│   └── seo/         # SEO-related components
+├── lib/             # Utilities and configurations
+│   ├── utils.ts     # Utility functions
+│   ├── api/         # API configurations
+│   └── seo/         # SEO utilities
+├── types/           # TypeScript type definitions
+└── data/           # Static data and content
+```
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/cerebrum-biology-academy.git
+cd cerebrum-biology-academy-website
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Start development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📋 Available Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `npm run dev` - Start development server with Turbopack
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+- `npm run lint:fix` - Fix ESLint issues
+- `npm run format` - Format code with Prettier
+- `npm run type-check` - Run TypeScript type checking
 
-## Learn More
+## 🎯 Development Workflow
 
-To learn more about Next.js, take a look at the following resources:
+1. **Agent-Based Development**: Different agents handle UI, UX, Content, and SEO
+2. **Feature Branches**: Use descriptive branch names (`ui/hero-section`, `seo/meta-tags`)
+3. **Code Quality**: Pre-commit hooks ensure code quality
+4. **Testing**: Comprehensive testing before deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🤝 Contributing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Create a feature branch
+2. Make your changes
+3. Run tests and linting
+4. Submit a pull request
 
-## Deploy on Vercel
+## 📱 Features Roadmap
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- [ ] Homepage with hero section
+- [ ] Course catalog and details
+- [ ] Student testimonials
+- [ ] Faculty information
+- [ ] Appointment booking system
+- [ ] Contact forms with validation
+- [ ] Blog with AI content generation
+- [ ] SEO optimization tools
+- [ ] Student authentication portal
+- [ ] Payment integration
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📞 Support
+
+For support and questions, contact:
+
+- Email: support@cerebrumbiologyacademy.com
+- Phone: +918826444334, +919999744334
+
+---
+
+Built with ❤️ by Cerebrum Biology Academy team
