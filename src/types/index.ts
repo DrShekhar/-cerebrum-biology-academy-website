@@ -33,4 +33,5 @@ export interface ContactForm {
   phone: string
   course: string
   message?: string
+  preferredTime?: string
 }
