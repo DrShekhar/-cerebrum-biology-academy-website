@@ -7,7 +7,7 @@ import { ClassSelector, ClassType } from '@/components/simple/ClassSelector'
 import { TestInterface } from '@/components/simple/TestInterface'
 import { TestResults } from '@/components/simple/TestResults'
 import { SimpleTest, TestResponse } from '@/types/simpleTest'
-import { getTestProgress, hasUserTakenTest, getBestScoreForTest, getAttemptCount } from '@/utils/testStorage'
+import { getTestProgress, hasUserTakenTest, getBestScoreForTest, getAttemptCount, SavedTestProgress } from '@/utils/testStorage'
 
 export default function TestPage() {
   const params = useParams()
@@ -18,7 +18,7 @@ export default function TestPage() {
   const [testState, setTestState] = useState<'preview' | 'taking' | 'completed'>('preview')
   const [testResponses, setTestResponses] = useState<TestResponse[]>([])
   const [timeTaken, setTimeTaken] = useState<number>(0)
-  const [savedProgress, setSavedProgress] = useState<any>(null)
+  const [savedProgress, setSavedProgress] = useState<SavedTestProgress | null>(null)
   const [showResumeDialog, setShowResumeDialog] = useState(false)
 
   useEffect(() => {
@@ -143,7 +143,7 @@ export default function TestPage() {
   // Resume test dialog
   if (showResumeDialog && savedProgress) {
     const progress = savedProgress
-    const answeredCount = progress.responses.filter((r: any) => r.selectedAnswer !== null).length
+    const answeredCount = progress.responses.filter((r: TestResponse) => r.selectedAnswer !== null).length
     const timeElapsed = Math.round((Date.now() - progress.startTime) / 60000) // minutes
 
     return (
