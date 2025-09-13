@@ -82,6 +82,12 @@ export interface Faculty {
   experience: string
   specialization: string[]
   image: string
+  designation?: string
+  bio?: string
+  achievements?: string[]
+  teachingStyle?: string
+  successRate?: number
+  studentTestimonial?: string
 }
 
 export interface Testimonial {
