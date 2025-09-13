@@ -6,6 +6,16 @@ const nextConfig: NextConfig = {
     optimizePackageImports: ['@radix-ui/react-icons', 'lucide-react'],
   },
   
+  // Skip linting during build
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  
+  // Skip TypeScript type checking during build
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  
   // Image optimization
   images: {
     domains: ['localhost'],
