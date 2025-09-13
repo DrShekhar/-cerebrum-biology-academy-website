@@ -433,8 +433,3 @@ export default function ContactPage() {
   )
 }
 
-export const metadata = {
-  title: 'Contact Us | Get In Touch | Cerebrum Biology Academy',
-  description: 'Contact Cerebrum Biology Academy for NEET coaching inquiries, admissions information, and expert guidance. Call +91 98765 43210 or visit our Noida campus.',
-  keywords: 'contact cerebrum biology academy, NEET coaching contact, biology coaching noida, admissions inquiry, campus visit, phone consultation',
-}

@@ -1,3 +1,5 @@
+'use client'
+
 import { Button } from '@/components/ui/Button'
 import {
   Award,
@@ -445,8 +447,3 @@ export default function AboutPage() {
   )
 }
 
-export const metadata = {
-  title: 'About Us | Our Story & Mission | Cerebrum Biology Academy',
-  description: 'Learn about Cerebrum Biology Academy - India\'s premier NEET Biology coaching institute with 94% success rate. Founded in 2015, we\'ve helped 2847+ students achieve medical career dreams.',
-  keywords: 'about cerebrum biology academy, NEET coaching history, biology academy mission, medical coaching institute, NEET success rate, faculty excellence',
-}

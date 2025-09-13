@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { CourseProgram, CourseSeries } from '@/types/courseSystem'
 import { PaymentOptionsDisplay } from './PaymentOptionsDisplay'
+import { DemoClassModal } from './DemoClassModal'
 import { useState } from 'react'
 
 interface CourseCardProps {
@@ -12,6 +13,7 @@ interface CourseCardProps {
 
 export function CourseCard({ course, selectedTier = 'ascent' }: CourseCardProps) {
   const [showPaymentDetails, setShowPaymentDetails] = useState(false)
+  const [showDemoModal, setShowDemoModal] = useState(false)
   const [activeTier, setActiveTier] = useState<CourseSeries>(selectedTier)
 
   const tierDetails = course.tiers[activeTier]
@@ -156,19 +158,27 @@ export function CourseCard({ course, selectedTier = 'ascent' }: CourseCardProps)
         )}
 
         {/* Action Buttons */}
-        <div className="flex space-x-3">
-          <Link 
-            href={`/courses/${course.id}`}
-            className="flex-1 bg-gray-200 text-gray-800 py-3 rounded-xl font-semibold text-center hover:bg-gray-300 transition-colors"
+        <div className="space-y-3">
+          <div className="flex space-x-3">
+            <Link 
+              href={`/courses/${course.id}`}
+              className="flex-1 bg-gray-200 text-gray-800 py-3 rounded-xl font-semibold text-center hover:bg-gray-300 transition-colors"
+            >
+              View Details
+            </Link>
+            <Link 
+              href={`/enrollments?course=${course.id}&tier=${activeTier}`}
+              className={`flex-1 bg-gradient-to-r ${tierColors[activeTier]} text-white py-3 rounded-xl font-semibold text-center hover:opacity-90 transition-opacity`}
+            >
+              Enroll Now
+            </Link>
+          </div>
+          <button
+            onClick={() => setShowDemoModal(true)}
+            className="w-full bg-green-600 text-white py-3 rounded-xl font-semibold hover:bg-green-700 transition-colors"
           >
-            View Details
-          </Link>
-          <Link 
-            href={`/enrollments?course=${course.id}&tier=${activeTier}`}
-            className={`flex-1 bg-gradient-to-r ${tierColors[activeTier]} text-white py-3 rounded-xl font-semibold text-center hover:opacity-90 transition-opacity`}
-          >
-            Enroll Now
-          </Link>
+            Book Free Demo Class
+          </button>
         </div>
 
         {/* Learning Modes */}
@@ -181,6 +191,14 @@ export function CourseCard({ course, selectedTier = 'ascent' }: CourseCardProps)
           ))}
         </div>
       </div>
+
+      {/* Demo Class Modal */}
+      {showDemoModal && (
+        <DemoClassModal 
+          course={course}
+          onClose={() => setShowDemoModal(false)}
+        />
+      )}
     </div>
   )
 }

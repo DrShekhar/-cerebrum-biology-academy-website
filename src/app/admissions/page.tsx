@@ -620,8 +620,3 @@ export default function AdmissionsPage() {
   )
 }
 
-export const metadata = {
-  title: 'Admission Process | How to Join | Cerebrum Biology Academy',
-  description: 'Simple 5-step admission process for NEET Biology coaching. Requirements, documents, scholarships, and batch options. 94% success rate with expert faculty guidance.',
-  keywords: 'NEET admission process, biology coaching admission, admission requirements, NEET coaching fees, scholarships, batch selection, diagnostic test',
-}

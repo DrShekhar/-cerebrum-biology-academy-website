@@ -96,12 +96,13 @@ export interface CourseProgram {
   // Additional Information
   prerequisites: string[]
   learningOutcomes: string[]
-  testimonials: string[]
+  testimonials: CourseTestimonial[]
   faq: FAQ[]
   
   // SEO & Marketing
   isPopular?: boolean
   isFeatured?: boolean
+  specialBadge?: string
   seoTitle?: string
   seoDescription?: string
 }
@@ -159,8 +160,21 @@ export interface FAQ {
   id: string
   question: string
   answer: string
-  category: 'general' | 'admission' | 'payment' | 'curriculum' | 'support'
+  category: 'general' | 'admission' | 'payment' | 'curriculum' | 'support' | 'performance' | 'program' | 'eligibility'
   order: number
+}
+
+export interface CourseTestimonial {
+  id: string
+  studentName: string
+  course: string
+  year: string
+  rank: string
+  previousRank?: string
+  improvement?: string
+  college: string
+  feedback: string
+  rating: number
 }
 
 // Comprehensive Course System

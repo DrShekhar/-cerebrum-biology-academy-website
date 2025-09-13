@@ -1,14 +1,17 @@
 'use client'
 
 import { useState, useMemo } from 'react'
-import { ClassLevel } from '@/types/courseSystem'
+import { ClassLevel, CourseProgram } from '@/types/courseSystem'
 import { coursePrograms, courseTiers } from '@/data/courseSystemData'
 import { ClassFilterNav } from './ClassFilterNav'
 import { CourseCard } from './CourseCard'
+import { DemoClassModal } from './DemoClassModal'
 
 export function EnhancedCoursesListingPage() {
   const [selectedClass, setSelectedClass] = useState<ClassLevel | 'all'>('all')
   const [searchQuery, setSearchQuery] = useState('')
+  const [showDemoModal, setShowDemoModal] = useState(false)
+  const [selectedCourse, setSelectedCourse] = useState<CourseProgram | null>(null)
 
   // Calculate course counts for each class
   const courseCounts = useMemo(() => {
@@ -50,6 +53,11 @@ export function EnhancedCoursesListingPage() {
     return filteredCourses.reduce((total, course) => {
       return total + Object.values(course.tiers).reduce((sum, tier) => sum + tier.batchSize, 0)
     }, 0)
+  }
+
+  const handleBookDemo = (course: CourseProgram) => {
+    setSelectedCourse(course)
+    setShowDemoModal(true)
   }
 
   return (
@@ -216,7 +224,17 @@ export function EnhancedCoursesListingPage() {
               Join thousands of successful students who have achieved their medical dreams with our expert guidance
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">
+              <button 
+                onClick={() => {
+                  // Use a featured course or the first available course
+                  const demoCourse = filteredCourses.find(course => course.isFeatured || course.isPopular) || filteredCourses[0]
+                  if (demoCourse) {
+                    handleBookDemo(demoCourse)
+                  }
+                }}
+                className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors"
+                disabled={filteredCourses.length === 0}
+              >
                 Book Free Demo Class
               </button>
               <button className="bg-blue-500 text-white px-8 py-4 rounded-xl font-semibold hover:bg-blue-400 transition-colors">
@@ -226,6 +244,17 @@ export function EnhancedCoursesListingPage() {
           </div>
         </div>
       </section>
+
+      {/* Demo Class Modal */}
+      {showDemoModal && selectedCourse && (
+        <DemoClassModal 
+          course={selectedCourse}
+          onClose={() => {
+            setShowDemoModal(false)
+            setSelectedCourse(null)
+          }}
+        />
+      )}
     </div>
   )
 }
