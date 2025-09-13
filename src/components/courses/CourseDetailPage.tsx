@@ -24,6 +24,7 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { useState } from 'react'
 import { DemoBookingModal } from '@/components/booking/DemoBookingModal'
+import { EnrollmentModal } from '@/components/enrollment/EnrollmentModal'
 
 interface CourseDetailPageProps {
   course: Course
@@ -36,10 +37,10 @@ export function CourseDetailPage({ course }: CourseDetailPageProps) {
   const [expandedModule, setExpandedModule] = useState<string | null>(null)
   const [expandedFAQ, setExpandedFAQ] = useState<string | null>(null)
   const [showDemoModal, setShowDemoModal] = useState(false)
+  const [showEnrollmentModal, setShowEnrollmentModal] = useState(false)
 
   const handleEnrollNow = () => {
-    // TODO: Implement enrollment system
-    console.log('Enroll now clicked for course:', course.id)
+    setShowEnrollmentModal(true)
   }
 
   const handleBookDemo = () => {
@@ -529,6 +530,13 @@ export function CourseDetailPage({ course }: CourseDetailPageProps) {
         onClose={() => setShowDemoModal(false)}
         courseId={course.id}
         courseTitle={course.title}
+      />
+
+      {/* Enrollment Modal */}
+      <EnrollmentModal
+        isOpen={showEnrollmentModal}
+        onClose={() => setShowEnrollmentModal(false)}
+        course={course}
       />
     </div>
   )
