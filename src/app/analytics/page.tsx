@@ -220,7 +220,7 @@ export default function AnalyticsPage() {
               <span className="text-purple-100">Viewing data for:</span>
               <select
                 value={userClass}
-                onChange={(e) => setUserClass(e.target.value as any)}
+                onChange={(e) => setUserClass(e.target.value as 'class-11' | 'class-12' | 'dropper')}
                 className="bg-white/20 text-white border border-white/30 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-white/50"
               >
                 <option value="class-11" className="text-gray-900">Class 11</option>

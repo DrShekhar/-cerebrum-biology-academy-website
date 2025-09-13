@@ -68,7 +68,7 @@ export function SuccessAnalytics({ data }: SuccessAnalyticsProps) {
     title: string
     value: string | number
     subtitle: string
-    icon: any
+    icon: React.ComponentType<any>
     color: string
     trend?: number
   }) => (
@@ -137,7 +137,7 @@ export function SuccessAnalytics({ data }: SuccessAnalyticsProps) {
           {tabs.map((tab) => (
             <button
               key={tab.id}
-              onClick={() => setActiveTab(tab.id as any)}
+              onClick={() => setActiveTab(tab.id)}
               className={`flex items-center px-6 py-3 rounded-xl transition-all ${
                 activeTab === tab.id
                   ? 'bg-blue-600 text-white shadow-lg'
