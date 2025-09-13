@@ -476,7 +476,7 @@ export function PerformanceDashboard({
                 <div className="text-2xl font-bold text-red-600 mb-1">
                   {userHistory.recentTests.filter(t => t.percentage < 40).length}
                 </div>
-                <div className="text-sm text-gray-700">Needs Work (<40%)</div>
+                <div className="text-sm text-gray-700">Needs Work (&lt;40%)</div>
               </div>
             </div>
           </motion.div>

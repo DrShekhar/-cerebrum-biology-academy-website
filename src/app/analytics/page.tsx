@@ -309,17 +309,4 @@ export default function AnalyticsPage() {
   )
 }
 
-export const metadata = {
-  title: 'Performance Analytics | Track Your NEET Progress | Cerebrum Biology Academy',
-  description: 'Advanced analytics dashboard for NEET preparation. Track performance, identify weak areas, get AI-powered insights, and compare with peers. Boost your biology scores.',
-  keywords: [
-    'NEET analytics',
-    'performance tracking',
-    'test analysis',
-    'biology preparation analytics',
-    'NEET progress tracking',
-    'study analytics',
-    'exam performance insights',
-    'NEET score improvement'
-  ],
-}
+// Metadata moved to layout.tsx for client components
