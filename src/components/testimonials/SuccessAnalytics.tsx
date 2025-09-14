@@ -250,7 +250,7 @@ export function SuccessAnalytics({ data }: SuccessAnalyticsProps) {
                         subject === 'biology' ? 'text-green-600' :
                         subject === 'chemistry' ? 'text-blue-600' : 'text-purple-600'
                       }`}>
-                        {stats.averageScore}/180
+                        {stats.averageScore}/{subject === 'biology' ? '360' : '180'}
                       </div>
                       <div className="text-gray-600">Average Score</div>
                     </div>

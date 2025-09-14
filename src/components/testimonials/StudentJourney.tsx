@@ -169,7 +169,7 @@ export function StudentJourney({ student }: StudentJourneyProps) {
             <div className="grid md:grid-cols-3 gap-6 mt-6">
               <div className="bg-green-50 rounded-2xl p-4">
                 <h4 className="font-semibold text-green-900 mb-2">Biology</h4>
-                <div className="text-3xl font-bold text-green-600">{student.finalScore.biology}/180</div>
+                <div className="text-3xl font-bold text-green-600">{student.finalScore.biology}/360</div>
                 <div className="text-green-700 text-sm">+{student.improvement.biology} improvement</div>
               </div>
               <div className="bg-blue-50 rounded-2xl p-4">

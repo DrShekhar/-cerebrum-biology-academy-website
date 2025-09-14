@@ -143,7 +143,7 @@ export default function SuccessStoriesPage() {
               <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Star className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-blue-900 mb-2">178/180</h3>
+              <h3 className="text-2xl font-bold text-blue-900 mb-2">354/360</h3>
               <p className="text-blue-700">Biology Top Score</p>
               <p className="text-sm text-blue-600 mt-2">Ishita Verma - AIIMS Rishikesh</p>
             </div>

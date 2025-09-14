@@ -391,7 +391,7 @@ export const successStoriesData: SuccessStoryData[] = [
     rank: 892,
     improvement: 189,
     achievement: 'Biology Topper',
-    quote: 'Scoring 178/180 in biology seemed impossible until I joined Cerebrum. Their teaching methodology is simply outstanding.',
+    quote: 'Scoring 354/360 in biology seemed impossible until I joined Cerebrum. Their teaching methodology is simply outstanding.',
     beforeScore: {
       biology: 98,
       chemistry: 167,
