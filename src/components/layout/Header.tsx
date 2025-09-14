@@ -44,11 +44,13 @@ const Header = () => {
   const mainNavigation = [
     { href: '/', label: 'Home' },
     { 
+      href: '/courses',
       label: 'Courses', 
       hasDropdown: true,
       items: courseLinks
     },
     {
+      href: '/mock-tests',
       label: 'Tests',
       hasDropdown: true, 
       items: testLinks
@@ -95,10 +97,17 @@ const Header = () => {
                       if (item.label === 'Tests') setIsTestsOpen(false)
                     }}
                   >
-                    <button className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                    <Link
+                      href={item.href!}
+                      className={`flex items-center space-x-1 font-medium transition-colors ${
+                        isActive(item.href!) 
+                          ? 'text-blue-600' 
+                          : 'text-gray-700 hover:text-blue-600'
+                      }`}
+                    >
                       <span>{item.label}</span>
                       <ChevronDown className="w-4 h-4" />
-                    </button>
+                    </Link>
                     
                     <AnimatePresence>
                       {((item.label === 'Courses' && isCoursesOpen) || (item.label === 'Tests' && isTestsOpen)) && (
@@ -183,20 +192,31 @@ const Header = () => {
                   <div key={index}>
                     {item.hasDropdown ? (
                       <div>
-                        <button
-                          onClick={() => {
-                            if (item.label === 'Courses') setIsCoursesOpen(!isCoursesOpen)
-                            if (item.label === 'Tests') setIsTestsOpen(!isTestsOpen)
-                          }}
-                          className="flex items-center justify-between w-full text-left text-gray-700 hover:text-blue-600 font-medium py-2"
-                        >
-                          <span>{item.label}</span>
-                          <ChevronDown className={`w-4 h-4 transition-transform ${
-                            (item.label === 'Courses' && isCoursesOpen) || (item.label === 'Tests' && isTestsOpen)
-                              ? 'rotate-180' 
-                              : ''
-                          }`} />
-                        </button>
+                        <div className="flex items-center">
+                          <Link
+                            href={item.href!}
+                            className={`flex-1 font-medium py-2 transition-colors ${
+                              isActive(item.href!)
+                                ? 'text-blue-600'
+                                : 'text-gray-700 hover:text-blue-600'
+                            }`}
+                          >
+                            {item.label}
+                          </Link>
+                          <button
+                            onClick={() => {
+                              if (item.label === 'Courses') setIsCoursesOpen(!isCoursesOpen)
+                              if (item.label === 'Tests') setIsTestsOpen(!isTestsOpen)
+                            }}
+                            className="p-2 text-gray-500 hover:text-blue-600"
+                          >
+                            <ChevronDown className={`w-4 h-4 transition-transform ${
+                              (item.label === 'Courses' && isCoursesOpen) || (item.label === 'Tests' && isTestsOpen)
+                                ? 'rotate-180' 
+                                : ''
+                            }`} />
+                          </button>
+                        </div>
                         
                         <AnimatePresence>
                           {((item.label === 'Courses' && isCoursesOpen) || (item.label === 'Tests' && isTestsOpen)) && (
