@@ -127,7 +127,7 @@ export function TrustBadgesSection() {
       growth: '+2.1% YoY',
     },
     {
-      number: '180+',
+      number: '335+',
       label: 'Average Biology Score',
       description: 'Among qualified students',
       growth: '+8% YoY',

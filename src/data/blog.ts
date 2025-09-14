@@ -41,13 +41,13 @@ export const blogCategories: BlogCategory[] = [
 export const blogPosts: BlogPost[] = [
   {
     id: '1',
-    title: 'NEET Biology Preparation Strategy: Score 180+ in 6 Months',
-    slug: 'neet-biology-preparation-strategy-score-180-plus',
+    title: 'NEET Biology Preparation Strategy: Score 330+ in 6 Months',
+    slug: 'neet-biology-preparation-strategy-score-330-plus',
     excerpt:
       'Master NEET Biology with our proven 6-month strategy. Learn how to tackle Botany, Zoology, and Human Physiology effectively for maximum marks.',
-    content: `# NEET Biology Preparation Strategy: Score 180+ in 6 Months
+    content: `# NEET Biology Preparation Strategy: Score 330+ in 6 Months
 
-Biology is often considered the scoring subject in NEET, contributing 50% of the total marks (180 out of 360). With the right strategy, you can easily secure 160+ marks in biology and boost your overall NEET score significantly.
+Biology is often considered the scoring subject in NEET, contributing 50% of the total marks (360 out of 720). With the right strategy, you can easily secure 330+ marks in biology and boost your overall NEET score significantly.
 
 ## Understanding NEET Biology Pattern
 
@@ -142,9 +142,9 @@ With consistent effort and the right guidance, scoring 170+ in NEET Biology is a
     updatedAt: '2024-01-15',
     readTime: 8,
     isPublished: true,
-    seoTitle: 'NEET Biology Strategy 2025: Score 180+ Marks | Expert Guide',
+    seoTitle: 'NEET Biology Strategy 2025: Score 330+ Marks | Expert Guide',
     seoDescription:
-      'Complete NEET Biology preparation strategy to score 180+ marks. Expert tips, study plan, and high-weightage topics by AIIMS faculty. Start today!',
+      'Complete NEET Biology preparation strategy to score 330+ marks. Expert tips, study plan, and high-weightage topics by AIIMS faculty. Start today!',
     views: 15420,
   },
   {

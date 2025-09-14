@@ -84,7 +84,7 @@ export const successStats = [
     description: 'NEET Qualification Rate',
   },
   {
-    number: '180+',
+    number: '335+',
     label: 'Average Biology Score',
     description: 'Among our NEET toppers',
   },

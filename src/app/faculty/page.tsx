@@ -40,7 +40,7 @@ export default function FacultyPage() {
     { number: '2847+', label: 'Students Mentored', sublabel: 'To Medical College Success' },
     { number: '247', label: 'AIIMS Selections', sublabel: 'Across all campuses' },
     { number: '94.2%', label: 'Success Rate', sublabel: 'NEET Qualification Rate' },
-    { number: '180+', label: 'Avg Biology Score', sublabel: 'Among our toppers' },
+    { number: '335+', label: 'Avg Biology Score', sublabel: 'Among our toppers' },
   ]
 
   return (
