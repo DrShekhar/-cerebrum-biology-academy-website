@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import { StructuredData } from '@/components/seo/StructuredData'
 import { ErrorBoundary } from '@/components/ErrorBoundary'
+import Header from '@/components/layout/Header'
+import { Footer } from '@/components/layout/Footer'
 import './globals.css'
 
 const geistSans = Geist({
@@ -72,7 +74,13 @@ export default function RootLayout({
         <meta name="theme-color" content="#2563eb" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <ErrorBoundary>{children}</ErrorBoundary>
+        <ErrorBoundary>
+          <Header />
+          <main className="min-h-screen">
+            {children}
+          </main>
+          <Footer />
+        </ErrorBoundary>
       </body>
     </html>
   )
