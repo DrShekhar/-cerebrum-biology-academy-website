@@ -15,7 +15,7 @@ interface VerifyOtpCredentials {
   otp: string
   otpId: string
   purpose: 'registration' | 'login' | 'password_reset' | 'mobile_verification'
-  
+
   // Required for registration
   name?: string
   email?: string
@@ -24,7 +24,7 @@ interface VerifyOtpCredentials {
   currentClass?: '10th' | '11th' | '12th' | 'Dropper'
   parentMobile?: string
   referralCode?: string
-  
+
   // Marketing consent
   marketingConsent?: boolean
   whatsappConsent?: boolean
@@ -49,24 +49,28 @@ interface RegisterCredentials {
 }
 
 export function useAuth() {
-  const { data: session, status } = useSession()
+  const sessionData = useSession()
+  const session = sessionData?.data
+  const status = sessionData?.status || 'loading'
   const [isSubmitting, setIsSubmitting] = useState(false)
-  
+
   const isLoading = status === 'loading'
   const isAuthenticated = status === 'authenticated'
-  
+
   // Convert NextAuth session to our User type
-  const user: User | null = session?.user ? {
-    id: session.user.id,
-    email: session.user.email!,
-    name: session.user.name!,
-    password: '', // Never expose password
-    role: session.user.role,
-    phone: session.user.profile?.phone,
-    createdAt: Date.now(), // This would come from database in real implementation
-    updatedAt: Date.now(),
-    profile: session.user.profile
-  } : null
+  const user: User | null = session?.user
+    ? {
+        id: session.user.id,
+        email: session.user.email!,
+        name: session.user.name!,
+        password: '', // Never expose password
+        role: session.user.role,
+        phone: session.user.profile?.phone,
+        createdAt: Date.now(), // This would come from database in real implementation
+        updatedAt: Date.now(),
+        profile: session.user.profile,
+      }
+    : null
 
   // Modern mobile-first OTP authentication
   const sendOtp = async ({ mobile, purpose, whatsapp }: SendOtpCredentials) => {
@@ -129,7 +133,7 @@ export function useAuth() {
       const result = await signIn('credentials', {
         email,
         password,
-        redirect: false
+        redirect: false,
       })
 
       if (result?.error) {
@@ -150,7 +154,7 @@ export function useAuth() {
     return await sendOtp({ mobile, purpose: 'login', whatsapp })
   }
 
-  // Convenience method for mobile registration  
+  // Convenience method for mobile registration
   const registerWithMobile = async (mobile: string, whatsapp?: string) => {
     return await sendOtp({ mobile, purpose: 'registration', whatsapp })
   }
@@ -175,7 +179,7 @@ export function useAuth() {
       // After successful registration, automatically sign in
       const signInResult = await signInWithEmail({
         email: credentials.email,
-        password: credentials.password
+        password: credentials.password,
       })
 
       return { success: true, data: { registration: data, signIn: signInResult } }
@@ -202,7 +206,7 @@ export function useAuth() {
   const isParent = () => user?.role === 'parent'
   const isTeacher = () => user?.role === 'teacher'
   const isAdmin = () => user?.role === 'admin'
-  
+
   // Check if user has required role
   const hasRole = (roles: string | string[]) => {
     if (!user) return false
@@ -222,30 +226,30 @@ export function useAuth() {
     isLoading,
     isAuthenticated,
     isSubmitting,
-    
+
     // Role helpers
     isStudent,
-    isParent, 
+    isParent,
     isTeacher,
     isAdmin,
     hasRole,
-    
+
     // Modern mobile-first OTP authentication
     sendOtp,
     verifyOtp,
     signInWithMobile,
     registerWithMobile,
-    
+
     // Legacy email/password authentication
     signInWithEmail,
     register,
     signOut: logout,
-    
+
     // Legacy support (deprecated)
     createUserProfile,
-    
+
     // Additional session data
     session,
-    status
+    status,
   }
 }
