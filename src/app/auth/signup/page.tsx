@@ -579,7 +579,3 @@ export default function SignUpPage() {
   )
 }
 
-export const metadata = {
-  title: 'Sign Up | Cerebrum Biology Academy',
-  description: 'Join Cerebrum Biology Academy and start your NEET Biology preparation journey with expert guidance.',
-}

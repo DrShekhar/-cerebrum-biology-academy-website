@@ -402,7 +402,3 @@ export default function SignInPage() {
   )
 }
 
-export const metadata = {
-  title: 'Sign In | Cerebrum Biology Academy',
-  description: 'Sign in to your Cerebrum Biology Academy account and continue your NEET preparation journey.',
-}
