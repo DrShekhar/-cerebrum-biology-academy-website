@@ -14,11 +14,15 @@ import {
   BarChart3
 } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { BurgerMenu } from '@/components/navigation/BurgerMenu'
+import { SearchMenu } from '@/components/navigation/SearchMenu'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isCoursesOpen, setIsCoursesOpen] = useState(false)
   const [isTestsOpen, setIsTestsOpen] = useState(false)
+  const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(false)
+  const [isSearchOpen, setIsSearchOpen] = useState(false)
   const pathname = usePathname()
 
   // Close mobile menu when route changes
@@ -26,6 +30,8 @@ const Header = () => {
     setIsMenuOpen(false)
     setIsCoursesOpen(false)
     setIsTestsOpen(false)
+    setIsBurgerMenuOpen(false)
+    setIsSearchOpen(false)
   }, [pathname])
 
   const courseLinks = [
@@ -70,16 +76,26 @@ const Header = () => {
     <header className="bg-white shadow-lg sticky top-0 z-50 border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-              <BookOpen className="w-6 h-6 text-white" />
-            </div>
-            <div className="hidden sm:block">
-              <span className="text-xl font-bold text-gray-900">Cerebrum</span>
-              <span className="text-sm text-gray-600 block -mt-1">Biology Academy</span>
-            </div>
-          </Link>
+          {/* Left Section - Burger Menu + Logo */}
+          <div className="flex items-center space-x-4">
+            {/* Burger Menu */}
+            <BurgerMenu
+              isOpen={isBurgerMenuOpen}
+              onToggle={() => setIsBurgerMenuOpen(!isBurgerMenuOpen)}
+              onClose={() => setIsBurgerMenuOpen(false)}
+            />
+            
+            {/* Logo */}
+            <Link href="/" className="flex items-center space-x-2">
+              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                <BookOpen className="w-6 h-6 text-white" />
+              </div>
+              <div className="hidden sm:block">
+                <span className="text-xl font-bold text-gray-900">Cerebrum</span>
+                <span className="text-sm text-gray-600 block -mt-1">Biology Academy</span>
+              </div>
+            </Link>
+          </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
@@ -151,30 +167,33 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* CTA Buttons */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <Link
-              href="/admissions"
-              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-md hover:shadow-lg"
-            >
-              Enroll Now
-            </Link>
-            <Link
-              href="/contact"
-              className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium transition-colors"
-            >
-              <Phone className="w-4 h-4" />
-              <span>Book Demo</span>
-            </Link>
+          {/* Right Section - Search + CTA Buttons */}
+          <div className="flex items-center space-x-4">
+            {/* Search Menu */}
+            <SearchMenu
+              isOpen={isSearchOpen}
+              onToggle={() => setIsSearchOpen(!isSearchOpen)}
+              onClose={() => setIsSearchOpen(false)}
+            />
+            
+            {/* CTA Buttons */}
+            <div className="hidden lg:flex items-center space-x-4">
+              <Link
+                href="/support/admission"
+                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-md hover:shadow-lg"
+              >
+                Enroll Now
+              </Link>
+              <Link
+                href="/support/demo"
+                className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium transition-colors"
+              >
+                <Phone className="w-4 h-4" />
+                <span>Book Demo</span>
+              </Link>
+            </div>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden text-gray-700 hover:text-blue-600 p-2"
-          >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
         </div>
 
         {/* Mobile Menu */}

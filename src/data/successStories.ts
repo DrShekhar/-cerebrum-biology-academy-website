@@ -231,7 +231,7 @@ export const successStoriesData: SuccessStoryData[] = [
       total: 437
     },
     afterScore: {
-      biology: 172,
+      biology: 345,
       chemistry: 158,
       physics: 125,
       total: 635

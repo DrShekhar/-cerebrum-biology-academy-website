@@ -71,7 +71,7 @@ export function ScoreComparison({
   }
 
   const subjects = [
-    { name: 'Biology', key: 'biology' as keyof ScoreData, color: 'green', maxScore: 180 },
+    { name: 'Biology', key: 'biology' as keyof ScoreData, color: 'green', maxScore: 360 },
     { name: 'Chemistry', key: 'chemistry' as keyof ScoreData, color: 'blue', maxScore: 180 },
     { name: 'Physics', key: 'physics' as keyof ScoreData, color: 'purple', maxScore: 180 },
   ]
