@@ -37,9 +37,9 @@ export function HeroSection() {
             <Link href="/" className="text-gray-600 hover:text-blue-600 transition-colors">
               Home
             </Link>
-            <a href="#courses" className="text-gray-600 hover:text-blue-600 transition-colors">
+            <Link href="/courses" className="text-gray-600 hover:text-blue-600 transition-colors">
               Courses
-            </a>
+            </Link>
             <a href="#faculty" className="text-gray-600 hover:text-blue-600 transition-colors">
               Faculty
             </a>
