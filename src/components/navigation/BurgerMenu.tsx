@@ -125,7 +125,7 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
       {/* Burger Button */}
       <button
         onClick={onToggle}
-        className="lg:flex items-center justify-center w-10 h-10 rounded-xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 group relative z-50"
+        className="flex items-center justify-center w-10 h-10 rounded-xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 group relative z-50"
         aria-label="Toggle navigation menu"
         aria-expanded={isOpen}
       >
