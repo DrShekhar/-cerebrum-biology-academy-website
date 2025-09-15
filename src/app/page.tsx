@@ -1,3 +1,4 @@
+// Force deployment rebuild - 2025-09-16 15:30
 import { HeroSection } from '@/components/layout/HeroSection'
 import { CoursesSection } from '@/components/layout/CoursesSection'
 import { FacultySection } from '@/components/layout/FacultySection'
