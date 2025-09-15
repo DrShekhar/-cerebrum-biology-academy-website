@@ -34,7 +34,7 @@ export function MyEnrollments() {
     )
   }
 
-  const userEnrollments = getUserEnrollments(user.id)
+  const userEnrollments = getUserEnrollments(user.id) || []
 
   if (userEnrollments.length === 0) {
     return (
