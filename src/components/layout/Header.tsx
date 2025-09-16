@@ -3,15 +3,17 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { 
-  Menu, 
-  X, 
+import {
+  Menu,
+  X,
   ChevronDown,
   BookOpen,
   Award,
   Phone,
   Play,
-  BarChart3
+  BarChart3,
+  LogIn,
+  UserPlus,
 } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { BurgerMenu } from '@/components/navigation/BurgerMenu'
@@ -49,17 +51,17 @@ const Header = () => {
 
   const mainNavigation = [
     { href: '/', label: 'Home' },
-    { 
+    {
       href: '/courses',
-      label: 'Courses', 
+      label: 'Courses',
       hasDropdown: true,
-      items: courseLinks
+      items: courseLinks,
     },
     {
       href: '/mock-tests',
       label: 'Tests',
-      hasDropdown: true, 
-      items: testLinks
+      hasDropdown: true,
+      items: testLinks,
     },
     { href: '/faculty', label: 'Faculty' },
     { href: '/success-stories', label: 'Success Stories' },
@@ -84,7 +86,7 @@ const Header = () => {
               onToggle={() => setIsBurgerMenuOpen(!isBurgerMenuOpen)}
               onClose={() => setIsBurgerMenuOpen(false)}
             />
-            
+
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-2">
               <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
@@ -116,17 +118,16 @@ const Header = () => {
                     <Link
                       href={item.href!}
                       className={`flex items-center space-x-1 font-medium transition-colors ${
-                        isActive(item.href!) 
-                          ? 'text-blue-600' 
-                          : 'text-gray-700 hover:text-blue-600'
+                        isActive(item.href!) ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'
                       }`}
                     >
                       <span>{item.label}</span>
                       <ChevronDown className="w-4 h-4" />
                     </Link>
-                    
+
                     <AnimatePresence>
-                      {((item.label === 'Courses' && isCoursesOpen) || (item.label === 'Tests' && isTestsOpen)) && (
+                      {((item.label === 'Courses' && isCoursesOpen) ||
+                        (item.label === 'Tests' && isTestsOpen)) && (
                         <motion.div
                           initial={{ opacity: 0, y: -10 }}
                           animate={{ opacity: 1, y: 0 }}
@@ -155,9 +156,7 @@ const Header = () => {
                   <Link
                     href={item.href!}
                     className={`font-medium transition-colors ${
-                      isActive(item.href!) 
-                        ? 'text-blue-600' 
-                        : 'text-gray-700 hover:text-blue-600'
+                      isActive(item.href!) ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'
                     }`}
                   >
                     {item.label}
@@ -175,25 +174,34 @@ const Header = () => {
               onToggle={() => setIsSearchOpen(!isSearchOpen)}
               onClose={() => setIsSearchOpen(false)}
             />
-            
-            {/* CTA Buttons */}
-            <div className="hidden lg:flex items-center space-x-4">
+
+            {/* Authentication & CTA Buttons */}
+            <div className="hidden lg:flex items-center space-x-3">
+              {/* Auth Buttons */}
               <Link
-                href="/support/admission"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-md hover:shadow-lg"
+                href="/auth/signin"
+                className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium transition-colors px-3 py-2 rounded-lg hover:bg-blue-50"
               >
-                Enroll Now
+                <LogIn className="w-4 h-4" />
+                <span>Sign In</span>
               </Link>
               <Link
-                href="/support/demo"
-                className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                href="/auth/signup"
+                className="flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-medium transition-colors px-3 py-2 border border-blue-200 rounded-lg hover:bg-blue-50"
               >
-                <Phone className="w-4 h-4" />
-                <span>Book Demo</span>
+                <UserPlus className="w-4 h-4" />
+                <span>Sign Up</span>
+              </Link>
+
+              {/* Primary CTA */}
+              <Link
+                href="/support/demo"
+                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-5 py-2 rounded-full font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-md hover:shadow-lg"
+              >
+                Book Free Demo
               </Link>
             </div>
           </div>
-
         </div>
 
         {/* Mobile Menu */}
@@ -229,16 +237,20 @@ const Header = () => {
                             }}
                             className="p-2 text-gray-500 hover:text-blue-600"
                           >
-                            <ChevronDown className={`w-4 h-4 transition-transform ${
-                              (item.label === 'Courses' && isCoursesOpen) || (item.label === 'Tests' && isTestsOpen)
-                                ? 'rotate-180' 
-                                : ''
-                            }`} />
+                            <ChevronDown
+                              className={`w-4 h-4 transition-transform ${
+                                (item.label === 'Courses' && isCoursesOpen) ||
+                                (item.label === 'Tests' && isTestsOpen)
+                                  ? 'rotate-180'
+                                  : ''
+                              }`}
+                            />
                           </button>
                         </div>
-                        
+
                         <AnimatePresence>
-                          {((item.label === 'Courses' && isCoursesOpen) || (item.label === 'Tests' && isTestsOpen)) && (
+                          {((item.label === 'Courses' && isCoursesOpen) ||
+                            (item.label === 'Tests' && isTestsOpen)) && (
                             <motion.div
                               initial={{ opacity: 0, height: 0 }}
                               animate={{ opacity: 1, height: 'auto' }}
@@ -276,21 +288,33 @@ const Header = () => {
                     )}
                   </div>
                 ))}
-                
-                {/* Mobile CTA Buttons */}
+
+                {/* Mobile Auth & CTA Buttons */}
                 <div className="pt-4 border-t border-gray-200 space-y-3">
+                  {/* Auth Buttons */}
+                  <div className="flex space-x-3">
+                    <Link
+                      href="/auth/signin"
+                      className="flex-1 flex items-center justify-center space-x-2 text-gray-700 hover:text-blue-600 font-medium transition-colors py-2 border border-gray-200 rounded-lg hover:bg-blue-50"
+                    >
+                      <LogIn className="w-4 h-4" />
+                      <span>Sign In</span>
+                    </Link>
+                    <Link
+                      href="/auth/signup"
+                      className="flex-1 flex items-center justify-center space-x-2 text-blue-600 hover:text-blue-700 font-medium transition-colors py-2 border border-blue-200 rounded-lg hover:bg-blue-50"
+                    >
+                      <UserPlus className="w-4 h-4" />
+                      <span>Sign Up</span>
+                    </Link>
+                  </div>
+
+                  {/* Primary CTA */}
                   <Link
-                    href="/admissions"
+                    href="/support/demo"
                     className="block w-full text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
                   >
-                    Enroll Now
-                  </Link>
-                  <Link
-                    href="/contact"
-                    className="flex items-center justify-center space-x-2 text-gray-700 hover:text-blue-600 font-medium transition-colors py-2"
-                  >
-                    <Phone className="w-4 h-4" />
-                    <span>Book Demo Class</span>
+                    Book Free Demo
                   </Link>
                 </div>
               </div>
