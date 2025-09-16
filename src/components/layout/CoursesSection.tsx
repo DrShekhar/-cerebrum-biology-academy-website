@@ -13,9 +13,13 @@ import {
   BookOpen,
   Award,
   Target,
+  Filter,
+  Search,
+  SlidersHorizontal,
+  Star,
 } from 'lucide-react'
 import { motion } from 'framer-motion'
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 
 const iconMap = {
   Users,
@@ -25,6 +29,11 @@ const iconMap = {
 
 export function CoursesSection() {
   const [selectedCategory, setSelectedCategory] = useState('classroom')
+  const [searchTerm, setSearchTerm] = useState('')
+  const [priceRange, setPriceRange] = useState('all')
+  const [duration, setDuration] = useState('all')
+  const [difficulty, setDifficulty] = useState('all')
+  const [showFilters, setShowFilters] = useState(false)
 
   const handleEnrollClick = (courseId: string) => {
     console.log(`Enroll clicked for course: ${courseId}`)
@@ -39,6 +48,63 @@ export function CoursesSection() {
       console.log(`Course details not found for: ${courseId}`)
     }
   }
+
+  // Advanced filtering logic
+  const filteredCourses = useMemo(() => {
+    let filtered = courses.filter((course) => course.category === selectedCategory)
+
+    // Search filter
+    if (searchTerm) {
+      filtered = filtered.filter(
+        (course) =>
+          course.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          course.description.toLowerCase().includes(searchTerm.toLowerCase())
+      )
+    }
+
+    // Price filter
+    if (priceRange !== 'all') {
+      switch (priceRange) {
+        case 'under50k':
+          filtered = filtered.filter((course) => {
+            const coursePrice = parseInt(course.price.replace(/[₹,]/g, ''))
+            return coursePrice < 50000
+          })
+          break
+        case '50k-80k':
+          filtered = filtered.filter((course) => {
+            const coursePrice = parseInt(course.price.replace(/[₹,]/g, ''))
+            return coursePrice >= 50000 && coursePrice <= 80000
+          })
+          break
+        case 'above80k':
+          filtered = filtered.filter((course) => {
+            const coursePrice = parseInt(course.price.replace(/[₹,]/g, ''))
+            return coursePrice > 80000
+          })
+          break
+      }
+    }
+
+    // Duration filter
+    if (duration !== 'all') {
+      filtered = filtered.filter((course) => {
+        const courseDuration = course.duration.toLowerCase()
+        switch (duration) {
+          case 'short':
+            return courseDuration.includes('month') && !courseDuration.includes('year')
+          case 'medium':
+            return courseDuration.includes('6 month') || courseDuration.includes('8 month')
+          case 'long':
+            return courseDuration.includes('year') || courseDuration.includes('12 month')
+          default:
+            return true
+        }
+      })
+    }
+
+    return filtered
+  }, [selectedCategory, searchTerm, priceRange, duration, courses])
 
   return (
     <section className="py-20 bg-gray-50">
@@ -96,9 +162,96 @@ export function CoursesSection() {
           })}
         </motion.div>
 
+        {/* Search and Filters */}
+        <motion.div
+          className="bg-white rounded-2xl p-6 shadow-lg mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          viewport={{ once: true }}
+        >
+          <div className="flex flex-col lg:flex-row gap-4 items-center">
+            {/* Search Bar */}
+            <div className="flex-1 relative">
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+              <input
+                type="text"
+                placeholder="Search courses by name or description..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-100 outline-none transition-all min-h-[48px] touch-manipulation"
+              />
+            </div>
+
+            {/* Filter Toggle */}
+            <button
+              onClick={() => setShowFilters(!showFilters)}
+              className={`flex items-center space-x-2 px-4 py-3 rounded-xl border transition-all min-h-[48px] touch-manipulation ${
+                showFilters
+                  ? 'bg-primary-50 border-primary-200 text-primary-700'
+                  : 'bg-white border-gray-200 text-gray-600 hover:border-primary-200 hover:bg-primary-50'
+              }`}
+            >
+              <SlidersHorizontal className="w-5 h-5" />
+              <span className="font-medium">Filters</span>
+            </button>
+          </div>
+
+          {/* Advanced Filters */}
+          {showFilters && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6 pt-6 border-t border-gray-200"
+            >
+              {/* Price Range Filter */}
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  Price Range
+                </label>
+                <select
+                  value={priceRange}
+                  onChange={(e) => setPriceRange(e.target.value)}
+                  className="w-full px-3 py-2 rounded-lg border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-100 outline-none min-h-[44px] touch-manipulation"
+                >
+                  <option value="all">All Prices</option>
+                  <option value="under50k">Under ₹50,000</option>
+                  <option value="50k-80k">₹50,000 - ₹80,000</option>
+                  <option value="above80k">Above ₹80,000</option>
+                </select>
+              </div>
+
+              {/* Duration Filter */}
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">Duration</label>
+                <select
+                  value={duration}
+                  onChange={(e) => setDuration(e.target.value)}
+                  className="w-full px-3 py-2 rounded-lg border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-100 outline-none min-h-[44px] touch-manipulation"
+                >
+                  <option value="all">All Durations</option>
+                  <option value="short">Short Term (1-3 months)</option>
+                  <option value="medium">Medium Term (6-8 months)</option>
+                  <option value="long">Long Term (1+ year)</option>
+                </select>
+              </div>
+
+              {/* Results Count */}
+              <div className="flex items-end">
+                <div className="bg-primary-50 text-primary-700 px-4 py-2 rounded-lg border border-primary-200">
+                  <span className="text-sm font-medium">
+                    {filteredCourses.length} course{filteredCourses.length !== 1 ? 's' : ''} found
+                  </span>
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </motion.div>
+
         {/* Courses Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16">
-          {courses.map((course, index) => (
+          {filteredCourses.map((course, index) => (
             <motion.div
               key={course.id}
               className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"

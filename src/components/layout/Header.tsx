@@ -202,14 +202,14 @@ const Header = () => {
               {/* Auth Buttons */}
               <Link
                 href="/auth/signin"
-                className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium transition-colors px-3 py-2 rounded-lg hover:bg-blue-50"
+                className="flex items-center space-x-2 text-gray-700 hover:text-primary-600 font-medium transition-colors px-4 py-3 rounded-xl hover:bg-primary-50 min-h-[44px] touch-manipulation"
               >
                 <LogIn className="w-4 h-4" />
                 <span>Sign In</span>
               </Link>
               <Link
                 href="/auth/signup"
-                className="flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-medium transition-colors px-3 py-2 border border-blue-200 rounded-lg hover:bg-blue-50"
+                className="flex items-center space-x-2 text-primary-600 hover:text-primary-700 font-medium transition-colors px-4 py-3 border border-primary-200 rounded-xl hover:bg-primary-50 min-h-[44px] touch-manipulation"
               >
                 <UserPlus className="w-4 h-4" />
                 <span>Sign Up</span>
@@ -218,7 +218,8 @@ const Header = () => {
               {/* Primary CTA */}
               <Link
                 href="/support/demo"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-5 py-2 rounded-full font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-md hover:shadow-lg"
+                className="bg-gradient-to-r from-primary-600 to-purple-600 text-white px-6 py-3 rounded-full font-semibold hover:from-primary-700 hover:to-purple-700 transition-all duration-300 transform hover:-translate-y-1 min-h-[48px] flex items-center touch-manipulation"
+                style={{ boxShadow: 'var(--shadow-premium)' }}
               >
                 Book Free Demo
               </Link>
@@ -320,14 +321,14 @@ const Header = () => {
                   <div className="flex space-x-3">
                     <Link
                       href="/auth/signin"
-                      className="flex-1 flex items-center justify-center space-x-2 text-gray-700 hover:text-blue-600 font-medium transition-colors py-2 border border-gray-200 rounded-lg hover:bg-blue-50"
+                      className="flex-1 flex items-center justify-center space-x-2 text-gray-700 hover:text-primary-600 font-medium transition-colors py-3 border border-gray-200 rounded-xl hover:bg-primary-50 min-h-[48px] touch-manipulation"
                     >
                       <LogIn className="w-4 h-4" />
                       <span>Sign In</span>
                     </Link>
                     <Link
                       href="/auth/signup"
-                      className="flex-1 flex items-center justify-center space-x-2 text-blue-600 hover:text-blue-700 font-medium transition-colors py-2 border border-blue-200 rounded-lg hover:bg-blue-50"
+                      className="flex-1 flex items-center justify-center space-x-2 text-primary-600 hover:text-primary-700 font-medium transition-colors py-3 border border-primary-200 rounded-xl hover:bg-primary-50 min-h-[48px] touch-manipulation"
                     >
                       <UserPlus className="w-4 h-4" />
                       <span>Sign Up</span>
@@ -337,7 +338,8 @@ const Header = () => {
                   {/* Primary CTA */}
                   <Link
                     href="/support/demo"
-                    className="block w-full text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+                    className="block w-full text-center bg-gradient-to-r from-primary-600 to-purple-600 text-white px-6 py-4 rounded-full font-semibold hover:from-primary-700 hover:to-purple-700 transition-all duration-300 min-h-[52px] flex items-center justify-center touch-manipulation"
+                    style={{ boxShadow: 'var(--shadow-premium)' }}
                   >
                     Book Free Demo
                   </Link>

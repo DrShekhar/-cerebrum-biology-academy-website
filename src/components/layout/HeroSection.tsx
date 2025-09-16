@@ -22,7 +22,10 @@ export function HeroSection() {
   }
 
   return (
-    <section className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 px-4 py-12">
+    <section
+      className="min-h-screen bg-gradient-to-br from-primary-50 via-primary-100 to-indigo-100 px-4 py-12"
+      style={{ background: 'var(--gradient-hero)' }}
+    >
       <div className="max-w-7xl mx-auto">
         {/* Hero Content */}
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -57,13 +60,25 @@ export function HeroSection() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="primary" size="xl" onClick={handleBookDemo} className="group">
-                <Calendar className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" />
+              <Button
+                variant="primary"
+                size="xl"
+                onClick={handleBookDemo}
+                className="group min-h-[54px] px-8 py-4 rounded-2xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                style={{ boxShadow: 'var(--shadow-premium)' }}
+              >
+                <Calendar className="w-6 h-6 mr-3 group-hover:rotate-12 transition-transform" />
                 Book Free Demo
               </Button>
 
-              <Button variant="secondary_cta" size="xl" onClick={handleCallNow} className="group">
-                <Phone className="w-5 h-5 mr-2 group-hover:ring-2 group-hover:ring-blue-300 rounded-full transition-all" />
+              <Button
+                variant="secondary_cta"
+                size="xl"
+                onClick={handleCallNow}
+                className="group min-h-[54px] px-8 py-4 rounded-2xl font-semibold text-lg border-2 border-primary-200 bg-white/90 backdrop-blur-sm hover:bg-white hover:border-primary-300 transition-all duration-300 transform hover:-translate-y-1"
+                style={{ boxShadow: 'var(--shadow-soft)' }}
+              >
+                <Phone className="w-6 h-6 mr-3 group-hover:ring-2 group-hover:ring-primary-300 rounded-full transition-all" />
                 Call Now: +91 88264 44334
               </Button>
             </div>
@@ -72,17 +87,17 @@ export function HeroSection() {
             <div className="space-y-6 pt-6">
               {/* Trust Badges */}
               <div className="flex flex-wrap justify-center gap-3">
-                <div className="flex items-center bg-green-50 text-green-700 px-3 py-1 rounded-full text-sm">
+                <div className="flex items-center bg-emerald-50 text-emerald-700 px-4 py-2 rounded-full text-sm border border-emerald-100 shadow-sm backdrop-blur-sm">
                   <Trophy className="w-4 h-4 mr-2" />
-                  <span className="font-medium">9+ Years Excellence</span>
+                  <span className="font-semibold">9+ Years Excellence</span>
                 </div>
-                <div className="flex items-center bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm">
+                <div className="flex items-center bg-primary-50 text-primary-700 px-4 py-2 rounded-full text-sm border border-primary-100 shadow-sm backdrop-blur-sm">
                   <Users className="w-4 h-4 mr-2" />
-                  <span className="font-medium">2847+ Students Coached</span>
+                  <span className="font-semibold">2847+ Students Coached</span>
                 </div>
-                <div className="flex items-center bg-purple-50 text-purple-700 px-3 py-1 rounded-full text-sm">
+                <div className="flex items-center bg-gold-50 text-gold-700 px-4 py-2 rounded-full text-sm border border-gold-100 shadow-sm backdrop-blur-sm">
                   <BookOpen className="w-4 h-4 mr-2" />
-                  <span className="font-medium">247 AIIMS Selections</span>
+                  <span className="font-semibold">247 AIIMS Selections</span>
                 </div>
               </div>
 
@@ -162,7 +177,8 @@ export function HeroSection() {
               {stats.map((stat, index) => (
                 <motion.div
                   key={stat.label}
-                  className="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow"
+                  className="bg-white/95 backdrop-blur-sm rounded-3xl p-6 text-center border border-white/50 hover:border-primary-200 transition-all duration-300 transform hover:-translate-y-2 hover:scale-105"
+                  style={{ boxShadow: 'var(--shadow-premium)' }}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
