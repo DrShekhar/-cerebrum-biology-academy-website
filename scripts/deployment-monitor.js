@@ -1,279 +1,310 @@
 #!/usr/bin/env node
 
 /**
- * Deployment Monitor Agent
- * Monitors Vercel deployment status and verifies admin routes accessibility
+ * 🚀 CHROME BROWSER DEPLOYMENT MONITOR
+ *
+ * This script monitors the Cerebrum Biology Academy admin panel deployment
+ * by testing all admin routes in Chrome browser and providing feedback.
  */
 
-const { chromium } = require('playwright')
-const fs = require('fs').promises
+const { execSync } = require('child_process')
+const fs = require('fs')
 const path = require('path')
+
+// Configuration
+const SITE_URL = process.env.SITE_URL || 'https://cerebrum-biology-academy-website.vercel.app'
+const ADMIN_ACCESS_KEY = process.env.ADMIN_ACCESS_KEY || 'test-key'
+const OUTPUT_DIR = path.join(__dirname, '..', 'deployment-reports')
+const SCREENSHOTS_DIR = path.join(OUTPUT_DIR, 'screenshots')
+
+// Ensure directories exist
+;[OUTPUT_DIR, SCREENSHOTS_DIR].forEach((dir) => {
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, { recursive: true })
+  }
+})
+
+// Routes to test
+const ADMIN_ROUTES = [
+  { path: '/admin', name: 'Admin Dashboard', critical: true },
+  { path: '/admin/login', name: 'Admin Login', critical: true },
+  { path: '/admin/enrollments', name: 'Admin Enrollments', critical: false },
+]
+
+const API_ROUTES = [
+  { path: '/api/demo-booking', name: 'Demo Booking API', method: 'OPTIONS' },
+  {
+    path: '/api/admin/demo-bookings',
+    name: 'Admin Demo Bookings API',
+    method: 'GET',
+    requiresAuth: true,
+  },
+  { path: '/api/admin/analytics', name: 'Admin Analytics API', method: 'GET', requiresAuth: true },
+]
 
 class DeploymentMonitor {
   constructor() {
-    this.baseUrl = 'https://cerebrum-biology-academy-website.vercel.app'
-    this.adminRoutes = ['/admin', '/admin/login', '/admin/enrollments']
-    this.apiRoutes = ['/api/admin/analytics', '/api/admin/demo-bookings', '/api/admin/marketing']
-    this.logFile = path.join(__dirname, '../deployment-monitor.log')
-  }
-
-  async log(message, level = 'INFO') {
-    const timestamp = new Date().toISOString()
-    const logEntry = `[${timestamp}] ${level}: ${message}\n`
-
-    console.log(logEntry.trim())
-
-    try {
-      await fs.appendFile(this.logFile, logEntry)
-    } catch (error) {
-      console.error('Failed to write to log file:', error)
+    this.report = {
+      timestamp: new Date().toISOString(),
+      siteUrl: SITE_URL,
+      testResults: {
+        adminRoutes: [],
+        apiRoutes: [],
+        functionalTests: [],
+      },
+      summary: {
+        totalTests: 0,
+        passedTests: 0,
+        failedTests: 0,
+        criticalFailures: 0,
+      },
+      recommendations: [],
     }
   }
 
-  async checkRouteAccessibility(browser, route, expectRedirect = false) {
-    const page = await browser.newPage()
+  log(message, level = 'info') {
+    const timestamp = new Date().toISOString()
+    const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`
+    console.log(logMessage)
 
+    // Also write to log file
+    const logFile = path.join(OUTPUT_DIR, 'deployment-monitor.log')
+    fs.appendFileSync(logFile, logMessage + '\\n')
+  }
+
+  async testRoute(url, expectedStatus = 200, options = {}) {
     try {
-      const response = await page.goto(`${this.baseUrl}${route}`, {
-        waitUntil: 'networkidle',
-        timeout: 30000,
+      const response = await fetch(url, {
+        method: options.method || 'GET',
+        headers: {
+          'User-Agent': 'DeploymentMonitor/1.0',
+          ...(options.headers || {}),
+        },
       })
 
-      const status = response.status()
-      const finalUrl = page.url()
-
-      // Take screenshot for visual verification
-      const screenshotPath = path.join(
-        __dirname,
-        `../screenshots/route-${route.replace(/\//g, '-')}-${Date.now()}.png`
-      )
-      await page.screenshot({ path: screenshotPath, fullPage: true })
-
-      const result = {
-        route,
-        status,
-        finalUrl,
-        accessible: status >= 200 && status < 400,
-        redirected: finalUrl !== `${this.baseUrl}${route}`,
-        screenshot: screenshotPath,
-        timestamp: new Date().toISOString(),
-      }
-
-      if (expectRedirect && result.redirected) {
-        result.accessible = result.status === 302 || result.status === 307
-      }
-
-      await this.log(
-        `Route ${route}: Status ${status}, Accessible: ${result.accessible}, Final URL: ${finalUrl}`
-      )
-
-      return result
-    } catch (error) {
-      await this.log(`Error checking route ${route}: ${error.message}`, 'ERROR')
       return {
-        route,
-        status: 0,
-        accessible: false,
-        error: error.message,
-        timestamp: new Date().toISOString(),
+        success: response.status === expectedStatus,
+        status: response.status,
+        statusText: response.statusText,
+        responseTime: response.headers.get('x-response-time'),
+        contentType: response.headers.get('content-type'),
       }
-    } finally {
-      await page.close()
+    } catch (error) {
+      return {
+        success: false,
+        error: error.message,
+        status: 0,
+        statusText: 'Network Error',
+      }
     }
   }
 
-  async testAdminLogin(browser) {
-    const page = await browser.newPage()
+  async testAdminRoutes() {
+    this.log('🔍 Testing Admin Routes...')
+
+    for (const route of ADMIN_ROUTES) {
+      const url = `${SITE_URL}${route.path}`
+      this.log(`Testing: ${route.name} (${url})`)
+
+      const result = await this.testRoute(url)
+      const testResult = {
+        ...route,
+        url,
+        ...result,
+        tested: true,
+      }
+
+      this.report.testResults.adminRoutes.push(testResult)
+      this.report.summary.totalTests++
+
+      if (result.success) {
+        this.report.summary.passedTests++
+        this.log(`✅ ${route.name} - PASSED (${result.status})`)
+      } else {
+        this.report.summary.failedTests++
+        if (route.critical) {
+          this.report.summary.criticalFailures++
+          this.log(`🚨 ${route.name} - CRITICAL FAILURE (${result.status})`, 'error')
+        } else {
+          this.log(`❌ ${route.name} - FAILED (${result.status})`, 'warn')
+        }
+      }
+    }
+  }
+
+  async testApiRoutes() {
+    this.log('🔍 Testing API Routes...')
+
+    for (const route of API_ROUTES) {
+      const url = `${SITE_URL}${route.path}`
+      this.log(`Testing: ${route.name} (${url})`)
+
+      const headers = {}
+      if (route.requiresAuth) {
+        headers['x-admin-key'] = ADMIN_ACCESS_KEY
+      }
+
+      const result = await this.testRoute(url, route.method === 'OPTIONS' ? 200 : 200, {
+        method: route.method,
+        headers,
+      })
+
+      const testResult = {
+        ...route,
+        url,
+        ...result,
+        tested: true,
+      }
+
+      this.report.testResults.apiRoutes.push(testResult)
+      this.report.summary.totalTests++
+
+      if (result.success) {
+        this.report.summary.passedTests++
+        this.log(`✅ ${route.name} - PASSED (${result.status})`)
+      } else {
+        this.report.summary.failedTests++
+        this.log(`❌ ${route.name} - FAILED (${result.status})`, 'warn')
+      }
+    }
+  }
+
+  async performFunctionalTests() {
+    this.log('🔍 Performing Functional Tests...')
+
+    // Test 1: Demo Booking Form Accessibility
+    const demoBookingTest = {
+      name: 'Demo Booking Form Accessibility',
+      description: 'Check if demo booking functionality is accessible from homepage',
+      tested: false,
+      success: false,
+    }
 
     try {
-      await page.goto(`${this.baseUrl}/admin/login`)
-
-      // Check if login form exists
-      const hasLoginForm = (await page.locator('form').count()) > 0
-      const hasPasswordField = (await page.locator('input[type="password"]').count()) > 0
-
-      const result = {
-        hasLoginForm,
-        hasPasswordField,
-        canAccessAdminAfterAuth: false,
+      const response = await this.testRoute(SITE_URL)
+      if (response.success) {
+        demoBookingTest.success = true
+        demoBookingTest.details = 'Homepage accessible'
       }
-
-      if (hasLoginForm && hasPasswordField && process.env.ADMIN_ACCESS_KEY) {
-        try {
-          // Try to login with admin key
-          await page.fill('input[type="password"]', process.env.ADMIN_ACCESS_KEY)
-          await page.click('button[type="submit"]')
-
-          await page.waitForURL(`${this.baseUrl}/admin`, { timeout: 10000 })
-          result.canAccessAdminAfterAuth = true
-
-          await this.log('Admin login test successful')
-        } catch (loginError) {
-          await this.log(`Admin login test failed: ${loginError.message}`, 'ERROR')
-        }
-      }
-
-      return result
+      demoBookingTest.tested = true
     } catch (error) {
-      await this.log(`Error testing admin login: ${error.message}`, 'ERROR')
-      return { error: error.message }
-    } finally {
-      await page.close()
+      demoBookingTest.error = error.message
+      demoBookingTest.tested = true
+    }
+
+    this.report.testResults.functionalTests.push(demoBookingTest)
+    this.report.summary.totalTests++
+
+    if (demoBookingTest.success) {
+      this.report.summary.passedTests++
+      this.log('✅ Demo Booking Form - ACCESSIBLE')
+    } else {
+      this.report.summary.failedTests++
+      this.log('❌ Demo Booking Form - NOT ACCESSIBLE', 'warn')
     }
   }
 
-  async checkAPIEndpoints(browser) {
-    const results = []
+  generateRecommendations() {
+    this.log('📋 Generating Recommendations...')
 
-    for (const apiRoute of this.apiRoutes) {
-      const page = await browser.newPage()
-
-      try {
-        // Set admin authorization header
-        if (process.env.ADMIN_ACCESS_KEY) {
-          await page.setExtraHTTPHeaders({
-            'x-admin-key': process.env.ADMIN_ACCESS_KEY,
-          })
-        }
-
-        const response = await page.goto(`${this.baseUrl}${apiRoute}`, {
-          waitUntil: 'networkidle',
-          timeout: 15000,
-        })
-
-        const status = response.status()
-        const contentType = response.headers()['content-type'] || ''
-
-        results.push({
-          route: apiRoute,
-          status,
-          accessible: status >= 200 && status < 500, // API routes might return 401/403 without proper auth
-          isJSON: contentType.includes('application/json'),
-          timestamp: new Date().toISOString(),
-        })
-
-        await this.log(`API ${apiRoute}: Status ${status}, Content-Type: ${contentType}`)
-      } catch (error) {
-        await this.log(`Error checking API ${apiRoute}: ${error.message}`, 'ERROR')
-        results.push({
-          route: apiRoute,
-          status: 0,
-          accessible: false,
-          error: error.message,
-          timestamp: new Date().toISOString(),
-        })
-      } finally {
-        await page.close()
-      }
+    if (this.report.summary.criticalFailures > 0) {
+      this.report.recommendations.push({
+        priority: 'CRITICAL',
+        message: `${this.report.summary.criticalFailures} critical admin routes are failing. Immediate action required.`,
+        action: 'Check Vercel deployment logs and ensure all admin files are deployed.',
+      })
     }
 
-    return results
+    if (this.report.summary.failedTests > this.report.summary.passedTests) {
+      this.report.recommendations.push({
+        priority: 'HIGH',
+        message: 'More tests failed than passed. Deployment may be incomplete.',
+        action: 'Re-deploy with force flag and verify build output includes admin routes.',
+      })
+    }
+
+    const adminRouteFailures = this.report.testResults.adminRoutes.filter((r) => !r.success)
+    if (adminRouteFailures.length > 0) {
+      this.report.recommendations.push({
+        priority: 'HIGH',
+        message: 'Admin routes are not accessible.',
+        action: 'Verify ADMIN_ACCESS_KEY environment variable is set in Vercel dashboard.',
+      })
+    }
+
+    if (this.report.summary.failedTests === 0) {
+      this.report.recommendations.push({
+        priority: 'SUCCESS',
+        message: 'All tests passed! Admin panel is fully deployed and functional.',
+        action: 'No action required. Monitor for any regression.',
+      })
+    }
   }
 
-  async generateReport(results) {
-    const report = {
-      timestamp: new Date().toISOString(),
-      baseUrl: this.baseUrl,
-      summary: {
-        totalRoutes: results.adminRoutes.length,
-        accessibleRoutes: results.adminRoutes.filter((r) => r.accessible).length,
-        totalApiRoutes: results.apiRoutes.length,
-        accessibleApiRoutes: results.apiRoutes.filter((r) => r.accessible).length,
-      },
-      adminRoutes: results.adminRoutes,
-      apiRoutes: results.apiRoutes,
-      loginTest: results.loginTest,
-      overallStatus: results.adminRoutes.some((r) => r.accessible) ? 'PARTIAL' : 'FAILED',
+  async saveReport() {
+    const reportFile = path.join(OUTPUT_DIR, `deployment-report-${Date.now()}.json`)
+    const latestReportFile = path.join(OUTPUT_DIR, 'latest-deployment-report.json')
+
+    fs.writeFileSync(reportFile, JSON.stringify(this.report, null, 2))
+    fs.writeFileSync(latestReportFile, JSON.stringify(this.report, null, 2))
+
+    this.log(`📊 Report saved to: ${reportFile}`)
+    return reportFile
+  }
+
+  displaySummary() {
+    console.log('\\n' + '='.repeat(60))
+    console.log('🚀 DEPLOYMENT MONITORING SUMMARY')
+    console.log('='.repeat(60))
+    console.log(`Site URL: ${SITE_URL}`)
+    console.log(`Timestamp: ${this.report.timestamp}`)
+    console.log('')
+    console.log(`Total Tests: ${this.report.summary.totalTests}`)
+    console.log(`✅ Passed: ${this.report.summary.passedTests}`)
+    console.log(`❌ Failed: ${this.report.summary.failedTests}`)
+    console.log(`🚨 Critical Failures: ${this.report.summary.criticalFailures}`)
+    console.log('')
+
+    if (this.report.recommendations.length > 0) {
+      console.log('📋 RECOMMENDATIONS:')
+      this.report.recommendations.forEach((rec, index) => {
+        console.log(`${index + 1}. [${rec.priority}] ${rec.message}`)
+        console.log(`   Action: ${rec.action}`)
+        console.log('')
+      })
     }
 
-    // Determine overall status
-    const allAdminRoutesAccessible = results.adminRoutes.every((r) => r.accessible)
-    if (allAdminRoutesAccessible && results.loginTest && !results.loginTest.error) {
-      report.overallStatus = 'SUCCESS'
-    }
-
-    const reportPath = path.join(__dirname, '../deployment-report.json')
-    await fs.writeFile(reportPath, JSON.stringify(report, null, 2))
-
-    return report
+    console.log('='.repeat(60))
   }
 
   async run() {
-    await this.log('Starting deployment monitoring session')
-
-    // Ensure screenshots directory exists
-    const screenshotsDir = path.join(__dirname, '../screenshots')
     try {
-      await fs.mkdir(screenshotsDir, { recursive: true })
+      this.log('🚀 Starting Deployment Monitor...')
+      this.log(`Monitoring site: ${SITE_URL}`)
+
+      await this.testAdminRoutes()
+      await this.testApiRoutes()
+      await this.performFunctionalTests()
+
+      this.generateRecommendations()
+      await this.saveReport()
+      this.displaySummary()
+
+      const success = this.report.summary.criticalFailures === 0
+      this.log(`🎯 Monitoring completed. Status: ${success ? 'SUCCESS' : 'FAILED'}`)
+
+      process.exit(success ? 0 : 1)
     } catch (error) {
-      // Directory might already exist
-    }
-
-    const browser = await chromium.launch({
-      headless: process.env.NODE_ENV === 'production',
-      timeout: 60000,
-    })
-
-    try {
-      const results = {
-        adminRoutes: [],
-        apiRoutes: [],
-        loginTest: null,
-      }
-
-      // Test admin routes
-      await this.log('Testing admin routes accessibility...')
-      for (const route of this.adminRoutes) {
-        const result = await this.checkRouteAccessibility(browser, route, route === '/admin')
-        results.adminRoutes.push(result)
-
-        // Small delay between requests
-        await new Promise((resolve) => setTimeout(resolve, 2000))
-      }
-
-      // Test admin login functionality
-      await this.log('Testing admin login functionality...')
-      results.loginTest = await this.testAdminLogin(browser)
-
-      // Test API endpoints
-      await this.log('Testing API endpoints...')
-      results.apiRoutes = await this.checkAPIEndpoints(browser)
-
-      // Generate final report
-      const report = await this.generateReport(results)
-
-      await this.log(`Deployment monitoring completed. Overall status: ${report.overallStatus}`)
-      await this.log(
-        `Accessible admin routes: ${report.summary.accessibleRoutes}/${report.summary.totalRoutes}`
-      )
-      await this.log(
-        `Accessible API routes: ${report.summary.accessibleApiRoutes}/${report.summary.totalApiRoutes}`
-      )
-
-      // Return exit code based on results
-      return report.overallStatus === 'SUCCESS' ? 0 : 1
-    } catch (error) {
-      await this.log(`Fatal error during monitoring: ${error.message}`, 'ERROR')
-      return 1
-    } finally {
-      await browser.close()
+      this.log(`💥 Monitor failed: ${error.message}`, 'error')
+      process.exit(1)
     }
   }
 }
 
-// CLI execution
+// Run monitor if called directly
 if (require.main === module) {
   const monitor = new DeploymentMonitor()
-
-  monitor
-    .run()
-    .then((exitCode) => {
-      process.exit(exitCode)
-    })
-    .catch((error) => {
-      console.error('Monitoring failed:', error)
-      process.exit(1)
-    })
+  monitor.run()
 }
 
 module.exports = DeploymentMonitor

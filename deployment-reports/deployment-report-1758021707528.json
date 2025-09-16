@@ -1,0 +1,116 @@
+{
+  "timestamp": "2025-09-16T11:21:45.154Z",
+  "siteUrl": "https://cerebrum-biology-academy-website.vercel.app",
+  "testResults": {
+    "adminRoutes": [
+      {
+        "path": "/admin",
+        "name": "Admin Dashboard",
+        "critical": true,
+        "url": "https://cerebrum-biology-academy-website.vercel.app/admin",
+        "success": false,
+        "status": 404,
+        "statusText": "Not Found",
+        "responseTime": null,
+        "contentType": "text/html; charset=utf-8",
+        "tested": true
+      },
+      {
+        "path": "/admin/login",
+        "name": "Admin Login",
+        "critical": true,
+        "url": "https://cerebrum-biology-academy-website.vercel.app/admin/login",
+        "success": false,
+        "status": 404,
+        "statusText": "Not Found",
+        "responseTime": null,
+        "contentType": "text/html; charset=utf-8",
+        "tested": true
+      },
+      {
+        "path": "/admin/enrollments",
+        "name": "Admin Enrollments",
+        "critical": false,
+        "url": "https://cerebrum-biology-academy-website.vercel.app/admin/enrollments",
+        "success": true,
+        "status": 200,
+        "statusText": "OK",
+        "responseTime": null,
+        "contentType": "text/html; charset=utf-8",
+        "tested": true
+      }
+    ],
+    "apiRoutes": [
+      {
+        "path": "/api/demo-booking",
+        "name": "Demo Booking API",
+        "method": "OPTIONS",
+        "url": "https://cerebrum-biology-academy-website.vercel.app/api/demo-booking",
+        "success": false,
+        "status": 204,
+        "statusText": "No Content",
+        "responseTime": null,
+        "contentType": null,
+        "tested": true
+      },
+      {
+        "path": "/api/admin/demo-bookings",
+        "name": "Admin Demo Bookings API",
+        "method": "GET",
+        "requiresAuth": true,
+        "url": "https://cerebrum-biology-academy-website.vercel.app/api/admin/demo-bookings",
+        "success": false,
+        "status": 404,
+        "statusText": "Not Found",
+        "responseTime": null,
+        "contentType": "text/html; charset=utf-8",
+        "tested": true
+      },
+      {
+        "path": "/api/admin/analytics",
+        "name": "Admin Analytics API",
+        "method": "GET",
+        "requiresAuth": true,
+        "url": "https://cerebrum-biology-academy-website.vercel.app/api/admin/analytics",
+        "success": false,
+        "status": 404,
+        "statusText": "Not Found",
+        "responseTime": null,
+        "contentType": "text/html; charset=utf-8",
+        "tested": true
+      }
+    ],
+    "functionalTests": [
+      {
+        "name": "Demo Booking Form Accessibility",
+        "description": "Check if demo booking functionality is accessible from homepage",
+        "tested": true,
+        "success": true,
+        "details": "Homepage accessible"
+      }
+    ]
+  },
+  "summary": {
+    "totalTests": 7,
+    "passedTests": 2,
+    "failedTests": 5,
+    "criticalFailures": 2
+  },
+  "recommendations": [
+    {
+      "priority": "CRITICAL",
+      "message": "2 critical admin routes are failing. Immediate action required.",
+      "action": "Check Vercel deployment logs and ensure all admin files are deployed."
+    },
+    {
+      "priority": "HIGH",
+      "message": "More tests failed than passed. Deployment may be incomplete.",
+      "action": "Re-deploy with force flag and verify build output includes admin routes."
+    },
+    {
+      "priority": "HIGH",
+      "message": "Admin routes are not accessible.",
+      "action": "Verify ADMIN_ACCESS_KEY environment variable is set in Vercel dashboard."
+    }
+  ]
+}
