@@ -1,17 +1,17 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, Suspense } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { motion } from 'framer-motion'
 import { BookOpen, Lock, Eye, EyeOff } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 
-export default function AdminLogin() {
+function AdminLoginForm() {
   const [adminKey, setAdminKey] = useState('')
   const [showKey, setShowKey] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState('')
-  
+
   const router = useRouter()
   const searchParams = useSearchParams()
   const redirectTo = searchParams.get('redirect') || '/admin'
@@ -30,13 +30,13 @@ export default function AdminLogin() {
       // Set secure admin session cookie with HTTPOnly simulation
       const sessionToken = generateSecureToken()
       document.cookie = `admin-session=${sessionToken}; path=/admin; max-age=3600; secure; samesite=strict`
-      
+
       // Redirect to admin dashboard
       router.push(redirectTo)
     } else {
       setError('Invalid admin access key')
     }
-    
+
     setIsLoading(false)
   }
 
@@ -99,12 +99,30 @@ export default function AdminLogin() {
           </Button>
         </form>
 
-
         {/* Footer */}
         <div className="mt-6 text-center text-xs text-gray-500">
           Secure admin access for authorized personnel only
         </div>
       </motion.div>
     </div>
+  )
+}
+
+export default function AdminLogin() {
+  return (
+    <Suspense
+      fallback={
+        <div className="min-h-screen bg-gradient-to-br from-primary-50 via-primary-100 to-indigo-100 flex items-center justify-center">
+          <div className="text-center">
+            <div className="w-16 h-16 bg-gradient-to-r from-primary-600 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <BookOpen className="w-8 h-8 text-white" />
+            </div>
+            <div className="text-lg font-semibold text-gray-700">Loading...</div>
+          </div>
+        </div>
+      }
+    >
+      <AdminLoginForm />
+    </Suspense>
   )
 }
