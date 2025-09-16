@@ -3,6 +3,9 @@ import { Geist, Geist_Mono } from 'next/font/google'
 import { StructuredData } from '@/components/seo/StructuredData'
 import { ErrorBoundary } from '@/components/ErrorBoundary'
 import { AnalyticsProvider } from '@/components/analytics/AnalyticsProvider'
+import { StickyTrustBar } from '@/components/common/StickyTrustBar'
+import { RealTimeProof } from '@/components/common/RealTimeProof'
+import { FloatingCTA } from '@/components/common/FloatingCTA'
 import Header from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 import './globals.css'
@@ -77,9 +80,12 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <AnalyticsProvider>
           <ErrorBoundary>
+            <StickyTrustBar />
             <Header />
             <main className="min-h-screen">{children}</main>
             <Footer />
+            <RealTimeProof />
+            <FloatingCTA />
           </ErrorBoundary>
         </AnalyticsProvider>
       </body>

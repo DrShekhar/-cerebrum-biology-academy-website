@@ -26,8 +26,7 @@ import { SearchMenu } from '@/components/navigation/SearchMenu'
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isCoursesOpen, setIsCoursesOpen] = useState(false)
-  const [isServicesOpen, setIsServicesOpen] = useState(false)
-  const [isTestsOpen, setIsTestsOpen] = useState(false)
+  const [isAuthOpen, setIsAuthOpen] = useState(false)
   const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(false)
   const [isSearchOpen, setIsSearchOpen] = useState(false)
   const pathname = usePathname()
@@ -36,8 +35,7 @@ const Header = () => {
   useEffect(() => {
     setIsMenuOpen(false)
     setIsCoursesOpen(false)
-    setIsServicesOpen(false)
-    setIsTestsOpen(false)
+    setIsAuthOpen(false)
     setIsBurgerMenuOpen(false)
     setIsSearchOpen(false)
   }, [pathname])
@@ -62,6 +60,7 @@ const Header = () => {
     { href: '/services/doubt-resolution', label: 'Doubt Resolution', icon: HelpCircle },
   ]
 
+  // Simplified navigation structure (6 core items)
   const mainNavigation = [
     { href: '/', label: 'Home' },
     {
@@ -69,23 +68,19 @@ const Header = () => {
       label: 'Courses',
       hasDropdown: true,
       items: courseLinks,
+      isMegaMenu: true,
     },
-    {
-      href: '/services',
-      label: 'Services',
-      hasDropdown: true,
-      items: serviceLinks,
-    },
-    {
-      href: '/mock-tests',
-      label: 'Tests',
-      hasDropdown: true,
-      items: testLinks,
-    },
-    { href: '/faculty', label: 'Faculty' },
     { href: '/success-stories', label: 'Success Stories' },
+    { href: '/faculty', label: 'Faculty' },
     { href: '/about', label: 'About' },
     { href: '/contact', label: 'Contact' },
+  ]
+
+  // Authentication dropdown items
+  const authOptions = [
+    { href: '/auth/signin', label: 'Student Login', icon: LogIn },
+    { href: '/auth/signup', label: 'New Student Registration', icon: UserPlus },
+    { href: '/admin', label: 'Admin Login', icon: Users },
   ]
 
   const isActive = (href: string) => {
@@ -127,13 +122,9 @@ const Header = () => {
                     className="relative"
                     onMouseEnter={() => {
                       if (item.label === 'Courses') setIsCoursesOpen(true)
-                      if (item.label === 'Services') setIsServicesOpen(true)
-                      if (item.label === 'Tests') setIsTestsOpen(true)
                     }}
                     onMouseLeave={() => {
                       if (item.label === 'Courses') setIsCoursesOpen(false)
-                      if (item.label === 'Services') setIsServicesOpen(false)
-                      if (item.label === 'Tests') setIsTestsOpen(false)
                     }}
                   >
                     <Link
@@ -147,29 +138,80 @@ const Header = () => {
                     </Link>
 
                     <AnimatePresence>
-                      {((item.label === 'Courses' && isCoursesOpen) ||
-                        (item.label === 'Services' && isServicesOpen) ||
-                        (item.label === 'Tests' && isTestsOpen)) && (
+                      {item.label === 'Courses' && isCoursesOpen && (
                         <motion.div
                           initial={{ opacity: 0, y: -10 }}
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: -10 }}
                           transition={{ duration: 0.2 }}
-                          className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50"
+                          className={`absolute top-full left-0 mt-2 bg-white rounded-lg shadow-xl border border-gray-200 py-4 z-50 ${
+                            item.isMegaMenu ? 'w-96' : 'w-64'
+                          }`}
                         >
-                          {item.items?.map((subItem, subIndex) => {
-                            const Icon = subItem.icon
-                            return (
-                              <Link
-                                key={subIndex}
-                                href={subItem.href}
-                                className="flex items-center space-x-3 px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
-                              >
-                                <Icon className="w-5 h-5" />
-                                <span className="font-medium">{subItem.label}</span>
-                              </Link>
-                            )
-                          })}
+                          {item.isMegaMenu ? (
+                            <div className="px-6">
+                              <div className="mb-4">
+                                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                                  NEET Biology Courses
+                                </h3>
+                                <p className="text-sm text-gray-600 mb-4">
+                                  Comprehensive programs designed for medical entrance success
+                                </p>
+                              </div>
+                              <div className="grid grid-cols-1 gap-3">
+                                {item.items?.map((subItem, subIndex) => {
+                                  const Icon = subItem.icon
+                                  return (
+                                    <Link
+                                      key={subIndex}
+                                      href={subItem.href}
+                                      className="flex items-center space-x-3 p-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors rounded-lg border border-gray-100 hover:border-blue-200"
+                                    >
+                                      <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+                                        <Icon className="w-5 h-5 text-blue-600" />
+                                      </div>
+                                      <div>
+                                        <span className="font-medium block">{subItem.label}</span>
+                                        <span className="text-xs text-gray-500">
+                                          {subIndex === 0
+                                            ? 'All courses overview'
+                                            : subIndex === 1
+                                              ? 'Foundation building'
+                                              : subIndex === 2
+                                                ? 'Board + NEET prep'
+                                                : 'Intensive NEET focus'}
+                                        </span>
+                                      </div>
+                                    </Link>
+                                  )
+                                })}
+                              </div>
+                              <div className="mt-4 pt-4 border-t border-gray-200">
+                                <Link
+                                  href="/support/demo"
+                                  className="block w-full text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-4 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all"
+                                >
+                                  Book Free Demo Class
+                                </Link>
+                              </div>
+                            </div>
+                          ) : (
+                            <div className="py-2">
+                              {item.items?.map((subItem, subIndex) => {
+                                const Icon = subItem.icon
+                                return (
+                                  <Link
+                                    key={subIndex}
+                                    href={subItem.href}
+                                    className="flex items-center space-x-3 px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                                  >
+                                    <Icon className="w-5 h-5" />
+                                    <span className="font-medium">{subItem.label}</span>
+                                  </Link>
+                                )
+                              })}
+                            </div>
+                          )}
                         </motion.div>
                       )}
                     </AnimatePresence>
@@ -199,21 +241,44 @@ const Header = () => {
 
             {/* Authentication & CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-3">
-              {/* Auth Buttons */}
-              <Link
-                href="/auth/signin"
-                className="flex items-center space-x-2 text-gray-700 hover:text-primary-600 font-medium transition-colors px-4 py-3 rounded-xl hover:bg-primary-50 min-h-[44px] touch-manipulation"
+              {/* Consolidated Login Dropdown */}
+              <div
+                className="relative"
+                onMouseEnter={() => setIsAuthOpen(true)}
+                onMouseLeave={() => setIsAuthOpen(false)}
               >
-                <LogIn className="w-4 h-4" />
-                <span>Sign In</span>
-              </Link>
-              <Link
-                href="/auth/signup"
-                className="flex items-center space-x-2 text-primary-600 hover:text-primary-700 font-medium transition-colors px-4 py-3 border border-primary-200 rounded-xl hover:bg-primary-50 min-h-[44px] touch-manipulation"
-              >
-                <UserPlus className="w-4 h-4" />
-                <span>Sign Up</span>
-              </Link>
+                <button className="flex items-center space-x-2 text-gray-700 hover:text-primary-600 font-medium transition-colors px-4 py-3 rounded-xl hover:bg-primary-50 min-h-[44px] touch-manipulation">
+                  <LogIn className="w-4 h-4" />
+                  <span>Login</span>
+                  <ChevronDown className="w-3 h-3" />
+                </button>
+
+                <AnimatePresence>
+                  {isAuthOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      transition={{ duration: 0.2 }}
+                      className="absolute top-full right-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50"
+                    >
+                      {authOptions.map((option, index) => {
+                        const Icon = option.icon
+                        return (
+                          <Link
+                            key={index}
+                            href={option.href}
+                            className="flex items-center space-x-3 px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                          >
+                            <Icon className="w-5 h-5" />
+                            <span className="font-medium">{option.label}</span>
+                          </Link>
+                        )
+                      })}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
 
               {/* Primary CTA */}
               <Link
@@ -221,7 +286,7 @@ const Header = () => {
                 className="bg-gradient-to-r from-primary-600 to-purple-600 text-white px-6 py-3 rounded-full font-semibold hover:from-primary-700 hover:to-purple-700 transition-all duration-300 transform hover:-translate-y-1 min-h-[48px] flex items-center touch-manipulation"
                 style={{ boxShadow: 'var(--shadow-premium)' }}
               >
-                Book Free Demo
+                Book Demo
               </Link>
             </div>
           </div>
@@ -256,27 +321,19 @@ const Header = () => {
                           <button
                             onClick={() => {
                               if (item.label === 'Courses') setIsCoursesOpen(!isCoursesOpen)
-                              if (item.label === 'Services') setIsServicesOpen(!isServicesOpen)
-                              if (item.label === 'Tests') setIsTestsOpen(!isTestsOpen)
                             }}
                             className="p-2 text-gray-500 hover:text-blue-600"
                           >
                             <ChevronDown
                               className={`w-4 h-4 transition-transform ${
-                                (item.label === 'Courses' && isCoursesOpen) ||
-                                (item.label === 'Services' && isServicesOpen) ||
-                                (item.label === 'Tests' && isTestsOpen)
-                                  ? 'rotate-180'
-                                  : ''
+                                item.label === 'Courses' && isCoursesOpen ? 'rotate-180' : ''
                               }`}
                             />
                           </button>
                         </div>
 
                         <AnimatePresence>
-                          {((item.label === 'Courses' && isCoursesOpen) ||
-                            (item.label === 'Services' && isServicesOpen) ||
-                            (item.label === 'Tests' && isTestsOpen)) && (
+                          {item.label === 'Courses' && isCoursesOpen && (
                             <motion.div
                               initial={{ opacity: 0, height: 0 }}
                               animate={{ opacity: 1, height: 'auto' }}
@@ -317,22 +374,21 @@ const Header = () => {
 
                 {/* Mobile Auth & CTA Buttons */}
                 <div className="pt-4 border-t border-gray-200 space-y-3">
-                  {/* Auth Buttons */}
-                  <div className="flex space-x-3">
-                    <Link
-                      href="/auth/signin"
-                      className="flex-1 flex items-center justify-center space-x-2 text-gray-700 hover:text-primary-600 font-medium transition-colors py-3 border border-gray-200 rounded-xl hover:bg-primary-50 min-h-[48px] touch-manipulation"
-                    >
-                      <LogIn className="w-4 h-4" />
-                      <span>Sign In</span>
-                    </Link>
-                    <Link
-                      href="/auth/signup"
-                      className="flex-1 flex items-center justify-center space-x-2 text-primary-600 hover:text-primary-700 font-medium transition-colors py-3 border border-primary-200 rounded-xl hover:bg-primary-50 min-h-[48px] touch-manipulation"
-                    >
-                      <UserPlus className="w-4 h-4" />
-                      <span>Sign Up</span>
-                    </Link>
+                  {/* Consolidated Auth Options */}
+                  <div className="space-y-2">
+                    {authOptions.map((option, index) => {
+                      const Icon = option.icon
+                      return (
+                        <Link
+                          key={index}
+                          href={option.href}
+                          className="flex items-center space-x-3 text-gray-700 hover:text-primary-600 font-medium transition-colors py-3 px-4 border border-gray-200 rounded-xl hover:bg-primary-50 min-h-[48px] touch-manipulation"
+                        >
+                          <Icon className="w-4 h-4" />
+                          <span>{option.label}</span>
+                        </Link>
+                      )
+                    })}
                   </div>
 
                   {/* Primary CTA */}
