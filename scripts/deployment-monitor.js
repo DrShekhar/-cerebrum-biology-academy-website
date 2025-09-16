@@ -7,9 +7,8 @@
  * by testing all admin routes in Chrome browser and providing feedback.
  */
 
-const { execSync } = require('child_process')
-const fs = require('fs')
-const path = require('path')
+import fs from 'fs'
+import path from 'path'
 
 // Configuration
 const SITE_URL = process.env.SITE_URL || 'https://cerebrum-biology-academy-website.vercel.app'
@@ -302,9 +301,9 @@ class DeploymentMonitor {
 }
 
 // Run monitor if called directly
-if (require.main === module) {
+if (import.meta.url === `file://${process.argv[1]}`) {
   const monitor = new DeploymentMonitor()
   monitor.run()
 }
 
-module.exports = DeploymentMonitor
+export default DeploymentMonitor

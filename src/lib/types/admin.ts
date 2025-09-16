@@ -137,14 +137,14 @@ export interface UserActivity {
   id: string
   userId: string
   type: ActivityType
-  data: Record<string, any>
+  data: Record<string, unknown>
   timestamp: Date
   sessionId: string
   ipAddress?: string
   userAgent?: string
 }
 
-export type ActivityType = 
+export type ActivityType =
   | 'page_view'
   | 'course_view'
   | 'demo_booking'
@@ -191,7 +191,7 @@ export interface Payment {
   status: 'pending' | 'processing' | 'completed' | 'failed' | 'refunded'
   method: 'upi' | 'card' | 'netbanking' | 'wallet'
   transactionId: string
-  gatewayResponse: Record<string, any>
+  gatewayResponse: Record<string, unknown>
   createdAt: Date
   completedAt?: Date
 }
@@ -280,7 +280,7 @@ export interface Notification {
   type: NotificationType
   title: string
   message: string
-  data?: Record<string, any>
+  data?: Record<string, unknown>
   recipients: string[] // user IDs
   channels: ('email' | 'sms' | 'whatsapp' | 'push' | 'in_app')[]
   priority: 'low' | 'medium' | 'high' | 'urgent'
@@ -290,7 +290,7 @@ export interface Notification {
   sentAt?: Date
 }
 
-export type NotificationType = 
+export type NotificationType =
   | 'demo_booking'
   | 'payment_success'
   | 'payment_failed'
@@ -348,7 +348,7 @@ export interface CourseMetric {
 export interface RealTimeEvent {
   id: string
   type: string
-  data: Record<string, any>
+  data: Record<string, unknown>
   timestamp: Date
   userId?: string
   sessionId?: string
