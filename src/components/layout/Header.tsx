@@ -14,6 +14,10 @@ import {
   BarChart3,
   LogIn,
   UserPlus,
+  Monitor,
+  Users,
+  Globe,
+  HelpCircle,
 } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { BurgerMenu } from '@/components/navigation/BurgerMenu'
@@ -22,6 +26,7 @@ import { SearchMenu } from '@/components/navigation/SearchMenu'
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isCoursesOpen, setIsCoursesOpen] = useState(false)
+  const [isServicesOpen, setIsServicesOpen] = useState(false)
   const [isTestsOpen, setIsTestsOpen] = useState(false)
   const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(false)
   const [isSearchOpen, setIsSearchOpen] = useState(false)
@@ -31,6 +36,7 @@ const Header = () => {
   useEffect(() => {
     setIsMenuOpen(false)
     setIsCoursesOpen(false)
+    setIsServicesOpen(false)
     setIsTestsOpen(false)
     setIsBurgerMenuOpen(false)
     setIsSearchOpen(false)
@@ -49,6 +55,13 @@ const Header = () => {
     { href: '/test/demo', label: 'Demo Test', icon: Play },
   ]
 
+  const serviceLinks = [
+    { href: '/services/online-classes', label: 'Online Classes', icon: Monitor },
+    { href: '/services/classroom', label: 'Classroom Coaching', icon: Users },
+    { href: '/services/international', label: 'International Students', icon: Globe },
+    { href: '/services/doubt-resolution', label: 'Doubt Resolution', icon: HelpCircle },
+  ]
+
   const mainNavigation = [
     { href: '/', label: 'Home' },
     {
@@ -56,6 +69,12 @@ const Header = () => {
       label: 'Courses',
       hasDropdown: true,
       items: courseLinks,
+    },
+    {
+      href: '/services',
+      label: 'Services',
+      hasDropdown: true,
+      items: serviceLinks,
     },
     {
       href: '/mock-tests',
@@ -108,10 +127,12 @@ const Header = () => {
                     className="relative"
                     onMouseEnter={() => {
                       if (item.label === 'Courses') setIsCoursesOpen(true)
+                      if (item.label === 'Services') setIsServicesOpen(true)
                       if (item.label === 'Tests') setIsTestsOpen(true)
                     }}
                     onMouseLeave={() => {
                       if (item.label === 'Courses') setIsCoursesOpen(false)
+                      if (item.label === 'Services') setIsServicesOpen(false)
                       if (item.label === 'Tests') setIsTestsOpen(false)
                     }}
                   >
@@ -127,6 +148,7 @@ const Header = () => {
 
                     <AnimatePresence>
                       {((item.label === 'Courses' && isCoursesOpen) ||
+                        (item.label === 'Services' && isServicesOpen) ||
                         (item.label === 'Tests' && isTestsOpen)) && (
                         <motion.div
                           initial={{ opacity: 0, y: -10 }}
@@ -233,6 +255,7 @@ const Header = () => {
                           <button
                             onClick={() => {
                               if (item.label === 'Courses') setIsCoursesOpen(!isCoursesOpen)
+                              if (item.label === 'Services') setIsServicesOpen(!isServicesOpen)
                               if (item.label === 'Tests') setIsTestsOpen(!isTestsOpen)
                             }}
                             className="p-2 text-gray-500 hover:text-blue-600"
@@ -240,6 +263,7 @@ const Header = () => {
                             <ChevronDown
                               className={`w-4 h-4 transition-transform ${
                                 (item.label === 'Courses' && isCoursesOpen) ||
+                                (item.label === 'Services' && isServicesOpen) ||
                                 (item.label === 'Tests' && isTestsOpen)
                                   ? 'rotate-180'
                                   : ''
@@ -250,6 +274,7 @@ const Header = () => {
 
                         <AnimatePresence>
                           {((item.label === 'Courses' && isCoursesOpen) ||
+                            (item.label === 'Services' && isServicesOpen) ||
                             (item.label === 'Tests' && isTestsOpen)) && (
                             <motion.div
                               initial={{ opacity: 0, height: 0 }}

@@ -24,46 +24,6 @@ export function HeroSection() {
   return (
     <section className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 px-4 py-12">
       <div className="max-w-7xl mx-auto">
-        {/* Navigation */}
-        <nav className="flex items-center justify-between mb-16">
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">C</span>
-            </div>
-            <span className="text-xl font-bold text-gray-800">Cerebrum</span>
-          </div>
-
-          <div className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-gray-600 hover:text-blue-600 transition-colors">
-              Home
-            </Link>
-            <Link href="/courses" className="text-gray-600 hover:text-blue-600 transition-colors">
-              Courses
-            </Link>
-            <a href="#faculty" className="text-gray-600 hover:text-blue-600 transition-colors">
-              Faculty
-            </a>
-            <Link
-              href="/blog"
-              className="text-gray-600 hover:text-blue-600 transition-colors font-medium"
-            >
-              Blog
-            </Link>
-            <a href="#results" className="text-gray-600 hover:text-blue-600 transition-colors">
-              Results
-            </a>
-          </div>
-
-          <div className="flex items-center space-x-4">
-            <Button variant="ghost" className="hidden md:inline-flex">
-              Sign In
-            </Button>
-            <Button variant="primary" size="default">
-              Register
-            </Button>
-          </div>
-        </nav>
-
         {/* Hero Content */}
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Content */}
