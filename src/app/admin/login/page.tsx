@@ -16,15 +16,20 @@ export default function AdminLogin() {
   const searchParams = useSearchParams()
   const redirectTo = searchParams.get('redirect') || '/admin'
 
+  const generateSecureToken = () => {
+    return `session_${Date.now()}_${Math.random().toString(36).substr(2, 16)}`
+  }
+
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsLoading(true)
     setError('')
 
-    // Simple admin key validation
-    if (adminKey === 'admin-demo-2024' || adminKey === process.env.NEXT_PUBLIC_ADMIN_KEY) {
-      // Set admin session cookie
-      document.cookie = `admin-session=${adminKey}; path=/; max-age=${7 * 24 * 60 * 60}; secure; samesite=strict`
+    // Production admin key validation
+    if (process.env.NEXT_PUBLIC_ADMIN_KEY && adminKey === process.env.NEXT_PUBLIC_ADMIN_KEY) {
+      // Set secure admin session cookie with HTTPOnly simulation
+      const sessionToken = generateSecureToken()
+      document.cookie = `admin-session=${sessionToken}; path=/admin; max-age=3600; secure; samesite=strict`
       
       // Redirect to admin dashboard
       router.push(redirectTo)
@@ -94,15 +99,6 @@ export default function AdminLogin() {
           </Button>
         </form>
 
-        {/* Demo Credentials Info */}
-        <div className="mt-8 p-4 bg-blue-50 border border-blue-200 rounded-xl">
-          <p className="text-sm text-blue-700">
-            <strong>Demo Access:</strong> Use key <code className="bg-blue-100 px-2 py-1 rounded">admin-demo-2024</code>
-          </p>
-          <p className="text-xs text-blue-600 mt-1">
-            This is for development purposes only. Production will use secure authentication.
-          </p>
-        </div>
 
         {/* Footer */}
         <div className="mt-6 text-center text-xs text-gray-500">

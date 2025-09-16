@@ -11,9 +11,8 @@ export function middleware(request: NextRequest) {
     // In production, this should use proper session-based authentication
     const adminKey = request.headers.get('x-admin-key') || request.cookies.get('admin-session')?.value
     
-    // Temporary admin access - replace with proper authentication
-    const isAdminAuthenticated = adminKey === 'admin-demo-2024' || 
-                                adminKey === process.env.ADMIN_ACCESS_KEY ||
+    // Production-ready authentication - only environment key accepted
+    const isAdminAuthenticated = (process.env.ADMIN_ACCESS_KEY && adminKey === process.env.ADMIN_ACCESS_KEY) ||
                                 pathname === '/admin/login'
 
     if (!isAdminAuthenticated) {

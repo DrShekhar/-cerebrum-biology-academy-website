@@ -1,9 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { db } from '@/lib/db'
 import { EnhancedDemoBooking } from '@/lib/admin-schema'
+import { requireAdminAuth } from '@/lib/auth/admin-auth'
 
 // GET /api/admin/demo-bookings - Get all demo bookings with filters
-export async function GET(request: NextRequest) {
+export const GET = requireAdminAuth(async (request: NextRequest) => {
   try {
     const { searchParams } = new URL(request.url)
     const status = searchParams.get('status')
@@ -69,10 +70,10 @@ export async function GET(request: NextRequest) {
       { status: 500 }
     )
   }
-}
+})
 
 // POST /api/admin/demo-bookings - Create new demo booking (typically from admin interface)
-export async function POST(request: NextRequest) {
+export const POST = requireAdminAuth(async (request: NextRequest) => {
   try {
     const body = await request.json()
     const { 
@@ -151,10 +152,10 @@ export async function POST(request: NextRequest) {
       { status: 500 }
     )
   }
-}
+})
 
 // PATCH /api/admin/demo-bookings/[id] - Update demo booking status and details
-export async function PATCH(request: NextRequest) {
+export const PATCH = requireAdminAuth(async (request: NextRequest) => {
   try {
     const body = await request.json()
     const { id, status, assignedTo, followUpDate, demoFeedback, notes } = body
@@ -219,7 +220,7 @@ export async function PATCH(request: NextRequest) {
       { status: 500 }
     )
   }
-}
+})
 
 // Helper function to calculate demo booking statistics
 async function calculateDemoStats(whereConditions: any) {
