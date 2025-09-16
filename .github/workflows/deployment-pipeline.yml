@@ -1,0 +1,250 @@
+name: 🚀 Deployment Pipeline with Admin Panel Verification
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+env:
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+  ADMIN_ACCESS_KEY: ${{ secrets.ADMIN_ACCESS_KEY }}
+
+jobs:
+  # Pre-deployment validation
+  validate:
+    name: 📋 Pre-deployment Validation
+    runs-on: ubuntu-latest
+    outputs:
+      admin-routes-present: ${{ steps.check-admin.outputs.admin-routes-present }}
+      
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: 📦 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: 🔧 Install Dependencies
+        run: npm ci
+
+      - name: 🔍 Verify Admin Routes Exist
+        id: check-admin
+        run: |
+          echo "Checking for admin routes..."
+          if [ -d "src/app/admin" ]; then
+            echo "✅ Admin directory exists"
+            echo "admin-routes-present=true" >> $GITHUB_OUTPUT
+          else
+            echo "❌ Admin directory missing"
+            echo "admin-routes-present=false" >> $GITHUB_OUTPUT
+            exit 1
+          fi
+          
+          # Check for required admin files
+          REQUIRED_FILES=(
+            "src/app/admin/page.tsx"
+            "src/app/admin/login/page.tsx" 
+            "src/components/admin/AdminLayout.tsx"
+            "middleware.ts"
+          )
+          
+          for file in "${REQUIRED_FILES[@]}"; do
+            if [ ! -f "$file" ]; then
+              echo "❌ Required file missing: $file"
+              exit 1
+            else
+              echo "✅ Found: $file"
+            fi
+          done
+
+      - name: 🏗️ Test Build with Admin Routes
+        run: |
+          npm run build
+          echo "Checking build output for admin routes..."
+          
+          # Verify admin routes were generated
+          if [ -d ".next/server/app/admin" ]; then
+            echo "✅ Admin routes successfully built"
+            ls -la .next/server/app/admin/
+          else
+            echo "❌ Admin routes not found in build output"
+            echo "Build directory contents:"
+            find .next -name "*admin*" -type d || echo "No admin directories found"
+            exit 1
+          fi
+
+  # Deploy to Vercel
+  deploy:
+    name: 🚀 Deploy to Vercel
+    runs-on: ubuntu-latest
+    needs: validate
+    if: needs.validate.outputs.admin-routes-present == 'true'
+    outputs:
+      deployment-url: ${{ steps.deploy.outputs.deployment-url }}
+      
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: 📦 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: 🔧 Install Dependencies
+        run: npm ci
+
+      - name: 📦 Install Vercel CLI
+        run: npm install -g vercel@latest
+
+      - name: 🔗 Link Vercel Project
+        run: vercel link --yes --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: 🏗️ Build for Production
+        run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: 🚀 Deploy to Vercel
+        id: deploy
+        run: |
+          DEPLOYMENT_URL=$(vercel deploy --prod --token=${{ secrets.VERCEL_TOKEN }})
+          echo "deployment-url=$DEPLOYMENT_URL" >> $GITHUB_OUTPUT
+          echo "🎉 Deployed to: $DEPLOYMENT_URL"
+
+  # Post-deployment verification  
+  verify-deployment:
+    name: 🔍 Verify Admin Panel Deployment
+    runs-on: ubuntu-latest
+    needs: [validate, deploy]
+    if: always() && needs.deploy.result == 'success'
+    
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: 📦 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: 🔧 Install Dependencies
+        run: |
+          npm ci
+          npx playwright install chromium
+
+      - name: ⏳ Wait for Deployment Propagation
+        run: |
+          echo "Waiting 60 seconds for deployment to propagate..."
+          sleep 60
+
+      - name: 🔍 Run Deployment Monitor
+        id: monitor
+        run: |
+          cd scripts
+          node deployment-monitor.js
+        env:
+          ADMIN_ACCESS_KEY: ${{ secrets.ADMIN_ACCESS_KEY }}
+
+      - name: 📊 Upload Monitoring Results
+        uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: deployment-monitoring-results
+          path: |
+            deployment-report.json
+            deployment-monitor.log
+            screenshots/
+          retention-days: 7
+
+      - name: 📝 Generate Deployment Summary
+        if: always()
+        run: |
+          if [ -f "deployment-report.json" ]; then
+            echo "## 📊 Deployment Verification Results" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            
+            OVERALL_STATUS=$(jq -r '.overallStatus' deployment-report.json)
+            ACCESSIBLE_ROUTES=$(jq -r '.summary.accessibleRoutes' deployment-report.json)
+            TOTAL_ROUTES=$(jq -r '.summary.totalRoutes' deployment-report.json)
+            ACCESSIBLE_API=$(jq -r '.summary.accessibleApiRoutes' deployment-report.json)
+            TOTAL_API=$(jq -r '.summary.totalApiRoutes' deployment-report.json)
+            
+            echo "**Overall Status:** $OVERALL_STATUS" >> $GITHUB_STEP_SUMMARY
+            echo "**Admin Routes:** $ACCESSIBLE_ROUTES/$TOTAL_ROUTES accessible" >> $GITHUB_STEP_SUMMARY
+            echo "**API Routes:** $ACCESSIBLE_API/$TOTAL_API accessible" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            
+            if [ "$OVERALL_STATUS" = "SUCCESS" ]; then
+              echo "✅ All admin panel routes are accessible!" >> $GITHUB_STEP_SUMMARY
+            else
+              echo "❌ Some admin panel routes are not accessible." >> $GITHUB_STEP_SUMMARY
+              echo "Please check the monitoring results for details." >> $GITHUB_STEP_SUMMARY
+            fi
+          else
+            echo "⚠️ Deployment report not found" >> $GITHUB_STEP_SUMMARY
+          fi
+
+      - name: ❌ Fail on Inaccessible Admin Routes
+        if: steps.monitor.outcome == 'failure'
+        run: |
+          echo "❌ Admin panel verification failed!"
+          echo "The deployment completed but admin routes are not accessible."
+          echo "This indicates a deployment configuration issue."
+          exit 1
+
+  # Rollback on failure
+  rollback:
+    name: ↩️ Rollback on Failure
+    runs-on: ubuntu-latest
+    needs: [deploy, verify-deployment]
+    if: always() && needs.verify-deployment.result == 'failure'
+    
+    steps:
+      - name: 🔧 Setup Vercel CLI
+        run: npm install -g vercel@latest
+
+      - name: ↩️ Rollback Deployment
+        run: |
+          echo "🔄 Initiating rollback due to failed verification..."
+          # Get previous deployment
+          PREVIOUS_DEPLOYMENT=$(vercel ls --token=${{ secrets.VERCEL_TOKEN }} | head -2 | tail -1 | awk '{print $1}')
+          if [ ! -z "$PREVIOUS_DEPLOYMENT" ]; then
+            vercel promote $PREVIOUS_DEPLOYMENT --token=${{ secrets.VERCEL_TOKEN }}
+            echo "✅ Rolled back to previous deployment: $PREVIOUS_DEPLOYMENT"
+          else
+            echo "⚠️ No previous deployment found for rollback"
+          fi
+
+      - name: 📢 Notify Rollback
+        run: |
+          echo "## ↩️ Deployment Rolled Back" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "The deployment was automatically rolled back due to admin panel verification failure." >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Reason:** Admin routes were not accessible after deployment" >> $GITHUB_STEP_SUMMARY
+          echo "**Action Required:** Review deployment configuration and admin route implementation" >> $GITHUB_STEP_SUMMARY
+
+  # Success notification
+  notify-success:
+    name: 📢 Notify Success
+    runs-on: ubuntu-latest
+    needs: [validate, deploy, verify-deployment]
+    if: needs.verify-deployment.result == 'success'
+    
+    steps:
+      - name: 🎉 Deployment Success
+        run: |
+          echo "## 🎉 Deployment Successful!" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "✅ Admin panel successfully deployed and verified" >> $GITHUB_STEP_SUMMARY
+          echo "✅ All admin routes are accessible" >> $GITHUB_STEP_SUMMARY
+          echo "✅ API endpoints are functioning" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Deployment URL:** ${{ needs.deploy.outputs.deployment-url }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Admin Panel:** ${{ needs.deploy.outputs.deployment-url }}/admin" >> $GITHUB_STEP_SUMMARY

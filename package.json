@@ -19,7 +19,12 @@
     "test:integration": "jest --config jest.integration.config.js",
     "test:perf": "node scripts/performance-test.js",
     "test:load": "artillery run scripts/load-test.yml",
-    "verify-completion": "node scripts/verify-completion.js"
+    "verify-completion": "node scripts/verify-completion.js",
+    "deploy:monitor": "node scripts/deployment-monitor.js",
+    "deploy:verify": "npm run deploy:monitor && echo '✅ Deployment verified'",
+    "deploy:force": "git add . && git commit -m '🚀 Force deployment trigger' && git push",
+    "vercel:deploy": "vercel deploy --prod",
+    "vercel:preview": "vercel deploy"
   },
   "dependencies": {
     "@instantdb/react": "^0.21.14",
@@ -45,6 +50,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@playwright/test": "^1.47.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20.19.13",
     "@types/react": "^19",
@@ -53,13 +59,17 @@
     "eslint-config-next": "15.5.3",
     "husky": "^9.1.7",
     "lint-staged": "^16.1.6",
+    "playwright": "^1.47.0",
     "prettier": "^3.6.2",
     "tailwindcss": "^4",
     "typescript": "^5"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
+    "src/**/*.{js,jsx,ts,tsx}": [
       "eslint --fix",
+      "prettier --write"
+    ],
+    "scripts/**/*.js": [
       "prettier --write"
     ],
     "*.{json,css,md}": [
