@@ -8,8 +8,8 @@ import Link from 'next/link'
 export function HeroSection() {
   const stats = [
     { icon: BookOpen, label: '10k+', subtitle: 'NEET Questions Solved' },
-    { icon: Users, label: '500+', subtitle: 'Expert Faculty' },
-    { icon: Trophy, label: '98%', subtitle: 'Success Rate' },
+    { icon: Users, label: '50+', subtitle: 'Expert Faculty' },
+    { icon: Trophy, label: '94.2%', subtitle: 'Success Rate' },
   ]
 
   const handleBookDemo = () => {
