@@ -1,11 +1,15 @@
 'use client'
 
+import { useState } from 'react'
 import { Button } from '@/components/ui/Button'
 import { Phone, Calendar, Star, Users, BookOpen, Trophy } from 'lucide-react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { DemoBookingModal, DemoBookingData } from '@/components/admin/DemoBookingModal'
 
 export function HeroSection() {
+  const [isDemoModalOpen, setIsDemoModalOpen] = useState(false)
+  
   const stats = [
     { icon: BookOpen, label: '10k+', subtitle: 'NEET Questions Solved' },
     { icon: Users, label: '50+', subtitle: 'Expert Faculty' },
@@ -13,8 +17,49 @@ export function HeroSection() {
   ]
 
   const handleBookDemo = () => {
-    // TODO: Implement booking system
-    console.log('Book demo clicked')
+    setIsDemoModalOpen(true)
+  }
+
+  const handleDemoSubmit = async (data: DemoBookingData) => {
+    try {
+      const response = await fetch('/api/demo-booking', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'x-session-id': generateSessionId(),
+        },
+        body: JSON.stringify(data),
+      })
+
+      if (!response.ok) {
+        throw new Error('Demo booking failed')
+      }
+
+      const result = await response.json()
+      // Demo booking successful - no sensitive data logged
+      
+      // Track the conversion event
+      trackDemoBooking(data)
+      
+    } catch (error) {
+      console.error('Demo booking error:', error)
+      throw error
+    }
+  }
+
+  const generateSessionId = () => {
+    return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+  }
+
+  const trackDemoBooking = (data: DemoBookingData) => {
+    // Analytics tracking
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'demo_booking', {
+        'event_category': 'engagement',
+        'event_label': data.courseInterest.join(','),
+        'value': 1
+      })
+    }
   }
 
   const handleCallNow = () => {
@@ -192,6 +237,13 @@ export function HeroSection() {
           </motion.div>
         </div>
       </div>
+      
+      {/* Demo Booking Modal */}
+      <DemoBookingModal
+        isOpen={isDemoModalOpen}
+        onClose={() => setIsDemoModalOpen(false)}
+        onSubmit={handleDemoSubmit}
+      />
     </section>
   )
 }
