@@ -1,14 +1,25 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Button } from '@/components/ui/Button'
-import { Phone, Calendar, Star, Users, BookOpen, Trophy, User } from 'lucide-react'
+import { Phone, Calendar, Star, Users, BookOpen, Trophy, User, Zap } from 'lucide-react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { DemoBookingModal, DemoBookingData } from '@/components/admin/DemoBookingModal'
+import { getHeroVariant, trackABTestEvent, type HeroVariant } from '@/lib/ab-testing/heroVariants'
 
 export function HeroSection() {
   const [isDemoModalOpen, setIsDemoModalOpen] = useState(false)
+  const [heroVariant, setHeroVariant] = useState<HeroVariant | null>(null)
+
+  // Initialize A/B test variant on client side
+  useEffect(() => {
+    const variant = getHeroVariant()
+    setHeroVariant(variant)
+
+    // Track variant view
+    trackABTestEvent(variant.id, 'variant_view', { page: 'homepage' })
+  }, [])
 
   const stats = [
     { icon: BookOpen, label: '10k+', subtitle: 'NEET Questions Solved' },
@@ -18,6 +29,13 @@ export function HeroSection() {
 
   const handleBookDemo = () => {
     setIsDemoModalOpen(true)
+
+    // Track A/B test conversion
+    if (heroVariant) {
+      trackABTestEvent(heroVariant.id, 'demo_booking_click', {
+        cta_text: heroVariant.primaryCTA,
+      })
+    }
   }
 
   const handleDemoSubmit = async (data: DemoBookingData) => {
@@ -63,6 +81,13 @@ export function HeroSection() {
 
   const handleCallNow = () => {
     window.location.href = 'tel:+918826444334'
+
+    // Track A/B test conversion
+    if (heroVariant) {
+      trackABTestEvent(heroVariant.id, 'phone_call_click', {
+        cta_text: heroVariant.secondaryCTA,
+      })
+    }
   }
 
   return (
@@ -81,49 +106,109 @@ export function HeroSection() {
             transition={{ duration: 0.6 }}
           >
             <div className="space-y-4">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                From{' '}
-                <span className="text-blue-600 relative">
-                  NEET Dreams
-                  <svg
-                    className="absolute -bottom-2 left-0 w-full h-3 text-blue-200"
-                    viewBox="0 0 100 12"
-                    fill="currentColor"
-                  >
-                    <path d="M0,8 Q50,0 100,8 L100,12 L0,12 Z" />
-                  </svg>
-                </span>{' '}
-                to <span className="text-indigo-600">Medical College Reality</span>
-              </h1>
+              {/* A/B Test Hero Headlines */}
+              {heroVariant ? (
+                <>
+                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                    {heroVariant.headline.main}{' '}
+                    <span className="text-blue-600 relative">
+                      {heroVariant.headline.highlight1}
+                      <svg
+                        className="absolute -bottom-2 left-0 w-full h-3 text-blue-200"
+                        viewBox="0 0 100 12"
+                        fill="currentColor"
+                      >
+                        <path d="M0,8 Q50,0 100,8 L100,12 L0,12 Z" />
+                      </svg>
+                    </span>{' '}
+                    {heroVariant.id === 'outcome_focused' && (
+                      <span className="text-emerald-600">{heroVariant.headline.highlight2}</span>
+                    )}
+                    {heroVariant.id === 'urgency_social_proof' && (
+                      <span className="text-indigo-600">{heroVariant.headline.highlight2}</span>
+                    )}
+                    {heroVariant.id === 'guarantee_focused' && (
+                      <span className="text-emerald-600 font-extrabold">
+                        {heroVariant.headline.highlight2}
+                      </span>
+                    )}
+                    {heroVariant.id === 'control' && (
+                      <span className="text-indigo-600">{heroVariant.headline.highlight2}</span>
+                    )}
+                  </h1>
 
-              <p className="text-xl text-gray-600 max-w-lg leading-relaxed">
-                Join 2,847 students who secured medical seats with our proven 94.2% success
-                methodology. Transform your NEET preparation with personalized coaching from AIIMS
-                faculty.
-              </p>
+                  {/* Urgency indicator for specific variants */}
+                  {heroVariant.id === 'urgency_social_proof' && (
+                    <motion.div
+                      className="inline-flex items-center bg-red-50 border border-red-200 rounded-full px-4 py-2 text-red-700 font-medium text-sm"
+                      initial={{ scale: 0 }}
+                      animate={{ scale: 1 }}
+                      transition={{ delay: 0.5, type: 'spring' }}
+                    >
+                      <Zap className="w-4 h-4 mr-2 text-red-500" />
+                      Limited Time: November Batch Filling Fast
+                    </motion.div>
+                  )}
+
+                  <p className="text-xl text-gray-600 max-w-lg leading-relaxed">
+                    {heroVariant.subtext}
+                  </p>
+                </>
+              ) : (
+                // Fallback content while loading
+                <>
+                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                    From{' '}
+                    <span className="text-blue-600 relative">
+                      NEET Dreams
+                      <svg
+                        className="absolute -bottom-2 left-0 w-full h-3 text-blue-200"
+                        viewBox="0 0 100 12"
+                        fill="currentColor"
+                      >
+                        <path d="M0,8 Q50,0 100,8 L100,12 L0,12 Z" />
+                      </svg>
+                    </span>{' '}
+                    to <span className="text-indigo-600">Medical College Reality</span>
+                  </h1>
+
+                  <p className="text-xl text-gray-600 max-w-lg leading-relaxed">
+                    Join 2,847 students who secured medical seats with our proven 94.2% success
+                    methodology. Transform your NEET preparation with personalized coaching from
+                    AIIMS faculty.
+                  </p>
+                </>
+              )}
             </div>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
-                variant="primary"
+                variant={
+                  heroVariant?.id === 'outcome_focused' || heroVariant?.id === 'guarantee_focused'
+                    ? 'success_cta'
+                    : heroVariant?.id === 'urgency_social_proof'
+                      ? 'urgency_cta'
+                      : 'demo_cta'
+                }
                 size="xl"
                 onClick={handleBookDemo}
-                className="group min-h-[56px] px-8 py-4 rounded-2xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
+                className="group mobile-cta touch-animation haptic-feedback ripple-effect min-h-[56px] px-8 py-4 rounded-2xl gpu-accelerated"
                 style={{ boxShadow: 'var(--shadow-premium)' }}
               >
                 <Calendar className="w-6 h-6 mr-3 group-hover:rotate-12 transition-transform" />
-                Book Free Demo Class
+                {heroVariant?.primaryCTA || 'Book Free Demo Class'}
               </Button>
 
               <Button
-                variant="secondary_cta"
+                variant="phone_cta"
                 size="xl"
-                className="group min-h-[56px] px-6 py-4 rounded-2xl font-medium text-lg border-2 border-emerald-200 bg-white/95 backdrop-blur-sm hover:bg-emerald-50 hover:border-emerald-300 transition-all duration-300 transform hover:-translate-y-1 text-emerald-700"
+                className="group mobile-secondary-btn touch-animation haptic-feedback min-h-[56px] px-6 py-4 rounded-2xl gpu-accelerated"
+                onClick={handleCallNow}
                 style={{ boxShadow: 'var(--shadow-soft)' }}
               >
-                <Trophy className="w-6 h-6 mr-3 group-hover:scale-110 transition-transform" />
-                View Success Stories
+                <Phone className="w-6 h-6 mr-3 group-hover:scale-110 transition-transform" />
+                {heroVariant?.secondaryCTA || 'Call Now: +91 88264 44334'}
               </Button>
             </div>
 

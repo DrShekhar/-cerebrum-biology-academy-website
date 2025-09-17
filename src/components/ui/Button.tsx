@@ -14,10 +14,38 @@ const buttonVariants = cva(
         secondary: 'bg-secondary text-secondary-foreground hover:bg-secondary/80',
         ghost: 'hover:bg-accent hover:text-accent-foreground',
         link: 'text-primary underline-offset-4 hover:underline',
+
+        // Enhanced CTA variants with color psychology for education/conversion
         primary:
           'bg-blue-600 text-white hover:bg-blue-700 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200',
+
+        // GREEN = Success, Achievement, Go/Action (High conversion)
+        success_cta:
+          'bg-gradient-to-r from-emerald-600 to-green-600 text-white hover:from-emerald-700 hover:to-green-700 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 font-semibold',
+
+        // ORANGE = Urgency, Energy, Immediate Action
+        urgency_cta:
+          'bg-gradient-to-r from-orange-600 to-red-600 text-white hover:from-orange-700 hover:to-red-700 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 font-semibold animate-pulse',
+
+        // BLUE = Trust, Reliability (Education sector standard)
+        trust_cta:
+          'bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:from-blue-700 hover:to-indigo-700 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 font-semibold',
+
+        // PURPLE = Premium, Quality, Excellence
+        premium_cta:
+          'bg-gradient-to-r from-purple-600 to-indigo-600 text-white hover:from-purple-700 hover:to-indigo-700 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 font-semibold',
+
+        // Secondary CTA - Softer conversion
         secondary_cta:
-          'bg-transparent text-blue-600 border-2 border-blue-600 hover:bg-blue-600 hover:text-white transition-all duration-200',
+          'bg-white/95 backdrop-blur-sm border-2 border-emerald-200 text-emerald-700 hover:bg-emerald-50 hover:border-emerald-300 transition-all duration-300 transform hover:-translate-y-1',
+
+        // Phone/Call CTA - Direct action
+        phone_cta:
+          'bg-gradient-to-r from-green-500 to-emerald-600 text-white hover:from-green-600 hover:to-emerald-700 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 font-semibold',
+
+        // Demo/Trial CTA - Low commitment
+        demo_cta:
+          'bg-gradient-to-r from-blue-500 to-cyan-600 text-white hover:from-blue-600 hover:to-cyan-700 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 font-semibold',
       },
       size: {
         default: 'h-10 px-4 py-2',
