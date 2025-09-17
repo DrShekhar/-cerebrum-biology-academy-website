@@ -83,8 +83,14 @@ export default function Home() {
       <FacultySection />
       <BookingSection />
 
-      {/* 📺 TV-Style Notification Center - Single Point of Social Proof */}
-      <NotificationCenter position="top-right" autoPlay={true} interval={8} maxWidth="340px" />
+      {/* 📺 TV-Style Notification Center - Single Point of Social Proof - v2.0 */}
+      <NotificationCenter
+        position="top-right"
+        autoPlay={true}
+        interval={8}
+        maxWidth="340px"
+        key="tv-v2"
+      />
 
       {/* Exit Intent Popup - Coordinated through popup system */}
       {coordinatedExitIntent && (
