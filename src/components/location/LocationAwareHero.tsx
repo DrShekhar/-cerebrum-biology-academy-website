@@ -5,8 +5,8 @@ import { motion } from 'framer-motion'
 import { MapPin, Users, Target, Award, ChevronRight } from 'lucide-react'
 import { getLocationBySlug } from '@/data/locationData'
 import { useUserLocation } from '@/components/location/LocationDetector'
-import { Button } from '@/components/ui/button'
-import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/Button'
+import { Badge } from '@/components/ui/Badge'
 
 interface LocationAwareHeroProps {
   className?: string

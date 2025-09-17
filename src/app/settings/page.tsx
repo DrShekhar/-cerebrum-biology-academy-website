@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import { NotificationManager } from '@/components/pwa/NotificationManager'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
+import { Badge } from '@/components/ui/Badge'
 import {
   Settings as SettingsIcon,
   Bell,

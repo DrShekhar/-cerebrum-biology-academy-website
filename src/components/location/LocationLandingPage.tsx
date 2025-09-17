@@ -18,9 +18,9 @@ import {
   Zap,
 } from 'lucide-react'
 import { LocationData } from '@/data/locationData'
-import { Button } from '@/components/ui/button'
-import { Badge } from '@/components/ui/badge'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Button } from '@/components/ui/Button'
+import { Badge } from '@/components/ui/Badge'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Separator } from '@/components/ui/separator'
 
 interface LocationLandingPageProps {

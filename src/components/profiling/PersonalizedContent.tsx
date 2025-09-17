@@ -18,9 +18,9 @@ import {
 } from 'lucide-react'
 import { UserProfileService } from '@/lib/profiling/userProfileService'
 import { useUserProfile } from './ProgressiveProfilingWidget'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/Button'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
+import { Badge } from '@/components/ui/Badge'
 
 interface PersonalizedContentProps {
   className?: string

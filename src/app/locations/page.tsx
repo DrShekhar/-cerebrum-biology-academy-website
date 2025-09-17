@@ -17,9 +17,9 @@ import {
   getLocationsByTier,
   getTopLocationsByAspirants,
 } from '@/data/locationData'
-import { Button } from '@/components/ui/button'
-import { Badge } from '@/components/ui/badge'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Button } from '@/components/ui/Button'
+import { Badge } from '@/components/ui/Badge'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
 
 export const metadata: Metadata = {
   title: 'NEET Biology Coaching Locations | Cerebrum Biology Academy',

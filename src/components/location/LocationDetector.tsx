@@ -5,9 +5,9 @@ import { useRouter } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { MapPin, X, ChevronRight, Loader2 } from 'lucide-react'
 import { getLocationBySlug, locationDatabase } from '@/data/locationData'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/Button'
+import { Card, CardContent } from '@/components/ui/Card'
+import { Badge } from '@/components/ui/Badge'
 
 interface LocationDetectorProps {
   className?: string
