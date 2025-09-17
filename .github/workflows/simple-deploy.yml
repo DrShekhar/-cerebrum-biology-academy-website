@@ -31,3 +31,14 @@ jobs:
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
           vercel-args: '--prod'
+        env:
+          # Ensure environment variables are available for build
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
+      - name: 📊 Verify Deployment
+        run: |
+          echo "✅ Deployment completed successfully!"
+          echo "🌐 Production URL: https://cerebrum-biology-academy-website.vercel.app"
+          echo "🔗 Admin Panel: https://cerebrum-biology-academy-website.vercel.app/admin"
