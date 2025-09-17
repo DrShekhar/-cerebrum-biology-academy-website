@@ -1,4 +1,4 @@
-// ✨ CLEAN HOMEPAGE with TV-Style Notification Center
+// ✨ CLEAN HOMEPAGE with TV-Style Notification Center - Force Deploy
 'use client'
 
 import { useState, useEffect } from 'react'
