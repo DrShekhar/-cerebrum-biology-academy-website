@@ -4,9 +4,9 @@ import { getLocationBySlug, getAllLocationSlugs } from '@/data/locationData'
 import { LocationLandingPage } from '@/components/location/LocationLandingPage'
 
 interface LocationPageProps {
-  params: {
+  params: Promise<{
     city: string
-  }
+  }>
 }
 
 export async function generateStaticParams() {
@@ -17,7 +17,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: LocationPageProps): Promise<Metadata> {
-  const locationData = getLocationBySlug(params.city)
+  const { city } = await params
+  const locationData = getLocationBySlug(city)
 
   if (!locationData) {
     return {
@@ -101,8 +102,9 @@ function getLocationCoordinates(city: string): string {
   return coordinates[city] || '20.5937,78.9629' // Default to India center
 }
 
-export default function LocationPage({ params }: LocationPageProps) {
-  const locationData = getLocationBySlug(params.city)
+export default async function LocationPage({ params }: LocationPageProps) {
+  const { city } = await params
+  const locationData = getLocationBySlug(city)
 
   if (!locationData) {
     notFound()

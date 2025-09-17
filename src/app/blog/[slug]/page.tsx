@@ -4,11 +4,12 @@ import { blogPosts } from '@/data/blog'
 import { BlogPostPage } from '@/components/blog/BlogPostPage'
 
 interface Props {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const post = blogPosts.find((post) => post.slug === params.slug)
+  const { slug } = await params
+  const post = blogPosts.find((post) => post.slug === slug)
 
   if (!post) {
     return {
@@ -46,8 +47,9 @@ export async function generateStaticParams() {
   }))
 }
 
-export default function BlogPost({ params }: Props) {
-  const post = blogPosts.find((post) => post.slug === params.slug)
+export default async function BlogPost({ params }: Props) {
+  const { slug } = await params
+  const post = blogPosts.find((post) => post.slug === slug)
 
   if (!post || !post.isPublished) {
     notFound()

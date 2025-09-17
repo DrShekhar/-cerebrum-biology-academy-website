@@ -3,11 +3,12 @@ import { facultyMembers } from '@/data/faculty'
 import { FacultyProfile } from '@/components/faculty/FacultyProfile'
 
 interface Props {
-  params: { facultyId: string }
+  params: Promise<{ facultyId: string }>
 }
 
 export async function generateMetadata({ params }: Props) {
-  const faculty = facultyMembers.find((f) => f.id === params.facultyId)
+  const { facultyId } = await params
+  const faculty = facultyMembers.find((f) => f.id === facultyId)
 
   if (!faculty) {
     return {
@@ -22,8 +23,9 @@ export async function generateMetadata({ params }: Props) {
   }
 }
 
-export default function FacultyProfilePage({ params }: Props) {
-  const faculty = facultyMembers.find((f) => f.id === params.facultyId)
+export default async function FacultyProfilePage({ params }: Props) {
+  const { facultyId } = await params
+  const faculty = facultyMembers.find((f) => f.id === facultyId)
 
   if (!faculty) {
     notFound()

@@ -3,15 +3,16 @@ import { getTestBySlug } from '@/data/mockTests'
 import { TestInterface } from '@/components/mockTests/TestInterface'
 
 interface Props {
-  params: { 
+  params: Promise<{
     subject: string
-    slug: string 
-  }
+    slug: string
+  }>
 }
 
 export async function generateMetadata({ params }: Props) {
-  const test = getTestBySlug(params.slug)
-  
+  const { subject, slug } = await params
+  const test = getTestBySlug(slug)
+
   if (!test) {
     return {
       title: 'Test Not Found',
@@ -26,7 +27,7 @@ export async function generateMetadata({ params }: Props) {
       title: test.title,
       description: test.description,
       type: 'website',
-      url: `/mock-tests/${params.subject}/${params.slug}`,
+      url: `/mock-tests/${subject}/${slug}`,
     },
     twitter: {
       card: 'summary_large_image',
@@ -39,8 +40,9 @@ export async function generateMetadata({ params }: Props) {
   }
 }
 
-export default function TestPage({ params }: Props) {
-  const test = getTestBySlug(params.slug)
+export default async function TestPage({ params }: Props) {
+  const { slug } = await params
+  const test = getTestBySlug(slug)
 
   if (!test) {
     notFound()

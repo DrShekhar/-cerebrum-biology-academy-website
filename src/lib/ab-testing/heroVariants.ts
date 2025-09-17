@@ -17,60 +17,46 @@ export interface HeroVariant {
 
 export const heroVariants: HeroVariant[] = [
   {
-    id: 'control',
-    name: 'Original Control',
+    id: 'batch_size_focus',
+    name: 'Small Batch Differentiator (Content Optimized)',
     headline: {
-      main: 'From',
-      highlight1: 'NEET Dreams',
-      highlight2: 'Medical College Reality',
+      main: '12 Students per Batch',
+      highlight1: 'vs 100+ in Allen/Aakash',
+      highlight2: 'Personal Attention. Proven Results.',
     },
     subtext:
-      "Join 2,847 students who secured medical seats with Cerebrum Biology Academy's proven 94.2% success methodology. Transform your NEET preparation with personalized coaching from AIIMS faculty.",
-    primaryCTA: 'Book Free Cerebrum Demo',
-    secondaryCTA: 'Call Cerebrum: +91 88264 44334',
-    weight: 25, // 25% traffic
+      '94.2% Success Rate with AIIMS Faculty. Join 2,847+ students who chose personal attention over mass coaching. Premium NEET Biology preparation with guaranteed results.',
+    primaryCTA: 'Book Free NEET Biology Demo',
+    secondaryCTA: 'Call Now: +91 88264 44334',
+    weight: 40, // Primary content-optimized variant
   },
   {
-    id: 'outcome_focused',
-    name: 'Outcome-Focused (High Impact)',
+    id: 'outcome_focused_v2',
+    name: 'Results-Focused with Differentiation',
     headline: {
-      main: '2,847 Medical Seats Secured by Cerebrum -',
-      highlight1: 'Your Turn',
-      highlight2: 'Next',
-    },
-    subtext:
-      "Join Cerebrum Biology Academy - India's #1 NEET Biology coaching with 94.2% success rate. Get personalized mentorship from AIIMS faculty and guarantee your medical college admission.",
-    primaryCTA: 'Secure My Seat - Cerebrum Demo',
-    secondaryCTA: 'Call Cerebrum: +91 88264 44334',
-    weight: 30, // 30% traffic - primary test variant
-  },
-  {
-    id: 'urgency_social_proof',
-    name: 'Urgency + Social Proof',
-    headline: {
-      main: 'Last 7 Cerebrum Seats Left -',
-      highlight1: 'Join 2,847 Successful',
-      highlight2: 'NEET Toppers',
-    },
-    subtext:
-      "Limited seats for Cerebrum's November batch! Get the same proven methodology that helped 2,847 students crack NEET with 94.2% success rate. AIIMS faculty coaching included.",
-    primaryCTA: 'Grab Cerebrum Seat - Free Demo',
-    secondaryCTA: 'Call Cerebrum: +91 88264 44334',
-    weight: 25, // 25% traffic
-  },
-  {
-    id: 'guarantee_focused',
-    name: 'Guarantee-Focused',
-    headline: {
-      main: 'Cerebrum Guarantees Your',
-      highlight1: 'Medical Seat',
+      main: '2,847 Medical Seats Secured',
+      highlight1: 'with Personal Mentoring',
       highlight2: '94.2% Success Rate',
     },
     subtext:
-      'Join Cerebrum - the only NEET coaching with proven track record - 2,847 medical seats secured. Get personalized AIIMS faculty mentorship or get 50% refund guarantee.',
-    primaryCTA: 'Start My Cerebrum Journey - Demo',
-    secondaryCTA: 'Call Cerebrum: +91 88264 44334',
-    weight: 20, // 20% traffic
+      'Small batch sizes (12-25 students) vs mass coaching (100+ students). AIIMS faculty. Personalized attention. Real results. Your medical college admission awaits.',
+    primaryCTA: 'Book Free NEET Biology Demo',
+    secondaryCTA: 'Call Now: +91 88264 44334',
+    weight: 35, // Secondary variant with differentiation
+  },
+  {
+    id: 'trust_focused',
+    name: 'Trust & Credibility Focused',
+    headline: {
+      main: 'Premium NEET Biology Coaching',
+      highlight1: 'Small Batches. Big Results.',
+      highlight2: '94.2% Success Rate',
+    },
+    subtext:
+      'AIIMS faculty teaching 12-25 students (not 100+). Proven track record: 2,847 medical seats secured. Personal mentoring that actually works.',
+    primaryCTA: 'Book Free NEET Biology Demo',
+    secondaryCTA: 'Call Now: +91 88264 44334',
+    weight: 25, // Trust-building variant
   },
 ]
 
