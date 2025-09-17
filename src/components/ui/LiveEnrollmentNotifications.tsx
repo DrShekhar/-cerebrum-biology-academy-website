@@ -13,6 +13,7 @@ import {
   CheckCircle2,
 } from 'lucide-react'
 import { getRandomSuccessStory, successStats } from '@/data/studentSuccessData'
+import { usePopupCoordinator } from '@/lib/ui/popupCoordinator'
 
 interface EnrollmentNotification {
   id: string
@@ -96,22 +97,47 @@ interface LiveEnrollmentNotificationsProps {
   showDuration?: number // Duration in minutes
   notificationInterval?: number // Interval in seconds
   maxVisible?: number
+  useCoordination?: boolean // Enable popup coordination
 }
 
 export function LiveEnrollmentNotifications({
   showDuration = 8, // Show for 8 minutes
   notificationInterval = 12, // New notification every 12 seconds
   maxVisible = 5,
+  useCoordination = false, // Popup coordination disabled by default
 }: LiveEnrollmentNotificationsProps) {
   const [notifications, setNotifications] = useState<EnrollmentNotification[]>([])
   const [isActive, setIsActive] = useState(false)
+  const [coordinationActive, setCoordinationActive] = useState(false)
+  const popupCoordinator = usePopupCoordinator()
   const [enrollmentStats, setEnrollmentStats] = useState({
     todayEnrollments: 23,
     activeViewers: 47,
     lastHourBookings: 8,
   })
 
+  // Coordination effect
   useEffect(() => {
+    if (!useCoordination) {
+      setCoordinationActive(true)
+      return
+    }
+
+    // Check coordination after other popups have had chance to show
+    const coordinationTimer = setTimeout(() => {
+      if (popupCoordinator.canShowPopup('live_enrollment')) {
+        if (popupCoordinator.showPopup('live_enrollment')) {
+          setCoordinationActive(true)
+        }
+      }
+    }, 5000) // 5 second delay to avoid conflicts
+
+    return () => clearTimeout(coordinationTimer)
+  }, [useCoordination, popupCoordinator])
+
+  useEffect(() => {
+    if (!coordinationActive) return
+
     // Start notifications after 3 seconds
     const startTimer = setTimeout(() => {
       setIsActive(true)

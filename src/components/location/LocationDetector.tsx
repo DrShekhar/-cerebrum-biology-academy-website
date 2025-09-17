@@ -8,10 +8,12 @@ import { getLocationBySlug, locationDatabase } from '@/data/locationData'
 import { Button } from '@/components/ui/Button'
 import { Card, CardContent } from '@/components/ui/Card'
 import { Badge } from '@/components/ui/Badge'
+import { usePopupCoordinator } from '@/lib/ui/popupCoordinator'
 
 interface LocationDetectorProps {
   className?: string
   showBanner?: boolean
+  useCoordination?: boolean
 }
 
 interface LocationInfo {
@@ -22,16 +24,43 @@ interface LocationInfo {
   longitude: number
 }
 
-export function LocationDetector({ className = '', showBanner = true }: LocationDetectorProps) {
+export function LocationDetector({
+  className = '',
+  showBanner = true,
+  useCoordination = false,
+}: LocationDetectorProps) {
   const [userLocation, setUserLocation] = useState<LocationInfo | null>(null)
   const [suggestedLocation, setSuggestedLocation] = useState<any>(null)
   const [isLoading, setIsLoading] = useState(false)
   const [showLocationBanner, setShowLocationBanner] = useState(false)
   const [hasDetected, setHasDetected] = useState(false)
+  const [coordinationActive, setCoordinationActive] = useState(false)
+  const popupCoordinator = usePopupCoordinator()
   const router = useRouter()
+
+  // Coordination effect
+  useEffect(() => {
+    if (!useCoordination) {
+      setCoordinationActive(true)
+      return
+    }
+
+    // Location detection has low priority
+    const coordinationTimer = setTimeout(() => {
+      if (popupCoordinator.canShowPopup('location_detection')) {
+        if (popupCoordinator.showPopup('location_detection')) {
+          setCoordinationActive(true)
+        }
+      }
+    }, 2000) // 2 second delay
+
+    return () => clearTimeout(coordinationTimer)
+  }, [useCoordination, popupCoordinator])
 
   // Check if we already have stored location preference
   useEffect(() => {
+    if (!coordinationActive) return
+
     const storedLocation = localStorage.getItem('preferredLocation')
     const locationDetected = localStorage.getItem('locationDetected')
 
@@ -44,7 +73,7 @@ export function LocationDetector({ className = '', showBanner = true }: Location
     } else if (!locationDetected && showBanner) {
       detectUserLocation()
     }
-  }, [showBanner])
+  }, [showBanner, coordinationActive])
 
   const detectUserLocation = async () => {
     if (!navigator.geolocation) {

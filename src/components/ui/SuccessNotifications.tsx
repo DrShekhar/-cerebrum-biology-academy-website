@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { CheckCircle, X, Trophy, Star, MapPin, Calendar, TrendingUp } from 'lucide-react'
 import { getRandomSuccessStory, successStats } from '@/data/studentSuccessData'
+import { usePopupCoordinator } from '@/lib/ui/popupCoordinator'
 
 interface SuccessNotification {
   id: string
@@ -24,18 +25,45 @@ interface SuccessNotificationsProps {
   maxNotifications?: number
   displayDuration?: number // Duration in minutes to show notifications
   notificationInterval?: number // Interval between notifications in seconds
+  useCoordination?: boolean // Enable popup coordination
 }
 
 export function SuccessNotifications({
   maxNotifications = 10,
   displayDuration = 5, // Show for 5 minutes after page load
   notificationInterval = 8, // New notification every 8 seconds
+  useCoordination = false, // Popup coordination disabled by default
 }: SuccessNotificationsProps) {
   const [notifications, setNotifications] = useState<SuccessNotification[]>([])
   const [isVisible, setIsVisible] = useState(false)
   const [hasStarted, setHasStarted] = useState(false)
+  const popupCoordinator = usePopupCoordinator()
+  const [coordinationActive, setCoordinationActive] = useState(false)
+
+  // Coordination effect
+  useEffect(() => {
+    if (!useCoordination) {
+      setCoordinationActive(true)
+      return
+    }
+
+    // Check if we can show notifications through coordinator
+    const checkCoordination = () => {
+      if (popupCoordinator.canShowPopup('success_notifications')) {
+        if (popupCoordinator.showPopup('success_notifications')) {
+          setCoordinationActive(true)
+        }
+      }
+    }
+
+    // Delay coordination check to avoid immediate conflicts
+    const coordinationTimer = setTimeout(checkCoordination, 3000)
+    return () => clearTimeout(coordinationTimer)
+  }, [useCoordination, popupCoordinator])
 
   useEffect(() => {
+    if (!coordinationActive) return
+
     // Only show notifications during initial page load and for limited time
     const startDelay = setTimeout(() => {
       setIsVisible(true)
@@ -55,11 +83,14 @@ export function SuccessNotifications({
     return () => {
       clearTimeout(startDelay)
       clearTimeout(hideTimer)
+      if (useCoordination) {
+        popupCoordinator.hidePopup('success_notifications')
+      }
     }
-  }, [displayDuration])
+  }, [displayDuration, coordinationActive, useCoordination, popupCoordinator])
 
   useEffect(() => {
-    if (!hasStarted || !isVisible) return
+    if (!hasStarted || !isVisible || !coordinationActive) return
 
     // Generate initial notification immediately
     addNewNotification()
@@ -285,23 +316,52 @@ export function useSuccessNotifications() {
 }
 
 // Mini success ticker for mobile devices
-export function SuccessTicker() {
+interface SuccessTickerProps {
+  useCoordination?: boolean
+}
+
+export function SuccessTicker({ useCoordination = false }: SuccessTickerProps) {
   const [currentStory, setCurrentStory] = useState('')
   const [isVisible, setIsVisible] = useState(false)
+  const [coordinationActive, setCoordinationActive] = useState(false)
+  const popupCoordinator = usePopupCoordinator()
+
+  // Coordination effect
+  useEffect(() => {
+    if (!useCoordination) {
+      setCoordinationActive(true)
+      return
+    }
+
+    // Mobile ticker gets priority on mobile
+    const isMobile = window.innerWidth <= 768
+    if (isMobile && popupCoordinator.canShowPopup('mobile_ticker')) {
+      if (popupCoordinator.showPopup('mobile_ticker')) {
+        setCoordinationActive(true)
+      }
+    }
+  }, [useCoordination, popupCoordinator])
 
   useEffect(() => {
+    if (!coordinationActive) return
+
     // Show ticker only on mobile for first 3 minutes
     const startTimer = setTimeout(() => setIsVisible(true), 3000)
-    const endTimer = setTimeout(() => setIsVisible(false), 180000) // 3 minutes
+    const endTimer = setTimeout(() => {
+      setIsVisible(false)
+      if (useCoordination) {
+        popupCoordinator.hidePopup('mobile_ticker')
+      }
+    }, 180000) // 3 minutes
 
     return () => {
       clearTimeout(startTimer)
       clearTimeout(endTimer)
     }
-  }, [])
+  }, [coordinationActive, useCoordination, popupCoordinator])
 
   useEffect(() => {
-    if (!isVisible) return
+    if (!isVisible || !coordinationActive) return
 
     const updateStory = () => {
       const story = getRandomSuccessStory()

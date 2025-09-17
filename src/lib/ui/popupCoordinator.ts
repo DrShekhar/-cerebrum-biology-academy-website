@@ -88,10 +88,47 @@ export class PopupCoordinator {
       },
     })
 
+    // Notification systems
+    this.registerPopup({
+      id: 'success_notifications',
+      priority: 7,
+      maxPerSession: 1,
+      cooldownMinutes: 30,
+      conflictsWith: ['exit_intent', 'pwa_install'],
+      showConditions: {
+        minTimeOnPage: 5,
+        deviceType: 'both',
+      },
+    })
+
+    this.registerPopup({
+      id: 'live_enrollment',
+      priority: 8,
+      maxPerSession: 1,
+      cooldownMinutes: 45,
+      conflictsWith: ['exit_intent', 'success_notifications'],
+      showConditions: {
+        minTimeOnPage: 10,
+        deviceType: 'both',
+      },
+    })
+
+    this.registerPopup({
+      id: 'mobile_ticker',
+      priority: 4,
+      maxPerSession: 1,
+      cooldownMinutes: 60,
+      conflictsWith: ['progressive_profiling'],
+      showConditions: {
+        minTimeOnPage: 8,
+        deviceType: 'mobile',
+      },
+    })
+
     // Low priority notifications
     this.registerPopup({
       id: 'notification_permission',
-      priority: 8,
+      priority: 9,
       maxPerSession: 1,
       cooldownMinutes: 180,
       conflictsWith: ['exit_intent', 'pwa_install'],

@@ -1,6 +1,7 @@
-// Optimized homepage flow for maximum conversion - Phase 1.4 Implementation
+// Phase 1 Implementation: Popup Coordination Integration
 'use client'
 
+import { useState, useEffect } from 'react'
 import { HeroSection } from '@/components/layout/HeroSection'
 import { TrustBadgesSection } from '@/components/layout/TrustBadgesSection'
 import { ValuePropositionSection } from '@/components/layout/ValuePropositionSection'
@@ -20,9 +21,46 @@ import { LiveEnrollmentNotifications } from '@/components/ui/LiveEnrollmentNotif
 import { LocationDetector } from '@/components/location/LocationDetector'
 import { ProgressiveProfilingWidget } from '@/components/profiling/ProgressiveProfilingWidget'
 import { PersonalizedContent } from '@/components/profiling/PersonalizedContent'
+import { usePopupCoordinator } from '@/lib/ui/popupCoordinator'
 
 export default function Home() {
   const { showExitIntent, hideExitIntent } = useExitIntent()
+  const popupCoordinator = usePopupCoordinator()
+  const [coordinatedExitIntent, setCoordinatedExitIntent] = useState(false)
+  const [coordinatedProgressive, setCoordinatedProgressive] = useState(false)
+
+  // Coordinate exit intent popup with other popups
+  useEffect(() => {
+    if (showExitIntent && popupCoordinator.canShowPopup('exit_intent')) {
+      if (popupCoordinator.showPopup('exit_intent')) {
+        setCoordinatedExitIntent(true)
+      }
+    }
+  }, [showExitIntent, popupCoordinator])
+
+  // Handle progressive profiling coordination
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (popupCoordinator.canShowPopup('progressive_profiling')) {
+        if (popupCoordinator.showPopup('progressive_profiling')) {
+          setCoordinatedProgressive(true)
+        }
+      }
+    }, 15000) // 15 second delay
+
+    return () => clearTimeout(timer)
+  }, [popupCoordinator])
+
+  const handleExitIntentClose = () => {
+    popupCoordinator.hidePopup('exit_intent')
+    setCoordinatedExitIntent(false)
+    hideExitIntent()
+  }
+
+  const handleProgressiveClose = () => {
+    popupCoordinator.hidePopup('progressive_profiling')
+    setCoordinatedProgressive(false)
+  }
 
   const handleCatalogDownload = async (email: string, phone: string) => {
     try {
@@ -63,8 +101,8 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
-      {/* Location-based targeting banner */}
-      <LocationDetector showBanner={true} />
+      {/* Phase 1: Coordinated location detection */}
+      <LocationDetector showBanner={true} useCoordination={true} />
 
       {/* Optimized Flow: Hero → Social Proof → Value Proposition → Courses → Urgency → Booking */}
       <HeroSection />
@@ -86,24 +124,38 @@ export default function Home() {
       <FacultySection />
       <BookingSection />
 
-      {/* Exit Intent Popup for Lead Capture */}
-      <ExitIntentPopup
-        isVisible={showExitIntent}
-        onClose={hideExitIntent}
-        onDownload={handleCatalogDownload}
+      {/* Phase 1: Coordinated Exit Intent Popup */}
+      {coordinatedExitIntent && (
+        <ExitIntentPopup
+          isVisible={true}
+          onClose={handleExitIntentClose}
+          onDownload={handleCatalogDownload}
+        />
+      )}
+
+      {/* Phase 1: Reduced density notifications with coordination */}
+      <SuccessNotifications
+        maxNotifications={3}
+        displayDuration={5}
+        notificationInterval={15}
+        useCoordination={true}
       />
 
-      {/* Real-time Success Notifications - Shows only during initial loading */}
-      <SuccessNotifications maxNotifications={10} displayDuration={5} notificationInterval={8} />
+      {/* Phase 1: Reduced live enrollment notifications */}
+      <LiveEnrollmentNotifications
+        showDuration={8}
+        notificationInterval={18}
+        maxVisible={2}
+        useCoordination={true}
+      />
 
-      {/* Live Enrollment Notifications - Shows enrollment activity */}
-      <LiveEnrollmentNotifications showDuration={8} notificationInterval={12} maxVisible={5} />
+      {/* Phase 1: Coordinated mobile success ticker */}
+      <SuccessTicker useCoordination={true} />
 
-      {/* Mobile Success Ticker */}
-      <SuccessTicker />
-
-      {/* Progressive Profiling Widget */}
-      <ProgressiveProfilingWidget showDelay={15000} position="bottom-right" />
+      {/* Phase 1: Coordinated progressive profiling */}
+      {coordinatedProgressive && (
+        <ProgressiveProfilingWidget position="bottom-right" onClose={handleProgressiveClose} />
+      )}
     </div>
   )
 }
