@@ -60,7 +60,7 @@ const Header = () => {
     { href: '/services/doubt-resolution', label: 'Doubt Resolution', icon: HelpCircle },
   ]
 
-  // Simplified navigation structure (6 core items)
+  // Enhanced navigation structure with video lectures
   const mainNavigation = [
     { href: '/', label: 'Home' },
     {
@@ -70,6 +70,7 @@ const Header = () => {
       items: courseLinks,
       isMegaMenu: true,
     },
+    { href: '/video-lectures', label: 'Video Lectures' },
     { href: '/success-stories', label: 'Success Stories' },
     { href: '/faculty', label: 'Faculty' },
     { href: '/about', label: 'About' },

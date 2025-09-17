@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import { globalSEOService } from '@/lib/seo/globalSEO'
 import { citySpecificSEOService } from '@/lib/seo/citySpecificSEO'
+import { locationDatabase } from '@/data/locationData'
 
 export async function GET() {
   const baseUrl = 'https://cerebrumbiologyacademy.com'
@@ -118,10 +119,22 @@ export async function GET() {
     { url: '/results/aiims-2024', priority: '0.7', changefreq: 'monthly' },
   ]
 
+  // Location-specific pages (new comprehensive location system)
+  const locationPages = [
+    { url: '/locations', priority: '0.9', changefreq: 'weekly' },
+    ...locationDatabase.map((location) => ({
+      url: `/locations/${location.slug}`,
+      priority: location.tier === 'tier1' ? '0.8' : location.tier === 'tier2' ? '0.7' : '0.6',
+      changefreq: 'weekly',
+      lastmod: currentDate,
+    })),
+  ]
+
   // Combine all pages
   const allPages = [
     ...corePages,
     ...cityPages,
+    ...locationPages,
     ...topicPages,
     ...coursePages,
     ...internationalPages,

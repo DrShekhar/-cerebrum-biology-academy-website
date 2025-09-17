@@ -4,6 +4,9 @@ import { StructuredData } from '@/components/seo/StructuredData'
 import { ErrorBoundary } from '@/components/ErrorBoundary'
 import { AnalyticsProvider } from '@/components/analytics/AnalyticsProvider'
 import { SessionProvider } from '@/components/providers/SessionProvider'
+import { VisitorAnalytics } from '@/components/profiling/VisitorAnalytics'
+import { PWAInstallPrompt, PWAInstallSuccess } from '@/components/pwa/PWAInstallPrompt'
+import { OfflineFormHandler } from '@/components/pwa/OfflineFormHandler'
 import { StickyTrustBar } from '@/components/common/StickyTrustBar'
 import { RealTimeProof } from '@/components/common/RealTimeProof'
 import { FloatingCTA } from '@/components/common/FloatingCTA'
@@ -80,6 +83,22 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <meta name="theme-color" content="#2563eb" />
 
+        {/* PWA Manifest */}
+        <link rel="manifest" href="/manifest.json" />
+
+        {/* PWA Icons */}
+        <link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png" />
+        <link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png" />
+
+        {/* PWA Meta Tags */}
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="Cerebrum Biology" />
+        <meta name="application-name" content="Cerebrum Biology Academy" />
+        <meta name="msapplication-TileColor" content="#2563eb" />
+        <meta name="msapplication-TileImage" content="/icons/icon-144x144.png" />
+
         {/* Google Analytics & Tag Manager */}
         <script dangerouslySetInnerHTML={{ __html: googleIntegration.initializeGA4() }} />
         <script dangerouslySetInnerHTML={{ __html: googleIntegration.initializeGTM() }} />
@@ -93,14 +112,22 @@ export default function RootLayout({
 
         <SessionProvider>
           <AnalyticsProvider>
-            <ErrorBoundary>
-              <StickyTrustBar />
-              <Header />
-              <main className="min-h-screen">{children}</main>
-              <Footer />
-              <RealTimeProof />
-              <FloatingCTA />
-            </ErrorBoundary>
+            <VisitorAnalytics>
+              <OfflineFormHandler>
+                <ErrorBoundary>
+                  <StickyTrustBar />
+                  <Header />
+                  <main className="min-h-screen">{children}</main>
+                  <Footer />
+                  <RealTimeProof />
+                  <FloatingCTA />
+
+                  {/* PWA Components */}
+                  <PWAInstallPrompt showDelay={45000} />
+                  <PWAInstallSuccess />
+                </ErrorBoundary>
+              </OfflineFormHandler>
+            </VisitorAnalytics>
           </AnalyticsProvider>
         </SessionProvider>
       </body>
