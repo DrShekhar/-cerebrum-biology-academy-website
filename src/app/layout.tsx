@@ -7,9 +7,10 @@ import { SessionProvider } from '@/components/providers/SessionProvider'
 import { VisitorAnalytics } from '@/components/profiling/VisitorAnalytics'
 import { PWAInstallPrompt, PWAInstallSuccess } from '@/components/pwa/PWAInstallPrompt'
 import { OfflineFormHandler } from '@/components/pwa/OfflineFormHandler'
-import { StickyTrustBar } from '@/components/common/StickyTrustBar'
-import { RealTimeProof } from '@/components/common/RealTimeProof'
-import { FloatingCTA } from '@/components/common/FloatingCTA'
+// EMERGENCY: Popup components temporarily removed
+// import { StickyTrustBar } from '@/components/common/StickyTrustBar'
+// import { RealTimeProof } from '@/components/common/RealTimeProof'
+// import { FloatingCTA } from '@/components/common/FloatingCTA'
 import { googleIntegration } from '@/lib/analytics/googleIntegration'
 import { metaIntegration } from '@/lib/social/metaIntegration'
 import Header from '@/components/layout/Header'
@@ -115,16 +116,17 @@ export default function RootLayout({
             <VisitorAnalytics>
               <OfflineFormHandler>
                 <ErrorBoundary>
-                  <StickyTrustBar />
+                  {/* EMERGENCY: All popup components removed for clean homepage */}
+                  {/* <StickyTrustBar /> */}
                   <Header />
                   <main className="min-h-screen">{children}</main>
                   <Footer />
-                  <RealTimeProof />
-                  <FloatingCTA />
+                  {/* <RealTimeProof /> */}
+                  {/* <FloatingCTA /> */}
 
-                  {/* PWA Components */}
-                  <PWAInstallPrompt showDelay={45000} />
-                  <PWAInstallSuccess />
+                  {/* PWA Components - keeping essential only */}
+                  {/* <PWAInstallPrompt showDelay={45000} /> */}
+                  {/* <PWAInstallSuccess /> */}
                 </ErrorBoundary>
               </OfflineFormHandler>
             </VisitorAnalytics>
