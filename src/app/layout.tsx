@@ -6,6 +6,8 @@ import { AnalyticsProvider } from '@/components/analytics/AnalyticsProvider'
 import { StickyTrustBar } from '@/components/common/StickyTrustBar'
 import { RealTimeProof } from '@/components/common/RealTimeProof'
 import { FloatingCTA } from '@/components/common/FloatingCTA'
+import { googleIntegration } from '@/lib/analytics/googleIntegration'
+import { metaIntegration } from '@/lib/social/metaIntegration'
 import Header from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 import './globals.css'
@@ -76,8 +78,18 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <meta name="theme-color" content="#2563eb" />
+
+        {/* Google Analytics & Tag Manager */}
+        <script dangerouslySetInnerHTML={{ __html: googleIntegration.initializeGA4() }} />
+        <script dangerouslySetInnerHTML={{ __html: googleIntegration.initializeGTM() }} />
+
+        {/* Facebook Pixel */}
+        <script dangerouslySetInnerHTML={{ __html: metaIntegration.initializeFacebookPixel() }} />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        {/* Google Tag Manager (noscript) */}
+        <noscript dangerouslySetInnerHTML={{ __html: googleIntegration.getGTMNoScript() }} />
+
         <AnalyticsProvider>
           <ErrorBoundary>
             <StickyTrustBar />
