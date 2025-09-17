@@ -101,14 +101,26 @@ const Header = () => {
               onClose={() => setIsBurgerMenuOpen(false)}
             />
 
-            {/* Logo */}
+            {/* Enhanced Logo with Full Brand Visibility */}
             <Link href="/" className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center shadow-lg">
                 <BookOpen className="w-6 h-6 text-white" />
               </div>
+
+              {/* Mobile: Compact brand display */}
+              <div className="block sm:hidden">
+                <span className="text-lg font-bold text-gray-900">Cerebrum</span>
+                <span className="text-xs text-gray-600 block -mt-1 font-medium">
+                  Biology Academy
+                </span>
+              </div>
+
+              {/* Desktop: Full brand display */}
               <div className="hidden sm:block">
                 <span className="text-xl font-bold text-gray-900">Cerebrum</span>
-                <span className="text-sm text-gray-600 block -mt-1">Biology Academy</span>
+                <span className="text-sm text-gray-600 block -mt-1 font-medium">
+                  Biology Academy
+                </span>
               </div>
             </Link>
           </div>
@@ -152,10 +164,11 @@ const Header = () => {
                             <div className="px-6">
                               <div className="mb-4">
                                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                                  NEET Biology Courses
+                                  Cerebrum NEET Biology Courses
                                 </h3>
                                 <p className="text-sm text-gray-600 mb-4">
-                                  Comprehensive programs designed for medical entrance success
+                                  Comprehensive programs designed for medical entrance success with
+                                  94.2% success rate
                                 </p>
                               </div>
                               <div className="grid grid-cols-1 gap-3">
@@ -191,7 +204,7 @@ const Header = () => {
                                   href="/support/demo"
                                   className="block w-full text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-4 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all"
                                 >
-                                  Book Free Demo Class
+                                  Book Free Cerebrum Demo Class
                                 </Link>
                               </div>
                             </div>
@@ -280,13 +293,13 @@ const Header = () => {
                 </AnimatePresence>
               </div>
 
-              {/* Primary CTA */}
+              {/* Primary CTA with Brand Integration */}
               <Link
                 href="/support/demo"
                 className="bg-gradient-to-r from-primary-600 to-purple-600 text-white px-6 py-3 rounded-full font-semibold hover:from-primary-700 hover:to-purple-700 transition-all duration-300 transform hover:-translate-y-1 min-h-[48px] flex items-center touch-manipulation"
                 style={{ boxShadow: 'var(--shadow-premium)' }}
               >
-                Book Demo
+                Book Cerebrum Demo
               </Link>
             </div>
           </div>
@@ -391,13 +404,13 @@ const Header = () => {
                     })}
                   </div>
 
-                  {/* Primary CTA */}
+                  {/* Primary CTA with Brand Integration */}
                   <Link
                     href="/support/demo"
                     className="block w-full text-center bg-gradient-to-r from-primary-600 to-purple-600 text-white px-6 py-4 rounded-full font-semibold hover:from-primary-700 hover:to-purple-700 transition-all duration-300 min-h-[52px] flex items-center justify-center touch-manipulation"
                     style={{ boxShadow: 'var(--shadow-premium)' }}
                   >
-                    Book Free Demo
+                    Book Free Cerebrum Demo
                   </Link>
                 </div>
               </div>

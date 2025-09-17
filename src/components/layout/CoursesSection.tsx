@@ -267,33 +267,44 @@ export function CoursesSection() {
               {/* Course Header */}
               <div className="p-8 border-b border-gray-100">
                 <div className="flex items-center justify-between mb-4">
-                  <span
-                    className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium ${
-                      course.targetClass === '11th'
-                        ? 'bg-green-100 text-green-600'
-                        : course.targetClass === '12th'
-                          ? 'bg-blue-100 text-blue-600'
-                          : 'bg-purple-100 text-purple-600'
-                    }`}
-                  >
-                    {course.targetClass === 'Dropper'
-                      ? 'Dropper Batch'
-                      : `Class ${course.targetClass}`}
-                  </span>
-                  {course.isPopular && (
-                    <div className="flex items-center bg-yellow-100 text-yellow-600 px-2 py-1 rounded-full text-xs font-medium">
-                      <Star className="w-3 h-3 mr-1 fill-current" />
-                      Popular
+                  <div className="flex items-center space-x-2">
+                    <span
+                      className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium ${
+                        course.targetClass === '11th'
+                          ? 'bg-green-100 text-green-600'
+                          : course.targetClass === '12th'
+                            ? 'bg-blue-100 text-blue-600'
+                            : 'bg-purple-100 text-purple-600'
+                      }`}
+                    >
+                      {course.targetClass === 'Dropper'
+                        ? 'Dropper Batch'
+                        : `Class ${course.targetClass}`}
+                    </span>
+                    {course.isPopular && (
+                      <div className="flex items-center bg-yellow-100 text-yellow-600 px-2 py-1 rounded-full text-xs font-medium">
+                        <Star className="w-3 h-3 mr-1 fill-current" />
+                        Popular
+                      </div>
+                    )}
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="flex items-center bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 text-blue-700 px-3 py-1 rounded-full text-xs font-semibold">
+                      <Award className="w-3 h-3 mr-1" />
+                      Cerebrum Certified
                     </div>
-                  )}
-                  <Award className="w-6 h-6 text-yellow-500" />
+                  </div>
                 </div>
 
                 <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  {course.name}
+                  Cerebrum {course.name}
                 </h3>
 
-                <p className="text-gray-600 mb-6">{course.description}</p>
+                <p className="text-gray-600 mb-6">
+                  {course.description
+                    .replace(/our/gi, "Cerebrum's")
+                    .replace(/we provide/gi, 'Cerebrum provides')}
+                </p>
 
                 {/* Course Meta */}
                 <div className="flex items-center space-x-6 text-sm text-gray-500 mb-6">
@@ -373,7 +384,7 @@ export function CoursesSection() {
                     className="flex-1"
                     onClick={() => handleEnrollClick(course.id)}
                   >
-                    Enroll Now
+                    Enroll in Cerebrum
                   </Button>
                   <Button
                     variant="outline"
@@ -381,7 +392,7 @@ export function CoursesSection() {
                     className="flex-1"
                     onClick={() => handleViewDetails(course.id)}
                   >
-                    View Details
+                    View Cerebrum Details
                   </Button>
                 </div>
               </div>
@@ -397,9 +408,12 @@ export function CoursesSection() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-3xl font-bold mb-4">Not Sure Which Course is Right for You?</h3>
+          <h3 className="text-3xl font-bold mb-4">
+            Not Sure Which Cerebrum Course is Right for You?
+          </h3>
           <p className="text-xl mb-8 opacity-90">
-            Get personalized guidance from our expert counselors to choose the perfect program
+            Get personalized guidance from our Cerebrum expert counselors to choose the perfect
+            program
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
@@ -407,14 +421,14 @@ export function CoursesSection() {
               size="xl"
               className="bg-white text-blue-600 hover:bg-gray-100"
             >
-              Free Counseling Session
+              Free Cerebrum Counseling Session
             </Button>
             <Button
               variant="outline"
               size="xl"
               className="border-white text-white hover:bg-white hover:text-blue-600"
             >
-              Download Brochure
+              Download Cerebrum Brochure
             </Button>
           </div>
         </motion.div>

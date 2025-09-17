@@ -105,6 +105,21 @@ export function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
+            {/* Brand Positioning Banner */}
+            <motion.div
+              className="inline-flex items-center bg-gradient-to-r from-blue-50 via-purple-50 to-indigo-50 border border-blue-200 rounded-full px-6 py-3 mb-6"
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mr-3">
+                <BookOpen className="w-4 h-4 text-white" />
+              </div>
+              <span className="text-sm font-semibold text-gray-800">
+                🏆 Cerebrum Biology Academy - India's #1 NEET Biology Coaching
+              </span>
+            </motion.div>
+
             <div className="space-y-4">
               {/* A/B Test Hero Headlines */}
               {heroVariant ? (
@@ -225,7 +240,7 @@ export function HeroSection() {
                   <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                   <span className="text-sm font-medium text-gray-700">
                     <span className="text-emerald-600 font-semibold">Rahul from Delhi</span> just
-                    enrolled in Class 12th Biology
+                    enrolled in Cerebrum Class 12th Biology
                   </span>
                   <div className="text-xs text-gray-500 bg-white/80 px-2 py-1 rounded-full">
                     2 min ago
@@ -237,15 +252,15 @@ export function HeroSection() {
               <div className="flex flex-wrap justify-center gap-3">
                 <div className="flex items-center bg-gradient-to-r from-emerald-50 to-emerald-100 text-emerald-700 px-5 py-3 rounded-full text-sm border border-emerald-200 shadow-sm backdrop-blur-sm">
                   <Trophy className="w-5 h-5 mr-2" />
-                  <span className="font-semibold">94.2% Success Rate</span>
+                  <span className="font-semibold">Cerebrum: 94.2% Success Rate</span>
                 </div>
                 <div className="flex items-center bg-gradient-to-r from-blue-50 to-blue-100 text-blue-700 px-5 py-3 rounded-full text-sm border border-blue-200 shadow-sm backdrop-blur-sm">
                   <Users className="w-5 h-5 mr-2" />
-                  <span className="font-semibold">2,847+ Medical Seats Secured</span>
+                  <span className="font-semibold">2,847+ Cerebrum Medical Seats</span>
                 </div>
                 <div className="flex items-center bg-gradient-to-r from-purple-50 to-purple-100 text-purple-700 px-5 py-3 rounded-full text-sm border border-purple-200 shadow-sm backdrop-blur-sm">
                   <BookOpen className="w-5 h-5 mr-2" />
-                  <span className="font-semibold">247 AIIMS Selections</span>
+                  <span className="font-semibold">247 Cerebrum AIIMS Selections</span>
                 </div>
               </div>
 

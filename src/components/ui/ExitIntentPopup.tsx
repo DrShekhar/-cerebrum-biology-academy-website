@@ -52,13 +52,13 @@ export function ExitIntentPopup({ isVisible, onClose, onDownload }: ExitIntentPo
   }, [isVisible])
 
   const catalogFeatures = [
-    'Complete NEET Biology Course Outline',
-    'Chapter-wise Study Timeline',
-    'Previous Year Question Analysis',
-    'Success Stories from 2,847 Students',
-    'Faculty Profiles & Credentials',
-    'Fee Structure & Scholarship Details',
-    'Exclusive Study Materials Preview',
+    'Complete Cerebrum NEET Biology Course Outline',
+    'Chapter-wise Study Timeline by Cerebrum Experts',
+    'Previous Year Question Analysis & Solutions',
+    'Success Stories from 2,847 Cerebrum Students',
+    'Cerebrum AIIMS Faculty Profiles & Credentials',
+    'Fee Structure & Cerebrum Scholarship Details',
+    'Exclusive Cerebrum Study Materials Preview',
   ]
 
   return (
@@ -98,7 +98,7 @@ export function ExitIntentPopup({ isVisible, onClose, onDownload }: ExitIntentPo
                 </div>
                 <div>
                   <h2 className="text-2xl font-bold">Wait! Don't Miss This...</h2>
-                  <p className="text-blue-100">Get our complete NEET Biology guide FREE</p>
+                  <p className="text-blue-100">Get Cerebrum's complete NEET Biology guide FREE</p>
                 </div>
               </div>
 
@@ -106,7 +106,7 @@ export function ExitIntentPopup({ isVisible, onClose, onDownload }: ExitIntentPo
                 <div className="flex items-center justify-between text-sm">
                   <div className="flex items-center">
                     <Trophy className="w-4 h-4 mr-2" />
-                    <span>94.2% Success Rate</span>
+                    <span>Cerebrum 94.2% Success</span>
                   </div>
                   <div className="flex items-center">
                     <Users className="w-4 h-4 mr-2" />
@@ -126,10 +126,11 @@ export function ExitIntentPopup({ isVisible, onClose, onDownload }: ExitIntentPo
                 <>
                   <div className="text-center mb-6">
                     <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      Download Our Complete Course Catalog
+                      Download Cerebrum's Complete Course Catalog
                     </h3>
                     <p className="text-gray-600">
-                      Everything you need to know about our NEET Biology coaching programs
+                      Everything you need to know about Cerebrum's proven NEET Biology coaching
+                      programs
                     </p>
                   </div>
 
@@ -182,7 +183,9 @@ export function ExitIntentPopup({ isVisible, onClose, onDownload }: ExitIntentPo
                       className="w-full py-4 text-lg font-semibold"
                     >
                       <Download className="w-5 h-5 mr-3" />
-                      {isSubmitting ? 'Sending Catalog...' : 'Download Free Catalog'}
+                      {isSubmitting
+                        ? 'Sending Cerebrum Catalog...'
+                        : 'Download Free Cerebrum Catalog'}
                     </Button>
 
                     <p className="text-xs text-gray-500 text-center">
@@ -215,13 +218,14 @@ export function ExitIntentPopup({ isVisible, onClose, onDownload }: ExitIntentPo
                     <CheckCircle className="w-8 h-8 text-green-600" />
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                    Catalog Sent Successfully!
+                    Cerebrum Catalog Sent Successfully!
                   </h3>
                   <p className="text-gray-600 mb-4">
-                    Check your email for the complete NEET Biology course catalog.
+                    Check your email for the complete Cerebrum NEET Biology course catalog.
                   </p>
                   <p className="text-sm text-gray-500">
-                    Our counselor will call you within 24 hours to discuss your NEET preparation.
+                    Our Cerebrum counselor will call you within 24 hours to discuss your NEET
+                    preparation.
                   </p>
                 </div>
               )}
