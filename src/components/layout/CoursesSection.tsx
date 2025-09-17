@@ -1,8 +1,10 @@
 'use client'
 
 import { Button } from '@/components/ui/Button'
-import { courses, courseCategories } from '@/data/courses'
+import { courseCategories } from '@/data/courses'
 import { detailedCourses } from '@/data/detailedCourses'
+import { coursePrograms } from '@/data/courseSystemData'
+import { getCoursePricing, formatPrice } from '@/lib/utils/pricing'
 import {
   Clock,
   IndianRupee,
@@ -51,7 +53,10 @@ export function CoursesSection() {
 
   // Advanced filtering logic
   const filteredCourses = useMemo(() => {
-    let filtered = courses.filter((course) => course.category === selectedCategory)
+    let filtered = coursePrograms.filter((course) => {
+      // Map course categories - for now, show all programs in all categories
+      return true
+    })
 
     // Search filter
     if (searchTerm) {
@@ -64,26 +69,25 @@ export function CoursesSection() {
 
     // Price filter
     if (priceRange !== 'all') {
-      switch (priceRange) {
-        case 'under50k':
-          filtered = filtered.filter((course) => {
-            const coursePrice = parseInt(course.price.replace(/[₹,]/g, ''))
-            return coursePrice < 50000
-          })
-          break
-        case '50k-80k':
-          filtered = filtered.filter((course) => {
-            const coursePrice = parseInt(course.price.replace(/[₹,]/g, ''))
-            return coursePrice >= 50000 && coursePrice <= 80000
-          })
-          break
-        case 'above80k':
-          filtered = filtered.filter((course) => {
-            const coursePrice = parseInt(course.price.replace(/[₹,]/g, ''))
-            return coursePrice > 80000
-          })
-          break
-      }
+      filtered = filtered.filter((course) => {
+        try {
+          const pricing = getCoursePricing(course.id)
+          const coursePrice = pricing.minPrice
+          switch (priceRange) {
+            case 'under50k':
+              return coursePrice < 50000
+            case '50k-80k':
+              return coursePrice >= 50000 && coursePrice <= 80000
+            case 'above80k':
+              return coursePrice > 80000
+            default:
+              return true
+          }
+        } catch (error) {
+          console.warn(`Pricing not found for course: ${course.id}`)
+          return true
+        }
+      })
     }
 
     // Duration filter
@@ -104,7 +108,7 @@ export function CoursesSection() {
     }
 
     return filtered
-  }, [selectedCategory, searchTerm, priceRange, duration, courses])
+  }, [selectedCategory, searchTerm, priceRange, duration])
 
   return (
     <section className="py-20 bg-gray-50">
@@ -276,11 +280,17 @@ export function CoursesSection() {
                       ? 'Dropper Batch'
                       : `Class ${course.targetClass}`}
                   </span>
+                  {course.isPopular && (
+                    <div className="flex items-center bg-yellow-100 text-yellow-600 px-2 py-1 rounded-full text-xs font-medium">
+                      <Star className="w-3 h-3 mr-1 fill-current" />
+                      Popular
+                    </div>
+                  )}
                   <Award className="w-6 h-6 text-yellow-500" />
                 </div>
 
                 <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  {course.title}
+                  {course.name}
                 </h3>
 
                 <p className="text-gray-600 mb-6">{course.description}</p>
@@ -295,28 +305,64 @@ export function CoursesSection() {
                     <Target className="w-4 h-4 mr-2" />
                     NEET Focused
                   </div>
+                  <div className="flex items-center">
+                    <Users className="w-4 h-4 mr-2" />
+                    {course.teachingHours}h/week
+                  </div>
                 </div>
 
                 {/* Pricing */}
-                <div className="flex items-center space-x-2 mb-6">
-                  <IndianRupee className="w-6 h-6 text-green-600" />
-                  <span className="text-3xl font-bold text-gray-900">
-                    {course.price.toLocaleString('en-IN')}
-                  </span>
-                  <span className="text-gray-500">/ year</span>
+                <div className="flex items-center justify-between mb-6">
+                  <div className="flex items-center space-x-2">
+                    <IndianRupee className="w-6 h-6 text-green-600" />
+                    <div>
+                      {(() => {
+                        try {
+                          const pricing = getCoursePricing(course.id)
+                          return (
+                            <>
+                              <span className="text-3xl font-bold text-gray-900">
+                                {pricing.priceRange}
+                              </span>
+                              <div className="text-sm text-gray-500">
+                                Choose from {pricing.tiers.length} tiers
+                              </div>
+                            </>
+                          )
+                        } catch (error) {
+                          return (
+                            <>
+                              <span className="text-3xl font-bold text-gray-900">₹48K+</span>
+                              <div className="text-sm text-gray-500">Multiple options</div>
+                            </>
+                          )
+                        }
+                      })()}
+                    </div>
+                  </div>
+                  <div className="text-right">
+                    <div className="text-xs text-green-600 font-medium bg-green-50 px-2 py-1 rounded-full">
+                      EMI Available
+                    </div>
+                  </div>
                 </div>
               </div>
 
               {/* Features List */}
               <div className="p-8">
-                <h4 className="font-semibold text-gray-900 mb-4">What&apos;s Included:</h4>
+                <h4 className="font-semibold text-gray-900 mb-4">Key Highlights:</h4>
                 <ul className="space-y-3 mb-8">
-                  {course.features.map((feature, featureIndex) => (
+                  {(course.highlights || []).slice(0, 4).map((highlight, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-600">
                       <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                      {feature}
+                      {highlight}
                     </li>
                   ))}
+                  {(course.highlights || []).length > 4 && (
+                    <li className="text-sm text-blue-600">
+                      +{(course.highlights || []).length - 4} more features
+                    </li>
+                  )}
                 </ul>
 
                 {/* Action Buttons */}
