@@ -70,10 +70,6 @@ export function HeroSection() {
       className="min-h-screen bg-gradient-to-br from-primary-50 via-primary-100 to-indigo-100 px-4 py-12"
       style={{ background: 'var(--gradient-hero)' }}
     >
-      {/* Deployment Test Marker */}
-      <div className="fixed top-0 right-0 bg-red-500 text-white px-4 py-2 text-sm font-mono z-50">
-        DEPLOY TEST v{Date.now()}
-      </div>
       <div className="max-w-7xl mx-auto">
         {/* Hero Content */}
         <div className="grid lg:grid-cols-2 gap-12 items-center">

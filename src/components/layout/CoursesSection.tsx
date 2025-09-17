@@ -327,9 +327,6 @@ export function CoursesSection() {
                               <div className="text-sm text-gray-500">
                                 Choose from {pricing.tiers.length} tiers
                               </div>
-                              <div className="text-xs text-blue-600 font-mono">
-                                NEW PRICING: {course.id}
-                              </div>
                             </>
                           )
                         } catch (error) {
@@ -337,9 +334,6 @@ export function CoursesSection() {
                             <>
                               <span className="text-3xl font-bold text-gray-900">₹48K+</span>
                               <div className="text-sm text-gray-500">Multiple options</div>
-                              <div className="text-xs text-red-600 font-mono">
-                                ERROR: {error instanceof Error ? error.message : 'Unknown'}
-                              </div>
                             </>
                           )
                         }

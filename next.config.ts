@@ -26,6 +26,13 @@ const nextConfig: NextConfig = {
   env: {
     NEXT_PUBLIC_ENV: process.env.NEXT_PUBLIC_ENV || 'development',
     NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
+    NEXT_PUBLIC_BUILD_ID: Date.now().toString(),
+    NEXT_PUBLIC_PRICING_SYSTEM: '2.0.0',
+  },
+
+  // Force fresh deployment
+  generateBuildId: async () => {
+    return `build-${Date.now()}`
   },
   
   // Production optimizations
