@@ -12,12 +12,14 @@ interface ProgressiveProfilingWidgetProps {
   className?: string
   showDelay?: number
   position?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left' | 'center'
+  onClose?: () => void
 }
 
 export function ProgressiveProfilingWidget({
   className = '',
   showDelay = 10000, // Show after 10 seconds
   position = 'bottom-right',
+  onClose,
 }: ProgressiveProfilingWidgetProps) {
   const [isVisible, setIsVisible] = useState(false)
   const [currentQuestion, setCurrentQuestion] = useState<any>(null)
@@ -144,9 +146,34 @@ export function ProgressiveProfilingWidget({
       'progressive_profiling_dismiss',
       currentQuestion?.category || 'unknown'
     )
+    // Call parent close handler if provided
+    if (onClose) {
+      onClose()
+    }
   }
 
   const getPositionClasses = () => {
+    // Mobile-specific positioning to avoid conflicts
+    const isMobile = typeof window !== 'undefined' && window.innerWidth <= 768
+
+    if (isMobile) {
+      // On mobile, use top-right to avoid bottom conflicts with ticker
+      switch (position) {
+        case 'bottom-right':
+        case 'bottom-left':
+          return 'top-20 right-4' // Move to top-right on mobile
+        case 'top-right':
+          return 'top-20 right-4'
+        case 'top-left':
+          return 'top-20 left-4'
+        case 'center':
+          return 'top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'
+        default:
+          return 'top-20 right-4' // Default to top-right on mobile
+      }
+    }
+
+    // Desktop positioning (original)
     switch (position) {
       case 'bottom-right':
         return 'bottom-6 right-6'

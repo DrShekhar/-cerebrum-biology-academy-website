@@ -377,16 +377,16 @@ export function SuccessTicker({ useCoordination = false }: SuccessTickerProps) {
   if (!isVisible || !currentStory) return null
 
   return (
-    <div className="md:hidden fixed bottom-4 left-4 right-4 z-50">
+    <div className="md:hidden fixed bottom-4 left-4 right-4 z-40">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 50 }}
-        className="bg-gradient-to-r from-green-500 to-emerald-600 text-white p-3 rounded-lg shadow-lg"
+        className="bg-gradient-to-r from-green-500 to-emerald-600 text-white p-2.5 rounded-lg shadow-lg"
       >
         <div className="flex items-center">
           <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />
-          <p className="text-sm font-medium truncate">{currentStory}</p>
+          <p className="text-xs font-medium truncate">{currentStory}</p>
         </div>
       </motion.div>
     </div>

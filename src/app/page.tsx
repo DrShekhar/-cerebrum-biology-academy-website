@@ -104,23 +104,35 @@ export default function Home() {
       {/* Phase 1: Coordinated location detection */}
       <LocationDetector showBanner={true} useCoordination={true} />
 
-      {/* Optimized Flow: Hero → Social Proof → Value Proposition → Courses → Urgency → Booking */}
+      {/* Phase 2: Optimized Flow with Reduced Content Density */}
       <HeroSection />
-      <PersonalizedContent section="hero" className="py-8" />
+      <PersonalizedContent section="hero" className="py-6 md:py-8" />
       <TrustBadgesSection />
       <ValuePropositionSection />
-      <PersonalizedContent section="courses" className="py-16 px-4 bg-gray-50" />
+      <PersonalizedContent section="courses" className="py-8 md:py-16 px-4 bg-gray-50" />
       <CoursesSection />
-      <PersonalizedContent section="recommendations" className="py-16 px-4" />
+      {/* Phase 2: Removed excessive PersonalizedContent sections on mobile */}
+      <div className="hidden md:block">
+        <PersonalizedContent section="recommendations" className="py-16 px-4" />
+      </div>
       <UrgencySection />
-      <PersonalizedContent section="urgency" className="py-8 px-4" />
       <TestimonialsSection />
-      <PersonalizedContent section="testimonials" className="py-16 px-4 bg-gray-50" />
-      <NEETToppersShowcase maxToppers={6} showVideos={true} />
-      <ParentTestimonialsSection />
-      <PhotoGallerySection showFeaturedOnly={true} maxPhotos={8} />
-      <FacultyVideoSection />
-      <CompactVideoLectures />
+      {/* Phase 2: Reduced sections for better mobile performance */}
+      <div className="hidden md:block">
+        <PersonalizedContent section="testimonials" className="py-16 px-4 bg-gray-50" />
+        <ParentTestimonialsSection />
+        <PhotoGallerySection showFeaturedOnly={true} maxPhotos={8} />
+        <FacultyVideoSection />
+        <CompactVideoLectures />
+      </div>
+      {/* Phase 2: Mobile-optimized content flow */}
+      <div className="md:hidden">
+        <NEETToppersShowcase maxToppers={3} showVideos={false} />
+        <PhotoGallerySection showFeaturedOnly={true} maxPhotos={4} />
+      </div>
+      <div className="hidden md:block">
+        <NEETToppersShowcase maxToppers={6} showVideos={true} />
+      </div>
       <FacultySection />
       <BookingSection />
 
