@@ -1,4 +1,4 @@
-// ✨ CLEAN HOMEPAGE with TV-Style Notification Center - Force Deploy
+// 🚨 EMERGENCY HOMEPAGE - Simplified, Clean, Usable Interface
 'use client'
 
 import { useState, useEffect } from 'react'
@@ -10,10 +10,9 @@ import { TestimonialsSection } from '@/components/layout/TestimonialsSection'
 import { FacultySection } from '@/components/layout/FacultySection'
 import { BookingSection } from '@/components/layout/BookingSection'
 import { ExitIntentPopup, useExitIntent } from '@/components/ui/ExitIntentPopup'
-import { NotificationCenter } from '@/components/ui/NotificationCenter'
 import { usePopupCoordinator } from '@/lib/ui/popupCoordinator'
 
-export default function Home() {
+export default function EmergencyHomePage() {
   const { showExitIntent, hideExitIntent } = useExitIntent()
   const popupCoordinator = usePopupCoordinator()
   const [coordinatedExitIntent, setCoordinatedExitIntent] = useState(false)
@@ -72,9 +71,9 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
-      {/* 🎯 CLEAN, FOCUSED HOMEPAGE - TV-Style Notification System */}
+      {/* 🎯 CLEAN, FOCUSED HOMEPAGE - NO POPUP CONFLICTS */}
 
-      {/* Core sections only - clean experience */}
+      {/* Core sections only - removed all conflicting elements */}
       <HeroSection />
       <TrustBadgesSection />
       <ValuePropositionSection />
@@ -83,16 +82,7 @@ export default function Home() {
       <FacultySection />
       <BookingSection />
 
-      {/* 📺 TV-Style Notification Center - Single Point of Social Proof - v2.0 */}
-      <NotificationCenter
-        position="top-right"
-        autoPlay={true}
-        interval={8}
-        maxWidth="340px"
-        key="tv-v2"
-      />
-
-      {/* Exit Intent Popup - Coordinated through popup system */}
+      {/* ONLY Exit Intent Popup - Coordinated through popup system */}
       {coordinatedExitIntent && (
         <ExitIntentPopup
           isVisible={true}
@@ -101,15 +91,17 @@ export default function Home() {
         />
       )}
 
-      {/* ELIMINATED ALL COMPETING ELEMENTS:
-          ✅ Replaced SuccessNotifications spam with TV-style center
-          ✅ Replaced LiveEnrollmentNotifications with TV-style center
-          ✅ Replaced SuccessTicker with TV-style center
-          ✅ Removed LocationDetector banner conflicts
-          ✅ Removed ProgressiveProfilingWidget conflicts
-          ✅ Removed Multiple PersonalizedContent sections
-          ✅ Removed all video sections for performance
-          ✅ Single clean notification experience
+      {/* REMOVED ALL COMPETING ELEMENTS:
+          - SuccessNotifications (was causing right-side spam)
+          - LiveEnrollmentNotifications (was causing left-side spam)
+          - SuccessTicker (was blocking mobile bottom)
+          - ProgressiveProfilingWidget (was conflicting with exit intent)
+          - LocationDetector (was causing immediate popup)
+          - Multiple PersonalizedContent sections (was adding clutter)
+          - All video sections (was slowing page performance)
+          - ParentTestimonialsSection (was duplicating testimonials)
+          - PhotoGallerySection (was adding visual noise)
+          - UrgencySection (was adding pressure without purpose)
       */}
     </div>
   )
