@@ -1,0 +1,371 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// User Management
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  phone     String?  @unique
+  name      String
+  role      UserRole @default(STUDENT)
+
+  // Authentication
+  passwordHash String?
+  emailVerified DateTime?
+  phoneVerified DateTime?
+
+  // Profile
+  profile Json?
+
+  // Timestamps
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  lastActiveAt DateTime?
+
+  // Relations
+  enrollments    Enrollment[]
+  demoBookings   DemoBooking[]
+  payments       Payment[]
+  sessions       Session[]
+  communicationLog CommunicationLog[]
+
+  @@map("users")
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("sessions")
+}
+
+// Course Management
+model Course {
+  id          String   @id @default(cuid())
+  name        String
+  description String?
+
+  // Course Details
+  type        CourseType
+  class       StudentClass
+  duration    Int      // in months
+  totalFees   Int      // in paise (₹1 = 100 paise)
+
+  // Course Structure
+  syllabus    Json?
+  features    String[]
+
+  // Metadata
+  isActive    Boolean  @default(true)
+  sortOrder   Int      @default(0)
+
+  // Timestamps
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  enrollments Enrollment[]
+  demoBookings DemoBooking[]
+
+  @@map("courses")
+}
+
+// Enrollment Management
+model Enrollment {
+  id            String           @id @default(cuid())
+  userId        String
+  courseId      String
+
+  // Enrollment Details
+  status        EnrollmentStatus @default(PENDING)
+  enrollmentDate DateTime        @default(now())
+  startDate     DateTime?
+  endDate       DateTime?
+
+  // Payment Details
+  totalFees     Int              // in paise
+  paidAmount    Int              @default(0)
+  pendingAmount Int              @default(0)
+  paymentPlan   PaymentPlan      @default(FULL)
+
+  // Academic Details
+  currentProgress Int            @default(0) // percentage
+  lastAccessDate  DateTime?
+
+  // Timestamps
+  createdAt     DateTime         @default(now())
+  updatedAt     DateTime         @updatedAt
+
+  // Relations
+  user          User             @relation(fields: [userId], references: [id])
+  course        Course           @relation(fields: [courseId], references: [id])
+  payments      Payment[]
+
+  @@unique([userId, courseId])
+  @@map("enrollments")
+}
+
+// Demo Booking Management
+model DemoBooking {
+  id              String              @id @default(cuid())
+  userId          String?
+  courseId        String?
+
+  // Student Information
+  studentName     String
+  email           String?
+  phone           String
+  studentClass    StudentClass?
+
+  // Demo Details
+  preferredDate   String
+  preferredTime   String
+  message         String?
+  status          DemoBookingStatus   @default(PENDING)
+
+  // Assignment & Follow-up
+  assignedTo      String?
+  followUpDate    DateTime?
+  remindersSent   Int                 @default(0)
+
+  // Demo Feedback
+  demoCompleted   Boolean             @default(false)
+  demoRating      Int?                // 1-5
+  demoFeedback    String?
+  convertedToEnrollment Boolean       @default(false)
+
+  // Marketing
+  source          String?             // website, facebook, google_ads, etc.
+  utmSource       String?
+  utmMedium       String?
+  utmCampaign     String?
+
+  // Timestamps
+  createdAt       DateTime            @default(now())
+  updatedAt       DateTime            @updatedAt
+
+  // Relations
+  user            User?               @relation(fields: [userId], references: [id])
+  course          Course?             @relation(fields: [courseId], references: [id])
+  communicationLog CommunicationLog[]
+
+  @@map("demo_bookings")
+}
+
+// Payment Management
+model Payment {
+  id              String        @id @default(cuid())
+  userId          String
+  enrollmentId    String?
+
+  // Payment Details
+  amount          Int           // in paise
+  currency        String        @default("INR")
+  status          PaymentStatus @default(PENDING)
+  paymentMethod   PaymentMethod
+
+  // Gateway Details
+  razorpayOrderId    String?   @unique
+  razorpayPaymentId  String?   @unique
+  razorpaySignature  String?
+
+  // Transaction Details
+  transactionId   String?
+  failureReason   String?
+
+  // Installment Details
+  installmentNumber Int?       // for EMI payments
+  totalInstallments Int?
+
+  // Timestamps
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+  completedAt     DateTime?
+
+  // Relations
+  user            User          @relation(fields: [userId], references: [id])
+  enrollment      Enrollment?   @relation(fields: [enrollmentId], references: [id])
+
+  @@map("payments")
+}
+
+// Communication & Marketing
+model CommunicationLog {
+  id              String              @id @default(cuid())
+  userId          String?
+  demoBookingId   String?
+
+  // Communication Details
+  type            CommunicationType
+  channel         CommunicationChannel
+  content         String
+  subject         String?
+
+  // Status
+  status          MessageStatus       @default(SENT)
+  sentAt          DateTime            @default(now())
+  deliveredAt     DateTime?
+  readAt          DateTime?
+
+  // WhatsApp specific
+  whatsappMessageId String?
+
+  // Email specific
+  emailMessageId    String?
+
+  // Template Details
+  templateId      String?
+  templateData    Json?
+
+  // Timestamps
+  createdAt       DateTime            @default(now())
+
+  // Relations
+  user            User?               @relation(fields: [userId], references: [id])
+  demoBooking     DemoBooking?        @relation(fields: [demoBookingId], references: [id])
+
+  @@map("communication_logs")
+}
+
+// Analytics & Tracking
+model AnalyticsEvent {
+  id          String   @id @default(cuid())
+  userId      String?
+  sessionId   String?
+
+  // Event Details
+  eventType   String
+  eventName   String
+  properties  Json?
+
+  // Page/Context
+  pagePath    String?
+  pageTitle   String?
+  referrer    String?
+  userAgent   String?
+
+  // Marketing Attribution
+  utmSource   String?
+  utmMedium   String?
+  utmCampaign String?
+
+  // Location
+  ipAddress   String?
+  country     String?
+  city        String?
+
+  // Timestamps
+  createdAt   DateTime @default(now())
+
+  @@map("analytics_events")
+}
+
+// Enums
+enum UserRole {
+  STUDENT
+  PARENT
+  TEACHER
+  ADMIN
+}
+
+enum CourseType {
+  NEET_COMPLETE
+  CLASS_11
+  CLASS_12
+  DROPPER
+  FOUNDATION
+  CRASH_COURSE
+}
+
+enum StudentClass {
+  CLASS_9
+  CLASS_10
+  CLASS_11
+  CLASS_12
+  DROPPER
+  FOUNDATION
+}
+
+enum EnrollmentStatus {
+  PENDING
+  ACTIVE
+  COMPLETED
+  CANCELLED
+  SUSPENDED
+}
+
+enum PaymentPlan {
+  FULL
+  QUARTERLY
+  MONTHLY
+  CUSTOM
+}
+
+enum DemoBookingStatus {
+  PENDING
+  CONFIRMED
+  COMPLETED
+  CANCELLED
+  NO_SHOW
+}
+
+enum PaymentStatus {
+  PENDING
+  PROCESSING
+  COMPLETED
+  FAILED
+  CANCELLED
+  REFUNDED
+}
+
+enum PaymentMethod {
+  RAZORPAY_UPI
+  RAZORPAY_CARD
+  RAZORPAY_NETBANKING
+  RAZORPAY_WALLET
+  BANK_TRANSFER
+  CASH
+  CHEQUE
+}
+
+enum CommunicationType {
+  WELCOME_MESSAGE
+  DEMO_CONFIRMATION
+  DEMO_REMINDER
+  ENROLLMENT_CONFIRMATION
+  PAYMENT_REMINDER
+  COURSE_UPDATE
+  MARKETING_MESSAGE
+  SUPPORT_MESSAGE
+  FEEDBACK_REQUEST
+  CUSTOM_MESSAGE
+}
+
+enum CommunicationChannel {
+  WHATSAPP
+  EMAIL
+  SMS
+  PHONE_CALL
+  IN_APP_NOTIFICATION
+}
+
+enum MessageStatus {
+  SENT
+  DELIVERED
+  READ
+  FAILED
+  PENDING
+}

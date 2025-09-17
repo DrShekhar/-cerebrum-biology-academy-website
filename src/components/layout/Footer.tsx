@@ -19,11 +19,12 @@ export function Footer() {
   const currentYear = new Date().getFullYear()
 
   const courseLinks = [
-    { name: 'NEET Biology Coaching', href: '/courses/neet-biology' },
     { name: 'Class 11th Biology', href: '/courses/class-11' },
     { name: 'Class 12th Biology', href: '/courses/class-12' },
-    { name: 'Dropper Batch', href: '/courses/dropper' },
+    { name: 'NEET Dropper Program', href: '/courses/neet-dropper' },
     { name: 'Foundation Course (9th-10th)', href: '/courses/foundation' },
+    { name: 'Class 9th Foundation', href: '/courses/class-9-foundation' },
+    { name: 'Class 10th Foundation', href: '/courses/class-10-foundation' },
   ]
 
   const boardLinks = [

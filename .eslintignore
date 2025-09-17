@@ -1,0 +1,29 @@
+# Build outputs
+.next/
+dist/
+build/
+
+# Generated files
+src/generated/
+prisma/migrations/
+
+# Dependencies
+node_modules/
+
+# Environment files
+.env*
+
+# Coverage reports
+coverage/
+
+# Test files
+**/*.test.ts
+**/*.test.tsx
+**/*.spec.ts
+**/*.spec.tsx
+
+# Config files
+*.config.js
+*.config.cjs
+jest.setup.js
+jest.env.js

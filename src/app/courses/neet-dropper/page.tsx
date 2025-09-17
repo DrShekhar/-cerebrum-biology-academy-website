@@ -1,12 +1,20 @@
-import { Metadata } from 'next'
-import Link from 'next/link'
-import { CheckCircle, Clock, Users, Award, BookOpen, Target, Star, ArrowRight, Trophy, Zap, Brain } from 'lucide-react'
+'use client'
 
-export const metadata: Metadata = {
-  title: 'NEET Dropper Course 2025 | One Year Intensive | Cerebrum Biology Academy',
-  description: 'Dedicated NEET Dropper program for 2025. Intensive Biology coaching, rank improvement strategy, expert AIIMS faculty. Join now!',
-  keywords: 'NEET dropper course, NEET 2025, dropper batch, rank improvement, NEET Biology coaching, one year program',
-}
+import Link from 'next/link'
+import {
+  CheckCircle,
+  Clock,
+  Users,
+  Award,
+  BookOpen,
+  Target,
+  Star,
+  ArrowRight,
+  Trophy,
+  Zap,
+  Brain,
+} from 'lucide-react'
+import { PricingDisplay } from '@/components/ui/PricingDisplay'
 
 export default function NEETDropperPage() {
   const courseFeatures = [
@@ -17,7 +25,7 @@ export default function NEETDropperPage() {
     'Weekly full-length mock tests',
     'Personal rank improvement tracking',
     'Dedicated counseling and motivation',
-    'Crash course revision in final months'
+    'Crash course revision in final months',
   ]
 
   const phasePlan = [
@@ -26,59 +34,59 @@ export default function NEETDropperPage() {
       duration: 'Month 1-3',
       focus: 'Complete syllabus coverage with strong foundation building',
       topics: ['NCERT thorough revision', 'Concept clarity', 'Basic problem solving'],
-      color: 'green'
+      color: 'green',
     },
     {
       phase: 'Phase 2: Advanced',
       duration: 'Month 4-7',
       focus: 'Advanced concepts and extensive practice',
       topics: ['Previous year questions', 'Advanced problem solving', 'Speed enhancement'],
-      color: 'blue'
+      color: 'blue',
     },
     {
       phase: 'Phase 3: Mastery',
       duration: 'Month 8-10',
       focus: 'Mock tests, revision, and exam strategy',
       topics: ['Full-length tests', 'Weak area improvement', 'Time management'],
-      color: 'purple'
+      color: 'purple',
     },
     {
       phase: 'Phase 4: Final',
       duration: 'Month 11-12',
       focus: 'Final revision and exam preparation',
       topics: ['Crash course', 'Last minute tips', 'Confidence building'],
-      color: 'red'
-    }
+      color: 'red',
+    },
   ]
 
   const successStats = [
     { number: '89%', label: 'Rank Improvement', description: 'Significant rank boost' },
     { number: '350+', label: 'Avg Biology Score', description: 'Target achievement' },
     { number: '1500+', label: 'Droppers Coached', description: 'Successful transformations' },
-    { number: '95%', label: 'Target Achievement', description: 'Desired rank/college' }
+    { number: '95%', label: 'Target Achievement', description: 'Desired rank/college' },
   ]
 
   const uniqueFeatures = [
     {
       icon: Brain,
       title: 'Psychology Support',
-      description: 'Dedicated counseling to handle dropper year stress and maintain motivation'
+      description: 'Dedicated counseling to handle dropper year stress and maintain motivation',
     },
     {
       icon: Target,
       title: 'Rank Prediction',
-      description: 'AI-powered rank prediction and improvement tracking throughout the year'
+      description: 'AI-powered rank prediction and improvement tracking throughout the year',
     },
     {
       icon: Zap,
       title: 'Speed Training',
-      description: 'Specialized speed enhancement sessions for Biology section completion'
+      description: 'Specialized speed enhancement sessions for Biology section completion',
     },
     {
       icon: Trophy,
       title: 'Success Guarantee',
-      description: 'Structured approach with measurable milestones and guaranteed improvement'
-    }
+      description: 'Structured approach with measurable milestones and guaranteed improvement',
+    },
   ]
 
   return (
@@ -88,22 +96,20 @@ export default function NEETDropperPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-5xl font-bold mb-6">
-                NEET Dropper Course 2025
-              </h1>
+              <h1 className="text-5xl font-bold mb-6">NEET Dropper Course 2025</h1>
               <p className="text-xl text-red-100 mb-8">
-                Turn your second chance into your best chance. Intensive one-year program 
-                designed specifically for NEET droppers with proven rank improvement strategies.
+                Turn your second chance into your best chance. Intensive one-year program designed
+                specifically for NEET droppers with proven rank improvement strategies.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link 
+                <Link
                   href="/admissions"
                   className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-red-50 transition-colors inline-flex items-center"
                 >
                   Join Dropper Batch
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
-                <Link 
+                <Link
                   href="/contact"
                   className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors"
                 >
@@ -141,11 +147,16 @@ export default function NEETDropperPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Dropper Success Record</h2>
-            <p className="text-gray-600">Proven track record of transforming dropper students into medical college admits</p>
+            <p className="text-gray-600">
+              Proven track record of transforming dropper students into medical college admits
+            </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {successStats.map((stat, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow">
+              <div
+                key={index}
+                className="bg-white rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow"
+              >
                 <div className="text-3xl font-bold text-red-600 mb-2">{stat.number}</div>
                 <div className="text-lg font-semibold text-gray-900 mb-1">{stat.label}</div>
                 <div className="text-sm text-gray-600">{stat.description}</div>
@@ -161,15 +172,19 @@ export default function NEETDropperPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Droppers Choose Us</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Specialized features designed specifically for dropper students' unique needs and challenges
+              Specialized features designed specifically for dropper students' unique needs and
+              challenges
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {uniqueFeatures.map((feature, index) => {
               const Icon = feature.icon
               return (
-                <div key={index} className="bg-white rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow">
+                <div
+                  key={index}
+                  className="bg-white rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow"
+                >
                   <Icon className="w-12 h-12 text-red-600 mx-auto mb-4" />
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">{feature.title}</h3>
                   <p className="text-gray-600 text-sm">{feature.description}</p>
@@ -184,31 +199,40 @@ export default function NEETDropperPage() {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Strategic 4-Phase Preparation Plan</h2>
-            <p className="text-gray-600">Scientifically designed phases for maximum rank improvement</p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Strategic 4-Phase Preparation Plan
+            </h2>
+            <p className="text-gray-600">
+              Scientifically designed phases for maximum rank improvement
+            </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 gap-6">
             {phasePlan.map((phase, index) => {
               const colorClasses = {
                 green: 'border-green-600 bg-green-50',
                 blue: 'border-blue-600 bg-blue-50',
                 purple: 'border-purple-600 bg-purple-50',
-                red: 'border-red-600 bg-red-50'
+                red: 'border-red-600 bg-red-50',
               }
-              
+
               const textClasses = {
                 green: 'text-green-800',
                 blue: 'text-blue-800',
                 purple: 'text-purple-800',
-                red: 'text-red-800'
+                red: 'text-red-800',
               }
 
               return (
-                <div key={index} className={`rounded-xl p-6 shadow-lg border-l-4 ${colorClasses[phase.color]}`}>
+                <div
+                  key={index}
+                  className={`rounded-xl p-6 shadow-lg border-l-4 ${colorClasses[phase.color]}`}
+                >
                   <div className="flex justify-between items-start mb-4">
                     <h3 className="text-xl font-bold text-gray-900">{phase.phase}</h3>
-                    <span className={`px-3 py-1 rounded-full text-sm font-medium ${textClasses[phase.color]} bg-white`}>
+                    <span
+                      className={`px-3 py-1 rounded-full text-sm font-medium ${textClasses[phase.color]} bg-white`}
+                    >
                       {phase.duration}
                     </span>
                   </div>
@@ -216,7 +240,9 @@ export default function NEETDropperPage() {
                   <div className="space-y-2">
                     {phase.topics.map((topic, topicIndex) => (
                       <div key={topicIndex} className="flex items-center">
-                        <CheckCircle className={`w-4 h-4 mr-2 ${phase.color === 'green' ? 'text-green-600' : phase.color === 'blue' ? 'text-blue-600' : phase.color === 'purple' ? 'text-purple-600' : 'text-red-600'}`} />
+                        <CheckCircle
+                          className={`w-4 h-4 mr-2 ${phase.color === 'green' ? 'text-green-600' : phase.color === 'blue' ? 'text-blue-600' : phase.color === 'purple' ? 'text-purple-600' : 'text-red-600'}`}
+                        />
                         <span className="text-gray-700 text-sm">{topic}</span>
                       </div>
                     ))}
@@ -232,12 +258,17 @@ export default function NEETDropperPage() {
       <section className="py-16 bg-gray-100">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Complete Dropper Course Features</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Complete Dropper Course Features
+            </h2>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {courseFeatures.map((feature, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+              <div
+                key={index}
+                className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
+              >
                 <CheckCircle className="w-8 h-8 text-red-600 mb-4" />
                 <p className="text-gray-700 font-medium">{feature}</p>
               </div>
@@ -250,11 +281,13 @@ export default function NEETDropperPage() {
       <section className="py-16 bg-red-50">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Transform Your NEET Journey</h2>
-          
+
           <div className="bg-white rounded-3xl shadow-xl p-8 mb-8">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">NEET Dropper Complete Course</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  NEET Dropper Complete Course
+                </h3>
                 <div className="text-left space-y-3">
                   <div className="flex items-center">
                     <Star className="w-5 h-5 text-yellow-500 mr-2" />
@@ -274,24 +307,13 @@ export default function NEETDropperPage() {
                   </div>
                 </div>
               </div>
-              
+
               <div>
-                <div className="text-4xl font-bold text-red-600 mb-4">₹44,999</div>
-                <p className="text-gray-600 mb-6">Complete dropper transformation program</p>
-                <div className="space-y-3">
-                  <Link 
-                    href="/admissions"
-                    className="block bg-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors"
-                  >
-                    Join Dropper Batch
-                  </Link>
-                  <Link 
-                    href="/contact"
-                    className="block border border-red-600 text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-red-50 transition-colors"
-                  >
-                    Book Free Counseling
-                  </Link>
-                </div>
+                <PricingDisplay
+                  courseId="neet-dropper-intensive"
+                  showCompetitiveAdvantage={true}
+                  onEnrollClick={() => (window.location.href = '/admissions')}
+                />
               </div>
             </div>
           </div>
@@ -299,7 +321,8 @@ export default function NEETDropperPage() {
           <div className="bg-orange-100 border border-orange-300 rounded-xl p-6">
             <p className="text-orange-800 font-semibold mb-2">🔥 Dropper Special Offer</p>
             <p className="text-orange-700">
-              Join before 15th February and get additional 100 hours of personal mentoring + Psychology counseling sessions FREE!
+              Join before 15th February and get additional 100 hours of personal mentoring +
+              Psychology counseling sessions FREE!
             </p>
           </div>
         </div>
@@ -308,46 +331,52 @@ export default function NEETDropperPage() {
       {/* FAQ Section */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Dropper Students FAQ</h2>
-          
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
+            Dropper Students FAQ
+          </h2>
+
           <div className="space-y-6">
             <div className="bg-white rounded-xl p-6 shadow-lg">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
                 Is there a separate batch only for dropper students?
               </h3>
               <p className="text-gray-600">
-                Yes, we have dedicated dropper-only batches. This creates the right environment where all students 
-                have similar goals and motivation levels, leading to better peer learning and support.
+                Yes, we have dedicated dropper-only batches. This creates the right environment
+                where all students have similar goals and motivation levels, leading to better peer
+                learning and support.
               </p>
             </div>
-            
+
             <div className="bg-white rounded-xl p-6 shadow-lg">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
                 How do you handle the psychological pressure of dropper year?
               </h3>
               <p className="text-gray-600">
-                We provide dedicated counseling sessions, motivation workshops, and stress management techniques. 
-                Our faculty is specially trained to handle dropper student psychology and maintain high motivation levels.
+                We provide dedicated counseling sessions, motivation workshops, and stress
+                management techniques. Our faculty is specially trained to handle dropper student
+                psychology and maintain high motivation levels.
               </p>
             </div>
-            
+
             <div className="bg-white rounded-xl p-6 shadow-lg">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
                 What is the average rank improvement for your dropper students?
               </h3>
               <p className="text-gray-600">
-                Our dropper students typically see 50,000-100,000 rank improvement. Many who scored 400+ in first attempt 
-                achieve 550+ scores and secure government medical colleges in their second attempt.
+                Our dropper students typically see 50,000-100,000 rank improvement. Many who scored
+                400+ in first attempt achieve 550+ scores and secure government medical colleges in
+                their second attempt.
               </p>
             </div>
-            
+
             <div className="bg-white rounded-xl p-6 shadow-lg">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
                 Do you provide personalized study plans for dropper students?
               </h3>
               <p className="text-gray-600">
-                Absolutely! Each dropper student gets a personalized study plan based on their previous attempt analysis, 
-                weak areas identification, and target rank/college preferences.
+                Absolutely! Each dropper student gets a personalized study plan based on their
+                previous attempt analysis, weak areas identification, and target rank/college
+                preferences.
               </p>
             </div>
           </div>

@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from 'next/font/google'
 import { StructuredData } from '@/components/seo/StructuredData'
 import { ErrorBoundary } from '@/components/ErrorBoundary'
 import { AnalyticsProvider } from '@/components/analytics/AnalyticsProvider'
+import { SessionProvider } from '@/components/providers/SessionProvider'
 import { StickyTrustBar } from '@/components/common/StickyTrustBar'
 import { RealTimeProof } from '@/components/common/RealTimeProof'
 import { FloatingCTA } from '@/components/common/FloatingCTA'
@@ -90,16 +91,18 @@ export default function RootLayout({
         {/* Google Tag Manager (noscript) */}
         <noscript dangerouslySetInnerHTML={{ __html: googleIntegration.getGTMNoScript() }} />
 
-        <AnalyticsProvider>
-          <ErrorBoundary>
-            <StickyTrustBar />
-            <Header />
-            <main className="min-h-screen">{children}</main>
-            <Footer />
-            <RealTimeProof />
-            <FloatingCTA />
-          </ErrorBoundary>
-        </AnalyticsProvider>
+        <SessionProvider>
+          <AnalyticsProvider>
+            <ErrorBoundary>
+              <StickyTrustBar />
+              <Header />
+              <main className="min-h-screen">{children}</main>
+              <Footer />
+              <RealTimeProof />
+              <FloatingCTA />
+            </ErrorBoundary>
+          </AnalyticsProvider>
+        </SessionProvider>
       </body>
     </html>
   )

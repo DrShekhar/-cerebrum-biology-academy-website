@@ -1,43 +1,70 @@
 'use client'
 
 import { useState, Suspense } from 'react'
+import { signIn, getSession } from 'next-auth/react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { motion } from 'framer-motion'
-import { BookOpen, Lock, Eye, EyeOff } from 'lucide-react'
+import { BookOpen, Lock, Eye, EyeOff, AlertCircle } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
+import { checkRateLimit } from '@/lib/auth'
 
 function AdminLoginForm() {
-  const [adminKey, setAdminKey] = useState('')
-  const [showKey, setShowKey] = useState(false)
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [showPassword, setShowPassword] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState('')
 
   const router = useRouter()
   const searchParams = useSearchParams()
-  const redirectTo = searchParams.get('redirect') || '/admin'
+  const callbackUrl = searchParams.get('callbackUrl') || '/admin'
 
-  const generateSecureToken = () => {
-    return `session_${Date.now()}_${Math.random().toString(36).substr(2, 16)}`
-  }
-
-  const handleLogin = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsLoading(true)
     setError('')
 
-    // Production admin key validation
-    if (process.env.NEXT_PUBLIC_ADMIN_KEY && adminKey === process.env.NEXT_PUBLIC_ADMIN_KEY) {
-      // Set secure admin session cookie with HTTPOnly simulation
-      const sessionToken = generateSecureToken()
-      document.cookie = `admin-session=${sessionToken}; path=/admin; max-age=3600; secure; samesite=strict`
-
-      // Redirect to admin dashboard
-      router.push(redirectTo)
-    } else {
-      setError('Invalid admin access key')
+    // Basic client-side validation
+    if (!email || !password) {
+      setError('Please enter both email and password')
+      setIsLoading(false)
+      return
     }
 
-    setIsLoading(false)
+    // Simple rate limiting check (in production, this should be server-side)
+    if (!checkRateLimit(email)) {
+      setError('Too many login attempts. Please try again in 15 minutes.')
+      setIsLoading(false)
+      return
+    }
+
+    try {
+      const result = await signIn('credentials', {
+        email: email.trim(),
+        password,
+        redirect: false,
+      })
+
+      if (result?.error) {
+        setError('Invalid email or password')
+      } else if (result?.ok) {
+        // Verify the session and redirect
+        const session = await getSession()
+        if (session?.user?.role === 'admin') {
+          router.push(callbackUrl)
+          router.refresh()
+        } else {
+          setError('Admin access required')
+        }
+      } else {
+        setError('Login failed. Please try again.')
+      }
+    } catch (error) {
+      console.error('Login error:', error)
+      setError('An unexpected error occurred. Please try again.')
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   return (
@@ -53,40 +80,67 @@ function AdminLoginForm() {
           <div className="w-16 h-16 bg-gradient-to-r from-primary-600 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
             <BookOpen className="w-8 h-8 text-white" />
           </div>
-          <h1 className="text-2xl font-bold text-gray-900">Admin Access</h1>
+          <h1 className="text-2xl font-bold text-gray-900">Admin Login</h1>
           <p className="text-gray-600 mt-2">Cerebrum Biology Academy</p>
         </div>
 
         {/* Login Form */}
-        <form onSubmit={handleLogin} className="space-y-6">
+        <form onSubmit={handleSubmit} className="space-y-6">
           <div>
-            <label className="block text-sm font-semibold text-gray-700 mb-2">
+            <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
+              Email Address
+            </label>
+            <input
+              id="email"
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:border-primary-500 focus:ring-2 focus:ring-primary-100 outline-none transition-all"
+              placeholder="admin@cerebrumbiologyacademy.com"
+              required
+              disabled={isLoading}
+              autoComplete="email"
+            />
+          </div>
+
+          <div>
+            <label htmlFor="password" className="block text-sm font-semibold text-gray-700 mb-2">
               <Lock className="w-4 h-4 inline mr-2" />
-              Admin Access Key
+              Password
             </label>
             <div className="relative">
               <input
-                type={showKey ? 'text' : 'password'}
-                value={adminKey}
-                onChange={(e) => setAdminKey(e.target.value)}
+                id="password"
+                type={showPassword ? 'text' : 'password'}
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
                 className="w-full px-4 py-3 pr-12 border border-gray-200 rounded-xl focus:border-primary-500 focus:ring-2 focus:ring-primary-100 outline-none transition-all"
-                placeholder="Enter admin access key"
+                placeholder="Enter your password"
                 required
+                disabled={isLoading}
+                autoComplete="current-password"
+                minLength={6}
               />
               <button
                 type="button"
-                onClick={() => setShowKey(!showKey)}
+                onClick={() => setShowPassword(!showPassword)}
                 className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                disabled={isLoading}
               >
-                {showKey ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+                {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
               </button>
             </div>
           </div>
 
           {error && (
-            <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-xl">
-              {error}
-            </div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-xl flex items-center"
+            >
+              <AlertCircle className="w-4 h-4 mr-2 flex-shrink-0" />
+              <span className="text-sm">{error}</span>
+            </motion.div>
           )}
 
           <Button
@@ -95,14 +149,41 @@ function AdminLoginForm() {
             className="w-full py-3 font-semibold"
             disabled={isLoading}
           >
-            {isLoading ? 'Accessing...' : 'Access Admin Panel'}
+            {isLoading ? (
+              <div className="flex items-center justify-center">
+                <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
+                Signing in...
+              </div>
+            ) : (
+              'Sign In'
+            )}
           </Button>
         </form>
 
-        {/* Footer */}
-        <div className="mt-6 text-center text-xs text-gray-500">
-          Secure admin access for authorized personnel only
+        {/* Security Notice */}
+        <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-xl">
+          <div className="flex items-start">
+            <Lock className="w-4 h-4 text-blue-600 mt-0.5 mr-2 flex-shrink-0" />
+            <div className="text-xs text-blue-700">
+              <p className="font-semibold mb-1">Security Notice</p>
+              <p>
+                Admin access is protected with authentication. All login attempts are logged and
+                monitored.
+              </p>
+            </div>
+          </div>
         </div>
+
+        {/* Development Note */}
+        {process.env.NODE_ENV === 'development' && (
+          <div className="mt-4 p-3 bg-yellow-50 border border-yellow-200 rounded-lg">
+            <div className="text-xs text-yellow-700">
+              <p className="font-semibold">Development Mode</p>
+              <p>Email: admin@cerebrumbiologyacademy.com</p>
+              <p>Password: admin123</p>
+            </div>
+          </div>
+        )}
       </motion.div>
     </div>
   )

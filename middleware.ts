@@ -1,45 +1,76 @@
+import { withAuth } from 'next-auth/middleware'
 import { NextResponse } from 'next/server'
-import type { NextRequest } from 'next/server'
 
-// Simple admin authentication middleware
-export function middleware(request: NextRequest) {
-  const { pathname } = request.nextUrl
+export default withAuth(
+  function middleware(req) {
+    const { pathname } = req.nextUrl
+    const token = req.nextauth.token
 
-  // Protect admin routes
-  if (pathname.startsWith('/admin')) {
-    // For now, we'll use a simple admin key approach
-    // In production, this should use proper session-based authentication
-    const adminKey = request.headers.get('x-admin-key') || request.cookies.get('admin-session')?.value
-    
-    // Production-ready authentication - only environment key accepted
-    const isAdminAuthenticated = (process.env.ADMIN_ACCESS_KEY && adminKey === process.env.ADMIN_ACCESS_KEY) ||
-                                pathname === '/admin/login'
-
-    if (!isAdminAuthenticated) {
-      // Redirect to login page instead of showing admin content
-      const loginUrl = new URL('/admin/login', request.url)
-      loginUrl.searchParams.set('redirect', pathname)
-      return NextResponse.redirect(loginUrl)
+    // Public admin routes (login page)
+    if (pathname === '/admin/login') {
+      // If already authenticated admin, redirect to dashboard
+      if (token?.role === 'admin') {
+        return NextResponse.redirect(new URL('/admin', req.url))
+      }
+      return NextResponse.next()
     }
+
+    // Protected admin routes
+    if (pathname.startsWith('/admin')) {
+      // Check if user is authenticated and has admin role
+      if (!token || token.role !== 'admin') {
+        const loginUrl = new URL('/admin/login', req.url)
+        loginUrl.searchParams.set('callbackUrl', pathname)
+        return NextResponse.redirect(loginUrl)
+      }
+    }
+
+    // Security headers for all requests
+    const response = NextResponse.next()
+
+    // Add security headers
+    response.headers.set('X-DNS-Prefetch-Control', 'on')
+    response.headers.set('X-XSS-Protection', '1; mode=block')
+    response.headers.set('X-Frame-Options', 'SAMEORIGIN')
+    response.headers.set('X-Content-Type-Options', 'nosniff')
+    response.headers.set('Referrer-Policy', 'origin-when-cross-origin')
+    response.headers.set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains')
+
+    // Prevent admin routes from being cached
+    if (pathname.startsWith('/admin') || pathname.startsWith('/api/admin')) {
+      response.headers.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate')
+      response.headers.set('Pragma', 'no-cache')
+      response.headers.set('Expires', '0')
+    }
+
+    return response
+  },
+  {
+    callbacks: {
+      authorized: ({ token, req }) => {
+        const { pathname } = req.nextUrl
+
+        // Allow access to login page without authentication
+        if (pathname === '/admin/login') {
+          return true
+        }
+
+        // For admin routes, require admin role
+        if (pathname.startsWith('/admin')) {
+          return token?.role === 'admin'
+        }
+
+        // For admin API routes, require admin role
+        if (pathname.startsWith('/api/admin')) {
+          return token?.role === 'admin'
+        }
+
+        // Allow all other routes
+        return true
+      },
+    },
   }
-
-  // Security headers for all requests
-  const response = NextResponse.next()
-
-  // Add security headers
-  response.headers.set('X-DNS-Prefetch-Control', 'on')
-  response.headers.set('X-XSS-Protection', '1; mode=block')
-  response.headers.set('X-Frame-Options', 'SAMEORIGIN')
-  response.headers.set('X-Content-Type-Options', 'nosniff')
-  response.headers.set('Referrer-Policy', 'origin-when-cross-origin')
-
-  // Prevent admin routes from being cached
-  if (pathname.startsWith('/admin') || pathname.startsWith('/api/admin')) {
-    response.headers.set('Cache-Control', 'no-store, no-cache, must-revalidate')
-  }
-
-  return response
-}
+)
 
 export const config = {
   matcher: [

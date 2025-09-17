@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, ReactNode } from 'react'
+import { useSession, signOut } from 'next-auth/react'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   LayoutDashboard,
@@ -20,7 +21,7 @@ import {
   ChevronDown,
 } from 'lucide-react'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 
 interface AdminLayoutProps {
   children: ReactNode
@@ -39,6 +40,40 @@ export function AdminLayout({ children }: AdminLayoutProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const [userMenuOpen, setUserMenuOpen] = useState(false)
   const pathname = usePathname()
+  const router = useRouter()
+  const { data: session, status } = useSession()
+
+  // Show loading state while session is loading
+  if (status === 'loading') {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <div className="w-16 h-16 bg-gradient-to-r from-primary-600 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <BookOpen className="w-8 h-8 text-white" />
+          </div>
+          <div className="text-lg font-semibold text-gray-700 mb-2">Loading...</div>
+          <div className="w-6 h-6 border-2 border-primary-600 border-t-transparent rounded-full animate-spin mx-auto"></div>
+        </div>
+      </div>
+    )
+  }
+
+  // Redirect to login if not authenticated
+  if (status === 'unauthenticated' || !session?.user || session.user.role !== 'admin') {
+    router.push('/admin/login')
+    return null
+  }
+
+  const handleLogout = async () => {
+    try {
+      await signOut({
+        callbackUrl: '/admin/login',
+        redirect: true,
+      })
+    } catch (error) {
+      console.error('Logout error:', error)
+    }
+  }
 
   const navigation: NavItem[] = [
     {
@@ -61,9 +96,14 @@ export function AdminLayout({ children }: AdminLayoutProps) {
       href: '/admin/students',
       children: [
         { id: 'all-students', name: 'All Students', icon: Users, href: '/admin/students' },
-        { id: 'active-students', name: 'Active Students', icon: Users, href: '/admin/students/active' },
+        {
+          id: 'active-students',
+          name: 'Active Students',
+          icon: Users,
+          href: '/admin/students/active',
+        },
         { id: 'leads', name: 'Leads', icon: Users, href: '/admin/students/leads' },
-      ]
+      ],
     },
     {
       id: 'courses',
@@ -71,10 +111,25 @@ export function AdminLayout({ children }: AdminLayoutProps) {
       icon: BookOpen,
       href: '/admin/courses',
       children: [
-        { id: 'course-management', name: 'Course Management', icon: BookOpen, href: '/admin/courses' },
-        { id: 'enrollments', name: 'Enrollments', icon: BookOpen, href: '/admin/courses/enrollments' },
-        { id: 'performance', name: 'Performance', icon: BarChart3, href: '/admin/courses/performance' },
-      ]
+        {
+          id: 'course-management',
+          name: 'Course Management',
+          icon: BookOpen,
+          href: '/admin/courses',
+        },
+        {
+          id: 'enrollments',
+          name: 'Enrollments',
+          icon: BookOpen,
+          href: '/admin/courses/enrollments',
+        },
+        {
+          id: 'performance',
+          name: 'Performance',
+          icon: BarChart3,
+          href: '/admin/courses/performance',
+        },
+      ],
     },
     {
       id: 'payments',
@@ -83,10 +138,16 @@ export function AdminLayout({ children }: AdminLayoutProps) {
       href: '/admin/payments',
       children: [
         { id: 'all-payments', name: 'All Payments', icon: CreditCard, href: '/admin/payments' },
-        { id: 'pending', name: 'Pending', icon: CreditCard, href: '/admin/payments/pending', badge: 2 },
+        {
+          id: 'pending',
+          name: 'Pending',
+          icon: CreditCard,
+          href: '/admin/payments/pending',
+          badge: 2,
+        },
         { id: 'failed', name: 'Failed', icon: CreditCard, href: '/admin/payments/failed' },
         { id: 'refunds', name: 'Refunds', icon: CreditCard, href: '/admin/payments/refunds' },
-      ]
+      ],
     },
     {
       id: 'marketing',
@@ -94,11 +155,27 @@ export function AdminLayout({ children }: AdminLayoutProps) {
       icon: MessageSquare,
       href: '/admin/marketing',
       children: [
-        { id: 'campaigns', name: 'Campaigns', icon: MessageSquare, href: '/admin/marketing/campaigns' },
-        { id: 'whatsapp', name: 'WhatsApp', icon: MessageSquare, href: '/admin/marketing/whatsapp' },
+        {
+          id: 'campaigns',
+          name: 'Campaigns',
+          icon: MessageSquare,
+          href: '/admin/marketing/campaigns',
+        },
+        {
+          id: 'whatsapp',
+          name: 'WhatsApp',
+          icon: MessageSquare,
+          href: '/admin/marketing/whatsapp',
+        },
         { id: 'email', name: 'Email', icon: MessageSquare, href: '/admin/marketing/email' },
-        { id: 'abandoned-carts', name: 'Abandoned Carts', icon: MessageSquare, href: '/admin/marketing/abandoned-carts', badge: 8 },
-      ]
+        {
+          id: 'abandoned-carts',
+          name: 'Abandoned Carts',
+          icon: MessageSquare,
+          href: '/admin/marketing/abandoned-carts',
+          badge: 8,
+        },
+      ],
     },
     {
       id: 'analytics',
@@ -107,10 +184,20 @@ export function AdminLayout({ children }: AdminLayoutProps) {
       href: '/admin/analytics',
       children: [
         { id: 'overview', name: 'Overview', icon: BarChart3, href: '/admin/analytics' },
-        { id: 'user-behavior', name: 'User Behavior', icon: BarChart3, href: '/admin/analytics/behavior' },
-        { id: 'conversion', name: 'Conversion', icon: BarChart3, href: '/admin/analytics/conversion' },
+        {
+          id: 'user-behavior',
+          name: 'User Behavior',
+          icon: BarChart3,
+          href: '/admin/analytics/behavior',
+        },
+        {
+          id: 'conversion',
+          name: 'Conversion',
+          icon: BarChart3,
+          href: '/admin/analytics/conversion',
+        },
         { id: 'reports', name: 'Reports', icon: BarChart3, href: '/admin/analytics/reports' },
-      ]
+      ],
     },
     {
       id: 'settings',
@@ -121,8 +208,13 @@ export function AdminLayout({ children }: AdminLayoutProps) {
         { id: 'general', name: 'General', icon: Settings, href: '/admin/settings' },
         { id: 'users', name: 'Admin Users', icon: User, href: '/admin/settings/users' },
         { id: 'faculty', name: 'Faculty', icon: Users, href: '/admin/settings/faculty' },
-        { id: 'notifications', name: 'Notifications', icon: Bell, href: '/admin/settings/notifications' },
-      ]
+        {
+          id: 'notifications',
+          name: 'Notifications',
+          icon: Bell,
+          href: '/admin/settings/notifications',
+        },
+      ],
     },
   ]
 
@@ -265,11 +357,15 @@ export function AdminLayout({ children }: AdminLayoutProps) {
                     <User className="w-4 h-4 text-primary-600" />
                   </div>
                   <div className="text-left">
-                    <div className="text-sm font-medium text-gray-900">Admin User</div>
-                    <div className="text-xs text-gray-500">admin@cerebrumacademy.com</div>
+                    <div className="text-sm font-medium text-gray-900">
+                      {session.user.name || 'Admin User'}
+                    </div>
+                    <div className="text-xs text-gray-500">{session.user.email}</div>
                   </div>
                 </div>
-                <ChevronDown className={`w-4 h-4 transition-transform ${userMenuOpen ? 'rotate-180' : ''}`} />
+                <ChevronDown
+                  className={`w-4 h-4 transition-transform ${userMenuOpen ? 'rotate-180' : ''}`}
+                />
               </button>
 
               <AnimatePresence>
@@ -289,7 +385,10 @@ export function AdminLayout({ children }: AdminLayoutProps) {
                       Settings
                     </button>
                     <hr className="my-1" />
-                    <button className="w-full flex items-center px-4 py-2 text-sm text-red-600 hover:bg-red-50">
+                    <button
+                      onClick={handleLogout}
+                      className="w-full flex items-center px-4 py-2 text-sm text-red-600 hover:bg-red-50"
+                    >
                       <LogOut className="w-4 h-4 mr-3" />
                       Sign out
                     </button>
@@ -345,9 +444,7 @@ export function AdminLayout({ children }: AdminLayoutProps) {
         </header>
 
         {/* Page content */}
-        <main className="flex-1 overflow-hidden">
-          {children}
-        </main>
+        <main className="flex-1 overflow-hidden">{children}</main>
       </div>
     </div>
   )

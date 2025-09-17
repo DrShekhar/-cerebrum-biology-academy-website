@@ -42,7 +42,7 @@ export const navigationConfig: NavigationSection[] = [
       {
         id: 'dropper',
         title: 'Dropper Batch',
-        href: '/courses/dropper',
+        href: '/courses/neet-dropper',
         description: 'Specialized program for NEET repeaters',
         keywords: ['dropper', 'repeater', 'gap year', 'second attempt'],
       },
@@ -52,6 +52,22 @@ export const navigationConfig: NavigationSection[] = [
         href: '/courses/foundation',
         description: 'Building strong fundamentals for future medical aspirants',
         keywords: ['foundation', 'fundamentals', 'basics', 'early start'],
+        children: [
+          {
+            id: 'class-9-foundation',
+            title: 'Class 9th Foundation',
+            href: '/courses/class-9-foundation',
+            description: 'Age-appropriate Biology learning for 13-14 year olds',
+            keywords: ['class 9', 'foundation', 'early learning', 'age appropriate'],
+          },
+          {
+            id: 'class-10-foundation',
+            title: 'Class 10th Foundation',
+            href: '/courses/class-10-foundation',
+            description: 'Advanced foundation with board exam excellence',
+            keywords: ['class 10', 'foundation', 'board exams', 'neet preparation'],
+          },
+        ],
       },
     ],
   },
@@ -63,7 +79,7 @@ export const navigationConfig: NavigationSection[] = [
       {
         id: 'cbse',
         title: 'CBSE',
-        href: '/board-preparation/cbse',
+        href: '/boards/cbse',
         description: 'CBSE Biology preparation aligned with NEET',
         keywords: ['cbse', 'central board', 'ncert', 'board exams'],
         isPopular: true,
@@ -71,28 +87,28 @@ export const navigationConfig: NavigationSection[] = [
       {
         id: 'icse',
         title: 'ICSE',
-        href: '/board-preparation/icse',
+        href: '/boards/icse',
         description: 'ICSE Biology curriculum with NEET focus',
         keywords: ['icse', 'council', 'indian certificate'],
       },
       {
         id: 'igcse',
         title: 'IGCSE',
-        href: '/board-preparation/igcse',
+        href: '/boards/igcse',
         description: 'International GCSE Biology preparation',
         keywords: ['igcse', 'international', 'cambridge', 'global'],
       },
       {
         id: 'ib',
         title: 'IB (International Baccalaureate)',
-        href: '/board-preparation/ib',
+        href: '/boards/ib',
         description: 'IB Biology HL/SL with medical entrance focus',
         keywords: ['ib', 'international baccalaureate', 'higher level', 'standard level'],
       },
       {
         id: 'state-board',
         title: 'State Board',
-        href: '/board-preparation/state-board',
+        href: '/boards/state-boards',
         description: 'State board biology preparation for NEET',
         keywords: ['state board', 'regional', 'local curriculum'],
       },
@@ -214,8 +230,10 @@ export const footerNavigationConfig = {
   courses: [
     { title: 'Class 11th Foundation', href: '/courses/class-11' },
     { title: 'Class 12th Intensive', href: '/courses/class-12' },
-    { title: 'Dropper Batch', href: '/courses/dropper' },
+    { title: 'NEET Dropper Program', href: '/courses/neet-dropper' },
     { title: 'Foundation Course', href: '/courses/foundation' },
+    { title: 'Class 9th Foundation', href: '/courses/class-9-foundation' },
+    { title: 'Class 10th Foundation', href: '/courses/class-10-foundation' },
   ],
   services: [
     { title: 'Online Classes', href: '/services/online-classes' },
@@ -234,8 +252,8 @@ export const footerNavigationConfig = {
 // Search configuration
 export const searchableContent = [
   // Flatten all navigation items for search
-  ...navigationConfig.flatMap(section => 
-    section.items.map(item => ({
+  ...navigationConfig.flatMap((section) =>
+    section.items.map((item) => ({
       id: item.id,
       title: item.title,
       href: item.href,
@@ -278,6 +296,30 @@ export const searchableContent = [
     description: 'Success stories from our students',
     category: 'About',
     keywords: ['testimonials', 'reviews', 'student feedback', 'success stories'],
+  },
+  {
+    id: 'class-9-foundation',
+    title: 'Class 9th Foundation Biology',
+    href: '/courses/class-9-foundation',
+    description: 'Age-appropriate Biology learning for 13-14 year olds',
+    category: 'Courses',
+    keywords: ['class 9', 'foundation', 'early learning', 'age appropriate', 'teenagers'],
+  },
+  {
+    id: 'class-10-foundation',
+    title: 'Class 10th Foundation Biology',
+    href: '/courses/class-10-foundation',
+    description: 'Advanced foundation with board exam excellence',
+    category: 'Courses',
+    keywords: ['class 10', 'foundation', 'board exams', 'neet preparation', 'advanced'],
+  },
+  {
+    id: 'intensive-neet-biology',
+    title: 'Intensive NEET Biology Course',
+    href: '/courses/intensive-neet-biology',
+    description: 'Premium intensive course for serious NEET aspirants',
+    category: 'Courses',
+    keywords: ['intensive', 'premium', 'neet biology', 'exclusive', 'high-ticket'],
   },
 ]
 

@@ -1,6 +1,8 @@
 import NextAuth from 'next-auth'
 import Credentials from 'next-auth/providers/credentials'
 import bcrypt from 'bcryptjs'
+import { z } from 'zod'
+import { prisma } from './prisma'
 
 declare module 'next-auth' {
   interface User {
@@ -21,6 +23,22 @@ declare module 'next-auth' {
   }
 }
 
+// Validation schemas
+const loginSchema = z.object({
+  email: z.string().email('Invalid email format'),
+  password: z.string().min(6, 'Password must be at least 6 characters'),
+})
+
+// Admin credentials (in production, this should be in a secure database)
+const ADMIN_CREDENTIALS = {
+  email: process.env.ADMIN_EMAIL || 'admin@cerebrumbiologyacademy.com',
+  passwordHash:
+    process.env.ADMIN_PASSWORD_HASH ||
+    '$2a$12$LQv3c1yqBwkVsvDqjrOuWOFHk.cqmZqjSmUjcScVHFWuLnDSsOlMe', // 'admin123'
+  name: 'Admin User',
+  role: 'admin' as const,
+}
+
 export const { handlers, auth, signIn, signOut } = NextAuth({
   providers: [
     Credentials({
@@ -35,58 +53,74 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         }
 
         try {
-          // For now, use demo mode for authentication
-          // In production, this would query InstantDB for user
-          console.warn('Using demo authentication mode')
+          // Validate input
+          const validatedData = loginSchema.parse({
+            email: credentials.email,
+            password: credentials.password,
+          })
 
-          // Demo user for testing
-          const demoUser = {
-            id: 'demo-user-1',
-            email: credentials.email as string,
-            name: 'Demo Student',
-            password: '$2a$12$demo.hash', // This would be properly hashed in production
-            role: 'student' as const,
-            profile: {
-              phone: '+91-9876543210',
-              currentClass: '12th' as const,
-              enrolledCourses: ['neet-biology-complete'],
-            },
+          // First check if it's the hardcoded admin credentials (fallback)
+          if (validatedData.email === ADMIN_CREDENTIALS.email) {
+            const isValidPassword = await bcrypt.compare(
+              validatedData.password,
+              ADMIN_CREDENTIALS.passwordHash
+            )
+
+            if (isValidPassword) {
+              return {
+                id: 'admin-1',
+                email: ADMIN_CREDENTIALS.email,
+                name: ADMIN_CREDENTIALS.name,
+                role: ADMIN_CREDENTIALS.role,
+              }
+            }
           }
 
-          // Simple demo authentication (accept any password for demo)
-          const user = credentials.email ? demoUser : null
+          // Try to find user in database
+          try {
+            const user = await prisma.user.findUnique({
+              where: { email: validatedData.email },
+            })
 
-          if (!user) {
-            throw new Error('Invalid credentials')
+            if (user && user.passwordHash) {
+              const isValidPassword = await bcrypt.compare(
+                validatedData.password,
+                user.passwordHash
+              )
+
+              if (isValidPassword) {
+                return {
+                  id: user.id,
+                  email: user.email,
+                  name: user.name,
+                  role: user.role.toLowerCase() as 'student' | 'parent' | 'teacher' | 'admin',
+                  profile: user.profile as any,
+                }
+              }
+            }
+          } catch (dbError) {
+            console.warn('Database query failed, falling back to hardcoded admin:', dbError)
           }
 
-          // Skip password verification in demo mode
-          // In production, this would verify the password against the hashed version
-
-          // Return user object for JWT
-          return {
-            id: user.id,
-            email: user.email,
-            name: user.name,
-            role: user.role || 'student',
-            profile: user.profile || {},
-          }
+          throw new Error('Invalid email or password')
         } catch (error) {
           console.error('Authentication error:', error)
+          if (error instanceof z.ZodError) {
+            throw new Error('Invalid input: ' + error.errors.map((e) => e.message).join(', '))
+          }
           throw new Error('Authentication failed')
         }
       },
     }),
   ],
   pages: {
-    signIn: '/auth/signin',
-    signUp: '/auth/signup',
-    error: '/auth/error',
+    signIn: '/admin/login',
+    error: '/admin/login',
   },
   session: {
     strategy: 'jwt',
-    maxAge: 30 * 24 * 60 * 60, // 30 days
-    updateAge: 24 * 60 * 60, // 24 hours
+    maxAge: 8 * 60 * 60, // 8 hours for admin sessions
+    updateAge: 2 * 60 * 60, // Update every 2 hours
   },
   callbacks: {
     async jwt({ token, user }) {
@@ -108,7 +142,10 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       return session
     },
     async redirect({ url, baseUrl }) {
-      // Redirect logic after sign in/out
+      // Redirect admin users to admin panel after login
+      if (url.includes('/admin/login')) {
+        return `${baseUrl}/admin`
+      }
       if (url.startsWith('/')) return `${baseUrl}${url}`
       if (new URL(url).origin === baseUrl) return url
       return baseUrl
@@ -116,26 +153,10 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   },
   events: {
     async signIn(message) {
-      console.log('User signed in:', message.user.email)
-
-      // Log authentication event (demo mode)
-      try {
-        console.log('Demo mode: Auth signin logged for user:', message.user.id)
-        // In production, this would log to InstantDB
-      } catch (error) {
-        console.error('Failed to log signin event:', error)
-      }
+      console.log('User signed in:', message.user.email, 'Role:', message.user.role)
     },
     async signOut(message) {
       console.log('User signed out:', message.session?.user?.email)
-
-      // Log signout event (demo mode)
-      try {
-        console.log('Demo mode: Auth signout logged for user:', message.session?.user?.id)
-        // In production, this would log to InstantDB
-      } catch (error) {
-        console.error('Failed to log signout event:', error)
-      }
     },
   },
   debug: process.env.NODE_ENV === 'development',
@@ -170,6 +191,16 @@ export async function requireAdmin() {
   return await requireAuth(['admin'])
 }
 
+// Middleware for protecting admin routes
+export async function requireAdminAuth() {
+  try {
+    const session = await requireAdmin()
+    return session
+  } catch (error) {
+    throw new Error('Admin authentication required')
+  }
+}
+
 // Password hashing utilities
 export async function hashPassword(password: string): Promise<string> {
   const saltRounds = 12
@@ -178,4 +209,32 @@ export async function hashPassword(password: string): Promise<string> {
 
 export async function verifyPassword(password: string, hashedPassword: string): Promise<boolean> {
   return await bcrypt.compare(password, hashedPassword)
+}
+
+// Rate limiting for authentication (simple in-memory implementation)
+const loginAttempts = new Map<string, { count: number; lastAttempt: number }>()
+
+export function checkRateLimit(identifier: string): boolean {
+  const now = Date.now()
+  const attempt = loginAttempts.get(identifier)
+
+  if (!attempt) {
+    loginAttempts.set(identifier, { count: 1, lastAttempt: now })
+    return true
+  }
+
+  // Reset after 15 minutes
+  if (now - attempt.lastAttempt > 15 * 60 * 1000) {
+    loginAttempts.set(identifier, { count: 1, lastAttempt: now })
+    return true
+  }
+
+  // Allow max 5 attempts per 15 minutes
+  if (attempt.count >= 5) {
+    return false
+  }
+
+  attempt.count++
+  attempt.lastAttempt = now
+  return true
 }
