@@ -42,6 +42,8 @@ const Header = () => {
 
   const courseLinks = [
     { href: '/courses', label: 'All Courses', icon: BookOpen },
+    { href: '/courses/class-9-foundation', label: 'Class 9th Biology', icon: BookOpen },
+    { href: '/courses/class-10-foundation', label: 'Class 10th Biology', icon: BookOpen },
     { href: '/courses/class-11', label: 'Class 11th Biology', icon: BookOpen },
     { href: '/courses/class-12', label: 'Class 12th Biology', icon: BookOpen },
     { href: '/courses/neet-dropper', label: 'NEET Dropper Program', icon: Award },
@@ -157,8 +159,8 @@ const Header = () => {
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: -10 }}
                           transition={{ duration: 0.2 }}
-                          className={`absolute top-full left-0 mt-2 bg-white rounded-lg shadow-xl border border-gray-200 py-4 z-50 ${
-                            item.isMegaMenu ? 'w-96' : 'w-64'
+                          className={`absolute top-full left-0 mt-2 bg-white rounded-lg shadow-xl border border-gray-200 py-6 z-50 ${
+                            item.isMegaMenu ? 'w-[480px]' : 'w-64'
                           }`}
                         >
                           {item.isMegaMenu ? (
@@ -172,28 +174,34 @@ const Header = () => {
                                   94.2% success rate
                                 </p>
                               </div>
-                              <div className="grid grid-cols-1 gap-3">
+                              <div className="grid grid-cols-2 gap-4">
                                 {item.items?.map((subItem, subIndex) => {
                                   const Icon = subItem.icon
                                   return (
                                     <Link
                                       key={subIndex}
                                       href={subItem.href}
-                                      className="flex items-center space-x-3 p-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors rounded-lg border border-gray-100 hover:border-blue-200"
+                                      className={`flex items-start space-x-3 p-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors rounded-lg border border-gray-100 hover:border-blue-200 hover:shadow-md ${subIndex === 0 ? 'col-span-2 bg-blue-50 border-blue-200' : ''}`}
                                     >
-                                      <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+                                      <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
                                         <Icon className="w-5 h-5 text-blue-600" />
                                       </div>
-                                      <div>
-                                        <span className="font-medium block">{subItem.label}</span>
-                                        <span className="text-xs text-gray-500">
+                                      <div className="flex-1 min-w-0">
+                                        <span className="font-semibold block text-sm leading-tight">
+                                          {subItem.label}
+                                        </span>
+                                        <span className="text-xs text-gray-500 mt-1 block leading-relaxed">
                                           {subIndex === 0
                                             ? 'All courses overview'
                                             : subIndex === 1
-                                              ? 'Foundation building'
+                                              ? 'Age-appropriate learning'
                                               : subIndex === 2
-                                                ? 'Board + NEET prep'
-                                                : 'Intensive NEET focus'}
+                                                ? 'Advanced foundation'
+                                                : subIndex === 3
+                                                  ? 'Foundation building'
+                                                  : subIndex === 4
+                                                    ? 'Board + NEET prep'
+                                                    : 'Intensive NEET focus'}
                                         </span>
                                       </div>
                                     </Link>

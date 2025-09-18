@@ -83,7 +83,7 @@ export function FloatingCTA() {
   return (
     <>
       {/* Mobile Floating CTA */}
-      <div className="fixed bottom-4 right-4 z-50 lg:hidden">
+      <div className="fixed bottom-20 right-4 z-[60] lg:hidden">
         <AnimatePresence>
           {isExpanded && (
             <motion.div
@@ -186,13 +186,13 @@ export function FloatingCTA() {
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: scrollProgress > 20 ? 1 : 0, scale: scrollProgress > 20 ? 1 : 0 }}
         onClick={scrollToTop}
-        className="hidden lg:block fixed bottom-8 right-8 z-50 w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full shadow-lg flex items-center justify-center text-white hover:shadow-xl transition-all duration-300 transform hover:scale-110"
+        className="hidden lg:block fixed bottom-8 right-8 z-[60] w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full shadow-lg flex items-center justify-center text-white hover:shadow-xl transition-all duration-300 transform hover:scale-110"
       >
         <ChevronUp className="w-6 h-6" />
       </motion.button>
 
-      {/* Fixed Bottom CTA Bar for Mobile */}
-      <div className="fixed bottom-0 left-0 right-0 z-40 lg:hidden bg-white border-t border-gray-200 shadow-lg">
+      {/* Fixed Bottom CTA Bar for Mobile - Hidden when course-specific CTA is present */}
+      <div className="fixed bottom-0 left-0 right-0 z-[45] lg:hidden bg-white border-t border-gray-200 shadow-lg">
         <div className="grid grid-cols-3 divide-x divide-gray-200">
           {actions.map((action) => {
             const Icon = action.icon
@@ -217,7 +217,7 @@ export function FloatingCTA() {
       </div>
 
       {/* Spacer for fixed bottom bar */}
-      <div className="h-16 lg:hidden"></div>
+      <div className="h-20 lg:hidden"></div>
     </>
   )
 }

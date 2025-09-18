@@ -50,7 +50,7 @@ export function FloatingCTABar({ course }: FloatingCTABarProps) {
   }
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 bg-black border-t-2 border-yellow-400 shadow-2xl">
+    <div className="fixed bottom-0 left-0 right-0 z-[50] bg-black border-t-2 border-yellow-400 shadow-2xl">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex items-center justify-between">
           {/* Course Info */}
@@ -146,6 +146,9 @@ export function FloatingCTABar({ course }: FloatingCTABarProps) {
 
       {/* Demo Class Modal */}
       {showDemoModal && <DemoClassModal course={course} onClose={() => setShowDemoModal(false)} />}
+
+      {/* Spacer to prevent content from being hidden behind floating bar */}
+      <div className="h-32 lg:hidden"></div>
     </div>
   )
 }
