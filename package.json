@@ -25,7 +25,12 @@
     "deploy:verify": "npm run deploy:monitor && echo '✅ Deployment verified'",
     "deploy:force": "git add . && git commit -m '🚀 Force deployment trigger' && git push",
     "vercel:deploy": "vercel deploy --prod",
-    "vercel:preview": "vercel deploy"
+    "vercel:preview": "vercel deploy",
+    "create:component": "node scripts/create-component.js",
+    "dev:safe": "npm run type-check && npm run lint && npm run dev",
+    "build:analyze": "ANALYZE=true npm run build",
+    "clean": "rm -rf .next && rm -rf node_modules/.cache",
+    "fresh-install": "rm -rf node_modules package-lock.json && npm install"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
