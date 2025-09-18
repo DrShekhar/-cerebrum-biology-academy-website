@@ -726,6 +726,90 @@ Please provide detailed technical implementation plan, component architecture, d
       '/prisma/schema.prisma',
     ],
   },
+
+  'spec-kit-integration': {
+    title: '🔧 GitHub Spec Kit Integration for Revolutionary Workflow',
+    context: 'Integrate GitHub Spec Kit for 40% faster development and 25% fewer bugs',
+    prompt: `
+You are a workflow optimization specialist for Cerebrum Biology Academy's development process enhancement.
+
+**TASK:** Demonstrate GitHub Spec Kit integration for AI chatbot feature development
+
+**CONTEXT:**
+- Platform: ${PROJECT_CONTEXT.name} with Spec Kit now installed and configured
+- Goal: Showcase spec-driven development workflow for AI education features
+- Integration: GitHub Spec Kit + Claude Code + Next.js 15.5.3 + TypeScript
+- Constitution: Education-first, revenue-driven development principles
+
+**SPEC KIT WORKFLOW DEMONSTRATION:**
+
+1. **Initialize Feature with /specify:**
+   Run this command in Claude Code:
+   \`/specify "24/7 Biology doubt resolution AI chatbot with personalized learning paths for NEET students. Must support voice queries, provide detailed explanations with diagrams, track learning progress, and integrate with existing payment system. Should handle 1000+ concurrent users with <2 second response time."\`
+
+2. **Generate Implementation Plan with /plan:**
+   After spec creation, run:
+   \`/plan "Next.js 15.5.3, TypeScript, OpenAI GPT-4, WebSocket, Prisma PostgreSQL, Tailwind CSS, MCP integration, Voice Recognition API, WhatsApp Business API integration, Razorpay payment system"\`
+
+3. **Break Down Tasks with /tasks:**
+   After planning phase, run:
+   \`/tasks "Focus on education-first architecture, ensure revenue impact tracking, maintain 94.2% success rate standards, implement proper testing for AI responses, ensure Indian market optimization"\`
+
+**EXPECTED WORKFLOW OUTPUT:**
+
+**Step 1 - Feature Specification (.specify/features/ai-chatbot/spec.md):**
+- User scenarios for NEET students asking doubts
+- Functional requirements for AI accuracy
+- Performance requirements (1000+ users, <2s response)
+- Integration requirements with existing platform
+
+**Step 2 - Implementation Plan (.specify/features/ai-chatbot/plan.md):**
+- Technical architecture decisions
+- Component design and data flow
+- API contracts and database schema
+- Integration points with existing systems
+- Performance optimization strategy
+
+**Step 3 - Task Breakdown (.specify/features/ai-chatbot/tasks.md):**
+- T001: Setup WebSocket infrastructure
+- T002: OpenAI API integration service
+- T003: Voice recognition interface
+- T004: AI response evaluation system
+- T005: Progress tracking integration
+- T006: Payment system hooks
+- T007: Performance monitoring
+- T008: Testing framework for AI accuracy
+
+**INTEGRATION BENEFITS:**
+- Structured approach ensures education-first principles
+- Revenue tracking built into every feature
+- Test-driven development for AI accuracy
+- Clear documentation for team collaboration
+- Scalable architecture planning
+
+**TECHNICAL IMPLEMENTATION:**
+The Spec Kit is now integrated at:
+- Constitution: .specify/memory/constitution.md (Cerebrum-specific)
+- Templates: .specify/templates/ (customized for education)
+- Scripts: .specify/scripts/ (Next.js integration)
+- Commands: .claude-spec-kit/commands/ (Claude Code integration)
+
+**SUCCESS METRICS TO TRACK:**
+- Development velocity: 40% faster feature delivery
+- Bug reduction: 25% fewer production issues
+- Code quality: Better test coverage and documentation
+- Team alignment: Clear specifications and requirements
+- Student impact: Measurable learning outcome improvements
+
+Please demonstrate this workflow by creating the AI chatbot specification, plan, and tasks using the /specify, /plan, and /tasks commands in sequence.
+    `,
+    files: [
+      '/.specify/memory/constitution.md',
+      '/spec-kit.config.js',
+      '/.claude-spec-kit/commands/',
+      '/.specify/templates/',
+    ],
+  },
 }
 
 function generatePrompt(taskType) {
