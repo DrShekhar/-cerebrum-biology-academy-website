@@ -24,10 +24,11 @@ export function CourseCard({ course, selectedTier = 'ascent' }: CourseCardProps)
   const tierInfo = courseTiers.find((t) => t.series === activeTier)
   const tierPricing = pricing.tiers.find((t) => t.series === activeTier)
 
+  // Premium black-gold theme for all course cards
   const tierColors = {
-    pinnacle: 'from-purple-600 to-pink-600',
-    ascent: 'from-blue-600 to-indigo-600',
-    pursuit: 'from-green-600 to-teal-600',
+    pinnacle: 'from-black via-gray-900 to-black',
+    ascent: 'from-black via-gray-900 to-black',
+    pursuit: 'from-black via-gray-900 to-black',
   }
 
   const tierNames = {
@@ -68,11 +69,11 @@ export function CourseCard({ course, selectedTier = 'ascent' }: CourseCardProps)
         <div className="flex items-start justify-between mb-4">
           <div className="flex-1">
             <div className="flex items-center space-x-2 mb-2">
-              <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold">
+              <span className="bg-gray-800/80 border border-yellow-400/30 px-3 py-1 rounded-full text-sm font-semibold text-white">
                 Class {course.targetClass}
               </span>
               {course.isPopular && (
-                <span className="bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-xs font-bold">
+                <span className="bg-gradient-to-r from-yellow-400 to-yellow-500 text-black px-3 py-1 rounded-full text-xs font-black border-2 border-yellow-300 shadow-lg">
                   POPULAR
                 </span>
               )}
@@ -82,19 +83,19 @@ export function CourseCard({ course, selectedTier = 'ascent' }: CourseCardProps)
           </div>
         </div>
 
-        {/* Course Stats */}
+        {/* Course Stats - Premium design */}
         <div className="grid grid-cols-3 gap-4 text-center">
-          <div>
-            <div className="text-2xl font-bold">{course.duration}</div>
-            <div className="text-xs opacity-75">Duration</div>
+          <div className="bg-gray-800/50 border border-yellow-400/30 rounded-lg p-3">
+            <div className="text-2xl font-bold text-yellow-400">{course.duration}</div>
+            <div className="text-xs text-gray-300">Duration</div>
           </div>
-          <div>
-            <div className="text-2xl font-bold">{course.teachingHours}h</div>
-            <div className="text-xs opacity-75">Per Week</div>
+          <div className="bg-gray-800/50 border border-yellow-400/30 rounded-lg p-3">
+            <div className="text-2xl font-bold text-yellow-400">{course.teachingHours}h</div>
+            <div className="text-xs text-gray-300">Per Week</div>
           </div>
-          <div>
-            <div className="text-2xl font-bold">{tierInfo?.batchSize || 25}</div>
-            <div className="text-xs opacity-75">Batch Size</div>
+          <div className="bg-gray-800/50 border border-yellow-400/30 rounded-lg p-3">
+            <div className="text-2xl font-bold text-yellow-400">{tierInfo?.batchSize || 25}</div>
+            <div className="text-xs text-gray-300">Batch Size</div>
           </div>
         </div>
       </div>
@@ -108,8 +109,8 @@ export function CourseCard({ course, selectedTier = 'ascent' }: CourseCardProps)
               onClick={() => setActiveTier(tierOption.series)}
               className={`flex-1 py-2 px-3 text-sm font-semibold rounded-lg transition-all ${
                 activeTier === tierOption.series
-                  ? 'bg-blue-600 text-white'
-                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                  ? 'bg-gradient-to-r from-yellow-400 to-yellow-500 text-black font-bold'
+                  : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-600'
               }`}
             >
               {tierNames[tierOption.series]}
@@ -117,45 +118,45 @@ export function CourseCard({ course, selectedTier = 'ascent' }: CourseCardProps)
           ))}
         </div>
 
-        {/* Pricing */}
-        <div className="mb-6 text-center">
-          <div className="text-3xl font-bold text-gray-900 mb-1">
+        {/* Pricing - Premium gold design */}
+        <div className="mb-6 text-center bg-gradient-to-br from-yellow-400 via-yellow-500 to-yellow-600 text-black p-4 rounded-xl shadow-lg">
+          <div className="text-3xl font-black mb-1">
             {tierPricing?.formattedPrice || formatPrice(pricing.minPrice)}
           </div>
-          <div className="text-sm text-gray-500">
+          <div className="text-sm font-semibold">
             {formatCurrency(tierPricing?.price || pricing.minPrice)} per year
           </div>
-          <div className="text-sm text-green-600 font-medium">0% EMI available</div>
+          <div className="text-sm font-bold">0% EMI available</div>
         </div>
 
-        {/* Key Features */}
+        {/* Key Features - Premium theme */}
         <div className="mb-6">
-          <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
+          <h4 className="font-semibold text-white mb-3">Key Features:</h4>
           <div className="space-y-2">
             {tierInfo?.highlights.slice(0, 3).map((highlight, index) => (
-              <div key={index} className="flex items-center text-sm text-gray-700">
-                <span className="text-green-500 mr-2">✓</span>
+              <div key={index} className="flex items-center text-sm text-gray-200">
+                <span className="text-yellow-400 mr-2 font-bold">✓</span>
                 {highlight}
               </div>
             )) ||
               course.highlights.slice(0, 3).map((highlight, index) => (
-                <div key={index} className="flex items-center text-sm text-gray-700">
-                  <span className="text-green-500 mr-2">✓</span>
+                <div key={index} className="flex items-center text-sm text-gray-200">
+                  <span className="text-yellow-400 mr-2 font-bold">✓</span>
                   {highlight}
                 </div>
               ))}
             {(tierInfo?.highlights.length || course.highlights.length) > 3 && (
-              <div className="text-sm text-blue-600">
+              <div className="text-sm text-yellow-400 font-medium">
                 +{(tierInfo?.highlights.length || course.highlights.length) - 3} more features
               </div>
             )}
           </div>
         </div>
 
-        {/* Competitive Advantage */}
-        <div className="mb-6 bg-green-50 border border-green-200 rounded-lg p-4">
-          <div className="text-sm text-green-800 font-medium mb-2">💰 Best Value Guarantee</div>
-          <div className="text-xs text-green-700">
+        {/* Competitive Advantage - Premium theme */}
+        <div className="mb-6 bg-gray-800/60 border border-yellow-400/40 rounded-lg p-4">
+          <div className="text-sm text-yellow-400 font-bold mb-2">💰 Best Value Guarantee</div>
+          <div className="text-xs text-gray-200">
             Starting ₹12K lower than competitors • Up to 25% scholarships
           </div>
         </div>
@@ -165,30 +166,30 @@ export function CourseCard({ course, selectedTier = 'ascent' }: CourseCardProps)
           <div className="flex space-x-3">
             <Link
               href={`/courses/${course.id}`}
-              className="flex-1 bg-gray-200 text-gray-800 py-3 rounded-xl font-semibold text-center hover:bg-gray-300 transition-colors"
+              className="flex-1 bg-gray-700 border border-gray-600 text-gray-200 py-3 rounded-xl font-semibold text-center hover:bg-gray-600 transition-colors"
             >
               View Details
             </Link>
             <Link
               href={`/enrollments?course=${course.id}&tier=${activeTier}`}
-              className={`flex-1 bg-gradient-to-r ${tierColors[activeTier]} text-white py-3 rounded-xl font-semibold text-center hover:opacity-90 transition-opacity`}
+              className="flex-1 bg-gradient-to-r from-yellow-400 to-yellow-500 text-black py-3 rounded-xl font-bold text-center hover:from-yellow-500 hover:to-yellow-600 transition-all shadow-lg"
             >
               Enroll Now
             </Link>
           </div>
           <button
             onClick={() => setShowDemoModal(true)}
-            className="w-full bg-green-600 text-white py-3 rounded-xl font-semibold hover:bg-green-700 transition-colors"
+            className="w-full bg-gradient-to-r from-yellow-400 to-yellow-500 text-black py-3 rounded-xl font-bold hover:from-yellow-500 hover:to-yellow-600 transition-all shadow-lg border-2 border-yellow-300"
           >
             Book Free Demo Class
           </button>
         </div>
 
-        {/* Learning Modes */}
-        <div className="mt-4 flex justify-center space-x-4 text-xs text-gray-500">
+        {/* Learning Modes - Premium theme */}
+        <div className="mt-4 flex justify-center space-x-4 text-xs text-gray-300">
           {course.learningMode.map((mode, index) => (
             <span key={index} className="flex items-center">
-              <span className="w-2 h-2 bg-gray-300 rounded-full mr-1"></span>
+              <span className="w-2 h-2 bg-yellow-400 rounded-full mr-1"></span>
               {mode}
             </span>
           ))}
