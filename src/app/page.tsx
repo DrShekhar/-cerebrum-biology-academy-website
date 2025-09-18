@@ -13,6 +13,7 @@ import {
   UserPreferenceModal,
 } from '@/components/providers/PersonalizationProvider'
 import { IntelligentChatbot } from '@/components/chat/IntelligentChatbot'
+import { CurrencySelector } from '@/components/international/CurrencySelector'
 
 export default function OptimizedHomePage() {
   return (
@@ -30,10 +31,26 @@ export default function OptimizedHomePage() {
         <ValuePropositionSection />
       </div>
 
-      {/* Personalized Recommendations */}
+      {/* Personalized Recommendations & International Options */}
       <div className="py-8 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <PersonalizedCourseRecommendations />
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="lg:col-span-2">
+              <PersonalizedCourseRecommendations />
+            </div>
+            <div className="lg:col-span-1">
+              <div className="bg-gradient-to-br from-blue-50 to-purple-50 border border-blue-200 rounded-xl p-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">
+                  🌍 International Students
+                </h3>
+                <p className="text-gray-700 mb-4">
+                  We welcome students from around the world. Select your currency for localized
+                  pricing.
+                </p>
+                <CurrencySelector showPriceExample={true} />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 

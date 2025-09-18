@@ -51,6 +51,18 @@ export interface UserPreferences {
   allowLocationTracking?: boolean
   allowAnalytics?: boolean
   marketingOptIn?: boolean
+
+  // International Features
+  preferredCurrency?: 'INR' | 'USD' | 'GBP' | 'AUD' | 'CAD' | 'EUR' | 'SGD' | 'AED'
+  countryCode?: string
+  selectedTimezone?: string
+  paymentProvider?: string
+  languagePreference?: string[]
+
+  // Contact Information
+  name?: string
+  email?: string
+  phone?: string
 }
 
 export interface PersonalizationContext {
