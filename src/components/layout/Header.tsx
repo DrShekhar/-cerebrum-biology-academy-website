@@ -22,6 +22,7 @@ import {
 import { motion, AnimatePresence } from 'framer-motion'
 import { BurgerMenu } from '@/components/navigation/BurgerMenu'
 import { SearchMenu } from '@/components/navigation/SearchMenu'
+import { BrainLogo } from '@/components/ui/BrainLogo'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -104,26 +105,39 @@ const Header = () => {
               onClose={() => setIsBurgerMenuOpen(false)}
             />
 
-            {/* Enhanced Logo with Full Brand Visibility */}
-            <Link href="/" className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center shadow-lg">
-                <BookOpen className="w-6 h-6 text-white" />
+            {/* Enhanced Logo with Brain Design */}
+            <Link href="/" className="flex items-center space-x-3 group">
+              {/* Beautiful Brain Logo with Background */}
+              <div className="relative">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-50 via-purple-50 to-cyan-50 rounded-xl flex items-center justify-center shadow-lg border border-blue-100 group-hover:shadow-xl group-hover:scale-105 transition-all duration-300">
+                  <BrainLogo size="lg" animate={false} className="drop-shadow-sm" />
+                </div>
+                {/* Subtle glow effect */}
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 via-purple-400/20 to-cyan-400/20 rounded-xl blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300 -z-10"></div>
               </div>
 
               {/* Mobile: Compact brand display */}
               <div className="block sm:hidden">
-                <span className="text-lg font-bold text-gray-900">Cerebrum</span>
-                <span className="text-xs text-gray-600 block -mt-1 font-medium">
-                  Biology Academy
-                </span>
+                <div className="flex flex-col">
+                  <span className="text-xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent leading-tight">
+                    CEREBRUM
+                  </span>
+                  <span className="text-xs text-gray-600 font-medium -mt-1 tracking-wide">
+                    Biology Academy
+                  </span>
+                </div>
               </div>
 
               {/* Desktop: Full brand display */}
               <div className="hidden sm:block">
-                <span className="text-xl font-bold text-gray-900">Cerebrum</span>
-                <span className="text-sm text-gray-600 block -mt-1 font-medium">
-                  Biology Academy
-                </span>
+                <div className="flex flex-col">
+                  <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent leading-tight tracking-wide">
+                    CEREBRUM
+                  </span>
+                  <span className="text-sm text-gray-600 font-medium -mt-1 tracking-wide">
+                    Biology Academy
+                  </span>
+                </div>
               </div>
             </Link>
           </div>
@@ -269,7 +283,12 @@ const Header = () => {
                 onMouseEnter={() => setIsAuthOpen(true)}
                 onMouseLeave={() => setIsAuthOpen(false)}
               >
-                <button className="flex items-center space-x-2 text-gray-700 hover:text-primary-600 font-medium transition-colors px-4 py-3 rounded-xl hover:bg-primary-50 min-h-[44px] touch-manipulation">
+                <button
+                  className="flex items-center space-x-2 text-gray-700 hover:text-primary-600 font-medium transition-colors px-4 py-3 rounded-xl hover:bg-primary-50 min-h-[44px] touch-manipulation"
+                  aria-label="Login options menu"
+                  aria-expanded={isAuthOpen}
+                  aria-haspopup="menu"
+                >
                   <LogIn className="w-4 h-4" />
                   <span>Login</span>
                   <ChevronDown className="w-3 h-3" />
@@ -344,7 +363,10 @@ const Header = () => {
                             onClick={() => {
                               if (item.label === 'Courses') setIsCoursesOpen(!isCoursesOpen)
                             }}
-                            className="p-2 text-gray-500 hover:text-blue-600"
+                            className="p-3 text-gray-500 hover:text-blue-600 min-h-[44px] min-w-[44px] flex items-center justify-center"
+                            aria-label={`Toggle ${item.label} submenu`}
+                            aria-expanded={item.label === 'Courses' && isCoursesOpen}
+                            aria-haspopup="menu"
                           >
                             <ChevronDown
                               className={`w-4 h-4 transition-transform ${

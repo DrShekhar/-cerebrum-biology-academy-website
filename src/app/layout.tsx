@@ -120,10 +120,20 @@ export default function RootLayout({
                 <PersonalizationProvider>
                   <ABTestProvider>
                     <ErrorBoundary>
+                      {/* Skip Navigation Link for Accessibility */}
+                      <a
+                        href="#main-content"
+                        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-md z-[9999] font-medium"
+                      >
+                        Skip to main content
+                      </a>
+
                       {/* EMERGENCY: All popup components removed for clean homepage */}
                       {/* <StickyTrustBar /> */}
                       <Header />
-                      <main className="min-h-screen">{children}</main>
+                      <main id="main-content" className="min-h-screen">
+                        {children}
+                      </main>
                       <Footer />
                       {/* <RealTimeProof /> */}
                       {/* <FloatingCTA /> */}

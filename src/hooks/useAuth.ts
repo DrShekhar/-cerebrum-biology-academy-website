@@ -87,6 +87,16 @@ export function useAuth() {
       const data = await response.json()
 
       if (!response.ok) {
+        // Handle rate limiting with specific error details
+        if (response.status === 429) {
+          throw new Error(data.error || 'Too many OTP requests', {
+            cause: {
+              type: 'RATE_LIMITED',
+              waitTime: data.waitTime,
+              canRetryAt: data.canRetryAt,
+            },
+          })
+        }
         throw new Error(data.error || 'Failed to send OTP')
       }
 

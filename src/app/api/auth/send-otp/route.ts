@@ -17,9 +17,10 @@ function generateOTP(): string {
   return Math.floor(100000 + Math.random() * 900000).toString()
 }
 
-// Rate limiting: Max 3 OTPs per mobile per hour
-async function checkRateLimit(mobile: string): Promise<boolean> {
+// Rate limiting: Max 5 OTPs per mobile per hour, with progressive delays
+async function checkRateLimit(mobile: string): Promise<{ allowed: boolean; waitTime?: number }> {
   const oneHourAgo = Date.now() - 60 * 60 * 1000
+  const fiveMinutesAgo = Date.now() - 5 * 60 * 1000
 
   try {
     const recentOtps = await db.query({
@@ -33,10 +34,39 @@ async function checkRateLimit(mobile: string): Promise<boolean> {
       },
     })
 
-    return (recentOtps?.otpVerification?.length || 0) < 3
+    const otpCount = recentOtps?.otpVerification?.length || 0
+
+    // Check if too many requests in last 5 minutes (max 2)
+    const recentOtpsShort = await db.query({
+      otpVerification: {
+        $: {
+          where: {
+            mobile: mobile,
+            createdAt: { $gt: fiveMinutesAgo },
+          },
+        },
+      },
+    })
+
+    const shortTermCount = recentOtpsShort?.otpVerification?.length || 0
+
+    // Allow up to 5 OTPs per hour, but max 2 in 5 minutes
+    if (shortTermCount >= 2) {
+      const lastOtpTime = Math.max(
+        ...(recentOtpsShort.otpVerification?.map((otp) => otp.createdAt) || [0])
+      )
+      const waitTime = Math.max(0, 5 * 60 * 1000 - (Date.now() - lastOtpTime))
+      return { allowed: false, waitTime }
+    }
+
+    if (otpCount >= 5) {
+      return { allowed: false, waitTime: 60 * 60 * 1000 } // 1 hour wait
+    }
+
+    return { allowed: true }
   } catch (error) {
     console.error('Rate limit check error:', error)
-    return false
+    return { allowed: false }
   }
 }
 
@@ -49,7 +79,12 @@ async function sendSMSOTP(mobile: string, otp: string): Promise<boolean> {
     // - TextLocal
     // - MSG91
 
-    console.log(`📱 SMS OTP for ${mobile}: ${otp}`)
+    // In development only - remove OTP from logs in production
+    if (process.env.NODE_ENV === 'development') {
+      console.log(`📱 SMS OTP for ${mobile}: ${otp}`)
+    } else {
+      console.log(`📱 SMS OTP sent to ${mobile.slice(0, 3)}****${mobile.slice(-2)}`)
+    }
 
     // Mock success for development
     return true
@@ -77,7 +112,12 @@ Your OTP for Cerebrum Biology Academy is: *${otp}*
 Best of luck with your NEET preparation! 🎯
 - Team Cerebrum`
 
-    console.log(`💬 WhatsApp OTP for ${whatsapp}:`, message)
+    // In development only - remove OTP from logs in production
+    if (process.env.NODE_ENV === 'development') {
+      console.log(`💬 WhatsApp OTP for ${whatsapp}:`, message)
+    } else {
+      console.log(`💬 WhatsApp OTP sent to ${whatsapp.slice(0, 3)}****${whatsapp.slice(-2)}`)
+    }
 
     // Mock success for development
     return true
@@ -106,9 +146,24 @@ export async function POST(request: NextRequest) {
     const { mobile, purpose, whatsapp } = validationResult.data
 
     // Check rate limiting
-    if (!(await checkRateLimit(mobile))) {
+    const rateLimitResult = await checkRateLimit(mobile)
+    if (!rateLimitResult.allowed) {
+      const waitTimeMinutes = Math.ceil((rateLimitResult.waitTime || 0) / (60 * 1000))
+      const waitTimeHours = Math.ceil((rateLimitResult.waitTime || 0) / (60 * 60 * 1000))
+
+      let errorMessage = 'Too many OTP requests.'
+      if (rateLimitResult.waitTime && rateLimitResult.waitTime < 60 * 60 * 1000) {
+        errorMessage += ` Please try again after ${waitTimeMinutes} minutes.`
+      } else {
+        errorMessage += ` Please try again after ${waitTimeHours} hour(s).`
+      }
+
       return NextResponse.json(
-        { error: 'Too many OTP requests. Please try again after 1 hour.' },
+        {
+          error: errorMessage,
+          waitTime: rateLimitResult.waitTime,
+          canRetryAt: Date.now() + (rateLimitResult.waitTime || 0),
+        },
         { status: 429 }
       )
     }

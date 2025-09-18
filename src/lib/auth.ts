@@ -29,14 +29,22 @@ const loginSchema = z.object({
   password: z.string().min(6, 'Password must be at least 6 characters'),
 })
 
-// Admin credentials (in production, this should be in a secure database)
+// Admin credentials - MUST be set via environment variables in production
 const ADMIN_CREDENTIALS = {
-  email: process.env.ADMIN_EMAIL || 'admin@cerebrumbiologyacademy.com',
-  passwordHash:
-    process.env.ADMIN_PASSWORD_HASH ||
-    '$2a$12$LQv3c1yqBwkVsvDqjrOuWOFHk.cqmZqjSmUjcScVHFWuLnDSsOlMe', // 'admin123'
-  name: 'Admin User',
+  email: process.env.ADMIN_EMAIL,
+  passwordHash: process.env.ADMIN_PASSWORD_HASH,
+  name: process.env.ADMIN_NAME || 'Admin User',
   role: 'admin' as const,
+}
+
+// Validate required admin environment variables
+if (!ADMIN_CREDENTIALS.email || !ADMIN_CREDENTIALS.passwordHash) {
+  console.error(
+    '❌ SECURITY ERROR: ADMIN_EMAIL and ADMIN_PASSWORD_HASH environment variables are required'
+  )
+  if (process.env.NODE_ENV === 'production') {
+    throw new Error('Missing required admin credentials in production environment')
+  }
 }
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
