@@ -30,7 +30,7 @@ const catalogLeads: CatalogLead[] = []
 export async function POST(request: NextRequest) {
   try {
     const body = (await request.json()) as CatalogDownloadRequest
-    const headersList = headers()
+    const headersList = await headers()
 
     // Validate required fields
     if (!body.email || !body.phone) {
@@ -66,7 +66,7 @@ export async function POST(request: NextRequest) {
       source: body.source || 'exit_intent_popup',
       timestamp: Date.now(),
       userAgent: headersList.get('user-agent') || '',
-      ip: request.ip || headersList.get('x-forwarded-for') || 'unknown',
+      ip: headersList.get('x-forwarded-for') || '127.0.0.1',
       utm_data: {
         campaign: body.utm_campaign,
         source: body.utm_source,

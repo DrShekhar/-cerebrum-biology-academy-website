@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { db } from '@/lib/db'
+import { adminDb as db } from '@/lib/db-admin'
 import { signIn } from '@/lib/auth'
 import { z } from 'zod'
 
@@ -9,57 +9,63 @@ const verifyOtpSchema = z.object({
   otp: z.string().length(6, 'OTP must be 6 digits'),
   otpId: z.string().uuid('Invalid OTP ID'),
   purpose: z.enum(['registration', 'login', 'password_reset', 'mobile_verification']),
-  
+
   // Required for registration
   name: z.string().min(2, 'Name must be at least 2 characters').optional(),
   email: z.string().email('Invalid email').optional(),
-  whatsapp: z.string().regex(/^[6-9]\d{9}$/, 'Invalid WhatsApp number').optional(),
+  whatsapp: z
+    .string()
+    .regex(/^[6-9]\d{9}$/, 'Invalid WhatsApp number')
+    .optional(),
   role: z.enum(['student', 'parent']).optional(),
   currentClass: z.enum(['10th', '11th', '12th', 'Dropper']).optional(),
-  parentMobile: z.string().regex(/^[6-9]\d{9}$/, 'Invalid parent mobile').optional(),
+  parentMobile: z
+    .string()
+    .regex(/^[6-9]\d{9}$/, 'Invalid parent mobile')
+    .optional(),
   referralCode: z.string().optional(),
-  
+
   // Marketing consent
   marketingConsent: z.boolean().optional(),
   whatsappConsent: z.boolean().optional(),
-  smsConsent: z.boolean().optional()
+  smsConsent: z.boolean().optional(),
 })
 
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
-    
+
     // Validate input
     const validationResult = verifyOtpSchema.safeParse(body)
     if (!validationResult.success) {
       return NextResponse.json(
-        { 
-          error: 'Validation failed', 
-          details: validationResult.error.errors 
+        {
+          error: 'Validation failed',
+          details: validationResult.error.issues,
         },
         { status: 400 }
       )
     }
 
-    const { 
-      mobile, 
-      otp, 
-      otpId, 
-      purpose, 
-      name, 
-      email, 
-      whatsapp, 
-      role, 
-      currentClass, 
+    const {
+      mobile,
+      otp,
+      otpId,
+      purpose,
+      name,
+      email,
+      whatsapp,
+      role,
+      currentClass,
       parentMobile,
       referralCode,
       marketingConsent = true,
       whatsappConsent = true,
-      smsConsent = true
+      smsConsent = true,
     } = validationResult.data
 
     // Verify OTP
-    const { data: otpData, error: otpQueryError } = await db.query({
+    const otpData = await db.query({
       otpVerification: {
         $: {
           where: {
@@ -67,28 +73,25 @@ export async function POST(request: NextRequest) {
             mobile: mobile,
             otp: otp,
             purpose: purpose,
-            isUsed: false
-          }
-        }
-      }
+            isUsed: false,
+          },
+        },
+      },
     })
 
-    if (otpQueryError || !otpData?.otpVerification || otpData.otpVerification.length === 0) {
+    if (!otpData?.otpVerification || otpData.otpVerification.length === 0) {
       // Increment failed attempt counter
       try {
         await db.transact([
           db.tx.otpVerification[otpId].update({
-            attempts: (otpData?.otpVerification?.[0]?.attempts || 0) + 1
-          })
+            attempts: (otpData?.otpVerification?.[0]?.attempts || 0) + 1,
+          }),
         ])
       } catch (error) {
         console.error('Failed to increment OTP attempts:', error)
       }
 
-      return NextResponse.json(
-        { error: 'Invalid or expired OTP' },
-        { status: 400 }
-      )
+      return NextResponse.json({ error: 'Invalid or expired OTP' }, { status: 400 })
     }
 
     const otpRecord = otpData.otpVerification[0]
@@ -113,8 +116,8 @@ export async function POST(request: NextRequest) {
     await db.transact([
       db.tx.otpVerification[otpId].update({
         isUsed: true,
-        attempts: otpRecord.attempts + 1
-      })
+        attempts: otpRecord.attempts + 1,
+      }),
     ])
 
     let user
@@ -130,14 +133,14 @@ export async function POST(request: NextRequest) {
       }
 
       // Check if user already exists
-      const { data: existingUsers } = await db.query({
+      const existingUsers = await db.query({
         users: {
-          $: { 
-            where: { 
-              mobile: mobile 
-            }
-          }
-        }
+          $: {
+            where: {
+              mobile: mobile,
+            },
+          },
+        },
       })
 
       if (existingUsers?.users && existingUsers.users.length > 0) {
@@ -149,7 +152,7 @@ export async function POST(request: NextRequest) {
 
       // Create new user
       const userId = crypto.randomUUID()
-      
+
       const newUser = {
         mobile,
         email: email || undefined,
@@ -173,30 +176,20 @@ export async function POST(request: NextRequest) {
           referralCode,
           marketingConsent,
           whatsappConsent,
-          smsConsent
-        }
+          smsConsent,
+        },
       }
 
-      const { error: createError } = await db.transact([
-        db.tx.users[userId].update(newUser)
-      ])
-
-      if (createError) {
-        console.error('Failed to create user:', createError)
-        return NextResponse.json(
-          { error: 'Failed to create account' },
-          { status: 500 }
-        )
-      }
+      await db.transact([db.tx.users[userId].update(newUser)])
 
       user = { id: userId, ...newUser }
 
       // Update marketing lead status
       try {
-        const { data: leads } = await db.query({
+        const leads = await db.query({
           marketingLead: {
-            $: { where: { mobile: mobile } }
-          }
+            $: { where: { mobile: mobile } },
+          },
         })
 
         if (leads?.marketingLead && leads.marketingLead.length > 0) {
@@ -206,24 +199,23 @@ export async function POST(request: NextRequest) {
               name: name,
               email: email,
               whatsapp: whatsapp || mobile,
-              status: 'enrolled'
-            })
+              status: 'enrolled',
+            }),
           ])
         }
       } catch (leadError) {
         console.error('Failed to update marketing lead:', leadError)
       }
-
     } else if (purpose === 'login') {
       // Get existing user
-      const { data: existingUsers } = await db.query({
+      const existingUsers = await db.query({
         users: {
-          $: { 
-            where: { 
-              mobile: mobile 
-            }
-          }
-        }
+          $: {
+            where: {
+              mobile: mobile,
+            },
+          },
+        },
       })
 
       if (!existingUsers?.users || existingUsers.users.length === 0) {
@@ -239,9 +231,14 @@ export async function POST(request: NextRequest) {
       await db.transact([
         db.tx.users[user.id].update({
           lastActiveAt: currentTime,
-          updatedAt: currentTime
-        })
+          updatedAt: currentTime,
+        }),
       ])
+    }
+
+    // Ensure user exists before proceeding
+    if (!user) {
+      return NextResponse.json({ error: 'User authentication failed' }, { status: 500 })
     }
 
     // Log authentication event
@@ -255,9 +252,9 @@ export async function POST(request: NextRequest) {
             method: 'otp',
             mobile: mobile,
             whatsapp: whatsapp || mobile,
-            purpose
-          }
-        })
+            purpose,
+          },
+        }),
       ])
     } catch (logError) {
       console.error('Failed to log auth event:', logError)
@@ -273,7 +270,7 @@ export async function POST(request: NextRequest) {
       whatsappNumber: user.whatsappNumber,
       communicationPreference: user.communicationPreference,
       isMobileVerified: user.isMobileVerified,
-      profile: user.profile
+      profile: user.profile,
     }
 
     return NextResponse.json(
@@ -284,12 +281,8 @@ export async function POST(request: NextRequest) {
       },
       { status: 200 }
     )
-
   } catch (error) {
     console.error('Verify OTP error:', error)
-    return NextResponse.json(
-      { error: 'Internal server error' },
-      { status: 500 }
-    )
+    return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
   }
 }

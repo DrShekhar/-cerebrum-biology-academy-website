@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { useABTestVariant } from './ABTestProvider'
-import { Button } from '@/components/ui/button'
+import { Button } from '@/components/ui/Button'
 import {
   ArrowRightIcon,
   UserGroupIcon,

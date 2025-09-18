@@ -2,32 +2,41 @@
 // Handles demo booking submissions with real-time notifications
 
 import { NextRequest, NextResponse } from 'next/server'
-import { init } from '@instantdb/react'
+import { adminDb as db } from '@/lib/db-admin'
 import { DemoBookingData } from '@/components/admin/DemoBookingModal'
 import { z } from 'zod'
 
 // Input validation schema
 const DemoBookingSchema = z.object({
-  name: z.string().min(2, 'Name must be at least 2 characters').max(50, 'Name must be less than 50 characters').regex(/^[a-zA-Z\s]+$/, 'Name can only contain letters and spaces'),
+  name: z
+    .string()
+    .min(2, 'Name must be at least 2 characters')
+    .max(50, 'Name must be less than 50 characters')
+    .regex(/^[a-zA-Z\s]+$/, 'Name can only contain letters and spaces'),
   email: z.string().email('Invalid email format'),
   phone: z.string().regex(/^\+?[\d\s\-\(\)]{10,15}$/, 'Invalid phone number format'),
-  whatsappNumber: z.string().regex(/^\+?[\d\s\-\(\)]{10,15}$/, 'Invalid WhatsApp number format').optional(),
-  courseInterest: z.array(z.string()).min(1, 'Please select at least one course').max(5, 'Maximum 5 courses allowed'),
-  preferredDate: z.string().refine(date => {
+  whatsappNumber: z
+    .string()
+    .regex(/^\+?[\d\s\-\(\)]{10,15}$/, 'Invalid WhatsApp number format')
+    .optional(),
+  courseInterest: z
+    .array(z.string())
+    .min(1, 'Please select at least one course')
+    .max(5, 'Maximum 5 courses allowed'),
+  preferredDate: z.string().refine((date) => {
     const selectedDate = new Date(date)
     const today = new Date()
     today.setHours(0, 0, 0, 0)
     return selectedDate >= today
   }, 'Preferred date must be today or in the future'),
   preferredTime: z.string().regex(/^\d{2}:\d{2} [AP]M - \d{2}:\d{2} [AP]M$/, 'Invalid time format'),
-  message: z.string().max(500, 'Message must be less than 500 characters').optional()
+  message: z.string().max(500, 'Message must be less than 500 characters').optional(),
 })
 
 // Rate limiting store (in production, use Redis)
 const rateLimitStore = new Map<string, { count: number; resetTime: number }>()
 
-// Initialize InstantDB (you'll need to set up your app ID)
-const db = init({ appId: process.env.INSTANT_DB_APP_ID! })
+// Database is now imported from db-admin.ts
 
 export async function POST(request: NextRequest) {
   try {
@@ -35,9 +44,10 @@ export async function POST(request: NextRequest) {
     const clientIp = request.headers.get('x-forwarded-for') || 'unknown'
     const now = Date.now()
     const rateLimit = rateLimitStore.get(clientIp)
-    
+
     if (rateLimit && rateLimit.resetTime > now) {
-      if (rateLimit.count >= 5) { // Max 5 requests per 15 minutes
+      if (rateLimit.count >= 5) {
+        // Max 5 requests per 15 minutes
         return NextResponse.json(
           { error: 'Rate limit exceeded. Please try again later.' },
           { status: 429 }
@@ -47,7 +57,7 @@ export async function POST(request: NextRequest) {
     } else {
       rateLimitStore.set(clientIp, {
         count: 1,
-        resetTime: now + 15 * 60 * 1000 // 15 minutes
+        resetTime: now + 15 * 60 * 1000, // 15 minutes
       })
     }
 
@@ -57,12 +67,12 @@ export async function POST(request: NextRequest) {
     const validationResult = DemoBookingSchema.safeParse(rawData)
     if (!validationResult.success) {
       return NextResponse.json(
-        { 
-          error: 'Invalid input data', 
-          details: validationResult.error.issues.map(issue => ({
+        {
+          error: 'Invalid input data',
+          details: validationResult.error.issues.map((issue) => ({
             field: issue.path.join('.'),
-            message: issue.message
-          }))
+            message: issue.message,
+          })),
         },
         { status: 400 }
       )
@@ -95,9 +105,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Save to database
-    await db.transact([
-      db.tx.demoBookings[bookingId].update(bookingData)
-    ])
+    await db.transact([db.tx.demoBookings[bookingId].update(bookingData)])
 
     // Create user activity record (with sanitized data)
     await db.transact([
@@ -114,7 +122,7 @@ export async function POST(request: NextRequest) {
         sessionId: request.headers.get('x-session-id') || 'unknown',
         ipAddress: clientIp,
         userAgent: request.headers.get('user-agent')?.substring(0, 200) || 'unknown', // Limit user agent length
-      })
+      }),
     ])
 
     // Create contact record for CRM
@@ -132,7 +140,7 @@ export async function POST(request: NextRequest) {
         createdAt: new Date(),
         conversionProbability: 65,
         estimatedValue: 75000, // Average course value
-      })
+      }),
     ])
 
     // Create real-time notification for admin panel
@@ -156,7 +164,7 @@ export async function POST(request: NextRequest) {
         priority: 'high',
         status: 'queued',
         createdAt: new Date(),
-      })
+      }),
     ])
 
     // Create real-time event for dashboard
@@ -172,7 +180,7 @@ export async function POST(request: NextRequest) {
         },
         timestamp: new Date(),
         processed: false,
-      })
+      }),
     ])
 
     // Schedule follow-up actions
@@ -186,11 +194,10 @@ export async function POST(request: NextRequest) {
       bookingId,
       message: 'Demo booking created successfully',
     })
-
   } catch (error) {
     // Log error securely (don't expose internal details)
     console.error('Demo booking error:', error instanceof Error ? error.message : 'Unknown error')
-    
+
     // Return generic error message
     return NextResponse.json(
       { error: 'Unable to process booking request. Please try again later.' },
@@ -202,10 +209,10 @@ export async function POST(request: NextRequest) {
 // Schedule automated follow-up actions
 async function scheduleFollowUpActions(bookingId: string, data: DemoBookingData) {
   const now = new Date()
-  
+
   // Schedule confirmation call within 2 hours
   const confirmationTime = new Date(now.getTime() + 2 * 60 * 60 * 1000)
-  
+
   // Schedule reminder 1 day before demo
   const preferredDate = new Date(data.preferredDate)
   const reminderTime = new Date(preferredDate.getTime() - 24 * 60 * 60 * 1000)
@@ -223,17 +230,19 @@ async function scheduleFollowUpActions(bookingId: string, data: DemoBookingData)
       type: 'demo_reminder',
       scheduledFor: reminderTime,
       data: { bookingId, whatsappNumber: data.whatsappNumber || data.phone, name: data.name },
-    }
+    },
   ]
 
   for (const task of tasks) {
     await db.transact([
       db.tx.notifications[task.id].update({
         type: task.type,
-        title: task.type === 'confirmation_call' ? 'Confirmation Call Required' : 'Send Demo Reminder',
-        message: task.type === 'confirmation_call' 
-          ? `Call ${data.name} to confirm demo booking`
-          : `Send demo reminder to ${data.name}`,
+        title:
+          task.type === 'confirmation_call' ? 'Confirmation Call Required' : 'Send Demo Reminder',
+        message:
+          task.type === 'confirmation_call'
+            ? `Call ${data.name} to confirm demo booking`
+            : `Send demo reminder to ${data.name}`,
         data: task.data,
         recipients: ['admin'],
         channels: ['in_app'],
@@ -241,7 +250,7 @@ async function scheduleFollowUpActions(bookingId: string, data: DemoBookingData)
         status: 'scheduled',
         scheduledFor: task.scheduledFor,
         createdAt: new Date(),
-      })
+      }),
     ])
   }
 }
@@ -253,9 +262,9 @@ async function sendImmediateNotifications(bookingData: any) {
   // 2. Send WhatsApp message to admin
   // 3. Create Slack notification
   // 4. Update admin dashboard in real-time
-  
+
   console.log('Sending immediate notifications for booking:', bookingData.id)
-  
+
   // For now, we'll just log the notification
   // In production, integrate with:
   // - Email service (SendGrid, AWS SES)
@@ -274,23 +283,19 @@ export async function GET(request: NextRequest) {
 
     // Query demo bookings
     const query = db.query({
-      demoBookings: status ? { status } : {}
+      demoBookings: status ? { status } : {},
     })
 
     const result = await query
-    
+
     return NextResponse.json({
       success: true,
       bookings: result.demoBookings,
       total: result.demoBookings.length,
     })
-
   } catch (error) {
     console.error('Fetch demo bookings error:', error)
-    return NextResponse.json(
-      { error: 'Internal server error' },
-      { status: 500 }
-    )
+    return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
   }
 }
 
@@ -300,10 +305,7 @@ export async function PUT(request: NextRequest) {
     const { bookingId, updates } = await request.json()
 
     if (!bookingId) {
-      return NextResponse.json(
-        { error: 'Booking ID is required' },
-        { status: 400 }
-      )
+      return NextResponse.json({ error: 'Booking ID is required' }, { status: 400 })
     }
 
     // Update demo booking
@@ -311,7 +313,7 @@ export async function PUT(request: NextRequest) {
       db.tx.demoBookings[bookingId].update({
         ...updates,
         updatedAt: new Date(),
-      })
+      }),
     ])
 
     // Create activity log
@@ -327,19 +329,15 @@ export async function PUT(request: NextRequest) {
         },
         timestamp: new Date(),
         sessionId: request.headers.get('x-session-id') || 'admin',
-      })
+      }),
     ])
 
     return NextResponse.json({
       success: true,
       message: 'Demo booking updated successfully',
     })
-
   } catch (error) {
     console.error('Update demo booking error:', error)
-    return NextResponse.json(
-      { error: 'Internal server error' },
-      { status: 500 }
-    )
+    return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
   }
 }

@@ -223,8 +223,8 @@ describe('Validation Schemas', () => {
     })
 
     it('should make email optional', () => {
-      const dataWithoutEmail = { ...validBookingData }
-      delete dataWithoutEmail.email
+      const dataWithoutEmail: Partial<typeof validBookingData> = { ...validBookingData }
+      delete (dataWithoutEmail as any).email
 
       const result = demoBookingSchema.safeParse(dataWithoutEmail)
       expect(result.success).toBe(true)

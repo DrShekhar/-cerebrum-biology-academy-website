@@ -139,7 +139,7 @@ export async function GET(request: NextRequest) {
     // If date is provided, calculate available time slots for that date
     if (date) {
       const targetDate = new Date(date)
-      const dayName = targetDate.toLocaleLowerCase().split(',')[0] // Get day name
+      const dayName = targetDate.toLocaleDateString('en-US', { weekday: 'long' }).toLowerCase()
       const dateString = targetDate.toISOString().split('T')[0]
 
       const availableSlots = await calculateAvailableSlots(

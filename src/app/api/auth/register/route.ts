@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { db } from '@/lib/db'
+import { adminDb as db } from '@/lib/db-admin'
 import { hashPassword } from '@/lib/auth'
 import { z } from 'zod'
 
@@ -9,56 +9,44 @@ const registerSchema = z.object({
   email: z.string().email('Invalid email format'),
   password: z.string().min(8, 'Password must be at least 8 characters'),
   phone: z.string().min(10, 'Phone number must be at least 10 digits'),
-  role: z.enum(['student', 'parent', 'teacher'], { 
-    errorMap: () => ({ message: 'Role must be student, parent, or teacher' })
-  }),
+  role: z.enum(['student', 'parent', 'teacher']),
   currentClass: z.enum(['10th', '11th', '12th', 'Dropper']).optional(),
   parentEmail: z.string().email().optional(),
-  referralCode: z.string().optional()
+  referralCode: z.string().optional(),
 })
 
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
-    
+
     // Validate input
     const validationResult = registerSchema.safeParse(body)
     if (!validationResult.success) {
       return NextResponse.json(
-        { 
-          error: 'Validation failed', 
-          details: validationResult.error.errors 
+        {
+          error: 'Validation failed',
+          details: validationResult.error.issues,
         },
         { status: 400 }
       )
     }
 
-    const { name, email, password, phone, role, currentClass, parentEmail, referralCode } = validationResult.data
+    const { name, email, password, phone, role, currentClass, parentEmail, referralCode } =
+      validationResult.data
 
     // Check if user already exists
-    const { data: existingUsers, error: queryError } = await db.query({
+    const existingUsers = await db.query({
       users: {
-        $: { 
-          where: { 
-            email: email 
-          }
-        }
-      }
+        $: {
+          where: {
+            email: email,
+          },
+        },
+      },
     })
 
-    if (queryError) {
-      console.error('Database query error:', queryError)
-      return NextResponse.json(
-        { error: 'Database error occurred' },
-        { status: 500 }
-      )
-    }
-
     if (existingUsers?.users && existingUsers.users.length > 0) {
-      return NextResponse.json(
-        { error: 'User with this email already exists' },
-        { status: 409 }
-      )
+      return NextResponse.json({ error: 'User with this email already exists' }, { status: 409 })
     }
 
     // Hash password
@@ -69,7 +57,7 @@ export async function POST(request: NextRequest) {
       phone,
       registrationDate: Date.now(),
       isVerified: false,
-      enrolledCourses: []
+      enrolledCourses: [],
     }
 
     if (role === 'student') {
@@ -88,7 +76,7 @@ export async function POST(request: NextRequest) {
     const userId = crypto.randomUUID()
 
     // Create user in database
-    const { error: createError } = await db.transact([
+    await db.transact([
       db.tx.users[userId].update({
         name,
         email,
@@ -96,17 +84,9 @@ export async function POST(request: NextRequest) {
         role,
         profile,
         createdAt: Date.now(),
-        updatedAt: Date.now()
-      })
+        updatedAt: Date.now(),
+      }),
     ])
-
-    if (createError) {
-      console.error('Failed to create user:', createError)
-      return NextResponse.json(
-        { error: 'Failed to create account' },
-        { status: 500 }
-      )
-    }
 
     // Log registration event
     try {
@@ -118,9 +98,9 @@ export async function POST(request: NextRequest) {
           metadata: {
             role,
             currentClass,
-            referralCode
-          }
-        })
+            referralCode,
+          },
+        }),
       ])
     } catch (logError) {
       console.error('Failed to log registration:', logError)
@@ -139,19 +119,15 @@ export async function POST(request: NextRequest) {
           profile: {
             phone,
             currentClass,
-            isVerified: false
-          }
-        }
+            isVerified: false,
+          },
+        },
       },
       { status: 201 }
     )
-
   } catch (error) {
     console.error('Registration error:', error)
-    return NextResponse.json(
-      { error: 'Internal server error' },
-      { status: 500 }
-    )
+    return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
   }
 }
 

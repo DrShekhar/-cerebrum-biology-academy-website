@@ -20,7 +20,7 @@ const abTestEvents: ABTestEvent[] = []
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
-    const headersList = headers()
+    const headersList = await headers()
 
     // Validate required fields (support both old and new format)
     const testIdentifier = body.testName || body.testId
@@ -46,7 +46,7 @@ export async function POST(request: NextRequest) {
         ...body.metadata,
         userAgent: headersList.get('user-agent'),
         referer: headersList.get('referer'),
-        ip: request.ip || headersList.get('x-forwarded-for') || 'unknown',
+        ip: headersList.get('x-forwarded-for') || '127.0.0.1',
       },
     }
 

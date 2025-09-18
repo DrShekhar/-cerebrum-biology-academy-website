@@ -1,6 +1,5 @@
 import React from 'react'
 import { render, screen, waitFor } from '@testing-library/react'
-import { useSession } from 'next-auth/react'
 import { AdminLayout } from '@/components/admin/AdminLayout'
 
 // Mock next-auth

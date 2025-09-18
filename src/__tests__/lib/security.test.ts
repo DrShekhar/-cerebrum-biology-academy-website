@@ -170,10 +170,10 @@ describe('Security Library', () => {
 
       expect(token).toBeTruthy()
       expect(typeof token).toBe('string')
-      expect(token.length).toBeGreaterThan(10)
+      expect((token as string).length).toBeGreaterThan(10)
 
       // Validate the same token
-      const isValid = validateCSRFToken(token, sessionId)
+      const isValid = validateCSRFToken(token as string, sessionId)
       expect(isValid).toBe(true)
     })
 
@@ -182,7 +182,7 @@ describe('Security Library', () => {
       const validToken = validateCSRFToken('', sessionId) // Generate
 
       expect(validateCSRFToken('invalid-token', sessionId)).toBe(false)
-      expect(validateCSRFToken(validToken, 'different-session')).toBe(false)
+      expect(validateCSRFToken(validToken as string, 'different-session')).toBe(false)
       expect(validateCSRFToken('', sessionId)).toBeTruthy() // Generate new
     })
   })

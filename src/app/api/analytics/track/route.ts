@@ -12,9 +12,9 @@ export async function POST(request: NextRequest) {
     const { activities, sessionId, timestamp } = body
 
     // Get client IP and user agent
-    const headersList = headers()
+    const headersList = await headers()
     const clientIP =
-      headersList.get('x-forwarded-for') || headersList.get('x-real-ip') || request.ip || 'unknown'
+      headersList.get('x-forwarded-for') || headersList.get('x-real-ip') || '127.0.0.1'
     const userAgent = headersList.get('user-agent') || 'unknown'
 
     // Process each activity

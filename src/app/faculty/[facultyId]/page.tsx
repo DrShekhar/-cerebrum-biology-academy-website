@@ -31,5 +31,6 @@ export default async function FacultyProfilePage({ params }: Props) {
     notFound()
   }
 
-  return <FacultyProfile facultyId={params.facultyId} />
+  const resolvedParams = await params
+  return <FacultyProfile facultyId={resolvedParams.facultyId} />
 }

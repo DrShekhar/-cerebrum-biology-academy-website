@@ -369,3 +369,335 @@ enum MessageStatus {
   FAILED
   PENDING
 }
+
+// Free Resources System Models
+
+model FreeUser {
+  id               String   @id @default(cuid())
+  email            String   @unique
+  name             String?
+  grade            String?  // CLASS_9, CLASS_10, CLASS_11, CLASS_12, DROPPER
+  curriculum       String?  // NEET, CBSE, ICSE, IB, IGCSE
+  school           String?
+  city             String?
+
+  // Progress Tracking
+  totalPoints      Int      @default(0)
+  studyStreak      Int      @default(0)
+  lastActiveDate   DateTime?
+
+  // Preferences
+  preferences      Json?    // study times, notifications, etc.
+
+  // Timestamps
+  registrationDate DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  // Relations
+  testAttempts     TestAttempt[]
+  bookmarks        Bookmark[]
+  studyPlans       StudyPlan[]
+  forumPosts       ForumPost[]
+  achievements     Achievement[]
+
+  @@map("free_users")
+}
+
+model ChapterNote {
+  id               String   @id @default(cuid())
+  title            String
+  curriculum       String   // NEET, CBSE, ICSE, IB, IGCSE
+  grade            String   // CLASS_9, CLASS_10, CLASS_11, CLASS_12
+  subject          String   @default("Biology")
+  chapter          String
+  topic            String?
+
+  // Content
+  content          String   // Markdown format
+  summary          String?
+  keyPoints        String[] // Array of key points
+  diagrams         String[] // URLs to diagrams
+
+  // Metadata
+  difficulty       String   @default("Medium") // Easy, Medium, Hard
+  estimatedTime    Int?     // Reading time in minutes
+  downloadCount    Int      @default(0)
+  viewCount        Int      @default(0)
+  rating           Float    @default(0)
+  ratingCount      Int      @default(0)
+
+  // SEO
+  slug             String   @unique
+  metaDescription  String?
+  tags             String[]
+
+  // Status
+  isPublished      Boolean  @default(false)
+  publishedAt      DateTime?
+
+  // Timestamps
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  // Relations
+  bookmarks        Bookmark[]
+
+  @@index([curriculum, grade, chapter])
+  @@index([slug])
+  @@map("chapter_notes")
+}
+
+model Question {
+  id               String   @id @default(cuid())
+  topic            String   // Cell Biology, Genetics, etc.
+  subtopic         String?
+  curriculum       String   // NEET, CBSE, ICSE, IB, IGCSE
+  grade            String   // CLASS_9, CLASS_10, CLASS_11, CLASS_12
+
+  // Question Details
+  type             QuestionType // MCQ, SHORT_ANSWER, DIAGRAM, TRUE_FALSE
+  difficulty       String   @default("Medium") // Easy, Medium, Hard
+  question         String   // The question text
+  options          String[] // For MCQ (empty array for others)
+  correctAnswer    String   // The correct answer
+  explanation      String?  // Detailed explanation
+
+  // Metadata
+  source           String?  // NEET_2023, CBSE_2022, etc.
+  marks            Int      @default(1)
+  timeLimit        Int?     // Recommended time in seconds
+  tags             String[] // For better categorization
+
+  // Analytics
+  totalAttempts    Int      @default(0)
+  correctAttempts  Int      @default(0)
+  averageTime      Int?     // Average time taken in seconds
+
+  // Status
+  isActive         Boolean  @default(true)
+  isVerified       Boolean  @default(false)
+
+  // Timestamps
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  // Relations
+  testQuestions    TestQuestion[]
+
+  @@index([topic, difficulty])
+  @@index([curriculum, grade])
+  @@map("questions")
+}
+
+model TestAttempt {
+  id               String   @id @default(cuid())
+  freeUserId       String
+
+  // Test Configuration
+  title            String   // "Cell Biology Test - Easy"
+  topics           String[] // Selected topics
+  difficulty       String   // Easy, Medium, Hard, Mixed
+  questionCount    Int
+  timeLimit        Int?     // In minutes
+
+  // Results
+  score            Int      // Out of total marks
+  totalMarks       Int
+  percentage       Float
+  timeSpent        Int      // In seconds
+
+  // Analysis
+  topicWiseScore   Json     // { "Cell Biology": 8, "Genetics": 6 }
+  strengthAreas    String[] // Topics where score > 70%
+  weaknessAreas    String[] // Topics where score < 50%
+  recommendations  String[] // AI-generated suggestions
+
+  // Status
+  status           TestStatus @default(IN_PROGRESS)
+  startedAt        DateTime @default(now())
+  submittedAt      DateTime?
+
+  // Relations
+  freeUser         FreeUser @relation(fields: [freeUserId], references: [id], onDelete: Cascade)
+  testQuestions    TestQuestion[]
+
+  @@index([freeUserId, startedAt])
+  @@map("test_attempts")
+}
+
+model TestQuestion {
+  id               String   @id @default(cuid())
+  testAttemptId    String
+  questionId       String
+
+  // Student Response
+  selectedAnswer   String?
+  isCorrect        Boolean?
+  timeSpent        Int?     // In seconds
+  marksAwarded     Int      @default(0)
+
+  // Relations
+  testAttempt      TestAttempt @relation(fields: [testAttemptId], references: [id], onDelete: Cascade)
+  question         Question @relation(fields: [questionId], references: [id])
+
+  @@unique([testAttemptId, questionId])
+  @@map("test_questions")
+}
+
+model Bookmark {
+  id               String   @id @default(cuid())
+  freeUserId       String
+  chapterNoteId    String
+
+  // Metadata
+  notes            String?  // Personal notes by student
+  createdAt        DateTime @default(now())
+
+  // Relations
+  freeUser         FreeUser @relation(fields: [freeUserId], references: [id], onDelete: Cascade)
+  chapterNote      ChapterNote @relation(fields: [chapterNoteId], references: [id], onDelete: Cascade)
+
+  @@unique([freeUserId, chapterNoteId])
+  @@map("bookmarks")
+}
+
+model StudyPlan {
+  id               String   @id @default(cuid())
+  freeUserId       String
+
+  // Plan Details
+  title            String   // "NEET 2025 Preparation"
+  targetExam       String   // NEET, CBSE, etc.
+  examDate         DateTime?
+
+  // Schedule
+  schedule         Json     // Weekly/daily schedule
+  currentWeek      Int      @default(1)
+  totalWeeks       Int
+
+  // Progress
+  completedTopics  String[]
+  currentTopic     String?
+  overallProgress  Int      @default(0) // Percentage
+
+  // Status
+  isActive         Boolean  @default(true)
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  // Relations
+  freeUser         FreeUser @relation(fields: [freeUserId], references: [id], onDelete: Cascade)
+
+  @@map("study_plans")
+}
+
+model ForumPost {
+  id               String   @id @default(cuid())
+  freeUserId       String
+
+  // Post Details
+  title            String
+  content          String
+  topic            String   // Biology topic
+  type             PostType @default(QUESTION)
+
+  // Engagement
+  upvotes          Int      @default(0)
+  views            Int      @default(0)
+
+  // Status
+  isResolved       Boolean  @default(false)
+  isPinned         Boolean  @default(false)
+
+  // Timestamps
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  // Relations
+  freeUser         FreeUser @relation(fields: [freeUserId], references: [id], onDelete: Cascade)
+  replies          ForumReply[]
+
+  @@index([topic, createdAt])
+  @@map("forum_posts")
+}
+
+model ForumReply {
+  id               String   @id @default(cuid())
+  postId           String
+  content          String
+  authorName       String   // Anonymous display name
+
+  // Engagement
+  upvotes          Int      @default(0)
+  isAccepted       Boolean  @default(false) // Best answer
+
+  // Timestamps
+  createdAt        DateTime @default(now())
+
+  // Relations
+  post             ForumPost @relation(fields: [postId], references: [id], onDelete: Cascade)
+
+  @@map("forum_replies")
+}
+
+model Achievement {
+  id               String   @id @default(cuid())
+  freeUserId       String
+
+  // Achievement Details
+  type             AchievementType
+  title            String
+  description      String
+  icon             String?  // Icon URL or name
+  points           Int      @default(0)
+
+  // Progress (for progressive achievements)
+  currentProgress  Int      @default(0)
+  targetProgress   Int      @default(1)
+  isCompleted      Boolean  @default(false)
+
+  // Timestamps
+  earnedAt         DateTime?
+  createdAt        DateTime @default(now())
+
+  // Relations
+  freeUser         FreeUser @relation(fields: [freeUserId], references: [id], onDelete: Cascade)
+
+  @@map("achievements")
+}
+
+// Additional Enums for Free Resources
+
+enum QuestionType {
+  MCQ
+  SHORT_ANSWER
+  DIAGRAM
+  TRUE_FALSE
+  FILL_BLANK
+}
+
+enum TestStatus {
+  IN_PROGRESS
+  COMPLETED
+  ABANDONED
+  EXPIRED
+}
+
+enum PostType {
+  QUESTION
+  DISCUSSION
+  TIP
+  RESOURCE
+  ANNOUNCEMENT
+}
+
+enum AchievementType {
+  FIRST_TEST
+  STREAK_7_DAYS
+  STREAK_30_DAYS
+  TOPIC_MASTER
+  SPEED_DEMON
+  PERFECTIONIST
+  COMMUNITY_HELPER
+  BOOKWORM
+}

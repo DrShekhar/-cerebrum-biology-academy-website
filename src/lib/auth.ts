@@ -106,7 +106,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         } catch (error) {
           console.error('Authentication error:', error)
           if (error instanceof z.ZodError) {
-            throw new Error('Invalid input: ' + error.errors.map((e) => e.message).join(', '))
+            throw new Error('Invalid input: ' + error.issues.map((e: any) => e.message).join(', '))
           }
           throw new Error('Authentication failed')
         }

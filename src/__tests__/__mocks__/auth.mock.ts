@@ -15,11 +15,11 @@ export async function verifyPassword(password: string, hash: string): Promise<bo
 
 export function checkRateLimit(identifier: string, limit = 5): boolean {
   // Simple mock rate limiting for tests
-  if (!global.rateLimitStore) {
-    global.rateLimitStore = new Map()
+  if (!(global as any).rateLimitStore) {
+    ;(global as any).rateLimitStore = new Map()
   }
 
-  const store = global.rateLimitStore as Map<string, number>
+  const store = (global as any).rateLimitStore as Map<string, number>
   const current = store.get(identifier) || 0
 
   if (current >= limit) {

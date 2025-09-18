@@ -1,12 +1,15 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { db } from '@/lib/db'
+import { adminDb as db } from '@/lib/db-admin'
 import { z } from 'zod'
 
 // Validation schema for OTP request
 const sendOtpSchema = z.object({
   mobile: z.string().regex(/^[6-9]\d{9}$/, 'Invalid Indian mobile number'),
   purpose: z.enum(['registration', 'login', 'password_reset', 'mobile_verification']),
-  whatsapp: z.string().regex(/^[6-9]\d{9}$/, 'Invalid WhatsApp number').optional()
+  whatsapp: z
+    .string()
+    .regex(/^[6-9]\d{9}$/, 'Invalid WhatsApp number')
+    .optional(),
 })
 
 // Generate 6-digit OTP
@@ -17,17 +20,17 @@ function generateOTP(): string {
 // Rate limiting: Max 3 OTPs per mobile per hour
 async function checkRateLimit(mobile: string): Promise<boolean> {
   const oneHourAgo = Date.now() - 60 * 60 * 1000
-  
+
   try {
-    const { data: recentOtps } = await db.query({
+    const recentOtps = await db.query({
       otpVerification: {
         $: {
           where: {
             mobile: mobile,
-            createdAt: { $gt: oneHourAgo }
-          }
-        }
-      }
+            createdAt: { $gt: oneHourAgo },
+          },
+        },
+      },
     })
 
     return (recentOtps?.otpVerification?.length || 0) < 3
@@ -45,9 +48,9 @@ async function sendSMSOTP(mobile: string, otp: string): Promise<boolean> {
     // - AWS SNS
     // - TextLocal
     // - MSG91
-    
+
     console.log(`📱 SMS OTP for ${mobile}: ${otp}`)
-    
+
     // Mock success for development
     return true
   } catch (error) {
@@ -63,7 +66,7 @@ async function sendWhatsAppOTP(whatsapp: string, otp: string, name?: string): Pr
     // - Facebook WhatsApp Business API
     // - Twilio WhatsApp API
     // - 360Dialog
-    
+
     const message = `Hi ${name || 'Student'}! 👋
 
 Your OTP for Cerebrum Biology Academy is: *${otp}*
@@ -75,7 +78,7 @@ Best of luck with your NEET preparation! 🎯
 - Team Cerebrum`
 
     console.log(`💬 WhatsApp OTP for ${whatsapp}:`, message)
-    
+
     // Mock success for development
     return true
   } catch (error) {
@@ -87,14 +90,14 @@ Best of luck with your NEET preparation! 🎯
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
-    
+
     // Validate input
     const validationResult = sendOtpSchema.safeParse(body)
     if (!validationResult.success) {
       return NextResponse.json(
-        { 
-          error: 'Validation failed', 
-          details: validationResult.error.errors 
+        {
+          error: 'Validation failed',
+          details: validationResult.error.issues,
         },
         { status: 400 }
       )
@@ -117,14 +120,14 @@ export async function POST(request: NextRequest) {
 
     // Check if user exists for login purpose
     if (purpose === 'login') {
-      const { data: existingUsers } = await db.query({
+      const existingUsers = await db.query({
         users: {
-          $: { 
-            where: { 
-              mobile: mobile 
-            }
-          }
-        }
+          $: {
+            where: {
+              mobile: mobile,
+            },
+          },
+        },
       })
 
       if (!existingUsers?.users || existingUsers.users.length === 0) {
@@ -136,7 +139,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Store OTP in database
-    const { error: createError } = await db.transact([
+    await db.transact([
       db.tx.otpVerification[otpId].update({
         mobile,
         otp,
@@ -144,21 +147,13 @@ export async function POST(request: NextRequest) {
         expiresAt,
         attempts: 0,
         isUsed: false,
-        createdAt: Date.now()
-      })
+        createdAt: Date.now(),
+      }),
     ])
-
-    if (createError) {
-      console.error('Failed to store OTP:', createError)
-      return NextResponse.json(
-        { error: 'Failed to generate OTP' },
-        { status: 500 }
-      )
-    }
 
     // Send OTP via SMS
     const smsSuccess = await sendSMSOTP(mobile, otp)
-    
+
     // Send OTP via WhatsApp if number provided
     let whatsappSuccess = false
     if (whatsapp && whatsapp !== mobile) {
@@ -174,8 +169,8 @@ export async function POST(request: NextRequest) {
             whatsapp: whatsapp || mobile,
             source: 'website',
             status: 'new',
-            createdAt: Date.now()
-          })
+            createdAt: Date.now(),
+          }),
         ])
       } catch (leadError) {
         console.error('Failed to create marketing lead:', leadError)
@@ -194,9 +189,9 @@ export async function POST(request: NextRequest) {
             purpose,
             smsSuccess,
             whatsappSuccess,
-            hasWhatsapp: !!whatsapp
-          }
-        })
+            hasWhatsapp: !!whatsapp,
+          },
+        }),
       ])
     } catch (logError) {
       console.error('Failed to log OTP send:', logError)
@@ -209,17 +204,13 @@ export async function POST(request: NextRequest) {
         expiresAt,
         sentVia: {
           sms: smsSuccess,
-          whatsapp: whatsappSuccess
-        }
+          whatsapp: whatsappSuccess,
+        },
       },
       { status: 200 }
     )
-
   } catch (error) {
     console.error('Send OTP error:', error)
-    return NextResponse.json(
-      { error: 'Internal server error' },
-      { status: 500 }
-    )
+    return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
   }
 }

@@ -30,10 +30,22 @@
     "dev:safe": "npm run type-check && npm run lint && npm run dev",
     "build:analyze": "ANALYZE=true npm run build",
     "clean": "rm -rf .next && rm -rf node_modules/.cache",
-    "fresh-install": "rm -rf node_modules package-lock.json && npm install"
+    "fresh-install": "rm -rf node_modules package-lock.json && npm install",
+    "workflow:check": "node scripts/workflow-check.js",
+    "workflow:setup": "bash scripts/setup-workflow-aliases.sh",
+    "workflow:guide": "echo '🚀 Cerebrum Workflow Guide:' && echo '1. git workflow-status - Check current status' && echo '2. git start-feature name - Start new feature' && echo '3. npm run create:component Name - Generate component' && echo '4. npm run dev:safe - Safe development' && echo '5. git safe-commit \"msg\" - Commit with checks' && echo '6. git finish-feature - Push and PR' && echo '' && echo '📚 For detailed guide: cat DEVELOPMENT_WORKFLOW.md'",
+    "claude:prompt": "node scripts/claude-prompt-agent.js",
+    "claude:ads": "node scripts/claude-prompt-agent.js google-ads",
+    "claude:whatsapp": "node scripts/claude-prompt-agent.js whatsapp-automation",
+    "claude:payments": "node scripts/claude-prompt-agent.js payment-processing",
+    "claude:international": "node scripts/claude-prompt-agent.js international-testing",
+    "claude:ai": "node scripts/claude-prompt-agent.js ai-integration",
+    "claude:analytics": "node scripts/claude-prompt-agent.js analytics-dashboard",
+    "claude:free-resources": "node scripts/claude-prompt-agent.js free-resources-system"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
+    "@instantdb/admin": "^0.21.17",
     "@instantdb/react": "^0.21.14",
     "@prisma/client": "^6.16.2",
     "@radix-ui/react-icons": "^1.3.2",
