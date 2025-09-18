@@ -15,6 +15,7 @@ import { googleIntegration } from '@/lib/analytics/googleIntegration'
 import { metaIntegration } from '@/lib/social/metaIntegration'
 import Header from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
+import { PersonalizationProvider } from '@/components/providers/PersonalizationProvider'
 import './globals.css'
 
 const geistSans = Geist({
@@ -115,19 +116,21 @@ export default function RootLayout({
           <AnalyticsProvider>
             <VisitorAnalytics>
               <OfflineFormHandler>
-                <ErrorBoundary>
-                  {/* EMERGENCY: All popup components removed for clean homepage */}
-                  {/* <StickyTrustBar /> */}
-                  <Header />
-                  <main className="min-h-screen">{children}</main>
-                  <Footer />
-                  {/* <RealTimeProof /> */}
-                  {/* <FloatingCTA /> */}
+                <PersonalizationProvider>
+                  <ErrorBoundary>
+                    {/* EMERGENCY: All popup components removed for clean homepage */}
+                    {/* <StickyTrustBar /> */}
+                    <Header />
+                    <main className="min-h-screen">{children}</main>
+                    <Footer />
+                    {/* <RealTimeProof /> */}
+                    {/* <FloatingCTA /> */}
 
-                  {/* PWA Components - keeping essential only */}
-                  {/* <PWAInstallPrompt showDelay={45000} /> */}
-                  {/* <PWAInstallSuccess /> */}
-                </ErrorBoundary>
+                    {/* PWA Components - keeping essential only */}
+                    {/* <PWAInstallPrompt showDelay={45000} /> */}
+                    {/* <PWAInstallSuccess /> */}
+                  </ErrorBoundary>
+                </PersonalizationProvider>
               </OfflineFormHandler>
             </VisitorAnalytics>
           </AnalyticsProvider>

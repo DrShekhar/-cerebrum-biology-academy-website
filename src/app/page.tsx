@@ -8,6 +8,11 @@ import { CoursesSection } from '@/components/layout/CoursesSection'
 import { TestimonialsSection } from '@/components/layout/TestimonialsSection'
 import { FacultySection } from '@/components/layout/FacultySection'
 import { BookingSection } from '@/components/layout/BookingSection'
+import {
+  PersonalizedCourseRecommendations,
+  UserPreferenceModal,
+} from '@/components/providers/PersonalizationProvider'
+import { IntelligentChatbot } from '@/components/chat/IntelligentChatbot'
 
 export default function OptimizedHomePage() {
   return (
@@ -23,6 +28,13 @@ export default function OptimizedHomePage() {
       {/* Value Proposition - Clear differentiation */}
       <div className="py-8">
         <ValuePropositionSection />
+      </div>
+
+      {/* Personalized Recommendations */}
+      <div className="py-8 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <PersonalizedCourseRecommendations />
+        </div>
       </div>
 
       {/* Courses - Core offering with enhanced presentation */}
@@ -42,6 +54,10 @@ export default function OptimizedHomePage() {
 
       {/* Conversion - Clear call-to-action */}
       <BookingSection />
+
+      {/* Personalization Components */}
+      <IntelligentChatbot />
+      <UserPreferenceModal />
 
       {/* ✅ COMPLETELY REMOVED ALL POPUP SYSTEMS:
           ❌ ExitIntentPopup - removed completely
