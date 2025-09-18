@@ -139,15 +139,15 @@ export function CourseCard({ course, selectedTier = 'ascent' }: CourseCardProps)
                 {highlight}
               </div>
             )) ||
-              course.highlights.slice(0, 3).map((highlight, index) => (
+              course.learningOutcomes.slice(0, 3).map((highlight: string, index: number) => (
                 <div key={index} className="flex items-center text-sm text-gray-200">
                   <span className="text-yellow-400 mr-2 font-bold">✓</span>
                   {highlight}
                 </div>
               ))}
-            {(tierInfo?.highlights.length || course.highlights.length) > 3 && (
+            {(tierInfo?.highlights.length || course.learningOutcomes.length) > 3 && (
               <div className="text-sm text-yellow-400 font-medium">
-                +{(tierInfo?.highlights.length || course.highlights.length) - 3} more features
+                +{(tierInfo?.highlights.length || course.learningOutcomes.length) - 3} more features
               </div>
             )}
           </div>

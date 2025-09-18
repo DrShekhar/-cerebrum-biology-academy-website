@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: Props) {
       description: test.description,
     },
     alternates: {
-      canonical: test.seoMetadata.canonicalUrl || `/mock-tests/${params.subject}/${params.slug}`,
+      canonical: test.seoMetadata.canonicalUrl || `/mock-tests/${subject}/${slug}`,
     },
   }
 }

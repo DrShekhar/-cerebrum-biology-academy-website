@@ -10,14 +10,10 @@ import type {
   EducationalAgent,
   StudentQuery,
   AgentResponse,
-  AgentType,
-  AgentCapability,
   BiologyTopic,
-  DifficultyLevel,
-  ExamType,
   NEETCurriculum,
-  BiologyUnit,
 } from '../types'
+import { AgentType, AgentCapability, DifficultyLevel, ExamType, BiologyUnit } from '../types'
 
 interface AgentConfig {
   anthropic: Anthropic
@@ -721,13 +717,13 @@ Make descriptions clear enough for students to visualize without seeing the actu
   ): GeneratedQuestion | null {
     try {
       // Extract question components using regex
-      const questionMatch = block.match(/Q\d+\.\s*(.+?)(?=\(a\))/s)
+      const questionMatch = block.match(/Q\d+\.\s*([\s\S]+?)(?=\(a\))/)
       const optionsMatch = block.match(
-        /\(a\)\s*(.+?)\n\(b\)\s*(.+?)\n\(c\)\s*(.+?)\n\(d\)\s*(.+?)(?=Answer:)/s
+        /\(a\)\s*([\s\S]+?)\n\(b\)\s*([\s\S]+?)\n\(c\)\s*([\s\S]+?)\n\(d\)\s*([\s\S]+?)(?=Answer:)/
       )
       const answerMatch = block.match(/Answer:\s*\(([abcd])\)/)
       const explanationMatch = block.match(
-        /Explanation:\s*(.+?)(?=NEET Relevance:|Time:|Keywords:|$)/s
+        /Explanation:\s*([\s\S]+?)(?=NEET Relevance:|Time:|Keywords:|$)/
       )
 
       if (!questionMatch || !optionsMatch || !answerMatch) {
@@ -850,7 +846,7 @@ Make descriptions clear enough for students to visualize without seeing the actu
 
   private getRelatedTopics(topic: string): string[] {
     // Topic relationship mapping
-    const relationships = {
+    const relationships: Record<string, string[]> = {
       photosynthesis: ['respiration', 'chloroplast', 'plant physiology'],
       respiration: ['photosynthesis', 'mitochondria', 'energy metabolism'],
       genetics: ['heredity', 'dna', 'protein synthesis', 'evolution'],

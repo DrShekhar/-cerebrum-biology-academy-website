@@ -22,7 +22,7 @@ export async function POST(request: NextRequest) {
     const body: DemoBookingRequest = await request.json()
 
     // Validate required fields
-    const requiredFields = [
+    const requiredFields: (keyof DemoBookingRequest)[] = [
       'studentName',
       'email',
       'phone',

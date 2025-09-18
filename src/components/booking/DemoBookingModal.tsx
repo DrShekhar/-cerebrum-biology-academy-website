@@ -31,7 +31,7 @@ export function DemoBookingModal({
   const [formData, setFormData] = useState({
     studentName: user?.name || '',
     email: user?.email || '',
-    phone: user?.phone || '',
+    phone: user?.mobile || '',
     preferredDate: '',
     preferredTime: '',
     message: '',
@@ -81,7 +81,7 @@ export function DemoBookingModal({
     setFormData({
       studentName: user?.name || '',
       email: user?.email || '',
-      phone: user?.phone || '',
+      phone: user?.mobile || '',
       preferredDate: '',
       preferredTime: '',
       message: '',

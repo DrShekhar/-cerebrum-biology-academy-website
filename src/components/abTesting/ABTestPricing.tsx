@@ -36,6 +36,7 @@ export function ABTestPricing({ tiers, onEnroll, className = '' }: ABTestPricing
     discountPercentage: 20,
     urgencyTimer: false,
     guaranteeBadge: false,
+    guaranteeText: '100% Money Back Guarantee',
   }
 
   const pricingConfig = config || defaultConfig

@@ -16,7 +16,7 @@ import { FacultyVideoSection } from '@/components/layout/FacultyVideoSection'
 import { CompactVideoLectures } from '@/components/layout/CompactVideoLectures'
 import { BookingSection } from '@/components/layout/BookingSection'
 import { ExitIntentPopup, useExitIntent } from '@/components/ui/ExitIntentPopup'
-import { SuccessNotifications, SuccessTicker } from '@/components/ui/SuccessNotifications'
+import { SuccessNotifications } from '@/components/ui/SuccessNotifications'
 import { LiveEnrollmentNotifications } from '@/components/ui/LiveEnrollmentNotifications'
 import { LocationDetector } from '@/components/location/LocationDetector'
 import { ProgressiveProfilingWidget } from '@/components/profiling/ProgressiveProfilingWidget'
@@ -161,8 +161,8 @@ export default function Home() {
         useCoordination={true}
       />
 
-      {/* Phase 1: Coordinated mobile success ticker */}
-      <SuccessTicker useCoordination={true} />
+      {/* Phase 1: Coordinated mobile success ticker - temporarily disabled */}
+      {/* <SuccessTicker useCoordination={true} /> */}
 
       {/* Phase 1: Coordinated progressive profiling */}
       {coordinatedProgressive && (

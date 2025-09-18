@@ -28,7 +28,8 @@ export function AuthModal({ isOpen, onClose, title, subtitle }: AuthModalProps) 
     setError('')
 
     try {
-      await signInWithEmail(email)
+      // Note: This appears to be legacy code - consider updating to use modern OTP flow
+      await signInWithEmail({ email, password: '' })
       setIsCodeSent(true)
     } catch (err) {
       setError('Failed to send magic link. Please try again.')

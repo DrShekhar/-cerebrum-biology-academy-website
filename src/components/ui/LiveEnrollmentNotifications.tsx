@@ -11,7 +11,19 @@ interface LiveEnrollment {
   timestamp: number
 }
 
-export const LiveEnrollmentNotifications: React.FC = () => {
+interface LiveEnrollmentNotificationsProps {
+  showDuration?: number
+  notificationInterval?: number
+  maxVisible?: number
+  useCoordination?: boolean
+}
+
+export const LiveEnrollmentNotifications: React.FC<LiveEnrollmentNotificationsProps> = ({
+  showDuration = 8,
+  notificationInterval = 18,
+  maxVisible = 2,
+  useCoordination = false,
+}) => {
   const [enrollments, setEnrollments] = useState<LiveEnrollment[]>([])
 
   useEffect(() => {

@@ -209,14 +209,14 @@ export default function NEETDropperPage() {
 
           <div className="grid md:grid-cols-2 gap-6">
             {phasePlan.map((phase, index) => {
-              const colorClasses = {
+              const colorClasses: Record<string, string> = {
                 green: 'border-green-600 bg-green-50',
                 blue: 'border-blue-600 bg-blue-50',
                 purple: 'border-purple-600 bg-purple-50',
                 red: 'border-red-600 bg-red-50',
               }
 
-              const textClasses = {
+              const textClasses: Record<string, string> = {
                 green: 'text-green-800',
                 blue: 'text-blue-800',
                 purple: 'text-purple-800',

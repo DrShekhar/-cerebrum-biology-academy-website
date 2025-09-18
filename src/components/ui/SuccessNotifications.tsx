@@ -9,7 +9,19 @@ interface SuccessNotification {
   timestamp: number
 }
 
-export const SuccessNotifications: React.FC = () => {
+interface SuccessNotificationsProps {
+  maxNotifications?: number
+  displayDuration?: number
+  notificationInterval?: number
+  useCoordination?: boolean
+}
+
+export const SuccessNotifications: React.FC<SuccessNotificationsProps> = ({
+  maxNotifications = 3,
+  displayDuration = 5,
+  notificationInterval = 15,
+  useCoordination = false,
+}) => {
   const [notifications, setNotifications] = useState<SuccessNotification[]>([])
 
   // Mock success notifications

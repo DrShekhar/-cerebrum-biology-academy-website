@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: LocationPageProps): Promise<M
     openGraph: {
       title: seoData.title,
       description: seoData.description,
-      url: `https://cerebrumbiologyacademy.com/locations/${params.city}`,
+      url: `https://cerebrumbiologyacademy.com/locations/${city}`,
       siteName: 'Cerebrum Biology Academy',
       type: 'website',
       images: [
@@ -55,7 +55,7 @@ export async function generateMetadata({ params }: LocationPageProps): Promise<M
       images: ['/images/og-location-default.jpg'],
     },
     alternates: {
-      canonical: `https://cerebrumbiologyacademy.com/locations/${params.city}`,
+      canonical: `https://cerebrumbiologyacademy.com/locations/${city}`,
     },
     other: {
       'geo.region': `IN-${getStateCode(locationData.state)}`,
@@ -121,7 +121,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
             '@type': 'EducationalOrganization',
             name: `Cerebrum Biology Academy - ${locationData.city}`,
             description: locationData.seoData.description,
-            url: `https://cerebrumbiologyacademy.com/locations/${params.city}`,
+            url: `https://cerebrumbiologyacademy.com/locations/${city}`,
             areaServed: {
               '@type': 'City',
               name: locationData.city,

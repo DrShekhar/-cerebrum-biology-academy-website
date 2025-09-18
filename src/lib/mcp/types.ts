@@ -3,8 +3,6 @@
  * TypeScript definitions for AI-powered education system
  */
 
-import { MCPRequest, MCPResponse } from '@modelcontextprotocol/sdk'
-
 // Core MCP Server Configuration
 export interface MCPServerConfig {
   name: string

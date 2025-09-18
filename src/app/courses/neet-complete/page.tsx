@@ -642,20 +642,22 @@ const NEETCompletePage = () => {
                               </div>
                             </div>
 
-                            {chapter.assessments && (
+                            {'assessments' in chapter && chapter.assessments && (
                               <div className="mt-4 pt-4 border-t">
                                 <h6 className="font-medium text-gray-700 mb-2">
                                   Assessment Methods
                                 </h6>
                                 <div className="flex flex-wrap gap-2">
-                                  {chapter.assessments.map((assessment, assIndex) => (
-                                    <span
-                                      key={assIndex}
-                                      className="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm"
-                                    >
-                                      {assessment}
-                                    </span>
-                                  ))}
+                                  {chapter.assessments.map(
+                                    (assessment: string, assIndex: number) => (
+                                      <span
+                                        key={assIndex}
+                                        className="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm"
+                                      >
+                                        {assessment}
+                                      </span>
+                                    )
+                                  )}
                                 </div>
                               </div>
                             )}

@@ -6,16 +6,16 @@
 
 import { Anthropic } from '@anthropic-ai/sdk'
 import Redis from 'ioredis'
-import type {
-  EducationalAgent,
-  StudentQuery,
-  AgentResponse,
-  AgentType,
-  AgentCapability,
-  ParentEngagement,
-  ParentNotification,
-  ProgressReport,
-  ParentCommunication,
+import {
+  type EducationalAgent,
+  type StudentQuery,
+  type AgentResponse,
+  type AgentType,
+  type AgentCapability,
+  type ParentEngagement,
+  type ParentNotification,
+  type ProgressReport,
+  type ParentCommunication,
   NotificationType,
   CommunicationChannel,
   ReportType,

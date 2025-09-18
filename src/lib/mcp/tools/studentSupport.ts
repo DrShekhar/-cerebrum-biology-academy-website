@@ -10,13 +10,10 @@ import type {
   EducationalAgent,
   StudentQuery,
   AgentResponse,
-  AgentType,
-  AgentCapability,
   BiologyTopic,
-  DifficultyLevel,
   QueryPriority,
-  BiologyUnit,
 } from '../types'
+import { AgentType, AgentCapability, DifficultyLevel, BiologyUnit } from '../types'
 
 interface AgentConfig {
   anthropic: Anthropic
@@ -150,7 +147,7 @@ export class StudentSupportAgent implements EducationalAgent {
       await this.auditLogger.logError('student_support_error', {
         studentId: query.studentId,
         query: query.query,
-        error: error.message,
+        error: error instanceof Error ? error.message : String(error),
       })
 
       return {
