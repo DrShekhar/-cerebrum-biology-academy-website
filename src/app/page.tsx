@@ -87,7 +87,7 @@ export default function OptimizedHomePage() {
 
       {/* Personalization Components */}
       <IntelligentChatbot />
-      <UserPreferenceModal />
+      {/* <UserPreferenceModal /> - Removed to eliminate floating button popup */}
 
       {/* ✅ COMPLETELY REMOVED ALL POPUP SYSTEMS:
           ❌ ExitIntentPopup - removed completely
