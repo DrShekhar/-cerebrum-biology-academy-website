@@ -1,7 +1,7 @@
 // 🚨 EMERGENCY CLEAN HOMEPAGE - ZERO POPUP CHAOS
 'use client'
 
-import { HeroSection } from '@/components/layout/HeroSection'
+import { ABTestHero } from '@/components/abTesting/ABTestHero'
 import { TrustBadgesSection } from '@/components/layout/TrustBadgesSection'
 import { ValuePropositionSection } from '@/components/layout/ValuePropositionSection'
 import { CoursesSection } from '@/components/layout/CoursesSection'
@@ -14,14 +14,27 @@ import {
 } from '@/components/providers/PersonalizationProvider'
 import { IntelligentChatbot } from '@/components/chat/IntelligentChatbot'
 import { CurrencySelector } from '@/components/international/CurrencySelector'
+import { ConversionTracker } from '@/lib/abTesting/conversionTracking'
+import { useEffect } from 'react'
 
 export default function OptimizedHomePage() {
+  useEffect(() => {
+    // Initialize conversion tracking
+    ConversionTracker.initialize()
+  }, [])
+
+  const handleDemoBooking = () => {
+    ConversionTracker.trackDemoBooking()
+    // Navigate to demo booking form or open modal
+    console.log('Demo booking clicked - tracked!')
+  }
+
   return (
     <div className="min-h-screen">
       {/* 🎯 OPTIMIZED HOMEPAGE - CLEAR HIERARCHY & SPACING */}
 
-      {/* Hero Section - Primary focal point */}
-      <HeroSection />
+      {/* A/B Testing Hero Section - Primary focal point */}
+      <ABTestHero onCtaClick={handleDemoBooking} />
 
       {/* Trust & Social Proof - Build credibility immediately */}
       <TrustBadgesSection />

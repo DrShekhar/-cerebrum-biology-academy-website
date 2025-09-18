@@ -16,6 +16,7 @@ import { metaIntegration } from '@/lib/social/metaIntegration'
 import Header from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 import { PersonalizationProvider } from '@/components/providers/PersonalizationProvider'
+import { ABTestProvider } from '@/components/abTesting/ABTestProvider'
 import './globals.css'
 
 const geistSans = Geist({
@@ -117,19 +118,21 @@ export default function RootLayout({
             <VisitorAnalytics>
               <OfflineFormHandler>
                 <PersonalizationProvider>
-                  <ErrorBoundary>
-                    {/* EMERGENCY: All popup components removed for clean homepage */}
-                    {/* <StickyTrustBar /> */}
-                    <Header />
-                    <main className="min-h-screen">{children}</main>
-                    <Footer />
-                    {/* <RealTimeProof /> */}
-                    {/* <FloatingCTA /> */}
+                  <ABTestProvider>
+                    <ErrorBoundary>
+                      {/* EMERGENCY: All popup components removed for clean homepage */}
+                      {/* <StickyTrustBar /> */}
+                      <Header />
+                      <main className="min-h-screen">{children}</main>
+                      <Footer />
+                      {/* <RealTimeProof /> */}
+                      {/* <FloatingCTA /> */}
 
-                    {/* PWA Components - keeping essential only */}
-                    {/* <PWAInstallPrompt showDelay={45000} /> */}
-                    {/* <PWAInstallSuccess /> */}
-                  </ErrorBoundary>
+                      {/* PWA Components - keeping essential only */}
+                      {/* <PWAInstallPrompt showDelay={45000} /> */}
+                      {/* <PWAInstallSuccess /> */}
+                    </ErrorBoundary>
+                  </ABTestProvider>
                 </PersonalizationProvider>
               </OfflineFormHandler>
             </VisitorAnalytics>

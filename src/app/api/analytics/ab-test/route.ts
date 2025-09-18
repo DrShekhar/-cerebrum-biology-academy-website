@@ -2,12 +2,15 @@ import { NextRequest, NextResponse } from 'next/server'
 import { headers } from 'next/headers'
 
 interface ABTestEvent {
-  testName: string
+  testName?: string // Legacy support
+  testId?: string // New format
   variantId: string
-  variantName: string
+  variantName?: string
   event: string
+  eventType?: 'view' | 'click' | 'conversion' | 'signup' | 'payment' // New format
   userId?: string
   timestamp: number
+  eventValue?: number
   metadata?: Record<string, any>
 }
 
@@ -19,20 +22,24 @@ export async function POST(request: NextRequest) {
     const body = await request.json()
     const headersList = headers()
 
-    // Validate required fields
-    if (!body.testName || !body.variantId || !body.event) {
+    // Validate required fields (support both old and new format)
+    const testIdentifier = body.testName || body.testId
+    if (!testIdentifier || !body.variantId || !(body.event || body.eventType)) {
       return NextResponse.json(
-        { error: 'Missing required fields: testName, variantId, event' },
+        { error: 'Missing required fields: testName/testId, variantId, event/eventType' },
         { status: 400 }
       )
     }
 
     // Create event record
     const event: ABTestEvent = {
-      testName: body.testName,
+      testName: body.testName || body.testId,
+      testId: body.testId || body.testName,
       variantId: body.variantId,
       variantName: body.variantName || body.variantId,
-      event: body.event,
+      event: body.event || body.eventType,
+      eventType: body.eventType || body.event,
+      eventValue: body.eventValue,
       userId: body.userId,
       timestamp: body.timestamp || Date.now(),
       metadata: {
