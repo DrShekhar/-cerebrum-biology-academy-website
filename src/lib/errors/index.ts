@@ -96,7 +96,7 @@ export function handleError(error: unknown, path?: string): NextResponse<ErrorRe
     code = error.code
 
     if (error instanceof ValidationError && error.details) {
-      details = error.details.errors.map((err) => ({
+      details = error.details.issues.map((err: any) => ({
         field: err.path.join('.'),
         message: err.message,
         code: err.code,
@@ -130,7 +130,7 @@ export function handleError(error: unknown, path?: string): NextResponse<ErrorRe
     statusCode = 400
     message = 'Validation failed'
     code = 'VALIDATION_ERROR'
-    details = error.errors.map((err) => ({
+    details = error.issues.map((err: any) => ({
       field: err.path.join('.'),
       message: err.message,
       code: err.code,
@@ -253,7 +253,7 @@ export function paginatedResponse<T>(
   })
 }
 
-// Error logging
+// Error logging with monitoring integration
 export function logError(error: unknown, context?: Record<string, any>) {
   const errorInfo = {
     message: error instanceof Error ? error.message : 'Unknown error',
@@ -263,13 +263,41 @@ export function logError(error: unknown, context?: Record<string, any>) {
     environment: process.env.NODE_ENV,
   }
 
-  // In production, this would send to logging service
+  // Console logging for development and debugging
   console.error('Application Error:', errorInfo)
 
-  // TODO: Send to external logging service (Sentry, DataDog, etc.)
-  // if (process.env.NODE_ENV === 'production') {
-  //   // Send to logging service
-  // }
+  // Send to monitoring service
+  if (typeof window !== 'undefined') {
+    // Client-side error reporting
+    import('@/lib/monitoring/errorMonitoring')
+      .then(({ errorMonitoring }) => {
+        const actualError = error instanceof Error ? error : new Error(String(error))
+        errorMonitoring
+          .reportErrorWithRateLimit(actualError, {
+            custom: context,
+          })
+          .catch(console.error)
+      })
+      .catch(console.error)
+  } else {
+    // Server-side error logging
+    // TODO: Integrate with server-side monitoring service
+    // This could send to external services like Sentry, DataDog, etc.
+    if (process.env.NODE_ENV === 'production') {
+      // For now, structured logging to console that can be captured by log aggregators
+      console.error(
+        JSON.stringify({
+          level: 'error',
+          message: errorInfo.message,
+          stack: errorInfo.stack,
+          context: errorInfo.context,
+          timestamp: errorInfo.timestamp,
+          environment: errorInfo.environment,
+          source: 'server',
+        })
+      )
+    }
+  }
 }
 
 // Health check error

@@ -7,12 +7,13 @@ import { ArrowLeft, Share2, Download, Heart } from 'lucide-react'
 import Link from 'next/link'
 
 interface Props {
-  params: { studentId: string }
+  params: Promise<{ studentId: string }>
 }
 
 export async function generateMetadata({ params }: Props) {
-  const story = getStoryById(params.studentId)
-  
+  const { studentId } = await params
+  const story = getStoryById(studentId)
+
   if (!story) {
     return {
       title: 'Student Not Found',
@@ -31,8 +32,9 @@ export async function generateMetadata({ params }: Props) {
   }
 }
 
-export default function StudentStoryPage({ params }: Props) {
-  const story = getStoryById(params.studentId)
+export default async function StudentStoryPage({ params }: Props) {
+  const { studentId } = await params
+  const story = getStoryById(studentId)
 
   if (!story || !story.detailedJourney) {
     notFound()
@@ -50,7 +52,7 @@ export default function StudentStoryPage({ params }: Props) {
                 Back to Stories
               </Button>
             </Link>
-            
+
             <div className="flex items-center space-x-3">
               <Button variant="outline" size="sm">
                 <Heart className="w-4 h-4 mr-2" />
@@ -128,15 +130,23 @@ export default function StudentStoryPage({ params }: Props) {
           <p className="text-xl text-blue-100 mb-8">
             Start your own NEET success story with our expert guidance and proven methodology.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/courses">
-              <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-blue-600">
+              <Button
+                variant="outline"
+                size="lg"
+                className="border-white text-white hover:bg-white hover:text-blue-600"
+              >
                 Explore Our Courses
               </Button>
             </Link>
             <Link href="/contact">
-              <Button variant="primary" size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
+              <Button
+                variant="primary"
+                size="lg"
+                className="bg-white text-blue-600 hover:bg-gray-100"
+              >
                 Book Free Consultation
               </Button>
             </Link>

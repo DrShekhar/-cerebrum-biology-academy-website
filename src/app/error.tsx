@@ -13,7 +13,25 @@ interface ErrorProps {
 
 export default function Error({ error, reset }: ErrorProps) {
   useEffect(() => {
-    // Log the error to an error reporting service
+    // Log the error to our error handling service
+    const logErrorToService = async () => {
+      try {
+        // Import logError dynamically to avoid SSR issues
+        const { logError } = await import('@/lib/errors')
+
+        logError(error, {
+          page: 'global-error-page',
+          digest: error.digest,
+          userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : 'unknown',
+          url: typeof window !== 'undefined' ? window.location.href : 'unknown',
+          timestamp: new Date().toISOString(),
+        })
+      } catch (logError) {
+        console.error('Failed to log error:', logError)
+      }
+    }
+
+    logErrorToService()
     console.error('Application Error:', error)
   }, [error])
 

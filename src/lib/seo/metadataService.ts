@@ -46,9 +46,7 @@ export class MetadataService {
       title: seoData.title,
       description: seoData.description,
       keywords: seoData.keywords,
-      canonical: seoData.canonicalUrl,
       alternates: {
-        canonical: seoData.canonicalUrl,
         languages: seoData.hreflang || {},
       },
       openGraph: {
@@ -99,7 +97,6 @@ export class MetadataService {
       title: cityData.title,
       description: cityData.description,
       keywords: cityData.keywords,
-      canonical: cityData.canonicalUrl,
       openGraph: {
         title: cityData.title,
         description: cityData.description,
@@ -135,7 +132,6 @@ export class MetadataService {
       title: seoData.title,
       description: seoData.description,
       keywords: seoData.keywords,
-      canonical: seoData.canonicalUrl,
       openGraph: {
         title: seoData.title,
         description: seoData.description,
@@ -207,7 +203,6 @@ export class MetadataService {
       title: info.title,
       description: info.description,
       keywords: info.keywords,
-      canonical: `${this.baseUrl}/exams/${examData.exam}`,
       openGraph: {
         title: info.title,
         description: info.description,
@@ -270,7 +265,6 @@ export class MetadataService {
       title: info.title,
       description: info.description,
       keywords: info.keywords,
-      canonical: `${this.baseUrl}/international/${countryData.country}`,
       openGraph: {
         title: info.title,
         description: info.description,
@@ -297,7 +291,6 @@ export class MetadataService {
         'biology online classes',
         'medical college preparation',
       ],
-      canonical: this.baseUrl,
       openGraph: {
         title: 'Cerebrum Biology Academy | Best NEET Biology Coaching Online',
         description:
@@ -344,7 +337,6 @@ export class MetadataService {
       title: seoData.title,
       description: seoData.description,
       keywords: seoData.keywords,
-      canonical: seoData.canonicalUrl,
       openGraph: {
         title: seoData.title,
         description: seoData.description,
@@ -366,7 +358,6 @@ export class MetadataService {
       title: seoData.title,
       description: seoData.description,
       keywords: seoData.keywords,
-      canonical: seoData.canonicalUrl,
       openGraph: {
         title: seoData.title,
         description: seoData.description,
@@ -385,7 +376,6 @@ export class MetadataService {
       title: 'Cerebrum Biology Academy | Expert Biology Coaching',
       description:
         'Premium Biology coaching for medical entrance exams. Expert faculty, comprehensive study material, proven results.',
-      canonical: this.baseUrl,
     }
   }
 

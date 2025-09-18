@@ -52,11 +52,25 @@ export class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoun
     console.error('Error caught by ErrorBoundary:', error)
     console.error('Error info:', errorInfo)
 
-    // In production, you would log this to your error monitoring service
-    if (typeof window !== 'undefined') {
-      // Example: Sentry, LogRocket, etc.
-      // Sentry.captureException(error, { contexts: { react: errorInfo } })
+    // Log error to our error handling service
+    const logErrorAsync = async () => {
+      try {
+        const { logError } = await import('@/lib/errors')
+
+        logError(error, {
+          errorBoundary: true,
+          componentStack: errorInfo.componentStack,
+          errorInfo,
+          userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : 'unknown',
+          url: typeof window !== 'undefined' ? window.location.href : 'unknown',
+          timestamp: new Date().toISOString(),
+        })
+      } catch (logError) {
+        console.error('Failed to log error:', logError)
+      }
     }
+
+    logErrorAsync()
   }
 
   resetError = () => {
