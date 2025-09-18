@@ -165,7 +165,7 @@ const Header = () => {
                             <div className="px-6">
                               <div className="mb-4">
                                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                                  Cerebrum NEET Biology Courses
+                                  NEET Biology Courses
                                 </h3>
                                 <p className="text-sm text-gray-600 mb-4">
                                   Comprehensive programs designed for medical entrance success with
@@ -205,7 +205,7 @@ const Header = () => {
                                   href="/support/demo"
                                   className="block w-full text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-4 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all"
                                 >
-                                  Book Free Cerebrum Demo Class
+                                  Book Free Demo Class
                                 </Link>
                               </div>
                             </div>
@@ -300,7 +300,7 @@ const Header = () => {
                 className="bg-gradient-to-r from-primary-600 to-purple-600 text-white px-6 py-3 rounded-full font-semibold hover:from-primary-700 hover:to-purple-700 transition-all duration-300 transform hover:-translate-y-1 min-h-[48px] flex items-center touch-manipulation"
                 style={{ boxShadow: 'var(--shadow-premium)' }}
               >
-                Book Cerebrum Demo
+                Book Demo
               </Link>
             </div>
           </div>
@@ -411,7 +411,7 @@ const Header = () => {
                     className="block w-full text-center bg-gradient-to-r from-primary-600 to-purple-600 text-white px-6 py-4 rounded-full font-semibold hover:from-primary-700 hover:to-purple-700 transition-all duration-300 min-h-[52px] flex items-center justify-center touch-manipulation"
                     style={{ boxShadow: 'var(--shadow-premium)' }}
                   >
-                    Book Free Cerebrum Demo
+                    Book Free Demo
                   </Link>
                 </div>
               </div>

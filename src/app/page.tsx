@@ -9,18 +9,38 @@ import { TestimonialsSection } from '@/components/layout/TestimonialsSection'
 import { FacultySection } from '@/components/layout/FacultySection'
 import { BookingSection } from '@/components/layout/BookingSection'
 
-export default function EmergencyCleanHomePage() {
+export default function OptimizedHomePage() {
   return (
     <div className="min-h-screen">
-      {/* 🎯 EMERGENCY CLEAN HOMEPAGE - ZERO POPUP CHAOS */}
+      {/* 🎯 OPTIMIZED HOMEPAGE - CLEAR HIERARCHY & SPACING */}
 
-      {/* Essential sections only - ALL POPUPS REMOVED */}
+      {/* Hero Section - Primary focal point */}
       <HeroSection />
+
+      {/* Trust & Social Proof - Build credibility immediately */}
       <TrustBadgesSection />
-      <ValuePropositionSection />
-      <CoursesSection />
-      <TestimonialsSection />
-      <FacultySection />
+
+      {/* Value Proposition - Clear differentiation */}
+      <div className="py-8">
+        <ValuePropositionSection />
+      </div>
+
+      {/* Courses - Core offering with enhanced presentation */}
+      <div className="py-12 bg-gray-50">
+        <CoursesSection />
+      </div>
+
+      {/* Social Proof - Student success stories */}
+      <div className="py-8">
+        <TestimonialsSection />
+      </div>
+
+      {/* Faculty - Expertise showcase */}
+      <div className="py-12 bg-blue-50">
+        <FacultySection />
+      </div>
+
+      {/* Conversion - Clear call-to-action */}
       <BookingSection />
 
       {/* ✅ COMPLETELY REMOVED ALL POPUP SYSTEMS:

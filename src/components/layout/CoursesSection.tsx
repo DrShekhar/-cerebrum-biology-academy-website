@@ -283,19 +283,17 @@ export function CoursesSection() {
                   <div className="flex items-center space-x-2">
                     <div className="flex items-center bg-gradient-to-r from-yellow-400 to-yellow-500 border border-yellow-300 text-black px-3 py-1 rounded-full text-xs font-bold">
                       <Award className="w-3 h-3 mr-1" />
-                      Cerebrum Certified
+                      Certified Program
                     </div>
                   </div>
                 </div>
 
                 <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-yellow-400 transition-colors">
-                  Cerebrum {course.name}
+                  {course.name}
                 </h3>
 
                 <p className="text-gray-300 mb-6">
-                  {course.description
-                    .replace(/our/gi, "Cerebrum's")
-                    .replace(/we provide/gi, 'Cerebrum provides')}
+                  {course.description.replace(/our/gi, 'our').replace(/we provide/gi, 'we provide')}
                 </p>
 
                 {/* Course Meta - Premium theme */}
@@ -376,7 +374,7 @@ export function CoursesSection() {
                     className="flex-1 bg-gradient-to-r from-yellow-400 to-yellow-500 text-black hover:from-yellow-500 hover:to-yellow-600 font-bold border-2 border-yellow-300 shadow-lg"
                     onClick={() => handleEnrollClick(course.id)}
                   >
-                    Enroll in Cerebrum
+                    Enroll Now
                   </Button>
                   <Button
                     variant="outline"
@@ -384,7 +382,7 @@ export function CoursesSection() {
                     className="flex-1 border-2 border-gray-600 text-gray-200 hover:bg-gray-700 hover:text-white"
                     onClick={() => handleViewDetails(course.id)}
                   >
-                    View Cerebrum Details
+                    View Details
                   </Button>
                 </div>
               </div>
@@ -400,12 +398,9 @@ export function CoursesSection() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-3xl font-bold mb-4">
-            Not Sure Which Cerebrum Course is Right for You?
-          </h3>
+          <h3 className="text-3xl font-bold mb-4">Not Sure Which Course is Right for You?</h3>
           <p className="text-xl mb-8 opacity-90">
-            Get personalized guidance from our Cerebrum expert counselors to choose the perfect
-            program
+            Get personalized guidance from our expert counselors to choose the perfect program
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
@@ -413,14 +408,14 @@ export function CoursesSection() {
               size="xl"
               className="bg-white text-blue-600 hover:bg-gray-100"
             >
-              Free Cerebrum Counseling Session
+              Free Counseling Session
             </Button>
             <Button
               variant="outline"
               size="xl"
               className="border-white text-white hover:bg-white hover:text-blue-600"
             >
-              Download Cerebrum Brochure
+              Download Brochure
             </Button>
           </div>
         </motion.div>

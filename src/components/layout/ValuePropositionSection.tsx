@@ -168,7 +168,7 @@ export function ValuePropositionSection() {
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Why Choose Cerebrum Over Traditional Coaching?
+              Why Choose Our Academy Over Traditional Coaching?
             </h3>
             <p className="text-lg text-gray-600">
               See the dramatic difference our methodology makes compared to conventional approaches
@@ -182,7 +182,7 @@ export function ValuePropositionSection() {
                   <tr className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
                     <th className="text-left py-6 px-6 font-semibold">Success Metrics</th>
                     <th className="text-center py-6 px-6 font-semibold">Traditional Coaching</th>
-                    <th className="text-center py-6 px-6 font-semibold">Cerebrum Academy</th>
+                    <th className="text-center py-6 px-6 font-semibold">Our Academy</th>
                     <th className="text-center py-6 px-6 font-semibold">Improvement</th>
                   </tr>
                 </thead>

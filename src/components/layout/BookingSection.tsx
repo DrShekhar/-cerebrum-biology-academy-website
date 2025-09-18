@@ -15,51 +15,49 @@ export function BookingSection() {
   const features = [
     {
       icon: Calendar,
-      title: 'Free Cerebrum Demo Class',
-      description:
-        "Experience Cerebrum's teaching methodology with a complimentary biology session",
+      title: 'Free Demo Class',
+      description: 'Experience our teaching methodology with a complimentary biology session',
     },
     {
       icon: Shield,
-      title: 'Cerebrum Transparency',
-      description:
-        'Transparent pricing with no surprise charges. What you see is what you pay at Cerebrum',
+      title: 'Complete Transparency',
+      description: 'Transparent pricing with no surprise charges. What you see is what you pay',
     },
     {
       icon: Award,
-      title: 'Cerebrum Expert Faculty',
-      description: 'Learn from AIIMS alumni and experienced NEET Biology experts at Cerebrum',
+      title: 'Expert Faculty',
+      description: 'Learn from AIIMS alumni and experienced NEET Biology experts',
     },
     {
       icon: Users,
-      title: 'Cerebrum 94.2% Success Rate',
-      description: "Join 2,847 students who cracked NEET with Cerebrum's proven methods",
+      title: '94.2% Success Rate',
+      description: 'Join 2,847 students who cracked NEET with our proven methods',
     },
   ]
 
   const contactMethods = [
     {
       icon: Phone,
-      title: 'Call Cerebrum',
-      description: 'Speak directly with our Cerebrum counselors',
+      title: 'Call Us',
+      description: 'Speak directly with our expert counselors',
       action: 'tel:+918826444334',
       actionText: '+91 88264 44334',
       available: 'Mon-Sat: 9 AM - 8 PM',
     },
     {
       icon: MessageSquare,
-      title: 'Cerebrum WhatsApp',
-      description: 'Quick questions and instant Cerebrum support',
+      title: 'WhatsApp Support',
+      description: 'Quick questions and instant support',
       action: 'https://wa.me/918826444334',
-      actionText: 'Chat with Cerebrum',
+      actionText: 'Chat with Us',
       available: '24/7 Support',
     },
     {
       icon: MapPin,
-      title: 'Visit Cerebrum',
-      description: 'Meet our team at Cerebrum Biology Academy',
+      title: 'Visit Our Academy',
+      description: 'Meet our team at the academy',
       action: 'https://maps.google.com',
-      actionText: 'Get Directions to Cerebrum',
+      actionText: 'Get Directions',
       available: 'Delhi NCR Location',
     },
   ]
@@ -77,17 +75,16 @@ export function BookingSection() {
         >
           <div className="inline-flex items-center bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
             <Calendar className="w-4 h-4 mr-2" />
-            Start Your Cerebrum Journey Today
+            Start Your Journey Today
           </div>
 
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Ready to Begin Your <span className="text-blue-600">Cerebrum NEET Journey?</span>
+            Ready to Begin Your <span className="text-blue-600">NEET Journey?</span>
           </h2>
 
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Take the first step towards your medical career with Cerebrum Biology Academy. Book a
-            free demo class, request a callback, or visit our academy to learn more about our proven
-            programs.
+            Take the first step towards your medical career with us. Book a free demo class, request
+            a callback, or visit our academy to learn more about our proven programs.
           </p>
         </motion.div>
 
@@ -106,9 +103,7 @@ export function BookingSection() {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                Why Choose Cerebrum Biology Academy?
-              </h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Why Choose Our Academy?</h3>
 
               <div className="grid gap-4">
                 {features.map((feature, index) => (
@@ -182,15 +177,15 @@ export function BookingSection() {
               transition={{ duration: 0.6, delay: 0.6 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-xl font-bold mb-4">Join Cerebrum's Success Story</h3>
+              <h3 className="text-xl font-bold mb-4">Join Our Success Story</h3>
               <div className="grid grid-cols-2 gap-4">
                 <div className="text-center">
                   <div className="text-3xl font-bold mb-1">2,847+</div>
-                  <div className="text-sm opacity-90">Cerebrum Students</div>
+                  <div className="text-sm opacity-90">Students</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold mb-1">94.2%</div>
-                  <div className="text-sm opacity-90">Cerebrum Success Rate</div>
+                  <div className="text-sm opacity-90">Success Rate</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold mb-1">50+</div>

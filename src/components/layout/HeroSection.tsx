@@ -196,35 +196,62 @@ export function HeroSection() {
               )}
             </div>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button
-                variant={
-                  heroVariant?.id === 'outcome_focused' || heroVariant?.id === 'guarantee_focused'
-                    ? 'success_cta'
-                    : heroVariant?.id === 'urgency_social_proof'
-                      ? 'urgency_cta'
-                      : 'demo_cta'
-                }
-                size="xl"
-                onClick={handleBookDemo}
-                className="group mobile-cta touch-animation haptic-feedback ripple-effect min-h-[56px] px-8 py-4 rounded-2xl gpu-accelerated"
-                style={{ boxShadow: 'var(--shadow-premium)' }}
+            {/* Enhanced CTA Section with Urgency */}
+            <div className="space-y-4">
+              {/* Urgency Banner */}
+              <motion.div
+                className="inline-flex items-center bg-gradient-to-r from-red-50 to-orange-50 border border-red-200 rounded-full px-4 py-2 text-red-700 font-medium text-sm"
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ delay: 0.3, type: 'spring' }}
               >
-                <Calendar className="w-6 h-6 mr-3 group-hover:rotate-12 transition-transform" />
-                {heroVariant?.primaryCTA || 'Book Free Demo Class'}
-              </Button>
+                <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse mr-2"></div>
+                <span>⏰ Limited Seats: November Batch Filling Fast - Only 12 Spots Left!</span>
+              </motion.div>
 
-              <Button
-                variant="phone_cta"
-                size="xl"
-                className="group mobile-secondary-btn touch-animation haptic-feedback min-h-[56px] px-6 py-4 rounded-2xl gpu-accelerated"
-                onClick={handleCallNow}
-                style={{ boxShadow: 'var(--shadow-soft)' }}
-              >
-                <Phone className="w-6 h-6 mr-3 group-hover:scale-110 transition-transform" />
-                {heroVariant?.secondaryCTA || 'Call Now: +91 88264 44334'}
-              </Button>
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button
+                  variant={
+                    heroVariant?.id === 'outcome_focused' || heroVariant?.id === 'guarantee_focused'
+                      ? 'success_cta'
+                      : heroVariant?.id === 'urgency_social_proof'
+                        ? 'urgency_cta'
+                        : 'demo_cta'
+                  }
+                  size="xl"
+                  onClick={handleBookDemo}
+                  className="group mobile-cta touch-animation haptic-feedback ripple-effect min-h-[56px] px-8 py-4 rounded-2xl gpu-accelerated relative overflow-hidden"
+                  style={{ boxShadow: 'var(--shadow-premium)' }}
+                >
+                  <div className="relative z-10 flex items-center">
+                    <Calendar className="w-6 h-6 mr-3 group-hover:rotate-12 transition-transform" />
+                    {heroVariant?.primaryCTA || 'Book Free Demo Class'}
+                  </div>
+                  {/* Subtle animation overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                </Button>
+
+                <Button
+                  variant="phone_cta"
+                  size="xl"
+                  className="group mobile-secondary-btn touch-animation haptic-feedback min-h-[56px] px-6 py-4 rounded-2xl gpu-accelerated"
+                  onClick={handleCallNow}
+                  style={{ boxShadow: 'var(--shadow-soft)' }}
+                >
+                  <Phone className="w-6 h-6 mr-3 group-hover:scale-110 transition-transform" />
+                  {heroVariant?.secondaryCTA || 'Call Now: +91 88264 44334'}
+                </Button>
+              </div>
+
+              {/* Risk Reversal */}
+              <div className="text-center">
+                <p className="text-sm text-gray-600">
+                  💯 <span className="font-semibold text-green-600">100% Risk-Free</span> • No
+                  Payment Required for Demo •
+                  <span className="font-semibold text-blue-600">330+ Score Guarantee</span>
+                </p>
+              </div>
             </div>
 
             {/* Enhanced Trust Indicators */}
@@ -240,7 +267,7 @@ export function HeroSection() {
                   <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                   <span className="text-sm font-medium text-gray-700">
                     <span className="text-emerald-600 font-semibold">Rahul from Delhi</span> just
-                    enrolled in Cerebrum Class 12th Biology
+                    enrolled in our Class 12th Biology course
                   </span>
                   <div className="text-xs text-gray-500 bg-white/80 px-2 py-1 rounded-full">
                     2 min ago
@@ -252,7 +279,7 @@ export function HeroSection() {
               <div className="flex flex-wrap justify-center gap-3">
                 <div className="flex items-center bg-gradient-to-r from-emerald-50 to-emerald-100 text-emerald-700 px-5 py-3 rounded-full text-sm border border-emerald-200 shadow-sm backdrop-blur-sm">
                   <Trophy className="w-5 h-5 mr-2" />
-                  <span className="font-semibold">Cerebrum: 94.2% Success Rate</span>
+                  <span className="font-semibold">94.2% Success Rate</span>
                 </div>
                 <div className="flex items-center bg-gradient-to-r from-blue-50 to-blue-100 text-blue-700 px-5 py-3 rounded-full text-sm border border-blue-200 shadow-sm backdrop-blur-sm">
                   <Users className="w-5 h-5 mr-2" />
@@ -260,7 +287,7 @@ export function HeroSection() {
                 </div>
                 <div className="flex items-center bg-gradient-to-r from-purple-50 to-purple-100 text-purple-700 px-5 py-3 rounded-full text-sm border border-purple-200 shadow-sm backdrop-blur-sm">
                   <BookOpen className="w-5 h-5 mr-2" />
-                  <span className="font-semibold">247 Cerebrum AIIMS Selections</span>
+                  <span className="font-semibold">247 AIIMS Selections</span>
                 </div>
               </div>
 
