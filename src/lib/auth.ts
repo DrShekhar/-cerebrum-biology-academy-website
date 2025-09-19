@@ -3,6 +3,7 @@ import Credentials from 'next-auth/providers/credentials'
 import bcrypt from 'bcryptjs'
 import { z } from 'zod'
 import { prisma } from './prisma'
+import { logLogin, logFailedLogin, logAdminAccess } from './security/auditLogger'
 
 declare module 'next-auth' {
   interface User {
@@ -38,15 +39,15 @@ const ADMIN_CREDENTIALS = {
 }
 
 // Validate required admin environment variables
-// Temporarily disabled for deployment
-// if (!ADMIN_CREDENTIALS.email || !ADMIN_CREDENTIALS.passwordHash) {
-//   console.error(
-//     '❌ SECURITY ERROR: ADMIN_EMAIL and ADMIN_PASSWORD_HASH environment variables are required'
-//   )
-//   if (process.env.NODE_ENV === 'production') {
-//     throw new Error('Missing required admin credentials in production environment')
-//   }
-// }
+if (!ADMIN_CREDENTIALS.email || !ADMIN_CREDENTIALS.passwordHash) {
+  console.error(
+    '❌ SECURITY ERROR: ADMIN_EMAIL and ADMIN_PASSWORD_HASH environment variables are required'
+  )
+  if (process.env.NODE_ENV === 'production') {
+    throw new Error('Missing required admin credentials in production environment')
+  }
+  console.warn('⚠️  Running in development mode without proper admin credentials')
+}
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
   providers: [
@@ -166,10 +167,19 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   },
   events: {
     async signIn(message) {
-      console.log('User signed in:', message.user.email, 'Role:', message.user.role)
+      const user = message.user
+      console.log('User signed in:', user.email, 'Role:', user.role)
+
+      // Log successful login to audit system
+      if (user.email && user.role) {
+        logLogin(user.email, user.role, 'unknown', 'unknown') // IP and user agent will be captured in middleware
+      }
     },
     async signOut(message) {
-      console.log('User signed out:', message.session?.user?.email)
+      const userEmail = message.session?.user?.email
+      console.log('User signed out:', userEmail)
+
+      // Note: Logout events could be added to audit logger if needed
     },
   },
   debug: process.env.NODE_ENV === 'development',
@@ -206,15 +216,17 @@ export async function requireAdmin() {
 
 // Middleware for protecting admin routes
 export async function requireAdminAuth() {
-  // Temporarily disable admin auth for deployment
-  return { user: { role: 'admin', email: 'admin@cerebrumbiologyacademy.com' } }
+  try {
+    const session = await requireAdmin()
 
-  // try {
-  //   const session = await requireAdmin()
-  //   return session
-  // } catch (error) {
-  //   throw new Error('Admin authentication required')
-  // }
+    // Additional security: Log admin access attempts
+    console.log(`Admin access granted: ${session.user.email} at ${new Date().toISOString()}`)
+
+    return session
+  } catch (error) {
+    console.warn(`Admin authentication failed at ${new Date().toISOString()}:`, error)
+    throw new Error('Admin authentication required')
+  }
 }
 
 // Password hashing utilities
