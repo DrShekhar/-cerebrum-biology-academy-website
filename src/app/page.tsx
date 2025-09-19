@@ -2,6 +2,7 @@
 'use client'
 
 import { SophisticatedHero } from '@/components/layout/SophisticatedHero'
+import { EmotionalHeroSection } from '@/components/layout/EmotionalHeroSection'
 import { HarvardLevelContent } from '@/components/education/HarvardLevelContent'
 import { SophisticatedClaudeChat } from '@/components/ai/SophisticatedClaudeChat'
 import { EnhancedTouchInterface } from '@/components/mobile/EnhancedTouchInterface'
@@ -48,12 +49,22 @@ export default function SophisticatedHomePage() {
     ConversionTracker.trackChatInteraction()
   }
 
+  const handleDownloadPDF = () => {
+    ConversionTracker.trackDownload('success-stories-pdf')
+    // Create and download PDF (implement later)
+    alert('Success stories PDF download coming soon!')
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* 🎯 WORLD-CLASS HOMEPAGE - SILICON VALLEY SOPHISTICATION */}
 
-      {/* Sophisticated Hero Section - Harvard Professor + Silicon Valley Innovation */}
-      <SophisticatedHero onDemoBooking={handleDemoBooking} onCallNow={handleCallNow} />
+      {/* Emotional Hero Section - Targeting Failed NEET Students */}
+      <EmotionalHeroSection
+        onDemoBooking={handleDemoBooking}
+        onCallNow={handleCallNow}
+        onDownloadPDF={handleDownloadPDF}
+      />
 
       {/* Harvard-Level Biology Education Content */}
       <HarvardLevelContent />

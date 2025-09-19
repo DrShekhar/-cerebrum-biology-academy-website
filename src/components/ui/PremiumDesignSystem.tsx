@@ -327,6 +327,75 @@ export function PremiumTooltip({
   )
 }
 
+// Animated Counter Component
+interface AnimatedCounterProps {
+  value: number
+  prefix?: string
+  suffix?: string
+  duration?: number
+  className?: string
+}
+
+export function AnimatedCounter({
+  value,
+  prefix = '',
+  suffix = '',
+  duration = 2000,
+  className,
+}: AnimatedCounterProps) {
+  const [displayValue, setDisplayValue] = useState(0)
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+        }
+      },
+      { threshold: 0.3 }
+    )
+
+    const element = document.getElementById(`counter-${value}`)
+    if (element) observer.observe(element)
+
+    return () => observer.disconnect()
+  }, [value])
+
+  useEffect(() => {
+    if (!isVisible) return
+
+    let startTime: number
+    const startValue = 0
+    const endValue = value
+
+    const animate = (currentTime: number) => {
+      if (!startTime) startTime = currentTime
+      const progress = Math.min((currentTime - startTime) / duration, 1)
+
+      // Easing function for smooth animation
+      const easeOutCubic = 1 - Math.pow(1 - progress, 3)
+      const currentValue = startValue + (endValue - startValue) * easeOutCubic
+
+      setDisplayValue(Math.floor(currentValue))
+
+      if (progress < 1) {
+        requestAnimationFrame(animate)
+      }
+    }
+
+    requestAnimationFrame(animate)
+  }, [isVisible, value, duration])
+
+  return (
+    <span id={`counter-${value}`} className={className}>
+      {prefix}
+      {displayValue.toLocaleString()}
+      {suffix}
+    </span>
+  )
+}
+
 // Premium Progress Indicator
 interface PremiumProgressProps {
   value: number
