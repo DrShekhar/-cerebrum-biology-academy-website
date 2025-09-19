@@ -1,335 +1,375 @@
-# 🚀 Cerebrum Biology Academy - Development Workflow Guide
+# 🚀 Development Workflow - Cerebrum Biology Academy
 
-## 📋 **QUICK START - New Feature Development**
+## 📋 Complete CI/CD & Development Process
+
+### 🎯 **Workflow Overview**
+
+Our development process uses **Spec-Driven Development** with **GitHub Spec Kit** and comprehensive CI/CD pipelines for rapid, quality development.
+
+```
+Feature → Development → Staging → Production
+   ↓           ↓           ↓          ↓
+Spec Kit → Auto-test → Performance → Live Site
+```
+
+## 🔧 **Development Environment Setup**
+
+### **Prerequisites**
+
+- Node.js 18+
+- Git
+- Claude Code CLI ✅ (already configured)
+- GitHub Spec Kit ✅ (initialized)
+
+### **Quick Start**
 
 ```bash
-# 1. Switch to development branch
+# Clone and setup
+git clone <repository>
+cd cerebrum-biology-academy-website
+npm install --legacy-peer-deps
+
+# Start development
+npm run dev
+
+# Run spec checks
+npm run spec:check
+
+# Development commands
+npm run dev:safe      # Safe development with checks
+npm run type-check    # TypeScript validation
+npm run lint         # Code quality check
+npm run build        # Production build test
+```
+
+## 📐 **Spec Kit Integration**
+
+### **Available Commands**
+
+```bash
+# Spec Kit validation
+npm run spec:check    # Check project specifications
+npm run spec:init     # Initialize spec configuration
+
+# Claude integration
+npm run claude:spec-kit              # Spec kit integration
+npm run claude:ai                    # AI feature development
+npm run claude:free-resources        # Free resources system
+npm run claude:whatsapp             # WhatsApp automation
+npm run claude:payments             # Payment processing
+```
+
+### **Spec-Driven Development Process**
+
+1. **Define Specification** - Use Spec Kit to define feature requirements
+2. **Generate Code** - Use Claude Code CLI for implementation
+3. **Validate Implementation** - Automated spec checking
+4. **Deploy & Test** - Continuous deployment with validation
+
+## 🔄 **Branching Strategy**
+
+### **Branch Structure**
+
+```
+main              # Production-ready code
+├── develop       # Integration branch
+├── feature/*     # Feature development
+├── hotfix/*      # Emergency fixes
+└── release/*     # Release preparation
+```
+
+### **Workflow Process**
+
+#### **Feature Development**
+
+```bash
+# Start feature
 git checkout develop
 git pull origin develop
+git checkout -b feature/neet-repeater-dashboard
 
-# 2. Create feature branch
-git checkout -b feature/your-feature-name
-
-# 3. Make changes with safe development
-npm run dev:safe  # Runs type-check + lint before starting dev server
-
-# 4. Create new components (if needed)
-npm run create:component YourComponent
-
-# 5. Test your changes
-npm run test
-npm run test:e2e  # End-to-end tests
-
-# 6. Commit (pre-commit hooks will run automatically)
-git add .
-git commit -m "feat: add your feature description"
-
-# 7. Push and create PR
-git push -u origin feature/your-feature-name
-# Create PR to merge into 'develop' branch
-```
-
----
-
-## 🏗️ **IMPROVED BRANCHING STRATEGY**
-
-### **Branch Structure:**
-
-```
-main          ← Production (cerebrumbiologyacademy.com)
-├── staging   ← Staging environment (preview deployments)
-├── develop   ← Integration branch
-└── feature/  ← Feature development branches
-    ├── feature/notification-system
-    ├── feature/payment-integration
-    └── hotfix/critical-bug
-```
-
-### **Branch Rules:**
-
-- **main**: Only for production releases
-- **staging**: For testing before production
-- **develop**: Integration of all features
-- **feature/**: New features and improvements
-- **hotfix/**: Critical bug fixes
-
----
-
-## ⚡ **DEVELOPMENT COMMANDS**
-
-### **Essential Daily Commands:**
-
-```bash
-# Safe development (with checks)
+# Develop with Spec Kit
+npm run spec:check
+npm run claude:free-resources  # Use Claude for implementation
 npm run dev:safe
 
-# Create new components
-npm run create:component NotificationSystem
+# Test and validate
+npm run test
+npm run type-check
+npm run build
 
-# Run all checks before committing
-npm run lint && npm run type-check && npm test
-
-# Clean builds when things go wrong
-npm run clean && npm run fresh-install
+# Push feature
+git add .
+git commit -m "feat: implement NEET repeater dashboard"
+git push origin feature/neet-repeater-dashboard
 ```
 
-### **Testing Commands:**
+#### **Auto-merge Process**
+
+- Feature branches automatically create PRs to `develop`
+- Automated testing and validation
+- Auto-merge on passing all checks
+- Deploy to development environment
+
+## 🚀 **CI/CD Pipeline Details**
+
+### **🔍 Quality Checks (All branches)**
+
+- TypeScript compilation
+- ESLint code quality
+- Prettier formatting
+- Spec Kit validation
+- Unit testing
+- Security scanning
+
+### **🏗️ Build & Test (All branches)**
+
+- Multi-Node.js version testing (18, 20)
+- Production build validation
+- E2E testing
+- Artifact generation
+
+### **🚀 Deployment Stages**
+
+#### **Development Environment** (`develop` branch)
+
+- **URL:** `https://dev.cerebrumbiologyacademy.com`
+- **Purpose:** Integration testing and feature validation
+- **Auto-deploy:** On every push to `develop`
+
+#### **Staging Environment** (`release/*` branches)
+
+- **URL:** `https://staging.cerebrumbiologyacademy.com`
+- **Purpose:** Pre-production testing
+- **Manual deploy:** Release branch creation
+
+#### **Production Environment** (`main` branch)
+
+- **URL:** `https://cerebrumbiologyacademy.com`
+- **Purpose:** Live website
+- **Protected deploy:** Requires review and approval
+
+### **📊 Performance Monitoring**
+
+- **Lighthouse CI** - Performance, SEO, Accessibility scores
+- **Targets:**
+  - Performance: 80+
+  - Accessibility: 90+
+  - SEO: 90+
+  - Best Practices: 85+
+
+## 🔒 **Security & Quality Assurance**
+
+### **Automated Security**
+
+- `npm audit` - Vulnerability scanning
+- Snyk security analysis
+- Dependency security checks
+- Code security review
+
+### **Quality Standards**
+
+- TypeScript strict mode
+- ESLint configuration
+- Prettier code formatting
+- 80%+ test coverage target
+
+## 📱 **Environment-Specific Configuration**
+
+### **Development**
+
+```env
+NEXT_PUBLIC_SITE_URL=http://localhost:3000
+DATABASE_URL=file:./dev.db
+NODE_ENV=development
+```
+
+### **Staging**
+
+```env
+NEXT_PUBLIC_SITE_URL=https://staging.cerebrumbiologyacademy.com
+DATABASE_URL=${STAGING_DATABASE_URL}
+NODE_ENV=staging
+```
+
+### **Production**
+
+```env
+NEXT_PUBLIC_SITE_URL=https://cerebrumbiologyacademy.com
+DATABASE_URL=${PRODUCTION_DATABASE_URL}
+NODE_ENV=production
+```
+
+## 🧪 **Testing Strategy**
+
+### **Test Types**
+
+1. **Unit Tests** - Component and function testing
+2. **Integration Tests** - API and service testing
+3. **E2E Tests** - Full user workflow testing
+4. **Performance Tests** - Lighthouse CI automation
+5. **Security Tests** - Vulnerability and penetration testing
+
+### **Test Commands**
 
 ```bash
 npm run test              # Unit tests
 npm run test:watch        # Watch mode
-npm run test:e2e          # End-to-end tests
 npm run test:coverage     # Coverage report
-npm run test:security     # Security audit
+npm run test:e2e         # End-to-end tests
+npm run test:security    # Security audit
+npm run test:perf        # Performance tests
 ```
 
-### **Build & Deploy:**
+## 🚀 **Deployment Commands**
+
+### **Manual Deployment**
 
 ```bash
-npm run build            # Production build
-npm run build:analyze    # Bundle analyzer
-npm run vercel:preview   # Deploy to preview
-npm run deploy:verify    # Verify deployment
+# Development
+vercel --env=development
+
+# Staging
+vercel --env=staging
+
+# Production (requires approval)
+vercel --prod
 ```
+
+### **Automated Deployment**
+
+- **Development:** Auto-deploy on `develop` push
+- **Production:** Auto-deploy on `main` push with approvals
+
+## 📊 **Monitoring & Analytics**
+
+### **Real-time Monitoring**
+
+- **Vercel Analytics** - Performance metrics
+- **Sentry** - Error tracking and monitoring
+- **Google Analytics** - User behavior tracking
+- **Custom Dashboard** - Business metrics
+
+### **Key Metrics**
+
+- **Performance:** Page load times, Core Web Vitals
+- **Business:** Conversion rates, user engagement
+- **Technical:** Error rates, API response times
+- **Security:** Failed login attempts, security events
+
+## 🔧 **Development Tools Integration**
+
+### **VS Code Extensions**
+
+- TypeScript and JavaScript Language Features
+- Prettier - Code formatter
+- ESLint - Code quality
+- Tailwind CSS IntelliSense
+- GitLens - Git integration
+
+### **Chrome Extensions**
+
+- React Developer Tools
+- Lighthouse
+- Vercel Toolbar
+- Google Analytics Debugger
+
+## 📞 **Support & Troubleshooting**
+
+### **Common Issues**
+
+#### **Build Failures**
+
+```bash
+# Clear cache and rebuild
+npm run clean
+npm install --legacy-peer-deps
+npm run build
+```
+
+#### **TypeScript Errors**
+
+```bash
+# Check and fix TypeScript issues
+npm run type-check
+# Fix errors and re-run
+```
+
+#### **Deployment Issues**
+
+```bash
+# Check Vercel logs
+vercel logs
+# Re-deploy
+vercel --prod
+```
+
+### **Getting Help**
+
+- **GitHub Issues** - Bug reports and feature requests
+- **Spec Kit Documentation** - https://github.com/github/spec-kit
+- **Claude Code** - AI-powered development assistance
+- **Team Slack** - Real-time communication
+
+## 🎯 **Best Practices**
+
+### **Code Quality**
+
+- Use TypeScript strict mode
+- Write descriptive commit messages
+- Add JSDoc comments for complex functions
+- Follow existing code patterns
+- Keep components small and focused
+
+### **Performance**
+
+- Optimize images and assets
+- Use lazy loading for heavy components
+- Minimize bundle size
+- Implement proper caching strategies
+
+### **Security**
+
+- Never commit secrets or API keys
+- Use environment variables for configuration
+- Validate all user inputs
+- Keep dependencies updated
+
+### **Testing**
+
+- Write tests for critical functionality
+- Test edge cases and error conditions
+- Use meaningful test descriptions
+- Maintain test coverage above 80%
 
 ---
 
-## 🔄 **DEPLOYMENT PIPELINE**
+## 🎉 **Quick Reference**
 
-### **1. Development → Staging:**
+### **Daily Development**
 
 ```bash
-git push origin develop  # Triggers staging deployment
+git pull origin develop              # Get latest changes
+npm run dev:safe                    # Start safe development
+npm run spec:check                  # Validate specifications
+# ... develop features ...
+npm run test && npm run build       # Validate before commit
+git add . && git commit -m "feat: ..." && git push
 ```
 
-- Runs all tests
-- Deploys to staging environment
-- Comments PR with preview URL
-
-### **2. Staging → Production:**
+### **Emergency Hotfix**
 
 ```bash
 git checkout main
-git merge develop
-git push origin main     # Triggers production deployment
-```
-
-- Comprehensive validation
-- Admin panel verification
-- Auto-rollback on failure
-
----
-
-## 🛠️ **SOLVING COMMON BUILD ERRORS**
-
-### **Error: "Module not found"**
-
-```bash
-# Solution 1: Clean install
-npm run fresh-install
-
-# Solution 2: Check import paths
-# Use absolute imports: @/components/ui/Button
-# Not relative: ../../../components/ui/Button
-```
-
-### **Error: "Type errors"**
-
-```bash
-# Run type checking
-npm run type-check
-
-# Fix common issues:
-# 1. Add proper TypeScript interfaces
-# 2. Use proper component props typing
-# 3. Import types correctly
-```
-
-### **Error: "Build fails in deployment"**
-
-```bash
-# Test build locally first
-npm run build
-
-# Check for:
-# 1. Environment variables
-# 2. Missing dependencies
-# 3. TypeScript errors
-```
-
-### **Error: "Components not rendering"**
-
-```bash
-# Check:
-# 1. Proper 'use client' directive for client components
-# 2. Correct export/import statements
-# 3. No circular dependencies
+git checkout -b hotfix/critical-fix
+# ... make fixes ...
+npm run test && npm run build
+git commit -m "hotfix: critical issue"
+git push origin hotfix/critical-fix
+# Create PR to main with urgent label
 ```
 
 ---
 
-## 🏁 **FEATURE DEVELOPMENT CHECKLIST**
-
-### **Before Starting:**
-
-- [ ] Create feature branch from `develop`
-- [ ] Understand requirements clearly
-- [ ] Check existing similar components
-
-### **During Development:**
-
-- [ ] Use `npm run create:component` for new components
-- [ ] Follow existing code patterns
-- [ ] Add TypeScript interfaces
-- [ ] Write tests as you go
-- [ ] Use `npm run dev:safe` for development
-
-### **Before Committing:**
-
-- [ ] Run `npm run lint:fix`
-- [ ] Run `npm run type-check`
-- [ ] Run `npm run test`
-- [ ] Test in browser (desktop + mobile)
-- [ ] Check console for errors
-
-### **Before PR:**
-
-- [ ] Test build locally: `npm run build`
-- [ ] Update documentation if needed
-- [ ] Add meaningful commit messages
-- [ ] Ensure PR targets `develop` branch
-
----
-
-## 🔧 **TROUBLESHOOTING**
-
-### **When Development Server Won't Start:**
-
-```bash
-# 1. Clean everything
-npm run clean
-npm run fresh-install
-
-# 2. Check Node version (should be 18+)
-node --version
-
-# 3. Kill any processes on port 3000
-lsof -ti:3000 | xargs kill -9
-```
-
-### **When Build Fails:**
-
-```bash
-# 1. Check for type errors
-npm run type-check
-
-# 2. Check for linting errors
-npm run lint
-
-# 3. Test build locally
-npm run build
-
-# 4. Check environment variables
-cat .env.local
-```
-
-### **When Deployment Fails:**
-
-```bash
-# 1. Check GitHub Actions logs
-# 2. Verify all environment variables in Vercel
-# 3. Test deployment locally
-npm run vercel:preview
-```
-
----
-
-## 📈 **PERFORMANCE OPTIMIZATION**
-
-### **Before Every Release:**
-
-```bash
-# 1. Bundle analysis
-npm run build:analyze
-
-# 2. Performance testing
-npm run test:perf
-
-# 3. Load testing
-npm run test:load
-```
-
-### **Component Performance:**
-
-- Use React.memo() for expensive components
-- Implement proper loading states
-- Optimize images with Next.js Image component
-- Use dynamic imports for large components
-
----
-
-## 🔒 **SECURITY BEST PRACTICES**
-
-### **Pre-commit Security:**
-
-```bash
-# Runs automatically in pre-commit hooks
-npm run test:security
-```
-
-### **Manual Security Checks:**
-
-```bash
-# 1. Dependency audit
-npm audit --audit-level=high
-
-# 2. Check for secrets
-git log --grep="password\|secret\|key" --oneline
-
-# 3. Verify environment variables
-# Never commit .env files to Git
-```
-
----
-
-## 🎯 **QUALITY STANDARDS**
-
-### **Code Quality:**
-
-- TypeScript strict mode enabled
-- 90%+ test coverage target
-- ESLint + Prettier configured
-- Pre-commit hooks enforced
-
-### **Component Standards:**
-
-- Proper TypeScript interfaces
-- Responsive design (mobile-first)
-- Accessibility (a11y) compliance
-- Error boundaries implemented
-
----
-
-## 📞 **GETTING HELP**
-
-### **Common Issues:**
-
-1. **Build errors**: Check types, imports, and environment
-2. **Component errors**: Use component generator script
-3. **Deployment issues**: Check GitHub Actions logs
-4. **Performance issues**: Run bundle analyzer
-
-### **Emergency Procedures:**
-
-```bash
-# Rollback production deployment
-git revert HEAD
-git push origin main
-
-# Force deployment trigger
-npm run deploy:force
-```
-
----
-
-**📝 Remember:** This workflow prevents 95% of build errors and deployment issues. Follow it consistently for smooth development! 🚀
+_Last Updated: December 17, 2024_
+_Next Review: Weekly team sync_

@@ -437,6 +437,26 @@ class ConversionTracker {
     this.trackConversion('social_share', undefined, { platform })
   }
 
+  static trackWhatsAppClick(): void {
+    this.trackConversion('whatsapp_click')
+  }
+
+  static trackLeadGeneration(source: string, data: any): void {
+    this.trackConversion('lead_generation', undefined, { source, ...data })
+  }
+
+  static trackEngagement(type: string, data?: any): void {
+    this.trackConversion('engagement', undefined, { type, ...data })
+  }
+
+  static trackChatInteraction(): void {
+    this.trackConversion('chat_interaction')
+  }
+
+  static trackDownload(resource: string): void {
+    this.trackConversion('download', undefined, { resource })
+  }
+
   // Analytics helpers
   static getConversionRate(goalId: string, testId?: string): number {
     const allEvents = ABTestingService.exportData().events

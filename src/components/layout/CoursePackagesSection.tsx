@@ -6,7 +6,6 @@ import { PremiumButton, PremiumCard, AnimatedCounter } from '@/components/ui/Pre
 import {
   CheckCircleIcon,
   StarIcon,
-  CrownIcon,
   SparklesIcon,
   AcademicCapIcon,
   TrophyIcon,
@@ -22,7 +21,7 @@ import {
   ChevronLeftIcon,
   ChevronRightIcon,
 } from '@heroicons/react/24/outline'
-import { StarIcon as StarSolid } from '@heroicons/react/24/solid'
+import { StarIcon as StarSolid, TrophyIcon as CrownIcon } from '@heroicons/react/24/solid'
 
 interface CoursePackagesSectionProps {
   onBookDemo?: (packageName: string) => void
