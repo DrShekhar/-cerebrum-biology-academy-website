@@ -140,6 +140,72 @@ git:
     - "build"
     - "security-audit"
 
+# Development Workflow Constitution
+workflow:
+  mandatory_process:
+    - "TodoWrite task breakdown"
+    - "Quality gates validation"
+    - "CI/CD pipeline execution"
+    - "Post-deployment verification"
+    - "Documentation updates"
+
+  task_lifecycle:
+    phases:
+      - name: "planning"
+        requirements:
+          - "TodoWrite list created"
+          - "Requirements analyzed"
+          - "Implementation planned"
+
+      - name: "development"
+        requirements:
+          - "Code written following standards"
+          - "Tests added/updated"
+          - "Documentation updated"
+
+      - name: "quality_assurance"
+        requirements:
+          - "Lint checks passing"
+          - "TypeScript compilation clean"
+          - "Tests passing (80% coverage)"
+          - "Build successful"
+
+      - name: "deployment"
+        requirements:
+          - "CI/CD pipeline passing"
+          - "Environment variables configured"
+          - "Security audit clean"
+
+      - name: "verification"
+        requirements:
+          - "Live site verified"
+          - "Functionality tested"
+          - "Performance checked"
+          - "TodoWrite status updated"
+
+  constitutional_rules:
+    - "Never start tasks without TodoWrite breakdown"
+    - "All commits must pass quality gates"
+    - "Environment variables must use automation scripts"
+    - "Documentation is mandatory for all changes"
+    - "Performance standards are non-negotiable"
+
+  emergency_procedures:
+    hotfix:
+      allowed_for: "critical production issues only"
+      process:
+        - "Create hotfix branch"
+        - "Make minimal fix"
+        - "Run quality gates"
+        - "Deploy with immediate verification"
+
+    rollback:
+      triggers: "deployment failure or critical bugs"
+      process:
+        - "Immediate rollback via Vercel"
+        - "Root cause analysis"
+        - "Fix and proper redeploy"
+
 # Dependencies specifications
 dependencies:
   package_manager: "npm"
