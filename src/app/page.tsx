@@ -3,6 +3,7 @@
 
 import { SophisticatedHero } from '@/components/layout/SophisticatedHero'
 import { EmotionalHeroSection } from '@/components/layout/EmotionalHeroSection'
+import { CoursePackagesSection } from '@/components/layout/CoursePackagesSection'
 import { HarvardLevelContent } from '@/components/education/HarvardLevelContent'
 import { SophisticatedClaudeChat } from '@/components/ai/SophisticatedClaudeChat'
 import { EnhancedTouchInterface } from '@/components/mobile/EnhancedTouchInterface'
@@ -55,16 +56,29 @@ export default function SophisticatedHomePage() {
     alert('Success stories PDF download coming soon!')
   }
 
+  const handleBookDemo = (packageName?: string) => {
+    ConversionTracker.trackDemoBooking()
+    if (packageName) {
+      // Track which package demo was booked
+      console.log(`Demo booked for package: ${packageName}`)
+    }
+    // Navigate to demo booking with package pre-selected
+    window.location.href = '/demo'
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* 🎯 WORLD-CLASS HOMEPAGE - SILICON VALLEY SOPHISTICATION */}
 
       {/* Emotional Hero Section - Targeting Failed NEET Students */}
       <EmotionalHeroSection
-        onDemoBooking={handleDemoBooking}
+        onDemoBooking={() => handleBookDemo()}
         onCallNow={handleCallNow}
         onDownloadPDF={handleDownloadPDF}
       />
+
+      {/* Course Packages Section - Specialized for Failed NEET Students */}
+      <CoursePackagesSection onBookDemo={handleBookDemo} />
 
       {/* Harvard-Level Biology Education Content */}
       <HarvardLevelContent />
