@@ -44,7 +44,10 @@
     "claude:free-resources": "node scripts/claude-prompt-agent.js free-resources-system",
     "claude:spec-kit": "node scripts/claude-prompt-agent.js spec-kit-integration",
     "spec:check": "export PATH=\"/Users/drshekhar/.local/bin:$PATH\" && uvx --from git+https://github.com/github/spec-kit.git specify check",
-    "spec:init": "export PATH=\"/Users/drshekhar/.local/bin:$PATH\" && uvx --from git+https://github.com/github/spec-kit.git specify init"
+    "spec:init": "export PATH=\"/Users/drshekhar/.local/bin:$PATH\" && uvx --from git+https://github.com/github/spec-kit.git specify init",
+    "whatsapp:setup": "node scripts/setup-whatsapp-api.js",
+    "whatsapp:test": "node scripts/test-whatsapp-automation.js",
+    "test:whatsapp": "npm run whatsapp:test"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.63.0",
