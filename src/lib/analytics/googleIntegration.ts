@@ -74,7 +74,7 @@ export class GoogleIntegration {
 
   constructor() {
     this.config = {
-      measurementId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-XXXXXXXXXX',
+      measurementId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-DISABLED-DEV-MODE',
       apiSecret: process.env.GA_API_SECRET || '',
       conversionIds: {
         demoBooking: 'AW-DEMO_BOOKING',

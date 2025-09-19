@@ -108,12 +108,16 @@ export function DemoBookingModal({
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95 }}
             onClick={(e) => e.stopPropagation()}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="demo-modal-title"
           >
             <button
               onClick={handleClose}
               className="absolute top-4 right-4 p-2 hover:bg-gray-100 rounded-full transition-colors"
+              aria-label="Close demo booking modal"
             >
-              <X className="w-5 h-5" />
+              <X className="w-5 h-5" aria-hidden="true" />
             </button>
 
             {!isSubmitted ? (
@@ -122,11 +126,18 @@ export function DemoBookingModal({
                   <div className="w-16 h-16 mx-auto bg-blue-100 rounded-full flex items-center justify-center mb-4">
                     <Calendar className="w-8 h-8 text-blue-600" />
                   </div>
-                  <h2 className="text-2xl font-bold text-gray-900 mb-2">Book Free Demo Class</h2>
+                  <h2 className="text-2xl font-bold text-gray-900 mb-2" id="demo-modal-title">
+                    Book Free Demo Class
+                  </h2>
                   <p className="text-gray-600">{courseTitle}</p>
                 </div>
 
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form
+                  onSubmit={handleSubmit}
+                  className="space-y-6"
+                  role="form"
+                  aria-labelledby="demo-modal-title"
+                >
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
                       <User className="w-4 h-4 inline mr-2" />
@@ -139,7 +150,12 @@ export function DemoBookingModal({
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
                       required
+                      aria-label="Student name"
+                      aria-describedby="studentName-desc"
                     />
+                    <div id="studentName-desc" className="sr-only">
+                      Enter the student's full name for demo booking
+                    </div>
                   </div>
 
                   <div>
@@ -154,7 +170,12 @@ export function DemoBookingModal({
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
                       required
+                      aria-label="Email address"
+                      aria-describedby="email-desc"
                     />
+                    <div id="email-desc" className="sr-only">
+                      Enter your email address for demo booking confirmation
+                    </div>
                   </div>
 
                   <div>
@@ -169,7 +190,12 @@ export function DemoBookingModal({
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
                       required
+                      aria-label="Phone number"
+                      aria-describedby="phone-desc"
                     />
+                    <div id="phone-desc" className="sr-only">
+                      Enter your phone number for demo booking coordination
+                    </div>
                   </div>
 
                   <div className="grid grid-cols-2 gap-4">
@@ -186,7 +212,12 @@ export function DemoBookingModal({
                         min={new Date().toISOString().split('T')[0]}
                         className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
                         required
+                        aria-label="Preferred date for demo class"
+                        aria-describedby="date-desc"
                       />
+                      <div id="date-desc" className="sr-only">
+                        Select your preferred date for the demo class
+                      </div>
                     </div>
 
                     <div>
@@ -200,6 +231,8 @@ export function DemoBookingModal({
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
                         required
+                        aria-label="Preferred time for demo class"
+                        aria-describedby="time-desc"
                       >
                         <option value="">Select time</option>
                         <option value="10:00 AM">10:00 AM</option>
@@ -210,6 +243,9 @@ export function DemoBookingModal({
                         <option value="5:00 PM">5:00 PM</option>
                         <option value="6:00 PM">6:00 PM</option>
                       </select>
+                      <div id="time-desc" className="sr-only">
+                        Select your preferred time slot for the demo class
+                      </div>
                     </div>
                   </div>
 
@@ -225,7 +261,13 @@ export function DemoBookingModal({
                       rows={3}
                       className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-none"
                       placeholder="Any specific topics you'd like to cover in the demo?"
+                      aria-label="Optional message for demo booking"
+                      aria-describedby="message-desc"
                     />
+                    <div id="message-desc" className="sr-only">
+                      Optionally provide any specific topics or questions you'd like covered in the
+                      demo class
+                    </div>
                   </div>
 
                   <Button

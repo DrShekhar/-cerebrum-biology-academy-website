@@ -49,7 +49,13 @@ interface RegisterCredentials {
 }
 
 export function useAuth() {
-  const sessionData = useSession()
+  // Configure useSession to prevent aggressive polling
+  const sessionData = useSession({
+    required: false,
+    onUnauthenticated() {
+      // Do nothing - don't redirect, just handle gracefully
+    },
+  })
   const session = sessionData?.data
   const status = sessionData?.status || 'loading'
   const [isSubmitting, setIsSubmitting] = useState(false)

@@ -87,7 +87,7 @@ export default auth((req) => {
   }
 
   return response
-}
+})
 
 export const config = {
   matcher: [

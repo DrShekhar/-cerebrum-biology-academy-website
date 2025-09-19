@@ -9,6 +9,14 @@ const nextConfig: NextConfig = {
     scrollRestoration: true,
   },
 
+  // Turbopack configuration
+  turbopack: {
+    resolveAlias: {
+      // Use lighter alternatives where possible
+      'lodash': 'lodash-es',
+    },
+  },
+
   // Skip linting during build
   eslint: {
     ignoreDuringBuilds: true,
@@ -54,8 +62,13 @@ const nextConfig: NextConfig = {
   // Optimized output for better performance
   output: 'standalone',
 
-  // Bundle analyzer for optimization
+  // Bundle analyzer for optimization (only when not using Turbopack)
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+    // Skip webpack configuration when using Turbopack in development
+    if (dev && process.env.NODE_ENV !== 'production') {
+      return config
+    }
+
     // Optimize bundle for mobile devices
     if (!dev && !isServer) {
       config.optimization.splitChunks = {
@@ -100,7 +113,8 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
-        source: '/(.*)',
+        // Apply headers to all routes except error pages
+        source: '/((?!_next|api|not-found).*)',
         headers: [
           // Security headers
           {
@@ -115,10 +129,10 @@ const nextConfig: NextConfig = {
             key: 'X-XSS-Protection',
             value: '1; mode=block',
           },
-          // Performance headers for Indian mobile networks
+          // Performance headers for Indian mobile networks - but not for error pages
           {
             key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
+            value: 'no-store, must-revalidate',
           },
           // Enable compression
           {

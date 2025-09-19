@@ -41,7 +41,13 @@ export function AdminLayout({ children }: AdminLayoutProps) {
   const [userMenuOpen, setUserMenuOpen] = useState(false)
   const pathname = usePathname()
   const router = useRouter()
-  const { data: session, status } = useSession()
+  const { data: session, status } = useSession({
+    required: false,
+    onUnauthenticated() {
+      // Redirect to login for admin pages
+      router.push('/admin/login')
+    },
+  })
 
   // Show loading state while session is loading
   if (status === 'loading') {

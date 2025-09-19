@@ -12,9 +12,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const area = getAreaBySlug(resolvedParams.localSlug)
 
   if (!area) {
-    return {
-      title: 'Page Not Found',
-    }
+    // Don't generate metadata for non-existent pages
+    // This allows the notFound() function to work properly
+    notFound()
   }
 
   return {

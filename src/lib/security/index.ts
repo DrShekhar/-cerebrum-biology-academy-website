@@ -175,7 +175,7 @@ export function validateSecurityHeaders(request: NextRequest): {
   if (request.method !== 'GET' && origin) {
     const allowedOrigins = [
       'http://localhost:3000',
-      'http://localhost:3001',
+      'http://localhost:3004',
       'https://cerebrumbiologyacademy.com',
       'https://www.cerebrumbiologyacademy.com',
     ]
