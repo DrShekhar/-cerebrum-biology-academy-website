@@ -19,14 +19,26 @@ export class IndianMobileOptimizer {
   private deviceInfo: DeviceInfo | null = null
   private isLowEndDevice = false
   private isSlowNetwork = false
+  private _isInitialized = false
 
   constructor() {
+    if (typeof window !== 'undefined') {
+      this.initialize()
+    }
+  }
+
+  public initialize() {
+    if (this._isInitialized) return
+
     this.detectNetworkCapabilities()
     this.detectDeviceCapabilities()
     this.applyOptimizations()
+    this._isInitialized = true
   }
 
   private detectNetworkCapabilities() {
+    if (typeof window === 'undefined' || typeof navigator === 'undefined') return
+
     if ('connection' in navigator) {
       const connection = (navigator as any).connection
       this.networkInfo = {
@@ -52,6 +64,8 @@ export class IndianMobileOptimizer {
   }
 
   private detectDeviceCapabilities() {
+    if (typeof window === 'undefined' || typeof navigator === 'undefined') return
+
     // Detect low-end devices (common in India)
     this.deviceInfo = {
       ram: (navigator as any).deviceMemory || 4,
@@ -114,6 +128,8 @@ export class IndianMobileOptimizer {
   }
 
   private applyOptimizations() {
+    if (typeof window === 'undefined' || typeof document === 'undefined') return
+
     // Apply CSS optimizations
     this.applyCSSOptimizations()
 
@@ -125,6 +141,8 @@ export class IndianMobileOptimizer {
   }
 
   private applyCSSOptimizations() {
+    if (typeof document === 'undefined') return
+
     const style = document.createElement('style')
     style.id = 'indian-mobile-optimizations'
 
@@ -233,6 +251,8 @@ export class IndianMobileOptimizer {
   }
 
   private addResourceHints() {
+    if (typeof document === 'undefined') return
+
     const hints = [
       // Indian CDN endpoints
       { rel: 'dns-prefetch', href: 'https://cdn.jsdelivr.net' },
@@ -254,6 +274,8 @@ export class IndianMobileOptimizer {
   }
 
   private setupLazyLoading() {
+    if (typeof window === 'undefined' || typeof document === 'undefined') return
+
     const threshold = this.getLazyLoadingThreshold()
 
     const observer = new IntersectionObserver(
@@ -292,6 +314,8 @@ export class IndianMobileOptimizer {
   }
 
   private optimizeTouchInteractions() {
+    if (typeof document === 'undefined') return
+
     // Add touch event optimizations
     const style = document.createElement('style')
     style.textContent = `
@@ -326,6 +350,8 @@ export class IndianMobileOptimizer {
 
   // Performance monitoring
   measurePerformance() {
+    if (typeof window === 'undefined' || !('performance' in window)) return
+
     if ('performance' in window) {
       const navigation = performance.getEntriesByType(
         'navigation'
@@ -381,6 +407,9 @@ export class IndianMobileOptimizer {
   isOptimizedDevice() {
     return this.isLowEndDevice || this.isSlowNetwork
   }
+  get isInitialized() {
+    return this._isInitialized
+  }
 }
 
 // Singleton instance
@@ -388,6 +417,23 @@ export const indianMobileOptimizer = new IndianMobileOptimizer()
 
 // React hook for using in components
 export function useIndianMobileOptimizations() {
+  // Server-side safe defaults
+  if (typeof window === 'undefined') {
+    return {
+      isSlowNetwork: false,
+      getOptimizedImageSrc: (src: string, width: number, height: number) => src,
+      shouldReduceAnimations: false,
+      getLazyLoadingThreshold: () => '100px',
+      networkInfo: null,
+      deviceInfo: null,
+    }
+  }
+
+  // Initialize client-side if not already done
+  if (!indianMobileOptimizer.isInitialized) {
+    indianMobileOptimizer.initialize()
+  }
+
   return {
     isSlowNetwork: indianMobileOptimizer.isOptimizedDevice(),
     getOptimizedImageSrc: indianMobileOptimizer.getOptimizedImageSrc.bind(indianMobileOptimizer),
