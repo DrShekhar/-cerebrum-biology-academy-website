@@ -1,470 +1,452 @@
-// Cerebrum Biology Academy Service Worker
-// Provides offline functionality, caching, and background sync for NEET students
+// Service Worker for Cerebrum Biology Academy
+// Optimized for Indian mobile networks and offline learning
 
-const CACHE_NAME = 'cerebrum-biology-v1.2.0'
-const STATIC_CACHE = 'cerebrum-static-v1.2.0'
-const DYNAMIC_CACHE = 'cerebrum-dynamic-v1.2.0'
-const IMAGE_CACHE = 'cerebrum-images-v1.2.0'
+const CACHE_NAME = 'cerebrum-biology-v1';
+const OFFLINE_URL = '/offline';
 
 // Critical resources to cache immediately
-const STATIC_ASSETS = [
+const CRITICAL_RESOURCES = [
   '/',
   '/offline',
-  '/manifest.json',
-  '/icons/icon-192x192.png',
-  '/icons/icon-512x512.png',
-  // Core CSS and JS will be added dynamically
-]
-
-// Routes to cache for offline access
-const CACHE_ROUTES = [
-  '/',
   '/courses',
-  '/mock-tests',
-  '/study-materials',
-  '/video-lectures',
-  '/faculty',
-  '/testimonials',
-  '/contact',
-  '/class-11',
-  '/class-12',
-  '/dropper'
-]
+  '/claudechat',
+  '/_next/static/css/app.css',
+  '/_next/static/js/app.js',
+];
 
-// Routes that should always be fetched from network (dynamic content)
-const NETWORK_FIRST_ROUTES = [
-  '/api/',
-  '/admin/',
-  '/auth/',
-  '/enrollments',
-  '/analytics'
-]
+// Additional resources to cache on demand
+const CACHE_STRATEGIES = {
+  // Static assets - Cache First
+  STATIC: [
+    /\/_next\/static\//,
+    /\.(?:js|css|woff2?|png|jpg|jpeg|gif|svg|ico)$/,
+  ],
 
-// Image extensions to cache
-const IMAGE_EXTENSIONS = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg', '.ico']
+  // API routes - Network First
+  API: [
+    /\/api\//,
+  ],
 
-self.addEventListener('install', event => {
-  console.log('[SW] Installing service worker...')
+  // Pages - Stale While Revalidate
+  PAGES: [
+    /^\/(?!api|_next|static)/,
+  ],
+};
+
+// Network-aware caching durations (in milliseconds)
+const CACHE_DURATIONS = {
+  FAST_NETWORK: 24 * 60 * 60 * 1000, // 24 hours
+  SLOW_NETWORK: 7 * 24 * 60 * 60 * 1000, // 7 days
+  OFFLINE_FALLBACK: 30 * 24 * 60 * 60 * 1000, // 30 days
+};
+
+// Detect network quality
+function getNetworkQuality() {
+  if ('connection' in navigator) {
+    const connection = navigator.connection;
+    const effectiveType = connection.effectiveType;
+
+    if (effectiveType === 'slow-2g' || effectiveType === '2g') {
+      return 'slow';
+    } else if (effectiveType === '3g') {
+      return 'medium';
+    }
+  }
+  return 'fast';
+}
+
+// Get appropriate cache duration based on network
+function getCacheDuration() {
+  const networkQuality = getNetworkQuality();
+
+  switch (networkQuality) {
+    case 'slow':
+      return CACHE_DURATIONS.SLOW_NETWORK;
+    case 'medium':
+      return CACHE_DURATIONS.FAST_NETWORK;
+    default:
+      return CACHE_DURATIONS.FAST_NETWORK;
+  }
+}
+
+// Install event - cache critical resources
+self.addEventListener('install', (event) => {
+  console.log('🚀 Service Worker installing for Cerebrum Biology Academy');
 
   event.waitUntil(
-    Promise.all([
-      // Cache static assets
-      caches.open(STATIC_CACHE).then(cache => {
-        console.log('[SW] Caching static assets')
-        return cache.addAll(STATIC_ASSETS)
-      }),
+    caches.open(CACHE_NAME)
+      .then((cache) => {
+        console.log('📦 Caching critical resources');
+        return cache.addAll(CRITICAL_RESOURCES);
+      })
+      .then(() => {
+        // Skip waiting to activate immediately
+        return self.skipWaiting();
+      })
+      .catch((error) => {
+        console.error('❌ Failed to cache critical resources:', error);
+      })
+  );
+});
 
-      // Skip waiting to activate immediately
-      self.skipWaiting()
-    ])
-  )
-})
-
-self.addEventListener('activate', event => {
-  console.log('[SW] Activating service worker...')
+// Activate event - clean up old caches
+self.addEventListener('activate', (event) => {
+  console.log('✅ Service Worker activated');
 
   event.waitUntil(
-    Promise.all([
-      // Clean up old caches
-      caches.keys().then(cacheNames => {
-        return Promise.all(
-          cacheNames.map(cacheName => {
-            if (cacheName !== STATIC_CACHE &&
-                cacheName !== DYNAMIC_CACHE &&
-                cacheName !== IMAGE_CACHE &&
-                cacheName !== CACHE_NAME) {
-              console.log('[SW] Deleting old cache:', cacheName)
-              return caches.delete(cacheName)
-            }
-          })
-        )
-      }),
-
-      // Take control of all clients
-      self.clients.claim()
-    ])
-  )
-})
-
-self.addEventListener('fetch', event => {
-  const { request } = event
-  const { url, method } = request
-
-  // Only handle GET requests
-  if (method !== 'GET') return
-
-  // Handle different types of requests
-  if (isImageRequest(url)) {
-    event.respondWith(handleImageRequest(request))
-  } else if (isNetworkFirstRoute(url)) {
-    event.respondWith(handleNetworkFirst(request))
-  } else if (isCacheableRoute(url)) {
-    event.respondWith(handleCacheFirst(request))
-  } else {
-    event.respondWith(handleStaleWhileRevalidate(request))
-  }
-})
-
-// Handle image requests with long-term caching
-async function handleImageRequest(request) {
-  try {
-    const cache = await caches.open(IMAGE_CACHE)
-    const cachedResponse = await cache.match(request)
-
-    if (cachedResponse) {
-      return cachedResponse
-    }
-
-    const networkResponse = await fetch(request)
-    if (networkResponse.ok) {
-      cache.put(request, networkResponse.clone())
-    }
-
-    return networkResponse
-  } catch (error) {
-    console.log('[SW] Image request failed:', error)
-    // Return a fallback image or placeholder
-    return new Response('', { status: 200, statusText: 'OK' })
-  }
-}
-
-// Handle API and dynamic routes (network first)
-async function handleNetworkFirst(request) {
-  try {
-    const networkResponse = await fetch(request)
-
-    // Cache successful responses for offline fallback
-    if (networkResponse.ok && !request.url.includes('/api/auth/')) {
-      const cache = await caches.open(DYNAMIC_CACHE)
-      cache.put(request, networkResponse.clone())
-    }
-
-    return networkResponse
-  } catch (error) {
-    console.log('[SW] Network first failed, trying cache:', error)
-    const cachedResponse = await caches.match(request)
-
-    if (cachedResponse) {
-      return cachedResponse
-    }
-
-    // Return offline page for navigation requests
-    if (request.mode === 'navigate') {
-      return caches.match('/offline')
-    }
-
-    return new Response('Offline', { status: 503, statusText: 'Service Unavailable' })
-  }
-}
-
-// Handle static content (cache first)
-async function handleCacheFirst(request) {
-  try {
-    const cache = await caches.open(STATIC_CACHE)
-    const cachedResponse = await cache.match(request)
-
-    if (cachedResponse) {
-      // Update cache in background
-      updateCacheInBackground(request, cache)
-      return cachedResponse
-    }
-
-    const networkResponse = await fetch(request)
-    if (networkResponse.ok) {
-      cache.put(request, networkResponse.clone())
-    }
-
-    return networkResponse
-  } catch (error) {
-    console.log('[SW] Cache first failed:', error)
-    return caches.match('/offline')
-  }
-}
-
-// Handle dynamic content (stale while revalidate)
-async function handleStaleWhileRevalidate(request) {
-  try {
-    const cache = await caches.open(DYNAMIC_CACHE)
-    const cachedResponse = await cache.match(request)
-
-    const networkResponsePromise = fetch(request).then(response => {
-      if (response.ok) {
-        cache.put(request, response.clone())
-      }
-      return response
-    }).catch(() => null)
-
-    return cachedResponse || await networkResponsePromise || await caches.match('/offline')
-  } catch (error) {
-    console.log('[SW] Stale while revalidate failed:', error)
-    return caches.match('/offline')
-  }
-}
-
-// Background cache update
-function updateCacheInBackground(request, cache) {
-  fetch(request).then(response => {
-    if (response.ok) {
-      cache.put(request, response)
-    }
-  }).catch(() => {
-    // Silent fail for background updates
-  })
-}
-
-// Utility functions
-function isImageRequest(url) {
-  return IMAGE_EXTENSIONS.some(ext => url.includes(ext))
-}
-
-function isNetworkFirstRoute(url) {
-  return NETWORK_FIRST_ROUTES.some(route => url.includes(route))
-}
-
-function isCacheableRoute(url) {
-  try {
-    const urlObj = new URL(url)
-    return CACHE_ROUTES.some(route => {
-      return urlObj.pathname === route || urlObj.pathname.startsWith(route + '/')
+    caches.keys().then((cacheNames) => {
+      return Promise.all(
+        cacheNames.map((cacheName) => {
+          if (cacheName !== CACHE_NAME) {
+            console.log('🗑️ Deleting old cache:', cacheName);
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    }).then(() => {
+      // Take control of all clients immediately
+      return self.clients.claim();
     })
-  } catch {
-    return false
+  );
+});
+
+// Fetch event - implement caching strategies
+self.addEventListener('fetch', (event) => {
+  const { request } = event;
+  const url = new URL(request.url);
+
+  // Skip non-GET requests
+  if (request.method !== 'GET') {
+    return;
+  }
+
+  // Skip chrome-extension requests
+  if (url.protocol === 'chrome-extension:') {
+    return;
+  }
+
+  // Determine caching strategy based on request
+  if (isStaticAsset(url)) {
+    event.respondWith(cacheFirstStrategy(request));
+  } else if (isAPIRequest(url)) {
+    event.respondWith(networkFirstStrategy(request));
+  } else if (isPageRequest(url)) {
+    event.respondWith(staleWhileRevalidateStrategy(request));
+  } else {
+    event.respondWith(networkOnlyStrategy(request));
+  }
+});
+
+// Helper functions to categorize requests
+function isStaticAsset(url) {
+  return CACHE_STRATEGIES.STATIC.some(pattern => pattern.test(url.pathname));
+}
+
+function isAPIRequest(url) {
+  return CACHE_STRATEGIES.API.some(pattern => pattern.test(url.pathname));
+}
+
+function isPageRequest(url) {
+  return CACHE_STRATEGIES.PAGES.some(pattern => pattern.test(url.pathname));
+}
+
+// Cache First Strategy - for static assets
+async function cacheFirstStrategy(request) {
+  try {
+    const cachedResponse = await caches.match(request);
+
+    if (cachedResponse) {
+      // Check if cache is still valid
+      const cacheTime = new Date(cachedResponse.headers.get('sw-cache-time') || 0).getTime();
+      const now = Date.now();
+      const cacheDuration = getCacheDuration();
+
+      if (now - cacheTime < cacheDuration) {
+        return cachedResponse;
+      }
+    }
+
+    // Fetch from network and update cache
+    const networkResponse = await fetch(request);
+
+    if (networkResponse.ok) {
+      const cache = await caches.open(CACHE_NAME);
+      const responseToCache = networkResponse.clone();
+
+      // Add timestamp to track cache age
+      const headers = new Headers(responseToCache.headers);
+      headers.set('sw-cache-time', new Date().toISOString());
+
+      const responseWithTimestamp = new Response(responseToCache.body, {
+        status: responseToCache.status,
+        statusText: responseToCache.statusText,
+        headers: headers,
+      });
+
+      await cache.put(request, responseWithTimestamp);
+    }
+
+    return networkResponse;
+  } catch (error) {
+    console.log('🌐 Network failed, serving from cache:', request.url);
+    const cachedResponse = await caches.match(request);
+
+    if (cachedResponse) {
+      return cachedResponse;
+    }
+
+    // Return offline fallback for pages
+    if (request.mode === 'navigate') {
+      return caches.match(OFFLINE_URL);
+    }
+
+    throw error;
   }
 }
 
-// Background sync for form submissions
-self.addEventListener('sync', event => {
-  console.log('[SW] Background sync triggered:', event.tag)
-
-  if (event.tag === 'contact-form-sync') {
-    event.waitUntil(syncContactForms())
-  } else if (event.tag === 'demo-booking-sync') {
-    event.waitUntil(syncDemoBookings())
-  } else if (event.tag === 'enrollment-sync') {
-    event.waitUntil(syncEnrollments())
-  }
-})
-
-// Sync contact form submissions
-async function syncContactForms() {
+// Network First Strategy - for API requests
+async function networkFirstStrategy(request) {
   try {
-    const formData = await getStoredData('contact-forms')
+    const networkResponse = await fetch(request);
 
-    for (const form of formData) {
-      try {
-        const response = await fetch('/api/contact', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(form.data)
-        })
+    // Cache successful API responses for offline access
+    if (networkResponse.ok) {
+      const cache = await caches.open(CACHE_NAME);
+      const responseToCache = networkResponse.clone();
 
-        if (response.ok) {
-          await removeStoredData('contact-forms', form.id)
-          console.log('[SW] Contact form synced successfully')
-        }
-      } catch (error) {
-        console.log('[SW] Failed to sync contact form:', error)
-      }
+      // Add timestamp for cache invalidation
+      const headers = new Headers(responseToCache.headers);
+      headers.set('sw-cache-time', new Date().toISOString());
+
+      const responseWithTimestamp = new Response(responseToCache.body, {
+        status: responseToCache.status,
+        statusText: responseToCache.statusText,
+        headers: headers,
+      });
+
+      await cache.put(request, responseWithTimestamp);
     }
+
+    return networkResponse;
   } catch (error) {
-    console.log('[SW] Contact form sync failed:', error)
+    console.log('📡 API network failed, checking cache:', request.url);
+
+    const cachedResponse = await caches.match(request);
+
+    if (cachedResponse) {
+      // Add offline indicator header
+      const headers = new Headers(cachedResponse.headers);
+      headers.set('x-served-from', 'cache');
+
+      return new Response(cachedResponse.body, {
+        status: cachedResponse.status,
+        statusText: cachedResponse.statusText,
+        headers: headers,
+      });
+    }
+
+    throw error;
   }
 }
 
-// Sync demo bookings
-async function syncDemoBookings() {
+// Stale While Revalidate Strategy - for pages
+async function staleWhileRevalidateStrategy(request) {
+  const cache = await caches.open(CACHE_NAME);
+  const cachedResponse = await cache.match(request);
+
+  // Fetch from network in background
+  const networkResponsePromise = fetch(request).then((networkResponse) => {
+    if (networkResponse.ok) {
+      const responseToCache = networkResponse.clone();
+
+      // Add timestamp
+      const headers = new Headers(responseToCache.headers);
+      headers.set('sw-cache-time', new Date().toISOString());
+
+      const responseWithTimestamp = new Response(responseToCache.body, {
+        status: responseToCache.status,
+        statusText: responseToCache.statusText,
+        headers: headers,
+      });
+
+      cache.put(request, responseWithTimestamp);
+    }
+    return networkResponse;
+  }).catch((error) => {
+    console.log('🌐 Network failed for page:', request.url);
+    return null;
+  });
+
+  // Return cached response immediately if available
+  if (cachedResponse) {
+    return cachedResponse;
+  }
+
+  // Otherwise wait for network
   try {
-    const bookingData = await getStoredData('demo-bookings')
+    const networkResponse = await networkResponsePromise;
+    if (networkResponse) {
+      return networkResponse;
+    }
+  } catch (error) {
+    // Network failed, no cache available
+  }
 
-    for (const booking of bookingData) {
-      try {
-        const response = await fetch('/api/demo/book', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(booking.data)
-        })
+  // Return offline page for navigation requests
+  if (request.mode === 'navigate') {
+    return caches.match(OFFLINE_URL);
+  }
 
-        if (response.ok) {
-          await removeStoredData('demo-bookings', booking.id)
-          console.log('[SW] Demo booking synced successfully')
+  // Throw error for other requests
+  throw new Error('Request failed and no cache available');
+}
+
+// Network Only Strategy - for uncacheable requests
+async function networkOnlyStrategy(request) {
+  return fetch(request);
+}
+
+// Background sync for offline actions
+self.addEventListener('sync', (event) => {
+  if (event.tag === 'background-sync') {
+    event.waitUntil(handleBackgroundSync());
+  }
+});
+
+async function handleBackgroundSync() {
+  console.log('🔄 Performing background sync');
+
+  // Sync offline form submissions, user progress, etc.
+  try {
+    // Get offline data from IndexedDB
+    const offlineData = await getOfflineData();
+
+    if (offlineData.length > 0) {
+      console.log(`📤 Syncing ${offlineData.length} offline items`);
+
+      for (const item of offlineData) {
+        try {
+          await syncOfflineItem(item);
+          await removeOfflineItem(item.id);
+        } catch (error) {
+          console.error('❌ Failed to sync item:', error);
         }
-      } catch (error) {
-        console.log('[SW] Failed to sync demo booking:', error)
       }
     }
   } catch (error) {
-    console.log('[SW] Demo booking sync failed:', error)
+    console.error('🔄 Background sync failed:', error);
   }
 }
 
-// Sync enrollment data
-async function syncEnrollments() {
-  try {
-    const enrollmentData = await getStoredData('enrollments')
+// Placeholder functions for offline data management
+async function getOfflineData() {
+  // Implement IndexedDB or localStorage logic
+  return [];
+}
 
-    for (const enrollment of enrollmentData) {
-      try {
-        const response = await fetch('/api/enrollments', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(enrollment.data)
-        })
+async function syncOfflineItem(item) {
+  // Implement API sync logic
+  console.log('Syncing offline item:', item);
+}
 
-        if (response.ok) {
-          await removeStoredData('enrollments', enrollment.id)
-          console.log('[SW] Enrollment synced successfully')
-        }
-      } catch (error) {
-        console.log('[SW] Failed to sync enrollment:', error)
-      }
-    }
-  } catch (error) {
-    console.log('[SW] Enrollment sync failed:', error)
-  }
+async function removeOfflineItem(id) {
+  // Remove from offline storage
+  console.log('Removing offline item:', id);
 }
 
 // Push notification handling
-self.addEventListener('push', event => {
-  console.log('[SW] Push notification received')
+self.addEventListener('push', (event) => {
+  console.log('📬 Push notification received');
 
   const options = {
-    badge: '/icons/badge-72x72.png',
-    icon: '/icons/icon-192x192.png',
-    vibrate: [200, 100, 200],
+    body: 'नया Biology lesson उपलब्ध है!',
+    icon: '/icon-192x192.png',
+    badge: '/badge-72x72.png',
+    tag: 'cerebrum-notification',
     data: {
-      url: '/'
+      url: '/courses'
     },
     actions: [
       {
         action: 'open',
-        title: 'Open App',
-        icon: '/icons/action-open.png'
+        title: 'खोलें',
+        icon: '/action-open.png'
       },
       {
-        action: 'close',
-        title: 'Close',
-        icon: '/icons/action-close.png'
+        action: 'dismiss',
+        title: 'बंद करें',
+        icon: '/action-dismiss.png'
       }
     ]
-  }
+  };
 
   if (event.data) {
     try {
-      const payload = event.data.json()
-
-      // Customize notification based on type
-      if (payload.type === 'class-reminder') {
-        options.title = 'Live Class Starting Soon!'
-        options.body = `Your ${payload.subject} class starts in ${payload.time} minutes`
-        options.data.url = '/courses/live-classes'
-        options.tag = 'class-reminder'
-      } else if (payload.type === 'test-reminder') {
-        options.title = 'Mock Test Available'
-        options.body = `New ${payload.subject} mock test is now available`
-        options.data.url = '/mock-tests'
-        options.tag = 'test-reminder'
-      } else if (payload.type === 'study-reminder') {
-        options.title = 'Study Reminder'
-        options.body = payload.message || 'Time for your daily biology revision!'
-        options.data.url = '/study-materials'
-        options.tag = 'study-reminder'
-      } else {
-        options.title = payload.title || 'Cerebrum Biology Academy'
-        options.body = payload.body || 'New update available'
-        options.data.url = payload.url || '/'
-      }
+      const payload = event.data.json();
+      options.body = payload.body || options.body;
+      options.data.url = payload.url || options.data.url;
     } catch (error) {
-      console.log('[SW] Error parsing push payload:', error)
-      options.title = 'Cerebrum Biology Academy'
-      options.body = 'New notification'
+      console.error('Failed to parse push payload:', error);
     }
-  } else {
-    options.title = 'Cerebrum Biology Academy'
-    options.body = 'Stay focused on your NEET preparation!'
   }
 
   event.waitUntil(
-    self.registration.showNotification(options.title, options)
-  )
-})
+    self.registration.showNotification('Cerebrum Biology Academy', options)
+  );
+});
 
 // Notification click handling
-self.addEventListener('notificationclick', event => {
-  console.log('[SW] Notification clicked:', event.action)
+self.addEventListener('notificationclick', (event) => {
+  console.log('🔔 Notification clicked');
 
-  event.notification.close()
+  event.notification.close();
 
-  if (event.action === 'close') {
-    return
+  if (event.action === 'dismiss') {
+    return;
   }
 
-  const urlToOpen = event.notification.data?.url || '/'
+  const url = event.notification.data?.url || '/';
 
   event.waitUntil(
-    clients.matchAll({ type: 'window', includeUncontrolled: true }).then(clients => {
-      // Check if app is already open
-      for (const client of clients) {
-        if (client.url.includes(urlToOpen.split('?')[0]) && 'focus' in client) {
-          return client.focus()
+    clients.matchAll({ type: 'window' }).then((clientList) => {
+      // Check if there's already a window/tab open with the target URL
+      for (const client of clientList) {
+        if (client.url === url && 'focus' in client) {
+          return client.focus();
         }
       }
 
-      // Open new window
+      // Open a new window/tab
       if (clients.openWindow) {
-        return clients.openWindow(urlToOpen)
+        return clients.openWindow(url);
       }
     })
-  )
-})
+  );
+});
 
-// Utility functions for IndexedDB operations
-async function getStoredData(storeName) {
-  return new Promise((resolve, reject) => {
-    const request = indexedDB.open('CerebrumOfflineDB', 1)
-
-    request.onerror = () => reject(request.error)
-    request.onsuccess = () => {
-      const db = request.result
-      const transaction = db.transaction([storeName], 'readonly')
-      const store = transaction.objectStore(storeName)
-      const getAllRequest = store.getAll()
-
-      getAllRequest.onsuccess = () => resolve(getAllRequest.result)
-      getAllRequest.onerror = () => reject(getAllRequest.error)
-    }
-
-    request.onupgradeneeded = () => {
-      const db = request.result
-      if (!db.objectStoreNames.contains(storeName)) {
-        db.createObjectStore(storeName, { keyPath: 'id' })
-      }
-    }
-  })
-}
-
-async function removeStoredData(storeName, id) {
-  return new Promise((resolve, reject) => {
-    const request = indexedDB.open('CerebrumOfflineDB', 1)
-
-    request.onerror = () => reject(request.error)
-    request.onsuccess = () => {
-      const db = request.result
-      const transaction = db.transaction([storeName], 'readwrite')
-      const store = transaction.objectStore(storeName)
-      const deleteRequest = store.delete(id)
-
-      deleteRequest.onsuccess = () => resolve()
-      deleteRequest.onerror = () => reject(deleteRequest.error)
-    }
-  })
-}
-
-// Performance monitoring
-self.addEventListener('message', event => {
-  if (event.data && event.data.type === 'PERFORMANCE_MEASURE') {
-    // Log performance metrics
-    console.log('[SW] Performance measure:', event.data)
+// Message handling for communication with main thread
+self.addEventListener('message', (event) => {
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
   }
-})
 
-console.log('[SW] Service worker script loaded successfully')
+  if (event.data && event.data.type === 'GET_CACHE_STATUS') {
+    event.ports[0].postMessage({
+      cacheSize: getCacheSize(),
+      networkQuality: getNetworkQuality(),
+    });
+  }
+});
+
+async function getCacheSize() {
+  try {
+    const cache = await caches.open(CACHE_NAME);
+    const requests = await cache.keys();
+    return requests.length;
+  } catch (error) {
+    return 0;
+  }
+}
+
+console.log('🚀 Cerebrum Biology Academy Service Worker loaded successfully');
+console.log('📱 Optimized for Indian mobile networks and offline learning');

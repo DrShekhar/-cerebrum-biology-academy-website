@@ -7,7 +7,7 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "sqlite"
   url      = env("DATABASE_URL")
 }
 
@@ -66,7 +66,7 @@ model Course {
 
   // Course Structure
   syllabus    Json?
-  features    String[]
+  features    Json? // String array stored as JSON
 
   // Metadata
   isActive    Boolean  @default(true)
@@ -415,8 +415,8 @@ model ChapterNote {
   // Content
   content          String   // Markdown format
   summary          String?
-  keyPoints        String[] // Array of key points
-  diagrams         String[] // URLs to diagrams
+  keyPoints        Json? // String array stored as JSON
+  diagrams         Json? // String array stored as JSON
 
   // Metadata
   difficulty       String   @default("Medium") // Easy, Medium, Hard
@@ -429,7 +429,7 @@ model ChapterNote {
   // SEO
   slug             String   @unique
   metaDescription  String?
-  tags             String[]
+  tags             Json? // String array stored as JSON
 
   // Status
   isPublished      Boolean  @default(false)
@@ -458,7 +458,7 @@ model Question {
   type             QuestionType // MCQ, SHORT_ANSWER, DIAGRAM, TRUE_FALSE
   difficulty       String   @default("Medium") // Easy, Medium, Hard
   question         String   // The question text
-  options          String[] // For MCQ (empty array for others)
+  options          Json? // String array stored as JSON
   correctAnswer    String   // The correct answer
   explanation      String?  // Detailed explanation
 
@@ -466,7 +466,7 @@ model Question {
   source           String?  // NEET_2023, CBSE_2022, etc.
   marks            Int      @default(1)
   timeLimit        Int?     // Recommended time in seconds
-  tags             String[] // For better categorization
+  tags             Json? // String array stored as JSON
 
   // Analytics
   totalAttempts    Int      @default(0)
@@ -495,7 +495,7 @@ model TestAttempt {
 
   // Test Configuration
   title            String   // "Cell Biology Test - Easy"
-  topics           String[] // Selected topics
+  topics           Json? // String array stored as JSON
   difficulty       String   // Easy, Medium, Hard, Mixed
   questionCount    Int
   timeLimit        Int?     // In minutes
@@ -508,9 +508,9 @@ model TestAttempt {
 
   // Analysis
   topicWiseScore   Json     // { "Cell Biology": 8, "Genetics": 6 }
-  strengthAreas    String[] // Topics where score > 70%
-  weaknessAreas    String[] // Topics where score < 50%
-  recommendations  String[] // AI-generated suggestions
+  strengthAreas    Json? // String array stored as JSON
+  weaknessAreas    Json? // String array stored as JSON
+  recommendations  Json? // String array stored as JSON
 
   // Status
   status           TestStatus @default(IN_PROGRESS)
@@ -576,7 +576,7 @@ model StudyPlan {
   totalWeeks       Int
 
   // Progress
-  completedTopics  String[]
+  completedTopics  Json? // String array stored as JSON
   currentTopic     String?
   overallProgress  Int      @default(0) // Percentage
 

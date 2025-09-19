@@ -1,0 +1,214 @@
+/* Neomorphism Design System */
+
+/* Base neomorphism shadow */
+.shadow-neomorph {
+  box-shadow:
+    8px 8px 16px rgba(174, 174, 192, 0.4),
+    -8px -8px 16px rgba(255, 255, 255, 0.8);
+}
+
+/* Pressed/inset neomorphism shadow */
+.shadow-neomorph-inset {
+  box-shadow:
+    inset 4px 4px 8px rgba(174, 174, 192, 0.3),
+    inset -4px -4px 8px rgba(255, 255, 255, 0.7);
+}
+
+/* Pressed state shadow */
+.shadow-neomorph-pressed {
+  box-shadow:
+    inset 2px 2px 6px rgba(174, 174, 192, 0.2),
+    inset -2px -2px 6px rgba(255, 255, 255, 0.5);
+}
+
+/* Soft neomorphism shadow for cards */
+.shadow-neomorph-soft {
+  box-shadow:
+    6px 6px 12px rgba(174, 174, 192, 0.3),
+    -6px -6px 12px rgba(255, 255, 255, 0.9);
+}
+
+/* Strong neomorphism shadow for important elements */
+.shadow-neomorph-strong {
+  box-shadow:
+    12px 12px 24px rgba(174, 174, 192, 0.5),
+    -12px -12px 24px rgba(255, 255, 255, 0.8);
+}
+
+/* Floating neomorphism shadow */
+.shadow-neomorph-float {
+  box-shadow:
+    0 10px 20px rgba(174, 174, 192, 0.4),
+    0 6px 6px rgba(174, 174, 192, 0.3),
+    inset 0 -1px 1px rgba(255, 255, 255, 0.8);
+}
+
+/* Neomorphism gradient backgrounds */
+.bg-neomorph-light {
+  background: linear-gradient(145deg, #f0f0f3, #cacace);
+}
+
+.bg-neomorph-dark {
+  background: linear-gradient(145deg, #e6e7ee, #c1c2c7);
+}
+
+.bg-neomorph-blue {
+  background: linear-gradient(145deg, #e3f2fd, #bbdefb);
+}
+
+.bg-neomorph-purple {
+  background: linear-gradient(145deg, #f3e5f5, #e1bee7);
+}
+
+/* Interactive hover effects */
+.neomorph-button {
+  transition: all 0.2s ease;
+}
+
+.neomorph-button:hover {
+  transform: translateY(-1px);
+}
+
+.neomorph-button:active {
+  transform: translateY(0);
+  box-shadow:
+    inset 2px 2px 6px rgba(174, 174, 192, 0.3),
+    inset -2px -2px 6px rgba(255, 255, 255, 0.6);
+}
+
+/* Text shadows for depth */
+.text-neomorph {
+  text-shadow:
+    1px 1px 2px rgba(255, 255, 255, 0.8),
+    -1px -1px 2px rgba(174, 174, 192, 0.3);
+}
+
+.text-neomorph-inset {
+  text-shadow:
+    1px 1px 2px rgba(174, 174, 192, 0.3),
+    -1px -1px 2px rgba(255, 255, 255, 0.8);
+}
+
+/* Glassmorphism variant for modern touch */
+.glass-neomorph {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow:
+    0 8px 32px 0 rgba(31, 38, 135, 0.37),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+/* Soft border for neomorphism elements */
+.border-neomorph {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.8);
+  border-left: 1px solid rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid rgba(174, 174, 192, 0.3);
+  border-right: 1px solid rgba(174, 174, 192, 0.3);
+}
+
+/* Chat message specific neomorphism */
+.message-neomorph-user {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow:
+    4px 4px 8px rgba(102, 126, 234, 0.3),
+    -2px -2px 6px rgba(255, 255, 255, 0.2);
+}
+
+.message-neomorph-ai {
+  background: linear-gradient(145deg, #f8f9fa, #e9ecef);
+  box-shadow:
+    4px 4px 8px rgba(174, 174, 192, 0.25),
+    -4px -4px 8px rgba(255, 255, 255, 0.9);
+}
+
+/* Input field neomorphism */
+.input-neomorph {
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  box-shadow:
+    inset 2px 2px 4px rgba(174, 174, 192, 0.2),
+    inset -2px -2px 4px rgba(255, 255, 255, 0.8);
+  border: none;
+  outline: none;
+}
+
+.input-neomorph:focus {
+  box-shadow:
+    inset 3px 3px 6px rgba(174, 174, 192, 0.3),
+    inset -3px -3px 6px rgba(255, 255, 255, 0.9),
+    0 0 0 2px rgba(59, 130, 246, 0.3);
+}
+
+/* Button variants */
+.btn-neomorph-primary {
+  background: linear-gradient(145deg, #3b82f6, #2563eb);
+  color: white;
+  box-shadow:
+    4px 4px 8px rgba(37, 99, 235, 0.3),
+    -2px -2px 6px rgba(147, 197, 253, 0.3);
+}
+
+.btn-neomorph-primary:hover {
+  background: linear-gradient(145deg, #2563eb, #1d4ed8);
+  transform: translateY(-1px);
+  box-shadow:
+    6px 6px 12px rgba(37, 99, 235, 0.4),
+    -3px -3px 8px rgba(147, 197, 253, 0.4);
+}
+
+.btn-neomorph-primary:active {
+  transform: translateY(0);
+  box-shadow:
+    inset 2px 2px 6px rgba(29, 78, 216, 0.4),
+    inset -2px -2px 6px rgba(147, 197, 253, 0.2);
+}
+
+/* Subtle animations */
+@keyframes neomorph-pulse {
+  0%,
+  100% {
+    box-shadow:
+      8px 8px 16px rgba(174, 174, 192, 0.4),
+      -8px -8px 16px rgba(255, 255, 255, 0.8);
+  }
+  50% {
+    box-shadow:
+      6px 6px 12px rgba(174, 174, 192, 0.3),
+      -6px -6px 12px rgba(255, 255, 255, 0.9);
+  }
+}
+
+.animate-neomorph-pulse {
+  animation: neomorph-pulse 2s ease-in-out infinite;
+}
+
+/* Utility classes for spacing and layout */
+.neomorph-container {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+}
+
+.neomorph-card {
+  background: linear-gradient(145deg, #ffffff, #f0f0f3);
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow:
+    8px 8px 16px rgba(174, 174, 192, 0.4),
+    -8px -8px 16px rgba(255, 255, 255, 0.8);
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .shadow-neomorph {
+    box-shadow:
+      8px 8px 16px rgba(0, 0, 0, 0.4),
+      -8px -8px 16px rgba(255, 255, 255, 0.1);
+  }
+
+  .shadow-neomorph-inset {
+    box-shadow:
+      inset 4px 4px 8px rgba(0, 0, 0, 0.3),
+      inset -4px -4px 8px rgba(255, 255, 255, 0.1);
+  }
+}

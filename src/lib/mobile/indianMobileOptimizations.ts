@@ -103,7 +103,7 @@ export class IndianMobileOptimizer {
 
   // Prefetch strategy
   shouldPrefetchResources(): boolean {
-    return !this.isSlowNetwork && !this.deviceInfo?.saveData
+    return !this.isSlowNetwork && this.networkInfo && !this.networkInfo.saveData
   }
 
   // Bundle splitting strategy

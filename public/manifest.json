@@ -1,190 +1,62 @@
 {
-  "name": "Cerebrum Biology Academy - NEET Biology Coaching",
-  "short_name": "Cerebrum Biology",
-  "description": "Top NEET Biology coaching by AIIMS experts. 94.2% success rate, personalized learning for Class 11th, 12th & droppers.",
-  "start_url": "/?utm_source=pwa&utm_medium=app&utm_campaign=home_screen",
+  "name": "Cerebrum Biology Academy - NEET Biology Excellence",
+  "short_name": "Cerebrum Bio",
+  "description": "India's leading Biology coaching for NEET with AI-powered learning, voice synthesis by Shekhar Sir, and comprehensive study materials. Achieve 94.2% success rate with offline support.",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#2563eb",
+  "theme_color": "#0ea5e9",
   "orientation": "portrait-primary",
   "scope": "/",
   "lang": "en-IN",
   "dir": "ltr",
-  "categories": ["education", "medical", "neet", "biology"],
+  "categories": ["education", "productivity", "health"],
+
   "icons": [
     {
-      "src": "/icons/icon-72x72.png",
-      "sizes": "72x72",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "/icons/icon-96x96.png",
-      "sizes": "96x96",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "/icons/icon-128x128.png",
-      "sizes": "128x128",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "/icons/icon-144x144.png",
-      "sizes": "144x144",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "/icons/icon-152x152.png",
-      "sizes": "152x152",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "/icons/icon-192x192.png",
+      "src": "/icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "maskable any"
+      "purpose": "any maskable"
     },
     {
-      "src": "/icons/icon-384x384.png",
-      "sizes": "384x384",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "/icons/icon-512x512.png",
+      "src": "/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "maskable any"
+      "purpose": "any maskable"
     }
   ],
+
   "shortcuts": [
     {
-      "name": "Live Classes",
-      "short_name": "Live Classes",
-      "description": "Join live biology classes and interactive sessions",
-      "url": "/courses/live-classes?utm_source=pwa_shortcut",
+      "name": "NEET Courses",
+      "short_name": "Courses",
+      "description": "Access NEET Biology courses and study materials",
+      "url": "/courses",
       "icons": [
         {
-          "src": "/icons/shortcut-live-classes.png",
-          "sizes": "96x96",
+          "src": "/icon-192.png",
+          "sizes": "192x192",
           "type": "image/png"
         }
       ]
     },
     {
-      "name": "Mock Tests",
-      "short_name": "Tests",
-      "description": "Take NEET biology mock tests and assessments",
-      "url": "/mock-tests?utm_source=pwa_shortcut",
+      "name": "AI Doubt Resolution",
+      "short_name": "ClaudeChat",
+      "description": "Get instant doubt resolution with AI voice synthesis",
+      "url": "/claudechat",
       "icons": [
         {
-          "src": "/icons/shortcut-mock-tests.png",
-          "sizes": "96x96",
-          "type": "image/png"
-        }
-      ]
-    },
-    {
-      "name": "Study Materials",
-      "short_name": "Materials",
-      "description": "Access biology notes, diagrams and study resources",
-      "url": "/study-materials?utm_source=pwa_shortcut",
-      "icons": [
-        {
-          "src": "/icons/shortcut-study-materials.png",
-          "sizes": "96x96",
-          "type": "image/png"
-        }
-      ]
-    },
-    {
-      "name": "Video Lectures",
-      "short_name": "Videos",
-      "description": "Watch biology video lectures and tutorials",
-      "url": "/video-lectures?utm_source=pwa_shortcut",
-      "icons": [
-        {
-          "src": "/icons/shortcut-video-lectures.png",
-          "sizes": "96x96",
+          "src": "/icon-192.png",
+          "sizes": "192x192",
           "type": "image/png"
         }
       ]
     }
   ],
-  "screenshots": [
-    {
-      "src": "/screenshots/mobile-home.png",
-      "sizes": "540x720",
-      "type": "image/png",
-      "form_factor": "narrow",
-      "label": "Cerebrum Biology Academy Homepage"
-    },
-    {
-      "src": "/screenshots/mobile-courses.png",
-      "sizes": "540x720",
-      "type": "image/png",
-      "form_factor": "narrow",
-      "label": "NEET Biology Courses"
-    },
-    {
-      "src": "/screenshots/mobile-tests.png",
-      "sizes": "540x720",
-      "type": "image/png",
-      "form_factor": "narrow",
-      "label": "Mock Tests & Assessments"
-    },
-    {
-      "src": "/screenshots/desktop-home.png",
-      "sizes": "1280x720",
-      "type": "image/png",
-      "form_factor": "wide",
-      "label": "Cerebrum Biology Academy Desktop"
-    }
-  ],
-  "share_target": {
-    "action": "/share-target",
-    "method": "POST",
-    "enctype": "multipart/form-data",
-    "params": {
-      "title": "title",
-      "text": "text",
-      "url": "url",
-      "files": [
-        {
-          "name": "files",
-          "accept": ["image/*", ".pdf", ".doc", ".docx"]
-        }
-      ]
-    }
-  },
-  "protocol_handlers": [
-    {
-      "protocol": "web+cerebrumbiology",
-      "url": "/handle-protocol?url=%s"
-    }
-  ],
+
+  "display_override": ["window-controls-overlay", "minimal-ui", "standalone"],
   "prefer_related_applications": false,
-  "related_applications": [
-    {
-      "platform": "play",
-      "url": "https://play.google.com/store/apps/details?id=com.cerebrumbiologyacademy.app",
-      "id": "com.cerebrumbiologyacademy.app"
-    },
-    {
-      "platform": "itunes",
-      "url": "https://apps.apple.com/app/cerebrum-biology-academy/id123456789",
-      "id": "123456789"
-    }
-  ],
-  "edge_side_panel": {
-    "preferred_width": 480
-  },
-  "handle_links": "preferred",
-  "launch_handler": {
-    "client_mode": "navigate-existing"
-  }
+  "offline_capable": true
 }

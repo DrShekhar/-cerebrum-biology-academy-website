@@ -10,8 +10,6 @@ import type {
   EducationalAgent,
   StudentQuery,
   AgentResponse,
-  AgentType,
-  AgentCapability,
   StudentProgress,
   PerformanceMetrics,
   LearningRecommendation,
@@ -19,6 +17,7 @@ import type {
   DifficultyLevel,
   BiologyUnit,
 } from '../types'
+import { AgentType, AgentCapability } from '../types'
 
 interface AgentConfig {
   anthropic: Anthropic

@@ -11,7 +11,8 @@ import { CommunicationAgent } from './tools/communication'
 import { SecurityManager } from './security/encryption'
 import { ComplianceManager } from './security/compliance'
 import { AuditLogger } from './security/audit'
-import type { MCPServerConfig, StudentQuery, AgentType, DifficultyLevel, ExamType } from './types'
+import type { MCPServerConfig, StudentQuery } from './types'
+import { AgentType, QueryPriority, StudentLevel, DifficultyLevel, ExamType } from './types'
 
 /**
  * Test configuration for MCP server
@@ -58,13 +59,28 @@ const getTestQueries = (): StudentQuery[] => [
     agentType: AgentType.STUDENT_SUPPORT,
     query: 'Can you explain photosynthesis in simple terms for NEET preparation?',
     context: {
-      topic: 'photosynthesis',
+      topic: {
+        id: 'photosynthesis_1',
+        name: 'photosynthesis',
+        chapter: 'Plant Physiology',
+        unit: 'PLANT_PHYSIOLOGY' as any,
+        subtopics: [],
+        difficulty: DifficultyLevel.INTERMEDIATE,
+        examRelevance: {
+          neetWeightage: 8,
+          boardsWeightage: 7,
+          frequencyInExams: 9,
+          topicImportance: 'HIGH' as any,
+        },
+        prerequisites: [],
+        estimatedTime: 45,
+      },
       difficulty: DifficultyLevel.INTERMEDIATE,
       examType: ExamType.NEET,
-      studentLevel: 'class_12',
+      studentLevel: StudentLevel.CLASS_12,
     },
     timestamp: new Date(),
-    priority: 'medium',
+    priority: QueryPriority.MEDIUM,
   },
   {
     id: 'test_query_2',
@@ -72,13 +88,27 @@ const getTestQueries = (): StudentQuery[] => [
     agentType: AgentType.CONTENT_GENERATOR,
     query: 'Generate 3 MCQ questions on cell organelles for NEET practice',
     context: {
-      topic: 'cell_organelles',
+      topic: {
+        id: 'cell_organelles_1',
+        name: 'cell_organelles',
+        chapter: 'Cell Structure and Function',
+        unit: 'CELL_STRUCTURE_FUNCTION' as any,
+        subtopics: [],
+        difficulty: DifficultyLevel.INTERMEDIATE,
+        examRelevance: {
+          neetWeightage: 9,
+          boardsWeightage: 8,
+          frequencyInExams: 10,
+          topicImportance: 'VERY_HIGH' as any,
+        },
+        prerequisites: [],
+        estimatedTime: 60,
+      },
       difficulty: DifficultyLevel.INTERMEDIATE,
       examType: ExamType.NEET,
-      count: 3,
     },
     timestamp: new Date(),
-    priority: 'medium',
+    priority: QueryPriority.MEDIUM,
   },
   {
     id: 'test_query_3',
@@ -86,11 +116,10 @@ const getTestQueries = (): StudentQuery[] => [
     agentType: AgentType.ANALYTICS,
     query: 'Analyze my performance in Biology over the last week',
     context: {
-      timeframe: 'weekly',
-      studentLevel: 'class_12',
+      studentLevel: StudentLevel.CLASS_12,
     },
     timestamp: new Date(),
-    priority: 'medium',
+    priority: QueryPriority.MEDIUM,
   },
   {
     id: 'test_query_4',
@@ -98,11 +127,10 @@ const getTestQueries = (): StudentQuery[] => [
     agentType: AgentType.COMMUNICATION,
     query: 'Send progress update to parents about recent performance',
     context: {
-      notificationType: 'progress_update',
-      channel: 'whatsapp',
+      studentLevel: StudentLevel.CLASS_12,
     },
     timestamp: new Date(),
-    priority: 'medium',
+    priority: QueryPriority.MEDIUM,
   },
 ]
 

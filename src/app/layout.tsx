@@ -7,6 +7,7 @@ import { SessionProvider } from '@/components/providers/SessionProvider'
 import { VisitorAnalytics } from '@/components/profiling/VisitorAnalytics'
 import { PWAInstallPrompt, PWAInstallSuccess } from '@/components/pwa/PWAInstallPrompt'
 import { OfflineFormHandler } from '@/components/pwa/OfflineFormHandler'
+import ServiceWorkerProvider from '@/components/mobile/ServiceWorkerProvider'
 // EMERGENCY: Popup components temporarily removed
 // import { StickyTrustBar } from '@/components/common/StickyTrustBar'
 // import { RealTimeProof } from '@/components/common/RealTimeProof'
@@ -81,7 +82,26 @@ export default function RootLayout({
       <head>
         <StructuredData />
         <meta name="google-site-verification" content="your-google-verification-code" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
+        />
+
+        {/* Mobile optimization meta tags for Indian networks */}
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-touch-fullscreen" content="yes" />
+
+        {/* Performance hints for slow networks */}
+        <meta httpEquiv="Accept-CH" content="DPR, Viewport-Width, Width, Save-Data" />
+        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+
+        {/* Hindi language support */}
+        <meta httpEquiv="Content-Language" content="en-IN,hi-IN" />
+        <meta name="language" content="English,Hindi" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <meta name="theme-color" content="#2563eb" />
@@ -117,33 +137,35 @@ export default function RootLayout({
           <AnalyticsProvider>
             <VisitorAnalytics>
               <OfflineFormHandler>
-                <PersonalizationProvider>
-                  <ABTestProvider>
-                    <ErrorBoundary>
-                      {/* Skip Navigation Link for Accessibility */}
-                      <a
-                        href="#main-content"
-                        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-md z-[9999] font-medium"
-                      >
-                        Skip to main content
-                      </a>
+                <ServiceWorkerProvider>
+                  <PersonalizationProvider>
+                    <ABTestProvider>
+                      <ErrorBoundary>
+                        {/* Skip Navigation Link for Accessibility */}
+                        <a
+                          href="#main-content"
+                          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-md z-[9999] font-medium"
+                        >
+                          Skip to main content
+                        </a>
 
-                      {/* EMERGENCY: All popup components removed for clean homepage */}
-                      {/* <StickyTrustBar /> */}
-                      <Header />
-                      <main id="main-content" className="min-h-screen">
-                        {children}
-                      </main>
-                      <Footer />
-                      {/* <RealTimeProof /> */}
-                      {/* <FloatingCTA /> */}
+                        {/* EMERGENCY: All popup components removed for clean homepage */}
+                        {/* <StickyTrustBar /> */}
+                        <Header />
+                        <main id="main-content" className="min-h-screen">
+                          {children}
+                        </main>
+                        <Footer />
+                        {/* <RealTimeProof /> */}
+                        {/* <FloatingCTA /> */}
 
-                      {/* PWA Components - keeping essential only */}
-                      {/* <PWAInstallPrompt showDelay={45000} /> */}
-                      {/* <PWAInstallSuccess /> */}
-                    </ErrorBoundary>
-                  </ABTestProvider>
-                </PersonalizationProvider>
+                        {/* PWA Components - keeping essential only */}
+                        {/* <PWAInstallPrompt showDelay={45000} /> */}
+                        {/* <PWAInstallSuccess /> */}
+                      </ErrorBoundary>
+                    </ABTestProvider>
+                  </PersonalizationProvider>
+                </ServiceWorkerProvider>
               </OfflineFormHandler>
             </VisitorAnalytics>
           </AnalyticsProvider>

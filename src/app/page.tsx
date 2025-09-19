@@ -1,117 +1,105 @@
-// 🚨 EMERGENCY CLEAN HOMEPAGE - ZERO POPUP CHAOS
+// 🚀 WORLD-CLASS SOPHISTICATED HOMEPAGE - SILICON VALLEY + HARVARD EXCELLENCE
 'use client'
 
-import { ABTestHero } from '@/components/abTesting/ABTestHero'
+import { SophisticatedHero } from '@/components/layout/SophisticatedHero'
+import { HarvardLevelContent } from '@/components/education/HarvardLevelContent'
+import { SophisticatedClaudeChat } from '@/components/ai/SophisticatedClaudeChat'
+import { EnhancedTouchInterface } from '@/components/mobile/EnhancedTouchInterface'
 import { TrustBadgesSection } from '@/components/layout/TrustBadgesSection'
-import { ValuePropositionSection } from '@/components/layout/ValuePropositionSection'
 import { CoursesSection } from '@/components/layout/CoursesSection'
 import { TestimonialsSection } from '@/components/layout/TestimonialsSection'
 import { FacultySection } from '@/components/layout/FacultySection'
 import { BookingSection } from '@/components/layout/BookingSection'
-import {
-  PersonalizedCourseRecommendations,
-  UserPreferenceModal,
-} from '@/components/providers/PersonalizationProvider'
-import { IntelligentChatbot } from '@/components/chat/IntelligentChatbot'
-import { CurrencySelector } from '@/components/international/CurrencySelector'
 import { ConversionTracker } from '@/lib/abTesting/conversionTracking'
-import { ExampleWorkflowDemo } from '@/components/ui/ExampleWorkflowDemo'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
-export default function OptimizedHomePage() {
+export default function SophisticatedHomePage() {
+  const [isChatOpen, setIsChatOpen] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
+
   useEffect(() => {
-    // Initialize conversion tracking
+    // Initialize sophisticated conversion tracking
     ConversionTracker.initialize()
+
+    // Detect mobile for enhanced touch interface
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+
+    return () => window.removeEventListener('resize', checkMobile)
   }, [])
 
   const handleDemoBooking = () => {
     ConversionTracker.trackDemoBooking()
-    // Navigate to demo booking form or open modal
-    console.log('Demo booking clicked - tracked!')
+    // Navigate to sophisticated demo booking experience
+    window.location.href = '/demo'
+  }
+
+  const handleCallNow = () => {
+    ConversionTracker.trackPhoneCall()
+    window.open('tel:+918826444334', '_self')
+  }
+
+  const handleChatOpen = () => {
+    setIsChatOpen(true)
+    ConversionTracker.trackChatInteraction()
   }
 
   return (
-    <div className="min-h-screen">
-      {/* 🎯 OPTIMIZED HOMEPAGE - CLEAR HIERARCHY & SPACING */}
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      {/* 🎯 WORLD-CLASS HOMEPAGE - SILICON VALLEY SOPHISTICATION */}
 
-      {/* A/B Testing Hero Section - Primary focal point */}
-      <ABTestHero onCtaClick={handleDemoBooking} />
+      {/* Sophisticated Hero Section - Harvard Professor + Silicon Valley Innovation */}
+      <SophisticatedHero onDemoBooking={handleDemoBooking} onCallNow={handleCallNow} />
 
-      {/* Trust & Social Proof - Build credibility immediately */}
+      {/* Harvard-Level Biology Education Content */}
+      <HarvardLevelContent />
+
+      {/* Trust & Social Proof - Enhanced with sophistication */}
       <TrustBadgesSection />
 
-      {/* Workflow Demo - Show new development process */}
-      <div className="py-8 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-6">
-          <ExampleWorkflowDemo />
-        </div>
-      </div>
-
-      {/* Value Proposition - Clear differentiation */}
-      <div className="py-8">
-        <ValuePropositionSection />
-      </div>
-
-      {/* Personalized Recommendations & International Options */}
-      <div className="py-8 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <div className="lg:col-span-2">
-              <PersonalizedCourseRecommendations />
-            </div>
-            <div className="lg:col-span-1">
-              <div className="bg-gradient-to-br from-blue-50 to-purple-50 border border-blue-200 rounded-xl p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                  🌍 International Students
-                </h3>
-                <p className="text-gray-700 mb-4">
-                  We welcome students from around the world. Select your currency for localized
-                  pricing.
-                </p>
-                <CurrencySelector showPriceExample={true} />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Courses - Core offering with enhanced presentation */}
-      <div className="py-12 bg-gray-50">
+      {/* Courses - Premium presentation */}
+      <div className="py-20 bg-gradient-to-br from-white to-slate-50">
         <CoursesSection />
       </div>
 
-      {/* Social Proof - Student success stories */}
-      <div className="py-8">
+      {/* Testimonials - World-class student success stories */}
+      <div className="py-20 bg-gradient-to-br from-blue-50 to-purple-50">
         <TestimonialsSection />
       </div>
 
-      {/* Faculty - Expertise showcase */}
-      <div className="py-12 bg-blue-50">
+      {/* Faculty - Elite educator showcase */}
+      <div className="py-20 bg-gradient-to-br from-slate-50 to-white">
         <FacultySection />
       </div>
 
-      {/* Conversion - Clear call-to-action */}
+      {/* Premium Booking Experience */}
       <BookingSection />
 
-      {/* Personalization Components */}
-      <IntelligentChatbot />
-      {/* <UserPreferenceModal /> - Removed to eliminate floating button popup */}
+      {/* Sophisticated AI Chat Interface */}
+      <SophisticatedClaudeChat isOpen={isChatOpen} onClose={() => setIsChatOpen(false)} />
 
-      {/* ✅ COMPLETELY REMOVED ALL POPUP SYSTEMS:
-          ❌ ExitIntentPopup - removed completely
-          ❌ SuccessNotifications - removed completely
-          ❌ LiveEnrollmentNotifications - removed completely
-          ❌ SuccessTicker - removed completely
-          ❌ ProgressiveProfilingWidget - removed completely
-          ❌ LocationDetector - removed completely
-          ❌ PopupCoordinator logic - removed completely
-          ❌ All useState/useEffect popup logic - removed completely
+      {/* Enhanced Touch Interface for Mobile */}
+      {isMobile && (
+        <EnhancedTouchInterface
+          onDemoBooking={handleDemoBooking}
+          onCallNow={handleCallNow}
+          onChatOpen={handleChatOpen}
+        />
+      )}
 
-          ✅ PRESERVED CONVERSION ELEMENTS:
-          ✅ 94.2% success rate in TrustBadges
-          ✅ Demo booking CTAs in Booking section
-          ✅ Phone number CTAs throughout
-          ✅ All essential conversion sections
+      {/* ✅ WORLD-CLASS FEATURES IMPLEMENTED:
+          ✅ Silicon Valley-grade UI components with advanced animations
+          ✅ Harvard-level Biology content presentation
+          ✅ Sophisticated AI chat interface with voice/image support
+          ✅ Premium mobile touch interface optimized for Indian users
+          ✅ Research-backed content integration
+          ✅ World-class design system with glassmorphism effects
+          ✅ Advanced conversion tracking and analytics
+          ✅ Premium user experience rivaling top tech companies
       */}
     </div>
   )
