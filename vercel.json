@@ -1,62 +1,22 @@
 {
-  "github": {
-    "autoJobCancelation": false
-  },
   "buildCommand": "npm run build",
   "outputDirectory": ".next",
   "framework": "nextjs",
-  "regions": ["cle1"],
+  "installCommand": "npm install",
+  "env": {
+    "NEXT_PUBLIC_SITE_URL": "https://cerebrum-biology-academy-website.vercel.app",
+    "NEXT_PUBLIC_ENV": "production"
+  },
   "functions": {
-    "app/**/*.{js,ts,jsx,tsx}": {
-      "maxDuration": 30
-    },
-    "src/app/api/admin/**/*.{js,ts,jsx,tsx}": {
-      "maxDuration": 60
+    "src/app/api/**/*.ts": {
+      "runtime": "nodejs18.x"
     }
   },
-  "headers": [
+  "regions": ["bom1"],
+  "builds": [
     {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        },
-        {
-          "key": "X-Frame-Options",
-          "value": "DENY"
-        },
-        {
-          "key": "X-XSS-Protection",
-          "value": "1; mode=block"
-        },
-        {
-          "key": "Strict-Transport-Security",
-          "value": "max-age=63072000; includeSubDomains; preload"
-        }
-      ]
-    },
-    {
-      "source": "/admin/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "no-store, no-cache, must-revalidate, proxy-revalidate"
-        }
-      ]
-    }
-  ],
-  "redirects": [
-    {
-      "source": "/admin",
-      "destination": "/admin",
-      "permanent": false
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/admin/:path*",
-      "destination": "/admin/:path*"
+      "src": "package.json",
+      "use": "@vercel/next"
     }
   ]
 }
