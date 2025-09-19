@@ -71,7 +71,7 @@ export class IndianMobileOptimizer {
       ram: (navigator as any).deviceMemory || 4,
       cores: navigator.hardwareConcurrency || 4,
       platform: navigator.platform,
-      isTouchDevice: 'ontouchstart' in window,
+      isTouchDevice: typeof window !== 'undefined' ? 'ontouchstart' in window : false,
     }
 
     this.isLowEndDevice =
