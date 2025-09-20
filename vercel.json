@@ -1,8 +1,8 @@
 {
-  "buildCommand": "NEXT_TELEMETRY_DISABLED=1 npx next build",
+  "buildCommand": "npm run build",
   "outputDirectory": ".next",
   "framework": "nextjs",
-  "installCommand": "npm install --legacy-peer-deps && npx prisma generate",
+  "installCommand": "npm install --legacy-peer-deps",
   "env": {
     "NEXT_PUBLIC_SITE_URL": "https://cerebrum-biology-academy-website-gnd0it0vm.vercel.app",
     "NEXT_PUBLIC_ENV": "production",

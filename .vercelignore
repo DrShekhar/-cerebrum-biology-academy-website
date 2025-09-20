@@ -18,6 +18,10 @@ dist/
 # Testing
 coverage/
 .nyc_output/
+src/__tests__/
+*.test.tsx
+*.test.ts
+jest.config.js
 
 # IDE
 .vscode/
@@ -40,3 +44,10 @@ prisma/dev.db-journal
 
 # Cache
 .cache/
+
+# Problematic files for deployment
+src/lib/mcp/
+src/lib/voice/voiceRecognitionService.ts
+src/lib/pwa/pwaService.ts
+src/lib/social/metaIntegration.ts
+playwright.config.ts
