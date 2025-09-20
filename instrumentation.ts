@@ -1,7 +1,9 @@
-import { registerOTel } from '@vercel/otel';
+// import { registerOTel } from '@vercel/otel';
 
 export function register() {
-  registerOTel({ serviceName: 'cerebrum-biology-academy' });
+  // registerOTel({ serviceName: 'cerebrum-biology-academy' });
+  // Temporarily disabled due to dependency resolution issue
+  // Will re-enable after verifying all OpenTelemetry packages are properly installed
 }
 
 // Constitutional Excellence: Harvard Medical School Performance Monitoring
