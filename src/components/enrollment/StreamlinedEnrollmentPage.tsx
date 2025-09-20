@@ -28,6 +28,7 @@ import {
   ShieldCheckIcon as ShieldCheckSolid,
 } from '@heroicons/react/24/solid'
 import { PremiumCard, PremiumButton, AnimatedCounter } from '@/components/ui/PremiumDesignSystem'
+import { EnrollmentProgress } from '@/components/ui/ProgressIndicators'
 
 interface StreamlinedEnrollmentPageProps {
   onEnrollmentComplete?: (data: any) => void
@@ -264,45 +265,22 @@ export function StreamlinedEnrollmentPage({
             </div>
           </div>
 
-          {/* Progress Steps */}
-          <div className="flex items-center justify-center space-x-4 md:space-x-8">
-            {steps.map((step, index) => {
-              const isCompleted = index < currentStep
-              const isCurrent = index === currentStep
-              const IconComponent = isCompleted ? step.iconSolid : step.icon
-
-              return (
-                <div key={step.id} className="flex items-center">
-                  <div className="flex flex-col items-center">
-                    <motion.div
-                      className={`w-12 h-12 rounded-full flex items-center justify-center border-2 ${
-                        isCompleted
-                          ? 'bg-green-500 border-green-500 text-white'
-                          : isCurrent
-                            ? 'bg-blue-500 border-blue-500 text-white'
-                            : 'bg-gray-100 border-gray-300 text-gray-400'
-                      }`}
-                      whileHover={{ scale: 1.05 }}
-                      transition={{ type: 'spring', stiffness: 300 }}
-                    >
-                      <IconComponent className="w-6 h-6" />
-                    </motion.div>
-                    <span
-                      className={`text-sm font-medium mt-2 ${
-                        isCompleted || isCurrent ? 'text-gray-900' : 'text-gray-400'
-                      }`}
-                    >
-                      {step.title}
-                    </span>
-                  </div>
-
-                  {index < steps.length - 1 && (
-                    <ChevronRightIcon className="w-5 h-5 text-gray-300 mx-2 md:mx-4" />
-                  )}
-                </div>
-              )
-            })}
-          </div>
+          {/* Enhanced Progress Steps */}
+          <EnrollmentProgress
+            currentStep={
+              currentStep === 0
+                ? 'personal'
+                : currentStep === 1
+                  ? 'course'
+                  : currentStep === 2
+                    ? 'payment'
+                    : 'confirmation'
+            }
+            completedSteps={Array.from({ length: currentStep }, (_, i) =>
+              i === 0 ? 'personal' : i === 1 ? 'course' : i === 2 ? 'payment' : 'confirmation'
+            )}
+            className="px-4"
+          />
         </div>
       </div>
 

@@ -333,6 +333,217 @@ export function CourseSkeleton({ className = '' }: { className?: string }) {
   )
 }
 
+// Smart Button Loading States
+interface SmartButtonProps {
+  children: React.ReactNode
+  isLoading?: boolean
+  loadingText?: string
+  successText?: string
+  isSuccess?: boolean
+  onClick?: () => void
+  className?: string
+  variant?: 'primary' | 'secondary' | 'success' | 'danger'
+  size?: 'sm' | 'md' | 'lg'
+  disabled?: boolean
+}
+
+export function SmartButton({
+  children,
+  isLoading = false,
+  loadingText = 'Processing...',
+  successText = '✓ Success!',
+  isSuccess = false,
+  onClick,
+  className = '',
+  variant = 'primary',
+  size = 'md',
+  disabled = false,
+}: SmartButtonProps) {
+  const variants = {
+    primary: 'bg-purple-600 hover:bg-purple-700 text-white',
+    secondary: 'bg-slate-600 hover:bg-slate-700 text-white',
+    success: 'bg-emerald-600 hover:bg-emerald-700 text-white',
+    danger: 'bg-red-600 hover:bg-red-700 text-white',
+  }
+
+  const sizes = {
+    sm: 'px-3 py-1.5 text-sm',
+    md: 'px-4 py-2 text-base',
+    lg: 'px-6 py-3 text-lg',
+  }
+
+  const isDisabled = isLoading || disabled
+
+  return (
+    <motion.button
+      onClick={onClick}
+      disabled={isDisabled}
+      className={`
+        relative overflow-hidden rounded-lg font-medium transition-all duration-200
+        ${variants[variant]} ${sizes[size]}
+        ${isDisabled ? 'opacity-50 cursor-not-allowed' : 'hover:shadow-lg active:scale-95'}
+        ${className}
+      `}
+      whileTap={!isDisabled ? { scale: 0.98 } : {}}
+    >
+      <motion.div
+        className="flex items-center justify-center space-x-2"
+        animate={{
+          opacity: isLoading ? 0.8 : 1,
+          scale: isSuccess ? [1, 1.05, 1] : 1,
+        }}
+        transition={{ duration: 0.3 }}
+      >
+        {isLoading && (
+          <motion.div
+            initial={{ rotate: 0 }}
+            animate={{ rotate: 360 }}
+            transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
+            className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full"
+          />
+        )}
+        {isSuccess && (
+          <motion.div
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ type: 'spring', bounce: 0.5 }}
+            className="w-4 h-4 flex items-center justify-center"
+          >
+            <CheckCircle className="w-4 h-4" />
+          </motion.div>
+        )}
+        <span>{isLoading ? loadingText : isSuccess ? successText : children}</span>
+      </motion.div>
+
+      {/* Success pulse effect */}
+      {isSuccess && (
+        <motion.div
+          className="absolute inset-0 bg-white/20 rounded-lg"
+          initial={{ scale: 0, opacity: 0.5 }}
+          animate={{ scale: 1.1, opacity: 0 }}
+          transition={{ duration: 0.5 }}
+        />
+      )}
+    </motion.button>
+  )
+}
+
+// Enhanced Success Feedback Component
+interface SuccessFeedbackProps {
+  isVisible: boolean
+  message?: string
+  description?: string
+  onComplete?: () => void
+  duration?: number
+  variant?: 'default' | 'cerebrum' | 'inline'
+  className?: string
+}
+
+export function SuccessFeedback({
+  isVisible,
+  message = 'Success!',
+  description,
+  onComplete,
+  duration = 3000,
+  variant = 'cerebrum',
+  className = '',
+}: SuccessFeedbackProps) {
+  React.useEffect(() => {
+    if (isVisible && duration > 0) {
+      const timer = setTimeout(() => {
+        onComplete?.()
+      }, duration)
+      return () => clearTimeout(timer)
+    }
+  }, [isVisible, duration, onComplete])
+
+  if (!isVisible) return null
+
+  if (variant === 'inline') {
+    return (
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8, y: 10 }}
+        animate={{ opacity: 1, scale: 1, y: 0 }}
+        exit={{ opacity: 0, scale: 0.8, y: -10 }}
+        className={`
+          inline-flex items-center space-x-2 bg-emerald-100 text-emerald-800
+          px-4 py-2 rounded-lg border border-emerald-200 font-medium
+          ${className}
+        `}
+      >
+        <motion.div
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ delay: 0.1, type: 'spring', bounce: 0.5 }}
+        >
+          <CheckCircle className="w-4 h-4" />
+        </motion.div>
+        <span>{message}</span>
+      </motion.div>
+    )
+  }
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, scale: 0.9 }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0, scale: 0.9 }}
+      className={`
+        fixed top-4 right-4 bg-white rounded-xl shadow-2xl border border-emerald-200
+        p-6 max-w-sm z-50 ${className}
+      `}
+    >
+      <div className="flex items-start space-x-3">
+        <motion.div
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ delay: 0.2, type: 'spring', bounce: 0.6 }}
+          className="flex-shrink-0"
+        >
+          <div className="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center">
+            <CheckCircle className="w-5 h-5 text-emerald-600" />
+          </div>
+        </motion.div>
+        <div className="flex-1">
+          <motion.h3
+            initial={{ opacity: 0, x: 10 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.3 }}
+            className="text-sm font-semibold text-gray-900"
+          >
+            {message}
+          </motion.h3>
+          {description && (
+            <motion.p
+              initial={{ opacity: 0, x: 10 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.4 }}
+              className="text-sm text-gray-600 mt-1"
+            >
+              {description}
+            </motion.p>
+          )}
+        </div>
+      </div>
+
+      {/* Progress bar */}
+      <motion.div
+        className="mt-4 h-1 bg-emerald-100 rounded-full overflow-hidden"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.5 }}
+      >
+        <motion.div
+          className="h-full bg-emerald-500"
+          initial={{ width: '100%' }}
+          animate={{ width: '0%' }}
+          transition={{ duration: duration / 1000, ease: 'linear' }}
+        />
+      </motion.div>
+    </motion.div>
+  )
+}
+
 // Loading overlay for forms and interactive elements
 export function LoadingOverlay({
   isVisible,
@@ -365,4 +576,24 @@ export function LoadingOverlay({
       </div>
     </motion.div>
   )
+}
+
+// Smart Loading States Export (matches user's request format)
+export const LoadingStates = {
+  // Skeleton screens for content
+  courseSkeleton: CourseSkeleton,
+
+  // Button loading states
+  buttonLoading: SmartButton,
+
+  // Success feedback
+  showSuccess: SuccessFeedback,
+
+  // Additional utilities
+  spinner: LoadingSpinner,
+  skeleton: Skeleton,
+  progressBar: ProgressBar,
+  pageLoader: CerebrumPageLoader,
+  videoSkeleton: VideoSkeleton,
+  loadingOverlay: LoadingOverlay,
 }

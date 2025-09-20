@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { CheckCircle, Clock, Users, Award, BookOpen, Target, Star, ArrowRight } from 'lucide-react'
 import { PricingDisplay } from '@/components/ui/PricingDisplay'
+import { Breadcrumbs, BreadcrumbContainer } from '@/components/ui/Breadcrumbs'
 
 export default function Class11BiologyPage() {
   const courseFeatures = [
@@ -48,6 +49,11 @@ export default function Class11BiologyPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      {/* Breadcrumbs */}
+      <BreadcrumbContainer className="pt-4">
+        <Breadcrumbs />
+      </BreadcrumbContainer>
+
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-green-600 to-blue-600 text-white py-20">
         <div className="max-w-7xl mx-auto px-6">

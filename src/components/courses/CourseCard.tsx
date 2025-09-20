@@ -24,11 +24,11 @@ export function CourseCard({ course, selectedTier = 'ascent' }: CourseCardProps)
   const tierInfo = courseTiers.find((t) => t.series === activeTier)
   const tierPricing = pricing.tiers.find((t) => t.series === activeTier)
 
-  // Premium black-gold theme for all course cards
+  // Clean, professional theme like Ministry of Education card
   const tierColors = {
-    pinnacle: 'from-black via-gray-900 to-black',
-    ascent: 'from-black via-gray-900 to-black',
-    pursuit: 'from-black via-gray-900 to-black',
+    pinnacle: 'from-blue-50 to-blue-100',
+    ascent: 'from-green-50 to-green-100',
+    pursuit: 'from-purple-50 to-purple-100',
   }
 
   const tierNames = {
@@ -58,59 +58,72 @@ export function CourseCard({ course, selectedTier = 'ascent' }: CourseCardProps)
 
   return (
     <div className="bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
-      {/* Course Header */}
-      <div
-        className={`bg-gradient-to-r ${tierColors[activeTier]} p-6 text-white relative overflow-hidden`}
-      >
-        <div className="absolute top-2 right-2 text-2xl opacity-20">
-          {getClassEmoji(course.targetClass)}
+      {/* Course Header - Clean Ministry style */}
+      <div className="p-8 text-center">
+        {/* Course Icon - like Ministry badge */}
+        <div
+          className={`w-20 h-20 mx-auto mb-6 bg-gradient-to-br ${tierColors[activeTier]} rounded-full flex items-center justify-center`}
+        >
+          <div className="text-3xl">{getClassEmoji(course.targetClass)}</div>
         </div>
 
-        <div className="flex items-start justify-between mb-4">
-          <div className="flex-1">
-            <div className="flex items-center space-x-2 mb-2">
-              <span className="bg-gray-800/80 border border-yellow-400/30 px-3 py-1 rounded-full text-sm font-semibold text-white">
-                Class {course.targetClass}
+        <div className="mb-6">
+          <div className="flex items-center justify-center space-x-3 mb-3">
+            <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">
+              Class {course.targetClass}
+            </span>
+            {course.isPopular && (
+              <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium">
+                ⭐ Popular
               </span>
-              {course.isPopular && (
-                <span className="bg-gradient-to-r from-yellow-400 to-yellow-500 text-black px-3 py-1 rounded-full text-xs font-black border-2 border-yellow-300 shadow-lg">
-                  POPULAR
-                </span>
-              )}
-            </div>
-            <h3 className="text-xl font-bold mb-2">{course.name}</h3>
-            <p className="text-sm opacity-90 line-clamp-2">{course.description}</p>
+            )}
+          </div>
+          <h3 className="text-2xl font-bold text-gray-900 mb-3">{course.name}</h3>
+          <p className="text-gray-600 leading-relaxed">{course.description}</p>
+        </div>
+
+        {/* Course Stats - Clean Ministry style */}
+        <div className="grid grid-cols-3 gap-4 text-center mb-6">
+          <div className="bg-gray-50 rounded-lg p-4">
+            <div className="text-xl font-bold text-gray-900">{course.duration}</div>
+            <div className="text-sm text-gray-600">Duration</div>
+          </div>
+          <div className="bg-gray-50 rounded-lg p-4">
+            <div className="text-xl font-bold text-gray-900">{course.teachingHours}h</div>
+            <div className="text-sm text-gray-600">Per Week</div>
+          </div>
+          <div className="bg-gray-50 rounded-lg p-4">
+            <div className="text-xl font-bold text-gray-900">{tierInfo?.batchSize || 25}</div>
+            <div className="text-sm text-gray-600">Batch Size</div>
           </div>
         </div>
 
-        {/* Course Stats - Premium design */}
-        <div className="grid grid-cols-3 gap-4 text-center">
-          <div className="bg-gray-800/50 border border-yellow-400/30 rounded-lg p-3">
-            <div className="text-2xl font-bold text-yellow-400">{course.duration}</div>
-            <div className="text-xs text-gray-300">Duration</div>
-          </div>
-          <div className="bg-gray-800/50 border border-yellow-400/30 rounded-lg p-3">
-            <div className="text-2xl font-bold text-yellow-400">{course.teachingHours}h</div>
-            <div className="text-xs text-gray-300">Per Week</div>
-          </div>
-          <div className="bg-gray-800/50 border border-yellow-400/30 rounded-lg p-3">
-            <div className="text-2xl font-bold text-yellow-400">{tierInfo?.batchSize || 25}</div>
-            <div className="text-xs text-gray-300">Batch Size</div>
+        {/* Verification Badge - like Ministry card */}
+        <div className="flex items-center justify-center mb-6">
+          <div className="flex items-center space-x-2 text-green-600">
+            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path
+                fillRule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                clipRule="evenodd"
+              />
+            </svg>
+            <span className="font-medium">NEET Focused</span>
           </div>
         </div>
       </div>
 
       {/* Tier Selection */}
       <div className="p-6">
-        <div className="flex mb-6">
+        <div className="flex mb-6 bg-gray-100 rounded-lg p-1">
           {pricing.tiers.map((tierOption) => (
             <button
               key={tierOption.series}
               onClick={() => setActiveTier(tierOption.series)}
-              className={`flex-1 py-2 px-3 text-sm font-semibold rounded-lg transition-all ${
+              className={`flex-1 py-2 px-3 text-sm font-medium rounded-md transition-all ${
                 activeTier === tierOption.series
-                  ? 'bg-gradient-to-r from-yellow-400 to-yellow-500 text-black font-bold'
-                  : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-600'
+                  ? 'bg-white text-gray-900 shadow-sm'
+                  : 'text-gray-600 hover:text-gray-900'
               }`}
             >
               {tierNames[tierOption.series]}
@@ -118,78 +131,78 @@ export function CourseCard({ course, selectedTier = 'ascent' }: CourseCardProps)
           ))}
         </div>
 
-        {/* Pricing - Premium gold design */}
-        <div className="mb-6 text-center bg-gradient-to-br from-yellow-400 via-yellow-500 to-yellow-600 text-black p-4 rounded-xl shadow-lg">
-          <div className="text-3xl font-black mb-1">
+        {/* Pricing - Clean Ministry style */}
+        <div className="mb-6 text-center bg-gray-50 border border-gray-200 p-6 rounded-xl">
+          <div className="text-3xl font-bold text-gray-900 mb-2">
             {tierPricing?.formattedPrice || formatPrice(pricing.minPrice)}
           </div>
-          <div className="text-sm font-semibold">
+          <div className="text-gray-600 mb-2">
             {formatCurrency(tierPricing?.price || pricing.minPrice)} per year
           </div>
-          <div className="text-sm font-bold">0% EMI available</div>
+          <div className="text-sm text-blue-600 font-medium">0% EMI available</div>
         </div>
 
-        {/* Key Features - Premium theme */}
+        {/* Key Features - Clean style */}
         <div className="mb-6">
-          <h4 className="font-semibold text-white mb-3">Key Features:</h4>
+          <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
           <div className="space-y-2">
             {tierInfo?.highlights.slice(0, 3).map((highlight, index) => (
-              <div key={index} className="flex items-center text-sm text-gray-200">
-                <span className="text-yellow-400 mr-2 font-bold">✓</span>
+              <div key={index} className="flex items-center text-sm text-gray-700">
+                <span className="text-green-600 mr-2 font-bold">✓</span>
                 {highlight}
               </div>
             )) ||
               course.learningOutcomes.slice(0, 3).map((highlight: string, index: number) => (
-                <div key={index} className="flex items-center text-sm text-gray-200">
-                  <span className="text-yellow-400 mr-2 font-bold">✓</span>
+                <div key={index} className="flex items-center text-sm text-gray-700">
+                  <span className="text-green-600 mr-2 font-bold">✓</span>
                   {highlight}
                 </div>
               ))}
             {(tierInfo?.highlights.length || course.learningOutcomes.length) > 3 && (
-              <div className="text-sm text-yellow-400 font-medium">
+              <div className="text-sm text-blue-600 font-medium">
                 +{(tierInfo?.highlights.length || course.learningOutcomes.length) - 3} more features
               </div>
             )}
           </div>
         </div>
 
-        {/* Competitive Advantage - Premium theme */}
-        <div className="mb-6 bg-gray-800/60 border border-yellow-400/40 rounded-lg p-4">
-          <div className="text-sm text-yellow-400 font-bold mb-2">💰 Best Value Guarantee</div>
-          <div className="text-xs text-gray-200">
+        {/* Competitive Advantage - Clean style */}
+        <div className="mb-6 bg-blue-50 border border-blue-200 rounded-lg p-4">
+          <div className="text-sm text-blue-700 font-semibold mb-2">💰 Best Value Guarantee</div>
+          <div className="text-xs text-blue-600">
             Starting ₹12K lower than competitors • Up to 25% scholarships
           </div>
         </div>
 
-        {/* Action Buttons */}
+        {/* Action Buttons - Clean Ministry style */}
         <div className="space-y-3">
           <div className="flex space-x-3">
             <Link
               href={`/courses/${course.id}`}
-              className="flex-1 bg-gray-700 border border-gray-600 text-gray-200 py-3 rounded-xl font-semibold text-center hover:bg-gray-600 transition-colors"
+              className="flex-1 bg-white border border-gray-300 text-gray-700 py-3 rounded-lg font-medium text-center hover:bg-gray-50 transition-colors"
             >
               View Details
             </Link>
             <Link
               href={`/enrollments?course=${course.id}&tier=${activeTier}`}
-              className="flex-1 bg-gradient-to-r from-yellow-400 to-yellow-500 text-black py-3 rounded-xl font-bold text-center hover:from-yellow-500 hover:to-yellow-600 transition-all shadow-lg"
+              className="flex-1 bg-blue-600 text-white py-3 rounded-lg font-semibold text-center hover:bg-blue-700 transition-colors"
             >
               Enroll Now
             </Link>
           </div>
           <button
             onClick={() => setShowDemoModal(true)}
-            className="w-full bg-gradient-to-r from-yellow-400 to-yellow-500 text-black py-3 rounded-xl font-bold hover:from-yellow-500 hover:to-yellow-600 transition-all shadow-lg border-2 border-yellow-300"
+            className="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
           >
             Book Free Demo Class
           </button>
         </div>
 
-        {/* Learning Modes - Premium theme */}
-        <div className="mt-4 flex justify-center space-x-4 text-xs text-gray-300">
+        {/* Learning Modes - Clean style */}
+        <div className="mt-6 flex justify-center space-x-4 text-xs text-gray-500">
           {course.learningMode.map((mode, index) => (
             <span key={index} className="flex items-center">
-              <span className="w-2 h-2 bg-yellow-400 rounded-full mr-1"></span>
+              <span className="w-2 h-2 bg-blue-400 rounded-full mr-1"></span>
               {mode}
             </span>
           ))}

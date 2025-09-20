@@ -6,7 +6,7 @@ import { ConversionTracker } from '@/lib/abTesting/conversionTracking'
 export default function EnrollmentPage() {
   const handleEnrollmentComplete = (data: any) => {
     // Track successful enrollment
-    ConversionTracker.trackEnrollment(data.plan?.name || 'Unknown Plan')
+    ConversionTracker.trackEnrollment()
 
     // You can add additional tracking or API calls here
     console.log('Enrollment completed:', data)

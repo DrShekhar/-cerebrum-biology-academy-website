@@ -14,11 +14,15 @@ import ServiceWorkerProvider from '@/components/mobile/ServiceWorkerProvider'
 // import { FloatingCTA } from '@/components/common/FloatingCTA'
 import { googleIntegration } from '@/lib/analytics/googleIntegration'
 import { metaIntegration } from '@/lib/social/metaIntegration'
-import Header from '@/components/layout/Header'
+import { FixedHeader } from '@/components/layout/FixedHeader'
+import { MobileBottomNav } from '@/components/layout/MobileBottomNav'
 import { Footer } from '@/components/layout/Footer'
+import { ScrollProgressBar } from '@/components/ui/ProgressIndicators'
 import { PersonalizationProvider } from '@/components/providers/PersonalizationProvider'
 import { ABTestProvider } from '@/components/abTesting/ABTestProvider'
+import { PerformanceProvider } from '@/components/providers/PerformanceProvider'
 import './globals.css'
+import '@/styles/performance.css'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -138,33 +142,47 @@ export default function RootLayout({
             <VisitorAnalytics>
               <OfflineFormHandler>
                 <ServiceWorkerProvider>
-                  <PersonalizationProvider>
-                    <ABTestProvider>
-                      <ErrorBoundary>
-                        {/* Skip Navigation Link for Accessibility */}
-                        <a
-                          href="#main-content"
-                          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-md z-[9999] font-medium"
-                        >
-                          Skip to main content
-                        </a>
+                  <PerformanceProvider>
+                    <PersonalizationProvider>
+                      <ABTestProvider>
+                        <ErrorBoundary>
+                          {/* Scroll Progress Bar */}
+                          <ScrollProgressBar />
+                          {/* Skip Navigation Link for Accessibility */}
+                          <a
+                            href="#main-content"
+                            className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-md z-[9999] font-medium"
+                          >
+                            Skip to main content
+                          </a>
 
-                        {/* EMERGENCY: All popup components removed for clean homepage */}
-                        {/* <StickyTrustBar /> */}
-                        <Header />
-                        <main id="main-content" className="min-h-screen">
-                          {children}
-                        </main>
-                        <Footer />
-                        {/* <RealTimeProof /> */}
-                        {/* <FloatingCTA /> */}
+                          {/* EMERGENCY: All popup components removed for clean homepage */}
+                          {/* <StickyTrustBar /> */}
+                          <div data-section="navigation" className="priority-immediate">
+                            <FixedHeader />
+                          </div>
+                          <main
+                            id="main-content"
+                            className="min-h-screen pt-16 pb-16 md:pb-0 performance-layout"
+                          >
+                            {children}
+                          </main>
+                          <div data-lazy="footer" className="priority-lazy">
+                            <Footer />
+                          </div>
+                          <div data-section="mobile-bottom-nav" className="priority-immediate">
+                            <MobileBottomNav />
+                          </div>
+                          {/* <RealTimeProof /> */}
+                          {/* <FloatingCTA /> */}
 
-                        {/* PWA Components - keeping essential only */}
-                        {/* <PWAInstallPrompt showDelay={45000} /> */}
-                        {/* <PWAInstallSuccess /> */}
-                      </ErrorBoundary>
-                    </ABTestProvider>
-                  </PersonalizationProvider>
+                          {/* PWA Components - keeping essential only */}
+                          {/* <PWAInstallPrompt showDelay={45000} /> */}
+                          {/* <PWAInstallSuccess /> */}
+                        </ErrorBoundary>
+                      </ABTestProvider>
+                    </PersonalizationProvider>
+                  </PerformanceProvider>
                 </ServiceWorkerProvider>
               </OfflineFormHandler>
             </VisitorAnalytics>

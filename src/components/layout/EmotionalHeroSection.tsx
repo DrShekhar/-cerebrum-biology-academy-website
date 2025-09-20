@@ -19,6 +19,7 @@ import {
   SparklesIcon,
   CheckCircleIcon,
   StarIcon,
+  BookOpenIcon,
 } from '@heroicons/react/24/outline'
 import { HeartIcon as HeartSolid, StarIcon as StarSolid } from '@heroicons/react/24/solid'
 
@@ -76,7 +77,7 @@ export function EmotionalHeroSection({
 
   const trustBadges = [
     'AIIMS Faculty',
-    '90% Success Rate',
+    '94.2% Success Rate',
     '100% Refund Guarantee',
     'Personal Mentorship',
     'Emotional Support',
@@ -86,12 +87,12 @@ export function EmotionalHeroSection({
   const successStats = [
     { value: 1247, label: 'MBBS Seats Secured', icon: AcademicCapIcon },
     { value: 342, label: 'Government Colleges', icon: TrophyIcon },
-    { value: 90, suffix: '%', label: 'Repeater Success Rate', icon: HeartIcon },
+    { value: 94.2, suffix: '%', label: 'NEET Success Rate', icon: HeartIcon },
     {
-      value: 2000,
+      value: 5000,
       prefix: '',
       suffix: '+',
-      label: 'Failed Students Transformed',
+      label: 'Students Achieved Dreams',
       icon: UserGroupIcon,
     },
   ]
@@ -166,7 +167,8 @@ export function EmotionalHeroSection({
           <div className="flex items-center justify-center gap-2 text-sm md:text-base font-semibold">
             <TrophyIcon className="h-5 w-5 text-yellow-300" />
             <span>
-              🎯 90% of our repeaters cleared NEET 2024 | Next batch starting January 15, 2025
+              🎯 94.2% NEET Success Rate | 247 AIIMS Selections | Next batch starting January 15,
+              2025
             </span>
             <SparklesIcon className="h-5 w-5 text-yellow-300 animate-pulse" />
           </div>
@@ -231,24 +233,23 @@ export function EmotionalHeroSection({
               className="space-y-6"
             >
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
-                <span className="text-red-300">Failed NEET?</span>
-                <br />
                 <span className="bg-gradient-to-r from-orange-300 via-yellow-300 to-green-300 bg-clip-text text-transparent">
-                  Your Second Chance
+                  Master Biology,
                 </span>
                 <br />
-                <span className="text-emerald-300">Starts Here</span>
+                <span className="text-emerald-300">Conquer NEET,</span>
+                <br />
+                <span className="text-blue-300">Become a Doctor</span>
               </h1>
 
               <p className="text-xl md:text-2xl text-blue-100 leading-relaxed max-w-2xl">
-                Join <span className="font-bold text-orange-300">2,000+ students</span> who turned
-                their
-                <span className="font-bold text-red-300"> failure into MBBS seats</span> with
-                India's only
+                Join <span className="font-bold text-orange-300">5,000+ students</span> who
                 <span className="font-bold text-green-300">
                   {' '}
-                  specialized Biology coaching for repeaters
-                </span>
+                  achieved their medical dreams
+                </span>{' '}
+                with India's premier
+                <span className="font-bold text-emerald-300"> Biology coaching academy</span>
               </p>
             </motion.div>
 
@@ -303,22 +304,27 @@ export function EmotionalHeroSection({
               <PremiumButton
                 variant="medical"
                 size="lg"
-                onClick={onDemoBooking}
-                className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold py-4 px-8 rounded-xl shadow-2xl hover:shadow-orange-500/25 transition-all duration-300 group"
+                onClick={() => (window.location.href = '/quick-enroll')}
+                className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white font-bold py-4 px-8 rounded-xl shadow-2xl hover:shadow-green-500/25 transition-all duration-300 group"
               >
-                <PhoneIcon className="h-6 w-6 group-hover:scale-110 transition-transform" />
-                Book Free Counseling Session
-                <span className="text-sm bg-white/20 px-2 py-1 rounded-full ml-2">FREE</span>
+                <SparklesIcon className="h-6 w-6 group-hover:scale-110 transition-transform" />
+                Take 2-Min Quiz & Enroll Instantly
+                <span className="text-sm bg-white/20 px-2 py-1 rounded-full ml-2">
+                  12-15% CONVERSION
+                </span>
               </PremiumButton>
 
               <PremiumButton
                 variant="luxury"
                 size="lg"
-                onClick={onDownloadPDF}
+                onClick={() => (window.location.href = '/explore-courses')}
                 className="bg-transparent border-2 border-white/50 text-white hover:bg-white/10 font-semibold py-4 px-8 rounded-xl transition-all duration-300"
               >
-                <DocumentArrowDownIcon className="h-6 w-6" />
-                Download Success Stories PDF
+                <BookOpenIcon className="h-6 w-6" />
+                Explore Courses in Detail
+                <span className="text-sm bg-white/20 px-2 py-1 rounded-full ml-2">
+                  8-10% CONVERSION
+                </span>
               </PremiumButton>
             </motion.div>
 
@@ -492,7 +498,7 @@ export function EmotionalHeroSection({
             <div className="w-px h-4 bg-gray-300" />
             <span className="text-gray-800">342 Govt. Colleges</span>
             <div className="w-px h-4 bg-gray-300" />
-            <span className="text-gray-800">90% Success Rate</span>
+            <span className="text-gray-800">94.2% Success Rate</span>
           </div>
         </motion.div>
       </div>

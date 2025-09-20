@@ -20,8 +20,13 @@ export default function ThankYouPage() {
   const [countdown, setCountdown] = useState(120) // 2 minutes countdown
 
   useEffect(() => {
-    // Track thank you page view
-    ConversionTracker.trackPageView('thank-you')
+    // Track thank you page view (method is private, use trackConversion instead)
+    ConversionTracker.trackConversion({
+      goalId: 'thank-you-page-view',
+      testId: 'thank-you',
+      variantId: 'default',
+      value: 0,
+    })
 
     // Google Ads conversion tracking
     if (typeof window !== 'undefined' && (window as any).gtag) {

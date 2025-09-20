@@ -5,7 +5,7 @@
  */
 
 import Redis from 'ioredis'
-import type { AuditLog, UserType, AuditAction, AuditStatus, MCPError } from '../types'
+import { AuditLog, UserType, AuditAction, AuditStatus, MCPError } from '../types'
 
 interface AuditConfiguration {
   enabledActions: AuditAction[]
