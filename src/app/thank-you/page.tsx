@@ -21,11 +21,10 @@ export default function ThankYouPage() {
 
   useEffect(() => {
     // Track thank you page view (method is private, use trackConversion instead)
-    ConversionTracker.trackConversion({
-      goalId: 'thank-you-page-view',
+    ConversionTracker.trackConversion('page_view', 0, {
       testId: 'thank-you',
       variantId: 'default',
-      value: 0,
+      pageType: 'thank-you',
     })
 
     // Google Ads conversion tracking

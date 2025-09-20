@@ -13,7 +13,7 @@ import helmet from 'helmet'
 import rateLimit from 'express-rate-limit'
 import jwt from 'jsonwebtoken'
 
-import type {
+import {
   MCPServerConfig,
   EducationalAgent,
   StudentQuery,

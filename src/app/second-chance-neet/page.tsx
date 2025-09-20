@@ -10,11 +10,10 @@ export default function SecondChanceNEETPage() {
     ConversionTracker.initialize()
 
     // Track landing page view (method is private, use trackConversion instead)
-    ConversionTracker.trackConversion({
-      goalId: 'second-chance-page-view',
+    ConversionTracker.trackConversion('page_view', 0, {
       testId: 'second-chance-landing',
       variantId: 'default',
-      value: 0,
+      pageType: 'second-chance-neet',
     })
 
     // Google Ads conversion tracking for page view
