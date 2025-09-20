@@ -6,7 +6,7 @@ import { useRouter, useSearchParams } from 'next/navigation'
 import { motion } from 'framer-motion'
 import { BookOpen, Lock, Eye, EyeOff, AlertCircle } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
-import { checkRateLimit } from '@/lib/auth'
+// Rate limiting will be handled server-side in the API route
 
 function AdminLoginForm() {
   const [email, setEmail] = useState('')
@@ -31,12 +31,7 @@ function AdminLoginForm() {
       return
     }
 
-    // Simple rate limiting check (in production, this should be server-side)
-    if (!checkRateLimit(email)) {
-      setError('Too many login attempts. Please try again in 15 minutes.')
-      setIsLoading(false)
-      return
-    }
+    // Rate limiting is handled server-side in NextAuth
 
     try {
       const result = await signIn('credentials', {
