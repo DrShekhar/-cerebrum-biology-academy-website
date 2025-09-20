@@ -1,6 +1,4 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": ".next",
   "framework": "nextjs",
   "installCommand": "npm install --legacy-peer-deps",
   "env": {
@@ -11,14 +9,6 @@
     "AUTH_SECRET": "cerebrum-biology-academy-production-secret-2024-vercel",
     "AUTH_TRUST_HOST": "true",
     "ADMIN_EMAIL": "admin@cerebrumbiologyacademy.com",
-    "ADMIN_PASSWORD_HASH": "$2a$12$LQv3c1yqBwkVsvDqjrOuWOFHk.cqmZqjSmUjcScVHFWuLnDSsOlMe",
-    "NEXT_TELEMETRY_DISABLED": "1",
-    "SKIP_ENV_VALIDATION": "true"
-  },
-  "regions": ["bom1"],
-  "functions": {
-    "src/app/api/**/*.ts": {
-      "maxDuration": 10
-    }
+    "ADMIN_PASSWORD_HASH": "$2a$12$LQv3c1yqBwkVsvDqjrOuWOFHk.cqmZqjSmUjcScVHFWuLnDSsOlMe"
   }
 }
