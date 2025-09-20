@@ -40,15 +40,17 @@ function createPrismaClient() {
       errorFormat: 'minimal',
     })
 
-    // Test the client connection in a non-blocking way
-    process.nextTick(async () => {
-      try {
-        await client.$queryRaw`SELECT 1`
-        console.log('✅ Prisma client initialized successfully')
-      } catch (error) {
-        console.warn('⚠️ Prisma connection test failed, operations may fallback to mock:', error)
-      }
-    })
+    // Test the client connection in a non-blocking way (only in non-build environments)
+    if (process.env.NODE_ENV !== 'production' && !process.env.VERCEL_ENV) {
+      process.nextTick(async () => {
+        try {
+          await client.$queryRaw`SELECT 1`
+          console.log('✅ Prisma client initialized successfully')
+        } catch (error) {
+          console.warn('⚠️ Prisma connection test failed, operations may fallback to mock:', error)
+        }
+      })
+    }
 
     return client
   } catch (error) {

@@ -10,7 +10,6 @@
     "NEXTAUTH_SECRET": "cerebrum-biology-academy-production-secret-2024-vercel",
     "AUTH_SECRET": "cerebrum-biology-academy-production-secret-2024-vercel",
     "AUTH_TRUST_HOST": "true",
-    "DATABASE_URL": "file:./prisma/prod.db",
     "ADMIN_EMAIL": "admin@cerebrumbiologyacademy.com",
     "ADMIN_PASSWORD_HASH": "$2a$12$LQv3c1yqBwkVsvDqjrOuWOFHk.cqmZqjSmUjcScVHFWuLnDSsOlMe"
   },
