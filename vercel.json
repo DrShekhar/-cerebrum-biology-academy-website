@@ -2,21 +2,22 @@
   "buildCommand": "npm run build",
   "outputDirectory": ".next",
   "framework": "nextjs",
-  "installCommand": "npm install",
+  "installCommand": "npm install --legacy-peer-deps && npx prisma generate",
   "env": {
-    "NEXT_PUBLIC_SITE_URL": "https://cerebrum-biology-academy-website.vercel.app",
-    "NEXT_PUBLIC_ENV": "production"
-  },
-  "functions": {
-    "src/app/api/**/*.ts": {
-      "runtime": "nodejs18.x"
-    }
+    "NEXT_PUBLIC_SITE_URL": "https://cerebrum-biology-academy-website-gnd0it0vm.vercel.app",
+    "NEXT_PUBLIC_ENV": "production",
+    "NEXTAUTH_URL": "https://cerebrum-biology-academy-website-gnd0it0vm.vercel.app",
+    "NEXTAUTH_SECRET": "cerebrum-biology-academy-production-secret-2024-vercel",
+    "AUTH_SECRET": "cerebrum-biology-academy-production-secret-2024-vercel",
+    "AUTH_TRUST_HOST": "true",
+    "DATABASE_URL": "file:./prisma/prod.db",
+    "ADMIN_EMAIL": "admin@cerebrumbiologyacademy.com",
+    "ADMIN_PASSWORD_HASH": "$2a$12$LQv3c1yqBwkVsvDqjrOuWOFHk.cqmZqjSmUjcScVHFWuLnDSsOlMe"
   },
   "regions": ["bom1"],
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/next"
+  "functions": {
+    "src/app/api/**/*.ts": {
+      "maxDuration": 10
     }
-  ]
+  }
 }
