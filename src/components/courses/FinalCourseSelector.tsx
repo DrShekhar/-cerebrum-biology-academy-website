@@ -4,8 +4,10 @@ import { useState, useMemo } from 'react'
 import { motion } from 'framer-motion'
 import { ClassLevel, CourseProgram } from '@/types/courseSystem'
 import { coursePrograms, courseTiers } from '@/data/courseSystemData'
+import { getSeriesForClass } from '@/data/seriesData'
 import { ClassFilterNav } from './ClassFilterNav'
 import { CourseCard } from './CourseCard'
+import { SeriesCard } from './SeriesCard'
 import { DemoClassModal } from './DemoClassModal'
 
 interface FinalCourseSelectorProps {
@@ -72,6 +74,14 @@ export function FinalCourseSelector({ onCourseSelect, className = '' }: FinalCou
       onCourseSelect(course, tier)
     }
   }
+
+  const handlePlanSelection = (seriesId: string, planId: string) => {
+    console.log(`Selected ${seriesId} Plan ${planId} for Class ${selectedClass}`)
+    // Navigate to plan details page or trigger callback
+  }
+
+  // Get series data for the selected class
+  const seriesData = selectedClass !== 'all' ? getSeriesForClass(selectedClass) : []
 
   return (
     <div
@@ -192,68 +202,282 @@ export function FinalCourseSelector({ onCourseSelect, className = '' }: FinalCou
               className="mb-8 text-center"
             >
               <p className="text-gray-600">
-                Showing{' '}
-                <span className="font-semibold text-blue-600">{filteredCourses.length}</span> course
-                {filteredCourses.length !== 1 ? 's' : ''}
-                {selectedClass !== 'all' && (
-                  <span>
-                    {' '}
-                    for <span className="font-semibold">Class {selectedClass}</span>
-                  </span>
-                )}
-                {searchQuery && (
-                  <span>
-                    {' '}
-                    matching "<span className="font-semibold">{searchQuery}</span>"
-                  </span>
+                {selectedClass !== 'all' ? (
+                  <>
+                    Showing <span className="font-semibold text-blue-600">3 course series</span> for{' '}
+                    <span className="font-semibold">Class {selectedClass}</span>
+                    <br />
+                    <span className="text-sm">
+                      Choose your series, then select from Plan A, B, or C
+                    </span>
+                  </>
+                ) : (
+                  <>
+                    Showing{' '}
+                    <span className="font-semibold text-blue-600">{filteredCourses.length}</span>{' '}
+                    course
+                    {filteredCourses.length !== 1 ? 's' : ''}
+                    {searchQuery && (
+                      <span>
+                        {' '}
+                        matching "<span className="font-semibold">{searchQuery}</span>"
+                      </span>
+                    )}
+                  </>
                 )}
               </p>
             </motion.div>
 
-            {/* Course Grid */}
-            {filteredCourses.length > 0 ? (
-              <motion.div
-                initial={{ opacity: 0, y: 40 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8"
-              >
-                {filteredCourses.map((course, index) => (
+            {/* Enhanced Course Grid with Apple-level transitions */}
+            <AnimatePresence mode="wait">
+              {selectedClass !== 'all' ? (
+                // Show 3 Series Cards (Pinnacle, Ascent, Pursuit) when specific class is selected
+                seriesData.length > 0 ? (
                   <motion.div
-                    key={course.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.1 * index }}
+                    key={`series-${selectedClass}`}
+                    initial={{ opacity: 0, y: 60, scale: 0.9 }}
+                    animate={{
+                      opacity: 1,
+                      y: 0,
+                      scale: 1,
+                      transition: {
+                        duration: 0.8,
+                        ease: [0.16, 1, 0.3, 1],
+                        staggerChildren: 0.12,
+                        delayChildren: 0.2,
+                      },
+                    }}
+                    exit={{
+                      opacity: 0,
+                      y: -30,
+                      scale: 0.95,
+                      transition: {
+                        duration: 0.4,
+                        ease: [0.4, 0, 1, 1],
+                      },
+                    }}
+                    className="relative"
                   >
-                    <CourseCard course={course} />
+                    {/* Class transition indicator */}
+                    <motion.div
+                      initial={{ scaleX: 0 }}
+                      animate={{ scaleX: 1 }}
+                      exit={{ scaleX: 0 }}
+                      transition={{ duration: 0.6, ease: 'easeInOut' }}
+                      className="h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full mb-8 mx-auto max-w-xs"
+                    />
+
+                    {/* Series Cards Grid */}
+                    <div className="grid lg:grid-cols-3 gap-8">
+                      {seriesData.map((series, index) => (
+                        <motion.div
+                          key={`${series.id}-${selectedClass}`}
+                          variants={{
+                            hidden: {
+                              opacity: 0,
+                              y: 40,
+                              rotateX: -15,
+                              scale: 0.9,
+                            },
+                            visible: {
+                              opacity: 1,
+                              y: 0,
+                              rotateX: 0,
+                              scale: 1,
+                              transition: {
+                                duration: 0.7,
+                                ease: [0.16, 1, 0.3, 1],
+                                delay: index * 0.15,
+                              },
+                            },
+                          }}
+                          initial="hidden"
+                          animate="visible"
+                          whileHover={{
+                            y: -5,
+                            transition: { duration: 0.2 },
+                          }}
+                        >
+                          <SeriesCard
+                            series={series}
+                            classLevel={selectedClass}
+                            onPlanSelect={handlePlanSelection}
+                          />
+                        </motion.div>
+                      ))}
+                    </div>
+
+                    {/* Floating context indicators */}
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 1, duration: 0.5 }}
+                      className="flex justify-center mt-8 space-x-8"
+                    >
+                      {['Pinnacle', 'Ascent', 'Pursuit'].map((name, index) => (
+                        <motion.div
+                          key={name}
+                          initial={{ scale: 0 }}
+                          animate={{ scale: 1 }}
+                          transition={{
+                            delay: 1.2 + index * 0.1,
+                            type: 'spring',
+                            stiffness: 200,
+                            damping: 10,
+                          }}
+                          className="flex items-center space-x-2 text-sm text-gray-500"
+                        >
+                          <div
+                            className={`w-2 h-2 rounded-full ${
+                              index === 0
+                                ? 'bg-purple-400'
+                                : index === 1
+                                  ? 'bg-blue-400'
+                                  : 'bg-green-400'
+                            } animate-pulse`}
+                          />
+                          <span className="font-medium">{name} Series</span>
+                        </motion.div>
+                      ))}
+                    </motion.div>
                   </motion.div>
-                ))}
-              </motion.div>
-            ) : (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.6 }}
-                className="text-center py-16"
-              >
-                <div className="text-6xl mb-4">📚</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">No Courses Found</h3>
-                <p className="text-gray-600 mb-8">
-                  {searchQuery
-                    ? `No courses match your search "${searchQuery}"`
-                    : `No courses available for ${selectedClass === 'all' ? 'the selected filters' : `Class ${selectedClass}`}`}
-                </p>
-                <button
-                  onClick={() => {
-                    setSearchQuery('')
-                    setSelectedClass('all')
+                ) : (
+                  <motion.div
+                    key={`no-series-${selectedClass}`}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.9 }}
+                    transition={{ duration: 0.5 }}
+                    className="text-center py-16"
+                  >
+                    <motion.div
+                      animate={{
+                        y: [0, -10, 0],
+                        transition: {
+                          duration: 2,
+                          repeat: Infinity,
+                          ease: 'easeInOut',
+                        },
+                      }}
+                      className="text-6xl mb-4"
+                    >
+                      📚
+                    </motion.div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4">No Series Found</h3>
+                    <p className="text-gray-600">
+                      No series data available for Class {selectedClass}
+                    </p>
+                  </motion.div>
+                )
+              ) : filteredCourses.length > 0 ? (
+                // Show regular course cards when 'all' is selected
+                <motion.div
+                  key="all-courses"
+                  initial={{ opacity: 0, y: 60, scale: 0.95 }}
+                  animate={{
+                    opacity: 1,
+                    y: 0,
+                    scale: 1,
+                    transition: {
+                      duration: 0.8,
+                      ease: [0.16, 1, 0.3, 1],
+                      staggerChildren: 0.08,
+                      delayChildren: 0.1,
+                    },
                   }}
-                  className="bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition-colors"
+                  exit={{
+                    opacity: 0,
+                    y: -30,
+                    scale: 0.95,
+                    transition: {
+                      duration: 0.4,
+                      ease: [0.4, 0, 1, 1],
+                    },
+                  }}
+                  className="relative"
                 >
-                  Clear Filters
-                </button>
-              </motion.div>
-            )}
+                  {/* All courses indicator */}
+                  <motion.div
+                    initial={{ scaleX: 0 }}
+                    animate={{ scaleX: 1 }}
+                    exit={{ scaleX: 0 }}
+                    transition={{ duration: 0.6, ease: 'easeInOut' }}
+                    className="h-1 bg-gradient-to-r from-slate-500 to-slate-600 rounded-full mb-8 mx-auto max-w-xs"
+                  />
+
+                  <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
+                    {filteredCourses.map((course, index) => (
+                      <motion.div
+                        key={course.id}
+                        variants={{
+                          hidden: {
+                            opacity: 0,
+                            y: 30,
+                            scale: 0.95,
+                          },
+                          visible: {
+                            opacity: 1,
+                            y: 0,
+                            scale: 1,
+                            transition: {
+                              duration: 0.6,
+                              ease: [0.16, 1, 0.3, 1],
+                              delay: index * 0.08,
+                            },
+                          },
+                        }}
+                        initial="hidden"
+                        animate="visible"
+                        whileHover={{
+                          y: -3,
+                          transition: { duration: 0.2 },
+                        }}
+                      >
+                        <CourseCard course={course} />
+                      </motion.div>
+                    ))}
+                  </div>
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="no-courses"
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.9 }}
+                  transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                  className="text-center py-16"
+                >
+                  <motion.div
+                    animate={{
+                      y: [0, -10, 0],
+                      transition: {
+                        duration: 2,
+                        repeat: Infinity,
+                        ease: 'easeInOut',
+                      },
+                    }}
+                    className="text-6xl mb-4"
+                  >
+                    🔍
+                  </motion.div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">No Courses Found</h3>
+                  <p className="text-gray-600 mb-8">
+                    {searchQuery
+                      ? `No courses match your search "${searchQuery}"`
+                      : `No courses available for ${selectedClass === 'all' ? 'the selected filters' : `Class ${selectedClass}`}`}
+                  </p>
+                  <button
+                    onClick={() => {
+                      setSearchQuery('')
+                      setSelectedClass('all')
+                    }}
+                    className="bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition-colors"
+                  >
+                    Clear Filters
+                  </button>
+                </motion.div>
+              )}
+            </AnimatePresence>
 
             {/* Tier Comparison Section */}
             <motion.div

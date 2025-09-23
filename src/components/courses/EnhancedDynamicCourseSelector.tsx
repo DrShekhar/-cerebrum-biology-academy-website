@@ -562,6 +562,7 @@ export function EnhancedDynamicCourseSelector({
   onCourseSelect,
   className = '',
 }: EnhancedDynamicCourseSelectorProps) {
+  // Redesigned with basic selector's clean aesthetic
   // State management with persistence
   const [selectedCourse, setSelectedCourse, clearSelectedCourse] = useLocalStorage<
     Partial<SelectedCourse>
@@ -833,20 +834,20 @@ export function EnhancedDynamicCourseSelector({
         )}
       </AnimatePresence>
 
-      {/* Enhanced Progress Bar */}
+      {/* Simple Progress Bar - matching basic selector style */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6 }}
-        className="mb-12 relative"
+        className="mb-8 relative"
       >
         {/* Reset Button */}
-        <div className="absolute -top-4 right-0">
+        <div className="absolute -top-2 right-0">
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={handleReset}
-            className="flex items-center gap-2 text-gray-500 hover:text-gray-700 text-sm bg-white/80 backdrop-blur-xl px-3 py-2 rounded-full shadow-md transition-colors"
+            className="flex items-center gap-2 text-gray-500 hover:text-gray-700 text-sm bg-white/70 backdrop-blur-sm px-3 py-1.5 rounded-lg shadow-sm transition-colors"
             disabled={loadingState.isLoading}
           >
             <RotateCcw className="w-4 h-4" />
@@ -854,102 +855,54 @@ export function EnhancedDynamicCourseSelector({
           </motion.button>
         </div>
 
-        {/* Progress indicators */}
-        <div className="bg-white/80 backdrop-blur-xl rounded-3xl p-6 border border-white/30 shadow-2xl">
-          <div className="flex items-center justify-between mb-6">
+        {/* Simple Step Indicators */}
+        <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-4 border border-white/20">
+          <div className="flex items-center justify-between mb-4">
             {steps.map((step, index) => (
-              <div key={step} className="flex items-center relative">
-                <motion.div
-                  className={`w-14 h-14 rounded-full flex items-center justify-center text-sm font-bold transition-all duration-500 relative overflow-hidden ${
-                    index <= currentStep
-                      ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-2xl scale-110'
-                      : 'bg-gray-100 text-gray-400 shadow-md'
+              <div key={step} className="flex items-center">
+                <div
+                  className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-semibold transition-all duration-300 ${
+                    index <= currentStep ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-500'
                   }`}
-                  whileHover={{ scale: index <= currentStep ? 1.15 : 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  role="button"
-                  aria-label={`Step ${index + 1}: ${step}`}
-                  tabIndex={0}
                 >
-                  {index <= currentStep && (
-                    <motion.div
-                      className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 opacity-30"
-                      animate={{ rotate: 360 }}
-                      transition={{ duration: 4, repeat: Infinity, ease: 'linear' }}
-                    />
-                  )}
-
                   {index < currentStep ? (
-                    <CheckCircle className="w-6 h-6" />
-                  ) : index === currentStep ? (
-                    <motion.div
-                      animate={{ scale: [1, 1.2, 1] }}
-                      transition={{ duration: 1.5, repeat: Infinity }}
-                    >
-                      <Sparkles className="w-6 h-6" />
-                    </motion.div>
+                    <CheckCircle className="w-5 h-5" />
                   ) : (
                     <span>{index + 1}</span>
                   )}
-                </motion.div>
+                </div>
 
-                <div className="ml-4">
-                  <motion.span
-                    className={`block text-base font-semibold transition-all duration-300 ${
+                <div className="ml-3">
+                  <span
+                    className={`block text-sm font-medium transition-colors ${
                       index <= currentStep ? 'text-gray-900' : 'text-gray-400'
                     }`}
-                    animate={index === currentStep ? { scale: [1, 1.05, 1] } : {}}
-                    transition={{ duration: 2, repeat: Infinity }}
                   >
                     {step}
-                  </motion.span>
-                  {index === currentStep && (
-                    <motion.div
-                      initial={{ width: 0 }}
-                      animate={{ width: '100%' }}
-                      className="h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mt-1"
-                    />
-                  )}
+                  </span>
                 </div>
 
                 {index < steps.length - 1 && (
-                  <motion.div className="mx-8">
+                  <div className="mx-6">
                     <ChevronRight
-                      className={`w-6 h-6 transition-all duration-300 ${
+                      className={`w-5 h-5 transition-colors ${
                         index < currentStep ? 'text-blue-500' : 'text-gray-300'
                       }`}
                     />
-                  </motion.div>
+                  </div>
                 )}
               </div>
             ))}
           </div>
 
-          {/* Enhanced Progress Bar */}
-          <div className="relative">
-            <div className="w-full bg-gradient-to-r from-gray-100 to-gray-200 rounded-full h-4 overflow-hidden shadow-inner">
-              <motion.div
-                className="h-4 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-600 relative overflow-hidden shadow-lg"
-                initial={{ width: 0 }}
-                animate={{ width: `${((currentStep + 1) / steps.length) * 100}%` }}
-                transition={{ duration: 0.8, ease: 'easeOut' }}
-              >
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-white/40 to-transparent"
-                  animate={{ x: ['-100%', '100%'] }}
-                  transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-                />
-              </motion.div>
-            </div>
-
-            {/* Progress Percentage */}
+          {/* Simple Progress Bar */}
+          <div className="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
             <motion.div
-              className="absolute -top-10 text-sm font-bold text-gray-700 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full shadow-lg border"
-              style={{ left: `${((currentStep + 1) / steps.length) * 100}%` }}
-              animate={{ x: '-50%' }}
-            >
-              {Math.round(((currentStep + 1) / steps.length) * 100)}%
-            </motion.div>
+              className="h-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-500"
+              initial={{ width: 0 }}
+              animate={{ width: `${((currentStep + 1) / steps.length) * 100}%` }}
+              transition={{ duration: 0.5, ease: 'easeOut' }}
+            />
           </div>
         </div>
       </motion.div>
@@ -964,34 +917,20 @@ export function EnhancedDynamicCourseSelector({
           transition={{ duration: 0.4, ease: 'easeInOut' }}
           className="min-h-[600px] relative"
         >
-          {/* Step 0: Enhanced Class Selection */}
+          {/* Step 0: Class Selection - matching basic selector style */}
           {currentStep === 0 && (
             <div>
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="text-center mb-12 relative"
+                className="text-center mb-8"
               >
-                <motion.div
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                  className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 px-6 py-3 rounded-full text-sm font-semibold mb-6 shadow-lg"
-                >
-                  <Rocket className="w-4 h-4" />
-                  Start Your Academic Journey
-                </motion.div>
-
-                <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-                  Select Your
-                  <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent block">
-                    Academic Level
-                  </span>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                  Select Your Academic Level
                 </h2>
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                  Choose your current academic level to unlock personalized course recommendations
-                  tailored to your goals
+                <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                  Choose your current class to get personalized course recommendations
                 </p>
               </motion.div>
 
@@ -999,198 +938,138 @@ export function EnhancedDynamicCourseSelector({
                 {CLASS_LEVELS.map((classLevel, index) => (
                   <motion.div
                     key={classLevel.id}
-                    initial={{ opacity: 0, y: 60, scale: 0.8 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    whileHover={{
-                      scale: 1.05,
-                      y: -8,
-                      transition: { duration: 0.3 },
-                    }}
-                    whileTap={{ scale: 0.95 }}
+                    whileHover={{ scale: 1.02, y: -4 }}
+                    whileTap={{ scale: 0.98 }}
                     onClick={() => handleClassSelect(classLevel.id)}
-                    className="group relative bg-white/90 backdrop-blur-xl rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer border border-white/40 hover:border-blue-300/60 overflow-hidden"
+                    className="group bg-white/70 backdrop-blur-sm rounded-xl p-4 shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer border border-white/30 hover:border-blue-300/50"
                     role="button"
                     aria-label={`Select ${classLevel.name}`}
                     tabIndex={0}
-                    style={{ minHeight: '48px' }} // Accessibility: minimum touch target
+                    style={{ minHeight: '48px' }}
                   >
-                    {/* Background Glow */}
                     <div
-                      className={`absolute inset-0 bg-gradient-to-br ${classLevel.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
-                    />
-
-                    <motion.div
-                      className={`w-12 h-12 rounded-xl bg-gradient-to-r ${classLevel.gradient} flex items-center justify-center text-white mb-3 mx-auto relative overflow-hidden group-hover:scale-110 transition-transform duration-300`}
-                      whileHover={{ rotate: [0, -5, 5, 0] }}
-                      transition={{ duration: 0.4 }}
+                      className={`w-10 h-10 rounded-lg bg-gradient-to-r ${classLevel.gradient} flex items-center justify-center text-white mb-3 mx-auto`}
                     >
-                      <div className="w-6 h-6">{classLevel.icon}</div>
-                    </motion.div>
+                      <div className="w-5 h-5">{classLevel.icon}</div>
+                    </div>
 
                     <h3
-                      className={`text-lg font-bold ${classLevel.textColor} text-center mb-2 group-hover:scale-105 transition-transform duration-300`}
+                      className={`text-base font-semibold ${classLevel.textColor} text-center mb-1`}
                     >
                       {classLevel.name}
                     </h3>
 
-                    <p className="text-gray-600 text-center text-xs leading-relaxed mb-3">
-                      {classLevel.description}
-                    </p>
+                    <p className="text-gray-600 text-center text-sm">{classLevel.description}</p>
 
-                    {/* Highlights */}
-                    <div className="space-y-0.5 mb-3">
-                      {classLevel.highlights.slice(0, 2).map((highlight, idx) => (
-                        <div
-                          key={idx}
-                          className="flex items-center justify-center text-xs text-gray-500"
-                        >
-                          <div className="w-1 h-1 bg-blue-400 rounded-full mr-1.5" />
-                          {highlight}
-                        </div>
-                      ))}
-                    </div>
-
-                    {/* Hover Arrow */}
-                    <motion.div
-                      initial={{ x: -8, opacity: 0 }}
-                      whileHover={{ x: 0, opacity: 1 }}
-                      className="absolute bottom-2 right-2 text-blue-500"
-                    >
-                      <ArrowRight className="w-4 h-4" />
-                    </motion.div>
+                    {classLevel.highlights && (
+                      <div className="mt-2 space-y-1">
+                        {classLevel.highlights.slice(0, 1).map((highlight, idx) => (
+                          <div
+                            key={idx}
+                            className="flex items-center justify-center text-xs text-gray-500"
+                          >
+                            <div className="w-1 h-1 bg-blue-400 rounded-full mr-1" />
+                            {highlight}
+                          </div>
+                        ))}
+                      </div>
+                    )}
                   </motion.div>
                 ))}
               </div>
             </div>
           )}
 
-          {/* Step 1: Enhanced Series Selection */}
+          {/* Step 1: Series Selection - matching basic selector style */}
           {currentStep === 1 && selectedClass && (
             <div>
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="text-center mb-12"
+                className="text-center mb-8"
               >
-                <motion.div
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                  className="inline-flex items-center gap-2 bg-gradient-to-r from-green-100 to-blue-100 text-green-800 px-6 py-3 rounded-full text-sm font-semibold mb-6 shadow-lg"
-                >
-                  <Target className="w-4 h-4" />
-                  Choose Your Learning Path
-                </motion.div>
-
-                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                  Select Your
-                  <span className="bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent block">
-                    Course Series
-                  </span>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                  Choose Your Course Series
                 </h2>
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                  Choose the learning approach that best matches your goals and learning style
+                <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                  Select the learning approach that best fits your goals
                 </p>
               </motion.div>
 
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                 {COURSE_SERIES[selectedClass]?.map((series, index) => (
                   <motion.div
                     key={series.id}
-                    initial={{ opacity: 0, y: 60, scale: 0.9 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     whileHover={{ scale: 1.02, y: -4 }}
                     onClick={() => handleSeriesSelect(series.id)}
-                    className={`relative bg-white/90 backdrop-blur-xl rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer border-2 overflow-hidden ${
+                    className={`relative bg-white/70 backdrop-blur-sm rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer border ${
                       series.popular
-                        ? 'border-blue-500 ring-4 ring-blue-500/20 bg-gradient-to-br from-blue-50/50 to-purple-50/50'
-                        : 'border-white/40 hover:border-gray-300/60'
+                        ? 'border-blue-500 ring-2 ring-blue-500/20'
+                        : 'border-white/30 hover:border-gray-300/50'
                     }`}
                     role="button"
                     aria-label={`Select ${series.name} series`}
                     tabIndex={0}
                   >
                     {/* Badges */}
-                    <div className="absolute top-0 left-0 right-0 flex justify-between p-4">
+                    <div className="flex justify-between items-start mb-4">
                       {series.badge && (
-                        <motion.span
-                          initial={{ scale: 0 }}
-                          animate={{ scale: 1 }}
-                          transition={{ delay: index * 0.1 + 0.3 }}
-                          className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg"
-                        >
+                        <span className="bg-yellow-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
                           {series.badge}
-                        </motion.span>
+                        </span>
                       )}
-
                       {series.popular && (
-                        <motion.span
-                          initial={{ scale: 0 }}
-                          animate={{ scale: 1 }}
-                          transition={{ delay: index * 0.1 + 0.4 }}
-                          className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg"
-                        >
+                        <span className="bg-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
                           Most Popular
-                        </motion.span>
+                        </span>
                       )}
                     </div>
 
-                    <div className="mt-8">
+                    <div className="text-center">
                       <div
-                        className={`w-20 h-20 rounded-3xl mb-6 flex items-center justify-center text-white mx-auto relative overflow-hidden`}
+                        className="w-16 h-16 rounded-xl mb-4 flex items-center justify-center text-white mx-auto"
                         style={{ background: series.color.gradient }}
                       >
-                        <Users className="h-10 w-10" />
-                        <motion.div
-                          className="absolute inset-0 bg-white/20"
-                          animate={{ rotate: 360 }}
-                          transition={{ duration: 10, repeat: Infinity, ease: 'linear' }}
-                        />
+                        <Users className="h-8 w-8" />
                       </div>
 
-                      <h3 className="text-2xl font-bold text-gray-900 mb-2 text-center">
-                        {series.name}
-                      </h3>
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">{series.name}</h3>
 
-                      <p className="text-gray-600 mb-4 text-center">{series.description}</p>
+                      <p className="text-gray-600 mb-4 text-sm">{series.description}</p>
 
                       {/* Success Rate Badge */}
                       {series.success_rate && (
-                        <div className="flex items-center justify-center mb-4">
-                          <div className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold flex items-center gap-1">
-                            <Award className="w-4 h-4" />
-                            {series.success_rate}% Success Rate
-                          </div>
+                        <div className="inline-flex items-center bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold mb-4">
+                          <Award className="w-3 h-3 mr-1" />
+                          {series.success_rate}% Success
                         </div>
                       )}
 
                       {/* Features */}
-                      <div className="space-y-3 mb-6">
-                        {series.features.map((feature, idx) => (
-                          <motion.div
-                            key={idx}
-                            initial={{ opacity: 0, x: -20 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ delay: index * 0.1 + idx * 0.1 }}
-                            className="flex items-start text-sm text-gray-600"
-                          >
-                            <CheckCircle className="h-4 w-4 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
+                      <div className="space-y-2 mb-6 text-left">
+                        {series.features.slice(0, 4).map((feature, idx) => (
+                          <div key={idx} className="flex items-start text-sm text-gray-600">
+                            <CheckCircle className="h-3 w-3 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
                             {feature}
-                          </motion.div>
+                          </div>
                         ))}
                       </div>
 
                       {/* Highlights */}
                       {series.highlights && (
-                        <div className="mb-6">
-                          <div className="flex flex-wrap gap-2 justify-center">
-                            {series.highlights.map((highlight, idx) => (
+                        <div className="mb-4">
+                          <div className="flex flex-wrap gap-1 justify-center">
+                            {series.highlights.slice(0, 3).map((highlight, idx) => (
                               <span
                                 key={idx}
-                                className="bg-gray-100 text-gray-700 px-2 py-1 rounded-full text-xs font-medium"
+                                className="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs"
                               >
                                 {highlight}
                               </span>
@@ -1200,19 +1079,16 @@ export function EnhancedDynamicCourseSelector({
                       )}
 
                       {/* Pricing */}
-                      <div className="text-center border-t border-gray-100 pt-6">
-                        <div className="text-3xl font-bold text-gray-900 mb-2">
+                      <div className="border-t border-gray-100 pt-4">
+                        <div className="text-2xl font-bold text-gray-900 mb-1">
                           ₹{series.pricing.planA.toLocaleString()}
                         </div>
-                        <div className="text-sm text-gray-500 mb-4">Starting from</div>
+                        <div className="text-sm text-gray-500 mb-3">Starting from</div>
 
-                        <motion.div
-                          whileHover={{ scale: 1.05 }}
-                          className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-2 rounded-full text-sm font-semibold inline-flex items-center gap-2"
-                        >
+                        <div className="bg-blue-500 text-white px-4 py-2 rounded-lg text-sm font-semibold inline-flex items-center gap-2 hover:bg-blue-600 transition-colors">
                           Select Plan
-                          <ArrowRight className="w-4 h-4" />
-                        </motion.div>
+                          <ArrowRight className="w-3 h-3" />
+                        </div>
                       </div>
                     </div>
                   </motion.div>
@@ -1226,56 +1102,55 @@ export function EnhancedDynamicCourseSelector({
         </motion.div>
       </AnimatePresence>
 
-      {/* Enhanced Navigation & Summary */}
+      {/* Simple Navigation & Summary - matching basic selector style */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.4 }}
-        className="mt-12 bg-white/80 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-white/30"
+        className="mt-8 bg-white/50 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
       >
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-4">
             {currentStep > 0 && (
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
                 onClick={handleBack}
                 disabled={loadingState.isLoading}
-                className="flex items-center px-6 py-3 text-gray-600 hover:text-gray-900 transition-colors border border-gray-200 rounded-xl font-semibold hover:border-gray-300 disabled:opacity-50"
+                className="flex items-center px-4 py-2 text-gray-600 hover:text-gray-900 transition-colors border border-gray-200 rounded-lg font-medium hover:border-gray-300 disabled:opacity-50"
                 aria-label="Go back to previous step"
               >
-                <ChevronLeft className="h-5 w-5 mr-2" />
+                <ChevronLeft className="h-4 w-4 mr-1" />
                 Back
               </motion.button>
             )}
 
-            {/* Keyboard hint */}
-            <div className="hidden md:flex items-center text-sm text-gray-400 gap-4">
-              <span>Use ← → arrow keys to navigate</span>
-              <span>Press Esc to reset</span>
+            {/* Save notification hint */}
+            <div className="hidden md:flex items-center text-sm text-gray-400">
+              <Save className="w-3 h-3 mr-1" />
+              <span>Progress auto-saved</span>
             </div>
           </div>
 
           {/* Price Summary */}
-          <div className="flex items-center space-x-6">
+          <div className="flex items-center space-x-4">
             {selectedClass && selectedSeries && selectedPlan && (
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
-                className="text-right bg-gradient-to-r from-blue-50 to-purple-50 px-6 py-4 rounded-2xl border border-blue-200"
+                className="text-right bg-blue-50 px-4 py-2 rounded-lg border border-blue-200"
               >
-                <div className="text-sm text-gray-500 mb-1">Total Investment</div>
-                <div className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                <div className="text-xs text-gray-500">Total</div>
+                <div className="text-2xl font-bold text-blue-600">
                   ₹{getCurrentPrice().toLocaleString()}
                 </div>
-                <div className="text-xs text-gray-500 mt-1">All inclusive</div>
               </motion.div>
             )}
 
             {currentStep < steps.length - 1 ? (
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
                 onClick={handleNext}
                 disabled={
                   (currentStep === 0 && !selectedClass) ||
@@ -1283,32 +1158,32 @@ export function EnhancedDynamicCourseSelector({
                   (currentStep === 2 && !selectedPlan) ||
                   loadingState.isLoading
                 }
-                className="flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-2xl font-semibold hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed text-lg"
+                className="flex items-center px-6 py-3 bg-blue-500 text-white rounded-lg font-semibold hover:bg-blue-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 aria-label="Continue to next step"
               >
                 {loadingState.isLoading ? (
-                  <Loader2 className="h-5 w-5 mr-2 animate-spin" />
+                  <Loader2 className="h-4 w-4 mr-2 animate-spin" />
                 ) : (
                   <>
                     Continue
-                    <ArrowRight className="h-5 w-5 ml-2" />
+                    <ArrowRight className="h-4 w-4 ml-2" />
                   </>
                 )}
               </motion.button>
             ) : (
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
                 onClick={handleFinalize}
                 disabled={loadingState.isLoading}
-                className="flex items-center px-10 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-2xl font-semibold hover:shadow-xl transition-all duration-300 disabled:opacity-50 text-lg"
+                className="flex items-center px-8 py-3 bg-green-500 text-white rounded-lg font-semibold hover:bg-green-600 transition-colors disabled:opacity-50"
                 aria-label="Finalize course selection"
               >
                 {loadingState.isLoading ? (
-                  <Loader2 className="h-5 w-5 mr-2 animate-spin" />
+                  <Loader2 className="h-4 w-4 mr-2 animate-spin" />
                 ) : (
                   <>
-                    <Sparkles className="h-5 w-5 mr-2" />
+                    <Check className="h-4 w-4 mr-2" />
                     Enroll Now
                   </>
                 )}
@@ -1317,13 +1192,13 @@ export function EnhancedDynamicCourseSelector({
           </div>
         </div>
 
-        {/* Progress indicators for mobile */}
-        <div className="md:hidden mt-6 pt-6 border-t border-gray-100">
+        {/* Mobile step indicators */}
+        <div className="md:hidden mt-4 pt-4 border-t border-gray-100">
           <div className="flex justify-center items-center gap-2">
             {steps.map((_, index) => (
               <div
                 key={index}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                className={`w-2 h-2 rounded-full transition-colors ${
                   index <= currentStep ? 'bg-blue-500' : 'bg-gray-300'
                 }`}
               />

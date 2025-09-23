@@ -1,0 +1,305 @@
+/* Apple-Level Course Series Grid Styling */
+
+.course-series-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  /* Enhanced grid for different breakpoints */
+  @media (min-width: 640px) {
+    gap: 2.5rem;
+    padding: 2.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr); /* Exactly 3 cards in a row on desktop */
+    gap: 3rem;
+    padding: 3rem;
+  }
+
+  @media (min-width: 1536px) {
+    gap: 3.5rem;
+    padding: 4rem;
+  }
+}
+
+/* Enhanced Course Card with Apple-level design */
+.course-card {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); /* Apple's preferred easing */
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  /* Enhanced glassmorphism effect */
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.1));
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    0 1px 0 rgba(255, 255, 255, 0.5) inset;
+
+  /* Prevent content overflow during animations */
+  will-change: transform;
+  transform-style: preserve-3d;
+}
+
+/* Enhanced hover state with Apple-level micro-interactions */
+.course-card:hover {
+  transform: translateY(-12px) scale(1.03) rotateX(2deg);
+  box-shadow:
+    0 32px 64px rgba(0, 0, 0, 0.2),
+    0 0 0 1px rgba(255, 255, 255, 0.4),
+    0 1px 0 rgba(255, 255, 255, 0.6) inset;
+
+  /* Subtle glow effect */
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.15));
+}
+
+/* Series-specific card styling */
+.course-card.pinnacle {
+  background: linear-gradient(
+    135deg,
+    rgba(168, 85, 247, 0.15),
+    rgba(236, 72, 153, 0.1),
+    rgba(168, 85, 247, 0.05)
+  );
+  border-color: rgba(168, 85, 247, 0.3);
+}
+
+.course-card.ascent {
+  background: linear-gradient(
+    135deg,
+    rgba(59, 130, 246, 0.15),
+    rgba(6, 182, 212, 0.1),
+    rgba(59, 130, 246, 0.05)
+  );
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.course-card.pursuit {
+  background: linear-gradient(
+    135deg,
+    rgba(34, 197, 94, 0.15),
+    rgba(16, 185, 129, 0.1),
+    rgba(34, 197, 94, 0.05)
+  );
+  border-color: rgba(34, 197, 94, 0.3);
+}
+
+/* Enhanced Plan Buttons Container */
+.plan-buttons-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem 1.5rem;
+
+  /* Enhanced gradient overlay */
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.7) 40%,
+    rgba(0, 0, 0, 0.3) 70%,
+    transparent 100%
+  );
+
+  /* Apple-style backdrop blur */
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+
+  /* Initially hidden, slides up on hover */
+  transform: translateY(100%);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  opacity: 0;
+
+  /* Ensure content is readable */
+  color: white;
+}
+
+/* Reveal plan buttons on card hover */
+.course-card:hover .plan-buttons-container {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Plan buttons styling within the container */
+.plan-buttons-container .plan-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transition: all 0.2s ease;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.plan-buttons-container .plan-button:hover {
+  transform: translateX(4px);
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.plan-buttons-container .plan-button:last-child {
+  margin-bottom: 0;
+}
+
+/* Plan button icons and pricing */
+.plan-button-icon {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.2);
+  margin-right: 0.75rem;
+  font-size: 1rem;
+}
+
+.plan-button-details {
+  flex: 1;
+  text-align: left;
+}
+
+.plan-button-title {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  font-size: 0.95rem;
+}
+
+.plan-button-subtitle {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.plan-button-price {
+  font-weight: 700;
+  font-size: 1.1rem;
+  background: linear-gradient(45deg, #fbbf24, #f59e0b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Grid container animations */
+.course-series-grid.animate-in .course-card {
+  animation: card-entrance 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+  transform: translateY(40px) scale(0.95);
+}
+
+.course-series-grid.animate-in .course-card:nth-child(1) {
+  animation-delay: 0s;
+}
+.course-series-grid.animate-in .course-card:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.course-series-grid.animate-in .course-card:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+@keyframes card-entrance {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Loading skeleton animation */
+.course-card.loading {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.1) 25%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.1) 75%
+  );
+  background-size: 200% 100%;
+  animation: loading-shimmer 2s infinite;
+}
+
+@keyframes loading-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .course-series-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+
+  .course-card:hover {
+    transform: translateY(-6px) scale(1.02);
+  }
+
+  .plan-buttons-container {
+    position: static;
+    transform: none;
+    opacity: 1;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.8) 20%);
+    padding: 1.5rem 1rem;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .course-card {
+    border: 2px solid;
+    background: rgba(255, 255, 255, 0.95);
+  }
+
+  .plan-buttons-container {
+    background: rgba(0, 0, 0, 0.95);
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .course-card {
+    transition: none;
+  }
+
+  .course-card:hover {
+    transform: none;
+  }
+
+  .plan-buttons-container {
+    transition: opacity 0.2s ease;
+  }
+}
+
+/* Print styles */
+@media print {
+  .course-series-grid {
+    display: block;
+  }
+
+  .course-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    margin-bottom: 2rem;
+  }
+
+  .plan-buttons-container {
+    position: static;
+    background: none;
+    color: black;
+  }
+}
