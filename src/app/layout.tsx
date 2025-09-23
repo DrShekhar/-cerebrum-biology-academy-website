@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from 'next/font/google'
 import { StructuredData } from '@/components/seo/StructuredData'
 import { ErrorBoundary } from '@/components/ErrorBoundary'
 import { AnalyticsProvider } from '@/components/analytics/AnalyticsProvider'
+import GoogleAnalytics from '@/components/analytics/GoogleAnalytics'
 import { SessionProvider } from '@/components/providers/SessionProvider'
 import { VisitorAnalytics } from '@/components/profiling/VisitorAnalytics'
 import { PWAInstallPrompt, PWAInstallSuccess } from '@/components/pwa/PWAInstallPrompt'
@@ -84,6 +85,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <GoogleAnalytics />
         <StructuredData />
         <meta name="google-site-verification" content="your-google-verification-code" />
         <meta

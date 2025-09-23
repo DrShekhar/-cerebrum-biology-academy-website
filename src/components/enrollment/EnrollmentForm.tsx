@@ -13,6 +13,7 @@ import {
   AlertCircle,
 } from 'lucide-react'
 import { razorpayService } from '@/lib/payments/razorpay'
+import { useAnalytics } from '@/hooks/useAnalytics'
 
 interface Course {
   id: string
@@ -29,6 +30,7 @@ interface EnrollmentFormProps {
 }
 
 export function EnrollmentForm({ course, onSuccess }: EnrollmentFormProps) {
+  const { trackCourseEnrollment, trackFormSubmission } = useAnalytics()
   const [formData, setFormData] = useState({
     studentName: '',
     email: '',
@@ -122,6 +124,8 @@ export function EnrollmentForm({ course, onSuccess }: EnrollmentFormProps) {
 
             if (verified) {
               setSuccess(true)
+              // Track successful enrollment for revenue analytics
+              trackCourseEnrollment(course.id, course.name, enrollmentData.amount)
               onSuccess?.(enrollmentData)
 
               // Send WhatsApp confirmation
@@ -151,10 +155,13 @@ export function EnrollmentForm({ course, onSuccess }: EnrollmentFormProps) {
         // For demo purposes, simulate successful payment
         setTimeout(() => {
           setSuccess(true)
+          // Track successful enrollment for revenue analytics
+          trackCourseEnrollment(course.id, course.name, enrollmentData.amount)
           onSuccess?.(enrollmentData)
         }, 2000)
       } else {
         setError(result.error || 'Failed to process enrollment')
+        trackFormSubmission('enrollment', false, enrollmentData.amount)
       }
     } catch (error) {
       console.error('Enrollment error:', error)
