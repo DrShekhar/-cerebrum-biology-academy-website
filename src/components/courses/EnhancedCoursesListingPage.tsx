@@ -5,6 +5,7 @@ import { ClassLevel, CourseProgram } from '@/types/courseSystem'
 import { coursePrograms, courseTiers } from '@/data/courseSystemData'
 import { ClassFilterNav } from './ClassFilterNav'
 import { CourseCard } from './CourseCard'
+import { ClassTierCard } from './ClassTierCard'
 import { DemoClassModal } from './DemoClassModal'
 
 export function EnhancedCoursesListingPage() {
@@ -20,13 +21,13 @@ export function EnhancedCoursesListingPage() {
       '10th': 0,
       '11th': 0,
       '12th': 0,
-      'Dropper': 0
+      Dropper: 0,
     }
-    
-    coursePrograms.forEach(course => {
+
+    coursePrograms.forEach((course) => {
       counts[course.targetClass]++
     })
-    
+
     return counts
   }, [])
 
@@ -35,14 +36,15 @@ export function EnhancedCoursesListingPage() {
     let filtered = coursePrograms
 
     if (selectedClass !== 'all') {
-      filtered = filtered.filter(course => course.targetClass === selectedClass)
+      filtered = filtered.filter((course) => course.targetClass === selectedClass)
     }
 
     if (searchQuery) {
-      filtered = filtered.filter(course =>
-        course.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        course.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        course.targetClass.toLowerCase().includes(searchQuery.toLowerCase())
+      filtered = filtered.filter(
+        (course) =>
+          course.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          course.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          course.targetClass.toLowerCase().includes(searchQuery.toLowerCase())
       )
     }
 
@@ -67,10 +69,10 @@ export function EnhancedCoursesListingPage() {
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h1 className="text-5xl font-bold mb-6">NEET Biology Courses</h1>
           <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
-            Choose from our comprehensive range of NEET Biology courses designed for every class level. 
-            Expert faculty, proven curriculum, and guaranteed results.
+            Choose from our comprehensive range of NEET Biology courses designed for every class
+            level. Expert faculty, proven curriculum, and guaranteed results.
           </p>
-          
+
           {/* Stats */}
           <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
@@ -99,11 +101,10 @@ export function EnhancedCoursesListingPage() {
           {/* Search and Filter Section */}
           <div className="mb-8">
             <div className="text-center mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Find Your Perfect Course
-              </h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Find Your Perfect Course</h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Explore our class-wise course offerings with flexible pricing tiers and payment options
+                Explore our class-wise course offerings with flexible pricing tiers and payment
+                options
               </p>
             </div>
 
@@ -134,46 +135,62 @@ export function EnhancedCoursesListingPage() {
           {/* Results Summary */}
           <div className="mb-8 text-center">
             <p className="text-gray-600">
-              Showing <span className="font-semibold text-blue-600">{filteredCourses.length}</span> course
-              {filteredCourses.length !== 1 ? 's' : ''} 
+              Showing <span className="font-semibold text-blue-600">{filteredCourses.length}</span>{' '}
+              course
+              {filteredCourses.length !== 1 ? 's' : ''}
               {selectedClass !== 'all' && (
-                <span> for <span className="font-semibold">Class {selectedClass}</span></span>
+                <span>
+                  {' '}
+                  for <span className="font-semibold">Class {selectedClass}</span>
+                </span>
               )}
               {searchQuery && (
-                <span> matching "<span className="font-semibold">{searchQuery}</span>"</span>
+                <span>
+                  {' '}
+                  matching "<span className="font-semibold">{searchQuery}</span>"
+                </span>
               )}
             </p>
           </div>
 
           {/* Course Grid */}
-          {filteredCourses.length > 0 ? (
-            <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
-              {filteredCourses.map((course) => (
-                <CourseCard
-                  key={course.id}
-                  course={course}
-                />
-              ))}
-            </div>
+          {selectedClass === 'all' ? (
+            // Show all courses when "All Classes" is selected
+            filteredCourses.length > 0 ? (
+              <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
+                {filteredCourses.map((course) => (
+                  <CourseCard key={course.id} course={course} />
+                ))}
+              </div>
+            ) : (
+              <div className="text-center py-16">
+                <div className="text-6xl mb-4">📚</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">No Courses Found</h3>
+                <p className="text-gray-600 mb-8">
+                  {searchQuery
+                    ? `No courses match your search "${searchQuery}"`
+                    : 'No courses available for the selected filters'}
+                </p>
+              </div>
+            )
           ) : (
-            <div className="text-center py-16">
-              <div className="text-6xl mb-4">📚</div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">No Courses Found</h3>
-              <p className="text-gray-600 mb-8">
-                {searchQuery 
-                  ? `No courses match your search "${searchQuery}"`
-                  : `No courses available for ${selectedClass === 'all' ? 'the selected filters' : `Class ${selectedClass}`}`
-                }
-              </p>
-              <button
-                onClick={() => {
-                  setSearchQuery('')
-                  setSelectedClass('all')
-                }}
-                className="bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition-colors"
-              >
-                Clear Filters
-              </button>
+            // Show tier cards when a specific class is selected
+            <div>
+              <div className="text-center mb-8">
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                  Choose Your Learning Path for Class {selectedClass}
+                </h2>
+                <p className="text-gray-600 max-w-2xl mx-auto">
+                  Select the tier that best matches your learning goals and commitment level. Each
+                  tier offers different features and batch sizes to optimize your NEET preparation.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto pb-8">
+                {(['pinnacle', 'ascent', 'pursuit'] as const).map((tier) => (
+                  <ClassTierCard key={tier} classLevel={selectedClass} tier={tier} />
+                ))}
+              </div>
             </div>
           )}
 
@@ -181,25 +198,32 @@ export function EnhancedCoursesListingPage() {
           <div className="mt-20 bg-white rounded-3xl shadow-lg p-8">
             <div className="text-center mb-8">
               <h3 className="text-3xl font-bold text-gray-900 mb-4">Compare Our Course Tiers</h3>
-              <p className="text-gray-600">Choose the learning tier that best fits your needs and budget</p>
+              <p className="text-gray-600">
+                Choose the learning tier that best fits your needs and budget
+              </p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
               {courseTiers.map((tier) => (
                 <div key={tier.series} className="text-center">
-                  <div className={`w-16 h-16 mx-auto mb-4 rounded-2xl flex items-center justify-center ${
-                    tier.series === 'pinnacle' ? 'bg-purple-100' :
-                    tier.series === 'ascent' ? 'bg-blue-100' : 'bg-green-100'
-                  }`}>
+                  <div
+                    className={`w-16 h-16 mx-auto mb-4 rounded-2xl flex items-center justify-center ${
+                      tier.series === 'pinnacle'
+                        ? 'bg-purple-100'
+                        : tier.series === 'ascent'
+                          ? 'bg-blue-100'
+                          : 'bg-green-100'
+                    }`}
+                  >
                     <span className="text-2xl">
-                      {tier.series === 'pinnacle' ? '👑' : 
-                       tier.series === 'ascent' ? '🎯' : '🌟'}
+                      {tier.series === 'pinnacle' ? '👑' : tier.series === 'ascent' ? '🎯' : '🌟'}
                     </span>
                   </div>
                   <h4 className="text-xl font-bold text-gray-900 mb-2">{tier.name}</h4>
                   <p className="text-gray-600 mb-4">{tier.description}</p>
                   <div className="text-2xl font-bold text-gray-900 mb-2">
-                    ₹{tier.priceRange.min.toLocaleString()} - ₹{tier.priceRange.max.toLocaleString()}
+                    ₹{tier.priceRange.min.toLocaleString()} - ₹
+                    {tier.priceRange.max.toLocaleString()}
                   </div>
                   <div className="text-sm text-gray-500 mb-4">
                     Batch Size: {tier.batchSize} students
@@ -221,13 +245,16 @@ export function EnhancedCoursesListingPage() {
           <div className="mt-16 text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12 text-white">
             <h3 className="text-3xl font-bold mb-4">Ready to Start Your NEET Journey?</h3>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Join thousands of successful students who have achieved their medical dreams with our expert guidance
+              Join thousands of successful students who have achieved their medical dreams with our
+              expert guidance
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button 
+              <button
                 onClick={() => {
                   // Use a featured course or the first available course
-                  const demoCourse = filteredCourses.find(course => course.isFeatured || course.isPopular) || filteredCourses[0]
+                  const demoCourse =
+                    filteredCourses.find((course) => course.isFeatured || course.isPopular) ||
+                    filteredCourses[0]
                   if (demoCourse) {
                     handleBookDemo(demoCourse)
                   }
@@ -247,7 +274,7 @@ export function EnhancedCoursesListingPage() {
 
       {/* Demo Class Modal */}
       {showDemoModal && selectedCourse && (
-        <DemoClassModal 
+        <DemoClassModal
           course={selectedCourse}
           onClose={() => {
             setShowDemoModal(false)

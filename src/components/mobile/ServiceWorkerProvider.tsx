@@ -16,7 +16,8 @@ export default function ServiceWorkerProvider({ children }: ServiceWorkerProvide
   const { isDataSaverMode, isLowEndDevice } = useMobileOptimization()
 
   useEffect(() => {
-    if ('serviceWorker' in navigator) {
+    // Disable service worker in development to prevent caching issues
+    if ('serviceWorker' in navigator && process.env.NODE_ENV !== 'development') {
       registerServiceWorker()
     }
 

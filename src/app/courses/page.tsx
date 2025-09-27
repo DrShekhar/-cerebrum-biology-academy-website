@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import { EnhancedCoursesListingPage } from '@/components/courses/EnhancedCoursesListingPage'
+import { FixedCourseSelector } from '@/components/courses/FixedCourseSelector'
 
 export const metadata: Metadata = {
   title: 'NEET Biology Courses | Class 11th, 12th & Dropper Batches',
@@ -16,5 +16,5 @@ export const metadata: Metadata = {
 }
 
 export default function CoursesPage() {
-  return <EnhancedCoursesListingPage />
+  return <FixedCourseSelector />
 }

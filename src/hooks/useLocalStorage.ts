@@ -1,7 +1,11 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 
-export function useLocalStorage<T>(key: string, initialValue: T) {
-  // Get value from localStorage on mount
+type SetValue<T> = T | ((val: T) => T)
+
+export function useLocalStorage<T>(
+  key: string,
+  initialValue: T
+): [T, (value: SetValue<T>) => void, () => void] {
   const [storedValue, setStoredValue] = useState<T>(() => {
     if (typeof window === 'undefined') {
       return initialValue
@@ -16,35 +20,49 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
     }
   })
 
-  // Return a wrapped version of useState's setter function that persists to localStorage
-  const setValue = (value: T | ((val: T) => T)) => {
-    try {
-      // Allow value to be a function to mimic useState behavior
-      const valueToStore = value instanceof Function ? value(storedValue) : value
+  const setValue = useCallback(
+    (value: SetValue<T>) => {
+      try {
+        const valueToStore = value instanceof Function ? value(storedValue) : value
+        setStoredValue(valueToStore)
 
-      // Save state
-      setStoredValue(valueToStore)
-
-      // Save to localStorage
-      if (typeof window !== 'undefined') {
-        window.localStorage.setItem(key, JSON.stringify(valueToStore))
+        if (typeof window !== 'undefined') {
+          window.localStorage.setItem(key, JSON.stringify(valueToStore))
+        }
+      } catch (error) {
+        console.warn(`Error setting localStorage key "${key}":`, error)
       }
-    } catch (error) {
-      console.warn(`Error setting localStorage key "${key}":`, error)
-    }
-  }
+    },
+    [key, storedValue]
+  )
 
-  // Clear localStorage value
-  const clearValue = () => {
+  const removeValue = useCallback(() => {
     try {
+      setStoredValue(initialValue)
       if (typeof window !== 'undefined') {
         window.localStorage.removeItem(key)
       }
-      setStoredValue(initialValue)
     } catch (error) {
-      console.warn(`Error clearing localStorage key "${key}":`, error)
+      console.warn(`Error removing localStorage key "${key}":`, error)
     }
-  }
+  }, [key, initialValue])
 
-  return [storedValue, setValue, clearValue] as const
+  useEffect(() => {
+    const handleStorageChange = (e: StorageEvent) => {
+      if (e.key === key && e.newValue !== null) {
+        try {
+          setStoredValue(JSON.parse(e.newValue))
+        } catch (error) {
+          console.warn(`Error parsing localStorage change for key "${key}":`, error)
+        }
+      }
+    }
+
+    if (typeof window !== 'undefined') {
+      window.addEventListener('storage', handleStorageChange)
+      return () => window.removeEventListener('storage', handleStorageChange)
+    }
+  }, [key])
+
+  return [storedValue, setValue, removeValue]
 }

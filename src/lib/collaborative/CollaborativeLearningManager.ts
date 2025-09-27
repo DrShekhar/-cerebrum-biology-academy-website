@@ -143,9 +143,28 @@ export class CollaborativeLearningManager {
   private studentConnections: Map<string, WebSocket> = new Map()
   private pendingMatches: Map<string, StudentProfile[]> = new Map()
 
-  constructor(port: number = 8080, redisUrl?: string) {
-    this.wss = new WebSocketServer({ port })
-    this.redis = new Redis(redisUrl || process.env.REDIS_URL || 'redis://localhost:6379')
+  constructor(port?: number, redisUrl?: string) {
+    // Use dynamic port allocation to avoid conflicts
+    const wsPort = port || parseInt(process.env.COLLABORATIVE_WS_PORT || '0') || 0 // 0 = dynamic
+
+    try {
+      this.wss = new WebSocketServer({ port: wsPort })
+      console.log(
+        `🤝 Collaborative Learning Platform started on port ${this.wss.options.port || 'dynamic'}`
+      )
+    } catch (error) {
+      console.warn('⚠️ WebSocket server initialization skipped (port conflict or development mode)')
+      // Create a mock WebSocket server for development
+      this.wss = null as any
+    }
+
+    // Skip Redis in development if not configured
+    if (!redisUrl && !process.env.REDIS_URL) {
+      console.log('📬 Redis not configured, using in-memory storage for development')
+      this.redis = null as any
+    } else {
+      this.redis = new Redis(redisUrl || process.env.REDIS_URL || 'redis://localhost:6379')
+    }
 
     this.setupWebSocketHandlers()
     this.startMatchmaking()

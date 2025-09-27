@@ -9,7 +9,7 @@ import { CollaborativeLearningManager } from '@/lib/collaborative/CollaborativeL
 let collaborativeManager: CollaborativeLearningManager
 
 if (!collaborativeManager) {
-  collaborativeManager = new CollaborativeLearningManager(8080)
+  collaborativeManager = new CollaborativeLearningManager()
 }
 
 export async function POST(request: NextRequest) {

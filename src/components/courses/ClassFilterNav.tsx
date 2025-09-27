@@ -35,7 +35,7 @@ export function ClassFilterNav({
     },
     {
       value: '9th',
-      label: 'Foundation',
+      label: 'Class 9th',
       emoji: '🌱',
       gradient: 'from-emerald-500 to-emerald-600',
       seriesCount: 3,
@@ -43,23 +43,23 @@ export function ClassFilterNav({
     },
     {
       value: '10th',
-      label: 'Explorer',
+      label: 'Class 10th',
       emoji: '🌿',
       gradient: 'from-green-500 to-green-600',
       seriesCount: 3,
-      description: 'Expanding biological concepts',
+      description: 'Foundation for NEET preparation',
     },
     {
       value: '11th',
-      label: 'Advanced',
+      label: 'Class 11th',
       emoji: '🎯',
       gradient: 'from-blue-500 to-blue-600',
       seriesCount: 3,
-      description: 'NEET preparation focus',
+      description: 'NEET Biology preparation focus',
     },
     {
       value: '12th',
-      label: 'Mastery',
+      label: 'Class 12th',
       emoji: '🏆',
       gradient: 'from-purple-500 to-purple-600',
       seriesCount: 3,
@@ -67,11 +67,11 @@ export function ClassFilterNav({
     },
     {
       value: 'Dropper',
-      label: 'Elite',
+      label: 'Droppers',
       emoji: '💪',
       gradient: 'from-orange-500 to-orange-600',
       seriesCount: 3,
-      description: 'Intensive rank improvement',
+      description: 'Intensive rank improvement program',
     },
   ]
 
@@ -109,9 +109,9 @@ export function ClassFilterNav({
                   {isSelected && (
                     <motion.div
                       layoutId="classSelection"
-                      className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl border-2 border-blue-400/50"
+                      className="absolute inset-0 rounded-2xl border-3 border-white shadow-selection bg-gradient-to-r from-green-500/30 to-green-600/30"
                       initial={{ opacity: 0, scale: 0.8 }}
-                      animate={{ opacity: 1, scale: 1 }}
+                      animate={{ opacity: 1, scale: 1.05 }}
                       exit={{ opacity: 0, scale: 0.8 }}
                       transition={{
                         type: 'spring',
@@ -125,25 +125,32 @@ export function ClassFilterNav({
 
                 {/* Main button */}
                 <motion.button
-                  onClick={() => onClassSelect(option.value)}
-                  className={`relative flex flex-col items-center p-4 rounded-2xl font-semibold transition-all duration-300 whitespace-nowrap min-w-[140px] group ${
+                  onClick={() => {
+                    // Add haptic feedback for mobile
+                    if (typeof window !== 'undefined' && 'vibrate' in navigator) {
+                      navigator.vibrate(50)
+                    }
+                    onClassSelect(option.value)
+                  }}
+                  className={`relative flex flex-col items-center p-4 rounded-2xl font-semibold transition-all duration-300 whitespace-nowrap min-w-[140px] group focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 ${
                     isSelected ? 'text-white shadow-2xl z-10' : 'text-gray-700 hover:text-gray-900'
                   }`}
                   style={{
                     background: isSelected
                       ? `linear-gradient(135deg, var(--tw-gradient-stops))`
                       : isHovered
-                        ? 'rgba(255, 255, 255, 0.9)'
+                        ? 'rgba(16, 185, 129, 0.1)'
                         : 'rgba(255, 255, 255, 0.7)',
+                    border: isHovered && !isSelected ? '2px solid #10b981' : 'none',
                   }}
                   whileHover={{
-                    scale: 1.05,
+                    scale: isSelected ? 1.05 : 1.03,
                     y: -2,
                     transition: { duration: 0.2 },
                   }}
                   whileTap={{
-                    scale: 0.98,
-                    transition: { duration: 0.1 },
+                    scale: 0.95,
+                    transition: { duration: 0.1, type: 'spring', stiffness: 400 },
                   }}
                 >
                   {/* Gradient background for selected state */}
@@ -233,7 +240,7 @@ export function ClassFilterNav({
                     <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse" />
                     <span className="text-sm font-semibold text-gray-700">
                       Showing 3 Biology Series for{' '}
-                      {classOptions.find((opt) => opt.value === selectedClass)?.label}
+                      {classOptions.find((opt) => opt.value === selectedClass)?.label} Students
                     </span>
                   </div>
                   <div className="flex items-center space-x-2 text-xs text-gray-500">

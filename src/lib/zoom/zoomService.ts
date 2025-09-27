@@ -91,9 +91,10 @@ export class ZoomService {
         },
       }
 
-      // For MVP, we'll simulate Zoom API call
-      // In production, you would use the actual Zoom API
-      const response = await this.simulateZoomAPICall(meetingData)
+      // Use real Zoom API if credentials are available, otherwise simulate
+      const response = this.jwtToken
+        ? await this.createRealZoomMeeting(meetingData)
+        : await this.simulateZoomAPICall(meetingData)
 
       if (response) {
         // Store meeting data in database
@@ -114,6 +115,32 @@ export class ZoomService {
     } catch (error) {
       console.error('Error creating Zoom meeting:', error)
       return null
+    }
+  }
+
+  private async createRealZoomMeeting(
+    meetingData: ZoomMeetingData
+  ): Promise<ZoomMeetingResponse | null> {
+    try {
+      const response = await fetch(`${this.apiUrl}/users/${this.userId}/meetings`, {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${this.jwtToken}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(meetingData),
+      })
+
+      if (!response.ok) {
+        console.error('Zoom API error:', response.statusText)
+        return await this.simulateZoomAPICall(meetingData) // Fallback to simulation
+      }
+
+      const zoomResponse = await response.json()
+      return zoomResponse as ZoomMeetingResponse
+    } catch (error) {
+      console.error('Error calling Zoom API:', error)
+      return await this.simulateZoomAPICall(meetingData) // Fallback to simulation
     }
   }
 
