@@ -612,3 +612,6 @@ declare global {
 }
 
 export const metaIntegration = new MetaIntegration()
+
+// Export for use in components
+export default metaIntegration
