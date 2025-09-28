@@ -57,11 +57,19 @@ export interface PerformanceStats {
 }
 
 export class PerformanceMonitor {
+  private static instance: PerformanceMonitor
   private metrics: PerformanceMetric[] = []
   private maxMetrics: number = 1000 // Keep last 1000 metrics
 
-  constructor(maxMetrics: number = 1000) {
+  private constructor(maxMetrics: number = 1000) {
     this.maxMetrics = maxMetrics
+  }
+
+  static getInstance(maxMetrics: number = 1000): PerformanceMonitor {
+    if (!PerformanceMonitor.instance) {
+      PerformanceMonitor.instance = new PerformanceMonitor(maxMetrics)
+    }
+    return PerformanceMonitor.instance
   }
 
   async trackRequest<T>(
@@ -520,7 +528,7 @@ export class PerformanceMonitor {
 }
 
 // Singleton instance for global use
-export const performanceMonitor = new PerformanceMonitor()
+export const performanceMonitor = PerformanceMonitor.getInstance()
 
 // Export for use in our unified AI system
 export default PerformanceMonitor

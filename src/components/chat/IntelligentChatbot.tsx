@@ -14,6 +14,7 @@ import {
   Download,
 } from 'lucide-react'
 import { usePersonalization } from '@/components/providers/PersonalizationProvider'
+import { AIErrorBoundary } from '@/components/ai/AIErrorBoundary'
 
 interface ChatMessage {
   id: string
@@ -83,7 +84,7 @@ export function IntelligentChatbot() {
     else if (timeOfDay < 17) timeGreeting = 'Good afternoon'
     else timeGreeting = 'Good evening'
 
-    let content = `${timeGreeting}! I'm your AI assistant at Biology Academy. `
+    let content = `${timeGreeting}! I'm Ceri AI, your personal Biology assistant at Cerebrum Academy. `
 
     if (preferences.currentClass) {
       content += `I see you're in Class ${preferences.currentClass}. `
@@ -521,13 +522,31 @@ export function IntelligentChatbot() {
   }
 
   return (
-    <>
+    <AIErrorBoundary
+      showDebugInfo={process.env.NODE_ENV === 'development'}
+      fallback={
+        <div className="fixed bottom-4 right-4 bg-red-100 border border-red-300 rounded-lg p-4 max-w-sm">
+          <p className="text-red-800 text-sm">
+            ⚠️ Chat temporarily unavailable. Please contact us at{' '}
+            <a href="tel:+918826444334" className="underline">
+              +91 88264 44334
+            </a>
+          </p>
+        </div>
+      }
+    >
       {/* Chat Toggle Button */}
       <motion.button
         onClick={toggleChat}
-        className="fixed bottom-6 right-6 bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition-colors z-50"
+        className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 bg-blue-600 text-white p-3 sm:p-4 rounded-full shadow-lg hover:bg-blue-700 focus:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none transition-colors z-50"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
+        aria-label={
+          chatState.isOpen ? 'Close Ceri AI chat assistant' : 'Open Ceri AI chat assistant'
+        }
+        aria-expanded={chatState.isOpen}
+        role="button"
+        tabIndex={0}
       >
         <AnimatePresence mode="wait">
           {chatState.isOpen ? (
@@ -562,30 +581,53 @@ export function IntelligentChatbot() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 100, scale: 0.8 }}
             transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-            className="fixed bottom-24 right-6 w-96 h-[32rem] bg-white rounded-2xl shadow-2xl border border-gray-200 z-40 flex flex-col"
+            className="fixed bottom-16 right-4 left-4 sm:bottom-24 sm:right-6 sm:left-auto sm:w-96 h-[85vh] sm:h-[32rem] max-h-[600px] bg-white rounded-2xl shadow-2xl border border-gray-200 z-40 flex flex-col"
+            role="dialog"
+            aria-labelledby="chat-title"
+            aria-describedby="chat-description"
+            aria-modal="true"
           >
             {/* Chat Header */}
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 rounded-t-2xl">
-              <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-                  <Bot className="w-6 h-6" />
+            <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-3 sm:p-4 rounded-t-2xl">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center space-x-3">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 bg-white/20 rounded-full flex items-center justify-center">
+                    <Bot className="w-4 h-4 sm:w-6 sm:h-6" />
+                  </div>
+                  <div>
+                    <h3 id="chat-title" className="font-semibold text-sm sm:text-base">
+                      Ceri AI
+                    </h3>
+                    <p id="chat-description" className="text-xs sm:text-sm text-blue-100">
+                      Your Biology Assistant • Online
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-semibold">AI Assistant</h3>
-                  <p className="text-sm text-blue-100">Online • Ready to help</p>
-                </div>
+                <button
+                  onClick={toggleChat}
+                  className="sm:hidden text-white/80 hover:text-white focus:text-white focus:ring-2 focus:ring-white/50 focus:outline-none rounded p-1"
+                  aria-label="Close Ceri AI chat"
+                  tabIndex={0}
+                >
+                  <X className="w-5 h-5" aria-hidden="true" />
+                </button>
               </div>
             </div>
 
             {/* Messages */}
-            <div className="flex-1 overflow-y-auto p-4 space-y-4">
+            <div
+              className="flex-1 overflow-y-auto p-3 sm:p-4 space-y-3 sm:space-y-4"
+              role="log"
+              aria-label="Chat conversation history"
+              aria-live="polite"
+            >
               {chatState.messages.map((message) => (
                 <div
                   key={message.id}
                   className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
                 >
                   <div
-                    className={`max-w-xs lg:max-w-md px-4 py-2 rounded-2xl ${
+                    className={`max-w-[80%] sm:max-w-xs lg:max-w-md px-3 sm:px-4 py-2 rounded-2xl ${
                       message.type === 'user'
                         ? 'bg-blue-600 text-white'
                         : 'bg-gray-100 text-gray-900'
@@ -603,7 +645,9 @@ export function IntelligentChatbot() {
                           <button
                             key={index}
                             onClick={() => handleSuggestionClick(suggestion)}
-                            className="block w-full text-left text-xs bg-white/10 hover:bg-white/20 px-2 py-1 rounded border border-white/20 transition-colors"
+                            className="block w-full text-left text-xs sm:text-sm bg-white/10 hover:bg-white/20 focus:bg-white/30 focus:ring-2 focus:ring-blue-300 focus:outline-none px-2 py-1.5 rounded border border-white/20 transition-colors"
+                            aria-label={`Quick reply: ${suggestion}`}
+                            tabIndex={0}
                           >
                             {suggestion}
                           </button>
@@ -618,15 +662,23 @@ export function IntelligentChatbot() {
                           <button
                             key={index}
                             onClick={() => handleActionClick(action)}
-                            className="flex items-center space-x-2 w-full text-left text-xs bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-lg transition-colors"
+                            className="flex items-center space-x-2 w-full text-left text-xs sm:text-sm bg-blue-600 hover:bg-blue-700 focus:bg-blue-700 focus:ring-2 focus:ring-blue-300 focus:outline-none text-white px-3 py-2 rounded-lg transition-colors"
+                            aria-label={`Action: ${action.label}`}
+                            tabIndex={0}
                           >
-                            {action.type === 'book_demo' && <Calendar className="w-3 h-3" />}
-                            {action.type === 'call_request' && <Phone className="w-3 h-3" />}
-                            {action.type === 'download_brochure' && (
-                              <Download className="w-3 h-3" />
+                            {action.type === 'book_demo' && (
+                              <Calendar className="w-3 h-3 flex-shrink-0" aria-hidden="true" />
                             )}
-                            {action.type === 'view_course' && <BookOpen className="w-3 h-3" />}
-                            <span>{action.label}</span>
+                            {action.type === 'call_request' && (
+                              <Phone className="w-3 h-3 flex-shrink-0" aria-hidden="true" />
+                            )}
+                            {action.type === 'download_brochure' && (
+                              <Download className="w-3 h-3 flex-shrink-0" aria-hidden="true" />
+                            )}
+                            {action.type === 'view_course' && (
+                              <BookOpen className="w-3 h-3 flex-shrink-0" aria-hidden="true" />
+                            )}
+                            <span className="truncate">{action.label}</span>
                           </button>
                         ))}
                       </div>
@@ -661,28 +713,46 @@ export function IntelligentChatbot() {
             </div>
 
             {/* Input */}
-            <div className="p-4 border-t border-gray-200">
-              <div className="flex space-x-2">
+            <div className="p-3 sm:p-4 border-t border-gray-200">
+              <form
+                onSubmit={(e) => {
+                  e.preventDefault()
+                  handleSendMessage()
+                }}
+                className="flex space-x-2"
+              >
+                <label htmlFor="chat-input" className="sr-only">
+                  Type your biology question for Ceri AI
+                </label>
                 <input
+                  id="chat-input"
                   type="text"
                   value={inputValue}
                   onChange={(e) => setInputValue(e.target.value)}
-                  onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
-                  placeholder="Type your message..."
-                  className="flex-1 border border-gray-300 rounded-full px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
+                  placeholder="Ask Ceri AI about biology..."
+                  className="flex-1 border border-gray-300 rounded-full px-3 sm:px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent focus:outline-none text-sm"
+                  aria-describedby="chat-input-help"
+                  autoComplete="off"
+                  maxLength={500}
                 />
                 <button
-                  onClick={handleSendMessage}
+                  type="submit"
                   disabled={!inputValue.trim()}
-                  className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors"
+                  className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 focus:bg-blue-700 focus:ring-2 focus:ring-blue-300 focus:outline-none disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors flex-shrink-0"
+                  aria-label="Send message to Ceri AI"
+                  tabIndex={0}
                 >
-                  <Send className="w-4 h-4" />
+                  <Send className="w-4 h-4" aria-hidden="true" />
                 </button>
+              </form>
+              <div id="chat-input-help" className="sr-only">
+                Press Enter or click send to ask Ceri AI your biology question. Maximum 500
+                characters.
               </div>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
-    </>
+    </AIErrorBoundary>
   )
 }

@@ -3,6 +3,7 @@
 
 import { NextRequest, NextResponse } from 'next/server'
 import { aiClient } from '@/lib/ai/aiClient'
+import { AIDebugger } from '@/lib/ai/aiDebugger'
 
 // Force Node.js runtime for better compatibility with AI libraries
 export const runtime = 'nodejs'
@@ -113,6 +114,14 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json(response)
   } catch (error) {
+    // Use our enhanced AI debugger for comprehensive error analysis
+    const analysis = AIDebugger.logAIError(error, {
+      provider: 'unified_chat_api',
+      model: 'api_route',
+      requestId: `api_${Date.now()}`,
+      prompt: body?.message?.substring(0, 100),
+    })
+
     console.error('=== UNIFIED AI CHAT ERROR ===')
     console.error('Error type:', typeof error)
     console.error('Error message:', error instanceof Error ? error.message : error)
@@ -125,9 +134,13 @@ export async function POST(request: NextRequest) {
       {
         success: false,
         error: 'Failed to process chat message',
-        message: 'I apologize, but I encountered an error. Please try again.',
+        message:
+          'I apologize, but I encountered an error. Please try again or contact support at +91 88264 44334.',
         debug: error instanceof Error ? error.message : String(error),
         timestamp: new Date().toISOString(),
+        errorAnalysis: analysis,
+        retryable: analysis.retryable,
+        severity: analysis.severity,
       },
       { status: 500 }
     )
