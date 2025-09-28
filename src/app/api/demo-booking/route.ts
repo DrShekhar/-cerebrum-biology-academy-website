@@ -61,7 +61,7 @@ export async function POST(request: NextRequest) {
       })
     }
 
-    const rawData: DemoBookingData = await request.json()
+    const rawData = await request.json()
 
     // Validate and sanitize input data
     const validationResult = DemoBookingSchema.safeParse(rawData)
@@ -78,7 +78,7 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    const data = validationResult.data
+    const data = validationResult.data as DemoBookingData
 
     // Generate unique ID
     const bookingId = `demo_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`

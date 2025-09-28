@@ -31,8 +31,10 @@ interface ChatRequest {
 }
 
 export async function POST(request: NextRequest) {
+  let body: any = null
+
   try {
-    const body = await request.json()
+    body = await request.json()
     const { message, context, options } = body as ChatRequest
 
     if (!message || typeof message !== 'string') {
@@ -127,7 +129,10 @@ export async function POST(request: NextRequest) {
     console.error('Error message:', error instanceof Error ? error.message : error)
     console.error('Error stack:', error instanceof Error ? error.stack : 'No stack trace')
     console.error('Full error object:', error)
-    console.error('Request body:', { message, context, options })
+    console.error(
+      'Request body:',
+      body ? { message: body.message, context: body.context, options: body.options } : 'null'
+    )
     console.error('================================')
 
     return NextResponse.json(

@@ -97,6 +97,10 @@ export async function POST(request: NextRequest) {
     // Create demo booking in database
     const newBooking = await createDemoBooking({
       ...validatedData,
+      studentName: validatedData.studentName || 'Unknown',
+      phone: validatedData.phone || '',
+      preferredDate: validatedData.preferredDate || new Date().toISOString(),
+      preferredTime: validatedData.preferredTime || '10:00 AM',
       source: validatedData.source || 'admin',
     })
 
