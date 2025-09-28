@@ -195,8 +195,10 @@ export class CollaborativeLearningManager {
 
     this.studyRooms.set(room.id, room)
 
-    // Store in Redis for persistence
-    await this.redis.setex(`room:${room.id}`, 86400, JSON.stringify(room))
+    // Store in Redis for persistence (if available)
+    if (this.redis) {
+      await this.redis.setex(`room:${room.id}`, 86400, JSON.stringify(room))
+    }
 
     // Broadcast room creation
     this.broadcastToAll({
@@ -234,8 +236,10 @@ export class CollaborativeLearningManager {
 
     session.participants.set(student.id, student)
 
-    // Update Redis
-    await this.redis.setex(`room:${roomId}`, 86400, JSON.stringify(room))
+    // Update Redis (if available)
+    if (this.redis) {
+      await this.redis.setex(`room:${roomId}`, 86400, JSON.stringify(room))
+    }
 
     // Notify all participants
     this.broadcastToRoom(roomId, {
@@ -259,7 +263,9 @@ export class CollaborativeLearningManager {
       room.participants = room.participants.filter((p) => p.id !== studentId)
       room.currentParticipants = Math.max(0, room.currentParticipants - 1)
 
-      await this.redis.setex(`room:${roomId}`, 86400, JSON.stringify(room))
+      if (this.redis) {
+        await this.redis.setex(`room:${roomId}`, 86400, JSON.stringify(room))
+      }
     }
 
     if (session) {
@@ -301,8 +307,10 @@ export class CollaborativeLearningManager {
     session.chatHistory.push(chatMessage)
 
     // Store in Redis
-    await this.redis.lpush(`chat:${roomId}`, JSON.stringify(chatMessage))
-    await this.redis.expire(`chat:${roomId}`, 86400)
+    if (this.redis) {
+      await this.redis.lpush(`chat:${roomId}`, JSON.stringify(chatMessage))
+      await this.redis.expire(`chat:${roomId}`, 86400)
+    }
 
     // Broadcast to room
     this.broadcastToRoom(roomId, {
@@ -343,8 +351,14 @@ export class CollaborativeLearningManager {
       session.sharedWhiteboard.currentSlide = update.currentSlide
     }
 
-    // Store in Redis
-    await this.redis.setex(`whiteboard:${roomId}`, 86400, JSON.stringify(session.sharedWhiteboard))
+    // Store in Redis (if available)
+    if (this.redis) {
+      await this.redis.setex(
+        `whiteboard:${roomId}`,
+        86400,
+        JSON.stringify(session.sharedWhiteboard)
+      )
+    }
 
     // Broadcast update
     this.broadcastToRoom(roomId, {
@@ -425,7 +439,7 @@ export class CollaborativeLearningManager {
    * Get learning analytics for a student
    */
   async getLearningAnalytics(studentId: string): Promise<LearningAnalytics> {
-    const analytics = await this.redis.hgetall(`analytics:${studentId}`)
+    const analytics = this.redis ? await this.redis.hgetall(`analytics:${studentId}`) : {}
 
     return {
       studentId,
@@ -648,7 +662,7 @@ export class CollaborativeLearningManager {
 
   private async processMatchmaking(): Promise<void> {
     // Find students waiting for matches
-    const waitingStudents = await this.redis.lrange('matchmaking:queue', 0, -1)
+    const waitingStudents = this.redis ? await this.redis.lrange('matchmaking:queue', 0, -1) : []
 
     for (const studentData of waitingStudents) {
       try {
@@ -668,7 +682,9 @@ export class CollaborativeLearningManager {
           }
 
           // Remove from queue
-          await this.redis.lrem('matchmaking:queue', 1, studentData)
+          if (this.redis) {
+            await this.redis.lrem('matchmaking:queue', 1, studentData)
+          }
         }
       } catch (error) {
         console.error('Matchmaking error:', error)
