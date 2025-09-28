@@ -2,9 +2,9 @@
   "framework": "nextjs",
   "installCommand": "npm install --legacy-peer-deps",
   "env": {
-    "NEXT_PUBLIC_SITE_URL": "https://cerebrum-biology-academy-website-gnd0it0vm.vercel.app",
+    "NEXT_PUBLIC_SITE_URL": "https://cerebrum-biology-academy-website-6d423uz4b.vercel.app",
     "NEXT_PUBLIC_ENV": "production",
-    "NEXTAUTH_URL": "https://cerebrum-biology-academy-website-gnd0it0vm.vercel.app",
+    "NEXTAUTH_URL": "https://cerebrum-biology-academy-website-6d423uz4b.vercel.app",
     "NEXTAUTH_SECRET": "cerebrum-biology-academy-production-secret-2024-vercel",
     "AUTH_SECRET": "cerebrum-biology-academy-production-secret-2024-vercel",
     "AUTH_TRUST_HOST": "true",
