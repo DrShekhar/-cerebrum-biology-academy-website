@@ -1,15 +1,9 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/next",
-      "config": {
-        "distDir": ".next",
-        "generateBuildId": "cerebrum-ai-minimal-build"
-      }
-    }
-  ],
+  "buildCommand": "npm run build",
+  "devCommand": "npm run dev",
+  "installCommand": "npm install --legacy-peer-deps",
+  "framework": "nextjs",
   "env": {
     "NODE_ENV": "production",
     "NEXT_TELEMETRY_DISABLED": "1",
@@ -21,6 +15,12 @@
       "runtime": "nodejs20.x",
       "maxDuration": 30
     }
+  },
+  "images": {
+    "sizes": [320, 375, 420, 640, 750, 828, 1080, 1200],
+    "formats": ["image/webp", "image/avif"],
+    "minimumCacheTTL": 31536000,
+    "dangerouslyAllowSVG": false
   },
   "rewrites": [
     {
@@ -43,6 +43,23 @@
         {
           "key": "Access-Control-Allow-Headers",
           "value": "Content-Type, Authorization"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
         }
       ]
     }
