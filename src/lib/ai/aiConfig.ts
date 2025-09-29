@@ -9,6 +9,11 @@ export interface AIProviderConfig {
     default: string
     fast: string
     premium: string
+    reasoning?: string
+    vision?: string
+    ultrafast?: string
+    long?: string
+    embedding?: string
   }
   rateLimits: {
     requestsPerMinute: number
@@ -17,6 +22,18 @@ export interface AIProviderConfig {
   pricing: {
     inputTokenCost: number // per 1K tokens
     outputTokenCost: number // per 1K tokens
+    premiumInputCost?: number // per 1K tokens for premium models
+    premiumOutputCost?: number // per 1K tokens for premium models
+  }
+  capabilities?: {
+    reasoning?: string[]
+    vision?: string[]
+    multimodal?: string[]
+    coding?: string[]
+    analysis?: string[]
+    longContext?: string[]
+    fastResponse?: string[]
+    ultrafast?: string[]
   }
 }
 
@@ -102,63 +119,101 @@ class AIConfigManager {
       Object.keys(process.env).filter((key) => key.includes('GOOGLE'))
     )
 
-    // OpenAI Configuration
+    // OpenAI Configuration - Enhanced for GPT-5 and latest models
     this.providers.set('openai', {
       name: 'OpenAI',
       apiKey: process.env.OPENAI_API_KEY || '',
       baseUrl: process.env.OPENAI_API_URL || 'https://api.openai.com/v1',
       models: {
-        default: 'gpt-4',
-        fast: 'gpt-3.5-turbo',
-        premium: 'gpt-4-turbo',
+        default: 'gpt-4o',
+        fast: 'gpt-4o-mini',
+        premium: 'gpt-5', // GPT-5 for premium tier
+        reasoning: 'o1-preview', // O1 for complex reasoning
+        vision: 'gpt-4o', // Vision capabilities
+        embedding: 'text-embedding-3-large', // Latest embedding model
       },
       rateLimits: {
-        requestsPerMinute: 3000,
-        tokensPerMinute: 250000,
+        requestsPerMinute: 10000, // Increased limits for GPT-5
+        tokensPerMinute: 500000,
       },
       pricing: {
-        inputTokenCost: 0.01, // $0.01 per 1K tokens
-        outputTokenCost: 0.03, // $0.03 per 1K tokens
+        inputTokenCost: 0.005, // Updated GPT-4o pricing
+        outputTokenCost: 0.015,
+        premiumInputCost: 0.01, // GPT-5 pricing (estimated)
+        premiumOutputCost: 0.03,
+      },
+      capabilities: {
+        reasoning: ['o1-preview', 'o1-mini'],
+        vision: ['gpt-4o'],
+        multimodal: ['gpt-4o'],
+        longContext: ['gpt-4o'], // 128K context
+        fastResponse: ['gpt-4o-mini'],
       },
     })
 
-    // Anthropic Claude Configuration
+    // Anthropic Claude Configuration - Enhanced for Claude 4 and Sonnet 3.5
     this.providers.set('anthropic', {
       name: 'Anthropic',
       apiKey: process.env.ANTHROPIC_API_KEY || '',
       baseUrl: process.env.ANTHROPIC_API_URL || 'https://api.anthropic.com/v1',
       models: {
-        default: 'claude-3-5-sonnet-20241022',
-        fast: 'claude-3-haiku-20240307',
-        premium: 'claude-3-5-sonnet-20241022',
+        default: 'claude-3-5-sonnet-20250107',
+        fast: 'claude-3-5-haiku-20241022',
+        premium: 'claude-4', // Claude 4 for premium tier
+        reasoning: 'claude-3-5-sonnet-20250107', // Best for reasoning
+        vision: 'claude-3-5-sonnet-20250107', // Vision capabilities
+        long: 'claude-3-5-sonnet-20250107', // 200K context window
       },
       rateLimits: {
-        requestsPerMinute: 4000,
-        tokensPerMinute: 400000,
+        requestsPerMinute: 5000, // Increased limits
+        tokensPerMinute: 600000, // Enhanced capacity
       },
       pricing: {
-        inputTokenCost: 0.015, // $0.015 per 1K tokens
-        outputTokenCost: 0.075, // $0.075 per 1K tokens
+        inputTokenCost: 0.003, // Latest Sonnet 3.5 pricing
+        outputTokenCost: 0.015,
+        premiumInputCost: 0.006, // Claude 4 pricing (estimated)
+        premiumOutputCost: 0.030,
+      },
+      capabilities: {
+        reasoning: ['claude-3-5-sonnet-20250107', 'claude-4'],
+        vision: ['claude-3-5-sonnet-20250107'],
+        coding: ['claude-3-5-sonnet-20250107'],
+        analysis: ['claude-3-5-sonnet-20250107', 'claude-4'],
+        longContext: ['claude-3-5-sonnet-20250107'], // 200K tokens
+        fastResponse: ['claude-3-5-haiku-20241022'],
       },
     })
 
-    // Google AI Configuration
+    // Google AI Configuration - Enhanced for Gemini 2.5 Pro and Flash models
     this.providers.set('google', {
       name: 'Google AI',
       apiKey: process.env.GOOGLE_AI_API_KEY || '',
       baseUrl: process.env.GOOGLE_AI_API_URL || 'https://generativelanguage.googleapis.com/v1',
       models: {
-        default: 'gemini-2.0-flash',
-        fast: 'gemini-2.0-flash',
-        premium: 'gemini-2.5-flash',
+        default: 'gemini-2.0-flash-exp',
+        fast: 'gemini-2.0-flash-exp',
+        premium: 'gemini-2.5-pro', // Gemini 2.5 Pro for premium
+        reasoning: 'gemini-2.0-flash-thinking-exp', // Advanced reasoning
+        vision: 'gemini-2.0-flash-exp', // Multimodal capabilities
+        ultrafast: 'gemini-1.5-flash-8b', // Ultra-fast responses
       },
       rateLimits: {
-        requestsPerMinute: 60,
-        tokensPerMinute: 32000,
+        requestsPerMinute: 1000, // Increased limits
+        tokensPerMinute: 1000000, // 1M tokens per minute
       },
       pricing: {
-        inputTokenCost: 0.000125, // $0.000125 per 1K tokens
-        outputTokenCost: 0.000375, // $0.000375 per 1K tokens
+        inputTokenCost: 0.000075, // Gemini 2.0 Flash pricing
+        outputTokenCost: 0.0003,
+        premiumInputCost: 0.00125, // Gemini 2.5 Pro pricing
+        premiumOutputCost: 0.005,
+      },
+      capabilities: {
+        reasoning: ['gemini-2.0-flash-thinking-exp', 'gemini-2.5-pro'],
+        vision: ['gemini-2.0-flash-exp', 'gemini-2.5-pro'],
+        multimodal: ['gemini-2.0-flash-exp', 'gemini-2.5-pro'],
+        longContext: ['gemini-2.5-pro'], // 2M token context
+        fastResponse: ['gemini-1.5-flash-8b'],
+        ultrafast: ['gemini-1.5-flash-8b'],
       },
     })
 
@@ -205,21 +260,77 @@ class AIConfigManager {
     return available[0]
   }
 
-  // Calculate cost estimate
-  estimateCost(provider: string, inputTokens: number, outputTokens: number): number {
+  // Calculate cost estimate with model-specific pricing
+  estimateCost(provider: string, inputTokens: number, outputTokens: number, model?: string): number {
     const config = this.getProvider(provider)
     if (!config) return 0
 
-    const inputCost = (inputTokens / 1000) * config.pricing.inputTokenCost
-    const outputCost = (outputTokens / 1000) * config.pricing.outputTokenCost
+    // Use premium pricing for premium models
+    const isPremiumModel = model && (
+      model.includes('gpt-5') ||
+      model.includes('claude-4') ||
+      model.includes('gemini-2.5-pro') ||
+      model.includes('o1-preview')
+    )
+
+    const inputCost = (inputTokens / 1000) * (
+      isPremiumModel && config.pricing.premiumInputCost
+        ? config.pricing.premiumInputCost
+        : config.pricing.inputTokenCost
+    )
+
+    const outputCost = (outputTokens / 1000) * (
+      isPremiumModel && config.pricing.premiumOutputCost
+        ? config.pricing.premiumOutputCost
+        : config.pricing.outputTokenCost
+    )
 
     return inputCost + outputCost
   }
 
-  // Get model for specific use case
-  getModelForUseCase(provider: string, useCase: 'fast' | 'default' | 'premium'): string {
+  // Get model for specific use case with enhanced capabilities
+  getModelForUseCase(provider: string, useCase: 'fast' | 'default' | 'premium' | 'reasoning' | 'vision' | 'ultrafast'): string {
     const config = this.getProvider(provider)
-    return config?.models[useCase] || config?.models.default || 'gpt-3.5-turbo'
+    return config?.models[useCase] || config?.models.default || 'gpt-4o-mini'
+  }
+
+  // Get optimal model based on task characteristics
+  getOptimalModel(provider: string, taskType: {
+    complexity: 'low' | 'medium' | 'high'
+    requiresReasoning: boolean
+    requiresVision: boolean
+    priority: 'low' | 'medium' | 'high' | 'critical'
+    maxLatency: number // milliseconds
+  }): string {
+    const config = this.getProvider(provider)
+    if (!config?.capabilities) return config?.models.default || 'gpt-4o-mini'
+
+    // Ultra-fast responses for low latency requirements
+    if (taskType.maxLatency < 1000 && config.capabilities.ultrafast) {
+      return config.capabilities.ultrafast[0]
+    }
+
+    // Reasoning models for complex tasks
+    if (taskType.requiresReasoning && config.capabilities.reasoning) {
+      return config.capabilities.reasoning[0]
+    }
+
+    // Vision models for multimodal tasks
+    if (taskType.requiresVision && config.capabilities.vision) {
+      return config.capabilities.vision[0]
+    }
+
+    // Fast models for simple tasks
+    if (taskType.complexity === 'low' && config.capabilities.fastResponse) {
+      return config.capabilities.fastResponse[0]
+    }
+
+    // Premium models for critical tasks
+    if (taskType.priority === 'critical' && config.models.premium) {
+      return config.models.premium
+    }
+
+    return config.models.default
   }
 
   // Validate configuration

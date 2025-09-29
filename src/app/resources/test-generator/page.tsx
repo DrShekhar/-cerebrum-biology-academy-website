@@ -154,7 +154,7 @@ const TestGeneratorPage = () => {
 
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Curriculum</label>
+                  <label className="block text-sm font-semibold text-gray-900 mb-2">Curriculum</label>
                   <select
                     value={curriculum}
                     onChange={(e) => setCurriculum(e.target.value)}
@@ -169,7 +169,7 @@ const TestGeneratorPage = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-semibold text-gray-900 mb-2">
                     Grade/Class
                   </label>
                   <select
@@ -186,7 +186,7 @@ const TestGeneratorPage = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-semibold text-gray-900 mb-2">
                     Difficulty Level
                   </label>
                   <div className="flex gap-2">
@@ -198,7 +198,7 @@ const TestGeneratorPage = () => {
                           'px-4 py-2 rounded-lg font-medium transition-all',
                           difficulty === diff
                             ? 'bg-blue-600 text-white shadow-md'
-                            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                            : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
                         )}
                       >
                         {diff}
@@ -208,7 +208,7 @@ const TestGeneratorPage = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-semibold text-gray-900 mb-2">
                     Number of Questions
                   </label>
                   <div className="flex items-center gap-4">
@@ -249,8 +249,8 @@ const TestGeneratorPage = () => {
                     <div className="flex items-start gap-3">
                       <div className="text-2xl">{topic.icon}</div>
                       <div>
-                        <div className="font-semibold text-gray-900">{topic.name}</div>
-                        <div className="text-sm text-gray-600 mt-1">{topic.description}</div>
+                        <div className="font-bold text-gray-900">{topic.name}</div>
+                        <div className="text-sm text-gray-800 mt-1">{topic.description}</div>
                       </div>
                     </div>
                   </div>
@@ -277,7 +277,7 @@ const TestGeneratorPage = () => {
                     )}
                   >
                     <div className="text-2xl mb-2">{type.icon}</div>
-                    <div className="font-medium text-sm">{type.name}</div>
+                    <div className="font-semibold text-sm text-gray-900">{type.name}</div>
                   </div>
                 ))}
               </div>
@@ -291,7 +291,7 @@ const TestGeneratorPage = () => {
               </h2>
 
               <div className="flex items-center gap-4">
-                <label className="font-medium text-gray-700">Time Limit:</label>
+                <label className="font-semibold text-gray-900">Time Limit:</label>
                 <input
                   type="range"
                   min="10"
@@ -318,30 +318,30 @@ const TestGeneratorPage = () => {
 
               <div className="space-y-4">
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Questions:</span>
+                  <span className="text-gray-800 font-medium">Questions:</span>
                   <span className="font-bold">{questionCount}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Topics:</span>
+                  <span className="text-gray-800 font-medium">Topics:</span>
                   <span className="font-bold">{selectedTopics.length}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Time Limit:</span>
+                  <span className="text-gray-800 font-medium">Time Limit:</span>
                   <span className="font-bold">{timeLimit} min</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Difficulty:</span>
+                  <span className="text-gray-800 font-medium">Difficulty:</span>
                   <span className="font-bold">{difficulty}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Types:</span>
+                  <span className="text-gray-800 font-medium">Types:</span>
                   <span className="font-bold">{questionTypes.length}</span>
                 </div>
 
                 <hr className="my-4" />
 
-                <div className="text-sm text-gray-600">
-                  <div className="font-medium mb-2">Selected Topics:</div>
+                <div className="text-sm text-gray-800">
+                  <div className="font-semibold mb-2 text-gray-900">Selected Topics:</div>
                   {selectedTopics.length === 0 ? (
                     <div className="text-red-500">No topics selected</div>
                   ) : (
@@ -351,7 +351,7 @@ const TestGeneratorPage = () => {
                         return (
                           <div key={topicId} className="flex items-center gap-2">
                             <span>{topic?.icon}</span>
-                            <span>{topic?.name}</span>
+                            <span className="text-gray-900 font-medium">{topic?.name}</span>
                           </div>
                         )
                       })}
@@ -394,7 +394,7 @@ const TestGeneratorPage = () => {
             {/* Features */}
             <div className="bg-gradient-to-br from-green-50 to-blue-50 border border-green-200 rounded-xl p-6">
               <h3 className="font-bold mb-4">✨ AI Features</h3>
-              <ul className="space-y-2 text-sm text-gray-700">
+              <ul className="space-y-2 text-sm text-gray-900">
                 <li>• Unlimited unique questions</li>
                 <li>• Adaptive difficulty levels</li>
                 <li>• Instant detailed analysis</li>

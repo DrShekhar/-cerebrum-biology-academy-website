@@ -50,19 +50,22 @@ class ClientAIDebugger {
       ...config,
     }
 
-    // Check localStorage for debug state
-    this.initializeFromStorage()
+    // Only initialize in browser environment
+    if (typeof window !== 'undefined') {
+      // Check localStorage for debug state
+      this.initializeFromStorage()
 
-    // Store original fetch for restoration
-    this.originalFetch = window.fetch
+      // Store original fetch for restoration
+      this.originalFetch = window.fetch
 
-    // Initialize fetch interceptor if enabled
-    if (this.config.enabled && this.config.interceptFetch) {
-      this.setupFetchInterceptor()
+      // Initialize fetch interceptor if enabled
+      if (this.config.enabled && this.config.interceptFetch) {
+        this.setupFetchInterceptor()
+      }
+
+      // Setup console shortcuts
+      this.setupConsoleShortcuts()
     }
-
-    // Setup console shortcuts
-    this.setupConsoleShortcuts()
   }
 
   // Initialize debug state from localStorage
@@ -446,11 +449,11 @@ class ClientAIDebugger {
   }
 }
 
-// Create singleton instance
-export const clientAIDebugger = new ClientAIDebugger()
+// Create singleton instance only in browser
+export const clientAIDebugger = typeof window !== 'undefined' ? new ClientAIDebugger() : null
 
 // Auto-enable debugging if localStorage flag is set
-if (typeof window !== 'undefined' && localStorage.getItem('DEBUG_AI') === 'true') {
+if (typeof window !== 'undefined' && clientAIDebugger && localStorage.getItem('DEBUG_AI') === 'true') {
   clientAIDebugger.enable()
 }
 
