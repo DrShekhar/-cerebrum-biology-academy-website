@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { AnalyticsDashboard, RealTimeMetrics } from '@/lib/types/analytics'
+import { AnalyticsDashboard, RealTimeMetrics, DashboardMetrics, TeacherAnalytics, AdminAnalytics } from '@/lib/types/analytics'
+import { prisma as db } from '@/lib/database'
 
 // Mock data for demonstration - in production, this would come from your database
 const generateMockDashboardData = (): AnalyticsDashboard => {
@@ -130,23 +131,41 @@ const generateMockRealTimeData = (): RealTimeMetrics => {
 export async function GET(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url)
-    const type = searchParams.get('type') || 'dashboard'
+    const dashboardType = searchParams.get('type') as 'student' | 'teacher' | 'admin' | 'general' || 'general'
+    const userId = searchParams.get('userId')
+    const grade = searchParams.get('grade')
     const dateRange = searchParams.get('dateRange') || '30d'
 
-    if (type === 'realtime') {
-      const realTimeData = generateMockRealTimeData()
-      return NextResponse.json(realTimeData)
+    switch (dashboardType) {
+      case 'student':
+        if (!userId) {
+          return NextResponse.json({ error: 'User ID is required for student dashboard' }, { status: 400 })
+        }
+        const studentMetrics = await getStudentDashboardMetrics(userId)
+        return NextResponse.json({ success: true, data: studentMetrics })
+
+      case 'teacher':
+        if (!grade) {
+          return NextResponse.json({ error: 'Grade is required for teacher dashboard' }, { status: 400 })
+        }
+        const teacherMetrics = await getTeacherDashboardMetrics(grade)
+        return NextResponse.json({ success: true, data: teacherMetrics })
+
+      case 'admin':
+        const adminMetrics = await getAdminDashboardMetrics()
+        return NextResponse.json({ success: true, data: adminMetrics })
+
+      case 'general':
+      default:
+        if (searchParams.get('realtime') === 'true') {
+          const realTimeData = generateMockRealTimeData()
+          return NextResponse.json(realTimeData)
+        }
+
+        const dashboardData = generateMockDashboardData()
+        return NextResponse.json(dashboardData)
     }
 
-    const dashboardData = generateMockDashboardData()
-
-    // Apply date filtering if needed
-    if (dateRange !== '30d') {
-      // In production, filter data based on date range
-      // For now, return the same mock data
-    }
-
-    return NextResponse.json(dashboardData)
   } catch (error) {
     console.error('Analytics dashboard error:', error)
     return NextResponse.json({ error: 'Failed to fetch analytics data' }, { status: 500 })
@@ -171,4 +190,304 @@ export async function POST(request: NextRequest) {
     console.error('Analytics dashboard filter error:', error)
     return NextResponse.json({ error: 'Failed to apply filters' }, { status: 500 })
   }
+}
+
+async function getStudentDashboardMetrics(userId: string): Promise<DashboardMetrics> {
+  // Get user's grade for class comparison
+  const user = await db.freeUser.findUnique({
+    where: { id: userId },
+    select: { grade: true }
+  })
+
+  if (!user) {
+    throw new Error('User not found')
+  }
+
+  // Get total students in same grade
+  const totalStudents = await db.freeUser.count({
+    where: { grade: user.grade }
+  })
+
+  // Get completed tests for the user
+  const userTests = await db.testAttempt.findMany({
+    where: {
+      freeUserId: userId,
+      status: 'COMPLETED'
+    },
+    orderBy: { submittedAt: 'desc' }
+  })
+
+  const totalTests = userTests.length
+  const averageScore = totalTests > 0
+    ? userTests.reduce((sum, test) => sum + test.percentage, 0) / totalTests
+    : 0
+
+  // Get completion rate (completed vs started)
+  const startedTests = await db.testAttempt.count({
+    where: { freeUserId: userId }
+  })
+  const completionRate = startedTests > 0 ? (totalTests / startedTests) * 100 : 0
+
+  // Get daily activity for last 30 days
+  const thirtyDaysAgo = new Date()
+  thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30)
+
+  const dailyTests = await db.testAttempt.findMany({
+    where: {
+      freeUserId: userId,
+      status: 'COMPLETED',
+      submittedAt: { gte: thirtyDaysAgo }
+    },
+    select: { submittedAt: true }
+  })
+
+  const dailyActive = generateDailyActivity(dailyTests, 30)
+
+  // Get top performers in same grade
+  const gradeTests = await db.testAttempt.findMany({
+    where: {
+      status: 'COMPLETED',
+      freeUser: { grade: user.grade }
+    },
+    include: { freeUser: true }
+  })
+
+  const topPerformers = calculateTopPerformers(gradeTests)
+
+  return {
+    overview: {
+      totalStudents,
+      totalTests,
+      averageScore,
+      completionRate
+    },
+    trends: {
+      dailyActive,
+      weeklyTests: [], // Implement if needed
+      monthlyGrowth: [] // Implement if needed
+    },
+    topPerformers,
+    popularContent: [] // Implement based on user's test history
+  }
+}
+
+async function getTeacherDashboardMetrics(grade: string): Promise<TeacherAnalytics> {
+  // Get all students in the grade
+  const students = await db.freeUser.findMany({
+    where: { grade },
+    include: {
+      testAttempts: {
+        where: { status: 'COMPLETED' },
+        orderBy: { submittedAt: 'desc' }
+      }
+    }
+  })
+
+  const totalStudents = students.length
+
+  // Calculate class metrics
+  const allTests = students.flatMap(s => s.testAttempts)
+  const classAverage = allTests.length > 0
+    ? allTests.reduce((sum, test) => sum + test.percentage, 0) / allTests.length
+    : 0
+
+  // Calculate improvement (compare last 2 weeks)
+  const twoWeeksAgo = new Date()
+  twoWeeksAgo.setDate(twoWeeksAgo.getDate() - 14)
+
+  const recentTests = allTests.filter(test => test.submittedAt >= twoWeeksAgo)
+  const olderTests = allTests.filter(test => test.submittedAt < twoWeeksAgo)
+
+  const recentAverage = recentTests.length > 0
+    ? recentTests.reduce((sum, test) => sum + test.percentage, 0) / recentTests.length
+    : 0
+  const olderAverage = olderTests.length > 0
+    ? olderTests.reduce((sum, test) => sum + test.percentage, 0) / olderTests.length
+    : 0
+
+  const improvement = recentAverage - olderAverage
+
+  // Get student progress
+  const studentProgress = students.map(student => {
+    const studentTests = student.testAttempts
+    const avgScore = studentTests.length > 0
+      ? studentTests.reduce((sum, test) => sum + test.percentage, 0) / studentTests.length
+      : 0
+
+    const recentStudentTests = studentTests.filter(test => test.submittedAt >= twoWeeksAgo)
+    const olderStudentTests = studentTests.filter(test => test.submittedAt < twoWeeksAgo)
+
+    const recentStudentAvg = recentStudentTests.length > 0
+      ? recentStudentTests.reduce((sum, test) => sum + test.percentage, 0) / recentStudentTests.length
+      : 0
+    const olderStudentAvg = olderStudentTests.length > 0
+      ? olderStudentTests.reduce((sum, test) => sum + test.percentage, 0) / olderStudentTests.length
+      : 0
+
+    return {
+      studentId: student.id,
+      name: student.name || 'Anonymous',
+      lastActive: student.lastActiveDate || new Date(),
+      testsTaken: studentTests.length,
+      averageScore: avgScore,
+      improvement: recentStudentAvg - olderStudentAvg,
+      strugglingTopics: [] // Implement based on test analysis
+    }
+  })
+
+  // Active students (last 7 days)
+  const sevenDaysAgo = new Date()
+  sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7)
+
+  const activeStudents = await db.freeUser.count({
+    where: {
+      grade,
+      lastActiveDate: { gte: sevenDaysAgo }
+    }
+  })
+
+  // Weekly test completion
+  const weeklyTests = await db.testAttempt.count({
+    where: {
+      status: 'COMPLETED',
+      submittedAt: { gte: sevenDaysAgo },
+      freeUser: { grade }
+    }
+  })
+
+  return {
+    classOverview: {
+      totalStudents,
+      averageScore: classAverage,
+      classAverage,
+      improvement
+    },
+    studentProgress,
+    topicPerformance: [], // Implement topic-wise analysis
+    engagementMetrics: {
+      dailyActiveStudents: activeStudents,
+      weeklyTestCompletion: weeklyTests,
+      averageStudyTime: 0, // Calculate from test durations
+      dropoffPoints: [] // Implement analysis
+    }
+  }
+}
+
+async function getAdminDashboardMetrics(): Promise<AdminAnalytics> {
+  // System metrics
+  const totalUsers = await db.user.count()
+  const totalTeachers = await db.user.count({ where: { role: 'TEACHER' } })
+  const totalStudents = await db.freeUser.count()
+
+  // Monthly growth
+  const lastMonth = new Date()
+  lastMonth.setMonth(lastMonth.getMonth() - 1)
+
+  const newUsersThisMonth = await db.freeUser.count({
+    where: { registrationDate: { gte: lastMonth } }
+  })
+
+  const previousMonth = new Date(lastMonth)
+  previousMonth.setMonth(previousMonth.getMonth() - 1)
+
+  const newUsersLastMonth = await db.freeUser.count({
+    where: {
+      registrationDate: {
+        gte: previousMonth,
+        lt: lastMonth
+      }
+    }
+  })
+
+  const monthlyGrowth = newUsersLastMonth > 0
+    ? ((newUsersThisMonth - newUsersLastMonth) / newUsersLastMonth) * 100
+    : 0
+
+  // Content metrics
+  const totalQuestions = await db.question.count()
+  const totalTests = await db.testTemplate.count()
+
+  // Performance metrics (mock data for now)
+  const systemUptime = 99.9
+  const averageResponseTime = 250
+  const errorRate = 0.1
+
+  return {
+    systemMetrics: {
+      totalUsers,
+      totalTeachers,
+      totalStudents,
+      monthlyGrowth,
+      churnRate: 0 // Implement churn calculation
+    },
+    contentMetrics: {
+      totalQuestions,
+      totalTests,
+      averageRating: 4.5, // Implement rating system
+      contentGaps: [] // Implement gap analysis
+    },
+    performanceMetrics: {
+      systemUptime,
+      averageResponseTime,
+      errorRate,
+      serverLoad: 65 // Mock data
+    },
+    businessMetrics: {
+      revenue: 0, // Implement revenue tracking
+      conversionRate: 0, // Implement conversion tracking
+      customerLifetimeValue: 0, // Implement CLV calculation
+      costPerAcquisition: 0 // Implement CPA calculation
+    }
+  }
+}
+
+function generateDailyActivity(tests: any[], days: number): Array<{ date: string; count: number }> {
+  const activity = []
+  const testsByDate: Record<string, number> = {}
+
+  tests.forEach(test => {
+    const date = test.submittedAt.toISOString().split('T')[0]
+    testsByDate[date] = (testsByDate[date] || 0) + 1
+  })
+
+  for (let i = days - 1; i >= 0; i--) {
+    const date = new Date()
+    date.setDate(date.getDate() - i)
+    const dateStr = date.toISOString().split('T')[0]
+
+    activity.push({
+      date: dateStr,
+      count: testsByDate[dateStr] || 0
+    })
+  }
+
+  return activity
+}
+
+function calculateTopPerformers(tests: any[]): Array<{ userId: string; name: string; score: number; rank: number }> {
+  const userStats: Record<string, { name: string; totalScore: number; testCount: number }> = {}
+
+  tests.forEach(test => {
+    const userId = test.freeUserId
+    if (!userStats[userId]) {
+      userStats[userId] = {
+        name: test.freeUser.name || 'Anonymous',
+        totalScore: 0,
+        testCount: 0
+      }
+    }
+    userStats[userId].totalScore += test.percentage
+    userStats[userId].testCount++
+  })
+
+  return Object.entries(userStats)
+    .map(([userId, stats]) => ({
+      userId,
+      name: stats.name,
+      score: stats.testCount > 0 ? stats.totalScore / stats.testCount : 0,
+      rank: 0
+    }))
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 10)
+    .map((user, index) => ({ ...user, rank: index + 1 }))
 }
