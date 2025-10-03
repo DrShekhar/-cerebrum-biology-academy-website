@@ -1,17 +1,32 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    unoptimized: true,  // Disable image optimization
-    domains: ['localhost', 'cdn.cerebrumbiologyacademy.com', 'images.unsplash.com'], // Add allowed domains
+    unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'cdn.cerebrumbiologyacademy.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+      },
+    ],
   },
-  // Also try adding:
   eslint: {
     ignoreDuringBuilds: true,
   },
   typescript: {
     ignoreBuildErrors: true,
   },
-  // Disable caching in development
+  serverExternalPackages: ['ioredis', 'pg'],
+  experimental: {
+    serverComponentsExternalPackages: ['ioredis', 'pg'],
+  },
   async headers() {
     if (process.env.NODE_ENV === 'development') {
       return [
