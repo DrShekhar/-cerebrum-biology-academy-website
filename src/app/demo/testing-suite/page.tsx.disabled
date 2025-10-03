@@ -2,15 +2,9 @@
 
 import React, { useState, useEffect } from 'react'
 import { ConversionFunnelChart } from '../../../components/analytics/ConversionFunnelChart'
-import {
-  HeatmapVisualization,
-  InteractiveHeatmap,
-  HeatmapStats,
-} from '../../../components/analytics/HeatmapVisualization'
 import { FeedbackModal, QuickFeedbackWidget } from '../../../components/feedback/FeedbackModal'
 import { OptimizationDashboard } from '../../../components/optimization/OptimizationDashboard'
 import { useFeedbackCollection } from '../../../lib/feedback/feedbackCollection'
-import { useHeatmapTracking } from '../../../lib/heatmap/heatmapTracking'
 import { useFunnelAnalytics } from '../../../hooks/useFunnelAnalytics'
 
 // Demo data generators
@@ -325,7 +319,6 @@ function HeatmapDemo({ demoData }: { demoData: any }) {
         <div className="bg-white rounded-lg shadow p-6">
           <h3 className="text-lg font-semibold mb-4">Click Heatmap</h3>
           <div className="relative h-64 bg-gray-100 rounded">
-            <HeatmapVisualization
               dataPoints={demoData.heatmapData}
               width={400}
               height={256}

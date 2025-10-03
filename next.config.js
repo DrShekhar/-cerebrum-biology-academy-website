@@ -24,9 +24,6 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   serverExternalPackages: ['ioredis', 'pg'],
-  experimental: {
-    serverComponentsExternalPackages: ['ioredis', 'pg'],
-  },
   async headers() {
     if (process.env.NODE_ENV === 'development') {
       return [

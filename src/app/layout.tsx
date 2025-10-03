@@ -20,7 +20,6 @@ import { MobileBottomNav } from '@/components/layout/MobileBottomNav'
 import { Footer } from '@/components/layout/Footer'
 import { ScrollProgressBar } from '@/components/ui/ProgressIndicators'
 import { PersonalizationProvider } from '@/components/providers/PersonalizationProvider'
-import { ABTestProvider } from '@/components/abTesting/ABTestProvider'
 import { PerformanceProvider } from '@/components/providers/PerformanceProvider'
 import './globals.css'
 import '@/styles/performance.css'
@@ -146,7 +145,7 @@ export default function RootLayout({
                 <ServiceWorkerProvider>
                   <PerformanceProvider>
                     <PersonalizationProvider>
-                      <ABTestProvider>
+                      
                         <ErrorBoundary>
                           {/* Scroll Progress Bar */}
                           <ScrollProgressBar />
@@ -182,7 +181,7 @@ export default function RootLayout({
                           {/* <PWAInstallPrompt showDelay={45000} /> */}
                           {/* <PWAInstallSuccess /> */}
                         </ErrorBoundary>
-                      </ABTestProvider>
+                      
                     </PersonalizationProvider>
                   </PerformanceProvider>
                 </ServiceWorkerProvider>

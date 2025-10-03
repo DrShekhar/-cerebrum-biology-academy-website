@@ -3,7 +3,6 @@
  * Production-ready configuration for millions of students
  */
 
-import { DistributedCacheManager } from './DistributedCacheManager'
 import { QueryCacheOptimizer } from './QueryCacheOptimizer'
 import { SessionCacheManager } from './SessionCacheManager'
 
@@ -34,7 +33,6 @@ interface EnvironmentConfig {
 class CacheConfigurationManager {
   private static instance: CacheConfigurationManager
   private config: EnvironmentConfig
-  private distributedCache: DistributedCacheManager
   private queryOptimizer: QueryCacheOptimizer
   private sessionManager: SessionCacheManager
 
@@ -164,7 +162,6 @@ class CacheConfigurationManager {
 
   private initializeCacheManagers(): void {
     // Initialize Distributed Cache Manager
-    this.distributedCache = new DistributedCacheManager({
       redis: this.config.redis,
       defaultTTL: this.config.performance.defaultTTL,
       compressionThreshold: this.config.performance.compressionThreshold,
