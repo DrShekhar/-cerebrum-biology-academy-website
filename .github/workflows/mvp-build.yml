@@ -1,0 +1,40 @@
+name: 🚀 MVP Build & Deploy
+
+on:
+  push:
+    branches: [emergency-revenue-mvp, main]
+  pull_request:
+    branches: [main]
+
+env:
+  NODE_VERSION: '22'
+
+jobs:
+  build:
+    name: 🏗️ Build Application
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+
+      - name: 📦 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: 📋 Install dependencies
+        run: npm ci --legacy-peer-deps
+
+      - name: 🏗️ Build application
+        run: npm run build
+        env:
+          # Provide minimal env vars for build
+          NEXT_PUBLIC_SITE_URL: https://cerebrumbiologyacademy.com
+          DATABASE_URL: postgresql://placeholder
+          ADMIN_EMAIL: admin@cerebrumbiologyacademy.com
+          ADMIN_PASSWORD_HASH: placeholder
+
+      - name: ✅ Build successful
+        run: echo "Build completed successfully!"
