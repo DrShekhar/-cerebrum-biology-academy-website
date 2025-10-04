@@ -38,15 +38,18 @@ const ADMIN_CREDENTIALS = {
   role: 'admin' as const,
 }
 
-// Validate required admin environment variables
-if (!ADMIN_CREDENTIALS.email || !ADMIN_CREDENTIALS.passwordHash) {
-  console.error(
-    '❌ SECURITY ERROR: ADMIN_EMAIL and ADMIN_PASSWORD_HASH environment variables are required'
-  )
-  if (process.env.NODE_ENV === 'production') {
-    throw new Error('Missing required admin credentials in production environment')
+// Validate required admin environment variables (only at runtime, not during build)
+if (typeof window === 'undefined' && process.env.NEXT_PHASE !== 'phase-production-build') {
+  if (!ADMIN_CREDENTIALS.email || !ADMIN_CREDENTIALS.passwordHash) {
+    console.error(
+      '❌ SECURITY ERROR: ADMIN_EMAIL and ADMIN_PASSWORD_HASH environment variables are required'
+    )
+    if (process.env.NODE_ENV === 'production') {
+      console.warn('⚠️  Missing admin credentials in production - admin features will be disabled')
+    } else {
+      console.warn('⚠️  Running in development mode without proper admin credentials')
+    }
   }
-  console.warn('⚠️  Running in development mode without proper admin credentials')
 }
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
