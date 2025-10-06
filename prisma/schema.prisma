@@ -38,6 +38,8 @@ model User {
   payments       Payment[]
   sessions       Session[]
   communicationLog CommunicationLog[]
+  materialAccess MaterialAccess[]
+  materialProgress MaterialProgress[]
 
   @@map("users")
 }
@@ -79,6 +81,8 @@ model Course {
   // Relations
   enrollments Enrollment[]
   demoBookings DemoBooking[]
+  chapters Chapter[]
+  materials StudyMaterial[]
 
   @@map("courses")
 }
@@ -700,4 +704,253 @@ enum AchievementType {
   PERFECTIONIST
   COMMUNITY_HELPER
   BOOKWORM
+}
+
+// ============================================
+// LMS SYSTEM MODELS
+// ============================================
+
+model Chapter {
+  id              String   @id @default(cuid())
+  courseId        String
+
+  // Chapter Details
+  title           String
+  description     String?
+  orderIndex      Int
+
+  // Status
+  isActive        Boolean  @default(true)
+
+  // Timestamps
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  // Relations
+  course          Course   @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  topics          Topic[]
+  materials       StudyMaterial[]
+
+  @@index([courseId, orderIndex])
+  @@map("chapters")
+}
+
+model Topic {
+  id              String   @id @default(cuid())
+  chapterId       String
+
+  // Topic Details
+  title           String
+  description     String?
+  orderIndex      Int
+
+  // Status
+  isActive        Boolean  @default(true)
+
+  // Timestamps
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  // Relations
+  chapter         Chapter  @relation(fields: [chapterId], references: [id], onDelete: Cascade)
+  materials       StudyMaterial[]
+
+  @@index([chapterId, orderIndex])
+  @@map("topics")
+}
+
+model StudyMaterial {
+  id              String   @id @default(cuid())
+
+  // Content Details
+  title           String
+  description     String?
+  materialType    MaterialType
+
+  // File Information
+  fileUrl         String
+  fileName        String
+  fileSize        Int
+  mimeType        String       @default("application/pdf")
+
+  // Classification
+  courseId        String?
+  chapterId       String?
+  topicId         String?
+  tags            Json?
+
+  // Access Control
+  accessLevel     AccessLevel  @default(ENROLLED)
+  requiredCourseId String?
+
+  // Organization
+  sortOrder       Int          @default(0)
+  category        String?
+
+  // Publishing
+  uploadedBy      String
+  isPublished     Boolean      @default(false)
+  publishedAt     DateTime?
+
+  // Analytics
+  totalDownloads  Int          @default(0)
+  totalViews      Int          @default(0)
+  avgRating       Float        @default(0)
+  ratingCount     Int          @default(0)
+
+  // Timestamps
+  createdAt       DateTime     @default(now())
+  updatedAt       DateTime     @updatedAt
+
+  // Relations
+  course          Course?      @relation(fields: [courseId], references: [id])
+  chapter         Chapter?     @relation(fields: [chapterId], references: [id])
+  topic           Topic?       @relation(fields: [topicId], references: [id])
+  materialAccess  MaterialAccess[]
+  progress        MaterialProgress[]
+
+  @@index([courseId, isPublished])
+  @@index([materialType, accessLevel])
+  @@index([createdAt])
+  @@map("study_materials")
+}
+
+model MaterialAccess {
+  id              String   @id @default(cuid())
+  materialId      String
+  userId          String
+
+  // Access Details
+  grantedBy       String
+  grantedAt       DateTime @default(now())
+  expiresAt       DateTime?
+  reason          String?
+
+  // Relations
+  material        StudyMaterial @relation(fields: [materialId], references: [id], onDelete: Cascade)
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([materialId, userId])
+  @@index([userId])
+  @@map("material_access")
+}
+
+model MaterialProgress {
+  id              String   @id @default(cuid())
+  materialId      String
+  userId          String
+
+  // Progress Status
+  status          ProgressStatus @default(NOT_STARTED)
+
+  // Engagement Tracking
+  firstViewedAt   DateTime?
+  lastViewedAt    DateTime?
+  downloadedAt    DateTime?
+  completedAt     DateTime?
+
+  // Reading Progress
+  currentPage     Int?
+  totalPages      Int?
+  timeSpent       Int      @default(0)
+
+  // Student Feedback
+  rating          Int?
+  feedback        String?
+  notes           String?
+
+  // Timestamps
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  // Relations
+  material        StudyMaterial @relation(fields: [materialId], references: [id], onDelete: Cascade)
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([materialId, userId])
+  @@index([userId, status])
+  @@index([materialId, updatedAt])
+  @@map("material_progress")
+}
+
+model ContentNotification {
+  id              String   @id @default(cuid())
+
+  // Notification Content
+  title           String
+  message         String
+  type            NotificationType
+
+  // Target Audience
+  targetUserIds   Json?
+  targetCourseIds Json?
+  sendToAll       Boolean  @default(false)
+
+  // Content Reference
+  materialId      String?
+  courseId        String?
+
+  // Delivery Channels
+  channels        Json
+
+  // Scheduling
+  scheduledFor    DateTime?
+  sentAt          DateTime?
+
+  // Status & Stats
+  status          NotificationStatus @default(DRAFT)
+  recipientCount  Int      @default(0)
+  deliveredCount  Int      @default(0)
+  failedCount     Int      @default(0)
+
+  // Timestamps
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@index([status, scheduledFor])
+  @@index([materialId])
+  @@map("content_notifications")
+}
+
+// LMS Enums
+enum MaterialType {
+  PDF_NOTES
+  PDF_ASSIGNMENT
+  PDF_PRACTICE_PAPER
+  PDF_REFERENCE
+  PDF_EBOOK
+  VIDEO
+  LINK
+}
+
+enum AccessLevel {
+  FREE
+  ENROLLED
+  PREMIUM
+  SPECIFIC_COURSE
+}
+
+enum ProgressStatus {
+  NOT_STARTED
+  VIEWED
+  IN_PROGRESS
+  DOWNLOADED
+  COMPLETED
+}
+
+enum NotificationType {
+  NEW_MATERIAL
+  ASSIGNMENT_REMINDER
+  COURSE_UPDATE
+  ANNOUNCEMENT
+  CUSTOM
+}
+
+enum NotificationStatus {
+  DRAFT
+  SCHEDULED
+  SENDING
+  SENT
+  FAILED
+  CANCELLED
 }
