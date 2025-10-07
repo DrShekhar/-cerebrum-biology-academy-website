@@ -21,16 +21,81 @@ interface Material {
   createdAt: string
 }
 
+interface Stats {
+  totalMaterials: number
+  totalDownloads: number
+  totalViews: number
+  totalSize: number
+}
+
 export default function MaterialsListPage() {
   const [materials, setMaterials] = useState<Material[]>([])
+  const [stats, setStats] = useState<Stats>({
+    totalMaterials: 0,
+    totalDownloads: 0,
+    totalViews: 0,
+    totalSize: 0,
+  })
   const [loading, setLoading] = useState(true)
   const [filter, setFilter] = useState('')
+  const [typeFilter, setTypeFilter] = useState('')
+  const [publishedFilter, setPublishedFilter] = useState('')
+  const [deleteId, setDeleteId] = useState<string | null>(null)
+  const [deleting, setDeleting] = useState(false)
 
   useEffect(() => {
-    // TODO: Fetch materials from API
-    // For now, show placeholder
-    setLoading(false)
-  }, [])
+    fetchMaterials()
+  }, [filter, typeFilter, publishedFilter])
+
+  const fetchMaterials = async () => {
+    try {
+      setLoading(true)
+      const params = new URLSearchParams()
+      if (filter) params.append('search', filter)
+      if (typeFilter) params.append('type', typeFilter)
+      if (publishedFilter) params.append('published', publishedFilter)
+
+      const response = await fetch(`/api/admin/lms/materials?${params}`)
+      const data = await response.json()
+
+      if (data.success) {
+        setMaterials(data.materials)
+        setStats(data.stats)
+      }
+    } catch (error) {
+      console.error('Failed to fetch materials:', error)
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  const handleDelete = async (id: string) => {
+    if (!confirm('Are you sure you want to delete this material?')) {
+      return
+    }
+
+    try {
+      setDeleting(true)
+      const response = await fetch(`/api/admin/lms/materials/${id}`, {
+        method: 'DELETE',
+      })
+
+      const data = await response.json()
+
+      if (data.success) {
+        // Refresh list
+        fetchMaterials()
+        setDeleteId(null)
+      } else {
+        alert('Failed to delete material: ' + data.error)
+      }
+    } catch (error) {
+      console.error('Delete failed:', error)
+      alert('Failed to delete material')
+    } finally {
+      setDeleting(false)
+    }
+  }
 
   const formatFileSize = (bytes: number) => {
     if (bytes === 0) return '0 Bytes'
@@ -79,17 +144,25 @@ export default function MaterialsListPage() {
               />
             </div>
 
-            <select className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            <select
+              value={typeFilter}
+              onChange={(e) => setTypeFilter(e.target.value)}
+              className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            >
               <option value="">All Types</option>
               <option value="PDF_NOTES">Class Notes</option>
               <option value="PDF_ASSIGNMENT">Assignments</option>
               <option value="PDF_PRACTICE_PAPER">Practice Papers</option>
             </select>
 
-            <select className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            <select
+              value={publishedFilter}
+              onChange={(e) => setPublishedFilter(e.target.value)}
+              className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            >
               <option value="">All Status</option>
-              <option value="published">Published</option>
-              <option value="draft">Draft</option>
+              <option value="true">Published</option>
+              <option value="false">Draft</option>
             </select>
           </div>
         </div>
@@ -160,8 +233,13 @@ export default function MaterialsListPage() {
                       </span>
                     </td>
                     <td className="px-6 py-4 text-sm">
-                      <button className="text-blue-600 hover:text-blue-800 mr-3">Edit</button>
-                      <button className="text-red-600 hover:text-red-800">Delete</button>
+                      <button
+                        onClick={() => handleDelete(material.id)}
+                        disabled={deleting}
+                        className="text-red-600 hover:text-red-800 disabled:opacity-50"
+                      >
+                        {deleting && deleteId === material.id ? 'Deleting...' : 'Delete'}
+                      </button>
                     </td>
                   </tr>
                 ))}
@@ -174,7 +252,7 @@ export default function MaterialsListPage() {
         <div className="mt-8 grid grid-cols-1 md:grid-cols-4 gap-4">
           <div className="bg-white p-6 rounded-lg border border-gray-200">
             <p className="text-sm text-gray-600 mb-1">Total Materials</p>
-            <p className="text-2xl font-bold text-gray-900">{materials.length}</p>
+            <p className="text-2xl font-bold text-gray-900">{stats.totalMaterials}</p>
           </div>
 
           <div className="bg-white p-6 rounded-lg border border-gray-200">
@@ -186,16 +264,12 @@ export default function MaterialsListPage() {
 
           <div className="bg-white p-6 rounded-lg border border-gray-200">
             <p className="text-sm text-gray-600 mb-1">Total Downloads</p>
-            <p className="text-2xl font-bold text-blue-600">
-              {materials.reduce((sum, m) => sum + m.totalDownloads, 0)}
-            </p>
+            <p className="text-2xl font-bold text-blue-600">{stats.totalDownloads}</p>
           </div>
 
           <div className="bg-white p-6 rounded-lg border border-gray-200">
             <p className="text-sm text-gray-600 mb-1">Total Views</p>
-            <p className="text-2xl font-bold text-purple-600">
-              {materials.reduce((sum, m) => sum + m.totalViews, 0)}
-            </p>
+            <p className="text-2xl font-bold text-purple-600">{stats.totalViews}</p>
           </div>
         </div>
       </div>
