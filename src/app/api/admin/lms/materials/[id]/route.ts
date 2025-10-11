@@ -9,14 +9,22 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { deletePDF } from '@/lib/lms/blobStorage'
+import { auth } from '@/lib/auth'
 
 /**
  * GET - Fetch single material by ID
  */
-export async function GET(request: NextRequest, { params }: { params: { id: string } }) {
+export async function GET(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
+    // Authentication check
+    const session = await auth()
+    if (!session || session.user.role !== 'ADMIN') {
+      return NextResponse.json({ error: 'Unauthorized. Admin access required.' }, { status: 401 })
+    }
+
+    const { id } = await params
     const material = await prisma.studyMaterial.findUnique({
-      where: { id: params.id },
+      where: { id },
       include: {
         course: true,
         chapter: true,
@@ -51,13 +59,20 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
 /**
  * PATCH - Update material metadata
  */
-export async function PATCH(request: NextRequest, { params }: { params: { id: string } }) {
+export async function PATCH(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
+    // Authentication check
+    const session = await auth()
+    if (!session || session.user.role !== 'ADMIN') {
+      return NextResponse.json({ error: 'Unauthorized. Admin access required.' }, { status: 401 })
+    }
+
+    const { id } = await params
     const body = await request.json()
 
     // Validate material exists
     const existing = await prisma.studyMaterial.findUnique({
-      where: { id: params.id },
+      where: { id },
     })
 
     if (!existing) {
@@ -93,7 +108,7 @@ export async function PATCH(request: NextRequest, { params }: { params: { id: st
 
     // Update material
     const updated = await prisma.studyMaterial.update({
-      where: { id: params.id },
+      where: { id },
       data: updateData,
       include: {
         course: true,
@@ -126,11 +141,22 @@ export async function PATCH(request: NextRequest, { params }: { params: { id: st
 /**
  * DELETE - Delete material and associated file
  */
-export async function DELETE(request: NextRequest, { params }: { params: { id: string } }) {
+export async function DELETE(
+  request: NextRequest,
+  { params }: { params: Promise<{ id: string }> }
+) {
   try {
+    // Authentication check
+    const session = await auth()
+    if (!session || session.user.role !== 'ADMIN') {
+      return NextResponse.json({ error: 'Unauthorized. Admin access required.' }, { status: 401 })
+    }
+
+    const { id } = await params
+
     // Fetch material to get file URL
     const material = await prisma.studyMaterial.findUnique({
-      where: { id: params.id },
+      where: { id },
     })
 
     if (!material) {
@@ -139,7 +165,7 @@ export async function DELETE(request: NextRequest, { params }: { params: { id: s
 
     // Delete from database first
     await prisma.studyMaterial.delete({
-      where: { id: params.id },
+      where: { id },
     })
 
     // Then delete file from storage

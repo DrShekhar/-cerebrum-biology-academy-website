@@ -2,7 +2,7 @@ import NextAuth from 'next-auth'
 import Credentials from 'next-auth/providers/credentials'
 import bcrypt from 'bcryptjs'
 import { z } from 'zod'
-import { prisma } from './prisma'
+import { prisma } from './prisma-edge-safe'
 import { logLogin, logFailedLogin, logAdminAccess } from './security/auditLogger'
 
 declare module 'next-auth' {

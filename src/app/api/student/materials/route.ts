@@ -1,8 +1,7 @@
 /**
- * LMS Materials Management API
+ * Student Materials API
  *
- * GET /api/admin/lms/materials - List all materials
- * POST /api/admin/lms/materials - Update material (future)
+ * GET /api/student/materials - List published materials accessible to student
  */
 
 import { NextRequest, NextResponse } from 'next/server'
@@ -10,15 +9,15 @@ import { prisma } from '@/lib/prisma'
 import { auth } from '@/lib/auth'
 
 /**
- * GET - Fetch all study materials
- * Supports filtering and pagination
+ * GET - Fetch published materials for student
+ * Only returns published materials
  */
 export async function GET(request: NextRequest) {
   try {
-    // Authentication check
+    // Authentication check - student or higher
     const session = await auth()
-    if (!session || session.user.role !== 'ADMIN') {
-      return NextResponse.json({ error: 'Unauthorized. Admin access required.' }, { status: 401 })
+    if (!session) {
+      return NextResponse.json({ error: 'Unauthorized. Please sign in.' }, { status: 401 })
     }
 
     const { searchParams } = new URL(request.url)
@@ -26,13 +25,14 @@ export async function GET(request: NextRequest) {
     // Parse query parameters
     const search = searchParams.get('search') || ''
     const materialType = searchParams.get('type')
-    const isPublished = searchParams.get('published')
     const courseId = searchParams.get('courseId')
     const page = parseInt(searchParams.get('page') || '1')
     const limit = parseInt(searchParams.get('limit') || '50')
 
-    // Build where clause
-    const where: any = {}
+    // Build where clause - ALWAYS filter for published only
+    const where: any = {
+      isPublished: true, // Critical: Only show published materials
+    }
 
     if (search) {
       where.OR = [
@@ -46,13 +46,13 @@ export async function GET(request: NextRequest) {
       where.materialType = materialType
     }
 
-    if (isPublished !== null && isPublished !== '') {
-      where.isPublished = isPublished === 'true'
-    }
-
     if (courseId) {
       where.courseId = courseId
     }
+
+    // TODO: Add access control based on student's enrollment
+    // For now, all students see all published materials
+    // Future: Filter by MaterialAccess table
 
     // Fetch materials with pagination
     const [materials, total] = await Promise.all([
@@ -79,7 +79,7 @@ export async function GET(request: NextRequest) {
           },
         },
         orderBy: {
-          createdAt: 'desc',
+          publishedAt: 'desc', // Most recent first
         },
         skip: (page - 1) * limit,
         take: limit,
@@ -93,7 +93,6 @@ export async function GET(request: NextRequest) {
       _sum: {
         totalDownloads: true,
         totalViews: true,
-        fileSize: true,
       },
       _count: {
         id: true,
@@ -108,20 +107,18 @@ export async function GET(request: NextRequest) {
         description: m.description,
         fileName: m.fileName,
         fileSize: m.fileSize,
-        fileUrl: m.fileUrl,
+        fileUrl: m.fileUrl, // Students need URL to download
         materialType: m.materialType,
         category: m.category,
         tags: m.tags ? JSON.parse(m.tags as string) : [],
-        isPublished: m.isPublished,
-        publishedAt: m.publishedAt,
         totalDownloads: m.totalDownloads,
         totalViews: m.totalViews,
         avgRating: m.avgRating,
         course: m.course,
         chapter: m.chapter,
         topic: m.topic,
+        publishedAt: m.publishedAt,
         createdAt: m.createdAt,
-        updatedAt: m.updatedAt,
       })),
       pagination: {
         page,
@@ -133,7 +130,6 @@ export async function GET(request: NextRequest) {
         totalMaterials: stats._count.id,
         totalDownloads: stats._sum.totalDownloads || 0,
         totalViews: stats._sum.totalViews || 0,
-        totalSize: stats._sum.fileSize || 0,
       },
     })
   } catch (error) {

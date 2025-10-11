@@ -9,16 +9,16 @@
 
 ## 🎯 QUICK STATUS OVERVIEW
 
-| Milestone              | Status         | Session   | Completion | ETA    |
-| ---------------------- | -------------- | --------- | ---------- | ------ |
-| 1. Database Foundation | 🔄 In Progress | Session 1 | 75%        | Today  |
-| 2. File Storage Setup  | ⏳ Pending     | Session 2 | 0%         | Next   |
-| 3. Admin Upload UI     | ⏳ Pending     | Session 3 | 0%         | Week 2 |
-| 4. Material Management | ⏳ Pending     | Session 4 | 0%         | Week 2 |
-| 5. Student Portal      | ⏳ Pending     | Session 5 | 0%         | Week 3 |
-| 6. Notification System | ⏳ Pending     | Session 6 | 0%         | Week 3 |
-| 7. Analytics Dashboard | ⏳ Pending     | Session 7 | 0%         | Week 4 |
-| 8. Testing & Launch    | ⏳ Pending     | Session 8 | 0%         | Week 4 |
+| Milestone              | Status         | Session   | Completion | ETA     |
+| ---------------------- | -------------- | --------- | ---------- | ------- |
+| 1. Database Foundation | ✅ Completed   | Session 1 | 100%       | Done    |
+| 2. File Storage Setup  | ✅ Completed   | Session 2 | 100%       | Done    |
+| 3. Admin Upload UI     | ✅ Completed   | Session 3 | 100%       | Done    |
+| 4. Material Management | ✅ Completed   | Session 4 | 100%       | Done    |
+| 5. Student Portal      | ⏳ Pending     | Session 5 | 0%         | Next    |
+| 6. Notification System | ⏳ Pending     | Session 6 | 0%         | Week 3  |
+| 7. Analytics Dashboard | ⏳ Pending     | Session 7 | 0%         | Week 4  |
+| 8. Testing & Launch    | 🔄 In Progress | Session 8 | 30%        | Ongoing |
 
 **Legend:**
 

@@ -23,6 +23,16 @@ class MockPrismaClient {
 // Create Prisma client with enhanced error handling and WASM fallback
 function createPrismaClient() {
   try {
+    // Detect Edge Runtime and return mock client to avoid process.nextTick errors
+    if (
+      typeof EdgeRuntime !== 'undefined' ||
+      (globalThis as any).EdgeRuntime ||
+      typeof process.nextTick !== 'function'
+    ) {
+      console.warn('⚠️ Edge Runtime detected, using mock Prisma client')
+      return new MockPrismaClient() as any
+    }
+
     // Check if DATABASE_URL is available
     if (!process.env.DATABASE_URL) {
       console.warn('DATABASE_URL not found, using mock Prisma client')
@@ -41,8 +51,14 @@ function createPrismaClient() {
     })
 
     // Test the client connection in a non-blocking way (only in non-build environments)
-    if (process.env.NODE_ENV !== 'production' && !process.env.VERCEL_ENV) {
-      process.nextTick(async () => {
+    // Skip in Edge Runtime contexts to avoid compatibility issues
+    if (
+      process.env.NODE_ENV !== 'production' &&
+      !process.env.VERCEL_ENV &&
+      typeof process.nextTick === 'function'
+    ) {
+      // Defer connection test to avoid blocking initialization
+      Promise.resolve().then(async () => {
         try {
           await client.$queryRaw`SELECT 1`
           console.log('✅ Prisma client initialized successfully')

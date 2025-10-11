@@ -1,0 +1,246 @@
+name: 🚀 Cerebrum Biology Academy - Production Deployment
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Deployment environment'
+        required: true
+        default: 'preview'
+        type: choice
+        options:
+          - preview
+          - production
+      skip_tests:
+        description: 'Skip tests (not recommended)'
+        required: false
+        default: false
+        type: boolean
+
+env:
+  NODE_VERSION: '18.x'
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
+jobs:
+  # Step 1: Code Quality Checks
+  quality-checks:
+    name: 🔍 Code Quality & Linting
+    runs-on: ubuntu-latest
+    if: ${{ !inputs.skip_tests }}
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: 📦 Install dependencies
+        run: npm ci
+
+      - name: 🔍 Run ESLint
+        run: npm run lint
+        continue-on-error: true
+
+      - name: 🔧 Type check
+        run: npx tsc --noEmit
+        continue-on-error: true
+
+  # Step 2: Build Test
+  build-test:
+    name: 🏗️ Build Test
+    runs-on: ubuntu-latest
+    needs: [quality-checks]
+    if: always() && (needs.quality-checks.result == 'success' || needs.quality-checks.result == 'skipped')
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: 📦 Install dependencies
+        run: npm ci
+
+      - name: 🔨 Build application
+        run: npm run build
+        env:
+          # Required for build
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          NEXTAUTH_SECRET: ${{ secrets.NEXTAUTH_SECRET }}
+          NEXTAUTH_URL: ${{ secrets.NEXTAUTH_URL || 'https://cerebrum-biology-academy-website.vercel.app' }}
+
+      - name: 📊 Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-output
+          path: .next
+          retention-days: 1
+
+  # Step 3: Database Migration Check
+  database-check:
+    name: 🗄️ Database Migration Check
+    runs-on: ubuntu-latest
+    needs: [build-test]
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: 📦 Install dependencies
+        run: npm ci
+
+      - name: 🔍 Check Prisma schema
+        run: npx prisma validate
+
+      - name: 📋 Check migration status
+        run: npx prisma migrate status
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        continue-on-error: true
+
+  # Step 4: Deploy to Vercel
+  deploy:
+    name: 🚀 Deploy to Vercel
+    runs-on: ubuntu-latest
+    needs: [build-test, database-check]
+    environment:
+      name: ${{ github.event.inputs.environment || 'production' }}
+      url: ${{ steps.deploy.outputs.url }}
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: 📦 Install Vercel CLI
+        run: npm install --global vercel@latest
+
+      - name: 🔧 Pull Vercel Environment Information
+        run: vercel pull --yes --environment=${{ github.event.inputs.environment || 'production' }} --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: 🏗️ Build Project Artifacts
+        run: vercel build ${{ github.event.inputs.environment == 'production' && '--prod' || '' }} --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: 🚀 Deploy Project to Vercel
+        id: deploy
+        run: |
+          DEPLOYMENT_URL=$(vercel deploy ${{ github.event.inputs.environment == 'production' && '--prod' || '--prebuilt' }} --token=${{ secrets.VERCEL_TOKEN }})
+          echo "url=$DEPLOYMENT_URL" >> $GITHUB_OUTPUT
+          echo "🎉 Deployed to: $DEPLOYMENT_URL"
+
+      - name: 📝 Comment on PR (if exists)
+        uses: actions/github-script@v7
+        if: github.event_name == 'pull_request'
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `🚀 **Deployment successful!**\n\n**Preview URL:** ${{ steps.deploy.outputs.url }}\n\n✅ Build completed successfully`
+            })
+
+  # Step 5: Post-Deployment Health Check
+  health-check:
+    name: 🏥 Post-Deployment Health Check
+    runs-on: ubuntu-latest
+    needs: [deploy]
+    steps:
+      - name: 🔍 Check Homepage
+        run: |
+          echo "Checking deployment health..."
+          curl -f -s -o /dev/null -w "%{http_code}" ${{ needs.deploy.outputs.url }} || exit 1
+
+      - name: 🔍 Check Admin Routes
+        run: |
+          echo "Checking admin routes..."
+          curl -f -s -o /dev/null -w "%{http_code}" ${{ needs.deploy.outputs.url }}/admin/login || exit 1
+        continue-on-error: true
+
+      - name: 🔍 Check API Health
+        run: |
+          echo "Checking API health..."
+          curl -f -s ${{ needs.deploy.outputs.url }}/api/health || echo "Health endpoint not found (optional)"
+        continue-on-error: true
+
+  # Step 6: Notification
+  notify:
+    name: 📢 Send Deployment Notification
+    runs-on: ubuntu-latest
+    needs: [deploy, health-check]
+    if: always()
+    steps:
+      - name: 📧 Send success notification
+        if: needs.deploy.result == 'success' && needs.health-check.result == 'success'
+        run: |
+          echo "✅ Deployment successful!"
+          echo "🌐 URL: ${{ needs.deploy.outputs.url }}"
+          echo "📅 Time: $(date)"
+          # Add your notification logic here (Slack, Discord, Email, etc.)
+
+      - name: ⚠️ Send failure notification
+        if: needs.deploy.result == 'failure' || needs.health-check.result == 'failure'
+        run: |
+          echo "❌ Deployment failed!"
+          echo "📅 Time: $(date)"
+          # Add your failure notification logic here
+
+  # Step 7: Database Migration (Production Only)
+  migrate-production:
+    name: 🗄️ Run Database Migration
+    runs-on: ubuntu-latest
+    needs: [deploy]
+    if: github.event.inputs.environment == 'production' || github.ref == 'refs/heads/main'
+    environment: production
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: 📦 Install dependencies
+        run: npm ci
+
+      - name: 🚀 Run Prisma Migrations
+        run: npx prisma migrate deploy
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+
+      - name: 🔄 Generate Prisma Client
+        run: npx prisma generate
+
+# Required Secrets to Configure in GitHub:
+# - VERCEL_TOKEN: Vercel API token from https://vercel.com/account/tokens
+# - VERCEL_ORG_ID: From .vercel/project.json after running `vercel link`
+# - VERCEL_PROJECT_ID: From .vercel/project.json after running `vercel link`
+# - DATABASE_URL: PostgreSQL connection string (production)
+# - NEXTAUTH_SECRET: NextAuth secret key
+# - NEXTAUTH_URL: Production URL (e.g., https://cerebrumbiologyacademy.com)
+# - BLOB_READ_WRITE_TOKEN: Vercel Blob storage token
+# - OPENAI_API_KEY: OpenAI API key for AI features
+# - ANTHROPIC_API_KEY: Anthropic API key for Claude
+# - RAZORPAY_KEY_ID: Razorpay production key
+# - RAZORPAY_KEY_SECRET: Razorpay secret key
+# - WHATSAPP_ACCESS_TOKEN: WhatsApp Business API token

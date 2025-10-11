@@ -1,0 +1,956 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// User Management
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  phone     String?  @unique
+  name      String
+  role      UserRole @default(STUDENT)
+
+  // Authentication
+  passwordHash String?
+  emailVerified DateTime?
+  phoneVerified DateTime?
+
+  // Profile
+  profile Json?
+
+  // Timestamps
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  lastActiveAt DateTime?
+
+  // Relations
+  enrollments    Enrollment[]
+  demoBookings   DemoBooking[]
+  payments       Payment[]
+  sessions       Session[]
+  communicationLog CommunicationLog[]
+  materialAccess MaterialAccess[]
+  materialProgress MaterialProgress[]
+
+  @@map("users")
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("sessions")
+}
+
+// Course Management
+model Course {
+  id          String   @id @default(cuid())
+  name        String
+  description String?
+
+  // Course Details
+  type        CourseType
+  class       StudentClass
+  duration    Int      // in months
+  totalFees   Int      // in paise (₹1 = 100 paise)
+
+  // Course Structure
+  syllabus    Json?
+  features    Json? // String array stored as JSON
+
+  // Metadata
+  isActive    Boolean  @default(true)
+  sortOrder   Int      @default(0)
+
+  // Timestamps
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  enrollments Enrollment[]
+  demoBookings DemoBooking[]
+  chapters Chapter[]
+  materials StudyMaterial[]
+
+  @@map("courses")
+}
+
+// Enrollment Management
+model Enrollment {
+  id            String           @id @default(cuid())
+  userId        String
+  courseId      String
+
+  // Enrollment Details
+  status        EnrollmentStatus @default(PENDING)
+  enrollmentDate DateTime        @default(now())
+  startDate     DateTime?
+  endDate       DateTime?
+
+  // Payment Details
+  totalFees     Int              // in paise
+  paidAmount    Int              @default(0)
+  pendingAmount Int              @default(0)
+  paymentPlan   PaymentPlan      @default(FULL)
+
+  // Academic Details
+  currentProgress Int            @default(0) // percentage
+  lastAccessDate  DateTime?
+
+  // Timestamps
+  createdAt     DateTime         @default(now())
+  updatedAt     DateTime         @updatedAt
+
+  // Relations
+  user          User             @relation(fields: [userId], references: [id])
+  course        Course           @relation(fields: [courseId], references: [id])
+  payments      Payment[]
+
+  @@unique([userId, courseId])
+  @@map("enrollments")
+}
+
+// Demo Booking Management
+model DemoBooking {
+  id              String              @id @default(cuid())
+  userId          String?
+  courseId        String?
+
+  // Student Information
+  studentName     String
+  email           String?
+  phone           String
+  studentClass    StudentClass?
+
+  // Demo Details
+  preferredDate   String
+  preferredTime   String
+  message         String?
+  status          DemoBookingStatus   @default(PENDING)
+
+  // Assignment & Follow-up
+  assignedTo      String?
+  followUpDate    DateTime?
+  remindersSent   Int                 @default(0)
+
+  // Demo Feedback
+  demoCompleted   Boolean             @default(false)
+  demoRating      Int?                // 1-5
+  demoFeedback    String?
+  convertedToEnrollment Boolean       @default(false)
+
+  // Marketing
+  source          String?             // website, facebook, google_ads, etc.
+  utmSource       String?
+  utmMedium       String?
+  utmCampaign     String?
+
+  // Timestamps
+  createdAt       DateTime            @default(now())
+  updatedAt       DateTime            @updatedAt
+
+  // Relations
+  user            User?               @relation(fields: [userId], references: [id])
+  course          Course?             @relation(fields: [courseId], references: [id])
+  communicationLog CommunicationLog[]
+
+  @@map("demo_bookings")
+}
+
+// Payment Management
+model Payment {
+  id              String        @id @default(cuid())
+  userId          String
+  enrollmentId    String?
+
+  // Payment Details
+  amount          Int           // in paise
+  currency        String        @default("INR")
+  status          PaymentStatus @default(PENDING)
+  paymentMethod   PaymentMethod
+
+  // Gateway Details
+  razorpayOrderId    String?   @unique
+  razorpayPaymentId  String?   @unique
+  razorpaySignature  String?
+
+  // Transaction Details
+  transactionId   String?
+  failureReason   String?
+
+  // Installment Details
+  installmentNumber Int?       // for EMI payments
+  totalInstallments Int?
+
+  // Timestamps
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+  completedAt     DateTime?
+
+  // Relations
+  user            User          @relation(fields: [userId], references: [id])
+  enrollment      Enrollment?   @relation(fields: [enrollmentId], references: [id])
+
+  @@map("payments")
+}
+
+// Communication & Marketing
+model CommunicationLog {
+  id              String              @id @default(cuid())
+  userId          String?
+  demoBookingId   String?
+
+  // Communication Details
+  type            CommunicationType
+  channel         CommunicationChannel
+  content         String
+  subject         String?
+
+  // Status
+  status          MessageStatus       @default(SENT)
+  sentAt          DateTime            @default(now())
+  deliveredAt     DateTime?
+  readAt          DateTime?
+
+  // WhatsApp specific
+  whatsappMessageId String?
+
+  // Email specific
+  emailMessageId    String?
+
+  // Template Details
+  templateId      String?
+  templateData    Json?
+
+  // Timestamps
+  createdAt       DateTime            @default(now())
+
+  // Relations
+  user            User?               @relation(fields: [userId], references: [id])
+  demoBooking     DemoBooking?        @relation(fields: [demoBookingId], references: [id])
+
+  @@map("communication_logs")
+}
+
+// Analytics & Tracking
+model AnalyticsEvent {
+  id          String   @id @default(cuid())
+  userId      String?
+  sessionId   String?
+
+  // Event Details
+  eventType   String
+  eventName   String
+  properties  Json?
+
+  // Page/Context
+  pagePath    String?
+  pageTitle   String?
+  referrer    String?
+  userAgent   String?
+
+  // Marketing Attribution
+  utmSource   String?
+  utmMedium   String?
+  utmCampaign String?
+
+  // Location
+  ipAddress   String?
+  country     String?
+  city        String?
+
+  // Timestamps
+  createdAt   DateTime @default(now())
+
+  @@map("analytics_events")
+}
+
+// Enums
+enum UserRole {
+  STUDENT
+  PARENT
+  TEACHER
+  ADMIN
+}
+
+enum CourseType {
+  NEET_COMPLETE
+  CLASS_11
+  CLASS_12
+  DROPPER
+  FOUNDATION
+  CRASH_COURSE
+}
+
+enum StudentClass {
+  CLASS_9
+  CLASS_10
+  CLASS_11
+  CLASS_12
+  DROPPER
+  FOUNDATION
+}
+
+enum EnrollmentStatus {
+  PENDING
+  ACTIVE
+  COMPLETED
+  CANCELLED
+  SUSPENDED
+}
+
+enum PaymentPlan {
+  FULL
+  QUARTERLY
+  MONTHLY
+  CUSTOM
+}
+
+enum DemoBookingStatus {
+  PENDING
+  CONFIRMED
+  COMPLETED
+  CANCELLED
+  NO_SHOW
+}
+
+enum PaymentStatus {
+  PENDING
+  PROCESSING
+  COMPLETED
+  FAILED
+  CANCELLED
+  REFUNDED
+}
+
+enum PaymentMethod {
+  RAZORPAY_UPI
+  RAZORPAY_CARD
+  RAZORPAY_NETBANKING
+  RAZORPAY_WALLET
+  BANK_TRANSFER
+  CASH
+  CHEQUE
+}
+
+enum CommunicationType {
+  WELCOME_MESSAGE
+  DEMO_CONFIRMATION
+  DEMO_REMINDER
+  ENROLLMENT_CONFIRMATION
+  PAYMENT_REMINDER
+  COURSE_UPDATE
+  MARKETING_MESSAGE
+  SUPPORT_MESSAGE
+  FEEDBACK_REQUEST
+  CUSTOM_MESSAGE
+}
+
+enum CommunicationChannel {
+  WHATSAPP
+  EMAIL
+  SMS
+  PHONE_CALL
+  IN_APP_NOTIFICATION
+}
+
+enum MessageStatus {
+  SENT
+  DELIVERED
+  READ
+  FAILED
+  PENDING
+}
+
+// Free Resources System Models
+
+model FreeUser {
+  id               String   @id @default(cuid())
+  email            String   @unique
+  name             String?
+  grade            String?  // CLASS_9, CLASS_10, CLASS_11, CLASS_12, DROPPER
+  curriculum       String?  // NEET, CBSE, ICSE, IB, IGCSE
+  school           String?
+  city             String?
+
+  // Progress Tracking
+  totalPoints      Int      @default(0)
+  studyStreak      Int      @default(0)
+  lastActiveDate   DateTime?
+
+  // Preferences
+  preferences      Json?    // study times, notifications, etc.
+
+  // Timestamps
+  registrationDate DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  // Relations
+  testAttempts     TestAttempt[]
+  bookmarks        Bookmark[]
+  studyPlans       StudyPlan[]
+  forumPosts       ForumPost[]
+  achievements     Achievement[]
+
+  @@map("free_users")
+}
+
+model ChapterNote {
+  id               String   @id @default(cuid())
+  title            String
+  curriculum       String   // NEET, CBSE, ICSE, IB, IGCSE
+  grade            String   // CLASS_9, CLASS_10, CLASS_11, CLASS_12
+  subject          String   @default("Biology")
+  chapter          String
+  topic            String?
+
+  // Content
+  content          String   // Markdown format
+  summary          String?
+  keyPoints        Json? // String array stored as JSON
+  diagrams         Json? // String array stored as JSON
+
+  // Metadata
+  difficulty       String   @default("Medium") // Easy, Medium, Hard
+  estimatedTime    Int?     // Reading time in minutes
+  downloadCount    Int      @default(0)
+  viewCount        Int      @default(0)
+  rating           Float    @default(0)
+  ratingCount      Int      @default(0)
+
+  // SEO
+  slug             String   @unique
+  metaDescription  String?
+  tags             Json? // String array stored as JSON
+
+  // Status
+  isPublished      Boolean  @default(false)
+  publishedAt      DateTime?
+
+  // Timestamps
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  // Relations
+  bookmarks        Bookmark[]
+
+  @@index([curriculum, grade, chapter])
+  @@index([slug])
+  @@map("chapter_notes")
+}
+
+model Question {
+  id               String   @id @default(cuid())
+  topic            String   // Cell Biology, Genetics, etc.
+  subtopic         String?
+  curriculum       String   // NEET, CBSE, ICSE, IB, IGCSE
+  grade            String   // CLASS_9, CLASS_10, CLASS_11, CLASS_12
+
+  // Question Details
+  type             QuestionType // MCQ, SHORT_ANSWER, DIAGRAM, TRUE_FALSE
+  difficulty       String   @default("Medium") // Easy, Medium, Hard
+  question         String   // The question text
+  options          Json? // String array stored as JSON
+  correctAnswer    String   // The correct answer
+  explanation      String?  // Detailed explanation
+
+  // Metadata
+  source           String?  // NEET_2023, CBSE_2022, etc.
+  marks            Int      @default(1)
+  timeLimit        Int?     // Recommended time in seconds
+  tags             Json? // String array stored as JSON
+
+  // Analytics
+  totalAttempts    Int      @default(0)
+  correctAttempts  Int      @default(0)
+  averageTime      Int?     // Average time taken in seconds
+
+  // Status
+  isActive         Boolean  @default(true)
+  isVerified       Boolean  @default(false)
+
+  // Timestamps
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  // Relations
+  testQuestions    TestQuestion[]
+
+  @@index([topic, difficulty])
+  @@index([curriculum, grade])
+  @@map("questions")
+}
+
+model TestAttempt {
+  id               String   @id @default(cuid())
+  freeUserId       String
+
+  // Test Configuration
+  title            String   // "Cell Biology Test - Easy"
+  topics           Json? // String array stored as JSON
+  difficulty       String   // Easy, Medium, Hard, Mixed
+  questionCount    Int
+  timeLimit        Int?     // In minutes
+
+  // Results
+  score            Int      // Out of total marks
+  totalMarks       Int
+  percentage       Float
+  timeSpent        Int      // In seconds
+
+  // Analysis
+  topicWiseScore   Json     // { "Cell Biology": 8, "Genetics": 6 }
+  strengthAreas    Json? // String array stored as JSON
+  weaknessAreas    Json? // String array stored as JSON
+  recommendations  Json? // String array stored as JSON
+
+  // Status
+  status           TestStatus @default(IN_PROGRESS)
+  startedAt        DateTime @default(now())
+  submittedAt      DateTime?
+
+  // Relations
+  freeUser         FreeUser @relation(fields: [freeUserId], references: [id], onDelete: Cascade)
+  testQuestions    TestQuestion[]
+
+  @@index([freeUserId, startedAt])
+  @@map("test_attempts")
+}
+
+model TestQuestion {
+  id               String   @id @default(cuid())
+  testAttemptId    String
+  questionId       String
+
+  // Student Response
+  selectedAnswer   String?
+  isCorrect        Boolean?
+  timeSpent        Int?     // In seconds
+  marksAwarded     Int      @default(0)
+
+  // Relations
+  testAttempt      TestAttempt @relation(fields: [testAttemptId], references: [id], onDelete: Cascade)
+  question         Question @relation(fields: [questionId], references: [id])
+
+  @@unique([testAttemptId, questionId])
+  @@map("test_questions")
+}
+
+model Bookmark {
+  id               String   @id @default(cuid())
+  freeUserId       String
+  chapterNoteId    String
+
+  // Metadata
+  notes            String?  // Personal notes by student
+  createdAt        DateTime @default(now())
+
+  // Relations
+  freeUser         FreeUser @relation(fields: [freeUserId], references: [id], onDelete: Cascade)
+  chapterNote      ChapterNote @relation(fields: [chapterNoteId], references: [id], onDelete: Cascade)
+
+  @@unique([freeUserId, chapterNoteId])
+  @@map("bookmarks")
+}
+
+model StudyPlan {
+  id               String   @id @default(cuid())
+  freeUserId       String
+
+  // Plan Details
+  title            String   // "NEET 2025 Preparation"
+  targetExam       String   // NEET, CBSE, etc.
+  examDate         DateTime?
+
+  // Schedule
+  schedule         Json     // Weekly/daily schedule
+  currentWeek      Int      @default(1)
+  totalWeeks       Int
+
+  // Progress
+  completedTopics  Json? // String array stored as JSON
+  currentTopic     String?
+  overallProgress  Int      @default(0) // Percentage
+
+  // Status
+  isActive         Boolean  @default(true)
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  // Relations
+  freeUser         FreeUser @relation(fields: [freeUserId], references: [id], onDelete: Cascade)
+
+  @@map("study_plans")
+}
+
+model ForumPost {
+  id               String   @id @default(cuid())
+  freeUserId       String
+
+  // Post Details
+  title            String
+  content          String
+  topic            String   // Biology topic
+  type             PostType @default(QUESTION)
+
+  // Engagement
+  upvotes          Int      @default(0)
+  views            Int      @default(0)
+
+  // Status
+  isResolved       Boolean  @default(false)
+  isPinned         Boolean  @default(false)
+
+  // Timestamps
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  // Relations
+  freeUser         FreeUser @relation(fields: [freeUserId], references: [id], onDelete: Cascade)
+  replies          ForumReply[]
+
+  @@index([topic, createdAt])
+  @@map("forum_posts")
+}
+
+model ForumReply {
+  id               String   @id @default(cuid())
+  postId           String
+  content          String
+  authorName       String   // Anonymous display name
+
+  // Engagement
+  upvotes          Int      @default(0)
+  isAccepted       Boolean  @default(false) // Best answer
+
+  // Timestamps
+  createdAt        DateTime @default(now())
+
+  // Relations
+  post             ForumPost @relation(fields: [postId], references: [id], onDelete: Cascade)
+
+  @@map("forum_replies")
+}
+
+model Achievement {
+  id               String   @id @default(cuid())
+  freeUserId       String
+
+  // Achievement Details
+  type             AchievementType
+  title            String
+  description      String
+  icon             String?  // Icon URL or name
+  points           Int      @default(0)
+
+  // Progress (for progressive achievements)
+  currentProgress  Int      @default(0)
+  targetProgress   Int      @default(1)
+  isCompleted      Boolean  @default(false)
+
+  // Timestamps
+  earnedAt         DateTime?
+  createdAt        DateTime @default(now())
+
+  // Relations
+  freeUser         FreeUser @relation(fields: [freeUserId], references: [id], onDelete: Cascade)
+
+  @@map("achievements")
+}
+
+// Additional Enums for Free Resources
+
+enum QuestionType {
+  MCQ
+  SHORT_ANSWER
+  DIAGRAM
+  TRUE_FALSE
+  FILL_BLANK
+}
+
+enum TestStatus {
+  IN_PROGRESS
+  COMPLETED
+  ABANDONED
+  EXPIRED
+}
+
+enum PostType {
+  QUESTION
+  DISCUSSION
+  TIP
+  RESOURCE
+  ANNOUNCEMENT
+}
+
+enum AchievementType {
+  FIRST_TEST
+  STREAK_7_DAYS
+  STREAK_30_DAYS
+  TOPIC_MASTER
+  SPEED_DEMON
+  PERFECTIONIST
+  COMMUNITY_HELPER
+  BOOKWORM
+}
+
+// ============================================
+// LMS SYSTEM MODELS
+// ============================================
+
+model Chapter {
+  id              String   @id @default(cuid())
+  courseId        String
+
+  // Chapter Details
+  title           String
+  description     String?
+  orderIndex      Int
+
+  // Status
+  isActive        Boolean  @default(true)
+
+  // Timestamps
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  // Relations
+  course          Course   @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  topics          Topic[]
+  materials       StudyMaterial[]
+
+  @@index([courseId, orderIndex])
+  @@map("chapters")
+}
+
+model Topic {
+  id              String   @id @default(cuid())
+  chapterId       String
+
+  // Topic Details
+  title           String
+  description     String?
+  orderIndex      Int
+
+  // Status
+  isActive        Boolean  @default(true)
+
+  // Timestamps
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  // Relations
+  chapter         Chapter  @relation(fields: [chapterId], references: [id], onDelete: Cascade)
+  materials       StudyMaterial[]
+
+  @@index([chapterId, orderIndex])
+  @@map("topics")
+}
+
+model StudyMaterial {
+  id              String   @id @default(cuid())
+
+  // Content Details
+  title           String
+  description     String?
+  materialType    MaterialType
+
+  // File Information
+  fileUrl         String
+  fileName        String
+  fileSize        Int
+  mimeType        String       @default("application/pdf")
+
+  // Classification
+  courseId        String?
+  chapterId       String?
+  topicId         String?
+  tags            Json?
+
+  // Access Control
+  accessLevel     AccessLevel  @default(ENROLLED)
+  requiredCourseId String?
+
+  // Organization
+  sortOrder       Int          @default(0)
+  category        String?
+
+  // Publishing
+  uploadedBy      String
+  isPublished     Boolean      @default(false)
+  publishedAt     DateTime?
+
+  // Analytics
+  totalDownloads  Int          @default(0)
+  totalViews      Int          @default(0)
+  avgRating       Float        @default(0)
+  ratingCount     Int          @default(0)
+
+  // Timestamps
+  createdAt       DateTime     @default(now())
+  updatedAt       DateTime     @updatedAt
+
+  // Relations
+  course          Course?      @relation(fields: [courseId], references: [id])
+  chapter         Chapter?     @relation(fields: [chapterId], references: [id])
+  topic           Topic?       @relation(fields: [topicId], references: [id])
+  materialAccess  MaterialAccess[]
+  progress        MaterialProgress[]
+
+  @@index([courseId, isPublished])
+  @@index([materialType, accessLevel])
+  @@index([createdAt])
+  @@map("study_materials")
+}
+
+model MaterialAccess {
+  id              String   @id @default(cuid())
+  materialId      String
+  userId          String
+
+  // Access Details
+  grantedBy       String
+  grantedAt       DateTime @default(now())
+  expiresAt       DateTime?
+  reason          String?
+
+  // Relations
+  material        StudyMaterial @relation(fields: [materialId], references: [id], onDelete: Cascade)
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([materialId, userId])
+  @@index([userId])
+  @@map("material_access")
+}
+
+model MaterialProgress {
+  id              String   @id @default(cuid())
+  materialId      String
+  userId          String
+
+  // Progress Status
+  status          ProgressStatus @default(NOT_STARTED)
+
+  // Engagement Tracking
+  firstViewedAt   DateTime?
+  lastViewedAt    DateTime?
+  downloadedAt    DateTime?
+  completedAt     DateTime?
+
+  // Reading Progress
+  currentPage     Int?
+  totalPages      Int?
+  timeSpent       Int      @default(0)
+
+  // Student Feedback
+  rating          Int?
+  feedback        String?
+  notes           String?
+
+  // Timestamps
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  // Relations
+  material        StudyMaterial @relation(fields: [materialId], references: [id], onDelete: Cascade)
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([materialId, userId])
+  @@index([userId, status])
+  @@index([materialId, updatedAt])
+  @@map("material_progress")
+}
+
+model ContentNotification {
+  id              String   @id @default(cuid())
+
+  // Notification Content
+  title           String
+  message         String
+  type            NotificationType
+
+  // Target Audience
+  targetUserIds   Json?
+  targetCourseIds Json?
+  sendToAll       Boolean  @default(false)
+
+  // Content Reference
+  materialId      String?
+  courseId        String?
+
+  // Delivery Channels
+  channels        Json
+
+  // Scheduling
+  scheduledFor    DateTime?
+  sentAt          DateTime?
+
+  // Status & Stats
+  status          NotificationStatus @default(DRAFT)
+  recipientCount  Int      @default(0)
+  deliveredCount  Int      @default(0)
+  failedCount     Int      @default(0)
+
+  // Timestamps
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@index([status, scheduledFor])
+  @@index([materialId])
+  @@map("content_notifications")
+}
+
+// LMS Enums
+enum MaterialType {
+  PDF_NOTES
+  PDF_ASSIGNMENT
+  PDF_PRACTICE_PAPER
+  PDF_REFERENCE
+  PDF_EBOOK
+  VIDEO
+  LINK
+}
+
+enum AccessLevel {
+  FREE
+  ENROLLED
+  PREMIUM
+  SPECIFIC_COURSE
+}
+
+enum ProgressStatus {
+  NOT_STARTED
+  VIEWED
+  IN_PROGRESS
+  DOWNLOADED
+  COMPLETED
+}
+
+enum NotificationType {
+  NEW_MATERIAL
+  ASSIGNMENT_REMINDER
+  COURSE_UPDATE
+  ANNOUNCEMENT
+  CUSTOM
+}
+
+enum NotificationStatus {
+  DRAFT
+  SCHEDULED
+  SENDING
+  SENT
+  FAILED
+  CANCELLED
+}

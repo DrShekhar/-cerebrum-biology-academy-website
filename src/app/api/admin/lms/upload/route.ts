@@ -16,6 +16,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { uploadPDF } from '@/lib/lms/blobStorage'
 import { validateFile, validatePDFContent, formatFileSize } from '@/lib/lms/fileValidation'
 import { prisma } from '@/lib/prisma'
+import { auth } from '@/lib/auth'
 
 // Increase payload size limit for PDF uploads (50MB)
 export const runtime = 'nodejs'
@@ -36,11 +37,11 @@ interface UploadMetadata {
 
 export async function POST(request: NextRequest) {
   try {
-    // TODO: Add authentication check
-    // const session = await getServerSession();
-    // if (!session || session.user.role !== 'ADMIN') {
-    //   return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
-    // }
+    // Authentication check
+    const session = await auth()
+    if (!session || session.user.role !== 'ADMIN') {
+      return NextResponse.json({ error: 'Unauthorized. Admin access required.' }, { status: 401 })
+    }
 
     // Parse multipart form data
     const formData = await request.formData()
@@ -114,7 +115,7 @@ export async function POST(request: NextRequest) {
     const uploadResult = await uploadPDF(buffer, fileValidation.sanitizedFilename || file.name, {
       materialId: undefined, // Will be set after database creation
       courseId: metadata.courseId,
-      uploadedBy: 'admin', // TODO: Get from session
+      uploadedBy: session.user.email || session.user.id || 'admin',
       originalFileName: file.name,
     })
 
@@ -134,7 +135,7 @@ export async function POST(request: NextRequest) {
         tags: metadata.tags ? JSON.stringify(metadata.tags) : null,
         category: metadata.category || null,
         accessLevel: (metadata.accessLevel as any) || 'ENROLLED',
-        uploadedBy: 'admin', // TODO: Get from session
+        uploadedBy: session.user.email || session.user.id || 'admin',
         isPublished: metadata.isPublished || false,
         publishedAt: metadata.isPublished ? new Date() : null,
       },
