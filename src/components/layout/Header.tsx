@@ -143,7 +143,7 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-6">
             {mainNavigation.map((item, index) => (
               <div key={index} className="relative">
                 {item.hasDropdown ? (
@@ -267,7 +267,7 @@ const Header = () => {
           </nav>
 
           {/* Right Section - Search + CTA Buttons */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-3">
             {/* Search Menu */}
             <SearchMenu
               isOpen={isSearchOpen}
@@ -276,7 +276,7 @@ const Header = () => {
             />
 
             {/* Authentication & CTA Buttons */}
-            <div className="hidden lg:flex items-center space-x-3">
+            <div className="hidden lg:flex items-center space-x-2">
               {/* Consolidated Login Dropdown */}
               <div
                 className="relative"
@@ -284,13 +284,13 @@ const Header = () => {
                 onMouseLeave={() => setIsAuthOpen(false)}
               >
                 <button
-                  className="flex items-center space-x-2 text-gray-700 hover:text-primary-600 font-medium transition-colors px-4 py-3 rounded-xl hover:bg-primary-50 min-h-[44px] touch-manipulation"
+                  className="flex items-center space-x-1.5 text-gray-700 hover:text-primary-600 font-medium transition-colors px-3 py-2 rounded-lg hover:bg-primary-50"
                   aria-label="Login options menu"
                   aria-expanded={isAuthOpen}
                   aria-haspopup="menu"
                 >
                   <LogIn className="w-4 h-4" />
-                  <span>Login</span>
+                  <span className="text-sm">Login</span>
                   <ChevronDown className="w-3 h-3" />
                 </button>
 
@@ -324,8 +324,7 @@ const Header = () => {
               {/* Primary CTA with Brand Integration */}
               <Link
                 href="/support/demo"
-                className="bg-gradient-to-r from-primary-600 to-purple-600 text-white px-6 py-3 rounded-full font-semibold hover:from-primary-700 hover:to-purple-700 transition-all duration-300 transform hover:-translate-y-1 min-h-[48px] flex items-center touch-manipulation"
-                style={{ boxShadow: 'var(--shadow-premium)' }}
+                className="bg-gradient-to-r from-primary-600 to-purple-600 text-white px-5 py-2.5 rounded-full font-semibold hover:from-primary-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl whitespace-nowrap text-sm"
               >
                 Book Demo
               </Link>
