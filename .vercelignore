@@ -48,6 +48,5 @@ prisma/dev.db-journal
 # Problematic files for deployment
 src/lib/mcp/
 src/lib/voice/voiceRecognitionService.ts
-src/lib/pwa/pwaService.ts
 src/lib/social/metaIntegration.ts
 playwright.config.ts
