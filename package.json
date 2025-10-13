@@ -47,7 +47,31 @@
     "spec:init": "export PATH=\"/Users/drshekhar/.local/bin:$PATH\" && uvx --from git+https://github.com/github/spec-kit.git specify init",
     "whatsapp:setup": "node scripts/setup-whatsapp-api.js",
     "whatsapp:test": "node scripts/test-whatsapp-automation.js",
-    "test:whatsapp": "npm run whatsapp:test"
+    "test:whatsapp": "npm run whatsapp:test",
+    "test:ai:quality": "jest --config jest.config.cjs src/__tests__/ai/",
+    "test:ai:mock:start": "node scripts/start-ai-mock-server.js",
+    "test:ai:mock:stop": "pkill -f ai-mock-server || true",
+    "test:accessibility": "playwright test --project=accessibility",
+    "test:mobile": "playwright test --project=\"Mobile Chrome\"",
+    "test:performance:full": "playwright test --project=performance",
+    "test:security:scan": "playwright test tests/security/",
+    "test:all": "npm run test && npm run test:integration && npm run test:e2e && npm run test:performance:full",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate deploy",
+    "db:migrate:dev": "prisma migrate dev",
+    "db:migrate:reset": "prisma migrate reset",
+    "db:seed": "tsx prisma/seed.ts",
+    "db:studio": "prisma studio",
+    "db:push": "prisma db push",
+    "db:test:setup": "NODE_ENV=test prisma migrate deploy && NODE_ENV=test tsx prisma/seed.ts",
+    "db:test:reset": "NODE_ENV=test prisma migrate reset --force",
+    "db:test:seed": "NODE_ENV=test tsx prisma/seed.ts",
+    "db:test:cleanup": "NODE_ENV=test prisma migrate reset --force",
+    "redis:start": "redis-server",
+    "redis:cli": "redis-cli",
+    "redis:flush": "redis-cli flushall",
+    "cache:warm": "tsx scripts/warm-cache.ts",
+    "health:check": "tsx scripts/health-check.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.63.0",
@@ -80,6 +104,7 @@
     "critters": "^0.0.23",
     "crypto-js": "^4.2.0",
     "express-rate-limit": "^8.1.0",
+    "form-data": "^4.0.4",
     "framer-motion": "^12.23.12",
     "fuse.js": "^7.1.0",
     "helmet": "^8.1.0",
@@ -122,6 +147,14 @@
   },
   "overrides": {
     "zod": "3.23.8"
+  },
+  "scripts-info": {
+    "test:ai:quality": "Run AI content quality tests",
+    "test:accessibility": "Run accessibility tests with aXe",
+    "test:mobile": "Run mobile-specific E2E tests",
+    "test:performance:full": "Run comprehensive performance tests",
+    "test:security:scan": "Run security vulnerability tests",
+    "test:all": "Run complete test suite"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": [

@@ -27,6 +27,8 @@ export function useAIDebug(options: UseAIDebugOptions = {}) {
 
   // Initialize debugging
   useEffect(() => {
+    if (typeof window === 'undefined' || !clientAIDebugger) return
+
     if (options.autoEnable) {
       clientAIDebugger.enable(options.logLevel)
     }
@@ -49,34 +51,40 @@ export function useAIDebug(options: UseAIDebugOptions = {}) {
 
   // Enable debugging
   const enableDebug = useCallback((logLevel: 'minimal' | 'detailed' | 'verbose' = 'detailed') => {
-    clientAIDebugger.enable(logLevel)
-    setDebugState((prev) => ({ ...prev, isEnabled: true }))
+    if (clientAIDebugger) {
+      clientAIDebugger.enable(logLevel)
+      setDebugState((prev) => ({ ...prev, isEnabled: true }))
+    }
   }, [])
 
   // Disable debugging
   const disableDebug = useCallback(() => {
-    clientAIDebugger.disable()
-    setDebugState((prev) => ({ ...prev, isEnabled: false }))
+    if (clientAIDebugger) {
+      clientAIDebugger.disable()
+      setDebugState((prev) => ({ ...prev, isEnabled: false }))
+    }
   }, [])
 
   // Get current logs
   const getLogs = useCallback(() => {
-    const logs = (clientAIDebugger as any).logs || []
+    const logs = clientAIDebugger ? (clientAIDebugger as any).logs || [] : []
     setDebugState((prev) => ({ ...prev, logs }))
     return logs
   }, [])
 
   // Get performance stats
   const getStats = useCallback(() => {
-    const stats = (clientAIDebugger as any).getStats?.() || null
+    const stats = clientAIDebugger ? (clientAIDebugger as any).getStats?.() || null : null
     setDebugState((prev) => ({ ...prev, stats }))
     return stats
   }, [])
 
   // Clear debug logs
   const clearLogs = useCallback(() => {
-    ;(clientAIDebugger as any).clearLogs?.()
-    setDebugState((prev) => ({ ...prev, logs: [] }))
+    if (clientAIDebugger) {
+      ;(clientAIDebugger as any).clearLogs?.()
+      setDebugState((prev) => ({ ...prev, logs: [] }))
+    }
   }, [])
 
   // Log custom debug message

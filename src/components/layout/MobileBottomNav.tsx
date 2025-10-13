@@ -84,9 +84,12 @@ export function MobileBottomNav({ className = '' }: MobileBottomNavProps) {
 
   return (
     <div
-      className={`mobile-nav fixed bottom-0 left-0 right-0 md:hidden bg-slate-900 border-t border-slate-800 z-50 ${className}`}
+      className={`mobile-nav fixed bottom-0 left-0 right-0 md:hidden bg-white border-t border-gray-200 z-50 shadow-lg safe-area-bottom ${className}`}
+      style={{
+        paddingBottom: 'max(env(safe-area-inset-bottom), 8px)',
+      }}
     >
-      <div className="grid grid-cols-5 gap-1">
+      <div className="grid grid-cols-5 gap-0 bg-white">
         {navItems.map((item) => {
           const active = isActive(item.href)
           const IconComponent = active ? item.iconSolid : item.icon
@@ -96,16 +99,17 @@ export function MobileBottomNav({ className = '' }: MobileBottomNavProps) {
               <button
                 key={item.href}
                 onClick={() => handleNavClick(item)}
-                className={`nav-item flex flex-col items-center justify-center py-2 px-1 text-xs transition-colors duration-200 ${
+                className={`nav-item flex flex-col items-center justify-center touch-target-large mobile-focus ripple-effect ${
                   item.highlight
-                    ? 'text-emerald-400 bg-emerald-400/10'
+                    ? 'text-emerald-600 bg-emerald-50 border-t-2 border-emerald-600'
                     : active
-                      ? 'text-emerald-400 bg-slate-800'
-                      : 'text-gray-400 hover:text-gray-300'
-                }`}
+                      ? 'text-primary-600 bg-primary-50 border-t-2 border-primary-600'
+                      : 'text-gray-500 hover:text-gray-700 border-t-2 border-transparent'
+                } py-2 px-1 min-h-touch-md transition-all duration-200`}
+                aria-label={`${item.label} - ${item.isExternal ? 'Call now' : 'Navigate to'}`}
               >
-                <IconComponent className="w-5 h-5 mb-1" />
-                <span className="text-xs leading-tight">{item.label}</span>
+                <IconComponent className="w-6 h-6 mb-1" />
+                <span className="text-xs leading-tight font-medium">{item.label}</span>
               </button>
             )
           }
@@ -114,16 +118,17 @@ export function MobileBottomNav({ className = '' }: MobileBottomNavProps) {
             <Link
               key={item.href}
               href={item.href}
-              className={`nav-item flex flex-col items-center justify-center py-2 px-1 text-xs transition-colors duration-200 ${
+              className={`nav-item flex flex-col items-center justify-center touch-target-large mobile-focus ripple-effect ${
                 item.highlight
-                  ? 'text-emerald-400 bg-emerald-400/10'
+                  ? 'text-emerald-600 bg-emerald-50 border-t-2 border-emerald-600'
                   : active
-                    ? 'text-emerald-400 bg-slate-800'
-                    : 'text-gray-400 hover:text-gray-300'
-              }`}
+                    ? 'text-primary-600 bg-primary-50 border-t-2 border-primary-600'
+                    : 'text-gray-500 hover:text-gray-700 border-t-2 border-transparent'
+              } py-2 px-1 min-h-touch-md transition-all duration-200`}
+              aria-label={`${item.label} - Navigate to ${item.label} page`}
             >
-              <IconComponent className="w-5 h-5 mb-1" />
-              <span className="text-xs leading-tight">{item.label}</span>
+              <IconComponent className="w-6 h-6 mb-1" />
+              <span className="text-xs leading-tight font-medium">{item.label}</span>
             </Link>
           )
         })}

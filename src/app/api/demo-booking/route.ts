@@ -80,60 +80,86 @@ export async function POST(request: NextRequest) {
 
     const data = validationResult.data as DemoBookingData
 
-    // Generate unique ID
-    const bookingId = `demo_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+    // Save demo booking to database using Prisma
+    let demoBooking
+    try {
+      demoBooking = await prisma.demoBooking.create({
+        data: {
+          // Identity (no userId for guest bookings)
+          userId: null, // Guest booking
+          courseId: null, // Will be assigned later by admin
 
-    // Create demo booking record
-    const bookingData = {
-      id: bookingId,
-      userId: 'guest', // For now, handling guest bookings
-      studentName: data.name,
-      phone: data.phone,
-      whatsappNumber: data.whatsappNumber || data.phone,
-      email: data.email,
-      courseInterest: data.courseInterest,
-      preferredDate: new Date(data.preferredDate),
-      preferredTimeStart: data.preferredTime.split(' - ')[0],
-      preferredTimeEnd: data.preferredTime.split(' - ')[1],
-      timezone: 'Asia/Kolkata',
-      status: 'pending',
-      notes: data.message || '',
-      remindersSent: 0,
-      createdAt: new Date(),
-      updatedAt: new Date(),
-      followUpRequired: true,
-    }
-
-    // Save to database using Prisma (simplified for now - will expand later)
-    if (prisma) {
-      try {
-        // For now, just log the booking data - we'll expand this later
-        console.log('Demo booking received:', {
-          bookingId,
-          name: data.name,
+          // Student Information
+          studentName: data.name,
           email: data.email,
           phone: data.phone,
-          courses: data.courseInterest,
-          preferredDate: data.preferredDate,
-          preferredTime: data.preferredTime,
-        })
+          studentClass: null, // Optional, can be added to form later
 
-        // TODO: Create proper Prisma schema and save to database
-        // This is a temporary fix to prevent 500 errors
-      } catch (dbError) {
-        console.warn('Database save failed, continuing with email notification:', dbError)
-      }
+          // Demo Details
+          preferredDate: data.preferredDate, // Store as string
+          preferredTime: data.preferredTime, // Single field: "10:00 AM - 11:00 AM"
+          message: data.message || null,
+          status: 'PENDING', // Use enum value
+
+          // Marketing Attribution
+          source: 'website',
+          utmSource: null,
+          utmMedium: null,
+          utmCampaign: null,
+
+          // Follow-up Fields (defaults from schema)
+          assignedTo: null,
+          followUpDate: null,
+          remindersSent: 0,
+
+          // Demo Feedback (defaults)
+          demoCompleted: false,
+          demoRating: null,
+          demoFeedback: null,
+          convertedToEnrollment: false,
+        },
+      })
+
+      console.log('✅ Demo booking created:', {
+        id: demoBooking.id,
+        name: demoBooking.studentName,
+        email: demoBooking.email,
+        status: demoBooking.status,
+        timestamp: demoBooking.createdAt,
+      })
+    } catch (dbError) {
+      // Log detailed error for debugging
+      console.error('❌ Database save failed:', {
+        error: dbError instanceof Error ? dbError.message : 'Unknown error',
+        stack: dbError instanceof Error ? dbError.stack : undefined,
+        data: { name: data.name, email: data.email, phone: data.phone },
+      })
+
+      // Return user-friendly error
+      return NextResponse.json(
+        {
+          error: 'Database error',
+          message: 'Unable to save booking. Please try again or contact support.',
+          details:
+            process.env.NODE_ENV === 'development'
+              ? dbError instanceof Error
+                ? dbError.message
+                : 'Unknown error'
+              : undefined,
+        },
+        { status: 500 }
+      )
     }
 
     // Schedule follow-up actions
-    await scheduleFollowUpActions(bookingId, data)
+    await scheduleFollowUpActions(demoBooking.id, data)
 
     // Send immediate notifications
-    await sendImmediateNotifications(bookingData)
+    await sendImmediateNotifications(demoBooking)
 
     return NextResponse.json({
       success: true,
-      bookingId,
+      bookingId: demoBooking.id,
       message: 'Demo booking created successfully',
     })
   } catch (error) {
@@ -201,29 +227,66 @@ export async function GET(request: NextRequest) {
     const limit = parseInt(searchParams.get('limit') || '50')
     const offset = parseInt(searchParams.get('offset') || '0')
 
-    // TODO: Implement proper database query when schema is ready
-    // For now, return mock data to prevent errors
-    const mockBookings = [
-      {
-        id: 'demo_1234567890_abc123',
-        studentName: 'Test Student',
-        email: 'test@example.com',
-        phone: '+91 9876543210',
-        courseInterest: ['Class 12 Biology'],
-        preferredDate: new Date().toISOString(),
-        status: 'pending',
-        createdAt: new Date().toISOString(),
-      },
-    ]
+    // Build query filters
+    const where: any = {}
+    if (status) {
+      where.status = status.toUpperCase() // PENDING, CONFIRMED, etc.
+    }
+
+    // Fetch from database
+    const [bookings, total] = await Promise.all([
+      prisma.demoBooking.findMany({
+        where,
+        take: limit,
+        skip: offset,
+        orderBy: { createdAt: 'desc' },
+        include: {
+          user: {
+            select: { id: true, name: true, email: true },
+          },
+          course: {
+            select: { id: true, name: true, type: true },
+          },
+        },
+      }),
+      prisma.demoBooking.count({ where }),
+    ])
 
     return NextResponse.json({
       success: true,
-      bookings: mockBookings,
-      total: mockBookings.length,
+      bookings: bookings.map((booking) => ({
+        id: booking.id,
+        studentName: booking.studentName,
+        email: booking.email,
+        phone: booking.phone,
+        preferredDate: booking.preferredDate,
+        preferredTime: booking.preferredTime,
+        status: booking.status,
+        message: booking.message,
+        courseId: booking.courseId,
+        remindersSent: booking.remindersSent,
+        assignedTo: booking.assignedTo,
+        followUpDate: booking.followUpDate?.toISOString(),
+        demoCompleted: booking.demoCompleted,
+        source: booking.source,
+        createdAt: booking.createdAt.toISOString(),
+        updatedAt: booking.updatedAt.toISOString(),
+        user: booking.user,
+        course: booking.course,
+      })),
+      total,
+      page: Math.floor(offset / limit) + 1,
+      totalPages: Math.ceil(total / limit),
     })
   } catch (error) {
     console.error('Fetch demo bookings error:', error)
-    return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
+    return NextResponse.json(
+      {
+        error: 'Internal server error',
+        details: error instanceof Error ? error.message : 'Unknown error',
+      },
+      { status: 500 }
+    )
   }
 }
 
@@ -236,15 +299,42 @@ export async function PUT(request: NextRequest) {
       return NextResponse.json({ error: 'Booking ID is required' }, { status: 400 })
     }
 
-    // TODO: Implement proper database update when schema is ready
-    console.log('Demo booking update request:', { bookingId, updates })
+    // Validate bookingId exists
+    const existingBooking = await prisma.demoBooking.findUnique({
+      where: { id: bookingId },
+    })
+
+    if (!existingBooking) {
+      return NextResponse.json({ error: 'Booking not found' }, { status: 404 })
+    }
+
+    // Update booking
+    const updatedBooking = await prisma.demoBooking.update({
+      where: { id: bookingId },
+      data: {
+        ...updates,
+        updatedAt: new Date(),
+      },
+    })
+
+    console.log('✅ Demo booking updated:', {
+      id: updatedBooking.id,
+      changes: Object.keys(updates),
+    })
 
     return NextResponse.json({
       success: true,
       message: 'Demo booking updated successfully',
+      booking: updatedBooking,
     })
   } catch (error) {
     console.error('Update demo booking error:', error)
-    return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
+    return NextResponse.json(
+      {
+        error: 'Internal server error',
+        details: error instanceof Error ? error.message : 'Unknown error',
+      },
+      { status: 500 }
+    )
   }
 }

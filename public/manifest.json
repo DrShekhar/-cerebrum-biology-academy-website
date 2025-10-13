@@ -5,22 +5,58 @@
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#0ea5e9",
+  "theme_color": "#2563eb",
   "orientation": "portrait-primary",
   "scope": "/",
   "lang": "en-IN",
   "dir": "ltr",
-  "categories": ["education", "productivity", "health"],
+  "categories": ["education", "productivity", "health", "medical"],
 
   "icons": [
     {
-      "src": "/icon-192.png",
+      "src": "/icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/icon-512.png",
+      "src": "/icons/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
@@ -29,34 +65,122 @@
 
   "shortcuts": [
     {
+      "name": "NEET Mock Tests",
+      "short_name": "Tests",
+      "description": "Take NEET Biology mock tests with offline support",
+      "url": "/mock-tests",
+      "icons": [
+        {
+          "src": "/icons/shortcut-test.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
       "name": "NEET Courses",
       "short_name": "Courses",
       "description": "Access NEET Biology courses and study materials",
       "url": "/courses",
       "icons": [
         {
-          "src": "/icon-192.png",
-          "sizes": "192x192",
+          "src": "/icons/shortcut-course.png",
+          "sizes": "96x96",
           "type": "image/png"
         }
       ]
     },
     {
-      "name": "AI Doubt Resolution",
-      "short_name": "ClaudeChat",
+      "name": "AI Biology Tutor",
+      "short_name": "AI Tutor",
       "description": "Get instant doubt resolution with AI voice synthesis",
       "url": "/claudechat",
       "icons": [
         {
-          "src": "/icon-192.png",
-          "sizes": "192x192",
+          "src": "/icons/shortcut-ai.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Book Demo Class",
+      "short_name": "Demo",
+      "description": "Book a free demo class with AIIMS faculty",
+      "url": "/demo",
+      "icons": [
+        {
+          "src": "/icons/shortcut-demo.png",
+          "sizes": "96x96",
           "type": "image/png"
         }
       ]
     }
   ],
 
+  "screenshots": [
+    {
+      "src": "/screenshots/mobile-home.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Home screen showing courses and features"
+    },
+    {
+      "src": "/screenshots/mobile-test.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Mobile-optimized test interface with touch navigation"
+    },
+    {
+      "src": "/screenshots/mobile-ai-chat.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "AI tutor chat with voice synthesis"
+    }
+  ],
+
   "display_override": ["window-controls-overlay", "minimal-ui", "standalone"],
   "prefer_related_applications": false,
-  "offline_capable": true
+  "offline_capable": true,
+
+  "protocol_handlers": [
+    {
+      "protocol": "mailto",
+      "url": "/contact?email=%s"
+    },
+    {
+      "protocol": "tel",
+      "url": "/contact?phone=%s"
+    }
+  ],
+
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=com.cerebrumbiologyacademy.app",
+      "id": "com.cerebrumbiologyacademy.app"
+    }
+  ],
+
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+
+  "file_handlers": [
+    {
+      "action": "/file-handler",
+      "accept": {
+        "application/pdf": [".pdf"],
+        "image/*": [".jpg", ".jpeg", ".png", ".webp"]
+      }
+    }
+  ],
+
+  "handle_links": "preferred",
+  "launch_handler": {
+    "client_mode": "focus-existing"
+  }
 }

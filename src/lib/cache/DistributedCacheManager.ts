@@ -3,7 +3,26 @@
  * Designed for millions of concurrent students with sub-millisecond response times
  */
 
-import Redis from 'ioredis'
+// Conditional import for Edge Runtime compatibility
+let Redis: any = null
+
+// Check if we're in Edge Runtime before attempting any imports
+const isEdgeRuntime = typeof EdgeRuntime !== 'undefined' ||
+                     typeof process === 'undefined' ||
+                     !process.nextTick ||
+                     typeof window !== 'undefined'
+
+if (!isEdgeRuntime) {
+  try {
+    // Only import Redis in Node.js runtime
+    Redis = require('ioredis')
+  } catch (error) {
+    console.log('📦 Redis not available, using mock cache')
+  }
+} else {
+  console.log('📦 Edge Runtime detected, using in-memory cache')
+}
+
 import { createHash } from 'crypto'
 
 interface CacheConfig {
@@ -44,14 +63,36 @@ interface CacheStats {
 }
 
 export class DistributedCacheManager {
-  private primaryRedis: Redis
-  private replicaRedis: Redis[]
+  private primaryRedis: any
+  private replicaRedis: any[]
   private config: CacheConfig
   private stats: CacheStats
   private compressionEnabled: boolean
+  private isEdgeRuntime: boolean
+  private memoryCache: Map<string, any> = new Map()
 
-  constructor(config: CacheConfig) {
-    this.config = config
+  constructor(config?: CacheConfig) {
+    this.isEdgeRuntime = !Redis || typeof process === 'undefined' || !process.nextTick
+
+    this.config = config || {
+      redis: {
+        primary: 'redis://localhost:6379',
+        replicas: [],
+        cluster: false,
+        maxRetries: 3,
+        retryDelayOnFailover: 100
+      },
+      defaultTTL: 3600,
+      compressionThreshold: 1024,
+      prefixes: {
+        student: 'student:',
+        session: 'session:',
+        query: 'query:',
+        assessment: 'assessment:',
+        content: 'content:'
+      }
+    }
+
     this.stats = {
       hits: 0,
       misses: 0,
@@ -62,7 +103,14 @@ export class DistributedCacheManager {
       avgResponseTime: 0,
     }
     this.compressionEnabled = true
-    this.initializeRedisConnections()
+
+    if (!this.isEdgeRuntime) {
+      this.initializeRedisConnections()
+    } else {
+      console.log('🔄 Using in-memory cache for Edge Runtime')
+      this.primaryRedis = null
+      this.replicaRedis = []
+    }
   }
 
   private initializeRedisConnections(): void {
@@ -120,6 +168,27 @@ export class DistributedCacheManager {
     const startTime = Date.now()
 
     try {
+      // Handle Edge Runtime with in-memory cache
+      if (this.isEdgeRuntime) {
+        const cached = this.memoryCache.get(key)
+        if (!cached) {
+          this.stats.misses++
+          this.updateStats(startTime)
+          return null
+        }
+
+        if (this.isExpired(cached)) {
+          this.memoryCache.delete(key)
+          this.stats.misses++
+          this.updateStats(startTime)
+          return null
+        }
+
+        this.stats.hits++
+        this.updateStats(startTime)
+        return cached.compressed ? await this.decompress(cached.data) : cached.data
+      }
+
       const redis =
         useReplica && this.replicaRedis.length > 0 ? this.getRandomReplica() : this.primaryRedis
 
@@ -175,6 +244,18 @@ export class DistributedCacheManager {
         version: this.generateVersion(),
         compressed: shouldCompress,
         metadata,
+      }
+
+      // Handle Edge Runtime with in-memory cache
+      if (this.isEdgeRuntime) {
+        this.memoryCache.set(key, entry)
+        // Set up expiration for memory cache
+        const expiryTime = ttl || this.config.defaultTTL
+        setTimeout(() => {
+          this.memoryCache.delete(key)
+        }, expiryTime * 1000)
+        this.stats.sets++
+        return true
       }
 
       const entryData = JSON.stringify(entry)
@@ -283,6 +364,14 @@ export class DistributedCacheManager {
    */
   async delete(key: string): Promise<boolean> {
     try {
+      // Handle Edge Runtime with in-memory cache
+      if (this.isEdgeRuntime) {
+        const existed = this.memoryCache.has(key)
+        this.memoryCache.delete(key)
+        this.stats.deletes++
+        return existed
+      }
+
       const result = await this.primaryRedis.del(key)
       this.stats.deletes++
       return result > 0
