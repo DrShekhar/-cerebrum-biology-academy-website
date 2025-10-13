@@ -11,8 +11,7 @@
     "COMPLEX_FEATURES_ENABLED": "false"
   },
   "functions": {
-    "src/app/api/ai/unified-chat/route.ts": {
-      "runtime": "nodejs20.x",
+    "src/app/api/**/*.ts": {
       "maxDuration": 30
     }
   },
