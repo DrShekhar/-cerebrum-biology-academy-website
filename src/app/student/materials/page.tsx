@@ -12,6 +12,9 @@
  */
 
 import { useEffect, useState } from 'react'
+
+// Force dynamic rendering since this requires authentication
+export const dynamic = 'force-dynamic'
 import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import {
@@ -31,6 +34,7 @@ interface Material {
   title: string
   description: string | null
   fileName: string
+  fileUrl: string
   fileSize: number
   materialType: string
   category: string | null
@@ -67,6 +71,7 @@ interface MaterialsResponse {
     totalMaterials: number
     totalDownloads: number
   }
+  error?: string
 }
 
 export default function StudentMaterialsPage() {
