@@ -7,8 +7,8 @@
   "env": {
     "NODE_ENV": "production",
     "NEXT_TELEMETRY_DISABLED": "1",
-    "REDIS_ENABLED": "false",
-    "COMPLEX_FEATURES_ENABLED": "false"
+    "REDIS_ENABLED": "true",
+    "COMPLEX_FEATURES_ENABLED": "true"
   },
   "functions": {
     "src/app/api/**/*.ts": {
