@@ -6,38 +6,83 @@
   --background: #ffffff;
   --foreground: #171717;
 
-  /* Premium Color System */
-  --primary-blue: #1e40af;
-  --primary-blue-50: #eff6ff;
-  --primary-blue-100: #dbeafe;
-  --primary-blue-200: #bfdbfe;
-  --primary-blue-600: #2563eb;
-  --primary-blue-700: #1d4ed8;
-  --primary-blue-900: #1e3a8a;
+  /* ========================================
+     CEREBRUM BIOLOGY ACADEMY - COLOR SYSTEM
+     Updated: January 2025
+     Purpose: Cohesive, accessible, medical/academic brand
+     ======================================== */
 
-  --accent-emerald: #059669;
-  --accent-emerald-50: #ecfdf5;
-  --accent-emerald-100: #d1fae5;
-  --accent-emerald-200: #a7f3d0;
-  --accent-emerald-600: #10b981;
-  --accent-emerald-700: #047857;
+  /* PRIMARY BRAND - Royal Blue (Medical/Academic Trust) */
+  --cerebrum-royal-blue-900: #1e3a8a; /* Deep headings */
+  --cerebrum-royal-blue-700: #1e40af; /* Primary brand */
+  --cerebrum-royal-blue-600: #2563eb; /* Interactive */
+  --cerebrum-royal-blue-500: #3b82f6; /* Hover states */
+  --cerebrum-royal-blue-100: #dbeafe; /* Light backgrounds */
+  --cerebrum-royal-blue-50: #eff6ff; /* Subtle backgrounds */
 
-  --premium-gold: #d97706;
-  --premium-gold-50: #fffbeb;
-  --premium-gold-100: #fef3c7;
-  --premium-gold-200: #fde68a;
-  --premium-gold-600: #f59e0b;
-  --premium-gold-700: #d97706;
+  /* ACCENT - Medical Green (Success, Growth, Action) */
+  --cerebrum-medical-green-700: #047857; /* Dark text */
+  --cerebrum-medical-green-600: #059669; /* Primary success */
+  --cerebrum-medical-green-500: #10b981; /* CTA buttons */
+  --cerebrum-medical-green-100: #d1fae5; /* Light backgrounds */
+  --cerebrum-medical-green-50: #ecfdf5; /* Subtle backgrounds */
 
-  --trust-navy: #1e293b;
-  --trust-navy-50: #f8fafc;
-  --trust-navy-100: #f1f5f9;
-  --trust-navy-200: #e2e8f0;
-  --trust-navy-700: #334155;
-  --trust-navy-800: #1e293b;
-  --trust-navy-900: #0f172a;
+  /* ACCENT - Achievement Gold (Premium, Excellence) */
+  --cerebrum-achievement-gold-700: #d97706; /* Text */
+  --cerebrum-achievement-gold-600: #f59e0b; /* Badges */
+  --cerebrum-achievement-gold-100: #fef3c7; /* Backgrounds */
+  --cerebrum-achievement-gold-50: #fffbeb; /* Subtle backgrounds */
 
-  /* Enhanced Design Tokens */
+  /* ACCENT - Alert Orange (Urgency, Limited Offers) */
+  --cerebrum-alert-orange-700: #c2410c; /* Text */
+  --cerebrum-alert-orange-600: #ea580c; /* Buttons */
+  --cerebrum-alert-orange-100: #ffedd5; /* Backgrounds */
+  --cerebrum-alert-orange-50: #fff7ed; /* Subtle backgrounds */
+
+  /* TEXT HIERARCHY (Neutral Slate) */
+  --cerebrum-text-primary: #0f172a; /* Headings (Navy 900) - WCAG AAA */
+  --cerebrum-text-secondary: #334155; /* Body text (Slate 700) - WCAG AAA */
+  --cerebrum-text-tertiary: #64748b; /* Muted text (Slate 500) - WCAG AA */
+  --cerebrum-text-light: #94a3b8; /* Disabled/placeholder (Slate 400) */
+
+  /* BACKGROUNDS */
+  --cerebrum-bg-primary: #ffffff; /* White */
+  --cerebrum-bg-secondary: #f8fafc; /* Slate 50 - sections */
+  --cerebrum-bg-accent: #eff6ff; /* Blue 50 - highlighted */
+  --cerebrum-bg-dark: #0f172a; /* Dark footer/header */
+
+  /* BORDERS */
+  --cerebrum-border-light: #e2e8f0; /* Slate 200 */
+  --cerebrum-border-medium: #cbd5e1; /* Slate 300 */
+  --cerebrum-border-dark: #94a3b8; /* Slate 400 */
+
+  /* LEGACY COMPATIBILITY (map old vars to new system) */
+  --primary-blue: var(--cerebrum-royal-blue-700);
+  --primary-blue-50: var(--cerebrum-royal-blue-50);
+  --primary-blue-100: var(--cerebrum-royal-blue-100);
+  --primary-blue-600: var(--cerebrum-royal-blue-600);
+  --primary-blue-700: var(--cerebrum-royal-blue-700);
+  --primary-blue-900: var(--cerebrum-royal-blue-900);
+
+  --accent-emerald: var(--cerebrum-medical-green-600);
+  --accent-emerald-50: var(--cerebrum-medical-green-50);
+  --accent-emerald-100: var(--cerebrum-medical-green-100);
+  --accent-emerald-600: var(--cerebrum-medical-green-500);
+  --accent-emerald-700: var(--cerebrum-medical-green-700);
+
+  --premium-gold: var(--cerebrum-achievement-gold-700);
+  --premium-gold-50: var(--cerebrum-achievement-gold-50);
+  --premium-gold-100: var(--cerebrum-achievement-gold-100);
+  --premium-gold-600: var(--cerebrum-achievement-gold-600);
+  --premium-gold-700: var(--cerebrum-achievement-gold-700);
+
+  --trust-navy: var(--cerebrum-text-primary);
+  --trust-navy-50: var(--cerebrum-bg-secondary);
+  --trust-navy-700: var(--cerebrum-text-secondary);
+  --trust-navy-800: var(--cerebrum-text-primary);
+  --trust-navy-900: var(--cerebrum-text-primary);
+
+  /* ENHANCED DESIGN TOKENS */
   --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   --shadow-premium: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
   --shadow-glow: 0 0 20px rgba(30, 64, 175, 0.3);
@@ -48,14 +93,26 @@
   --radius-xl: 1rem;
   --radius-2xl: 1.5rem;
 
-  --gradient-primary: linear-gradient(135deg, var(--primary-blue) 0%, #8b5cf6 100%);
-  --gradient-success: linear-gradient(135deg, var(--accent-emerald) 0%, #10b981 100%);
-  --gradient-premium: linear-gradient(135deg, var(--premium-gold) 0%, #f59e0b 100%);
+  /* OPTIMIZED GRADIENTS (Cohesive Blue-based) */
+  --gradient-primary: linear-gradient(
+    135deg,
+    var(--cerebrum-royal-blue-700) 0%,
+    var(--cerebrum-royal-blue-500) 100%
+  );
+  --gradient-success: linear-gradient(
+    135deg,
+    var(--cerebrum-medical-green-600) 0%,
+    var(--cerebrum-medical-green-500) 100%
+  );
+  --gradient-premium: linear-gradient(
+    135deg,
+    var(--cerebrum-achievement-gold-700) 0%,
+    var(--cerebrum-achievement-gold-600) 100%
+  );
   --gradient-hero: linear-gradient(
     135deg,
-    var(--primary-blue-50) 0%,
-    var(--primary-blue-100) 50%,
-    #e0e7ff 100%
+    var(--cerebrum-royal-blue-50) 0%,
+    var(--cerebrum-royal-blue-100) 100%
   );
 }
 
