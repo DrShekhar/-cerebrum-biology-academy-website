@@ -1,0 +1,454 @@
+/**
+ * Enhanced AI Integration Example
+ * Demonstrates the complete AI system with all advanced features
+ */
+
+import { aiClient, AIRequest } from './aiClient'
+
+/**
+ * Example: Basic request with all enhancements enabled
+ */
+export async function basicEnhancedRequest() {
+  const request: AIRequest = {
+    prompt: "Explain the process of photosynthesis in detail, including the light and dark reactions.",
+    context: {
+      subject: "biology",
+      studentLevel: "class-11",
+      language: "english",
+      userId: "student_123",
+      sessionId: "session_456"
+    },
+    options: {
+      // Enable all advanced features
+      intelligentRouting: true,
+      qualityAssurance: true,
+      autoRetryOnLowQuality: true,
+      enhancedFallback: true,
+      useCache: true,
+
+      // Quality and cost controls
+      qualityThreshold: 0.8,
+      maxCost: 0.05, // $0.05 maximum
+      maxLatency: 10000, // 10 seconds maximum
+
+      // Provider selection preferences
+      selectionCriteria: {
+        costWeight: 0.3,
+        qualityWeight: 0.5,
+        speedWeight: 0.2
+      },
+
+      // Fallback strategy
+      fallbackStrategy: "biology" // Use biology-optimized fallback
+    }
+  }
+
+  try {
+    console.log("🚀 Making enhanced AI request...")
+    const response = await aiClient.generateResponse(request)
+
+    if (response.success) {
+      console.log("✅ Request successful!")
+      console.log("📝 Content:", response.content?.substring(0, 200) + "...")
+      console.log("🔧 Provider:", response.metadata.provider)
+      console.log("🧠 Model:", response.metadata.model)
+      console.log("💰 Cost:", `$${response.metadata.cost.toFixed(4)}`)
+      console.log("⚡ Response Time:", `${response.metadata.responseTime}ms`)
+      console.log("🎯 Quality Score:", response.metadata.qualityReport?.overallScore?.toFixed(2))
+      console.log("📊 Provider Score:", response.metadata.providerScore?.toFixed(2))
+      console.log("🔄 Cached:", response.metadata.cached)
+
+      if (response.metadata.enhancedFallbackUsed) {
+        console.log("🛡️ Fallback attempts:", response.metadata.fallbackAttempts?.length)
+        console.log("🎯 Final provider:", response.metadata.finalProvider)
+      }
+
+      return response
+    } else {
+      console.error("❌ Request failed:", response.error)
+      return response
+    }
+  } catch (error) {
+    console.error("💥 Error:", error)
+    throw error
+  }
+}
+
+/**
+ * Example: Critical request with maximum quality requirements
+ */
+export async function criticalQualityRequest() {
+  const request: AIRequest = {
+    prompt: "A student is struggling with understanding DNA replication. Create a comprehensive explanation with analogies, step-by-step process, and memory techniques specifically for NEET preparation.",
+    context: {
+      subject: "biology",
+      studentLevel: "neet-dropper",
+      language: "english",
+      important: true,
+      urgent: false
+    },
+    options: {
+      intelligentRouting: true,
+      qualityAssurance: true,
+      autoRetryOnLowQuality: true,
+      enhancedFallback: true,
+
+      // Maximum quality requirements
+      qualityThreshold: 0.9,
+      minQuality: 0.85,
+
+      // Prefer premium models
+      model: "premium",
+
+      // Cost is secondary to quality for critical requests
+      selectionCriteria: {
+        costWeight: 0.1,
+        qualityWeight: 0.8,
+        speedWeight: 0.1
+      },
+
+      fallbackStrategy: "critical"
+    }
+  }
+
+  const response = await aiClient.generateResponse(request)
+
+  if (response.success && response.metadata.qualityReport) {
+    console.log("📊 Quality Analysis:")
+    console.log("  Overall Score:", response.metadata.qualityReport.overallScore.toFixed(2))
+    console.log("  Accuracy:", response.metadata.qualityReport.metrics.accuracy.toFixed(2))
+    console.log("  Educational Value:", response.metadata.qualityReport.metrics.educationalValue.toFixed(2))
+    console.log("  NEET Alignment:", response.metadata.qualityReport.metrics.neetAlignment.toFixed(2))
+    console.log("  Flags:", response.metadata.qualityReport.flags.length)
+
+    if (response.metadata.qualityReport.recommendations.length > 0) {
+      console.log("💡 Recommendations:")
+      response.metadata.qualityReport.recommendations.forEach((rec, i) => {
+        console.log(`  ${i + 1}. ${rec}`)
+      })
+    }
+  }
+
+  return response
+}
+
+/**
+ * Example: Cost-optimized request for practice questions
+ */
+export async function costOptimizedRequest() {
+  const request: AIRequest = {
+    prompt: "Generate 5 quick practice questions on cellular respiration for class 11 students.",
+    context: {
+      subject: "biology",
+      studentLevel: "class-11",
+      language: "english",
+      practice: true // This is a practice session
+    },
+    options: {
+      intelligentRouting: true,
+      qualityAssurance: true,
+      enhancedFallback: true,
+
+      // Cost optimization
+      maxCost: 0.01, // Very low cost limit
+      model: "fast", // Use fast models
+
+      // Prioritize cost over other factors
+      selectionCriteria: {
+        costWeight: 0.7,
+        qualityWeight: 0.2,
+        speedWeight: 0.1
+      },
+
+      fallbackStrategy: "fast"
+    }
+  }
+
+  const response = await aiClient.generateResponse(request)
+  console.log(`💰 Cost-optimized request completed for $${response.metadata.cost.toFixed(4)}`)
+
+  return response
+}
+
+/**
+ * Example: Speed-optimized request for real-time chat
+ */
+export async function speedOptimizedRequest() {
+  const request: AIRequest = {
+    prompt: "What is the function of ribosomes?",
+    context: {
+      subject: "biology",
+      studentLevel: "class-10",
+      language: "english"
+    },
+    options: {
+      intelligentRouting: true,
+      enhancedFallback: true,
+
+      // Speed optimization
+      maxLatency: 3000, // 3 seconds maximum
+      model: "ultrafast",
+
+      // Prioritize speed
+      selectionCriteria: {
+        costWeight: 0.2,
+        qualityWeight: 0.3,
+        speedWeight: 0.5
+      },
+
+      fallbackStrategy: "fast"
+    }
+  }
+
+  const startTime = Date.now()
+  const response = await aiClient.generateResponse(request)
+  const totalTime = Date.now() - startTime
+
+  console.log(`⚡ Speed-optimized request completed in ${totalTime}ms`)
+  return response
+}
+
+/**
+ * Example: Comprehensive system status check
+ */
+export async function systemStatusCheck() {
+  console.log("🔍 Checking AI system status...")
+
+  // Get overall system status
+  const status = aiClient.getStatus()
+
+  console.log("📊 System Overview:")
+  console.log("  Available Providers:", status.availableProviders)
+  console.log("  Default Provider:", status.defaultProvider)
+  console.log("  Cache Hit Rate:", `${(status.cache.advanced.hitRate * 100).toFixed(1)}%`)
+  console.log("  Total Requests:", status.performance.totalRequests)
+  console.log("  Cost Trend:", status.costOptimization.metrics.costTrend)
+  console.log("  Active Alerts:", status.costOptimization.alerts)
+
+  // Get cost dashboard
+  const costDashboard = aiClient.getCostDashboard()
+
+  console.log("💰 Cost Analysis:")
+  console.log("  Monthly Spent:", `$${costDashboard.budget.monthly.spent.toFixed(2)}`)
+  console.log("  Monthly Budget:", `$${costDashboard.budget.monthly.budget.toFixed(2)}`)
+  console.log("  Budget Used:", `${costDashboard.budget.monthly.percentage.toFixed(1)}%`)
+  console.log("  Potential Savings:", `$${costDashboard.optimization.potentialSavings.toFixed(2)}`)
+  console.log("  Efficiency Score:", `${(costDashboard.optimization.efficiencyScore * 100).toFixed(1)}%`)
+
+  // Get fallback system status
+  const fallbackStatus = aiClient.getFallbackStatus()
+
+  console.log("🛡️ Fallback System:")
+  console.log("  Overall Health:", fallbackStatus.overallHealth)
+
+  Object.entries(fallbackStatus.providers).forEach(([provider, info]) => {
+    console.log(`  ${provider}:`, {
+      health: info.health.status,
+      successRate: `${(info.health.successRate * 100).toFixed(1)}%`,
+      circuitBreaker: info.circuitBreaker.state,
+      responseTime: `${info.health.responseTime.toFixed(0)}ms`
+    })
+  })
+
+  // Get quality analytics
+  const qualityAnalytics = aiClient.getQualityAnalytics()
+
+  console.log("Quality Metrics:")
+  console.log("  Quality Threshold:", qualityAnalytics.pipeline.threshold)
+  console.log("  Avg Processing Time:", `${qualityAnalytics.pipeline.averageProcessingTime}ms`)
+
+  return {
+    status,
+    costDashboard,
+    fallbackStatus,
+    qualityAnalytics
+  }
+}
+
+/**
+ * Example: Budget management
+ */
+export async function budgetManagementExample() {
+  console.log("Budget Management Example")
+
+  // Update budget settings
+  aiClient.updateBudget({
+    monthly: 2000, // $2000/month
+    daily: 100,    // $100/day
+    alertThresholds: {
+      warning: 75,  // 75%
+      critical: 90  // 90%
+    },
+    autoStop: false
+  })
+
+  console.log("Budget settings updated")
+
+  // Set quality threshold
+  aiClient.setQualityThreshold(0.85)
+  console.log("Quality threshold set to 85%")
+
+  // Export cost data for analysis
+  const costDataJSON = aiClient.exportCostData('json')
+  console.log("Cost data exported (JSON length):", costDataJSON.length)
+
+  const costDataCSV = aiClient.exportCostData('csv')
+  console.log("Cost data exported (CSV length):", costDataCSV.length)
+}
+
+/**
+ * Example: Circuit breaker testing
+ */
+export async function circuitBreakerExample() {
+  console.log("Circuit Breaker Testing")
+
+  // Force a circuit breaker open for testing
+  aiClient.forceCircuitBreakerState('openai', 'open')
+  console.log("Forced OpenAI circuit breaker to OPEN")
+
+  // Make a request - should fallback to other providers
+  const request: AIRequest = {
+    prompt: "What is mitosis?",
+    context: {
+      subject: "biology",
+      studentLevel: "class-10",
+      language: "english"
+    },
+    options: {
+      enhancedFallback: true,
+      fallbackStrategy: "default"
+    }
+  }
+
+  const response = await aiClient.generateResponse(request)
+
+  if (response.success) {
+    console.log("Request succeeded despite circuit breaker")
+    console.log("Used provider:", response.metadata.finalProvider || response.metadata.provider)
+
+    if (response.metadata.fallbackAttempts) {
+      console.log("Fallback attempts:", response.metadata.fallbackAttempts.length)
+      response.metadata.fallbackAttempts.forEach((attempt, i) => {
+        console.log(`  ${i + 1}. ${attempt.provider}: ${attempt.success ? 'SUCCESS' : 'FAILED'} (${attempt.responseTime}ms)`)
+      })
+    }
+  }
+
+  // Reset circuit breaker
+  aiClient.forceCircuitBreakerState('openai', 'closed')
+  console.log("Reset OpenAI circuit breaker to CLOSED")
+}
+
+/**
+ * Run all examples
+ */
+export async function runAllExamples() {
+  console.log("Running Enhanced AI Integration Examples\n")
+
+  try {
+    console.log("=== Basic Enhanced Request ===")
+    await basicEnhancedRequest()
+    console.log("\n")
+
+    console.log("=== Critical Quality Request ===")
+    await criticalQualityRequest()
+    console.log("\n")
+
+    console.log("=== Cost Optimized Request ===")
+    await costOptimizedRequest()
+    console.log("\n")
+
+    console.log("=== Speed Optimized Request ===")
+    await speedOptimizedRequest()
+    console.log("\n")
+
+    console.log("=== System Status Check ===")
+    await systemStatusCheck()
+    console.log("\n")
+
+    console.log("=== Budget Management ===")
+    await budgetManagementExample()
+    console.log("\n")
+
+    console.log("=== Circuit Breaker Testing ===")
+    await circuitBreakerExample()
+    console.log("\n")
+
+    console.log("All examples completed successfully!")
+
+  } catch (error) {
+    console.error("Example failed:", error)
+  }
+}
+
+// Example of how to use in a real application
+export const EnhancedAIService = {
+  // Standard educational query
+  async askBiologyQuestion(question: string, studentLevel: string) {
+    return aiClient.generateResponse({
+      prompt: question,
+      context: {
+        subject: "biology",
+        studentLevel: studentLevel as any,
+        language: "english"
+      },
+      options: {
+        intelligentRouting: true,
+        qualityAssurance: true,
+        enhancedFallback: true,
+        fallbackStrategy: "biology"
+      }
+    })
+  },
+
+  // Fast chat response
+  async quickAnswer(question: string) {
+    return aiClient.generateResponse({
+      prompt: question,
+      context: {
+        subject: "biology",
+        studentLevel: "class-12",
+        language: "english"
+      },
+      options: {
+        intelligentRouting: true,
+        enhancedFallback: true,
+        model: "fast",
+        maxLatency: 5000,
+        fallbackStrategy: "fast"
+      }
+    })
+  },
+
+  // High-quality NEET preparation
+  async neetPreparation(topic: string, studentLevel: string) {
+    return aiClient.generateResponse({
+      prompt: `Provide a comprehensive NEET-focused explanation of ${topic} with practice questions and memory techniques.`,
+      context: {
+        subject: "biology",
+        studentLevel: studentLevel as any,
+        language: "english",
+        important: true
+      },
+      options: {
+        intelligentRouting: true,
+        qualityAssurance: true,
+        autoRetryOnLowQuality: true,
+        enhancedFallback: true,
+        model: "premium",
+        qualityThreshold: 0.9,
+        fallbackStrategy: "critical"
+      }
+    })
+  },
+
+  // Get system health
+  getSystemHealth() {
+    return aiClient.getStatus()
+  },
+
+  // Get cost analytics
+  getCostAnalytics() {
+    return aiClient.getCostDashboard()
+  }
+}"

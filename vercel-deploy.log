@@ -1,0 +1,17 @@
+Vercel CLI 48.1.6
+Retrieving project…
+Deploying bobbyaiims-gmailcoms-projects/cerebrum-biology-academy-website
+Uploading [--------------------] (0.0B/514.2KB)
+Uploading [=====---------------] (128.7KB/514.2KB)
+Uploading [==========----------] (271.1KB/514.2KB)
+Uploading [===============-----] (399.1KB/514.2KB)
+Uploading [====================] (514.2KB/514.2KB)
+Inspect: https://vercel.com/bobbyaiims-gmailcoms-projects/cerebrum-biology-academy-website/2hVwftfznN3ayg1CkWzrcuM1C6dC [8s]
+Production: https://cerebrum-biology-academy-website-6yf1dcgg3.vercel.app [8s]
+https://cerebrum-biology-academy-website-6yf1dcgg3.vercel.appQueued
+Building
+Completing
+
+Common next commands:
+- `vercel inspect cerebrum-biology-academy-website-6yf1dcgg3.vercel.app --logs`
+- `vercel redeploy cerebrum-biology-academy-website-6yf1dcgg3.vercel.app`
