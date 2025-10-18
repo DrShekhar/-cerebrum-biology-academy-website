@@ -6,13 +6,32 @@
 import OpenAI from 'openai'
 import { Anthropic } from '@anthropic-ai/sdk'
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY || '',
-})
+let openai: OpenAI | null = null
+let anthropic: Anthropic | null = null
 
-const anthropic = new Anthropic({
-  apiKey: process.env.ANTHROPIC_API_KEY || '',
-})
+function getOpenAI(): OpenAI {
+  if (!openai && process.env.OPENAI_API_KEY) {
+    openai = new OpenAI({
+      apiKey: process.env.OPENAI_API_KEY,
+    })
+  }
+  if (!openai) {
+    throw new Error('OpenAI API key not configured')
+  }
+  return openai
+}
+
+function getClaude(): Anthropic {
+  if (!anthropic && process.env.ANTHROPIC_API_KEY) {
+    anthropic = new Anthropic({
+      apiKey: process.env.ANTHROPIC_API_KEY,
+    })
+  }
+  if (!anthropic) {
+    throw new Error('Anthropic API key not configured')
+  }
+  return anthropic
+}
 
 interface BiologyImageAnalysis {
   topic: string
@@ -62,7 +81,7 @@ export class ImageAnalysisService {
     caption?: string
   ): Promise<Partial<BiologyImageAnalysis>> {
     try {
-      const response = await openai.chat.completions.create({
+      const response = await getOpenAI().chat.completions.create({
         model: 'gpt-4-vision-preview',
         messages: [
           {
@@ -124,7 +143,7 @@ export class ImageAnalysisService {
       // Download image and convert to base64 for Claude
       const imageBase64 = await this.downloadAndEncodeImage(imageUrl)
 
-      const response = await anthropic.messages.create({
+      const response = await getClaude().messages.create({
         model: 'claude-3-sonnet-20240229',
         max_tokens: 1000,
         messages: [

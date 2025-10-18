@@ -8,9 +8,19 @@ import fs from 'fs'
 import path from 'path'
 import { promisify } from 'util'
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY || '',
-})
+let openai: OpenAI | null = null
+
+function getOpenAI(): OpenAI {
+  if (!openai && process.env.OPENAI_API_KEY) {
+    openai = new OpenAI({
+      apiKey: process.env.OPENAI_API_KEY,
+    })
+  }
+  if (!openai) {
+    throw new Error('OpenAI API key not configured')
+  }
+  return openai
+}
 
 export class VoiceTranscriptionService {
   private downloadFile = promisify(require('fs').writeFile)
@@ -81,7 +91,7 @@ export class VoiceTranscriptionService {
     try {
       const fileStream = fs.createReadStream(filePath)
 
-      const transcription = await openai.audio.transcriptions.create({
+      const transcription = await getOpenAI().audio.transcriptions.create({
         file: fileStream,
         model: 'whisper-1',
         language: 'hi', // Hindi - but Whisper auto-detects English/Hinglish too

@@ -112,17 +112,13 @@ export class AIGateway {
   }
 
   private async initializeProviders(): Promise<void> {
-    // Claude (Anthropic) Provider
+    // Claude (Anthropic) Provider - lazy initialization
     if (process.env.ANTHROPIC_API_KEY) {
-      const claude = new Anthropic({
-        apiKey: process.env.ANTHROPIC_API_KEY,
-      })
-
       this.providers.set('claude', {
         id: 'claude',
         name: 'Claude (Anthropic)',
-        client: claude,
-        healthCheck: async () => this.healthCheckClaude(claude),
+        client: null as any, // Will be lazily initialized
+        healthCheck: async () => this.healthCheckClaude(),
         costPerToken: 0.00001, // $0.01 per 1K tokens
         maxTokens: 100000,
         capabilities: ['text', 'reasoning', 'biology', 'analysis'],
@@ -130,17 +126,13 @@ export class AIGateway {
       })
     }
 
-    // OpenAI Provider
+    // OpenAI Provider - lazy initialization
     if (process.env.OPENAI_API_KEY) {
-      const openai = new OpenAI({
-        apiKey: process.env.OPENAI_API_KEY,
-      })
-
       this.providers.set('openai', {
         id: 'openai',
         name: 'OpenAI GPT-4',
-        client: openai,
-        healthCheck: async () => this.healthCheckOpenAI(openai),
+        client: null as any, // Will be lazily initialized
+        healthCheck: async () => this.healthCheckOpenAI(),
         costPerToken: 0.00003, // $0.03 per 1K tokens
         maxTokens: 128000,
         capabilities: ['text', 'vision', 'voice', 'code'],
@@ -149,6 +141,44 @@ export class AIGateway {
     }
 
     console.log(`📡 Initialized ${this.providers.size} AI providers`)
+  }
+
+  /**
+   * Lazy initialization of Anthropic client
+   */
+  private ensureClaude(): Anthropic {
+    const provider = this.providers.get('claude')
+    if (!provider) {
+      throw new Error('Claude provider not configured')
+    }
+    if (!provider.client && process.env.ANTHROPIC_API_KEY) {
+      provider.client = new Anthropic({
+        apiKey: process.env.ANTHROPIC_API_KEY,
+      })
+    }
+    if (!provider.client) {
+      throw new Error('Anthropic API key not configured')
+    }
+    return provider.client as Anthropic
+  }
+
+  /**
+   * Lazy initialization of OpenAI client
+   */
+  private ensureOpenAI(): OpenAI {
+    const provider = this.providers.get('openai')
+    if (!provider) {
+      throw new Error('OpenAI provider not configured')
+    }
+    if (!provider.client && process.env.OPENAI_API_KEY) {
+      provider.client = new OpenAI({
+        apiKey: process.env.OPENAI_API_KEY,
+      })
+    }
+    if (!provider.client) {
+      throw new Error('OpenAI API key not configured')
+    }
+    return provider.client as OpenAI
   }
 
   private setupCircuitBreakers(): void {
@@ -247,7 +277,7 @@ export class AIGateway {
       const startTime = Date.now()
 
       if (provider.id === 'claude') {
-        const claude = provider.client as Anthropic
+        const claude = this.ensureClaude()
         const response = await claude.messages.create({
           model: 'claude-3-sonnet-20240229',
           max_tokens: request.maxTokens || 1000,
@@ -277,7 +307,7 @@ export class AIGateway {
           },
         }
       } else {
-        const openai = provider.client as OpenAI
+        const openai = this.ensureOpenAI()
         const response = await openai.chat.completions.create({
           model: 'gpt-4',
           messages: [{ role: 'user', content: request.prompt }],
@@ -395,8 +425,9 @@ export class AIGateway {
   }
 
   // Health check implementations
-  private async healthCheckClaude(claude: Anthropic): Promise<boolean> {
+  private async healthCheckClaude(): Promise<boolean> {
     try {
+      const claude = this.ensureClaude()
       await claude.messages.create({
         model: 'claude-3-sonnet-20240229',
         max_tokens: 10,
@@ -408,8 +439,9 @@ export class AIGateway {
     }
   }
 
-  private async healthCheckOpenAI(openai: OpenAI): Promise<boolean> {
+  private async healthCheckOpenAI(): Promise<boolean> {
     try {
+      const openai = this.ensureOpenAI()
       await openai.chat.completions.create({
         model: 'gpt-4',
         messages: [{ role: 'user', content: 'Health check' }],

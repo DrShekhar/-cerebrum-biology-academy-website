@@ -31,14 +31,28 @@ interface VoiceProfile {
 }
 
 export class VoiceSynthesis {
-  private openai: OpenAI
+  private openai: OpenAI | null = null
   private voiceProfiles: Map<string, VoiceProfile>
 
   constructor() {
-    this.openai = new OpenAI({
-      apiKey: process.env.OPENAI_API_KEY!,
-    })
+    // Lazy initialization - only init OpenAI when actually needed
+    // This prevents build failures when API keys aren't available
     this.initializeVoiceProfiles()
+  }
+
+  /**
+   * Lazy initialization of OpenAI client
+   */
+  private ensureOpenAI(): OpenAI {
+    if (!this.openai && process.env.OPENAI_API_KEY) {
+      this.openai = new OpenAI({
+        apiKey: process.env.OPENAI_API_KEY,
+      })
+    }
+    if (!this.openai) {
+      throw new Error('OpenAI API key not configured')
+    }
+    return this.openai
   }
 
   /**
@@ -53,7 +67,8 @@ export class VoiceSynthesis {
       const voiceModel = this.selectVoiceModel(request.language, request.emotion)
 
       // Generate speech using OpenAI TTS
-      const response = await this.openai.audio.speech.create({
+      const openai = this.ensureOpenAI()
+      const response = await openai.audio.speech.create({
         model: 'tts-1-hd', // High quality model
         voice: voiceModel,
         input: optimizedText,

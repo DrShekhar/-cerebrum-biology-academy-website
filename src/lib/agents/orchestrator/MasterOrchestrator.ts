@@ -25,7 +25,7 @@ import { TaskQueue } from './TaskQueue'
 import { WorkflowEngine } from './WorkflowEngine'
 
 export class MasterOrchestrator {
-  private anthropic: Anthropic
+  private anthropic: Anthropic | null = null
   private config: OrchestratorConfig
   private registry: AgentRegistry
   private taskQueue: TaskQueue
@@ -43,16 +43,30 @@ export class MasterOrchestrator {
       ...config,
     }
 
-    this.anthropic = new Anthropic({
-      apiKey: process.env.ANTHROPIC_API_KEY,
-    })
+    // Lazy initialization - only init Anthropic when actually needed
+    // This prevents build failures when API keys aren't available
 
     this.registry = new AgentRegistry()
     this.taskQueue = new TaskQueue(this.config.taskQueueSize)
-    this.workflowEngine = new WorkflowEngine(this.anthropic, this.registry)
+    this.workflowEngine = new WorkflowEngine(this.ensureClaude(), this.registry)
     this.activeExecutions = new Map()
 
     this.initialize()
+  }
+
+  /**
+   * Lazy initialization of Anthropic client
+   */
+  private ensureClaude(): Anthropic {
+    if (!this.anthropic && process.env.ANTHROPIC_API_KEY) {
+      this.anthropic = new Anthropic({
+        apiKey: process.env.ANTHROPIC_API_KEY,
+      })
+    }
+    if (!this.anthropic) {
+      throw new Error('Anthropic API key not configured')
+    }
+    return this.anthropic
   }
 
   /**

@@ -39,7 +39,7 @@ import { AuditLogger } from './security/audit'
  */
 export class CerebrumMCPServer {
   private mcpServer: MCPServer
-  private anthropic: Anthropic
+  private anthropic: Anthropic | null = null
   private redis: Redis
   private wsServer: WebSocket.Server
   private agents: Map<AgentType, EducationalAgent>
@@ -87,10 +87,8 @@ export class CerebrumMCPServer {
       version: this.config.version,
     })
 
-    // Initialize Anthropic SDK
-    this.anthropic = new Anthropic({
-      apiKey: process.env.ANTHROPIC_API_KEY || '',
-    })
+    // Anthropic SDK will be lazily initialized when needed
+    // This prevents build failures when API keys aren't available
 
     // Initialize Redis for caching and session management (uses factory with graceful degradation)
     this.redis = getRedisClient(process.env.REDIS_URL) as any
@@ -105,11 +103,26 @@ export class CerebrumMCPServer {
   }
 
   /**
+   * Lazy initialization of Anthropic client
+   */
+  private ensureClaude(): Anthropic {
+    if (!this.anthropic && process.env.ANTHROPIC_API_KEY) {
+      this.anthropic = new Anthropic({
+        apiKey: process.env.ANTHROPIC_API_KEY,
+      })
+    }
+    if (!this.anthropic) {
+      throw new Error('Anthropic API key not configured')
+    }
+    return this.anthropic
+  }
+
+  /**
    * Setup AI agents for different educational functions
    */
   private setupAgents(): void {
     const agentConfig = {
-      anthropic: this.anthropic,
+      anthropic: this.ensureClaude(),
       redis: this.redis,
       securityManager: this.securityManager,
       auditLogger: this.auditLogger,

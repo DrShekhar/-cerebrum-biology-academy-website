@@ -12,13 +12,32 @@ import { VoiceTranscriptionService } from './voiceTranscription'
 import { ImageAnalysisService } from './imageAnalysis'
 import { NCERTReferenceService } from './ncertReference'
 
-const anthropic = new Anthropic({
-  apiKey: process.env.ANTHROPIC_API_KEY || '',
-})
+let anthropic: Anthropic | null = null
+let openai: OpenAI | null = null
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY || '',
-})
+function getClaude(): Anthropic {
+  if (!anthropic && process.env.ANTHROPIC_API_KEY) {
+    anthropic = new Anthropic({
+      apiKey: process.env.ANTHROPIC_API_KEY,
+    })
+  }
+  if (!anthropic) {
+    throw new Error('Anthropic API key not configured')
+  }
+  return anthropic
+}
+
+function getOpenAI(): OpenAI {
+  if (!openai && process.env.OPENAI_API_KEY) {
+    openai = new OpenAI({
+      apiKey: process.env.OPENAI_API_KEY,
+    })
+  }
+  if (!openai) {
+    throw new Error('OpenAI API key not configured')
+  }
+  return openai
+}
 
 interface EducationalMessage {
   messageId: string
@@ -222,7 +241,7 @@ export class WhatsAppMessageProcessor {
     question: string
   ): Promise<{ isRelevant: boolean; suggestion?: string }> {
     try {
-      const response = await anthropic.messages.create({
+      const response = await getClaude().messages.create({
         model: 'claude-3-sonnet-20240229',
         max_tokens: 200,
         messages: [
@@ -273,7 +292,7 @@ Respond with JSON:
         studentName
       )
 
-      const response = await anthropic.messages.create({
+      const response = await getClaude().messages.create({
         model: 'claude-3-sonnet-20240229',
         max_tokens: 1000,
         messages: [

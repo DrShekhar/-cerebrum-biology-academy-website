@@ -61,8 +61,8 @@ export class IntelligentAIOrchestrator extends EventEmitter {
   private responseAnalytics: Map<string, any[]> = new Map()
 
   // Provider instances
-  private openai: OpenAI
-  private anthropic: Anthropic
+  private openai: OpenAI | null = null
+  private anthropic: Anthropic | null = null
 
   // Configuration
   private readonly CACHE_TTL = 24 * 60 * 60 * 1000 // 24 hours
@@ -73,7 +73,6 @@ export class IntelligentAIOrchestrator extends EventEmitter {
   constructor() {
     super()
     this.initializeProviders()
-    this.initializeClients()
     this.startHealthCheck()
   }
 
@@ -125,22 +124,36 @@ export class IntelligentAIOrchestrator extends EventEmitter {
     }
   }
 
-  private initializeClients() {
-    // Only initialize clients if API keys are available
-    // This prevents build failures when keys aren't set in CI/CD
-    if (process.env.OPENAI_API_KEY) {
+  /**
+   * Lazy initialization of OpenAI client
+   */
+  private ensureOpenAI(): OpenAI {
+    if (!this.openai && process.env.OPENAI_API_KEY) {
       this.openai = new OpenAI({
         apiKey: process.env.OPENAI_API_KEY,
         timeout: 60000, // 60 seconds
       })
     }
+    if (!this.openai) {
+      throw new Error('OpenAI API key not configured')
+    }
+    return this.openai
+  }
 
-    if (process.env.ANTHROPIC_API_KEY) {
+  /**
+   * Lazy initialization of Anthropic client
+   */
+  private ensureClaude(): Anthropic {
+    if (!this.anthropic && process.env.ANTHROPIC_API_KEY) {
       this.anthropic = new Anthropic({
         apiKey: process.env.ANTHROPIC_API_KEY,
         timeout: 60000,
       })
     }
+    if (!this.anthropic) {
+      throw new Error('Anthropic API key not configured')
+    }
+    return this.anthropic
   }
 
   /**
@@ -292,14 +305,16 @@ export class IntelligentAIOrchestrator extends EventEmitter {
       let response: any
 
       if (provider.includes('claude')) {
-        response = await this.anthropic.messages.create({
+        const anthropic = this.ensureClaude()
+        response = await anthropic.messages.create({
           model: provider,
           max_tokens: context.maxTokens || 4000,
           messages: [{ role: 'user', content: prompt }],
           temperature: context.type === 'reasoning' ? 0.1 : 0.7,
         })
       } else {
-        response = await this.openai.chat.completions.create({
+        const openai = this.ensureOpenAI()
+        response = await openai.chat.completions.create({
           model: provider,
           messages: [{ role: 'user', content: prompt }],
           max_tokens: context.maxTokens || 4000,
