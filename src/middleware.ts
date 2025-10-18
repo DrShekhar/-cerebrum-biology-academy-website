@@ -50,13 +50,14 @@ export async function middleware(request: NextRequest) {
     pathname.startsWith('/claudechat') ||
     pathname.startsWith('/admin/ai-monitoring')
 
-  // Apply security hardening to all requests except AI routes
-  if (!isAIRoute) {
-    const securityResponse = securityHardening.securityMiddleware(request)
-    if (securityResponse && securityResponse.status !== 200) {
-      return securityResponse
-    }
-  }
+  // TEMPORARILY DISABLED: Security hardening uses express-rate-limit/helmet which don't work in Edge runtime
+  // TODO: Refactor SecurityHardening.ts to use Edge-compatible libraries
+  // if (!isAIRoute) {
+  //   const securityResponse = securityHardening.securityMiddleware(request)
+  //   if (securityResponse && securityResponse.status !== 200) {
+  //     return securityResponse
+  //   }
+  // }
 
   // Skip security checks for public static assets
   if (pathname.startsWith('/_next/') || pathname.startsWith('/favicon') || pathname.includes('.')) {
