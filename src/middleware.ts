@@ -4,7 +4,8 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server'
-import { securityHardening } from './lib/security/SecurityHardening'
+// TEMPORARILY DISABLED: SecurityHardening uses express-rate-limit/helmet which don't work in Edge runtime
+// import { securityHardening } from './lib/security/SecurityHardening'
 
 // Define protected routes that require authentication
 const PROTECTED_ROUTES = [
