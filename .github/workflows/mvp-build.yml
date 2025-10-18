@@ -35,6 +35,13 @@ jobs:
           DATABASE_URL: postgresql://placeholder
           ADMIN_EMAIL: admin@cerebrumbiologyacademy.com
           ADMIN_PASSWORD_HASH: placeholder
+          # AI API Keys (placeholders for build - not used at build time)
+          OPENAI_API_KEY: placeholder-build-only
+          ANTHROPIC_API_KEY: placeholder-build-only
+          GOOGLE_AI_API_KEY: placeholder-build-only
+          # JWT Secrets (placeholders for build - not used at build time)
+          JWT_SECRET: placeholder-build-secret-change-in-production
+          JWT_REFRESH_SECRET: placeholder-build-refresh-secret-change-in-production
 
       - name: ✅ Build successful
         run: echo "Build completed successfully!"
