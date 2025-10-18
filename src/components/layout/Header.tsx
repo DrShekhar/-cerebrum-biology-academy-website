@@ -18,6 +18,8 @@ import {
   Users,
   Globe,
   HelpCircle,
+  Brain,
+  Sparkles,
 } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { BurgerMenu } from '@/components/navigation/BurgerMenu'
@@ -72,6 +74,13 @@ const Header = () => {
       hasDropdown: true,
       items: courseLinks,
       isMegaMenu: true,
+    },
+    {
+      href: '/ai-education-demo',
+      label: 'Ceri AI',
+      icon: Brain,
+      isSpecial: true,
+      badge: 'AI',
     },
     { href: '/video-lectures', label: 'Video Lectures' },
     { href: '/success-stories', label: 'Success Stories' },
@@ -252,6 +261,22 @@ const Header = () => {
                       )}
                     </AnimatePresence>
                   </div>
+                ) : item.isSpecial ? (
+                  <Link
+                    href={item.href!}
+                    className={`flex items-center space-x-2 font-semibold px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 text-white hover:shadow-lg hover:scale-105 transition-all duration-300 ${
+                      isActive(item.href!) ? 'shadow-xl' : ''
+                    }`}
+                  >
+                    {item.icon && <item.icon className="w-4 h-4" />}
+                    <span>{item.label}</span>
+                    {item.badge && (
+                      <span className="ml-1 bg-white/20 backdrop-blur-sm text-white text-xs font-bold px-2 py-0.5 rounded-full">
+                        {item.badge}
+                      </span>
+                    )}
+                    <Sparkles className="w-3 h-3 animate-pulse" />
+                  </Link>
                 ) : (
                   <Link
                     href={item.href!}
@@ -343,77 +368,103 @@ const Header = () => {
               className="lg:hidden border-t border-gray-200 py-4"
             >
               <div className="space-y-4">
-                {mainNavigation.map((item, index) => (
-                  <div key={index}>
-                    {item.hasDropdown ? (
-                      <div>
-                        <div className="flex items-center">
-                          <Link
-                            href={item.href!}
-                            className={`flex-1 font-medium py-2 transition-colors ${
-                              isActive(item.href!)
-                                ? 'text-blue-600'
-                                : 'text-gray-700 hover:text-blue-600'
-                            }`}
-                          >
-                            {item.label}
-                          </Link>
-                          <button
-                            onClick={() => {
-                              if (item.label === 'Courses') setIsCoursesOpen(!isCoursesOpen)
-                            }}
-                            className="p-3 text-gray-500 hover:text-blue-600 min-h-[44px] min-w-[44px] flex items-center justify-center"
-                            aria-label={`Toggle ${item.label} submenu`}
-                            aria-expanded={item.label === 'Courses' && isCoursesOpen}
-                            aria-haspopup="menu"
-                          >
-                            <ChevronDown
-                              className={`w-4 h-4 transition-transform ${
-                                item.label === 'Courses' && isCoursesOpen ? 'rotate-180' : ''
-                              }`}
-                            />
-                          </button>
-                        </div>
-
-                        <AnimatePresence>
-                          {item.label === 'Courses' && isCoursesOpen && (
-                            <motion.div
-                              initial={{ opacity: 0, height: 0 }}
-                              animate={{ opacity: 1, height: 'auto' }}
-                              exit={{ opacity: 0, height: 0 }}
-                              className="ml-4 mt-2 space-y-2"
-                            >
-                              {item.items?.map((subItem, subIndex) => {
-                                const Icon = subItem.icon
-                                return (
-                                  <Link
-                                    key={subIndex}
-                                    href={subItem.href}
-                                    className="flex items-center space-x-3 text-gray-600 hover:text-blue-600 py-2 transition-colors"
-                                  >
-                                    <Icon className="w-4 h-4" />
-                                    <span>{subItem.label}</span>
-                                  </Link>
-                                )
-                              })}
-                            </motion.div>
-                          )}
-                        </AnimatePresence>
-                      </div>
-                    ) : (
+                {/* Featured: Ceri AI Button at Top */}
+                {mainNavigation
+                  .filter((item) => item.isSpecial)
+                  .map((item, index) => {
+                    const Icon = item.icon
+                    return (
                       <Link
+                        key={`special-${index}`}
                         href={item.href!}
-                        className={`block font-medium py-2 transition-colors ${
-                          isActive(item.href!)
-                            ? 'text-blue-600'
-                            : 'text-gray-700 hover:text-blue-600'
-                        }`}
+                        className="flex items-center justify-center space-x-3 bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 text-white px-6 py-4 rounded-2xl font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 min-h-[56px] touch-manipulation"
                       >
-                        {item.label}
+                        {Icon && <Icon className="w-6 h-6" />}
+                        <span>{item.label}</span>
+                        {item.badge && (
+                          <span className="bg-white/20 backdrop-blur-sm text-white text-xs font-bold px-2 py-1 rounded-full">
+                            {item.badge}
+                          </span>
+                        )}
+                        <Sparkles className="w-5 h-5 animate-pulse" />
                       </Link>
-                    )}
-                  </div>
-                ))}
+                    )
+                  })}
+
+                {/* Regular Navigation Items */}
+                {mainNavigation
+                  .filter((item) => !item.isSpecial)
+                  .map((item, index) => (
+                    <div key={index}>
+                      {item.hasDropdown ? (
+                        <div>
+                          <div className="flex items-center">
+                            <Link
+                              href={item.href!}
+                              className={`flex-1 font-medium py-2 transition-colors ${
+                                isActive(item.href!)
+                                  ? 'text-blue-600'
+                                  : 'text-gray-700 hover:text-blue-600'
+                              }`}
+                            >
+                              {item.label}
+                            </Link>
+                            <button
+                              onClick={() => {
+                                if (item.label === 'Courses') setIsCoursesOpen(!isCoursesOpen)
+                              }}
+                              className="p-3 text-gray-500 hover:text-blue-600 min-h-[44px] min-w-[44px] flex items-center justify-center"
+                              aria-label={`Toggle ${item.label} submenu`}
+                              aria-expanded={item.label === 'Courses' && isCoursesOpen}
+                              aria-haspopup="menu"
+                            >
+                              <ChevronDown
+                                className={`w-4 h-4 transition-transform ${
+                                  item.label === 'Courses' && isCoursesOpen ? 'rotate-180' : ''
+                                }`}
+                              />
+                            </button>
+                          </div>
+
+                          <AnimatePresence>
+                            {item.label === 'Courses' && isCoursesOpen && (
+                              <motion.div
+                                initial={{ opacity: 0, height: 0 }}
+                                animate={{ opacity: 1, height: 'auto' }}
+                                exit={{ opacity: 0, height: 0 }}
+                                className="ml-4 mt-2 space-y-2"
+                              >
+                                {item.items?.map((subItem, subIndex) => {
+                                  const Icon = subItem.icon
+                                  return (
+                                    <Link
+                                      key={subIndex}
+                                      href={subItem.href}
+                                      className="flex items-center space-x-3 text-gray-600 hover:text-blue-600 py-2 transition-colors"
+                                    >
+                                      <Icon className="w-4 h-4" />
+                                      <span>{subItem.label}</span>
+                                    </Link>
+                                  )
+                                })}
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
+                        </div>
+                      ) : (
+                        <Link
+                          href={item.href!}
+                          className={`block font-medium py-2 transition-colors ${
+                            isActive(item.href!)
+                              ? 'text-blue-600'
+                              : 'text-gray-700 hover:text-blue-600'
+                          }`}
+                        >
+                          {item.label}
+                        </Link>
+                      )}
+                    </div>
+                  ))}
 
                 {/* Mobile Auth & CTA Buttons */}
                 <div className="pt-4 border-t border-gray-200 space-y-3">

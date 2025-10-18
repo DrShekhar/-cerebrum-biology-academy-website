@@ -7,6 +7,8 @@ import { TestCreationInterface } from './TestCreationInterface'
 import { ViewAnalytics } from './ViewAnalytics'
 import { RealTimeMetrics } from './RealTimeMetrics'
 import AITestGeneration from './AITestGeneration'
+import { DashboardSkeleton } from '../ui/LoadingSkeleton'
+import { useToast } from '../ui/Toast'
 import {
   Brain,
   BookOpen,
@@ -36,7 +38,8 @@ import {
   GraduationCap,
   Microscope,
   X,
-  Send
+  Send,
+  Menu,
 } from 'lucide-react'
 // import { aiEducationOrchestrator } from '@/lib/ai/AIEducationOrchestrator' // Commented out for Edge Runtime compatibility
 
@@ -64,9 +67,14 @@ interface RecentActivity {
 }
 
 export function AIEducationDashboard() {
-  const [activeTab, setActiveTab] = useState<'overview' | 'tutor' | 'assessment' | 'testgen' | 'analytics' | 'metrics'>('overview')
+  const { showToast } = useToast()
+  const [activeTab, setActiveTab] = useState<
+    'overview' | 'tutor' | 'assessment' | 'testgen' | 'analytics' | 'metrics'
+  >('overview')
   const [timeFilter, setTimeFilter] = useState<'week' | 'month'>('week')
   const [notifications, setNotifications] = useState(3)
+  const [isInitialLoading, setIsInitialLoading] = useState(true)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [metrics, setMetrics] = useState<AIMetrics>({
     totalQuestions: 1247,
     doubtsResolved: 156,
@@ -76,8 +84,8 @@ export function AIEducationDashboard() {
     predictions: {
       examScore: 650,
       readiness: 82,
-      rank: 1250
-    }
+      rank: 1250,
+    },
   })
 
   const [recentActivities] = useState<RecentActivity[]>([
@@ -88,7 +96,7 @@ export function AIEducationDashboard() {
       description: 'Explained mitosis vs meiosis with diagrams',
       timestamp: new Date(Date.now() - 1000 * 60 * 15),
       success: true,
-      icon: <Brain className="w-4 h-4" />
+      icon: <Brain className="w-4 h-4" />,
     },
     {
       id: '2',
@@ -97,7 +105,7 @@ export function AIEducationDashboard() {
       description: 'Score: 34/40 (85%)',
       timestamp: new Date(Date.now() - 1000 * 60 * 60 * 2),
       success: true,
-      icon: <FileText className="w-4 h-4" />
+      icon: <FileText className="w-4 h-4" />,
     },
     {
       id: '3',
@@ -106,7 +114,7 @@ export function AIEducationDashboard() {
       description: 'Completed 15 hours of study',
       timestamp: new Date(Date.now() - 1000 * 60 * 60 * 6),
       success: true,
-      icon: <Award className="w-4 h-4" />
+      icon: <Award className="w-4 h-4" />,
     },
     {
       id: '4',
@@ -115,8 +123,8 @@ export function AIEducationDashboard() {
       description: 'Generated personalized study material',
       timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24),
       success: true,
-      icon: <BookOpen className="w-4 h-4" />
-    }
+      icon: <BookOpen className="w-4 h-4" />,
+    },
   ])
 
   const [isLoading, setIsLoading] = useState(false)
@@ -124,48 +132,69 @@ export function AIEducationDashboard() {
   const [showTestCreation, setShowTestCreation] = useState(false)
   const [showAnalytics, setShowAnalytics] = useState(false)
   const [showRealTimeMetrics, setShowRealTimeMetrics] = useState(false)
-  const [chatMessages, setChatMessages] = useState<Array<{
-    id: string
-    text: string
-    sender: 'user' | 'ai'
-    timestamp: Date
-    type?: 'text' | 'explanation' | 'recommendation'
-  }>>([])
+  const [chatMessages, setChatMessages] = useState<
+    Array<{
+      id: string
+      text: string
+      sender: 'user' | 'ai'
+      timestamp: Date
+      type?: 'text' | 'explanation' | 'recommendation'
+    }>
+  >([])
   const [chatInput, setChatInput] = useState('')
   const [isChatLoading, setIsChatLoading] = useState(false)
 
   useEffect(() => {
+    // Simulate initial data loading
+    const loadTimeout = setTimeout(() => {
+      setIsInitialLoading(false)
+      showToast('success', 'Dashboard Loaded', 'Welcome back! Your latest stats are ready.')
+    }, 1500)
+
     // Simulate real-time updates
     const interval = setInterval(() => {
-      setMetrics(prev => ({
+      setMetrics((prev) => ({
         ...prev,
         doubtsResolved: prev.doubtsResolved + Math.floor(Math.random() * 2),
-        studyTime: prev.studyTime + Math.floor(Math.random() * 5)
+        studyTime: prev.studyTime + Math.floor(Math.random() * 5),
       }))
     }, 30000)
 
-    return () => clearInterval(interval)
+    return () => {
+      clearTimeout(loadTimeout)
+      clearInterval(interval)
+    }
   }, [])
 
   // Button handlers
   const handleNotifications = () => {
-    alert('📢 You have 3 new notifications!\n\n1. New study recommendation available\n2. Biology quiz reminder\n3. Achievement unlocked: Study Streak!')
+    showToast(
+      'info',
+      '3 New Notifications',
+      '1. Study recommendation\n2. Quiz reminder\n3. Achievement unlocked!',
+      7000
+    )
     setNotifications(0)
   }
 
   const handleSettings = () => {
-    alert('⚙️ Settings panel would open here\n\nFeatures:\n• Notification preferences\n• Study goals\n• AI tutoring settings\n• Account management')
+    showToast('info', 'Settings', 'Settings panel coming soon!', 3000)
   }
 
   const handleViewDetails = () => {
-    alert('📊 Detailed analytics view\n\nShowing:\n• Performance trends\n• Topic-wise breakdown\n• Study pattern analysis\n• Improvement suggestions')
+    showToast('info', 'Analytics', 'Opening detailed performance analytics...', 3000)
+    setTimeout(() => setActiveTab('analytics'), 500)
   }
 
   const handleViewAll = () => {
-    alert('📋 All activities view\n\nComplete history of:\n• Doubt sessions\n• Practice tests\n• Study materials\n• Achievements')
+    showToast('info', 'Activity History', 'Complete activity history coming soon!', 3000)
   }
 
-  const handleStartConversation = async (message?: string, type?: 'text' | 'image' | 'voice', file?: File) => {
+  const handleStartConversation = async (
+    message?: string,
+    type?: 'text' | 'image' | 'voice',
+    file?: File
+  ) => {
     if (message === 'start' || !showChatInterface) {
       setShowChatInterface(true)
       setActiveTab('tutor')
@@ -176,7 +205,7 @@ export function AIEducationDashboard() {
         text: "Hello! I'm your enhanced Biology AI tutor. 🧬 I can help you with:\n\n📝 Text questions and explanations\n📸 Image analysis (diagrams, microscopy, specimens)\n🎤 Voice doubts and audio responses\n\nWhat would you like to learn about today?",
         sender: 'ai' as const,
         timestamp: new Date(),
-        type: 'text' as const
+        type: 'text' as const,
       }
 
       setChatMessages([welcomeMessage])
@@ -202,10 +231,10 @@ export function AIEducationDashboard() {
       sender: 'user' as const,
       timestamp: new Date(),
       type: 'image' as const,
-      imageUrl: imageUrl
+      imageUrl: imageUrl,
     }
 
-    setChatMessages(prev => [...prev, userMessage])
+    setChatMessages((prev) => [...prev, userMessage])
     setIsChatLoading(true)
 
     try {
@@ -217,7 +246,7 @@ export function AIEducationDashboard() {
 
       const response = await fetch('/api/ai/image-analysis', {
         method: 'POST',
-        body: formData
+        body: formData,
       })
 
       if (!response.ok) {
@@ -233,9 +262,9 @@ export function AIEducationDashboard() {
           sender: 'ai' as const,
           timestamp: new Date(),
           type: 'explanation' as const,
-          analysis: result.data.analysis
+          analysis: result.data.analysis,
         }
-        setChatMessages(prev => [...prev, aiMessage])
+        setChatMessages((prev) => [...prev, aiMessage])
       } else {
         throw new Error('Image analysis failed')
       }
@@ -246,9 +275,9 @@ export function AIEducationDashboard() {
         text: "Sorry, I couldn't analyze the image. Please try again with a clearer biology-related image.",
         sender: 'ai' as const,
         timestamp: new Date(),
-        type: 'text' as const
+        type: 'text' as const,
       }
-      setChatMessages(prev => [...prev, errorMessage])
+      setChatMessages((prev) => [...prev, errorMessage])
     } finally {
       setIsChatLoading(false)
     }
@@ -261,10 +290,10 @@ export function AIEducationDashboard() {
       text: message,
       sender: 'user' as const,
       timestamp: new Date(),
-      type: 'voice' as const
+      type: 'voice' as const,
     }
 
-    setChatMessages(prev => [...prev, userMessage])
+    setChatMessages((prev) => [...prev, userMessage])
     setIsChatLoading(true)
 
     try {
@@ -276,7 +305,7 @@ export function AIEducationDashboard() {
 
       const response = await fetch('/api/ai/voice-processing', {
         method: 'POST',
-        body: formData
+        body: formData,
       })
 
       if (!response.ok) {
@@ -292,9 +321,9 @@ export function AIEducationDashboard() {
           text: `🎤 You said: "${result.data.transcription.text}"`,
           sender: 'ai' as const,
           timestamp: new Date(),
-          type: 'text' as const
+          type: 'text' as const,
         }
-        setChatMessages(prev => [...prev, transcriptionMessage])
+        setChatMessages((prev) => [...prev, transcriptionMessage])
 
         // Show AI response
         if (result.data.ai_response) {
@@ -304,10 +333,11 @@ export function AIEducationDashboard() {
             sender: 'ai' as const,
             timestamp: new Date(),
             type: 'explanation' as const,
-            audioUrl: result.data.audio_response ?
-              `data:audio/mp3;base64,${result.data.audio_response.audio_base64}` : undefined
+            audioUrl: result.data.audio_response
+              ? `data:audio/mp3;base64,${result.data.audio_response.audio_base64}`
+              : undefined,
           }
-          setChatMessages(prev => [...prev, aiMessage])
+          setChatMessages((prev) => [...prev, aiMessage])
         }
       } else {
         throw new Error('Voice processing failed')
@@ -319,9 +349,9 @@ export function AIEducationDashboard() {
         text: "Sorry, I couldn't process your voice message. Please try again or type your question.",
         sender: 'ai' as const,
         timestamp: new Date(),
-        type: 'text' as const
+        type: 'text' as const,
       }
-      setChatMessages(prev => [...prev, errorMessage])
+      setChatMessages((prev) => [...prev, errorMessage])
     } finally {
       setIsChatLoading(false)
     }
@@ -336,10 +366,10 @@ export function AIEducationDashboard() {
       text: message,
       sender: 'user' as const,
       timestamp: new Date(),
-      type: 'text' as const
+      type: 'text' as const,
     }
 
-    setChatMessages(prev => [...prev, userMessage])
+    setChatMessages((prev) => [...prev, userMessage])
     setChatInput('')
     setIsChatLoading(true)
 
@@ -355,10 +385,10 @@ export function AIEducationDashboard() {
             question: message,
             context: {
               topic: 'General Biology',
-              difficulty: 'intermediate'
-            }
-          }
-        })
+              difficulty: 'intermediate',
+            },
+          },
+        }),
       })
 
       if (!response.ok) {
@@ -373,21 +403,24 @@ export function AIEducationDashboard() {
           text: result.data.response.answer,
           sender: 'ai' as const,
           timestamp: new Date(),
-          type: 'explanation' as const
+          type: 'explanation' as const,
         }
-        setChatMessages(prev => [...prev, aiMessage])
+        setChatMessages((prev) => [...prev, aiMessage])
 
         // Add recommendations if available
         if (result.data.recommendations && result.data.recommendations.length > 0) {
           const recommendationMessage = {
             id: `msg_${Date.now()}_rec`,
-            text: `📚 Study Recommendations:\n${result.data.recommendations.slice(0, 3).map((rec: string, i: number) => `${i + 1}. ${rec}`).join('\n')}`,
+            text: `📚 Study Recommendations:\n${result.data.recommendations
+              .slice(0, 3)
+              .map((rec: string, i: number) => `${i + 1}. ${rec}`)
+              .join('\n')}`,
             sender: 'ai' as const,
             timestamp: new Date(),
-            type: 'recommendation' as const
+            type: 'recommendation' as const,
           }
           setTimeout(() => {
-            setChatMessages(prev => [...prev, recommendationMessage])
+            setChatMessages((prev) => [...prev, recommendationMessage])
           }, 1000)
         }
       } else {
@@ -400,9 +433,9 @@ export function AIEducationDashboard() {
         text: "Sorry, I'm having trouble processing your question right now. Please try again in a moment.",
         sender: 'ai' as const,
         timestamp: new Date(),
-        type: 'text' as const
+        type: 'text' as const,
       }
-      setChatMessages(prev => [...prev, errorMessage])
+      setChatMessages((prev) => [...prev, errorMessage])
     } finally {
       setIsChatLoading(false)
     }
@@ -420,14 +453,18 @@ export function AIEducationDashboard() {
     try {
       console.log('🧪 Generating test with configuration:', testConfig)
 
-      // Show initial message
-      alert(`📝 Creating AI Test...\n\n• ${testConfig.totalQuestions} questions\n• ${testConfig.selectedTopics.length} topics selected\n• ${testConfig.difficultyDistribution.easy}% Easy, ${testConfig.difficultyDistribution.moderate}% Moderate, ${testConfig.difficultyDistribution.difficult}% Difficult\n\nGenerating your personalized NEET Biology test...`)
+      showToast(
+        'info',
+        'Creating AI Test',
+        `Generating ${testConfig.totalQuestions} questions across ${testConfig.selectedTopics.length} topics...`,
+        4000
+      )
 
       // Call the test generation API
       const response = await fetch('/api/ai/test-generation', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(testConfig)
+        body: JSON.stringify(testConfig),
       })
 
       const result = await response.json()
@@ -435,33 +472,36 @@ export function AIEducationDashboard() {
       if (result.success) {
         const generatedTest = result.data
 
-        alert(`✅ Test Generated Successfully!\n\n${generatedTest.title}\n\n📊 Test Details:\n• ${generatedTest.questions.length} questions generated\n• Estimated time: ${generatedTest.metadata.estimatedTime} minutes\n• Topics covered: ${generatedTest.metadata.topicCoverage.length}\n• Difficulty score: ${generatedTest.metadata.difficultyScore}/3.0\n• NEET alignment: ${generatedTest.metadata.neetAlignment}%\n\nYour personalized test is ready! Click OK to continue...`)
-
-        // Update activity feed (in a real app, this would update the global activity state)
-        console.log('New test generation activity:', {
-          id: Date.now().toString(),
-          type: 'assessment',
-          title: generatedTest.title,
-          description: `Generated ${generatedTest.questions.length}-question AI test`,
-          timestamp: new Date(),
-          success: true
-        })
+        showToast(
+          'success',
+          'Test Generated Successfully!',
+          `${generatedTest.title} - ${generatedTest.questions.length} questions ready!`,
+          6000
+        )
 
         // Update metrics
-        setMetrics(prev => ({
+        setMetrics((prev) => ({
           ...prev,
-          totalQuestions: prev.totalQuestions + generatedTest.questions.length
+          totalQuestions: prev.totalQuestions + generatedTest.questions.length,
         }))
 
-        // Store the generated test (in a real app, this would go to a database)
         console.log('Generated test stored:', generatedTest)
-
       } else {
-        alert(`❌ Test Generation Failed\n\nError: ${result.error || 'Unknown error occurred'}\n\nPlease try again with different settings.`)
+        showToast(
+          'error',
+          'Test Generation Failed',
+          result.error || 'Unknown error occurred. Please try again.',
+          5000
+        )
       }
     } catch (error) {
       console.error('Test generation error:', error)
-      alert('❌ Network Error\n\nFailed to generate test due to network issues.\nPlease check your connection and try again.')
+      showToast(
+        'error',
+        'Network Error',
+        'Failed to generate test. Please check your connection.',
+        5000
+      )
     } finally {
       setIsLoading(false)
     }
@@ -478,7 +518,27 @@ export function AIEducationDashboard() {
     assessment: 'from-green-500 to-emerald-500',
     testgen: 'from-indigo-500 to-purple-500',
     analytics: 'from-orange-500 to-red-500',
-    metrics: 'from-teal-500 to-cyan-500'
+    metrics: 'from-teal-500 to-cyan-500',
+  }
+
+  if (isInitialLoading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+        <header className="bg-white/80 backdrop-blur-md border-b border-white/20 sticky top-0 z-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex items-center justify-between h-16">
+              <div className="flex items-center space-x-2 animate-pulse">
+                <div className="w-10 h-10 bg-gray-300 rounded-xl"></div>
+                <div className="h-6 w-48 bg-gray-300 rounded"></div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <DashboardSkeleton />
+        </div>
+      </div>
+    )
   }
 
   return (
@@ -526,29 +586,90 @@ export function AIEducationDashboard() {
       </header>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Navigation Tabs */}
-        <div className="flex space-x-1 bg-white/50 backdrop-blur-sm p-1 rounded-2xl mb-8 border border-white/20">
-          {[
-            { id: 'overview', label: 'Overview', icon: BarChart3 },
-            { id: 'tutor', label: 'AI Tutor', icon: Brain },
-            { id: 'assessment', label: 'Assessment', icon: FileText },
-            { id: 'testgen', label: 'Test Generation', icon: Zap },
-            { id: 'analytics', label: 'Analytics', icon: TrendingUp },
-            { id: 'metrics', label: 'Live Metrics', icon: Activity }
-          ].map((tab) => (
+        {/* Navigation Tabs - Responsive */}
+        <div className="bg-white/50 backdrop-blur-sm p-1 rounded-2xl mb-8 border border-white/20">
+          <div className="hidden md:flex space-x-1">
+            {[
+              { id: 'overview', label: 'Overview', icon: BarChart3 },
+              { id: 'tutor', label: 'AI Tutor', icon: Brain },
+              { id: 'assessment', label: 'Assessment', icon: FileText },
+              { id: 'testgen', label: 'Test Generation', icon: Zap },
+              { id: 'analytics', label: 'Analytics', icon: TrendingUp },
+              { id: 'metrics', label: 'Live Metrics', icon: Activity },
+            ].map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id as any)}
+                className={`flex items-center space-x-2 px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
+                  activeTab === tab.id
+                    ? `bg-gradient-to-r ${tabColors[tab.id as keyof typeof tabColors]} text-white shadow-lg transform scale-105`
+                    : 'text-gray-600 hover:text-gray-800 hover:bg-white/50'
+                }`}
+                aria-label={`Switch to ${tab.label} tab`}
+                aria-current={activeTab === tab.id ? 'page' : undefined}
+              >
+                <tab.icon className="w-4 h-4" />
+                <span>{tab.label}</span>
+              </button>
+            ))}
+          </div>
+
+          {/* Mobile Tab Navigation */}
+          <div className="md:hidden">
             <button
-              key={tab.id}
-              onClick={() => setActiveTab(tab.id as any)}
-              className={`flex items-center space-x-2 px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
-                activeTab === tab.id
-                  ? `bg-gradient-to-r ${tabColors[tab.id as keyof typeof tabColors]} text-white shadow-lg transform scale-105`
-                  : 'text-gray-600 hover:text-gray-800 hover:bg-white/50'
-              }`}
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="w-full flex items-center justify-between px-4 py-3 rounded-xl text-gray-700 hover:bg-white/50"
+              aria-label="Toggle navigation menu"
+              aria-expanded={mobileMenuOpen}
             >
-              <tab.icon className="w-4 h-4" />
-              <span>{tab.label}</span>
+              <span className="font-medium flex items-center">
+                <Menu className="w-4 h-4 mr-2" />
+                {
+                  [
+                    { id: 'overview', label: 'Overview' },
+                    { id: 'tutor', label: 'AI Tutor' },
+                    { id: 'assessment', label: 'Assessment' },
+                    { id: 'testgen', label: 'Test Generation' },
+                    { id: 'analytics', label: 'Analytics' },
+                    { id: 'metrics', label: 'Live Metrics' },
+                  ].find((t) => t.id === activeTab)?.label
+                }
+              </span>
+              <ChevronRight
+                className={`w-5 h-5 transition-transform ${mobileMenuOpen ? 'rotate-90' : ''}`}
+              />
             </button>
-          ))}
+
+            {mobileMenuOpen && (
+              <div className="mt-2 space-y-1">
+                {[
+                  { id: 'overview', label: 'Overview', icon: BarChart3 },
+                  { id: 'tutor', label: 'AI Tutor', icon: Brain },
+                  { id: 'assessment', label: 'Assessment', icon: FileText },
+                  { id: 'testgen', label: 'Test Generation', icon: Zap },
+                  { id: 'analytics', label: 'Analytics', icon: TrendingUp },
+                  { id: 'metrics', label: 'Live Metrics', icon: Activity },
+                ].map((tab) => (
+                  <button
+                    key={tab.id}
+                    onClick={() => {
+                      setActiveTab(tab.id as any)
+                      setMobileMenuOpen(false)
+                    }}
+                    className={`w-full flex items-center space-x-3 px-4 py-3 rounded-xl font-medium transition-all ${
+                      activeTab === tab.id
+                        ? 'bg-blue-500 text-white shadow-md'
+                        : 'text-gray-600 hover:bg-white/50'
+                    }`}
+                    aria-label={`Switch to ${tab.label} tab`}
+                  >
+                    <tab.icon className="w-4 h-4" />
+                    <span>{tab.label}</span>
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
         </div>
 
         <AnimatePresence mode="wait">
@@ -570,7 +691,7 @@ export function AIEducationDashboard() {
                     change: '+12',
                     icon: Brain,
                     color: 'from-purple-500 to-pink-500',
-                    bgColor: 'from-purple-50 to-pink-50'
+                    bgColor: 'from-purple-50 to-pink-50',
                   },
                   {
                     title: 'Study Time',
@@ -578,7 +699,7 @@ export function AIEducationDashboard() {
                     change: '+8h',
                     icon: Clock,
                     color: 'from-blue-500 to-cyan-500',
-                    bgColor: 'from-blue-50 to-cyan-50'
+                    bgColor: 'from-blue-50 to-cyan-50',
                   },
                   {
                     title: 'Accuracy',
@@ -586,7 +707,7 @@ export function AIEducationDashboard() {
                     change: '+2.5%',
                     icon: Target,
                     color: 'from-green-500 to-emerald-500',
-                    bgColor: 'from-green-50 to-emerald-50'
+                    bgColor: 'from-green-50 to-emerald-50',
                   },
                   {
                     title: 'Progress',
@@ -594,8 +715,8 @@ export function AIEducationDashboard() {
                     change: '+5%',
                     icon: TrendingUp,
                     color: 'from-orange-500 to-red-500',
-                    bgColor: 'from-orange-50 to-red-50'
-                  }
+                    bgColor: 'from-orange-50 to-red-50',
+                  },
                 ].map((metric, index) => (
                   <motion.div
                     key={metric.title}
@@ -614,7 +735,9 @@ export function AIEducationDashboard() {
                           <span className="text-gray-500 ml-1">this week</span>
                         </div>
                       </div>
-                      <div className={`w-12 h-12 bg-gradient-to-r ${metric.color} rounded-xl flex items-center justify-center shadow-lg`}>
+                      <div
+                        className={`w-12 h-12 bg-gradient-to-r ${metric.color} rounded-xl flex items-center justify-center shadow-lg`}
+                      >
                         <metric.icon className="w-6 h-6 text-white" />
                       </div>
                     </div>
@@ -646,14 +769,14 @@ export function AIEducationDashboard() {
                         value: metrics.predictions.examScore,
                         max: 720,
                         color: 'purple',
-                        icon: GraduationCap
+                        icon: GraduationCap,
                       },
                       {
                         label: 'Exam Readiness',
                         value: metrics.predictions.readiness,
                         max: 100,
                         color: 'blue',
-                        icon: CheckCircle
+                        icon: CheckCircle,
                       },
                       {
                         label: 'Expected Rank',
@@ -661,51 +784,90 @@ export function AIEducationDashboard() {
                         max: 10000,
                         color: 'green',
                         icon: Award,
-                        isRank: true
-                      }
-                    ].map((prediction, index) => (
-                      <motion.div
-                        key={prediction.label}
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ delay: 0.2 + index * 0.1 }}
-                        className="bg-white/80 rounded-xl p-4 border border-white/30"
-                      >
-                        <div className="flex items-center justify-between mb-2">
-                          <prediction.icon className={`w-5 h-5 text-${prediction.color}-500`} />
-                          <span className="text-xs text-gray-500 font-medium uppercase tracking-wide">
-                            {prediction.isRank ? 'Lower is Better' : 'Target'}
-                          </span>
-                        </div>
-                        <p className="text-sm text-gray-600 mb-1">{prediction.label}</p>
-                        <p className="text-2xl font-bold text-gray-800">
-                          {prediction.isRank ? '#' : ''}{prediction.value}
-                          {!prediction.isRank && prediction.max > 100 ? `/${prediction.max}` : ''}
-                          {!prediction.isRank && prediction.max <= 100 ? '%' : ''}
-                        </p>
-                        {!prediction.isRank && (
-                          <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
-                            <div
-                              className={`bg-gradient-to-r from-${prediction.color}-400 to-${prediction.color}-600 h-2 rounded-full transition-all duration-500`}
-                              style={{ width: `${(prediction.value / prediction.max) * 100}%` }}
-                            ></div>
+                        isRank: true,
+                      },
+                    ].map((prediction, index) => {
+                      const iconColorClass =
+                        prediction.color === 'purple'
+                          ? 'text-purple-500'
+                          : prediction.color === 'blue'
+                            ? 'text-blue-500'
+                            : 'text-green-500'
+
+                      const gradientClass =
+                        prediction.color === 'purple'
+                          ? 'bg-gradient-to-r from-purple-400 to-purple-600'
+                          : prediction.color === 'blue'
+                            ? 'bg-gradient-to-r from-blue-400 to-blue-600'
+                            : 'bg-gradient-to-r from-green-400 to-green-600'
+
+                      return (
+                        <motion.div
+                          key={prediction.label}
+                          initial={{ opacity: 0, scale: 0.9 }}
+                          animate={{ opacity: 1, scale: 1 }}
+                          transition={{ delay: 0.2 + index * 0.1 }}
+                          className="bg-white/80 rounded-xl p-4 border border-white/30"
+                        >
+                          <div className="flex items-center justify-between mb-2">
+                            <prediction.icon className={`w-5 h-5 ${iconColorClass}`} />
+                            <span className="text-xs text-gray-500 font-medium uppercase tracking-wide">
+                              {prediction.isRank ? 'Lower is Better' : 'Target'}
+                            </span>
                           </div>
-                        )}
-                      </motion.div>
-                    ))}
+                          <p className="text-sm text-gray-600 mb-1">{prediction.label}</p>
+                          <p className="text-2xl font-bold text-gray-800">
+                            {prediction.isRank ? '#' : ''}
+                            {prediction.value}
+                            {!prediction.isRank && prediction.max > 100 ? `/${prediction.max}` : ''}
+                            {!prediction.isRank && prediction.max <= 100 ? '%' : ''}
+                          </p>
+                          {!prediction.isRank && (
+                            <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
+                              <div
+                                className={`${gradientClass} h-2 rounded-full transition-all duration-500`}
+                                style={{ width: `${(prediction.value / prediction.max) * 100}%` }}
+                              ></div>
+                            </div>
+                          )}
+                        </motion.div>
+                      )
+                    })}
                   </div>
 
                   {/* Quick Actions */}
                   <div className="mt-6 flex flex-wrap gap-3">
                     {[
-                      { label: 'Ask AI Tutor', icon: MessageCircle, color: 'blue' },
-                      { label: 'Take Practice Test', icon: FileText, color: 'green' },
-                      { label: 'Study Materials', icon: BookOpen, color: 'purple' },
-                      { label: 'Performance Analysis', icon: BarChart3, color: 'orange' }
+                      {
+                        label: 'Ask AI Tutor',
+                        icon: MessageCircle,
+                        colorClass: 'bg-gradient-to-r from-blue-500 to-blue-600',
+                        onClick: () => setActiveTab('tutor'),
+                      },
+                      {
+                        label: 'Take Practice Test',
+                        icon: FileText,
+                        colorClass: 'bg-gradient-to-r from-green-500 to-green-600',
+                        onClick: () => setActiveTab('testgen'),
+                      },
+                      {
+                        label: 'Study Materials',
+                        icon: BookOpen,
+                        colorClass: 'bg-gradient-to-r from-purple-500 to-purple-600',
+                        onClick: () => showToast('info', 'Study Materials', 'Coming soon!', 3000),
+                      },
+                      {
+                        label: 'Performance Analysis',
+                        icon: BarChart3,
+                        colorClass: 'bg-gradient-to-r from-orange-500 to-orange-600',
+                        onClick: () => setActiveTab('analytics'),
+                      },
                     ].map((action) => (
                       <button
                         key={action.label}
-                        className={`flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-${action.color}-500 to-${action.color}-600 text-white rounded-lg hover:shadow-lg transform hover:scale-105 transition-all duration-200 text-sm font-medium`}
+                        onClick={action.onClick}
+                        className={`flex items-center space-x-2 px-4 py-2 ${action.colorClass} text-white rounded-lg hover:shadow-lg transform hover:scale-105 transition-all duration-200 text-sm font-medium`}
+                        aria-label={action.label}
                       >
                         <action.icon className="w-4 h-4" />
                         <span>{action.label}</span>
@@ -738,21 +900,24 @@ export function AIEducationDashboard() {
                         transition={{ delay: 0.3 + index * 0.1 }}
                         className="flex items-start space-x-3 p-3 bg-white/60 rounded-lg border border-white/30 hover:shadow-md transition-shadow"
                       >
-                        <div className={`w-8 h-8 rounded-lg flex items-center justify-center ${
-                          activity.type === 'doubt' ? 'bg-purple-100 text-purple-600' :
-                          activity.type === 'assessment' ? 'bg-green-100 text-green-600' :
-                          activity.type === 'achievement' ? 'bg-yellow-100 text-yellow-600' :
-                          'bg-blue-100 text-blue-600'
-                        }`}>
+                        <div
+                          className={`w-8 h-8 rounded-lg flex items-center justify-center ${
+                            activity.type === 'doubt'
+                              ? 'bg-purple-100 text-purple-600'
+                              : activity.type === 'assessment'
+                                ? 'bg-green-100 text-green-600'
+                                : activity.type === 'achievement'
+                                  ? 'bg-yellow-100 text-yellow-600'
+                                  : 'bg-blue-100 text-blue-600'
+                          }`}
+                        >
                           {activity.icon}
                         </div>
                         <div className="flex-1 min-w-0">
                           <p className="text-sm font-medium text-gray-800 truncate">
                             {activity.title}
                           </p>
-                          <p className="text-xs text-gray-500 mt-1">
-                            {activity.description}
-                          </p>
+                          <p className="text-xs text-gray-500 mt-1">{activity.description}</p>
                           <p className="text-xs text-gray-400 mt-1">
                             {new Intl.RelativeTimeFormat().format(
                               Math.round((activity.timestamp.getTime() - Date.now()) / (1000 * 60)),
@@ -802,10 +967,10 @@ export function AIEducationDashboard() {
 
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                   {[
-                    { subject: 'Cell Biology', progress: 85, color: 'purple' },
-                    { subject: 'Genetics', progress: 72, color: 'blue' },
-                    { subject: 'Ecology', progress: 90, color: 'green' },
-                    { subject: 'Physiology', progress: 68, color: 'orange' }
+                    { subject: 'Cell Biology', progress: 85, colorClass: 'text-purple-500' },
+                    { subject: 'Genetics', progress: 72, colorClass: 'text-blue-500' },
+                    { subject: 'Ecology', progress: 90, colorClass: 'text-green-500' },
+                    { subject: 'Physiology', progress: 68, colorClass: 'text-orange-500' },
                   ].map((subject, index) => (
                     <motion.div
                       key={subject.subject}
@@ -834,7 +999,7 @@ export function AIEducationDashboard() {
                             fill="transparent"
                             strokeDasharray={`${2 * Math.PI * 40}`}
                             strokeDashoffset={`${2 * Math.PI * 40 * (1 - subject.progress / 100)}`}
-                            className={`text-${subject.color}-500 transition-all duration-1000`}
+                            className={`${subject.colorClass} transition-all duration-1000`}
                             strokeLinecap="round"
                           />
                         </svg>
@@ -887,13 +1052,17 @@ export function AIEducationDashboard() {
                   <FileText className="w-8 h-8 text-white" />
                 </div>
                 <h2 className="text-2xl font-bold text-gray-800 mb-2">Smart Assessment</h2>
-                <p className="text-gray-600 mb-8">AI-generated tests adapted to your learning level</p>
+                <p className="text-gray-600 mb-8">
+                  AI-generated tests adapted to your learning level
+                </p>
 
                 <button
                   onClick={(e) => {
                     e.preventDefault()
                     e.stopPropagation()
-                    console.log('Assessment tab Create Test button clicked - Generating real AI test')
+                    console.log(
+                      'Assessment tab Create Test button clicked - Generating real AI test'
+                    )
                     handleCreateTest()
                   }}
                   disabled={isLoading}
@@ -934,13 +1103,17 @@ export function AIEducationDashboard() {
                   <TrendingUp className="w-8 h-8 text-white" />
                 </div>
                 <h2 className="text-2xl font-bold text-gray-800 mb-2">Performance Analytics</h2>
-                <p className="text-gray-600 mb-8">Deep insights into your learning patterns and progress</p>
+                <p className="text-gray-600 mb-8">
+                  Deep insights into your learning patterns and progress
+                </p>
 
                 <button
                   onClick={(e) => {
                     e.preventDefault()
                     e.stopPropagation()
-                    console.log('Analytics View Analytics button clicked - Generating real AI analytics')
+                    console.log(
+                      'Analytics View Analytics button clicked - Generating real AI analytics'
+                    )
                     handleViewAnalytics()
                   }}
                   disabled={isLoading}
@@ -968,7 +1141,9 @@ export function AIEducationDashboard() {
                   <Activity className="w-6 h-6 mr-3 text-teal-500" />
                   Real-Time Performance Metrics
                 </h2>
-                <p className="text-gray-600">Live monitoring of system performance, user activity, and learning analytics</p>
+                <p className="text-gray-600">
+                  Live monitoring of system performance, user activity, and learning analytics
+                </p>
               </div>
 
               <RealTimeMetrics />
@@ -984,10 +1159,7 @@ export function AIEducationDashboard() {
         />
 
         {/* View Analytics Interface */}
-        <ViewAnalytics
-          isOpen={showAnalytics}
-          onClose={() => setShowAnalytics(false)}
-        />
+        <ViewAnalytics isOpen={showAnalytics} onClose={() => setShowAnalytics(false)} />
       </div>
     </div>
   )
