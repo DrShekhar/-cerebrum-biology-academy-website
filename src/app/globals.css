@@ -12,110 +12,129 @@
   /* ========================================
      CEREBRUM BIOLOGY ACADEMY - COLOR SYSTEM
      Updated: January 2025
-     Purpose: Cohesive, accessible, medical/academic brand
+     Harvard + Silicon Valley Design System
+     Purpose: Professional, accessible, medical/academic excellence
      ======================================== */
 
-  /* PRIMARY BRAND - Royal Blue (Medical/Academic Trust) */
-  --cerebrum-royal-blue-900: #1e3a8a; /* Deep headings */
-  --cerebrum-royal-blue-700: #1e40af; /* Primary brand */
-  --cerebrum-royal-blue-600: #2563eb; /* Interactive */
-  --cerebrum-royal-blue-500: #3b82f6; /* Hover states */
-  --cerebrum-royal-blue-100: #dbeafe; /* Light backgrounds */
-  --cerebrum-royal-blue-50: #eff6ff; /* Subtle backgrounds */
+  /* PRIMARY - Medical Navy (Trust, Authority, Professionalism) */
+  --cerebrum-navy-950: #0a1628;
+  --cerebrum-navy-900: #0f172a;
+  --cerebrum-navy-800: #1e293b;
+  --cerebrum-navy-700: #334155;
+  --cerebrum-navy-600: #475569;
+  --cerebrum-navy-500: #64748b;
+  --cerebrum-navy-400: #94a3b8;
+  --cerebrum-navy-300: #cbd5e1;
+  --cerebrum-navy-200: #e2e8f0;
+  --cerebrum-navy-100: #f1f5f9;
+  --cerebrum-navy-50: #f8fafc;
 
-  /* ACCENT - Medical Green (Success, Growth, Action) */
-  --cerebrum-medical-green-700: #047857; /* Dark text */
-  --cerebrum-medical-green-600: #059669; /* Primary success */
-  --cerebrum-medical-green-500: #10b981; /* CTA buttons */
-  --cerebrum-medical-green-100: #d1fae5; /* Light backgrounds */
-  --cerebrum-medical-green-50: #ecfdf5; /* Subtle backgrounds */
+  /* ACCENT - Medical Teal (Action, Engagement, Success) */
+  --cerebrum-teal-900: #0f4c59;
+  --cerebrum-teal-800: #115e67;
+  --cerebrum-teal-700: #0f766e;
+  --cerebrum-teal-600: #0d9488;
+  --cerebrum-teal-500: #14b8a6;
+  --cerebrum-teal-400: #2dd4bf;
+  --cerebrum-teal-300: #5eead4;
+  --cerebrum-teal-200: #99f6e4;
+  --cerebrum-teal-100: #ccfbf1;
+  --cerebrum-teal-50: #f0fdfa;
 
-  /* ACCENT - Achievement Gold (Premium, Excellence) */
-  --cerebrum-achievement-gold-700: #d97706; /* Text */
-  --cerebrum-achievement-gold-600: #f59e0b; /* Badges */
-  --cerebrum-achievement-gold-100: #fef3c7; /* Backgrounds */
-  --cerebrum-achievement-gold-50: #fffbeb; /* Subtle backgrounds */
+  /* ACHIEVEMENT - Academic Gold (Excellence, Premium, Recognition) */
+  --cerebrum-gold-900: #78350f;
+  --cerebrum-gold-800: #92400e;
+  --cerebrum-gold-700: #b45309;
+  --cerebrum-gold-600: #d97706;
+  --cerebrum-gold-500: #f59e0b;
+  --cerebrum-gold-400: #fbbf24;
+  --cerebrum-gold-300: #fcd34d;
+  --cerebrum-gold-200: #fde68a;
+  --cerebrum-gold-100: #fef3c7;
+  --cerebrum-gold-50: #fffbeb;
 
-  /* ACCENT - Alert Orange (Urgency, Limited Offers) */
-  --cerebrum-alert-orange-700: #c2410c; /* Text */
-  --cerebrum-alert-orange-600: #ea580c; /* Buttons */
-  --cerebrum-alert-orange-100: #ffedd5; /* Backgrounds */
-  --cerebrum-alert-orange-50: #fff7ed; /* Subtle backgrounds */
-
-  /* TEXT HIERARCHY (Neutral Slate) */
-  --cerebrum-text-primary: #0f172a; /* Headings (Navy 900) - WCAG AAA */
-  --cerebrum-text-secondary: #334155; /* Body text (Slate 700) - WCAG AAA */
-  --cerebrum-text-tertiary: #64748b; /* Muted text (Slate 500) - WCAG AA */
-  --cerebrum-text-light: #94a3b8; /* Disabled/placeholder (Slate 400) */
+  /* TEXT HIERARCHY (Navy Scale) */
+  --cerebrum-text-primary: #0a1628; /* Headings (Navy 950) - WCAG AAA */
+  --cerebrum-text-secondary: #334155; /* Body text (Navy 700) - WCAG AAA */
+  --cerebrum-text-tertiary: #64748b; /* Muted text (Navy 500) - WCAG AA */
+  --cerebrum-text-light: #94a3b8; /* Disabled/placeholder (Navy 400) */
 
   /* BACKGROUNDS */
   --cerebrum-bg-primary: #ffffff; /* White */
-  --cerebrum-bg-secondary: #f8fafc; /* Slate 50 - sections */
-  --cerebrum-bg-accent: #eff6ff; /* Blue 50 - highlighted */
-  --cerebrum-bg-dark: #0f172a; /* Dark footer/header */
+  --cerebrum-bg-secondary: #f8fafc; /* Navy 50 - sections */
+  --cerebrum-bg-accent: #f0fdfa; /* Teal 50 - highlighted areas */
+  --cerebrum-bg-dark: #0f172a; /* Navy 900 - dark footer/header */
 
   /* BORDERS */
-  --cerebrum-border-light: #e2e8f0; /* Slate 200 */
-  --cerebrum-border-medium: #cbd5e1; /* Slate 300 */
-  --cerebrum-border-dark: #94a3b8; /* Slate 400 */
+  --cerebrum-border-light: #e2e8f0; /* Navy 200 */
+  --cerebrum-border-medium: #cbd5e1; /* Navy 300 */
+  --cerebrum-border-dark: #94a3b8; /* Navy 400 */
 
-  /* LEGACY COMPATIBILITY (map old vars to new system) */
-  --primary-blue: var(--cerebrum-royal-blue-700);
-  --primary-blue-50: var(--cerebrum-royal-blue-50);
-  --primary-blue-100: var(--cerebrum-royal-blue-100);
-  --primary-blue-600: var(--cerebrum-royal-blue-600);
-  --primary-blue-700: var(--cerebrum-royal-blue-700);
-  --primary-blue-900: var(--cerebrum-royal-blue-900);
+  /* LEGACY COMPATIBILITY (map old vars to new navy/teal/gold system) */
+  --primary-blue: var(--cerebrum-navy-900);
+  --primary-blue-50: var(--cerebrum-navy-50);
+  --primary-blue-100: var(--cerebrum-navy-100);
+  --primary-blue-600: var(--cerebrum-navy-600);
+  --primary-blue-700: var(--cerebrum-navy-700);
+  --primary-blue-900: var(--cerebrum-navy-900);
 
-  --accent-emerald: var(--cerebrum-medical-green-600);
-  --accent-emerald-50: var(--cerebrum-medical-green-50);
-  --accent-emerald-100: var(--cerebrum-medical-green-100);
-  --accent-emerald-600: var(--cerebrum-medical-green-500);
-  --accent-emerald-700: var(--cerebrum-medical-green-700);
+  --accent-emerald: var(--cerebrum-teal-600);
+  --accent-emerald-50: var(--cerebrum-teal-50);
+  --accent-emerald-100: var(--cerebrum-teal-100);
+  --accent-emerald-600: var(--cerebrum-teal-600);
+  --accent-emerald-700: var(--cerebrum-teal-700);
 
-  --premium-gold: var(--cerebrum-achievement-gold-700);
-  --premium-gold-50: var(--cerebrum-achievement-gold-50);
-  --premium-gold-100: var(--cerebrum-achievement-gold-100);
-  --premium-gold-600: var(--cerebrum-achievement-gold-600);
-  --premium-gold-700: var(--cerebrum-achievement-gold-700);
+  --premium-gold: var(--cerebrum-gold-700);
+  --premium-gold-50: var(--cerebrum-gold-50);
+  --premium-gold-100: var(--cerebrum-gold-100);
+  --premium-gold-600: var(--cerebrum-gold-600);
+  --premium-gold-700: var(--cerebrum-gold-700);
 
-  --trust-navy: var(--cerebrum-text-primary);
-  --trust-navy-50: var(--cerebrum-bg-secondary);
-  --trust-navy-700: var(--cerebrum-text-secondary);
-  --trust-navy-800: var(--cerebrum-text-primary);
-  --trust-navy-900: var(--cerebrum-text-primary);
+  --trust-navy: var(--cerebrum-navy-900);
+  --trust-navy-50: var(--cerebrum-navy-50);
+  --trust-navy-700: var(--cerebrum-navy-700);
+  --trust-navy-800: var(--cerebrum-navy-800);
+  --trust-navy-900: var(--cerebrum-navy-900);
 
-  /* ENHANCED DESIGN TOKENS */
-  --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-premium: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  --shadow-glow: 0 0 20px rgba(30, 64, 175, 0.3);
+  /* ENHANCED SHADOW SYSTEM */
+  --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
 
+  /* Legacy shadow support */
+  --shadow-soft: var(--shadow-md);
+  --shadow-premium: var(--shadow-xl);
+  --shadow-glow: 0 0 20px rgba(15, 23, 42, 0.2);
+
+  /* BORDER RADIUS */
   --radius-sm: 0.375rem;
   --radius-md: 0.5rem;
   --radius-lg: 0.75rem;
   --radius-xl: 1rem;
   --radius-2xl: 1.5rem;
 
-  /* OPTIMIZED GRADIENTS (Cohesive Blue-based) */
+  /* MONOCHROMATIC GRADIENTS (Navy-based) */
   --gradient-primary: linear-gradient(
     135deg,
-    var(--cerebrum-royal-blue-700) 0%,
-    var(--cerebrum-royal-blue-500) 100%
+    var(--cerebrum-navy-800) 0%,
+    var(--cerebrum-navy-600) 100%
   );
   --gradient-success: linear-gradient(
     135deg,
-    var(--cerebrum-medical-green-600) 0%,
-    var(--cerebrum-medical-green-500) 100%
+    var(--cerebrum-teal-700) 0%,
+    var(--cerebrum-teal-500) 100%
   );
   --gradient-premium: linear-gradient(
     135deg,
-    var(--cerebrum-achievement-gold-700) 0%,
-    var(--cerebrum-achievement-gold-600) 100%
+    var(--cerebrum-gold-700) 0%,
+    var(--cerebrum-gold-500) 100%
   );
   --gradient-hero: linear-gradient(
-    135deg,
-    var(--cerebrum-royal-blue-50) 0%,
-    var(--cerebrum-royal-blue-100) 100%
+    180deg,
+    var(--cerebrum-navy-50) 0%,
+    var(--cerebrum-navy-100) 100%
   );
 }
 
@@ -125,40 +144,68 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 
-  /* Premium Colors */
-  --color-primary: var(--primary-blue);
-  --color-primary-50: var(--primary-blue-50);
-  --color-primary-100: var(--primary-blue-100);
-  --color-primary-200: var(--primary-blue-200);
-  --color-primary-600: var(--primary-blue-600);
-  --color-primary-700: var(--primary-blue-700);
-  --color-primary-900: var(--primary-blue-900);
+  /* Navy Color System */
+  --color-navy: var(--cerebrum-navy-900);
+  --color-navy-50: var(--cerebrum-navy-50);
+  --color-navy-100: var(--cerebrum-navy-100);
+  --color-navy-200: var(--cerebrum-navy-200);
+  --color-navy-300: var(--cerebrum-navy-300);
+  --color-navy-400: var(--cerebrum-navy-400);
+  --color-navy-500: var(--cerebrum-navy-500);
+  --color-navy-600: var(--cerebrum-navy-600);
+  --color-navy-700: var(--cerebrum-navy-700);
+  --color-navy-800: var(--cerebrum-navy-800);
+  --color-navy-900: var(--cerebrum-navy-900);
+  --color-navy-950: var(--cerebrum-navy-950);
 
-  --color-emerald: var(--accent-emerald);
-  --color-emerald-50: var(--accent-emerald-50);
-  --color-emerald-100: var(--accent-emerald-100);
-  --color-emerald-200: var(--accent-emerald-200);
-  --color-emerald-600: var(--accent-emerald-600);
-  --color-emerald-700: var(--accent-emerald-700);
+  /* Teal Color System */
+  --color-teal: var(--cerebrum-teal-600);
+  --color-teal-50: var(--cerebrum-teal-50);
+  --color-teal-100: var(--cerebrum-teal-100);
+  --color-teal-200: var(--cerebrum-teal-200);
+  --color-teal-300: var(--cerebrum-teal-300);
+  --color-teal-400: var(--cerebrum-teal-400);
+  --color-teal-500: var(--cerebrum-teal-500);
+  --color-teal-600: var(--cerebrum-teal-600);
+  --color-teal-700: var(--cerebrum-teal-700);
+  --color-teal-800: var(--cerebrum-teal-800);
+  --color-teal-900: var(--cerebrum-teal-900);
 
-  --color-gold: var(--premium-gold);
-  --color-gold-50: var(--premium-gold-50);
-  --color-gold-100: var(--premium-gold-100);
-  --color-gold-200: var(--premium-gold-200);
-  --color-gold-600: var(--premium-gold-600);
-  --color-gold-700: var(--premium-gold-700);
+  /* Gold Color System */
+  --color-gold: var(--cerebrum-gold-600);
+  --color-gold-50: var(--cerebrum-gold-50);
+  --color-gold-100: var(--cerebrum-gold-100);
+  --color-gold-200: var(--cerebrum-gold-200);
+  --color-gold-300: var(--cerebrum-gold-300);
+  --color-gold-400: var(--cerebrum-gold-400);
+  --color-gold-500: var(--cerebrum-gold-500);
+  --color-gold-600: var(--cerebrum-gold-600);
+  --color-gold-700: var(--cerebrum-gold-700);
+  --color-gold-800: var(--cerebrum-gold-800);
+  --color-gold-900: var(--cerebrum-gold-900);
 
-  --color-navy: var(--trust-navy);
-  --color-navy-50: var(--trust-navy-50);
-  --color-navy-100: var(--trust-navy-100);
-  --color-navy-200: var(--trust-navy-200);
-  --color-navy-700: var(--trust-navy-700);
-  --color-navy-800: var(--trust-navy-800);
-  --color-navy-900: var(--trust-navy-900);
+  /* Legacy Compatibility Mappings */
+  --color-primary: var(--cerebrum-navy-900);
+  --color-primary-50: var(--cerebrum-navy-50);
+  --color-primary-100: var(--cerebrum-navy-100);
+  --color-primary-600: var(--cerebrum-navy-600);
+  --color-primary-700: var(--cerebrum-navy-700);
+  --color-primary-900: var(--cerebrum-navy-900);
+
+  --color-emerald: var(--cerebrum-teal-600);
+  --color-emerald-50: var(--cerebrum-teal-50);
+  --color-emerald-100: var(--cerebrum-teal-100);
+  --color-emerald-600: var(--cerebrum-teal-600);
+  --color-emerald-700: var(--cerebrum-teal-700);
 
   /* Enhanced Shadows */
-  --shadow-soft: var(--shadow-soft);
-  --shadow-premium: var(--shadow-premium);
+  --shadow-xs: var(--shadow-xs);
+  --shadow-sm: var(--shadow-sm);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+  --shadow-xl: var(--shadow-xl);
+  --shadow-soft: var(--shadow-md);
+  --shadow-premium: var(--shadow-xl);
   --shadow-glow: var(--shadow-glow);
 
   /* Custom Radius */

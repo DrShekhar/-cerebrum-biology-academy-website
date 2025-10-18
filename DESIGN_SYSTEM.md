@@ -1,683 +1,490 @@
-# 🎨 CEREBRUM BIOLOGY ACADEMY - HARVARD-LEVEL DESIGN SYSTEM
+# Cerebrum Biology Academy - Design System
 
-## 🎯 Design Philosophy
+## Overview
 
-Our design system embodies **academic excellence**, **scientific rigor**, and **premium educational experience** that rivals top-tier institutions like Harvard, MIT, and Stanford. Every component is crafted to convey authority, trustworthiness, and intellectual sophistication while maintaining optimal user experience for medical entrance preparation.
+This design system implements a Harvard + Silicon Valley inspired visual language that combines:
 
-## 📐 Core Design Principles
+- **Medical professionalism** (Navy palette)
+- **Academic excellence** (Gold accents for achievements)
+- **Modern engagement** (Teal for CTAs and interactive elements)
 
-### 1. **Academic Credibility**
+**Updated:** January 2025
+**Version:** 2.0
 
-- Research-backed content presentation
-- Citation-ready typography
-- Professional color schemes
-- Institutional-grade layouts
+---
 
-### 2. **Scientific Precision**
+## Color Palette
 
-- Accurate biological visualizations
-- Evidence-based design decisions
-- Meticulous attention to detail
-- Data-driven user experience
+### Primary - Medical Navy
 
-### 3. **Premium Quality**
-
-- Sophisticated animations
-- High-end interactive elements
-- Polished visual hierarchy
-- Luxurious spacing and typography
-
-### 4. **Educational Excellence**
-
-- Clear information hierarchy
-- Optimal reading patterns
-- Accessibility compliance
-- Learning-focused interactions
-
-## 🎨 Color Palette (Updated from Live Website Analysis)
-
-### Primary Academic Colors
+The navy scale serves as our foundation for professionalism, trust, and authority. Use navy for typography, backgrounds, and structural elements.
 
 ```css
-/* Primary Brand Blues - Core Identity */
---cerebrum-primary: #4f46e5; /* Main brand blue from screenshots */
---cerebrum-blue: #5b6df6; /* Interactive elements, CTAs */
---cerebrum-dark-blue: #3730a3; /* Headers, emphasis */
---cerebrum-light-blue: #e0e7ff; /* Light backgrounds, cards */
-
-/* Secondary Brand Colors */
---cerebrum-purple: #7c3aed; /* Secondary brand color */
---cerebrum-indigo: #6366f1; /* Supporting elements */
-
-/* Success and Achievement System */
---success-green: #10b981; /* Checkmarks, success states */
---achievement-gold: #f59e0b; /* Star ratings, achievements */
---warning-orange: #f97316; /* Attention, warnings */
---error-red: #ef4444; /* Errors, urgent actions */
-
-/* Functional Colors */
---text-primary: #1f2937; /* Main text color */
---text-secondary: #6b7280; /* Supporting text */
---text-muted: #9ca3af; /* Subtle text */
---background-white: #ffffff; /* Clean backgrounds */
---background-gray: #f9fafb; /* Section backgrounds */
---border-gray: #e5e7eb; /* Subtle borders */
-
-/* Gradient Combinations (from screenshots) */
---gradient-primary: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
---gradient-secondary: linear-gradient(135deg, #10b981 0%, #059669 100%);
---gradient-card: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+--cerebrum-navy-950: #0a1628 /* Deepest text, maximum contrast */ --cerebrum-navy-900: #0f172a
+  /* Primary headings, dark backgrounds */ --cerebrum-navy-800: #1e293b
+  /* Subheadings, emphasis text */ --cerebrum-navy-700: #334155 /* Body text, secondary headings */
+  --cerebrum-navy-600: #475569 /* Secondary text */ --cerebrum-navy-500: #64748b
+  /* Muted text, placeholders */ --cerebrum-navy-400: #94a3b8 /* Disabled states, subtle text */
+  --cerebrum-navy-300: #cbd5e1 /* Borders, dividers */ --cerebrum-navy-200: #e2e8f0
+  /* Light borders, subtle backgrounds */ --cerebrum-navy-100: #f1f5f9
+  /* Card backgrounds, sections */ --cerebrum-navy-50: #f8fafc
+  /* Page backgrounds, subtle highlights */;
 ```
 
-### Color Usage Guidelines
+**Usage Guidelines:**
 
-- **Blue palette**: Primary branding, trust elements, CTAs
-- **Green palette**: Success states, achievements, positive feedback
-- **Gold/Yellow**: Highlights, awards, special recognition
-- **Grays**: Text hierarchy, subtle backgrounds
-- **Red accents**: Urgent actions, important notices (sparingly)
+- **900-950:** Primary headings, footer/header backgrounds
+- **700-800:** Body text, subheadings (WCAG AAA compliant on white)
+- **500-600:** Secondary text, muted content (WCAG AA compliant)
+- **300-400:** Borders, disabled states, icons
+- **50-200:** Backgrounds, cards, sections
 
-## ✍️ Typography System
+### Accent - Medical Teal
 
-### Hierarchy Levels
+Teal represents action, engagement, and success. Use sparingly for CTAs, hover states, and interactive elements.
 
 ```css
-/* Academic Headlines */
-h1: 60px/72px (mobile: 48px/56px) - Hero statements
-h2: 48px/56px (mobile: 36px/44px) - Section headers
-h3: 36px/44px (mobile: 28px/36px) - Subsections
-h4: 28px/36px (mobile: 24px/32px) - Card titles
-h5: 24px/32px (mobile: 20px/28px) - Component headers
-h6: 20px/28px (mobile: 18px/26px) - Small headers
+--cerebrum-teal-900: #0f4c59 /* Dark text on light teal */ --cerebrum-teal-800: #115e67
+  /* Teal text variants */ --cerebrum-teal-700: #0f766e /* Primary teal text */
+  --cerebrum-teal-600: #0d9488 /* Main CTA buttons */ --cerebrum-teal-500: #14b8a6
+  /* Hover states, active elements */ --cerebrum-teal-400: #2dd4bf /* Bright accents */
+  --cerebrum-teal-300: #5eead4 /* Light accents */ --cerebrum-teal-200: #99f6e4
+  /* Very light backgrounds */ --cerebrum-teal-100: #ccfbf1 /* Subtle highlights */
+  --cerebrum-teal-50: #f0fdfa /* Background tints */;
+```
+
+**Usage Guidelines:**
+
+- **600-700:** Primary CTA buttons, links, active states
+- **400-500:** Hover states, progress indicators
+- **50-300:** Highlights, success messages, light backgrounds
+- **DO NOT** overuse - teal should be intentional and purposeful
+
+### Achievement - Academic Gold
+
+Gold signifies excellence, premium features, and achievements. Reserve for badges, awards, and premium indicators.
+
+```css
+--cerebrum-gold-900: #78350f /* Dark gold text */ --cerebrum-gold-800: #92400e
+  /* Gold text variants */ --cerebrum-gold-700: #b45309 /* Primary gold text */
+  --cerebrum-gold-600: #d97706 /* Main gold accents */ --cerebrum-gold-500: #f59e0b
+  /* Bright gold */ --cerebrum-gold-400: #fbbf24 /* Achievement highlights */
+  --cerebrum-gold-300: #fcd34d /* Light gold accents */ --cerebrum-gold-200: #fde68a
+  /* Very light gold */ --cerebrum-gold-100: #fef3c7 /* Gold backgrounds */
+  --cerebrum-gold-50: #fffbeb /* Subtle gold tint */;
+```
+
+**Usage Guidelines:**
+
+- **600-700:** Achievement badges, premium indicators, award icons
+- **400-500:** Gold buttons (sparingly), featured content
+- **50-300:** Premium card backgrounds, achievement highlights
+- **ONLY** use for: Top performers, premium features, awards, special recognition
+
+---
+
+## When to Use Each Color
+
+### Medical Navy (Primary)
+
+- ✅ All typography (headings, body text, captions)
+- ✅ Navigation bars, footers, headers
+- ✅ Card structures, containers
+- ✅ Borders, dividers
+- ✅ Icon default states
+- ✅ Background layers
+
+### Medical Teal (Accent)
+
+- ✅ Primary CTA buttons ("Enroll Now", "Start Learning")
+- ✅ Links and hyperlinks
+- ✅ Active navigation states
+- ✅ Form focus states
+- ✅ Success messages
+- ✅ Progress indicators
+- ❌ Large background areas
+- ❌ Body text
+- ❌ Decorative elements without purpose
+
+### Academic Gold (Achievement)
+
+- ✅ Top student badges
+- ✅ Achievement indicators (e.g., "94.2% NEET Success Rate")
+- ✅ Premium course indicators
+- ✅ Award and recognition icons
+- ✅ Featured/spotlight content (minimal use)
+- ❌ Regular buttons
+- ❌ Standard text
+- ❌ Common UI elements
+- ❌ Frequent/repeating elements
+
+---
+
+## Approved Gradients
+
+All gradients should be **monochromatic** (single color family) for visual cohesion.
+
+### Primary Gradient (Navy)
+
+```css
+background: linear-gradient(135deg, #1e293b 0%, #475569 100%);
+```
+
+**Use for:** Button hover states, dark hero sections, premium card headers
+
+### Success Gradient (Teal)
+
+```css
+background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%);
+```
+
+**Use for:** CTA buttons, success states, progress completion
+
+### Premium Gradient (Gold)
+
+```css
+background: linear-gradient(135deg, #b45309 0%, #f59e0b 100%);
+```
+
+**Use for:** Achievement badges, premium indicators, special recognition elements
+
+### Hero Gradient (Light Navy)
+
+```css
+background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+```
+
+**Use for:** Hero section backgrounds, large page sections
+
+**RULES:**
+
+- ❌ NO multi-color gradients (e.g., navy-to-teal)
+- ❌ NO rainbow gradients
+- ❌ NO more than 2 stops per gradient
+- ✅ Keep angles consistent: 135deg (diagonal) or 180deg (vertical)
+
+---
+
+## Shadow System
+
+Consistent shadow hierarchy creates depth and visual hierarchy.
+
+```css
+--shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+--shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+--shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+--shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+--shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+```
+
+### Usage Guidelines
+
+| Shadow | Usage                            | Example                         |
+| ------ | -------------------------------- | ------------------------------- |
+| `xs`   | Subtle borders, minimal depth    | Input fields, text boxes        |
+| `sm`   | Small cards, buttons             | Notification cards, chips       |
+| `md`   | Standard cards, dropdowns        | Course cards, info panels       |
+| `lg`   | Modal dialogs, raised sections   | Pop-up modals, featured cards   |
+| `xl`   | Hero elements, sticky navigation | Main hero section, floating nav |
+
+**Legacy Support:**
+
+- `--shadow-soft` maps to `--shadow-md`
+- `--shadow-premium` maps to `--shadow-xl`
+
+---
+
+## Border Radius Standards
+
+Consistent border radius creates visual harmony.
+
+```css
+--radius-sm: 0.375rem /* 6px - Small elements */ --radius-md: 0.5rem /* 8px - Standard elements */
+  --radius-lg: 0.75rem /* 12px - Cards, buttons */ --radius-xl: 1rem /* 16px - Large cards */
+  --radius-2xl: 1.5rem /* 24px - Hero sections, modals */;
+```
+
+### Usage Guidelines
+
+- **sm (6px):** Badges, tags, small chips
+- **md (8px):** Input fields, small buttons
+- **lg (12px):** Standard buttons, small cards
+- **xl (16px):** Medium/large cards, dropdowns
+- **2xl (24px):** Hero cards, modal dialogs, major sections
+
+---
+
+## Typography Hierarchy
+
+Using the navy scale for text ensures readability and hierarchy.
+
+```css
+/* Headings */
+h1 {
+  color: var(--cerebrum-navy-950);
+} /* Largest headings */
+h2 {
+  color: var(--cerebrum-navy-900);
+} /* Section headings */
+h3 {
+  color: var(--cerebrum-navy-800);
+} /* Subsection headings */
 
 /* Body Text */
-Large: 20px/32px - Hero descriptions, important content
-Medium: 16px/28px - Standard body text
-Small: 14px/24px - Supporting text, captions
+body {
+  color: var(--cerebrum-navy-700);
+} /* Main body text */
+p.secondary {
+  color: var(--cerebrum-navy-600);
+} /* Secondary text */
+p.muted {
+  color: var(--cerebrum-navy-500);
+} /* Muted/helper text */
+
+/* Interactive */
+a {
+  color: var(--cerebrum-teal-600);
+} /* Links */
+a:hover {
+  color: var(--cerebrum-teal-700);
+} /* Link hover */
 ```
 
-### Font Weights
+**WCAG Compliance:**
 
-- **Bold (700)**: Headlines, emphasis, CTAs
-- **Semibold (600)**: Subheadings, important text
-- **Medium (500)**: Body text, navigation
-- **Regular (400)**: Standard text
+- Navy 950-700: **AAA** on white backgrounds
+- Navy 600-500: **AA** on white backgrounds
+- Always test color contrast for accessibility
 
-### Typography Rules
+---
 
-1. **Line spacing**: 1.6x font size for optimal readability
-2. **Tracking**: -0.025em for headlines, 0 for body text
-3. **Max width**: 65 characters per line for body text
-4. **Contrast**: Minimum 4.5:1 ratio for accessibility
+## Component Color Patterns
 
-## 📦 Component Library (Updated from Website Analysis)
+### Buttons
 
-### 1. **Hero Section Patterns**
-
-```typescript
-// Mission & Vision Hero (Screenshot 1)
-<HeroSection variant="mission">
-  // Two-column layout with blue accent cards
-  // Clean typography with research-backed tagline
-  // Minimal background with focused content
-</HeroSection>
-
-// Video Lecture Hero (Screenshots 4, 15)
-<HeroSection variant="video-centric">
-  // Large stats display (200+ videos, 100+ hours, 50K+ views)
-  // Purple accent with "Complete Video Lecture Series" badge
-  // Clear value proposition with statistics
-</HeroSection>
-```
-
-### 2. **Card Design Patterns**
-
-```typescript
-// Faculty Cards (Screenshot 5)
-<FacultyCard>
-  // Clean white background with subtle shadows
-  // Blue accent headers for specialization
-  // Tag system for expertise areas
-  // Star ratings with gold color (#F59E0B)
-  // Student testimonials with green quotes
-</FacultyCard>
-
-// Value Proposition Cards (Screenshots 8, 9)
-<FeatureCard variant="numbered">
-  // Large blue circular numbers (01, 02, 03, 04)
-  // Clean white background
-  // Green checkmarks for feature lists
-  // Structured content hierarchy
-</FeatureCard>
-
-// Course Comparison Cards (Screenshot 16)
-<ComparisonCard>
-  // Three-tier layout (Pinnacle, Ascent, Pursuit)
-  // Color-coded headers (purple, blue, green)
-  // Feature comparison with checkmarks
-  // Clear pricing and CTA placement
-</ComparisonCard>
-```
-
-### 3. **Filter and Navigation Components**
-
-```typescript
-// Category Filters (Screenshot 2)
-<FilterTabs>
-  // Pill-style buttons with blue selection
-  // "All Stories (8)", "Top Rankers (3)" pattern
-  // Clean spacing and typography
-</FilterTabs>
-
-// Content Type Filters (Screenshot 2)
-<ContentTypeFilter>
-  // Icon + text combination
-  // Purple selection state
-  // Grid layout for options
-</ContentTypeFilter>
-```
-
-### 4. **Statistics and Metrics Display**
-
-```typescript
-// Success Metrics (Screenshots 10, 13)
-<StatsGrid variant="four-column">
-  // Large blue numbers (50+, 20+, 15+, 98%)
-  // Descriptive labels below
-  // Clean spacing with gray backgrounds
-</StatsGrid>
-
-// CBSE Performance Stats (Screenshot 11)
-<StatsGrid variant="horizontal">
-  // Large percentage displays (95%, 90%, 85%)
-  // Achievement descriptions
-  // Blue accent colors
-</StatsGrid>
-```
-
-### 3. **Typography Components**
-
-```typescript
-// Semantic typography with built-in animations
-<AcademicHeadline level={1-6} variant="hero|section|research" />
-<AcademicParagraph size="small|medium|large" />
-<AcademicQuote variant="default|testimonial|research" />
-<AcademicList variant="bulleted|numbered|checkmark|research" />
-<AcademicEmphasis variant="highlight|stat|achievement" />
-```
-
-### 4. **Interactive Elements**
-
-```typescript
-// Advanced animations and interactions
-<BiologyConceptExplorer />     // 3D concept visualization
-<InteractiveQuiz />            // Adaptive assessment
-<DNAHelixAnimation />          // Molecular animations
-<CellDivisionAnimation />      // Process visualization
-```
-
-## 🎭 Animation Standards
-
-### Timing Functions
+**Primary CTA (Teal)**
 
 ```css
-/* Harvard-style easing curves */
---ease-academic: cubic-bezier(0.25, 0.46, 0.45, 0.94);
---ease-premium: cubic-bezier(0.16, 1, 0.3, 1);
---ease-gentle: cubic-bezier(0.4, 0, 0.2, 1);
+background: var(--cerebrum-teal-600);
+color: white;
 ```
-
-### Duration Guidelines
-
-- **Micro-interactions**: 200-300ms
-- **Component transitions**: 400-600ms
-- **Page transitions**: 600-800ms
-- **Complex animations**: 1-3 seconds
-
-### Animation Principles
-
-1. **Purpose-driven**: Every animation serves a functional purpose
-2. **Academic elegance**: Sophisticated, not flashy
-3. **Performance-conscious**: 60fps minimum
-4. **Accessibility-aware**: Respects reduced motion preferences
-
-## 📱 Responsive Design
-
-### Breakpoint System
 
 ```css
-/* Mobile-first approach */
-xs: 0px      /* Mobile phones */
-sm: 640px    /* Large phones */
-md: 768px    /* Tablets */
-lg: 1024px   /* Small laptops */
-xl: 1280px   /* Desktops */
-2xl: 1536px  /* Large screens */
+/* Hover */
+background: var(--cerebrum-teal-700);
 ```
 
-### Layout Guidelines
-
-- **Mobile**: Single column, 16px margins
-- **Tablet**: 2-column grid, 24px margins
-- **Desktop**: 3-4 column grid, 32px margins
-- **Large**: 4+ columns, 48px margins
-
-## 🎯 Interaction Design
-
-### Button Hierarchy (From Screenshot Analysis)
-
-```typescript
-// Primary CTAs (Screenshots 6, 15)
-variant = 'primary' // "Enroll Now" - Solid blue (#4F46E5)
-variant = 'primary-large' // Large CTAs with rounded corners
-
-// Secondary Actions (Screenshot 6)
-variant = 'secondary' // "View Details" - White with blue border
-variant = 'outline' // Clean outline style
-
-// Success Actions (Screenshot 6)
-variant = 'success' // "Book Free Demo Class" - Green (#10B981)
-variant = 'success-large' // Full-width green buttons
-
-// Navigation Elements (Screenshot 14)
-variant = 'nav-primary' // "Meet Our Faculty" - Blue with arrow icon
-variant = 'nav-secondary' // Supporting navigation buttons
-
-// Specialty Buttons
-variant = 'demo-book' // "Book Demo" - Purple gradient (top-right)
-variant = 'course-access' // Course-specific access buttons
-```
-
-### Button Design Specifications
+**Secondary (Navy Outline)**
 
 ```css
-/* Primary Button Styles */
-.btn-primary {
-  background: #4f46e5;
-  color: white;
-  border-radius: 12px;
-  padding: 16px 32px;
-  font-weight: 600;
-  transition: all 200ms ease;
-}
-
-/* Secondary Button Styles */
-.btn-secondary {
-  background: white;
-  color: #4f46e5;
-  border: 2px solid #4f46e5;
-  border-radius: 12px;
-  padding: 14px 30px;
-}
-
-/* Success Button Styles */
-.btn-success {
-  background: #10b981;
-  color: white;
-  border-radius: 12px;
-  padding: 16px 32px;
-  font-weight: 600;
-}
-
-/* Demo Book Button (Top Navigation) */
-.btn-demo {
-  background: linear-gradient(135deg, #7c3aed 0%, #4f46e5 100%);
-  color: white;
-  border-radius: 24px;
-  padding: 12px 24px;
-  font-weight: 600;
-}
+border: 2px solid var(--cerebrum-navy-600);
+color: var(--cerebrum-navy-900);
+background: transparent;
 ```
 
-### Hover States
-
-- **Cards**: Lift (2px), scale (1.02), shadow increase
-- **Buttons**: Lift (1px), color darken (10%), scale (1.05)
-- **Links**: Color transition (200ms)
-- **Images**: Subtle zoom (1.05x)
-
-### Focus States
-
-- **Keyboard navigation**: 4px blue outline
-- **Form inputs**: Blue border + shadow
-- **Interactive elements**: Clear focus indication
-
-## 📊 Data Visualization
-
-### Chart Colors
+**Premium/Achievement (Gold - Use Sparingly)**
 
 ```css
-/* Primary data colors */
---chart-blue: #3b82f6;
---chart-green: #10b981;
---chart-purple: #8b5cf6;
---chart-orange: #f59e0b;
---chart-red: #ef4444;
-
-/* Supporting colors */
---chart-gray: #6b7280;
---chart-light: #e5e7eb;
+background: var(--cerebrum-gold-600);
+color: white;
 ```
 
-### Chart Guidelines
+### Cards
 
-1. **Accessibility**: Color + pattern differentiation
-2. **Clarity**: Maximum 5 data series per chart
-3. **Context**: Always include units and references
-4. **Animation**: Smooth transitions for data updates
-
-## 🧪 Interactive Learning Elements
-
-### Biology Animations
-
-- **Molecular level**: DNA, proteins, chemical processes
-- **Cellular level**: Division, organelles, membranes
-- **System level**: Circulation, respiration, nervous system
-- **Ecosystem level**: Energy flow, cycles, interactions
-
-### Design Standards
-
-- **Scientific accuracy**: Peer-reviewed references
-- **Educational value**: Clear learning objectives
-- **Engagement**: Interactive controls
-- **Performance**: Optimized for all devices
-
-## 📝 Content Guidelines
-
-### Writing Standards
-
-- **Tone**: Professional, authoritative, encouraging
-- **Clarity**: Flesch-Kincaid Grade 12-14 level
-- **Citations**: Research references for claims
-- **Structure**: Clear hierarchy, scannable format
-
-### Research Integration
-
-- **Citations**: Proper academic format
-- **Data**: Quantifiable metrics and outcomes
-- **Authority**: Expert attributions
-- **Currency**: Recent studies and findings
-
-## ♿ Accessibility Standards
-
-### WCAG 2.1 AA Compliance
-
-- **Color contrast**: 4.5:1 minimum for text
-- **Focus management**: Logical tab order
-- **Screen readers**: Proper ARIA labels
-- **Keyboard navigation**: Full functionality
-
-### Inclusive Design
-
-- **Reduced motion**: Respects user preferences
-- **Font scaling**: Supports 200% zoom
-- **Color independence**: Information not color-dependent
-- **Clear language**: Avoids jargon, explains terms
-
-## 🔧 Implementation Guidelines
-
-### Code Standards
-
-```typescript
-// Component structure
-export const ComponentName: React.FC<Props> = ({
-  children,
-  variant = 'default',
-  className,
-  ...props
-}) => {
-  return (
-    <motion.div
-      className={cn(baseClasses, variantClasses, className)}
-      {...animations}
-      {...props}
-    >
-      {children}
-    </motion.div>
-  )
-}
-```
-
-### File Organization
-
-```
-src/
-├── components/
-│   ├── ui/                    # Base UI components
-│   ├── interactive/           # Interactive learning elements
-│   └── layout/               # Layout components
-├── lib/
-│   └── design/               # Design system utilities
-└── styles/                   # Global styles and variables
-```
-
-## 📈 Performance Standards
-
-### Core Web Vitals
-
-- **LCP**: < 2.5 seconds
-- **FID**: < 100 milliseconds
-- **CLS**: < 0.1
-
-### Optimization Guidelines
-
-- **Images**: WebP format, lazy loading
-- **Animations**: CSS transforms, GPU acceleration
-- **Bundles**: Code splitting, tree shaking
-- **Caching**: Aggressive caching strategies
-
-## 🎓 Academic Branding
-
-### Visual Elements
-
-- **Logos**: Clear, professional presentations
-- **Badges**: Achievement and certification graphics
-- **Icons**: Consistent style, appropriate metaphors
-- **Photography**: High-quality, academic environment
-
-### Brand Voice
-
-- **Authoritative**: Based on research and expertise
-- **Encouraging**: Supportive of student goals
-- **Professional**: Maintains academic standards
-- **Accessible**: Clear communication for all levels
-
-## 🔄 Design System Evolution
-
-### Version Control
-
-- **Semantic versioning**: Major.Minor.Patch
-- **Change documentation**: Clear migration guides
-- **Backward compatibility**: Gradual deprecation
-- **Testing**: Cross-browser and device validation
-
-### Maintenance
-
-- **Regular audits**: Quarterly design reviews
-- **User feedback**: Continuous improvement
-- **Performance monitoring**: Ongoing optimization
-- **Accessibility testing**: Regular compliance checks
-
-## 🎨 Specific Design Patterns from Live Website
-
-### Navigation Header (Screenshot 14)
-
-```typescript
-<Navigation>
-  // Left: Purple brain logo + "CEREBRUM Biology Academy"
-  // Center: Home, Courses, Video Lectures, Success Stories, Faculty, About, Contact
-  // Right: Search icon, Login dropdown, "Book Demo" gradient button
-  // Clean white background with subtle shadow
-</Navigation>
-```
-
-### Content Layout Patterns
+**Standard Card**
 
 ```css
-/* Two-Column Mission/Vision Layout (Screenshot 1) */
-.mission-vision-layout {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  padding: 80px 0;
-}
-
-/* Four-Column Feature Grid (Screenshots 7, 12) */
-.feature-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 32px;
-  padding: 60px 0;
-}
-
-/* Three-Column Faculty Layout (Screenshot 5) */
-.faculty-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-  padding: 80px 0;
-}
-
-/* Single Column Teaching Approach (Screenshots 8, 9) */
-.teaching-approach {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 80px 20px;
-}
+background: white;
+border: 1px solid var(--cerebrum-navy-200);
+border-radius: var(--radius-xl);
+box-shadow: var(--shadow-md);
 ```
 
-### Visual Hierarchy Patterns
+**Featured Card**
 
 ```css
-/* Section Headers (Consistent across screenshots) */
-.section-header {
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.section-title {
-  font-size: 48px;
-  font-weight: 700;
-  color: #1f2937;
-  margin-bottom: 16px;
-}
-
-.section-subtitle {
-  font-size: 18px;
-  color: #6b7280;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-/* Card Shadows and Spacing */
-.card-standard {
-  background: white;
-  border-radius: 16px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  padding: 32px;
-  transition: all 200ms ease;
-}
-
-.card-standard:hover {
-  box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1);
-  transform: translateY(-2px);
-}
+background: var(--cerebrum-navy-50);
+border: 2px solid var(--cerebrum-teal-200);
+border-radius: var(--radius-xl);
+box-shadow: var(--shadow-lg);
 ```
 
-### Icon and Badge System
+**Achievement Card**
 
 ```css
-/* Expertise Tags (Screenshot 5) */
-.expertise-tag {
-  background: #e0e7ff;
-  color: #4f46e5;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 14px;
-  font-weight: 500;
-}
-
-/* Achievement Badges (Screenshot 2) */
-.achievement-badge {
-  background: #fef3c7;
-  color: #92400e;
-  padding: 4px 12px;
-  border-radius: 16px;
-  font-size: 12px;
-  font-weight: 600;
-}
-
-/* Green Checkmarks (Consistent pattern) */
-.checkmark-icon {
-  color: #10b981;
-  font-size: 20px;
-  margin-right: 12px;
-}
+background: var(--cerebrum-gold-50);
+border: 2px solid var(--cerebrum-gold-200);
+border-radius: var(--radius-xl);
+box-shadow: var(--shadow-lg);
 ```
 
-### Typography Scale from Screenshots
+### Forms
+
+**Input Fields**
 
 ```css
-/* Large Hero Headlines */
-.hero-headline {
-  font-size: 56px;
-  font-weight: 700;
-  line-height: 1.1;
-  color: #1f2937;
-}
+background: white;
+border: 1px solid var(--cerebrum-navy-300);
+border-radius: var(--radius-md);
+color: var(--cerebrum-navy-900);
+```
 
-/* Section Headlines */
-.section-headline {
-  font-size: 42px;
-  font-weight: 700;
-  line-height: 1.2;
-  color: #1f2937;
-}
+```css
+/* Focus */
+border-color: var(--cerebrum-teal-600);
+box-shadow: 0 0 0 3px var(--cerebrum-teal-100);
+```
 
-/* Card Titles */
-.card-title {
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 1.3;
-  color: #1f2937;
-  margin-bottom: 16px;
-}
+**Error State**
 
-/* Body Text */
-.body-text {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #6b7280;
-}
+```css
+border-color: #ef4444; /* red-500 */
+```
 
-/* Large Statistics */
-.stat-number {
-  font-size: 48px;
-  font-weight: 700;
-  color: #4f46e5;
-  line-height: 1;
-}
+**Success State**
 
-.stat-label {
-  font-size: 16px;
-  font-weight: 500;
-  color: #6b7280;
-  margin-top: 8px;
-}
+```css
+border-color: var(--cerebrum-teal-600);
 ```
 
 ---
 
-## 📞 Design System Support
+## Accessibility Guidelines
 
-For questions about implementing the design system:
+1. **Color Contrast**
+   - Use navy 700+ for body text (WCAG AAA)
+   - Use navy 500+ for secondary text (WCAG AA minimum)
+   - Never use navy 400 or lighter for text under 18px
 
-- **Documentation**: This guide and component documentation
-- **Code examples**: Storybook and example implementations
-- **Design assets**: Figma components and style guide
-- **Support**: Technical team consultation
+2. **Interactive Elements**
+   - Minimum touch target: 44x44px
+   - Clear hover/focus states using teal
+   - Focus rings: 3px solid teal-100 with teal-600 border
+
+3. **Color Blindness**
+   - Never rely on color alone to convey information
+   - Use icons, labels, and patterns alongside color
+   - Navy/teal/gold palette is deuteranopia-friendly
 
 ---
 
-_Last Updated: December 17, 2024_
-_Next Review: March 17, 2025_
+## Migration from Old System
+
+### Color Replacements
+
+| Old Variable                    | New Variable        | Notes                  |
+| ------------------------------- | ------------------- | ---------------------- |
+| `--cerebrum-royal-blue-*`       | `--cerebrum-navy-*` | Direct replacement     |
+| `--cerebrum-medical-green-*`    | `--cerebrum-teal-*` | Green → Teal           |
+| `--cerebrum-alert-orange-*`     | `--cerebrum-teal-*` | Orange → Teal for CTAs |
+| `--cerebrum-achievement-gold-*` | `--cerebrum-gold-*` | Direct replacement     |
+
+### Removed Colors
+
+- ❌ Royal Blue (replaced with Navy)
+- ❌ Medical Green (replaced with Teal)
+- ❌ Alert Orange (replaced with Teal for urgency/CTAs)
+- ❌ Purple variants (removed entirely)
+- ❌ Saffron (removed from Tailwind config)
+
+---
+
+## Examples in Practice
+
+### ✅ Correct Usage
+
+**Enrollment CTA Button**
+
+```jsx
+<button className="bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-lg shadow-md">
+  Enroll Now
+</button>
+```
+
+**Achievement Badge**
+
+```jsx
+<div className="bg-gold-50 border-2 border-gold-200 rounded-lg p-4">
+  <span className="text-gold-700 font-bold">94.2% NEET Success Rate</span>
+</div>
+```
+
+**Standard Course Card**
+
+```jsx
+<div className="bg-white border border-navy-200 rounded-xl p-6 shadow-md">
+  <h3 className="text-navy-900 text-xl font-bold">NEET 2025 Batch</h3>
+  <p className="text-navy-600 mt-2">Comprehensive Biology preparation</p>
+</div>
+```
+
+### ❌ Incorrect Usage
+
+**DON'T: Multi-color gradient**
+
+```css
+/* ❌ Avoid */
+background: linear-gradient(135deg, navy-900, teal-600, gold-500);
+```
+
+**DON'T: Gold for regular buttons**
+
+```jsx
+/* ❌ Avoid - Gold is for achievements only */
+<button className="bg-gold-600">Submit Form</button>
+```
+
+**DON'T: Teal for large backgrounds**
+
+```jsx
+/* ❌ Avoid - Too visually heavy */
+<section className="bg-teal-500 min-h-screen">
+```
+
+---
+
+## Design Tokens Reference
+
+### Quick Reference Table
+
+| Token                 | Value       | Usage                              |
+| --------------------- | ----------- | ---------------------------------- |
+| `--cerebrum-navy-900` | `#0f172a`   | Primary headings, dark backgrounds |
+| `--cerebrum-navy-700` | `#334155`   | Body text, secondary headings      |
+| `--cerebrum-teal-600` | `#0d9488`   | Primary CTA buttons, links         |
+| `--cerebrum-gold-600` | `#d97706`   | Achievement badges, premium        |
+| `--shadow-md`         | (see above) | Standard card shadow               |
+| `--shadow-lg`         | (see above) | Modal/elevated shadow              |
+| `--radius-lg`         | `0.75rem`   | Standard button/card radius        |
+| `--radius-xl`         | `1rem`      | Large card radius                  |
+
+---
+
+## Testing Checklist
+
+Before launching any UI changes:
+
+- [ ] Verify all text meets WCAG AA minimum (navy-500+)
+- [ ] Check that headings use navy-900 or navy-950
+- [ ] Ensure CTAs use teal-600 (not gold or navy)
+- [ ] Confirm gold is used ONLY for achievements
+- [ ] Test color blindness using browser tools
+- [ ] Validate focus states are visible (teal ring)
+- [ ] Check hover states are distinct from default
+- [ ] Ensure mobile touch targets are 44x44px minimum
+- [ ] Verify gradients are monochromatic
+- [ ] Test dark mode compatibility (if applicable)
+
+---
+
+## Support & Questions
+
+For questions about the design system:
+
+- Review this document first
+- Check the component library examples
+- Consult the Tailwind config for available utilities
+- Test in browser before committing changes
+
+**Last Updated:** January 2025
+**Maintained by:** Cerebrum Biology Academy Development Team

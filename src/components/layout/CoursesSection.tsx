@@ -258,73 +258,75 @@ export function CoursesSection() {
           {filteredCourses.map((course, index) => (
             <motion.div
               key={course.id}
-              className="bg-gradient-to-br from-black via-gray-900 to-black rounded-2xl shadow-2xl hover:shadow-xl transition-all duration-300 overflow-hidden group border border-yellow-400/20"
+              className="bg-white border-2 border-navy-200 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden group"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
               {/* Course Header */}
-              <div className="p-8 border-b border-yellow-400/20">
+              <div className="p-8 border-b border-navy-100">
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center space-x-2">
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-800/80 border border-yellow-400/30 text-white">
+                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-navy-50 border border-navy-200 text-navy-700">
                       {course.targetClass === 'Dropper'
                         ? 'Dropper Batch'
                         : `Class ${course.targetClass}`}
                     </span>
                     {course.isPopular && (
-                      <div className="flex items-center bg-gradient-to-r from-yellow-400 to-yellow-500 text-black px-2 py-1 rounded-full text-xs font-black border-2 border-yellow-300 shadow-lg">
+                      <div className="flex items-center bg-teal-100 text-teal-800 px-2 py-1 rounded-full text-xs font-semibold border border-teal-200">
                         <Star className="w-3 h-3 mr-1 fill-current" />
                         Popular
                       </div>
                     )}
                   </div>
                   <div className="flex items-center space-x-2">
-                    <div className="flex items-center bg-gradient-to-r from-yellow-400 to-yellow-500 border border-yellow-300 text-black px-3 py-1 rounded-full text-xs font-bold">
+                    <div className="flex items-center bg-gold-100 text-gold-800 border border-gold-300 px-3 py-1 rounded-full text-xs font-semibold">
                       <Award className="w-3 h-3 mr-1" />
                       Certified Program
                     </div>
                   </div>
                 </div>
 
-                <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-yellow-400 transition-colors">
+                <h3 className="text-2xl font-bold text-navy-900 mb-3 group-hover:text-teal-600 transition-colors">
                   {course.name}
                 </h3>
 
-                <p className="text-gray-300 mb-6">
+                <p className="text-navy-600 mb-6">
                   {course.description.replace(/our/gi, 'our').replace(/we provide/gi, 'we provide')}
                 </p>
 
-                {/* Course Meta - Premium theme */}
-                <div className="flex items-center space-x-6 text-sm text-gray-300 mb-6">
+                {/* Course Meta */}
+                <div className="flex items-center space-x-6 text-sm text-navy-600 mb-6">
                   <div className="flex items-center">
-                    <Clock className="w-4 h-4 mr-2 text-yellow-400" />
+                    <Clock className="w-4 h-4 mr-2 text-teal-600" />
                     {course.duration}
                   </div>
                   <div className="flex items-center">
-                    <Target className="w-4 h-4 mr-2 text-yellow-400" />
+                    <Target className="w-4 h-4 mr-2 text-teal-600" />
                     NEET Focused
                   </div>
                   <div className="flex items-center">
-                    <Users className="w-4 h-4 mr-2 text-yellow-400" />
+                    <Users className="w-4 h-4 mr-2 text-teal-600" />
                     {course.teachingHours}h/week
                   </div>
                 </div>
 
-                {/* Pricing - Premium gold design */}
-                <div className="bg-gradient-to-br from-yellow-400 via-yellow-500 to-yellow-600 text-black p-4 rounded-xl shadow-lg mb-6">
+                {/* Pricing */}
+                <div className="bg-teal-50 border border-teal-200 text-navy-900 p-4 rounded-lg mb-6">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-2">
-                      <IndianRupee className="w-6 h-6 text-black" />
+                      <IndianRupee className="w-6 h-6 text-teal-700" />
                       <div>
                         {(() => {
                           try {
                             const pricing = getCoursePricing(course.id)
                             return (
                               <>
-                                <span className="text-3xl font-black">{pricing.priceRange}</span>
-                                <div className="text-sm font-semibold">
+                                <span className="text-3xl font-bold text-navy-900">
+                                  {pricing.priceRange}
+                                </span>
+                                <div className="text-sm font-medium text-navy-600">
                                   Choose from {pricing.tiers.length} tiers
                                 </div>
                               </>
@@ -332,8 +334,10 @@ export function CoursesSection() {
                           } catch (error) {
                             return (
                               <>
-                                <span className="text-3xl font-black">₹48K+</span>
-                                <div className="text-sm font-semibold">Multiple options</div>
+                                <span className="text-3xl font-bold text-navy-900">₹48K+</span>
+                                <div className="text-sm font-medium text-navy-600">
+                                  Multiple options
+                                </div>
                               </>
                             )
                           }
@@ -341,7 +345,7 @@ export function CoursesSection() {
                       </div>
                     </div>
                     <div className="text-right">
-                      <div className="text-xs font-bold bg-black text-yellow-400 px-2 py-1 rounded-full">
+                      <div className="text-xs font-semibold bg-teal-600 text-white px-3 py-1 rounded-full">
                         EMI Available
                       </div>
                     </div>
@@ -349,29 +353,29 @@ export function CoursesSection() {
                 </div>
               </div>
 
-              {/* Features List - Premium theme */}
+              {/* Features List */}
               <div className="p-8">
-                <h4 className="font-semibold text-white mb-4">Key Highlights:</h4>
+                <h4 className="font-semibold text-navy-900 mb-4">Key Highlights:</h4>
                 <ul className="space-y-3 mb-8">
                   {(course.highlights || []).slice(0, 4).map((highlight, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-200">
-                      <CheckCircle className="w-5 h-5 text-yellow-400 mr-3 flex-shrink-0" />
+                    <li key={featureIndex} className="flex items-center text-navy-700">
+                      <CheckCircle className="w-5 h-5 text-teal-600 mr-3 flex-shrink-0" />
                       {highlight}
                     </li>
                   ))}
                   {(course.highlights || []).length > 4 && (
-                    <li className="text-sm text-yellow-400 font-medium">
+                    <li className="text-sm text-teal-600 font-medium">
                       +{(course.highlights || []).length - 4} more features
                     </li>
                   )}
                 </ul>
 
-                {/* Action Buttons - Premium theme */}
+                {/* Action Buttons */}
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Button
                     variant="primary"
                     size="lg"
-                    className="flex-1 bg-gradient-to-r from-yellow-400 to-yellow-500 text-black hover:from-yellow-500 hover:to-yellow-600 font-bold border-2 border-yellow-300 shadow-lg"
+                    className="flex-1 bg-teal-600 hover:bg-teal-700 text-white font-semibold"
                     onClick={() => handleEnrollClick(course.id)}
                   >
                     Enroll Now
@@ -379,7 +383,7 @@ export function CoursesSection() {
                   <Button
                     variant="outline"
                     size="lg"
-                    className="flex-1 border-2 border-gray-600 text-gray-200 hover:bg-gray-700 hover:text-white"
+                    className="flex-1 border-2 border-navy-300 text-navy-700 hover:bg-navy-50 hover:border-navy-400"
                     onClick={() => handleViewDetails(course.id)}
                   >
                     View Details
@@ -392,28 +396,28 @@ export function CoursesSection() {
 
         {/* Bottom CTA */}
         <motion.div
-          className="text-center bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 rounded-3xl p-12 text-white"
+          className="text-center bg-navy-900 border-4 border-teal-500 rounded-2xl p-12 text-white"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
           <h3 className="text-3xl font-bold mb-4">Not Sure Which Course is Right for You?</h3>
-          <p className="text-xl mb-8 opacity-90">
+          <p className="text-xl mb-8 text-gray-200">
             Get personalized guidance from our expert counselors to choose the perfect program
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               variant="secondary_cta"
               size="xl"
-              className="bg-white text-blue-600 hover:bg-gray-100"
+              className="bg-teal-600 hover:bg-teal-700 text-white font-semibold"
             >
               Free Counseling Session
             </Button>
             <Button
               variant="outline"
               size="xl"
-              className="border-white text-white hover:bg-white hover:text-blue-600"
+              className="border-2 border-white text-white hover:bg-white hover:text-navy-900 font-semibold"
             >
               Download Brochure
             </Button>

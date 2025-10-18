@@ -10,42 +10,45 @@ const buttonVariants = cva(
       variant: {
         default: 'bg-primary text-primary-foreground hover:bg-primary/90',
         destructive: 'bg-destructive text-destructive-foreground hover:bg-destructive/90',
-        outline: 'border border-input bg-background hover:bg-accent hover:text-accent-foreground',
-        secondary: 'bg-secondary text-secondary-foreground hover:bg-secondary/80',
-        ghost: 'hover:bg-accent hover:text-accent-foreground',
-        link: 'text-primary underline-offset-4 hover:underline',
+        outline:
+          'border-2 border-navy-300 bg-transparent text-navy-700 hover:bg-navy-50 hover:border-navy-400 transition-all duration-200',
+        secondary:
+          'bg-white hover:bg-navy-50 text-navy-700 border-2 border-navy-300 hover:border-navy-400 font-semibold transition-all duration-200',
+        ghost:
+          'bg-transparent hover:bg-navy-50 text-navy-700 hover:text-navy-900 font-medium transition-all duration-200',
+        link: 'text-teal-600 underline-offset-4 hover:underline',
 
-        // Enhanced CTA variants - All converted to solid blue for professional consistency
+        // Primary CTA - Teal
         primary:
-          'bg-[#0066ff] text-white hover:bg-[#0052cc] shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200',
+          'bg-teal-600 text-white hover:bg-teal-700 font-semibold shadow-sm hover:shadow-md transition-all duration-200',
 
-        // Success CTA - Solid Blue
+        // Success CTA - Teal
         success_cta:
-          'bg-[#0066ff] text-white hover:bg-[#0052cc] shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 font-semibold',
+          'bg-teal-600 text-white hover:bg-teal-700 shadow-sm hover:shadow-md transition-all duration-200 font-semibold',
 
-        // Urgency CTA - Solid Blue
+        // Urgency CTA - Teal
         urgency_cta:
-          'bg-[#0066ff] text-white hover:bg-[#0052cc] shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 font-semibold',
+          'bg-teal-600 text-white hover:bg-teal-700 shadow-sm hover:shadow-md transition-all duration-200 font-semibold',
 
-        // Trust CTA - Solid Blue
+        // Trust CTA - Teal
         trust_cta:
-          'bg-[#0066ff] text-white hover:bg-[#0052cc] shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 font-semibold',
+          'bg-teal-600 text-white hover:bg-teal-700 shadow-sm hover:shadow-md transition-all duration-200 font-semibold',
 
-        // Premium CTA - Solid Blue
+        // Premium CTA - Teal
         premium_cta:
-          'bg-[#0066ff] text-white hover:bg-[#0052cc] shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 font-semibold',
+          'bg-teal-600 text-white hover:bg-teal-700 shadow-sm hover:shadow-md transition-all duration-200 font-semibold',
 
-        // Secondary CTA - Softer conversion (kept as outline for variety)
+        // Secondary CTA - Navy outline
         secondary_cta:
-          'bg-white/95 backdrop-blur-sm border-2 border-[#0066ff] text-[#0066ff] hover:bg-blue-50 hover:border-[#0052cc] transition-all duration-300 transform hover:-translate-y-1',
+          'bg-white border-2 border-navy-300 text-navy-700 hover:bg-navy-50 hover:border-navy-400 transition-all duration-200 font-semibold',
 
-        // Phone/Call CTA - Solid Blue
+        // Phone/Call CTA - Teal
         phone_cta:
-          'bg-[#0066ff] text-white hover:bg-[#0052cc] shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 font-semibold',
+          'bg-teal-600 text-white hover:bg-teal-700 shadow-sm hover:shadow-md transition-all duration-200 font-semibold',
 
-        // Demo/Trial CTA - Solid Blue
+        // Demo/Trial CTA - Teal
         demo_cta:
-          'bg-[#0066ff] text-white hover:bg-[#0052cc] shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 font-semibold',
+          'bg-teal-600 text-white hover:bg-teal-700 shadow-sm hover:shadow-md transition-all duration-200 font-semibold',
       },
       size: {
         default: 'h-10 px-4 py-2',
