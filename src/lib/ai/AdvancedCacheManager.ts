@@ -73,7 +73,7 @@ export class AdvancedCacheManager {
     enablePreCaching: true,
     enableQualityFiltering: true,
     minQualityScore: 0.7,
-    embeddingModel: 'text-embedding-3-large'
+    embeddingModel: 'text-embedding-3-large',
   }
 
   private stats: CacheStats = {
@@ -86,7 +86,7 @@ export class AdvancedCacheManager {
     avgSimilarityScore: 0,
     topQueries: [],
     qualityDistribution: {},
-    providerDistribution: {}
+    providerDistribution: {},
   }
 
   constructor(config?: Partial<CacheConfig>) {
@@ -94,12 +94,22 @@ export class AdvancedCacheManager {
       this.config = { ...this.config, ...config }
     }
 
-    this.openai = new OpenAI({
-      apiKey: process.env.OPENAI_API_KEY,
-    })
+    // Lazy initialization - only init OpenAI when actually needed
+    // This prevents build failures when API keys aren't available
 
     this.startCacheOptimization()
     this.initializePopularQueries()
+  }
+
+  /**
+   * Lazy initialization of OpenAI client
+   */
+  private initOpenAI() {
+    if (!this.openai && process.env.OPENAI_API_KEY) {
+      this.openai = new OpenAI({
+        apiKey: process.env.OPENAI_API_KEY,
+      })
+    }
   }
 
   /**
@@ -180,10 +190,10 @@ export class AdvancedCacheManager {
         accessCount: 0,
         lastAccessed: Date.now(),
         created: Date.now(),
-        expiresAt: Date.now() + ttl
+        expiresAt: Date.now() + ttl,
       },
       tags,
-      confidence: metadata.quality
+      confidence: metadata.quality,
     }
 
     // Store with multiple indexing
@@ -203,7 +213,9 @@ export class AdvancedCacheManager {
       await this.evictEntries()
     }
 
-    console.log(`Cached response for ${metadata.provider}/${metadata.model} (quality: ${metadata.quality})`)
+    console.log(
+      `Cached response for ${metadata.provider}/${metadata.model} (quality: ${metadata.quality})`
+    )
   }
 
   /**
@@ -251,10 +263,19 @@ export class AdvancedCacheManager {
       return this.embeddings.get(cacheKey)!
     }
 
+    // Initialize OpenAI client if needed
+    this.initOpenAI()
+
+    // If OpenAI is not available (no API key), return a zero vector
+    if (!this.openai) {
+      console.warn('OpenAI API key not available, returning zero embedding vector')
+      return new Array(1536).fill(0) // text-embedding-ada-002 dimensions
+    }
+
     try {
       const response = await this.openai.embeddings.create({
         model: this.config.embeddingModel,
-        input: text.substring(0, 8000) // Limit input length
+        input: text.substring(0, 8000), // Limit input length
       })
 
       const embedding = response.data[0].embedding
@@ -297,11 +318,13 @@ export class AdvancedCacheManager {
    * Generate exact cache key
    */
   private generateExactKey(prompt: string, context?: any): string {
-    const contextStr = context ? JSON.stringify({
-      subject: context.subject,
-      studentLevel: context.studentLevel,
-      language: context.language
-    }) : ''
+    const contextStr = context
+      ? JSON.stringify({
+          subject: context.subject,
+          studentLevel: context.studentLevel,
+          language: context.language,
+        })
+      : ''
 
     return this.hashText(prompt + contextStr)
   }
@@ -328,13 +351,28 @@ export class AdvancedCacheManager {
 
     // Biology-specific tags
     const biologyTerms = [
-      'cell', 'dna', 'protein', 'enzyme', 'photosynthesis', 'respiration',
-      'genetics', 'evolution', 'ecology', 'anatomy', 'physiology', 'mitochondria',
-      'chloroplast', 'nucleus', 'membrane', 'chromosome', 'gene', 'allele'
+      'cell',
+      'dna',
+      'protein',
+      'enzyme',
+      'photosynthesis',
+      'respiration',
+      'genetics',
+      'evolution',
+      'ecology',
+      'anatomy',
+      'physiology',
+      'mitochondria',
+      'chloroplast',
+      'nucleus',
+      'membrane',
+      'chromosome',
+      'gene',
+      'allele',
     ]
 
     const promptLower = prompt.toLowerCase()
-    biologyTerms.forEach(term => {
+    biologyTerms.forEach((term) => {
       if (promptLower.includes(term)) {
         tags.push(`bio:${term}`)
       }
@@ -388,10 +426,12 @@ export class AdvancedCacheManager {
     const entries = Array.from(this.cache.values())
 
     // Score entries for eviction (lower score = more likely to evict)
-    const scoredEntries = entries.map(entry => ({
-      entry,
-      score: this.calculateEvictionScore(entry)
-    })).sort((a, b) => a.score - b.score)
+    const scoredEntries = entries
+      .map((entry) => ({
+        entry,
+        score: this.calculateEvictionScore(entry),
+      }))
+      .sort((a, b) => a.score - b.score)
 
     // Remove bottom 10%
     const toRemove = Math.floor(entries.length * 0.1)
@@ -413,8 +453,8 @@ export class AdvancedCacheManager {
     // Base score components
     const qualityScore = entry.metadata.quality * 100
     const accessScore = Math.min(entry.metadata.accessCount * 10, 100)
-    const freshnessScore = Math.max(0, 100 - (age / (24 * 60 * 60 * 1000))) // Decrease over days
-    const recentAccessScore = Math.max(0, 100 - (timeSinceAccess / (60 * 60 * 1000))) // Decrease over hours
+    const freshnessScore = Math.max(0, 100 - age / (24 * 60 * 60 * 1000)) // Decrease over days
+    const recentAccessScore = Math.max(0, 100 - timeSinceAccess / (60 * 60 * 1000)) // Decrease over hours
 
     return qualityScore + accessScore + freshnessScore + recentAccessScore
   }
@@ -460,10 +500,10 @@ export class AdvancedCacheManager {
       'what is evolution theory',
       'how do plant hormones work',
       'describe human circulatory system',
-      'explain protein synthesis'
+      'explain protein synthesis',
     ]
 
-    commonQueries.forEach(query => {
+    commonQueries.forEach((query) => {
       this.popularQueries.add(this.normalizeQuery(query))
       this.queryStats.set(this.normalizeQuery(query), 5) // Pre-populate with high frequency
     })
@@ -472,11 +512,14 @@ export class AdvancedCacheManager {
   /**
    * Record user feedback on cached responses
    */
-  recordFeedback(cacheKey: string, feedback: {
-    helpful: boolean
-    rating: number
-    comments?: string
-  }): void {
+  recordFeedback(
+    cacheKey: string,
+    feedback: {
+      helpful: boolean
+      rating: number
+      comments?: string
+    }
+  ): void {
     const entry = this.cache.get(cacheKey)
     if (entry) {
       entry.userFeedback = feedback
@@ -512,7 +555,7 @@ export class AdvancedCacheManager {
       let matches = true
 
       if (query.tags) {
-        const hasMatchingTag = query.tags.some(tag => entry.tags.includes(tag))
+        const hasMatchingTag = query.tags.some((tag) => entry.tags.includes(tag))
         if (!hasMatchingTag) matches = false
       }
 
@@ -548,9 +591,8 @@ export class AdvancedCacheManager {
    * Update internal statistics
    */
   private updateStatistics(): void {
-    this.stats.hitRate = this.stats.totalQueries > 0
-      ? this.stats.cacheHits / this.stats.totalQueries
-      : 0
+    this.stats.hitRate =
+      this.stats.totalQueries > 0 ? this.stats.cacheHits / this.stats.totalQueries : 0
 
     // Calculate cost savings (average API call cost: $0.001)
     this.stats.costSavings = this.stats.cacheHits * 0.001
@@ -586,19 +628,28 @@ export class AdvancedCacheManager {
    */
   private startCacheOptimization(): void {
     // Cleanup expired entries every 5 minutes
-    setInterval(() => {
-      this.cleanupExpiredEntries()
-    }, 5 * 60 * 1000)
+    setInterval(
+      () => {
+        this.cleanupExpiredEntries()
+      },
+      5 * 60 * 1000
+    )
 
     // Pre-cache popular queries every hour
-    setInterval(() => {
-      this.preCachePopularQueries()
-    }, 60 * 60 * 1000)
+    setInterval(
+      () => {
+        this.preCachePopularQueries()
+      },
+      60 * 60 * 1000
+    )
 
     // Update statistics every 10 minutes
-    setInterval(() => {
-      this.updateStatistics()
-    }, 10 * 60 * 1000)
+    setInterval(
+      () => {
+        this.updateStatistics()
+      },
+      10 * 60 * 1000
+    )
   }
 
   /**
@@ -626,7 +677,11 @@ export class AdvancedCacheManager {
   }
 
   private normalizeQuery(query: string): string {
-    return query.toLowerCase().replace(/[^\w\s]/g, '').trim().substring(0, 100)
+    return query
+      .toLowerCase()
+      .replace(/[^\w\s]/g, '')
+      .trim()
+      .substring(0, 100)
   }
 
   private generateUniqueId(): string {
@@ -641,7 +696,7 @@ export class AdvancedCacheManager {
       entries: Array.from(this.cache.entries()),
       stats: this.stats,
       config: this.config,
-      timestamp: Date.now()
+      timestamp: Date.now(),
     }
   }
 
@@ -663,7 +718,7 @@ export class AdvancedCacheManager {
       avgSimilarityScore: 0,
       topQueries: [],
       qualityDistribution: {},
-      providerDistribution: {}
+      providerDistribution: {},
     }
   }
 }

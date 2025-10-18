@@ -126,15 +126,21 @@ export class IntelligentAIOrchestrator extends EventEmitter {
   }
 
   private initializeClients() {
-    this.openai = new OpenAI({
-      apiKey: process.env.OPENAI_API_KEY,
-      timeout: 60000, // 60 seconds
-    })
+    // Only initialize clients if API keys are available
+    // This prevents build failures when keys aren't set in CI/CD
+    if (process.env.OPENAI_API_KEY) {
+      this.openai = new OpenAI({
+        apiKey: process.env.OPENAI_API_KEY,
+        timeout: 60000, // 60 seconds
+      })
+    }
 
-    this.anthropic = new Anthropic({
-      apiKey: process.env.ANTHROPIC_API_KEY,
-      timeout: 60000,
-    })
+    if (process.env.ANTHROPIC_API_KEY) {
+      this.anthropic = new Anthropic({
+        apiKey: process.env.ANTHROPIC_API_KEY,
+        timeout: 60000,
+      })
+    }
   }
 
   /**

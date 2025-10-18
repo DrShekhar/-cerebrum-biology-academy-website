@@ -65,12 +65,22 @@ export class SemanticCacheEngine {
   }
 
   constructor() {
-    this.openai = new OpenAI({
-      apiKey: process.env.OPENAI_API_KEY,
-    })
+    // Lazy initialization - only init OpenAI when actually needed
+    // This prevents build failures when API keys aren't available
 
     this.startCacheOptimization()
     this.loadPopularQueries()
+  }
+
+  /**
+   * Lazy initialization of OpenAI client
+   */
+  private initOpenAI() {
+    if (!this.openai && process.env.OPENAI_API_KEY) {
+      this.openai = new OpenAI({
+        apiKey: process.env.OPENAI_API_KEY,
+      })
+    }
   }
 
   /**
@@ -81,6 +91,15 @@ export class SemanticCacheEngine {
 
     if (this.embeddings.has(cacheKey)) {
       return this.embeddings.get(cacheKey)!
+    }
+
+    // Initialize OpenAI client if needed
+    this.initOpenAI()
+
+    // If OpenAI is not available (no API key), return a zero vector
+    if (!this.openai) {
+      console.warn('OpenAI API key not available, returning zero embedding vector')
+      return new Array(1536).fill(0) // text-embedding-ada-002 dimensions
     }
 
     try {
