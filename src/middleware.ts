@@ -43,8 +43,12 @@ export async function middleware(request: NextRequest) {
   const isProtected = PROTECTED_ROUTES.some((route) => pathname.startsWith(route))
   const isPublicAPI = PUBLIC_API_ROUTES.some((route) => pathname.startsWith(route))
 
-  // Skip security hardening for AI routes to prevent blocking
-  const isAIRoute = pathname.startsWith('/api/ai') || pathname.startsWith('/api/admin/ai-metrics')
+  // Skip security hardening for AI routes and pages to prevent blocking
+  const isAIRoute =
+    pathname.startsWith('/api/ai') ||
+    pathname.startsWith('/api/admin/ai-metrics') ||
+    pathname.startsWith('/claudechat') ||
+    pathname.startsWith('/admin/ai-monitoring')
 
   // Apply security hardening to all requests except AI routes
   if (!isAIRoute) {
