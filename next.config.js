@@ -73,7 +73,6 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   output: 'standalone',
-  swcMinify: true,
 
   // Experimental features for better performance
   experimental: {
