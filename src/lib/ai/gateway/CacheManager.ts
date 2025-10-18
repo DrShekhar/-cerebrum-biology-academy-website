@@ -3,7 +3,7 @@
  * Achieves 70% cost reduction through intelligent caching strategy
  */
 
-import Redis from 'ioredis'
+import { getRedisClient } from '@/lib/cache/redis'
 
 interface CacheEntry {
   content: string
@@ -153,7 +153,7 @@ export class CacheManager {
   }
 
   constructor(redisUrl?: string, config?: Partial<CacheConfig>) {
-    this.redis = new Redis(redisUrl || process.env.REDIS_URL || 'redis://localhost:6379')
+    this.redis = getRedisClient(redisUrl || process.env.REDIS_URL) as any
 
     this.config = {
       l1: {

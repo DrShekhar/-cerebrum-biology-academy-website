@@ -3,14 +3,17 @@
  * Designed for millions of concurrent students with sub-millisecond response times
  */
 
+import { getRedisClient } from '@/lib/cache/redis'
+
 // Conditional import for Edge Runtime compatibility
 let Redis: any = null
 
 // Check if we're in Edge Runtime before attempting any imports
-const isEdgeRuntime = typeof EdgeRuntime !== 'undefined' ||
-                     typeof process === 'undefined' ||
-                     !process.nextTick ||
-                     typeof window !== 'undefined'
+const isEdgeRuntime =
+  typeof EdgeRuntime !== 'undefined' ||
+  typeof process === 'undefined' ||
+  !process.nextTick ||
+  typeof window !== 'undefined'
 
 if (!isEdgeRuntime) {
   try {
@@ -80,7 +83,7 @@ export class DistributedCacheManager {
         replicas: [],
         cluster: false,
         maxRetries: 3,
-        retryDelayOnFailover: 100
+        retryDelayOnFailover: 100,
       },
       defaultTTL: 3600,
       compressionThreshold: 1024,
@@ -89,8 +92,8 @@ export class DistributedCacheManager {
         session: 'session:',
         query: 'query:',
         assessment: 'assessment:',
-        content: 'content:'
-      }
+        content: 'content:',
+      },
     }
 
     this.stats = {
@@ -123,20 +126,11 @@ export class DistributedCacheManager {
         },
       })
     } else {
-      this.primaryRedis = new Redis(this.config.redis.primary, {
-        maxRetriesPerRequest: this.config.redis.maxRetries,
-        retryDelayOnFailover: this.config.redis.retryDelayOnFailover,
-      })
+      this.primaryRedis = getRedisClient(this.config.redis.primary) as any
     }
 
-    // Read replicas for load distribution
-    this.replicaRedis = this.config.redis.replicas.map(
-      (replica) =>
-        new Redis(replica, {
-          maxRetriesPerRequest: this.config.redis.maxRetries,
-          lazyConnect: true,
-        })
-    )
+    // Read replicas for load distribution (use mock clients when Redis disabled)
+    this.replicaRedis = this.config.redis.replicas.map((replica) => getRedisClient(replica) as any)
 
     this.setupRedisEventHandlers()
   }

@@ -3,7 +3,7 @@
  * Automatically detects, categorizes, and heals system errors
  */
 
-import Redis from 'ioredis'
+import { getRedisClient } from '@/lib/cache/redis'
 
 interface ErrorPattern {
   type: 'network' | 'api' | 'rate_limit' | 'timeout' | 'provider' | 'unknown'
@@ -56,7 +56,7 @@ export class ErrorHandlingManager {
   private healingInProgress = new Set<string>()
 
   constructor(redisUrl?: string) {
-    this.redis = new Redis(redisUrl || process.env.REDIS_URL || 'redis://localhost:6379')
+    this.redis = getRedisClient(redisUrl || process.env.REDIS_URL) as any
     this.initializeErrorPatterns()
     this.initializeHealingActions()
     this.startErrorMonitoring()

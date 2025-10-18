@@ -9,7 +9,7 @@ import crypto from 'crypto'
 import { HyperIntelligentRouter } from '@/lib/api/HyperIntelligentRouter'
 import { VisualEnhancementEngine } from '@/lib/api/VisualEnhancementEngine'
 import { CreditManagementSystem } from '@/lib/api/CreditManagementSystem'
-import Redis from 'ioredis'
+import { getRedisClient } from '@/lib/cache/redis'
 
 interface WhatsAppMessage {
   id: string
@@ -62,7 +62,7 @@ interface ProcessingResult {
 }
 
 // Initialize services
-const redis = new Redis(process.env.REDIS_URL || 'redis://localhost:6379')
+const redis = getRedisClient(process.env.REDIS_URL)
 const aiRouter = new HyperIntelligentRouter()
 const visualEngine = new VisualEnhancementEngine()
 const creditSystem = new CreditManagementSystem()

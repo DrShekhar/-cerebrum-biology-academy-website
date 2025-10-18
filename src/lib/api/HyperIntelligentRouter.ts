@@ -6,7 +6,7 @@
 
 import { Anthropic } from '@anthropic-ai/sdk'
 import OpenAI from 'openai'
-import Redis from 'ioredis'
+import { getRedisClient } from '@/lib/cache/redis'
 
 interface APIRequest {
   id: string
@@ -87,7 +87,7 @@ export class HyperIntelligentRouter {
       },
     })
 
-    this.redis = new Redis(process.env.REDIS_URL || 'redis://localhost:6379')
+    this.redis = getRedisClient(process.env.REDIS_URL) as any
     this.initializeProviderCapabilities()
     this.startOptimizationEngine()
   }

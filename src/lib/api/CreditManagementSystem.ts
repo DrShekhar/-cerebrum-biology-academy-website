@@ -4,7 +4,7 @@
  * Handles subscription tiers and billing
  */
 
-import Redis from 'ioredis'
+import { getRedisClient } from '@/lib/cache/redis'
 
 interface StudentCredits {
   userId: string
@@ -69,7 +69,7 @@ export class CreditManagementSystem {
   private pricePerCredit = 0.001 // $0.001 per credit
 
   constructor() {
-    this.redis = new Redis(process.env.REDIS_URL || 'redis://localhost:6379')
+    this.redis = getRedisClient(process.env.REDIS_URL) as any
     this.initializeTierLimits()
     this.startDailyResetTask()
     this.startMonthlyResetTask()

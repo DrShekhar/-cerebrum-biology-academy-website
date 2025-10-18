@@ -4,7 +4,7 @@
  * Optimized for educational platform cost control
  */
 
-import Redis from 'ioredis'
+import { getRedisClient } from '@/lib/cache/redis'
 
 interface CostRecord {
   id: string
@@ -64,12 +64,15 @@ interface CostMetrics {
     savings: number
     budgetUtilization: number
   }
-  providerBreakdown: Record<string, {
-    spend: number
-    requests: number
-    averageCost: number
-    percentage: number
-  }>
+  providerBreakdown: Record<
+    string,
+    {
+      spend: number
+      requests: number
+      averageCost: number
+      percentage: number
+    }
+  >
   topCostDrivers: Array<{
     category: string
     spend: number
@@ -98,7 +101,7 @@ export class CostTrackingEngine {
   private maxCostPerRequest = 0.05 // $0.05 max per request
 
   constructor(redisUrl?: string) {
-    this.redis = new Redis(redisUrl || process.env.REDIS_URL || 'redis://localhost:6379')
+    this.redis = getRedisClient(redisUrl || process.env.REDIS_URL) as any
     this.initializeCostTracking()
   }
 
@@ -145,7 +148,7 @@ export class CostTrackingEngine {
       id: this.generateRecordId(),
       timestamp: new Date(),
       ...costData,
-      totalTokens: costData.inputTokens + costData.outputTokens
+      totalTokens: costData.inputTokens + costData.outputTokens,
     }
 
     // Store in memory and Redis
@@ -162,7 +165,7 @@ export class CostTrackingEngine {
       cost: `$${record.cost.toFixed(4)}`,
       tokens: record.totalTokens,
       cached: record.metadata.cached ? '🎯' : '🔄',
-      type: record.requestType
+      type: record.requestType,
     })
 
     // Clean up old records periodically
@@ -181,9 +184,9 @@ export class CostTrackingEngine {
     const oneMonthAgo = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000)
 
     // Filter records by time period
-    const dailyRecords = this.costRecords.filter(r => r.timestamp >= oneDayAgo)
-    const weeklyRecords = this.costRecords.filter(r => r.timestamp >= oneWeekAgo)
-    const monthlyRecords = this.costRecords.filter(r => r.timestamp >= oneMonthAgo)
+    const dailyRecords = this.costRecords.filter((r) => r.timestamp >= oneDayAgo)
+    const weeklyRecords = this.costRecords.filter((r) => r.timestamp >= oneWeekAgo)
+    const monthlyRecords = this.costRecords.filter((r) => r.timestamp >= oneMonthAgo)
 
     // Calculate metrics for each period
     const daily = this.calculatePeriodMetrics(dailyRecords)
@@ -204,7 +207,7 @@ export class CostTrackingEngine {
       weekly,
       monthly,
       providerBreakdown,
-      topCostDrivers
+      topCostDrivers,
     }
   }
 
@@ -218,7 +221,7 @@ export class CostTrackingEngine {
     totalSavings: number
     savingsRate: number
   } {
-    const cachedRequests = this.costRecords.filter(r => r.metadata.cached)
+    const cachedRequests = this.costRecords.filter((r) => r.metadata.cached)
     const totalRequests = this.costRecords.length
 
     // Estimate savings from caching (cached requests would have cost full price)
@@ -251,7 +254,7 @@ export class CostTrackingEngine {
       routingOptimizationSavings,
       modelOptimizationSavings,
       totalSavings,
-      savingsRate
+      savingsRate,
     }
   }
 
@@ -262,12 +265,7 @@ export class CostTrackingEngine {
     const metrics = await this.getCostMetrics()
 
     // Check daily budget
-    this.checkBudgetThreshold(
-      metrics.daily.spend,
-      this.dailyBudget,
-      'daily',
-      'Daily budget alert'
-    )
+    this.checkBudgetThreshold(metrics.daily.spend, this.dailyBudget, 'daily', 'Daily budget alert')
 
     // Check weekly budget
     this.checkBudgetThreshold(
@@ -311,7 +309,7 @@ export class CostTrackingEngine {
         'Immediately enable cost-saving mode',
         'Switch to lowest-cost providers only',
         'Increase cache hit rate',
-        'Review and pause non-critical requests'
+        'Review and pause non-critical requests',
       ]
     } else if (utilization >= this.criticalThreshold) {
       alertType = 'critical'
@@ -320,7 +318,7 @@ export class CostTrackingEngine {
         'Enable aggressive cost optimization',
         'Prioritize Google AI for new requests',
         'Increase cache TTL for educational content',
-        'Review high-cost request patterns'
+        'Review high-cost request patterns',
       ]
     } else if (utilization >= this.warningThreshold) {
       alertType = 'warning'
@@ -329,7 +327,7 @@ export class CostTrackingEngine {
         'Monitor spending closely',
         'Optimize request routing',
         'Review cache effectiveness',
-        'Consider batch processing for bulk requests'
+        'Consider batch processing for bulk requests',
       ]
     }
 
@@ -340,7 +338,7 @@ export class CostTrackingEngine {
         currentSpend,
         budgetLimit,
         threshold: utilization,
-        recommendations
+        recommendations,
       })
     }
   }
@@ -354,11 +352,12 @@ export class CostTrackingEngine {
     if (recentRecords.length < 20) return // Need sufficient data
 
     // Check for cost spikes
-    const recentCosts = recentRecords.map(r => r.cost)
+    const recentCosts = recentRecords.map((r) => r.cost)
     const averageCost = recentCosts.reduce((a, b) => a + b, 0) / recentCosts.length
     const maxCost = Math.max(...recentCosts)
 
-    if (maxCost > averageCost * 5) { // Cost spike > 5x average
+    if (maxCost > averageCost * 5) {
+      // Cost spike > 5x average
       this.generateAlert({
         type: 'warning',
         message: `💸 Cost spike detected: Request cost $${maxCost.toFixed(4)} is ${(maxCost / averageCost).toFixed(1)}x average`,
@@ -369,19 +368,23 @@ export class CostTrackingEngine {
           'Review high-cost request details',
           'Check for inefficient prompt patterns',
           'Consider prompt optimization',
-          'Verify model selection is appropriate'
-        ]
+          'Verify model selection is appropriate',
+        ],
       })
     }
 
     // Check for unusual provider distribution
-    const providerCounts = recentRecords.reduce((acc, record) => {
-      acc[record.provider] = (acc[record.provider] || 0) + 1
-      return acc
-    }, {} as Record<string, number>)
+    const providerCounts = recentRecords.reduce(
+      (acc, record) => {
+        acc[record.provider] = (acc[record.provider] || 0) + 1
+        return acc
+      },
+      {} as Record<string, number>
+    )
 
     const expensiveProviderUsage = (providerCounts['openai'] || 0) / recentRecords.length
-    if (expensiveProviderUsage > 0.7) { // More than 70% expensive provider usage
+    if (expensiveProviderUsage > 0.7) {
+      // More than 70% expensive provider usage
       this.generateAlert({
         type: 'warning',
         message: `📊 High expensive provider usage: ${(expensiveProviderUsage * 100).toFixed(1)}% OpenAI requests`,
@@ -392,8 +395,8 @@ export class CostTrackingEngine {
           'Increase Google AI usage for cost savings',
           'Review provider routing logic',
           'Check if Claude is available for reasoning tasks',
-          'Consider batch processing for bulk requests'
-        ]
+          'Consider batch processing for bulk requests',
+        ],
       })
     }
   }
@@ -412,7 +415,7 @@ export class CostTrackingEngine {
     const alert: BudgetAlert = {
       id: this.generateAlertId(),
       timestamp: new Date(),
-      ...alertData
+      ...alertData,
     }
 
     this.alerts.push(alert)
@@ -446,12 +449,12 @@ export class CostTrackingEngine {
       'Enabled cost-saving mode',
       'Switched to Google AI as primary provider',
       'Increased cache TTL to maximum',
-      'Enabled request queuing for optimization'
+      'Enabled request queuing for optimization',
     ]
 
     alert.autoActions = autoActions
 
-    autoActions.forEach(action => {
+    autoActions.forEach((action) => {
       console.log(`🤖 AUTO-ACTION: ${action}`)
     })
   }
@@ -470,7 +473,7 @@ export class CostTrackingEngine {
     const averageCost = requests > 0 ? spend / requests : 0
 
     // Calculate savings from cached requests
-    const cachedRequests = records.filter(r => r.metadata.cached)
+    const cachedRequests = records.filter((r) => r.metadata.cached)
     const savings = cachedRequests.reduce((sum, r) => {
       return sum + this.estimateRequestCost(r)
     }, 0)
@@ -481,22 +484,25 @@ export class CostTrackingEngine {
   /**
    * Calculate provider breakdown
    */
-  private calculateProviderBreakdown(records: CostRecord[]): Record<string, {
-    spend: number
-    requests: number
-    averageCost: number
-    percentage: number
-  }> {
+  private calculateProviderBreakdown(records: CostRecord[]): Record<
+    string,
+    {
+      spend: number
+      requests: number
+      averageCost: number
+      percentage: number
+    }
+  > {
     const totalSpend = records.reduce((sum, r) => sum + r.cost, 0)
     const breakdown: Record<string, any> = {}
 
-    records.forEach(record => {
+    records.forEach((record) => {
       if (!breakdown[record.provider]) {
         breakdown[record.provider] = {
           spend: 0,
           requests: 0,
           averageCost: 0,
-          percentage: 0
+          percentage: 0,
         }
       }
 
@@ -505,7 +511,7 @@ export class CostTrackingEngine {
     })
 
     // Calculate averages and percentages
-    Object.keys(breakdown).forEach(provider => {
+    Object.keys(breakdown).forEach((provider) => {
       const data = breakdown[provider]
       data.averageCost = data.spend / data.requests
       data.percentage = totalSpend > 0 ? (data.spend / totalSpend) * 100 : 0
@@ -525,17 +531,20 @@ export class CostTrackingEngine {
     const totalSpend = records.reduce((sum, r) => sum + r.cost, 0)
 
     // Group by request type
-    const requestTypeSpend = records.reduce((acc, record) => {
-      acc[record.requestType] = (acc[record.requestType] || 0) + record.cost
-      return acc
-    }, {} as Record<string, number>)
+    const requestTypeSpend = records.reduce(
+      (acc, record) => {
+        acc[record.requestType] = (acc[record.requestType] || 0) + record.cost
+        return acc
+      },
+      {} as Record<string, number>
+    )
 
     // Convert to array and sort
     const drivers = Object.entries(requestTypeSpend)
       .map(([category, spend]) => ({
         category,
         spend,
-        percentage: totalSpend > 0 ? (spend / totalSpend) * 100 : 0
+        percentage: totalSpend > 0 ? (spend / totalSpend) * 100 : 0,
       }))
       .sort((a, b) => b.spend - a.spend)
 
@@ -551,9 +560,9 @@ export class CostTrackingEngine {
 
     // Estimated costs per 1K tokens by provider
     const providerCosts = {
-      'google': 0.0002,
-      'anthropic': 0.008,
-      'openai': 0.015
+      google: 0.0002,
+      anthropic: 0.008,
+      openai: 0.015,
     }
 
     const costPer1K = providerCosts[record.provider as keyof typeof providerCosts] || 0.01
@@ -575,7 +584,7 @@ export class CostTrackingEngine {
   private estimatePremiumModelCost(record: CostRecord): number {
     // Estimate cost if premium model was used
     const tokenCount = record.totalTokens
-    return (tokenCount / 1000) * 0.030 // Premium model pricing
+    return (tokenCount / 1000) * 0.03 // Premium model pricing
   }
 
   /**
@@ -583,9 +592,12 @@ export class CostTrackingEngine {
    */
   private startAlertMonitoring(): void {
     // Check for alerts every 5 minutes
-    setInterval(async () => {
-      await this.checkBudgetAlerts()
-    }, 5 * 60 * 1000)
+    setInterval(
+      async () => {
+        await this.checkBudgetAlerts()
+      },
+      5 * 60 * 1000
+    )
 
     console.log('🔔 Alert monitoring started')
   }
@@ -597,7 +609,8 @@ export class CostTrackingEngine {
     try {
       const keys = await this.redis.keys('ai:cost:record:*')
 
-      for (const key of keys.slice(-1000)) { // Load last 1000 records
+      for (const key of keys.slice(-1000)) {
+        // Load last 1000 records
         const data = await this.redis.get(key)
         if (data) {
           const record = JSON.parse(data) as CostRecord
@@ -640,9 +653,7 @@ export class CostTrackingEngine {
   private async cleanupOldRecords(): Promise<void> {
     const thirtyDaysAgo = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000)
 
-    this.costRecords = this.costRecords.filter(record =>
-      record.timestamp >= thirtyDaysAgo
-    )
+    this.costRecords = this.costRecords.filter((record) => record.timestamp >= thirtyDaysAgo)
 
     console.log('🧹 Cleaned up old cost records')
   }
@@ -660,10 +671,14 @@ export class CostTrackingEngine {
 
   private getAlertEmoji(type: string): string {
     switch (type) {
-      case 'emergency': return '🚨'
-      case 'critical': return '⚠️'
-      case 'warning': return '⚡'
-      default: return '📊'
+      case 'emergency':
+        return '🚨'
+      case 'critical':
+        return '⚠️'
+      case 'warning':
+        return '⚡'
+      default:
+        return '📊'
     }
   }
 
@@ -674,11 +689,7 @@ export class CostTrackingEngine {
   /**
    * Set budget limits
    */
-  setBudgets(budgets: {
-    daily?: number
-    weekly?: number
-    monthly?: number
-  }): void {
+  setBudgets(budgets: { daily?: number; weekly?: number; monthly?: number }): void {
     if (budgets.daily) this.dailyBudget = budgets.daily
     if (budgets.weekly) this.weeklyBudget = budgets.weekly
     if (budgets.monthly) this.monthlyBudget = budgets.monthly
@@ -686,7 +697,7 @@ export class CostTrackingEngine {
     console.log('💰 Budget limits updated:', {
       daily: `$${this.dailyBudget}`,
       weekly: `$${this.weeklyBudget}`,
-      monthly: `$${this.monthlyBudget}`
+      monthly: `$${this.monthlyBudget}`,
     })
   }
 
@@ -694,9 +705,7 @@ export class CostTrackingEngine {
    * Get recent alerts
    */
   getRecentAlerts(limit: number = 10): BudgetAlert[] {
-    return this.alerts
-      .sort((a, b) => b.timestamp.getTime() - a.timestamp.getTime())
-      .slice(0, limit)
+    return this.alerts.sort((a, b) => b.timestamp.getTime() - a.timestamp.getTime()).slice(0, limit)
   }
 
   /**
@@ -714,7 +723,7 @@ export class CostTrackingEngine {
         budgetUtilization: metrics.monthly.budgetUtilization,
         totalSavings: savings.totalSavings,
         savingsRate: savings.savingsRate * 100,
-        targetSavingsRate: this.targetSavingsRate * 100
+        targetSavingsRate: this.targetSavingsRate * 100,
       },
       metrics,
       savings,
@@ -723,8 +732,9 @@ export class CostTrackingEngine {
       performance: {
         averageCostPerRequest: metrics.monthly.averageCost,
         targetCostPerRequest: this.maxCostPerRequest,
-        costEfficiency: metrics.monthly.averageCost < this.maxCostPerRequest ? 'Good' : 'Needs Improvement'
-      }
+        costEfficiency:
+          metrics.monthly.averageCost < this.maxCostPerRequest ? 'Good' : 'Needs Improvement',
+      },
     }
   }
 
@@ -749,11 +759,13 @@ export class CostTrackingEngine {
     // Provider distribution recommendations
     const openaiUsage = metrics.providerBreakdown['openai']?.percentage || 0
     if (openaiUsage > 60) {
-      recommendations.push('Reduce OpenAI usage and increase Google AI for similar quality at lower cost')
+      recommendations.push(
+        'Reduce OpenAI usage and increase Google AI for similar quality at lower cost'
+      )
     }
 
     // Request type recommendations
-    const chatCost = metrics.topCostDrivers.find(d => d.category === 'chat')
+    const chatCost = metrics.topCostDrivers.find((d) => d.category === 'chat')
     if (chatCost && chatCost.percentage > 70) {
       recommendations.push('Implement batch processing for similar chat requests')
       recommendations.push('Enhance semantic caching for educational Q&A')

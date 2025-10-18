@@ -6,7 +6,7 @@
 
 import { Anthropic } from '@anthropic-ai/sdk'
 import OpenAI from 'openai'
-import Redis from 'ioredis'
+import { getRedisClient } from '@/lib/cache/redis'
 import { CircuitBreaker } from './CircuitBreaker'
 import { RetryManager } from './RetryManager'
 import { PerformanceMonitor } from './PerformanceMonitor'
@@ -78,7 +78,7 @@ export class AIGateway {
   private isInitialized = false
 
   constructor() {
-    this.redis = new Redis(process.env.REDIS_URL || 'redis://localhost:6379')
+    this.redis = getRedisClient(process.env.REDIS_URL) as any
     this.retryManager = new RetryManager()
     this.performanceMonitor = new PerformanceMonitor()
     this.costOptimizer = new CostOptimizer()

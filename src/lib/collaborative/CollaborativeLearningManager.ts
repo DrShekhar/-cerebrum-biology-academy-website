@@ -4,7 +4,7 @@
  */
 
 import { WebSocketServer, WebSocket } from 'ws'
-import Redis from 'ioredis'
+import { getRedisClient } from '@/lib/cache/redis'
 
 interface StudyRoom {
   id: string
@@ -158,13 +158,8 @@ export class CollaborativeLearningManager {
       this.wss = null as any
     }
 
-    // Skip Redis in development if not configured
-    if (!redisUrl && !process.env.REDIS_URL) {
-      console.log('📬 Redis not configured, using in-memory storage for development')
-      this.redis = null as any
-    } else {
-      this.redis = new Redis(redisUrl || process.env.REDIS_URL || 'redis://localhost:6379')
-    }
+    // Use Redis client factory (handles enabled/disabled state automatically)
+    this.redis = getRedisClient(redisUrl || process.env.REDIS_URL)
 
     this.setupWebSocketHandlers()
     this.startMatchmaking()

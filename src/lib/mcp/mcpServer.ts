@@ -6,7 +6,7 @@
 
 import { MCPServer } from '@modelcontextprotocol/sdk'
 import { Anthropic } from '@anthropic-ai/sdk'
-import Redis from 'ioredis'
+import { getRedisClient } from '@/lib/cache/redis'
 import WebSocket from 'ws'
 import compression from 'compression'
 import helmet from 'helmet'
@@ -92,15 +92,8 @@ export class CerebrumMCPServer {
       apiKey: process.env.ANTHROPIC_API_KEY || '',
     })
 
-    // Initialize Redis for caching and session management
-    this.redis = new Redis({
-      host: this.config.redis.host,
-      port: this.config.redis.port,
-      password: this.config.redis.password,
-      db: this.config.redis.db,
-      retryDelayOnFailure: 1000,
-      maxRetriesPerRequest: 3,
-    })
+    // Initialize Redis for caching and session management (uses factory with graceful degradation)
+    this.redis = getRedisClient(process.env.REDIS_URL) as any
 
     // Initialize security services
     this.securityManager = new SecurityManager(this.config.security)

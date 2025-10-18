@@ -3,7 +3,7 @@
  * Tracks metrics, latency, costs, and provides observability
  */
 
-import Redis from 'ioredis'
+import { getRedisClient } from '@/lib/cache/redis'
 
 interface RequestMetric {
   requestId: string
@@ -78,7 +78,7 @@ export class PerformanceMonitor {
   }
 
   constructor() {
-    this.redis = new Redis(process.env.REDIS_URL || 'redis://localhost:6379')
+    this.redis = getRedisClient(process.env.REDIS_URL) as any
   }
 
   async initialize(): Promise<void> {

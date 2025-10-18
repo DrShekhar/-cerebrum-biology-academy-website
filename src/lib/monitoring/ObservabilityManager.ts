@@ -3,7 +3,7 @@
  * Comprehensive system health, performance, and business metrics tracking
  */
 
-import Redis from 'ioredis'
+import { getRedisClient } from '@/lib/cache/redis'
 
 interface SystemMetrics {
   timestamp: number
@@ -159,7 +159,7 @@ export class ObservabilityManager {
   private isCollecting = false
 
   constructor(redisUrl?: string) {
-    this.redis = new Redis(redisUrl || process.env.REDIS_URL || 'redis://localhost:6379')
+    this.redis = getRedisClient(redisUrl || process.env.REDIS_URL) as any
     this.config = this.getDefaultConfig()
     this.startMetricsCollection()
     this.startAlertProcessing()
