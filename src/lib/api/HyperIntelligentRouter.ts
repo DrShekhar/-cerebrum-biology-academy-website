@@ -63,33 +63,49 @@ interface TokenPrediction {
 }
 
 export class HyperIntelligentRouter {
-  private claude: Anthropic
-  private openai: OpenAI
+  private claude: Anthropic | null = null
+  private openai: OpenAI | null = null
   private redis: Redis
   private providerCapabilities: Map<string, ProviderCapabilities>
   private semanticCache: Map<string, SemanticCacheEntry[]> = new Map()
   private requestHistory: Map<string, APIRequest[]> = new Map()
 
   constructor() {
-    this.claude = new Anthropic({
-      apiKey: process.env.ANTHROPIC_API_KEY!,
-      // Undocumented: Enable beta features for enhanced reasoning
-      defaultHeaders: {
-        'anthropic-beta': 'computer-use-2024-10-22,prompt-caching-2024-07-31',
-      },
-    })
-
-    this.openai = new OpenAI({
-      apiKey: process.env.OPENAI_API_KEY!,
-      // Undocumented: Enable experimental features
-      defaultHeaders: {
-        'OpenAI-Beta': 'assistants-v2,function-calling-parallel',
-      },
-    })
-
+    // Lazy initialization - only create clients when API keys are available
+    // This prevents build-time failures in CI/CD environments
     this.redis = getRedisClient(process.env.REDIS_URL) as any
     this.initializeProviderCapabilities()
     this.startOptimizationEngine()
+  }
+
+  private ensureClaude(): Anthropic {
+    if (!this.claude && process.env.ANTHROPIC_API_KEY) {
+      this.claude = new Anthropic({
+        apiKey: process.env.ANTHROPIC_API_KEY,
+        defaultHeaders: {
+          'anthropic-beta': 'computer-use-2024-10-22,prompt-caching-2024-07-31',
+        },
+      })
+    }
+    if (!this.claude) {
+      throw new Error('Anthropic API key not configured')
+    }
+    return this.claude
+  }
+
+  private ensureOpenAI(): OpenAI {
+    if (!this.openai && process.env.OPENAI_API_KEY) {
+      this.openai = new OpenAI({
+        apiKey: process.env.OPENAI_API_KEY,
+        defaultHeaders: {
+          'OpenAI-Beta': 'assistants-v2,function-calling-parallel',
+        },
+      })
+    }
+    if (!this.openai) {
+      throw new Error('OpenAI API key not configured')
+    }
+    return this.openai
   }
 
   /**
@@ -352,7 +368,8 @@ export class HyperIntelligentRouter {
     // Claude-specific optimizations
     const systemPrompt = this.buildClaudeSystemPrompt(request)
 
-    const response = await this.claude.messages.create({
+    const claude = this.ensureClaude()
+    const response = await claude.messages.create({
       model: 'claude-3-5-sonnet-20241022',
       max_tokens: request.maxTokens || 1000,
       temperature: 0.7,
@@ -392,7 +409,8 @@ export class HyperIntelligentRouter {
     prompt: string,
     startTime: number
   ): Promise<APIResponse> {
-    const response = await this.openai.chat.completions.create({
+    const openai = this.ensureOpenAI()
+    const response = await openai.chat.completions.create({
       model: 'gpt-4-turbo-preview',
       messages: [
         {
@@ -435,7 +453,8 @@ export class HyperIntelligentRouter {
     prompt: string,
     startTime: number
   ): Promise<APIResponse> {
-    const response = await this.openai.chat.completions.create({
+    const openai = this.ensureOpenAI()
+    const response = await openai.chat.completions.create({
       model: 'gpt-3.5-turbo',
       messages: [
         {
@@ -555,7 +574,8 @@ export class HyperIntelligentRouter {
   }
 
   private async generateEmbedding(text: string): Promise<number[]> {
-    const response = await this.openai.embeddings.create({
+    const openai = this.ensureOpenAI()
+    const response = await openai.embeddings.create({
       model: 'text-embedding-3-small',
       input: text.substring(0, 8000), // Limit input length
     })
