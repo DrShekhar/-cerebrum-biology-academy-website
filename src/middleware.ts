@@ -142,13 +142,14 @@ async function checkAuthentication(request: NextRequest): Promise<NextResponse |
     return null // Token is valid
   } catch (error) {
     // Invalid token
-    securityHardening.logSecurityEvent({
-      type: 'authentication',
-      severity: 'medium',
-      ipAddress: getClientIP(request),
-      userAgent: request.headers.get('user-agent') || 'unknown',
-      details: { error: 'Invalid token', path: request.nextUrl.pathname },
-    })
+    // TEMPORARILY DISABLED: SecurityHardening logging
+    // securityHardening.logSecurityEvent({
+    //   type: 'authentication',
+    //   severity: 'medium',
+    //   ipAddress: getClientIP(request),
+    //   userAgent: request.headers.get('user-agent') || 'unknown',
+    //   details: { error: 'Invalid token', path: request.nextUrl.pathname },
+    // })
 
     if (request.nextUrl.pathname.startsWith('/api/')) {
       return NextResponse.json({ error: 'Invalid authentication token' }, { status: 401 })
@@ -169,13 +170,14 @@ async function applyAPISecurityMeasures(request: NextRequest): Promise<NextRespo
   )
 
   if (requiresAPIKey && (!apiKey || !isValidAPIKey(apiKey))) {
-    securityHardening.logSecurityEvent({
-      type: 'authorization',
-      severity: 'high',
-      ipAddress: getClientIP(request),
-      userAgent: request.headers.get('user-agent') || 'unknown',
-      details: { error: 'Invalid or missing API key', path: request.nextUrl.pathname },
-    })
+    // TEMPORARILY DISABLED: SecurityHardening logging
+    // securityHardening.logSecurityEvent({
+    //   type: 'authorization',
+    //   severity: 'high',
+    //   ipAddress: getClientIP(request),
+    //   userAgent: request.headers.get('user-agent') || 'unknown',
+    //   details: { error: 'Invalid or missing API key', path: request.nextUrl.pathname },
+    // })
 
     return NextResponse.json({ error: 'Valid API key required' }, { status: 403 })
   }
