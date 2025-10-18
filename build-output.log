@@ -1,0 +1,57 @@
+
+> cerebrum-biology-academy-website@1.0.0 build
+> next build
+
+   ▲ Next.js 15.5.3
+   - Environments: .env.local, .env.production, .env
+
+   Creating an optimized production build ...
+ ⚠ Compiled with warnings in 41s
+
+./src/app/api/adaptive-testing.disabled/[sessionId]/analytics/route.ts
+Attempted import error: 'getServerSession' is not exported from 'next-auth' (imported as 'getServerSession').
+
+Import trace for requested module:
+./src/app/api/adaptive-testing.disabled/[sessionId]/analytics/route.ts
+
+./src/app/api/adaptive-testing.disabled/[sessionId]/complete/route.ts
+Attempted import error: 'getServerSession' is not exported from 'next-auth' (imported as 'getServerSession').
+
+Import trace for requested module:
+./src/app/api/adaptive-testing.disabled/[sessionId]/complete/route.ts
+
+./src/app/api/adaptive-testing.disabled/[sessionId]/response/route.ts
+Attempted import error: 'getServerSession' is not exported from 'next-auth' (imported as 'getServerSession').
+
+Import trace for requested module:
+./src/app/api/adaptive-testing.disabled/[sessionId]/response/route.ts
+
+./src/app/api/adaptive-testing.disabled/[sessionId]/start/route.ts
+Attempted import error: 'getServerSession' is not exported from 'next-auth' (imported as 'getServerSession').
+
+Import trace for requested module:
+./src/app/api/adaptive-testing.disabled/[sessionId]/start/route.ts
+
+./src/app/api/adaptive-testing.disabled/create-session/route.ts
+Attempted import error: 'getServerSession' is not exported from 'next-auth' (imported as 'getServerSession').
+
+Import trace for requested module:
+./src/app/api/adaptive-testing.disabled/create-session/route.ts
+
+   Skipping validation of types
+   Skipping linting
+   Collecting page data ...
+Error: JWT_SECRET and JWT_REFRESH_SECRET must be set in production
+    at 61501 (.next/server/chunks/5363.js:1:512)
+    at c (.next/server/webpack-runtime.js:1:128)
+    at 3150 (.next/server/app/api/adaptive-testing.disabled/[sessionId]/response/route.js:1:585)
+    at c (.next/server/webpack-runtime.js:1:128)
+    at <unknown> (.next/server/app/api/adaptive-testing.disabled/[sessionId]/response/route.js:1:8805)
+    at c.X (.next/server/webpack-runtime.js:1:1206)
+    at <unknown> (.next/server/app/api/adaptive-testing.disabled/[sessionId]/response/route.js:1:8750)
+    at Object.<anonymous> (.next/server/app/api/adaptive-testing.disabled/[sessionId]/response/route.js:1:8836)
+
+> Build error occurred
+[Error: Failed to collect page data for /api/adaptive-testing.disabled/[sessionId]/response] {
+  type: 'Error'
+}

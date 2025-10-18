@@ -11,10 +11,10 @@
  * - View material details
  */
 
-import { useEffect, useState } from 'react'
-
 // Force dynamic rendering since this requires authentication
 export const dynamic = 'force-dynamic'
+
+import { useEffect, useState } from 'react'
 import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import {
