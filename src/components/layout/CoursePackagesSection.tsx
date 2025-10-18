@@ -272,7 +272,7 @@ export function CoursePackagesSection({ onBookDemo, className = '' }: CoursePack
   const getBadgeStyles = (color: string) => {
     const styles = {
       gold: 'bg-gradient-to-r from-yellow-400 to-orange-500 text-white',
-      blue: 'bg-gradient-to-r from-blue-500 to-purple-600 text-white',
+      blue: 'bg-teal-600 text-white',
       green: 'bg-gradient-to-r from-green-500 to-emerald-600 text-white',
     }
     return styles[color as keyof typeof styles] || styles.blue
@@ -281,7 +281,7 @@ export function CoursePackagesSection({ onBookDemo, className = '' }: CoursePack
   const getCategoryStyles = (category: string) => {
     const styles = {
       premium: 'border-2 border-yellow-400 bg-gradient-to-br from-yellow-50 to-orange-50',
-      standard: 'border-2 border-blue-400 bg-gradient-to-br from-blue-50 to-indigo-50',
+      standard: 'border-2 border-teal-400 bg-navy-50',
       foundation: 'border border-gray-300 bg-gradient-to-br from-gray-50 to-slate-50',
       crash: 'border border-orange-300 bg-gradient-to-br from-orange-50 to-red-50',
     }
@@ -299,14 +299,14 @@ export function CoursePackagesSection({ onBookDemo, className = '' }: CoursePack
           transition={{ duration: 0.8 }}
           className="text-center space-y-6 mb-16"
         >
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-100 to-purple-100 border border-blue-200 rounded-full px-4 py-2">
+          <div className="inline-flex items-center gap-2 bg-navy-100 border border-teal-300 rounded-full px-4 py-2">
             <CrownIcon className="h-5 w-5 text-blue-600" />
             <span className="text-sm font-semibold text-blue-800">
               Specialized Programs for Failed NEET Students
             </span>
           </div>
 
-          <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-6xl font-bold text-navy-900">
             Transform Your Failure
             <br />
             Into MBBS Success
@@ -882,7 +882,7 @@ function EMICalculatorModal({
 function getBadgeStyles(color: string) {
   const styles = {
     gold: 'bg-gradient-to-r from-yellow-400 to-orange-500 text-white',
-    blue: 'bg-gradient-to-r from-blue-500 to-purple-600 text-white',
+    blue: 'bg-teal-600 text-white',
     green: 'bg-gradient-to-r from-green-500 to-emerald-600 text-white',
   }
   return styles[color as keyof typeof styles] || styles.blue

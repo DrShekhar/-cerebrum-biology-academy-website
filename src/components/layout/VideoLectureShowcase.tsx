@@ -188,7 +188,7 @@ export function VideoLectureShowcase() {
   }
 
   return (
-    <section className="py-20 bg-gradient-to-br from-indigo-50 via-white to-blue-50">
+    <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header Section */}
         <motion.div
@@ -403,7 +403,7 @@ export function VideoLectureShowcase() {
 
         {/* Bottom CTA */}
         <motion.div
-          className="text-center bg-gradient-to-r from-indigo-600 via-blue-600 to-purple-600 rounded-3xl p-12 text-white"
+          className="text-center bg-teal-600 rounded-3xl p-12 text-white"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}

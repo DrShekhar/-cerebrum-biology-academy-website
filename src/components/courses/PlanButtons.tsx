@@ -46,19 +46,19 @@ export function PlanButtons({
   const getPlanConfig = (seriesType: string): PlanOption[] => {
     const baseConfigs = {
       pinnacle: {
-        gradient: 'from-purple-600 via-pink-500 to-purple-700',
-        cardGradient: 'from-purple-50 via-pink-50 to-purple-100',
-        accentColor: 'purple',
+        gradient: 'from-navy-700 to-navy-900',
+        cardGradient: 'from-navy-50 to-navy-100',
+        accentColor: 'navy',
       },
       ascent: {
-        gradient: 'from-blue-600 via-cyan-500 to-blue-700',
-        cardGradient: 'from-blue-50 via-cyan-50 to-blue-100',
-        accentColor: 'blue',
+        gradient: 'from-teal-600 to-teal-700',
+        cardGradient: 'from-teal-50 to-teal-100',
+        accentColor: 'teal',
       },
       pursuit: {
-        gradient: 'from-green-600 via-emerald-500 to-green-700',
-        cardGradient: 'from-green-50 via-emerald-50 to-green-100',
-        accentColor: 'green',
+        gradient: 'from-gold-600 to-gold-700',
+        cardGradient: 'from-gold-50 to-gold-100',
+        accentColor: 'gold',
       },
     }
 
@@ -84,7 +84,7 @@ export function PlanButtons({
         ],
         badge: {
           text: 'INTENSIVE',
-          gradient: 'from-orange-400 to-red-500',
+          gradient: 'from-gold-500 to-gold-600',
           icon: Zap,
         },
       },
@@ -107,7 +107,7 @@ export function PlanButtons({
         ],
         badge: {
           text: 'POPULAR',
-          gradient: 'from-blue-400 to-cyan-500',
+          gradient: 'from-teal-500 to-teal-600',
           icon: Star,
         },
         popular: true,
@@ -127,7 +127,7 @@ export function PlanButtons({
         features: ['Recorded Sessions', 'Self-Assessment', 'Community Access', 'Basic Support'],
         badge: {
           text: 'FLEXIBLE',
-          gradient: 'from-green-400 to-emerald-500',
+          gradient: 'from-gold-500 to-gold-600',
           icon: Target,
         },
       },
@@ -174,7 +174,7 @@ export function PlanButtons({
                 {isSelected && (
                   <motion.div
                     layoutId={`plan-selection-${seriesId}`}
-                    className="absolute -inset-1 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-3xl blur-sm"
+                    className="absolute -inset-1 bg-gradient-to-r from-teal-500/20 to-teal-600/20 rounded-3xl blur-sm"
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.8 }}
@@ -234,7 +234,7 @@ export function PlanButtons({
                       initial={{ scaleX: 0 }}
                       animate={{ scaleX: 1 }}
                       transition={{ delay: 0.5 + index * 0.1, duration: 0.4 }}
-                      className="h-1 bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 rounded-full"
+                      className="h-1 bg-gold-500 rounded-full"
                     />
                   </div>
                 )}
@@ -312,7 +312,7 @@ export function PlanButtons({
                       exit={{ opacity: 0, scale: 0.8 }}
                       className="absolute bottom-4 right-4"
                     >
-                      <div className="w-6 h-6 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full flex items-center justify-center">
+                      <div className="w-6 h-6 bg-teal-600 rounded-full flex items-center justify-center">
                         <Check className="w-3 h-3 text-white" />
                       </div>
                     </motion.div>

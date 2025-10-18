@@ -244,7 +244,7 @@ export function StudentCommunity() {
   return (
     <div className="max-w-6xl mx-auto p-6 space-y-6">
       {/* Header */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-6 text-white">
+      <div className="bg-gradient-to-r from-teal-600 to-navy-700 rounded-lg p-6 text-white">
         <div className="flex items-center justify-between">
           <div>
             <h1 className="text-2xl font-bold flex items-center gap-2">
@@ -535,7 +535,7 @@ export function StudentCommunity() {
                 transition={{ delay: student.rank * 0.1 }}
                 className={`flex items-center justify-between p-4 rounded-lg border-2 transition-all ${
                   student.rank <= 3
-                    ? 'bg-gradient-to-r from-yellow-50 to-orange-50 border-yellow-200'
+                    ? 'bg-gold-50 border-gold-200'
                     : 'bg-gray-50 border-gray-200 hover:border-blue-200'
                 }`}
               >

@@ -29,23 +29,23 @@ export function AppleCourseCard({ course, selectedTier = 'ascent' }: AppleCourse
     pinnacle: {
       name: 'Pinnacle',
       gradient: 'from-slate-900 to-slate-700',
-      accentColor: 'from-indigo-600 to-blue-600',
-      bgColor: 'bg-indigo-50/50',
-      borderColor: 'border-indigo-200/60',
+      accentColor: 'from-navy-700 to-navy-900',
+      bgColor: 'bg-navy-50/50',
+      borderColor: 'border-navy-200/60',
     },
     ascent: {
       name: 'Ascent',
       gradient: 'from-slate-900 to-slate-700',
-      accentColor: 'from-emerald-600 to-green-600',
-      bgColor: 'bg-emerald-50/50',
-      borderColor: 'border-emerald-200/60',
+      accentColor: 'from-teal-600 to-teal-700',
+      bgColor: 'bg-teal-50/50',
+      borderColor: 'border-teal-200/60',
     },
     pursuit: {
       name: 'Pursuit',
       gradient: 'from-slate-900 to-slate-700',
-      accentColor: 'from-purple-600 to-violet-600',
-      bgColor: 'bg-purple-50/50',
-      borderColor: 'border-purple-200/60',
+      accentColor: 'from-gold-600 to-gold-700',
+      bgColor: 'bg-gold-50/50',
+      borderColor: 'border-gold-200/60',
     },
   }
 
@@ -108,7 +108,7 @@ export function AppleCourseCard({ course, selectedTier = 'ascent' }: AppleCourse
               animate={{ scale: 1, rotate: 0 }}
               transition={{ delay: 0.4, ...springConfig }}
               className="
-                bg-gradient-to-r from-amber-400 to-orange-400
+                bg-gold-600
                 text-white px-3 py-1.5 rounded-full text-xs font-semibold
                 shadow-sm flex items-center gap-1
               "

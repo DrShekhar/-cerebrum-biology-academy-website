@@ -88,14 +88,14 @@ export function SophisticatedHero({
 
   return (
     <div
-      className={`relative min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 overflow-hidden ${className}`}
+      className={`relative min-h-screen bg-navy-50 overflow-hidden ${className}`}
       onMouseMove={handleMouseMove}
     >
       {/* Dynamic Background Effects */}
       <div className="absolute inset-0">
         {/* Animated Gradient Orbs */}
         <motion.div
-          className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-blue-400/20 to-purple-500/20 rounded-full blur-3xl"
+          className="absolute top-1/4 left-1/4 w-96 h-96 bg-teal-400/10 rounded-full blur-3xl"
           animate={{
             x: mousePosition.x * 0.1,
             y: mousePosition.y * 0.1,
@@ -147,7 +147,7 @@ export function SophisticatedHero({
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600/10 to-purple-600/10 border border-blue-200 rounded-full px-4 py-2"
+              className="inline-flex items-center gap-2 bg-navy-100 border border-teal-300 rounded-full px-4 py-2"
             >
               <SparklesIcon className="h-5 w-5 text-blue-600" />
               <span className="text-sm font-semibold text-blue-800">
@@ -163,13 +163,9 @@ export function SophisticatedHero({
               className="space-y-4"
             >
               <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
-                <span className="bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent">
-                  Master Biology
-                </span>
+                <span className="text-navy-900">Master Biology</span>
                 <br />
-                <span className="bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 bg-clip-text text-transparent">
-                  Like a Harvard Professor
-                </span>
+                <span className="text-teal-700">Like a Harvard Professor</span>
               </h1>
 
               <p className="text-xl lg:text-2xl text-gray-700 leading-relaxed max-w-2xl">

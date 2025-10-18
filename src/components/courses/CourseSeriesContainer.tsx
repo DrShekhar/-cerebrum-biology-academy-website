@@ -268,7 +268,7 @@ export function CourseSeriesContainer({
                 <motion.button
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold py-3 px-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow"
+                  className="bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all"
                 >
                   Proceed to Enrollment
                 </motion.button>

@@ -111,7 +111,7 @@ const uniqueFeatures = [
     title: 'Second Chance Specialists',
     description: 'We ONLY teach failed students. Our entire curriculum is designed for repeaters.',
     icon: Phoenix,
-    color: 'from-orange-500 to-red-600',
+    color: 'from-amber-600 to-amber-700',
     stats: '3000+ failed students converted',
     benefit: 'Specialized failure analysis & recovery',
   },
@@ -120,7 +120,7 @@ const uniqueFeatures = [
     title: 'Emotional Support System',
     description: 'In-house psychologist, parent counseling, peer support groups for mental health.',
     icon: HeartIcon,
-    color: 'from-pink-500 to-rose-600',
+    color: 'from-teal-500 to-teal-600',
     stats: '95% stress reduction reported',
     benefit: 'Mental health = Academic performance',
   },
@@ -129,7 +129,7 @@ const uniqueFeatures = [
     title: 'Small Batch Guarantee',
     description: 'Never more than 25 students. Personal attention tracked daily with Dr. Shekhar.',
     icon: UsersIcon,
-    color: 'from-blue-500 to-indigo-600',
+    color: 'from-navy-600 to-navy-700',
     stats: 'Max 25 students per batch',
     benefit: 'Individual attention guaranteed',
   },
@@ -138,7 +138,7 @@ const uniqueFeatures = [
     title: 'Transparent Results',
     description: 'Third-party audited success rates. Published mark improvements with proof.',
     icon: ShieldCheckIcon,
-    color: 'from-green-500 to-emerald-600',
+    color: 'from-teal-600 to-teal-700',
     stats: 'KPMG audited results',
     benefit: 'No false claims, pure transparency',
   },
@@ -147,7 +147,7 @@ const uniqueFeatures = [
     title: 'Pay After Results',
     description: '40% upfront, 60% after NEET. Performance-linked fee structure available.',
     icon: CurrencyRupeeIcon,
-    color: 'from-purple-500 to-violet-600',
+    color: 'from-amber-700 to-amber-800',
     stats: '60% fees after results',
     benefit: 'Success-aligned payment model',
   },
@@ -198,15 +198,12 @@ export function DifferentiationSection({
   }
 
   return (
-    <section
-      ref={sectionRef}
-      className={`relative py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 overflow-hidden ${className}`}
-    >
+    <section ref={sectionRef} className={`relative py-20 bg-navy-900 overflow-hidden ${className}`}>
       {/* Background Effects */}
       <div className="absolute inset-0">
-        <div className="absolute top-10 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-10 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-emerald-500/5 rounded-full blur-3xl transform -translate-x-1/2 -translate-y-1/2" />
+        <div className="absolute top-10 left-10 w-72 h-72 bg-navy-500/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 right-10 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-teal-500/5 rounded-full blur-3xl transform -translate-x-1/2 -translate-y-1/2" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -217,26 +214,22 @@ export function DifferentiationSection({
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500/20 to-red-500/20 backdrop-blur-sm border border-orange-500/30 rounded-full px-6 py-3 mb-6">
-            <FireIcon className="w-5 h-5 text-orange-400" />
-            <span className="text-orange-300 font-medium">The Brutal Truth</span>
+          <div className="inline-flex items-center gap-2 bg-amber-900/30 backdrop-blur-sm border border-amber-500/30 rounded-full px-6 py-3 mb-6">
+            <FireIcon className="w-5 h-5 text-amber-400" />
+            <span className="text-amber-300 font-medium">The Brutal Truth</span>
           </div>
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
             <span className="text-white">Why </span>
-            <span className="bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent">
-              Failed Students
-            </span>
+            <span className="text-amber-400">Failed Students</span>
             <br />
             <span className="text-white">Choose Us Over </span>
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Allen & Aakash
-            </span>
+            <span className="text-teal-400">Allen & Aakash</span>
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            <span className="text-red-400 font-semibold">We Don't Teach Everyone.</span>{' '}
-            <span className="text-emerald-400 font-semibold">We Resurrect Medical Dreams.</span>
+            <span className="text-amber-400 font-semibold">We Don't Teach Everyone.</span>{' '}
+            <span className="text-teal-400 font-semibold">We Resurrect Medical Dreams.</span>
             <br />
             <span className="text-gray-400 text-lg mt-2 block">
               The only institute in India designed exclusively for failed NEET students.
@@ -252,7 +245,7 @@ export function DifferentiationSection({
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
-            The <span className="text-emerald-400">Honest</span> Comparison
+            The <span className="text-teal-400">Honest</span> Comparison
           </h2>
 
           <PremiumCard variant="luxury" className="overflow-hidden">
@@ -263,11 +256,11 @@ export function DifferentiationSection({
                     <th className="text-left py-4 px-6 text-gray-400 font-medium">Feature</th>
                     <th className="text-center py-4 px-6">
                       <div className="flex flex-col items-center gap-2">
-                        <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center">
+                        <div className="w-12 h-12 bg-teal-600 rounded-full flex items-center justify-center">
                           <TrophyIcon className="w-6 h-6 text-white" />
                         </div>
-                        <span className="font-bold text-emerald-400">Cerebrum Biology</span>
-                        <span className="text-xs text-emerald-300">Failed Student Specialists</span>
+                        <span className="font-bold text-teal-400">Cerebrum Biology</span>
+                        <span className="text-xs text-teal-300">Failed Student Specialists</span>
                       </div>
                     </th>
                     <th className="text-center py-4 px-6">
@@ -304,7 +297,7 @@ export function DifferentiationSection({
                     <motion.tr
                       key={row.feature}
                       className={`border-b border-white/5 hover:bg-white/5 transition-colors ${
-                        row.highlight ? 'bg-emerald-500/5' : ''
+                        row.highlight ? 'bg-teal-500/5' : ''
                       }`}
                       initial={{ opacity: 0, x: -20 }}
                       animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
@@ -313,7 +306,7 @@ export function DifferentiationSection({
                       <td className="py-4 px-6">
                         <div className="flex items-center gap-3">
                           {row.highlight && (
-                            <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
+                            <div className="w-2 h-2 bg-teal-400 rounded-full animate-pulse" />
                           )}
                           <span className="font-medium text-white">{row.feature}</span>
                         </div>
@@ -321,10 +314,8 @@ export function DifferentiationSection({
                       <td className="py-4 px-6 text-center">
                         <div className="flex items-center justify-center gap-2">
                           <span className="text-2xl">{row.cereb_icon}</span>
-                          <span className="font-semibold text-emerald-400">{row.cerebrum}</span>
-                          {row.highlight && (
-                            <CheckCircleIcon className="w-5 h-5 text-emerald-400" />
-                          )}
+                          <span className="font-semibold text-teal-400">{row.cerebrum}</span>
+                          {row.highlight && <CheckCircleIcon className="w-5 h-5 text-teal-400" />}
                         </div>
                       </td>
                       <td className="py-4 px-6 text-center">
@@ -352,7 +343,7 @@ export function DifferentiationSection({
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
-            Our <span className="text-purple-400">Exclusive</span> Advantages
+            Our <span className="text-teal-400">Exclusive</span> Advantages
           </h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
@@ -383,10 +374,10 @@ export function DifferentiationSection({
                         {feature.description}
                       </p>
                       <div className="flex items-center gap-4">
-                        <span className="text-xs font-medium text-emerald-400 bg-emerald-500/20 px-3 py-1 rounded-full">
+                        <span className="text-xs font-medium text-teal-400 bg-teal-500/20 px-3 py-1 rounded-full">
                           {feature.stats}
                         </span>
-                        <span className="text-xs text-purple-300">{feature.benefit}</span>
+                        <span className="text-xs text-teal-300">{feature.benefit}</span>
                       </div>
                     </div>
                   </div>
@@ -417,11 +408,11 @@ export function DifferentiationSection({
                           <p className="text-gray-300 text-lg mb-6 leading-relaxed">
                             {feature.description}
                           </p>
-                          <div className="bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-500/30 rounded-xl p-6">
-                            <div className="text-3xl font-bold text-emerald-400 mb-2">
+                          <div className="bg-teal-900/30 border border-teal-500/30 rounded-xl p-6">
+                            <div className="text-3xl font-bold text-teal-400 mb-2">
                               {feature.stats}
                             </div>
-                            <div className="text-emerald-300 font-medium">{feature.benefit}</div>
+                            <div className="text-teal-300 font-medium">{feature.benefit}</div>
                           </div>
                         </PremiumCard>
                       </motion.div>
@@ -440,15 +431,15 @@ export function DifferentiationSection({
           transition={{ duration: 0.8, delay: 0.6 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
-            Your <span className="text-yellow-400">Personal Attention</span> Calculator
+            Your <span className="text-amber-400">Personal Attention</span> Calculator
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { name: 'Cerebrum Biology', ratio: '1:5', time: '12 min/student', color: 'emerald' },
-              { name: 'JPT Biology', ratio: '1:15', time: '4 min/student', color: 'blue' },
-              { name: 'Aakash', ratio: '1:25', time: '2.4 min/student', color: 'orange' },
-              { name: 'Allen', ratio: '1:30', time: '2 min/student', color: 'red' },
+              { name: 'Cerebrum Biology', ratio: '1:5', time: '12 min/student', color: 'teal' },
+              { name: 'JPT Biology', ratio: '1:15', time: '4 min/student', color: 'navy' },
+              { name: 'Aakash', ratio: '1:25', time: '2.4 min/student', color: 'amber' },
+              { name: 'Allen', ratio: '1:30', time: '2 min/student', color: 'amber' },
             ].map((institute, index) => (
               <PremiumCard
                 key={institute.name}
@@ -461,13 +452,11 @@ export function DifferentiationSection({
                   <h3 className="text-lg font-bold text-white mb-2">{institute.name}</h3>
                   <div
                     className={`text-3xl font-bold mb-2 ${
-                      institute.color === 'emerald'
-                        ? 'text-emerald-400'
-                        : institute.color === 'blue'
-                          ? 'text-blue-400'
-                          : institute.color === 'orange'
-                            ? 'text-orange-400'
-                            : 'text-red-400'
+                      institute.color === 'teal'
+                        ? 'text-teal-400'
+                        : institute.color === 'navy'
+                          ? 'text-navy-400'
+                          : 'text-amber-400'
                     }`}
                   >
                     {institute.ratio}
@@ -481,8 +470,8 @@ export function DifferentiationSection({
                 </div>
 
                 {institute.name === 'Cerebrum Biology' && (
-                  <div className="mt-4 bg-emerald-500/20 border border-emerald-500/30 rounded-lg p-3">
-                    <div className="text-emerald-400 font-medium text-sm">🎯 Winner!</div>
+                  <div className="mt-4 bg-teal-500/20 border border-teal-500/30 rounded-lg p-3">
+                    <div className="text-teal-400 font-medium text-sm">🎯 Winner!</div>
                   </div>
                 )}
               </PremiumCard>
@@ -498,7 +487,7 @@ export function DifferentiationSection({
           transition={{ duration: 0.8, delay: 0.8 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-8 text-white">
-            See the <span className="text-emerald-400">Difference</span> Yourself
+            See the <span className="text-teal-400">Difference</span> Yourself
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
@@ -512,7 +501,7 @@ export function DifferentiationSection({
                 <PlayCircleIcon className="w-6 h-6 group-hover:scale-110 transition-transform" />
                 <span>Book Trial Class</span>
               </div>
-              <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/0 via-emerald-400/20 to-emerald-600/0 opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="absolute inset-0 bg-teal-600/20 opacity-0 group-hover:opacity-100 transition-opacity" />
             </PremiumButton>
 
             <PremiumButton
@@ -541,8 +530,8 @@ export function DifferentiationSection({
           </div>
 
           <p className="text-gray-400 mt-8 max-w-2xl mx-auto">
-            Join the <span className="text-emerald-400 font-semibold">3000+ failed students</span>{' '}
-            who transformed their medical dreams into reality with us.
+            Join the <span className="text-teal-400 font-semibold">3000+ failed students</span> who
+            transformed their medical dreams into reality with us.
           </p>
         </motion.div>
       </div>

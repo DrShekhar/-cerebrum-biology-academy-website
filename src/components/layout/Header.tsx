@@ -118,19 +118,17 @@ const Header = () => {
             <Link href="/" className="flex items-center space-x-3 group">
               {/* Beautiful Brain Logo with Background */}
               <div className="relative">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-50 via-purple-50 to-cyan-50 rounded-xl flex items-center justify-center shadow-lg border border-blue-100 group-hover:shadow-xl group-hover:scale-105 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-br from-navy-50 to-navy-100 rounded-xl flex items-center justify-center shadow-lg border border-teal-200 group-hover:shadow-xl group-hover:scale-105 transition-all duration-300">
                   <BrainLogo size="lg" animate={false} className="drop-shadow-sm" />
                 </div>
                 {/* Subtle glow effect */}
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 via-purple-400/20 to-cyan-400/20 rounded-xl blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300 -z-10"></div>
+                <div className="absolute inset-0 bg-teal-400/10 rounded-xl blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300 -z-10"></div>
               </div>
 
               {/* Mobile: Compact brand display */}
               <div className="block sm:hidden">
                 <div className="flex flex-col">
-                  <span className="text-xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent leading-tight">
-                    CEREBRUM
-                  </span>
+                  <span className="text-xl font-bold text-navy-900 leading-tight">CEREBRUM</span>
                   <span className="text-xs text-gray-600 font-medium -mt-1 tracking-wide">
                     Biology Academy
                   </span>
@@ -140,7 +138,7 @@ const Header = () => {
               {/* Desktop: Full brand display */}
               <div className="hidden sm:block">
                 <div className="flex flex-col">
-                  <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent leading-tight tracking-wide">
+                  <span className="text-2xl font-bold text-navy-900 leading-tight tracking-wide">
                     CEREBRUM
                   </span>
                   <span className="text-sm text-gray-600 font-medium -mt-1 tracking-wide">
@@ -234,7 +232,7 @@ const Header = () => {
                               <div className="mt-4 pt-4 border-t border-gray-200">
                                 <Link
                                   href="/support/demo"
-                                  className="block w-full text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-4 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all"
+                                  className="block w-full text-center bg-teal-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-teal-700 transition-all"
                                 >
                                   Book Free Demo Class
                                 </Link>
@@ -264,7 +262,7 @@ const Header = () => {
                 ) : item.isSpecial ? (
                   <Link
                     href={item.href!}
-                    className={`flex items-center space-x-2 font-semibold px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 text-white hover:shadow-lg hover:scale-105 transition-all duration-300 ${
+                    className={`flex items-center space-x-2 font-semibold px-4 py-2 rounded-full bg-teal-600 text-white hover:bg-teal-700 hover:shadow-lg hover:scale-105 transition-all duration-300 ${
                       isActive(item.href!) ? 'shadow-xl' : ''
                     }`}
                   >
@@ -349,7 +347,7 @@ const Header = () => {
               {/* Primary CTA with Brand Integration */}
               <Link
                 href="/support/demo"
-                className="bg-gradient-to-r from-primary-600 to-purple-600 text-white px-5 py-2.5 rounded-full font-semibold hover:from-primary-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl whitespace-nowrap text-sm"
+                className="bg-teal-600 text-white px-5 py-2.5 rounded-full font-semibold hover:bg-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl whitespace-nowrap text-sm"
               >
                 Book Demo
               </Link>
@@ -377,7 +375,7 @@ const Header = () => {
                       <Link
                         key={`special-${index}`}
                         href={item.href!}
-                        className="flex items-center justify-center space-x-3 bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 text-white px-6 py-4 rounded-2xl font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 min-h-[56px] touch-manipulation"
+                        className="flex items-center justify-center space-x-3 bg-teal-600 text-white px-6 py-4 rounded-2xl font-bold text-lg shadow-lg hover:bg-teal-700 hover:shadow-xl transition-all duration-300 min-h-[56px] touch-manipulation"
                       >
                         {Icon && <Icon className="w-6 h-6" />}
                         <span>{item.label}</span>
@@ -488,7 +486,7 @@ const Header = () => {
                   {/* Primary CTA with Brand Integration */}
                   <Link
                     href="/support/demo"
-                    className="block w-full text-center bg-gradient-to-r from-primary-600 to-purple-600 text-white px-6 py-4 rounded-full font-semibold hover:from-primary-700 hover:to-purple-700 transition-all duration-300 min-h-[52px] flex items-center justify-center touch-manipulation"
+                    className="block w-full text-center bg-teal-600 text-white px-6 py-4 rounded-full font-semibold hover:bg-teal-700 transition-all duration-300 min-h-[52px] flex items-center justify-center touch-manipulation"
                     style={{ boxShadow: 'var(--shadow-premium)' }}
                   >
                     Book Free Demo

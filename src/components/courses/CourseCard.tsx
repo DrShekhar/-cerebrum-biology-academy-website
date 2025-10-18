@@ -26,9 +26,9 @@ export function CourseCard({ course, selectedTier = 'ascent' }: CourseCardProps)
 
   // Clean, professional theme like Ministry of Education card
   const tierColors = {
-    pinnacle: 'from-blue-50 to-blue-100',
-    ascent: 'from-green-50 to-green-100',
-    pursuit: 'from-purple-50 to-purple-100',
+    pinnacle: 'from-navy-50 to-navy-100',
+    ascent: 'from-teal-50 to-teal-100',
+    pursuit: 'from-gold-50 to-gold-100',
   }
 
   const tierNames = {

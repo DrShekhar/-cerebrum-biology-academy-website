@@ -289,13 +289,11 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
             <motion.div whileHover={{ scale: 1.05 }} className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center">
+              <div className="w-10 h-10 bg-teal-600 rounded-xl flex items-center justify-center">
                 <Brain className="h-6 w-6 text-white" />
               </div>
               <div className="hidden sm:block">
-                <div className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                  Cerebrum Academy
-                </div>
+                <div className="text-xl font-bold text-navy-900">Cerebrum Academy</div>
                 <div className="text-xs text-gray-500 font-medium">Biology Excellence</div>
               </div>
             </motion.div>
@@ -367,7 +365,7 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
 
                         {/* Featured Action */}
                         <div className="mt-8 pt-6 border-t border-gray-100">
-                          <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-4 flex items-center justify-between">
+                          <div className="bg-navy-50 rounded-xl p-4 flex items-center justify-between">
                             <div>
                               <div className="font-semibold text-gray-900">
                                 Not sure which program to choose?
@@ -380,7 +378,7 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
                               href="/courses/finder"
                               whileHover={{ scale: 1.05 }}
                               whileTap={{ scale: 0.95 }}
-                              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-2 hover:shadow-lg transition-all duration-200"
+                              className="bg-teal-600 text-white px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-2 hover:bg-teal-700 hover:shadow-lg transition-all duration-200"
                             >
                               Find Course
                               <ArrowRight className="h-4 w-4" />
@@ -521,7 +519,7 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
                   href="/demo"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 shadow-lg hover:shadow-xl"
+                  className="bg-teal-600 hover:bg-teal-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 shadow-lg hover:shadow-xl"
                 >
                   Book Demo
                 </motion.a>
@@ -564,7 +562,7 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
                 {/* Mobile Header */}
                 <div className="flex items-center justify-between mb-8">
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                    <div className="w-8 h-8 bg-teal-600 rounded-lg flex items-center justify-center">
                       <Brain className="h-5 w-5 text-white" />
                     </div>
                     <div>
@@ -662,7 +660,7 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
                   </a>
                   <a
                     href="/demo"
-                    className="flex items-center justify-center gap-2 w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-xl font-medium"
+                    className="flex items-center justify-center gap-2 w-full bg-teal-600 hover:bg-teal-700 text-white py-3 rounded-xl font-medium"
                   >
                     <Video className="h-5 w-5" />
                     Book Demo Class

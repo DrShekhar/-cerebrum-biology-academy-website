@@ -48,45 +48,45 @@ export function SeriesCard({ series, classLevel, onPlanSelect }: SeriesCardProps
           name: 'Elite Mastery',
           tagline: 'For the Top 1%',
           icon: Crown,
-          gradient: 'from-purple-600 via-pink-500 to-purple-700',
-          cardGradient: 'from-purple-50 via-pink-50 to-purple-100',
-          borderGradient: 'from-purple-400 to-pink-400',
-          textColor: 'text-purple-700',
-          accentColor: 'purple',
+          gradient: 'from-navy-700 to-navy-900',
+          cardGradient: 'from-navy-50 to-navy-100',
+          borderGradient: 'from-navy-400 to-navy-500',
+          textColor: 'text-navy-900',
+          accentColor: 'navy',
           description: 'Premium coaching with personal mentorship for NEET toppers',
           features: ['1:1 Mentoring', 'Custom Study Plans', 'Priority Support'],
-          bgPattern: 'bg-gradient-to-br from-purple-500/5 to-pink-500/5',
-          shimmer: 'from-purple-400/20 via-pink-400/20 to-purple-400/20',
+          bgPattern: 'bg-gradient-to-br from-navy-500/5 to-navy-600/5',
+          shimmer: 'from-navy-400/20 via-navy-500/20 to-navy-400/20',
         }
       case 'ascent':
         return {
           name: 'Advanced Plus',
           tagline: 'Most Popular Choice',
           icon: Zap,
-          gradient: 'from-blue-600 via-cyan-500 to-blue-700',
-          cardGradient: 'from-blue-50 via-cyan-50 to-blue-100',
-          borderGradient: 'from-blue-400 to-cyan-400',
-          textColor: 'text-blue-700',
-          accentColor: 'blue',
+          gradient: 'from-teal-600 to-teal-700',
+          cardGradient: 'from-teal-50 to-teal-100',
+          borderGradient: 'from-teal-400 to-teal-500',
+          textColor: 'text-teal-900',
+          accentColor: 'teal',
           description: 'Comprehensive NEET preparation with proven track record',
           features: ['Live Classes', 'Test Series', 'Study Material'],
-          bgPattern: 'bg-gradient-to-br from-blue-500/5 to-cyan-500/5',
-          shimmer: 'from-blue-400/20 via-cyan-400/20 to-blue-400/20',
+          bgPattern: 'bg-gradient-to-br from-teal-500/5 to-teal-600/5',
+          shimmer: 'from-teal-400/20 via-teal-500/20 to-teal-400/20',
         }
       case 'pursuit':
         return {
           name: 'Foundation Pro',
           tagline: 'Smart Start',
           icon: Rocket,
-          gradient: 'from-green-600 via-emerald-500 to-green-700',
-          cardGradient: 'from-green-50 via-emerald-50 to-green-100',
-          borderGradient: 'from-green-400 to-emerald-400',
-          textColor: 'text-green-700',
-          accentColor: 'green',
+          gradient: 'from-gold-600 to-gold-700',
+          cardGradient: 'from-gold-50 to-gold-100',
+          borderGradient: 'from-gold-400 to-gold-500',
+          textColor: 'text-gold-900',
+          accentColor: 'gold',
           description: 'Strong foundation building with conceptual clarity',
           features: ['Concept Building', 'Practice Tests', 'Doubt Clearing'],
-          bgPattern: 'bg-gradient-to-br from-green-500/5 to-emerald-500/5',
-          shimmer: 'from-green-400/20 via-emerald-400/20 to-green-400/20',
+          bgPattern: 'bg-gradient-to-br from-gold-500/5 to-gold-600/5',
+          shimmer: 'from-gold-400/20 via-gold-500/20 to-gold-400/20',
         }
       default:
         return {
@@ -167,7 +167,7 @@ export function SeriesCard({ series, classLevel, onPlanSelect }: SeriesCardProps
               initial={{ scale: 0, rotate: -180 }}
               animate={{ scale: 1, rotate: 0 }}
               transition={{ delay: 0.5, duration: 0.5, type: 'spring' }}
-              className="bg-gradient-to-r from-yellow-400 to-orange-400 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center space-x-1"
+              className="bg-gold-600 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center space-x-1"
             >
               <Crown className="w-3 h-3" />
               <span>ELITE</span>
@@ -182,7 +182,7 @@ export function SeriesCard({ series, classLevel, onPlanSelect }: SeriesCardProps
               initial={{ scale: 0, rotate: -180 }}
               animate={{ scale: 1, rotate: 0 }}
               transition={{ delay: 0.5, duration: 0.5, type: 'spring' }}
-              className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center space-x-1"
+              className="bg-teal-600 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center space-x-1"
             >
               <Star className="w-3 h-3" />
               <span>POPULAR</span>
@@ -386,7 +386,7 @@ export function SeriesCard({ series, classLevel, onPlanSelect }: SeriesCardProps
                           <motion.span
                             initial={{ scale: 0, rotate: -180 }}
                             animate={{ scale: 1, rotate: 0 }}
-                            className="bg-gradient-to-r from-yellow-400 to-orange-400 text-white px-3 py-1 rounded-full text-xs font-bold"
+                            className="bg-gold-600 text-white px-3 py-1 rounded-full text-xs font-bold"
                           >
                             Most Popular
                           </motion.span>

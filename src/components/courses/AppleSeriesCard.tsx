@@ -75,10 +75,10 @@ export function AppleSeriesCard({ series, classLevel, onPlanSelect }: AppleSerie
           icon: Rocket,
           gradient: 'from-slate-900 to-slate-700',
           cardBg: 'bg-white',
-          accentColor: 'from-purple-600 to-violet-600',
+          accentColor: 'from-gold-600 to-gold-700',
           textColor: 'text-slate-900',
           mutedColor: 'text-slate-500',
-          badge: { bg: 'bg-purple-100', text: 'text-purple-700', label: 'FOUNDATION' },
+          badge: { bg: 'bg-gold-100', text: 'text-gold-700', label: 'FOUNDATION' },
           description: 'Strong foundation building with conceptual clarity',
         }
       default:
@@ -334,7 +334,7 @@ export function AppleSeriesCard({ series, classLevel, onPlanSelect }: AppleSerie
                           {plan.popular && (
                             <span
                               className="
-                              bg-gradient-to-r from-amber-400 to-orange-400
+                              bg-gold-600
                               text-white px-2.5 py-1 rounded-full text-xs font-semibold
                             "
                             >

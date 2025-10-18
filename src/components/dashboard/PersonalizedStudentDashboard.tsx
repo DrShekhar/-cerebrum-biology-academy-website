@@ -168,7 +168,7 @@ export function PersonalizedStudentDashboard() {
 
   if (!isAuthenticated || !user) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-navy-50 to-teal-50 flex items-center justify-center">
         <div className="text-center">
           <Brain className="w-16 h-16 text-blue-500 mx-auto mb-4" />
           <h2 className="text-2xl font-bold text-gray-900 mb-2">Welcome to Your Learning Hub</h2>
@@ -182,13 +182,13 @@ export function PersonalizedStudentDashboard() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-green-50">
+    <div className="min-h-screen bg-gradient-to-br from-navy-50 via-teal-50 to-gold-50">
       {/* Header */}
       <div className="bg-white shadow-lg border-b">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
+              <div className="w-12 h-12 bg-gradient-to-br from-teal-600 to-teal-700 rounded-xl flex items-center justify-center">
                 <Brain className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -261,7 +261,7 @@ export function PersonalizedStudentDashboard() {
               className="space-y-8"
             >
               {/* NEET Score Prediction Card */}
-              <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
+              <div className="bg-gradient-to-r from-teal-600 to-navy-700 rounded-2xl p-8 text-white">
                 <div className="grid md:grid-cols-3 gap-8">
                   <div>
                     <h3 className="text-2xl font-bold mb-4">🎯 NEET Score Prediction</h3>
@@ -345,11 +345,11 @@ export function PersonalizedStudentDashboard() {
 
                 <div className="bg-white rounded-xl p-6 shadow-lg">
                   <div className="flex items-center justify-between mb-4">
-                    <Zap className="w-8 h-8 text-purple-500" />
+                    <Zap className="w-8 h-8 text-teal-600" />
                     <span className="text-2xl font-bold text-gray-900">5</span>
                   </div>
                   <div className="text-gray-600">Study Streak (days)</div>
-                  <div className="text-sm text-purple-600">Keep it up!</div>
+                  <div className="text-sm text-teal-600">Keep it up!</div>
                 </div>
               </div>
 
@@ -435,7 +435,7 @@ export function PersonalizedStudentDashboard() {
                               ? 'bg-blue-100'
                               : session.type === 'practice'
                                 ? 'bg-green-100'
-                                : 'bg-purple-100'
+                                : 'bg-navy-100'
                           }`}
                         >
                           {session.type === 'study' ? (
@@ -443,7 +443,7 @@ export function PersonalizedStudentDashboard() {
                           ) : session.type === 'practice' ? (
                             <Zap className="w-5 h-5 text-green-600" />
                           ) : (
-                            <Target className="w-5 h-5 text-purple-600" />
+                            <Target className="w-5 h-5 text-navy-600" />
                           )}
                         </div>
                         <div>
@@ -476,18 +476,18 @@ export function PersonalizedStudentDashboard() {
               className="space-y-8"
             >
               {/* Study Timer */}
-              <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-white">
+              <div className="bg-gradient-to-r from-navy-600 to-teal-600 rounded-2xl p-8 text-white">
                 <div className="text-center">
                   <h2 className="text-3xl font-bold mb-4">🎯 Focus Study Session</h2>
                   <div className="text-6xl font-mono font-bold mb-6">{formatTime(studyTimer)}</div>
                   {currentSession && (
-                    <div className="text-purple-200 mb-6">Studying: {currentSession}</div>
+                    <div className="text-teal-200 mb-6">Studying: {currentSession}</div>
                   )}
                   <div className="flex items-center justify-center space-x-4">
                     <button
                       onClick={() => startStudySession('Current Chapter')}
                       disabled={isStudying}
-                      className="flex items-center space-x-2 bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 disabled:opacity-50"
+                      className="flex items-center space-x-2 bg-white text-navy-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 disabled:opacity-50"
                     >
                       <Play className="w-5 h-5" />
                       <span>Start</span>
@@ -495,14 +495,14 @@ export function PersonalizedStudentDashboard() {
                     <button
                       onClick={pauseStudySession}
                       disabled={!isStudying}
-                      className="flex items-center space-x-2 bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 disabled:opacity-50"
+                      className="flex items-center space-x-2 bg-white text-navy-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 disabled:opacity-50"
                     >
                       <Pause className="w-5 h-5" />
                       <span>Pause</span>
                     </button>
                     <button
                       onClick={stopStudySession}
-                      className="flex items-center space-x-2 bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100"
+                      className="flex items-center space-x-2 bg-white text-navy-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100"
                     >
                       <RotateCcw className="w-5 h-5" />
                       <span>Reset</span>

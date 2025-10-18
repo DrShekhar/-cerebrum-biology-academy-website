@@ -154,14 +154,12 @@ export function EmotionalHeroSection({
   }
 
   return (
-    <div
-      className={`relative min-h-screen bg-gradient-to-br from-blue-900 via-indigo-800 to-purple-900 overflow-hidden ${className}`}
-    >
+    <div className={`relative min-h-screen bg-navy-900 overflow-hidden ${className}`}>
       {/* Announcement Bar */}
       <motion.div
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        className="relative z-50 bg-gradient-to-r from-emerald-500 to-green-600 text-white py-3 px-4"
+        className="relative z-50 bg-teal-600 text-white py-3 px-4"
       >
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex items-center justify-center gap-2 text-sm md:text-base font-semibold">
@@ -179,7 +177,7 @@ export function EmotionalHeroSection({
       <div className="absolute inset-0">
         {/* Animated gradient orbs */}
         <motion.div
-          className="absolute top-1/4 left-1/6 w-96 h-96 bg-gradient-to-br from-orange-400/20 to-red-500/20 rounded-full blur-3xl"
+          className="absolute top-1/4 left-1/6 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.2, 1],
             x: [0, 50, 0],
@@ -188,7 +186,7 @@ export function EmotionalHeroSection({
           transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
         />
         <motion.div
-          className="absolute bottom-1/4 right-1/6 w-80 h-80 bg-gradient-to-br from-blue-400/20 to-purple-500/20 rounded-full blur-3xl"
+          className="absolute bottom-1/4 right-1/6 w-80 h-80 bg-navy-500/10 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.3, 1],
             x: [0, -40, 0],
@@ -216,7 +214,7 @@ export function EmotionalHeroSection({
               delay: i * 0.5,
             }}
           >
-            <HeartSolid className="h-4 w-4 text-pink-300/50" />
+            <HeartSolid className="h-4 w-4 text-teal-300/50" />
           </motion.div>
         ))}
       </div>
@@ -233,23 +231,18 @@ export function EmotionalHeroSection({
               className="space-y-6"
             >
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
-                <span className="bg-gradient-to-r from-orange-300 via-yellow-300 to-green-300 bg-clip-text text-transparent">
-                  Master Biology,
-                </span>
+                <span className="text-amber-200">Master Biology,</span>
                 <br />
-                <span className="text-emerald-300">Conquer NEET,</span>
+                <span className="text-teal-300">Conquer NEET,</span>
                 <br />
-                <span className="text-blue-300">Become a Doctor</span>
+                <span className="text-white">Become a Doctor</span>
               </h1>
 
-              <p className="text-xl md:text-2xl text-blue-100 leading-relaxed max-w-2xl">
-                Join <span className="font-bold text-orange-300">5,000+ students</span> who
-                <span className="font-bold text-green-300">
-                  {' '}
-                  achieved their medical dreams
-                </span>{' '}
-                with India's premier
-                <span className="font-bold text-emerald-300"> Biology coaching academy</span>
+              <p className="text-xl md:text-2xl text-slate-100 leading-relaxed max-w-2xl">
+                Join <span className="font-bold text-amber-300">5,000+ students</span> who
+                <span className="font-bold text-teal-300"> achieved their medical dreams</span> with
+                India's premier
+                <span className="font-bold text-teal-200"> Biology coaching academy</span>
               </p>
             </motion.div>
 
@@ -285,7 +278,7 @@ export function EmotionalHeroSection({
                   size="sm"
                   className="bg-white/10 backdrop-blur-sm border-white/20 text-center"
                 >
-                  <stat.icon className="h-8 w-8 text-orange-300 mx-auto mb-2" />
+                  <stat.icon className="h-8 w-8 text-amber-300 mx-auto mb-2" />
                   <div className="text-2xl font-bold text-white">
                     <AnimatedCounter value={stat.value} prefix={stat.prefix} suffix={stat.suffix} />
                   </div>
@@ -305,7 +298,7 @@ export function EmotionalHeroSection({
                 variant="medical"
                 size="lg"
                 onClick={() => (window.location.href = '/quick-enroll')}
-                className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white font-bold py-4 px-8 rounded-xl shadow-2xl hover:shadow-green-500/25 transition-all duration-300 group"
+                className="bg-teal-600 hover:bg-teal-700 text-white font-bold py-4 px-8 rounded-xl shadow-2xl hover:shadow-teal-500/25 transition-all duration-300 group"
               >
                 <SparklesIcon className="h-6 w-6 group-hover:scale-110 transition-transform" />
                 Take 2-Min Quiz & Enroll Instantly
@@ -333,18 +326,18 @@ export function EmotionalHeroSection({
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.8 }}
-              className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 backdrop-blur-sm border border-green-300/30 rounded-lg p-4"
+              className="bg-teal-900/30 backdrop-blur-sm border border-teal-300/30 rounded-lg p-4"
             >
               <div className="flex items-center justify-between">
                 <div>
-                  <h3 className="text-lg font-semibold text-green-300">Quick Eligibility Check</h3>
-                  <p className="text-sm text-green-200">
+                  <h3 className="text-lg font-semibold text-teal-300">Quick Eligibility Check</h3>
+                  <p className="text-sm text-teal-200">
                     See if you qualify for our success guarantee
                   </p>
                 </div>
                 <button
                   onClick={handleEligibilityCheck}
-                  className="bg-green-500 text-white px-4 py-2 rounded-lg font-semibold hover:bg-green-600 transition-colors"
+                  className="bg-teal-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-teal-700 transition-colors"
                 >
                   Check Now
                 </button>
@@ -363,9 +356,9 @@ export function EmotionalHeroSection({
             <PremiumCard
               variant="luxury"
               size="lg"
-              className="relative overflow-hidden bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border-white/20"
+              className="relative overflow-hidden bg-white/10 backdrop-blur-sm border-white/20"
             >
-              <div className="aspect-video bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+              <div className="aspect-video bg-navy-800 rounded-lg flex items-center justify-center">
                 <div className="text-center text-white">
                   <div className="flex items-center justify-center gap-8 mb-4">
                     {/* Before: Stressed Student */}
@@ -412,7 +405,7 @@ export function EmotionalHeroSection({
                     <img
                       src={emotionalTestimonials[currentTestimonial].image}
                       alt={emotionalTestimonials[currentTestimonial].name}
-                      className="w-16 h-16 rounded-full object-cover border-3 border-orange-300"
+                      className="w-16 h-16 rounded-full object-cover border-3 border-teal-300"
                     />
                     <div>
                       <h3 className="text-xl font-bold text-white">
@@ -449,10 +442,10 @@ export function EmotionalHeroSection({
             <PremiumCard
               variant="premium"
               size="md"
-              className="bg-gradient-to-r from-orange-500/20 to-red-500/20 backdrop-blur-sm border-orange-300/30"
+              className="bg-amber-900/30 backdrop-blur-sm border-amber-300/30"
             >
               <div className="text-center space-y-4">
-                <div className="flex items-center justify-center gap-2 text-orange-300">
+                <div className="flex items-center justify-center gap-2 text-amber-300">
                   <ClockIcon className="h-5 w-5" />
                   <span className="font-semibold">Next Batch Starting Soon</span>
                 </div>
@@ -468,12 +461,12 @@ export function EmotionalHeroSection({
                       <div className="text-2xl font-bold text-white">
                         {item.value.toString().padStart(2, '0')}
                       </div>
-                      <div className="text-xs text-orange-200">{item.label}</div>
+                      <div className="text-xs text-amber-200">{item.label}</div>
                     </div>
                   ))}
                 </div>
 
-                <p className="text-sm text-orange-200">
+                <p className="text-sm text-amber-200">
                   Limited seats available • Only 50 students per batch
                 </p>
               </div>

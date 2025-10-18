@@ -153,8 +153,8 @@ export function TrustBadgesSection() {
             India's Most <span className="text-blue-600">Trusted</span> NEET Academy
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Recognized by government bodies, featured in leading media, and trusted by thousands 
-            of families for proven NEET success.
+            Recognized by government bodies, featured in leading media, and trusted by thousands of
+            families for proven NEET success.
           </p>
         </motion.div>
 
@@ -193,7 +193,9 @@ export function TrustBadgesSection() {
         >
           <div className="text-center mb-8">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">Our Growing Impact</h3>
-            <p className="text-gray-600">Real numbers that demonstrate our commitment to student success</p>
+            <p className="text-gray-600">
+              Real numbers that demonstrate our commitment to student success
+            </p>
           </div>
 
           <div className="grid md:grid-cols-4 gap-8">
@@ -228,7 +230,9 @@ export function TrustBadgesSection() {
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">Featured in Leading Media</h3>
-            <p className="text-xl text-gray-600">National recognition for our educational excellence</p>
+            <p className="text-xl text-gray-600">
+              National recognition for our educational excellence
+            </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
@@ -242,7 +246,9 @@ export function TrustBadgesSection() {
                 viewport={{ once: true }}
               >
                 <div className="flex items-start space-x-4">
-                  <div className={`w-12 h-12 ${feature.color} bg-opacity-10 rounded-2xl flex items-center justify-center`}>
+                  <div
+                    className={`w-12 h-12 ${feature.color} bg-opacity-10 rounded-2xl flex items-center justify-center`}
+                  >
                     <feature.icon className={`w-6 h-6 ${feature.color}`} />
                   </div>
                   <div className="flex-1">
@@ -250,7 +256,9 @@ export function TrustBadgesSection() {
                       <h4 className={`font-bold ${feature.color}`}>{feature.outlet}</h4>
                       <span className="text-xs text-gray-500">{feature.date}</span>
                     </div>
-                    <h5 className="font-semibold text-gray-900 mb-1 leading-tight">{feature.headline}</h5>
+                    <h5 className="font-semibold text-gray-900 mb-1 leading-tight">
+                      {feature.headline}
+                    </h5>
                     <p className="text-sm text-gray-600">{feature.type}</p>
                   </div>
                 </div>
@@ -297,7 +305,7 @@ export function TrustBadgesSection() {
 
         {/* Final Trust Statement */}
         <motion.div
-          className="text-center mt-16 p-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl text-white"
+          className="text-center mt-16 p-8 bg-teal-600 rounded-3xl text-white"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.0 }}
@@ -305,7 +313,7 @@ export function TrustBadgesSection() {
         >
           <h3 className="text-3xl font-bold mb-4">Join the Most Trusted NEET Community</h3>
           <p className="text-xl text-blue-100 mb-6">
-            When families trust us with their children's medical career dreams, we deliver results 
+            When families trust us with their children's medical career dreams, we deliver results
             that speak louder than any advertisement.
           </p>
           <div className="flex items-center justify-center space-x-8 text-sm">

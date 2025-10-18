@@ -92,7 +92,7 @@ export function FacultyVideoSection() {
   }
 
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <section className="py-20 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4">
         {/* Section Header */}
         <motion.div
@@ -125,7 +125,7 @@ export function FacultyVideoSection() {
                 icon: BookOpen,
                 label: '247',
                 sublabel: 'AIIMS Selections',
-                color: 'text-purple-600',
+                color: 'text-teal-600',
               },
               { icon: Star, label: '4.9/5', sublabel: 'Student Rating', color: 'text-yellow-600' },
             ].map((stat, index) => (
@@ -228,7 +228,7 @@ export function FacultyVideoSection() {
 
         {/* Bottom CTA Section */}
         <motion.div
-          className="text-center bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 rounded-3xl p-12 text-white"
+          className="text-center bg-navy-900 rounded-3xl p-12 text-white"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}

@@ -49,7 +49,7 @@ export function CompactVideoLectures() {
   }
 
   return (
-    <section className="py-20 bg-gradient-to-br from-purple-50 via-indigo-50 to-blue-50">
+    <section className="py-20 bg-navy-50">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
         <motion.div
@@ -154,11 +154,7 @@ export function CompactVideoLectures() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Link href="/video-lectures">
-              <Button
-                variant="primary"
-                size="xl"
-                className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700"
-              >
+              <Button variant="primary" size="xl" className="bg-teal-600 hover:bg-teal-700">
                 <BookOpen className="w-5 h-5 mr-2" />
                 Browse All Lectures
               </Button>

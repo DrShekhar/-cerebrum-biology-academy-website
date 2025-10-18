@@ -18,7 +18,7 @@ import { motion } from 'framer-motion'
 
 export function FacultySection() {
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50">
+    <section className="py-20 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4">
         {/* Section Header */}
         <motion.div
@@ -85,9 +85,9 @@ export function FacultySection() {
               viewport={{ once: true }}
             >
               {/* Faculty Image Placeholder */}
-              <div className="w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center text-white relative overflow-hidden group-hover:scale-105 transition-transform">
+              <div className="w-24 h-24 mx-auto mb-6 bg-teal-600 rounded-full flex items-center justify-center text-white relative overflow-hidden group-hover:scale-105 transition-transform">
                 <Users className="w-12 h-12 opacity-80" />
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 opacity-90"></div>
+                <div className="absolute inset-0 bg-teal-700 opacity-90"></div>
                 <GraduationCap className="w-8 h-8 relative z-10" />
               </div>
 
@@ -206,7 +206,7 @@ export function FacultySection() {
 
         {/* Call to Action */}
         <motion.div
-          className="text-center bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 rounded-3xl p-12 text-white"
+          className="text-center bg-navy-900 rounded-3xl p-12 text-white"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.2 }}
@@ -220,7 +220,7 @@ export function FacultySection() {
             <Button
               variant="secondary_cta"
               size="xl"
-              className="bg-white text-blue-600 hover:bg-gray-100"
+              className="bg-white text-teal-600 hover:bg-gray-100"
             >
               Meet Our Faculty
               <ArrowRight className="w-5 h-5 ml-2" />
@@ -228,7 +228,7 @@ export function FacultySection() {
             <Button
               variant="outline"
               size="xl"
-              className="border-white text-white hover:bg-white hover:text-blue-600"
+              className="border-white text-white hover:bg-white hover:text-teal-600"
             >
               Book Demo Class
             </Button>
