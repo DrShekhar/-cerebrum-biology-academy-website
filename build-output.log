@@ -6,52 +6,374 @@
    - Environments: .env.local, .env.production, .env
 
    Creating an optimized production build ...
- ⚠ Compiled with warnings in 41s
-
-./src/app/api/adaptive-testing.disabled/[sessionId]/analytics/route.ts
-Attempted import error: 'getServerSession' is not exported from 'next-auth' (imported as 'getServerSession').
-
-Import trace for requested module:
-./src/app/api/adaptive-testing.disabled/[sessionId]/analytics/route.ts
-
-./src/app/api/adaptive-testing.disabled/[sessionId]/complete/route.ts
-Attempted import error: 'getServerSession' is not exported from 'next-auth' (imported as 'getServerSession').
-
-Import trace for requested module:
-./src/app/api/adaptive-testing.disabled/[sessionId]/complete/route.ts
-
-./src/app/api/adaptive-testing.disabled/[sessionId]/response/route.ts
-Attempted import error: 'getServerSession' is not exported from 'next-auth' (imported as 'getServerSession').
-
-Import trace for requested module:
-./src/app/api/adaptive-testing.disabled/[sessionId]/response/route.ts
-
-./src/app/api/adaptive-testing.disabled/[sessionId]/start/route.ts
-Attempted import error: 'getServerSession' is not exported from 'next-auth' (imported as 'getServerSession').
-
-Import trace for requested module:
-./src/app/api/adaptive-testing.disabled/[sessionId]/start/route.ts
-
-./src/app/api/adaptive-testing.disabled/create-session/route.ts
-Attempted import error: 'getServerSession' is not exported from 'next-auth' (imported as 'getServerSession').
-
-Import trace for requested module:
-./src/app/api/adaptive-testing.disabled/create-session/route.ts
-
+ ✓ Compiled successfully in 109s
    Skipping validation of types
    Skipping linting
    Collecting page data ...
-Error: JWT_SECRET and JWT_REFRESH_SECRET must be set in production
-    at 61501 (.next/server/chunks/5363.js:1:512)
-    at c (.next/server/webpack-runtime.js:1:128)
-    at 3150 (.next/server/app/api/adaptive-testing.disabled/[sessionId]/response/route.js:1:585)
-    at c (.next/server/webpack-runtime.js:1:128)
-    at <unknown> (.next/server/app/api/adaptive-testing.disabled/[sessionId]/response/route.js:1:8805)
-    at c.X (.next/server/webpack-runtime.js:1:1206)
-    at <unknown> (.next/server/app/api/adaptive-testing.disabled/[sessionId]/response/route.js:1:8750)
-    at Object.<anonymous> (.next/server/app/api/adaptive-testing.disabled/[sessionId]/response/route.js:1:8836)
+NEXT_PUBLIC_INSTANT_APP_ID environment variable is not set. Using demo mode.
+INSTANT_APP_ADMIN_TOKEN environment variable is not set. Admin operations will fail.
+🔍 Debugging AI Environment Variables:
+ANTHROPIC_API_KEY exists: true
+ANTHROPIC_API_KEY prefix: sk-ant-api
+OPENAI_API_KEY exists: true
+GOOGLE_AI_API_KEY exists: true
+GOOGLE_AI_API_KEY prefix: AIzaSyBmqo
+All API env vars: [
+  'NEXT_PUBLIC_API_URL',
+  'WHATSAPP_API_URL',
+  'ZOOM_API_URL',
+  'OPENAI_API_KEY',
+  'OPENAI_API_URL',
+  'ANTHROPIC_API_KEY',
+  'ANTHROPIC_API_URL',
+  'GOOGLE_AI_API_KEY',
+  'GOOGLE_AI_API_URL'
+]
+All ANTHROPIC env vars: [ 'ANTHROPIC_API_KEY', 'ANTHROPIC_API_URL' ]
+All OPENAI env vars: [ 'OPENAI_API_KEY', 'OPENAI_API_URL' ]
+All GOOGLE env vars: [
+  'NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_ID',
+  'GOOGLE_AI_API_KEY',
+  'GOOGLE_CLOUD_PROJECT_ID',
+  'GOOGLE_AI_API_URL'
+]
+🤖 AI Providers initialized: [ 'openai', 'anthropic', 'google' ]
+Cost optimization dashboard initialized
+Health monitoring started for all fallback strategies
+ℹ️  Redis is disabled - using mock client for graceful degradation
+NEXT_PUBLIC_INSTANT_APP_ID environment variable is not set. Using demo mode.
+INSTANT_APP_ADMIN_TOKEN environment variable is not set. Admin operations will fail.
+📊 Observability Manager initialized
+💰 Initializing Advanced Payment & Monetization Engine...
+📋 Initialized 3 subscription plans with regional pricing
+💳 Initialized 3 payment providers
+🌍 Regional pricing configured for global markets
+🤝 Referral and affiliate programs initialized
+✅ Payment Engine ready with global monetization capabilities
+ℹ️  Redis is disabled - using mock client for graceful degradation
+   Generating static pages (0/215) ...
+NEXT_PUBLIC_INSTANT_APP_ID environment variable is not set. Using demo mode.
+INSTANT_APP_ADMIN_TOKEN environment variable is not set. Admin operations will fail.
+   Generating static pages (53/215) 
+NEXT_PUBLIC_INSTANT_APP_ID environment variable is not set. Using demo mode.
+INSTANT_APP_ADMIN_TOKEN environment variable is not set. Admin operations will fail.
+🔍 Debugging AI Environment Variables:
+ANTHROPIC_API_KEY exists: true
+ANTHROPIC_API_KEY prefix: sk-ant-api
+OPENAI_API_KEY exists: true
+GOOGLE_AI_API_KEY exists: true
+GOOGLE_AI_API_KEY prefix: AIzaSyBmqo
+All API env vars: [
+  'NEXT_PUBLIC_API_URL',
+  'WHATSAPP_API_URL',
+  'ZOOM_API_URL',
+  'OPENAI_API_KEY',
+  'OPENAI_API_URL',
+  'ANTHROPIC_API_KEY',
+  'ANTHROPIC_API_URL',
+  'GOOGLE_AI_API_KEY',
+  'GOOGLE_AI_API_URL'
+]
+All ANTHROPIC env vars: [ 'ANTHROPIC_API_KEY', 'ANTHROPIC_API_URL' ]
+All OPENAI env vars: [ 'OPENAI_API_KEY', 'OPENAI_API_URL' ]
+All GOOGLE env vars: [
+  'NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_ID',
+  'GOOGLE_AI_API_KEY',
+  'GOOGLE_CLOUD_PROJECT_ID',
+  'GOOGLE_AI_API_URL'
+]
+🤖 AI Providers initialized: [ 'openai', 'anthropic', 'google' ]
+Cost optimization dashboard initialized
+Health monitoring started for all fallback strategies
+ℹ️  Redis is disabled - using mock client for graceful degradation
+📊 Observability Manager initialized
+💰 Initializing Advanced Payment & Monetization Engine...
+📋 Initialized 3 subscription plans with regional pricing
+💳 Initialized 3 payment providers
+🌍 Regional pricing configured for global markets
+🤝 Referral and affiliate programs initialized
+✅ Payment Engine ready with global monetization capabilities
+NEXT_PUBLIC_INSTANT_APP_ID environment variable is not set. Using demo mode.
+   Generating static pages (107/215) 
+ℹ️  Redis is disabled - using mock client for graceful degradation
+   Generating static pages (161/215) 
+ ✓ Generating static pages (215/215)
+Initiating graceful database shutdown...
+Successfully disconnected from database
+Initiating graceful database shutdown...
+Successfully disconnected from database
+Initiating graceful database shutdown...
+Successfully disconnected from database
+Initiating graceful database shutdown...
+Successfully disconnected from database
+Initiating graceful database shutdown...
+Successfully disconnected from database
+Initiating graceful database shutdown...
+Successfully disconnected from database
+   Finalizing page optimization ...
+   Collecting build traces ...
+Initiating graceful database shutdown...
+Successfully disconnected from database
+Initiating graceful database shutdown...
+Successfully disconnected from database
+Initiating graceful database shutdown...
+Successfully disconnected from database
+Initiating graceful database shutdown...
+Successfully disconnected from database
+Initiating graceful database shutdown...
+Successfully disconnected from database
+Initiating graceful database shutdown...
+Successfully disconnected from database
+Initiating graceful database shutdown...
+Successfully disconnected from database
+Initiating graceful database shutdown...
+Successfully disconnected from database
+Initiating graceful database shutdown...
+Successfully disconnected from database
+Initiating graceful database shutdown...
+Successfully disconnected from database
+Initiating graceful database shutdown...
+Successfully disconnected from database
+Initiating graceful database shutdown...
+Successfully disconnected from database
+Initiating graceful database shutdown...
+Successfully disconnected from database
+Initiating graceful database shutdown...
+Successfully disconnected from database
 
-> Build error occurred
-[Error: Failed to collect page data for /api/adaptive-testing.disabled/[sessionId]/response] {
-  type: 'Error'
-}
+Route (app)                                                      Size  First Load JS
+┌ ○ /                                                           370 B         102 kB
+├ ○ /_not-found                                                 370 B         102 kB
+├ ƒ /[...not_found]                                             370 B         102 kB
+├ ● /[localSlug]                                              13.9 kB         202 kB
+├   ├ /best-biology-coaching-gurgaon
+├   ├ /best-biology-tuition-noida
+├   ├ /biology-coaching-faridabad-neet
+├   └ [+3 more paths]
+├ ○ /about                                                    9.45 kB         164 kB
+├ ○ /about/faculty                                              370 B         102 kB
+├ ○ /about/media                                                370 B         102 kB
+├ ○ /about/results                                              370 B         102 kB
+├ ○ /adaptive-testing                                         15.6 kB         155 kB
+├ ○ /admin                                                    4.62 kB         156 kB
+├ ○ /admin/ab-testing.disabled                                8.46 kB         110 kB
+├ ○ /admin/ai-monitoring                                      6.53 kB         109 kB
+├ ○ /admin/analytics.disabled                                 6.71 kB         166 kB
+├ ○ /admin/courses                                            6.72 kB         166 kB
+├ ○ /admin/demo-bookings                                      6.37 kB         166 kB
+├ ○ /admin/enrollments                                        4.15 kB         186 kB
+├ ○ /admin/lms/analytics                                      1.29 kB         103 kB
+├ ○ /admin/lms/chapters                                         849 B         103 kB
+├ ○ /admin/lms/materials                                      1.98 kB         107 kB
+├ ○ /admin/lms/materials/upload                               2.73 kB         105 kB
+├ ○ /admin/login                                              4.71 kB         155 kB
+├ ○ /admin/marketing.disabled                                 5.78 kB         165 kB
+├ ○ /admin/payments                                           6.88 kB         166 kB
+├ ○ /admin/students                                           7.26 kB         167 kB
+├ ○ /admin/students/active                                    6.83 kB         166 kB
+├ ○ /admin/students/leads                                     7.82 kB         167 kB
+├ ○ /admissions                                               8.02 kB         162 kB
+├ ○ /ai-education-demo                                         135 kB         277 kB
+├ ○ /ai-features                                              5.62 kB         111 kB
+├ ○ /analytics                                                12.4 kB         160 kB
+├ ƒ /api/admin/demo-bookings                                    370 B         102 kB
+├ ƒ /api/admin/lms/materials                                    370 B         102 kB
+├ ƒ /api/admin/lms/materials/[id]                               370 B         102 kB
+├ ƒ /api/admin/lms/upload                                       370 B         102 kB
+├ ƒ /api/admin/marketing                                        370 B         102 kB
+├ ƒ /api/ai-management                                          370 B         102 kB
+├ ƒ /api/ai/education-hub                                       370 B         102 kB
+├ ƒ /api/ai/image-analysis                                      370 B         102 kB
+├ ƒ /api/ai/question-generator                                  370 B         102 kB
+├ ƒ /api/ai/test-generation                                     370 B         102 kB
+├ ƒ /api/ai/unified-chat                                        370 B         102 kB
+├ ƒ /api/ai/voice-processing                                    370 B         102 kB
+├ ƒ /api/analytics/ab-test                                      370 B         102 kB
+├ ƒ /api/analytics/comparative                                  370 B         102 kB
+├ ƒ /api/analytics/dashboard                                    370 B         102 kB
+├ ƒ /api/analytics/events                                       370 B         102 kB
+├ ƒ /api/analytics/export                                       370 B         102 kB
+├ ƒ /api/analytics/funnel                                       370 B         102 kB
+├ ƒ /api/analytics/funnel/live                                  370 B         102 kB
+├ ƒ /api/analytics/heatmap                                      370 B         102 kB
+├ ƒ /api/analytics/interactions                                 370 B         102 kB
+├ ƒ /api/analytics/leaderboard                                  370 B         102 kB
+├ ƒ /api/analytics/performance                                  370 B         102 kB
+├ ƒ /api/analytics/real-time                                    370 B         102 kB
+├ ƒ /api/analytics/session                                      370 B         102 kB
+├ ƒ /api/analytics/test-session                                 370 B         102 kB
+├ ƒ /api/analytics/topic                                        370 B         102 kB
+├ ƒ /api/analytics/track                                        370 B         102 kB
+├ ƒ /api/auth/[...nextauth]                                     370 B         102 kB
+├ ƒ /api/auth/change-password                                   370 B         102 kB
+├ ƒ /api/auth/csrf-token                                        370 B         102 kB
+├ ƒ /api/auth/logout                                            370 B         102 kB
+├ ƒ /api/auth/profile                                           370 B         102 kB
+├ ƒ /api/auth/refresh                                           370 B         102 kB
+├ ƒ /api/auth/register                                          370 B         102 kB
+├ ƒ /api/auth/send-otp                                          370 B         102 kB
+├ ƒ /api/auth/settings                                          370 B         102 kB
+├ ƒ /api/auth/signin                                            370 B         102 kB
+├ ƒ /api/auth/signup                                            370 B         102 kB
+├ ƒ /api/auth/verify-otp                                        370 B         102 kB
+├ ƒ /api/cache/demo                                             370 B         102 kB
+├ ƒ /api/calendar/availability                                  370 B         102 kB
+├ ƒ /api/calendar/events                                        370 B         102 kB
+├ ƒ /api/catalog/download                                       370 B         102 kB
+├ ƒ /api/claudechat/analyze-biology-image                       370 B         102 kB
+├ ƒ /api/claudechat/process-voice                               370 B         102 kB
+├ ƒ /api/claudechat/voice-explanation                           370 B         102 kB
+├ ƒ /api/contact/inquiry                                        370 B         102 kB
+├ ƒ /api/courses/enhanced                                       370 B         102 kB
+├ ƒ /api/demo-booking                                           370 B         102 kB
+├ ƒ /api/demo/book                                              370 B         102 kB
+├ ƒ /api/errors                                                 370 B         102 kB
+├ ƒ /api/errors/feedback                                        370 B         102 kB
+├ ƒ /api/feedback                                               163 B         106 kB
+├ ƒ /api/generate-test                                          370 B         102 kB
+├ ƒ /api/leads/failure-analysis                                 370 B         102 kB
+├ ƒ /api/monitoring/dashboard                                   370 B         102 kB
+├ ƒ /api/payments                                               370 B         102 kB
+├ ƒ /api/payments/create-order                                  370 B         102 kB
+├ ƒ /api/placeholder/[...dimensions]                            370 B         102 kB
+├ ƒ /api/progress/[userId]                                      370 B         102 kB
+├ ƒ /api/questions                                              370 B         102 kB
+├ ƒ /api/questions/[id]                                         370 B         102 kB
+├ ƒ /api/questions/random                                       370 B         102 kB
+├ ƒ /api/student/materials                                      370 B         102 kB
+├ ƒ /api/student/materials/[id]/download                        370 B         102 kB
+├ ƒ /api/subscription-tiers                                     370 B         102 kB
+├ ƒ /api/test/[id]                                              370 B         102 kB
+├ ƒ /api/test/[id]/answer                                       370 B         102 kB
+├ ƒ /api/test/[id]/results                                      370 B         102 kB
+├ ƒ /api/test/[id]/submit                                       370 B         102 kB
+├ ƒ /api/test/create                                            370 B         102 kB
+├ ƒ /api/test/security                                          370 B         102 kB
+├ ƒ /api/test/session                                           370 B         102 kB
+├ ƒ /api/test/session/[sessionId]                               370 B         102 kB
+├ ƒ /api/webhooks/payments                                      370 B         102 kB
+├ ƒ /api/whatsapp/automation                                    370 B         102 kB
+├ ƒ /api/whatsapp/enhanced-webhook                              370 B         102 kB
+├ ƒ /api/whatsapp/process-message                               370 B         102 kB
+├ ƒ /api/whatsapp/send                                          370 B         102 kB
+├ ○ /auth/signin                                              6.89 kB         161 kB
+├ ○ /auth/signup                                              7.75 kB         162 kB
+├ ○ /blog                                                     11.3 kB         162 kB
+├ ● /blog/[slug]                                              5.37 kB         156 kB
+├   ├ /blog/neet-biology-preparation-strategy-score-330-plus
+├   ├ /blog/photosynthesis-vs-respiration-neet-comparison
+├   └ /blog/neet-biology-coaching-delhi-ncr-guide
+├ ○ /boards                                                     203 B         106 kB
+├ ○ /boards/cbse                                                203 B         106 kB
+├ ○ /boards/ib                                                  203 B         106 kB
+├ ○ /boards/icse                                                203 B         106 kB
+├ ○ /boards/igcse                                               203 B         106 kB
+├ ○ /boards/state-boards                                        203 B         106 kB
+├ ○ /brand-studio                                             12.8 kB         160 kB
+├ ○ /class-11                                                 5.18 kB         174 kB
+├ ○ /class-12                                                 4.79 kB         172 kB
+├ ○ /claudechat                                               5.79 kB         108 kB
+├ ○ /claudechat-demo                                          15.9 kB         118 kB
+├ ○ /claudechat-standalone                                    4.37 kB         144 kB
+├ ○ /community                                                9.58 kB         152 kB
+├ ○ /company/careers                                           7.9 kB         148 kB
+├ ○ /company/results                                            203 B         106 kB
+├ ○ /compare                                                    370 B         102 kB
+├ ○ /contact                                                  8.11 kB         164 kB
+├ ○ /course-finder                                            12.6 kB         166 kB
+├ ○ /courses                                                    189 B         202 kB
+├ ƒ /courses/[series]/[class]/plan-[plan]                     5.98 kB         149 kB
+├ ○ /courses/class-10-foundation                              7.66 kB         167 kB
+├ ○ /courses/class-11                                         6.96 kB         166 kB
+├ ○ /courses/class-12                                          6.8 kB         166 kB
+├ ○ /courses/class-9-foundation                                7.5 kB         167 kB
+├ ○ /courses/dropper                                            370 B         102 kB
+├ ○ /courses/foundation                                       7.44 kB         167 kB
+├ ○ /courses/intensive-neet-biology                           11.3 kB         151 kB
+├ ○ /courses/neet-complete                                    8.64 kB         118 kB
+├ ○ /courses/neet-dropper                                     7.29 kB         167 kB
+├ ○ /curriculum                                                 370 B         102 kB
+├ ○ /dashboard                                                3.11 kB         160 kB
+├ ○ /dashboard/admin                                          6.43 kB         128 kB
+├ ○ /dashboard/student                                        10.7 kB         132 kB
+├ ○ /dashboard/teacher                                        6.13 kB         127 kB
+├ ○ /demo                                                     7.34 kB         147 kB
+├ ○ /demo-booking                                             12.1 kB         152 kB
+├ ○ /demo/comprehensive-courses                               1.88 kB         203 kB
+├ ○ /demo/course-grid                                         11.7 kB         155 kB
+├ ○ /demo/course-selector-interface                           6.82 kB         147 kB
+├ ○ /demo/premium-course-cards                                4.02 kB         144 kB
+├ ○ /demo/simple-course-selector                              1.89 kB         142 kB
+├ ○ /demo/testing-suite                                       21.7 kB         127 kB
+├ ○ /disclaimer                                                 370 B         102 kB
+├ ○ /dropper                                                  4.86 kB         172 kB
+├ ○ /enrollment                                                9.3 kB         166 kB
+├ ƒ /enrollments                                              4.74 kB         190 kB
+├ ○ /explore-courses                                          10.4 kB         158 kB
+├ ○ /faculty                                                  8.24 kB         160 kB
+├ ƒ /faculty/[facultyId]                                      7.94 kB         159 kB
+├ ○ /gallery                                                  6.04 kB         159 kB
+├ ○ /interactive-learning                                     14.6 kB         169 kB
+├ ○ /learning-path                                            3.17 kB         160 kB
+├ ○ /locations                                                  203 B         106 kB
+├ ● /locations/[city]                                         7.03 kB         155 kB
+├   ├ /locations/kota
+├   ├ /locations/delhi
+├   ├ /locations/hyderabad
+├   └ [+9 more paths]
+├ ○ /mobile-app                                                 370 B         102 kB
+├ ○ /mock-tests                                               3.05 kB         108 kB
+├ ƒ /mock-tests/[subject]/[slug]                              5.12 kB         168 kB
+├ ○ /neet-repeaters                                           1.03 kB         103 kB
+├ ○ /offline                                                  2.04 kB         142 kB
+├ ○ /privacy-policy                                             370 B         102 kB
+├ ○ /quick-enroll                                             10.1 kB         160 kB
+├ ○ /refund-policy                                              370 B         102 kB
+├ ○ /resources                                                4.42 kB         118 kB
+├ ○ /resources/analytics                                      3.94 kB         114 kB
+├ ○ /resources/notes                                          4.33 kB         114 kB
+├ ○ /resources/questions                                      5.36 kB         115 kB
+├ ○ /resources/test-generator                                 10.8 kB         173 kB
+├ ○ /robots.txt                                                 370 B         102 kB
+├ ○ /second-chance-neet                                       10.9 kB         167 kB
+├ ○ /security-demo                                            19.6 kB         122 kB
+├ ○ /services                                                   203 B         106 kB
+├ ○ /services/classroom                                         203 B         106 kB
+├ ○ /services/doubt-resolution                                8.68 kB         114 kB
+├ ○ /services/international                                     203 B         106 kB
+├ ○ /services/online-classes                                    203 B         106 kB
+├ ○ /settings                                                 12.2 kB         160 kB
+├ ○ /simple-test-gen                                          1.24 kB         103 kB
+├ ƒ /sitemap-locations.xml                                      370 B         102 kB
+├ ○ /sitemap.xml                                                370 B         102 kB
+├ ○ /status                                                     370 B         102 kB
+├ ○ /study-materials                                          5.71 kB         153 kB
+├ ○ /success-stories                                          8.56 kB         165 kB
+├ ƒ /success-stories/[studentId]                              5.12 kB         159 kB
+├ ○ /support/admission                                        5.24 kB         145 kB
+├ ○ /support/brochure                                         6.17 kB         157 kB
+├ ○ /support/demo                                             4.69 kB         144 kB
+├ ○ /support/fees                                             7.68 kB         159 kB
+├ ○ /terms-of-service                                           370 B         102 kB
+├ ○ /test                                                       370 B         102 kB
+├ ○ /test-learning                                             1.4 kB         103 kB
+├ ○ /test-platform                                              370 B         102 kB
+├ ○ /test-voice                                               1.51 kB         104 kB
+├ ƒ /test/[testId]                                            6.99 kB         109 kB
+├ ○ /testimonials                                             6.33 kB         154 kB
+├ ○ /testing-demo                                              2.3 kB         108 kB
+├ ○ /thank-you                                                3.47 kB         160 kB
+├ ○ /video-lectures                                           10.6 kB         160 kB
+└ ○ /voice-training                                           1.52 kB         104 kB
++ First Load JS shared by all                                  102 kB
+  ├ chunks/1255-5e80850ee659f6b0.js                           45.5 kB
+  ├ chunks/4bd1b696-100b9d70ed4e49c1.js                       54.2 kB
+  └ other shared chunks (total)                               2.25 kB
+
+
+ƒ Middleware                                                  34.5 kB
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ƒ  (Dynamic)  server-rendered on demand
+
