@@ -40,14 +40,25 @@ interface MoleculeData {
 }
 
 export class VisualEnhancementEngine {
-  private openai: OpenAI
+  private openai: OpenAI | null = null
   private moleculeDatabase: Map<string, MoleculeData> = new Map()
 
   constructor() {
-    this.openai = new OpenAI({
-      apiKey: process.env.OPENAI_API_KEY!,
-    })
+    // Lazy initialization - only create client when API key is available
+    // This prevents build-time failures in CI/CD environments
     this.initializeMoleculeDatabase()
+  }
+
+  private ensureOpenAI(): OpenAI {
+    if (!this.openai && process.env.OPENAI_API_KEY) {
+      this.openai = new OpenAI({
+        apiKey: process.env.OPENAI_API_KEY,
+      })
+    }
+    if (!this.openai) {
+      throw new Error('OpenAI API key not configured')
+    }
+    return this.openai
   }
 
   /**
@@ -57,7 +68,8 @@ export class VisualEnhancementEngine {
     const optimizedPrompt = this.createDiagramPrompt(request)
 
     try {
-      const response = await this.openai.images.generate({
+      const openai = this.ensureOpenAI()
+      const response = await openai.images.generate({
         model: 'dall-e-3',
         prompt: optimizedPrompt,
         size: '1024x1024',
@@ -178,7 +190,8 @@ export class VisualEnhancementEngine {
       clean white background, medical textbook quality`
 
     try {
-      const response = await this.openai.images.generate({
+      const openai = this.ensureOpenAI()
+      const response = await openai.images.generate({
         model: 'dall-e-3',
         prompt: optimizedPrompt,
         size: '1024x1024',
