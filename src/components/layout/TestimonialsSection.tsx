@@ -43,7 +43,7 @@ export function TestimonialsSection() {
   }
 
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <section className="py-20 bg-navy-50">
       <div className="max-w-7xl mx-auto px-4">
         {/* Section Header */}
         <motion.div
@@ -151,7 +151,7 @@ export function TestimonialsSection() {
                 {/* Student Image & Video */}
                 <div className="text-center">
                   <div className="relative inline-block">
-                    <div className="w-48 h-48 mx-auto bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center text-white relative overflow-hidden">
+                    <div className="w-48 h-48 mx-auto bg-navy-900 rounded-full flex items-center justify-center text-white relative overflow-hidden">
                       {/* Placeholder for student image */}
                       <Users className="w-24 h-24 opacity-80" />
                       {testimonials[currentTestimonial].videoId && (
@@ -238,7 +238,7 @@ export function TestimonialsSection() {
                 transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <div className="relative aspect-video bg-gradient-to-br from-blue-400 to-purple-500">
+                <div className="relative aspect-video bg-navy-900">
                   {/* Placeholder thumbnail */}
                   <div className="absolute inset-0 flex items-center justify-center">
                     <Youtube className="w-16 h-16 text-white opacity-80" />
@@ -339,7 +339,7 @@ export function TestimonialsSection() {
             </motion.div>
 
             <motion.div
-              className="bg-gradient-to-br from-blue-50 to-indigo-50 border-2 border-blue-200 rounded-3xl p-8 text-center relative overflow-hidden"
+              className="bg-white border-2 border-navy-200 rounded-3xl p-8 text-center relative overflow-hidden shadow-sm"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.0 }}
@@ -376,20 +376,18 @@ export function TestimonialsSection() {
 
         {/* Call to Action */}
         <motion.div
-          className="text-center bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 rounded-3xl p-12 text-white"
+          className="text-center bg-navy-900 rounded-3xl p-12 text-white"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-4xl font-bold mb-4">
-            Your NEET Success Story Awaits!
-          </h3>
+          <h3 className="text-4xl font-bold mb-4">Your NEET Success Story Awaits!</h3>
           <p className="text-xl mb-6 opacity-90">
-            Join 2,847+ students who transformed from struggling to medical college success. 
-            Your rank could be next on our achievement board!
+            Join 2,847+ students who transformed from struggling to medical college success. Your
+            rank could be next on our achievement board!
           </p>
-          
+
           {/* Urgency Elements */}
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8 max-w-2xl mx-auto">
             <div className="flex items-center justify-center mb-4">

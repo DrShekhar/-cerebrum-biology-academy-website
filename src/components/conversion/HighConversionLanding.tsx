@@ -133,15 +133,13 @@ export function HighConversionLanding({ className = '' }: HighConversionLandingP
   ]
 
   return (
-    <div
-      className={`min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 ${className}`}
-    >
+    <div className={`min-h-screen bg-gradient-to-b from-navy-50 to-white ${className}`}>
       {/* Hero Section with Integrated Quiz */}
-      <div className="relative bg-gradient-to-br from-blue-600 via-indigo-700 to-purple-800 text-white overflow-hidden">
+      <div className="relative bg-navy-900 text-white overflow-hidden">
         {/* Background Effects */}
         <div className="absolute inset-0">
           <motion.div
-            className="absolute top-1/4 left-1/6 w-96 h-96 bg-gradient-to-br from-orange-400/20 to-red-500/20 rounded-full blur-3xl"
+            className="absolute top-1/4 left-1/6 w-96 h-96 bg-gradient-to-br from-teal-400/15 to-teal-600/10 rounded-full blur-3xl"
             animate={{
               scale: [1, 1.2, 1],
               x: [0, 50, 0],
@@ -233,7 +231,7 @@ export function HighConversionLanding({ className = '' }: HighConversionLandingP
                   variant="medical"
                   size="lg"
                   onClick={handleCallNow}
-                  className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white"
+                  className="bg-teal-600 hover:bg-teal-700 text-white"
                 >
                   <PhoneIcon className="h-5 w-5" />
                   Call Now - Get Instant Admission
@@ -329,7 +327,7 @@ export function HighConversionLanding({ className = '' }: HighConversionLandingP
       </AnimatePresence>
 
       {/* Conversion Stats Section */}
-      <div className="py-16 bg-gradient-to-r from-gray-50 to-blue-50">
+      <div className="py-16 bg-navy-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">
             Why Students Choose Our 2-Minute Enrollment

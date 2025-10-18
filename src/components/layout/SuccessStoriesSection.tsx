@@ -404,17 +404,15 @@ export function SuccessStoriesSection({
   const getCategoryColor = (category: string) => {
     const colors = {
       'low-scorer': 'from-red-500 to-orange-500',
-      'multiple-attempts': 'from-blue-500 to-purple-500',
-      'gave-up': 'from-pink-500 to-red-500',
+      'multiple-attempts': 'from-blue-500 to-teal-500',
+      'gave-up': 'from-navy-500 to-red-500',
       'biology-weak': 'from-green-500 to-emerald-500',
     }
-    return colors[category as keyof typeof colors] || 'from-blue-500 to-purple-500'
+    return colors[category as keyof typeof colors] || 'from-blue-500 to-teal-500'
   }
 
   return (
-    <section
-      className={`py-20 bg-gradient-to-br from-indigo-50 via-white to-purple-50 ${className}`}
-    >
+    <section className={`py-20 bg-navy-50 ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Banner */}
         <motion.div
@@ -432,7 +430,7 @@ export function SuccessStoriesSection({
           </div>
 
           <div className="space-y-4">
-            <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-gray-900 via-emerald-700 to-blue-800 bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-6xl font-bold text-navy-900">
               From Failure to AIIMS
               <br />
               <span className="text-red-500">Real Stories</span>, Real Students
@@ -448,7 +446,7 @@ export function SuccessStoriesSection({
           {/* Video Compilation Placeholder */}
           <motion.div whileHover={{ scale: 1.02 }} className="relative max-w-4xl mx-auto">
             <PremiumCard variant="luxury" size="lg" className="relative overflow-hidden">
-              <div className="aspect-video bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center relative">
+              <div className="aspect-video bg-gradient-to-br from-teal-600 to-navy-600 rounded-lg flex items-center justify-center relative">
                 <div className="absolute inset-0 bg-black/30" />
                 <div className="relative text-center text-white space-y-4">
                   <PlayCircleIcon className="h-20 w-20 mx-auto mb-4 text-white/90 hover:text-white transition-colors cursor-pointer" />
@@ -628,7 +626,7 @@ export function SuccessStoriesSection({
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="mt-16 text-center bg-gradient-to-r from-emerald-600 to-blue-600 rounded-2xl p-8 text-white"
+          className="mt-16 text-center bg-navy-900 rounded-2xl p-8 text-white"
         >
           <h3 className="text-3xl font-bold mb-4">Ready to Write Your Success Story?</h3>
           <p className="text-xl mb-6 opacity-90">
@@ -639,7 +637,7 @@ export function SuccessStoriesSection({
             <PremiumButton
               variant="luxury"
               size="lg"
-              className="bg-white text-blue-600 hover:bg-gray-50"
+              className="bg-teal-600 text-white hover:bg-teal-700 shadow-lg hover:shadow-xl"
             >
               <PhoneIcon className="h-6 w-6" />
               Book Your Success Consultation

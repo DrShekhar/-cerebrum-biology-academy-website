@@ -217,9 +217,9 @@ export function SecondChanceNEETLanding({
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-red-50 via-white to-blue-50">
+    <div className="min-h-screen bg-gradient-to-b from-navy-50 to-white">
       {/* Above the Fold Hero Section */}
-      <div className="relative bg-gradient-to-br from-red-100 via-white to-blue-100 py-12 overflow-hidden">
+      <div className="relative bg-gradient-to-b from-navy-50 to-white py-12 overflow-hidden">
         <div className="absolute inset-0 bg-[url('/api/placeholder/1920/1080')] bg-cover bg-center opacity-5" />
 
         <div className="max-w-7xl mx-auto px-4 relative">
@@ -442,7 +442,7 @@ export function SecondChanceNEETLanding({
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -100 }}
                   transition={{ duration: 0.5 }}
-                  className="grid md:grid-cols-2 gap-8 items-center bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-2xl"
+                  className="grid md:grid-cols-2 gap-8 items-center bg-navy-50 border border-navy-100 p-8 rounded-2xl"
                 >
                   <div className="relative">
                     <div className="relative bg-black rounded-2xl overflow-hidden aspect-video">
@@ -534,7 +534,7 @@ export function SecondChanceNEETLanding({
       </div>
 
       {/* Problem-Solution Section */}
-      <div className="py-16 bg-gradient-to-br from-red-50 to-blue-50">
+      <div className="py-16 bg-navy-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Problem Section */}
@@ -647,7 +647,7 @@ export function SecondChanceNEETLanding({
       </div>
 
       {/* Urgency Section */}
-      <div className="py-16 bg-gradient-to-r from-orange-500 to-red-500 text-white">
+      <div className="py-16 bg-teal-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -774,7 +774,7 @@ export function SecondChanceNEETLanding({
       </div>
 
       {/* Final CTA Section */}
-      <div className="py-16 bg-gradient-to-br from-blue-600 to-purple-600 text-white">
+      <div className="py-16 bg-navy-900 border-t-4 border-teal-500 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

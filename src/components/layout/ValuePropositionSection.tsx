@@ -29,7 +29,7 @@ export function ValuePropositionSection() {
       description:
         'AIIMS faculty-designed curriculum with proven methodology for maximum retention',
       icon: BookOpen,
-      color: 'from-purple-500 to-purple-600',
+      color: 'from-teal-500 to-teal-600',
       benefits: ['Expert faculty guidance', 'High-yield topics focus', 'Regular assessments'],
     },
     {
@@ -88,7 +88,7 @@ export function ValuePropositionSection() {
   ]
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50">
+    <section className="py-20 bg-navy-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -122,9 +122,9 @@ export function ValuePropositionSection() {
                 >
                   {/* Connection Line */}
                   {index < successFramework.length - 1 && (
-                    <div className="hidden lg:block absolute top-20 left-full w-full h-0.5 bg-gradient-to-r from-blue-200 to-purple-200 z-10">
+                    <div className="hidden lg:block absolute top-20 left-full w-full h-0.5 bg-gradient-to-r from-blue-200 to-teal-200 z-10">
                       <div className="absolute right-0 top-1/2 transform -translate-y-1/2">
-                        <div className="w-3 h-3 bg-purple-400 rounded-full"></div>
+                        <div className="w-3 h-3 bg-teal-400 rounded-full"></div>
                       </div>
                     </div>
                   )}
@@ -179,7 +179,7 @@ export function ValuePropositionSection() {
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
-                  <tr className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+                  <tr className="bg-navy-900 text-white">
                     <th className="text-left py-6 px-6 font-semibold">Success Metrics</th>
                     <th className="text-center py-6 px-6 font-semibold">Traditional Coaching</th>
                     <th className="text-center py-6 px-6 font-semibold">Our Academy</th>
@@ -258,7 +258,7 @@ export function ValuePropositionSection() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
+          <div className="bg-navy-900 rounded-2xl p-8 text-white">
             <h3 className="text-2xl md:text-3xl font-bold mb-4">
               Ready to Experience the Difference?
             </h3>
@@ -267,7 +267,7 @@ export function ValuePropositionSection() {
             </p>
             <Link
               href="/support/demo"
-              className="inline-block bg-white text-blue-600 px-8 py-4 rounded-full font-semibold hover:bg-blue-50 transition-all duration-300 transform hover:-translate-y-1 shadow-lg"
+              className="inline-block bg-teal-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-teal-700 transition-all duration-300 transform hover:-translate-y-1 shadow-lg"
             >
               Book Your Free Strategy Session
             </Link>

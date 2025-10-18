@@ -66,7 +66,7 @@ export function CountryLandingPage({ countryContent, countryCode }: CountryLandi
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white">
+      <section className="relative bg-navy-900 text-white">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -183,10 +183,7 @@ export function CountryLandingPage({ countryContent, countryCode }: CountryLandi
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {countryContent.localOffers.map((offer, index) => (
-              <div
-                key={index}
-                className="bg-gradient-to-br from-blue-50 to-purple-50 border border-blue-200 rounded-xl p-6"
-              >
+              <div key={index} className="bg-teal-50 border border-teal-200 rounded-xl p-6">
                 <div className="flex items-start space-x-3">
                   <CheckCircleIcon className="h-6 w-6 text-green-500 mt-1 flex-shrink-0" />
                   <div>
@@ -397,7 +394,7 @@ export function CountryLandingPage({ countryContent, countryCode }: CountryLandi
             </div>
 
             <div>
-              <div className="bg-gradient-to-br from-blue-50 to-purple-50 border border-blue-200 rounded-xl p-8">
+              <div className="bg-white border-2 border-navy-200 shadow-sm rounded-xl p-8">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   Course Timing for {countryContent.name}
                 </h3>

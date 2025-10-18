@@ -86,7 +86,7 @@ export function ParentTestimonialsSection({
   const currentTestimonialData = featuredTestimonials[currentTestimonial]
 
   return (
-    <section className="py-20 bg-gradient-to-br from-rose-50 via-pink-50 to-purple-50">
+    <section className="py-20 bg-navy-50">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
         <motion.div
@@ -96,13 +96,13 @@ export function ParentTestimonialsSection({
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <div className="inline-flex items-center bg-pink-100 text-pink-600 px-6 py-3 rounded-full text-sm font-medium mb-6">
+          <div className="inline-flex items-center bg-teal-100 text-teal-600 px-6 py-3 rounded-full text-sm font-medium mb-6">
             <Heart className="w-5 h-5 mr-2" />
             Parent Testimonials - Real Stories of Trust
           </div>
 
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            What <span className="text-pink-600">Parents Say</span> About Cerebrum
+            What <span className="text-navy-700">Parents Say</span> About Cerebrum
           </h2>
 
           <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
@@ -129,7 +129,7 @@ export function ParentTestimonialsSection({
                 icon: Users,
                 label: `${parentSuccessMetrics.recommendationRate}%`,
                 sublabel: 'Recommendation Rate',
-                color: 'text-purple-600',
+                color: 'text-navy-600',
               },
               {
                 icon: Star,
@@ -180,7 +180,7 @@ export function ParentTestimonialsSection({
                   {/* Parent Info */}
                   <div className="text-center md:text-left">
                     <div className="relative inline-block mb-6">
-                      <div className="w-24 h-24 bg-gradient-to-br from-pink-400 to-purple-500 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg">
+                      <div className="w-24 h-24 bg-navy-900 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg border-2 border-teal-600">
                         {currentTestimonialData.parentName
                           .split(' ')
                           .map((n) => n[0])
@@ -218,14 +218,14 @@ export function ParentTestimonialsSection({
                   {/* Testimonial Content */}
                   <div className="md:col-span-2">
                     <div className="relative">
-                      <Quote className="w-12 h-12 text-pink-200 absolute -top-4 -left-4" />
+                      <Quote className="w-12 h-12 text-teal-200 absolute -top-4 -left-4" />
                       <blockquote className="text-lg text-gray-700 leading-relaxed italic mb-6 pl-8">
                         "{currentTestimonialData.testimonial}"
                       </blockquote>
                     </div>
 
                     {/* Student Details */}
-                    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-6 mb-6">
+                    <div className="bg-teal-50 rounded-xl p-6 mb-6 border border-teal-100">
                       <h4 className="font-semibold text-gray-900 mb-3">Success Story Details:</h4>
                       <div className="grid md:grid-cols-2 gap-4 text-sm">
                         <div>
@@ -269,7 +269,7 @@ export function ParentTestimonialsSection({
                       {currentTestimonialData.highlights.map((highlight, index) => (
                         <span
                           key={index}
-                          className="inline-flex items-center bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-medium"
+                          className="inline-flex items-center bg-navy-100 text-navy-700 px-3 py-1 rounded-full text-xs font-medium"
                         >
                           {highlight}
                         </span>
@@ -305,7 +305,7 @@ export function ParentTestimonialsSection({
                   key={index}
                   onClick={() => setCurrentTestimonial(index)}
                   className={`w-3 h-3 rounded-full transition-colors ${
-                    index === currentTestimonial ? 'bg-pink-500' : 'bg-white/50'
+                    index === currentTestimonial ? 'bg-teal-600' : 'bg-white/50'
                   }`}
                 />
               ))}
@@ -332,10 +332,10 @@ export function ParentTestimonialsSection({
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-white rounded-xl shadow-lg p-6"
+                  className="bg-white rounded-xl shadow-lg p-6 border border-navy-200"
                 >
                   <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-pink-400 to-purple-500 rounded-full flex items-center justify-center text-white text-sm font-bold">
+                    <div className="w-12 h-12 bg-navy-900 rounded-full flex items-center justify-center text-white text-sm font-bold border-2 border-teal-600">
                       {testimonial.parentName
                         .split(' ')
                         .map((n) => n[0])
@@ -373,7 +373,7 @@ export function ParentTestimonialsSection({
 
         {/* Call to Action */}
         <motion.div
-          className="text-center bg-gradient-to-r from-pink-600 via-purple-600 to-indigo-600 rounded-3xl p-12 text-white"
+          className="text-center bg-navy-900 rounded-3xl p-12 text-white"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -391,7 +391,7 @@ export function ParentTestimonialsSection({
             <Button
               variant="secondary_cta"
               size="xl"
-              className="bg-white text-purple-600 hover:bg-gray-100"
+              className="bg-white text-navy-900 hover:bg-gray-100"
               onClick={handleDemoBooking}
             >
               <BookOpen className="w-5 h-5 mr-2" />
@@ -401,7 +401,7 @@ export function ParentTestimonialsSection({
             <Button
               variant="outline"
               size="xl"
-              className="border-white text-white hover:bg-white hover:text-purple-600"
+              className="border-white text-white hover:bg-white hover:text-navy-900"
             >
               <MessageCircle className="w-5 h-5 mr-2" />
               Talk to Other Parents
@@ -423,7 +423,7 @@ export function ParentTestimonialsSection({
               <span>4.9/5 Rating</span>
             </div>
             <div className="flex items-center">
-              <div className="w-2 h-2 bg-pink-400 rounded-full mr-2"></div>
+              <div className="w-2 h-2 bg-teal-400 rounded-full mr-2"></div>
               <span>96.2% Recommend</span>
             </div>
           </div>

@@ -92,7 +92,7 @@ export function HeroSection() {
 
   return (
     <section
-      className="min-h-screen bg-gradient-to-br from-primary-50 via-primary-100 to-indigo-100 px-4 py-12"
+      className="min-h-screen bg-navy-50 px-4 py-12"
       style={{ background: 'var(--gradient-hero)' }}
     >
       <div className="max-w-7xl mx-auto">
@@ -107,12 +107,12 @@ export function HeroSection() {
           >
             {/* Brand Positioning Banner */}
             <motion.div
-              className="inline-flex items-center bg-gradient-to-r from-blue-50 via-purple-50 to-indigo-50 border border-blue-200 rounded-full px-6 py-3 mb-6"
+              className="inline-flex items-center bg-navy-50 border border-navy-200 rounded-full px-6 py-3 mb-6"
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mr-3">
+              <div className="w-8 h-8 bg-teal-600 rounded-full flex items-center justify-center mr-3">
                 <BookOpen className="w-4 h-4 text-white" />
               </div>
               <span className="text-sm font-semibold text-gray-800">
@@ -140,7 +140,7 @@ export function HeroSection() {
                       <span className="text-emerald-600">{heroVariant.headline.highlight2}</span>
                     )}
                     {heroVariant.id === 'urgency_social_proof' && (
-                      <span className="text-indigo-600">{heroVariant.headline.highlight2}</span>
+                      <span className="text-navy-600">{heroVariant.headline.highlight2}</span>
                     )}
                     {heroVariant.id === 'guarantee_focused' && (
                       <span className="text-emerald-600 font-extrabold">
@@ -148,7 +148,7 @@ export function HeroSection() {
                       </span>
                     )}
                     {heroVariant.id === 'control' && (
-                      <span className="text-indigo-600">{heroVariant.headline.highlight2}</span>
+                      <span className="text-navy-600">{heroVariant.headline.highlight2}</span>
                     )}
                   </h1>
 
@@ -184,7 +184,7 @@ export function HeroSection() {
                         <path d="M0,8 Q50,0 100,8 L100,12 L0,12 Z" />
                       </svg>
                     </span>{' '}
-                    to <span className="text-indigo-600">Medical College Reality</span>
+                    to <span className="text-navy-600">Medical College Reality</span>
                   </h1>
 
                   <p className="text-xl text-gray-600 max-w-lg leading-relaxed">
@@ -261,7 +261,7 @@ export function HeroSection() {
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.4 }}
-                className="bg-gradient-to-r from-emerald-50 via-blue-50 to-purple-50 border border-emerald-200 rounded-2xl p-4 shadow-sm"
+                className="bg-teal-50 border border-teal-200 rounded-2xl p-4 shadow-sm"
               >
                 <div className="flex items-center justify-center space-x-2">
                   <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
@@ -277,15 +277,15 @@ export function HeroSection() {
 
               {/* Enhanced Trust Badges */}
               <div className="flex flex-wrap justify-center gap-3">
-                <div className="flex items-center bg-gradient-to-r from-emerald-50 to-emerald-100 text-emerald-700 px-5 py-3 rounded-full text-sm border border-emerald-200 shadow-sm backdrop-blur-sm">
+                <div className="flex items-center bg-teal-50 border border-teal-100 text-teal-700 px-5 py-3 rounded-full text-sm shadow-sm backdrop-blur-sm">
                   <Trophy className="w-5 h-5 mr-2" />
                   <span className="font-semibold">94.2% Success Rate</span>
                 </div>
-                <div className="flex items-center bg-gradient-to-r from-blue-50 to-blue-100 text-blue-700 px-5 py-3 rounded-full text-sm border border-blue-200 shadow-sm backdrop-blur-sm">
+                <div className="flex items-center bg-navy-50 border border-navy-100 text-navy-700 px-5 py-3 rounded-full text-sm shadow-sm backdrop-blur-sm">
                   <Users className="w-5 h-5 mr-2" />
                   <span className="font-semibold">2,847+ Cerebrum Medical Seats</span>
                 </div>
-                <div className="flex items-center bg-gradient-to-r from-purple-50 to-purple-100 text-purple-700 px-5 py-3 rounded-full text-sm border border-purple-200 shadow-sm backdrop-blur-sm">
+                <div className="flex items-center bg-teal-50 border border-teal-100 text-teal-700 px-5 py-3 rounded-full text-sm shadow-sm backdrop-blur-sm">
                   <BookOpen className="w-5 h-5 mr-2" />
                   <span className="font-semibold">247 AIIMS Selections</span>
                 </div>
@@ -298,7 +298,7 @@ export function HeroSection() {
                     {[1, 2, 3, 4].map((i) => (
                       <div
                         key={i}
-                        className="w-8 h-8 rounded-full bg-gradient-to-r from-blue-400 to-indigo-500 border-2 border-white flex items-center justify-center"
+                        className="w-8 h-8 rounded-full bg-teal-600 border-2 border-white flex items-center justify-center"
                       >
                         <User className="w-4 h-4 text-white" />
                       </div>
@@ -344,8 +344,8 @@ export function HeroSection() {
           >
             {/* Hero Illustration Placeholder */}
             <div className="relative">
-              <div className="w-full h-96 bg-gradient-to-br from-blue-500 via-purple-500 to-indigo-600 rounded-3xl flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 via-purple-400/20 to-indigo-400/20"></div>
+              <div className="w-full h-96 bg-navy-900 rounded-3xl flex items-center justify-center relative overflow-hidden">
+                <div className="absolute inset-0 bg-navy-800/20"></div>
                 <div className="relative z-10 text-center text-white">
                   <div className="w-32 h-32 mx-auto mb-6 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
                     <BookOpen className="w-16 h-16" />

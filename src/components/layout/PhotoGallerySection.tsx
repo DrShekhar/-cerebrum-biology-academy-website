@@ -116,7 +116,7 @@ export function PhotoGallerySection({
   }
 
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+    <section className="py-20 bg-navy-50">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
         <motion.div
@@ -160,7 +160,7 @@ export function PhotoGallerySection({
                 label: galleryStats.studentsDocumented + '+',
                 sublabel: 'Students',
                 icon: Users,
-                color: 'text-purple-600',
+                color: 'text-teal-600',
               },
               {
                 label: galleryStats.successMoments + '+',
@@ -281,11 +281,11 @@ export function PhotoGallerySection({
                           : photo.category === 'celebrations'
                             ? 'from-emerald-400 to-emerald-600'
                             : photo.category === 'seminars'
-                              ? 'from-purple-400 to-purple-600'
+                              ? 'from-teal-400 to-teal-600'
                               : photo.category === 'awards'
                                 ? 'from-yellow-400 to-yellow-600'
                                 : photo.category === 'mentoring'
-                                  ? 'from-pink-400 to-pink-600'
+                                  ? 'from-navy-400 to-navy-600'
                                   : 'from-gray-400 to-gray-600'
                       } flex items-center justify-center text-white`}
                     >
@@ -307,11 +307,11 @@ export function PhotoGallerySection({
                                 : photo.category === 'celebrations'
                                   ? 'bg-emerald-100 text-emerald-700'
                                   : photo.category === 'seminars'
-                                    ? 'bg-purple-100 text-purple-700'
+                                    ? 'bg-teal-100 text-teal-700'
                                     : photo.category === 'awards'
                                       ? 'bg-yellow-100 text-yellow-700'
                                       : photo.category === 'mentoring'
-                                        ? 'bg-pink-100 text-pink-700'
+                                        ? 'bg-navy-100 text-navy-700'
                                         : 'bg-gray-100 text-gray-700'
                             }`}
                           >
@@ -400,7 +400,7 @@ export function PhotoGallerySection({
                 </button>
 
                 {/* Photo */}
-                <div className="aspect-video bg-gradient-to-br from-blue-400 to-purple-600 rounded-lg flex items-center justify-center mb-4">
+                <div className="aspect-video bg-gradient-to-br from-teal-400 to-navy-600 rounded-lg flex items-center justify-center mb-4">
                   <div className="text-center text-white p-8">
                     <Camera className="w-20 h-20 mx-auto mb-4 opacity-60" />
                     <h3 className="text-2xl font-bold mb-2">{lightboxPhoto.title}</h3>
@@ -461,7 +461,7 @@ export function PhotoGallerySection({
 
         {/* Call to Action */}
         <motion.div
-          className="text-center bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-3xl p-12 text-white"
+          className="text-center bg-navy-900 rounded-3xl p-12 text-white"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -477,7 +477,7 @@ export function PhotoGallerySection({
             <Button
               variant="secondary_cta"
               size="xl"
-              className="bg-white text-blue-600 hover:bg-gray-100"
+              className="bg-teal-600 text-white hover:bg-teal-700 shadow-lg hover:shadow-xl"
               onClick={handleDemoBooking}
             >
               <BookOpen className="w-5 h-5 mr-2" />
@@ -487,7 +487,7 @@ export function PhotoGallerySection({
             <Button
               variant="outline"
               size="xl"
-              className="border-white text-white hover:bg-white hover:text-blue-600"
+              className="border-white text-white hover:bg-white hover:text-navy-900"
             >
               <Camera className="w-5 h-5 mr-2" />
               View Complete Gallery

@@ -178,12 +178,12 @@ export function CoursePhaseTimeline({
           {/* Desktop: Horizontal Timeline */}
           <div className={`${isMobile ? 'hidden' : 'block'}`}>
             {/* Connecting Line */}
-            <div className="absolute top-24 left-0 right-0 h-1 bg-gradient-to-r from-emerald-200 via-blue-200 via-purple-200 to-red-200 rounded-full">
+            <div className="absolute top-24 left-0 right-0 h-1 bg-gradient-to-r from-teal-200 to-teal-400 rounded-full">
               <motion.div
                 initial={{ scaleX: 0 }}
                 animate={isInView ? { scaleX: currentPhase / 4 } : {}}
                 transition={{ duration: 2, delay: 0.5, ease: 'easeOut' }}
-                className="h-full bg-gradient-to-r from-emerald-500 via-blue-500 via-purple-500 to-red-500 rounded-full origin-left"
+                className="h-full bg-gradient-to-r from-teal-500 to-teal-600 rounded-full origin-left"
               />
             </div>
 
@@ -207,9 +207,9 @@ export function CoursePhaseTimeline({
                       initial={{ scale: 0 }}
                       animate={isInView ? { scale: 1 } : {}}
                       transition={{ duration: 0.4, delay: index * 0.2 + 0.3 }}
-                      className={`w-8 h-8 rounded-full border-4 border-white ${phase.id <= currentPhase ? 'bg-gradient-to-r from-blue-500 to-purple-500' : 'bg-gray-300'} shadow-lg`}
+                      className={`w-8 h-8 rounded-full border-4 border-white ${phase.id <= currentPhase ? 'bg-teal-600' : 'bg-gray-300'} shadow-lg`}
                       style={{
-                        background: phase.id <= currentPhase ? phase.color.gradient : undefined,
+                        opacity: phase.id <= currentPhase ? 1 : 0.5,
                       }}
                     />
                   </div>
@@ -302,12 +302,12 @@ export function CoursePhaseTimeline({
           {/* Mobile: Vertical Timeline */}
           <div className={`${isMobile ? 'block' : 'hidden'} relative`}>
             {/* Vertical Connecting Line */}
-            <div className="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-emerald-200 via-blue-200 via-purple-200 to-red-200 rounded-full">
+            <div className="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-teal-200 to-teal-400 rounded-full">
               <motion.div
                 initial={{ scaleY: 0 }}
                 animate={isInView ? { scaleY: currentPhase / 4 } : {}}
                 transition={{ duration: 2, delay: 0.5, ease: 'easeOut' }}
-                className="w-full bg-gradient-to-b from-emerald-500 via-blue-500 via-purple-500 to-red-500 rounded-full origin-top"
+                className="w-full bg-gradient-to-b from-teal-500 to-teal-600 rounded-full origin-top"
               />
             </div>
 
@@ -331,9 +331,9 @@ export function CoursePhaseTimeline({
                       initial={{ scale: 0 }}
                       animate={isInView ? { scale: 1 } : {}}
                       transition={{ duration: 0.4, delay: index * 0.2 + 0.3 }}
-                      className={`w-8 h-8 rounded-full border-4 border-white shadow-lg flex items-center justify-center`}
+                      className={`w-8 h-8 rounded-full border-4 border-white shadow-lg flex items-center justify-center ${phase.id <= currentPhase ? 'bg-teal-600' : 'bg-gray-300'}`}
                       style={{
-                        background: phase.id <= currentPhase ? phase.color.gradient : '#D1D5DB',
+                        opacity: phase.id <= currentPhase ? 1 : 0.5,
                       }}
                     >
                       {phase.id <= currentPhase && <Check className="h-4 w-4 text-white" />}
@@ -418,7 +418,7 @@ export function CoursePhaseTimeline({
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 1.2 }}
-          className="mt-16 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 rounded-2xl p-8 text-center text-white"
+          className="mt-16 bg-navy-900 border-t-4 border-teal-500 rounded-2xl p-8 text-center text-white"
         >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="space-y-2">
