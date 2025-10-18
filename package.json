@@ -20,6 +20,7 @@
     "test:integration": "jest --config jest.integration.config.js",
     "test:perf": "node scripts/performance-test.js",
     "test:load": "artillery run scripts/load-test.yml",
+    "test:whatsapp-bot": "npx ts-node scripts/test-whatsapp-bot.ts",
     "verify-completion": "node scripts/verify-completion.js",
     "deploy:monitor": "node scripts/deployment-monitor.js",
     "deploy:verify": "npm run deploy:monitor && echo '✅ Deployment verified'",
