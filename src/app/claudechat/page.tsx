@@ -134,20 +134,59 @@ export default function ClaudeChatPage() {
     setInputMessage('')
     setIsThinking(true)
 
-    setTimeout(async () => {
-      const aiResponse = generateAIResponse(currentInput)
+    try {
+      // Call the real AI API instead of using hardcoded responses
+      const response = await fetch('/api/ai/unified-chat', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          message: currentInput,
+          context: {
+            subject: 'Biology',
+            studentLevel: 'class-12',
+            language: language,
+            conversationHistory: messages.slice(-5).map((m) => ({
+              role: m.type === 'user' ? 'user' : 'assistant',
+              content: m.content,
+            })),
+          },
+        }),
+      })
+
+      if (!response.ok) {
+        throw new Error(`API Error: ${response.status}`)
+      }
+
+      const data = await response.json()
       const aiMessageId = `ai-${Date.now()}-${Math.random()}`
       const aiMessage: Message = {
         id: aiMessageId,
-        content: aiResponse,
+        content: data.response || data.message || 'Sorry, I could not process your request.',
         type: 'ai',
         timestamp: new Date(),
       }
 
       setMessages((prev) => [...prev, aiMessage])
+    } catch (error) {
+      console.error('AI Chat Error:', error)
+
+      // Fallback to hardcoded response on error
+      const fallbackResponse = generateAIResponse(currentInput)
+      const aiMessageId = `ai-${Date.now()}-${Math.random()}`
+      const aiMessage: Message = {
+        id: aiMessageId,
+        content: `⚠️ AI service temporarily unavailable. Using offline mode:\n\n${fallbackResponse}`,
+        type: 'ai',
+        timestamp: new Date(),
+      }
+
+      setMessages((prev) => [...prev, aiMessage])
+    } finally {
       setIsThinking(false)
-    }, 1500)
-  }, [inputMessage, language])
+    }
+  }, [inputMessage, language, messages])
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-100 via-gray-50 to-blue-50 flex flex-col">
