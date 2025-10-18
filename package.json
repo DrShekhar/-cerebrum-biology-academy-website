@@ -71,7 +71,10 @@
     "redis:cli": "redis-cli",
     "redis:flush": "redis-cli flushall",
     "cache:warm": "tsx scripts/warm-cache.ts",
-    "health:check": "tsx scripts/health-check.ts"
+    "health:check": "tsx scripts/health-check.ts",
+    "agent": "tsx scripts/agent-workflow.ts",
+    "agent:status": "tsx scripts/agent-status.ts",
+    "agent:list": "tsx scripts/agent-list.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.63.0",
