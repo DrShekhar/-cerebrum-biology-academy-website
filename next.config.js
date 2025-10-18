@@ -10,10 +10,37 @@ const nextConfig = {
         net: false,
         tls: false,
       }
+
+      // Production bundle optimization
+      if (process.env.NODE_ENV === 'production') {
+        config.optimization = {
+          ...config.optimization,
+          splitChunks: {
+            chunks: 'all',
+            cacheGroups: {
+              default: false,
+              vendors: false,
+              vendor: {
+                name: 'vendor',
+                chunks: 'all',
+                test: /node_modules/,
+                priority: 20
+              },
+              common: {
+                name: 'common',
+                minChunks: 2,
+                chunks: 'async',
+                priority: 10,
+                reuseExistingChunk: true,
+                enforce: true
+              }
+            }
+          }
+        }
+      }
     }
     return config
   },
-
 
   // Consistent image optimization for production
   images: {
@@ -46,6 +73,13 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   output: 'standalone',
+  swcMinify: true,
+
+  // Experimental features for better performance
+  experimental: {
+    optimizeCss: true,
+    scrollRestoration: true
+  },
 
   // Development-only cache disabling
   async headers() {
@@ -92,6 +126,14 @@ const nextConfig = {
             key: 'Content-Language',
             value: 'en-IN, hi-IN',
           },
+          {
+            key: 'Referrer-Policy',
+            value: 'strict-origin-when-cross-origin',
+          },
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=()',
+          },
         ],
       },
       {
@@ -102,6 +144,26 @@ const nextConfig = {
             value: 'public, max-age=31536000, immutable',
           },
         ],
+      },
+      {
+        source: '/_next/static/(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+    ]
+  },
+
+  // Redirects for SEO
+  async redirects() {
+    return [
+      {
+        source: '/admin-login',
+        destination: '/admin',
+        permanent: false,
       },
     ]
   },

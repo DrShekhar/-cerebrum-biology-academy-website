@@ -4,27 +4,60 @@
   "devCommand": "npm run dev",
   "installCommand": "npm install",
   "framework": "nextjs",
+  "regions": ["sin1"],
   "env": {
     "NODE_ENV": "production",
     "NEXT_TELEMETRY_DISABLED": "1",
     "REDIS_ENABLED": "true",
-    "COMPLEX_FEATURES_ENABLED": "true"
+    "COMPLEX_FEATURES_ENABLED": "true",
+    "AI_CACHE_ENABLED": "true",
+    "AI_COST_TRACKING": "true"
   },
   "functions": {
     "src/app/api/**/*.ts": {
-      "maxDuration": 30
+      "maxDuration": 30,
+      "memory": 1024
+    },
+    "src/app/api/ai/**/*.ts": {
+      "maxDuration": 60,
+      "memory": 1024
+    },
+    "src/app/api/whatsapp/**/*.ts": {
+      "maxDuration": 30,
+      "memory": 512
     }
   },
   "images": {
     "sizes": [320, 375, 420, 640, 750, 828, 1080, 1200],
     "formats": ["image/webp", "image/avif"],
     "minimumCacheTTL": 31536000,
-    "dangerouslyAllowSVG": false
+    "dangerouslyAllowSVG": false,
+    "remotePatterns": [
+      {
+        "protocol": "https",
+        "hostname": "**.cerebrumbiologyacademy.com"
+      },
+      {
+        "protocol": "https",
+        "hostname": "images.unsplash.com"
+      }
+    ]
   },
   "rewrites": [
     {
       "source": "/claudechat",
       "destination": "/claudechat"
+    },
+    {
+      "source": "/api/health",
+      "destination": "/api/health"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/admin-login",
+      "destination": "/admin",
+      "permanent": false
     }
   ],
   "headers": [
@@ -42,6 +75,19 @@
         {
           "key": "Access-Control-Allow-Headers",
           "value": "Content-Type, Authorization"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "no-cache, no-store, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/static/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
         }
       ]
     },
@@ -59,8 +105,30 @@
         {
           "key": "X-XSS-Protection",
           "value": "1; mode=block"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=31536000; includeSubDomains"
         }
       ]
+    }
+  ],
+  "crons": [
+    {
+      "path": "/api/cron/cleanup",
+      "schedule": "0 2 * * *"
+    },
+    {
+      "path": "/api/cron/backup",
+      "schedule": "0 3 * * *"
     }
   ]
 }
