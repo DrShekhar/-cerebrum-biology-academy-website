@@ -11,16 +11,21 @@ on:
 env:
   NODE_VERSION: '18'
   PYTHON_VERSION: '3.11'
-  DATABASE_URL: ${{ secrets.TEST_DATABASE_URL }}
+  DATABASE_URL: ${{ secrets.TEST_DATABASE_URL || 'postgresql://placeholder' }}
   NEXT_PUBLIC_ENV: test
 
-  # AI Testing
-  OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY_TEST }}
-  ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY_TEST }}
+  # AI Testing (placeholders if secrets not set - only needed at runtime, not build time)
+  OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY_TEST || 'placeholder-build-only' }}
+  ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY_TEST || 'placeholder-build-only' }}
+  GOOGLE_AI_API_KEY: ${{ secrets.GOOGLE_AI_API_KEY_TEST || 'placeholder-build-only' }}
+
+  # JWT Secrets (placeholders for build - not used at build time)
+  JWT_SECRET: ${{ secrets.JWT_SECRET_TEST || 'placeholder-build-secret' }}
+  JWT_REFRESH_SECRET: ${{ secrets.JWT_REFRESH_SECRET_TEST || 'placeholder-build-refresh-secret' }}
 
   # Payment Testing
-  RAZORPAY_KEY_ID: ${{ secrets.RAZORPAY_KEY_ID_TEST }}
-  RAZORPAY_KEY_SECRET: ${{ secrets.RAZORPAY_KEY_SECRET_TEST }}
+  RAZORPAY_KEY_ID: ${{ secrets.RAZORPAY_KEY_ID_TEST || 'placeholder' }}
+  RAZORPAY_KEY_SECRET: ${{ secrets.RAZORPAY_KEY_SECRET_TEST || 'placeholder' }}
 
   # Performance Baselines
   PERF_BASELINE_PAGE_LOAD: 3000

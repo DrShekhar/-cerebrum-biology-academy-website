@@ -1,45 +1,113 @@
 import Redis from 'ioredis'
 import { Question, TestTemplate, TestSession, UserProgress } from '@/generated/prisma'
 
-// Redis configuration optimized for high concurrency
-const redis = new Redis({
-  host: process.env.REDIS_HOST || 'localhost',
-  port: parseInt(process.env.REDIS_PORT || '6379'),
-  password: process.env.REDIS_PASSWORD,
-  db: parseInt(process.env.REDIS_DB || '0'),
+// Check if Redis is enabled via environment variable
+const isRedisEnabled = process.env.REDIS_ENABLED === 'true' && process.env.REDIS_URL
 
-  // Connection pool configuration for 10,000+ concurrent users
-  maxRetriesPerRequest: 3,
-  retryDelayOnFailover: 100,
-  enableReadyCheck: true,
-  maxLoadingTimeout: 1000,
+// Create a mock Redis client for when Redis is disabled
+const createMockRedisClient = () => {
+  const noOp = () => Promise.resolve(null)
+  const noOpNumber = () => Promise.resolve(0)
+  const noOpVoid = () => Promise.resolve()
 
-  // Performance optimizations
-  lazyConnect: true,
-  keepAlive: 30000,
+  return {
+    get: noOp,
+    set: noOpVoid,
+    setex: noOpVoid,
+    del: noOpVoid,
+    incr: noOpNumber,
+    expire: noOpVoid,
+    ttl: noOpNumber,
+    keys: () => Promise.resolve([]),
+    sadd: noOpVoid,
+    srem: noOpVoid,
+    scard: noOpNumber,
+    pipeline: () => ({
+      del: () => {},
+      zadd: () => {},
+      expire: () => {},
+      exec: () => Promise.resolve([]),
+    }),
+    zrange: () => Promise.resolve([]),
+    ping: () => Promise.resolve('PONG'),
+    memory: noOp,
+    info: () => Promise.resolve(''),
+    client: noOp,
+    flushdb: noOpVoid,
+    on: () => {},
+  } as any
+}
 
-  // Cluster configuration (if using Redis Cluster)
-  enableOfflineQueue: false,
+// Redis configuration optimized for high concurrency (only created if enabled)
+const createRedisClient = () => {
+  if (!isRedisEnabled) {
+    console.log('ℹ️  Redis is disabled - using mock client for graceful degradation')
+    return createMockRedisClient()
+  }
 
-  // Command timeout
-  commandTimeout: 5000,
+  const client = new Redis({
+    host: process.env.REDIS_HOST || 'localhost',
+    port: parseInt(process.env.REDIS_PORT || '6379'),
+    password: process.env.REDIS_PASSWORD,
+    db: parseInt(process.env.REDIS_DB || '0'),
 
-  // Key prefix for multi-tenant support
-  keyPrefix: 'cerebrum:',
-})
+    // Connection pool configuration for 10,000+ concurrent users
+    maxRetriesPerRequest: 3,
+    retryDelayOnFailover: 100,
+    enableReadyCheck: true,
+    maxLoadingTimeout: 1000,
 
-// Connection event handlers
-redis.on('connect', () => {
-  console.log('✅ Redis connected successfully')
-})
+    // Performance optimizations
+    lazyConnect: true,
+    keepAlive: 30000,
 
-redis.on('error', (err) => {
-  console.error('❌ Redis connection error:', err)
-})
+    // Cluster configuration (if using Redis Cluster)
+    enableOfflineQueue: false,
 
-redis.on('ready', () => {
-  console.log('🚀 Redis is ready to accept commands')
-})
+    // Command timeout
+    commandTimeout: 5000,
+
+    // Key prefix for multi-tenant support
+    keyPrefix: 'cerebrum:',
+  })
+
+  // Connection event handlers
+  client.on('connect', () => {
+    console.log('✅ Redis connected successfully')
+  })
+
+  client.on('error', (err) => {
+    console.error('❌ Redis connection error:', err)
+  })
+
+  client.on('ready', () => {
+    console.log('🚀 Redis is ready to accept commands')
+  })
+
+  return client
+}
+
+// Initialize Redis client (real or mock based on environment)
+const redis = createRedisClient()
+
+/**
+ * Get a Redis client instance (either real or mock based on REDIS_ENABLED)
+ * Use this function instead of creating new Redis() instances directly
+ * @param url Optional Redis URL (ignored if Redis is disabled)
+ * @returns Redis client instance
+ */
+export const getRedisClient = (url?: string): any => {
+  if (!isRedisEnabled) {
+    return createMockRedisClient()
+  }
+
+  if (!url) {
+    return redis
+  }
+
+  // Create a new client with the provided URL if Redis is enabled
+  return new Redis(url)
+}
 
 // Cache key generators with consistent naming
 export const CacheKeys = {
@@ -85,17 +153,17 @@ export const CacheKeys = {
 
 // Cache TTL values (in seconds)
 export const CacheTTL = {
-  QUESTION: 3600,           // 1 hour
-  QUESTION_LIST: 1800,      // 30 minutes
-  TEST_TEMPLATE: 3600,      // 1 hour
-  TEST_SESSION: 1800,       // 30 minutes (active session)
-  USER_PROGRESS: 300,       // 5 minutes
-  USER_SESSION: 86400,      // 24 hours
-  ANALYTICS: 3600,          // 1 hour
-  GLOBAL_STATS: 300,        // 5 minutes
-  LEADERBOARD: 600,         // 10 minutes
-  REAL_TIME: 60,            // 1 minute
-  RATE_LIMIT: 3600,         // 1 hour
+  QUESTION: 3600, // 1 hour
+  QUESTION_LIST: 1800, // 30 minutes
+  TEST_TEMPLATE: 3600, // 1 hour
+  TEST_SESSION: 1800, // 30 minutes (active session)
+  USER_PROGRESS: 300, // 5 minutes
+  USER_SESSION: 86400, // 24 hours
+  ANALYTICS: 3600, // 1 hour
+  GLOBAL_STATS: 300, // 5 minutes
+  LEADERBOARD: 600, // 10 minutes
+  REAL_TIME: 60, // 1 minute
+  RATE_LIMIT: 3600, // 1 hour
 }
 
 // Question caching service
@@ -179,7 +247,7 @@ export class TestTemplateCacheService {
     const templateData = JSON.stringify(template)
     await Promise.all([
       redis.setex(idKey, CacheTTL.TEST_TEMPLATE, templateData),
-      redis.setex(slugKey, CacheTTL.TEST_TEMPLATE, templateData)
+      redis.setex(slugKey, CacheTTL.TEST_TEMPLATE, templateData),
     ])
   }
 
@@ -239,7 +307,7 @@ export class TestSessionCacheService {
     const sessionData = JSON.stringify(session)
     await Promise.all([
       redis.setex(sessionKey, CacheTTL.TEST_SESSION, sessionData),
-      redis.setex(userKey, CacheTTL.TEST_SESSION, session.sessionToken)
+      redis.setex(userKey, CacheTTL.TEST_SESSION, session.sessionToken),
     ])
   }
 
@@ -315,10 +383,7 @@ export class UserCacheService {
 
   // Cache user progress
   static async cacheUserProgress(progress: UserProgress): Promise<void> {
-    const key = CacheKeys.userProgress(
-      progress.userId || progress.freeUserId || '',
-      progress.topic
-    )
+    const key = CacheKeys.userProgress(progress.userId || progress.freeUserId || '', progress.topic)
     await redis.setex(key, CacheTTL.USER_PROGRESS, JSON.stringify(progress))
   }
 
@@ -435,7 +500,7 @@ export class AnalyticsCacheService {
   static async getLeaderboard(type: string, limit: number = 10): Promise<any[]> {
     const key = CacheKeys.leaderboard(type)
     const cached = await redis.zrange(key, 0, limit - 1)
-    return cached.map(item => JSON.parse(item))
+    return cached.map((item) => JSON.parse(item))
   }
 }
 
@@ -455,12 +520,12 @@ export class RateLimitService {
     }
 
     const ttl = await redis.ttl(key)
-    const resetTime = Date.now() + (ttl * 1000)
+    const resetTime = Date.now() + ttl * 1000
 
     return {
       allowed: current <= maxRequests,
       remaining: Math.max(0, maxRequests - current),
-      resetTime
+      resetTime,
     }
   }
 
@@ -478,12 +543,12 @@ export class RateLimitService {
     }
 
     const ttl = await redis.ttl(key)
-    const resetTime = Date.now() + (ttl * 1000)
+    const resetTime = Date.now() + ttl * 1000
 
     return {
       allowed: current <= maxRequests,
       remaining: Math.max(0, maxRequests - current),
-      resetTime
+      resetTime,
     }
   }
 }
@@ -503,13 +568,13 @@ export class CacheHealthService {
       return {
         status: 'healthy',
         latency,
-        memory
+        memory,
       }
     } catch (error) {
       return {
         status: 'unhealthy',
         latency: -1,
-        memory: null
+        memory: null,
       }
     }
   }
@@ -522,7 +587,7 @@ export class CacheHealthService {
     return {
       memory: info,
       stats,
-      connectedClients: await redis.client('list')
+      connectedClients: await redis.client('list'),
     }
   }
 
@@ -540,10 +605,12 @@ export class CacheHealthService {
 
     for (const key of keys) {
       const ttl = await redis.ttl(key)
-      if (ttl === -1) { // No expiration set
+      if (ttl === -1) {
+        // No expiration set
         continue
       }
-      if (ttl <= 0) { // Expired
+      if (ttl <= 0) {
+        // Expired
         await redis.del(key)
         cleaned++
       }

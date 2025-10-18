@@ -79,9 +79,19 @@ export class ResponseEnhancer {
   private enhancementCache: Map<string, any> = new Map()
 
   constructor() {
-    this.openai = new OpenAI({
-      apiKey: process.env.OPENAI_API_KEY,
-    })
+    // Lazy initialization - only init OpenAI when actually needed
+    // This prevents build failures when API keys aren't available
+  }
+
+  /**
+   * Lazy initialization of OpenAI client
+   */
+  private initOpenAI() {
+    if (!this.openai && process.env.OPENAI_API_KEY) {
+      this.openai = new OpenAI({
+        apiKey: process.env.OPENAI_API_KEY,
+      })
+    }
   }
 
   /**
@@ -224,6 +234,15 @@ export class ResponseEnhancer {
 
     if (this.enhancementCache.has(cacheKey)) {
       return this.enhancementCache.get(cacheKey)
+    }
+
+    // Initialize OpenAI client if needed
+    this.initOpenAI()
+
+    // If OpenAI is not available (no API key), return empty
+    if (!this.openai) {
+      console.warn('OpenAI API key not available, skipping diagram generation')
+      return ''
     }
 
     try {
@@ -434,6 +453,15 @@ M  END
    */
   private async generateAudioNarration(content: string, language: string): Promise<AudioElement[]> {
     const elements: AudioElement[] = []
+
+    // Initialize OpenAI client if needed
+    this.initOpenAI()
+
+    // If OpenAI is not available (no API key), return empty
+    if (!this.openai) {
+      console.warn('OpenAI API key not available, skipping audio narration')
+      return elements
+    }
 
     try {
       // Clean content for speech

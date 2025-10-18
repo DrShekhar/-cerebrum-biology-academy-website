@@ -1,7 +1,17 @@
 'use client'
 
 import React, { useState, useRef } from 'react'
-import { Brain, X, Send, Camera, Mic, MicOff, Image as ImageIcon, FileText, Volume2 } from 'lucide-react'
+import {
+  Brain,
+  X,
+  Send,
+  Camera,
+  Mic,
+  MicOff,
+  Image as ImageIcon,
+  FileText,
+  Volume2,
+} from 'lucide-react'
 
 interface ChatMessage {
   id: string
@@ -27,7 +37,7 @@ export function EnhancedChatInterface({
   onClose,
   messages,
   onSendMessage,
-  isLoading
+  isLoading,
 }: EnhancedChatInterfaceProps) {
   const [input, setInput] = useState('')
   const [isRecording, setIsRecording] = useState(false)
@@ -78,7 +88,7 @@ export function EnhancedChatInterface({
         onSendMessage('Voice question recorded', 'voice', audioFile)
 
         // Cleanup
-        stream.getTracks().forEach(track => track.stop())
+        stream.getTracks().forEach((track) => track.stop())
       }
 
       mediaRecorder.start()
@@ -125,7 +135,9 @@ export function EnhancedChatInterface({
           <Brain className="w-8 h-8 text-white" />
         </div>
         <h2 className="text-2xl font-bold text-gray-800 mb-2">AI Biology Tutor</h2>
-        <p className="text-gray-600 mb-8">Get instant help with text, images, and voice questions</p>
+        <p className="text-gray-600 mb-8">
+          Get instant help with text, images, and voice questions
+        </p>
         <div className="flex flex-wrap justify-center gap-3 mb-6">
           <div className="flex items-center space-x-2 bg-blue-50 px-3 py-2 rounded-lg">
             <FileText className="w-4 h-4 text-blue-600" />
@@ -183,8 +195,8 @@ export function EnhancedChatInterface({
                 message.sender === 'user'
                   ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white'
                   : message.type === 'recommendation'
-                  ? 'bg-gradient-to-r from-green-100 to-emerald-100 text-green-800 border border-green-200'
-                  : 'bg-gray-100 text-gray-800'
+                    ? 'bg-gradient-to-r from-green-100 to-emerald-100 text-green-800 border border-green-200'
+                    : 'bg-gray-100 text-gray-800'
               }`}
             >
               {/* Image Display */}
@@ -241,9 +253,11 @@ export function EnhancedChatInterface({
                 </div>
               )}
 
-              <p className={`text-xs mt-1 ${
-                message.sender === 'user' ? 'text-blue-100' : 'text-gray-500'
-              }`}>
+              <p
+                className={`text-xs mt-1 ${
+                  message.sender === 'user' ? 'text-blue-100' : 'text-gray-500'
+                }`}
+              >
                 {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
               </p>
             </div>
@@ -254,8 +268,14 @@ export function EnhancedChatInterface({
             <div className="bg-gray-100 text-gray-800 p-3 rounded-2xl">
               <div className="flex space-x-1">
                 <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
-                <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                <div
+                  className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
+                  style={{ animationDelay: '0.1s' }}
+                ></div>
+                <div
+                  className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
+                  style={{ animationDelay: '0.2s' }}
+                ></div>
               </div>
             </div>
           </div>
@@ -304,7 +324,9 @@ export function EnhancedChatInterface({
               <div className="flex flex-col items-center space-y-2">
                 <ImageIcon className="w-8 h-8 text-gray-400" />
                 <span className="text-sm text-gray-600">Upload biology image for analysis</span>
-                <span className="text-xs text-gray-500">Supports: diagrams, microscopy, specimens</span>
+                <span className="text-xs text-gray-500">
+                  Supports: diagrams, microscopy, specimens
+                </span>
               </div>
             </button>
           </div>
@@ -319,7 +341,7 @@ export function EnhancedChatInterface({
             onKeyPress={handleKeyPress}
             placeholder="Ask me anything about Biology..."
             disabled={isLoading || isRecording}
-            className="flex-1 px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:opacity-50"
+            className="flex-1 px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:opacity-50 text-gray-900 placeholder:text-gray-400"
           />
           <button
             onClick={handleSend}

@@ -10,7 +10,7 @@
  * - AI Education Demo: Interactive demos
  */
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import {
   MessageSquare,
@@ -143,8 +143,68 @@ const stats = [
   { label: 'Active Daily Users', value: '2,500+', icon: <Users className="w-5 h-5" /> },
 ]
 
+interface APIStatus {
+  [key: string]: {
+    status: 'operational' | 'checking' | 'error'
+    responseTime?: number
+  }
+}
+
 export default function AIFeaturesHub() {
   const [selectedFeature, setSelectedFeature] = useState<string | null>(null)
+  const [apiStatus, setApiStatus] = useState<APIStatus>({})
+  const [isCheckingAPIs, setIsCheckingAPIs] = useState(true)
+
+  // Check API health on component mount
+  useEffect(() => {
+    checkAllAPIs()
+  }, [])
+
+  async function checkAllAPIs() {
+    setIsCheckingAPIs(true)
+
+    const apis = [
+      { id: 'claudechat', endpoint: '/api/ai/unified-chat' },
+      { id: 'ai-education-demo', endpoint: '/api/ai/education-hub' },
+      { id: 'voice-training', endpoint: '/api/ai/voice-processing' },
+    ]
+
+    const statusPromises = apis.map(async (api) => {
+      const startTime = Date.now()
+      try {
+        const response = await fetch(api.endpoint, {
+          method: 'GET',
+          headers: { 'Content-Type': 'application/json' },
+        })
+        const responseTime = Date.now() - startTime
+
+        return {
+          id: api.id,
+          status: response.ok ? 'operational' : 'error',
+          responseTime,
+        }
+      } catch (error) {
+        return {
+          id: api.id,
+          status: 'error' as const,
+          responseTime: Date.now() - startTime,
+        }
+      }
+    })
+
+    const results = await Promise.all(statusPromises)
+
+    const newStatus: APIStatus = {}
+    results.forEach((result) => {
+      newStatus[result.id] = {
+        status: result.status as 'operational' | 'error',
+        responseTime: result.responseTime,
+      }
+    })
+
+    setApiStatus(newStatus)
+    setIsCheckingAPIs(false)
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50">
@@ -189,10 +249,34 @@ export default function AIFeaturesHub() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Our AI Features</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-6">
             Explore our comprehensive suite of AI-powered tools designed to enhance your learning
             experience
           </p>
+
+          {/* API Status Indicator */}
+          <div className="flex items-center justify-center gap-4 flex-wrap">
+            <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-lg shadow-sm border border-gray-200">
+              <div
+                className={`w-2 h-2 rounded-full ${isCheckingAPIs ? 'bg-yellow-500 animate-pulse' : Object.values(apiStatus).every((s) => s.status === 'operational') ? 'bg-green-500' : 'bg-orange-500'}`}
+              ></div>
+              <span className="text-sm font-medium text-gray-700">
+                {isCheckingAPIs
+                  ? 'Checking APIs...'
+                  : `${Object.values(apiStatus).filter((s) => s.status === 'operational').length}/${Object.keys(apiStatus).length} APIs Online`}
+              </span>
+            </div>
+            {!isCheckingAPIs && Object.values(apiStatus).some((s) => s.responseTime) && (
+              <div className="text-sm text-gray-600">
+                Avg Response:{' '}
+                {Math.round(
+                  Object.values(apiStatus).reduce((acc, s) => acc + (s.responseTime || 0), 0) /
+                    Object.values(apiStatus).length
+                )}
+                ms
+              </div>
+            )}
+          </div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
@@ -221,6 +305,26 @@ export default function AIFeaturesHub() {
                   </div>
 
                   <div className="flex items-center gap-2">
+                    {/* API Status Badge */}
+                    {apiStatus[feature.id] && (
+                      <span
+                        className={`px-3 py-1 text-xs font-semibold rounded-full ${
+                          apiStatus[feature.id].status === 'operational'
+                            ? 'bg-green-100 text-green-700'
+                            : apiStatus[feature.id].status === 'checking'
+                              ? 'bg-yellow-100 text-yellow-700'
+                              : 'bg-red-100 text-red-700'
+                        }`}
+                      >
+                        {apiStatus[feature.id].status === 'operational'
+                          ? '● Online'
+                          : apiStatus[feature.id].status === 'checking'
+                            ? '○ Checking'
+                            : '● Offline'}
+                      </span>
+                    )}
+
+                    {/* Feature Status Badge */}
                     {feature.status === 'active' && (
                       <span className="px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded-full">
                         Active
