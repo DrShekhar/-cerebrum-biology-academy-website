@@ -10,7 +10,7 @@
  *   node scripts/run-cicd-agent.js setup full-pipeline
  */
 
-const https = require('https')
+const http = require('http')
 
 const args = process.argv.slice(2)
 const action = args[0]
@@ -50,7 +50,7 @@ const options = {
 console.log(`🤖 Running CI/CD Agent: ${action} ${param || ''}`)
 console.log('')
 
-const req = https.request(options, (res) => {
+const req = http.request(options, (res) => {
   let data = ''
 
   res.on('data', (chunk) => {
