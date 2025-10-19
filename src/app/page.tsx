@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 
+// Build timestamp: 2025-10-19T20:00:00Z - Cache invalidation
 export const metadata: Metadata = {
   title: 'Cerebrum Biology Academy',
   description: 'NEET Biology Coaching',

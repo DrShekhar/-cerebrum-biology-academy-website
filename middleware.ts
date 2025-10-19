@@ -154,16 +154,18 @@ export default async function middleware(req: NextRequest) {
     'camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), gyroscope=()'
   )
 
+  // CRITICAL: Prevent homepage and all pages from being cached to fix stuck loading screen
+  // This ensures users always get the latest version
+  response.headers.set(
+    'Cache-Control',
+    'no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0'
+  )
+  response.headers.set('Pragma', 'no-cache')
+  response.headers.set('Expires', '0')
+  response.headers.set('Surrogate-Control', 'no-store')
+
   // Prevent admin routes from being cached with stronger directives
   if (pathname.startsWith('/admin') || pathname.startsWith('/api/admin')) {
-    response.headers.set(
-      'Cache-Control',
-      'no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0'
-    )
-    response.headers.set('Pragma', 'no-cache')
-    response.headers.set('Expires', '0')
-    response.headers.set('Surrogate-Control', 'no-store')
-
     // Additional security for admin routes
     response.headers.set('X-Admin-Route', 'true')
 
