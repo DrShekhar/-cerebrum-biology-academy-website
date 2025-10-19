@@ -74,8 +74,22 @@ export async function middleware(request: NextRequest) {
     }
   }
 
-  // Authentication check for protected routes
-  if (isProtected && !isPublicAPI) {
+  // Allow public routes without authentication
+  const PUBLIC_ROUTES = [
+    '/',
+    '/courses',
+    '/about',
+    '/contact',
+    '/pricing',
+    '/faculty',
+    '/testimonials',
+  ]
+  const isPublicRoute = PUBLIC_ROUTES.some(
+    (route) => pathname === route || pathname.startsWith(`${route}/`)
+  )
+
+  // Authentication check for protected routes (skip public routes)
+  if (isProtected && !isPublicAPI && !isPublicRoute) {
     const authResponse = await checkAuthentication(request)
     if (authResponse) {
       return authResponse
