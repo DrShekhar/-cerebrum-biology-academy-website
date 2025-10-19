@@ -1,5 +1,6 @@
 'use client'
 
+import React from 'react'
 import { motion } from 'framer-motion'
 import { BookOpen, Play, Award, Users, Clock, CheckCircle } from 'lucide-react'
 
@@ -162,12 +163,46 @@ export function ProgressBar({
 // Cerebrum-branded loading screen for page transitions
 export function CerebrumPageLoader({
   message = 'Loading Cerebrum Biology Academy...',
+  timeout = 10000, // 10 seconds default timeout
+  showBackButton = true,
 }: {
   message?: string
+  timeout?: number
+  showBackButton?: boolean
 }) {
+  const [showError, setShowError] = React.useState(false)
+  const [showTimeout, setShowTimeout] = React.useState(false)
+
+  React.useEffect(() => {
+    // Show timeout message after specified duration
+    const timer = setTimeout(() => {
+      setShowTimeout(true)
+    }, timeout)
+
+    return () => clearTimeout(timer)
+  }, [timeout])
+
+  const handleGoBack = () => {
+    if (typeof window !== 'undefined') {
+      window.history.back()
+    }
+  }
+
+  const handleGoHome = () => {
+    if (typeof window !== 'undefined') {
+      window.location.href = '/'
+    }
+  }
+
+  const handleRetry = () => {
+    if (typeof window !== 'undefined') {
+      window.location.reload()
+    }
+  }
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-indigo-50 to-blue-50 flex items-center justify-center">
-      <div className="text-center">
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-indigo-50 to-blue-50 flex items-center justify-center px-4">
+      <div className="text-center max-w-md w-full">
         {/* Cerebrum Logo Animation */}
         <motion.div
           className="mb-8 flex justify-center"
@@ -235,25 +270,84 @@ export function CerebrumPageLoader({
         </motion.div>
 
         {/* Success Indicators */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.9 }}
-          className="grid grid-cols-3 gap-6 text-center"
-        >
-          <div>
-            <div className="text-2xl font-bold text-purple-600 mb-1">94.2%</div>
-            <div className="text-xs text-gray-500">Success Rate</div>
-          </div>
-          <div>
-            <div className="text-2xl font-bold text-indigo-600 mb-1">2,847+</div>
-            <div className="text-xs text-gray-500">Selections</div>
-          </div>
-          <div>
-            <div className="text-2xl font-bold text-blue-600 mb-1">10K+</div>
-            <div className="text-xs text-gray-500">Students</div>
-          </div>
-        </motion.div>
+        {!showTimeout && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.9 }}
+            className="grid grid-cols-3 gap-6 text-center"
+          >
+            <div>
+              <div className="text-2xl font-bold text-purple-600 mb-1">94.2%</div>
+              <div className="text-xs text-gray-500">Success Rate</div>
+            </div>
+            <div>
+              <div className="text-2xl font-bold text-indigo-600 mb-1">2,847+</div>
+              <div className="text-xs text-gray-500">Selections</div>
+            </div>
+            <div>
+              <div className="text-2xl font-bold text-blue-600 mb-1">10K+</div>
+              <div className="text-xs text-gray-500">Students</div>
+            </div>
+          </motion.div>
+        )}
+
+        {/* Timeout Message and Navigation Options */}
+        {showTimeout && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mt-8 p-6 bg-white rounded-xl shadow-lg border border-gray-200"
+          >
+            <div className="mb-6">
+              <p className="text-lg font-semibold text-gray-800 mb-2">
+                Taking longer than expected...
+              </p>
+              <p className="text-sm text-gray-600">
+                The page is taking a while to load. You can try refreshing or return to the
+                homepage.
+              </p>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-3">
+              <button
+                onClick={handleRetry}
+                className="flex-1 px-4 py-2 bg-purple-600 text-white rounded-lg font-medium hover:bg-purple-700 transition-colors"
+              >
+                🔄 Retry
+              </button>
+              <button
+                onClick={handleGoBack}
+                className="flex-1 px-4 py-2 bg-gray-600 text-white rounded-lg font-medium hover:bg-gray-700 transition-colors"
+              >
+                ← Go Back
+              </button>
+              <button
+                onClick={handleGoHome}
+                className="flex-1 px-4 py-2 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition-colors"
+              >
+                🏠 Home
+              </button>
+            </div>
+          </motion.div>
+        )}
+
+        {/* Always show back button at bottom */}
+        {showBackButton && !showTimeout && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 1.2 }}
+            className="mt-8"
+          >
+            <button
+              onClick={handleGoBack}
+              className="text-sm text-gray-500 hover:text-gray-700 underline transition-colors"
+            >
+              ← Go back
+            </button>
+          </motion.div>
+        )}
       </div>
     </div>
   )
