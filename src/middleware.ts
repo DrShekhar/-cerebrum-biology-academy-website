@@ -315,10 +315,13 @@ function isValidAPIKey(apiKey: string): boolean {
 
 /**
  * Generate cryptographic nonce for CSP
+ * Uses Web Crypto API for Edge runtime compatibility
  */
 function generateNonce(): string {
-  const crypto = require('crypto')
-  return crypto.randomBytes(16).toString('base64')
+  // Use Web Crypto API which is available in Edge runtime
+  const array = new Uint8Array(16)
+  crypto.getRandomValues(array)
+  return btoa(String.fromCharCode(...array))
 }
 
 // Configure middleware matcher
