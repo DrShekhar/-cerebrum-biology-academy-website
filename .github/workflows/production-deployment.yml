@@ -219,7 +219,7 @@ jobs:
 
   # Step 7: Database Migration (Production Only)
   migrate-production:
-    name: 🗄️ Run Database Migration
+    name: 🗄️ Safe Database Migration
     runs-on: ubuntu-latest
     needs: [deploy]
     if: github.event.inputs.environment == 'production' || github.ref == 'refs/heads/main'
@@ -237,13 +237,62 @@ jobs:
       - name: 📦 Install dependencies
         run: npm ci
 
-      - name: 🚀 Run Prisma Migrations
-        run: npx prisma migrate deploy
+      # SAFETY: Check if DATABASE_URL is set
+      - name: 🔍 Validate DATABASE_URL
+        run: |
+          if [ -z "$DATABASE_URL" ]; then
+            echo "❌ ERROR: DATABASE_URL secret is not set or is empty"
+            echo "Please set DATABASE_URL in GitHub Secrets:"
+            echo "gh secret set DATABASE_URL --body 'postgresql://user:pass@host:5432/db'"
+            exit 1
+          fi
+          echo "✅ DATABASE_URL is configured"
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
+      # SAFETY: Validate Prisma Schema
+      - name: ✅ Validate Prisma Schema
+        run: npx prisma validate
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        continue-on-error: true
+
+      # SAFETY: Check Migration Status
+      - name: 🔍 Check Migration Status
+        run: npx prisma migrate status
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          PRISMA_MIGRATE_SKIP_SHADOW_DB: "true"
+        continue-on-error: true
+
+      # MIGRATION
+      - name: 🚀 Run Prisma Migrations
+        id: migrate
+        run: npx prisma migrate deploy
+        timeout-minutes: 10
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          PRISMA_MIGRATE_SKIP_SHADOW_DB: "true"
+
       - name: 🔄 Generate Prisma Client
         run: npx prisma generate
+
+      # VERIFICATION
+      - name: ✅ Verify Migration Success
+        run: |
+          npx prisma migrate status
+          echo "✅ Migration completed successfully"
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          PRISMA_MIGRATE_SKIP_SHADOW_DB: "true"
+
+      # ALERT ON FAILURE
+      - name: ⚠️  Migration Failed Alert
+        if: failure() && steps.migrate.conclusion == 'failure'
+        run: |
+          echo "❌ MIGRATION FAILED!"
+          echo "Please check database connection and migration files"
+          echo "See database-migration-manager skill for troubleshooting"
 
 # Required Secrets to Configure in GitHub:
 # - VERCEL_TOKEN: Vercel API token from https://vercel.com/account/tokens
