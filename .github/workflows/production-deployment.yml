@@ -140,12 +140,23 @@ jobs:
         run: vercel pull --yes --environment=${{ github.event.inputs.environment || 'production' }} --token=${{ secrets.VERCEL_TOKEN }}
 
       - name: 🏗️ Build Project Artifacts
-        run: vercel build ${{ github.event.inputs.environment == 'production' && '--prod' || '' }} --token=${{ secrets.VERCEL_TOKEN }}
+        run: |
+          # Always build for production when triggered by push to main
+          if [ "${{ github.event_name }}" == "push" ] && [ "${{ github.ref }}" == "refs/heads/main" ]; then
+            vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+          else
+            vercel build ${{ github.event.inputs.environment == 'production' && '--prod' || '' }} --token=${{ secrets.VERCEL_TOKEN }}
+          fi
 
       - name: 🚀 Deploy Project to Vercel
         id: deploy
         run: |
-          DEPLOYMENT_URL=$(vercel deploy ${{ github.event.inputs.environment == 'production' && '--prod' || '--prebuilt' }} --token=${{ secrets.VERCEL_TOKEN }})
+          # Always deploy to production when triggered by push to main
+          if [ "${{ github.event_name }}" == "push" ] && [ "${{ github.ref }}" == "refs/heads/main" ]; then
+            DEPLOYMENT_URL=$(vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }})
+          else
+            DEPLOYMENT_URL=$(vercel deploy ${{ github.event.inputs.environment == 'production' && '--prod' || '--prebuilt' }} --token=${{ secrets.VERCEL_TOKEN }})
+          fi
           echo "url=$DEPLOYMENT_URL" >> $GITHUB_OUTPUT
           echo "🎉 Deployed to: $DEPLOYMENT_URL"
 
