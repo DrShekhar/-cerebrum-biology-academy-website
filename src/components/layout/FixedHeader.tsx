@@ -35,20 +35,9 @@ export function FixedHeader({ className = '' }: FixedHeaderProps) {
     <header className={`fixed top-0 w-full z-50 bg-slate-900/95 backdrop-blur ${className}`}>
       <nav className="container mx-auto px-4 py-3">
         <div className="flex justify-between items-center">
-          {/* Logo */}
+          {/* Logo - Text Only */}
           <Link href="/" className="logo">
-            <img
-              src="/logo.svg"
-              alt="Cerebrum Biology Academy"
-              className="h-10"
-              onError={(e) => {
-                // Fallback if logo.svg doesn't exist
-                const target = e.target as HTMLImageElement
-                target.style.display = 'none'
-                target.nextElementSibling?.classList.remove('hidden')
-              }}
-            />
-            <div className="hidden text-white font-bold text-xl">Cerebrum</div>
+            <div className="text-white font-bold text-xl">Cerebrum Biology Academy</div>
           </Link>
 
           {/* Desktop Menu (Hidden on mobile) */}
