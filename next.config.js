@@ -80,8 +80,25 @@ const nextConfig = {
     scrollRestoration: true
   },
 
-  // Development-only cache disabling
+  // Redirects for SEO
+  async redirects() {
+    return [
+      {
+        source: '/admin-login',
+        destination: '/admin',
+        permanent: false,
+      },
+    ]
+  },
+
+  // Force new build ID to bust all caches
+  generateBuildId: async () => {
+    return `build-${Date.now()}-${Math.random().toString(36).substring(7)}`
+  },
+
+  // Merged headers function: cache control + security
   async headers() {
+    // For development: aggressive no-cache
     if (process.env.NODE_ENV === 'development') {
       return [
         {
@@ -104,11 +121,23 @@ const nextConfig = {
       ]
     }
 
-    // Production headers for security and performance
+    // For production: aggressive no-cache + security headers
     return [
       {
-        source: '/((?!_next|api|not-found).*)',
+        source: '/:path*',
         headers: [
+          {
+            key: 'Cache-Control',
+            value: 'no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0',
+          },
+          {
+            key: 'Pragma',
+            value: 'no-cache',
+          },
+          {
+            key: 'Expires',
+            value: '0',
+          },
           {
             key: 'X-Content-Type-Options',
             value: 'nosniff',
@@ -132,63 +161,6 @@ const nextConfig = {
           {
             key: 'Permissions-Policy',
             value: 'camera=(), microphone=(), geolocation=()',
-          },
-        ],
-      },
-      {
-        source: '/static/(.*)',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-          },
-        ],
-      },
-      {
-        source: '/_next/static/(.*)',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-          },
-        ],
-      },
-    ]
-  },
-
-  // Redirects for SEO
-  async redirects() {
-    return [
-      {
-        source: '/admin-login',
-        destination: '/admin',
-        permanent: false,
-      },
-    ]
-  },
-
-  // Force new build ID to bust all caches
-  generateBuildId: async () => {
-    return `build-${Date.now()}-${Math.random().toString(36).substring(7)}`
-  },
-
-  // Aggressive cache busting headers
-  async headers() {
-    return [
-      {
-        source: '/:path*',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0',
-          },
-          {
-            key: 'Pragma',
-            value: 'no-cache',
-          },
-          {
-            key: 'Expires',
-            value: '0',
           },
         ],
       },
