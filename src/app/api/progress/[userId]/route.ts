@@ -6,9 +6,9 @@ import { withRateLimit } from '@/lib/middleware/rateLimit'
 import { logger } from '@/lib/utils/logger'
 
 interface RouteParams {
-  params: {
+  params: Promise<{
     userId: string
-  }
+  }>
 }
 
 // Validation schema for progress filters
@@ -20,8 +20,10 @@ const progressFiltersSchema = z.object({
   timeFrame: z.enum(['week', 'month', 'quarter', 'year', 'all']).default('all'),
   includeInactive: z.boolean().default(false),
   groupBy: z.enum(['topic', 'difficulty', 'type', 'curriculum']).default('topic'),
-  sortBy: z.enum(['accuracy', 'masteryScore', 'lastPracticed', 'totalQuestions']).default('masteryScore'),
-  sortOrder: z.enum(['asc', 'desc']).default('desc')
+  sortBy: z
+    .enum(['accuracy', 'masteryScore', 'lastPracticed', 'totalQuestions'])
+    .default('masteryScore'),
+  sortOrder: z.enum(['asc', 'desc']).default('desc'),
 })
 
 // Helper function to check user access permissions
@@ -70,7 +72,7 @@ async function calculateProgressMetrics(userId: string, freeUserId: string | nul
 
   // Build base filters
   const baseWhere: any = {
-    ...(freeUserId ? { freeUserId } : { userId })
+    ...(freeUserId ? { freeUserId } : { userId }),
   }
 
   if (filters.curriculum) baseWhere.curriculum = filters.curriculum
@@ -88,8 +90,8 @@ async function calculateProgressMetrics(userId: string, freeUserId: string | nul
   const userProgress = await prisma.userProgress.findMany({
     where: baseWhere,
     orderBy: {
-      [filters.sortBy]: filters.sortOrder
-    }
+      [filters.sortBy]: filters.sortOrder,
+    },
   })
 
   // Get recent test sessions for context
@@ -97,7 +99,7 @@ async function calculateProgressMetrics(userId: string, freeUserId: string | nul
     where: {
       ...(freeUserId ? { freeUserId } : { userId }),
       status: 'COMPLETED',
-      ...(timeFrameDate && { submittedAt: { gte: timeFrameDate } })
+      ...(timeFrameDate && { submittedAt: { gte: timeFrameDate } }),
     },
     include: {
       testTemplate: {
@@ -105,19 +107,19 @@ async function calculateProgressMetrics(userId: string, freeUserId: string | nul
           title: true,
           type: true,
           topics: true,
-          difficulty: true
-        }
-      }
+          difficulty: true,
+        },
+      },
     },
     orderBy: { submittedAt: 'desc' },
-    take: 10
+    take: 10,
   })
 
   // Get recent question responses for detailed analysis
   const recentResponses = await prisma.userQuestionResponse.findMany({
     where: {
       ...(freeUserId ? { freeUserId } : { userId }),
-      ...(timeFrameDate && { answeredAt: { gte: timeFrameDate } })
+      ...(timeFrameDate && { answeredAt: { gte: timeFrameDate } }),
     },
     include: {
       question: {
@@ -125,12 +127,12 @@ async function calculateProgressMetrics(userId: string, freeUserId: string | nul
           topic: true,
           difficulty: true,
           type: true,
-          marks: true
-        }
-      }
+          marks: true,
+        },
+      },
     },
     orderBy: { answeredAt: 'desc' },
-    take: 100 // Last 100 responses for analysis
+    take: 100, // Last 100 responses for analysis
   })
 
   return { userProgress, recentTestSessions, recentResponses }
@@ -144,11 +146,11 @@ function generateInsights(userProgress: any[], recentTestSessions: any[], recent
     improvements: [] as string[],
     recommendations: [] as string[],
     studyPatterns: {} as any,
-    performanceTrends: {} as any
+    performanceTrends: {} as any,
   }
 
   // Analyze strengths and weaknesses
-  userProgress.forEach(progress => {
+  userProgress.forEach((progress) => {
     if (progress.accuracy >= 80 && progress.masteryScore >= 75) {
       insights.strengths.push(progress.topic)
     } else if (progress.accuracy < 50 || progress.masteryScore < 40) {
@@ -157,12 +159,14 @@ function generateInsights(userProgress: any[], recentTestSessions: any[], recent
   })
 
   // Analyze improvement trends
-  const improvingTopics = userProgress.filter(p => p.improvementRate > 10)
-  insights.improvements = improvingTopics.map(p => p.topic)
+  const improvingTopics = userProgress.filter((p) => p.improvementRate > 10)
+  insights.improvements = improvingTopics.map((p) => p.topic)
 
   // Generate recommendations
   if (insights.weaknesses.length > 0) {
-    insights.recommendations.push(`Focus on improving: ${insights.weaknesses.slice(0, 3).join(', ')}`)
+    insights.recommendations.push(
+      `Focus on improving: ${insights.weaknesses.slice(0, 3).join(', ')}`
+    )
   }
 
   if (insights.strengths.length > 3) {
@@ -171,32 +175,50 @@ function generateInsights(userProgress: any[], recentTestSessions: any[], recent
 
   // Analyze study patterns
   if (recentResponses.length > 0) {
-    const responsesByDay = recentResponses.reduce((acc, response) => {
-      const day = response.answeredAt.toISOString().split('T')[0]
-      acc[day] = (acc[day] || 0) + 1
-      return acc
-    }, {} as Record<string, number>)
+    const responsesByDay = recentResponses.reduce(
+      (acc, response) => {
+        const day = response.answeredAt.toISOString().split('T')[0]
+        acc[day] = (acc[day] || 0) + 1
+        return acc
+      },
+      {} as Record<string, number>
+    )
 
     insights.studyPatterns = {
-      averageQuestionsPerDay: Object.values(responsesByDay).reduce((sum, count) => sum + count, 0) / Object.keys(responsesByDay).length,
-      studyDaysPerWeek: Object.keys(responsesByDay).length / (recentResponses.length > 0 ?
-        Math.ceil((Date.now() - recentResponses[recentResponses.length - 1].answeredAt.getTime()) / (7 * 24 * 60 * 60 * 1000)) : 1),
-      mostActiveDay: Object.entries(responsesByDay).reduce((max, [day, count]) =>
-        count > max.count ? { day, count } : max, { day: '', count: 0 })
+      averageQuestionsPerDay:
+        Object.values(responsesByDay).reduce((sum, count) => sum + count, 0) /
+        Object.keys(responsesByDay).length,
+      studyDaysPerWeek:
+        Object.keys(responsesByDay).length /
+        (recentResponses.length > 0
+          ? Math.ceil(
+              (Date.now() - recentResponses[recentResponses.length - 1].answeredAt.getTime()) /
+                (7 * 24 * 60 * 60 * 1000)
+            )
+          : 1),
+      mostActiveDay: Object.entries(responsesByDay).reduce(
+        (max, [day, count]) => (count > max.count ? { day, count } : max),
+        { day: '', count: 0 }
+      ),
     }
   }
 
   // Analyze performance trends
   if (recentTestSessions.length > 0) {
-    const avgScore = recentTestSessions.reduce((sum, session) => sum + (session.percentage || 0), 0) / recentTestSessions.length
-    const trend = recentTestSessions.length > 1 ?
-      (recentTestSessions[0].percentage || 0) - (recentTestSessions[recentTestSessions.length - 1].percentage || 0) : 0
+    const avgScore =
+      recentTestSessions.reduce((sum, session) => sum + (session.percentage || 0), 0) /
+      recentTestSessions.length
+    const trend =
+      recentTestSessions.length > 1
+        ? (recentTestSessions[0].percentage || 0) -
+          (recentTestSessions[recentTestSessions.length - 1].percentage || 0)
+        : 0
 
     insights.performanceTrends = {
       averageScore: Math.round(avgScore * 100) / 100,
       trend: trend > 5 ? 'improving' : trend < -5 ? 'declining' : 'stable',
       recentTestCount: recentTestSessions.length,
-      bestScore: Math.max(...recentTestSessions.map(s => s.percentage || 0))
+      bestScore: Math.max(...recentTestSessions.map((s) => s.percentage || 0)),
     }
   }
 
@@ -206,7 +228,7 @@ function generateInsights(userProgress: any[], recentTestSessions: any[], recent
 // GET /api/progress/[userId] - Get user progress data
 export async function GET(request: NextRequest, { params }: RouteParams) {
   try {
-    const { userId } = params
+    const { userId } = await params
     const { searchParams } = new URL(request.url)
 
     // Parse query parameters
@@ -215,11 +237,11 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
       grade: searchParams.get('grade') || undefined,
       subject: searchParams.get('subject') || undefined,
       topics: searchParams.get('topics')?.split(',') || undefined,
-      timeFrame: searchParams.get('timeFrame') as any || 'all',
+      timeFrame: (searchParams.get('timeFrame') as any) || 'all',
       includeInactive: searchParams.get('includeInactive') === 'true',
-      groupBy: searchParams.get('groupBy') as any || 'topic',
-      sortBy: searchParams.get('sortBy') as any || 'masteryScore',
-      sortOrder: searchParams.get('sortOrder') as any || 'desc'
+      groupBy: (searchParams.get('groupBy') as any) || 'topic',
+      sortBy: (searchParams.get('sortBy') as any) || 'masteryScore',
+      sortOrder: (searchParams.get('sortOrder') as any) || 'desc',
     })
 
     const authResult = await withAuth(request)
@@ -234,17 +256,14 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
 
     // Check access permissions
     if (!checkUserAccess(user, userId)) {
-      return NextResponse.json(
-        { error: 'Access denied', code: 'FORBIDDEN' },
-        { status: 403 }
-      )
+      return NextResponse.json({ error: 'Access denied', code: 'FORBIDDEN' }, { status: 403 })
     }
 
     // Rate limiting
     const rateLimitResult = await withRateLimit(request, {
       identifier: user.id,
       limit: 100, // 100 progress requests per hour
-      window: 3600000
+      window: 3600000,
     })
 
     if (!rateLimitResult.success) {
@@ -257,19 +276,18 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
     // Determine if this is a free user or regular user
     const targetUser = await prisma.user.findUnique({
       where: { id: userId },
-      select: { id: true, role: true, name: true, email: true }
+      select: { id: true, role: true, name: true, email: true },
     })
 
-    const freeUser = targetUser ? null : await prisma.freeUser.findUnique({
-      where: { id: userId },
-      select: { id: true, name: true, email: true, grade: true, curriculum: true }
-    })
+    const freeUser = targetUser
+      ? null
+      : await prisma.freeUser.findUnique({
+          where: { id: userId },
+          select: { id: true, name: true, email: true, grade: true, curriculum: true },
+        })
 
     if (!targetUser && !freeUser) {
-      return NextResponse.json(
-        { error: 'User not found', code: 'USER_NOT_FOUND' },
-        { status: 404 }
-      )
+      return NextResponse.json({ error: 'User not found', code: 'USER_NOT_FOUND' }, { status: 404 })
     }
 
     // Calculate progress metrics
@@ -280,61 +298,81 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
     )
 
     // Group progress data according to groupBy parameter
-    const groupedProgress = userProgress.reduce((acc, progress) => {
-      let key: string
+    const groupedProgress = userProgress.reduce(
+      (acc, progress) => {
+        let key: string
 
-      switch (filters.groupBy) {
-        case 'difficulty':
-          key = progress.currentLevel
-          break
-        case 'curriculum':
-          key = progress.curriculum
-          break
-        case 'topic':
-        default:
-          key = progress.topic
-          break
-      }
+        switch (filters.groupBy) {
+          case 'difficulty':
+            key = progress.currentLevel
+            break
+          case 'curriculum':
+            key = progress.curriculum
+            break
+          case 'topic':
+          default:
+            key = progress.topic
+            break
+        }
 
-      if (!acc[key]) {
-        acc[key] = []
-      }
-      acc[key].push(progress)
-      return acc
-    }, {} as Record<string, any[]>)
+        if (!acc[key]) {
+          acc[key] = []
+        }
+        acc[key].push(progress)
+        return acc
+      },
+      {} as Record<string, any[]>
+    )
 
     // Calculate aggregate statistics
     const totalQuestions = userProgress.reduce((sum, p) => sum + p.totalQuestions, 0)
     const totalCorrect = userProgress.reduce((sum, p) => sum + p.correctAnswers, 0)
     const overallAccuracy = totalQuestions > 0 ? (totalCorrect / totalQuestions) * 100 : 0
-    const averageMastery = userProgress.length > 0 ?
-      userProgress.reduce((sum, p) => sum + p.masteryScore, 0) / userProgress.length : 0
+    const averageMastery =
+      userProgress.length > 0
+        ? userProgress.reduce((sum, p) => sum + p.masteryScore, 0) / userProgress.length
+        : 0
 
     // Generate insights and recommendations
     const insights = generateInsights(userProgress, recentTestSessions, recentResponses)
 
     // Calculate learning velocity (questions answered per day)
-    const learningVelocity = recentResponses.length > 0 ? {
-      questionsPerDay: recentResponses.length / Math.max(1,
-        Math.ceil((Date.now() - recentResponses[recentResponses.length - 1].answeredAt.getTime()) / (24 * 60 * 60 * 1000))),
-      accuracy: (recentResponses.filter(r => r.isCorrect).length / recentResponses.length) * 100,
-      averageTime: recentResponses.reduce((sum, r) => sum + (r.timeSpent || 0), 0) / recentResponses.length
-    } : null
+    const learningVelocity =
+      recentResponses.length > 0
+        ? {
+            questionsPerDay:
+              recentResponses.length /
+              Math.max(
+                1,
+                Math.ceil(
+                  (Date.now() - recentResponses[recentResponses.length - 1].answeredAt.getTime()) /
+                    (24 * 60 * 60 * 1000)
+                )
+              ),
+            accuracy:
+              (recentResponses.filter((r) => r.isCorrect).length / recentResponses.length) * 100,
+            averageTime:
+              recentResponses.reduce((sum, r) => sum + (r.timeSpent || 0), 0) /
+              recentResponses.length,
+          }
+        : null
 
     const progressData = {
-      user: targetUser ? {
-        id: targetUser.id,
-        name: targetUser.name,
-        email: targetUser.email,
-        role: targetUser.role
-      } : {
-        id: freeUser!.id,
-        name: freeUser!.name,
-        email: freeUser!.email,
-        grade: freeUser!.grade,
-        curriculum: freeUser!.curriculum,
-        type: 'free_user'
-      },
+      user: targetUser
+        ? {
+            id: targetUser.id,
+            name: targetUser.name,
+            email: targetUser.email,
+            role: targetUser.role,
+          }
+        : {
+            id: freeUser!.id,
+            name: freeUser!.name,
+            email: freeUser!.email,
+            grade: freeUser!.grade,
+            curriculum: freeUser!.curriculum,
+            type: 'free_user',
+          },
 
       summary: {
         totalTopics: userProgress.length,
@@ -345,13 +383,15 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
         strongTopics: insights.strengths.length,
         weakTopics: insights.weaknesses.length,
         improvingTopics: insights.improvements.length,
-        lastActivity: userProgress.length > 0 ?
-          Math.max(...userProgress.map(p => new Date(p.lastPracticed || 0).getTime())) : null
+        lastActivity:
+          userProgress.length > 0
+            ? Math.max(...userProgress.map((p) => new Date(p.lastPracticed || 0).getTime()))
+            : null,
       },
 
       progressByTopic: Object.entries(groupedProgress).map(([key, progressList]) => ({
         [filters.groupBy]: key,
-        topics: progressList.map(p => ({
+        topics: progressList.map((p) => ({
           topic: p.topic,
           subtopic: p.subtopic,
           curriculum: p.curriculum,
@@ -366,17 +406,19 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
           lastPracticed: p.lastPracticed,
           recommendedNext: p.recommendedNext,
           weakAreas: p.weakAreas,
-          strongAreas: p.strongAreas
+          strongAreas: p.strongAreas,
         })),
         aggregateStats: {
           totalQuestions: progressList.reduce((sum, p) => sum + p.totalQuestions, 0),
-          averageAccuracy: progressList.reduce((sum, p) => sum + p.accuracy, 0) / progressList.length,
-          averageMastery: progressList.reduce((sum, p) => sum + p.masteryScore, 0) / progressList.length
-        }
+          averageAccuracy:
+            progressList.reduce((sum, p) => sum + p.accuracy, 0) / progressList.length,
+          averageMastery:
+            progressList.reduce((sum, p) => sum + p.masteryScore, 0) / progressList.length,
+        },
       })),
 
       recentActivity: {
-        testSessions: recentTestSessions.map(session => ({
+        testSessions: recentTestSessions.map((session) => ({
           id: session.id,
           title: session.testTemplate?.title,
           type: session.testTemplate?.type,
@@ -385,10 +427,10 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
           score: session.totalScore,
           percentage: session.percentage,
           submittedAt: session.submittedAt,
-          timeSpent: session.timeSpent
+          timeSpent: session.timeSpent,
         })),
 
-        questionResponses: recentResponses.slice(0, 20).map(response => ({
+        questionResponses: recentResponses.slice(0, 20).map((response) => ({
           questionId: response.questionId,
           topic: response.question.topic,
           difficulty: response.question.difficulty,
@@ -396,10 +438,10 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
           isCorrect: response.isCorrect,
           timeSpent: response.timeSpent,
           confidence: response.confidence,
-          answeredAt: response.answeredAt
+          answeredAt: response.answeredAt,
         })),
 
-        learningVelocity
+        learningVelocity,
       },
 
       insights,
@@ -407,17 +449,17 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
       recommendations: {
         immediate: insights.recommendations,
         studyPlan: userProgress
-          .filter(p => p.masteryScore < 70)
+          .filter((p) => p.masteryScore < 70)
           .sort((a, b) => a.masteryScore - b.masteryScore)
           .slice(0, 5)
-          .map(p => ({
+          .map((p) => ({
             topic: p.topic,
             currentMastery: p.masteryScore,
             targetMastery: 80,
             estimatedHours: Math.ceil((80 - p.masteryScore) / 10), // Rough estimate
-            priority: p.masteryScore < 40 ? 'high' : p.masteryScore < 60 ? 'medium' : 'low'
-          }))
-      }
+            priority: p.masteryScore < 40 ? 'high' : p.masteryScore < 60 ? 'medium' : 'low',
+          })),
+      },
     }
 
     // Log progress access
@@ -426,7 +468,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
       targetUserId: userId,
       filters,
       progressTopics: userProgress.length,
-      timeFrame: filters.timeFrame
+      timeFrame: filters.timeFrame,
     })
 
     return NextResponse.json({
@@ -435,10 +477,9 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
       meta: {
         filters,
         generatedAt: new Date().toISOString(),
-        dataSource: targetUser ? 'registered_user' : 'free_user'
-      }
+        dataSource: targetUser ? 'registered_user' : 'free_user',
+      },
     })
-
   } catch (error) {
     logger.error('Error fetching user progress:', error)
 
@@ -447,7 +488,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
         {
           error: 'Invalid query parameters',
           code: 'VALIDATION_ERROR',
-          details: error.errors
+          details: error.errors,
         },
         { status: 400 }
       )
@@ -456,7 +497,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
     return NextResponse.json(
       {
         error: 'Failed to fetch user progress',
-        code: 'INTERNAL_ERROR'
+        code: 'INTERNAL_ERROR',
       },
       { status: 500 }
     )

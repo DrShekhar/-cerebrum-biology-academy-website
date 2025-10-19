@@ -6,33 +6,47 @@ import { withRateLimit } from '@/lib/middleware/rateLimit'
 import { logger } from '@/lib/utils/logger'
 
 interface RouteParams {
-  params: {
+  params: Promise<{
     id: string
-  }
+  }>
 }
 
 // Validation schema for test session updates
 const updateTestSessionSchema = z.object({
-  status: z.enum(['NOT_STARTED', 'IN_PROGRESS', 'PAUSED', 'COMPLETED', 'EXPIRED', 'ABANDONED', 'TERMINATED']).optional(),
+  status: z
+    .enum([
+      'NOT_STARTED',
+      'IN_PROGRESS',
+      'PAUSED',
+      'COMPLETED',
+      'EXPIRED',
+      'ABANDONED',
+      'TERMINATED',
+    ])
+    .optional(),
   currentQuestionIndex: z.number().min(0).optional(),
   timeSpent: z.number().min(0).optional(),
   remainingTime: z.number().min(0).optional(),
-  browserInfo: z.object({
-    userAgent: z.string().optional(),
-    screenSize: z.string().optional(),
-    timestamp: z.string().optional()
-  }).optional(),
-  antiCheatData: z.object({
-    tabSwitchCount: z.number().optional(),
-    fullscreenExits: z.number().optional(),
-    suspiciousEvents: z.array(z.string()).optional()
-  }).optional()
+  browserInfo: z
+    .object({
+      userAgent: z.string().optional(),
+      screenSize: z.string().optional(),
+      timestamp: z.string().optional(),
+    })
+    .optional(),
+  antiCheatData: z
+    .object({
+      tabSwitchCount: z.number().optional(),
+      fullscreenExits: z.number().optional(),
+      suspiciousEvents: z.array(z.string()).optional(),
+    })
+    .optional(),
 })
 
 // GET /api/test/[id] - Get test session details
 export async function GET(request: NextRequest, { params }: RouteParams) {
   try {
-    const { id } = params
+    const { id } = await params
 
     const authResult = await withAuth(request)
     if (!authResult.success) {
@@ -48,7 +62,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
     const rateLimitResult = await withRateLimit(request, {
       identifier: user.id,
       limit: 100, // 100 requests per hour for getting test details
-      window: 3600000
+      window: 3600000,
     })
 
     if (!rateLimitResult.success) {
@@ -64,8 +78,8 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
         id,
         OR: [
           { userId: user.id },
-          { freeUserId: user.id } // Support for free users
-        ]
+          { freeUserId: user.id }, // Support for free users
+        ],
       },
       include: {
         testTemplate: {
@@ -87,17 +101,17 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
                         timeLimit: true,
                         questionImage: true,
                         tags: true,
-                        relatedConcepts: true
-                      }
-                    }
+                        relatedConcepts: true,
+                      },
+                    },
                   },
                   orderBy: {
-                    orderIndex: 'asc'
-                  }
-                }
-              }
-            }
-          }
+                    orderIndex: 'asc',
+                  },
+                },
+              },
+            },
+          },
         },
         responses: {
           include: {
@@ -107,16 +121,16 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
                 correctAnswer: true,
                 explanation: true,
                 explanationImage: true,
-                videoExplanation: true
-              }
-            }
+                videoExplanation: true,
+              },
+            },
           },
           orderBy: {
-            answeredAt: 'asc'
-          }
+            answeredAt: 'asc',
+          },
         },
-        analytics: true
-      }
+        analytics: true,
+      },
     })
 
     if (!testSession) {
@@ -132,43 +146,46 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
     const progress = totalQuestions > 0 ? (answeredQuestions / totalQuestions) * 100 : 0
 
     // Prepare questions with user responses
-    const questionsWithResponses = testSession.testTemplate?.questionBank?.[0]?.questions?.map((qbq, index) => {
-      const userResponse = testSession.responses.find(r => r.questionId === qbq.question.id)
+    const questionsWithResponses =
+      testSession.testTemplate?.questionBank?.[0]?.questions?.map((qbq, index) => {
+        const userResponse = testSession.responses.find((r) => r.questionId === qbq.question.id)
 
-      return {
-        index: index + 1,
-        id: qbq.question.id,
-        topic: qbq.question.topic,
-        subtopic: qbq.question.subtopic,
-        type: qbq.question.type,
-        difficulty: qbq.question.difficulty,
-        question: qbq.question.question,
-        options: qbq.question.options,
-        marks: qbq.question.marks,
-        timeLimit: qbq.question.timeLimit,
-        questionImage: qbq.question.questionImage,
-        tags: qbq.question.tags,
-        relatedConcepts: qbq.question.relatedConcepts,
-        userResponse: userResponse ? {
-          selectedAnswer: userResponse.selectedAnswer,
-          isCorrect: userResponse.isCorrect,
-          timeSpent: userResponse.timeSpent,
-          marksAwarded: userResponse.marksAwarded,
-          confidence: userResponse.confidence,
-          answeredAt: userResponse.answeredAt
-        } : null,
-        // Only show correct answer and explanation if test is completed or in review mode
-        ...(testSession.status === 'COMPLETED' && {
-          correctAnswer: qbq.question.correctAnswer,
-          explanation: qbq.question.explanation,
-          explanationImage: qbq.question.explanationImage,
-          videoExplanation: qbq.question.videoExplanation
-        })
-      }
-    }) || []
+        return {
+          index: index + 1,
+          id: qbq.question.id,
+          topic: qbq.question.topic,
+          subtopic: qbq.question.subtopic,
+          type: qbq.question.type,
+          difficulty: qbq.question.difficulty,
+          question: qbq.question.question,
+          options: qbq.question.options,
+          marks: qbq.question.marks,
+          timeLimit: qbq.question.timeLimit,
+          questionImage: qbq.question.questionImage,
+          tags: qbq.question.tags,
+          relatedConcepts: qbq.question.relatedConcepts,
+          userResponse: userResponse
+            ? {
+                selectedAnswer: userResponse.selectedAnswer,
+                isCorrect: userResponse.isCorrect,
+                timeSpent: userResponse.timeSpent,
+                marksAwarded: userResponse.marksAwarded,
+                confidence: userResponse.confidence,
+                answeredAt: userResponse.answeredAt,
+              }
+            : null,
+          // Only show correct answer and explanation if test is completed or in review mode
+          ...(testSession.status === 'COMPLETED' && {
+            correctAnswer: qbq.question.correctAnswer,
+            explanation: qbq.question.explanation,
+            explanationImage: qbq.question.explanationImage,
+            videoExplanation: qbq.question.videoExplanation,
+          }),
+        }
+      }) || []
 
     // Calculate real-time statistics
-    const correctAnswers = testSession.responses.filter(r => r.isCorrect).length
+    const correctAnswers = testSession.responses.filter((r) => r.isCorrect).length
     const currentScore = testSession.responses.reduce((sum, r) => sum + r.marksAwarded, 0)
     const totalMarks = testSession.testTemplate?.totalMarks || 0
     const accuracy = answeredQuestions > 0 ? (correctAnswers / answeredQuestions) * 100 : 0
@@ -198,24 +215,26 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
           rank: testSession.rank,
           tabSwitchCount: testSession.tabSwitchCount,
           fullscreenExits: testSession.fullscreenExits,
-          isProctored: testSession.isProctored
+          isProctored: testSession.isProctored,
         },
-        testTemplate: testSession.testTemplate ? {
-          id: testSession.testTemplate.id,
-          title: testSession.testTemplate.title,
-          description: testSession.testTemplate.description,
-          type: testSession.testTemplate.type,
-          category: testSession.testTemplate.category,
-          difficulty: testSession.testTemplate.difficulty,
-          timeLimit: testSession.testTemplate.timeLimit,
-          totalQuestions: testSession.testTemplate.totalQuestions,
-          totalMarks: testSession.testTemplate.totalMarks,
-          passingMarks: testSession.testTemplate.passingMarks,
-          negativeMarking: testSession.testTemplate.negativeMarking,
-          topics: testSession.testTemplate.topics,
-          instructions: testSession.testTemplate.instructions,
-          isAdaptive: testSession.testTemplate.isAdaptive
-        } : null,
+        testTemplate: testSession.testTemplate
+          ? {
+              id: testSession.testTemplate.id,
+              title: testSession.testTemplate.title,
+              description: testSession.testTemplate.description,
+              type: testSession.testTemplate.type,
+              category: testSession.testTemplate.category,
+              difficulty: testSession.testTemplate.difficulty,
+              timeLimit: testSession.testTemplate.timeLimit,
+              totalQuestions: testSession.testTemplate.totalQuestions,
+              totalMarks: testSession.testTemplate.totalMarks,
+              passingMarks: testSession.testTemplate.passingMarks,
+              negativeMarking: testSession.testTemplate.negativeMarking,
+              topics: testSession.testTemplate.topics,
+              instructions: testSession.testTemplate.instructions,
+              isAdaptive: testSession.testTemplate.isAdaptive,
+            }
+          : null,
         questions: questionsWithResponses,
         progress: {
           totalQuestions,
@@ -225,20 +244,22 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
           totalMarks,
           accuracy: Math.round(accuracy * 100) / 100,
           timeElapsed,
-          remainingTime: effectiveRemainingTime
+          remainingTime: effectiveRemainingTime,
         },
-        analytics: testSession.analytics ? {
-          totalTime: testSession.analytics.totalTime,
-          averageTimePerQ: testSession.analytics.averageTimePerQ,
-          questionsAttempted: testSession.analytics.questionsAttempted,
-          questionsCorrect: testSession.analytics.questionsCorrect,
-          accuracy: testSession.analytics.accuracy,
-          topicPerformance: testSession.analytics.topicPerformance,
-          strengthTopics: testSession.analytics.strengthTopics,
-          weaknessTopics: testSession.analytics.weaknessTopics,
-          percentileRank: testSession.analytics.percentileRank
-        } : null
-      }
+        analytics: testSession.analytics
+          ? {
+              totalTime: testSession.analytics.totalTime,
+              averageTimePerQ: testSession.analytics.averageTimePerQ,
+              questionsAttempted: testSession.analytics.questionsAttempted,
+              questionsCorrect: testSession.analytics.questionsCorrect,
+              accuracy: testSession.analytics.accuracy,
+              topicPerformance: testSession.analytics.topicPerformance,
+              strengthTopics: testSession.analytics.strengthTopics,
+              weaknessTopics: testSession.analytics.weaknessTopics,
+              percentileRank: testSession.analytics.percentileRank,
+            }
+          : null,
+      },
     }
 
     // Log access
@@ -246,17 +267,16 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
       testSessionId: id,
       userId: user.id,
       status: testSession.status,
-      progress: `${answeredQuestions}/${totalQuestions}`
+      progress: `${answeredQuestions}/${totalQuestions}`,
     })
 
     return NextResponse.json(response)
-
   } catch (error) {
     logger.error('Error fetching test session:', error)
     return NextResponse.json(
       {
         error: 'Failed to fetch test session',
-        code: 'INTERNAL_ERROR'
+        code: 'INTERNAL_ERROR',
       },
       { status: 500 }
     )
@@ -266,7 +286,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
 // PUT /api/test/[id] - Update test session
 export async function PUT(request: NextRequest, { params }: RouteParams) {
   try {
-    const { id } = params
+    const { id } = await params
     const body = await request.json()
     const validatedData = updateTestSessionSchema.parse(body)
 
@@ -284,7 +304,7 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
     const rateLimitResult = await withRateLimit(request, {
       identifier: user.id,
       limit: 200, // 200 updates per hour
-      window: 3600000
+      window: 3600000,
     })
 
     if (!rateLimitResult.success) {
@@ -298,11 +318,8 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
     const existingSession = await prisma.testSession.findUnique({
       where: {
         id,
-        OR: [
-          { userId: user.id },
-          { freeUserId: user.id }
-        ]
-      }
+        OR: [{ userId: user.id }, { freeUserId: user.id }],
+      },
     })
 
     if (!existingSession) {
@@ -344,8 +361,8 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
 
     if (validatedData.browserInfo) {
       updateData.browserInfo = {
-        ...existingSession.browserInfo as any,
-        ...validatedData.browserInfo
+        ...(existingSession.browserInfo as any),
+        ...validatedData.browserInfo,
       }
     }
 
@@ -358,11 +375,11 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
       }
       if (validatedData.antiCheatData.suspiciousEvents) {
         updateData.suspiciousActivity = {
-          ...existingSession.suspiciousActivity as any,
+          ...(existingSession.suspiciousActivity as any),
           events: [
             ...((existingSession.suspiciousActivity as any)?.events || []),
-            ...validatedData.antiCheatData.suspiciousEvents
-          ]
+            ...validatedData.antiCheatData.suspiciousEvents,
+          ],
         }
       }
     }
@@ -377,10 +394,10 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
             id: true,
             title: true,
             timeLimit: true,
-            totalQuestions: true
-          }
-        }
-      }
+            totalQuestions: true,
+          },
+        },
+      },
     })
 
     // Log update
@@ -388,7 +405,7 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
       testSessionId: id,
       userId: user.id,
       changes: Object.keys(updateData),
-      newStatus: updatedSession.status
+      newStatus: updatedSession.status,
     })
 
     return NextResponse.json({
@@ -405,11 +422,10 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
           remainingTime: updatedSession.remainingTime,
           currentQuestionIndex: updatedSession.currentQuestionIndex,
           tabSwitchCount: updatedSession.tabSwitchCount,
-          fullscreenExits: updatedSession.fullscreenExits
-        }
-      }
+          fullscreenExits: updatedSession.fullscreenExits,
+        },
+      },
     })
-
   } catch (error) {
     logger.error('Error updating test session:', error)
 
@@ -418,7 +434,7 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
         {
           error: 'Validation failed',
           code: 'VALIDATION_ERROR',
-          details: error.errors
+          details: error.errors,
         },
         { status: 400 }
       )
@@ -427,7 +443,7 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
     return NextResponse.json(
       {
         error: 'Failed to update test session',
-        code: 'INTERNAL_ERROR'
+        code: 'INTERNAL_ERROR',
       },
       { status: 500 }
     )
@@ -437,7 +453,7 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
 // DELETE /api/test/[id] - Delete test session
 export async function DELETE(request: NextRequest, { params }: RouteParams) {
   try {
-    const { id } = params
+    const { id } = await params
 
     const authResult = await withAuth(request)
     if (!authResult.success) {
@@ -453,11 +469,8 @@ export async function DELETE(request: NextRequest, { params }: RouteParams) {
     const existingSession = await prisma.testSession.findUnique({
       where: {
         id,
-        OR: [
-          { userId: user.id },
-          { freeUserId: user.id }
-        ]
-      }
+        OR: [{ userId: user.id }, { freeUserId: user.id }],
+      },
     })
 
     if (!existingSession) {
@@ -472,7 +485,7 @@ export async function DELETE(request: NextRequest, { params }: RouteParams) {
       return NextResponse.json(
         {
           error: 'Cannot delete completed or in-progress test session',
-          code: 'OPERATION_NOT_ALLOWED'
+          code: 'OPERATION_NOT_ALLOWED',
         },
         { status: 403 }
       )
@@ -482,17 +495,17 @@ export async function DELETE(request: NextRequest, { params }: RouteParams) {
     await prisma.$transaction(async (tx) => {
       // Delete user responses
       await tx.userQuestionResponse.deleteMany({
-        where: { testSessionId: id }
+        where: { testSessionId: id },
       })
 
       // Delete analytics
       await tx.testAnalytics.deleteMany({
-        where: { testSessionId: id }
+        where: { testSessionId: id },
       })
 
       // Delete test session
       await tx.testSession.delete({
-        where: { id }
+        where: { id },
       })
     })
 
@@ -500,20 +513,19 @@ export async function DELETE(request: NextRequest, { params }: RouteParams) {
     logger.info('Test session deleted:', {
       testSessionId: id,
       userId: user.id,
-      previousStatus: existingSession.status
+      previousStatus: existingSession.status,
     })
 
     return NextResponse.json({
       success: true,
-      message: 'Test session deleted successfully'
+      message: 'Test session deleted successfully',
     })
-
   } catch (error) {
     logger.error('Error deleting test session:', error)
     return NextResponse.json(
       {
         error: 'Failed to delete test session',
-        code: 'INTERNAL_ERROR'
+        code: 'INTERNAL_ERROR',
       },
       { status: 500 }
     )

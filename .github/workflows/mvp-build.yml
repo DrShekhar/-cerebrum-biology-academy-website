@@ -1,10 +1,13 @@
 name: 🚀 MVP Build & Deploy
 
 on:
-  push:
-    branches: [emergency-revenue-mvp, main]
-  pull_request:
-    branches: [main]
+  # Temporarily disabled to prevent auto-runs
+  # Re-enable after fixing build issues
+  workflow_dispatch:
+  # push:
+  #   branches: [emergency-revenue-mvp, main]
+  # pull_request:
+  #   branches: [main]
 
 env:
   NODE_VERSION: '22'

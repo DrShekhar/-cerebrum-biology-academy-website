@@ -6,9 +6,9 @@ import { withRateLimit } from '@/lib/middleware/rateLimit'
 import { logger } from '@/lib/utils/logger'
 
 interface RouteParams {
-  params: {
+  params: Promise<{
     id: string
-  }
+  }>
 }
 
 // Validation schema for question updates
@@ -18,7 +18,18 @@ const updateQuestionSchema = z.object({
   curriculum: z.string().optional(),
   grade: z.string().optional(),
   subject: z.string().optional(),
-  type: z.enum(['MCQ', 'SHORT_ANSWER', 'DIAGRAM', 'TRUE_FALSE', 'FILL_BLANK', 'MULTIPLE_SELECT', 'MATCH_FOLLOWING', 'NUMERICAL']).optional(),
+  type: z
+    .enum([
+      'MCQ',
+      'SHORT_ANSWER',
+      'DIAGRAM',
+      'TRUE_FALSE',
+      'FILL_BLANK',
+      'MULTIPLE_SELECT',
+      'MATCH_FOLLOWING',
+      'NUMERICAL',
+    ])
+    .optional(),
   difficulty: z.enum(['EASY', 'MEDIUM', 'HARD', 'EXPERT']).optional(),
   question: z.string().min(10).optional(),
   options: z.array(z.string()).optional(),
@@ -35,13 +46,19 @@ const updateQuestionSchema = z.object({
   tags: z.array(z.string()).optional(),
   relatedConcepts: z.array(z.string()).optional(),
   keywords: z.array(z.string()).optional(),
-  category: z.enum(['PRACTICE', 'MOCK_TEST', 'PREVIOUS_YEAR', 'CONCEPT_BUILDER', 'COMPETITIVE']).optional(),
+  category: z
+    .enum(['PRACTICE', 'MOCK_TEST', 'PREVIOUS_YEAR', 'CONCEPT_BUILDER', 'COMPETITIVE'])
+    .optional(),
   isActive: z.boolean().optional(),
-  isVerified: z.boolean().optional()
+  isVerified: z.boolean().optional(),
 })
 
 // Helper function to check permissions
-function checkPermissions(user: any, action: 'read' | 'update' | 'delete', questionOwnerId?: string) {
+function checkPermissions(
+  user: any,
+  action: 'read' | 'update' | 'delete',
+  questionOwnerId?: string
+) {
   const adminRoles = ['ADMIN', 'TEACHER']
 
   switch (action) {
@@ -58,7 +75,7 @@ function checkPermissions(user: any, action: 'read' | 'update' | 'delete', quest
 // GET /api/questions/[id] - Get specific question
 export async function GET(request: NextRequest, { params }: RouteParams) {
   try {
-    const { id } = params
+    const { id } = await params
 
     const authResult = await withAuth(request)
     if (!authResult.success) {
@@ -81,7 +98,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
     const rateLimitResult = await withRateLimit(request, {
       identifier: user.id,
       limit: 500, // 500 requests per hour for individual questions
-      window: 3600000
+      window: 3600000,
     })
 
     if (!rateLimitResult.success) {
@@ -102,11 +119,11 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
                 id: true,
                 title: true,
                 score: true,
-                percentage: true
-              }
-            }
+                percentage: true,
+              },
+            },
           },
-          take: 5 // Recent 5 test uses
+          take: 5, // Recent 5 test uses
         },
         userResponses: {
           select: {
@@ -114,25 +131,19 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
             isCorrect: true,
             timeSpent: true,
             confidence: true,
-            answeredAt: true
+            answeredAt: true,
           },
           where: {
-            OR: [
-              { userId: user.id },
-              { freeUserId: user.id }
-            ]
+            OR: [{ userId: user.id }, { freeUserId: user.id }],
           },
           orderBy: { answeredAt: 'desc' },
-          take: 10 // Recent 10 responses by this user
-        }
-      }
+          take: 10, // Recent 10 responses by this user
+        },
+      },
     })
 
     if (!question) {
-      return NextResponse.json(
-        { error: 'Question not found', code: 'NOT_FOUND' },
-        { status: 404 }
-      )
+      return NextResponse.json({ error: 'Question not found', code: 'NOT_FOUND' }, { status: 404 })
     }
 
     // Check if question is accessible (active and verified for regular users)
@@ -144,19 +155,32 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
     }
 
     // Calculate question statistics
-    const successRate = question.totalAttempts > 0 ?
-      Math.round((question.correctAttempts / question.totalAttempts) * 100 * 100) / 100 : 0
+    const successRate =
+      question.totalAttempts > 0
+        ? Math.round((question.correctAttempts / question.totalAttempts) * 100 * 100) / 100
+        : 0
 
-    const averageTime = question.userResponses.length > 0 ?
-      Math.round(question.userResponses.reduce((sum, r) => sum + (r.timeSpent || 0), 0) / question.userResponses.length) : 0
+    const averageTime =
+      question.userResponses.length > 0
+        ? Math.round(
+            question.userResponses.reduce((sum, r) => sum + (r.timeSpent || 0), 0) /
+              question.userResponses.length
+          )
+        : 0
 
     const userStats = {
       totalAttempts: question.userResponses.length,
-      correctAttempts: question.userResponses.filter(r => r.isCorrect).length,
+      correctAttempts: question.userResponses.filter((r) => r.isCorrect).length,
       averageTime,
-      bestTime: question.userResponses.length > 0 ?
-        Math.min(...question.userResponses.map(r => r.timeSpent || Infinity).filter(t => t !== Infinity)) : 0,
-      lastAttempt: question.userResponses[0]?.answeredAt
+      bestTime:
+        question.userResponses.length > 0
+          ? Math.min(
+              ...question.userResponses
+                .map((r) => r.timeSpent || Infinity)
+                .filter((t) => t !== Infinity)
+            )
+          : 0,
+      lastAttempt: question.userResponses[0]?.answeredAt,
     }
 
     // Prepare response data
@@ -187,13 +211,13 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
       lastUsed: question.lastUsed,
 
       // Include answer and explanation for authorized users or if user has attempted
-      ...(user.role === 'ADMIN' || user.role === 'TEACHER' || userStats.totalAttempts > 0) && {
+      ...((user.role === 'ADMIN' || user.role === 'TEACHER' || userStats.totalAttempts > 0) && {
         correctAnswer: question.correctAnswer,
         explanation: question.explanation,
         explanationImage: question.explanationImage,
         videoExplanation: question.videoExplanation,
-        solutionSteps: question.solutionSteps
-      },
+        solutionSteps: question.solutionSteps,
+      }),
 
       // Statistics
       statistics: {
@@ -203,30 +227,32 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
         popularityScore: question.popularityScore,
         difficultyRating: question.difficultyRating,
         qualityScore: question.qualityScore,
-        reportCount: question.reportCount
+        reportCount: question.reportCount,
       },
 
       // User-specific data
       userProgress: userStats,
 
       // Recent test usage
-      recentUsage: question.testQuestions.map(tq => ({
+      recentUsage: question.testQuestions.map((tq) => ({
         testId: tq.testAttempt.id,
         testTitle: tq.testAttempt.title,
         score: tq.testAttempt.score,
-        percentage: tq.testAttempt.percentage
-      }))
+        percentage: tq.testAttempt.percentage,
+      })),
     }
 
     // Update question view count and popularity (async)
-    prisma.question.update({
-      where: { id },
-      data: {
-        popularityScore: { increment: 0.1 }
-      }
-    }).catch(error => {
-      logger.error('Error updating question popularity:', error)
-    })
+    prisma.question
+      .update({
+        where: { id },
+        data: {
+          popularityScore: { increment: 0.1 },
+        },
+      })
+      .catch((error) => {
+        logger.error('Error updating question popularity:', error)
+      })
 
     // Log question access
     logger.info('Question accessed:', {
@@ -234,20 +260,19 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
       userId: user.id,
       topic: question.topic,
       type: question.type,
-      userAttempts: userStats.totalAttempts
+      userAttempts: userStats.totalAttempts,
     })
 
     return NextResponse.json({
       success: true,
-      data: responseData
+      data: responseData,
     })
-
   } catch (error) {
     logger.error('Error fetching question:', error)
     return NextResponse.json(
       {
         error: 'Failed to fetch question',
-        code: 'INTERNAL_ERROR'
+        code: 'INTERNAL_ERROR',
       },
       { status: 500 }
     )
@@ -257,7 +282,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
 // PUT /api/questions/[id] - Update question
 export async function PUT(request: NextRequest, { params }: RouteParams) {
   try {
-    const { id } = params
+    const { id } = await params
     const body = await request.json()
     const validatedData = updateQuestionSchema.parse(body)
 
@@ -274,14 +299,11 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
     // Get existing question to check ownership
     const existingQuestion = await prisma.question.findUnique({
       where: { id },
-      select: { id: true, verifiedBy: true }
+      select: { id: true, verifiedBy: true },
     })
 
     if (!existingQuestion) {
-      return NextResponse.json(
-        { error: 'Question not found', code: 'NOT_FOUND' },
-        { status: 404 }
-      )
+      return NextResponse.json({ error: 'Question not found', code: 'NOT_FOUND' }, { status: 404 })
     }
 
     if (!checkPermissions(user, 'update', existingQuestion.verifiedBy || undefined)) {
@@ -295,7 +317,7 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
     const rateLimitResult = await withRateLimit(request, {
       identifier: user.id,
       limit: 100, // 100 updates per hour
-      window: 3600000
+      window: 3600000,
     })
 
     if (!rateLimitResult.success) {
@@ -310,19 +332,23 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
       return NextResponse.json(
         {
           error: 'MCQ questions must have at least 2 options',
-          code: 'INVALID_MCQ_OPTIONS'
+          code: 'INVALID_MCQ_OPTIONS',
         },
         { status: 400 }
       )
     }
 
     // Validate correct answer is in options for MCQ
-    if (validatedData.type === 'MCQ' && validatedData.options && validatedData.correctAnswer &&
-        !validatedData.options.includes(validatedData.correctAnswer)) {
+    if (
+      validatedData.type === 'MCQ' &&
+      validatedData.options &&
+      validatedData.correctAnswer &&
+      !validatedData.options.includes(validatedData.correctAnswer)
+    ) {
       return NextResponse.json(
         {
           error: 'Correct answer must be one of the provided options',
-          code: 'INVALID_CORRECT_ANSWER'
+          code: 'INVALID_CORRECT_ANSWER',
         },
         { status: 400 }
       )
@@ -331,7 +357,7 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
     // Prepare update data
     const updateData: any = {
       ...validatedData,
-      updatedAt: new Date()
+      updatedAt: new Date(),
     }
 
     // If non-admin user updates verified question, mark as unverified
@@ -351,7 +377,7 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
     // Update the question
     const updatedQuestion = await prisma.question.update({
       where: { id },
-      data: updateData
+      data: updateData,
     })
 
     // Log question update
@@ -359,7 +385,7 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
       questionId: id,
       updatedBy: user.id,
       updatedFields: Object.keys(validatedData),
-      wasReVerified: user.role === 'ADMIN'
+      wasReVerified: user.role === 'ADMIN',
     })
 
     return NextResponse.json({
@@ -382,15 +408,14 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
           tags: updatedQuestion.tags,
           isActive: updatedQuestion.isActive,
           isVerified: updatedQuestion.isVerified,
-          updatedAt: updatedQuestion.updatedAt
-        }
+          updatedAt: updatedQuestion.updatedAt,
+        },
       },
       meta: {
         wasReVerified: user.role === 'ADMIN',
-        needsReview: user.role !== 'ADMIN' && !updatedQuestion.isVerified
-      }
+        needsReview: user.role !== 'ADMIN' && !updatedQuestion.isVerified,
+      },
     })
-
   } catch (error) {
     logger.error('Error updating question:', error)
 
@@ -399,7 +424,7 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
         {
           error: 'Validation failed',
           code: 'VALIDATION_ERROR',
-          details: error.errors
+          details: error.errors,
         },
         { status: 400 }
       )
@@ -408,7 +433,7 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
     return NextResponse.json(
       {
         error: 'Failed to update question',
-        code: 'INTERNAL_ERROR'
+        code: 'INTERNAL_ERROR',
       },
       { status: 500 }
     )
@@ -418,7 +443,7 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
 // DELETE /api/questions/[id] - Delete question
 export async function DELETE(request: NextRequest, { params }: RouteParams) {
   try {
-    const { id } = params
+    const { id } = await params
 
     const authResult = await withAuth(request)
     if (!authResult.success) {
@@ -442,17 +467,14 @@ export async function DELETE(request: NextRequest, { params }: RouteParams) {
           select: {
             testQuestions: true,
             userResponses: true,
-            questionBank: true
-          }
-        }
-      }
+            questionBank: true,
+          },
+        },
+      },
     })
 
     if (!existingQuestion) {
-      return NextResponse.json(
-        { error: 'Question not found', code: 'NOT_FOUND' },
-        { status: 404 }
-      )
+      return NextResponse.json({ error: 'Question not found', code: 'NOT_FOUND' }, { status: 404 })
     }
 
     if (!checkPermissions(user, 'delete', existingQuestion.verifiedBy || undefined)) {
@@ -463,7 +485,8 @@ export async function DELETE(request: NextRequest, { params }: RouteParams) {
     }
 
     // Check if question is in use
-    const isInUse = existingQuestion._count.testQuestions > 0 ||
+    const isInUse =
+      existingQuestion._count.testQuestions > 0 ||
       existingQuestion._count.userResponses > 0 ||
       existingQuestion._count.questionBank > 0
 
@@ -475,8 +498,8 @@ export async function DELETE(request: NextRequest, { params }: RouteParams) {
           details: {
             testUsages: existingQuestion._count.testQuestions,
             userResponses: existingQuestion._count.userResponses,
-            questionBanks: existingQuestion._count.questionBank
-          }
+            questionBanks: existingQuestion._count.questionBank,
+          },
         },
         { status: 409 }
       )
@@ -488,47 +511,46 @@ export async function DELETE(request: NextRequest, { params }: RouteParams) {
         where: { id },
         data: {
           isActive: false,
-          updatedAt: new Date()
-        }
+          updatedAt: new Date(),
+        },
       })
 
       logger.info('Question soft deleted (in use):', {
         questionId: id,
         deletedBy: user.id,
         topic: existingQuestion.topic,
-        usageCount: existingQuestion.totalAttempts
+        usageCount: existingQuestion.totalAttempts,
       })
 
       return NextResponse.json({
         success: true,
         message: 'Question deactivated successfully (soft delete due to usage)',
-        action: 'soft_delete'
+        action: 'soft_delete',
       })
     }
 
     // Hard delete if not in use
     await prisma.question.delete({
-      where: { id }
+      where: { id },
     })
 
     logger.info('Question deleted:', {
       questionId: id,
       deletedBy: user.id,
-      topic: existingQuestion.topic
+      topic: existingQuestion.topic,
     })
 
     return NextResponse.json({
       success: true,
       message: 'Question deleted successfully',
-      action: 'hard_delete'
+      action: 'hard_delete',
     })
-
   } catch (error) {
     logger.error('Error deleting question:', error)
     return NextResponse.json(
       {
         error: 'Failed to delete question',
-        code: 'INTERNAL_ERROR'
+        code: 'INTERNAL_ERROR',
       },
       { status: 500 }
     )

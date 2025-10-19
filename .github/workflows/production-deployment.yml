@@ -1,8 +1,8 @@
 name: 🚀 Cerebrum Biology Academy - Production Deployment
 
 on:
-  push:
-    branches: [main]
+  # Temporarily disabled auto-deploy on push
+  # Use manual workflow_dispatch until build is stable
   workflow_dispatch:
     inputs:
       environment:

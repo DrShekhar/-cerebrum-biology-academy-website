@@ -10,7 +10,7 @@ const SubmitAnswerSchema = z.object({
   selectedAnswer: z.string().optional(),
   timeSpent: z.number().min(0).optional(),
   isMarkedForReview: z.boolean().default(false),
-  confidence: z.number().min(1).max(5).optional()
+  confidence: z.number().min(1).max(5).optional(),
 })
 
 // Session update schema
@@ -23,7 +23,7 @@ const UpdateSessionSchema = z.object({
   remainingTime: z.number().optional(),
   tabSwitchCount: z.number().min(0).optional(),
   fullscreenExits: z.number().min(0).optional(),
-  suspiciousActivity: z.array(z.any()).optional()
+  suspiciousActivity: z.array(z.any()).optional(),
 })
 
 /**
@@ -32,16 +32,16 @@ const UpdateSessionSchema = z.object({
  */
 export async function GET(
   request: NextRequest,
-  { params }: { params: { sessionId: string } }
+  { params }: { params: Promise<{ sessionId: string }> }
 ) {
   return withAuth(async (req: NextRequest, session) => {
     try {
-      const { sessionId } = params
+      const { sessionId } = await params
 
       const testSession = await prisma.testSession.findUnique({
         where: {
           id: sessionId,
-          userId: session.userId // Ensure user owns this session
+          userId: session.userId, // Ensure user owns this session
         },
         include: {
           testTemplate: true,
@@ -57,34 +57,45 @@ export async function GET(
                   marks: true,
                   timeLimit: true,
                   type: true,
-                  questionImage: true
-                }
-              }
+                  questionImage: true,
+                },
+              },
             },
-            orderBy: { answeredAt: 'asc' }
+            orderBy: { answeredAt: 'asc' },
           },
-          analytics: true
-        }
+          analytics: true,
+        },
       })
 
       if (!testSession) {
-        return addSecurityHeaders(NextResponse.json({
-          error: 'Test session not found',
-          message: 'Session not found or access denied'
-        }, { status: 404 }))
+        return addSecurityHeaders(
+          NextResponse.json(
+            {
+              error: 'Test session not found',
+              message: 'Session not found or access denied',
+            },
+            { status: 404 }
+          )
+        )
       }
 
-      return addSecurityHeaders(NextResponse.json({
-        success: true,
-        session: testSession
-      }))
-
+      return addSecurityHeaders(
+        NextResponse.json({
+          success: true,
+          session: testSession,
+        })
+      )
     } catch (error) {
       console.error('Get test session error:', error)
-      return addSecurityHeaders(NextResponse.json({
-        error: 'Internal server error',
-        message: 'Failed to retrieve test session'
-      }, { status: 500 }))
+      return addSecurityHeaders(
+        NextResponse.json(
+          {
+            error: 'Internal server error',
+            message: 'Failed to retrieve test session',
+          },
+          { status: 500 }
+        )
+      )
     }
   })(request)
 }
@@ -95,19 +106,24 @@ export async function GET(
  */
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { sessionId: string } }
+  { params }: { params: Promise<{ sessionId: string }> }
 ) {
   return withAuth(async (req: NextRequest, session) => {
     try {
-      const { sessionId } = params
+      const { sessionId } = await params
       const body = await request.json()
       const result = UpdateSessionSchema.safeParse(body)
 
       if (!result.success) {
-        return addSecurityHeaders(NextResponse.json({
-          error: 'Invalid input',
-          details: result.error.errors
-        }, { status: 400 }))
+        return addSecurityHeaders(
+          NextResponse.json(
+            {
+              error: 'Invalid input',
+              details: result.error.errors,
+            },
+            { status: 400 }
+          )
+        )
       }
 
       const updateData = result.data
@@ -116,15 +132,20 @@ export async function PUT(
       const existingSession = await prisma.testSession.findUnique({
         where: {
           id: sessionId,
-          userId: session.userId
-        }
+          userId: session.userId,
+        },
       })
 
       if (!existingSession) {
-        return addSecurityHeaders(NextResponse.json({
-          error: 'Test session not found',
-          message: 'Session not found or access denied'
-        }, { status: 404 }))
+        return addSecurityHeaders(
+          NextResponse.json(
+            {
+              error: 'Test session not found',
+              message: 'Session not found or access denied',
+            },
+            { status: 404 }
+          )
+        )
       }
 
       // Update session
@@ -132,14 +153,15 @@ export async function PUT(
         where: { id: sessionId },
         data: {
           ...updateData,
-          ...(updateData.status === 'IN_PROGRESS' && !existingSession.startedAt && {
-            startedAt: new Date()
-          }),
+          ...(updateData.status === 'IN_PROGRESS' &&
+            !existingSession.startedAt && {
+              startedAt: new Date(),
+            }),
           ...(updateData.status === 'COMPLETED' && {
-            submittedAt: new Date()
+            submittedAt: new Date(),
           }),
-          updatedAt: new Date()
-        }
+          updatedAt: new Date(),
+        },
       })
 
       // Track status change event
@@ -154,31 +176,38 @@ export async function PUT(
                 testSessionId: sessionId,
                 fromStatus: existingSession.status,
                 toStatus: updateData.status,
-                timeSpent: updateData.timeSpent || existingSession.timeSpent
+                timeSpent: updateData.timeSpent || existingSession.timeSpent,
               },
-              ipAddress: request.headers.get('x-forwarded-for') ||
-                        request.headers.get('x-real-ip') ||
-                        'unknown',
-              userAgent: request.headers.get('user-agent')
-            }
+              ipAddress:
+                request.headers.get('x-forwarded-for') ||
+                request.headers.get('x-real-ip') ||
+                'unknown',
+              userAgent: request.headers.get('user-agent'),
+            },
           })
         } catch (analyticsError) {
           console.error('Analytics tracking error:', analyticsError)
         }
       }
 
-      return addSecurityHeaders(NextResponse.json({
-        success: true,
-        message: 'Session updated successfully',
-        session: updatedSession
-      }))
-
+      return addSecurityHeaders(
+        NextResponse.json({
+          success: true,
+          message: 'Session updated successfully',
+          session: updatedSession,
+        })
+      )
     } catch (error) {
       console.error('Update test session error:', error)
-      return addSecurityHeaders(NextResponse.json({
-        error: 'Internal server error',
-        message: 'Failed to update test session'
-      }, { status: 500 }))
+      return addSecurityHeaders(
+        NextResponse.json(
+          {
+            error: 'Internal server error',
+            message: 'Failed to update test session',
+          },
+          { status: 500 }
+        )
+      )
     }
   })(request)
 }
@@ -189,19 +218,24 @@ export async function PUT(
  */
 export async function POST(
   request: NextRequest,
-  { params }: { params: { sessionId: string } }
+  { params }: { params: Promise<{ sessionId: string }> }
 ) {
   return withAuth(async (req: NextRequest, session) => {
     try {
-      const { sessionId } = params
+      const { sessionId } = await params
       const body = await request.json()
       const result = SubmitAnswerSchema.safeParse(body)
 
       if (!result.success) {
-        return addSecurityHeaders(NextResponse.json({
-          error: 'Invalid input',
-          details: result.error.errors
-        }, { status: 400 }))
+        return addSecurityHeaders(
+          NextResponse.json(
+            {
+              error: 'Invalid input',
+              details: result.error.errors,
+            },
+            { status: 400 }
+          )
+        )
       }
 
       const { questionId, selectedAnswer, timeSpent, isMarkedForReview, confidence } = result.data
@@ -210,48 +244,63 @@ export async function POST(
       const testSession = await prisma.testSession.findUnique({
         where: {
           id: sessionId,
-          userId: session.userId
-        }
+          userId: session.userId,
+        },
       })
 
       if (!testSession) {
-        return addSecurityHeaders(NextResponse.json({
-          error: 'Test session not found',
-          message: 'Session not found or access denied'
-        }, { status: 404 }))
+        return addSecurityHeaders(
+          NextResponse.json(
+            {
+              error: 'Test session not found',
+              message: 'Session not found or access denied',
+            },
+            { status: 404 }
+          )
+        )
       }
 
       // Check if session is in valid state for answering
       if (testSession.status !== 'IN_PROGRESS') {
-        return addSecurityHeaders(NextResponse.json({
-          error: 'Invalid session state',
-          message: 'Cannot submit answers to a session that is not in progress'
-        }, { status: 400 }))
+        return addSecurityHeaders(
+          NextResponse.json(
+            {
+              error: 'Invalid session state',
+              message: 'Cannot submit answers to a session that is not in progress',
+            },
+            { status: 400 }
+          )
+        )
       }
 
       // Get question details to check correct answer
       const question = await prisma.question.findUnique({
-        where: { id: questionId }
+        where: { id: questionId },
       })
 
       if (!question) {
-        return addSecurityHeaders(NextResponse.json({
-          error: 'Question not found',
-          message: 'Invalid question ID'
-        }, { status: 404 }))
+        return addSecurityHeaders(
+          NextResponse.json(
+            {
+              error: 'Question not found',
+              message: 'Invalid question ID',
+            },
+            { status: 404 }
+          )
+        )
       }
 
       // Check if answer is correct
       const isCorrect = selectedAnswer === question.correctAnswer
-      const marksAwarded = isCorrect ? (question.marks || 1) : 0
+      const marksAwarded = isCorrect ? question.marks || 1 : 0
 
       // Check if response already exists
       const existingResponse = await prisma.userQuestionResponse.findFirst({
         where: {
           userId: session.userId,
           questionId,
-          testSessionId: sessionId
-        }
+          testSessionId: sessionId,
+        },
       })
 
       // Create or update user question response
@@ -264,8 +313,8 @@ export async function POST(
               timeSpent,
               marksAwarded,
               confidence,
-              answeredAt: new Date()
-            }
+              answeredAt: new Date(),
+            },
           })
         : await prisma.userQuestionResponse.create({
             data: {
@@ -279,23 +328,23 @@ export async function POST(
               confidence,
               responseMode: 'TEST_MODE',
               deviceType: getDeviceType(request.headers.get('user-agent') || ''),
-              answeredAt: new Date()
-            }
+              answeredAt: new Date(),
+            },
           })
 
       // Update or create test question record
       await prisma.testQuestion.updateMany({
         where: {
           testAttemptId: testSession.id, // You might need to link this properly
-          questionId
+          questionId,
         },
         data: {
           selectedAnswer,
           isCorrect,
           timeSpent,
           marksAwarded,
-          isMarkedForReview
-        }
+          isMarkedForReview,
+        },
       })
 
       // Update question statistics
@@ -307,10 +356,10 @@ export async function POST(
           ...(timeSpent && {
             averageTime: {
               // Calculate new average (this is simplified, you might want a more sophisticated approach)
-              set: Math.round(((question.averageTime || 0) + timeSpent) / 2)
-            }
-          })
-        }
+              set: Math.round(((question.averageTime || 0) + timeSpent) / 2),
+            },
+          }),
+        },
       })
 
       // Update user progress for this topic
@@ -331,40 +380,47 @@ export async function POST(
               confidence,
               isMarkedForReview,
               topic: question.topic,
-              difficulty: question.difficulty
+              difficulty: question.difficulty,
             },
-            ipAddress: request.headers.get('x-forwarded-for') ||
-                      request.headers.get('x-real-ip') ||
-                      'unknown',
-            userAgent: request.headers.get('user-agent')
-          }
+            ipAddress:
+              request.headers.get('x-forwarded-for') ||
+              request.headers.get('x-real-ip') ||
+              'unknown',
+            userAgent: request.headers.get('user-agent'),
+          },
         })
       } catch (analyticsError) {
         console.error('Analytics tracking error:', analyticsError)
       }
 
-      return addSecurityHeaders(NextResponse.json({
-        success: true,
-        message: 'Answer submitted successfully',
-        response: {
-          id: response.id,
-          isCorrect,
-          marksAwarded,
-          timeSpent
-        },
-        feedback: {
-          correct: isCorrect,
-          explanation: question.explanation,
-          correctAnswer: question.correctAnswer
-        }
-      }))
-
+      return addSecurityHeaders(
+        NextResponse.json({
+          success: true,
+          message: 'Answer submitted successfully',
+          response: {
+            id: response.id,
+            isCorrect,
+            marksAwarded,
+            timeSpent,
+          },
+          feedback: {
+            correct: isCorrect,
+            explanation: question.explanation,
+            correctAnswer: question.correctAnswer,
+          },
+        })
+      )
     } catch (error) {
       console.error('Submit answer error:', error)
-      return addSecurityHeaders(NextResponse.json({
-        error: 'Internal server error',
-        message: 'Failed to submit answer'
-      }, { status: 500 }))
+      return addSecurityHeaders(
+        NextResponse.json(
+          {
+            error: 'Internal server error',
+            message: 'Failed to submit answer',
+          },
+          { status: 500 }
+        )
+      )
     }
   })(request)
 }
@@ -372,15 +428,20 @@ export async function POST(
 /**
  * Helper function to update user progress
  */
-async function updateUserProgress(userId: string, question: any, isCorrect: boolean, timeSpent: number) {
+async function updateUserProgress(
+  userId: string,
+  question: any,
+  isCorrect: boolean,
+  timeSpent: number
+) {
   try {
     const existingProgress = await prisma.userProgress.findFirst({
       where: {
         userId,
         topic: question.topic,
         curriculum: question.curriculum,
-        grade: question.grade
-      }
+        grade: question.grade,
+      },
     })
 
     if (existingProgress) {
@@ -407,8 +468,8 @@ async function updateUserProgress(userId: string, question: any, isCorrect: bool
           masteryScore,
           lastPracticed: new Date(),
           ...(masteryScore >= 80 && { currentLevel: 'MEDIUM' }),
-          ...(masteryScore >= 90 && { currentLevel: 'HARD' })
-        }
+          ...(masteryScore >= 90 && { currentLevel: 'HARD' }),
+        },
       })
     } else {
       // Create new progress record
@@ -425,8 +486,8 @@ async function updateUserProgress(userId: string, question: any, isCorrect: bool
           averageTime: timeSpent,
           masteryScore: isCorrect ? 20 : 0, // Starting score
           currentLevel: 'EASY',
-          lastPracticed: new Date()
-        }
+          lastPracticed: new Date(),
+        },
       })
     }
   } catch (error) {
@@ -441,7 +502,11 @@ function getDeviceType(userAgent: string): string {
   if (/tablet|ipad|playbook|silk/i.test(userAgent)) {
     return 'tablet'
   }
-  if (/mobile|iphone|ipod|android|blackberry|opera|mini|windows\sce|palm|smartphone|iemobile/i.test(userAgent)) {
+  if (
+    /mobile|iphone|ipod|android|blackberry|opera|mini|windows\sce|palm|smartphone|iemobile/i.test(
+      userAgent
+    )
+  ) {
     return 'mobile'
   }
   return 'desktop'
@@ -449,12 +514,14 @@ function getDeviceType(userAgent: string): string {
 
 // OPTIONS for CORS preflight
 export async function OPTIONS() {
-  return addSecurityHeaders(new NextResponse(null, {
-    status: 200,
-    headers: {
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'GET, PUT, POST, OPTIONS',
-      'Access-Control-Allow-Headers': 'Content-Type, Authorization',
-    },
-  }))
+  return addSecurityHeaders(
+    new NextResponse(null, {
+      status: 200,
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'GET, PUT, POST, OPTIONS',
+        'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+      },
+    })
+  )
 }

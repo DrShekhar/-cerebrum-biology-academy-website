@@ -1,10 +1,13 @@
 name: 🔧 Development Workflow
 
 on:
-  push:
-    branches: [ develop, feature/* ]
-  pull_request:
-    branches: [ develop ]
+  # Temporarily disabled to prevent auto-runs
+  # Re-enable after fixing build issues
+  workflow_dispatch:
+  # push:
+  #   branches: [ develop, feature/* ]
+  # pull_request:
+  #   branches: [ develop ]
 
 env:
   NODE_VERSION: '18'
