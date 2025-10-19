@@ -5,9 +5,9 @@ import { withRateLimit } from '@/lib/middleware/rateLimit'
 import { logger } from '@/lib/utils/logger'
 
 interface RouteParams {
-  params: {
+  params: Promise<{
     id: string
-  }
+  }>
 }
 
 // Helper function to generate detailed question analysis
@@ -36,7 +36,7 @@ async function generateQuestionAnalysis(responses: any[]) {
       videoExplanation: question.videoExplanation,
       tags: question.tags,
       relatedConcepts: question.relatedConcepts,
-      answeredAt: response.answeredAt
+      answeredAt: response.answeredAt,
     }
   })
 
@@ -46,87 +46,133 @@ async function generateQuestionAnalysis(responses: any[]) {
 // Helper function to generate comprehensive analytics
 function generateComprehensiveAnalytics(responses: any[], analytics: any) {
   // Topic-wise deep analysis
-  const topicAnalysis = Object.entries(analytics.topicPerformance || {}).map(([topic, stats]: [string, any]) => ({
-    topic,
-    totalQuestions: stats.total,
-    correctAnswers: stats.correct,
-    accuracy: Math.round(stats.accuracy * 100) / 100,
-    averageTime: Math.round(stats.averageTime),
-    marksEarned: stats.marks,
-    difficulty: responses
-      .filter(r => r.question.topic === topic)
-      .reduce((acc, r) => {
-        acc[r.question.difficulty] = (acc[r.question.difficulty] || 0) + 1
-        return acc
-      }, {} as Record<string, number>),
-    performance: stats.accuracy >= 80 ? 'Excellent' :
-      stats.accuracy >= 60 ? 'Good' :
-      stats.accuracy >= 40 ? 'Average' : 'Needs Improvement'
-  }))
+  const topicAnalysis = Object.entries(analytics.topicPerformance || {}).map(
+    ([topic, stats]: [string, any]) => ({
+      topic,
+      totalQuestions: stats.total,
+      correctAnswers: stats.correct,
+      accuracy: Math.round(stats.accuracy * 100) / 100,
+      averageTime: Math.round(stats.averageTime),
+      marksEarned: stats.marks,
+      difficulty: responses
+        .filter((r) => r.question.topic === topic)
+        .reduce(
+          (acc, r) => {
+            acc[r.question.difficulty] = (acc[r.question.difficulty] || 0) + 1
+            return acc
+          },
+          {} as Record<string, number>
+        ),
+      performance:
+        stats.accuracy >= 80
+          ? 'Excellent'
+          : stats.accuracy >= 60
+            ? 'Good'
+            : stats.accuracy >= 40
+              ? 'Average'
+              : 'Needs Improvement',
+    })
+  )
 
   // Difficulty-wise analysis
   const difficultyAnalysis = {
     easy: {
       attempted: analytics.easyQuestions?.total || 0,
       correct: analytics.easyQuestions?.correct || 0,
-      accuracy: analytics.easyQuestions?.total > 0 ?
-        Math.round((analytics.easyQuestions.correct / analytics.easyQuestions.total) * 100 * 100) / 100 : 0,
-      averageTime: analytics.easyQuestions?.total > 0 ?
-        Math.round(analytics.easyQuestions.time / analytics.easyQuestions.total) : 0
+      accuracy:
+        analytics.easyQuestions?.total > 0
+          ? Math.round(
+              (analytics.easyQuestions.correct / analytics.easyQuestions.total) * 100 * 100
+            ) / 100
+          : 0,
+      averageTime:
+        analytics.easyQuestions?.total > 0
+          ? Math.round(analytics.easyQuestions.time / analytics.easyQuestions.total)
+          : 0,
     },
     medium: {
       attempted: analytics.mediumQuestions?.total || 0,
       correct: analytics.mediumQuestions?.correct || 0,
-      accuracy: analytics.mediumQuestions?.total > 0 ?
-        Math.round((analytics.mediumQuestions.correct / analytics.mediumQuestions.total) * 100 * 100) / 100 : 0,
-      averageTime: analytics.mediumQuestions?.total > 0 ?
-        Math.round(analytics.mediumQuestions.time / analytics.mediumQuestions.total) : 0
+      accuracy:
+        analytics.mediumQuestions?.total > 0
+          ? Math.round(
+              (analytics.mediumQuestions.correct / analytics.mediumQuestions.total) * 100 * 100
+            ) / 100
+          : 0,
+      averageTime:
+        analytics.mediumQuestions?.total > 0
+          ? Math.round(analytics.mediumQuestions.time / analytics.mediumQuestions.total)
+          : 0,
     },
     hard: {
       attempted: analytics.hardQuestions?.total || 0,
       correct: analytics.hardQuestions?.correct || 0,
-      accuracy: analytics.hardQuestions?.total > 0 ?
-        Math.round((analytics.hardQuestions.correct / analytics.hardQuestions.total) * 100 * 100) / 100 : 0,
-      averageTime: analytics.hardQuestions?.total > 0 ?
-        Math.round(analytics.hardQuestions.time / analytics.hardQuestions.total) : 0
-    }
+      accuracy:
+        analytics.hardQuestions?.total > 0
+          ? Math.round(
+              (analytics.hardQuestions.correct / analytics.hardQuestions.total) * 100 * 100
+            ) / 100
+          : 0,
+      averageTime:
+        analytics.hardQuestions?.total > 0
+          ? Math.round(analytics.hardQuestions.time / analytics.hardQuestions.total)
+          : 0,
+    },
   }
 
   // Time analysis
   const timeAnalysis = {
     totalTimeSpent: analytics.totalTime || 0,
     averageTimePerQuestion: Math.round(analytics.averageTimePerQ || 0),
-    fastestQuestion: Math.min(...responses.map(r => r.timeSpent || 0).filter(t => t > 0)),
-    slowestQuestion: Math.max(...responses.map(r => r.timeSpent || 0)),
+    fastestQuestion: Math.min(...responses.map((r) => r.timeSpent || 0).filter((t) => t > 0)),
+    slowestQuestion: Math.max(...responses.map((r) => r.timeSpent || 0)),
     timeDistribution: analytics.timeDistribution || [],
-    timeEfficiency: responses.length > 0 ?
-      Math.round((responses.filter(r => r.isCorrect && (r.timeSpent || 0) < analytics.averageTimePerQ).length / responses.length) * 100) : 0
+    timeEfficiency:
+      responses.length > 0
+        ? Math.round(
+            (responses.filter((r) => r.isCorrect && (r.timeSpent || 0) < analytics.averageTimePerQ)
+              .length /
+              responses.length) *
+              100
+          )
+        : 0,
   }
 
   // Behavioral patterns
   const behavioralAnalysis = {
     questionsRevisited: analytics.questionsRevisited || 0,
     questionsSkipped: analytics.questionsSkipped || 0,
-    answerChangePattern: responses.filter(r => r.timeSpent && r.timeSpent > analytics.averageTimePerQ * 1.5).length,
-    confidencePattern: responses.filter(r => r.confidence).reduce((acc, r) => {
-      acc.total += 1
-      acc.averageConfidence += r.confidence
-      if (r.confidence >= 4 && r.isCorrect) acc.highConfidenceCorrect += 1
-      if (r.confidence <= 2 && !r.isCorrect) acc.lowConfidenceIncorrect += 1
-      return acc
-    }, { total: 0, averageConfidence: 0, highConfidenceCorrect: 0, lowConfidenceIncorrect: 0 })
+    answerChangePattern: responses.filter(
+      (r) => r.timeSpent && r.timeSpent > analytics.averageTimePerQ * 1.5
+    ).length,
+    confidencePattern: responses
+      .filter((r) => r.confidence)
+      .reduce(
+        (acc, r) => {
+          acc.total += 1
+          acc.averageConfidence += r.confidence
+          if (r.confidence >= 4 && r.isCorrect) acc.highConfidenceCorrect += 1
+          if (r.confidence <= 2 && !r.isCorrect) acc.lowConfidenceIncorrect += 1
+          return acc
+        },
+        { total: 0, averageConfidence: 0, highConfidenceCorrect: 0, lowConfidenceIncorrect: 0 }
+      ),
   }
 
   if (behavioralAnalysis.confidencePattern.total > 0) {
     behavioralAnalysis.confidencePattern.averageConfidence =
-      Math.round((behavioralAnalysis.confidencePattern.averageConfidence / behavioralAnalysis.confidencePattern.total) * 100) / 100
+      Math.round(
+        (behavioralAnalysis.confidencePattern.averageConfidence /
+          behavioralAnalysis.confidencePattern.total) *
+          100
+      ) / 100
   }
 
   return {
     topicAnalysis,
     difficultyAnalysis,
     timeAnalysis,
-    behavioralAnalysis
+    behavioralAnalysis,
   }
 }
 
@@ -137,7 +183,7 @@ function generateRecommendations(analytics: any, performance: any) {
     shortTerm: [] as string[],
     longTerm: [] as string[],
     studyPlan: [] as string[],
-    practiceTests: [] as string[]
+    practiceTests: [] as string[],
   }
 
   // Based on overall performance
@@ -163,18 +209,24 @@ function generateRecommendations(analytics: any, performance: any) {
   // Based on weak topics
   if (analytics.weaknessTopics && analytics.weaknessTopics.length > 0) {
     recommendations.studyPlan.push(`Focus on: ${analytics.weaknessTopics.join(', ')}`)
-    recommendations.practiceTests.push(`Take topic-specific tests for: ${analytics.weaknessTopics.slice(0, 3).join(', ')}`)
+    recommendations.practiceTests.push(
+      `Take topic-specific tests for: ${analytics.weaknessTopics.slice(0, 3).join(', ')}`
+    )
   }
 
   // Based on time management
-  if (analytics.averageTimePerQ > 90) { // More than 1.5 minutes per question
+  if (analytics.averageTimePerQ > 90) {
+    // More than 1.5 minutes per question
     recommendations.immediate.push('Improve time management - aim for 1 minute per question')
     recommendations.shortTerm.push('Practice speed solving techniques')
   }
 
   // Based on difficulty performance
-  if (analytics.easyQuestions && analytics.easyQuestions.total > 0 &&
-      (analytics.easyQuestions.correct / analytics.easyQuestions.total) < 0.8) {
+  if (
+    analytics.easyQuestions &&
+    analytics.easyQuestions.total > 0 &&
+    analytics.easyQuestions.correct / analytics.easyQuestions.total < 0.8
+  ) {
     recommendations.immediate.push('Master easy level questions first')
   }
 
@@ -184,7 +236,7 @@ function generateRecommendations(analytics: any, performance: any) {
 // GET /api/test/[id]/results - Get comprehensive test results and analytics
 export async function GET(request: NextRequest, { params }: RouteParams) {
   try {
-    const { id: testSessionId } = params
+    const { id: testSessionId } = await params
     const { searchParams } = new URL(request.url)
     const includeAnalytics = searchParams.get('analytics') !== 'false'
     const includeQuestions = searchParams.get('questions') !== 'false'
@@ -204,7 +256,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
     const rateLimitResult = await withRateLimit(request, {
       identifier: user.id,
       limit: 50, // 50 result requests per hour
-      window: 3600000
+      window: 3600000,
     })
 
     if (!rateLimitResult.success) {
@@ -218,10 +270,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
     const testSession = await prisma.testSession.findUnique({
       where: {
         id: testSessionId,
-        OR: [
-          { userId: user.id },
-          { freeUserId: user.id }
-        ]
+        OR: [{ userId: user.id }, { freeUserId: user.id }],
       },
       include: {
         testTemplate: {
@@ -242,8 +291,8 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
             grade: true,
             subject: true,
             averageScore: true,
-            attemptCount: true
-          }
+            attemptCount: true,
+          },
         },
         responses: {
           include: {
@@ -264,14 +313,14 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
                 tags: true,
                 relatedConcepts: true,
                 totalAttempts: true,
-                correctAttempts: true
-              }
-            }
+                correctAttempts: true,
+              },
+            },
           },
-          orderBy: { answeredAt: 'asc' }
+          orderBy: { answeredAt: 'asc' },
         },
-        analytics: true
-      }
+        analytics: true,
+      },
     })
 
     if (!testSession) {
@@ -291,7 +340,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
 
     // Calculate basic performance metrics
     const totalQuestions = testSession.responses.length
-    const correctAnswers = testSession.responses.filter(r => r.isCorrect).length
+    const correctAnswers = testSession.responses.filter((r) => r.isCorrect).length
     const totalMarks = testSession.responses.reduce((sum, r) => sum + r.marksAwarded, 0)
     const maxPossibleMarks = testSession.testTemplate?.totalMarks || 0
     const accuracy = totalQuestions > 0 ? (correctAnswers / totalQuestions) * 100 : 0
@@ -308,7 +357,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
         totalScore: testSession.totalScore || totalMarks,
         percentage: testSession.percentage || Math.round(percentage * 100) / 100,
         percentileRank: testSession.analytics?.percentileRank,
-        rank: testSession.rank
+        rank: testSession.rank,
       },
       testDetails: {
         title: testSession.testTemplate?.title,
@@ -324,7 +373,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
         totalQuestions: testSession.testTemplate?.totalQuestions,
         totalMarks: testSession.testTemplate?.totalMarks,
         passingMarks: testSession.testTemplate?.passingMarks,
-        negativeMarking: testSession.testTemplate?.negativeMarking
+        negativeMarking: testSession.testTemplate?.negativeMarking,
       },
       performance: {
         totalQuestions,
@@ -336,12 +385,12 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
         accuracy: Math.round(accuracy * 100) / 100,
         percentage: Math.round(percentage * 100) / 100,
         timeSpent: testSession.timeSpent || 0,
-        averageTimePerQuestion: totalQuestions > 0 ?
-          Math.round((testSession.timeSpent || 0) / totalQuestions) : 0,
-        isPassed: testSession.testTemplate?.passingMarks ?
-          totalMarks >= testSession.testTemplate.passingMarks :
-          percentage >= 40
-      }
+        averageTimePerQuestion:
+          totalQuestions > 0 ? Math.round((testSession.timeSpent || 0) / totalQuestions) : 0,
+        isPassed: testSession.testTemplate?.passingMarks
+          ? totalMarks >= testSession.testTemplate.passingMarks
+          : percentage >= 40,
+      },
     }
 
     // Add detailed question analysis if requested
@@ -361,7 +410,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
         percentileRank: testSession.analytics.percentileRank,
         averageComparison: testSession.analytics.averageComparison,
         predictedScore: testSession.analytics.predictedScore,
-        recommendedStudyTime: testSession.analytics.recommendedStudyTime
+        recommendedStudyTime: testSession.analytics.recommendedStudyTime,
       }
 
       // Generate personalized recommendations
@@ -377,16 +426,16 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
         where: {
           testTemplateId: testSession.testTemplate.id,
           status: 'COMPLETED',
-          totalScore: { not: null }
+          totalScore: { not: null },
         },
         _avg: {
           totalScore: true,
           timeSpent: true,
-          percentage: true
+          percentage: true,
         },
         _count: {
-          id: true
-        }
+          id: true,
+        },
       })
 
       resultData.comparison = {
@@ -397,8 +446,8 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
         userVsAverage: {
           scoreComparison: totalMarks - (comparisonData._avg.totalScore || 0),
           percentageComparison: percentage - (comparisonData._avg.percentage || 0),
-          timeComparison: (testSession.timeSpent || 0) - (comparisonData._avg.timeSpent || 0)
-        }
+          timeComparison: (testSession.timeSpent || 0) - (comparisonData._avg.timeSpent || 0),
+        },
       }
     }
 
@@ -408,8 +457,8 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
       progress: {
         testsCompleted: 1, // This would come from user's total test count
         topicsStrength: testSession.analytics?.strengthTopics?.length || 0,
-        improvementAreas: testSession.analytics?.weaknessTopics?.length || 0
-      }
+        improvementAreas: testSession.analytics?.weaknessTopics?.length || 0,
+      },
     }
 
     // Log result access
@@ -419,21 +468,20 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
       includeAnalytics,
       includeQuestions,
       includeComparison,
-      performance: `${correctAnswers}/${totalQuestions} (${Math.round(accuracy)}%)`
+      performance: `${correctAnswers}/${totalQuestions} (${Math.round(accuracy)}%)`,
     })
 
     return NextResponse.json({
       success: true,
       data: resultData,
-      generatedAt: new Date().toISOString()
+      generatedAt: new Date().toISOString(),
     })
-
   } catch (error) {
     logger.error('Error fetching test results:', error)
     return NextResponse.json(
       {
         error: 'Failed to fetch test results',
-        code: 'INTERNAL_ERROR'
+        code: 'INTERNAL_ERROR',
       },
       { status: 500 }
     )

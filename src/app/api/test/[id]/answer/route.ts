@@ -6,9 +6,9 @@ import { withRateLimit } from '@/lib/middleware/rateLimit'
 import { logger } from '@/lib/utils/logger'
 
 interface RouteParams {
-  params: {
+  params: Promise<{
     id: string
-  }
+  }>
 }
 
 // Validation schema for answer submission
@@ -19,11 +19,17 @@ const submitAnswerSchema = z.object({
   confidence: z.number().min(1).max(5).optional(), // Confidence level 1-5
   isMarkedForReview: z.boolean().default(false),
   deviceType: z.enum(['mobile', 'tablet', 'desktop']).optional(),
-  responseMode: z.enum(['TEST_MODE', 'PRACTICE_MODE', 'REVIEW_MODE', 'STUDY_MODE']).default('TEST_MODE')
+  responseMode: z
+    .enum(['TEST_MODE', 'PRACTICE_MODE', 'REVIEW_MODE', 'STUDY_MODE'])
+    .default('TEST_MODE'),
 })
 
 // Helper function to calculate marks based on answer correctness and marking scheme
-function calculateMarks(isCorrect: boolean, questionMarks: number, negativeMarking: boolean): number {
+function calculateMarks(
+  isCorrect: boolean,
+  questionMarks: number,
+  negativeMarking: boolean
+): number {
   if (isCorrect) {
     return questionMarks
   } else if (negativeMarking) {
@@ -48,8 +54,8 @@ async function updateUserProgress(
         topic: true,
         subtopic: true,
         curriculum: true,
-        difficulty: true
-      }
+        difficulty: true,
+      },
     })
 
     if (!question) return
@@ -59,8 +65,8 @@ async function updateUserProgress(
       where: {
         ...(freeUserId ? { freeUserId } : { userId }),
         topic: question.topic,
-        curriculum: question.curriculum
-      }
+        curriculum: question.curriculum,
+      },
     })
 
     if (existingProgress) {
@@ -74,7 +80,8 @@ async function updateUserProgress(
       const improvementRate = newAccuracy - oldAccuracy
 
       // Update average time
-      const totalTime = (existingProgress.averageTime || 0) * existingProgress.totalQuestions + timeSpent
+      const totalTime =
+        (existingProgress.averageTime || 0) * existingProgress.totalQuestions + timeSpent
       const newAverageTime = Math.round(totalTime / newTotal)
 
       await prisma.userProgress.update({
@@ -86,8 +93,8 @@ async function updateUserProgress(
           averageTime: newAverageTime,
           improvementRate,
           lastPracticed: new Date(),
-          updatedAt: new Date()
-        }
+          updatedAt: new Date(),
+        },
       })
     } else {
       // Create new progress record
@@ -105,8 +112,8 @@ async function updateUserProgress(
           improvementRate: 0,
           currentLevel: question.difficulty,
           masteryScore: isCorrect ? 25 : 0, // Start with 25% if correct, 0% if incorrect
-          lastPracticed: new Date()
-        }
+          lastPracticed: new Date(),
+        },
       })
     }
   } catch (error) {
@@ -118,7 +125,7 @@ async function updateUserProgress(
 // PUT /api/test/[id]/answer - Submit answer for a question
 export async function PUT(request: NextRequest, { params }: RouteParams) {
   try {
-    const { id: testSessionId } = params
+    const { id: testSessionId } = await params
     const body = await request.json()
     const validatedData = submitAnswerSchema.parse(body)
 
@@ -136,7 +143,7 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
     const rateLimitResult = await withRateLimit(request, {
       identifier: user.id,
       limit: 500, // 500 answer submissions per hour
-      window: 3600000
+      window: 3600000,
     })
 
     if (!rateLimitResult.success) {
@@ -150,19 +157,16 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
     const testSession = await prisma.testSession.findUnique({
       where: {
         id: testSessionId,
-        OR: [
-          { userId: user.id },
-          { freeUserId: user.id }
-        ]
+        OR: [{ userId: user.id }, { freeUserId: user.id }],
       },
       include: {
         testTemplate: {
           select: {
             negativeMarking: true,
-            timeLimit: true
-          }
-        }
-      }
+            timeLimit: true,
+          },
+        },
+      },
     })
 
     if (!testSession) {
@@ -177,7 +181,7 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
       return NextResponse.json(
         {
           error: 'Cannot submit answer for this test session',
-          code: 'INVALID_SESSION_STATE'
+          code: 'INVALID_SESSION_STATE',
         },
         { status: 400 }
       )
@@ -194,13 +198,13 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
         // Auto-expire the session
         await prisma.testSession.update({
           where: { id: testSessionId },
-          data: { status: 'EXPIRED', submittedAt: now }
+          data: { status: 'EXPIRED', submittedAt: now },
         })
 
         return NextResponse.json(
           {
             error: 'Test session has expired',
-            code: 'SESSION_EXPIRED'
+            code: 'SESSION_EXPIRED',
           },
           { status: 400 }
         )
@@ -217,8 +221,8 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
         topic: true,
         difficulty: true,
         totalAttempts: true,
-        correctAttempts: true
-      }
+        correctAttempts: true,
+      },
     })
 
     if (!question) {
@@ -233,8 +237,8 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
       where: {
         testSessionId,
         questionId: validatedData.questionId,
-        ...(user.role === 'STUDENT' ? { userId: user.id } : { freeUserId: user.id })
-      }
+        ...(user.role === 'STUDENT' ? { userId: user.id } : { freeUserId: user.id }),
+      },
     })
 
     const isCorrect = validatedData.selectedAnswer === question.correctAnswer
@@ -258,8 +262,8 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
           confidence: validatedData.confidence,
           responseMode: validatedData.responseMode,
           deviceType: validatedData.deviceType,
-          answeredAt: new Date()
-        }
+          answeredAt: new Date(),
+        },
       })
     } else {
       // Create new response
@@ -274,8 +278,8 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
           marksAwarded,
           confidence: validatedData.confidence,
           responseMode: validatedData.responseMode,
-          deviceType: validatedData.deviceType
-        }
+          deviceType: validatedData.deviceType,
+        },
       })
 
       // Update test session question count
@@ -284,14 +288,14 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
         data: {
           questionsAnswered: { increment: 1 },
           ...(validatedData.isMarkedForReview && {
-            questionsMarkedForReview: { increment: 1 }
+            questionsMarkedForReview: { increment: 1 },
           }),
           // Auto-start the session if not started
           ...(testSession.status === 'NOT_STARTED' && {
             status: 'IN_PROGRESS',
-            startedAt: new Date()
-          })
-        }
+            startedAt: new Date(),
+          }),
+        },
       })
     }
 
@@ -301,8 +305,8 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
       data: {
         totalAttempts: { increment: 1 },
         ...(isCorrect && { correctAttempts: { increment: 1 } }),
-        lastUsed: new Date()
-      }
+        lastUsed: new Date(),
+      },
     })
 
     // Update user progress asynchronously
@@ -312,7 +316,7 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
       validatedData.questionId,
       isCorrect,
       validatedData.timeSpent || 0
-    ).catch(error => {
+    ).catch((error) => {
       logger.error('Error updating user progress:', error)
     })
 
@@ -322,14 +326,15 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
       select: {
         isCorrect: true,
         marksAwarded: true,
-        timeSpent: true
-      }
+        timeSpent: true,
+      },
     })
 
     const totalMarks = sessionResponses.reduce((sum, r) => sum + r.marksAwarded, 0)
-    const correctCount = sessionResponses.filter(r => r.isCorrect).length
+    const correctCount = sessionResponses.filter((r) => r.isCorrect).length
     const totalTime = sessionResponses.reduce((sum, r) => sum + (r.timeSpent || 0), 0)
-    const accuracy = sessionResponses.length > 0 ? (correctCount / sessionResponses.length) * 100 : 0
+    const accuracy =
+      sessionResponses.length > 0 ? (correctCount / sessionResponses.length) * 100 : 0
 
     // Prepare response
     const responseData = {
@@ -343,14 +348,14 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
           marksAwarded: userResponse.marksAwarded,
           timeSpent: userResponse.timeSpent,
           confidence: userResponse.confidence,
-          answeredAt: userResponse.answeredAt
+          answeredAt: userResponse.answeredAt,
         },
         currentStats: {
           totalQuestions: sessionResponses.length,
           correctAnswers: correctCount,
           totalMarks,
           accuracy: Math.round(accuracy * 100) / 100,
-          totalTimeSpent: totalTime
+          totalTimeSpent: totalTime,
         },
         feedback: {
           isCorrect,
@@ -358,10 +363,10 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
           // Only show immediate feedback in practice mode
           ...(validatedData.responseMode === 'PRACTICE_MODE' && {
             correctAnswer: question.correctAnswer,
-            explanation: 'Explanation will be available after test completion'
-          })
-        }
-      }
+            explanation: 'Explanation will be available after test completion',
+          }),
+        },
+      },
     }
 
     // Log answer submission
@@ -371,11 +376,10 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
       userId: user.id,
       isCorrect,
       marksAwarded,
-      timeSpent: validatedData.timeSpent
+      timeSpent: validatedData.timeSpent,
     })
 
     return NextResponse.json(responseData)
-
   } catch (error) {
     logger.error('Error submitting answer:', error)
 
@@ -384,7 +388,7 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
         {
           error: 'Validation failed',
           code: 'VALIDATION_ERROR',
-          details: error.errors
+          details: error.errors,
         },
         { status: 400 }
       )
@@ -393,7 +397,7 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
     return NextResponse.json(
       {
         error: 'Failed to submit answer',
-        code: 'INTERNAL_ERROR'
+        code: 'INTERNAL_ERROR',
       },
       { status: 500 }
     )
@@ -403,7 +407,7 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
 // GET /api/test/[id]/answer - Get current answers for the test session
 export async function GET(request: NextRequest, { params }: RouteParams) {
   try {
-    const { id: testSessionId } = params
+    const { id: testSessionId } = await params
 
     const authResult = await withAuth(request)
     if (!authResult.success) {
@@ -419,11 +423,8 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
     const testSession = await prisma.testSession.findUnique({
       where: {
         id: testSessionId,
-        OR: [
-          { userId: user.id },
-          { freeUserId: user.id }
-        ]
-      }
+        OR: [{ userId: user.id }, { freeUserId: user.id }],
+      },
     })
 
     if (!testSession) {
@@ -443,41 +444,44 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
             topic: true,
             type: true,
             difficulty: true,
-            marks: true
-          }
-        }
+            marks: true,
+          },
+        },
       },
-      orderBy: { answeredAt: 'asc' }
+      orderBy: { answeredAt: 'asc' },
     })
 
     // Calculate statistics
     const totalMarks = responses.reduce((sum, r) => sum + r.marksAwarded, 0)
-    const correctCount = responses.filter(r => r.isCorrect).length
+    const correctCount = responses.filter((r) => r.isCorrect).length
     const totalTime = responses.reduce((sum, r) => sum + (r.timeSpent || 0), 0)
     const accuracy = responses.length > 0 ? (correctCount / responses.length) * 100 : 0
 
     // Group responses by topic for analysis
-    const topicStats = responses.reduce((acc, response) => {
-      const topic = response.question.topic
-      if (!acc[topic]) {
-        acc[topic] = {
-          total: 0,
-          correct: 0,
-          marks: 0,
-          timeSpent: 0
+    const topicStats = responses.reduce(
+      (acc, response) => {
+        const topic = response.question.topic
+        if (!acc[topic]) {
+          acc[topic] = {
+            total: 0,
+            correct: 0,
+            marks: 0,
+            timeSpent: 0,
+          }
         }
-      }
-      acc[topic].total += 1
-      acc[topic].correct += response.isCorrect ? 1 : 0
-      acc[topic].marks += response.marksAwarded
-      acc[topic].timeSpent += response.timeSpent || 0
-      return acc
-    }, {} as Record<string, any>)
+        acc[topic].total += 1
+        acc[topic].correct += response.isCorrect ? 1 : 0
+        acc[topic].marks += response.marksAwarded
+        acc[topic].timeSpent += response.timeSpent || 0
+        return acc
+      },
+      {} as Record<string, any>
+    )
 
     return NextResponse.json({
       success: true,
       data: {
-        responses: responses.map(r => ({
+        responses: responses.map((r) => ({
           id: r.id,
           questionId: r.questionId,
           selectedAnswer: r.selectedAnswer,
@@ -490,8 +494,8 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
             topic: r.question.topic,
             type: r.question.type,
             difficulty: r.question.difficulty,
-            marks: r.question.marks
-          }
+            marks: r.question.marks,
+          },
         })),
         statistics: {
           totalQuestions: responses.length,
@@ -499,7 +503,8 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
           totalMarks,
           accuracy: Math.round(accuracy * 100) / 100,
           totalTimeSpent: totalTime,
-          averageTimePerQuestion: responses.length > 0 ? Math.round(totalTime / responses.length) : 0
+          averageTimePerQuestion:
+            responses.length > 0 ? Math.round(totalTime / responses.length) : 0,
         },
         topicWiseStats: Object.entries(topicStats).map(([topic, stats]) => ({
           topic,
@@ -507,17 +512,16 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
           correctAnswers: stats.correct,
           accuracy: Math.round((stats.correct / stats.total) * 100 * 100) / 100,
           marks: stats.marks,
-          timeSpent: stats.timeSpent
-        }))
-      }
+          timeSpent: stats.timeSpent,
+        })),
+      },
     })
-
   } catch (error) {
     logger.error('Error fetching answers:', error)
     return NextResponse.json(
       {
         error: 'Failed to fetch answers',
-        code: 'INTERNAL_ERROR'
+        code: 'INTERNAL_ERROR',
       },
       { status: 500 }
     )

@@ -6,34 +6,46 @@ import { withRateLimit } from '@/lib/middleware/rateLimit'
 import { logger } from '@/lib/utils/logger'
 
 interface RouteParams {
-  params: {
+  params: Promise<{
     id: string
-  }
+  }>
 }
 
 // Validation schema for test submission
 const submitTestSchema = z.object({
   forceSubmit: z.boolean().default(false), // Allow force submission even if not all questions answered
-  finalAnswers: z.array(z.object({
-    questionId: z.string(),
-    selectedAnswer: z.string(),
-    timeSpent: z.number().optional(),
-    confidence: z.number().min(1).max(5).optional()
-  })).optional(), // Final batch of answers if any
-  sessionData: z.object({
-    totalTimeSpent: z.number().min(0),
-    browserEvents: z.array(z.object({
-      type: z.string(),
-      timestamp: z.string(),
-      data: z.any().optional()
-    })).optional(),
-    deviceInfo: z.object({
-      userAgent: z.string().optional(),
-      screenSize: z.string().optional(),
-      browserName: z.string().optional(),
-      osName: z.string().optional()
-    }).optional()
-  }).optional()
+  finalAnswers: z
+    .array(
+      z.object({
+        questionId: z.string(),
+        selectedAnswer: z.string(),
+        timeSpent: z.number().optional(),
+        confidence: z.number().min(1).max(5).optional(),
+      })
+    )
+    .optional(), // Final batch of answers if any
+  sessionData: z
+    .object({
+      totalTimeSpent: z.number().min(0),
+      browserEvents: z
+        .array(
+          z.object({
+            type: z.string(),
+            timestamp: z.string(),
+            data: z.any().optional(),
+          })
+        )
+        .optional(),
+      deviceInfo: z
+        .object({
+          userAgent: z.string().optional(),
+          screenSize: z.string().optional(),
+          browserName: z.string().optional(),
+          osName: z.string().optional(),
+        })
+        .optional(),
+    })
+    .optional(),
 })
 
 // Helper function to calculate comprehensive analytics
@@ -50,11 +62,11 @@ async function calculateTestAnalytics(testSessionId: string) {
             subtopic: true,
             difficulty: true,
             marks: true,
-            type: true
-          }
-        }
+            type: true,
+          },
+        },
       },
-      orderBy: { answeredAt: 'asc' }
+      orderBy: { answeredAt: 'asc' },
     })
 
     if (responses.length === 0) {
@@ -63,45 +75,51 @@ async function calculateTestAnalytics(testSessionId: string) {
 
     // Basic performance metrics
     const totalQuestions = responses.length
-    const correctAnswers = responses.filter(r => r.isCorrect).length
+    const correctAnswers = responses.filter((r) => r.isCorrect).length
     const totalMarks = responses.reduce((sum, r) => sum + r.marksAwarded, 0)
     const totalTime = responses.reduce((sum, r) => sum + (r.timeSpent || 0), 0)
     const accuracy = (correctAnswers / totalQuestions) * 100
     const averageTimePerQ = totalTime / totalQuestions
 
     // Difficulty-wise analysis
-    const difficultyStats = responses.reduce((acc, r) => {
-      const diff = r.question.difficulty
-      if (!acc[diff]) {
-        acc[diff] = { total: 0, correct: 0, time: 0 }
-      }
-      acc[diff].total += 1
-      acc[diff].correct += r.isCorrect ? 1 : 0
-      acc[diff].time += r.timeSpent || 0
-      return acc
-    }, {} as Record<string, any>)
+    const difficultyStats = responses.reduce(
+      (acc, r) => {
+        const diff = r.question.difficulty
+        if (!acc[diff]) {
+          acc[diff] = { total: 0, correct: 0, time: 0 }
+        }
+        acc[diff].total += 1
+        acc[diff].correct += r.isCorrect ? 1 : 0
+        acc[diff].time += r.timeSpent || 0
+        return acc
+      },
+      {} as Record<string, any>
+    )
 
     // Topic-wise performance
-    const topicPerformance = responses.reduce((acc, r) => {
-      const topic = r.question.topic
-      if (!acc[topic]) {
-        acc[topic] = {
-          total: 0,
-          correct: 0,
-          marks: 0,
-          averageTime: 0,
-          accuracy: 0
+    const topicPerformance = responses.reduce(
+      (acc, r) => {
+        const topic = r.question.topic
+        if (!acc[topic]) {
+          acc[topic] = {
+            total: 0,
+            correct: 0,
+            marks: 0,
+            averageTime: 0,
+            accuracy: 0,
+          }
         }
-      }
-      acc[topic].total += 1
-      acc[topic].correct += r.isCorrect ? 1 : 0
-      acc[topic].marks += r.marksAwarded
-      acc[topic].averageTime += r.timeSpent || 0
-      return acc
-    }, {} as Record<string, any>)
+        acc[topic].total += 1
+        acc[topic].correct += r.isCorrect ? 1 : 0
+        acc[topic].marks += r.marksAwarded
+        acc[topic].averageTime += r.timeSpent || 0
+        return acc
+      },
+      {} as Record<string, any>
+    )
 
     // Calculate final topic stats
-    Object.keys(topicPerformance).forEach(topic => {
+    Object.keys(topicPerformance).forEach((topic) => {
       const stats = topicPerformance[topic]
       stats.accuracy = (stats.correct / stats.total) * 100
       stats.averageTime = stats.averageTime / stats.total
@@ -120,19 +138,21 @@ async function calculateTestAnalytics(testSessionId: string) {
     const timeDistribution = responses.map((r, index) => ({
       questionIndex: index + 1,
       timeSpent: r.timeSpent || 0,
-      isCorrect: r.isCorrect
+      isCorrect: r.isCorrect,
     }))
 
     // Answer pattern analysis
-    const answerPattern = responses.map(r => ({
+    const answerPattern = responses.map((r) => ({
       questionId: r.questionId,
       selectedAnswer: r.selectedAnswer,
       isCorrect: r.isCorrect,
-      timeSpent: r.timeSpent || 0
+      timeSpent: r.timeSpent || 0,
     }))
 
     // Behavioral analytics
-    const questionsSkipped = responses.filter(r => !r.selectedAnswer || r.selectedAnswer === '').length
+    const questionsSkipped = responses.filter(
+      (r) => !r.selectedAnswer || r.selectedAnswer === ''
+    ).length
     const questionsRevisited = 0 // This would need tracking in the frontend
 
     return {
@@ -150,7 +170,7 @@ async function calculateTestAnalytics(testSessionId: string) {
       hardQuestions: difficultyStats.HARD || { total: 0, correct: 0, time: 0 },
       topicPerformance,
       strengthTopics,
-      weaknessTopics
+      weaknessTopics,
     }
   } catch (error) {
     logger.error('Error calculating test analytics:', error)
@@ -159,16 +179,20 @@ async function calculateTestAnalytics(testSessionId: string) {
 }
 
 // Helper function to calculate percentile rank
-async function calculatePercentileRank(testTemplateId: string, userScore: number, totalMarks: number): Promise<number | null> {
+async function calculatePercentileRank(
+  testTemplateId: string,
+  userScore: number,
+  totalMarks: number
+): Promise<number | null> {
   try {
     // Get all completed sessions for this test template
     const completedSessions = await prisma.testSession.findMany({
       where: {
         testTemplateId,
         status: 'COMPLETED',
-        totalScore: { not: null }
+        totalScore: { not: null },
       },
-      select: { totalScore: true }
+      select: { totalScore: true },
     })
 
     if (completedSessions.length === 0) {
@@ -176,9 +200,9 @@ async function calculatePercentileRank(testTemplateId: string, userScore: number
     }
 
     const userPercentage = (userScore / totalMarks) * 100
-    const allPercentages = completedSessions.map(s => ((s.totalScore || 0) / totalMarks) * 100)
+    const allPercentages = completedSessions.map((s) => ((s.totalScore || 0) / totalMarks) * 100)
 
-    const betterScores = allPercentages.filter(score => score < userPercentage).length
+    const betterScores = allPercentages.filter((score) => score < userPercentage).length
     const percentileRank = (betterScores / allPercentages.length) * 100
 
     return Math.round(percentileRank * 100) / 100
@@ -191,7 +215,7 @@ async function calculatePercentileRank(testTemplateId: string, userScore: number
 // POST /api/test/[id]/submit - Submit entire test
 export async function POST(request: NextRequest, { params }: RouteParams) {
   try {
-    const { id: testSessionId } = params
+    const { id: testSessionId } = await params
     const body = await request.json()
     const validatedData = submitTestSchema.parse(body)
 
@@ -209,7 +233,7 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
     const rateLimitResult = await withRateLimit(request, {
       identifier: user.id,
       limit: 10, // 10 test submissions per hour
-      window: 3600000
+      window: 3600000,
     })
 
     if (!rateLimitResult.success) {
@@ -223,10 +247,7 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
     const testSession = await prisma.testSession.findUnique({
       where: {
         id: testSessionId,
-        OR: [
-          { userId: user.id },
-          { freeUserId: user.id }
-        ]
+        OR: [{ userId: user.id }, { freeUserId: user.id }],
       },
       include: {
         testTemplate: {
@@ -237,10 +258,10 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
             totalMarks: true,
             negativeMarking: true,
             timeLimit: true,
-            passingMarks: true
-          }
-        }
-      }
+            passingMarks: true,
+          },
+        },
+      },
     })
 
     if (!testSession) {
@@ -263,7 +284,7 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
       return NextResponse.json(
         {
           error: 'Cannot submit test in current state',
-          code: 'INVALID_SESSION_STATE'
+          code: 'INVALID_SESSION_STATE',
         },
         { status: 400 }
       )
@@ -277,20 +298,23 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
         // Get question details
         const question = await prisma.question.findUnique({
           where: { id: answer.questionId },
-          select: { correctAnswer: true, marks: true }
+          select: { correctAnswer: true, marks: true },
         })
 
         if (question) {
           const isCorrect = answer.selectedAnswer === question.correctAnswer
-          const marksAwarded = isCorrect ? question.marks :
-            (testSession.testTemplate?.negativeMarking ? -Math.floor(question.marks / 4) : 0)
+          const marksAwarded = isCorrect
+            ? question.marks
+            : testSession.testTemplate?.negativeMarking
+              ? -Math.floor(question.marks / 4)
+              : 0
 
           // Check if response already exists
           const existingResponse = await prisma.userQuestionResponse.findFirst({
             where: {
               testSessionId,
-              questionId: answer.questionId
-            }
+              questionId: answer.questionId,
+            },
           })
 
           if (existingResponse) {
@@ -303,8 +327,8 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
                 marksAwarded,
                 timeSpent: answer.timeSpent || existingResponse.timeSpent,
                 confidence: answer.confidence,
-                answeredAt: submissionTime
-              }
+                answeredAt: submissionTime,
+              },
             })
           } else {
             // Create new response
@@ -318,8 +342,8 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
                 marksAwarded,
                 timeSpent: answer.timeSpent || 0,
                 confidence: answer.confidence,
-                responseMode: 'TEST_MODE'
-              }
+                responseMode: 'TEST_MODE',
+              },
             })
           }
         }
@@ -331,9 +355,9 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
       where: { testSessionId },
       include: {
         question: {
-          select: { marks: true, topic: true, difficulty: true }
-        }
-      }
+          select: { marks: true, topic: true, difficulty: true },
+        },
+      },
     })
 
     const totalScore = responses.reduce((sum, r) => sum + r.marksAwarded, 0)
@@ -363,11 +387,11 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
           percentage: Math.round(percentage * 100) / 100,
           questionsAnswered: responses.length,
           browserInfo: {
-            ...testSession.browserInfo as any,
+            ...(testSession.browserInfo as any),
             ...validatedData.sessionData?.deviceInfo,
-            submissionEvents: validatedData.sessionData?.browserEvents
-          }
-        }
+            submissionEvents: validatedData.sessionData?.browserEvents,
+          },
+        },
       })
 
       // Create analytics record if we have data
@@ -379,8 +403,8 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
             ...analyticsData,
             percentileRank,
             averageComparison: percentileRank ? percentileRank - 50 : null, // How much above/below average
-            analyzedAt: submissionTime
-          }
+            analyzedAt: submissionTime,
+          },
         })
       }
 
@@ -392,12 +416,12 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
           // Update running averages (simplified calculation)
           averageScore: {
             // This would need a more sophisticated calculation for accurate running averages
-            set: percentage
+            set: percentage,
           },
           averageTime: {
-            set: validatedData.sessionData?.totalTimeSpent || testSession.timeSpent
-          }
-        }
+            set: validatedData.sessionData?.totalTimeSpent || testSession.timeSpent,
+          },
+        },
       })
 
       return { updatedSession, analytics }
@@ -409,7 +433,7 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
     // Update session with rank
     await prisma.testSession.update({
       where: { id: testSessionId },
-      data: { rank }
+      data: { rank },
     })
 
     // Log test submission
@@ -420,7 +444,7 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
       percentage: Math.round(percentage * 100) / 100,
       questionsAnswered: responses.length,
       totalQuestions: testSession.testTemplate?.totalQuestions,
-      timeSpent: validatedData.sessionData?.totalTimeSpent
+      timeSpent: validatedData.sessionData?.totalTimeSpent,
     })
 
     // Prepare comprehensive response
@@ -439,41 +463,51 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
           questionsAnswered: responses.length,
           totalQuestions: testSession.testTemplate?.totalQuestions,
           timeSpent: validatedData.sessionData?.totalTimeSpent || testSession.timeSpent,
-          isPassed: testSession.testTemplate?.passingMarks ?
-            totalScore >= testSession.testTemplate.passingMarks :
-            percentage >= 40 // Default 40% passing
+          isPassed: testSession.testTemplate?.passingMarks
+            ? totalScore >= testSession.testTemplate.passingMarks
+            : percentage >= 40, // Default 40% passing
         },
         performance: {
           totalQuestions: responses.length,
-          correctAnswers: responses.filter(r => r.isCorrect).length,
-          incorrectAnswers: responses.filter(r => !r.isCorrect).length,
-          accuracy: responses.length > 0 ?
-            Math.round((responses.filter(r => r.isCorrect).length / responses.length) * 100 * 100) / 100 : 0,
-          averageTimePerQuestion: responses.length > 0 ?
-            Math.round(((validatedData.sessionData?.totalTimeSpent || 0) / responses.length) * 100) / 100 : 0
+          correctAnswers: responses.filter((r) => r.isCorrect).length,
+          incorrectAnswers: responses.filter((r) => !r.isCorrect).length,
+          accuracy:
+            responses.length > 0
+              ? Math.round(
+                  (responses.filter((r) => r.isCorrect).length / responses.length) * 100 * 100
+                ) / 100
+              : 0,
+          averageTimePerQuestion:
+            responses.length > 0
+              ? Math.round(
+                  ((validatedData.sessionData?.totalTimeSpent || 0) / responses.length) * 100
+                ) / 100
+              : 0,
         },
-        analytics: result.analytics ? {
-          strengthTopics: result.analytics.strengthTopics,
-          weaknessTopics: result.analytics.weaknessTopics,
-          topicPerformance: result.analytics.topicPerformance,
-          difficultyAnalysis: {
-            easy: result.analytics.easyQuestions,
-            medium: result.analytics.mediumQuestions,
-            hard: result.analytics.hardQuestions
-          }
-        } : null,
+        analytics: result.analytics
+          ? {
+              strengthTopics: result.analytics.strengthTopics,
+              weaknessTopics: result.analytics.weaknessTopics,
+              topicPerformance: result.analytics.topicPerformance,
+              difficultyAnalysis: {
+                easy: result.analytics.easyQuestions,
+                medium: result.analytics.mediumQuestions,
+                hard: result.analytics.hardQuestions,
+              },
+            }
+          : null,
         recommendations: {
           studyTopics: result.analytics?.weaknessTopics || [],
           practiceAreas: result.analytics?.weaknessTopics?.slice(0, 3) || [],
-          nextSteps: percentage >= 70 ?
-            ['Take advanced level tests', 'Focus on time management'] :
-            ['Review fundamental concepts', 'Practice more questions', 'Focus on weak topics']
-        }
-      }
+          nextSteps:
+            percentage >= 70
+              ? ['Take advanced level tests', 'Focus on time management']
+              : ['Review fundamental concepts', 'Practice more questions', 'Focus on weak topics'],
+        },
+      },
     }
 
     return NextResponse.json(submissionResponse)
-
   } catch (error) {
     logger.error('Error submitting test:', error)
 
@@ -482,7 +516,7 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
         {
           error: 'Validation failed',
           code: 'VALIDATION_ERROR',
-          details: error.errors
+          details: error.errors,
         },
         { status: 400 }
       )
@@ -491,7 +525,7 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
     return NextResponse.json(
       {
         error: 'Failed to submit test',
-        code: 'INTERNAL_ERROR'
+        code: 'INTERNAL_ERROR',
       },
       { status: 500 }
     )
