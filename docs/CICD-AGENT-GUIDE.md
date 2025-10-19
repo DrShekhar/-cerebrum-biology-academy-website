@@ -92,19 +92,19 @@ curl -X POST http://localhost:3000/api/agent/cicd \
 
 ```bash
 # Analyze build issues
-node scripts/run-cicd-agent.js analyze build
+node scripts/run-cicd-agent.cjs analyze build
 
 # Fix loading screen stuck
-node scripts/run-cicd-agent.js fix loading-screen-stuck
+node scripts/run-cicd-agent.cjs fix loading-screen-stuck
 
 # Verify Vercel deployment
-node scripts/run-cicd-agent.js verify vercel
+node scripts/run-cicd-agent.cjs verify vercel
 
 # Setup GitHub Actions
-node scripts/run-cicd-agent.js setup full-pipeline
+node scripts/run-cicd-agent.cjs setup full-pipeline
 
 # Check Vercel build logs
-node scripts/run-cicd-agent.js check vercel
+node scripts/run-cicd-agent.cjs check vercel
 ```
 
 ### Method 3: Import Directly in Code
@@ -236,7 +236,7 @@ fixDeploymentIssues()
 
 ```bash
 # Using CLI
-node scripts/run-cicd-agent.js fix loading-screen-stuck
+node scripts/run-cicd-agent.cjs fix loading-screen-stuck
 
 # Using API
 curl -X POST http://localhost:3000/api/agent/cicd \
@@ -257,10 +257,10 @@ curl -X POST http://localhost:3000/api/agent/cicd \
 
 ```bash
 # Analyze build issues
-node scripts/run-cicd-agent.js analyze build
+node scripts/run-cicd-agent.cjs analyze build
 
 # Check build logs
-node scripts/run-cicd-agent.js check local
+node scripts/run-cicd-agent.cjs check local
 ```
 
 **Agent will:**
@@ -276,7 +276,7 @@ node scripts/run-cicd-agent.js check local
 **Problem:** Need automated testing and deployment
 
 ```bash
-node scripts/run-cicd-agent.js setup full-pipeline
+node scripts/run-cicd-agent.cjs setup full-pipeline
 ```
 
 **Agent will:**
@@ -344,7 +344,7 @@ Add agent check to your pre-commit workflow:
 . "$(dirname "$0")/_/husky.sh"
 
 # Run CI/CD agent to check for issues
-node scripts/run-cicd-agent.js analyze build
+node scripts/run-cicd-agent.cjs analyze build
 
 # Continue with existing checks
 npm run lint
@@ -370,7 +370,7 @@ jobs:
         with:
           node-version: '18'
       - run: npm install
-      - run: node scripts/run-cicd-agent.js analyze build
+      - run: node scripts/run-cicd-agent.cjs analyze build
 ```
 
 ### Vercel Deployment
@@ -380,7 +380,7 @@ Add to your deployment script:
 ```json
 {
   "scripts": {
-    "predeploy": "node scripts/run-cicd-agent.js verify vercel",
+    "predeploy": "node scripts/run-cicd-agent.cjs verify vercel",
     "deploy": "vercel --prod"
   }
 }
@@ -448,21 +448,21 @@ async function monitorDeployment() {
 1. **Run agent checks before deploying:**
 
    ```bash
-   node scripts/run-cicd-agent.js analyze build && git push
+   node scripts/run-cicd-agent.cjs analyze build && git push
    ```
 
 2. **Use agent to verify fixes:**
 
    ```bash
    # After fixing an issue
-   node scripts/run-cicd-agent.js analyze runtime
+   node scripts/run-cicd-agent.cjs analyze runtime
    ```
 
 3. **Monitor deployment health:**
 
    ```bash
    # Regular health checks
-   node scripts/run-cicd-agent.js verify vercel
+   node scripts/run-cicd-agent.cjs verify vercel
    ```
 
 4. **Keep agent updated:**
