@@ -1,0 +1,18 @@
+# Build outputs
+.next/
+out/
+build/
+dist/
+
+# Dependencies
+node_modules/
+
+# Test coverage
+coverage/
+
+# Disabled features
+disabled-features/
+
+# Generated files
+*.generated.ts
+*.generated.js

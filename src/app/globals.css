@@ -212,11 +212,22 @@
   --radius-2xl: var(--radius-2xl);
 }
 
+/* Dark mode disabled for MVP - Phase 1 focus on consistent light mode experience
+   See CLAUDE.md Phase 1: Revenue and core features first
+   Dark mode will be reconsidered in Phase 4 (Weeks 17-24) when revenue stabilizes
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+}
+*/
+
+/* Force light mode for all users - ensures consistent educational experience */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
 }
 
 body {

@@ -61,12 +61,16 @@ const nextConfig = {
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
 
-  // Skip build-time checks for faster deployment
+  // TEMPORARY: Error suppression enabled for MVP Phase 1 deployment
+  // TODO: Phase 2 (Weeks 5-8) - TypeScript Cleanup Sprint
+  // - Fix 614 TypeScript errors across codebase
+  // - Remove error suppression after fixes
+  // - See CLAUDE.md: Revenue-first bootstrap approach
   eslint: {
-    ignoreDuringBuilds: true,
+    ignoreDuringBuilds: true, // Temporary - allows deployment while fixing
   },
   typescript: {
-    ignoreBuildErrors: true,
+    ignoreBuildErrors: true, // Temporary - 614 errors scheduled for Phase 2
   },
 
   // Production optimizations
