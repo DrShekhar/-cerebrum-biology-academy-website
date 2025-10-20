@@ -1,6 +1,2 @@
-// Database connection and exports
-import { prisma } from './prisma'
-
-export { prisma }
-
-export default prisma
+// Database connection and exports - Re-export from database folder
+export * from './database'
