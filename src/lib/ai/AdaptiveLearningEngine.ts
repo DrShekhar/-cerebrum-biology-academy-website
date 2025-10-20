@@ -3,7 +3,7 @@
  * Uses advanced ML algorithms to create unique learning paths for each student
  */
 
-import { HyperIntelligentRouter } from './HyperIntelligentRouter'
+import { HyperIntelligentRouter } from '../api/HyperIntelligentRouter'
 import { DistributedCacheManager } from '../cache/DistributedCacheManager'
 
 interface StudentProfile {
@@ -233,7 +233,7 @@ export class AdaptiveLearningEngine {
       id: `path_${Date.now()}`,
       userId: studentId,
       content: `Generate personalized learning path for ${subject} with goals: ${goals.join(', ')}`,
-      type: 'learning_path_generation' as const,
+      type: 'complex_reasoning' as const,
       context: {
         studentProfile: profile,
         timeframe,
@@ -243,7 +243,14 @@ export class AdaptiveLearningEngine {
       priority: 'high' as const,
       requiresVisuals: true,
       language: 'english' as const,
-      studentLevel: profile.academicProfile.currentLevel,
+      studentLevel:
+        profile.academicProfile.currentLevel === 'expert'
+          ? 'advanced'
+          : (profile.academicProfile.currentLevel as
+              | 'beginner'
+              | 'intermediate'
+              | 'advanced'
+              | 'neet'),
     }
 
     const aiResponse = await this.aiRouter.routeRequest(aiRequest)
@@ -365,7 +372,7 @@ export class AdaptiveLearningEngine {
    */
   async processLearningActivity(
     sessionId: string,
-    activity: Omit<LearningActivity, 'activityId' | 'startTime' | 'endTime' | 'duration'>
+    activity: Omit<LearningActivity, 'activityId' | 'startTime' | 'endTime'> & { duration?: number }
   ): Promise<{
     adaptations: AdaptationEvent[]
     recommendations: string[]
@@ -375,12 +382,13 @@ export class AdaptiveLearningEngine {
     if (!session) throw new Error(`Session ${sessionId} not found`)
 
     const activityId = `activity_${Date.now()}_${Math.random().toString(36).substr(2, 6)}`
+    const duration = activity.duration || 0
     const completedActivity: LearningActivity = {
       ...activity,
       activityId,
-      startTime: new Date(Date.now() - (activity.duration || 0)),
+      startTime: new Date(Date.now() - duration),
       endTime: new Date(),
-      duration: activity.duration || 0,
+      duration,
     }
 
     session.activities.push(completedActivity)
@@ -426,7 +434,7 @@ export class AdaptiveLearningEngine {
       id: `rec_${Date.now()}`,
       userId: studentId,
       content: `Generate personalized content recommendations for ${context.currentTopic}`,
-      type: 'content_recommendation' as const,
+      type: 'quick_answer' as const,
       context: {
         studentProfile: profile,
         currentContext: context,
@@ -437,7 +445,14 @@ export class AdaptiveLearningEngine {
       priority: 'medium' as const,
       requiresVisuals: profile.cognitiveProfile.learningStyle === 'visual',
       language: 'english' as const,
-      studentLevel: profile.academicProfile.currentLevel,
+      studentLevel:
+        profile.academicProfile.currentLevel === 'expert'
+          ? 'advanced'
+          : (profile.academicProfile.currentLevel as
+              | 'beginner'
+              | 'intermediate'
+              | 'advanced'
+              | 'neet'),
     }
 
     const aiResponse = await this.aiRouter.routeRequest(aiRequest)
@@ -483,7 +498,7 @@ export class AdaptiveLearningEngine {
       id: `analysis_${Date.now()}`,
       userId: studentId,
       content: 'Analyze comprehensive learning patterns and provide detailed insights',
-      type: 'pattern_analysis' as const,
+      type: 'complex_reasoning' as const,
       context: {
         studentProfile: profile,
         historicalData: await this.getStudentHistory(studentId),
@@ -492,7 +507,14 @@ export class AdaptiveLearningEngine {
       priority: 'high' as const,
       requiresVisuals: false,
       language: 'english' as const,
-      studentLevel: profile.academicProfile.currentLevel,
+      studentLevel:
+        profile.academicProfile.currentLevel === 'expert'
+          ? 'advanced'
+          : (profile.academicProfile.currentLevel as
+              | 'beginner'
+              | 'intermediate'
+              | 'advanced'
+              | 'neet'),
     }
 
     const aiResponse = await this.aiRouter.routeRequest(aiRequest)
@@ -599,7 +621,7 @@ export class AdaptiveLearningEngine {
       id: `assessment_${Date.now()}`,
       userId: profile.studentId,
       content: 'Create comprehensive initial learning profile assessment',
-      type: 'profile_assessment' as const,
+      type: 'complex_reasoning' as const,
       context: {
         baseProfile: profile,
         assessmentType: 'comprehensive_initial',

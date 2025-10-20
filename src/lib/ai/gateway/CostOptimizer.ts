@@ -6,6 +6,8 @@
 interface AIProvider {
   id: 'claude' | 'openai'
   name: string
+  client?: any
+  healthCheck?: () => Promise<boolean>
   costPerToken: number
   maxTokens: number
   capabilities: string[]

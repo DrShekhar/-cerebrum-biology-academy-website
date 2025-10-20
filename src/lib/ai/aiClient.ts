@@ -37,8 +37,15 @@ export interface AIResponse {
     responseTime: number
     cached: boolean
     requestId: string
+    [key: string]: any
   }
   error?: string
+  debug?: {
+    originalError: string
+    solution: string
+    retryable: boolean
+    severity: string
+  }
 }
 
 class UnifiedAIClient {
@@ -79,9 +86,10 @@ class UnifiedAIClient {
     requestId: string,
     startTime: number
   ): Promise<AIResponse> {
+    let provider: string = 'unknown'
     try {
       // Determine which provider to use
-      const provider = request.options?.provider || aiConfig.getBestProvider()
+      provider = request.options?.provider || aiConfig.getBestProvider()
       const providerConfig = aiConfig.getProvider(provider)
 
       if (!providerConfig) {
@@ -457,9 +465,6 @@ Guidelines:
 
 // Export singleton instance
 export const aiClient = UnifiedAIClient.getInstance()
-
-// Export types
-export type { AIRequest, AIResponse }
 
 // Export default
 export default aiClient

@@ -314,7 +314,7 @@ export class SemanticCacheEngine {
   /**
    * Preload cache with popular queries
    */
-  private async loadPopularQueries(): void {
+  private async loadPopularQueries(): Promise<void> {
     const popularQueries = [
       // Fundamental biology concepts
       'What is photosynthesis and how does it work?',

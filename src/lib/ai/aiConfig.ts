@@ -267,8 +267,5 @@ class AIConfigManager {
 // Export singleton instance
 export const aiConfig = AIConfigManager.getInstance()
 
-// Export types
-export type { AIProviderConfig, AIServiceConfig }
-
 // Export default
 export default aiConfig

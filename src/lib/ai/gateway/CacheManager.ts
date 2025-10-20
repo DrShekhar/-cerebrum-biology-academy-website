@@ -305,8 +305,8 @@ export class CacheManager {
       }
     }
 
-    // Update cache warming statistics
-    await this.updateCacheWarmingStats(cacheKey, entry)
+    // Update cache statistics
+    await this.updateCacheStats(entry, 'write')
   }
 
   /**

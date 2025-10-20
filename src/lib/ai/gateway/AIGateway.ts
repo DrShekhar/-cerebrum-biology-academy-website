@@ -41,7 +41,7 @@ interface AIRequest {
 
 interface AIResponse {
   id: string
-  provider: 'claude' | 'openai'
+  provider: 'claude' | 'openai' | 'fallback'
   content: string
   tokens: number
   cost: number
@@ -52,6 +52,8 @@ interface AIResponse {
     model: string
     confidence: number
     quality: number
+    errorId?: string
+    selfHealing?: boolean
   }
 }
 
@@ -209,6 +211,7 @@ export class AIGateway {
         tokens: response.tokens,
         cost: response.cost,
         success: true,
+        timestamp: Date.now(),
       })
 
       return response
@@ -231,10 +234,24 @@ export class AIGateway {
     const healthyProviders = await this.getHealthyProviders()
     if (healthyProviders.length === 0) return null
 
-    // Cost optimization logic
-    const optimizedProvider = this.costOptimizer.selectProvider(healthyProviders, request)
+    // Cost optimization logic - map to cost optimizer compatible format
+    const costOptimizerProviders = healthyProviders.map((p) => ({
+      id: p.id,
+      name: p.name,
+      costPerToken: p.costPerToken,
+      maxTokens: p.maxTokens,
+      capabilities: p.capabilities,
+      priority: p.priority,
+    }))
 
-    return optimizedProvider || healthyProviders[0]
+    const optimizedProvider = this.costOptimizer.selectProvider(costOptimizerProviders, request)
+
+    // Find the matching original provider
+    if (optimizedProvider) {
+      return healthyProviders.find((p) => p.id === optimizedProvider.id) || healthyProviders[0]
+    }
+
+    return healthyProviders[0]
   }
 
   private async executeWithCircuitBreaker(
@@ -349,6 +366,7 @@ export class AIGateway {
       success: false,
       error: error.message,
       userId: request.userId,
+      timestamp: Date.now(),
     })
 
     // Use intelligent fallback response from error handler
@@ -536,7 +554,7 @@ export class AIGateway {
 
   private async isProviderHealthy(providerId: string): Promise<boolean> {
     const circuitBreaker = this.circuitBreakers.get(providerId)
-    return circuitBreaker?.state !== 'OPEN'
+    return circuitBreaker?.currentState !== 'OPEN'
   }
 
   private enhanceResponse(response: AIResponse, enhancements: Partial<AIResponse>): AIResponse {
