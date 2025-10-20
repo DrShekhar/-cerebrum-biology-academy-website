@@ -93,12 +93,7 @@ export interface QueryContext {
   studentLevel?: StudentLevel
 }
 
-export enum QueryPriority {
-  LOW = 'low',
-  MEDIUM = 'medium',
-  HIGH = 'high',
-  URGENT = 'urgent',
-}
+export type QueryPriority = 'low' | 'medium' | 'high' | 'urgent'
 
 export enum DifficultyLevel {
   BASIC = 'basic',
@@ -423,6 +418,9 @@ export enum AuditAction {
   PAYMENT = 'payment',
   DATA_ACCESS = 'data_access',
   CONFIGURATION_CHANGE = 'configuration_change',
+  TOOL_REQUEST = 'tool_request',
+  SERVER_START = 'server_start',
+  SERVER_STOP = 'server_stop',
 }
 
 export enum AuditStatus {
@@ -440,13 +438,12 @@ export interface WebSocketMessage {
   recipient?: string
 }
 
-export enum MessageType {
-  CHAT_MESSAGE = 'chat_message',
-  PROGRESS_UPDATE = 'progress_update',
-  NOTIFICATION = 'notification',
-  SYSTEM_MESSAGE = 'system_message',
-  TYPING_INDICATOR = 'typing_indicator',
-}
+export type MessageType =
+  | 'chat_message'
+  | 'progress_update'
+  | 'notification'
+  | 'system_message'
+  | 'typing_indicator'
 
 // Error Types
 export interface MCPError {

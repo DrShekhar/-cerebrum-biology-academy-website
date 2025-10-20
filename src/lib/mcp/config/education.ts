@@ -4,7 +4,7 @@
  * Educational standards and learning objectives
  */
 
-import type {
+import {
   BiologyTopic,
   BiologyUnit,
   NEETCurriculum,

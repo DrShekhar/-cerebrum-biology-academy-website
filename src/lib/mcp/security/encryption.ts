@@ -67,8 +67,8 @@ export class SecurityManager {
       // Generate random IV for each encryption
       const iv = crypto.randomBytes(this.IV_LENGTH)
 
-      // Create cipher
-      const cipher = crypto.createCipher(this.ENCRYPTION_ALGORITHM, this.encryptionKey)
+      // Create cipher with IV
+      const cipher = crypto.createCipheriv(this.ENCRYPTION_ALGORITHM, this.encryptionKey, iv)
       cipher.setAAD(Buffer.from('cerebrum-biology-academy')) // Additional authenticated data
 
       // Encrypt data
@@ -86,7 +86,9 @@ export class SecurityManager {
         timestamp: new Date(),
       }
     } catch (error) {
-      this.logSecurityEvent('encryption_failed', 'system', false, { error: error.message })
+      this.logSecurityEvent('encryption_failed', 'system', false, {
+        error: (error as Error).message,
+      })
       throw new Error('Encryption failed')
     }
   }
@@ -101,8 +103,13 @@ export class SecurityManager {
         throw new Error('Invalid encrypted data format')
       }
 
-      // Create decipher
-      const decipher = crypto.createDecipher(encryptedData.algorithm, this.encryptionKey)
+      // Create decipher with IV
+      const iv = Buffer.from(encryptedData.iv, 'hex')
+      const decipher = crypto.createDecipheriv(
+        encryptedData.algorithm,
+        this.encryptionKey,
+        iv
+      ) as crypto.DecipherGCM
 
       decipher.setAAD(Buffer.from('cerebrum-biology-academy'))
       decipher.setAuthTag(Buffer.from(encryptedData.tag, 'hex'))
@@ -114,7 +121,9 @@ export class SecurityManager {
       this.logSecurityEvent('decryption_success', 'system', true)
       return decrypted
     } catch (error) {
-      this.logSecurityEvent('decryption_failed', 'system', false, { error: error.message })
+      this.logSecurityEvent('decryption_failed', 'system', false, {
+        error: (error as Error).message,
+      })
       throw new Error('Decryption failed')
     }
   }
@@ -122,7 +131,7 @@ export class SecurityManager {
   /**
    * Generate secure JWT token for authentication
    */
-  generateAuthToken(payload: any, expiresIn: string = this.JWT_EXPIRES_IN): string {
+  generateAuthToken(payload: any, expiresIn: string | number = this.JWT_EXPIRES_IN): string {
     try {
       const tokenPayload = {
         ...payload,
@@ -132,7 +141,7 @@ export class SecurityManager {
       }
 
       const token = jwt.sign(tokenPayload, this.jwtSecret, {
-        expiresIn,
+        expiresIn: expiresIn as string,
         algorithm: 'HS256',
       })
 
@@ -143,7 +152,9 @@ export class SecurityManager {
 
       return token
     } catch (error) {
-      this.logSecurityEvent('token_generation_failed', 'system', false, { error: error.message })
+      this.logSecurityEvent('token_generation_failed', 'system', false, {
+        error: (error as Error).message,
+      })
       throw new Error('Token generation failed')
     }
   }

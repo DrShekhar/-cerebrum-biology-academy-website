@@ -4,7 +4,7 @@
  * Performance tuning and capability definitions
  */
 
-import type { AgentType, AgentCapability, DifficultyLevel, BiologyUnit, ExamType } from '../types'
+import { AgentType, AgentCapability, DifficultyLevel, BiologyUnit, ExamType } from '../types'
 
 export interface AgentConfigProfile {
   id: string

@@ -11,8 +11,8 @@ import { CommunicationAgent } from './tools/communication'
 import { SecurityManager } from './security/encryption'
 import { ComplianceManager } from './security/compliance'
 import { AuditLogger } from './security/audit'
-import type { MCPServerConfig, StudentQuery } from './types'
-import { AgentType, QueryPriority, StudentLevel, DifficultyLevel, ExamType } from './types'
+import type { MCPServerConfig, StudentQuery, QueryPriority } from './types'
+import { AgentType, StudentLevel, DifficultyLevel, ExamType } from './types'
 
 /**
  * Test configuration for MCP server
@@ -80,7 +80,7 @@ const getTestQueries = (): StudentQuery[] => [
       studentLevel: StudentLevel.CLASS_12,
     },
     timestamp: new Date(),
-    priority: QueryPriority.MEDIUM,
+    priority: 'medium' as QueryPriority,
   },
   {
     id: 'test_query_2',
@@ -108,7 +108,7 @@ const getTestQueries = (): StudentQuery[] => [
       examType: ExamType.NEET,
     },
     timestamp: new Date(),
-    priority: QueryPriority.MEDIUM,
+    priority: 'medium' as QueryPriority,
   },
   {
     id: 'test_query_3',
@@ -119,7 +119,7 @@ const getTestQueries = (): StudentQuery[] => [
       studentLevel: StudentLevel.CLASS_12,
     },
     timestamp: new Date(),
-    priority: QueryPriority.MEDIUM,
+    priority: 'medium' as QueryPriority,
   },
   {
     id: 'test_query_4',
@@ -130,7 +130,7 @@ const getTestQueries = (): StudentQuery[] => [
       studentLevel: StudentLevel.CLASS_12,
     },
     timestamp: new Date(),
-    priority: QueryPriority.MEDIUM,
+    priority: 'medium' as QueryPriority,
   },
 ]
 
