@@ -6,7 +6,10 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { getCacheManagers } from '@/lib/cache/CacheConfiguration'
 
-const { distributedCache, queryOptimizer, sessionManager } = getCacheManagers()
+const cacheManagers = getCacheManagers()
+const distributedCache = cacheManagers.distributed
+const queryOptimizer = cacheManagers.query
+const sessionManager = cacheManagers.session
 
 export async function POST(request: NextRequest) {
   try {

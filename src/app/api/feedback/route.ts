@@ -141,7 +141,8 @@ export async function GET(request: NextRequest) {
 async function sendToExternalServices(feedback: FeedbackData): Promise<void> {
   try {
     // Send to Google Analytics 4
-    if (typeof gtag !== 'undefined') {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      const gtag = (window as any).gtag
       gtag('event', 'feedback_submitted', {
         event_category: 'User Feedback',
         event_label: feedback.feedbackType,

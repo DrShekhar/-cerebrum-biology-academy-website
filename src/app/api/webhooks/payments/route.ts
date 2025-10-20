@@ -306,6 +306,38 @@ async function handlePaymentFailure(event: WebhookEvent): Promise<any> {
 }
 
 /**
+ * Handle payment refund
+ */
+async function handlePaymentRefund(event: WebhookEvent): Promise<any> {
+  const refundData = event.data
+
+  console.log(`💸 Payment refund: ${refundData.id}`)
+
+  // Update payment status to refunded
+  await updatePaymentStatus(refundData.payment_id, 'refunded')
+
+  // Process refund for subscription if applicable
+  if (refundData.subscription_id) {
+    await updateSubscriptionStatus(refundData.subscription_id, 'refunded')
+  }
+
+  // Send refund confirmation to customer
+  await sendRefundConfirmation(refundData)
+
+  // Update financial records
+  await updateFinancialRecords('refund', refundData)
+
+  // Track refund metrics
+  await trackRefundMetrics(refundData)
+
+  return {
+    status: 'processed',
+    action: 'payment_refunded',
+    refund_id: refundData.id,
+  }
+}
+
+/**
  * Handle subscription payment
  */
 async function handleSubscriptionPayment(event: WebhookEvent): Promise<any> {
@@ -470,6 +502,18 @@ async function updateChurnAnalytics(data: any) {
 
 async function updateRiskMetrics(data: any) {
   console.log(`⚠️ Updated risk metrics for dispute ${data.id}`)
+}
+
+async function sendRefundConfirmation(refundData: any) {
+  console.log(`📧 Sent refund confirmation for ${refundData.id}`)
+}
+
+async function updateFinancialRecords(recordType: string, data: any) {
+  console.log(`💰 Updated financial records: ${recordType} for ${data.id}`)
+}
+
+async function trackRefundMetrics(refundData: any) {
+  console.log(`📊 Tracked refund metrics for ${refundData.id}`)
 }
 
 async function handleCustomerCreated(event: WebhookEvent) {

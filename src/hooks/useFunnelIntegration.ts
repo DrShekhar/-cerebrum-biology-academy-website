@@ -91,7 +91,8 @@ export function useFunnelIntegration(
       const mapping = WIZARD_FUNNEL_MAPPING.find((m) => m.wizardStep === currentStep)
       if (mapping) {
         // Send interaction event to analytics
-        if (typeof gtag !== 'undefined') {
+        if (typeof window !== 'undefined' && 'gtag' in window) {
+          const gtag = (window as any).gtag
           gtag('event', 'funnel_interaction', {
             step_id: mapping.funnelStepId,
             interaction_type: interactionType,

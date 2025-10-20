@@ -62,7 +62,9 @@ function generateInsights(interactions: any[]) {
     {} as Record<string, number>
   )
 
-  const mostPopularElement = Object.entries(elementPopularity).sort(([, a], [, b]) => b - a)[0]
+  const mostPopularElement = Object.entries(elementPopularity).sort(
+    ([, a], [, b]) => Number(b) - Number(a)
+  )[0]
 
   const typeDistribution = interactions.reduce(
     (acc, i) => {
@@ -103,7 +105,7 @@ function findPeakActivityTime(interactions: any[]) {
     {} as Record<number, number>
   )
 
-  const peakSlot = Object.entries(timeSlots).sort(([, a], [, b]) => b - a)[0]
+  const peakSlot = Object.entries(timeSlots).sort(([, a], [, b]) => Number(b) - Number(a))[0]
 
   return peakSlot
     ? {

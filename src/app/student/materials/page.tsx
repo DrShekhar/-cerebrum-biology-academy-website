@@ -32,6 +32,7 @@ interface Material {
   description: string | null
   fileName: string
   fileSize: number
+  fileUrl: string
   materialType: string
   category: string | null
   tags: string[]
@@ -67,6 +68,7 @@ interface MaterialsResponse {
     totalMaterials: number
     totalDownloads: number
   }
+  error?: string
 }
 
 export default function StudentMaterialsPage() {

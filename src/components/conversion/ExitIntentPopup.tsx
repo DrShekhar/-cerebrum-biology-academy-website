@@ -22,6 +22,7 @@ import {
   Calendar,
   Percent,
   Timer,
+  Shield,
 } from 'lucide-react'
 
 interface ExitIntentOffer {

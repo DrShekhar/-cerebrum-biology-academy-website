@@ -134,7 +134,8 @@ async function sendToExternalAnalytics(dataPoint: HeatmapDataPoint): Promise<voi
   // Example integrations with external services
   try {
     // Send to Google Analytics 4
-    if (typeof gtag !== 'undefined') {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      const gtag = (window as any).gtag
       gtag('event', 'heatmap_interaction', {
         event_category: 'User Behavior',
         event_label: dataPoint.eventType,

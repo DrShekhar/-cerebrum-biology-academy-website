@@ -45,33 +45,33 @@ export const NEETAnalyticsEvents = {
   PRICE_CHECKED: 'price_checked',
   DEMO_REQUESTED: 'demo_requested',
   BROCHURE_DOWNLOADED: 'brochure_downloaded',
-  
+
   // Engagement Events
   VIDEO_PLAYED: 'video_played',
   CONTENT_SHARED: 'content_shared',
   QUIZ_ATTEMPTED: 'quiz_attempted',
   DOUBT_ASKED: 'doubt_asked',
   PEER_INTERACTION: 'peer_interaction',
-  
+
   // Conversion Events
   FORM_STARTED: 'form_started',
   FORM_COMPLETED: 'form_completed',
   PAYMENT_INITIATED: 'payment_initiated',
   PAYMENT_COMPLETED: 'payment_completed',
   ENROLLMENT_CONFIRMED: 'enrollment_confirmed',
-  
+
   // Retention Events
   CLASS_ATTENDED: 'class_attended',
   ASSIGNMENT_SUBMITTED: 'assignment_submitted',
   LOGIN_STREAK: 'login_streak',
   COURSE_COMPLETED: 'course_completed',
   REFERRAL_MADE: 'referral_made',
-  
+
   // Revenue Events
   UPSELL_VIEWED: 'upsell_viewed',
   ADDON_PURCHASED: 'addon_purchased',
   RENEWAL_COMPLETED: 'renewal_completed',
-  REFUND_REQUESTED: 'refund_requested'
+  REFUND_REQUESTED: 'refund_requested',
 }
 
 // Key Performance Indicators for NEET Coaching
@@ -86,7 +86,7 @@ export const NEETKPIs: KPIMetric[] = [
     trend: 'up',
     category: 'growth',
     actionThreshold: 2.0,
-    alertConditions: ['< 1.5%', 'declining for 3+ days']
+    alertConditions: ['< 1.5%', 'declining for 3+ days'],
   },
   {
     id: 'demo_to_enrollment',
@@ -98,7 +98,7 @@ export const NEETKPIs: KPIMetric[] = [
     trend: 'up',
     category: 'growth',
     actionThreshold: 30,
-    alertConditions: ['< 25%', 'declining trend for 5+ days']
+    alertConditions: ['< 25%', 'declining trend for 5+ days'],
   },
   {
     id: 'student_acquisition_cost',
@@ -110,7 +110,7 @@ export const NEETKPIs: KPIMetric[] = [
     trend: 'down',
     category: 'growth',
     actionThreshold: 3000,
-    alertConditions: ['> ₹3500', 'increasing for 7+ days']
+    alertConditions: ['> ₹3500', 'increasing for 7+ days'],
   },
   {
     id: 'student_lifetime_value',
@@ -122,7 +122,7 @@ export const NEETKPIs: KPIMetric[] = [
     trend: 'up',
     category: 'revenue',
     actionThreshold: 20000,
-    alertConditions: ['< ₹20000', 'declining for 30+ days']
+    alertConditions: ['< ₹20000', 'declining for 30+ days'],
   },
   {
     id: 'class_attendance_rate',
@@ -134,7 +134,7 @@ export const NEETKPIs: KPIMetric[] = [
     trend: 'stable',
     category: 'engagement',
     actionThreshold: 80,
-    alertConditions: ['< 75%', 'declining for 7+ days']
+    alertConditions: ['< 75%', 'declining for 7+ days'],
   },
   {
     id: 'monthly_retention_rate',
@@ -146,7 +146,7 @@ export const NEETKPIs: KPIMetric[] = [
     trend: 'up',
     category: 'retention',
     actionThreshold: 85,
-    alertConditions: ['< 80%', 'declining trend']
+    alertConditions: ['< 80%', 'declining trend'],
   },
   {
     id: 'neet_score_improvement',
@@ -158,7 +158,7 @@ export const NEETKPIs: KPIMetric[] = [
     trend: 'up',
     category: 'quality',
     actionThreshold: 40,
-    alertConditions: ['< 30 points', 'no improvement for 60+ days']
+    alertConditions: ['< 30 points', 'no improvement for 60+ days'],
   },
   {
     id: 'revenue_per_student',
@@ -170,7 +170,7 @@ export const NEETKPIs: KPIMetric[] = [
     trend: 'up',
     category: 'revenue',
     actionThreshold: 3000,
-    alertConditions: ['< ₹2500', 'declining for 14+ days']
+    alertConditions: ['< ₹2500', 'declining for 14+ days'],
   },
   {
     id: 'whatsapp_engagement_rate',
@@ -182,7 +182,7 @@ export const NEETKPIs: KPIMetric[] = [
     trend: 'stable',
     category: 'engagement',
     actionThreshold: 50,
-    alertConditions: ['< 40%', 'declining for 5+ days']
+    alertConditions: ['< 40%', 'declining for 5+ days'],
   },
   {
     id: 'referral_rate',
@@ -194,21 +194,17 @@ export const NEETKPIs: KPIMetric[] = [
     trend: 'up',
     category: 'growth',
     actionThreshold: 10,
-    alertConditions: ['< 8%', 'no referrals for 30+ days']
-  }
+    alertConditions: ['< 8%', 'no referrals for 30+ days'],
+  },
 ]
 
 // Analytics Implementation Class
 export class NEETAnalyticsEngine {
   private events: AnalyticsEvent[] = []
   private insights: InsightGeneration[] = []
-  
+
   // Track user events with contextual data
-  trackEvent(
-    eventName: string, 
-    properties: Record<string, any> = {},
-    userId?: string
-  ): void {
+  trackEvent(eventName: string, properties: Record<string, any> = {}, userId?: string): void {
     const event: AnalyticsEvent = {
       name: eventName,
       category: this.categorizeEvent(eventName),
@@ -219,19 +215,19 @@ export class NEETAnalyticsEngine {
         user_agent: typeof navigator !== 'undefined' ? navigator.userAgent : '',
         screen_resolution: typeof screen !== 'undefined' ? `${screen.width}x${screen.height}` : '',
         is_mobile: this.isMobileDevice(),
-        ...this.getUTMParameters()
+        ...this.getUTMParameters(),
       },
       timestamp: Date.now(),
       userId,
       sessionId: this.getSessionId(),
       source: this.getTrafficSource(),
       medium: this.getTrafficMedium(),
-      campaign: this.getCampaignInfo()
+      campaign: this.getCampaignInfo(),
     }
-    
+
     this.events.push(event)
     this.processEventForInsights(event)
-    
+
     // Send to external analytics services
     this.sendToGoogleAnalytics(event)
     this.sendToCustomBackend(event)
@@ -243,17 +239,17 @@ export class NEETAnalyticsEngine {
     if (event.name === NEETAnalyticsEvents.COURSE_VIEWED) {
       this.checkCourseViewToDemo(event)
     }
-    
+
     // Monitor payment abandonment
     if (event.name === NEETAnalyticsEvents.PAYMENT_INITIATED) {
       this.monitorPaymentCompletion(event)
     }
-    
+
     // Track engagement anomalies
     if (event.name === NEETAnalyticsEvents.CLASS_ATTENDED) {
       this.checkAttendancePatterns(event)
     }
-    
+
     // Identify referral opportunities
     if (event.name === NEETAnalyticsEvents.COURSE_COMPLETED) {
       this.triggerReferralOutreach(event)
@@ -263,71 +259,80 @@ export class NEETAnalyticsEngine {
   // Generate actionable insights
   generateDailyInsights(): InsightGeneration[] {
     const insights: InsightGeneration[] = []
-    
+
     // Analyze conversion funnel performance
     insights.push(...this.analyzeFunnelPerformance())
-    
+
     // Identify high-value user segments
     insights.push(...this.identifyHighValueSegments())
-    
+
     // Detect retention risks
     insights.push(...this.detectRetentionRisks())
-    
+
     // Find revenue optimization opportunities
     insights.push(...this.findRevenueOpportunities())
-    
+
     // WhatsApp engagement analysis
     insights.push(...this.analyzeWhatsAppEngagement())
-    
+
     return insights.sort((a, b) => this.priorityScore(b) - this.priorityScore(a))
   }
 
   private analyzeFunnelPerformance(): InsightGeneration[] {
     const insights: InsightGeneration[] = []
-    
+
     // Example: Low demo-to-enrollment conversion
-    const demoEvents = this.events.filter(e => e.name === NEETAnalyticsEvents.DEMO_REQUESTED)
-    const enrollmentEvents = this.events.filter(e => e.name === NEETAnalyticsEvents.ENROLLMENT_CONFIRMED)
-    
+    const demoEvents = this.events.filter((e) => e.name === NEETAnalyticsEvents.DEMO_REQUESTED)
+    const enrollmentEvents = this.events.filter(
+      (e) => e.name === NEETAnalyticsEvents.ENROLLMENT_CONFIRMED
+    )
+
     if (demoEvents.length > 0) {
       const conversionRate = (enrollmentEvents.length / demoEvents.length) * 100
-      
+
       if (conversionRate < 25) {
         insights.push({
           type: 'opportunity',
           priority: 'high',
           title: 'Low Demo-to-Enrollment Conversion',
           description: `Demo conversion rate is ${conversionRate.toFixed(1)}%, below target of 35%`,
-          impact: `Potential ${Math.round((35 - conversionRate) * demoEvents.length / 100)} additional enrollments`,
+          impact: `Potential ${Math.round(((35 - conversionRate) * demoEvents.length) / 100)} additional enrollments`,
           recommendations: [
             'Improve demo class content and engagement',
             'Follow up within 2 hours of demo completion',
             'Offer limited-time enrollment discount during demo',
-            'Collect parent contact information during demo'
+            'Collect parent contact information during demo',
           ],
           dataPoints: [
             { metric: 'Demo Requests', value: demoEvents.length },
             { metric: 'Enrollments', value: enrollmentEvents.length },
-            { metric: 'Conversion Rate', value: `${conversionRate.toFixed(1)}%` }
+            { metric: 'Conversion Rate', value: `${conversionRate.toFixed(1)}%` },
           ],
-          confidence: 85
+          confidence: 85,
         })
       }
     }
-    
+
     return insights
   }
 
   private identifyHighValueSegments(): InsightGeneration[] {
     const insights: InsightGeneration[] = []
-    
+
     // Analyze user behavior patterns to identify high-converting segments
-    const courseViewers = this.groupEventsByProperty(NEETAnalyticsEvents.COURSE_VIEWED, 'course_type')
-    
+    const courseViewers = this.groupEventsByProperty(
+      NEETAnalyticsEvents.COURSE_VIEWED,
+      'course_type'
+    )
+
     for (const [courseType, events] of Object.entries(courseViewers)) {
-      const conversionRate = this.calculateConversionRate(events, NEETAnalyticsEvents.ENROLLMENT_CONFIRMED)
-      
-      if (conversionRate > 40) { // High-converting course type
+      const conversionRate = this.calculateConversionRate(
+        events,
+        NEETAnalyticsEvents.ENROLLMENT_CONFIRMED
+      )
+
+      if (conversionRate > 40) {
+        // High-converting course type
         insights.push({
           type: 'opportunity',
           priority: 'medium',
@@ -338,39 +343,42 @@ export class NEETAnalyticsEngine {
             `Increase ad spend for ${courseType} courses`,
             'Create lookalike audiences based on these users',
             'Develop more content targeting this segment',
-            'A/B test specific messaging for this audience'
+            'A/B test specific messaging for this audience',
           ],
           dataPoints: [
             { metric: 'Course Views', value: events.length },
-            { metric: 'Conversion Rate', value: `${conversionRate.toFixed(1)}%` }
+            { metric: 'Conversion Rate', value: `${conversionRate.toFixed(1)}%` },
           ],
-          confidence: 78
+          confidence: 78,
         })
       }
     }
-    
+
     return insights
   }
 
   private detectRetentionRisks(): InsightGeneration[] {
     const insights: InsightGeneration[] = []
-    
+
     // Identify students at risk of dropping out
-    const attendanceEvents = this.events.filter(e => e.name === NEETAnalyticsEvents.CLASS_ATTENDED)
+    const attendanceEvents = this.events.filter(
+      (e) => e.name === NEETAnalyticsEvents.CLASS_ATTENDED
+    )
     const userAttendance = this.groupEventsByProperty(attendanceEvents, 'userId')
-    
+
     let atRiskStudents = 0
-    
+
     for (const [userId, events] of Object.entries(userAttendance)) {
-      const recentEvents = events.filter(e => 
-        Date.now() - e.timestamp < 7 * 24 * 60 * 60 * 1000 // Last 7 days
+      const recentEvents = events.filter(
+        (e) => Date.now() - e.timestamp < 7 * 24 * 60 * 60 * 1000 // Last 7 days
       )
-      
-      if (recentEvents.length < 2) { // Less than 2 classes in past week
+
+      if (recentEvents.length < 2) {
+        // Less than 2 classes in past week
         atRiskStudents++
       }
     }
-    
+
     if (atRiskStudents > 0) {
       insights.push({
         type: 'risk',
@@ -382,25 +390,27 @@ export class NEETAnalyticsEngine {
           'Send personalized WhatsApp messages to at-risk students',
           'Offer one-on-one counseling sessions',
           'Provide recorded class access for missed sessions',
-          'Assign peer study buddies for motivation'
+          'Assign peer study buddies for motivation',
         ],
         dataPoints: [
           { metric: 'At-Risk Students', value: atRiskStudents },
-          { metric: 'Revenue at Risk', value: `₹${atRiskStudents * 15000}` }
+          { metric: 'Revenue at Risk', value: `₹${atRiskStudents * 15000}` },
         ],
-        confidence: 92
+        confidence: 92,
       })
     }
-    
+
     return insights
   }
 
   private findRevenueOpportunities(): InsightGeneration[] {
     const insights: InsightGeneration[] = []
-    
+
     // Identify upselling opportunities
-    const completedCourses = this.events.filter(e => e.name === NEETAnalyticsEvents.COURSE_COMPLETED)
-    
+    const completedCourses = this.events.filter(
+      (e) => e.name === NEETAnalyticsEvents.COURSE_COMPLETED
+    )
+
     if (completedCourses.length > 0) {
       insights.push({
         type: 'opportunity',
@@ -412,55 +422,61 @@ export class NEETAnalyticsEngine {
           'Offer advanced NEET preparation courses',
           'Introduce AIIMS/JIPMER specific modules',
           'Create premium mentorship programs',
-          'Provide post-NEET counseling services'
+          'Provide post-NEET counseling services',
         ],
         dataPoints: [
           { metric: 'Course Completers', value: completedCourses.length },
-          { metric: 'Upsell Potential', value: `₹${completedCourses.length * 20000}` }
+          { metric: 'Upsell Potential', value: `₹${completedCourses.length * 20000}` },
         ],
-        confidence: 70
+        confidence: 70,
       })
     }
-    
+
     return insights
   }
 
   private analyzeWhatsAppEngagement(): InsightGeneration[] {
     const insights: InsightGeneration[] = []
-    
+
     // WhatsApp-specific insights for Indian market
-    const whatsappEvents = this.events.filter(e => 
-      e.properties.source === 'whatsapp' || e.properties.channel === 'whatsapp'
+    const whatsappEvents = this.events.filter(
+      (e) => e.properties.source === 'whatsapp' || e.properties.channel === 'whatsapp'
     )
-    
+
     if (whatsappEvents.length > 0) {
-      const conversionRate = this.calculateConversionRate(whatsappEvents, NEETAnalyticsEvents.ENROLLMENT_CONFIRMED)
-      
+      const conversionRate = this.calculateConversionRate(
+        whatsappEvents,
+        NEETAnalyticsEvents.ENROLLMENT_CONFIRMED
+      )
+
       insights.push({
         type: 'trend',
         priority: 'medium',
         title: 'WhatsApp Channel Performance',
         description: `WhatsApp users convert at ${conversionRate.toFixed(1)}%`,
         impact: conversionRate > 30 ? 'High-performing channel' : 'Optimization needed',
-        recommendations: conversionRate > 30 ? [
-          'Increase WhatsApp marketing investment',
-          'Create WhatsApp-specific content',
-          'Implement WhatsApp business API',
-          'Train team on WhatsApp best practices'
-        ] : [
-          'Improve WhatsApp message personalization',
-          'Optimize response time to < 5 minutes',
-          'Create engaging multimedia content',
-          'Implement chatbot for instant responses'
-        ],
+        recommendations:
+          conversionRate > 30
+            ? [
+                'Increase WhatsApp marketing investment',
+                'Create WhatsApp-specific content',
+                'Implement WhatsApp business API',
+                'Train team on WhatsApp best practices',
+              ]
+            : [
+                'Improve WhatsApp message personalization',
+                'Optimize response time to < 5 minutes',
+                'Create engaging multimedia content',
+                'Implement chatbot for instant responses',
+              ],
         dataPoints: [
           { metric: 'WhatsApp Interactions', value: whatsappEvents.length },
-          { metric: 'Conversion Rate', value: `${conversionRate.toFixed(1)}%` }
+          { metric: 'Conversion Rate', value: `${conversionRate.toFixed(1)}%` },
         ],
-        confidence: 85
+        confidence: 85,
       })
     }
-    
+
     return insights
   }
 
@@ -471,43 +487,49 @@ export class NEETAnalyticsEngine {
       conversion: [NEETAnalyticsEvents.DEMO_REQUESTED, NEETAnalyticsEvents.ENROLLMENT_CONFIRMED],
       retention: [NEETAnalyticsEvents.CLASS_ATTENDED, NEETAnalyticsEvents.LOGIN_STREAK],
       revenue: [NEETAnalyticsEvents.PAYMENT_COMPLETED, NEETAnalyticsEvents.ADDON_PURCHASED],
-      product: [NEETAnalyticsEvents.DOUBT_ASKED, NEETAnalyticsEvents.ASSIGNMENT_SUBMITTED]
+      product: [NEETAnalyticsEvents.DOUBT_ASKED, NEETAnalyticsEvents.ASSIGNMENT_SUBMITTED],
     }
-    
+
     for (const [category, events] of Object.entries(categories)) {
       if (events.includes(eventName)) {
         return category as AnalyticsEvent['category']
       }
     }
-    
+
     return 'user_engagement'
   }
 
-  private groupEventsByProperty(events: AnalyticsEvent[] | string, property: string): Record<string, AnalyticsEvent[]> {
+  private groupEventsByProperty(
+    events: AnalyticsEvent[] | string,
+    property: string
+  ): Record<string, AnalyticsEvent[]> {
     let eventList: AnalyticsEvent[]
-    
+
     if (typeof events === 'string') {
-      eventList = this.events.filter(e => e.name === events)
+      eventList = this.events.filter((e) => e.name === events)
     } else {
       eventList = events
     }
-    
-    return eventList.reduce((groups, event) => {
-      const key = event.properties[property] || 'unknown'
-      groups[key] = groups[key] || []
-      groups[key].push(event)
-      return groups
-    }, {} as Record<string, AnalyticsEvent[]>)
+
+    return eventList.reduce(
+      (groups, event) => {
+        const key = event.properties[property] || 'unknown'
+        groups[key] = groups[key] || []
+        groups[key].push(event)
+        return groups
+      },
+      {} as Record<string, AnalyticsEvent[]>
+    )
   }
 
   private calculateConversionRate(sourceEvents: AnalyticsEvent[], targetEvent: string): number {
     if (sourceEvents.length === 0) return 0
-    
-    const userIds = sourceEvents.map(e => e.userId).filter(Boolean)
+
+    const userIds = sourceEvents.map((e) => e.userId).filter(Boolean)
     const convertedUsers = this.events
-      .filter(e => e.name === targetEvent && userIds.includes(e.userId))
-      .map(e => e.userId)
-    
+      .filter((e) => e.name === targetEvent && userIds.includes(e.userId))
+      .map((e) => e.userId)
+
     const uniqueConvertedUsers = [...new Set(convertedUsers)]
     return (uniqueConvertedUsers.length / userIds.length) * 100
   }
@@ -515,18 +537,19 @@ export class NEETAnalyticsEngine {
   private priorityScore(insight: InsightGeneration): number {
     const priorityWeights = { critical: 100, high: 75, medium: 50, low: 25 }
     const typeWeights = { risk: 1.2, opportunity: 1.0, anomaly: 0.8, trend: 0.6 }
-    
-    return priorityWeights[insight.priority] * 
-           typeWeights[insight.type] * 
-           (insight.confidence / 100)
+
+    return (
+      priorityWeights[insight.priority] * typeWeights[insight.type] * (insight.confidence / 100)
+    )
   }
 
   // External integrations
   private sendToGoogleAnalytics(event: AnalyticsEvent): void {
-    if (typeof gtag !== 'undefined') {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      const gtag = (window as any).gtag
       gtag('event', event.name, {
         event_category: event.category,
-        custom_parameters: event.properties
+        custom_parameters: event.properties,
       })
     }
   }
@@ -536,8 +559,8 @@ export class NEETAnalyticsEngine {
     fetch('/api/analytics/track', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(event)
-    }).catch(error => console.error('Analytics tracking failed:', error))
+      body: JSON.stringify(event),
+    }).catch((error) => console.error('Analytics tracking failed:', error))
   }
 
   // Utility methods
@@ -546,25 +569,26 @@ export class NEETAnalyticsEngine {
   }
 
   private isMobileDevice(): boolean {
-    return typeof navigator !== 'undefined' && 
-           /Mobile|Android|iPhone|iPad/.test(navigator.userAgent)
+    return (
+      typeof navigator !== 'undefined' && /Mobile|Android|iPhone|iPad/.test(navigator.userAgent)
+    )
   }
 
   private getUTMParameters(): Record<string, string> {
     if (typeof window === 'undefined') return {}
-    
+
     const urlParams = new URLSearchParams(window.location.search)
     return {
       utm_source: urlParams.get('utm_source') || '',
       utm_medium: urlParams.get('utm_medium') || '',
       utm_campaign: urlParams.get('utm_campaign') || '',
-      utm_content: urlParams.get('utm_content') || ''
+      utm_content: urlParams.get('utm_content') || '',
     }
   }
 
   private getTrafficSource(): string {
     if (typeof document === 'undefined') return 'direct'
-    
+
     const referrer = document.referrer
     if (!referrer) return 'direct'
     if (referrer.includes('google.com')) return 'google'
@@ -574,16 +598,20 @@ export class NEETAnalyticsEngine {
   }
 
   private getTrafficMedium(): string {
-    const urlParams = typeof window !== 'undefined' ? 
-      new URLSearchParams(window.location.search) : new URLSearchParams()
-    
+    const urlParams =
+      typeof window !== 'undefined'
+        ? new URLSearchParams(window.location.search)
+        : new URLSearchParams()
+
     return urlParams.get('utm_medium') || 'organic'
   }
 
   private getCampaignInfo(): string {
-    const urlParams = typeof window !== 'undefined' ? 
-      new URLSearchParams(window.location.search) : new URLSearchParams()
-    
+    const urlParams =
+      typeof window !== 'undefined'
+        ? new URLSearchParams(window.location.search)
+        : new URLSearchParams()
+
     return urlParams.get('utm_campaign') || ''
   }
 
@@ -594,18 +622,22 @@ export class NEETAnalyticsEngine {
 
   private monitorPaymentCompletion(event: AnalyticsEvent): void {
     // Set up monitoring for payment abandonment
-    setTimeout(() => {
-      const completionEvent = this.events.find(e => 
-        e.name === NEETAnalyticsEvents.PAYMENT_COMPLETED && 
-        e.userId === event.userId &&
-        e.timestamp > event.timestamp
-      )
-      
-      if (!completionEvent) {
-        // Trigger abandonment recovery workflow
-        this.triggerPaymentRecovery(event.userId!)
-      }
-    }, 30 * 60 * 1000) // 30 minutes
+    setTimeout(
+      () => {
+        const completionEvent = this.events.find(
+          (e) =>
+            e.name === NEETAnalyticsEvents.PAYMENT_COMPLETED &&
+            e.userId === event.userId &&
+            e.timestamp > event.timestamp
+        )
+
+        if (!completionEvent) {
+          // Trigger abandonment recovery workflow
+          this.triggerPaymentRecovery(event.userId!)
+        }
+      },
+      30 * 60 * 1000
+    ) // 30 minutes
   }
 
   private checkAttendancePatterns(event: AnalyticsEvent): void {

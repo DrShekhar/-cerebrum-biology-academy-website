@@ -1,3 +1,4 @@
+import { useState, useCallback } from 'react'
 import { FeedbackData, FeedbackAnalyzer } from '../feedback/feedbackCollection'
 import { HeatmapDataPoint, HeatmapAnalyzer } from '../heatmap/heatmapTracking'
 import { FunnelEvent, FunnelAnalyzer } from '../analytics/conversionFunnelAnalysis'

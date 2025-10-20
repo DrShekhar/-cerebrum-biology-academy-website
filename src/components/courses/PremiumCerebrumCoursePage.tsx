@@ -32,7 +32,7 @@ import {
   Play,
   GraduationCap,
   Brain,
-  Lightning,
+  Zap as Lightning,
   Sparkles,
   Microscope,
   FlaskConical,

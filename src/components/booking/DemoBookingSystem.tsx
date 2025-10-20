@@ -50,7 +50,7 @@ interface BookingData {
 }
 
 export function DemoBookingSystem() {
-  const { trackDemoRequest, trackFormInteraction } = useAnalytics()
+  const { trackDemoRequest } = useAnalytics()
   const [currentStep, setCurrentStep] = useState(1)
   const [selectedDate, setSelectedDate] = useState<string>('')
   const [selectedTime, setSelectedTime] = useState<string>('')

@@ -98,7 +98,7 @@ async function getAllTiers() {
       free: {
         name: freeTier.name,
         description: freeTier.description,
-        price: freeTier.price,
+        price: 'price' in freeTier ? freeTier.price : 0,
         currency: freeTier.currency,
         key_features: [
           '10 AI queries per day',
@@ -118,9 +118,10 @@ async function getAllTiers() {
       student: {
         name: studentTier.name,
         description: studentTier.description,
-        price: studentTier.price,
+        price: 'price' in studentTier ? studentTier.price : 0,
         currency: studentTier.currency,
-        regional_pricing: studentTier.regional_pricing,
+        regional_pricing:
+          'regional_pricing' in studentTier ? studentTier.regional_pricing : undefined,
         key_features: [
           'Unlimited AI queries',
           'Exam preparation mode',
@@ -131,14 +132,18 @@ async function getAllTiers() {
         exam_support: ['NEET preparation', 'MCAT preparation', 'AP Biology', 'IB Biology'],
         ideal_for: 'Serious biology students preparing for exams',
         trial_period: studentTier.trial_period,
-        student_discount: studentTier.student_verification?.discount_percentage,
+        student_discount:
+          'student_verification' in studentTier
+            ? studentTier.student_verification?.discount_percentage
+            : undefined,
       },
       premium: {
         name: premiumTier.name,
         description: premiumTier.description,
-        price: premiumTier.price,
+        price: 'price' in premiumTier ? premiumTier.price : 0,
         currency: premiumTier.currency,
-        regional_pricing: premiumTier.regional_pricing,
+        regional_pricing:
+          'regional_pricing' in premiumTier ? premiumTier.regional_pricing : undefined,
         key_features: [
           'Everything in Student',
           '1-on-1 AI tutoring (10 sessions/month)',
@@ -162,9 +167,14 @@ async function getAllTiers() {
         name: institutionalTier.name,
         description: institutionalTier.description,
         pricing_model: 'Per student/month',
-        base_price: institutionalTier.base_price_per_student,
-        minimum_students: institutionalTier.minimum_students,
-        volume_discounts: institutionalTier.volume_discounts,
+        base_price:
+          'base_price_per_student' in institutionalTier
+            ? institutionalTier.base_price_per_student
+            : 0,
+        minimum_students:
+          'minimum_students' in institutionalTier ? institutionalTier.minimum_students : 0,
+        volume_discounts:
+          'volume_discounts' in institutionalTier ? institutionalTier.volume_discounts : [],
         key_features: [
           'All Premium features for all students',
           'Admin dashboard',
@@ -213,15 +223,17 @@ async function getTierInfo(tierName: string) {
       name: tier.name,
       description: tier.description,
       pricing: {
-        price: tier.price,
+        price: 'price' in tier ? tier.price : undefined,
         currency: tier.currency,
         regional_pricing:
-          tierName === 'student' || tierName === 'premium' ? tier.regional_pricing : undefined,
+          (tierName === 'student' || tierName === 'premium') && 'regional_pricing' in tier
+            ? tier.regional_pricing
+            : undefined,
       },
       features: tier.features,
-      limitations: tier.limitations,
+      limitations: 'limitations' in tier ? tier.limitations : undefined,
       trial_period: tier.trial_period,
-      upgrade_incentives: tier.upgrade_incentives,
+      upgrade_incentives: 'upgrade_incentives' in tier ? tier.upgrade_incentives : undefined,
     },
     insights: [
       `${tier.name} is designed for specific user needs`,
