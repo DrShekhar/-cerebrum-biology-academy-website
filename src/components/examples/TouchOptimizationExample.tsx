@@ -160,8 +160,8 @@ function CourseDetailsForm({
 
   const [errors, setErrors] = useState<Record<string, string>>({})
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+  const handleSubmit = (e?: React.FormEvent) => {
+    if (e) e.preventDefault()
 
     // Validate form
     const newErrors: Record<string, string> = {}

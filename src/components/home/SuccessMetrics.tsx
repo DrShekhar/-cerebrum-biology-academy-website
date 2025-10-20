@@ -181,7 +181,6 @@ function MetricCardComponent({ metric, index, isInView }: MetricCardComponentPro
           <motion.div
             key={i}
             className="absolute w-1 h-1 rounded-full opacity-20"
-            style={{ background: metric.color.primary }}
             animate={{
               y: [-20, -100],
               opacity: [0, 0.6, 0],
@@ -194,6 +193,7 @@ function MetricCardComponent({ metric, index, isInView }: MetricCardComponentPro
               repeatDelay: 2,
             }}
             style={{
+              background: metric.color.primary,
               left: `${20 + i * 30}%`,
               top: '80%',
             }}

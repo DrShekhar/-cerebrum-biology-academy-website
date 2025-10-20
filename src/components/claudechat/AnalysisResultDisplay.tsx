@@ -37,11 +37,17 @@ interface ImageAnalysisResult {
 
 interface AnalysisResultDisplayProps {
   result: ImageAnalysisResult
+  onPlayAudio?: () => void
+  onStopAudio?: () => void
+  isAudioPlaying?: boolean
   className?: string
 }
 
 const AnalysisResultDisplay: React.FC<AnalysisResultDisplayProps> = ({
   result,
+  onPlayAudio,
+  onStopAudio,
+  isAudioPlaying = false,
   className = '',
 }) => {
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['analysis']))

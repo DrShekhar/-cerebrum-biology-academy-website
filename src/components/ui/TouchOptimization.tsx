@@ -145,7 +145,9 @@ export function SwipeableCourseCarousel({ courses, onCourseSelect }: CourseCarou
               index === currentIndex ? 'bg-purple-500' : 'bg-slate-300'
             }`}
             onClick={() => setCurrentIndex(index)}
-          />
+          >
+            <span className="sr-only">Course {index + 1}</span>
+          </TouchTarget>
         ))}
       </div>
     </div>
@@ -174,8 +176,10 @@ export function MobileActionBar({
           className="flex-1 bg-blue-600 text-white font-semibold py-3 rounded-lg flex items-center justify-center space-x-2"
           onClick={onCallClick}
         >
-          <PhoneIcon className="w-5 h-5" />
-          <span>Call</span>
+          <>
+            <PhoneIcon className="w-5 h-5" />
+            <span>Call</span>
+          </>
         </TouchTarget>
 
         <TouchTarget

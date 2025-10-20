@@ -3,12 +3,7 @@
  * Handles Facebook Pixel initialization and event tracking
  */
 
-declare global {
-  interface Window {
-    fbq: any
-    _fbq: any
-  }
-}
+import '../types/analytics'
 
 export class FacebookPixelService {
   private static isInitialized = false
@@ -17,11 +12,13 @@ export class FacebookPixelService {
     if (typeof window === 'undefined' || this.isInitialized) return
 
     // Facebook Pixel initialization
-    window.fbq =
-      window.fbq ||
-      function () {
-        ;(window.fbq.q = window.fbq.q || []).push(arguments)
+    if (!window.fbq) {
+      const fbq: any = function () {
+        ;(fbq.q = fbq.q || []).push(arguments)
       }
+      fbq.q = []
+      window.fbq = fbq
+    }
 
     if (!window._fbq) window._fbq = window.fbq
     window.fbq.push = window.fbq

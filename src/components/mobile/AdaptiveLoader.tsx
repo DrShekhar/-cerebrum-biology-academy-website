@@ -107,7 +107,7 @@ export default function AdaptiveLoader({
   const [showContent, setShowContent] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const containerRef = useRef<HTMLDivElement>(null)
-  const timeoutRef = useRef<NodeJS.Timeout>()
+  const timeoutRef = useRef<NodeJS.Timeout | undefined>(undefined)
 
   const { isDataSaverMode, isLowEndDevice, dataUsageMB, indianNetworkOptimizations } =
     useMobileOptimization()

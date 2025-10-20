@@ -27,7 +27,7 @@ function courseSelectorReducer(
         selectedClass: action.payload,
         lastInteraction: Date.now(),
         // Clear selections when changing class
-        selectedPlans: {},
+        selectedPlans: {} as Record<SeriesType, PlanSelection>,
         selectedPlan: null,
       }
 
@@ -52,11 +52,14 @@ function courseSelectorReducer(
 
     case 'CLEAR_SELECTION':
       const { [action.payload]: removed, ...remainingPlans } = state.selectedPlans
+      const typedRemainingPlans = remainingPlans as Partial<Record<SeriesType, PlanSelection>>
       return {
         ...state,
-        selectedPlans: remainingPlans,
+        selectedPlans: typedRemainingPlans as Record<SeriesType, PlanSelection>,
         selectedPlan:
-          Object.keys(remainingPlans).length > 0 ? Object.values(remainingPlans)[0] : null,
+          Object.keys(typedRemainingPlans).length > 0
+            ? (Object.values(typedRemainingPlans)[0] ?? null)
+            : null,
         lastInteraction: Date.now(),
       }
 

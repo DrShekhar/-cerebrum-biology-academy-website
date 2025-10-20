@@ -29,13 +29,7 @@ import VoiceRecognitionService, {
   BiologyTerm,
 } from '../../lib/voice/voiceRecognitionService'
 
-// Type declarations for Speech Recognition
-declare global {
-  interface Window {
-    SpeechRecognition: any
-    webkitSpeechRecognition: any
-  }
-}
+// Type declarations for Speech Recognition - removed to use global types
 
 interface VoiceMessage {
   id: string

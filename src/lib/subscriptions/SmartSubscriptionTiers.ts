@@ -754,18 +754,22 @@ export class SmartSubscriptionTiers {
     const t1 = this.tiers[tier1]
     const t2 = this.tiers[tier2]
 
+    // Get price for each tier (handle institutional tier differently)
+    const t1Price = 'price' in t1 ? t1.price : t1.base_price_per_student
+    const t2Price = 'price' in t2 ? t2.price : t2.base_price_per_student
+
     return {
       tier1: {
         name: t1.name,
-        price: t1.price,
+        price: t1Price,
         currency: t1.currency,
       },
       tier2: {
         name: t2.name,
-        price: t2.price,
+        price: t2Price,
         currency: t2.currency,
       },
-      price_difference: t2.price - t1.price,
+      price_difference: t2Price - t1Price,
       feature_comparison: this.generateFeatureComparison(t1, t2),
       value_proposition: this.generateValueProposition(t1, t2),
     }
@@ -795,7 +799,9 @@ export class SmartSubscriptionTiers {
   }
 
   private generateValueProposition(tier1: any, tier2: any): string {
-    const priceDiff = tier2.price - tier1.price
+    const tier1Price = 'price' in tier1 ? tier1.price : tier1.base_price_per_student
+    const tier2Price = 'price' in tier2 ? tier2.price : tier2.base_price_per_student
+    const priceDiff = tier2Price - tier1Price
     return `For just $${priceDiff} more per month, get 10x more value with advanced features`
   }
 }

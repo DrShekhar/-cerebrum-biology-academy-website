@@ -99,16 +99,19 @@ export class ClaudeChatEngine extends EventEmitter {
         emotion: 'explaining',
       })
 
-      // 4. Track interaction
-      this.analyticsEngine.trackVoiceInteraction(voiceInput, response)
-
-      return {
+      // 4. Build AI response
+      const aiResponse: AIResponse = {
         text: response.text,
         voiceAudio: voiceAudio.url,
-        visualAids: response.diagrams,
+        visualAids: response.diagrams || [],
         confidence: response.confidence,
-        followUpQuestions: response.followUpQuestions,
+        followUpQuestions: response.followUpQuestions || [],
       }
+
+      // 5. Track interaction
+      this.analyticsEngine.trackVoiceInteraction(voiceInput, aiResponse)
+
+      return aiResponse
     } catch (error) {
       console.error('Voice processing error:', error)
       throw error
@@ -125,7 +128,7 @@ export class ClaudeChatEngine extends EventEmitter {
       const arOverlays = await this.arProcessor.generateOverlays(analysis)
 
       // 3. Create interactive explanation
-      const explanation = await this.biologyAI.generateImageExplanation(analysis)
+      const explanation = await this.biologyAI.generateExplanationFromAnalysis(analysis)
 
       // 4. Synthesize voice explanation
       const voiceExplanation = await this.voiceSynthesizer.synthesizeShekharSirVoice({
@@ -344,6 +347,19 @@ export class BiologyAI {
     })
 
     return response.json()
+  }
+
+  async generateExplanationFromAnalysis(analysis: ImageAnalysis): Promise<string> {
+    // Generate explanation from image analysis
+    const concepts = analysis.concepts.join(', ')
+    const response = await this.callAnthropicAPI({
+      prompt: `Explain these biology concepts found in the diagram: ${concepts}.
+
+      Provide a clear, educational explanation suitable for students.`,
+      model: 'claude-3-sonnet',
+    })
+
+    return response.text || response.content || 'Unable to generate explanation'
   }
 }
 

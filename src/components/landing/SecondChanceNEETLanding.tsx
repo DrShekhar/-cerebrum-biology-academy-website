@@ -710,6 +710,7 @@ export function SecondChanceNEETLanding({
 
             <div className="flex justify-center space-x-4 mt-8">
               <PremiumButton
+                type="button"
                 onClick={onBookCounseling}
                 variant="luxury"
                 size="xl"
@@ -789,6 +790,7 @@ export function SecondChanceNEETLanding({
 
             <div className="grid md:grid-cols-3 gap-6">
               <PremiumButton
+                type="button"
                 onClick={onBookCounseling}
                 variant="luxury"
                 size="lg"
@@ -799,6 +801,7 @@ export function SecondChanceNEETLanding({
               </PremiumButton>
 
               <PremiumButton
+                type="button"
                 onClick={onDownloadStories}
                 variant="secondary"
                 size="lg"
@@ -809,6 +812,7 @@ export function SecondChanceNEETLanding({
               </PremiumButton>
 
               <PremiumButton
+                type="button"
                 onClick={() => window.open('/virtual-tour', '_blank')}
                 variant="secondary"
                 size="lg"
@@ -874,7 +878,7 @@ export function SecondChanceNEETLanding({
                     placeholder="Enter your email"
                     className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500"
                   />
-                  <PremiumButton variant="medical" size="lg" className="w-full">
+                  <PremiumButton type="button" variant="medical" size="lg" className="w-full">
                     Claim 50% Discount
                   </PremiumButton>
                 </div>
@@ -891,11 +895,23 @@ export function SecondChanceNEETLanding({
       {/* Fixed Bottom Action Bar - Mobile */}
       <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t shadow-lg p-3 z-40">
         <div className="flex space-x-3">
-          <PremiumButton onClick={onCallNow} variant="secondary" size="sm" className="flex-1">
+          <PremiumButton
+            type="button"
+            onClick={onCallNow}
+            variant="secondary"
+            size="sm"
+            className="flex-1"
+          >
             <PhoneIcon className="w-4 h-4 mr-2" />
             Call Now
           </PremiumButton>
-          <PremiumButton onClick={onWhatsAppContact} variant="medical" size="sm" className="flex-1">
+          <PremiumButton
+            type="button"
+            onClick={onWhatsAppContact}
+            variant="medical"
+            size="sm"
+            className="flex-1"
+          >
             <ChatBubbleLeftRightIcon className="w-4 h-4 mr-2" />
             WhatsApp
           </PremiumButton>

@@ -428,6 +428,7 @@ export function InstantEnrollment({
             </div>
 
             <PremiumButton
+              type="button"
               variant="medical"
               size="lg"
               onClick={onClose}

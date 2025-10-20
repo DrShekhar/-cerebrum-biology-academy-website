@@ -604,12 +604,7 @@ export class MetaIntegration {
   }
 }
 
-// Global Type Extensions
-declare global {
-  interface Window {
-    fbq: (...args: any[]) => void
-  }
-}
+import '../../types/analytics'
 
 export const metaIntegration = new MetaIntegration()
 

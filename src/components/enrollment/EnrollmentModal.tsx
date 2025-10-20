@@ -350,28 +350,35 @@ export function EnrollmentModal({ isOpen, onClose, course }: EnrollmentModalProp
                   <div className="border-t pt-6">
                     <h4 className="font-semibold text-gray-900 mb-4">Batch Preference</h4>
                     <div className="grid md:grid-cols-2 gap-4">
-                      {course.schedule?.map((schedule, index) => (
-                        <label
-                          key={index}
-                          className="flex items-center p-4 border border-gray-300 rounded-2xl cursor-pointer hover:border-blue-500 transition-colors"
-                        >
-                          <input
-                            type="radio"
-                            name="preferredBatch"
-                            value={`${schedule.days.join(', ')} - ${schedule.time}`}
-                            checked={
-                              formData.preferredBatch ===
-                              `${schedule.days.join(', ')} - ${schedule.time}`
-                            }
-                            onChange={handleInputChange}
-                            className="mr-3"
-                          />
-                          <div>
-                            <div className="font-medium">{schedule.days.join(', ')}</div>
-                            <div className="text-sm text-gray-600">{schedule.time}</div>
-                          </div>
-                        </label>
-                      ))}
+                      {course.schedule && Array.isArray((course.schedule as any).timing) ? (
+                        (course.schedule as any).timing.map((timing: string, index: number) => (
+                          <label
+                            key={index}
+                            className="flex items-center p-4 border border-gray-300 rounded-2xl cursor-pointer hover:border-blue-500 transition-colors"
+                          >
+                            <input
+                              type="radio"
+                              name="preferredBatch"
+                              value={timing}
+                              checked={formData.preferredBatch === timing}
+                              onChange={handleInputChange}
+                              className="mr-3"
+                            />
+                            <div>
+                              <div className="font-medium">{timing}</div>
+                              <div className="text-sm text-gray-600">
+                                {(course.schedule as any).daysPerWeek || 6} days/week
+                              </div>
+                            </div>
+                          </label>
+                        ))
+                      ) : (
+                        <div className="col-span-2 text-center text-gray-500">
+                          <p>
+                            Schedule information not available. Please contact us for batch timings.
+                          </p>
+                        </div>
+                      )}
                     </div>
                   </div>
 

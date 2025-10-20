@@ -88,6 +88,8 @@ export interface Faculty {
   teachingStyle?: string
   successRate?: number
   studentTestimonial?: string
+  studentsGuided?: number
+  rating?: number
 }
 
 export interface Testimonial {

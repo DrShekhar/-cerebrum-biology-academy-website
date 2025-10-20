@@ -289,8 +289,8 @@ export const usePricingCalculator = () => {
           break
 
         case 'custom':
-          // Custom plan based on user preferences
-          const customInstallments = selectionData?.budget?.paymentPreference === 'flexible' ? 6 : 3
+          // Custom plan - default to 6 installments
+          const customInstallments = 6
           const customAmount = Math.ceil(totalAmount / customInstallments)
           for (let i = 0; i < customInstallments; i++) {
             installments.push({

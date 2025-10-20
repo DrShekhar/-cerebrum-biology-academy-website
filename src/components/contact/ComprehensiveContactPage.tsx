@@ -291,6 +291,7 @@ export function ComprehensiveContactPage({
             {/* Quick Contact Bar */}
             <div className="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
               <PremiumButton
+                type="button"
                 onClick={() => handleQuickCall(selectedCenterData.phone)}
                 variant="luxury"
                 size="lg"
@@ -301,6 +302,7 @@ export function ComprehensiveContactPage({
               </PremiumButton>
 
               <PremiumButton
+                type="button"
                 onClick={() =>
                   handleWhatsApp('Hi! I need help with NEET Biology preparation. Please guide me.')
                 }
@@ -313,6 +315,7 @@ export function ComprehensiveContactPage({
               </PremiumButton>
 
               <PremiumButton
+                type="button"
                 onClick={onBookCounseling}
                 variant="secondary"
                 size="lg"
@@ -452,6 +455,7 @@ export function ComprehensiveContactPage({
                     {/* Action Buttons */}
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                       <PremiumButton
+                        type="button"
                         onClick={() => handleQuickCall(selectedCenterData.phone)}
                         variant="primary"
                         size="sm"
@@ -461,6 +465,7 @@ export function ComprehensiveContactPage({
                       </PremiumButton>
 
                       <PremiumButton
+                        type="button"
                         onClick={() => handleDirections(selectedCenterData)}
                         variant="secondary"
                         size="sm"
@@ -470,6 +475,7 @@ export function ComprehensiveContactPage({
                       </PremiumButton>
 
                       <PremiumButton
+                        type="button"
                         onClick={() => onBookVisit?.(selectedCenterData.id)}
                         variant="luxury"
                         size="sm"
@@ -479,6 +485,7 @@ export function ComprehensiveContactPage({
                       </PremiumButton>
 
                       <PremiumButton
+                        type="button"
                         onClick={() => window.open(selectedCenterData.virtualTourUrl, '_blank')}
                         variant="secondary"
                         size="sm"
@@ -617,6 +624,7 @@ export function ComprehensiveContactPage({
 
                     <div className="flex space-x-4 mt-6">
                       <PremiumButton
+                        type="button"
                         onClick={() =>
                           handleWhatsApp(
                             getWhatsAppMessage(selectedSupport, selectedCenterData.name)
@@ -630,6 +638,7 @@ export function ComprehensiveContactPage({
                       </PremiumButton>
 
                       <PremiumButton
+                        type="button"
                         onClick={() => handleQuickCall(selectedCenterData.phone)}
                         variant="secondary"
                         size="md"

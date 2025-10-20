@@ -12,16 +12,7 @@ import {
   trackStudySession,
   trackConversion,
 } from '@/lib/analytics/googleAnalytics'
-
-declare global {
-  interface Window {
-    gtag: (...args: any[]) => void
-    dataLayer: any[]
-    fbq: (...args: any[]) => void
-    clarity: (...args: any[]) => void
-    _hsq: any[]
-  }
-}
+import '@/types/analytics'
 
 export interface AnalyticsEvent {
   name: string
@@ -61,8 +52,8 @@ const DEFAULT_CONFIG: AnalyticsConfig = {
 
 export const useAnalytics = (config: AnalyticsConfig = {}) => {
   const finalConfig = { ...DEFAULT_CONFIG, ...config }
-  const sessionId = useRef<string>()
-  const userId = useRef<string>()
+  const sessionId = useRef<string | undefined>(undefined)
+  const userId = useRef<string | undefined>(undefined)
   const eventQueue = useRef<AnalyticsEvent[]>([])
   const isInitialized = useRef(false)
 
@@ -71,7 +62,7 @@ export const useAnalytics = (config: AnalyticsConfig = {}) => {
     if (typeof window === 'undefined') return
 
     if (!sessionId.current) {
-      sessionId.current = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+      sessionId.current = `session_${Date.now()}_${Math.random().toString(36).substring(2, 11)}`
     }
 
     // Try to get user ID from localStorage or generate new one
@@ -79,7 +70,7 @@ export const useAnalytics = (config: AnalyticsConfig = {}) => {
     if (storedUserId) {
       userId.current = storedUserId
     } else {
-      userId.current = `user_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+      userId.current = `user_${Date.now()}_${Math.random().toString(36).substring(2, 11)}`
       localStorage.setItem('analytics_user_id', userId.current)
     }
   }, [])

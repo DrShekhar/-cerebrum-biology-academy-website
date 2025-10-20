@@ -21,7 +21,7 @@ export interface KPIMetric {
   target: number
   current: number
   trend: 'up' | 'down' | 'stable'
-  category: 'growth' | 'engagement' | 'revenue' | 'quality'
+  category: 'growth' | 'engagement' | 'revenue' | 'quality' | 'retention'
   actionThreshold: number
   alertConditions: string[]
 }

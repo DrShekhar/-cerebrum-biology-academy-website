@@ -47,7 +47,7 @@ export interface WizardStep {
 
 export interface WizardStepProps {
   data: any
-  onUpdate: (data: any) => void
+  onUpdate: (stepKey: string, data: any) => void
   onNext: () => void
   onPrev: () => void
   isValid: boolean
@@ -410,7 +410,7 @@ const CourseWizardContainer: React.FC = () => {
                     onNext={handleNext}
                     onPrev={handlePrev}
                     isValid={isStepValid(currentStep)}
-                    variant={variant}
+                    variant={variant as 'default' | 'compact' | 'detailed'}
                   />
                 </motion.div>
               </AnimatePresence>

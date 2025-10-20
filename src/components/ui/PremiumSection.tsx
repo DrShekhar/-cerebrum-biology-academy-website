@@ -222,8 +222,8 @@ export const AcademicCard: React.FC<AcademicCardProps> = ({
       initial="initial"
       whileInView="animate"
       viewport={{ once: true }}
-      whileHover={hover ? premiumAnimations.premiumHover.whileHover : undefined}
-      whileTap={hover ? premiumAnimations.premiumHover.whileTap : undefined}
+      whileHover={hover ? (premiumAnimations.premiumHover.whileHover as any) : undefined}
+      whileTap={hover ? (premiumAnimations.premiumHover.whileTap as any) : undefined}
     >
       {children}
     </motion.div>

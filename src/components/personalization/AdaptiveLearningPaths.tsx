@@ -211,9 +211,9 @@ export function AdaptiveLearningPaths() {
 
     // Generate daily schedule based on preferences
     const studyTime = preferences.studyTime || 'evening'
-    const timeSlots = getTimeSlots(studyTime)[
-      ('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday')
-    ].forEach((day) => {
+    const timeSlots = getTimeSlots(studyTime)
+    const weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+    weekdays.forEach((day) => {
       dailySchedule[day] = [
         {
           time: timeSlots.primary,

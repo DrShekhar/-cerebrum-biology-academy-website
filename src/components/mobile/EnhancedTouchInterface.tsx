@@ -69,11 +69,14 @@ export function EnhancedTouchInterface({
       label: 'View Courses',
       hindi: 'कोर्सेज देखें',
       icon: BookOpenIcon,
-      action: () =>
+      action: () => {
+        const element = document.querySelector('#courses')
+        const top = element instanceof HTMLElement ? element.offsetTop : 800
         window.scrollTo({
-          top: document.querySelector('#courses')?.offsetTop || 800,
+          top,
           behavior: 'smooth',
-        }),
+        })
+      },
       color: 'bg-gradient-to-r from-purple-500 to-purple-600',
       priority: 'medium',
     },
@@ -116,8 +119,8 @@ export function EnhancedTouchInterface({
 
   // Simplified animations for slow devices
   const animationConfig = shouldReduceAnimations
-    ? { duration: 0.1, ease: 'linear' }
-    : { duration: 0.3, ease: 'easeOut' }
+    ? { duration: 0.1, ease: 'linear' as const }
+    : { duration: 0.3, ease: 'easeOut' as const }
 
   return (
     <div className={`fixed bottom-0 left-0 right-0 z-50 ${className}`}>

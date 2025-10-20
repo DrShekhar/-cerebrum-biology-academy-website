@@ -230,7 +230,7 @@ function FeeCalculator({
   seriesId: string
   planId: string
 }) {
-  const [installmentMonths, setInstallmentMonths] = useState(12)
+  const [installmentMonths, setInstallmentMonths] = useState<number>(12)
   const [processingFee] = useState(2000)
 
   const monthlyEMI = Math.ceil((totalFee + processingFee) / installmentMonths)
@@ -676,7 +676,8 @@ export default function SmartCourseSelectorUI({
               <QuestionCard
                 question={currentQuestion}
                 selectedValue={
-                  answers[currentQuestion.id] || (currentQuestion.type === 'multiple' ? [] : '')
+                  (answers[currentQuestion.id] as string | string[]) ||
+                  (currentQuestion.type === 'multiple' ? [] : '')
                 }
                 onAnswerSelect={(answer) => handleAnswerSelect(currentQuestion.id, answer)}
               />
@@ -701,7 +702,7 @@ export default function SmartCourseSelectorUI({
               !answers[currentQuestion?.id] ||
               (currentQuestion?.type === 'multiple' &&
                 (!Array.isArray(answers[currentQuestion.id]) ||
-                  answers[currentQuestion.id].length === 0))
+                  (answers[currentQuestion.id] as string[]).length === 0))
             }
             className="flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
           >

@@ -3,7 +3,6 @@
 import { useState } from 'react'
 import { Button } from '@/components/ui/Button'
 import { Input } from '@/components/ui/Input'
-import { Select } from '@/components/ui/Select'
 import { Textarea } from '@/components/ui/Textarea'
 import { ContactForm } from '@/types'
 import { Calendar, Phone, Mail, User, BookOpen, MessageSquare, Clock } from 'lucide-react'
@@ -223,15 +222,20 @@ export function BookingForm({ type = 'demo', onSubmit }: BookingFormProps) {
             <BookOpen className="w-4 h-4 inline mr-2" />
             Course of Interest *
           </label>
-          <Select
+          <select
             id="course"
-            options={courseOptions}
             value={formData.course}
             onChange={(e) => handleInputChange('course', e.target.value)}
-            className={
+            className={`w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
               errors.course ? 'border-red-500 focus:border-red-500 focus:ring-red-200' : ''
-            }
-          />
+            }`}
+          >
+            {courseOptions.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            ))}
+          </select>
           {errors.course && <p className="text-red-500 text-sm mt-1">{errors.course}</p>}
         </div>
 
@@ -242,14 +246,20 @@ export function BookingForm({ type = 'demo', onSubmit }: BookingFormProps) {
               <Clock className="w-4 h-4 inline mr-2" />
               Preferred Time
             </label>
-            <Select
+            <select
               id="preferredTime"
-              options={preferredTimeOptions}
               value={formData.preferredTime || ''}
               onChange={(e) =>
                 handleInputChange('preferredTime' as keyof ContactForm, e.target.value)
               }
-            />
+              className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+            >
+              {preferredTimeOptions.map((option) => (
+                <option key={option.value} value={option.value}>
+                  {option.label}
+                </option>
+              ))}
+            </select>
           </div>
         )}
 

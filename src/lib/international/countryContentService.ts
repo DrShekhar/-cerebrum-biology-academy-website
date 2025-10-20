@@ -36,6 +36,7 @@ export interface CountryContactInfo {
   address: string
   hours: string
   preferredContact: string
+  timezone?: string
 }
 
 export interface SocialProof {

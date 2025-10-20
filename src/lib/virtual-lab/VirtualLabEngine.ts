@@ -708,7 +708,10 @@ export class VirtualLabEngine {
           'Analyze DNA purity and concentration',
         ],
         prerequisites: ['basic_cell_biology', 'laboratory_safety'],
-        equipment: ['microscope_001', 'centrifuge_001'],
+        equipment: [
+          this.equipment.get('microscope_001') as VirtualEquipment,
+          this.equipment.get('centrifuge_001') as VirtualEquipment,
+        ],
         procedures: [
           {
             stepId: 'preparation',

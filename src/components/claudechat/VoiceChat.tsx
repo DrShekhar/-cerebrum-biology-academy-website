@@ -17,13 +17,7 @@ import {
   MessageCircle,
 } from 'lucide-react'
 
-// Type declaration for SpeechRecognition
-declare global {
-  interface Window {
-    SpeechRecognition: any
-    webkitSpeechRecognition: any
-  }
-}
+// Type declaration for SpeechRecognition - removed to use global types
 
 interface SpeechRecognition extends EventTarget {
   continuous: boolean

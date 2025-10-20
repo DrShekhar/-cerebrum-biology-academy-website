@@ -286,8 +286,7 @@ export function ExploratoryFlow({ onCounselingBook, className = '' }: Explorator
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
               >
-                <PremiumCard
-                  variant="luxury"
+                <div
                   className={`h-full cursor-pointer transition-all duration-300 ${
                     selectedCourses.includes(course.id)
                       ? 'ring-2 ring-blue-500 bg-blue-50'
@@ -295,96 +294,98 @@ export function ExploratoryFlow({ onCounselingBook, className = '' }: Explorator
                   }`}
                   onClick={() => handleCourseToggle(course.id)}
                 >
-                  <div className="p-6 space-y-4">
-                    {/* Course Header */}
-                    <div className="flex items-start justify-between">
-                      <div className="space-y-2">
-                        <h3 className="text-xl font-bold text-gray-900">{course.name}</h3>
-                        <div className="flex items-center gap-4 text-sm text-gray-600">
-                          <div className="flex items-center gap-1">
-                            <ClockIcon className="h-4 w-4" />
-                            {course.duration}
+                  <PremiumCard variant="luxury" className="h-full">
+                    <div className="p-6 space-y-4">
+                      {/* Course Header */}
+                      <div className="flex items-start justify-between">
+                        <div className="space-y-2">
+                          <h3 className="text-xl font-bold text-gray-900">{course.name}</h3>
+                          <div className="flex items-center gap-4 text-sm text-gray-600">
+                            <div className="flex items-center gap-1">
+                              <ClockIcon className="h-4 w-4" />
+                              {course.duration}
+                            </div>
+                            <div className="flex items-center gap-1">
+                              <UserGroupIcon className="h-4 w-4" />
+                              {course.batchSize} students/batch
+                            </div>
                           </div>
-                          <div className="flex items-center gap-1">
-                            <UserGroupIcon className="h-4 w-4" />
-                            {course.batchSize} students/batch
+                        </div>
+                        <div className="text-right">
+                          <div className="text-sm text-gray-500 line-through">
+                            ₹{course.originalPrice.toLocaleString()}
+                          </div>
+                          <div className="text-2xl font-bold text-green-600">
+                            ₹{course.price.toLocaleString()}
                           </div>
                         </div>
                       </div>
-                      <div className="text-right">
-                        <div className="text-sm text-gray-500 line-through">
-                          ₹{course.originalPrice.toLocaleString()}
-                        </div>
-                        <div className="text-2xl font-bold text-green-600">
-                          ₹{course.price.toLocaleString()}
-                        </div>
-                      </div>
-                    </div>
 
-                    {/* Course Stats */}
-                    <div className="grid grid-cols-3 gap-4 py-4 border-y border-gray-200">
-                      <div className="text-center">
-                        <div className="text-lg font-bold text-blue-600">
-                          <AnimatedCounter value={course.successRate} suffix="%" />
+                      {/* Course Stats */}
+                      <div className="grid grid-cols-3 gap-4 py-4 border-y border-gray-200">
+                        <div className="text-center">
+                          <div className="text-lg font-bold text-blue-600">
+                            <AnimatedCounter value={course.successRate} suffix="%" />
+                          </div>
+                          <div className="text-xs text-gray-500">Success Rate</div>
                         </div>
-                        <div className="text-xs text-gray-500">Success Rate</div>
-                      </div>
-                      <div className="text-center">
-                        <div className="text-lg font-bold text-purple-600">
-                          <AnimatedCounter value={course.studentsEnrolled} />
+                        <div className="text-center">
+                          <div className="text-lg font-bold text-purple-600">
+                            <AnimatedCounter value={course.studentsEnrolled} />
+                          </div>
+                          <div className="text-xs text-gray-500">Students</div>
                         </div>
-                        <div className="text-xs text-gray-500">Students</div>
+                        <div className="text-center">
+                          <div className="flex justify-center">
+                            {[...Array(5)].map((_, i) => (
+                              <StarSolid
+                                key={i}
+                                className={`h-4 w-4 ${i < Math.floor(course.rating) ? 'text-yellow-400' : 'text-gray-300'}`}
+                              />
+                            ))}
+                          </div>
+                          <div className="text-xs text-gray-500">{course.rating}/5</div>
+                        </div>
                       </div>
-                      <div className="text-center">
-                        <div className="flex justify-center">
-                          {[...Array(5)].map((_, i) => (
-                            <StarSolid
-                              key={i}
-                              className={`h-4 w-4 ${i < Math.floor(course.rating) ? 'text-yellow-400' : 'text-gray-300'}`}
-                            />
+
+                      {/* Course Description */}
+                      <p className="text-gray-600 text-sm leading-relaxed">{course.description}</p>
+
+                      {/* Course Features */}
+                      <div className="space-y-2">
+                        <div className="text-sm font-semibold text-gray-900">Key Features:</div>
+                        <div className="grid grid-cols-2 gap-1">
+                          {course.features.map((feature, i) => (
+                            <div key={i} className="flex items-center gap-2 text-sm text-gray-600">
+                              <CheckCircleIcon className="h-4 w-4 text-green-500 flex-shrink-0" />
+                              {feature}
+                            </div>
                           ))}
                         </div>
-                        <div className="text-xs text-gray-500">{course.rating}/5</div>
                       </div>
-                    </div>
 
-                    {/* Course Description */}
-                    <p className="text-gray-600 text-sm leading-relaxed">{course.description}</p>
-
-                    {/* Course Features */}
-                    <div className="space-y-2">
-                      <div className="text-sm font-semibold text-gray-900">Key Features:</div>
-                      <div className="grid grid-cols-2 gap-1">
-                        {course.features.map((feature, i) => (
-                          <div key={i} className="flex items-center gap-2 text-sm text-gray-600">
-                            <CheckCircleIcon className="h-4 w-4 text-green-500 flex-shrink-0" />
-                            {feature}
-                          </div>
+                      {/* Highlights */}
+                      <div className="flex flex-wrap gap-2">
+                        {course.highlights.map((highlight, i) => (
+                          <span
+                            key={i}
+                            className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full"
+                          >
+                            {highlight}
+                          </span>
                         ))}
                       </div>
-                    </div>
 
-                    {/* Highlights */}
-                    <div className="flex flex-wrap gap-2">
-                      {course.highlights.map((highlight, i) => (
-                        <span
-                          key={i}
-                          className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full"
-                        >
-                          {highlight}
+                      {/* Faculty */}
+                      <div className="flex items-center gap-2 text-sm text-gray-600 bg-gray-50 rounded-lg p-3">
+                        <AcademicCapIcon className="h-4 w-4" />
+                        <span>
+                          Faculty: <span className="font-semibold">{course.faculty}</span>
                         </span>
-                      ))}
+                      </div>
                     </div>
-
-                    {/* Faculty */}
-                    <div className="flex items-center gap-2 text-sm text-gray-600 bg-gray-50 rounded-lg p-3">
-                      <AcademicCapIcon className="h-4 w-4" />
-                      <span>
-                        Faculty: <span className="font-semibold">{course.faculty}</span>
-                      </span>
-                    </div>
-                  </div>
-                </PremiumCard>
+                  </PremiumCard>
+                </div>
               </motion.div>
             ))}
           </div>

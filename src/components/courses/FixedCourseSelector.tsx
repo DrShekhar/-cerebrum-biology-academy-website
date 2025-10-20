@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ClassLevel, CourseProgram } from '@/types/courseSystem'
+import { ClassLevel, CourseProgram, LearningMode } from '@/types/courseSystem'
 import { coursePrograms, courseTiers } from '@/data/courseSystemData'
 import { getSeriesForClass, Series } from '@/data/seriesData'
 import { ClassFilterNav } from './ClassFilterNav'
@@ -184,10 +184,14 @@ function EnhancedSeriesCard({
                 <div className={`text-2xl font-bold ${theme.text}`}>
                   ₹{selectedPlanData.price.toLocaleString()}
                 </div>
-                {selectedPlanData.originalPrice &&
-                  selectedPlanData.originalPrice > selectedPlanData.price && (
+                {(selectedPlanData as unknown as { originalPrice?: number }).originalPrice &&
+                  (selectedPlanData as unknown as { originalPrice: number }).originalPrice >
+                    selectedPlanData.price && (
                     <div className="text-sm text-gray-500 line-through">
-                      ₹{selectedPlanData.originalPrice.toLocaleString()}
+                      ₹
+                      {(
+                        selectedPlanData as unknown as { originalPrice: number }
+                      ).originalPrice.toLocaleString()}
                     </div>
                   )}
                 <div className="text-sm text-gray-500">{selectedPlanData.duration}</div>
@@ -481,9 +485,41 @@ export function FixedCourseSelector({ onCourseSelect, className = '' }: FixedCou
                           const mockCourse: CourseProgram = {
                             id: `${series.id}-${selectedClass}`,
                             name: `${series.name} - Class ${selectedClass}`,
-                            class: selectedClass as ClassLevel,
-                            tier: series.id,
-                            features: series.plans[0].features,
+                            description: `${series.name} series course for Class ${selectedClass}`,
+                            targetClass: selectedClass as ClassLevel,
+                            duration: '1 Year',
+                            teachingHours: series.weeklyHours || 6,
+                            learningMode: ['Online', 'Offline', 'Hybrid'] as LearningMode[],
+                            tiers: {
+                              pinnacle: {
+                                price: 150000,
+                                batchSize: 12,
+                                features: {} as any,
+                                payment: {} as any,
+                                additionalBenefits: [],
+                              },
+                              ascent: {
+                                price: 98000,
+                                batchSize: 16,
+                                features: {} as any,
+                                payment: {} as any,
+                                additionalBenefits: [],
+                              },
+                              pursuit: {
+                                price: 58000,
+                                batchSize: 20,
+                                features: {} as any,
+                                payment: {} as any,
+                                additionalBenefits: [],
+                              },
+                            },
+                            curriculum: {} as any,
+                            schedule: {} as any,
+                            faculty: [],
+                            prerequisites: [],
+                            learningOutcomes: [],
+                            testimonials: [],
+                            faq: [],
                             isFeatured: series.id === 'ascent',
                             isPopular: series.id === 'ascent',
                           }

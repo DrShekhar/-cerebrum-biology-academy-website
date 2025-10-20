@@ -1,5 +1,6 @@
 'use client'
 
+import React from 'react'
 import { motion } from 'framer-motion'
 import { BookOpen, Play, Award, Users, Clock, CheckCircle } from 'lucide-react'
 

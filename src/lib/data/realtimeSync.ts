@@ -152,7 +152,7 @@ export function useRealtimeData<T>(
   const [data, setData] = useState<T>(initialData)
   const [isConnected, setIsConnected] = useState(false)
   const [error, setError] = useState<string | null>(null)
-  const animationFrameRef = useRef<number>()
+  const animationFrameRef = useRef<number | undefined>(undefined)
   const pendingUpdatesRef = useRef<T[]>([])
 
   const {
@@ -165,7 +165,7 @@ export function useRealtimeData<T>(
   // Apply updates with animation frame synchronization
   const applyUpdates = useCallback(() => {
     if (pendingUpdatesRef.current.length > 0) {
-      const latestUpdate = pendingUpdatesRef.current.pop()!
+      const latestUpdate = pendingUpdatesRef.current[pendingUpdatesRef.current.length - 1]
       pendingUpdatesRef.current = [] // Clear all pending updates
 
       setData(latestUpdate)
@@ -318,7 +318,7 @@ export function trackCourseInteraction(
 ) {
   const event: RealtimeEvent = {
     id: crypto.randomUUID(),
-    type: 'user_interaction',
+    type: 'engagement_update',
     data: {
       courseId,
       action,

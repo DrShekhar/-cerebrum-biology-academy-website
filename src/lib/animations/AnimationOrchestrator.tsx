@@ -75,7 +75,7 @@ export function AnimationOrchestrator({
                     ? document.querySelector(target)
                     : registeredElements.current.get(anim.target)?.current
 
-                  if (element) {
+                  if (element && element instanceof HTMLElement) {
                     // Apply animation based on type
                     element.style.transition = `all ${phase.duration * globalTimingRef.current}s ${appleAnimations.easing.appleDefault}`
                   }
@@ -160,14 +160,29 @@ export const EnhancedMotionDiv: React.FC<EnhancedMotionProps> = ({
     }
   }, [isInView, sequence, delay, triggerSequence])
 
-  const variants = appleAnimations.variants
+  const variants = {
+    hidden: {
+      opacity: 0,
+      y: 60,
+      scale: 0.8,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.7,
+        ease: [0.16, 1, 0.3, 1] as [number, number, number, number],
+      },
+    },
+  }
 
   return (
     <motion.div
       ref={ref}
       initial="hidden"
       animate={isInView ? 'visible' : 'hidden'}
-      variants={variants.cardEntrance}
+      variants={variants}
       className={className}
       {...props}
     >
@@ -237,7 +252,7 @@ export const AnimatedCard: React.FC<AnimatedCardProps> = ({
             transition: {
               duration: 0.6,
               delay: index * 0.1,
-              ease: [0.16, 1, 0.3, 1],
+              ease: [0.16, 1, 0.3, 1] as [number, number, number, number],
             },
           },
         }
@@ -250,7 +265,7 @@ export const AnimatedCard: React.FC<AnimatedCardProps> = ({
             transition: {
               duration: 0.8,
               delay: index * 0.1,
-              ease: [0.16, 1, 0.3, 1],
+              ease: [0.16, 1, 0.3, 1] as [number, number, number, number],
             },
           },
         }
@@ -264,7 +279,7 @@ export const AnimatedCard: React.FC<AnimatedCardProps> = ({
             transition: {
               duration: 0.7,
               delay: index * 0.1,
-              ease: [0.16, 1, 0.3, 1],
+              ease: [0.16, 1, 0.3, 1] as [number, number, number, number],
             },
           },
         }
@@ -277,20 +292,29 @@ export const AnimatedCard: React.FC<AnimatedCardProps> = ({
         return {
           scale: 1.02,
           y: -5,
-          transition: { duration: 0.3, ease: [0.16, 1, 0.3, 1] },
+          transition: {
+            duration: 0.3,
+            ease: [0.16, 1, 0.3, 1] as [number, number, number, number],
+          },
         }
       case 'dramatic':
         return {
           scale: 1.05,
           y: -15,
           rotateX: 5,
-          transition: { duration: 0.3, ease: [0.16, 1, 0.3, 1] },
+          transition: {
+            duration: 0.3,
+            ease: [0.16, 1, 0.3, 1] as [number, number, number, number],
+          },
         }
       default: // dynamic
         return {
           scale: 1.03,
           y: -8,
-          transition: { duration: 0.3, ease: [0.16, 1, 0.3, 1] },
+          transition: {
+            duration: 0.3,
+            ease: [0.16, 1, 0.3, 1] as [number, number, number, number],
+          },
         }
     }
   }
@@ -349,7 +373,10 @@ export const PageTransition: React.FC<PageTransitionProps> = ({
           initial: { opacity: 0 },
           animate: { opacity: 1 },
           exit: { opacity: 0 },
-          transition: { duration: 0.4, ease: [0.16, 1, 0.3, 1] },
+          transition: {
+            duration: 0.4,
+            ease: [0.16, 1, 0.3, 1] as [number, number, number, number],
+          },
         }
       default: // slide
         return direction === 'right'
@@ -358,9 +385,19 @@ export const PageTransition: React.FC<PageTransitionProps> = ({
     }
   }
 
+  const config = getTransitionConfig()
+  const transition = config.transition as any
+
   return (
     <AnimatePresence mode="wait">
-      <motion.div {...getTransitionConfig()}>{children}</motion.div>
+      <motion.div
+        initial={config.initial}
+        animate={config.animate}
+        exit={config.exit}
+        transition={transition}
+      >
+        {children}
+      </motion.div>
     </AnimatePresence>
   )
 }

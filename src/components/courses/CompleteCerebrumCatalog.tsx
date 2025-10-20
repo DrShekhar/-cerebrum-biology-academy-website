@@ -390,10 +390,16 @@ export function CompleteCerebrumCatalog({ className = '' }: CompleteCerebrumCata
 
   // Filter courses based on selected criteria
   const getFilteredCourses = () => {
-    let allCourses: any[] = []
+    let allCourses: {
+      [key: string]: unknown
+      seriesKey: string
+      seriesTitle: string
+      title: string
+      type: string
+    }[] = []
 
     Object.entries(COMPLETE_COURSE_CATALOG).forEach(([seriesKey, series]) => {
-      series.courses.forEach((course: any) => {
+      series.courses.forEach((course: { title: string; type: string; [key: string]: unknown }) => {
         allCourses.push({
           ...course,
           seriesKey,
@@ -530,9 +536,9 @@ export function CompleteCerebrumCatalog({ className = '' }: CompleteCerebrumCata
                 {/* Course Cards */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {(selectedSeries === 'all' ? series.courses : seriesCourses).map(
-                    (course: any, index: number) => (
+                    (course: { [key: string]: unknown; id?: string }, index: number) => (
                       <motion.div
-                        key={course.id}
+                        key={String(course.id || index)}
                         initial={{ opacity: 0, y: 50 }}
                         animate={catalogInView ? { opacity: 1, y: 0 } : {}}
                         transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -541,41 +547,79 @@ export function CompleteCerebrumCatalog({ className = '' }: CompleteCerebrumCata
                       >
                         {/* Course Header */}
                         <div className="mb-6">
-                          <h3 className="text-xl font-bold text-white mb-2">{course.title}</h3>
-                          <p className="text-cyan-300 text-sm mb-2">{course.type}</p>
-                          <p className="text-white/70 text-sm">{course.duration}</p>
+                          <h3 className="text-xl font-bold text-white mb-2">
+                            {String(course.title || '')}
+                          </h3>
+                          <p className="text-cyan-300 text-sm mb-2">{String(course.type || '')}</p>
+                          <p className="text-white/70 text-sm">{String(course.duration || '')}</p>
                           {course.teachingHours && (
-                            <p className="text-white/60 text-xs mt-1">{course.teachingHours}</p>
+                            <p className="text-white/60 text-xs mt-1">
+                              {String(course.teachingHours)}
+                            </p>
                           )}
                         </div>
 
                         {/* Pricing */}
-                        {course.installments && (
+                        {course.installments && typeof course.installments === 'object' && (
                           <div className="mb-6">
                             <div className="bg-black/30 backdrop-blur-xl rounded-2xl p-4 border border-white/20">
                               <h4 className="font-bold text-white text-sm mb-3">
                                 Payment Options:
                               </h4>
                               <div className="space-y-2 text-sm">
-                                <div className="flex justify-between">
-                                  <span className="text-white/80">Single:</span>
-                                  <span className="font-bold text-green-400">
-                                    ₹{(course.installments.single / 1000).toFixed(0)}K
-                                  </span>
-                                </div>
-                                {course.installments.two && (
+                                {(
+                                  course.installments as {
+                                    single?: number
+                                    two?: number
+                                    three?: number
+                                  }
+                                ).single && (
                                   <div className="flex justify-between">
-                                    <span className="text-white/80">Two:</span>
-                                    <span className="font-bold text-yellow-400">
-                                      ₹{(course.installments.two / 1000).toFixed(0)}K
+                                    <span className="text-white/80">Single:</span>
+                                    <span className="font-bold text-green-400">
+                                      ₹
+                                      {(
+                                        ((course.installments as { single: number }).single || 0) /
+                                        1000
+                                      ).toFixed(0)}
+                                      K
                                     </span>
                                   </div>
                                 )}
-                                {course.installments.three && (
+                                {(
+                                  course.installments as {
+                                    single?: number
+                                    two?: number
+                                    three?: number
+                                  }
+                                ).two && (
+                                  <div className="flex justify-between">
+                                    <span className="text-white/80">Two:</span>
+                                    <span className="font-bold text-yellow-400">
+                                      ₹
+                                      {(
+                                        ((course.installments as { two: number }).two || 0) / 1000
+                                      ).toFixed(0)}
+                                      K
+                                    </span>
+                                  </div>
+                                )}
+                                {(
+                                  course.installments as {
+                                    single?: number
+                                    two?: number
+                                    three?: number
+                                  }
+                                ).three && (
                                   <div className="flex justify-between">
                                     <span className="text-white/80">Three:</span>
                                     <span className="font-bold text-orange-400">
-                                      ₹{(course.installments.three / 1000).toFixed(0)}K
+                                      ₹
+                                      {(
+                                        ((course.installments as { three: number }).three || 0) /
+                                        1000
+                                      ).toFixed(0)}
+                                      K
                                     </span>
                                   </div>
                                 )}
@@ -593,9 +637,9 @@ export function CompleteCerebrumCatalog({ className = '' }: CompleteCerebrumCata
                               </h4>
                               <div className="space-y-1 text-xs text-white/80">
                                 {Object.entries(course.pricing).map(
-                                  ([key, value]: [string, any]) => (
+                                  ([key, value]: [string, unknown]) => (
                                     <div key={key}>
-                                      {typeof value === 'object' ? (
+                                      {typeof value === 'object' && value !== null ? (
                                         <div>
                                           <strong>{key}:</strong>
                                           {Object.entries(value).map(([subKey, subValue]) => (
@@ -603,13 +647,13 @@ export function CompleteCerebrumCatalog({ className = '' }: CompleteCerebrumCata
                                               {subKey}:{' '}
                                               {typeof subValue === 'number'
                                                 ? `₹${(subValue / 1000).toFixed(0)}K`
-                                                : subValue}
+                                                : String(subValue)}
                                             </div>
                                           ))}
                                         </div>
                                       ) : (
                                         <div>
-                                          {key}: {value}
+                                          {key}: {String(value)}
                                         </div>
                                       )}
                                     </div>
@@ -621,19 +665,21 @@ export function CompleteCerebrumCatalog({ className = '' }: CompleteCerebrumCata
                         )}
 
                         {/* Features */}
-                        {course.features && (
+                        {course.features && Array.isArray(course.features) && (
                           <div className="mb-6">
                             <h4 className="font-bold text-white text-sm mb-3">Features:</h4>
                             <div className="space-y-1">
-                              {course.features.slice(0, 5).map((feature: string, idx: number) => (
-                                <div key={idx} className="flex items-center gap-2">
-                                  <Check className="h-3 w-3 text-green-400 flex-shrink-0" />
-                                  <span className="text-white/80 text-xs">{feature}</span>
-                                </div>
-                              ))}
-                              {course.features.length > 5 && (
+                              {(course.features as string[])
+                                .slice(0, 5)
+                                .map((feature: string, idx: number) => (
+                                  <div key={idx} className="flex items-center gap-2">
+                                    <Check className="h-3 w-3 text-green-400 flex-shrink-0" />
+                                    <span className="text-white/80 text-xs">{feature}</span>
+                                  </div>
+                                ))}
+                              {(course.features as string[]).length > 5 && (
                                 <div className="text-xs text-cyan-400">
-                                  +{course.features.length - 5} more features
+                                  +{(course.features as string[]).length - 5} more features
                                 </div>
                               )}
                             </div>

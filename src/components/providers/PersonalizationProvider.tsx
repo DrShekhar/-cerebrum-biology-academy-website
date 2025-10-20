@@ -2,13 +2,13 @@
 
 import React, { createContext, useContext, useEffect, useState } from 'react'
 import {
-  UserPreferences,
-  PersonalizationContext,
-  CourseRecommendation,
+  type UserPreferences,
+  type PersonalizationContext as PersonalizationContextType,
+  type CourseRecommendation,
   UserPreferenceManager,
 } from '@/lib/personalization/userPreferences'
 
-const PersonalizationContext = createContext<PersonalizationContext | undefined>(undefined)
+const PersonalizationContext = createContext<PersonalizationContextType | undefined>(undefined)
 
 export function usePersonalization() {
   const context = useContext(PersonalizationContext)
@@ -185,7 +185,7 @@ export function PersonalizationProvider({ children }: PersonalizationProviderPro
     }
   }
 
-  const value: PersonalizationContext = {
+  const value: PersonalizationContextType = {
     preferences,
     updatePreferences,
     resetPreferences,

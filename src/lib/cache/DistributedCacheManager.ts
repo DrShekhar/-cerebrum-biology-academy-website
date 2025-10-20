@@ -21,6 +21,7 @@ interface CacheConfig {
     question: string
     session: string
     analytics: string
+    assessment: string
   }
 }
 

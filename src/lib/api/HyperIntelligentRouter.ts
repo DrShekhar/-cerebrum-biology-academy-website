@@ -12,13 +12,21 @@ interface APIRequest {
   id: string
   userId: string
   content: string
-  type: 'quick_answer' | 'complex_reasoning' | 'diagram_analysis' | 'formula_explanation'
+  type:
+    | 'quick_answer'
+    | 'complex_reasoning'
+    | 'diagram_analysis'
+    | 'formula_explanation'
+    | 'assessment_generation'
+    | 'question_generation'
+    | 'assessment_analysis'
+    | 'response_evaluation'
   context?: any
   priority: 'low' | 'medium' | 'high' | 'critical'
   maxTokens?: number
   requiresVisuals?: boolean
   language: 'english' | 'hindi' | 'hinglish'
-  studentLevel: 'beginner' | 'intermediate' | 'advanced' | 'neet'
+  studentLevel: 'beginner' | 'intermediate' | 'advanced' | 'neet' | 'expert'
 }
 
 interface APIResponse {
@@ -356,17 +364,19 @@ export class HyperIntelligentRouter {
       model: 'claude-3-5-sonnet-20241022',
       max_tokens: request.maxTokens || 1000,
       temperature: 0.7,
-      system: systemPrompt,
+      system: [
+        {
+          type: 'text',
+          text: systemPrompt,
+          cache_control: { type: 'ephemeral' },
+        },
+      ],
       messages: [
         {
           role: 'user',
           content: prompt,
         },
       ],
-      // Undocumented: Enable prompt caching for repeated patterns
-      extra: {
-        cache_control: { type: 'ephemeral' },
-      },
     })
 
     const content = response.content[0]

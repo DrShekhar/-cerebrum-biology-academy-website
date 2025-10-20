@@ -57,7 +57,7 @@ export class VoiceSynthesis {
         model: 'tts-1-hd', // High quality model
         voice: voiceModel,
         input: optimizedText,
-        response_format: request.format || 'mp3',
+        response_format: (request.format === 'ogg' ? 'opus' : request.format) || 'mp3',
         speed: this.getSpeedValue(request.speed),
       })
 

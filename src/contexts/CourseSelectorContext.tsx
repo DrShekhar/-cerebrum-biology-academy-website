@@ -114,7 +114,7 @@ export function CourseSelectorProvider({
     },
 
     onStateChange: (newState) => {
-      onStateChange?.(newState)
+      onStateChange?.(state)
     },
   }
 

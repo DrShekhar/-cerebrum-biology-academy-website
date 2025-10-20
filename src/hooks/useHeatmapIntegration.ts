@@ -372,6 +372,8 @@ function generateInteractionSummary(dataPoints: any[]): Record<string, any> {
 function identifyHotspots(
   dataPoints: any[]
 ): Array<{ element: string; interactions: number; types: string[] }> {
+  type ElementData = { interactions: number; types: Set<string> }
+
   const elementMap = dataPoints.reduce(
     (acc, point) => {
       const elementKey = point.elementId || point.elementClass || point.elementTag || 'unknown'
@@ -379,7 +381,7 @@ function identifyHotspots(
       if (!acc[elementKey]) {
         acc[elementKey] = {
           interactions: 0,
-          types: new Set(),
+          types: new Set<string>(),
         }
       }
 
@@ -388,10 +390,10 @@ function identifyHotspots(
 
       return acc
     },
-    {} as Record<string, any>
+    {} as Record<string, ElementData>
   )
 
-  return Object.entries(elementMap)
+  return (Object.entries(elementMap) as Array<[string, ElementData]>)
     .map(([element, data]) => ({
       element,
       interactions: data.interactions,

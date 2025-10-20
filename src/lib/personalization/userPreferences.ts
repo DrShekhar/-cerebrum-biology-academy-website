@@ -30,6 +30,8 @@ export interface UserPreferences {
   preferredMode?: 'online' | 'offline' | 'hybrid'
   budgetRange?: 'budget' | 'standard' | 'premium' | 'flexible'
   startDate?: 'immediate' | 'next-month' | 'after-boards' | 'flexible'
+  selectedLearningPath?: string
+  weeklyStudyHours?: number
 
   // Behavioral Data
   visitCount?: number

@@ -76,7 +76,7 @@ export const FormValidation = {
 export function useFormValidation(rules: ValidationRules) {
   const [values, setValues] = useState<Record<string, string>>({})
   const [errors, setErrors] = useState<Record<string, string>>({})
-  const [touched, setTouched] = useState<Record<string, boolean>>({})
+  const [touched, setFieldTouched] = useState<Record<string, boolean>>({})
   const [isSubmitting, setIsSubmitting] = useState(false)
   const errorRefs = useRef<Record<string, HTMLElement | null>>({})
 
@@ -127,7 +127,7 @@ export function useFormValidation(rules: ValidationRules) {
   }
 
   const setTouched = (name: string) => {
-    setTouched((prev) => ({ ...prev, [name]: true }))
+    setFieldTouched((prev) => ({ ...prev, [name]: true }))
 
     const rule = rules[name]
     if (rule?.validateOnBlur) {
@@ -147,7 +147,7 @@ export function useFormValidation(rules: ValidationRules) {
     })
 
     setErrors(newErrors)
-    setTouched(Object.keys(rules).reduce((acc, key) => ({ ...acc, [key]: true }), {}))
+    setFieldTouched(Object.keys(rules).reduce((acc, key) => ({ ...acc, [key]: true }), {}))
 
     return isValid
   }
@@ -174,16 +174,17 @@ export function useFormValidation(rules: ValidationRules) {
     return true
   }
 
-  const getFieldProps = (name: string) => ({
-    value: values[name] || '',
-    onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) =>
-      setValue(name, e.target.value),
-    onBlur: () => setTouched(name),
-    error: touched[name] ? errors[name] : '',
-    ref: (el: HTMLElement | null) => {
-      errorRefs.current[name] = el
-    },
-  })
+  const getFieldProps = (name: string) =>
+    ({
+      value: values[name] || '',
+      onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) =>
+        setValue(name, e.target.value),
+      onBlur: () => setTouched(name),
+      error: touched[name] ? errors[name] : '',
+      ref: (el: HTMLElement | null) => {
+        errorRefs.current[name] = el
+      },
+    }) as Record<string, any>
 
   return {
     values,
@@ -549,9 +550,9 @@ export function ValidatedForm({
 
       <form onSubmit={handleSubmit} className={className} noValidate>
         {React.Children.map(children, (child) => {
-          if (React.isValidElement(child) && child.props.name) {
-            const fieldProps = validation.getFieldProps(child.props.name)
-            return React.cloneElement(child, fieldProps)
+          if (React.isValidElement(child) && (child.props as any).name) {
+            const fieldProps = validation.getFieldProps((child.props as any).name)
+            return React.cloneElement(child as React.ReactElement<any>, fieldProps)
           }
           return child
         })}

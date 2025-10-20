@@ -170,6 +170,15 @@ interface FraudDetectionConfig {
 }
 
 // Billing & Invoicing
+interface SubscriptionHistory {
+  subscription_id: string
+  plan_id: string
+  start_date: Date
+  end_date?: Date
+  status: 'active' | 'canceled' | 'expired'
+  amount_paid: number
+}
+
 interface BillingAccount {
   account_id: string
   user_id: string
@@ -771,7 +780,7 @@ export class AdvancedPaymentEngine extends EventEmitter {
     planId: string,
     paymentMethodId: string,
     options: {
-      billing_cycle?: 'monthly' | 'quarterly' | 'yearly'
+      billing_cycle?: 'monthly' | 'quarterly' | 'yearly' | 'lifetime'
       promotional_code?: string
       quantity?: number
       start_date?: Date
@@ -836,7 +845,7 @@ export class AdvancedPaymentEngine extends EventEmitter {
       } else {
         return {
           success: false,
-          error: paymentResult.error,
+          error: paymentResult.error || 'Payment failed',
         }
       }
     } catch (error) {
@@ -1022,7 +1031,7 @@ export class AdvancedPaymentEngine extends EventEmitter {
   private async processSubscriptionPayment(
     subscription: ActiveSubscription,
     paymentMethodId: string
-  ) {
+  ): Promise<{ success: boolean; payment_intent?: any; error?: string }> {
     // Implementation for payment processing
     return {
       success: true,
@@ -1084,7 +1093,7 @@ interface ActiveSubscription {
   user_id: string
   plan_id: string
   status: 'pending' | 'active' | 'past_due' | 'canceled' | 'unpaid'
-  billing_cycle: 'monthly' | 'quarterly' | 'yearly'
+  billing_cycle: 'monthly' | 'quarterly' | 'yearly' | 'lifetime'
   current_period_start: Date
   current_period_end: Date
   pricing_details: any

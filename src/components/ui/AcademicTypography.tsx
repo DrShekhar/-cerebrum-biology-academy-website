@@ -25,7 +25,7 @@ export const AcademicHeadline: React.FC<AcademicHeadlineProps> = ({
   animation = true,
   gradient = false,
 }) => {
-  const Tag = `h${level}` as keyof JSX.IntrinsicElements
+  const Tag = `h${level}` as 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
 
   const baseClasses = cn(
     'font-bold tracking-tight',

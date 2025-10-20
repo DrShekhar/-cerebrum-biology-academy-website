@@ -67,14 +67,24 @@ export function useAuth() {
   const user: User | null = session?.user
     ? {
         id: session.user.id,
+        mobile: session.user.profile?.phone || '',
         email: session.user.email!,
         name: session.user.name!,
         password: '', // Never expose password
         role: session.user.role,
-        phone: session.user.profile?.phone,
+        isMobileVerified: false,
+        isEmailVerified: false,
+        communicationPreference: 'whatsapp' as const,
         createdAt: Date.now(), // This would come from database in real implementation
         updatedAt: Date.now(),
-        profile: session.user.profile,
+        profile: session.user.profile
+          ? {
+              ...session.user.profile,
+              marketingConsent: (session.user.profile as any).marketingConsent ?? false,
+              whatsappConsent: (session.user.profile as any).whatsappConsent ?? false,
+              smsConsent: (session.user.profile as any).smsConsent ?? false,
+            }
+          : undefined,
       }
     : null
 

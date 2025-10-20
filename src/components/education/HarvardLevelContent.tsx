@@ -14,6 +14,7 @@ import {
   CogIcon,
   GlobeAltIcon,
   LightBulbIcon,
+  PlayIcon,
 } from '@heroicons/react/24/outline'
 
 interface BiologyModule {
@@ -197,108 +198,108 @@ export function HarvardLevelContent({ className = '' }: HarvardLevelContentProps
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <PremiumCard
-                variant="hover"
-                size="lg"
+              <div
                 className={`h-full cursor-pointer transition-all duration-300 ${
                   selectedModule === module.id ? 'ring-2 ring-blue-500 shadow-xl' : ''
                 }`}
                 onClick={() => setSelectedModule(selectedModule === module.id ? null : module.id)}
               >
-                <div className="space-y-6">
-                  {/* Module Header */}
-                  <div className="flex items-start justify-between">
-                    <div className="flex items-center gap-3">
-                      <div className="p-3 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl text-white">
-                        <module.icon className="h-6 w-6" />
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-bold text-gray-900">{module.title}</h3>
-                        <div className="flex items-center gap-2 mt-1">
-                          <span
-                            className={`px-2 py-1 text-xs font-medium rounded-full border ${difficultyColors[module.difficulty]}`}
-                          >
-                            {module.difficulty}
-                          </span>
-                          {module.researchBased && (
-                            <span className="px-2 py-1 text-xs font-medium rounded-full bg-yellow-100 text-yellow-800 border border-yellow-200">
-                              Research-Based
+                <PremiumCard variant="hover" size="lg" className="h-full">
+                  <div className="space-y-6">
+                    {/* Module Header */}
+                    <div className="flex items-start justify-between">
+                      <div className="flex items-center gap-3">
+                        <div className="p-3 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl text-white">
+                          <module.icon className="h-6 w-6" />
+                        </div>
+                        <div>
+                          <h3 className="text-xl font-bold text-gray-900">{module.title}</h3>
+                          <div className="flex items-center gap-2 mt-1">
+                            <span
+                              className={`px-2 py-1 text-xs font-medium rounded-full border ${difficultyColors[module.difficulty]}`}
+                            >
+                              {module.difficulty}
                             </span>
-                          )}
+                            {module.researchBased && (
+                              <span className="px-2 py-1 text-xs font-medium rounded-full bg-yellow-100 text-yellow-800 border border-yellow-200">
+                                Research-Based
+                              </span>
+                            )}
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
 
-                  {/* Module Description */}
-                  <p className="text-gray-700 leading-relaxed">{module.description}</p>
+                    {/* Module Description */}
+                    <p className="text-gray-700 leading-relaxed">{module.description}</p>
 
-                  {/* Module Stats */}
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <div className="flex justify-between text-sm">
-                        <span className="text-gray-600">Duration</span>
-                        <span className="font-medium">{module.duration}</span>
-                      </div>
-                      <div className="flex justify-between text-sm">
-                        <span className="text-gray-600">Topics</span>
-                        <span className="font-medium">{module.topics}</span>
-                      </div>
-                    </div>
-                    <div className="space-y-2">
-                      <div className="flex justify-between text-sm">
-                        <span className="text-gray-600">NEET Weight</span>
-                        <span className="font-medium">{module.neetWeight}%</span>
-                      </div>
-                      <div className="flex justify-between text-sm">
-                        <span className="text-gray-600">AIIMS Weight</span>
-                        <span className="font-medium">{module.aimsWeight}%</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Completion Rate */}
-                  <div>
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-sm text-gray-600">Student Success Rate</span>
-                      <span className="text-sm font-bold text-green-600">
-                        {module.completionRate}%
-                      </span>
-                    </div>
-                    <PremiumProgress value={module.completionRate} variant="linear" size="sm" />
-                  </div>
-
-                  {/* Expanded Content */}
-                  <AnimatePresence>
-                    {selectedModule === module.id && (
-                      <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="border-t pt-6 space-y-4"
-                      >
-                        <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-4">
-                          <h4 className="font-semibold text-gray-900 mb-2">
-                            Key Learning Outcomes
-                          </h4>
-                          <ul className="text-sm text-gray-700 space-y-1">
-                            <li>• Master fundamental concepts with research-grade depth</li>
-                            <li>• Analyze current scientific literature and methodologies</li>
-                            <li>• Apply knowledge to NEET and AIIMS question patterns</li>
-                            <li>• Develop critical thinking for medical entrance success</li>
-                          </ul>
+                    {/* Module Stats */}
+                    <div className="grid grid-cols-2 gap-4">
+                      <div className="space-y-2">
+                        <div className="flex justify-between text-sm">
+                          <span className="text-gray-600">Duration</span>
+                          <span className="font-medium">{module.duration}</span>
                         </div>
+                        <div className="flex justify-between text-sm">
+                          <span className="text-gray-600">Topics</span>
+                          <span className="font-medium">{module.topics}</span>
+                        </div>
+                      </div>
+                      <div className="space-y-2">
+                        <div className="flex justify-between text-sm">
+                          <span className="text-gray-600">NEET Weight</span>
+                          <span className="font-medium">{module.neetWeight}%</span>
+                        </div>
+                        <div className="flex justify-between text-sm">
+                          <span className="text-gray-600">AIIMS Weight</span>
+                          <span className="font-medium">{module.aimsWeight}%</span>
+                        </div>
+                      </div>
+                    </div>
 
-                        <PremiumButton variant="medical" size="md" className="w-full">
-                          <PlayIcon className="h-5 w-5 mr-2" />
-                          Start Learning Journey
-                        </PremiumButton>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-              </PremiumCard>
+                    {/* Completion Rate */}
+                    <div>
+                      <div className="flex justify-between items-center mb-2">
+                        <span className="text-sm text-gray-600">Student Success Rate</span>
+                        <span className="text-sm font-bold text-green-600">
+                          {module.completionRate}%
+                        </span>
+                      </div>
+                      <PremiumProgress value={module.completionRate} variant="linear" size="sm" />
+                    </div>
+
+                    {/* Expanded Content */}
+                    <AnimatePresence>
+                      {selectedModule === module.id && (
+                        <motion.div
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: 'auto' }}
+                          exit={{ opacity: 0, height: 0 }}
+                          transition={{ duration: 0.3 }}
+                          className="border-t pt-6 space-y-4"
+                        >
+                          <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-4">
+                            <h4 className="font-semibold text-gray-900 mb-2">
+                              Key Learning Outcomes
+                            </h4>
+                            <ul className="text-sm text-gray-700 space-y-1">
+                              <li>• Master fundamental concepts with research-grade depth</li>
+                              <li>• Analyze current scientific literature and methodologies</li>
+                              <li>• Apply knowledge to NEET and AIIMS question patterns</li>
+                              <li>• Develop critical thinking for medical entrance success</li>
+                            </ul>
+                          </div>
+
+                          <PremiumButton variant="medical" size="md" className="w-full">
+                            <PlayIcon className="h-5 w-5 mr-2" />
+                            Start Learning Journey
+                          </PremiumButton>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                </PremiumCard>
+              </div>
             </motion.div>
           ))}
         </div>

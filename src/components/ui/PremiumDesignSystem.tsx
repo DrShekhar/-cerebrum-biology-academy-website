@@ -55,6 +55,7 @@ export function PremiumCard({
 interface PremiumButtonProps {
   children: React.ReactNode
   onClick?: () => void
+  type?: 'button' | 'submit' | 'reset'
   variant?: 'primary' | 'secondary' | 'luxury' | 'medical'
   size?: 'sm' | 'md' | 'lg' | 'xl'
   className?: string
@@ -64,6 +65,7 @@ interface PremiumButtonProps {
 export function PremiumButton({
   children,
   onClick,
+  type = 'button',
   variant = 'primary',
   size = 'md',
   className,
@@ -92,6 +94,7 @@ export function PremiumButton({
 
   return (
     <motion.button
+      type={type}
       className={cn(
         'relative overflow-hidden rounded-xl font-semibold transition-all duration-300',
         'focus:outline-none focus:ring-4 focus:ring-opacity-50',
@@ -104,8 +107,8 @@ export function PremiumButton({
       disabled={disabled}
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
-      onTapStart={() => setIsPressed(true)}
-      onTapEnd={() => setIsPressed(false)}
+      onPointerDown={() => setIsPressed(true)}
+      onPointerUp={() => setIsPressed(false)}
       whileHover={{ scale: 1.02, y: -1 }}
       whileTap={{ scale: 0.98 }}
       transition={{ type: 'spring', stiffness: 300, damping: 20 }}

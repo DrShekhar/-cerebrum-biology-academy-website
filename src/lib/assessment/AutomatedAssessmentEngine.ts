@@ -5,6 +5,16 @@
 
 import { HyperIntelligentRouter } from '../api/HyperIntelligentRouter'
 import { DistributedCacheManager } from '../cache/DistributedCacheManager'
+import { QuestionType } from '../../generated/prisma'
+
+// Define ValidationRule type since it's not in the Prisma schema
+type ValidationRule = {
+  ruleId: string
+  type: 'required' | 'format' | 'range' | 'custom'
+  condition: string
+  message: string
+  severity: 'error' | 'warning'
+}
 
 interface AssessmentBlueprint {
   assessmentId: string
@@ -984,7 +994,7 @@ export class AutomatedAssessmentEngine {
         hard: 0.25,
         expert: 0.05,
       },
-      question_types: ['mcq', 'multiple_select', 'short_answer'],
+      question_types: ['MCQ', 'SHORT_ANSWER', 'TRUE_FALSE'],
       validation_rules: [],
     }
   }

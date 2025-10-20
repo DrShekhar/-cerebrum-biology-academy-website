@@ -1,3 +1,7 @@
+// Storybook stories - commented out until @storybook/react is installed
+// To enable: npm install @storybook/react @storybook/react-vite storybook --save-dev
+
+/*
 import type { Meta, StoryObj } from '@storybook/react'
 import { ExampleWorkflowDemo } from './ExampleWorkflowDemo'
 
@@ -34,3 +38,6 @@ export const WithChildren: Story = {
     children: 'Custom content for ExampleWorkflowDemo',
   },
 }
+*/
+
+export {}

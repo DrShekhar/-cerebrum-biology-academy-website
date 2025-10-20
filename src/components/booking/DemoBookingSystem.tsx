@@ -112,13 +112,23 @@ export function DemoBookingSystem() {
 
   const handleInputChange = (field: keyof BookingData, value: string) => {
     setBookingData((prev) => ({ ...prev, [field]: value }))
-    trackFormInteraction('demo_booking', 'field_update', field)
+    // Track form interaction
+    trackDemoRequest(
+      bookingData.studentName || 'Guest',
+      bookingData.courseInterest,
+      bookingData.phone
+    )
   }
 
   const handleNextStep = () => {
     if (currentStep < 4) {
       setCurrentStep(currentStep + 1)
-      trackFormInteraction('demo_booking', 'step_advance', `step_${currentStep + 1}`)
+      // Track step progression
+      trackDemoRequest(
+        bookingData.studentName || 'Guest',
+        bookingData.courseInterest,
+        bookingData.phone
+      )
     }
   }
 
