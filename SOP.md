@@ -126,6 +126,48 @@ export { prisma } from './prisma'
 export default prisma
 ```
 
+### 1.5 Type Declaration Files (.d.ts)
+
+**Rule:** Do NOT explicitly import `.d.ts` files - TypeScript picks them up automatically.
+
+**Bad:**
+
+```typescript
+import '@/types/analytics' // Causes webpack module resolution error
+import '@/types/speech.d.ts' // Never import .d.ts files
+
+export const useAnalytics = () => {
+  // TypeScript can't find the types during build
+}
+```
+
+**Good:**
+
+```typescript
+// No import needed - types are automatically available
+// Just create the .d.ts file in src/types/ directory
+
+// src/types/analytics.d.ts
+declare global {
+  interface Window {
+    fbq: FacebookPixel
+  }
+}
+
+// src/hooks/useAnalytics.ts
+export const useAnalytics = () => {
+  // TypeScript automatically finds and uses the types
+  window.fbq('track', 'PageView')
+}
+```
+
+**Why:**
+
+- `.d.ts` files are ambient type declarations
+- TypeScript compiler automatically includes them
+- Explicit imports cause webpack errors: "Module not found: Can't resolve '@/types/analytics'"
+- Build will fail even though type-check passes
+
 ---
 
 ## 2. Framer Motion Integration
@@ -604,6 +646,26 @@ npm run type-check
 npx prettier --write src/lib/ai/*.ts
 ```
 
+### 8.4 Build Verification
+
+**Rule:** Always test production build locally before creating PR.
+
+```bash
+# Clean previous builds
+npm run clean
+
+# Run type check
+npm run type-check
+
+# Build for production
+npm run build
+
+# If build succeeds, test the production server
+npm run start
+```
+
+**Critical:** Type-check passing doesn't guarantee build success. Webpack may fail on module resolution issues that TypeScript doesn't catch.
+
 ---
 
 ## 9. Pre-Commit Checklist
@@ -668,6 +730,34 @@ Before committing code, verify:
 1. Constrain type to specific string literals
 2. Use `ElementType` from React for dynamic components
 3. Ensure proper type guards for conditional rendering
+
+### Error: "Module not found: Can't resolve '@/types/analytics'"
+
+**Symptoms:**
+
+- `npm run type-check` passes ✅
+- `npm run build` fails ❌
+- Error: "Module not found: Can't resolve '@/types/analytics'"
+
+**Root Cause:**
+Explicitly importing `.d.ts` files causes webpack module resolution errors.
+
+**Solution:**
+
+```typescript
+// ❌ BAD - Remove this import
+import '@/types/analytics'
+
+// ✅ GOOD - No import needed
+// TypeScript automatically picks up .d.ts files from src/types/
+```
+
+**Prevention:**
+
+1. Never import `.d.ts` files
+2. Place type declarations in `src/types/` directory
+3. Use `declare global` for global type augmentation
+4. Always run `npm run build` before creating PR
 
 ---
 
