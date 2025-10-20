@@ -271,22 +271,23 @@ class OptimizationEngine {
 
     // Low rating insights
     Object.entries(analysis.summary.avgRatings || {}).forEach(([metric, rating]) => {
-      if (rating < 3) {
+      const ratingValue = Number(rating) || 0
+      if (ratingValue < 3) {
         insights.push({
           id: `feedback_low_rating_${metric}`,
           type: 'performance',
-          severity: rating < 2 ? 'critical' : 'high',
+          severity: ratingValue < 2 ? 'critical' : 'high',
           title: `Poor User Rating for ${metric}`,
-          description: `${metric} has an average rating of ${rating.toFixed(1)}/10, indicating significant user dissatisfaction.`,
+          description: `${metric} has an average rating of ${ratingValue.toFixed(1)}/10, indicating significant user dissatisfaction.`,
           evidence: [
             {
               source: 'feedback',
-              data: { metric, rating, feedbackCount: feedbackData.length },
+              data: { metric, rating: ratingValue, feedbackCount: feedbackData.length },
               confidence: 0.9,
             },
           ],
           impact: {
-            estimated_improvement: (5 - rating) * 10, // Potential improvement to reach good rating
+            estimated_improvement: (5 - ratingValue) * 10, // Potential improvement to reach good rating
             effort_required: 'high',
             time_to_implement: '3-4 weeks',
           },

@@ -4,6 +4,61 @@
  * Optimized for Indian accents and Biology terminology
  */
 
+// Browser API type declarations
+declare global {
+  interface Window {
+    SpeechRecognition: typeof SpeechRecognition
+    webkitSpeechRecognition: typeof SpeechRecognition
+  }
+}
+
+interface SpeechRecognition extends EventTarget {
+  continuous: boolean
+  interimResults: boolean
+  lang: string
+  maxAlternatives: number
+  start(): void
+  stop(): void
+  abort(): void
+  onresult: ((this: SpeechRecognition, ev: SpeechRecognitionEvent) => any) | null
+  onerror: ((this: SpeechRecognition, ev: SpeechRecognitionErrorEvent) => any) | null
+  onstart: ((this: SpeechRecognition, ev: Event) => any) | null
+  onend: ((this: SpeechRecognition, ev: Event) => any) | null
+}
+
+declare var SpeechRecognition: {
+  prototype: SpeechRecognition
+  new (): SpeechRecognition
+}
+
+interface SpeechRecognitionEvent extends Event {
+  results: SpeechRecognitionResultList
+  resultIndex: number
+}
+
+interface SpeechRecognitionErrorEvent extends Event {
+  error: string
+  message: string
+}
+
+interface SpeechRecognitionResultList {
+  length: number
+  item(index: number): SpeechRecognitionResult
+  [index: number]: SpeechRecognitionResult
+}
+
+interface SpeechRecognitionResult {
+  length: number
+  item(index: number): SpeechRecognitionAlternative
+  [index: number]: SpeechRecognitionAlternative
+  isFinal: boolean
+}
+
+interface SpeechRecognitionAlternative {
+  transcript: string
+  confidence: number
+}
+
 interface VoiceRecognitionConfig {
   language: 'en-IN' | 'hi-IN' | 'en-US'
   continuous: boolean
@@ -142,9 +197,9 @@ class VoiceRecognitionService {
 
   private initializeSpeechRecognition() {
     if ('webkitSpeechRecognition' in window) {
-      this.recognition = new webkitSpeechRecognition()
+      this.recognition = new (window as any).webkitSpeechRecognition()
     } else if ('SpeechRecognition' in window) {
-      this.recognition = new SpeechRecognition()
+      this.recognition = new (window as any).SpeechRecognition()
     } else {
       console.error('Speech recognition not supported in this browser')
       return
@@ -183,7 +238,7 @@ class VoiceRecognitionService {
       if (latestResult) {
         const transcript = latestResult[0].transcript
         const confidence = latestResult[0].confidence
-        const alternatives = Array.from(latestResult)
+        const alternatives = Array.from({ length: latestResult.length }, (_, i) => latestResult[i])
           .slice(1)
           .map((alt) => alt.transcript)
 

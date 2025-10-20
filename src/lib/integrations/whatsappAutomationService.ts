@@ -512,6 +512,72 @@ export class WhatsAppAutomationService {
   }
 
   /**
+   * Helper methods for specific actions
+   */
+  private static async scheduleWeeklyMotivation(studentData: any) {
+    // Implement weekly motivation scheduling
+    await this.scheduleMessage({
+      userId: studentData.userId,
+      phone: studentData.phone,
+      delay: 7 * 24 * 60 * 60 * 1000, // 1 week
+      messageType: 'text',
+      content: 'Keep up the great work! Your dedication will pay off. 🌟',
+    })
+  }
+
+  private static async scheduleProgressCheckins(studentData: any) {
+    // Implement bi-weekly progress check-ins
+    await this.scheduleMessage({
+      userId: studentData.userId,
+      phone: studentData.phone,
+      delay: 14 * 24 * 60 * 60 * 1000, // 2 weeks
+      messageType: 'text',
+      content: 'How is your preparation going? Need any help?',
+    })
+  }
+
+  private static async scheduleParentUpdates(studentData: any) {
+    // Implement monthly parent updates
+    if (studentData.parentPhone) {
+      await this.scheduleMessage({
+        userId: studentData.userId,
+        phone: studentData.parentPhone,
+        delay: 30 * 24 * 60 * 60 * 1000, // 1 month
+        messageType: 'text',
+        content: `Monthly update for ${studentData.name}: Progress is on track!`,
+      })
+    }
+  }
+
+  private static async handleBatchTimingInquiry(actionData: any) {
+    await WhatsAppBusinessService.sendTextMessage(
+      actionData.phone,
+      '📅 Our batch timings:\n\n🕐 Morning: 6:00 AM - 8:00 AM\n🕔 Evening: 5:00 PM - 7:00 PM\n\nCall +91-88264-44334 for more details.'
+    )
+  }
+
+  private static async handleFeePayment(actionData: any) {
+    await WhatsAppBusinessService.sendTextMessage(
+      actionData.phone,
+      '💳 Payment options:\n\n1. UPI\n2. Net Banking\n3. Card Payment\n\nContact: +91-88264-44334'
+    )
+  }
+
+  private static async handleAttendanceMarking(actionData: any) {
+    await WhatsAppBusinessService.sendTextMessage(
+      actionData.phone,
+      '✅ Attendance marked successfully!\n\nView details: cerebrumbiologyacademy.com/attendance'
+    )
+  }
+
+  private static async handleDoubtSubmission(actionData: any) {
+    await WhatsAppBusinessService.sendTextMessage(
+      actionData.phone,
+      '❓ Doubt submitted!\n\nOur faculty will respond within 24 hours.'
+    )
+  }
+
+  /**
    * Webhook Handler for Real-time Responses
    */
   static async handleWebhook(webhookData: any) {

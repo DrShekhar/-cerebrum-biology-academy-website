@@ -23,7 +23,7 @@ export function LeadMagnetModal({ isOpen, onClose, leadMagnet, area }: LeadMagne
   const [formData, setFormData] = useState({
     name: user?.name || '',
     email: user?.email || '',
-    phone: user?.phone || '',
+    phone: (user as any)?.phone || '',
     studentClass: '',
     currentSchool: '',
     targetScore: '',
@@ -64,7 +64,7 @@ export function LeadMagnetModal({ isOpen, onClose, leadMagnet, area }: LeadMagne
     setFormData({
       name: user?.name || '',
       email: user?.email || '',
-      phone: user?.phone || '',
+      phone: (user as any)?.phone || '',
       studentClass: '',
       currentSchool: '',
       targetScore: '',

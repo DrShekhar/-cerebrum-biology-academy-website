@@ -141,9 +141,9 @@ export class SecurityManager {
       }
 
       const token = jwt.sign(tokenPayload, this.jwtSecret, {
-        expiresIn: expiresIn as string,
+        expiresIn: String(expiresIn),
         algorithm: 'HS256',
-      })
+      } as jwt.SignOptions)
 
       this.logSecurityEvent('token_generated', payload.userId || 'system', true, {
         tokenType: 'auth',

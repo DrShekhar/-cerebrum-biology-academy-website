@@ -463,7 +463,7 @@ export class PersonalizationEngine {
     switch (learningStyle.primary) {
       case 'visual':
         score += course.delivery.recordedContent > 300 ? 20 : 10
-        score += course.content.practicalWeightage > 3 ? 10 : 5
+        score += (course.content.biologyFocus?.practicalWeightage || 0) > 3 ? 10 : 5
         break
       case 'auditory':
         score += course.delivery.liveClasses > 200 ? 20 : 10
@@ -471,7 +471,7 @@ export class PersonalizationEngine {
         break
       case 'kinesthetic':
         score += course.delivery.practicalSessions > 30 ? 25 : 10
-        score += course.content.practicalWeightage > 5 ? 15 : 5
+        score += (course.content.biologyFocus?.practicalWeightage || 0) > 5 ? 15 : 5
         break
       case 'reading':
         score += course.delivery.recordedContent > 250 ? 15 : 10
@@ -780,7 +780,8 @@ export class PersonalizationEngine {
 
     // Analyze strong match factors
     Object.entries(matchFactors).forEach(([factor, score]) => {
-      if (score >= 80) {
+      const scoreValue = Number(score) || 0
+      if (scoreValue >= 80) {
         switch (factor) {
           case 'academicFit':
             strengths.push('Excellent alignment with your academic performance level')
@@ -800,7 +801,7 @@ export class PersonalizationEngine {
             personalizedFeatures.push('Focused attention on your challenging topics')
             break
         }
-      } else if (score < 60) {
+      } else if (scoreValue < 60) {
         switch (factor) {
           case 'academicFit':
             considerations.push('Course difficulty may not match your current performance level')
@@ -838,8 +839,10 @@ export class PersonalizationEngine {
   // Calculate predicted outcomes
   private calculatePredictedOutcomes(course: CourseData, matchFactors: any): any {
     const avgMatchScore =
-      Object.values(matchFactors).reduce((a: number, b: number) => a + b, 0) /
-      Object.keys(matchFactors).length
+      (Object.values(matchFactors).reduce(
+        (a, b) => (Number(a) || 0) + (Number(b) || 0),
+        0 as number
+      ) as number) / Object.keys(matchFactors).length
 
     // Success probability based on match percentage and course success rate
     const successProbability = Math.min(100, (course.outcomes.successRate * avgMatchScore) / 100)

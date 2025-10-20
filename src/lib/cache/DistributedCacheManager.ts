@@ -71,13 +71,11 @@ export class DistributedCacheManager {
       this.primaryRedis = new Redis.Cluster([this.config.redis.primary], {
         redisOptions: {
           maxRetriesPerRequest: this.config.redis.maxRetries,
-          retryDelayOnFailover: this.config.redis.retryDelayOnFailover,
         },
-      })
+      }) as any
     } else {
       this.primaryRedis = new Redis(this.config.redis.primary, {
         maxRetriesPerRequest: this.config.redis.maxRetries,
-        retryDelayOnFailover: this.config.redis.retryDelayOnFailover,
       })
     }
 
@@ -142,7 +140,7 @@ export class DistributedCacheManager {
       }
 
       // Decompress if needed
-      const data = entry.compressed ? await this.decompress(entry.data) : entry.data
+      const data = entry.compressed ? await this.decompress(entry.data as any) : entry.data
 
       this.stats.hits++
       this.updateStats(startTime)
@@ -169,7 +167,7 @@ export class DistributedCacheManager {
       const shouldCompress = serializedData.length > this.config.compressionThreshold
 
       const entry: CacheEntry<T> = {
-        data: shouldCompress ? await this.compress(data) : data,
+        data: (shouldCompress ? await this.compress(data) : data) as T,
         timestamp: Date.now(),
         ttl: ttl || this.config.defaultTTL,
         version: this.generateVersion(),
@@ -222,7 +220,9 @@ export class DistributedCacheManager {
             continue
           }
 
-          const decompressedData = entry.compressed ? await this.decompress(entry.data) : entry.data
+          const decompressedData = entry.compressed
+            ? await this.decompress(entry.data as any)
+            : entry.data
 
           result.set(key, decompressedData)
           this.stats.hits++
@@ -255,7 +255,7 @@ export class DistributedCacheManager {
         const shouldCompress = serializedData.length > this.config.compressionThreshold
 
         const entry: CacheEntry<T> = {
-          data: shouldCompress ? await this.compress(data) : data,
+          data: (shouldCompress ? await this.compress(data) : data) as T,
           timestamp: Date.now(),
           ttl: ttl || this.config.defaultTTL,
           version: this.generateVersion(),

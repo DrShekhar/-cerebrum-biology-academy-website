@@ -38,7 +38,7 @@ export function EnrollmentModal({ isOpen, onClose, course }: EnrollmentModalProp
   const [formData, setFormData] = useState({
     studentName: user?.name || '',
     email: user?.email || '',
-    phone: user?.phone || '',
+    phone: (user as any)?.phone || '',
     class: '',
     school: '',
     previousExperience: '',
@@ -114,7 +114,7 @@ export function EnrollmentModal({ isOpen, onClose, course }: EnrollmentModalProp
     setFormData({
       studentName: user?.name || '',
       email: user?.email || '',
-      phone: user?.phone || '',
+      phone: (user as any)?.phone || '',
       class: '',
       school: '',
       previousExperience: '',

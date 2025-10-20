@@ -17,10 +17,12 @@ interface LeadNurturingSequence {
 export class WhatsAppService {
   private apiUrl: string
   private accessToken: string
+  private phoneNumberId: string
 
   constructor() {
     this.apiUrl = process.env.WHATSAPP_API_URL || 'https://graph.facebook.com/v17.0'
     this.accessToken = process.env.WHATSAPP_ACCESS_TOKEN || ''
+    this.phoneNumberId = process.env.WHATSAPP_PHONE_NUMBER_ID || ''
   }
 
   async sendMessage(messageData: WhatsAppMessage): Promise<boolean> {
@@ -199,6 +201,52 @@ Keep going, future doctor! 🩺🌟`
     // This would integrate with your database
     // For MVP, return demo data
     return ['+919876543210', '+919876543211', '+919876543212']
+  }
+
+  /**
+   * Get media URL from WhatsApp media ID
+   */
+  async getMediaUrl(mediaId: string): Promise<string> {
+    try {
+      const response = await fetch(`${this.apiUrl}/${mediaId}`, {
+        method: 'GET',
+        headers: {
+          Authorization: `Bearer ${this.accessToken}`,
+        },
+      })
+
+      const data = await response.json()
+      return data.url || ''
+    } catch (error) {
+      console.error('Error fetching media URL:', error)
+      return ''
+    }
+  }
+
+  /**
+   * Send interactive message with buttons
+   */
+  async sendInteractiveMessage(phone: string, interactiveData: any): Promise<boolean> {
+    try {
+      const response = await fetch(`${this.apiUrl}/${this.phoneNumberId}/messages`, {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${this.accessToken}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          messaging_product: 'whatsapp',
+          to: phone,
+          type: 'interactive',
+          interactive: interactiveData,
+        }),
+      })
+
+      return response.ok
+    } catch (error) {
+      console.error('Error sending interactive message:', error)
+      return false
+    }
   }
 }
 

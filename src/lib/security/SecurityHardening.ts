@@ -188,7 +188,11 @@ export class SecurityHardening {
         },
       },
       monitoring: {
-        logLevel: environment === 'production' ? 'error' : 'debug',
+        logLevel: (environment === 'production' ? 'error' : 'debug') as
+          | 'error'
+          | 'warn'
+          | 'info'
+          | 'debug',
         enableAuditLog: true,
         alertThresholds: {
           failedLogins: 10,
@@ -339,8 +343,10 @@ export class SecurityHardening {
     const encryptionKey = key ? Buffer.from(key, 'hex') : crypto.randomBytes(config.keyLength)
     const iv = crypto.randomBytes(config.ivLength)
 
-    const cipher = crypto.createCipher(config.algorithm, encryptionKey)
-    cipher.setAAD(Buffer.from('cerebrum-auth'))
+    const cipher = crypto.createCipheriv(config.algorithm, encryptionKey, iv) as crypto.CipherGCM
+
+    // Set AAD for authenticated encryption
+    cipher.setAAD(Buffer.from('cerebrum-auth'), { plaintextLength: Buffer.byteLength(data) })
 
     let encrypted = cipher.update(data, 'utf8', 'hex')
     encrypted += cipher.final('hex')
@@ -363,7 +369,13 @@ export class SecurityHardening {
     const iv = Buffer.from(encryptedData.iv, 'hex')
     const tag = Buffer.from(encryptedData.tag, 'hex')
 
-    const decipher = crypto.createDecipher(config.algorithm, encryptionKey)
+    const decipher = crypto.createDecipheriv(
+      config.algorithm,
+      encryptionKey,
+      iv
+    ) as crypto.DecipherGCM
+
+    // Set AAD for authenticated decryption
     decipher.setAAD(Buffer.from('cerebrum-auth'))
     decipher.setAuthTag(tag)
 
@@ -498,7 +510,6 @@ export class SecurityHardening {
     return (
       request.headers.get('x-forwarded-for')?.split(',')[0] ||
       request.headers.get('x-real-ip') ||
-      request.ip ||
       'unknown'
     )
   }

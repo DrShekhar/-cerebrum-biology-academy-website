@@ -194,7 +194,7 @@ class PWAService {
         if (vapidPublicKey) {
           subscription = await registration.pushManager.subscribe({
             userVisibleOnly: true,
-            applicationServerKey: this.urlBase64ToUint8Array(vapidPublicKey),
+            applicationServerKey: this.urlBase64ToUint8Array(vapidPublicKey) as BufferSource,
           })
         }
       }
@@ -254,19 +254,10 @@ class PWAService {
       },
       requireInteraction: payload.type === 'class-reminder',
       vibrate: [200, 100, 200],
-      actions: [
-        {
-          action: 'open',
-          title: 'Open App',
-        },
-        {
-          action: 'close',
-          title: 'Close',
-        },
-      ],
     }
 
-    new Notification(payload.title, options)
+    // For browsers that support NotificationAction, cast to any to include actions
+    new Notification(payload.title, options as any)
   }
 
   // Study Reminders

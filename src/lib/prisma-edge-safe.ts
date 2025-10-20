@@ -32,7 +32,7 @@ class MockPrismaClient {
 // Check if we're in Edge Runtime
 function isEdgeRuntime(): boolean {
   return (
-    typeof EdgeRuntime !== 'undefined' ||
+    typeof (globalThis as any).EdgeRuntime !== 'undefined' ||
     (globalThis as any).EdgeRuntime !== undefined ||
     typeof process?.nextTick !== 'function'
   )
