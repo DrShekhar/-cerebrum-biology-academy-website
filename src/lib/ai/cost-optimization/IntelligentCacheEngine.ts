@@ -99,7 +99,7 @@ export class IntelligentCacheEngine {
           prompt: prompt.substring(0, 50) + '...',
           costSaved: `$${exactMatch.metadata.cost.toFixed(4)}`,
           age: this.getEntryAge(exactMatch),
-          accessCount: exactMatch.metadata.accessCount + 1
+          accessCount: exactMatch.metadata.accessCount + 1,
         })
 
         return exactMatch
@@ -116,7 +116,7 @@ export class IntelligentCacheEngine {
           prompt: prompt.substring(0, 50) + '...',
           similarity: 'High',
           costSaved: `$${semanticMatch.metadata.cost.toFixed(4)}`,
-          age: this.getEntryAge(semanticMatch)
+          age: this.getEntryAge(semanticMatch),
         })
 
         return semanticMatch
@@ -126,11 +126,10 @@ export class IntelligentCacheEngine {
       this.metrics.misses++
       console.log('❌ Cache MISS:', {
         prompt: prompt.substring(0, 50) + '...',
-        responseTime: `${Date.now() - startTime}ms`
+        responseTime: `${Date.now() - startTime}ms`,
       })
 
       return null
-
     } catch (error) {
       console.warn('Cache read error:', error)
       this.metrics.misses++
@@ -166,9 +165,9 @@ export class IntelligentCacheEngine {
           timestamp: new Date(),
           lastAccessed: new Date(),
           accessCount: 0,
-          tags: this.generateIntelligentTags(prompt, context, metadata.educationalContext)
+          tags: this.generateIntelligentTags(prompt, context, metadata.educationalContext),
         },
-        semanticHash: this.generateSemanticHash(prompt, context)
+        semanticHash: this.generateSemanticHash(prompt, context),
       }
 
       // Store with multiple keys for fast retrieval
@@ -188,9 +187,8 @@ export class IntelligentCacheEngine {
         hash: cacheEntry.semanticHash.substring(0, 8),
         cost: `$${metadata.cost.toFixed(4)}`,
         tags: cacheEntry.metadata.tags.slice(0, 3),
-        ttl: this.getTTL(cacheEntry) / 3600 + ' hours'
+        ttl: this.getTTL(cacheEntry) / 3600 + ' hours',
       })
-
     } catch (error) {
       console.warn('Cache write error:', error)
     }
@@ -216,42 +214,48 @@ export class IntelligentCacheEngine {
    * Normalize prompt for semantic similarity
    */
   private normalizePrompt(prompt: string): string {
-    return prompt
-      .toLowerCase()
-      .trim()
-      // Remove common variations that don't affect meaning
-      .replace(/please\s+/gi, '')
-      .replace(/can you\s+/gi, '')
-      .replace(/could you\s+/gi, '')
-      .replace(/would you\s+/gi, '')
-      .replace(/\s+/g, ' ')
-      // Normalize biology terminology
-      .replace(/photosynthesis/gi, 'photosynthesis')
-      .replace(/cellular respiration/gi, 'respiration')
-      .replace(/deoxyribonucleic acid/gi, 'dna')
-      .replace(/ribonucleic acid/gi, 'rna')
+    return (
+      prompt
+        .toLowerCase()
+        .trim()
+        // Remove common variations that don't affect meaning
+        .replace(/please\s+/gi, '')
+        .replace(/can you\s+/gi, '')
+        .replace(/could you\s+/gi, '')
+        .replace(/would you\s+/gi, '')
+        .replace(/\s+/g, ' ')
+        // Normalize biology terminology
+        .replace(/photosynthesis/gi, 'photosynthesis')
+        .replace(/cellular respiration/gi, 'respiration')
+        .replace(/deoxyribonucleic acid/gi, 'dna')
+        .replace(/ribonucleic acid/gi, 'rna')
+    )
   }
 
   /**
    * Generate intelligent tags for enhanced categorization
    */
-  private generateIntelligentTags(prompt: string, context?: any, educationalContext?: any): string[] {
+  private generateIntelligentTags(
+    prompt: string,
+    context?: any,
+    educationalContext?: any
+  ): string[] {
     const tags: string[] = []
     const promptLower = prompt.toLowerCase()
 
     // Biology subject tags
     const biologyTopics = {
       'cell-biology': ['cell', 'membrane', 'nucleus', 'organelle', 'mitochondria', 'ribosome'],
-      'genetics': ['dna', 'rna', 'gene', 'chromosome', 'allele', 'mutation', 'heredity'],
-      'ecology': ['ecosystem', 'biodiversity', 'food chain', 'habitat', 'population'],
-      'evolution': ['natural selection', 'adaptation', 'species', 'fossil', 'darwin'],
-      'physiology': ['respiration', 'circulation', 'digestion', 'nervous system'],
-      'botany': ['photosynthesis', 'plant', 'flower', 'root', 'stem', 'leaf'],
-      'zoology': ['animal', 'vertebrate', 'invertebrate', 'mammal', 'reptile']
+      genetics: ['dna', 'rna', 'gene', 'chromosome', 'allele', 'mutation', 'heredity'],
+      ecology: ['ecosystem', 'biodiversity', 'food chain', 'habitat', 'population'],
+      evolution: ['natural selection', 'adaptation', 'species', 'fossil', 'darwin'],
+      physiology: ['respiration', 'circulation', 'digestion', 'nervous system'],
+      botany: ['photosynthesis', 'plant', 'flower', 'root', 'stem', 'leaf'],
+      zoology: ['animal', 'vertebrate', 'invertebrate', 'mammal', 'reptile'],
     }
 
     for (const [topic, keywords] of Object.entries(biologyTopics)) {
-      if (keywords.some(keyword => promptLower.includes(keyword))) {
+      if (keywords.some((keyword) => promptLower.includes(keyword))) {
         tags.push(`topic:${topic}`)
       }
     }
@@ -262,12 +266,12 @@ export class IntelligentCacheEngine {
       'class-10': ['class 10', '10th grade', 'grade 10'],
       'class-11': ['class 11', '11th grade', 'grade 11'],
       'class-12': ['class 12', '12th grade', 'grade 12'],
-      'neet': ['neet', 'medical entrance', 'aiims', 'jipmer'],
-      'jee': ['jee', 'engineering entrance']
+      neet: ['neet', 'medical entrance', 'aiims', 'jipmer'],
+      jee: ['jee', 'engineering entrance'],
     }
 
     for (const [level, indicators] of Object.entries(levelIndicators)) {
-      if (indicators.some(indicator => promptLower.includes(indicator))) {
+      if (indicators.some((indicator) => promptLower.includes(indicator))) {
         tags.push(`level:${level}`)
       }
     }
@@ -321,7 +325,8 @@ export class IntelligentCacheEngine {
     for (const tag of tags) {
       const matchingKeys = await this.redis.keys(`ai:cache:semantic:${tag}:*`)
 
-      for (const key of matchingKeys.slice(0, 10)) { // Limit search
+      for (const key of matchingKeys.slice(0, 10)) {
+        // Limit search
         const entryId = key.split(':').pop()
         const entryKey = `ai:cache:entry:${entryId}`
         const cached = await this.redis.get(entryKey)
@@ -351,13 +356,13 @@ export class IntelligentCacheEngine {
     const entryTags = entry.metadata.tags
 
     // Calculate tag overlap
-    const commonTags = promptTags.filter(tag => entryTags.includes(tag))
+    const commonTags = promptTags.filter((tag) => entryTags.includes(tag))
     const tagSimilarity = commonTags.length / Math.max(promptTags.length, entryTags.length)
 
     // Boost similarity for biology-specific content
     let biologyBoost = 0
-    const biologyTags = commonTags.filter(tag =>
-      tag.startsWith('topic:') || tag.startsWith('subject:biology')
+    const biologyTags = commonTags.filter(
+      (tag) => tag.startsWith('topic:') || tag.startsWith('subject:biology')
     )
     if (biologyTags.length > 0) {
       biologyBoost = 0.2
@@ -407,7 +412,7 @@ export class IntelligentCacheEngine {
     }
 
     // Extend TTL for NEET/educational content
-    if (entry.metadata.tags.some(tag => tag.includes('neet') || tag.includes('ncert'))) {
+    if (entry.metadata.tags.some((tag) => tag.includes('neet') || tag.includes('ncert'))) {
       ttl *= 3 // 21 days for exam content
     }
 
@@ -431,7 +436,7 @@ export class IntelligentCacheEngine {
           entries.push({
             key,
             lastAccessed: new Date(entry.metadata.lastAccessed),
-            accessCount: entry.metadata.accessCount
+            accessCount: entry.metadata.accessCount,
           })
         }
       }
@@ -464,7 +469,7 @@ export class IntelligentCacheEngine {
       subject: context.subject,
       level: context.level,
       topic: context.topic,
-      questionType: context.questionType
+      questionType: context.questionType,
     }
   }
 
@@ -507,7 +512,7 @@ export class IntelligentCacheEngine {
       entriesCount: cacheKeys.length,
       avgResponseTime: 150, // Cached responses are much faster
       semanticMatches: this.metrics.semanticMatches,
-      exactMatches: this.metrics.exactMatches
+      exactMatches: this.metrics.exactMatches,
     }
   }
 
@@ -525,7 +530,7 @@ export class IntelligentCacheEngine {
       misses: 0,
       totalCostSaved: 0,
       semanticMatches: 0,
-      exactMatches: 0
+      exactMatches: 0,
     }
 
     console.log('🧹 Cache cleared')
@@ -542,13 +547,14 @@ export class IntelligentCacheEngine {
     const topicDistribution: Record<string, number> = {}
     const providerDistribution: Record<string, number> = {}
 
-    for (const key of keys.slice(0, 100)) { // Sample first 100 entries
+    for (const key of keys.slice(0, 100)) {
+      // Sample first 100 entries
       const cached = await this.redis.get(key)
       if (cached) {
         const entry = JSON.parse(cached) as CacheEntry
 
         // Count topics
-        entry.metadata.tags.forEach(tag => {
+        entry.metadata.tags.forEach((tag) => {
           if (tag.startsWith('topic:')) {
             const topic = tag.replace('topic:', '')
             topicDistribution[topic] = (topicDistribution[topic] || 0) + 1
@@ -566,9 +572,14 @@ export class IntelligentCacheEngine {
       topicDistribution,
       providerDistribution,
       estimatedMonthlySavings: metrics.costSaved * 30, // Rough monthly estimate
-      cacheEfficiency: metrics.hitRate > 60 ? 'Excellent' :
-                      metrics.hitRate > 40 ? 'Good' :
-                      metrics.hitRate > 20 ? 'Fair' : 'Poor'
+      cacheEfficiency:
+        metrics.hitRate > 60
+          ? 'Excellent'
+          : metrics.hitRate > 40
+            ? 'Good'
+            : metrics.hitRate > 20
+              ? 'Fair'
+              : 'Poor',
     }
   }
 

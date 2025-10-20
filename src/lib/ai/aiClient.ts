@@ -143,7 +143,12 @@ class UnifiedAIClient {
       let confidence: number | undefined
       let alternatives: Array<{ provider: string; score: number; estimatedCost: number }> = []
       let enhancedFallbackUsed = false
-      let fallbackAttempts: Array<{ provider: string; success: boolean; error?: string; responseTime: number }> = []
+      let fallbackAttempts: Array<{
+        provider: string
+        success: boolean
+        error?: string
+        responseTime: number
+      }> = []
 
       // Enhanced fallback execution
       if (request.options?.enhancedFallback !== false) {
@@ -154,7 +159,7 @@ class UnifiedAIClient {
             options: request.options,
             attemptCount: 0,
             startTime,
-            errors: []
+            errors: [],
           },
           async (fallbackProvider: string) => {
             // Use smart provider selection if enabled
@@ -168,7 +173,7 @@ class UnifiedAIClient {
                 preferProvider: fallbackProvider,
                 costWeight: request.options?.selectionCriteria?.costWeight || 0.3,
                 qualityWeight: request.options?.selectionCriteria?.qualityWeight || 0.5,
-                speedWeight: request.options?.selectionCriteria?.speedWeight || 0.2
+                speedWeight: request.options?.selectionCriteria?.speedWeight || 0.2,
               }
 
               const providerScores = smartProviderSelector.selectProvider(taskAnalysis, criteria)
@@ -176,10 +181,10 @@ class UnifiedAIClient {
                 const bestProvider = providerScores[0]
                 providerScore = bestProvider.score
                 confidence = bestProvider.confidence
-                alternatives = providerScores.slice(1, 4).map(p => ({
+                alternatives = providerScores.slice(1, 4).map((p) => ({
                   provider: p.provider,
                   score: p.score,
-                  estimatedCost: p.estimatedCost
+                  estimatedCost: p.estimatedCost,
                 }))
               }
 
@@ -188,7 +193,7 @@ class UnifiedAIClient {
                 requiresReasoning: taskAnalysis.requiresReasoning,
                 requiresVision: taskAnalysis.requiresVision,
                 priority: taskAnalysis.priority,
-                maxLatency: taskAnalysis.maxLatency
+                maxLatency: taskAnalysis.maxLatency,
               })
             } else {
               selectedModel = request.options?.model || 'default'
@@ -202,11 +207,29 @@ class UnifiedAIClient {
             // Execute the actual request
             switch (fallbackProvider) {
               case 'openai':
-                return await this.callOpenAI(request, providerConfig, requestId, startTime, selectedModel)
+                return await this.callOpenAI(
+                  request,
+                  providerConfig,
+                  requestId,
+                  startTime,
+                  selectedModel
+                )
               case 'anthropic':
-                return await this.callAnthropic(request, providerConfig, requestId, startTime, selectedModel)
+                return await this.callAnthropic(
+                  request,
+                  providerConfig,
+                  requestId,
+                  startTime,
+                  selectedModel
+                )
               case 'google':
-                return await this.callGoogleAI(request, providerConfig, requestId, startTime, selectedModel)
+                return await this.callGoogleAI(
+                  request,
+                  providerConfig,
+                  requestId,
+                  startTime,
+                  selectedModel
+                )
               default:
                 throw new Error(`Unsupported provider: ${fallbackProvider}`)
             }
@@ -233,10 +256,20 @@ class UnifiedAIClient {
           provider = fallbackResult.finalProvider || 'unknown'
 
           // Continue with quality assurance and other processing...
-          return await this.processSuccessfulResponse(request, response, taskAnalysis, confidence, alternatives, requestId, startTime)
+          return await this.processSuccessfulResponse(
+            request,
+            response,
+            taskAnalysis,
+            confidence,
+            alternatives,
+            requestId,
+            startTime
+          )
         } else {
           // Enhanced fallback failed, throw error with attempt history
-          throw new Error(`All providers failed. Attempts: ${JSON.stringify(fallbackResult.attemptHistory)}`)
+          throw new Error(
+            `All providers failed. Attempts: ${JSON.stringify(fallbackResult.attemptHistory)}`
+          )
         }
       } else {
         // Traditional single-provider execution
@@ -250,7 +283,7 @@ class UnifiedAIClient {
             preferProvider: request.options?.provider,
             costWeight: request.options?.selectionCriteria?.costWeight || 0.3,
             qualityWeight: request.options?.selectionCriteria?.qualityWeight || 0.5,
-            speedWeight: request.options?.selectionCriteria?.speedWeight || 0.2
+            speedWeight: request.options?.selectionCriteria?.speedWeight || 0.2,
           }
 
           const providerScores = smartProviderSelector.selectProvider(taskAnalysis, criteria)
@@ -261,10 +294,10 @@ class UnifiedAIClient {
             providerScore = bestProvider.score
             confidence = bestProvider.confidence
 
-            alternatives = providerScores.slice(1, 4).map(p => ({
+            alternatives = providerScores.slice(1, 4).map((p) => ({
               provider: p.provider,
               score: p.score,
-              estimatedCost: p.estimatedCost
+              estimatedCost: p.estimatedCost,
             }))
 
             selectedModel = aiConfig.getOptimalModel(provider, {
@@ -272,7 +305,7 @@ class UnifiedAIClient {
               requiresReasoning: taskAnalysis.requiresReasoning,
               requiresVision: taskAnalysis.requiresVision,
               priority: taskAnalysis.priority,
-              maxLatency: taskAnalysis.maxLatency
+              maxLatency: taskAnalysis.maxLatency,
             })
           } else {
             provider = request.options?.provider || aiConfig.getBestProvider()
@@ -285,40 +318,42 @@ class UnifiedAIClient {
 
         const providerConfig = aiConfig.getProvider(provider)
 
-      if (!providerConfig) {
-        throw new Error(`Provider ${provider} not found or not configured`)
-      }
+        if (!providerConfig) {
+          throw new Error(`Provider ${provider} not found or not configured`)
+        }
 
-      // Check advanced cache first (if enabled)
-      if (request.options?.useCache !== false && aiConfig.getServiceConfig().cacheEnabled) {
-        const cachedEntry = await advancedCacheManager.get(request.prompt, request.context)
-        if (cachedEntry) {
-          return {
-            success: true,
-            content: cachedEntry.response.content,
-            metadata: {
-              provider: cachedEntry.metadata.provider,
-              model: cachedEntry.metadata.model,
-              tokensUsed: { input: 0, output: 0 },
-              cost: 0,
-              responseTime: Date.now() - startTime,
-              cached: true,
-              requestId,
-              taskAnalysis: taskAnalysis,
-              providerScore: 1.0, // Cached responses are perfect matches
-              confidence: cachedEntry.confidence,
-              alternativeProviders: []
-            },
-            cacheMetadata: {
-              cacheId: cachedEntry.id,
-              originalCost: cachedEntry.metadata.cost,
-              quality: cachedEntry.metadata.quality,
-              accessCount: cachedEntry.metadata.accessCount,
-              semanticMatch: cachedEntry.key !== advancedCacheManager['generateExactKey'](request.prompt, request.context)
+        // Check advanced cache first (if enabled)
+        if (request.options?.useCache !== false && aiConfig.getServiceConfig().cacheEnabled) {
+          const cachedEntry = await advancedCacheManager.get(request.prompt, request.context)
+          if (cachedEntry) {
+            return {
+              success: true,
+              content: cachedEntry.response.content,
+              metadata: {
+                provider: cachedEntry.metadata.provider,
+                model: cachedEntry.metadata.model,
+                tokensUsed: { input: 0, output: 0 },
+                cost: 0,
+                responseTime: Date.now() - startTime,
+                cached: true,
+                requestId,
+                taskAnalysis: taskAnalysis,
+                providerScore: 1.0, // Cached responses are perfect matches
+                confidence: cachedEntry.confidence,
+                alternativeProviders: [],
+              },
+              cacheMetadata: {
+                cacheId: cachedEntry.id,
+                originalCost: cachedEntry.metadata.cost,
+                quality: cachedEntry.metadata.quality,
+                accessCount: cachedEntry.metadata.accessCount,
+                semanticMatch:
+                  cachedEntry.key !==
+                  advancedCacheManager['generateExactKey'](request.prompt, request.context),
+              },
             }
           }
         }
-      }
 
         if (!providerConfig) {
           throw new Error(`Provider ${provider} not found or not configured`)
@@ -329,13 +364,31 @@ class UnifiedAIClient {
 
         switch (provider) {
           case 'openai':
-            response = await this.callOpenAI(request, providerConfig, requestId, startTime, selectedModel)
+            response = await this.callOpenAI(
+              request,
+              providerConfig,
+              requestId,
+              startTime,
+              selectedModel
+            )
             break
           case 'anthropic':
-            response = await this.callAnthropic(request, providerConfig, requestId, startTime, selectedModel)
+            response = await this.callAnthropic(
+              request,
+              providerConfig,
+              requestId,
+              startTime,
+              selectedModel
+            )
             break
           case 'google':
-            response = await this.callGoogleAI(request, providerConfig, requestId, startTime, selectedModel)
+            response = await this.callGoogleAI(
+              request,
+              providerConfig,
+              requestId,
+              startTime,
+              selectedModel
+            )
             break
           default:
             throw new Error(`Unsupported provider: ${provider}`)
@@ -349,7 +402,15 @@ class UnifiedAIClient {
           response.metadata.alternativeProviders = alternatives
         }
 
-        return await this.processSuccessfulResponse(request, response, taskAnalysis, confidence, alternatives, requestId, startTime)
+        return await this.processSuccessfulResponse(
+          request,
+          response,
+          taskAnalysis,
+          confidence,
+          alternatives,
+          requestId,
+          startTime
+        )
       }
 
       // Run quality assurance if enabled
@@ -361,7 +422,7 @@ class UnifiedAIClient {
           provider: response.metadata.provider,
           model: response.metadata.model,
           studentLevel: request.context?.studentLevel || 'class-12',
-          subject: request.context?.subject || 'biology'
+          subject: request.context?.subject || 'biology',
         })
 
         response.metadata.qualityReport = qualityReport
@@ -374,7 +435,9 @@ class UnifiedAIClient {
           qualityReport.overallScore < qualityThreshold &&
           !response.metadata.retryAttempt
         ) {
-          console.log(`Quality too low (${qualityReport.overallScore.toFixed(2)}), retrying with different provider...`)
+          console.log(
+            `Quality too low (${qualityReport.overallScore.toFixed(2)}), retrying with different provider...`
+          )
 
           // Try with next best provider
           const retryRequest = {
@@ -382,15 +445,13 @@ class UnifiedAIClient {
             options: {
               ...request.options,
               provider: alternatives[0]?.provider || provider, // Use alternative if available
-              autoRetryOnLowQuality: false // Prevent infinite retries
-            }
+              autoRetryOnLowQuality: false, // Prevent infinite retries
+            },
           }
 
           const retryResponse = await this.executeRequest(retryRequest, requestId, startTime)
         }
       }
-
-
 
       return response
     } catch (error) {
@@ -433,7 +494,8 @@ class UnifiedAIClient {
     startTime: number,
     selectedModel?: string
   ): Promise<AIResponse> {
-    const model = selectedModel || aiConfig.getModelForUseCase('openai', request.options?.model || 'default')
+    const model =
+      selectedModel || aiConfig.getModelForUseCase('openai', request.options?.model || 'default')
     const maxTokens = request.options?.maxTokens || aiConfig.getServiceConfig().maxTokens
     const temperature = request.options?.temperature || aiConfig.getServiceConfig().temperature
 
@@ -495,7 +557,8 @@ class UnifiedAIClient {
     startTime: number,
     selectedModel?: string
   ): Promise<AIResponse> {
-    const model = selectedModel || aiConfig.getModelForUseCase('anthropic', request.options?.model || 'default')
+    const model =
+      selectedModel || aiConfig.getModelForUseCase('anthropic', request.options?.model || 'default')
     const maxTokens = request.options?.maxTokens || aiConfig.getServiceConfig().maxTokens
     const temperature = request.options?.temperature || aiConfig.getServiceConfig().temperature
 
@@ -554,7 +617,8 @@ class UnifiedAIClient {
     startTime: number,
     selectedModel?: string
   ): Promise<AIResponse> {
-    const model = selectedModel || aiConfig.getModelForUseCase('google', request.options?.model || 'default')
+    const model =
+      selectedModel || aiConfig.getModelForUseCase('google', request.options?.model || 'default')
     const maxTokens = request.options?.maxTokens || aiConfig.getServiceConfig().maxTokens
     const temperature = request.options?.temperature || aiConfig.getServiceConfig().temperature
 
@@ -570,7 +634,9 @@ class UnifiedAIClient {
             {
               parts: [
                 {
-                  text: `${this.generateSystemPrompt(request.context)}\n\nUser: ${request.prompt}`,
+                  text: `${this.generateSystemPrompt(request.context)}
+
+User: ${request.prompt}`,
                 },
               ],
             },
@@ -633,15 +699,19 @@ Guidelines:
     let contextualPrompt = basePrompt
 
     if (context.studentLevel) {
-      contextualPrompt += `\n\nStudent Level: ${context.studentLevel.replace('-', ' ').toUpperCase()}`
+      contextualPrompt += `
+
+Student Level: ${context.studentLevel.replace('-', ' ').toUpperCase()}`
     }
 
     if (context.subject) {
-      contextualPrompt += `\nSubject Focus: ${context.subject}`
+      contextualPrompt += `
+Subject Focus: ${context.subject}`
     }
 
     if (context.language === 'hindi') {
-      contextualPrompt += `\nLanguage: Respond in Hindi (Devanagari script) when appropriate, but use English for scientific terms.`
+      contextualPrompt += `
+Language: Respond in Hindi (Devanagari script) when appropriate, but use English for scientific terms.`
     }
 
     return contextualPrompt
@@ -683,17 +753,20 @@ Guidelines:
       advanced: advancedCacheManager.getStats(),
       legacy: {
         size: this.cache.size,
-        enabled: aiConfig.getServiceConfig().cacheEnabled
-      }
+        enabled: aiConfig.getServiceConfig().cacheEnabled,
+      },
     }
   }
 
   // Record user feedback on responses
-  recordResponseFeedback(requestId: string, feedback: {
-    helpful: boolean
-    rating: number
-    comments?: string
-  }) {
+  recordResponseFeedback(
+    requestId: string,
+    feedback: {
+      helpful: boolean
+      rating: number
+      comments?: string
+    }
+  ) {
     // This would typically be linked to the cache entry
     // For now, we'll log it for future implementation
     console.log(`Feedback for request ${requestId}:`, feedback)
@@ -746,22 +819,22 @@ Guidelines:
       ...config,
       cache: {
         legacy: {
-          size: this.cache.size
+          size: this.cache.size,
         },
-        advanced: cacheStats
+        advanced: cacheStats,
       },
       providerSelection: providerAnalytics,
       qualityAssurance: {
         enabled: true,
         threshold: qualityStats.threshold,
         averageProcessingTime: qualityStats.averageProcessingTime,
-        totalAssessments: qualityStats.totalAssessments
+        totalAssessments: qualityStats.totalAssessments,
       },
       costOptimization: {
         metrics: costMetrics,
         budget: budgetStatus,
         optimization,
-        alerts: budgetStatus.alerts.length
+        alerts: budgetStatus.alerts.length,
       },
       performance: {
         totalRequests: cacheStats.totalQueries,
@@ -773,9 +846,9 @@ Guidelines:
           threshold: 0.85,
           avgSimilarity: cacheStats.avgSimilarityScore,
           semanticHits: cacheStats.semanticHits,
-          exactHits: cacheStats.exactHits
-        }
-      }
+          exactHits: cacheStats.exactHits,
+        },
+      },
     }
   }
 
@@ -788,7 +861,7 @@ Guidelines:
   getQualityAnalytics(): any {
     return {
       pipeline: qualityAssurance.getQualityStats(),
-      cache: advancedCacheManager.getStats().qualityDistribution
+      cache: advancedCacheManager.getStats().qualityDistribution,
     }
   }
 
@@ -805,7 +878,7 @@ Guidelines:
       budget: costDashboard.getBudgetStatus(),
       optimization: costDashboard.getOptimizationRecommendations(),
       forecast: costDashboard.getCostForecast(),
-      analytics: costDashboard.getDetailedAnalytics()
+      analytics: costDashboard.getDetailedAnalytics(),
     }
   }
 
@@ -853,7 +926,7 @@ Guidelines:
         provider: response.metadata.provider,
         model: response.metadata.model,
         studentLevel: request.context?.studentLevel || 'class-12',
-        subject: request.context?.subject || 'biology'
+        subject: request.context?.subject || 'biology',
       })
 
       response.metadata.qualityReport = qualityReport
@@ -866,7 +939,9 @@ Guidelines:
         qualityReport.overallScore < qualityThreshold &&
         !response.metadata.retryAttempt
       ) {
-        console.log(`Quality too low (${qualityReport.overallScore.toFixed(2)}), retrying with different provider...`)
+        console.log(
+          `Quality too low (${qualityReport.overallScore.toFixed(2)}), retrying with different provider...`
+        )
 
         // Try with next best provider
         const retryRequest = {
@@ -874,8 +949,8 @@ Guidelines:
           options: {
             ...request.options,
             provider: alternatives?.[0]?.provider || provider,
-            autoRetryOnLowQuality: false
-          }
+            autoRetryOnLowQuality: false,
+          },
         }
 
         const retryResponse = await this.executeRequest(retryRequest, requestId!, startTime!)
@@ -892,12 +967,13 @@ Guidelines:
               provider: retryResponse.metadata.provider,
               model: retryResponse.metadata.model,
               cost: retryResponse.metadata.cost,
-              tokensUsed: retryResponse.metadata.tokensUsed.input + retryResponse.metadata.tokensUsed.output,
+              tokensUsed:
+                retryResponse.metadata.tokensUsed.input + retryResponse.metadata.tokensUsed.output,
               cached: retryResponse.metadata.cached,
               quality: retryResponse.metadata.qualityReport.overallScore,
               taskAnalysis,
               studentLevel: request.context?.studentLevel,
-              subject: request.context?.subject
+              subject: request.context?.subject,
             })
 
             return retryResponse
@@ -920,7 +996,7 @@ Guidelines:
         quality: response.metadata.qualityReport?.overallScore,
         taskAnalysis,
         studentLevel: request.context?.studentLevel,
-        subject: request.context?.subject
+        subject: request.context?.subject,
       })
     }
 
@@ -931,7 +1007,7 @@ Guidelines:
         latency: response.metadata.responseTime,
         cost: response.metadata.cost,
         success: response.success,
-        quality: finalQuality
+        quality: finalQuality,
       })
     }
 
@@ -948,7 +1024,7 @@ Guidelines:
             model: response.metadata.model,
             cost: response.metadata.cost,
             quality: finalQuality,
-            taskAnalysis
+            taskAnalysis,
           },
           request.context
         )

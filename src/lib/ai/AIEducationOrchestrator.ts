@@ -5,8 +5,17 @@
 
 import { biologyTutor, BiologyQuery, BiologyResponse } from './BiologyTutorEngine'
 import { assessmentAI, GeneratedQuestion, StudentAnswer, AssessmentSession } from './AssessmentAI'
-import { contentIntelligence, StudyMaterial, DiagramSpec, MnemonicDevice } from './ContentIntelligence'
-import { performancePredictionAI, PredictionResult, StudentPerformanceData } from './PerformancePredictionAI'
+import {
+  contentIntelligence,
+  StudyMaterial,
+  DiagramSpec,
+  MnemonicDevice,
+} from './ContentIntelligence'
+import {
+  performancePredictionAI,
+  PredictionResult,
+  StudentPerformanceData,
+} from './PerformancePredictionAI'
 import { AdaptiveLearningEngine } from './AdaptiveLearningEngine'
 import { AIGateway } from './gateway/AIGateway'
 import { DistributedCacheManager } from '../cache/DistributedCacheManager'
@@ -217,9 +226,9 @@ class AIEducationOrchestrator {
         context: {
           previousQuestions: [],
           currentChapter: context?.topic,
-          weakTopics: profile.academic.weakSubjects
+          weakTopics: profile.academic.weakSubjects,
         },
-        timestamp: new Date()
+        timestamp: new Date(),
       }
 
       // Get AI response
@@ -230,7 +239,7 @@ class AIEducationOrchestrator {
         type: 'doubt_resolution',
         topic: query.topic,
         difficulty: response.difficulty,
-        success: response.confidence > 0.7
+        success: response.confidence > 0.7,
       })
 
       // Update learning analytics
@@ -238,7 +247,7 @@ class AIEducationOrchestrator {
         activity: 'doubt_resolution',
         topic: query.topic || 'general',
         success: response.confidence > 0.7,
-        timeSpent: response.estimatedStudyTime
+        timeSpent: response.estimatedStudyTime,
       })
 
       // Generate follow-up suggestions
@@ -247,9 +256,8 @@ class AIEducationOrchestrator {
       return {
         response,
         recommendations,
-        followUp
+        followUp,
       }
-
     } catch (error) {
       console.error('Doubt resolution failed:', error)
       throw new Error('Failed to resolve student doubt')
@@ -283,7 +291,7 @@ class AIEducationOrchestrator {
       grade: profile.academic.currentClass,
       questionCount: params.questionCount,
       timeLimit: params.duration,
-      difficulty: params.difficulty
+      difficulty: params.difficulty,
     })
 
     // Generate preparation recommendations
@@ -291,7 +299,7 @@ class AIEducationOrchestrator {
       type: 'assessment_preparation',
       assessmentType: params.type,
       topics: params.topics,
-      timeAvailable: 60 // 1 hour preparation
+      timeAvailable: 60, // 1 hour preparation
     })
 
     // Provide preparation guidance
@@ -300,7 +308,7 @@ class AIEducationOrchestrator {
     return {
       session,
       recommendations,
-      preparation
+      preparation,
     }
   }
 
@@ -334,7 +342,7 @@ class AIEducationOrchestrator {
           difficulty: params.difficulty || 'intermediate',
           language: profile.learning.preferredLanguage,
           learningStyle: profile.learning.style,
-          length: params.type === 'summary' ? 'brief' : 'detailed'
+          length: params.type === 'summary' ? 'brief' : 'detailed',
         })
         break
 
@@ -344,7 +352,7 @@ class AIEducationOrchestrator {
           diagramType: 'structure',
           complexity: params.difficulty === 'basic' ? 'simple' : 'detailed',
           curriculum: profile.academic.curriculum,
-          grade: profile.academic.currentClass
+          grade: profile.academic.currentClass,
         })
         break
 
@@ -354,7 +362,7 @@ class AIEducationOrchestrator {
           topic: params.topic,
           type: 'acronym',
           language: profile.learning.preferredLanguage,
-          difficulty: params.difficulty || 'medium'
+          difficulty: params.difficulty || 'medium',
         })
         break
 
@@ -367,7 +375,7 @@ class AIEducationOrchestrator {
       type: 'content_study',
       topic: params.topic,
       materialType: params.type,
-      urgency: params.urgency
+      urgency: params.urgency,
     })
 
     // Create study plan
@@ -376,7 +384,7 @@ class AIEducationOrchestrator {
     return {
       material,
       recommendations,
-      studyPlan
+      studyPlan,
     }
   }
 
@@ -399,13 +407,13 @@ class AIEducationOrchestrator {
       type: 'performance_improvement',
       currentScore: prediction.predictions.examScore.predicted,
       targetScore: (await this.getStudentProfile(studentId))?.goals.targetScore || 600,
-      timeframe
+      timeframe,
     })
 
     return {
       prediction,
       insights,
-      recommendations
+      recommendations,
     }
   }
 
@@ -452,7 +460,7 @@ class AIEducationOrchestrator {
             prerequisites: [],
             resources: ['Study Notes', 'Practice Questions', 'Video Lessons'],
             status: 'pending',
-            createdAt: new Date()
+            createdAt: new Date(),
           })
         }
         break
@@ -471,7 +479,7 @@ class AIEducationOrchestrator {
           prerequisites: [],
           resources: ['Practice Question Bank'],
           status: 'pending',
-          createdAt: new Date()
+          createdAt: new Date(),
         })
         break
 
@@ -491,7 +499,7 @@ class AIEducationOrchestrator {
             prerequisites: [],
             resources: ['Comprehensive Study Plan', 'Daily Assessments', 'Tutor Support'],
             status: 'pending',
-            createdAt: new Date()
+            createdAt: new Date(),
           })
         }
         break
@@ -504,7 +512,9 @@ class AIEducationOrchestrator {
     const followUp: string[] = []
 
     if (response.relatedTopics.length > 0) {
-      followUp.push(`Would you like to explore related topics: ${response.relatedTopics.slice(0, 2).join(', ')}?`)
+      followUp.push(
+        `Would you like to explore related topics: ${response.relatedTopics.slice(0, 2).join(', ')}?`
+      )
     }
 
     if (response.practiceQuestions.length > 0) {
@@ -516,13 +526,18 @@ class AIEducationOrchestrator {
     }
 
     if (response.difficulty > 7) {
-      followUp.push('This is a complex topic. Would you like me to break it down into simpler parts?')
+      followUp.push(
+        'This is a complex topic. Would you like me to break it down into simpler parts?'
+      )
     }
 
     return followUp
   }
 
-  private generatePreparationGuidance(session: AssessmentSession, profile: StudentProfile): string[] {
+  private generatePreparationGuidance(
+    session: AssessmentSession,
+    profile: StudentProfile
+  ): string[] {
     const guidance: string[] = []
 
     guidance.push(`This ${session.type} will take ${session.settings.timeLimit} minutes`)
@@ -577,16 +592,16 @@ class AIEducationOrchestrator {
         performance: [],
         engagement: [],
         prediction: [],
-        recommendation: []
+        recommendation: [],
       },
       summary: {
         overallProgress: 75,
         readinessScore: 80,
         riskLevel: 'low',
         nextSteps: [],
-        urgentActions: []
+        urgentActions: [],
       },
-      generatedAt: new Date()
+      generatedAt: new Date(),
     }
 
     return insights
@@ -615,7 +630,10 @@ class AIEducationOrchestrator {
   }
 
   // Session management
-  async startLearningSession(studentId: string, type: LearningSession['type']): Promise<LearningSession> {
+  async startLearningSession(
+    studentId: string,
+    type: LearningSession['type']
+  ): Promise<LearningSession> {
     const session: LearningSession = {
       id: `session_${Date.now()}`,
       studentId,
@@ -628,8 +646,8 @@ class AIEducationOrchestrator {
       metadata: {
         platform: 'web',
         device: 'desktop',
-        internetQuality: 'good'
-      }
+        internetQuality: 'good',
+      },
     }
 
     this.activeSessions.set(session.id, session)
@@ -680,13 +698,13 @@ class AIEducationOrchestrator {
         assessmentAI: true,
         contentIntelligence: true,
         performancePrediction: true,
-        adaptiveLearning: true
+        adaptiveLearning: true,
       },
       metrics: {
         activeStudents: this.studentProfiles.size,
         activeSessions: this.activeSessions.size,
-        totalRecommendations: Array.from(this.recommendations.values()).flat().length
-      }
+        totalRecommendations: Array.from(this.recommendations.values()).flat().length,
+      },
     }
   }
 }
