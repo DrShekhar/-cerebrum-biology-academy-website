@@ -1,12 +1,27 @@
 'use client'
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { Home, Search, BookOpen, ArrowLeft, HelpCircle, Phone } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 
 export default function NotFound() {
+  // Set document title and meta tags for SEO
+  useEffect(() => {
+    document.title = '404 - Page Not Found | Cerebrum Biology Academy'
+    const metaDescription = document.querySelector('meta[name="description"]')
+    if (metaDescription) {
+      metaDescription.setAttribute(
+        'content',
+        'The page you are looking for could not be found. Browse our NEET biology courses or contact support.'
+      )
+    }
+    const metaRobots = document.querySelector('meta[name="robots"]')
+    if (metaRobots) {
+      metaRobots.setAttribute('content', 'noindex, follow')
+    }
+  }, [])
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center px-4">
       <div className="max-w-4xl mx-auto text-center">
