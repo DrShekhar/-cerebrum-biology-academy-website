@@ -76,7 +76,7 @@ const nextConfig = {
   // Production optimizations
   compress: true,
   poweredByHeader: false,
-  output: 'standalone',
+  // output: 'standalone', // Disabled for local testing - enables npm run start to work correctly
 
   // Experimental features for better performance
   experimental: {
