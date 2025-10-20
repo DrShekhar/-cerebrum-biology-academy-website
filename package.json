@@ -7,6 +7,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "test:local": "npm run build && npm run start",
+    "deploy:quick": "git add . && git commit && git push",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "format": "prettier --write .",

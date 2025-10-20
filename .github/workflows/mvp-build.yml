@@ -1,13 +1,11 @@
-name: 🚀 MVP Build & Deploy
+name: 🚀 MVP Build Check
 
 on:
-  # Temporarily disabled to prevent auto-runs
-  # Re-enable after fixing build issues
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
   workflow_dispatch:
-  # push:
-  #   branches: [emergency-revenue-mvp, main]
-  # pull_request:
-  #   branches: [main]
 
 env:
   NODE_VERSION: '18'
@@ -47,4 +45,4 @@ jobs:
           JWT_REFRESH_SECRET: placeholder-build-refresh-secret-change-in-production
 
       - name: ✅ Build successful
-        run: echo "Build completed successfully!"
+        run: echo "✅ Build completed successfully! Vercel will auto-deploy."
