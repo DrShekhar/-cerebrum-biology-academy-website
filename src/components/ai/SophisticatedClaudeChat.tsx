@@ -46,7 +46,7 @@ export function SophisticatedClaudeChat({
       id: '1',
       type: 'system',
       content:
-        "Welcome to Cerebrum AI! I'm your personal Biology mentor, trained on Harvard-level curriculum and designed to help you master NEET Biology. Ask me anything!",
+        "Welcome to Ceri AI! I'm your personal Biology mentor, trained on Harvard-level curriculum and designed to help you master NEET Biology. Ask me anything!",
       timestamp: new Date(),
     },
   ])

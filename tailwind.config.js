@@ -6,6 +6,26 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    screens: {
+      'xs': '320px',
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1536px',
+      // Touch-specific breakpoints
+      'touch': {'raw': '(pointer: coarse)'},
+      'no-touch': {'raw': '(pointer: fine)'},
+      // Mobile-first breakpoints for Indian market
+      'mobile-small': '320px',
+      'mobile-medium': '375px',
+      'mobile-large': '414px',
+      'tablet': '768px',
+      'desktop': '1024px',
+      // Network-aware breakpoints for low bandwidth
+      'slow-2g': {'raw': '(connection: slow-2g)'},
+      'slow-3g': {'raw': '(connection: 3g)'},
+    },
     extend: {
       colors: {
         background: 'var(--background)',
@@ -53,6 +73,17 @@ module.exports = {
           white: 'rgba(255, 255, 255, 0.25)',
           dark: 'rgba(0, 0, 0, 0.25)',
         },
+        // Mobile-optimized color palette
+        mobile: {
+          primary: '#2563eb',
+          secondary: '#16a34a',
+          accent: '#f59e0b',
+          success: '#10b981',
+          warning: '#f59e0b',
+          error: '#ef4444',
+          info: '#3b82f6',
+          muted: '#6b7280',
+        },
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
@@ -73,6 +104,17 @@ module.exports = {
         '7xl': ['4.5rem', { lineHeight: '1.1' }],
         '8xl': ['6rem', { lineHeight: '1.1' }],
         '9xl': ['8rem', { lineHeight: '1.1' }],
+        // Mobile-optimized font sizes
+        'mobile-xs': ['0.75rem', { lineHeight: '1.25rem' }],
+        'mobile-sm': ['0.875rem', { lineHeight: '1.375rem' }],
+        'mobile-base': ['1rem', { lineHeight: '1.5rem' }],
+        'mobile-lg': ['1.125rem', { lineHeight: '1.625rem' }],
+        'mobile-xl': ['1.25rem', { lineHeight: '1.75rem' }],
+        'mobile-2xl': ['1.5rem', { lineHeight: '2rem' }],
+        'mobile-3xl': ['1.875rem', { lineHeight: '2.25rem' }],
+        'mobile-hero': ['clamp(1.5rem, 4vw, 2.5rem)', { lineHeight: '1.2' }],
+        'mobile-heading': ['clamp(1.25rem, 3vw, 1.875rem)', { lineHeight: '1.3' }],
+        'mobile-text': ['clamp(0.875rem, 2.5vw, 1rem)', { lineHeight: '1.5' }],
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
@@ -141,6 +183,15 @@ module.exports = {
         '18': '4.5rem',
         '88': '22rem',
         '128': '32rem',
+        // Touch-friendly mobile spacing
+        'touch-sm': '44px',
+        'touch-md': '48px',
+        'touch-lg': '56px',
+        'thumb-zone': 'calc(100vh / 3)',
+        'safe-top': 'env(safe-area-inset-top)',
+        'safe-bottom': 'env(safe-area-inset-bottom)',
+        'safe-left': 'env(safe-area-inset-left)',
+        'safe-right': 'env(safe-area-inset-right)',
       },
       borderWidth: {
         '3': '3px',

@@ -1,14 +1,67 @@
 {
-  "framework": "nextjs",
+  "version": 2,
+  "buildCommand": "npm run build",
+  "devCommand": "npm run dev",
   "installCommand": "npm install --legacy-peer-deps",
+  "framework": "nextjs",
   "env": {
-    "NEXT_PUBLIC_SITE_URL": "https://cerebrum-biology-academy-website-gnd0it0vm.vercel.app",
-    "NEXT_PUBLIC_ENV": "production",
-    "NEXTAUTH_URL": "https://cerebrum-biology-academy-website-gnd0it0vm.vercel.app",
-    "NEXTAUTH_SECRET": "cerebrum-biology-academy-production-secret-2024-vercel",
-    "AUTH_SECRET": "cerebrum-biology-academy-production-secret-2024-vercel",
-    "AUTH_TRUST_HOST": "true",
-    "ADMIN_EMAIL": "admin@cerebrumbiologyacademy.com",
-    "ADMIN_PASSWORD_HASH": "$2a$12$LQv3c1yqBwkVsvDqjrOuWOFHk.cqmZqjSmUjcScVHFWuLnDSsOlMe"
-  }
+    "NODE_ENV": "production",
+    "NEXT_TELEMETRY_DISABLED": "1",
+    "REDIS_ENABLED": "false",
+    "COMPLEX_FEATURES_ENABLED": "false"
+  },
+  "functions": {
+    "src/app/api/ai/unified-chat/route.ts": {
+      "runtime": "nodejs20.x",
+      "maxDuration": 30
+    }
+  },
+  "images": {
+    "sizes": [320, 375, 420, 640, 750, 828, 1080, 1200],
+    "formats": ["image/webp", "image/avif"],
+    "minimumCacheTTL": 31536000,
+    "dangerouslyAllowSVG": false
+  },
+  "rewrites": [
+    {
+      "source": "/claudechat",
+      "destination": "/claudechat"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Access-Control-Allow-Methods",
+          "value": "GET, POST, PUT, DELETE, OPTIONS"
+        },
+        {
+          "key": "Access-Control-Allow-Headers",
+          "value": "Content-Type, Authorization"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        }
+      ]
+    }
+  ]
 }
