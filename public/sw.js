@@ -9,9 +9,22 @@ const CRITICAL_RESOURCES = [
   '/',
   '/offline',
   '/courses',
+  '/mock-tests',
   '/claudechat',
   '/_next/static/css/app.css',
   '/_next/static/js/app.js',
+  '/manifest.json',
+  '/icons/icon-192x192.png',
+  '/icons/icon-512x512.png',
+];
+
+// Test-specific resources for offline capability
+const TEST_RESOURCES = [
+  '/components/mobile/MobileTestInterface',
+  '/api/tests/sample-biology-test',
+  '/api/mock-tests/class-11',
+  '/api/mock-tests/class-12',
+  '/api/mock-tests/dropper',
 ];
 
 // Additional resources to cache on demand

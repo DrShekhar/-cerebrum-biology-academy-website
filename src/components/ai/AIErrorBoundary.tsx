@@ -64,7 +64,7 @@ export class AIErrorBoundary extends Component<Props, State> {
     })
 
     // Log to client debugger if available
-    if (typeof window !== 'undefined') {
+    if (typeof window !== 'undefined' && clientAIDebugger) {
       clientAIDebugger.enable?.('detailed')
     }
 
