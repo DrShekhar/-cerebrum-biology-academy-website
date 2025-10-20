@@ -38,6 +38,10 @@ model User {
   payments       Payment[]
   sessions       Session[]
   communicationLog CommunicationLog[]
+  testSessions   TestSession[]
+  userProgress   UserProgress[]
+  performanceReports PerformanceReport[]
+  userQuestionResponses UserQuestionResponse[]
 
   @@map("users")
 }
@@ -370,7 +374,7 @@ enum MessageStatus {
   PENDING
 }
 
-// Free Resources System Models
+// Enhanced Test Generator System Models
 
 model FreeUser {
   id               String   @id @default(cuid())
@@ -386,6 +390,17 @@ model FreeUser {
   studyStreak      Int      @default(0)
   lastActiveDate   DateTime?
 
+  // Performance Analytics
+  averageScore     Float?   // Overall average test score percentage
+  totalTestsTaken  Int      @default(0)
+  bestScore        Float?   // Highest score percentage achieved
+  weakestTopics    Json?    // Array of topics needing improvement
+  strongestTopics  Json?    // Array of mastered topics
+
+  // Adaptive Learning
+  currentLevel     Int      @default(1) // Difficulty level (1-10)
+  adaptiveData     Json?    // ML model data for personalization
+
   // Preferences
   preferences      Json?    // study times, notifications, etc.
 
@@ -395,10 +410,14 @@ model FreeUser {
 
   // Relations
   testAttempts     TestAttempt[]
+  testSessions     TestSession[]
   bookmarks        Bookmark[]
   studyPlans       StudyPlan[]
   forumPosts       ForumPost[]
   achievements     Achievement[]
+  userProgress     UserProgress[]
+  questionResponses UserQuestionResponse[]
+  performanceReports PerformanceReport[]
 
   @@map("free_users")
 }
@@ -453,50 +472,204 @@ model Question {
   subtopic         String?
   curriculum       String   // NEET, CBSE, ICSE, IB, IGCSE
   grade            String   // CLASS_9, CLASS_10, CLASS_11, CLASS_12
+  subject          String   @default("biology") // biology, botany, zoology, physics, chemistry
 
   // Question Details
   type             QuestionType // MCQ, SHORT_ANSWER, DIAGRAM, TRUE_FALSE
-  difficulty       String   @default("Medium") // Easy, Medium, Hard
+  difficulty       DifficultyLevel @default(MEDIUM)
   question         String   // The question text
-  options          Json? // String array stored as JSON
+  options          Json? // String array stored as JSON for MCQ
   correctAnswer    String   // The correct answer
   explanation      String?  // Detailed explanation
+  solutionSteps    Json? // Array of solution steps for complex problems
+
+  // Rich Content Support
+  questionImage    String?  // URL to question image
+  explanationImage String?  // URL to explanation image
+  videoExplanation String?  // URL to video explanation
 
   // Metadata
   source           String?  // NEET_2023, CBSE_2022, etc.
+  examYear         Int?     // Year of the exam
   marks            Int      @default(1)
   timeLimit        Int?     // Recommended time in seconds
-  tags             Json? // String array stored as JSON
+  tags             Json?    // String array stored as JSON
+  relatedConcepts  Json?    // Related topics/concepts
+  keywords         Json?    // Searchable keywords
 
-  // Analytics
+  // Advanced Analytics
   totalAttempts    Int      @default(0)
   correctAttempts  Int      @default(0)
   averageTime      Int?     // Average time taken in seconds
+  difficultyRating Float?   // User-perceived difficulty (1-5)
+  popularityScore  Float    @default(0) // Algorithm-calculated popularity
 
-  // Status
+  // A/B Testing
+  variantId        String?  // For question variants testing
+  conversionRate   Float?   // Performance metric
+
+  // Quality Control
   isActive         Boolean  @default(true)
   isVerified       Boolean  @default(false)
+  verifiedBy       String?  // Teacher/expert who verified
+  qualityScore     Float?   // AI-generated quality score
+  reportCount      Int      @default(0) // User-reported issues
+
+  // SEO and Categorization
+  slug             String?  @unique // URL-friendly identifier
+  category         QuestionCategory @default(PRACTICE)
+
+  // Timestamps
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+  lastUsed         DateTime? // Last time used in a test
+
+  // Relations
+  testQuestions    TestQuestion[]
+  questionBank     QuestionBankQuestion[]
+  userResponses    UserQuestionResponse[]
+
+  @@index([topic, difficulty])
+  @@index([curriculum, grade])
+  @@index([subject, type])
+  @@index([popularityScore])
+  @@index([isActive, isVerified])
+  @@map("questions")
+}
+
+// Comprehensive Test Management Models
+
+model TestTemplate {
+  id               String   @id @default(cuid())
+  title            String
+  description      String?
+  slug             String   @unique
+
+  // Test Configuration
+  type             TestType @default(PRACTICE_TEST)
+  category         TestCategory @default(TOPIC_WISE)
+  difficulty       DifficultyLevel @default(MEDIUM)
+  timeLimit        Int      // In minutes
+  totalQuestions   Int
+  totalMarks       Int
+  passingMarks     Int?
+
+  // Content Specification
+  curriculum       String   // NEET, CBSE, etc.
+  grade            String   // CLASS_11, CLASS_12, etc.
+  subject          String   @default("biology")
+  topics           Json     // Array of topics to include
+
+  // Advanced Settings
+  negativeMarking  Boolean  @default(false)
+  markingScheme    Json?    // Custom marking rules
+  questionDistribution Json? // Topic-wise question distribution
+  instructions     Json?    // Array of instructions
+
+  // Adaptive Features
+  isAdaptive       Boolean  @default(false)
+  adaptiveSettings Json?    // Adaptive test configuration
+
+  // Analytics & Performance
+  attemptCount     Int      @default(0)
+  averageScore     Float?
+  averageTime      Int?     // Average time taken
+  popularityScore  Float    @default(0)
+
+  // Status & Metadata
+  isActive         Boolean  @default(true)
+  isPremium        Boolean  @default(false)
+  isPublished      Boolean  @default(false)
+  publishedAt      DateTime?
+
+  // SEO
+  seoTitle         String?
+  seoDescription   String?
+  seoKeywords      Json?
+
+  // Timestamps
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+  createdBy        String?  // Admin/teacher who created
+
+  // Relations
+  testSessions     TestSession[]
+  questionBank     QuestionBankQuestion[]
+  testAttempts     TestAttempt[]
+
+  @@index([type, category])
+  @@index([curriculum, grade])
+  @@index([isActive, isPublished])
+  @@index([popularityScore])
+  @@map("test_templates")
+}
+
+model TestSession {
+  id               String   @id @default(cuid())
+  userId           String?  // Can be null for anonymous users
+  freeUserId       String?  // For free users
+  testTemplateId   String
+
+  // Session Details
+  sessionToken     String   @unique // For real-time tracking
+  status           TestSessionStatus @default(NOT_STARTED)
+
+  // Timing
+  startedAt        DateTime?
+  pausedAt         DateTime?
+  resumedAt        DateTime?
+  submittedAt      DateTime?
+  timeSpent        Int      @default(0) // Total time in seconds
+  remainingTime    Int?     // Remaining time for paused sessions
+
+  // Current State
+  currentQuestionIndex Int   @default(0)
+  questionsAnswered    Int   @default(0)
+  questionsMarkedForReview Int @default(0)
+
+  // Real-time Monitoring
+  browserInfo      Json?    // Browser, OS, screen size
+  ipAddress        String?
+  locationData     Json?    // Country, city for security
+
+  // Anti-cheating
+  tabSwitchCount   Int      @default(0)
+  fullscreenExits  Int      @default(0)
+  suspiciousActivity Json?  // Array of suspicious events
+  isProctored      Boolean  @default(false)
+
+  // Final Results (populated after submission)
+  totalScore       Int?
+  percentage       Float?
+  rank             Int?     // Among all test takers
 
   // Timestamps
   createdAt        DateTime @default(now())
   updatedAt        DateTime @updatedAt
 
   // Relations
-  testQuestions    TestQuestion[]
+  user             User?    @relation(fields: [userId], references: [id])
+  freeUser         FreeUser? @relation(fields: [freeUserId], references: [id])
+  testTemplate     TestTemplate @relation(fields: [testTemplateId], references: [id])
+  responses        UserQuestionResponse[]
+  analytics        TestAnalytics?
 
-  @@index([topic, difficulty])
-  @@index([curriculum, grade])
-  @@map("questions")
+  @@index([userId, status])
+  @@index([freeUserId, status])
+  @@index([sessionToken])
+  @@index([testTemplateId, submittedAt])
+  @@map("test_sessions")
 }
 
 model TestAttempt {
   id               String   @id @default(cuid())
   freeUserId       String
+  testTemplateId   String?  // Link to template if used
 
   // Test Configuration
   title            String   // "Cell Biology Test - Easy"
-  topics           Json? // String array stored as JSON
-  difficulty       String   // Easy, Medium, Hard, Mixed
+  topics           Json?    // String array stored as JSON
+  difficulty       DifficultyLevel @default(MEDIUM)
   questionCount    Int
   timeLimit        Int?     // In minutes
 
@@ -505,12 +678,19 @@ model TestAttempt {
   totalMarks       Int
   percentage       Float
   timeSpent        Int      // In seconds
+  rank             Int?     // Among all attempts
 
-  // Analysis
+  // Detailed Analysis
   topicWiseScore   Json     // { "Cell Biology": 8, "Genetics": 6 }
-  strengthAreas    Json? // String array stored as JSON
-  weaknessAreas    Json? // String array stored as JSON
-  recommendations  Json? // String array stored as JSON
+  strengthAreas    Json?    // String array stored as JSON
+  weaknessAreas    Json?    // String array stored as JSON
+  recommendations  Json?    // String array stored as JSON
+  improvementAreas Json?    // Specific areas for improvement
+
+  // Performance Metrics
+  accuracy         Float?   // Percentage of correct answers
+  speed            Float?   // Questions per minute
+  consistency      Float?   // Variation in performance across topics
 
   // Status
   status           TestStatus @default(IN_PROGRESS)
@@ -519,9 +699,12 @@ model TestAttempt {
 
   // Relations
   freeUser         FreeUser @relation(fields: [freeUserId], references: [id], onDelete: Cascade)
+  testTemplate     TestTemplate? @relation(fields: [testTemplateId], references: [id])
   testQuestions    TestQuestion[]
 
   @@index([freeUserId, startedAt])
+  @@index([testTemplateId])
+  @@index([percentage]) // For ranking queries
   @@map("test_attempts")
 }
 
@@ -535,6 +718,11 @@ model TestQuestion {
   isCorrect        Boolean?
   timeSpent        Int?     // In seconds
   marksAwarded     Int      @default(0)
+  isMarkedForReview Boolean @default(false)
+
+  // Additional Analytics
+  attempts         Int      @default(1) // Number of times student changed answer
+  confidenceLevel  Int?     // 1-5 scale if asked
 
   // Relations
   testAttempt      TestAttempt @relation(fields: [testAttemptId], references: [id], onDelete: Cascade)
@@ -542,6 +730,229 @@ model TestQuestion {
 
   @@unique([testAttemptId, questionId])
   @@map("test_questions")
+}
+
+// New Models for Enhanced Functionality
+
+model QuestionBank {
+  id               String   @id @default(cuid())
+  name             String
+  description      String?
+  category         QuestionBankCategory @default(CUSTOM)
+
+  // Configuration
+  curriculum       String   // NEET, CBSE, etc.
+  grade            String   // CLASS_11, CLASS_12, etc.
+  subject          String   @default("biology")
+  topics           Json?    // Array of topics covered
+
+  // Analytics
+  totalQuestions   Int      @default(0)
+  activeQuestions  Int      @default(0)
+  usageCount       Int      @default(0)
+
+  // Status
+  isActive         Boolean  @default(true)
+  isPublic         Boolean  @default(false)
+
+  // Timestamps
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+  createdBy        String?  // Admin/teacher who created
+
+  // Relations
+  questions        QuestionBankQuestion[]
+
+  @@map("question_banks")
+}
+
+model QuestionBankQuestion {
+  id               String   @id @default(cuid())
+  questionBankId   String
+  questionId       String
+  testTemplateId   String?  // If part of a test template
+
+  // Order and grouping
+  orderIndex       Int      // Position in the bank
+  groupLabel       String?  // Optional grouping (e.g., "Section A")
+
+  // Relations
+  questionBank     QuestionBank @relation(fields: [questionBankId], references: [id], onDelete: Cascade)
+  question         Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  testTemplate     TestTemplate? @relation(fields: [testTemplateId], references: [id])
+
+  @@unique([questionBankId, questionId])
+  @@index([questionBankId, orderIndex])
+  @@map("question_bank_questions")
+}
+
+model UserQuestionResponse {
+  id               String   @id @default(cuid())
+  userId           String?  // Regular user
+  freeUserId       String?  // Free user
+  questionId       String
+  testSessionId    String?  // If part of a test session
+
+  // Response Details
+  selectedAnswer   String?
+  isCorrect        Boolean?
+  timeSpent        Int?     // In seconds
+  marksAwarded     Int      @default(0)
+  confidence       Int?     // 1-5 scale
+
+  // Context
+  responseMode     ResponseMode @default(TEST_MODE) // TEST_MODE, PRACTICE_MODE, REVIEW_MODE
+  deviceType       String?  // mobile, tablet, desktop
+
+  // Timestamps
+  answeredAt       DateTime @default(now())
+
+  // Relations
+  user             User? @relation(fields: [userId], references: [id])
+  freeUser         FreeUser? @relation(fields: [freeUserId], references: [id])
+  question         Question @relation(fields: [questionId], references: [id])
+  testSession      TestSession? @relation(fields: [testSessionId], references: [id])
+
+  @@index([userId, answeredAt])
+  @@index([freeUserId, answeredAt])
+  @@index([questionId, isCorrect])
+  @@map("user_question_responses")
+}
+
+model UserProgress {
+  id               String   @id @default(cuid())
+  userId           String?  // Regular user
+  freeUserId       String?  // Free user
+
+  // Progress Tracking
+  topic            String   // Cell Biology, Genetics, etc.
+  subtopic         String?
+  curriculum       String   // NEET, CBSE, etc.
+  grade            String   // CLASS_11, CLASS_12, etc.
+
+  // Performance Metrics
+  totalQuestions   Int      @default(0)
+  correctAnswers   Int      @default(0)
+  accuracy         Float    @default(0) // Percentage
+  averageTime      Int?     // Average time per question in seconds
+  improvementRate  Float    @default(0) // Week-over-week improvement
+
+  // Difficulty Progression
+  currentLevel     DifficultyLevel @default(EASY)
+  masteryScore     Float    @default(0) // 0-100 scale
+
+  // Learning Path
+  recommendedNext  Json?    // Array of recommended topics
+  weakAreas        Json?    // Array of areas needing improvement
+  strongAreas      Json?    // Array of mastered areas
+
+  // Timestamps
+  lastPracticed    DateTime?
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  // Relations
+  user             User? @relation(fields: [userId], references: [id])
+  freeUser         FreeUser? @relation(fields: [freeUserId], references: [id])
+
+  @@unique([userId, topic, curriculum, grade])
+  @@unique([freeUserId, topic, curriculum, grade])
+  @@index([topic, masteryScore])
+  @@map("user_progress")
+}
+
+model TestAnalytics {
+  id               String   @id @default(cuid())
+  testSessionId    String   @unique
+
+  // Performance Analytics
+  totalTime        Int      // Total time spent in seconds
+  averageTimePerQ  Float    // Average time per question
+  questionsAttempted Int
+  questionsCorrect Int
+  accuracy         Float    // Percentage correct
+
+  // Behavioral Analytics
+  questionsSkipped Int      @default(0)
+  questionsRevisited Int    @default(0)
+  timeDistribution Json     // Time spent on each question
+  answerPattern    Json     // Sequence of answers
+
+  // Difficulty Analysis
+  easyQuestions    Json     // Performance on easy questions
+  mediumQuestions  Json     // Performance on medium questions
+  hardQuestions    Json     // Performance on hard questions
+
+  // Topic-wise Performance
+  topicPerformance Json     // Detailed topic-wise analysis
+  strengthTopics   Json     // Array of strong topics
+  weaknessTopics   Json     // Array of weak topics
+
+  // Comparative Analytics
+  percentileRank   Float?   // Percentile among all test takers
+  averageComparison Float?  // How performance compares to average
+
+  // Predictive Analytics
+  predictedScore   Float?   // AI-predicted score for similar tests
+  recommendedStudyTime Int? // Recommended study time in hours
+
+  // Timestamps
+  analyzedAt       DateTime @default(now())
+
+  // Relations
+  testSession      TestSession @relation(fields: [testSessionId], references: [id], onDelete: Cascade)
+
+  @@map("test_analytics")
+}
+
+model PerformanceReport {
+  id               String   @id @default(cuid())
+  userId           String?  // Regular user
+  freeUserId       String?  // Free user
+
+  // Report Details
+  reportType       ReportType @default(WEEKLY)
+  reportPeriod     String   // "2024-W1", "2024-01", etc.
+
+  // Overall Performance
+  testsAttempted   Int      @default(0)
+  averageScore     Float?
+  totalStudyTime   Int      @default(0) // In minutes
+  improvementRate  Float?   // Percentage improvement
+
+  // Subject-wise Performance
+  biologyScore     Float?
+  botanyScore      Float?
+  zoologyScore     Float?
+
+  // Topic Analysis
+  strongTopics     Json?    // Array of topics with good performance
+  weakTopics       Json?    // Array of topics needing improvement
+  improvingTopics  Json?    // Array of topics showing improvement
+
+  // Goals and Targets
+  targetScore      Float?   // User-set target score
+  targetDate       DateTime? // Target exam date
+  onTrackStatus    Boolean  @default(true) // Whether on track to meet goals
+
+  // Recommendations
+  studyPlan        Json?    // Recommended study plan
+  focusAreas       Json?    // Areas to focus on
+  practiceTests    Json?    // Recommended tests to take
+
+  // Timestamps
+  periodStart      DateTime
+  periodEnd        DateTime
+  generatedAt      DateTime @default(now())
+
+  // Relations
+  user             User? @relation(fields: [userId], references: [id])
+  freeUser         FreeUser? @relation(fields: [freeUserId], references: [id])
+
+  @@unique([userId, reportType, reportPeriod])
+  @@unique([freeUserId, reportType, reportPeriod])
+  @@index([reportType, periodStart])
+  @@map("performance_reports")
 }
 
 model Bookmark {
@@ -666,7 +1077,7 @@ model Achievement {
   @@map("achievements")
 }
 
-// Additional Enums for Free Resources
+// Enhanced Enums for Test Generator System
 
 enum QuestionType {
   MCQ
@@ -674,6 +1085,54 @@ enum QuestionType {
   DIAGRAM
   TRUE_FALSE
   FILL_BLANK
+  MULTIPLE_SELECT
+  MATCH_FOLLOWING
+  NUMERICAL
+}
+
+enum DifficultyLevel {
+  EASY
+  MEDIUM
+  HARD
+  EXPERT
+}
+
+enum QuestionCategory {
+  PRACTICE
+  MOCK_TEST
+  PREVIOUS_YEAR
+  CONCEPT_BUILDER
+  COMPETITIVE
+}
+
+enum TestType {
+  PRACTICE_TEST
+  MOCK_TEST
+  FULL_TEST
+  QUICK_TEST
+  ADAPTIVE_TEST
+  TIMED_TEST
+  DIAGNOSTIC_TEST
+}
+
+enum TestCategory {
+  TOPIC_WISE
+  SUBJECT_WISE
+  FULL_SYLLABUS
+  CHAPTER_WISE
+  DIFFICULTY_WISE
+  PREVIOUS_YEAR
+  MIXED
+}
+
+enum TestSessionStatus {
+  NOT_STARTED
+  IN_PROGRESS
+  PAUSED
+  COMPLETED
+  EXPIRED
+  ABANDONED
+  TERMINATED
 }
 
 enum TestStatus {
@@ -681,6 +1140,31 @@ enum TestStatus {
   COMPLETED
   ABANDONED
   EXPIRED
+}
+
+enum QuestionBankCategory {
+  NEET_PREVIOUS_YEAR
+  CBSE_BOARD
+  NCERT_BASED
+  COMPETITIVE
+  CONCEPT_BUILDER
+  CUSTOM
+  PRACTICE_SET
+}
+
+enum ResponseMode {
+  TEST_MODE
+  PRACTICE_MODE
+  REVIEW_MODE
+  STUDY_MODE
+}
+
+enum ReportType {
+  DAILY
+  WEEKLY
+  MONTHLY
+  QUARTERLY
+  CUSTOM
 }
 
 enum PostType {
