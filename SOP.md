@@ -648,7 +648,7 @@ npx prettier --write src/lib/ai/*.ts
 
 ### 8.4 Build Verification
 
-**Rule:** Always test production build locally before creating PR.
+**Rule:** ALWAYS test production build locally on localhost before creating PR or merging to main.
 
 ```bash
 # Clean previous builds
@@ -662,9 +662,38 @@ npm run build
 
 # If build succeeds, test the production server
 npm run start
+
+# Test in browser at http://localhost:3000
+# Verify:
+# - Homepage loads with correct styling
+# - Navigation works across pages
+# - No console errors
+# - All dynamic features work
 ```
 
-**Critical:** Type-check passing doesn't guarantee build success. Webpack may fail on module resolution issues that TypeScript doesn't catch.
+**Critical Warnings:**
+
+1. **Type-check passing ≠ Build success:** Webpack may fail on module resolution issues that TypeScript doesn't catch.
+
+2. **Build success ≠ Runtime success:** Production build may compile but break at runtime due to:
+   - Edge Runtime vs Node.js Runtime mismatches
+   - Client/Server component boundaries
+   - Environment variable issues
+   - Database connection problems
+   - API route configuration errors
+
+3. **NEVER merge without local testing:** Even if CI passes, ALWAYS test the production build locally on your machine before creating a PR. This prevents deploying broken code to production.
+
+**Why This Matters:**
+
+In a recent incident, 148 TypeScript errors were fixed and the build compiled successfully, but the website was completely broken in production due to:
+
+- Prisma Edge Runtime false positive detection
+- Loading screen blocking homepage
+- Middleware crypto API incompatibility
+- Missing runtime directives on API routes
+
+**Local testing caught all these issues before deployment.**
 
 ---
 
@@ -675,6 +704,8 @@ Before committing code, verify:
 - [ ] **Type Check Passes:** `npm run type-check`
 - [ ] **ESLint Passes:** `npm run lint`
 - [ ] **Prettier Formatted:** `npm run format`
+- [ ] **Production Build Succeeds:** `npm run build` (REQUIRED before PR)
+- [ ] **Production Server Runs:** `npm run start` and test in browser
 - [ ] **All Required Properties:** Interfaces fully implemented
 - [ ] **No Deprecated APIs:** No `substr()`, `createCipher()`, etc.
 - [ ] **Type Guards Used:** For union types and browser APIs
@@ -682,6 +713,15 @@ Before committing code, verify:
 - [ ] **Security Headers:** Added to all API routes
 - [ ] **Error Handling:** All async functions have try-catch
 - [ ] **Tests Pass:** `npm test` (if applicable)
+
+**Before Creating Pull Request (MANDATORY):**
+
+- [ ] **Clean Build:** `npm run clean && npm run build`
+- [ ] **Test Localhost:** Visit http://localhost:3000 after `npm run start`
+- [ ] **Homepage Works:** Verify styling and navigation
+- [ ] **No Console Errors:** Check browser console for errors
+- [ ] **Dynamic Routes Work:** Test /thank-you, /enrollment, etc.
+- [ ] **Production-Ready:** Confirm website functions correctly
 
 ---
 
