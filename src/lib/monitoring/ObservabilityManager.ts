@@ -4,6 +4,7 @@
  */
 
 import Redis from 'ioredis'
+import { createRedisClient } from '@/lib/redis/redisClient'
 
 interface SystemMetrics {
   timestamp: number
@@ -152,14 +153,17 @@ interface AlertConfig {
 }
 
 export class ObservabilityManager {
-  private redis: Redis
+  private redis: Redis | null = null
   private config: MonitoringConfig
   private alertHistory: Map<string, Alert[]> = new Map()
   private activeAlerts: Map<string, Alert> = new Map()
   private isCollecting = false
 
   constructor(redisUrl?: string) {
-    this.redis = new Redis(redisUrl || process.env.REDIS_URL || 'redis://localhost:6379')
+    // Lazy initialize Redis
+    if (typeof window === 'undefined' && process.env.NEXT_PHASE !== 'phase-production-build') {
+      this.redis = createRedisClient()
+    }
     this.config = this.getDefaultConfig()
     this.startMetricsCollection()
     this.startAlertProcessing()

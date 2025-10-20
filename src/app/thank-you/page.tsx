@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { motion } from 'framer-motion'
 import {
@@ -14,7 +14,11 @@ import {
 import { PremiumCard, PremiumButton, AnimatedCounter } from '@/components/ui/PremiumDesignSystem'
 import { ConversionTracker } from '@/lib/abTesting/conversionTracking'
 
-export default function ThankYouPage() {
+// Force dynamic rendering for this page (uses search params)
+export const dynamic = 'force-dynamic'
+export const dynamicParams = true
+
+function ThankYouContent() {
   const searchParams = useSearchParams()
   const form = searchParams?.get('form') || 'general'
   const [countdown, setCountdown] = useState(120) // 2 minutes countdown
@@ -315,5 +319,24 @@ export default function ThankYouPage() {
         </motion.div>
       </div>
     </div>
+  )
+}
+
+function ThankYouPageLoading() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50 py-12 flex items-center justify-center">
+      <div className="text-center">
+        <div className="w-16 h-16 border-4 border-green-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+        <p className="text-gray-600 text-lg">Loading your confirmation page...</p>
+      </div>
+    </div>
+  )
+}
+
+export default function ThankYouPage() {
+  return (
+    <Suspense fallback={<ThankYouPageLoading />}>
+      <ThankYouContent />
+    </Suspense>
   )
 }

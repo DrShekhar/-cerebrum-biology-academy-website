@@ -9,22 +9,22 @@ export interface User {
   name: string
   password?: string // Optional - OTP-first authentication
   role: 'student' | 'parent' | 'teacher' | 'admin'
-  
+
   // Remarketing and communication fields
   whatsappNumber?: string // Often different from mobile, critical for remarketing
   isWhatsappSame?: boolean // True if WhatsApp number is same as mobile
   communicationPreference: 'sms' | 'whatsapp' | 'email' | 'call'
-  
+
   // Verification and security
   isMobileVerified: boolean
   isEmailVerified: boolean
   lastOtpSent?: number
   otpAttempts?: number
-  
+
   createdAt: number
   updatedAt: number
   lastActiveAt?: number
-  
+
   profile?: {
     // Student-specific fields
     currentClass?: '10th' | '11th' | '12th' | 'Dropper'
@@ -35,16 +35,16 @@ export interface User {
     studyHours?: number
     registrationDate?: number
     enrolledCourses?: string[]
-    
-    // Parent-specific fields  
+
+    // Parent-specific fields
     childrenIds?: string[]
     relationToStudent?: 'father' | 'mother' | 'guardian'
-    
+
     // Teacher-specific fields
     subjects?: string[]
     experience?: number
     qualification?: string
-    
+
     // Common fields for remarketing
     location?: string
     city?: string
@@ -54,7 +54,7 @@ export interface User {
     referralCode?: string
     referredBy?: string
     targetYear?: string
-    
+
     // Marketing consent
     marketingConsent: boolean
     whatsappConsent: boolean
@@ -148,7 +148,8 @@ export interface ContactSubmission {
 // You'll need to get your app ID from InstantDB dashboard
 const APP_ID = process.env.NEXT_PUBLIC_INSTANT_APP_ID as string
 
-if (!APP_ID) {
+// Only warn in development mode, not during build
+if (!APP_ID && process.env.NODE_ENV === 'development') {
   console.warn('NEXT_PUBLIC_INSTANT_APP_ID environment variable is not set. Using demo mode.')
 }
 

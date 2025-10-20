@@ -7,6 +7,7 @@
 import { Server } from '@modelcontextprotocol/sdk/server/index.js'
 import { Anthropic } from '@anthropic-ai/sdk'
 import Redis from 'ioredis'
+import { createRedisClient } from '@/lib/redis/redisClient'
 import WebSocket, { WebSocketServer } from 'ws'
 import compression from 'compression'
 import helmet from 'helmet'
@@ -41,12 +42,12 @@ import { AuditLogger } from './security/audit'
 export class CerebrumMCPServer {
   private mcpServer: Server
   private anthropic: Anthropic
-  private redis: Redis
+  private redis: Redis | null = null
   private wsServer: WebSocketServer
   private agents: Map<AgentType, EducationalAgent>
   private securityManager: SecurityManager
   private complianceManager: ComplianceManager
-  private auditLogger: AuditLogger
+  private auditLogger: AuditLogger | null = null
   private config: MCPServerConfig
   private isRunning: boolean = false
   private activeConnections: Set<WebSocket> = new Set()
@@ -93,20 +94,33 @@ export class CerebrumMCPServer {
       apiKey: process.env.ANTHROPIC_API_KEY || '',
     })
 
-    // Initialize Redis for caching and session management
-    this.redis = new Redis({
-      host: this.config.redis.host,
-      port: this.config.redis.port,
-      password: this.config.redis.password,
-      db: this.config.redis.db,
-      maxRetriesPerRequest: 3,
-      enableOfflineQueue: false,
-    })
+    // Initialize Redis for caching and session management (lazy initialization)
+    // Skip during build time
+    if (typeof window === 'undefined' && process.env.NEXT_PHASE !== 'phase-production-build') {
+      try {
+        const client = createRedisClient({
+          host: this.config.redis.host,
+          port: this.config.redis.port,
+          password: this.config.redis.password,
+          db: this.config.redis.db,
+          maxRetriesPerRequest: 3,
+        })
+        if (client) {
+          this.redis = client
+        }
+      } catch (error) {
+        console.error('❌ Failed to initialize Redis for MCP Server:', error)
+      }
+    }
 
     // Initialize security services
     this.securityManager = new SecurityManager(this.config.security)
     this.complianceManager = new ComplianceManager()
-    this.auditLogger = new AuditLogger(this.redis)
+
+    // Initialize audit logger only if Redis is available
+    if (this.redis) {
+      this.auditLogger = new AuditLogger(this.redis)
+    }
 
     // Initialize agents map
     this.agents = new Map()
@@ -116,6 +130,12 @@ export class CerebrumMCPServer {
    * Setup AI agents for different educational functions
    */
   private setupAgents(): void {
+    // Skip agent setup if Redis is not available
+    if (!this.redis || !this.auditLogger) {
+      console.warn('⚠️ Skipping agent setup - Redis not available')
+      return
+    }
+
     const agentConfig = {
       anthropic: this.anthropic,
       redis: this.redis,
@@ -186,14 +206,18 @@ export class CerebrumMCPServer {
     console.log('MCP Server event handlers setup pending - SDK integration required')
 
     // Redis event handlers
-    this.redis.on('connect', () => {
-      console.log('✅ Redis connected successfully')
-    })
+    if (this.redis) {
+      this.redis.on('connect', () => {
+        console.log('✅ Redis connected successfully')
+      })
 
-    this.redis.on('error', (error) => {
-      console.error('❌ Redis connection error:', error)
-      this.auditLogger.logError('redis_error', error)
-    })
+      this.redis.on('error', (error) => {
+        console.error('❌ Redis connection error:', error)
+        if (this.auditLogger) {
+          this.auditLogger.logError('redis_error', error)
+        }
+      })
+    }
   }
 
   /**
@@ -204,11 +228,13 @@ export class CerebrumMCPServer {
     const { name, arguments: args } = request.params
 
     // Log the request
-    await this.auditLogger.logAction(AuditAction.TOOL_REQUEST, {
-      toolName: name,
-      arguments: args,
-      timestamp: new Date(),
-    })
+    if (this.auditLogger) {
+      await this.auditLogger.logAction(AuditAction.TOOL_REQUEST, {
+        toolName: name,
+        arguments: args,
+        timestamp: new Date(),
+      })
+    }
 
     // Route to appropriate agent
     const query: StudentQuery = {
@@ -493,7 +519,9 @@ export class CerebrumMCPServer {
       }
 
       // Close Redis connection
-      await this.redis.quit()
+      if (this.redis) {
+        await this.redis.quit()
+      }
 
       // TODO: MCP SDK uses close() method instead of stop()
       // await this.mcpServer.close()
@@ -540,7 +568,7 @@ export class CerebrumMCPServer {
   }> {
     const services = {
       mcpServer: this.isRunning,
-      redis: this.redis.status === 'ready',
+      redis: this.redis ? this.redis.status === 'ready' : false,
       agents: Array.from(this.agents.values()).every((agent) => agent.isActive),
       webSocket: this.wsServer !== undefined,
     }
@@ -572,6 +600,8 @@ export class CerebrumMCPServer {
   }
 
   private async cacheResponse(query: StudentQuery, response: AgentResponse): Promise<void> {
+    if (!this.redis) return
+
     const cacheKey = `response:${query.agentType}:${Buffer.from(query.query).toString('base64')}`
     await this.redis.setex(cacheKey, this.config.redis.ttl, JSON.stringify(response))
   }
@@ -628,7 +658,9 @@ export class CerebrumMCPServer {
     }
 
     // Log error
-    this.auditLogger.logError('mcp_request_error', mcpError)
+    if (this.auditLogger) {
+      this.auditLogger.logError('mcp_request_error', mcpError)
+    }
 
     return {
       error: {

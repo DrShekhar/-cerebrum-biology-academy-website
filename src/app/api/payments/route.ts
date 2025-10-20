@@ -8,14 +8,25 @@ import { AdvancedPaymentEngine } from '@/lib/payments/AdvancedPaymentEngine'
 import { HyperIntelligentRouter } from '@/lib/api/HyperIntelligentRouter'
 import { getCacheManagers } from '@/lib/cache/CacheConfiguration'
 
-// Initialize payment engine
-const cacheManagers = getCacheManagers()
-const distributedCache = cacheManagers.distributed
-const aiRouter = new HyperIntelligentRouter()
-const paymentEngine = new AdvancedPaymentEngine()
+// Lazy-load services on first request
+let cacheManagers: ReturnType<typeof getCacheManagers> | null = null
+let distributedCache: any = null
+let aiRouter: HyperIntelligentRouter | null = null
+let paymentEngine: AdvancedPaymentEngine | null = null
+
+function getServices() {
+  if (!cacheManagers) {
+    cacheManagers = getCacheManagers()
+    distributedCache = cacheManagers.distributed
+  }
+  if (!aiRouter) aiRouter = new HyperIntelligentRouter()
+  if (!paymentEngine) paymentEngine = new AdvancedPaymentEngine()
+  return { cacheManagers, distributedCache, aiRouter, paymentEngine }
+}
 
 export async function POST(request: NextRequest) {
   try {
+    const services = getServices()
     const { action, data } = await request.json()
 
     console.log(`💰 Payment API: ${action}`)
@@ -93,6 +104,7 @@ export async function POST(request: NextRequest) {
 
 export async function GET(request: NextRequest) {
   try {
+    const services = getServices()
     const { searchParams } = new URL(request.url)
     const type = searchParams.get('type')
     const userId = searchParams.get('userId')

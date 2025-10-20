@@ -10,6 +10,7 @@ import { HyperIntelligentRouter } from '@/lib/api/HyperIntelligentRouter'
 import { VisualEnhancementEngine } from '@/lib/api/VisualEnhancementEngine'
 import { CreditManagementSystem } from '@/lib/api/CreditManagementSystem'
 import Redis from 'ioredis'
+import { getRedisClient } from '@/lib/redis/redisClient'
 
 interface WhatsAppMessage {
   id: string
@@ -61,11 +62,28 @@ interface ProcessingResult {
   creditsUsed: number
 }
 
-// Initialize services
-const redis = new Redis(process.env.REDIS_URL || 'redis://localhost:6379')
-const aiRouter = new HyperIntelligentRouter()
-const visualEngine = new VisualEnhancementEngine()
-const creditSystem = new CreditManagementSystem()
+// Initialize services with lazy loading
+let redis: Redis | null = null
+let aiRouter: HyperIntelligentRouter | null = null
+let visualEngine: VisualEnhancementEngine | null = null
+let creditSystem: CreditManagementSystem | null = null
+
+// Initialize services on first request
+function getServices() {
+  if (!redis) {
+    redis = getRedisClient()
+  }
+  if (!aiRouter) {
+    aiRouter = new HyperIntelligentRouter()
+  }
+  if (!visualEngine) {
+    visualEngine = new VisualEnhancementEngine()
+  }
+  if (!creditSystem) {
+    creditSystem = new CreditManagementSystem()
+  }
+  return { redis, aiRouter, visualEngine, creditSystem }
+}
 
 // Message queue for high-volume processing
 const messageQueue: MessageQueue[] = []

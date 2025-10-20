@@ -7,6 +7,7 @@
 import { Anthropic } from '@anthropic-ai/sdk'
 import OpenAI from 'openai'
 import Redis from 'ioredis'
+import { createRedisClient } from '@/lib/redis/redisClient'
 import { CircuitBreaker } from './CircuitBreaker'
 import { RetryManager } from './RetryManager'
 import { PerformanceMonitor } from './PerformanceMonitor'
@@ -76,11 +77,18 @@ export class AIGateway {
   private loadBalancer: LoadBalancer
   private cacheManager: CacheManager
   private errorHandlingManager: ErrorHandlingManager
-  private redis: Redis
+  private redis: Redis | null = null
   private isInitialized = false
 
   constructor() {
-    this.redis = new Redis(process.env.REDIS_URL || 'redis://localhost:6379')
+    // Lazy initialize Redis
+    if (typeof window === 'undefined' && process.env.NEXT_PHASE !== 'phase-production-build') {
+      const client = createRedisClient()
+      if (client) {
+        this.redis = client
+      }
+    }
+
     this.retryManager = new RetryManager()
     this.performanceMonitor = new PerformanceMonitor()
     this.costOptimizer = new CostOptimizer()

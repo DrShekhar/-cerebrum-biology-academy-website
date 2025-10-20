@@ -7,6 +7,7 @@
 import { Anthropic } from '@anthropic-ai/sdk'
 import OpenAI from 'openai'
 import Redis from 'ioredis'
+import { createRedisClient } from '@/lib/redis/redisClient'
 
 interface APIRequest {
   id: string
@@ -73,7 +74,7 @@ interface TokenPrediction {
 export class HyperIntelligentRouter {
   private claude: Anthropic
   private openai: OpenAI
-  private redis: Redis
+  private redis: Redis | null = null
   private providerCapabilities: Map<string, ProviderCapabilities>
   private semanticCache: Map<string, SemanticCacheEntry[]> = new Map()
   private requestHistory: Map<string, APIRequest[]> = new Map()
@@ -95,7 +96,14 @@ export class HyperIntelligentRouter {
       },
     })
 
-    this.redis = new Redis(process.env.REDIS_URL || 'redis://localhost:6379')
+    // Lazy initialize Redis
+    if (typeof window === 'undefined' && process.env.NEXT_PHASE !== 'phase-production-build') {
+      const client = createRedisClient()
+      if (client) {
+        this.redis = client
+      }
+    }
+
     this.initializeProviderCapabilities()
     this.startOptimizationEngine()
   }

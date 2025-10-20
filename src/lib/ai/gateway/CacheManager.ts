@@ -4,6 +4,7 @@
  */
 
 import Redis from 'ioredis'
+import { createRedisClient } from '@/lib/redis/redisClient'
 
 interface CacheEntry {
   content: string
@@ -142,7 +143,7 @@ class SimpleLRUCache<K, V> {
 }
 
 export class CacheManager {
-  private redis: Redis
+  private redis: Redis | null = null
   private l1Cache: SimpleLRUCache<string, CacheEntry>
   private config: CacheConfig
   private stats = {
@@ -151,10 +152,9 @@ export class CacheManager {
     l3: { hits: 0, misses: 0 },
     totalSavings: 0,
   }
+  private isInitialized: boolean = false
 
   constructor(redisUrl?: string, config?: Partial<CacheConfig>) {
-    this.redis = new Redis(redisUrl || process.env.REDIS_URL || 'redis://localhost:6379')
-
     this.config = {
       l1: {
         maxSize: 1000, // 1000 entries in memory
@@ -177,9 +177,29 @@ export class CacheManager {
       this.config.l1.ttl
     )
 
-    // Start cache warming and maintenance
-    this.startCacheWarming()
-    this.startCacheMaintenance()
+    // Lazy initialize Redis only when needed
+    this.initializeRedis(redisUrl)
+  }
+
+  private initializeRedis(redisUrl?: string): void {
+    // Skip during build time or on client-side
+    if (typeof window !== 'undefined' || process.env.NEXT_PHASE === 'phase-production-build') {
+      return
+    }
+
+    try {
+      const client = createRedisClient()
+      if (client) {
+        this.redis = client
+        this.isInitialized = true
+
+        // Start cache warming and maintenance only if Redis is available
+        this.startCacheWarming()
+        this.startCacheMaintenance()
+      }
+    } catch (error) {
+      console.error('❌ Failed to initialize Redis for CacheManager:', error)
+    }
   }
 
   /**
@@ -200,52 +220,56 @@ export class CacheManager {
     this.stats.l1.misses++
 
     // L2 Cache (Redis) - Fast shared cache
-    try {
-      const l2Key = `${this.config.l2.keyPrefix}${cacheKey}`
-      const l2Result = await this.redis.get(l2Key)
+    if (this.redis) {
+      try {
+        const l2Key = `${this.config.l2.keyPrefix}${cacheKey}`
+        const l2Result = await this.redis.get(l2Key)
 
-      if (l2Result) {
-        this.stats.l2.hits++
-        const entry = JSON.parse(l2Result) as CacheEntry
-        entry.metadata.hitCount++
-        entry.metadata.lastAccessed = Date.now()
+        if (l2Result) {
+          this.stats.l2.hits++
+          const entry = JSON.parse(l2Result) as CacheEntry
+          entry.metadata.hitCount++
+          entry.metadata.lastAccessed = Date.now()
 
-        // Promote to L1 cache
-        this.l1Cache.set(cacheKey, entry)
+          // Promote to L1 cache
+          this.l1Cache.set(cacheKey, entry)
 
-        await this.updateCacheStats(entry, 'l2')
-        return entry
+          await this.updateCacheStats(entry, 'l2')
+          return entry
+        }
+        this.stats.l2.misses++
+      } catch (error) {
+        console.warn('L2 cache read failed:', error)
       }
-      this.stats.l2.misses++
-    } catch (error) {
-      console.warn('L2 cache read failed:', error)
     }
 
     // L3 Cache (Redis Persistent) - Long-term storage
-    try {
-      const l3Key = `${this.config.l3.keyPrefix}${cacheKey}`
-      const l3Result = await this.redis.get(l3Key)
+    if (this.redis) {
+      try {
+        const l3Key = `${this.config.l3.keyPrefix}${cacheKey}`
+        const l3Result = await this.redis.get(l3Key)
 
-      if (l3Result) {
-        this.stats.l3.hits++
-        const entry = JSON.parse(l3Result) as CacheEntry
-        entry.metadata.hitCount++
-        entry.metadata.lastAccessed = Date.now()
+        if (l3Result) {
+          this.stats.l3.hits++
+          const entry = JSON.parse(l3Result) as CacheEntry
+          entry.metadata.hitCount++
+          entry.metadata.lastAccessed = Date.now()
 
-        // Promote to L1 and L2 caches
-        this.l1Cache.set(cacheKey, entry)
-        await this.redis.setex(
-          `${this.config.l2.keyPrefix}${cacheKey}`,
-          this.config.l2.ttl,
-          JSON.stringify(entry)
-        )
+          // Promote to L1 and L2 caches
+          this.l1Cache.set(cacheKey, entry)
+          await this.redis.setex(
+            `${this.config.l2.keyPrefix}${cacheKey}`,
+            this.config.l2.ttl,
+            JSON.stringify(entry)
+          )
 
-        await this.updateCacheStats(entry, 'l3')
-        return entry
+          await this.updateCacheStats(entry, 'l3')
+          return entry
+        }
+        this.stats.l3.misses++
+      } catch (error) {
+        console.warn('L3 cache read failed:', error)
       }
-      this.stats.l3.misses++
-    } catch (error) {
-      console.warn('L3 cache read failed:', error)
     }
 
     return null
@@ -288,15 +312,17 @@ export class CacheManager {
     this.l1Cache.set(cacheKey, entry)
 
     // Store in L2 cache (Redis short-term)
-    try {
-      const l2Key = `${this.config.l2.keyPrefix}${cacheKey}`
-      await this.redis.setex(l2Key, this.config.l2.ttl, JSON.stringify(entry))
-    } catch (error) {
-      console.warn('L2 cache write failed:', error)
+    if (this.redis) {
+      try {
+        const l2Key = `${this.config.l2.keyPrefix}${cacheKey}`
+        await this.redis.setex(l2Key, this.config.l2.ttl, JSON.stringify(entry))
+      } catch (error) {
+        console.warn('L2 cache write failed:', error)
+      }
     }
 
     // Store in L3 cache (Redis long-term) for biology content
-    if (this.isBiologyContent(key, options.tags)) {
+    if (this.redis && this.isBiologyContent(key, options.tags)) {
       try {
         const l3Key = `${this.config.l3.keyPrefix}${cacheKey}`
         await this.redis.setex(l3Key, this.config.l3.ttl, JSON.stringify(entry))
@@ -325,21 +351,23 @@ export class CacheManager {
       }
 
       // Invalidate L2 and L3 caches
-      try {
-        const l2Keys = await this.redis.keys(`${this.config.l2.keyPrefix}*${pattern}*`)
-        const l3Keys = await this.redis.keys(`${this.config.l3.keyPrefix}*${pattern}*`)
+      if (this.redis) {
+        try {
+          const l2Keys = await this.redis.keys(`${this.config.l2.keyPrefix}*${pattern}*`)
+          const l3Keys = await this.redis.keys(`${this.config.l3.keyPrefix}*${pattern}*`)
 
-        if (l2Keys.length > 0) {
-          await this.redis.del(...l2Keys)
-          invalidatedCount += l2Keys.length
-        }
+          if (l2Keys.length > 0) {
+            await this.redis.del(...l2Keys)
+            invalidatedCount += l2Keys.length
+          }
 
-        if (l3Keys.length > 0) {
-          await this.redis.del(...l3Keys)
-          invalidatedCount += l3Keys.length
+          if (l3Keys.length > 0) {
+            await this.redis.del(...l3Keys)
+            invalidatedCount += l3Keys.length
+          }
+        } catch (error) {
+          console.warn('Cache invalidation failed:', error)
         }
-      } catch (error) {
-        console.warn('Cache invalidation failed:', error)
       }
     }
 
@@ -500,11 +528,13 @@ export class CacheManager {
     this.stats.totalSavings += savings
 
     // Store cache hit statistics
-    try {
-      await this.redis.hincrby('cache:stats', `${layer}:hits`, 1)
-      await this.redis.hincrby('cache:stats', 'total:savings', Math.round(savings * 100))
-    } catch (error) {
-      console.warn('Failed to update cache stats:', error)
+    if (this.redis) {
+      try {
+        await this.redis.hincrby('cache:stats', `${layer}:hits`, 1)
+        await this.redis.hincrby('cache:stats', 'total:savings', Math.round(savings * 100))
+      } catch (error) {
+        console.warn('Failed to update cache stats:', error)
+      }
     }
   }
 
@@ -512,6 +542,8 @@ export class CacheManager {
    * Invalidate cache entries by tags
    */
   private async invalidateByTags(tags: string[]): Promise<number> {
+    if (!this.redis) return 0
+
     let invalidatedCount = 0
 
     // This would require a more sophisticated tagging system
@@ -536,6 +568,8 @@ export class CacheManager {
    * Mark topic for cache warming
    */
   private async markForWarming(topic: string): Promise<void> {
+    if (!this.redis) return
+
     try {
       await this.redis.sadd('cache:warming:topics', topic)
       await this.redis.expire('cache:warming:topics', 3600) // 1 hour expiry
@@ -565,6 +599,8 @@ export class CacheManager {
    * Promote frequently accessed items to higher cache layers
    */
   private async promoteFrequentItems(): Promise<void> {
+    if (!this.redis) return
+
     // Analyze L2 cache for frequently accessed items
     try {
       const l2Keys = await this.redis.keys(`${this.config.l2.keyPrefix}*`)

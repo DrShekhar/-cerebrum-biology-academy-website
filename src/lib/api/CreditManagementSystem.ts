@@ -5,6 +5,7 @@
  */
 
 import Redis from 'ioredis'
+import { createRedisClient } from '@/lib/redis/redisClient'
 
 interface StudentCredits {
   userId: string
@@ -64,12 +65,15 @@ interface BillingAlert {
 }
 
 export class CreditManagementSystem {
-  private redis: Redis
+  private redis: Redis | null = null
   private tierLimits: Map<string, TierLimits>
   private pricePerCredit = 0.001 // $0.001 per credit
 
   constructor() {
-    this.redis = new Redis(process.env.REDIS_URL || 'redis://localhost:6379')
+    // Lazy initialize Redis
+    if (typeof window === 'undefined' && process.env.NEXT_PHASE !== 'phase-production-build') {
+      this.redis = createRedisClient()
+    }
     this.initializeTierLimits()
     this.startDailyResetTask()
     this.startMonthlyResetTask()

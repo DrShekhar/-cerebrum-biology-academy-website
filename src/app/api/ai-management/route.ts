@@ -9,14 +9,24 @@ import { VisualEnhancementEngine } from '@/lib/api/VisualEnhancementEngine'
 import { CreditManagementSystem } from '@/lib/api/CreditManagementSystem'
 import { VoiceSynthesis } from '@/lib/api/VoiceSynthesis'
 
-// Initialize services
-const aiRouter = new HyperIntelligentRouter()
-const visualEngine = new VisualEnhancementEngine()
-const creditSystem = new CreditManagementSystem()
-const voiceSynthesis = new VoiceSynthesis()
+// Lazy-load services on first request
+let aiRouter: HyperIntelligentRouter | null = null
+let visualEngine: VisualEnhancementEngine | null = null
+let creditSystem: CreditManagementSystem | null = null
+let voiceSynthesis: VoiceSynthesis | null = null
+
+function getServices() {
+  if (!aiRouter) aiRouter = new HyperIntelligentRouter()
+  if (!visualEngine) visualEngine = new VisualEnhancementEngine()
+  if (!creditSystem) creditSystem = new CreditManagementSystem()
+  if (!voiceSynthesis) voiceSynthesis = new VoiceSynthesis()
+  return { aiRouter, visualEngine, creditSystem, voiceSynthesis }
+}
 
 export async function POST(request: NextRequest) {
   try {
+    // Initialize services (sets module-level variables)
+    getServices()
     const { action, data } = await request.json()
 
     switch (action) {
@@ -46,6 +56,8 @@ export async function POST(request: NextRequest) {
 
 export async function GET(request: NextRequest) {
   try {
+    // Initialize services (sets module-level variables)
+    getServices()
     const { searchParams } = new URL(request.url)
     const type = searchParams.get('type')
     const userId = searchParams.get('userId')
@@ -55,22 +67,22 @@ export async function GET(request: NextRequest) {
         if (!userId) {
           return NextResponse.json({ error: 'User ID required' }, { status: 400 })
         }
-        const credits = await creditSystem.getStudentCredits(userId)
+        const credits = await creditSystem!.getStudentCredits(userId)
         return NextResponse.json({ success: true, credits })
 
       case 'usage_analytics':
         if (!userId) {
           return NextResponse.json({ error: 'User ID required' }, { status: 400 })
         }
-        const analytics = await creditSystem.getUsageAnalytics(userId)
+        const analytics = await creditSystem!.getUsageAnalytics(userId)
         return NextResponse.json({ success: true, analytics })
 
       case 'tier_comparison':
-        const tiers = creditSystem.getTierComparison()
+        const tiers = creditSystem!.getTierComparison()
         return NextResponse.json({ success: true, tiers })
 
       case 'voice_profiles':
-        const profiles = voiceSynthesis.getVoiceProfiles()
+        const profiles = voiceSynthesis!.getVoiceProfiles()
         return NextResponse.json({ success: true, profiles })
 
       default:
@@ -92,7 +104,7 @@ async function processQuestion(data: any) {
   }
 
   // Check credits first
-  const creditCheck = await creditSystem.checkCreditsAvailable(
+  const creditCheck = await creditSystem!.checkCreditsAvailable(
     userId,
     0.01, // Estimated cost
     'text_question'
@@ -120,13 +132,13 @@ async function processQuestion(data: any) {
     studentLevel: preferences?.level || 'intermediate',
   }
 
-  const response = await aiRouter.routeRequest(aiRequest)
+  const response = await aiRouter!.routeRequest(aiRequest)
 
   // Generate visuals if requested
   let visualResponse = null
   if (preferences?.includeVisuals && shouldGenerateVisuals(question)) {
     try {
-      visualResponse = await visualEngine.generateBiologyDiagram({
+      visualResponse = await visualEngine!.generateBiologyDiagram({
         type: 'diagram',
         content: question,
         subject: 'Biology',
@@ -143,7 +155,7 @@ async function processQuestion(data: any) {
   let voiceResponse = null
   if (preferences?.includeVoice) {
     try {
-      voiceResponse = await voiceSynthesis.generateExplanationAudio(
+      voiceResponse = await voiceSynthesis!.generateExplanationAudio(
         response.content,
         extractTopic(question),
         preferences?.language || 'english'
@@ -154,7 +166,7 @@ async function processQuestion(data: any) {
   }
 
   // Deduct credits
-  await creditSystem.deductCredits(
+  await creditSystem!.deductCredits(
     userId,
     response.tokens,
     response.cost,
@@ -208,7 +220,7 @@ async function generateVisual(data: any) {
 
   switch (type) {
     case 'diagram':
-      visualResponse = await visualEngine.generateBiologyDiagram({
+      visualResponse = await visualEngine!.generateBiologyDiagram({
         type: 'diagram',
         content,
         subject: preferences?.subject || 'Biology',
@@ -219,19 +231,22 @@ async function generateVisual(data: any) {
       break
 
     case 'molecule':
-      visualResponse = await visualEngine.generate3DMolecule(content)
+      visualResponse = await visualEngine!.generate3DMolecule(content)
       break
 
     case 'anatomy':
-      visualResponse = await visualEngine.generateAnatomyDiagram(content, preferences?.labels || [])
+      visualResponse = await visualEngine!.generateAnatomyDiagram(
+        content,
+        preferences?.labels || []
+      )
       break
 
     case 'process_flow':
-      visualResponse = await visualEngine.generateProcessFlow(content, preferences?.steps || [])
+      visualResponse = await visualEngine!.generateProcessFlow(content, preferences?.steps || [])
       break
 
     case 'formula':
-      visualResponse = await visualEngine.renderChemicalFormula(content, preferences?.context)
+      visualResponse = await visualEngine!.renderChemicalFormula(content, preferences?.context)
       break
 
     default:
@@ -239,7 +254,7 @@ async function generateVisual(data: any) {
   }
 
   // Deduct credits for visual generation
-  await creditSystem.deductCredits(
+  await creditSystem!.deductCredits(
     userId,
     0, // No tokens for visual generation
     visualResponse.cost,
@@ -261,8 +276,8 @@ async function synthesizeVoice(data: any) {
   }
 
   // Check credits
-  const estimatedCost = voiceSynthesis.estimateCost(text)
-  const creditCheck = await creditSystem.checkCreditsAvailable(
+  const estimatedCost = voiceSynthesis!.estimateCost(text)
+  const creditCheck = await creditSystem!.checkCreditsAvailable(
     userId,
     estimatedCost,
     'voice_synthesis'
@@ -276,7 +291,7 @@ async function synthesizeVoice(data: any) {
     })
   }
 
-  const voiceResponse = await voiceSynthesis.synthesizeTeacherVoice({
+  const voiceResponse = await voiceSynthesis!.synthesizeTeacherVoice({
     text,
     language: preferences?.language || 'english',
     emotion: preferences?.emotion || 'explanatory',
@@ -285,7 +300,7 @@ async function synthesizeVoice(data: any) {
   })
 
   // Deduct credits
-  await creditSystem.deductCredits(
+  await creditSystem!.deductCredits(
     userId,
     0, // No tokens for voice synthesis
     voiceResponse.cost,
@@ -306,8 +321,8 @@ async function checkCredits(data: any) {
     return NextResponse.json({ error: 'User ID is required' }, { status: 400 })
   }
 
-  const credits = await creditSystem.getStudentCredits(userId)
-  const alerts = await creditSystem.generateBillingAlerts(userId)
+  const credits = await creditSystem!.getStudentCredits(userId)
+  const alerts = await creditSystem!.generateBillingAlerts(userId)
 
   return NextResponse.json({
     success: true,
@@ -324,7 +339,7 @@ async function upgradeTier(data: any) {
   }
 
   try {
-    const updatedCredits = await creditSystem.upgradeStudentTier(userId, newTier)
+    const updatedCredits = await creditSystem!.upgradeStudentTier(userId, newTier)
 
     return NextResponse.json({
       success: true,

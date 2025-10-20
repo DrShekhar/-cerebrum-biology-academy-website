@@ -4,6 +4,7 @@
  */
 
 import Redis from 'ioredis'
+import { createRedisClient } from '@/lib/redis/redisClient'
 
 interface RequestMetric {
   requestId: string
@@ -56,7 +57,7 @@ interface Alert {
 }
 
 export class PerformanceMonitor {
-  private redis: Redis
+  private redis: Redis | null = null
   private metrics: Map<string, RequestMetric[]> = new Map()
   private alerts: Alert[] = []
   private initialized = false
@@ -78,7 +79,10 @@ export class PerformanceMonitor {
   }
 
   constructor() {
-    this.redis = new Redis(process.env.REDIS_URL || 'redis://localhost:6379')
+    // Lazy initialize Redis
+    if (typeof window === 'undefined' && process.env.NEXT_PHASE !== 'phase-production-build') {
+      this.redis = createRedisClient()
+    }
   }
 
   async initialize(): Promise<void> {

@@ -5,11 +5,12 @@ import { init, id } from '@instantdb/admin'
 const APP_ID = process.env.NEXT_PUBLIC_INSTANT_APP_ID as string
 const ADMIN_TOKEN = process.env.INSTANT_APP_ADMIN_TOKEN as string
 
-if (!APP_ID) {
+// Only warn in development mode, not during build
+if (!APP_ID && process.env.NODE_ENV === 'development') {
   console.warn('NEXT_PUBLIC_INSTANT_APP_ID environment variable is not set. Using demo mode.')
 }
 
-if (!ADMIN_TOKEN) {
+if (!ADMIN_TOKEN && process.env.NODE_ENV === 'development') {
   console.warn(
     'INSTANT_APP_ADMIN_TOKEN environment variable is not set. Admin operations will fail.'
   )

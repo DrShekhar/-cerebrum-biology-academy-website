@@ -26,6 +26,9 @@ import {
   ChevronRight,
 } from 'lucide-react'
 
+// Force dynamic rendering (requires authentication)
+export const dynamic = 'force-dynamic'
+
 interface Material {
   id: string
   title: string
@@ -72,8 +75,9 @@ interface MaterialsResponse {
 }
 
 export default function StudentMaterialsPage() {
-  const { data: session, status } = useSession()
+  const session = useSession()
   const router = useRouter()
+  const status = session?.status || 'loading'
 
   const [materials, setMaterials] = useState<Material[]>([])
   const [loading, setLoading] = useState(true)

@@ -5,6 +5,7 @@
 
 import Redis from 'ioredis'
 import { createHash } from 'crypto'
+import { createRedisClient } from '@/lib/redis/redisClient'
 
 interface CacheConfig {
   redis: {
@@ -45,11 +46,12 @@ interface CacheStats {
 }
 
 export class DistributedCacheManager {
-  private primaryRedis: Redis
-  private replicaRedis: Redis[]
+  private primaryRedis: Redis | null = null
+  private replicaRedis: Redis[] = []
   private config: CacheConfig
   private stats: CacheStats
   private compressionEnabled: boolean
+  private isInitialized: boolean = false
 
   constructor(config: CacheConfig) {
     this.config = config
@@ -63,36 +65,70 @@ export class DistributedCacheManager {
       avgResponseTime: 0,
     }
     this.compressionEnabled = true
-    this.initializeRedisConnections()
+    // Don't initialize Redis in constructor - use lazy initialization
   }
 
   private initializeRedisConnections(): void {
-    // Primary Redis instance for writes
-    if (this.config.redis.cluster) {
-      this.primaryRedis = new Redis.Cluster([this.config.redis.primary], {
-        redisOptions: {
-          maxRetriesPerRequest: this.config.redis.maxRetries,
-        },
-      }) as any
-    } else {
-      this.primaryRedis = new Redis(this.config.redis.primary, {
-        maxRetriesPerRequest: this.config.redis.maxRetries,
-      })
+    // Skip if already initialized or during build time
+    if (
+      this.isInitialized ||
+      typeof window !== 'undefined' ||
+      process.env.NEXT_PHASE === 'phase-production-build'
+    ) {
+      return
     }
 
-    // Read replicas for load distribution
-    this.replicaRedis = this.config.redis.replicas.map(
-      (replica) =>
-        new Redis(replica, {
+    try {
+      // Primary Redis instance for writes
+      if (this.config.redis.cluster) {
+        this.primaryRedis = new Redis.Cluster([this.config.redis.primary], {
+          redisOptions: {
+            maxRetriesPerRequest: this.config.redis.maxRetries,
+            lazyConnect: true,
+          },
+        }) as any
+      } else {
+        const client = createRedisClient({
           maxRetriesPerRequest: this.config.redis.maxRetries,
-          lazyConnect: true,
         })
-    )
+        if (client) {
+          this.primaryRedis = client
+        }
+      }
 
-    this.setupRedisEventHandlers()
+      // Read replicas for load distribution
+      this.replicaRedis = this.config.redis.replicas
+        .map((replica) => {
+          try {
+            return new Redis(replica, {
+              maxRetriesPerRequest: this.config.redis.maxRetries,
+              lazyConnect: true,
+            })
+          } catch {
+            return null
+          }
+        })
+        .filter((client): client is Redis => client !== null)
+
+      if (this.primaryRedis) {
+        this.setupRedisEventHandlers()
+        this.isInitialized = true
+      }
+    } catch (error) {
+      console.error('❌ Failed to initialize Redis connections:', error)
+    }
+  }
+
+  private ensureRedisConnection(): boolean {
+    if (!this.isInitialized) {
+      this.initializeRedisConnections()
+    }
+    return this.primaryRedis !== null
   }
 
   private setupRedisEventHandlers(): void {
+    if (!this.primaryRedis) return
+
     this.primaryRedis.on('connect', () => {
       console.log('✅ Primary Redis connected')
     })
@@ -116,11 +152,15 @@ export class DistributedCacheManager {
    * Get data from cache with intelligent read distribution
    */
   async get<T>(key: string, useReplica: boolean = true): Promise<T | null> {
+    if (!this.ensureRedisConnection()) {
+      return null
+    }
+
     const startTime = Date.now()
 
     try {
       const redis =
-        useReplica && this.replicaRedis.length > 0 ? this.getRandomReplica() : this.primaryRedis
+        useReplica && this.replicaRedis.length > 0 ? this.getRandomReplica() : this.primaryRedis!
 
       const cachedData = await redis.get(key)
 
@@ -163,6 +203,10 @@ export class DistributedCacheManager {
     ttl?: number,
     metadata?: Record<string, any>
   ): Promise<boolean> {
+    if (!this.ensureRedisConnection() || !this.primaryRedis) {
+      return false
+    }
+
     try {
       const serializedData = JSON.stringify(data)
       const shouldCompress = serializedData.length > this.config.compressionThreshold
@@ -444,7 +488,7 @@ export class DistributedCacheManager {
 
   // Private helper methods
 
-  private getRandomReplica(): Redis {
+  private getRandomReplica(): Redis | null {
     if (this.replicaRedis.length === 0) {
       return this.primaryRedis
     }
