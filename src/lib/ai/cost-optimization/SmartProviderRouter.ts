@@ -97,10 +97,7 @@ export class SmartProviderRouter {
     }
 
     // Calculate scores for each provider
-    const providerScores = await this.calculateProviderScores(
-      availableProviders,
-      requestAnalysis
-    )
+    const providerScores = await this.calculateProviderScores(availableProviders, requestAnalysis)
 
     // Select optimal provider
     const bestProvider = this.selectOptimalProvider(providerScores, requestAnalysis)
@@ -113,7 +110,7 @@ export class SmartProviderRouter {
       model: decision.selectedModel,
       estimatedCost: `$${decision.estimatedCost.toFixed(4)}`,
       confidence: `${(decision.confidence * 100).toFixed(1)}%`,
-      reasoning: decision.reasoning.slice(0, 2)
+      reasoning: decision.reasoning.slice(0, 2),
     })
 
     return decision
@@ -134,11 +131,16 @@ export class SmartProviderRouter {
 
     // Biology-specific complexity indicators
     const complexBiologyTopics = [
-      'biochemistry', 'molecular biology', 'genetics', 'evolution',
-      'photosynthesis mechanism', 'cellular respiration', 'protein synthesis'
+      'biochemistry',
+      'molecular biology',
+      'genetics',
+      'evolution',
+      'photosynthesis mechanism',
+      'cellular respiration',
+      'protein synthesis',
     ]
 
-    if (complexBiologyTopics.some(topic => prompt.includes(topic))) {
+    if (complexBiologyTopics.some((topic) => prompt.includes(topic))) {
       complexity = 'high'
     }
 
@@ -183,7 +185,7 @@ export class SmartProviderRouter {
       isEducational,
       estimatedTokens: this.estimateTokenUsage(prompt),
       maxLatency: context.maxLatency || this.targetLatency,
-      budgetConstraint: this.getCurrentBudgetStatus()
+      budgetConstraint: this.getCurrentBudgetStatus(),
     }
   }
 
@@ -193,15 +195,17 @@ export class SmartProviderRouter {
   private async calculateProviderScores(
     providers: string[],
     analysis: any
-  ): Promise<Array<{
-    provider: string
-    totalScore: number
-    costScore: number
-    performanceScore: number
-    qualityScore: number
-    availabilityScore: number
-    details: any
-  }>> {
+  ): Promise<
+    Array<{
+      provider: string
+      totalScore: number
+      costScore: number
+      performanceScore: number
+      qualityScore: number
+      availabilityScore: number
+      details: any
+    }>
+  > {
     const scores = []
 
     for (const providerId of providers) {
@@ -223,12 +227,8 @@ export class SmartProviderRouter {
       const availabilityScore = this.calculateAvailabilityScore(performance)
 
       // Calculate weighted total score
-      const totalScore = (
-        costScore * 0.30 +
-        performanceScore * 0.25 +
-        qualityScore * 0.25 +
-        availabilityScore * 0.20
-      )
+      const totalScore =
+        costScore * 0.3 + performanceScore * 0.25 + qualityScore * 0.25 + availabilityScore * 0.2
 
       scores.push({
         provider: providerId,
@@ -240,8 +240,8 @@ export class SmartProviderRouter {
         details: {
           config,
           performance,
-          optimalModel: this.getOptimalModel(config, analysis)
-        }
+          optimalModel: this.getOptimalModel(config, analysis),
+        },
       })
     }
 
@@ -261,7 +261,7 @@ export class SmartProviderRouter {
     )
 
     // Normalize cost score (inverse relationship)
-    const maxCost = 0.10 // $0.10 max expected cost
+    const maxCost = 0.1 // $0.10 max expected cost
     const normalizedCost = Math.min(estimatedCost / maxCost, 1)
 
     let costScore = (1 - normalizedCost) * 100
@@ -369,9 +369,9 @@ export class SmartProviderRouter {
 
     // For educational content, balance cost and quality
     if (analysis.isEducational) {
-      const educationalScores = scores.map(s => ({
+      const educationalScores = scores.map((s) => ({
         ...s,
-        educationalScore: (s.costScore * 0.4 + s.qualityScore * 0.6)
+        educationalScore: s.costScore * 0.4 + s.qualityScore * 0.6,
       }))
       return educationalScores.sort((a, b) => b.educationalScore - a.educationalScore)[0]
     }
@@ -402,11 +402,15 @@ export class SmartProviderRouter {
 
     // Add reasoning for selection
     if (selectedProvider.costScore > 70) {
-      reasoning.push(`Cost-effective choice (${selectedProvider.costScore.toFixed(0)}/100 cost score)`)
+      reasoning.push(
+        `Cost-effective choice (${selectedProvider.costScore.toFixed(0)}/100 cost score)`
+      )
     }
 
     if (selectedProvider.qualityScore > 80) {
-      reasoning.push(`High quality for this task type (${selectedProvider.qualityScore.toFixed(0)}/100 quality score)`)
+      reasoning.push(
+        `High quality for this task type (${selectedProvider.qualityScore.toFixed(0)}/100 quality score)`
+      )
     }
 
     if (analysis.isEducational) {
@@ -427,7 +431,7 @@ export class SmartProviderRouter {
         analysis.estimatedTokens * 0.7,
         score.details.optimalModel
       ),
-      priority: index + 2
+      priority: index + 2,
     }))
 
     return {
@@ -437,7 +441,7 @@ export class SmartProviderRouter {
       estimatedLatency: selectedProvider.details.performance.averageLatency,
       confidence: selectedProvider.totalScore / 100,
       reasoning,
-      fallbackOptions
+      fallbackOptions,
     }
   }
 
@@ -451,7 +455,7 @@ export class SmartProviderRouter {
       requiresReasoning: analysis.requiresReasoning,
       requiresVision: analysis.requiresVision,
       priority: analysis.priority,
-      maxLatency: analysis.maxLatency
+      maxLatency: analysis.maxLatency,
     })
   }
 
@@ -497,7 +501,7 @@ export class SmartProviderRouter {
         averageCost: 0.01, // Default cost estimate
         qualityScore: 0.85, // Default quality
         uptimeScore: 0.99, // Default uptime
-        consecutiveFailures: 0
+        consecutiveFailures: 0,
       })
     }
     return this.performanceHistory.get(providerId)!
@@ -517,8 +521,8 @@ export class SmartProviderRouter {
     const performance = this.getProviderPerformance(provider)
 
     // Update running averages
-    performance.averageLatency = (performance.averageLatency * 0.8) + (latency * 0.2)
-    performance.averageCost = (performance.averageCost * 0.8) + (cost * 0.2)
+    performance.averageLatency = performance.averageLatency * 0.8 + latency * 0.2
+    performance.averageCost = performance.averageCost * 0.8 + cost * 0.2
 
     if (success) {
       performance.successRate = Math.min(0.99, performance.successRate * 0.95 + 0.05)
@@ -536,7 +540,7 @@ export class SmartProviderRouter {
       cost,
       latency,
       success,
-      context
+      context,
     })
 
     // Keep only last 1000 entries
@@ -548,7 +552,7 @@ export class SmartProviderRouter {
       provider,
       successRate: `${(performance.successRate * 100).toFixed(1)}%`,
       avgLatency: `${performance.averageLatency.toFixed(0)}ms`,
-      avgCost: `$${performance.averageCost.toFixed(4)}`
+      avgCost: `$${performance.averageCost.toFixed(4)}`,
     })
   }
 
@@ -564,11 +568,11 @@ export class SmartProviderRouter {
     routingEfficiency: number
   } {
     const totalRequests = this.routingHistory.length
-    const successfulRequests = this.routingHistory.filter(r => r.success).length
+    const successfulRequests = this.routingHistory.filter((r) => r.success).length
 
     // Provider distribution
     const providerDistribution: Record<string, number> = {}
-    this.routingHistory.forEach(r => {
+    this.routingHistory.forEach((r) => {
       providerDistribution[r.provider] = (providerDistribution[r.provider] || 0) + 1
     })
 
@@ -585,7 +589,7 @@ export class SmartProviderRouter {
       averageCost,
       totalCostSaved: estimatedSavings,
       successRate: totalRequests > 0 ? successfulRequests / totalRequests : 0,
-      routingEfficiency: this.calculateRoutingEfficiency()
+      routingEfficiency: this.calculateRoutingEfficiency(),
     }
   }
 
@@ -600,12 +604,13 @@ export class SmartProviderRouter {
     // Calculate efficiency based on cost vs quality tradeoffs
     let totalEfficiency = 0
 
-    recentHistory.forEach(record => {
+    recentHistory.forEach((record) => {
       const performance = this.getProviderPerformance(record.provider)
 
       // Efficiency = (Success Rate * Quality Score) / (Normalized Cost)
       const normalizedCost = Math.min(record.cost / 0.05, 1) // Normalize to $0.05 max
-      const efficiency = (performance.successRate * performance.qualityScore) / (normalizedCost + 0.1)
+      const efficiency =
+        (performance.successRate * performance.qualityScore) / (normalizedCost + 0.1)
 
       totalEfficiency += efficiency
     })
@@ -619,7 +624,7 @@ export class SmartProviderRouter {
   private initializePerformanceTracking(): void {
     const providers = aiConfig.getAvailableProviders()
 
-    providers.forEach(provider => {
+    providers.forEach((provider) => {
       this.getProviderPerformance(provider) // Initialize with defaults
     })
 
@@ -632,11 +637,12 @@ export class SmartProviderRouter {
   private getCurrentMonthSpend(): number {
     // This would integrate with actual cost tracking
     return this.routingHistory
-      .filter(r => {
+      .filter((r) => {
         const recordDate = r.timestamp
         const now = new Date()
-        return recordDate.getMonth() === now.getMonth() &&
-               recordDate.getFullYear() === now.getFullYear()
+        return (
+          recordDate.getMonth() === now.getMonth() && recordDate.getFullYear() === now.getFullYear()
+        )
       })
       .reduce((sum, r) => sum + r.cost, 0)
   }
@@ -661,11 +667,13 @@ export class SmartProviderRouter {
       budgetStatus: currentBudgetStatus,
       monthlyBudget: this.monthlyBudget,
       currentSpend: this.getCurrentMonthSpend(),
-      performanceByProvider: Array.from(this.performanceHistory.entries()).map(([provider, perf]) => ({
-        provider,
-        ...perf
-      })),
-      recommendations: this.generateRecommendations(analytics, currentBudgetStatus)
+      performanceByProvider: Array.from(this.performanceHistory.entries()).map(
+        ([provider, perf]) => ({
+          provider,
+          ...perf,
+        })
+      ),
+      recommendations: this.generateRecommendations(analytics, currentBudgetStatus),
     }
   }
 

@@ -1,12 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { validateUserSession, addSecurityHeaders } from '@/lib/auth/config'
+import { validateUserSession, addSecurityHeaders, type UserSession } from '@/lib/auth/config'
 import { addCSPHeaders } from '@/lib/auth/csrf'
 
 export default async function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl
 
   // Validate user session for protected routes
-  const session = await validateUserSession(req).catch(() => ({ valid: false }))
+  const session = await validateUserSession(req).catch((): UserSession => ({ valid: false }))
 
   // Public auth routes
   if (pathname.startsWith('/auth/')) {

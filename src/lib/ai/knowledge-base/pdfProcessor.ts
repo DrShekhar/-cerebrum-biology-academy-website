@@ -41,12 +41,14 @@ export class BiologyPDFProcessor {
             // Detect chapter headings
             if (this.isChapterHeading(text)) {
               if (textBuffer.trim()) {
-                content.push(this.createContentBlock(
-                  textBuffer,
-                  currentChapter,
-                  currentSection,
-                  page.pageInfo.num
-                ))
+                content.push(
+                  this.createContentBlock(
+                    textBuffer,
+                    currentChapter,
+                    currentSection,
+                    page.pageInfo.num
+                  )
+                )
                 textBuffer = ''
               }
               currentChapter = text
@@ -55,12 +57,14 @@ export class BiologyPDFProcessor {
             // Detect section headings
             else if (this.isSectionHeading(text)) {
               if (textBuffer.trim()) {
-                content.push(this.createContentBlock(
-                  textBuffer,
-                  currentChapter,
-                  currentSection,
-                  page.pageInfo.num
-                ))
+                content.push(
+                  this.createContentBlock(
+                    textBuffer,
+                    currentChapter,
+                    currentSection,
+                    page.pageInfo.num
+                  )
+                )
                 textBuffer = ''
               }
               currentSection = text
@@ -75,12 +79,14 @@ export class BiologyPDFProcessor {
 
       // Process final buffer
       if (textBuffer.trim()) {
-        content.push(this.createContentBlock(
-          textBuffer,
-          currentChapter,
-          currentSection,
-          data.pages[data.pages.length - 1].pageInfo.num
-        ))
+        content.push(
+          this.createContentBlock(
+            textBuffer,
+            currentChapter,
+            currentSection,
+            data.pages[data.pages.length - 1].pageInfo.num
+          )
+        )
       }
 
       return content
@@ -117,38 +123,84 @@ export class BiologyPDFProcessor {
       topics,
       difficulty,
       neetRelevance,
-      pageNumber
+      pageNumber,
     }
   }
 
   private extractBiologyTopics(text: string): string[] {
     const biologyKeywords = [
       // Cell Biology
-      'cell', 'nucleus', 'mitochondria', 'ribosome', 'endoplasmic reticulum',
-      'golgi apparatus', 'lysosome', 'cytoplasm', 'membrane', 'organelle',
+      'cell',
+      'nucleus',
+      'mitochondria',
+      'ribosome',
+      'endoplasmic reticulum',
+      'golgi apparatus',
+      'lysosome',
+      'cytoplasm',
+      'membrane',
+      'organelle',
 
       // Genetics
-      'DNA', 'RNA', 'gene', 'chromosome', 'allele', 'genotype', 'phenotype',
-      'mutation', 'heredity', 'meiosis', 'mitosis', 'transcription', 'translation',
+      'DNA',
+      'RNA',
+      'gene',
+      'chromosome',
+      'allele',
+      'genotype',
+      'phenotype',
+      'mutation',
+      'heredity',
+      'meiosis',
+      'mitosis',
+      'transcription',
+      'translation',
 
       // Ecology
-      'ecosystem', 'biodiversity', 'food chain', 'food web', 'population',
-      'community', 'habitat', 'niche', 'succession', 'conservation',
+      'ecosystem',
+      'biodiversity',
+      'food chain',
+      'food web',
+      'population',
+      'community',
+      'habitat',
+      'niche',
+      'succession',
+      'conservation',
 
       // Plant Biology
-      'photosynthesis', 'chlorophyll', 'stomata', 'xylem', 'phloem',
-      'transpiration', 'respiration', 'flower', 'fruit', 'seed',
+      'photosynthesis',
+      'chlorophyll',
+      'stomata',
+      'xylem',
+      'phloem',
+      'transpiration',
+      'respiration',
+      'flower',
+      'fruit',
+      'seed',
 
       // Animal Biology
-      'digestive system', 'respiratory system', 'circulatory system',
-      'nervous system', 'reproductive system', 'excretory system',
+      'digestive system',
+      'respiratory system',
+      'circulatory system',
+      'nervous system',
+      'reproductive system',
+      'excretory system',
 
       // Biochemistry
-      'enzyme', 'protein', 'carbohydrate', 'lipid', 'amino acid',
-      'metabolism', 'ATP', 'hormone', 'vitamin'
+      'enzyme',
+      'protein',
+      'carbohydrate',
+      'lipid',
+      'amino acid',
+      'metabolism',
+      'ATP',
+      'hormone',
+      'vitamin',
     ]
 
-    const foundTopics = biologyKeywords.filter(keyword =>
+    const foundTopics = biologyKeywords.filter((keyword) =>
       text.toLowerCase().includes(keyword.toLowerCase())
     )
 
@@ -156,12 +208,18 @@ export class BiologyPDFProcessor {
   }
 
   private assessDifficulty(text: string, topics: string[]): 'basic' | 'intermediate' | 'advanced' {
-    const advancedTopics = ['transcription', 'translation', 'enzyme kinetics', 'genetics', 'molecular biology']
+    const advancedTopics = [
+      'transcription',
+      'translation',
+      'enzyme kinetics',
+      'genetics',
+      'molecular biology',
+    ]
     const intermediateTopics = ['photosynthesis', 'respiration', 'circulation', 'reproduction']
 
-    if (topics.some(topic => advancedTopics.includes(topic.toLowerCase()))) {
+    if (topics.some((topic) => advancedTopics.includes(topic.toLowerCase()))) {
       return 'advanced'
-    } else if (topics.some(topic => intermediateTopics.includes(topic.toLowerCase()))) {
+    } else if (topics.some((topic) => intermediateTopics.includes(topic.toLowerCase()))) {
       return 'intermediate'
     }
     return 'basic'
@@ -170,13 +228,20 @@ export class BiologyPDFProcessor {
   private calculateNEETRelevance(topics: string[], text: string): number {
     // NEET Biology high-priority topics
     const neetTopics = [
-      'cell biology', 'genetics', 'evolution', 'plant physiology',
-      'animal physiology', 'reproduction', 'ecology', 'biotechnology'
+      'cell biology',
+      'genetics',
+      'evolution',
+      'plant physiology',
+      'animal physiology',
+      'reproduction',
+      'ecology',
+      'biotechnology',
     ]
 
-    const matches = neetTopics.filter(neetTopic =>
-      topics.some(topic => topic.toLowerCase().includes(neetTopic.toLowerCase())) ||
-      text.toLowerCase().includes(neetTopic.toLowerCase())
+    const matches = neetTopics.filter(
+      (neetTopic) =>
+        topics.some((topic) => topic.toLowerCase().includes(neetTopic.toLowerCase())) ||
+        text.toLowerCase().includes(neetTopic.toLowerCase())
     )
 
     return Math.min(100, matches.length * 20 + topics.length * 5)
@@ -193,20 +258,21 @@ export class BiologyPDFProcessor {
         const response = await fetch('https://api.openai.com/v1/embeddings', {
           method: 'POST',
           headers: {
-            'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`,
-            'Content-Type': 'application/json'
+            Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
+            'Content-Type': 'application/json',
           },
           body: JSON.stringify({
             model: 'text-embedding-ada-002',
-            input: `${item.title}\n${item.content}`.substring(0, 8000)
-          })
+            input: `${item.title}
+${item.content}`.substring(0, 8000),
+          }),
         })
 
         if (response.ok) {
           const result = await response.json()
           enrichedContent.push({
             ...item,
-            embeddings: result.data[0].embedding
+            embeddings: result.data[0].embedding,
           })
         } else {
           enrichedContent.push(item)

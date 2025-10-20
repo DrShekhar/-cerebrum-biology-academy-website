@@ -109,9 +109,8 @@ export class OptimizedAIHandler {
       console.log('📊 Initial Optimization Status:', {
         activeOptimizations: dashboardMetrics.realTime.activeOptimizations,
         optimizationScore: `${dashboardMetrics.overview.optimizationScore}/100`,
-        costEfficiency: dashboardMetrics.overview.costEfficiencyRating
+        costEfficiency: dashboardMetrics.overview.costEfficiencyRating,
       })
-
     } catch (error) {
       console.error('❌ Optimization suite initialization failed:', error)
       throw error
@@ -132,7 +131,7 @@ export class OptimizedAIHandler {
     console.log('🎯 Processing optimized AI request:', {
       id: requestId.substring(0, 8),
       prompt: request.prompt.substring(0, 50) + '...',
-      priority: request.priority || 'medium'
+      priority: request.priority || 'medium',
     })
 
     try {
@@ -146,7 +145,7 @@ export class OptimizedAIHandler {
           subject: request.educationalContext?.subject,
           level: request.educationalContext?.level,
           priority: request.priority,
-          preserveEducationalContext: true
+          preserveEducationalContext: true,
         })
 
         optimizedPrompt = tokenOptimization.optimizedPrompt
@@ -174,7 +173,7 @@ export class OptimizedAIHandler {
           tokens: {
             input: 0,
             output: 0,
-            total: 0
+            total: 0,
           },
           cached: true,
           tokenOptimized,
@@ -185,7 +184,7 @@ export class OptimizedAIHandler {
           optimizationTechniques: [...optimizationTechniques, 'Intelligent caching'],
           responseTime: Date.now() - startTime,
           qualityScore: cachedResponse.metadata.quality || 0.9,
-          cacheHitRate: (await intelligentCache.getDetailedStats()).hitRate
+          cacheHitRate: (await intelligentCache.getDetailedStats()).hitRate,
         })
       }
 
@@ -194,12 +193,21 @@ export class OptimizedAIHandler {
 
       if (shouldBatch && request.options?.enableBatching !== false) {
         // Process through batching engine
-        return await this.processBatchedRequest(request, optimizedPrompt, optimizationTechniques, startTime)
+        return await this.processBatchedRequest(
+          request,
+          optimizedPrompt,
+          optimizationTechniques,
+          startTime
+        )
       } else {
         // Process immediately with routing optimization
-        return await this.processImmediateRequest(request, optimizedPrompt, optimizationTechniques, startTime)
+        return await this.processImmediateRequest(
+          request,
+          optimizedPrompt,
+          optimizationTechniques,
+          startTime
+        )
       }
-
     } catch (error) {
       console.error('❌ Optimized request processing failed:', error)
 
@@ -218,8 +226,8 @@ export class OptimizedAIHandler {
           latency: Date.now() - startTime,
           cached: false,
           quality: 0,
-          confidence: 0
-        }
+          confidence: 0,
+        },
       })
 
       throw error
@@ -242,7 +250,7 @@ export class OptimizedAIHandler {
       userId: request.userId,
       sessionId: request.sessionId,
       educationalContext: request.educationalContext,
-      maxWaitTime: request.options?.maxWaitTime
+      maxWaitTime: request.options?.maxWaitTime,
     })
 
     // Estimate cost and tokens for batched request
@@ -258,7 +266,7 @@ export class OptimizedAIHandler {
       tokens: {
         input: Math.floor(estimatedTokens * 0.3),
         output: Math.floor(estimatedTokens * 0.7),
-        total: estimatedTokens
+        total: estimatedTokens,
       },
       cached: false,
       tokenOptimized: optimizationTechniques.length > 0,
@@ -269,7 +277,7 @@ export class OptimizedAIHandler {
       optimizationTechniques: [...optimizationTechniques, 'Request batching'],
       responseTime: Date.now() - startTime,
       qualityScore: 0.85,
-      cacheHitRate: undefined
+      cacheHitRate: undefined,
     })
   }
 
@@ -292,10 +300,10 @@ export class OptimizedAIHandler {
         priority: request.priority,
         requiresReasoning: this.requiresReasoning(optimizedPrompt),
         requiresVision: this.requiresVision(optimizedPrompt),
-        complexity: this.analyzeComplexity(optimizedPrompt)
+        complexity: this.analyzeComplexity(optimizedPrompt),
       },
       userId: request.userId,
-      sessionId: request.sessionId
+      sessionId: request.sessionId,
     })
 
     // Step 2: Execute AI request (integrate with your existing AI Gateway)
@@ -313,7 +321,7 @@ export class OptimizedAIHandler {
           cost: aiResponse.cost,
           quality: 0.9,
           confidence: 0.85,
-          educationalContext: request.educationalContext
+          educationalContext: request.educationalContext,
         },
         request.context
       )
@@ -335,8 +343,8 @@ export class OptimizedAIHandler {
           latency: Date.now() - startTime,
           cached: false,
           quality: 0.9,
-          confidence: routingDecision.confidence
-        }
+          confidence: routingDecision.confidence,
+        },
       }),
       smartRouter.recordPerformance(
         routingDecision.selectedProvider,
@@ -344,7 +352,7 @@ export class OptimizedAIHandler {
         Date.now() - startTime,
         aiResponse.success,
         request.context
-      )
+      ),
     ])
 
     return this.formatOptimizedResponse({
@@ -363,19 +371,23 @@ export class OptimizedAIHandler {
       optimizationTechniques: [...optimizationTechniques, 'Smart provider routing'],
       responseTime: Date.now() - startTime,
       qualityScore: 0.9,
-      cacheHitRate: undefined
+      cacheHitRate: undefined,
     })
   }
 
   /**
    * Execute AI request with selected provider (integrate with your AI Gateway)
    */
-  private async executeAIRequest(prompt: string, routingDecision: any, request: OptimizedAIRequest): Promise<any> {
+  private async executeAIRequest(
+    prompt: string,
+    routingDecision: any,
+    request: OptimizedAIRequest
+  ): Promise<any> {
     // This would integrate with your existing AI Gateway
     // For now, simulate the response
     const estimatedTokens = tokenOptimizer['estimateTokenCount'](prompt) * 2.5
 
-    await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000)) // Simulate API call
+    await new Promise((resolve) => setTimeout(resolve, 1000 + Math.random() * 2000)) // Simulate API call
 
     return {
       success: true,
@@ -383,11 +395,11 @@ export class OptimizedAIHandler {
       tokens: {
         input: Math.floor(estimatedTokens * 0.3),
         output: Math.floor(estimatedTokens * 0.7),
-        total: estimatedTokens
+        total: estimatedTokens,
       },
       cost: routingDecision.estimatedCost * (0.8 + Math.random() * 0.4), // Simulate cost variation
       provider: routingDecision.selectedProvider,
-      model: routingDecision.selectedModel
+      model: routingDecision.selectedModel,
     }
   }
 
@@ -410,15 +422,15 @@ export class OptimizedAIHandler {
           routingOptimized: data.routingOptimized,
           originalCost: data.originalCost,
           costSavings: data.costSavings,
-          optimizationTechniques: data.optimizationTechniques
+          optimizationTechniques: data.optimizationTechniques,
         },
         performance: {
           responseTime: data.responseTime,
           qualityScore: data.qualityScore,
-          cacheHitRate: data.cacheHitRate
+          cacheHitRate: data.cacheHitRate,
         },
-        timestamp: new Date()
-      }
+        timestamp: new Date(),
+      },
     }
   }
 
@@ -443,12 +455,12 @@ export class OptimizedAIHandler {
 
   private requiresReasoning(prompt: string): boolean {
     const reasoningKeywords = ['explain', 'analyze', 'compare', 'why', 'how does', 'mechanism']
-    return reasoningKeywords.some(keyword => prompt.toLowerCase().includes(keyword))
+    return reasoningKeywords.some((keyword) => prompt.toLowerCase().includes(keyword))
   }
 
   private requiresVision(prompt: string): boolean {
     const visionKeywords = ['diagram', 'image', 'chart', 'graph', 'visual', 'picture']
-    return visionKeywords.some(keyword => prompt.toLowerCase().includes(keyword))
+    return visionKeywords.some((keyword) => prompt.toLowerCase().includes(keyword))
   }
 
   private analyzeComplexity(prompt: string): 'low' | 'medium' | 'high' {
@@ -456,20 +468,23 @@ export class OptimizedAIHandler {
     if (prompt.length > 300) return 'high'
 
     const complexKeywords = ['molecular', 'biochemical', 'metabolic', 'genetic', 'cellular']
-    if (complexKeywords.some(keyword => prompt.toLowerCase().includes(keyword))) {
+    if (complexKeywords.some((keyword) => prompt.toLowerCase().includes(keyword))) {
       return 'high'
     }
 
     return 'medium'
   }
 
-  private getRequestType(request: OptimizedAIRequest): 'chat' | 'question-generation' | 'analysis' | 'vision' | 'batch' {
+  private getRequestType(
+    request: OptimizedAIRequest
+  ): 'chat' | 'question-generation' | 'analysis' | 'vision' | 'batch' {
     if (request.educationalContext?.questionType) {
       return request.educationalContext.questionType as any
     }
 
     if (this.requiresVision(request.prompt)) return 'vision'
-    if (request.prompt.includes('generate') && request.prompt.includes('question')) return 'question-generation'
+    if (request.prompt.includes('generate') && request.prompt.includes('question'))
+      return 'question-generation'
     if (request.prompt.includes('analyze') || request.prompt.includes('evaluate')) return 'analysis'
 
     return 'chat'
@@ -478,10 +493,10 @@ export class OptimizedAIHandler {
   private estimateRequestCost(tokens: number, type: string = 'standard'): number {
     const baseCostPer1K = 0.01 // $0.01 per 1K tokens average
     const multipliers = {
-      'standard': 1.0,
-      'batch': 0.8,
-      'premium': 1.5,
-      'fast': 1.2
+      standard: 1.0,
+      batch: 0.8,
+      premium: 1.5,
+      fast: 1.2,
     }
 
     return (tokens / 1000) * baseCostPer1K * (multipliers[type as keyof typeof multipliers] || 1.0)
@@ -500,7 +515,7 @@ export class OptimizedAIHandler {
     return {
       ...dashboardMetrics,
       systemStatus: costDashboard.getStatus(),
-      recommendations: dashboardMetrics.recommendations.slice(0, 5)
+      recommendations: dashboardMetrics.recommendations.slice(0, 5),
     }
   }
 
@@ -536,7 +551,7 @@ export class OptimizedAIHandler {
     await Promise.all([
       intelligentCache.shutdown(),
       costTracker.shutdown(),
-      costDashboard.shutdown()
+      costDashboard.shutdown(),
     ])
 
     this.isInitialized = false

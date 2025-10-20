@@ -118,38 +118,38 @@ export class CostOptimizationDashboard {
       enabled: true,
       aggressiveMode: false,
       ttlHours: 168, // 7 days
-      semanticSimilarityThreshold: 0.8
+      semanticSimilarityThreshold: 0.8,
     },
     routing: {
       enabled: true,
       costOptimizationWeight: 0.4, // 40% weight on cost vs quality
       qualityThreshold: 0.8,
-      emergencyFallback: true
+      emergencyFallback: true,
     },
     batching: {
       enabled: true,
       maxBatchSize: 10,
       maxWaitTime: 2000,
-      minBatchSize: 3
+      minBatchSize: 3,
     },
     tokenOptimization: {
       enabled: true,
       aggressiveMode: false,
       preserveEducationalContext: true,
-      autoOptimizePrompts: true
+      autoOptimizePrompts: true,
     },
     budgets: {
       daily: 50,
       weekly: 300,
       monthly: 1000,
-      emergencyThreshold: 0.9
+      emergencyThreshold: 0.9,
     },
     alerts: {
       emailNotifications: true,
       slackNotifications: false,
       warningThreshold: 0.7,
-      criticalThreshold: 0.85
-    }
+      criticalThreshold: 0.85,
+    },
   }
 
   constructor() {
@@ -183,7 +183,6 @@ export class CostOptimizationDashboard {
 
       // Initial metrics collection
       await this.collectMetrics()
-
     } catch (error) {
       console.error('❌ Dashboard initialization failed:', error)
       throw error
@@ -198,30 +197,29 @@ export class CostOptimizationDashboard {
       await this.initialize()
     }
 
-    const [
-      cacheMetrics,
-      routingAnalytics,
-      batchingMetrics,
-      tokenOptimizationStats,
-      costMetrics
-    ] = await Promise.all([
-      intelligentCache.getDetailedStats(),
-      smartRouter.getRoutingReport(),
-      batchingEngine.getMetrics(),
-      tokenOptimizer.getOptimizationStats(),
-      costTracker.getCostMetrics()
-    ])
+    const [cacheMetrics, routingAnalytics, batchingMetrics, tokenOptimizationStats, costMetrics] =
+      await Promise.all([
+        intelligentCache.getDetailedStats(),
+        smartRouter.getRoutingReport(),
+        batchingEngine.getMetrics(),
+        tokenOptimizer.getOptimizationStats(),
+        costTracker.getCostMetrics(),
+      ])
 
     // Calculate overview metrics
-    const totalCostSavings = (
+    const totalCostSavings =
       cacheMetrics.costSaved +
       routingAnalytics.totalCostSaved +
       batchingMetrics.costSavings +
       tokenOptimizationStats.totalCostSaved
-    )
 
     const savingsRate = totalCostSavings / Math.max(costMetrics.monthly.spend + totalCostSavings, 1)
-    const optimizationScore = this.calculateOptimizationScore(cacheMetrics, routingAnalytics, batchingMetrics, tokenOptimizationStats)
+    const optimizationScore = this.calculateOptimizationScore(
+      cacheMetrics,
+      routingAnalytics,
+      batchingMetrics,
+      tokenOptimizationStats
+    )
 
     // Generate alerts
     const alerts = await this.generateAlerts()
@@ -235,43 +233,43 @@ export class CostOptimizationDashboard {
         monthlyCostReduction: savingsRate * 100,
         savingsRate,
         optimizationScore,
-        costEfficiencyRating: this.getCostEfficiencyRating(optimizationScore)
+        costEfficiencyRating: this.getCostEfficiencyRating(optimizationScore),
       },
       realTime: {
         currentSpend: costMetrics.daily.spend,
         requestsPerMinute: this.calculateRequestsPerMinute(),
         averageResponseTime: cacheMetrics.avgResponseTime,
         cacheHitRate: cacheMetrics.hitRate,
-        activeOptimizations: this.countActiveOptimizations()
+        activeOptimizations: this.countActiveOptimizations(),
       },
       performance: {
         caching: {
           hitRate: cacheMetrics.hitRate,
           costSaved: cacheMetrics.costSaved,
           entriesCount: cacheMetrics.entriesCount,
-          semanticMatches: cacheMetrics.semanticMatches
+          semanticMatches: cacheMetrics.semanticMatches,
         },
         routing: {
           efficiency: routingAnalytics.routingEfficiency * 100,
           costSavings: routingAnalytics.totalCostSaved,
           providerDistribution: routingAnalytics.providerDistribution,
-          routingAccuracy: this.calculateRoutingAccuracy(routingAnalytics)
+          routingAccuracy: this.calculateRoutingAccuracy(routingAnalytics),
         },
         batching: {
           batchesCreated: batchingMetrics.batchesCreated,
           averageBatchSize: batchingMetrics.averageBatchSize,
           costSavings: batchingMetrics.costSavings,
-          throughputImprovement: batchingMetrics.throughputImprovement
+          throughputImprovement: batchingMetrics.throughputImprovement,
         },
         tokenOptimization: {
           totalOptimizations: tokenOptimizationStats.totalOptimizations,
           averageTokenReduction: tokenOptimizationStats.averageTokenReduction,
           costSaved: tokenOptimizationStats.totalCostSaved,
-          qualityScore: 0.85 // Would be calculated from actual quality metrics
-        }
+          qualityScore: 0.85, // Would be calculated from actual quality metrics
+        },
       },
       alerts,
-      recommendations
+      recommendations,
     }
   }
 
@@ -286,7 +284,7 @@ export class CostOptimizationDashboard {
       caching: this.settings.caching.enabled,
       routing: this.settings.routing.enabled,
       batching: this.settings.batching.enabled,
-      tokenOptimization: this.settings.tokenOptimization.enabled
+      tokenOptimization: this.settings.tokenOptimization.enabled,
     })
   }
 
@@ -308,26 +306,26 @@ export class CostOptimizationDashboard {
         enabled: true,
         aggressiveMode: true,
         ttlHours: 720, // 30 days
-        semanticSimilarityThreshold: 0.7 // Lower threshold for more matches
+        semanticSimilarityThreshold: 0.7, // Lower threshold for more matches
       },
       routing: {
         enabled: true,
         costOptimizationWeight: 0.8, // Heavily favor cost over quality
         qualityThreshold: 0.6, // Lower quality threshold
-        emergencyFallback: true
+        emergencyFallback: true,
       },
       batching: {
         enabled: true,
         maxBatchSize: 20, // Larger batches
         maxWaitTime: 5000, // Longer wait times
-        minBatchSize: 2 // Lower minimum
+        minBatchSize: 2, // Lower minimum
       },
       tokenOptimization: {
         enabled: true,
         aggressiveMode: true,
         preserveEducationalContext: false, // More aggressive optimization
-        autoOptimizePrompts: true
-      }
+        autoOptimizePrompts: true,
+      },
     }
 
     await this.updateSettings(emergencySettings)
@@ -347,26 +345,26 @@ export class CostOptimizationDashboard {
         enabled: true,
         aggressiveMode: false,
         ttlHours: 168, // 7 days
-        semanticSimilarityThreshold: 0.8
+        semanticSimilarityThreshold: 0.8,
       },
       routing: {
         enabled: true,
         costOptimizationWeight: 0.4, // Balanced cost vs quality
         qualityThreshold: 0.8,
-        emergencyFallback: true
+        emergencyFallback: true,
       },
       batching: {
         enabled: true,
         maxBatchSize: 10,
         maxWaitTime: 2000,
-        minBatchSize: 3
+        minBatchSize: 3,
       },
       tokenOptimization: {
         enabled: true,
         aggressiveMode: false,
         preserveEducationalContext: true,
-        autoOptimizePrompts: true
-      }
+        autoOptimizePrompts: true,
+      },
     }
 
     await this.updateSettings(normalSettings)
@@ -380,7 +378,7 @@ export class CostOptimizationDashboard {
     costTracker.setBudgets({
       daily: this.settings.budgets.daily,
       weekly: this.settings.budgets.weekly,
-      monthly: this.settings.budgets.monthly
+      monthly: this.settings.budgets.monthly,
     })
 
     // Apply routing settings
@@ -465,25 +463,27 @@ export class CostOptimizationDashboard {
   /**
    * Generate system alerts
    */
-  private async generateAlerts(): Promise<Array<{
-    id: string
-    type: 'warning' | 'critical' | 'emergency' | 'info'
-    message: string
-    timestamp: Date
-    action?: string
-  }>> {
+  private async generateAlerts(): Promise<
+    Array<{
+      id: string
+      type: 'warning' | 'critical' | 'emergency' | 'info'
+      message: string
+      timestamp: Date
+      action?: string
+    }>
+  > {
     const alerts = []
 
     // Get recent alerts from cost tracker
     const recentAlerts = costTracker.getRecentAlerts(5)
 
-    recentAlerts.forEach(alert => {
+    recentAlerts.forEach((alert) => {
       alerts.push({
         id: alert.id,
         type: alert.type,
         message: alert.message,
         timestamp: alert.timestamp,
-        action: alert.recommendations?.[0]
+        action: alert.recommendations?.[0],
       })
     })
 
@@ -495,7 +495,7 @@ export class CostOptimizationDashboard {
         type: 'warning',
         message: `Low cache hit rate: ${(cacheMetrics.hitRate * 100).toFixed(1)}%`,
         timestamp: new Date(),
-        action: 'Review cache settings and similarity thresholds'
+        action: 'Review cache settings and similarity thresholds',
       })
     }
 
@@ -506,7 +506,7 @@ export class CostOptimizationDashboard {
         type: 'info',
         message: 'Some optimization features are disabled',
         timestamp: new Date(),
-        action: 'Enable all optimization features for maximum savings'
+        action: 'Enable all optimization features for maximum savings',
       })
     }
 
@@ -516,21 +516,23 @@ export class CostOptimizationDashboard {
   /**
    * Generate optimization recommendations
    */
-  private async generateRecommendations(): Promise<Array<{
-    priority: 'high' | 'medium' | 'low'
-    category: 'cost' | 'performance' | 'quality' | 'efficiency'
-    title: string
-    description: string
-    estimatedSavings: number
-    implementationComplexity: 'low' | 'medium' | 'high'
-  }>> {
+  private async generateRecommendations(): Promise<
+    Array<{
+      priority: 'high' | 'medium' | 'low'
+      category: 'cost' | 'performance' | 'quality' | 'efficiency'
+      title: string
+      description: string
+      estimatedSavings: number
+      implementationComplexity: 'low' | 'medium' | 'high'
+    }>
+  > {
     const recommendations = []
 
     // Get current metrics
     const [cacheMetrics, routingAnalytics, batchingMetrics] = await Promise.all([
       intelligentCache.getDetailedStats(),
       smartRouter.getRoutingReport(),
-      batchingEngine.getMetrics()
+      batchingEngine.getMetrics(),
     ])
 
     // Cache optimization recommendations
@@ -539,9 +541,10 @@ export class CostOptimizationDashboard {
         priority: 'high' as const,
         category: 'cost' as const,
         title: 'Improve Cache Hit Rate',
-        description: 'Current cache hit rate is below 50%. Implementing semantic caching for biology topics could increase savings.',
+        description:
+          'Current cache hit rate is below 50%. Implementing semantic caching for biology topics could increase savings.',
         estimatedSavings: 150,
-        implementationComplexity: 'medium' as const
+        implementationComplexity: 'medium' as const,
       })
     }
 
@@ -552,9 +555,10 @@ export class CostOptimizationDashboard {
         priority: 'high' as const,
         category: 'cost' as const,
         title: 'Increase Google AI Usage',
-        description: 'Google AI usage is low. Routing more educational content to Google AI could reduce costs by 60%.',
+        description:
+          'Google AI usage is low. Routing more educational content to Google AI could reduce costs by 60%.',
         estimatedSavings: 200,
-        implementationComplexity: 'low' as const
+        implementationComplexity: 'low' as const,
       })
     }
 
@@ -564,9 +568,10 @@ export class CostOptimizationDashboard {
         priority: 'medium' as const,
         category: 'efficiency' as const,
         title: 'Optimize Request Batching',
-        description: 'Average batch size is low. Implementing intelligent queuing could improve efficiency and reduce costs.',
+        description:
+          'Average batch size is low. Implementing intelligent queuing could improve efficiency and reduce costs.',
         estimatedSavings: 75,
-        implementationComplexity: 'medium' as const
+        implementationComplexity: 'medium' as const,
       })
     }
 
@@ -575,9 +580,10 @@ export class CostOptimizationDashboard {
       priority: 'medium' as const,
       category: 'quality' as const,
       title: 'Implement Response Quality Monitoring',
-      description: 'Add automated quality scoring to ensure cost optimizations don\'t impact educational content quality.',
+      description:
+        "Add automated quality scoring to ensure cost optimizations don't impact educational content quality.",
       estimatedSavings: 0,
-      implementationComplexity: 'high' as const
+      implementationComplexity: 'high' as const,
     })
 
     // Performance recommendations
@@ -586,9 +592,10 @@ export class CostOptimizationDashboard {
         priority: 'low' as const,
         category: 'performance' as const,
         title: 'Optimize Cache Response Time',
-        description: 'Cache response time can be improved with Redis optimization and better indexing.',
+        description:
+          'Cache response time can be improved with Redis optimization and better indexing.',
         estimatedSavings: 25,
-        implementationComplexity: 'medium' as const
+        implementationComplexity: 'medium' as const,
       })
     }
 
@@ -624,9 +631,8 @@ export class CostOptimizationDashboard {
         totalSavings: `$${metrics.overview.totalCostSavings.toFixed(2)}`,
         optimizationScore: `${metrics.overview.optimizationScore}/100`,
         cacheHitRate: `${metrics.performance.caching.hitRate.toFixed(1)}%`,
-        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString(),
       })
-
     } catch (error) {
       console.error('❌ Metrics collection failed:', error)
     }
@@ -651,7 +657,7 @@ export class CostOptimizationDashboard {
       `Cache Hit Rate,${metrics.performance.caching.hitRate}%,Performance`,
       `Routing Efficiency,${metrics.performance.routing.efficiency}%,Performance`,
       `Average Batch Size,${metrics.performance.batching.averageBatchSize},Performance`,
-      `Token Reduction,${metrics.performance.tokenOptimization.averageTokenReduction},Performance`
+      `Token Reduction,${metrics.performance.tokenOptimization.averageTokenReduction},Performance`,
     ]
 
     return csvData.join('\n')
@@ -676,7 +682,7 @@ export class CostOptimizationDashboard {
       initialized: this.isInitialized,
       lastUpdate: this.lastUpdateTime,
       activeOptimizations,
-      systemHealth
+      systemHealth,
     }
   }
 
@@ -723,12 +729,16 @@ Generated: ${new Date().toISOString()}
 - Quality Score: ${(metrics.performance.tokenOptimization.qualityScore * 100).toFixed(1)}%
 
 ## Current Alerts
-${metrics.alerts.map(alert => `- ${alert.type.toUpperCase()}: ${alert.message}`).join('\n')}
+${metrics.alerts.map((alert) => `- ${alert.type.toUpperCase()}: ${alert.message}`).join('\n')}
 
 ## Top Recommendations
-${metrics.recommendations.slice(0, 3).map(rec =>
-  `- **${rec.title}** (${rec.priority} priority): ${rec.description} (Est. savings: $${rec.estimatedSavings})`
-).join('\n')}
+${metrics.recommendations
+  .slice(0, 3)
+  .map(
+    (rec) =>
+      `- **${rec.title}** (${rec.priority} priority): ${rec.description} (Est. savings: $${rec.estimatedSavings})`
+  )
+  .join('\n')}
 
 ## Optimization Settings
 - Caching: ${this.settings.caching.enabled ? 'Enabled' : 'Disabled'}

@@ -1,4 +1,4 @@
-import { PrismaClient } from '@/generated/prisma'
+import { PrismaClient, QuestionType, TestType } from '@/generated/prisma'
 
 const prisma = new PrismaClient()
 
@@ -63,7 +63,7 @@ async function main() {
       curriculum: 'NEET',
       grade: 'CLASS_12',
       subject: 'biology',
-      type: 'MCQ',
+      type: QuestionType.MCQ,
       difficulty: 'EASY',
       question: 'Which of the following is called the powerhouse of the cell?',
       options: JSON.stringify([
@@ -99,7 +99,7 @@ async function main() {
       curriculum: 'NEET',
       grade: 'CLASS_12',
       subject: 'biology',
-      type: 'MCQ',
+      type: QuestionType.MCQ,
       difficulty: 'MEDIUM',
       question: 'In which phase of mitosis do chromosomes align at the metaphase plate?',
       options: JSON.stringify([
@@ -135,7 +135,7 @@ async function main() {
       curriculum: 'NEET',
       grade: 'CLASS_12',
       subject: 'biology',
-      type: 'MCQ',
+      type: QuestionType.MCQ,
       difficulty: 'HARD',
       question: 'Which enzyme is responsible for joining Okazaki fragments during DNA replication?',
       options: JSON.stringify([
@@ -171,7 +171,7 @@ async function main() {
       curriculum: 'NEET',
       grade: 'CLASS_12',
       subject: 'botany',
-      type: 'MCQ',
+      type: QuestionType.MCQ,
       difficulty: 'EASY',
       question: 'What is the primary function of stomata in plants?',
       options: JSON.stringify([
@@ -207,7 +207,7 @@ async function main() {
       curriculum: 'NEET',
       grade: 'CLASS_12',
       subject: 'zoology',
-      type: 'MCQ',
+      type: QuestionType.MCQ,
       difficulty: 'MEDIUM',
       question: 'Which hormone regulates the heartbeat in humans?',
       options: JSON.stringify([
@@ -285,7 +285,7 @@ async function main() {
       title: 'NEET Biology Full Test - Cell Biology & Genetics',
       description: 'Comprehensive test covering cell biology fundamentals and genetic principles. Perfect for NEET 2024 preparation with detailed explanations.',
       slug: 'neet-biology-cell-biology-genetics',
-      type: 'MOCK_TEST',
+      type: TestType.MOCK_TEST,
       category: 'TOPIC_WISE',
       difficulty: 'MEDIUM',
       timeLimit: 180, // 3 hours
@@ -328,7 +328,7 @@ async function main() {
       title: 'Plant Physiology Quick Test',
       description: 'Quick 30-minute test focusing on plant physiology concepts. Test your knowledge of photosynthesis, respiration, and transport in plants.',
       slug: 'plant-physiology-quick-test',
-      type: 'QUICK_TEST',
+      type: TestType.QUICK_TEST,
       category: 'TOPIC_WISE',
       difficulty: 'EASY',
       timeLimit: 30,
@@ -368,7 +368,7 @@ async function main() {
       title: 'Adaptive Biology Assessment',
       description: 'AI-powered adaptive test that adjusts difficulty based on your performance. Get personalized learning recommendations.',
       slug: 'adaptive-biology-assessment',
-      type: 'ADAPTIVE_TEST',
+      type: TestType.ADAPTIVE_TEST,
       category: 'MIXED',
       difficulty: 'MEDIUM',
       timeLimit: 120,

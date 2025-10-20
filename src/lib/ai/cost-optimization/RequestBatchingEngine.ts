@@ -62,9 +62,9 @@ export class RequestBatchingEngine extends EventEmitter {
   // Educational content batching settings
   private educationalBatchSettings = {
     'question-generation': { maxSize: 20, maxWait: 5000 },
-    'explanation': { maxSize: 15, maxWait: 3000 },
-    'assessment': { maxSize: 25, maxWait: 4000 },
-    'general': { maxSize: 10, maxWait: 2000 }
+    explanation: { maxSize: 15, maxWait: 3000 },
+    assessment: { maxSize: 25, maxWait: 4000 },
+    general: { maxSize: 10, maxWait: 2000 },
   }
 
   // Performance tracking
@@ -73,7 +73,7 @@ export class RequestBatchingEngine extends EventEmitter {
     batchesCreated: 0,
     totalWaitTime: 0,
     costSavings: 0,
-    requestsProcessed: 0
+    requestsProcessed: 0,
   }
 
   constructor() {
@@ -113,7 +113,7 @@ export class RequestBatchingEngine extends EventEmitter {
         educationalContext: requestData.educationalContext,
         timestamp: new Date(),
         resolve,
-        reject
+        reject,
       }
 
       this.metrics.totalRequests++
@@ -131,7 +131,7 @@ export class RequestBatchingEngine extends EventEmitter {
         id: request.id.substring(0, 8),
         queue: queueKey,
         priority: request.priority,
-        queueSize: this.requestQueue.get(queueKey)!.length
+        queueSize: this.requestQueue.get(queueKey)!.length,
       })
 
       // Check if we should immediately process this queue
@@ -254,15 +254,16 @@ export class RequestBatchingEngine extends EventEmitter {
 
     // Priority-based wait times
     const priorityMultipliers = {
-      'critical': 0.5, // 50% of normal wait time
-      'high': 0.7,     // 70% of normal wait time
-      'medium': 1.0,   // Normal wait time
-      'low': 1.5       // 150% of normal wait time
+      critical: 0.5, // 50% of normal wait time
+      high: 0.7, // 70% of normal wait time
+      medium: 1.0, // Normal wait time
+      low: 1.5, // 150% of normal wait time
     }
 
     // Content-type specific settings
-    const baseWaitTime = this.educationalBatchSettings[contentType as keyof typeof this.educationalBatchSettings]?.maxWait
-                        || this.educationalBatchSettings.general.maxWait
+    const baseWaitTime =
+      this.educationalBatchSettings[contentType as keyof typeof this.educationalBatchSettings]
+        ?.maxWait || this.educationalBatchSettings.general.maxWait
 
     return Math.floor(baseWaitTime * priorityMultipliers[priority])
   }
@@ -275,14 +276,14 @@ export class RequestBatchingEngine extends EventEmitter {
     if (!queue || queue.length === 0) return
 
     const contentType = this.analyzeContentType(queue[0].prompt)
-    const batchSettings = this.educationalBatchSettings[contentType as keyof typeof this.educationalBatchSettings]
-                         || this.educationalBatchSettings.general
+    const batchSettings =
+      this.educationalBatchSettings[contentType as keyof typeof this.educationalBatchSettings] ||
+      this.educationalBatchSettings.general
 
     // Check if we should create a batch
-    const shouldBatch = (
+    const shouldBatch =
       queue.length >= batchSettings.maxSize ||
       (queue.length >= this.minBatchSize && this.hasWaitedLongEnough(queue))
-    )
 
     if (shouldBatch) {
       this.createAndProcessBatch(queueKey)
@@ -309,8 +310,9 @@ export class RequestBatchingEngine extends EventEmitter {
     if (!queue || queue.length === 0) return
 
     const contentType = this.analyzeContentType(queue[0].prompt)
-    const batchSettings = this.educationalBatchSettings[contentType as keyof typeof this.educationalBatchSettings]
-                         || this.educationalBatchSettings.general
+    const batchSettings =
+      this.educationalBatchSettings[contentType as keyof typeof this.educationalBatchSettings] ||
+      this.educationalBatchSettings.general
 
     // Take requests for batch
     const batchRequests = queue.splice(0, Math.min(queue.length, batchSettings.maxSize))
@@ -323,7 +325,7 @@ export class RequestBatchingEngine extends EventEmitter {
       estimatedCost: this.estimateBatchCost(batchRequests),
       estimatedTokens: this.estimateBatchTokens(batchRequests),
       status: 'pending',
-      createdAt: new Date()
+      createdAt: new Date(),
     }
 
     this.activeBatches.set(batch.id, batch)
@@ -334,7 +336,7 @@ export class RequestBatchingEngine extends EventEmitter {
       size: batch.requests.length,
       type: contentType,
       provider: batch.provider,
-      estimatedCost: `$${batch.estimatedCost.toFixed(4)}`
+      estimatedCost: `$${batch.estimatedCost.toFixed(4)}`,
     })
 
     // Process batch
@@ -355,7 +357,7 @@ export class RequestBatchingEngine extends EventEmitter {
       console.log('⚡ Processing batch:', {
         id: batch.id.substring(0, 8),
         requests: batch.requests.length,
-        provider: batch.provider
+        provider: batch.provider,
       })
 
       // Simulate batch processing (integrate with your AI Gateway)
@@ -383,7 +385,7 @@ export class RequestBatchingEngine extends EventEmitter {
       console.log('✅ Batch completed:', {
         id: batch.id.substring(0, 8),
         requests: batch.requests.length,
-        costSavings: this.calculateBatchSavings(batch)
+        costSavings: this.calculateBatchSavings(batch),
       })
 
       // Move to completed batches
@@ -394,14 +396,13 @@ export class RequestBatchingEngine extends EventEmitter {
       if (this.completedBatches.length > 100) {
         this.completedBatches = this.completedBatches.slice(-100)
       }
-
     } catch (error) {
       console.error('❌ Batch processing failed:', error)
 
       batch.status = 'failed'
 
       // Reject all requests in the batch
-      batch.requests.forEach(request => {
+      batch.requests.forEach((request) => {
         request.reject(error as Error)
       })
 
@@ -432,13 +433,15 @@ export class RequestBatchingEngine extends EventEmitter {
    * Create question generation batch prompt
    */
   private createQuestionGenerationBatch(requests: BatchRequest[]): string {
-    const topics = requests.map((req, index) => {
-      const context = req.educationalContext
-      const subject = context?.subject || 'Biology'
-      const level = context?.level || 'Class 12'
+    const topics = requests
+      .map((req, index) => {
+        const context = req.educationalContext
+        const subject = context?.subject || 'Biology'
+        const level = context?.level || 'Class 12'
 
-      return `${index + 1}. Topic: ${this.extractTopic(req.prompt)} (${subject}, ${level})`
-    }).join('\n')
+        return `${index + 1}. Topic: ${this.extractTopic(req.prompt)} (${subject}, ${level})`
+      })
+      .join('\n')
 
     return `You are an expert biology educator. Generate high-quality questions for the following topics:
 
@@ -462,12 +465,14 @@ Requirements:
    * Create explanation batch prompt
    */
   private createExplanationBatch(requests: BatchRequest[]): string {
-    const explanations = requests.map((req, index) => {
-      const topic = this.extractTopic(req.prompt)
-      const level = req.educationalContext?.level || 'intermediate'
+    const explanations = requests
+      .map((req, index) => {
+        const topic = this.extractTopic(req.prompt)
+        const level = req.educationalContext?.level || 'intermediate'
 
-      return `${index + 1}. Explain: ${topic} (Level: ${level})`
-    }).join('\n')
+        return `${index + 1}. Explain: ${topic} (Level: ${level})`
+      })
+      .join('\n')
 
     return `You are an expert biology teacher. Provide clear, comprehensive explanations for the following topics:
 
@@ -493,9 +498,11 @@ Requirements:
    * Create general batch prompt
    */
   private createGeneralBatch(requests: BatchRequest[]): string {
-    const queries = requests.map((req, index) => {
-      return `${index + 1}. ${req.prompt}`
-    }).join('\n\n')
+    const queries = requests
+      .map((req, index) => {
+        return `${index + 1}. ${req.prompt}`
+      })
+      .join('\n')
 
     return `Please respond to the following biology-related queries. Number each response clearly (1., 2., etc.):
 
@@ -513,7 +520,9 @@ Requirements:
    */
   private extractTopic(prompt: string): string {
     // Simple topic extraction - could be enhanced with NLP
-    const keywords = prompt.toLowerCase().match(/(?:explain|describe|what is|define)\s+(.+?)(?:\?|$|\.)/i)
+    const keywords = prompt
+      .toLowerCase()
+      .match(/(?:explain|describe|what is|define)\s+(.+?)(?:\?|$|\.)/i)
     if (keywords && keywords[1]) {
       return keywords[1].trim()
     }
@@ -528,11 +537,17 @@ Requirements:
   private async executeAIBatch(batchPrompt: string, batch: Batch): Promise<string> {
     // This would integrate with your actual AI Gateway
     // For now, simulate processing time
-    await new Promise(resolve => setTimeout(resolve, 1000 + batch.requests.length * 200))
+    await new Promise((resolve) => setTimeout(resolve, 1000 + batch.requests.length * 200))
 
     // Simulate batch response
-    return `Batch response for ${batch.requests.length} requests:\n\n` +
-           batch.requests.map((_, index) => `${index + 1}. [Simulated response for request ${index + 1}]`).join('\n\n')
+    return (
+      `Batch response for ${batch.requests.length} requests:
+
+` +
+      batch.requests
+        .map((_, index) => `${index + 1}. [Simulated response for request ${index + 1}]`)
+        .join('\n')
+    )
   }
 
   /**
@@ -548,8 +563,8 @@ Requirements:
         metadata: {
           batchProcessed: true,
           batchSize: requests.length,
-          processingMethod: 'batch'
-        }
+          processingMethod: 'batch',
+        },
       })
     }
 
@@ -561,7 +576,7 @@ Requirements:
    */
   private selectOptimalProvider(requests: BatchRequest[]): string {
     // Analyze batch characteristics to select provider
-    const hasHighPriority = requests.some(r => r.priority === 'critical' || r.priority === 'high')
+    const hasHighPriority = requests.some((r) => r.priority === 'critical' || r.priority === 'high')
     const averageComplexity = this.calculateAverageComplexity(requests)
 
     if (hasHighPriority && averageComplexity > 0.7) {
@@ -579,7 +594,7 @@ Requirements:
   private calculateAverageComplexity(requests: BatchRequest[]): number {
     let totalComplexity = 0
 
-    requests.forEach(request => {
+    requests.forEach((request) => {
       let complexity = 0.5 // Base complexity
 
       // Analyze prompt for complexity indicators
@@ -604,9 +619,9 @@ Requirements:
 
     // Provider-specific pricing (estimated)
     const providerCosts = {
-      'google': 0.0002,
-      'anthropic': 0.008,
-      'openai': 0.015
+      google: 0.0002,
+      anthropic: 0.008,
+      openai: 0.015,
     }
 
     const provider = this.selectOptimalProvider(requests)
@@ -621,7 +636,7 @@ Requirements:
   private estimateBatchTokens(requests: BatchRequest[]): number {
     let totalTokens = 0
 
-    requests.forEach(request => {
+    requests.forEach((request) => {
       // Base tokens from prompt
       const promptTokens = Math.ceil(request.prompt.split(' ').length * 1.3)
 
@@ -629,7 +644,7 @@ Requirements:
       const contentType = this.analyzeContentType(request.prompt)
       const responseMultiplier = this.getResponseMultiplier(contentType)
 
-      totalTokens += promptTokens + (promptTokens * responseMultiplier)
+      totalTokens += promptTokens + promptTokens * responseMultiplier
     })
 
     // Batch processing is more efficient
@@ -642,11 +657,11 @@ Requirements:
   private getResponseMultiplier(contentType: string): number {
     const multipliers = {
       'question-generation': 3.0,
-      'explanation': 2.5,
-      'assessment': 2.0,
-      'comparison': 2.5,
-      'visual': 1.5,
-      'general': 2.0
+      explanation: 2.5,
+      assessment: 2.0,
+      comparison: 2.5,
+      visual: 1.5,
+      general: 2.0,
     }
 
     return multipliers[contentType as keyof typeof multipliers] || 2.0
@@ -658,7 +673,7 @@ Requirements:
   private forceProcessRequest(requestId: string): void {
     // Find the request in queues
     for (const [queueKey, queue] of this.requestQueue) {
-      const requestIndex = queue.findIndex(r => r.id === requestId)
+      const requestIndex = queue.findIndex((r) => r.id === requestId)
 
       if (requestIndex !== -1) {
         const request = queue[requestIndex]
@@ -668,7 +683,7 @@ Requirements:
 
         console.log('⏰ Force processing request due to timeout:', {
           id: request.id.substring(0, 8),
-          waitTime: Date.now() - request.timestamp.getTime()
+          waitTime: Date.now() - request.timestamp.getTime(),
         })
 
         // Process as single request or create minimal batch
@@ -688,8 +703,8 @@ Requirements:
         content: `Single processed response for: ${request.prompt.substring(0, 50)}...`,
         metadata: {
           batchProcessed: false,
-          processingMethod: 'single'
-        }
+          processingMethod: 'single',
+        },
       }
 
       request.resolve(result)
@@ -718,7 +733,7 @@ Requirements:
   private updateBatchMetrics(batch: Batch): void {
     const processingTime = batch.processedAt!.getTime() - batch.createdAt.getTime()
 
-    batch.requests.forEach(request => {
+    batch.requests.forEach((request) => {
       const waitTime = batch.createdAt.getTime() - request.timestamp.getTime()
       this.metrics.totalWaitTime += waitTime
       this.metrics.requestsProcessed++
@@ -755,21 +770,25 @@ Requirements:
    * Get batching metrics
    */
   getMetrics(): QueueMetrics {
-    const queueDepth = Array.from(this.requestQueue.values())
-      .reduce((total, queue) => total + queue.length, 0)
+    const queueDepth = Array.from(this.requestQueue.values()).reduce(
+      (total, queue) => total + queue.length,
+      0
+    )
 
     return {
       totalRequests: this.metrics.totalRequests,
       batchesCreated: this.metrics.batchesCreated,
-      averageBatchSize: this.metrics.batchesCreated > 0
-        ? this.metrics.requestsProcessed / this.metrics.batchesCreated
-        : 0,
-      averageWaitTime: this.metrics.requestsProcessed > 0
-        ? this.metrics.totalWaitTime / this.metrics.requestsProcessed
-        : 0,
+      averageBatchSize:
+        this.metrics.batchesCreated > 0
+          ? this.metrics.requestsProcessed / this.metrics.batchesCreated
+          : 0,
+      averageWaitTime:
+        this.metrics.requestsProcessed > 0
+          ? this.metrics.totalWaitTime / this.metrics.requestsProcessed
+          : 0,
       costSavings: this.metrics.costSavings,
       throughputImprovement: this.calculateThroughputImprovement(),
-      queueDepth
+      queueDepth,
     }
   }
 
@@ -815,7 +834,7 @@ Requirements:
         oldestRequest: queue.reduce((oldest, current) =>
           current.timestamp < oldest.timestamp ? current : oldest
         ).timestamp,
-        contentType: this.analyzeContentType(queue[0].prompt)
+        contentType: this.analyzeContentType(queue[0].prompt),
       }))
       .sort((a, b) => b.size - a.size)
   }
@@ -831,16 +850,16 @@ Requirements:
       metrics,
       queuesStatus,
       activeBatches: this.activeBatches.size,
-      recentBatches: this.completedBatches.slice(-10).map(batch => ({
+      recentBatches: this.completedBatches.slice(-10).map((batch) => ({
         id: batch.id.substring(0, 8),
         size: batch.requests.length,
         cost: batch.estimatedCost,
         savings: this.calculateBatchSavings(batch),
         processingTime: batch.processedAt
           ? batch.processedAt.getTime() - batch.createdAt.getTime()
-          : 0
+          : 0,
       })),
-      recommendations: this.generateBatchingRecommendations(metrics)
+      recommendations: this.generateBatchingRecommendations(metrics),
     }
   }
 

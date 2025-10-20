@@ -124,11 +124,11 @@ export class AdaptiveDifficultyEngine {
   private readonly adaptiveParameters: AdaptiveParameters = {
     difficultyAdjustmentRate: 0.1,
     masteryThreshold: 0.85,
-    strugglingThreshold: 0.60,
+    strugglingThreshold: 0.6,
     confidenceWeight: 0.25,
-    timeWeight: 0.20,
+    timeWeight: 0.2,
     accuracyWeight: 0.35,
-    retentionWeight: 0.20
+    retentionWeight: 0.2,
   }
 
   private readonly difficultyLevels = [
@@ -136,15 +136,15 @@ export class AdaptiveDifficultyEngine {
     { level: 2, name: 'Elementary', description: 'Simple application and understanding' },
     { level: 3, name: 'Intermediate', description: 'Analysis and complex application' },
     { level: 4, name: 'Advanced', description: 'Synthesis and evaluation' },
-    { level: 5, name: 'Expert', description: 'Creative problem solving and innovation' }
+    { level: 5, name: 'Expert', description: 'Creative problem solving and innovation' },
   ]
 
   private readonly cognitiveFactors = {
     processingSpeed: 0.15,
-    workingMemory: 0.20,
+    workingMemory: 0.2,
     conceptualUnderstanding: 0.25,
-    patternRecognition: 0.20,
-    metacognition: 0.20
+    patternRecognition: 0.2,
+    metacognition: 0.2,
   }
 
   /**
@@ -177,8 +177,12 @@ export class AdaptiveDifficultyEngine {
       reasoning: this.generateReasoning(baseDifficulty, adaptations, finalDifficulty),
       confidence: this.calculateConfidence(adaptations),
       estimatedAccuracy: this.estimateAccuracy(studentProfile, topicId, finalDifficulty),
-      supportingQuestions: this.suggestSupportingQuestions(studentProfile, topicId, finalDifficulty),
-      alternativeStrategies: this.generateAlternativeStrategies(studentProfile, topicMastery)
+      supportingQuestions: this.suggestSupportingQuestions(
+        studentProfile,
+        topicId,
+        finalDifficulty
+      ),
+      alternativeStrategies: this.generateAlternativeStrategies(studentProfile, topicMastery),
     }
   }
 
@@ -259,17 +263,14 @@ export class AdaptiveDifficultyEngine {
       prerequisites: this.identifyPrerequisites(targetTopics, studentProfile),
       objectives: this.generateLearningObjectives(targetTopics, studentProfile),
       estimatedDuration: this.estimateDuration(pathSteps),
-      adaptationPoints
+      adaptationPoints,
     }
   }
 
   /**
    * Implement zone of proximal development targeting
    */
-  findZoneOfProximalDevelopment(
-    studentProfile: StudentProfile,
-    topicId: string
-  ): ZPDAnalysis {
+  findZoneOfProximalDevelopment(studentProfile: StudentProfile, topicId: string): ZPDAnalysis {
     const currentMastery = studentProfile.topicMastery[topicId] || this.initializeMastery()
 
     // Determine current capability level
@@ -290,7 +291,7 @@ export class AdaptiveDifficultyEngine {
       upperBoundary,
       optimalZone,
       scaffoldingNeeded: this.assessScaffoldingNeeds(studentProfile, topicId, optimalZone),
-      supportStrategies: this.generateSupportStrategies(studentProfile, optimalZone)
+      supportStrategies: this.generateSupportStrategies(studentProfile, optimalZone),
     }
   }
 
@@ -318,7 +319,7 @@ export class AdaptiveDifficultyEngine {
       intervals: personalizedIntervals,
       forgettingCurve,
       retentionProbability: this.calculateRetentionProbability(mastery, forgettingCurve),
-      reviewIntensity: this.calculateReviewIntensity(mastery)
+      reviewIntensity: this.calculateReviewIntensity(mastery),
     }
   }
 
@@ -335,7 +336,7 @@ export class AdaptiveDifficultyEngine {
       averageTime: 0,
       difficultyCurve: [],
       misconceptions: [],
-      strengthAreas: []
+      strengthAreas: [],
     }
   }
 
@@ -360,12 +361,13 @@ export class AdaptiveDifficultyEngine {
   }
 
   private calculateBaseDifficulty(mastery: MasteryLevel, trend: PerformanceTrend): number {
-    let baseDifficulty = mastery.level / 100 * 5 // Convert to 0-5 scale
+    let baseDifficulty = (mastery.level / 100) * 5 // Convert to 0-5 scale
 
     // Adjust based on recent performance
     if (mastery.difficultyCurve.length > 0) {
-      const recentAccuracy = mastery.difficultyCurve.slice(-5)
-        .reduce((sum, point) => sum + point.accuracy, 0) / Math.min(5, mastery.difficultyCurve.length)
+      const recentAccuracy =
+        mastery.difficultyCurve.slice(-5).reduce((sum, point) => sum + point.accuracy, 0) /
+        Math.min(5, mastery.difficultyCurve.length)
 
       if (recentAccuracy > this.adaptiveParameters.masteryThreshold) {
         baseDifficulty += 0.2 // Increase difficulty
@@ -388,7 +390,7 @@ export class AdaptiveDifficultyEngine {
       confidenceAdjustment: this.calculateConfidenceAdjustment(profile.confidenceScore),
       timeOfDayAdjustment: this.calculateTimeOfDayAdjustment(session.timeOfDay),
       streakBonus: this.calculateStreakBonus(session.consecutiveCorrect),
-      strugglingPenalty: this.calculateStrugglingPenalty(session.consecutiveIncorrect)
+      strugglingPenalty: this.calculateStrugglingPenalty(session.consecutiveIncorrect),
     }
   }
 
@@ -406,11 +408,7 @@ export class AdaptiveDifficultyEngine {
     return adjustedDifficulty
   }
 
-  private validateDifficulty(
-    difficulty: number,
-    profile: StudentProfile,
-    topicId: string
-  ): number {
+  private validateDifficulty(difficulty: number, profile: StudentProfile, topicId: string): number {
     // Ensure difficulty is within valid range
     let validatedDifficulty = Math.max(0.5, Math.min(5, difficulty))
 
@@ -424,11 +422,7 @@ export class AdaptiveDifficultyEngine {
     return Math.round(validatedDifficulty * 10) / 10 // Round to 1 decimal place
   }
 
-  private generateReasoning(
-    base: number,
-    adaptations: AdaptationFactors,
-    final: number
-  ): string {
+  private generateReasoning(base: number, adaptations: AdaptationFactors, final: number): string {
     let reasoning = `Base difficulty: ${base.toFixed(1)}. `
 
     if (adaptations.sessionFatigue !== 0) {
@@ -452,11 +446,7 @@ export class AdaptiveDifficultyEngine {
     return Math.max(0.1, Math.min(1, 1 - variance))
   }
 
-  private estimateAccuracy(
-    profile: StudentProfile,
-    topicId: string,
-    difficulty: number
-  ): number {
+  private estimateAccuracy(profile: StudentProfile, topicId: string, difficulty: number): number {
     const mastery = profile.topicMastery[topicId]
     if (!mastery || mastery.difficultyCurve.length === 0) {
       return 0.7 // Default estimate for new topics
@@ -464,7 +454,7 @@ export class AdaptiveDifficultyEngine {
 
     // Find similar difficulty points
     const similarPoints = mastery.difficultyCurve.filter(
-      point => Math.abs(point.difficulty - difficulty) < 0.5
+      (point) => Math.abs(point.difficulty - difficulty) < 0.5
     )
 
     if (similarPoints.length === 0) {
@@ -497,10 +487,7 @@ export class AdaptiveDifficultyEngine {
     return suggestions
   }
 
-  private generateAlternativeStrategies(
-    profile: StudentProfile,
-    mastery: MasteryLevel
-  ): string[] {
+  private generateAlternativeStrategies(profile: StudentProfile, mastery: MasteryLevel): string[] {
     const strategies = []
 
     if (mastery.level < 50) {
@@ -530,7 +517,8 @@ export class AdaptiveDifficultyEngine {
 
   private calculateStability(points: DifficultyPoint[]): number {
     const mean = points.reduce((sum, point) => sum + point.accuracy, 0) / points.length
-    const variance = points.reduce((sum, point) => sum + Math.pow(point.accuracy - mean, 2), 0) / points.length
+    const variance =
+      points.reduce((sum, point) => sum + Math.pow(point.accuracy - mean, 2), 0) / points.length
 
     return 1 / (1 + variance) // Higher stability for lower variance
   }
@@ -556,7 +544,9 @@ export class AdaptiveDifficultyEngine {
 
     // Extrapolate from nearest point
     const nearest = sortedPoints.reduce((prev, curr) =>
-      Math.abs(curr.difficulty - targetDifficulty) < Math.abs(prev.difficulty - targetDifficulty) ? curr : prev
+      Math.abs(curr.difficulty - targetDifficulty) < Math.abs(prev.difficulty - targetDifficulty)
+        ? curr
+        : prev
     )
 
     return nearest.accuracy
@@ -644,7 +634,10 @@ export class AdaptiveDifficultyEngine {
     return []
   }
 
-  private generateLearningObjectives(topics: string[], profile: StudentProfile): LearningObjective[] {
+  private generateLearningObjectives(
+    topics: string[],
+    profile: StudentProfile
+  ): LearningObjective[] {
     return []
   }
 
@@ -668,7 +661,11 @@ export class AdaptiveDifficultyEngine {
     return {} as OptimalZone
   }
 
-  private assessScaffoldingNeeds(profile: StudentProfile, topic: string, zone: OptimalZone): string[] {
+  private assessScaffoldingNeeds(
+    profile: StudentProfile,
+    topic: string,
+    zone: OptimalZone
+  ): string[] {
     return []
   }
 
