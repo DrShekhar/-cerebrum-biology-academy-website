@@ -6,6 +6,9 @@ import { prisma } from '@/lib/prisma'
 import { DemoBookingData } from '@/components/admin/DemoBookingModal'
 import { z } from 'zod'
 
+// Force Node.js runtime for Prisma compatibility
+export const runtime = 'nodejs'
+
 // Input validation schema
 const DemoBookingSchema = z.object({
   name: z

@@ -4,7 +4,7 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server'
-import crypto from 'crypto'
+// Use Web Crypto API for Edge Runtime compatibility (no Node.js crypto import)
 import rateLimit from 'express-rate-limit'
 import helmet from 'helmet'
 
@@ -436,7 +436,7 @@ export class SecurityHardening {
    */
   logSecurityEvent(event: Omit<SecurityEvent, 'id' | 'timestamp' | 'riskScore'>): void {
     const securityEvent: SecurityEvent = {
-      id: crypto.randomUUID(),
+      id: globalThis.crypto.randomUUID(), // Use Web Crypto API (Edge Runtime compatible)
       ...event,
       timestamp: new Date(),
       riskScore: this.calculateRiskScore(event),

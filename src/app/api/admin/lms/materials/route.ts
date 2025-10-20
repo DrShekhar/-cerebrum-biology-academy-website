@@ -9,6 +9,9 @@ import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { auth } from '@/lib/auth'
 
+// Force Node.js runtime for Prisma compatibility
+export const runtime = 'nodejs'
+
 /**
  * GET - Fetch all study materials
  * Supports filtering and pagination

@@ -23,19 +23,26 @@ class MockPrismaClient {
 // Create Prisma client with enhanced error handling and WASM fallback
 function createPrismaClient() {
   try {
-    // Detect Edge Runtime and return mock client to avoid process.nextTick errors
-    if (
-      typeof (globalThis as any).EdgeRuntime !== 'undefined' ||
-      (globalThis as any).EdgeRuntime ||
-      typeof process.nextTick !== 'function'
-    ) {
+    // Only detect EXPLICIT Edge Runtime (not Turbopack dev mode)
+    // Removed unreliable process.nextTick check that was causing false positives
+    if (typeof (globalThis as any).EdgeRuntime !== 'undefined') {
       console.warn('⚠️ Edge Runtime detected, using mock Prisma client')
       return new MockPrismaClient() as any
     }
 
-    // Check if DATABASE_URL is available
+    // In development mode, always try to use real client (skip Edge check)
+    // This allows Turbopack to work properly with Prisma
+    if (process.env.NODE_ENV === 'development') {
+      if (!process.env.DATABASE_URL) {
+        console.warn('⚠️ DATABASE_URL not found in development, using mock client')
+        return new MockPrismaClient() as any
+      }
+      // Force real client in development - no Edge Runtime assumptions
+    }
+
+    // Check if DATABASE_URL is available (production)
     if (!process.env.DATABASE_URL) {
-      console.warn('DATABASE_URL not found, using mock Prisma client')
+      console.warn('⚠️ DATABASE_URL not found, using mock Prisma client')
       return new MockPrismaClient() as any
     }
 

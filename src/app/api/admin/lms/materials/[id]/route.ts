@@ -11,6 +11,9 @@ import { prisma } from '@/lib/prisma'
 import { deletePDF } from '@/lib/lms/blobStorage'
 import { auth } from '@/lib/auth'
 
+// Force Node.js runtime for Prisma compatibility
+export const runtime = 'nodejs'
+
 /**
  * GET - Fetch single material by ID
  */
