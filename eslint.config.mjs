@@ -21,6 +21,9 @@ const eslintConfig = [
       "scripts/**",
       ".vercel/**",
       "*.d.ts",
+      "*.cjs",
+      "test-*.js",
+      "coverage/**",
     ],
     rules: {
       "@typescript-eslint/no-unused-vars": "off",

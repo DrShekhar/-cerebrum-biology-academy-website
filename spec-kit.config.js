@@ -5,7 +5,7 @@
  * education platform, enabling 40% faster development and 25% fewer bugs.
  */
 
-module.exports = {
+const config = {
   // Project metadata
   project: {
     name: "Cerebrum Biology Academy",
@@ -151,4 +151,6 @@ module.exports = {
     stakeholders: ["Students", "Teachers", "Parents"],
     reviewProcess: "Spec → Plan → Tasks → Implementation → Testing"
   }
-};
+}
+
+export default config
