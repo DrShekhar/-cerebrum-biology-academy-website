@@ -12,7 +12,6 @@ import {
   trackStudySession,
   trackConversion,
 } from '@/lib/analytics/googleAnalytics'
-import '@/types/analytics'
 
 export interface AnalyticsEvent {
   name: string
