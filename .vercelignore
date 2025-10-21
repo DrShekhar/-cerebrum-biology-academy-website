@@ -50,4 +50,4 @@ src/lib/mcp/
 src/lib/voice/voiceRecognitionService.ts
 src/lib/social/metaIntegration.ts
 src/app/api/adaptive-testing.disabled/
-playwright.config.ts
+playwright.config.ts.husky/
