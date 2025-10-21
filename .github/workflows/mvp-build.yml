@@ -28,6 +28,11 @@ jobs:
       - name: 📋 Install dependencies
         run: npm ci --legacy-peer-deps --ignore-scripts
 
+      - name: 🔧 Generate Prisma Client
+        run: npx prisma generate
+        env:
+          DATABASE_URL: postgresql://placeholder
+
       - name: 🏗️ Build application
         run: npm run build
         env:
