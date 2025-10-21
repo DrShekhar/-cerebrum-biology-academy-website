@@ -76,7 +76,8 @@ const nextConfig = {
   // Production optimizations
   compress: true,
   poweredByHeader: false,
-  // output: 'standalone', // Disabled for local testing - enables npm run start to work correctly
+  // Enable standalone output for production (smaller deployments)
+  output: process.env.NODE_ENV === 'production' ? 'standalone' : undefined,
 
   // Experimental features for better performance
   experimental: {
@@ -95,77 +96,106 @@ const nextConfig = {
     ]
   },
 
-  // Force new build ID to bust all caches
+  // Generate stable build IDs for better caching
   generateBuildId: async () => {
-    return `build-${Date.now()}-${Math.random().toString(36).substring(7)}`
+    // Use Vercel git SHA if available, otherwise timestamp
+    return process.env.VERCEL_GIT_COMMIT_SHA ||
+           process.env.BUILD_ID ||
+           `build-${Date.now()}`
   },
 
-  // Merged headers function: cache control + security
+  // Strategic caching + security headers (OPTIMIZED for performance)
   async headers() {
-    // For development: aggressive no-cache
+    // Security headers to apply to all routes
+    const securityHeaders = [
+      {
+        key: 'X-Content-Type-Options',
+        value: 'nosniff',
+      },
+      {
+        key: 'X-Frame-Options',
+        value: 'DENY',
+      },
+      {
+        key: 'X-XSS-Protection',
+        value: '1; mode=block',
+      },
+      {
+        key: 'Content-Language',
+        value: 'en-IN, hi-IN',
+      },
+      {
+        key: 'Referrer-Policy',
+        value: 'strict-origin-when-cross-origin',
+      },
+      {
+        key: 'Permissions-Policy',
+        value: 'camera=(), microphone=(), geolocation=()',
+      },
+    ]
+
+    // Development: no caching
     if (process.env.NODE_ENV === 'development') {
       return [
         {
-          source: '/(.*)',
+          source: '/:path*',
           headers: [
-            {
-              key: 'Cache-Control',
-              value: 'no-cache, no-store, must-revalidate, max-age=0',
-            },
-            {
-              key: 'Pragma',
-              value: 'no-cache',
-            },
-            {
-              key: 'Expires',
-              value: '0',
-            },
+            { key: 'Cache-Control', value: 'no-cache, no-store, must-revalidate' },
+            ...securityHeaders,
           ],
         },
       ]
     }
 
-    // For production: aggressive no-cache + security headers
+    // Production: strategic caching for maximum performance
     return [
+      // Static assets - Long-term caching with immutable
+      {
+        source: '/_next/static/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+          ...securityHeaders,
+        ],
+      },
+      // JavaScript & CSS - Long-term caching
+      {
+        source: '/:path*.{js,css,woff,woff2,ttf,eot}',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+          ...securityHeaders,
+        ],
+      },
+      // Images - Long-term caching with stale-while-revalidate
+      {
+        source: '/:path*.{jpg,jpeg,png,webp,avif,svg,ico,gif}',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=86400, s-maxage=31536000, stale-while-revalidate=86400'
+          },
+          ...securityHeaders,
+        ],
+      },
+      // API routes - No caching
+      {
+        source: '/api/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'no-store, must-revalidate' },
+          { key: 'Access-Control-Allow-Origin', value: '*' },
+          { key: 'Access-Control-Allow-Methods', value: 'GET, POST, PUT, DELETE, OPTIONS' },
+          { key: 'Access-Control-Allow-Headers', value: 'Content-Type, Authorization' },
+          ...securityHeaders,
+        ],
+      },
+      // HTML pages - Short-term caching with revalidation
       {
         source: '/:path*',
         headers: [
           {
             key: 'Cache-Control',
-            value: 'no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0',
+            value: 'public, max-age=3600, s-maxage=86400, stale-while-revalidate=86400'
           },
-          {
-            key: 'Pragma',
-            value: 'no-cache',
-          },
-          {
-            key: 'Expires',
-            value: '0',
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
-            key: 'X-XSS-Protection',
-            value: '1; mode=block',
-          },
-          {
-            key: 'Content-Language',
-            value: 'en-IN, hi-IN',
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'strict-origin-when-cross-origin',
-          },
-          {
-            key: 'Permissions-Policy',
-            value: 'camera=(), microphone=(), geolocation=()',
-          },
+          ...securityHeaders,
         ],
       },
     ]
