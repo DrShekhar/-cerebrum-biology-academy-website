@@ -1,5 +1,9 @@
 import { prisma, DatabaseUtils } from './connection'
-import { TestTemplateCacheService, TestSessionCacheService, AnalyticsCacheService } from '../cache/redis'
+import {
+  TestTemplateCacheService,
+  TestSessionCacheService,
+  AnalyticsCacheService,
+} from '../cache/redis'
 import type {
   TestTemplate,
   TestSession,
@@ -7,7 +11,7 @@ import type {
   Question,
   UserQuestionResponse,
   TestAnalytics,
-  Prisma
+  Prisma,
 } from '@/generated/prisma'
 
 export interface CreateTestTemplateInput {
@@ -77,7 +81,9 @@ export class TestService {
           ...data,
           topics: JSON.stringify(data.topics),
           markingScheme: data.markingScheme ? JSON.stringify(data.markingScheme) : null,
-          questionDistribution: data.questionDistribution ? JSON.stringify(data.questionDistribution) : null,
+          questionDistribution: data.questionDistribution
+            ? JSON.stringify(data.questionDistribution)
+            : null,
           instructions: data.instructions ? JSON.stringify(data.instructions) : null,
           adaptiveSettings: data.adaptiveSettings ? JSON.stringify(data.adaptiveSettings) : null,
           seoKeywords: data.seoKeywords ? JSON.stringify(data.seoKeywords) : null,
@@ -105,12 +111,28 @@ export class TestService {
         return cached
       }
 
+      // OPTIMIZED: Single query with eager loading to prevent N+1
       const template = await prisma.testTemplate.findUnique({
         where: { id },
         include: {
           questionBank: {
             include: {
-              question: true,
+              question: {
+                // Select only necessary fields to reduce data transfer
+                select: {
+                  id: true,
+                  topic: true,
+                  difficulty: true,
+                  question: true,
+                  options: true,
+                  correctAnswer: true,
+                  explanation: true,
+                  marks: true,
+                  timeLimit: true,
+                  questionImage: true,
+                  type: true,
+                },
+              },
             },
           },
         },
@@ -135,12 +157,28 @@ export class TestService {
         return cached
       }
 
+      // OPTIMIZED: Single query with eager loading to prevent N+1
       const template = await prisma.testTemplate.findUnique({
         where: { slug },
         include: {
           questionBank: {
             include: {
-              question: true,
+              question: {
+                // Select only necessary fields to reduce data transfer
+                select: {
+                  id: true,
+                  topic: true,
+                  difficulty: true,
+                  question: true,
+                  options: true,
+                  correctAnswer: true,
+                  explanation: true,
+                  marks: true,
+                  timeLimit: true,
+                  questionImage: true,
+                  type: true,
+                },
+              },
             },
           },
         },
@@ -202,10 +240,7 @@ export class TestService {
       const [templates, total] = await Promise.all([
         prisma.testTemplate.findMany({
           where,
-          orderBy: [
-            { popularityScore: 'desc' },
-            { createdAt: 'desc' },
-          ],
+          orderBy: [{ popularityScore: 'desc' }, { createdAt: 'desc' }],
           ...DatabaseUtils.getPaginationParams(page, limit),
         }),
         prisma.testTemplate.count({ where }),
@@ -217,7 +252,7 @@ export class TestService {
       return {
         templates,
         total,
-        hasMore: (page * limit) < total,
+        hasMore: page * limit < total,
       }
     } catch (error) {
       console.error('Failed to fetch test templates:', error)
@@ -238,10 +273,7 @@ export class TestService {
           isActive: true,
           isPublished: true,
         },
-        orderBy: [
-          { attemptCount: 'desc' },
-          { popularityScore: 'desc' },
-        ],
+        orderBy: [{ attemptCount: 'desc' }, { popularityScore: 'desc' }],
         take: limit,
       })
 
@@ -305,13 +337,31 @@ export class TestService {
         return cached
       }
 
+      // OPTIMIZED: Single query with eager loading to prevent N+1
+      // This prevents separate queries for each response's question
       const session = await prisma.testSession.findUnique({
         where: { sessionToken },
         include: {
           testTemplate: true,
           responses: {
             include: {
-              question: true,
+              question: {
+                // Select only necessary fields to reduce data transfer
+                select: {
+                  id: true,
+                  topic: true,
+                  difficulty: true,
+                  question: true,
+                  options: true,
+                  correctAnswer: true,
+                  explanation: true,
+                  marks: true,
+                  type: true,
+                },
+              },
+            },
+            orderBy: {
+              answeredAt: 'asc',
             },
           },
         },
@@ -393,7 +443,8 @@ export class TestService {
       })
 
       // Cache the answer for real-time auto-save
-      const currentAnswers = await TestSessionCacheService.getSessionAnswers(data.sessionToken) || {}
+      const currentAnswers =
+        (await TestSessionCacheService.getSessionAnswers(data.sessionToken)) || {}
       currentAnswers[data.questionId] = {
         selectedAnswer: data.selectedAnswer,
         timeSpent: data.timeSpent,
@@ -412,14 +463,24 @@ export class TestService {
   static async submitTest(sessionToken: string): Promise<TestSession | null> {
     try {
       return await DatabaseUtils.transaction(async (tx) => {
-        // Get the test session with responses
+        // OPTIMIZED: Get the test session with responses in a single query
+        // This prevents N+1 by eager loading all questions at once
         const session = await tx.testSession.findUnique({
           where: { sessionToken },
           include: {
             testTemplate: true,
             responses: {
               include: {
-                question: true,
+                question: {
+                  // Only select fields needed for scoring
+                  select: {
+                    id: true,
+                    marks: true,
+                    correctAnswer: true,
+                    difficulty: true,
+                    topic: true,
+                  },
+                },
               },
             },
           },
@@ -446,9 +507,10 @@ export class TestService {
           }
         }
 
-        const percentage = session.testTemplate.totalMarks > 0
-          ? (totalScore / session.testTemplate.totalMarks) * 100
-          : 0
+        const percentage =
+          session.testTemplate.totalMarks > 0
+            ? (totalScore / session.testTemplate.totalMarks) * 100
+            : 0
 
         // Update session with final results
         const updatedSession = await tx.testSession.update({
@@ -499,10 +561,7 @@ export class TestService {
   }
 
   // Question Management for Tests
-  static async getQuestionsForTest(
-    testTemplateId: string,
-    count?: number
-  ): Promise<Question[]> {
+  static async getQuestionsForTest(testTemplateId: string, count?: number): Promise<Question[]> {
     try {
       const template = await this.getTestTemplateById(testTemplateId)
       if (!template) {
@@ -614,7 +673,7 @@ export class TestService {
         select: { questionId: true },
       })
 
-      const answeredIds = answeredQuestions.map(q => q.questionId)
+      const answeredIds = answeredQuestions.map((q) => q.questionId)
 
       const question = await prisma.question.findFirst({
         where: {
@@ -660,11 +719,11 @@ export class TestService {
 
       const responses = session.responses
       const totalQuestions = responses.length
-      const correctAnswers = responses.filter(r => r.isCorrect).length
+      const correctAnswers = responses.filter((r) => r.isCorrect).length
       const accuracy = totalQuestions > 0 ? (correctAnswers / totalQuestions) * 100 : 0
 
       // Calculate time distribution
-      const timeDistribution = responses.map(r => ({
+      const timeDistribution = responses.map((r) => ({
         questionId: r.questionId,
         timeSpent: r.timeSpent || 0,
       }))
@@ -676,7 +735,7 @@ export class TestService {
         hard: { attempted: 0, correct: 0 },
       }
 
-      responses.forEach(response => {
+      responses.forEach((response) => {
         const difficulty = response.question.difficulty.toLowerCase()
         if (difficulty in difficultyPerformance) {
           difficultyPerformance[difficulty as keyof typeof difficultyPerformance].attempted++
@@ -688,7 +747,7 @@ export class TestService {
 
       // Calculate topic-wise performance
       const topicPerformance: Record<string, { attempted: number; correct: number }> = {}
-      responses.forEach(response => {
+      responses.forEach((response) => {
         const topic = response.question.topic
         if (!topicPerformance[topic]) {
           topicPerformance[topic] = { attempted: 0, correct: 0 }
@@ -708,19 +767,19 @@ export class TestService {
           questionsCorrect: correctAnswers,
           accuracy,
           timeDistribution: JSON.stringify(timeDistribution),
-          answerPattern: JSON.stringify(responses.map(r => r.selectedAnswer)),
+          answerPattern: JSON.stringify(responses.map((r) => r.selectedAnswer)),
           easyQuestions: JSON.stringify(difficultyPerformance.easy),
           mediumQuestions: JSON.stringify(difficultyPerformance.medium),
           hardQuestions: JSON.stringify(difficultyPerformance.hard),
           topicPerformance: JSON.stringify(topicPerformance),
           strengthTopics: JSON.stringify(
             Object.entries(topicPerformance)
-              .filter(([_, perf]) => perf.attempted > 0 && (perf.correct / perf.attempted) >= 0.8)
+              .filter(([_, perf]) => perf.attempted > 0 && perf.correct / perf.attempted >= 0.8)
               .map(([topic]) => topic)
           ),
           weaknessTopics: JSON.stringify(
             Object.entries(topicPerformance)
-              .filter(([_, perf]) => perf.attempted > 0 && (perf.correct / perf.attempted) < 0.6)
+              .filter(([_, perf]) => perf.attempted > 0 && perf.correct / perf.attempted < 0.6)
               .map(([topic]) => topic)
           ),
         },
@@ -737,8 +796,8 @@ export class TestService {
   private static shuffleArray<T>(array: T[]): T[] {
     const shuffled = [...array]
     for (let i = shuffled.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
+      const j = Math.floor(Math.random() * (i + 1))
+      ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
     }
     return shuffled
   }

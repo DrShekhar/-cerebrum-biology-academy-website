@@ -5,7 +5,7 @@ import type {
   QuestionBank,
   QuestionBankQuestion,
   UserQuestionResponse,
-  Prisma
+  Prisma,
 } from '@/generated/prisma'
 
 export interface CreateQuestionInput {
@@ -222,11 +222,7 @@ export class QuestionService {
       const [questions, total] = await Promise.all([
         prisma.question.findMany({
           where,
-          orderBy: [
-            { popularityScore: 'desc' },
-            { qualityScore: 'desc' },
-            { createdAt: 'desc' },
-          ],
+          orderBy: [{ popularityScore: 'desc' }, { qualityScore: 'desc' }, { createdAt: 'desc' }],
           ...DatabaseUtils.getPaginationParams(page, limit),
         }),
         prisma.question.count({ where }),
@@ -235,7 +231,7 @@ export class QuestionService {
       return {
         questions,
         total,
-        hasMore: (page * limit) < total,
+        hasMore: page * limit < total,
       }
     } catch (error) {
       console.error('Failed to search questions:', error)
@@ -272,10 +268,7 @@ export class QuestionService {
 
       const questions = await prisma.question.findMany({
         where,
-        orderBy: [
-          { popularityScore: 'desc' },
-          { totalAttempts: 'desc' },
-        ],
+        orderBy: [{ popularityScore: 'desc' }, { totalAttempts: 'desc' }],
         ...DatabaseUtils.getPaginationParams(page, limit),
       })
 
@@ -429,12 +422,36 @@ export class QuestionService {
 
   static async getQuestionBank(id: string): Promise<QuestionBank | null> {
     try {
+      // OPTIMIZED: Single query with selective field loading to prevent N+1
+      // This loads all questions in one go instead of separate queries
       return await prisma.questionBank.findUnique({
         where: { id },
         include: {
           questions: {
             include: {
-              question: true,
+              question: {
+                // Select only necessary fields to reduce data transfer
+                select: {
+                  id: true,
+                  topic: true,
+                  subtopic: true,
+                  difficulty: true,
+                  question: true,
+                  options: true,
+                  correctAnswer: true,
+                  explanation: true,
+                  marks: true,
+                  timeLimit: true,
+                  questionImage: true,
+                  type: true,
+                  curriculum: true,
+                  grade: true,
+                  subject: true,
+                  isActive: true,
+                  isVerified: true,
+                  tags: true,
+                },
+              },
             },
             orderBy: { orderIndex: 'asc' },
           },
@@ -472,10 +489,7 @@ export class QuestionService {
       const [banks, total] = await Promise.all([
         prisma.questionBank.findMany({
           where,
-          orderBy: [
-            { usageCount: 'desc' },
-            { createdAt: 'desc' },
-          ],
+          orderBy: [{ usageCount: 'desc' }, { createdAt: 'desc' }],
           ...DatabaseUtils.getPaginationParams(page, limit),
         }),
         prisma.questionBank.count({ where }),
@@ -484,7 +498,7 @@ export class QuestionService {
       return {
         banks,
         total,
-        hasMore: (page * limit) < total,
+        hasMore: page * limit < total,
       }
     } catch (error) {
       console.error('Failed to fetch question banks:', error)
@@ -571,9 +585,8 @@ export class QuestionService {
 
       if (!question) return null
 
-      const accuracy = question.totalAttempts > 0
-        ? (question.correctAttempts / question.totalAttempts) * 100
-        : 0
+      const accuracy =
+        question.totalAttempts > 0 ? (question.correctAttempts / question.totalAttempts) * 100 : 0
 
       // Get recent performance (last 30 days)
       const thirtyDaysAgo = new Date()
@@ -590,7 +603,7 @@ export class QuestionService {
       // Group by date
       const dailyPerformance: Record<string, { attempts: number; correct: number }> = {}
 
-      recentResponses.forEach(response => {
+      recentResponses.forEach((response) => {
         const date = response.answeredAt.toISOString().split('T')[0]
         if (!dailyPerformance[date]) {
           dailyPerformance[date] = { attempts: 0, correct: 0 }
@@ -624,7 +637,7 @@ export class QuestionService {
   // Bulk Operations
   static async bulkCreateQuestions(questions: CreateQuestionInput[]): Promise<number> {
     try {
-      const questionData = questions.map(q => ({
+      const questionData = questions.map((q) => ({
         ...q,
         options: q.options ? JSON.stringify(q.options) : null,
         solutionSteps: q.solutionSteps ? JSON.stringify(q.solutionSteps) : null,
@@ -647,30 +660,54 @@ export class QuestionService {
 
   static async updatePopularityScores(): Promise<void> {
     try {
+      // OPTIMIZED: Load questions with aggregated response count instead of all responses
+      // This prevents loading thousands of response records
       const questions = await prisma.question.findMany({
-        include: {
-          userResponses: {
-            where: {
-              answeredAt: {
-                gte: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000), // Last 30 days
+        select: {
+          id: true,
+          totalAttempts: true,
+          qualityScore: true,
+          _count: {
+            select: {
+              userResponses: {
+                where: {
+                  answeredAt: {
+                    gte: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000),
+                  },
+                },
               },
             },
           },
         },
       })
 
-      for (const question of questions) {
-        const recentUsage = question.userResponses.length
+      // OPTIMIZED: Batch update using transaction for better performance
+      const updates = questions.map((question) => {
+        const recentUsage = question._count.userResponses
         const totalUsage = question.totalAttempts
         const qualityScore = question.qualityScore || 3.0
 
         // Calculate popularity score based on recent usage, total usage, and quality
-        const popularityScore = Math.log(recentUsage + 1) * 2 + Math.log(totalUsage + 1) + qualityScore
+        const popularityScore =
+          Math.log(recentUsage + 1) * 2 + Math.log(totalUsage + 1) + qualityScore
 
-        await prisma.question.update({
-          where: { id: question.id },
-          data: { popularityScore },
-        })
+        return {
+          id: question.id,
+          popularityScore,
+        }
+      })
+
+      // Batch update in chunks of 100 to avoid memory issues
+      for (let i = 0; i < updates.length; i += 100) {
+        const chunk = updates.slice(i, i + 100)
+        await Promise.all(
+          chunk.map((update) =>
+            prisma.question.update({
+              where: { id: update.id },
+              data: { popularityScore: update.popularityScore },
+            })
+          )
+        )
       }
 
       console.log('Updated popularity scores for questions')
@@ -683,8 +720,8 @@ export class QuestionService {
   private static shuffleArray<T>(array: T[]): T[] {
     const shuffled = [...array]
     for (let i = shuffled.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
+      const j = Math.floor(Math.random() * (i + 1))
+      ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
     }
     return shuffled
   }

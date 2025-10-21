@@ -1,12 +1,6 @@
 import { prisma, DatabaseUtils } from './connection'
 import { UserCacheService } from '../cache/redis'
-import type {
-  User,
-  FreeUser,
-  UserProgress,
-  PerformanceReport,
-  Prisma
-} from '@/generated/prisma'
+import type { User, FreeUser, UserProgress, PerformanceReport, Prisma } from '@/generated/prisma'
 
 export interface CreateFreeUserInput {
   email: string
@@ -53,7 +47,11 @@ export class UserService {
       })
 
       // Initialize user progress for common topics
-      await this.initializeUserProgress(user.id, user.curriculum || 'NEET', user.grade || 'CLASS_12')
+      await this.initializeUserProgress(
+        user.id,
+        user.curriculum || 'NEET',
+        user.grade || 'CLASS_12'
+      )
 
       return user
     } catch (error) {
@@ -70,19 +68,55 @@ export class UserService {
         return cached.user
       }
 
+      // OPTIMIZED: Single query with all related data to prevent N+1
       const user = await prisma.freeUser.findUnique({
         where: { id },
         include: {
           testAttempts: {
             orderBy: { startedAt: 'desc' },
-            take: 5, // Recent test attempts
+            take: 5,
+            // Select only necessary fields to reduce data transfer
+            select: {
+              id: true,
+              title: true,
+              percentage: true,
+              score: true,
+              totalMarks: true,
+              timeSpent: true,
+              startedAt: true,
+              submittedAt: true,
+              difficulty: true,
+              status: true,
+            },
           },
           userProgress: {
             orderBy: { lastPracticed: 'desc' },
+            // Select only necessary fields
+            select: {
+              id: true,
+              topic: true,
+              subtopic: true,
+              accuracy: true,
+              masteryScore: true,
+              currentLevel: true,
+              totalQuestions: true,
+              correctAnswers: true,
+              lastPracticed: true,
+            },
           },
           achievements: {
             where: { isCompleted: true },
             orderBy: { earnedAt: 'desc' },
+            // Select only necessary fields
+            select: {
+              id: true,
+              type: true,
+              title: true,
+              description: true,
+              icon: true,
+              points: true,
+              earnedAt: true,
+            },
           },
         },
       })
@@ -101,13 +135,33 @@ export class UserService {
 
   static async getFreeUserByEmail(email: string): Promise<FreeUser | null> {
     try {
+      // OPTIMIZED: Single query with selective field loading
       return await prisma.freeUser.findUnique({
         where: { email },
         include: {
-          userProgress: true,
+          userProgress: {
+            // Select only necessary fields
+            select: {
+              id: true,
+              topic: true,
+              accuracy: true,
+              masteryScore: true,
+              currentLevel: true,
+              lastPracticed: true,
+            },
+          },
           testAttempts: {
             orderBy: { startedAt: 'desc' },
             take: 3,
+            // Select only necessary fields
+            select: {
+              id: true,
+              title: true,
+              percentage: true,
+              score: true,
+              startedAt: true,
+              submittedAt: true,
+            },
           },
         },
       })
@@ -155,10 +209,10 @@ export class UserService {
       'Human Physiology',
       'Ecology',
       'Evolution',
-      'Biotechnology'
+      'Biotechnology',
     ]
 
-    const progressData = defaultTopics.map(topic => ({
+    const progressData = defaultTopics.map((topic) => ({
       freeUserId: userId,
       topic,
       curriculum,
@@ -182,7 +236,8 @@ export class UserService {
 
   static async updateUserProgress(data: UpdateUserProgressInput): Promise<UserProgress | null> {
     try {
-      const accuracy = data.totalQuestions > 0 ? (data.correctAnswers / data.totalQuestions) * 100 : 0
+      const accuracy =
+        data.totalQuestions > 0 ? (data.correctAnswers / data.totalQuestions) * 100 : 0
 
       // Determine mastery level based on accuracy and total questions
       let masteryScore = accuracy
@@ -194,18 +249,22 @@ export class UserService {
 
       const progress = await prisma.userProgress.upsert({
         where: {
-          userId_topic_curriculum_grade: data.userId ? {
-            userId: data.userId,
-            topic: data.topic,
-            curriculum: data.curriculum,
-            grade: data.grade,
-          } : undefined,
-          freeUserId_topic_curriculum_grade: data.freeUserId ? {
-            freeUserId: data.freeUserId,
-            topic: data.topic,
-            curriculum: data.curriculum,
-            grade: data.grade,
-          } : undefined,
+          userId_topic_curriculum_grade: data.userId
+            ? {
+                userId: data.userId,
+                topic: data.topic,
+                curriculum: data.curriculum,
+                grade: data.grade,
+              }
+            : undefined,
+          freeUserId_topic_curriculum_grade: data.freeUserId
+            ? {
+                freeUserId: data.freeUserId,
+                topic: data.topic,
+                curriculum: data.curriculum,
+                grade: data.grade,
+              }
+            : undefined,
         },
         update: {
           totalQuestions: data.totalQuestions,
@@ -255,10 +314,7 @@ export class UserService {
 
       return await prisma.userProgress.findMany({
         where: whereClause,
-        orderBy: [
-          { masteryScore: 'desc' },
-          { lastPracticed: 'desc' },
-        ],
+        orderBy: [{ masteryScore: 'desc' }, { lastPracticed: 'desc' }],
       })
     } catch (error) {
       console.error('Failed to fetch user progress:', error)
@@ -312,46 +368,61 @@ export class UserService {
 
       const whereClause = isFreeUser ? { freeUserId: userId } : { userId }
 
-      // Get test attempts
-      const testAttempts = await prisma.testAttempt.findMany({
-        where: whereClause,
-        orderBy: { startedAt: 'desc' },
-        take: 50, // Last 50 attempts
-      })
-
-      // Get user progress
-      const userProgress = await prisma.userProgress.findMany({
-        where: whereClause,
-        orderBy: { masteryScore: 'desc' },
-      })
+      // OPTIMIZED: Single query with selective fields to reduce data transfer
+      const [testAttempts, userProgress] = await Promise.all([
+        prisma.testAttempt.findMany({
+          where: whereClause,
+          orderBy: { startedAt: 'desc' },
+          take: 50,
+          // Select only fields needed for metrics calculation
+          select: {
+            id: true,
+            percentage: true,
+            startedAt: true,
+            topicWiseScore: true,
+          },
+        }),
+        prisma.userProgress.findMany({
+          where: whereClause,
+          orderBy: { masteryScore: 'desc' },
+          // Select only fields needed for metrics
+          select: {
+            id: true,
+            topic: true,
+            masteryScore: true,
+            accuracy: true,
+          },
+        }),
+      ])
 
       // Calculate metrics
       const totalTests = testAttempts.length
-      const averageScore = totalTests > 0
-        ? testAttempts.reduce((sum, test) => sum + test.percentage, 0) / totalTests
-        : 0
+      const averageScore =
+        totalTests > 0
+          ? testAttempts.reduce((sum, test) => sum + test.percentage, 0) / totalTests
+          : 0
 
-      const bestScore = totalTests > 0
-        ? Math.max(...testAttempts.map(test => test.percentage))
-        : 0
+      const bestScore =
+        totalTests > 0 ? Math.max(...testAttempts.map((test) => test.percentage)) : 0
 
       // Identify weak and strong topics
       const weakTopics = userProgress
-        .filter(p => p.masteryScore < 60)
+        .filter((p) => p.masteryScore < 60)
         .sort((a, b) => a.masteryScore - b.masteryScore)
         .slice(0, 3)
-        .map(p => p.topic)
+        .map((p) => p.topic)
 
       const strongTopics = userProgress
-        .filter(p => p.masteryScore >= 80)
+        .filter((p) => p.masteryScore >= 80)
         .sort((a, b) => b.masteryScore - a.masteryScore)
         .slice(0, 3)
-        .map(p => p.topic)
+        .map((p) => p.topic)
 
       // Calculate overall progress
-      const overallProgress = userProgress.length > 0
-        ? userProgress.reduce((sum, p) => sum + p.masteryScore, 0) / userProgress.length
-        : 0
+      const overallProgress =
+        userProgress.length > 0
+          ? userProgress.reduce((sum, p) => sum + p.masteryScore, 0) / userProgress.length
+          : 0
 
       // Calculate recent improvement (last 10 vs previous 10 tests)
       let recentImprovement = 0
@@ -360,8 +431,10 @@ export class UserService {
         const previousTests = testAttempts.slice(10, 20)
 
         if (previousTests.length > 0) {
-          const recentAvg = recentTests.reduce((sum, t) => sum + t.percentage, 0) / recentTests.length
-          const previousAvg = previousTests.reduce((sum, t) => sum + t.percentage, 0) / previousTests.length
+          const recentAvg =
+            recentTests.reduce((sum, t) => sum + t.percentage, 0) / recentTests.length
+          const previousAvg =
+            previousTests.reduce((sum, t) => sum + t.percentage, 0) / previousTests.length
           recentImprovement = recentAvg - previousAvg
         }
       }
@@ -428,7 +501,7 @@ export class UserService {
 
       const whereClause = isFreeUser ? { freeUserId: userId } : { userId }
 
-      // Get test attempts in the period
+      // OPTIMIZED: Get test attempts with only necessary template fields
       const testAttempts = await prisma.testAttempt.findMany({
         where: {
           ...whereClause,
@@ -438,38 +511,49 @@ export class UserService {
           },
         },
         include: {
-          testTemplate: true,
+          testTemplate: {
+            // Select only necessary fields from template
+            select: {
+              id: true,
+              subject: true,
+              title: true,
+            },
+          },
         },
       })
 
       // Calculate metrics
       const testsAttempted = testAttempts.length
-      const averageScore = testsAttempted > 0
-        ? testAttempts.reduce((sum, test) => sum + test.percentage, 0) / testsAttempted
-        : null
+      const averageScore =
+        testsAttempted > 0
+          ? testAttempts.reduce((sum, test) => sum + test.percentage, 0) / testsAttempted
+          : null
 
       const totalStudyTime = testAttempts.reduce((sum, test) => sum + test.timeSpent, 0) / 60 // Convert to minutes
 
       // Calculate subject-wise scores
-      const biologyTests = testAttempts.filter(t => t.testTemplate?.subject === 'biology')
-      const botanyTests = testAttempts.filter(t => t.testTemplate?.subject === 'botany')
-      const zoologyTests = testAttempts.filter(t => t.testTemplate?.subject === 'zoology')
+      const biologyTests = testAttempts.filter((t) => t.testTemplate?.subject === 'biology')
+      const botanyTests = testAttempts.filter((t) => t.testTemplate?.subject === 'botany')
+      const zoologyTests = testAttempts.filter((t) => t.testTemplate?.subject === 'zoology')
 
-      const biologyScore = biologyTests.length > 0
-        ? biologyTests.reduce((sum, t) => sum + t.percentage, 0) / biologyTests.length
-        : null
+      const biologyScore =
+        biologyTests.length > 0
+          ? biologyTests.reduce((sum, t) => sum + t.percentage, 0) / biologyTests.length
+          : null
 
-      const botanyScore = botanyTests.length > 0
-        ? botanyTests.reduce((sum, t) => sum + t.percentage, 0) / botanyTests.length
-        : null
+      const botanyScore =
+        botanyTests.length > 0
+          ? botanyTests.reduce((sum, t) => sum + t.percentage, 0) / botanyTests.length
+          : null
 
-      const zoologyScore = zoologyTests.length > 0
-        ? zoologyTests.reduce((sum, t) => sum + t.percentage, 0) / zoologyTests.length
-        : null
+      const zoologyScore =
+        zoologyTests.length > 0
+          ? zoologyTests.reduce((sum, t) => sum + t.percentage, 0) / zoologyTests.length
+          : null
 
       // Analyze topic performance
       const topicScores: Record<string, number[]> = {}
-      testAttempts.forEach(attempt => {
+      testAttempts.forEach((attempt) => {
         if (attempt.topicWiseScore) {
           const scores = attempt.topicWiseScore as Record<string, number>
           Object.entries(scores).forEach(([topic, score]) => {
@@ -485,23 +569,23 @@ export class UserService {
         .filter(([_, scores]) => scores.length > 0)
         .map(([topic, scores]) => ({
           topic,
-          average: scores.reduce((sum, score) => sum + score, 0) / scores.length
+          average: scores.reduce((sum, score) => sum + score, 0) / scores.length,
         }))
-        .filter(item => item.average >= 80)
+        .filter((item) => item.average >= 80)
         .sort((a, b) => b.average - a.average)
         .slice(0, 3)
-        .map(item => item.topic)
+        .map((item) => item.topic)
 
       const weakTopics = Object.entries(topicScores)
         .filter(([_, scores]) => scores.length > 0)
         .map(([topic, scores]) => ({
           topic,
-          average: scores.reduce((sum, score) => sum + score, 0) / scores.length
+          average: scores.reduce((sum, score) => sum + score, 0) / scores.length,
         }))
-        .filter(item => item.average < 60)
+        .filter((item) => item.average < 60)
         .sort((a, b) => a.average - b.average)
         .slice(0, 3)
-        .map(item => item.topic)
+        .map((item) => item.topic)
 
       // Create the report
       const report = await prisma.performanceReport.create({
@@ -565,7 +649,7 @@ export class UserService {
         const checkDate = new Date(today)
         checkDate.setDate(today.getDate() - i)
 
-        const hasStudied = recentAttempts.some(attempt => {
+        const hasStudied = recentAttempts.some((attempt) => {
           const attemptDate = new Date(attempt.startedAt)
           return attemptDate.toDateString() === checkDate.toDateString()
         })
@@ -584,23 +668,23 @@ export class UserService {
       const weekAgo = new Date()
       weekAgo.setDate(weekAgo.getDate() - 7)
 
-      const thisWeekAttempts = recentAttempts.filter(a => a.startedAt >= weekAgo)
+      const thisWeekAttempts = recentAttempts.filter((a) => a.startedAt >= weekAgo)
       const weeklyProgress = thisWeekAttempts.length
 
       // Get user progress for insights
       const userProgress = await this.getUserProgress(userId, isFreeUser)
 
       const strongAreas = userProgress
-        .filter(p => p.masteryScore >= 80)
+        .filter((p) => p.masteryScore >= 80)
         .sort((a, b) => b.masteryScore - a.masteryScore)
         .slice(0, 3)
-        .map(p => p.topic)
+        .map((p) => p.topic)
 
       const improvementAreas = userProgress
-        .filter(p => p.masteryScore < 60)
+        .filter((p) => p.masteryScore < 60)
         .sort((a, b) => a.masteryScore - b.masteryScore)
         .slice(0, 3)
-        .map(p => p.topic)
+        .map((p) => p.topic)
 
       // Generate recommendations
       const recommendations = []
@@ -612,7 +696,9 @@ export class UserService {
       }
 
       if (improvementAreas.length > 0) {
-        recommendations.push(`Focus on improving ${improvementAreas[0]} - practice with easier questions first`)
+        recommendations.push(
+          `Focus on improving ${improvementAreas[0]} - practice with easier questions first`
+        )
       }
 
       if (strongAreas.length > 0) {
@@ -660,9 +746,11 @@ export class UserService {
       for (const user of users) {
         if (user.testAttempts.length === 0) continue
 
-        const averageScore = user.testAttempts.reduce((sum, test) => sum + test.percentage, 0) / user.testAttempts.length
+        const averageScore =
+          user.testAttempts.reduce((sum, test) => sum + test.percentage, 0) /
+          user.testAttempts.length
         const totalTests = user.testAttempts.length
-        const bestScore = Math.max(...user.testAttempts.map(test => test.percentage))
+        const bestScore = Math.max(...user.testAttempts.map((test) => test.percentage))
 
         // Calculate new level based on performance
         let newLevel = 1

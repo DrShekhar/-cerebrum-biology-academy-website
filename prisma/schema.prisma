@@ -9,6 +9,15 @@ generator client {
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
+  relationMode = "prisma"
+
+  // Connection pooling configuration for 1,000+ concurrent users
+  // Optimized for high-traffic educational platform
+  directUrl = env("DIRECT_DATABASE_URL") // Direct connection for migrations
+
+  // Connection pool settings
+  // Note: These are managed via DATABASE_URL connection string parameters
+  // Example: postgresql://user:pass@host:5432/db?connection_limit=10&pool_timeout=20&connect_timeout=10
 }
 
 // User Management
