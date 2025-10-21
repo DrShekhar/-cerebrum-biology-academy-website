@@ -1,35 +1,72 @@
 import { NextRequest, NextResponse } from 'next/server'
-import crypto from 'crypto'
+import Razorpay from 'razorpay'
+import { prisma } from '@/lib/prisma'
 
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
-    const { amount, currency, receipt, notes } = body
+    const { amount, currency = 'INR', receipt, notes, enrollmentId } = body
 
-    // For MVP, we'll simulate Razorpay order creation
-    // In production, you'd use the actual Razorpay SDK
-    const orderId = `order_${crypto.randomBytes(16).toString('hex')}`
-
-    const order = {
-      id: orderId,
-      entity: 'order',
-      amount,
-      currency,
-      receipt,
-      notes,
-      status: 'created',
-      created_at: Math.floor(Date.now() / 1000),
+    if (!amount || amount <= 0) {
+      return NextResponse.json({ success: false, error: 'Invalid amount' }, { status: 400 })
     }
 
-    // Store order in your database here
-    console.log('Order created:', order)
+    const razorpayKeyId = process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID
+    const razorpayKeySecret = process.env.RAZORPAY_KEY_SECRET
+
+    if (!razorpayKeyId || !razorpayKeySecret) {
+      console.error('Razorpay credentials not configured')
+      return NextResponse.json(
+        { success: false, error: 'Payment gateway not configured' },
+        { status: 500 }
+      )
+    }
+
+    const razorpay = new Razorpay({
+      key_id: razorpayKeyId,
+      key_secret: razorpayKeySecret,
+    })
+
+    const amountInPaise = Math.round(amount * 100)
+
+    const order = await razorpay.orders.create({
+      amount: amountInPaise,
+      currency: currency || 'INR',
+      receipt: receipt || `receipt_${Date.now()}`,
+      notes: notes || {},
+    })
+
+    if (enrollmentId) {
+      await prisma.payment.create({
+        data: {
+          enrollmentId,
+          amount: amountInPaise,
+          razorpayOrderId: order.id,
+          status: 'PENDING',
+        },
+      })
+    }
+
+    console.log('Razorpay order created:', order.id)
 
     return NextResponse.json({
       success: true,
-      ...order,
+      id: order.id,
+      entity: order.entity,
+      amount: order.amount,
+      currency: order.currency,
+      receipt: order.receipt,
+      status: order.status,
+      created_at: order.created_at,
     })
   } catch (error) {
-    console.error('Error creating order:', error)
-    return NextResponse.json({ success: false, error: 'Failed to create order' }, { status: 500 })
+    console.error('Error creating Razorpay order:', error)
+    return NextResponse.json(
+      {
+        success: false,
+        error: error instanceof Error ? error.message : 'Failed to create order',
+      },
+      { status: 500 }
+    )
   }
 }

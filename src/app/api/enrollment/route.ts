@@ -10,6 +10,7 @@ const EnrollmentSchema = z.object({
   installmentPlan: z.enum(['FULL', 'QUARTERLY', 'MONTHLY']).optional(),
   amount: z.number().positive(),
   paymentId: z.string().optional(),
+  userId: z.string().optional(),
 })
 
 export async function POST(request: NextRequest) {
@@ -17,22 +18,52 @@ export async function POST(request: NextRequest) {
     const body = await request.json()
     const validatedData = EnrollmentSchema.parse(body)
 
-    // Create enrollment record
+    let userId = validatedData.userId
+
+    if (!userId) {
+      const existingUser = await prisma.user.findUnique({
+        where: { email: validatedData.email },
+      })
+
+      if (existingUser) {
+        userId = existingUser.id
+      } else {
+        const newUser = await prisma.user.create({
+          data: {
+            name: validatedData.studentName,
+            email: validatedData.email,
+            phone: validatedData.phone,
+            role: 'STUDENT',
+          },
+        })
+        userId = newUser.id
+        console.log('Created new user:', { id: newUser.id, email: newUser.email })
+      }
+    }
+
     const enrollment = await prisma.enrollment.create({
       data: {
-        userId: null, // Guest enrollment
+        userId,
         courseId: validatedData.courseId,
         status: 'PENDING',
-        totalFees: validatedData.amount * 100, // Convert to paise
+        totalFees: validatedData.amount * 100,
         paidAmount: 0,
         pendingAmount: validatedData.amount * 100,
         paymentPlan: validatedData.installmentPlan || 'FULL',
       },
     })
 
+    console.log('Enrollment created:', {
+      id: enrollment.id,
+      userId,
+      courseId: enrollment.courseId,
+      status: enrollment.status,
+    })
+
     return NextResponse.json({
       success: true,
       enrollmentId: enrollment.id,
+      userId,
       message: 'Enrollment created successfully',
     })
   } catch (error) {
@@ -45,7 +76,13 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    return NextResponse.json({ error: 'Failed to create enrollment' }, { status: 500 })
+    return NextResponse.json(
+      {
+        error: 'Failed to create enrollment',
+        details: error instanceof Error ? error.message : 'Unknown error',
+      },
+      { status: 500 }
+    )
   }
 }
 

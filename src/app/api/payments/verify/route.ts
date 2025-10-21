@@ -49,43 +49,57 @@ export async function POST(request: NextRequest) {
 
     if (verified) {
       try {
-        // Update payment status in database
-        const updatedPayments = await prisma.payment.updateMany({
-          where: { razorpayOrderId: orderId },
-          data: {
-            razorpayPaymentId: paymentId,
-            razorpaySignature: paymentSignature,
-            status: 'COMPLETED',
-            completedAt: new Date(),
-          },
-        })
+        await prisma.$transaction(async (tx) => {
+          const payment = await tx.payment.findFirst({
+            where: { razorpayOrderId: orderId },
+            include: { enrollment: true },
+          })
 
-        console.log(`Payment verified and updated: ${orderId}`, {
-          updatedCount: updatedPayments.count,
-        })
+          if (!payment) {
+            throw new Error('Payment record not found')
+          }
 
-        // Also update enrollment status if linked
-        const payment = await prisma.payment.findFirst({
-          where: { razorpayOrderId: orderId },
-          include: { enrollment: true },
-        })
+          if (payment.status === 'COMPLETED') {
+            console.log(`Payment already completed: ${orderId}`)
+            return
+          }
 
-        if (payment && payment.enrollmentId) {
-          await prisma.enrollment.update({
-            where: { id: payment.enrollmentId },
+          await tx.payment.updateMany({
+            where: { razorpayOrderId: orderId },
             data: {
-              status: 'ACTIVE',
-              paidAmount: payment.amount,
-              pendingAmount: { decrement: payment.amount },
+              razorpayPaymentId: paymentId,
+              razorpaySignature: paymentSignature,
+              status: 'COMPLETED',
+              completedAt: new Date(),
             },
           })
 
-          console.log(`Enrollment activated: ${payment.enrollmentId}`)
-        }
+          if (payment.enrollmentId) {
+            await tx.enrollment.update({
+              where: { id: payment.enrollmentId },
+              data: {
+                status: 'ACTIVE',
+                paidAmount: { increment: payment.amount },
+                pendingAmount: { decrement: payment.amount },
+              },
+            })
+            console.log(`Enrollment activated: ${payment.enrollmentId}`)
+          }
+
+          console.log(`Payment verified and updated: ${orderId}`)
+        })
       } catch (dbError) {
-        console.error('Database update error after payment verification:', dbError)
-        // Still return verified=true since payment is valid
-        // Just log the DB error for later resolution
+        console.error('Transaction error after payment verification:', dbError)
+        return NextResponse.json(
+          {
+            verified: true,
+            orderId,
+            paymentId,
+            warning: 'Payment verified but database update failed',
+            error: dbError instanceof Error ? dbError.message : 'Unknown error',
+          },
+          { status: 200 }
+        )
       }
     } else {
       console.warn('Payment verification failed', {
