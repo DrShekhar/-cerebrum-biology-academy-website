@@ -89,6 +89,7 @@ export function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
+            style={{ opacity: 1 }}
           >
             {/* Logo */}
             <div className="flex items-center space-x-3 mb-6">
@@ -145,6 +146,7 @@ export function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
+            style={{ opacity: 1 }}
           >
             <h4 className="font-semibold text-lg mb-4 text-white">Courses</h4>
             <ul className="space-y-2">
@@ -167,6 +169,7 @@ export function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
+            style={{ opacity: 1 }}
           >
             <h4 className="font-semibold text-lg mb-4 text-white">Board Preparation</h4>
             <ul className="space-y-2">
@@ -189,6 +192,7 @@ export function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
+            style={{ opacity: 1 }}
           >
             <h4 className="font-semibold text-lg mb-4 text-white">Services</h4>
             <ul className="space-y-2">
@@ -211,6 +215,7 @@ export function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
+            style={{ opacity: 1 }}
           >
             <h4 className="font-semibold text-lg mb-4 text-white">Company</h4>
             <ul className="space-y-2 mb-6">
@@ -249,6 +254,7 @@ export function Footer() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
           viewport={{ once: true }}
+          style={{ opacity: 1 }}
         >
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
