@@ -6,6 +6,7 @@ import GoogleAnalytics from '@/components/analytics/GoogleAnalytics'
 import { FixedHeader } from '@/components/layout/FixedHeader'
 import { MobileBottomNav } from '@/components/layout/MobileBottomNav'
 import { Footer } from '@/components/layout/Footer'
+import { PWAProvider } from '@/components/pwa/PWAProvider'
 import './globals.css'
 
 const geistSans = Geist({
@@ -92,9 +93,11 @@ export default function RootLayout({
         <meta name="application-name" content="Cerebrum Biology Academy" />
         <meta name="msapplication-TileColor" content="#2563eb" />
         <meta name="msapplication-TileImage" content="/icons/icon-144x144.png" />
+        <link rel="manifest" href="/manifest.json" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <GoogleAnalytics />
+        <PWAProvider />
         <ErrorBoundary>
           <a
             href="#main-content"

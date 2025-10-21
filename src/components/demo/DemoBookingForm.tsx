@@ -31,12 +31,7 @@ export function DemoBookingForm({ onSuccess, className = '' }: DemoBookingFormPr
     preferredDate: '',
     preferredTime: '',
     courseInterest: 'class-12-biology',
-    studentClass: 'class-12',
-    previousKnowledge: 'beginner',
-    specificTopics: [] as string[],
-    parentName: '',
-    parentPhone: '',
-    hearAboutUs: '',
+    message: '',
   })
   const [availableSlots, setAvailableSlots] = useState<string[]>([])
   const [isLoading, setIsLoading] = useState(false)
@@ -166,7 +161,7 @@ export function DemoBookingForm({ onSuccess, className = '' }: DemoBookingFormPr
   }
 
   const nextStep = () => {
-    if (step < 3) setStep(step + 1)
+    if (step < 2) setStep(step + 1)
   }
 
   const prevStep = () => {
@@ -242,13 +237,13 @@ export function DemoBookingForm({ onSuccess, className = '' }: DemoBookingFormPr
       {/* Progress Bar */}
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-4">
         <div className="flex items-center justify-between text-white mb-2">
-          <span className="font-semibold">Step {step} of 3</span>
-          <span className="text-sm opacity-90">Book Your Free Demo</span>
+          <span className="font-semibold">Step {step} of 2</span>
+          <span className="text-sm opacity-90">Book Your Free Demo - Just 2 Steps!</span>
         </div>
         <div className="w-full bg-white/20 rounded-full h-2">
           <div
             className="bg-white h-2 rounded-full transition-all duration-300"
-            style={{ width: `${(step / 3) * 100}%` }}
+            style={{ width: `${(step / 2) * 100}%` }}
           />
         </div>
       </div>
@@ -269,11 +264,11 @@ export function DemoBookingForm({ onSuccess, className = '' }: DemoBookingFormPr
             className="space-y-6"
           >
             <div className="text-center mb-6">
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">Basic Information</h3>
-              <p className="text-gray-600">Let's get to know you better</p>
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">Your Information</h3>
+              <p className="text-gray-600">Quick and easy - takes just 30 seconds!</p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 gap-4">
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-2">
                   <User className="w-4 h-4 inline mr-2" />
@@ -290,167 +285,77 @@ export function DemoBookingForm({ onSuccess, className = '' }: DemoBookingFormPr
                 />
               </div>
 
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
-                  <Mail className="w-4 h-4 inline mr-2" />
-                  Email Address *
-                </label>
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none text-gray-900 placeholder-gray-500"
-                  placeholder="your.email@example.com"
-                  required
-                />
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                    <Mail className="w-4 h-4 inline mr-2" />
+                    Email Address *
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none text-gray-900 placeholder-gray-500"
+                    placeholder="your.email@example.com"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                    <Phone className="w-4 h-4 inline mr-2" />
+                    WhatsApp Number *
+                  </label>
+                  <input
+                    type="tel"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none text-gray-900 placeholder-gray-500"
+                    placeholder="+91 XXXXX XXXXX"
+                    required
+                  />
+                </div>
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
-                  <Phone className="w-4 h-4 inline mr-2" />
-                  WhatsApp Number *
+                <label className="block text-sm font-semibold text-gray-700 mb-3">
+                  <BookOpen className="w-4 h-4 inline mr-2" />
+                  Course Interest *
                 </label>
-                <input
-                  type="tel"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none text-gray-900 placeholder-gray-500"
-                  placeholder="+91 XXXXX XXXXX"
-                  required
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
-                  <GraduationCap className="w-4 h-4 inline mr-2" />
-                  Current Class *
-                </label>
-                <select
-                  name="studentClass"
-                  value={formData.studentClass}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none text-gray-900"
-                  required
-                >
-                  {classOptions.map((option) => (
-                    <option key={option.value} value={option.value}>
-                      {option.label}
-                    </option>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  {courseOptions.map((course) => (
+                    <label
+                      key={course.value}
+                      className={`relative flex items-center p-4 border-2 rounded-xl cursor-pointer transition-all ${
+                        formData.courseInterest === course.value
+                          ? 'border-blue-500 bg-blue-50'
+                          : 'border-gray-200 hover:border-gray-300'
+                      }`}
+                    >
+                      <input
+                        type="radio"
+                        name="courseInterest"
+                        value={course.value}
+                        checked={formData.courseInterest === course.value}
+                        onChange={handleInputChange}
+                        className="sr-only"
+                      />
+                      <div className="flex items-center">
+                        <span className="text-2xl mr-3">{course.icon}</span>
+                        <span className="font-medium text-gray-700">{course.label}</span>
+                      </div>
+                    </label>
                   ))}
-                </select>
-              </div>
-            </div>
-
-            <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-2">
-                <Brain className="w-4 h-4 inline mr-2" />
-                Biology Knowledge Level
-              </label>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-                {knowledgeOptions.map((option) => (
-                  <label
-                    key={option.value}
-                    className={`relative flex items-center p-4 border-2 rounded-xl cursor-pointer transition-all ${
-                      formData.previousKnowledge === option.value
-                        ? 'border-blue-500 bg-blue-50'
-                        : 'border-gray-200 hover:border-gray-300'
-                    }`}
-                  >
-                    <input
-                      type="radio"
-                      name="previousKnowledge"
-                      value={option.value}
-                      checked={formData.previousKnowledge === option.value}
-                      onChange={handleInputChange}
-                      className="sr-only"
-                    />
-                    <div className="flex items-center">
-                      <span className="text-2xl mr-3">{option.icon}</span>
-                      <span className="font-medium text-gray-700">{option.label}</span>
-                    </div>
-                  </label>
-                ))}
+                </div>
               </div>
             </div>
           </motion.div>
         )}
 
-        {/* Step 2: Course Preferences */}
+        {/* Step 2: Schedule Demo */}
         {step === 2 && (
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            className="space-y-6"
-          >
-            <div className="text-center mb-6">
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">Course Preferences</h3>
-              <p className="text-gray-600">What would you like to learn?</p>
-            </div>
-
-            <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-3">
-                <BookOpen className="w-4 h-4 inline mr-2" />
-                Course Interest *
-              </label>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                {courseOptions.map((course) => (
-                  <label
-                    key={course.value}
-                    className={`relative flex items-center p-4 border-2 rounded-xl cursor-pointer transition-all ${
-                      formData.courseInterest === course.value
-                        ? 'border-blue-500 bg-blue-50'
-                        : 'border-gray-200 hover:border-gray-300'
-                    }`}
-                  >
-                    <input
-                      type="radio"
-                      name="courseInterest"
-                      value={course.value}
-                      checked={formData.courseInterest === course.value}
-                      onChange={handleInputChange}
-                      className="sr-only"
-                    />
-                    <div className="flex items-center">
-                      <span className="text-2xl mr-3">{course.icon}</span>
-                      <span className="font-medium text-gray-700">{course.label}</span>
-                    </div>
-                  </label>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-3">
-                Specific Topics of Interest (Optional)
-              </label>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
-                {topicOptions.map((topic) => (
-                  <label
-                    key={topic}
-                    className={`flex items-center p-3 border rounded-lg cursor-pointer transition-all text-sm ${
-                      formData.specificTopics.includes(topic)
-                        ? 'border-blue-500 bg-blue-50 text-blue-700'
-                        : 'border-gray-200 hover:border-gray-300'
-                    }`}
-                  >
-                    <input
-                      type="checkbox"
-                      checked={formData.specificTopics.includes(topic)}
-                      onChange={() => handleTopicChange(topic)}
-                      className="sr-only"
-                    />
-                    <span>{topic}</span>
-                  </label>
-                ))}
-              </div>
-            </div>
-          </motion.div>
-        )}
-
-        {/* Step 3: Schedule Demo */}
-        {step === 3 && (
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -502,6 +407,20 @@ export function DemoBookingForm({ onSuccess, className = '' }: DemoBookingFormPr
               </div>
             </div>
 
+            <div>
+              <label className="block text-sm font-semibold text-gray-700 mb-2">
+                Any specific questions or topics? (Optional)
+              </label>
+              <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleInputChange}
+                rows={3}
+                className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none text-gray-900 placeholder-gray-500 resize-none"
+                placeholder="e.g., I want to focus on Cell Biology and Human Physiology..."
+              />
+            </div>
+
             <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-xl border border-blue-200">
               <h4 className="font-semibold text-gray-800 mb-3 flex items-center">
                 <Zap className="w-5 h-5 text-blue-600 mr-2" />
@@ -545,14 +464,16 @@ export function DemoBookingForm({ onSuccess, className = '' }: DemoBookingFormPr
             </button>
           )}
 
-          {step < 3 ? (
+          {step < 2 ? (
             <button
               type="button"
               onClick={nextStep}
               className="ml-auto px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all"
               disabled={
-                (step === 1 && (!formData.studentName || !formData.email || !formData.phone)) ||
-                (step === 2 && !formData.courseInterest)
+                !formData.studentName ||
+                !formData.email ||
+                !formData.phone ||
+                !formData.courseInterest
               }
             >
               Next Step
