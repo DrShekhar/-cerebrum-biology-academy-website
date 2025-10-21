@@ -68,7 +68,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <GoogleAnalytics />
         <StructuredData />
         <meta name="google-site-verification" content="your-google-verification-code" />
         <meta
@@ -95,6 +94,7 @@ export default function RootLayout({
         <meta name="msapplication-TileImage" content="/icons/icon-144x144.png" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <GoogleAnalytics />
         <ErrorBoundary>
           <a
             href="#main-content"
