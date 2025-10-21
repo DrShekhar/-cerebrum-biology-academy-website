@@ -20,3 +20,11 @@ process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID = ''
 
 // Mock API keys for testing
 process.env.NEXT_PUBLIC_INSTANT_APP_ID = 'test-instant-db-id'
+
+// Mock Razorpay for payment tests
+process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID = 'rzp_test_key'
+process.env.RAZORPAY_KEY_SECRET = 'test_secret_key'
+
+// Mock WhatsApp API
+process.env.WHATSAPP_API_URL = 'https://graph.facebook.com/v17.0'
+process.env.WHATSAPP_ACCESS_TOKEN = 'test_whatsapp_token'

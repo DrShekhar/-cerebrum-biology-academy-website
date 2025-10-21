@@ -3,7 +3,12 @@
  * Testing mathematical accuracy, edge cases, and performance
  */
 
-import { irtEngine, ItemParameters, StudentResponse, AbilityEstimate } from '../../lib/adaptive-testing/ItemResponseTheory'
+import {
+  irtEngine,
+  ItemParameters,
+  StudentResponse,
+  AbilityEstimate,
+} from '../../lib/adaptive-testing/ItemResponseTheory'
 
 describe('Item Response Theory Engine', () => {
   let sampleItems: ItemParameters[]
@@ -22,7 +27,7 @@ describe('Item Response Theory Engine', () => {
         subtopic: 'Cell Structure',
         bloomsLevel: 'understand',
         estimatedTime: 120,
-        keywords: ['cell', 'organelles']
+        keywords: ['cell', 'organelles'],
       },
       {
         id: 'item2',
@@ -34,7 +39,7 @@ describe('Item Response Theory Engine', () => {
         subtopic: 'DNA Structure',
         bloomsLevel: 'apply',
         estimatedTime: 180,
-        keywords: ['DNA', 'nucleotides']
+        keywords: ['DNA', 'nucleotides'],
       },
       {
         id: 'item3',
@@ -46,8 +51,8 @@ describe('Item Response Theory Engine', () => {
         subtopic: 'Natural Selection',
         bloomsLevel: 'remember',
         estimatedTime: 90,
-        keywords: ['evolution', 'selection']
-      }
+        keywords: ['evolution', 'selection'],
+      },
     ]
 
     // Sample responses
@@ -57,22 +62,22 @@ describe('Item Response Theory Engine', () => {
         response: true,
         responseTime: 95,
         confidence: 4,
-        timestamp: new Date()
+        timestamp: new Date(),
       },
       {
         itemId: 'item2',
         response: false,
         responseTime: 210,
         confidence: 2,
-        timestamp: new Date()
+        timestamp: new Date(),
       },
       {
         itemId: 'item3',
         response: true,
         responseTime: 75,
         confidence: 5,
-        timestamp: new Date()
-      }
+        timestamp: new Date(),
+      },
     ]
   })
 
@@ -83,7 +88,12 @@ describe('Item Response Theory Engine', () => {
       const discrimination = 1.0
       const guessing = 0.2
 
-      const probability = irtEngine.calculateProbability3PL(theta, difficulty, discrimination, guessing)
+      const probability = irtEngine.calculateProbability3PL(
+        theta,
+        difficulty,
+        discrimination,
+        guessing
+      )
 
       // For theta = difficulty = 0, with guessing = 0.2, probability should be around 0.6
       expect(probability).toBeCloseTo(0.6, 2)
@@ -120,7 +130,12 @@ describe('Item Response Theory Engine', () => {
       const discrimination = 2.0
       const guessing = 0.1
 
-      const probability = irtEngine.calculateProbability3PL(extremeTheta, extremeDifficulty, discrimination, guessing)
+      const probability = irtEngine.calculateProbability3PL(
+        extremeTheta,
+        extremeDifficulty,
+        discrimination,
+        guessing
+      )
 
       expect(probability).toBeGreaterThanOrEqual(0.001)
       expect(probability).toBeLessThanOrEqual(0.999)
@@ -135,13 +150,16 @@ describe('Item Response Theory Engine', () => {
       const information = irtEngine.calculateInformation(theta, item)
 
       expect(information).toBeGreaterThan(0)
-      expect(information).toBeFinite()
+      expect(Number.isFinite(information)).toBe(true)
     })
 
     test('should calculate test information as sum of item information', () => {
       const theta = 0.5
       const testInfo = irtEngine.calculateTestInformation(theta, sampleItems)
-      const sumInfo = sampleItems.reduce((sum, item) => sum + irtEngine.calculateInformation(theta, item), 0)
+      const sumInfo = sampleItems.reduce(
+        (sum, item) => sum + irtEngine.calculateInformation(theta, item),
+        0
+      )
 
       expect(testInfo).toBeCloseTo(sumInfo, 5)
     })
@@ -151,7 +169,7 @@ describe('Item Response Theory Engine', () => {
       const se = irtEngine.calculateStandardError(theta, sampleItems)
 
       expect(se).toBeGreaterThan(0)
-      expect(se).toBeFinite()
+      expect(Number.isFinite(se)).toBe(true)
 
       // Standard error should decrease with more information
       const moreItems = [...sampleItems, ...sampleItems] // Double the items
@@ -164,7 +182,7 @@ describe('Item Response Theory Engine', () => {
     test('should estimate ability using MLE', () => {
       const estimate = irtEngine.estimateAbilityMLE(sampleResponses, sampleItems)
 
-      expect(estimate.theta).toBeFinite()
+      expect(Number.isFinite(estimate.theta)).toBe(true)
       expect(estimate.standardError).toBeGreaterThan(0)
       expect(estimate.confidence).toBeGreaterThanOrEqual(0)
       expect(estimate.confidence).toBeLessThanOrEqual(1)
@@ -175,7 +193,7 @@ describe('Item Response Theory Engine', () => {
     test('should estimate ability using EAP', () => {
       const estimate = irtEngine.estimateAbilityEAP(sampleResponses, sampleItems)
 
-      expect(estimate.theta).toBeFinite()
+      expect(Number.isFinite(estimate.theta)).toBe(true)
       expect(estimate.standardError).toBeGreaterThan(0)
       expect(estimate.confidence).toBeGreaterThanOrEqual(0)
       expect(estimate.confidence).toBeLessThanOrEqual(1)
@@ -184,12 +202,12 @@ describe('Item Response Theory Engine', () => {
 
     test('should handle edge cases in ability estimation', () => {
       // All correct responses
-      const allCorrect = sampleResponses.map(r => ({ ...r, response: true }))
+      const allCorrect = sampleResponses.map((r) => ({ ...r, response: true }))
       const estimateHigh = irtEngine.estimateAbilityMLE(allCorrect, sampleItems)
       expect(estimateHigh.theta).toBeGreaterThan(0)
 
       // All incorrect responses
-      const allIncorrect = sampleResponses.map(r => ({ ...r, response: false }))
+      const allIncorrect = sampleResponses.map((r) => ({ ...r, response: false }))
       const estimateLow = irtEngine.estimateAbilityMLE(allIncorrect, sampleItems)
       expect(estimateLow.theta).toBeLessThan(0)
     })
@@ -216,7 +234,7 @@ describe('Item Response Theory Engine', () => {
         informationGained: 5.0,
         estimationMethod: 'MLE',
         convergence: true,
-        iterations: 5
+        iterations: 5,
       }
 
       const selectedItem = irtEngine.selectNextItem(
@@ -238,15 +256,11 @@ describe('Item Response Theory Engine', () => {
         informationGained: 2.0,
         estimationMethod: 'MLE',
         convergence: false,
-        iterations: 3
+        iterations: 3,
       }
 
       const administeredItems = ['item1', 'item2']
-      const selectedItem = irtEngine.selectNextItem(
-        currentAbility,
-        sampleItems,
-        administeredItems
-      )
+      const selectedItem = irtEngine.selectNextItem(currentAbility, sampleItems, administeredItems)
 
       expect(selectedItem).toBeDefined()
       expect(administeredItems).not.toContain(selectedItem?.id)
@@ -260,15 +274,11 @@ describe('Item Response Theory Engine', () => {
         informationGained: 2.0,
         estimationMethod: 'MLE',
         convergence: false,
-        iterations: 3
+        iterations: 3,
       }
 
-      const allAdministered = sampleItems.map(item => item.id)
-      const selectedItem = irtEngine.selectNextItem(
-        currentAbility,
-        sampleItems,
-        allAdministered
-      )
+      const allAdministered = sampleItems.map((item) => item.id)
+      const selectedItem = irtEngine.selectNextItem(currentAbility, sampleItems, allAdministered)
 
       expect(selectedItem).toBeNull()
     })
@@ -284,7 +294,7 @@ describe('Item Response Theory Engine', () => {
           informationGained: 15,
           estimationMethod: 'MLE' as const,
           convergence: true,
-          iterations: 8
+          iterations: 8,
         },
         administeredItems: ['item1'], // Only 1 item
         responses: sampleResponses.slice(0, 1),
@@ -295,14 +305,14 @@ describe('Item Response Theory Engine', () => {
           targetSE: 0.3,
           targetInfo: 10,
           contentBalancing: false,
-          timeLimit: 3600
+          timeLimit: 3600,
         },
         performanceMetrics: {
           accuracy: 1.0,
           averageResponseTime: 120,
           difficultyProgression: [0.0],
-          informationProgression: [5.0]
-        }
+          informationProgression: [5.0],
+        },
       }
 
       const termination = irtEngine.shouldTerminateTest(state)
@@ -319,10 +329,14 @@ describe('Item Response Theory Engine', () => {
           informationGained: 8,
           estimationMethod: 'MLE' as const,
           convergence: true,
-          iterations: 10
+          iterations: 10,
         },
-        administeredItems: Array(10).fill(0).map((_, i) => `item${i}`), // 10 items
-        responses: Array(10).fill(null).map((_, i) => sampleResponses[0]),
+        administeredItems: Array(10)
+          .fill(0)
+          .map((_, i) => `item${i}`), // 10 items
+        responses: Array(10)
+          .fill(null)
+          .map((_, i) => sampleResponses[0]),
         availableItems: sampleItems,
         testConfiguration: {
           minItems: 5,
@@ -330,14 +344,16 @@ describe('Item Response Theory Engine', () => {
           targetSE: 0.3,
           targetInfo: 20,
           contentBalancing: false,
-          timeLimit: 3600
+          timeLimit: 3600,
         },
         performanceMetrics: {
           accuracy: 0.8,
           averageResponseTime: 150,
           difficultyProgression: Array(10).fill(0.5),
-          informationProgression: Array(10).fill(0).map((_, i) => i + 1)
-        }
+          informationProgression: Array(10)
+            .fill(0)
+            .map((_, i) => i + 1),
+        },
       }
 
       const termination = irtEngine.shouldTerminateTest(state)
@@ -354,10 +370,14 @@ describe('Item Response Theory Engine', () => {
           informationGained: 20,
           estimationMethod: 'MLE' as const,
           convergence: true,
-          iterations: 8
+          iterations: 8,
         },
-        administeredItems: Array(8).fill(0).map((_, i) => `item${i}`),
-        responses: Array(8).fill(null).map((_, i) => sampleResponses[0]),
+        administeredItems: Array(8)
+          .fill(0)
+          .map((_, i) => `item${i}`),
+        responses: Array(8)
+          .fill(null)
+          .map((_, i) => sampleResponses[0]),
         availableItems: sampleItems,
         testConfiguration: {
           minItems: 5,
@@ -365,14 +385,16 @@ describe('Item Response Theory Engine', () => {
           targetSE: 0.3,
           targetInfo: 10,
           contentBalancing: false,
-          timeLimit: 3600
+          timeLimit: 3600,
         },
         performanceMetrics: {
           accuracy: 0.9,
           averageResponseTime: 120,
           difficultyProgression: Array(8).fill(1.0),
-          informationProgression: Array(8).fill(0).map((_, i) => (i + 1) * 2.5)
-        }
+          informationProgression: Array(8)
+            .fill(0)
+            .map((_, i) => (i + 1) * 2.5),
+        },
       }
 
       const termination = irtEngine.shouldTerminateTest(state)
@@ -390,7 +412,7 @@ describe('Item Response Theory Engine', () => {
         informationGained: 5,
         estimationMethod: 'MLE',
         convergence: true,
-        iterations: 5
+        iterations: 5,
       }
 
       const currentEstimate: AbilityEstimate = {
@@ -400,7 +422,7 @@ describe('Item Response Theory Engine', () => {
         informationGained: 12,
         estimationMethod: 'MLE',
         convergence: true,
-        iterations: 8
+        iterations: 8,
       }
 
       const change = irtEngine.detectAbilityChange(previousEstimate, currentEstimate)
@@ -418,7 +440,7 @@ describe('Item Response Theory Engine', () => {
         informationGained: 8,
         estimationMethod: 'MLE',
         convergence: true,
-        iterations: 6
+        iterations: 6,
       }
 
       const currentEstimate: AbilityEstimate = {
@@ -428,7 +450,7 @@ describe('Item Response Theory Engine', () => {
         informationGained: 10,
         estimationMethod: 'MLE',
         convergence: true,
-        iterations: 8
+        iterations: 8,
       }
 
       const change = irtEngine.detectAbilityChange(previousEstimate, currentEstimate)
@@ -447,7 +469,7 @@ describe('Item Response Theory Engine', () => {
         informationGained: 15,
         estimationMethod: 'MLE',
         convergence: true,
-        iterations: 10
+        iterations: 10,
       }
 
       const report = irtEngine.generateScoreReport(finalAbility, sampleResponses, sampleItems)
@@ -468,7 +490,7 @@ describe('Item Response Theory Engine', () => {
         { theta: 1.0, expectedLevel: 'Proficient' },
         { theta: 0.0, expectedLevel: 'Developing' },
         { theta: -1.0, expectedLevel: 'Beginning' },
-        { theta: -2.0, expectedLevel: 'Below Basic' }
+        { theta: -2.0, expectedLevel: 'Below Basic' },
       ]
 
       testCases.forEach(({ theta, expectedLevel }) => {
@@ -479,7 +501,7 @@ describe('Item Response Theory Engine', () => {
           informationGained: 10,
           estimationMethod: 'MLE',
           convergence: true,
-          iterations: 8
+          iterations: 8,
         }
 
         const report = irtEngine.generateScoreReport(ability, sampleResponses, sampleItems)
@@ -494,7 +516,12 @@ describe('Item Response Theory Engine', () => {
       const item = sampleItems[0]
 
       // Test that P + (1-P) = 1
-      const probability = irtEngine.calculateProbability3PL(theta, item.difficulty, item.discrimination, item.guessing)
+      const probability = irtEngine.calculateProbability3PL(
+        theta,
+        item.difficulty,
+        item.discrimination,
+        item.guessing
+      )
       expect(probability + (1 - probability)).toBeCloseTo(1.0, 10)
 
       // Test that information is always positive
@@ -537,18 +564,20 @@ describe('Item Response Theory Engine', () => {
 
     test('should handle large item banks efficiently', () => {
       // Create a large item bank
-      const largeItemBank: ItemParameters[] = Array(100).fill(null).map((_, i) => ({
-        id: `item${i}`,
-        difficulty: (Math.random() - 0.5) * 4, // Random difficulty between -2 and 2
-        discrimination: 0.5 + Math.random() * 2, // Random discrimination between 0.5 and 2.5
-        guessing: 0.1 + Math.random() * 0.2, // Random guessing between 0.1 and 0.3
-        upperAsymptote: 1.0,
-        topic: `Topic${i % 10}`,
-        subtopic: `Subtopic${i % 20}`,
-        bloomsLevel: 'understand',
-        estimatedTime: 60 + Math.random() * 120,
-        keywords: [`keyword${i}`]
-      }))
+      const largeItemBank: ItemParameters[] = Array(100)
+        .fill(null)
+        .map((_, i) => ({
+          id: `item${i}`,
+          difficulty: (Math.random() - 0.5) * 4, // Random difficulty between -2 and 2
+          discrimination: 0.5 + Math.random() * 2, // Random discrimination between 0.5 and 2.5
+          guessing: 0.1 + Math.random() * 0.2, // Random guessing between 0.1 and 0.3
+          upperAsymptote: 1.0,
+          topic: `Topic${i % 10}`,
+          subtopic: `Subtopic${i % 20}`,
+          bloomsLevel: 'understand',
+          estimatedTime: 60 + Math.random() * 120,
+          keywords: [`keyword${i}`],
+        }))
 
       const startTime = Date.now()
 
@@ -559,25 +588,27 @@ describe('Item Response Theory Engine', () => {
 
       expect(duration).toBeLessThan(100) // Should complete quickly even for large banks
       expect(testInfo).toBeGreaterThan(0)
-      expect(testInfo).toBeFinite()
+      expect(Number.isFinite(testInfo)).toBe(true)
     })
   })
 })
 
 describe('IRT Integration Tests', () => {
   test('should work end-to-end for a complete adaptive test', () => {
-    const items: ItemParameters[] = Array(20).fill(null).map((_, i) => ({
-      id: `item${i}`,
-      difficulty: (i - 10) * 0.2, // Spread difficulties from -2 to 2
-      discrimination: 1.0,
-      guessing: 0.2,
-      upperAsymptote: 1.0,
-      topic: 'Biology',
-      subtopic: `Topic${i % 5}`,
-      bloomsLevel: 'understand',
-      estimatedTime: 120,
-      keywords: [`keyword${i}`]
-    }))
+    const items: ItemParameters[] = Array(20)
+      .fill(null)
+      .map((_, i) => ({
+        id: `item${i}`,
+        difficulty: (i - 10) * 0.2, // Spread difficulties from -2 to 2
+        discrimination: 1.0,
+        guessing: 0.2,
+        upperAsymptote: 1.0,
+        topic: 'Biology',
+        subtopic: `Topic${i % 5}`,
+        bloomsLevel: 'understand',
+        estimatedTime: 120,
+        keywords: [`keyword${i}`],
+      }))
 
     let currentAbility: AbilityEstimate = {
       theta: 0.0,
@@ -586,7 +617,7 @@ describe('IRT Integration Tests', () => {
       informationGained: 0,
       estimationMethod: 'EAP',
       convergence: false,
-      iterations: 0
+      iterations: 0,
     }
 
     const responses: StudentResponse[] = []
@@ -601,7 +632,12 @@ describe('IRT Integration Tests', () => {
       if (!nextItem) break
 
       // Simulate response (student with ability 0.5)
-      const probability = irtEngine.calculateProbability3PL(0.5, nextItem.difficulty, nextItem.discrimination, nextItem.guessing)
+      const probability = irtEngine.calculateProbability3PL(
+        0.5,
+        nextItem.difficulty,
+        nextItem.discrimination,
+        nextItem.guessing
+      )
       const isCorrect = Math.random() < probability
 
       const response: StudentResponse = {
@@ -609,7 +645,7 @@ describe('IRT Integration Tests', () => {
         response: isCorrect,
         responseTime: 60 + Math.random() * 120,
         confidence: Math.floor(Math.random() * 5) + 1,
-        timestamp: new Date()
+        timestamp: new Date(),
       }
 
       responses.push(response)

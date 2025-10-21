@@ -1,4 +1,22 @@
 import '@testing-library/jest-dom'
+import { TextEncoder, TextDecoder } from 'util'
+import { ReadableStream } from 'stream/web'
+
+// Polyfill for Next.js Web APIs in tests
+global.TextEncoder = TextEncoder
+global.TextDecoder = TextDecoder
+global.ReadableStream = ReadableStream
+
+// Mock Request and Response for Next.js API routes
+if (typeof Request === 'undefined') {
+  global.Request = class Request {}
+}
+if (typeof Response === 'undefined') {
+  global.Response = class Response {}
+}
+if (typeof Headers === 'undefined') {
+  global.Headers = class Headers {}
+}
 
 // Mock Next.js router
 jest.mock('next/navigation', () => ({

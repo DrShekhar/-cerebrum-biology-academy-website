@@ -11,6 +11,9 @@ const customJestConfig = {
   displayName: 'Cerebrum Biology Academy Tests',
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   testEnvironment: 'jsdom',
+  testEnvironmentOptions: {
+    customExportConditions: [''],
+  },
 
   // Test patterns
   testMatch: [
