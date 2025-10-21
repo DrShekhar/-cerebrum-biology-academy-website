@@ -120,9 +120,34 @@ export class RazorpayService {
   }
 
   private async saveEnrollmentData(data: any) {
-    // This would integrate with your database
-    // For MVP, we can use a simple file-based storage or local database
-    console.log('Saving enrollment data:', data)
+    try {
+      const response = await fetch('/api/enrollment', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          studentName: data.studentName,
+          email: data.email,
+          phone: data.phone,
+          courseId: data.courseId,
+          amount: data.amount / 100, // Convert from paise to rupees
+          installmentPlan: data.installmentPlan?.toUpperCase() || 'FULL',
+          paymentId: data.orderId,
+        }),
+      })
+
+      if (!response.ok) {
+        throw new Error('Failed to save enrollment')
+      }
+
+      const result = await response.json()
+      console.log('Enrollment saved successfully:', result)
+      return result
+    } catch (error) {
+      console.error('Failed to save enrollment:', error)
+      throw error
+    }
   }
 }
 

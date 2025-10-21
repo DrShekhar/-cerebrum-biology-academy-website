@@ -104,7 +104,6 @@
     "@radix-ui/react-tabs": "^1.1.13",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/forms": "^0.5.10",
-    "@tailwindcss/postcss": "^4.1.14",
     "@tailwindcss/typography": "^0.5.17",
     "@types/bcryptjs": "^2.4.6",
     "@types/crypto-js": "^4.2.2",
@@ -135,7 +134,6 @@
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "tailwind-merge": "^3.3.1",
-    "tailwindcss": "^4.1.14",
     "tailwindcss-animate": "^1.0.7",
     "ws": "^8.18.3",
     "zod": "3.23.8"
@@ -150,6 +148,7 @@
     "@types/node": "^20.19.13",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "autoprefixer": "^10.4.21",
     "eslint": "^9",
     "eslint-config-next": "15.5.3",
     "husky": "^9.1.7",
@@ -158,6 +157,7 @@
     "lint-staged": "^16.1.6",
     "playwright": "^1.47.0",
     "prettier": "^3.6.2",
+    "tailwindcss": "^3.4.18",
     "tsx": "^4.20.6",
     "typescript": "^5"
   },
