@@ -2,16 +2,27 @@ import { Metadata } from 'next'
 import { FixedCourseSelector } from '@/components/courses/FixedCourseSelector'
 
 export const metadata: Metadata = {
-  title: 'NEET Biology Courses | Class 11th, 12th & Dropper Batches',
+  title: 'NEET Biology Courses 2025 | Class 11, 12 & Dropper Batches | Cerebrum Academy',
   description:
-    'Explore our comprehensive NEET biology courses for Class 11th, 12th, and dropper students. Expert AIIMS faculty, proven curriculum, and guaranteed results.',
+    'Choose from 5+ NEET Biology courses: Class 11 Foundation, Class 12 Target, Dropper Batch, 2-Year Integrated. AIIMS faculty, 94.2% success rate. Enroll for 2025 batch now!',
   keywords:
-    'NEET biology courses, Class 11th biology, Class 12th biology, dropper batch, NEET preparation, medical entrance coaching',
+    'NEET biology courses, Class 11 biology, Class 12 biology, dropper batch, 2 year program, NEET preparation, medical entrance coaching, biology courses',
   openGraph: {
-    title: 'NEET Biology Courses | Expert Faculty & Proven Results',
+    title: 'Best NEET Biology Courses | All Batches Available for 2025',
     description:
-      'Join our NEET biology courses designed by AIIMS experts. Choose from Class 11th, 12th, or dropper batches with comprehensive curriculum.',
-    images: ['/courses/neet-biology-courses-og.jpg'],
+      'Class 11, Class 12, Dropper, Integrated programs. AIIMS expert faculty, 94.2% success rate, 2,847+ selections. Find your perfect course!',
+    images: ['/og-images/courses-overview.jpg'],
+    url: 'https://cerebrumbiologyacademy.com/courses',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NEET Biology Courses 2025 | Cerebrum Academy',
+    description: 'Class 11, 12, Dropper batches - AIIMS faculty, 94.2% success rate',
+    images: ['/og-images/courses-overview.jpg'],
+  },
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/courses',
   },
 }
 
