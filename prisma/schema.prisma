@@ -123,6 +123,10 @@ model Enrollment {
   payments      Payment[]
 
   @@unique([userId, courseId])
+  @@index([userId, status])
+  @@index([courseId, status])
+  @@index([status, createdAt])
+  @@index([enrollmentDate])
   @@map("enrollments")
 }
 
@@ -170,6 +174,11 @@ model DemoBooking {
   course          Course?             @relation(fields: [courseId], references: [id])
   communicationLog CommunicationLog[]
 
+  @@index([email])
+  @@index([phone])
+  @@index([status, createdAt])
+  @@index([assignedTo, status])
+  @@index([preferredDate, status])
   @@map("demo_bookings")
 }
 
@@ -207,6 +216,10 @@ model Payment {
   user            User          @relation(fields: [userId], references: [id])
   enrollment      Enrollment?   @relation(fields: [enrollmentId], references: [id])
 
+  @@index([userId, status])
+  @@index([enrollmentId, status])
+  @@index([createdAt])
+  @@index([status, completedAt])
   @@map("payments")
 }
 
