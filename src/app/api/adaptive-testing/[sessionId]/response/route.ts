@@ -5,13 +5,13 @@
 
 import { NextRequest, NextResponse } from 'next/server'
 import { adaptiveTestingEngine } from '@/lib/adaptive-testing/AdaptiveTestingEngine'
-import { getServerSession } from 'next-auth'
+import { auth } from '@/lib/auth/config'
 import { authOptions } from '@/lib/auth/config'
 
 export async function POST(request: NextRequest, { params }: { params: { sessionId: string } }) {
   try {
     // Get user session
-    const session = await getServerSession(authOptions)
+    const session = await auth()
     if (!session?.user?.id) {
       return NextResponse.json({ error: 'Authentication required' }, { status: 401 })
     }

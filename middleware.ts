@@ -1,12 +1,17 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { validateUserSession, addSecurityHeaders } from '@/lib/auth/config'
+import { validateUserSession, addSecurityHeaders, UserSession } from '@/lib/auth/config'
 import { addCSPHeaders } from '@/lib/auth/csrf'
+
+// Type guard to check if session has role property
+function hasRole(session: UserSession): session is UserSession & { role: string } {
+  return session.valid && typeof session.role === 'string'
+}
 
 export default async function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl
 
   // Validate user session for protected routes
-  const session = await validateUserSession(req).catch(() => ({ valid: false }))
+  const session = await validateUserSession(req).catch(() => ({ valid: false } as UserSession))
 
   // Public auth routes
   if (pathname.startsWith('/auth/')) {
@@ -20,7 +25,7 @@ export default async function middleware(req: NextRequest) {
   // Public admin routes (login page)
   if (pathname === '/admin/login') {
     // If already authenticated admin, redirect to dashboard
-    if (session.valid && session.role === 'ADMIN') {
+    if (hasRole(session) && session.role === 'ADMIN') {
       return NextResponse.redirect(new URL('/admin', req.url))
     }
     return addSecurityHeaders(NextResponse.next())
@@ -41,7 +46,7 @@ export default async function middleware(req: NextRequest) {
 
   // Protected teacher routes
   if (pathname.startsWith('/teacher/')) {
-    if (!session.valid || (session.role !== 'TEACHER' && session.role !== 'ADMIN')) {
+    if (!hasRole(session) || (session.role !== 'TEACHER' && session.role !== 'ADMIN')) {
       return NextResponse.redirect(new URL('/auth/signin', req.url))
     }
   }
@@ -49,7 +54,7 @@ export default async function middleware(req: NextRequest) {
   // Protected admin routes
   if (pathname.startsWith('/admin') && pathname !== '/admin/login') {
     // Check if user is authenticated and has admin role
-    if (!session.valid || session.role !== 'ADMIN') {
+    if (!hasRole(session) || session.role !== 'ADMIN') {
       const loginUrl = new URL('/admin/login', req.url)
       loginUrl.searchParams.set('callbackUrl', pathname)
       return NextResponse.redirect(loginUrl)
@@ -89,7 +94,7 @@ export default async function middleware(req: NextRequest) {
 
   // Admin API protection
   if (pathname.startsWith('/api/admin/')) {
-    if (!session.valid || session.role !== 'ADMIN') {
+    if (!hasRole(session) || session.role !== 'ADMIN') {
       return addSecurityHeaders(
         NextResponse.json(
           {

@@ -137,7 +137,7 @@ html {
   /* Better button accessibility */
   button,
   .button,
-  [role="button"] {
+  [role='button'] {
     position: relative;
     cursor: pointer;
     user-select: none;
@@ -195,7 +195,7 @@ html {
   }
 
   .error-message::before {
-    content: "⚠️";
+    content: '⚠️';
     margin-right: 4px;
   }
 
@@ -209,7 +209,7 @@ html {
   }
 
   .success-message::before {
-    content: "✅";
+    content: '✅';
     margin-right: 4px;
   }
 
@@ -220,7 +220,7 @@ html {
   }
 
   .loading::after {
-    content: "";
+    content: '';
     position: absolute;
     top: 50%;
     left: 50%;
@@ -329,7 +329,7 @@ html {
   }
 
   .progress-bar::after {
-    content: attr(data-progress) "%";
+    content: attr(data-progress) '%';
     position: absolute;
     top: -24px;
     right: 0;
@@ -431,8 +431,8 @@ html {
   }
 
   /* External link indicator */
-  a[target="_blank"]::after {
-    content: " ↗";
+  a[target='_blank']::after {
+    content: ' ↗';
     font-size: 0.8em;
     opacity: 0.7;
   }
@@ -444,7 +444,7 @@ html {
     border-radius: 8px;
   }
 
-  img[alt=""],
+  img[alt=''],
   img:not([alt]) {
     opacity: 0.5;
   }
@@ -493,7 +493,7 @@ html {
   }
 }
 
-/* Dark mode accessibility improvements */
+/* Dark mode accessibility improvements - DISABLED for Phase 1 (light mode only)
 @media (prefers-color-scheme: dark) {
   :root {
     --text-color: #f3f4f6;
@@ -510,6 +510,7 @@ html {
     --border-color: #ffffff;
   }
 }
+*/
 
 /* Animation preferences */
 @media (prefers-reduced-motion: reduce) {
@@ -524,32 +525,32 @@ html {
 }
 
 /* Language-specific improvements */
-html[lang="hi"] {
-  font-family: "Noto Sans Devanagari", system-ui, sans-serif;
+html[lang='hi'] {
+  font-family: 'Noto Sans Devanagari', system-ui, sans-serif;
 }
 
-html[lang="bn"] {
-  font-family: "Noto Sans Bengali", system-ui, sans-serif;
+html[lang='bn'] {
+  font-family: 'Noto Sans Bengali', system-ui, sans-serif;
 }
 
-html[lang="ta"] {
-  font-family: "Noto Sans Tamil", system-ui, sans-serif;
+html[lang='ta'] {
+  font-family: 'Noto Sans Tamil', system-ui, sans-serif;
 }
 
-html[lang="te"] {
-  font-family: "Noto Sans Telugu", system-ui, sans-serif;
+html[lang='te'] {
+  font-family: 'Noto Sans Telugu', system-ui, sans-serif;
 }
 
-html[lang="gu"] {
-  font-family: "Noto Sans Gujarati", system-ui, sans-serif;
+html[lang='gu'] {
+  font-family: 'Noto Sans Gujarati', system-ui, sans-serif;
 }
 
-html[lang="mr"] {
-  font-family: "Noto Sans Devanagari", system-ui, sans-serif;
+html[lang='mr'] {
+  font-family: 'Noto Sans Devanagari', system-ui, sans-serif;
 }
 
-html[lang="kn"] {
-  font-family: "Noto Sans Kannada", system-ui, sans-serif;
+html[lang='kn'] {
+  font-family: 'Noto Sans Kannada', system-ui, sans-serif;
 }
 
 /* Voice navigation helpers */
@@ -558,7 +559,7 @@ html[lang="kn"] {
 }
 
 .voice-command::before {
-  content: "🎙️";
+  content: '🎙️';
   position: absolute;
   top: -8px;
   right: -8px;
@@ -568,7 +569,7 @@ html[lang="kn"] {
 
 /* Gesture indication */
 .swipeable::after {
-  content: "👆 Swipe";
+  content: '👆 Swipe';
   position: absolute;
   bottom: -20px;
   left: 50%;

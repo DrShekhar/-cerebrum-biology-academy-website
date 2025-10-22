@@ -291,7 +291,7 @@
   contain: layout style paint;
 }
 
-/* Dark mode touch targets */
+/* Dark mode touch targets - DISABLED for Phase 1 (light mode only)
 @media (prefers-color-scheme: dark) {
   .touch-target {
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -305,6 +305,7 @@
     background: rgba(255, 255, 255, 0.2);
   }
 }
+*/
 
 /* Safe area handling */
 .safe-area-padding {

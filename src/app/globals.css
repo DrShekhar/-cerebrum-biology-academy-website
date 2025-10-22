@@ -1,9 +1,11 @@
+/* Import custom styles first */
+@import '../styles/mobile-optimizations.css';
+@import '../styles/mobile-accessibility.css';
+
+/* Tailwind last to allow utility overrides */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import '../styles/mobile-optimizations.css';
-@import '../styles/mobile-accessibility.css';
 
 :root {
   --background: #ffffff;
