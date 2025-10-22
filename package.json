@@ -13,6 +13,7 @@
     "lint:fix": "eslint --fix",
     "format": "prettier --write .",
     "type-check": "tsc --noEmit",
+    "type-check:strict": "tsc --project tsconfig.strict.json --noEmit",
     "test": "jest --config jest.config.cjs",
     "test:watch": "jest --watch --config jest.config.cjs",
     "test:coverage": "jest --coverage --config jest.config.cjs",
