@@ -71,7 +71,7 @@ export function ScoreComparison({
   }
 
   const subjects = [
-    { name: 'Biology', key: 'biology' as keyof ScoreData, color: 'green', maxScore: 360 },
+    { name: 'Biology', key: 'biology' as keyof ScoreData, color: 'green', maxScore: 180 },
     { name: 'Chemistry', key: 'chemistry' as keyof ScoreData, color: 'blue', maxScore: 180 },
     { name: 'Physics', key: 'physics' as keyof ScoreData, color: 'purple', maxScore: 180 },
   ]
@@ -138,7 +138,7 @@ export function ScoreComparison({
         {/* Total Score Comparison */}
         <div className="bg-gray-50 rounded-3xl p-8 mb-8">
           <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">Total NEET Score</h3>
-          
+
           <div className="grid md:grid-cols-3 gap-8 items-center">
             {/* Before Score */}
             <div className="text-center">
@@ -218,13 +218,15 @@ export function ScoreComparison({
 
         {/* Subject-wise Breakdown */}
         <div className="space-y-6">
-          <h3 className="text-xl font-bold text-gray-900 text-center mb-6">Subject-wise Performance</h3>
-          
+          <h3 className="text-xl font-bold text-gray-900 text-center mb-6">
+            Subject-wise Performance
+          </h3>
+
           {subjects.map((subject, index) => {
             const colors = getColorClasses(subject.color)
             const beforePercent = (beforeScore[subject.key] / subject.maxScore) * 100
             const afterPercent = (afterScore[subject.key] / subject.maxScore) * 100
-            
+
             return (
               <motion.div
                 key={subject.key}
@@ -289,7 +291,8 @@ export function ScoreComparison({
                 <div className="mt-4 flex items-center justify-between">
                   <div className={`${colors.light} px-3 py-1 rounded-full`}>
                     <span className={`text-sm font-semibold ${colors.accent}`}>
-                      {improvements[subject.key] >= 0 ? '+' : ''}{improvements[subject.key]} marks
+                      {improvements[subject.key] >= 0 ? '+' : ''}
+                      {improvements[subject.key]} marks
                     </span>
                   </div>
                   <div className="flex items-center">
@@ -298,9 +301,11 @@ export function ScoreComparison({
                     ) : (
                       <TrendingDown className="w-4 h-4 text-red-500 mr-1" />
                     )}
-                    <span className={`text-sm font-medium ${
-                      improvements[subject.key] >= 0 ? 'text-green-600' : 'text-red-600'
-                    }`}>
+                    <span
+                      className={`text-sm font-medium ${
+                        improvements[subject.key] >= 0 ? 'text-green-600' : 'text-red-600'
+                      }`}
+                    >
                       {improvementPercentage[subject.key]}%
                     </span>
                   </div>
@@ -329,9 +334,7 @@ export function ScoreComparison({
             <div className="bg-green-50 rounded-2xl p-6 text-center">
               <Target className="w-8 h-8 text-green-600 mx-auto mb-3" />
               <h4 className="font-bold text-green-900 mb-2">Overall Improvement</h4>
-              <div className="text-2xl font-bold text-green-600">
-                +{improvements.total} marks
-              </div>
+              <div className="text-2xl font-bold text-green-600">+{improvements.total} marks</div>
               <div className="text-sm text-green-700 mt-1">
                 {improvementPercentage.total}% better performance
               </div>

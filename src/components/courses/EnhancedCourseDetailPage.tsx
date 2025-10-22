@@ -28,8 +28,8 @@ export function EnhancedCourseDetailPage({ course }: EnhancedCourseDetailPagePro
 
   return (
     <div className="min-h-screen">
-      {/* Breadcrumb Navigation - Premium black theme */}
-      <div className="bg-gray-900 border-b border-yellow-400/20 py-4">
+      {/* Breadcrumb Navigation */}
+      <div className="bg-white border-b border-gray-200 py-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumb items={breadcrumbItems} />
         </div>

@@ -87,7 +87,7 @@ export const localTestimonials: LocalTestimonial[] = [
     school: 'DPS Noida',
     class: '12th',
     neetScore: {
-      biology: 345,
+      biology: 172,
       total: 635,
       rank: 892,
     },

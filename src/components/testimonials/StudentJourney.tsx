@@ -83,25 +83,30 @@ export function StudentJourney({ student }: StudentJourneyProps) {
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl text-white p-8 mb-8">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div>
-            <h1 className="text-4xl font-bold mb-4">
-              {student.name}&apos;s NEET Success Journey
-            </h1>
+            <h1 className="text-4xl font-bold mb-4">{student.name}&apos;s NEET Success Journey</h1>
             <div className="space-y-2 text-blue-100">
-              <p className="text-lg">{student.school} → {student.college}</p>
+              <p className="text-lg">
+                {student.school} → {student.college}
+              </p>
               <p>NEET Rank: #{student.neetRank.toLocaleString()}</p>
-              <p>Journey Duration: {student.startDate} to {student.endDate}</p>
+              <p>
+                Journey Duration: {student.startDate} to {student.endDate}
+              </p>
             </div>
-            
+
             <div className="flex items-center mt-6 space-x-4">
               {student.testimonialVideo && (
-                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
+                <Button
+                  variant="outline"
+                  className="border-white text-white hover:bg-white hover:text-blue-600"
+                >
                   <Play className="w-4 h-4 mr-2" />
                   Watch Story
                 </Button>
               )}
-              <Button 
+              <Button
                 onClick={() => setShowScoreChart(!showScoreChart)}
-                variant="outline" 
+                variant="outline"
                 className="border-white text-white hover:bg-white hover:text-blue-600"
               >
                 <BarChart3 className="w-4 h-4 mr-2" />
@@ -112,19 +117,17 @@ export function StudentJourney({ student }: StudentJourneyProps) {
 
           <div className="relative">
             <div className="aspect-square rounded-full overflow-hidden border-4 border-white/20 bg-white/10 backdrop-blur-sm">
-              <img
-                src={student.image}
-                alt={student.name}
-                className="w-full h-full object-cover"
-              />
+              <img src={student.image} alt={student.name} className="w-full h-full object-cover" />
             </div>
-            
+
             {/* Achievement Badges */}
             <div className="absolute -top-2 -right-2 bg-yellow-400 text-yellow-900 rounded-full w-16 h-16 flex items-center justify-center font-bold text-sm">
               AIIMS
             </div>
             <div className="absolute -bottom-2 -left-2 bg-green-400 text-green-900 rounded-full w-20 h-20 flex items-center justify-center font-bold text-xs text-center">
-              +{student.improvement.total}<br/>Marks
+              +{student.improvement.total}
+              <br />
+              Marks
             </div>
           </div>
         </div>
@@ -139,27 +142,25 @@ export function StudentJourney({ student }: StudentJourneyProps) {
           exit={{ opacity: 0, height: 0 }}
         >
           <h3 className="text-2xl font-bold text-gray-900 mb-6">Score Improvement Timeline</h3>
-          
+
           <div className="relative">
             {/* Chart Background */}
             <div className="bg-gray-50 rounded-2xl p-6">
               <div className="flex items-end justify-between h-64">
                 {scoreData.map((data, index) => (
                   <div key={index} className="flex flex-col items-center flex-1">
-                    <div 
+                    <div
                       className="bg-gradient-to-t from-blue-600 to-blue-400 rounded-t-lg w-12 transition-all duration-1000 ease-out"
-                      style={{ 
+                      style={{
                         height: `${(data.score / 720) * 100}%`,
-                        animationDelay: `${index * 200}ms`
+                        animationDelay: `${index * 200}ms`,
                       }}
                     >
                       <div className="text-white text-xs font-semibold p-1 text-center">
                         {data.score}
                       </div>
                     </div>
-                    <div className="text-sm text-gray-600 mt-2 text-center">
-                      {data.month}
-                    </div>
+                    <div className="text-sm text-gray-600 mt-2 text-center">{data.month}</div>
                   </div>
                 ))}
               </div>
@@ -169,16 +170,24 @@ export function StudentJourney({ student }: StudentJourneyProps) {
             <div className="grid md:grid-cols-3 gap-6 mt-6">
               <div className="bg-green-50 rounded-2xl p-4">
                 <h4 className="font-semibold text-green-900 mb-2">Biology</h4>
-                <div className="text-3xl font-bold text-green-600">{student.finalScore.biology}/360</div>
-                <div className="text-green-700 text-sm">+{student.improvement.biology} improvement</div>
+                <div className="text-3xl font-bold text-green-600">
+                  {student.finalScore.biology}/180
+                </div>
+                <div className="text-green-700 text-sm">
+                  +{student.improvement.biology} improvement
+                </div>
               </div>
               <div className="bg-blue-50 rounded-2xl p-4">
                 <h4 className="font-semibold text-blue-900 mb-2">Chemistry</h4>
-                <div className="text-3xl font-bold text-blue-600">{student.finalScore.chemistry}/180</div>
+                <div className="text-3xl font-bold text-blue-600">
+                  {student.finalScore.chemistry}/180
+                </div>
               </div>
               <div className="bg-purple-50 rounded-2xl p-4">
                 <h4 className="font-semibold text-purple-900 mb-2">Physics</h4>
-                <div className="text-3xl font-bold text-purple-600">{student.finalScore.physics}/180</div>
+                <div className="text-3xl font-bold text-purple-600">
+                  {student.finalScore.physics}/180
+                </div>
               </div>
             </div>
           </div>
@@ -207,9 +216,13 @@ export function StudentJourney({ student }: StudentJourneyProps) {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 {/* Timeline Dot */}
-                <div className={`absolute left-6 w-4 h-4 rounded-full border-4 ${
-                  activePhase === index ? 'bg-blue-600 border-blue-600' : 'bg-white border-gray-300'
-                }`}></div>
+                <div
+                  className={`absolute left-6 w-4 h-4 rounded-full border-4 ${
+                    activePhase === index
+                      ? 'bg-blue-600 border-blue-600'
+                      : 'bg-white border-gray-300'
+                  }`}
+                ></div>
 
                 {/* Phase Content */}
                 <div className="ml-16 bg-gray-50 rounded-2xl p-6 hover:bg-gray-100 transition-colors">
@@ -224,9 +237,11 @@ export function StudentJourney({ student }: StudentJourneyProps) {
                           {phase.scoreProgress} marks
                         </div>
                       )}
-                      <ArrowRight className={`w-5 h-5 text-gray-400 transition-transform ${
-                        activePhase === index ? 'rotate-90' : ''
-                      }`} />
+                      <ArrowRight
+                        className={`w-5 h-5 text-gray-400 transition-transform ${
+                          activePhase === index ? 'rotate-90' : ''
+                        }`}
+                      />
                     </div>
                   </div>
 
@@ -296,14 +311,16 @@ export function StudentJourney({ student }: StudentJourneyProps) {
       {/* Study Materials Used */}
       <div className="bg-white rounded-3xl shadow-lg p-8 mb-8">
         <h3 className="text-2xl font-bold text-gray-900 mb-6">Study Materials & Resources</h3>
-        
+
         <div className="grid md:grid-cols-3 gap-6">
           {student.studyMaterials.map((material, index) => (
             <div key={index} className="bg-gray-50 rounded-2xl p-6">
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center">
                   {material.type === 'notes' && <BookOpen className="w-5 h-5 text-blue-600 mr-2" />}
-                  {material.type === 'practice' && <Target className="w-5 h-5 text-green-600 mr-2" />}
+                  {material.type === 'practice' && (
+                    <Target className="w-5 h-5 text-green-600 mr-2" />
+                  )}
                   {material.type === 'video' && <Play className="w-5 h-5 text-purple-600 mr-2" />}
                   <span className="font-medium text-gray-900">{material.title}</span>
                 </div>
@@ -342,7 +359,9 @@ export function StudentJourney({ student }: StudentJourneyProps) {
 
       {/* Student's Advice */}
       <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl text-white p-8">
-        <h3 className="text-2xl font-bold mb-6">{student.name}&apos;s Advice for Future NEET Aspirants</h3>
+        <h3 className="text-2xl font-bold mb-6">
+          {student.name}&apos;s Advice for Future NEET Aspirants
+        </h3>
         <div className="grid md:grid-cols-2 gap-6">
           {student.advice.map((advice, index) => (
             <div key={index} className="flex items-start">

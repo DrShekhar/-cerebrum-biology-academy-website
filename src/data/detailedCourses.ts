@@ -142,7 +142,7 @@ export const detailedCourses: Course[] = [
     highlights: [
       '2000+ NEET questions covered',
       'AIIMS alumni faculty',
-      '94.2% NEET qualification rate',
+      '98% student satisfaction rate',
       'Small batch sizes (max 50 students)',
       'Regular parent-teacher meetings',
       'Comprehensive study material included',

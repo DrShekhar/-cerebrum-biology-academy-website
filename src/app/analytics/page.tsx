@@ -5,10 +5,10 @@ import { PerformanceDashboard } from '@/components/analytics/PerformanceDashboar
 import { UserTestHistory, TestAnalytics } from '@/types/mockTest'
 import { mockTests } from '@/data/mockTests'
 import { Button } from '@/components/ui/Button'
-import { 
-  BarChart3, 
-  TrendingUp, 
-  Users, 
+import {
+  BarChart3,
+  TrendingUp,
+  Users,
   Award,
   Calendar,
   Clock,
@@ -17,7 +17,7 @@ import {
   BookOpen,
   Brain,
   Zap,
-  Activity
+  Activity,
 } from 'lucide-react'
 import { motion } from 'framer-motion'
 
@@ -38,7 +38,7 @@ export default function AnalyticsPage() {
         score: 85,
         percentage: 85,
         date: '2024-01-22T10:00:00Z',
-        rank: 1250
+        rank: 1250,
       },
       {
         testId: 'test-2',
@@ -46,7 +46,7 @@ export default function AnalyticsPage() {
         score: 78,
         percentage: 78,
         date: '2024-01-20T14:30:00Z',
-        rank: 2340
+        rank: 2340,
       },
       {
         testId: 'test-3',
@@ -54,7 +54,7 @@ export default function AnalyticsPage() {
         score: 65,
         percentage: 65,
         date: '2024-01-18T11:15:00Z',
-        rank: 4567
+        rank: 4567,
       },
       {
         testId: 'test-4',
@@ -62,7 +62,7 @@ export default function AnalyticsPage() {
         score: 72,
         percentage: 72,
         date: '2024-01-15T16:45:00Z',
-        rank: 3890
+        rank: 3890,
       },
       {
         testId: 'test-5',
@@ -70,30 +70,30 @@ export default function AnalyticsPage() {
         score: 68,
         percentage: 68,
         date: '2024-01-12T09:30:00Z',
-        rank: 4123
-      }
+        rank: 4123,
+      },
     ],
     subjectStrengths: [
       {
         subject: 'Cell Biology',
         averageScore: 82,
-        testsAttempted: 12
+        testsAttempted: 12,
       },
       {
         subject: 'Plant Physiology',
         averageScore: 76,
-        testsAttempted: 10
+        testsAttempted: 10,
       },
       {
         subject: 'Human Physiology',
         averageScore: 68,
-        testsAttempted: 15
+        testsAttempted: 15,
       },
       {
         subject: 'Genetics',
         averageScore: 59,
-        testsAttempted: 8
-      }
+        testsAttempted: 8,
+      },
     ],
     progressTrend: [
       { date: '2023-12-01', averageScore: 45 },
@@ -108,23 +108,23 @@ export default function AnalyticsPage() {
         title: 'First 80% Score',
         description: 'Achieved your first score above 80% in Cell Biology test',
         earnedDate: '2024-01-10T00:00:00Z',
-        icon: 'trophy'
+        icon: 'trophy',
       },
       {
         id: 'consistency-king',
         title: 'Consistency King',
         description: 'Maintained scores above 70% for 5 consecutive tests',
         earnedDate: '2024-01-18T00:00:00Z',
-        icon: 'target'
+        icon: 'target',
       },
       {
         id: 'improvement-champion',
         title: 'Improvement Champion',
         description: 'Improved average score by 25% over last month',
         earnedDate: '2024-01-20T00:00:00Z',
-        icon: 'trending-up'
-      }
-    ]
+        icon: 'trending-up',
+      },
+    ],
   }
 
   // Mock test analytics data
@@ -141,34 +141,34 @@ export default function AnalyticsPage() {
           correctRate: 78.5,
           averageTime: 65,
           skipRate: 12.3,
-          mostSelectedWrongAnswer: 'c'
-        }
+          mostSelectedWrongAnswer: 'c',
+        },
       ],
       topicDifficulty: [
         {
           topic: 'Cell Biology',
           averageScore: 72.3,
-          difficultyRating: 3.2
-        }
+          difficultyRating: 3.2,
+        },
       ],
       performanceByTime: [
         {
           timeSlot: 'morning',
           averageScore: 71.2,
-          attempts: 456
+          attempts: 456,
         },
         {
           timeSlot: 'afternoon',
           averageScore: 68.8,
-          attempts: 523
+          attempts: 523,
         },
         {
           timeSlot: 'evening',
           averageScore: 63.4,
-          attempts: 268
-        }
-      ]
-    }
+          attempts: 268,
+        },
+      ],
+    },
   ]
 
   // Check if user is logged in (mock check)
@@ -183,7 +183,8 @@ export default function AnalyticsPage() {
           </div>
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Analytics Dashboard</h2>
           <p className="text-gray-600 mb-6">
-            Sign up or log in to access your personalized performance analytics and track your NEET preparation progress.
+            Sign up or log in to access your personalized performance analytics and track your NEET
+            preparation progress.
           </p>
           <div className="space-y-3">
             <Button variant="primary" size="lg" className="w-full">
@@ -211,21 +212,29 @@ export default function AnalyticsPage() {
           >
             <h1 className="text-4xl font-bold mb-4">Your Performance Analytics</h1>
             <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
-              Deep insights into your NEET preparation journey with AI-powered recommendations 
-              to accelerate your progress and maximize your potential.
+              Deep insights into your NEET preparation journey with AI-powered recommendations to
+              accelerate your progress and maximize your potential.
             </p>
-            
+
             {/* Class Selector */}
             <div className="flex items-center justify-center space-x-4 mb-8">
               <span className="text-purple-100">Viewing data for:</span>
               <select
                 value={userClass}
-                onChange={(e) => setUserClass(e.target.value as 'class-11' | 'class-12' | 'dropper')}
+                onChange={(e) =>
+                  setUserClass(e.target.value as 'class-11' | 'class-12' | 'dropper')
+                }
                 className="bg-white/20 text-white border border-white/30 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-white/50"
               >
-                <option value="class-11" className="text-gray-900">Class 11</option>
-                <option value="class-12" className="text-gray-900">Class 12</option>
-                <option value="dropper" className="text-gray-900">Dropper</option>
+                <option value="class-11" className="text-gray-900">
+                  Class 11
+                </option>
+                <option value="class-12" className="text-gray-900">
+                  Class 12
+                </option>
+                <option value="dropper" className="text-gray-900">
+                  Dropper
+                </option>
               </select>
             </div>
 
@@ -267,20 +276,26 @@ export default function AnalyticsPage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-green-600 to-blue-600 text-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold mb-6">
-            Ready to Improve Your Performance?
-          </h2>
+          <h2 className="text-4xl font-bold mb-6">Ready to Improve Your Performance?</h2>
           <p className="text-xl text-green-100 mb-8">
-            Use these insights to create a personalized study plan and take targeted practice tests 
+            Use these insights to create a personalized study plan and take targeted practice tests
             to strengthen your weak areas and maintain your strong subjects.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="outline" size="xl" className="border-white text-white hover:bg-white hover:text-green-600">
+            <Button
+              variant="outline"
+              size="xl"
+              className="border-white text-white hover:bg-white hover:text-green-600"
+            >
               <BookOpen className="w-5 h-5 mr-2" />
               Get Study Plan
             </Button>
-            <Button variant="primary" size="xl" className="bg-white text-green-600 hover:bg-gray-100">
+            <Button
+              variant="primary"
+              size="xl"
+              className="bg-white text-green-600 hover:bg-gray-100"
+            >
               <Target className="w-5 h-5 mr-2" />
               Take Targeted Test
             </Button>
@@ -308,5 +323,3 @@ export default function AnalyticsPage() {
     </div>
   )
 }
-
-// Metadata moved to layout.tsx for client components

@@ -3,361 +3,391 @@
 import { Button } from '@/components/ui/Button'
 import { facultyMembers, facultyStats, facultyHighlights } from '@/data/faculty'
 import {
-  Users,
   Award,
+  Users,
   BookOpen,
   Star,
-  GraduationCap,
-  Microscope,
-  Heart,
-  Target,
-  CheckCircle,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  Calendar,
-  Trophy,
-  Medal,
-  Shield,
   Clock,
-  ThumbsUp,
+  GraduationCap,
+  MessageSquare,
+  Calendar,
+  ArrowRight,
+  Play,
+  CheckCircle,
+  Target,
   TrendingUp,
-  PlayCircle,
+  Lightbulb,
 } from 'lucide-react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import {
-  PremiumSection,
-  HeroSection,
-  FeatureSection,
-  ContentSection,
-  SectionHeader,
-  AcademicGrid,
-  AcademicCard,
-} from '@/components/ui/PremiumSection'
-import {
-  AcademicHeadline,
-  AcademicParagraph,
-  AcademicQuote,
-  AcademicList,
-  AcademicEmphasis,
-  ResearchCitation,
-} from '@/components/ui/AcademicTypography'
+import Image from 'next/image'
 
 export default function FacultyPage() {
-  const trustBadges = [
-    { icon: Medal, text: 'NEET Board Certified', color: 'text-yellow-600 bg-yellow-50' },
-    { icon: Shield, text: 'Medical Council Approved', color: 'text-blue-600 bg-blue-50' },
-    { icon: Trophy, text: 'Excellence in Teaching Award', color: 'text-purple-600 bg-purple-50' },
-    { icon: Target, text: '98% Success Rate Guarantee', color: 'text-green-600 bg-green-50' },
+  const specializations = [
+    {
+      title: 'Human Biology & Anatomy',
+      description: 'MBBS & MD faculty specializing in human body systems',
+      faculty: 15,
+      icon: Users,
+      color: 'bg-blue-500',
+    },
+    {
+      title: 'Plant Biology & Botany',
+      description: 'PhD botanists covering plant sciences comprehensively',
+      faculty: 12,
+      icon: BookOpen,
+      color: 'bg-green-500',
+    },
+    {
+      title: 'Genetics & Molecular Biology',
+      description: 'Research experts in advanced genetic concepts',
+      faculty: 8,
+      icon: Lightbulb,
+      color: 'bg-purple-500',
+    },
+    {
+      title: 'Environmental Biology',
+      description: 'Ecology and environmental science specialists',
+      faculty: 6,
+      icon: Target,
+      color: 'bg-orange-500',
+    },
   ]
 
-  const facultyAchievements = [
-    { number: '2847+', label: 'Students Mentored', sublabel: 'To Medical College Success' },
-    { number: '247', label: 'AIIMS Selections', sublabel: 'Across all campuses' },
-    { number: '94.2%', label: 'Success Rate', sublabel: 'NEET Qualification Rate' },
-    { number: '335+', label: 'Avg Biology Score', sublabel: 'Among our toppers' },
+  const teachingApproach = [
+    {
+      title: 'Conceptual Learning',
+      description: 'Deep understanding over rote memorization',
+      icon: Lightbulb,
+    },
+    {
+      title: 'Visual Teaching',
+      description: 'Diagrams, models, and interactive demonstrations',
+      icon: Play,
+    },
+    {
+      title: 'Regular Assessment',
+      description: 'Continuous evaluation and feedback',
+      icon: Target,
+    },
+    {
+      title: 'Individual Attention',
+      description: 'Personal mentoring for every student',
+      icon: Users,
+    },
   ]
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Hero Section - Harvard-Level Faculty Excellence */}
-      <HeroSection className="text-white text-center">
-        <AcademicHeadline level={1} variant="hero" align="center" className="mb-8">
-          Meet Our{' '}
-          <AcademicEmphasis variant="achievement" color="blue">
-            Harvard-Caliber
-          </AcademicEmphasis>{' '}
-          Faculty
-        </AcademicHeadline>
+      {/* Hero Section */}
+      <section className="bg-gradient-to-r from-green-600 to-blue-600 text-white py-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center">
+            <motion.h1
+              className="text-5xl font-bold mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              World-Class Faculty
+            </motion.h1>
+            <motion.p
+              className="text-xl text-green-100 max-w-3xl mx-auto mb-8"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              Learn from the best minds in biology education. Our faculty comprises PhD holders,
+              MBBS graduates from AIIMS, and industry experts with decades of NEET coaching
+              experience.
+            </motion.p>
 
-        <AcademicParagraph size="large" className="text-blue-100 max-w-5xl mx-auto mb-12">
-          Learn from{' '}
-          <strong>AIIMS alumni, PhD holders, and distinguished medical professionals</strong> who
-          have dedicated their careers to advancing medical education. Our faculty combines
-          cutting-edge research expertise with proven pedagogical excellence, creating an
-          unparalleled learning environment for NEET success.
-          <ResearchCitation
-            source="Medical Education Excellence Standards"
-            year="2024"
-            className="ml-2 text-blue-200"
-          />
-        </AcademicParagraph>
-
-        {/* Academic Credentials & Trust Badges */}
-        <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 mb-12 max-w-6xl mx-auto">
-          <AcademicHeadline level={4} variant="hero" className="mb-6">
-            Academic Excellence Credentials
-          </AcademicHeadline>
-
-          <AcademicGrid columns={4} gap="medium">
-            {trustBadges.map((badge, index) => (
-              <div key={index} className="flex flex-col items-center text-center">
-                <div
-                  className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-3 ${badge.color} shadow-lg`}
+            <motion.div
+              className="flex flex-col sm:flex-row gap-4 justify-center"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
+              <Button
+                variant="outline"
+                size="lg"
+                className="border-white text-white hover:bg-white hover:text-green-600"
+              >
+                <Calendar className="w-5 h-5 mr-2" />
+                Book Faculty Interaction
+              </Button>
+              <Link href="/contact">
+                <Button
+                  variant="primary"
+                  size="lg"
+                  className="bg-white text-green-600 hover:bg-gray-100"
                 >
-                  <badge.icon className="w-8 h-8" />
-                </div>
-                <span className="text-sm font-semibold text-white">{badge.text}</span>
-              </div>
-            ))}
-          </AcademicGrid>
-        </div>
-
-        {/* Enhanced CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-6 justify-center">
-          <Button
-            variant="secondary_cta"
-            size="xl"
-            className="bg-white text-blue-600 hover:bg-gray-100"
-          >
-            <PlayCircle className="w-6 h-6 mr-3" />
-            Watch Faculty Research Presentations
-          </Button>
-          <Button variant="premium_cta" size="xl" className="border-2 border-white">
-            <Phone className="w-6 h-6 mr-3" />
-            Schedule Faculty Consultation
-          </Button>
-        </div>
-
-        {/* Faculty Excellence Stats */}
-        <div className="mt-16 grid md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-          <div className="text-center">
-            <AcademicEmphasis variant="stat" className="text-white text-4xl block mb-2">
-              100%
-            </AcademicEmphasis>
-            <div className="text-blue-100 font-medium">PhD/MBBS Qualified</div>
-          </div>
-          <div className="text-center">
-            <AcademicEmphasis variant="stat" className="text-white text-4xl block mb-2">
-              15+
-            </AcademicEmphasis>
-            <div className="text-blue-100 font-medium">Avg Years Experience</div>
-          </div>
-          <div className="text-center">
-            <AcademicEmphasis variant="stat" className="text-white text-4xl block mb-2">
-              247
-            </AcademicEmphasis>
-            <div className="text-blue-100 font-medium">Research Publications</div>
-          </div>
-          <div className="text-center">
-            <AcademicEmphasis variant="stat" className="text-white text-4xl block mb-2">
-              98.5%
-            </AcademicEmphasis>
-            <div className="text-blue-100 font-medium">Student Satisfaction</div>
+                  Join Our Academy
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+              </Link>
+            </motion.div>
           </div>
         </div>
-      </HeroSection>
+      </section>
 
-      {/* Faculty Achievement Stats */}
+      {/* Faculty Stats */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Faculty's Impact</h2>
-            <p className="text-xl text-gray-600">Numbers that speak louder than words</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Faculty Excellence Statistics</h2>
+            <p className="text-xl text-gray-600">Numbers that showcase our teaching expertise</p>
           </div>
 
-          <div className="grid md:grid-cols-4 gap-8">
-            {facultyAchievements.map((achievement, index) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {facultyStats.map((stat, index) => (
               <motion.div
                 key={index}
-                className="text-center bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl p-8"
+                className="bg-gray-50 rounded-3xl p-8 text-center hover:shadow-lg transition-shadow"
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <div className="text-4xl font-bold text-blue-600 mb-2">{achievement.number}</div>
-                <div className="text-lg font-semibold text-gray-900 mb-1">{achievement.label}</div>
-                <div className="text-sm text-gray-600">{achievement.sublabel}</div>
+                <div className="text-4xl font-bold text-blue-600 mb-2">{stat.number}</div>
+                <div className="text-lg font-semibold text-gray-900 mb-2">{stat.label}</div>
+                <div className="text-gray-600">{stat.description}</div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Faculty Profiles */}
+      {/* Faculty Specializations */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Expert Teaching Team</h2>
-            <p className="text-xl text-gray-600">
-              Each faculty member brings decades of experience and proven results
-            </p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Subject Specializations</h2>
+            <p className="text-xl text-gray-600">Expert faculty for every biology domain</p>
           </div>
 
-          <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
+            {specializations.map((spec, index) => (
+              <motion.div
+                key={index}
+                className="bg-white rounded-3xl shadow-lg p-8 hover:shadow-xl transition-shadow"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <div className="flex items-center mb-6">
+                  <div
+                    className={`w-16 h-16 ${spec.color} rounded-2xl flex items-center justify-center`}
+                  >
+                    <spec.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="text-xl font-bold text-gray-900">{spec.title}</h3>
+                    <p className="text-blue-600 font-medium">{spec.faculty} Faculty Members</p>
+                  </div>
+                </div>
+                <p className="text-gray-600 mb-6">{spec.description}</p>
+                <Button variant="outline" size="sm">
+                  View Faculty <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Faculty */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Meet Our Faculty</h2>
+            <p className="text-xl text-gray-600">Distinguished educators shaping future doctors</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {facultyMembers.map((faculty, index) => (
               <motion.div
                 key={faculty.id}
-                className="bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow group"
+                className="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                {/* Faculty Image */}
-                <div className="relative h-64 bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center">
-                  <div className="w-32 h-32 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
-                    <GraduationCap className="w-16 h-16 text-white" />
-                  </div>
-
-                  {/* Success Rate Badge */}
-                  <div className="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                    {faculty.successRate}% Success Rate
+                <div className="relative h-48 bg-gradient-to-br from-blue-500 to-purple-600">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center">
+                      <GraduationCap className="w-10 h-10 text-white" />
+                    </div>
                   </div>
                 </div>
 
-                <div className="p-8">
-                  {/* Faculty Info */}
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{faculty.name}</h3>
-                  <p className="text-blue-600 font-semibold mb-1">{faculty.designation}</p>
-                  <div className="flex items-center text-gray-600 text-sm mb-4">
-                    <Clock className="w-4 h-4 mr-1" />
-                    {faculty.experience} Experience
-                  </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{faculty.name}</h3>
+                  <p className="text-blue-600 font-medium mb-3">{faculty.qualification}</p>
+                  <p className="text-gray-600 mb-4">{faculty.experience} Experience</p>
 
-                  {/* Qualifications */}
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-gray-800 mb-2 flex items-center">
-                      <Award className="w-4 h-4 mr-2 text-yellow-600" />
-                      Qualifications
-                    </h4>
-                    <p className="text-sm text-gray-700">{faculty.qualification}</p>
-                  </div>
-
-                  {/* Specializations */}
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-800 mb-2 flex items-center">
-                      <Microscope className="w-4 h-4 mr-2 text-blue-600" />
-                      Expertise
-                    </h4>
-                    <div className="flex flex-wrap gap-2">
-                      {faculty.specialization.map((spec, idx) => (
-                        <span
-                          key={idx}
-                          className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full"
-                        >
-                          {spec}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Student Testimonial */}
-                  <div className="mb-6 p-4 bg-gray-50 rounded-2xl">
-                    <div className="flex items-center mb-2">
-                      <ThumbsUp className="w-4 h-4 text-green-600 mr-2" />
-                      <span className="text-sm font-semibold text-gray-800">Student Says:</span>
-                    </div>
-                    <p className="text-sm text-gray-700 italic">"{faculty.studentTestimonial}"</p>
-                  </div>
-
-                  {/* Teaching Style */}
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-800 mb-2 flex items-center">
-                      <Heart className="w-4 h-4 mr-2 text-red-500" />
-                      Teaching Style
-                    </h4>
-                    <p className="text-sm text-gray-700">{faculty.teachingStyle}</p>
-                  </div>
-
-                  {/* Rating */}
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center">
-                      <div className="flex text-yellow-400 mr-2">
-                        {[...Array(5)].map((_, i) => (
-                          <Star key={i} className="w-4 h-4 fill-current" />
-                        ))}
+                  <div className="space-y-2 mb-6">
+                    {faculty.specialization.slice(0, 2).map((spec, idx) => (
+                      <div key={idx} className="flex items-center">
+                        <Star className="w-4 h-4 text-yellow-400 mr-2" />
+                        <span className="text-sm text-gray-700">{spec}</span>
                       </div>
-                      <span className="text-gray-600 text-sm">4.9/5 Rating</span>
-                    </div>
+                    ))}
+                  </div>
 
-                    <Button variant="ghost" size="sm" className="text-blue-600 hover:text-blue-800">
-                      <ArrowRight className="w-4 h-4" />
+                  <div className="flex gap-3">
+                    <Button variant="outline" size="sm" className="flex-1">
+                      <MessageSquare className="w-4 h-4 mr-2" />
+                      Profile
+                    </Button>
+                    <Button variant="primary" size="sm" className="flex-1">
+                      <Calendar className="w-4 h-4 mr-2" />
+                      Meet
                     </Button>
                   </div>
                 </div>
               </motion.div>
             ))}
           </div>
+
+          <div className="text-center mt-12">
+            <Button variant="primary" size="lg">
+              View All Faculty Members
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Button>
+          </div>
         </div>
       </section>
 
-      {/* Why Choose Our Faculty */}
+      {/* Teaching Approach */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Teaching Approach</h2>
+              <p className="text-xl text-gray-600 mb-8">
+                Our faculty employs research-backed teaching methodologies that ensure deep
+                conceptual understanding and excellent NEET performance.
+              </p>
+
+              <div className="space-y-6">
+                {teachingApproach.map((approach, index) => (
+                  <motion.div
+                    key={index}
+                    className="flex items-start"
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                  >
+                    <div className="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center mr-4">
+                      <approach.icon className="w-6 h-6 text-blue-600" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold text-gray-900 mb-2">{approach.title}</h3>
+                      <p className="text-gray-600">{approach.description}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+
+            <motion.div
+              className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl p-8"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Faculty Highlights</h3>
+              <div className="space-y-4">
+                {facultyHighlights.map((highlight, index) => (
+                  <div key={index} className="flex items-center">
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                    <span className="text-gray-700">{highlight}</span>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-8 pt-8 border-t border-gray-200">
+                <div className="grid grid-cols-2 gap-6 text-center">
+                  <div>
+                    <div className="text-2xl font-bold text-blue-600">98%</div>
+                    <div className="text-sm text-gray-600">Student Satisfaction</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-green-600">15+</div>
+                    <div className="text-sm text-gray-600">Avg. Experience</div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Faculty Recruitment */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Why Parents & Students Trust Our Faculty
-            </h2>
-            <p className="text-xl text-gray-600">The difference quality teaching makes</p>
-          </div>
+          <div className="text-center">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Join Our Faculty Team</h2>
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              Are you a passionate educator with expertise in biology? Join our team of
+              distinguished faculty and shape the future of medical education.
+            </p>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {facultyHighlights.map((highlight, index) => (
-              <motion.div
-                key={index}
-                className="flex items-start space-x-4 p-6 bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl"
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="flex-shrink-0 w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-                  <CheckCircle className="w-5 h-5 text-green-600" />
-                </div>
-                <p className="text-gray-800 font-medium text-lg">{highlight}</p>
-              </motion.div>
-            ))}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button variant="outline" size="lg">
+                <GraduationCap className="w-5 h-5 mr-2" />
+                Faculty Requirements
+              </Button>
+              <Button variant="primary" size="lg">
+                <MessageSquare className="w-5 h-5 mr-2" />
+                Apply Now
+              </Button>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="py-20 bg-gradient-to-r from-green-600 to-blue-600 text-white">
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold mb-6">
-            Ready to Learn from the Best in NEET Coaching?
-          </h2>
-          <p className="text-xl text-green-100 mb-8">
-            Join thousands of successful students who achieved their medical dreams under our expert
-            faculty guidance. Your NEET success story starts here.
+          <h2 className="text-4xl font-bold mb-6">Learn from the Best Biology Faculty</h2>
+          <p className="text-xl text-purple-100 mb-8">
+            Experience world-class biology education with our expert faculty. Book a demo class and
+            see the difference quality teaching makes.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button
-              variant="secondary_cta"
-              size="xl"
-              className="bg-white text-green-600 hover:bg-gray-100"
-            >
-              <Calendar className="w-5 h-5 mr-2" />
-              Book Free Demo Class
-            </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               variant="outline"
               size="xl"
-              className="border-white text-white hover:bg-white hover:text-green-600"
+              className="border-white text-white hover:bg-white hover:text-purple-600"
             >
-              <Phone className="w-5 h-5 mr-2" />
-              Talk to Faculty
+              <Play className="w-5 h-5 mr-2" />
+              Watch Demo Class
             </Button>
+            <Link href="/contact">
+              <Button
+                variant="primary"
+                size="xl"
+                className="bg-white text-purple-600 hover:bg-gray-100"
+              >
+                Book Free Consultation
+              </Button>
+            </Link>
           </div>
 
-          {/* Final Trust Indicators */}
-          <div className="grid md:grid-cols-3 gap-8 text-center">
+          <div className="mt-12 grid md:grid-cols-3 gap-8 text-center">
             <div>
-              <div className="text-3xl font-bold mb-2">Free</div>
-              <div className="text-green-100">Demo Classes</div>
+              <div className="text-3xl font-bold mb-2">50+</div>
+              <div className="text-purple-100">Expert Faculty</div>
             </div>
             <div>
-              <div className="text-3xl font-bold mb-2">1:1</div>
-              <div className="text-green-100">Mentoring</div>
+              <div className="text-3xl font-bold mb-2">20+</div>
+              <div className="text-purple-100">AIIMS Alumni</div>
             </div>
             <div>
-              <div className="text-3xl font-bold mb-2">24/7</div>
-              <div className="text-green-100">Doubt Support</div>
+              <div className="text-3xl font-bold mb-2">15+</div>
+              <div className="text-purple-100">Years Experience</div>
             </div>
           </div>
         </div>

@@ -1,10 +1,8 @@
 'use client'
 
 import { Button } from '@/components/ui/Button'
-import { courseCategories } from '@/data/courses'
+import { courses, courseCategories } from '@/data/courses'
 import { detailedCourses } from '@/data/detailedCourses'
-import { coursePrograms } from '@/data/courseSystemData'
-import { getCoursePricing, formatPrice } from '@/lib/utils/pricing'
 import {
   Clock,
   IndianRupee,
@@ -15,13 +13,9 @@ import {
   BookOpen,
   Award,
   Target,
-  Filter,
-  Search,
-  SlidersHorizontal,
-  Star,
 } from 'lucide-react'
 import { motion } from 'framer-motion'
-import { useState, useMemo } from 'react'
+import { useState } from 'react'
 
 const iconMap = {
   Users,
@@ -31,11 +25,6 @@ const iconMap = {
 
 export function CoursesSection() {
   const [selectedCategory, setSelectedCategory] = useState('classroom')
-  const [searchTerm, setSearchTerm] = useState('')
-  const [priceRange, setPriceRange] = useState('all')
-  const [duration, setDuration] = useState('all')
-  const [difficulty, setDifficulty] = useState('all')
-  const [showFilters, setShowFilters] = useState(false)
 
   const handleEnrollClick = (courseId: string) => {
     console.log(`Enroll clicked for course: ${courseId}`)
@@ -50,65 +39,6 @@ export function CoursesSection() {
       console.log(`Course details not found for: ${courseId}`)
     }
   }
-
-  // Advanced filtering logic
-  const filteredCourses = useMemo(() => {
-    let filtered = coursePrograms.filter((course) => {
-      // Map course categories - for now, show all programs in all categories
-      return true
-    })
-
-    // Search filter
-    if (searchTerm) {
-      filtered = filtered.filter(
-        (course) =>
-          course.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          course.description.toLowerCase().includes(searchTerm.toLowerCase())
-      )
-    }
-
-    // Price filter
-    if (priceRange !== 'all') {
-      filtered = filtered.filter((course) => {
-        try {
-          const pricing = getCoursePricing(course.id)
-          const coursePrice = pricing.minPrice
-          switch (priceRange) {
-            case 'under50k':
-              return coursePrice < 50000
-            case '50k-80k':
-              return coursePrice >= 50000 && coursePrice <= 80000
-            case 'above80k':
-              return coursePrice > 80000
-            default:
-              return true
-          }
-        } catch (error) {
-          console.warn(`Pricing not found for course: ${course.id}`)
-          return true
-        }
-      })
-    }
-
-    // Duration filter
-    if (duration !== 'all') {
-      filtered = filtered.filter((course) => {
-        const courseDuration = course.duration.toLowerCase()
-        switch (duration) {
-          case 'short':
-            return courseDuration.includes('month') && !courseDuration.includes('year')
-          case 'medium':
-            return courseDuration.includes('6 month') || courseDuration.includes('8 month')
-          case 'long':
-            return courseDuration.includes('year') || courseDuration.includes('12 month')
-          default:
-            return true
-        }
-      })
-    }
-
-    return filtered
-  }, [selectedCategory, searchTerm, priceRange, duration])
 
   return (
     <section className="py-20 bg-gray-50">
@@ -166,208 +96,74 @@ export function CoursesSection() {
           })}
         </motion.div>
 
-        {/* Search and Filters */}
-        <motion.div
-          className="bg-white rounded-2xl p-6 shadow-lg mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          viewport={{ once: true }}
-        >
-          <div className="flex flex-col lg:flex-row gap-4 items-center">
-            {/* Search Bar */}
-            <div className="flex-1 relative">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-              <input
-                type="text"
-                placeholder="Search courses by name or description..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-100 outline-none transition-all min-h-[48px] touch-manipulation"
-              />
-            </div>
-
-            {/* Filter Toggle */}
-            <button
-              onClick={() => setShowFilters(!showFilters)}
-              className={`flex items-center space-x-2 px-4 py-3 rounded-xl border transition-all min-h-[48px] touch-manipulation ${
-                showFilters
-                  ? 'bg-primary-50 border-primary-200 text-primary-700'
-                  : 'bg-white border-gray-200 text-gray-600 hover:border-primary-200 hover:bg-primary-50'
-              }`}
-            >
-              <SlidersHorizontal className="w-5 h-5" />
-              <span className="font-medium">Filters</span>
-            </button>
-          </div>
-
-          {/* Advanced Filters */}
-          {showFilters && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6 pt-6 border-t border-gray-200"
-            >
-              {/* Price Range Filter */}
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
-                  Price Range
-                </label>
-                <select
-                  value={priceRange}
-                  onChange={(e) => setPriceRange(e.target.value)}
-                  className="w-full px-3 py-2 rounded-lg border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-100 outline-none min-h-[44px] touch-manipulation"
-                >
-                  <option value="all">All Prices</option>
-                  <option value="under50k">Under ₹50,000</option>
-                  <option value="50k-80k">₹50,000 - ₹80,000</option>
-                  <option value="above80k">Above ₹80,000</option>
-                </select>
-              </div>
-
-              {/* Duration Filter */}
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">Duration</label>
-                <select
-                  value={duration}
-                  onChange={(e) => setDuration(e.target.value)}
-                  className="w-full px-3 py-2 rounded-lg border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-100 outline-none min-h-[44px] touch-manipulation"
-                >
-                  <option value="all">All Durations</option>
-                  <option value="short">Short Term (1-3 months)</option>
-                  <option value="medium">Medium Term (6-8 months)</option>
-                  <option value="long">Long Term (1+ year)</option>
-                </select>
-              </div>
-
-              {/* Results Count */}
-              <div className="flex items-end">
-                <div className="bg-primary-50 text-primary-700 px-4 py-2 rounded-lg border border-primary-200">
-                  <span className="text-sm font-medium">
-                    {filteredCourses.length} course{filteredCourses.length !== 1 ? 's' : ''} found
-                  </span>
-                </div>
-              </div>
-            </motion.div>
-          )}
-        </motion.div>
-
         {/* Courses Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16">
-          {filteredCourses.map((course, index) => (
+          {courses.map((course, index) => (
             <motion.div
               key={course.id}
-              className="bg-white border-2 border-navy-200 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden group"
+              className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
               {/* Course Header */}
-              <div className="p-8 border-b border-navy-100">
+              <div className="p-8 border-b border-gray-100">
                 <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center space-x-2">
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-navy-50 border border-navy-200 text-navy-700">
-                      {course.targetClass === 'Dropper'
-                        ? 'Dropper Batch'
-                        : `Class ${course.targetClass}`}
-                    </span>
-                    {course.isPopular && (
-                      <div className="flex items-center bg-teal-100 text-teal-800 px-2 py-1 rounded-full text-xs font-semibold border border-teal-200">
-                        <Star className="w-3 h-3 mr-1 fill-current" />
-                        Popular
-                      </div>
-                    )}
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="flex items-center bg-gold-100 text-gold-800 border border-gold-300 px-3 py-1 rounded-full text-xs font-semibold">
-                      <Award className="w-3 h-3 mr-1" />
-                      Certified Program
-                    </div>
-                  </div>
+                  <span
+                    className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium ${
+                      course.targetClass === '11th'
+                        ? 'bg-green-100 text-green-600'
+                        : course.targetClass === '12th'
+                          ? 'bg-blue-100 text-blue-600'
+                          : 'bg-purple-100 text-purple-600'
+                    }`}
+                  >
+                    {course.targetClass === 'Dropper'
+                      ? 'Dropper Batch'
+                      : `Class ${course.targetClass}`}
+                  </span>
+                  <Award className="w-6 h-6 text-yellow-500" />
                 </div>
 
-                <h3 className="text-2xl font-bold text-navy-900 mb-3 group-hover:text-teal-600 transition-colors">
-                  {course.name}
+                <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  {course.title}
                 </h3>
 
-                <p className="text-navy-600 mb-6">
-                  {course.description.replace(/our/gi, 'our').replace(/we provide/gi, 'we provide')}
-                </p>
+                <p className="text-gray-600 mb-6">{course.description}</p>
 
                 {/* Course Meta */}
-                <div className="flex items-center space-x-6 text-sm text-navy-600 mb-6">
+                <div className="flex items-center space-x-6 text-sm text-gray-500 mb-6">
                   <div className="flex items-center">
-                    <Clock className="w-4 h-4 mr-2 text-teal-600" />
+                    <Clock className="w-4 h-4 mr-2" />
                     {course.duration}
                   </div>
                   <div className="flex items-center">
-                    <Target className="w-4 h-4 mr-2 text-teal-600" />
+                    <Target className="w-4 h-4 mr-2" />
                     NEET Focused
-                  </div>
-                  <div className="flex items-center">
-                    <Users className="w-4 h-4 mr-2 text-teal-600" />
-                    {course.teachingHours}h/week
                   </div>
                 </div>
 
                 {/* Pricing */}
-                <div className="bg-teal-50 border border-teal-200 text-navy-900 p-4 rounded-lg mb-6">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-2">
-                      <IndianRupee className="w-6 h-6 text-teal-700" />
-                      <div>
-                        {(() => {
-                          try {
-                            const pricing = getCoursePricing(course.id)
-                            return (
-                              <>
-                                <span className="text-3xl font-bold text-navy-900">
-                                  {pricing.priceRange}
-                                </span>
-                                <div className="text-sm font-medium text-navy-600">
-                                  Choose from {pricing.tiers.length} tiers
-                                </div>
-                              </>
-                            )
-                          } catch (error) {
-                            return (
-                              <>
-                                <span className="text-3xl font-bold text-navy-900">₹48K+</span>
-                                <div className="text-sm font-medium text-navy-600">
-                                  Multiple options
-                                </div>
-                              </>
-                            )
-                          }
-                        })()}
-                      </div>
-                    </div>
-                    <div className="text-right">
-                      <div className="text-xs font-semibold bg-teal-600 text-white px-3 py-1 rounded-full">
-                        EMI Available
-                      </div>
-                    </div>
-                  </div>
+                <div className="flex items-center space-x-2 mb-6">
+                  <IndianRupee className="w-6 h-6 text-green-600" />
+                  <span className="text-3xl font-bold text-gray-900">
+                    {course.price.toLocaleString('en-IN')}
+                  </span>
+                  <span className="text-gray-500">/ year</span>
                 </div>
               </div>
 
               {/* Features List */}
               <div className="p-8">
-                <h4 className="font-semibold text-navy-900 mb-4">Key Highlights:</h4>
+                <h4 className="font-semibold text-gray-900 mb-4">What&apos;s Included:</h4>
                 <ul className="space-y-3 mb-8">
-                  {(course.highlights || []).slice(0, 4).map((highlight, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-navy-700">
-                      <CheckCircle className="w-5 h-5 text-teal-600 mr-3 flex-shrink-0" />
-                      {highlight}
+                  {course.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-gray-600">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
+                      {feature}
                     </li>
                   ))}
-                  {(course.highlights || []).length > 4 && (
-                    <li className="text-sm text-teal-600 font-medium">
-                      +{(course.highlights || []).length - 4} more features
-                    </li>
-                  )}
                 </ul>
 
                 {/* Action Buttons */}
@@ -375,7 +171,7 @@ export function CoursesSection() {
                   <Button
                     variant="primary"
                     size="lg"
-                    className="flex-1 bg-teal-600 hover:bg-teal-700 text-white font-semibold"
+                    className="flex-1"
                     onClick={() => handleEnrollClick(course.id)}
                   >
                     Enroll Now
@@ -383,7 +179,7 @@ export function CoursesSection() {
                   <Button
                     variant="outline"
                     size="lg"
-                    className="flex-1 border-2 border-navy-300 text-navy-700 hover:bg-navy-50 hover:border-navy-400"
+                    className="flex-1"
                     onClick={() => handleViewDetails(course.id)}
                   >
                     View Details
@@ -396,28 +192,28 @@ export function CoursesSection() {
 
         {/* Bottom CTA */}
         <motion.div
-          className="text-center bg-navy-900 border-4 border-teal-500 rounded-2xl p-12 text-white"
+          className="text-center bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 rounded-3xl p-12 text-white"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
           <h3 className="text-3xl font-bold mb-4">Not Sure Which Course is Right for You?</h3>
-          <p className="text-xl mb-8 text-gray-200">
+          <p className="text-xl mb-8 opacity-90">
             Get personalized guidance from our expert counselors to choose the perfect program
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               variant="secondary_cta"
               size="xl"
-              className="bg-teal-600 hover:bg-teal-700 text-white font-semibold"
+              className="bg-white text-blue-600 hover:bg-gray-100"
             >
               Free Counseling Session
             </Button>
             <Button
               variant="outline"
               size="xl"
-              className="border-2 border-white text-white hover:bg-white hover:text-navy-900 font-semibold"
+              className="border-white text-white hover:bg-white hover:text-blue-600"
             >
               Download Brochure
             </Button>

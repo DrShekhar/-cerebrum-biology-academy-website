@@ -8,7 +8,7 @@ import Link from 'next/link'
 
 export default function SuccessStoriesPage() {
   const featuredStories = getFeaturedStories()
-  const videoStories = successStoriesData.filter(story => story.type === 'video').slice(0, 3)
+  const videoStories = successStoriesData.filter((story) => story.type === 'video').slice(0, 3)
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -16,14 +16,12 @@ export default function SuccessStoriesPage() {
       <section className="bg-gradient-to-r from-green-600 to-blue-600 text-white py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center">
-            <h1 className="text-5xl font-bold mb-6">
-              Student Success Stories
-            </h1>
+            <h1 className="text-5xl font-bold mb-6">Student Success Stories</h1>
             <p className="text-xl text-green-100 max-w-3xl mx-auto mb-8">
-              Discover inspiring journeys of our students who achieved their medical dreams. 
-              Real stories, real results, real transformations.
+              Discover inspiring journeys of our students who achieved their medical dreams. Real
+              stories, real results, real transformations.
             </p>
-            
+
             {/* Quick Stats */}
             <div className="grid md:grid-cols-4 gap-6 mt-12">
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
@@ -143,7 +141,7 @@ export default function SuccessStoriesPage() {
               <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Star className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-blue-900 mb-2">354/360</h3>
+              <h3 className="text-2xl font-bold text-blue-900 mb-2">178/180</h3>
               <p className="text-blue-700">Biology Top Score</p>
               <p className="text-sm text-blue-600 mt-2">Ishita Verma - AIIMS Rishikesh</p>
             </div>
@@ -163,22 +161,28 @@ export default function SuccessStoriesPage() {
       {/* Call to Action */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold mb-6">
-            Ready to Write Your Success Story?
-          </h2>
+          <h2 className="text-4xl font-bold mb-6">Ready to Write Your Success Story?</h2>
           <p className="text-xl text-blue-100 mb-8">
-            Join thousands of successful students who achieved their medical dreams with our expert guidance.
-            Your NEET success story could be next!
+            Join thousands of successful students who achieved their medical dreams with our expert
+            guidance. Your NEET success story could be next!
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/courses">
-              <Button variant="outline" size="xl" className="border-white text-white hover:bg-white hover:text-blue-600">
+              <Button
+                variant="outline"
+                size="xl"
+                className="border-white text-white hover:bg-white hover:text-blue-600"
+              >
                 Explore Courses
               </Button>
             </Link>
             <Link href="/contact">
-              <Button variant="primary" size="xl" className="bg-white text-blue-600 hover:bg-gray-100">
+              <Button
+                variant="primary"
+                size="xl"
+                className="bg-white text-blue-600 hover:bg-gray-100"
+              >
                 Book Free Demo
               </Button>
             </Link>
@@ -206,6 +210,8 @@ export default function SuccessStoriesPage() {
 
 export const metadata = {
   title: 'Student Success Stories | NEET Results & Testimonials | Cerebrum Biology Academy',
-  description: 'Discover inspiring NEET success stories from our students. Watch video testimonials, analyze score improvements, and see how we help students achieve medical college dreams with 94% success rate.',
-  keywords: 'NEET success stories, student testimonials, AIIMS results, medical college admissions, biology coaching results, NEET rank improvement, student achievements',
+  description:
+    'Discover inspiring NEET success stories from our students. Watch video testimonials, analyze score improvements, and see how we help students achieve medical college dreams with 94% success rate.',
+  keywords:
+    'NEET success stories, student testimonials, AIIMS results, medical college admissions, biology coaching results, NEET rank improvement, student achievements',
 }

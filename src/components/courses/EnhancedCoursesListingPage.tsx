@@ -5,7 +5,6 @@ import { ClassLevel, CourseProgram } from '@/types/courseSystem'
 import { coursePrograms, courseTiers } from '@/data/courseSystemData'
 import { ClassFilterNav } from './ClassFilterNav'
 import { CourseCard } from './CourseCard'
-import { ClassTierCard } from './ClassTierCard'
 import { DemoClassModal } from './DemoClassModal'
 
 export function EnhancedCoursesListingPage() {
@@ -154,43 +153,30 @@ export function EnhancedCoursesListingPage() {
           </div>
 
           {/* Course Grid */}
-          {selectedClass === 'all' ? (
-            // Show all courses when "All Classes" is selected
-            filteredCourses.length > 0 ? (
-              <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
-                {filteredCourses.map((course) => (
-                  <CourseCard key={course.id} course={course} />
-                ))}
-              </div>
-            ) : (
-              <div className="text-center py-16">
-                <div className="text-6xl mb-4">📚</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">No Courses Found</h3>
-                <p className="text-gray-600 mb-8">
-                  {searchQuery
-                    ? `No courses match your search "${searchQuery}"`
-                    : 'No courses available for the selected filters'}
-                </p>
-              </div>
-            )
+          {filteredCourses.length > 0 ? (
+            <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
+              {filteredCourses.map((course) => (
+                <CourseCard key={course.id} course={course} />
+              ))}
+            </div>
           ) : (
-            // Show tier cards when a specific class is selected
-            <div>
-              <div className="text-center mb-8">
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                  Choose Your Learning Path for Class {selectedClass}
-                </h2>
-                <p className="text-gray-600 max-w-2xl mx-auto">
-                  Select the tier that best matches your learning goals and commitment level. Each
-                  tier offers different features and batch sizes to optimize your NEET preparation.
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto pb-8">
-                {(['pinnacle', 'ascent', 'pursuit'] as const).map((tier) => (
-                  <ClassTierCard key={tier} classLevel={selectedClass} tier={tier} />
-                ))}
-              </div>
+            <div className="text-center py-16">
+              <div className="text-6xl mb-4">📚</div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">No Courses Found</h3>
+              <p className="text-gray-600 mb-8">
+                {searchQuery
+                  ? `No courses match your search "${searchQuery}"`
+                  : `No courses available for ${selectedClass === 'all' ? 'the selected filters' : `Class ${selectedClass}`}`}
+              </p>
+              <button
+                onClick={() => {
+                  setSearchQuery('')
+                  setSelectedClass('all')
+                }}
+                className="bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition-colors"
+              >
+                Clear Filters
+              </button>
             </div>
           )}
 

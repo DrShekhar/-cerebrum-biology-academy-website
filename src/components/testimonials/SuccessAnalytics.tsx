@@ -55,15 +55,17 @@ interface SuccessAnalyticsProps {
 
 export function SuccessAnalytics({ data }: SuccessAnalyticsProps) {
   const [selectedFilter, setSelectedFilter] = useState<'all' | 'toppers' | 'droppers'>('all')
-  const [activeTab, setActiveTab] = useState<'overview' | 'subjects' | 'batches' | 'colleges'>('overview')
+  const [activeTab, setActiveTab] = useState<'overview' | 'subjects' | 'batches' | 'colleges'>(
+    'overview'
+  )
 
-  const StatCard = ({ 
-    title, 
-    value, 
-    subtitle, 
-    icon: Icon, 
+  const StatCard = ({
+    title,
+    value,
+    subtitle,
+    icon: Icon,
     color,
-    trend 
+    trend,
   }: {
     title: string
     value: string | number
@@ -109,7 +111,7 @@ export function SuccessAnalytics({ data }: SuccessAnalyticsProps) {
         <p className="text-blue-100 text-lg">
           Comprehensive analysis of student performance and achievements at Cerebrum Biology Academy
         </p>
-        
+
         {/* Quick Stats */}
         <div className="grid md:grid-cols-4 gap-6 mt-8">
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4">
@@ -192,16 +194,16 @@ export function SuccessAnalytics({ data }: SuccessAnalyticsProps) {
           {/* Yearly Progress Chart */}
           <div className="bg-white rounded-3xl shadow-lg p-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Year-over-Year Progress</h3>
-            
+
             <div className="relative">
               <div className="flex items-end justify-between h-64 bg-gray-50 rounded-2xl p-6">
                 {data.yearlyProgress.map((year, index) => (
                   <div key={index} className="flex flex-col items-center flex-1">
-                    <div 
+                    <div
                       className="bg-gradient-to-t from-blue-600 to-blue-400 rounded-t-lg w-16 transition-all duration-1000"
-                      style={{ 
+                      style={{
                         height: `${(year.avgScore / 720) * 100}%`,
-                        animationDelay: `${index * 200}ms`
+                        animationDelay: `${index * 200}ms`,
                       }}
                     >
                       <div className="text-white text-xs font-semibold p-1 text-center">
@@ -229,47 +231,70 @@ export function SuccessAnalytics({ data }: SuccessAnalyticsProps) {
               <motion.div
                 key={subject}
                 className={`rounded-3xl shadow-lg p-8 ${
-                  subject === 'biology' ? 'bg-green-50' :
-                  subject === 'chemistry' ? 'bg-blue-50' : 'bg-purple-50'
+                  subject === 'biology'
+                    ? 'bg-green-50'
+                    : subject === 'chemistry'
+                      ? 'bg-blue-50'
+                      : 'bg-purple-50'
                 }`}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
                 <div className="text-center">
-                  <h3 className={`text-2xl font-bold mb-4 ${
-                    subject === 'biology' ? 'text-green-900' :
-                    subject === 'chemistry' ? 'text-blue-900' : 'text-purple-900'
-                  }`}>
+                  <h3
+                    className={`text-2xl font-bold mb-4 ${
+                      subject === 'biology'
+                        ? 'text-green-900'
+                        : subject === 'chemistry'
+                          ? 'text-blue-900'
+                          : 'text-purple-900'
+                    }`}
+                  >
                     {subject.charAt(0).toUpperCase() + subject.slice(1)}
                   </h3>
-                  
+
                   <div className="space-y-4">
                     <div>
-                      <div className={`text-3xl font-bold ${
-                        subject === 'biology' ? 'text-green-600' :
-                        subject === 'chemistry' ? 'text-blue-600' : 'text-purple-600'
-                      }`}>
-                        {stats.averageScore}/{subject === 'biology' ? '360' : '180'}
+                      <div
+                        className={`text-3xl font-bold ${
+                          subject === 'biology'
+                            ? 'text-green-600'
+                            : subject === 'chemistry'
+                              ? 'text-blue-600'
+                              : 'text-purple-600'
+                        }`}
+                      >
+                        {stats.averageScore}/180
                       </div>
                       <div className="text-gray-600">Average Score</div>
                     </div>
-                    
+
                     <div>
-                      <div className={`text-2xl font-bold ${
-                        subject === 'biology' ? 'text-green-600' :
-                        subject === 'chemistry' ? 'text-blue-600' : 'text-purple-600'
-                      }`}>
+                      <div
+                        className={`text-2xl font-bold ${
+                          subject === 'biology'
+                            ? 'text-green-600'
+                            : subject === 'chemistry'
+                              ? 'text-blue-600'
+                              : 'text-purple-600'
+                        }`}
+                      >
                         +{stats.improvement}
                       </div>
                       <div className="text-gray-600">Avg. Improvement</div>
                     </div>
-                    
+
                     <div>
-                      <div className={`text-2xl font-bold ${
-                        subject === 'biology' ? 'text-green-600' :
-                        subject === 'chemistry' ? 'text-blue-600' : 'text-purple-600'
-                      }`}>
+                      <div
+                        className={`text-2xl font-bold ${
+                          subject === 'biology'
+                            ? 'text-green-600'
+                            : subject === 'chemistry'
+                              ? 'text-blue-600'
+                              : 'text-purple-600'
+                        }`}
+                      >
                         {stats.toppers}
                       </div>
                       <div className="text-gray-600">160+ Scorers</div>
@@ -287,15 +312,19 @@ export function SuccessAnalytics({ data }: SuccessAnalyticsProps) {
         <div className="bg-white rounded-3xl shadow-lg overflow-hidden">
           <div className="p-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Batch Performance Analysis</h3>
-            
+
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
                   <tr className="border-b border-gray-200">
                     <th className="text-left py-4 px-6 font-semibold text-gray-900">Batch Type</th>
                     <th className="text-left py-4 px-6 font-semibold text-gray-900">Students</th>
-                    <th className="text-left py-4 px-6 font-semibold text-gray-900">Success Rate</th>
-                    <th className="text-left py-4 px-6 font-semibold text-gray-900">Avg. Improvement</th>
+                    <th className="text-left py-4 px-6 font-semibold text-gray-900">
+                      Success Rate
+                    </th>
+                    <th className="text-left py-4 px-6 font-semibold text-gray-900">
+                      Avg. Improvement
+                    </th>
                     <th className="text-left py-4 px-6 font-semibold text-gray-900">Performance</th>
                   </tr>
                 </thead>
@@ -316,11 +345,15 @@ export function SuccessAnalytics({ data }: SuccessAnalyticsProps) {
                       </td>
                       <td className="py-4 px-6">
                         <div className="flex items-center">
-                          <div className={`px-3 py-1 rounded-full text-sm font-medium ${
-                            batch.successRate >= 90 ? 'bg-green-100 text-green-800' :
-                            batch.successRate >= 75 ? 'bg-yellow-100 text-yellow-800' :
-                            'bg-red-100 text-red-800'
-                          }`}>
+                          <div
+                            className={`px-3 py-1 rounded-full text-sm font-medium ${
+                              batch.successRate >= 90
+                                ? 'bg-green-100 text-green-800'
+                                : batch.successRate >= 75
+                                  ? 'bg-yellow-100 text-yellow-800'
+                                  : 'bg-red-100 text-red-800'
+                            }`}
+                          >
                             {batch.successRate}%
                           </div>
                         </div>
@@ -356,7 +389,7 @@ export function SuccessAnalytics({ data }: SuccessAnalyticsProps) {
         <div className="space-y-6">
           <div className="bg-white rounded-3xl shadow-lg p-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Top College Admissions</h3>
-            
+
             <div className="space-y-4">
               {data.collegeAdmissions.map((college, index) => (
                 <motion.div
@@ -372,10 +405,12 @@ export function SuccessAnalytics({ data }: SuccessAnalyticsProps) {
                     </div>
                     <div>
                       <h4 className="text-lg font-bold text-gray-900">{college.college}</h4>
-                      <p className="text-gray-600">Average Rank: #{college.avgRank.toLocaleString()}</p>
+                      <p className="text-gray-600">
+                        Average Rank: #{college.avgRank.toLocaleString()}
+                      </p>
                     </div>
                   </div>
-                  
+
                   <div className="text-right">
                     <div className="text-2xl font-bold text-blue-600">{college.students}</div>
                     <div className="text-gray-600 text-sm">Students Admitted</div>

@@ -9,6 +9,3 @@ export const metadata = {
   description:
     'Track your course progress and manage your enrollments at Cerebrum Biology Academy.',
 }
-
-// Make this page dynamic to avoid SSR issues
-export const dynamic = 'force-dynamic'

@@ -154,13 +154,13 @@ export function EnrollmentModal({ isOpen, onClose, course }: EnrollmentModalProp
           </button>
 
           {/* Step Indicator */}
-          <div className="bg-navy-900 border-b-4 border-teal-500 text-white p-6 rounded-t-3xl">
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-6 rounded-t-3xl">
             <div className="flex items-center justify-between mb-4">
               <h2 className="text-2xl font-bold">Enroll in {course.title}</h2>
               <div className="flex items-center space-x-2">
                 <div
                   className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold ${
-                    currentStep === 'details' ? 'bg-teal-500 text-white' : 'bg-navy-700'
+                    currentStep === 'details' ? 'bg-white text-blue-600' : 'bg-blue-500'
                   }`}
                 >
                   1
@@ -168,7 +168,7 @@ export function EnrollmentModal({ isOpen, onClose, course }: EnrollmentModalProp
                 <ArrowRight className="w-4 h-4" />
                 <div
                   className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold ${
-                    currentStep === 'payment' ? 'bg-teal-500 text-white' : 'bg-navy-700'
+                    currentStep === 'payment' ? 'bg-white text-blue-600' : 'bg-blue-500'
                   }`}
                 >
                   2
@@ -176,7 +176,7 @@ export function EnrollmentModal({ isOpen, onClose, course }: EnrollmentModalProp
                 <ArrowRight className="w-4 h-4" />
                 <div
                   className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold ${
-                    currentStep === 'success' ? 'bg-teal-500 text-white' : 'bg-navy-700'
+                    currentStep === 'success' ? 'bg-white text-blue-600' : 'bg-blue-500'
                   }`}
                 >
                   3
@@ -225,7 +225,7 @@ export function EnrollmentModal({ isOpen, onClose, course }: EnrollmentModalProp
                         name="studentName"
                         value={formData.studentName}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
                         required
                       />
                     </div>
@@ -240,7 +240,7 @@ export function EnrollmentModal({ isOpen, onClose, course }: EnrollmentModalProp
                         name="email"
                         value={formData.email}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
                         required
                       />
                     </div>
@@ -255,7 +255,7 @@ export function EnrollmentModal({ isOpen, onClose, course }: EnrollmentModalProp
                         name="phone"
                         value={formData.phone}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
                         required
                       />
                     </div>
@@ -268,7 +268,7 @@ export function EnrollmentModal({ isOpen, onClose, course }: EnrollmentModalProp
                         name="class"
                         value={formData.class}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
                         required
                       >
                         <option value="">Select Class</option>
@@ -287,7 +287,7 @@ export function EnrollmentModal({ isOpen, onClose, course }: EnrollmentModalProp
                         name="school"
                         value={formData.school}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
                       />
                     </div>
 
@@ -299,7 +299,7 @@ export function EnrollmentModal({ isOpen, onClose, course }: EnrollmentModalProp
                         name="targetScore"
                         value={formData.targetScore}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
                       >
                         <option value="">Select Target</option>
                         <option value="600+">600+ (AIIMS/Top Colleges)</option>
@@ -325,7 +325,7 @@ export function EnrollmentModal({ isOpen, onClose, course }: EnrollmentModalProp
                           name="parentName"
                           value={formData.parentName}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
                           required
                         />
                       </div>
@@ -339,7 +339,7 @@ export function EnrollmentModal({ isOpen, onClose, course }: EnrollmentModalProp
                           name="parentPhone"
                           value={formData.parentPhone}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
                           required
                         />
                       </div>
@@ -353,7 +353,7 @@ export function EnrollmentModal({ isOpen, onClose, course }: EnrollmentModalProp
                       {course.schedule?.map((schedule, index) => (
                         <label
                           key={index}
-                          className="flex items-center p-4 border border-gray-300 rounded-2xl cursor-pointer hover:border-teal-500 transition-colors"
+                          className="flex items-center p-4 border border-gray-300 rounded-2xl cursor-pointer hover:border-blue-500 transition-colors"
                         >
                           <input
                             type="radio"
@@ -404,8 +404,8 @@ export function EnrollmentModal({ isOpen, onClose, course }: EnrollmentModalProp
                     <div
                       className={`p-6 border-2 rounded-2xl cursor-pointer transition-colors ${
                         formData.paymentMethod === 'full'
-                          ? 'border-teal-500 bg-teal-50'
-                          : 'border-gray-300 hover:border-teal-300'
+                          ? 'border-blue-500 bg-blue-50'
+                          : 'border-gray-300 hover:border-blue-300'
                       }`}
                     >
                       <div className="flex items-center justify-between mb-4">
@@ -438,8 +438,8 @@ export function EnrollmentModal({ isOpen, onClose, course }: EnrollmentModalProp
                     <div
                       className={`p-6 border-2 rounded-2xl cursor-pointer transition-colors ${
                         formData.paymentMethod === 'installment'
-                          ? 'border-teal-500 bg-teal-50'
-                          : 'border-gray-300 hover:border-teal-300'
+                          ? 'border-blue-500 bg-blue-50'
+                          : 'border-gray-300 hover:border-blue-300'
                       }`}
                     >
                       <h4 className="font-semibold text-gray-900 mb-4">3 Installments</h4>
@@ -477,8 +477,8 @@ export function EnrollmentModal({ isOpen, onClose, course }: EnrollmentModalProp
                 </div>
 
                 {/* Enrollment Summary */}
-                <div className="bg-teal-50 border border-teal-200 rounded-2xl p-6 mb-8">
-                  <h4 className="font-semibold text-navy-900 mb-4">Enrollment Summary</h4>
+                <div className="bg-blue-50 rounded-2xl p-6 mb-8">
+                  <h4 className="font-semibold text-blue-900 mb-4">Enrollment Summary</h4>
                   <div className="space-y-2 text-sm">
                     <div className="flex justify-between">
                       <span>Student:</span>

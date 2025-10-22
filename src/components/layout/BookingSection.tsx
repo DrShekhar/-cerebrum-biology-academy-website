@@ -20,7 +20,7 @@ export function BookingSection() {
     },
     {
       icon: Shield,
-      title: 'Complete Transparency',
+      title: 'No Hidden Fees',
       description: 'Transparent pricing with no surprise charges. What you see is what you pay',
     },
     {
@@ -30,8 +30,8 @@ export function BookingSection() {
     },
     {
       icon: Users,
-      title: '94.2% Success Rate',
-      description: 'Join 2,847 students who cracked NEET with our proven methods',
+      title: '98% Success Rate',
+      description: 'Join thousands of students who cracked NEET with our proven methods',
     },
   ]
 
@@ -39,23 +39,23 @@ export function BookingSection() {
     {
       icon: Phone,
       title: 'Call Us',
-      description: 'Speak directly with our expert counselors',
+      description: 'Speak directly with our counselors',
       action: 'tel:+918826444334',
       actionText: '+91 88264 44334',
       available: 'Mon-Sat: 9 AM - 8 PM',
     },
     {
       icon: MessageSquare,
-      title: 'WhatsApp Support',
+      title: 'WhatsApp',
       description: 'Quick questions and instant support',
       action: 'https://wa.me/918826444334',
-      actionText: 'Chat with Us',
+      actionText: 'Chat on WhatsApp',
       available: '24/7 Support',
     },
     {
       icon: MapPin,
-      title: 'Visit Our Academy',
-      description: 'Meet our team at the academy',
+      title: 'Visit Us',
+      description: 'Meet our team at our academy',
       action: 'https://maps.google.com',
       actionText: 'Get Directions',
       available: 'Delhi NCR Location',
@@ -63,7 +63,7 @@ export function BookingSection() {
   ]
 
   return (
-    <section className="py-20 bg-navy-50">
+    <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-purple-50">
       <div className="max-w-7xl mx-auto px-4">
         {/* Section Header */}
         <motion.div
@@ -75,7 +75,7 @@ export function BookingSection() {
         >
           <div className="inline-flex items-center bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
             <Calendar className="w-4 h-4 mr-2" />
-            Start Your Journey Today
+            Get Started Today
           </div>
 
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -83,8 +83,8 @@ export function BookingSection() {
           </h2>
 
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Take the first step towards your medical career with us. Book a free demo class, request
-            a callback, or visit our academy to learn more about our proven programs.
+            Take the first step towards your medical career. Book a free demo class, request a
+            callback, or visit our academy to learn more about our programs.
           </p>
         </motion.div>
 
@@ -103,7 +103,9 @@ export function BookingSection() {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Why Choose Our Academy?</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                Why Choose Cerebrum Biology Academy?
+              </h3>
 
               <div className="grid gap-4">
                 {features.map((feature, index) => (
@@ -171,7 +173,7 @@ export function BookingSection() {
 
             {/* Quick Stats */}
             <motion.div
-              className="bg-navy-900 rounded-2xl p-8 text-white"
+              className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white"
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
@@ -180,20 +182,20 @@ export function BookingSection() {
               <h3 className="text-xl font-bold mb-4">Join Our Success Story</h3>
               <div className="grid grid-cols-2 gap-4">
                 <div className="text-center">
-                  <div className="text-3xl font-bold mb-1">2,847+</div>
-                  <div className="text-sm opacity-90">Students</div>
+                  <div className="text-3xl font-bold mb-1">2000+</div>
+                  <div className="text-sm opacity-90">Students Enrolled</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold mb-1">94.2%</div>
+                  <div className="text-3xl font-bold mb-1">98%</div>
                   <div className="text-sm opacity-90">Success Rate</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold mb-1">50+</div>
-                  <div className="text-sm opacity-90">AIIMS Faculty</div>
+                  <div className="text-3xl font-bold mb-1">500+</div>
+                  <div className="text-sm opacity-90">Expert Faculty</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold mb-1">247</div>
-                  <div className="text-sm opacity-90">AIIMS Selections</div>
+                  <div className="text-3xl font-bold mb-1">5+</div>
+                  <div className="text-sm opacity-90">Years Experience</div>
                 </div>
               </div>
             </motion.div>

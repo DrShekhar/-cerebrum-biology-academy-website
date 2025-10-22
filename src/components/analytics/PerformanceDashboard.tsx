@@ -40,13 +40,15 @@ interface PerformanceDashboardProps {
   userClass: 'class-11' | 'class-12' | 'dropper'
 }
 
-export function PerformanceDashboard({ 
-  userHistory, 
-  testAnalytics, 
+export function PerformanceDashboard({
+  userHistory,
+  testAnalytics,
   availableTests,
-  userClass 
+  userClass,
 }: PerformanceDashboardProps) {
-  const [activeTab, setActiveTab] = useState<'overview' | 'performance' | 'progress' | 'insights'>('overview')
+  const [activeTab, setActiveTab] = useState<'overview' | 'performance' | 'progress' | 'insights'>(
+    'overview'
+  )
   const [selectedTimeframe, setSelectedTimeframe] = useState<'7d' | '30d' | '90d' | 'all'>('30d')
   const [expandedSection, setExpandedSection] = useState<string | null>(null)
 
@@ -64,15 +66,15 @@ export function PerformanceDashboard({
       totalTests: userHistory.totalTests,
       averageScore: userHistory.averageScore,
       bestScore: userHistory.bestScore,
-      testsThisWeek: recentTests.filter(test => {
+      testsThisWeek: recentTests.filter((test) => {
         const testDate = new Date(test.date)
         const weekAgo = new Date()
         weekAgo.setDate(weekAgo.getDate() - 7)
         return testDate >= weekAgo
       }).length,
       consistencyScore: Math.round(
-        (recentTests.reduce((acc, test) => acc + test.percentage, 0) / recentTests.length) || 0
-      )
+        recentTests.reduce((acc, test) => acc + test.percentage, 0) / recentTests.length || 0
+      ),
     }
   }, [userHistory])
 
@@ -81,37 +83,53 @@ export function PerformanceDashboard({
     return userHistory.progressTrend.slice(-12).map((point, index) => ({
       ...point,
       index,
-      improvement: index > 0 ? point.averageScore - userHistory.progressTrend[index - 1].averageScore : 0
+      improvement:
+        index > 0 ? point.averageScore - userHistory.progressTrend[index - 1].averageScore : 0,
     }))
   }, [userHistory])
 
   // Subject performance analysis
   const subjectPerformance = useMemo(() => {
-    return userHistory.subjectStrengths.map(subject => ({
+    return userHistory.subjectStrengths.map((subject) => ({
       ...subject,
-      grade: subject.averageScore >= 85 ? 'A' : 
-             subject.averageScore >= 70 ? 'B' : 
-             subject.averageScore >= 55 ? 'C' : 'D',
-      color: subject.averageScore >= 85 ? 'text-green-600' : 
-             subject.averageScore >= 70 ? 'text-blue-600' : 
-             subject.averageScore >= 55 ? 'text-yellow-600' : 'text-red-600',
-      bgColor: subject.averageScore >= 85 ? 'bg-green-50' : 
-               subject.averageScore >= 70 ? 'bg-blue-50' : 
-               subject.averageScore >= 55 ? 'bg-yellow-50' : 'bg-red-50'
+      grade:
+        subject.averageScore >= 85
+          ? 'A'
+          : subject.averageScore >= 70
+            ? 'B'
+            : subject.averageScore >= 55
+              ? 'C'
+              : 'D',
+      color:
+        subject.averageScore >= 85
+          ? 'text-green-600'
+          : subject.averageScore >= 70
+            ? 'text-blue-600'
+            : subject.averageScore >= 55
+              ? 'text-yellow-600'
+              : 'text-red-600',
+      bgColor:
+        subject.averageScore >= 85
+          ? 'bg-green-50'
+          : subject.averageScore >= 70
+            ? 'bg-blue-50'
+            : subject.averageScore >= 55
+              ? 'bg-yellow-50'
+              : 'bg-red-50',
     }))
   }, [userHistory])
 
   // Performance insights
   const insights = useMemo(() => {
     const insights = []
-    
+
     if (keyMetrics.improvement > 10) {
       insights.push({
         type: 'success',
         icon: TrendingUp,
         title: 'Excellent Progress!',
         description: `Your score improved by ${keyMetrics.improvement}% in the latest test.`,
-        action: 'Keep up the momentum'
+        action: 'Keep up the momentum',
       })
     } else if (keyMetrics.improvement < -10) {
       insights.push({
@@ -119,7 +137,7 @@ export function PerformanceDashboard({
         icon: AlertTriangle,
         title: 'Performance Dip',
         description: `Your score dropped by ${Math.abs(keyMetrics.improvement)}%. Let's analyze what happened.`,
-        action: 'Review weak areas'
+        action: 'Review weak areas',
       })
     }
 
@@ -129,7 +147,7 @@ export function PerformanceDashboard({
         icon: Target,
         title: 'Great Consistency!',
         description: `You've taken ${keyMetrics.testsThisWeek} tests this week.`,
-        action: 'Maintain this rhythm'
+        action: 'Maintain this rhythm',
       })
     } else if (keyMetrics.testsThisWeek === 0) {
       insights.push({
@@ -137,7 +155,7 @@ export function PerformanceDashboard({
         icon: Calendar,
         title: 'Time to Practice',
         description: 'No tests taken this week. Regular practice is key to improvement.',
-        action: 'Take a test today'
+        action: 'Take a test today',
       })
     }
 
@@ -148,7 +166,7 @@ export function PerformanceDashboard({
         icon: BookOpen,
         title: 'Focus Area Identified',
         description: `${weakestSubject.subject} needs attention (${weakestSubject.averageScore}% average).`,
-        action: 'Practice more questions'
+        action: 'Practice more questions',
       })
     }
 
@@ -171,7 +189,7 @@ export function PerformanceDashboard({
       change: keyMetrics.improvement,
       icon: Trophy,
       color: 'text-blue-600',
-      bgColor: 'bg-blue-50'
+      bgColor: 'bg-blue-50',
     },
     {
       title: 'Best Score',
@@ -179,7 +197,7 @@ export function PerformanceDashboard({
       change: keyMetrics.bestScore - keyMetrics.averageScore,
       icon: Award,
       color: 'text-green-600',
-      bgColor: 'bg-green-50'
+      bgColor: 'bg-green-50',
     },
     {
       title: 'Average Score',
@@ -187,7 +205,7 @@ export function PerformanceDashboard({
       change: keyMetrics.consistencyScore - keyMetrics.averageScore,
       icon: BarChart3,
       color: 'text-purple-600',
-      bgColor: 'bg-purple-50'
+      bgColor: 'bg-purple-50',
     },
     {
       title: 'Tests Taken',
@@ -195,8 +213,8 @@ export function PerformanceDashboard({
       change: keyMetrics.testsThisWeek,
       icon: Target,
       color: 'text-orange-600',
-      bgColor: 'bg-orange-50'
-    }
+      bgColor: 'bg-orange-50',
+    },
   ]
 
   return (
@@ -206,9 +224,7 @@ export function PerformanceDashboard({
         <div className="flex items-center justify-between">
           <div>
             <h1 className="text-3xl font-bold text-gray-900 mb-2">Performance Analytics</h1>
-            <p className="text-gray-600">
-              Track your progress and identify areas for improvement
-            </p>
+            <p className="text-gray-600">Track your progress and identify areas for improvement</p>
           </div>
           <div className="flex items-center space-x-3">
             <select
@@ -269,13 +285,21 @@ export function PerformanceDashboard({
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <div className="flex items-center justify-between mb-4">
-                  <div className={`w-12 h-12 ${metric.bgColor} rounded-xl flex items-center justify-center`}>
+                  <div
+                    className={`w-12 h-12 ${metric.bgColor} rounded-xl flex items-center justify-center`}
+                  >
                     <metric.icon className={`w-6 h-6 ${metric.color}`} />
                   </div>
                   {metric.change !== 0 && (
-                    <div className={`flex items-center text-sm font-medium ${
-                      metric.change > 0 ? 'text-green-600' : metric.change < 0 ? 'text-red-600' : 'text-gray-600'
-                    }`}>
+                    <div
+                      className={`flex items-center text-sm font-medium ${
+                        metric.change > 0
+                          ? 'text-green-600'
+                          : metric.change < 0
+                            ? 'text-red-600'
+                            : 'text-gray-600'
+                      }`}
+                    >
                       {metric.change > 0 ? (
                         <ArrowUp className="w-4 h-4 mr-1" />
                       ) : metric.change < 0 ? (
@@ -306,17 +330,23 @@ export function PerformanceDashboard({
                 <div
                   key={index}
                   className={`p-6 rounded-2xl border-l-4 ${
-                    insight.type === 'success' ? 'bg-green-50 border-green-500' :
-                    insight.type === 'warning' ? 'bg-yellow-50 border-yellow-500' :
-                    'bg-blue-50 border-blue-500'
+                    insight.type === 'success'
+                      ? 'bg-green-50 border-green-500'
+                      : insight.type === 'warning'
+                        ? 'bg-yellow-50 border-yellow-500'
+                        : 'bg-blue-50 border-blue-500'
                   }`}
                 >
                   <div className="flex items-start">
-                    <insight.icon className={`w-6 h-6 mr-3 mt-0.5 ${
-                      insight.type === 'success' ? 'text-green-600' :
-                      insight.type === 'warning' ? 'text-yellow-600' :
-                      'text-blue-600'
-                    }`} />
+                    <insight.icon
+                      className={`w-6 h-6 mr-3 mt-0.5 ${
+                        insight.type === 'success'
+                          ? 'text-green-600'
+                          : insight.type === 'warning'
+                            ? 'text-yellow-600'
+                            : 'text-blue-600'
+                      }`}
+                    />
                     <div className="flex-1">
                       <h3 className="font-semibold text-gray-900 mb-1">{insight.title}</h3>
                       <p className="text-gray-700 mb-3">{insight.description}</p>
@@ -356,11 +386,17 @@ export function PerformanceDashboard({
                         <div className="font-medium text-gray-900">{test.testTitle}</div>
                       </td>
                       <td className="py-3 px-4">
-                        <div className={`font-semibold ${
-                          test.percentage >= 80 ? 'text-green-600' :
-                          test.percentage >= 60 ? 'text-blue-600' :
-                          test.percentage >= 40 ? 'text-yellow-600' : 'text-red-600'
-                        }`}>
+                        <div
+                          className={`font-semibold ${
+                            test.percentage >= 80
+                              ? 'text-green-600'
+                              : test.percentage >= 60
+                                ? 'text-blue-600'
+                                : test.percentage >= 40
+                                  ? 'text-yellow-600'
+                                  : 'text-red-600'
+                          }`}
+                        >
                           {test.percentage}%
                         </div>
                       </td>
@@ -405,7 +441,9 @@ export function PerformanceDashboard({
                 <div key={subject.subject} className={`${subject.bgColor} rounded-2xl p-6`}>
                   <div className="flex items-center justify-between mb-4">
                     <h3 className="font-bold text-gray-900">{subject.subject}</h3>
-                    <div className={`w-8 h-8 rounded-full ${subject.color} bg-white flex items-center justify-center font-bold`}>
+                    <div
+                      className={`w-8 h-8 rounded-full ${subject.color} bg-white flex items-center justify-center font-bold`}
+                    >
                       {subject.grade}
                     </div>
                   </div>
@@ -447,7 +485,7 @@ export function PerformanceDashboard({
                   <Trophy className="w-6 h-6 text-white" />
                 </div>
                 <div className="text-2xl font-bold text-green-600 mb-1">
-                  {userHistory.recentTests.filter(t => t.percentage >= 80).length}
+                  {userHistory.recentTests.filter((t) => t.percentage >= 80).length}
                 </div>
                 <div className="text-sm text-gray-700">Excellent (80%+)</div>
               </div>
@@ -456,7 +494,10 @@ export function PerformanceDashboard({
                   <Star className="w-6 h-6 text-white" />
                 </div>
                 <div className="text-2xl font-bold text-blue-600 mb-1">
-                  {userHistory.recentTests.filter(t => t.percentage >= 60 && t.percentage < 80).length}
+                  {
+                    userHistory.recentTests.filter((t) => t.percentage >= 60 && t.percentage < 80)
+                      .length
+                  }
                 </div>
                 <div className="text-sm text-gray-700">Good (60-79%)</div>
               </div>
@@ -465,7 +506,10 @@ export function PerformanceDashboard({
                   <Target className="w-6 h-6 text-white" />
                 </div>
                 <div className="text-2xl font-bold text-yellow-600 mb-1">
-                  {userHistory.recentTests.filter(t => t.percentage >= 40 && t.percentage < 60).length}
+                  {
+                    userHistory.recentTests.filter((t) => t.percentage >= 40 && t.percentage < 60)
+                      .length
+                  }
                 </div>
                 <div className="text-sm text-gray-700">Average (40-59%)</div>
               </div>
@@ -474,9 +518,9 @@ export function PerformanceDashboard({
                   <AlertTriangle className="w-6 h-6 text-white" />
                 </div>
                 <div className="text-2xl font-bold text-red-600 mb-1">
-                  {userHistory.recentTests.filter(t => t.percentage < 40).length}
+                  {userHistory.recentTests.filter((t) => t.percentage < 40).length}
                 </div>
-                <div className="text-sm text-gray-700">Needs Work (&lt;40%)</div>
+                <div className="text-sm text-gray-700">Needs Work (below 40%)</div>
               </div>
             </div>
           </motion.div>
@@ -519,7 +563,10 @@ export function PerformanceDashboard({
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Achievements</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {userHistory.achievements.map((achievement, index) => (
-                <div key={achievement.id} className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-2xl p-6 border border-yellow-200">
+                <div
+                  key={achievement.id}
+                  className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-2xl p-6 border border-yellow-200"
+                >
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center mr-4">
                       <Award className="w-6 h-6 text-white" />
@@ -557,8 +604,8 @@ export function PerformanceDashboard({
                   <h3 className="text-xl font-bold text-gray-900">Learning Pattern Analysis</h3>
                 </div>
                 <p className="text-gray-700 mb-4">
-                  Based on your test patterns, you perform best during morning hours (9-11 AM) 
-                  with an average score 15% higher than evening tests. Consider scheduling important 
+                  Based on your test patterns, you perform best during morning hours (9-11 AM) with
+                  an average score 15% higher than evening tests. Consider scheduling important
                   practice sessions during this time.
                 </p>
                 <Button variant="outline" size="sm">
@@ -572,9 +619,9 @@ export function PerformanceDashboard({
                   <h3 className="text-xl font-bold text-gray-900">Speed vs Accuracy</h3>
                 </div>
                 <p className="text-gray-700 mb-4">
-                  You tend to rush through questions, spending average 45 seconds per question. 
-                  Students who take 60-75 seconds per question show 12% higher accuracy. 
-                  Consider slowing down slightly for better results.
+                  You tend to rush through questions, spending average 45 seconds per question.
+                  Students who take 60-75 seconds per question show 12% higher accuracy. Consider
+                  slowing down slightly for better results.
                 </p>
                 <Button variant="outline" size="sm">
                   Practice Time Management
@@ -587,8 +634,8 @@ export function PerformanceDashboard({
                   <h3 className="text-xl font-bold text-gray-900">Consistency Analysis</h3>
                 </div>
                 <p className="text-gray-700 mb-4">
-                  Your performance shows high variability (±18% from average). Top performers 
-                  maintain consistency within ±8%. Focus on regular revision and concept 
+                  Your performance shows high variability (±18% from average). Top performers
+                  maintain consistency within ±8%. Focus on regular revision and concept
                   strengthening rather than attempting new topics.
                 </p>
                 <Button variant="outline" size="sm">
@@ -606,7 +653,13 @@ export function PerformanceDashboard({
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              Peer Comparison ({userClass === 'class-11' ? 'Class 11' : userClass === 'class-12' ? 'Class 12' : 'Droppers'})
+              Peer Comparison (
+              {userClass === 'class-11'
+                ? 'Class 11'
+                : userClass === 'class-12'
+                  ? 'Class 12'
+                  : 'Droppers'}
+              )
             </h2>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="text-center">

@@ -7,7 +7,7 @@ export const courses: BasicCourse[] = [
     description:
       'Complete foundation course for Class 11th students starting their NEET journey. Covers full syllabus with conceptual clarity.',
     duration: '2 Years',
-    price: 76000,
+    price: 75000,
     targetClass: '11th',
     features: [
       'Live Interactive Classes',
@@ -26,7 +26,7 @@ export const courses: BasicCourse[] = [
     description:
       'Intensive program for Class 12th students with focus on both boards and NEET preparation simultaneously.',
     duration: '1 Year',
-    price: 72000,
+    price: 65000,
     targetClass: '12th',
     features: [
       'Dual Preparation (Board + NEET)',
@@ -45,7 +45,7 @@ export const courses: BasicCourse[] = [
     description:
       'Specialized crash course for students who want to improve their NEET score. Intensive preparation with proven results.',
     duration: '1 Year',
-    price: 85000,
+    price: 55000,
     targetClass: 'Dropper',
     features: [
       'Complete Syllabus Revision',
@@ -64,7 +64,7 @@ export const courses: BasicCourse[] = [
     description:
       'Get ahead with our early preparation program. Perfect for motivated Class 10th passed students.',
     duration: '2.5 Years',
-    price: 90000,
+    price: 85000,
     targetClass: '11th',
     features: [
       'Foundation Building',

@@ -2,12 +2,9 @@
 
 import Link from 'next/link'
 import { CourseProgram, CourseSeries } from '@/types/courseSystem'
-import { getCoursePricing, formatPrice, formatCurrency } from '@/lib/utils/pricing'
-import { courseTiers } from '@/data/courseSystemData'
 import { PaymentOptionsDisplay } from './PaymentOptionsDisplay'
 import { DemoClassModal } from './DemoClassModal'
 import { useState } from 'react'
-import { Star, Users, Clock, Award } from 'lucide-react'
 
 interface CourseCardProps {
   course: CourseProgram
@@ -19,16 +16,11 @@ export function CourseCard({ course, selectedTier = 'ascent' }: CourseCardProps)
   const [showDemoModal, setShowDemoModal] = useState(false)
   const [activeTier, setActiveTier] = useState<CourseSeries>(selectedTier)
 
-  // Get pricing information using the centralized system
-  const pricing = getCoursePricing(course.id)
-  const tierInfo = courseTiers.find((t) => t.series === activeTier)
-  const tierPricing = pricing.tiers.find((t) => t.series === activeTier)
-
-  // Clean, professional theme like Ministry of Education card
+  const tierDetails = course.tiers[activeTier]
   const tierColors = {
-    pinnacle: 'from-navy-50 to-navy-100',
-    ascent: 'from-teal-50 to-teal-100',
-    pursuit: 'from-gold-50 to-gold-100',
+    pinnacle: 'from-purple-600 to-pink-600',
+    ascent: 'from-blue-600 to-indigo-600',
+    pursuit: 'from-green-600 to-teal-600',
   }
 
   const tierNames = {
@@ -37,7 +29,14 @@ export function CourseCard({ course, selectedTier = 'ascent' }: CourseCardProps)
     pursuit: 'Pursuit',
   }
 
-  // Use centralized formatting functions
+  const formatCurrency = (amount: number) => {
+    return new Intl.NumberFormat('en-IN', {
+      style: 'currency',
+      currency: 'INR',
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0,
+    }).format(amount)
+  }
 
   const getClassEmoji = (targetClass: string) => {
     switch (targetClass) {
@@ -58,151 +57,140 @@ export function CourseCard({ course, selectedTier = 'ascent' }: CourseCardProps)
 
   return (
     <div className="bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
-      {/* Course Header - Clean Ministry style */}
-      <div className="p-5 text-center">
-        {/* Course Icon - like Ministry badge */}
-        <div
-          className={`w-14 h-14 mx-auto mb-4 bg-gradient-to-br ${tierColors[activeTier]} rounded-full flex items-center justify-center`}
-        >
-          <div className="text-2xl">{getClassEmoji(course.targetClass)}</div>
+      {/* Course Header */}
+      <div
+        className={`bg-gradient-to-r ${tierColors[activeTier]} p-6 text-white relative overflow-hidden`}
+      >
+        <div className="absolute top-2 right-2 text-2xl opacity-20">
+          {getClassEmoji(course.targetClass)}
         </div>
 
-        <div className="mb-4">
-          <div className="flex items-center justify-center space-x-2 mb-2">
-            <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded-full text-xs font-medium">
-              Class {course.targetClass}
-            </span>
-            {course.isPopular && (
-              <span className="bg-blue-100 text-blue-700 px-2 py-1 rounded-full text-xs font-medium">
-                ⭐ Popular
+        <div className="flex items-start justify-between mb-4">
+          <div className="flex-1">
+            <div className="flex items-center space-x-2 mb-2">
+              <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold">
+                Class {course.targetClass}
               </span>
-            )}
-          </div>
-          <h3 className="text-2xl font-bold text-gray-900 mb-2">{course.name}</h3>
-          <p className="text-gray-700 text-sm leading-relaxed">{course.description}</p>
-        </div>
-
-        {/* Course Stats - Clean Ministry style */}
-        <div className="grid grid-cols-3 gap-3 text-center mb-5">
-          <div className="bg-gray-50 rounded-lg p-3">
-            <div className="text-lg font-bold text-gray-900">{course.duration}</div>
-            <div className="text-sm text-gray-700">Duration</div>
-          </div>
-          <div className="bg-gray-50 rounded-lg p-3">
-            <div className="text-lg font-bold text-gray-900">{course.teachingHours}h</div>
-            <div className="text-sm text-gray-700">Per Week</div>
-          </div>
-          <div className="bg-gray-50 rounded-lg p-3">
-            <div className="text-lg font-bold text-gray-900">{tierInfo?.batchSize || 25}</div>
-            <div className="text-sm text-gray-700">Batch Size</div>
+              {course.isPopular && (
+                <span className="bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-xs font-bold">
+                  POPULAR
+                </span>
+              )}
+            </div>
+            <h3 className="text-xl font-bold mb-2">{course.name}</h3>
+            <p className="text-sm opacity-90 line-clamp-2">{course.description}</p>
           </div>
         </div>
 
-        {/* Verification Badge - like Ministry card */}
-        <div className="flex items-center justify-center mb-4">
-          <div className="flex items-center space-x-1 text-green-600">
-            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-              <path
-                fillRule="evenodd"
-                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                clipRule="evenodd"
-              />
-            </svg>
-            <span className="text-sm font-medium text-green-700">NEET Focused</span>
+        {/* Course Stats */}
+        <div className="grid grid-cols-3 gap-4 text-center">
+          <div>
+            <div className="text-2xl font-bold">{course.duration}</div>
+            <div className="text-xs opacity-75">Duration</div>
+          </div>
+          <div>
+            <div className="text-2xl font-bold">{course.teachingHours}h</div>
+            <div className="text-xs opacity-75">Per Week</div>
+          </div>
+          <div>
+            <div className="text-2xl font-bold">{tierDetails.batchSize}</div>
+            <div className="text-xs opacity-75">Batch Size</div>
           </div>
         </div>
       </div>
 
       {/* Tier Selection */}
-      <div className="p-4 sm:p-5">
-        <div className="flex mb-4 bg-gray-100 rounded-lg p-1">
-          {pricing.tiers.map((tierOption) => (
+      <div className="p-6">
+        <div className="flex mb-6">
+          {(Object.keys(course.tiers) as CourseSeries[]).map((tier) => (
             <button
-              key={tierOption.series}
-              onClick={() => setActiveTier(tierOption.series)}
-              className={`flex-1 py-1.5 px-2 text-sm font-medium rounded-md transition-all ${
-                activeTier === tierOption.series
-                  ? 'bg-white text-gray-900 shadow-sm'
-                  : 'text-gray-600 hover:text-gray-900'
+              key={tier}
+              onClick={() => setActiveTier(tier)}
+              className={`flex-1 py-2 px-3 text-sm font-semibold rounded-lg transition-all ${
+                activeTier === tier
+                  ? 'bg-blue-600 text-white'
+                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
               }`}
             >
-              {tierNames[tierOption.series]}
+              {tierNames[tier]}
             </button>
           ))}
         </div>
 
-        {/* Pricing - Clean Ministry style */}
-        <div className="mb-5 text-center bg-gray-50 border border-gray-200 p-4 rounded-lg">
-          <div className="text-2xl font-bold text-gray-900 mb-1">
-            {tierPricing?.formattedPrice || formatPrice(pricing.minPrice)}
+        {/* Pricing */}
+        <div className="mb-6 text-center">
+          <div className="text-3xl font-bold text-gray-900 mb-1">
+            {formatCurrency(tierDetails.payment.oneTime.discountedAmount)}
           </div>
-          <div className="text-gray-700 text-sm mb-1">
-            {formatCurrency(tierPricing?.price || pricing.minPrice)} per year
+          <div className="text-sm text-gray-500 line-through">
+            {formatCurrency(tierDetails.payment.oneTime.amount)}
           </div>
-          <div className="text-xs text-blue-600 font-medium">0% EMI available</div>
+          <div className="text-sm text-green-600 font-medium">
+            Save {formatCurrency(tierDetails.payment.oneTime.discount)} (5% off)
+          </div>
         </div>
 
-        {/* Key Features - Clean style */}
-        <div className="mb-3">
-          <h4 className="font-semibold text-gray-800 mb-2 text-sm">Key Features:</h4>
-          <div className="space-y-1">
-            {tierInfo?.highlights.slice(0, 3).map((highlight, index) => (
+        {/* Key Features */}
+        <div className="mb-6">
+          <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
+          <div className="space-y-2">
+            {tierDetails.additionalBenefits.slice(0, 3).map((benefit, index) => (
               <div key={index} className="flex items-center text-sm text-gray-700">
-                <span className="text-green-600 mr-1 font-bold">✓</span>
-                {highlight}
+                <span className="text-green-500 mr-2">✓</span>
+                {benefit}
               </div>
-            )) ||
-              course.learningOutcomes.slice(0, 3).map((highlight: string, index: number) => (
-                <div key={index} className="flex items-center text-sm text-gray-700">
-                  <span className="text-green-600 mr-1 font-bold">✓</span>
-                  {highlight}
-                </div>
-              ))}
-            {(tierInfo?.highlights.length || course.learningOutcomes.length) > 3 && (
-              <div className="text-xs text-blue-600 font-medium">
-                +{(tierInfo?.highlights.length || course.learningOutcomes.length) - 3} more features
+            ))}
+            {tierDetails.additionalBenefits.length > 3 && (
+              <div className="text-sm text-blue-600">
+                +{tierDetails.additionalBenefits.length - 3} more features
               </div>
             )}
           </div>
         </div>
 
-        {/* Competitive Advantage - Clean style */}
-        <div className="mb-2 bg-blue-50 border border-blue-200 rounded-lg p-1.5">
-          <div className="text-xs text-blue-700 font-semibold mb-0.5">💰 Best Value Guarantee</div>
-          <div className="text-sm text-blue-700">
-            Starting ₹12K lower than competitors • Up to 25% scholarships
-          </div>
-        </div>
+        {/* Payment Options Toggle */}
+        <button
+          onClick={() => setShowPaymentDetails(!showPaymentDetails)}
+          className="w-full mb-4 py-2 px-4 bg-gray-100 text-gray-700 rounded-xl text-sm font-medium hover:bg-gray-200 transition-colors"
+        >
+          {showPaymentDetails ? 'Hide Payment Options' : 'View Payment Options'}
+        </button>
 
-        {/* Action Buttons - Clean Ministry style */}
-        <div className="space-y-1.5">
-          <div className="flex space-x-1.5">
+        {showPaymentDetails && (
+          <div className="mb-6">
+            <PaymentOptionsDisplay paymentOptions={tierDetails.payment} tier={activeTier} />
+          </div>
+        )}
+
+        {/* Action Buttons */}
+        <div className="space-y-3">
+          <div className="flex space-x-3">
             <Link
               href={`/courses/${course.id}`}
-              className="flex-1 bg-white border border-gray-300 text-gray-700 py-2 sm:py-2.5 rounded-lg font-medium text-center hover:bg-gray-50 transition-colors text-sm"
+              className="flex-1 bg-gray-200 text-gray-800 py-3 rounded-xl font-semibold text-center hover:bg-gray-300 transition-colors"
             >
               View Details
             </Link>
             <Link
               href={`/enrollments?course=${course.id}&tier=${activeTier}`}
-              className="flex-1 bg-blue-600 text-white py-2 sm:py-2.5 rounded-lg font-semibold text-center hover:bg-blue-700 transition-colors text-sm"
+              className={`flex-1 bg-gradient-to-r ${tierColors[activeTier]} text-white py-3 rounded-xl font-semibold text-center hover:opacity-90 transition-opacity`}
             >
               Enroll Now
             </Link>
           </div>
           <button
             onClick={() => setShowDemoModal(true)}
-            className="w-full bg-green-600 text-white py-2.5 sm:py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors text-sm"
+            className="w-full bg-green-600 text-white py-3 rounded-xl font-semibold hover:bg-green-700 transition-colors"
           >
             Book Free Demo Class
           </button>
         </div>
 
-        {/* Learning Modes - Clean style */}
-        <div className="mt-3 flex justify-center space-x-3 text-sm text-gray-600">
+        {/* Learning Modes */}
+        <div className="mt-4 flex justify-center space-x-4 text-xs text-gray-500">
           {course.learningMode.map((mode, index) => (
             <span key={index} className="flex items-center">
-              <span className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-1"></span>
+              <span className="w-2 h-2 bg-gray-300 rounded-full mr-1"></span>
               {mode}
             </span>
           ))}

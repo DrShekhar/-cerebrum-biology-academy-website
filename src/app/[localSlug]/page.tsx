@@ -4,17 +4,16 @@ import { getAreaBySlug, getAllAreaSlugs } from '@/data/localAreas'
 import { LocalLandingPage } from '@/components/local/LocalLandingPage'
 
 interface Props {
-  params: Promise<{ localSlug: string }>
+  params: { localSlug: string }
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const resolvedParams = await params
-  const area = getAreaBySlug(resolvedParams.localSlug)
+  const area = getAreaBySlug(params.localSlug)
 
   if (!area) {
-    // Don't generate metadata for non-existent pages
-    // This allows the notFound() function to work properly
-    notFound()
+    return {
+      title: 'Page Not Found',
+    }
   }
 
   return {
@@ -53,9 +52,8 @@ export async function generateStaticParams() {
   }))
 }
 
-export default async function LocalAreaPage({ params }: Props) {
-  const resolvedParams = await params
-  const area = getAreaBySlug(resolvedParams.localSlug)
+export default function LocalAreaPage({ params }: Props) {
+  const area = getAreaBySlug(params.localSlug)
 
   if (!area) {
     notFound()
