@@ -517,3 +517,6 @@ export function addSecurityHeaders(response: NextResponse): NextResponse {
 
 // Export admin auth utilities
 export { validateAdminSession, type AdminSession } from './admin-auth'
+
+// Export NextAuth auth function for API routes
+export { auth } from '@/lib/auth'
