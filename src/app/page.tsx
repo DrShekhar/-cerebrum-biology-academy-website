@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { CountdownTimer } from '@/components/ui/CountdownTimer'
+import { GraduationCap, Target, Trophy } from 'lucide-react'
 
 // Build timestamp: 2025-10-19T20:00:00Z - Cache invalidation
 export const metadata: Metadata = {
@@ -179,24 +180,27 @@ export default function HomePage() {
               {
                 title: 'Expert Faculty',
                 description: 'Learn from AIIMS graduates and medical professionals',
-                icon: '👨‍⚕️',
+                icon: GraduationCap,
+                color: 'text-blue-600',
               },
               {
                 title: 'Personalized Learning',
                 description: 'AI-powered adaptive testing and 24/7 doubt clearing',
-                icon: '🎯',
+                icon: Target,
+                color: 'text-teal-600',
               },
               {
                 title: 'Proven Results',
                 description: '94.2% qualification rate, 2,847+ medical college selections',
-                icon: '🏆',
+                icon: Trophy,
+                color: 'text-amber-600',
               },
             ].map((feature, idx) => (
               <div
                 key={idx}
                 className="bg-white border border-slate-200 rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow duration-200"
               >
-                <div className="text-4xl mb-4">{feature.icon}</div>
+                <feature.icon className={`w-12 h-12 mb-4 ${feature.color}`} />
                 <h3 className="text-xl font-bold text-slate-900 mb-3">{feature.title}</h3>
                 <p className="text-slate-600">{feature.description}</p>
               </div>
