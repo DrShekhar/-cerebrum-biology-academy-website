@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'NEET Success Stories | 2,847+ Medical College Selections',
     description:
-      'Real students, real results. See how our NEET Biology coaching transformed lives. 94.2% success rate, 247+ in Top 1000 AIR.',
+      'Real students, real results. See how our NEET Biology coaching transformed lives. 98% success rate, 247+ in Top 1000 AIR.',
     images: ['/og-images/testimonials.jpg'],
     url: 'https://cerebrumbiologyacademy.com/testimonials',
     type: 'website',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'NEET Success Testimonials | Cerebrum Biology Academy',
     description:
-      '2,847+ medical college selections, 94.2% success rate, student transformation stories',
+      '2,847+ medical college selections, 98% success rate, student transformation stories',
     images: ['/og-images/testimonials.jpg'],
   },
   alternates: {

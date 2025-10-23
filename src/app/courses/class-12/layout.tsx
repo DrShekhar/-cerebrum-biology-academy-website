@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Class 12 Biology NEET Target Batch | Crack NEET 2025',
     description:
-      'Final year intensive NEET Biology coaching. 94.2% qualification rate, board exam 90+ guarantee, complete syllabus + previous years. Book your seat now!',
+      'Final year intensive NEET Biology coaching. 98% qualification rate, board exam 90+ guarantee, complete syllabus + previous years. Book your seat now!',
     images: ['/og-images/class-12-biology.jpg'],
     url: 'https://cerebrumbiologyacademy.com/courses/class-12',
     type: 'website',
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Class 12 Biology NEET Target Batch 2025 | Cerebrum Academy',
-    description: 'Intensive NEET preparation, 90+ board marks guarantee, 94.2% success rate',
+    description: 'Intensive NEET preparation, 90+ board marks guarantee, 98% success rate',
     images: ['/og-images/class-12-biology.jpg'],
   },
   alternates: {

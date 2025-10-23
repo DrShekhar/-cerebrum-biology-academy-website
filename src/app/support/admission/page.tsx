@@ -99,7 +99,11 @@ export default function AdmissionPage() {
       duration: '1 Year',
       fee: '₹34,999',
       description: 'Intensive NEET preparation for Class 12 students',
-      features: ['Comprehensive syllabus coverage', 'Regular mock tests', 'Doubt clearing sessions'],
+      features: [
+        'Comprehensive syllabus coverage',
+        'Regular mock tests',
+        'Doubt clearing sessions',
+      ],
     },
     {
       id: 'dropper',
@@ -188,8 +192,8 @@ export default function AdmissionPage() {
               <span className="block text-yellow-300">Medical Excellence</span>
             </h1>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Join thousands of successful students who have achieved their NEET dreams with Cerebrum Biology Academy. 
-              Simple admission process with comprehensive support.
+              Join thousands of successful students who have achieved their NEET dreams with
+              Cerebrum Biology Academy. Simple admission process with comprehensive support.
             </p>
             <div className="flex flex-wrap justify-center gap-8 text-center">
               <div>
@@ -201,7 +205,7 @@ export default function AdmissionPage() {
                 <div className="text-blue-200">Quick Response</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-yellow-300">94.2%</div>
+                <div className="text-3xl font-bold text-yellow-300">98%</div>
                 <div className="text-blue-200">Success Rate</div>
               </div>
             </div>
@@ -227,7 +231,7 @@ export default function AdmissionPage() {
           <div className="relative">
             {/* Progress Line */}
             <div className="absolute top-1/2 left-0 right-0 h-1 bg-gray-200 transform -translate-y-1/2 hidden lg:block"></div>
-            
+
             <div className="grid lg:grid-cols-5 gap-8">
               {admissionSteps.map((step, index) => (
                 <motion.div
@@ -238,9 +242,13 @@ export default function AdmissionPage() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
                   <div className="relative z-10 bg-white">
-                    <div className={`w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4 ${
-                      step.step <= currentStep ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-600'
-                    }`}>
+                    <div
+                      className={`w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4 ${
+                        step.step <= currentStep
+                          ? 'bg-blue-600 text-white'
+                          : 'bg-gray-200 text-gray-600'
+                      }`}
+                    >
                       <step.icon className="w-8 h-8" />
                     </div>
                     <h3 className="text-lg font-bold text-gray-900 mb-2">{step.title}</h3>
@@ -273,7 +281,9 @@ export default function AdmissionPage() {
               <motion.div
                 key={course.id}
                 className={`bg-white rounded-2xl p-6 border-2 transition-all duration-300 cursor-pointer ${
-                  selectedCourse === course.id ? 'border-blue-600 shadow-lg' : 'border-gray-200 hover:border-blue-300'
+                  selectedCourse === course.id
+                    ? 'border-blue-600 shadow-lg'
+                    : 'border-gray-200 hover:border-blue-300'
                 }`}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -287,7 +297,7 @@ export default function AdmissionPage() {
                   <div className="text-2xl font-bold text-blue-600">{course.fee}</div>
                   <div className="text-gray-500 text-sm">{course.duration}</div>
                 </div>
-                
+
                 <div className="space-y-2">
                   {course.features.map((feature, idx) => (
                     <div key={idx} className="flex items-center space-x-2 text-sm text-gray-600">
@@ -364,7 +374,10 @@ export default function AdmissionPage() {
           >
             <div className="space-y-4">
               {requiredDocuments.map((doc, index) => (
-                <div key={index} className="flex items-center justify-between p-4 border border-gray-200 rounded-xl">
+                <div
+                  key={index}
+                  className="flex items-center justify-between p-4 border border-gray-200 rounded-xl"
+                >
                   <div className="flex items-center space-x-3">
                     <FileText className="w-6 h-6 text-blue-600" />
                     <div>
@@ -375,9 +388,11 @@ export default function AdmissionPage() {
                       <div className="text-sm text-gray-600">Format: {doc.format}</div>
                     </div>
                   </div>
-                  <div className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                    doc.required ? 'bg-red-100 text-red-600' : 'bg-gray-100 text-gray-600'
-                  }`}>
+                  <div
+                    className={`px-3 py-1 rounded-full text-xs font-semibold ${
+                      doc.required ? 'bg-red-100 text-red-600' : 'bg-gray-100 text-gray-600'
+                    }`}
+                  >
                     {doc.required ? 'Required' : 'Optional'}
                   </div>
                 </div>
@@ -414,11 +429,15 @@ export default function AdmissionPage() {
                 <Calendar className="w-12 h-12 text-green-600 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{phase.phase}</h3>
                 <p className="text-gray-600 mb-3">{phase.dates}</p>
-                <div className={`inline-block px-4 py-2 rounded-full font-semibold ${
-                  index === 0 ? 'bg-green-100 text-green-700' : 
-                  index === 1 ? 'bg-yellow-100 text-yellow-700' : 
-                  'bg-red-100 text-red-700'
-                }`}>
+                <div
+                  className={`inline-block px-4 py-2 rounded-full font-semibold ${
+                    index === 0
+                      ? 'bg-green-100 text-green-700'
+                      : index === 1
+                        ? 'bg-yellow-100 text-yellow-700'
+                        : 'bg-red-100 text-red-700'
+                  }`}
+                >
                   {phase.discount}
                 </div>
               </motion.div>

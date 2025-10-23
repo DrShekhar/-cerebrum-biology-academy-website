@@ -120,7 +120,7 @@ export default function Class12Page() {
   ]
 
   const successMetrics = [
-    { label: '94.2%', sublabel: 'NEET Success Rate', icon: Trophy },
+    { label: '98%', sublabel: 'NEET Success Rate', icon: Trophy },
     { label: '680+', sublabel: 'Average NEET Score', icon: Star },
     { label: '97.1%', sublabel: 'Board Pass Rate', icon: Award },
     { label: '3.2K+', sublabel: 'NEET Qualifiers', icon: Users },
@@ -536,7 +536,7 @@ export default function Class12Page() {
             <div className="flex items-center justify-center space-x-8 text-sm opacity-90">
               <div className="flex items-center">
                 <Trophy className="w-4 h-4 mr-2" />
-                <span>94.2% NEET Success</span>
+                <span>98% NEET Success</span>
               </div>
               <div className="flex items-center">
                 <Star className="w-4 h-4 mr-2" />

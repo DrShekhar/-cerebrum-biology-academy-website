@@ -112,7 +112,7 @@ export default function AboutPage() {
 
   const achievements = [
     { number: '2847', label: 'Students Coached', icon: Users },
-    { number: '94.2%', label: 'Success Rate', icon: Target },
+    { number: '98%', label: 'Success Rate', icon: Target },
     { number: '247', label: 'Top 1000 Ranks', icon: Award },
     { number: '9', label: 'Years of Excellence', icon: Calendar },
   ]
@@ -168,7 +168,7 @@ export default function AboutPage() {
               <AcademicList
                 variant="checkmark"
                 items={[
-                  '94.2% NEET qualification success rate',
+                  '98% NEET qualification success rate',
                   '2847+ medical college selections achieved',
                   'AIIMS alumnus-led teaching excellence',
                   'Proven teaching methodologies',
@@ -527,7 +527,7 @@ export default function AboutPage() {
               <div className="text-green-100">Students Coached</div>
             </div>
             <div>
-              <div className="text-3xl font-bold mb-2">94.2%</div>
+              <div className="text-3xl font-bold mb-2">98%</div>
               <div className="text-green-100">Success Rate</div>
             </div>
             <div>

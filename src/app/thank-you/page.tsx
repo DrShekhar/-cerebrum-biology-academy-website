@@ -292,7 +292,7 @@ function ThankYouContent() {
                 <div className="text-gray-600 text-sm">Students Succeeded</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-600">94.2%</div>
+                <div className="text-3xl font-bold text-purple-600">98%</div>
                 <div className="text-gray-600 text-sm">Success Rate</div>
               </div>
               <div className="text-center">

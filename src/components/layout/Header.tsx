@@ -57,7 +57,7 @@ const Header = () => {
       href: '/results',
       label: 'Results',
       icon: Trophy,
-      badge: '94.2%',
+      badge: '98%',
       priority: 1,
     },
     {

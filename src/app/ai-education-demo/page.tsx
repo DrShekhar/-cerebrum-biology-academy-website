@@ -181,7 +181,7 @@ export default function AIEducationDemo() {
                   label: 'Faster Learning',
                   description: 'Accelerated concept mastery',
                 },
-                { metric: '94.2%', label: 'Success Rate', description: 'NEET qualification rate' },
+                { metric: '98%', label: 'Success Rate', description: 'NEET qualification rate' },
                 {
                   metric: '<2min',
                   label: 'Response Time',

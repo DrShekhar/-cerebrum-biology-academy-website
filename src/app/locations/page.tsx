@@ -152,7 +152,7 @@ export default function LocationsPage() {
               <div className="text-sm opacity-80">NEET Aspirants</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold">94.2%</div>
+              <div className="text-3xl font-bold">98%</div>
               <div className="text-sm opacity-80">Success Rate</div>
             </div>
           </div>

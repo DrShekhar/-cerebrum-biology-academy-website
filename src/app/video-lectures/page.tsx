@@ -96,7 +96,7 @@ export default function VideoLecturesPage() {
               <div className="space-y-6">
                 <div className="flex items-center justify-between">
                   <span className="text-gray-600">NEET Qualification Rate</span>
-                  <span className="text-2xl font-bold text-emerald-600">94.2%</span>
+                  <span className="text-2xl font-bold text-emerald-600">98%</span>
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-gray-600">AIIMS Selections</span>

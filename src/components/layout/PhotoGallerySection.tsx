@@ -502,7 +502,7 @@ export function PhotoGallerySection({
             </div>
             <div className="flex items-center">
               <div className="w-2 h-2 bg-blue-400 rounded-full mr-2"></div>
-              <span>247+ Students Featured</span>
+              <span>2,500+ Students Mentored</span>
             </div>
             <div className="flex items-center">
               <div className="w-2 h-2 bg-yellow-400 rounded-full mr-2"></div>

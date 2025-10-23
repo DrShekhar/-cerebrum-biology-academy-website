@@ -408,7 +408,7 @@ const NEETCompletePage = () => {
                   #1 NEET Biology Course
                 </div>
                 <div className="bg-green-500 text-green-900 px-3 py-1 rounded-full text-sm font-bold">
-                  94.2% Success Rate
+                  98% Success Rate
                 </div>
               </div>
 
@@ -430,7 +430,7 @@ const NEETCompletePage = () => {
                   <div className="text-sm text-blue-200">Highest Score</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-yellow-400">94.2%</div>
+                  <div className="text-3xl font-bold text-yellow-400">98%</div>
                   <div className="text-sm text-blue-200">Success Rate</div>
                 </div>
                 <div className="text-center">

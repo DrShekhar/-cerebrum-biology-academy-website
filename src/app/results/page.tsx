@@ -176,7 +176,7 @@ export default function ResultsPage() {
       : 'https://cerebrumbiologyacademy.com/results'
 
   const handleShare = (platform: string) => {
-    const text = `Cerebrum Biology Academy NEET 2024: 247 AIIMS selections, 94.2% success rate! Check out these incredible results.`
+    const text = `Cerebrum Biology Academy NEET 2024: 247 AIIMS selections, 98% success rate! Check out these incredible results.`
 
     const urls = {
       facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`,

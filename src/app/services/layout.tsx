@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Complete NEET Biology Services | All-in-One Learning Platform',
     description:
-      'From live classes to mock tests, we provide everything you need for NEET success. 94.2% success rate with comprehensive support system.',
+      'From live classes to mock tests, we provide everything you need for NEET success. 98% success rate with comprehensive support system.',
     images: ['/og-images/services.jpg'],
     url: 'https://cerebrumbiologyacademy.com/services',
     type: 'website',

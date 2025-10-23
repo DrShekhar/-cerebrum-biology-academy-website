@@ -108,7 +108,7 @@ const stats = [
   },
   {
     icon: Award,
-    value: '94.2%',
+    value: '98%',
     label: 'NEET Qualification',
     color: 'text-emerald-600',
   },
@@ -143,7 +143,7 @@ export default function TestimonialsPage() {
               methodology and personalized guidance
             </p>
             <div className="flex items-center justify-center space-x-8 text-sm opacity-75">
-              <span>94.2% NEET Qualification Rate</span>
+              <span>98% NEET Qualification Rate</span>
               <span>•</span>
               <span>2,847+ Students Taught</span>
               <span>•</span>

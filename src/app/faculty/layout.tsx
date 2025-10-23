@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Meet Our AIIMS Expert Faculty | 15+ Years Experience',
     description:
-      'Learn from the best! Our faculty includes AIIMS graduates, PhD holders, and experienced NEET mentors. Meet the teachers behind 94.2% success rate.',
+      'Learn from the best! Our faculty includes AIIMS graduates, PhD holders, and experienced NEET mentors. Meet the teachers behind 98% success rate.',
     images: ['/og-images/faculty.jpg'],
     url: 'https://cerebrumbiologyacademy.com/faculty',
     type: 'website',

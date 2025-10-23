@@ -45,6 +45,7 @@ export function Footer() {
 
   const companyLinks = [
     { name: 'About Us', href: '/about' },
+    { name: 'Dr. Shekhar Singh', href: '/dr-shekhar-singh' },
     { name: 'Our Faculty', href: '/faculty' },
     { name: 'Success Stories', href: '/testimonials' },
     { name: 'Results', href: '/results' },

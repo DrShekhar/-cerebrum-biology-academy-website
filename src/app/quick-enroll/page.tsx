@@ -4,7 +4,7 @@ import { HighConversionLanding } from '@/components/conversion/HighConversionLan
 export const metadata: Metadata = {
   title: 'Quick Enroll - Master Biology, Conquer NEET | Cerebrum Biology Academy',
   description:
-    'Take our 2-minute quiz and get personalized NEET Biology course recommendations with instant enrollment. 94.2% success rate, 247 AIIMS selections. Start your medical journey today!',
+    'Take our 2-minute quiz and get personalized NEET Biology course recommendations with instant enrollment. 98% success rate, 247 AIIMS selections. Start your medical journey today!',
   keywords: [
     'NEET Biology quick enrollment',
     'instant NEET admission',
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Quick Enroll - 2-Minute Path to NEET Success',
     description:
-      'Take our quiz and get instant course recommendations. 94.2% success rate guaranteed.',
+      'Take our quiz and get instant course recommendations. 98% success rate guaranteed.',
   },
 }
 

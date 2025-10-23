@@ -79,7 +79,7 @@ export default function DemoPage() {
     },
     {
       name: 'Dr. Rajesh Kumar',
-      qualification: 'M.Sc. Zoology, 12+ years experience', 
+      qualification: 'M.Sc. Zoology, 12+ years experience',
       specialization: 'Human Physiology & Genetics',
       image: '/faculty/dr-rajesh-kumar.jpg',
     },
@@ -88,7 +88,11 @@ export default function DemoPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     // Handle demo booking
-    console.log('Demo booking:', { ...formData, course: selectedCourse, timeSlot: selectedTimeSlot })
+    console.log('Demo booking:', {
+      ...formData,
+      course: selectedCourse,
+      timeSlot: selectedTimeSlot,
+    })
     alert('Demo class booked successfully! We will contact you shortly.')
   }
 
@@ -112,8 +116,8 @@ export default function DemoPage() {
               <span className="block text-yellow-300">Before You Enroll</span>
             </h1>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Join our free demo class and discover why 94.2% of our students crack NEET. 
-              Experience our unique teaching methodology and meet our expert faculty.
+              Join our free demo class and discover why 98% of our students crack NEET. Experience
+              our unique teaching methodology and meet our expert faculty.
             </p>
             <div className="flex flex-wrap justify-center gap-8 text-center">
               <div>
@@ -228,15 +232,13 @@ export default function DemoPage() {
                         !slot.available
                           ? 'border-gray-200 bg-gray-100 text-gray-400 cursor-not-allowed'
                           : selectedTimeSlot === slot.id
-                          ? 'border-blue-600 bg-blue-50'
-                          : 'border-gray-200 hover:border-blue-300'
+                            ? 'border-blue-600 bg-blue-50'
+                            : 'border-gray-200 hover:border-blue-300'
                       }`}
                     >
                       <Clock className="w-5 h-5 mx-auto mb-2" />
                       <div className="font-semibold">{slot.time}</div>
-                      {!slot.available && (
-                        <div className="text-xs text-red-500 mt-1">Booked</div>
-                      )}
+                      {!slot.available && <div className="text-xs text-red-500 mt-1">Booked</div>}
                     </button>
                   ))}
                 </div>

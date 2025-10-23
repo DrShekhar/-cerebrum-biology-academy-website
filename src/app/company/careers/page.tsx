@@ -84,7 +84,8 @@ export default function CareersPage() {
       experience: '5+ years',
       salary: '₹8-15 LPA',
       urgent: true,
-      description: 'Looking for passionate Biology educators with proven track record in NEET coaching',
+      description:
+        'Looking for passionate Biology educators with proven track record in NEET coaching',
       requirements: [
         'M.Sc./Ph.D. in Biology/Life Sciences',
         '5+ years NEET coaching experience',
@@ -330,9 +331,10 @@ export default function CareersPage() {
     },
   ]
 
-  const filteredPositions = selectedDepartment === 'all'
-    ? openPositions
-    : openPositions.filter(position => position.department === selectedDepartment)
+  const filteredPositions =
+    selectedDepartment === 'all'
+      ? openPositions
+      : openPositions.filter((position) => position.department === selectedDepartment)
 
   const handleApplicationSubmit = (e: React.FormEvent) => {
     e.preventDefault()
@@ -356,8 +358,9 @@ export default function CareersPage() {
               <span className="block text-yellow-300">Future Doctors</span>
             </h1>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Be part of a passionate team dedicated to helping students achieve their medical dreams. 
-              We're looking for educators, innovators, and leaders who share our commitment to excellence.
+              Be part of a passionate team dedicated to helping students achieve their medical
+              dreams. We're looking for educators, innovators, and leaders who share our commitment
+              to excellence.
             </p>
             <div className="flex flex-wrap justify-center gap-8 text-center">
               <div>
@@ -373,7 +376,7 @@ export default function CareersPage() {
                 <div className="text-blue-200">Team Members</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-yellow-300">94.2%</div>
+                <div className="text-3xl font-bold text-yellow-300">98%</div>
                 <div className="text-blue-200">Success Rate</div>
               </div>
             </div>
@@ -392,7 +395,8 @@ export default function CareersPage() {
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Values & Culture</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We foster an environment where passion meets purpose, and every team member contributes to student success.
+              We foster an environment where passion meets purpose, and every team member
+              contributes to student success.
             </p>
           </motion.div>
 
@@ -516,7 +520,10 @@ export default function CareersPage() {
                       <h4 className="font-semibold text-gray-900 mb-2">Key Requirements:</h4>
                       <ul className="space-y-1">
                         {position.requirements.slice(0, 2).map((req, idx) => (
-                          <li key={idx} className="flex items-center space-x-2 text-sm text-gray-600">
+                          <li
+                            key={idx}
+                            className="flex items-center space-x-2 text-sm text-gray-600"
+                          >
                             <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
                             <span>{req}</span>
                           </li>
@@ -605,7 +612,9 @@ export default function CareersPage() {
                     className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Enter your full name"
                     value={applicationForm.name}
-                    onChange={(e) => setApplicationForm({ ...applicationForm, name: e.target.value })}
+                    onChange={(e) =>
+                      setApplicationForm({ ...applicationForm, name: e.target.value })
+                    }
                   />
                 </div>
                 <div>
@@ -618,7 +627,9 @@ export default function CareersPage() {
                     className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Enter your email"
                     value={applicationForm.email}
-                    onChange={(e) => setApplicationForm({ ...applicationForm, email: e.target.value })}
+                    onChange={(e) =>
+                      setApplicationForm({ ...applicationForm, email: e.target.value })
+                    }
                   />
                 </div>
               </div>
@@ -634,7 +645,9 @@ export default function CareersPage() {
                     className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Enter your phone number"
                     value={applicationForm.phone}
-                    onChange={(e) => setApplicationForm({ ...applicationForm, phone: e.target.value })}
+                    onChange={(e) =>
+                      setApplicationForm({ ...applicationForm, phone: e.target.value })
+                    }
                   />
                 </div>
                 <div>
@@ -645,7 +658,9 @@ export default function CareersPage() {
                     required
                     className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     value={applicationForm.position}
-                    onChange={(e) => setApplicationForm({ ...applicationForm, position: e.target.value })}
+                    onChange={(e) =>
+                      setApplicationForm({ ...applicationForm, position: e.target.value })
+                    }
                   >
                     <option value="">Select a position</option>
                     {openPositions.map((position) => (
@@ -665,7 +680,9 @@ export default function CareersPage() {
                   required
                   className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   value={applicationForm.experience}
-                  onChange={(e) => setApplicationForm({ ...applicationForm, experience: e.target.value })}
+                  onChange={(e) =>
+                    setApplicationForm({ ...applicationForm, experience: e.target.value })
+                  }
                 >
                   <option value="">Select experience level</option>
                   <option value="0-1">0-1 years</option>
@@ -685,7 +702,9 @@ export default function CareersPage() {
                   className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="Tell us why you're interested in this position and what makes you a great fit..."
                   value={applicationForm.coverLetter}
-                  onChange={(e) => setApplicationForm({ ...applicationForm, coverLetter: e.target.value })}
+                  onChange={(e) =>
+                    setApplicationForm({ ...applicationForm, coverLetter: e.target.value })
+                  }
                 />
               </div>
 
@@ -700,7 +719,12 @@ export default function CareersPage() {
                     required
                     className="hidden"
                     id="resume-upload"
-                    onChange={(e) => setApplicationForm({ ...applicationForm, resume: e.target.files?.[0] || null })}
+                    onChange={(e) =>
+                      setApplicationForm({
+                        ...applicationForm,
+                        resume: e.target.files?.[0] || null,
+                      })
+                    }
                   />
                   <label htmlFor="resume-upload" className="cursor-pointer">
                     <div className="text-gray-600">
@@ -729,7 +753,8 @@ export default function CareersPage() {
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold mb-4">Questions About Careers?</h2>
           <p className="text-xl text-blue-100 mb-8">
-            Our HR team is here to help you with any questions about opportunities at Cerebrum Biology Academy
+            Our HR team is here to help you with any questions about opportunities at Cerebrum
+            Biology Academy
           </p>
           <div className="flex flex-wrap justify-center gap-8">
             <div className="flex items-center space-x-2">

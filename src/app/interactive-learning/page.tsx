@@ -381,7 +381,7 @@ export default function InteractiveLearningPage() {
           </div>
           <div>
             <AcademicEmphasis variant="stat" className="text-white text-3xl block mb-2">
-              94.2%
+              98%
             </AcademicEmphasis>
             <div className="text-blue-100 font-medium">Success Rate</div>
           </div>

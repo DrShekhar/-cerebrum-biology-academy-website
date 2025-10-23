@@ -4,7 +4,7 @@ import { ExploratoryFlow } from '@/components/conversion/ExploratoryFlow'
 export const metadata: Metadata = {
   title: 'Explore NEET Biology Courses - Compare & Choose | Cerebrum Biology Academy',
   description:
-    'Take your time to explore our comprehensive NEET Biology courses. Compare features, read success stories, and book free counseling. 94.2% success rate, 247 AIIMS selections.',
+    'Take your time to explore our comprehensive NEET Biology courses. Compare features, read success stories, and book free counseling. 98% success rate, 247 AIIMS selections.',
   keywords: [
     'NEET Biology course exploration',
     'compare NEET courses',
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Explore & Compare NEET Biology Courses',
     description:
-      'Detailed course exploration with success stories and expert counseling. 94.2% success rate.',
+      'Detailed course exploration with success stories and expert counseling. 98% success rate.',
   },
 }
 

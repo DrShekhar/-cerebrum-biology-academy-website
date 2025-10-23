@@ -239,7 +239,7 @@ export default function DemoBookingPage() {
               </div>
               <div className="flex items-center text-gray-700">
                 <CheckCircle className="w-5 h-5 text-purple-600 mr-2" />
-                <span>94.2% Success Rate</span>
+                <span>98% Success Rate</span>
               </div>
             </div>
           </motion.div>
@@ -417,14 +417,14 @@ export default function DemoBookingPage() {
 
               {/* Why Choose Us */}
               <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-3xl p-8 text-white shadow-lg">
-                <h3 className="text-2xl font-bold mb-6">Why 5,000+ Students Choose Us</h3>
+                <h3 className="text-2xl font-bold mb-6">Why 2,500+ Students Choose Us</h3>
                 <div className="space-y-4">
                   <div className="flex items-center">
-                    <div className="text-4xl font-bold mr-4">247</div>
-                    <div className="text-sm">AIIMS Selections Last Year</div>
+                    <div className="text-4xl font-bold mr-4">695</div>
+                    <div className="text-sm">Sadhna's NEET 2023 Score (100%ile Bio)</div>
                   </div>
                   <div className="flex items-center">
-                    <div className="text-4xl font-bold mr-4">94.2%</div>
+                    <div className="text-4xl font-bold mr-4">98%</div>
                     <div className="text-sm">NEET Qualification Rate</div>
                   </div>
                   <div className="flex items-center">
