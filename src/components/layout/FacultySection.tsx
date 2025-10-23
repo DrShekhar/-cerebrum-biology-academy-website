@@ -84,11 +84,19 @@ export function FacultySection() {
               transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
               viewport={{ once: true }}
             >
-              {/* Faculty Image Placeholder */}
-              <div className="w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center text-white relative overflow-hidden group-hover:scale-105 transition-transform">
-                <Users className="w-12 h-12 opacity-80" />
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 opacity-90"></div>
-                <GraduationCap className="w-8 h-8 relative z-10" />
+              {/* Faculty Image */}
+              <div className="w-24 h-24 mx-auto mb-6 rounded-full overflow-hidden border-4 border-blue-100 group-hover:scale-105 transition-transform shadow-lg">
+                {faculty.image ? (
+                  <img
+                    src={faculty.image}
+                    alt={faculty.name}
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <div className="w-full h-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center">
+                    <GraduationCap className="w-12 h-12 text-white" />
+                  </div>
+                )}
               </div>
 
               {/* Faculty Info */}
@@ -97,24 +105,6 @@ export function FacultySection() {
                 <div className="flex items-center justify-center text-gray-600 text-sm mb-3">
                   <Award className="w-4 h-4 mr-1" />
                   {faculty.experience}
-                </div>
-              </div>
-
-              {/* Specializations */}
-              <div className="mb-6">
-                <h4 className="text-sm font-semibold text-gray-800 mb-3 flex items-center">
-                  <Microscope className="w-4 h-4 mr-2 text-blue-600" />
-                  Specializations
-                </h4>
-                <div className="flex flex-wrap gap-2">
-                  {faculty.specialization.map((spec, idx) => (
-                    <span
-                      key={idx}
-                      className="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded-full"
-                    >
-                      {spec}
-                    </span>
-                  ))}
                 </div>
               </div>
 

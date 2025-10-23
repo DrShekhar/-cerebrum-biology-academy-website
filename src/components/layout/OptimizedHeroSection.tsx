@@ -61,7 +61,15 @@ export function OptimizedHeroSection({ className = '' }: OptimizedHeroSectionPro
     <div
       className={`relative min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-blue-900 overflow-hidden ${className}`}
     >
+      {/* Background Image with Overlay */}
       <div className="absolute inset-0">
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-20"
+          style={{
+            backgroundImage:
+              'url(https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1440,h=756,fit=crop,f=jpeg/meP3n6VKelS9LnOn/img_2854-YD0v2gX7w8TZqBql.jpg)',
+          }}
+        />
         <motion.div
           className="absolute top-1/4 left-1/6 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl"
           animate={{
@@ -102,8 +110,9 @@ export function OptimizedHeroSection({ className = '' }: OptimizedHeroSectionPro
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <span className="text-yellow-300">247 Students</span> Got into{' '}
-            <span className="text-green-300">AIIMS</span> Last Year.
+            <span className="text-yellow-300">Sadhna Scored 695</span> in NEET 2023
+            <br />
+            <span className="text-green-300">100 Percentile</span> in Biology
             <br />
             <span className="text-white">You're Next.</span>
           </motion.h1>
@@ -114,7 +123,8 @@ export function OptimizedHeroSection({ className = '' }: OptimizedHeroSectionPro
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            94.2% Success Rate • 5,000+ Students Mentored • AIIMS Faculty
+            98% Success Rate • 2,500+ Students Mentored • Founded by Dr. Shekhar C Singh (AIIMS New
+            Delhi)
           </motion.p>
 
           <motion.div
@@ -151,18 +161,16 @@ export function OptimizedHeroSection({ className = '' }: OptimizedHeroSectionPro
             transition={{ duration: 0.8, delay: 0.8 }}
           >
             <div className="text-center bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
-              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-green-400">247</div>
-              <div className="text-xs sm:text-sm text-blue-200 mt-1">AIIMS Selections</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-green-400">695</div>
+              <div className="text-xs sm:text-sm text-blue-200 mt-1">Sadhna's Score</div>
             </div>
             <div className="text-center bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
-              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-yellow-400">
-                94.2%
-              </div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-yellow-400">98%</div>
               <div className="text-xs sm:text-sm text-blue-200 mt-1">Success Rate</div>
             </div>
             <div className="text-center bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
               <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-purple-400">
-                5,000+
+                2,500+
               </div>
               <div className="text-xs sm:text-sm text-blue-200 mt-1">Students</div>
             </div>

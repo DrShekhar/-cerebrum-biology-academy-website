@@ -69,12 +69,20 @@ export function Footer() {
   ]
 
   const socialLinks = [
-    { name: 'Facebook', href: 'https://facebook.com/cerebrumbiologyacademy', icon: Facebook },
-    { name: 'Instagram', href: 'https://instagram.com/cerebrumbiologyacademy', icon: Instagram },
-    { name: 'YouTube', href: 'https://youtube.com/cerebrumbiologyacademy', icon: Youtube },
-    { name: 'Twitter', href: 'https://twitter.com/cerebrumbioacad', icon: Twitter },
+    {
+      name: 'Facebook',
+      href: 'https://www.facebook.com/people/Cerebrum-Biology-Academy/100063640374134/',
+      icon: Facebook,
+    },
+    { name: 'Instagram', href: 'https://www.instagram.com/biologyforneetug/', icon: Instagram },
+    {
+      name: 'YouTube',
+      href: 'https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQw',
+      icon: Youtube,
+    },
+    { name: 'Twitter', href: 'https://twitter.com/shekharsingh', icon: Twitter },
     { name: 'WhatsApp', href: 'https://wa.me/918826444334', icon: MessageCircle },
-    { name: 'Telegram', href: 'https://t.me/cerebrumbiologyacademy', icon: Send },
+    { name: 'Telegram', href: 'https://t.me/biologyforneetug', icon: Send },
   ]
 
   return (
@@ -103,9 +111,9 @@ export function Footer() {
             </div>
 
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Premier biology coaching institute specializing in NEET preparation and board exams.
-              Serving students from Classes 9-12 and droppers across India and English-speaking
-              countries.
+              Founded by Dr. Shekhar C Singh (AIIMS New Delhi). Premier NEET Biology coaching
+              institute with 14+ years of excellence. 98% success rate, 2,500+ students mentored to
+              medical colleges.
             </p>
 
             {/* Contact Info */}
@@ -116,7 +124,11 @@ export function Footer() {
                   <a href="tel:+918826444334" className="hover:text-white transition-colors">
                     +91 88264 44334
                   </a>
-                  <span className="text-gray-500 text-sm block">Mon-Sat: 9 AM - 8 PM</span>
+                  {' / '}
+                  <a href="tel:+919999744334" className="hover:text-white transition-colors">
+                    +91 99997 44334
+                  </a>
+                  <span className="text-gray-500 text-sm block">Mon-Sat: 8 AM - 8 PM</span>
                 </div>
               </div>
 
@@ -132,9 +144,16 @@ export function Footer() {
 
               <div className="flex items-start text-gray-300">
                 <MapPin className="w-4 h-4 mr-3 text-blue-400 mt-1" />
-                <div>
-                  <span>Delhi NCR, India</span>
-                  <span className="text-gray-500 text-sm block">Multiple Centers Available</span>
+                <div className="text-sm space-y-1">
+                  <div>
+                    <strong>Rohini:</strong> DC Chauk Sector 9, Delhi 110085
+                  </div>
+                  <div>
+                    <strong>Gurugram:</strong> M2K Corporate Park, Sector 50, 122018
+                  </div>
+                  <div>
+                    <strong>South Delhi:</strong> Block B, South Extension 2, 110049
+                  </div>
                 </div>
               </div>
             </div>

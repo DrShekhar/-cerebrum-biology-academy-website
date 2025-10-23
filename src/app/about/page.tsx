@@ -43,17 +43,24 @@ import {
 export default function AboutPage() {
   const milestones = [
     {
-      year: '2015',
-      title: 'Academy Founded',
-      description: 'Started with a vision to make quality NEET coaching accessible to all students',
+      year: 'Early Career',
+      title: 'Academic Head at Narayana Group',
+      description:
+        'Dr. Shekhar C Singh served as Academic Head, leading NEET Biology preparation programs',
       icon: Building,
     },
     {
-      year: '2017',
-      title: 'First 100 Selections',
+      year: '2015',
+      title: 'Academy Founded',
       description:
-        'Achieved remarkable success with 100 medical college selections in just 2 years',
+        'Dr. Shekhar C Singh (AIIMS Delhi) founded Cerebrum Biology Academy with a vision to make quality NEET coaching accessible to all students',
       icon: Trophy,
+    },
+    {
+      year: '2017',
+      title: 'Growing Success',
+      description: 'Achieved remarkable success with students securing medical college admissions',
+      icon: Star,
     },
     {
       year: '2019',
@@ -62,21 +69,15 @@ export default function AboutPage() {
       icon: BookOpen,
     },
     {
-      year: '2021',
-      title: 'AI-Powered Analytics',
-      description: 'Integrated AI technology for personalized learning and performance tracking',
-      icon: Zap,
-    },
-    {
       year: '2023',
-      title: '2500+ Success Stories',
-      description: 'Crossed 2500 successful NEET qualifications with 94% success rate',
-      icon: Star,
+      title: 'Continued Excellence',
+      description: 'Maintained high success rates with proven teaching methodologies',
+      icon: TrendingUp,
     },
     {
       year: '2024',
-      title: 'Research Institute',
-      description: 'Established research wing for advanced NEET preparation methodologies',
+      title: 'Educational Innovation',
+      description: 'Continuing to innovate in NEET Biology preparation and student mentoring',
       icon: Lightbulb,
     },
   ]
@@ -145,7 +146,7 @@ export default function AboutPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Hero Section - Harvard-level Academic Excellence */}
+      {/* Hero Section - Academic Excellence */}
       <HeroSection className="text-white">
         <div className="grid lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7">
@@ -157,11 +158,10 @@ export default function AboutPage() {
             </AcademicHeadline>
 
             <AcademicParagraph size="large" className="text-blue-100 mb-8">
-              Established in 2015, we are{' '}
-              <strong>India's premier NEET Biology coaching institute</strong>
-              committed to nurturing future medical professionals through research-backed teaching
-              methodologies, personalized mentoring, and academic excellence that meets
-              international standards.
+              Founded by Dr. Shekhar C Singh (AIIMS Delhi) in 2015, we are{' '}
+              <strong>an AIIMSonian's initiative</strong> committed to making world-class NEET
+              Biology education accessible to all students through proven teaching methodologies and
+              personal mentoring.
             </AcademicParagraph>
 
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8">
@@ -170,8 +170,8 @@ export default function AboutPage() {
                 items={[
                   '94.2% NEET qualification success rate',
                   '2847+ medical college selections achieved',
-                  'Harvard-trained curriculum design',
-                  'Research-backed teaching methodologies',
+                  'AIIMS alumnus-led teaching excellence',
+                  'Proven teaching methodologies',
                 ]}
                 className="text-white"
                 animation={false}
@@ -225,7 +225,7 @@ export default function AboutPage() {
         <SectionHeader
           subtitle="Academic Foundation"
           title="Our Mission & Vision"
-          description="Grounded in research-backed pedagogy and committed to transforming medical education in India"
+          description="Grounded in proven teaching methodologies and committed to transforming medical education in India"
           variant="center"
         />
 
@@ -239,20 +239,19 @@ export default function AboutPage() {
             </div>
 
             <AcademicQuote variant="research" className="bg-transparent border-none p-0">
-              To democratize quality NEET preparation by providing{' '}
-              <strong>world-class biology education</strong>
-              that combines traditional teaching excellence with modern learning technologies,
-              ensuring every student achieves their medical career aspirations through
-              evidence-based methodology.
+              To revolutionize education and make high-quality NEET Biology instruction universally
+              accessible, combining traditional teaching excellence with modern learning
+              technologies, ensuring every student achieves their medical career aspirations through
+              proven methodologies.
             </AcademicQuote>
 
             <div className="mt-6 pt-6 border-t border-blue-200">
               <AcademicList
                 variant="research"
                 items={[
-                  'Evidence-based curriculum design',
+                  'Proven curriculum design',
                   'Personalized learning pathways',
-                  'Technology-enhanced pedagogy',
+                  'Technology-enhanced teaching',
                   'Outcome-focused assessment',
                 ]}
                 className="text-blue-800"
@@ -302,7 +301,7 @@ export default function AboutPage() {
         <SectionHeader
           subtitle="Institutional Values"
           title="Our Core Academic Principles"
-          description="The fundamental values that drive our commitment to educational excellence and student success"
+          description="The fundamental values that drive our commitment to educational excellence and creating great human beings alongside successful medical professionals"
           variant="center"
         />
 
@@ -325,7 +324,7 @@ export default function AboutPage() {
 
               <div className="pt-4 border-t border-gray-100">
                 <AcademicEmphasis variant="highlight" color="blue" className="text-xs">
-                  Research-Backed Approach
+                  Proven Approach
                 </AcademicEmphasis>
               </div>
             </AcademicCard>
@@ -336,13 +335,14 @@ export default function AboutPage() {
         <div className="mt-16">
           <AcademicQuote
             variant="testimonial"
-            author="Dr. Sarah Chen"
-            designation="Educational Psychology, Harvard University"
+            author="Dr. Shekhar C Singh"
+            designation="AIIMS New Delhi Alumnus, Director - Cerebrum Biology Academy"
             className="max-w-4xl mx-auto"
           >
-            "Cerebrum Biology Academy's commitment to evidence-based teaching and student-centered
-            learning represents the gold standard in medical entrance preparation. Their value
-            system aligns perfectly with international best practices in academic excellence."
+            "I believe all humans are equally talented; it's not their genes but the hard work that
+            makes them special. Hard work done smartly brings extraordinary success. My mission is
+            to extend my teaching beyond textbooks to include life skills and character development,
+            creating great human beings alongside successful medical professionals."
           </AcademicQuote>
         </div>
       </FeatureSection>
