@@ -186,48 +186,93 @@ export default function Class11BiologyPage() {
         </div>
       </section>
 
-      {/* Pricing & Enrollment */}
+      {/* Pricing & Enrollment - MOBILE OPTIMIZED */}
       <section className="py-16 bg-green-50">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Start Your NEET Journey Today</h2>
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+            Start Your NEET Journey Today
+          </h2>
 
-          <div className="bg-white rounded-3xl shadow-xl p-8 mb-8">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  Class 11th Biology Complete Course
-                </h3>
-                <div className="text-left space-y-3">
-                  <div className="flex items-center">
-                    <Star className="w-5 h-5 text-yellow-500 mr-2" />
-                    <span>12 months comprehensive program</span>
+          <div className="bg-white rounded-3xl shadow-xl p-6 md:p-8 mb-8">
+            {/* Mobile-First Pricing Display - Always Visible */}
+            <div className="text-center mb-6">
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
+                Class 11th Biology Complete Course
+              </h3>
+
+              {/* Prominent Pricing - No Hidden Collapsibles */}
+              <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl p-6 my-6 border-2 border-green-200">
+                <div className="text-sm text-gray-600 mb-2">Starting from</div>
+                <div className="text-4xl md:text-5xl font-bold text-green-600 mb-2">
+                  ₹3,500<span className="text-2xl text-gray-600">/month</span>
+                </div>
+                <div className="text-sm text-gray-600 mb-4">
+                  EMI options available • Zero cost EMI on credit cards
+                </div>
+
+                {/* Quick Value Props */}
+                <div className="grid grid-cols-2 gap-3 text-left">
+                  <div className="flex items-center text-sm">
+                    <CheckCircle className="w-4 h-4 text-green-600 mr-2 flex-shrink-0" />
+                    <span>12 months program</span>
                   </div>
-                  <div className="flex items-center">
-                    <Star className="w-5 h-5 text-yellow-500 mr-2" />
-                    <span>Live classes + recorded lectures</span>
+                  <div className="flex items-center text-sm">
+                    <CheckCircle className="w-4 h-4 text-green-600 mr-2 flex-shrink-0" />
+                    <span>Live + recorded</span>
                   </div>
-                  <div className="flex items-center">
-                    <Star className="w-5 h-5 text-yellow-500 mr-2" />
-                    <span>Study materials + test series</span>
+                  <div className="flex items-center text-sm">
+                    <CheckCircle className="w-4 h-4 text-green-600 mr-2 flex-shrink-0" />
+                    <span>Study materials</span>
                   </div>
-                  <div className="flex items-center">
-                    <Star className="w-5 h-5 text-yellow-500 mr-2" />
-                    <span>Doubt resolution sessions</span>
+                  <div className="flex items-center text-sm">
+                    <CheckCircle className="w-4 h-4 text-green-600 mr-2 flex-shrink-0" />
+                    <span>Doubt sessions</span>
                   </div>
                 </div>
               </div>
+            </div>
 
-              <div>
-                <PricingDisplay
-                  courseId="class-11-neet-comprehensive"
-                  showCompetitiveAdvantage={true}
-                  onEnrollClick={() => (window.location.href = '/admissions')}
-                />
+            {/* Mobile-Optimized CTA Buttons */}
+            <div className="space-y-3">
+              <Link
+                href="/admissions"
+                className="block w-full bg-green-600 text-white text-center px-8 py-4 rounded-xl font-semibold hover:bg-green-700 transition-colors min-h-[56px] flex items-center justify-center touch-target-large"
+              >
+                Enroll Now - Start Learning
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+              <Link
+                href="/contact"
+                className="block w-full border-2 border-green-600 text-green-600 text-center px-8 py-4 rounded-xl font-semibold hover:bg-green-50 transition-colors min-h-[56px] flex items-center justify-center touch-target-large"
+              >
+                Book Free Demo Class
+              </Link>
+            </div>
+
+            {/* Comparison with Competitors - Always Visible */}
+            <div className="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-xl">
+              <div className="text-sm font-semibold text-gray-900 mb-3 flex items-center justify-center">
+                <Award className="w-5 h-5 text-yellow-600 mr-2" />
+                Compare with Competition
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-sm">
+                <div className="text-center">
+                  <div className="font-bold text-green-600">Cerebrum</div>
+                  <div className="text-gray-600">₹3,500/month</div>
+                </div>
+                <div className="text-center">
+                  <div className="font-medium text-gray-700">Allen Digital</div>
+                  <div className="text-gray-500">₹5,000/month</div>
+                </div>
+                <div className="text-center">
+                  <div className="font-medium text-gray-700">BYJU'S</div>
+                  <div className="text-gray-500">₹7,000/month</div>
+                </div>
               </div>
             </div>
           </div>
 
-          <p className="text-gray-600">
+          <p className="text-gray-600 text-center text-sm md:text-base">
             💡 <strong>Early Bird Offer:</strong> Enroll before 15th of the month and get 10%
             discount!
           </p>

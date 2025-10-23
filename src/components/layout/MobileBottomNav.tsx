@@ -48,14 +48,14 @@ export function MobileBottomNav({ className = '' }: MobileBottomNavProps) {
       iconSolid: BookSolid,
     },
     {
-      href: '/course-finder',
-      label: 'Find Course',
+      href: '/demo',
+      label: 'Demo',
       icon: BeakerIcon,
       iconSolid: BeakerSolid,
       highlight: true,
     },
     {
-      href: '/success-stories',
+      href: '/results',
       label: 'Results',
       icon: TrophyIcon,
       iconSolid: TrophySolid,
@@ -84,9 +84,10 @@ export function MobileBottomNav({ className = '' }: MobileBottomNavProps) {
 
   return (
     <div
-      className={`mobile-nav fixed bottom-0 left-0 right-0 md:hidden bg-white border-t border-gray-200 z-50 shadow-lg safe-area-bottom ${className}`}
+      className={`mobile-nav fixed bottom-0 left-0 right-0 md:hidden bg-white border-t-2 border-gray-200 z-50 shadow-2xl safe-area-bottom ${className}`}
       style={{
-        paddingBottom: 'max(env(safe-area-inset-bottom), 8px)',
+        paddingBottom: 'max(env(safe-area-inset-bottom), 12px)',
+        paddingTop: '8px',
       }}
     >
       <div className="grid grid-cols-5 gap-0 bg-white">
@@ -99,17 +100,17 @@ export function MobileBottomNav({ className = '' }: MobileBottomNavProps) {
               <button
                 key={item.href}
                 onClick={() => handleNavClick(item)}
-                className={`nav-item flex flex-col items-center justify-center touch-target-large mobile-focus ripple-effect ${
+                className={`nav-item flex flex-col items-center justify-center touch-target-large mobile-focus ripple-effect haptic-feedback ${
                   item.highlight
-                    ? 'text-emerald-600 bg-emerald-50 border-t-2 border-emerald-600'
+                    ? 'text-green-600 bg-green-50 border-t-4 border-green-600 rounded-t-xl'
                     : active
-                      ? 'text-primary-600 bg-primary-50 border-t-2 border-primary-600'
-                      : 'text-gray-500 hover:text-gray-700 border-t-2 border-transparent'
-                } py-2 px-1 min-h-touch-md transition-all duration-200`}
+                      ? 'text-blue-600 bg-blue-50 border-t-4 border-blue-600'
+                      : 'text-gray-600 hover:text-gray-800 border-t-4 border-transparent hover:bg-gray-50'
+                } py-3 px-1 min-h-[64px] transition-all duration-200`}
                 aria-label={`${item.label} - ${item.isExternal ? 'Call now' : 'Navigate to'}`}
               >
-                <IconComponent className="w-6 h-6 mb-1" />
-                <span className="text-xs leading-tight font-medium">{item.label}</span>
+                <IconComponent className="w-7 h-7 mb-1" />
+                <span className="text-[10px] leading-tight font-semibold">{item.label}</span>
               </button>
             )
           }
@@ -118,17 +119,23 @@ export function MobileBottomNav({ className = '' }: MobileBottomNavProps) {
             <Link
               key={item.href}
               href={item.href}
-              className={`nav-item flex flex-col items-center justify-center touch-target-large mobile-focus ripple-effect ${
+              className={`nav-item flex flex-col items-center justify-center touch-target-large mobile-focus ripple-effect haptic-feedback ${
                 item.highlight
-                  ? 'text-emerald-600 bg-emerald-50 border-t-2 border-emerald-600'
+                  ? 'text-green-600 bg-green-50 border-t-4 border-green-600 rounded-t-xl scale-105 shadow-lg'
                   : active
-                    ? 'text-primary-600 bg-primary-50 border-t-2 border-primary-600'
-                    : 'text-gray-500 hover:text-gray-700 border-t-2 border-transparent'
-              } py-2 px-1 min-h-touch-md transition-all duration-200`}
+                    ? 'text-blue-600 bg-blue-50 border-t-4 border-blue-600'
+                    : 'text-gray-600 hover:text-gray-800 border-t-4 border-transparent hover:bg-gray-50'
+              } py-3 px-1 min-h-[64px] transition-all duration-200`}
               aria-label={`${item.label} - Navigate to ${item.label} page`}
             >
-              <IconComponent className="w-6 h-6 mb-1" />
-              <span className="text-xs leading-tight font-medium">{item.label}</span>
+              <IconComponent className="w-7 h-7 mb-1" />
+              <span className="text-[10px] leading-tight font-semibold">{item.label}</span>
+              {item.highlight && (
+                <span className="absolute top-1 right-1 flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                </span>
+              )}
             </Link>
           )
         })}

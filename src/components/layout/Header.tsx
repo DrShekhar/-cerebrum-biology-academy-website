@@ -20,6 +20,8 @@ import {
   HelpCircle,
   Brain,
   Sparkles,
+  Trophy,
+  ArrowRight,
 } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { BurgerMenu } from '@/components/navigation/BurgerMenu'
@@ -44,50 +46,49 @@ const Header = () => {
   }, [pathname])
 
   const courseLinks = [
-    { href: '/courses', label: 'All Courses', icon: BookOpen },
-    { href: '/courses/class-9-foundation', label: 'Class 9th Biology', icon: BookOpen },
-    { href: '/courses/class-10-foundation', label: 'Class 10th Biology', icon: BookOpen },
-    { href: '/courses/class-11', label: 'Class 11th Biology', icon: BookOpen },
-    { href: '/courses/class-12', label: 'Class 12th Biology', icon: BookOpen },
-    { href: '/courses/neet-dropper', label: 'NEET Dropper Program', icon: Award },
+    { href: '/courses/class-11', label: 'Class 11th NEET', icon: BookOpen },
+    { href: '/courses/class-12', label: 'Class 12th NEET', icon: BookOpen },
+    { href: '/courses/neet-dropper', label: 'Dropper Program', icon: Award },
+    { href: '/courses/class-9-foundation', label: 'Early Bird (9th/10th)', icon: BookOpen },
   ]
 
-  const testLinks = [
-    { href: '/mock-tests', label: 'Mock Tests', icon: BarChart3 },
-    { href: '/analytics', label: 'Performance Analytics', icon: BarChart3 },
-    { href: '/test/demo', label: 'Demo Test', icon: Play },
-  ]
-
-  const serviceLinks = [
-    { href: '/services/online-classes', label: 'Online Classes', icon: Monitor },
-    { href: '/services/classroom', label: 'Classroom Coaching', icon: Users },
-    { href: '/services/international', label: 'International Students', icon: Globe },
-    { href: '/services/doubt-resolution', label: 'Doubt Resolution', icon: HelpCircle },
-  ]
-
-  // Enhanced navigation structure with video lectures
   const mainNavigation = [
-    { href: '/', label: 'Home' },
+    {
+      href: '/results',
+      label: 'Results',
+      icon: Trophy,
+      badge: '94.2%',
+      priority: 1,
+    },
     {
       href: '/courses',
       label: 'Courses',
       hasDropdown: true,
       items: courseLinks,
-      isMegaMenu: true,
+      priority: 2,
     },
     {
-      href: '/ai-education-demo',
-      label: 'Ceri AI',
-      icon: Brain,
-      isSpecial: true,
-      badge: 'AI',
+      href: '/faculty',
+      label: 'Faculty',
+      icon: Users,
+      priority: 3,
     },
-    { href: '/video-lectures', label: 'Video Lectures' },
-    { href: '/success-stories', label: 'Success Stories' },
-    { href: '/faculty', label: 'Faculty' },
-    { href: '/about', label: 'About' },
-    { href: '/contact', label: 'Contact' },
+    {
+      href: '/demo',
+      label: 'Free Demo',
+      icon: Play,
+      highlight: true,
+      priority: 4,
+    },
   ]
+
+  const primaryCTA = {
+    label: 'Enroll Now',
+    href: '/enroll',
+    variant: 'primary',
+    icon: ArrowRight,
+    className: 'bg-green-600 hover:bg-green-700',
+  }
 
   // Authentication dropdown items
   const authOptions = [
@@ -180,109 +181,59 @@ const Header = () => {
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: -10 }}
                           transition={{ duration: 0.2 }}
-                          className={`absolute top-full left-0 mt-2 bg-white rounded-lg shadow-xl border border-gray-200 py-6 z-50 ${
-                            item.isMegaMenu ? 'w-[480px]' : 'w-64'
-                          }`}
+                          className="absolute top-full left-0 mt-2 bg-white rounded-lg shadow-xl border border-gray-200 py-4 z-50 w-72"
                         >
-                          {item.isMegaMenu ? (
-                            <div className="px-6">
-                              <div className="mb-4">
-                                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                                  NEET Biology Courses
-                                </h3>
-                                <p className="text-sm text-gray-600 mb-4">
-                                  Comprehensive programs designed for medical entrance success with
-                                  94.2% success rate
-                                </p>
-                              </div>
-                              <div className="grid grid-cols-2 gap-4">
-                                {item.items?.map((subItem, subIndex) => {
-                                  const Icon = subItem.icon
-                                  return (
-                                    <Link
-                                      key={subIndex}
-                                      href={subItem.href}
-                                      className={`flex items-start space-x-3 p-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors rounded-lg border border-gray-100 hover:border-blue-200 hover:shadow-md ${subIndex === 0 ? 'col-span-2 bg-blue-50 border-blue-200' : ''}`}
-                                    >
-                                      <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
-                                        <Icon className="w-5 h-5 text-blue-600" />
-                                      </div>
-                                      <div className="flex-1 min-w-0">
-                                        <span className="font-semibold block text-sm leading-tight">
-                                          {subItem.label}
-                                        </span>
-                                        <span className="text-xs text-gray-500 mt-1 block leading-relaxed">
-                                          {subIndex === 0
-                                            ? 'All courses overview'
-                                            : subIndex === 1
-                                              ? 'Age-appropriate learning'
-                                              : subIndex === 2
-                                                ? 'Advanced foundation'
-                                                : subIndex === 3
-                                                  ? 'Foundation building'
-                                                  : subIndex === 4
-                                                    ? 'Board + NEET prep'
-                                                    : 'Intensive NEET focus'}
-                                        </span>
-                                      </div>
-                                    </Link>
-                                  )
-                                })}
-                              </div>
-                              <div className="mt-4 pt-4 border-t border-gray-200">
-                                <Link
-                                  href="/support/demo"
-                                  className="block w-full text-center bg-teal-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-teal-700 transition-all"
-                                >
-                                  Book Free Demo Class
-                                </Link>
-                              </div>
+                          <div className="px-4">
+                            <div className="mb-3">
+                              <h3 className="text-sm font-semibold text-gray-900 mb-1">
+                                NEET Biology Courses
+                              </h3>
+                              <p className="text-xs text-gray-600">Choose your program</p>
                             </div>
-                          ) : (
-                            <div className="py-2">
+                            <div className="space-y-2">
                               {item.items?.map((subItem, subIndex) => {
                                 const Icon = subItem.icon
                                 return (
                                   <Link
                                     key={subIndex}
                                     href={subItem.href}
-                                    className="flex items-center space-x-3 px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                                    className="flex items-center space-x-3 p-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors rounded-lg"
                                   >
                                     <Icon className="w-5 h-5" />
-                                    <span className="font-medium">{subItem.label}</span>
+                                    <span className="font-medium text-sm">{subItem.label}</span>
                                   </Link>
                                 )
                               })}
                             </div>
-                          )}
+                          </div>
                         </motion.div>
                       )}
                     </AnimatePresence>
                   </div>
-                ) : item.isSpecial ? (
+                ) : item.highlight ? (
                   <Link
                     href={item.href!}
-                    className={`flex items-center space-x-2 font-semibold px-4 py-2 rounded-full bg-teal-600 text-white hover:bg-teal-700 hover:shadow-lg hover:scale-105 transition-all duration-300 ${
-                      isActive(item.href!) ? 'shadow-xl' : ''
+                    className={`flex items-center space-x-2 font-semibold px-4 py-2 rounded-lg bg-orange-100 text-orange-700 hover:bg-orange-200 border border-orange-300 transition-all duration-300 ${
+                      isActive(item.href!) ? 'shadow-md' : ''
+                    }`}
+                  >
+                    {item.icon && <item.icon className="w-4 h-4" />}
+                    <span>{item.label}</span>
+                  </Link>
+                ) : (
+                  <Link
+                    href={item.href!}
+                    className={`flex items-center space-x-1.5 font-medium transition-colors ${
+                      isActive(item.href!) ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'
                     }`}
                   >
                     {item.icon && <item.icon className="w-4 h-4" />}
                     <span>{item.label}</span>
                     {item.badge && (
-                      <span className="ml-1 bg-white/20 backdrop-blur-sm text-white text-xs font-bold px-2 py-0.5 rounded-full">
+                      <span className="ml-1 bg-green-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">
                         {item.badge}
                       </span>
                     )}
-                    <Sparkles className="w-3 h-3 animate-pulse" />
-                  </Link>
-                ) : (
-                  <Link
-                    href={item.href!}
-                    className={`font-medium transition-colors ${
-                      isActive(item.href!) ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'
-                    }`}
-                  >
-                    {item.label}
                   </Link>
                 )}
               </div>
@@ -299,57 +250,14 @@ const Header = () => {
             />
 
             {/* Authentication & CTA Buttons */}
-            <div className="hidden lg:flex items-center space-x-2">
-              {/* Consolidated Login Dropdown */}
-              <div
-                className="relative"
-                onMouseEnter={() => setIsAuthOpen(true)}
-                onMouseLeave={() => setIsAuthOpen(false)}
-              >
-                <button
-                  className="flex items-center space-x-1.5 text-gray-700 hover:text-primary-600 font-medium transition-colors px-3 py-2 rounded-lg hover:bg-primary-50"
-                  aria-label="Login options menu"
-                  aria-expanded={isAuthOpen}
-                  aria-haspopup="menu"
-                >
-                  <LogIn className="w-4 h-4" />
-                  <span className="text-sm">Login</span>
-                  <ChevronDown className="w-3 h-3" />
-                </button>
-
-                <AnimatePresence>
-                  {isAuthOpen && (
-                    <motion.div
-                      initial={{ opacity: 0, y: -10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -10 }}
-                      transition={{ duration: 0.2 }}
-                      className="absolute top-full right-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50"
-                    >
-                      {authOptions.map((option, index) => {
-                        const Icon = option.icon
-                        return (
-                          <Link
-                            key={index}
-                            href={option.href}
-                            className="flex items-center space-x-3 px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
-                          >
-                            <Icon className="w-5 h-5" />
-                            <span className="font-medium">{option.label}</span>
-                          </Link>
-                        )
-                      })}
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-
-              {/* Primary CTA with Brand Integration */}
+            <div className="hidden lg:flex items-center space-x-3">
+              {/* Primary CTA - Enroll Now */}
               <Link
-                href="/support/demo"
-                className="bg-teal-600 text-white px-5 py-2.5 rounded-full font-semibold hover:bg-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl whitespace-nowrap text-sm"
+                href={primaryCTA.href}
+                className={`flex items-center space-x-2 px-6 py-2.5 rounded-full font-bold transition-all duration-300 shadow-lg hover:shadow-xl whitespace-nowrap text-sm ${primaryCTA.className}`}
               >
-                Book Demo
+                <span>{primaryCTA.label}</span>
+                <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           </div>
@@ -366,130 +274,108 @@ const Header = () => {
               className="lg:hidden border-t border-gray-200 py-4"
             >
               <div className="space-y-4">
-                {/* Featured: Ceri AI Button at Top */}
-                {mainNavigation
-                  .filter((item) => item.isSpecial)
-                  .map((item, index) => {
-                    const Icon = item.icon
-                    return (
+                {/* Regular Navigation Items */}
+                {mainNavigation.map((item, index) => (
+                  <div key={index}>
+                    {item.hasDropdown ? (
+                      <div>
+                        <div className="flex items-center">
+                          <Link
+                            href={item.href!}
+                            className={`flex-1 font-medium py-2 transition-colors flex items-center space-x-2 ${
+                              isActive(item.href!)
+                                ? 'text-blue-600'
+                                : 'text-gray-700 hover:text-blue-600'
+                            }`}
+                          >
+                            {item.icon && <item.icon className="w-4 h-4" />}
+                            <span>{item.label}</span>
+                            {item.badge && (
+                              <span className="ml-1 bg-green-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">
+                                {item.badge}
+                              </span>
+                            )}
+                          </Link>
+                          <button
+                            onClick={() => {
+                              if (item.label === 'Courses') setIsCoursesOpen(!isCoursesOpen)
+                            }}
+                            className="p-3 text-gray-500 hover:text-blue-600 min-h-[44px] min-w-[44px] flex items-center justify-center"
+                            aria-label={`Toggle ${item.label} submenu`}
+                            aria-expanded={item.label === 'Courses' && isCoursesOpen}
+                            aria-haspopup="menu"
+                          >
+                            <ChevronDown
+                              className={`w-4 h-4 transition-transform ${
+                                item.label === 'Courses' && isCoursesOpen ? 'rotate-180' : ''
+                              }`}
+                            />
+                          </button>
+                        </div>
+
+                        <AnimatePresence>
+                          {item.label === 'Courses' && isCoursesOpen && (
+                            <motion.div
+                              initial={{ opacity: 0, height: 0 }}
+                              animate={{ opacity: 1, height: 'auto' }}
+                              exit={{ opacity: 0, height: 0 }}
+                              className="ml-4 mt-2 space-y-2"
+                            >
+                              {item.items?.map((subItem, subIndex) => {
+                                const Icon = subItem.icon
+                                return (
+                                  <Link
+                                    key={subIndex}
+                                    href={subItem.href}
+                                    className="flex items-center space-x-3 text-gray-600 hover:text-blue-600 py-2 transition-colors"
+                                  >
+                                    <Icon className="w-4 h-4" />
+                                    <span className="text-sm">{subItem.label}</span>
+                                  </Link>
+                                )
+                              })}
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      </div>
+                    ) : item.highlight ? (
                       <Link
-                        key={`special-${index}`}
                         href={item.href!}
-                        className="flex items-center justify-center space-x-3 bg-teal-600 text-white px-6 py-4 rounded-2xl font-bold text-lg shadow-lg hover:bg-teal-700 hover:shadow-xl transition-all duration-300 min-h-[56px] touch-manipulation"
+                        className="flex items-center space-x-2 font-semibold px-4 py-3 rounded-lg bg-orange-100 text-orange-700 hover:bg-orange-200 border border-orange-300 transition-all duration-300 min-h-[48px]"
                       >
-                        {Icon && <Icon className="w-6 h-6" />}
+                        {item.icon && <item.icon className="w-5 h-5" />}
+                        <span>{item.label}</span>
+                      </Link>
+                    ) : (
+                      <Link
+                        href={item.href!}
+                        className={`flex items-center space-x-2 font-medium py-2 transition-colors ${
+                          isActive(item.href!)
+                            ? 'text-blue-600'
+                            : 'text-gray-700 hover:text-blue-600'
+                        }`}
+                      >
+                        {item.icon && <item.icon className="w-4 h-4" />}
                         <span>{item.label}</span>
                         {item.badge && (
-                          <span className="bg-white/20 backdrop-blur-sm text-white text-xs font-bold px-2 py-1 rounded-full">
+                          <span className="ml-1 bg-green-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">
                             {item.badge}
                           </span>
                         )}
-                        <Sparkles className="w-5 h-5 animate-pulse" />
                       </Link>
-                    )
-                  })}
-
-                {/* Regular Navigation Items */}
-                {mainNavigation
-                  .filter((item) => !item.isSpecial)
-                  .map((item, index) => (
-                    <div key={index}>
-                      {item.hasDropdown ? (
-                        <div>
-                          <div className="flex items-center">
-                            <Link
-                              href={item.href!}
-                              className={`flex-1 font-medium py-2 transition-colors ${
-                                isActive(item.href!)
-                                  ? 'text-blue-600'
-                                  : 'text-gray-700 hover:text-blue-600'
-                              }`}
-                            >
-                              {item.label}
-                            </Link>
-                            <button
-                              onClick={() => {
-                                if (item.label === 'Courses') setIsCoursesOpen(!isCoursesOpen)
-                              }}
-                              className="p-3 text-gray-500 hover:text-blue-600 min-h-[44px] min-w-[44px] flex items-center justify-center"
-                              aria-label={`Toggle ${item.label} submenu`}
-                              aria-expanded={item.label === 'Courses' && isCoursesOpen}
-                              aria-haspopup="menu"
-                            >
-                              <ChevronDown
-                                className={`w-4 h-4 transition-transform ${
-                                  item.label === 'Courses' && isCoursesOpen ? 'rotate-180' : ''
-                                }`}
-                              />
-                            </button>
-                          </div>
-
-                          <AnimatePresence>
-                            {item.label === 'Courses' && isCoursesOpen && (
-                              <motion.div
-                                initial={{ opacity: 0, height: 0 }}
-                                animate={{ opacity: 1, height: 'auto' }}
-                                exit={{ opacity: 0, height: 0 }}
-                                className="ml-4 mt-2 space-y-2"
-                              >
-                                {item.items?.map((subItem, subIndex) => {
-                                  const Icon = subItem.icon
-                                  return (
-                                    <Link
-                                      key={subIndex}
-                                      href={subItem.href}
-                                      className="flex items-center space-x-3 text-gray-600 hover:text-blue-600 py-2 transition-colors"
-                                    >
-                                      <Icon className="w-4 h-4" />
-                                      <span>{subItem.label}</span>
-                                    </Link>
-                                  )
-                                })}
-                              </motion.div>
-                            )}
-                          </AnimatePresence>
-                        </div>
-                      ) : (
-                        <Link
-                          href={item.href!}
-                          className={`block font-medium py-2 transition-colors ${
-                            isActive(item.href!)
-                              ? 'text-blue-600'
-                              : 'text-gray-700 hover:text-blue-600'
-                          }`}
-                        >
-                          {item.label}
-                        </Link>
-                      )}
-                    </div>
-                  ))}
-
-                {/* Mobile Auth & CTA Buttons */}
-                <div className="pt-4 border-t border-gray-200 space-y-3">
-                  {/* Consolidated Auth Options */}
-                  <div className="space-y-2">
-                    {authOptions.map((option, index) => {
-                      const Icon = option.icon
-                      return (
-                        <Link
-                          key={index}
-                          href={option.href}
-                          className="flex items-center space-x-3 text-gray-700 hover:text-primary-600 font-medium transition-colors py-3 px-4 border border-gray-200 rounded-xl hover:bg-primary-50 min-h-[48px] touch-manipulation"
-                        >
-                          <Icon className="w-4 h-4" />
-                          <span>{option.label}</span>
-                        </Link>
-                      )
-                    })}
+                    )}
                   </div>
+                ))}
 
-                  {/* Primary CTA with Brand Integration */}
+                {/* Mobile CTA Buttons */}
+                <div className="pt-4 border-t border-gray-200 space-y-3">
+                  {/* Primary CTA - Enroll Now */}
                   <Link
-                    href="/support/demo"
-                    className="block w-full text-center bg-teal-600 text-white px-6 py-4 rounded-full font-semibold hover:bg-teal-700 transition-all duration-300 min-h-[52px] flex items-center justify-center touch-manipulation"
-                    style={{ boxShadow: 'var(--shadow-premium)' }}
+                    href={primaryCTA.href}
+                    className="flex items-center justify-center space-x-2 bg-green-600 text-white px-6 py-4 rounded-full font-bold hover:bg-green-700 transition-all duration-300 min-h-[52px] shadow-lg"
                   >
-                    Book Free Demo
+                    <span>{primaryCTA.label}</span>
+                    <ArrowRight className="w-5 h-5" />
                   </Link>
                 </div>
               </div>
