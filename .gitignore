@@ -41,3 +41,13 @@ yarn-error.log*
 next-env.d.ts
 
 /src/generated/prisma
+
+# Merge artifacts
+*.backup
+*.orig
+*CONFLICT*
+*MERGE*
+*BRANCH_ANALYSIS*
+
+# IDE
+.vscode/settings.json

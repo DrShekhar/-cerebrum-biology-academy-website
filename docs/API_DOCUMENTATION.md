@@ -36,6 +36,7 @@ API endpoints are rate limited based on user role:
 - `STUDENT`: 100 requests/hour
 
 Rate limit headers are included in responses:
+
 - `X-RateLimit-Limit`: Maximum requests allowed
 - `X-RateLimit-Remaining`: Remaining requests in window
 - `X-RateLimit-Reset`: Reset time (ISO 8601)
@@ -1007,7 +1008,7 @@ import { CerebrumAPI } from '@cerebrum/api-client'
 
 const api = new CerebrumAPI({
   baseURL: 'https://cerebrumbiologyacademy.com/api',
-  apiKey: 'your-api-key'
+  apiKey: 'your-api-key',
 })
 
 // Create test session
@@ -1015,14 +1016,14 @@ const testSession = await api.tests.create({
   topics: ['Cell Biology', 'Genetics'],
   difficulty: 'MEDIUM',
   questionCount: 30,
-  timeLimit: 60
+  timeLimit: 60,
 })
 
 // Submit answer
 await api.tests.submitAnswer(testSession.id, {
   questionId: 'q1',
   selectedAnswer: 'Mitochondria',
-  timeSpent: 45
+  timeSpent: 45,
 })
 
 // Get progress
@@ -1094,6 +1095,7 @@ Use the test endpoint to get authentication tokens:
 ## Changelog
 
 ### v1.0.0 (2024-01-01)
+
 - Initial API release
 - Test session management
 - Question management
@@ -1102,6 +1104,7 @@ Use the test endpoint to get authentication tokens:
 - Comprehensive authentication and security
 
 ### v1.1.0 (2024-02-01)
+
 - Enhanced analytics
 - Adaptive question selection
 - Performance improvements
@@ -1109,4 +1112,4 @@ Use the test endpoint to get authentication tokens:
 
 ---
 
-*Last updated: January 2024*
+_Last updated: January 2024_

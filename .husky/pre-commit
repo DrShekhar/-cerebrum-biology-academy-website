@@ -3,21 +3,19 @@
 
 echo "🔍 Running pre-commit checks (MVP Phase 1 - Pragmatic Mode)..."
 
-# Run lint-staged (code formatting)
+# Run lint-staged (code formatting) - BLOCKING
 npx lint-staged
 
-# Type checking - TEMPORARILY DISABLED
-# TODO: Phase 2 (Weeks 5-8) - Fix 614 TypeScript errors and re-enable
-# echo "🔧 Type checking..."
-# npm run type-check
+# Type checking - NON-BLOCKING (warning only)
+echo "🔧 Type checking (non-blocking)..."
+npm run type-check || echo "⚠️  Type errors found - review before deployment"
 
-# Run tests - TEMPORARILY DISABLED
-# TODO: Phase 2 - Fix test suite and re-enable
-# echo "🧪 Running tests..."
-# npm test -- --passWithNoTests
+# Run tests - NON-BLOCKING (warning only)
+echo "🧪 Running tests (non-blocking)..."
+npm test -- --passWithNoTests || echo "⚠️  Test failures found - review before deployment"
 
-# Security check - WARN ONLY
+# Security check - NON-BLOCKING (warning only)
 echo "🛡️ Security audit (warnings only)..."
 npm audit --audit-level=high || echo "⚠️  Security issues found - review in Phase 2"
 
-echo "✅ Pre-commit checks passed (MVP Phase 1 mode)!"
+echo "✅ Pre-commit checks completed!"
