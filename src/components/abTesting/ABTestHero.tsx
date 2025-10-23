@@ -24,7 +24,7 @@ export function ABTestHero({ onCtaClick, className = '' }: ABTestHeroProps) {
   const defaultConfig = {
     headline: 'Score 330+ in NEET Biology',
     subtitle: "Join India's Top Biology Faculty",
-    subtext: 'Master Biology with Shekhar Sir - 94.2% Students Qualify NEET',
+    subtext: 'Master Biology with Shekhar Sir - 98% Students Qualify NEET',
     ctaText: 'Book FREE Demo Class',
     ctaColor: 'bg-gradient-to-r from-green-500 to-green-600',
   }
@@ -145,9 +145,9 @@ export function ABTestHero({ onCtaClick, className = '' }: ABTestHeroProps) {
             {/* Success Statistics Cards */}
             <div className="grid grid-cols-2 gap-4 mb-8">
               <div className="bg-white p-6 rounded-2xl shadow-lg border hover:shadow-xl transition-shadow">
-                <div className="text-3xl font-bold text-green-600 mb-2">94.2%</div>
+                <div className="text-3xl font-bold text-green-600 mb-2">98%</div>
                 <div className="text-sm text-gray-600">NEET Success Rate</div>
-                <div className="text-xs text-gray-500 mt-1">vs 18% National Average</div>
+                <div className="text-xs text-gray-500 mt-1">vs 23% National Average</div>
               </div>
               <div className="bg-white p-6 rounded-2xl shadow-lg border hover:shadow-xl transition-shadow">
                 <div className="text-3xl font-bold text-blue-600 mb-2">330+</div>

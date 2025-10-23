@@ -73,10 +73,10 @@ export function SophisticatedHero({
   ]
 
   const achievements = [
-    { value: 94.2, suffix: '%', label: 'NEET Success Rate', icon: TrophyIcon },
+    { value: 98, suffix: '%', label: 'NEET Success Rate', icon: TrophyIcon },
     { value: 330, prefix: '', suffix: '+', label: 'Average Biology Score', icon: ChartBarIcon },
-    { value: 500, suffix: '+', label: 'AIIMS Selections', icon: AcademicCapIcon },
-    { value: 12000, suffix: '+', label: 'Students Mentored', icon: GlobeAltIcon },
+    { value: 695, suffix: '', label: 'Top Score (Sadhna)', icon: AcademicCapIcon },
+    { value: 2500, suffix: '+', label: 'Students Mentored', icon: GlobeAltIcon },
   ]
 
   useEffect(() => {
@@ -174,7 +174,7 @@ export function SophisticatedHero({
                   <span className="font-semibold text-blue-700 cursor-help"> Dr. Shekhar's </span>
                 </PremiumTooltip>
                 revolutionary teaching methodology.
-                <span className="font-semibold text-green-700">94.2% success rate</span> speaks
+                <span className="font-semibold text-green-700">98% success rate</span> speaks
                 volumes.
               </p>
             </motion.div>

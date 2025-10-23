@@ -218,7 +218,7 @@ export function VideoLectureShowcase() {
               { icon: Play, label: '200+', sublabel: 'Video Lectures', color: 'text-indigo-600' },
               { icon: Clock, label: '100+', sublabel: 'Hours Content', color: 'text-blue-600' },
               { icon: Users, label: '50K+', sublabel: 'Views', color: 'text-emerald-600' },
-              { icon: Award, label: '94.2%', sublabel: 'Success Rate', color: 'text-yellow-600' },
+              { icon: Award, label: '98%', sublabel: 'Success Rate', color: 'text-yellow-600' },
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}

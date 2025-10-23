@@ -383,10 +383,10 @@ export function IntelligentChatbot() {
 
     response +=
       '🎯 **Our NEET Biology Results:**\n' +
-      '• 94.2% success rate\n' +
+      '• 98% success rate\n' +
       '• Average biology score: 335+/360\n' +
-      '• 247 AIIMS selections in 2024\n' +
-      '• 2,847+ medical college admissions\n\n' +
+      '• Top score: 695/720 (Sadhna Sirin - 100%ile Biology)\n' +
+      '• 2,500+ students mentored to medical colleges\n\n' +
       '📚 **Our NEET Biology Approach:**\n' +
       '• Complete NCERT mastery\n' +
       '• High-yield topic focus\n' +
@@ -444,10 +444,10 @@ export function IntelligentChatbot() {
     const response =
       "Our results speak for themselves! Here's our track record:\n\n" +
       '🏆 **2024 NEET Results:**\n' +
-      '• 94.2% success rate (National avg: 23%)\n' +
-      '• 247 AIIMS selections\n' +
-      '• 156 AFMC selections\n' +
-      '• 2,847 total medical college admissions\n\n' +
+      '• 98% success rate (National avg: 23%)\n' +
+      '• Top Score: 695/720 (100%ile Biology - Sadhna Sirin)\n' +
+      '• Perfect 360/360: Priya Sehgal\n' +
+      '• 2,500+ medical college admissions\n\n' +
       '📊 **Score Improvement:**\n' +
       '• Average improvement: 127 points\n' +
       '• Biology average: 335+/360\n' +

@@ -106,11 +106,11 @@ export function ExitIntentPopup({ isVisible, onClose, onDownload }: ExitIntentPo
                 <div className="flex items-center justify-between text-sm">
                   <div className="flex items-center">
                     <Trophy className="w-4 h-4 mr-2" />
-                    <span>Cerebrum 94.2% Success</span>
+                    <span>Cerebrum 98% Success</span>
                   </div>
                   <div className="flex items-center">
                     <Users className="w-4 h-4 mr-2" />
-                    <span>2,847 Medical Seats</span>
+                    <span>2,500+ Students</span>
                   </div>
                   <div className="flex items-center">
                     <BookOpen className="w-4 h-4 mr-2" />

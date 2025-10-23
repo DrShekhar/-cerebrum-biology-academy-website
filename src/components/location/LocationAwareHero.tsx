@@ -144,7 +144,7 @@ export function LocationAwareHero({
         {/* Stats Section */}
         <motion.div variants={itemVariants} className="flex flex-wrap justify-center gap-8 mb-10">
           <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold">94.2%</div>
+            <div className="text-3xl md:text-4xl font-bold">98%</div>
             <div className="text-sm md:text-base opacity-80">Success Rate</div>
           </div>
           <div className="text-center">

@@ -355,7 +355,7 @@ export function LocationLandingPage({ locationData, className = '' }: LocationLa
                     <div className="text-sm text-green-700">Teacher:Student Ratio</div>
                   </div>
                   <div>
-                    <div className="text-3xl font-bold text-green-600">94.2%</div>
+                    <div className="text-3xl font-bold text-green-600">98%</div>
                     <div className="text-sm text-green-700">Success Rate</div>
                   </div>
                   <div>

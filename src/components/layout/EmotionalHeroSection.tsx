@@ -77,7 +77,7 @@ export function EmotionalHeroSection({
 
   const trustBadges = [
     'AIIMS Faculty',
-    '94.2% Success Rate',
+    '98% Success Rate',
     '100% Refund Guarantee',
     'Personal Mentorship',
     'Emotional Support',
@@ -165,8 +165,7 @@ export function EmotionalHeroSection({
           <div className="flex items-center justify-center gap-2 text-sm md:text-base font-semibold">
             <TrophyIcon className="h-5 w-5 text-yellow-300" />
             <span>
-              🎯 94.2% NEET Success Rate | 247 AIIMS Selections | Next batch starting January 15,
-              2025
+              🎯 98% NEET Success Rate | 247 AIIMS Selections | Next batch starting January 15, 2025
             </span>
             <SparklesIcon className="h-5 w-5 text-yellow-300 animate-pulse" />
           </div>
@@ -491,7 +490,7 @@ export function EmotionalHeroSection({
             <div className="w-px h-4 bg-gray-300" />
             <span className="text-gray-800">342 Govt. Colleges</span>
             <div className="w-px h-4 bg-gray-300" />
-            <span className="text-gray-800">94.2% Success Rate</span>
+            <span className="text-gray-800">98% Success Rate</span>
           </div>
         </motion.div>
       </div>

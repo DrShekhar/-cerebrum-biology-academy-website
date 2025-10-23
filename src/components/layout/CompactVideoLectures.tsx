@@ -79,7 +79,7 @@ export function CompactVideoLectures() {
               { icon: Play, label: '200+', sublabel: 'Lectures' },
               { icon: Clock, label: '100+', sublabel: 'Hours' },
               { icon: Users, label: '50K+', sublabel: 'Views' },
-              { icon: Award, label: '94.2%', sublabel: 'Success' },
+              { icon: Award, label: '98%', sublabel: 'Success' },
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}

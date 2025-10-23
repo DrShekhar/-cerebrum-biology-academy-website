@@ -25,7 +25,7 @@ const facultyVideos: FacultyVideo[] = [
     videoId: 'WqcWDy0K4lU', // Your provided video
     title: 'NEET Biology - Advanced Teaching Methodology',
     description:
-      'Watch Dr. Shekhar demonstrate the proven teaching techniques that have helped 2,847+ students secure medical seats with 94.2% success rate.',
+      'Watch Dr. Shekhar demonstrate the proven teaching techniques that have helped 2,847+ students secure medical seats with 98% success rate.',
     category: 'demo',
     subject: 'Biology',
     duration: 'Watch Preview',
@@ -113,14 +113,14 @@ export function FacultyVideoSection() {
 
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
             Watch Dr. Shekhar Singh in action - see the proven teaching methodology that has helped
-            2,847+ students secure medical seats with our industry-leading 94.2% success rate.
+            2,847+ students secure medical seats with our industry-leading 98% success rate.
           </p>
 
           {/* Quick Stats */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
             {[
               { icon: Users, label: '2,847+', sublabel: 'Students Placed', color: 'text-blue-600' },
-              { icon: Award, label: '94.2%', sublabel: 'Success Rate', color: 'text-emerald-600' },
+              { icon: Award, label: '98%', sublabel: 'Success Rate', color: 'text-emerald-600' },
               {
                 icon: BookOpen,
                 label: '247',
@@ -276,7 +276,7 @@ export function FacultyVideoSection() {
               </div>
               <div className="flex items-center">
                 <div className="w-2 h-2 bg-yellow-400 rounded-full mr-2"></div>
-                <span>94.2% Success Rate</span>
+                <span>98% Success Rate</span>
               </div>
             </div>
           </div>

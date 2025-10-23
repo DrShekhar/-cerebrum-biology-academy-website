@@ -197,11 +197,11 @@ export function ABTestPricing({ tiers, onEnroll, className = '' }: ABTestPricing
         {/* Trust Indicators */}
         <div className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-8 text-center">
           <div>
-            <div className="text-2xl font-bold text-gray-900">94.2%</div>
+            <div className="text-2xl font-bold text-gray-900">98%</div>
             <div className="text-sm text-gray-600">Success Rate</div>
           </div>
           <div>
-            <div className="text-2xl font-bold text-gray-900">10,000+</div>
+            <div className="text-2xl font-bold text-gray-900">2,500+</div>
             <div className="text-sm text-gray-600">Students</div>
           </div>
           <div>
