@@ -1,4 +1,4 @@
-import { EmotionalHeroSection } from '@/components/layout/EmotionalHeroSection'
+import { OptimizedHeroSection } from '@/components/layout/OptimizedHeroSection'
 import { CoursesSection } from '@/components/layout/CoursesSection'
 import { FacultySection } from '@/components/layout/FacultySection'
 import { TestimonialsSection } from '@/components/layout/TestimonialsSection'
@@ -8,7 +8,7 @@ import { Footer } from '@/components/layout/Footer'
 export default function Home() {
   return (
     <div className="min-h-screen">
-      <EmotionalHeroSection />
+      <OptimizedHeroSection />
       <CoursesSection />
       <FacultySection />
       <TestimonialsSection />
