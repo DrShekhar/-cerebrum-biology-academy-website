@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from 'next/font/google'
 import { StructuredData } from '@/components/seo/StructuredData'
 import { ErrorBoundary } from '@/components/ErrorBoundary'
 import GoogleAnalytics from '@/components/analytics/GoogleAnalytics'
-import { FixedHeader } from '@/components/layout/FixedHeader'
+import Header from '@/components/layout/Header'
 import { MobileBottomNav } from '@/components/layout/MobileBottomNav'
 import { Footer } from '@/components/layout/Footer'
 import { PWAProvider } from '@/components/pwa/PWAProvider'
@@ -106,7 +106,7 @@ export default function RootLayout({
             Skip to main content
           </a>
           <div data-section="navigation" className="priority-immediate">
-            <FixedHeader />
+            <Header />
           </div>
           <main id="main-content" className="min-h-screen pt-16 pb-16 md:pb-0">
             {children}
