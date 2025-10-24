@@ -29,30 +29,74 @@ export async function GET(request: NextRequest) {
     const page = parseInt(searchParams.get('page') || '1')
     const limit = parseInt(searchParams.get('limit') || '50')
 
-    // Build where clause - ALWAYS filter for published only
+    // Implement access control based on student's enrollment
+    const userId = session.user.id
+
+    // Get student's active enrollments and material access
+    const [enrollments, materialAccess] = await Promise.all([
+      prisma.enrollment.findMany({
+        where: {
+          userId,
+          status: 'ACTIVE',
+        },
+        select: {
+          courseId: true,
+        },
+      }),
+      prisma.materialAccess.findMany({
+        where: {
+          userId,
+        },
+        select: {
+          materialId: true,
+        },
+      }),
+    ])
+
+    const enrolledCourseIds = enrollments.map((e) => e.courseId)
+    const accessibleMaterialIds = materialAccess.map((m) => m.materialId)
+
+    // Build where clause with access control
     const where: any = {
-      isPublished: true, // Critical: Only show published materials
+      AND: [
+        { isPublished: true }, // Critical: Only show published materials
+
+        // Access control: Free materials OR materials with explicit access OR enrolled course materials
+        {
+          OR: [
+            { accessLevel: 'FREE' },
+            { id: { in: accessibleMaterialIds.length > 0 ? accessibleMaterialIds : [''] } }, // Empty array would match nothing
+            {
+              AND: [
+                { courseId: { in: enrolledCourseIds.length > 0 ? enrolledCourseIds : [''] } },
+                { accessLevel: { in: ['ENROLLED', 'SPECIFIC_COURSE'] } },
+              ],
+            },
+          ],
+        },
+      ],
     }
 
+    // Add search filters
     if (search) {
-      where.OR = [
-        { title: { contains: search, mode: 'insensitive' } },
-        { description: { contains: search, mode: 'insensitive' } },
-        { fileName: { contains: search, mode: 'insensitive' } },
-      ]
+      where.AND.push({
+        OR: [
+          { title: { contains: search, mode: 'insensitive' } },
+          { description: { contains: search, mode: 'insensitive' } },
+          { fileName: { contains: search, mode: 'insensitive' } },
+        ],
+      })
     }
 
+    // Add material type filter
     if (materialType) {
-      where.materialType = materialType
+      where.AND.push({ materialType })
     }
 
+    // Add course filter
     if (courseId) {
-      where.courseId = courseId
+      where.AND.push({ courseId })
     }
-
-    // TODO: Add access control based on student's enrollment
-    // For now, all students see all published materials
-    // Future: Filter by MaterialAccess table
 
     // Fetch materials with pagination
     const [materials, total] = await Promise.all([

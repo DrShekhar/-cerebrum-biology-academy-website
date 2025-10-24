@@ -134,6 +134,12 @@ export default function PurchasePage() {
   const [selectedPlan, setSelectedPlan] = useState<PricingPlan | null>(null)
   const [loading, setLoading] = useState(false)
   const [razorpayLoaded, setRazorpayLoaded] = useState(false)
+  const [showGuestForm, setShowGuestForm] = useState(false)
+  const [guestDetails, setGuestDetails] = useState({
+    name: '',
+    email: '',
+    phone: '',
+  })
 
   const courseData = COURSE_PRICING[courseId as keyof typeof COURSE_PRICING]
 
@@ -154,42 +160,64 @@ export default function PurchasePage() {
       return
     }
 
+    // Show guest checkout form for now (can be enhanced with auth check later)
+    setShowGuestForm(true)
+  }
+
+  const handleGuestCheckout = async () => {
+    if (!guestDetails.name || !guestDetails.email || !guestDetails.phone) {
+      alert('Please fill in all details')
+      return
+    }
+
+    if (!selectedPlan) {
+      alert('Please select a pricing plan')
+      return
+    }
+
     setLoading(true)
+    setShowGuestForm(false)
 
     try {
-      // Step 1: Create order
-      const orderResponse = await fetch('/api/payments/create-order', {
+      // Step 1: Create enrollment and order
+      const purchaseResponse = await fetch('/api/purchase', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
+          courseId,
+          planType: selectedPlan.paymentType,
           amount: selectedPlan.price,
-          currency: 'INR',
-          notes: {
-            courseId,
-            courseName: courseData.title,
-            planType: selectedPlan.paymentType,
-            planName: selectedPlan.name,
-          },
+          email: guestDetails.email,
+          phone: guestDetails.phone,
+          name: guestDetails.name,
+          planName: selectedPlan.name,
+          courseName: courseData.title,
         }),
       })
 
-      if (!orderResponse.ok) {
-        throw new Error('Failed to create order')
+      if (!purchaseResponse.ok) {
+        const errorData = await purchaseResponse.json()
+        throw new Error(errorData.error || 'Failed to create enrollment')
       }
 
-      const orderData = await orderResponse.json()
+      const purchaseData = await purchaseResponse.json()
+
+      if (!purchaseData.success) {
+        throw new Error(purchaseData.error || 'Purchase failed')
+      }
 
       // Step 2: Open Razorpay checkout
       const options = {
         key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
-        amount: orderData.amount,
-        currency: orderData.currency,
+        amount: purchaseData.order.amount,
+        currency: purchaseData.order.currency,
         name: 'Cerebrum Biology Academy',
         description: courseData.title,
-        order_id: orderData.id,
+        order_id: purchaseData.order.id,
         prefill: {
-          email: '',
-          contact: '',
+          name: purchaseData.user.name,
+          email: purchaseData.user.email,
+          contact: purchaseData.user.phone,
         },
         theme: {
           color: '#16a34a',
@@ -204,16 +232,12 @@ export default function PurchasePage() {
                 razorpay_order_id: response.razorpay_order_id,
                 razorpay_payment_id: response.razorpay_payment_id,
                 razorpay_signature: response.razorpay_signature,
-                courseId,
-                planType: selectedPlan.paymentType,
               }),
             })
 
             if (!verifyResponse.ok) {
               throw new Error('Payment verification failed')
             }
-
-            const verifyData = await verifyResponse.json()
 
             // Redirect to success page
             router.push(
@@ -234,8 +258,8 @@ export default function PurchasePage() {
       const rzp = new window.Razorpay(options)
       rzp.open()
     } catch (error) {
-      console.error('Payment error:', error)
-      alert('Payment failed. Please try again.')
+      console.error('Purchase error:', error)
+      alert(error instanceof Error ? error.message : 'Purchase failed. Please try again.')
       setLoading(false)
     }
   }
@@ -316,6 +340,86 @@ export default function PurchasePage() {
               selectedPlanId={selectedPlan?.id}
             />
           </div>
+
+          {/* Guest Checkout Form Modal */}
+          {showGuestForm && (
+            <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+              <div className="bg-white rounded-2xl max-w-md w-full p-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Complete Your Details</h3>
+                <p className="text-gray-600 mb-6">
+                  Enter your details to proceed with the enrollment
+                </p>
+
+                <div className="space-y-4 mb-6">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Full Name
+                    </label>
+                    <input
+                      type="text"
+                      value={guestDetails.name}
+                      onChange={(e) =>
+                        setGuestDetails((prev) => ({ ...prev, name: e.target.value }))
+                      }
+                      placeholder="John Doe"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Email Address
+                    </label>
+                    <input
+                      type="email"
+                      value={guestDetails.email}
+                      onChange={(e) =>
+                        setGuestDetails((prev) => ({ ...prev, email: e.target.value }))
+                      }
+                      placeholder="john@example.com"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Phone Number
+                    </label>
+                    <input
+                      type="tel"
+                      value={guestDetails.phone}
+                      onChange={(e) =>
+                        setGuestDetails((prev) => ({ ...prev, phone: e.target.value }))
+                      }
+                      placeholder="+91 9876543210"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div className="flex gap-3">
+                  <button
+                    onClick={() => setShowGuestForm(false)}
+                    className="flex-1 px-6 py-3 border-2 border-gray-300 text-gray-700 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    onClick={handleGuestCheckout}
+                    disabled={loading}
+                    className="flex-1 px-6 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors disabled:bg-gray-300 disabled:cursor-not-allowed"
+                  >
+                    {loading ? 'Processing...' : 'Continue'}
+                  </button>
+                </div>
+
+                <p className="text-xs text-gray-500 text-center mt-4">
+                  Your login credentials will be sent to your email after successful payment
+                </p>
+              </div>
+            </div>
+          )}
 
           {/* Proceed Button */}
           <div className="max-w-3xl mx-auto">

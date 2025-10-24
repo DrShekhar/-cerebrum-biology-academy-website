@@ -11,7 +11,7 @@ import {
   BookOpen,
   Play,
 } from 'lucide-react'
-import Link from 'link'
+import Link from 'next/link'
 
 interface OrderDetails {
   orderId: string
@@ -107,19 +107,11 @@ export default function PurchaseSuccessPage() {
     if (!orderId) return
 
     try {
-      const response = await fetch(`/api/payments/receipt/${orderId}`)
-      const blob = await response.blob()
-      const url = window.URL.createObjectURL(blob)
-      const a = document.createElement('a')
-      a.href = url
-      a.download = `Cerebrum-Receipt-${orderId}.pdf`
-      document.body.appendChild(a)
-      a.click()
-      window.URL.revokeObjectURL(url)
-      document.body.removeChild(a)
+      // Open receipt in new window (HTML version)
+      window.open(`/api/payments/receipt/${orderId}`, '_blank')
     } catch (error) {
-      console.error('Download error:', error)
-      alert('Failed to download receipt. Please contact support.')
+      console.error('Receipt error:', error)
+      alert('Failed to open receipt. Please contact support.')
     }
   }
 

@@ -49,10 +49,20 @@ export async function POST(request: NextRequest) {
 
     if (verified) {
       try {
+        let enrollmentId: string | null = null
+        let userId: string | null = null
+        let courseId: string | null = null
+
         await prisma.$transaction(async (tx) => {
           const payment = await tx.payment.findFirst({
             where: { razorpayOrderId: orderId },
-            include: { enrollment: true },
+            include: {
+              enrollment: {
+                include: {
+                  course: true,
+                },
+              },
+            },
           })
 
           if (!payment) {
@@ -74,20 +84,88 @@ export async function POST(request: NextRequest) {
             },
           })
 
-          if (payment.enrollmentId) {
+          if (payment.enrollmentId && payment.enrollment) {
+            // Update enrollment status
             await tx.enrollment.update({
               where: { id: payment.enrollmentId },
               data: {
                 status: 'ACTIVE',
                 paidAmount: { increment: payment.amount },
                 pendingAmount: { decrement: payment.amount },
+                startDate: new Date(),
               },
             })
+
+            // Store IDs for post-transaction operations
+            enrollmentId = payment.enrollmentId
+            userId = payment.userId
+            courseId = payment.enrollment.courseId
+
+            // Grant access to all course materials
+            const courseMaterials = await tx.studyMaterial.findMany({
+              where: {
+                courseId: payment.enrollment.courseId,
+                isPublished: true,
+              },
+              select: { id: true },
+            })
+
+            if (courseMaterials.length > 0) {
+              // Create material access records for all published course materials
+              const materialAccessRecords = courseMaterials.map((material) => ({
+                materialId: material.id,
+                userId: payment.userId,
+                grantedBy: 'system',
+                grantedAt: new Date(),
+                reason: 'Enrollment payment completed',
+              }))
+
+              await tx.materialAccess.createMany({
+                data: materialAccessRecords,
+                skipDuplicates: true,
+              })
+
+              console.log(
+                `Granted access to ${courseMaterials.length} materials for user ${payment.userId}`
+              )
+            }
+
             console.log(`Enrollment activated: ${payment.enrollmentId}`)
           }
 
           console.log(`Payment verified and updated: ${orderId}`)
         })
+
+        // Trigger notifications after successful transaction (fire-and-forget)
+        if (enrollmentId && userId && courseId) {
+          // Trigger WhatsApp notification
+          fetch(`${request.nextUrl.origin}/api/notifications/whatsapp`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              orderId,
+              enrollmentId,
+              userId,
+              courseId,
+              type: 'enrollment_confirmation',
+            }),
+          }).catch((err) => console.error('WhatsApp notification failed:', err))
+
+          // Trigger email notification
+          fetch(`${request.nextUrl.origin}/api/notifications/email`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              orderId,
+              enrollmentId,
+              userId,
+              courseId,
+              type: 'enrollment_confirmation',
+            }),
+          }).catch((err) => console.error('Email notification failed:', err))
+
+          console.log('Triggered WhatsApp and Email notifications')
+        }
       } catch (dbError) {
         console.error('Transaction error after payment verification:', dbError)
         return NextResponse.json(
