@@ -157,14 +157,14 @@ export default function AboutPage() {
               </AcademicEmphasis>
             </AcademicHeadline>
 
-            <AcademicParagraph size="large" className="text-blue-100 mb-8">
+            <AcademicParagraph size="large" className="text-white mb-8">
               Founded by Dr. Shekhar C Singh (AIIMS Delhi) in 2015, we are{' '}
               <strong>an AIIMSonian's initiative</strong> committed to making world-class NEET
               Biology education accessible to all students through proven teaching methodologies and
               personal mentoring.
             </AcademicParagraph>
 
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8">
+            <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-white/30">
               <AcademicList
                 variant="checkmark"
                 items={[
@@ -199,7 +199,7 @@ export default function AboutPage() {
           <div className="lg:col-span-5">
             <AcademicCard
               variant="premium"
-              className="bg-white/10 backdrop-blur-sm border-white/20 text-white"
+              className="bg-white/20 backdrop-blur-sm border-white/30 text-white"
             >
               <AcademicHeadline level={3} variant="hero" className="mb-8">
                 Our Academic Impact
@@ -207,11 +207,11 @@ export default function AboutPage() {
               <AcademicGrid columns={2} gap="medium">
                 {achievements.map((achievement, index) => (
                   <div key={index} className="text-center">
-                    <achievement.icon className="w-10 h-10 mx-auto mb-4 text-blue-200" />
+                    <achievement.icon className="w-10 h-10 mx-auto mb-4 text-white/90" />
                     <AcademicEmphasis variant="stat" className="text-white text-4xl block mb-2">
                       {achievement.number}
                     </AcademicEmphasis>
-                    <div className="text-blue-100 font-medium">{achievement.label}</div>
+                    <div className="text-white/90 font-medium">{achievement.label}</div>
                   </div>
                 ))}
               </AcademicGrid>
