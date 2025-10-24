@@ -108,7 +108,7 @@ export default function RootLayout({
           <div data-section="navigation" className="priority-immediate">
             <Header />
           </div>
-          <main id="main-content" className="min-h-screen pt-16 pb-16 md:pb-0">
+          <main id="main-content" className="min-h-screen pb-16 md:pb-0">
             {children}
           </main>
           <div data-lazy="footer" className="priority-lazy">
