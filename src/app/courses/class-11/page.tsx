@@ -208,12 +208,10 @@ export default function Class11BiologyPage() {
 
               {/* Prominent Pricing - No Hidden Collapsibles */}
               <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl p-6 my-6 border-2 border-green-200">
-                <div className="text-sm text-gray-600 mb-2">Starting from</div>
-                <div className="text-4xl md:text-5xl font-bold text-green-600 mb-2">
-                  ₹3,500<span className="text-2xl text-gray-600">/month</span>
-                </div>
+                <div className="text-sm text-gray-600 mb-2">Complete Course Price</div>
+                <div className="text-4xl md:text-5xl font-bold text-green-600 mb-2">₹75,000</div>
                 <div className="text-sm text-gray-600 mb-4">
-                  EMI options available • Zero cost EMI on credit cards
+                  Or pay in EMI: ₹3,500/month • Zero cost EMI available
                 </div>
 
                 {/* Quick Value Props */}
