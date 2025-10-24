@@ -100,7 +100,8 @@ export default function AboutPage() {
       title: 'Student-Centric Approach',
       description:
         'Every decision prioritizes student success and well-being through personalized attention and comprehensive support systems.',
-      color: 'bg-red-500',
+      color: 'from-red-600 to-red-500',
+      colorSolid: 'red',
       metric: '98%',
       metricLabel: 'Success Rate',
     },
@@ -109,7 +110,8 @@ export default function AboutPage() {
       title: 'Academic Integrity',
       description:
         'Highest standards of ethical teaching with transparent progress tracking and honest performance assessment.',
-      color: 'bg-blue-500',
+      color: 'from-blue-600 to-blue-500',
+      colorSolid: 'blue',
       metric: '2,847+',
       metricLabel: 'Students Trust Us',
     },
@@ -118,7 +120,8 @@ export default function AboutPage() {
       title: 'Innovation in Learning',
       description:
         'Evidence-based teaching methods combining AIIMS-proven strategies with modern educational technology.',
-      color: 'bg-yellow-500',
+      color: 'from-amber-600 to-orange-500',
+      colorSolid: 'orange',
       metric: '9+ Years',
       metricLabel: 'Proven Methods',
     },
@@ -127,7 +130,8 @@ export default function AboutPage() {
       title: 'Collaborative Growth',
       description:
         'Integrated community of students, AIIMS faculty, and parents working together toward medical career success.',
-      color: 'bg-green-500',
+      color: 'from-emerald-600 to-emerald-500',
+      colorSolid: 'emerald',
       metric: '27',
       metricLabel: 'Top 1000 AIR',
     },
@@ -319,8 +323,8 @@ export default function AboutPage() {
         </AcademicGrid>
       </ContentSection>
 
-      {/* Our Values - Academic Excellence Principles (Harvard Business Review Style) */}
-      <FeatureSection className="py-12">
+      {/* Our Values - Academic Excellence Principles - Enhanced Card Grid */}
+      <FeatureSection className="py-16">
         <SectionHeader
           subtitle="Institutional Values"
           title="Our Core Academic Principles"
@@ -328,8 +332,8 @@ export default function AboutPage() {
           variant="center"
         />
 
-        {/* Compact Horizontal Value Bars */}
-        <div className="max-w-5xl mx-auto space-y-4">
+        {/* Enhanced 4-Column Card Grid - Better Organized */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
           {values.map((value, index) => (
             <motion.div
               key={index}
@@ -337,27 +341,37 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg hover:border-gray-300 transition-all duration-300 group"
+              className="bg-white border-2 border-gray-200 rounded-2xl p-6 hover:shadow-xl hover:border-gray-300 hover:-translate-y-1 transition-all duration-300 group"
             >
-              <div className="flex items-center gap-6">
-                {/* Icon */}
-                <div
-                  className={`${value.color} w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform`}
-                >
-                  <value.icon className="w-7 h-7 text-white" />
-                </div>
+              {/* Icon with Gradient */}
+              <div
+                className={`w-16 h-16 bg-gradient-to-br ${value.color} rounded-xl flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform`}
+              >
+                <value.icon className="w-8 h-8 text-white" strokeWidth={2.5} />
+              </div>
 
-                {/* Content */}
-                <div className="flex-1 min-w-0">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{value.title}</h3>
-                  <p className="text-gray-700 leading-relaxed">{value.description}</p>
-                </div>
+              {/* Title */}
+              <h3 className="text-lg font-bold text-gray-900 mb-3 leading-tight">{value.title}</h3>
 
-                {/* Metric Badge */}
-                <div className="flex-shrink-0 text-right pl-4 border-l-2 border-gray-200">
-                  <div className="text-3xl font-bold text-gray-900">{value.metric}</div>
-                  <div className="text-sm text-gray-600 font-medium mt-1">{value.metricLabel}</div>
-                </div>
+              {/* Description */}
+              <p className="text-sm text-gray-600 leading-relaxed mb-4">{value.description}</p>
+
+              {/* Metric - White Numbers on Dark Gradient Pill */}
+              <div
+                className={`inline-flex flex-col bg-gradient-to-r from-${value.colorSolid}-700 to-${value.colorSolid}-600 text-white px-4 py-3 rounded-xl shadow-md mb-4`}
+              >
+                <span className="text-3xl font-extrabold tabular-nums text-white leading-none">
+                  {value.metric}
+                </span>
+                <span className="text-xs opacity-90 font-medium text-white mt-1">
+                  {value.metricLabel}
+                </span>
+              </div>
+
+              {/* Badge */}
+              <div className="inline-flex items-center bg-emerald-100 border border-emerald-300 text-emerald-700 px-3 py-1.5 rounded-full text-xs font-semibold">
+                <CheckCircle className="w-3.5 h-3.5 mr-1.5" />
+                Verified Results
               </div>
             </motion.div>
           ))}
