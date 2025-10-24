@@ -99,26 +99,37 @@ export default function AboutPage() {
       icon: Heart,
       title: 'Student-Centric Approach',
       description:
-        'Every decision we make prioritizes student success and well-being above everything else.',
+        'Every decision prioritizes student success and well-being through personalized attention and comprehensive support systems.',
       color: 'bg-red-500',
+      metric: '98%',
+      metricLabel: 'Success Rate',
     },
     {
       icon: Shield,
       title: 'Academic Integrity',
-      description: 'We maintain the highest standards of ethical teaching and honest guidance.',
+      description:
+        'Highest standards of ethical teaching with transparent progress tracking and honest performance assessment.',
       color: 'bg-blue-500',
+      metric: '2,847+',
+      metricLabel: 'Students Trust Us',
     },
     {
       icon: Lightbulb,
       title: 'Innovation in Learning',
-      description: 'Constantly evolving our teaching methods with latest educational technologies.',
+      description:
+        'Evidence-based teaching methods combining AIIMS-proven strategies with modern educational technology.',
       color: 'bg-yellow-500',
+      metric: '9+ Years',
+      metricLabel: 'Proven Methods',
     },
     {
       icon: Users,
       title: 'Collaborative Growth',
-      description: 'Building a community where students, faculty, and parents grow together.',
+      description:
+        'Integrated community of students, AIIMS faculty, and parents working together toward medical career success.',
       color: 'bg-green-500',
+      metric: '27',
+      metricLabel: 'Top 1000 AIR',
     },
   ]
 
@@ -308,40 +319,49 @@ export default function AboutPage() {
         </AcademicGrid>
       </ContentSection>
 
-      {/* Our Values - Academic Excellence Principles */}
-      <FeatureSection>
+      {/* Our Values - Academic Excellence Principles (Harvard Business Review Style) */}
+      <FeatureSection className="py-12">
         <SectionHeader
           subtitle="Institutional Values"
           title="Our Core Academic Principles"
-          description="The fundamental values that drive our commitment to educational excellence and creating great human beings alongside successful medical professionals"
+          description="Data-driven commitment to educational excellence backed by proven results"
           variant="center"
         />
 
-        <AcademicGrid columns={4} gap="medium">
+        {/* Compact Horizontal Value Bars */}
+        <div className="max-w-5xl mx-auto space-y-4">
           {values.map((value, index) => (
-            <AcademicCard key={index} variant="premium" hover={true} className="text-center">
-              <div
-                className={`w-16 h-16 ${value.color} rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg`}
-              >
-                <value.icon className="w-8 h-8 text-white" />
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg hover:border-gray-300 transition-all duration-300 group"
+            >
+              <div className="flex items-center gap-6">
+                {/* Icon */}
+                <div
+                  className={`${value.color} w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform`}
+                >
+                  <value.icon className="w-7 h-7 text-white" />
+                </div>
+
+                {/* Content */}
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{value.title}</h3>
+                  <p className="text-gray-700 leading-relaxed">{value.description}</p>
+                </div>
+
+                {/* Metric Badge */}
+                <div className="flex-shrink-0 text-right pl-4 border-l-2 border-gray-200">
+                  <div className="text-3xl font-bold text-gray-900">{value.metric}</div>
+                  <div className="text-sm text-gray-600 font-medium mt-1">{value.metricLabel}</div>
+                </div>
               </div>
-
-              <AcademicHeadline level={4} className="mb-4 text-gray-900">
-                {value.title}
-              </AcademicHeadline>
-
-              <AcademicParagraph size="small" variant="muted" className="mb-4">
-                {value.description}
-              </AcademicParagraph>
-
-              <div className="pt-4 border-t border-gray-100">
-                <AcademicEmphasis variant="highlight" color="blue" className="text-xs">
-                  Proven Approach
-                </AcademicEmphasis>
-              </div>
-            </AcademicCard>
+            </motion.div>
           ))}
-        </AcademicGrid>
+        </div>
 
         {/* Academic Excellence Quote */}
         <div className="mt-16">
