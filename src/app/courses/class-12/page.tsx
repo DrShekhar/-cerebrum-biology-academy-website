@@ -82,15 +82,21 @@ export default function Class12BiologyPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
-                  href="/admissions"
-                  className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center"
+                  href="/purchase/class-12"
+                  className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center justify-center shadow-lg"
                 >
-                  Enroll Now
+                  Buy Now - Start Learning
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
                 <Link
+                  href="/admissions"
+                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors inline-flex items-center justify-center"
+                >
+                  Talk to Counselor
+                </Link>
+                <Link
                   href="/contact"
-                  className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+                  className="border border-white/50 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors inline-flex items-center justify-center"
                 >
                   Book Demo Class
                 </Link>
