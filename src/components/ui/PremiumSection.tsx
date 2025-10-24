@@ -140,7 +140,9 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
       )}
       <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 tracking-tight">{title}</h2>
       {description && (
-        <p className="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto">{description}</p>
+        <p className="text-xl lg:text-2xl text-gray-600 leading-relaxed max-w-4xl mx-auto">
+          {description}
+        </p>
       )}
     </motion.div>
   )
