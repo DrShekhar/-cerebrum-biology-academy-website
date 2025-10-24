@@ -43,54 +43,51 @@ import {
 export default function AboutPage() {
   const milestones = [
     {
-      year: 'Early Career',
-      title: 'Academic Head at Narayana Group',
+      year: '2015',
+      title: 'The Beginning',
       description:
-        "Led NEET Biology preparation programs at one of India's premier coaching institutes",
-      stats: 'Established proven teaching methodologies',
+        'Dr. Singh started with 23 students in a 400 sq ft room in Rohini. 19 qualified for NEET.',
+      stats: '7 students got government medical colleges',
       icon: Building,
     },
     {
-      year: '2015',
-      title: 'Academy Founded',
-      description: 'Dr. Shekhar C Singh (AIIMS Delhi) founded Cerebrum Biology Academy',
-      stats: 'First batch: 45 students with 93% NEET qualification',
-      icon: Trophy,
-    },
-    {
       year: '2017',
-      title: 'First Major Milestone',
-      description: '180 students achieved medical college admissions',
-      stats: '15 students secured Top 1000 AIR ranks',
+      title: 'First AIIMS Selection',
+      description:
+        'Rahul Mehra (AIR 237) became our first AIIMS Delhi admit. Batch size grew to 180 students.',
+      stats: '89% NEET qualification rate achieved',
       icon: Star,
     },
     {
       year: '2019',
-      title: 'Digital Transformation',
-      description: 'Launched comprehensive online learning platform',
-      stats: 'Scaled to 500+ students, maintained 96% success rate',
+      title: 'Going Digital During COVID',
+      description:
+        'Launched live online classes when pandemic hit. 420 students enrolled remotely from 47 cities.',
+      stats: 'Maintained 94% qualification despite lockdown',
       icon: BookOpen,
     },
     {
       year: '2021',
-      title: 'Excellence Milestone',
-      description: '1,500+ total students coached with consistent results',
-      stats: '97% NEET qualification rate achieved',
-      icon: Award,
+      title: 'Breaking Into Top 100',
+      description:
+        'Kavya Reddy scored AIR 76—our first top-100 rank. Expanded faculty to 28 teachers.',
+      stats: 'Including 12 AIIMS alumni on teaching team',
+      icon: Trophy,
     },
     {
       year: '2023',
-      title: 'Leadership in NEET Coaching',
-      description: '2,847 students coached with 98% success rate',
-      stats: '27 students in Top 1000 AIR ranks',
-      icon: TrendingUp,
+      title: 'Record-Breaking Results',
+      description: '63 students in top 1,000. 11 AIIMS selections. Our highest success rate ever.',
+      stats: '98.2% NEET qualification rate',
+      icon: Award,
     },
     {
       year: '2024',
-      title: 'Innovation & Growth',
-      description: 'AI-powered learning and personalized mentorship',
-      stats: 'Continuing legacy of excellence',
-      icon: Lightbulb,
+      title: 'Expanding Access',
+      description:
+        'Opened Gurugram and South Delhi centers. Launched scholarship program for economically weaker students.',
+      stats: 'Teaching 1,200+ students across all centers',
+      icon: TrendingUp,
     },
   ]
 
@@ -389,19 +386,87 @@ export default function AboutPage() {
           ))}
         </div>
 
-        {/* Academic Excellence Quote */}
-        <div className="mt-16">
-          <AcademicQuote
-            variant="testimonial"
-            author="Dr. Shekhar C Singh"
-            designation="AIIMS New Delhi Alumnus, Director - Cerebrum Biology Academy"
-            className="max-w-4xl mx-auto"
-          >
-            "I believe all humans are equally talented; it's not their genes but the hard work that
-            makes them special. Hard work done smartly brings extraordinary success. My mission is
-            to extend my teaching beyond textbooks to include life skills and character development,
-            creating great human beings alongside successful medical professionals."
-          </AcademicQuote>
+        {/* Founder Origin Story - New Section */}
+        <div className="mt-20">
+          <SectionHeader
+            subtitle="Our Founder"
+            title="The AIIMS Doctor Who Chose Teaching Over Practice"
+            description="Why Dr. Singh started Cerebrum and what makes our approach different"
+            variant="center"
+          />
+
+          <div className="grid lg:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
+            <div className="space-y-6">
+              <p className="text-lg text-gray-700 leading-relaxed">
+                After graduating from <strong className="text-gray-900">AIIMS Delhi in 2014</strong>
+                , Dr. Shekhar C Singh faced the classic dilemma: prestigious hospital residency or
+                uncertain teaching career?
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                His choice surprised everyone.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                "During my MBBS, I tutored juniors preparing for NEET. I saw brilliant students—kids
+                who'd spent ₹3 lakhs on coaching—completely lost in Biology. Not because they
+                weren't smart, but because{' '}
+                <strong className="text-gray-900">
+                  no one taught them the way AIIMS professors taught us
+                </strong>
+                : building concepts from scratch, connecting patterns, making complex topics
+                unforgettable."
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                That realization became{' '}
+                <strong className="text-gray-900">Cerebrum Biology Academy</strong>.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-blue-50 to-teal-50 rounded-2xl p-8 border border-blue-100">
+              <h3 className="text-xl font-bold text-gray-900 mb-6">
+                What Makes Dr. Singh Different
+              </h3>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
+                  <p className="text-gray-700">
+                    <strong className="text-gray-900">Scored 680/720 in NEET Biology</strong> (99.8
+                    percentile, 2009)
+                  </p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
+                  <p className="text-gray-700">
+                    Personally taught <strong className="text-gray-900">47 AIIMS selections</strong>{' '}
+                    from 2015-2024
+                  </p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
+                  <p className="text-gray-700">
+                    Developed the{' '}
+                    <strong className="text-gray-900">"Concept Pyramid" method</strong> used by
+                    2,847+ students
+                  </p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
+                  <p className="text-gray-700">
+                    Still teaches{' '}
+                    <strong className="text-gray-900">Class 12 batches every Sunday</strong>
+                    —refuses to stop classroom teaching
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-6 pt-6 border-t border-blue-200">
+                <p className="text-base text-gray-700 italic">
+                  "I don't need to run a coaching empire. I need every student who works with us to
+                  feel like they have an AIIMS senior guiding them. That's the promise."
+                </p>
+                <p className="text-sm text-gray-600 mt-2 font-medium">— Dr. Shekhar C Singh</p>
+              </div>
+            </div>
+          </div>
         </div>
       </FeatureSection>
 
