@@ -64,10 +64,10 @@ export function OptimizedHeroSection({ className = '' }: OptimizedHeroSectionPro
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <div
-          className="absolute inset-0 bg-cover bg-center opacity-20"
+          className="absolute inset-0 bg-cover bg-center opacity-15"
           style={{
             backgroundImage:
-              'url(https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1440,h=756,fit=crop,f=jpeg/meP3n6VKelS9LnOn/img_2854-YD0v2gX7w8TZqBql.jpg)',
+              'url(https://images.unsplash.com/photo-1584515933487-779824d29309?w=1440&h=756&fit=crop&auto=format)',
           }}
         />
         <motion.div
