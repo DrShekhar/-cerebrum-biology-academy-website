@@ -479,49 +479,53 @@ export default function AboutPage() {
           </div>
 
           <div className="relative">
-            {/* Timeline Line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-blue-200"></div>
+            {/* Timeline Line - Hidden on mobile, visible on desktop */}
+            <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-1.5 h-full bg-gradient-to-b from-blue-400 to-blue-200 shadow-sm"></div>
 
-            <div className="space-y-16">
+            <div className="space-y-8 lg:space-y-16">
               {milestones.map((milestone, index) => (
                 <motion.div
                   key={index}
-                  className={`flex items-center ${
+                  className={`flex flex-col lg:flex-row lg:items-center ${
                     index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
                   }`}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
-                  <div className={`lg:w-1/2 ${index % 2 === 0 ? 'lg:pr-12' : 'lg:pl-12'}`}>
-                    <div className="bg-white rounded-3xl shadow-lg p-8 hover:shadow-xl transition-shadow border-l-4 border-blue-600">
-                      <div
-                        className={`flex items-center mb-4 ${
-                          index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
-                        }`}
-                      >
-                        <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-full flex items-center justify-center shadow-lg">
-                          <milestone.icon className="w-8 h-8 text-white" />
+                  <div className={`w-full lg:w-1/2 ${index % 2 === 0 ? 'lg:pr-12' : 'lg:pl-12'}`}>
+                    <div className="bg-white rounded-2xl shadow-lg p-6 lg:p-8 hover:shadow-xl transition-shadow border-l-4 border-teal-600">
+                      <div className="flex items-center mb-4">
+                        <div className="w-14 h-14 lg:w-16 lg:h-16 bg-gradient-to-br from-teal-600 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg flex-shrink-0">
+                          <milestone.icon className="w-7 h-7 lg:w-8 lg:h-8 text-white" />
                         </div>
-                        <div className={`${index % 2 === 0 ? 'lg:ml-4' : 'lg:mr-4'}`}>
-                          <div className="text-3xl font-bold text-blue-600">{milestone.year}</div>
+                        <div className="ml-4">
+                          <div className="text-2xl lg:text-3xl font-bold text-teal-600">
+                            {milestone.year}
+                          </div>
                         </div>
                       </div>
-                      <h3 className="text-2xl font-bold text-gray-900 mb-3">{milestone.title}</h3>
-                      <p className="text-gray-700 mb-4 leading-relaxed">{milestone.description}</p>
-                      <div className="bg-blue-50 rounded-xl p-4 border-l-4 border-blue-600">
+                      <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-3">
+                        {milestone.title}
+                      </h3>
+                      <p className="text-base lg:text-lg text-gray-700 mb-4 leading-relaxed">
+                        {milestone.description}
+                      </p>
+                      <div className="bg-teal-50 rounded-xl p-4 border-l-4 border-teal-600">
                         <div className="flex items-center">
-                          <CheckCircle className="w-5 h-5 text-blue-600 mr-2 flex-shrink-0" />
-                          <span className="text-blue-900 font-semibold">{milestone.stats}</span>
+                          <CheckCircle className="w-5 h-5 text-teal-600 mr-2 flex-shrink-0" />
+                          <span className="text-teal-900 font-semibold text-sm lg:text-base">
+                            {milestone.stats}
+                          </span>
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  {/* Timeline Dot */}
-                  <div className="relative lg:w-4 lg:h-4 lg:bg-blue-600 lg:rounded-full lg:z-10 lg:mx-auto"></div>
+                  {/* Timeline Dot - Only visible on desktop */}
+                  <div className="hidden lg:block relative w-5 h-5 bg-gradient-to-br from-teal-600 to-blue-600 rounded-full z-10 mx-auto ring-4 ring-white shadow-lg"></div>
 
-                  <div className="lg:w-1/2"></div>
+                  <div className="hidden lg:block lg:w-1/2"></div>
                 </motion.div>
               ))}
             </div>
