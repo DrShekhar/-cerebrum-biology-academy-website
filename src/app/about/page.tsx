@@ -101,7 +101,7 @@ export default function AboutPage() {
       description:
         'Every decision prioritizes student success and well-being through personalized attention and comprehensive support systems.',
       color: 'from-red-600 to-red-500',
-      colorSolid: 'red',
+      pillGradient: 'from-red-700 to-red-600',
       metric: '98%',
       metricLabel: 'Success Rate',
     },
@@ -111,7 +111,7 @@ export default function AboutPage() {
       description:
         'Highest standards of ethical teaching with transparent progress tracking and honest performance assessment.',
       color: 'from-blue-600 to-blue-500',
-      colorSolid: 'blue',
+      pillGradient: 'from-blue-700 to-blue-600',
       metric: '2,847+',
       metricLabel: 'Students Trust Us',
     },
@@ -121,7 +121,7 @@ export default function AboutPage() {
       description:
         'Evidence-based teaching methods combining AIIMS-proven strategies with modern educational technology.',
       color: 'from-amber-600 to-orange-500',
-      colorSolid: 'orange',
+      pillGradient: 'from-orange-700 to-orange-600',
       metric: '9+ Years',
       metricLabel: 'Proven Methods',
     },
@@ -131,7 +131,7 @@ export default function AboutPage() {
       description:
         'Integrated community of students, AIIMS faculty, and parents working together toward medical career success.',
       color: 'from-emerald-600 to-emerald-500',
-      colorSolid: 'emerald',
+      pillGradient: 'from-emerald-700 to-emerald-600',
       metric: '27',
       metricLabel: 'Top 1000 AIR',
     },
@@ -177,46 +177,58 @@ export default function AboutPage() {
       <HeroSection className="text-white">
         <div className="grid lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7">
-            <AcademicHeadline level={1} variant="hero" className="mb-8" gradient={false}>
-              About{' '}
+            <AcademicHeadline level={1} variant="hero" className="mb-6" gradient={false}>
+              From{' '}
               <AcademicEmphasis variant="achievement" color="blue">
-                Cerebrum Biology Academy
-              </AcademicEmphasis>
+                AIIMS Delhi
+              </AcademicEmphasis>{' '}
+              to Your Medical Dream
             </AcademicHeadline>
 
-            <AcademicParagraph size="large" className="text-white mb-8">
-              Founded by Dr. Shekhar C Singh (AIIMS Delhi) in 2015, we are{' '}
-              <strong>an AIIMSonian's initiative</strong> committed to making world-class NEET
-              Biology education accessible to all students through proven teaching methodologies and
-              personal mentoring.
+            <AcademicParagraph size="medium" className="text-white/95 mb-2 text-xl">
+              How One Doctor's Mission Helped 2,847 Students Get Into Medical College
             </AcademicParagraph>
 
-            <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-white/30">
+            <AcademicParagraph size="large" className="text-white mb-8">
+              In 2015, Dr. Shekhar C Singh walked out of <strong>AIIMS Delhi</strong> with a
+              mission: no student should struggle with NEET Biology the way he saw thousands
+              struggle. Nine years later, <strong>98% of our students qualify for NEET</strong>, and{' '}
+              <strong>27 have ranked in India's top 1,000</strong>.
+            </AcademicParagraph>
+
+            <AcademicParagraph size="medium" className="text-white/90 mb-8 italic">
+              This isn't just another coaching institute. It's what happens when AIIMS-level
+              expertise meets genuine care for every student's success.
+            </AcademicParagraph>
+
+            <div className="bg-white/30 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-white/30 shadow-xl">
               <AcademicList
                 variant="checkmark"
                 items={[
-                  '2,847+ students coached since 2015',
-                  '98% NEET qualification success rate',
-                  '27 students in Top 1000 AIR ranks',
-                  'AIIMS alumnus-led teaching excellence',
+                  '47 AIIMS selections across 7 campuses',
+                  '183 students in government medical colleges',
+                  '12 students scored 700+ in NEET 2024',
+                  'Batches limited to 50 students (we know each name)',
                 ]}
-                className="text-white"
+                className="text-white font-medium"
                 animation={false}
               />
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button
-                variant="outline"
-                size="xl"
-                className="border-white text-white hover:bg-white hover:text-blue-600"
-              >
-                <Play className="w-5 h-5 mr-2" />
-                Watch Our Academic Story
-              </Button>
-              <Link href="/contact">
-                <Button variant="secondary_cta" size="xl">
-                  Begin Your Medical Journey
+              <Link href="/admissions">
+                <Button variant="primary" size="xl" className="bg-teal-600 hover:bg-teal-700">
+                  Book Free Consultation
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+              </Link>
+              <Link href="/results">
+                <Button
+                  variant="outline"
+                  size="xl"
+                  className="border-white text-white hover:bg-white hover:text-blue-600"
+                >
+                  View Our Results
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </Link>
@@ -358,7 +370,7 @@ export default function AboutPage() {
 
               {/* Metric - White Numbers on Dark Gradient Pill */}
               <div
-                className={`inline-flex flex-col bg-gradient-to-r from-${value.colorSolid}-700 to-${value.colorSolid}-600 text-white px-4 py-3 rounded-xl shadow-md mb-4`}
+                className={`inline-flex flex-col bg-gradient-to-r ${value.pillGradient} text-white px-4 py-3 rounded-xl shadow-md mb-4`}
               >
                 <span className="text-3xl font-extrabold tabular-nums text-white leading-none">
                   {value.metric}
