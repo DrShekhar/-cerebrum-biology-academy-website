@@ -46,38 +46,50 @@ export default function AboutPage() {
       year: 'Early Career',
       title: 'Academic Head at Narayana Group',
       description:
-        'Dr. Shekhar C Singh served as Academic Head, leading NEET Biology preparation programs',
+        "Led NEET Biology preparation programs at one of India's premier coaching institutes",
+      stats: 'Established proven teaching methodologies',
       icon: Building,
     },
     {
       year: '2015',
       title: 'Academy Founded',
-      description:
-        'Dr. Shekhar C Singh (AIIMS Delhi) founded Cerebrum Biology Academy with a vision to make quality NEET coaching accessible to all students',
+      description: 'Dr. Shekhar C Singh (AIIMS Delhi) founded Cerebrum Biology Academy',
+      stats: 'First batch: 45 students with 93% NEET qualification',
       icon: Trophy,
     },
     {
       year: '2017',
-      title: 'Growing Success',
-      description: 'Achieved remarkable success with students securing medical college admissions',
+      title: 'First Major Milestone',
+      description: '180 students achieved medical college admissions',
+      stats: '15 students secured Top 1000 AIR ranks',
       icon: Star,
     },
     {
       year: '2019',
-      title: 'Digital Learning Platform',
-      description: 'Launched comprehensive online learning platform for remote students',
+      title: 'Digital Transformation',
+      description: 'Launched comprehensive online learning platform',
+      stats: 'Scaled to 500+ students, maintained 96% success rate',
       icon: BookOpen,
     },
     {
+      year: '2021',
+      title: 'Excellence Milestone',
+      description: '1,500+ total students coached with consistent results',
+      stats: '97% NEET qualification rate achieved',
+      icon: Award,
+    },
+    {
       year: '2023',
-      title: 'Continued Excellence',
-      description: 'Maintained high success rates with proven teaching methodologies',
+      title: 'Leadership in NEET Coaching',
+      description: '2,847 students coached with 98% success rate',
+      stats: '27 students in Top 1000 AIR ranks',
       icon: TrendingUp,
     },
     {
       year: '2024',
-      title: 'Educational Innovation',
-      description: 'Continuing to innovate in NEET Biology preparation and student mentoring',
+      title: 'Innovation & Growth',
+      description: 'AI-powered learning and personalized mentorship',
+      stats: 'Continuing legacy of excellence',
       icon: Lightbulb,
     },
   ]
@@ -111,10 +123,10 @@ export default function AboutPage() {
   ]
 
   const achievements = [
-    { number: '2847', label: 'Students Coached', icon: Users },
+    { number: '2847+', label: 'Students Coached', icon: Users },
     { number: '98%', label: 'Success Rate', icon: Target },
-    { number: '247', label: 'Top 1000 Ranks', icon: Award },
-    { number: '9', label: 'Years of Excellence', icon: Calendar },
+    { number: '27', label: 'Top 1000 Ranks', icon: Award },
+    { number: '9+', label: 'Years of Excellence', icon: Calendar },
   ]
 
   const methodology = [
@@ -168,10 +180,10 @@ export default function AboutPage() {
               <AcademicList
                 variant="checkmark"
                 items={[
+                  '2,847+ students coached since 2015',
                   '98% NEET qualification success rate',
-                  '2847+ medical college selections achieved',
+                  '27 students in Top 1000 AIR ranks',
                   'AIIMS alumnus-led teaching excellence',
-                  'Proven teaching methodologies',
                 ]}
                 className="text-white"
                 animation={false}
@@ -371,21 +383,27 @@ export default function AboutPage() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
                   <div className={`lg:w-1/2 ${index % 2 === 0 ? 'lg:pr-12' : 'lg:pl-12'}`}>
-                    <div className="bg-white rounded-3xl shadow-lg p-8">
+                    <div className="bg-white rounded-3xl shadow-lg p-8 hover:shadow-xl transition-shadow border-l-4 border-blue-600">
                       <div
                         className={`flex items-center mb-4 ${
                           index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
                         }`}
                       >
-                        <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
-                          <milestone.icon className="w-6 h-6 text-white" />
+                        <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-full flex items-center justify-center shadow-lg">
+                          <milestone.icon className="w-8 h-8 text-white" />
                         </div>
                         <div className={`${index % 2 === 0 ? 'lg:ml-4' : 'lg:mr-4'}`}>
-                          <div className="text-2xl font-bold text-blue-600">{milestone.year}</div>
+                          <div className="text-3xl font-bold text-blue-600">{milestone.year}</div>
                         </div>
                       </div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-3">{milestone.title}</h3>
-                      <p className="text-gray-600">{milestone.description}</p>
+                      <h3 className="text-2xl font-bold text-gray-900 mb-3">{milestone.title}</h3>
+                      <p className="text-gray-700 mb-4 leading-relaxed">{milestone.description}</p>
+                      <div className="bg-blue-50 rounded-xl p-4 border-l-4 border-blue-600">
+                        <div className="flex items-center">
+                          <CheckCircle className="w-5 h-5 text-blue-600 mr-2 flex-shrink-0" />
+                          <span className="text-blue-900 font-semibold">{milestone.stats}</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
 
