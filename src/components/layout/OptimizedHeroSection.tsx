@@ -67,7 +67,7 @@ export function OptimizedHeroSection({ className = '' }: OptimizedHeroSectionPro
           className="absolute inset-0 bg-cover bg-center opacity-15"
           style={{
             backgroundImage:
-              'url(https://images.unsplash.com/photo-1584515933487-779824d29309?w=1440&h=756&fit=crop&auto=format)',
+              'url(https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=1440&h=756&fit=crop&auto=format)',
           }}
         />
         <motion.div

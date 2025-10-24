@@ -7,6 +7,7 @@ import Header from '@/components/layout/Header'
 import { MobileBottomNav } from '@/components/layout/MobileBottomNav'
 import { Footer } from '@/components/layout/Footer'
 import { PWAProvider } from '@/components/pwa/PWAProvider'
+import { MaintenancePopup } from '@/components/ui/MaintenancePopup'
 import './globals.css'
 
 const geistSans = Geist({
@@ -118,6 +119,7 @@ export default function RootLayout({
             <MobileBottomNav />
           </div>
         </ErrorBoundary>
+        <MaintenancePopup />
       </body>
     </html>
   )
