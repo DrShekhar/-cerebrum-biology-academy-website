@@ -84,7 +84,7 @@ const Header = () => {
 
   const primaryCTA = {
     label: 'Enroll Now',
-    href: '/enroll',
+    href: '/admissions',
     variant: 'primary',
     icon: ArrowRight,
     className: 'bg-green-600 hover:bg-green-700',
