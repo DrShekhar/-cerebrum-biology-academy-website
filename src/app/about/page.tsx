@@ -520,25 +520,6 @@ export default function AboutPage() {
               </Button>
             </Link>
           </div>
-
-          <div className="mt-12 grid md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-3xl font-bold mb-2">2847+</div>
-              <div className="text-green-100">Students Coached</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold mb-2">98%</div>
-              <div className="text-green-100">Success Rate</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold mb-2">247</div>
-              <div className="text-green-100">Top 1000 Ranks</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold mb-2">9</div>
-              <div className="text-green-100">Years Excellence</div>
-            </div>
-          </div>
         </div>
       </section>
     </div>

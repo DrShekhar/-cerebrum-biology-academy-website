@@ -291,7 +291,7 @@ export const AcademicEmphasis: React.FC<AcademicEmphasisProps> = ({
   const classes = cn(
     'font-semibold',
     {
-      'bg-yellow-100 text-yellow-800 px-2 py-1 rounded': variant === 'highlight',
+      'bg-yellow-50 text-yellow-900 px-2 py-1 rounded': variant === 'highlight',
       'text-3xl font-bold': variant === 'stat',
       'text-2xl font-bold bg-gradient-to-r bg-clip-text text-transparent':
         variant === 'achievement',

@@ -1,27 +1,42 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: "About Us | India's Best NEET Biology Coaching | Cerebrum Academy Story",
+  title: "About Cerebrum Biology Academy | India's Most Trusted NEET Coaching",
   description:
-    'Founded in 2015, Cerebrum Biology Academy has achieved 98% NEET success rate with 2,847+ medical college selections. Meet our AIIMS faculty, learn our methodology & mission.',
+    'Founded by Dr. Shekhar C Singh (AIIMS Delhi) in 2015. 98% NEET qualification success rate, 2,847+ medical college selections achieved. AIIMS alumnus-led teaching excellence with proven methodologies.',
   keywords:
-    'about Cerebrum, NEET coaching institute, biology coaching history, our mission, our faculty, coaching methodology, success rate, NEET coaching Delhi',
+    'Cerebrum Biology Academy, AIIMS faculty NEET coaching, Dr Shekhar Singh AIIMS, NEET Biology coaching Delhi, medical college entrance coaching, NEET success rate, top NEET coaching institute',
   openGraph: {
-    title: 'About Cerebrum Biology Academy | 9 Years of NEET Excellence',
+    title: 'About Cerebrum Biology Academy | AIIMS-Led NEET Excellence Since 2015',
     description:
-      "From 2015 to today: 2,847+ selections, 98% success rate, 247+ in Top 1000 AIR. Meet the team behind India's best NEET Biology coaching.",
+      "Founded by AIIMS alumnus Dr. Shekhar C Singh. 2,847+ medical college selections, 98% success rate, 247+ Top 1000 AIR ranks. Meet the team behind India's most trusted NEET Biology coaching.",
     images: ['/og-images/about-us.jpg'],
     url: 'https://cerebrumbiologyacademy.com/about',
     type: 'website',
+    siteName: 'Cerebrum Biology Academy',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'About Cerebrum Biology Academy | Our Journey',
-    description: '9 years, 2,847+ selections, 98% success, AIIMS faculty, proven methodology',
+    title: 'About Cerebrum Biology Academy | AIIMS-Led Excellence',
+    description:
+      'Founded 2015. AIIMS alumnus-led. 2,847+ selections. 98% success rate. 247+ Top 1000 ranks.',
     images: ['/og-images/about-us.jpg'],
+    creator: '@CerebrumAcademy',
+    site: '@CerebrumAcademy',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/about',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 }
 
