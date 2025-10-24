@@ -59,7 +59,7 @@ export function OptimizedHeroSection({ className = '' }: OptimizedHeroSectionPro
 
   return (
     <div
-      className={`relative min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-blue-900 overflow-hidden ${className}`}
+      className={`relative min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-blue-900 overflow-hidden -mt-16 lg:-mt-20 ${className}`}
     >
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
