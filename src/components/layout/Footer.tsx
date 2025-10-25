@@ -50,6 +50,7 @@ export function Footer() {
     { name: 'Our Faculty', href: '/faculty' },
     { name: 'Success Stories', href: '/testimonials' },
     { name: 'Results', href: '/results' },
+    { name: 'Photo Gallery', href: '/gallery' },
     { name: 'Blog', href: '/blog' },
     { name: 'Careers', href: '/careers' },
   ]
