@@ -22,3 +22,8 @@ Purpose: Clear Vercel CDN cache and deploy About page with Silicon Valley polish
 Timestamp: 2025-10-25T17:28:00Z
 Purpose: Deploy with NEXT_PUBLIC_RAZORPAY_KEY_ID env var to fix purchase pages
 Critical: Revenue-blocking issue - purchase pages timing out without Razorpay key
+
+# Force deployment for header branding upgrade - Sun Oct 26 00:24:00 IST 2025
+Timestamp: 2025-10-25T18:54:00Z
+Purpose: Deploy commit 903fbb3 with professional header branding
+Changes: Title case "Cerebrum", dark slate background, amber glow, tight typography
