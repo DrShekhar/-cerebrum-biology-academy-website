@@ -39,6 +39,7 @@ export function Footer() {
     { name: 'Online Live Classes', href: '/services/online-classes' },
     { name: 'Classroom Programs', href: '/services/classroom' },
     { name: 'NEET Mock Tests', href: '/mock-tests' },
+    { name: 'Cerin AI', href: '/cerin-ai' },
     { name: 'International Students', href: '/services/international' },
     { name: 'Board Exam Preparation', href: '/services/board-prep' },
     { name: 'Doubt Resolution', href: '/services/doubt-resolution' },
