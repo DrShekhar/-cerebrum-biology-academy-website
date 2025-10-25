@@ -17,3 +17,8 @@ This MUST trigger a fresh deployment from commit 62ac342
 # Force deployment for About page sophisticated redesign - Sat Oct 25 21:42:40 IST 2025
 Timestamp: 2025-10-25T16:12:40Z
 Purpose: Clear Vercel CDN cache and deploy About page with Silicon Valley polish
+
+# Force deployment with RAZORPAY environment variable - Sat Oct 25 22:58:00 IST 2025
+Timestamp: 2025-10-25T17:28:00Z
+Purpose: Deploy with NEXT_PUBLIC_RAZORPAY_KEY_ID env var to fix purchase pages
+Critical: Revenue-blocking issue - purchase pages timing out without Razorpay key
