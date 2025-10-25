@@ -117,20 +117,22 @@ const Header = () => {
 
             {/* Enhanced Logo with Brain Design */}
             <Link href="/" className="flex items-center space-x-3 group">
-              {/* Beautiful Brain Logo with Background */}
+              {/* Beautiful Brain Logo with Sophisticated Background */}
               <div className="relative">
-                <div className="w-12 h-12 bg-gradient-to-br from-navy-50 to-navy-100 rounded-xl flex items-center justify-center shadow-lg border border-teal-200 group-hover:shadow-xl group-hover:scale-105 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-900 rounded-xl flex items-center justify-center shadow-lg border border-slate-600/30 group-hover:shadow-2xl group-hover:scale-105 transition-all duration-300">
                   <BrainLogo size="lg" animate={false} className="drop-shadow-sm" />
                 </div>
-                {/* Subtle glow effect */}
-                <div className="absolute inset-0 bg-teal-400/10 rounded-xl blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300 -z-10"></div>
+                {/* Sophisticated amber glow effect */}
+                <div className="absolute inset-0 bg-amber-400/20 rounded-xl blur-md opacity-0 group-hover:opacity-100 transition-all duration-300 -z-10"></div>
               </div>
 
               {/* Mobile: Compact brand display */}
               <div className="block sm:hidden">
                 <div className="flex flex-col">
-                  <span className="text-xl font-bold text-navy-900 leading-tight">CEREBRUM</span>
-                  <span className="text-xs text-gray-600 font-medium -mt-1 tracking-wide">
+                  <span className="text-xl font-bold text-slate-900 leading-tight tracking-[-0.02em] antialiased">
+                    Cerebrum
+                  </span>
+                  <span className="text-xs text-slate-600 font-medium -mt-1 tracking-wide">
                     Biology Academy
                   </span>
                 </div>
@@ -139,10 +141,10 @@ const Header = () => {
               {/* Desktop: Full brand display */}
               <div className="hidden sm:block">
                 <div className="flex flex-col">
-                  <span className="text-2xl font-bold text-navy-900 leading-tight tracking-wide">
-                    CEREBRUM
+                  <span className="text-2xl font-bold text-slate-900 leading-tight tracking-[-0.02em] antialiased">
+                    Cerebrum
                   </span>
-                  <span className="text-sm text-gray-600 font-medium -mt-1 tracking-wide">
+                  <span className="text-sm text-slate-600 font-medium -mt-1 tracking-wide">
                     Biology Academy
                   </span>
                 </div>
