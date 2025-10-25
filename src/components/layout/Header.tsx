@@ -120,7 +120,7 @@ const Header = () => {
               {/* Beautiful Brain Logo with Sophisticated Background */}
               <div className="relative">
                 <div className="w-12 h-12 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-900 rounded-xl flex items-center justify-center shadow-lg border border-slate-600/30 group-hover:shadow-2xl group-hover:scale-105 transition-all duration-300">
-                  <BrainLogo size="lg" animate={false} className="drop-shadow-sm" />
+                  <BrainLogo size="lg" animate={false} className="drop-shadow-sm text-white" />
                 </div>
                 {/* Sophisticated amber glow effect */}
                 <div className="absolute inset-0 bg-amber-400/20 rounded-xl blur-md opacity-0 group-hover:opacity-100 transition-all duration-300 -z-10"></div>
