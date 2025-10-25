@@ -9,6 +9,7 @@ import { RealTimeMetrics } from './RealTimeMetrics'
 import AITestGeneration from './AITestGeneration'
 import { DashboardSkeleton } from '../ui/LoadingSkeleton'
 import { useToast } from '../ui/Toast'
+import { SyllabusCard, StudyHoursCard, TestScoreCard, StreakCard } from './ProgressCard'
 import {
   Brain,
   BookOpen,
@@ -86,6 +87,13 @@ export function AIEducationDashboard() {
       readiness: 82,
       rank: 1250,
     },
+  })
+
+  const [progressData, setProgressData] = useState({
+    syllabus: { completed: 76, total: 100 },
+    studyHours: { hours: 284, target: 400 },
+    testScore: { score: 87.5, maxScore: 100 },
+    streak: { days: 12, bestStreak: 30 },
   })
 
   const [recentActivities] = useState<RecentActivity[]>([
@@ -682,68 +690,62 @@ export function AIEducationDashboard() {
               transition={{ duration: 0.3 }}
               className="space-y-8"
             >
-              {/* Key Metrics */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {[
-                  {
-                    title: 'Doubts Resolved',
-                    value: metrics.doubtsResolved,
-                    change: '+12',
-                    icon: Brain,
-                    color: 'from-purple-500 to-pink-500',
-                    bgColor: 'from-purple-50 to-pink-50',
-                  },
-                  {
-                    title: 'Study Time',
-                    value: `${metrics.studyTime}h`,
-                    change: '+8h',
-                    icon: Clock,
-                    color: 'from-blue-500 to-cyan-500',
-                    bgColor: 'from-blue-50 to-cyan-50',
-                  },
-                  {
-                    title: 'Accuracy',
-                    value: `${metrics.accuracy}%`,
-                    change: '+2.5%',
-                    icon: Target,
-                    color: 'from-green-500 to-emerald-500',
-                    bgColor: 'from-green-50 to-emerald-50',
-                  },
-                  {
-                    title: 'Progress',
-                    value: `${metrics.progress}%`,
-                    change: '+5%',
-                    icon: TrendingUp,
-                    color: 'from-orange-500 to-red-500',
-                    bgColor: 'from-orange-50 to-red-50',
-                  },
-                ].map((metric, index) => (
-                  <motion.div
-                    key={metric.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.1 }}
-                    className={`bg-gradient-to-br ${metric.bgColor} p-6 rounded-2xl border border-white/20 shadow-lg hover:shadow-xl transition-all duration-300`}
-                  >
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <p className="text-gray-600 text-sm font-medium">{metric.title}</p>
-                        <p className="text-2xl font-bold text-gray-800 mt-1">{metric.value}</p>
-                        <div className="flex items-center mt-2 text-sm">
-                          <ArrowUp className="w-3 h-3 text-green-500 mr-1" />
-                          <span className="text-green-600 font-medium">{metric.change}</span>
-                          <span className="text-gray-500 ml-1">this week</span>
-                        </div>
-                      </div>
-                      <div
-                        className={`w-12 h-12 bg-gradient-to-r ${metric.color} rounded-xl flex items-center justify-center shadow-lg`}
-                      >
-                        <metric.icon className="w-6 h-6 text-white" />
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
+              {/* Visual Progress Cards */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.6 }}
+                className="grid grid-cols-1 md:grid-cols-2 gap-6"
+              >
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.1 }}
+                >
+                  <SyllabusCard
+                    completed={progressData.syllabus.completed}
+                    total={progressData.syllabus.total}
+                    change="+5%"
+                    showMilestones={true}
+                  />
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.2 }}
+                >
+                  <StudyHoursCard
+                    hours={progressData.studyHours.hours}
+                    target={progressData.studyHours.target}
+                    change="+8h"
+                  />
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3 }}
+                >
+                  <TestScoreCard
+                    score={progressData.testScore.score}
+                    maxScore={progressData.testScore.maxScore}
+                    change="+2.5%"
+                  />
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.4 }}
+                >
+                  <StreakCard
+                    days={progressData.streak.days}
+                    bestStreak={progressData.streak.bestStreak}
+                    change="+3 days"
+                  />
+                </motion.div>
+              </motion.div>
 
               {/* Main Content Grid */}
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -863,15 +865,17 @@ export function AIEducationDashboard() {
                         onClick: () => setActiveTab('analytics'),
                       },
                     ].map((action) => (
-                      <button
+                      <motion.button
                         key={action.label}
                         onClick={action.onClick}
-                        className={`flex items-center space-x-2 px-4 py-2 ${action.colorClass} text-white rounded-lg hover:shadow-lg transform hover:scale-105 transition-all duration-200 text-sm font-medium`}
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.98 }}
+                        className={`flex items-center space-x-2 px-4 py-2 ${action.colorClass} text-white rounded-lg hover:shadow-lg transition-all duration-200 text-sm font-medium`}
                         aria-label={action.label}
                       >
                         <action.icon className="w-4 h-4" />
                         <span>{action.label}</span>
-                      </button>
+                      </motion.button>
                     ))}
                   </div>
                 </div>
@@ -1056,7 +1060,7 @@ export function AIEducationDashboard() {
                   AI-generated tests adapted to your learning level
                 </p>
 
-                <button
+                <motion.button
                   onClick={(e) => {
                     e.preventDefault()
                     e.stopPropagation()
@@ -1066,11 +1070,13 @@ export function AIEducationDashboard() {
                     handleCreateTest()
                   }}
                   disabled={isLoading}
-                  className={`bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-3 rounded-xl font-medium hover:shadow-lg transform hover:scale-105 transition-all duration-200 cursor-pointer ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
+                  whileHover={isLoading ? {} : { scale: 1.05 }}
+                  whileTap={isLoading ? {} : { scale: 0.98 }}
+                  className={`bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-3 rounded-xl font-medium hover:shadow-lg transition-all duration-200 cursor-pointer ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
                   style={{ pointerEvents: 'all', zIndex: 10 }}
                 >
                   {isLoading ? 'Generating Test...' : 'Create Test'}
-                </button>
+                </motion.button>
               </div>
             </motion.div>
           )}
@@ -1107,7 +1113,7 @@ export function AIEducationDashboard() {
                   Deep insights into your learning patterns and progress
                 </p>
 
-                <button
+                <motion.button
                   onClick={(e) => {
                     e.preventDefault()
                     e.stopPropagation()
@@ -1117,11 +1123,13 @@ export function AIEducationDashboard() {
                     handleViewAnalytics()
                   }}
                   disabled={isLoading}
-                  className={`bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-3 rounded-xl font-medium hover:shadow-lg transform hover:scale-105 transition-all duration-200 cursor-pointer ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
+                  whileHover={isLoading ? {} : { scale: 1.05 }}
+                  whileTap={isLoading ? {} : { scale: 0.98 }}
+                  className={`bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-3 rounded-xl font-medium hover:shadow-lg transition-all duration-200 cursor-pointer ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
                   style={{ pointerEvents: 'all', zIndex: 10 }}
                 >
                   {isLoading ? 'Analyzing Data...' : 'View Analytics'}
-                </button>
+                </motion.button>
               </div>
             </motion.div>
           )}

@@ -31,7 +31,7 @@ import {
   Share2,
   ThumbsUp,
   ThumbsDown,
-  RotateCcw
+  RotateCcw,
 } from 'lucide-react'
 // import { biologyTutor, BiologyQuery, BiologyResponse } from '@/lib/ai/BiologyTutorEngine' // Using API instead for Edge Runtime compatibility
 
@@ -119,13 +119,13 @@ export function BiologyTutorChatbot() {
       grade: '12',
       weakTopics: [],
       preferredLanguage: 'english',
-      learningStyle: 'visual'
+      learningStyle: 'visual',
     },
     voiceSettings: {
       enabled: true,
       autoPlay: false,
-      speed: 1
-    }
+      speed: 1,
+    },
   })
 
   const [inputValue, setInputValue] = useState('')
@@ -133,7 +133,7 @@ export function BiologyTutorChatbot() {
     isSupported: false,
     isListening: false,
     transcript: '',
-    confidence: 0
+    confidence: 0,
   })
 
   const messagesEndRef = useRef<HTMLDivElement>(null)
@@ -158,23 +158,23 @@ export function BiologyTutorChatbot() {
         const transcript = event.results[0][0].transcript
         const confidence = event.results[0][0].confidence
 
-        setVoiceRecognition(prev => ({
+        setVoiceRecognition((prev) => ({
           ...prev,
           transcript,
-          confidence
+          confidence,
         }))
 
         if (event.results[0].isFinal) {
           setInputValue(transcript)
-          setVoiceRecognition(prev => ({ ...prev, isListening: false }))
+          setVoiceRecognition((prev) => ({ ...prev, isListening: false }))
         }
       }
 
       recognitionRef.current.onerror = () => {
-        setVoiceRecognition(prev => ({ ...prev, isListening: false }))
+        setVoiceRecognition((prev) => ({ ...prev, isListening: false }))
       }
 
-      setVoiceRecognition(prev => ({ ...prev, isSupported: true }))
+      setVoiceRecognition((prev) => ({ ...prev, isSupported: true }))
     }
 
     // Initialize speech synthesis
@@ -208,26 +208,26 @@ What would you like to explore today?`,
           type: 'practice',
           label: 'Practice Questions',
           icon: <BookOpen className="w-4 h-4" />,
-          data: { type: 'practice_questions' }
+          data: { type: 'practice_questions' },
         },
         {
           type: 'diagram',
           label: 'Explain Diagrams',
           icon: <Brain className="w-4 h-4" />,
-          data: { type: 'diagram_explanation' }
+          data: { type: 'diagram_explanation' },
         },
         {
           type: 'study_plan',
           label: 'Study Plan',
           icon: <Clock className="w-4 h-4" />,
-          data: { type: 'personalized_study_plan' }
-        }
-      ]
+          data: { type: 'personalized_study_plan' },
+        },
+      ],
     }
 
-    setChatState(prev => ({
+    setChatState((prev) => ({
       ...prev,
-      messages: [welcomeMessage]
+      messages: [welcomeMessage],
     }))
 
     // Auto-play welcome message if enabled
@@ -243,13 +243,13 @@ What would you like to explore today?`,
       id: `msg_${Date.now()}`,
       type: 'user',
       content: inputValue,
-      timestamp: new Date()
+      timestamp: new Date(),
     }
 
-    setChatState(prev => ({
+    setChatState((prev) => ({
       ...prev,
       messages: [...prev.messages, userMessage],
-      isTyping: true
+      isTyping: true,
     }))
 
     setInputValue('')
@@ -264,7 +264,7 @@ What would you like to explore today?`,
         grade: chatState.studentProfile.grade,
         difficulty: 'intermediate',
         queryType: detectQueryType(inputValue),
-        timestamp: new Date()
+        timestamp: new Date(),
       }
 
       // Get AI response via API
@@ -281,10 +281,10 @@ What would you like to explore today?`,
             context: {
               topic: detectTopic(inputValue),
               difficulty: 'intermediate',
-              urgency: 'low'
-            }
-          }
-        })
+              urgency: 'low',
+            },
+          },
+        }),
       })
 
       if (!apiResponse.ok) {
@@ -302,42 +302,42 @@ What would you like to explore today?`,
         query,
         response,
         timestamp: new Date(),
-        actions: generateChatActions(response)
+        actions: generateChatActions(response),
       }
 
-      setChatState(prev => ({
+      setChatState((prev) => ({
         ...prev,
         messages: [...prev.messages, botMessage],
         isTyping: false,
-        currentTopic: response.relatedTopics[0]
+        currentTopic: response.relatedTopics[0],
       }))
 
       // Auto-play response if enabled
       if (chatState.voiceSettings.autoPlay) {
         speakText(response.answer)
       }
-
     } catch (error) {
       console.error('Biology tutor error:', error)
 
       const errorMessage: ChatMessage = {
         id: `msg_${Date.now()}`,
         type: 'bot',
-        content: "I'm experiencing some technical difficulties. Let me connect you with a human tutor or try asking your question in a different way.",
+        content:
+          "I'm experiencing some technical difficulties. Let me connect you with a human tutor or try asking your question in a different way.",
         timestamp: new Date(),
         actions: [
           {
             type: 'human_tutor',
             label: 'Talk to Human Tutor',
-            icon: <User className="w-4 h-4" />
-          }
-        ]
+            icon: <User className="w-4 h-4" />,
+          },
+        ],
       }
 
-      setChatState(prev => ({
+      setChatState((prev) => ({
         ...prev,
         messages: [...prev.messages, errorMessage],
-        isTyping: false
+        isTyping: false,
       }))
     }
   }
@@ -345,16 +345,32 @@ What would you like to explore today?`,
   const detectQueryType = (question: string): BiologyQuery['queryType'] => {
     const lowerQuestion = question.toLowerCase()
 
-    if (lowerQuestion.includes('diagram') || lowerQuestion.includes('draw') || lowerQuestion.includes('structure')) {
+    if (
+      lowerQuestion.includes('diagram') ||
+      lowerQuestion.includes('draw') ||
+      lowerQuestion.includes('structure')
+    ) {
       return 'diagram'
     }
-    if (lowerQuestion.includes('solve') || lowerQuestion.includes('calculate') || lowerQuestion.includes('problem')) {
+    if (
+      lowerQuestion.includes('solve') ||
+      lowerQuestion.includes('calculate') ||
+      lowerQuestion.includes('problem')
+    ) {
       return 'problem'
     }
-    if (lowerQuestion.includes('remember') || lowerQuestion.includes('memorize') || lowerQuestion.includes('mnemonic')) {
+    if (
+      lowerQuestion.includes('remember') ||
+      lowerQuestion.includes('memorize') ||
+      lowerQuestion.includes('mnemonic')
+    ) {
       return 'memory'
     }
-    if (lowerQuestion.includes('apply') || lowerQuestion.includes('use') || lowerQuestion.includes('example')) {
+    if (
+      lowerQuestion.includes('apply') ||
+      lowerQuestion.includes('use') ||
+      lowerQuestion.includes('example')
+    ) {
       return 'application'
     }
 
@@ -365,19 +381,39 @@ What would you like to explore today?`,
     const lowerQuestion = question.toLowerCase()
 
     // Biology topic detection
-    if (lowerQuestion.includes('cell') || lowerQuestion.includes('membrane') || lowerQuestion.includes('mitochondria')) {
+    if (
+      lowerQuestion.includes('cell') ||
+      lowerQuestion.includes('membrane') ||
+      lowerQuestion.includes('mitochondria')
+    ) {
       return 'Cell Biology'
     }
-    if (lowerQuestion.includes('photosynthesis') || lowerQuestion.includes('respiration') || lowerQuestion.includes('enzyme')) {
+    if (
+      lowerQuestion.includes('photosynthesis') ||
+      lowerQuestion.includes('respiration') ||
+      lowerQuestion.includes('enzyme')
+    ) {
       return 'Physiology'
     }
-    if (lowerQuestion.includes('dna') || lowerQuestion.includes('gene') || lowerQuestion.includes('chromosome')) {
+    if (
+      lowerQuestion.includes('dna') ||
+      lowerQuestion.includes('gene') ||
+      lowerQuestion.includes('chromosome')
+    ) {
       return 'Genetics'
     }
-    if (lowerQuestion.includes('evolution') || lowerQuestion.includes('species') || lowerQuestion.includes('natural selection')) {
+    if (
+      lowerQuestion.includes('evolution') ||
+      lowerQuestion.includes('species') ||
+      lowerQuestion.includes('natural selection')
+    ) {
       return 'Evolution'
     }
-    if (lowerQuestion.includes('ecosystem') || lowerQuestion.includes('biodiversity') || lowerQuestion.includes('ecology')) {
+    if (
+      lowerQuestion.includes('ecosystem') ||
+      lowerQuestion.includes('biodiversity') ||
+      lowerQuestion.includes('ecology')
+    ) {
       return 'Ecology'
     }
 
@@ -396,7 +432,8 @@ What would you like to explore today?`,
     }
 
     if (response.studyTips && response.studyTips.length > 0) {
-      formatted += '\n\n📚 **Study Tips:**\n' + response.studyTips.map(tip => `• ${tip}`).join('\n')
+      formatted +=
+        '\n\n📚 **Study Tips:**\n' + response.studyTips.map((tip) => `• ${tip}`).join('\n')
     }
 
     return formatted
@@ -410,7 +447,7 @@ What would you like to explore today?`,
         type: 'practice',
         label: 'Practice Questions',
         icon: <BookOpen className="w-4 h-4" />,
-        data: { questions: response.practiceQuestions }
+        data: { questions: response.practiceQuestions },
       })
     }
 
@@ -419,7 +456,7 @@ What would you like to explore today?`,
         type: 'diagram',
         label: 'View Diagrams',
         icon: <Brain className="w-4 h-4" />,
-        data: { diagrams: response.visualAids.diagrams }
+        data: { diagrams: response.visualAids.diagrams },
       })
     }
 
@@ -428,7 +465,7 @@ What would you like to explore today?`,
         type: 'related_topic',
         label: 'Related Topics',
         icon: <TrendingUp className="w-4 h-4" />,
-        data: { topics: response.relatedTopics }
+        data: { topics: response.relatedTopics },
       })
     }
 
@@ -440,10 +477,10 @@ What would you like to explore today?`,
 
     if (voiceRecognition.isListening) {
       recognitionRef.current?.stop()
-      setVoiceRecognition(prev => ({ ...prev, isListening: false }))
+      setVoiceRecognition((prev) => ({ ...prev, isListening: false }))
     } else {
       recognitionRef.current?.start()
-      setVoiceRecognition(prev => ({ ...prev, isListening: true }))
+      setVoiceRecognition((prev) => ({ ...prev, isListening: true }))
     }
   }
 
@@ -464,7 +501,7 @@ What would you like to explore today?`,
   }
 
   const toggleChatbot = () => {
-    setChatState(prev => ({ ...prev, isOpen: !prev.isOpen }))
+    setChatState((prev) => ({ ...prev, isOpen: !prev.isOpen }))
   }
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
@@ -522,10 +559,10 @@ What would you like to explore today?`,
               initial={{ opacity: 0, y: 100, scale: 0.3 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 100, scale: 0.3 }}
-              className="bg-white rounded-lg shadow-2xl w-80 h-96 flex flex-col border border-gray-200"
+              className="bg-white rounded-lg shadow-2xl md:w-80 md:h-96 flex flex-col border border-gray-200 fixed inset-0 md:inset-auto md:bottom-4 md:right-4 z-50"
             >
               {/* Header */}
-              <div className="bg-gradient-to-r from-green-500 to-blue-500 text-white p-4 rounded-t-lg">
+              <div className="bg-gradient-to-r from-green-500 to-blue-500 text-white p-4 md:rounded-t-lg">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-2">
                     <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
@@ -538,21 +575,24 @@ What would you like to explore today?`,
                   </div>
                   <div className="flex items-center space-x-2">
                     <button
-                      onClick={() => setChatState(prev => ({
-                        ...prev,
-                        voiceSettings: { ...prev.voiceSettings, autoPlay: !prev.voiceSettings.autoPlay }
-                      }))}
-                      className="p-1 hover:bg-white/20 rounded"
-                    >
-                      {chatState.voiceSettings.autoPlay ?
-                        <Volume2 className="w-4 h-4" /> :
-                        <VolumeX className="w-4 h-4" />
+                      onClick={() =>
+                        setChatState((prev) => ({
+                          ...prev,
+                          voiceSettings: {
+                            ...prev.voiceSettings,
+                            autoPlay: !prev.voiceSettings.autoPlay,
+                          },
+                        }))
                       }
-                    </button>
-                    <button
-                      onClick={toggleChatbot}
                       className="p-1 hover:bg-white/20 rounded"
                     >
+                      {chatState.voiceSettings.autoPlay ? (
+                        <Volume2 className="w-4 h-4" />
+                      ) : (
+                        <VolumeX className="w-4 h-4" />
+                      )}
+                    </button>
+                    <button onClick={toggleChatbot} className="p-1 hover:bg-white/20 rounded">
                       <X className="w-4 h-4" />
                     </button>
                   </div>
@@ -574,9 +614,7 @@ What would you like to explore today?`,
                       }`}
                     >
                       <div className="flex items-start space-x-2">
-                        {message.type === 'bot' && (
-                          <Bot className="w-4 h-4 mt-1 text-green-500" />
-                        )}
+                        {message.type === 'bot' && <Bot className="w-4 h-4 mt-1 text-green-500" />}
                         <div className="flex-1">
                           <p className="text-sm whitespace-pre-wrap">{message.content}</p>
 
@@ -601,7 +639,9 @@ What would you like to explore today?`,
                             <div className="mt-2 text-xs text-gray-500 space-y-1">
                               <div className="flex items-center space-x-2">
                                 <Star className="w-3 h-3" />
-                                <span>Confidence: {Math.round(message.response.confidence * 100)}%</span>
+                                <span>
+                                  Confidence: {Math.round(message.response.confidence * 100)}%
+                                </span>
                               </div>
                               <div className="flex items-center space-x-2">
                                 <Clock className="w-3 h-3" />
@@ -616,25 +656,52 @@ What would you like to explore today?`,
                 ))}
 
                 {chatState.isTyping && (
-                  <div className="flex justify-start">
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    className="flex justify-start"
+                  >
                     <div className="bg-gray-100 p-3 rounded-lg">
                       <div className="flex items-center space-x-2">
                         <Bot className="w-4 h-4 text-green-500" />
                         <div className="flex space-x-1">
-                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
-                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                          <motion.div
+                            className="w-2 h-2 bg-gray-400 rounded-full"
+                            animate={{ y: [0, -8, 0] }}
+                            transition={{ duration: 0.6, repeat: Infinity, ease: 'easeInOut' }}
+                          />
+                          <motion.div
+                            className="w-2 h-2 bg-gray-400 rounded-full"
+                            animate={{ y: [0, -8, 0] }}
+                            transition={{
+                              duration: 0.6,
+                              repeat: Infinity,
+                              ease: 'easeInOut',
+                              delay: 0.1,
+                            }}
+                          />
+                          <motion.div
+                            className="w-2 h-2 bg-gray-400 rounded-full"
+                            animate={{ y: [0, -8, 0] }}
+                            transition={{
+                              duration: 0.6,
+                              repeat: Infinity,
+                              ease: 'easeInOut',
+                              delay: 0.2,
+                            }}
+                          />
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </motion.div>
                 )}
 
                 <div ref={messagesEndRef} />
               </div>
 
               {/* Input */}
-              <div className="p-4 border-t border-gray-200">
+              <div className="p-4 border-t border-gray-200 pb-safe-bottom">
                 <div className="flex items-center space-x-2">
                   <div className="flex-1 relative">
                     <textarea
@@ -642,7 +709,7 @@ What would you like to explore today?`,
                       onChange={(e) => setInputValue(e.target.value)}
                       onKeyPress={handleKeyPress}
                       placeholder="Ask me anything about Biology..."
-                      className="w-full p-2 border border-gray-300 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full p-3 border border-gray-300 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-blue-500 text-base min-h-[48px]"
                       rows={1}
                     />
 
@@ -650,24 +717,29 @@ What would you like to explore today?`,
                       <button
                         onClick={handleVoiceToggle}
                         className={`absolute right-2 top-1/2 transform -translate-y-1/2 p-1 rounded ${
-                          voiceRecognition.isListening ? 'bg-red-100 text-red-500' : 'bg-gray-100 text-gray-500'
+                          voiceRecognition.isListening
+                            ? 'bg-red-100 text-red-500'
+                            : 'bg-gray-100 text-gray-500'
                         }`}
                       >
-                        {voiceRecognition.isListening ?
-                          <MicOff className="w-4 h-4" /> :
+                        {voiceRecognition.isListening ? (
+                          <MicOff className="w-4 h-4" />
+                        ) : (
                           <Mic className="w-4 h-4" />
-                        }
+                        )}
                       </button>
                     )}
                   </div>
 
-                  <button
+                  <motion.button
                     onClick={handleSendMessage}
                     disabled={!inputValue.trim() || chatState.isTyping}
+                    whileHover={!inputValue.trim() || chatState.isTyping ? {} : { scale: 1.05 }}
+                    whileTap={!inputValue.trim() || chatState.isTyping ? {} : { scale: 0.95 }}
                     className="bg-blue-500 text-white p-2 rounded-lg hover:bg-blue-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                   >
                     <Send className="w-4 h-4" />
-                  </button>
+                  </motion.button>
                 </div>
 
                 {voiceRecognition.isListening && (

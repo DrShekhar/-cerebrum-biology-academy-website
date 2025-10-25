@@ -1,6 +1,7 @@
 /* Import custom styles first */
 @import '../styles/mobile-optimizations.css';
 @import '../styles/mobile-accessibility.css';
+@import '../styles/mobile-typography.css';
 
 /* Tailwind last to allow utility overrides */
 @tailwind base;

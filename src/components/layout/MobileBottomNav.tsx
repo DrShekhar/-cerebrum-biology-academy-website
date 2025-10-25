@@ -42,30 +42,23 @@ export function MobileBottomNav({ className = '' }: MobileBottomNavProps) {
       iconSolid: HomeSolid,
     },
     {
-      href: '/courses',
-      label: 'Courses',
-      icon: BookOpenIcon,
-      iconSolid: BookSolid,
-    },
-    {
-      href: '/demo',
-      label: 'Demo',
+      href: '/admin/ai-education',
+      label: 'AI Tutor',
       icon: BeakerIcon,
       iconSolid: BeakerSolid,
       highlight: true,
     },
     {
-      href: '/results',
-      label: 'Results',
-      icon: TrophyIcon,
-      iconSolid: TrophySolid,
+      href: '/tests',
+      label: 'Tests',
+      icon: BookOpenIcon,
+      iconSolid: BookSolid,
     },
     {
-      href: 'tel:+918826444334',
-      label: 'Call',
-      icon: PhoneIcon,
-      iconSolid: PhoneSolid,
-      isExternal: true,
+      href: '/progress',
+      label: 'Progress',
+      icon: TrophyIcon,
+      iconSolid: TrophySolid,
     },
   ]
 
@@ -90,7 +83,7 @@ export function MobileBottomNav({ className = '' }: MobileBottomNavProps) {
         paddingTop: '8px',
       }}
     >
-      <div className="grid grid-cols-5 gap-0 bg-white">
+      <div className="grid grid-cols-4 gap-0 bg-white">
         {navItems.map((item) => {
           const active = isActive(item.href)
           const IconComponent = active ? item.iconSolid : item.icon

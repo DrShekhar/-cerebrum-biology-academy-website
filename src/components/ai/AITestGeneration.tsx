@@ -15,6 +15,8 @@ import Distribution from './Distribution'
 import Analytics from './Analytics'
 import UICustomization from './UICustomization'
 import Lifecycle from './Lifecycle'
+import TopicSelector from './TopicSelector'
+import { getAllUnits, getChapterById } from '@/data/neet-syllabus'
 import {
   Brain,
   Target,
@@ -41,7 +43,7 @@ import {
   Library,
   Share2,
   LineChart,
-  Palette
+  Palette,
 } from 'lucide-react'
 
 // Types and Interfaces
@@ -113,7 +115,23 @@ interface GeneratedTest {
 }
 
 const AITestGeneration: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'configure' | 'templates' | 'sections' | 'adaptive' | 'access' | 'security' | 'collaborate' | 'data' | 'bank' | 'distribute' | 'analytics' | 'ui' | 'lifecycle' | 'generate' | 'review'>('configure')
+  const [activeTab, setActiveTab] = useState<
+    | 'configure'
+    | 'templates'
+    | 'sections'
+    | 'adaptive'
+    | 'access'
+    | 'security'
+    | 'collaborate'
+    | 'data'
+    | 'bank'
+    | 'distribute'
+    | 'analytics'
+    | 'ui'
+    | 'lifecycle'
+    | 'generate'
+    | 'review'
+  >('configure')
   const [isGenerating, setIsGenerating] = useState(false)
   const [configuration, setConfiguration] = useState<TestConfiguration>({
     totalQuestions: 50,
@@ -122,15 +140,33 @@ const AITestGeneration: React.FC = () => {
     difficultyDistribution: { easy: 30, medium: 50, hard: 20 },
     topicDistribution: {},
     questionTypes: { mcq: 70, assertion: 15, numerical: 10, matching: 5 },
-    bloomsDistribution: { remember: 20, understand: 30, apply: 30, analyze: 15, evaluate: 5, create: 0 },
+    bloomsDistribution: {
+      remember: 20,
+      understand: 30,
+      apply: 30,
+      analyze: 15,
+      evaluate: 5,
+      create: 0,
+    },
     learningObjectives: [],
-    previousYearWeightage: 70
+    previousYearWeightage: 70,
   })
   const [generatedTest, setGeneratedTest] = useState<GeneratedTest | null>(null)
+  const [selectedUnits, setSelectedUnits] = useState<string[]>([])
+  const [selectedChapters, setSelectedChapters] = useState<string[]>([])
   const [availableTopics] = useState([
-    'Cell Biology', 'Genetics', 'Evolution', 'Ecology', 'Human Physiology',
-    'Plant Physiology', 'Reproduction', 'Biotechnology', 'Molecular Biology',
-    'Taxonomy', 'Anatomy', 'Environmental Biology'
+    'Cell Biology',
+    'Genetics',
+    'Evolution',
+    'Ecology',
+    'Human Physiology',
+    'Plant Physiology',
+    'Reproduction',
+    'Biotechnology',
+    'Molecular Biology',
+    'Taxonomy',
+    'Anatomy',
+    'Environmental Biology',
   ])
 
   // Auto-Generate from Topics Algorithm
@@ -148,7 +184,7 @@ const AITestGeneration: React.FC = () => {
 
   // Mock function to simulate database fetch
   const fetchQuestionsByTopic = async (topic: string): Promise<QuestionBank[]> => {
-    return new Promise(resolve => {
+    return new Promise((resolve) => {
       setTimeout(() => {
         const mockQuestions: QuestionBank[] = Array.from({ length: 20 }, (_, i) => ({
           id: `${topic.toLowerCase().replace(' ', '_')}_${i + 1}`,
@@ -159,7 +195,9 @@ const AITestGeneration: React.FC = () => {
           subtopic: `${topic} Subtopic ${(i % 3) + 1}`,
           chapter: `Chapter ${Math.floor(i / 5) + 1}`,
           learningObjectives: [`Understand ${topic} concepts`, `Apply ${topic} principles`],
-          bloomsLevel: ['remember', 'understand', 'apply', 'analyze'][Math.floor(Math.random() * 4)],
+          bloomsLevel: ['remember', 'understand', 'apply', 'analyze'][
+            Math.floor(Math.random() * 4)
+          ],
           marks: [1, 2, 4][Math.floor(Math.random() * 3)],
           estimatedTime: Math.floor(Math.random() * 5) + 2,
           previousYearFrequency: Math.random(),
@@ -167,13 +205,13 @@ const AITestGeneration: React.FC = () => {
           solution: {
             answer: `Answer for ${topic} question ${i + 1}`,
             explanation: `Detailed explanation for ${topic} question ${i + 1}`,
-            steps: ['Step 1', 'Step 2', 'Step 3']
+            steps: ['Step 1', 'Step 2', 'Step 3'],
           },
           metadata: {
             discriminationIndex: Math.random(),
             reliabilityCoefficient: 0.7 + Math.random() * 0.3,
-            avgAttemptTime: Math.floor(Math.random() * 3) + 2
-          }
+            avgAttemptTime: Math.floor(Math.random() * 3) + 2,
+          },
         }))
         resolve(mockQuestions)
       }, 500)
@@ -181,39 +219,49 @@ const AITestGeneration: React.FC = () => {
   }
 
   // Difficulty Distribution Algorithm
-  const applyDifficultyDistribution = (questions: QuestionBank[], distribution: TestConfiguration['difficultyDistribution']): QuestionBank[] => {
+  const applyDifficultyDistribution = (
+    questions: QuestionBank[],
+    distribution: TestConfiguration['difficultyDistribution']
+  ): QuestionBank[] => {
     const total = configuration.totalQuestions
-    const easyCount = Math.floor(total * distribution.easy / 100)
-    const mediumCount = Math.floor(total * distribution.medium / 100)
+    const easyCount = Math.floor((total * distribution.easy) / 100)
+    const mediumCount = Math.floor((total * distribution.medium) / 100)
     const hardCount = total - easyCount - mediumCount
 
-    const easyQuestions = questions.filter(q => q.difficulty === 'easy').slice(0, easyCount)
-    const mediumQuestions = questions.filter(q => q.difficulty === 'medium').slice(0, mediumCount)
-    const hardQuestions = questions.filter(q => q.difficulty === 'hard').slice(0, hardCount)
+    const easyQuestions = questions.filter((q) => q.difficulty === 'easy').slice(0, easyCount)
+    const mediumQuestions = questions.filter((q) => q.difficulty === 'medium').slice(0, mediumCount)
+    const hardQuestions = questions.filter((q) => q.difficulty === 'hard').slice(0, hardCount)
 
     return [...easyQuestions, ...mediumQuestions, ...hardQuestions]
   }
 
   // Learning Objective Coverage
-  const ensureLearningObjectiveCoverage = (questions: QuestionBank[], objectives: string[]): QuestionBank[] => {
+  const ensureLearningObjectiveCoverage = (
+    questions: QuestionBank[],
+    objectives: string[]
+  ): QuestionBank[] => {
     const coveredObjectives = new Set<string>()
     const selectedQuestions: QuestionBank[] = []
 
     // First pass: ensure each objective is covered at least once
     for (const objective of objectives) {
-      const questionWithObjective = questions.find(q =>
-        q.learningObjectives.some(lo => lo.toLowerCase().includes(objective.toLowerCase())) &&
-        !selectedQuestions.includes(q)
+      const questionWithObjective = questions.find(
+        (q) =>
+          q.learningObjectives.some((lo) => lo.toLowerCase().includes(objective.toLowerCase())) &&
+          !selectedQuestions.includes(q)
       )
       if (questionWithObjective) {
         selectedQuestions.push(questionWithObjective)
-        questionWithObjective.learningObjectives.forEach(lo => coveredObjectives.add(lo))
+        questionWithObjective.learningObjectives.forEach((lo) => coveredObjectives.add(lo))
       }
     }
 
     // Second pass: fill remaining slots with balanced coverage
-    const remainingQuestions = questions.filter(q => !selectedQuestions.includes(q))
-    while (selectedQuestions.length < configuration.totalQuestions && remainingQuestions.length > 0) {
+    const remainingQuestions = questions.filter((q) => !selectedQuestions.includes(q))
+    while (
+      selectedQuestions.length < configuration.totalQuestions &&
+      remainingQuestions.length > 0
+    ) {
       const question = remainingQuestions.shift()!
       selectedQuestions.push(question)
     }
@@ -226,7 +274,9 @@ const AITestGeneration: React.FC = () => {
     const weightage = configuration.previousYearWeightage / 100
 
     // Sort questions by previous year frequency (higher frequency first)
-    const sortedByFrequency = [...questions].sort((a, b) => b.previousYearFrequency - a.previousYearFrequency)
+    const sortedByFrequency = [...questions].sort(
+      (a, b) => b.previousYearFrequency - a.previousYearFrequency
+    )
 
     const highFrequencyCount = Math.floor(configuration.totalQuestions * weightage)
     const highFrequencyQuestions = sortedByFrequency.slice(0, highFrequencyCount)
@@ -245,14 +295,19 @@ const AITestGeneration: React.FC = () => {
     const balancedQuestions: QuestionBank[] = []
 
     for (const [topic, count] of topicCounts) {
-      const topicQuestions = questions.filter(q => q.topic === topic && !balancedQuestions.includes(q))
+      const topicQuestions = questions.filter(
+        (q) => q.topic === topic && !balancedQuestions.includes(q)
+      )
       const selectedFromTopic = topicQuestions.slice(0, count)
       balancedQuestions.push(...selectedFromTopic)
     }
 
     // Fill remaining slots if any
-    const remainingQuestions = questions.filter(q => !balancedQuestions.includes(q))
-    while (balancedQuestions.length < configuration.totalQuestions && remainingQuestions.length > 0) {
+    const remainingQuestions = questions.filter((q) => !balancedQuestions.includes(q))
+    while (
+      balancedQuestions.length < configuration.totalQuestions &&
+      remainingQuestions.length > 0
+    ) {
       balancedQuestions.push(remainingQuestions.shift()!)
     }
 
@@ -267,15 +322,21 @@ const AITestGeneration: React.FC = () => {
     for (const question of questions) {
       const combination = `${question.topic}_${question.difficulty}_${question.type}_${question.bloomsLevel}`
 
-      if (!usedCombinations.has(combination) || diverseQuestions.length < configuration.totalQuestions * 0.7) {
+      if (
+        !usedCombinations.has(combination) ||
+        diverseQuestions.length < configuration.totalQuestions * 0.7
+      ) {
         diverseQuestions.push(question)
         usedCombinations.add(combination)
       }
     }
 
     // Fill remaining slots if diversity requirement leaves gaps
-    const remainingQuestions = questions.filter(q => !diverseQuestions.includes(q))
-    while (diverseQuestions.length < configuration.totalQuestions && remainingQuestions.length > 0) {
+    const remainingQuestions = questions.filter((q) => !diverseQuestions.includes(q))
+    while (
+      diverseQuestions.length < configuration.totalQuestions &&
+      remainingQuestions.length > 0
+    ) {
       diverseQuestions.push(remainingQuestions.shift()!)
     }
 
@@ -289,7 +350,10 @@ const AITestGeneration: React.FC = () => {
 
     for (const question of questions) {
       // Create a normalized version of the question for comparison
-      const normalizedQuestion = question.question.toLowerCase().replace(/[^\w\s]/g, '').trim()
+      const normalizedQuestion = question.question
+        .toLowerCase()
+        .replace(/[^\w\s]/g, '')
+        .trim()
 
       if (!seenQuestions.has(normalizedQuestion)) {
         uniqueQuestions.push(question)
@@ -309,7 +373,8 @@ const AITestGeneration: React.FC = () => {
 
       for (const existingQuestion of filteredQuestions) {
         const similarity = calculateSimilarity(question.question, existingQuestion.question)
-        if (similarity > 0.8) { // 80% similarity threshold
+        if (similarity > 0.8) {
+          // 80% similarity threshold
           isSimilar = true
           break
         }
@@ -328,7 +393,7 @@ const AITestGeneration: React.FC = () => {
     const words1 = text1.toLowerCase().split(/\s+/)
     const words2 = text2.toLowerCase().split(/\s+/)
 
-    const commonWords = words1.filter(word => words2.includes(word))
+    const commonWords = words1.filter((word) => words2.includes(word))
     const totalWords = new Set([...words1, ...words2]).size
 
     return commonWords.length / totalWords
@@ -377,7 +442,7 @@ const AITestGeneration: React.FC = () => {
         configuration,
         qualityMetrics,
         generationTime: Date.now() - startTime,
-        recommendations
+        recommendations,
       }
 
       return generatedTest
@@ -388,16 +453,22 @@ const AITestGeneration: React.FC = () => {
 
   // Quality Metrics Calculation
   const calculateQualityMetrics = (questions: QuestionBank[]) => {
-    const difficultyScore = questions.reduce((sum, q) => {
-      return sum + (['easy', 'medium', 'hard'].indexOf(q.difficulty) + 1)
-    }, 0) / questions.length / 3 * 100
+    const difficultyScore =
+      (questions.reduce((sum, q) => {
+        return sum + (['easy', 'medium', 'hard'].indexOf(q.difficulty) + 1)
+      }, 0) /
+        questions.length /
+        3) *
+      100
 
-    const topicCoverage = Object.keys(configuration.topicDistribution).length / availableTopics.length * 100
+    const topicCoverage =
+      (Object.keys(configuration.topicDistribution).length / availableTopics.length) * 100
 
-    const objectivesCovered = new Set(questions.flatMap(q => q.learningObjectives)).size
-    const objectiveCoverage = configuration.learningObjectives.length > 0
-      ? objectivesCovered / configuration.learningObjectives.length * 100
-      : 100
+    const objectivesCovered = new Set(questions.flatMap((q) => q.learningObjectives)).size
+    const objectiveCoverage =
+      configuration.learningObjectives.length > 0
+        ? (objectivesCovered / configuration.learningObjectives.length) * 100
+        : 100
 
     const diversityIndex = calculateDiversityIndex(questions)
     const duplicateScore = 100 // Assuming no duplicates after filtering
@@ -409,13 +480,13 @@ const AITestGeneration: React.FC = () => {
       objectiveCoverage,
       diversityIndex,
       duplicateScore,
-      similarityScore
+      similarityScore,
     }
   }
 
   const calculateDiversityIndex = (questions: QuestionBank[]): number => {
-    const combinations = new Set(questions.map(q => `${q.topic}_${q.difficulty}_${q.type}`))
-    return combinations.size / questions.length * 100
+    const combinations = new Set(questions.map((q) => `${q.topic}_${q.difficulty}_${q.type}`))
+    return (combinations.size / questions.length) * 100
   }
 
   const calculateAverageSimilarity = (questions: QuestionBank[]): number => {
@@ -437,23 +508,29 @@ const AITestGeneration: React.FC = () => {
     const recommendations: string[] = []
 
     if (metrics.difficultyScore < 40) {
-      recommendations.push("Consider adding more medium and hard difficulty questions for better assessment balance")
+      recommendations.push(
+        'Consider adding more medium and hard difficulty questions for better assessment balance'
+      )
     }
 
     if (metrics.topicCoverage < 80) {
-      recommendations.push("Include questions from more topics to ensure comprehensive coverage")
+      recommendations.push('Include questions from more topics to ensure comprehensive coverage')
     }
 
     if (metrics.objectiveCoverage < 90) {
-      recommendations.push("Some learning objectives are not adequately covered. Review question selection")
+      recommendations.push(
+        'Some learning objectives are not adequately covered. Review question selection'
+      )
     }
 
     if (metrics.diversityIndex < 60) {
-      recommendations.push("Increase question type diversity for more engaging assessment")
+      recommendations.push('Increase question type diversity for more engaging assessment')
     }
 
     if (metrics.similarityScore < 80) {
-      recommendations.push("Some questions may be too similar. Consider replacing with more varied content")
+      recommendations.push(
+        'Some questions may be too similar. Consider replacing with more varied content'
+      )
     }
 
     return recommendations
@@ -467,12 +544,43 @@ const AITestGeneration: React.FC = () => {
   }
 
   const handleTopicDistributionChange = (topic: string, percentage: number) => {
-    setConfiguration(prev => ({
+    setConfiguration((prev) => ({
       ...prev,
       topicDistribution: {
         ...prev.topicDistribution,
-        [topic]: Math.floor(prev.totalQuestions * percentage / 100)
+        [topic]: Math.floor((prev.totalQuestions * percentage) / 100),
+      },
+    }))
+  }
+
+  const handleNEETTopicSelection = (units: string[], chapters: string[]) => {
+    setSelectedUnits(units)
+    setSelectedChapters(chapters)
+
+    const newTopicDistribution: { [topic: string]: number } = {}
+    const allUnits = getAllUnits()
+    const totalWeightage = units.reduce((sum, unitId) => {
+      const unit = allUnits.find((u) => u.id === unitId)
+      return sum + (unit?.weightage || 0)
+    }, 0)
+
+    chapters.forEach((chapterId) => {
+      const chapter = getChapterById(chapterId)
+      if (chapter) {
+        const questionsForChapter = Math.floor(
+          (configuration.totalQuestions * chapter.pyqFrequency) /
+            chapters.reduce((sum, id) => {
+              const ch = getChapterById(id)
+              return sum + (ch?.pyqFrequency || 0)
+            }, 0)
+        )
+        newTopicDistribution[chapter.name] = questionsForChapter
       }
+    })
+
+    setConfiguration((prev) => ({
+      ...prev,
+      topicDistribution: newTopicDistribution,
     }))
   }
 
@@ -516,7 +624,7 @@ const AITestGeneration: React.FC = () => {
             { id: 'ui', label: 'UI/UX', icon: Palette },
             { id: 'lifecycle', label: 'Lifecycle', icon: RefreshCw },
             { id: 'generate', label: 'Generate', icon: Play },
-            { id: 'review', label: 'Review', icon: CheckCircle2 }
+            { id: 'review', label: 'Review', icon: CheckCircle2 },
           ].map(({ id, label, icon: Icon }) => (
             <button
               key={id}
@@ -559,10 +667,12 @@ const AITestGeneration: React.FC = () => {
                   <input
                     type="number"
                     value={configuration.totalQuestions}
-                    onChange={(e) => setConfiguration(prev => ({
-                      ...prev,
-                      totalQuestions: parseInt(e.target.value) || 0
-                    }))}
+                    onChange={(e) =>
+                      setConfiguration((prev) => ({
+                        ...prev,
+                        totalQuestions: parseInt(e.target.value) || 0,
+                      }))
+                    }
                     className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                   />
                 </div>
@@ -574,10 +684,12 @@ const AITestGeneration: React.FC = () => {
                   <input
                     type="number"
                     value={configuration.totalMarks}
-                    onChange={(e) => setConfiguration(prev => ({
-                      ...prev,
-                      totalMarks: parseInt(e.target.value) || 0
-                    }))}
+                    onChange={(e) =>
+                      setConfiguration((prev) => ({
+                        ...prev,
+                        totalMarks: parseInt(e.target.value) || 0,
+                      }))
+                    }
                     className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                   />
                 </div>
@@ -589,10 +701,12 @@ const AITestGeneration: React.FC = () => {
                   <input
                     type="number"
                     value={configuration.duration}
-                    onChange={(e) => setConfiguration(prev => ({
-                      ...prev,
-                      duration: parseInt(e.target.value) || 0
-                    }))}
+                    onChange={(e) =>
+                      setConfiguration((prev) => ({
+                        ...prev,
+                        duration: parseInt(e.target.value) || 0,
+                      }))
+                    }
                     className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                   />
                 </div>
@@ -620,13 +734,15 @@ const AITestGeneration: React.FC = () => {
                       min="0"
                       max="100"
                       value={percentage}
-                      onChange={(e) => setConfiguration(prev => ({
-                        ...prev,
-                        difficultyDistribution: {
-                          ...prev.difficultyDistribution,
-                          [level]: parseInt(e.target.value)
-                        }
-                      }))}
+                      onChange={(e) =>
+                        setConfiguration((prev) => ({
+                          ...prev,
+                          difficultyDistribution: {
+                            ...prev.difficultyDistribution,
+                            [level]: parseInt(e.target.value),
+                          },
+                        }))
+                      }
                       className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
                     />
                   </div>
@@ -634,35 +750,34 @@ const AITestGeneration: React.FC = () => {
               </div>
             </div>
 
-            {/* Topic Distribution */}
+            {/* NEET Topic Selection */}
             <div className="bg-white rounded-xl p-6 border lg:col-span-2">
               <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
                 <BookOpen className="w-5 h-5 text-blue-600" />
-                Topic Distribution
+                NEET Topic Selection
               </h3>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {availableTopics.map(topic => (
-                  <div key={topic} className="space-y-2">
-                    <div className="flex justify-between items-center">
-                      <label className="text-sm font-semibold text-gray-900">
-                        {topic}
-                      </label>
-                      <span className="text-sm text-gray-800 font-medium">
-                        {configuration.topicDistribution[topic] || 0} questions
-                      </span>
-                    </div>
-                    <input
-                      type="range"
-                      min="0"
-                      max="50"
-                      value={Math.floor((configuration.topicDistribution[topic] || 0) / configuration.totalQuestions * 100)}
-                      onChange={(e) => handleTopicDistributionChange(topic, parseInt(e.target.value))}
-                      className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
-                    />
+              <TopicSelector
+                onSelectionChange={handleNEETTopicSelection}
+                initialSelectedUnits={selectedUnits}
+                initialSelectedChapters={selectedChapters}
+              />
+
+              {Object.keys(configuration.topicDistribution).length > 0 && (
+                <div className="mt-6 p-4 bg-purple-50 rounded-lg border border-purple-200">
+                  <h4 className="font-semibold text-gray-900 mb-3">Question Distribution</h4>
+                  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+                    {Object.entries(configuration.topicDistribution).map(([topic, count]) => (
+                      <div key={topic} className="text-sm">
+                        <div className="font-medium text-gray-900 truncate" title={topic}>
+                          {topic}
+                        </div>
+                        <div className="text-purple-600 font-semibold">{count} questions</div>
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
+                </div>
+              )}
             </div>
 
             {/* Advanced Settings */}
@@ -683,10 +798,12 @@ const AITestGeneration: React.FC = () => {
                       min="0"
                       max="100"
                       value={configuration.previousYearWeightage}
-                      onChange={(e) => setConfiguration(prev => ({
-                        ...prev,
-                        previousYearWeightage: parseInt(e.target.value)
-                      }))}
+                      onChange={(e) =>
+                        setConfiguration((prev) => ({
+                          ...prev,
+                          previousYearWeightage: parseInt(e.target.value),
+                        }))
+                      }
                       className="flex-1 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
                     />
                     <span className="text-sm text-gray-800 font-medium min-w-[3rem]">
@@ -702,10 +819,12 @@ const AITestGeneration: React.FC = () => {
                   <textarea
                     placeholder="Enter learning objectives (one per line)"
                     value={configuration.learningObjectives.join('\n')}
-                    onChange={(e) => setConfiguration(prev => ({
-                      ...prev,
-                      learningObjectives: e.target.value.split('\n').filter(obj => obj.trim())
-                    }))}
+                    onChange={(e) =>
+                      setConfiguration((prev) => ({
+                        ...prev,
+                        learningObjectives: e.target.value.split('\n').filter((obj) => obj.trim()),
+                      }))
+                    }
                     rows={3}
                     className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                   />
@@ -878,7 +997,8 @@ const AITestGeneration: React.FC = () => {
                 <div>
                   <h3 className="text-2xl font-bold mb-2">Ready to Generate Test</h3>
                   <p className="text-gray-800 font-medium">
-                    AI will analyze your configuration and generate an optimized test using advanced algorithms
+                    AI will analyze your configuration and generate an optimized test using advanced
+                    algorithms
                   </p>
                 </div>
 
@@ -888,18 +1008,23 @@ const AITestGeneration: React.FC = () => {
                     { icon: Target, label: 'Auto Topic Selection', color: 'text-blue-600' },
                     { icon: BarChart3, label: 'Difficulty Balance', color: 'text-green-600' },
                     { icon: Shield, label: 'Duplicate Detection', color: 'text-red-600' },
-                    { icon: Shuffle, label: 'Diversity Assurance', color: 'text-purple-600' }
+                    { icon: Shuffle, label: 'Diversity Assurance', color: 'text-purple-600' },
                   ].map(({ icon: Icon, label, color }) => (
-                    <div key={label} className="flex flex-col items-center gap-2 p-4 bg-gray-50 rounded-lg">
+                    <div
+                      key={label}
+                      className="flex flex-col items-center gap-2 p-4 bg-gray-50 rounded-lg"
+                    >
                       <Icon className={`w-6 h-6 ${color}`} />
                       <span className="font-semibold text-center text-gray-900">{label}</span>
                     </div>
                   ))}
                 </div>
 
-                <button
+                <motion.button
                   onClick={handleGenerateTest}
                   disabled={isGenerating}
+                  whileHover={isGenerating ? {} : { scale: 1.05 }}
+                  whileTap={isGenerating ? {} : { scale: 0.98 }}
                   className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-purple-700 hover:to-blue-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-3 mx-auto"
                 >
                   {isGenerating ? (
@@ -913,7 +1038,7 @@ const AITestGeneration: React.FC = () => {
                       Generate Test
                     </>
                   )}
-                </button>
+                </motion.button>
               </div>
             </div>
           </motion.div>

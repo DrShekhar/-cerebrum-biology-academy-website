@@ -1,4 +1,5 @@
-import { Metadata } from 'next'
+'use client'
+
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import {
@@ -20,39 +21,6 @@ import {
 import { Button } from '@/components/ui/Button'
 import { Badge } from '@/components/ui/Badge'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
-
-export const metadata: Metadata = {
-  title: 'NEET Biology Coaching Locations | Cerebrum Biology Academy',
-  description:
-    'Find the best NEET Biology coaching for your city. We serve 12+ major Indian cities with personalized coaching and proven results.',
-  keywords: [
-    'NEET Biology coaching India',
-    'Medical coaching locations',
-    'Biology classes Indian cities',
-    'NEET preparation centers',
-    'Medical entrance coaching',
-    'City-wise NEET coaching',
-  ].join(', '),
-  openGraph: {
-    title: 'NEET Biology Coaching Locations | Cerebrum Biology Academy',
-    description:
-      'Find the best NEET Biology coaching for your city. We serve 12+ major Indian cities with personalized coaching and proven results.',
-    url: 'https://cerebrumbiologyacademy.com/locations',
-    siteName: 'Cerebrum Biology Academy',
-    type: 'website',
-    images: [
-      {
-        url: '/images/og-locations.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'NEET Biology Coaching Locations across India',
-      },
-    ],
-  },
-  alternates: {
-    canonical: 'https://cerebrumbiologyacademy.com/locations',
-  },
-}
 
 export default function LocationsPage() {
   const tier1Cities = getLocationsByTier('tier1')

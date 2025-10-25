@@ -1,3 +1,5 @@
+'use client'
+
 import { TestimonialGallery } from '@/components/testimonials/TestimonialGallery'
 import { SuccessAnalytics } from '@/components/testimonials/SuccessAnalytics'
 import { successStoriesData, successAnalyticsData, getFeaturedStories } from '@/data/successStories'
@@ -206,12 +208,4 @@ export default function SuccessStoriesPage() {
       </section>
     </div>
   )
-}
-
-export const metadata = {
-  title: 'Student Success Stories | NEET Results & Testimonials | Cerebrum Biology Academy',
-  description:
-    'Discover inspiring NEET success stories from our students. Watch video testimonials, analyze score improvements, and see how we help students achieve medical college dreams with 94% success rate.',
-  keywords:
-    'NEET success stories, student testimonials, AIIMS results, medical college admissions, biology coaching results, NEET rank improvement, student achievements',
 }
