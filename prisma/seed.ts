@@ -20,7 +20,81 @@ async function main() {
     await prisma.userProgress.deleteMany()
     await prisma.performanceReport.deleteMany()
     await prisma.freeUser.deleteMany()
+    await prisma.enrollment.deleteMany()
+    await prisma.course.deleteMany()
   }
+
+  // Seed Courses (CRITICAL - Required for purchase flow)
+  console.log('📚 Creating courses...')
+  const class11Course = await prisma.course.create({
+    data: {
+      id: 'class-11',
+      name: 'Class 11th Biology - Complete NEET Foundation',
+      description: 'Comprehensive preparation for NEET with expert faculty and structured curriculum',
+      type: 'CLASS_11',
+      class: 'CLASS_11',
+      duration: 12, // months
+      totalFees: 3500000, // ₹35,000 in paise (for full year)
+      syllabus: JSON.stringify({
+        modules: [
+          'Diversity in Living World',
+          'Structural Organization in Plants and Animals',
+          'Cell Structure and Function',
+          'Plant Physiology',
+          'Human Physiology'
+        ]
+      }),
+      features: JSON.stringify([
+        'Access to all video lectures',
+        'Live doubt solving sessions',
+        'Weekly tests and assessments',
+        'Study materials (PDF)',
+        'Personalized study plan',
+        'Complete test series',
+        'Previous 10 years NEET papers'
+      ]),
+      isActive: true,
+      sortOrder: 1
+    }
+  })
+
+  const class12Course = await prisma.course.create({
+    data: {
+      id: 'class-12',
+      name: 'Class 12th Biology - Intensive NEET Preparation',
+      description: 'Final year intensive coaching with focus on NEET exam pattern and strategy',
+      type: 'CLASS_12',
+      class: 'CLASS_12',
+      duration: 12, // months
+      totalFees: 5000000, // ₹50,000 in paise (for full year)
+      syllabus: JSON.stringify({
+        modules: [
+          'Reproduction',
+          'Genetics and Evolution',
+          'Biology and Human Welfare',
+          'Biotechnology and Its Applications',
+          'Ecology and Environment'
+        ]
+      }),
+      features: JSON.stringify([
+        'Access to all video lectures',
+        'Live doubt solving sessions',
+        'Weekly mock tests',
+        'Study materials (PDF)',
+        'NEET crash course (FREE)',
+        'Previous 15 years questions',
+        'Exam strategy sessions',
+        'Dedicated NEET mentor',
+        'Complete Grand Test Series',
+        'College admission guidance'
+      ]),
+      isActive: true,
+      sortOrder: 2
+    }
+  })
+
+  console.log(`   ✓ Created course: ${class11Course.name}`)
+  console.log(`   ✓ Created course: ${class12Course.name}`)
 
   // Seed Question Banks
   console.log('📚 Creating question banks...')
@@ -570,6 +644,7 @@ async function main() {
   console.log('✅ Database seeding completed successfully!')
   console.log(`
 📊 Seeding Summary:
+   - Courses: 2 (class-11, class-12)
    - Question Banks: 2
    - Questions: ${createdQuestions.length}
    - Test Templates: ${createdTestTemplates.length}
