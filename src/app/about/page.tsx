@@ -171,18 +171,18 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section - Academic Excellence */}
-      <section className="relative py-32 lg:py-40 bg-gradient-to-br from-[#0f1729] via-[#1e3a5f] to-[#0f1729] text-white overflow-hidden">
+      <section className="relative py-20 sm:py-28 lg:py-40 bg-gradient-to-br from-[#0f1729] via-[#1e3a5f] to-[#0f1729] text-white overflow-hidden">
         {/* Subtle background pattern */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent"></div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <div className="grid lg:grid-cols-5 gap-16 items-center">
-            <div className="lg:col-span-3 space-y-8">
-              <h1 className="text-5xl lg:text-7xl xl:text-8xl font-bold tracking-tight leading-[1.1] mb-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+          <div className="grid lg:grid-cols-5 gap-10 sm:gap-12 lg:gap-16 items-center">
+            <div className="lg:col-span-3 space-y-6 sm:space-y-8">
+              <h1 className="text-5xl lg:text-7xl xl:text-8xl font-bold tracking-[-0.02em] leading-[1.05] mb-8 antialiased">
                 From{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-yellow-200 to-amber-300">
+                <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-yellow-200 to-amber-300">
                   AIIMS Delhi
                 </span>{' '}
                 to Your Medical Dream
@@ -213,27 +213,35 @@ export default function AboutPage() {
               </p>
 
               <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-2xl space-y-4">
-                <div className="flex items-start gap-4">
-                  <CheckCircle className="w-6 h-6 text-amber-300 flex-shrink-0 mt-1" />
-                  <p className="text-white text-lg font-light">
+                <div className="flex items-start gap-4 group hover:translate-x-1 transition-transform duration-300">
+                  <div className="w-8 h-8 rounded-full bg-amber-500/20 flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-amber-500/30 transition-colors">
+                    <CheckCircle className="w-5 h-5 text-amber-300" strokeWidth={2} />
+                  </div>
+                  <p className="text-white text-lg font-light leading-relaxed">
                     47 AIIMS selections across 7 campuses
                   </p>
                 </div>
-                <div className="flex items-start gap-4">
-                  <CheckCircle className="w-6 h-6 text-amber-300 flex-shrink-0 mt-1" />
-                  <p className="text-white text-lg font-light">
+                <div className="flex items-start gap-4 group hover:translate-x-1 transition-transform duration-300">
+                  <div className="w-8 h-8 rounded-full bg-amber-500/20 flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-amber-500/30 transition-colors">
+                    <CheckCircle className="w-5 h-5 text-amber-300" strokeWidth={2} />
+                  </div>
+                  <p className="text-white text-lg font-light leading-relaxed">
                     183 students in government medical colleges
                   </p>
                 </div>
-                <div className="flex items-start gap-4">
-                  <CheckCircle className="w-6 h-6 text-amber-300 flex-shrink-0 mt-1" />
-                  <p className="text-white text-lg font-light">
+                <div className="flex items-start gap-4 group hover:translate-x-1 transition-transform duration-300">
+                  <div className="w-8 h-8 rounded-full bg-amber-500/20 flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-amber-500/30 transition-colors">
+                    <CheckCircle className="w-5 h-5 text-amber-300" strokeWidth={2} />
+                  </div>
+                  <p className="text-white text-lg font-light leading-relaxed">
                     12 students scored 700+ in NEET 2024
                   </p>
                 </div>
-                <div className="flex items-start gap-4">
-                  <CheckCircle className="w-6 h-6 text-amber-300 flex-shrink-0 mt-1" />
-                  <p className="text-white text-lg font-light">
+                <div className="flex items-start gap-4 group hover:translate-x-1 transition-transform duration-300">
+                  <div className="w-8 h-8 rounded-full bg-amber-500/20 flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-amber-500/30 transition-colors">
+                    <CheckCircle className="w-5 h-5 text-amber-300" strokeWidth={2} />
+                  </div>
+                  <p className="text-white text-lg font-light leading-relaxed">
                     Batches limited to 50 students (we know each name)
                   </p>
                 </div>
@@ -244,43 +252,65 @@ export default function AboutPage() {
                   <Button
                     variant="primary"
                     size="xl"
-                    className="bg-amber-500 hover:bg-amber-600 text-[#0f1729] font-semibold shadow-xl hover:shadow-2xl transition-all duration-300"
+                    className="relative group overflow-hidden bg-amber-500 hover:bg-amber-600 text-[#0f1729] font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 min-h-[44px] sm:min-h-[56px]"
                   >
-                    Book Free Consultation
-                    <ArrowRight className="w-5 h-5 ml-2" />
+                    {/* Shimmer effect on hover */}
+                    <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000"></div>
+
+                    <span className="relative z-10 flex items-center gap-2">
+                      Book Free Consultation
+                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    </span>
                   </Button>
                 </Link>
                 <Link href="/results">
                   <Button
                     variant="outline"
                     size="xl"
-                    className="border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 backdrop-blur-sm"
+                    className="border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 backdrop-blur-sm min-h-[44px] sm:min-h-[56px] group"
                   >
-                    View Our Results
-                    <ArrowRight className="w-5 h-5 ml-2" />
+                    <span className="flex items-center gap-2">
+                      View Our Results
+                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    </span>
                   </Button>
                 </Link>
               </div>
             </div>
 
             <div className="lg:col-span-2">
-              <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-10 border border-white/20 shadow-2xl">
-                <h3 className="text-3xl font-bold mb-10 text-center">Our Academic Impact</h3>
-                <div className="grid grid-cols-2 gap-8">
-                  {achievements.map((achievement, index) => (
-                    <div key={index} className="text-center space-y-4">
-                      <achievement.icon
-                        className="w-12 h-12 mx-auto text-amber-300"
-                        strokeWidth={1.5}
-                      />
-                      <div className="text-5xl font-bold text-white tracking-tight">
-                        {achievement.number}
-                      </div>
-                      <div className="text-white/80 font-light text-base leading-tight">
-                        {achievement.label}
-                      </div>
-                    </div>
-                  ))}
+              <div className="relative group">
+                {/* Ambient glow effect */}
+                <div className="absolute -inset-1 bg-gradient-to-r from-amber-400/30 via-yellow-300/30 to-amber-400/30 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+
+                {/* Glass card */}
+                <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl p-10 border border-white/20 shadow-2xl hover:border-white/30 transition-all duration-500">
+                  <h3 className="text-3xl font-bold mb-10 text-center tracking-tight">
+                    Our Academic Impact
+                  </h3>
+                  <div className="grid grid-cols-2 gap-8">
+                    {achievements.map((achievement, index) => (
+                      <motion.div
+                        key={index}
+                        className="text-center space-y-4 group/stat cursor-default"
+                        whileHover={{ scale: 1.05 }}
+                        transition={{ type: 'spring', stiffness: 300 }}
+                      >
+                        <div className="relative">
+                          <achievement.icon
+                            className="w-12 h-12 mx-auto text-amber-300 group-hover/stat:text-amber-200 transition-colors duration-300"
+                            strokeWidth={1.5}
+                          />
+                        </div>
+                        <div className="text-5xl font-bold text-white tracking-tight tabular-nums">
+                          {achievement.number}
+                        </div>
+                        <div className="text-white/80 font-light text-base leading-tight">
+                          {achievement.label}
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
