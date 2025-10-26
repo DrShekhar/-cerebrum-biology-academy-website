@@ -183,26 +183,30 @@ const Header = () => {
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: -10 }}
                           transition={{ duration: 0.2 }}
-                          className="absolute top-full left-0 mt-2 bg-white rounded-lg shadow-xl border border-gray-200 py-4 z-50 w-72"
+                          className="absolute top-full left-0 mt-2 bg-white rounded-lg shadow-xl border border-gray-200 py-3 xs:py-4 z-50 w-64 xs:w-72 min-w-[240px]"
                         >
-                          <div className="px-4">
-                            <div className="mb-3">
-                              <h3 className="text-sm font-semibold text-gray-900 mb-1">
+                          <div className="px-3 xs:px-4">
+                            <div className="mb-2 xs:mb-3">
+                              <h3 className="text-xs xs:text-sm font-semibold text-gray-900 mb-1">
                                 NEET Biology Courses
                               </h3>
-                              <p className="text-xs text-gray-600">Choose your program</p>
+                              <p className="text-[10px] xs:text-xs text-gray-600">
+                                Choose your program
+                              </p>
                             </div>
-                            <div className="space-y-2">
+                            <div className="space-y-1.5 xs:space-y-2">
                               {item.items?.map((subItem, subIndex) => {
                                 const Icon = subItem.icon
                                 return (
                                   <Link
                                     key={subIndex}
                                     href={subItem.href}
-                                    className="flex items-center space-x-3 p-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors rounded-lg"
+                                    className="flex items-center space-x-2 xs:space-x-3 p-2.5 xs:p-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors rounded-lg"
                                   >
-                                    <Icon className="w-5 h-5" />
-                                    <span className="font-medium text-sm">{subItem.label}</span>
+                                    <Icon className="w-4 xs:w-5 h-4 xs:h-5 flex-shrink-0" />
+                                    <span className="font-medium text-xs xs:text-sm">
+                                      {subItem.label}
+                                    </span>
                                   </Link>
                                 )
                               })}
@@ -321,7 +325,7 @@ const Header = () => {
                               initial={{ opacity: 0, height: 0 }}
                               animate={{ opacity: 1, height: 'auto' }}
                               exit={{ opacity: 0, height: 0 }}
-                              className="ml-4 mt-2 space-y-2"
+                              className="ml-3 xs:ml-4 mt-1.5 xs:mt-2 space-y-1.5 xs:space-y-2"
                             >
                               {item.items?.map((subItem, subIndex) => {
                                 const Icon = subItem.icon
@@ -329,10 +333,10 @@ const Header = () => {
                                   <Link
                                     key={subIndex}
                                     href={subItem.href}
-                                    className="flex items-center space-x-3 text-gray-600 hover:text-blue-600 py-2 transition-colors"
+                                    className="flex items-center space-x-2 xs:space-x-3 text-gray-600 hover:text-blue-600 py-1.5 xs:py-2 transition-colors"
                                   >
-                                    <Icon className="w-4 h-4" />
-                                    <span className="text-sm">{subItem.label}</span>
+                                    <Icon className="w-3.5 xs:w-4 h-3.5 xs:h-4 flex-shrink-0" />
+                                    <span className="text-xs xs:text-sm">{subItem.label}</span>
                                   </Link>
                                 )
                               })}
