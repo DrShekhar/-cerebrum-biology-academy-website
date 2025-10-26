@@ -99,11 +99,13 @@ export function MobileBottomNav({ className = '' }: MobileBottomNavProps) {
                     : active
                       ? 'text-blue-600 bg-blue-50 border-t-4 border-blue-600'
                       : 'text-gray-600 hover:text-gray-800 border-t-4 border-transparent hover:bg-gray-50'
-                } py-3 px-1 min-h-[64px] transition-all duration-200`}
+                } py-2.5 xs:py-3 px-0.5 xs:px-1 min-h-[60px] xs:min-h-[64px] transition-all duration-200`}
                 aria-label={`${item.label} - ${item.isExternal ? 'Call now' : 'Navigate to'}`}
               >
-                <IconComponent className="w-7 h-7 mb-1" />
-                <span className="text-[10px] leading-tight font-semibold">{item.label}</span>
+                <IconComponent className="w-6 xs:w-7 h-6 xs:h-7 mb-0.5 xs:mb-1" />
+                <span className="text-[9px] xs:text-[10px] leading-tight font-semibold">
+                  {item.label}
+                </span>
               </button>
             )
           }
@@ -118,11 +120,13 @@ export function MobileBottomNav({ className = '' }: MobileBottomNavProps) {
                   : active
                     ? 'text-blue-600 bg-blue-50 border-t-4 border-blue-600'
                     : 'text-gray-600 hover:text-gray-800 border-t-4 border-transparent hover:bg-gray-50'
-              } py-3 px-1 min-h-[64px] transition-all duration-200`}
+              } py-2.5 xs:py-3 px-0.5 xs:px-1 min-h-[60px] xs:min-h-[64px] transition-all duration-200`}
               aria-label={`${item.label} - Navigate to ${item.label} page`}
             >
-              <IconComponent className="w-7 h-7 mb-1" />
-              <span className="text-[10px] leading-tight font-semibold">{item.label}</span>
+              <IconComponent className="w-6 xs:w-7 h-6 xs:h-7 mb-0.5 xs:mb-1" />
+              <span className="text-[9px] xs:text-[10px] leading-tight font-semibold">
+                {item.label}
+              </span>
               {item.highlight && (
                 <span className="absolute top-1 right-1 flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>

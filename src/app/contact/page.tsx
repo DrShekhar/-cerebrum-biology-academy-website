@@ -103,11 +103,11 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-12 xs:py-16 sm:py-20">
+        <div className="max-w-7xl mx-auto px-4 xs:px-6 lg:px-8">
           <div className="text-center">
             <motion.h1
-              className="text-5xl font-bold mb-6"
+              className="text-3xl xs:text-4xl sm:text-5xl font-bold mb-4 xs:mb-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -115,7 +115,7 @@ export default function ContactPage() {
               Get In Touch With Us
             </motion.h1>
             <motion.p
-              className="text-xl text-blue-100 max-w-3xl mx-auto mb-8"
+              className="text-base xs:text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto mb-6 xs:mb-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -152,28 +152,34 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Information */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Contact Information</h2>
-            <p className="text-xl text-gray-600">Multiple ways to reach us for your convenience</p>
+      <section className="py-12 xs:py-16 sm:py-20">
+        <div className="max-w-7xl mx-auto px-4 xs:px-6 lg:px-8">
+          <div className="text-center mb-10 xs:mb-12 sm:mb-16">
+            <h2 className="text-2xl xs:text-3xl sm:text-4xl font-bold text-gray-900 mb-3 xs:mb-4">
+              Contact Information
+            </h2>
+            <p className="text-base xs:text-lg sm:text-xl text-gray-600">
+              Multiple ways to reach us for your convenience
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-6 xs:gap-8 mb-10 xs:mb-12 sm:mb-16">
             {contactInfo.map((info, index) => (
               <motion.div
                 key={index}
-                className="bg-white rounded-3xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow"
+                className="bg-white rounded-2xl xs:rounded-3xl shadow-lg p-5 xs:p-6 sm:p-8 text-center hover:shadow-xl transition-shadow"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <div
-                  className={`w-16 h-16 ${info.color} rounded-full flex items-center justify-center mx-auto mb-6`}
+                  className={`w-12 xs:w-14 sm:w-16 h-12 xs:h-14 sm:h-16 ${info.color} rounded-full flex items-center justify-center mx-auto mb-4 xs:mb-5 sm:mb-6`}
                 >
-                  <info.icon className="w-8 h-8 text-white" />
+                  <info.icon className="w-6 xs:w-7 sm:w-8 h-6 xs:h-7 sm:h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{info.title}</h3>
+                <h3 className="text-lg xs:text-xl font-bold text-gray-900 mb-3 xs:mb-4">
+                  {info.title}
+                </h3>
                 <div className="space-y-2">
                   {info.details.map((detail, idx) => (
                     <p key={idx} className="text-gray-600">
@@ -186,9 +192,11 @@ export default function ContactPage() {
           </div>
 
           {/* Quick Links */}
-          <div className="bg-white rounded-3xl shadow-lg p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Quick Actions</h3>
-            <div className="grid md:grid-cols-4 gap-6">
+          <div className="bg-white rounded-2xl xs:rounded-3xl shadow-lg p-5 xs:p-6 sm:p-8">
+            <h3 className="text-xl xs:text-2xl font-bold text-gray-900 mb-4 xs:mb-5 sm:mb-6 text-center">
+              Quick Actions
+            </h3>
+            <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-4 xs:gap-5 sm:gap-6">
               {quickLinks.map((link, index) => (
                 <Link key={index} href={link.href}>
                   <motion.div
@@ -211,15 +219,19 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Form */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Send Us a Message</h2>
-            <p className="text-xl text-gray-600">We'll get back to you within 24 hours</p>
+      <section className="py-12 xs:py-16 sm:py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 xs:px-6 lg:px-8">
+          <div className="text-center mb-10 xs:mb-12 sm:mb-16">
+            <h2 className="text-2xl xs:text-3xl sm:text-4xl font-bold text-gray-900 mb-3 xs:mb-4">
+              Send Us a Message
+            </h2>
+            <p className="text-base xs:text-lg sm:text-xl text-gray-600">
+              We'll get back to you within 24 hours
+            </p>
           </div>
 
           <motion.div
-            className="bg-gray-50 rounded-3xl shadow-lg p-8"
+            className="bg-gray-50 rounded-2xl xs:rounded-3xl shadow-lg p-5 xs:p-6 sm:p-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}

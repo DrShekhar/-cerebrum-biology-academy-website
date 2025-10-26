@@ -104,7 +104,7 @@ const Header = () => {
 
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50 border-b border-gray-100">
-      <div className="max-w-7xl mx-auto pl-2 pr-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Left Section - Burger Menu + Logo */}
           <div className="flex items-center space-x-4">
@@ -273,9 +273,9 @@ const Header = () => {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="lg:hidden border-t border-gray-200 py-4"
+              className="lg:hidden border-t border-gray-200 py-3 xs:py-4"
             >
-              <div className="space-y-4">
+              <div className="space-y-3 xs:space-y-4">
                 {/* Regular Navigation Items */}
                 {mainNavigation.map((item, index) => (
                   <div key={index}>
@@ -370,7 +370,7 @@ const Header = () => {
                 ))}
 
                 {/* Mobile CTA Buttons */}
-                <div className="pt-4 border-t border-gray-200 space-y-3">
+                <div className="pt-3 xs:pt-4 border-t border-gray-200 space-y-3">
                   {/* Primary CTA - Enroll Now */}
                   <Link
                     href={primaryCTA.href}

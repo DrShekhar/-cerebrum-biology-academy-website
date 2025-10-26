@@ -99,13 +99,13 @@ export function OptimizedHeroSection({ className = '' }: OptimizedHeroSectionPro
             transition={{ duration: 0.6 }}
           >
             <TrophyIcon className="w-5 h-5 mr-2 text-green-300" />
-            <span className="text-green-100 font-medium text-sm md:text-base">
+            <span className="text-green-100 font-medium text-xs xs:text-sm md:text-base">
               #1 NEET Biology Coaching in India
             </span>
           </motion.div>
 
           <motion.h1
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-white"
+            className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 xs:mb-6 leading-tight text-white"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -118,7 +118,7 @@ export function OptimizedHeroSection({ className = '' }: OptimizedHeroSectionPro
           </motion.h1>
 
           <motion.p
-            className="text-lg sm:text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl"
+            className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl text-blue-100 mb-6 xs:mb-8 max-w-3xl"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -128,7 +128,7 @@ export function OptimizedHeroSection({ className = '' }: OptimizedHeroSectionPro
           </motion.p>
 
           <motion.div
-            className="flex flex-col sm:flex-row gap-4 mb-12"
+            className="flex flex-col sm:flex-row gap-3 xs:gap-4 mb-8 xs:mb-12"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
@@ -137,7 +137,7 @@ export function OptimizedHeroSection({ className = '' }: OptimizedHeroSectionPro
               variant="medical"
               size="lg"
               onClick={() => router.push('/success-stories')}
-              className="bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-8 rounded-xl shadow-2xl hover:shadow-green-500/25 transition-all duration-300 group text-base md:text-lg"
+              className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 xs:py-4 px-6 xs:px-8 rounded-lg xs:rounded-xl shadow-2xl hover:shadow-green-500/25 transition-all duration-300 group text-sm xs:text-base md:text-lg"
             >
               <StarIcon className="h-6 w-6 group-hover:scale-110 transition-transform" />
               See Their Success Stories
@@ -147,56 +147,64 @@ export function OptimizedHeroSection({ className = '' }: OptimizedHeroSectionPro
               variant="luxury"
               size="lg"
               onClick={() => router.push('/demo')}
-              className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-semibold py-4 px-8 rounded-xl transition-all duration-300 text-base md:text-lg"
+              className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-semibold py-3 xs:py-4 px-6 xs:px-8 rounded-lg xs:rounded-xl transition-all duration-300 text-sm xs:text-base md:text-lg"
             >
-              <PlayIcon className="h-6 w-6" />
+              <PlayIcon className="h-5 xs:h-6 w-5 xs:w-6" />
               Try Free Demo Class
             </PremiumButton>
           </motion.div>
 
           <motion.div
-            className="grid grid-cols-3 gap-4 sm:gap-6 max-w-2xl mb-8"
+            className="grid grid-cols-3 gap-3 xs:gap-4 sm:gap-6 max-w-2xl mb-6 xs:mb-8"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
-            <div className="text-center bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
-              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-green-400">695</div>
-              <div className="text-xs sm:text-sm text-blue-200 mt-1">Sadhna's Score</div>
+            <div className="text-center bg-white/5 backdrop-blur-sm rounded-lg xs:rounded-xl p-3 xs:p-4 border border-white/10">
+              <div className="text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-green-400">
+                695
+              </div>
+              <div className="text-[10px] xs:text-xs sm:text-sm text-blue-200 mt-1">
+                Sadhna's Score
+              </div>
             </div>
-            <div className="text-center bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
-              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-yellow-400">98%</div>
-              <div className="text-xs sm:text-sm text-blue-200 mt-1">Success Rate</div>
+            <div className="text-center bg-white/5 backdrop-blur-sm rounded-lg xs:rounded-xl p-3 xs:p-4 border border-white/10">
+              <div className="text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-yellow-400">
+                98%
+              </div>
+              <div className="text-[10px] xs:text-xs sm:text-sm text-blue-200 mt-1">
+                Success Rate
+              </div>
             </div>
-            <div className="text-center bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
-              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-purple-400">
+            <div className="text-center bg-white/5 backdrop-blur-sm rounded-lg xs:rounded-xl p-3 xs:p-4 border border-white/10">
+              <div className="text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-purple-400">
                 2,500+
               </div>
-              <div className="text-xs sm:text-sm text-blue-200 mt-1">Students</div>
+              <div className="text-[10px] xs:text-xs sm:text-sm text-blue-200 mt-1">Students</div>
             </div>
           </motion.div>
 
           <motion.div
-            className="inline-flex items-center bg-red-500/20 backdrop-blur-sm border border-red-300/30 px-4 py-3 rounded-lg"
+            className="inline-flex items-center bg-red-500/20 backdrop-blur-sm border border-red-300/30 px-3 xs:px-4 py-2 xs:py-3 rounded-lg"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1 }}
           >
-            <ClockIcon className="w-5 h-5 mr-2 text-red-300 flex-shrink-0" />
-            <span className="text-red-100 text-sm sm:text-base">
+            <ClockIcon className="w-4 xs:w-5 h-4 xs:h-5 mr-2 text-red-300 flex-shrink-0" />
+            <span className="text-red-100 text-xs xs:text-sm sm:text-base">
               Next Batch Starting: <span className="font-bold">January 15, 2025</span> • Only 50
               Seats Left
             </span>
           </motion.div>
 
           <motion.div
-            className="mt-8 flex items-center gap-2 text-yellow-200"
+            className="mt-6 xs:mt-8 flex items-center gap-2 text-yellow-200"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 1.2 }}
           >
-            <SparklesIcon className="w-5 h-5 animate-pulse" />
-            <span className="text-sm sm:text-base">
+            <SparklesIcon className="w-4 xs:w-5 h-4 xs:h-5 animate-pulse" />
+            <span className="text-xs xs:text-sm sm:text-base">
               Join in the next {timeLeft.days} days and get 15% early bird discount
             </span>
           </motion.div>
