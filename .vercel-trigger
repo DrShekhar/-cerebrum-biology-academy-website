@@ -28,13 +28,14 @@ Timestamp: 2025-10-25T18:54:00Z
 Purpose: Deploy commit 903fbb3 with professional header branding
 Changes: Title case "Cerebrum", dark slate background, amber glow, tight typography
 
-# Force deployment for AI Education Quick Wins - Sun Oct 26 01:15:00 IST 2025
-Timestamp: 2025-10-25T19:45:00Z
-Purpose: Deploy commit 3a7ecf5 with comprehensive Quick Win enhancements
-Changes: Silicon Valley UX polish with Harvard-level sophistication
-Features:
-- NEET Syllabus Integration (54 chapters, weightage mapping)
-- Visual Progress Dashboard (Instagram/Duolingo-style)
-- Micro-interactions & Loading States
-- Mobile-First Optimizations (44x44px touch targets)
+# Force deployment for NEET Weightage Correction - Sun Oct 26 02:30:00 IST 2025
+Timestamp: 2025-10-25T21:00:00Z
+Purpose: Deploy commit 5d37414 with corrected NEET Biology marks distribution
+Critical Fix: User-reported error - weightages now show actual NEET exam marks
+Changes: All 10 units updated from relative scale (71 total) to actual marks (360 total)
+Distribution:
+- Class 11: 156 marks (Diversity 18, Structural Org 24, Cell 46, Plant Physiology 32, Human Physiology 36)
+- Class 12: 204 marks (Reproduction 44, Genetics 60, Bio & Welfare 30, Biotech 38, Ecology 32)
+- Total: 360 marks = 90 questions × 4 marks (matches NEET Biology paper)
 Build: ✓ All 231 pages generated successfully
+User Impact: Students now see accurate NEET exam weightages for study planning
