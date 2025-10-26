@@ -30,7 +30,7 @@ export const neetSyllabus: NEETSyllabus = {
       {
         id: 'unit-11-1',
         name: 'Diversity in Living World',
-        weightage: 3,
+        weightage: 18, // NEET marks (out of 360 total)
         chapters: [
           {
             id: 'ch-11-1',
@@ -109,7 +109,7 @@ export const neetSyllabus: NEETSyllabus = {
       {
         id: 'unit-11-2',
         name: 'Structural Organization in Animals and Plants',
-        weightage: 5,
+        weightage: 24, // NEET marks
         chapters: [
           {
             id: 'ch-11-5',
@@ -167,7 +167,7 @@ export const neetSyllabus: NEETSyllabus = {
       {
         id: 'unit-11-3',
         name: 'Cell Structure and Function',
-        weightage: 9,
+        weightage: 46, // NEET marks
         chapters: [
           {
             id: 'ch-11-8',
@@ -218,7 +218,7 @@ export const neetSyllabus: NEETSyllabus = {
       {
         id: 'unit-11-4',
         name: 'Plant Physiology',
-        weightage: 6,
+        weightage: 32, // NEET marks
         chapters: [
           {
             id: 'ch-11-11',
@@ -315,7 +315,7 @@ export const neetSyllabus: NEETSyllabus = {
       {
         id: 'unit-11-5',
         name: 'Human Physiology',
-        weightage: 7,
+        weightage: 36, // NEET marks
         chapters: [
           {
             id: 'ch-11-16',
@@ -453,7 +453,7 @@ export const neetSyllabus: NEETSyllabus = {
       {
         id: 'unit-12-1',
         name: 'Reproduction',
-        weightage: 9,
+        weightage: 44, // NEET marks
         chapters: [
           {
             id: 'ch-12-1',
@@ -535,7 +535,7 @@ export const neetSyllabus: NEETSyllabus = {
       {
         id: 'unit-12-2',
         name: 'Genetics and Evolution',
-        weightage: 12,
+        weightage: 60, // NEET marks (highest weightage unit)
         chapters: [
           {
             id: 'ch-12-5',
@@ -610,7 +610,7 @@ export const neetSyllabus: NEETSyllabus = {
       {
         id: 'unit-12-3',
         name: 'Biology and Human Welfare',
-        weightage: 6,
+        weightage: 30, // NEET marks
         chapters: [
           {
             id: 'ch-12-8',
@@ -666,7 +666,7 @@ export const neetSyllabus: NEETSyllabus = {
       {
         id: 'unit-12-4',
         name: 'Biotechnology and Its Applications',
-        weightage: 8,
+        weightage: 38, // NEET marks
         chapters: [
           {
             id: 'ch-12-11',
@@ -704,7 +704,7 @@ export const neetSyllabus: NEETSyllabus = {
       {
         id: 'unit-12-5',
         name: 'Ecology and Environment',
-        weightage: 6,
+        weightage: 32, // NEET marks
         chapters: [
           {
             id: 'ch-12-13',
