@@ -95,27 +95,29 @@ export function TrustSignalsBanner({
   if (variant === 'compact') {
     return (
       <div
-        className={`bg-gradient-to-r from-blue-50 via-purple-50 to-teal-50 py-6 border-y border-blue-100 ${className}`}
+        className={`bg-gradient-to-r from-blue-50 via-purple-50 to-teal-50 py-4 xs:py-5 sm:py-6 border-y border-blue-100 ${className}`}
       >
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8">
+        <div className="max-w-7xl mx-auto px-4 xs:px-6 lg:px-8">
+          <div className="flex flex-wrap items-center justify-center gap-4 xs:gap-5 sm:gap-6 md:gap-8">
             {trustSignals.slice(0, 4).map((signal, index) => (
               <motion.div
                 key={signal.id}
-                className="flex items-center space-x-3"
+                className="flex items-center space-x-2 xs:space-x-3"
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
                 <div
-                  className={`w-10 h-10 bg-gradient-to-br ${signal.color} rounded-full flex items-center justify-center shadow-md`}
+                  className={`w-8 xs:w-9 sm:w-10 h-8 xs:h-9 sm:h-10 bg-gradient-to-br ${signal.color} rounded-full flex items-center justify-center shadow-md`}
                 >
-                  <signal.icon className="w-5 h-5 text-white" />
+                  <signal.icon className="w-4 xs:w-5 h-4 xs:h-5 text-white" />
                 </div>
                 <div>
                   <div className="flex items-center space-x-1">
-                    <span className="text-lg font-bold text-gray-900">{signal.value}</span>
+                    <span className="text-base xs:text-lg font-bold text-gray-900">
+                      {signal.value}
+                    </span>
                     {signal.verified && showVerificationBadges && (
                       <BadgeCheck className="w-4 h-4 text-blue-600" />
                     )}
@@ -131,34 +133,36 @@ export function TrustSignalsBanner({
   }
 
   return (
-    <section className={`py-16 bg-gradient-to-br from-gray-50 to-blue-50 ${className}`}>
-      <div className="max-w-7xl mx-auto px-4">
+    <section
+      className={`py-12 xs:py-14 sm:py-16 bg-gradient-to-br from-gray-50 to-blue-50 ${className}`}
+    >
+      <div className="max-w-7xl mx-auto px-4 xs:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          className="text-center mb-12"
+          className="text-center mb-8 xs:mb-10 sm:mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <div className="inline-flex items-center bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-            <Shield className="w-4 h-4 mr-2" />
+          <div className="inline-flex items-center bg-blue-100 text-blue-700 px-3 xs:px-4 py-1.5 xs:py-2 rounded-full text-xs xs:text-sm font-semibold mb-3 xs:mb-4">
+            <Shield className="w-3 xs:w-4 h-3 xs:h-4 mr-2" />
             Verified Trust Signals
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-2xl xs:text-3xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 xs:mb-4">
             Why 2,500+ Students Trust Us
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-base xs:text-lg text-gray-600 max-w-2xl mx-auto">
             Every number tells a story of dedication, excellence, and proven results
           </p>
         </motion.div>
 
         {/* Trust Signals Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 xs:gap-5 sm:gap-6">
           {trustSignals.map((signal, index) => (
             <motion.div
               key={signal.id}
-              className="relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 group border border-gray-100"
+              className="relative bg-white rounded-xl xs:rounded-2xl p-4 xs:p-5 sm:p-6 shadow-lg hover:shadow-2xl transition-all duration-300 group border border-gray-100"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -167,9 +171,9 @@ export function TrustSignalsBanner({
             >
               {/* Verified Badge */}
               {signal.verified && showVerificationBadges && (
-                <div className="absolute top-4 right-4">
-                  <div className="flex items-center bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">
-                    <CheckCircle className="w-3 h-3 mr-1" />
+                <div className="absolute top-3 xs:top-4 right-3 xs:right-4">
+                  <div className="flex items-center bg-green-100 text-green-700 px-2 xs:px-3 py-0.5 xs:py-1 rounded-full text-[10px] xs:text-xs font-semibold">
+                    <CheckCircle className="w-2.5 xs:w-3 h-2.5 xs:h-3 mr-1" />
                     Verified
                   </div>
                 </div>
@@ -177,15 +181,19 @@ export function TrustSignalsBanner({
 
               {/* Icon */}
               <div
-                className={`w-16 h-16 bg-gradient-to-br ${signal.color} rounded-2xl flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300`}
+                className={`w-12 xs:w-14 sm:w-16 h-12 xs:h-14 sm:h-16 bg-gradient-to-br ${signal.color} rounded-xl xs:rounded-2xl flex items-center justify-center mb-3 xs:mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300`}
               >
-                <signal.icon className="w-8 h-8 text-white" />
+                <signal.icon className="w-6 xs:w-7 sm:w-8 h-6 xs:h-7 sm:h-8 text-white" />
               </div>
 
               {/* Content */}
               <div className="mb-2">
-                <div className="text-4xl font-bold text-gray-900 mb-1">{signal.value}</div>
-                <div className="text-lg font-semibold text-gray-700">{signal.label}</div>
+                <div className="text-2xl xs:text-3xl sm:text-4xl font-bold text-gray-900 mb-1">
+                  {signal.value}
+                </div>
+                <div className="text-base xs:text-lg font-semibold text-gray-700">
+                  {signal.label}
+                </div>
               </div>
 
               {/* Sublabel */}
@@ -222,7 +230,7 @@ export function TrustSignalsBanner({
 
         {/* Additional Trust Indicators */}
         <motion.div
-          className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4"
+          className="mt-8 xs:mt-10 sm:mt-12 grid grid-cols-2 md:grid-cols-4 gap-3 xs:gap-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}

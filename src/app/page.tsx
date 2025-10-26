@@ -40,15 +40,17 @@ export default function Home() {
       <LocationsSection />
 
       {/* Photo Gallery CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">See Our Academy in Action</h2>
-          <p className="text-xl mb-8 opacity-90">
+      <section className="py-12 xs:py-14 sm:py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div className="max-w-4xl mx-auto px-4 xs:px-6 text-center">
+          <h2 className="text-2xl xs:text-3xl sm:text-3xl md:text-4xl font-bold mb-3 xs:mb-4">
+            See Our Academy in Action
+          </h2>
+          <p className="text-base xs:text-lg sm:text-xl mb-6 xs:mb-8 opacity-90">
             Explore our facilities, events, and achievements through our photo gallery
           </p>
           <Link
             href="/gallery"
-            className="inline-block bg-white text-blue-600 px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-all duration-300 shadow-lg"
+            className="inline-block bg-white text-blue-600 px-6 xs:px-8 py-3 xs:py-4 rounded-full font-bold hover:bg-gray-100 transition-all duration-300 shadow-lg text-sm xs:text-base"
           >
             View Photo Gallery
           </Link>
