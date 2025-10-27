@@ -22,6 +22,14 @@ export interface ItemParameters {
   bloomsLevel: string
   estimatedTime: number
   keywords: string[]
+
+  // Question content properties (for API responses)
+  type?: string // QuestionType: MCQ, SHORT_ANSWER, etc.
+  question?: string // The question text
+  options?: string[] | any // Answer options for MCQ
+  hints?: string[] // Hints for the question
+  correctAnswer?: string // The correct answer
+  explanation?: string // Explanation text
 }
 
 export interface StudentResponse {
@@ -112,11 +120,7 @@ class ItemResponseTheory {
    * 2-Parameter Logistic Model (2PL)
    * P(θ) = 1 / (1 + exp(-Da(θ-b)))
    */
-  calculateProbability2PL(
-    theta: number,
-    difficulty: number,
-    discrimination: number
-  ): number {
+  calculateProbability2PL(theta: number, difficulty: number, discrimination: number): number {
     return this.calculateProbability3PL(theta, difficulty, discrimination, 0)
   }
 
@@ -132,16 +136,19 @@ class ItemResponseTheory {
    * Fisher Information Function
    * I(θ) = D²a² * [P(θ)(1-P(θ))]² / [P(θ)(1-P(θ)) + c²]
    */
-  calculateInformation(
-    theta: number,
-    item: ItemParameters
-  ): number {
-    const P = this.calculateProbability3PL(theta, item.difficulty, item.discrimination, item.guessing)
+  calculateInformation(theta: number, item: ItemParameters): number {
+    const P = this.calculateProbability3PL(
+      theta,
+      item.difficulty,
+      item.discrimination,
+      item.guessing
+    )
     const Q = 1 - P
 
     if (item.guessing > 0) {
       // 3PL information function
-      const numerator = Math.pow(this.D * item.discrimination, 2) * Math.pow(P - item.guessing, 2) * Q
+      const numerator =
+        Math.pow(this.D * item.discrimination, 2) * Math.pow(P - item.guessing, 2) * Q
       const denominator = P * (1 - item.guessing)
       return numerator / denominator
     } else {
@@ -169,16 +176,13 @@ class ItemResponseTheory {
   /**
    * Maximum Likelihood Estimation (MLE) of ability
    */
-  estimateAbilityMLE(
-    responses: StudentResponse[],
-    items: ItemParameters[]
-  ): AbilityEstimate {
+  estimateAbilityMLE(responses: StudentResponse[], items: ItemParameters[]): AbilityEstimate {
     let theta = 0 // Initial estimate
     let iterations = 0
     let converged = false
 
     // Create item lookup for faster access
-    const itemLookup = new Map(items.map(item => [item.id, item]))
+    const itemLookup = new Map(items.map((item) => [item.id, item]))
 
     for (let iter = 0; iter < this.MAX_ITERATIONS; iter++) {
       iterations = iter + 1
@@ -191,21 +195,26 @@ class ItemResponseTheory {
         const item = itemLookup.get(response.itemId)
         if (!item) continue
 
-        const P = this.calculateProbability3PL(theta, item.difficulty, item.discrimination, item.guessing)
+        const P = this.calculateProbability3PL(
+          theta,
+          item.difficulty,
+          item.discrimination,
+          item.guessing
+        )
         const Q = 1 - P
-        const W = this.D * item.discrimination * (P - item.guessing) / (1 - item.guessing)
+        const W = (this.D * item.discrimination * (P - item.guessing)) / (1 - item.guessing)
 
         // First derivative (score function)
         firstDerivative += W * (response.response ? 1 : 0) - W * P
 
         // Second derivative (information function)
-        secondDerivative -= W * W * P * Q / Math.pow(P, 2)
+        secondDerivative -= (W * W * P * Q) / Math.pow(P, 2)
       }
 
       // Newton-Raphson update
       if (Math.abs(secondDerivative) < 1e-10) break
 
-      const delta = firstDerivative / (-secondDerivative)
+      const delta = firstDerivative / -secondDerivative
       const newTheta = theta + delta
 
       // Check convergence
@@ -219,7 +228,9 @@ class ItemResponseTheory {
     }
 
     // Calculate standard error and information
-    const administeredItems = responses.map(r => itemLookup.get(r.itemId)).filter(Boolean) as ItemParameters[]
+    const administeredItems = responses
+      .map((r) => itemLookup.get(r.itemId))
+      .filter(Boolean) as ItemParameters[]
     const standardError = this.calculateStandardError(theta, administeredItems)
     const information = this.calculateTestInformation(theta, administeredItems)
 
@@ -230,7 +241,7 @@ class ItemResponseTheory {
       informationGained: information,
       estimationMethod: 'MLE',
       convergence: converged,
-      iterations
+      iterations,
     }
   }
 
@@ -248,7 +259,7 @@ class ItemResponseTheory {
     const maxTheta = 4
     const step = (maxTheta - minTheta) / (numQuadraturePoints - 1)
 
-    const itemLookup = new Map(items.map(item => [item.id, item]))
+    const itemLookup = new Map(items.map((item) => [item.id, item]))
 
     let numerator = 0
     let denominator = 0
@@ -259,8 +270,9 @@ class ItemResponseTheory {
       const theta = minTheta + i * step
 
       // Prior probability (normal distribution)
-      const priorProb = Math.exp(-0.5 * Math.pow(theta - priorMean, 2) / priorVariance) /
-                       Math.sqrt(2 * Math.PI * priorVariance)
+      const priorProb =
+        Math.exp((-0.5 * Math.pow(theta - priorMean, 2)) / priorVariance) /
+        Math.sqrt(2 * Math.PI * priorVariance)
 
       // Likelihood
       let likelihood = 1
@@ -268,8 +280,13 @@ class ItemResponseTheory {
         const item = itemLookup.get(response.itemId)
         if (!item) continue
 
-        const P = this.calculateProbability3PL(theta, item.difficulty, item.discrimination, item.guessing)
-        likelihood *= response.response ? P : (1 - P)
+        const P = this.calculateProbability3PL(
+          theta,
+          item.difficulty,
+          item.discrimination,
+          item.guessing
+        )
+        likelihood *= response.response ? P : 1 - P
       }
 
       const posterior = likelihood * priorProb
@@ -279,10 +296,12 @@ class ItemResponseTheory {
     }
 
     const meanTheta = denominator > 0 ? numerator / denominator : 0
-    const varianceTheta = denominator > 0 ? (variance / denominator) - meanTheta * meanTheta : 1
+    const varianceTheta = denominator > 0 ? variance / denominator - meanTheta * meanTheta : 1
     const standardError = Math.sqrt(varianceTheta)
 
-    const administeredItems = responses.map(r => itemLookup.get(r.itemId)).filter(Boolean) as ItemParameters[]
+    const administeredItems = responses
+      .map((r) => itemLookup.get(r.itemId))
+      .filter(Boolean) as ItemParameters[]
     const information = this.calculateTestInformation(meanTheta, administeredItems)
 
     return {
@@ -292,7 +311,7 @@ class ItemResponseTheory {
       informationGained: information,
       estimationMethod: 'EAP',
       convergence: true,
-      iterations: 1
+      iterations: 1,
     }
   }
 
@@ -310,9 +329,7 @@ class ItemResponseTheory {
     }
   ): ItemParameters | null {
     // Filter out already administered items
-    const candidateItems = availableItems.filter(item =>
-      !administeredItems.includes(item.id)
-    )
+    const candidateItems = availableItems.filter((item) => !administeredItems.includes(item.id))
 
     if (candidateItems.length === 0) return null
 
@@ -320,13 +337,13 @@ class ItemResponseTheory {
     let filteredItems = candidateItems
 
     if (contentConstraints?.maxTimePerItem) {
-      filteredItems = filteredItems.filter(item =>
-        item.estimatedTime <= contentConstraints.maxTimePerItem!
+      filteredItems = filteredItems.filter(
+        (item) => item.estimatedTime <= contentConstraints.maxTimePerItem!
       )
     }
 
     // Calculate information for each candidate item
-    const itemsWithInfo = filteredItems.map(item => ({
+    const itemsWithInfo = filteredItems.map((item) => ({
       item,
       information: this.calculateInformation(currentAbility.theta, item),
       probability: this.calculateProbability3PL(
@@ -334,12 +351,12 @@ class ItemResponseTheory {
         item.difficulty,
         item.discrimination,
         item.guessing
-      )
+      ),
     }))
 
     // Apply exposure control (prevent overuse of highly informative items)
-    const exposureControlledItems = itemsWithInfo.filter(({ probability }) =>
-      probability >= 0.1 && probability <= 0.9 // Avoid items that are too easy or too hard
+    const exposureControlledItems = itemsWithInfo.filter(
+      ({ probability }) => probability >= 0.1 && probability <= 0.9 // Avoid items that are too easy or too hard
     )
 
     if (exposureControlledItems.length === 0) {
@@ -376,7 +393,7 @@ class ItemResponseTheory {
       return {
         shouldTerminate: false,
         reason: 'Minimum items not reached',
-        confidence: 0
+        confidence: 0,
       }
     }
 
@@ -385,7 +402,7 @@ class ItemResponseTheory {
       return {
         shouldTerminate: true,
         reason: 'Maximum items reached',
-        confidence: currentAbility.confidence
+        confidence: currentAbility.confidence,
       }
     }
 
@@ -394,7 +411,7 @@ class ItemResponseTheory {
       return {
         shouldTerminate: true,
         reason: 'Target precision achieved',
-        confidence: currentAbility.confidence
+        confidence: currentAbility.confidence,
       }
     }
 
@@ -403,7 +420,7 @@ class ItemResponseTheory {
       return {
         shouldTerminate: true,
         reason: 'Sufficient information collected',
-        confidence: currentAbility.confidence
+        confidence: currentAbility.confidence,
       }
     }
 
@@ -413,7 +430,7 @@ class ItemResponseTheory {
     return {
       shouldTerminate: false,
       reason: 'Continue testing',
-      confidence: currentAbility.confidence
+      confidence: currentAbility.confidence,
     }
   }
 
@@ -450,7 +467,7 @@ class ItemResponseTheory {
       significantChange,
       changeDirection,
       changeMagnitude,
-      confidence: Math.min(previousEstimate.confidence, currentEstimate.confidence)
+      confidence: Math.min(previousEstimate.confidence, currentEstimate.confidence),
     }
   }
 
@@ -484,7 +501,7 @@ class ItemResponseTheory {
     else abilityLevel = 'Below Basic'
 
     // Analyze performance by topic/difficulty
-    const itemLookup = new Map(items.map(item => [item.id, item]))
+    const itemLookup = new Map(items.map((item) => [item.id, item]))
     const topicPerformance = new Map<string, { correct: number; total: number }>()
 
     for (const response of responses) {
@@ -525,7 +542,7 @@ class ItemResponseTheory {
       abilityLevel,
       strengths,
       weaknesses,
-      recommendations
+      recommendations,
     }
   }
 
@@ -541,18 +558,18 @@ class ItemResponseTheory {
    */
   private erf(x: number): number {
     // Abramowitz and Stegun approximation
-    const a1 =  0.254829592
+    const a1 = 0.254829592
     const a2 = -0.284496736
-    const a3 =  1.421413741
+    const a3 = 1.421413741
     const a4 = -1.453152027
-    const a5 =  1.061405429
-    const p  =  0.3275911
+    const a5 = 1.061405429
+    const p = 0.3275911
 
     const sign = x >= 0 ? 1 : -1
     x = Math.abs(x)
 
     const t = 1.0 / (1.0 + p * x)
-    const y = 1.0 - (((((a5 * t + a4) * t) + a3) * t + a2) * t + a1) * t * Math.exp(-x * x)
+    const y = 1.0 - ((((a5 * t + a4) * t + a3) * t + a2) * t + a1) * t * Math.exp(-x * x)
 
     return sign * y
   }
