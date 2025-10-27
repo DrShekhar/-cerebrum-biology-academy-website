@@ -1,4 +1,5 @@
 import { PrismaClient } from '@/generated/prisma'
+import { neetBiologyQuestions } from './neet-questions-data'
 
 const prisma = new PrismaClient()
 
@@ -128,194 +129,20 @@ async function main() {
     }
   })
 
-  // Seed Questions
+  // Seed Questions from imported data
   console.log('❓ Creating sample questions...')
-  const questions = [
-    {
-      topic: 'Cell Biology',
-      subtopic: 'Cell Organelles',
-      curriculum: 'NEET',
-      grade: 'CLASS_12',
-      subject: 'biology',
-      type: 'MCQ',
-      difficulty: 'EASY',
-      question: 'Which of the following is called the powerhouse of the cell?',
-      options: JSON.stringify([
-        'Nucleus',
-        'Mitochondria',
-        'Ribosome',
-        'Endoplasmic Reticulum'
-      ]),
-      correctAnswer: 'Mitochondria',
-      explanation: 'Mitochondria are called the powerhouse of the cell because they produce ATP through cellular respiration, providing energy for cellular processes.',
-      solutionSteps: JSON.stringify([
-        'Mitochondria contain enzymes for cellular respiration',
-        'They convert glucose and oxygen into ATP',
-        'ATP is the primary energy currency of cells',
-        'Hence, mitochondria are called powerhouses'
-      ]),
-      source: 'NEET_2023',
-      examYear: 2023,
-      marks: 4,
-      timeLimit: 60,
-      tags: JSON.stringify(['mitochondria', 'powerhouse', 'ATP', 'cellular respiration']),
-      relatedConcepts: JSON.stringify(['ATP synthesis', 'Cellular respiration', 'Cell organelles']),
-      keywords: JSON.stringify(['mitochondria', 'powerhouse', 'energy', 'ATP']),
-      isActive: true,
-      isVerified: true,
-      verifiedBy: 'expert_teacher_1',
-      qualityScore: 4.8,
-      category: 'PREVIOUS_YEAR'
-    },
-    {
-      topic: 'Cell Division',
-      subtopic: 'Mitosis',
-      curriculum: 'NEET',
-      grade: 'CLASS_12',
-      subject: 'biology',
-      type: 'MCQ',
-      difficulty: 'MEDIUM',
-      question: 'In which phase of mitosis do chromosomes align at the metaphase plate?',
-      options: JSON.stringify([
-        'Prophase',
-        'Metaphase',
-        'Anaphase',
-        'Telophase'
-      ]),
-      correctAnswer: 'Metaphase',
-      explanation: 'During metaphase, chromosomes align at the cell\'s equatorial plane called the metaphase plate, ensuring equal distribution of genetic material.',
-      solutionSteps: JSON.stringify([
-        'Metaphase is the second phase of mitosis',
-        'Nuclear envelope has broken down',
-        'Chromosomes attach to spindle fibers',
-        'They align at the cell center (metaphase plate)'
-      ]),
-      source: 'NEET_2022',
-      examYear: 2022,
-      marks: 4,
-      timeLimit: 90,
-      tags: JSON.stringify(['metaphase', 'chromosomes', 'metaphase plate', 'mitosis']),
-      relatedConcepts: JSON.stringify(['Cell division', 'Chromosome movement', 'Spindle fibers']),
-      keywords: JSON.stringify(['metaphase', 'chromosomes', 'mitosis', 'division']),
-      isActive: true,
-      isVerified: true,
-      verifiedBy: 'expert_teacher_2',
-      qualityScore: 4.6,
-      category: 'PREVIOUS_YEAR'
-    },
-    {
-      topic: 'Molecular Biology',
-      subtopic: 'DNA Replication',
-      curriculum: 'NEET',
-      grade: 'CLASS_12',
-      subject: 'biology',
-      type: 'MCQ',
-      difficulty: 'HARD',
-      question: 'Which enzyme is responsible for joining Okazaki fragments during DNA replication?',
-      options: JSON.stringify([
-        'DNA Polymerase',
-        'DNA Ligase',
-        'DNA Helicase',
-        'DNA Primase'
-      ]),
-      correctAnswer: 'DNA Ligase',
-      explanation: 'DNA Ligase joins Okazaki fragments on the lagging strand by forming phosphodiester bonds between adjacent nucleotides.',
-      solutionSteps: JSON.stringify([
-        'DNA replication occurs in 5\' to 3\' direction',
-        'Lagging strand is synthesized discontinuously',
-        'Short fragments called Okazaki fragments are formed',
-        'DNA Ligase joins these fragments together'
-      ]),
-      source: 'NEET_2023',
-      examYear: 2023,
-      marks: 4,
-      timeLimit: 120,
-      tags: JSON.stringify(['DNA ligase', 'Okazaki fragments', 'DNA replication', 'lagging strand']),
-      relatedConcepts: JSON.stringify(['DNA replication', 'Enzymes', 'Molecular biology']),
-      keywords: JSON.stringify(['ligase', 'Okazaki', 'replication', 'DNA']),
-      isActive: true,
-      isVerified: true,
-      verifiedBy: 'expert_teacher_1',
-      qualityScore: 4.9,
-      category: 'PREVIOUS_YEAR'
-    },
-    {
-      topic: 'Plant Physiology',
-      subtopic: 'Transpiration',
-      curriculum: 'NEET',
-      grade: 'CLASS_12',
-      subject: 'botany',
-      type: 'MCQ',
-      difficulty: 'EASY',
-      question: 'What is the primary function of stomata in plants?',
-      options: JSON.stringify([
-        'Water absorption',
-        'Gas exchange and transpiration',
-        'Nutrient storage',
-        'Photosynthesis'
-      ]),
-      correctAnswer: 'Gas exchange and transpiration',
-      explanation: 'Stomata are pores in plant leaves that regulate gas exchange (CO2 in, O2 out) and control water loss through transpiration.',
-      solutionSteps: JSON.stringify([
-        'Stomata are small pores on leaf surface',
-        'They allow CO2 to enter for photosynthesis',
-        'They allow O2 to exit as byproduct',
-        'They also regulate water loss (transpiration)'
-      ]),
-      source: 'NEET_2023',
-      examYear: 2023,
-      marks: 4,
-      timeLimit: 60,
-      tags: JSON.stringify(['stomata', 'gas exchange', 'transpiration', 'plant physiology']),
-      relatedConcepts: JSON.stringify(['Plant anatomy', 'Photosynthesis', 'Water transport']),
-      keywords: JSON.stringify(['stomata', 'transpiration', 'gas', 'exchange']),
-      isActive: true,
-      isVerified: true,
-      verifiedBy: 'expert_teacher_3',
-      qualityScore: 4.5,
-      category: 'PRACTICE'
-    },
-    {
-      topic: 'Human Physiology',
-      subtopic: 'Endocrine System',
-      curriculum: 'NEET',
-      grade: 'CLASS_12',
-      subject: 'zoology',
-      type: 'MCQ',
-      difficulty: 'MEDIUM',
-      question: 'Which hormone regulates the heartbeat in humans?',
-      options: JSON.stringify([
-        'Insulin',
-        'Adrenaline',
-        'Thyroxine',
-        'Growth hormone'
-      ]),
-      correctAnswer: 'Adrenaline',
-      explanation: 'Adrenaline (epinephrine) is released during stress and increases heart rate, blood pressure, and breathing rate as part of the fight-or-flight response.',
-      solutionSteps: JSON.stringify([
-        'Adrenaline is released by adrenal glands',
-        'It is a stress hormone',
-        'It increases heart rate during emergencies',
-        'Part of fight-or-flight response'
-      ]),
-      source: 'NEET_2022',
-      examYear: 2022,
-      marks: 4,
-      timeLimit: 90,
-      tags: JSON.stringify(['adrenaline', 'heartbeat', 'hormone', 'endocrine system']),
-      relatedConcepts: JSON.stringify(['Hormones', 'Cardiovascular system', 'Stress response']),
-      keywords: JSON.stringify(['adrenaline', 'hormone', 'heart', 'rate']),
-      isActive: true,
-      isVerified: true,
-      verifiedBy: 'expert_teacher_2',
-      qualityScore: 4.7,
-      category: 'PRACTICE'
-    }
-  ]
-
   const createdQuestions = []
-  for (const questionData of questions) {
-    const question = await prisma.question.create({ data: questionData })
+  for (const questionData of neetBiologyQuestions) {
+    const question = await prisma.question.create({
+      data: {
+        ...questionData,
+        options: JSON.stringify(questionData.options),
+        solutionSteps: JSON.stringify(questionData.solutionSteps),
+        tags: JSON.stringify(questionData.tags),
+        relatedConcepts: JSON.stringify(questionData.relatedConcepts),
+        keywords: JSON.stringify(questionData.keywords),
+      }
+    })
     createdQuestions.push(question)
     console.log(`   ✓ Created question: ${question.question.substring(0, 50)}...`)
   }
@@ -499,6 +326,83 @@ async function main() {
     const template = await prisma.testTemplate.create({ data: templateData })
     createdTestTemplates.push(template)
     console.log(`   ✓ Created test template: ${template.title}`)
+  }
+
+  // Link questions to test templates
+  console.log('🔗 Linking questions to test templates...')
+  for (const template of createdTestTemplates) {
+    const templateTopics = JSON.parse(template.topics as string)
+    const targetDifficulty = template.difficulty
+
+    // Find questions matching template topics
+    const matchingQuestions = createdQuestions.filter(q =>
+      templateTopics.some((topic: string) =>
+        q.topic.includes(topic) || topic.includes(q.topic)
+      )
+    )
+
+    // For the first template (Cell Biology & Genetics) - pick matching questions
+    if (template.slug === 'neet-biology-cell-biology-genetics') {
+      const cellBioQuestions = matchingQuestions.filter(q => q.topic === 'Cell Biology')
+      const geneticsQuestions = matchingQuestions.filter(q => q.topic === 'Genetics & Molecular Biology')
+      const selectedQuestions = [...cellBioQuestions, ...geneticsQuestions].slice(0, 15)
+
+      for (const question of selectedQuestions) {
+        await prisma.questionBankQuestion.updateMany({
+          where: {
+            questionId: question.id,
+            questionBankId: neetQuestionBank.id
+          },
+          data: {
+            testTemplateId: template.id
+          }
+        })
+      }
+      console.log(`   ✓ Linked ${selectedQuestions.length} questions to ${template.title}`)
+    }
+
+    // For the second template (Plant Physiology) - pick plant questions
+    if (template.slug === 'plant-physiology-quick-test') {
+      const plantQuestions = matchingQuestions.filter(q => q.topic === 'Plant Physiology')
+      const selectedQuestions = plantQuestions.slice(0, 15)
+
+      for (const question of selectedQuestions) {
+        await prisma.questionBankQuestion.updateMany({
+          where: {
+            questionId: question.id,
+            questionBankId: neetQuestionBank.id
+          },
+          data: {
+            testTemplateId: template.id
+          }
+        })
+      }
+      console.log(`   ✓ Linked ${selectedQuestions.length} questions to ${template.title}`)
+    }
+
+    // For the third template (Adaptive) - pick diverse questions
+    if (template.slug === 'adaptive-biology-assessment') {
+      const cellBioQ = matchingQuestions.filter(q => q.topic === 'Cell Biology').slice(0, 6)
+      const plantPhysioQ = matchingQuestions.filter(q => q.topic === 'Plant Physiology').slice(0, 6)
+      const humanPhysioQ = matchingQuestions.filter(q => q.topic === 'Human Physiology').slice(0, 6)
+      const geneticsQ = matchingQuestions.filter(q => q.topic === 'Genetics & Molecular Biology').slice(0, 6)
+      const ecologyQ = matchingQuestions.filter(q => q.topic === 'Ecology').slice(0, 6)
+
+      const selectedQuestions = [...cellBioQ, ...plantPhysioQ, ...humanPhysioQ, ...geneticsQ, ...ecologyQ]
+
+      for (const question of selectedQuestions) {
+        await prisma.questionBankQuestion.updateMany({
+          where: {
+            questionId: question.id,
+            questionBankId: neetQuestionBank.id
+          },
+          data: {
+            testTemplateId: template.id
+          }
+        })
+      }
+      console.log(`   ✓ Linked ${selectedQuestions.length} questions to ${template.title}`)
+    }
   }
 
   // Seed Sample Free Users
