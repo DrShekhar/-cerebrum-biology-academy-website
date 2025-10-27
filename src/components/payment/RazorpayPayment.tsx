@@ -93,17 +93,50 @@ export function RazorpayPayment({
         throw new Error('Razorpay SDK failed to load')
       }
 
-      // In production, this would be your actual Razorpay key
-      const razorpayKey = process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID || 'rzp_test_demo_key'
+      // Create order from backend
+      const orderResponse = await fetch('/api/payments/create-order', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          amount: amount,
+          currency: 'INR',
+          receipt: `receipt_${Date.now()}`,
+          notes: {
+            course: courseTitle,
+            student_name: studentName,
+            email: email,
+            phone: phone,
+          },
+        }),
+      })
+
+      if (!orderResponse.ok) {
+        const errorData = await orderResponse.json()
+        throw new Error(errorData.error || 'Failed to create payment order')
+      }
+
+      const orderData = await orderResponse.json()
+
+      if (!orderData.success) {
+        throw new Error(orderData.error || 'Failed to create payment order')
+      }
+
+      const razorpayKey = process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID
+
+      if (!razorpayKey) {
+        throw new Error('Razorpay key not configured')
+      }
 
       const options = {
         key: razorpayKey,
-        amount: amount * 100, // Razorpay expects amount in paisa
-        currency: 'INR',
+        amount: orderData.amount,
+        currency: orderData.currency,
         name: 'Cerebrum Biology Academy',
         description: `Enrollment for ${courseTitle}`,
         image: '/logo.png',
-        order_id: `order_${Date.now()}`, // In production, get this from backend
+        order_id: orderData.id,
         handler: function (response: {
           razorpay_payment_id: string
           razorpay_order_id: string
@@ -127,7 +160,7 @@ export function RazorpayPayment({
           student_name: studentName,
         },
         theme: {
-          color: '#2563EB', // Blue theme
+          color: '#2563EB',
         },
         modal: {
           ondismiss: function () {
@@ -153,7 +186,7 @@ export function RazorpayPayment({
       payment.open()
     } catch (error) {
       console.error('Payment initiation error:', error)
-      onError(error)
+      onError({ error })
       setIsLoading(false)
     }
   }
