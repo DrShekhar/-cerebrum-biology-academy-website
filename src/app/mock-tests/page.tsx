@@ -59,7 +59,7 @@ export default async function MockTestsPage() {
   const publishedTests = await getTestsFromDatabase()
   const totalQuestions = publishedTests.reduce((total, test) => total + test.totalQuestions, 0)
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 scroll-smooth">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
         <div className="max-w-7xl mx-auto px-6 text-center">
@@ -160,7 +160,7 @@ export default async function MockTestsPage() {
           </div>
 
           {/* Available Tests */}
-          <div className="mt-16" id="available-tests">
+          <div className="mt-16 scroll-mt-8" id="available-tests">
             <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">Available Tests</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {publishedTests.map((test) => (
