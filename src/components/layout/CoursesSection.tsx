@@ -199,7 +199,7 @@ export function CoursesSection() {
 
         {/* Bottom CTA */}
         <motion.div
-          className="text-center bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 rounded-2xl xs:rounded-3xl p-6 xs:p-8 sm:p-12 text-white"
+          className="text-center bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 rounded-2xl xs:rounded-3xl p-6 xs:p-8 sm:p-12 text-white mx-2"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -208,21 +208,21 @@ export function CoursesSection() {
           <h3 className="text-xl xs:text-2xl sm:text-3xl font-bold mb-3 xs:mb-4">
             Not Sure Which Course is Right for You?
           </h3>
-          <p className="text-base xs:text-lg sm:text-xl mb-6 xs:mb-8 opacity-90">
+          <p className="text-base xs:text-lg sm:text-xl mb-6 xs:mb-8 opacity-90 px-2">
             Get personalized guidance from our expert counselors to choose the perfect program
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center max-w-2xl mx-auto px-2">
             <Button
               variant="secondary_cta"
               size="xl"
-              className="bg-white text-blue-600 hover:bg-gray-100"
+              className="w-full sm:w-auto bg-white text-blue-600 hover:bg-gray-100 whitespace-normal sm:whitespace-nowrap px-4 py-3 text-sm xs:text-base"
             >
               Free Counseling Session
             </Button>
             <Button
               variant="outline"
               size="xl"
-              className="border-white text-white hover:bg-white hover:text-blue-600"
+              className="w-full sm:w-auto border-white text-white hover:bg-white hover:text-blue-600 whitespace-normal sm:whitespace-nowrap px-4 py-3 text-sm xs:text-base"
             >
               Download Brochure
             </Button>
