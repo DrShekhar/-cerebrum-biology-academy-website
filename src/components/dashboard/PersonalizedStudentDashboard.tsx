@@ -68,69 +68,129 @@ export function PersonalizedStudentDashboard() {
   const [studyTimer, setStudyTimer] = useState(0)
   const [isStudying, setIsStudying] = useState(false)
   const [currentSession, setCurrentSession] = useState<string>('')
+  const [isLoading, setIsLoading] = useState(true)
+  const [freeUserId, setFreeUserId] = useState<string | null>(null)
 
-  // Mock data - in production, this would come from API
-  const [neetProgress] = useState<NEETProgress>({
-    currentScore: 485,
+  // Real data from API
+  const [neetProgress, setNeetProgress] = useState<NEETProgress>({
+    currentScore: 0,
     targetScore: 540,
-    improvement: +12,
-    rank: 2847,
-    percentile: 94.2,
-    strongAreas: ['Cell Biology', 'Ecology', 'Human Physiology'],
-    weakAreas: [
-      {
-        chapter: 'Genetics',
-        topic: 'Molecular Basis of Inheritance',
-        difficulty: 'high',
-        improvement: -5,
-        recommendedStudyTime: 120,
-      },
-      {
-        chapter: 'Plant Physiology',
-        topic: 'Photosynthesis',
-        difficulty: 'medium',
-        improvement: -3,
-        recommendedStudyTime: 90,
-      },
-      {
-        chapter: 'Evolution',
-        topic: 'Molecular Evolution',
-        difficulty: 'medium',
-        improvement: -2,
-        recommendedStudyTime: 75,
-      },
-    ],
+    improvement: 0,
+    rank: 0,
+    percentile: 0,
+    strongAreas: [],
+    weakAreas: [],
   })
 
-  const [recentSessions] = useState<StudySession[]>([
-    {
-      id: '1',
-      subject: 'Biology',
-      chapter: 'Cell Structure',
-      duration: 45,
-      score: 87,
-      date: '2025-09-20',
-      type: 'practice',
-    },
-    {
-      id: '2',
-      subject: 'Biology',
-      chapter: 'Photosynthesis',
-      duration: 60,
-      score: 78,
-      date: '2025-09-19',
-      type: 'study',
-    },
-    {
-      id: '3',
-      subject: 'Biology',
-      chapter: 'Genetics',
-      duration: 90,
-      score: 65,
-      date: '2025-09-19',
-      type: 'test',
-    },
-  ])
+  const [recentSessions, setRecentSessions] = useState<StudySession[]>([])
+
+  // Get or create freeUserId for guest users
+  useEffect(() => {
+    if (!isAuthenticated) {
+      let storedFreeUserId = localStorage.getItem('freeUserId')
+      if (!storedFreeUserId) {
+        storedFreeUserId = `free_${Date.now()}_${Math.random().toString(36).substring(7)}`
+        localStorage.setItem('freeUserId', storedFreeUserId)
+      }
+      setFreeUserId(storedFreeUserId)
+    }
+  }, [isAuthenticated])
+
+  // Fetch test attempts and calculate progress
+  useEffect(() => {
+    async function fetchDashboardData() {
+      try {
+        setIsLoading(true)
+        const userId = user?.id || freeUserId
+        if (!userId) return
+
+        // Fetch test attempts
+        const attemptsResponse = await fetch(`/api/test-attempts?freeUserId=${userId}`)
+        const attemptsData = await attemptsResponse.json()
+
+        // Fetch test sessions
+        const sessionsResponse = await fetch(`/api/test-sessions?freeUserId=${userId}`)
+        const sessionsData = await sessionsResponse.json()
+
+        if (attemptsData.success && attemptsData.data.attempts.length > 0) {
+          const attempts = attemptsData.data.attempts
+
+          // Calculate average score and improvement
+          const scores = attempts.map((a: any) => a.score)
+          const avgScore = Math.round(
+            scores.reduce((a: number, b: number) => a + b, 0) / scores.length
+          )
+          const latestScore = scores[0]
+          const previousScore = scores.length > 1 ? scores[1] : latestScore
+          const improvement = latestScore - previousScore
+
+          // Collect all strength and weakness areas
+          const allStrongAreas = new Set<string>()
+          const allWeakAreas = new Map<string, { count: number; topics: Set<string> }>()
+
+          attempts.forEach((attempt: any) => {
+            attempt.strengthAreas?.forEach((area: string) => allStrongAreas.add(area))
+            attempt.weaknessAreas?.forEach((area: string) => {
+              if (!allWeakAreas.has(area)) {
+                allWeakAreas.set(area, { count: 0, topics: new Set() })
+              }
+              const weakArea = allWeakAreas.get(area)!
+              weakArea.count++
+            })
+          })
+
+          // Build weak areas with recommendations
+          const weakAreas: WeakArea[] = Array.from(allWeakAreas.entries())
+            .sort((a, b) => b[1].count - a[1].count)
+            .slice(0, 5)
+            .map(([chapter, data]) => ({
+              chapter,
+              topic: 'Multiple concepts',
+              difficulty: data.count >= 3 ? 'high' : data.count >= 2 ? 'medium' : 'low',
+              improvement: -data.count,
+              recommendedStudyTime: data.count * 30,
+            }))
+
+          setNeetProgress({
+            currentScore: avgScore,
+            targetScore: 540,
+            improvement,
+            rank: attempts[0]?.rank || 0,
+            percentile: attempts[0]?.percentage || 0,
+            strongAreas: Array.from(allStrongAreas).slice(0, 5),
+            weakAreas,
+          })
+
+          // Transform sessions to study sessions format
+          const transformedSessions = attempts.slice(0, 5).map((attempt: any) => ({
+            id: attempt.id,
+            subject: 'Biology',
+            chapter: attempt.testTemplate.title,
+            duration: Math.round(attempt.timeSpent / 60),
+            score: attempt.percentage,
+            date: attempt.createdAt,
+            type:
+              attempt.testTemplate.type === 'PRACTICE_TEST'
+                ? 'practice'
+                : attempt.testTemplate.type === 'MOCK_TEST'
+                  ? 'test'
+                  : 'study',
+          }))
+
+          setRecentSessions(transformedSessions)
+        }
+
+        setIsLoading(false)
+      } catch (error) {
+        console.error('Error fetching dashboard data:', error)
+        setIsLoading(false)
+      }
+    }
+
+    if (user?.id || freeUserId) {
+      fetchDashboardData()
+    }
+  }, [user?.id, freeUserId])
 
   // Study Timer Logic
   useEffect(() => {
@@ -166,16 +226,70 @@ export function PersonalizedStudentDashboard() {
     setCurrentSession('')
   }
 
-  if (!isAuthenticated || !user) {
+  // Loading state
+  if (isLoading) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-navy-50 to-teal-50 flex items-center justify-center">
         <div className="text-center">
-          <Brain className="w-16 h-16 text-blue-500 mx-auto mb-4" />
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">Welcome to Your Learning Hub</h2>
-          <p className="text-gray-600 mb-6">Please sign in to access your personalized dashboard</p>
-          <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-            Sign In
-          </button>
+          <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mb-4 mx-auto animate-pulse">
+            <Brain className="w-8 h-8 text-white" />
+          </div>
+          <p className="text-gray-600">Loading your dashboard data...</p>
+        </div>
+      </div>
+    )
+  }
+
+  // Empty state - no tests taken yet
+  if (recentSessions.length === 0 && !isLoading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-navy-50 via-teal-50 to-gold-50">
+        <div className="bg-white shadow-lg border-b">
+          <div className="max-w-7xl mx-auto px-6 py-4">
+            <div className="flex items-center space-x-4">
+              <div className="w-12 h-12 bg-gradient-to-br from-teal-600 to-teal-700 rounded-xl flex items-center justify-center">
+                <Brain className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <h1 className="text-2xl font-bold text-gray-900">
+                  Welcome, {user?.name || 'Student'}! 🎓
+                </h1>
+                <p className="text-gray-600">Start your NEET Biology mastery journey</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="max-w-4xl mx-auto px-6 py-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="bg-white rounded-3xl shadow-xl p-12 text-center"
+          >
+            <div className="w-20 h-20 bg-gradient-to-r from-teal-600 to-navy-700 rounded-full flex items-center justify-center mx-auto mb-6">
+              <Target className="w-10 h-10 text-white" />
+            </div>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Start Your Journey?</h2>
+            <p className="text-gray-600 text-lg mb-8 max-w-2xl mx-auto">
+              Take your first practice test to unlock personalized insights, track your progress,
+              and master NEET Biology concepts with our AI-powered learning platform.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a
+                href="/mock-tests"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-teal-600 to-navy-700 text-white rounded-xl font-semibold hover:shadow-lg transition-all"
+              >
+                <Target className="w-5 h-5 mr-2" />
+                Take Your First Test
+              </a>
+              <a
+                href="/practice"
+                className="inline-flex items-center px-8 py-4 bg-white border-2 border-gray-300 text-gray-700 rounded-xl font-semibold hover:border-teal-600 hover:text-teal-600 transition-all"
+              >
+                <BookOpen className="w-5 h-5 mr-2" />
+                Browse Practice Questions
+              </a>
+            </div>
+          </motion.div>
         </div>
       </div>
     )
@@ -319,37 +433,54 @@ export function PersonalizedStudentDashboard() {
                 <div className="bg-white rounded-xl p-6 shadow-lg">
                   <div className="flex items-center justify-between mb-4">
                     <Clock className="w-8 h-8 text-blue-500" />
-                    <span className="text-2xl font-bold text-gray-900">24h</span>
+                    <span className="text-2xl font-bold text-gray-900">
+                      {Math.round(recentSessions.reduce((acc, s) => acc + s.duration, 0) / 60)}h
+                    </span>
                   </div>
-                  <div className="text-gray-600">Study Time (Week)</div>
-                  <div className="text-sm text-green-600">+2.5h from last week</div>
+                  <div className="text-gray-600">Total Study Time</div>
+                  <div className="text-sm text-blue-600">{recentSessions.length} sessions</div>
                 </div>
 
                 <div className="bg-white rounded-xl p-6 shadow-lg">
                   <div className="flex items-center justify-between mb-4">
                     <Trophy className="w-8 h-8 text-yellow-500" />
-                    <span className="text-2xl font-bold text-gray-900">87%</span>
+                    <span className="text-2xl font-bold text-gray-900">
+                      {neetProgress.percentile}%
+                    </span>
                   </div>
                   <div className="text-gray-600">Average Score</div>
-                  <div className="text-sm text-green-600">+5% improvement</div>
+                  <div
+                    className={`text-sm ${neetProgress.improvement >= 0 ? 'text-green-600' : 'text-red-600'}`}
+                  >
+                    {neetProgress.improvement >= 0 ? '+' : ''}
+                    {neetProgress.improvement} from last test
+                  </div>
                 </div>
 
                 <div className="bg-white rounded-xl p-6 shadow-lg">
                   <div className="flex items-center justify-between mb-4">
-                    <CheckCircle className="w-8 h-8 text-green-500" />
-                    <span className="text-2xl font-bold text-gray-900">12/15</span>
+                    <Target className="w-8 h-8 text-green-500" />
+                    <span className="text-2xl font-bold text-gray-900">
+                      {recentSessions.length}
+                    </span>
                   </div>
-                  <div className="text-gray-600">Chapters Completed</div>
-                  <div className="text-sm text-blue-600">3 remaining</div>
+                  <div className="text-gray-600">Tests Completed</div>
+                  <div className="text-sm text-green-600">
+                    {neetProgress.strongAreas.length} strong areas
+                  </div>
                 </div>
 
                 <div className="bg-white rounded-xl p-6 shadow-lg">
                   <div className="flex items-center justify-between mb-4">
                     <Zap className="w-8 h-8 text-teal-600" />
-                    <span className="text-2xl font-bold text-gray-900">5</span>
+                    <span className="text-2xl font-bold text-gray-900">
+                      {neetProgress.rank || '-'}
+                    </span>
                   </div>
-                  <div className="text-gray-600">Study Streak (days)</div>
-                  <div className="text-sm text-teal-600">Keep it up!</div>
+                  <div className="text-gray-600">National Rank</div>
+                  <div className="text-sm text-teal-600">
+                    {neetProgress.percentile}th percentile
+                  </div>
                 </div>
               </div>
 
