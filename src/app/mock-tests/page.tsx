@@ -101,7 +101,7 @@ export default async function MockTestsPage() {
           </div>
 
           {/* Test Categories */}
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8" id="test-categories">
             <div className="bg-white rounded-3xl shadow-lg p-8 hover:shadow-xl transition-shadow">
               <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-6 mx-auto">
                 <span className="text-blue-600 text-2xl">📚</span>
@@ -113,9 +113,12 @@ export default async function MockTestsPage() {
                 Complete NEET pattern tests with 180 questions covering all Biology topics
               </p>
               <div className="text-center">
-                <button className="bg-blue-600 text-white px-8 py-3 rounded-xl font-semibold hover:bg-blue-700 transition-colors">
+                <a
+                  href="#available-tests"
+                  className="inline-block bg-blue-600 text-white px-8 py-3 rounded-xl font-semibold hover:bg-blue-700 transition-colors"
+                >
                   Start Test
-                </button>
+                </a>
               </div>
             </div>
 
@@ -128,9 +131,12 @@ export default async function MockTestsPage() {
                 Focus on specific topics like Cell Biology, Genetics, Plant Physiology
               </p>
               <div className="text-center">
-                <button className="bg-green-600 text-white px-8 py-3 rounded-xl font-semibold hover:bg-green-700 transition-colors">
+                <a
+                  href="#available-tests"
+                  className="inline-block bg-green-600 text-white px-8 py-3 rounded-xl font-semibold hover:bg-green-700 transition-colors"
+                >
                   Browse Topics
-                </button>
+                </a>
               </div>
             </div>
 
@@ -143,15 +149,18 @@ export default async function MockTestsPage() {
                 Practice with actual NEET questions from previous years with solutions
               </p>
               <div className="text-center">
-                <button className="bg-purple-600 text-white px-8 py-3 rounded-xl font-semibold hover:bg-purple-700 transition-colors">
+                <a
+                  href="#available-tests"
+                  className="inline-block bg-purple-600 text-white px-8 py-3 rounded-xl font-semibold hover:bg-purple-700 transition-colors"
+                >
                   Practice Now
-                </button>
+                </a>
               </div>
             </div>
           </div>
 
           {/* Available Tests */}
-          <div className="mt-16">
+          <div className="mt-16" id="available-tests">
             <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">Available Tests</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {publishedTests.map((test) => (
