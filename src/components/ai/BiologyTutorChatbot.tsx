@@ -511,24 +511,229 @@ What would you like to explore today?`,
     }
   }
 
-  const handleActionClick = (action: ChatAction) => {
-    switch (action.type) {
-      case 'practice':
-        // Handle practice questions
-        break
-      case 'diagram':
-        // Handle diagram viewing
-        break
-      case 'study_plan':
-        // Handle study plan generation
-        break
-      case 'related_topic':
-        // Handle related topic exploration
-        break
-      case 'human_tutor':
-        // Handle human tutor connection
-        break
+  const handleActionClick = async (action: ChatAction) => {
+    setChatState((prev) => ({ ...prev, isTyping: true }))
+
+    try {
+      switch (action.type) {
+        case 'practice':
+          await handlePracticeQuestions(action.data)
+          break
+        case 'diagram':
+          await handleDiagramView(action.data)
+          break
+        case 'study_plan':
+          await handleStudyPlanGeneration(action.data)
+          break
+        case 'related_topic':
+          await handleRelatedTopicExploration(action.data)
+          break
+        case 'human_tutor':
+          handleHumanTutorConnection(action.data)
+          break
+      }
+    } catch (error) {
+      const errorMessage: ChatMessage = {
+        id: Date.now().toString(),
+        text: `Sorry, I encountered an error processing your request: ${error instanceof Error ? error.message : 'Unknown error'}. Please try again.`,
+        sender: 'bot',
+        timestamp: new Date(),
+      }
+      setChatState((prev) => ({
+        ...prev,
+        messages: [...prev.messages, errorMessage],
+        isTyping: false,
+      }))
     }
+  }
+
+  const handlePracticeQuestions = async (data: string) => {
+    const topic = data || 'general Biology'
+    const practiceMessage: ChatMessage = {
+      id: Date.now().toString(),
+      text: `Generating 5 practice questions on ${topic}...`,
+      sender: 'bot',
+      timestamp: new Date(),
+    }
+
+    setChatState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, practiceMessage],
+    }))
+
+    try {
+      const response = await fetch('/api/ai/tutor', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          message: `Generate 5 NEET-level practice questions on ${topic} with detailed solutions`,
+          studentId: 'current_student',
+          mode: 'practice_generation',
+        }),
+      })
+
+      if (!response.ok) {
+        throw new Error('Failed to generate practice questions')
+      }
+
+      const result = await response.json()
+      const questionsMessage: ChatMessage = {
+        id: (Date.now() + 1).toString(),
+        text:
+          result.response ||
+          'Here are your practice questions:\n\n' + result.questions?.join('\n\n'),
+        sender: 'bot',
+        timestamp: new Date(),
+      }
+
+      setChatState((prev) => ({
+        ...prev,
+        messages: [...prev.messages, questionsMessage],
+        isTyping: false,
+      }))
+    } catch (error) {
+      throw error
+    }
+  }
+
+  const handleDiagramView = async (data: string) => {
+    const diagramMessage: ChatMessage = {
+      id: Date.now().toString(),
+      text: `Let me help you understand the diagram for ${data}. You can upload an image using the attachment icon, or I can provide a detailed explanation of common ${data} diagrams.`,
+      sender: 'bot',
+      timestamp: new Date(),
+      actions: [
+        {
+          type: 'practice',
+          label: 'Get diagram questions',
+          data: data,
+        },
+      ],
+    }
+
+    setChatState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, diagramMessage],
+      isTyping: false,
+    }))
+  }
+
+  const handleStudyPlanGeneration = async (data: string) => {
+    const planMessage: ChatMessage = {
+      id: Date.now().toString(),
+      text: `Creating a personalized study plan for ${data}...`,
+      sender: 'bot',
+      timestamp: new Date(),
+    }
+
+    setChatState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, planMessage],
+    }))
+
+    try {
+      const response = await fetch('/api/ai/tutor', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          message: `Create a detailed 7-day study plan for ${data} focused on NEET preparation`,
+          studentId: 'current_student',
+          mode: 'study_plan',
+        }),
+      })
+
+      if (!response.ok) {
+        throw new Error('Failed to generate study plan')
+      }
+
+      const result = await response.json()
+      const studyPlanMessage: ChatMessage = {
+        id: (Date.now() + 1).toString(),
+        text: result.response || result.studyPlan,
+        sender: 'bot',
+        timestamp: new Date(),
+      }
+
+      setChatState((prev) => ({
+        ...prev,
+        messages: [...prev.messages, studyPlanMessage],
+        isTyping: false,
+      }))
+    } catch (error) {
+      throw error
+    }
+  }
+
+  const handleRelatedTopicExploration = async (data: string) => {
+    const relatedMessage: ChatMessage = {
+      id: Date.now().toString(),
+      text: `Exploring topics related to ${data}...`,
+      sender: 'bot',
+      timestamp: new Date(),
+    }
+
+    setChatState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, relatedMessage],
+    }))
+
+    try {
+      const response = await fetch('/api/ai/tutor', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          message: `What topics are related to ${data} for NEET? Explain the connections and which ones I should study together.`,
+          studentId: 'current_student',
+        }),
+      })
+
+      if (!response.ok) {
+        throw new Error('Failed to fetch related topics')
+      }
+
+      const result = await response.json()
+      const topicsMessage: ChatMessage = {
+        id: (Date.now() + 1).toString(),
+        text: result.response,
+        sender: 'bot',
+        timestamp: new Date(),
+        actions: result.relatedTopics?.map((topic: string) => ({
+          type: 'related_topic',
+          label: `Learn about ${topic}`,
+          data: topic,
+        })),
+      }
+
+      setChatState((prev) => ({
+        ...prev,
+        messages: [...prev.messages, topicsMessage],
+        isTyping: false,
+      }))
+    } catch (error) {
+      throw error
+    }
+  }
+
+  const handleHumanTutorConnection = (data: string) => {
+    const tutorMessage: ChatMessage = {
+      id: Date.now().toString(),
+      text: `I understand you'd like to connect with a human tutor${data ? ` for ${data}` : ''}. Our expert biology tutors are available for personalized doubt-solving sessions.\n\nPlease contact our support team at:\n📱 WhatsApp: +91-XXXXXXXXXX\n📧 Email: support@cerebrumbiologyacademy.com\n\nOr I can continue helping you with your questions!`,
+      sender: 'bot',
+      timestamp: new Date(),
+      actions: [
+        {
+          type: 'practice',
+          label: 'Continue with AI tutor',
+          data: data || 'current topic',
+        },
+      ],
+    }
+
+    setChatState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, tutorMessage],
+      isTyping: false,
+    }))
   }
 
   return (
