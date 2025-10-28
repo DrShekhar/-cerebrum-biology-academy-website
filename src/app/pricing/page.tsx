@@ -19,6 +19,7 @@ import {
   ChevronDownIcon,
 } from '@heroicons/react/24/outline'
 import { Button } from '@/components/ui/Button'
+import { motion } from 'framer-motion'
 import {
   allClassPricing,
   addOnCourses,
@@ -439,16 +440,28 @@ export default function PricingPage() {
               <div className="flex gap-2 min-w-max">
                 <button
                   onClick={() => setSelectedClass('all')}
-                  className={`flex items-center gap-2 px-6 py-3 rounded-full font-medium text-sm transition-all ${
+                  className={`relative flex items-center gap-2 px-6 py-3 rounded-full font-medium text-sm transition-colors ${
                     selectedClass === 'all'
-                      ? 'bg-blue-600 text-white shadow-lg'
+                      ? 'text-white'
                       : 'bg-white text-gray-700 hover:bg-gray-50 shadow'
                   }`}
                 >
-                  <span className="text-lg">🎓</span>
-                  <span>All Classes</span>
+                  {selectedClass === 'all' && (
+                    <motion.div
+                      layoutId="activeTab"
+                      className="absolute inset-0 bg-blue-600 rounded-full shadow-lg"
+                      initial={false}
+                      transition={{
+                        type: 'spring',
+                        stiffness: 500,
+                        damping: 30,
+                      }}
+                    />
+                  )}
+                  <span className="relative z-10 text-lg">🎓</span>
+                  <span className="relative z-10">All Classes</span>
                   <span
-                    className={`ml-1 px-2 py-0.5 rounded-full text-xs ${
+                    className={`relative z-10 ml-1 px-2 py-0.5 rounded-full text-xs ${
                       selectedClass === 'all'
                         ? 'bg-white/20 text-white'
                         : 'bg-gray-200 text-gray-600'
@@ -468,16 +481,28 @@ export default function PricingPage() {
                   <button
                     key={item.class}
                     onClick={() => setSelectedClass(item.class as ClassLevel)}
-                    className={`flex items-center gap-2 px-6 py-3 rounded-full font-medium text-sm transition-all ${
+                    className={`relative flex items-center gap-2 px-6 py-3 rounded-full font-medium text-sm transition-colors ${
                       selectedClass === item.class
-                        ? 'bg-blue-600 text-white shadow-lg'
+                        ? 'text-white'
                         : 'bg-white text-gray-700 hover:bg-gray-50 shadow'
                     }`}
                   >
-                    <span className="text-lg">{item.icon}</span>
-                    <span>{item.label}</span>
+                    {selectedClass === item.class && (
+                      <motion.div
+                        layoutId="activeTab"
+                        className="absolute inset-0 bg-blue-600 rounded-full shadow-lg"
+                        initial={false}
+                        transition={{
+                          type: 'spring',
+                          stiffness: 500,
+                          damping: 30,
+                        }}
+                      />
+                    )}
+                    <span className="relative z-10 text-lg">{item.icon}</span>
+                    <span className="relative z-10">{item.label}</span>
                     <span
-                      className={`ml-1 px-2 py-0.5 rounded-full text-xs ${
+                      className={`relative z-10 ml-1 px-2 py-0.5 rounded-full text-xs ${
                         selectedClass === item.class
                           ? 'bg-white/20 text-white'
                           : 'bg-gray-200 text-gray-600'
