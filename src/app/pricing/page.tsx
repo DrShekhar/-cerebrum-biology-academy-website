@@ -125,9 +125,21 @@ export default function PricingPage() {
       pinnacle: {
         bg: 'from-purple-600 to-pink-600',
         badge: 'bg-purple-100 text-purple-700',
+        floatingBadge: '👑 BEST FOR TOP RANKERS',
+        badgeGradient: 'from-yellow-400 via-yellow-500 to-amber-600',
       },
-      ascent: { bg: 'from-blue-600 to-indigo-600', badge: 'bg-blue-100 text-blue-700' },
-      pursuit: { bg: 'from-green-600 to-teal-600', badge: 'bg-green-100 text-green-700' },
+      ascent: {
+        bg: 'from-blue-600 to-indigo-600',
+        badge: 'bg-blue-100 text-blue-700',
+        floatingBadge: '🔥 MOST POPULAR',
+        badgeGradient: 'from-orange-500 via-red-500 to-pink-600',
+      },
+      pursuit: {
+        bg: 'from-green-600 to-teal-600',
+        badge: 'bg-green-100 text-green-700',
+        floatingBadge: '💰 BEST VALUE',
+        badgeGradient: 'from-green-400 via-emerald-500 to-teal-600',
+      },
     }
 
     const colors = tierColors[tier.tier]
@@ -135,10 +147,15 @@ export default function PricingPage() {
     return (
       <div
         key={tierKey}
-        className="group relative bg-white rounded-3xl shadow-xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_70px_rgba(0,0,0,0.12)]"
+        className="group relative bg-white rounded-3xl shadow-xl overflow-visible transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_70px_rgba(0,0,0,0.12)]"
       >
         <div
-          className={`bg-gradient-to-r ${colors.bg} text-white p-6 transition-all duration-500 group-hover:bg-gradient-to-br`}
+          className={`absolute -top-3 left-1/2 transform -translate-x-1/2 z-10 px-4 py-2 rounded-full bg-gradient-to-r ${colors.badgeGradient} text-white text-xs font-bold shadow-lg whitespace-nowrap`}
+        >
+          {colors.floatingBadge}
+        </div>
+        <div
+          className={`bg-gradient-to-r ${colors.bg} text-white p-6 transition-all duration-500 group-hover:bg-gradient-to-br rounded-t-3xl`}
         >
           <div className="flex items-center gap-2 mb-4">
             <span className="px-3 py-1 bg-white/20 rounded-full text-sm font-medium capitalize">
@@ -528,7 +545,7 @@ export default function PricingPage() {
                     </h2>
                     <p className="text-gray-600">{classData.description}</p>
                   </div>
-                  <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+                  <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8 pt-6">
                     {allTiers.map((tier) => renderTierCard(tier, classData))}
                   </div>
                 </div>
@@ -537,7 +554,7 @@ export default function PricingPage() {
           </div>
         ) : (
           hasResults && (
-            <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8 mb-16">
+            <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8 mb-16 pt-6">
               {currentTiers.map((tier) =>
                 currentClassData ? renderTierCard(tier, currentClassData) : null
               )}
