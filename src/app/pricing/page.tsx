@@ -135,9 +135,11 @@ export default function PricingPage() {
     return (
       <div
         key={tierKey}
-        className="relative bg-white rounded-3xl shadow-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+        className="group relative bg-white rounded-3xl shadow-xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_70px_rgba(0,0,0,0.12)]"
       >
-        <div className={`bg-gradient-to-r ${colors.bg} text-white p-6`}>
+        <div
+          className={`bg-gradient-to-r ${colors.bg} text-white p-6 transition-all duration-500 group-hover:bg-gradient-to-br`}
+        >
           <div className="flex items-center gap-2 mb-4">
             <span className="px-3 py-1 bg-white/20 rounded-full text-sm font-medium capitalize">
               {tier.tier}
@@ -265,13 +267,23 @@ export default function PricingPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
-      <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-purple-700 text-white py-16">
+      <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-purple-700 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">NEET Biology Courses</h1>
-            <p className="text-xl md:text-2xl text-blue-100">
-              Choose from our comprehensive range of NEET Biology courses designed for every class
-              level. Expert faculty, proven curriculum, and guaranteed results.
+            <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 mb-6">
+              <ShieldCheckIcon className="w-5 h-5" />
+              <span className="font-semibold text-sm">Trusted by 5,000+ NEET aspirants</span>
+            </div>
+            <h1 className="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
+              Master NEET Biology
+              <br />
+              <span className="bg-gradient-to-r from-yellow-300 via-yellow-200 to-yellow-300 bg-clip-text text-transparent">
+                With India&apos;s Best Faculty
+              </span>
+            </h1>
+            <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
+              Small batches, personalized attention, and proven results. Choose your path to medical
+              college success.
             </p>
           </div>
 
