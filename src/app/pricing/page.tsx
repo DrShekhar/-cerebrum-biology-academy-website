@@ -336,9 +336,11 @@ export default function PricingPage() {
             </Link>
           </div>
 
-          <button className="shimmer-button w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-lg transition-all duration-200 hover:scale-105 hover:shadow-xl mb-4">
-            Book Free Demo Class
-          </button>
+          <Link href="/demo-booking">
+            <button className="shimmer-button w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-lg transition-all duration-200 hover:scale-105 hover:shadow-xl mb-4">
+              Book Free Demo Class
+            </button>
+          </Link>
 
           <div className="flex items-center justify-center gap-4 text-xs text-gray-500">
             <div className="flex items-center gap-1">
