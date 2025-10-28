@@ -195,11 +195,24 @@ export default function PricingPage() {
         key={tierKey}
         className="group relative bg-white rounded-3xl shadow-xl overflow-visible transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_70px_rgba(0,0,0,0.12)]"
       >
-        <div
+        <motion.div
           className={`absolute -top-3 left-1/2 transform -translate-x-1/2 z-10 px-4 py-2 rounded-full bg-gradient-to-r ${colors.badgeGradient} text-white text-xs font-bold shadow-lg whitespace-nowrap`}
+          animate={{
+            scale: [1, 1.05, 1],
+            boxShadow: [
+              '0 10px 25px rgba(0,0,0,0.15)',
+              '0 15px 35px rgba(0,0,0,0.25)',
+              '0 10px 25px rgba(0,0,0,0.15)',
+            ],
+          }}
+          transition={{
+            duration: 2,
+            repeat: Infinity,
+            ease: 'easeInOut',
+          }}
         >
           {colors.floatingBadge}
-        </div>
+        </motion.div>
         <div
           className={`bg-gradient-to-r ${colors.bg} text-white p-6 transition-all duration-500 group-hover:bg-gradient-to-br rounded-t-3xl`}
         >
@@ -267,10 +280,17 @@ export default function PricingPage() {
             <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
             <div className="space-y-2">
               {tier.features.slice(0, 3).map((feature, idx) => (
-                <div key={idx} className="flex items-start gap-2">
-                  <CheckCircleIcon className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
+                <motion.div
+                  key={idx}
+                  className="flex items-start gap-2"
+                  initial={{ opacity: 0, x: -10 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.3, delay: idx * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <CheckCircleIcon className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5 transition-transform hover:scale-125" />
                   <span className="text-sm text-gray-700">{feature}</span>
-                </div>
+                </motion.div>
               ))}
               {tier.features.length > 3 && (
                 <button className="text-sm text-blue-600 font-medium">
@@ -303,20 +323,20 @@ export default function PricingPage() {
 
           <div className="grid grid-cols-2 gap-3 mb-3">
             <Link href={`/courses#${classData.class}`}>
-              <button className="w-full bg-gray-200 hover:bg-gray-300 text-gray-700 font-medium py-3 rounded-lg transition-colors">
+              <button className="w-full bg-gray-200 hover:bg-gray-300 text-gray-700 font-medium py-3 rounded-lg transition-all duration-200 hover:scale-105 hover:shadow-lg">
                 View Details
               </button>
             </Link>
             <Link href={`/demo-booking?tier=${tier.tier}&class=${classData.class}`}>
               <button
-                className={`shimmer-button w-full bg-gradient-to-r ${colors.bg} text-white font-bold py-3 rounded-lg hover:opacity-90 transition-opacity`}
+                className={`shimmer-button w-full bg-gradient-to-r ${colors.bg} text-white font-bold py-3 rounded-lg hover:opacity-90 transition-all duration-200 hover:scale-105 hover:shadow-xl`}
               >
                 Enroll Now
               </button>
             </Link>
           </div>
 
-          <button className="shimmer-button w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-lg transition-colors mb-4">
+          <button className="shimmer-button w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-lg transition-all duration-200 hover:scale-105 hover:shadow-xl mb-4">
             Book Free Demo Class
           </button>
 
