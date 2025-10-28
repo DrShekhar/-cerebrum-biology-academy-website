@@ -122,7 +122,12 @@ export default function PricingPage() {
   const getFilteredClasses = () => {
     if (selectedClass === 'all') {
       return allClassPricing.filter((classData) => {
+        const hasCourseType = classData.tiers[courseType] && classData.tiers[courseType].length > 0
+
+        if (!searchQuery && !hasCourseType) return false
+        if (!hasCourseType) return false
         if (!searchQuery) return true
+
         const query = searchQuery.toLowerCase()
         const matchesClassName = classData.displayName.toLowerCase().includes(query)
         const matchesDescription = classData.description.toLowerCase().includes(query)
@@ -169,22 +174,16 @@ export default function PricingPage() {
 
     const tierColors = {
       pinnacle: {
-        bg: 'from-purple-600 to-pink-600',
-        badge: 'bg-purple-100 text-purple-700',
-        floatingBadge: '👑 BEST FOR TOP RANKERS',
-        badgeGradient: 'from-yellow-400 via-yellow-500 to-amber-600',
+        badge: 'bg-yellow-100 text-yellow-800 border-yellow-300',
+        badgeText: 'POPULAR',
       },
       ascent: {
-        bg: 'from-blue-600 to-indigo-600',
-        badge: 'bg-blue-100 text-blue-700',
-        floatingBadge: '🔥 MOST POPULAR',
-        badgeGradient: 'from-orange-500 via-red-500 to-pink-600',
+        badge: 'bg-blue-100 text-blue-800 border-blue-300',
+        badgeText: 'POPULAR',
       },
       pursuit: {
-        bg: 'from-green-600 to-teal-600',
-        badge: 'bg-green-100 text-green-700',
-        floatingBadge: '💰 BEST VALUE',
-        badgeGradient: 'from-green-400 via-emerald-500 to-teal-600',
+        badge: 'bg-gray-100 text-gray-700 border-gray-300',
+        badgeText: '',
       },
     }
 
@@ -193,85 +192,73 @@ export default function PricingPage() {
     return (
       <div
         key={tierKey}
-        className="group relative bg-white rounded-3xl shadow-xl overflow-visible transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_70px_rgba(0,0,0,0.12)]"
+        className="group relative bg-white rounded-2xl border-2 border-gray-200 overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-blue-400"
       >
-        <motion.div
-          className={`absolute -top-3 left-1/2 transform -translate-x-1/2 z-10 px-4 py-2 rounded-full bg-gradient-to-r ${colors.badgeGradient} text-white text-xs font-bold shadow-lg whitespace-nowrap`}
-          animate={{
-            scale: [1, 1.05, 1],
-            boxShadow: [
-              '0 10px 25px rgba(0,0,0,0.15)',
-              '0 15px 35px rgba(0,0,0,0.25)',
-              '0 10px 25px rgba(0,0,0,0.15)',
-            ],
-          }}
-          transition={{
-            duration: 2,
-            repeat: Infinity,
-            ease: 'easeInOut',
-          }}
-        >
-          {colors.floatingBadge}
-        </motion.div>
-        <div
-          className={`bg-gradient-to-r ${colors.bg} text-white p-6 transition-all duration-500 group-hover:bg-gradient-to-br rounded-t-3xl`}
-        >
-          <div className="flex items-center gap-2 mb-4">
-            <span className="px-3 py-1 bg-white/20 rounded-full text-sm font-medium capitalize">
-              {tier.tier}
+        {tier.tier !== 'pursuit' && (
+          <div className="absolute top-4 right-4">
+            <span className={`px-3 py-1 rounded-full text-xs font-bold border ${colors.badge}`}>
+              {colors.badgeText}
             </span>
-            {isPopular && (
-              <span className="px-3 py-1 bg-gradient-to-r from-yellow-400 to-orange-500 text-white rounded-full text-xs font-bold">
-                POPULAR
-              </span>
-            )}
           </div>
+        )}
 
-          <h3 className="text-2xl font-bold mb-3 capitalize">
-            {classData.displayName} - {tier.tier}
-          </h3>
+        <div className="p-6 bg-gradient-to-br from-blue-600 to-indigo-700 text-white">
+          <h3 className="text-xl font-bold mb-2">{classData.displayName}</h3>
+          <p className="text-blue-100 text-sm mb-4">{classData.description}</p>
 
-          <p className="text-white/90 text-sm mb-4">{classData.description}</p>
-
-          <div className="mt-3">
-            <div className="inline-block bg-white/20 backdrop-blur-sm rounded-lg px-3 py-2">
-              <div className="text-xs font-semibold uppercase tracking-wide mb-1">Best For:</div>
-              <div className="text-sm font-medium">{bestForDescriptions[tier.tier]}</div>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-4 gap-3 text-center">
+          <div className="grid grid-cols-3 gap-4 text-center">
             <div>
               <div className="text-2xl font-bold">{classData.duration}</div>
-              <div className="text-xs text-white/80">Duration</div>
+              <div className="text-xs text-blue-200">Duration</div>
             </div>
             <div>
               <div className="text-2xl font-bold">{tier.hours}</div>
-              <div className="text-xs text-white/80">Per Week</div>
+              <div className="text-xs text-blue-200">Per Week</div>
             </div>
             <div>
               <div className="text-2xl font-bold">{tier.batchSize}</div>
-              <div className="text-xs text-white/80">Batch Size</div>
-            </div>
-            <div>
-              <div className="text-2xl font-bold text-green-300">
-                {tier.tier === 'pinnacle' ? '55' : tier.tier === 'ascent' ? '120' : '160'}
-              </div>
-              <div className="text-xs text-white/80">Enrolled</div>
+              <div className="text-xs text-blue-200">Batch Size</div>
             </div>
           </div>
         </div>
 
         <div className="p-6">
+          <div className="flex items-center justify-center gap-2 mb-6 border-b pb-4">
+            <button
+              className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
+                tier.tier === 'pinnacle'
+                  ? 'bg-blue-600 text-white'
+                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+              }`}
+            >
+              Pinnacle
+            </button>
+            <button
+              className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
+                tier.tier === 'ascent'
+                  ? 'bg-blue-600 text-white'
+                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+              }`}
+            >
+              Ascent
+            </button>
+            <button
+              className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
+                tier.tier === 'pursuit'
+                  ? 'bg-blue-600 text-white'
+                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+              }`}
+            >
+              Pursuit
+            </button>
+          </div>
+
           <div className="text-center mb-6">
             <div className="text-4xl font-bold text-gray-900 mb-1">₹{price.toLocaleString()}</div>
-            <div className="text-sm text-blue-600 font-medium mb-2">
-              Approx. ₹{Math.round(price / 12).toLocaleString()}/month
-            </div>
             <div className="text-sm text-gray-500 line-through mb-1">
               ₹{(price + Math.round(price * 0.05)).toLocaleString()}
             </div>
-            <div className="text-xs text-green-600 font-medium">
+            <div className="text-sm text-green-600 font-medium">
               Save ₹{Math.round(price * 0.05).toLocaleString()} (5% off)
             </div>
           </div>
@@ -280,34 +267,19 @@ export default function PricingPage() {
             <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
             <div className="space-y-2">
               {tier.features.slice(0, 3).map((feature, idx) => (
-                <motion.div
-                  key={idx}
-                  className="flex items-start gap-2"
-                  initial={{ opacity: 0, x: -10 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.3, delay: idx * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <CheckCircleIcon className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5 transition-transform hover:scale-125" />
+                <div key={idx} className="flex items-start gap-2">
+                  <CheckCircleIcon className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
                   <span className="text-sm text-gray-700">{feature}</span>
-                </motion.div>
+                </div>
               ))}
-              {tier.features.length > 3 && (
-                <button className="text-sm text-blue-600 font-medium">
-                  +{tier.features.length - 3} more features
-                </button>
-              )}
             </div>
           </div>
 
           <button
             onClick={() => setExpandedTier(isExpanded ? null : tierKey)}
-            className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium py-3 rounded-lg mb-3 transition-colors flex items-center justify-center gap-2"
+            className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium py-3 rounded-lg mb-3 transition-colors"
           >
-            <span>View Payment Options</span>
-            <ChevronDownIcon
-              className={`w-5 h-5 transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}`}
-            />
+            View Payment Options
           </button>
 
           {isExpanded && (
@@ -323,21 +295,19 @@ export default function PricingPage() {
 
           <div className="grid grid-cols-2 gap-3 mb-3">
             <Link href={`/courses#${classData.class}`}>
-              <button className="w-full bg-gray-200 hover:bg-gray-300 text-gray-700 font-medium py-3 rounded-lg transition-all duration-200 hover:scale-105 hover:shadow-lg">
+              <button className="w-full bg-gray-200 hover:bg-gray-300 text-gray-700 font-medium py-3 rounded-lg transition-colors">
                 View Details
               </button>
             </Link>
             <Link href={`/demo-booking?tier=${tier.tier}&class=${classData.class}`}>
-              <button
-                className={`shimmer-button w-full bg-gradient-to-r ${colors.bg} text-white font-bold py-3 rounded-lg hover:opacity-90 transition-all duration-200 hover:scale-105 hover:shadow-xl`}
-              >
+              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg transition-colors">
                 Enroll Now
               </button>
             </Link>
           </div>
 
           <Link href="/demo-booking">
-            <button className="shimmer-button w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-lg transition-all duration-200 hover:scale-105 hover:shadow-xl mb-4">
+            <button className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-lg transition-colors mb-4">
               Book Free Demo Class
             </button>
           </Link>
@@ -394,7 +364,7 @@ export default function PricingPage() {
         }
       `}</style>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
-        <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-purple-700 text-white py-20">
+        <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-purple-700 text-white py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 mb-6">
@@ -538,32 +508,31 @@ export default function PricingPage() {
             </div>
 
             <div className="flex flex-col md:flex-row justify-center items-center gap-6 mb-8">
-              {selectedClass !== 'all' && availableCourseTypes.length > 1 && (
-                <div className="flex items-center gap-3">
-                  <span className="text-sm font-medium text-gray-700">Focus:</span>
-                  <div className="inline-flex rounded-lg bg-gray-100 p-1">
-                    {availableCourseTypes.map((type) => (
-                      <button
-                        key={type}
-                        onClick={() => setCourseType(type)}
-                        className={`px-4 py-2 rounded-md font-medium text-sm transition-all ${
-                          courseType === type
-                            ? 'bg-white text-blue-600 shadow-sm'
-                            : 'text-gray-600 hover:text-gray-900'
-                        }`}
-                      >
-                        {type === 'board-only'
-                          ? 'Board Only'
-                          : type === 'board-neet'
-                            ? 'Board + NEET'
-                            : type === 'academic'
-                              ? 'Academic'
-                              : 'NEET'}
-                      </button>
-                    ))}
-                  </div>
+              <div className="flex items-center gap-3">
+                <span className="text-sm font-medium text-gray-700">Focus:</span>
+                <div className="inline-flex rounded-lg bg-gray-100 p-1">
+                  <button
+                    onClick={() => setCourseType('board-only')}
+                    className={`px-4 py-2 rounded-md font-medium text-sm transition-all ${
+                      courseType === 'board-only'
+                        ? 'bg-white text-blue-600 shadow-sm'
+                        : 'text-gray-600 hover:text-gray-900'
+                    }`}
+                  >
+                    Board Only
+                  </button>
+                  <button
+                    onClick={() => setCourseType('board-neet')}
+                    className={`px-4 py-2 rounded-md font-medium text-sm transition-all ${
+                      courseType === 'board-neet'
+                        ? 'bg-white text-blue-600 shadow-sm'
+                        : 'text-gray-600 hover:text-gray-900'
+                    }`}
+                  >
+                    Board + NEET
+                  </button>
                 </div>
-              )}
+              </div>
 
               <div className="flex items-center gap-3">
                 <span className="text-sm font-medium text-gray-700">Payment:</span>
@@ -669,9 +638,10 @@ export default function PricingPage() {
           {selectedClass === 'all' && hasResults ? (
             <div className="space-y-16">
               {filteredClasses.map((classData) => {
-                const allTiers = Object.entries(classData.tiers).flatMap(([courseTypeKey, tiers]) =>
-                  tiers.map((tier) => ({ ...tier, courseType: courseTypeKey as CourseType }))
-                )
+                const allTiers = (classData.tiers[courseType] || []).map((tier) => ({
+                  ...tier,
+                  courseType: courseType,
+                }))
 
                 return (
                   <div key={classData.class}>
