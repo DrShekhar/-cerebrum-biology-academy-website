@@ -181,7 +181,7 @@ export default function PricingPage() {
             </div>
           </div>
 
-          <div className="grid grid-cols-3 gap-4 text-center">
+          <div className="grid grid-cols-4 gap-3 text-center">
             <div>
               <div className="text-2xl font-bold">{classData.duration}</div>
               <div className="text-xs text-white/80">Duration</div>
@@ -194,12 +194,21 @@ export default function PricingPage() {
               <div className="text-2xl font-bold">{tier.batchSize}</div>
               <div className="text-xs text-white/80">Batch Size</div>
             </div>
+            <div>
+              <div className="text-2xl font-bold text-green-300">
+                {tier.tier === 'pinnacle' ? '55' : tier.tier === 'ascent' ? '120' : '160'}
+              </div>
+              <div className="text-xs text-white/80">Enrolled</div>
+            </div>
           </div>
         </div>
 
         <div className="p-6">
           <div className="text-center mb-6">
             <div className="text-4xl font-bold text-gray-900 mb-1">₹{price.toLocaleString()}</div>
+            <div className="text-sm text-blue-600 font-medium mb-2">
+              Approx. ₹{Math.round(price / 12).toLocaleString()}/month
+            </div>
             <div className="text-sm text-gray-500 line-through mb-1">
               ₹{(price + Math.round(price * 0.05)).toLocaleString()}
             </div>
@@ -314,12 +323,12 @@ export default function PricingPage() {
               <div className="text-blue-100 text-sm">Learning Tiers</div>
             </div>
             <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-6 text-center">
-              <div className="text-4xl font-bold mb-2">5%</div>
-              <div className="text-blue-100 text-sm">One-time Discount</div>
+              <div className="text-4xl font-bold mb-2">98%</div>
+              <div className="text-blue-100 text-sm">NEET Qualified 2024</div>
             </div>
             <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-6 text-center">
-              <div className="text-4xl font-bold mb-2">281</div>
-              <div className="text-blue-100 text-sm">Total Capacity</div>
+              <div className="text-4xl font-bold mb-2">7-Day</div>
+              <div className="text-blue-100 text-sm">Money-Back Guarantee</div>
             </div>
           </div>
         </div>
