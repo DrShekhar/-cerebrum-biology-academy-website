@@ -270,15 +270,36 @@ const Header = () => {
                 </Link>
               )}
 
-              {/* Primary CTA - Enroll Now (show for non-authenticated users) */}
+              {/* Auth Buttons (show for non-authenticated users) */}
               {!isAuthenticated && (
-                <Link
-                  href={primaryCTA.href}
-                  className={`flex items-center space-x-2 px-6 py-2.5 rounded-full font-bold transition-all duration-300 shadow-lg hover:shadow-xl whitespace-nowrap text-sm ${primaryCTA.className}`}
-                >
-                  <span>{primaryCTA.label}</span>
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
+                <>
+                  {/* Primary CTA - Enroll Now */}
+                  <Link
+                    href={primaryCTA.href}
+                    className={`flex items-center space-x-2 px-6 py-2.5 rounded-full font-bold transition-all duration-300 shadow-lg hover:shadow-xl whitespace-nowrap text-sm ${primaryCTA.className}`}
+                  >
+                    <span>{primaryCTA.label}</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+
+                  {/* Login Button */}
+                  <Link
+                    href="/auth/signin"
+                    className="flex items-center space-x-2 px-5 py-2.5 rounded-full font-semibold transition-all duration-300 bg-white hover:bg-gray-50 text-gray-700 border-2 border-gray-300 hover:border-blue-600 hover:text-blue-600 whitespace-nowrap text-sm"
+                  >
+                    <LogIn className="w-4 h-4" />
+                    <span>Login</span>
+                  </Link>
+
+                  {/* Sign Up Button */}
+                  <Link
+                    href="/auth/signup"
+                    className="flex items-center space-x-2 px-5 py-2.5 rounded-full font-semibold transition-all duration-300 bg-blue-600 hover:bg-blue-700 text-white shadow-md hover:shadow-lg whitespace-nowrap text-sm"
+                  >
+                    <UserPlus className="w-4 h-4" />
+                    <span>Sign Up</span>
+                  </Link>
+                </>
               )}
             </div>
           </div>
@@ -401,15 +422,36 @@ const Header = () => {
                     </Link>
                   )}
 
-                  {/* Primary CTA - Enroll Now (show for non-authenticated users) */}
+                  {/* Auth Buttons (show for non-authenticated users) */}
                   {!isAuthenticated && (
-                    <Link
-                      href={primaryCTA.href}
-                      className="flex items-center justify-center space-x-2 bg-green-600 text-white px-6 py-4 rounded-full font-bold hover:bg-green-700 transition-all duration-300 min-h-[52px] shadow-lg"
-                    >
-                      <span>{primaryCTA.label}</span>
-                      <ArrowRight className="w-5 h-5" />
-                    </Link>
+                    <>
+                      {/* Primary CTA - Enroll Now */}
+                      <Link
+                        href={primaryCTA.href}
+                        className="flex items-center justify-center space-x-2 bg-green-600 text-white px-6 py-4 rounded-full font-bold hover:bg-green-700 transition-all duration-300 min-h-[52px] shadow-lg"
+                      >
+                        <span>{primaryCTA.label}</span>
+                        <ArrowRight className="w-5 h-5" />
+                      </Link>
+
+                      {/* Login Button */}
+                      <Link
+                        href="/auth/signin"
+                        className="flex items-center justify-center space-x-2 bg-white border-2 border-gray-300 text-gray-700 px-6 py-4 rounded-full font-bold hover:border-blue-600 hover:text-blue-600 transition-all duration-300 min-h-[52px]"
+                      >
+                        <LogIn className="w-5 h-5" />
+                        <span>Login</span>
+                      </Link>
+
+                      {/* Sign Up Button */}
+                      <Link
+                        href="/auth/signup"
+                        className="flex items-center justify-center space-x-2 bg-blue-600 text-white px-6 py-4 rounded-full font-bold hover:bg-blue-700 transition-all duration-300 min-h-[52px] shadow-lg"
+                      >
+                        <UserPlus className="w-5 h-5" />
+                        <span>Sign Up</span>
+                      </Link>
+                    </>
                   )}
                 </div>
               </div>
