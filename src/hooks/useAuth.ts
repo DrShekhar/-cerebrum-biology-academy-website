@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import { db, id } from '@/lib/db'
 import type { User } from '@/lib/db'
 
@@ -73,20 +73,26 @@ export function useAuth() {
     }
   }
 
+  const user = useMemo(() => {
+    if (currentUser) return currentUser
+    if (instantUser) {
+      return {
+        id: instantUser.id,
+        email: instantUser.email,
+        name: instantUser.email?.split('@')[0] || 'User',
+        createdAt: Date.now(),
+      }
+    }
+    return null
+  }, [currentUser, instantUser])
+
+  const isAuthenticated = useMemo(() => !!(currentUser || instantUser), [currentUser, instantUser])
+
   return {
-    user:
-      currentUser ||
-      (instantUser
-        ? {
-            id: instantUser.id,
-            email: instantUser.email,
-            name: instantUser.email?.split('@')[0] || 'User',
-            createdAt: Date.now(),
-          }
-        : null),
+    user,
     isLoading,
     error,
-    isAuthenticated: !!(currentUser || instantUser),
+    isAuthenticated,
     signInWithEmail,
     signOut,
     createUserProfile,
