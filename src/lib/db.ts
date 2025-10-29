@@ -56,15 +56,32 @@ export interface ContactSubmission {
 
 // Initialize the database
 // You'll need to get your app ID from InstantDB dashboard
-const APP_ID = process.env.NEXT_PUBLIC_INSTANT_APP_ID as string
+const rawAppId = process.env.NEXT_PUBLIC_INSTANT_APP_ID as string
 
-if (!APP_ID) {
-  console.warn('NEXT_PUBLIC_INSTANT_APP_ID environment variable is not set. Using demo mode.')
+// Validate that APP_ID is a valid UUID format
+// InstantDB requires a valid UUID, not a placeholder string
+const isValidUuid = (str: string) => {
+  const uuidRegex = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i
+  return str && uuidRegex.test(str)
 }
 
-export const db = init({
-  appId: APP_ID || 'demo-app-id',
-})
+const APP_ID = isValidUuid(rawAppId) ? rawAppId : undefined
+
+if (!APP_ID) {
+  console.warn(
+    'NEXT_PUBLIC_INSTANT_APP_ID environment variable is not set or invalid. InstantDB features will be limited.'
+  )
+}
+
+// Create a mock db object when APP_ID is not available
+// This prevents crashes while allowing the app to function with Prisma
+export const db: any = APP_ID
+  ? init({ appId: APP_ID })
+  : {
+      // Mock object for when InstantDB is not configured
+      useAuth: () => ({ user: null, isLoading: false, error: null }),
+      auth: null,
+    }
 
 // Export utilities
 export { tx, id }
