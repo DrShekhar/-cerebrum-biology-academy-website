@@ -13,7 +13,7 @@ datasource db {
 
   // Connection pooling configuration for 1,000+ concurrent users
   // Optimized for high-traffic educational platform
-  directUrl = env("DIRECT_DATABASE_URL") // Direct connection for migrations
+  // directUrl = env("DIRECT_DATABASE_URL") // Direct connection for migrations (optional for local dev)
 
   // Connection pool settings
   // Note: These are managed via DATABASE_URL connection string parameters

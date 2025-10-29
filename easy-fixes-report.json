@@ -1,0 +1,2625 @@
+{
+  "easyFiles": [
+    {
+      "file": "src/app/api/admin/lms/materials/route.ts",
+      "errorCount": 1,
+      "errorCounts": {
+        "TS2367": 1
+      },
+      "avgDifficulty": 1,
+      "hasEasyFix": true,
+      "errors": [
+        {
+          "errorCode": "TS2367",
+          "lineNum": "20",
+          "colNum": "21",
+          "message": "This comparison appears to be unintentional because the types '\"admin\" | \"student\" | \"teacher\" | \"parent\"' and '\"ADMIN\"' have no overlap."
+        }
+      ]
+    },
+    {
+      "file": "src/app/api/admin/lms/upload/route.ts",
+      "errorCount": 1,
+      "errorCounts": {
+        "TS2367": 1
+      },
+      "avgDifficulty": 1,
+      "hasEasyFix": true,
+      "errors": [
+        {
+          "errorCode": "TS2367",
+          "lineNum": "42",
+          "colNum": "21",
+          "message": "This comparison appears to be unintentional because the types '\"admin\" | \"student\" | \"teacher\" | \"parent\"' and '\"ADMIN\"' have no overlap."
+        }
+      ]
+    },
+    {
+      "file": "src/app/api/admin/lms/materials/[id]/route.ts",
+      "errorCount": 3,
+      "errorCounts": {
+        "TS2367": 3
+      },
+      "avgDifficulty": 1,
+      "hasEasyFix": true,
+      "errors": [
+        {
+          "errorCode": "TS2367",
+          "lineNum": "21",
+          "colNum": "21",
+          "message": "This comparison appears to be unintentional because the types '\"admin\" | \"student\" | \"teacher\" | \"parent\"' and '\"ADMIN\"' have no overlap."
+        },
+        {
+          "errorCode": "TS2367",
+          "lineNum": "66",
+          "colNum": "21",
+          "message": "This comparison appears to be unintentional because the types '\"admin\" | \"student\" | \"teacher\" | \"parent\"' and '\"ADMIN\"' have no overlap."
+        },
+        {
+          "errorCode": "TS2367",
+          "lineNum": "151",
+          "colNum": "21",
+          "message": "This comparison appears to be unintentional because the types '\"admin\" | \"student\" | \"teacher\" | \"parent\"' and '\"ADMIN\"' have no overlap."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/mcp/config/agents.ts",
+      "errorCount": 24,
+      "errorCounts": {
+        "TS1361": 24
+      },
+      "avgDifficulty": 1,
+      "hasEasyFix": true,
+      "errors": [
+        {
+          "errorCode": "TS1361",
+          "lineNum": "157",
+          "colNum": "28",
+          "message": "'AgentType' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "160",
+          "colNum": "13",
+          "message": "'AgentType' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "162",
+          "colNum": "9",
+          "message": "'AgentCapability' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "163",
+          "colNum": "9",
+          "message": "'AgentCapability' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "164",
+          "colNum": "9",
+          "message": "'AgentCapability' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "223",
+          "colNum": "28",
+          "message": "'AgentType' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "226",
+          "colNum": "13",
+          "message": "'AgentType' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "228",
+          "colNum": "9",
+          "message": "'AgentCapability' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "229",
+          "colNum": "9",
+          "message": "'AgentCapability' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "230",
+          "colNum": "9",
+          "message": "'AgentCapability' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "289",
+          "colNum": "28",
+          "message": "'AgentType' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "292",
+          "colNum": "13",
+          "message": "'AgentType' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "294",
+          "colNum": "9",
+          "message": "'AgentCapability' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "295",
+          "colNum": "9",
+          "message": "'AgentCapability' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "296",
+          "colNum": "9",
+          "message": "'AgentCapability' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "355",
+          "colNum": "28",
+          "message": "'AgentType' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "358",
+          "colNum": "13",
+          "message": "'AgentType' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "359",
+          "colNum": "22",
+          "message": "'AgentCapability' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "359",
+          "colNum": "60",
+          "message": "'AgentCapability' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "417",
+          "colNum": "28",
+          "message": "'AgentType' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "420",
+          "colNum": "13",
+          "message": "'AgentType' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "422",
+          "colNum": "9",
+          "message": "'AgentCapability' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "423",
+          "colNum": "9",
+          "message": "'AgentCapability' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "424",
+          "colNum": "9",
+          "message": "'AgentCapability' cannot be used as a value because it was imported using 'import type'."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/mcp/config/education.ts",
+      "errorCount": 35,
+      "errorCounts": {
+        "TS1361": 35
+      },
+      "avgDifficulty": 1,
+      "hasEasyFix": true,
+      "errors": [
+        {
+          "errorCode": "TS1361",
+          "lineNum": "305",
+          "colNum": "15",
+          "message": "'BiologyUnit' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "315",
+          "colNum": "23",
+          "message": "'BiologyUnit' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "322",
+          "colNum": "29",
+          "message": "'DifficultyLevel' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "327",
+          "colNum": "36",
+          "message": "'TopicImportance' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "336",
+          "colNum": "23",
+          "message": "'BiologyUnit' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "345",
+          "colNum": "29",
+          "message": "'DifficultyLevel' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "350",
+          "colNum": "36",
+          "message": "'TopicImportance' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "367",
+          "colNum": "23",
+          "message": "'BiologyUnit' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "369",
+          "colNum": "29",
+          "message": "'DifficultyLevel' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "374",
+          "colNum": "36",
+          "message": "'TopicImportance' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "390",
+          "colNum": "15",
+          "message": "'BiologyUnit' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "400",
+          "colNum": "23",
+          "message": "'BiologyUnit' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "408",
+          "colNum": "29",
+          "message": "'DifficultyLevel' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "413",
+          "colNum": "36",
+          "message": "'TopicImportance' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "429",
+          "colNum": "15",
+          "message": "'BiologyUnit' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "439",
+          "colNum": "23",
+          "message": "'BiologyUnit' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "447",
+          "colNum": "29",
+          "message": "'DifficultyLevel' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "452",
+          "colNum": "36",
+          "message": "'TopicImportance' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "461",
+          "colNum": "23",
+          "message": "'BiologyUnit' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "471",
+          "colNum": "29",
+          "message": "'DifficultyLevel' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "476",
+          "colNum": "36",
+          "message": "'TopicImportance' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "591",
+          "colNum": "10",
+          "message": "'DifficultyLevel' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "597",
+          "colNum": "10",
+          "message": "'DifficultyLevel' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "603",
+          "colNum": "10",
+          "message": "'DifficultyLevel' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "609",
+          "colNum": "10",
+          "message": "'DifficultyLevel' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "659",
+          "colNum": "30",
+          "message": "'DifficultyLevel' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "666",
+          "colNum": "30",
+          "message": "'DifficultyLevel' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "857",
+          "colNum": "8",
+          "message": "'TopicImportance' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "858",
+          "colNum": "8",
+          "message": "'TopicImportance' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "859",
+          "colNum": "8",
+          "message": "'TopicImportance' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "860",
+          "colNum": "8",
+          "message": "'TopicImportance' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "880",
+          "colNum": "7",
+          "message": "'DifficultyLevel' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "881",
+          "colNum": "7",
+          "message": "'DifficultyLevel' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "882",
+          "colNum": "7",
+          "message": "'DifficultyLevel' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "883",
+          "colNum": "7",
+          "message": "'DifficultyLevel' cannot be used as a value because it was imported using 'import type'."
+        }
+      ]
+    },
+    {
+      "file": "src/app/api/webhooks/payments/route.ts",
+      "errorCount": 1,
+      "errorCounts": {
+        "TS2304": 1
+      },
+      "avgDifficulty": 2,
+      "hasEasyFix": true,
+      "errors": [
+        {
+          "errorCode": "TS2304",
+          "lineNum": "215",
+          "colNum": "20",
+          "message": "Cannot find name 'handlePaymentRefund'."
+        }
+      ]
+    },
+    {
+      "file": "src/components/ai/AccessSettings.tsx",
+      "errorCount": 1,
+      "errorCounts": {
+        "TS2304": 1
+      },
+      "avgDifficulty": 2,
+      "hasEasyFix": true,
+      "errors": [
+        {
+          "errorCode": "TS2304",
+          "lineNum": "1584",
+          "colNum": "18",
+          "message": "Cannot find name 'RefreshCw'."
+        }
+      ]
+    },
+    {
+      "file": "src/components/ai/Distribution.tsx",
+      "errorCount": 1,
+      "errorCounts": {
+        "TS2304": 1
+      },
+      "avgDifficulty": 2,
+      "hasEasyFix": true,
+      "errors": [
+        {
+          "errorCode": "TS2304",
+          "lineNum": "1673",
+          "colNum": "12",
+          "message": "Cannot find name 'BarChart3'."
+        }
+      ]
+    },
+    {
+      "file": "src/components/analytics/QuestionTypeAnalytics.tsx",
+      "errorCount": 1,
+      "errorCounts": {
+        "TS2304": 1
+      },
+      "avgDifficulty": 2,
+      "hasEasyFix": true,
+      "errors": [
+        {
+          "errorCode": "TS2304",
+          "lineNum": "219",
+          "colNum": "30",
+          "message": "Cannot find name 'setTimeRange'."
+        }
+      ]
+    },
+    {
+      "file": "src/components/conversion/ExitIntentPopup.tsx",
+      "errorCount": 1,
+      "errorCounts": {
+        "TS2304": 1
+      },
+      "avgDifficulty": 2,
+      "hasEasyFix": true,
+      "errors": [
+        {
+          "errorCode": "TS2304",
+          "lineNum": "602",
+          "colNum": "18",
+          "message": "Cannot find name 'Shield'."
+        }
+      ]
+    },
+    {
+      "file": "src/components/courses/PremiumCerebrumCoursePage.tsx",
+      "errorCount": 1,
+      "errorCounts": {
+        "TS2305": 1
+      },
+      "avgDifficulty": 2,
+      "hasEasyFix": true,
+      "errors": [
+        {
+          "errorCode": "TS2305",
+          "lineNum": "35",
+          "colNum": "3",
+          "message": "Module '\"lucide-react\"' has no exported member 'Lightning'."
+        }
+      ]
+    },
+    {
+      "file": "src/components/examples/TrustIntegrationExample.tsx",
+      "errorCount": 1,
+      "errorCounts": {
+        "TS2305": 1
+      },
+      "avgDifficulty": 2,
+      "hasEasyFix": true,
+      "errors": [
+        {
+          "errorCode": "TS2305",
+          "lineNum": "5",
+          "colNum": "10",
+          "message": "Module '\"@/components/ui/LoadingStates\"' has no exported member 'SmartButton'."
+        }
+      ]
+    },
+    {
+      "file": "src/components/mobile/IndianMarketFeatures.tsx",
+      "errorCount": 1,
+      "errorCounts": {
+        "TS2304": 1
+      },
+      "avgDifficulty": 2,
+      "hasEasyFix": true,
+      "errors": [
+        {
+          "errorCode": "TS2304",
+          "lineNum": "372",
+          "colNum": "24",
+          "message": "Cannot find name 'BookOpen'."
+        }
+      ]
+    },
+    {
+      "file": "src/components/trust/FacultyCredentialsShowcase.tsx",
+      "errorCount": 1,
+      "errorCounts": {
+        "TS2304": 1
+      },
+      "avgDifficulty": 2,
+      "hasEasyFix": true,
+      "errors": [
+        {
+          "errorCode": "TS2304",
+          "lineNum": "461",
+          "colNum": "55",
+          "message": "Cannot find name 'User'."
+        }
+      ]
+    },
+    {
+      "file": "src/components/voice/VoiceTrainingStudio.tsx",
+      "errorCount": 1,
+      "errorCounts": {
+        "TS2305": 1
+      },
+      "avgDifficulty": 2,
+      "hasEasyFix": true,
+      "errors": [
+        {
+          "errorCode": "TS2305",
+          "lineNum": "19",
+          "colNum": "3",
+          "message": "Module '\"lucide-react\"' has no exported member 'Waveform'."
+        }
+      ]
+    },
+    {
+      "file": "src/hooks/usePricingCalculator.ts",
+      "errorCount": 1,
+      "errorCounts": {
+        "TS2304": 1
+      },
+      "avgDifficulty": 2,
+      "hasEasyFix": true,
+      "errors": [
+        {
+          "errorCode": "TS2304",
+          "lineNum": "293",
+          "colNum": "38",
+          "message": "Cannot find name 'selectionData'."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/admin-schema.ts",
+      "errorCount": 1,
+      "errorCounts": {
+        "TS2305": 1
+      },
+      "avgDifficulty": 2,
+      "hasEasyFix": true,
+      "errors": [
+        {
+          "errorCode": "TS2305",
+          "lineNum": "1",
+          "colNum": "60",
+          "message": "Module '\"./db\"' has no exported member 'MarketingLead'."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/ai/cost-optimization/IntelligentCacheEngine.ts",
+      "errorCount": 1,
+      "errorCounts": {
+        "TS2304": 1
+      },
+      "avgDifficulty": 2,
+      "hasEasyFix": true,
+      "errors": [
+        {
+          "errorCode": "TS2304",
+          "lineNum": "47",
+          "colNum": "18",
+          "message": "Cannot find name 'Redis'."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/ai/gateway/ErrorHandlingManager.ts",
+      "errorCount": 1,
+      "errorCounts": {
+        "TS2304": 1
+      },
+      "avgDifficulty": 2,
+      "hasEasyFix": true,
+      "errors": [
+        {
+          "errorCode": "TS2304",
+          "lineNum": "51",
+          "colNum": "18",
+          "message": "Cannot find name 'Redis'."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/ai/gateway/PerformanceMonitor.ts",
+      "errorCount": 1,
+      "errorCounts": {
+        "TS2304": 1
+      },
+      "avgDifficulty": 2,
+      "hasEasyFix": true,
+      "errors": [
+        {
+          "errorCode": "TS2304",
+          "lineNum": "59",
+          "colNum": "18",
+          "message": "Cannot find name 'Redis'."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/api/CreditManagementSystem.ts",
+      "errorCount": 1,
+      "errorCounts": {
+        "TS2304": 1
+      },
+      "avgDifficulty": 2,
+      "hasEasyFix": true,
+      "errors": [
+        {
+          "errorCode": "TS2304",
+          "lineNum": "67",
+          "colNum": "18",
+          "message": "Cannot find name 'Redis'."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/collaborative/CollaborativeLearningManager.ts",
+      "errorCount": 1,
+      "errorCounts": {
+        "TS2304": 1
+      },
+      "avgDifficulty": 2,
+      "hasEasyFix": true,
+      "errors": [
+        {
+          "errorCode": "TS2304",
+          "lineNum": "140",
+          "colNum": "18",
+          "message": "Cannot find name 'Redis'."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/monitoring/ObservabilityManager.ts",
+      "errorCount": 1,
+      "errorCounts": {
+        "TS2304": 1
+      },
+      "avgDifficulty": 2,
+      "hasEasyFix": true,
+      "errors": [
+        {
+          "errorCode": "TS2304",
+          "lineNum": "155",
+          "colNum": "18",
+          "message": "Cannot find name 'Redis'."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/prisma.ts",
+      "errorCount": 1,
+      "errorCounts": {
+        "TS2304": 1
+      },
+      "avgDifficulty": 2,
+      "hasEasyFix": true,
+      "errors": [
+        {
+          "errorCode": "TS2304",
+          "lineNum": "28",
+          "colNum": "14",
+          "message": "Cannot find name 'EdgeRuntime'."
+        }
+      ]
+    },
+    {
+      "file": "src/app/api/analytics/heatmap/route.ts",
+      "errorCount": 2,
+      "errorCounts": {
+        "TS2304": 2
+      },
+      "avgDifficulty": 2,
+      "hasEasyFix": true,
+      "errors": [
+        {
+          "errorCode": "TS2304",
+          "lineNum": "137",
+          "colNum": "16",
+          "message": "Cannot find name 'gtag'."
+        },
+        {
+          "errorCode": "TS2304",
+          "lineNum": "138",
+          "colNum": "7",
+          "message": "Cannot find name 'gtag'."
+        }
+      ]
+    },
+    {
+      "file": "src/app/api/feedback/route.ts",
+      "errorCount": 2,
+      "errorCounts": {
+        "TS2304": 2
+      },
+      "avgDifficulty": 2,
+      "hasEasyFix": true,
+      "errors": [
+        {
+          "errorCode": "TS2304",
+          "lineNum": "144",
+          "colNum": "16",
+          "message": "Cannot find name 'gtag'."
+        },
+        {
+          "errorCode": "TS2304",
+          "lineNum": "145",
+          "colNum": "7",
+          "message": "Cannot find name 'gtag'."
+        }
+      ]
+    },
+    {
+      "file": "src/components/ai/EnhancedTemplateManager.tsx",
+      "errorCount": 2,
+      "errorCounts": {
+        "TS2304": 2
+      },
+      "avgDifficulty": 2,
+      "hasEasyFix": true,
+      "errors": [
+        {
+          "errorCode": "TS2304",
+          "lineNum": "567",
+          "colNum": "49",
+          "message": "Cannot find name 'ArrowUp'."
+        },
+        {
+          "errorCode": "TS2304",
+          "lineNum": "567",
+          "colNum": "83",
+          "message": "Cannot find name 'ArrowDown'."
+        }
+      ]
+    },
+    {
+      "file": "src/components/questions/index.ts",
+      "errorCount": 2,
+      "errorCounts": {
+        "TS2305": 2
+      },
+      "avgDifficulty": 2,
+      "hasEasyFix": true,
+      "errors": [
+        {
+          "errorCode": "TS2305",
+          "lineNum": "37",
+          "colNum": "3",
+          "message": "Module '\"../../data/neetQuestionBank\"' has no exported member 'allAdvancedQuestions'."
+        },
+        {
+          "errorCode": "TS2305",
+          "lineNum": "38",
+          "colNum": "3",
+          "message": "Module '\"../../data/neetQuestionBank\"' has no exported member 'advancedQuestionStats'."
+        }
+      ]
+    },
+    {
+      "file": "src/hooks/useFunnelIntegration.ts",
+      "errorCount": 2,
+      "errorCounts": {
+        "TS2304": 2
+      },
+      "avgDifficulty": 2,
+      "hasEasyFix": true,
+      "errors": [
+        {
+          "errorCode": "TS2304",
+          "lineNum": "94",
+          "colNum": "20",
+          "message": "Cannot find name 'gtag'."
+        },
+        {
+          "errorCode": "TS2304",
+          "lineNum": "95",
+          "colNum": "11",
+          "message": "Cannot find name 'gtag'."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/analytics/conversionFunnelAnalysis.ts",
+      "errorCount": 2,
+      "errorCounts": {
+        "TS2304": 2
+      },
+      "avgDifficulty": 2,
+      "hasEasyFix": true,
+      "errors": [
+        {
+          "errorCode": "TS2304",
+          "lineNum": "323",
+          "colNum": "16",
+          "message": "Cannot find name 'gtag'."
+        },
+        {
+          "errorCode": "TS2304",
+          "lineNum": "324",
+          "colNum": "7",
+          "message": "Cannot find name 'gtag'."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/database/index.ts",
+      "errorCount": 5,
+      "errorCounts": {
+        "TS2304": 5
+      },
+      "avgDifficulty": 2,
+      "hasEasyFix": true,
+      "errors": [
+        {
+          "errorCode": "TS2304",
+          "lineNum": "44",
+          "colNum": "28",
+          "message": "Cannot find name 'checkDatabaseConnection'."
+        },
+        {
+          "errorCode": "TS2304",
+          "lineNum": "48",
+          "colNum": "7",
+          "message": "Cannot find name 'UserService'."
+        },
+        {
+          "errorCode": "TS2304",
+          "lineNum": "49",
+          "colNum": "7",
+          "message": "Cannot find name 'TestService'."
+        },
+        {
+          "errorCode": "TS2304",
+          "lineNum": "50",
+          "colNum": "7",
+          "message": "Cannot find name 'QuestionService'."
+        },
+        {
+          "errorCode": "TS2304",
+          "lineNum": "51",
+          "colNum": "7",
+          "message": "Cannot find name 'AnalyticsService'."
+        }
+      ]
+    },
+    {
+      "file": "src/components/arvr/ARVRInfrastructure.tsx",
+      "errorCount": 6,
+      "errorCounts": {
+        "TS2304": 6
+      },
+      "avgDifficulty": 2,
+      "hasEasyFix": true,
+      "errors": [
+        {
+          "errorCode": "TS2304",
+          "lineNum": "99",
+          "colNum": "46",
+          "message": "Cannot find name 'XRSession'."
+        },
+        {
+          "errorCode": "TS2304",
+          "lineNum": "381",
+          "colNum": "44",
+          "message": "Cannot find name 'XRSession'."
+        },
+        {
+          "errorCode": "TS2304",
+          "lineNum": "383",
+          "colNum": "27",
+          "message": "Cannot find name 'XRWebGLLayer'."
+        },
+        {
+          "errorCode": "TS2304",
+          "lineNum": "388",
+          "colNum": "42",
+          "message": "Cannot find name 'XRFrame'."
+        },
+        {
+          "errorCode": "TS2304",
+          "lineNum": "400",
+          "colNum": "34",
+          "message": "Cannot find name 'XRViewerPose'."
+        },
+        {
+          "errorCode": "TS2304",
+          "lineNum": "400",
+          "colNum": "55",
+          "message": "Cannot find name 'XRFrame'."
+        }
+      ]
+    },
+    {
+      "file": "src/components/location/LocationLandingPage.tsx",
+      "errorCount": 1,
+      "errorCounts": {
+        "TS2307": 1
+      },
+      "avgDifficulty": 3,
+      "hasEasyFix": true,
+      "errors": [
+        {
+          "errorCode": "TS2307",
+          "lineNum": "24",
+          "colNum": "27",
+          "message": "Cannot find module '@/components/ui/separator' or its corresponding type declarations."
+        }
+      ]
+    },
+    {
+      "file": "src/components/ui/ExampleWorkflowDemo/ExampleWorkflowDemo.stories.tsx",
+      "errorCount": 1,
+      "errorCounts": {
+        "TS2307": 1
+      },
+      "avgDifficulty": 3,
+      "hasEasyFix": true,
+      "errors": [
+        {
+          "errorCode": "TS2307",
+          "lineNum": "1",
+          "colNum": "37",
+          "message": "Cannot find module '@storybook/react' or its corresponding type declarations."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/ai/knowledge-base/pdfProcessor.ts",
+      "errorCount": 1,
+      "errorCounts": {
+        "TS2307": 1
+      },
+      "avgDifficulty": 3,
+      "hasEasyFix": true,
+      "errors": [
+        {
+          "errorCode": "TS2307",
+          "lineNum": "2",
+          "colNum": "28",
+          "message": "Cannot find module 'pdf.js-extract' or its corresponding type declarations."
+        }
+      ]
+    },
+    {
+      "file": "src/components/voice/VoiceIntegrationHub.tsx",
+      "errorCount": 3,
+      "errorCounts": {
+        "TS2305": 1,
+        "TS2304": 1,
+        "TS2551": 1
+      },
+      "avgDifficulty": 3,
+      "hasEasyFix": true,
+      "errors": [
+        {
+          "errorCode": "TS2305",
+          "lineNum": "16",
+          "colNum": "3",
+          "message": "Module '\"lucide-react\"' has no exported member 'Waveform'."
+        },
+        {
+          "errorCode": "TS2304",
+          "lineNum": "92",
+          "colNum": "33",
+          "message": "Cannot find name 'SpeechRecognition'."
+        },
+        {
+          "errorCode": "TS2551",
+          "lineNum": "193",
+          "colNum": "68",
+          "message": "Property 'webkitAudioContext' does not exist on type 'Window & typeof globalThis'. Did you mean 'AudioContext'?"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/analytics-strategy.ts",
+      "errorCount": 3,
+      "errorCounts": {
+        "TS2322": 1,
+        "TS2304": 2
+      },
+      "avgDifficulty": 3,
+      "hasEasyFix": true,
+      "errors": [
+        {
+          "errorCode": "TS2322",
+          "lineNum": "147",
+          "colNum": "5",
+          "message": "Type '\"retention\"' is not assignable to type '\"quality\" | \"engagement\" | \"revenue\" | \"growth\"'."
+        },
+        {
+          "errorCode": "TS2304",
+          "lineNum": "526",
+          "colNum": "16",
+          "message": "Cannot find name 'gtag'."
+        },
+        {
+          "errorCode": "TS2304",
+          "lineNum": "527",
+          "colNum": "7",
+          "message": "Cannot find name 'gtag'."
+        }
+      ]
+    },
+    {
+      "file": "src/app/demo/archive/_disabled-testing-suite/page.tsx",
+      "errorCount": 8,
+      "errorCounts": {
+        "TS2307": 8
+      },
+      "avgDifficulty": 3,
+      "hasEasyFix": true,
+      "errors": [
+        {
+          "errorCode": "TS2307",
+          "lineNum": "4",
+          "colNum": "39",
+          "message": "Cannot find module '../../../components/analytics/ConversionFunnelChart' or its corresponding type declarations."
+        },
+        {
+          "errorCode": "TS2307",
+          "lineNum": "9",
+          "colNum": "8",
+          "message": "Cannot find module '../../../components/analytics/HeatmapVisualization' or its corresponding type declarations."
+        },
+        {
+          "errorCode": "TS2307",
+          "lineNum": "10",
+          "colNum": "52",
+          "message": "Cannot find module '../../../components/feedback/FeedbackModal' or its corresponding type declarations."
+        },
+        {
+          "errorCode": "TS2307",
+          "lineNum": "11",
+          "colNum": "39",
+          "message": "Cannot find module '../../../components/optimization/OptimizationDashboard' or its corresponding type declarations."
+        },
+        {
+          "errorCode": "TS2307",
+          "lineNum": "12",
+          "colNum": "39",
+          "message": "Cannot find module '../../../lib/feedback/feedbackCollection' or its corresponding type declarations."
+        },
+        {
+          "errorCode": "TS2307",
+          "lineNum": "13",
+          "colNum": "36",
+          "message": "Cannot find module '../../../lib/heatmap/heatmapTracking' or its corresponding type declarations."
+        },
+        {
+          "errorCode": "TS2307",
+          "lineNum": "14",
+          "colNum": "36",
+          "message": "Cannot find module '../../../hooks/useFunnelAnalytics' or its corresponding type declarations."
+        },
+        {
+          "errorCode": "TS2307",
+          "lineNum": "22",
+          "colNum": "8",
+          "message": "Cannot find module '../../../lib/demo/demoDataGenerators' or its corresponding type declarations."
+        }
+      ]
+    }
+  ],
+  "highImpactFiles": [
+    {
+      "file": "src/lib/ai/aiClient.ts",
+      "errorCount": 13,
+      "errorCounts": {
+        "TS2459": 1,
+        "TS2552": 3,
+        "TS2304": 7,
+        "TS2484": 2
+      },
+      "avgDifficulty": 3.3846153846153846,
+      "hasEasyFix": true,
+      "errors": [
+        {
+          "errorCode": "TS2459",
+          "lineNum": "9",
+          "colNum": "28",
+          "message": "Module '\"./QualityAssurancePipeline\"' declares 'QualityReport' locally, but it is not exported."
+        },
+        {
+          "errorCode": "TS2552",
+          "lineNum": "356",
+          "colNum": "58",
+          "message": "Cannot find name 'response'. Did you mean 'Response'?"
+        },
+        {
+          "errorCode": "TS2552",
+          "lineNum": "356",
+          "colNum": "78",
+          "message": "Cannot find name 'response'. Did you mean 'Response'?"
+        },
+        {
+          "errorCode": "TS2552",
+          "lineNum": "359",
+          "colNum": "21",
+          "message": "Cannot find name 'response'. Did you mean 'Response'?"
+        },
+        {
+          "errorCode": "TS2304",
+          "lineNum": "361",
+          "colNum": "21",
+          "message": "Cannot find name 'response'."
+        },
+        {
+          "errorCode": "TS2304",
+          "lineNum": "362",
+          "colNum": "18",
+          "message": "Cannot find name 'response'."
+        },
+        {
+          "errorCode": "TS2304",
+          "lineNum": "367",
+          "colNum": "9",
+          "message": "Cannot find name 'response'."
+        },
+        {
+          "errorCode": "TS2304",
+          "lineNum": "375",
+          "colNum": "12",
+          "message": "Cannot find name 'response'."
+        },
+        {
+          "errorCode": "TS2304",
+          "lineNum": "395",
+          "colNum": "14",
+          "message": "Cannot find name 'response'."
+        },
+        {
+          "errorCode": "TS2304",
+          "lineNum": "399",
+          "colNum": "19",
+          "message": "Cannot find name 'provider'."
+        },
+        {
+          "errorCode": "TS2304",
+          "lineNum": "409",
+          "colNum": "21",
+          "message": "Cannot find name 'provider'."
+        },
+        {
+          "errorCode": "TS2484",
+          "lineNum": "978",
+          "colNum": "15",
+          "message": "Export declaration conflicts with exported declaration of 'AIRequest'."
+        },
+        {
+          "errorCode": "TS2484",
+          "lineNum": "978",
+          "colNum": "26",
+          "message": "Export declaration conflicts with exported declaration of 'AIResponse'."
+        }
+      ]
+    },
+    {
+      "file": "src/components/courseSelector/CourseWizardContainer.tsx",
+      "errorCount": 11,
+      "errorCounts": {
+        "TS2307": 10,
+        "TS2769": 1
+      },
+      "avgDifficulty": 3.1818181818181817,
+      "hasEasyFix": true,
+      "errors": [
+        {
+          "errorCode": "TS2307",
+          "lineNum": "26",
+          "colNum": "41",
+          "message": "Cannot find module './wizard/WizardProgressIndicator' or its corresponding type declarations."
+        },
+        {
+          "errorCode": "TS2307",
+          "lineNum": "27",
+          "colNum": "36",
+          "message": "Cannot find module './wizard/steps/GoalsSelectionStep' or its corresponding type declarations."
+        },
+        {
+          "errorCode": "TS2307",
+          "lineNum": "28",
+          "colNum": "38",
+          "message": "Cannot find module './wizard/steps/BudgetPreferenceStep' or its corresponding type declarations."
+        },
+        {
+          "errorCode": "TS2307",
+          "lineNum": "29",
+          "colNum": "38",
+          "message": "Cannot find module './wizard/steps/TimeAvailabilityStep' or its corresponding type declarations."
+        },
+        {
+          "errorCode": "TS2307",
+          "lineNum": "30",
+          "colNum": "40",
+          "message": "Cannot find module './wizard/steps/LocationPreferenceStep' or its corresponding type declarations."
+        },
+        {
+          "errorCode": "TS2307",
+          "lineNum": "31",
+          "colNum": "35",
+          "message": "Cannot find module './wizard/steps/LearningStyleStep' or its corresponding type declarations."
+        },
+        {
+          "errorCode": "TS2307",
+          "lineNum": "32",
+          "colNum": "41",
+          "message": "Cannot find module './wizard/steps/WeakAreasAssessmentStep' or its corresponding type declarations."
+        },
+        {
+          "errorCode": "TS2307",
+          "lineNum": "33",
+          "colNum": "43",
+          "message": "Cannot find module './wizard/steps/CourseRecommendationsStep' or its corresponding type declarations."
+        },
+        {
+          "errorCode": "TS2307",
+          "lineNum": "34",
+          "colNum": "39",
+          "message": "Cannot find module './wizard/steps/PricingCalculatorStep' or its corresponding type declarations."
+        },
+        {
+          "errorCode": "TS2307",
+          "lineNum": "35",
+          "colNum": "39",
+          "message": "Cannot find module './wizard/steps/FinalConfirmationStep' or its corresponding type declarations."
+        },
+        {
+          "errorCode": "TS2769",
+          "lineNum": "407",
+          "colNum": "20",
+          "message": "No overload matches this call."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/optimization/iterativeImprovement.ts",
+      "errorCount": 11,
+      "errorCounts": {
+        "TS2365": 2,
+        "TS2339": 1,
+        "TS2363": 1,
+        "TS2304": 7
+      },
+      "avgDifficulty": 3.090909090909091,
+      "hasEasyFix": true,
+      "errors": [
+        {
+          "errorCode": "TS2365",
+          "lineNum": "273",
+          "colNum": "11",
+          "message": "Operator '<' cannot be applied to types 'unknown' and 'number'."
+        },
+        {
+          "errorCode": "TS2365",
+          "lineNum": "277",
+          "colNum": "21",
+          "message": "Operator '<' cannot be applied to types 'unknown' and 'number'."
+        },
+        {
+          "errorCode": "TS2339",
+          "lineNum": "279",
+          "colNum": "69",
+          "message": "Property 'toFixed' does not exist on type 'unknown'."
+        },
+        {
+          "errorCode": "TS2363",
+          "lineNum": "288",
+          "colNum": "41",
+          "message": "The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type."
+        },
+        {
+          "errorCode": "TS2304",
+          "lineNum": "658",
+          "colNum": "20",
+          "message": "Cannot find name 'useState'."
+        },
+        {
+          "errorCode": "TS2304",
+          "lineNum": "660",
+          "colNum": "28",
+          "message": "Cannot find name 'useCallback'."
+        },
+        {
+          "errorCode": "TS2304",
+          "lineNum": "667",
+          "colNum": "35",
+          "message": "Cannot find name 'useCallback'."
+        },
+        {
+          "errorCode": "TS2304",
+          "lineNum": "674",
+          "colNum": "30",
+          "message": "Cannot find name 'useCallback'."
+        },
+        {
+          "errorCode": "TS2304",
+          "lineNum": "681",
+          "colNum": "30",
+          "message": "Cannot find name 'useCallback'."
+        },
+        {
+          "errorCode": "TS2304",
+          "lineNum": "688",
+          "colNum": "25",
+          "message": "Cannot find name 'useCallback'."
+        },
+        {
+          "errorCode": "TS2304",
+          "lineNum": "695",
+          "colNum": "26",
+          "message": "Cannot find name 'useCallback'."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/mcp/config/education.ts",
+      "errorCount": 35,
+      "errorCounts": {
+        "TS1361": 35
+      },
+      "avgDifficulty": 1,
+      "hasEasyFix": true,
+      "errors": [
+        {
+          "errorCode": "TS1361",
+          "lineNum": "305",
+          "colNum": "15",
+          "message": "'BiologyUnit' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "315",
+          "colNum": "23",
+          "message": "'BiologyUnit' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "322",
+          "colNum": "29",
+          "message": "'DifficultyLevel' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "327",
+          "colNum": "36",
+          "message": "'TopicImportance' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "336",
+          "colNum": "23",
+          "message": "'BiologyUnit' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "345",
+          "colNum": "29",
+          "message": "'DifficultyLevel' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "350",
+          "colNum": "36",
+          "message": "'TopicImportance' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "367",
+          "colNum": "23",
+          "message": "'BiologyUnit' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "369",
+          "colNum": "29",
+          "message": "'DifficultyLevel' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "374",
+          "colNum": "36",
+          "message": "'TopicImportance' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "390",
+          "colNum": "15",
+          "message": "'BiologyUnit' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "400",
+          "colNum": "23",
+          "message": "'BiologyUnit' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "408",
+          "colNum": "29",
+          "message": "'DifficultyLevel' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "413",
+          "colNum": "36",
+          "message": "'TopicImportance' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "429",
+          "colNum": "15",
+          "message": "'BiologyUnit' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "439",
+          "colNum": "23",
+          "message": "'BiologyUnit' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "447",
+          "colNum": "29",
+          "message": "'DifficultyLevel' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "452",
+          "colNum": "36",
+          "message": "'TopicImportance' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "461",
+          "colNum": "23",
+          "message": "'BiologyUnit' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "471",
+          "colNum": "29",
+          "message": "'DifficultyLevel' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "476",
+          "colNum": "36",
+          "message": "'TopicImportance' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "591",
+          "colNum": "10",
+          "message": "'DifficultyLevel' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "597",
+          "colNum": "10",
+          "message": "'DifficultyLevel' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "603",
+          "colNum": "10",
+          "message": "'DifficultyLevel' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "609",
+          "colNum": "10",
+          "message": "'DifficultyLevel' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "659",
+          "colNum": "30",
+          "message": "'DifficultyLevel' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "666",
+          "colNum": "30",
+          "message": "'DifficultyLevel' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "857",
+          "colNum": "8",
+          "message": "'TopicImportance' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "858",
+          "colNum": "8",
+          "message": "'TopicImportance' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "859",
+          "colNum": "8",
+          "message": "'TopicImportance' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "860",
+          "colNum": "8",
+          "message": "'TopicImportance' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "880",
+          "colNum": "7",
+          "message": "'DifficultyLevel' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "881",
+          "colNum": "7",
+          "message": "'DifficultyLevel' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "882",
+          "colNum": "7",
+          "message": "'DifficultyLevel' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "883",
+          "colNum": "7",
+          "message": "'DifficultyLevel' cannot be used as a value because it was imported using 'import type'."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/mcp/config/agents.ts",
+      "errorCount": 24,
+      "errorCounts": {
+        "TS1361": 24
+      },
+      "avgDifficulty": 1,
+      "hasEasyFix": true,
+      "errors": [
+        {
+          "errorCode": "TS1361",
+          "lineNum": "157",
+          "colNum": "28",
+          "message": "'AgentType' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "160",
+          "colNum": "13",
+          "message": "'AgentType' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "162",
+          "colNum": "9",
+          "message": "'AgentCapability' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "163",
+          "colNum": "9",
+          "message": "'AgentCapability' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "164",
+          "colNum": "9",
+          "message": "'AgentCapability' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "223",
+          "colNum": "28",
+          "message": "'AgentType' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "226",
+          "colNum": "13",
+          "message": "'AgentType' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "228",
+          "colNum": "9",
+          "message": "'AgentCapability' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "229",
+          "colNum": "9",
+          "message": "'AgentCapability' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "230",
+          "colNum": "9",
+          "message": "'AgentCapability' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "289",
+          "colNum": "28",
+          "message": "'AgentType' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "292",
+          "colNum": "13",
+          "message": "'AgentType' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "294",
+          "colNum": "9",
+          "message": "'AgentCapability' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "295",
+          "colNum": "9",
+          "message": "'AgentCapability' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "296",
+          "colNum": "9",
+          "message": "'AgentCapability' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "355",
+          "colNum": "28",
+          "message": "'AgentType' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "358",
+          "colNum": "13",
+          "message": "'AgentType' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "359",
+          "colNum": "22",
+          "message": "'AgentCapability' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "359",
+          "colNum": "60",
+          "message": "'AgentCapability' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "417",
+          "colNum": "28",
+          "message": "'AgentType' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "420",
+          "colNum": "13",
+          "message": "'AgentType' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "422",
+          "colNum": "9",
+          "message": "'AgentCapability' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "423",
+          "colNum": "9",
+          "message": "'AgentCapability' cannot be used as a value because it was imported using 'import type'."
+        },
+        {
+          "errorCode": "TS1361",
+          "lineNum": "424",
+          "colNum": "9",
+          "message": "'AgentCapability' cannot be used as a value because it was imported using 'import type'."
+        }
+      ]
+    }
+  ],
+  "fixOrder": [
+    {
+      "phase": "Phase 1A - Import Type Fixes (Highest impact)",
+      "files": [
+        {
+          "file": "src/lib/mcp/config/education.ts",
+          "errorCount": 35,
+          "errorCounts": {
+            "TS1361": 35
+          },
+          "avgDifficulty": 1,
+          "hasEasyFix": true,
+          "errors": [
+            {
+              "errorCode": "TS1361",
+              "lineNum": "305",
+              "colNum": "15",
+              "message": "'BiologyUnit' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "315",
+              "colNum": "23",
+              "message": "'BiologyUnit' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "322",
+              "colNum": "29",
+              "message": "'DifficultyLevel' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "327",
+              "colNum": "36",
+              "message": "'TopicImportance' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "336",
+              "colNum": "23",
+              "message": "'BiologyUnit' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "345",
+              "colNum": "29",
+              "message": "'DifficultyLevel' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "350",
+              "colNum": "36",
+              "message": "'TopicImportance' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "367",
+              "colNum": "23",
+              "message": "'BiologyUnit' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "369",
+              "colNum": "29",
+              "message": "'DifficultyLevel' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "374",
+              "colNum": "36",
+              "message": "'TopicImportance' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "390",
+              "colNum": "15",
+              "message": "'BiologyUnit' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "400",
+              "colNum": "23",
+              "message": "'BiologyUnit' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "408",
+              "colNum": "29",
+              "message": "'DifficultyLevel' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "413",
+              "colNum": "36",
+              "message": "'TopicImportance' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "429",
+              "colNum": "15",
+              "message": "'BiologyUnit' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "439",
+              "colNum": "23",
+              "message": "'BiologyUnit' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "447",
+              "colNum": "29",
+              "message": "'DifficultyLevel' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "452",
+              "colNum": "36",
+              "message": "'TopicImportance' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "461",
+              "colNum": "23",
+              "message": "'BiologyUnit' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "471",
+              "colNum": "29",
+              "message": "'DifficultyLevel' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "476",
+              "colNum": "36",
+              "message": "'TopicImportance' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "591",
+              "colNum": "10",
+              "message": "'DifficultyLevel' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "597",
+              "colNum": "10",
+              "message": "'DifficultyLevel' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "603",
+              "colNum": "10",
+              "message": "'DifficultyLevel' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "609",
+              "colNum": "10",
+              "message": "'DifficultyLevel' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "659",
+              "colNum": "30",
+              "message": "'DifficultyLevel' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "666",
+              "colNum": "30",
+              "message": "'DifficultyLevel' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "857",
+              "colNum": "8",
+              "message": "'TopicImportance' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "858",
+              "colNum": "8",
+              "message": "'TopicImportance' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "859",
+              "colNum": "8",
+              "message": "'TopicImportance' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "860",
+              "colNum": "8",
+              "message": "'TopicImportance' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "880",
+              "colNum": "7",
+              "message": "'DifficultyLevel' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "881",
+              "colNum": "7",
+              "message": "'DifficultyLevel' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "882",
+              "colNum": "7",
+              "message": "'DifficultyLevel' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "883",
+              "colNum": "7",
+              "message": "'DifficultyLevel' cannot be used as a value because it was imported using 'import type'."
+            }
+          ]
+        },
+        {
+          "file": "src/lib/mcp/config/agents.ts",
+          "errorCount": 24,
+          "errorCounts": {
+            "TS1361": 24
+          },
+          "avgDifficulty": 1,
+          "hasEasyFix": true,
+          "errors": [
+            {
+              "errorCode": "TS1361",
+              "lineNum": "157",
+              "colNum": "28",
+              "message": "'AgentType' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "160",
+              "colNum": "13",
+              "message": "'AgentType' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "162",
+              "colNum": "9",
+              "message": "'AgentCapability' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "163",
+              "colNum": "9",
+              "message": "'AgentCapability' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "164",
+              "colNum": "9",
+              "message": "'AgentCapability' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "223",
+              "colNum": "28",
+              "message": "'AgentType' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "226",
+              "colNum": "13",
+              "message": "'AgentType' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "228",
+              "colNum": "9",
+              "message": "'AgentCapability' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "229",
+              "colNum": "9",
+              "message": "'AgentCapability' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "230",
+              "colNum": "9",
+              "message": "'AgentCapability' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "289",
+              "colNum": "28",
+              "message": "'AgentType' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "292",
+              "colNum": "13",
+              "message": "'AgentType' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "294",
+              "colNum": "9",
+              "message": "'AgentCapability' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "295",
+              "colNum": "9",
+              "message": "'AgentCapability' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "296",
+              "colNum": "9",
+              "message": "'AgentCapability' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "355",
+              "colNum": "28",
+              "message": "'AgentType' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "358",
+              "colNum": "13",
+              "message": "'AgentType' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "359",
+              "colNum": "22",
+              "message": "'AgentCapability' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "359",
+              "colNum": "60",
+              "message": "'AgentCapability' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "417",
+              "colNum": "28",
+              "message": "'AgentType' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "420",
+              "colNum": "13",
+              "message": "'AgentType' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "422",
+              "colNum": "9",
+              "message": "'AgentCapability' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "423",
+              "colNum": "9",
+              "message": "'AgentCapability' cannot be used as a value because it was imported using 'import type'."
+            },
+            {
+              "errorCode": "TS1361",
+              "lineNum": "424",
+              "colNum": "9",
+              "message": "'AgentCapability' cannot be used as a value because it was imported using 'import type'."
+            }
+          ]
+        }
+      ],
+      "estimatedSavings": 59
+    },
+    {
+      "phase": "Phase 1B - Quick Wins (1-3 errors each)",
+      "files": [
+        {
+          "file": "src/app/api/admin/lms/materials/route.ts",
+          "errorCount": 1,
+          "errorCounts": {
+            "TS2367": 1
+          },
+          "avgDifficulty": 1,
+          "hasEasyFix": true,
+          "errors": [
+            {
+              "errorCode": "TS2367",
+              "lineNum": "20",
+              "colNum": "21",
+              "message": "This comparison appears to be unintentional because the types '\"admin\" | \"student\" | \"teacher\" | \"parent\"' and '\"ADMIN\"' have no overlap."
+            }
+          ]
+        },
+        {
+          "file": "src/app/api/admin/lms/upload/route.ts",
+          "errorCount": 1,
+          "errorCounts": {
+            "TS2367": 1
+          },
+          "avgDifficulty": 1,
+          "hasEasyFix": true,
+          "errors": [
+            {
+              "errorCode": "TS2367",
+              "lineNum": "42",
+              "colNum": "21",
+              "message": "This comparison appears to be unintentional because the types '\"admin\" | \"student\" | \"teacher\" | \"parent\"' and '\"ADMIN\"' have no overlap."
+            }
+          ]
+        },
+        {
+          "file": "src/app/api/admin/lms/materials/[id]/route.ts",
+          "errorCount": 3,
+          "errorCounts": {
+            "TS2367": 3
+          },
+          "avgDifficulty": 1,
+          "hasEasyFix": true,
+          "errors": [
+            {
+              "errorCode": "TS2367",
+              "lineNum": "21",
+              "colNum": "21",
+              "message": "This comparison appears to be unintentional because the types '\"admin\" | \"student\" | \"teacher\" | \"parent\"' and '\"ADMIN\"' have no overlap."
+            },
+            {
+              "errorCode": "TS2367",
+              "lineNum": "66",
+              "colNum": "21",
+              "message": "This comparison appears to be unintentional because the types '\"admin\" | \"student\" | \"teacher\" | \"parent\"' and '\"ADMIN\"' have no overlap."
+            },
+            {
+              "errorCode": "TS2367",
+              "lineNum": "151",
+              "colNum": "21",
+              "message": "This comparison appears to be unintentional because the types '\"admin\" | \"student\" | \"teacher\" | \"parent\"' and '\"ADMIN\"' have no overlap."
+            }
+          ]
+        },
+        {
+          "file": "src/app/api/webhooks/payments/route.ts",
+          "errorCount": 1,
+          "errorCounts": {
+            "TS2304": 1
+          },
+          "avgDifficulty": 2,
+          "hasEasyFix": true,
+          "errors": [
+            {
+              "errorCode": "TS2304",
+              "lineNum": "215",
+              "colNum": "20",
+              "message": "Cannot find name 'handlePaymentRefund'."
+            }
+          ]
+        },
+        {
+          "file": "src/components/ai/AccessSettings.tsx",
+          "errorCount": 1,
+          "errorCounts": {
+            "TS2304": 1
+          },
+          "avgDifficulty": 2,
+          "hasEasyFix": true,
+          "errors": [
+            {
+              "errorCode": "TS2304",
+              "lineNum": "1584",
+              "colNum": "18",
+              "message": "Cannot find name 'RefreshCw'."
+            }
+          ]
+        },
+        {
+          "file": "src/components/ai/Distribution.tsx",
+          "errorCount": 1,
+          "errorCounts": {
+            "TS2304": 1
+          },
+          "avgDifficulty": 2,
+          "hasEasyFix": true,
+          "errors": [
+            {
+              "errorCode": "TS2304",
+              "lineNum": "1673",
+              "colNum": "12",
+              "message": "Cannot find name 'BarChart3'."
+            }
+          ]
+        },
+        {
+          "file": "src/components/analytics/QuestionTypeAnalytics.tsx",
+          "errorCount": 1,
+          "errorCounts": {
+            "TS2304": 1
+          },
+          "avgDifficulty": 2,
+          "hasEasyFix": true,
+          "errors": [
+            {
+              "errorCode": "TS2304",
+              "lineNum": "219",
+              "colNum": "30",
+              "message": "Cannot find name 'setTimeRange'."
+            }
+          ]
+        },
+        {
+          "file": "src/components/conversion/ExitIntentPopup.tsx",
+          "errorCount": 1,
+          "errorCounts": {
+            "TS2304": 1
+          },
+          "avgDifficulty": 2,
+          "hasEasyFix": true,
+          "errors": [
+            {
+              "errorCode": "TS2304",
+              "lineNum": "602",
+              "colNum": "18",
+              "message": "Cannot find name 'Shield'."
+            }
+          ]
+        },
+        {
+          "file": "src/components/courses/PremiumCerebrumCoursePage.tsx",
+          "errorCount": 1,
+          "errorCounts": {
+            "TS2305": 1
+          },
+          "avgDifficulty": 2,
+          "hasEasyFix": true,
+          "errors": [
+            {
+              "errorCode": "TS2305",
+              "lineNum": "35",
+              "colNum": "3",
+              "message": "Module '\"lucide-react\"' has no exported member 'Lightning'."
+            }
+          ]
+        },
+        {
+          "file": "src/components/examples/TrustIntegrationExample.tsx",
+          "errorCount": 1,
+          "errorCounts": {
+            "TS2305": 1
+          },
+          "avgDifficulty": 2,
+          "hasEasyFix": true,
+          "errors": [
+            {
+              "errorCode": "TS2305",
+              "lineNum": "5",
+              "colNum": "10",
+              "message": "Module '\"@/components/ui/LoadingStates\"' has no exported member 'SmartButton'."
+            }
+          ]
+        },
+        {
+          "file": "src/components/mobile/IndianMarketFeatures.tsx",
+          "errorCount": 1,
+          "errorCounts": {
+            "TS2304": 1
+          },
+          "avgDifficulty": 2,
+          "hasEasyFix": true,
+          "errors": [
+            {
+              "errorCode": "TS2304",
+              "lineNum": "372",
+              "colNum": "24",
+              "message": "Cannot find name 'BookOpen'."
+            }
+          ]
+        },
+        {
+          "file": "src/components/trust/FacultyCredentialsShowcase.tsx",
+          "errorCount": 1,
+          "errorCounts": {
+            "TS2304": 1
+          },
+          "avgDifficulty": 2,
+          "hasEasyFix": true,
+          "errors": [
+            {
+              "errorCode": "TS2304",
+              "lineNum": "461",
+              "colNum": "55",
+              "message": "Cannot find name 'User'."
+            }
+          ]
+        },
+        {
+          "file": "src/components/voice/VoiceTrainingStudio.tsx",
+          "errorCount": 1,
+          "errorCounts": {
+            "TS2305": 1
+          },
+          "avgDifficulty": 2,
+          "hasEasyFix": true,
+          "errors": [
+            {
+              "errorCode": "TS2305",
+              "lineNum": "19",
+              "colNum": "3",
+              "message": "Module '\"lucide-react\"' has no exported member 'Waveform'."
+            }
+          ]
+        },
+        {
+          "file": "src/hooks/usePricingCalculator.ts",
+          "errorCount": 1,
+          "errorCounts": {
+            "TS2304": 1
+          },
+          "avgDifficulty": 2,
+          "hasEasyFix": true,
+          "errors": [
+            {
+              "errorCode": "TS2304",
+              "lineNum": "293",
+              "colNum": "38",
+              "message": "Cannot find name 'selectionData'."
+            }
+          ]
+        },
+        {
+          "file": "src/lib/admin-schema.ts",
+          "errorCount": 1,
+          "errorCounts": {
+            "TS2305": 1
+          },
+          "avgDifficulty": 2,
+          "hasEasyFix": true,
+          "errors": [
+            {
+              "errorCode": "TS2305",
+              "lineNum": "1",
+              "colNum": "60",
+              "message": "Module '\"./db\"' has no exported member 'MarketingLead'."
+            }
+          ]
+        }
+      ],
+      "estimatedSavings": 17
+    },
+    {
+      "phase": "Phase 1C - Missing Names & Imports",
+      "files": [
+        {
+          "file": "src/app/api/webhooks/payments/route.ts",
+          "errorCount": 1,
+          "errorCounts": {
+            "TS2304": 1
+          },
+          "avgDifficulty": 2,
+          "hasEasyFix": true,
+          "errors": [
+            {
+              "errorCode": "TS2304",
+              "lineNum": "215",
+              "colNum": "20",
+              "message": "Cannot find name 'handlePaymentRefund'."
+            }
+          ]
+        },
+        {
+          "file": "src/components/ai/AccessSettings.tsx",
+          "errorCount": 1,
+          "errorCounts": {
+            "TS2304": 1
+          },
+          "avgDifficulty": 2,
+          "hasEasyFix": true,
+          "errors": [
+            {
+              "errorCode": "TS2304",
+              "lineNum": "1584",
+              "colNum": "18",
+              "message": "Cannot find name 'RefreshCw'."
+            }
+          ]
+        },
+        {
+          "file": "src/components/ai/Distribution.tsx",
+          "errorCount": 1,
+          "errorCounts": {
+            "TS2304": 1
+          },
+          "avgDifficulty": 2,
+          "hasEasyFix": true,
+          "errors": [
+            {
+              "errorCode": "TS2304",
+              "lineNum": "1673",
+              "colNum": "12",
+              "message": "Cannot find name 'BarChart3'."
+            }
+          ]
+        },
+        {
+          "file": "src/components/analytics/QuestionTypeAnalytics.tsx",
+          "errorCount": 1,
+          "errorCounts": {
+            "TS2304": 1
+          },
+          "avgDifficulty": 2,
+          "hasEasyFix": true,
+          "errors": [
+            {
+              "errorCode": "TS2304",
+              "lineNum": "219",
+              "colNum": "30",
+              "message": "Cannot find name 'setTimeRange'."
+            }
+          ]
+        },
+        {
+          "file": "src/components/conversion/ExitIntentPopup.tsx",
+          "errorCount": 1,
+          "errorCounts": {
+            "TS2304": 1
+          },
+          "avgDifficulty": 2,
+          "hasEasyFix": true,
+          "errors": [
+            {
+              "errorCode": "TS2304",
+              "lineNum": "602",
+              "colNum": "18",
+              "message": "Cannot find name 'Shield'."
+            }
+          ]
+        },
+        {
+          "file": "src/components/mobile/IndianMarketFeatures.tsx",
+          "errorCount": 1,
+          "errorCounts": {
+            "TS2304": 1
+          },
+          "avgDifficulty": 2,
+          "hasEasyFix": true,
+          "errors": [
+            {
+              "errorCode": "TS2304",
+              "lineNum": "372",
+              "colNum": "24",
+              "message": "Cannot find name 'BookOpen'."
+            }
+          ]
+        },
+        {
+          "file": "src/components/trust/FacultyCredentialsShowcase.tsx",
+          "errorCount": 1,
+          "errorCounts": {
+            "TS2304": 1
+          },
+          "avgDifficulty": 2,
+          "hasEasyFix": true,
+          "errors": [
+            {
+              "errorCode": "TS2304",
+              "lineNum": "461",
+              "colNum": "55",
+              "message": "Cannot find name 'User'."
+            }
+          ]
+        },
+        {
+          "file": "src/hooks/usePricingCalculator.ts",
+          "errorCount": 1,
+          "errorCounts": {
+            "TS2304": 1
+          },
+          "avgDifficulty": 2,
+          "hasEasyFix": true,
+          "errors": [
+            {
+              "errorCode": "TS2304",
+              "lineNum": "293",
+              "colNum": "38",
+              "message": "Cannot find name 'selectionData'."
+            }
+          ]
+        },
+        {
+          "file": "src/lib/ai/cost-optimization/IntelligentCacheEngine.ts",
+          "errorCount": 1,
+          "errorCounts": {
+            "TS2304": 1
+          },
+          "avgDifficulty": 2,
+          "hasEasyFix": true,
+          "errors": [
+            {
+              "errorCode": "TS2304",
+              "lineNum": "47",
+              "colNum": "18",
+              "message": "Cannot find name 'Redis'."
+            }
+          ]
+        },
+        {
+          "file": "src/lib/ai/gateway/ErrorHandlingManager.ts",
+          "errorCount": 1,
+          "errorCounts": {
+            "TS2304": 1
+          },
+          "avgDifficulty": 2,
+          "hasEasyFix": true,
+          "errors": [
+            {
+              "errorCode": "TS2304",
+              "lineNum": "51",
+              "colNum": "18",
+              "message": "Cannot find name 'Redis'."
+            }
+          ]
+        }
+      ],
+      "estimatedSavings": 10
+    }
+  ],
+  "totalQuickWins": 86
+}

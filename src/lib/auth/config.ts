@@ -4,7 +4,7 @@ import { validateAdminSession, AdminSession } from './admin-auth'
 import jwt from 'jsonwebtoken'
 import bcrypt from 'bcryptjs'
 import { prisma } from '@/lib/prisma'
-import { User, UserRole } from '@/generated/prisma'
+import type { User, UserRole } from '@/generated/prisma'
 import { cookies } from 'next/headers'
 
 // Environment variables validation

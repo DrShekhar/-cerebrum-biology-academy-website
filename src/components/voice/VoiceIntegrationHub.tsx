@@ -13,7 +13,6 @@ import {
   RotateCcw,
   Settings,
   Languages,
-  Waveform,
   Brain,
   Headphones,
   MessageSquare,
@@ -29,7 +28,7 @@ import {
   Heart,
   Zap,
   Users,
-  Star
+  Star,
 } from 'lucide-react'
 
 interface VoiceSettings {
@@ -72,7 +71,9 @@ interface VoiceLearningSession {
 }
 
 const VoiceIntegrationHub: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'chat' | 'practice' | 'pronunciation' | 'analytics' | 'settings'>('chat')
+  const [activeTab, setActiveTab] = useState<
+    'chat' | 'practice' | 'pronunciation' | 'analytics' | 'settings'
+  >('chat')
   const [isListening, setIsListening] = useState(false)
   const [isSpeaking, setIsSpeaking] = useState(false)
   const [conversation, setConversation] = useState<ConversationEntry[]>([])
@@ -83,7 +84,7 @@ const VoiceIntegrationHub: React.FC = () => {
     speed: 1.0,
     pitch: 1.0,
     volume: 0.8,
-    pronunciation: 'hinglish'
+    pronunciation: 'hinglish',
   })
   const [session, setSession] = useState<VoiceLearningSession | null>(null)
   const [isSupported, setIsSupported] = useState(true)
@@ -103,17 +104,17 @@ const VoiceIntegrationHub: React.FC = () => {
         'Tell me about mitochondria in Hindi',
         'Explain photosynthesis process',
         'What is the function of nucleus?',
-        'Describe cellular respiration'
-      ]
+        'Describe cellular respiration',
+      ],
     },
     {
       category: 'genetics',
       prompts: [
-        'What are Mendel\'s laws?',
+        "What are Mendel's laws?",
         'Explain DNA structure',
         'How does inheritance work?',
-        'What are chromosomes?'
-      ]
+        'What are chromosomes?',
+      ],
     },
     {
       category: 'human-physiology',
@@ -121,9 +122,9 @@ const VoiceIntegrationHub: React.FC = () => {
         'How does the heart work?',
         'Explain digestion process',
         'What is nervous system?',
-        'How do we breathe?'
-      ]
-    }
+        'How do we breathe?',
+      ],
+    },
   ]
 
   const pronunciationChallenges = [
@@ -131,7 +132,7 @@ const VoiceIntegrationHub: React.FC = () => {
     { term: 'photosynthesis', phonetic: '/ˌfoʊtoʊˈsɪnθəsɪs/', hindi: 'प्रकाश संश्लेषण' },
     { term: 'chromosome', phonetic: '/ˈkroʊməˌsoʊm/', hindi: 'गुणसूत्र' },
     { term: 'ecosystem', phonetic: '/ˈiːkoʊˌsɪstəm/', hindi: 'पारिस्थितिकी तंत्र' },
-    { term: 'respiration', phonetic: '/ˌrɛspəˈreɪʃən/', hindi: 'श्वसन' }
+    { term: 'respiration', phonetic: '/ˌrɛspəˈreɪʃən/', hindi: 'श्वसन' },
   ]
 
   useEffect(() => {
@@ -167,7 +168,7 @@ const VoiceIntegrationHub: React.FC = () => {
 
       recognitionRef.current.onresult = (event) => {
         const transcript = Array.from(event.results)
-          .map(result => result[0].transcript)
+          .map((result) => result[0].transcript)
           .join('')
 
         const confidence = event.results[event.results.length - 1][0].confidence
@@ -207,7 +208,7 @@ const VoiceIntegrationHub: React.FC = () => {
       questionsAsked: 0,
       correctAnswers: 0,
       voiceInteractions: 0,
-      languageMix: { english: 0, hindi: 0, hinglish: 0 }
+      languageMix: { english: 0, hindi: 0, hinglish: 0 },
     }
     setSession(newSession)
   }
@@ -223,10 +224,10 @@ const VoiceIntegrationHub: React.FC = () => {
       content: transcript,
       timestamp: Date.now(),
       confidence,
-      biologyTerms: response.biologyTerms
+      biologyTerms: response.biologyTerms,
     }
 
-    setConversation(prev => [...prev, userEntry])
+    setConversation((prev) => [...prev, userEntry])
 
     // Generate AI response
     const aiResponse = await generateAIResponse(response)
@@ -236,10 +237,10 @@ const VoiceIntegrationHub: React.FC = () => {
       id: `ai_${Date.now()}`,
       type: 'ai',
       content: aiResponse,
-      timestamp: Date.now()
+      timestamp: Date.now(),
     }
 
-    setConversation(prev => [...prev, aiEntry])
+    setConversation((prev) => [...prev, aiEntry])
 
     // Speak the response
     await speakText(aiResponse)
@@ -248,7 +249,10 @@ const VoiceIntegrationHub: React.FC = () => {
     updateSessionStats(response)
   }
 
-  const processVoiceInput = async (transcript: string, confidence: number): Promise<VoiceResponse> => {
+  const processVoiceInput = async (
+    transcript: string,
+    confidence: number
+  ): Promise<VoiceResponse> => {
     // Detect biology terms
     const biologyTerms = detectBiologyTerms(transcript)
 
@@ -267,22 +271,58 @@ const VoiceIntegrationHub: React.FC = () => {
       language,
       biologyTerms,
       intent,
-      sentiment
+      sentiment,
     }
   }
 
   const detectBiologyTerms = (text: string): string[] => {
     const terms = [
-      'cell', 'nucleus', 'mitochondria', 'DNA', 'RNA', 'protein', 'gene', 'chromosome',
-      'photosynthesis', 'respiration', 'enzyme', 'hormone', 'neuron', 'muscle',
-      'heart', 'kidney', 'liver', 'brain', 'blood', 'oxygen', 'carbon dioxide',
-      'metabolism', 'ecology', 'evolution', 'species', 'organism', 'bacteria',
-      'virus', 'immunity', 'antibody', 'vaccine', 'genetic', 'heredity'
+      'cell',
+      'nucleus',
+      'mitochondria',
+      'DNA',
+      'RNA',
+      'protein',
+      'gene',
+      'chromosome',
+      'photosynthesis',
+      'respiration',
+      'enzyme',
+      'hormone',
+      'neuron',
+      'muscle',
+      'heart',
+      'kidney',
+      'liver',
+      'brain',
+      'blood',
+      'oxygen',
+      'carbon dioxide',
+      'metabolism',
+      'ecology',
+      'evolution',
+      'species',
+      'organism',
+      'bacteria',
+      'virus',
+      'immunity',
+      'antibody',
+      'vaccine',
+      'genetic',
+      'heredity',
     ]
 
     const hindiTerms = [
-      'कोशिका', 'केंद्रक', 'प्रकाश संश्लेषण', 'श्वसन', 'रक्त', 'हृदय',
-      'गुणसूत्र', 'पारिस्थितिकी', 'जीन', 'हार्मोन'
+      'कोशिका',
+      'केंद्रक',
+      'प्रकाश संश्लेषण',
+      'श्वसन',
+      'रक्त',
+      'हृदय',
+      'गुणसूत्र',
+      'पारिस्थितिकी',
+      'जीन',
+      'हार्मोन',
     ]
 
     const foundTerms = []
@@ -309,30 +349,43 @@ const VoiceIntegrationHub: React.FC = () => {
     return 'english'
   }
 
-  const determineIntent = (text: string): 'question' | 'answer' | 'help' | 'repeat' | 'explanation' => {
-    const questionWords = ['what', 'how', 'why', 'when', 'where', 'क्या', 'कैसे', 'क्यों', 'कब', 'कहाँ']
+  const determineIntent = (
+    text: string
+  ): 'question' | 'answer' | 'help' | 'repeat' | 'explanation' => {
+    const questionWords = [
+      'what',
+      'how',
+      'why',
+      'when',
+      'where',
+      'क्या',
+      'कैसे',
+      'क्यों',
+      'कब',
+      'कहाँ',
+    ]
     const helpWords = ['help', 'मदद', 'explain', 'समझाओ', 'बताओ']
     const repeatWords = ['repeat', 'again', 'फिर से', 'दोबारा']
 
     const lowerText = text.toLowerCase()
 
-    if (questionWords.some(word => lowerText.includes(word))) return 'question'
-    if (helpWords.some(word => lowerText.includes(word))) return 'help'
-    if (repeatWords.some(word => lowerText.includes(word))) return 'repeat'
+    if (questionWords.some((word) => lowerText.includes(word))) return 'question'
+    if (helpWords.some((word) => lowerText.includes(word))) return 'help'
+    if (repeatWords.some((word) => lowerText.includes(word))) return 'repeat'
 
     return 'answer'
   }
 
   const analyzeSentiment = (text: string): 'positive' | 'neutral' | 'confused' | 'frustrated' => {
     const positiveWords = ['good', 'great', 'thanks', 'yes', 'correct', 'अच्छा', 'धन्यवाद', 'हाँ']
-    const confusedWords = ['confused', 'don\'t understand', 'समझ नहीं आया', 'confused हूं']
-    const frustratedWords = ['difficult', 'hard', 'can\'t', 'मुश्किल', 'नहीं आता']
+    const confusedWords = ['confused', "don't understand", 'समझ नहीं आया', 'confused हूं']
+    const frustratedWords = ['difficult', 'hard', "can't", 'मुश्किल', 'नहीं आता']
 
     const lowerText = text.toLowerCase()
 
-    if (positiveWords.some(word => lowerText.includes(word))) return 'positive'
-    if (confusedWords.some(word => lowerText.includes(word))) return 'confused'
-    if (frustratedWords.some(word => lowerText.includes(word))) return 'frustrated'
+    if (positiveWords.some((word) => lowerText.includes(word))) return 'positive'
+    if (confusedWords.some((word) => lowerText.includes(word))) return 'confused'
+    if (frustratedWords.some((word) => lowerText.includes(word))) return 'frustrated'
 
     return 'neutral'
   }
@@ -342,19 +395,19 @@ const VoiceIntegrationHub: React.FC = () => {
     const responses = {
       question: [
         "That's a great question about biology! Let me explain...",
-        "Interesting question! In biology, this concept is important because...",
-        "Good question! यह biology में बहुत important topic है..."
+        'Interesting question! In biology, this concept is important because...',
+        'Good question! यह biology में बहुत important topic है...',
       ],
       help: [
         "I'm here to help you with biology! What specifically would you like to know?",
         "Of course! Biology can be tricky, but let's break it down...",
-        "मैं आपकी biology में मदद करूंगा! क्या समझना चाहते हैं?"
+        'मैं आपकी biology में मदद करूंगा! क्या समझना चाहते हैं?',
       ],
       confused: [
         "Don't worry, biology concepts can be confusing at first. Let me explain it differently...",
-        "No problem! यह concept थोड़ा tricky है, मैं आसान तरीके से समझाता हूं...",
-        "It's okay to be confused. Let's approach this step by step..."
-      ]
+        'No problem! यह concept थोड़ा tricky है, मैं आसान तरीके से समझाता हूं...',
+        "It's okay to be confused. Let's approach this step by step...",
+      ],
     }
 
     const category = voiceResponse.sentiment === 'confused' ? 'confused' : voiceResponse.intent
@@ -377,9 +430,10 @@ const VoiceIntegrationHub: React.FC = () => {
 
       // Find appropriate voice
       const voices = synthesisRef.current!.getVoices()
-      const preferredVoice = voices.find(voice =>
-        voice.lang.includes(voiceSettings.language.split('-')[0]) &&
-        (voiceSettings.voice === 'female' ? voice.name.includes('female') : true)
+      const preferredVoice = voices.find(
+        (voice) =>
+          voice.lang.includes(voiceSettings.language.split('-')[0]) &&
+          (voiceSettings.voice === 'female' ? voice.name.includes('female') : true)
       )
 
       if (preferredVoice) {
@@ -404,7 +458,7 @@ const VoiceIntegrationHub: React.FC = () => {
   const updateSessionStats = (response: VoiceResponse) => {
     if (!session) return
 
-    setSession(prev => {
+    setSession((prev) => {
       if (!prev) return null
 
       const languageUpdate = { ...prev.languageMix }
@@ -416,7 +470,7 @@ const VoiceIntegrationHub: React.FC = () => {
         ...prev,
         voiceInteractions: prev.voiceInteractions + 1,
         languageMix: languageUpdate,
-        duration: Date.now() - prev.startTime
+        duration: Date.now() - prev.startTime,
       }
     })
   }
@@ -459,7 +513,8 @@ const VoiceIntegrationHub: React.FC = () => {
           <AlertCircle className="w-12 h-12 text-red-500 mx-auto mb-4" />
           <h3 className="text-lg font-semibold text-red-700 mb-2">Voice Features Not Supported</h3>
           <p className="text-red-600">
-            Your browser doesn't support voice recognition and synthesis. Please use Chrome, Safari, or Edge.
+            Your browser doesn't support voice recognition and synthesis. Please use Chrome, Safari,
+            or Edge.
           </p>
         </div>
       </div>
@@ -483,7 +538,8 @@ const VoiceIntegrationHub: React.FC = () => {
           </h1>
         </div>
         <p className="text-gray-600 max-w-3xl mx-auto">
-          Interactive voice-powered biology learning with multi-language support, pronunciation practice, and AI-driven conversations.
+          Interactive voice-powered biology learning with multi-language support, pronunciation
+          practice, and AI-driven conversations.
         </p>
       </motion.div>
 
@@ -505,7 +561,11 @@ const VoiceIntegrationHub: React.FC = () => {
           </motion.button>
 
           <motion.button
-            onClick={isSpeaking ? stopSpeaking : () => speakText("Hello! I'm ready to help you learn biology.")}
+            onClick={
+              isSpeaking
+                ? stopSpeaking
+                : () => speakText("Hello! I'm ready to help you learn biology.")
+            }
             disabled={isListening}
             className={`p-4 rounded-full shadow-lg transition-all ${
               isSpeaking
@@ -520,7 +580,9 @@ const VoiceIntegrationHub: React.FC = () => {
 
           <div className="flex items-center gap-2 text-sm text-gray-600">
             <Languages className="w-4 h-4" />
-            <span>{voiceSettings.language} • {voiceSettings.pronunciation}</span>
+            <span>
+              {voiceSettings.language} • {voiceSettings.pronunciation}
+            </span>
           </div>
         </div>
 
@@ -535,7 +597,7 @@ const VoiceIntegrationHub: React.FC = () => {
                 animate={{ scale: [1, 1.2, 1] }}
                 transition={{ duration: 1, repeat: Infinity }}
               >
-                <Waveform className="w-5 h-5" />
+                <Volume2 className="w-5 h-5" />
               </motion.div>
               <span className="text-sm">Listening for your voice...</span>
             </div>
@@ -569,7 +631,7 @@ const VoiceIntegrationHub: React.FC = () => {
             { id: 'practice', label: 'Practice', icon: Target },
             { id: 'pronunciation', label: 'Pronunciation', icon: Languages },
             { id: 'analytics', label: 'Analytics', icon: Brain },
-            { id: 'settings', label: 'Settings', icon: Settings }
+            { id: 'settings', label: 'Settings', icon: Settings },
           ].map(({ id, label, icon: Icon }) => (
             <button
               key={id}
@@ -608,7 +670,9 @@ const VoiceIntegrationHub: React.FC = () => {
                 <div className="text-center py-8 text-gray-500">
                   <Headphones className="w-12 h-12 mx-auto mb-4 text-gray-300" />
                   <p>Start a conversation by clicking the microphone</p>
-                  <p className="text-sm mt-2">Try asking: "What is photosynthesis?" or "फोटोसिंथेसिस क्या है?"</p>
+                  <p className="text-sm mt-2">
+                    Try asking: "What is photosynthesis?" or "फोटोसिंथेसिस क्या है?"
+                  </p>
                 </div>
               ) : (
                 conversation.map((entry) => (
@@ -636,7 +700,10 @@ const VoiceIntegrationHub: React.FC = () => {
                           <p className="text-xs opacity-75">Biology terms detected:</p>
                           <div className="flex flex-wrap gap-1 mt-1">
                             {entry.biologyTerms.map((term, index) => (
-                              <span key={index} className="text-xs bg-blue-700 text-white px-2 py-1 rounded">
+                              <span
+                                key={index}
+                                className="text-xs bg-blue-700 text-white px-2 py-1 rounded"
+                              >
                                 {term}
                               </span>
                             ))}
@@ -653,17 +720,18 @@ const VoiceIntegrationHub: React.FC = () => {
             <div className="border-t pt-4">
               <h4 className="text-sm font-medium text-gray-700 mb-2">Quick Biology Topics:</h4>
               <div className="flex flex-wrap gap-2">
-                {biologyPrompts.slice(0, 2).flatMap(category =>
-                  category.prompts.slice(0, 2)
-                ).map((prompt, index) => (
-                  <button
-                    key={index}
-                    onClick={() => speakText(prompt)}
-                    className="text-xs px-3 py-1 bg-blue-100 text-blue-700 rounded-full hover:bg-blue-200 transition-colors"
-                  >
-                    {prompt}
-                  </button>
-                ))}
+                {biologyPrompts
+                  .slice(0, 2)
+                  .flatMap((category) => category.prompts.slice(0, 2))
+                  .map((prompt, index) => (
+                    <button
+                      key={index}
+                      onClick={() => speakText(prompt)}
+                      className="text-xs px-3 py-1 bg-blue-100 text-blue-700 rounded-full hover:bg-blue-200 transition-colors"
+                    >
+                      {prompt}
+                    </button>
+                  ))}
               </div>
             </div>
           </motion.div>
@@ -737,7 +805,9 @@ const VoiceIntegrationHub: React.FC = () => {
 
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                   <div className="text-center p-4 bg-blue-50 rounded-lg">
-                    <div className="text-2xl font-bold text-blue-600">{session.voiceInteractions}</div>
+                    <div className="text-2xl font-bold text-blue-600">
+                      {session.voiceInteractions}
+                    </div>
                     <div className="text-sm text-blue-600">Voice Interactions</div>
                   </div>
                   <div className="text-center p-4 bg-green-50 rounded-lg">
@@ -747,12 +817,17 @@ const VoiceIntegrationHub: React.FC = () => {
                     <div className="text-sm text-green-600">Session Duration</div>
                   </div>
                   <div className="text-center p-4 bg-purple-50 rounded-lg">
-                    <div className="text-2xl font-bold text-purple-600">{session.questionsAsked}</div>
+                    <div className="text-2xl font-bold text-purple-600">
+                      {session.questionsAsked}
+                    </div>
                     <div className="text-sm text-purple-600">Questions Asked</div>
                   </div>
                   <div className="text-center p-4 bg-orange-50 rounded-lg">
                     <div className="text-2xl font-bold text-orange-600">
-                      {session.questionsAsked > 0 ? Math.round((session.correctAnswers / session.questionsAsked) * 100) : 0}%
+                      {session.questionsAsked > 0
+                        ? Math.round((session.correctAnswers / session.questionsAsked) * 100)
+                        : 0}
+                      %
                     </div>
                     <div className="text-sm text-orange-600">Accuracy</div>
                   </div>
@@ -768,7 +843,7 @@ const VoiceIntegrationHub: React.FC = () => {
                           <div
                             className="bg-blue-600 h-2 rounded-full"
                             style={{
-                              width: `${session.languageMix.english / Math.max(session.voiceInteractions, 1) * 100}%`
+                              width: `${(session.languageMix.english / Math.max(session.voiceInteractions, 1)) * 100}%`,
                             }}
                           />
                         </div>
@@ -784,7 +859,7 @@ const VoiceIntegrationHub: React.FC = () => {
                           <div
                             className="bg-green-600 h-2 rounded-full"
                             style={{
-                              width: `${session.languageMix.hindi / Math.max(session.voiceInteractions, 1) * 100}%`
+                              width: `${(session.languageMix.hindi / Math.max(session.voiceInteractions, 1)) * 100}%`,
                             }}
                           />
                         </div>
@@ -800,7 +875,7 @@ const VoiceIntegrationHub: React.FC = () => {
                           <div
                             className="bg-purple-600 h-2 rounded-full"
                             style={{
-                              width: `${session.languageMix.hinglish / Math.max(session.voiceInteractions, 1) * 100}%`
+                              width: `${(session.languageMix.hinglish / Math.max(session.voiceInteractions, 1)) * 100}%`,
                             }}
                           />
                         </div>
@@ -833,12 +908,12 @@ const VoiceIntegrationHub: React.FC = () => {
 
               <div className="space-y-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Language
-                  </label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Language</label>
                   <select
                     value={voiceSettings.language}
-                    onChange={(e) => setVoiceSettings(prev => ({ ...prev, language: e.target.value as any }))}
+                    onChange={(e) =>
+                      setVoiceSettings((prev) => ({ ...prev, language: e.target.value as any }))
+                    }
                     className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   >
                     <option value="en-IN">English (India)</option>
@@ -848,12 +923,12 @@ const VoiceIntegrationHub: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Voice Type
-                  </label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Voice Type</label>
                   <select
                     value={voiceSettings.voice}
-                    onChange={(e) => setVoiceSettings(prev => ({ ...prev, voice: e.target.value as any }))}
+                    onChange={(e) =>
+                      setVoiceSettings((prev) => ({ ...prev, voice: e.target.value as any }))
+                    }
                     className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   >
                     <option value="shekhar">Shekhar Sir (AI)</option>
@@ -872,7 +947,9 @@ const VoiceIntegrationHub: React.FC = () => {
                     max="2.0"
                     step="0.1"
                     value={voiceSettings.speed}
-                    onChange={(e) => setVoiceSettings(prev => ({ ...prev, speed: parseFloat(e.target.value) }))}
+                    onChange={(e) =>
+                      setVoiceSettings((prev) => ({ ...prev, speed: parseFloat(e.target.value) }))
+                    }
                     className="w-full"
                   />
                 </div>
@@ -887,7 +964,9 @@ const VoiceIntegrationHub: React.FC = () => {
                     max="2.0"
                     step="0.1"
                     value={voiceSettings.pitch}
-                    onChange={(e) => setVoiceSettings(prev => ({ ...prev, pitch: parseFloat(e.target.value) }))}
+                    onChange={(e) =>
+                      setVoiceSettings((prev) => ({ ...prev, pitch: parseFloat(e.target.value) }))
+                    }
                     className="w-full"
                   />
                 </div>
@@ -902,7 +981,9 @@ const VoiceIntegrationHub: React.FC = () => {
                     max="1.0"
                     step="0.1"
                     value={voiceSettings.volume}
-                    onChange={(e) => setVoiceSettings(prev => ({ ...prev, volume: parseFloat(e.target.value) }))}
+                    onChange={(e) =>
+                      setVoiceSettings((prev) => ({ ...prev, volume: parseFloat(e.target.value) }))
+                    }
                     className="w-full"
                   />
                 </div>
@@ -918,7 +999,12 @@ const VoiceIntegrationHub: React.FC = () => {
                   </label>
                   <select
                     value={voiceSettings.pronunciation}
-                    onChange={(e) => setVoiceSettings(prev => ({ ...prev, pronunciation: e.target.value as any }))}
+                    onChange={(e) =>
+                      setVoiceSettings((prev) => ({
+                        ...prev,
+                        pronunciation: e.target.value as any,
+                      }))
+                    }
                     className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   >
                     <option value="standard">Standard</option>

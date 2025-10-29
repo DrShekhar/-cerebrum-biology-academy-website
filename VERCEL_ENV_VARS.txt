@@ -1,0 +1,105 @@
+# ============================================
+# VERCEL ENVIRONMENT VARIABLES - COPY-PASTE READY
+# ============================================
+# Copy each variable below into Vercel Dashboard
+# For each variable: Environment = Production + Preview + Development (unless noted)
+# ============================================
+
+# ============================================
+# 🔴 CRITICAL - DATABASE
+# ============================================
+DATABASE_URL=postgresql://postgres.auhvqhytfunmzdnccgtz:PPsE1xqV0JAdMgB3@aws-0-ap-southeast-1.pooler.supabase.com:6543/postgres
+# Environment: Production + Preview
+
+# ============================================
+# 🔴 CRITICAL - AUTHENTICATION SECRETS (Pre-generated)
+# ============================================
+AUTH_SECRET=/jyLZuV+o9B2fMWW/HWlyQKAu5Q/IrT9KhIAlny0oEk=
+# Environment: Production + Preview + Development
+
+JWT_SECRET=G8kMkhiYUjxpf6P7J3RktRMPtk5LfIuU2VA4AFeBXNY=
+# Environment: Production + Preview + Development
+
+JWT_REFRESH_SECRET=dwVdeu7nXZxqKYFl1v/tGmn489L50WGrXKbZ+xrCWtE=
+# Environment: Production + Preview + Development
+
+NEXTAUTH_SECRET=56067ceeb2568d1849c118ed0a5668e5f6829f77c3e06640ca499878f9198cd2
+# Environment: Production + Preview + Development
+
+# ============================================
+# 🔴 CRITICAL - PRODUCTION URLS
+# ============================================
+NEXTAUTH_URL=https://cerebrumbiologyacademy.com
+# Environment: Production ONLY
+
+NEXT_PUBLIC_APP_URL=https://cerebrumbiologyacademy.com
+# Environment: Production ONLY
+
+# ============================================
+# 🔴 CRITICAL - RAZORPAY (You need to get these keys)
+# ============================================
+# Get from: https://dashboard.razorpay.com/app/keys
+
+# For TESTING (Add these first):
+RAZORPAY_KEY_ID=rzp_test_YOUR_TEST_KEY_HERE
+# Environment: Preview + Development
+# Get from: Razorpay Dashboard → Test Mode → API Keys
+
+RAZORPAY_KEY_SECRET=YOUR_TEST_SECRET_HERE
+# Environment: Preview + Development
+
+NEXT_PUBLIC_RAZORPAY_KEY_ID=rzp_test_YOUR_TEST_KEY_HERE
+# Environment: Preview + Development
+# Same as RAZORPAY_KEY_ID
+
+# For PRODUCTION (Add after testing):
+# RAZORPAY_KEY_ID=rzp_live_YOUR_LIVE_KEY_HERE
+# Environment: Production
+# Get from: Razorpay Dashboard → Live Mode → API Keys
+
+# RAZORPAY_KEY_SECRET=YOUR_LIVE_SECRET_HERE
+# Environment: Production
+
+# NEXT_PUBLIC_RAZORPAY_KEY_ID=rzp_live_YOUR_LIVE_KEY_HERE
+# Environment: Production
+
+# RAZORPAY_WEBHOOK_SECRET=YOUR_WEBHOOK_SECRET_HERE
+# Environment: Production
+# Get from: Razorpay Dashboard → Webhooks → Create Webhook
+
+# ============================================
+# 🟡 OPTIONAL - SUPABASE (If using Supabase features)
+# ============================================
+NEXT_PUBLIC_SUPABASE_URL=https://auhvqhytfunmzdnccgtz.supabase.co
+# Environment: Production + Preview + Development
+
+# SUPABASE_KEY=your-supabase-anon-key-here
+# Get from: Supabase Dashboard → Settings → API → anon public key
+
+# ============================================
+# 🟡 OPTIONAL - EMAIL SERVICE (Resend/SendGrid)
+# ============================================
+# RESEND_API_KEY=re_YOUR_API_KEY
+# Get from: https://resend.com/api-keys
+
+# ============================================
+# 🟡 OPTIONAL - WHATSAPP BUSINESS API
+# ============================================
+# WHATSAPP_ACCESS_TOKEN=YOUR_TOKEN
+# WHATSAPP_PHONE_NUMBER_ID=YOUR_PHONE_ID
+# Get from: Meta Business Manager
+
+# ============================================
+# 🟡 OPTIONAL - GOOGLE ANALYTICS
+# ============================================
+# NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
+# Get from: Google Analytics Dashboard
+
+# ============================================
+# APPLICATION CONFIGURATION
+# ============================================
+NODE_ENV=production
+# Environment: Production ONLY
+
+NEXT_PUBLIC_ENVIRONMENT=production
+# Environment: Production ONLY

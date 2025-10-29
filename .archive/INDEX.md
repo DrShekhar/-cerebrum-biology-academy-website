@@ -185,5 +185,36 @@ If you need to reference an archived document or move it back to active status, 
 
 ---
 
-**Last Updated:** October 23, 2025
-**Maintained By:** Development Team
+---
+
+## 🧹 Archive Cleanup (October 28, 2025)
+
+### Duplicate Content Removed
+
+The following duplicate/redundant files were consolidated during cleanup:
+
+1. **Desktop Clone Removed** (~200MB saved)
+   - Location: `/Users/drshekhar/Desktop/DeskTop\ /cerebrum-github-clone/`
+   - Reason: Complete duplicate of active project
+   - All content preserved in main project
+
+2. **Nested Project Duplicates Removed** (~50MB saved)
+   - Removed duplicate `.specify` folders within project
+   - Removed duplicate `cerebrum-biology-academy` nested folders
+   - Single source of truth maintained
+
+3. **Deployment Documentation Consolidated**
+   - All deployment guides now in `.archive/deployment-history/`
+   - Current deployment process: See root-level docs
+   - Removed duplicates across multiple locations
+
+### Legacy Projects Archived
+
+- **cerebrum-biology-academy/** (static site) - Archived to `.archive/legacy-projects/`
+- Superseded by current Next.js implementation
+- Preserved for reference only
+
+---
+
+**Last Updated:** October 28, 2025
+**Maintained By:** Development Team & Claude Code

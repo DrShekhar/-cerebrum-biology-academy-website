@@ -1,0 +1,151 @@
+ID,Category,Test Case,Priority,Type,Expected Result,Preconditions,Test Data,Status
+TC-001,Authentication,User can access dashboard when authenticated,Critical,E2E,Dashboard loads with user data,User logged in,Valid credentials,To Do
+TC-002,Authentication,Unauthenticated user redirected to login,Critical,E2E,Redirect to /login,No auth session,N/A,To Do
+TC-003,Authentication,Session expiry handled gracefully,High,E2E,Redirect to login on expired session,Expired session cookie,Expired session,To Do
+TC-004,Loading State,Loading skeleton shows while fetching data,Medium,Unit,Brain icon + loading text visible,Dashboard mounting,isLoading=true,To Do
+TC-005,Loading State,Loading transitions to content smoothly,Medium,Integration,Smooth fade-in animation,API responds,Mock API data,To Do
+TC-006,Empty State,New user sees empty state,Critical,E2E,Welcome message + 2 CTAs,0 test attempts,New user fixture,To Do
+TC-007,Empty State,CTA buttons navigate correctly,High,E2E,/mock-tests and /practice pages load,Empty state visible,N/A,To Do
+TC-008,Header,User name displays correctly,High,Unit,Name from auth context shown,Authenticated,user.name='John Doe',To Do
+TC-009,Header,Fallback name when name missing,Medium,Unit,'Student' shown as fallback,Authenticated,user.name=null,To Do
+TC-010,Header,Current score displayed,High,Unit,Score out of 720 shown,Has test attempts,score=450,To Do
+TC-011,Header,Rank displayed,Medium,Unit,Rank number with # prefix,Has test attempts,rank=1500,To Do
+TC-012,Header,Notification bell renders,Low,Unit,Bell icon visible,Authenticated,N/A,To Do
+TC-013,Header,Settings button renders,Low,Unit,Settings icon visible,Authenticated,N/A,To Do
+TC-014,Score Card,NEET score prediction shows,High,Unit,Score/720 displayed,Has attempts,currentScore=450,To Do
+TC-015,Score Card,Target progress bar correct width,High,Unit,Bar width = (current/target)*100%,Has attempts,current=450 target=540,To Do
+TC-016,Score Card,Improvement indicator shows,Medium,Unit,+25 with up arrow,Has attempts,improvement=25,To Do
+TC-017,Score Card,Negative improvement shows,Medium,Unit,-10 with down arrow,Has attempts,improvement=-10,To Do
+TC-018,Score Card,National ranking displays,Medium,Unit,Rank and percentile,Has attempts,rank=1500 percentile=85,To Do
+TC-019,Stats Cards,Total study time calculated,High,Unit,Hours calculated from sessions,Has sessions,sessions with durations,To Do
+TC-020,Stats Cards,Session count accurate,High,Unit,Number matches sessions length,Has sessions,5 sessions,To Do
+TC-021,Stats Cards,Average score shown,High,Unit,Percentage displayed,Has attempts,avg=75%,To Do
+TC-022,Stats Cards,Improvement delta shown,Medium,Unit,+/- from last test,Has attempts,improvement=5,To Do
+TC-023,Stats Cards,Tests completed count,Medium,Unit,Number of sessions,Has sessions,count=10,To Do
+TC-024,Stats Cards,Strong areas count,Low,Unit,Number of strong areas,Has attempts,strongAreas.length=5,To Do
+TC-025,Stats Cards,National rank displays,Medium,Unit,Rank number or '-',Has attempts,rank=1500,To Do
+TC-026,Stats Cards,Percentile displays,Medium,Unit,Percentile number,Has attempts,percentile=85,To Do
+TC-027,Strong Areas,List renders with items,High,Unit,Area names with checkmarks,Has strong areas,strongAreas array,To Do
+TC-028,Strong Areas,85%+ badge shown,Medium,Unit,Green badge with percentage,Has strong areas,N/A,To Do
+TC-029,Strong Areas,Empty state handled,Medium,Unit,No crash when empty,No strong areas,strongAreas=[],To Do
+TC-030,Weak Areas,List renders with items,High,Unit,Area names with details,Has weak areas,weakAreas array,To Do
+TC-031,Weak Areas,Difficulty badges correct,High,Unit,Color-coded badges (red/yellow/green),Has weak areas,difficulty levels,To Do
+TC-032,Weak Areas,Recommended time calculated,Medium,Unit,Minutes based on difficulty,Has weak areas,difficulty + count,To Do
+TC-033,Weak Areas,Start Practice button works,High,E2E,Timer tab opens with session,Weak area visible,area name,To Do
+TC-034,Weak Areas,Limited to top 3,Medium,Unit,Only 3 areas shown in overview,5+ weak areas,weakAreas.length>3,To Do
+TC-035,Recent Activity,Sessions sorted by date,High,Unit,Most recent first,Has sessions,sessions with dates,To Do
+TC-036,Recent Activity,Correct icon for type,Medium,Unit,Study/Practice/Test icons,Has sessions,different types,To Do
+TC-037,Recent Activity,Duration in minutes,Medium,Unit,Seconds converted to minutes,Has sessions,duration=3600,To Do
+TC-038,Recent Activity,Score percentage shown,Medium,Unit,Score with % symbol,Has scored sessions,score=75,To Do
+TC-039,Recent Activity,Date formatted readable,Medium,Unit,Locale date string,Has sessions,ISO date string,To Do
+TC-040,Recent Activity,Empty state handled,Medium,Unit,No crash when empty,No sessions,recentSessions=[],To Do
+TC-041,Navigation Tabs,All 6 tabs render,Medium,Unit,Overview Progress Study WeakAreas Practice Schedule,Authenticated,N/A,To Do
+TC-042,Navigation Tabs,Active tab highlighted,Medium,Unit,Blue border on active tab,Authenticated,activeTab='overview',To Do
+TC-043,Navigation Tabs,Tab switch updates content,High,E2E,Content changes on click,Authenticated,N/A,To Do
+TC-044,Navigation Tabs,Icons display correctly,Low,Unit,Icons next to labels,Authenticated,N/A,To Do
+TC-045,Navigation Tabs,Keyboard navigation works,Medium,Accessibility,Tab/Enter switches tabs,Authenticated,N/A,To Do
+TC-046,Study Timer,Timer starts at zero,High,Unit,00:00:00 displayed,Timer visible,N/A,To Do
+TC-047,Study Timer,Timer increments per second,High,Integration,00:00:01 after 1s,Timer playing,isStudying=true,To Do
+TC-048,Study Timer,Pause stops increment,High,Integration,Timer frozen,Timer paused,N/A,To Do
+TC-049,Study Timer,Stop resets timer,High,Integration,00:00:00 after stop,Timer stopped,N/A,To Do
+TC-050,Study Timer,Time format correct,Medium,Unit,HH:MM:SS format,Any seconds value,seconds=3661,To Do
+TC-051,Study Timer,Current session name shows,Medium,Unit,Session name displayed,Session started,currentSession='Cell Bio',To Do
+TC-052,Study Timer,Start button disabled when playing,Medium,Unit,Button disabled,isStudying=true,N/A,To Do
+TC-053,Study Timer,Pause button disabled when paused,Medium,Unit,Button disabled,isStudying=false,N/A,To Do
+TC-054,API,/test-attempts returns data,Critical,Integration,200 status + attempts array,Valid userId,userId param,To Do
+TC-055,API,/test-attempts handles missing userId,High,Integration,400 status + error,No userId param,N/A,To Do
+TC-056,API,/test-attempts handles DB error,High,Integration,500 status + error,DB down,Simulate error,To Do
+TC-057,API,/test-sessions returns data,Critical,Integration,200 status + sessions array,Valid userId,userId param,To Do
+TC-058,API,/test-sessions paginates results,Medium,Integration,Respects limit parameter,Valid userId,limit=10,To Do
+TC-059,API,/test-sessions filters by date,Medium,Integration,Only sessions in range,Valid userId,startDate endDate,To Do
+TC-060,API,/analytics/performance returns data,Medium,Integration,200 status + analytics,Valid userId,userId param,To Do
+TC-061,Error Handling,Network offline shows error,High,E2E,Error message + retry button,Network offline,N/A,To Do
+TC-062,Error Handling,500 error shows message,High,E2E,User-friendly error message,API returns 500,N/A,To Do
+TC-063,Error Handling,404 shows empty state,Medium,E2E,Empty state displayed,API returns 404,N/A,To Do
+TC-064,Error Handling,Timeout shows message,High,E2E,Timeout message after 30s,API never responds,N/A,To Do
+TC-065,Error Handling,Invalid JSON handled,Medium,Integration,Error message shown,API returns invalid JSON,Malformed response,To Do
+TC-066,Error Handling,Missing fields use fallbacks,Medium,Unit,Default values shown,Missing data fields,Incomplete data,To Do
+TC-067,Error Handling,Retry button works,High,E2E,Re-fetches data,Error shown,N/A,To Do
+TC-068,Performance,Dashboard loads in <3s,Critical,Performance,Page interactive <3s,Good network,N/A,To Do
+TC-069,Performance,First Contentful Paint <1.5s,High,Performance,FCP metric <1.5s,Good network,N/A,To Do
+TC-070,Performance,Largest Contentful Paint <2.5s,High,Performance,LCP metric <2.5s,Good network,N/A,To Do
+TC-071,Performance,Time to Interactive <3.5s,High,Performance,TTI metric <3.5s,Good network,N/A,To Do
+TC-072,Performance,Total Blocking Time <200ms,Medium,Performance,TBT metric <200ms,Good network,N/A,To Do
+TC-073,Performance,Cumulative Layout Shift <0.1,Medium,Performance,CLS metric <0.1,Good network,N/A,To Do
+TC-074,Performance,No memory leaks,High,Performance,Memory stable over 1h,Extended use,N/A,To Do
+TC-075,Performance,API responses <500ms,High,Performance,p95 response time <500ms,Load test,N/A,To Do
+TC-076,Accessibility,aXe scan passes,Critical,Accessibility,0 violations,Dashboard loaded,N/A,To Do
+TC-077,Accessibility,Color contrast 4.5:1,High,Accessibility,All text meets contrast,Dashboard loaded,N/A,To Do
+TC-078,Accessibility,Keyboard navigation full,High,Accessibility,All interactive elements reachable,Dashboard loaded,N/A,To Do
+TC-079,Accessibility,Focus indicators visible,High,Accessibility,Outline on focused elements,Tab navigation,N/A,To Do
+TC-080,Accessibility,Screen reader compatible,High,Accessibility,Content announced correctly,NVDA/VoiceOver,N/A,To Do
+TC-081,Accessibility,ARIA labels present,Medium,Accessibility,All interactive elements labeled,Dashboard loaded,N/A,To Do
+TC-082,Accessibility,Alt text on images,Medium,Accessibility,All images have alt text,Dashboard loaded,N/A,To Do
+TC-083,Mobile,Layout no horizontal scroll,Critical,Responsive,scrollWidth <= clientWidth,375px width,N/A,To Do
+TC-084,Mobile,Stats cards stack vertically,High,Responsive,Single column on mobile,375px width,N/A,To Do
+TC-085,Mobile,Touch targets 44x44px min,High,Mobile,All buttons meet size,Mobile device,N/A,To Do
+TC-086,Mobile,Fonts readable 16px min,Medium,Mobile,Body text >= 16px,Mobile device,N/A,To Do
+TC-087,Mobile,Tabs scroll horizontally,Medium,Mobile,Tabs swipeable,375px width,N/A,To Do
+TC-088,Responsive,iPhone SE layout correct,High,Responsive,No layout breaks,375x667,N/A,To Do
+TC-089,Responsive,iPhone 12 Pro layout correct,High,Responsive,No layout breaks,390x844,N/A,To Do
+TC-090,Responsive,iPad layout correct,High,Responsive,No layout breaks,768x1024,N/A,To Do
+TC-091,Responsive,Desktop 1920 layout correct,High,Responsive,No layout breaks,1920x1080,N/A,To Do
+TC-092,Responsive,Images scale properly,Medium,Responsive,No distortion,All sizes,N/A,To Do
+TC-093,Browser,Chrome renders correctly,Critical,Cross-Browser,Visual consistency,Chrome latest,N/A,To Do
+TC-094,Browser,Safari renders correctly,Critical,Cross-Browser,Visual consistency,Safari latest,N/A,To Do
+TC-095,Browser,Firefox renders correctly,High,Cross-Browser,Visual consistency,Firefox latest,N/A,To Do
+TC-096,Browser,Edge renders correctly,Medium,Cross-Browser,Visual consistency,Edge latest,N/A,To Do
+TC-097,Browser,JavaScript works all browsers,High,Cross-Browser,All interactions work,All browsers,N/A,To Do
+TC-098,Browser,CSS rendering consistent,Medium,Cross-Browser,Gradients animations work,All browsers,N/A,To Do
+TC-099,Security,XSS prevented,Critical,Security,Script tags escaped,Malicious input,<script> in data,To Do
+TC-100,Security,CSRF token present,High,Security,Token in API calls,API request,N/A,To Do
+TC-101,Security,No sensitive data in console,High,Security,No passwords/tokens logged,Dashboard loaded,N/A,To Do
+TC-102,Security,HTTPS enforced,Critical,Security,All requests use HTTPS,Production env,N/A,To Do
+TC-103,Security,Session secure flags set,High,Security,httpOnly secure sameSite,Cookie inspection,N/A,To Do
+TC-104,Data Integrity,Score calculation accurate,Critical,Unit,Correct average score,Multiple attempts,scores array,To Do
+TC-105,Data Integrity,Improvement delta correct,High,Unit,Latest - previous score,2+ attempts,score history,To Do
+TC-106,Data Integrity,Strong areas extracted,High,Unit,Unique areas from attempts,Multiple attempts,attempts data,To Do
+TC-107,Data Integrity,Weak areas aggregated,High,Unit,Count and sort by frequency,Multiple attempts,attempts data,To Do
+TC-108,Data Integrity,Study time calculated,High,Unit,Sum of all durations,Multiple sessions,session durations,To Do
+TC-109,Data Integrity,Session count accurate,High,Unit,Count matches array length,Multiple sessions,sessions array,To Do
+TC-110,Data Integrity,Null values handled,Medium,Unit,No crash on null data,Incomplete data,null values,To Do
+TC-111,Edge Cases,0 test attempts handled,High,Integration,Empty state shown,New user,attempts=[],To Do
+TC-112,Edge Cases,1000+ test attempts handled,Medium,Integration,Performance maintained,Power user,1000 attempts,To Do
+TC-113,Edge Cases,Max score (720) handled,Low,Unit,Progress bar at 100%,Perfect score,score=720,To Do
+TC-114,Edge Cases,Min score (0) handled,Low,Unit,Progress bar at 0%,Zero score,score=0,To Do
+TC-115,Edge Cases,Very long names handled,Low,Unit,Text truncates gracefully,Long name,name=50 chars,To Do
+TC-116,Edge Cases,Special chars in names,Low,Unit,Displays correctly,Special chars,name with emoji,To Do
+TC-117,Edge Cases,Future date handled,Low,Unit,No crash,Future session,date > now,To Do
+TC-118,Edge Cases,Very old date handled,Low,Unit,Date formats correctly,Old session,date < 2020,To Do
+TC-119,User Journey,First-time user flow,Critical,E2E,Empty state to first test,New account,New user fixture,To Do
+TC-120,User Journey,Returning user flow,Critical,E2E,Login to full dashboard,Existing account,Active user fixture,To Do
+TC-121,User Journey,High performer flow,High,E2E,Achievements highlighted,High score,High performer fixture,To Do
+TC-122,User Journey,Struggling student flow,High,E2E,Support and weak areas,Low score,Struggling fixture,To Do
+TC-123,User Journey,Tab navigation flow,Medium,E2E,Switch between all tabs,Authenticated,N/A,To Do
+TC-124,User Journey,Start study session flow,High,E2E,From weak area to timer,Weak areas present,N/A,To Do
+TC-125,User Journey,Take practice test flow,High,E2E,Dashboard to mock test page,Authenticated,N/A,To Do
+TC-126,Visual Regression,Desktop overview screenshot,Medium,Visual,No pixel diff >100,1920x1080,Baseline image,To Do
+TC-127,Visual Regression,Mobile overview screenshot,Medium,Visual,No pixel diff >50,375x667,Baseline image,To Do
+TC-128,Visual Regression,Tablet overview screenshot,Medium,Visual,No pixel diff >50,768x1024,Baseline image,To Do
+TC-129,Visual Regression,Empty state screenshot,Medium,Visual,Matches baseline,Empty state,Baseline image,To Do
+TC-130,Visual Regression,Loading state screenshot,Low,Visual,Matches baseline,Loading state,Baseline image,To Do
+TC-131,Load Testing,1000 concurrent users,High,Load,Error rate <1%,Load test env,1000 users,To Do
+TC-132,Load Testing,Response time under load,High,Load,p95 <1s,Load test env,100 req/s,To Do
+TC-133,Load Testing,No server crashes,Critical,Load,All requests handled,Load test env,Sustained load,To Do
+TC-134,Load Testing,Memory usage stable,High,Load,No memory leaks,Load test env,1h test,To Do
+TC-135,Load Testing,CPU usage reasonable,Medium,Load,CPU <80%,Load test env,Sustained load,To Do
+TC-136,Integration,Guest user ID generated,High,Integration,freeUserId in localStorage,Not authenticated,N/A,To Do
+TC-137,Integration,Guest user ID persists,High,Integration,Same ID on refresh,Guest user,N/A,To Do
+TC-138,Integration,Auth user uses real ID,High,Integration,user.id used not freeUserId,Authenticated,N/A,To Do
+TC-139,Integration,Multiple API calls parallel,Medium,Integration,Both complete successfully,Dashboard mount,N/A,To Do
+TC-140,Integration,API failure doesn't block render,High,Integration,Partial data shown,One API fails,N/A,To Do
+TC-141,State Management,activeTab state updates,Medium,Unit,State changes on click,Tab switch,N/A,To Do
+TC-142,State Management,studyTimer increments,High,Unit,State +1 per second,Timer running,N/A,To Do
+TC-143,State Management,isStudying toggles,Medium,Unit,Boolean flips,Play/pause click,N/A,To Do
+TC-144,State Management,currentSession updates,Medium,Unit,String changes,Start session click,N/A,To Do
+TC-145,State Management,isLoading transitions,High,Unit,true -> false after fetch,Mount component,N/A,To Do
+TC-146,State Management,freeUserId set once,Medium,Unit,No regeneration on re-render,Multiple renders,N/A,To Do
+TC-147,State Management,neetProgress updates,High,Unit,Object merges data,API response,N/A,To Do
+TC-148,State Management,recentSessions populated,High,Unit,Array filled from API,API response,N/A,To Do
+TC-149,Cleanup,Timer cleared on unmount,Medium,Unit,clearInterval called,Component unmounts,N/A,To Do
+TC-150,Cleanup,No state updates after unmount,Medium,Unit,No warnings in console,Component unmounts,N/A,To Do

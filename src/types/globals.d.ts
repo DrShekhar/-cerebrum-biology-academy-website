@@ -56,6 +56,16 @@ declare global {
       toBeInTheDocument(): R
     }
   }
+
+  // Google Analytics gtag
+  interface Window {
+    gtag: (...args: any[]) => void
+    dataLayer: any[]
+  }
+
+  // Google Analytics gtag function (can be undefined on server)
+  function gtag(...args: any[]): void
+  var gtag: ((...args: any[]) => void) | undefined
 }
 
 export {}

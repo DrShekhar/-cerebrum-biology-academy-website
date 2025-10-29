@@ -32,7 +32,6 @@ import {
   Play,
   GraduationCap,
   Brain,
-  Lightning,
   Sparkles,
   Microscope,
   FlaskConical,

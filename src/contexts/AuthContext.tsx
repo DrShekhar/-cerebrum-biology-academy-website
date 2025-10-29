@@ -1,7 +1,7 @@
 'use client'
 
 import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react'
-import { UserRole } from '@/generated/prisma'
+import type { UserRole } from '@/generated/prisma'
 
 export interface User {
   id: string
@@ -17,7 +17,11 @@ export interface AuthContextType {
   user: User | null
   isLoading: boolean
   isAuthenticated: boolean
-  login: (email: string, password: string, rememberMe?: boolean) => Promise<{ success: boolean; error?: string }>
+  login: (
+    email: string,
+    password: string,
+    rememberMe?: boolean
+  ) => Promise<{ success: boolean; error?: string }>
   signup: (userData: SignupData) => Promise<{ success: boolean; error?: string }>
   logout: () => Promise<void>
   refreshToken: () => Promise<boolean>
@@ -68,9 +72,12 @@ export function AuthProvider({ children }: AuthProviderProps) {
   // Auto-refresh tokens
   useEffect(() => {
     if (user) {
-      const interval = setInterval(() => {
-        refreshToken()
-      }, 14 * 60 * 1000) // Refresh every 14 minutes
+      const interval = setInterval(
+        () => {
+          refreshToken()
+        },
+        14 * 60 * 1000
+      ) // Refresh every 14 minutes
 
       return () => clearInterval(interval)
     }
@@ -83,7 +90,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
       // Check if we have valid tokens
       const response = await fetch('/api/auth/refresh', {
         method: 'GET',
-        credentials: 'include'
+        credentials: 'include',
       })
 
       if (response.ok) {
@@ -108,7 +115,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ email, password, rememberMe }),
-        credentials: 'include'
+        credentials: 'include',
       })
 
       const data = await response.json()
@@ -134,7 +141,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(userData),
-        credentials: 'include'
+        credentials: 'include',
       })
 
       const data = await response.json()
@@ -156,7 +163,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
     try {
       await fetch('/api/auth/logout', {
         method: 'POST',
-        credentials: 'include'
+        credentials: 'include',
       })
     } catch (error) {
       console.error('Logout error:', error)
@@ -170,7 +177,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
     try {
       const response = await fetch('/api/auth/refresh', {
         method: 'POST',
-        credentials: 'include'
+        credentials: 'include',
       })
 
       if (response.ok) {
@@ -202,7 +209,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(profileData),
-        credentials: 'include'
+        credentials: 'include',
       })
 
       const data = await response.json()
@@ -240,14 +247,10 @@ export function AuthProvider({ children }: AuthProviderProps) {
     updateProfile,
     permissions,
     hasPermission,
-    hasRole
+    hasRole,
   }
 
-  return (
-    <AuthContext.Provider value={value}>
-      {children}
-    </AuthContext.Provider>
-  )
+  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
 }
 
 // Helper function to get permissions based on role
@@ -260,15 +263,9 @@ function getUserPermissions(role: UserRole): string[] {
       'enrollment:view',
       'payment:make',
       'demo:book',
-      'community:participate'
+      'community:participate',
     ],
-    PARENT: [
-      'student:monitor',
-      'progress:view',
-      'payment:make',
-      'demo:book',
-      'reports:view'
-    ],
+    PARENT: ['student:monitor', 'progress:view', 'payment:make', 'demo:book', 'reports:view'],
     TEACHER: [
       'test:create',
       'test:edit',
@@ -277,11 +274,11 @@ function getUserPermissions(role: UserRole): string[] {
       'student:view',
       'progress:view',
       'class:manage',
-      'assignment:create'
+      'assignment:create',
     ],
     ADMIN: [
-      '*' // All permissions
-    ]
+      '*', // All permissions
+    ],
   }
 
   return ROLE_PERMISSIONS[role] || []

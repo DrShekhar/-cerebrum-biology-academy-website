@@ -1,0 +1,29 @@
+{
+  "baseline": 624,
+  "checkpoints": [
+    {
+      "timestamp": "2025-10-28T18:47:04.928Z",
+      "errorCount": 624,
+      "message": "established",
+      "reduction": 0,
+      "percentComplete": "0.0"
+    }
+  ],
+  "phases": {
+    "phase1": {
+      "target": 500,
+      "started": null,
+      "completed": null
+    },
+    "phase2": {
+      "target": 400,
+      "started": null,
+      "completed": null
+    },
+    "phase3": {
+      "target": 200,
+      "started": null,
+      "completed": null
+    }
+  }
+}

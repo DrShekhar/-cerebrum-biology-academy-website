@@ -253,14 +253,42 @@ export function paginatedResponse<T>(
   })
 }
 
+// Error severity levels
+export type ErrorSeverity = 'low' | 'normal' | 'high' | 'critical'
+
+// Error context interface
+export interface ErrorContext extends Record<string, any> {
+  page?: string
+  component?: string
+  action?: string
+  userId?: string
+  userAgent?: string
+  url?: string
+  timestamp?: string
+  severity?: ErrorSeverity
+  digest?: string
+  recoverable?: boolean
+}
+
+// Generate unique error fingerprint for deduplication
+export function generateErrorFingerprint(error: Error, context?: ErrorContext): string {
+  const parts = [error.name, error.message, context?.page || '', context?.component || '']
+  return parts.join('|')
+}
+
 // Error logging with monitoring integration
-export function logError(error: unknown, context?: Record<string, any>) {
+export function logError(error: unknown, context?: ErrorContext) {
+  const actualError = error instanceof Error ? error : new Error(String(error))
+
   const errorInfo = {
-    message: error instanceof Error ? error.message : 'Unknown error',
-    stack: error instanceof Error ? error.stack : undefined,
+    name: actualError.name,
+    message: actualError.message,
+    stack: actualError.stack,
+    fingerprint: generateErrorFingerprint(actualError, context),
     context,
     timestamp: new Date().toISOString(),
     environment: process.env.NODE_ENV,
+    severity: context?.severity || 'normal',
   }
 
   // Console logging for development and debugging
@@ -271,10 +299,10 @@ export function logError(error: unknown, context?: Record<string, any>) {
     // Client-side error reporting
     import('@/lib/monitoring/errorMonitoring')
       .then(({ errorMonitoring }) => {
-        const actualError = error instanceof Error ? error : new Error(String(error))
         errorMonitoring
           .reportErrorWithRateLimit(actualError, {
             custom: context,
+            fingerprint: errorInfo.fingerprint,
           })
           .catch(console.error)
       })
@@ -288,15 +316,47 @@ export function logError(error: unknown, context?: Record<string, any>) {
       console.error(
         JSON.stringify({
           level: 'error',
+          name: errorInfo.name,
           message: errorInfo.message,
           stack: errorInfo.stack,
+          fingerprint: errorInfo.fingerprint,
           context: errorInfo.context,
           timestamp: errorInfo.timestamp,
           environment: errorInfo.environment,
+          severity: errorInfo.severity,
           source: 'server',
         })
       )
     }
+  }
+}
+
+// Log error to API endpoint for centralized tracking
+export async function reportErrorToAPI(error: Error, context?: ErrorContext): Promise<void> {
+  if (typeof window === 'undefined') return
+
+  try {
+    const fingerprint = generateErrorFingerprint(error, context)
+
+    await fetch('/api/errors', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        error: {
+          name: error.name,
+          message: error.message,
+          stack: error.stack,
+        },
+        fingerprint,
+        severity: context?.severity || 'normal',
+        context,
+        timestamp: new Date().toISOString(),
+      }),
+    })
+  } catch (reportError) {
+    console.error('Failed to report error to API:', reportError)
   }
 }
 

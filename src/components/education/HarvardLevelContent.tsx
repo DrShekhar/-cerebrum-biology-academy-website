@@ -14,6 +14,7 @@ import {
   CogIcon,
   GlobeAltIcon,
   LightBulbIcon,
+  PlayIcon,
 } from '@heroicons/react/24/outline'
 
 interface BiologyModule {

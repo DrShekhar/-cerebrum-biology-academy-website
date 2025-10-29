@@ -1,0 +1,219 @@
+name: Deploy and Verify
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+env:
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    outputs:
+      deployment-url: ${{ steps.deploy.outputs.url }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run pre-deployment checks
+        run: |
+          npm run type-check
+          npm run lint
+          npm run test
+
+      - name: Install Vercel CLI
+        run: npm install --global vercel@latest
+
+      - name: Pull Vercel Environment Information
+        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Build Project Artifacts
+        run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Deploy to Vercel
+        id: deploy
+        run: |
+          DEPLOYMENT_URL=$(vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }})
+          echo "url=$DEPLOYMENT_URL" >> $GITHUB_OUTPUT
+          echo "Deployed to: $DEPLOYMENT_URL"
+
+  verify:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Wait for deployment to stabilize
+        run: sleep 30
+
+      - name: Run post-deployment verification
+        id: verify
+        run: |
+          node scripts/verify-deployment.js \
+            --url ${{ needs.deploy.outputs.deployment-url }} \
+            --json > verification-report.json
+
+      - name: Upload verification report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: verification-report
+          path: verification-report.json
+          retention-days: 30
+
+      - name: Parse verification results
+        id: parse
+        run: |
+          PASSED=$(cat verification-report.json | jq -r '.summary.passed')
+          FAILED=$(cat verification-report.json | jq -r '.summary.failed')
+          WARNINGS=$(cat verification-report.json | jq -r '.summary.warnings')
+          TOTAL=$(cat verification-report.json | jq -r '.summary.total')
+
+          echo "passed=$PASSED" >> $GITHUB_OUTPUT
+          echo "failed=$FAILED" >> $GITHUB_OUTPUT
+          echo "warnings=$WARNINGS" >> $GITHUB_OUTPUT
+          echo "total=$TOTAL" >> $GITHUB_OUTPUT
+
+          echo "### Verification Results" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Metric | Count |" >> $GITHUB_STEP_SUMMARY
+          echo "|--------|-------|" >> $GITHUB_STEP_SUMMARY
+          echo "| ✅ Passed | $PASSED/$TOTAL |" >> $GITHUB_STEP_SUMMARY
+          echo "| ❌ Failed | $FAILED/$TOTAL |" >> $GITHUB_STEP_SUMMARY
+          echo "| ⚠️ Warnings | $WARNINGS/$TOTAL |" >> $GITHUB_STEP_SUMMARY
+
+      - name: Check verification status
+        run: |
+          FAILED=${{ steps.parse.outputs.failed }}
+          if [ "$FAILED" -gt 0 ]; then
+            echo "❌ Verification failed with $FAILED failed checks"
+            exit 1
+          fi
+          echo "✅ All verification checks passed!"
+
+      - name: Send Slack notification
+        if: always()
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          if [ -n "$SLACK_WEBHOOK_URL" ]; then
+            node scripts/notify-deployment.js verification-report.json
+          fi
+
+      - name: Comment on PR
+        if: github.event_name == 'pull_request' && always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const results = JSON.parse(fs.readFileSync('verification-report.json', 'utf8'));
+            const { passed, failed, warnings, total } = results.summary;
+
+            const status = failed === 0 ? '✅ PASSED' : '❌ FAILED';
+            const emoji = failed === 0 ? '🎉' : '🚨';
+
+            const body = `
+            ## ${emoji} Post-Deployment Verification ${status}
+
+            | Metric | Count |
+            |--------|-------|
+            | Total Checks | ${total} |
+            | ✅ Passed | ${passed} |
+            | ❌ Failed | ${failed} |
+            | ⚠️ Warnings | ${warnings} |
+
+            **Deployment URL:** ${results.baseUrl}
+            **Duration:** ${results.duration}ms
+
+            <details>
+            <summary>View failed checks</summary>
+
+            ${results.checks
+              .filter(c => !c.passed && !c.warning)
+              .map(c => `- ❌ ${c.category} → ${c.name}: ${c.error || 'Failed'}`)
+              .join('\n') || 'No failed checks'}
+
+            </details>
+
+            <details>
+            <summary>View warnings</summary>
+
+            ${results.checks
+              .filter(c => c.warning)
+              .map(c => `- ⚠️ ${c.category} → ${c.name}: ${c.error || 'Warning'}`)
+              .join('\n') || 'No warnings'}
+
+            </details>
+            `;
+
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: body
+            });
+
+  rollback:
+    needs: [deploy, verify]
+    runs-on: ubuntu-latest
+    if: failure()
+    steps:
+      - name: Rollback deployment
+        run: |
+          echo "⚠️ Verification failed. Consider rolling back the deployment."
+          echo "Run: vercel rollback <deployment-id> --token=<token>"
+
+      - name: Send alert
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          if [ -n "$SLACK_WEBHOOK_URL" ]; then
+            curl -X POST "$SLACK_WEBHOOK_URL" \
+              -H "Content-Type: application/json" \
+              -d '{
+                "text": "🚨 *DEPLOYMENT VERIFICATION FAILED*",
+                "attachments": [{
+                  "color": "danger",
+                  "fields": [
+                    {
+                      "title": "Repository",
+                      "value": "${{ github.repository }}",
+                      "short": true
+                    },
+                    {
+                      "title": "Branch",
+                      "value": "${{ github.ref_name }}",
+                      "short": true
+                    },
+                    {
+                      "title": "Commit",
+                      "value": "${{ github.sha }}",
+                      "short": true
+                    },
+                    {
+                      "title": "Action",
+                      "value": "<${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|View Run>",
+                      "short": true
+                    }
+                  ]
+                }]
+              }'
+          fi

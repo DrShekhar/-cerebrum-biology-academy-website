@@ -1,5 +1,5 @@
 import Redis from 'ioredis'
-import { Question, TestTemplate, TestSession, UserProgress } from '@/generated/prisma'
+import type { Question, TestTemplate, TestSession, UserProgress } from '@/generated/prisma'
 
 // Check if Redis is enabled via environment variable
 const isRedisEnabled = process.env.REDIS_ENABLED === 'true' && process.env.REDIS_URL

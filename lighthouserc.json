@@ -5,21 +5,64 @@
         "http://localhost:3000",
         "http://localhost:3000/courses",
         "http://localhost:3000/contact",
-        "http://localhost:3000/neet-repeaters"
+        "http://localhost:3000/neet-repeaters",
+        "http://localhost:3000/student/dashboard"
       ],
       "startServerCommand": "npm start",
-      "numberOfRuns": 3
+      "numberOfRuns": 3,
+      "settings": {
+        "preset": "desktop",
+        "throttling": {
+          "rttMs": 40,
+          "throughputKbps": 10240,
+          "cpuSlowdownMultiplier": 1
+        }
+      }
     },
     "assert": {
+      "preset": "lighthouse:recommended",
       "assertions": {
-        "categories:performance": ["warn", { "minScore": 0.8 }],
+        "categories:performance": ["error", { "minScore": 0.85 }],
         "categories:accessibility": ["error", { "minScore": 0.9 }],
-        "categories:best-practices": ["warn", { "minScore": 0.85 }],
-        "categories:seo": ["error", { "minScore": 0.9 }],
-        "first-contentful-paint": ["warn", { "maxNumericValue": 2000 }],
-        "largest-contentful-paint": ["error", { "maxNumericValue": 3000 }],
+        "categories:best-practices": ["error", { "minScore": 0.85 }],
+        "categories:seo": ["error", { "minScore": 0.85 }],
+        "first-contentful-paint": ["error", { "maxNumericValue": 1500 }],
+        "largest-contentful-paint": ["error", { "maxNumericValue": 2500 }],
+        "interactive": ["error", { "maxNumericValue": 3500 }],
+        "total-blocking-time": ["error", { "maxNumericValue": 200 }],
         "cumulative-layout-shift": ["error", { "maxNumericValue": 0.1 }],
-        "speed-index": ["warn", { "maxNumericValue": 4000 }]
+        "max-potential-fid": ["error", { "maxNumericValue": 100 }],
+        "speed-index": ["warn", { "maxNumericValue": 3000 }],
+        "first-meaningful-paint": ["warn", { "maxNumericValue": 2000 }],
+        "uses-responsive-images": "error",
+        "modern-image-formats": "warn",
+        "uses-optimized-images": "warn",
+        "uses-text-compression": "error",
+        "uses-long-cache-ttl": "warn",
+        "dom-size": ["warn", { "maxNumericValue": 1500 }],
+        "bootup-time": ["warn", { "maxNumericValue": 3500 }],
+        "mainthread-work-breakdown": ["warn", { "maxNumericValue": 4000 }],
+        "uses-http2": "warn",
+        "uses-rel-preconnect": "warn",
+        "font-display": "warn",
+        "duplicated-javascript": "warn",
+        "unused-css-rules": "warn",
+        "unused-javascript": "warn",
+        "aria-allowed-attr": "error",
+        "aria-required-attr": "error",
+        "button-name": "error",
+        "color-contrast": "error",
+        "document-title": "error",
+        "html-has-lang": "error",
+        "image-alt": "error",
+        "label": "error",
+        "link-name": "error",
+        "meta-viewport": "error",
+        "tabindex": "error",
+        "no-vulnerable-libraries": "warn",
+        "js-libraries": "off",
+        "charset": "error",
+        "viewport": "error"
       }
     },
     "upload": {

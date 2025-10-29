@@ -31,7 +31,8 @@ async function main() {
     data: {
       id: 'class-11',
       name: 'Class 11th Biology - Complete NEET Foundation',
-      description: 'Comprehensive preparation for NEET with expert faculty and structured curriculum',
+      description:
+        'Comprehensive preparation for NEET with expert faculty and structured curriculum',
       type: 'CLASS_11',
       class: 'CLASS_11',
       duration: 12, // months
@@ -42,8 +43,8 @@ async function main() {
           'Structural Organization in Plants and Animals',
           'Cell Structure and Function',
           'Plant Physiology',
-          'Human Physiology'
-        ]
+          'Human Physiology',
+        ],
       }),
       features: JSON.stringify([
         'Access to all video lectures',
@@ -52,11 +53,11 @@ async function main() {
         'Study materials (PDF)',
         'Personalized study plan',
         'Complete test series',
-        'Previous 10 years NEET papers'
+        'Previous 10 years NEET papers',
       ]),
       isActive: true,
-      sortOrder: 1
-    }
+      sortOrder: 1,
+    },
   })
 
   const class12Course = await prisma.course.create({
@@ -74,8 +75,8 @@ async function main() {
           'Genetics and Evolution',
           'Biology and Human Welfare',
           'Biotechnology and Its Applications',
-          'Ecology and Environment'
-        ]
+          'Ecology and Environment',
+        ],
       }),
       features: JSON.stringify([
         'Access to all video lectures',
@@ -87,15 +88,62 @@ async function main() {
         'Exam strategy sessions',
         'Dedicated NEET mentor',
         'Complete Grand Test Series',
-        'College admission guidance'
+        'College admission guidance',
       ]),
       isActive: true,
-      sortOrder: 2
-    }
+      sortOrder: 2,
+    },
+  })
+
+  const dropperCourse = await prisma.course.create({
+    data: {
+      id: 'neet-dropper',
+      name: 'NEET Dropper Year Program',
+      description:
+        'Intensive 1-year crash course for NEET droppers. Complete syllabus revision with advanced problem-solving and exam strategy.',
+      type: 'DROPPER',
+      class: 'DROPPER',
+      duration: 12, // months
+      totalFees: 7200000, // ₹72,000 in paise (for full year - Pursuit tier pricing)
+      syllabus: JSON.stringify({
+        modules: [
+          'Biology Quick Revision - Diversity of Living World',
+          'Structural Organisation - Plant & Animal',
+          'Cell Structure and Function - Intensive',
+          'Plant Physiology - Advanced',
+          'Human Physiology - Comprehensive',
+          'Reproduction - Detailed Study',
+          'Genetics and Evolution - Master Class',
+          'Biology and Human Welfare',
+          'Biotechnology - Applications',
+          'Ecology and Environment - Current Issues',
+          'NEET Pattern Analysis and Strategy',
+          'Speed Enhancement and Accuracy',
+          'Advanced Biology for High Scorers',
+          'Memory Techniques and Mnemonics',
+          'Final Revision and Problem Solving',
+        ],
+      }),
+      features: JSON.stringify([
+        'Complete syllabus quick revision',
+        'Intensive daily mock tests',
+        'Rank improvement tracking',
+        'Speed and accuracy enhancement',
+        'Time management masterclasses',
+        'NEET previous years solved papers',
+        'Advanced problem-solving techniques',
+        'Personal NEET rank improvement strategy',
+        'Individual weakness analysis',
+        'Mock interview preparation for counseling',
+      ]),
+      isActive: true,
+      sortOrder: 3,
+    },
   })
 
   console.log(`   ✓ Created course: ${class11Course.name}`)
   console.log(`   ✓ Created course: ${class12Course.name}`)
+  console.log(`   ✓ Created course: ${dropperCourse.name}`)
 
   // Seed Question Banks
   console.log('📚 Creating question banks...')
@@ -107,11 +155,17 @@ async function main() {
       curriculum: 'NEET',
       grade: 'CLASS_12',
       subject: 'biology',
-      topics: JSON.stringify(['Cell Biology', 'Genetics', 'Plant Physiology', 'Human Physiology', 'Ecology']),
+      topics: JSON.stringify([
+        'Cell Biology',
+        'Genetics',
+        'Plant Physiology',
+        'Human Physiology',
+        'Ecology',
+      ]),
       isActive: true,
       isPublic: true,
-      createdBy: 'system'
-    }
+      createdBy: 'system',
+    },
   })
 
   const cbseQuestionBank = await prisma.questionBank.create({
@@ -122,11 +176,16 @@ async function main() {
       curriculum: 'CBSE',
       grade: 'CLASS_12',
       subject: 'biology',
-      topics: JSON.stringify(['Diversity of Living Organisms', 'Structural Organization', 'Cell Structure', 'Plant Physiology']),
+      topics: JSON.stringify([
+        'Diversity of Living Organisms',
+        'Structural Organization',
+        'Cell Structure',
+        'Plant Physiology',
+      ]),
       isActive: true,
       isPublic: true,
-      createdBy: 'system'
-    }
+      createdBy: 'system',
+    },
   })
 
   // Seed Questions from imported data
@@ -141,7 +200,7 @@ async function main() {
         tags: JSON.stringify(questionData.tags),
         relatedConcepts: JSON.stringify(questionData.relatedConcepts),
         keywords: JSON.stringify(questionData.keywords),
-      }
+      },
     })
     createdQuestions.push(question)
     console.log(`   ✓ Created question: ${question.question.substring(0, 50)}...`)
@@ -157,8 +216,8 @@ async function main() {
       data: {
         questionBankId: bankId,
         questionId: question.id,
-        orderIndex: i + 1
-      }
+        orderIndex: i + 1,
+      },
     })
   }
 
@@ -166,17 +225,17 @@ async function main() {
   await prisma.questionBank.update({
     where: { id: neetQuestionBank.id },
     data: {
-      totalQuestions: createdQuestions.filter(q => q.curriculum === 'NEET').length,
-      activeQuestions: createdQuestions.filter(q => q.curriculum === 'NEET' && q.isActive).length
-    }
+      totalQuestions: createdQuestions.filter((q) => q.curriculum === 'NEET').length,
+      activeQuestions: createdQuestions.filter((q) => q.curriculum === 'NEET' && q.isActive).length,
+    },
   })
 
   await prisma.questionBank.update({
     where: { id: cbseQuestionBank.id },
     data: {
-      totalQuestions: createdQuestions.filter(q => q.curriculum === 'CBSE').length,
-      activeQuestions: createdQuestions.filter(q => q.curriculum === 'CBSE' && q.isActive).length
-    }
+      totalQuestions: createdQuestions.filter((q) => q.curriculum === 'CBSE').length,
+      activeQuestions: createdQuestions.filter((q) => q.curriculum === 'CBSE' && q.isActive).length,
+    },
   })
 
   // Seed Test Templates
@@ -184,7 +243,8 @@ async function main() {
   const testTemplates = [
     {
       title: 'NEET Biology Full Test - Cell Biology & Genetics',
-      description: 'Comprehensive test covering cell biology fundamentals and genetic principles. Perfect for NEET 2024 preparation with detailed explanations.',
+      description:
+        'Comprehensive test covering cell biology fundamentals and genetic principles. Perfect for NEET 2024 preparation with detailed explanations.',
       slug: 'neet-biology-cell-biology-genetics',
       type: 'MOCK_TEST',
       category: 'TOPIC_WISE',
@@ -201,19 +261,19 @@ async function main() {
       markingScheme: JSON.stringify({
         correct: 4,
         incorrect: -1,
-        unattempted: 0
+        unattempted: 0,
       }),
       questionDistribution: JSON.stringify({
         'Cell Biology': 15,
         'Molecular Biology': 15,
-        'Genetics': 15
+        Genetics: 15,
       }),
       instructions: JSON.stringify([
         'Each question carries 4 marks',
         'There is negative marking of 1 mark for wrong answers',
         'You can mark questions for review',
         'Calculator is not allowed',
-        'Keep your ID proof ready'
+        'Keep your ID proof ready',
       ]),
       isAdaptive: false,
       isActive: true,
@@ -221,13 +281,21 @@ async function main() {
       isPublished: true,
       publishedAt: new Date(),
       seoTitle: 'Free NEET Biology Mock Test - Cell Biology & Genetics | Cerebrum Academy',
-      seoDescription: 'Take free NEET Biology practice test on Cell Biology & Genetics. 45 questions, detailed solutions, performance analysis. Improve your NEET 2024 score.',
-      seoKeywords: JSON.stringify(['NEET biology mock test', 'cell biology test', 'genetics practice test', 'free NEET test', 'biology questions NEET']),
-      createdBy: 'system'
+      seoDescription:
+        'Take free NEET Biology practice test on Cell Biology & Genetics. 45 questions, detailed solutions, performance analysis. Improve your NEET 2024 score.',
+      seoKeywords: JSON.stringify([
+        'NEET biology mock test',
+        'cell biology test',
+        'genetics practice test',
+        'free NEET test',
+        'biology questions NEET',
+      ]),
+      createdBy: 'system',
     },
     {
       title: 'Plant Physiology Quick Test',
-      description: 'Quick 30-minute test focusing on plant physiology concepts. Test your knowledge of photosynthesis, respiration, and transport in plants.',
+      description:
+        'Quick 30-minute test focusing on plant physiology concepts. Test your knowledge of photosynthesis, respiration, and transport in plants.',
       slug: 'plant-physiology-quick-test',
       type: 'QUICK_TEST',
       category: 'TOPIC_WISE',
@@ -244,16 +312,16 @@ async function main() {
       markingScheme: JSON.stringify({
         correct: 4,
         incorrect: 0,
-        unattempted: 0
+        unattempted: 0,
       }),
       questionDistribution: JSON.stringify({
-        'Plant Physiology': 15
+        'Plant Physiology': 15,
       }),
       instructions: JSON.stringify([
         'Quick 30-minute test',
         'Each question carries 4 marks',
         'No negative marking',
-        'Focus on plant physiology concepts'
+        'Focus on plant physiology concepts',
       ]),
       isAdaptive: false,
       isActive: true,
@@ -261,13 +329,21 @@ async function main() {
       isPublished: true,
       publishedAt: new Date(),
       seoTitle: 'Plant Physiology Mock Test | Free Botany Practice Test | NEET Preparation',
-      seoDescription: 'Free plant physiology practice test for NEET. 15 questions on photosynthesis, respiration, transport. Quick 30-minute test with instant results.',
-      seoKeywords: JSON.stringify(['plant physiology test', 'botany mock test', 'photosynthesis questions', 'NEET botany practice', 'plant biology test']),
-      createdBy: 'system'
+      seoDescription:
+        'Free plant physiology practice test for NEET. 15 questions on photosynthesis, respiration, transport. Quick 30-minute test with instant results.',
+      seoKeywords: JSON.stringify([
+        'plant physiology test',
+        'botany mock test',
+        'photosynthesis questions',
+        'NEET botany practice',
+        'plant biology test',
+      ]),
+      createdBy: 'system',
     },
     {
       title: 'Adaptive Biology Assessment',
-      description: 'AI-powered adaptive test that adjusts difficulty based on your performance. Get personalized learning recommendations.',
+      description:
+        'AI-powered adaptive test that adjusts difficulty based on your performance. Get personalized learning recommendations.',
       slug: 'adaptive-biology-assessment',
       type: 'ADAPTIVE_TEST',
       category: 'MIXED',
@@ -279,46 +355,59 @@ async function main() {
       curriculum: 'NEET',
       grade: 'CLASS_12',
       subject: 'biology',
-      topics: JSON.stringify(['Cell Biology', 'Plant Physiology', 'Human Physiology', 'Genetics', 'Ecology']),
+      topics: JSON.stringify([
+        'Cell Biology',
+        'Plant Physiology',
+        'Human Physiology',
+        'Genetics',
+        'Ecology',
+      ]),
       negativeMarking: true,
       markingScheme: JSON.stringify({
         correct: 4,
         incorrect: -1,
-        unattempted: 0
+        unattempted: 0,
       }),
       questionDistribution: JSON.stringify({
         'Cell Biology': 6,
         'Plant Physiology': 6,
         'Human Physiology': 6,
-        'Genetics': 6,
-        'Ecology': 6
+        Genetics: 6,
+        Ecology: 6,
       }),
       instructions: JSON.stringify([
         'Adaptive test - difficulty adjusts based on performance',
         'Each question carries 4 marks',
         'Negative marking of 1 mark for wrong answers',
         'Cannot skip questions or go back',
-        'Focus on accuracy over speed'
+        'Focus on accuracy over speed',
       ]),
       isAdaptive: true,
       adaptiveSettings: JSON.stringify({
         startingLevel: 'MEDIUM',
         levelAdjustment: {
           correctIncrease: 0.2,
-          incorrectDecrease: 0.3
+          incorrectDecrease: 0.3,
         },
         minLevel: 'EASY',
-        maxLevel: 'EXPERT'
+        maxLevel: 'EXPERT',
       }),
       isActive: true,
       isPremium: true,
       isPublished: true,
       publishedAt: new Date(),
       seoTitle: 'Adaptive Biology Test | AI-Powered NEET Assessment | Personalized Learning',
-      seoDescription: 'Take AI-powered adaptive biology test. Difficulty adjusts to your performance. Get personalized recommendations for NEET preparation.',
-      seoKeywords: JSON.stringify(['adaptive biology test', 'AI powered test', 'personalized assessment', 'NEET adaptive test', 'smart biology test']),
-      createdBy: 'system'
-    }
+      seoDescription:
+        'Take AI-powered adaptive biology test. Difficulty adjusts to your performance. Get personalized recommendations for NEET preparation.',
+      seoKeywords: JSON.stringify([
+        'adaptive biology test',
+        'AI powered test',
+        'personalized assessment',
+        'NEET adaptive test',
+        'smart biology test',
+      ]),
+      createdBy: 'system',
+    },
   ]
 
   const createdTestTemplates = []
@@ -335,27 +424,27 @@ async function main() {
     const targetDifficulty = template.difficulty
 
     // Find questions matching template topics
-    const matchingQuestions = createdQuestions.filter(q =>
-      templateTopics.some((topic: string) =>
-        q.topic.includes(topic) || topic.includes(q.topic)
-      )
+    const matchingQuestions = createdQuestions.filter((q) =>
+      templateTopics.some((topic: string) => q.topic.includes(topic) || topic.includes(q.topic))
     )
 
     // For the first template (Cell Biology & Genetics) - pick matching questions
     if (template.slug === 'neet-biology-cell-biology-genetics') {
-      const cellBioQuestions = matchingQuestions.filter(q => q.topic === 'Cell Biology')
-      const geneticsQuestions = matchingQuestions.filter(q => q.topic === 'Genetics & Molecular Biology')
+      const cellBioQuestions = matchingQuestions.filter((q) => q.topic === 'Cell Biology')
+      const geneticsQuestions = matchingQuestions.filter(
+        (q) => q.topic === 'Genetics & Molecular Biology'
+      )
       const selectedQuestions = [...cellBioQuestions, ...geneticsQuestions].slice(0, 15)
 
       for (const question of selectedQuestions) {
         await prisma.questionBankQuestion.updateMany({
           where: {
             questionId: question.id,
-            questionBankId: neetQuestionBank.id
+            questionBankId: neetQuestionBank.id,
           },
           data: {
-            testTemplateId: template.id
-          }
+            testTemplateId: template.id,
+          },
         })
       }
       console.log(`   ✓ Linked ${selectedQuestions.length} questions to ${template.title}`)
@@ -363,18 +452,18 @@ async function main() {
 
     // For the second template (Plant Physiology) - pick plant questions
     if (template.slug === 'plant-physiology-quick-test') {
-      const plantQuestions = matchingQuestions.filter(q => q.topic === 'Plant Physiology')
+      const plantQuestions = matchingQuestions.filter((q) => q.topic === 'Plant Physiology')
       const selectedQuestions = plantQuestions.slice(0, 15)
 
       for (const question of selectedQuestions) {
         await prisma.questionBankQuestion.updateMany({
           where: {
             questionId: question.id,
-            questionBankId: neetQuestionBank.id
+            questionBankId: neetQuestionBank.id,
           },
           data: {
-            testTemplateId: template.id
-          }
+            testTemplateId: template.id,
+          },
         })
       }
       console.log(`   ✓ Linked ${selectedQuestions.length} questions to ${template.title}`)
@@ -382,23 +471,35 @@ async function main() {
 
     // For the third template (Adaptive) - pick diverse questions
     if (template.slug === 'adaptive-biology-assessment') {
-      const cellBioQ = matchingQuestions.filter(q => q.topic === 'Cell Biology').slice(0, 6)
-      const plantPhysioQ = matchingQuestions.filter(q => q.topic === 'Plant Physiology').slice(0, 6)
-      const humanPhysioQ = matchingQuestions.filter(q => q.topic === 'Human Physiology').slice(0, 6)
-      const geneticsQ = matchingQuestions.filter(q => q.topic === 'Genetics & Molecular Biology').slice(0, 6)
-      const ecologyQ = matchingQuestions.filter(q => q.topic === 'Ecology').slice(0, 6)
+      const cellBioQ = matchingQuestions.filter((q) => q.topic === 'Cell Biology').slice(0, 6)
+      const plantPhysioQ = matchingQuestions
+        .filter((q) => q.topic === 'Plant Physiology')
+        .slice(0, 6)
+      const humanPhysioQ = matchingQuestions
+        .filter((q) => q.topic === 'Human Physiology')
+        .slice(0, 6)
+      const geneticsQ = matchingQuestions
+        .filter((q) => q.topic === 'Genetics & Molecular Biology')
+        .slice(0, 6)
+      const ecologyQ = matchingQuestions.filter((q) => q.topic === 'Ecology').slice(0, 6)
 
-      const selectedQuestions = [...cellBioQ, ...plantPhysioQ, ...humanPhysioQ, ...geneticsQ, ...ecologyQ]
+      const selectedQuestions = [
+        ...cellBioQ,
+        ...plantPhysioQ,
+        ...humanPhysioQ,
+        ...geneticsQ,
+        ...ecologyQ,
+      ]
 
       for (const question of selectedQuestions) {
         await prisma.questionBankQuestion.updateMany({
           where: {
             questionId: question.id,
-            questionBankId: neetQuestionBank.id
+            questionBankId: neetQuestionBank.id,
           },
           data: {
-            testTemplateId: template.id
-          }
+            testTemplateId: template.id,
+          },
         })
       }
       console.log(`   ✓ Linked ${selectedQuestions.length} questions to ${template.title}`)
@@ -427,8 +528,8 @@ async function main() {
       preferences: JSON.stringify({
         studyTime: 'evening',
         notifications: true,
-        difficulty: 'medium'
-      })
+        difficulty: 'medium',
+      }),
     },
     {
       email: 'student2@example.com',
@@ -449,8 +550,8 @@ async function main() {
       preferences: JSON.stringify({
         studyTime: 'morning',
         notifications: true,
-        difficulty: 'hard'
-      })
+        difficulty: 'hard',
+      }),
     },
     {
       email: 'student3@example.com',
@@ -466,14 +567,19 @@ async function main() {
       totalTestsTaken: 35,
       bestScore: 95.5,
       weakestTopics: JSON.stringify(['Ecology']),
-      strongestTopics: JSON.stringify(['Cell Biology', 'Molecular Biology', 'Human Physiology', 'Plant Physiology']),
+      strongestTopics: JSON.stringify([
+        'Cell Biology',
+        'Molecular Biology',
+        'Human Physiology',
+        'Plant Physiology',
+      ]),
       currentLevel: 6,
       preferences: JSON.stringify({
         studyTime: 'all_day',
         notifications: true,
-        difficulty: 'expert'
-      })
-    }
+        difficulty: 'expert',
+      }),
+    },
   ]
 
   const createdFreeUsers = []
@@ -485,7 +591,14 @@ async function main() {
 
   // Seed User Progress Data
   console.log('📈 Creating user progress data...')
-  const topics = ['Cell Biology', 'Molecular Biology', 'Genetics', 'Plant Physiology', 'Human Physiology', 'Ecology']
+  const topics = [
+    'Cell Biology',
+    'Molecular Biology',
+    'Genetics',
+    'Plant Physiology',
+    'Human Physiology',
+    'Ecology',
+  ]
 
   for (const user of createdFreeUsers) {
     for (const topic of topics) {
@@ -509,8 +622,8 @@ async function main() {
           recommendedNext: JSON.stringify([`Advanced ${topic}`, `${topic} Applications`]),
           weakAreas: accuracy < 70 ? JSON.stringify([`${topic} Fundamentals`]) : null,
           strongAreas: accuracy > 80 ? JSON.stringify([`${topic} Concepts`]) : null,
-          lastPracticed: new Date(Date.now() - Math.random() * 7 * 24 * 60 * 60 * 1000) // Within last week
-        }
+          lastPracticed: new Date(Date.now() - Math.random() * 7 * 24 * 60 * 60 * 1000), // Within last week
+        },
       })
     }
   }
@@ -536,25 +649,30 @@ async function main() {
         browserInfo: JSON.stringify({
           browser: 'Chrome',
           os: 'Windows',
-          screenSize: '1920x1080'
+          screenSize: '1920x1080',
         }),
         ipAddress: '192.168.1.100',
         tabSwitchCount: Math.floor(Math.random() * 3),
-        fullscreenExits: Math.floor(Math.random() * 2)
-      }
+        fullscreenExits: Math.floor(Math.random() * 2),
+      },
     })
   }
 
   console.log('✅ Database seeding completed successfully!')
   console.log(`
 📊 Seeding Summary:
-   - Courses: 2 (class-11, class-12)
+   - Courses: 3 (class-11, class-12, neet-dropper)
    - Question Banks: 2
    - Questions: ${createdQuestions.length}
    - Test Templates: ${createdTestTemplates.length}
    - Free Users: ${createdFreeUsers.length}
    - User Progress Records: ${createdFreeUsers.length * topics.length}
    - Test Sessions: 5
+
+💰 Course Pricing (Full Year):
+   - Class 11: ₹35,000
+   - Class 12: ₹50,000
+   - NEET Dropper: ₹72,000
   `)
 }
 

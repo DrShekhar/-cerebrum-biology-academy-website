@@ -31,7 +31,7 @@ import {
   Award,
   BookOpen,
   Lightbulb,
-  Info
+  Info,
 } from 'lucide-react'
 
 // Types and Interfaces
@@ -88,64 +88,81 @@ interface SectionConfigurationProps {
 const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
   onSectionsChange,
   initialSections = [],
-  maxSections = 10
+  maxSections = 10,
 }) => {
-  const [sections, setSections] = useState<TestSection[]>(initialSections.length > 0 ? initialSections : [
-    {
-      id: 'section_1',
-      name: 'Biology Section A',
-      description: 'Fundamental Biology Concepts',
-      instructions: [
-        'This section contains 20 multiple choice questions',
-        'Each question carries 4 marks',
-        'There is negative marking of -1 for incorrect answers',
-        'You have 30 minutes to complete this section'
-      ],
-      timeLimit: 30,
-      isMandatory: true,
-      isShufflingEnabled: true,
-      questionCount: 20,
-      totalMarks: 80,
-      markingScheme: {
-        correct: 4,
-        incorrect: -1,
-        unattempted: 0,
-        partialMarking: false,
-        partialPercentage: 50
-      },
-      questionDistribution: {
-        mcq: 80,
-        assertion: 15,
-        numerical: 5,
-        matching: 0,
-        subjective: 0
-      },
-      topics: ['Cell Biology', 'Genetics'],
-      difficultyDistribution: {
-        easy: 30,
-        medium: 50,
-        hard: 20
-      },
-      order: 1,
-      isVisible: true,
-      allowReview: true,
-      allowBackNavigation: true,
-      showTimer: true,
-      warningTime: 5,
-      passingMarks: 32,
-      qualifyingMarks: 48
-    }
-  ])
+  const [sections, setSections] = useState<TestSection[]>(
+    initialSections.length > 0
+      ? initialSections
+      : [
+          {
+            id: 'section_1',
+            name: 'Biology Section A',
+            description: 'Fundamental Biology Concepts',
+            instructions: [
+              'This section contains 20 multiple choice questions',
+              'Each question carries 4 marks',
+              'There is negative marking of -1 for incorrect answers',
+              'You have 30 minutes to complete this section',
+            ],
+            timeLimit: 30,
+            isMandatory: true,
+            isShufflingEnabled: true,
+            questionCount: 20,
+            totalMarks: 80,
+            markingScheme: {
+              correct: 4,
+              incorrect: -1,
+              unattempted: 0,
+              partialMarking: false,
+              partialPercentage: 50,
+            },
+            questionDistribution: {
+              mcq: 80,
+              assertion: 15,
+              numerical: 5,
+              matching: 0,
+              subjective: 0,
+            },
+            topics: ['Cell Biology', 'Genetics'],
+            difficultyDistribution: {
+              easy: 30,
+              medium: 50,
+              hard: 20,
+            },
+            order: 1,
+            isVisible: true,
+            allowReview: true,
+            allowBackNavigation: true,
+            showTimer: true,
+            warningTime: 5,
+            passingMarks: 32,
+            qualifyingMarks: 48,
+          },
+        ]
+  )
 
   const [activeSection, setActiveSection] = useState<string>('')
   const [isCreating, setIsCreating] = useState(false)
   const [previewMode, setPreviewMode] = useState(false)
 
   const availableTopics = [
-    'Cell Biology', 'Genetics', 'Evolution', 'Ecology', 'Human Physiology',
-    'Plant Physiology', 'Reproduction', 'Biotechnology', 'Molecular Biology',
-    'Taxonomy', 'Anatomy', 'Environmental Biology', 'Photosynthesis',
-    'Respiration', 'Enzyme Action', 'Biomolecules', 'Cell Division'
+    'Cell Biology',
+    'Genetics',
+    'Evolution',
+    'Ecology',
+    'Human Physiology',
+    'Plant Physiology',
+    'Reproduction',
+    'Biotechnology',
+    'Molecular Biology',
+    'Taxonomy',
+    'Anatomy',
+    'Environmental Biology',
+    'Photosynthesis',
+    'Respiration',
+    'Enzyme Action',
+    'Biomolecules',
+    'Cell Division',
   ]
 
   // Update parent component when sections change
@@ -172,30 +189,30 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
         incorrect: -1,
         unattempted: 0,
         partialMarking: false,
-        partialPercentage: 50
+        partialPercentage: 50,
       },
       questionDistribution: {
         mcq: 100,
         assertion: 0,
         numerical: 0,
         matching: 0,
-        subjective: 0
+        subjective: 0,
       },
       topics: [],
       difficultyDistribution: {
         easy: 40,
         medium: 40,
-        hard: 20
+        hard: 20,
       },
       order: sections.length + 1,
       isVisible: true,
       allowReview: true,
       allowBackNavigation: true,
       showTimer: true,
-      warningTime: 5
+      warningTime: 5,
     }
 
-    setSections(prev => [...prev, newSection])
+    setSections((prev) => [...prev, newSection])
     setActiveSection(newSection.id)
     setIsCreating(true)
   }
@@ -207,35 +224,35 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
       return
     }
 
-    setSections(prev => prev.filter(s => s.id !== sectionId))
+    setSections((prev) => prev.filter((s) => s.id !== sectionId))
     setActiveSection('')
   }
 
   // Update section
   const updateSection = (sectionId: string, updates: Partial<TestSection>) => {
-    setSections(prev => prev.map(section =>
-      section.id === sectionId ? { ...section, ...updates } : section
-    ))
+    setSections((prev) =>
+      prev.map((section) => (section.id === sectionId ? { ...section, ...updates } : section))
+    )
   }
 
   // Duplicate section
   const duplicateSection = (sectionId: string) => {
-    const sectionToDuplicate = sections.find(s => s.id === sectionId)
+    const sectionToDuplicate = sections.find((s) => s.id === sectionId)
     if (!sectionToDuplicate) return
 
     const newSection: TestSection = {
       ...sectionToDuplicate,
       id: `section_${Date.now()}`,
       name: `${sectionToDuplicate.name} (Copy)`,
-      order: sections.length + 1
+      order: sections.length + 1,
     }
 
-    setSections(prev => [...prev, newSection])
+    setSections((prev) => [...prev, newSection])
   }
 
   // Move section up/down
   const moveSectionOrder = (sectionId: string, direction: 'up' | 'down') => {
-    const sectionIndex = sections.findIndex(s => s.id === sectionId)
+    const sectionIndex = sections.findIndex((s) => s.id === sectionId)
     if (sectionIndex === -1) return
 
     const newSections = [...sections]
@@ -244,7 +261,10 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
     if (targetIndex < 0 || targetIndex >= sections.length) return
 
     // Swap sections
-    [newSections[sectionIndex], newSections[targetIndex]] = [newSections[targetIndex], newSections[sectionIndex]]
+    ;[newSections[sectionIndex], newSections[targetIndex]] = [
+      newSections[targetIndex],
+      newSections[sectionIndex],
+    ]
 
     // Update order numbers
     newSections.forEach((section, index) => {
@@ -256,12 +276,15 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
 
   // Calculate totals
   const calculateTotals = () => {
-    return sections.reduce((totals, section) => ({
-      totalQuestions: totals.totalQuestions + section.questionCount,
-      totalMarks: totals.totalMarks + section.totalMarks,
-      totalTime: totals.totalTime + section.timeLimit,
-      mandatorySections: totals.mandatorySections + (section.isMandatory ? 1 : 0)
-    }), { totalQuestions: 0, totalMarks: 0, totalTime: 0, mandatorySections: 0 })
+    return sections.reduce(
+      (totals, section) => ({
+        totalQuestions: totals.totalQuestions + section.questionCount,
+        totalMarks: totals.totalMarks + section.totalMarks,
+        totalTime: totals.totalTime + section.timeLimit,
+        mandatorySections: totals.mandatorySections + (section.isMandatory ? 1 : 0),
+      }),
+      { totalQuestions: 0, totalMarks: 0, totalTime: 0, mandatorySections: 0 }
+    )
   }
 
   const totals = calculateTotals()
@@ -288,12 +311,18 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
         errors.push(`Section ${index + 1}: At least one topic must be selected`)
       }
 
-      const distributionTotal = Object.values(section.questionDistribution).reduce((sum, val) => sum + val, 0)
+      const distributionTotal = Object.values(section.questionDistribution).reduce(
+        (sum, val) => sum + val,
+        0
+      )
       if (Math.abs(distributionTotal - 100) > 0.1) {
         errors.push(`Section ${index + 1}: Question distribution must total 100%`)
       }
 
-      const difficultyTotal = Object.values(section.difficultyDistribution).reduce((sum, val) => sum + val, 0)
+      const difficultyTotal = Object.values(section.difficultyDistribution).reduce(
+        (sum, val) => sum + val,
+        0
+      )
       if (Math.abs(difficultyTotal - 100) > 0.1) {
         errors.push(`Section ${index + 1}: Difficulty distribution must total 100%`)
       }
@@ -321,8 +350,8 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
           </h1>
         </motion.div>
         <p className="text-gray-600 max-w-2xl mx-auto">
-          Configure multiple test sections with individual time limits, marking schemes,
-          and question distributions for comprehensive assessments
+          Configure multiple test sections with individual time limits, marking schemes, and
+          question distributions for comprehensive assessments
         </p>
       </div>
 
@@ -333,26 +362,26 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
             label: 'Total Sections',
             value: sections.length,
             icon: FileText,
-            color: 'from-blue-500 to-cyan-500'
+            color: 'from-blue-500 to-cyan-500',
           },
           {
             label: 'Total Questions',
             value: totals.totalQuestions,
             icon: Target,
-            color: 'from-green-500 to-emerald-500'
+            color: 'from-green-500 to-emerald-500',
           },
           {
             label: 'Total Marks',
             value: totals.totalMarks,
             icon: Award,
-            color: 'from-purple-500 to-pink-500'
+            color: 'from-purple-500 to-pink-500',
           },
           {
             label: 'Total Time',
             value: `${totals.totalTime} min`,
             icon: Clock,
-            color: 'from-orange-500 to-red-500'
-          }
+            color: 'from-orange-500 to-red-500',
+          },
         ].map((item, index) => (
           <motion.div
             key={item.label}
@@ -455,7 +484,7 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
                         </span>
                       )}
                       {section.isShufflingEnabled && (
-                        <Shuffle className="w-4 h-4 text-blue-500" title="Shuffling Enabled" />
+                        <Shuffle className="w-4 h-4 text-blue-500" aria-label="Shuffling Enabled" />
                       )}
                     </div>
                   </div>
@@ -547,7 +576,9 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
                             </label>
                             <textarea
                               value={section.description}
-                              onChange={(e) => updateSection(section.id, { description: e.target.value })}
+                              onChange={(e) =>
+                                updateSection(section.id, { description: e.target.value })
+                              }
                               rows={3}
                               className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
                               placeholder="Brief description of this section"
@@ -562,10 +593,14 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
                               <input
                                 type="number"
                                 value={section.questionCount}
-                                onChange={(e) => updateSection(section.id, {
-                                  questionCount: parseInt(e.target.value) || 0,
-                                  totalMarks: (parseInt(e.target.value) || 0) * section.markingScheme.correct
-                                })}
+                                onChange={(e) =>
+                                  updateSection(section.id, {
+                                    questionCount: parseInt(e.target.value) || 0,
+                                    totalMarks:
+                                      (parseInt(e.target.value) || 0) *
+                                      section.markingScheme.correct,
+                                  })
+                                }
                                 min="1"
                                 className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
                               />
@@ -577,7 +612,11 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
                               <input
                                 type="number"
                                 value={section.timeLimit}
-                                onChange={(e) => updateSection(section.id, { timeLimit: parseInt(e.target.value) || 0 })}
+                                onChange={(e) =>
+                                  updateSection(section.id, {
+                                    timeLimit: parseInt(e.target.value) || 0,
+                                  })
+                                }
                                 min="1"
                                 className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
                               />
@@ -595,7 +634,9 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
                                 <input
                                   type="checkbox"
                                   checked={section.isMandatory}
-                                  onChange={(e) => updateSection(section.id, { isMandatory: e.target.checked })}
+                                  onChange={(e) =>
+                                    updateSection(section.id, { isMandatory: e.target.checked })
+                                  }
                                   className="rounded"
                                 />
                                 <span className="text-sm">Mandatory Section</span>
@@ -610,7 +651,11 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
                                 <input
                                   type="checkbox"
                                   checked={section.isShufflingEnabled}
-                                  onChange={(e) => updateSection(section.id, { isShufflingEnabled: e.target.checked })}
+                                  onChange={(e) =>
+                                    updateSection(section.id, {
+                                      isShufflingEnabled: e.target.checked,
+                                    })
+                                  }
                                   className="rounded"
                                 />
                                 <span className="text-sm">Enable Question Shuffling</span>
@@ -621,7 +666,9 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
                                 <input
                                   type="checkbox"
                                   checked={section.allowReview}
-                                  onChange={(e) => updateSection(section.id, { allowReview: e.target.checked })}
+                                  onChange={(e) =>
+                                    updateSection(section.id, { allowReview: e.target.checked })
+                                  }
                                   className="rounded"
                                 />
                                 <span className="text-sm">Allow Review</span>
@@ -632,7 +679,11 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
                                 <input
                                   type="checkbox"
                                   checked={section.allowBackNavigation}
-                                  onChange={(e) => updateSection(section.id, { allowBackNavigation: e.target.checked })}
+                                  onChange={(e) =>
+                                    updateSection(section.id, {
+                                      allowBackNavigation: e.target.checked,
+                                    })
+                                  }
                                   className="rounded"
                                 />
                                 <span className="text-sm">Allow Back Navigation</span>
@@ -642,7 +693,9 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
                                 <input
                                   type="checkbox"
                                   checked={section.showTimer}
-                                  onChange={(e) => updateSection(section.id, { showTimer: e.target.checked })}
+                                  onChange={(e) =>
+                                    updateSection(section.id, { showTimer: e.target.checked })
+                                  }
                                   className="rounded"
                                 />
                                 <span className="text-sm">Show Section Timer</span>
@@ -659,7 +712,11 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
                               <input
                                 type="number"
                                 value={section.warningTime}
-                                onChange={(e) => updateSection(section.id, { warningTime: parseInt(e.target.value) || 0 })}
+                                onChange={(e) =>
+                                  updateSection(section.id, {
+                                    warningTime: parseInt(e.target.value) || 0,
+                                  })
+                                }
                                 min="1"
                                 max={section.timeLimit}
                                 className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
@@ -690,7 +747,9 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
                               />
                               <button
                                 onClick={() => {
-                                  const newInstructions = section.instructions.filter((_, i) => i !== idx)
+                                  const newInstructions = section.instructions.filter(
+                                    (_, i) => i !== idx
+                                  )
                                   updateSection(section.id, { instructions: newInstructions })
                                 }}
                                 className="px-3 py-2 text-red-600 hover:bg-red-50 rounded-lg"
@@ -728,7 +787,7 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
                                 const correct = parseFloat(e.target.value) || 0
                                 updateSection(section.id, {
                                   markingScheme: { ...section.markingScheme, correct },
-                                  totalMarks: section.questionCount * correct
+                                  totalMarks: section.questionCount * correct,
                                 })
                               }}
                               className="w-full px-2 py-1 border rounded text-sm"
@@ -739,9 +798,14 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
                             <input
                               type="number"
                               value={section.markingScheme.incorrect}
-                              onChange={(e) => updateSection(section.id, {
-                                markingScheme: { ...section.markingScheme, incorrect: parseFloat(e.target.value) || 0 }
-                              })}
+                              onChange={(e) =>
+                                updateSection(section.id, {
+                                  markingScheme: {
+                                    ...section.markingScheme,
+                                    incorrect: parseFloat(e.target.value) || 0,
+                                  },
+                                })
+                              }
                               className="w-full px-2 py-1 border rounded text-sm"
                             />
                           </div>
@@ -750,9 +814,14 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
                             <input
                               type="number"
                               value={section.markingScheme.unattempted}
-                              onChange={(e) => updateSection(section.id, {
-                                markingScheme: { ...section.markingScheme, unattempted: parseFloat(e.target.value) || 0 }
-                              })}
+                              onChange={(e) =>
+                                updateSection(section.id, {
+                                  markingScheme: {
+                                    ...section.markingScheme,
+                                    unattempted: parseFloat(e.target.value) || 0,
+                                  },
+                                })
+                              }
                               className="w-full px-2 py-1 border rounded text-sm"
                             />
                           </div>
@@ -761,9 +830,14 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
                               <input
                                 type="checkbox"
                                 checked={section.markingScheme.partialMarking}
-                                onChange={(e) => updateSection(section.id, {
-                                  markingScheme: { ...section.markingScheme, partialMarking: e.target.checked }
-                                })}
+                                onChange={(e) =>
+                                  updateSection(section.id, {
+                                    markingScheme: {
+                                      ...section.markingScheme,
+                                      partialMarking: e.target.checked,
+                                    },
+                                  })
+                                }
                                 className="rounded text-xs"
                               />
                               Partial
@@ -774,57 +848,73 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
 
                       {/* Question Distribution */}
                       <div>
-                        <h4 className="text-sm font-medium text-gray-700 mb-3">Question Distribution</h4>
+                        <h4 className="text-sm font-medium text-gray-700 mb-3">
+                          Question Distribution
+                        </h4>
                         <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-                          {Object.entries(section.questionDistribution).map(([type, percentage]) => (
-                            <div key={type}>
-                              <label className="block text-xs text-gray-600 mb-1 capitalize">{type}</label>
-                              <div className="flex items-center gap-1">
-                                <input
-                                  type="range"
-                                  min="0"
-                                  max="100"
-                                  value={percentage}
-                                  onChange={(e) => updateSection(section.id, {
-                                    questionDistribution: {
-                                      ...section.questionDistribution,
-                                      [type]: parseInt(e.target.value)
+                          {Object.entries(section.questionDistribution).map(
+                            ([type, percentage]) => (
+                              <div key={type}>
+                                <label className="block text-xs text-gray-600 mb-1 capitalize">
+                                  {type}
+                                </label>
+                                <div className="flex items-center gap-1">
+                                  <input
+                                    type="range"
+                                    min="0"
+                                    max="100"
+                                    value={percentage}
+                                    onChange={(e) =>
+                                      updateSection(section.id, {
+                                        questionDistribution: {
+                                          ...section.questionDistribution,
+                                          [type]: parseInt(e.target.value),
+                                        },
+                                      })
                                     }
-                                  })}
-                                  className="flex-1"
-                                />
-                                <span className="text-xs w-8">{percentage}%</span>
+                                    className="flex-1"
+                                  />
+                                  <span className="text-xs w-8">{percentage}%</span>
+                                </div>
                               </div>
-                            </div>
-                          ))}
+                            )
+                          )}
                         </div>
                       </div>
 
                       {/* Difficulty Distribution */}
                       <div>
-                        <h4 className="text-sm font-medium text-gray-700 mb-3">Difficulty Distribution</h4>
+                        <h4 className="text-sm font-medium text-gray-700 mb-3">
+                          Difficulty Distribution
+                        </h4>
                         <div className="grid grid-cols-3 gap-4">
-                          {Object.entries(section.difficultyDistribution).map(([level, percentage]) => (
-                            <div key={level}>
-                              <label className="block text-xs text-gray-600 mb-1 capitalize">{level}</label>
-                              <div className="flex items-center gap-1">
-                                <input
-                                  type="range"
-                                  min="0"
-                                  max="100"
-                                  value={percentage}
-                                  onChange={(e) => updateSection(section.id, {
-                                    difficultyDistribution: {
-                                      ...section.difficultyDistribution,
-                                      [level]: parseInt(e.target.value)
+                          {Object.entries(section.difficultyDistribution).map(
+                            ([level, percentage]) => (
+                              <div key={level}>
+                                <label className="block text-xs text-gray-600 mb-1 capitalize">
+                                  {level}
+                                </label>
+                                <div className="flex items-center gap-1">
+                                  <input
+                                    type="range"
+                                    min="0"
+                                    max="100"
+                                    value={percentage}
+                                    onChange={(e) =>
+                                      updateSection(section.id, {
+                                        difficultyDistribution: {
+                                          ...section.difficultyDistribution,
+                                          [level]: parseInt(e.target.value),
+                                        },
+                                      })
                                     }
-                                  })}
-                                  className="flex-1"
-                                />
-                                <span className="text-xs w-8">{percentage}%</span>
+                                    className="flex-1"
+                                  />
+                                  <span className="text-xs w-8">{percentage}%</span>
+                                </div>
                               </div>
-                            </div>
-                          ))}
+                            )
+                          )}
                         </div>
                       </div>
 
@@ -832,7 +922,7 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
                       <div>
                         <h4 className="text-sm font-medium text-gray-700 mb-3">Topics Coverage</h4>
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-2 max-h-32 overflow-y-auto border rounded p-3">
-                          {availableTopics.map(topic => (
+                          {availableTopics.map((topic) => (
                             <label key={topic} className="flex items-center gap-2 text-sm">
                               <input
                                 type="checkbox"
@@ -840,7 +930,7 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
                                 onChange={(e) => {
                                   const topics = e.target.checked
                                     ? [...section.topics, topic]
-                                    : section.topics.filter(t => t !== topic)
+                                    : section.topics.filter((t) => t !== topic)
                                   updateSection(section.id, { topics })
                                 }}
                                 className="rounded"
@@ -860,9 +950,11 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
                           <input
                             type="number"
                             value={section.passingMarks || ''}
-                            onChange={(e) => updateSection(section.id, {
-                              passingMarks: e.target.value ? parseInt(e.target.value) : undefined
-                            })}
+                            onChange={(e) =>
+                              updateSection(section.id, {
+                                passingMarks: e.target.value ? parseInt(e.target.value) : undefined,
+                              })
+                            }
                             min="0"
                             max={section.totalMarks}
                             className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
@@ -876,9 +968,13 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
                           <input
                             type="number"
                             value={section.qualifyingMarks || ''}
-                            onChange={(e) => updateSection(section.id, {
-                              qualifyingMarks: e.target.value ? parseInt(e.target.value) : undefined
-                            })}
+                            onChange={(e) =>
+                              updateSection(section.id, {
+                                qualifyingMarks: e.target.value
+                                  ? parseInt(e.target.value)
+                                  : undefined,
+                              })
+                            }
                             min="0"
                             max={section.totalMarks}
                             className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
@@ -934,7 +1030,8 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
 
                 <div className="flex justify-between items-center mt-3 pt-3 border-t text-xs text-gray-500">
                   <div>
-                    {section.questionCount} questions • {section.isMandatory ? 'Mandatory' : 'Optional'}
+                    {section.questionCount} questions •{' '}
+                    {section.isMandatory ? 'Mandatory' : 'Optional'}
                   </div>
                   <div className="flex gap-2">
                     {section.isShufflingEnabled && (
@@ -987,7 +1084,9 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
         <div className="flex gap-3">
           <button
             onClick={() => {
-              alert('Configuration exported successfully!\n\nThis would generate a JSON configuration file with all section settings.')
+              alert(
+                'Configuration exported successfully!\n\nThis would generate a JSON configuration file with all section settings.'
+              )
             }}
             className="border border-gray-300 px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors flex items-center gap-2"
           >
@@ -998,7 +1097,9 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
           <button
             onClick={() => {
               if (validationErrors.length === 0) {
-                alert('Sections configured successfully!\n\nThis configuration would be applied to the test generation process.')
+                alert(
+                  'Sections configured successfully!\n\nThis configuration would be applied to the test generation process.'
+                )
               } else {
                 alert('Please fix all validation errors before applying the configuration.')
               }

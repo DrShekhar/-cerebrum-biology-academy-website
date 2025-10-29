@@ -1,9 +1,9 @@
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
-  // Dark mode disabled for MVP - Phase 1 focus on light mode excellence
-  // See CLAUDE.md: Revenue-first approach, dark mode reconsidered in Phase 4
-  darkMode: false,
+  // Dark mode uses system preference (media query)
+  // Phase 1 focus on light mode excellence, dark mode reconsidered in Phase 4
+  darkMode: 'media',
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',

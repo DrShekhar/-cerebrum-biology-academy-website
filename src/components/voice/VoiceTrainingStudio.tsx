@@ -16,7 +16,6 @@ import {
   Languages,
   Brain,
   Target,
-  Waveform,
   User,
   CheckCircle,
   AlertCircle,
