@@ -27,6 +27,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { BurgerMenu } from '@/components/navigation/BurgerMenu'
 import { SearchMenu } from '@/components/navigation/SearchMenu'
 import { BrainLogo } from '@/components/ui/BrainLogo'
+import { useAuth } from '@/hooks/useAuth'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -35,6 +36,7 @@ const Header = () => {
   const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(false)
   const [isSearchOpen, setIsSearchOpen] = useState(false)
   const pathname = usePathname()
+  const { user, isAuthenticated } = useAuth()
 
   // Close mobile menu when route changes
   useEffect(() => {
@@ -257,14 +259,27 @@ const Header = () => {
 
             {/* Authentication & CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-3">
-              {/* Primary CTA - Enroll Now */}
-              <Link
-                href={primaryCTA.href}
-                className={`flex items-center space-x-2 px-6 py-2.5 rounded-full font-bold transition-all duration-300 shadow-lg hover:shadow-xl whitespace-nowrap text-sm ${primaryCTA.className}`}
-              >
-                <span>{primaryCTA.label}</span>
-                <ArrowRight className="w-4 h-4" />
-              </Link>
+              {/* Student Dashboard Button (for authenticated users) */}
+              {isAuthenticated && (
+                <Link
+                  href="/student/dashboard"
+                  className="flex items-center space-x-2 px-5 py-2.5 rounded-full font-semibold transition-all duration-300 bg-blue-600 hover:bg-blue-700 text-white shadow-md hover:shadow-lg whitespace-nowrap text-sm"
+                >
+                  <BarChart3 className="w-4 h-4" />
+                  <span>My Dashboard</span>
+                </Link>
+              )}
+
+              {/* Primary CTA - Enroll Now (show for non-authenticated users) */}
+              {!isAuthenticated && (
+                <Link
+                  href={primaryCTA.href}
+                  className={`flex items-center space-x-2 px-6 py-2.5 rounded-full font-bold transition-all duration-300 shadow-lg hover:shadow-xl whitespace-nowrap text-sm ${primaryCTA.className}`}
+                >
+                  <span>{primaryCTA.label}</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              )}
             </div>
           </div>
         </div>
@@ -375,14 +390,27 @@ const Header = () => {
 
                 {/* Mobile CTA Buttons */}
                 <div className="pt-3 xs:pt-4 border-t border-gray-200 space-y-3">
-                  {/* Primary CTA - Enroll Now */}
-                  <Link
-                    href={primaryCTA.href}
-                    className="flex items-center justify-center space-x-2 bg-green-600 text-white px-6 py-4 rounded-full font-bold hover:bg-green-700 transition-all duration-300 min-h-[52px] shadow-lg"
-                  >
-                    <span>{primaryCTA.label}</span>
-                    <ArrowRight className="w-5 h-5" />
-                  </Link>
+                  {/* Student Dashboard Button (for authenticated users) */}
+                  {isAuthenticated && (
+                    <Link
+                      href="/student/dashboard"
+                      className="flex items-center justify-center space-x-2 bg-blue-600 text-white px-6 py-4 rounded-full font-bold hover:bg-blue-700 transition-all duration-300 min-h-[52px] shadow-lg"
+                    >
+                      <BarChart3 className="w-5 h-5" />
+                      <span>My Dashboard</span>
+                    </Link>
+                  )}
+
+                  {/* Primary CTA - Enroll Now (show for non-authenticated users) */}
+                  {!isAuthenticated && (
+                    <Link
+                      href={primaryCTA.href}
+                      className="flex items-center justify-center space-x-2 bg-green-600 text-white px-6 py-4 rounded-full font-bold hover:bg-green-700 transition-all duration-300 min-h-[52px] shadow-lg"
+                    >
+                      <span>{primaryCTA.label}</span>
+                      <ArrowRight className="w-5 h-5" />
+                    </Link>
+                  )}
                 </div>
               </div>
             </motion.div>
