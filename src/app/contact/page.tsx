@@ -94,7 +94,7 @@ export default function ContactPage() {
   ]
 
   const quickLinks = [
-    { title: 'Book Free Demo Class', href: '/courses', icon: BookOpen },
+    { title: 'Book Free Demo Class', href: '/demo-booking', icon: BookOpen },
     { title: 'Download Brochure', href: '#', icon: Target },
     { title: 'Check Results', href: '/success-stories', icon: Award },
     { title: 'Meet Our Faculty', href: '/faculty', icon: Users },

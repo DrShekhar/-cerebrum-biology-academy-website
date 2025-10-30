@@ -9,6 +9,7 @@ import {
   BeakerIcon,
   TrophyIcon,
   PhoneIcon,
+  PlayIcon,
 } from '@heroicons/react/24/outline'
 import {
   HomeIcon as HomeSolid,
@@ -16,6 +17,7 @@ import {
   BeakerIcon as BeakerSolid,
   TrophyIcon as TrophySolid,
   PhoneIcon as PhoneSolid,
+  PlayIcon as PlaySolid,
 } from '@heroicons/react/24/solid'
 
 interface MobileBottomNavProps {
@@ -42,10 +44,10 @@ export function MobileBottomNav({ className = '' }: MobileBottomNavProps) {
       iconSolid: HomeSolid,
     },
     {
-      href: '/admin/ai-education',
-      label: 'AI Tutor',
-      icon: BeakerIcon,
-      iconSolid: BeakerSolid,
+      href: '/demo-booking',
+      label: 'Demo',
+      icon: PlayIcon,
+      iconSolid: PlaySolid,
       highlight: true,
     },
     {
@@ -55,8 +57,8 @@ export function MobileBottomNav({ className = '' }: MobileBottomNavProps) {
       iconSolid: BookSolid,
     },
     {
-      href: '/progress',
-      label: 'Progress',
+      href: '/results',
+      label: 'Results',
       icon: TrophyIcon,
       iconSolid: TrophySolid,
     },

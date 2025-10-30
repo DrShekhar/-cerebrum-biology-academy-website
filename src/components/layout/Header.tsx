@@ -76,7 +76,7 @@ const Header = () => {
       priority: 3,
     },
     {
-      href: '/demo',
+      href: '/demo-booking',
       label: 'Free Demo',
       icon: Play,
       highlight: true,

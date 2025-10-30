@@ -298,14 +298,18 @@ export default function TestimonialsPage() {
                 expert guidance and proven methodology
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg">
-                  <BookOpen className="w-5 h-5 mr-2" />
-                  Enroll Now
-                </Button>
-                <Button size="lg" variant="outline">
-                  <Calendar className="w-5 h-5 mr-2" />
-                  Book Free Demo
-                </Button>
+                <Link href="/admissions">
+                  <Button size="lg">
+                    <BookOpen className="w-5 h-5 mr-2" />
+                    Enroll Now
+                  </Button>
+                </Link>
+                <Link href="/demo-booking">
+                  <Button size="lg" variant="outline">
+                    <Calendar className="w-5 h-5 mr-2" />
+                    Book Free Demo
+                  </Button>
+                </Link>
               </div>
               <div className="mt-6 text-sm text-gray-500">
                 Join 2,847+ students who trust Cerebrum Biology Academy

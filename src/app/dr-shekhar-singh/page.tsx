@@ -103,7 +103,7 @@ export default function DrShekharSinghPage() {
               {/* CTA Buttons */}
               <div className="flex flex-wrap gap-4">
                 <Link
-                  href="/demo"
+                  href="/demo-booking"
                   className="inline-flex items-center bg-teal-600 hover:bg-teal-700 text-white font-bold px-6 py-3 rounded-xl shadow-lg transition-all"
                 >
                   <BookOpen className="w-5 h-5 mr-2" />
@@ -372,7 +372,7 @@ export default function DrShekharSinghPage() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/demo"
+                href="/demo-booking"
                 className="inline-flex items-center justify-center bg-teal-600 hover:bg-teal-700 text-white font-bold px-8 py-4 rounded-xl shadow-lg transition-all"
               >
                 <BookOpen className="w-5 h-5 mr-2" />

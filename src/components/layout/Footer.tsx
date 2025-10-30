@@ -60,7 +60,7 @@ export function Footer() {
   const supportLinks = [
     { name: 'Contact Us', href: '/contact' },
     { name: 'Help Center', href: '/help' },
-    { name: 'Book Demo Class', href: '/demo' },
+    { name: 'Book Demo Class', href: '/demo-booking' },
     { name: 'Download Brochure', href: '/brochure' },
     { name: 'Fee Structure', href: '/fees' },
     { name: 'Admission Process', href: '/admission' },

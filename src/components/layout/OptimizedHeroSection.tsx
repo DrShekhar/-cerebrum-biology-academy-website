@@ -146,7 +146,7 @@ export function OptimizedHeroSection({ className = '' }: OptimizedHeroSectionPro
             <PremiumButton
               variant="luxury"
               size="lg"
-              onClick={() => router.push('/demo')}
+              onClick={() => router.push('/demo-booking')}
               className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-semibold py-3 xs:py-4 px-6 xs:px-8 rounded-lg xs:rounded-xl transition-all duration-300 text-sm xs:text-base md:text-lg"
             >
               <PlayIcon className="h-5 xs:h-6 w-5 xs:w-6" />

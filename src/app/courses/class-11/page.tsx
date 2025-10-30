@@ -79,7 +79,7 @@ export default function Class11BiologyPage() {
                   Talk to Counselor
                 </Link>
                 <Link
-                  href="/contact"
+                  href="/demo-booking"
                   className="border border-white/50 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors inline-flex items-center justify-center"
                 >
                   Book Demo Class
@@ -246,7 +246,7 @@ export default function Class11BiologyPage() {
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link
-                href="/contact"
+                href="/demo-booking"
                 className="block w-full border-2 border-green-600 text-green-600 text-center px-8 py-4 rounded-xl font-semibold hover:bg-green-50 transition-colors min-h-[56px] flex items-center justify-center touch-target-large"
               >
                 Book Free Demo Class
