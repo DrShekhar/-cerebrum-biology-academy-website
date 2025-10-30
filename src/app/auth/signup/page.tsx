@@ -19,7 +19,8 @@ import {
   Eye,
   EyeOff,
 } from 'lucide-react'
-import { useAuth } from '@/hooks/useAuth'
+import { useAuth } from '@/contexts/AuthContext'
+import { useAuth as useInstantAuth } from '@/hooks/useAuth'
 import { Button } from '@/components/ui/Button'
 
 export default function SignUpPage() {
@@ -46,8 +47,10 @@ export default function SignUpPage() {
   const [showPassword, setShowPassword] = useState(false)
   const [error, setError] = useState('')
 
-  const { sendOtp, verifyOtp, register, isSubmitting } = useAuth()
+  const { signup, isLoading: isAuthLoading } = useAuth()
+  const { sendOtp, verifyOtp, isSubmitting: isInstantSubmitting } = useInstantAuth()
   const router = useRouter()
+  const isSubmitting = isAuthLoading || isInstantSubmitting
 
   const handleInputChange = (field: string, value: any) => {
     setFormData((prev) => ({ ...prev, [field]: value }))
@@ -109,19 +112,20 @@ export default function SignUpPage() {
 
     try {
       setError('')
-      const result = await register({
+      const result = await signup({
         name: formData.name,
         email: formData.email,
         password: formData.password,
         phone: formData.mobile,
-        role: formData.role,
-        currentClass: formData.currentClass,
-        parentEmail: formData.role === 'student' ? formData.email : undefined,
-        referralCode: formData.referralCode,
+        role: formData.role === 'student' ? 'STUDENT' : 'PARENT',
+        grade: formData.currentClass,
+        agreeToTerms: true,
       })
 
       if (result.success) {
         router.push('/dashboard')
+      } else {
+        setError(result.error || 'Registration failed')
       }
     } catch (err: any) {
       setError(err.message || 'Registration failed')

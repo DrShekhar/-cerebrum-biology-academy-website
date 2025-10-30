@@ -16,7 +16,8 @@ import {
   Smartphone,
   MessageSquare,
 } from 'lucide-react'
-import { useAuth } from '@/hooks/useAuth'
+import { useAuth } from '@/contexts/AuthContext'
+import { useAuth as useInstantAuth } from '@/hooks/useAuth'
 import { Button } from '@/components/ui/Button'
 
 export default function SignInPage() {
@@ -38,8 +39,10 @@ export default function SignInPage() {
     countdown: number
   } | null>(null)
 
-  const { sendOtp, verifyOtp, signInWithEmail, isSubmitting } = useAuth()
+  const { login, isLoading: isAuthLoading } = useAuth()
+  const { sendOtp, verifyOtp, isSubmitting: isInstantSubmitting } = useInstantAuth()
   const router = useRouter()
+  const isSubmitting = isAuthLoading || isInstantSubmitting
 
   // Effect to handle countdown timer for rate limiting
   React.useEffect(() => {
@@ -136,10 +139,12 @@ export default function SignInPage() {
 
     try {
       setError('')
-      const result = await signInWithEmail({ email, password })
+      const result = await login(email, password, true)
 
       if (result.success) {
         router.push('/dashboard')
+      } else {
+        setError(result.error || 'Sign in failed')
       }
     } catch (err: any) {
       setError(err.message || 'Sign in failed')
