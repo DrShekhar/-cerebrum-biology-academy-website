@@ -31,6 +31,9 @@ export function useAuth() {
   const [currentUser, setCurrentUser] = useState<User | null>(null)
   const [isSubmitting, setIsSubmitting] = useState(false)
 
+  // Debug log to verify new version is loading
+  console.log('🔧 useAuth v2.0 loaded with OTP support!')
+
   // Try to use real InstantDB auth, fallback to demo mode
   let authData
   try {
@@ -185,7 +188,7 @@ export function useAuth() {
 
   const isAuthenticated = useMemo(() => !!(currentUser || instantUser), [currentUser, instantUser])
 
-  return {
+  const authReturn = {
     user,
     isLoading,
     error,
@@ -197,4 +200,7 @@ export function useAuth() {
     sendOtp,
     verifyOtp,
   }
+
+  console.log('✅ useAuth returning methods:', Object.keys(authReturn))
+  return authReturn
 }
