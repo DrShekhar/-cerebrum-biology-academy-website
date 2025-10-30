@@ -2,6 +2,7 @@
 
 import dynamic from 'next/dynamic'
 import { useAuth } from '@/hooks/useAuth'
+import { useUserFlow } from '@/hooks/useUserFlow'
 import { useRouter } from 'next/navigation'
 import { useEffect } from 'react'
 import Link from 'next/link'
@@ -80,6 +81,7 @@ function AuthRequiredMessage() {
 
 export default function DashboardPage() {
   const { user, isLoading, isAuthenticated } = useAuth()
+  const { isDevMode } = useUserFlow()
   const router = useRouter()
 
   useEffect(() => {
@@ -104,8 +106,8 @@ export default function DashboardPage() {
     )
   }
 
-  // Show authentication required message if not signed in
-  if (!isAuthenticated || !user) {
+  // Show authentication required message if not signed in (unless dev mode)
+  if (!isDevMode && (!isAuthenticated || !user)) {
     return <AuthRequiredMessage />
   }
 

@@ -22,6 +22,18 @@ export function useUserFlow() {
   const router = useRouter()
   const pathname = usePathname()
   const [freeUserId, setFreeUserId] = useState<string | null>(null)
+  const [isDevMode, setIsDevMode] = useState(false)
+
+  // Check for dev mode (only in development)
+  useEffect(() => {
+    if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
+      const devMode = localStorage.getItem('devMode') === 'true'
+      setIsDevMode(devMode)
+      if (devMode) {
+        console.log('🔓 DEV MODE ACTIVE - All dashboards unlocked for testing')
+      }
+    }
+  }, [])
 
   // Get or create freeUserId for guest users
   useEffect(() => {
@@ -64,15 +76,17 @@ export function useUserFlow() {
     return needsOnboarding(userFlowUser)
   }, [userFlowUser])
 
-  // Check if user is paid
+  // Check if user is paid (or in dev mode)
   const isPaidUser = useMemo(() => {
+    if (isDevMode) return true
     return defaultDashboard.isPaid
-  }, [defaultDashboard])
+  }, [defaultDashboard, isDevMode])
 
   // Check if user is guest
   const isGuestUser = useMemo(() => {
+    if (isDevMode) return false
     return !user && !!freeUserId
-  }, [user, freeUserId])
+  }, [user, freeUserId, isDevMode])
 
   /**
    * Navigate to default dashboard for user
@@ -93,6 +107,10 @@ export function useUserFlow() {
    * Check if user can access a specific dashboard
    */
   const checkDashboardAccess = (dashboard: DashboardType) => {
+    // Dev mode bypasses all access checks
+    if (isDevMode) {
+      return { hasAccess: true, reason: 'Dev mode active' }
+    }
     return canAccessDashboard(dashboard, userFlowUser, freeUserId)
   }
 
@@ -138,8 +156,8 @@ export function useUserFlow() {
    * Redirect to default dashboard (useful for post-login)
    */
   useEffect(() => {
-    // Skip during loading
-    if (isLoading) return
+    // Skip during loading or dev mode
+    if (isLoading || isDevMode) return
 
     // Skip if on public pages
     const publicRoutes = ['/', '/auth', '/courses', '/results', '/faculty', '/demo']
@@ -155,7 +173,15 @@ export function useUserFlow() {
     if (currentRouteRequiresAuth && !isAuthenticated) {
       router.push(`/auth/signin?callbackUrl=${encodeURIComponent(pathname || '/')}`)
     }
-  }, [isLoading, isAuthenticated, requiresOnboarding, pathname, currentRouteRequiresAuth, router])
+  }, [
+    isLoading,
+    isAuthenticated,
+    requiresOnboarding,
+    pathname,
+    currentRouteRequiresAuth,
+    router,
+    isDevMode,
+  ])
 
   return {
     // User state
@@ -165,6 +191,7 @@ export function useUserFlow() {
     isPaidUser,
     isGuestUser,
     freeUserId,
+    isDevMode,
 
     // Dashboard info
     defaultDashboard,
