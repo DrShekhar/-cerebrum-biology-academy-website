@@ -80,6 +80,9 @@ export async function POST(request: NextRequest) {
 
     const data = validationResult.data as DemoBookingData
 
+    // Extract new fields from request body (if present)
+    const { demoType, referralCodeUsed, referralDiscount } = rawData
+
     // Save demo booking to database using Prisma
     let demoBooking
     try {
@@ -100,6 +103,12 @@ export async function POST(request: NextRequest) {
           preferredTime: data.preferredTime, // Single field: "10:00 AM - 11:00 AM"
           message: data.message || null,
           status: 'PENDING', // Use enum value
+
+          // Level 3: Premium Demo & Referral Fields
+          demoType: demoType || 'FREE',
+          paymentStatus: demoType === 'PREMIUM' ? 'PENDING' : 'NOT_REQUIRED',
+          referralCodeUsed: referralCodeUsed || null,
+          referralDiscount: referralDiscount || 0,
 
           // Marketing Attribution
           source: 'website',

@@ -21,9 +21,25 @@ import {
   Users,
   Target,
   Award,
+  AlertCircle,
+  TrendingUp,
+  Check,
+  X,
 } from 'lucide-react'
+import { DayPicker } from 'react-day-picker'
+import { format, addDays, startOfTomorrow } from 'date-fns'
+import 'react-day-picker/dist/style.css'
 import { useAnalytics } from '@/hooks/useAnalytics'
 import { zoomService } from '@/lib/zoom/zoomService'
+import { useFormValidation } from '@/hooks/useFormValidation'
+import { TestimonialCarousel } from './TestimonialCarousel'
+import { BenefitsGrid } from './BenefitsGrid'
+import { FAQAccordion } from './FAQAccordion'
+import { InstructorCard } from './InstructorCard'
+import { PremiumDemoCard } from './PremiumDemoCard'
+import { ReferralInput } from './ReferralInput'
+import { CalendarActions } from './CalendarActions'
+import { ReferralShare } from './ReferralShare'
 
 interface TimeSlot {
   id: string
@@ -39,7 +55,7 @@ interface BookingData {
   phone: string
   preferredDate: string
   preferredTime: string
-  courseInterest: string
+  courseInterest: string[]
   currentClass: string
   previousScore?: string
   specificTopics: string
@@ -50,17 +66,19 @@ interface BookingData {
 }
 
 export function DemoBookingSystem() {
-  const { trackDemoRequest, trackFormInteraction } = useAnalytics()
+  const { trackDemoRequest } = useAnalytics()
+  const { validationStates, validateField, formatPhone, capitalizeName } = useFormValidation()
   const [currentStep, setCurrentStep] = useState(1)
-  const [selectedDate, setSelectedDate] = useState<string>('')
+  const [selectedDate, setSelectedDate] = useState<Date | undefined>(undefined)
   const [selectedTime, setSelectedTime] = useState<string>('')
+  const [hoveredInstructor, setHoveredInstructor] = useState<string | null>(null)
   const [bookingData, setBookingData] = useState<BookingData>({
     studentName: '',
     email: '',
     phone: '',
     preferredDate: '',
     preferredTime: '',
-    courseInterest: 'neet-biology',
+    courseInterest: ['neet-biology'],
     currentClass: '',
     previousScore: '',
     specificTopics: '',
@@ -69,31 +87,18 @@ export function DemoBookingSystem() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [bookingComplete, setBookingComplete] = useState(false)
   const [error, setError] = useState('')
+  const [liveBookings] = useState(847) // Social proof counter
+  const [selectedDemoType, setSelectedDemoType] = useState<'FREE' | 'PREMIUM'>('FREE')
+  const [referralCode, setReferralCode] = useState('')
+  const [referralDiscount, setReferralDiscount] = useState(0)
+  const [paymentInProgress, setPaymentInProgress] = useState(false)
+  const [bookingId, setBookingId] = useState<string>('')
 
-  // Generate available dates for next 14 days (excluding Sundays)
-  const getAvailableDates = () => {
-    const dates = []
-    const today = new Date()
+  const disabledDays = [{ dayOfWeek: [0] }]
+  const tomorrow = startOfTomorrow()
+  const twoWeeksFromNow = addDays(tomorrow, 14)
 
-    for (let i = 1; i <= 14; i++) {
-      const date = new Date(today)
-      date.setDate(today.getDate() + i)
-
-      // Skip Sundays
-      if (date.getDay() !== 0) {
-        dates.push({
-          date: date.toISOString().split('T')[0],
-          day: date.toLocaleDateString('en-US', { weekday: 'short' }),
-          dayNum: date.getDate(),
-          month: date.toLocaleDateString('en-US', { month: 'short' }),
-        })
-      }
-    }
-    return dates
-  }
-
-  // Available time slots based on selected date
-  const getTimeSlots = (date: string): TimeSlot[] => {
+  const getTimeSlots = (date: Date): TimeSlot[] => {
     const slots = [
       { id: '10:00', time: '10:00 AM', available: true, instructor: 'Dr. Priya', spotsLeft: 3 },
       { id: '11:30', time: '11:30 AM', available: true, instructor: 'Dr. Rahul', spotsLeft: 2 },
@@ -103,22 +108,70 @@ export function DemoBookingSystem() {
       { id: '18:30', time: '6:30 PM', available: true, instructor: 'Dr. Rahul', spotsLeft: 3 },
     ]
 
-    // Simulate different availability for weekends
-    const selectedDate = new Date(date)
-    const isWeekend = selectedDate.getDay() === 6 || selectedDate.getDay() === 0
-
+    const isWeekend = date.getDay() === 6
     return isWeekend ? slots.filter((slot) => ['10:00', '11:30', '14:00'].includes(slot.id)) : slots
   }
 
-  const handleInputChange = (field: keyof BookingData, value: string) => {
-    setBookingData((prev) => ({ ...prev, [field]: value }))
-    trackFormInteraction('demo_booking', 'field_update', field)
+  const getAvailabilityColor = (spotsLeft: number): string => {
+    if (spotsLeft === 0) return 'bg-red-500'
+    if (spotsLeft <= 2) return 'bg-yellow-500'
+    return 'bg-green-500'
+  }
+
+  const handleInputChange = (field: keyof BookingData, value: string | string[]) => {
+    if (field === 'studentName' && typeof value === 'string') {
+      const capitalized = capitalizeName(value)
+      setBookingData((prev) => ({ ...prev, [field]: capitalized }))
+      if (value.trim().length >= 2) {
+        validateField(field, value, 'name')
+      }
+    } else if (field === 'email' && typeof value === 'string') {
+      setBookingData((prev) => ({ ...prev, [field]: value }))
+      if (value.includes('@')) {
+        validateField(field, value, 'email')
+      }
+    } else if (field === 'phone' && typeof value === 'string') {
+      const formatted = formatPhone(value)
+      setBookingData((prev) => ({ ...prev, [field]: formatted }))
+      validateField(field, formatted, 'phone')
+    } else {
+      setBookingData((prev) => ({ ...prev, [field]: value }))
+    }
+  }
+
+  const handleCourseInterestToggle = (course: string) => {
+    setBookingData((prev) => {
+      const currentInterests = prev.courseInterest
+      const isSelected = currentInterests.includes(course)
+
+      if (isSelected) {
+        if (currentInterests.length === 1) {
+          return prev
+        }
+        return {
+          ...prev,
+          courseInterest: currentInterests.filter((c) => c !== course),
+        }
+      } else {
+        if (currentInterests.length >= 3) {
+          return prev
+        }
+        return {
+          ...prev,
+          courseInterest: [...currentInterests, course],
+        }
+      }
+    })
+  }
+
+  const handleEmailSuggestionAccept = (suggestion: string) => {
+    setBookingData((prev) => ({ ...prev, email: suggestion }))
+    validateField('email', suggestion, 'email')
   }
 
   const handleNextStep = () => {
     if (currentStep < 4) {
       setCurrentStep(currentStep + 1)
-      trackFormInteraction('demo_booking', 'step_advance', `step_${currentStep + 1}`)
     }
   }
 
@@ -128,51 +181,228 @@ export function DemoBookingSystem() {
     }
   }
 
-  const handleSubmit = async () => {
-    setIsSubmitting(true)
+  const handlePayment = async (bookingId: string, amount: number): Promise<void> => {
+    return new Promise(async (resolve, reject) => {
+      try {
+        // Create Razorpay order
+        const orderResponse = await fetch('/api/payment/create-order', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ amount, bookingId }),
+        })
 
+        if (!orderResponse.ok) {
+          throw new Error('Failed to create payment order')
+        }
+
+        const { orderId, key } = await orderResponse.json()
+
+        // Initialize Razorpay
+        const options = {
+          key,
+          amount: amount * 100, // Convert to paise
+          currency: 'INR',
+          name: 'Cerebrum Biology Academy',
+          description: 'Premium Demo Class',
+          order_id: orderId,
+          handler: async (response: any) => {
+            try {
+              // Verify payment
+              const verifyResponse = await fetch('/api/payment/verify', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                  razorpay_order_id: response.razorpay_order_id,
+                  razorpay_payment_id: response.razorpay_payment_id,
+                  razorpay_signature: response.razorpay_signature,
+                  bookingId,
+                }),
+              })
+
+              if (verifyResponse.ok) {
+                console.log('✅ Payment verified successfully')
+                resolve()
+              } else {
+                throw new Error('Payment verification failed')
+              }
+            } catch (error) {
+              console.error('Payment verification error:', error)
+              reject(error)
+            }
+          },
+          prefill: {
+            name: bookingData.studentName,
+            email: bookingData.email,
+            contact: bookingData.phone,
+          },
+          theme: {
+            color: '#0ea5e9',
+          },
+          modal: {
+            ondismiss: () => reject(new Error('Payment cancelled by user')),
+          },
+        }
+
+        const razorpay = new (window as any).Razorpay(options)
+        razorpay.open()
+      } catch (error) {
+        console.error('Payment initialization error:', error)
+        reject(error)
+      }
+    })
+  }
+
+  const sendSMSConfirmation = async (bookingIdParam: string) => {
     try {
-      const finalBookingData = {
-        studentName: bookingData.studentName,
-        email: bookingData.email,
-        phone: bookingData.phone,
-        preferredDate: new Date(selectedDate),
-        preferredTime: selectedTime,
-        courseInterest: bookingData.courseInterest,
-        studentClass: bookingData.currentClass,
-        previousKnowledge: bookingData.previousScore || 'First attempt',
-        specificTopics: bookingData.specificTopics ? [bookingData.specificTopics] : [],
-      }
-
-      // Create Zoom meeting
-      const zoomMeeting = await zoomService.createDemoMeeting(finalBookingData)
-
-      if (zoomMeeting) {
-        // Track the demo booking with Zoom meeting ID
-        trackDemoRequest(bookingData.studentName, bookingData.courseInterest, bookingData.phone)
-
-        setBookingComplete(true)
-
-        // Store meeting details for confirmation screen
-        setBookingData((prev) => ({
-          ...prev,
-          zoomMeetingId: zoomMeeting.id,
-          zoomJoinUrl: zoomMeeting.join_url,
-          zoomPassword: zoomMeeting.password,
-        }))
-      } else {
-        throw new Error('Failed to create Zoom meeting')
-      }
+      await fetch('/api/notifications/sms', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          phone: bookingData.phone,
+          name: bookingData.studentName,
+          date: selectedDate ? format(selectedDate, 'yyyy-MM-dd') : '',
+          time: selectedTime,
+          zoomUrl: bookingData.zoomJoinUrl || 'Will be sent 30 minutes before',
+          demoType: selectedDemoType,
+          bookingId: bookingIdParam,
+        }),
+      })
+      console.log('✅ SMS confirmation sent')
     } catch (error) {
-      console.error('Booking failed:', error)
-      setError('Failed to book demo. Please try again or contact support.')
-    } finally {
-      setIsSubmitting(false)
+      console.error('⚠️ SMS failed (non-critical):', error)
+      // Don't fail booking if SMS fails
     }
   }
 
-  const availableDates = getAvailableDates()
+  const handleSubmit = async () => {
+    setIsSubmitting(true)
+    setError('') // Clear previous errors
+
+    try {
+      const formattedDate = selectedDate ? format(selectedDate, 'yyyy-MM-dd') : ''
+
+      const bookingPayload = {
+        name: bookingData.studentName,
+        email: bookingData.email,
+        phone: bookingData.phone,
+        whatsappNumber: bookingData.phone,
+        courseInterest: bookingData.courseInterest,
+        preferredDate: formattedDate,
+        preferredTime: selectedTime,
+        message: bookingData.specificTopics || undefined,
+        demoType: selectedDemoType,
+        referralCodeUsed: referralCode || undefined,
+        referralDiscount: referralDiscount || undefined,
+      }
+
+      console.log('📤 Submitting booking to API:', bookingPayload)
+
+      const apiResponse = await fetch('/api/demo-booking', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(bookingPayload),
+      })
+
+      if (!apiResponse.ok) {
+        const errorData = await apiResponse.json()
+        throw new Error(errorData.error || 'Booking submission failed')
+      }
+
+      const apiResult = await apiResponse.json()
+      const bookingIdResult = apiResult.bookingId
+
+      console.log('✅ Booking saved to database:', bookingIdResult)
+      setBookingId(bookingIdResult) // Save bookingId to state
+
+      let zoomMeeting = null
+      try {
+        zoomMeeting = await zoomService.createDemoMeeting({
+          studentName: bookingData.studentName,
+          email: bookingData.email,
+          phone: bookingData.phone,
+          preferredDate: selectedDate!,
+          preferredTime: selectedTime,
+          courseInterest: bookingData.courseInterest.join(', '),
+          studentClass: bookingData.currentClass,
+          previousKnowledge: bookingData.previousScore || 'First attempt',
+          specificTopics: bookingData.specificTopics ? [bookingData.specificTopics] : [],
+        })
+
+        console.log('✅ Zoom meeting created:', zoomMeeting?.id)
+
+        if (zoomMeeting) {
+          setBookingData((prev) => ({
+            ...prev,
+            zoomMeetingId: zoomMeeting.id,
+            zoomJoinUrl: zoomMeeting.join_url,
+            zoomPassword: zoomMeeting.password,
+          }))
+        }
+      } catch (zoomError) {
+        console.warn('⚠️ Zoom meeting creation failed (non-critical):', zoomError)
+      }
+
+      // Step 3: Handle Payment (if premium)
+      if (selectedDemoType === 'PREMIUM') {
+        const finalPrice = 99 - referralDiscount
+
+        if (finalPrice > 0) {
+          console.log(`💳 Processing payment: ₹${finalPrice}`)
+          setPaymentInProgress(true)
+          try {
+            await handlePayment(bookingIdResult, finalPrice)
+            console.log('✅ Payment completed successfully')
+          } catch (paymentError) {
+            setPaymentInProgress(false)
+            throw new Error(
+              paymentError instanceof Error
+                ? paymentError.message
+                : 'Payment failed. Please try again.'
+            )
+          }
+          setPaymentInProgress(false)
+        } else {
+          console.log('🎉 Premium demo is free with referral discount!')
+        }
+      }
+
+      // Step 4: Send SMS Confirmation
+      await sendSMSConfirmation(bookingIdResult)
+
+      // Step 5: Track analytics
+      trackDemoRequest(
+        bookingData.studentName,
+        bookingData.courseInterest.join(', '),
+        bookingData.phone
+      )
+
+      // Step 6: Show success screen
+      setBookingComplete(true)
+
+      // Step 7: Clear saved draft from localStorage
+      localStorage.removeItem('demo-booking-draft')
+
+      console.log('🎉 Booking completed successfully!')
+    } catch (error) {
+      console.error('❌ Booking failed:', error)
+
+      // Show user-friendly error message
+      const errorMessage =
+        error instanceof Error
+          ? error.message
+          : 'Unable to complete your booking. Please try again or contact us at +91 88264 44334.'
+
+      setError(errorMessage)
+    } finally {
+      setIsSubmitting(false)
+      setPaymentInProgress(false)
+    }
+  }
+
   const timeSlots = selectedDate ? getTimeSlots(selectedDate) : []
+  const formattedSelectedDate = selectedDate ? format(selectedDate, 'MMMM d, yyyy') : ''
 
   const stepTitles = [
     'Select Date & Time',
@@ -200,7 +430,7 @@ export function DemoBookingSystem() {
             <div className="space-y-2 text-sm">
               <div className="flex items-center gap-2">
                 <Calendar className="w-4 h-4 text-blue-600" />
-                <span>{selectedDate}</span>
+                <span>{formattedSelectedDate}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4 text-blue-600" />
@@ -224,6 +454,27 @@ export function DemoBookingSystem() {
                 <span>WhatsApp confirmation sent to {bookingData.phone}</span>
               </div>
             </div>
+          </div>
+
+          {/* Calendar Actions */}
+          <div className="mb-6">
+            <CalendarActions
+              bookingData={{
+                studentName: bookingData.studentName,
+                email: bookingData.email,
+                phone: bookingData.phone,
+                preferredDate: selectedDate ? format(selectedDate, 'yyyy-MM-dd') : '',
+                preferredTime: selectedTime,
+                zoomJoinUrl: bookingData.zoomJoinUrl || '',
+                zoomPassword: bookingData.zoomPassword || '',
+                demoType: selectedDemoType,
+              }}
+            />
+          </div>
+
+          {/* Referral Share */}
+          <div className="mb-6">
+            <ReferralShare userName={bookingData.studentName} userEmail={bookingData.email} />
           </div>
 
           <div className="space-y-4">
@@ -267,15 +518,99 @@ export function DemoBookingSystem() {
     )
   }
 
+  useEffect(() => {
+    if (bookingData.studentName || bookingData.email || selectedDate) {
+      const draftData = {
+        ...bookingData,
+        selectedDate: selectedDate ? format(selectedDate, 'yyyy-MM-dd') : null,
+        selectedTime,
+        currentStep,
+        savedAt: new Date().toISOString(),
+      }
+      localStorage.setItem('demo-booking-draft', JSON.stringify(draftData))
+      console.log('💾 Progress saved to localStorage')
+    }
+  }, [bookingData, selectedDate, selectedTime, currentStep])
+
+  // Load saved progress on mount
+  useEffect(() => {
+    const savedDraft = localStorage.getItem('demo-booking-draft')
+    if (savedDraft) {
+      try {
+        const parsed = JSON.parse(savedDraft)
+        const savedAt = new Date(parsed.savedAt)
+        const hoursSince = (Date.now() - savedAt.getTime()) / (1000 * 60 * 60)
+
+        // Only restore if less than 24 hours old
+        if (hoursSince < 24) {
+          const shouldRestore = window.confirm(
+            'We found your previous booking draft. Would you like to continue where you left off?'
+          )
+
+          if (shouldRestore) {
+            setBookingData({
+              studentName: parsed.studentName || '',
+              email: parsed.email || '',
+              phone: parsed.phone || '',
+              preferredDate: parsed.preferredDate || '',
+              preferredTime: parsed.preferredTime || '',
+              courseInterest: Array.isArray(parsed.courseInterest)
+                ? parsed.courseInterest
+                : parsed.courseInterest
+                  ? [parsed.courseInterest]
+                  : ['neet-biology'],
+              currentClass: parsed.currentClass || '',
+              previousScore: parsed.previousScore || '',
+              specificTopics: parsed.specificTopics || '',
+              hearAboutUs: parsed.hearAboutUs || '',
+            })
+            if (parsed.selectedDate) {
+              setSelectedDate(new Date(parsed.selectedDate))
+            }
+            setSelectedTime(parsed.selectedTime || '')
+            setCurrentStep(parsed.currentStep || 1)
+            console.log('✅ Draft restored from localStorage')
+          } else {
+            localStorage.removeItem('demo-booking-draft')
+          }
+        } else {
+          localStorage.removeItem('demo-booking-draft')
+          console.log('🗑️ Old draft removed (>24 hours)')
+        }
+      } catch (e) {
+        console.error('Failed to restore draft:', e)
+        localStorage.removeItem('demo-booking-draft')
+      }
+    }
+  }, [])
+
   return (
-    <div className="max-w-4xl mx-auto p-6">
+    <div className="max-w-4xl mx-auto p-4 md:p-6">
       <div className="bg-white rounded-lg shadow-lg overflow-hidden">
         {/* Header */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-6 text-white">
-          <h1 className="text-2xl font-bold mb-2">Book Your Free NEET Biology Demo Class</h1>
+        <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-4 md:p-6 text-white">
+          <h1 className="text-xl md:text-2xl font-bold mb-2">
+            Book Your Free NEET Biology Demo Class
+          </h1>
           <p className="text-blue-100">
             Experience our teaching methodology and get personalized guidance from AIIMS experts
           </p>
+
+          {/* Social Proof Counter */}
+          <div className="mt-4 flex flex-wrap items-center justify-center gap-4 text-sm text-blue-100">
+            <div className="flex items-center gap-2">
+              <Users className="w-4 h-4" />
+              <span>{liveBookings}+ students booked this month</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+              <span>4.9/5 rating from demos</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <TrendingUp className="w-4 h-4" />
+              <span>94.2% NEET success rate</span>
+            </div>
+          </div>
 
           {/* Step Indicator */}
           <div className="flex items-center justify-between mt-6">
@@ -308,8 +643,41 @@ export function DemoBookingSystem() {
           </div>
         </div>
 
+        {/* Testimonials */}
+        <div className="px-4 md:px-6 pt-6">
+          <TestimonialCarousel />
+        </div>
+
+        {/* Benefits Grid */}
+        <div className="px-4 md:px-6">
+          <BenefitsGrid />
+        </div>
+
         {/* Content */}
-        <div className="p-6">
+        <div className="p-4 md:p-6">
+          {/* Error Display */}
+          {error && (
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="bg-red-50 border-2 border-red-200 rounded-lg p-4 mb-6"
+            >
+              <div className="flex items-start gap-3">
+                <AlertCircle className="w-5 h-5 text-red-600 mt-0.5 flex-shrink-0" />
+                <div className="flex-1">
+                  <p className="font-medium text-red-900">Booking Error</p>
+                  <p className="text-sm text-red-800 mt-1">{error}</p>
+                  <button
+                    onClick={() => setError('')}
+                    className="text-sm text-red-700 underline mt-2 hover:text-red-900"
+                  >
+                    Dismiss
+                  </button>
+                </div>
+              </div>
+            </motion.div>
+          )}
+
           <AnimatePresence mode="wait">
             {/* Step 1: Date & Time Selection */}
             {currentStep === 1 && (
@@ -324,60 +692,97 @@ export function DemoBookingSystem() {
                   <h3 className="text-lg font-semibold text-gray-900 mb-4">
                     Choose Your Preferred Date
                   </h3>
-                  <div className="grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-7 gap-3">
-                    {availableDates.map((date) => (
-                      <button
-                        key={date.date}
-                        onClick={() => {
-                          setSelectedDate(date.date)
-                          setSelectedTime('') // Reset time when date changes
-                        }}
-                        className={`p-3 rounded-lg border-2 text-center transition-all ${
-                          selectedDate === date.date
-                            ? 'border-blue-600 bg-blue-50 text-blue-900'
-                            : 'border-gray-200 hover:border-blue-300 hover:bg-blue-50'
-                        }`}
-                      >
-                        <div className="text-sm font-medium">{date.day}</div>
-                        <div className="text-xs text-gray-500">{date.month}</div>
-                        <div className="text-lg font-bold">{date.dayNum}</div>
-                      </button>
-                    ))}
+                  <div className="flex justify-center">
+                    <DayPicker
+                      mode="single"
+                      selected={selectedDate}
+                      onSelect={(date) => {
+                        setSelectedDate(date)
+                        setSelectedTime('')
+                      }}
+                      disabled={disabledDays}
+                      fromDate={tomorrow}
+                      toDate={twoWeeksFromNow}
+                      modifiersClassNames={{
+                        selected: 'bg-blue-600 text-white hover:bg-blue-700',
+                        today: 'font-bold text-blue-600',
+                        disabled: 'text-gray-300 cursor-not-allowed',
+                      }}
+                      className="border border-gray-200 rounded-lg p-4"
+                    />
                   </div>
+                  <p className="text-sm text-gray-500 text-center mt-2">
+                    Sundays are not available for booking
+                  </p>
                 </div>
 
                 {selectedDate && (
                   <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+                    {/* Urgency Banner */}
+                    <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-4 rounded-r-lg">
+                      <div className="flex items-start gap-3">
+                        <Zap className="w-5 h-5 text-yellow-600 mt-0.5 flex-shrink-0" />
+                        <div>
+                          <p className="font-medium text-yellow-900">Limited Slots Available!</p>
+                          <p className="text-sm text-yellow-800 mt-1">
+                            Only {timeSlots.filter((s) => s.available).length} slots left for this
+                            date. Book now to secure your preferred time!
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
                     <h3 className="text-lg font-semibold text-gray-900 mb-4">
                       Available Time Slots
                     </h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                       {timeSlots.map((slot) => (
-                        <button
+                        <div
                           key={slot.id}
-                          onClick={() => slot.available && setSelectedTime(slot.time)}
-                          disabled={!slot.available}
-                          className={`p-4 rounded-lg border-2 text-left transition-all ${
-                            selectedTime === slot.time
-                              ? 'border-blue-600 bg-blue-50'
-                              : slot.available
-                                ? 'border-gray-200 hover:border-blue-300 hover:bg-blue-50'
-                                : 'border-gray-100 bg-gray-50 cursor-not-allowed opacity-50'
-                          }`}
+                          className="relative"
+                          onMouseEnter={() =>
+                            slot.instructor && setHoveredInstructor(slot.instructor)
+                          }
+                          onMouseLeave={() => setHoveredInstructor(null)}
                         >
-                          <div className="flex items-center justify-between mb-2">
-                            <span className="font-medium text-gray-900">{slot.time}</span>
-                            {slot.available && (
-                              <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">
-                                {slot.spotsLeft} spots left
-                              </span>
+                          <button
+                            onClick={() => slot.available && setSelectedTime(slot.time)}
+                            disabled={!slot.available}
+                            className={`w-full p-4 rounded-lg border-2 text-left transition-all min-h-[44px] touch-manipulation ${
+                              selectedTime === slot.time
+                                ? 'border-blue-600 bg-blue-50'
+                                : slot.available
+                                  ? 'border-gray-200 hover:border-blue-300 hover:bg-blue-50'
+                                  : 'border-gray-100 bg-gray-50 cursor-not-allowed opacity-50'
+                            }`}
+                          >
+                            <div className="flex items-center justify-between mb-2">
+                              <span className="font-medium text-gray-900">{slot.time}</span>
+                              {slot.available && slot.spotsLeft !== undefined && (
+                                <div className="flex items-center gap-1">
+                                  <div
+                                    className={`w-2 h-2 rounded-full ${getAvailabilityColor(slot.spotsLeft)}`}
+                                  />
+                                  <span className="text-xs text-gray-600">
+                                    {slot.spotsLeft} {slot.spotsLeft === 1 ? 'spot' : 'spots'}
+                                  </span>
+                                </div>
+                              )}
+                            </div>
+                            <div className="text-sm text-gray-600 hover:text-blue-600 transition-colors">
+                              with {slot.instructor}
+                            </div>
+                            {!slot.available && (
+                              <div className="text-xs text-red-600 mt-1">Fully booked</div>
                             )}
-                          </div>
-                          <div className="text-sm text-gray-600">with {slot.instructor}</div>
-                          {!slot.available && (
-                            <div className="text-xs text-red-600 mt-1">Fully booked</div>
+                          </button>
+                          {slot.instructor && (
+                            <InstructorCard
+                              instructorName={slot.instructor}
+                              isVisible={hoveredInstructor === slot.instructor}
+                            />
                           )}
-                        </button>
+                        </div>
                       ))}
                     </div>
                   </motion.div>
@@ -402,14 +807,33 @@ export function DemoBookingSystem() {
                       <User className="w-4 h-4 inline mr-2" />
                       Full Name *
                     </label>
-                    <input
-                      type="text"
-                      value={bookingData.studentName}
-                      onChange={(e) => handleInputChange('studentName', e.target.value)}
-                      className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="Enter your full name"
-                      required
-                    />
+                    <div className="relative">
+                      <input
+                        type="text"
+                        value={bookingData.studentName}
+                        onChange={(e) => handleInputChange('studentName', e.target.value)}
+                        className={`w-full p-3 pr-10 border rounded-lg focus:ring-2 focus:border-transparent ${
+                          validationStates.studentName?.isValid
+                            ? 'border-green-500 focus:ring-green-500'
+                            : validationStates.studentName?.error
+                              ? 'border-red-500 focus:ring-red-500'
+                              : 'border-gray-300 focus:ring-blue-500'
+                        }`}
+                        placeholder="Enter your full name"
+                        required
+                      />
+                      {validationStates.studentName?.isValid && (
+                        <Check className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-green-500" />
+                      )}
+                      {validationStates.studentName?.error && (
+                        <X className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-red-500" />
+                      )}
+                    </div>
+                    {validationStates.studentName?.error && (
+                      <p className="text-xs text-red-600 mt-1">
+                        {validationStates.studentName.error}
+                      </p>
+                    )}
                   </div>
 
                   <div>
@@ -417,14 +841,41 @@ export function DemoBookingSystem() {
                       <Mail className="w-4 h-4 inline mr-2" />
                       Email Address *
                     </label>
-                    <input
-                      type="email"
-                      value={bookingData.email}
-                      onChange={(e) => handleInputChange('email', e.target.value)}
-                      className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="your@email.com"
-                      required
-                    />
+                    <div className="relative">
+                      <input
+                        type="email"
+                        value={bookingData.email}
+                        onChange={(e) => handleInputChange('email', e.target.value)}
+                        className={`w-full p-3 pr-10 border rounded-lg focus:ring-2 focus:border-transparent ${
+                          validationStates.email?.isValid
+                            ? 'border-green-500 focus:ring-green-500'
+                            : validationStates.email?.error
+                              ? 'border-red-500 focus:ring-red-500'
+                              : 'border-gray-300 focus:ring-blue-500'
+                        }`}
+                        placeholder="your@email.com"
+                        required
+                      />
+                      {validationStates.email?.isValid && (
+                        <Check className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-green-500" />
+                      )}
+                      {validationStates.email?.error && (
+                        <X className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-red-500" />
+                      )}
+                    </div>
+                    {validationStates.email?.error && (
+                      <p className="text-xs text-red-600 mt-1">{validationStates.email.error}</p>
+                    )}
+                    {validationStates.email?.suggestion && (
+                      <button
+                        onClick={() =>
+                          handleEmailSuggestionAccept(validationStates.email!.suggestion!)
+                        }
+                        className="text-xs text-blue-600 hover:text-blue-700 underline mt-1"
+                      >
+                        Did you mean: {validationStates.email.suggestion}?
+                      </button>
+                    )}
                   </div>
 
                   <div>
@@ -432,14 +883,31 @@ export function DemoBookingSystem() {
                       <Phone className="w-4 h-4 inline mr-2" />
                       Phone Number *
                     </label>
-                    <input
-                      type="tel"
-                      value={bookingData.phone}
-                      onChange={(e) => handleInputChange('phone', e.target.value)}
-                      className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="+91 98765 43210"
-                      required
-                    />
+                    <div className="relative">
+                      <input
+                        type="tel"
+                        value={bookingData.phone}
+                        onChange={(e) => handleInputChange('phone', e.target.value)}
+                        className={`w-full p-3 pr-10 border rounded-lg focus:ring-2 focus:border-transparent ${
+                          validationStates.phone?.isValid
+                            ? 'border-green-500 focus:ring-green-500'
+                            : validationStates.phone?.error
+                              ? 'border-red-500 focus:ring-red-500'
+                              : 'border-gray-300 focus:ring-blue-500'
+                        }`}
+                        placeholder="+91 98765 43210"
+                        required
+                      />
+                      {validationStates.phone?.isValid && (
+                        <Check className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-green-500" />
+                      )}
+                      {validationStates.phone?.error && (
+                        <X className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-red-500" />
+                      )}
+                    </div>
+                    {validationStates.phone?.error && (
+                      <p className="text-xs text-red-600 mt-1">{validationStates.phone.error}</p>
+                    )}
                   </div>
 
                   <div>
@@ -493,21 +961,54 @@ export function DemoBookingSystem() {
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     <BookOpen className="w-4 h-4 inline mr-2" />
-                    Course Interest *
+                    Course Interest * (Select 1-3 courses)
                   </label>
-                  <select
-                    value={bookingData.courseInterest}
-                    onChange={(e) => handleInputChange('courseInterest', e.target.value)}
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    required
-                  >
-                    <option value="neet-biology">Complete NEET Biology Course</option>
-                    <option value="class-11-biology">Class 11th Biology</option>
-                    <option value="class-12-biology">Class 12th Biology</option>
-                    <option value="crash-course">NEET Biology Crash Course</option>
-                    <option value="doubt-clearing">Doubt Clearing Sessions</option>
-                    <option value="test-series">Biology Test Series</option>
-                  </select>
+                  <p className="text-xs text-gray-500 mb-3">
+                    Choose up to 3 courses you are interested in
+                  </p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    {[
+                      { id: 'neet-biology', label: 'Complete NEET Biology Course' },
+                      { id: 'class-11-biology', label: 'Class 11th Biology' },
+                      { id: 'class-12-biology', label: 'Class 12th Biology' },
+                      { id: 'crash-course', label: 'NEET Biology Crash Course' },
+                      { id: 'doubt-clearing', label: 'Doubt Clearing Sessions' },
+                      { id: 'test-series', label: 'Biology Test Series' },
+                    ].map((course) => (
+                      <button
+                        key={course.id}
+                        type="button"
+                        onClick={() => handleCourseInterestToggle(course.id)}
+                        disabled={
+                          !bookingData.courseInterest.includes(course.id) &&
+                          bookingData.courseInterest.length >= 3
+                        }
+                        className={`p-4 rounded-lg border-2 text-left transition-all ${
+                          bookingData.courseInterest.includes(course.id)
+                            ? 'border-blue-600 bg-blue-50 text-blue-900'
+                            : 'border-gray-200 hover:border-blue-300 hover:bg-blue-50 disabled:opacity-50 disabled:cursor-not-allowed'
+                        }`}
+                      >
+                        <div className="flex items-center gap-2">
+                          <div
+                            className={`w-5 h-5 rounded border-2 flex items-center justify-center ${
+                              bookingData.courseInterest.includes(course.id)
+                                ? 'bg-blue-600 border-blue-600'
+                                : 'border-gray-300'
+                            }`}
+                          >
+                            {bookingData.courseInterest.includes(course.id) && (
+                              <Check className="w-3 h-3 text-white" />
+                            )}
+                          </div>
+                          <span className="font-medium">{course.label}</span>
+                        </div>
+                      </button>
+                    ))}
+                  </div>
+                  <p className="text-xs text-gray-500 mt-2">
+                    Selected: {bookingData.courseInterest.length}/3
+                  </p>
                 </div>
 
                 <div>
@@ -578,12 +1079,21 @@ export function DemoBookingSystem() {
                     <div className="flex justify-between">
                       <span className="text-gray-600">Date & Time:</span>
                       <span className="font-medium">
-                        {selectedDate} at {selectedTime}
+                        {formattedSelectedDate} at {selectedTime}
                       </span>
                     </div>
-                    <div className="flex justify-between">
+                    <div className="flex flex-col gap-2">
                       <span className="text-gray-600">Course Interest:</span>
-                      <span className="font-medium">{bookingData.courseInterest}</span>
+                      <div className="flex flex-wrap gap-1">
+                        {bookingData.courseInterest.map((course) => (
+                          <span
+                            key={course}
+                            className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full font-medium"
+                          >
+                            {course}
+                          </span>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -635,15 +1145,38 @@ export function DemoBookingSystem() {
             )}
           </AnimatePresence>
 
+          {/* WhatsApp Quick Booking */}
+          <div className="border-t border-gray-200 pt-6 mt-6">
+            <p className="text-center text-sm text-gray-600 mb-3">Prefer to book via WhatsApp?</p>
+            <a
+              href={`https://wa.me/918826444334?text=${encodeURIComponent(
+                `Hi! I'd like to book a free NEET Biology demo class.\n\n${
+                  bookingData.studentName ? `Name: ${bookingData.studentName}\n` : ''
+                }${bookingData.currentClass ? `Class: ${bookingData.currentClass}\n` : ''}${
+                  bookingData.courseInterest ? `Interest: ${bookingData.courseInterest}\n` : ''
+                }${selectedDate ? `Preferred Date: ${selectedDate}\n` : ''}${
+                  selectedTime ? `Preferred Time: ${selectedTime}` : ''
+                }`
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition-colors min-h-[44px] touch-manipulation"
+            >
+              <MessageSquare className="w-5 h-5" />
+              <span>Book via WhatsApp</span>
+            </a>
+          </div>
+
           {/* Navigation Buttons */}
           <div className="flex justify-between items-center mt-8 pt-6 border-t">
             <button
               onClick={handlePrevStep}
               disabled={currentStep === 1}
-              className="flex items-center gap-2 px-6 py-3 text-gray-600 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="flex items-center gap-2 px-4 md:px-6 py-3 text-gray-600 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors disabled:opacity-50 disabled:cursor-not-allowed min-h-[44px] touch-manipulation"
             >
               <ArrowLeft className="w-4 h-4" />
-              Previous
+              <span className="hidden sm:inline">Previous</span>
+              <span className="sm:hidden">Back</span>
             </button>
 
             {currentStep < 4 ? (
@@ -656,9 +1189,10 @@ export function DemoBookingSystem() {
                       !bookingData.email ||
                       !bookingData.phone ||
                       !bookingData.currentClass)) ||
-                  (currentStep === 3 && (!bookingData.courseInterest || !bookingData.hearAboutUs))
+                  (currentStep === 3 &&
+                    (bookingData.courseInterest.length === 0 || !bookingData.hearAboutUs))
                 }
-                className="flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                className="flex items-center gap-2 px-4 md:px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed min-h-[44px] touch-manipulation"
               >
                 Next
                 <ArrowRight className="w-4 h-4" />
@@ -667,7 +1201,7 @@ export function DemoBookingSystem() {
               <button
                 onClick={handleSubmit}
                 disabled={isSubmitting}
-                className="flex items-center gap-2 px-8 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                className="flex items-center gap-2 px-6 md:px-8 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed min-h-[44px] touch-manipulation"
               >
                 {isSubmitting ? (
                   <>
@@ -677,12 +1211,18 @@ export function DemoBookingSystem() {
                 ) : (
                   <>
                     <CheckCircle className="w-4 h-4" />
-                    Confirm Booking
+                    <span className="hidden sm:inline">Confirm Booking</span>
+                    <span className="sm:hidden">Confirm</span>
                   </>
                 )}
               </button>
             )}
           </div>
+        </div>
+
+        {/* FAQ Section */}
+        <div className="px-4 md:px-6 pb-6">
+          <FAQAccordion />
         </div>
       </div>
     </div>

@@ -156,6 +156,18 @@ model DemoBooking {
   preferredTime   String
   message         String?
   status          DemoBookingStatus   @default(PENDING)
+  demoType        DemoType            @default(FREE)
+
+  // Payment Details (for premium demos)
+  paymentStatus   DemoPaymentStatus   @default(NOT_REQUIRED)
+  paymentAmount   Int?                // in paise
+  razorpayOrderId String?             @unique
+  razorpayPaymentId String?           @unique
+  paymentCompletedAt DateTime?
+
+  // Referral Tracking
+  referralCodeUsed String?
+  referralDiscount Int?               // discount in rupees
 
   // Assignment & Follow-up
   assignedTo      String?
@@ -350,6 +362,20 @@ enum DemoBookingStatus {
   COMPLETED
   CANCELLED
   NO_SHOW
+  RESCHEDULED
+}
+
+enum DemoType {
+  FREE
+  PREMIUM
+}
+
+enum DemoPaymentStatus {
+  NOT_REQUIRED
+  PENDING
+  COMPLETED
+  FAILED
+  REFUNDED
 }
 
 enum PaymentStatus {
@@ -1459,4 +1485,55 @@ enum NotificationStatus {
   SENT
   FAILED
   CANCELLED
+}
+
+// ============================================
+// ADVANCED DEMO BOOKING FEATURES
+// ============================================
+
+model ReferralCode {
+  id          String   @id @default(cuid())
+  code        String   @unique
+  userId      String?
+  userEmail   String
+  uses        Int      @default(0)
+  maxUses     Int      @default(10)
+  discount    Int
+  expiresAt   DateTime?
+  createdAt   DateTime @default(now())
+
+  redemptions ReferralRedemption[]
+
+  @@index([code])
+  @@index([userEmail])
+  @@map("referral_codes")
+}
+
+model ReferralRedemption {
+  id             String   @id @default(cuid())
+  referralCodeId String
+  redeemedBy     String
+  redeemedByEmail String
+  discountGiven  Int
+  bookingId      String?
+  createdAt      DateTime @default(now())
+
+  referralCode   ReferralCode @relation(fields: [referralCodeId], references: [id], onDelete: Cascade)
+
+  @@index([referralCodeId])
+  @@index([redeemedByEmail])
+  @@map("referral_redemptions")
+}
+
+model RescheduleToken {
+  id          String   @id @default(cuid())
+  bookingId   String   @unique
+  token       String   @unique
+  expiresAt   DateTime
+  used        Boolean  @default(false)
+  createdAt   DateTime @default(now())
+
+  @@index([token])
+  @@index([bookingId])
+  @@map("reschedule_tokens")
 }

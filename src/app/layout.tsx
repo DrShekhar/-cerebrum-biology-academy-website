@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
+import Script from 'next/script'
 import { StructuredData } from '@/components/seo/StructuredData'
 import { ErrorBoundary } from '@/components/ErrorBoundary'
 import GoogleAnalytics from '@/components/analytics/GoogleAnalytics'
@@ -126,6 +127,7 @@ export default function RootLayout({
           </div>
         </ErrorBoundary>
         <MaintenancePopup />
+        <Script src="https://checkout.razorpay.com/v1/checkout.js" strategy="lazyOnload" />
       </body>
     </html>
   )
