@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import {
   Phone,
   Mail,
@@ -167,9 +168,15 @@ export default function SignInPage() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-8"
         >
-          <Link href="/" className="inline-flex items-center space-x-2 mb-6">
-            <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center">
-              <BookOpen className="w-7 h-7 text-white" />
+          <Link href="/" className="inline-flex items-center space-x-3 mb-6">
+            <div className="w-14 h-14 bg-white rounded-xl flex items-center justify-center shadow-md border border-teal-100 p-2">
+              <Image
+                src="/brain-logo.png"
+                alt="Cerebrum Biology Academy"
+                width={48}
+                height={48}
+                className="object-contain"
+              />
             </div>
             <div>
               <span className="text-2xl font-bold text-gray-900">Cerebrum</span>

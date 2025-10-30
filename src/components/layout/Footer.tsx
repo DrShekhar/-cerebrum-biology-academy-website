@@ -14,6 +14,7 @@ import {
 } from 'lucide-react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -105,8 +106,14 @@ export function Footer() {
           >
             {/* Logo */}
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center">
-                <span className="text-white font-bold text-lg">C</span>
+              <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center p-2">
+                <Image
+                  src="/brain-logo.png"
+                  alt="Cerebrum Biology Academy"
+                  width={40}
+                  height={40}
+                  className="object-contain"
+                />
               </div>
               <div>
                 <h3 className="text-xl font-bold">Cerebrum Biology Academy</h3>

@@ -26,7 +26,7 @@ import {
 import { motion, AnimatePresence } from 'framer-motion'
 import { BurgerMenu } from '@/components/navigation/BurgerMenu'
 import { SearchMenu } from '@/components/navigation/SearchMenu'
-import { BrainLogo } from '@/components/ui/BrainLogo'
+import Image from 'next/image'
 import { useAuth } from '@/hooks/useAuth'
 
 const Header = () => {
@@ -119,13 +119,20 @@ const Header = () => {
 
             {/* Enhanced Logo with Brain Design */}
             <Link href="/" className="flex items-center space-x-3 group">
-              {/* Beautiful Brain Logo with Sophisticated Background */}
+              {/* Beautiful Brain Logo */}
               <div className="relative">
-                <div className="w-12 h-12 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-900 rounded-xl flex items-center justify-center shadow-lg border border-slate-600/30 group-hover:shadow-2xl group-hover:scale-105 transition-all duration-300">
-                  <BrainLogo size="lg" animate={false} className="drop-shadow-sm text-white" />
+                <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-md border border-teal-100 group-hover:shadow-xl group-hover:scale-105 transition-all duration-300 overflow-hidden">
+                  <Image
+                    src="/brain-logo.png"
+                    alt="Cerebrum Biology Academy Logo"
+                    width={40}
+                    height={40}
+                    className="object-contain"
+                    priority
+                  />
                 </div>
-                {/* Sophisticated amber glow effect */}
-                <div className="absolute inset-0 bg-amber-400/20 rounded-xl blur-md opacity-0 group-hover:opacity-100 transition-all duration-300 -z-10"></div>
+                {/* Teal glow effect on hover */}
+                <div className="absolute inset-0 bg-teal-400/20 rounded-xl blur-md opacity-0 group-hover:opacity-100 transition-all duration-300 -z-10"></div>
               </div>
 
               {/* Mobile: Compact brand display */}

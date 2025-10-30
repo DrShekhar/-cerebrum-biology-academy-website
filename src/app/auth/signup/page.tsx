@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import {
   Phone,
   Mail,
@@ -24,7 +25,7 @@ import { Button } from '@/components/ui/Button'
 export default function SignUpPage() {
   const [registrationMethod, setRegistrationMethod] = useState<'mobile' | 'email'>('mobile')
   const [step, setStep] = useState<'details' | 'otp'>('details')
-  
+
   // Form data
   const [formData, setFormData] = useState({
     name: '',
@@ -39,7 +40,7 @@ export default function SignUpPage() {
     marketingConsent: true,
     whatsappConsent: true,
   })
-  
+
   const [otp, setOtp] = useState('')
   const [otpId, setOtpId] = useState('')
   const [showPassword, setShowPassword] = useState(false)
@@ -49,24 +50,28 @@ export default function SignUpPage() {
   const router = useRouter()
 
   const handleInputChange = (field: string, value: any) => {
-    setFormData(prev => ({ ...prev, [field]: value }))
+    setFormData((prev) => ({ ...prev, [field]: value }))
   }
 
   const handleMobileRegistration = async (e: React.FormEvent) => {
     e.preventDefault()
-    
+
     // Validation
     if (!formData.name || !formData.mobile) {
       setError('Please fill in all required fields')
       return
     }
-    
+
     if (!formData.mobile.match(/^[6-9]\d{9}$/)) {
       setError('Please enter a valid Indian mobile number')
       return
     }
 
-    if (formData.role === 'student' && formData.parentMobile && !formData.parentMobile.match(/^[6-9]\d{9}$/)) {
+    if (
+      formData.role === 'student' &&
+      formData.parentMobile &&
+      !formData.parentMobile.match(/^[6-9]\d{9}$/)
+    ) {
       setError('Please enter a valid parent mobile number')
       return
     }
@@ -78,7 +83,7 @@ export default function SignUpPage() {
         purpose: 'registration',
         whatsapp: formData.whatsapp || formData.mobile,
       })
-      
+
       if (result.success) {
         setOtpId(result.data.otpId)
         setStep('otp')
@@ -90,13 +95,13 @@ export default function SignUpPage() {
 
   const handleEmailRegistration = async (e: React.FormEvent) => {
     e.preventDefault()
-    
+
     // Validation
     if (!formData.name || !formData.email || !formData.password) {
       setError('Please fill in all required fields')
       return
     }
-    
+
     if (formData.password.length < 6) {
       setError('Password must be at least 6 characters long')
       return
@@ -114,7 +119,7 @@ export default function SignUpPage() {
         parentEmail: formData.role === 'student' ? formData.email : undefined,
         referralCode: formData.referralCode,
       })
-      
+
       if (result.success) {
         router.push('/dashboard')
       }
@@ -125,7 +130,7 @@ export default function SignUpPage() {
 
   const handleOtpVerification = async (e: React.FormEvent) => {
     e.preventDefault()
-    
+
     if (!otp || otp.length !== 6) {
       setError('Please enter a valid 6-digit OTP')
       return
@@ -148,7 +153,7 @@ export default function SignUpPage() {
         marketingConsent: formData.marketingConsent,
         whatsappConsent: formData.whatsappConsent,
       })
-      
+
       if (result.success) {
         router.push('/dashboard')
       }
@@ -179,9 +184,15 @@ export default function SignUpPage() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-8"
         >
-          <Link href="/" className="inline-flex items-center space-x-2 mb-6">
-            <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center">
-              <BookOpen className="w-7 h-7 text-white" />
+          <Link href="/" className="inline-flex items-center space-x-3 mb-6">
+            <div className="w-14 h-14 bg-white rounded-xl flex items-center justify-center shadow-md border border-teal-100 p-2">
+              <Image
+                src="/brain-logo.png"
+                alt="Cerebrum Biology Academy"
+                width={48}
+                height={48}
+                className="object-contain"
+              />
             </div>
             <div>
               <span className="text-2xl font-bold text-gray-900">Cerebrum</span>
@@ -189,9 +200,7 @@ export default function SignUpPage() {
             </div>
           </Link>
           <h1 className="text-3xl font-bold text-gray-900 mb-2">Join Us Today!</h1>
-          <p className="text-gray-600">
-            Start your NEET Biology preparation journey
-          </p>
+          <p className="text-gray-600">Start your NEET Biology preparation journey</p>
         </motion.div>
 
         {/* Registration Form */}
@@ -228,12 +237,15 @@ export default function SignUpPage() {
               </button>
             </div>
 
-            <form onSubmit={registrationMethod === 'mobile' ? handleMobileRegistration : handleEmailRegistration} className="space-y-4">
+            <form
+              onSubmit={
+                registrationMethod === 'mobile' ? handleMobileRegistration : handleEmailRegistration
+              }
+              className="space-y-4"
+            >
               {/* Basic Info */}
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Full Name *
-                </label>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
                 <div className="relative">
                   <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
                   <input
@@ -257,7 +269,9 @@ export default function SignUpPage() {
                   <input
                     type="tel"
                     value={formData.mobile}
-                    onChange={(e) => handleInputChange('mobile', e.target.value.replace(/\D/g, '').slice(0, 10))}
+                    onChange={(e) =>
+                      handleInputChange('mobile', e.target.value.replace(/\D/g, '').slice(0, 10))
+                    }
                     placeholder="9876543210"
                     className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     required
@@ -276,7 +290,12 @@ export default function SignUpPage() {
                     <input
                       type="tel"
                       value={formData.whatsapp}
-                      onChange={(e) => handleInputChange('whatsapp', e.target.value.replace(/\D/g, '').slice(0, 10))}
+                      onChange={(e) =>
+                        handleInputChange(
+                          'whatsapp',
+                          e.target.value.replace(/\D/g, '').slice(0, 10)
+                        )
+                      }
                       placeholder="9876543210 (for updates)"
                       className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     />
@@ -322,7 +341,11 @@ export default function SignUpPage() {
                         onClick={() => setShowPassword(!showPassword)}
                         className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
                       >
-                        {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+                        {showPassword ? (
+                          <EyeOff className="w-5 h-5" />
+                        ) : (
+                          <Eye className="w-5 h-5" />
+                        )}
                       </button>
                     </div>
                   </div>
@@ -331,13 +354,15 @@ export default function SignUpPage() {
 
               {/* Role Selection */}
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  I am a *
-                </label>
+                <label className="block text-sm font-medium text-gray-700 mb-2">I am a *</label>
                 <div className="grid grid-cols-2 gap-3">
-                  <label className={`flex items-center space-x-3 p-3 border rounded-xl cursor-pointer transition-all ${
-                    formData.role === 'student' ? 'border-blue-500 bg-blue-50' : 'border-gray-300 hover:border-gray-400'
-                  }`}>
+                  <label
+                    className={`flex items-center space-x-3 p-3 border rounded-xl cursor-pointer transition-all ${
+                      formData.role === 'student'
+                        ? 'border-blue-500 bg-blue-50'
+                        : 'border-gray-300 hover:border-gray-400'
+                    }`}
+                  >
                     <input
                       type="radio"
                       name="role"
@@ -349,9 +374,13 @@ export default function SignUpPage() {
                     <GraduationCap className="w-5 h-5 text-gray-600" />
                     <span className="font-medium">Student</span>
                   </label>
-                  <label className={`flex items-center space-x-3 p-3 border rounded-xl cursor-pointer transition-all ${
-                    formData.role === 'parent' ? 'border-blue-500 bg-blue-50' : 'border-gray-300 hover:border-gray-400'
-                  }`}>
+                  <label
+                    className={`flex items-center space-x-3 p-3 border rounded-xl cursor-pointer transition-all ${
+                      formData.role === 'parent'
+                        ? 'border-blue-500 bg-blue-50'
+                        : 'border-gray-300 hover:border-gray-400'
+                    }`}
+                  >
                     <input
                       type="radio"
                       name="role"
@@ -397,7 +426,12 @@ export default function SignUpPage() {
                     <input
                       type="tel"
                       value={formData.parentMobile}
-                      onChange={(e) => handleInputChange('parentMobile', e.target.value.replace(/\D/g, '').slice(0, 10))}
+                      onChange={(e) =>
+                        handleInputChange(
+                          'parentMobile',
+                          e.target.value.replace(/\D/g, '').slice(0, 10)
+                        )
+                      }
                       placeholder="9876543210"
                       className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     />
@@ -452,10 +486,13 @@ export default function SignUpPage() {
                 className="w-full"
                 disabled={isSubmitting}
               >
-                {isSubmitting ? 
-                  (registrationMethod === 'mobile' ? 'Sending OTP...' : 'Creating Account...') : 
-                  (registrationMethod === 'mobile' ? 'Send OTP' : 'Create Account')
-                }
+                {isSubmitting
+                  ? registrationMethod === 'mobile'
+                    ? 'Sending OTP...'
+                    : 'Creating Account...'
+                  : registrationMethod === 'mobile'
+                    ? 'Send OTP'
+                    : 'Create Account'}
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </form>
@@ -492,9 +529,7 @@ export default function SignUpPage() {
 
             <form onSubmit={handleOtpVerification} className="space-y-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Enter OTP
-                </label>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Enter OTP</label>
                 <input
                   type="text"
                   value={otp}
@@ -578,4 +613,3 @@ export default function SignUpPage() {
     </div>
   )
 }
-
