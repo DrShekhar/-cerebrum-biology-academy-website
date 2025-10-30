@@ -25,8 +25,12 @@ import {
   Activity,
   Flame,
   Timer,
+  Lock,
+  Crown,
 } from 'lucide-react'
 import { useAuth } from '@/hooks/useAuth'
+import { useUserFlow } from '@/hooks/useUserFlow'
+import { UpgradeModal } from '@/components/UpgradeModal'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 import { cn } from '@/lib/utils'
@@ -63,12 +67,14 @@ interface RecentActivity {
 
 export default function StudentDashboard() {
   const { user, isAuthenticated, isLoading: authLoading } = useAuth()
+  const { isPaidUser, isGuestUser, freeUserId: userFlowFreeUserId } = useUserFlow()
   const [isLoading, setIsLoading] = useState(true)
   const [freeUserId, setFreeUserId] = useState<string | null>(null)
   const [testAttempts, setTestAttempts] = useState<TestAttempt[]>([])
   const [quickStats, setQuickStats] = useState<QuickStat[]>([])
   const [recentActivities, setRecentActivities] = useState<RecentActivity[]>([])
   const [currentDate, setCurrentDate] = useState(new Date())
+  const [showUpgradeModal, setShowUpgradeModal] = useState(false)
 
   const motivationalQuotes = [
     'Success is the sum of small efforts repeated day in and day out.',
@@ -107,7 +113,10 @@ export default function StudentDashboard() {
 
         if (attemptsData.success && attemptsData.data.attempts.length > 0) {
           const attempts = attemptsData.data.attempts
-          setTestAttempts(attempts.slice(0, 5))
+
+          // Limit data for guest users (only last 5 tests)
+          const displayAttempts = isGuestUser ? attempts.slice(0, 5) : attempts
+          setTestAttempts(displayAttempts.slice(0, 5))
 
           // Calculate statistics
           const totalTests = attempts.length
@@ -194,6 +203,37 @@ export default function StudentDashboard() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+      {/* Upgrade Modal */}
+      <UpgradeModal
+        isOpen={showUpgradeModal}
+        onClose={() => setShowUpgradeModal(false)}
+        feature="Premium Features"
+      />
+
+      {/* Upgrade Banner (for free/guest users) */}
+      {!isPaidUser && (
+        <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-teal-600 text-white py-3 px-4">
+          <div className="max-w-7xl mx-auto flex items-center justify-between flex-wrap gap-3">
+            <div className="flex items-center gap-3">
+              <Crown className="w-5 h-5" />
+              <span className="font-medium">
+                {isGuestUser
+                  ? 'Sign up for free to save your progress and access more features!'
+                  : 'Upgrade to unlock NEET Prep, Analytics, and unlimited tests'}
+              </span>
+            </div>
+            <Button
+              onClick={() => setShowUpgradeModal(true)}
+              variant="secondary"
+              size="sm"
+              className="bg-white text-blue-600 hover:bg-gray-100"
+            >
+              {isGuestUser ? 'Sign Up Free' : 'Upgrade Now'}
+            </Button>
+          </div>
+        </div>
+      )}
+
       {/* Header Section */}
       <div className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -216,12 +256,27 @@ export default function StudentDashboard() {
                 <Bell className="w-4 h-4 mr-2" />
                 Notifications
               </Button>
-              <Link href="/dashboard/student">
-                <Button variant="primary" size="sm">
-                  <BarChart3 className="w-4 h-4 mr-2" />
+              {isPaidUser ? (
+                <Link href="/dashboard/student">
+                  <Button variant="primary" size="sm">
+                    <BarChart3 className="w-4 h-4 mr-2" />
+                    Full Analytics
+                  </Button>
+                </Link>
+              ) : (
+                <Button
+                  variant="primary"
+                  size="sm"
+                  onClick={() => setShowUpgradeModal(true)}
+                  className="relative"
+                >
+                  <Lock className="w-4 h-4 mr-2" />
                   Full Analytics
+                  <span className="ml-2 px-2 py-0.5 bg-yellow-400 text-yellow-900 text-xs font-bold rounded-full">
+                    PRO
+                  </span>
                 </Button>
-              </Link>
+              )}
             </div>
           </div>
 
@@ -376,13 +431,23 @@ export default function StudentDashboard() {
                 href="/mock-tests"
                 color="from-blue-500 to-blue-600"
               />
-              <ActionButton
-                icon={<Brain className="w-6 h-6" />}
-                title="Ask AI Tutor"
-                description="Get instant help"
-                href="/student/ai-tutor"
-                color="from-purple-500 to-purple-600"
-              />
+              {isPaidUser ? (
+                <ActionButton
+                  icon={<Brain className="w-6 h-6" />}
+                  title="Ask AI Tutor"
+                  description="Get instant help"
+                  href="/student/ai-tutor"
+                  color="from-purple-500 to-purple-600"
+                />
+              ) : (
+                <LockedActionButton
+                  icon={<Brain className="w-6 h-6" />}
+                  title="Ask AI Tutor"
+                  description="Get instant help"
+                  color="from-purple-500 to-purple-600"
+                  onClick={() => setShowUpgradeModal(true)}
+                />
+              )}
               <ActionButton
                 icon={<FileText className="w-6 h-6" />}
                 title="Browse Materials"
@@ -390,13 +455,23 @@ export default function StudentDashboard() {
                 href="/student/materials"
                 color="from-green-500 to-green-600"
               />
-              <ActionButton
-                icon={<BarChart3 className="w-6 h-6" />}
-                title="View Analytics"
-                description="Track progress"
-                href="/dashboard/student"
-                color="from-orange-500 to-orange-600"
-              />
+              {isPaidUser ? (
+                <ActionButton
+                  icon={<BarChart3 className="w-6 h-6" />}
+                  title="View Analytics"
+                  description="Track progress"
+                  href="/dashboard/student"
+                  color="from-orange-500 to-orange-600"
+                />
+              ) : (
+                <LockedActionButton
+                  icon={<BarChart3 className="w-6 h-6" />}
+                  title="View Analytics"
+                  description="Track progress"
+                  color="from-orange-500 to-orange-600"
+                  onClick={() => setShowUpgradeModal(true)}
+                />
+              )}
             </div>
           </section>
 
@@ -505,6 +580,61 @@ function ActionButton({
         </Card>
       </motion.div>
     </Link>
+  )
+}
+
+function LockedActionButton({
+  icon,
+  title,
+  description,
+  color,
+  onClick,
+}: {
+  icon: React.ReactNode
+  title: string
+  description: string
+  color: string
+  onClick: () => void
+}) {
+  return (
+    <motion.div
+      whileHover={{ scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
+      className="h-full cursor-pointer"
+      onClick={onClick}
+    >
+      <Card className="h-full hover:shadow-lg transition-shadow relative overflow-hidden">
+        <CardContent className="p-6 relative">
+          {/* Lock Badge */}
+          <div className="absolute top-2 right-2 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center shadow-md z-10">
+            <Lock className="w-4 h-4 text-yellow-900" />
+          </div>
+
+          <div
+            className={cn(
+              'w-12 h-12 rounded-lg bg-gradient-to-br flex items-center justify-center text-white mb-4 opacity-75',
+              color
+            )}
+          >
+            {icon}
+          </div>
+          <h3 className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
+            {title}
+            <span className="px-2 py-0.5 bg-yellow-100 text-yellow-800 text-xs font-bold rounded">
+              PRO
+            </span>
+          </h3>
+          <p className="text-sm text-gray-600">{description}</p>
+        </CardContent>
+
+        {/* Hover overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-purple-600/10 opacity-0 hover:opacity-100 transition-opacity flex items-center justify-center">
+          <span className="text-sm font-semibold text-gray-900 bg-white px-4 py-2 rounded-lg shadow-lg">
+            Click to Upgrade
+          </span>
+        </div>
+      </Card>
+    </motion.div>
   )
 }
 

@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react'
 import { useAuth } from '@/hooks/useAuth'
+import { DashboardAccessControl } from '@/components/DashboardAccessControl'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
@@ -15,7 +16,7 @@ import {
   BarChart3,
   Download,
   Zap,
-  Brain
+  Brain,
 } from 'lucide-react'
 import { PerformanceChart } from '@/components/analytics/PerformanceChart'
 import { TopicAnalysisChart } from '@/components/analytics/TopicAnalysisChart'
@@ -26,7 +27,7 @@ import type {
   UserPerformanceData,
   PerformanceMetrics,
   ComparativeAnalytics,
-  Leaderboard
+  Leaderboard,
 } from '@/lib/types/analytics'
 
 export default function StudentDashboard() {
@@ -58,27 +59,26 @@ export default function StudentDashboard() {
             userId: user.id,
             timeRange: {
               from: getPeriodStartDate(selectedPeriod),
-              to: new Date()
-            }
-          })
+              to: new Date(),
+            },
+          }),
         }),
         fetch(`/api/analytics/performance?userId=${user.id}&period=${selectedPeriod}`),
         fetch(`/api/analytics/comparative?userId=${user.id}&grade=${user.grade || 'CLASS_12'}`),
-        fetch(`/api/analytics/leaderboard?type=global&period=weekly&userId=${user.id}`)
+        fetch(`/api/analytics/leaderboard?type=global&period=weekly&userId=${user.id}`),
       ])
 
       const [performanceData, metricsData, comparativeData, leaderboardData] = await Promise.all([
         performanceRes.json(),
         metricsRes.json(),
         comparativeRes.json(),
-        leaderboardRes.json()
+        leaderboardRes.json(),
       ])
 
       if (performanceData.success) setPerformanceData(performanceData.data)
       if (metricsData.success) setMetrics(metricsData.data)
       if (comparativeData.success) setComparative(comparativeData.data)
       if (leaderboardData.success) setLeaderboard(leaderboardData.data)
-
     } catch (error) {
       console.error('Error fetching analytics data:', error)
     } finally {
@@ -112,16 +112,16 @@ export default function StudentDashboard() {
             format,
             timeRange: {
               from: getPeriodStartDate(selectedPeriod),
-              to: new Date()
+              to: new Date(),
             },
             filters: {
               userId: user.id,
-              grade: user.grade
+              grade: user.grade,
             },
             includeCharts: true,
-            includeRawData: true
-          }
-        })
+            includeRawData: true,
+          },
+        }),
       })
 
       if (response.ok) {
@@ -145,282 +145,285 @@ export default function StudentDashboard() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 p-6">
-      <div className="max-w-7xl mx-auto space-y-6">
-        {/* Header */}
-        <div className="flex justify-between items-start">
-          <div>
-            <h1 className="text-3xl font-bold text-gray-900">
-              Welcome back, {user.name || 'Student'}!
-            </h1>
-            <p className="text-gray-600 mt-2">
-              Track your NEET Biology preparation progress and performance insights
-            </p>
-          </div>
-
-          <div className="flex gap-2">
-            <select
-              value={selectedPeriod}
-              onChange={(e) => setSelectedPeriod(e.target.value as any)}
-              className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
-              <option value="week">Last Week</option>
-              <option value="month">Last Month</option>
-              <option value="quarter">Last Quarter</option>
-            </select>
-
-            <Button
-              onClick={() => exportReport('pdf')}
-              variant="outline"
-              className="flex items-center gap-2"
-            >
-              <Download className="w-4 h-4" />
-              Export PDF
-            </Button>
-          </div>
-        </div>
-
-        {/* Key Metrics Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <MetricCard
-            title="Tests Completed"
-            value={metrics?.totalTests || 0}
-            icon={<BookOpen className="w-6 h-6 text-blue-600" />}
-            trend={metrics?.improvement || 0}
-            format="number"
-          />
-          <MetricCard
-            title="Average Score"
-            value={metrics?.averageScore || 0}
-            icon={<Target className="w-6 h-6 text-green-600" />}
-            trend={metrics?.improvement || 0}
-            format="percentage"
-          />
-          <MetricCard
-            title="Study Time"
-            value={(metrics?.totalStudyTime || 0) / 60}
-            icon={<Clock className="w-6 h-6 text-orange-600" />}
-            trend={0}
-            format="time"
-          />
-          <MetricCard
-            title="Accuracy"
-            value={metrics?.accuracy || 0}
-            icon={<TrendingUp className="w-6 h-6 text-purple-600" />}
-            trend={metrics?.improvement || 0}
-            format="percentage"
-          />
-        </div>
-
-        {/* Main Dashboard Tabs */}
-        <Tabs defaultValue="overview" className="space-y-6">
-          <TabsList className="grid w-full grid-cols-4">
-            <TabsTrigger value="overview">Overview</TabsTrigger>
-            <TabsTrigger value="performance">Performance</TabsTrigger>
-            <TabsTrigger value="topics">Topics</TabsTrigger>
-            <TabsTrigger value="comparison">Comparison</TabsTrigger>
-          </TabsList>
-
-          <TabsContent value="overview" className="space-y-6">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              {/* Progress Trend Chart */}
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <BarChart3 className="w-5 h-5" />
-                    Progress Trend
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  {performanceData?.progressTrend && (
-                    <ProgressTrendChart data={performanceData.progressTrend} />
-                  )}
-                </CardContent>
-              </Card>
-
-              {/* Leaderboard */}
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <Trophy className="w-5 h-5" />
-                    Leaderboard
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  {leaderboard && (
-                    <LeaderboardWidget
-                      leaderboard={leaderboard}
-                      currentUser={user}
-                    />
-                  )}
-                </CardContent>
-              </Card>
+    <DashboardAccessControl dashboardType="ANALYTICS" fallbackRoute="/student/dashboard">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 p-6">
+        <div className="max-w-7xl mx-auto space-y-6">
+          {/* Header */}
+          <div className="flex justify-between items-start">
+            <div>
+              <h1 className="text-3xl font-bold text-gray-900">
+                Welcome back, {user.name || 'Student'}!
+              </h1>
+              <p className="text-gray-600 mt-2">
+                Track your NEET Biology preparation progress and performance insights
+              </p>
             </div>
 
-            {/* Achievements and Recommendations */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <Award className="w-5 h-5" />
-                    Achievements
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  {performanceData?.achievements && (
-                    <AchievementsBadge achievements={performanceData.achievements} />
-                  )}
-                </CardContent>
-              </Card>
+            <div className="flex gap-2">
+              <select
+                value={selectedPeriod}
+                onChange={(e) => setSelectedPeriod(e.target.value as any)}
+                className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              >
+                <option value="week">Last Week</option>
+                <option value="month">Last Month</option>
+                <option value="quarter">Last Quarter</option>
+              </select>
 
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <Brain className="w-5 h-5" />
-                    Recommended Actions
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-3">
-                    {performanceData?.weaknesses?.length > 0 && (
-                      <div className="p-3 bg-red-50 rounded-lg border border-red-200">
-                        <h4 className="font-medium text-red-800 mb-2">Focus Areas</h4>
-                        <ul className="text-sm text-red-700 space-y-1">
-                          {performanceData.weaknesses.map((topic, idx) => (
-                            <li key={idx}>• Practice more {topic} questions</li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
-
-                    {performanceData?.strengths?.length > 0 && (
-                      <div className="p-3 bg-green-50 rounded-lg border border-green-200">
-                        <h4 className="font-medium text-green-800 mb-2">Strengths</h4>
-                        <ul className="text-sm text-green-700 space-y-1">
-                          {performanceData.strengths.map((topic, idx) => (
-                            <li key={idx}>• Excellent in {topic}</li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
-                  </div>
-                </CardContent>
-              </Card>
+              <Button
+                onClick={() => exportReport('pdf')}
+                variant="outline"
+                className="flex items-center gap-2"
+              >
+                <Download className="w-4 h-4" />
+                Export PDF
+              </Button>
             </div>
-          </TabsContent>
+          </div>
 
-          <TabsContent value="performance" className="space-y-6">
-            <Card>
-              <CardHeader>
-                <CardTitle>Detailed Performance Analysis</CardTitle>
-              </CardHeader>
-              <CardContent>
-                {performanceData && (
-                  <PerformanceChart
-                    data={performanceData}
-                    period={selectedPeriod}
-                  />
-                )}
-              </CardContent>
-            </Card>
-          </TabsContent>
+          {/* Key Metrics Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <MetricCard
+              title="Tests Completed"
+              value={metrics?.totalTests || 0}
+              icon={<BookOpen className="w-6 h-6 text-blue-600" />}
+              trend={metrics?.improvement || 0}
+              format="number"
+            />
+            <MetricCard
+              title="Average Score"
+              value={metrics?.averageScore || 0}
+              icon={<Target className="w-6 h-6 text-green-600" />}
+              trend={metrics?.improvement || 0}
+              format="percentage"
+            />
+            <MetricCard
+              title="Study Time"
+              value={(metrics?.totalStudyTime || 0) / 60}
+              icon={<Clock className="w-6 h-6 text-orange-600" />}
+              trend={0}
+              format="time"
+            />
+            <MetricCard
+              title="Accuracy"
+              value={metrics?.accuracy || 0}
+              icon={<TrendingUp className="w-6 h-6 text-purple-600" />}
+              trend={metrics?.improvement || 0}
+              format="percentage"
+            />
+          </div>
 
-          <TabsContent value="topics" className="space-y-6">
-            <Card>
-              <CardHeader>
-                <CardTitle>Topic-wise Performance</CardTitle>
-              </CardHeader>
-              <CardContent>
-                {performanceData?.topicPerformance && (
-                  <TopicAnalysisChart data={performanceData.topicPerformance} />
-                )}
-              </CardContent>
-            </Card>
-          </TabsContent>
+          {/* Main Dashboard Tabs */}
+          <Tabs defaultValue="overview" className="space-y-6">
+            <TabsList className="grid w-full grid-cols-4">
+              <TabsTrigger value="overview">Overview</TabsTrigger>
+              <TabsTrigger value="performance">Performance</TabsTrigger>
+              <TabsTrigger value="topics">Topics</TabsTrigger>
+              <TabsTrigger value="comparison">Comparison</TabsTrigger>
+            </TabsList>
 
-          <TabsContent value="comparison" className="space-y-6">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Class Comparison</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  {comparative && (
-                    <div className="space-y-4">
-                      <div className="text-center">
-                        <div className="text-3xl font-bold text-blue-600">
-                          #{comparative.user.rank}
-                        </div>
-                        <div className="text-gray-600">Class Rank</div>
-                        <div className="text-sm text-gray-500">
-                          {Math.round(comparative.percentile)}th percentile
-                        </div>
-                      </div>
+            <TabsContent value="overview" className="space-y-6">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                {/* Progress Trend Chart */}
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="flex items-center gap-2">
+                      <BarChart3 className="w-5 h-5" />
+                      Progress Trend
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    {performanceData?.progressTrend && (
+                      <ProgressTrendChart data={performanceData.progressTrend} />
+                    )}
+                  </CardContent>
+                </Card>
 
-                      <div className="space-y-3">
-                        <div className="flex justify-between items-center">
-                          <span className="text-gray-600">Your Score</span>
-                          <span className="font-semibold">
-                            {Math.round(comparative.user.score * 100) / 100}%
-                          </span>
-                        </div>
-                        <div className="flex justify-between items-center">
-                          <span className="text-gray-600">Class Average</span>
-                          <span className="font-semibold">
-                            {Math.round(comparative.class.averageScore * 100) / 100}%
-                          </span>
-                        </div>
-                        <div className="flex justify-between items-center">
-                          <span className="text-gray-600">Difference</span>
-                          <span className={`font-semibold ${
-                            comparative.comparison.scoreComparison >= 0
-                              ? 'text-green-600'
-                              : 'text-red-600'
-                          }`}>
-                            {comparative.comparison.scoreComparison >= 0 ? '+' : ''}
-                            {Math.round(comparative.comparison.scoreComparison * 100) / 100}%
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  )}
-                </CardContent>
-              </Card>
+                {/* Leaderboard */}
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="flex items-center gap-2">
+                      <Trophy className="w-5 h-5" />
+                      Leaderboard
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    {leaderboard && (
+                      <LeaderboardWidget leaderboard={leaderboard} currentUser={user} />
+                    )}
+                  </CardContent>
+                </Card>
+              </div>
 
-              <Card>
-                <CardHeader>
-                  <CardTitle>Top Performers</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  {comparative?.class.topPerformers && (
+              {/* Achievements and Recommendations */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="flex items-center gap-2">
+                      <Award className="w-5 h-5" />
+                      Achievements
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    {performanceData?.achievements && (
+                      <AchievementsBadge achievements={performanceData.achievements} />
+                    )}
+                  </CardContent>
+                </Card>
+
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="flex items-center gap-2">
+                      <Brain className="w-5 h-5" />
+                      Recommended Actions
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
                     <div className="space-y-3">
-                      {comparative.class.topPerformers.map((performer, idx) => (
-                        <div key={idx} className="flex items-center justify-between">
-                          <div className="flex items-center gap-3">
-                            <div className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${
-                              idx === 0 ? 'bg-yellow-500 text-white' :
-                              idx === 1 ? 'bg-gray-400 text-white' :
-                              idx === 2 ? 'bg-amber-600 text-white' :
-                              'bg-gray-200 text-gray-700'
-                            }`}>
-                              {performer.rank}
-                            </div>
-                            <span className="font-medium">{performer.name}</span>
-                          </div>
-                          <span className="text-gray-600">
-                            {Math.round(performer.score * 100) / 100}%
-                          </span>
+                      {performanceData?.weaknesses?.length > 0 && (
+                        <div className="p-3 bg-red-50 rounded-lg border border-red-200">
+                          <h4 className="font-medium text-red-800 mb-2">Focus Areas</h4>
+                          <ul className="text-sm text-red-700 space-y-1">
+                            {performanceData.weaknesses.map((topic, idx) => (
+                              <li key={idx}>• Practice more {topic} questions</li>
+                            ))}
+                          </ul>
                         </div>
-                      ))}
+                      )}
+
+                      {performanceData?.strengths?.length > 0 && (
+                        <div className="p-3 bg-green-50 rounded-lg border border-green-200">
+                          <h4 className="font-medium text-green-800 mb-2">Strengths</h4>
+                          <ul className="text-sm text-green-700 space-y-1">
+                            {performanceData.strengths.map((topic, idx) => (
+                              <li key={idx}>• Excellent in {topic}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
                     </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </TabsContent>
+
+            <TabsContent value="performance" className="space-y-6">
+              <Card>
+                <CardHeader>
+                  <CardTitle>Detailed Performance Analysis</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  {performanceData && (
+                    <PerformanceChart data={performanceData} period={selectedPeriod} />
                   )}
                 </CardContent>
               </Card>
-            </div>
-          </TabsContent>
-        </Tabs>
+            </TabsContent>
+
+            <TabsContent value="topics" className="space-y-6">
+              <Card>
+                <CardHeader>
+                  <CardTitle>Topic-wise Performance</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  {performanceData?.topicPerformance && (
+                    <TopicAnalysisChart data={performanceData.topicPerformance} />
+                  )}
+                </CardContent>
+              </Card>
+            </TabsContent>
+
+            <TabsContent value="comparison" className="space-y-6">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Class Comparison</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    {comparative && (
+                      <div className="space-y-4">
+                        <div className="text-center">
+                          <div className="text-3xl font-bold text-blue-600">
+                            #{comparative.user.rank}
+                          </div>
+                          <div className="text-gray-600">Class Rank</div>
+                          <div className="text-sm text-gray-500">
+                            {Math.round(comparative.percentile)}th percentile
+                          </div>
+                        </div>
+
+                        <div className="space-y-3">
+                          <div className="flex justify-between items-center">
+                            <span className="text-gray-600">Your Score</span>
+                            <span className="font-semibold">
+                              {Math.round(comparative.user.score * 100) / 100}%
+                            </span>
+                          </div>
+                          <div className="flex justify-between items-center">
+                            <span className="text-gray-600">Class Average</span>
+                            <span className="font-semibold">
+                              {Math.round(comparative.class.averageScore * 100) / 100}%
+                            </span>
+                          </div>
+                          <div className="flex justify-between items-center">
+                            <span className="text-gray-600">Difference</span>
+                            <span
+                              className={`font-semibold ${
+                                comparative.comparison.scoreComparison >= 0
+                                  ? 'text-green-600'
+                                  : 'text-red-600'
+                              }`}
+                            >
+                              {comparative.comparison.scoreComparison >= 0 ? '+' : ''}
+                              {Math.round(comparative.comparison.scoreComparison * 100) / 100}%
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </CardContent>
+                </Card>
+
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Top Performers</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    {comparative?.class.topPerformers && (
+                      <div className="space-y-3">
+                        {comparative.class.topPerformers.map((performer, idx) => (
+                          <div key={idx} className="flex items-center justify-between">
+                            <div className="flex items-center gap-3">
+                              <div
+                                className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${
+                                  idx === 0
+                                    ? 'bg-yellow-500 text-white'
+                                    : idx === 1
+                                      ? 'bg-gray-400 text-white'
+                                      : idx === 2
+                                        ? 'bg-amber-600 text-white'
+                                        : 'bg-gray-200 text-gray-700'
+                                }`}
+                              >
+                                {performer.rank}
+                              </div>
+                              <span className="font-medium">{performer.name}</span>
+                            </div>
+                            <span className="text-gray-600">
+                              {Math.round(performer.score * 100) / 100}%
+                            </span>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </CardContent>
+                </Card>
+              </div>
+            </TabsContent>
+          </Tabs>
+        </div>
       </div>
-    </div>
+    </DashboardAccessControl>
   )
 }
 
@@ -429,7 +432,7 @@ function MetricCard({
   value,
   icon,
   trend,
-  format
+  format,
 }: {
   title: string
   value: number
@@ -454,21 +457,19 @@ function MetricCard({
         <div className="flex items-center justify-between">
           <div>
             <p className="text-sm text-gray-600">{title}</p>
-            <p className="text-2xl font-bold text-gray-900">
-              {formatValue(value, format)}
-            </p>
+            <p className="text-2xl font-bold text-gray-900">{formatValue(value, format)}</p>
             {trend !== 0 && (
-              <p className={`text-sm flex items-center gap-1 ${
-                trend > 0 ? 'text-green-600' : 'text-red-600'
-              }`}>
+              <p
+                className={`text-sm flex items-center gap-1 ${
+                  trend > 0 ? 'text-green-600' : 'text-red-600'
+                }`}
+              >
                 <TrendingUp className={`w-3 h-3 ${trend < 0 ? 'rotate-180' : ''}`} />
                 {Math.abs(trend).toFixed(1)}%
               </p>
             )}
           </div>
-          <div className="p-3 bg-gray-50 rounded-lg">
-            {icon}
-          </div>
+          <div className="p-3 bg-gray-50 rounded-lg">{icon}</div>
         </div>
       </CardContent>
     </Card>

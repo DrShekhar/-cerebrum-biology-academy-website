@@ -8,6 +8,7 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { BookOpen, LogIn, UserPlus } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
+import { DashboardAccessControl } from '@/components/DashboardAccessControl'
 
 const PersonalizedStudentDashboard = dynamic(
   () =>
@@ -108,10 +109,12 @@ export default function DashboardPage() {
     return <AuthRequiredMessage />
   }
 
-  // Show dashboard for authenticated users
+  // Show dashboard for authenticated users with access control
   return (
-    <main className="min-h-screen">
-      <PersonalizedStudentDashboard />
-    </main>
+    <DashboardAccessControl dashboardType="NEET_PREP" fallbackRoute="/student/dashboard">
+      <main className="min-h-screen">
+        <PersonalizedStudentDashboard />
+      </main>
+    </DashboardAccessControl>
   )
 }
