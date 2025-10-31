@@ -1536,3 +1536,21 @@ model RescheduleToken {
   @@index([bookingId])
   @@map("reschedule_tokens")
 }
+
+// OTP Verification
+model OtpVerification {
+  id        String   @id @default(cuid())
+  mobile    String
+  otp       String
+  purpose   String   // registration, login, password_reset, mobile_verification
+  verified  Boolean  @default(false)
+  expiresAt DateTime
+  attempts  Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([mobile])
+  @@index([mobile, createdAt])
+  @@index([expiresAt])
+  @@map("otp_verifications")
+}

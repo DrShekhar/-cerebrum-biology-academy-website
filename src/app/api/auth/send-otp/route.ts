@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { adminDb as db } from '@/lib/db-admin'
+import { prisma } from '@/lib/prisma'
 import { z } from 'zod'
+import twilio from 'twilio'
 
 // Validation schema for OTP request
 const sendOtpSchema = z.object({
@@ -19,42 +20,33 @@ function generateOTP(): string {
 
 // Rate limiting: Max 5 OTPs per mobile per hour, with progressive delays
 async function checkRateLimit(mobile: string): Promise<{ allowed: boolean; waitTime?: number }> {
-  const oneHourAgo = Date.now() - 60 * 60 * 1000
-  const fiveMinutesAgo = Date.now() - 5 * 60 * 1000
+  const oneHourAgo = new Date(Date.now() - 60 * 60 * 1000)
+  const fiveMinutesAgo = new Date(Date.now() - 5 * 60 * 1000)
 
   try {
-    const recentOtps = await db.query({
-      otpVerification: {
-        $: {
-          where: {
-            mobile: mobile,
-            createdAt: { $gt: oneHourAgo },
-          },
+    // Check last hour
+    const recentOtps = await prisma.otpVerification.findMany({
+      where: {
+        mobile: mobile,
+        createdAt: {
+          gte: oneHourAgo,
         },
+      },
+      orderBy: {
+        createdAt: 'desc',
       },
     })
 
-    const otpCount = recentOtps?.otpVerification?.length || 0
+    const otpCount = recentOtps.length
 
-    // Check if too many requests in last 5 minutes (max 2)
-    const recentOtpsShort = await db.query({
-      otpVerification: {
-        $: {
-          where: {
-            mobile: mobile,
-            createdAt: { $gt: fiveMinutesAgo },
-          },
-        },
-      },
-    })
+    // Check last 5 minutes
+    const recentOtpsShort = recentOtps.filter((otp) => otp.createdAt >= fiveMinutesAgo)
 
-    const shortTermCount = recentOtpsShort?.otpVerification?.length || 0
+    const shortTermCount = recentOtpsShort.length
 
     // Allow up to 5 OTPs per hour, but max 2 in 5 minutes
     if (shortTermCount >= 2) {
-      const lastOtpTime = Math.max(
-        ...(recentOtpsShort.otpVerification?.map((otp) => otp.createdAt) || [0])
-      )
+      const lastOtpTime = recentOtpsShort[0]?.createdAt.getTime() || 0
       const waitTime = Math.max(0, 5 * 60 * 1000 - (Date.now() - lastOtpTime))
       return { allowed: false, waitTime }
     }
@@ -66,27 +58,47 @@ async function checkRateLimit(mobile: string): Promise<{ allowed: boolean; waitT
     return { allowed: true }
   } catch (error) {
     console.error('Rate limit check error:', error)
-    return { allowed: false }
+    return { allowed: true } // Allow on error to not block users
   }
 }
 
-// Send SMS OTP (Mock implementation - replace with actual SMS service)
+// Send SMS OTP via Twilio
 async function sendSMSOTP(mobile: string, otp: string): Promise<boolean> {
   try {
-    // In production, integrate with SMS service like:
-    // - Twilio
-    // - AWS SNS
-    // - TextLocal
-    // - MSG91
+    const accountSid = process.env.TWILIO_ACCOUNT_SID
+    const authToken = process.env.TWILIO_AUTH_TOKEN
+    const twilioPhone = process.env.TWILIO_PHONE_NUMBER
 
-    // In development only - remove OTP from logs in production
+    // Fallback to mock in development if credentials not configured
+    if (!accountSid || !authToken || !twilioPhone) {
+      if (process.env.NODE_ENV === 'development') {
+        console.log(`📱 SMS OTP for ${mobile}: ${otp} (MOCK - Twilio not configured)`)
+        return true
+      }
+      console.error('Twilio credentials not configured')
+      return false
+    }
+
+    const client = twilio(accountSid, authToken)
+
+    const message = `Your OTP for Cerebrum Biology Academy is: ${otp}
+
+🔒 Valid for 10 minutes
+🚫 Don't share with anyone
+
+Best of luck with your NEET preparation!
+- Team Cerebrum`
+
+    await client.messages.create({
+      body: message,
+      from: twilioPhone,
+      to: `+91${mobile}`,
+    })
+
     if (process.env.NODE_ENV === 'development') {
-      console.log(`📱 SMS OTP for ${mobile}: ${otp}`)
-    } else {
       console.log(`📱 SMS OTP sent to ${mobile.slice(0, 3)}****${mobile.slice(-2)}`)
     }
 
-    // Mock success for development
     return true
   } catch (error) {
     console.error('SMS send error:', error)
@@ -94,13 +106,26 @@ async function sendSMSOTP(mobile: string, otp: string): Promise<boolean> {
   }
 }
 
-// Send WhatsApp OTP (Mock implementation - replace with actual WhatsApp Business API)
+// Send WhatsApp OTP via Twilio
 async function sendWhatsAppOTP(whatsapp: string, otp: string, name?: string): Promise<boolean> {
   try {
-    // In production, integrate with WhatsApp Business API:
-    // - Facebook WhatsApp Business API
-    // - Twilio WhatsApp API
-    // - 360Dialog
+    const accountSid = process.env.TWILIO_ACCOUNT_SID
+    const authToken = process.env.TWILIO_AUTH_TOKEN
+    const twilioWhatsAppNumber = process.env.TWILIO_WHATSAPP_NUMBER
+
+    // Fallback to mock in development if credentials not configured
+    if (!accountSid || !authToken || !twilioWhatsAppNumber) {
+      if (process.env.NODE_ENV === 'development') {
+        console.log(
+          `💬 WhatsApp OTP for ${whatsapp}: ${otp} (MOCK - Twilio WhatsApp not configured)`
+        )
+        return true
+      }
+      console.error('Twilio WhatsApp credentials not configured')
+      return false
+    }
+
+    const client = twilio(accountSid, authToken)
 
     const message = `Hi ${name || 'Student'}! 👋
 
@@ -112,14 +137,16 @@ Your OTP for Cerebrum Biology Academy is: *${otp}*
 Best of luck with your NEET preparation! 🎯
 - Team Cerebrum`
 
-    // In development only - remove OTP from logs in production
+    await client.messages.create({
+      body: message,
+      from: `whatsapp:${twilioWhatsAppNumber}`,
+      to: `whatsapp:+91${whatsapp}`,
+    })
+
     if (process.env.NODE_ENV === 'development') {
-      console.log(`💬 WhatsApp OTP for ${whatsapp}:`, message)
-    } else {
       console.log(`💬 WhatsApp OTP sent to ${whatsapp.slice(0, 3)}****${whatsapp.slice(-2)}`)
     }
 
-    // Mock success for development
     return true
   } catch (error) {
     console.error('WhatsApp send error:', error)
@@ -175,17 +202,13 @@ export async function POST(request: NextRequest) {
 
     // Check if user exists for login purpose
     if (purpose === 'login') {
-      const existingUsers = await db.query({
-        users: {
-          $: {
-            where: {
-              mobile: mobile,
-            },
-          },
+      const existingUser = await prisma.user.findUnique({
+        where: {
+          phone: mobile,
         },
       })
 
-      if (!existingUsers?.users || existingUsers.users.length === 0) {
+      if (!existingUser) {
         return NextResponse.json(
           { error: 'Mobile number not registered. Please sign up first.' },
           { status: 404 }
@@ -194,17 +217,17 @@ export async function POST(request: NextRequest) {
     }
 
     // Store OTP in database
-    await db.transact([
-      db.tx.otpVerification[otpId].update({
+    await prisma.otpVerification.create({
+      data: {
+        id: otpId,
         mobile,
         otp,
         purpose,
-        expiresAt,
+        expiresAt: new Date(expiresAt),
         attempts: 0,
-        isUsed: false,
-        createdAt: Date.now(),
-      }),
-    ])
+        verified: false,
+      },
+    })
 
     // Send OTP via SMS
     const smsSuccess = await sendSMSOTP(mobile, otp)
@@ -215,42 +238,9 @@ export async function POST(request: NextRequest) {
       whatsappSuccess = await sendWhatsAppOTP(whatsapp, otp)
     }
 
-    // Create marketing lead for new users
-    if (purpose === 'registration') {
-      try {
-        await db.transact([
-          db.tx.marketingLead[crypto.randomUUID()].update({
-            mobile,
-            whatsapp: whatsapp || mobile,
-            source: 'website',
-            status: 'new',
-            createdAt: Date.now(),
-          }),
-        ])
-      } catch (leadError) {
-        console.error('Failed to create marketing lead:', leadError)
-        // Don't fail OTP send if lead creation fails
-      }
-    }
-
-    // Log OTP send event
-    try {
-      await db.transact([
-        db.tx.authLogs[crypto.randomUUID()].update({
-          userId: mobile, // Use mobile as temp ID for logging
-          event: 'otp_sent',
-          timestamp: Date.now(),
-          metadata: {
-            purpose,
-            smsSuccess,
-            whatsappSuccess,
-            hasWhatsapp: !!whatsapp,
-          },
-        }),
-      ])
-    } catch (logError) {
-      console.error('Failed to log OTP send:', logError)
-    }
+    console.log(
+      `OTP sent successfully to ${mobile} (SMS: ${smsSuccess}, WhatsApp: ${whatsappSuccess})`
+    )
 
     return NextResponse.json(
       {

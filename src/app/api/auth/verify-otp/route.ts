@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { adminDb as db } from '@/lib/db-admin'
+import { prisma } from '@/lib/prisma'
 import { signIn } from '@/lib/auth'
 import { z } from 'zod'
 
@@ -65,39 +65,38 @@ export async function POST(request: NextRequest) {
     } = validationResult.data
 
     // Verify OTP
-    const otpData = await db.query({
-      otpVerification: {
-        $: {
-          where: {
-            id: otpId,
-            mobile: mobile,
-            otp: otp,
-            purpose: purpose,
-            isUsed: false,
-          },
-        },
+    const otpRecord = await prisma.otpVerification.findUnique({
+      where: {
+        id: otpId,
       },
     })
 
-    if (!otpData?.otpVerification || otpData.otpVerification.length === 0) {
+    if (
+      !otpRecord ||
+      otpRecord.mobile !== mobile ||
+      otpRecord.otp !== otp ||
+      otpRecord.purpose !== purpose ||
+      otpRecord.verified
+    ) {
       // Increment failed attempt counter
-      try {
-        await db.transact([
-          db.tx.otpVerification[otpId].update({
-            attempts: (otpData?.otpVerification?.[0]?.attempts || 0) + 1,
-          }),
-        ])
-      } catch (error) {
-        console.error('Failed to increment OTP attempts:', error)
+      if (otpRecord) {
+        try {
+          await prisma.otpVerification.update({
+            where: { id: otpId },
+            data: {
+              attempts: { increment: 1 },
+            },
+          })
+        } catch (error) {
+          console.error('Failed to increment OTP attempts:', error)
+        }
       }
 
       return NextResponse.json({ error: 'Invalid or expired OTP' }, { status: 400 })
     }
 
-    const otpRecord = otpData.otpVerification[0]
-
     // Check if OTP is expired
-    if (otpRecord.expiresAt < Date.now()) {
+    if (otpRecord.expiresAt < new Date()) {
       return NextResponse.json(
         { error: 'OTP has expired. Please request a new one.' },
         { status: 400 }
@@ -112,13 +111,14 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Mark OTP as used
-    await db.transact([
-      db.tx.otpVerification[otpId].update({
-        isUsed: true,
+    // Mark OTP as verified
+    await prisma.otpVerification.update({
+      where: { id: otpId },
+      data: {
+        verified: true,
         attempts: otpRecord.attempts + 1,
-      }),
-    ])
+      },
+    })
 
     let user
     const currentTime = Date.now()
@@ -133,17 +133,11 @@ export async function POST(request: NextRequest) {
       }
 
       // Check if user already exists
-      const existingUsers = await db.query({
-        users: {
-          $: {
-            where: {
-              mobile: mobile,
-            },
-          },
-        },
+      const existingUser = await prisma.user.findUnique({
+        where: { phone: mobile },
       })
 
-      if (existingUsers?.users && existingUsers.users.length > 0) {
+      if (existingUser) {
         return NextResponse.json(
           { error: 'User already exists. Please login instead.' },
           { status: 409 }
@@ -151,89 +145,67 @@ export async function POST(request: NextRequest) {
       }
 
       // Create new user
-      const userId = crypto.randomUUID()
-
-      const newUser = {
-        mobile,
-        email: email || undefined,
-        name,
-        role,
-        whatsappNumber: whatsapp || mobile,
-        isWhatsappSame: !whatsapp || whatsapp === mobile,
-        communicationPreference: whatsappConsent ? 'whatsapp' : 'sms',
-        isMobileVerified: true,
-        isEmailVerified: false,
-        createdAt: currentTime,
-        updatedAt: currentTime,
-        lastActiveAt: currentTime,
-        profile: {
-          currentClass: role === 'student' ? currentClass : undefined,
-          parentMobile: role === 'student' ? parentMobile : undefined,
-          parentWhatsapp: role === 'student' ? parentMobile : undefined, // Assume same unless specified
-          targetScore: role === 'student' ? 650 : undefined, // Default NEET target
-          registrationDate: currentTime,
-          enrolledCourses: [],
-          referralCode,
-          marketingConsent,
-          whatsappConsent,
-          smsConsent,
+      user = await prisma.user.create({
+        data: {
+          name,
+          email: email || `${mobile}@temp.cerebrumbiologyacademy.com`,
+          phone: mobile,
+          role: role === 'student' ? 'STUDENT' : 'PARENT',
+          phoneVerified: new Date(),
+          profile: {
+            whatsappNumber: whatsapp || mobile,
+            isWhatsappSame: !whatsapp || whatsapp === mobile,
+            communicationPreference: whatsappConsent ? 'whatsapp' : 'sms',
+            currentClass: role === 'student' ? currentClass : undefined,
+            parentMobile: role === 'student' ? parentMobile : undefined,
+            referralCode,
+            marketingConsent,
+            whatsappConsent,
+            smsConsent,
+          },
         },
-      }
-
-      await db.transact([db.tx.users[userId].update(newUser)])
-
-      user = { id: userId, ...newUser }
+      })
 
       // Update marketing lead status
       try {
-        const leads = await db.query({
-          marketingLead: {
-            $: { where: { mobile: mobile } },
-          },
+        const lead = await prisma.marketingLead.findFirst({
+          where: { mobile: mobile },
         })
 
-        if (leads?.marketingLead && leads.marketingLead.length > 0) {
-          const leadId = leads.marketingLead[0].id
-          await db.transact([
-            db.tx.marketingLead[leadId].update({
+        if (lead) {
+          await prisma.marketingLead.update({
+            where: { id: lead.id },
+            data: {
               name: name,
               email: email,
               whatsapp: whatsapp || mobile,
               status: 'enrolled',
-            }),
-          ])
+            },
+          })
         }
       } catch (leadError) {
         console.error('Failed to update marketing lead:', leadError)
       }
     } else if (purpose === 'login') {
       // Get existing user
-      const existingUsers = await db.query({
-        users: {
-          $: {
-            where: {
-              mobile: mobile,
-            },
-          },
-        },
+      user = await prisma.user.findUnique({
+        where: { phone: mobile },
       })
 
-      if (!existingUsers?.users || existingUsers.users.length === 0) {
+      if (!user) {
         return NextResponse.json(
           { error: 'User not found. Please register first.' },
           { status: 404 }
         )
       }
 
-      user = existingUsers.users[0]
-
       // Update last active time
-      await db.transact([
-        db.tx.users[user.id].update({
-          lastActiveAt: currentTime,
-          updatedAt: currentTime,
-        }),
-      ])
+      await prisma.user.update({
+        where: { id: user.id },
+        data: {
+          lastActiveAt: new Date(),
+        },
+      })
     }
 
     // Ensure user exists before proceeding
@@ -241,35 +213,19 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'User authentication failed' }, { status: 500 })
     }
 
-    // Log authentication event
-    try {
-      await db.transact([
-        db.tx.authLogs[crypto.randomUUID()].update({
-          userId: user.id,
-          event: purpose === 'registration' ? 'registration' : 'signin',
-          timestamp: currentTime,
-          metadata: {
-            method: 'otp',
-            mobile: mobile,
-            whatsapp: whatsapp || mobile,
-            purpose,
-          },
-        }),
-      ])
-    } catch (logError) {
-      console.error('Failed to log auth event:', logError)
-    }
+    // Log authentication event for monitoring
+    console.log(
+      `Auth event: ${purpose === 'registration' ? 'registration' : 'signin'} for user ${user.id} via OTP`
+    )
 
     // Return success with user data (excluding password)
     const safeUser = {
       id: user.id,
-      mobile: user.mobile,
+      phone: user.phone,
       email: user.email,
       name: user.name,
       role: user.role,
-      whatsappNumber: user.whatsappNumber,
-      communicationPreference: user.communicationPreference,
-      isMobileVerified: user.isMobileVerified,
+      phoneVerified: user.phoneVerified,
       profile: user.profile,
     }
 
