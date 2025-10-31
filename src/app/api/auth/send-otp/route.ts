@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { z } from 'zod'
-import twilio from 'twilio'
+import axios from 'axios'
 
 // Validation schema for OTP request
 const sendOtpSchema = z.object({
@@ -62,92 +62,127 @@ async function checkRateLimit(mobile: string): Promise<{ allowed: boolean; waitT
   }
 }
 
-// Send SMS OTP via Twilio
+// Send SMS OTP via MSG91
 async function sendSMSOTP(mobile: string, otp: string): Promise<boolean> {
   try {
-    const accountSid = process.env.TWILIO_ACCOUNT_SID
-    const authToken = process.env.TWILIO_AUTH_TOKEN
-    const twilioPhone = process.env.TWILIO_PHONE_NUMBER
+    const authKey = process.env.MSG91_AUTH_KEY
+    const templateId = process.env.MSG91_SMS_TEMPLATE_ID
+    const senderId = process.env.MSG91_SENDER_ID || 'CRBMBIO'
 
     // Fallback to mock in development if credentials not configured
-    if (!accountSid || !authToken || !twilioPhone) {
+    if (!authKey) {
       if (process.env.NODE_ENV === 'development') {
-        console.log(`📱 SMS OTP for ${mobile}: ${otp} (MOCK - Twilio not configured)`)
+        console.log(`📱 SMS OTP for ${mobile}: ${otp} (MOCK - MSG91 not configured)`)
         return true
       }
-      console.error('Twilio credentials not configured')
+      console.error('MSG91 credentials not configured')
       return false
     }
 
-    const client = twilio(accountSid, authToken)
+    const url = 'https://control.msg91.com/api/v5/otp'
 
-    const message = `Your OTP for Cerebrum Biology Academy is: ${otp}
+    const response = await axios.post(
+      url,
+      {
+        template_id: templateId,
+        mobile: `91${mobile}`,
+        authkey: authKey,
+        otp: otp,
+        otp_expiry: 10,
+      },
+      {
+        headers: {
+          authkey: authKey,
+          'Content-Type': 'application/json',
+        },
+      }
+    )
 
-🔒 Valid for 10 minutes
-🚫 Don't share with anyone
-
-Best of luck with your NEET preparation!
-- Team Cerebrum`
-
-    await client.messages.create({
-      body: message,
-      from: twilioPhone,
-      to: `+91${mobile}`,
-    })
-
-    if (process.env.NODE_ENV === 'development') {
-      console.log(`📱 SMS OTP sent to ${mobile.slice(0, 3)}****${mobile.slice(-2)}`)
+    if (response.data.type === 'success') {
+      if (process.env.NODE_ENV === 'development') {
+        console.log(`📱 SMS OTP sent to ${mobile.slice(0, 3)}****${mobile.slice(-2)}`)
+      }
+      return true
     }
 
-    return true
+    console.error('MSG91 SMS send failed:', response.data)
+    return false
   } catch (error) {
     console.error('SMS send error:', error)
     return false
   }
 }
 
-// Send WhatsApp OTP via Twilio
+// Send WhatsApp OTP via MSG91
 async function sendWhatsAppOTP(whatsapp: string, otp: string, name?: string): Promise<boolean> {
   try {
-    const accountSid = process.env.TWILIO_ACCOUNT_SID
-    const authToken = process.env.TWILIO_AUTH_TOKEN
-    const twilioWhatsAppNumber = process.env.TWILIO_WHATSAPP_NUMBER
+    const authKey = process.env.MSG91_AUTH_KEY
+    const whatsappTemplateId = process.env.MSG91_WHATSAPP_TEMPLATE_ID
 
     // Fallback to mock in development if credentials not configured
-    if (!accountSid || !authToken || !twilioWhatsAppNumber) {
+    if (!authKey || !whatsappTemplateId) {
       if (process.env.NODE_ENV === 'development') {
         console.log(
-          `💬 WhatsApp OTP for ${whatsapp}: ${otp} (MOCK - Twilio WhatsApp not configured)`
+          `💬 WhatsApp OTP for ${whatsapp}: ${otp} (MOCK - MSG91 WhatsApp not configured)`
         )
         return true
       }
-      console.error('Twilio WhatsApp credentials not configured')
+      console.error('MSG91 WhatsApp credentials not configured')
       return false
     }
 
-    const client = twilio(accountSid, authToken)
+    const url = 'https://api.msg91.com/api/v5/whatsapp/whatsapp-outbound-message/bulk/'
 
-    const message = `Hi ${name || 'Student'}! 👋
+    const response = await axios.post(
+      url,
+      {
+        integrated_number: process.env.MSG91_WHATSAPP_NUMBER,
+        content_type: 'template',
+        payload: {
+          messaging_product: 'whatsapp',
+          recipient_type: 'individual',
+          to: `91${whatsapp}`,
+          type: 'template',
+          template: {
+            name: whatsappTemplateId,
+            language: {
+              code: 'en',
+            },
+            components: [
+              {
+                type: 'body',
+                parameters: [
+                  {
+                    type: 'text',
+                    text: name || 'Student',
+                  },
+                  {
+                    type: 'text',
+                    text: otp,
+                  },
+                ],
+              },
+            ],
+          },
+        },
+      },
+      {
+        headers: {
+          authkey: authKey,
+          'Content-Type': 'application/json',
+        },
+      }
+    )
 
-Your OTP for Cerebrum Biology Academy is: *${otp}*
-
-🔒 Valid for 10 minutes
-🚫 Don't share with anyone
-
-Best of luck with your NEET preparation! 🎯
-- Team Cerebrum`
-
-    await client.messages.create({
-      body: message,
-      from: `whatsapp:${twilioWhatsAppNumber}`,
-      to: `whatsapp:+91${whatsapp}`,
-    })
-
-    if (process.env.NODE_ENV === 'development') {
-      console.log(`💬 WhatsApp OTP sent to ${whatsapp.slice(0, 3)}****${whatsapp.slice(-2)}`)
+    if (response.data.type === 'success' || response.status === 200) {
+      if (process.env.NODE_ENV === 'development') {
+        console.log(`💬 WhatsApp OTP sent to ${whatsapp.slice(0, 3)}****${whatsapp.slice(-2)}`)
+      }
+      return true
     }
 
-    return true
+    console.error('MSG91 WhatsApp send failed:', response.data)
+    return false
   } catch (error) {
     console.error('WhatsApp send error:', error)
     return false
