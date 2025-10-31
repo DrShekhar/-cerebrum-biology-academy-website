@@ -28,7 +28,7 @@ import {
   Lock,
   Crown,
 } from 'lucide-react'
-import { useAuth } from '@/hooks/useAuth'
+import { useAuth } from '@/contexts/AuthContext'
 import { useUserFlow } from '@/hooks/useUserFlow'
 import { UpgradeModal } from '@/components/UpgradeModal'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'

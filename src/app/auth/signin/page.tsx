@@ -165,8 +165,34 @@ export default function SignInPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 flex items-center justify-center p-4">
-      <div className="max-w-md w-full">
+    <div className="min-h-screen flex items-center justify-center p-4 relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-50">
+      {/* Background decoration layer */}
+      <div className="absolute inset-0 z-0">
+        {/* Corner decorative shapes - highly visible */}
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-teal-200/40 rounded-full blur-[120px] translate-x-1/4 -translate-y-1/4"></div>
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-purple-200/40 rounded-full blur-[120px] -translate-x-1/4 translate-y-1/4"></div>
+        <div className="absolute top-1/3 right-1/4 w-[300px] h-[300px] bg-blue-200/30 rounded-full blur-[80px]"></div>
+        <div className="absolute bottom-1/3 left-1/4 w-[300px] h-[300px] bg-pink-200/30 rounded-full blur-[80px]"></div>
+
+        {/* Animated glowing orbs */}
+        <div className="absolute top-1/4 left-1/3 w-40 h-40 bg-teal-300/50 rounded-full blur-[60px] animate-pulse"></div>
+        <div
+          className="absolute bottom-1/4 right-1/3 w-48 h-48 bg-purple-300/50 rounded-full blur-[60px] animate-pulse"
+          style={{ animationDelay: '2s' }}
+        ></div>
+
+        {/* Subtle pattern overlay */}
+        <div
+          className="absolute inset-0 opacity-30"
+          style={{
+            backgroundImage:
+              'radial-gradient(circle at 2px 2px, rgba(100, 100, 150, 0.15) 1px, transparent 1px)',
+            backgroundSize: '48px 48px',
+          }}
+        ></div>
+      </div>
+
+      <div className="max-w-md w-full relative z-10">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -174,7 +200,7 @@ export default function SignInPage() {
           className="text-center mb-8"
         >
           <Link href="/" className="inline-flex items-center space-x-3 mb-6">
-            <div className="w-14 h-14 bg-white rounded-xl flex items-center justify-center shadow-md border border-teal-100 p-2">
+            <div className="w-14 h-14 bg-gradient-to-br from-teal-50 to-white rounded-xl flex items-center justify-center shadow-[0_4px_12px_rgba(0,0,0,0.08)] border border-teal-200/50 p-2">
               <Image
                 src="/brain-logo.png"
                 alt="Cerebrum Biology Academy"
@@ -198,9 +224,9 @@ export default function SignInPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="bg-white rounded-2xl shadow-xl p-6 mb-6"
+            className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.12),0_2px_8px_rgba(0,0,0,0.08)] border border-gray-100/50 p-6 mb-6 ring-1 ring-black/5"
           >
-            <div className="flex bg-gray-100 rounded-xl p-1 mb-6">
+            <div className="flex bg-gray-100 rounded-xl p-1 mb-6 border border-gray-200 shadow-inner">
               <button
                 onClick={() => setAuthMethod('mobile')}
                 className={`flex-1 flex items-center justify-center space-x-2 py-3 rounded-lg font-medium transition-all ${
@@ -239,7 +265,7 @@ export default function SignInPage() {
                       value={mobile}
                       onChange={(e) => setMobile(e.target.value.replace(/\D/g, '').slice(0, 10))}
                       placeholder="9876543210"
-                      className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 placeholder-gray-500"
+                      className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-teal-500 text-gray-900 placeholder-gray-400 shadow-sm hover:border-gray-400 transition-all duration-200"
                       required
                     />
                   </div>
@@ -257,7 +283,7 @@ export default function SignInPage() {
                       value={whatsapp}
                       onChange={(e) => setWhatsapp(e.target.value.replace(/\D/g, '').slice(0, 10))}
                       placeholder="9876543210 (for updates)"
-                      className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 placeholder-gray-500"
+                      className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-teal-500 text-gray-900 placeholder-gray-400 shadow-sm hover:border-gray-400 transition-all duration-200"
                     />
                   </div>
                   <p className="text-xs text-gray-500 mt-1">
@@ -296,7 +322,7 @@ export default function SignInPage() {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="student@example.com"
-                      className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 placeholder-gray-500"
+                      className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-teal-500 text-gray-900 placeholder-gray-400 shadow-sm hover:border-gray-400 transition-all duration-200"
                       required
                     />
                   </div>
@@ -310,7 +336,7 @@ export default function SignInPage() {
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
                       placeholder="Enter your password"
-                      className="w-full pl-4 pr-12 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 placeholder-gray-500"
+                      className="w-full pl-4 pr-12 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-teal-500 text-gray-900 placeholder-gray-400 shadow-sm hover:border-gray-400 transition-all duration-200"
                       required
                     />
                     <button
@@ -357,7 +383,7 @@ export default function SignInPage() {
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="bg-white rounded-2xl shadow-xl p-6 mb-6"
+            className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.12),0_2px_8px_rgba(0,0,0,0.08)] border border-gray-100/50 p-6 mb-6 ring-1 ring-black/5"
           >
             <div className="text-center mb-6">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -378,7 +404,7 @@ export default function SignInPage() {
                   value={otp}
                   onChange={(e) => setOtp(e.target.value.replace(/\D/g, '').slice(0, 6))}
                   placeholder="123456"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent text-center text-lg font-mono tracking-widest text-gray-900 placeholder-gray-500"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-teal-500 text-center text-lg font-mono tracking-widest text-gray-900 placeholder-gray-400 shadow-sm hover:border-gray-400 transition-all duration-200"
                   maxLength={6}
                   required
                 />

@@ -180,8 +180,34 @@ export default function SignUpPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 flex items-center justify-center p-4">
-      <div className="max-w-md w-full">
+    <div className="min-h-screen flex items-center justify-center p-4 relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-50">
+      {/* Background decoration layer */}
+      <div className="absolute inset-0 z-0">
+        {/* Corner decorative shapes - highly visible */}
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-teal-200/40 rounded-full blur-[120px] translate-x-1/4 -translate-y-1/4"></div>
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-purple-200/40 rounded-full blur-[120px] -translate-x-1/4 translate-y-1/4"></div>
+        <div className="absolute top-1/3 right-1/4 w-[300px] h-[300px] bg-blue-200/30 rounded-full blur-[80px]"></div>
+        <div className="absolute bottom-1/3 left-1/4 w-[300px] h-[300px] bg-pink-200/30 rounded-full blur-[80px]"></div>
+
+        {/* Animated glowing orbs */}
+        <div className="absolute top-1/4 left-1/3 w-40 h-40 bg-teal-300/50 rounded-full blur-[60px] animate-pulse"></div>
+        <div
+          className="absolute bottom-1/4 right-1/3 w-48 h-48 bg-purple-300/50 rounded-full blur-[60px] animate-pulse"
+          style={{ animationDelay: '2s' }}
+        ></div>
+
+        {/* Subtle pattern overlay */}
+        <div
+          className="absolute inset-0 opacity-30"
+          style={{
+            backgroundImage:
+              'radial-gradient(circle at 2px 2px, rgba(100, 100, 150, 0.15) 1px, transparent 1px)',
+            backgroundSize: '48px 48px',
+          }}
+        ></div>
+      </div>
+
+      <div className="max-w-md w-full relative z-10">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
