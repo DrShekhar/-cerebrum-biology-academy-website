@@ -375,7 +375,7 @@ export function EnhancedCourseFinderQuiz({
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
-        className={`bg-white rounded-2xl p-6 max-w-2xl shadow-xl border border-blue-100 ${className}`}
+        className={`bg-white rounded-2xl p-6 max-w-2xl shadow-2xl ${className}`}
       >
         <div className="text-center space-y-6">
           {/* Match Score */}
@@ -519,7 +519,7 @@ export function EnhancedCourseFinderQuiz({
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className={`bg-white rounded-2xl p-6 max-w-xl shadow-xl border border-blue-100 ${className}`}
+      className={`bg-white rounded-2xl p-6 max-w-xl shadow-2xl ${className}`}
     >
       {/* Quiz Header */}
       <div className="text-center mb-4">
