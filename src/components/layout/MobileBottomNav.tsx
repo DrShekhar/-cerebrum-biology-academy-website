@@ -79,7 +79,7 @@ export function MobileBottomNav({ className = '' }: MobileBottomNavProps) {
 
   return (
     <div
-      className={`mobile-nav fixed bottom-0 left-0 right-0 md:hidden bg-white border-t-2 border-gray-200 z-50 shadow-2xl safe-area-bottom ${className}`}
+      className={`mobile-nav fixed bottom-0 left-0 right-0 md:hidden bg-white border-t-2 border-gray-200 z-[60] shadow-2xl safe-area-bottom ${className}`}
       style={{
         paddingBottom: 'max(env(safe-area-inset-bottom), 12px)',
         paddingTop: '8px',
@@ -96,10 +96,10 @@ export function MobileBottomNav({ className = '' }: MobileBottomNavProps) {
                 key={item.href}
                 onClick={() => handleNavClick(item)}
                 className={`nav-item flex flex-col items-center justify-center touch-target-large mobile-focus ripple-effect haptic-feedback ${
-                  item.highlight
-                    ? 'text-green-600 bg-green-50 border-t-4 border-green-600 rounded-t-xl'
-                    : active
-                      ? 'text-blue-600 bg-blue-50 border-t-4 border-blue-600'
+                  active
+                    ? 'text-blue-600 bg-blue-50 border-t-4 border-blue-600'
+                    : item.highlight
+                      ? 'text-green-600 bg-green-50 border-t-4 border-green-600 rounded-t-xl scale-105 shadow-lg'
                       : 'text-gray-600 hover:text-gray-800 border-t-4 border-transparent hover:bg-gray-50'
                 } py-2.5 xs:py-3 px-0.5 xs:px-1 min-h-[60px] xs:min-h-[64px] transition-all duration-200`}
                 aria-label={`${item.label} - ${item.isExternal ? 'Call now' : 'Navigate to'}`}
@@ -117,10 +117,10 @@ export function MobileBottomNav({ className = '' }: MobileBottomNavProps) {
               key={item.href}
               href={item.href}
               className={`nav-item flex flex-col items-center justify-center touch-target-large mobile-focus ripple-effect haptic-feedback ${
-                item.highlight
-                  ? 'text-green-600 bg-green-50 border-t-4 border-green-600 rounded-t-xl scale-105 shadow-lg'
-                  : active
-                    ? 'text-blue-600 bg-blue-50 border-t-4 border-blue-600'
+                active
+                  ? 'text-blue-600 bg-blue-50 border-t-4 border-blue-600'
+                  : item.highlight
+                    ? 'text-green-600 bg-green-50 border-t-4 border-green-600 rounded-t-xl scale-105 shadow-lg'
                     : 'text-gray-600 hover:text-gray-800 border-t-4 border-transparent hover:bg-gray-50'
               } py-2.5 xs:py-3 px-0.5 xs:px-1 min-h-[60px] xs:min-h-[64px] transition-all duration-200`}
               aria-label={`${item.label} - Navigate to ${item.label} page`}

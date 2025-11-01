@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { Star, Quote, Award, TrendingUp, Users, BookOpen, Target, Calendar } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
