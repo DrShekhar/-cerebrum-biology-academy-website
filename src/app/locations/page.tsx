@@ -124,6 +124,28 @@ export default function LocationsPage() {
               <div className="text-sm opacity-80">Success Rate</div>
             </div>
           </div>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Link href="/demo-booking">
+              <Button
+                size="lg"
+                className="text-lg px-8 py-4 bg-white text-blue-600 hover:bg-blue-50 shadow-lg hover:shadow-xl transition-all w-full sm:w-auto"
+              >
+                <GraduationCap className="mr-2 w-5 h-5" />
+                Book Free Demo Class
+              </Button>
+            </Link>
+            <Link href="/course-finder">
+              <Button
+                size="lg"
+                variant="outline"
+                className="text-lg px-8 py-4 bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 transition-all w-full sm:w-auto"
+              >
+                <Target className="mr-2 w-5 h-5" />
+                Find Your Perfect Course
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -330,18 +352,33 @@ export default function LocationsPage() {
             Don't See Your City Listed?
           </h2>
           <p className="text-xl text-gray-600 mb-8">
-            We're expanding rapidly. Contact us to bring Cerebrum Biology Academy to your city.
+            We're expanding rapidly. Contact us to bring Cerebrum Biology Academy to your city or
+            start with our online programs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="text-lg px-8 py-4">
-              <MapPin className="mr-2 w-5 h-5" />
-              Request Your City
-            </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 py-4">
-              <Users className="mr-2 w-5 h-5" />
-              Start Online Learning
-            </Button>
+            <Link href="/demo-booking">
+              <Button size="lg" className="text-lg px-8 py-4 w-full sm:w-auto">
+                <MapPin className="mr-2 w-5 h-5" />
+                Book Free Demo Class
+              </Button>
+            </Link>
+            <Link href="/course-finder">
+              <Button size="lg" variant="outline" className="text-lg px-8 py-4 w-full sm:w-auto">
+                <Users className="mr-2 w-5 h-5" />
+                Find My Perfect Course
+              </Button>
+            </Link>
           </div>
+          <p className="text-sm text-gray-500 mt-6">
+            Or{' '}
+            <Link href="/pricing" className="text-blue-600 hover:underline font-medium">
+              view all pricing options
+            </Link>{' '}
+            •{' '}
+            <Link href="/quick-enroll" className="text-blue-600 hover:underline font-medium">
+              enroll in 2 minutes
+            </Link>
+          </p>
         </div>
       </section>
     </div>
