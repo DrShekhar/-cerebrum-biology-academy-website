@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 
 export default function CourseFinderPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#4F46E5] via-[#7C3AED] to-[#6366F1] py-8">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-slate-50 py-8">
       {/* Breadcrumbs */}
       <BreadcrumbContainer className="pt-4">
         <Breadcrumbs />
@@ -28,30 +28,30 @@ export default function CourseFinderPage() {
         <div className="max-w-4xl mx-auto">
           {/* Page Header */}
           <div className="text-center mb-8">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
               Find Your Perfect Course
             </h1>
-            <p className="text-xl text-blue-100 mb-2">
+            <p className="text-xl text-gray-700 mb-2">
               Answer 3 simple questions to get a personalized course recommendation
             </p>
-            <p className="text-sm text-blue-200">
+            <p className="text-sm text-gray-600">
               Based on your class, NEET experience, and available study time
             </p>
           </div>
 
           {/* Trust Indicators */}
-          <div className="flex justify-center items-center gap-8 mb-8 text-sm text-white/90">
-            <div className="flex items-center gap-2 bg-white/10 rounded-full px-4 py-2">
-              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-              <span>5000+ Students</span>
+          <div className="flex justify-center items-center gap-6 mb-10">
+            <div className="flex items-center gap-2 bg-white rounded-full px-5 py-2.5 shadow-sm border border-gray-200">
+              <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
+              <span className="text-sm font-medium text-gray-700">5000+ Students</span>
             </div>
-            <div className="flex items-center gap-2 bg-white/10 rounded-full px-4 py-2">
-              <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse" />
-              <span>94.8% Success</span>
+            <div className="flex items-center gap-2 bg-white rounded-full px-5 py-2.5 shadow-sm border border-gray-200">
+              <div className="w-2 h-2 bg-indigo-500 rounded-full animate-pulse" />
+              <span className="text-sm font-medium text-gray-700">94.8% Success</span>
             </div>
-            <div className="flex items-center gap-2 bg-white/10 rounded-full px-4 py-2">
-              <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse" />
-              <span>AIIMS Faculty</span>
+            <div className="flex items-center gap-2 bg-white rounded-full px-5 py-2.5 shadow-sm border border-gray-200">
+              <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse" />
+              <span className="text-sm font-medium text-gray-700">AIIMS Faculty</span>
             </div>
           </div>
 
@@ -62,10 +62,10 @@ export default function CourseFinderPage() {
 
           {/* Additional Information */}
           <div className="mt-12 grid md:grid-cols-3 gap-6 text-center">
-            <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-12 h-12 rounded-2xl bg-yellow-500 flex items-center justify-center mx-auto mb-3">
+            <div className="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 border-t-4 border-t-yellow-500">
+              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center mx-auto mb-4 shadow-lg">
                 <svg
-                  className="w-6 h-6 text-white"
+                  className="w-7 h-7 text-white"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -78,16 +78,16 @@ export default function CourseFinderPage() {
                   />
                 </svg>
               </div>
-              <div className="text-2xl font-bold text-gray-900 mb-2">60 Seconds</div>
-              <div className="text-gray-800 font-medium mb-1">Quick Assessment</div>
-              <div className="text-gray-600 text-sm">
+              <div className="text-3xl font-bold text-gray-900 mb-2">60 Seconds</div>
+              <div className="text-gray-800 font-semibold mb-2">Quick Assessment</div>
+              <div className="text-gray-600 text-sm leading-relaxed">
                 Get your recommendation in just 3 questions
               </div>
             </div>
-            <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-12 h-12 rounded-2xl bg-green-500 flex items-center justify-center mx-auto mb-3">
+            <div className="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 border-t-4 border-t-emerald-500">
+              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center mx-auto mb-4 shadow-lg">
                 <svg
-                  className="w-6 h-6 text-white"
+                  className="w-7 h-7 text-white"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -100,14 +100,16 @@ export default function CourseFinderPage() {
                   />
                 </svg>
               </div>
-              <div className="text-2xl font-bold text-gray-900 mb-2">Smart Algorithm</div>
-              <div className="text-gray-800 font-medium mb-1">AI-Powered Matching</div>
-              <div className="text-gray-600 text-sm">Based on 5000+ successful student data</div>
+              <div className="text-3xl font-bold text-gray-900 mb-2">Smart Algorithm</div>
+              <div className="text-gray-800 font-semibold mb-2">AI-Powered Matching</div>
+              <div className="text-gray-600 text-sm leading-relaxed">
+                Based on 5000+ successful student data
+              </div>
             </div>
-            <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-12 h-12 rounded-2xl bg-blue-500 flex items-center justify-center mx-auto mb-3">
+            <div className="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 border-t-4 border-t-indigo-500">
+              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-indigo-400 to-indigo-600 flex items-center justify-center mx-auto mb-4 shadow-lg">
                 <svg
-                  className="w-6 h-6 text-white"
+                  className="w-7 h-7 text-white"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -120,38 +122,94 @@ export default function CourseFinderPage() {
                   />
                 </svg>
               </div>
-              <div className="text-2xl font-bold text-gray-900 mb-2">100% Free</div>
-              <div className="text-gray-800 font-medium mb-1">No Hidden Costs</div>
-              <div className="text-gray-600 text-sm">
+              <div className="text-3xl font-bold text-gray-900 mb-2">100% Free</div>
+              <div className="text-gray-800 font-semibold mb-2">No Hidden Costs</div>
+              <div className="text-gray-600 text-sm leading-relaxed">
                 Complete course recommendations at no cost
               </div>
             </div>
           </div>
 
           {/* Why Take This Quiz */}
-          <div className="mt-12 bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-            <h2 className="text-2xl font-bold text-white text-center mb-6">
+          <div className="mt-12 bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+            <h2 className="text-2xl font-bold text-gray-900 text-center mb-6">
               Why Take Our Course Finder Quiz?
             </h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="text-lg font-semibold text-yellow-300 mb-3">
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-xl p-6 border border-yellow-200">
+                <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+                  <span className="w-8 h-8 rounded-lg bg-yellow-500 flex items-center justify-center">
+                    <svg
+                      className="w-5 h-5 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </span>
                   Personalized Recommendations
                 </h3>
-                <ul className="space-y-2 text-blue-100">
-                  <li>• Courses matched to your current class and goals</li>
-                  <li>• Study schedule aligned with your availability</li>
-                  <li>• Previous NEET experience considered</li>
-                  <li>• Success rate data for each recommendation</li>
+                <ul className="space-y-3 text-gray-700">
+                  <li className="flex items-start gap-2">
+                    <span className="text-yellow-600 font-bold">•</span>
+                    <span>Courses matched to your current class and goals</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-yellow-600 font-bold">•</span>
+                    <span>Study schedule aligned with your availability</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-yellow-600 font-bold">•</span>
+                    <span>Previous NEET experience considered</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-yellow-600 font-bold">•</span>
+                    <span>Success rate data for each recommendation</span>
+                  </li>
                 </ul>
               </div>
-              <div>
-                <h3 className="text-lg font-semibold text-green-300 mb-3">Data-Driven Insights</h3>
-                <ul className="space-y-2 text-blue-100">
-                  <li>• Algorithm based on 5000+ student outcomes</li>
-                  <li>• Success patterns from AIIMS selections</li>
-                  <li>• Optimized for different learning styles</li>
-                  <li>• Regularly updated with latest results</li>
+              <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl p-6 border border-emerald-200">
+                <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+                  <span className="w-8 h-8 rounded-lg bg-emerald-500 flex items-center justify-center">
+                    <svg
+                      className="w-5 h-5 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                      />
+                    </svg>
+                  </span>
+                  Data-Driven Insights
+                </h3>
+                <ul className="space-y-3 text-gray-700">
+                  <li className="flex items-start gap-2">
+                    <span className="text-emerald-600 font-bold">•</span>
+                    <span>Algorithm based on 5000+ student outcomes</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-emerald-600 font-bold">•</span>
+                    <span>Success patterns from AIIMS selections</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-emerald-600 font-bold">•</span>
+                    <span>Optimized for different learning styles</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-emerald-600 font-bold">•</span>
+                    <span>Regularly updated with latest results</span>
+                  </li>
                 </ul>
               </div>
             </div>
