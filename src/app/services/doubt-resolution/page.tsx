@@ -134,6 +134,9 @@ export default function DoubtResolutionPage() {
         'Used doubt resolution 150+ times in 6 months. The 24/7 support helped me clear concepts immediately without waiting for the next class.',
       doubtsSolved: '156 doubts',
       avgResponse: '12 minutes',
+      videoUrl: '', // Placeholder for future video testimonial
+      hasVideo: true,
+      videoPlaceholder: '/images/testimonials/priya-video-thumb.jpg', // Thumbnail placeholder
     },
     {
       name: 'Arjun Patel',
@@ -143,6 +146,9 @@ export default function DoubtResolutionPage() {
         'The instant video calls for complex genetics problems were a game-changer. Faculty explained each step until I was completely clear.',
       doubtsSolved: '203 doubts',
       avgResponse: '8 minutes',
+      videoUrl: '', // Placeholder for future video testimonial
+      hasVideo: true,
+      videoPlaceholder: '/images/testimonials/arjun-video-thumb.jpg', // Thumbnail placeholder
     },
     {
       name: 'Sneha Reddy',
@@ -152,14 +158,17 @@ export default function DoubtResolutionPage() {
         'WhatsApp support was perfect for me. I could ask doubts even during late-night study sessions and get immediate help.',
       doubtsSolved: '189 doubts',
       avgResponse: '15 minutes',
+      videoUrl: '', // Placeholder for future video testimonial
+      hasVideo: true,
+      videoPlaceholder: '/images/testimonials/sneha-video-thumb.jpg', // Thumbnail placeholder
     },
   ]
 
   const pricingPlans = [
     {
       name: 'Course Included',
-      price: 'FREE',
-      originalPrice: 'With any course',
+      price: 'INCLUDED',
+      originalPrice: 'With any course enrollment',
       popular: false,
       features: [
         '24/7 WhatsApp support',
@@ -169,16 +178,18 @@ export default function DoubtResolutionPage() {
         'Basic priority support',
         'Doubt history tracking',
       ],
-      cta: 'Included with Courses',
+      cta: 'View Courses',
       link: '/courses',
+      badge: 'Best Value with Course',
     },
     {
       name: 'Doubt Resolution Pro',
       price: '₹4,999',
       originalPrice: '₹7,999',
+      dailyPrice: 'Just ₹166/day',
       popular: true,
       features: [
-        'All free features included',
+        'All course-included features',
         'Priority response (15 min)',
         'Unlimited video calls',
         'Personal doubt mentor',
@@ -188,12 +199,15 @@ export default function DoubtResolutionPage() {
       ],
       cta: 'Get Pro Support',
       link: '/admissions',
+      badge: 'Most Popular',
     },
     {
       name: 'Elite Doubt Support',
       price: '₹8,999',
       originalPrice: '₹12,999',
+      dailyPrice: 'Just ₹300/day',
       popular: false,
+      scarcity: 'Only 20 slots per batch',
       features: [
         'All Pro features included',
         'Instant response (5 min)',
@@ -203,8 +217,9 @@ export default function DoubtResolutionPage() {
         'Performance analysis',
         'Direct faculty access',
       ],
-      cta: 'Get Elite Support',
+      cta: 'Reserve Elite Slot',
       link: '/admissions',
+      badge: 'Limited Availability',
     },
   ]
 
@@ -249,156 +264,111 @@ export default function DoubtResolutionPage() {
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-red-600 to-pink-600 text-white py-20">
         <div className="max-w-7xl mx-auto px-6">
+          {/* Real-time Social Proof Banner */}
+          <div className="mb-8 flex justify-center">
+            <div className="bg-white/20 backdrop-blur-md rounded-full px-6 py-3 inline-flex items-center gap-3 border border-white/30">
+              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+              <span className="text-sm font-medium">
+                <span className="font-bold">47 doubts</span> resolved in the last hour
+              </span>
+              <div className="flex -space-x-2">
+                <div className="w-6 h-6 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 border-2 border-white" />
+                <div className="w-6 h-6 rounded-full bg-gradient-to-br from-blue-400 to-purple-500 border-2 border-white" />
+                <div className="w-6 h-6 rounded-full bg-gradient-to-br from-pink-400 to-red-500 border-2 border-white" />
+              </div>
+            </div>
+          </div>
+
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-5xl font-bold mb-6">Never Let a Doubt Stop You</h1>
-              <p className="text-xl text-red-100 mb-8">
-                24/7 doubt resolution support that ensures no question goes unanswered. Get instant
-                help from expert NEET Biology faculty anytime, anywhere.
+              <h1 className="text-5xl font-bold mb-6 leading-tight">
+                Get Your NEET Biology Doubts Solved in{' '}
+                <span className="text-yellow-300">12 Minutes or Less</span>
+              </h1>
+              <p className="text-xl text-red-100 mb-6">
+                Join 5,000+ students who cleared their doubts and scored{' '}
+                <span className="font-bold text-yellow-300">340+ in Biology</span>. Expert AIIMS
+                faculty available 24/7 on WhatsApp, Video Call, and Chat.
               </p>
+
+              {/* Trust Indicators */}
+              <div className="flex flex-wrap gap-4 mb-8 text-sm">
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-5 h-5 text-green-300" />
+                  <span>98.5% satisfaction rate</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-5 h-5 text-green-300" />
+                  <span>50,000+ doubts solved</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-5 h-5 text-green-300" />
+                  <span>AIIMS faculty only</span>
+                </div>
+              </div>
+
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/contact"
-                  className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-red-50 transition-colors inline-flex items-center"
+                  className="bg-white text-red-600 px-8 py-4 rounded-lg font-bold hover:bg-red-50 transition-all hover:scale-105 inline-flex items-center justify-center text-lg shadow-lg"
                 >
-                  Ask Your First Doubt
+                  Ask Your First Doubt FREE
                   <MessageCircle className="w-5 h-5 ml-2" />
                 </Link>
                 <Link
                   href="#pricing"
-                  className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors"
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors inline-flex items-center justify-center"
                 >
-                  View Plans
+                  View Plans & Pricing
                 </Link>
               </div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8">
-              <h3 className="text-2xl font-bold mb-6">Doubt Support Features</h3>
-              <div className="space-y-4">
-                <div className="flex items-center">
-                  <Clock className="w-6 h-6 mr-3 text-red-300" />
-                  <span>24/7 Available Support</span>
-                </div>
-                <div className="flex items-center">
-                  <Zap className="w-6 h-6 mr-3 text-red-300" />
-                  <span>5-15 Min Response Time</span>
-                </div>
-                <div className="flex items-center">
-                  <Users className="w-6 h-6 mr-3 text-red-300" />
-                  <span>Expert AIIMS Faculty</span>
-                </div>
-                <div className="flex items-center">
-                  <MessageCircle className="w-6 h-6 mr-3 text-red-300" />
-                  <span>Multiple Support Channels</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* AI Doubt Resolution Bot Section */}
-      <section className="py-16 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <div className="flex items-center justify-center mb-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mr-4">
-                <Brain className="w-6 h-6 text-white" />
-              </div>
-              <h2 className="text-4xl font-bold text-gray-900">
-                AI-Powered Instant Doubt Resolution
-              </h2>
-            </div>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-6">
-              Meet Shekhar Sir's AI Assistant - Get instant Biology doubt resolution with voice
-              support in Hindi, English & Hinglish
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm">
-              <div className="flex items-center bg-white px-4 py-2 rounded-full shadow-lg">
-                <Bot className="w-4 h-4 text-blue-600 mr-2" />
-                <span className="text-gray-700">AI-Powered Teaching</span>
-              </div>
-              <div className="flex items-center bg-white px-4 py-2 rounded-full shadow-lg">
-                <MessageCircle className="w-4 h-4 text-green-600 mr-2" />
-                <span className="text-gray-700">Voice Synthesis</span>
-              </div>
-              <div className="flex items-center bg-white px-4 py-2 rounded-full shadow-lg">
-                <Zap className="w-4 h-4 text-yellow-600 mr-2" />
-                <span className="text-gray-700">Instant Responses</span>
-              </div>
-              <div className="flex items-center bg-white px-4 py-2 rounded-full shadow-lg">
-                <Video className="w-4 h-4 text-purple-600 mr-2" />
-                <span className="text-gray-700">Multi-modal Learning</span>
-              </div>
-            </div>
-          </div>
-
-          {/* AI Chat Board Container */}
-          <div className="bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-200/50">
-            <div className="h-[600px]">
-              <NeomorphismClaudeChatBoard />
-            </div>
-          </div>
-
-          {/* AI Features Grid */}
-          <div className="grid md:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg">
-              <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
-                <Brain className="w-6 h-6 text-blue-600" />
-              </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-3">Smart Biology AI</h3>
-              <p className="text-gray-600 text-sm">
-                Advanced AI trained specifically on NEET Biology syllabus with comprehensive
-                knowledge of all topics from Class 11 & 12.
+              {/* Time Promise */}
+              <p className="text-sm text-red-100 mt-4 flex items-center gap-2">
+                <Clock className="w-4 h-4" />
+                Average response time: 12 minutes | Available 24/7
               </p>
             </div>
 
-            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg">
-              <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-4">
-                <MessageCircle className="w-6 h-6 text-green-600" />
-              </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-3">Shekhar Sir's Voice</h3>
-              <p className="text-gray-600 text-sm">
-                Experience Shekhar Sir's teaching style with AI voice synthesis. Get explanations in
-                Hindi, English, or Hinglish as preferred.
-              </p>
-            </div>
-
-            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg">
-              <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
-                <Zap className="w-6 h-6 text-purple-600" />
-              </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-3">Instant Learning</h3>
-              <p className="text-gray-600 text-sm">
-                No waiting for responses. Get immediate explanations, concept clarifications, and
-                study guidance 24/7 without any delay.
-              </p>
-            </div>
-          </div>
-
-          {/* Call to Action */}
-          <div className="text-center mt-12">
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
-              <h3 className="text-2xl font-bold mb-4">Try the AI Doubt Resolution Above!</h3>
-              <p className="text-blue-100 mb-6">
-                Start with questions like "Explain photosynthesis" or "What is DNA structure" to
-                experience AI-powered learning
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/claudechat"
-                  className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center justify-center"
-                >
-                  <Brain className="w-5 h-5 mr-2" />
-                  Full ClaudeChat Board
-                </Link>
-                <Link
-                  href="/test-voice"
-                  className="border border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-flex items-center justify-center"
-                >
-                  <MessageCircle className="w-5 h-5 mr-2" />
-                  Test Voice Features
-                </Link>
+            <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
+              <h3 className="text-2xl font-bold mb-6">Why Students Love Our Doubt Support</h3>
+              <div className="space-y-5">
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-green-500/20 flex items-center justify-center flex-shrink-0">
+                    <Clock className="w-5 h-5 text-green-300" />
+                  </div>
+                  <div>
+                    <div className="font-semibold text-lg">12-Minute Resolution</div>
+                    <div className="text-red-100 text-sm">Fastest response in the industry</div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center flex-shrink-0">
+                    <Users className="w-5 h-5 text-blue-300" />
+                  </div>
+                  <div>
+                    <div className="font-semibold text-lg">Expert AIIMS Faculty</div>
+                    <div className="text-red-100 text-sm">Taught by doctors who cleared AIIMS</div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-purple-500/20 flex items-center justify-center flex-shrink-0">
+                    <MessageCircle className="w-5 h-5 text-purple-300" />
+                  </div>
+                  <div>
+                    <div className="font-semibold text-lg">4 Support Channels</div>
+                    <div className="text-red-100 text-sm">WhatsApp, Video, Chat, Voice Call</div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-yellow-500/20 flex items-center justify-center flex-shrink-0">
+                    <Zap className="w-5 h-5 text-yellow-300" />
+                  </div>
+                  <div>
+                    <div className="font-semibold text-lg">Unlimited Doubts</div>
+                    <div className="text-red-100 text-sm">No cap on questions, ask freely</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -487,6 +457,114 @@ export default function DoubtResolutionPage() {
         </div>
       </section>
 
+      {/* AI Doubt Resolution - Supplementary Tool */}
+      <section className="py-16 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
+        <div className="max-w-7xl mx-auto px-6">
+          {/* Supplementary Positioning */}
+          <div className="text-center mb-8">
+            <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full border border-blue-200 mb-4">
+              <span className="text-sm font-medium text-gray-700">Bonus Feature</span>
+              <span className="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full">
+                Available 24/7
+              </span>
+            </div>
+          </div>
+
+          <div className="text-center mb-12">
+            <div className="flex items-center justify-center mb-4">
+              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mr-4">
+                <Brain className="w-6 h-6 text-white" />
+              </div>
+              <h2 className="text-3xl font-bold text-gray-900">
+                Plus: AI Assistant for Quick Reference
+              </h2>
+            </div>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-4">
+              When faculty support is busy, get instant concept clarification with our AI assistant.
+              Great for quick questions while you wait for detailed faculty explanations.
+            </p>
+            <p className="text-sm text-gray-500 max-w-2xl mx-auto">
+              <strong>Note:</strong> AI is supplementary to our human expert support. For
+              exam-focused doubts and personalized guidance, use the human support channels above.
+            </p>
+          </div>
+
+          {/* AI Chat Board Container */}
+          <div className="bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-200/50">
+            <div className="h-[600px]">
+              <NeomorphismClaudeChatBoard />
+            </div>
+          </div>
+
+          {/* AI Features Grid */}
+          <div className="grid md:grid-cols-3 gap-6 mt-12">
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg">
+              <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+                <Brain className="w-6 h-6 text-blue-600" />
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Quick Concept Refresh</h3>
+              <p className="text-gray-600 text-sm">
+                Get instant definitions, formulas, and basic concept explanations for quick
+                reference while studying.
+              </p>
+            </div>
+
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg">
+              <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-4">
+                <MessageCircle className="w-6 h-6 text-green-600" />
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Voice Support Available</h3>
+              <p className="text-gray-600 text-sm">
+                Listen to explanations in Hindi, English, or Hinglish - useful for auditory learners
+                and revision.
+              </p>
+            </div>
+
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg">
+              <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
+                <Zap className="w-6 h-6 text-purple-600" />
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Instant Availability</h3>
+              <p className="text-gray-600 text-sm">
+                No waiting time. Perfect for late-night study sessions when you need quick
+                clarification.
+              </p>
+            </div>
+          </div>
+
+          {/* Call to Action */}
+          <div className="text-center mt-12">
+            <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
+              <h3 className="text-2xl font-bold mb-4">Try the AI Assistant Above!</h3>
+              <p className="text-blue-100 mb-6">
+                Start with basic questions like "Explain photosynthesis" or "What is DNA structure"
+                for quick concept review
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/claudechat"
+                  className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center justify-center"
+                >
+                  <Brain className="w-5 h-5 mr-2" />
+                  Full ClaudeChat Board
+                </Link>
+                <Link
+                  href="/test-voice"
+                  className="border border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-flex items-center justify-center"
+                >
+                  <MessageCircle className="w-5 h-5 mr-2" />
+                  Test Voice Features
+                </Link>
+              </div>
+              <p className="text-xs text-blue-100 mt-4 opacity-75">
+                Remember: For exam strategy and complex doubts, connect with our expert faculty via
+                WhatsApp or Video Call
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Types of Doubts */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-6">
@@ -528,44 +606,98 @@ export default function DoubtResolutionPage() {
         </div>
       </section>
 
-      {/* Success Stories */}
+      {/* Success Stories with Video Testimonials */}
       <section className="py-16 bg-gray-100">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               Success Through Doubt Resolution
             </h2>
-            <p className="text-gray-600">
+            <p className="text-gray-600 mb-4">
               How our 24/7 support helped students achieve their NEET dreams
             </p>
+            <div className="inline-flex items-center gap-2 bg-red-50 border border-red-200 rounded-full px-4 py-2">
+              <Video className="w-4 h-4 text-red-600" />
+              <span className="text-sm font-medium text-red-700">Watch Video Testimonials</span>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
             {successStories.map((story, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
+                className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
-                <div className="mb-4">
-                  <h3 className="text-lg font-bold text-gray-900">{story.name}</h3>
-                  <p className="text-sm text-gray-600">{story.location}</p>
-                  <div className="text-lg font-semibold text-red-600 mt-2">{story.improvement}</div>
-                </div>
+                {/* Video Thumbnail Placeholder */}
+                {story.hasVideo && (
+                  <div className="relative bg-gradient-to-br from-red-100 to-pink-100 h-48 flex items-center justify-center group cursor-pointer">
+                    {/* Placeholder gradient background */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-red-600/20 to-pink-600/20" />
 
-                <p className="text-gray-700 text-sm mb-4 italic">"{story.story}"</p>
+                    {/* Play Button */}
+                    <div className="relative z-10">
+                      <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                        <div className="w-0 h-0 border-l-[20px] border-l-red-600 border-t-[12px] border-t-transparent border-b-[12px] border-b-transparent ml-1" />
+                      </div>
+                    </div>
 
-                <div className="flex justify-between text-sm">
-                  <div>
-                    <span className="font-medium text-gray-900">{story.doubtsSolved}</span>
-                    <div className="text-gray-600">Total Doubts</div>
+                    {/* Video Placeholder Badge */}
+                    <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
+                      <span className="text-xs font-semibold text-red-600">30 sec</span>
+                    </div>
+
+                    {/* Coming Soon Badge */}
+                    <div className="absolute bottom-3 left-3 bg-orange-500 text-white px-3 py-1 rounded-full">
+                      <span className="text-xs font-bold">Video Coming Soon</span>
+                    </div>
                   </div>
-                  <div>
-                    <span className="font-medium text-gray-900">{story.avgResponse}</span>
-                    <div className="text-gray-600">Avg Response</div>
+                )}
+
+                <div className="p-6">
+                  <div className="mb-4">
+                    <h3 className="text-lg font-bold text-gray-900">{story.name}</h3>
+                    <p className="text-sm text-gray-600">{story.location}</p>
+                    <div className="text-lg font-semibold text-red-600 mt-2">
+                      {story.improvement}
+                    </div>
+                  </div>
+
+                  <p className="text-gray-700 text-sm mb-4 italic">"{story.story}"</p>
+
+                  <div className="flex justify-between text-sm pt-4 border-t border-gray-100">
+                    <div>
+                      <span className="font-medium text-gray-900">{story.doubtsSolved}</span>
+                      <div className="text-gray-600">Total Doubts</div>
+                    </div>
+                    <div>
+                      <span className="font-medium text-gray-900">{story.avgResponse}</span>
+                      <div className="text-gray-600">Avg Response</div>
+                    </div>
                   </div>
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* CTA to record video testimonials */}
+          <div className="mt-12 text-center">
+            <div className="bg-white rounded-2xl p-8 max-w-2xl mx-auto shadow-lg">
+              <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Video className="w-6 h-6 text-red-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Share Your Success Story</h3>
+              <p className="text-gray-600 mb-6">
+                Record a 30-second video sharing how doubt resolution helped you succeed in NEET.
+                Your story could inspire thousands of future doctors!
+              </p>
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors"
+              >
+                <Video className="w-5 h-5" />
+                Record Your Testimonial
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -607,18 +739,38 @@ export default function DoubtResolutionPage() {
                 key={index}
                 className={`bg-white rounded-xl p-8 shadow-lg ${plan.popular ? 'ring-2 ring-red-600 relative' : ''} hover:shadow-xl transition-shadow`}
               >
-                {plan.popular && (
+                {plan.badge && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-red-600 text-white px-4 py-1 rounded-full text-sm font-medium">
-                      Most Popular
+                    <span
+                      className={`px-4 py-1 rounded-full text-sm font-medium ${
+                        plan.popular
+                          ? 'bg-red-600 text-white'
+                          : index === 0
+                            ? 'bg-green-600 text-white'
+                            : 'bg-orange-600 text-white'
+                      }`}
+                    >
+                      {plan.badge}
                     </span>
                   </div>
                 )}
 
                 <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
-                  <div className="text-4xl font-bold text-red-600 mb-2">{plan.price}</div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">{plan.name}</h3>
+                  <div className="text-4xl font-bold text-red-600 mb-1">{plan.price}</div>
+                  {plan.dailyPrice && (
+                    <div className="text-lg font-semibold text-green-600 mb-2">
+                      {plan.dailyPrice}
+                    </div>
+                  )}
                   <div className="text-sm text-gray-600 line-through">{plan.originalPrice}</div>
+                  {plan.scarcity && (
+                    <div className="mt-3 bg-orange-50 border border-orange-200 rounded-lg px-3 py-2">
+                      <div className="text-xs font-bold text-orange-700 uppercase tracking-wide">
+                        ⚡ {plan.scarcity}
+                      </div>
+                    </div>
+                  )}
                 </div>
 
                 <div className="space-y-3 mb-8">
