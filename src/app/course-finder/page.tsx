@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 
 export default function CourseFinderPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-600 via-purple-600 to-blue-700 py-8">
+    <div className="min-h-screen bg-gradient-to-br from-[#4F46E5] via-[#7C3AED] to-[#6366F1] py-8">
       {/* Breadcrumbs */}
       <BreadcrumbContainer className="pt-4">
         <Breadcrumbs />
@@ -40,17 +40,17 @@ export default function CourseFinderPage() {
           </div>
 
           {/* Trust Indicators */}
-          <div className="flex justify-center items-center gap-8 mb-8 text-sm text-white">
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse" />
-              <span>5000+ Students Helped</span>
-            </div>
-            <div className="flex items-center gap-2">
+          <div className="flex justify-center items-center gap-8 mb-8 text-sm text-white/90">
+            <div className="flex items-center gap-2 bg-white/10 rounded-full px-4 py-2">
               <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-              <span>94.8% Success Rate</span>
+              <span>5000+ Students</span>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 bg-white/10 rounded-full px-4 py-2">
               <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse" />
+              <span>94.8% Success</span>
+            </div>
+            <div className="flex items-center gap-2 bg-white/10 rounded-full px-4 py-2">
+              <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse" />
               <span>AIIMS Faculty</span>
             </div>
           </div>
@@ -62,22 +62,67 @@ export default function CourseFinderPage() {
 
           {/* Additional Information */}
           <div className="mt-12 grid md:grid-cols-3 gap-6 text-center">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="text-2xl font-bold text-yellow-300 mb-2">60 Seconds</div>
-              <div className="text-white font-medium mb-1">Quick Assessment</div>
-              <div className="text-blue-100 text-sm">
+            <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-12 h-12 rounded-2xl bg-yellow-500 flex items-center justify-center mx-auto mb-3">
+                <svg
+                  className="w-6 h-6 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+              </div>
+              <div className="text-2xl font-bold text-gray-900 mb-2">60 Seconds</div>
+              <div className="text-gray-800 font-medium mb-1">Quick Assessment</div>
+              <div className="text-gray-600 text-sm">
                 Get your recommendation in just 3 questions
               </div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="text-2xl font-bold text-green-300 mb-2">Smart Algorithm</div>
-              <div className="text-white font-medium mb-1">AI-Powered Matching</div>
-              <div className="text-blue-100 text-sm">Based on 5000+ successful student data</div>
+            <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-12 h-12 rounded-2xl bg-green-500 flex items-center justify-center mx-auto mb-3">
+                <svg
+                  className="w-6 h-6 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
+                  />
+                </svg>
+              </div>
+              <div className="text-2xl font-bold text-gray-900 mb-2">Smart Algorithm</div>
+              <div className="text-gray-800 font-medium mb-1">AI-Powered Matching</div>
+              <div className="text-gray-600 text-sm">Based on 5000+ successful student data</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="text-2xl font-bold text-yellow-300 mb-2">100% Free</div>
-              <div className="text-white font-medium mb-1">No Hidden Costs</div>
-              <div className="text-blue-100 text-sm">
+            <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-12 h-12 rounded-2xl bg-blue-500 flex items-center justify-center mx-auto mb-3">
+                <svg
+                  className="w-6 h-6 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+              </div>
+              <div className="text-2xl font-bold text-gray-900 mb-2">100% Free</div>
+              <div className="text-gray-800 font-medium mb-1">No Hidden Costs</div>
+              <div className="text-gray-600 text-sm">
                 Complete course recommendations at no cost
               </div>
             </div>
