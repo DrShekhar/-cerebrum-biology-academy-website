@@ -375,31 +375,31 @@ export function EnhancedCourseFinderQuiz({
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
-        className={`bg-slate-800 rounded-2xl p-6 max-w-2xl ${className}`}
+        className={`bg-white rounded-2xl p-6 max-w-2xl shadow-xl border border-blue-100 ${className}`}
       >
         <div className="text-center space-y-6">
           {/* Match Score */}
-          <div className="flex items-center justify-center gap-2 text-emerald-400 text-sm">
+          <div className="flex items-center justify-center gap-2 text-blue-600 text-sm">
             <SparklesIcon className="h-4 w-4" />
             <span>{recommendation.primary.match}% Perfect Match Found!</span>
           </div>
 
           {/* Primary Recommendation */}
-          <div className="bg-slate-700 rounded-xl p-6">
+          <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-6 border border-blue-100">
             <div className="flex items-center justify-center gap-2 mb-3">
-              <StarSolid className="h-5 w-5 text-yellow-500" />
-              <span className="text-xs font-semibold text-yellow-500 uppercase tracking-wide">
+              <StarSolid className="h-5 w-5 text-purple-600" />
+              <span className="text-xs font-semibold text-purple-600 uppercase tracking-wide">
                 RECOMMENDED FOR YOU
               </span>
             </div>
 
-            <h3 className="text-xl font-bold text-white mb-2">{recommendation.primary.name}</h3>
-            <p className="text-gray-300 text-sm mb-4">{recommendation.primary.subtitle}</p>
+            <h3 className="text-xl font-bold text-gray-900 mb-2">{recommendation.primary.name}</h3>
+            <p className="text-gray-700 text-sm mb-4">{recommendation.primary.subtitle}</p>
 
             <div className="flex justify-between items-center mb-4">
               <div className="text-right">
                 <div className="flex items-center gap-2">
-                  <span className="text-2xl font-bold text-emerald-400">
+                  <span className="text-2xl font-bold text-blue-600">
                     ₹{recommendation.primary.price.toLocaleString()}
                   </span>
                   <span className="text-sm text-gray-400 line-through">
@@ -414,22 +414,22 @@ export function EnhancedCourseFinderQuiz({
 
             <div className="grid grid-cols-2 gap-4 text-xs">
               <div>
-                <h4 className="font-semibold text-white mb-2">Features:</h4>
+                <h4 className="font-semibold text-gray-900 mb-2">Features:</h4>
                 <ul className="space-y-1">
                   {recommendation.primary.features.map((feature, index) => (
-                    <li key={index} className="flex items-center gap-2 text-gray-300">
-                      <CheckCircleIcon className="h-3 w-3 text-emerald-400 flex-shrink-0" />
+                    <li key={index} className="flex items-center gap-2 text-gray-700">
+                      <CheckCircleIcon className="h-3 w-3 text-blue-600 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
                 </ul>
               </div>
               <div>
-                <h4 className="font-semibold text-white mb-2">Highlights:</h4>
+                <h4 className="font-semibold text-gray-900 mb-2">Highlights:</h4>
                 <ul className="space-y-1">
                   {recommendation.primary.highlights.map((highlight, index) => (
-                    <li key={index} className="flex items-center gap-2 text-gray-300">
-                      <StarIcon className="h-3 w-3 text-yellow-500 flex-shrink-0" />
+                    <li key={index} className="flex items-center gap-2 text-gray-700">
+                      <StarIcon className="h-3 w-3 text-purple-600 flex-shrink-0" />
                       {highlight}
                     </li>
                   ))}
@@ -440,24 +440,26 @@ export function EnhancedCourseFinderQuiz({
 
           {/* Alternative Options */}
           <div className="text-left">
-            <h4 className="text-sm font-semibold text-gray-300 mb-3">Other Options:</h4>
+            <h4 className="text-sm font-semibold text-gray-900 mb-3">Other Options:</h4>
             <div className="grid gap-2">
               {recommendation.alternatives.map((alt, index) => (
                 <div
                   key={index}
-                  className="flex justify-between items-center bg-slate-700/50 rounded-lg p-3"
+                  className="flex justify-between items-center bg-white rounded-lg p-3 border border-gray-200 shadow-sm"
                 >
                   <div>
-                    <div className="text-sm font-medium text-white">{alt.name}</div>
-                    <div className="text-xs text-gray-400">
+                    <div className="text-sm font-medium text-gray-900">{alt.name}</div>
+                    <div className="text-xs text-gray-600">
                       {alt.duration} • {alt.match}% match
                     </div>
                   </div>
                   <div className="text-right">
-                    <div className="text-sm font-bold text-emerald-400">
+                    <div className="text-sm font-bold text-blue-600">
                       ₹{alt.price.toLocaleString()}
                     </div>
-                    <button className="text-xs text-gray-400 hover:text-white">View Details</button>
+                    <button className="text-xs text-gray-500 hover:text-blue-600">
+                      View Details
+                    </button>
                   </div>
                 </div>
               ))}
@@ -470,7 +472,7 @@ export function EnhancedCourseFinderQuiz({
               variant="medical"
               size="lg"
               onClick={handleEnrollNow}
-              className="w-full bg-gradient-to-r from-emerald-500 to-green-500 hover:from-emerald-600 hover:to-green-600 text-white py-3"
+              className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-3"
             >
               Enroll Now
               <ChevronRightIcon className="h-5 w-5" />
@@ -486,7 +488,7 @@ export function EnhancedCourseFinderQuiz({
               </button>
               <button
                 onClick={handleDownloadDetails}
-                className="flex items-center justify-center gap-2 py-2 px-4 bg-slate-600 hover:bg-slate-500 text-white rounded-lg transition-colors text-sm"
+                className="flex items-center justify-center gap-2 py-2 px-4 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-colors text-sm"
               >
                 <DocumentArrowDownIcon className="h-4 w-4" />
                 Download Details
@@ -502,7 +504,7 @@ export function EnhancedCourseFinderQuiz({
           </div>
 
           {/* Live Stats */}
-          <div className="flex justify-between items-center text-xs text-gray-400 pt-2 border-t border-slate-600">
+          <div className="flex justify-between items-center text-xs text-gray-600 pt-2 border-t border-gray-200">
             <span>🟢 {liveStats.studentsOnline} students online</span>
             <span>✅ {liveStats.recentEnrollment}</span>
           </div>
@@ -517,19 +519,19 @@ export function EnhancedCourseFinderQuiz({
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className={`bg-slate-800 rounded-2xl p-6 max-w-xl ${className}`}
+      className={`bg-white rounded-2xl p-6 max-w-xl shadow-xl border border-blue-100 ${className}`}
     >
       {/* Quiz Header */}
       <div className="text-center mb-4">
-        <p className="text-sm text-emerald-400 mb-1">Find your perfect course in 60 seconds</p>
+        <p className="text-sm text-blue-600 mb-1">Find your perfect course in 60 seconds</p>
         <div className="flex justify-center gap-2">
           {Object.keys(quizFlow).map((step, index) => (
             <div
               key={step}
               className={`w-2 h-2 rounded-full transition-colors ${
                 step === currentStep || Object.keys(quizFlow).indexOf(currentStep) > index
-                  ? 'bg-emerald-400'
-                  : 'bg-slate-600'
+                  ? 'bg-blue-600'
+                  : 'bg-gray-300'
               }`}
             />
           ))}
@@ -545,7 +547,7 @@ export function EnhancedCourseFinderQuiz({
           exit={{ opacity: 0, x: -20 }}
           transition={{ duration: 0.3 }}
         >
-          <p className="text-white mb-4 font-medium text-center">{currentStepData.question}</p>
+          <p className="text-gray-900 mb-4 font-medium text-center">{currentStepData.question}</p>
 
           <div className="grid gap-3">
             {currentStepData.options.map((option, index) => (
@@ -555,11 +557,11 @@ export function EnhancedCourseFinderQuiz({
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 onClick={() => handleAnswer(option.value)}
-                className="quiz-option bg-slate-700 hover:bg-slate-600 text-white p-4 rounded-lg transition-all duration-200 text-left group hover:ring-2 hover:ring-emerald-400"
+                className="quiz-option bg-gradient-to-r from-blue-50 to-purple-50 hover:from-blue-100 hover:to-purple-100 text-gray-900 p-4 rounded-lg transition-all duration-200 text-left group hover:ring-2 hover:ring-blue-600 border border-blue-100"
               >
                 <div className="font-medium">{option.label}</div>
                 {option.description && (
-                  <div className="text-xs text-gray-400 mt-1">{option.description}</div>
+                  <div className="text-xs text-gray-600 mt-1">{option.description}</div>
                 )}
               </motion.button>
             ))}
