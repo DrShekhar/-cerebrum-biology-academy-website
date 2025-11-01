@@ -138,162 +138,338 @@ export function EnhancedCourseFinderQuiz({
   const calculateRecommendation = (answers: QuizAnswer): CourseRecommendation => {
     const { step1: studentClass, step2: neetExperience, step3: studyHours } = answers
 
-    // Course recommendation algorithm
+    // Course recommendation algorithm based on actual pricing
     let primaryCourse: CourseRecommendation['primary']
     let alternatives: CourseRecommendation['alternatives'] = []
 
+    // Determine recommended tier based on study hours and dedication
+    const isHighCommitment = studyHours === 'full-day' || studyHours === '6+'
+    const isMediumCommitment = studyHours === '4-5'
+
     if (studentClass === '9-10') {
-      primaryCourse = {
-        id: 'foundation',
-        name: 'Foundation Excellence Program',
-        subtitle: 'Build strong fundamentals for NEET success',
-        price: 45000,
-        originalPrice: 60000,
-        duration: '2 Years',
-        successRate: '96.5%',
-        features: [
-          'Complete NCERT foundation',
-          'Conceptual clarity sessions',
-          'Regular assessment tests',
-          'Personalized doubt clearing',
-        ],
-        highlights: [
-          '1200+ Foundation students',
-          '96.5% Board success rate',
-          'AIIMS faculty teaching',
-        ],
-        match: studyHours === 'full-day' ? 95 : studyHours === '6+' ? 90 : 85,
-      }
-      alternatives = [
-        {
-          id: 'class-11-prep',
-          name: 'Class 11 Advance Prep',
-          price: 35000,
+      // Foundation courses (Class 9-10)
+      if (isHighCommitment) {
+        // Recommend Pinnacle for high commitment
+        primaryCourse = {
+          id: 'foundation-pinnacle',
+          name: 'Pinnacle Foundation Program',
+          subtitle: 'Elite NEET foundation with personal AIIMS mentorship',
+          price: 90000,
+          originalPrice: 96000,
           duration: '1 Year',
-          match: 75,
-        },
-        {
-          id: 'weekend-foundation',
-          name: 'Weekend Foundation',
-          price: 25000,
-          duration: '2 Years',
-          match: 65,
-        },
-      ]
+          successRate: '96.5%',
+          features: [
+            '10-12 students per batch',
+            'Personal mentorship from AIIMS faculty',
+            'NEET foundation preparation',
+            '5000+ practice questions',
+            'Weekly 1-on-1 doubt sessions',
+          ],
+          highlights: ['Ultra-small batch size', 'AIIMS faculty teaching', 'Money-back guarantee'],
+          match: 95,
+        }
+        alternatives = [
+          {
+            id: 'foundation-ascent',
+            name: 'Ascent Foundation',
+            price: 60000,
+            duration: '1 Year',
+            match: 85,
+          },
+          {
+            id: 'foundation-pursuit',
+            name: 'Pursuit Foundation',
+            price: 45000,
+            duration: '1 Year',
+            match: 75,
+          },
+        ]
+      } else {
+        // Recommend Ascent for medium commitment
+        primaryCourse = {
+          id: 'foundation-ascent',
+          name: 'Ascent Foundation Program',
+          subtitle: 'Most popular choice for NEET foundation',
+          price: 60000,
+          originalPrice: 63000,
+          duration: '1 Year',
+          successRate: '94.2%',
+          features: [
+            '16-18 students per batch',
+            'AIIMS faculty teaching',
+            'NEET foundation preparation',
+            '3000+ practice questions',
+            'Weekly group doubt sessions',
+          ],
+          highlights: ['Most popular choice', '94.2% success rate', 'Complete study materials'],
+          match: 92,
+        }
+        alternatives = [
+          {
+            id: 'foundation-pinnacle',
+            name: 'Pinnacle Foundation',
+            price: 90000,
+            duration: '1 Year',
+            match: 88,
+          },
+          {
+            id: 'foundation-pursuit',
+            name: 'Pursuit Foundation',
+            price: 45000,
+            duration: '1 Year',
+            match: 80,
+          },
+        ]
+      }
     } else if (studentClass === '11') {
-      primaryCourse = {
-        id: 'neet-complete',
-        name: 'Class 11-12 NEET Complete',
-        subtitle: 'Comprehensive 2-year NEET preparation',
-        price: 65000,
-        originalPrice: 85000,
-        duration: '2 Years',
-        successRate: '94.8%',
-        features: [
-          'Complete NCERT + advanced',
-          'Regular mock tests',
-          'Personal mentorship',
-          'Doubt resolution sessions',
-        ],
-        highlights: [
-          '2500+ successful students',
-          '94.8% NEET success rate',
-          'Most popular program',
-        ],
-        match: studyHours === 'full-day' ? 98 : studyHours === '6+' ? 95 : 88,
-      }
-      alternatives = [
-        {
-          id: 'fast-track-11',
-          name: 'Fast Track Class 11',
-          price: 45000,
+      // Class 11 NEET courses
+      if (isHighCommitment) {
+        // Recommend Pinnacle for high commitment
+        primaryCourse = {
+          id: 'class-11-pinnacle',
+          name: 'Pinnacle Series - Class 11 (Board + NEET)',
+          subtitle: 'Elite 2-year NEET preparation with personal AIIMS mentorship',
+          price: 98000,
+          originalPrice: 108000,
           duration: '1 Year',
-          match: 80,
-        },
-        {
-          id: 'weekend-11-12',
-          name: 'Weekend Complete',
-          price: 55000,
-          duration: '2 Years',
-          match: 70,
-        },
-      ]
+          successRate: '94.8%',
+          features: [
+            '10-12 students per batch',
+            'Personal mentorship from Dr. Shekhar (AIIMS)',
+            '7000+ practice questions',
+            '30+ mock tests',
+            '24/7 AI-powered doubt bot',
+          ],
+          highlights: [
+            '2500+ successful students',
+            '94.8% NEET success rate',
+            'Premium materials (₹15K value)',
+          ],
+          match: 98,
+        }
+        alternatives = [
+          {
+            id: 'class-11-ascent',
+            name: 'Ascent Series - Class 11',
+            price: 76000,
+            duration: '1 Year',
+            match: 90,
+          },
+          {
+            id: 'class-11-pursuit',
+            name: 'Pursuit Series - Class 11',
+            price: 48000,
+            duration: '1 Year',
+            match: 82,
+          },
+        ]
+      } else {
+        // Recommend Ascent for medium commitment (most popular)
+        primaryCourse = {
+          id: 'class-11-ascent',
+          name: 'Ascent Series - Class 11 (Board + NEET)',
+          subtitle: 'Most popular choice for NEET preparation',
+          price: 76000,
+          originalPrice: 79000,
+          duration: '1 Year',
+          successRate: '92.5%',
+          features: [
+            '16-18 students per batch',
+            'AIIMS faculty teaching',
+            '5000+ practice questions',
+            '20+ mock tests',
+            'AI doubt resolution',
+          ],
+          highlights: [
+            '#1 choice of NEET toppers',
+            'Perfect study-practice balance',
+            '600+ high scorers',
+          ],
+          match: 95,
+        }
+        alternatives = [
+          {
+            id: 'class-11-pinnacle',
+            name: 'Pinnacle Series - Class 11',
+            price: 98000,
+            duration: '1 Year',
+            match: 92,
+          },
+          {
+            id: 'class-11-pursuit',
+            name: 'Pursuit Series - Class 11',
+            price: 48000,
+            duration: '1 Year',
+            match: 85,
+          },
+        ]
+      }
     } else if (studentClass === '12') {
-      primaryCourse = {
-        id: 'final-sprint',
-        name: 'Class 12 Final Sprint',
-        subtitle: 'Last mile NEET preparation',
-        price: 55000,
-        originalPrice: 70000,
-        duration: '1 Year',
-        successRate: '92.3%',
-        features: [
-          'Revision + test series',
-          'Exam strategy sessions',
-          'Previous year analysis',
-          'Time management training',
-        ],
-        highlights: ['1800+ Class 12 students', '92.3% success rate', 'Proven final year strategy'],
-        match: studyHours === 'full-day' ? 95 : studyHours === '6+' ? 92 : 85,
-      }
-      alternatives = [
-        {
-          id: 'crash-course',
-          name: 'NEET Crash Course',
-          price: 35000,
-          duration: '6 Months',
-          match: 75,
-        },
-        {
-          id: 'test-series-only',
-          name: 'Test Series + Doubt',
-          price: 25000,
+      // Class 12 NEET courses
+      if (isHighCommitment) {
+        primaryCourse = {
+          id: 'class-12-pinnacle',
+          name: 'Pinnacle Series - Class 12 NEET',
+          subtitle: 'Final year intensive NEET preparation',
+          price: 156000,
+          originalPrice: 159000,
           duration: '1 Year',
-          match: 65,
-        },
-      ]
+          successRate: '92.3%',
+          features: [
+            '10-12 students per batch',
+            'Complete syllabus coverage (11th + 12th)',
+            '15000+ practice questions',
+            '50+ full-length mock tests',
+            'Daily doubt clearing sessions',
+          ],
+          highlights: [
+            'Elite faculty access',
+            'Proven final year strategy',
+            'NEET counseling assistance',
+          ],
+          match: 95,
+        }
+        alternatives = [
+          {
+            id: 'class-12-ascent',
+            name: 'Ascent Series - Class 12',
+            price: 70000,
+            duration: '1 Year',
+            match: 88,
+          },
+          {
+            id: 'class-12-pursuit',
+            name: 'Pursuit Series - Class 12',
+            price: 70000,
+            duration: '1 Year',
+            match: 80,
+          },
+        ]
+      } else {
+        primaryCourse = {
+          id: 'class-12-ascent',
+          name: 'Ascent Series - Class 12 NEET',
+          subtitle: 'Focused NEET preparation for final year',
+          price: 70000,
+          originalPrice: 73000,
+          duration: '1 Year',
+          successRate: '91.0%',
+          features: [
+            '16-18 students per batch',
+            'AIIMS faculty teaching',
+            '8000+ practice questions',
+            '30+ mock tests',
+            'NEET strategy sessions',
+          ],
+          highlights: [
+            'Mission mode preparation',
+            'Rank prediction 98%+ accuracy',
+            'Regular assessments',
+          ],
+          match: 92,
+        }
+        alternatives = [
+          {
+            id: 'class-12-pinnacle',
+            name: 'Pinnacle Series - Class 12',
+            price: 156000,
+            duration: '1 Year',
+            match: 90,
+          },
+          {
+            id: 'class-12-pursuit',
+            name: 'Pursuit Series - Class 12',
+            price: 70000,
+            duration: '1 Year',
+            match: 82,
+          },
+        ]
+      }
     } else {
-      // passed-12 (dropper)
+      // Dropper courses
       const isMultipleAttempt = neetExperience === 'multiple'
-      primaryCourse = {
-        id: 'dropper-intensive',
-        name: isMultipleAttempt ? 'Dropper Success Guarantee' : 'Dropper Success Intensive',
-        subtitle: isMultipleAttempt
-          ? 'Special program for repeat attempts'
-          : 'Second chance, first class success',
-        price: isMultipleAttempt ? 85000 : 75000,
-        originalPrice: isMultipleAttempt ? 110000 : 95000,
-        duration: '1 Year',
-        successRate: isMultipleAttempt ? '89.5%' : '91.2%',
-        features: [
-          'Complete syllabus revision',
-          'Intensive test series',
-          'Psychology counseling',
-          'Strategy optimization',
-        ],
-        highlights: [
-          '800+ dropper students',
-          isMultipleAttempt ? '89.5% success rate' : '91.2% success rate',
-          'Specialized dropper faculty',
-        ],
-        match: studyHours === 'full-day' ? 98 : studyHours === '6+' ? 95 : 88,
-      }
-      alternatives = [
-        {
-          id: 'dropper-fast',
-          name: 'Dropper Fast Track',
-          price: 55000,
-          duration: '8 Months',
-          match: 80,
-        },
-        {
-          id: 'dropper-weekend',
-          name: 'Dropper Weekend',
-          price: 45000,
+
+      if (isHighCommitment) {
+        primaryCourse = {
+          id: 'dropper-pinnacle',
+          name: 'Pinnacle Dropper Program',
+          subtitle: isMultipleAttempt
+            ? 'Rank improvement specialist for multiple attempts'
+            : 'Second chance, elite success strategy',
+          price: 165000,
+          originalPrice: 180000,
           duration: '1 Year',
-          match: 70,
-        },
-      ]
+          successRate: '89.5%',
+          features: [
+            '10 students per batch',
+            'Personal NEET rank improvement strategist',
+            'Individual weakness analysis',
+            'Advanced problem-solving masterclasses',
+            'Previous year toppers mentoring',
+          ],
+          highlights: [
+            '200+ rank jump average',
+            'Elite dropper mentoring',
+            'Complete question bank (15 years)',
+          ],
+          match: 98,
+        }
+        alternatives = [
+          {
+            id: 'dropper-ascent',
+            name: 'Ascent Dropper Program',
+            price: 85000,
+            duration: '1 Year',
+            match: 90,
+          },
+          {
+            id: 'dropper-pursuit',
+            name: 'Pursuit Dropper Program',
+            price: 72000,
+            duration: '1 Year',
+            match: 82,
+          },
+        ]
+      } else {
+        primaryCourse = {
+          id: 'dropper-ascent',
+          name: 'Ascent Dropper Program',
+          subtitle: 'Most chosen by droppers for rank improvement',
+          price: 85000,
+          originalPrice: 90000,
+          duration: '1 Year',
+          successRate: '88.0%',
+          features: [
+            '18 students per batch',
+            'Intensive daily mock tests',
+            'Rank improvement tracking',
+            'Subject-wise expert faculty',
+            'Speed and accuracy enhancement',
+          ],
+          highlights: [
+            '85% achieve target college',
+            'Systematic rank improvement',
+            'Time management mastery',
+          ],
+          match: 95,
+        }
+        alternatives = [
+          {
+            id: 'dropper-pinnacle',
+            name: 'Pinnacle Dropper Program',
+            price: 165000,
+            duration: '1 Year',
+            match: 92,
+          },
+          {
+            id: 'dropper-pursuit',
+            name: 'Pursuit Dropper Program',
+            price: 72000,
+            duration: '1 Year',
+            match: 85,
+          },
+        ]
+      }
     }
 
     return { primary: primaryCourse, alternatives }
