@@ -27,31 +27,37 @@ export default function CourseFinderPage() {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           {/* Page Header */}
-          <div className="text-center mb-8">
-            <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+          <div className="text-center mb-6 sm:mb-8 px-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 mb-3 sm:mb-4">
               Find Your Perfect Course
             </h1>
-            <p className="text-xl text-gray-700 mb-2">
+            <p className="text-lg sm:text-xl text-gray-700 mb-2">
               Answer 3 simple questions to get a personalized course recommendation
             </p>
-            <p className="text-sm text-gray-600">
+            <p className="text-xs sm:text-sm text-gray-600">
               Based on your class, NEET experience, and available study time
             </p>
           </div>
 
           {/* Trust Indicators */}
-          <div className="flex justify-center items-center gap-6 mb-10">
-            <div className="flex items-center gap-2 bg-white rounded-full px-5 py-2.5 shadow-sm border border-gray-200">
-              <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
-              <span className="text-sm font-medium text-gray-700">5000+ Students</span>
+          <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-4 md:gap-6 mb-8 sm:mb-10 px-4">
+            <div className="flex items-center gap-2 bg-white rounded-full px-3 sm:px-4 md:px-5 py-2 sm:py-2.5 shadow-sm border border-gray-200">
+              <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse flex-shrink-0" />
+              <span className="text-xs sm:text-sm font-medium text-gray-700 whitespace-nowrap">
+                5000+ Students
+              </span>
             </div>
-            <div className="flex items-center gap-2 bg-white rounded-full px-5 py-2.5 shadow-sm border border-gray-200">
-              <div className="w-2 h-2 bg-indigo-500 rounded-full animate-pulse" />
-              <span className="text-sm font-medium text-gray-700">94.8% Success</span>
+            <div className="flex items-center gap-2 bg-white rounded-full px-3 sm:px-4 md:px-5 py-2 sm:py-2.5 shadow-sm border border-gray-200">
+              <div className="w-2 h-2 bg-indigo-500 rounded-full animate-pulse flex-shrink-0" />
+              <span className="text-xs sm:text-sm font-medium text-gray-700 whitespace-nowrap">
+                94.8% Success
+              </span>
             </div>
-            <div className="flex items-center gap-2 bg-white rounded-full px-5 py-2.5 shadow-sm border border-gray-200">
-              <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse" />
-              <span className="text-sm font-medium text-gray-700">AIIMS Faculty</span>
+            <div className="flex items-center gap-2 bg-white rounded-full px-3 sm:px-4 md:px-5 py-2 sm:py-2.5 shadow-sm border border-gray-200">
+              <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse flex-shrink-0" />
+              <span className="text-xs sm:text-sm font-medium text-gray-700 whitespace-nowrap">
+                AIIMS Faculty
+              </span>
             </div>
           </div>
 
@@ -61,11 +67,11 @@ export default function CourseFinderPage() {
           </div>
 
           {/* Additional Information */}
-          <div className="mt-12 grid md:grid-cols-3 gap-6 text-center">
-            <div className="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 border-t-4 border-t-yellow-500">
-              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center mx-auto mb-4 shadow-lg">
+          <div className="mt-10 sm:mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 text-center px-4">
+            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 border-t-4 border-t-yellow-500">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-lg">
                 <svg
-                  className="w-7 h-7 text-white"
+                  className="w-6 h-6 sm:w-7 sm:h-7 text-white"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -78,16 +84,18 @@ export default function CourseFinderPage() {
                   />
                 </svg>
               </div>
-              <div className="text-3xl font-bold text-gray-900 mb-2">60 Seconds</div>
-              <div className="text-gray-800 font-semibold mb-2">Quick Assessment</div>
-              <div className="text-gray-600 text-sm leading-relaxed">
+              <div className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">60 Seconds</div>
+              <div className="text-gray-800 font-semibold mb-2 text-sm sm:text-base">
+                Quick Assessment
+              </div>
+              <div className="text-gray-600 text-xs sm:text-sm leading-relaxed">
                 Get your recommendation in just 3 questions
               </div>
             </div>
-            <div className="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 border-t-4 border-t-emerald-500">
-              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center mx-auto mb-4 shadow-lg">
+            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 border-t-4 border-t-emerald-500">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-lg">
                 <svg
-                  className="w-7 h-7 text-white"
+                  className="w-6 h-6 sm:w-7 sm:h-7 text-white"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -100,16 +108,20 @@ export default function CourseFinderPage() {
                   />
                 </svg>
               </div>
-              <div className="text-3xl font-bold text-gray-900 mb-2">Smart Algorithm</div>
-              <div className="text-gray-800 font-semibold mb-2">AI-Powered Matching</div>
-              <div className="text-gray-600 text-sm leading-relaxed">
+              <div className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
+                Smart Algorithm
+              </div>
+              <div className="text-gray-800 font-semibold mb-2 text-sm sm:text-base">
+                AI-Powered Matching
+              </div>
+              <div className="text-gray-600 text-xs sm:text-sm leading-relaxed">
                 Based on 5000+ successful student data
               </div>
             </div>
-            <div className="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 border-t-4 border-t-indigo-500">
-              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-indigo-400 to-indigo-600 flex items-center justify-center mx-auto mb-4 shadow-lg">
+            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 border-t-4 border-t-indigo-500 sm:col-span-2 md:col-span-1">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-br from-indigo-400 to-indigo-600 flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-lg">
                 <svg
-                  className="w-7 h-7 text-white"
+                  className="w-6 h-6 sm:w-7 sm:h-7 text-white"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -122,20 +134,22 @@ export default function CourseFinderPage() {
                   />
                 </svg>
               </div>
-              <div className="text-3xl font-bold text-gray-900 mb-2">100% Free</div>
-              <div className="text-gray-800 font-semibold mb-2">No Hidden Costs</div>
-              <div className="text-gray-600 text-sm leading-relaxed">
+              <div className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">100% Free</div>
+              <div className="text-gray-800 font-semibold mb-2 text-sm sm:text-base">
+                No Hidden Costs
+              </div>
+              <div className="text-gray-600 text-xs sm:text-sm leading-relaxed">
                 Complete course recommendations at no cost
               </div>
             </div>
           </div>
 
           {/* Why Take This Quiz */}
-          <div className="mt-12 bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
-            <h2 className="text-2xl font-bold text-gray-900 text-center mb-6">
+          <div className="mt-10 sm:mt-12 bg-white rounded-2xl p-6 sm:p-8 shadow-lg border border-gray-200 mx-4">
+            <h2 className="text-xl sm:text-2xl font-bold text-gray-900 text-center mb-6">
               Why Take Our Course Finder Quiz?
             </h2>
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
               <div className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-xl p-6 border border-yellow-200">
                 <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
                   <span className="w-8 h-8 rounded-lg bg-yellow-500 flex items-center justify-center">

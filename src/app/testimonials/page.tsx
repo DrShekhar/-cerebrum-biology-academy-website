@@ -131,40 +131,44 @@ export default function TestimonialsPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-600 to-primary-800 text-white py-16">
+      <section className="bg-gradient-to-br from-primary-600 to-primary-800 text-white py-12 sm:py-14 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">Success Stories</h1>
-            <p className="text-xl md:text-2xl mb-8 opacity-90 max-w-3xl mx-auto">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
+              Success Stories
+            </h1>
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 opacity-90 max-w-3xl mx-auto">
               Discover how our students achieved their medical dreams with our proven teaching
               methodology and personalized guidance
             </p>
-            <div className="flex items-center justify-center space-x-8 text-sm opacity-75">
-              <span>98% NEET Qualification Rate</span>
-              <span>•</span>
-              <span>2,847+ Students Taught</span>
-              <span>•</span>
-              <span>186+ AIIMS/JIPMER Selected</span>
+            <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 md:gap-8 text-xs sm:text-sm opacity-75 px-4">
+              <span className="whitespace-nowrap">98% NEET Qualification Rate</span>
+              <span className="hidden sm:inline">•</span>
+              <span className="whitespace-nowrap">2,847+ Students Taught</span>
+              <span className="hidden sm:inline">•</span>
+              <span className="whitespace-nowrap">186+ AIIMS/JIPMER Selected</span>
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-white">
+      <section className="py-10 sm:py-12 md:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Track Record</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <div className="text-center mb-8 sm:mb-10 md:mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
+              Our Track Record
+            </h2>
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
               Numbers that speak for our commitment to student success
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -174,14 +178,16 @@ export default function TestimonialsPage() {
                 className="text-center"
               >
                 <div
-                  className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gray-100 mb-4`}
+                  className={`inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl sm:rounded-2xl bg-gray-100 mb-3 sm:mb-4`}
                 >
-                  <stat.icon className={`w-8 h-8 ${stat.color}`} />
+                  <stat.icon className={`w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 ${stat.color}`} />
                 </div>
-                <div className={`text-3xl md:text-4xl font-bold ${stat.color} mb-2`}>
+                <div className={`text-2xl sm:text-3xl md:text-4xl font-bold ${stat.color} mb-2`}>
                   {stat.value}
                 </div>
-                <div className="text-gray-600 font-medium">{stat.label}</div>
+                <div className="text-gray-600 font-medium text-xs sm:text-sm md:text-base">
+                  {stat.label}
+                </div>
               </motion.div>
             ))}
           </div>
@@ -189,73 +195,81 @@ export default function TestimonialsPage() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16">
+      <section className="py-10 sm:py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <div className="text-center mb-10 sm:mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
               What Our Students Say
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
               Real stories from real students who achieved their medical dreams with us
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-14 md:mb-16">
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={testimonial.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 hover:shadow-lg transition-all duration-300"
+                className="bg-white rounded-xl sm:rounded-2xl shadow-sm border border-gray-100 p-5 sm:p-6 md:p-8 hover:shadow-lg transition-all duration-300"
               >
                 {/* Header */}
-                <div className="flex items-start space-x-4 mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary-100 to-primary-200 rounded-full flex items-center justify-center">
-                    <span className="text-2xl font-bold text-primary-600">
+                <div className="flex items-start gap-3 sm:gap-4 mb-5 sm:mb-6">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-gradient-to-br from-primary-100 to-primary-200 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-lg sm:text-xl md:text-2xl font-bold text-primary-600">
                       {testimonial.name.charAt(0)}
                     </span>
                   </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-semibold text-gray-900">{testimonial.name}</h3>
-                    <div className="text-primary-600 font-medium mb-1">{testimonial.college}</div>
-                    <div className="flex items-center space-x-4 text-sm text-gray-500">
-                      <span>NEET {testimonial.year}</span>
-                      <span>•</span>
-                      <span>{testimonial.rank}</span>
-                      <span>•</span>
-                      <span>{testimonial.score}/720</span>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-base sm:text-lg md:text-xl font-semibold text-gray-900 truncate">
+                      {testimonial.name}
+                    </h3>
+                    <div className="text-primary-600 font-medium mb-1 text-sm sm:text-base truncate">
+                      {testimonial.college}
+                    </div>
+                    <div className="flex flex-wrap items-center gap-x-2 sm:gap-x-3 gap-y-1 text-xs sm:text-sm text-gray-500">
+                      <span className="whitespace-nowrap">NEET {testimonial.year}</span>
+                      <span className="hidden sm:inline">•</span>
+                      <span className="whitespace-nowrap">{testimonial.rank}</span>
+                      <span className="hidden sm:inline">•</span>
+                      <span className="whitespace-nowrap">{testimonial.score}/720</span>
                     </div>
                   </div>
-                  <div className="flex items-center space-x-1 text-yellow-500">
+                  <div className="hidden sm:flex items-center space-x-1 text-yellow-500 flex-shrink-0">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-current" />
+                      <Star key={i} className="w-3 h-3 sm:w-4 sm:h-4 fill-current" />
                     ))}
                   </div>
                 </div>
 
                 {/* Quote */}
-                <div className="relative mb-6">
-                  <Quote className="absolute top-0 left-0 w-6 h-6 text-primary-200 -translate-x-2 -translate-y-2" />
-                  <p className="text-gray-700 leading-relaxed pl-4">{testimonial.testimonial}</p>
+                <div className="relative mb-5 sm:mb-6">
+                  <Quote className="absolute top-0 left-0 w-5 h-5 sm:w-6 sm:h-6 text-primary-200 -translate-x-2 -translate-y-2" />
+                  <p className="text-sm sm:text-base text-gray-700 leading-relaxed pl-4">
+                    {testimonial.testimonial}
+                  </p>
                 </div>
 
                 {/* Stats */}
-                <div className="flex flex-wrap gap-4 pt-4 border-t border-gray-100">
-                  <div className="flex items-center space-x-2 text-sm">
-                    <TrendingUp className="w-4 h-4 text-emerald-500" />
+                <div className="flex flex-wrap gap-3 sm:gap-4 pt-4 border-t border-gray-100">
+                  <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm">
+                    <TrendingUp className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-500 flex-shrink-0" />
                     <span className="text-gray-600">Improvement:</span>
-                    <span className="font-semibold text-emerald-600">
+                    <span className="font-semibold text-emerald-600 whitespace-nowrap">
                       {testimonial.improvement}
                     </span>
                   </div>
-                  <div className="flex items-center space-x-2 text-sm">
-                    <Calendar className="w-4 h-4 text-blue-500" />
+                  <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm">
+                    <Calendar className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-blue-500 flex-shrink-0" />
                     <span className="text-gray-600">Duration:</span>
-                    <span className="font-semibold text-blue-600">{testimonial.duration}</span>
+                    <span className="font-semibold text-blue-600 whitespace-nowrap">
+                      {testimonial.duration}
+                    </span>
                   </div>
-                  <div className="flex items-center space-x-2 text-sm">
-                    <BookOpen className="w-4 h-4 text-purple-500" />
+                  <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm">
+                    <BookOpen className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-purple-500 flex-shrink-0" />
                     <span className="text-gray-600">Batch:</span>
                     <span className="font-semibold text-purple-600">{testimonial.batch}</span>
                   </div>
@@ -265,14 +279,16 @@ export default function TestimonialsPage() {
           </div>
 
           {/* Video Testimonials CTA */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-12 sm:mb-14 md:mb-16">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="bg-primary-50 rounded-2xl p-8 max-w-4xl mx-auto"
+              className="bg-primary-50 rounded-xl sm:rounded-2xl p-6 sm:p-8 max-w-4xl mx-auto"
             >
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Watch Video Testimonials</h3>
-              <p className="text-gray-600 mb-6">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">
+                Watch Video Testimonials
+              </h3>
+              <p className="text-sm sm:text-base text-gray-600 mb-5 sm:mb-6">
                 Hear directly from our successful students about their journey and experience
               </p>
               <Button>
@@ -289,16 +305,16 @@ export default function TestimonialsPage() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="bg-white rounded-2xl shadow-lg p-8 max-w-4xl mx-auto"
+              className="bg-white rounded-xl sm:rounded-2xl shadow-lg p-6 sm:p-8 max-w-4xl mx-auto"
             >
-              <h3 className="text-3xl font-bold text-gray-900 mb-4">
+              <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
                 Ready to Write Your Success Story?
               </h3>
-              <p className="text-xl text-gray-600 mb-8">
+              <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 sm:mb-8">
                 Join thousands of successful students who achieved their medical dreams with our
                 expert guidance and proven methodology
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
                 <Link href="/admissions">
                   <Button size="lg">
                     <BookOpen className="w-5 h-5 mr-2" />

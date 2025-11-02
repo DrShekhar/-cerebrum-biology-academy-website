@@ -238,15 +238,15 @@ export default function HelpCenterPage() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="mb-8 flex flex-wrap gap-4 justify-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 md:py-12">
+        <div className="mb-6 sm:mb-8 flex flex-wrap gap-2 sm:gap-3 md:gap-4 justify-center">
           <button
             onClick={() => {
               setViewMode('categories')
               setSelectedCategory('all')
               setSearchQuery('')
             }}
-            className={`px-6 py-3 rounded-xl font-semibold transition-all ${
+            className={`px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 rounded-lg sm:rounded-xl text-sm sm:text-base font-semibold transition-all ${
               viewMode === 'categories'
                 ? 'bg-blue-600 text-white shadow-lg'
                 : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
@@ -259,7 +259,7 @@ export default function HelpCenterPage() {
               setViewMode('popular')
               setSearchQuery('')
             }}
-            className={`px-6 py-3 rounded-xl font-semibold transition-all ${
+            className={`px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 rounded-lg sm:rounded-xl text-sm sm:text-base font-semibold transition-all ${
               viewMode === 'popular'
                 ? 'bg-blue-600 text-white shadow-lg'
                 : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
@@ -273,20 +273,23 @@ export default function HelpCenterPage() {
               setSelectedCategory('all')
               setSearchQuery('')
             }}
-            className={`px-6 py-3 rounded-xl font-semibold transition-all ${
+            className={`px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 rounded-lg sm:rounded-xl text-sm sm:text-base font-semibold transition-all ${
               viewMode === 'all'
                 ? 'bg-blue-600 text-white shadow-lg'
                 : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
             }`}
           >
-            All FAQs ({allFAQs.length})
+            <span className="hidden sm:inline">All FAQs ({allFAQs.length})</span>
+            <span className="sm:hidden">All ({allFAQs.length})</span>
           </button>
         </div>
 
         {viewMode === 'categories' && !searchQuery && (
           <div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Choose a Category</h2>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 sm:mb-8 text-center">
+              Choose a Category
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6 mb-10 sm:mb-12">
               {helpCategories
                 .sort((a, b) => a.order - b.order)
                 .map((category) => {
@@ -300,22 +303,22 @@ export default function HelpCenterPage() {
                         setSelectedCategory(category.id)
                         setViewMode('all')
                       }}
-                      className={`${colors.bg} ${colors.border} border-2 rounded-2xl p-6 text-left hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group`}
+                      className={`${colors.bg} ${colors.border} border-2 rounded-xl sm:rounded-2xl p-5 sm:p-6 text-left hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group`}
                     >
-                      <div className={`${colors.text} mb-4`}>
-                        {Icon && <Icon className="w-12 h-12" />}
+                      <div className={`${colors.text} mb-3 sm:mb-4`}>
+                        {Icon && <Icon className="w-10 h-10 sm:w-12 sm:h-12" />}
                       </div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                      <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                         {category.name}
                       </h3>
-                      <p className="text-gray-600 text-sm mb-3 leading-relaxed">
+                      <p className="text-gray-600 text-xs sm:text-sm mb-3 leading-relaxed">
                         {category.description}
                       </p>
                       <div className="flex items-center justify-between">
                         <span className={`text-xs font-semibold ${colors.text}`}>
                           {faqCount} articles
                         </span>
-                        <span className="text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span className="text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity text-sm">
                           View →
                         </span>
                       </div>
@@ -390,48 +393,56 @@ export default function HelpCenterPage() {
           </div>
         )}
 
-        <div className="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-8 sm:p-12 text-white">
-          <div className="text-center mb-10">
-            <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-4">
-              <LightBulbIcon className="w-5 h-5" />
-              <span className="font-semibold text-sm">Still need help?</span>
+        <div className="mt-12 sm:mt-14 md:mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl sm:rounded-3xl p-6 sm:p-10 md:p-12 text-white">
+          <div className="text-center mb-8 sm:mb-10">
+            <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-3 sm:px-4 py-1.5 sm:py-2 mb-3 sm:mb-4">
+              <LightBulbIcon className="w-4 h-4 sm:w-5 sm:h-5" />
+              <span className="font-semibold text-xs sm:text-sm">Still need help?</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">Contact Our Support Team</h2>
-            <p className="text-xl text-blue-100 max-w-2xl mx-auto">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
+              Contact Our Support Team
+            </h2>
+            <p className="text-base sm:text-lg md:text-xl text-blue-100 max-w-2xl mx-auto">
               Our friendly support team is here to help you with any questions
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center hover:bg-white/20 transition-all">
-              <PhoneIcon className="w-12 h-12 mx-auto mb-4" />
-              <h3 className="text-xl font-bold mb-2">Call Us</h3>
-              <p className="text-blue-100 mb-3">Mon-Sun, 9 AM - 9 PM</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 md:gap-6 max-w-5xl mx-auto">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl sm:rounded-2xl p-5 sm:p-6 text-center hover:bg-white/20 transition-all">
+              <PhoneIcon className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-3 sm:mb-4" />
+              <h3 className="text-lg sm:text-xl font-bold mb-2">Call Us</h3>
+              <p className="text-blue-100 mb-2 sm:mb-3 text-sm sm:text-base">
+                Mon-Sun, 9 AM - 9 PM
+              </p>
               <a
                 href="tel:+918826444334"
-                className="text-white font-bold text-lg hover:text-yellow-300 transition-colors"
+                className="text-white font-bold text-base sm:text-lg hover:text-yellow-300 transition-colors"
               >
                 +91-88264-44334
               </a>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center hover:bg-white/20 transition-all">
-              <EnvelopeIcon className="w-12 h-12 mx-auto mb-4" />
-              <h3 className="text-xl font-bold mb-2">Email Us</h3>
-              <p className="text-blue-100 mb-3">Response within 4-6 hours</p>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl sm:rounded-2xl p-5 sm:p-6 text-center hover:bg-white/20 transition-all sm:col-span-2 md:col-span-1">
+              <EnvelopeIcon className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-3 sm:mb-4" />
+              <h3 className="text-lg sm:text-xl font-bold mb-2">Email Us</h3>
+              <p className="text-blue-100 mb-2 sm:mb-3 text-sm sm:text-base">
+                Response within 4-6 hours
+              </p>
               <a
                 href="mailto:support@cerebrumacademy.in"
-                className="text-white font-bold hover:text-yellow-300 transition-colors break-all"
+                className="text-white font-bold hover:text-yellow-300 transition-colors break-all text-sm sm:text-base"
               >
                 support@cerebrumacademy.in
               </a>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center hover:bg-white/20 transition-all">
-              <ChatBubbleLeftRightIcon className="w-12 h-12 mx-auto mb-4" />
-              <h3 className="text-xl font-bold mb-2">Live Chat</h3>
-              <p className="text-blue-100 mb-3">Instant support available</p>
-              <button className="text-white font-bold hover:text-yellow-300 transition-colors">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl sm:rounded-2xl p-5 sm:p-6 text-center hover:bg-white/20 transition-all sm:col-span-2 md:col-span-1">
+              <ChatBubbleLeftRightIcon className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-3 sm:mb-4" />
+              <h3 className="text-lg sm:text-xl font-bold mb-2">Live Chat</h3>
+              <p className="text-blue-100 mb-2 sm:mb-3 text-sm sm:text-base">
+                Instant support available
+              </p>
+              <button className="text-white font-bold hover:text-yellow-300 transition-colors text-sm sm:text-base">
                 Start Chat
               </button>
             </div>
