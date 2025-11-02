@@ -80,11 +80,11 @@ export default function FacultyPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-green-600 to-blue-600 text-white py-20">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="bg-gradient-to-r from-green-600 to-blue-600 text-white py-12 sm:py-16 md:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center">
             <motion.h1
-              className="text-5xl font-bold mb-6"
+              className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -92,7 +92,7 @@ export default function FacultyPage() {
               World-Class Faculty
             </motion.h1>
             <motion.p
-              className="text-xl text-green-100 max-w-3xl mx-auto mb-8"
+              className="text-base sm:text-lg md:text-xl text-green-100 max-w-3xl mx-auto mb-6 sm:mb-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -103,7 +103,7 @@ export default function FacultyPage() {
             </motion.p>
 
             <motion.div
-              className="flex flex-col sm:flex-row gap-4 justify-center"
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
@@ -111,16 +111,16 @@ export default function FacultyPage() {
               <Button
                 variant="outline"
                 size="lg"
-                className="border-white text-white hover:bg-white hover:text-green-600"
+                className="border-white text-white hover:bg-white hover:text-green-600 w-full sm:w-auto"
               >
                 <Calendar className="w-5 h-5 mr-2" />
                 Book Faculty Interaction
               </Button>
-              <Link href="/contact">
+              <Link href="/contact" className="w-full sm:w-auto">
                 <Button
                   variant="primary"
                   size="lg"
-                  className="bg-white text-green-600 hover:bg-gray-100"
+                  className="bg-white text-green-600 hover:bg-gray-100 w-full"
                 >
                   Join Our Academy
                   <ArrowRight className="w-5 h-5 ml-2" />
@@ -132,25 +132,35 @@ export default function FacultyPage() {
       </section>
 
       {/* Faculty Stats */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Faculty Excellence Statistics</h2>
-            <p className="text-xl text-gray-600">Numbers that showcase our teaching expertise</p>
+      <section className="py-12 sm:py-16 md:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-10 sm:mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
+              Faculty Excellence Statistics
+            </h2>
+            <p className="text-base sm:text-lg md:text-xl text-gray-600">
+              Numbers that showcase our teaching expertise
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
             {facultyStats.map((stat, index) => (
               <motion.div
                 key={index}
-                className="bg-gray-50 rounded-3xl p-8 text-center hover:shadow-lg transition-shadow"
+                className="bg-gray-50 rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 text-center hover:shadow-lg transition-shadow"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <div className="text-4xl font-bold text-blue-600 mb-2">{stat.number}</div>
-                <div className="text-lg font-semibold text-gray-900 mb-2">{stat.label}</div>
-                <div className="text-gray-600">{stat.description}</div>
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-600 mb-1 sm:mb-2">
+                  {stat.number}
+                </div>
+                <div className="text-sm sm:text-base md:text-lg font-semibold text-gray-900 mb-1 sm:mb-2">
+                  {stat.label}
+                </div>
+                <div className="text-xs sm:text-sm md:text-base text-gray-600">
+                  {stat.description}
+                </div>
               </motion.div>
             ))}
           </div>
@@ -158,14 +168,18 @@ export default function FacultyPage() {
       </section>
 
       {/* Faculty Specializations */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Subject Specializations</h2>
-            <p className="text-xl text-gray-600">Expert faculty for every biology domain</p>
+      <section className="py-12 sm:py-16 md:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-10 sm:mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
+              Subject Specializations
+            </h2>
+            <p className="text-base sm:text-lg md:text-xl text-gray-600">
+              Expert faculty for every biology domain
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             {specializations.map((spec, index) => (
               <motion.div
                 key={index}
