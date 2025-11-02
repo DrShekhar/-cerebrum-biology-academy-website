@@ -37,15 +37,17 @@ export default function GalleryPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
+      <section className="relative bg-gradient-to-r from-blue-600 to-blue-800 text-white py-12 sm:py-16 md:py-20">
         <div className="absolute inset-0 bg-black/10"></div>
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Photo Gallery</h1>
-            <p className="text-xl text-blue-100 mb-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
+              Photo Gallery
+            </h1>
+            <p className="text-lg sm:text-xl text-blue-100 mb-3 sm:mb-4">
               Capturing Excellence in Medical Entrance Coaching
             </p>
-            <p className="text-lg text-blue-200 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-blue-200 max-w-3xl mx-auto">
               Explore memorable moments from our journey - from faculty leadership and educational
               seminars to campus events and student achievements. Each photo tells a story of
               dedication, excellence, and success.
@@ -55,30 +57,32 @@ export default function GalleryPage() {
       </section>
 
       {/* Gallery Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
+      <section className="py-12 sm:py-14 md:py-16">
+        <div className="container mx-auto px-4 sm:px-6">
           <PhotoGallery images={galleryImages} />
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Be Part of Our Success Story</h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-12 sm:py-14 md:py-16">
+        <div className="container mx-auto px-4 sm:px-6 text-center">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">
+            Be Part of Our Success Story
+          </h2>
+          <p className="text-base sm:text-lg md:text-xl text-blue-100 mb-6 sm:mb-8 max-w-2xl mx-auto">
             Join Cerebrum Biology Academy and create your own success story in medical entrance
             exams.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
             <a
               href="/contact"
-              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+              className="bg-white text-blue-600 px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-center"
             >
               Contact Us
             </a>
             <a
               href="/courses"
-              className="bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors border-2 border-white"
+              className="bg-blue-700 text-white px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors border-2 border-white text-center"
             >
               View Courses
             </a>
