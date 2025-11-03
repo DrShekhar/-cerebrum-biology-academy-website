@@ -262,16 +262,16 @@ export default function DoubtResolutionPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-red-600 to-pink-600 text-white py-20">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="bg-gradient-to-r from-red-600 to-pink-600 text-white py-12 sm:py-16 md:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           {/* Real-time Social Proof Banner */}
-          <div className="mb-8 flex justify-center">
-            <div className="bg-white/20 backdrop-blur-md rounded-full px-6 py-3 inline-flex items-center gap-3 border border-white/30">
+          <div className="mb-6 sm:mb-8 flex justify-center">
+            <div className="bg-white/20 backdrop-blur-md rounded-full px-4 sm:px-6 py-2 sm:py-3 inline-flex items-center gap-2 sm:gap-3 border border-white/30">
               <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-              <span className="text-sm font-medium">
+              <span className="text-xs sm:text-sm font-medium">
                 <span className="font-bold">47 doubts</span> resolved in the last hour
               </span>
-              <div className="flex -space-x-2">
+              <div className="hidden sm:flex -space-x-2">
                 <div className="w-6 h-6 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 border-2 border-white" />
                 <div className="w-6 h-6 rounded-full bg-gradient-to-br from-blue-400 to-purple-500 border-2 border-white" />
                 <div className="w-6 h-6 rounded-full bg-gradient-to-br from-pink-400 to-red-500 border-2 border-white" />
@@ -279,45 +279,45 @@ export default function DoubtResolutionPage() {
             </div>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
             <div>
-              <h1 className="text-5xl font-bold mb-6 leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 leading-tight">
                 Get Your NEET Biology Doubts Solved in{' '}
                 <span className="text-yellow-300">12 Minutes or Less</span>
               </h1>
-              <p className="text-xl text-red-100 mb-6">
+              <p className="text-base sm:text-lg md:text-xl text-red-100 mb-4 sm:mb-6">
                 Join 5,000+ students who cleared their doubts and scored{' '}
                 <span className="font-bold text-yellow-300">340+ in Biology</span>. Expert AIIMS
                 faculty available 24/7 on WhatsApp, Video Call, and Chat.
               </p>
 
               {/* Trust Indicators */}
-              <div className="flex flex-wrap gap-4 mb-8 text-sm">
+              <div className="flex flex-wrap gap-3 sm:gap-4 mb-6 sm:mb-8 text-xs sm:text-sm">
                 <div className="flex items-center gap-2">
-                  <CheckCircle className="w-5 h-5 text-green-300" />
+                  <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-300" />
                   <span>98.5% satisfaction rate</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle className="w-5 h-5 text-green-300" />
+                  <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-300" />
                   <span>50,000+ doubts solved</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle className="w-5 h-5 text-green-300" />
+                  <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-300" />
                   <span>AIIMS faculty only</span>
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <Link
                   href="/contact"
-                  className="bg-white text-red-600 px-8 py-4 rounded-lg font-bold hover:bg-red-50 transition-all hover:scale-105 inline-flex items-center justify-center text-lg shadow-lg"
+                  className="bg-white text-red-600 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold hover:bg-red-50 transition-all hover:scale-105 inline-flex items-center justify-center text-base sm:text-lg shadow-lg min-h-[44px]"
                 >
                   Ask Your First Doubt FREE
-                  <MessageCircle className="w-5 h-5 ml-2" />
+                  <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
                 </Link>
                 <Link
                   href="#pricing"
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors inline-flex items-center justify-center"
+                  className="border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors inline-flex items-center justify-center min-h-[44px]"
                 >
                   View Plans & Pricing
                 </Link>
@@ -330,16 +330,20 @@ export default function DoubtResolutionPage() {
               </p>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
-              <h3 className="text-2xl font-bold mb-6">Why Students Love Our Doubt Support</h3>
-              <div className="space-y-5">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-white/20">
+              <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">
+                Why Students Love Our Doubt Support
+              </h3>
+              <div className="space-y-4 sm:space-y-5">
                 <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-green-500/20 flex items-center justify-center flex-shrink-0">
-                    <Clock className="w-5 h-5 text-green-300" />
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-green-500/20 flex items-center justify-center flex-shrink-0">
+                    <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-green-300" />
                   </div>
                   <div>
-                    <div className="font-semibold text-lg">12-Minute Resolution</div>
-                    <div className="text-red-100 text-sm">Fastest response in the industry</div>
+                    <div className="font-semibold text-base sm:text-lg">12-Minute Resolution</div>
+                    <div className="text-red-100 text-xs sm:text-sm">
+                      Fastest response in the industry
+                    </div>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -376,23 +380,29 @@ export default function DoubtResolutionPage() {
       </section>
 
       {/* Success Statistics */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Doubt Resolution Excellence</h2>
-            <p className="text-gray-600">
+      <section className="py-12 sm:py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
+              Doubt Resolution Excellence
+            </h2>
+            <p className="text-sm sm:text-base text-gray-600">
               Industry-leading support statistics that speak for our commitment
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow"
+                className="bg-white rounded-xl p-4 sm:p-6 text-center shadow-lg hover:shadow-xl transition-shadow"
               >
-                <div className="text-3xl font-bold text-red-600 mb-2">{stat.number}</div>
-                <div className="text-lg font-semibold text-gray-900 mb-1">{stat.label}</div>
-                <div className="text-sm text-gray-600">{stat.description}</div>
+                <div className="text-2xl sm:text-3xl font-bold text-red-600 mb-1 sm:mb-2">
+                  {stat.number}
+                </div>
+                <div className="text-sm sm:text-lg font-semibold text-gray-900 mb-1">
+                  {stat.label}
+                </div>
+                <div className="text-xs sm:text-sm text-gray-600">{stat.description}</div>
               </div>
             ))}
           </div>
