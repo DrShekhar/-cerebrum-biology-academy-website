@@ -71,55 +71,57 @@ export default function Class12BiologyPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <section className="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-8 sm:py-12 md:py-16 lg:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div>
-              <h1 className="text-5xl font-bold mb-6">Class 12th Biology Course</h1>
-              <p className="text-xl text-purple-100 mb-8">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
+                Class 12th Biology Course
+              </h1>
+              <p className="text-base sm:text-lg md:text-xl text-purple-100 mb-6 sm:mb-8">
                 Master Class 12th Biology with intensive NEET preparation. The most crucial year for
                 medical entrance success with expert AIIMS faculty guidance.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <Link
                   href="/purchase/class-12"
-                  className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center justify-center shadow-lg"
+                  className="bg-white text-purple-600 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center justify-center shadow-lg min-h-[44px] w-full sm:w-auto"
                 >
                   Buy Now - Start Learning
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
                 <Link
                   href="/admissions"
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors inline-flex items-center justify-center"
+                  className="border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors inline-flex items-center justify-center min-h-[44px] w-full sm:w-auto"
                 >
                   Talk to Counselor
                 </Link>
                 <Link
                   href="/contact"
-                  className="border border-white/50 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors inline-flex items-center justify-center"
+                  className="border border-white/50 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors inline-flex items-center justify-center min-h-[44px] w-full sm:w-auto"
                 >
                   Book Demo Class
                 </Link>
               </div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8">
-              <h3 className="text-2xl font-bold mb-6">Course Highlights</h3>
-              <div className="space-y-4">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8">
+              <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">Course Highlights</h3>
+              <div className="space-y-3 sm:space-y-4">
                 <div className="flex items-center">
-                  <Clock className="w-6 h-6 mr-3 text-purple-300" />
-                  <span>1 Year Intensive Program</span>
+                  <Clock className="w-5 h-5 sm:w-6 sm:h-6 mr-3 text-purple-300 flex-shrink-0" />
+                  <span className="text-sm sm:text-base">1 Year Intensive Program</span>
                 </div>
                 <div className="flex items-center">
-                  <Users className="w-6 h-6 mr-3 text-purple-300" />
-                  <span>Premium Batch (Max 20 students)</span>
+                  <Users className="w-5 h-5 sm:w-6 sm:h-6 mr-3 text-purple-300 flex-shrink-0" />
+                  <span className="text-sm sm:text-base">Premium Batch (Max 20 students)</span>
                 </div>
                 <div className="flex items-center">
-                  <Trophy className="w-6 h-6 mr-3 text-purple-300" />
-                  <span>Board + NEET Excellence</span>
+                  <Trophy className="w-5 h-5 sm:w-6 sm:h-6 mr-3 text-purple-300 flex-shrink-0" />
+                  <span className="text-sm sm:text-base">Board + NEET Excellence</span>
                 </div>
                 <div className="flex items-center">
-                  <Target className="w-6 h-6 mr-3 text-purple-300" />
-                  <span>340+ NEET Biology Target</span>
+                  <Target className="w-5 h-5 sm:w-6 sm:h-6 mr-3 text-purple-300 flex-shrink-0" />
+                  <span className="text-sm sm:text-base">340+ NEET Biology Target</span>
                 </div>
               </div>
             </div>
@@ -128,21 +130,29 @@ export default function Class12BiologyPage() {
       </section>
 
       {/* Success Statistics */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Class 12th Success Record</h2>
-            <p className="text-gray-600">Outstanding results in both board exams and NEET</p>
+      <section className="py-8 sm:py-12 md:py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
+              Class 12th Success Record
+            </h2>
+            <p className="text-sm sm:text-base text-gray-600">
+              Outstanding results in both board exams and NEET
+            </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {successStats.map((stat, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow"
+                className="bg-white rounded-xl p-4 sm:p-6 text-center shadow-lg hover:shadow-xl transition-shadow"
               >
-                <div className="text-3xl font-bold text-purple-600 mb-2">{stat.number}</div>
-                <div className="text-lg font-semibold text-gray-900 mb-1">{stat.label}</div>
-                <div className="text-sm text-gray-600">{stat.description}</div>
+                <div className="text-2xl sm:text-3xl font-bold text-purple-600 mb-1 sm:mb-2">
+                  {stat.number}
+                </div>
+                <div className="text-sm sm:text-lg font-semibold text-gray-900 mb-1">
+                  {stat.label}
+                </div>
+                <div className="text-xs sm:text-sm text-gray-600">{stat.description}</div>
               </div>
             ))}
           </div>
@@ -150,26 +160,26 @@ export default function Class12BiologyPage() {
       </section>
 
       {/* Course Features */}
-      <section className="py-16 bg-gray-100">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+      <section className="py-8 sm:py-12 md:py-16 bg-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
               Why Choose Our Class 12th Biology Course?
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base text-gray-600 max-w-2xl mx-auto px-4">
               The most critical year for NEET aspirants with dual focus on board excellence and
               entrance exam success
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {courseFeatures.map((feature, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
+                className="bg-white rounded-xl p-5 sm:p-6 shadow-lg hover:shadow-xl transition-shadow"
               >
-                <CheckCircle className="w-8 h-8 text-purple-600 mb-4" />
-                <p className="text-gray-700 font-medium">{feature}</p>
+                <CheckCircle className="w-7 h-7 sm:w-8 sm:h-8 text-purple-600 mb-3 sm:mb-4" />
+                <p className="text-sm sm:text-base text-gray-700 font-medium">{feature}</p>
               </div>
             ))}
           </div>
@@ -177,25 +187,27 @@ export default function Class12BiologyPage() {
       </section>
 
       {/* NEET Preparation Focus */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Intensive NEET Preparation</h2>
-            <p className="text-gray-600">
+      <section className="py-8 sm:py-12 md:py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
+              Intensive NEET Preparation
+            </h2>
+            <p className="text-sm sm:text-base text-gray-600 px-4">
               Comprehensive NEET-focused approach for maximum Biology score
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {neetPreparation.map((item, index) => {
               const Icon = item.icon
               return (
                 <div
                   key={index}
-                  className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-xl p-6 text-center hover:shadow-lg transition-shadow"
+                  className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-xl p-5 sm:p-6 text-center hover:shadow-lg transition-shadow"
                 >
-                  <Icon className="w-12 h-12 text-purple-600 mx-auto mb-4" />
-                  <p className="text-gray-700 font-medium">{item.feature}</p>
+                  <Icon className="w-10 h-10 sm:w-12 sm:h-12 text-purple-600 mx-auto mb-3 sm:mb-4" />
+                  <p className="text-sm sm:text-base text-gray-700 font-medium">{item.feature}</p>
                 </div>
               )
             })}
@@ -204,18 +216,18 @@ export default function Class12BiologyPage() {
       </section>
 
       {/* Curriculum */}
-      <section className="py-16 bg-gray-100">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+      <section className="py-8 sm:py-12 md:py-16 bg-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
               Complete Curriculum with NEET Weightage
             </h2>
-            <p className="text-gray-600">
+            <p className="text-sm sm:text-base text-gray-600 px-4">
               Strategic coverage based on NEET exam pattern and board requirements
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
             {curriculum.map((unit, index) => (
               <div
                 key={index}
