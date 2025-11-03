@@ -710,17 +710,17 @@ export default function AdmissionsPage() {
 
           <div className="mt-10 sm:mt-12 grid grid-cols-3 gap-4 sm:gap-6 md:gap-8 text-center">
             <div>
-              <div className="text-2xl sm:text-3xl font-bold mb-1 sm:mb-2">Free</div>
+              <div className="text-xl sm:text-2xl md:text-3xl font-bold mb-1 sm:mb-2">Free</div>
               <div className="text-xs sm:text-sm md:text-base text-green-100">
                 Counseling Session
               </div>
             </div>
             <div>
-              <div className="text-2xl sm:text-3xl font-bold mb-1 sm:mb-2">5 Days</div>
+              <div className="text-xl sm:text-2xl md:text-3xl font-bold mb-1 sm:mb-2">5 Days</div>
               <div className="text-xs sm:text-sm md:text-base text-green-100">Quick Processing</div>
             </div>
             <div>
-              <div className="text-2xl sm:text-3xl font-bold mb-1 sm:mb-2">94%</div>
+              <div className="text-xl sm:text-2xl md:text-3xl font-bold mb-1 sm:mb-2">94%</div>
               <div className="text-xs sm:text-sm md:text-base text-green-100">Success Rate</div>
             </div>
           </div>

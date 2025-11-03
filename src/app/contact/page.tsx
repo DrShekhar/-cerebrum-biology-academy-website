@@ -103,11 +103,11 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-12 xs:py-16 sm:py-20">
-        <div className="max-w-7xl mx-auto px-4 xs:px-6 lg:px-8">
+      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-12 sm:py-16 md:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <motion.h1
-              className="text-3xl xs:text-4xl sm:text-5xl font-bold mb-4 xs:mb-6"
+              className="text-3xl sm:text-4xl sm:text-5xl font-bold mb-4 sm:mb-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -115,7 +115,7 @@ export default function ContactPage() {
               Get In Touch With Us
             </motion.h1>
             <motion.p
-              className="text-base xs:text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto mb-6 xs:mb-8"
+              className="text-base sm:text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto mb-6 sm:mb-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -152,32 +152,32 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Information */}
-      <section className="py-12 xs:py-16 sm:py-20">
-        <div className="max-w-7xl mx-auto px-4 xs:px-6 lg:px-8">
-          <div className="text-center mb-10 xs:mb-12 sm:mb-16">
-            <h2 className="text-2xl xs:text-3xl sm:text-4xl font-bold text-gray-900 mb-3 xs:mb-4">
+      <section className="py-12 sm:py-16 sm:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10 sm:mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl sm:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
               Contact Information
             </h2>
-            <p className="text-base xs:text-lg sm:text-xl text-gray-600">
+            <p className="text-base sm:text-lg sm:text-xl text-gray-600">
               Multiple ways to reach us for your convenience
             </p>
           </div>
 
-          <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-6 xs:gap-8 mb-10 xs:mb-12 sm:mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-10 sm:mb-12 sm:mb-16">
             {contactInfo.map((info, index) => (
               <motion.div
                 key={index}
-                className="bg-white rounded-2xl xs:rounded-3xl shadow-lg p-5 xs:p-6 sm:p-8 text-center hover:shadow-xl transition-shadow"
+                className="bg-white rounded-2xl sm:rounded-3xl shadow-lg p-5 sm:p-6 sm:p-8 text-center hover:shadow-xl transition-shadow"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <div
-                  className={`w-12 xs:w-14 sm:w-16 h-12 xs:h-14 sm:h-16 ${info.color} rounded-full flex items-center justify-center mx-auto mb-4 xs:mb-5 sm:mb-6`}
+                  className={`w-12 sm:w-14 sm:w-16 h-12 sm:h-14 sm:h-16 ${info.color} rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-5 sm:mb-6`}
                 >
-                  <info.icon className="w-6 xs:w-7 sm:w-8 h-6 xs:h-7 sm:h-8 text-white" />
+                  <info.icon className="w-6 sm:w-7 sm:w-8 h-6 sm:h-7 sm:h-8 text-white" />
                 </div>
-                <h3 className="text-lg xs:text-xl font-bold text-gray-900 mb-3 xs:mb-4">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">
                   {info.title}
                 </h3>
                 <div className="space-y-2">
@@ -192,11 +192,11 @@ export default function ContactPage() {
           </div>
 
           {/* Quick Links */}
-          <div className="bg-white rounded-2xl xs:rounded-3xl shadow-lg p-5 xs:p-6 sm:p-8">
-            <h3 className="text-xl xs:text-2xl font-bold text-gray-900 mb-4 xs:mb-5 sm:mb-6 text-center">
+          <div className="bg-white rounded-2xl sm:rounded-3xl shadow-lg p-5 sm:p-6 sm:p-8">
+            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-5 sm:mb-6 text-center">
               Quick Actions
             </h3>
-            <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 xs:gap-5 sm:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5 sm:gap-6">
               {quickLinks.map((link, index) => (
                 <Link key={index} href={link.href}>
                   <motion.div
@@ -219,19 +219,19 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Form */}
-      <section className="py-12 xs:py-16 sm:py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 xs:px-6 lg:px-8">
-          <div className="text-center mb-10 xs:mb-12 sm:mb-16">
-            <h2 className="text-2xl xs:text-3xl sm:text-4xl font-bold text-gray-900 mb-3 xs:mb-4">
+      <section className="py-12 sm:py-16 sm:py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10 sm:mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl sm:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
               Send Us a Message
             </h2>
-            <p className="text-base xs:text-lg sm:text-xl text-gray-600">
+            <p className="text-base sm:text-lg sm:text-xl text-gray-600">
               We'll get back to you within 24 hours
             </p>
           </div>
 
           <motion.div
-            className="bg-gray-50 rounded-2xl xs:rounded-3xl shadow-lg p-5 xs:p-6 sm:p-8"
+            className="bg-gray-50 rounded-2xl sm:rounded-3xl shadow-lg p-5 sm:p-6 sm:p-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -361,63 +361,63 @@ export default function ContactPage() {
       </section>
 
       {/* Map Section */}
-      <section className="py-12 xs:py-16 sm:py-20">
-        <div className="max-w-7xl mx-auto px-4 xs:px-6 lg:px-8">
-          <div className="text-center mb-10 xs:mb-12 sm:mb-16">
-            <h2 className="text-2xl xs:text-3xl sm:text-4xl font-bold text-gray-900 mb-3 xs:mb-4">
+      <section className="py-12 sm:py-16 sm:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10 sm:mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl sm:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
               Find Us On Map
             </h2>
-            <p className="text-base xs:text-lg sm:text-xl text-gray-600">
+            <p className="text-base sm:text-lg sm:text-xl text-gray-600">
               Conveniently located near metro stations
             </p>
           </div>
 
-          <div className="bg-white rounded-2xl xs:rounded-3xl shadow-lg overflow-hidden">
+          <div className="bg-white rounded-2xl sm:rounded-3xl shadow-lg overflow-hidden">
             <div className="grid lg:grid-cols-2">
-              <div className="p-5 xs:p-6 sm:p-8">
-                <h3 className="text-xl xs:text-2xl font-bold text-gray-900 mb-4 xs:mb-5 sm:mb-6">
+              <div className="p-5 sm:p-6 sm:p-8">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-5 sm:mb-6">
                   Visit Our Campus
                 </h3>
 
-                <div className="space-y-4 xs:space-y-5 sm:space-y-6">
+                <div className="space-y-4 sm:space-y-5 sm:space-y-6">
                   <div className="flex items-start">
-                    <Building className="w-5 xs:w-6 h-5 xs:h-6 text-blue-600 mr-3 xs:mr-4 mt-1 flex-shrink-0" />
+                    <Building className="w-5 sm:w-6 h-5 sm:h-6 text-blue-600 mr-3 sm:mr-4 mt-1 flex-shrink-0" />
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-1 text-sm xs:text-base">
+                      <h4 className="font-semibold text-gray-900 mb-1 text-sm sm:text-base">
                         Main Campus
                       </h4>
-                      <p className="text-gray-600 text-sm xs:text-base">
+                      <p className="text-gray-600 text-sm sm:text-base">
                         A-2/45, Sector 16, Noida, UP 201301
                       </p>
                     </div>
                   </div>
 
                   <div className="flex items-start">
-                    <Navigation className="w-5 xs:w-6 h-5 xs:h-6 text-green-600 mr-3 xs:mr-4 mt-1 flex-shrink-0" />
+                    <Navigation className="w-5 sm:w-6 h-5 sm:h-6 text-green-600 mr-3 sm:mr-4 mt-1 flex-shrink-0" />
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-1 text-sm xs:text-base">
+                      <h4 className="font-semibold text-gray-900 mb-1 text-sm sm:text-base">
                         Nearest Metro
                       </h4>
-                      <p className="text-gray-600 text-sm xs:text-base">
+                      <p className="text-gray-600 text-sm sm:text-base">
                         City Centre Metro Station (500m walk)
                       </p>
                     </div>
                   </div>
 
                   <div className="flex items-start">
-                    <Clock className="w-5 xs:w-6 h-5 xs:h-6 text-purple-600 mr-3 xs:mr-4 mt-1 flex-shrink-0" />
+                    <Clock className="w-5 sm:w-6 h-5 sm:h-6 text-purple-600 mr-3 sm:mr-4 mt-1 flex-shrink-0" />
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-1 text-sm xs:text-base">
+                      <h4 className="font-semibold text-gray-900 mb-1 text-sm sm:text-base">
                         Campus Hours
                       </h4>
-                      <p className="text-gray-600 text-sm xs:text-base">
+                      <p className="text-gray-600 text-sm sm:text-base">
                         Mon-Sat: 8 AM - 8 PM | Sun: 10 AM - 6 PM
                       </p>
                     </div>
                   </div>
                 </div>
 
-                <div className="mt-6 xs:mt-7 sm:mt-8">
+                <div className="mt-6 sm:mt-7 sm:mt-8">
                   <Button variant="primary" size="lg" className="w-full min-h-11 sm:min-h-12">
                     <Calendar className="w-5 h-5 mr-2" />
                     Schedule Campus Visit
@@ -425,11 +425,11 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="bg-gray-100 h-64 xs:h-80 sm:h-96 lg:h-full flex items-center justify-center p-4">
+              <div className="bg-gray-100 h-64 sm:h-80 sm:h-96 lg:h-full flex items-center justify-center p-4">
                 <div className="text-center">
-                  <MapPin className="w-12 xs:w-14 sm:w-16 h-12 xs:h-14 sm:h-16 text-gray-400 mx-auto mb-3 xs:mb-4" />
-                  <p className="text-gray-600 text-sm xs:text-base">Interactive Map Coming Soon</p>
-                  <p className="text-xs xs:text-sm text-gray-500 mt-2">
+                  <MapPin className="w-12 sm:w-14 sm:w-16 h-12 sm:h-14 sm:h-16 text-gray-400 mx-auto mb-3 sm:mb-4" />
+                  <p className="text-gray-600 text-sm sm:text-base">Interactive Map Coming Soon</p>
+                  <p className="text-xs sm:text-sm text-gray-500 mt-2">
                     A-2/45, Sector 16, Noida, UP 201301
                   </p>
                 </div>
@@ -440,17 +440,17 @@ export default function ContactPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 xs:py-16 sm:py-20 bg-gradient-to-r from-green-600 to-blue-600 text-white">
-        <div className="max-w-4xl mx-auto px-4 xs:px-6 text-center">
-          <h2 className="text-2xl xs:text-3xl sm:text-4xl font-bold mb-4 xs:mb-5 sm:mb-6">
+      <section className="py-12 sm:py-16 sm:py-20 bg-gradient-to-r from-green-600 to-blue-600 text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+          <h2 className="text-2xl sm:text-3xl sm:text-4xl font-bold mb-4 sm:mb-5 sm:mb-6">
             Ready to Start Your NEET Journey?
           </h2>
-          <p className="text-base xs:text-lg sm:text-xl text-green-100 mb-6 xs:mb-7 sm:mb-8">
+          <p className="text-base sm:text-lg sm:text-xl text-green-100 mb-6 sm:mb-7 sm:mb-8">
             Join thousands of successful students and achieve your medical dreams with expert
             guidance.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-3 xs:gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <Link href="/courses">
               <Button
                 variant="outline"
@@ -471,18 +471,18 @@ export default function ContactPage() {
             </Button>
           </div>
 
-          <div className="mt-8 xs:mt-10 sm:mt-12 grid grid-cols-3 gap-4 xs:gap-6 sm:gap-8 text-center">
+          <div className="mt-8 sm:mt-10 md:mt-12 grid grid-cols-3 gap-4 sm:gap-6 md:gap-8 text-center">
             <div>
-              <div className="text-2xl xs:text-3xl font-bold mb-1 xs:mb-2">Free</div>
-              <div className="text-green-100 text-xs xs:text-sm sm:text-base">Consultation</div>
+              <div className="text-xl sm:text-2xl md:text-3xl font-bold mb-1 sm:mb-2">Free</div>
+              <div className="text-green-100 text-xs sm:text-sm md:text-base">Consultation</div>
             </div>
             <div>
-              <div className="text-2xl xs:text-3xl font-bold mb-1 xs:mb-2">24/7</div>
-              <div className="text-green-100 text-xs xs:text-sm sm:text-base">Support</div>
+              <div className="text-xl sm:text-2xl md:text-3xl font-bold mb-1 sm:mb-2">24/7</div>
+              <div className="text-green-100 text-xs sm:text-sm md:text-base">Support</div>
             </div>
             <div>
-              <div className="text-2xl xs:text-3xl font-bold mb-1 xs:mb-2">94%</div>
-              <div className="text-green-100 text-xs xs:text-sm sm:text-base">Success Rate</div>
+              <div className="text-xl sm:text-2xl md:text-3xl font-bold mb-1 sm:mb-2">94%</div>
+              <div className="text-green-100 text-xs sm:text-sm md:text-base">Success Rate</div>
             </div>
           </div>
         </div>

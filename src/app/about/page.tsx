@@ -171,7 +171,7 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section - Academic Excellence */}
-      <section className="relative py-20 sm:py-28 lg:py-40 bg-gradient-to-br from-[#0f1729] via-[#1e3a5f] to-[#0f1729] text-white overflow-hidden">
+      <section className="relative py-12 sm:py-16 md:py-20 lg:py-28 xl:py-40 bg-gradient-to-br from-[#0f1729] via-[#1e3a5f] to-[#0f1729] text-white overflow-hidden">
         {/* Subtle background pattern */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent"></div>
@@ -180,7 +180,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
           <div className="grid lg:grid-cols-5 gap-8 sm:gap-10 lg:gap-16 items-center">
             <div className="lg:col-span-3 space-y-5 sm:space-y-6 md:space-y-8">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl font-bold tracking-[-0.02em] leading-[1.05] mb-6 sm:mb-8 antialiased">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-[-0.02em] leading-[1.05] mb-4 sm:mb-6 md:mb-8 antialiased">
                 From{' '}
                 <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-yellow-200 to-amber-300">
                   AIIMS Delhi
@@ -319,8 +319,8 @@ export default function AboutPage() {
       </section>
 
       {/* Mission & Vision - Academic Excellence Framework */}
-      <section className="py-32 bg-gradient-to-b from-[#fdfcfa] to-white">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 xl:py-32 bg-gradient-to-b from-[#fdfcfa] to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-20">
             <div className="text-[#6b8e7f] font-semibold text-sm uppercase tracking-[0.2em] mb-6">
               Academic Foundation
@@ -334,7 +334,7 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -448,7 +448,7 @@ export default function AboutPage() {
           </div>
 
           {/* Enhanced 4-Column Card Grid - Better Organized */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8">
             {values.map((value, index) => (
               <motion.div
                 key={index}
@@ -773,7 +773,7 @@ export default function AboutPage() {
               </Link>
             </motion.div>
 
-            <div className="grid grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
               {facultyStats.map((stat, index) => (
                 <motion.div
                   key={index}
