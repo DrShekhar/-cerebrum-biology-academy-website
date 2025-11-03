@@ -154,9 +154,9 @@ export function HighConversionLanding({ className = '' }: HighConversionLandingP
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="bg-white/10 backdrop-blur-sm rounded-lg px-6 py-3 mb-8"
+            className="bg-white/10 backdrop-blur-sm rounded-lg px-4 sm:px-6 py-3 mb-6 sm:mb-8"
           >
-            <div className="flex items-center justify-center gap-8 text-sm font-semibold">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 md:gap-8 text-xs sm:text-sm font-semibold">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
                 <span>
@@ -178,16 +178,16 @@ export function HighConversionLanding({ className = '' }: HighConversionLandingP
             </div>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center">
             {/* Left Column - Value Proposition */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="space-y-8"
+              className="space-y-6 sm:space-y-8"
             >
-              <div className="space-y-6">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+              <div className="space-y-4 sm:space-y-6">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                   <span className="bg-gradient-to-r from-orange-300 via-yellow-300 to-green-300 bg-clip-text text-transparent">
                     Master Biology,
                   </span>
@@ -197,7 +197,7 @@ export function HighConversionLanding({ className = '' }: HighConversionLandingP
                   <span className="text-blue-300">Become a Doctor</span>
                 </h1>
 
-                <p className="text-xl text-blue-100 leading-relaxed">
+                <p className="text-base sm:text-lg md:text-xl text-blue-100 leading-relaxed">
                   Take our <span className="font-bold text-yellow-300">2-minute quiz</span> and get
                   <span className="font-bold text-green-300">
                     {' '}
@@ -209,24 +209,28 @@ export function HighConversionLanding({ className = '' }: HighConversionLandingP
               </div>
 
               {/* Conversion Features */}
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 xs:grid-cols-2 gap-3 sm:gap-4">
                 {conversionFeatures.map((feature, index) => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2 + index * 0.1 }}
-                    className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center"
+                    className="bg-white/10 backdrop-blur-sm rounded-lg p-3 sm:p-4 text-center"
                   >
-                    <feature.icon className={`h-8 w-8 mx-auto mb-2 ${feature.color}`} />
-                    <div className="text-sm font-semibold">{feature.title}</div>
-                    <div className="text-xs text-blue-200">{feature.description}</div>
+                    <feature.icon
+                      className={`h-6 w-6 sm:h-8 sm:w-8 mx-auto mb-2 ${feature.color}`}
+                    />
+                    <div className="text-xs sm:text-sm font-semibold">{feature.title}</div>
+                    <div className="text-xs text-blue-200 hidden xs:block">
+                      {feature.description}
+                    </div>
                   </motion.div>
                 ))}
               </div>
 
               {/* Quick Action Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <PremiumButton
                   variant="medical"
                   size="lg"
@@ -249,7 +253,7 @@ export function HighConversionLanding({ className = '' }: HighConversionLandingP
               </div>
 
               {/* Trust Indicators */}
-              <div className="flex items-center gap-6 text-sm">
+              <div className="flex flex-col xs:flex-row items-start xs:items-center gap-3 xs:gap-6 text-xs sm:text-sm">
                 <div className="flex items-center gap-1">
                   <CheckCircleIcon className="h-4 w-4 text-green-400" />
                   <span>100% Refund Guarantee</span>
@@ -271,9 +275,11 @@ export function HighConversionLanding({ className = '' }: HighConversionLandingP
               <QuickQuizFlow onComplete={handleQuizComplete} />
 
               {/* Social Proof Testimonials */}
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
                 <div className="text-center">
-                  <h3 className="text-lg font-semibold text-white mb-4">Recent Success Stories</h3>
+                  <h3 className="text-base sm:text-lg font-semibold text-white mb-3 sm:mb-4">
+                    Recent Success Stories
+                  </h3>
                 </div>
 
                 <div className="space-y-3">
@@ -327,13 +333,13 @@ export function HighConversionLanding({ className = '' }: HighConversionLandingP
       </AnimatePresence>
 
       {/* Conversion Stats Section */}
-      <div className="py-16 bg-navy-50">
+      <div className="py-10 sm:py-12 md:py-16 bg-navy-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 sm:mb-8">
             Why Students Choose Our 2-Minute Enrollment
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
             {[
               { value: '12-15%', label: 'Conversion Rate', desc: 'Industry Leading' },
               { value: '2-3min', label: 'Enrollment Time', desc: 'Lightning Fast' },
@@ -347,9 +353,13 @@ export function HighConversionLanding({ className = '' }: HighConversionLandingP
                 transition={{ delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="text-4xl font-bold text-blue-600 mb-2">{stat.value}</div>
-                <div className="text-lg font-semibold text-gray-900">{stat.label}</div>
-                <div className="text-sm text-gray-600">{stat.desc}</div>
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-600 mb-1 sm:mb-2">
+                  {stat.value}
+                </div>
+                <div className="text-sm sm:text-base md:text-lg font-semibold text-gray-900">
+                  {stat.label}
+                </div>
+                <div className="text-xs sm:text-sm text-gray-600">{stat.desc}</div>
               </motion.div>
             ))}
           </div>
