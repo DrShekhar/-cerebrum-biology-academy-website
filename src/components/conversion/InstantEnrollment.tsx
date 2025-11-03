@@ -293,7 +293,7 @@ export function InstantEnrollment({
                       value={formData.phone}
                       onChange={(e) => setFormData((prev) => ({ ...prev, phone: e.target.value }))}
                       className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                      placeholder="+91 98765 43210"
+                      placeholder="+91 88264 44334"
                       required
                     />
                   </div>

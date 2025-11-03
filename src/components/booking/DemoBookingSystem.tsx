@@ -895,7 +895,7 @@ export function DemoBookingSystem() {
                               ? 'border-red-500 focus:ring-red-500'
                               : 'border-gray-300 focus:ring-blue-500'
                         }`}
-                        placeholder="+91 98765 43210"
+                        placeholder="+91 91931 19462"
                         required
                       />
                       {validationStates.phone?.isValid && (

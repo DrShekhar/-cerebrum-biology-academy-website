@@ -66,15 +66,15 @@ export function DemoBookingModal({ isOpen, onClose, onSubmit }: DemoBookingModal
   const [isSuccess, setIsSuccess] = useState(false)
 
   const handleInputChange = (field: keyof DemoBookingData, value: string | string[]) => {
-    setFormData(prev => ({ ...prev, [field]: value }))
+    setFormData((prev) => ({ ...prev, [field]: value }))
   }
 
   const handleCourseToggle = (courseId: string) => {
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
       courseInterest: prev.courseInterest.includes(courseId)
-        ? prev.courseInterest.filter(id => id !== courseId)
-        : [...prev.courseInterest, courseId]
+        ? prev.courseInterest.filter((id) => id !== courseId)
+        : [...prev.courseInterest, courseId],
     }))
   }
 
@@ -117,7 +117,9 @@ export function DemoBookingModal({ isOpen, onClose, onSubmit }: DemoBookingModal
   const isStepValid = () => {
     switch (step) {
       case 1:
-        return formData.name && formData.email && formData.phone && formData.courseInterest.length > 0
+        return (
+          formData.name && formData.email && formData.phone && formData.courseInterest.length > 0
+        )
       case 2:
         return formData.preferredDate && formData.preferredTime
       case 3:
@@ -154,7 +156,7 @@ export function DemoBookingModal({ isOpen, onClose, onSubmit }: DemoBookingModal
             >
               <X className="w-5 h-5" />
             </button>
-            
+
             <div className="flex items-center space-x-3">
               <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
                 <Calendar className="w-6 h-6" />
@@ -169,15 +171,17 @@ export function DemoBookingModal({ isOpen, onClose, onSubmit }: DemoBookingModal
             <div className="mt-6 flex items-center space-x-4">
               {[1, 2, 3].map((num) => (
                 <div key={num} className="flex items-center">
-                  <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold ${
-                    step >= num ? 'bg-white text-primary-600' : 'bg-white/20 text-white'
-                  }`}>
+                  <div
+                    className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold ${
+                      step >= num ? 'bg-white text-primary-600' : 'bg-white/20 text-white'
+                    }`}
+                  >
                     {step > num ? <CheckCircle className="w-5 h-5" /> : num}
                   </div>
                   {num < 3 && (
-                    <div className={`w-16 h-1 mx-2 rounded ${
-                      step > num ? 'bg-white' : 'bg-white/20'
-                    }`} />
+                    <div
+                      className={`w-16 h-1 mx-2 rounded ${step > num ? 'bg-white' : 'bg-white/20'}`}
+                    />
                   )}
                 </div>
               ))}
@@ -215,8 +219,10 @@ export function DemoBookingModal({ isOpen, onClose, onSubmit }: DemoBookingModal
                     exit={{ opacity: 0, x: -20 }}
                     className="space-y-6"
                   >
-                    <h3 className="text-xl font-semibold text-gray-900 mb-4">Personal Information</h3>
-                    
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                      Personal Information
+                    </h3>
+
                     <div className="space-y-4">
                       <div>
                         <label className="block text-sm font-semibold text-gray-700 mb-2">
@@ -257,7 +263,7 @@ export function DemoBookingModal({ isOpen, onClose, onSubmit }: DemoBookingModal
                             value={formData.phone}
                             onChange={(e) => handleInputChange('phone', e.target.value)}
                             className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:border-primary-500 focus:ring-2 focus:ring-primary-100 outline-none transition-all"
-                            placeholder="+91 98765 43210"
+                            placeholder="+91 91931 19462"
                           />
                         </div>
                       </div>
@@ -272,7 +278,7 @@ export function DemoBookingModal({ isOpen, onClose, onSubmit }: DemoBookingModal
                           value={formData.whatsappNumber}
                           onChange={(e) => handleInputChange('whatsappNumber', e.target.value)}
                           className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:border-primary-500 focus:ring-2 focus:ring-primary-100 outline-none transition-all"
-                          placeholder="+91 98765 43210"
+                          placeholder="+91 91931 19462"
                         />
                         <p className="text-sm text-gray-500 mt-1">For demo reminders and updates</p>
                       </div>
@@ -318,7 +324,7 @@ export function DemoBookingModal({ isOpen, onClose, onSubmit }: DemoBookingModal
                     className="space-y-6"
                   >
                     <h3 className="text-xl font-semibold text-gray-900 mb-4">Schedule Your Demo</h3>
-                    
+
                     <div className="space-y-4">
                       <div>
                         <label className="block text-sm font-semibold text-gray-700 mb-2">
@@ -367,8 +373,10 @@ export function DemoBookingModal({ isOpen, onClose, onSubmit }: DemoBookingModal
                     exit={{ opacity: 0, x: -20 }}
                     className="space-y-6"
                   >
-                    <h3 className="text-xl font-semibold text-gray-900 mb-4">Additional Information</h3>
-                    
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                      Additional Information
+                    </h3>
+
                     <div>
                       <label className="block text-sm font-semibold text-gray-700 mb-2">
                         <MessageSquare className="w-4 h-4 inline mr-2" />
@@ -387,17 +395,33 @@ export function DemoBookingModal({ isOpen, onClose, onSubmit }: DemoBookingModal
                     <div className="bg-primary-50 border border-primary-200 rounded-xl p-4">
                       <h4 className="font-semibold text-primary-900 mb-3">Booking Summary</h4>
                       <div className="space-y-2 text-sm">
-                        <p><strong>Name:</strong> {formData.name}</p>
-                        <p><strong>Email:</strong> {formData.email}</p>
-                        <p><strong>Phone:</strong> {formData.phone}</p>
+                        <p>
+                          <strong>Name:</strong> {formData.name}
+                        </p>
+                        <p>
+                          <strong>Email:</strong> {formData.email}
+                        </p>
+                        <p>
+                          <strong>Phone:</strong> {formData.phone}
+                        </p>
                         {formData.whatsappNumber && (
-                          <p><strong>WhatsApp:</strong> {formData.whatsappNumber}</p>
+                          <p>
+                            <strong>WhatsApp:</strong> {formData.whatsappNumber}
+                          </p>
                         )}
-                        <p><strong>Courses:</strong> {formData.courseInterest.map(id => 
-                          courseOptions.find(c => c.id === id)?.name
-                        ).join(', ')}</p>
-                        <p><strong>Date:</strong> {new Date(formData.preferredDate).toLocaleDateString()}</p>
-                        <p><strong>Time:</strong> {formData.preferredTime}</p>
+                        <p>
+                          <strong>Courses:</strong>{' '}
+                          {formData.courseInterest
+                            .map((id) => courseOptions.find((c) => c.id === id)?.name)
+                            .join(', ')}
+                        </p>
+                        <p>
+                          <strong>Date:</strong>{' '}
+                          {new Date(formData.preferredDate).toLocaleDateString()}
+                        </p>
+                        <p>
+                          <strong>Time:</strong> {formData.preferredTime}
+                        </p>
                       </div>
                     </div>
                   </motion.div>
@@ -411,11 +435,7 @@ export function DemoBookingModal({ isOpen, onClose, onSubmit }: DemoBookingModal
             <div className="border-t border-gray-200 p-6 flex items-center justify-between">
               <div className="flex space-x-3">
                 {step > 1 && (
-                  <Button
-                    variant="secondary"
-                    onClick={handleBack}
-                    className="px-6 py-2"
-                  >
+                  <Button variant="secondary" onClick={handleBack} className="px-6 py-2">
                     Back
                   </Button>
                 )}

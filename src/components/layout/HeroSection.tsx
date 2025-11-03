@@ -18,7 +18,7 @@ export function HeroSection() {
   }
 
   const handleCallNow = () => {
-    window.location.href = 'tel:+918826444334'
+    window.location.href = 'tel:+919193119462'
   }
 
   return (
@@ -104,7 +104,7 @@ export function HeroSection() {
 
               <Button variant="secondary_cta" size="xl" onClick={handleCallNow} className="group">
                 <Phone className="w-5 h-5 mr-2 group-hover:ring-2 group-hover:ring-blue-300 rounded-full transition-all" />
-                Call Now: +91 88264 44334
+                Call Now: +91 91931 19462
               </Button>
             </div>
 
