@@ -41,9 +41,24 @@ const mockDashboardData = {
   courses: {
     totalEnrollments: 1234,
     popularCourses: [
-      { courseId: 'class-12', courseName: 'Class 12th Biology', enrollments: 456, revenue: 3420000 },
-      { courseId: 'dropper', courseName: 'NEET Dropper Program', enrollments: 234, revenue: 1989000 },
-      { courseId: 'class-11', courseName: 'Class 11th Biology', enrollments: 345, revenue: 2622000 },
+      {
+        courseId: 'class-12',
+        courseName: 'Class 12th Biology',
+        enrollments: 456,
+        revenue: 3420000,
+      },
+      {
+        courseId: 'dropper',
+        courseName: 'NEET Dropper Program',
+        enrollments: 234,
+        revenue: 1989000,
+      },
+      {
+        courseId: 'class-11',
+        courseName: 'Class 11th Biology',
+        enrollments: 345,
+        revenue: 2622000,
+      },
     ],
   },
   recentActivities: [
@@ -116,14 +131,21 @@ function MetricCard({ title, value, change, changeLabel, icon: Icon, color }: Me
             {typeof value === 'number' ? value.toLocaleString() : value}
           </p>
           <div className="flex items-center mt-2">
-            <TrendingUp className={`w-4 h-4 mr-1 ${change >= 0 ? 'text-emerald-500' : 'text-red-500'}`} />
-            <span className={`text-sm font-medium ${change >= 0 ? 'text-emerald-600' : 'text-red-600'}`}>
-              {change >= 0 ? '+' : ''}{change}%
+            <TrendingUp
+              className={`w-4 h-4 mr-1 ${change >= 0 ? 'text-emerald-500' : 'text-red-500'}`}
+            />
+            <span
+              className={`text-sm font-medium ${change >= 0 ? 'text-emerald-600' : 'text-red-600'}`}
+            >
+              {change >= 0 ? '+' : ''}
+              {change}%
             </span>
             <span className="text-sm text-gray-500 ml-1">{changeLabel}</span>
           </div>
         </div>
-        <div className={`w-16 h-16 rounded-xl border-2 flex items-center justify-center ${colorClasses[color]}`}>
+        <div
+          className={`w-16 h-16 rounded-xl border-2 flex items-center justify-center ${colorClasses[color]}`}
+        >
           <Icon className="w-8 h-8" />
         </div>
       </div>
@@ -149,13 +171,13 @@ function ActivityIcon({ type }: { type: string }) {
 function formatTimeAgo(date: Date): string {
   const now = new Date()
   const diffInMinutes = Math.floor((now.getTime() - date.getTime()) / (1000 * 60))
-  
+
   if (diffInMinutes < 1) return 'just now'
   if (diffInMinutes < 60) return `${diffInMinutes}m ago`
-  
+
   const diffInHours = Math.floor(diffInMinutes / 60)
   if (diffInHours < 24) return `${diffInHours}h ago`
-  
+
   const diffInDays = Math.floor(diffInHours / 24)
   return `${diffInDays}d ago`
 }
@@ -170,14 +192,14 @@ export default function AdminDashboard() {
 
     // Simulate real-time updates
     const interval = setInterval(() => {
-      setData(prev => ({
+      setData((prev) => ({
         ...prev,
         liveMetrics: {
           ...prev.liveMetrics,
           usersOnline: prev.liveMetrics.usersOnline + Math.floor(Math.random() * 10) - 5,
           activeSessions: prev.liveMetrics.activeSessions + Math.floor(Math.random() * 6) - 3,
           currentPageViews: prev.liveMetrics.currentPageViews + Math.floor(Math.random() * 8) - 4,
-        }
+        },
       }))
     }, 5000)
 
@@ -203,16 +225,14 @@ export default function AdminDashboard() {
           <p className="text-gray-600 mt-2">
             Welcome back! Here's what's happening at Cerebrum Biology Academy today.
           </p>
-          
+
           {/* Live indicators */}
           <div className="flex items-center space-x-6 mt-4 p-4 bg-white rounded-lg shadow-sm border">
             <div className="flex items-center space-x-2">
               <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
               <span className="text-sm font-medium">System Online</span>
             </div>
-            <div className="text-sm text-gray-500">
-              {data.liveMetrics.usersOnline} users online
-            </div>
+            <div className="text-sm text-gray-500">{data.liveMetrics.usersOnline} users online</div>
             <div className="text-sm text-gray-500">
               {data.liveMetrics.activeSessions} active sessions
             </div>
@@ -223,7 +243,7 @@ export default function AdminDashboard() {
         </div>
 
         {/* Key Metrics */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-8">
           <MetricCard
             title="Total Students"
             value={data.overview.totalStudents}
@@ -271,7 +291,9 @@ export default function AdminDashboard() {
                 <Clock className="w-5 h-5 text-orange-600" />
               </div>
             </div>
-            <div className="text-3xl font-bold text-orange-600 mb-2">{data.demos.pendingBookings}</div>
+            <div className="text-3xl font-bold text-orange-600 mb-2">
+              {data.demos.pendingBookings}
+            </div>
             <p className="text-sm text-gray-600">Require immediate attention</p>
             <button className="mt-4 text-orange-600 hover:text-orange-700 font-medium text-sm">
               View Details →
@@ -290,7 +312,9 @@ export default function AdminDashboard() {
                 <CheckCircle className="w-5 h-5 text-emerald-600" />
               </div>
             </div>
-            <div className="text-3xl font-bold text-emerald-600 mb-2">{data.demos.completedToday}</div>
+            <div className="text-3xl font-bold text-emerald-600 mb-2">
+              {data.demos.completedToday}
+            </div>
             <p className="text-sm text-gray-600">Average rating: {data.demos.averageRating}★</p>
             <button className="mt-4 text-emerald-600 hover:text-emerald-700 font-medium text-sm">
               View Feedback →
@@ -309,7 +333,9 @@ export default function AdminDashboard() {
                 <BarChart3 className="w-5 h-5 text-blue-600" />
               </div>
             </div>
-            <div className="text-3xl font-bold text-blue-600 mb-2">{data.demos.conversionRate}%</div>
+            <div className="text-3xl font-bold text-blue-600 mb-2">
+              {data.demos.conversionRate}%
+            </div>
             <p className="text-sm text-gray-600">Conversion rate this month</p>
             <button className="mt-4 text-blue-600 hover:text-blue-700 font-medium text-sm">
               Improve Rate →
@@ -331,7 +357,7 @@ export default function AdminDashboard() {
                 View All
               </button>
             </div>
-            
+
             <div className="space-y-4">
               {data.recentActivities.map((activity) => (
                 <div key={activity.id} className="flex items-start space-x-3">
@@ -370,11 +396,15 @@ export default function AdminDashboard() {
               {data.courses.popularCourses.map((course, index) => (
                 <div key={course.courseId} className="flex items-center justify-between">
                   <div className="flex items-center space-x-3">
-                    <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold ${
-                      index === 0 ? 'bg-gold-100 text-gold-600' :
-                      index === 1 ? 'bg-gray-100 text-gray-600' :
-                      'bg-orange-100 text-orange-600'
-                    }`}>
+                    <div
+                      className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold ${
+                        index === 0
+                          ? 'bg-gold-100 text-gold-600'
+                          : index === 1
+                            ? 'bg-gray-100 text-gray-600'
+                            : 'bg-orange-100 text-orange-600'
+                      }`}
+                    >
                       #{index + 1}
                     </div>
                     <div>
@@ -401,8 +431,8 @@ export default function AdminDashboard() {
           className="bg-white rounded-xl shadow-sm border border-gray-200 p-6"
         >
           <h3 className="text-lg font-semibold text-gray-900 mb-6">Quick Actions</h3>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             <button className="flex items-center justify-center space-x-2 p-4 border-2 border-dashed border-gray-200 rounded-xl hover:border-primary-300 hover:bg-primary-50 transition-colors group">
               <UserPlus className="w-5 h-5 text-gray-400 group-hover:text-primary-600" />
               <span className="text-sm font-medium text-gray-600 group-hover:text-primary-700">

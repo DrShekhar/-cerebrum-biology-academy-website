@@ -25,7 +25,7 @@ import {
   ArrowRight,
   Star,
   Activity,
-  Gauge
+  Gauge,
 } from 'lucide-react'
 import AdaptiveTestInterface from '@/components/adaptive-testing/AdaptiveTestInterface'
 import AdaptiveTestResults from '@/components/adaptive-testing/AdaptiveTestResults'
@@ -39,7 +39,7 @@ const AdaptiveTestingPage: React.FC = () => {
     topics: ['Cell Biology', 'Genetics', 'Evolution'],
     timeLimit: 30,
     minItems: 10,
-    maxItems: 25
+    maxItems: 25,
   })
   const [testResults, setTestResults] = useState<any>(null)
 
@@ -142,12 +142,12 @@ const AdaptiveTestingPage: React.FC = () => {
             </div>
 
             {/* Key Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-16">
               {[
                 { icon: Target, label: '95% Accuracy', desc: 'Ability Estimation' },
                 { icon: Zap, label: '50% Faster', desc: 'Than Traditional Tests' },
                 { icon: BarChart3, label: '10+ Metrics', desc: 'Real-time Analytics' },
-                { icon: Users, label: '1000+ Students', desc: 'Successfully Tested' }
+                { icon: Users, label: '1000+ Students', desc: 'Successfully Tested' },
               ].map((stat, index) => (
                 <motion.div
                   key={index}
@@ -175,12 +175,10 @@ const AdaptiveTestingPage: React.FC = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Advanced Adaptive Features
-            </h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced Adaptive Features</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Our system combines cutting-edge psychometric models with AI to deliver
-              the most accurate and efficient assessment experience.
+              Our system combines cutting-edge psychometric models with AI to deliver the most
+              accurate and efficient assessment experience.
             </p>
           </motion.div>
 
@@ -189,45 +187,81 @@ const AdaptiveTestingPage: React.FC = () => {
               {
                 icon: Brain,
                 title: 'Item Response Theory',
-                description: '3-Parameter Logistic Model for precise ability estimation with maximum likelihood and Bayesian methods.',
-                features: ['3PL/2PL/1PL Models', 'MLE & EAP Estimation', 'Information Functions', 'Standard Error Calculation'],
-                color: 'from-blue-500 to-cyan-500'
+                description:
+                  '3-Parameter Logistic Model for precise ability estimation with maximum likelihood and Bayesian methods.',
+                features: [
+                  '3PL/2PL/1PL Models',
+                  'MLE & EAP Estimation',
+                  'Information Functions',
+                  'Standard Error Calculation',
+                ],
+                color: 'from-blue-500 to-cyan-500',
               },
               {
                 icon: Zap,
                 title: 'Real-time Adaptation',
-                description: 'Computer Adaptive Testing algorithm that adjusts difficulty and content based on ongoing performance.',
-                features: ['Dynamic Difficulty', 'Content Balancing', 'Exposure Control', 'Time Management'],
-                color: 'from-purple-500 to-pink-500'
+                description:
+                  'Computer Adaptive Testing algorithm that adjusts difficulty and content based on ongoing performance.',
+                features: [
+                  'Dynamic Difficulty',
+                  'Content Balancing',
+                  'Exposure Control',
+                  'Time Management',
+                ],
+                color: 'from-purple-500 to-pink-500',
               },
               {
                 icon: BarChart3,
                 title: 'Performance Analytics',
-                description: 'Comprehensive real-time analytics with ability tracking and engagement monitoring.',
-                features: ['Ability Progression', 'Learning Curves', 'Cognitive Load', 'Engagement Metrics'],
-                color: 'from-green-500 to-emerald-500'
+                description:
+                  'Comprehensive real-time analytics with ability tracking and engagement monitoring.',
+                features: [
+                  'Ability Progression',
+                  'Learning Curves',
+                  'Cognitive Load',
+                  'Engagement Metrics',
+                ],
+                color: 'from-green-500 to-emerald-500',
               },
               {
                 icon: Target,
                 title: 'Personalized Sequencing',
-                description: 'AI-driven question ordering optimized for individual learning paths and knowledge gaps.',
-                features: ['Prerequisite Tracking', 'Knowledge Graphs', 'Learning Objectives', 'Mastery Detection'],
-                color: 'from-orange-500 to-red-500'
+                description:
+                  'AI-driven question ordering optimized for individual learning paths and knowledge gaps.',
+                features: [
+                  'Prerequisite Tracking',
+                  'Knowledge Graphs',
+                  'Learning Objectives',
+                  'Mastery Detection',
+                ],
+                color: 'from-orange-500 to-red-500',
               },
               {
                 icon: Lightbulb,
                 title: 'Gap Identification',
-                description: 'Intelligent detection of learning gaps with automated remediation planning.',
-                features: ['Multi-modal Detection', 'Root Cause Analysis', 'Remediation Plans', 'Progress Monitoring'],
-                color: 'from-teal-500 to-blue-500'
+                description:
+                  'Intelligent detection of learning gaps with automated remediation planning.',
+                features: [
+                  'Multi-modal Detection',
+                  'Root Cause Analysis',
+                  'Remediation Plans',
+                  'Progress Monitoring',
+                ],
+                color: 'from-teal-500 to-blue-500',
               },
               {
                 icon: Activity,
                 title: 'Adaptive Engine',
-                description: 'Orchestrates all components for seamless adaptive testing with comprehensive reporting.',
-                features: ['Session Management', 'API Integration', 'Error Handling', 'Scalable Architecture'],
-                color: 'from-indigo-500 to-purple-500'
-              }
+                description:
+                  'Orchestrates all components for seamless adaptive testing with comprehensive reporting.',
+                features: [
+                  'Session Management',
+                  'API Integration',
+                  'Error Handling',
+                  'Scalable Architecture',
+                ],
+                color: 'from-indigo-500 to-purple-500',
+              },
             ].map((feature, index) => (
               <motion.div
                 key={index}
@@ -237,7 +271,9 @@ const AdaptiveTestingPage: React.FC = () => {
                 transition={{ delay: index * 0.1 }}
                 className="bg-gradient-to-br from-gray-50 to-white p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-all group"
               >
-                <div className={`p-3 bg-gradient-to-r ${feature.color} rounded-xl w-fit mb-4 group-hover:scale-110 transition-transform`}>
+                <div
+                  className={`p-3 bg-gradient-to-r ${feature.color} rounded-xl w-fit mb-4 group-hover:scale-110 transition-transform`}
+                >
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
@@ -269,8 +305,8 @@ const AdaptiveTestingPage: React.FC = () => {
               Built with Advanced Psychometrics
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Our implementation follows established psychometric principles and modern AI techniques
-              for optimal assessment accuracy and efficiency.
+              Our implementation follows established psychometric principles and modern AI
+              techniques for optimal assessment accuracy and efficiency.
             </p>
           </motion.div>
 
@@ -286,20 +322,40 @@ const AdaptiveTestingPage: React.FC = () => {
                 {[
                   {
                     category: 'Psychometric Models',
-                    items: ['3-Parameter Logistic (3PL)', '2-Parameter Logistic (2PL)', '1-Parameter Logistic (Rasch)', 'Graded Response Model']
+                    items: [
+                      '3-Parameter Logistic (3PL)',
+                      '2-Parameter Logistic (2PL)',
+                      '1-Parameter Logistic (Rasch)',
+                      'Graded Response Model',
+                    ],
                   },
                   {
                     category: 'Ability Estimation',
-                    items: ['Maximum Likelihood Estimation (MLE)', 'Expected A Posteriori (EAP)', 'Maximum A Posteriori (MAP)', 'Weighted Likelihood Estimation (WLE)']
+                    items: [
+                      'Maximum Likelihood Estimation (MLE)',
+                      'Expected A Posteriori (EAP)',
+                      'Maximum A Posteriori (MAP)',
+                      'Weighted Likelihood Estimation (WLE)',
+                    ],
                   },
                   {
                     category: 'Selection Algorithms',
-                    items: ['Maximum Information', 'Bayesian Optimal', 'Hybrid Selection', 'Content Balancing']
+                    items: [
+                      'Maximum Information',
+                      'Bayesian Optimal',
+                      'Hybrid Selection',
+                      'Content Balancing',
+                    ],
                   },
                   {
                     category: 'Termination Criteria',
-                    items: ['Standard Error Threshold', 'Information Target', 'Confidence Level', 'Maximum Items']
-                  }
+                    items: [
+                      'Standard Error Threshold',
+                      'Information Target',
+                      'Confidence Level',
+                      'Maximum Items',
+                    ],
+                  },
                 ].map((spec, index) => (
                   <div key={index} className="bg-white p-4 rounded-lg border border-gray-200">
                     <h4 className="font-semibold text-gray-900 mb-2">{spec.category}</h4>
@@ -325,12 +381,36 @@ const AdaptiveTestingPage: React.FC = () => {
 
               <div className="space-y-4">
                 {[
-                  { metric: 'Ability Estimation Accuracy', value: '95.2%', description: 'Correlation with true ability' },
-                  { metric: 'Test Length Reduction', value: '47%', description: 'Compared to fixed-length tests' },
-                  { metric: 'Standard Error', value: '< 0.3', description: 'Final measurement precision' },
-                  { metric: 'Response Time', value: '< 100ms', description: 'Next item selection speed' },
-                  { metric: 'Convergence Rate', value: '99.8%', description: 'Algorithm convergence success' },
-                  { metric: 'Information Efficiency', value: '2.3x', description: 'Information per item ratio' }
+                  {
+                    metric: 'Ability Estimation Accuracy',
+                    value: '95.2%',
+                    description: 'Correlation with true ability',
+                  },
+                  {
+                    metric: 'Test Length Reduction',
+                    value: '47%',
+                    description: 'Compared to fixed-length tests',
+                  },
+                  {
+                    metric: 'Standard Error',
+                    value: '< 0.3',
+                    description: 'Final measurement precision',
+                  },
+                  {
+                    metric: 'Response Time',
+                    value: '< 100ms',
+                    description: 'Next item selection speed',
+                  },
+                  {
+                    metric: 'Convergence Rate',
+                    value: '99.8%',
+                    description: 'Algorithm convergence success',
+                  },
+                  {
+                    metric: 'Information Efficiency',
+                    value: '2.3x',
+                    description: 'Information per item ratio',
+                  },
                 ].map((perf, index) => (
                   <motion.div
                     key={index}
@@ -366,8 +446,8 @@ const AdaptiveTestingPage: React.FC = () => {
               Benefits for Students & Educators
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Adaptive testing provides advantages for both students and educators,
-              improving assessment efficiency and learning outcomes.
+              Adaptive testing provides advantages for both students and educators, improving
+              assessment efficiency and learning outcomes.
             </p>
           </motion.div>
 
@@ -383,29 +463,34 @@ const AdaptiveTestingPage: React.FC = () => {
                 {[
                   {
                     title: 'Personalized Experience',
-                    description: 'Questions adapt to your skill level, providing optimal challenge and reducing frustration.',
-                    icon: Target
+                    description:
+                      'Questions adapt to your skill level, providing optimal challenge and reducing frustration.',
+                    icon: Target,
                   },
                   {
                     title: 'Shorter Test Duration',
-                    description: 'Complete assessments 40-60% faster while maintaining high measurement precision.',
-                    icon: Clock
+                    description:
+                      'Complete assessments 40-60% faster while maintaining high measurement precision.',
+                    icon: Clock,
                   },
                   {
                     title: 'Immediate Feedback',
-                    description: 'Get real-time insights into your performance and areas for improvement.',
-                    icon: Zap
+                    description:
+                      'Get real-time insights into your performance and areas for improvement.',
+                    icon: Zap,
                   },
                   {
                     title: 'Reduced Test Anxiety',
-                    description: 'Adaptive difficulty reduces stress and provides a more comfortable testing experience.',
-                    icon: Star
+                    description:
+                      'Adaptive difficulty reduces stress and provides a more comfortable testing experience.',
+                    icon: Star,
                   },
                   {
                     title: 'Detailed Analytics',
-                    description: 'Understand your learning patterns with comprehensive performance analytics.',
-                    icon: BarChart3
-                  }
+                    description:
+                      'Understand your learning patterns with comprehensive performance analytics.',
+                    icon: BarChart3,
+                  },
                 ].map((benefit, index) => (
                   <motion.div
                     key={index}
@@ -436,29 +521,32 @@ const AdaptiveTestingPage: React.FC = () => {
                 {[
                   {
                     title: 'Precise Ability Measurement',
-                    description: 'Get highly accurate student ability estimates with confidence intervals.',
-                    icon: Gauge
+                    description:
+                      'Get highly accurate student ability estimates with confidence intervals.',
+                    icon: Gauge,
                   },
                   {
                     title: 'Learning Gap Detection',
-                    description: 'Automatically identify specific knowledge gaps and misconceptions.',
-                    icon: Target
+                    description:
+                      'Automatically identify specific knowledge gaps and misconceptions.',
+                    icon: Target,
                   },
                   {
                     title: 'Actionable Insights',
                     description: 'Receive detailed analytics and recommendations for instruction.',
-                    icon: Lightbulb
+                    icon: Lightbulb,
                   },
                   {
                     title: 'Efficient Administration',
-                    description: 'Reduce testing time while increasing measurement quality and student engagement.',
-                    icon: TrendingUp
+                    description:
+                      'Reduce testing time while increasing measurement quality and student engagement.',
+                    icon: TrendingUp,
                   },
                   {
                     title: 'Scalable Assessment',
                     description: 'Handle large-scale testing with automated scoring and reporting.',
-                    icon: Globe
-                  }
+                    icon: Globe,
+                  },
                 ].map((benefit, index) => (
                   <motion.div
                     key={index}
@@ -505,12 +593,12 @@ const AdaptiveTestingPage: React.FC = () => {
                 <h3 className="text-lg font-semibold text-gray-900">Test Configuration</h3>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Curriculum
-                  </label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Curriculum</label>
                   <select
                     value={testConfiguration.curriculum}
-                    onChange={(e) => setTestConfiguration(prev => ({ ...prev, curriculum: e.target.value }))}
+                    onChange={(e) =>
+                      setTestConfiguration((prev) => ({ ...prev, curriculum: e.target.value }))
+                    }
                     className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   >
                     <option value="NEET">NEET</option>
@@ -526,7 +614,9 @@ const AdaptiveTestingPage: React.FC = () => {
                   </label>
                   <select
                     value={testConfiguration.grade}
-                    onChange={(e) => setTestConfiguration(prev => ({ ...prev, grade: e.target.value }))}
+                    onChange={(e) =>
+                      setTestConfiguration((prev) => ({ ...prev, grade: e.target.value }))
+                    }
                     className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   >
                     <option value="11">Class 11</option>
@@ -535,12 +625,12 @@ const AdaptiveTestingPage: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Test Type
-                  </label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Test Type</label>
                   <select
                     value={testConfiguration.testType}
-                    onChange={(e) => setTestConfiguration(prev => ({ ...prev, testType: e.target.value }))}
+                    onChange={(e) =>
+                      setTestConfiguration((prev) => ({ ...prev, testType: e.target.value }))
+                    }
                     className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   >
                     <option value="formative">Formative Assessment</option>
@@ -564,7 +654,12 @@ const AdaptiveTestingPage: React.FC = () => {
                     min="15"
                     max="120"
                     value={testConfiguration.timeLimit}
-                    onChange={(e) => setTestConfiguration(prev => ({ ...prev, timeLimit: parseInt(e.target.value) }))}
+                    onChange={(e) =>
+                      setTestConfiguration((prev) => ({
+                        ...prev,
+                        timeLimit: parseInt(e.target.value),
+                      }))
+                    }
                     className="w-full"
                   />
                   <div className="flex justify-between text-xs text-gray-500 mt-1">
@@ -579,24 +674,38 @@ const AdaptiveTestingPage: React.FC = () => {
                   </label>
                   <div className="space-y-2">
                     <div>
-                      <label className="text-xs text-gray-600">Minimum: {testConfiguration.minItems}</label>
+                      <label className="text-xs text-gray-600">
+                        Minimum: {testConfiguration.minItems}
+                      </label>
                       <input
                         type="range"
                         min="5"
                         max="50"
                         value={testConfiguration.minItems}
-                        onChange={(e) => setTestConfiguration(prev => ({ ...prev, minItems: parseInt(e.target.value) }))}
+                        onChange={(e) =>
+                          setTestConfiguration((prev) => ({
+                            ...prev,
+                            minItems: parseInt(e.target.value),
+                          }))
+                        }
                         className="w-full"
                       />
                     </div>
                     <div>
-                      <label className="text-xs text-gray-600">Maximum: {testConfiguration.maxItems}</label>
+                      <label className="text-xs text-gray-600">
+                        Maximum: {testConfiguration.maxItems}
+                      </label>
                       <input
                         type="range"
                         min="10"
                         max="100"
                         value={testConfiguration.maxItems}
-                        onChange={(e) => setTestConfiguration(prev => ({ ...prev, maxItems: parseInt(e.target.value) }))}
+                        onChange={(e) =>
+                          setTestConfiguration((prev) => ({
+                            ...prev,
+                            maxItems: parseInt(e.target.value),
+                          }))
+                        }
                         className="w-full"
                       />
                     </div>
@@ -604,20 +713,31 @@ const AdaptiveTestingPage: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Topics
-                  </label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Topics</label>
                   <div className="space-y-2">
-                    {['Cell Biology', 'Genetics', 'Evolution', 'Ecology', 'Plant Biology', 'Animal Physiology'].map((topic) => (
+                    {[
+                      'Cell Biology',
+                      'Genetics',
+                      'Evolution',
+                      'Ecology',
+                      'Plant Biology',
+                      'Animal Physiology',
+                    ].map((topic) => (
                       <label key={topic} className="flex items-center gap-2">
                         <input
                           type="checkbox"
                           checked={testConfiguration.topics.includes(topic)}
                           onChange={(e) => {
                             if (e.target.checked) {
-                              setTestConfiguration(prev => ({ ...prev, topics: [...prev.topics, topic] }))
+                              setTestConfiguration((prev) => ({
+                                ...prev,
+                                topics: [...prev.topics, topic],
+                              }))
                             } else {
-                              setTestConfiguration(prev => ({ ...prev, topics: prev.topics.filter(t => t !== topic) }))
+                              setTestConfiguration((prev) => ({
+                                ...prev,
+                                topics: prev.topics.filter((t) => t !== topic),
+                              }))
                             }
                           }}
                           className="rounded"
@@ -653,11 +773,10 @@ const AdaptiveTestingPage: React.FC = () => {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            <h2 className="text-4xl font-bold text-white">
-              Ready to Experience Adaptive Testing?
-            </h2>
+            <h2 className="text-4xl font-bold text-white">Ready to Experience Adaptive Testing?</h2>
             <p className="text-xl text-blue-100">
-              Try our live demo to see how AI-powered adaptive assessment can transform your learning experience.
+              Try our live demo to see how AI-powered adaptive assessment can transform your
+              learning experience.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <button

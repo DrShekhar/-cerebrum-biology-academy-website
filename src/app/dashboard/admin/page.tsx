@@ -22,7 +22,7 @@ import {
   BarChart3,
   PieChart,
   Globe,
-  Clock
+  Clock,
 } from 'lucide-react'
 import type { AdminAnalytics } from '@/lib/types/analytics'
 
@@ -84,12 +84,12 @@ export default function AdminDashboard() {
             format: 'pdf',
             timeRange: {
               from: new Date(new Date().getTime() - 30 * 24 * 60 * 60 * 1000),
-              to: new Date()
+              to: new Date(),
             },
             includeCharts: true,
-            includeRawData: true
-          }
-        })
+            includeRawData: true,
+          },
+        }),
       })
 
       if (response.ok) {
@@ -118,12 +118,8 @@ export default function AdminDashboard() {
         {/* Header */}
         <div className="flex justify-between items-start">
           <div>
-            <h1 className="text-3xl font-bold text-gray-900">
-              Admin Dashboard
-            </h1>
-            <p className="text-gray-600 mt-2">
-              System overview and performance monitoring
-            </p>
+            <h1 className="text-3xl font-bold text-gray-900">Admin Dashboard</h1>
+            <p className="text-gray-600 mt-2">System overview and performance monitoring</p>
           </div>
 
           <div className="flex gap-2">
@@ -169,7 +165,7 @@ export default function AdminDashboard() {
 
         {/* Key Metrics Grid */}
         {analytics && (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             <MetricCard
               title="Total Users"
               value={analytics.systemMetrics.totalUsers}
@@ -270,11 +266,16 @@ export default function AdminDashboard() {
                       { action: 'Tests completed', count: 156, time: '15 min ago' },
                       { action: 'Payment processed', count: 8, time: '1 hour ago' },
                       { action: 'Content uploaded', count: 3, time: '2 hours ago' },
-                      { action: 'System backup', count: 1, time: '6 hours ago' }
+                      { action: 'System backup', count: 1, time: '6 hours ago' },
                     ].map((activity, idx) => (
-                      <div key={idx} className="flex items-center justify-between p-2 hover:bg-gray-50 rounded">
+                      <div
+                        key={idx}
+                        className="flex items-center justify-between p-2 hover:bg-gray-50 rounded"
+                      >
                         <div>
-                          <span className="text-sm font-medium text-gray-900">{activity.action}</span>
+                          <span className="text-sm font-medium text-gray-900">
+                            {activity.action}
+                          </span>
                           <span className="text-sm text-gray-600 ml-2">({activity.count})</span>
                         </div>
                         <span className="text-xs text-gray-500">{activity.time}</span>
@@ -322,11 +323,15 @@ export default function AdminDashboard() {
                     <div className="space-y-4">
                       <div className="flex justify-between">
                         <span className="text-gray-600">Total Students</span>
-                        <span className="font-semibold">{analytics.systemMetrics.totalStudents}</span>
+                        <span className="font-semibold">
+                          {analytics.systemMetrics.totalStudents}
+                        </span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-gray-600">Total Teachers</span>
-                        <span className="font-semibold">{analytics.systemMetrics.totalTeachers}</span>
+                        <span className="font-semibold">
+                          {analytics.systemMetrics.totalTeachers}
+                        </span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-gray-600">Monthly Growth</span>
@@ -369,7 +374,9 @@ export default function AdminDashboard() {
                     <div className="space-y-4">
                       <div className="flex justify-between items-center">
                         <span className="text-gray-600">Total Questions</span>
-                        <span className="font-semibold">{analytics.contentMetrics.totalQuestions}</span>
+                        <span className="font-semibold">
+                          {analytics.contentMetrics.totalQuestions}
+                        </span>
                       </div>
                       <div className="flex justify-between items-center">
                         <span className="text-gray-600">Total Tests</span>
@@ -377,7 +384,9 @@ export default function AdminDashboard() {
                       </div>
                       <div className="flex justify-between items-center">
                         <span className="text-gray-600">Average Rating</span>
-                        <span className="font-semibold">{analytics.contentMetrics.averageRating}/5</span>
+                        <span className="font-semibold">
+                          {analytics.contentMetrics.averageRating}/5
+                        </span>
                       </div>
                     </div>
                   </CardContent>
@@ -391,7 +400,10 @@ export default function AdminDashboard() {
                     <div className="space-y-3">
                       {analytics.contentMetrics.contentGaps.length > 0 ? (
                         analytics.contentMetrics.contentGaps.map((gap, idx) => (
-                          <div key={idx} className="p-3 bg-yellow-50 border border-yellow-200 rounded-lg">
+                          <div
+                            key={idx}
+                            className="p-3 bg-yellow-50 border border-yellow-200 rounded-lg"
+                          >
                             <span className="text-sm text-yellow-800">{gap}</span>
                           </div>
                         ))
@@ -446,7 +458,9 @@ export default function AdminDashboard() {
                   </CardHeader>
                   <CardContent>
                     <div className="h-48 flex items-center justify-center bg-gray-50 rounded-lg">
-                      <p className="text-gray-500">Performance trends chart will be displayed here</p>
+                      <p className="text-gray-500">
+                        Performance trends chart will be displayed here
+                      </p>
                     </div>
                   </CardContent>
                 </Card>
@@ -465,19 +479,27 @@ export default function AdminDashboard() {
                     <div className="space-y-4">
                       <div className="flex justify-between items-center">
                         <span className="text-gray-600">Revenue</span>
-                        <span className="font-semibold">₹{analytics.businessMetrics.revenue.toLocaleString()}</span>
+                        <span className="font-semibold">
+                          ₹{analytics.businessMetrics.revenue.toLocaleString()}
+                        </span>
                       </div>
                       <div className="flex justify-between items-center">
                         <span className="text-gray-600">Conversion Rate</span>
-                        <span className="font-semibold">{analytics.businessMetrics.conversionRate}%</span>
+                        <span className="font-semibold">
+                          {analytics.businessMetrics.conversionRate}%
+                        </span>
                       </div>
                       <div className="flex justify-between items-center">
                         <span className="text-gray-600">Customer LTV</span>
-                        <span className="font-semibold">₹{analytics.businessMetrics.customerLifetimeValue.toLocaleString()}</span>
+                        <span className="font-semibold">
+                          ₹{analytics.businessMetrics.customerLifetimeValue.toLocaleString()}
+                        </span>
                       </div>
                       <div className="flex justify-between items-center">
                         <span className="text-gray-600">Cost per Acquisition</span>
-                        <span className="font-semibold">₹{analytics.businessMetrics.costPerAcquisition.toLocaleString()}</span>
+                        <span className="font-semibold">
+                          ₹{analytics.businessMetrics.costPerAcquisition.toLocaleString()}
+                        </span>
                       </div>
                     </div>
                   </CardContent>
@@ -508,7 +530,7 @@ function MetricCard({
   icon,
   trend,
   format,
-  status
+  status,
 }: {
   title: string
   value: number
@@ -551,21 +573,19 @@ function MetricCard({
         <div className="flex items-center justify-between">
           <div>
             <p className="text-sm text-gray-600">{title}</p>
-            <p className="text-2xl font-bold text-gray-900">
-              {formatValue(value, format)}
-            </p>
+            <p className="text-2xl font-bold text-gray-900">{formatValue(value, format)}</p>
             {trend !== 0 && (
-              <p className={`text-sm flex items-center gap-1 ${
-                trend > 0 ? 'text-green-600' : 'text-red-600'
-              }`}>
+              <p
+                className={`text-sm flex items-center gap-1 ${
+                  trend > 0 ? 'text-green-600' : 'text-red-600'
+                }`}
+              >
                 <TrendingUp className={`w-3 h-3 ${trend < 0 ? 'rotate-180' : ''}`} />
                 {Math.abs(trend).toFixed(1)}%
               </p>
             )}
           </div>
-          <div className="p-3 bg-white rounded-lg shadow-sm">
-            {icon}
-          </div>
+          <div className="p-3 bg-white rounded-lg shadow-sm">{icon}</div>
         </div>
       </CardContent>
     </Card>
@@ -576,7 +596,7 @@ function SystemHealthItem({
   name,
   status,
   value,
-  description
+  description,
 }: {
   name: string
   status: 'healthy' | 'warning' | 'critical'
@@ -613,7 +633,7 @@ function SystemHealthItem({
 function PerformanceMetric({
   name,
   value,
-  status
+  status,
 }: {
   name: string
   value: string
@@ -652,7 +672,7 @@ function LoadingDashboard() {
           <div className="h-8 bg-gray-300 rounded w-1/3 mb-4"></div>
           <div className="h-4 bg-gray-300 rounded w-1/2 mb-8"></div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-8">
             {[...Array(4)].map((_, i) => (
               <div key={i} className="h-32 bg-gray-300 rounded-lg"></div>
             ))}

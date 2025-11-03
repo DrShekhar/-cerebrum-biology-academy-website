@@ -17,7 +17,7 @@ import {
   Search,
   BarChart3,
   PieChart,
-  Activity
+  Activity,
 } from 'lucide-react'
 import type { TeacherAnalytics } from '@/lib/types/analytics'
 
@@ -63,13 +63,13 @@ export default function TeacherDashboard() {
             format,
             timeRange: {
               from: new Date(new Date().getTime() - 30 * 24 * 60 * 60 * 1000),
-              to: new Date()
+              to: new Date(),
             },
             filters: { grade: selectedGrade },
             includeCharts: true,
-            includeRawData: true
-          }
-        })
+            includeRawData: true,
+          },
+        }),
       })
 
       if (response.ok) {
@@ -88,22 +88,23 @@ export default function TeacherDashboard() {
     }
   }
 
-  const filteredStudents = analytics?.studentProgress?.filter(student =>
-    student.name.toLowerCase().includes(searchTerm.toLowerCase())
-  ).sort((a, b) => {
-    switch (sortBy) {
-      case 'name':
-        return a.name.localeCompare(b.name)
-      case 'score':
-        return b.averageScore - a.averageScore
-      case 'improvement':
-        return b.improvement - a.improvement
-      case 'lastActive':
-        return new Date(b.lastActive).getTime() - new Date(a.lastActive).getTime()
-      default:
-        return 0
-    }
-  }) || []
+  const filteredStudents =
+    analytics?.studentProgress
+      ?.filter((student) => student.name.toLowerCase().includes(searchTerm.toLowerCase()))
+      .sort((a, b) => {
+        switch (sortBy) {
+          case 'name':
+            return a.name.localeCompare(b.name)
+          case 'score':
+            return b.averageScore - a.averageScore
+          case 'improvement':
+            return b.improvement - a.improvement
+          case 'lastActive':
+            return new Date(b.lastActive).getTime() - new Date(a.lastActive).getTime()
+          default:
+            return 0
+        }
+      }) || []
 
   if (isLoading || !user) {
     return <LoadingDashboard />
@@ -115,12 +116,8 @@ export default function TeacherDashboard() {
         {/* Header */}
         <div className="flex justify-between items-start">
           <div>
-            <h1 className="text-3xl font-bold text-gray-900">
-              Teacher Dashboard
-            </h1>
-            <p className="text-gray-600 mt-2">
-              Monitor student progress and class performance
-            </p>
+            <h1 className="text-3xl font-bold text-gray-900">Teacher Dashboard</h1>
+            <p className="text-gray-600 mt-2">Monitor student progress and class performance</p>
           </div>
 
           <div className="flex gap-2">
@@ -149,7 +146,7 @@ export default function TeacherDashboard() {
 
         {/* Class Overview Cards */}
         {analytics && (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             <MetricCard
               title="Total Students"
               value={analytics.classOverview.totalStudents}
@@ -240,11 +237,18 @@ export default function TeacherDashboard() {
                         <div className="text-2xl font-bold text-gray-900">
                           {student.averageScore.toFixed(1)}%
                         </div>
-                        <div className={`text-sm flex items-center gap-1 justify-end ${
-                          student.improvement > 0 ? 'text-green-600' :
-                          student.improvement < 0 ? 'text-red-600' : 'text-gray-600'
-                        }`}>
-                          <TrendingUp className={`w-3 h-3 ${student.improvement < 0 ? 'rotate-180' : ''}`} />
+                        <div
+                          className={`text-sm flex items-center gap-1 justify-end ${
+                            student.improvement > 0
+                              ? 'text-green-600'
+                              : student.improvement < 0
+                                ? 'text-red-600'
+                                : 'text-gray-600'
+                          }`}
+                        >
+                          <TrendingUp
+                            className={`w-3 h-3 ${student.improvement < 0 ? 'rotate-180' : ''}`}
+                          />
                           {Math.abs(student.improvement).toFixed(1)}%
                         </div>
                       </div>
@@ -255,11 +259,16 @@ export default function TeacherDashboard() {
                       <div className="mt-4 p-3 bg-yellow-50 rounded-lg border border-yellow-200">
                         <div className="flex items-center gap-2 mb-2">
                           <AlertTriangle className="w-4 h-4 text-yellow-600" />
-                          <span className="text-sm font-medium text-yellow-800">Needs Attention</span>
+                          <span className="text-sm font-medium text-yellow-800">
+                            Needs Attention
+                          </span>
                         </div>
                         <div className="flex flex-wrap gap-2">
                           {student.strugglingTopics.map((topic, idx) => (
-                            <span key={idx} className="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded">
+                            <span
+                              key={idx}
+                              className="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded"
+                            >
                               {topic}
                             </span>
                           ))}
@@ -298,7 +307,7 @@ export default function TeacherDashboard() {
                       { range: '80-89%', count: 12, color: 'bg-blue-500' },
                       { range: '70-79%', count: 8, color: 'bg-yellow-500' },
                       { range: '60-69%', count: 4, color: 'bg-orange-500' },
-                      { range: '0-59%', count: 2, color: 'bg-red-500' }
+                      { range: '0-59%', count: 2, color: 'bg-red-500' },
                     ].map((item, idx) => (
                       <div key={idx} className="flex items-center gap-3">
                         <div className="w-16 text-sm text-gray-600">{item.range}</div>
@@ -329,7 +338,7 @@ export default function TeacherDashboard() {
                     { topic: 'Genetics', average: 78, struggling: 6 },
                     { topic: 'Ecology', average: 82, struggling: 4 },
                     { topic: 'Plant Physiology', average: 75, struggling: 8 },
-                    { topic: 'Human Physiology', average: 80, struggling: 5 }
+                    { topic: 'Human Physiology', average: 80, struggling: 5 },
                   ].map((topic, idx) => (
                     <div key={idx} className="p-4 border border-gray-200 rounded-lg">
                       <div className="flex items-center justify-between mb-2">
@@ -344,8 +353,11 @@ export default function TeacherDashboard() {
                       <div className="w-full bg-gray-200 rounded-full h-2">
                         <div
                           className={`h-2 rounded-full ${
-                            topic.average >= 80 ? 'bg-green-500' :
-                            topic.average >= 70 ? 'bg-yellow-500' : 'bg-red-500'
+                            topic.average >= 80
+                              ? 'bg-green-500'
+                              : topic.average >= 70
+                                ? 'bg-yellow-500'
+                                : 'bg-red-500'
                           }`}
                           style={{ width: `${topic.average}%` }}
                         />
@@ -442,7 +454,7 @@ function MetricCard({
   value,
   icon,
   trend,
-  format
+  format,
 }: {
   title: string
   value: number
@@ -465,21 +477,19 @@ function MetricCard({
         <div className="flex items-center justify-between">
           <div>
             <p className="text-sm text-gray-600">{title}</p>
-            <p className="text-2xl font-bold text-gray-900">
-              {formatValue(value, format)}
-            </p>
+            <p className="text-2xl font-bold text-gray-900">{formatValue(value, format)}</p>
             {trend !== 0 && (
-              <p className={`text-sm flex items-center gap-1 ${
-                trend > 0 ? 'text-green-600' : 'text-red-600'
-              }`}>
+              <p
+                className={`text-sm flex items-center gap-1 ${
+                  trend > 0 ? 'text-green-600' : 'text-red-600'
+                }`}
+              >
                 <TrendingUp className={`w-3 h-3 ${trend < 0 ? 'rotate-180' : ''}`} />
                 {Math.abs(trend).toFixed(1)}%
               </p>
             )}
           </div>
-          <div className="p-3 bg-gray-50 rounded-lg">
-            {icon}
-          </div>
+          <div className="p-3 bg-gray-50 rounded-lg">{icon}</div>
         </div>
       </CardContent>
     </Card>
@@ -494,7 +504,7 @@ function LoadingDashboard() {
           <div className="h-8 bg-gray-300 rounded w-1/3 mb-4"></div>
           <div className="h-4 bg-gray-300 rounded w-1/2 mb-8"></div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-8">
             {[...Array(4)].map((_, i) => (
               <div key={i} className="h-32 bg-gray-300 rounded-lg"></div>
             ))}

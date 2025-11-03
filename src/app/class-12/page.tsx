@@ -211,7 +211,7 @@ export default function Class12Page() {
               </div>
 
               {/* Quick Stats */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {successMetrics.map((metric, index) => (
                   <motion.div
                     key={metric.label}
@@ -332,7 +332,7 @@ export default function Class12Page() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {class12Features.map((feature, index) => (
               <motion.div
                 key={feature.title}

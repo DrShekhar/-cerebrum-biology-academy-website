@@ -129,7 +129,7 @@ const FreeResourcesHub = () => {
             </div>
 
             {/* Quick Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-2xl mx-auto">
               <div className="bg-white/20 rounded-lg p-4">
                 <div className="text-2xl font-bold">50,000+</div>
                 <div className="text-sm opacity-90">Free Users</div>
@@ -223,7 +223,7 @@ const FreeResourcesHub = () => {
             📚 Complete Biology Topics Coverage
           </h3>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {topics.map((topic, idx) => (
               <div
                 key={topic}

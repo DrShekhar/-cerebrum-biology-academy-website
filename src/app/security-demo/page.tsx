@@ -40,42 +40,45 @@ export default function SecurityDemoPage() {
       question: 'Which of the following is the powerhouse of the cell?',
       options: ['Nucleus', 'Mitochondria', 'Ribosome', 'Endoplasmic Reticulum'],
       correctAnswer: 1,
-      explanation: 'Mitochondria are known as the powerhouse of the cell because they produce ATP through cellular respiration.',
+      explanation:
+        'Mitochondria are known as the powerhouse of the cell because they produce ATP through cellular respiration.',
       subject: 'biology',
       topic: 'Cell Biology',
       difficulty: 'easy',
-      marks: 4
+      marks: 4,
     },
     {
       id: '2',
       question: 'What is the process by which plants make their own food?',
       options: ['Respiration', 'Photosynthesis', 'Transpiration', 'Reproduction'],
       correctAnswer: 1,
-      explanation: 'Photosynthesis is the process by which plants use sunlight, water, and carbon dioxide to produce glucose and oxygen.',
+      explanation:
+        'Photosynthesis is the process by which plants use sunlight, water, and carbon dioxide to produce glucose and oxygen.',
       subject: 'biology',
       topic: 'Plant Biology',
       difficulty: 'easy',
-      marks: 4
+      marks: 4,
     },
     {
       id: '3',
       question: 'Which enzyme is responsible for breaking down proteins in the stomach?',
       options: ['Amylase', 'Lipase', 'Pepsin', 'Trypsin'],
       correctAnswer: 2,
-      explanation: 'Pepsin is the main enzyme in the stomach that breaks down proteins into smaller peptides.',
+      explanation:
+        'Pepsin is the main enzyme in the stomach that breaks down proteins into smaller peptides.',
       subject: 'biology',
       topic: 'Digestive System',
       difficulty: 'medium',
-      marks: 4
-    }
+      marks: 4,
+    },
   ]
 
   const handleAlert = (alert: SecurityAlert) => {
-    setAlerts(prev => [alert, ...prev])
+    setAlerts((prev) => [alert, ...prev])
   }
 
   const handleSessionTerminate = (sessionId: string, reason: string) => {
-    setTerminatedSessions(prev => [...prev, sessionId])
+    setTerminatedSessions((prev) => [...prev, sessionId])
 
     const alert: SecurityAlert = {
       id: `alert_${Date.now()}`,
@@ -89,7 +92,7 @@ export default function SecurityDemoPage() {
       timestamp: Date.now(),
       isRead: false,
       isResolved: true,
-      metadata: { reason }
+      metadata: { reason },
     }
 
     handleAlert(alert)
@@ -114,7 +117,7 @@ export default function SecurityDemoPage() {
       timestamp: violation.timestamp,
       isRead: false,
       isResolved: violation.action === 'terminate',
-      metadata: { action: violation.action }
+      metadata: { action: violation.action },
     }
 
     handleAlert(alert)
@@ -127,9 +130,7 @@ export default function SecurityDemoPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-6">
             <div>
-              <h1 className="text-3xl font-bold text-gray-900">
-                NEET Biology Test Security Demo
-              </h1>
+              <h1 className="text-3xl font-bold text-gray-900">NEET Biology Test Security Demo</h1>
               <p className="text-gray-600 mt-2">
                 Comprehensive anti-cheating and test integrity demonstration
               </p>
@@ -169,7 +170,7 @@ export default function SecurityDemoPage() {
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
                 Anti-Cheating Security Features
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-3">
                     <span className="text-2xl">🔒</span>
@@ -230,9 +231,7 @@ export default function SecurityDemoPage() {
               </div>
 
               <div className="bg-white rounded-lg shadow p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                  ⚡ Real-time Actions
-                </h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">⚡ Real-time Actions</h3>
                 <ul className="space-y-2 text-sm text-gray-600">
                   <li>• Immediate violation alerts and warnings</li>
                   <li>• Progressive penalty system</li>
@@ -276,9 +275,11 @@ export default function SecurityDemoPage() {
               <div
                 key={alert.id}
                 className={`text-xs p-2 rounded ${
-                  alert.severity === 'critical' ? 'bg-red-100 text-red-700' :
-                  alert.severity === 'high' ? 'bg-orange-100 text-orange-700' :
-                  'bg-yellow-100 text-yellow-700'
+                  alert.severity === 'critical'
+                    ? 'bg-red-100 text-red-700'
+                    : alert.severity === 'high'
+                      ? 'bg-orange-100 text-orange-700'
+                      : 'bg-yellow-100 text-yellow-700'
                 }`}
               >
                 <div className="font-medium">{alert.title}</div>
@@ -287,9 +288,7 @@ export default function SecurityDemoPage() {
             ))}
           </div>
           {alerts.length > 3 && (
-            <div className="text-xs text-gray-500 mt-2">
-              +{alerts.length - 3} more alerts
-            </div>
+            <div className="text-xs text-gray-500 mt-2">+{alerts.length - 3} more alerts</div>
           )}
         </div>
       )}

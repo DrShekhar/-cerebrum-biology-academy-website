@@ -114,7 +114,7 @@ export default function TestingDemoLandingPage() {
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
             What You'll See in the Demo
           </h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 text-center">
             <div>
               <div className="text-3xl font-bold text-blue-600">100+</div>
               <div className="text-gray-600">Demo Users</div>

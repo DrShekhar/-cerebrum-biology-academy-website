@@ -196,7 +196,7 @@ export default function ContactPage() {
             <h3 className="text-xl xs:text-2xl font-bold text-gray-900 mb-4 xs:mb-5 sm:mb-6 text-center">
               Quick Actions
             </h3>
-            <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-4 xs:gap-5 sm:gap-6">
+            <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 xs:gap-5 sm:gap-6">
               {quickLinks.map((link, index) => (
                 <Link key={index} href={link.href}>
                   <motion.div

@@ -182,7 +182,7 @@ export default function ClaudeChatDemo() {
             <p className="text-xl text-gray-600">From ₹2L to ₹50L+ monthly revenue in 12 months</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-8 h-8 text-blue-600" />

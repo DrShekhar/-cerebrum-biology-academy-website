@@ -424,7 +424,7 @@ const NEETCompletePage = () => {
                 track record of 350+ average scores in NEET Biology.
               </p>
 
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-8">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-yellow-400">358</div>
                   <div className="text-sm text-blue-200">Highest Score</div>

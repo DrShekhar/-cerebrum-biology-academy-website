@@ -400,7 +400,7 @@ export default function PricingPage() {
 
           <div
             ref={statsRef}
-            className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 max-w-5xl mx-auto"
+            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 max-w-5xl mx-auto"
           >
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl sm:rounded-3xl p-4 sm:p-6 text-center">
               <div className="text-3xl sm:text-4xl font-bold mb-2">{stats.courses}</div>

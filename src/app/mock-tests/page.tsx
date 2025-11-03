@@ -70,7 +70,7 @@ export default async function MockTestsPage() {
             Practice with our comprehensive collection of NEET Biology mock tests. Get instant
             results, detailed analysis, and improve your preparation.
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 max-w-4xl mx-auto">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6">
               <div className="text-2xl sm:text-3xl font-bold">{totalQuestions}</div>
               <div className="text-sm sm:text-base text-blue-100">Questions</div>

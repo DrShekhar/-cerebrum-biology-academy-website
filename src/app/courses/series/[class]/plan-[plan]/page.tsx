@@ -151,7 +151,7 @@ export default function PlanDetailsPage() {
               </div>
 
               {/* Quick Stats */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
                   <div className="text-2xl font-bold">
                     {planDetails.detailedFeatures.liveClasses}

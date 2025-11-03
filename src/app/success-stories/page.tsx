@@ -27,7 +27,7 @@ export default function SuccessStoriesPage() {
             </p>
 
             {/* Quick Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mt-8 sm:mt-12">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 mt-8 sm:mt-12">
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-6">
                 <Award className="w-6 h-6 sm:w-8 sm:h-8 mx-auto mb-3" />
                 <div className="text-xl sm:text-2xl md:text-3xl font-bold">
