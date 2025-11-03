@@ -177,7 +177,7 @@ export default function AboutPage() {
           <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent"></div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-4 sm:px-6 relative z-10">
           <div className="grid lg:grid-cols-5 gap-8 sm:gap-10 lg:gap-16 items-center">
             <div className="lg:col-span-3 space-y-5 sm:space-y-6 md:space-y-8">
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-[-0.02em] leading-[1.05] mb-4 sm:mb-6 md:mb-8 antialiased">
@@ -319,16 +319,16 @@ export default function AboutPage() {
       </section>
 
       {/* Mission & Vision - Academic Excellence Framework */}
-      <section className="py-12 sm:py-16 md:py-20 lg:py-24 xl:py-32 bg-gradient-to-b from-[#fdfcfa] to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-20">
-            <div className="text-[#6b8e7f] font-semibold text-sm uppercase tracking-[0.2em] mb-6">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 xl:py-12 sm:py-16 md:py-20 lg:py-24 xl:py-32 bg-gradient-to-b from-[#fdfcfa] to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-4 sm:px-6">
+          <div className="text-center mb-12 sm:mb-16 md:mb-20">
+            <div className="text-[#6b8e7f] font-semibold text-sm uppercase tracking-[0.2em] mb-4 sm:mb-6">
               Academic Foundation
             </div>
-            <h2 className="text-5xl lg:text-6xl font-bold text-[#0f1729] mb-8 tracking-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#0f1729] mb-4 sm:mb-6 md:mb-8 tracking-tight">
               Our Mission & Vision
             </h2>
-            <p className="text-xl lg:text-2xl text-gray-700 leading-relaxed max-w-4xl mx-auto font-light">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed max-w-4xl mx-auto font-light">
               Grounded in proven teaching methodologies and committed to transforming medical
               education in India
             </p>
@@ -340,14 +340,19 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="bg-white rounded-3xl p-12 shadow-lg border-l-8 border-[#1e3a5f] hover:shadow-2xl transition-all duration-500"
+              className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 shadow-lg border-l-8 border-[#1e3a5f] hover:shadow-2xl transition-all duration-500"
             >
-              <div className="flex items-center mb-8">
-                <Target className="w-16 h-16 text-[#1e3a5f] mr-5" strokeWidth={1.5} />
-                <h3 className="text-3xl font-bold text-[#0f1729]">Our Mission</h3>
+              <div className="flex items-center mb-6 sm:mb-8">
+                <Target
+                  className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-[#1e3a5f] mr-3 sm:mr-4 md:mr-5"
+                  strokeWidth={1.5}
+                />
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#0f1729]">
+                  Our Mission
+                </h3>
               </div>
 
-              <p className="text-xl text-gray-700 leading-[1.8] font-light mb-8">
+              <p className="text-base sm:text-lg md:text-base sm:text-lg md:text-xl text-gray-700 leading-[1.8] font-light mb-6 sm:mb-8">
                 To revolutionize education and make high-quality NEET Biology instruction
                 universally accessible, combining traditional teaching excellence with modern
                 learning technologies, ensuring every student achieves their medical career
@@ -385,14 +390,16 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="bg-white rounded-3xl p-12 shadow-lg border-l-8 border-[#6b8e7f] hover:shadow-2xl transition-all duration-500"
+              className="bg-white rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 shadow-lg border-l-8 border-[#6b8e7f] hover:shadow-2xl transition-all duration-500"
             >
               <div className="flex items-center mb-8">
                 <Lightbulb className="w-16 h-16 text-[#6b8e7f] mr-5" strokeWidth={1.5} />
-                <h3 className="text-3xl font-bold text-[#0f1729]">Our Vision</h3>
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#0f1729]">
+                  Our Vision
+                </h3>
               </div>
 
-              <p className="text-xl text-gray-700 leading-[1.8] font-light mb-8">
+              <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-[1.8] font-light mb-8">
                 To become{' '}
                 <strong className="font-semibold text-[#0f1729]">
                   India's most trusted and innovative NEET coaching institute
@@ -433,16 +440,16 @@ export default function AboutPage() {
       </section>
 
       {/* Our Values - Academic Excellence Principles - Enhanced Card Grid */}
-      <section className="py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-20">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 xl:py-32 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-12 sm:mb-16 md:mb-20">
             <div className="text-[#6b8e7f] font-semibold text-sm uppercase tracking-[0.2em] mb-6">
               Institutional Values
             </div>
-            <h2 className="text-5xl lg:text-6xl font-bold text-[#0f1729] mb-8 tracking-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#0f1729] mb-8 tracking-tight">
               Our Core Academic Principles
             </h2>
-            <p className="text-xl lg:text-2xl text-gray-700 leading-relaxed max-w-4xl mx-auto font-light">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed max-w-4xl mx-auto font-light">
               Data-driven commitment to educational excellence backed by proven results
             </p>
           </div>
@@ -474,7 +481,7 @@ export default function AboutPage() {
                 </p>
 
                 {/* Metric - Elegant Display */}
-                <div className="bg-gradient-to-br from-[#1e3a5f] to-[#0f1729] text-white px-6 py-4 rounded-2xl shadow-md mb-6">
+                <div className="bg-gradient-to-br from-[#1e3a5f] to-[#0f1729] text-white px-4 sm:px-6 py-4 rounded-2xl shadow-md mb-6">
                   <div className="text-4xl font-bold tabular-nums text-amber-300 leading-none mb-2">
                     {value.metric}
                   </div>
@@ -492,14 +499,14 @@ export default function AboutPage() {
 
           {/* Founder Origin Story - Editorial Style */}
           <div className="mt-32 pt-32 border-t border-gray-200">
-            <div className="text-center mb-20">
+            <div className="text-center mb-12 sm:mb-16 md:mb-20">
               <div className="text-[#6b8e7f] font-semibold text-sm uppercase tracking-[0.2em] mb-6">
                 Our Founder
               </div>
-              <h2 className="text-5xl lg:text-6xl font-bold text-[#0f1729] mb-8 tracking-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#0f1729] mb-8 tracking-tight">
                 The AIIMS Doctor Who Chose Teaching Over Practice
               </h2>
-              <p className="text-xl lg:text-2xl text-gray-700 leading-relaxed max-w-4xl mx-auto font-light">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed max-w-4xl mx-auto font-light">
                 Why Dr. Singh started Cerebrum and what makes our approach different
               </p>
             </div>
@@ -512,7 +519,7 @@ export default function AboutPage() {
                 viewport={{ once: true }}
                 className="space-y-8"
               >
-                <p className="text-xl text-gray-700 leading-[1.8] font-light">
+                <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-[1.8] font-light">
                   After graduating from{' '}
                   <strong className="font-semibold text-[#0f1729]">AIIMS Delhi in 2014</strong>, Dr.
                   Shekhar C Singh faced the classic dilemma: prestigious hospital residency or
@@ -521,7 +528,7 @@ export default function AboutPage() {
                 <p className="text-2xl text-[#0f1729] leading-relaxed font-light italic">
                   His choice surprised everyone.
                 </p>
-                <p className="text-xl text-gray-700 leading-[1.8] font-light">
+                <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-[1.8] font-light">
                   "During my MBBS, I tutored juniors preparing for NEET. I saw brilliant
                   students—kids who'd spent ₹3 lakhs on coaching—completely lost in Biology. Not
                   because they weren't smart, but because{' '}
@@ -531,7 +538,7 @@ export default function AboutPage() {
                   : building concepts from scratch, connecting patterns, making complex topics
                   unforgettable."
                 </p>
-                <p className="text-xl text-gray-700 leading-[1.8] font-light">
+                <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-[1.8] font-light">
                   That realization became{' '}
                   <strong className="font-semibold text-[#0f1729]">Cerebrum Biology Academy</strong>
                   .
@@ -545,7 +552,7 @@ export default function AboutPage() {
                 viewport={{ once: true }}
                 className="bg-gradient-to-br from-[#1e3a5f] to-[#0f1729] rounded-3xl p-10 border border-[#6b8e7f]/20 shadow-2xl"
               >
-                <h3 className="text-2xl font-bold text-white mb-8">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-8">
                   What Makes Dr. Singh Different
                 </h3>
                 <div className="space-y-6">
@@ -602,16 +609,16 @@ export default function AboutPage() {
       </section>
 
       {/* Our Journey - Sophisticated Timeline */}
-      <section className="py-32 bg-gradient-to-b from-white to-[#fdfcfa]">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-24">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 xl:py-32 bg-gradient-to-b from-white to-[#fdfcfa]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-12 sm:mb-16 md:mb-20 lg:mb-24">
             <div className="text-[#6b8e7f] font-semibold text-sm uppercase tracking-[0.2em] mb-6">
               Our Journey
             </div>
-            <h2 className="text-5xl lg:text-6xl font-bold text-[#0f1729] mb-8 tracking-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#0f1729] mb-8 tracking-tight">
               Nine Years of Growth
             </h2>
-            <p className="text-xl lg:text-2xl text-gray-700 leading-relaxed max-w-4xl mx-auto font-light">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed max-w-4xl mx-auto font-light">
               From a 400 sq ft room to transforming 2,847+ lives
             </p>
           </div>
@@ -647,7 +654,7 @@ export default function AboutPage() {
                       <h3 className="text-2xl lg:text-3xl font-bold text-[#0f1729] mb-4 leading-tight">
                         {milestone.title}
                       </h3>
-                      <p className="text-lg lg:text-xl text-gray-700 mb-6 leading-[1.8] font-light">
+                      <p className="text-lg lg:text-base sm:text-lg md:text-xl text-gray-700 mb-6 leading-[1.8] font-light">
                         {milestone.description}
                       </p>
                       <div className="bg-gradient-to-br from-[#6b8e7f]/10 to-[#6b8e7f]/5 rounded-2xl p-6 border-l-4 border-[#6b8e7f]">
@@ -675,16 +682,16 @@ export default function AboutPage() {
       </section>
 
       {/* Our Methodology - Elegant Process */}
-      <section className="py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-24">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 xl:py-32 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-12 sm:mb-16 md:mb-20 lg:mb-24">
             <div className="text-[#6b8e7f] font-semibold text-sm uppercase tracking-[0.2em] mb-6">
               Our Approach
             </div>
-            <h2 className="text-5xl lg:text-6xl font-bold text-[#0f1729] mb-8 tracking-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#0f1729] mb-8 tracking-tight">
               Our Teaching Methodology
             </h2>
-            <p className="text-xl lg:text-2xl text-gray-700 leading-relaxed max-w-4xl mx-auto font-light">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed max-w-4xl mx-auto font-light">
               Scientifically designed approach for maximum results
             </p>
           </div>
@@ -730,8 +737,8 @@ export default function AboutPage() {
       </section>
 
       {/* Faculty Excellence */}
-      <section className="py-32 bg-gradient-to-b from-[#fdfcfa] to-white">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 xl:py-32 bg-gradient-to-b from-[#fdfcfa] to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -742,10 +749,10 @@ export default function AboutPage() {
               <div className="text-[#6b8e7f] font-semibold text-sm uppercase tracking-[0.2em] mb-6">
                 World-Class Teaching
               </div>
-              <h2 className="text-5xl lg:text-6xl font-bold text-[#0f1729] mb-8 tracking-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#0f1729] mb-8 tracking-tight">
                 Faculty Excellence
               </h2>
-              <p className="text-xl lg:text-2xl text-gray-700 mb-10 leading-[1.8] font-light">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 mb-10 leading-[1.8] font-light">
                 Our teaching team comprises PhD holders, MBBS graduates from premier institutes, and
                 industry experts with decades of NEET coaching experience.
               </p>
@@ -798,13 +805,13 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section - Sophisticated */}
-      <section className="relative py-32 bg-gradient-to-br from-[#0f1729] via-[#1e3a5f] to-[#0f1729] text-white overflow-hidden">
+      <section className="relative py-12 sm:py-16 md:py-20 lg:py-24 xl:py-32 bg-gradient-to-br from-[#0f1729] via-[#1e3a5f] to-[#0f1729] text-white overflow-hidden">
         {/* Elegant background pattern */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent"></div>
         </div>
 
-        <div className="max-w-5xl mx-auto px-6 text-center relative z-10">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -814,7 +821,7 @@ export default function AboutPage() {
             <div className="text-amber-300 font-semibold text-sm uppercase tracking-[0.2em] mb-6">
               Start Your Journey
             </div>
-            <h2 className="text-5xl lg:text-6xl font-bold mb-8 tracking-tight leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-8 tracking-tight leading-tight">
               Join Our Success Story
             </h2>
             <p className="text-xl lg:text-2xl text-white/90 mb-12 leading-relaxed font-light max-w-3xl mx-auto">
