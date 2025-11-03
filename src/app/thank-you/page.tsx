@@ -124,8 +124,8 @@ function ThankYouContent() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50 py-12">
-      <div className="max-w-4xl mx-auto px-4">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50 py-8 sm:py-12">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6">
         {/* Main Success Message */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -142,13 +142,15 @@ function ThankYouContent() {
             <CheckCircleIcon className="w-12 h-12 text-white" />
           </motion.div>
 
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">{content.title}</h1>
-          <p className="text-xl text-gray-600 mb-6">{content.subtitle}</p>
-          <p className="text-lg text-gray-700 max-w-2xl mx-auto">{content.message}</p>
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+            {content.title}
+          </h1>
+          <p className="text-lg sm:text-xl text-gray-600 mb-6">{content.subtitle}</p>
+          <p className="text-base sm:text-lg text-gray-700 max-w-2xl mx-auto">{content.message}</p>
         </motion.div>
 
         {/* Status Cards */}
-        <div className="grid md:grid-cols-2 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
           {/* WhatsApp Delivery Status */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -205,9 +207,13 @@ function ThankYouContent() {
         >
           <PremiumCard variant="luxury" size="lg">
             <div className="text-center mb-8">
-              <DocumentTextIcon className="w-16 h-16 text-purple-500 mx-auto mb-4" />
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">What Happens Next?</h2>
-              <p className="text-gray-600">Here's your step-by-step journey to NEET success</p>
+              <DocumentTextIcon className="w-12 h-12 sm:w-16 sm:h-16 text-purple-500 mx-auto mb-4" />
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">
+                What Happens Next?
+              </h2>
+              <p className="text-sm sm:text-base text-gray-600">
+                Here's your step-by-step journey to NEET success
+              </p>
             </div>
 
             <div className="space-y-4">
@@ -237,18 +243,20 @@ function ThankYouContent() {
           className="mb-12"
         >
           <div className="text-center mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Need Immediate Assistance?</h2>
-            <p className="text-gray-600">
+            <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">
+              Need Immediate Assistance?
+            </h2>
+            <p className="text-sm sm:text-base text-gray-600">
               Our team is available 24/7 to help you with any questions
             </p>
           </div>
 
-          <div className="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
+          <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
             <PremiumButton
               onClick={handleWhatsAppContact}
               variant="medical"
               size="lg"
-              className="md:w-auto w-full"
+              className="w-full sm:w-auto min-h-[44px]"
             >
               <ChatBubbleLeftRightIcon className="w-5 h-5 mr-3" />
               WhatsApp Now
@@ -258,7 +266,7 @@ function ThankYouContent() {
               onClick={handleCallNow}
               variant="secondary"
               size="lg"
-              className="md:w-auto w-full"
+              className="w-full sm:w-auto min-h-[44px]"
             >
               <PhoneIcon className="w-5 h-5 mr-3" />
               Call +91 88264 44334
@@ -268,7 +276,7 @@ function ThankYouContent() {
               onClick={handleBookCounseling}
               variant="luxury"
               size="lg"
-              className="md:w-auto w-full"
+              className="w-full sm:w-auto min-h-[44px]"
             >
               <CalendarDaysIcon className="w-5 h-5 mr-3" />
               Book Free Counseling
@@ -284,20 +292,20 @@ function ThankYouContent() {
           className="text-center"
         >
           <PremiumCard variant="premium" className="bg-gradient-to-r from-blue-50 to-purple-50">
-            <div className="grid grid-cols-3 gap-8">
+            <div className="grid grid-cols-3 gap-4 sm:gap-6 md:gap-8">
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600">
+                <div className="text-xl sm:text-2xl md:text-3xl font-bold text-blue-600">
                   <AnimatedCounter value={2341} />
                 </div>
-                <div className="text-gray-600 text-sm">Students Succeeded</div>
+                <div className="text-gray-600 text-xs sm:text-sm">Students Succeeded</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-600">98%</div>
-                <div className="text-gray-600 text-sm">Success Rate</div>
+                <div className="text-xl sm:text-2xl md:text-3xl font-bold text-purple-600">98%</div>
+                <div className="text-gray-600 text-xs sm:text-sm">Success Rate</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-600">24/7</div>
-                <div className="text-gray-600 text-sm">Support Available</div>
+                <div className="text-xl sm:text-2xl md:text-3xl font-bold text-green-600">24/7</div>
+                <div className="text-gray-600 text-xs sm:text-sm">Support Available</div>
               </div>
             </div>
           </PremiumCard>
