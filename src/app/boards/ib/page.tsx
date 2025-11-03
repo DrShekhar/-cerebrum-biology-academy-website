@@ -234,7 +234,7 @@ export default function IBBiologyPage() {
               Outstanding results with world-class university admissions
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
             {successStats.map((stat, index) => (
               <div
                 key={index}
@@ -365,7 +365,7 @@ export default function IBBiologyPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
             {universityPrep.map((prep, index) => {
               const Icon = prep.icon
               return (
@@ -394,7 +394,7 @@ export default function IBBiologyPage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
             {features.map((feature, index) => (
               <div
                 key={index}

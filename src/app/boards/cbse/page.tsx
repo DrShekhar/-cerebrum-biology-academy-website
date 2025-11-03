@@ -261,7 +261,7 @@ export default function CBSEBiologyPage() {
               Outstanding results in CBSE board examinations and NEET qualification
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
             {successStats.map((stat, index) => (
               <div
                 key={index}

@@ -200,7 +200,7 @@ export default function IGCSEBiologyPage() {
               Outstanding international results with global university admissions
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
             {successStats.map((stat, index) => (
               <div
                 key={index}
@@ -336,7 +336,7 @@ export default function IGCSEBiologyPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
             {igcseAdvantages.map((advantage, index) => {
               const Icon = advantage.icon
               return (
@@ -365,7 +365,7 @@ export default function IGCSEBiologyPage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
             {features.map((feature, index) => (
               <div
                 key={index}
