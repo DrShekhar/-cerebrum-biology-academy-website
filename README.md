@@ -109,7 +109,7 @@ npm run dev
 For support and questions, contact:
 
 - Email: support@cerebrumbiologyacademy.com
-- Phone: +918826444334, +919999744334
+- Phone: +918826444334, +919311946297
 
 ---
 

@@ -170,7 +170,7 @@ export function ExitIntentPopup({ isVisible, onClose, onDownload }: ExitIntentPo
                           onChange={(e) => setPhone(e.target.value)}
                           required
                           className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
-                          placeholder="+91 91931 19462"
+                          placeholder="+91 93119 46297"
                         />
                       </div>
                     </div>

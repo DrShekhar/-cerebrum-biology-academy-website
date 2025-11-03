@@ -895,7 +895,7 @@ export function DemoBookingSystem() {
                               ? 'border-red-500 focus:ring-red-500'
                               : 'border-gray-300 focus:ring-blue-500'
                         }`}
-                        placeholder="+91 91931 19462"
+                        placeholder="+91 93119 46297"
                         required
                       />
                       {validationStates.phone?.isValid && (

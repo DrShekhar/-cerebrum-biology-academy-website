@@ -76,7 +76,7 @@ export default function ContactPage() {
     {
       icon: Phone,
       title: 'Call Us',
-      details: ['+91 91931 19462', '+91 88264 44334 (Admissions)'],
+      details: ['+91 93119 46297', '+91 88264 44334 (Admissions)'],
       color: 'bg-green-500',
     },
     {
@@ -464,10 +464,10 @@ export default function ContactPage() {
               variant="primary"
               size="xl"
               className="bg-white text-green-600 hover:bg-gray-100 w-full sm:w-auto min-h-11 sm:min-h-12"
-              onClick={() => (window.location.href = 'tel:+919193119462')}
+              onClick={() => (window.location.href = 'tel:+919311946297')}
             >
               <Phone className="w-5 h-5 mr-2" />
-              Call +91 91931 19462
+              Call +91 93119 46297
             </Button>
           </div>
 

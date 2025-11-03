@@ -88,7 +88,7 @@ export function Footer() {
     { name: 'Twitter', href: 'https://twitter.com/shekharsingh', icon: Twitter },
     {
       name: 'WhatsApp',
-      href: 'https://wa.me/919193119462?text=Hi%2C%20I%27m%20interested%20in%20NEET%20Biology%20coaching',
+      href: 'https://wa.me/919311946297?text=Hi%2C%20I%27m%20interested%20in%20NEET%20Biology%20coaching',
       icon: MessageCircle,
     },
     { name: 'Telegram', href: 'https://t.me/biologyforneetug', icon: Send },
@@ -136,8 +136,8 @@ export function Footer() {
               <div className="flex items-center text-gray-300">
                 <Phone className="w-4 h-4 mr-3 text-blue-400" />
                 <div>
-                  <a href="tel:+919193119462" className="hover:text-white transition-colors">
-                    +91 91931 19462
+                  <a href="tel:+919311946297" className="hover:text-white transition-colors">
+                    +91 93119 46297
                   </a>
                   {' / '}
                   <a href="tel:+918826444334" className="hover:text-white transition-colors">
@@ -360,7 +360,7 @@ export function Footer() {
       {/* Quick Actions - Floating */}
       <div className="fixed bottom-4 right-4 z-50 flex flex-col space-y-2">
         <a
-          href="https://wa.me/919193119462?text=Hi%2C%20I%27m%20interested%20in%20NEET%20Biology%20coaching"
+          href="https://wa.me/919311946297?text=Hi%2C%20I%27m%20interested%20in%20NEET%20Biology%20coaching"
           target="_blank"
           rel="noopener noreferrer"
           className="w-12 h-12 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg transition-all duration-200 hover:scale-110"
@@ -370,7 +370,7 @@ export function Footer() {
         </a>
 
         <a
-          href="tel:+919193119462"
+          href="tel:+919311946297"
           className="w-12 h-12 bg-blue-500 hover:bg-blue-600 rounded-full flex items-center justify-center shadow-lg transition-all duration-200 hover:scale-110"
           aria-label="Call us"
         >

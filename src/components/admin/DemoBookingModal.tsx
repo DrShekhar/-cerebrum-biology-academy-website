@@ -263,7 +263,7 @@ export function DemoBookingModal({ isOpen, onClose, onSubmit }: DemoBookingModal
                             value={formData.phone}
                             onChange={(e) => handleInputChange('phone', e.target.value)}
                             className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:border-primary-500 focus:ring-2 focus:ring-primary-100 outline-none transition-all"
-                            placeholder="+91 91931 19462"
+                            placeholder="+91 93119 46297"
                           />
                         </div>
                       </div>
@@ -278,7 +278,7 @@ export function DemoBookingModal({ isOpen, onClose, onSubmit }: DemoBookingModal
                           value={formData.whatsappNumber}
                           onChange={(e) => handleInputChange('whatsappNumber', e.target.value)}
                           className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:border-primary-500 focus:ring-2 focus:ring-primary-100 outline-none transition-all"
-                          placeholder="+91 91931 19462"
+                          placeholder="+91 93119 46297"
                         />
                         <p className="text-sm text-gray-500 mt-1">For demo reminders and updates</p>
                       </div>

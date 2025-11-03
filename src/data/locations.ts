@@ -18,7 +18,7 @@ export const locations: Location[] = [
     address: '211 Vikas Surya Tower, DC Chauk Sector 9',
     city: 'Rohini',
     pincode: '110085',
-    phone: ['+918826444334', '+919999744334'],
+    phone: ['+918826444334', '+919311946297'],
     googleMapsUrl:
       'https://maps.google.com/?q=211+Vikas+Surya+Tower+DC+Chauk+Sector+9+Rohini+110085',
     googleMapsEmbed:
@@ -32,7 +32,7 @@ export const locations: Location[] = [
     address: 'M2K Corporate Park, Sector 50',
     city: 'Gurugram',
     pincode: '122018',
-    phone: ['+918826444334', '+919999744334'],
+    phone: ['+918826444334', '+919311946297'],
     googleMapsUrl: 'https://maps.google.com/?q=M2K+Corporate+Park+Sector+50+Gurugram+122018',
     googleMapsEmbed:
       'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.123!2d77.123!3d28.456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDE3JzIzLjAiTiA3N8KwMDcnMjMuMCJF!5e0!3m2!1sen!2sin!4v1234567890',
@@ -45,7 +45,7 @@ export const locations: Location[] = [
     address: 'Block B, South Extension 2',
     city: 'South Delhi',
     pincode: '110049',
-    phone: ['+918826444334', '+919999744334'],
+    phone: ['+918826444334', '+919311946297'],
     googleMapsUrl: 'https://maps.google.com/?q=Block+B+South+Extension+2+South+Delhi+110049',
     googleMapsEmbed:
       'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.123!2d77.223!3d28.566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDMzJzU3LjAiTiA3N8KwMTMnMjMuMCJF!5e0!3m2!1sen!2sin!4v1234567890',
@@ -55,7 +55,7 @@ export const locations: Location[] = [
 ]
 
 export const primaryContact = {
-  phone: ['+918826444334', '+919999744334'],
+  phone: ['+918826444334', '+919311946297'],
   email: 'info@cerebrumbiologyacademy.com',
   whatsapp: '+918826444334',
 }
