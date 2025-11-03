@@ -446,13 +446,13 @@ export default function AdmissionsPage() {
                         <div className="mt-4 sm:mt-6 flex flex-col sm:flex-row gap-3 sm:gap-4">
                           {index === 0 && (
                             <Button variant="primary" size="lg" className="w-full sm:w-auto">
-                              <FileText className="w-5 h-5 mr-2" />
-                              Start Application
+                              <FileText className="w-5 h-5 mr-2 flex-shrink-0" />
+                              <span className="truncate">Start Application</span>
                             </Button>
                           )}
                           <Button variant="outline" size="lg" className="w-full sm:w-auto">
-                            <Phone className="w-5 h-5 mr-2" />
-                            Get Help
+                            <Phone className="w-5 h-5 mr-2 flex-shrink-0" />
+                            <span className="truncate">Get Help</span>
                           </Button>
                         </div>
                       </motion.div>

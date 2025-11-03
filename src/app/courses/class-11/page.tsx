@@ -58,11 +58,11 @@ export default function Class11BiologyPage() {
       <section className="bg-gradient-to-r from-green-600 to-blue-600 text-white py-8 sm:py-12 md:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <div>
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
+            <div className="max-w-full">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 break-words">
                 Class 11th Biology Course
               </h1>
-              <p className="text-base sm:text-lg md:text-xl text-green-100 mb-6 sm:mb-8">
+              <p className="text-base sm:text-lg md:text-xl text-green-100 mb-6 sm:mb-8 break-words">
                 Build a strong foundation for NEET success while excelling in board exams.
                 Comprehensive coverage of NCERT Biology with expert AIIMS faculty guidance.
               </p>
@@ -71,20 +71,22 @@ export default function Class11BiologyPage() {
                   href="/purchase/class-11"
                   className="bg-white text-green-600 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-green-50 transition-colors inline-flex items-center justify-center shadow-lg min-h-[44px] w-full sm:w-auto"
                 >
-                  Buy Now - Start Learning
-                  <ArrowRight className="w-5 h-5 ml-2" />
+                  <span className="truncate">Buy Now - Start Learning</span>
+                  <ArrowRight className="w-5 h-5 ml-2 flex-shrink-0" />
                 </Link>
                 <Link
-                  href="/admissions"
-                  className="border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors inline-flex items-center justify-center min-h-[44px] w-full sm:w-auto"
+                  href="https://wa.me/919311946297?text=Hi%2C%20I%27m%20interested%20in%20Class%2011th%20Biology%20course"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-green-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-green-700 transition-colors inline-flex items-center justify-center min-h-[44px] w-full sm:w-auto"
                 >
-                  Talk to Counselor
+                  <span className="truncate">WhatsApp Counselor</span>
                 </Link>
                 <Link
                   href="/demo-booking"
                   className="border border-white/50 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors inline-flex items-center justify-center min-h-[44px] w-full sm:w-auto"
                 >
-                  Book Demo Class
+                  <span className="truncate">Book Demo Class</span>
                 </Link>
               </div>
             </div>
@@ -254,14 +256,14 @@ export default function Class11BiologyPage() {
                 href="/admissions"
                 className="block w-full bg-green-600 text-white text-center px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold hover:bg-green-700 transition-colors min-h-[44px] flex items-center justify-center"
               >
-                Enroll Now - Start Learning
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <span className="truncate">Enroll Now - Start Learning</span>
+                <ArrowRight className="w-5 h-5 ml-2 flex-shrink-0" />
               </Link>
               <Link
                 href="/demo-booking"
                 className="block w-full border-2 border-green-600 text-green-600 text-center px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold hover:bg-green-50 transition-colors min-h-[44px] flex items-center justify-center"
               >
-                Book Free Demo Class
+                <span className="truncate">Book Free Demo Class</span>
               </Link>
             </div>
 
