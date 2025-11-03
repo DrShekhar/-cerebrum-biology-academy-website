@@ -1,11 +1,26 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { CheckCircle, Clock, Users, Award, BookOpen, Target, Star, ArrowRight, Trophy, Globe, Beaker } from 'lucide-react'
+import {
+  CheckCircle,
+  Clock,
+  Users,
+  Award,
+  BookOpen,
+  Target,
+  Star,
+  ArrowRight,
+  Trophy,
+  Globe,
+  Beaker,
+} from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'IGCSE Biology Coaching | Cambridge Curriculum | International Standards | Cerebrum Biology Academy',
-  description: 'Expert IGCSE Biology coaching following Cambridge curriculum. International teaching standards, practical assessments, and global university preparation.',
-  keywords: 'IGCSE Biology coaching, Cambridge Biology, international curriculum, IGCSE board exam, global standards',
+  title:
+    'IGCSE Biology Coaching | Cambridge Curriculum | International Standards | Cerebrum Biology Academy',
+  description:
+    'Expert IGCSE Biology coaching following Cambridge curriculum. International teaching standards, practical assessments, and global university preparation.',
+  keywords:
+    'IGCSE Biology coaching, Cambridge Biology, international curriculum, IGCSE board exam, global standards',
 }
 
 export default function IGCSEBiologyPage() {
@@ -13,36 +28,59 @@ export default function IGCSEBiologyPage() {
     {
       section: 'Characteristics and Classification of Living Organisms',
       topics: ['Characteristics of living organisms', 'Classification and features of organisms'],
-      assessment: 'Core: 15%, Extended: 12%'
+      assessment: 'Core: 15%, Extended: 12%',
     },
     {
       section: 'Organisation and Maintenance of the Organism',
-      topics: ['Cell structure and organisation', 'Biological molecules', 'Movement into and out of cells', 'Nutrition', 'Respiration', 'Excretion', 'Coordination and response'],
-      assessment: 'Core: 45%, Extended: 40%'
+      topics: [
+        'Cell structure and organisation',
+        'Biological molecules',
+        'Movement into and out of cells',
+        'Nutrition',
+        'Respiration',
+        'Excretion',
+        'Coordination and response',
+      ],
+      assessment: 'Core: 45%, Extended: 40%',
     },
     {
       section: 'Development of the Organism and Continuity of Life',
       topics: ['Reproduction', 'Growth and development', 'Inheritance', 'Selection and evolution'],
-      assessment: 'Core: 25%, Extended: 28%'
+      assessment: 'Core: 25%, Extended: 28%',
     },
     {
       section: 'Relationships of Organisms with Environment',
       topics: ['Energy flow', 'Cycles within ecosystems', 'Human influences on environment'],
-      assessment: 'Core: 15%, Extended: 20%'
-    }
+      assessment: 'Core: 15%, Extended: 20%',
+    },
   ]
 
   const examStructure = {
     core: {
       paper1: { type: 'Multiple Choice', duration: '45 minutes', marks: '40 marks', weight: '30%' },
       paper3: { type: 'Theory (Core)', duration: '1hr 15min', marks: '80 marks', weight: '50%' },
-      paper5: { type: 'Practical Test', duration: '1hr 15min', marks: '40 marks', weight: '20%' }
+      paper5: { type: 'Practical Test', duration: '1hr 15min', marks: '40 marks', weight: '20%' },
     },
     extended: {
-      paper2: { type: 'Multiple Choice (Extended)', duration: '45 minutes', marks: '40 marks', weight: '30%' },
-      paper4: { type: 'Theory (Extended)', duration: '1hr 15min', marks: '80 marks', weight: '50%' },
-      paper6: { type: 'Alternative to Practical', duration: '1 hour', marks: '40 marks', weight: '20%' }
-    }
+      paper2: {
+        type: 'Multiple Choice (Extended)',
+        duration: '45 minutes',
+        marks: '40 marks',
+        weight: '30%',
+      },
+      paper4: {
+        type: 'Theory (Extended)',
+        duration: '1hr 15min',
+        marks: '80 marks',
+        weight: '50%',
+      },
+      paper6: {
+        type: 'Alternative to Practical',
+        duration: '1 hour',
+        marks: '40 marks',
+        weight: '20%',
+      },
+    },
   }
 
   const features = [
@@ -53,37 +91,38 @@ export default function IGCSEBiologyPage() {
     'A*/A grade achievement focus',
     'Global university preparation guidance',
     'Extended tier preparation for top universities',
-    'International examination technique training'
+    'International examination technique training',
   ]
 
   const successStats = [
     { number: '92%', label: 'A*/A Grades', description: 'Students achieving top grades' },
     { number: '400+', label: 'IGCSE Students', description: 'Successfully coached' },
     { number: '15+', label: 'Countries', description: 'Students from globally' },
-    { number: '88%', label: 'University Admissions', description: 'To top global universities' }
+    { number: '88%', label: 'University Admissions', description: 'To top global universities' },
   ]
 
   const igcseAdvantages = [
     {
       icon: Globe,
       title: 'Global Recognition',
-      description: 'IGCSE is recognized by universities worldwide for admissions and credit transfer'
+      description:
+        'IGCSE is recognized by universities worldwide for admissions and credit transfer',
     },
     {
       icon: Beaker,
       title: 'Practical Focus',
-      description: 'Strong emphasis on experimental skills and scientific methodology'
+      description: 'Strong emphasis on experimental skills and scientific methodology',
     },
     {
       icon: Trophy,
       title: 'University Preparation',
-      description: 'Excellent preparation for A-levels, IB, and international university programs'
+      description: 'Excellent preparation for A-levels, IB, and international university programs',
     },
     {
       icon: Target,
       title: 'Skill Development',
-      description: 'Develops critical thinking, analysis, and independent learning skills'
-    }
+      description: 'Develops critical thinking, analysis, and independent learning skills',
+    },
   ]
 
   const gradingSystem = [
@@ -94,7 +133,7 @@ export default function IGCSEBiologyPage() {
     { grade: 'D', points: '4', description: 'Moderate performance' },
     { grade: 'E', points: '3', description: 'Basic performance' },
     { grade: 'F', points: '2', description: 'Foundation level' },
-    { grade: 'G', points: '1', description: 'Entry level' }
+    { grade: 'G', points: '1', description: 'Entry level' },
   ]
 
   return (
@@ -104,22 +143,20 @@ export default function IGCSEBiologyPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-5xl font-bold mb-6">
-                IGCSE Biology Excellence
-              </h1>
+              <h1 className="text-5xl font-bold mb-6">IGCSE Biology Excellence</h1>
               <p className="text-xl text-purple-100 mb-8">
-                Master IGCSE Biology with Cambridge curriculum expertise. International standards, 
+                Master IGCSE Biology with Cambridge curriculum expertise. International standards,
                 practical focus, and global university preparation with A*/A grade achievement.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link 
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                <Link
                   href="/admissions"
                   className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center"
                 >
                   Enroll for IGCSE
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
-                <Link 
+                <Link
                   href="/contact"
                   className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
                 >
@@ -127,24 +164,24 @@ export default function IGCSEBiologyPage() {
                 </Link>
               </div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8">
-              <h3 className="text-2xl font-bold mb-6">IGCSE Program Features</h3>
-              <div className="space-y-4">
+            <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-6 sm:p-8">
+              <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">IGCSE Program Features</h3>
+              <div className="space-y-3 sm:space-y-4">
                 <div className="flex items-center">
-                  <Globe className="w-6 h-6 mr-3 text-purple-300" />
-                  <span>Cambridge Curriculum</span>
+                  <Globe className="w-5 h-5 sm:w-6 sm:h-6 mr-3 text-purple-300" />
+                  <span className="text-sm sm:text-base">Cambridge Curriculum</span>
                 </div>
                 <div className="flex items-center">
-                  <Beaker className="w-6 h-6 mr-3 text-purple-300" />
-                  <span>Practical Assessment Focus</span>
+                  <Beaker className="w-5 h-5 sm:w-6 sm:h-6 mr-3 text-purple-300" />
+                  <span className="text-sm sm:text-base">Practical Assessment Focus</span>
                 </div>
                 <div className="flex items-center">
-                  <Trophy className="w-6 h-6 mr-3 text-purple-300" />
-                  <span>A*/A Grade Target</span>
+                  <Trophy className="w-5 h-5 sm:w-6 sm:h-6 mr-3 text-purple-300" />
+                  <span className="text-sm sm:text-base">A*/A Grade Target</span>
                 </div>
                 <div className="flex items-center">
-                  <Target className="w-6 h-6 mr-3 text-purple-300" />
-                  <span>Global University Preparation</span>
+                  <Target className="w-5 h-5 sm:w-6 sm:h-6 mr-3 text-purple-300" />
+                  <span className="text-sm sm:text-base">Global University Preparation</span>
                 </div>
               </div>
             </div>
@@ -153,18 +190,29 @@ export default function IGCSEBiologyPage() {
       </section>
 
       {/* Success Statistics */}
-      <section className="py-16">
+      <section className="py-8 sm:py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">IGCSE Biology Success Record</h2>
-            <p className="text-gray-600">Outstanding international results with global university admissions</p>
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-2xl sm:text-3xl md:text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              IGCSE Biology Success Record
+            </h2>
+            <p className="text-sm sm:text-base text-gray-600">
+              Outstanding international results with global university admissions
+            </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
             {successStats.map((stat, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow">
-                <div className="text-3xl font-bold text-purple-600 mb-2">{stat.number}</div>
-                <div className="text-lg font-semibold text-gray-900 mb-1">{stat.label}</div>
-                <div className="text-sm text-gray-600">{stat.description}</div>
+              <div
+                key={index}
+                className="bg-white rounded-xl p-4 sm:p-6 text-center shadow-lg hover:shadow-xl transition-shadow"
+              >
+                <div className="text-2xl sm:text-3xl md:text-3xl sm:text-4xl font-bold text-purple-600 mb-2">
+                  {stat.number}
+                </div>
+                <div className="text-base sm:text-lg font-semibold text-gray-900 mb-1">
+                  {stat.label}
+                </div>
+                <div className="text-sm text-sm sm:text-base text-gray-600">{stat.description}</div>
               </div>
             ))}
           </div>
@@ -174,14 +222,18 @@ export default function IGCSEBiologyPage() {
       {/* Curriculum Structure */}
       <section className="py-16 bg-gray-100">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">IGCSE Biology Curriculum</h2>
-            <p className="text-gray-600">Cambridge International curriculum with practical assessment focus</p>
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-2xl sm:text-3xl md:text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              IGCSE Biology Curriculum
+            </h2>
+            <p className="text-sm sm:text-base text-gray-600">
+              Cambridge International curriculum with practical assessment focus
+            </p>
           </div>
-          
+
           <div className="space-y-6">
             {curriculum.map((section, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-lg">
+              <div key={index} className="bg-white rounded-xl p-4 sm:p-6 shadow-lg">
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-xl font-bold text-gray-900">{section.section}</h3>
                   <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">
@@ -203,18 +255,22 @@ export default function IGCSEBiologyPage() {
       </section>
 
       {/* Exam Structure */}
-      <section className="py-16">
+      <section className="py-8 sm:py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">IGCSE Examination Structure</h2>
-            <p className="text-gray-600">Core and Extended tier options for different ability levels</p>
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-2xl sm:text-3xl md:text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              IGCSE Examination Structure
+            </h2>
+            <p className="text-sm sm:text-base text-gray-600">
+              Core and Extended tier options for different ability levels
+            </p>
           </div>
-          
-          <div className="grid md:grid-cols-2 gap-8">
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             {/* Core Tier */}
-            <div className="bg-white rounded-xl p-6 shadow-lg">
+            <div className="bg-white rounded-xl p-4 sm:p-6 shadow-lg">
               <h3 className="text-xl font-bold text-gray-900 mb-6">Core Tier (Grades C-G)</h3>
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
                 {Object.entries(examStructure.core).map(([key, paper]) => (
                   <div key={key} className="border border-gray-200 rounded-lg p-4">
                     <div className="flex justify-between items-center mb-2">
@@ -231,9 +287,9 @@ export default function IGCSEBiologyPage() {
             </div>
 
             {/* Extended Tier */}
-            <div className="bg-white rounded-xl p-6 shadow-lg">
+            <div className="bg-white rounded-xl p-4 sm:p-6 shadow-lg">
               <h3 className="text-xl font-bold text-gray-900 mb-6">Extended Tier (Grades A*-E)</h3>
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
                 {Object.entries(examStructure.extended).map(([key, paper]) => (
                   <div key={key} className="border border-gray-200 rounded-lg p-4">
                     <div className="flex justify-between items-center mb-2">
@@ -252,7 +308,9 @@ export default function IGCSEBiologyPage() {
 
           {/* Grading System */}
           <div className="mt-12 bg-purple-50 rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">IGCSE Grading System</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+              IGCSE Grading System
+            </h3>
             <div className="grid md:grid-cols-4 gap-4">
               {gradingSystem.map((grade, index) => (
                 <div key={index} className="bg-white rounded-lg p-4 text-center">
@@ -269,20 +327,27 @@ export default function IGCSEBiologyPage() {
       {/* IGCSE Advantages */}
       <section className="py-16 bg-gray-100">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose IGCSE Biology?</h2>
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-2xl sm:text-3xl md:text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Why Choose IGCSE Biology?
+            </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               International curriculum with global recognition and university preparation focus
             </p>
           </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
             {igcseAdvantages.map((advantage, index) => {
               const Icon = advantage.icon
               return (
-                <div key={index} className="bg-white rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow">
-                  <Icon className="w-12 h-12 text-purple-600 mx-auto mb-4" />
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3">{advantage.title}</h3>
+                <div
+                  key={index}
+                  className="bg-white rounded-xl p-4 sm:p-6 text-center shadow-lg hover:shadow-xl transition-shadow"
+                >
+                  <Icon className="w-10 h-10 sm:w-12 sm:h-12 text-purple-600 mx-auto mb-4" />
+                  <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-3">
+                    {advantage.title}
+                  </h3>
                   <p className="text-gray-600 text-sm">{advantage.description}</p>
                 </div>
               )
@@ -292,16 +357,21 @@ export default function IGCSEBiologyPage() {
       </section>
 
       {/* Course Features */}
-      <section className="py-16">
+      <section className="py-8 sm:py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">IGCSE Course Features</h2>
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-2xl sm:text-3xl md:text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              IGCSE Course Features
+            </h2>
           </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                <CheckCircle className="w-8 h-8 text-purple-600 mb-4" />
+              <div
+                key={index}
+                className="bg-white rounded-xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-shadow"
+              >
+                <CheckCircle className="w-6 h-6 sm:w-8 sm:h-8 text-purple-600 mb-4" />
                 <p className="text-gray-700 font-medium">{feature}</p>
               </div>
             ))}
@@ -312,43 +382,47 @@ export default function IGCSEBiologyPage() {
       {/* Pricing & Enrollment */}
       <section className="py-16 bg-purple-50">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Excel in IGCSE Biology Today</h2>
-          
+          <h2 className="text-2xl sm:text-2xl sm:text-3xl md:text-3xl sm:text-4xl font-bold text-gray-900 mb-8">
+            Excel in IGCSE Biology Today
+          </h2>
+
           <div className="bg-white rounded-3xl shadow-xl p-8 mb-8">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-center">
               <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">IGCSE Biology Complete Course</h3>
-                <div className="text-left space-y-3">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  IGCSE Biology Complete Course
+                </h3>
+                <div className="text-left space-y-2 sm:space-y-3">
                   <div className="flex items-center">
-                    <Star className="w-5 h-5 text-yellow-500 mr-2" />
-                    <span>Cambridge curriculum mastery</span>
+                    <Star className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-500 mr-2" />
+                    <span className="text-sm sm:text-base">Cambridge curriculum mastery</span>
                   </div>
                   <div className="flex items-center">
-                    <Star className="w-5 h-5 text-yellow-500 mr-2" />
-                    <span>Extended tier preparation</span>
+                    <Star className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-500 mr-2" />
+                    <span className="text-sm sm:text-base">Extended tier preparation</span>
                   </div>
                   <div className="flex items-center">
-                    <Star className="w-5 h-5 text-yellow-500 mr-2" />
-                    <span>A*/A grade achievement</span>
+                    <Star className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-500 mr-2" />
+                    <span className="text-sm sm:text-base">A*/A grade achievement</span>
                   </div>
                   <div className="flex items-center">
-                    <Star className="w-5 h-5 text-yellow-500 mr-2" />
-                    <span>Global university preparation</span>
+                    <Star className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-500 mr-2" />
+                    <span className="text-sm sm:text-base">Global university preparation</span>
                   </div>
                 </div>
               </div>
-              
+
               <div>
-                <div className="text-4xl font-bold text-purple-600 mb-4">₹39,999</div>
+                <div className="text-3xl sm:text-4xl font-bold text-purple-600 mb-4">₹39,999</div>
                 <p className="text-gray-600 mb-6">Complete 2-year IGCSE program</p>
-                <div className="space-y-3">
-                  <Link 
+                <div className="space-y-2 sm:space-y-3">
+                  <Link
                     href="/admissions"
                     className="block bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
                   >
                     Enroll for IGCSE
                   </Link>
-                  <Link 
+                  <Link
                     href="/contact"
                     className="block border border-purple-600 text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors"
                   >
@@ -362,7 +436,8 @@ export default function IGCSEBiologyPage() {
           <div className="bg-orange-100 border border-orange-300 rounded-xl p-6">
             <p className="text-orange-800 font-semibold mb-2">🌟 IGCSE Special Offer</p>
             <p className="text-orange-700">
-              Enroll now and get FREE Cambridge past papers collection + practical skills workshop worth ₹6,000!
+              Enroll now and get FREE Cambridge past papers collection + practical skills workshop
+              worth ₹6,000!
             </p>
           </div>
         </div>
