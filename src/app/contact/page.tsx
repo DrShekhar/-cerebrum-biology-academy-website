@@ -361,57 +361,77 @@ export default function ContactPage() {
       </section>
 
       {/* Map Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Find Us On Map</h2>
-            <p className="text-xl text-gray-600">Conveniently located near metro stations</p>
+      <section className="py-12 xs:py-16 sm:py-20">
+        <div className="max-w-7xl mx-auto px-4 xs:px-6 lg:px-8">
+          <div className="text-center mb-10 xs:mb-12 sm:mb-16">
+            <h2 className="text-2xl xs:text-3xl sm:text-4xl font-bold text-gray-900 mb-3 xs:mb-4">
+              Find Us On Map
+            </h2>
+            <p className="text-base xs:text-lg sm:text-xl text-gray-600">
+              Conveniently located near metro stations
+            </p>
           </div>
 
-          <div className="bg-white rounded-3xl shadow-lg overflow-hidden">
+          <div className="bg-white rounded-2xl xs:rounded-3xl shadow-lg overflow-hidden">
             <div className="grid lg:grid-cols-2">
-              <div className="p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Visit Our Campus</h3>
+              <div className="p-5 xs:p-6 sm:p-8">
+                <h3 className="text-xl xs:text-2xl font-bold text-gray-900 mb-4 xs:mb-5 sm:mb-6">
+                  Visit Our Campus
+                </h3>
 
-                <div className="space-y-6">
+                <div className="space-y-4 xs:space-y-5 sm:space-y-6">
                   <div className="flex items-start">
-                    <Building className="w-6 h-6 text-blue-600 mr-4 mt-1" />
+                    <Building className="w-5 xs:w-6 h-5 xs:h-6 text-blue-600 mr-3 xs:mr-4 mt-1 flex-shrink-0" />
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-1">Main Campus</h4>
-                      <p className="text-gray-600">A-2/45, Sector 16, Noida, UP 201301</p>
+                      <h4 className="font-semibold text-gray-900 mb-1 text-sm xs:text-base">
+                        Main Campus
+                      </h4>
+                      <p className="text-gray-600 text-sm xs:text-base">
+                        A-2/45, Sector 16, Noida, UP 201301
+                      </p>
                     </div>
                   </div>
 
                   <div className="flex items-start">
-                    <Navigation className="w-6 h-6 text-green-600 mr-4 mt-1" />
+                    <Navigation className="w-5 xs:w-6 h-5 xs:h-6 text-green-600 mr-3 xs:mr-4 mt-1 flex-shrink-0" />
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-1">Nearest Metro</h4>
-                      <p className="text-gray-600">City Centre Metro Station (500m walk)</p>
+                      <h4 className="font-semibold text-gray-900 mb-1 text-sm xs:text-base">
+                        Nearest Metro
+                      </h4>
+                      <p className="text-gray-600 text-sm xs:text-base">
+                        City Centre Metro Station (500m walk)
+                      </p>
                     </div>
                   </div>
 
                   <div className="flex items-start">
-                    <Clock className="w-6 h-6 text-purple-600 mr-4 mt-1" />
+                    <Clock className="w-5 xs:w-6 h-5 xs:h-6 text-purple-600 mr-3 xs:mr-4 mt-1 flex-shrink-0" />
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-1">Campus Hours</h4>
-                      <p className="text-gray-600">Mon-Sat: 8 AM - 8 PM | Sun: 10 AM - 6 PM</p>
+                      <h4 className="font-semibold text-gray-900 mb-1 text-sm xs:text-base">
+                        Campus Hours
+                      </h4>
+                      <p className="text-gray-600 text-sm xs:text-base">
+                        Mon-Sat: 8 AM - 8 PM | Sun: 10 AM - 6 PM
+                      </p>
                     </div>
                   </div>
                 </div>
 
-                <div className="mt-8">
-                  <Button variant="primary" size="lg" className="w-full">
+                <div className="mt-6 xs:mt-7 sm:mt-8">
+                  <Button variant="primary" size="lg" className="w-full min-h-11 sm:min-h-12">
                     <Calendar className="w-5 h-5 mr-2" />
                     Schedule Campus Visit
                   </Button>
                 </div>
               </div>
 
-              <div className="bg-gray-100 h-96 lg:h-full flex items-center justify-center">
+              <div className="bg-gray-100 h-64 xs:h-80 sm:h-96 lg:h-full flex items-center justify-center p-4">
                 <div className="text-center">
-                  <MapPin className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-                  <p className="text-gray-600">Interactive Map Coming Soon</p>
-                  <p className="text-sm text-gray-500 mt-2">A-2/45, Sector 16, Noida, UP 201301</p>
+                  <MapPin className="w-12 xs:w-14 sm:w-16 h-12 xs:h-14 sm:h-16 text-gray-400 mx-auto mb-3 xs:mb-4" />
+                  <p className="text-gray-600 text-sm xs:text-base">Interactive Map Coming Soon</p>
+                  <p className="text-xs xs:text-sm text-gray-500 mt-2">
+                    A-2/45, Sector 16, Noida, UP 201301
+                  </p>
                 </div>
               </div>
             </div>
@@ -420,20 +440,22 @@ export default function ContactPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-green-600 to-blue-600 text-white">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Start Your NEET Journey?</h2>
-          <p className="text-xl text-green-100 mb-8">
+      <section className="py-12 xs:py-16 sm:py-20 bg-gradient-to-r from-green-600 to-blue-600 text-white">
+        <div className="max-w-4xl mx-auto px-4 xs:px-6 text-center">
+          <h2 className="text-2xl xs:text-3xl sm:text-4xl font-bold mb-4 xs:mb-5 sm:mb-6">
+            Ready to Start Your NEET Journey?
+          </h2>
+          <p className="text-base xs:text-lg sm:text-xl text-green-100 mb-6 xs:mb-7 sm:mb-8">
             Join thousands of successful students and achieve your medical dreams with expert
             guidance.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 xs:gap-4 justify-center">
             <Link href="/courses">
               <Button
                 variant="outline"
                 size="xl"
-                className="border-white text-white hover:bg-white hover:text-green-600"
+                className="border-white text-white hover:bg-white hover:text-green-600 w-full sm:w-auto min-h-11 sm:min-h-12"
               >
                 Explore Courses
               </Button>
@@ -441,25 +463,25 @@ export default function ContactPage() {
             <Button
               variant="primary"
               size="xl"
-              className="bg-white text-green-600 hover:bg-gray-100"
+              className="bg-white text-green-600 hover:bg-gray-100 w-full sm:w-auto min-h-11 sm:min-h-12"
             >
               <Phone className="w-5 h-5 mr-2" />
               Call +91 98765 43210
             </Button>
           </div>
 
-          <div className="mt-12 grid md:grid-cols-3 gap-8 text-center">
+          <div className="mt-8 xs:mt-10 sm:mt-12 grid grid-cols-3 gap-4 xs:gap-6 sm:gap-8 text-center">
             <div>
-              <div className="text-3xl font-bold mb-2">Free</div>
-              <div className="text-green-100">Consultation</div>
+              <div className="text-2xl xs:text-3xl font-bold mb-1 xs:mb-2">Free</div>
+              <div className="text-green-100 text-xs xs:text-sm sm:text-base">Consultation</div>
             </div>
             <div>
-              <div className="text-3xl font-bold mb-2">24/7</div>
-              <div className="text-green-100">Support</div>
+              <div className="text-2xl xs:text-3xl font-bold mb-1 xs:mb-2">24/7</div>
+              <div className="text-green-100 text-xs xs:text-sm sm:text-base">Support</div>
             </div>
             <div>
-              <div className="text-3xl font-bold mb-2">94%</div>
-              <div className="text-green-100">Success Rate</div>
+              <div className="text-2xl xs:text-3xl font-bold mb-1 xs:mb-2">94%</div>
+              <div className="text-green-100 text-xs xs:text-sm sm:text-base">Success Rate</div>
             </div>
           </div>
         </div>

@@ -2,34 +2,41 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Terms of Service | Cerebrum Biology Academy',
-  description: 'Terms and conditions for using Cerebrum Biology Academy services and educational platform.',
+  description:
+    'Terms and conditions for using Cerebrum Biology Academy services and educational platform.',
 }
 
 export default function TermsOfServicePage() {
   return (
-    <div className="min-h-screen bg-gray-50 py-16">
-      <div className="max-w-4xl mx-auto px-6">
-        <div className="bg-white rounded-3xl shadow-lg p-8 md:p-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Terms of Service</h1>
-          <p className="text-gray-600 mb-8">
-            <strong>Last updated:</strong> {new Date().toLocaleDateString('en-IN', { 
-              year: 'numeric', 
-              month: 'long', 
-              day: 'numeric' 
+    <div className="min-h-screen bg-gray-50 py-8 sm:py-12 md:py-16">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6">
+        <div className="bg-white rounded-2xl sm:rounded-3xl shadow-lg p-5 sm:p-8 md:p-12">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-6 sm:mb-8">
+            Terms of Service
+          </h1>
+          <p className="text-gray-600 mb-6 sm:mb-8 text-sm sm:text-base">
+            <strong>Last updated:</strong>{' '}
+            {new Date().toLocaleDateString('en-IN', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric',
             })}
           </p>
 
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8">
             <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Acceptance of Terms</h2>
-              <div className="space-y-4 text-gray-700">
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">
+                1. Acceptance of Terms
+              </h2>
+              <div className="space-y-3 sm:space-y-4 text-gray-700 text-sm sm:text-base">
                 <p>
-                  By accessing and using the services provided by Cerebrum Biology Academy ("we," "us," or "our"), 
-                  you ("user" or "student") agree to be bound by these Terms of Service. If you do not agree 
-                  to these terms, please do not use our services.
+                  By accessing and using the services provided by Cerebrum Biology Academy ("we,"
+                  "us," or "our"), you ("user" or "student") agree to be bound by these Terms of
+                  Service. If you do not agree to these terms, please do not use our services.
                 </p>
                 <p>
-                  These terms apply to all users of our website, online platform, courses, and related services.
+                  These terms apply to all users of our website, online platform, courses, and
+                  related services.
                 </p>
               </div>
             </section>
@@ -50,7 +57,9 @@ export default function TermsOfServicePage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">3. User Accounts and Registration</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                3. User Accounts and Registration
+              </h2>
               <div className="space-y-4 text-gray-700">
                 <p>To access certain services, you must create an account. You agree to:</p>
                 <ul className="list-disc list-inside space-y-2 ml-4">
@@ -61,18 +70,20 @@ export default function TermsOfServicePage() {
                   <li>Keep your account information updated</li>
                 </ul>
                 <p>
-                  You must be at least 13 years old to create an account. If you are under 18, 
-                  you must have parental or guardian consent.
+                  You must be at least 13 years old to create an account. If you are under 18, you
+                  must have parental or guardian consent.
                 </p>
               </div>
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">4. Course Enrollment and Payment</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                4. Course Enrollment and Payment
+              </h2>
               <div className="space-y-4 text-gray-700">
                 <h3 className="text-lg font-semibold text-gray-900">4.1 Enrollment</h3>
                 <p>Course enrollment is subject to availability and our admission criteria.</p>
-                
+
                 <h3 className="text-lg font-semibold text-gray-900">4.2 Fees and Payment</h3>
                 <ul className="list-disc list-inside space-y-2 ml-4">
                   <li>Course fees must be paid as per the agreed schedule</li>
@@ -81,11 +92,11 @@ export default function TermsOfServicePage() {
                   <li>Fees are non-transferable between courses or students</li>
                   <li>Late payment may result in service suspension</li>
                 </ul>
-                
+
                 <h3 className="text-lg font-semibold text-gray-900">4.3 Refund Policy</h3>
                 <p>
-                  Refunds are subject to our separate Refund Policy. Please refer to our 
-                  refund policy page for detailed terms and conditions.
+                  Refunds are subject to our separate Refund Policy. Please refer to our refund
+                  policy page for detailed terms and conditions.
                 </p>
               </div>
             </section>
@@ -108,38 +119,48 @@ export default function TermsOfServicePage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">6. Intellectual Property Rights</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                6. Intellectual Property Rights
+              </h2>
               <div className="space-y-4 text-gray-700">
                 <p>
-                  All content provided through our services, including but not limited to course materials, 
-                  videos, tests, and educational resources, is protected by intellectual property laws and 
-                  is owned by or licensed to Cerebrum Biology Academy.
+                  All content provided through our services, including but not limited to course
+                  materials, videos, tests, and educational resources, is protected by intellectual
+                  property laws and is owned by or licensed to Cerebrum Biology Academy.
                 </p>
                 <p>You are granted a limited, non-exclusive, non-transferable license to:</p>
                 <ul className="list-disc list-inside space-y-2 ml-4">
                   <li>Access and use course materials for personal educational purposes</li>
                   <li>Download materials where explicitly permitted</li>
                 </ul>
-                <p>You may not reproduce, distribute, or create derivative works without our written permission.</p>
-              </div>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">7. Privacy and Data Protection</h2>
-              <div className="space-y-4 text-gray-700">
                 <p>
-                  Your privacy is important to us. Our collection and use of personal information 
-                  is governed by our Privacy Policy, which is incorporated into these Terms by reference.
+                  You may not reproduce, distribute, or create derivative works without our written
+                  permission.
                 </p>
               </div>
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">8. Service Availability and Technical Requirements</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                7. Privacy and Data Protection
+              </h2>
               <div className="space-y-4 text-gray-700">
                 <p>
-                  While we strive to provide uninterrupted service, we do not guarantee that our 
-                  services will be available at all times. Service may be temporarily unavailable 
+                  Your privacy is important to us. Our collection and use of personal information is
+                  governed by our Privacy Policy, which is incorporated into these Terms by
+                  reference.
+                </p>
+              </div>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                8. Service Availability and Technical Requirements
+              </h2>
+              <div className="space-y-4 text-gray-700">
+                <p>
+                  While we strive to provide uninterrupted service, we do not guarantee that our
+                  services will be available at all times. Service may be temporarily unavailable
                   due to maintenance, updates, or technical issues.
                 </p>
                 <p>You are responsible for:</p>
@@ -152,25 +173,27 @@ export default function TermsOfServicePage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">9. Disclaimers and Limitations of Liability</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                9. Disclaimers and Limitations of Liability
+              </h2>
               <div className="space-y-4 text-gray-700">
                 <h3 className="text-lg font-semibold text-gray-900">9.1 Educational Outcomes</h3>
                 <p>
-                  While we are committed to providing high-quality education, we cannot guarantee 
-                  specific academic results or examination success. Student performance depends on 
+                  While we are committed to providing high-quality education, we cannot guarantee
+                  specific academic results or examination success. Student performance depends on
                   various factors including individual effort, aptitude, and external circumstances.
                 </p>
-                
+
                 <h3 className="text-lg font-semibold text-gray-900">9.2 Service Disclaimer</h3>
                 <p>
-                  Our services are provided "as is" without warranties of any kind, either express 
-                  or implied. We disclaim all warranties including merchantability, fitness for a 
+                  Our services are provided "as is" without warranties of any kind, either express
+                  or implied. We disclaim all warranties including merchantability, fitness for a
                   particular purpose, and non-infringement.
                 </p>
-                
+
                 <h3 className="text-lg font-semibold text-gray-900">9.3 Limitation of Liability</h3>
                 <p>
-                  Our liability for any damages shall not exceed the amount paid by you for the 
+                  Our liability for any damages shall not exceed the amount paid by you for the
                   specific service that gave rise to the claim.
                 </p>
               </div>
@@ -180,9 +203,9 @@ export default function TermsOfServicePage() {
               <h2 className="text-2xl font-bold text-gray-900 mb-4">10. Termination</h2>
               <div className="space-y-4 text-gray-700">
                 <p>
-                  Either party may terminate this agreement at any time. We reserve the right to 
-                  suspend or terminate your access to our services for violations of these terms 
-                  or for any other reason at our discretion.
+                  Either party may terminate this agreement at any time. We reserve the right to
+                  suspend or terminate your access to our services for violations of these terms or
+                  for any other reason at our discretion.
                 </p>
                 <p>Upon termination:</p>
                 <ul className="list-disc list-inside space-y-2 ml-4">
@@ -194,10 +217,12 @@ export default function TermsOfServicePage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">11. Governing Law and Dispute Resolution</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                11. Governing Law and Dispute Resolution
+              </h2>
               <div className="space-y-4 text-gray-700">
                 <p>
-                  These Terms are governed by the laws of India. Any disputes arising from these 
+                  These Terms are governed by the laws of India. Any disputes arising from these
                   terms or our services shall be resolved through:
                 </p>
                 <ol className="list-decimal list-inside space-y-2 ml-4">
@@ -205,9 +230,7 @@ export default function TermsOfServicePage() {
                   <li>Mediation if negotiation fails</li>
                   <li>Arbitration under the Indian Arbitration and Conciliation Act</li>
                 </ol>
-                <p>
-                  The jurisdiction for any legal proceedings shall be New Delhi, India.
-                </p>
+                <p>The jurisdiction for any legal proceedings shall be New Delhi, India.</p>
               </div>
             </section>
 
@@ -215,8 +238,8 @@ export default function TermsOfServicePage() {
               <h2 className="text-2xl font-bold text-gray-900 mb-4">12. Changes to Terms</h2>
               <div className="space-y-4 text-gray-700">
                 <p>
-                  We reserve the right to modify these Terms at any time. We will notify users of 
-                  material changes via email or prominent notice on our website. Continued use of 
+                  We reserve the right to modify these Terms at any time. We will notify users of
+                  material changes via email or prominent notice on our website. Continued use of
                   our services after such changes constitutes acceptance of the new terms.
                 </p>
               </div>
@@ -225,13 +248,17 @@ export default function TermsOfServicePage() {
             <section>
               <h2 className="text-2xl font-bold text-gray-900 mb-4">13. Contact Information</h2>
               <div className="space-y-4 text-gray-700">
-                <p>
-                  For questions about these Terms of Service, please contact us:
-                </p>
+                <p>For questions about these Terms of Service, please contact us:</p>
                 <div className="bg-gray-50 p-6 rounded-lg">
-                  <p><strong>Email:</strong> legal@cerebrumbiologyacademy.com</p>
-                  <p><strong>Phone:</strong> +91 88264 44334</p>
-                  <p><strong>Address:</strong> Cerebrum Biology Academy, New Delhi, India</p>
+                  <p>
+                    <strong>Email:</strong> legal@cerebrumbiologyacademy.com
+                  </p>
+                  <p>
+                    <strong>Phone:</strong> +91 88264 44334
+                  </p>
+                  <p>
+                    <strong>Address:</strong> Cerebrum Biology Academy, New Delhi, India
+                  </p>
                 </div>
               </div>
             </section>
@@ -239,8 +266,8 @@ export default function TermsOfServicePage() {
 
           <div className="mt-12 pt-8 border-t border-gray-200">
             <p className="text-sm text-gray-500 text-center">
-              By using our services, you acknowledge that you have read, understood, and agree 
-              to be bound by these Terms of Service.
+              By using our services, you acknowledge that you have read, understood, and agree to be
+              bound by these Terms of Service.
             </p>
           </div>
         </div>

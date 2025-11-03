@@ -178,9 +178,9 @@ export default function AboutPage() {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-          <div className="grid lg:grid-cols-5 gap-10 sm:gap-12 lg:gap-16 items-center">
-            <div className="lg:col-span-3 space-y-6 sm:space-y-8">
-              <h1 className="text-5xl lg:text-7xl xl:text-8xl font-bold tracking-[-0.02em] leading-[1.05] mb-8 antialiased">
+          <div className="grid lg:grid-cols-5 gap-8 sm:gap-10 lg:gap-16 items-center">
+            <div className="lg:col-span-3 space-y-5 sm:space-y-6 md:space-y-8">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl font-bold tracking-[-0.02em] leading-[1.05] mb-6 sm:mb-8 antialiased">
                 From{' '}
                 <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-yellow-200 to-amber-300">
                   AIIMS Delhi
@@ -188,11 +188,11 @@ export default function AboutPage() {
                 to Your Medical Dream
               </h1>
 
-              <p className="text-2xl lg:text-3xl text-white/95 font-light leading-relaxed tracking-wide">
+              <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white/95 font-light leading-relaxed tracking-wide">
                 How One Doctor's Mission Helped 2,847 Students Get Into Medical College
               </p>
 
-              <p className="text-lg lg:text-xl text-white/80 leading-[1.8] font-light max-w-3xl">
+              <p className="text-base sm:text-lg lg:text-xl text-white/80 leading-[1.8] font-light max-w-3xl">
                 In 2015, Dr. Shekhar C Singh walked out of{' '}
                 <strong className="font-semibold text-white">AIIMS Delhi</strong> with a mission: no
                 student should struggle with NEET Biology the way he saw thousands struggle. Nine
@@ -207,59 +207,59 @@ export default function AboutPage() {
                 .
               </p>
 
-              <p className="text-xl lg:text-2xl text-amber-200/90 leading-relaxed font-light italic">
+              <p className="text-lg sm:text-xl lg:text-2xl text-amber-200/90 leading-relaxed font-light italic">
                 This isn't just another coaching institute. It's what happens when AIIMS-level
                 expertise meets genuine care for every student's success.
               </p>
 
-              <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-2xl space-y-4">
-                <div className="flex items-start gap-4 group hover:translate-x-1 transition-transform duration-300">
-                  <div className="w-8 h-8 rounded-full bg-amber-500/20 flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-amber-500/30 transition-colors">
-                    <CheckCircle className="w-5 h-5 text-amber-300" strokeWidth={2} />
+              <div className="bg-white/10 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-8 border border-white/20 shadow-2xl space-y-3 sm:space-y-4">
+                <div className="flex items-start gap-3 sm:gap-4 group hover:translate-x-1 transition-transform duration-300">
+                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-amber-500/20 flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-amber-500/30 transition-colors">
+                    <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-amber-300" strokeWidth={2} />
                   </div>
-                  <p className="text-white text-lg font-light leading-relaxed">
+                  <p className="text-white text-base sm:text-lg font-light leading-relaxed">
                     47 AIIMS selections across 7 campuses
                   </p>
                 </div>
-                <div className="flex items-start gap-4 group hover:translate-x-1 transition-transform duration-300">
-                  <div className="w-8 h-8 rounded-full bg-amber-500/20 flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-amber-500/30 transition-colors">
-                    <CheckCircle className="w-5 h-5 text-amber-300" strokeWidth={2} />
+                <div className="flex items-start gap-3 sm:gap-4 group hover:translate-x-1 transition-transform duration-300">
+                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-amber-500/20 flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-amber-500/30 transition-colors">
+                    <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-amber-300" strokeWidth={2} />
                   </div>
-                  <p className="text-white text-lg font-light leading-relaxed">
+                  <p className="text-white text-base sm:text-lg font-light leading-relaxed">
                     183 students in government medical colleges
                   </p>
                 </div>
-                <div className="flex items-start gap-4 group hover:translate-x-1 transition-transform duration-300">
-                  <div className="w-8 h-8 rounded-full bg-amber-500/20 flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-amber-500/30 transition-colors">
-                    <CheckCircle className="w-5 h-5 text-amber-300" strokeWidth={2} />
+                <div className="flex items-start gap-3 sm:gap-4 group hover:translate-x-1 transition-transform duration-300">
+                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-amber-500/20 flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-amber-500/30 transition-colors">
+                    <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-amber-300" strokeWidth={2} />
                   </div>
-                  <p className="text-white text-lg font-light leading-relaxed">
+                  <p className="text-white text-base sm:text-lg font-light leading-relaxed">
                     12 students scored 700+ in NEET 2024
                   </p>
                 </div>
-                <div className="flex items-start gap-4 group hover:translate-x-1 transition-transform duration-300">
-                  <div className="w-8 h-8 rounded-full bg-amber-500/20 flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-amber-500/30 transition-colors">
-                    <CheckCircle className="w-5 h-5 text-amber-300" strokeWidth={2} />
+                <div className="flex items-start gap-3 sm:gap-4 group hover:translate-x-1 transition-transform duration-300">
+                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-amber-500/20 flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-amber-500/30 transition-colors">
+                    <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-amber-300" strokeWidth={2} />
                   </div>
-                  <p className="text-white text-lg font-light leading-relaxed">
+                  <p className="text-white text-base sm:text-lg font-light leading-relaxed">
                     Batches limited to 50 students (we know each name)
                   </p>
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-6 pt-4">
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 pt-4">
                 <Link href="/admissions">
                   <Button
                     variant="primary"
                     size="xl"
-                    className="relative group overflow-hidden bg-amber-500 hover:bg-amber-600 text-[#0f1729] font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 min-h-[44px] sm:min-h-[56px]"
+                    className="relative group overflow-hidden bg-amber-500 hover:bg-amber-600 text-[#0f1729] font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 min-h-11 sm:min-h-[56px] w-full sm:w-auto"
                   >
                     {/* Shimmer effect on hover */}
                     <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000"></div>
 
-                    <span className="relative z-10 flex items-center gap-2">
+                    <span className="relative z-10 flex items-center gap-2 text-sm sm:text-base">
                       Book Free Consultation
-                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                      <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
                     </span>
                   </Button>
                 </Link>
@@ -267,11 +267,11 @@ export default function AboutPage() {
                   <Button
                     variant="outline"
                     size="xl"
-                    className="border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 backdrop-blur-sm min-h-[44px] sm:min-h-[56px] group"
+                    className="border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 backdrop-blur-sm min-h-11 sm:min-h-[56px] group w-full sm:w-auto"
                   >
-                    <span className="flex items-center gap-2">
+                    <span className="flex items-center gap-2 text-sm sm:text-base">
                       View Our Results
-                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                      <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
                     </span>
                   </Button>
                 </Link>
@@ -284,28 +284,28 @@ export default function AboutPage() {
                 <div className="absolute -inset-1 bg-gradient-to-r from-amber-400/30 via-yellow-300/30 to-amber-400/30 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
 
                 {/* Glass card */}
-                <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl p-10 border border-white/20 shadow-2xl hover:border-white/30 transition-all duration-500">
-                  <h3 className="text-3xl font-bold mb-10 text-center tracking-tight">
+                <div className="relative bg-white/10 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 border border-white/20 shadow-2xl hover:border-white/30 transition-all duration-500">
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6 sm:mb-8 md:mb-10 text-center tracking-tight">
                     Our Academic Impact
                   </h3>
-                  <div className="grid grid-cols-2 gap-8">
+                  <div className="grid grid-cols-2 gap-4 sm:gap-6 md:gap-8">
                     {achievements.map((achievement, index) => (
                       <motion.div
                         key={index}
-                        className="text-center space-y-4 group/stat cursor-default"
+                        className="text-center space-y-2 sm:space-y-3 md:space-y-4 group/stat cursor-default"
                         whileHover={{ scale: 1.05 }}
                         transition={{ type: 'spring', stiffness: 300 }}
                       >
                         <div className="relative">
                           <achievement.icon
-                            className="w-12 h-12 mx-auto text-amber-300 group-hover/stat:text-amber-200 transition-colors duration-300"
+                            className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 mx-auto text-amber-300 group-hover/stat:text-amber-200 transition-colors duration-300"
                             strokeWidth={1.5}
                           />
                         </div>
-                        <div className="text-5xl font-bold text-white tracking-tight tabular-nums">
+                        <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight tabular-nums">
                           {achievement.number}
                         </div>
-                        <div className="text-white/80 font-light text-base leading-tight">
+                        <div className="text-white/80 font-light text-xs sm:text-sm md:text-base leading-tight">
                           {achievement.label}
                         </div>
                       </motion.div>

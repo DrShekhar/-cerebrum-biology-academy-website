@@ -197,27 +197,27 @@ export default function ResultsPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-green-100 text-green-800 px-4 py-2 rounded-full mb-6">
-            <Sparkles className="h-5 w-5" />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+        <div className="text-center mb-10 sm:mb-12 md:mb-16">
+          <div className="inline-flex items-center gap-2 bg-green-100 text-green-800 px-3 sm:px-4 py-2 rounded-full mb-4 sm:mb-6 text-xs sm:text-sm">
+            <Sparkles className="h-4 w-4 sm:h-5 sm:w-5" />
             <span className="font-semibold">NEET 2024 Results Announced</span>
           </div>
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-4 sm:mb-6 px-4">
             Our Students&apos; <span className="text-teal-600">Success Stories</span>
           </h1>
 
-          <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-8">
+          <p className="text-base sm:text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-6 sm:mb-8 px-4">
             Real students, real results. See how Cerebrum Biology Academy&apos;s proven methodology
             transformed dreams into reality for 582 students in NEET 2024.
           </p>
 
-          <div className="flex flex-wrap justify-center gap-3 mb-8">
+          <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 mb-6 sm:mb-8 px-4">
             <Button
               size="lg"
               variant="primary"
-              className="shadow-lg hover:shadow-xl transition-all"
+              className="shadow-lg hover:shadow-xl transition-all w-full sm:w-auto min-h-11"
               onClick={() =>
                 document
                   .getElementById('book-demo')
@@ -232,7 +232,7 @@ export default function ResultsPage() {
               size="lg"
               variant="outline"
               onClick={() => setShowShareMenu(!showShareMenu)}
-              className="relative"
+              className="relative w-full sm:w-auto min-h-11"
             >
               <Share2 className="h-5 w-5 mr-2" />
               Share Results
@@ -276,68 +276,68 @@ export default function ResultsPage() {
           )}
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 mb-16">
-          <Card className="text-center p-6 bg-gradient-to-br from-blue-50 to-blue-100 border-blue-200 shadow-lg hover:shadow-xl transition-shadow">
-            <Trophy className="h-12 w-12 text-yellow-500 mx-auto mb-4" />
-            <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4 md:gap-6 mb-10 sm:mb-12 md:mb-16">
+          <Card className="text-center p-4 sm:p-6 bg-gradient-to-br from-blue-50 to-blue-100 border-blue-200 shadow-lg hover:shadow-xl transition-shadow">
+            <Trophy className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 text-yellow-500 mx-auto mb-3 sm:mb-4" />
+            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-1 sm:mb-2">
               {NEET_2024_RESULTS.aiims}
             </div>
-            <div className="text-sm font-medium text-gray-700">AIIMS Selections</div>
+            <div className="text-xs sm:text-sm font-medium text-gray-700">AIIMS Selections</div>
           </Card>
 
-          <Card className="text-center p-6 bg-gradient-to-br from-green-50 to-green-100 border-green-200 shadow-lg hover:shadow-xl transition-shadow">
-            <Target className="h-12 w-12 text-green-600 mx-auto mb-4" />
-            <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+          <Card className="text-center p-4 sm:p-6 bg-gradient-to-br from-green-50 to-green-100 border-green-200 shadow-lg hover:shadow-xl transition-shadow">
+            <Target className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 text-green-600 mx-auto mb-3 sm:mb-4" />
+            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-1 sm:mb-2">
               {NEET_2024_RESULTS.successRate}%
             </div>
-            <div className="text-sm font-medium text-gray-700">Success Rate</div>
+            <div className="text-xs sm:text-sm font-medium text-gray-700">Success Rate</div>
           </Card>
 
-          <Card className="text-center p-6 bg-gradient-to-br from-purple-50 to-purple-100 border-purple-200 shadow-lg hover:shadow-xl transition-shadow">
-            <Medal className="h-12 w-12 text-purple-600 mx-auto mb-4" />
-            <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+          <Card className="text-center p-4 sm:p-6 bg-gradient-to-br from-purple-50 to-purple-100 border-purple-200 shadow-lg hover:shadow-xl transition-shadow">
+            <Medal className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 text-purple-600 mx-auto mb-3 sm:mb-4" />
+            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-1 sm:mb-2">
               {NEET_2024_RESULTS.topRanks}
             </div>
-            <div className="text-sm font-medium text-gray-700">Top 500 Ranks</div>
+            <div className="text-xs sm:text-sm font-medium text-gray-700">Top 500 Ranks</div>
           </Card>
 
-          <Card className="text-center p-6 bg-gradient-to-br from-orange-50 to-orange-100 border-orange-200 shadow-lg hover:shadow-xl transition-shadow">
-            <TrendingUp className="h-12 w-12 text-orange-600 mx-auto mb-4" />
-            <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+          <Card className="text-center p-4 sm:p-6 bg-gradient-to-br from-orange-50 to-orange-100 border-orange-200 shadow-lg hover:shadow-xl transition-shadow">
+            <TrendingUp className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 text-orange-600 mx-auto mb-3 sm:mb-4" />
+            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-1 sm:mb-2">
               +{NEET_2024_RESULTS.averageImprovement}
             </div>
-            <div className="text-sm font-medium text-gray-700">Avg. Improvement</div>
+            <div className="text-xs sm:text-sm font-medium text-gray-700">Avg. Improvement</div>
           </Card>
 
-          <Card className="text-center p-6 bg-gradient-to-br from-teal-50 to-teal-100 border-teal-200 shadow-lg hover:shadow-xl transition-shadow">
-            <GraduationCap className="h-12 w-12 text-teal-600 mx-auto mb-4" />
-            <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+          <Card className="text-center p-4 sm:p-6 bg-gradient-to-br from-teal-50 to-teal-100 border-teal-200 shadow-lg hover:shadow-xl transition-shadow">
+            <GraduationCap className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 text-teal-600 mx-auto mb-3 sm:mb-4" />
+            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-1 sm:mb-2">
               {NEET_2024_RESULTS.totalStudents}
             </div>
-            <div className="text-sm font-medium text-gray-700">Total Students</div>
+            <div className="text-xs sm:text-sm font-medium text-gray-700">Total Students</div>
           </Card>
 
-          <Card className="text-center p-6 bg-gradient-to-br from-pink-50 to-pink-100 border-pink-200 shadow-lg hover:shadow-xl transition-shadow">
-            <Award className="h-12 w-12 text-pink-600 mx-auto mb-4" />
-            <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+          <Card className="text-center p-4 sm:p-6 bg-gradient-to-br from-pink-50 to-pink-100 border-pink-200 shadow-lg hover:shadow-xl transition-shadow">
+            <Award className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 text-pink-600 mx-auto mb-3 sm:mb-4" />
+            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-1 sm:mb-2">
               {NEET_2024_RESULTS.scholarships}
             </div>
-            <div className="text-sm font-medium text-gray-700">Scholarships Won</div>
+            <div className="text-xs sm:text-sm font-medium text-gray-700">Scholarships Won</div>
           </Card>
         </div>
 
-        <section className="mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <section className="mb-10 sm:mb-12 md:mb-16">
+          <div className="text-center mb-8 sm:mb-10 md:mb-12 px-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
               Watch Our Students Share Their Journey
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
               Real stories from students who transformed their NEET preparation with Cerebrum
               Biology Academy
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {VIDEO_TESTIMONIALS.slice(0, 3).map((testimonial) => (
               <VideoTestimonial key={testimonial.id} {...testimonial} />
             ))}
