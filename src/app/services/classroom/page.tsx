@@ -1034,9 +1034,9 @@ export default function ClassroomCoachingPage() {
                       Main Campus
                     </div>
                     <div className="text-xs sm:text-sm text-gray-600">
-                      123 Education Hub, NEET Coaching Center
+                      DC Chauk, Sector 9, Rohini
                       <br />
-                      New Delhi - 110001
+                      New Delhi - 110085
                     </div>
                   </div>
                 </div>
@@ -1062,9 +1062,21 @@ export default function ClassroomCoachingPage() {
                       Contact Numbers
                     </div>
                     <div className="text-xs sm:text-sm text-gray-600">
-                      +91-9876543210 (Admissions)
+                      <a
+                        href="tel:+919311946297"
+                        className="hover:text-green-600 transition-colors"
+                      >
+                        +91 93119 46297
+                      </a>{' '}
+                      (Main)
                       <br />
-                      +91-9876543211 (Academic Query)
+                      <a
+                        href="tel:+918826444334"
+                        className="hover:text-green-600 transition-colors"
+                      >
+                        +91 88264 44334
+                      </a>{' '}
+                      (Admissions)
                     </div>
                   </div>
                 </div>
