@@ -516,7 +516,7 @@ const NEETCompletePage = () => {
             {/* Course Features */}
             <section>
               <h2 className="text-3xl font-bold mb-8">Why Choose Our NEET Biology Program?</h2>
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
                 {courseFeatures.map((feature, index) => (
                   <div
                     key={index}
@@ -535,7 +535,7 @@ const NEETCompletePage = () => {
             {/* Learning Outcomes */}
             <section>
               <h2 className="text-3xl font-bold mb-8">Learning Outcomes</h2>
-              <div className="grid md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
                 {learningOutcomes.map((category, index) => (
                   <div key={index} className="bg-white rounded-xl shadow-lg p-6">
                     <h3 className="text-xl font-bold mb-4 text-blue-800">{category.category}</h3>
@@ -773,7 +773,7 @@ const NEETCompletePage = () => {
             </div>
 
             <div className="bg-white rounded-xl shadow-lg p-8">
-              <div className="grid md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
                 <div>
                   <h3 className="text-2xl font-bold mb-6">NEET Complete Biology</h3>
 

@@ -186,7 +186,7 @@ export default function BoardPreparationPage() {
             </h2>
             <p className="text-gray-600">Outstanding results across all major educational boards</p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {successStats.map((stat, index) => (
               <div
                 key={index}

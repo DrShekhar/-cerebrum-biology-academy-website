@@ -276,7 +276,7 @@ export default function AdmissionPage() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {courses.map((course, index) => (
               <motion.div
                 key={course.id}
@@ -327,7 +327,7 @@ export default function AdmissionPage() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
             {eligibilityCriteria.map((item, index) => (
               <motion.div
                 key={index}
@@ -417,7 +417,7 @@ export default function AdmissionPage() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
             {admissionTimeline.map((phase, index) => (
               <motion.div
                 key={index}

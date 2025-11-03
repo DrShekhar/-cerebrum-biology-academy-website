@@ -317,7 +317,7 @@ export default function StateBoardsPage() {
           <div className="space-y-6">
             {commonChallenges.map((item, index) => (
               <div key={index} className="bg-white rounded-xl p-4 sm:p-6 shadow-lg">
-                <div className="grid md:grid-cols-3 gap-6 items-center">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 items-center">
                   <div>
                     <h3 className="text-lg font-bold text-red-600 mb-2">Challenge</h3>
                     <p className="text-gray-700">{item.challenge}</p>

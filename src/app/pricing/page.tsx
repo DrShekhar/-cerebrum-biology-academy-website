@@ -879,7 +879,7 @@ export default function PricingPage() {
 
         <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white mb-16">
           <h2 className="text-3xl font-bold text-center mb-12">Why Cerebrum Biology Academy?</h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
             <div className="text-center">
               <TrophyIcon className="w-16 h-16 mx-auto mb-4" />
               <h3 className="text-xl font-bold mb-2">98% Success Rate</h3>

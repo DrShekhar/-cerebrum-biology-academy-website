@@ -235,7 +235,7 @@ export default function ResultsPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             {topPerformers2024.map((student, index) => (
               <div
                 key={index}
@@ -315,7 +315,7 @@ export default function ResultsPage() {
                   </div>
                 </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-6">
                   <div className="text-center">
                     <div className="text-2xl font-bold text-blue-600">{year.totalStudents}</div>
                     <div className="text-sm text-gray-600">Total Students</div>
@@ -366,7 +366,7 @@ export default function ResultsPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {collegeAdmissions.map((college, index) => (
               <div
                 key={index}
@@ -393,7 +393,7 @@ export default function ResultsPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             {categoryWiseResults.map((category, index) => (
               <div
                 key={index}
@@ -428,7 +428,7 @@ export default function ResultsPage() {
           <div className="space-y-8">
             {remarkableStories.map((story, index) => (
               <div key={index} className="bg-white rounded-xl shadow-lg p-8">
-                <div className="grid lg:grid-cols-3 gap-8 items-center">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 items-center">
                   <div>
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">{story.student}</h3>
                     <p className="text-gray-600 mb-2">{story.location}</p>

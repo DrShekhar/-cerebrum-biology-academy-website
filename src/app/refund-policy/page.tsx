@@ -41,7 +41,7 @@ export default function RefundPolicyPage() {
                   1.1 Course Cancellation by Student
                 </h3>
                 <div className="bg-gray-50 p-6 rounded-lg space-y-4">
-                  <div className="grid md:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="bg-green-100 p-4 rounded-lg">
                       <h4 className="font-semibold text-green-800 mb-2">
                         Within 7 Days of Enrollment

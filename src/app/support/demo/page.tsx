@@ -152,7 +152,7 @@ export default function DemoPage() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {demoFeatures.map((feature, index) => (
               <motion.div
                 key={index}
@@ -245,7 +245,7 @@ export default function DemoPage() {
               </div>
 
               {/* Personal Information */}
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
                     Full Name *
@@ -274,7 +274,7 @@ export default function DemoPage() {
                 </div>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
                     Phone Number *
@@ -335,7 +335,7 @@ export default function DemoPage() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto">
             {facultyPreview.map((faculty, index) => (
               <motion.div
                 key={index}

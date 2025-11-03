@@ -183,7 +183,7 @@ export default function FoundationCoursePage() {
               Building strong Biology foundations that last a lifetime
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {successStats.map((stat, index) => (
               <div
                 key={index}
@@ -211,7 +211,7 @@ export default function FoundationCoursePage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             {ageGroups.map((group, index) => (
               <div
                 key={index}
@@ -251,7 +251,7 @@ export default function FoundationCoursePage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {uniqueFeatures.map((feature, index) => {
               const Icon = feature.icon
               return (
@@ -319,7 +319,7 @@ export default function FoundationCoursePage() {
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Foundation Course Features</h2>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {courseFeatures.map((feature, index) => (
               <div
                 key={index}

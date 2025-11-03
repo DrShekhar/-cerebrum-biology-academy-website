@@ -390,7 +390,7 @@ export default function FacultyPage() {
             </Link>
           </div>
 
-          <div className="mt-12 grid md:grid-cols-3 gap-8 text-center">
+          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 text-center">
             <div>
               <div className="text-3xl font-bold mb-2">50+</div>
               <div className="text-purple-100">Expert Faculty</div>

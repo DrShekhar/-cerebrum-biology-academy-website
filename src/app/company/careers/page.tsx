@@ -400,7 +400,7 @@ export default function CareersPage() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-16">
             {companyValues.map((value, index) => (
               <motion.div
                 key={index}
@@ -417,7 +417,7 @@ export default function CareersPage() {
           </div>
 
           {/* Work Culture Stats */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {workCulture.map((culture, index) => (
               <motion.div
                 key={index}
@@ -601,7 +601,7 @@ export default function CareersPage() {
             transition={{ duration: 0.6 }}
           >
             <form onSubmit={handleApplicationSubmit} className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
                     Full Name *
@@ -634,7 +634,7 @@ export default function CareersPage() {
                 </div>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
                     Phone Number *

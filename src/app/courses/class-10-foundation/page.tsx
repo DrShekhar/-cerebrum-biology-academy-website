@@ -153,33 +153,35 @@ export default function Class10FoundationPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <section className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white py-8 sm:py-12 md:py-16 lg:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-center">
             <div>
-              <h1 className="text-5xl font-bold mb-6">Class 10th Biology Foundation</h1>
-              <p className="text-xl text-emerald-100 mb-8">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
+                Class 10th Biology Foundation
+              </h1>
+              <p className="text-base sm:text-lg md:text-xl text-emerald-100 mb-6 sm:mb-8">
                 Master advanced Biology concepts while excelling in board exams. Perfect preparation
                 for NEET foundation with comprehensive life processes understanding.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/admissions"
-                  className="bg-white text-emerald-600 px-8 py-3 rounded-lg font-semibold hover:bg-emerald-50 transition-colors inline-flex items-center"
+                  className="w-full sm:w-auto bg-white text-emerald-600 px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-emerald-50 transition-colors inline-flex items-center justify-center min-h-[44px]"
                 >
                   Join Class 10 Foundation
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
                 <Link
                   href="/contact"
-                  className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-emerald-600 transition-colors"
+                  className="w-full sm:w-auto border border-white text-white px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-emerald-600 transition-colors inline-flex items-center justify-center min-h-[44px]"
                 >
                   Book Free Demo
                 </Link>
               </div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8">
-              <h3 className="text-2xl font-bold mb-6">Class 10 Highlights</h3>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8">
+              <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">Class 10 Highlights</h3>
               <div className="space-y-4">
                 <div className="flex items-center">
                   <Clock className="w-6 h-6 mr-3 text-emerald-300" />
@@ -204,15 +206,17 @@ export default function Class10FoundationPage() {
       </section>
 
       {/* Success Statistics */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Class 10 Excellence Record</h2>
+      <section className="py-8 sm:py-12 md:py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-8 sm:mb-10 md:mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
+              Class 10 Excellence Record
+            </h2>
             <p className="text-gray-600">
               Outstanding performance in board exams and NEET foundation building
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {successStats.map((stat, index) => (
               <div
                 key={index}
@@ -228,16 +232,18 @@ export default function Class10FoundationPage() {
       </section>
 
       {/* Board Focus */}
-      <section className="py-16 bg-gray-100">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">All Board Exam Excellence</h2>
+      <section className="py-8 sm:py-12 md:py-16 bg-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-8 sm:mb-10 md:mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
+              All Board Exam Excellence
+            </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Comprehensive preparation for all major boards with board-specific strategies
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             {boardFocus.map((board, index) => (
               <div
                 key={index}
@@ -259,17 +265,19 @@ export default function Class10FoundationPage() {
       </section>
 
       {/* Learning Approach */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced Class 10 Learning</h2>
+      <section className="py-8 sm:py-12 md:py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-8 sm:mb-10 md:mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
+              Advanced Class 10 Learning
+            </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Sophisticated teaching approach preparing students for board excellence and NEET
               foundation
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {learningApproach.map((approach, index) => (
               <div
                 key={index}
@@ -285,10 +293,10 @@ export default function Class10FoundationPage() {
       </section>
 
       {/* Unique Features */}
-      <section className="py-16 bg-gray-100">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+      <section className="py-8 sm:py-12 md:py-16 bg-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-8 sm:mb-10 md:mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
               Why Class 10 Foundation Matters?
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
@@ -296,7 +304,7 @@ export default function Class10FoundationPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {uniqueFeatures.map((feature, index) => {
               const Icon = feature.icon
               return (
@@ -315,14 +323,16 @@ export default function Class10FoundationPage() {
       </section>
 
       {/* Curriculum with NEET Weightage */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Class 10 Advanced Curriculum</h2>
+      <section className="py-8 sm:py-12 md:py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-8 sm:mb-10 md:mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
+              Class 10 Advanced Curriculum
+            </h2>
             <p className="text-gray-600">NCERT-based syllabus with NEET foundation perspective</p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
             {curriculum.map((unit, index) => (
               <div
                 key={index}
@@ -357,13 +367,15 @@ export default function Class10FoundationPage() {
       </section>
 
       {/* Course Features */}
-      <section className="py-16 bg-gray-100">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Class 10 Foundation Features</h2>
+      <section className="py-8 sm:py-12 md:py-16 bg-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-8 sm:mb-10 md:mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
+              Class 10 Foundation Features
+            </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {courseFeatures.map((feature, index) => (
               <div
                 key={index}
@@ -378,12 +390,14 @@ export default function Class10FoundationPage() {
       </section>
 
       {/* Pricing & Enrollment */}
-      <section className="py-16 bg-emerald-50">
+      <section className="py-8 sm:py-12 md:py-16 bg-emerald-50">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Excel in Board Exams & Beyond</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 sm:mb-8">
+            Excel in Board Exams & Beyond
+          </h2>
 
           <div className="bg-white rounded-3xl shadow-xl p-8 mb-8">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-center">
               <div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   Class 10th Advanced Foundation
@@ -429,8 +443,8 @@ export default function Class10FoundationPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16">
-        <div className="max-w-4xl mx-auto px-6">
+      <section className="py-8 sm:py-12 md:py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
             Class 10 Foundation FAQ
           </h2>
