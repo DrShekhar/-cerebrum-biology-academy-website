@@ -264,7 +264,7 @@ export default function ServicesPage() {
               Delivering exceptional results across all service formats
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
             {successMetrics.map((metric, index) => (
               <div
                 key={index}
@@ -469,7 +469,7 @@ export default function ServicesPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
             {whyChooseOurServices.map((reason, index) => {
               const Icon = reason.icon
               return (

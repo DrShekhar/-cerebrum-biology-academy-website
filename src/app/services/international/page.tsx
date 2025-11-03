@@ -331,7 +331,7 @@ export default function InternationalProgramsPage() {
           </div>
 
           {/* Hero Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
             {heroStats.map((stat, index) => (
               <div
                 key={index}
@@ -660,7 +660,7 @@ export default function InternationalProgramsPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
             <div className="bg-white rounded-lg sm:rounded-xl p-4 sm:p-6 text-center shadow-lg">
               <Phone className="w-10 h-10 sm:w-12 sm:h-12 text-purple-600 mx-auto mb-3 sm:mb-4" />
               <h3 className="text-sm sm:text-base font-semibold text-gray-900 mb-2">

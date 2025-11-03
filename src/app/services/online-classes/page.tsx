@@ -342,7 +342,7 @@ export default function OnlineClassesPage() {
           </div>
 
           {/* Hero Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
             {heroStats.map((stat, index) => (
               <div
                 key={index}
@@ -457,7 +457,7 @@ export default function OnlineClassesPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
             {learningAdvantages.map((advantage, index) => {
               const Icon = advantage.icon
               return (
@@ -619,7 +619,7 @@ export default function OnlineClassesPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-8 sm:mb-10 md:mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-8 sm:mb-10 md:mb-12">
             {technicalRequirements.map((req, index) => {
               const Icon = req.icon
               return (

@@ -390,7 +390,7 @@ export default function DoubtResolutionPage() {
               Industry-leading support statistics that speak for our commitment
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
             {stats.map((stat, index) => (
               <div
                 key={index}
@@ -748,7 +748,7 @@ export default function DoubtResolutionPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
             {responseGuarantees.map((guarantee, index) => (
               <div
                 key={index}
