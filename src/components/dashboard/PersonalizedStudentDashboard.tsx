@@ -46,6 +46,7 @@ import { fetchWithRetry } from '@/lib/utils/fetchWithRetry'
 import { useToast } from '@/components/ui/Toast'
 import { ProgressCardSkeleton } from '@/components/ai/skeletons/ProgressCardSkeleton'
 import { MetricCardSkeleton } from '@/components/ai/skeletons/MetricsSkeleton'
+import { BiologyScoreDisplay } from '@/components/ui/BiologyScoreDisplay'
 
 interface StudySession {
   id: string
@@ -520,15 +521,22 @@ export function PersonalizedStudentDashboard() {
               </div>
             </div>
             <div className="flex items-center space-x-2 sm:space-x-4 w-full sm:w-auto justify-between sm:justify-end">
-              <div className="text-center sm:text-right">
-                <div className="text-xs text-gray-600">Biology Score</div>
-                <div className="text-lg sm:text-2xl font-bold text-blue-600">
-                  {neetProgress.currentScore}/360
-                </div>
-                <div className="text-xs text-gray-500 hidden sm:block">
-                  Total: {neetProgress.currentScore * 2}/720
-                </div>
-              </div>
+              <BiologyScoreDisplay
+                currentScore={neetProgress.currentScore}
+                maxScore={360}
+                showNEETTotal={true}
+                size="md"
+                showPercentage={false}
+                className="hidden sm:block"
+              />
+              <BiologyScoreDisplay
+                currentScore={neetProgress.currentScore}
+                maxScore={360}
+                showNEETTotal={false}
+                size="sm"
+                showPercentage={false}
+                className="sm:hidden"
+              />
               <div className="text-center sm:text-right">
                 <div className="text-xs text-gray-600">Rank</div>
                 <div className="text-lg sm:text-2xl font-bold text-green-600">
@@ -644,12 +652,15 @@ export function PersonalizedStudentDashboard() {
                     </h3>
                     <div className="space-y-1.5 sm:space-y-2">
                       <div className="text-xs sm:text-sm text-blue-100">Current Score</div>
-                      <div className="text-3xl sm:text-4xl font-bold">
-                        {neetProgress.currentScore}/360
-                      </div>
-                      <div className="text-xs sm:text-sm text-blue-200 mb-2">
-                        Total NEET: {neetProgress.currentScore * 2}/720
-                      </div>
+                      <BiologyScoreDisplay
+                        currentScore={neetProgress.currentScore}
+                        maxScore={360}
+                        showNEETTotal={true}
+                        size="lg"
+                        showLabel={false}
+                        showPercentage={false}
+                        className="text-white [&_.text-blue-600]:text-white [&_.text-gray-500]:text-blue-200"
+                      />
                       <div className="flex items-center space-x-1.5 sm:space-x-2">
                         {neetProgress.improvement >= 0 ? (
                           <ArrowUp className="w-3 h-3 sm:w-4 sm:h-4 text-green-300" />

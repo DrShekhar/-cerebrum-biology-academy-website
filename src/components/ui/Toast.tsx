@@ -84,7 +84,13 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
       {children}
 
       {/* Toast Container */}
-      <div className="fixed top-4 right-4 z-50 space-y-2 max-w-sm w-full pointer-events-none">
+      <div
+        className="fixed top-4 right-4 z-50 space-y-2 max-w-sm w-full pointer-events-none"
+        aria-live="polite"
+        aria-atomic="true"
+        role="region"
+        aria-label="Notifications"
+      >
         <AnimatePresence>
           {toasts.map((toast) => (
             <motion.div
@@ -94,17 +100,22 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
               exit={{ opacity: 0, x: 100 }}
               transition={{ duration: 0.3, ease: 'easeOut' }}
               className={`${getColors(toast.type)} border rounded-xl shadow-lg p-4 pointer-events-auto backdrop-blur-sm`}
+              role="alert"
+              aria-live={toast.type === 'error' ? 'assertive' : 'polite'}
             >
               <div className="flex items-start gap-3">
-                <div className={getIconColor(toast.type)}>{getIcon(toast.type)}</div>
+                <div className={getIconColor(toast.type)} aria-hidden="true">
+                  {getIcon(toast.type)}
+                </div>
                 <div className="flex-1 min-w-0">
                   <h4 className="font-semibold text-sm">{toast.title}</h4>
                   {toast.message && <p className="text-sm mt-1 opacity-90">{toast.message}</p>}
                 </div>
                 <button
                   onClick={() => removeToast(toast.id)}
-                  className="text-gray-400 hover:text-gray-600 transition-colors"
+                  className="text-gray-400 hover:text-gray-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded"
                   aria-label="Close notification"
+                  type="button"
                 >
                   <X className="w-4 h-4" />
                 </button>

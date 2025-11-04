@@ -29,6 +29,7 @@ import {
 } from '@heroicons/react/24/solid'
 import { PremiumCard, PremiumButton, AnimatedCounter } from '@/components/ui/PremiumDesignSystem'
 import { EnrollmentProgress } from '@/components/ui/ProgressIndicators'
+import { BiologyScoreDisplay } from '@/components/ui/BiologyScoreDisplay'
 
 interface StreamlinedEnrollmentPageProps {
   onEnrollmentComplete?: (data: any) => void
@@ -388,13 +389,27 @@ export function StreamlinedEnrollmentPage({
                   <div className="grid md:grid-cols-3 gap-6 mb-6">
                     <div className="text-center">
                       <div className="text-3xl font-bold text-red-600">
-                        {assessmentResult.currentScore}/360
+                        <BiologyScoreDisplay
+                          currentScore={assessmentResult.currentScore}
+                          maxScore={360}
+                          showLabel={false}
+                          showPercentage={false}
+                          size="lg"
+                          className="[&_.text-blue-600]:text-red-600"
+                        />
                       </div>
                       <div className="text-gray-600">Current Score</div>
                     </div>
                     <div className="text-center">
                       <div className="text-3xl font-bold text-green-600">
-                        {assessmentResult.targetScore}/360
+                        <BiologyScoreDisplay
+                          currentScore={assessmentResult.targetScore}
+                          maxScore={360}
+                          showLabel={false}
+                          showPercentage={false}
+                          size="lg"
+                          className="[&_.text-blue-600]:text-green-600"
+                        />
                       </div>
                       <div className="text-gray-600">Target Score</div>
                     </div>

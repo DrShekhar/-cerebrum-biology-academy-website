@@ -16,6 +16,7 @@ import { fetchWithRetry } from '@/lib/utils/fetchWithRetry'
 import { ProgressCardSkeleton } from './skeletons/ProgressCardSkeleton'
 import { MetricCardSkeleton } from './skeletons/MetricsSkeleton'
 import { useAuth } from '@/hooks/useAuth'
+import { BiologyScoreDisplay } from '@/components/ui/BiologyScoreDisplay'
 import {
   Brain,
   BookOpen,
@@ -954,11 +955,13 @@ export function AIEducationDashboard() {
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
                     {[
                       {
-                        label: 'Predicted NEET Score',
-                        value: metrics.predictions.examScore,
-                        max: 720,
+                        label: 'Predicted Biology Score',
+                        value: Math.round(metrics.predictions.examScore / 2),
+                        max: 360,
                         color: 'purple',
                         icon: GraduationCap,
+                        showTotal: true,
+                        totalValue: metrics.predictions.examScore,
                       },
                       {
                         label: 'Exam Readiness',
@@ -1007,12 +1010,17 @@ export function AIEducationDashboard() {
                             </span>
                           </div>
                           <p className="text-sm text-gray-600 mb-2 sm:mb-3">{prediction.label}</p>
-                          <p className="text-2xl sm:text-3xl font-bold text-gray-800 mb-3">
+                          <p className="text-2xl sm:text-3xl font-bold text-gray-800 mb-1">
                             {prediction.isRank ? '#' : ''}
                             {prediction.value}
                             {!prediction.isRank && prediction.max > 100 ? `/${prediction.max}` : ''}
                             {!prediction.isRank && prediction.max <= 100 ? '%' : ''}
                           </p>
+                          {prediction.showTotal && (
+                            <p className="text-xs text-gray-500 mb-2">
+                              Total NEET: {prediction.totalValue}/720
+                            </p>
+                          )}
                           {!prediction.isRank && (
                             <div className="w-full bg-gray-200 rounded-full h-2 sm:h-2.5">
                               <div

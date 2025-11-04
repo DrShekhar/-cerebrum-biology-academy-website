@@ -39,6 +39,7 @@ import {
   type Milestone,
 } from '@/lib/learning/PersonalizedLearningEngine'
 import { useAuth } from '@/hooks/useAuth'
+import { BiologyScoreDisplay } from '@/components/ui/BiologyScoreDisplay'
 
 export function PersonalizedLearningPath() {
   const { user, isAuthenticated } = useAuth()
@@ -233,9 +234,21 @@ export function PersonalizedLearningPath() {
               <h1 className="text-3xl font-bold text-gray-900 mb-2">
                 🎯 Your Personalized Learning Path
               </h1>
-              <p className="text-gray-600">
+              <p className="text-gray-600 flex items-center gap-2">
                 AI-powered study plan designed to achieve your target of{' '}
-                {studentProfile.targetScore}/720
+                <span className="inline-flex">
+                  <BiologyScoreDisplay
+                    currentScore={Math.round(studentProfile.targetScore / 2)}
+                    maxScore={360}
+                    showLabel={false}
+                    showPercentage={false}
+                    size="sm"
+                    className="inline-flex"
+                  />
+                </span>
+                <span className="text-sm text-gray-500">
+                  (Total: {studentProfile.targetScore}/720)
+                </span>
               </p>
             </div>
             <div className="text-right">

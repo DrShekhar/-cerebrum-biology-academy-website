@@ -10,6 +10,8 @@ import { Footer } from '@/components/layout/Footer'
 import { PWAProvider } from '@/components/pwa/PWAProvider'
 import { MaintenancePopup } from '@/components/ui/MaintenancePopup'
 import { AuthProvider } from '@/contexts/AuthContext'
+import { ToastProvider } from '@/components/ui/Toast'
+import { TrialBannerWrapper } from '@/components/trial/TrialBannerWrapper'
 import './globals.css'
 
 const geistSans = Geist({
@@ -108,26 +110,29 @@ export default function RootLayout({
         <GoogleAnalytics />
         <PWAProvider />
         <AuthProvider>
-          <ErrorBoundary>
-            <a
-              href="#main-content"
-              className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-md z-[9999] font-medium"
-            >
-              Skip to main content
-            </a>
-            <div data-section="navigation" className="priority-immediate">
-              <Header />
-            </div>
-            <main id="main-content" className="min-h-screen pb-16 md:pb-0">
-              {children}
-            </main>
-            <div data-lazy="footer" className="priority-lazy">
-              <Footer />
-            </div>
-            <div data-section="mobile-bottom-nav" className="priority-immediate">
-              <MobileBottomNav />
-            </div>
-          </ErrorBoundary>
+          <ToastProvider>
+            <ErrorBoundary>
+              <a
+                href="#main-content"
+                className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-md z-[9999] font-medium"
+              >
+                Skip to main content
+              </a>
+              <div data-section="navigation" className="priority-immediate">
+                <Header />
+              </div>
+              <TrialBannerWrapper />
+              <main id="main-content" className="min-h-screen pb-16 md:pb-0">
+                {children}
+              </main>
+              <div data-lazy="footer" className="priority-lazy">
+                <Footer />
+              </div>
+              <div data-section="mobile-bottom-nav" className="priority-immediate">
+                <MobileBottomNav />
+              </div>
+            </ErrorBoundary>
+          </ToastProvider>
         </AuthProvider>
         <MaintenancePopup />
         <Script src="https://checkout.razorpay.com/v1/checkout.js" strategy="lazyOnload" />
