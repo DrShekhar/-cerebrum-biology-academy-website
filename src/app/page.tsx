@@ -1,3 +1,5 @@
+import type { Metadata } from 'next'
+import { generatePageMetadata } from '@/lib/seo/metadata'
 import { OptimizedHeroSection } from '@/components/layout/OptimizedHeroSection'
 import { CoursesSection } from '@/components/layout/CoursesSection'
 import { FacultySection } from '@/components/layout/FacultySection'
@@ -10,6 +12,8 @@ import { GoogleReviewsWidget } from '@/components/social-proof/GoogleReviewsWidg
 import { LiveActivityFeed } from '@/components/social-proof/LiveActivityFeed'
 import { realTestimonials } from '@/data/realTestimonials'
 import Link from 'next/link'
+
+export const metadata: Metadata = generatePageMetadata('home')
 
 export default function Home() {
   return (
