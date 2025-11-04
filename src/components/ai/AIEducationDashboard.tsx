@@ -17,6 +17,7 @@ import { ProgressCardSkeleton } from './skeletons/ProgressCardSkeleton'
 import { MetricCardSkeleton } from './skeletons/MetricsSkeleton'
 import { useAuth } from '@/hooks/useAuth'
 import { BiologyScoreDisplay } from '@/components/ui/BiologyScoreDisplay'
+import { EmptyState } from '@/components/ui/EmptyState'
 import {
   Brain,
   BookOpen,
@@ -879,61 +880,83 @@ export function AIEducationDashboard() {
               className="space-y-8"
             >
               {/* Visual Progress Cards */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.6 }}
-                className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8"
-              >
+              {metrics.totalQuestions > 0 ||
+              progressData.syllabus.completed > 0 ||
+              progressData.studyHours.hours > 0 ? (
                 <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.1 }}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.6 }}
+                  className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8"
                 >
-                  <SyllabusCard
-                    completed={progressData.syllabus.completed}
-                    total={progressData.syllabus.total}
-                    change="+5%"
-                    showMilestones={true}
-                  />
-                </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.1 }}
+                  >
+                    <SyllabusCard
+                      completed={progressData.syllabus.completed}
+                      total={progressData.syllabus.total}
+                      change="+5%"
+                      showMilestones={true}
+                    />
+                  </motion.div>
 
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.2 }}
-                >
-                  <StudyHoursCard
-                    hours={progressData.studyHours.hours}
-                    target={progressData.studyHours.target}
-                    change="+8h"
-                  />
-                </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.2 }}
+                  >
+                    <StudyHoursCard
+                      hours={progressData.studyHours.hours}
+                      target={progressData.studyHours.target}
+                      change="+8h"
+                    />
+                  </motion.div>
 
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.3 }}
-                >
-                  <TestScoreCard
-                    score={progressData.testScore.score}
-                    maxScore={progressData.testScore.maxScore}
-                    change="+2.5%"
-                  />
-                </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.3 }}
+                  >
+                    <TestScoreCard
+                      score={progressData.testScore.score}
+                      maxScore={progressData.testScore.maxScore}
+                      change="+2.5%"
+                    />
+                  </motion.div>
 
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.4 }}
-                >
-                  <StreakCard
-                    days={progressData.streak.days}
-                    bestStreak={progressData.streak.bestStreak}
-                    change="+3 days"
-                  />
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.4 }}
+                  >
+                    <StreakCard
+                      days={progressData.streak.days}
+                      bestStreak={progressData.streak.bestStreak}
+                      change="+3 days"
+                    />
+                  </motion.div>
                 </motion.div>
-              </motion.div>
+              ) : (
+                <div className="backdrop-blur-xl bg-white/10 rounded-2xl p-8 border border-white/20 shadow-xl">
+                  <EmptyState
+                    icon={BookOpen}
+                    title="Welcome to AI Education Dashboard"
+                    description="This is your personalized learning hub. Start by asking questions, taking assessments, or generating practice tests to see your progress here."
+                    primaryAction={{
+                      label: 'Ask AI Tutor',
+                      onClick: () => setActiveTab('tutor'),
+                    }}
+                    secondaryAction={{
+                      label: 'Take Assessment',
+                      onClick: () => setActiveTab('assessment'),
+                    }}
+                    size="lg"
+                    variant="default"
+                  />
+                </div>
+              )}
 
               {/* Main Content Grid */}
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
@@ -1084,54 +1107,76 @@ export function AIEducationDashboard() {
                       <Activity className="w-5 h-5 mr-2 sm:mr-3 text-green-500" />
                       Recent Activity
                     </h3>
-                    <button
-                      onClick={handleViewAll}
-                      className="text-sm text-blue-600 hover:text-blue-700 font-medium"
-                    >
-                      View All
-                    </button>
+                    {recentActivities.length > 0 && (
+                      <button
+                        onClick={handleViewAll}
+                        className="text-sm text-blue-600 hover:text-blue-700 font-medium"
+                      >
+                        View All
+                      </button>
+                    )}
                   </div>
 
-                  <div className="space-y-3 sm:space-y-4">
-                    {recentActivities.map((activity, index) => (
-                      <motion.div
-                        key={activity.id}
-                        initial={{ opacity: 0, x: 20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: 0.3 + index * 0.1 }}
-                        className="flex items-start space-x-3 sm:space-x-4 p-3 sm:p-4 backdrop-blur-lg bg-white/20 rounded-lg border border-white/30 hover:shadow-lg transition-shadow"
-                      >
-                        <div
-                          className={`w-8 h-8 rounded-lg flex items-center justify-center ${
-                            activity.type === 'doubt'
-                              ? 'bg-purple-100 text-purple-600'
-                              : activity.type === 'assessment'
-                                ? 'bg-green-100 text-green-600'
-                                : activity.type === 'achievement'
-                                  ? 'bg-yellow-100 text-yellow-600'
-                                  : 'bg-blue-100 text-blue-600'
-                          }`}
+                  {recentActivities.length > 0 ? (
+                    <div className="space-y-3 sm:space-y-4">
+                      {recentActivities.map((activity, index) => (
+                        <motion.div
+                          key={activity.id}
+                          initial={{ opacity: 0, x: 20 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ delay: 0.3 + index * 0.1 }}
+                          className="flex items-start space-x-3 sm:space-x-4 p-3 sm:p-4 backdrop-blur-lg bg-white/20 rounded-lg border border-white/30 hover:shadow-lg transition-shadow"
                         >
-                          {activity.icon}
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <p className="text-sm font-medium text-gray-800 truncate">
-                            {activity.title}
-                          </p>
-                          <p className="text-xs text-gray-500 mt-1">{activity.description}</p>
-                          <p className="text-xs text-gray-400 mt-1">
-                            {new Intl.RelativeTimeFormat().format(
-                              Math.round((activity.timestamp.getTime() - Date.now()) / (1000 * 60)),
-                              'minute'
-                            )}
-                          </p>
-                        </div>
-                        {activity.success && (
-                          <CheckCircle className="w-4 h-4 text-green-500 mt-1" />
-                        )}
-                      </motion.div>
-                    ))}
-                  </div>
+                          <div
+                            className={`w-8 h-8 rounded-lg flex items-center justify-center ${
+                              activity.type === 'doubt'
+                                ? 'bg-purple-100 text-purple-600'
+                                : activity.type === 'assessment'
+                                  ? 'bg-green-100 text-green-600'
+                                  : activity.type === 'achievement'
+                                    ? 'bg-yellow-100 text-yellow-600'
+                                    : 'bg-blue-100 text-blue-600'
+                            }`}
+                          >
+                            {activity.icon}
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <p className="text-sm font-medium text-gray-800 truncate">
+                              {activity.title}
+                            </p>
+                            <p className="text-xs text-gray-500 mt-1">{activity.description}</p>
+                            <p className="text-xs text-gray-400 mt-1">
+                              {new Intl.RelativeTimeFormat().format(
+                                Math.round(
+                                  (activity.timestamp.getTime() - Date.now()) / (1000 * 60)
+                                ),
+                                'minute'
+                              )}
+                            </p>
+                          </div>
+                          {activity.success && (
+                            <CheckCircle className="w-4 h-4 text-green-500 mt-1" />
+                          )}
+                        </motion.div>
+                      ))}
+                    </div>
+                  ) : (
+                    <EmptyState
+                      icon={TrendingUp}
+                      title="Your learning journey begins here"
+                      description="Start answering questions, taking tests, and using the AI tutor to unlock insights about your strengths and areas for improvement."
+                      primaryAction={{
+                        label: 'Start Learning',
+                        onClick: () => setActiveTab('tutor'),
+                      }}
+                      secondaryAction={{
+                        label: 'Take a Test',
+                        onClick: () => setActiveTab('assessment'),
+                      }}
+                      size="md"
+                      variant="info"
+                    />
+                  )}
                 </div>
               </div>
 

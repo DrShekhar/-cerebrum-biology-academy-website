@@ -33,6 +33,7 @@ import {
   ThumbsDown,
   RotateCcw,
 } from 'lucide-react'
+import { EmptyState } from '@/components/ui/EmptyState'
 // import { biologyTutor, BiologyQuery, BiologyResponse } from '@/lib/ai/BiologyTutorEngine' // Using API instead for Edge Runtime compatibility
 
 // Types for API compatibility
@@ -806,59 +807,74 @@ What would you like to explore today?`,
 
               {/* Messages */}
               <div className="flex-1 overflow-y-auto p-4 space-y-4">
-                {chatState.messages.map((message) => (
-                  <div
-                    key={message.id}
-                    className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
-                  >
+                {chatState.messages.length === 0 ? (
+                  <div className="flex items-center justify-center h-full">
+                    <EmptyState
+                      icon={MessageCircle}
+                      title="Ask me anything about Biology!"
+                      description="I can explain concepts, solve doubts, and help you understand difficult topics for NEET and school exams."
+                      size="sm"
+                      variant="default"
+                      animate={false}
+                    />
+                  </div>
+                ) : (
+                  chatState.messages.map((message) => (
                     <div
-                      className={`max-w-[70%] p-3 rounded-lg ${
-                        message.type === 'user'
-                          ? 'bg-blue-500 text-white'
-                          : 'bg-gray-100 text-gray-800'
-                      }`}
+                      key={message.id}
+                      className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
                     >
-                      <div className="flex items-start space-x-2">
-                        {message.type === 'bot' && <Bot className="w-4 h-4 mt-1 text-green-500" />}
-                        <div className="flex-1">
-                          <p className="text-sm whitespace-pre-wrap">{message.content}</p>
-
-                          {/* Message actions */}
-                          {message.actions && message.actions.length > 0 && (
-                            <div className="mt-2 space-y-1">
-                              {message.actions.map((action, index) => (
-                                <button
-                                  key={index}
-                                  onClick={() => handleActionClick(action)}
-                                  className="flex items-center space-x-1 text-xs bg-blue-100 hover:bg-blue-200 text-blue-700 px-2 py-1 rounded transition-colors w-full"
-                                >
-                                  {action.icon}
-                                  <span>{action.label}</span>
-                                </button>
-                              ))}
-                            </div>
+                      <div
+                        className={`max-w-[70%] p-3 rounded-lg ${
+                          message.type === 'user'
+                            ? 'bg-blue-500 text-white'
+                            : 'bg-gray-100 text-gray-800'
+                        }`}
+                      >
+                        <div className="flex items-start space-x-2">
+                          {message.type === 'bot' && (
+                            <Bot className="w-4 h-4 mt-1 text-green-500" />
                           )}
+                          <div className="flex-1">
+                            <p className="text-sm whitespace-pre-wrap">{message.content}</p>
 
-                          {/* Response metadata */}
-                          {message.response && (
-                            <div className="mt-2 text-xs text-gray-500 space-y-1">
-                              <div className="flex items-center space-x-2">
-                                <Star className="w-3 h-3" />
-                                <span>
-                                  Confidence: {Math.round(message.response.confidence * 100)}%
-                                </span>
+                            {/* Message actions */}
+                            {message.actions && message.actions.length > 0 && (
+                              <div className="mt-2 space-y-1">
+                                {message.actions.map((action, index) => (
+                                  <button
+                                    key={index}
+                                    onClick={() => handleActionClick(action)}
+                                    className="flex items-center space-x-1 text-xs bg-blue-100 hover:bg-blue-200 text-blue-700 px-2 py-1 rounded transition-colors w-full"
+                                  >
+                                    {action.icon}
+                                    <span>{action.label}</span>
+                                  </button>
+                                ))}
                               </div>
-                              <div className="flex items-center space-x-2">
-                                <Clock className="w-3 h-3" />
-                                <span>Study time: {message.response.estimatedStudyTime} min</span>
+                            )}
+
+                            {/* Response metadata */}
+                            {message.response && (
+                              <div className="mt-2 text-xs text-gray-500 space-y-1">
+                                <div className="flex items-center space-x-2">
+                                  <Star className="w-3 h-3" />
+                                  <span>
+                                    Confidence: {Math.round(message.response.confidence * 100)}%
+                                  </span>
+                                </div>
+                                <div className="flex items-center space-x-2">
+                                  <Clock className="w-3 h-3" />
+                                  <span>Study time: {message.response.estimatedStudyTime} min</span>
+                                </div>
                               </div>
-                            </div>
-                          )}
+                            )}
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  ))
+                )}
 
                 {chatState.isTyping && (
                   <motion.div

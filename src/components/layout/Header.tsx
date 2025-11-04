@@ -105,7 +105,7 @@ const Header = () => {
   }
 
   return (
-    <header className="bg-white shadow-lg sticky top-0 z-50 border-b border-gray-100">
+    <header className="bg-white shadow-lg sticky top-0 z-50 border-b border-gray-100" role="banner">
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Left Section - Burger Menu + Logo */}
@@ -162,7 +162,11 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-6">
+          <nav
+            className="hidden lg:flex items-center space-x-6"
+            role="navigation"
+            aria-label="Main navigation"
+          >
             {mainNavigation.map((item, index) => (
               <div key={index} className="relative">
                 {item.hasDropdown ? (
@@ -180,9 +184,12 @@ const Header = () => {
                       className={`flex items-center space-x-1 font-medium transition-colors ${
                         isActive(item.href!) ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'
                       }`}
+                      aria-current={isActive(item.href!) ? 'page' : undefined}
+                      aria-haspopup="true"
+                      aria-expanded={isCoursesOpen}
                     >
                       <span>{item.label}</span>
-                      <ChevronDown className="w-4 h-4" />
+                      <ChevronDown className="w-4 h-4" aria-hidden="true" />
                     </Link>
 
                     <AnimatePresence>
@@ -193,6 +200,8 @@ const Header = () => {
                           exit={{ opacity: 0, y: -10 }}
                           transition={{ duration: 0.2 }}
                           className="absolute top-full left-0 mt-2 bg-white rounded-lg shadow-xl border border-gray-200 py-3 xs:py-4 z-50 w-64 xs:w-72 min-w-[240px]"
+                          role="menu"
+                          aria-label="Course options"
                         >
                           <div className="px-3 xs:px-4">
                             <div className="mb-2 xs:mb-3">
@@ -211,8 +220,12 @@ const Header = () => {
                                     key={subIndex}
                                     href={subItem.href}
                                     className="flex items-center space-x-2 xs:space-x-3 p-2.5 xs:p-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors rounded-lg"
+                                    role="menuitem"
                                   >
-                                    <Icon className="w-4 xs:w-5 h-4 xs:h-5 flex-shrink-0" />
+                                    <Icon
+                                      className="w-4 xs:w-5 h-4 xs:h-5 flex-shrink-0"
+                                      aria-hidden="true"
+                                    />
                                     <span className="font-medium text-xs xs:text-sm">
                                       {subItem.label}
                                     </span>
@@ -241,11 +254,15 @@ const Header = () => {
                     className={`flex items-center space-x-1.5 font-medium transition-colors ${
                       isActive(item.href!) ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'
                     }`}
+                    aria-current={isActive(item.href!) ? 'page' : undefined}
                   >
-                    {item.icon && <item.icon className="w-4 h-4" />}
+                    {item.icon && <item.icon className="w-4 h-4" aria-hidden="true" />}
                     <span>{item.label}</span>
                     {item.badge && (
-                      <span className="ml-1 bg-green-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">
+                      <span
+                        className="ml-1 bg-green-500 text-white text-xs font-bold px-2 py-0.5 rounded-full"
+                        aria-label={`${item.badge} success rate`}
+                      >
                         {item.badge}
                       </span>
                     )}

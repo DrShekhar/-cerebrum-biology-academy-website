@@ -95,7 +95,7 @@ export function Footer() {
   ]
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-gray-900 text-white" role="contentinfo">
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-8">
@@ -134,13 +134,21 @@ export function Footer() {
             {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-center text-gray-300">
-                <Phone className="w-4 h-4 mr-3 text-blue-400" />
+                <Phone className="w-4 h-4 mr-3 text-blue-400" aria-hidden="true" />
                 <div>
-                  <a href="tel:+919311946297" className="hover:text-white transition-colors">
+                  <a
+                    href="tel:+919311946297"
+                    className="hover:text-white transition-colors"
+                    aria-label="Call us at +91 93119 46297"
+                  >
                     +91 93119 46297
                   </a>
                   {' / '}
-                  <a href="tel:+918826444334" className="hover:text-white transition-colors">
+                  <a
+                    href="tel:+918826444334"
+                    className="hover:text-white transition-colors"
+                    aria-label="Call us at +91 88264 44334"
+                  >
                     +91 88264 44334
                   </a>
                   <span className="text-gray-500 text-sm block">Mon-Sat: 8 AM - 8 PM</span>
@@ -148,17 +156,18 @@ export function Footer() {
               </div>
 
               <div className="flex items-center text-gray-300">
-                <Mail className="w-4 h-4 mr-3 text-blue-400" />
+                <Mail className="w-4 h-4 mr-3 text-blue-400" aria-hidden="true" />
                 <a
                   href="mailto:info@cerebrumbiologyacademy.com"
                   className="hover:text-white transition-colors"
+                  aria-label="Email us at info@cerebrumbiologyacademy.com"
                 >
                   info@cerebrumbiologyacademy.com
                 </a>
               </div>
 
               <div className="flex items-start text-gray-300">
-                <MapPin className="w-4 h-4 mr-3 text-blue-400 mt-1" />
+                <MapPin className="w-4 h-4 mr-3 text-blue-400 mt-1" aria-hidden="true" />
                 <div className="text-sm space-y-1">
                   <div>
                     <strong>Rohini:</strong> DC Chauk Sector 9, Delhi 110085
@@ -299,14 +308,23 @@ export function Footer() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3">
+              <label htmlFor="newsletter-email" className="sr-only">
+                Email address
+              </label>
               <input
+                id="newsletter-email"
                 type="email"
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20"
+                aria-label="Email address for newsletter"
               />
-              <Button variant="primary" className="whitespace-nowrap">
+              <Button
+                variant="primary"
+                className="whitespace-nowrap"
+                aria-label="Subscribe to newsletter"
+              >
                 Subscribe
-                <Send className="w-4 h-4 ml-2" />
+                <Send className="w-4 h-4 ml-2" aria-hidden="true" />
               </Button>
             </div>
           </div>
@@ -324,20 +342,22 @@ export function Footer() {
             </div>
 
             {/* Social Links */}
-            <div className="flex items-center space-x-4">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors"
-                  aria-label={social.name}
-                >
-                  <social.icon className="w-4 h-4" />
-                </a>
-              ))}
-            </div>
+            <nav aria-label="Social media links">
+              <div className="flex items-center space-x-4">
+                {socialLinks.map((social) => (
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors"
+                    aria-label={`Visit our ${social.name} page`}
+                  >
+                    <social.icon className="w-4 h-4" aria-hidden="true" />
+                  </a>
+                ))}
+              </div>
+            </nav>
 
             {/* Legal Links */}
             <div className="flex flex-wrap justify-center md:justify-end gap-4 text-sm">
@@ -358,23 +378,27 @@ export function Footer() {
       </div>
 
       {/* Quick Actions - Floating */}
-      <div className="fixed bottom-4 right-4 z-50 flex flex-col space-y-2">
+      <div
+        className="fixed bottom-4 right-4 z-50 flex flex-col space-y-2"
+        role="complementary"
+        aria-label="Quick contact actions"
+      >
         <a
           href="https://wa.me/919311946297?text=Hi%2C%20I%27m%20interested%20in%20NEET%20Biology%20coaching"
           target="_blank"
           rel="noopener noreferrer"
           className="w-12 h-12 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg transition-all duration-200 hover:scale-110"
-          aria-label="WhatsApp"
+          aria-label="Chat with us on WhatsApp"
         >
-          <MessageCircle className="w-6 h-6 text-white" />
+          <MessageCircle className="w-6 h-6 text-white" aria-hidden="true" />
         </a>
 
         <a
           href="tel:+919311946297"
           className="w-12 h-12 bg-blue-500 hover:bg-blue-600 rounded-full flex items-center justify-center shadow-lg transition-all duration-200 hover:scale-110"
-          aria-label="Call us"
+          aria-label="Call us at +91 93119 46297"
         >
-          <Phone className="w-6 h-6 text-white" />
+          <Phone className="w-6 h-6 text-white" aria-hidden="true" />
         </a>
       </div>
     </footer>

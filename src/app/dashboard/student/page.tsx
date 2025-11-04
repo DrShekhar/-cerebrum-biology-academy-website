@@ -1,6 +1,7 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, lazy, Suspense } from 'react'
+import dynamic from 'next/dynamic'
 import { useAuth } from '@/hooks/useAuth'
 import { DashboardAccessControl } from '@/components/DashboardAccessControl'
 import { DashboardErrorBoundary } from '@/components/errors/DashboardErrorBoundary'
@@ -19,17 +20,92 @@ import {
   Zap,
   Brain,
 } from 'lucide-react'
-import { PerformanceChart } from '@/components/analytics/PerformanceChart'
-import { TopicAnalysisChart } from '@/components/analytics/TopicAnalysisChart'
-import { ProgressTrendChart } from '@/components/analytics/ProgressTrendChart'
-import { LeaderboardWidget } from '@/components/analytics/LeaderboardWidget'
-import { AchievementsBadge } from '@/components/analytics/AchievementsBadge'
 import type {
   UserPerformanceData,
   PerformanceMetrics,
   ComparativeAnalytics,
   Leaderboard,
 } from '@/lib/types/analytics'
+
+// Lazy load heavy chart components to reduce initial bundle size
+const PerformanceChart = dynamic(
+  () =>
+    import('@/components/analytics/PerformanceChart').then((mod) => ({
+      default: mod.PerformanceChart,
+    })),
+  {
+    loading: () => (
+      <div className="h-64 bg-gray-100 animate-pulse rounded-lg flex items-center justify-center">
+        <span className="text-gray-500">Loading chart...</span>
+      </div>
+    ),
+    ssr: false,
+  }
+)
+
+const TopicAnalysisChart = dynamic(
+  () =>
+    import('@/components/analytics/TopicAnalysisChart').then((mod) => ({
+      default: mod.TopicAnalysisChart,
+    })),
+  {
+    loading: () => (
+      <div className="h-64 bg-gray-100 animate-pulse rounded-lg flex items-center justify-center">
+        <span className="text-gray-500">Loading analysis...</span>
+      </div>
+    ),
+    ssr: false,
+  }
+)
+
+const ProgressTrendChart = dynamic(
+  () =>
+    import('@/components/analytics/ProgressTrendChart').then((mod) => ({
+      default: mod.ProgressTrendChart,
+    })),
+  {
+    loading: () => (
+      <div className="h-64 bg-gray-100 animate-pulse rounded-lg flex items-center justify-center">
+        <span className="text-gray-500">Loading trends...</span>
+      </div>
+    ),
+    ssr: false,
+  }
+)
+
+const LeaderboardWidget = dynamic(
+  () =>
+    import('@/components/analytics/LeaderboardWidget').then((mod) => ({
+      default: mod.LeaderboardWidget,
+    })),
+  {
+    loading: () => (
+      <div className="space-y-2">
+        {[1, 2, 3].map((i) => (
+          <div key={i} className="h-12 bg-gray-100 animate-pulse rounded" />
+        ))}
+      </div>
+    ),
+    ssr: false,
+  }
+)
+
+const AchievementsBadge = dynamic(
+  () =>
+    import('@/components/analytics/AchievementsBadge').then((mod) => ({
+      default: mod.AchievementsBadge,
+    })),
+  {
+    loading: () => (
+      <div className="grid grid-cols-3 gap-2">
+        {[1, 2, 3].map((i) => (
+          <div key={i} className="h-16 bg-gray-100 animate-pulse rounded" />
+        ))}
+      </div>
+    ),
+    ssr: false,
+  }
+)
 
 export default function StudentDashboard() {
   const { user, isLoading } = useAuth()

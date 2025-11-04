@@ -42,21 +42,45 @@ const nextConfig = {
     return config
   },
 
-  // Consistent image optimization for production
+  // Optimized image configuration for performance
   images: {
     // Enable optimization for production, disable locally for faster builds
     unoptimized: process.env.NODE_ENV === 'development',
-    domains: [
-      'localhost',
-      'cdn.cerebrumbiologyacademy.com',
-      'images.unsplash.com',
-      'cerebrumbiologyacademy.com',
-      'www.cerebrumbiologyacademy.com'
+    // Use remotePatterns instead of domains (Next.js 15 best practice)
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'cdn.cerebrumbiologyacademy.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cerebrumbiologyacademy.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.cerebrumbiologyacademy.com',
+      },
+      {
+        protocol: 'https',
+        hostname: '**.vercel-storage.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'vercel.com',
+      },
     ],
+    // Optimize for modern formats (WebP and AVIF)
     formats: ['image/webp', 'image/avif'],
-    deviceSizes: [320, 375, 420, 640, 750, 828, 1080, 1200],
+    // Device sizes optimized for common breakpoints
+    deviceSizes: [320, 375, 420, 640, 750, 828, 1080, 1200, 1920],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 31536000, // 1 year cache for production
+    // Long cache TTL for better performance (1 year)
+    minimumCacheTTL: 31536000,
+    // Disable SVG for security (can be overridden per-image if needed)
     dangerouslyAllowSVG: false,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },

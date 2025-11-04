@@ -33,6 +33,7 @@ import { useUserFlow } from '@/hooks/useUserFlow'
 import { UpgradeModal } from '@/components/UpgradeModal'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
+import { EmptyState } from '@/components/ui/EmptyState'
 import { cn } from '@/lib/utils'
 import Link from 'next/link'
 
@@ -296,43 +297,61 @@ export default function StudentDashboard() {
           {/* Quick Stats */}
           <section>
             <h2 className="text-xl font-bold text-gray-900 mb-4">Quick Stats</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              {quickStats.map((stat, index) => (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3, delay: index * 0.1 }}
-                >
-                  <Card className="hover:shadow-lg transition-shadow">
-                    <CardContent className="p-6">
-                      <div className="flex items-start justify-between">
-                        <div className="flex-1">
-                          <p className="text-sm text-gray-600 mb-1">{stat.label}</p>
-                          <p className="text-2xl font-bold text-gray-900">{stat.value}</p>
-                          {stat.trend !== undefined && (
-                            <div
-                              className={cn(
-                                'flex items-center text-sm mt-2',
-                                stat.trend >= 0 ? 'text-green-600' : 'text-red-600'
-                              )}
-                            >
-                              {stat.trend >= 0 ? (
-                                <ArrowUp className="w-3 h-3 mr-1" />
-                              ) : (
-                                <ArrowDown className="w-3 h-3 mr-1" />
-                              )}
-                              <span>{Math.abs(stat.trend)}% from last week</span>
-                            </div>
-                          )}
+            {quickStats.length > 0 ? (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                {quickStats.map((stat, index) => (
+                  <motion.div
+                    key={stat.label}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3, delay: index * 0.1 }}
+                  >
+                    <Card className="hover:shadow-lg transition-shadow">
+                      <CardContent className="p-6">
+                        <div className="flex items-start justify-between">
+                          <div className="flex-1">
+                            <p className="text-sm text-gray-600 mb-1">{stat.label}</p>
+                            <p className="text-2xl font-bold text-gray-900">{stat.value}</p>
+                            {stat.trend !== undefined && (
+                              <div
+                                className={cn(
+                                  'flex items-center text-sm mt-2',
+                                  stat.trend >= 0 ? 'text-green-600' : 'text-red-600'
+                                )}
+                              >
+                                {stat.trend >= 0 ? (
+                                  <ArrowUp className="w-3 h-3 mr-1" />
+                                ) : (
+                                  <ArrowDown className="w-3 h-3 mr-1" />
+                                )}
+                                <span>{Math.abs(stat.trend)}% from last week</span>
+                              </div>
+                            )}
+                          </div>
+                          <div className={cn('p-3 rounded-lg', stat.color)}>{stat.icon}</div>
                         </div>
-                        <div className={cn('p-3 rounded-lg', stat.color)}>{stat.icon}</div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              ))}
-            </div>
+                      </CardContent>
+                    </Card>
+                  </motion.div>
+                ))}
+              </div>
+            ) : (
+              <Card>
+                <CardContent className="p-6">
+                  <EmptyState
+                    icon={TrendingUp}
+                    title="Your learning journey begins here"
+                    description="Start taking tests and studying to track your progress. We'll show you detailed statistics and insights about your performance."
+                    primaryAction={{
+                      label: 'Start Learning',
+                      href: '/mock-tests',
+                    }}
+                    size="md"
+                    variant="info"
+                  />
+                </CardContent>
+              </Card>
+            )}
           </section>
 
           {/* Today's Focus & Performance */}
@@ -487,18 +506,21 @@ export default function StudentDashboard() {
                     ))}
                   </div>
                 ) : (
-                  <div className="text-center py-8">
-                    <Activity className="w-12 h-12 text-gray-400 mx-auto mb-3" />
-                    <p className="text-gray-600">No recent activity</p>
-                    <p className="text-sm text-gray-500 mt-1">
-                      Start taking tests to see your activity here
-                    </p>
-                    <Link href="/mock-tests">
-                      <Button variant="primary" size="sm" className="mt-4">
-                        Take Your First Test
-                      </Button>
-                    </Link>
-                  </div>
+                  <EmptyState
+                    icon={BookOpen}
+                    title="Ready to start your NEET journey?"
+                    description="Take your first practice test to see where you stand. Our AI will analyze your performance and create a personalized learning path just for you."
+                    primaryAction={{
+                      label: 'Take Your First Test',
+                      href: '/mock-tests',
+                    }}
+                    secondaryAction={{
+                      label: 'Explore Topics',
+                      href: '/student/materials',
+                    }}
+                    size="lg"
+                    variant="default"
+                  />
                 )}
               </CardContent>
             </Card>

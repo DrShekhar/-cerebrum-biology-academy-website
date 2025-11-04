@@ -5,23 +5,29 @@ import { StructuredData } from '@/components/seo/StructuredData'
 import { ErrorBoundary } from '@/components/ErrorBoundary'
 import GoogleAnalytics from '@/components/analytics/GoogleAnalytics'
 import Header from '@/components/layout/Header'
-import { MobileBottomNav } from '@/components/layout/MobileBottomNav'
+import { MobileNavigation } from '@/components/navigation/MobileNavigation'
 import { Footer } from '@/components/layout/Footer'
 import { PWAProvider } from '@/components/pwa/PWAProvider'
 import { MaintenancePopup } from '@/components/ui/MaintenancePopup'
 import { AuthProvider } from '@/contexts/AuthContext'
 import { ToastProvider } from '@/components/ui/Toast'
 import { TrialBannerWrapper } from '@/components/trial/TrialBannerWrapper'
+import { SkipToContent } from '@/components/accessibility/SkipToContent'
+import { FocusVisibleStyles } from '@/components/accessibility/FocusVisibleStyles'
 import './globals.css'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],
+  display: 'swap', // Optimize font loading
+  preload: true, // Preload critical font
 })
 
 const geistMono = Geist_Mono({
   variable: '--font-geist-mono',
   subsets: ['latin'],
+  display: 'swap',
+  preload: false, // Not used on initial render
 })
 
 export const metadata: Metadata = {
@@ -86,8 +92,22 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-touch-fullscreen" content="yes" />
         <meta httpEquiv="Accept-CH" content="DPR, Viewport-Width, Width, Save-Data" />
-        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+
+        {/* Performance: Preconnect to critical domains */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="//checkout.razorpay.com" />
+        <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+
+        {/* Performance: Preload critical resources */}
+        <link
+          rel="preload"
+          href="/fonts/geist-sans.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+
         <meta httpEquiv="Content-Language" content="en-IN,hi-IN" />
         <meta name="language" content="English,Hindi" />
         <meta name="theme-color" content="#2563eb" />
@@ -109,27 +129,23 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <GoogleAnalytics />
         <PWAProvider />
+        <FocusVisibleStyles />
         <AuthProvider>
           <ToastProvider>
             <ErrorBoundary>
-              <a
-                href="#main-content"
-                className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-md z-[9999] font-medium"
-              >
-                Skip to main content
-              </a>
-              <div data-section="navigation" className="priority-immediate">
+              <SkipToContent />
+              <div data-section="navigation" className="priority-immediate" role="banner">
                 <Header />
               </div>
               <TrialBannerWrapper />
-              <main id="main-content" className="min-h-screen pb-16 md:pb-0">
+              <main id="main-content" role="main" className="min-h-screen pb-16 md:pb-0">
                 {children}
               </main>
-              <div data-lazy="footer" className="priority-lazy">
+              <div data-lazy="footer" className="priority-lazy" role="contentinfo">
                 <Footer />
               </div>
-              <div data-section="mobile-bottom-nav" className="priority-immediate">
-                <MobileBottomNav />
+              <div data-section="mobile-navigation" className="priority-immediate">
+                <MobileNavigation />
               </div>
             </ErrorBoundary>
           </ToastProvider>

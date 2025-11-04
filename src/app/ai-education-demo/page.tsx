@@ -1,9 +1,9 @@
 import React from 'react'
 import { Metadata } from 'next'
 import { AIEducationDashboard } from '@/components/ai/AIEducationDashboard'
-import BiologyTutorChatbot from '@/components/ai/BiologyTutorChatbot'
 import { ToastProvider } from '@/components/ui/Toast'
 import { DashboardErrorBoundary } from '@/components/errors/DashboardErrorBoundary'
+import AIEducationClient from './AIEducationClient'
 
 export const metadata: Metadata = {
   title: 'AI Education Hub - Cerebrum Biology Academy',
@@ -27,8 +27,8 @@ export default function AIEducationDemo() {
           {/* AI Education Dashboard */}
           <AIEducationDashboard />
 
-          {/* AI Biology Tutor Chatbot - floating */}
-          <BiologyTutorChatbot />
+          {/* AI Biology Tutor Chatbot - lazy loaded client component */}
+          <AIEducationClient />
 
           {/* Features Overview */}
           <section className="bg-gradient-to-br from-indigo-50 via-white to-purple-50 py-16">
