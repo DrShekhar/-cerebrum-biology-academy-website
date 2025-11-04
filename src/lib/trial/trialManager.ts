@@ -124,6 +124,15 @@ export async function checkTrialStatus(freeUserId: string): Promise<TrialStatus 
     return null
   }
 
+  if (!freeUser.trialExpiryDate) {
+    const expiryDate = calculateTrialExpiry(freeUser.trialStartDate)
+    await prisma.freeUser.update({
+      where: { id: freeUserId },
+      data: { trialExpiryDate: expiryDate },
+    })
+    freeUser.trialExpiryDate = expiryDate
+  }
+
   const now = new Date()
   const daysRemaining = calculateDaysRemaining(freeUser.trialExpiryDate)
   const isExpired = daysRemaining <= 0 || freeUser.testsTakenCount >= MAX_TRIAL_TESTS
@@ -156,6 +165,7 @@ export async function extendTrial(freeUserId: string, days: number = 7): Promise
     where: { id: freeUserId },
     select: {
       id: true,
+      trialStartDate: true,
       trialExpiryDate: true,
       extensionCount: true,
     },
@@ -165,7 +175,12 @@ export async function extendTrial(freeUserId: string, days: number = 7): Promise
     throw new Error('Free user not found')
   }
 
-  const newExpiryDate = new Date(freeUser.trialExpiryDate)
+  let currentExpiryDate = freeUser.trialExpiryDate
+  if (!currentExpiryDate) {
+    currentExpiryDate = calculateTrialExpiry(freeUser.trialStartDate)
+  }
+
+  const newExpiryDate = new Date(currentExpiryDate)
   newExpiryDate.setDate(newExpiryDate.getDate() + days)
 
   await prisma.freeUser.update({

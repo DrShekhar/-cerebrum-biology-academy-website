@@ -7,12 +7,14 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_DATABASE_URL")
 
   // Connection pooling configuration for 1,000+ concurrent users
   // Optimized for high-traffic educational platform
-  // directUrl = env("DIRECT_DATABASE_URL") // Direct connection for migrations (optional for local dev)
+  // directUrl uses direct connection for migrations (port 5432)
+  // url uses connection pooler for application queries (port 6543)
 
   // Connection pool settings
   // Note: These are managed via DATABASE_URL connection string parameters
@@ -456,15 +458,15 @@ model FreeUser {
   preferences      Json?    // study times, notifications, etc.
 
   // Trial Management
-  trialStartDate   DateTime @default(now()) // When trial started
-  trialExpiryDate  DateTime // When trial expires (15 days from start)
-  trialExtended    Boolean  @default(false) // Has trial been extended
-  extensionCount   Int      @default(0) // Number of times trial extended
-  upgradedToUserId String?  // Link to User.id if converted to paid user
-  isTrialExpired   Boolean  @default(false) // Cache for quick checks
-  lastTrialCheck   DateTime @default(now()) // Last time trial status was checked
-  deviceId         String?  // Unique device identifier for tracking
-  testsTakenCount  Int      @default(0) // Track number of tests (limit 50 during trial)
+  trialStartDate   DateTime  @default(now()) // When trial started
+  trialExpiryDate  DateTime? // When trial expires (15 days from start), nullable for existing users
+  trialExtended    Boolean   @default(false) // Has trial been extended
+  extensionCount   Int       @default(0) // Number of times trial extended
+  upgradedToUserId String?   // Link to User.id if converted to paid user
+  isTrialExpired   Boolean   @default(false) // Cache for quick checks
+  lastTrialCheck   DateTime  @default(now()) // Last time trial status was checked
+  deviceId         String?   // Unique device identifier for tracking
+  testsTakenCount  Int       @default(0) // Track number of tests (limit 50 during trial)
 
   // Timestamps
   registrationDate DateTime @default(now())
