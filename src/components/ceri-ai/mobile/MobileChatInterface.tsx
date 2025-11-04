@@ -53,7 +53,12 @@ export function MobileChatInterface({
   })
 
   const handleSend = async () => {
-    if (!input.trim() || isLoading) return
+    console.log('🚀 handleSend called', { input, isLoading })
+
+    if (!input.trim() || isLoading) {
+      console.log('❌ handleSend blocked:', { inputEmpty: !input.trim(), isLoading })
+      return
+    }
 
     const userMessage: Message = {
       id: Date.now().toString(),
@@ -62,12 +67,14 @@ export function MobileChatInterface({
       timestamp: new Date(),
     }
 
+    console.log('📤 Sending message:', userMessage)
     setMessages((prev) => [...prev, userMessage])
     setInput('')
     setIsLoading(true)
 
     try {
       // Call streaming API
+      console.log('🌐 Calling API:', '/api/ceri-ai/stream')
       const response = await fetch('/api/ceri-ai/stream', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -81,6 +88,8 @@ export function MobileChatInterface({
           ],
         }),
       })
+
+      console.log('✅ API Response:', response.status, response.ok)
 
       if (!response.ok) throw new Error('Failed to get response')
 

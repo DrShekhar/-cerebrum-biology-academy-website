@@ -24,6 +24,7 @@ import {
   Globe,
   Shield,
 } from 'lucide-react'
+import { useToast } from '@/components/ui/Toast'
 
 interface AIMetrics {
   totalRequests: number
@@ -87,6 +88,7 @@ interface ChartData {
 }
 
 export default function AIMonitoringDashboard() {
+  const { showToast } = useToast()
   const { user, hasRole } = useAuth()
   const [metrics, setMetrics] = useState<AIMetrics | null>(null)
   const [chartData, setChartData] = useState<ChartData | null>(null)
@@ -252,7 +254,7 @@ export default function AIMonitoringDashboard() {
       }
     } catch (error) {
       console.error('Export failed:', error)
-      alert('Failed to export data. Please try again.')
+      showToast('error', 'Export Failed', 'Failed to export data. Please try again.')
     }
   }
 

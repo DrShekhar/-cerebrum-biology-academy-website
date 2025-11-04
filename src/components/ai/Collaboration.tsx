@@ -483,9 +483,55 @@ const Collaboration: React.FC = () => {
       away: 'yellow',
       open: 'blue',
       resolved: 'green',
-      archived: 'gray'
+      archived: 'gray',
+      admin: 'purple',
+      editor: 'blue',
+      reviewer: 'green',
+      viewer: 'gray',
+      general: 'gray',
+      suggestion: 'blue',
+      concern: 'orange',
+      approval: 'green',
+      rejection: 'red',
+      high: 'red',
+      medium: 'orange',
+      low: 'yellow',
+      info: 'blue'
     }
     return colors[status as keyof typeof colors] || 'gray'
+  }
+
+  const getStatusBgClass = (status: string) => {
+    const color = getStatusColor(status)
+    return color === 'yellow' ? 'bg-yellow-100' :
+      color === 'green' ? 'bg-green-100' :
+      color === 'red' ? 'bg-red-100' :
+      color === 'orange' ? 'bg-orange-100' :
+      color === 'blue' ? 'bg-blue-100' :
+      color === 'purple' ? 'bg-purple-100' :
+      color === 'gray' ? 'bg-gray-100' : 'bg-gray-100'
+  }
+
+  const getStatusTextClass = (status: string) => {
+    const color = getStatusColor(status)
+    return color === 'yellow' ? 'text-yellow-700' :
+      color === 'green' ? 'text-green-700' :
+      color === 'red' ? 'text-red-700' :
+      color === 'orange' ? 'text-orange-700' :
+      color === 'blue' ? 'text-blue-700' :
+      color === 'purple' ? 'text-purple-700' :
+      color === 'gray' ? 'text-gray-700' : 'text-gray-700'
+  }
+
+  const getStatusDotClass = (status: string) => {
+    const color = getStatusColor(status)
+    return color === 'yellow' ? 'bg-yellow-500' :
+      color === 'green' ? 'bg-green-500' :
+      color === 'red' ? 'bg-red-500' :
+      color === 'orange' ? 'bg-orange-500' :
+      color === 'blue' ? 'bg-blue-500' :
+      color === 'purple' ? 'bg-purple-500' :
+      color === 'gray' ? 'bg-gray-500' : 'bg-gray-500'
   }
 
   const getRoleIcon = (role: User['role']) => {
@@ -537,7 +583,7 @@ const Collaboration: React.FC = () => {
                     <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold">
                       {user.name.split(' ').map(n => n[0]).join('')}
                     </div>
-                    <div className={`absolute -bottom-1 -right-1 w-4 h-4 bg-${getStatusColor(user.status)}-500 border-2 border-white rounded-full`} />
+                    <div className={`absolute -bottom-1 -right-1 w-4 h-4 ${getStatusDotClass(user.status)} border-2 border-white rounded-full`} />
                   </div>
 
                   <div className="flex-1 min-w-0">
@@ -547,10 +593,10 @@ const Collaboration: React.FC = () => {
                     </div>
                     <p className="text-sm text-gray-600 mb-2">{user.email}</p>
                     <div className="flex items-center gap-2 mb-2">
-                      <span className={`px-2 py-1 rounded text-xs font-medium capitalize bg-${getStatusColor(user.role)}-100 text-${getStatusColor(user.role)}-700`}>
+                      <span className={`px-2 py-1 rounded text-xs font-medium capitalize ${getStatusBgClass(user.role)} ${getStatusTextClass(user.role)}`}>
                         {user.role}
                       </span>
-                      <span className={`px-2 py-1 rounded text-xs font-medium capitalize bg-${getStatusColor(user.status)}-100 text-${getStatusColor(user.status)}-700`}>
+                      <span className={`px-2 py-1 rounded text-xs font-medium capitalize ${getStatusBgClass(user.status)} ${getStatusTextClass(user.status)}`}>
                         {user.status}
                       </span>
                     </div>
@@ -708,10 +754,10 @@ const Collaboration: React.FC = () => {
                           <p className="text-sm text-gray-600">{invitation.recipientEmail}</p>
                         </div>
                         <div className="flex items-center gap-2">
-                          <span className={`px-2 py-1 rounded text-xs font-medium bg-${getStatusColor(invitation.status)}-100 text-${getStatusColor(invitation.status)}-700`}>
+                          <span className={`px-2 py-1 rounded text-xs font-medium ${getStatusBgClass(invitation.status)}-100 text-${getStatusColor(invitation.status)}-700`}>
                             {invitation.status}
                           </span>
-                          <span className={`px-2 py-1 rounded text-xs font-medium bg-${getStatusColor(invitation.role)}-100 text-${getStatusColor(invitation.role)}-700`}>
+                          <span className={`px-2 py-1 rounded text-xs font-medium ${getStatusBgClass(invitation.role)}-100 text-${getStatusColor(invitation.role)}-700`}>
                             {invitation.role}
                           </span>
                         </div>
@@ -797,7 +843,7 @@ const Collaboration: React.FC = () => {
                         <p className="text-sm text-gray-600">Reviewed by {review.reviewerName}</p>
                       </div>
                       <div className="flex items-center gap-2">
-                        <span className={`px-2 py-1 rounded text-xs font-medium bg-${getStatusColor(review.status)}-100 text-${getStatusColor(review.status)}-700`}>
+                        <span className={`px-2 py-1 rounded text-xs font-medium ${getStatusBgClass(review.status)}-100 text-${getStatusColor(review.status)}-700`}>
                           {review.status.replace('_', ' ')}
                         </span>
                         <div className="flex items-center gap-1">
@@ -964,10 +1010,10 @@ const Collaboration: React.FC = () => {
                         </div>
                       </div>
                       <div className="flex items-center gap-2">
-                        <span className={`px-2 py-1 rounded text-xs font-medium bg-${getStatusColor(comment.type)}-100 text-${getStatusColor(comment.type)}-700`}>
+                        <span className={`px-2 py-1 rounded text-xs font-medium ${getStatusBgClass(comment.type)}-100 text-${getStatusColor(comment.type)}-700`}>
                           {comment.type}
                         </span>
-                        <span className={`px-2 py-1 rounded text-xs font-medium bg-${getStatusColor(comment.priority)}-100 text-${getStatusColor(comment.priority)}-700`}>
+                        <span className={`px-2 py-1 rounded text-xs font-medium ${getStatusBgClass(comment.priority)}-100 text-${getStatusColor(comment.priority)}-700`}>
                           {comment.priority}
                         </span>
                       </div>
@@ -1071,7 +1117,7 @@ const Collaboration: React.FC = () => {
                             </p>
                           </div>
                           <div className="flex items-center gap-2">
-                            <span className={`px-2 py-1 rounded text-xs font-medium bg-${getStatusColor(version.status)}-100 text-${getStatusColor(version.status)}-700`}>
+                            <span className={`px-2 py-1 rounded text-xs font-medium ${getStatusBgClass(version.status)}-100 text-${getStatusColor(version.status)}-700`}>
                               {version.status}
                             </span>
                             <button className="text-blue-600 hover:text-blue-800 text-sm">
@@ -1361,7 +1407,7 @@ const Collaboration: React.FC = () => {
                         </p>
                       </div>
                       <div className="flex items-center gap-2">
-                        <span className={`px-2 py-1 rounded text-xs font-medium bg-${getStatusColor(share.shareType)}-100 text-${getStatusColor(share.shareType)}-700`}>
+                        <span className={`px-2 py-1 rounded text-xs font-medium ${getStatusBgClass(share.shareType)}-100 text-${getStatusColor(share.shareType)}-700`}>
                           {share.shareType}
                         </span>
                         <span className="text-sm text-gray-500">

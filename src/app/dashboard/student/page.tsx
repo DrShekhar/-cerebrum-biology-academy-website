@@ -146,24 +146,24 @@ export default function StudentDashboard() {
 
   return (
     <DashboardAccessControl dashboardType="ANALYTICS" fallbackRoute="/student/dashboard">
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 p-6">
-        <div className="max-w-7xl mx-auto space-y-6">
-          {/* Header */}
-          <div className="flex justify-between items-start">
-            <div>
-              <h1 className="text-3xl font-bold text-gray-900">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 p-3 sm:p-6">
+        <div className="max-w-7xl mx-auto space-y-4 sm:space-y-6">
+          {/* Header - Mobile Optimized */}
+          <div className="flex flex-col sm:flex-row justify-between items-start gap-3 sm:gap-0">
+            <div className="w-full sm:w-auto">
+              <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">
                 Welcome back, {user.name || 'Student'}!
               </h1>
-              <p className="text-gray-600 mt-2">
+              <p className="text-sm sm:text-base text-gray-600 mt-1 sm:mt-2">
                 Track your NEET Biology preparation progress and performance insights
               </p>
             </div>
 
-            <div className="flex gap-2">
+            <div className="flex gap-2 w-full sm:w-auto flex-wrap sm:flex-nowrap">
               <select
                 value={selectedPeriod}
                 onChange={(e) => setSelectedPeriod(e.target.value as any)}
-                className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="flex-1 sm:flex-none px-3 sm:px-4 py-2 text-sm sm:text-base border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 touch-action-manipulation"
               >
                 <option value="week">Last Week</option>
                 <option value="month">Last Month</option>
@@ -173,16 +173,16 @@ export default function StudentDashboard() {
               <Button
                 onClick={() => exportReport('pdf')}
                 variant="outline"
-                className="flex items-center gap-2"
+                className="flex items-center gap-2 flex-1 sm:flex-none justify-center min-h-touch touch-action-manipulation active:scale-95 transition-transform"
               >
-                <Download className="w-4 h-4" />
-                Export PDF
+                <Download className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                <span className="text-sm sm:text-base">Export PDF</span>
               </Button>
             </div>
           </div>
 
-          {/* Key Metrics Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {/* Key Metrics Cards - Mobile Optimized (2 columns on mobile) */}
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-6">
             <MetricCard
               title="Tests Completed"
               value={metrics?.totalTests || 0}
@@ -213,17 +213,37 @@ export default function StudentDashboard() {
             />
           </div>
 
-          {/* Main Dashboard Tabs */}
-          <Tabs defaultValue="overview" className="space-y-6">
-            <TabsList className="grid w-full grid-cols-4">
-              <TabsTrigger value="overview">Overview</TabsTrigger>
-              <TabsTrigger value="performance">Performance</TabsTrigger>
-              <TabsTrigger value="topics">Topics</TabsTrigger>
-              <TabsTrigger value="comparison">Comparison</TabsTrigger>
+          {/* Main Dashboard Tabs - Mobile Optimized */}
+          <Tabs defaultValue="overview" className="space-y-4 sm:space-y-6">
+            <TabsList className="grid w-full grid-cols-4 gap-1 sm:gap-0">
+              <TabsTrigger
+                value="overview"
+                className="text-xs sm:text-sm px-2 sm:px-4 py-2 sm:py-2.5"
+              >
+                Overview
+              </TabsTrigger>
+              <TabsTrigger
+                value="performance"
+                className="text-xs sm:text-sm px-2 sm:px-4 py-2 sm:py-2.5"
+              >
+                Performance
+              </TabsTrigger>
+              <TabsTrigger
+                value="topics"
+                className="text-xs sm:text-sm px-2 sm:px-4 py-2 sm:py-2.5"
+              >
+                Topics
+              </TabsTrigger>
+              <TabsTrigger
+                value="comparison"
+                className="text-xs sm:text-sm px-2 sm:px-4 py-2 sm:py-2.5"
+              >
+                Comparison
+              </TabsTrigger>
             </TabsList>
 
-            <TabsContent value="overview" className="space-y-6">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <TabsContent value="overview" className="space-y-4 sm:space-y-6">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
                 {/* Progress Trend Chart */}
                 <Card>
                   <CardHeader>
@@ -452,24 +472,28 @@ function MetricCard({
   }
 
   return (
-    <Card>
-      <CardContent className="p-6">
+    <Card className="overflow-hidden">
+      <CardContent className="p-3 sm:p-6">
         <div className="flex items-center justify-between">
-          <div>
-            <p className="text-sm text-gray-600">{title}</p>
-            <p className="text-2xl font-bold text-gray-900">{formatValue(value, format)}</p>
+          <div className="min-w-0 flex-1">
+            <p className="text-xs sm:text-sm text-gray-600 truncate">{title}</p>
+            <p className="text-lg sm:text-2xl font-bold text-gray-900">
+              {formatValue(value, format)}
+            </p>
             {trend !== 0 && (
               <p
-                className={`text-sm flex items-center gap-1 ${
+                className={`text-xs sm:text-sm flex items-center gap-1 ${
                   trend > 0 ? 'text-green-600' : 'text-red-600'
                 }`}
               >
-                <TrendingUp className={`w-3 h-3 ${trend < 0 ? 'rotate-180' : ''}`} />
+                <TrendingUp
+                  className={`w-2.5 h-2.5 sm:w-3 sm:h-3 ${trend < 0 ? 'rotate-180' : ''}`}
+                />
                 {Math.abs(trend).toFixed(1)}%
               </p>
             )}
           </div>
-          <div className="p-3 bg-gray-50 rounded-lg">{icon}</div>
+          <div className="p-2 sm:p-3 bg-gray-50 rounded-lg flex-shrink-0 ml-2">{icon}</div>
         </div>
       </CardContent>
     </Card>
@@ -478,19 +502,19 @@ function MetricCard({
 
 function LoadingDashboard() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 p-6">
-      <div className="max-w-7xl mx-auto space-y-6">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 p-3 sm:p-6">
+      <div className="max-w-7xl mx-auto space-y-4 sm:space-y-6">
         <div className="animate-pulse">
-          <div className="h-8 bg-gray-300 rounded w-1/3 mb-4"></div>
-          <div className="h-4 bg-gray-300 rounded w-1/2 mb-8"></div>
+          <div className="h-6 sm:h-8 bg-gray-300 rounded w-2/3 sm:w-1/3 mb-3 sm:mb-4"></div>
+          <div className="h-3 sm:h-4 bg-gray-300 rounded w-3/4 sm:w-1/2 mb-6 sm:mb-8"></div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-8">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-6 mb-6 sm:mb-8">
             {[...Array(4)].map((_, i) => (
-              <div key={i} className="h-32 bg-gray-300 rounded-lg"></div>
+              <div key={i} className="h-24 sm:h-32 bg-gray-300 rounded-lg"></div>
             ))}
           </div>
 
-          <div className="h-96 bg-gray-300 rounded-lg"></div>
+          <div className="h-64 sm:h-96 bg-gray-300 rounded-lg"></div>
         </div>
       </div>
     </div>

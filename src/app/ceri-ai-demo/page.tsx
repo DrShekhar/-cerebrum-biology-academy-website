@@ -114,28 +114,12 @@ export default function CeriAIDemoPage() {
         </div>
       </div>
 
-      {/* Technical Features Footer */}
+      {/* Footer */}
       <div className="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-6 sm:p-8 text-white">
-          <h3 className="text-lg sm:text-xl font-bold mb-4">Technical Features</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <div>
-              <h4 className="font-semibold mb-1">Powered by Claude Sonnet 4</h4>
-              <p className="text-sm text-blue-100">Latest AI model from Anthropic</p>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-1">Edge Computing</h4>
-              <p className="text-sm text-blue-100">Ultra-fast responses worldwide</p>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-1">Redis Caching</h4>
-              <p className="text-sm text-blue-100">60%+ cache hit rate target</p>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-1">KaTeX Rendering</h4>
-              <p className="text-sm text-blue-100">&lt; 50ms formula rendering</p>
-            </div>
-          </div>
+        <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-6 sm:p-8 text-white text-center">
+          <p className="text-base sm:text-lg">
+            Start your NEET Biology preparation journey with Ceri AI today!
+          </p>
         </div>
       </div>
     </div>

@@ -990,15 +990,41 @@ const TestReview: React.FC = () => {
                       { grade: 'C', range: '50-59%', marks: `${Math.round(reviewMetrics.totalMarks * 0.5)}-${Math.round(reviewMetrics.totalMarks * 0.59)}`, color: 'yellow' },
                       { grade: 'D', range: '40-49%', marks: `${Math.round(reviewMetrics.totalMarks * 0.4)}-${Math.round(reviewMetrics.totalMarks * 0.49)}`, color: 'orange' },
                       { grade: 'F', range: '0-39%', marks: `0-${Math.round(reviewMetrics.totalMarks * 0.39)}`, color: 'red' }
-                    ].map((grade) => (
-                      <div key={grade.grade} className={`flex justify-between items-center p-3 bg-${grade.color}-50 border border-${grade.color}-200 rounded-lg`}>
-                        <div className="flex items-center gap-3">
-                          <span className={`font-bold text-${grade.color}-800 w-8`}>{grade.grade}</span>
-                          <span className={`text-${grade.color}-700`}>{grade.range}</span>
+                    ].map((grade) => {
+                      const bgClass = grade.color === 'green' ? 'bg-green-50' :
+                        grade.color === 'blue' ? 'bg-blue-50' :
+                        grade.color === 'yellow' ? 'bg-yellow-50' :
+                        grade.color === 'orange' ? 'bg-orange-50' :
+                        grade.color === 'red' ? 'bg-red-50' : 'bg-gray-50'
+
+                      const borderClass = grade.color === 'green' ? 'border-green-200' :
+                        grade.color === 'blue' ? 'border-blue-200' :
+                        grade.color === 'yellow' ? 'border-yellow-200' :
+                        grade.color === 'orange' ? 'border-orange-200' :
+                        grade.color === 'red' ? 'border-red-200' : 'border-gray-200'
+
+                      const textClass = grade.color === 'green' ? 'text-green-800' :
+                        grade.color === 'blue' ? 'text-blue-800' :
+                        grade.color === 'yellow' ? 'text-yellow-800' :
+                        grade.color === 'orange' ? 'text-orange-800' :
+                        grade.color === 'red' ? 'text-red-800' : 'text-gray-800'
+
+                      const textSecondaryClass = grade.color === 'green' ? 'text-green-700' :
+                        grade.color === 'blue' ? 'text-blue-700' :
+                        grade.color === 'yellow' ? 'text-yellow-700' :
+                        grade.color === 'orange' ? 'text-orange-700' :
+                        grade.color === 'red' ? 'text-red-700' : 'text-gray-700'
+
+                      return (
+                        <div key={grade.grade} className={`flex justify-between items-center p-3 ${bgClass} border ${borderClass} rounded-lg`}>
+                          <div className="flex items-center gap-3">
+                            <span className={`font-bold ${textClass} w-8`}>{grade.grade}</span>
+                            <span className={textSecondaryClass}>{grade.range}</span>
+                          </div>
+                          <span className={`font-medium ${textClass}`}>{grade.marks} marks</span>
                         </div>
-                        <span className={`font-medium text-${grade.color}-800`}>{grade.marks} marks</span>
-                      </div>
-                    ))}
+                      )
+                    })}
                   </div>
 
                   <div className="mt-4 p-4 bg-purple-50 border border-purple-200 rounded-lg">
@@ -1321,7 +1347,11 @@ const TestReview: React.FC = () => {
                       return (
                         <div key={item.level} className="space-y-2">
                           <div className="flex justify-between items-center">
-                            <span className={`font-medium text-${item.color}-700`}>
+                            <span className={`font-medium ${
+                              item.color === 'green' ? 'text-green-700' :
+                              item.color === 'yellow' ? 'text-yellow-700' :
+                              item.color === 'red' ? 'text-red-700' : 'text-gray-700'
+                            }`}>
                               {item.level} (Recommended: {item.recommended}%)
                             </span>
                             <span className={`font-medium ${
@@ -1334,7 +1364,11 @@ const TestReview: React.FC = () => {
                           </div>
                           <div className="w-full bg-gray-200 rounded-full h-2">
                             <div
-                              className={`h-2 rounded-full bg-${item.color}-500`}
+                              className={`h-2 rounded-full ${
+                                item.color === 'green' ? 'bg-green-500' :
+                                item.color === 'yellow' ? 'bg-yellow-500' :
+                                item.color === 'red' ? 'bg-red-500' : 'bg-gray-500'
+                              }`}
                               style={{ width: `${item.recommended}%` }}
                             />
                           </div>
@@ -1379,11 +1413,39 @@ const TestReview: React.FC = () => {
                     }
                     const color = colors[level as keyof typeof colors] || 'gray'
 
+                    const bgClass = color === 'blue' ? 'bg-blue-50' :
+                      color === 'green' ? 'bg-green-50' :
+                      color === 'yellow' ? 'bg-yellow-50' :
+                      color === 'orange' ? 'bg-orange-50' :
+                      color === 'red' ? 'bg-red-50' :
+                      color === 'purple' ? 'bg-purple-50' : 'bg-gray-50'
+
+                    const borderClass = color === 'blue' ? 'border-blue-200' :
+                      color === 'green' ? 'border-green-200' :
+                      color === 'yellow' ? 'border-yellow-200' :
+                      color === 'orange' ? 'border-orange-200' :
+                      color === 'red' ? 'border-red-200' :
+                      color === 'purple' ? 'border-purple-200' : 'border-gray-200'
+
+                    const textBoldClass = color === 'blue' ? 'text-blue-600' :
+                      color === 'green' ? 'text-green-600' :
+                      color === 'yellow' ? 'text-yellow-600' :
+                      color === 'orange' ? 'text-orange-600' :
+                      color === 'red' ? 'text-red-600' :
+                      color === 'purple' ? 'text-purple-600' : 'text-gray-600'
+
+                    const textClass = color === 'blue' ? 'text-blue-800' :
+                      color === 'green' ? 'text-green-800' :
+                      color === 'yellow' ? 'text-yellow-800' :
+                      color === 'orange' ? 'text-orange-800' :
+                      color === 'red' ? 'text-red-800' :
+                      color === 'purple' ? 'text-purple-800' : 'text-gray-800'
+
                     return (
-                      <div key={level} className={`p-3 bg-${color}-50 border border-${color}-200 rounded-lg text-center`}>
-                        <div className={`text-2xl font-bold text-${color}-600`}>{count}</div>
-                        <div className={`text-sm text-${color}-800 capitalize`}>{level}</div>
-                        <div className={`text-xs text-${color}-600`}>{percentage.toFixed(1)}%</div>
+                      <div key={level} className={`p-3 ${bgClass} border ${borderClass} rounded-lg text-center`}>
+                        <div className={`text-2xl font-bold ${textBoldClass}`}>{count}</div>
+                        <div className={`text-sm ${textClass} capitalize`}>{level}</div>
+                        <div className={`text-xs ${textBoldClass}`}>{percentage.toFixed(1)}%</div>
                       </div>
                     )
                   })}

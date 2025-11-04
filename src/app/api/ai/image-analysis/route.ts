@@ -1,31 +1,28 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { fetchWithRetry } from '@/lib/utils/fetchWithRetry'
 
 export async function POST(request: NextRequest) {
   try {
     const formData = await request.formData()
     const image = formData.get('image') as File
-    const question = formData.get('question') as string || 'Analyze this biology image and explain what you see'
-    const context = formData.get('context') as string || 'NEET Biology'
+    const question =
+      (formData.get('question') as string) || 'Analyze this biology image and explain what you see'
+    const context = (formData.get('context') as string) || 'NEET Biology'
 
     if (!image) {
-      return NextResponse.json(
-        { error: 'No image provided' },
-        { status: 400 }
-      )
+      return NextResponse.json({ error: 'No image provided' }, { status: 400 })
     }
 
-    // Convert image to base64
     const bytes = await image.arrayBuffer()
     const buffer = Buffer.from(bytes)
     const base64Image = buffer.toString('base64')
     const imageDataUrl = `data:${image.type};base64,${base64Image}`
 
-    // Call OpenAI Vision API for image analysis
-    const response = await fetch('https://api.openai.com/v1/chat/completions', {
+    const response = await fetchWithRetry('https://api.openai.com/v1/chat/completions', {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`,
-        'Content-Type': 'application/json'
+        Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify({
         model: 'gpt-4-vision-preview',
@@ -45,28 +42,38 @@ For each image analysis, provide:
 6. **Mnemonics**: Memory aids if applicable
 7. **Common Mistakes**: What students often confuse about this topic
 
-Be accurate, educational, and exam-focused.`
+Be accurate, educational, and exam-focused.`,
           },
           {
             role: 'user',
             content: [
               {
                 type: 'text',
-                text: question
+                text: question,
               },
               {
                 type: 'image_url',
                 image_url: {
                   url: imageDataUrl,
-                  detail: 'high'
-                }
-              }
-            ]
-          }
+                  detail: 'high',
+                },
+              },
+            ],
+          },
         ],
         max_tokens: 1000,
-        temperature: 0.7
-      })
+        temperature: 0.7,
+      }),
+      retryOptions: {
+        maxRetries: 3,
+        initialDelayMs: 1000,
+        onRetry: (attempt, error) => {
+          console.log(
+            `[Image Analysis] Retry attempt ${attempt}/3 after error:`,
+            error.message || error
+          )
+        },
+      },
     })
 
     if (!response.ok) {
@@ -90,29 +97,28 @@ Be accurate, educational, and exam-focused.`
           key_points: sections.key_points,
           related_topics: sections.related_topics,
           mnemonics: sections.mnemonics,
-          common_mistakes: sections.common_mistakes
+          common_mistakes: sections.common_mistakes,
         },
         metadata: {
           image_size: image.size,
           image_type: image.type,
           analysis_time: Date.now(),
           model_used: 'gpt-4-vision-preview',
-          tokens_used: result.usage?.total_tokens || 0
+          tokens_used: result.usage?.total_tokens || 0,
         },
         suggestions: [
           'Try asking about specific parts of the image',
           'Request for related practice questions',
-          'Ask for memory techniques for this topic'
-        ]
-      }
+          'Ask for memory techniques for this topic',
+        ],
+      },
     })
-
   } catch (error) {
     console.error('Image analysis error:', error)
     return NextResponse.json(
       {
         success: false,
-        error: 'Failed to analyze image. Please try again.'
+        error: 'Failed to analyze image. Please try again.',
       },
       { status: 500 }
     )
@@ -127,7 +133,7 @@ function parseAnalysisResponse(analysis: string) {
     key_points: [],
     related_topics: [],
     mnemonics: '',
-    common_mistakes: ''
+    common_mistakes: '',
   }
 
   try {
@@ -150,8 +156,8 @@ function parseAnalysisResponse(analysis: string) {
     if (keyPointsMatch?.[1]) {
       sections.key_points = keyPointsMatch[1]
         .split(/\d+\.|\-/)
-        .map(point => point.trim())
-        .filter(point => point.length > 0)
+        .map((point) => point.trim())
+        .filter((point) => point.length > 0)
         .slice(0, 5)
     }
 
@@ -159,11 +165,10 @@ function parseAnalysisResponse(analysis: string) {
     if (relatedMatch?.[1]) {
       sections.related_topics = relatedMatch[1]
         .split(/,|\n|\-/)
-        .map(topic => topic.trim())
-        .filter(topic => topic.length > 0)
+        .map((topic) => topic.trim())
+        .filter((topic) => topic.length > 0)
         .slice(0, 5)
     }
-
   } catch (parseError) {
     console.error('Parse error:', parseError)
     // Return the full analysis if parsing fails
@@ -184,9 +189,9 @@ export async function GET() {
       'Microscopy analysis',
       'Diagram explanation',
       'NEET-focused content',
-      'Structured learning output'
+      'Structured learning output',
     ],
     supported_formats: ['PNG', 'JPG', 'JPEG', 'WEBP'],
-    max_file_size: '10MB'
+    max_file_size: '10MB',
   })
 }

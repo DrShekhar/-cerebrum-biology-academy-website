@@ -73,21 +73,41 @@ Always:
 - Maintain accuracy (no hallucinations!)
 - Be encouraging and supportive`
 
-    // Create message with Claude Sonnet 4
-    const response = await anthropic.messages.create({
-      model: 'claude-sonnet-4-20250514',
-      max_tokens: 2048,
-      system: systemPrompt,
-      messages: [
-        {
-          role: 'user',
-          content: body.question,
-        },
-      ],
-      // Note: MCP tools would be configured here in production
-      // For now, using direct API without MCP tool integration
-      // This will be enhanced when MCP SDK supports direct tool integration
-    })
+    const createMessageWithRetry = async (attempt = 1, maxRetries = 3): Promise<any> => {
+      try {
+        return await anthropic.messages.create({
+          model: 'claude-sonnet-4-20250514',
+          max_tokens: 2048,
+          system: systemPrompt,
+          messages: [
+            {
+              role: 'user',
+              content: body.question,
+            },
+          ],
+        })
+      } catch (error: any) {
+        const isRetryable =
+          error?.status >= 500 ||
+          error?.status === 429 ||
+          error?.code === 'ECONNRESET' ||
+          error?.code === 'ETIMEDOUT'
+
+        if (isRetryable && attempt < maxRetries) {
+          const delayMs = 1000 * Math.pow(2, attempt - 1)
+          console.log(
+            `[AI Tutor] Retry attempt ${attempt}/${maxRetries} after ${delayMs}ms, error:`,
+            error.message || error
+          )
+          await new Promise((resolve) => setTimeout(resolve, delayMs))
+          return createMessageWithRetry(attempt + 1, maxRetries)
+        }
+
+        throw error
+      }
+    }
+
+    const response = await createMessageWithRetry()
 
     // Extract response text
     const answerContent = response.content.find((block) => block.type === 'text')

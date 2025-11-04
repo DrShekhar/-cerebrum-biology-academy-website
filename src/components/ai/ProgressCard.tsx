@@ -1,8 +1,17 @@
 'use client'
 
-import React from 'react'
-import { motion } from 'framer-motion'
-import { LucideIcon, Flame, Clock, Target, BookOpen, Award, TrendingUp } from 'lucide-react'
+import React, { useEffect, useState } from 'react'
+import { motion, useAnimationControls } from 'framer-motion'
+import {
+  LucideIcon,
+  Flame,
+  Clock,
+  Target,
+  BookOpen,
+  Award,
+  TrendingUp,
+  Sparkles,
+} from 'lucide-react'
 import { ProgressRing } from '../ui/ProgressRing'
 import { AnimatedCounter } from '../ui/AnimatedCounter'
 import { MilestoneIndicator } from '../ui/MilestoneIndicator'
@@ -70,6 +79,11 @@ export function ProgressCard({
   const gradientClass = gradient || variantConfig.gradient
   const colorScheme = variantConfig.color
 
+  const [isCelebrating, setIsCelebrating] = useState(false)
+  const [previousValue, setPreviousValue] = useState(value)
+  const iconControls = useAnimationControls()
+  const celebrationControls = useAnimationControls()
+
   const getGradientColors = (gradientClass: string): [string, string] => {
     const gradientMap: Record<string, [string, string]> = {
       'from-purple-500 to-pink-500': ['#a855f7', '#ec4899'],
@@ -80,66 +94,220 @@ export function ProgressCard({
     return gradientMap[gradientClass] || ['#a855f7', '#ec4899']
   }
 
+  const percentage = maxValue > 0 ? (value / maxValue) * 100 : 0
+  const isMilestoneReached =
+    milestones && milestones.some((m) => m.value === value && value > previousValue)
+
+  useEffect(() => {
+    if (value > previousValue) {
+      iconControls.start({
+        scale: [1, 1.2, 1],
+        rotate: [0, 10, -10, 0],
+        transition: { duration: 0.6, ease: 'easeInOut' },
+      })
+
+      if (isMilestoneReached) {
+        setIsCelebrating(true)
+        celebrationControls.start({
+          opacity: [0, 1, 1, 0],
+          scale: [0.8, 1.2, 1.2, 0.8],
+          y: [0, -20, -20, -40],
+          transition: { duration: 2, ease: 'easeOut' },
+        })
+
+        setTimeout(() => setIsCelebrating(false), 2000)
+      }
+    }
+    setPreviousValue(value)
+  }, [value, previousValue, isMilestoneReached, iconControls, celebrationControls])
+
+  const cardVariants = {
+    initial: { opacity: 0, y: 20, scale: 0.95 },
+    animate: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.5,
+        ease: [0.4, 0, 0.2, 1],
+        staggerChildren: 0.1,
+      },
+    },
+    hover: {
+      y: -8,
+      scale: 1.02,
+      transition: {
+        duration: 0.3,
+        ease: [0.4, 0, 0.2, 1],
+      },
+    },
+  }
+
+  const childVariants = {
+    initial: { opacity: 0, y: 10 },
+    animate: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.4, ease: 'easeOut' },
+    },
+  }
+
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      whileHover={{ y: -4, boxShadow: '0 20px 40px rgba(79, 70, 229, 0.2)' }}
-      transition={{ duration: 0.6, ease: 'easeOut' }}
-      className={`relative overflow-hidden rounded-2xl p-6 bg-gradient-to-br ${variantConfig.bgGradient} border border-white/20 ${className}`}
-      style={{ boxShadow: '0 8px 32px rgba(79, 70, 229, 0.12)' }}
+      variants={cardVariants}
+      initial="initial"
+      animate="animate"
+      whileHover="hover"
+      className={`relative overflow-hidden rounded-2xl p-4 sm:p-6 lg:p-8 backdrop-blur-xl bg-white/10 border border-white/20 shadow-xl ${className}`}
+      style={{
+        boxShadow: '0 8px 32px rgba(79, 70, 229, 0.12)',
+        willChange: 'transform',
+      }}
     >
-      <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br opacity-20 rounded-full blur-3xl -mr-16 -mt-16" />
+      <motion.div
+        className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br opacity-20 rounded-full blur-3xl -mr-16 -mt-16"
+        animate={{
+          scale: [1, 1.2, 1],
+          opacity: [0.2, 0.3, 0.2],
+        }}
+        transition={{
+          duration: 4,
+          repeat: Infinity,
+          ease: 'easeInOut',
+        }}
+      />
+
+      {isCelebrating && (
+        <motion.div
+          className="absolute inset-0 flex items-center justify-center pointer-events-none"
+          initial={{ opacity: 0 }}
+          animate={celebrationControls}
+        >
+          <Sparkles className={`w-12 h-12 text-yellow-400`} />
+        </motion.div>
+      )}
 
       <div className="relative z-10">
-        <div className="flex items-start justify-between mb-6">
-          <div className="flex-1">
-            <h3 className="text-lg font-semibold text-gray-800 mb-1">{title}</h3>
-            {subtitle && <p className="text-sm text-gray-600">{subtitle}</p>}
+        <motion.div
+          variants={childVariants}
+          className="flex items-start justify-between mb-4 sm:mb-6 lg:mb-8"
+        >
+          <div className="flex-1 min-w-0 pr-3 sm:pr-4">
+            <motion.h3
+              className="text-base sm:text-lg lg:text-xl font-semibold text-gray-800 mb-1 sm:mb-2"
+              layoutId={`title-${variant}`}
+            >
+              {title}
+            </motion.h3>
+            {subtitle && (
+              <motion.p
+                className="text-xs sm:text-sm text-gray-600"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.2 }}
+              >
+                {subtitle}
+              </motion.p>
+            )}
           </div>
 
-          <div
-            className={`w-12 h-12 rounded-xl bg-gradient-to-r ${gradientClass} flex items-center justify-center shadow-lg`}
+          <motion.div
+            animate={iconControls}
+            className={`w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 flex-shrink-0 rounded-xl bg-gradient-to-r ${gradientClass} flex items-center justify-center shadow-lg`}
+            whileHover={{
+              scale: 1.1,
+              rotate: 5,
+              transition: { duration: 0.2 },
+            }}
+            whileTap={{ scale: 0.95 }}
           >
-            <Icon className="w-6 h-6 text-white" />
-          </div>
-        </div>
+            <Icon className="w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7 text-white" />
+          </motion.div>
+        </motion.div>
 
-        <div className="flex items-center justify-between mb-6">
-          <div className="flex-1">
-            <div className="flex items-baseline space-x-2">
+        <motion.div
+          variants={childVariants}
+          className="flex items-center justify-between mb-4 sm:mb-6 lg:mb-8"
+        >
+          <div className="flex-1 min-w-0">
+            <div className="flex items-baseline space-x-1 sm:space-x-2">
               <AnimatedCounter
                 to={value}
-                className="text-4xl font-bold text-gray-900"
+                className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900"
                 formatLargeNumbers={variant === 'study-hours'}
               />
               {maxValue > 0 && variant !== 'streak' && (
-                <span className="text-lg text-gray-500">/ {maxValue}</span>
+                <motion.span
+                  className="text-base sm:text-lg lg:text-xl text-gray-500"
+                  initial={{ opacity: 0, x: -10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.3 }}
+                >
+                  / {maxValue}
+                </motion.span>
               )}
             </div>
 
             {change && (
-              <div className="flex items-center mt-2">
-                <TrendingUp className="w-4 h-4 text-green-500 mr-1" />
-                <span className="text-sm text-green-600 font-medium">{change}</span>
-                <span className="text-sm text-gray-500 ml-1">this week</span>
-              </div>
+              <motion.div
+                className="flex items-center mt-2 sm:mt-3"
+                initial={{ opacity: 0, x: -10 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.4 }}
+              >
+                <motion.div
+                  animate={{ y: [0, -2, 0] }}
+                  transition={{ duration: 1, repeat: Infinity, ease: 'easeInOut' }}
+                >
+                  <TrendingUp className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-green-500 mr-1" />
+                </motion.div>
+                <span className="text-xs sm:text-sm text-green-600 font-medium">{change}</span>
+                <span className="text-xs sm:text-sm text-gray-500 ml-1">this week</span>
+              </motion.div>
             )}
 
             {variant === 'streak' && streak !== undefined && (
               <motion.div
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{ delay: 0.3, type: 'spring' }}
-                className="mt-2 inline-flex items-center space-x-1 bg-orange-100 px-3 py-1 rounded-full"
+                initial={{ scale: 0, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{
+                  delay: 0.3,
+                  type: 'spring',
+                  stiffness: 200,
+                  damping: 15,
+                }}
+                whileHover={{
+                  scale: 1.05,
+                  transition: { duration: 0.2 },
+                }}
+                className="mt-2 sm:mt-3 inline-flex items-center space-x-1 sm:space-x-1.5 bg-orange-100 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full"
               >
-                <Flame className="w-4 h-4 text-orange-500" />
-                <span className="text-sm font-bold text-orange-700">{streak} day streak!</span>
+                <motion.div
+                  animate={{
+                    scale: [1, 1.2, 1],
+                    rotate: [0, 5, -5, 0],
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: 'easeInOut',
+                  }}
+                >
+                  <Flame className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-orange-500" />
+                </motion.div>
+                <span className="text-xs sm:text-sm font-bold text-orange-700">
+                  {streak} day streak!
+                </span>
               </motion.div>
             )}
           </div>
 
-          <div className="ml-4">
+          <motion.div
+            className="ml-3 sm:ml-4 lg:ml-6 flex-shrink-0"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.2, type: 'spring', stiffness: 150, damping: 20 }}
+          >
             <ProgressRing
               value={value}
               max={maxValue}
@@ -149,15 +317,13 @@ export function ProgressCard({
               gradientColors={getGradientColors(gradientClass)}
               showPercentage={variant !== 'streak'}
             />
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {showMilestones && milestones && milestones.length > 0 && (
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-            className="mt-6 pt-4 border-t border-gray-200"
+            variants={childVariants}
+            className="mt-4 sm:mt-6 pt-4 sm:pt-5 border-t border-gray-200"
           >
             <MilestoneIndicator
               current={value}

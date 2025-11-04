@@ -489,8 +489,22 @@ export function RealTimeMetrics() {
             className="bg-white rounded-xl p-6 border border-gray-200 shadow-sm hover:shadow-md transition-shadow"
           >
             <div className="flex items-center justify-between mb-4">
-              <div className={`w-10 h-10 bg-${metric.color}-100 rounded-lg flex items-center justify-center`}>
-                <div className={`text-${metric.color}-600`}>
+              <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${
+                metric.color === 'blue' ? 'bg-blue-100' :
+                metric.color === 'purple' ? 'bg-purple-100' :
+                metric.color === 'green' ? 'bg-green-100' :
+                metric.color === 'orange' ? 'bg-orange-100' :
+                metric.color === 'indigo' ? 'bg-indigo-100' :
+                metric.color === 'teal' ? 'bg-teal-100' : 'bg-gray-100'
+              }`}>
+                <div className={`${
+                  metric.color === 'blue' ? 'text-blue-600' :
+                  metric.color === 'purple' ? 'text-purple-600' :
+                  metric.color === 'green' ? 'text-green-600' :
+                  metric.color === 'orange' ? 'text-orange-600' :
+                  metric.color === 'indigo' ? 'text-indigo-600' :
+                  metric.color === 'teal' ? 'text-teal-600' : 'text-gray-600'
+                }`}>
                   {metric.icon}
                 </div>
               </div>

@@ -1,47 +1,25 @@
 import { NextRequest } from 'next/server'
 import { streamChatResponse, createSSEEncoder } from '@/lib/ceri-ai/streaming/streamHandler'
-import { getCached, setCache, CacheKeys } from '@/lib/ceri-ai/cache/redis'
 import type { MessageParam } from '@anthropic-ai/sdk/resources/messages'
 
-export const runtime = 'edge'
+// Using Node.js runtime for now (edge runtime doesn't support ioredis)
+// TODO: Migrate to Upstash Redis for edge-compatible caching
+export const runtime = 'nodejs'
 
 export async function POST(req: NextRequest) {
   try {
-    const { messages, useCache = true } = await req.json()
+    const { messages } = await req.json()
 
     if (!messages || !Array.isArray(messages)) {
       return new Response('Invalid messages format', { status: 400 })
     }
 
-    // Check cache for identical recent queries
-    const lastMessage = messages[messages.length - 1]
-    const cacheKey = CacheKeys.chatResponse(lastMessage.content as string)
-
-    if (useCache) {
-      const cached = await getCached<string>(cacheKey)
-      if (cached) {
-        // Return cached response as SSE
-        const encoder = new TextEncoder()
-        const stream = new ReadableStream({
-          start(controller) {
-            controller.enqueue(encoder.encode(`data: ${JSON.stringify({ text: cached })}\n\n`))
-            controller.enqueue(encoder.encode('data: [DONE]\n\n'))
-            controller.close()
-          },
-        })
-
-        return new Response(stream, {
-          headers: {
-            'Content-Type': 'text/event-stream',
-            'Cache-Control': 'no-cache',
-            Connection: 'keep-alive',
-          },
-        })
-      }
-    }
+    // TODO: Re-enable Redis caching once we migrate to Upstash Redis Edge
+    // For now, skip caching to get the chat working
+    // const lastMessage = messages[messages.length - 1]
+    // const cacheKey = CacheKeys.chatResponse(lastMessage.content as string)
 
     // Stream new response
-    let fullResponse = ''
     const encoder = createSSEEncoder()
 
     const stream = new ReadableStream({
@@ -52,14 +30,13 @@ export async function POST(req: NextRequest) {
             maxTokens: 4096,
             temperature: 0.7,
           })) {
-            fullResponse += chunk
             controller.enqueue(chunk)
           }
 
-          // Cache the complete response
-          if (useCache && fullResponse) {
-            await setCache(cacheKey, fullResponse, 3600) // 1 hour TTL
-          }
+          // TODO: Re-enable caching once Redis is configured for Node.js runtime
+          // if (useCache && fullResponse) {
+          //   await setCache(cacheKey, fullResponse, 3600)
+          // }
 
           controller.close()
         } catch (error) {

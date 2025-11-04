@@ -35,8 +35,9 @@ import {
   Activity,
   Shuffle,
   Award,
-  Calendar
+  Calendar,
 } from 'lucide-react'
+import { useToast } from '@/components/ui/Toast'
 
 // Types and Interfaces
 interface PrerequisiteCondition {
@@ -56,7 +57,12 @@ interface BranchingRule {
     value: number | string | [number, number]
   }
   action: {
-    type: 'redirect_to_section' | 'skip_questions' | 'add_questions' | 'adjust_difficulty' | 'extend_time'
+    type:
+      | 'redirect_to_section'
+      | 'skip_questions'
+      | 'add_questions'
+      | 'adjust_difficulty'
+      | 'extend_time'
     targetSectionId?: string
     questionIds?: string[]
     difficultyAdjustment?: number
@@ -145,9 +151,12 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
   onConfigurationChange,
   initialConfig,
   availableQuestions = [],
-  availableSections = []
+  availableSections = [],
 }) => {
-  const [activeTab, setActiveTab] = useState<'overview' | 'prerequisites' | 'branching' | 'difficulty' | 'skip' | 'conditional' | 'time'>('overview')
+  const { showToast } = useToast()
+  const [activeTab, setActiveTab] = useState<
+    'overview' | 'prerequisites' | 'branching' | 'difficulty' | 'skip' | 'conditional' | 'time'
+  >('overview')
   const [configuration, setConfiguration] = useState<AdaptiveTestConfiguration>(
     initialConfig || {
       isAdaptiveEnabled: false,
@@ -158,28 +167,28 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
           id: 'default_increase',
           triggerCondition: {
             consecutiveCorrect: 3,
-            overallAccuracy: 80
+            overallAccuracy: 80,
           },
           adjustment: {
             difficultyChange: 'increase',
             magnitude: 1,
-            applyToNextQuestions: 5
+            applyToNextQuestions: 5,
           },
-          isEnabled: true
+          isEnabled: true,
         },
         {
           id: 'default_decrease',
           triggerCondition: {
             consecutiveIncorrect: 3,
-            overallAccuracy: 40
+            overallAccuracy: 40,
           },
           adjustment: {
             difficultyChange: 'decrease',
             magnitude: 1,
-            applyToNextQuestions: 5
+            applyToNextQuestions: 5,
           },
-          isEnabled: true
-        }
+          isEnabled: true,
+        },
       ],
       skipLogicRules: [],
       timeExtensionRules: [
@@ -189,24 +198,24 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
           triggerCondition: {
             type: 'performance_based',
             threshold: 70,
-            metric: 'accuracy'
+            metric: 'accuracy',
           },
           extension: {
             type: 'percentage',
             amount: 20,
             maxExtensions: 2,
-            cooldownPeriod: 10
+            cooldownPeriod: 10,
           },
-          isActive: true
-        }
+          isActive: true,
+        },
       ],
       adaptiveSettings: {
         minQuestionsBeforeAdaptation: 5,
         maxDifficultyJumps: 2,
         enableRealTimeAdjustment: true,
         performanceWindowSize: 10,
-        enablePerformancePrediction: true
-      }
+        enablePerformancePrediction: true,
+      },
     }
   )
   const [previewMode, setPreviewMode] = useState(false)
@@ -220,38 +229,46 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
   }, [configuration, onConfigurationChange])
 
   // Mock data for demonstration
-  const mockQuestions = availableQuestions.length > 0 ? availableQuestions : [
-    { id: 'q1', text: 'What is photosynthesis?', difficulty: 'easy' },
-    { id: 'q2', text: 'Explain cellular respiration process', difficulty: 'medium' },
-    { id: 'q3', text: 'Describe the structure of DNA', difficulty: 'medium' },
-    { id: 'q4', text: 'Analyze the Calvin cycle mechanism', difficulty: 'hard' },
-    { id: 'q5', text: 'Compare mitosis and meiosis', difficulty: 'medium' }
-  ]
+  const mockQuestions =
+    availableQuestions.length > 0
+      ? availableQuestions
+      : [
+          { id: 'q1', text: 'What is photosynthesis?', difficulty: 'easy' },
+          { id: 'q2', text: 'Explain cellular respiration process', difficulty: 'medium' },
+          { id: 'q3', text: 'Describe the structure of DNA', difficulty: 'medium' },
+          { id: 'q4', text: 'Analyze the Calvin cycle mechanism', difficulty: 'hard' },
+          { id: 'q5', text: 'Compare mitosis and meiosis', difficulty: 'medium' },
+        ]
 
-  const mockSections = availableSections.length > 0 ? availableSections : [
-    { id: 'section1', name: 'Cell Biology' },
-    { id: 'section2', name: 'Genetics' },
-    { id: 'section3', name: 'Ecology' }
-  ]
+  const mockSections =
+    availableSections.length > 0
+      ? availableSections
+      : [
+          { id: 'section1', name: 'Cell Biology' },
+          { id: 'section2', name: 'Genetics' },
+          { id: 'section3', name: 'Ecology' },
+        ]
 
   // Helper Functions
   const addPrerequisiteQuestion = () => {
     const newPrerequisite: ConditionalQuestion = {
       id: `prereq_${Date.now()}`,
       questionId: '',
-      conditions: [{
-        questionId: '',
-        requiredAnswer: '',
-        operator: 'equals'
-      }],
+      conditions: [
+        {
+          questionId: '',
+          requiredAnswer: '',
+          operator: 'equals',
+        },
+      ],
       operator: 'AND',
       isRequired: true,
-      fallbackAction: 'skip'
+      fallbackAction: 'skip',
     }
 
-    setConfiguration(prev => ({
+    setConfiguration((prev) => ({
       ...prev,
-      prerequisites: [...prev.prerequisites, newPrerequisite]
+      prerequisites: [...prev.prerequisites, newPrerequisite],
     }))
   }
 
@@ -263,18 +280,18 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
         type: 'score_based',
         parameter: 'accuracy',
         operator: 'greater_than',
-        value: 70
+        value: 70,
       },
       action: {
         type: 'adjust_difficulty',
-        difficultyAdjustment: 1
+        difficultyAdjustment: 1,
       },
-      isActive: true
+      isActive: true,
     }
 
-    setConfiguration(prev => ({
+    setConfiguration((prev) => ({
       ...prev,
-      branchingRules: [...prev.branchingRules, newRule]
+      branchingRules: [...prev.branchingRules, newRule],
     }))
   }
 
@@ -285,12 +302,12 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
       triggerQuestion: '',
       triggerAnswer: '',
       skipTargets: [],
-      isActive: true
+      isActive: true,
     }
 
-    setConfiguration(prev => ({
+    setConfiguration((prev) => ({
       ...prev,
-      skipLogicRules: [...prev.skipLogicRules, newRule]
+      skipLogicRules: [...prev.skipLogicRules, newRule],
     }))
   }
 
@@ -301,20 +318,20 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
       triggerCondition: {
         type: 'performance_based',
         threshold: 60,
-        metric: 'accuracy'
+        metric: 'accuracy',
       },
       extension: {
         type: 'fixed',
         amount: 10,
         maxExtensions: 1,
-        cooldownPeriod: 15
+        cooldownPeriod: 15,
       },
-      isActive: true
+      isActive: true,
     }
 
-    setConfiguration(prev => ({
+    setConfiguration((prev) => ({
       ...prev,
-      timeExtensionRules: [...prev.timeExtensionRules, newRule]
+      timeExtensionRules: [...prev.timeExtensionRules, newRule],
     }))
   }
 
@@ -323,23 +340,27 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
     // Simulate adaptive test flow
     setTimeout(() => {
       setIsSimulating(false)
-      alert(`🧠 Adaptive Test Simulation Complete!\n\nResults:\n• 15 questions adapted based on performance\n• 2 difficulty adjustments made\n• 1 time extension granted\n• 3 questions skipped via logic rules\n• Final accuracy: 78%\n• Adaptive score: 85/100`)
+      showToast(
+        'success',
+        'Adaptive Test Simulation Complete',
+        '15 questions adapted based on performance, 2 difficulty adjustments made, 1 time extension granted, 3 questions skipped via logic rules. Final accuracy: 78%, Adaptive score: 85/100'
+      )
     }, 3000)
   }
 
   const deleteRule = (type: keyof AdaptiveTestConfiguration, id: string) => {
-    setConfiguration(prev => ({
+    setConfiguration((prev) => ({
       ...prev,
-      [type]: (prev[type] as any[]).filter((item: any) => item.id !== id)
+      [type]: (prev[type] as any[]).filter((item: any) => item.id !== id),
     }))
   }
 
   const updateRule = (type: keyof AdaptiveTestConfiguration, id: string, updates: any) => {
-    setConfiguration(prev => ({
+    setConfiguration((prev) => ({
       ...prev,
       [type]: (prev[type] as any[]).map((item: any) =>
         item.id === id ? { ...item, ...updates } : item
-      )
+      ),
     }))
   }
 
@@ -376,10 +397,12 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
             <input
               type="checkbox"
               checked={configuration.isAdaptiveEnabled}
-              onChange={(e) => setConfiguration(prev => ({
-                ...prev,
-                isAdaptiveEnabled: e.target.checked
-              }))}
+              onChange={(e) =>
+                setConfiguration((prev) => ({
+                  ...prev,
+                  isAdaptiveEnabled: e.target.checked,
+                }))
+              }
               className="w-5 h-5 rounded"
             />
             <span className="font-medium">
@@ -398,38 +421,38 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                 label: 'Prerequisites',
                 value: configuration.prerequisites.length,
                 icon: CheckCircle2,
-                color: 'from-green-500 to-emerald-500'
+                color: 'from-green-500 to-emerald-500',
               },
               {
                 label: 'Branching Rules',
-                value: configuration.branchingRules.filter(r => r.isActive).length,
+                value: configuration.branchingRules.filter((r) => r.isActive).length,
                 icon: GitBranch,
-                color: 'from-blue-500 to-cyan-500'
+                color: 'from-blue-500 to-cyan-500',
               },
               {
                 label: 'Difficulty Rules',
-                value: configuration.difficultyAdjustments.filter(r => r.isEnabled).length,
+                value: configuration.difficultyAdjustments.filter((r) => r.isEnabled).length,
                 icon: TrendingUp,
-                color: 'from-purple-500 to-pink-500'
+                color: 'from-purple-500 to-pink-500',
               },
               {
                 label: 'Skip Rules',
-                value: configuration.skipLogicRules.filter(r => r.isActive).length,
+                value: configuration.skipLogicRules.filter((r) => r.isActive).length,
                 icon: SkipForward,
-                color: 'from-orange-500 to-red-500'
+                color: 'from-orange-500 to-red-500',
               },
               {
                 label: 'Time Extensions',
-                value: configuration.timeExtensionRules.filter(r => r.isActive).length,
+                value: configuration.timeExtensionRules.filter((r) => r.isActive).length,
                 icon: Clock,
-                color: 'from-teal-500 to-green-500'
+                color: 'from-teal-500 to-green-500',
               },
               {
                 label: 'Adaptive Features',
                 value: Object.values(configuration.adaptiveSettings).filter(Boolean).length,
                 icon: Brain,
-                color: 'from-indigo-500 to-purple-500'
-              }
+                color: 'from-indigo-500 to-purple-500',
+              },
             ].map((item, index) => (
               <motion.div
                 key={item.label}
@@ -459,7 +482,7 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                 { id: 'difficulty', label: 'Difficulty', icon: TrendingUp },
                 { id: 'skip', label: 'Skip Logic', icon: SkipForward },
                 { id: 'conditional', label: 'Conditional', icon: AlertTriangle },
-                { id: 'time', label: 'Time Rules', icon: Clock }
+                { id: 'time', label: 'Time Rules', icon: Clock },
               ].map((tab) => (
                 <button
                   key={tab.id}
@@ -503,13 +526,15 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                         <input
                           type="number"
                           value={configuration.adaptiveSettings.minQuestionsBeforeAdaptation}
-                          onChange={(e) => setConfiguration(prev => ({
-                            ...prev,
-                            adaptiveSettings: {
-                              ...prev.adaptiveSettings,
-                              minQuestionsBeforeAdaptation: parseInt(e.target.value) || 0
-                            }
-                          }))}
+                          onChange={(e) =>
+                            setConfiguration((prev) => ({
+                              ...prev,
+                              adaptiveSettings: {
+                                ...prev.adaptiveSettings,
+                                minQuestionsBeforeAdaptation: parseInt(e.target.value) || 0,
+                              },
+                            }))
+                          }
                           min="1"
                           className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                         />
@@ -522,13 +547,15 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                         <input
                           type="number"
                           value={configuration.adaptiveSettings.maxDifficultyJumps}
-                          onChange={(e) => setConfiguration(prev => ({
-                            ...prev,
-                            adaptiveSettings: {
-                              ...prev.adaptiveSettings,
-                              maxDifficultyJumps: parseInt(e.target.value) || 0
-                            }
-                          }))}
+                          onChange={(e) =>
+                            setConfiguration((prev) => ({
+                              ...prev,
+                              adaptiveSettings: {
+                                ...prev.adaptiveSettings,
+                                maxDifficultyJumps: parseInt(e.target.value) || 0,
+                              },
+                            }))
+                          }
                           min="1"
                           max="5"
                           className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -542,13 +569,15 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                         <input
                           type="number"
                           value={configuration.adaptiveSettings.performanceWindowSize}
-                          onChange={(e) => setConfiguration(prev => ({
-                            ...prev,
-                            adaptiveSettings: {
-                              ...prev.adaptiveSettings,
-                              performanceWindowSize: parseInt(e.target.value) || 0
-                            }
-                          }))}
+                          onChange={(e) =>
+                            setConfiguration((prev) => ({
+                              ...prev,
+                              adaptiveSettings: {
+                                ...prev.adaptiveSettings,
+                                performanceWindowSize: parseInt(e.target.value) || 0,
+                              },
+                            }))
+                          }
                           min="3"
                           max="20"
                           className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -561,13 +590,15 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                         <input
                           type="checkbox"
                           checked={configuration.adaptiveSettings.enableRealTimeAdjustment}
-                          onChange={(e) => setConfiguration(prev => ({
-                            ...prev,
-                            adaptiveSettings: {
-                              ...prev.adaptiveSettings,
-                              enableRealTimeAdjustment: e.target.checked
-                            }
-                          }))}
+                          onChange={(e) =>
+                            setConfiguration((prev) => ({
+                              ...prev,
+                              adaptiveSettings: {
+                                ...prev.adaptiveSettings,
+                                enableRealTimeAdjustment: e.target.checked,
+                              },
+                            }))
+                          }
                           className="rounded"
                         />
                         <span className="text-sm font-medium">Enable Real-Time Adjustment</span>
@@ -577,13 +608,15 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                         <input
                           type="checkbox"
                           checked={configuration.adaptiveSettings.enablePerformancePrediction}
-                          onChange={(e) => setConfiguration(prev => ({
-                            ...prev,
-                            adaptiveSettings: {
-                              ...prev.adaptiveSettings,
-                              enablePerformancePrediction: e.target.checked
-                            }
-                          }))}
+                          onChange={(e) =>
+                            setConfiguration((prev) => ({
+                              ...prev,
+                              adaptiveSettings: {
+                                ...prev.adaptiveSettings,
+                                enablePerformancePrediction: e.target.checked,
+                              },
+                            }))
+                          }
                           className="rounded"
                         />
                         <span className="text-sm font-medium">Enable Performance Prediction</span>
@@ -593,8 +626,8 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                         <h4 className="font-medium text-blue-800 mb-2">AI Adaptation Engine</h4>
                         <p className="text-sm text-blue-700">
                           The adaptive engine analyzes performance patterns in real-time to optimize
-                          question selection, difficulty progression, and time allocation for maximum
-                          learning effectiveness.
+                          question selection, difficulty progression, and time allocation for
+                          maximum learning effectiveness.
                         </p>
                       </div>
                     </div>
@@ -685,14 +718,18 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                             </label>
                             <select
                               value={prereq.questionId}
-                              onChange={(e) => updateRule('prerequisites', prereq.id, {
-                                questionId: e.target.value
-                              })}
+                              onChange={(e) =>
+                                updateRule('prerequisites', prereq.id, {
+                                  questionId: e.target.value,
+                                })
+                              }
                               className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
                             >
                               <option value="">Select Question</option>
-                              {mockQuestions.map(q => (
-                                <option key={q.id} value={q.id}>{q.text}</option>
+                              {mockQuestions.map((q) => (
+                                <option key={q.id} value={q.id}>
+                                  {q.text}
+                                </option>
                               ))}
                             </select>
                           </div>
@@ -703,9 +740,11 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                             </label>
                             <select
                               value={prereq.fallbackAction}
-                              onChange={(e) => updateRule('prerequisites', prereq.id, {
-                                fallbackAction: e.target.value
-                              })}
+                              onChange={(e) =>
+                                updateRule('prerequisites', prereq.id, {
+                                  fallbackAction: e.target.value,
+                                })
+                              }
                               className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
                             >
                               <option value="skip">Skip Question</option>
@@ -721,9 +760,11 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                               <input
                                 type="checkbox"
                                 checked={prereq.isRequired}
-                                onChange={(e) => updateRule('prerequisites', prereq.id, {
-                                  isRequired: e.target.checked
-                                })}
+                                onChange={(e) =>
+                                  updateRule('prerequisites', prereq.id, {
+                                    isRequired: e.target.checked,
+                                  })
+                                }
                                 className="rounded"
                               />
                               <span className="text-sm">Required</span>
@@ -731,9 +772,11 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
 
                             <select
                               value={prereq.operator}
-                              onChange={(e) => updateRule('prerequisites', prereq.id, {
-                                operator: e.target.value
-                              })}
+                              onChange={(e) =>
+                                updateRule('prerequisites', prereq.id, {
+                                  operator: e.target.value,
+                                })
+                              }
                               className="px-3 py-1 border rounded text-sm"
                             >
                               <option value="AND">AND</option>
@@ -742,8 +785,9 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                           </div>
 
                           <div className="text-sm text-gray-600 bg-gray-50 p-3 rounded">
-                            <strong>Conditions:</strong> This question will be shown only if the prerequisite conditions are met.
-                            Use AND/OR logic to combine multiple conditions.
+                            <strong>Conditions:</strong> This question will be shown only if the
+                            prerequisite conditions are met. Use AND/OR logic to combine multiple
+                            conditions.
                           </div>
                         </div>
                       </div>
@@ -799,9 +843,11 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                               <input
                                 type="checkbox"
                                 checked={rule.isActive}
-                                onChange={(e) => updateRule('branchingRules', rule.id, {
-                                  isActive: e.target.checked
-                                })}
+                                onChange={(e) =>
+                                  updateRule('branchingRules', rule.id, {
+                                    isActive: e.target.checked,
+                                  })
+                                }
                                 className="rounded"
                               />
                               <span className="text-sm">Active</span>
@@ -823,9 +869,11 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                             <input
                               type="text"
                               value={rule.name}
-                              onChange={(e) => updateRule('branchingRules', rule.id, {
-                                name: e.target.value
-                              })}
+                              onChange={(e) =>
+                                updateRule('branchingRules', rule.id, {
+                                  name: e.target.value,
+                                })
+                              }
                               className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                             />
                           </div>
@@ -836,9 +884,11 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                             </label>
                             <select
                               value={rule.condition.type}
-                              onChange={(e) => updateRule('branchingRules', rule.id, {
-                                condition: { ...rule.condition, type: e.target.value }
-                              })}
+                              onChange={(e) =>
+                                updateRule('branchingRules', rule.id, {
+                                  condition: { ...rule.condition, type: e.target.value },
+                                })
+                              }
                               className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                             >
                               <option value="score_based">Score Based</option>
@@ -854,9 +904,11 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                             </label>
                             <select
                               value={rule.action.type}
-                              onChange={(e) => updateRule('branchingRules', rule.id, {
-                                action: { ...rule.action, type: e.target.value }
-                              })}
+                              onChange={(e) =>
+                                updateRule('branchingRules', rule.id, {
+                                  action: { ...rule.action, type: e.target.value },
+                                })
+                              }
                               className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                             >
                               <option value="redirect_to_section">Redirect to Section</option>
@@ -873,10 +925,17 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                             </label>
                             <input
                               type="number"
-                              value={typeof rule.condition.value === 'number' ? rule.condition.value : 0}
-                              onChange={(e) => updateRule('branchingRules', rule.id, {
-                                condition: { ...rule.condition, value: parseInt(e.target.value) || 0 }
-                              })}
+                              value={
+                                typeof rule.condition.value === 'number' ? rule.condition.value : 0
+                              }
+                              onChange={(e) =>
+                                updateRule('branchingRules', rule.id, {
+                                  condition: {
+                                    ...rule.condition,
+                                    value: parseInt(e.target.value) || 0,
+                                  },
+                                })
+                              }
                               className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                             />
                           </div>
@@ -887,8 +946,8 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                             <Route className="w-4 h-4" />
                             <strong>Branching Flow:</strong>
                             <span>
-                              If {rule.condition.type.replace('_', ' ')} {rule.condition.operator} {rule.condition.value},
-                              then {rule.action.type.replace('_', ' ')}
+                              If {rule.condition.type.replace('_', ' ')} {rule.condition.operator}{' '}
+                              {rule.condition.value}, then {rule.action.type.replace('_', ' ')}
                             </span>
                           </div>
                         </div>
@@ -938,9 +997,11 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                               <input
                                 type="checkbox"
                                 checked={adjustment.isEnabled}
-                                onChange={(e) => updateRule('difficultyAdjustments', adjustment.id, {
-                                  isEnabled: e.target.checked
-                                })}
+                                onChange={(e) =>
+                                  updateRule('difficultyAdjustments', adjustment.id, {
+                                    isEnabled: e.target.checked,
+                                  })
+                                }
                                 className="rounded"
                               />
                               <span className="text-sm">Enabled</span>
@@ -962,12 +1023,14 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                             <input
                               type="number"
                               value={adjustment.triggerCondition.consecutiveCorrect || ''}
-                              onChange={(e) => updateRule('difficultyAdjustments', adjustment.id, {
-                                triggerCondition: {
-                                  ...adjustment.triggerCondition,
-                                  consecutiveCorrect: parseInt(e.target.value) || undefined
-                                }
-                              })}
+                              onChange={(e) =>
+                                updateRule('difficultyAdjustments', adjustment.id, {
+                                  triggerCondition: {
+                                    ...adjustment.triggerCondition,
+                                    consecutiveCorrect: parseInt(e.target.value) || undefined,
+                                  },
+                                })
+                              }
                               placeholder="e.g., 3"
                               className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                             />
@@ -980,12 +1043,14 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                             <input
                               type="number"
                               value={adjustment.triggerCondition.overallAccuracy || ''}
-                              onChange={(e) => updateRule('difficultyAdjustments', adjustment.id, {
-                                triggerCondition: {
-                                  ...adjustment.triggerCondition,
-                                  overallAccuracy: parseInt(e.target.value) || undefined
-                                }
-                              })}
+                              onChange={(e) =>
+                                updateRule('difficultyAdjustments', adjustment.id, {
+                                  triggerCondition: {
+                                    ...adjustment.triggerCondition,
+                                    overallAccuracy: parseInt(e.target.value) || undefined,
+                                  },
+                                })
+                              }
                               placeholder="e.g., 80"
                               min="0"
                               max="100"
@@ -1000,12 +1065,14 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                             <input
                               type="number"
                               value={adjustment.adjustment.applyToNextQuestions}
-                              onChange={(e) => updateRule('difficultyAdjustments', adjustment.id, {
-                                adjustment: {
-                                  ...adjustment.adjustment,
-                                  applyToNextQuestions: parseInt(e.target.value) || 1
-                                }
-                              })}
+                              onChange={(e) =>
+                                updateRule('difficultyAdjustments', adjustment.id, {
+                                  adjustment: {
+                                    ...adjustment.adjustment,
+                                    applyToNextQuestions: parseInt(e.target.value) || 1,
+                                  },
+                                })
+                              }
                               min="1"
                               max="20"
                               className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
@@ -1020,12 +1087,14 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                             </label>
                             <select
                               value={adjustment.adjustment.magnitude}
-                              onChange={(e) => updateRule('difficultyAdjustments', adjustment.id, {
-                                adjustment: {
-                                  ...adjustment.adjustment,
-                                  magnitude: parseInt(e.target.value) || 1
-                                }
-                              })}
+                              onChange={(e) =>
+                                updateRule('difficultyAdjustments', adjustment.id, {
+                                  adjustment: {
+                                    ...adjustment.adjustment,
+                                    magnitude: parseInt(e.target.value) || 1,
+                                  },
+                                })
+                              }
                               className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                             >
                               <option value={1}>Mild (1 level)</option>
@@ -1039,9 +1108,12 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                               <div className="flex items-center gap-2 text-purple-800 text-sm">
                                 <TrendingUp className="w-4 h-4" />
                                 <span>
-                                  {adjustment.adjustment.difficultyChange === 'increase' ? '↗️' : '↘️'}
-                                  {adjustment.adjustment.difficultyChange} difficulty by {adjustment.adjustment.magnitude} level(s)
-                                  for next {adjustment.adjustment.applyToNextQuestions} questions
+                                  {adjustment.adjustment.difficultyChange === 'increase'
+                                    ? '↗️'
+                                    : '↘️'}
+                                  {adjustment.adjustment.difficultyChange} difficulty by{' '}
+                                  {adjustment.adjustment.magnitude} level(s) for next{' '}
+                                  {adjustment.adjustment.applyToNextQuestions} questions
                                 </span>
                               </div>
                             </div>
@@ -1087,9 +1159,11 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                               <input
                                 type="checkbox"
                                 checked={rule.isActive}
-                                onChange={(e) => updateRule('skipLogicRules', rule.id, {
-                                  isActive: e.target.checked
-                                })}
+                                onChange={(e) =>
+                                  updateRule('skipLogicRules', rule.id, {
+                                    isActive: e.target.checked,
+                                  })
+                                }
                                 className="rounded"
                               />
                               <span className="text-sm">Active</span>
@@ -1111,9 +1185,11 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                             <input
                               type="text"
                               value={rule.name}
-                              onChange={(e) => updateRule('skipLogicRules', rule.id, {
-                                name: e.target.value
-                              })}
+                              onChange={(e) =>
+                                updateRule('skipLogicRules', rule.id, {
+                                  name: e.target.value,
+                                })
+                              }
                               className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                             />
                           </div>
@@ -1124,14 +1200,18 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                             </label>
                             <select
                               value={rule.triggerQuestion}
-                              onChange={(e) => updateRule('skipLogicRules', rule.id, {
-                                triggerQuestion: e.target.value
-                              })}
+                              onChange={(e) =>
+                                updateRule('skipLogicRules', rule.id, {
+                                  triggerQuestion: e.target.value,
+                                })
+                              }
                               className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                             >
                               <option value="">Select Question</option>
-                              {mockQuestions.map(q => (
-                                <option key={q.id} value={q.id}>{q.text}</option>
+                              {mockQuestions.map((q) => (
+                                <option key={q.id} value={q.id}>
+                                  {q.text}
+                                </option>
                               ))}
                             </select>
                           </div>
@@ -1143,9 +1223,11 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                             <input
                               type="text"
                               value={rule.triggerAnswer}
-                              onChange={(e) => updateRule('skipLogicRules', rule.id, {
-                                triggerAnswer: e.target.value
-                              })}
+                              onChange={(e) =>
+                                updateRule('skipLogicRules', rule.id, {
+                                  triggerAnswer: e.target.value,
+                                })
+                              }
                               placeholder="Expected answer value"
                               className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                             />
@@ -1157,14 +1239,18 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                             </label>
                             <select
                               value={rule.skipToQuestion || ''}
-                              onChange={(e) => updateRule('skipLogicRules', rule.id, {
-                                skipToQuestion: e.target.value || undefined
-                              })}
+                              onChange={(e) =>
+                                updateRule('skipLogicRules', rule.id, {
+                                  skipToQuestion: e.target.value || undefined,
+                                })
+                              }
                               className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                             >
                               <option value="">Skip normally</option>
-                              {mockQuestions.map(q => (
-                                <option key={q.id} value={q.id}>{q.text}</option>
+                              {mockQuestions.map((q) => (
+                                <option key={q.id} value={q.id}>
+                                  {q.text}
+                                </option>
                               ))}
                             </select>
                           </div>
@@ -1175,7 +1261,9 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                             <SkipForward className="w-4 h-4" />
                             <span>
                               When question answers "{rule.triggerAnswer}",
-                              {rule.skipToQuestion ? ` jump to specific question` : ` skip ${rule.skipTargets.length} question(s)`}
+                              {rule.skipToQuestion
+                                ? ` jump to specific question`
+                                : ` skip ${rule.skipTargets.length} question(s)`}
                             </span>
                           </div>
                         </div>
@@ -1232,9 +1320,11 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                               <input
                                 type="checkbox"
                                 checked={rule.isActive}
-                                onChange={(e) => updateRule('timeExtensionRules', rule.id, {
-                                  isActive: e.target.checked
-                                })}
+                                onChange={(e) =>
+                                  updateRule('timeExtensionRules', rule.id, {
+                                    isActive: e.target.checked,
+                                  })
+                                }
                                 className="rounded"
                               />
                               <span className="text-sm">Active</span>
@@ -1256,9 +1346,11 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                             <input
                               type="text"
                               value={rule.name}
-                              onChange={(e) => updateRule('timeExtensionRules', rule.id, {
-                                name: e.target.value
-                              })}
+                              onChange={(e) =>
+                                updateRule('timeExtensionRules', rule.id, {
+                                  name: e.target.value,
+                                })
+                              }
                               className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                             />
                           </div>
@@ -1269,12 +1361,14 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                             </label>
                             <select
                               value={rule.triggerCondition.metric}
-                              onChange={(e) => updateRule('timeExtensionRules', rule.id, {
-                                triggerCondition: {
-                                  ...rule.triggerCondition,
-                                  metric: e.target.value as any
-                                }
-                              })}
+                              onChange={(e) =>
+                                updateRule('timeExtensionRules', rule.id, {
+                                  triggerCondition: {
+                                    ...rule.triggerCondition,
+                                    metric: e.target.value as any,
+                                  },
+                                })
+                              }
                               className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                             >
                               <option value="accuracy">Accuracy</option>
@@ -1291,12 +1385,14 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                             <input
                               type="number"
                               value={rule.triggerCondition.threshold}
-                              onChange={(e) => updateRule('timeExtensionRules', rule.id, {
-                                triggerCondition: {
-                                  ...rule.triggerCondition,
-                                  threshold: parseInt(e.target.value) || 0
-                                }
-                              })}
+                              onChange={(e) =>
+                                updateRule('timeExtensionRules', rule.id, {
+                                  triggerCondition: {
+                                    ...rule.triggerCondition,
+                                    threshold: parseInt(e.target.value) || 0,
+                                  },
+                                })
+                              }
                               className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                             />
                           </div>
@@ -1307,12 +1403,14 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                             </label>
                             <select
                               value={rule.extension.type}
-                              onChange={(e) => updateRule('timeExtensionRules', rule.id, {
-                                extension: {
-                                  ...rule.extension,
-                                  type: e.target.value as any
-                                }
-                              })}
+                              onChange={(e) =>
+                                updateRule('timeExtensionRules', rule.id, {
+                                  extension: {
+                                    ...rule.extension,
+                                    type: e.target.value as any,
+                                  },
+                                })
+                              }
                               className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                             >
                               <option value="fixed">Fixed Time (minutes)</option>
@@ -1328,12 +1426,14 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                             <input
                               type="number"
                               value={rule.extension.amount}
-                              onChange={(e) => updateRule('timeExtensionRules', rule.id, {
-                                extension: {
-                                  ...rule.extension,
-                                  amount: parseInt(e.target.value) || 0
-                                }
-                              })}
+                              onChange={(e) =>
+                                updateRule('timeExtensionRules', rule.id, {
+                                  extension: {
+                                    ...rule.extension,
+                                    amount: parseInt(e.target.value) || 0,
+                                  },
+                                })
+                              }
                               className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                             />
                           </div>
@@ -1345,12 +1445,14 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                             <input
                               type="number"
                               value={rule.extension.maxExtensions}
-                              onChange={(e) => updateRule('timeExtensionRules', rule.id, {
-                                extension: {
-                                  ...rule.extension,
-                                  maxExtensions: parseInt(e.target.value) || 1
-                                }
-                              })}
+                              onChange={(e) =>
+                                updateRule('timeExtensionRules', rule.id, {
+                                  extension: {
+                                    ...rule.extension,
+                                    maxExtensions: parseInt(e.target.value) || 1,
+                                  },
+                                })
+                              }
                               min="1"
                               max="5"
                               className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
@@ -1362,10 +1464,14 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                           <div className="flex items-center gap-2 text-teal-800 text-sm">
                             <Clock className="w-4 h-4" />
                             <span>
-                              When {rule.triggerCondition.metric} ≥ {rule.triggerCondition.threshold}%,
-                              extend time by {rule.extension.amount}
-                              {rule.extension.type === 'fixed' ? 'minutes' :
-                               rule.extension.type === 'percentage' ? '% of original time' : 'minutes per question'}
+                              When {rule.triggerCondition.metric} ≥{' '}
+                              {rule.triggerCondition.threshold}%, extend time by{' '}
+                              {rule.extension.amount}
+                              {rule.extension.type === 'fixed'
+                                ? 'minutes'
+                                : rule.extension.type === 'percentage'
+                                  ? '% of original time'
+                                  : 'minutes per question'}
                               (max {rule.extension.maxExtensions} times)
                             </span>
                           </div>
@@ -1381,7 +1487,11 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
           {/* Action Buttons */}
           <div className="flex justify-between items-center pt-6 border-t bg-white rounded-xl p-6">
             <div className="text-sm text-gray-600">
-              Adaptive features configured: {Object.values(configuration).filter(Array.isArray).reduce((sum, arr) => sum + arr.length, 0)} rules
+              Adaptive features configured:{' '}
+              {Object.values(configuration)
+                .filter(Array.isArray)
+                .reduce((sum, arr) => sum + arr.length, 0)}{' '}
+              rules
             </div>
 
             <div className="flex gap-3">
@@ -1394,7 +1504,13 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
               </button>
 
               <button
-                onClick={() => alert('Adaptive configuration exported successfully!')}
+                onClick={() =>
+                  showToast(
+                    'success',
+                    'Configuration Exported',
+                    'Adaptive configuration exported successfully!'
+                  )
+                }
                 className="border border-gray-300 px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors flex items-center gap-2"
               >
                 <Save className="w-4 h-4" />
@@ -1402,7 +1518,13 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
               </button>
 
               <button
-                onClick={() => alert('Adaptive features configuration applied successfully!')}
+                onClick={() =>
+                  showToast(
+                    'success',
+                    'Configuration Applied',
+                    'Adaptive features configuration applied successfully!'
+                  )
+                }
                 className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2"
               >
                 <CheckCircle2 className="w-4 h-4" />

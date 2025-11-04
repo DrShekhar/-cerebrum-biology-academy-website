@@ -10,6 +10,8 @@ import AITestGeneration from './AITestGeneration'
 import { DashboardSkeleton } from '../ui/LoadingSkeleton'
 import { useToast } from '../ui/Toast'
 import { SyllabusCard, StudyHoursCard, TestScoreCard, StreakCard } from './ProgressCard'
+import { ActivityHistoryModal } from './ActivityHistoryModal'
+import { SettingsPanel } from './SettingsPanel'
 import {
   Brain,
   BookOpen,
@@ -140,6 +142,8 @@ export function AIEducationDashboard() {
   const [showTestCreation, setShowTestCreation] = useState(false)
   const [showAnalytics, setShowAnalytics] = useState(false)
   const [showRealTimeMetrics, setShowRealTimeMetrics] = useState(false)
+  const [showActivityHistory, setShowActivityHistory] = useState(false)
+  const [showSettings, setShowSettings] = useState(false)
   const [chatMessages, setChatMessages] = useState<
     Array<{
       id: string
@@ -186,7 +190,7 @@ export function AIEducationDashboard() {
   }
 
   const handleSettings = () => {
-    showToast('info', 'Settings', 'Settings panel coming soon!', 3000)
+    setShowSettings(true)
   }
 
   const handleViewDetails = () => {
@@ -195,7 +199,7 @@ export function AIEducationDashboard() {
   }
 
   const handleViewAll = () => {
-    showToast('info', 'Activity History', 'Complete activity history coming soon!', 3000)
+    setShowActivityHistory(true)
   }
 
   const handleStartConversation = async (
@@ -595,7 +599,7 @@ export function AIEducationDashboard() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Navigation Tabs - Responsive */}
-        <div className="bg-white/50 backdrop-blur-sm p-1 rounded-2xl mb-8 border border-white/20">
+        <div className="backdrop-blur-xl bg-white/10 border border-white/20 shadow-xl p-1 rounded-2xl mb-8">
           <div className="hidden md:flex space-x-1">
             {[
               { id: 'overview', label: 'Overview', icon: BarChart3 },
@@ -610,8 +614,8 @@ export function AIEducationDashboard() {
                 onClick={() => setActiveTab(tab.id as any)}
                 className={`flex items-center space-x-2 px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
                   activeTab === tab.id
-                    ? `bg-gradient-to-r ${tabColors[tab.id as keyof typeof tabColors]} text-white shadow-lg transform scale-105`
-                    : 'text-gray-600 hover:text-gray-800 hover:bg-white/50'
+                    ? `bg-gradient-to-r ${tabColors[tab.id as keyof typeof tabColors]} text-white shadow-xl backdrop-blur-lg transform scale-105`
+                    : 'text-gray-600 hover:text-gray-800 hover:backdrop-blur-md hover:bg-white/20'
                 }`}
                 aria-label={`Switch to ${tab.label} tab`}
                 aria-current={activeTab === tab.id ? 'page' : undefined}
@@ -695,7 +699,7 @@ export function AIEducationDashboard() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6 }}
-                className="grid grid-cols-1 md:grid-cols-2 gap-6"
+                className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8"
               >
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
@@ -748,12 +752,12 @@ export function AIEducationDashboard() {
               </motion.div>
 
               {/* Main Content Grid */}
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
                 {/* AI Predictions */}
-                <div className="lg:col-span-2 bg-white/60 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-lg">
-                  <div className="flex items-center justify-between mb-6">
-                    <h3 className="text-lg font-semibold text-gray-800 flex items-center">
-                      <Zap className="w-5 h-5 mr-2 text-yellow-500" />
+                <div className="lg:col-span-2 backdrop-blur-xl bg-white/10 rounded-2xl p-4 sm:p-6 lg:p-8 border border-white/20 shadow-xl">
+                  <div className="flex items-center justify-between mb-6 sm:mb-8">
+                    <h3 className="text-lg sm:text-xl font-semibold text-gray-800 flex items-center">
+                      <Zap className="w-5 h-5 mr-2 sm:mr-3 text-yellow-500" />
                       AI Predictions
                     </h3>
                     <button
@@ -764,7 +768,7 @@ export function AIEducationDashboard() {
                     </button>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
                     {[
                       {
                         label: 'Predicted NEET Score',
@@ -809,25 +813,27 @@ export function AIEducationDashboard() {
                           initial={{ opacity: 0, scale: 0.9 }}
                           animate={{ opacity: 1, scale: 1 }}
                           transition={{ delay: 0.2 + index * 0.1 }}
-                          className="bg-white/80 rounded-xl p-4 border border-white/30"
+                          className="backdrop-blur-lg bg-white/20 rounded-xl p-4 sm:p-6 border border-white/30 shadow-lg"
                         >
-                          <div className="flex items-center justify-between mb-2">
-                            <prediction.icon className={`w-5 h-5 ${iconColorClass}`} />
+                          <div className="flex items-center justify-between mb-3 sm:mb-4">
+                            <prediction.icon
+                              className={`w-5 h-5 sm:w-6 sm:h-6 ${iconColorClass}`}
+                            />
                             <span className="text-xs text-gray-500 font-medium uppercase tracking-wide">
                               {prediction.isRank ? 'Lower is Better' : 'Target'}
                             </span>
                           </div>
-                          <p className="text-sm text-gray-600 mb-1">{prediction.label}</p>
-                          <p className="text-2xl font-bold text-gray-800">
+                          <p className="text-sm text-gray-600 mb-2 sm:mb-3">{prediction.label}</p>
+                          <p className="text-2xl sm:text-3xl font-bold text-gray-800 mb-3">
                             {prediction.isRank ? '#' : ''}
                             {prediction.value}
                             {!prediction.isRank && prediction.max > 100 ? `/${prediction.max}` : ''}
                             {!prediction.isRank && prediction.max <= 100 ? '%' : ''}
                           </p>
                           {!prediction.isRank && (
-                            <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
+                            <div className="w-full bg-gray-200 rounded-full h-2 sm:h-2.5">
                               <div
-                                className={`${gradientClass} h-2 rounded-full transition-all duration-500`}
+                                className={`${gradientClass} h-2 sm:h-2.5 rounded-full transition-all duration-500`}
                                 style={{ width: `${(prediction.value / prediction.max) * 100}%` }}
                               ></div>
                             </div>
@@ -838,7 +844,7 @@ export function AIEducationDashboard() {
                   </div>
 
                   {/* Quick Actions */}
-                  <div className="mt-6 flex flex-wrap gap-3">
+                  <div className="mt-6 sm:mt-8 flex flex-wrap gap-2 sm:gap-3">
                     {[
                       {
                         label: 'Ask AI Tutor',
@@ -870,7 +876,7 @@ export function AIEducationDashboard() {
                         onClick={action.onClick}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.98 }}
-                        className={`flex items-center space-x-2 px-4 py-2 ${action.colorClass} text-white rounded-lg hover:shadow-lg transition-all duration-200 text-sm font-medium`}
+                        className={`flex items-center space-x-2 px-3 py-2 sm:px-4 sm:py-3 ${action.colorClass} text-white rounded-lg hover:shadow-lg transition-all duration-200 text-sm font-medium min-h-[44px]`}
                         aria-label={action.label}
                       >
                         <action.icon className="w-4 h-4" />
@@ -881,10 +887,10 @@ export function AIEducationDashboard() {
                 </div>
 
                 {/* Recent Activity */}
-                <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-lg">
-                  <div className="flex items-center justify-between mb-6">
-                    <h3 className="text-lg font-semibold text-gray-800 flex items-center">
-                      <Activity className="w-5 h-5 mr-2 text-green-500" />
+                <div className="backdrop-blur-xl bg-white/10 rounded-2xl p-4 sm:p-6 lg:p-8 border border-white/20 shadow-xl">
+                  <div className="flex items-center justify-between mb-6 sm:mb-8">
+                    <h3 className="text-lg sm:text-xl font-semibold text-gray-800 flex items-center">
+                      <Activity className="w-5 h-5 mr-2 sm:mr-3 text-green-500" />
                       Recent Activity
                     </h3>
                     <button
@@ -895,14 +901,14 @@ export function AIEducationDashboard() {
                     </button>
                   </div>
 
-                  <div className="space-y-4">
+                  <div className="space-y-3 sm:space-y-4">
                     {recentActivities.map((activity, index) => (
                       <motion.div
                         key={activity.id}
                         initial={{ opacity: 0, x: 20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.3 + index * 0.1 }}
-                        className="flex items-start space-x-3 p-3 bg-white/60 rounded-lg border border-white/30 hover:shadow-md transition-shadow"
+                        className="flex items-start space-x-3 sm:space-x-4 p-3 sm:p-4 backdrop-blur-lg bg-white/20 rounded-lg border border-white/30 hover:shadow-lg transition-shadow"
                       >
                         <div
                           className={`w-8 h-8 rounded-lg flex items-center justify-center ${
@@ -939,10 +945,10 @@ export function AIEducationDashboard() {
               </div>
 
               {/* Progress Chart */}
-              <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-lg">
-                <div className="flex items-center justify-between mb-6">
-                  <h3 className="text-lg font-semibold text-gray-800 flex items-center">
-                    <PieChart className="w-5 h-5 mr-2 text-indigo-500" />
+              <div className="backdrop-blur-xl bg-white/10 rounded-2xl p-4 sm:p-6 lg:p-8 border border-white/20 shadow-xl">
+                <div className="flex items-center justify-between mb-6 sm:mb-8">
+                  <h3 className="text-lg sm:text-xl font-semibold text-gray-800 flex items-center">
+                    <PieChart className="w-5 h-5 mr-2 sm:mr-3 text-indigo-500" />
                     Learning Progress
                   </h3>
                   <div className="flex space-x-2">
@@ -969,7 +975,7 @@ export function AIEducationDashboard() {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
                   {[
                     { subject: 'Cell Biology', progress: 85, colorClass: 'text-purple-500' },
                     { subject: 'Genetics', progress: 72, colorClass: 'text-blue-500' },
@@ -1028,7 +1034,7 @@ export function AIEducationDashboard() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3 }}
-              className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 border border-white/20 shadow-lg"
+              className="backdrop-blur-xl bg-white/10 rounded-2xl p-8 border border-white/20 shadow-xl"
               style={{ pointerEvents: 'all' }}
             >
               <EnhancedChatInterface
@@ -1048,7 +1054,7 @@ export function AIEducationDashboard() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3 }}
-              className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 border border-white/20 shadow-lg"
+              className="backdrop-blur-xl bg-white/10 rounded-2xl p-8 border border-white/20 shadow-xl"
               style={{ pointerEvents: 'all' }}
             >
               <div className="text-center">
@@ -1101,7 +1107,7 @@ export function AIEducationDashboard() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3 }}
-              className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 border border-white/20 shadow-lg"
+              className="backdrop-blur-xl bg-white/10 rounded-2xl p-8 border border-white/20 shadow-xl"
               style={{ pointerEvents: 'all' }}
             >
               <div className="text-center">
@@ -1141,7 +1147,7 @@ export function AIEducationDashboard() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3 }}
-              className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 border border-white/20 shadow-lg"
+              className="backdrop-blur-xl bg-white/10 rounded-2xl p-8 border border-white/20 shadow-xl"
               style={{ pointerEvents: 'all' }}
             >
               <div className="mb-6">
@@ -1168,6 +1174,15 @@ export function AIEducationDashboard() {
 
         {/* View Analytics Interface */}
         <ViewAnalytics isOpen={showAnalytics} onClose={() => setShowAnalytics(false)} />
+
+        {/* Activity History Modal */}
+        <ActivityHistoryModal
+          isOpen={showActivityHistory}
+          onClose={() => setShowActivityHistory(false)}
+        />
+
+        {/* Settings Panel */}
+        <SettingsPanel isOpen={showSettings} onClose={() => setShowSettings(false)} />
       </div>
     </div>
   )

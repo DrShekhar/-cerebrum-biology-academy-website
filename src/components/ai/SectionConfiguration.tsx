@@ -33,6 +33,7 @@ import {
   Lightbulb,
   Info,
 } from 'lucide-react'
+import { useToast } from '@/components/ui/Toast'
 
 // Types and Interfaces
 interface SectionMarkingScheme {
@@ -90,6 +91,7 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
   initialSections = [],
   maxSections = 10,
 }) => {
+  const { showToast } = useToast()
   const [sections, setSections] = useState<TestSection[]>(
     initialSections.length > 0
       ? initialSections
@@ -220,7 +222,7 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
   // Delete section
   const deleteSection = (sectionId: string) => {
     if (sections.length <= 1) {
-      alert('At least one section is required')
+      showToast('warning', 'Cannot Delete Section', 'At least one section is required')
       return
     }
 
@@ -258,9 +260,7 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
     const newSections = [...sections]
     const targetIndex = direction === 'up' ? sectionIndex - 1 : sectionIndex + 1
 
-    if (targetIndex < 0 || targetIndex >= sections.length) return
-
-    // Swap sections
+    if (targetIndex < 0 || targetIndex >= sections.length) return // Swap sections
     ;[newSections[sectionIndex], newSections[targetIndex]] = [
       newSections[targetIndex],
       newSections[sectionIndex],
@@ -1084,8 +1084,10 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
         <div className="flex gap-3">
           <button
             onClick={() => {
-              alert(
-                'Configuration exported successfully!\n\nThis would generate a JSON configuration file with all section settings.'
+              showToast(
+                'success',
+                'Configuration Exported',
+                'This would generate a JSON configuration file with all section settings.'
               )
             }}
             className="border border-gray-300 px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors flex items-center gap-2"
@@ -1097,11 +1099,17 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
           <button
             onClick={() => {
               if (validationErrors.length === 0) {
-                alert(
-                  'Sections configured successfully!\n\nThis configuration would be applied to the test generation process.'
+                showToast(
+                  'success',
+                  'Sections Configured Successfully',
+                  'This configuration would be applied to the test generation process.'
                 )
               } else {
-                alert('Please fix all validation errors before applying the configuration.')
+                showToast(
+                  'error',
+                  'Validation Errors',
+                  'Please fix all validation errors before applying the configuration.'
+                )
               }
             }}
             disabled={validationErrors.length > 0}

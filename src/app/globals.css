@@ -244,6 +244,16 @@ body {
   .safe-area-bottom {
     padding-bottom: max(env(safe-area-inset-bottom), 16px);
   }
+
+  /* Hide scrollbar for horizontal scrolling */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 /* Mobile-specific component styles */

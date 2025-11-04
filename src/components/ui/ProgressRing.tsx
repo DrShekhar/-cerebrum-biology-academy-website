@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useEffect, useState } from 'react'
-import { motion } from 'framer-motion'
+import { motion, useSpring, useTransform } from 'framer-motion'
 
 interface ProgressRingProps {
   value: number
@@ -26,12 +26,19 @@ export function ProgressRing({
   label,
   className = '',
 }: ProgressRingProps) {
-  const [animatedValue, setAnimatedValue] = useState(0)
+  const [displayValue, setDisplayValue] = useState(0)
 
   const radius = (size - strokeWidth) / 2
   const circumference = 2 * Math.PI * radius
   const percentage = Math.min((value / max) * 100, 100)
-  const offset = circumference - (animatedValue / 100) * circumference
+
+  const spring = useSpring(0, {
+    stiffness: 75,
+    damping: 25,
+    restSpeed: 0.5,
+  })
+
+  const offset = useTransform(spring, (latest) => circumference - (latest / 100) * circumference)
 
   const colorClasses: Record<string, { stroke: string; text: string }> = {
     purple: { stroke: 'stroke-purple-500', text: 'text-purple-600' },
@@ -48,10 +55,18 @@ export function ProgressRing({
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setAnimatedValue(percentage)
+      spring.set(percentage)
     }, 100)
-    return () => clearTimeout(timer)
-  }, [percentage])
+
+    const unsubscribe = spring.on('change', (latest) => {
+      setDisplayValue(Math.round(latest))
+    })
+
+    return () => {
+      clearTimeout(timer)
+      unsubscribe()
+    }
+  }, [percentage, spring])
 
   return (
     <div className={`relative inline-flex items-center justify-center ${className}`}>
@@ -89,9 +104,7 @@ export function ProgressRing({
           strokeWidth={strokeWidth}
           fill="transparent"
           strokeDasharray={circumference}
-          strokeDashoffset={circumference}
-          animate={{ strokeDashoffset: offset }}
-          transition={{ duration: 1, ease: 'easeOut' }}
+          style={{ strokeDashoffset: offset }}
           className={!gradientColors ? selectedColor.stroke : ''}
           strokeLinecap="round"
         />
@@ -102,13 +115,27 @@ export function ProgressRing({
           <motion.span
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.3, duration: 0.5 }}
+            transition={{
+              delay: 0.3,
+              type: 'spring',
+              stiffness: 200,
+              damping: 20,
+            }}
             className={`text-2xl font-bold ${selectedColor.text}`}
           >
-            {Math.round(animatedValue)}%
+            {displayValue}%
           </motion.span>
         )}
-        {label && <span className="text-xs text-gray-500 mt-1 text-center">{label}</span>}
+        {label && (
+          <motion.span
+            className="text-xs text-gray-500 mt-1 text-center"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5 }}
+          >
+            {label}
+          </motion.span>
+        )}
       </div>
     </div>
   )

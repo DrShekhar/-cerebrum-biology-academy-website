@@ -1459,7 +1459,11 @@ export function TestCreationInterface({ isOpen, onClose, onCreateTest }: TestCre
                           max="100"
                           value={testConfig.difficultyDistribution[key]}
                           onChange={(e) => handleDifficultyChange(key, parseInt(e.target.value))}
-                          className={`w-full h-2 rounded-lg appearance-none cursor-pointer bg-${color}-200`}
+                          className={`w-full h-2 rounded-lg appearance-none cursor-pointer ${
+                            color === 'green' ? 'bg-green-200' :
+                            color === 'yellow' ? 'bg-yellow-200' :
+                            color === 'red' ? 'bg-red-200' : 'bg-gray-200'
+                          }`}
                         />
                         <div className="text-xs text-gray-600 mt-2">
                           {Math.round(testConfig.totalQuestions * testConfig.difficultyDistribution[key] / 100)} questions

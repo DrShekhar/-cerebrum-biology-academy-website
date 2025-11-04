@@ -589,6 +589,36 @@ const DataManagement: React.FC = () => {
     return colors[status as keyof typeof colors] || 'gray'
   }
 
+  const getStatusBgClass = (status: string) => {
+    const color = getStatusColor(status)
+    return color === 'green' ? 'bg-green-100' :
+      color === 'yellow' ? 'bg-yellow-100' :
+      color === 'gray' ? 'bg-gray-100' :
+      color === 'red' ? 'bg-red-100' :
+      color === 'blue' ? 'bg-blue-100' :
+      color === 'orange' ? 'bg-orange-100' : 'bg-gray-100'
+  }
+
+  const getStatusTextClass = (status: string) => {
+    const color = getStatusColor(status)
+    return color === 'green' ? 'text-green-700' :
+      color === 'yellow' ? 'text-yellow-700' :
+      color === 'gray' ? 'text-gray-700' :
+      color === 'red' ? 'text-red-700' :
+      color === 'blue' ? 'text-blue-700' :
+      color === 'orange' ? 'text-orange-700' : 'text-gray-700'
+  }
+
+  const getStatusProgressClass = (status: string) => {
+    const color = getStatusColor(status)
+    return color === 'green' ? 'bg-green-500' :
+      color === 'yellow' ? 'bg-yellow-500' :
+      color === 'gray' ? 'bg-gray-500' :
+      color === 'red' ? 'bg-red-500' :
+      color === 'blue' ? 'bg-blue-500' :
+      color === 'orange' ? 'bg-orange-500' : 'bg-gray-500'
+  }
+
   const getTypeIcon = (type: string) => {
     const icons = {
       test: BookOpen,
@@ -750,7 +780,7 @@ const DataManagement: React.FC = () => {
                         <p className="text-sm text-gray-600">{job.format} export</p>
                       </div>
                       <div className="flex items-center gap-2">
-                        <span className={`px-2 py-1 rounded text-xs font-medium bg-${getStatusColor(job.status)}-100 text-${getStatusColor(job.status)}-700`}>
+                        <span className={`px-2 py-1 rounded text-xs font-medium ${getStatusBgClass(job.status)} ${getStatusTextClass(job.status)}`}>
                           {job.status}
                         </span>
                         {job.status === 'completed' && job.downloadUrl && (
@@ -769,7 +799,7 @@ const DataManagement: React.FC = () => {
                       </div>
                       <div className="w-full bg-gray-200 rounded-full h-2">
                         <div
-                          className={`h-2 rounded-full bg-${getStatusColor(job.status)}-500 transition-all duration-300`}
+                          className={`h-2 rounded-full ${getStatusProgressClass(job.status)} transition-all duration-300`}
                           style={{ width: `${job.progress}%` }}
                         />
                       </div>
@@ -915,7 +945,7 @@ const DataManagement: React.FC = () => {
                         <h4 className="font-medium text-gray-800">{job.fileName}</h4>
                         <p className="text-sm text-gray-600">{job.format} • {job.fileSize}</p>
                       </div>
-                      <span className={`px-2 py-1 rounded text-xs font-medium bg-${getStatusColor(job.status)}-100 text-${getStatusColor(job.status)}-700`}>
+                      <span className={`px-2 py-1 rounded text-xs font-medium ${getStatusBgClass(job.status)} ${getStatusTextClass(job.status)}`}>
                         {job.status}
                       </span>
                     </div>
@@ -928,7 +958,7 @@ const DataManagement: React.FC = () => {
                       </div>
                       <div className="w-full bg-gray-200 rounded-full h-2">
                         <div
-                          className={`h-2 rounded-full bg-${getStatusColor(job.status)}-500 transition-all duration-300`}
+                          className={`h-2 rounded-full ${getStatusProgressClass(job.status)} transition-all duration-300`}
                           style={{ width: `${job.progress}%` }}
                         />
                       </div>
@@ -1141,7 +1171,7 @@ const DataManagement: React.FC = () => {
                         <p className="text-sm text-gray-600">{backup.location} • {backup.size}</p>
                       </div>
                       <div className="flex items-center gap-2">
-                        <span className={`px-2 py-1 rounded text-xs font-medium bg-${getStatusColor(backup.status)}-100 text-${getStatusColor(backup.status)}-700`}>
+                        <span className={`px-2 py-1 rounded text-xs font-medium ${getStatusBgClass(backup.status)} ${getStatusTextClass(backup.status)}`}>
                           {backup.status}
                         </span>
                         <span className={`px-2 py-1 rounded text-xs font-medium ${
@@ -1281,7 +1311,7 @@ const DataManagement: React.FC = () => {
                             <TypeIcon className="w-5 h-5 text-purple-600" />
                             <h4 className="font-medium text-gray-800 truncate">{test.name}</h4>
                           </div>
-                          <span className={`px-2 py-1 rounded text-xs font-medium bg-${getStatusColor(test.status)}-100 text-${getStatusColor(test.status)}-700`}>
+                          <span className={`px-2 py-1 rounded text-xs font-medium ${getStatusBgClass(test.status)} ${getStatusTextClass(test.status)}`}>
                             {test.status}
                           </span>
                         </div>

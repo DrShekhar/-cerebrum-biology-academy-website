@@ -283,20 +283,31 @@ export function QuestionProperties({
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-3">Difficulty Level</label>
                 <div className="flex space-x-3">
-                  {['easy', 'medium', 'hard'].map(level => (
-                    <button
-                      key={level}
-                      onClick={() => updateProperty('difficulty', level)}
-                      className={`flex items-center space-x-2 px-4 py-2 rounded-lg border-2 transition-all ${
-                        properties.difficulty === level
-                          ? `border-${getDifficultyColor(level)}-500 bg-${getDifficultyColor(level)}-50 text-${getDifficultyColor(level)}-700`
-                          : 'border-gray-200 text-gray-600 hover:border-gray-300'
-                      }`}
-                    >
-                      <div className={`w-3 h-3 rounded-full bg-${getDifficultyColor(level)}-500`}></div>
-                      <span className="capitalize font-medium">{level}</span>
-                    </button>
-                  ))}
+                  {['easy', 'medium', 'hard'].map(level => {
+                    const color = getDifficultyColor(level)
+                    const activeClasses = color === 'green' ? 'border-green-500 bg-green-50 text-green-700' :
+                      color === 'yellow' ? 'border-yellow-500 bg-yellow-50 text-yellow-700' :
+                      color === 'red' ? 'border-red-500 bg-red-50 text-red-700' : 'border-gray-500 bg-gray-50 text-gray-700'
+
+                    const dotClasses = color === 'green' ? 'bg-green-500' :
+                      color === 'yellow' ? 'bg-yellow-500' :
+                      color === 'red' ? 'bg-red-500' : 'bg-gray-500'
+
+                    return (
+                      <button
+                        key={level}
+                        onClick={() => updateProperty('difficulty', level)}
+                        className={`flex items-center space-x-2 px-4 py-2 rounded-lg border-2 transition-all ${
+                          properties.difficulty === level
+                            ? activeClasses
+                            : 'border-gray-200 text-gray-600 hover:border-gray-300'
+                        }`}
+                      >
+                        <div className={`w-3 h-3 rounded-full ${dotClasses}`}></div>
+                        <span className="capitalize font-medium">{level}</span>
+                      </button>
+                    )
+                  })}
                 </div>
               </div>
 
@@ -431,30 +442,53 @@ export function QuestionProperties({
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-3">Bloom's Taxonomy Level</label>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-                  {Object.entries(bloomsLevels).map(([level, details]) => (
-                    <button
-                      key={level}
-                      onClick={() => updateProperty('bloomsTaxonomy.level', level)}
-                      className={`p-4 rounded-lg border-2 transition-all text-left ${
-                        properties.bloomsTaxonomy.level === level
-                          ? `border-${details.color}-500 bg-${details.color}-50`
-                          : 'border-gray-200 hover:border-gray-300'
-                      }`}
-                    >
-                      <div className="flex items-center space-x-2 mb-2">
-                        <div className={`w-3 h-3 rounded-full bg-${details.color}-500`}></div>
-                        <span className="font-medium capitalize">{level}</span>
-                      </div>
-                      <p className="text-sm text-gray-600 mb-2">{details.description}</p>
-                      <div className="flex flex-wrap gap-1">
-                        {details.examples.slice(0, 2).map(example => (
-                          <span key={example} className="text-xs bg-gray-100 px-2 py-1 rounded">
-                            {example}
-                          </span>
-                        ))}
-                      </div>
-                    </button>
-                  ))}
+                  {Object.entries(bloomsLevels).map(([level, details]) => {
+                    const borderClass = details.color === 'blue' ? 'border-blue-500' :
+                      details.color === 'green' ? 'border-green-500' :
+                      details.color === 'purple' ? 'border-purple-500' :
+                      details.color === 'orange' ? 'border-orange-500' :
+                      details.color === 'red' ? 'border-red-500' :
+                      details.color === 'indigo' ? 'border-indigo-500' : 'border-gray-500'
+
+                    const bgClass = details.color === 'blue' ? 'bg-blue-50' :
+                      details.color === 'green' ? 'bg-green-50' :
+                      details.color === 'purple' ? 'bg-purple-50' :
+                      details.color === 'orange' ? 'bg-orange-50' :
+                      details.color === 'red' ? 'bg-red-50' :
+                      details.color === 'indigo' ? 'bg-indigo-50' : 'bg-gray-50'
+
+                    const dotClass = details.color === 'blue' ? 'bg-blue-500' :
+                      details.color === 'green' ? 'bg-green-500' :
+                      details.color === 'purple' ? 'bg-purple-500' :
+                      details.color === 'orange' ? 'bg-orange-500' :
+                      details.color === 'red' ? 'bg-red-500' :
+                      details.color === 'indigo' ? 'bg-indigo-500' : 'bg-gray-500'
+
+                    return (
+                      <button
+                        key={level}
+                        onClick={() => updateProperty('bloomsTaxonomy.level', level)}
+                        className={`p-4 rounded-lg border-2 transition-all text-left ${
+                          properties.bloomsTaxonomy.level === level
+                            ? `${borderClass} ${bgClass}`
+                            : 'border-gray-200 hover:border-gray-300'
+                        }`}
+                      >
+                        <div className="flex items-center space-x-2 mb-2">
+                          <div className={`w-3 h-3 rounded-full ${dotClass}`}></div>
+                          <span className="font-medium capitalize">{level}</span>
+                        </div>
+                        <p className="text-sm text-gray-600 mb-2">{details.description}</p>
+                        <div className="flex flex-wrap gap-1">
+                          {details.examples.slice(0, 2).map((example) => (
+                            <span key={example} className="text-xs bg-gray-100 px-2 py-1 rounded">
+                              {example}
+                            </span>
+                          ))}
+                        </div>
+                      </button>
+                    )
+                  })}
                 </div>
               </div>
 

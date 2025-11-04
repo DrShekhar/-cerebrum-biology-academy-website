@@ -12,6 +12,7 @@ import {
   FileText,
   Volume2,
 } from 'lucide-react'
+import { useToast } from '@/components/ui/Toast'
 
 interface ChatMessage {
   id: string
@@ -39,6 +40,7 @@ export function EnhancedChatInterface({
   onSendMessage,
   isLoading,
 }: EnhancedChatInterfaceProps) {
+  const { showToast } = useToast()
   const [input, setInput] = useState('')
   const [isRecording, setIsRecording] = useState(false)
   const [showImageUpload, setShowImageUpload] = useState(false)
@@ -95,7 +97,11 @@ export function EnhancedChatInterface({
       setIsRecording(true)
     } catch (error) {
       console.error('Error starting recording:', error)
-      alert('Could not access microphone. Please check permissions.')
+      showToast(
+        'error',
+        'Microphone Access Denied',
+        'Could not access microphone. Please check your browser permissions.'
+      )
     }
   }
 

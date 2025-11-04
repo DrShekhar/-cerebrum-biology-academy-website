@@ -31,14 +31,23 @@ import {
   TrendingUp,
   Filter,
   Download,
-  Share
+  Share,
 } from 'lucide-react'
+import { useToast } from '@/components/ui/Toast'
 
 // Types and Interfaces
 interface TestTemplate {
   id: string
   name: string
-  type: 'chapter' | 'unit' | 'board' | 'competitive' | 'quick' | 'diagnostic' | 'revision' | 'custom'
+  type:
+    | 'chapter'
+    | 'unit'
+    | 'board'
+    | 'competitive'
+    | 'quick'
+    | 'diagnostic'
+    | 'revision'
+    | 'custom'
   description: string
   duration: number
   totalQuestions: number
@@ -90,6 +99,7 @@ interface TemplateCategory {
 }
 
 const TestTemplates: React.FC = () => {
+  const { showToast } = useToast()
   const [activeView, setActiveView] = useState<'browse' | 'create' | 'customize'>('browse')
   const [selectedTemplate, setSelectedTemplate] = useState<TestTemplate | null>(null)
   const [searchQuery, setSearchQuery] = useState('')
@@ -115,8 +125,8 @@ const TestTemplates: React.FC = () => {
       showResults: true,
       timeLimit: true,
       sectionWise: false,
-      mandatoryQuestions: []
-    }
+      mandatoryQuestions: [],
+    },
   })
 
   // Pre-defined Templates Data
@@ -133,7 +143,8 @@ const TestTemplates: React.FC = () => {
           id: 'ch_cell_biology',
           name: 'Cell Biology Mastery Test',
           type: 'chapter',
-          description: 'Comprehensive test covering cell structure, organelles, and cellular processes',
+          description:
+            'Comprehensive test covering cell structure, organelles, and cellular processes',
           duration: 45,
           totalQuestions: 30,
           totalMarks: 120,
@@ -142,7 +153,11 @@ const TestTemplates: React.FC = () => {
           topicCoverage: ['Cell Structure', 'Cell Organelles', 'Cell Division', 'Cell Membrane'],
           syllabus: 'class11',
           examPattern: 'NCERT Based',
-          instructions: ['Read each question carefully', 'Manage time effectively', 'Review answers before submission'],
+          instructions: [
+            'Read each question carefully',
+            'Manage time effectively',
+            'Review answers before submission',
+          ],
           markingScheme: { correct: 4, incorrect: -1, unattempted: 0 },
           tags: ['cell biology', 'class 11', 'fundamental'],
           isPopular: true,
@@ -156,8 +171,8 @@ const TestTemplates: React.FC = () => {
             showResults: true,
             timeLimit: true,
             sectionWise: false,
-            mandatoryQuestions: []
-          }
+            mandatoryQuestions: [],
+          },
         },
         {
           id: 'ch_genetics',
@@ -169,10 +184,14 @@ const TestTemplates: React.FC = () => {
           totalMarks: 160,
           difficultyDistribution: { easy: 30, medium: 50, hard: 20 },
           questionTypes: { mcq: 65, assertion: 25, numerical: 10, matching: 0 },
-          topicCoverage: ['Mendel\'s Laws', 'Genetic Disorders', 'DNA Structure', 'Gene Expression'],
+          topicCoverage: ["Mendel's Laws", 'Genetic Disorders', 'DNA Structure', 'Gene Expression'],
           syllabus: 'class12',
           examPattern: 'CBSE Board Pattern',
-          instructions: ['Focus on genetic cross problems', 'Use Punnett squares where needed', 'Show working for numerical problems'],
+          instructions: [
+            'Focus on genetic cross problems',
+            'Use Punnett squares where needed',
+            'Show working for numerical problems',
+          ],
           markingScheme: { correct: 4, incorrect: -1, unattempted: 0 },
           tags: ['genetics', 'class 12', 'inheritance'],
           isPopular: true,
@@ -186,10 +205,10 @@ const TestTemplates: React.FC = () => {
             showResults: true,
             timeLimit: true,
             sectionWise: true,
-            mandatoryQuestions: []
-          }
-        }
-      ]
+            mandatoryQuestions: [],
+          },
+        },
+      ],
     },
     {
       id: 'unit',
@@ -212,7 +231,11 @@ const TestTemplates: React.FC = () => {
           topicCoverage: ['Classification', 'Taxonomy', 'Biodiversity', 'Conservation'],
           syllabus: 'class11',
           examPattern: 'Unit Test Pattern',
-          instructions: ['Cover all chapters in the unit', 'Pay attention to taxonomic hierarchy', 'Focus on conservation concepts'],
+          instructions: [
+            'Cover all chapters in the unit',
+            'Pay attention to taxonomic hierarchy',
+            'Focus on conservation concepts',
+          ],
           markingScheme: { correct: 4, incorrect: -1, unattempted: 0 },
           tags: ['diversity', 'classification', 'unit test'],
           isPopular: false,
@@ -226,10 +249,10 @@ const TestTemplates: React.FC = () => {
             showResults: true,
             timeLimit: true,
             sectionWise: true,
-            mandatoryQuestions: []
-          }
-        }
-      ]
+            mandatoryQuestions: [],
+          },
+        },
+      ],
     },
     {
       id: 'board',
@@ -252,7 +275,12 @@ const TestTemplates: React.FC = () => {
           topicCoverage: ['All Class 12 Biology Topics'],
           syllabus: 'class12',
           examPattern: 'CBSE Board Pattern 2024',
-          instructions: ['Read instructions carefully', '3 hours duration', 'All questions are compulsory', 'Use diagrams where necessary'],
+          instructions: [
+            'Read instructions carefully',
+            '3 hours duration',
+            'All questions are compulsory',
+            'Use diagrams where necessary',
+          ],
           markingScheme: { correct: 1, incorrect: 0, unattempted: 0 },
           tags: ['cbse', 'board exam', 'class 12', 'full syllabus'],
           isPopular: true,
@@ -266,10 +294,10 @@ const TestTemplates: React.FC = () => {
             showResults: true,
             timeLimit: true,
             sectionWise: true,
-            mandatoryQuestions: []
-          }
-        }
-      ]
+            mandatoryQuestions: [],
+          },
+        },
+      ],
     },
     {
       id: 'competitive',
@@ -292,7 +320,11 @@ const TestTemplates: React.FC = () => {
           topicCoverage: ['All NEET Biology Syllabus'],
           syllabus: 'neet',
           examPattern: 'NEET 2024 Pattern',
-          instructions: ['50 questions in 45 minutes', '+4 for correct, -1 for incorrect', 'No negative marking for unattempted'],
+          instructions: [
+            '50 questions in 45 minutes',
+            '+4 for correct, -1 for incorrect',
+            'No negative marking for unattempted',
+          ],
           markingScheme: { correct: 4, incorrect: -1, unattempted: 0 },
           tags: ['neet', 'biology', 'competitive', 'mock test'],
           isPopular: true,
@@ -306,8 +338,8 @@ const TestTemplates: React.FC = () => {
             showResults: true,
             timeLimit: true,
             sectionWise: false,
-            mandatoryQuestions: []
-          }
+            mandatoryQuestions: [],
+          },
         },
         {
           id: 'jee_bio_test',
@@ -322,7 +354,11 @@ const TestTemplates: React.FC = () => {
           topicCoverage: ['Advanced Biology Topics'],
           syllabus: 'jee',
           examPattern: 'JEE Advanced Pattern',
-          instructions: ['High difficulty questions', 'Multiple correct answers possible', 'Partial marking scheme'],
+          instructions: [
+            'High difficulty questions',
+            'Multiple correct answers possible',
+            'Partial marking scheme',
+          ],
           markingScheme: { correct: 4, incorrect: -1, unattempted: 0 },
           tags: ['jee advanced', 'biology', 'high difficulty'],
           isPopular: false,
@@ -336,10 +372,10 @@ const TestTemplates: React.FC = () => {
             showResults: true,
             timeLimit: true,
             sectionWise: false,
-            mandatoryQuestions: []
-          }
-        }
-      ]
+            mandatoryQuestions: [],
+          },
+        },
+      ],
     },
     {
       id: 'quick',
@@ -376,8 +412,8 @@ const TestTemplates: React.FC = () => {
             showResults: true,
             timeLimit: true,
             sectionWise: false,
-            mandatoryQuestions: []
-          }
+            mandatoryQuestions: [],
+          },
         },
         {
           id: 'quick_respiration',
@@ -406,10 +442,10 @@ const TestTemplates: React.FC = () => {
             showResults: true,
             timeLimit: true,
             sectionWise: false,
-            mandatoryQuestions: []
-          }
-        }
-      ]
+            mandatoryQuestions: [],
+          },
+        },
+      ],
     },
     {
       id: 'diagnostic',
@@ -432,7 +468,11 @@ const TestTemplates: React.FC = () => {
           topicCoverage: ['All Major Biology Topics'],
           syllabus: 'neet',
           examPattern: 'Diagnostic Assessment',
-          instructions: ['Comprehensive assessment', 'Detailed performance analysis', 'Identify weak areas'],
+          instructions: [
+            'Comprehensive assessment',
+            'Detailed performance analysis',
+            'Identify weak areas',
+          ],
           markingScheme: { correct: 4, incorrect: -1, unattempted: 0 },
           tags: ['diagnostic', 'neet', 'preparation', 'assessment'],
           isPopular: true,
@@ -446,10 +486,10 @@ const TestTemplates: React.FC = () => {
             showResults: true,
             timeLimit: true,
             sectionWise: true,
-            mandatoryQuestions: []
-          }
-        }
-      ]
+            mandatoryQuestions: [],
+          },
+        },
+      ],
     },
     {
       id: 'revision',
@@ -486,10 +526,10 @@ const TestTemplates: React.FC = () => {
             showResults: true,
             timeLimit: true,
             sectionWise: false,
-            mandatoryQuestions: []
-          }
-        }
-      ]
+            mandatoryQuestions: [],
+          },
+        },
+      ],
     },
     {
       id: 'custom',
@@ -498,28 +538,44 @@ const TestTemplates: React.FC = () => {
       icon: <Settings className="w-5 h-5" />,
       color: 'from-gray-500 to-slate-500',
       isExpanded: false,
-      templates: []
-    }
+      templates: [],
+    },
   ])
 
   const [availableTopics] = useState([
-    'Cell Biology', 'Genetics', 'Evolution', 'Ecology', 'Human Physiology',
-    'Plant Physiology', 'Reproduction', 'Biotechnology', 'Molecular Biology',
-    'Taxonomy', 'Anatomy', 'Environmental Biology', 'Photosynthesis',
-    'Respiration', 'Enzyme Action', 'Biomolecules', 'Cell Division'
+    'Cell Biology',
+    'Genetics',
+    'Evolution',
+    'Ecology',
+    'Human Physiology',
+    'Plant Physiology',
+    'Reproduction',
+    'Biotechnology',
+    'Molecular Biology',
+    'Taxonomy',
+    'Anatomy',
+    'Environmental Biology',
+    'Photosynthesis',
+    'Respiration',
+    'Enzyme Action',
+    'Biomolecules',
+    'Cell Division',
   ])
 
   // Filter templates based on search and category
-  const filteredCategories = templateCategories.map(category => ({
-    ...category,
-    templates: category.templates.filter(template => {
-      const matchesSearch = template.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                           template.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                           template.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-      const matchesCategory = selectedCategory === 'all' || category.id === selectedCategory
-      return matchesSearch && matchesCategory
-    })
-  })).filter(category => category.templates.length > 0 || selectedCategory === category.id)
+  const filteredCategories = templateCategories
+    .map((category) => ({
+      ...category,
+      templates: category.templates.filter((template) => {
+        const matchesSearch =
+          template.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          template.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          template.tags.some((tag) => tag.toLowerCase().includes(searchQuery.toLowerCase()))
+        const matchesCategory = selectedCategory === 'all' || category.id === selectedCategory
+        return matchesSearch && matchesCategory
+      }),
+    }))
+    .filter((category) => category.templates.length > 0 || selectedCategory === category.id)
 
   // Handle template selection
   const handleSelectTemplate = (template: TestTemplate) => {
@@ -536,7 +592,11 @@ const TestTemplates: React.FC = () => {
   // Save custom template
   const handleSaveTemplate = () => {
     if (!customTemplate.name || !customTemplate.description) {
-      alert('Please provide name and description for the template')
+      showToast(
+        'warning',
+        'Missing Information',
+        'Please provide name and description for the template'
+      )
       return
     }
 
@@ -548,33 +608,39 @@ const TestTemplates: React.FC = () => {
       createdBy: 'User',
       usageCount: 0,
       isPopular: false,
-      tags: customTemplate.tags || []
+      tags: customTemplate.tags || [],
     } as TestTemplate
 
-    setTemplateCategories(prev => prev.map(category =>
-      category.id === 'custom'
-        ? { ...category, templates: [...category.templates, newTemplate] }
-        : category
-    ))
+    setTemplateCategories((prev) =>
+      prev.map((category) =>
+        category.id === 'custom'
+          ? { ...category, templates: [...category.templates, newTemplate] }
+          : category
+      )
+    )
 
     setActiveView('browse')
     setIsCreating(false)
-    alert('Template created successfully!')
+    showToast('success', 'Template Created', 'Your custom template has been created successfully!')
   }
 
   // Use template (would integrate with AI Test Generation)
   const handleUseTemplate = (template: TestTemplate) => {
-    alert(`Using template: ${template.name}\n\nThis would integrate with the AI Test Generation system to create a test based on this template configuration.`)
+    showToast(
+      'info',
+      `Using Template: ${template.name}`,
+      'This would integrate with the AI Test Generation system to create a test based on this template configuration.'
+    )
 
     // Update usage count
-    setTemplateCategories(prev => prev.map(category => ({
-      ...category,
-      templates: category.templates.map(t =>
-        t.id === template.id
-          ? { ...t, usageCount: t.usageCount + 1, lastUsed: new Date() }
-          : t
-      )
-    })))
+    setTemplateCategories((prev) =>
+      prev.map((category) => ({
+        ...category,
+        templates: category.templates.map((t) =>
+          t.id === template.id ? { ...t, usageCount: t.usageCount + 1, lastUsed: new Date() } : t
+        ),
+      }))
+    )
   }
 
   return (
@@ -594,8 +660,8 @@ const TestTemplates: React.FC = () => {
           </h1>
         </motion.div>
         <p className="text-gray-600 max-w-2xl mx-auto">
-          Choose from professionally designed test templates for different exam patterns,
-          difficulty levels, and assessment types
+          Choose from professionally designed test templates for different exam patterns, difficulty
+          levels, and assessment types
         </p>
       </div>
 
@@ -605,7 +671,7 @@ const TestTemplates: React.FC = () => {
           {[
             { id: 'browse', label: 'Browse Templates', icon: Search },
             { id: 'create', label: 'Create Custom', icon: Plus },
-            { id: 'customize', label: 'Customize', icon: Settings }
+            { id: 'customize', label: 'Customize', icon: Settings },
           ].map(({ id, label, icon: Icon }) => (
             <button
               key={id}
@@ -653,7 +719,7 @@ const TestTemplates: React.FC = () => {
                 className="px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
               >
                 <option value="all">All Categories</option>
-                {templateCategories.map(category => (
+                {templateCategories.map((category) => (
                   <option key={category.id} value={category.id}>
                     {category.name}
                   </option>
@@ -681,11 +747,13 @@ const TestTemplates: React.FC = () => {
                   {/* Category Header */}
                   <div
                     className={`p-4 bg-gradient-to-r ${category.color} rounded-t-xl text-white cursor-pointer`}
-                    onClick={() => setTemplateCategories(prev => prev.map(cat =>
-                      cat.id === category.id
-                        ? { ...cat, isExpanded: !cat.isExpanded }
-                        : cat
-                    ))}
+                    onClick={() =>
+                      setTemplateCategories((prev) =>
+                        prev.map((cat) =>
+                          cat.id === category.id ? { ...cat, isExpanded: !cat.isExpanded } : cat
+                        )
+                      )
+                    }
                   >
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-3">
@@ -845,7 +913,9 @@ const TestTemplates: React.FC = () => {
                   <input
                     type="text"
                     value={customTemplate.name || ''}
-                    onChange={(e) => setCustomTemplate(prev => ({ ...prev, name: e.target.value }))}
+                    onChange={(e) =>
+                      setCustomTemplate((prev) => ({ ...prev, name: e.target.value }))
+                    }
                     className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                     placeholder="Enter template name"
                   />
@@ -857,7 +927,9 @@ const TestTemplates: React.FC = () => {
                   </label>
                   <textarea
                     value={customTemplate.description || ''}
-                    onChange={(e) => setCustomTemplate(prev => ({ ...prev, description: e.target.value }))}
+                    onChange={(e) =>
+                      setCustomTemplate((prev) => ({ ...prev, description: e.target.value }))
+                    }
                     rows={3}
                     className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                     placeholder="Describe your template"
@@ -872,7 +944,12 @@ const TestTemplates: React.FC = () => {
                     <input
                       type="number"
                       value={customTemplate.duration || 60}
-                      onChange={(e) => setCustomTemplate(prev => ({ ...prev, duration: parseInt(e.target.value) || 60 }))}
+                      onChange={(e) =>
+                        setCustomTemplate((prev) => ({
+                          ...prev,
+                          duration: parseInt(e.target.value) || 60,
+                        }))
+                      }
                       className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                     />
                   </div>
@@ -883,7 +960,12 @@ const TestTemplates: React.FC = () => {
                     <input
                       type="number"
                       value={customTemplate.totalQuestions || 30}
-                      onChange={(e) => setCustomTemplate(prev => ({ ...prev, totalQuestions: parseInt(e.target.value) || 30 }))}
+                      onChange={(e) =>
+                        setCustomTemplate((prev) => ({
+                          ...prev,
+                          totalQuestions: parseInt(e.target.value) || 30,
+                        }))
+                      }
                       className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                     />
                   </div>
@@ -894,19 +976,24 @@ const TestTemplates: React.FC = () => {
                     <input
                       type="number"
                       value={customTemplate.totalMarks || 120}
-                      onChange={(e) => setCustomTemplate(prev => ({ ...prev, totalMarks: parseInt(e.target.value) || 120 }))}
+                      onChange={(e) =>
+                        setCustomTemplate((prev) => ({
+                          ...prev,
+                          totalMarks: parseInt(e.target.value) || 120,
+                        }))
+                      }
                       className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Syllabus
-                  </label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Syllabus</label>
                   <select
                     value={customTemplate.syllabus || 'neet'}
-                    onChange={(e) => setCustomTemplate(prev => ({ ...prev, syllabus: e.target.value as any }))}
+                    onChange={(e) =>
+                      setCustomTemplate((prev) => ({ ...prev, syllabus: e.target.value as any }))
+                    }
                     className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                   >
                     <option value="class11">Class 11</option>
@@ -925,7 +1012,9 @@ const TestTemplates: React.FC = () => {
                     Difficulty Distribution
                   </label>
                   <div className="space-y-3">
-                    {Object.entries(customTemplate.difficultyDistribution || { easy: 40, medium: 40, hard: 20 }).map(([level, percentage]) => (
+                    {Object.entries(
+                      customTemplate.difficultyDistribution || { easy: 40, medium: 40, hard: 20 }
+                    ).map(([level, percentage]) => (
                       <div key={level} className="flex items-center gap-3">
                         <span className="w-16 text-sm capitalize">{level}:</span>
                         <input
@@ -933,13 +1022,15 @@ const TestTemplates: React.FC = () => {
                           min="0"
                           max="100"
                           value={percentage}
-                          onChange={(e) => setCustomTemplate(prev => ({
-                            ...prev,
-                            difficultyDistribution: {
-                              ...prev.difficultyDistribution,
-                              [level]: parseInt(e.target.value)
-                            }
-                          }))}
+                          onChange={(e) =>
+                            setCustomTemplate((prev) => ({
+                              ...prev,
+                              difficultyDistribution: {
+                                ...prev.difficultyDistribution,
+                                [level]: parseInt(e.target.value),
+                              },
+                            }))
+                          }
                           className="flex-1"
                         />
                         <span className="w-8 text-sm">{percentage}%</span>
@@ -953,7 +1044,14 @@ const TestTemplates: React.FC = () => {
                     Question Types
                   </label>
                   <div className="space-y-3">
-                    {Object.entries(customTemplate.questionTypes || { mcq: 80, assertion: 10, numerical: 5, matching: 5 }).map(([type, percentage]) => (
+                    {Object.entries(
+                      customTemplate.questionTypes || {
+                        mcq: 80,
+                        assertion: 10,
+                        numerical: 5,
+                        matching: 5,
+                      }
+                    ).map(([type, percentage]) => (
                       <div key={type} className="flex items-center gap-3">
                         <span className="w-16 text-sm uppercase">{type}:</span>
                         <input
@@ -961,13 +1059,15 @@ const TestTemplates: React.FC = () => {
                           min="0"
                           max="100"
                           value={percentage}
-                          onChange={(e) => setCustomTemplate(prev => ({
-                            ...prev,
-                            questionTypes: {
-                              ...prev.questionTypes,
-                              [type]: parseInt(e.target.value)
-                            }
-                          }))}
+                          onChange={(e) =>
+                            setCustomTemplate((prev) => ({
+                              ...prev,
+                              questionTypes: {
+                                ...prev.questionTypes,
+                                [type]: parseInt(e.target.value),
+                              },
+                            }))
+                          }
                           className="flex-1"
                         />
                         <span className="w-8 text-sm">{percentage}%</span>
@@ -981,7 +1081,7 @@ const TestTemplates: React.FC = () => {
                     Topic Coverage
                   </label>
                   <div className="grid grid-cols-2 gap-2 max-h-32 overflow-y-auto border rounded p-2">
-                    {availableTopics.map(topic => (
+                    {availableTopics.map((topic) => (
                       <label key={topic} className="flex items-center gap-2 text-sm">
                         <input
                           type="checkbox"
@@ -989,14 +1089,14 @@ const TestTemplates: React.FC = () => {
                           onChange={(e) => {
                             const topics = customTemplate.topicCoverage || []
                             if (e.target.checked) {
-                              setCustomTemplate(prev => ({
+                              setCustomTemplate((prev) => ({
                                 ...prev,
-                                topicCoverage: [...topics, topic]
+                                topicCoverage: [...topics, topic],
                               }))
                             } else {
-                              setCustomTemplate(prev => ({
+                              setCustomTemplate((prev) => ({
                                 ...prev,
-                                topicCoverage: topics.filter(t => t !== topic)
+                                topicCoverage: topics.filter((t) => t !== topic),
                               }))
                             }
                           }}
@@ -1066,7 +1166,9 @@ const TestTemplates: React.FC = () => {
                     </div>
                     <div>
                       <span className="text-gray-600">Syllabus:</span>
-                      <span className="ml-2 font-medium capitalize">{selectedTemplate.syllabus}</span>
+                      <span className="ml-2 font-medium capitalize">
+                        {selectedTemplate.syllabus}
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -1074,21 +1176,26 @@ const TestTemplates: React.FC = () => {
                 <div className="border rounded-lg p-4">
                   <h4 className="font-semibold mb-3">Difficulty Distribution</h4>
                   <div className="space-y-2">
-                    {Object.entries(selectedTemplate.difficultyDistribution).map(([level, percentage]) => (
-                      <div key={level} className="flex items-center gap-3">
-                        <span className="w-16 text-sm capitalize">{level}:</span>
-                        <div className="flex-1 bg-gray-200 rounded-full h-2">
-                          <div
-                            className={`h-2 rounded-full ${
-                              level === 'easy' ? 'bg-green-500' :
-                              level === 'medium' ? 'bg-yellow-500' : 'bg-red-500'
-                            }`}
-                            style={{ width: `${percentage}%` }}
-                          />
+                    {Object.entries(selectedTemplate.difficultyDistribution).map(
+                      ([level, percentage]) => (
+                        <div key={level} className="flex items-center gap-3">
+                          <span className="w-16 text-sm capitalize">{level}:</span>
+                          <div className="flex-1 bg-gray-200 rounded-full h-2">
+                            <div
+                              className={`h-2 rounded-full ${
+                                level === 'easy'
+                                  ? 'bg-green-500'
+                                  : level === 'medium'
+                                    ? 'bg-yellow-500'
+                                    : 'bg-red-500'
+                              }`}
+                              style={{ width: `${percentage}%` }}
+                            />
+                          </div>
+                          <span className="w-8 text-sm">{percentage}%</span>
                         </div>
-                        <span className="w-8 text-sm">{percentage}%</span>
-                      </div>
-                    ))}
+                      )
+                    )}
                   </div>
                 </div>
 
@@ -1096,7 +1203,10 @@ const TestTemplates: React.FC = () => {
                   <h4 className="font-semibold mb-3">Question Types</h4>
                   <div className="grid grid-cols-2 gap-3">
                     {Object.entries(selectedTemplate.questionTypes).map(([type, percentage]) => (
-                      <div key={type} className="flex justify-between items-center p-2 bg-gray-50 rounded">
+                      <div
+                        key={type}
+                        className="flex justify-between items-center p-2 bg-gray-50 rounded"
+                      >
                         <span className="text-sm uppercase font-medium">{type}</span>
                         <span className="text-sm">{percentage}%</span>
                       </div>
@@ -1144,7 +1254,13 @@ const TestTemplates: React.FC = () => {
                     </button>
 
                     <button
-                      onClick={() => alert('Export functionality would be implemented here')}
+                      onClick={() =>
+                        showToast(
+                          'info',
+                          'Export Template',
+                          'Export functionality would be implemented here'
+                        )
+                      }
                       className="w-full border py-2 px-4 rounded-lg hover:bg-gray-50 transition-colors flex items-center justify-center gap-2"
                     >
                       <Download className="w-4 h-4" />
@@ -1152,7 +1268,13 @@ const TestTemplates: React.FC = () => {
                     </button>
 
                     <button
-                      onClick={() => alert('Share functionality would be implemented here')}
+                      onClick={() =>
+                        showToast(
+                          'info',
+                          'Share Template',
+                          'Share functionality would be implemented here'
+                        )
+                      }
                       className="w-full border py-2 px-4 rounded-lg hover:bg-gray-50 transition-colors flex items-center justify-center gap-2"
                     >
                       <Share className="w-4 h-4" />
