@@ -1570,3 +1570,175 @@ model OtpVerification {
   @@index([expiresAt])
   @@map("otp_verifications")
 }
+
+// ============================================
+// SEO & CONTENT MARKETING SYSTEM MODELS
+// ============================================
+
+model BiologyTopic {
+  id               String   @id @default(cuid())
+
+  // Basic Information
+  title            String   // "Cell Biology: Structure and Function"
+  slug             String   @unique // "cell-biology-structure-function"
+  content          String   @db.Text // Full markdown content
+  excerpt          String?  // Short preview (150-200 chars)
+
+  // SEO Optimization
+  metaTitle        String?  // Custom SEO title (60 chars)
+  metaDescription  String?  // Custom meta description (160 chars)
+  keywords         String[] // ["cell", "biology", "mitochondria", "NEET"]
+
+  // Classification & Taxonomy
+  curriculum       String   // NEET, CBSE, ICSE, IB, IGCSE
+  grade            String   // CLASS_11, CLASS_12
+  chapter          String   // "Cell: The Unit of Life"
+  difficulty       String   @default("Medium") // Easy, Medium, Hard
+
+  // Rich Content
+  keyPoints        Json?    // String array of key learning points
+  diagrams         Json?    // Array of image URLs for diagrams
+  videoUrl         String?  // Optional YouTube/Vimeo URL
+
+  // Lead Magnet Association
+  leadMagnetId     String?
+  leadMagnet       LeadMagnet? @relation(fields: [leadMagnetId], references: [id])
+
+  // Analytics & Performance
+  viewCount        Int      @default(0)
+  leadConversions  Int      @default(0) // Number of leads captured from this page
+  avgTimeOnPage    Int?     // Average time in seconds
+  bounceRate       Float?   // Percentage
+
+  // Publishing
+  isPublished      Boolean  @default(false)
+  publishedAt      DateTime?
+  authorName       String?  @default("Dr. Shekhar C Singh")
+
+  // Timestamps
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  // Relations
+  contentLeads     ContentLead[]
+
+  @@index([slug])
+  @@index([curriculum, grade, chapter])
+  @@index([isPublished, publishedAt])
+  @@index([viewCount])
+  @@map("biology_topics")
+}
+
+model LeadMagnet {
+  id               String   @id @default(cuid())
+
+  // Lead Magnet Details
+  title            String   // "Cell Biology Complete Notes PDF"
+  description      String   // "Comprehensive 50-page notes covering all NEET topics"
+
+  // File Information
+  fileType         String   // PDF, ZIP, DOC, PPTX
+  fileUrl          String?  // S3/CDN URL (generated after lead capture)
+  fileSize         Int?     // In KB
+  thumbnailUrl     String?  // Preview image
+
+  // Gating Configuration
+  requiresEmail    Boolean  @default(true)
+  requiresWhatsApp Boolean  @default(false)
+  requiresName     Boolean  @default(true)
+
+  // Value Proposition
+  features         Json?    // Array of features/benefits
+  previewPages     Int?     // Number of preview pages shown before gating
+
+  // Analytics
+  downloadCount    Int      @default(0)
+  conversionRate   Float?   // Percentage of viewers who download
+
+  // Status
+  isActive         Boolean  @default(true)
+
+  // Timestamps
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  // Relations
+  topics           BiologyTopic[]
+  leads            ContentLead[]
+
+  @@map("lead_magnets")
+}
+
+model ContentLead {
+  id               String   @id @default(cuid())
+
+  // Contact Information (at least one required)
+  email            String?
+  whatsappNumber   String?  // Format: +919876543210
+  name             String?
+
+  // Additional Info
+  grade            String?  // CLASS_11, CLASS_12, DROPPER
+  interestedIn     String?  // NEET, CBSE, Both
+
+  // Source Tracking
+  source           String   // "topic-page", "pdf-download", "notes-request", "homepage-cta"
+  topicSlug        String?  // Which biology topic page they came from
+  leadMagnetId     String?
+
+  // UTM Parameters (Marketing Attribution)
+  utmSource        String?  // google, facebook, instagram
+  utmMedium        String?  // cpc, organic, social
+  utmCampaign      String?  // summer-2025, neet-prep
+  utmContent       String?  // ad-variant-a
+  utmTerm          String?  // biology notes
+
+  // Referrer Information
+  referrerUrl      String?  // Full URL of referring page
+  landingPage      String?  // First page visited
+
+  // Device & Location
+  deviceType       String?  // mobile, tablet, desktop
+  browser          String?  // Chrome, Safari, Firefox
+  ipAddress        String?
+  country          String?
+  city             String?
+
+  // Engagement Status
+  downloadCompleted Boolean  @default(false)
+  downloadedAt      DateTime?
+  emailVerified     Boolean  @default(false)
+  whatsappVerified  Boolean  @default(false)
+
+  // Conversion Tracking
+  convertedToPaid   Boolean  @default(false)
+  convertedAt       DateTime?
+  enrollmentId      String?  // Link to Enrollment if converted
+
+  // Communication Status
+  welcomeEmailSent  Boolean  @default(false)
+  welcomeWhatsAppSent Boolean @default(false)
+  followUpCount     Int      @default(0)
+  lastContactedAt   DateTime?
+
+  // Lead Quality Scoring
+  leadScore         Int      @default(0) // 0-100 score
+  leadStage         String   @default("NEW") // NEW, CONTACTED, QUALIFIED, ENROLLED, COLD
+
+  // Timestamps
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  // Relations
+  leadMagnet        LeadMagnet? @relation(fields: [leadMagnetId], references: [id])
+  biologyTopic      BiologyTopic? @relation(fields: [topicSlug], references: [slug])
+
+  @@index([email])
+  @@index([whatsappNumber])
+  @@index([createdAt])
+  @@index([topicSlug, createdAt])
+  @@index([source, createdAt])
+  @@index([leadStage, leadScore])
+  @@index([convertedToPaid])
+  @@map("content_leads")
+}
