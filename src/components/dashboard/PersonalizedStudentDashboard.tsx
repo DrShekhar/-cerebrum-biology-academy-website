@@ -42,6 +42,10 @@ import { FloatingActionButton, useDashboardFAB } from '@/components/mobile/Float
 import { BottomSheet, useBottomSheet } from '@/components/mobile/BottomSheet'
 import { BottomNavigation } from '@/components/mobile/MobileNavigation'
 import { usePathname } from 'next/navigation'
+import { fetchWithRetry } from '@/lib/utils/fetchWithRetry'
+import { useToast } from '@/components/ui/Toast'
+import { ProgressCardSkeleton } from '@/components/ai/skeletons/ProgressCardSkeleton'
+import { MetricCardSkeleton } from '@/components/ai/skeletons/MetricsSkeleton'
 
 interface StudySession {
   id: string
@@ -74,11 +78,15 @@ interface NEETProgress {
 export function PersonalizedStudentDashboard() {
   const { user, isAuthenticated } = useAuth()
   const pathname = usePathname()
+  const { showToast } = useToast()
   const [activeTab, setActiveTab] = useState('overview')
   const [studyTimer, setStudyTimer] = useState(0)
   const [isStudying, setIsStudying] = useState(false)
   const [currentSession, setCurrentSession] = useState<string>('')
   const [isLoading, setIsLoading] = useState(true)
+  const [isRefreshing, setIsRefreshing] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+  const [lastUpdated, setLastUpdated] = useState<Date | null>(null)
   const [freeUserId, setFreeUserId] = useState<string | null>(null)
   const [selectedWeakArea, setSelectedWeakArea] = useState<WeakArea | null>(null)
   const dashboardRef = useRef<HTMLDivElement>(null)
@@ -119,92 +127,145 @@ export function PersonalizedStudentDashboard() {
     }
   }, [isAuthenticated])
 
-  const fetchDashboardData = useCallback(async () => {
-    try {
-      setIsLoading(true)
-      const userId = user?.id || freeUserId
-      if (!userId) return
+  const fetchDashboardData = useCallback(
+    async (showLoadingState = true) => {
+      try {
+        if (showLoadingState) {
+          setIsLoading(true)
+        } else {
+          setIsRefreshing(true)
+        }
+        setError(null)
 
-      const attemptsResponse = await fetch(`/api/test-attempts?freeUserId=${userId}`)
-      const attemptsData = await attemptsResponse.json()
+        const userId = user?.id || freeUserId
+        if (!userId) return
 
-      const sessionsResponse = await fetch(`/api/test-sessions?freeUserId=${userId}`)
-      const sessionsData = await sessionsResponse.json()
+        // Parallel fetch for performance with retry logic
+        const [attemptsResponse, dashboardStatsResponse] = await Promise.allSettled([
+          fetchWithRetry(`/api/test-attempts?freeUserId=${userId}`, {
+            retryOptions: {
+              maxRetries: 3,
+              onRetry: (attempt) => {
+                console.log(`Retrying attempts fetch (attempt ${attempt})`)
+              },
+            },
+          }),
+          fetchWithRetry(`/api/analytics/dashboard?type=student&userId=${userId}`, {
+            retryOptions: {
+              maxRetries: 2,
+              onRetry: (attempt) => {
+                console.log(`Retrying dashboard stats fetch (attempt ${attempt})`)
+              },
+            },
+          }),
+        ])
 
-      if (attemptsData.success && attemptsData.data.attempts.length > 0) {
-        const attempts = attemptsData.data.attempts
+        // Process attempts data
+        if (attemptsResponse.status === 'fulfilled') {
+          const attemptsData = await attemptsResponse.value.json()
 
-        // Calculate average score and improvement
-        const scores = attempts.map((a: any) => a.score)
-        const avgScore = Math.round(
-          scores.reduce((a: number, b: number) => a + b, 0) / scores.length
-        )
-        const latestScore = scores[0]
-        const previousScore = scores.length > 1 ? scores[1] : latestScore
-        const improvement = latestScore - previousScore
+          if (attemptsData.success && attemptsData.data.attempts.length > 0) {
+            const attempts = attemptsData.data.attempts
 
-        // Collect all strength and weakness areas
-        const allStrongAreas = new Set<string>()
-        const allWeakAreas = new Map<string, { count: number; topics: Set<string> }>()
+            // Calculate average score and improvement
+            const scores = attempts.map((a: any) => a.score)
+            const avgScore = Math.round(
+              scores.reduce((a: number, b: number) => a + b, 0) / scores.length
+            )
+            const latestScore = scores[0]
+            const previousScore = scores.length > 1 ? scores[1] : latestScore
+            const improvement = latestScore - previousScore
 
-        attempts.forEach((attempt: any) => {
-          attempt.strengthAreas?.forEach((area: string) => allStrongAreas.add(area))
-          attempt.weaknessAreas?.forEach((area: string) => {
-            if (!allWeakAreas.has(area)) {
-              allWeakAreas.set(area, { count: 0, topics: new Set() })
-            }
-            const weakArea = allWeakAreas.get(area)!
-            weakArea.count++
-          })
-        })
+            // Collect all strength and weakness areas
+            const allStrongAreas = new Set<string>()
+            const allWeakAreas = new Map<string, { count: number; topics: Set<string> }>()
 
-        // Build weak areas with recommendations
-        const weakAreas: WeakArea[] = Array.from(allWeakAreas.entries())
-          .sort((a, b) => b[1].count - a[1].count)
-          .slice(0, 5)
-          .map(([chapter, data]) => ({
-            chapter,
-            topic: 'Multiple concepts',
-            difficulty: data.count >= 3 ? 'high' : data.count >= 2 ? 'medium' : 'low',
-            improvement: -data.count,
-            recommendedStudyTime: data.count * 30,
-          }))
+            attempts.forEach((attempt: any) => {
+              attempt.strengthAreas?.forEach((area: string) => allStrongAreas.add(area))
+              attempt.weaknessAreas?.forEach((area: string) => {
+                if (!allWeakAreas.has(area)) {
+                  allWeakAreas.set(area, { count: 0, topics: new Set() })
+                }
+                const weakArea = allWeakAreas.get(area)!
+                weakArea.count++
+              })
+            })
 
-        setNeetProgress({
-          currentScore: avgScore,
-          targetScore: 540,
-          improvement,
-          rank: attempts[0]?.rank || 0,
-          percentile: attempts[0]?.percentage || 0,
-          strongAreas: Array.from(allStrongAreas).slice(0, 5),
-          weakAreas,
-        })
+            // Build weak areas with recommendations
+            const weakAreas: WeakArea[] = Array.from(allWeakAreas.entries())
+              .sort((a, b) => b[1].count - a[1].count)
+              .slice(0, 5)
+              .map(([chapter, data]) => ({
+                chapter,
+                topic: 'Multiple concepts',
+                difficulty: data.count >= 3 ? 'high' : data.count >= 2 ? 'medium' : 'low',
+                improvement: -data.count,
+                recommendedStudyTime: data.count * 30,
+              }))
 
-        // Transform sessions to study sessions format
-        const transformedSessions = attempts.slice(0, 5).map((attempt: any) => ({
-          id: attempt.id,
-          subject: 'Biology',
-          chapter: attempt.testTemplate.title,
-          duration: Math.round(attempt.timeSpent / 60),
-          score: attempt.percentage,
-          date: attempt.createdAt,
-          type:
-            attempt.testTemplate.type === 'PRACTICE_TEST'
-              ? 'practice'
-              : attempt.testTemplate.type === 'MOCK_TEST'
-                ? 'test'
-                : 'study',
-        }))
+            // Calculate Biology score (out of 360 for NEET Biology section)
+            const biologyScore = Math.round(avgScore * 0.5)
 
-        setRecentSessions(transformedSessions)
+            setNeetProgress({
+              currentScore: biologyScore,
+              targetScore: 360,
+              improvement,
+              rank: attempts[0]?.rank || 0,
+              percentile: attempts[0]?.percentage || 0,
+              strongAreas: Array.from(allStrongAreas).slice(0, 5),
+              weakAreas,
+            })
+
+            // Transform sessions to study sessions format
+            const transformedSessions = attempts.slice(0, 10).map((attempt: any) => ({
+              id: attempt.id,
+              subject: 'Biology',
+              chapter: attempt.testTemplate.title,
+              duration: Math.round(attempt.timeSpent / 60),
+              score: attempt.percentage,
+              date: attempt.createdAt,
+              type:
+                attempt.testTemplate.type === 'PRACTICE_TEST'
+                  ? 'practice'
+                  : attempt.testTemplate.type === 'MOCK_TEST'
+                    ? 'test'
+                    : 'study',
+            }))
+
+            setRecentSessions(transformedSessions)
+          }
+        } else {
+          console.error('Failed to fetch attempts:', attemptsResponse.reason)
+          setError('Failed to load test history')
+          showToast('error', 'Load Failed', 'Could not fetch your test history')
+        }
+
+        // Process dashboard stats if available
+        if (dashboardStatsResponse.status === 'fulfilled' && dashboardStatsResponse.value.ok) {
+          const statsData = await dashboardStatsResponse.value.json()
+          if (statsData.success) {
+            console.log('Dashboard stats loaded:', statsData.data)
+          }
+        }
+
+        setLastUpdated(new Date())
+        setIsLoading(false)
+        setIsRefreshing(false)
+
+        if (!showLoadingState) {
+          showToast('success', 'Refreshed', 'Dashboard data updated successfully')
+        }
+      } catch (error) {
+        console.error('Error fetching dashboard data:', error)
+        setError('Failed to load dashboard data')
+        setIsLoading(false)
+        setIsRefreshing(false)
+
+        showToast('error', 'Load Failed', 'Unable to fetch dashboard data. Please try again.', 7000)
       }
-
-      setIsLoading(false)
-    } catch (error) {
-      console.error('Error fetching dashboard data:', error)
-      setIsLoading(false)
-    }
-  }, [user?.id, freeUserId])
+    },
+    [user?.id, freeUserId, showToast]
+  )
 
   useEffect(() => {
     if (user?.id || freeUserId) {
@@ -212,7 +273,20 @@ export function PersonalizedStudentDashboard() {
     }
   }, [user?.id, freeUserId, fetchDashboardData])
 
-  const pullToRefresh = usePullToRefresh(fetchDashboardData, 80)
+  // Auto-refresh every 5 minutes
+  useEffect(() => {
+    const AUTO_REFRESH_INTERVAL = 5 * 60 * 1000 // 5 minutes
+
+    const interval = setInterval(() => {
+      if (user?.id || freeUserId) {
+        fetchDashboardData(false) // Don't show loading state on auto-refresh
+      }
+    }, AUTO_REFRESH_INTERVAL)
+
+    return () => clearInterval(interval)
+  }, [user?.id, freeUserId, fetchDashboardData])
+
+  const pullToRefresh = usePullToRefresh(() => fetchDashboardData(false), 80)
 
   const goToPreviousTab = useCallback(() => {
     setActiveTab((current) => {
@@ -280,15 +354,51 @@ export function PersonalizedStudentDashboard() {
     setCurrentSession('')
   }
 
-  // Loading state - Mobile Optimized
+  // Helper function to get time since last update
+  const getTimeSinceUpdate = () => {
+    if (!lastUpdated) return ''
+    const now = new Date()
+    const diff = Math.floor((now.getTime() - lastUpdated.getTime()) / 1000 / 60) // minutes
+    if (diff < 1) return 'Just now'
+    if (diff < 60) return `${diff} min ago`
+    const hours = Math.floor(diff / 60)
+    if (hours < 24) return `${hours} hour${hours > 1 ? 's' : ''} ago`
+    const days = Math.floor(hours / 24)
+    return `${days} day${days > 1 ? 's' : ''} ago`
+  }
+
+  // Loading state - Mobile Optimized with Skeletons
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-navy-50 to-teal-50 flex items-center justify-center p-4">
-        <div className="text-center">
-          <div className="w-12 h-12 sm:w-16 sm:h-16 bg-blue-500 rounded-full flex items-center justify-center mb-3 sm:mb-4 mx-auto animate-pulse">
-            <Brain className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
+      <div className="min-h-screen bg-gradient-to-br from-navy-50 via-teal-50 to-gold-50 pb-20 md:pb-0">
+        <div className="bg-white shadow-lg border-b">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
+            <div className="flex items-center space-x-3 sm:space-x-4">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-teal-600 to-teal-700 rounded-xl flex items-center justify-center flex-shrink-0 animate-pulse">
+                <Brain className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+              </div>
+              <div className="min-w-0 flex-1">
+                <h1 className="text-lg sm:text-2xl font-bold text-gray-900">
+                  Loading your dashboard...
+                </h1>
+                <p className="text-xs sm:text-sm text-gray-600">Please wait</p>
+              </div>
+            </div>
           </div>
-          <p className="text-sm sm:text-base text-gray-600">Loading your dashboard data...</p>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-8 space-y-4 sm:space-y-8">
+          <ProgressCardSkeleton />
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6">
+            <MetricCardSkeleton />
+            <MetricCardSkeleton />
+            <MetricCardSkeleton />
+            <MetricCardSkeleton />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8">
+            <ProgressCardSkeleton />
+            <ProgressCardSkeleton />
+          </div>
         </div>
       </div>
     )
@@ -402,22 +512,44 @@ export function PersonalizedStudentDashboard() {
                 <p className="text-xs sm:text-sm text-gray-600 hidden sm:block">
                   Your NEET Biology mastery journey continues
                 </p>
+                {lastUpdated && (
+                  <p className="text-xs text-gray-500 mt-0.5 sm:hidden">
+                    Updated {getTimeSinceUpdate()}
+                  </p>
+                )}
               </div>
             </div>
             <div className="flex items-center space-x-2 sm:space-x-4 w-full sm:w-auto justify-between sm:justify-end">
               <div className="text-center sm:text-right">
-                <div className="text-xs text-gray-600">Score</div>
+                <div className="text-xs text-gray-600">Biology Score</div>
                 <div className="text-lg sm:text-2xl font-bold text-blue-600">
-                  {neetProgress.currentScore}/720
+                  {neetProgress.currentScore}/360
+                </div>
+                <div className="text-xs text-gray-500 hidden sm:block">
+                  Total: {neetProgress.currentScore * 2}/720
                 </div>
               </div>
               <div className="text-center sm:text-right">
                 <div className="text-xs text-gray-600">Rank</div>
                 <div className="text-lg sm:text-2xl font-bold text-green-600">
-                  #{neetProgress.rank}
+                  #{neetProgress.rank || '-'}
+                </div>
+                <div className="text-xs text-gray-500 hidden sm:block">
+                  {neetProgress.percentile}th %ile
                 </div>
               </div>
               <div className="flex items-center space-x-1 sm:space-x-2">
+                <button
+                  onClick={() => fetchDashboardData(false)}
+                  disabled={isRefreshing}
+                  aria-label="Refresh dashboard"
+                  title={lastUpdated ? `Last updated ${getTimeSinceUpdate()}` : 'Refresh'}
+                  className="p-2 sm:p-2.5 bg-gray-100 rounded-lg hover:bg-gray-200 touch-action-manipulation active:scale-95 transition-transform min-h-[44px] min-w-[44px] flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50"
+                >
+                  <RefreshCw
+                    className={`w-5 h-5 text-gray-600 ${isRefreshing ? 'animate-spin' : ''}`}
+                  />
+                </button>
                 <button
                   aria-label="Notifications"
                   className="p-2 sm:p-2.5 bg-gray-100 rounded-lg hover:bg-gray-200 touch-action-manipulation active:scale-95 transition-transform min-h-[44px] min-w-[44px] flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
@@ -433,6 +565,11 @@ export function PersonalizedStudentDashboard() {
               </div>
             </div>
           </div>
+          {lastUpdated && (
+            <div className="text-xs text-gray-500 mt-2 hidden sm:block">
+              Last updated {getTimeSinceUpdate()}
+            </div>
+          )}
         </div>
       </div>
 
@@ -503,17 +640,27 @@ export function PersonalizedStudentDashboard() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-8">
                   <div>
                     <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
-                      🎯 NEET Score Prediction
+                      🎯 NEET Biology Score
                     </h3>
                     <div className="space-y-1.5 sm:space-y-2">
-                      <div className="text-xs sm:text-sm text-blue-100">Current Biology Score</div>
+                      <div className="text-xs sm:text-sm text-blue-100">Current Score</div>
                       <div className="text-3xl sm:text-4xl font-bold">
-                        {neetProgress.currentScore}/720
+                        {neetProgress.currentScore}/360
+                      </div>
+                      <div className="text-xs sm:text-sm text-blue-200 mb-2">
+                        Total NEET: {neetProgress.currentScore * 2}/720
                       </div>
                       <div className="flex items-center space-x-1.5 sm:space-x-2">
-                        <ArrowUp className="w-3 h-3 sm:w-4 sm:h-4 text-green-300" />
-                        <span className="text-xs sm:text-sm text-green-300">
-                          +{neetProgress.improvement} from last test
+                        {neetProgress.improvement >= 0 ? (
+                          <ArrowUp className="w-3 h-3 sm:w-4 sm:h-4 text-green-300" />
+                        ) : (
+                          <ArrowDown className="w-3 h-3 sm:w-4 sm:h-4 text-red-300" />
+                        )}
+                        <span
+                          className={`text-xs sm:text-sm ${neetProgress.improvement >= 0 ? 'text-green-300' : 'text-red-300'}`}
+                        >
+                          {neetProgress.improvement >= 0 ? '+' : ''}
+                          {neetProgress.improvement} from last test
                         </span>
                       </div>
                     </div>
@@ -525,7 +672,7 @@ export function PersonalizedStudentDashboard() {
                     <div className="space-y-3 sm:space-y-4">
                       <div>
                         <div className="flex justify-between text-xs sm:text-sm mb-2">
-                          <span>Progress to Target (540/720)</span>
+                          <span>Progress to Target ({neetProgress.targetScore})</span>
                           <span>
                             {Math.round(
                               (neetProgress.currentScore / neetProgress.targetScore) * 100
@@ -543,20 +690,33 @@ export function PersonalizedStudentDashboard() {
                         </div>
                       </div>
                       <div className="text-xs sm:text-sm text-blue-100">
-                        {neetProgress.targetScore - neetProgress.currentScore} marks to target
+                        {Math.max(0, neetProgress.targetScore - neetProgress.currentScore)} marks to
+                        target
+                      </div>
+                      <div className="text-xs sm:text-sm text-blue-200">
+                        Biology: Zoology + Botany (180 + 180)
                       </div>
                     </div>
                   </div>
                   <div>
                     <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">
-                      National Ranking
+                      Performance Metrics
                     </h4>
                     <div className="space-y-1.5 sm:space-y-2">
-                      <div className="text-2xl sm:text-3xl font-bold">#{neetProgress.rank}</div>
+                      {neetProgress.rank > 0 && (
+                        <>
+                          <div className="text-2xl sm:text-3xl font-bold">#{neetProgress.rank}</div>
+                          <div className="text-xs sm:text-sm text-blue-100">
+                            {neetProgress.percentile}th percentile
+                          </div>
+                        </>
+                      )}
                       <div className="text-xs sm:text-sm text-blue-100">
-                        {neetProgress.percentile}th percentile
+                        {recentSessions.length} tests completed
                       </div>
-                      <div className="text-xs sm:text-sm text-blue-100">Top 5.8% nationally</div>
+                      <div className="text-xs sm:text-sm text-blue-100">
+                        {neetProgress.strongAreas.length} strong areas
+                      </div>
                     </div>
                   </div>
                 </div>

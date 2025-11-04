@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { EnhancedChatInterface } from './EnhancedChatInterface'
 import { TestCreationInterface } from './TestCreationInterface'
@@ -12,6 +12,10 @@ import { useToast } from '../ui/Toast'
 import { SyllabusCard, StudyHoursCard, TestScoreCard, StreakCard } from './ProgressCard'
 import { ActivityHistoryModal } from './ActivityHistoryModal'
 import { SettingsPanel } from './SettingsPanel'
+import { fetchWithRetry } from '@/lib/utils/fetchWithRetry'
+import { ProgressCardSkeleton } from './skeletons/ProgressCardSkeleton'
+import { MetricCardSkeleton } from './skeletons/MetricsSkeleton'
+import { useAuth } from '@/hooks/useAuth'
 import {
   Brain,
   BookOpen,
@@ -43,6 +47,7 @@ import {
   X,
   Send,
   Menu,
+  RefreshCw,
 } from 'lucide-react'
 // import { aiEducationOrchestrator } from '@/lib/ai/AIEducationOrchestrator' // Commented out for Edge Runtime compatibility
 
@@ -71,6 +76,7 @@ interface RecentActivity {
 
 export function AIEducationDashboard() {
   const { showToast } = useToast()
+  const { user, isAuthenticated } = useAuth()
   const [activeTab, setActiveTab] = useState<
     'overview' | 'tutor' | 'assessment' | 'testgen' | 'analytics' | 'metrics'
   >('overview')
@@ -78,24 +84,29 @@ export function AIEducationDashboard() {
   const [notifications, setNotifications] = useState(3)
   const [isInitialLoading, setIsInitialLoading] = useState(true)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
+  const [lastUpdated, setLastUpdated] = useState<Date | null>(null)
+  const [freeUserId, setFreeUserId] = useState<string | null>(null)
+
   const [metrics, setMetrics] = useState<AIMetrics>({
-    totalQuestions: 1247,
-    doubtsResolved: 156,
-    studyTime: 284,
-    accuracy: 87.5,
-    progress: 76,
+    totalQuestions: 0,
+    doubtsResolved: 0,
+    studyTime: 0,
+    accuracy: 0,
+    progress: 0,
     predictions: {
-      examScore: 650,
-      readiness: 82,
-      rank: 1250,
+      examScore: 0,
+      readiness: 0,
+      rank: 0,
     },
   })
 
   const [progressData, setProgressData] = useState({
-    syllabus: { completed: 76, total: 100 },
-    studyHours: { hours: 284, target: 400 },
-    testScore: { score: 87.5, maxScore: 100 },
-    streak: { days: 12, bestStreak: 30 },
+    syllabus: { completed: 0, total: 100 },
+    studyHours: { hours: 0, target: 400 },
+    testScore: { score: 0, maxScore: 100 },
+    streak: { days: 0, bestStreak: 0 },
   })
 
   const [recentActivities] = useState<RecentActivity[]>([
@@ -137,7 +148,6 @@ export function AIEducationDashboard() {
     },
   ])
 
-  const [isLoading, setIsLoading] = useState(false)
   const [showChatInterface, setShowChatInterface] = useState(false)
   const [showTestCreation, setShowTestCreation] = useState(false)
   const [showAnalytics, setShowAnalytics] = useState(false)
@@ -156,27 +166,164 @@ export function AIEducationDashboard() {
   const [chatInput, setChatInput] = useState('')
   const [isChatLoading, setIsChatLoading] = useState(false)
 
+  // Get or create freeUserId for guest users
   useEffect(() => {
-    // Simulate initial data loading
-    const loadTimeout = setTimeout(() => {
-      setIsInitialLoading(false)
-      showToast('success', 'Dashboard Loaded', 'Welcome back! Your latest stats are ready.')
-    }, 1500)
-
-    // Simulate real-time updates
-    const interval = setInterval(() => {
-      setMetrics((prev) => ({
-        ...prev,
-        doubtsResolved: prev.doubtsResolved + Math.floor(Math.random() * 2),
-        studyTime: prev.studyTime + Math.floor(Math.random() * 5),
-      }))
-    }, 30000)
-
-    return () => {
-      clearTimeout(loadTimeout)
-      clearInterval(interval)
+    if (!isAuthenticated) {
+      let storedFreeUserId = localStorage.getItem('freeUserId')
+      if (!storedFreeUserId) {
+        storedFreeUserId = `free_${Date.now()}_${Math.random().toString(36).substring(7)}`
+        localStorage.setItem('freeUserId', storedFreeUserId)
+      }
+      setFreeUserId(storedFreeUserId)
     }
-  }, [])
+  }, [isAuthenticated])
+
+  // Fetch dashboard data from APIs
+  const fetchDashboardData = useCallback(
+    async (showLoadingState = true) => {
+      try {
+        if (showLoadingState) {
+          setIsLoading(true)
+          setIsInitialLoading(true)
+        }
+        setError(null)
+
+        const userId = user?.id || freeUserId
+        if (!userId) return
+
+        // Parallel fetch for performance with retry logic
+        const [progressRes, statsRes, predictionsRes] = await Promise.allSettled([
+          fetchWithRetry(`/api/user/progress?userId=${userId}`, {
+            retryOptions: {
+              maxRetries: 3,
+              onRetry: (attempt) => {
+                console.log(`Retrying progress fetch (attempt ${attempt})`)
+              },
+            },
+          }),
+          fetchWithRetry(`/api/user/dashboard-stats?userId=${userId}`, {
+            retryOptions: {
+              maxRetries: 2,
+              onRetry: (attempt) => {
+                console.log(`Retrying dashboard stats fetch (attempt ${attempt})`)
+              },
+            },
+          }),
+          fetchWithRetry(`/api/analytics/predictions?userId=${userId}`, {
+            retryOptions: {
+              maxRetries: 2,
+              onRetry: (attempt) => {
+                console.log(`Retrying predictions fetch (attempt ${attempt})`)
+              },
+            },
+          }),
+        ])
+
+        // Process progress data
+        if (progressRes.status === 'fulfilled') {
+          const progressData = await progressRes.value.json()
+          if (progressData.success) {
+            const data = progressData.data
+            setProgressData({
+              syllabus: {
+                completed: data.syllabus.completed,
+                total: data.syllabus.total,
+              },
+              studyHours: {
+                hours: data.studyHours.total,
+                target: data.studyHours.target,
+              },
+              testScore: {
+                score: data.biologyScore.current,
+                maxScore: data.biologyScore.target,
+              },
+              streak: {
+                days: data.streak.current,
+                bestStreak: data.streak.best,
+              },
+            })
+
+            setMetrics((prev) => ({
+              ...prev,
+              progress: data.syllabus.percentage,
+              studyTime: data.studyHours.total,
+            }))
+          }
+        } else {
+          console.error('Failed to fetch progress:', progressRes.reason)
+        }
+
+        // Process dashboard stats
+        if (statsRes.status === 'fulfilled') {
+          const statsData = await statsRes.value.json()
+          if (statsData.success) {
+            const data = statsData.data
+            setMetrics((prev) => ({
+              ...prev,
+              totalQuestions: data.totalQuestions,
+              accuracy: data.accuracy,
+              doubtsResolved: Math.round(data.totalQuestions * 0.2),
+            }))
+          }
+        } else {
+          console.error('Failed to fetch stats:', statsRes.reason)
+        }
+
+        // Process predictions
+        if (predictionsRes.status === 'fulfilled') {
+          const predictionsData = await predictionsRes.value.json()
+          if (predictionsData.success) {
+            const data = predictionsData.data
+            setMetrics((prev) => ({
+              ...prev,
+              predictions: {
+                examScore: data.predictedScore.neet,
+                readiness: data.readinessScore,
+                rank: data.expectedRank,
+              },
+            }))
+          }
+        } else {
+          console.error('Failed to fetch predictions:', predictionsRes.reason)
+        }
+
+        setLastUpdated(new Date())
+        setIsInitialLoading(false)
+        setIsLoading(false)
+
+        if (showLoadingState) {
+          showToast('success', 'Dashboard Loaded', 'Welcome back! Your latest stats are ready.')
+        }
+      } catch (error) {
+        console.error('Error fetching dashboard data:', error)
+        setError('Failed to load dashboard data')
+        setIsInitialLoading(false)
+        setIsLoading(false)
+        showToast('error', 'Load Failed', 'Unable to fetch dashboard data. Please try again.', 7000)
+      }
+    },
+    [user?.id, freeUserId, showToast]
+  )
+
+  // Initial data load
+  useEffect(() => {
+    if (user?.id || freeUserId) {
+      fetchDashboardData()
+    }
+  }, [user?.id, freeUserId, fetchDashboardData])
+
+  // Auto-refresh every 5 minutes
+  useEffect(() => {
+    const AUTO_REFRESH_INTERVAL = 5 * 60 * 1000
+
+    const interval = setInterval(() => {
+      if (user?.id || freeUserId) {
+        fetchDashboardData(false)
+      }
+    }, AUTO_REFRESH_INTERVAL)
+
+    return () => clearInterval(interval)
+  }, [user?.id, freeUserId, fetchDashboardData])
 
   // Button handlers
   const handleNotifications = () => {
@@ -533,6 +680,19 @@ export function AIEducationDashboard() {
     metrics: 'from-teal-500 to-cyan-500',
   }
 
+  // Helper function to get time since last update
+  const getTimeSinceUpdate = () => {
+    if (!lastUpdated) return ''
+    const now = new Date()
+    const diff = Math.floor((now.getTime() - lastUpdated.getTime()) / 1000 / 60)
+    if (diff < 1) return 'Just now'
+    if (diff < 60) return `${diff} min ago`
+    const hours = Math.floor(diff / 60)
+    if (hours < 24) return `${hours} hour${hours > 1 ? 's' : ''} ago`
+    const days = Math.floor(hours / 24)
+    return `${days} day${days > 1 ? 's' : ''} ago`
+  }
+
   if (isInitialLoading) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
@@ -546,8 +706,19 @@ export function AIEducationDashboard() {
             </div>
           </div>
         </header>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <DashboardSkeleton />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <ProgressCardSkeleton />
+            <ProgressCardSkeleton />
+            <ProgressCardSkeleton />
+            <ProgressCardSkeleton />
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <MetricCardSkeleton />
+            <MetricCardSkeleton />
+            <MetricCardSkeleton />
+            <MetricCardSkeleton />
+          </div>
         </div>
       </div>
     )
@@ -575,6 +746,15 @@ export function AIEducationDashboard() {
 
             <div className="flex items-center space-x-4">
               <button
+                onClick={() => fetchDashboardData(false)}
+                disabled={isLoading}
+                aria-label="Refresh dashboard"
+                title={lastUpdated ? `Last updated ${getTimeSinceUpdate()}` : 'Refresh'}
+                className="p-2 text-gray-400 hover:text-gray-600 transition-colors disabled:opacity-50"
+              >
+                <RefreshCw className={`w-5 h-5 ${isLoading ? 'animate-spin' : ''}`} />
+              </button>
+              <button
                 onClick={handleNotifications}
                 className="relative p-2 text-gray-400 hover:text-gray-600 transition-colors"
               >
@@ -593,6 +773,9 @@ export function AIEducationDashboard() {
                 <User className="w-4 h-4 text-white" />
               </div>
             </div>
+            {lastUpdated && (
+              <div className="text-xs text-gray-500 mt-2">Last updated {getTimeSinceUpdate()}</div>
+            )}
           </div>
         </div>
       </header>
