@@ -1,7 +1,9 @@
 import { NextResponse } from 'next/server'
-import { PrismaClient } from '@/generated/prisma'
+import prisma from '@/lib/prisma'
 
-const prisma = new PrismaClient()
+// Force Node.js runtime for database operations
+export const runtime = 'nodejs'
+export const dynamic = 'force-dynamic'
 
 const biologyTopics = [
   {
