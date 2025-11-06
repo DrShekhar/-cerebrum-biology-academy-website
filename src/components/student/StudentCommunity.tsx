@@ -61,139 +61,138 @@ export function StudentCommunity() {
     'all' | 'questions' | 'achievements' | 'tips'
   >('all')
 
-  // Mock data - will be replaced with real API
-  const [posts, setPosts] = useState<Post[]>([
-    {
-      id: '1',
-      author: {
-        name: 'Priya Sharma',
-        avatar: '/avatars/priya.jpg',
-        badge: 'top_performer',
-        neetScore: 650,
-      },
-      content:
-        'Just scored 95% in Photosynthesis chapter test! 🌱 Key tip: Focus on light and dark reactions separately first, then connect them. The Calvin cycle diagram is crucial!',
-      type: 'achievement',
-      subject: 'Biology',
-      chapter: 'Photosynthesis',
-      likes: 24,
-      replies: 8,
-      timeAgo: '2h ago',
-      isLiked: false,
-      isBookmarked: true,
-      tags: ['photosynthesis', 'chapter-test', 'study-tip'],
-    },
-    {
-      id: '2',
-      author: {
-        name: 'Arjun Patel',
-        avatar: '/avatars/arjun.jpg',
-        badge: 'rising_star',
-        neetScore: 580,
-      },
-      content:
-        'Can someone explain the difference between Mitosis and Meiosis in simple terms? I keep mixing up the phases! 😅',
-      type: 'question',
-      subject: 'Biology',
-      chapter: 'Cell Division',
-      likes: 12,
-      replies: 15,
-      timeAgo: '4h ago',
-      isLiked: true,
-      isBookmarked: false,
-      tags: ['cell-division', 'help-needed', 'mitosis', 'meiosis'],
-    },
-    {
-      id: '3',
-      author: {
-        name: 'Dr. Kavya (Mentor)',
-        avatar: '/avatars/mentor.jpg',
-        badge: 'helper',
-      },
-      content:
-        '🎯 Weekly Study Tip: Use mnemonics for Kingdom classification! "King Philip Came Over For Good Soup" = Kingdom, Phylum, Class, Order, Family, Genus, Species. Simple but effective! 📚',
-      type: 'study_tip',
-      subject: 'Biology',
-      chapter: 'Classification',
-      likes: 89,
-      replies: 23,
-      timeAgo: '1d ago',
-      isLiked: true,
-      isBookmarked: true,
-      tags: ['classification', 'mnemonics', 'study-tip', 'taxonomy'],
-    },
-  ])
+  const [posts, setPosts] = useState<Post[]>([])
+  const [leaderboard, setLeaderboard] = useState<Leaderboard[]>([])
+  const [loadingPosts, setLoadingPosts] = useState(true)
+  const [loadingLeaderboard, setLoadingLeaderboard] = useState(true)
+  const [submittingPost, setSubmittingPost] = useState(false)
 
-  const [leaderboard, setLeaderboard] = useState<Leaderboard[]>([
-    {
-      rank: 1,
-      name: 'Sneha Reddy',
-      points: 2840,
-      studyHours: 156,
-      testsCompleted: 89,
-      avatar: '/avatars/sneha.jpg',
-      badge: 'crown',
-    },
-    {
-      rank: 2,
-      name: 'Rahul Kumar',
-      points: 2650,
-      studyHours: 142,
-      testsCompleted: 76,
-      avatar: '/avatars/rahul.jpg',
-      badge: 'trophy',
-    },
-    {
-      rank: 3,
-      name: 'Ananya Singh',
-      points: 2580,
-      studyHours: 138,
-      testsCompleted: 71,
-      avatar: '/avatars/ananya.jpg',
-      badge: 'medal',
-    },
-    {
-      rank: 4,
-      name: 'Vikram Joshi',
-      points: 2420,
-      studyHours: 125,
-      testsCompleted: 68,
-      avatar: '/avatars/vikram.jpg',
-    },
-    {
-      rank: 5,
-      name: 'Meera Shah',
-      points: 2380,
-      studyHours: 119,
-      testsCompleted: 65,
-      avatar: '/avatars/meera.jpg',
-    },
-  ])
+  useEffect(() => {
+    fetchPosts()
+  }, [selectedFilter])
 
-  const handlePostSubmit = () => {
+  useEffect(() => {
+    if (activeTab === 'leaderboard') {
+      fetchLeaderboard()
+    }
+  }, [activeTab])
+
+  const fetchPosts = async () => {
+    try {
+      setLoadingPosts(true)
+      const response = await fetch(`/api/community/posts?filter=${selectedFilter}&limit=20`)
+      if (response.ok) {
+        const data = await response.json()
+        setPosts(data.posts || [])
+      }
+    } catch (error) {
+      console.error('Error fetching posts:', error)
+    } finally {
+      setLoadingPosts(false)
+    }
+  }
+
+  const fetchLeaderboard = async () => {
+    try {
+      setLoadingLeaderboard(true)
+      const response = await fetch('/api/community/leaderboard?limit=10')
+      if (response.ok) {
+        const data = await response.json()
+        setLeaderboard(data.leaderboard || [])
+      }
+    } catch (error) {
+      console.error('Error fetching leaderboard:', error)
+    } finally {
+      setLoadingLeaderboard(false)
+    }
+  }
+
+  const handlePostSubmit = async () => {
     if (!newPost.trim()) return
+
+    setSubmittingPost(true)
 
     trackEvent('community_post', {
       content_type: 'student_post',
       content_length: newPost.length,
     })
 
-    // Add new post logic here
-    setNewPost('')
+    try {
+      const response = await fetch('/api/community/posts', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          userId: 'TEMP_USER_ID',
+          content: newPost,
+          type: 'DISCUSSION',
+          topic: 'General Discussion',
+        }),
+      })
+
+      if (response.ok) {
+        const data = await response.json()
+        setPosts([data.post, ...posts])
+        setNewPost('')
+      }
+    } catch (error) {
+      console.error('Error creating post:', error)
+    } finally {
+      setSubmittingPost(false)
+    }
   }
 
-  const handleLike = (postId: string) => {
+  const handleLike = async (postId: string) => {
+    const post = posts.find((p) => p.id === postId)
+    if (!post) return
+
+    const wasLiked = post.isLiked
+
     setPosts(
-      posts.map((post) =>
-        post.id === postId
+      posts.map((p) =>
+        p.id === postId
           ? {
-              ...post,
-              likes: post.isLiked ? post.likes - 1 : post.likes + 1,
-              isLiked: !post.isLiked,
+              ...p,
+              likes: wasLiked ? p.likes - 1 : p.likes + 1,
+              isLiked: !wasLiked,
             }
-          : post
+          : p
       )
     )
+
+    try {
+      const response = await fetch(`/api/community/posts/${postId}/like`, {
+        method: wasLiked ? 'DELETE' : 'POST',
+      })
+
+      if (response.ok) {
+        const data = await response.json()
+        setPosts(
+          posts.map((p) =>
+            p.id === postId
+              ? {
+                  ...p,
+                  likes: data.upvotes,
+                }
+              : p
+          )
+        )
+      }
+    } catch (error) {
+      console.error('Error liking post:', error)
+      setPosts(
+        posts.map((p) =>
+          p.id === postId
+            ? {
+                ...p,
+                likes: wasLiked ? p.likes + 1 : p.likes - 1,
+                isLiked: wasLiked,
+              }
+            : p
+        )
+      )
+    }
 
     trackEvent('community_interaction', {
       action: 'like_post',
@@ -314,11 +313,20 @@ export function StudentCommunity() {
                     </div>
                     <button
                       onClick={handlePostSubmit}
-                      disabled={!newPost.trim()}
+                      disabled={!newPost.trim() || submittingPost}
                       className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium disabled:opacity-50 disabled:cursor-not-allowed hover:bg-blue-700 transition-colors flex items-center gap-2"
                     >
-                      <Send className="w-4 h-4" />
-                      Post
+                      {submittingPost ? (
+                        <>
+                          <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                          Posting...
+                        </>
+                      ) : (
+                        <>
+                          <Send className="w-4 h-4" />
+                          Post
+                        </>
+                      )}
                     </button>
                   </div>
                 </div>
@@ -347,104 +355,118 @@ export function StudentCommunity() {
 
             {/* Posts */}
             <div className="space-y-4">
-              {filteredPosts.map((post) => (
-                <motion.div
-                  key={post.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="bg-white rounded-lg shadow-sm border p-4 hover:shadow-md transition-shadow"
-                >
-                  {/* Post Header */}
-                  <div className="flex items-start justify-between mb-3">
-                    <div className="flex items-center space-x-3">
-                      <img
-                        src={post.author.avatar}
-                        alt={post.author.name}
-                        className="w-10 h-10 rounded-full"
-                      />
-                      <div>
-                        <div className="flex items-center gap-2">
-                          <h4 className="font-medium text-gray-900">{post.author.name}</h4>
-                          {getBadgeIcon(post.author.badge)}
-                          {post.author.neetScore && (
-                            <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">
-                              {post.author.neetScore}/720
-                            </span>
-                          )}
-                        </div>
-                        <div className="flex items-center gap-2 text-sm text-gray-500">
-                          <span>{post.timeAgo}</span>
-                          {post.subject && (
-                            <>
-                              <span>•</span>
-                              <span className="text-blue-600">{post.subject}</span>
-                            </>
-                          )}
-                          {post.chapter && (
-                            <>
-                              <span>•</span>
-                              <span>{post.chapter}</span>
-                            </>
-                          )}
+              {loadingPosts ? (
+                <div className="flex items-center justify-center py-12">
+                  <div className="w-8 h-8 border-4 border-blue-600 border-t-transparent rounded-full animate-spin" />
+                </div>
+              ) : filteredPosts.length === 0 ? (
+                <div className="text-center py-12 bg-gray-50 rounded-lg">
+                  <MessageSquare className="w-12 h-12 text-gray-400 mx-auto mb-4" />
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">No Posts Yet</h3>
+                  <p className="text-gray-600">Be the first to start a discussion!</p>
+                </div>
+              ) : (
+                filteredPosts.map((post) => (
+                  <motion.div
+                    key={post.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="bg-white rounded-lg shadow-sm border p-4 hover:shadow-md transition-shadow"
+                  >
+                    {/* Post Header */}
+                    <div className="flex items-start justify-between mb-3">
+                      <div className="flex items-center space-x-3">
+                        <img
+                          src={post.author.avatar}
+                          alt={post.author.name}
+                          className="w-10 h-10 rounded-full"
+                        />
+                        <div>
+                          <div className="flex items-center gap-2">
+                            <h4 className="font-medium text-gray-900">{post.author.name}</h4>
+                            {getBadgeIcon(post.author.badge)}
+                            {post.author.neetScore && (
+                              <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">
+                                {post.author.neetScore}/720
+                              </span>
+                            )}
+                          </div>
+                          <div className="flex items-center gap-2 text-sm text-gray-500">
+                            <span>{post.timeAgo}</span>
+                            {post.subject && (
+                              <>
+                                <span>•</span>
+                                <span className="text-blue-600">{post.subject}</span>
+                              </>
+                            )}
+                            {post.chapter && (
+                              <>
+                                <span>•</span>
+                                <span>{post.chapter}</span>
+                              </>
+                            )}
+                          </div>
                         </div>
                       </div>
+                      <button className="text-gray-400 hover:text-gray-600">
+                        <Flag className="w-4 h-4" />
+                      </button>
                     </div>
-                    <button className="text-gray-400 hover:text-gray-600">
-                      <Flag className="w-4 h-4" />
-                    </button>
-                  </div>
 
-                  {/* Post Content */}
-                  <p className="text-gray-800 mb-3 leading-relaxed">{post.content}</p>
+                    {/* Post Content */}
+                    <p className="text-gray-800 mb-3 leading-relaxed">{post.content}</p>
 
-                  {/* Tags */}
-                  {post.tags.length > 0 && (
-                    <div className="flex flex-wrap gap-2 mb-3">
-                      {post.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full"
+                    {/* Tags */}
+                    {post.tags.length > 0 && (
+                      <div className="flex flex-wrap gap-2 mb-3">
+                        {post.tags.map((tag) => (
+                          <span
+                            key={tag}
+                            className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full"
+                          >
+                            #{tag}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+
+                    {/* Post Actions */}
+                    <div className="flex items-center justify-between pt-3 border-t">
+                      <div className="flex items-center space-x-4">
+                        <button
+                          onClick={() => handleLike(post.id)}
+                          className={`flex items-center gap-1 text-sm transition-colors ${
+                            post.isLiked ? 'text-red-600' : 'text-gray-500 hover:text-red-600'
+                          }`}
                         >
-                          #{tag}
-                        </span>
-                      ))}
-                    </div>
-                  )}
-
-                  {/* Post Actions */}
-                  <div className="flex items-center justify-between pt-3 border-t">
-                    <div className="flex items-center space-x-4">
+                          <ThumbsUp className={`w-4 h-4 ${post.isLiked ? 'fill-current' : ''}`} />
+                          {post.likes}
+                        </button>
+                        <button className="flex items-center gap-1 text-sm text-gray-500 hover:text-blue-600 transition-colors">
+                          <MessageSquare className="w-4 h-4" />
+                          {post.replies}
+                        </button>
+                        <button className="flex items-center gap-1 text-sm text-gray-500 hover:text-green-600 transition-colors">
+                          <Share2 className="w-4 h-4" />
+                          Share
+                        </button>
+                      </div>
                       <button
-                        onClick={() => handleLike(post.id)}
-                        className={`flex items-center gap-1 text-sm transition-colors ${
-                          post.isLiked ? 'text-red-600' : 'text-gray-500 hover:text-red-600'
+                        onClick={() => handleBookmark(post.id)}
+                        className={`text-sm transition-colors ${
+                          post.isBookmarked
+                            ? 'text-yellow-600'
+                            : 'text-gray-500 hover:text-yellow-600'
                         }`}
                       >
-                        <ThumbsUp className={`w-4 h-4 ${post.isLiked ? 'fill-current' : ''}`} />
-                        {post.likes}
-                      </button>
-                      <button className="flex items-center gap-1 text-sm text-gray-500 hover:text-blue-600 transition-colors">
-                        <MessageSquare className="w-4 h-4" />
-                        {post.replies}
-                      </button>
-                      <button className="flex items-center gap-1 text-sm text-gray-500 hover:text-green-600 transition-colors">
-                        <Share2 className="w-4 h-4" />
-                        Share
+                        <Bookmark
+                          className={`w-4 h-4 ${post.isBookmarked ? 'fill-current' : ''}`}
+                        />
                       </button>
                     </div>
-                    <button
-                      onClick={() => handleBookmark(post.id)}
-                      className={`text-sm transition-colors ${
-                        post.isBookmarked
-                          ? 'text-yellow-600'
-                          : 'text-gray-500 hover:text-yellow-600'
-                      }`}
-                    >
-                      <Bookmark className={`w-4 h-4 ${post.isBookmarked ? 'fill-current' : ''}`} />
-                    </button>
-                  </div>
-                </motion.div>
-              ))}
+                  </motion.div>
+                ))
+              )}
             </div>
           </div>
 
@@ -527,58 +549,72 @@ export function StudentCommunity() {
           </div>
 
           <div className="space-y-4">
-            {leaderboard.map((student) => (
-              <motion.div
-                key={student.rank}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: student.rank * 0.1 }}
-                className={`flex items-center justify-between p-4 rounded-lg border-2 transition-all ${
-                  student.rank <= 3
-                    ? 'bg-gold-50 border-gold-200'
-                    : 'bg-gray-50 border-gray-200 hover:border-blue-200'
-                }`}
-              >
-                <div className="flex items-center space-x-4">
-                  <div className="relative">
-                    <img
-                      src={student.avatar}
-                      alt={student.name}
-                      className="w-12 h-12 rounded-full"
-                    />
-                    {student.badge && (
-                      <div className="absolute -top-1 -right-1">{getBadgeIcon(student.badge)}</div>
-                    )}
-                  </div>
-                  <div>
-                    <div className="flex items-center gap-2">
-                      <span
-                        className={`font-bold text-lg ${
-                          student.rank === 1
-                            ? 'text-yellow-600'
-                            : student.rank === 2
-                              ? 'text-gray-600'
-                              : student.rank === 3
-                                ? 'text-orange-600'
-                                : 'text-gray-800'
-                        }`}
-                      >
-                        #{student.rank}
-                      </span>
-                      <h3 className="font-semibold text-gray-900">{student.name}</h3>
+            {loadingLeaderboard ? (
+              <div className="flex items-center justify-center py-12">
+                <div className="w-8 h-8 border-4 border-blue-600 border-t-transparent rounded-full animate-spin" />
+              </div>
+            ) : leaderboard.length === 0 ? (
+              <div className="text-center py-12 bg-gray-50 rounded-lg">
+                <Trophy className="w-12 h-12 text-gray-400 mx-auto mb-4" />
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">No Leaderboard Data</h3>
+                <p className="text-gray-600">Start studying to appear on the leaderboard!</p>
+              </div>
+            ) : (
+              leaderboard.map((student) => (
+                <motion.div
+                  key={student.rank}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: student.rank * 0.1 }}
+                  className={`flex items-center justify-between p-4 rounded-lg border-2 transition-all ${
+                    student.rank <= 3
+                      ? 'bg-gold-50 border-gold-200'
+                      : 'bg-gray-50 border-gray-200 hover:border-blue-200'
+                  }`}
+                >
+                  <div className="flex items-center space-x-4">
+                    <div className="relative">
+                      <img
+                        src={student.avatar}
+                        alt={student.name}
+                        className="w-12 h-12 rounded-full"
+                      />
+                      {student.badge && (
+                        <div className="absolute -top-1 -right-1">
+                          {getBadgeIcon(student.badge)}
+                        </div>
+                      )}
                     </div>
-                    <div className="flex items-center gap-4 text-sm text-gray-500">
-                      <span>{student.studyHours}h studied</span>
-                      <span>{student.testsCompleted} tests</span>
+                    <div>
+                      <div className="flex items-center gap-2">
+                        <span
+                          className={`font-bold text-lg ${
+                            student.rank === 1
+                              ? 'text-yellow-600'
+                              : student.rank === 2
+                                ? 'text-gray-600'
+                                : student.rank === 3
+                                  ? 'text-orange-600'
+                                  : 'text-gray-800'
+                          }`}
+                        >
+                          #{student.rank}
+                        </span>
+                        <h3 className="font-semibold text-gray-900">{student.name}</h3>
+                      </div>
+                      <div className="flex items-center gap-4 text-sm text-gray-500">
+                        <span>{student.studyHours}h studied</span>
+                        <span>{student.testsCompleted} tests</span>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div className="text-right">
-                  <div className="text-2xl font-bold text-blue-600">{student.points}</div>
-                  <div className="text-sm text-gray-500">points</div>
-                </div>
-              </motion.div>
-            ))}
+                  <div className="text-right">
+                    <div className="text-2xl font-bold text-blue-600">{student.points}</div>
+                    <div className="text-sm text-gray-500">points</div>
+                  </div>
+                </motion.div>
+              ))
+            )}
           </div>
         </div>
       )}
