@@ -272,7 +272,7 @@ export default function AITutorPage() {
             <div className="flex items-center gap-2">
               <button
                 onClick={handleNewSession}
-                className="rounded-lg bg-white px-3 py-2 text-sm font-medium text-gray-700 shadow-mobile-card transition-all hover:bg-gray-50 hover:shadow-md active:scale-95 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600"
+                className="rounded-lg bg-white px-3 py-2 text-sm font-medium text-gray-700 shadow-mobile-card transition-colors hover:bg-gray-50 hover:shadow-md active:scale-95 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600"
                 aria-label="New session"
                 type="button"
               >
@@ -281,7 +281,7 @@ export default function AITutorPage() {
               <button
                 onClick={handleExportChat}
                 disabled={messages.length === 0}
-                className="rounded-lg bg-white px-3 py-2 text-sm font-medium text-gray-700 shadow-mobile-card transition-all hover:bg-gray-50 hover:shadow-md active:scale-95 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600"
+                className="rounded-lg bg-white px-3 py-2 text-sm font-medium text-gray-700 shadow-mobile-card transition-colors hover:bg-gray-50 hover:shadow-md active:scale-95 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600"
                 aria-label="Export chat"
                 type="button"
               >
@@ -290,7 +290,7 @@ export default function AITutorPage() {
               <button
                 onClick={handleClearChat}
                 disabled={messages.length === 0}
-                className="rounded-lg bg-white px-3 py-2 text-sm font-medium text-red-600 shadow-mobile-card transition-all hover:bg-red-50 hover:shadow-md active:scale-95 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-gray-700 dark:text-red-400 dark:hover:bg-red-950"
+                className="rounded-lg bg-white px-3 py-2 text-sm font-medium text-red-600 shadow-mobile-card transition-colors hover:bg-red-50 hover:shadow-md active:scale-95 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-gray-700 dark:text-red-400 dark:hover:bg-red-950"
                 aria-label="Clear chat"
                 type="button"
               >
