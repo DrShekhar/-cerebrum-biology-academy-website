@@ -34,6 +34,7 @@ export default async function middleware(req: NextRequest) {
   // Protected student/parent routes
   if (
     pathname.startsWith('/dashboard') ||
+    pathname.startsWith('/student/') ||
     pathname.startsWith('/profile') ||
     pathname.startsWith('/test/')
   ) {
@@ -190,6 +191,7 @@ export const config = {
     // Auth routes
     '/auth/:path*',
     '/dashboard/:path*',
+    '/student/:path*',
     '/profile/:path*',
     '/test/:path*',
     '/teacher/:path*',
