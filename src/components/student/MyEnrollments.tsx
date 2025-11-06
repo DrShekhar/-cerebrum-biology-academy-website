@@ -1,6 +1,6 @@
 'use client'
 
-// import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useAuth } from '@/hooks/useAuth'
 import { useEnrollment } from '@/hooks/useEnrollment'
 import { Button } from '@/components/ui/Button'
@@ -20,9 +20,35 @@ import {
 } from 'lucide-react'
 import { motion } from 'framer-motion'
 
+interface ProgressData {
+  overallProgress: number
+  progressBreakdown: {
+    materials: {
+      viewed: number
+      total: number
+      percentage: number
+      weight: number
+    }
+    tests: {
+      completed: number
+      total: number
+      percentage: number
+      weight: number
+    }
+    studyTime: {
+      hours: number
+      targetHours: number
+      percentage: number
+      weight: number
+    }
+  }
+}
+
 export function MyEnrollments() {
   const { user, isAuthenticated } = useAuth()
   const { getUserEnrollments } = useEnrollment()
+  const [progressData, setProgressData] = useState<Record<string, ProgressData>>({})
+  const [loadingProgress, setLoadingProgress] = useState<Record<string, boolean>>({})
 
   if (!isAuthenticated || !user) {
     return (
@@ -35,6 +61,33 @@ export function MyEnrollments() {
   }
 
   const userEnrollments = getUserEnrollments(user.id)
+
+  useEffect(() => {
+    const fetchProgressForEnrollments = async () => {
+      if (userEnrollments.length === 0) return
+
+      for (const enrollment of userEnrollments) {
+        if (enrollment.paymentStatus !== 'paid') continue
+        if (progressData[enrollment.id]) continue
+
+        setLoadingProgress((prev) => ({ ...prev, [enrollment.id]: true }))
+
+        try {
+          const response = await fetch(`/api/progress/${enrollment.id}`)
+          if (response.ok) {
+            const data = await response.json()
+            setProgressData((prev) => ({ ...prev, [enrollment.id]: data }))
+          }
+        } catch (error) {
+          console.error(`Failed to fetch progress for enrollment ${enrollment.id}:`, error)
+        } finally {
+          setLoadingProgress((prev) => ({ ...prev, [enrollment.id]: false }))
+        }
+      }
+    }
+
+    fetchProgressForEnrollments()
+  }, [userEnrollments, progressData])
 
   if (userEnrollments.length === 0) {
     return (
@@ -213,16 +266,76 @@ export function MyEnrollments() {
                   <div className="space-y-4">
                     {/* Progress Bar */}
                     <div>
-                      <div className="flex justify-between text-sm text-gray-600 mb-2">
-                        <span>Overall Progress</span>
-                        <span>15% Complete</span>
-                      </div>
-                      <div className="w-full bg-gray-200 rounded-full h-2">
-                        <div
-                          className="bg-blue-600 h-2 rounded-full"
-                          style={{ width: '15%' }}
-                        ></div>
-                      </div>
+                      {loadingProgress[enrollment.id] ? (
+                        <div className="animate-pulse">
+                          <div className="h-4 bg-gray-200 rounded mb-2"></div>
+                          <div className="h-2 bg-gray-200 rounded"></div>
+                        </div>
+                      ) : (
+                        <>
+                          <div className="flex justify-between text-sm text-gray-600 mb-2">
+                            <span>Overall Progress</span>
+                            <span>
+                              {progressData[enrollment.id]?.overallProgress ?? 0}% Complete
+                            </span>
+                          </div>
+                          <div className="w-full bg-gray-200 rounded-full h-2">
+                            <div
+                              className="bg-blue-600 h-2 rounded-full transition-all duration-500"
+                              style={{
+                                width: `${progressData[enrollment.id]?.overallProgress ?? 0}%`,
+                              }}
+                            ></div>
+                          </div>
+
+                          {/* Progress Breakdown */}
+                          {progressData[enrollment.id]?.progressBreakdown && (
+                            <div className="mt-4 grid grid-cols-3 gap-3">
+                              <div className="bg-blue-50 rounded-lg p-3">
+                                <div className="text-xs text-gray-600 mb-1">Study Materials</div>
+                                <div className="text-lg font-semibold text-blue-700">
+                                  {progressData[enrollment.id].progressBreakdown.materials.viewed}/
+                                  {progressData[enrollment.id].progressBreakdown.materials.total}
+                                </div>
+                                <div className="text-xs text-gray-500">
+                                  {
+                                    progressData[enrollment.id].progressBreakdown.materials
+                                      .percentage
+                                  }
+                                  %
+                                </div>
+                              </div>
+                              <div className="bg-green-50 rounded-lg p-3">
+                                <div className="text-xs text-gray-600 mb-1">Tests Completed</div>
+                                <div className="text-lg font-semibold text-green-700">
+                                  {progressData[enrollment.id].progressBreakdown.tests.completed}/
+                                  {progressData[enrollment.id].progressBreakdown.tests.total}
+                                </div>
+                                <div className="text-xs text-gray-500">
+                                  {progressData[enrollment.id].progressBreakdown.tests.percentage}%
+                                </div>
+                              </div>
+                              <div className="bg-purple-50 rounded-lg p-3">
+                                <div className="text-xs text-gray-600 mb-1">Study Hours</div>
+                                <div className="text-lg font-semibold text-purple-700">
+                                  {progressData[enrollment.id].progressBreakdown.studyTime.hours}/
+                                  {
+                                    progressData[enrollment.id].progressBreakdown.studyTime
+                                      .targetHours
+                                  }
+                                </div>
+                                <div className="text-xs text-gray-500">
+                                  {
+                                    progressData[enrollment.id].progressBreakdown.studyTime
+                                      .percentage
+                                  }
+                                  %
+                                </div>
+                              </div>
+                            </div>
+                          )}
+                        </>
+                      )}
                     </div>
 
                     {/* Next Class */}
