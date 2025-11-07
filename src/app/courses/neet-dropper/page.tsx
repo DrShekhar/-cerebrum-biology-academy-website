@@ -101,20 +101,31 @@ export default function NEETDropperPage() {
                 Turn your second chance into your best chance. Intensive one-year program designed
                 specifically for NEET droppers with proven rank improvement strategies.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="space-y-4">
                 <Link
                   href="/admissions"
-                  className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-red-50 transition-colors inline-flex items-center"
+                  className="block w-full bg-white text-red-600 px-8 py-4 rounded-lg font-semibold hover:bg-red-50 transition-colors text-center"
                 >
-                  Join Dropper Batch
-                  <ArrowRight className="w-5 h-5 ml-2" />
+                  <span className="inline-flex items-center">
+                    Join Dropper Batch
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </span>
                 </Link>
-                <Link
-                  href="/contact"
-                  className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors"
-                >
-                  Book Counseling
-                </Link>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <Link
+                    href="https://wa.me/919876543210"
+                    target="_blank"
+                    className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors text-center"
+                  >
+                    WhatsApp Counselor
+                  </Link>
+                  <Link
+                    href="/contact"
+                    className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors text-center"
+                  >
+                    Book Counseling
+                  </Link>
+                </div>
               </div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8">
