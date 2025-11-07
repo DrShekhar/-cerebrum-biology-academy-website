@@ -77,6 +77,51 @@ interface UserProgressResponse {
 }
 
 /**
+ * Get default progress data for new users
+ */
+function getDefaultProgressData(): UserProgressResponse {
+  return {
+    biologyScore: {
+      current: 0,
+      target: 360,
+      improvement: 0,
+    },
+    neetScore: {
+      current: 0,
+      target: 720,
+      improvement: 0,
+      rank: 0,
+      percentile: 0,
+    },
+    componentScores: {
+      zoology: 0,
+      botany: 0,
+      physics: 0,
+      chemistry: 0,
+    },
+    syllabus: {
+      completed: 0,
+      total: 100,
+      percentage: 0,
+    },
+    studyHours: {
+      total: 0,
+      thisWeek: 0,
+      target: 400,
+      percentage: 0,
+    },
+    streak: {
+      current: 0,
+      best: 0,
+      lastActive: new Date(),
+    },
+    strongAreas: [],
+    weakAreas: [],
+    lastUpdated: new Date(),
+  }
+}
+
+/**
  * Calculate comprehensive user progress metrics
  */
 async function calculateUserProgress(userId: string): Promise<UserProgressResponse> {
@@ -94,8 +139,9 @@ async function calculateUserProgress(userId: string): Promise<UserProgressRespon
       },
     })
 
+    // Return default data for new users
     if (!user) {
-      throw new Error('User not found')
+      return getDefaultProgressData()
     }
 
     // Calculate biology score (average of recent tests)

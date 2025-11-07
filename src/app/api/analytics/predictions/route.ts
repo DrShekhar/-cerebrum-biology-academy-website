@@ -32,6 +32,35 @@ interface PredictionsResponse {
 }
 
 /**
+ * Get default predictions for new users
+ */
+function getDefaultPredictions(): PredictionsResponse {
+  const examDate = new Date('2025-05-15')
+  const daysRemaining = Math.max(
+    0,
+    Math.floor((examDate.getTime() - Date.now()) / (1000 * 60 * 60 * 24))
+  )
+
+  return {
+    predictedScore: {
+      biology: 0,
+      neet: 0,
+      confidence: 0.5,
+    },
+    readinessScore: 0,
+    expectedRank: 0,
+    examDate,
+    daysRemaining,
+    recommendedFocus: [
+      'Start with Cell Biology basics',
+      'Practice NCERT questions',
+      'Build study routine',
+    ],
+    milestones: [],
+  }
+}
+
+/**
  * Simple linear regression for score prediction
  */
 function predictScore(
@@ -125,8 +154,9 @@ async function generatePredictions(userId: string): Promise<PredictionsResponse>
       },
     })
 
-    if (!user) {
-      throw new Error('User not found')
+    // Return default predictions for new users
+    if (!user || user.testAttempts.length === 0) {
+      return getDefaultPredictions()
     }
 
     // Extract test scores and dates for prediction

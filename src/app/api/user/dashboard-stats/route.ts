@@ -28,6 +28,25 @@ interface DashboardStatsResponse {
 }
 
 /**
+ * Get default dashboard stats for new users
+ */
+function getDefaultDashboardStats(): DashboardStatsResponse {
+  return {
+    totalTests: 0,
+    averageScore: 0,
+    totalQuestions: 0,
+    accuracy: 0,
+    totalStudyTime: 0,
+    improvementRate: 0,
+    lastTestDate: null,
+    testsThisWeek: 0,
+    questionsThisWeek: 0,
+    studyTimeThisWeek: 0,
+    upcomingTests: [],
+  }
+}
+
+/**
  * Calculate comprehensive dashboard statistics
  */
 async function calculateDashboardStats(userId: string): Promise<DashboardStatsResponse> {
@@ -40,6 +59,11 @@ async function calculateDashboardStats(userId: string): Promise<DashboardStatsRe
       },
       orderBy: { submittedAt: 'desc' },
     })
+
+    // Return default data if no tests found
+    if (allTests.length === 0) {
+      return getDefaultDashboardStats()
+    }
 
     const totalTests = allTests.length
 
