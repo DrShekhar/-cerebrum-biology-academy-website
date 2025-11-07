@@ -11,6 +11,19 @@ import {
   Star,
   Sparkles,
   ArrowUpRight,
+  GraduationCap,
+  FileText,
+  RefreshCw,
+  Laptop,
+  Target,
+  BookOpen,
+  Phone,
+  MessageSquare,
+  HelpCircle,
+  DollarSign,
+  Flame,
+  Eye,
+  TrendingDown,
 } from 'lucide-react'
 import Link from 'next/link'
 import Fuse from 'fuse.js'
@@ -87,7 +100,7 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
     }
 
     setIsLoading(true)
-    
+
     // Debounce search
     const timeoutId = setTimeout(() => {
       if (fuse.current) {
@@ -124,9 +137,9 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
       // Add to recent searches
       const newRecentSearches = [
         searchQuery,
-        ...recentSearches.filter(s => s !== searchQuery),
+        ...recentSearches.filter((s) => s !== searchQuery),
       ].slice(0, 5)
-      
+
       setRecentSearches(newRecentSearches)
       try {
         localStorage.setItem('cerebrum-recent-searches', JSON.stringify(newRecentSearches))
@@ -142,32 +155,172 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
   }
 
   const popularSearches = [
-    'Class 12 Biology',
-    'NEET Mock Tests',
-    'Dropper Batch',
-    'Online Classes',
-    'Free Demo',
-    'CBSE Biology',
-    'Admission Process',
-    'Fee Structure',
+    { text: 'Class 12 Biology', icon: GraduationCap, trend: 'trending', count: '+45%' },
+    { text: 'NEET Mock Tests', icon: FileText, trend: 'hot', count: 'Most viewed' },
+    { text: 'Dropper Batch', icon: RefreshCw, trend: 'rising', count: '+30%' },
+    { text: 'Online Classes', icon: Laptop, trend: null, count: null },
+    { text: 'Free Demo', icon: Target, trend: 'hot', count: '2.5k views' },
+    { text: 'CBSE Biology', icon: BookOpen, trend: null, count: null },
+    { text: 'Admission Process', icon: ChevronRight, trend: 'rising', count: '+20%' },
+    { text: 'Fee Structure', icon: DollarSign, trend: null, count: null },
   ]
+
+  const quickActions = [
+    {
+      href: '/support/demo',
+      label: 'Book Demo',
+      icon: Phone,
+      gradient: 'from-blue-500 to-blue-600',
+      bgGradient: 'from-blue-50 to-blue-100',
+      hoverBg: 'hover:from-blue-100 hover:to-blue-200',
+      textColor: 'text-blue-700',
+      iconBg: 'bg-blue-600',
+    },
+    {
+      href: '/admissions',
+      label: 'Admission',
+      icon: ChevronRight,
+      gradient: 'from-green-500 to-green-600',
+      bgGradient: 'from-green-50 to-green-100',
+      hoverBg: 'hover:from-green-100 hover:to-green-200',
+      textColor: 'text-green-700',
+      iconBg: 'bg-green-600',
+    },
+    {
+      href: 'https://wa.me/919311946297?text=Hi%2C%20I%27m%20interested%20in%20your%20courses',
+      label: 'WhatsApp',
+      icon: MessageSquare,
+      gradient: 'from-emerald-500 to-emerald-600',
+      bgGradient: 'from-emerald-50 to-emerald-100',
+      hoverBg: 'hover:from-emerald-100 hover:to-emerald-200',
+      textColor: 'text-emerald-700',
+      iconBg: 'bg-emerald-600',
+      external: true,
+    },
+    {
+      href: '/course-finder',
+      label: 'Course Finder',
+      icon: Target,
+      gradient: 'from-purple-500 to-purple-600',
+      bgGradient: 'from-purple-50 to-purple-100',
+      hoverBg: 'hover:from-purple-100 hover:to-purple-200',
+      textColor: 'text-purple-700',
+      iconBg: 'bg-purple-600',
+    },
+    {
+      href: '/courses#fees',
+      label: 'Fee Structure',
+      icon: DollarSign,
+      gradient: 'from-orange-500 to-orange-600',
+      bgGradient: 'from-orange-50 to-orange-100',
+      hoverBg: 'hover:from-orange-100 hover:to-orange-200',
+      textColor: 'text-orange-700',
+      iconBg: 'bg-orange-600',
+    },
+    {
+      href: '/contact',
+      label: 'Help Center',
+      icon: HelpCircle,
+      gradient: 'from-pink-500 to-pink-600',
+      bgGradient: 'from-pink-50 to-pink-100',
+      hoverBg: 'hover:from-pink-100 hover:to-pink-200',
+      textColor: 'text-pink-700',
+      iconBg: 'bg-pink-600',
+    },
+  ]
+
+  // Get user's personalization data (from localStorage or context)
+  const [userClass, setUserClass] = useState<string | null>(null)
+  const [userGoal, setUserGoal] = useState<string | null>(null)
+
+  useEffect(() => {
+    try {
+      const savedClass = localStorage.getItem('user-class')
+      const savedGoal = localStorage.getItem('user-goal')
+      setUserClass(savedClass)
+      setUserGoal(savedGoal || 'NEET')
+    } catch (error) {
+      console.warn('Failed to load user preferences')
+    }
+  }, [])
+
+  const personalizedRecommendations = userClass
+    ? [
+        {
+          label: `${userClass} Pinnacle Series`,
+          href: `/courses/class-${userClass.toLowerCase()}`,
+          description: 'Recommended for you',
+          badge: '⭐ Best Match',
+        },
+        {
+          label: 'Book Free Demo',
+          href: '/support/demo',
+          description: 'Next step',
+          badge: '🎯 Action Item',
+        },
+        {
+          label: `${userGoal} 2025 Pattern Analysis`,
+          href: '/resources/neet-2025',
+          description: 'Trending now',
+          badge: '🔥 Hot Topic',
+        },
+      ]
+    : null
 
   const overlayVariants = {
     closed: { opacity: 0 },
     open: { opacity: 1 },
   }
 
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768)
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
+
   const modalVariants = {
     closed: {
       opacity: 0,
-      scale: 0.95,
-      y: -20,
+      scale: isMobile ? 1 : 0.95,
+      y: isMobile ? 100 : -20,
     },
     open: {
       opacity: 1,
       scale: 1,
       y: 0,
     },
+  }
+
+  // Haptic feedback helper
+  const triggerHaptic = () => {
+    if ('vibrate' in navigator) {
+      navigator.vibrate(10)
+    }
+  }
+
+  // Swipe to close on mobile
+  const [touchStart, setTouchStart] = useState(0)
+  const [touchEnd, setTouchEnd] = useState(0)
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStart(e.targetTouches[0].clientY)
+  }
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientY)
+  }
+
+  const handleTouchEnd = () => {
+    if (!isMobile) return
+    const swipeDistance = touchStart - touchEnd
+    // Swipe down to close (negative distance means swipe down)
+    if (swipeDistance < -50) {
+      triggerHaptic()
+      onClose()
+    }
   }
 
   return (
@@ -189,7 +342,7 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
             initial="closed"
             animate="open"
             exit="closed"
-            className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-start justify-center pt-20 px-4"
+            className={`fixed inset-0 bg-black bg-opacity-50 z-50 flex ${isMobile ? 'items-end' : 'items-start justify-center pt-20'} px-0 md:px-4`}
             onClick={onClose}
           >
             <motion.div
@@ -197,9 +350,18 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
               initial="closed"
               animate="open"
               exit="closed"
-              className="bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-[80vh] overflow-hidden"
-              onClick={e => e.stopPropagation()}
+              className={`bg-white ${isMobile ? 'rounded-t-3xl' : 'rounded-2xl'} shadow-2xl w-full max-w-2xl max-h-[85vh] md:max-h-[80vh] overflow-hidden`}
+              onClick={(e) => e.stopPropagation()}
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
             >
+              {/* Mobile Drag Handle */}
+              {isMobile && (
+                <div className="flex justify-center pt-3 pb-2">
+                  <div className="w-12 h-1.5 bg-gray-300 rounded-full"></div>
+                </div>
+              )}
               {/* Search Header */}
               <div className="p-6 border-b border-gray-200">
                 <div className="relative">
@@ -209,8 +371,8 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
                     type="text"
                     placeholder="Search courses, services, or help topics..."
                     value={query}
-                    onChange={e => setQuery(e.target.value)}
-                    onKeyDown={e => {
+                    onChange={(e) => setQuery(e.target.value)}
+                    onKeyDown={(e) => {
                       if (e.key === 'Enter' && query.trim()) {
                         handleSearch(query)
                       }
@@ -265,7 +427,9 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
                               )}
                             </div>
                             <p className="text-sm text-gray-600 mb-1">{item.description}</p>
-                            <span className="text-xs text-blue-600 font-medium">{item.category}</span>
+                            <span className="text-xs text-blue-600 font-medium">
+                              {item.category}
+                            </span>
                           </div>
                           <ArrowUpRight className="w-5 h-5 text-gray-400 group-hover:text-blue-600 transform group-hover:scale-110 transition-all duration-200" />
                         </Link>
@@ -330,49 +494,128 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
                         <TrendingUp className="w-4 h-4 mr-2" />
                         Popular Searches
                       </h3>
-                      <div className="flex flex-wrap gap-2">
-                        {popularSearches.map((search, index) => (
-                          <button
-                            key={index}
-                            onClick={() => setQuery(search)}
-                            className="px-3 py-2 bg-blue-50 text-blue-700 rounded-lg text-sm hover:bg-blue-100 transition-colors duration-200"
-                          >
-                            {search}
-                          </button>
-                        ))}
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        {popularSearches.map((search, index) => {
+                          const Icon = search.icon
+                          return (
+                            <button
+                              key={index}
+                              onClick={() => {
+                                setQuery(search.text)
+                                triggerHaptic()
+                              }}
+                              className="group relative flex items-center gap-3 px-4 py-3 bg-gradient-to-br from-white to-gray-50 border border-gray-200 rounded-xl text-left hover:border-blue-300 hover:shadow-lg hover:scale-[1.02] transition-all duration-200 min-h-[52px]"
+                            >
+                              <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center shadow-md group-hover:shadow-lg group-hover:scale-110 transition-all duration-200">
+                                <Icon className="w-5 h-5 text-white" />
+                              </div>
+                              <div className="flex-1 min-w-0">
+                                <div className="flex items-center gap-2">
+                                  <span className="font-medium text-gray-900 text-sm truncate">
+                                    {search.text}
+                                  </span>
+                                  {search.trend === 'trending' && (
+                                    <span className="flex items-center gap-1 text-xs font-semibold text-orange-600">
+                                      <Flame className="w-3 h-3" />
+                                      {search.count}
+                                    </span>
+                                  )}
+                                  {search.trend === 'hot' && (
+                                    <span className="flex items-center gap-1 text-xs font-semibold text-red-600">
+                                      <Eye className="w-3 h-3" />
+                                      {search.count}
+                                    </span>
+                                  )}
+                                  {search.trend === 'rising' && (
+                                    <span className="flex items-center gap-1 text-xs font-semibold text-green-600">
+                                      <TrendingUp className="w-3 h-3" />
+                                      {search.count}
+                                    </span>
+                                  )}
+                                </div>
+                              </div>
+                              <ArrowUpRight className="w-4 h-4 text-gray-400 group-hover:text-blue-600 opacity-0 group-hover:opacity-100 transition-all duration-200" />
+                            </button>
+                          )
+                        })}
                       </div>
                     </div>
+
+                    {/* Personalization Section */}
+                    {personalizedRecommendations && (
+                      <div>
+                        <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-4 flex items-center">
+                          <Sparkles className="w-4 h-4 mr-2" />
+                          For You
+                        </h3>
+                        <div className="bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 border border-purple-200 rounded-2xl p-4 shadow-md">
+                          <p className="text-xs text-purple-700 font-medium mb-3">
+                            Based on your class ({userClass}) and goal ({userGoal})
+                          </p>
+                          <div className="space-y-2">
+                            {personalizedRecommendations.map((rec, index) => (
+                              <Link
+                                key={index}
+                                href={rec.href}
+                                onClick={() => {
+                                  onClose()
+                                  triggerHaptic()
+                                }}
+                                className="group flex items-center justify-between p-3 bg-white/80 backdrop-blur-sm border border-purple-200 rounded-xl hover:bg-white hover:shadow-md transition-all duration-200 min-h-[44px]"
+                              >
+                                <div className="flex-1">
+                                  <div className="font-medium text-gray-900 text-sm mb-0.5">
+                                    {rec.label}
+                                  </div>
+                                  <div className="flex items-center gap-2">
+                                    <span className="text-xs text-gray-600">{rec.description}</span>
+                                    <span className="text-xs">{rec.badge}</span>
+                                  </div>
+                                </div>
+                                <ChevronRight className="w-4 h-4 text-purple-600 group-hover:translate-x-1 transition-transform" />
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    )}
 
                     {/* Quick Actions */}
                     <div>
                       <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-4">
                         Quick Actions
                       </h3>
-                      <div className="grid grid-cols-2 gap-3">
-                        <Link
-                          href="/support/demo"
-                          onClick={onClose}
-                          className="flex items-center space-x-3 p-3 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg hover:from-blue-100 hover:to-blue-200 transition-all duration-200 group"
-                        >
-                          <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-                            <Star className="w-4 h-4 text-white" />
-                          </div>
-                          <span className="font-medium text-blue-700 group-hover:text-blue-800">
-                            Book Demo
-                          </span>
-                        </Link>
-                        <Link
-                          href="/support/admission"
-                          onClick={onClose}
-                          className="flex items-center space-x-3 p-3 bg-gradient-to-r from-green-50 to-green-100 rounded-lg hover:from-green-100 hover:to-green-200 transition-all duration-200 group"
-                        >
-                          <div className="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center">
-                            <ChevronRight className="w-4 h-4 text-white" />
-                          </div>
-                          <span className="font-medium text-green-700 group-hover:text-green-800">
-                            Admission
-                          </span>
-                        </Link>
+                      <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                        {quickActions.map((action, index) => {
+                          const ActionIcon = action.icon
+                          const LinkComponent = action.external ? 'a' : Link
+                          const linkProps = action.external
+                            ? { href: action.href, target: '_blank', rel: 'noopener noreferrer' }
+                            : { href: action.href }
+
+                          return (
+                            <LinkComponent
+                              key={index}
+                              {...linkProps}
+                              onClick={() => {
+                                onClose()
+                                triggerHaptic()
+                              }}
+                              className={`group flex flex-col items-center justify-center gap-2 p-4 bg-gradient-to-br ${action.bgGradient} border border-gray-200 rounded-xl ${action.hoverBg} hover:border-opacity-50 hover:shadow-xl hover:scale-[1.02] transition-all duration-200 min-h-[100px]`}
+                            >
+                              <div
+                                className={`w-12 h-12 ${action.iconBg} rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-200`}
+                              >
+                                <ActionIcon className="w-6 h-6 text-white" />
+                              </div>
+                              <span
+                                className={`font-semibold ${action.textColor} text-sm text-center`}
+                              >
+                                {action.label}
+                              </span>
+                            </LinkComponent>
+                          )
+                        })}
                       </div>
                     </div>
                   </div>
