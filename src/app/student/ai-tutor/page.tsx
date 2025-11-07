@@ -31,7 +31,7 @@ const INITIAL_QUESTIONS = [
   'Describe the structure of DNA',
 ]
 
-const STUDENT_ID = 'STUDENT_001'
+const TEMP_FREE_USER_ID = 'temp_free_user_001' // TODO: Replace with real freeUserId from session
 const STORAGE_KEY = 'cerebrum_ai_tutor_session'
 
 export default function AITutorPage() {
@@ -88,6 +88,31 @@ export default function AITutorPage() {
     }
   }, [messages, sessionId])
 
+  const saveMessageToDatabase = async (message: Message) => {
+    try {
+      await fetch('/api/ai/tutor/history/save', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          sessionId,
+          freeUserId: TEMP_FREE_USER_ID,
+          message: message.content,
+          isUserMessage: message.isUser,
+          ncertReferences: message.ncertReferences,
+          relatedTopics: message.relatedTopics,
+          confidence: message.confidence,
+          tokensUsed: message.tokensUsed,
+          topic: 'General Biology',
+          difficulty: 'medium',
+        }),
+      })
+    } catch (error) {
+      console.error('Failed to save message to database:', error)
+    }
+  }
+
   const sendMessage = async (content: string) => {
     if (!content.trim()) return
 
@@ -102,6 +127,8 @@ export default function AITutorPage() {
     setIsLoading(true)
     setError(null)
 
+    saveMessageToDatabase(userMessage).catch(console.error)
+
     try {
       const response = await fetch('/api/ai/tutor', {
         method: 'POST',
@@ -110,7 +137,7 @@ export default function AITutorPage() {
         },
         body: JSON.stringify({
           question: content.trim(),
-          studentId: STUDENT_ID,
+          studentId: 'STUDENT_001',
           context: {
             topic: 'General Biology',
             difficulty: 'medium',
@@ -140,6 +167,8 @@ export default function AITutorPage() {
       }
 
       setMessages((prev) => [...prev, aiMessage])
+
+      saveMessageToDatabase(aiMessage).catch(console.error)
 
       if (data.suggestedQuestions && data.suggestedQuestions.length > 0) {
         setTimeout(() => {
