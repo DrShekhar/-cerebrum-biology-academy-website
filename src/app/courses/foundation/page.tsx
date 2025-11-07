@@ -133,20 +133,31 @@ export default function FoundationCoursePage() {
                 Build a strong foundation for your medical dreams. Early start advantage with
                 comprehensive Biology concepts and introduction to medical entrance preparation.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="space-y-4">
                 <Link
                   href="/admissions"
-                  className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors inline-flex items-center"
+                  className="block w-full bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-green-50 transition-colors text-center"
                 >
-                  Join Foundation Program
-                  <ArrowRight className="w-5 h-5 ml-2" />
+                  <span className="inline-flex items-center">
+                    Join Foundation Program
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </span>
                 </Link>
-                <Link
-                  href="/contact"
-                  className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
-                >
-                  Book Free Demo
-                </Link>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <Link
+                    href="/support/demo"
+                    className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors text-center"
+                  >
+                    Book Free Demo
+                  </Link>
+                  <Link
+                    href="https://wa.me/919876543210"
+                    target="_blank"
+                    className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors text-center"
+                  >
+                    WhatsApp Counselor
+                  </Link>
+                </div>
               </div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8">
