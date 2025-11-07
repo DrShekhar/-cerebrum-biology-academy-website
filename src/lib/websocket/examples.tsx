@@ -13,7 +13,7 @@ export function LiveStudyMetricsExample() {
   const socket = useWebSocket({
     url: 'wss://api.cerebrumbiologyacademy.com/ws',
     reconnect: true,
-    heartbeat: 30000,
+    heartbeatInterval: 30000,
     enableMockMode: true,
     debug: true,
   })

@@ -183,7 +183,7 @@ class VoiceRecognitionService {
       if (latestResult) {
         const transcript = latestResult[0].transcript
         const confidence = latestResult[0].confidence
-        const alternatives = Array.from(latestResult)
+        const alternatives = Array.from(latestResult as ArrayLike<SpeechRecognitionAlternative>)
           .slice(1)
           .map((alt) => alt.transcript)
 

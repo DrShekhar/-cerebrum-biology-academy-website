@@ -394,7 +394,7 @@ Guidelines:
       `❓ *Test Your Understanding:*\n${response.followUpQuestions.map((q, i) => `${i + 1}. ${q}`).join('\n')}\n\n` +
       `Ready for your next question! 💪`
 
-    await this.whatsappService.sendMessage(phoneNumberId, phoneNumber, mainMessage)
+    await this.whatsappService.sendMessage({ phone: phoneNumber, message: mainMessage })
 
     // Send interactive buttons for follow-up
     await this.sendFollowUpButtons(phoneNumber, phoneNumberId, response.topic)
@@ -450,7 +450,7 @@ Guidelines:
     phoneNumberId: string,
     message: string
   ): Promise<void> {
-    await this.whatsappService.sendMessage(phoneNumberId, phoneNumber, message)
+    await this.whatsappService.sendMessage({ phone: phoneNumber, message })
   }
 
   private async sendRateLimitMessage(phoneNumber: string, phoneNumberId: string): Promise<void> {
@@ -461,7 +461,7 @@ Guidelines:
       `💎 Upgrade to premium for unlimited questions\n\n` +
       `Keep studying! 💪`
 
-    await this.whatsappService.sendMessage(phoneNumberId, phoneNumber, message)
+    await this.whatsappService.sendMessage({ phone: phoneNumber, message })
   }
 
   private async sendOffTopicMessage(
@@ -480,7 +480,7 @@ Guidelines:
       `• NEET Previous Years\n\n` +
       `What would you like to learn today? 🧬`
 
-    await this.whatsappService.sendMessage(phoneNumberId, phoneNumber, message)
+    await this.whatsappService.sendMessage({ phone: phoneNumber, message })
   }
 
   private async sendUnsupportedMessage(phoneNumber: string, phoneNumberId: string): Promise<void> {
@@ -492,7 +492,7 @@ Guidelines:
       `📸 Biology diagrams/images\n\n` +
       `Please send your biology question in one of these formats! 📚`
 
-    await this.whatsappService.sendMessage(phoneNumberId, phoneNumber, message)
+    await this.whatsappService.sendMessage({ phone: phoneNumber, message })
   }
 
   private async sendClarificationMessage(
@@ -507,7 +507,7 @@ Guidelines:
       `📸 Sending an image with caption\n\n` +
       `Example: "What is photosynthesis?" 🌱`
 
-    await this.whatsappService.sendMessage(phoneNumberId, phoneNumber, message)
+    await this.whatsappService.sendMessage({ phone: phoneNumber, message })
   }
 
   async trackMessageStatus(status: MessageStatus): Promise<void> {

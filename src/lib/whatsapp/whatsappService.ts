@@ -200,6 +200,24 @@ Keep going, future doctor! 🩺🌟`
     // For MVP, return demo data
     return ['+919876543210', '+919876543211', '+919876543212']
   }
+
+  async getMediaUrl(mediaId: string): Promise<string> {
+    // This would integrate with WhatsApp Business API to download media
+    // For MVP, return a placeholder URL
+    console.log('📥 Fetching media URL for:', mediaId)
+    return `https://placeholder.com/media/${mediaId}`
+  }
+
+  async sendInteractiveMessage(phoneNumberId: string, message: any): Promise<boolean> {
+    // This would send interactive messages with buttons via WhatsApp Business API
+    // For MVP, log the interactive message
+    console.log('📱 Interactive WhatsApp Message:', {
+      phoneNumberId,
+      message,
+      timestamp: new Date().toISOString(),
+    })
+    return true
+  }
 }
 
 export const whatsappService = new WhatsAppService()
