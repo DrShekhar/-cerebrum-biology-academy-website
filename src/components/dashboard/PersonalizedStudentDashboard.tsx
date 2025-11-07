@@ -47,6 +47,9 @@ import { useToast } from '@/components/ui/Toast'
 import { ProgressCardSkeleton } from '@/components/ai/skeletons/ProgressCardSkeleton'
 import { MetricCardSkeleton } from '@/components/ai/skeletons/MetricsSkeleton'
 import { BiologyScoreDisplay } from '@/components/ui/BiologyScoreDisplay'
+import { AchievementsDisplay } from '@/components/gamification/AchievementsDisplay'
+import { XPProgressCard } from '@/components/gamification/XPProgressCard'
+import { StreakWidget } from '@/components/gamification/StreakWidget'
 
 interface StudySession {
   id: string
@@ -115,6 +118,9 @@ export function PersonalizedStudentDashboard() {
   })
 
   const [recentSessions, setRecentSessions] = useState<StudySession[]>([])
+
+  // Gamification data
+  const [gamificationData, setGamificationData] = useState<any | null>(null)
 
   // Get or create freeUserId for guest users
   useEffect(() => {
@@ -246,6 +252,22 @@ export function PersonalizedStudentDashboard() {
           const statsData = await dashboardStatsResponse.value.json()
           if (statsData.success) {
             console.log('Dashboard stats loaded:', statsData.data)
+          }
+        }
+
+        // Fetch gamification data
+        const gamificationUserId = freeUserId || user?.id
+        if (gamificationUserId) {
+          try {
+            const gamificationResponse = await fetchWithRetry(
+              `/api/gamification?${freeUserId ? 'freeUserId' : 'userId'}=${gamificationUserId}`
+            )
+            if (gamificationResponse.ok) {
+              const gamificationData = await gamificationResponse.json()
+              setGamificationData(gamificationData)
+            }
+          } catch (error) {
+            console.error('Error fetching gamification data:', error)
           }
         }
 
@@ -887,6 +909,40 @@ export function PersonalizedStudentDashboard() {
                   </div>
                 </div>
               </div>
+
+              {/* Gamification Widgets */}
+              {gamificationData && (
+                <div className="space-y-4 sm:space-y-6">
+                  <h2 className="text-xl sm:text-2xl font-bold text-gray-900 flex items-center">
+                    <Trophy className="w-6 h-6 sm:w-7 sm:h-7 text-yellow-500 mr-2" />
+                    Your Progress & Achievements
+                  </h2>
+
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
+                    <XPProgressCard
+                      totalPoints={gamificationData.gamification.totalPoints}
+                      currentLevel={gamificationData.gamification.currentLevel}
+                      xpInCurrentLevel={gamificationData.gamification.xpInCurrentLevel}
+                      xpNeededForNextLevel={gamificationData.gamification.xpNeededForNextLevel}
+                      levelProgress={gamificationData.gamification.levelProgress}
+                    />
+                    <StreakWidget
+                      studyStreak={gamificationData.gamification.studyStreak}
+                      longestStreak={gamificationData.gamification.longestStreak}
+                      streakMilestone={gamificationData.gamification.streakMilestone}
+                    />
+                  </div>
+
+                  <AchievementsDisplay
+                    achievements={[
+                      ...gamificationData.gamification.recentAchievements,
+                      ...gamificationData.gamification.inProgressAchievements,
+                    ]}
+                    totalAchievements={gamificationData.gamification.totalAchievements}
+                    completedAchievements={gamificationData.gamification.completedAchievements}
+                  />
+                </div>
+              )}
 
               {/* Recent Activity - Mobile Optimized */}
               <div className="bg-white rounded-lg sm:rounded-xl p-4 sm:p-6 shadow-lg">
