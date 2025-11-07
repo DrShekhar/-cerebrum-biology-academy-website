@@ -150,7 +150,7 @@ export default function RootLayout({
             </ErrorBoundary>
           </ToastProvider>
         </AuthProvider>
-        <MaintenancePopup />
+        {/* <MaintenancePopup /> */}
         <Script src="https://checkout.razorpay.com/v1/checkout.js" strategy="lazyOnload" />
       </body>
     </html>
