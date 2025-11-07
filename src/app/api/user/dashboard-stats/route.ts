@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { withAuth } from '@/lib/auth/middleware'
+import { withOptionalAuth } from '@/lib/auth/middleware'
 import { prisma } from '@/lib/prisma'
 import { z } from 'zod'
 import { unstable_cache } from 'next/cache'
@@ -144,13 +144,13 @@ async function calculateDashboardStats(userId: string): Promise<DashboardStatsRe
  * GET /api/user/dashboard-stats
  * Fetch high-level dashboard statistics with week-over-week comparisons
  */
-export const GET = withAuth(async (request: NextRequest, session) => {
+export const GET = withOptionalAuth(async (request: NextRequest, session) => {
   try {
     const { searchParams } = new URL(request.url)
     const userIdParam = searchParams.get('userId')
 
     // Use authenticated user ID or provided userId
-    const userId = userIdParam || session.userId
+    const userId = userIdParam || session?.userId
 
     if (!userId) {
       return NextResponse.json(
