@@ -66,28 +66,33 @@ export default function Class11BiologyPage() {
                 Build a strong foundation for NEET success while excelling in board exams.
                 Comprehensive coverage of NCERT Biology with expert AIIMS faculty guidance.
               </p>
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                <Link
-                  href="/purchase/class-11"
-                  className="bg-white text-green-600 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-green-50 transition-colors inline-flex items-center justify-center shadow-lg min-h-[44px] w-full sm:w-auto"
-                >
-                  <span className="truncate">Buy Now - Start Learning</span>
-                  <ArrowRight className="w-5 h-5 ml-2 flex-shrink-0" />
-                </Link>
-                <Link
-                  href="https://wa.me/919311946297?text=Hi%2C%20I%27m%20interested%20in%20Class%2011th%20Biology%20course"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-green-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-green-700 transition-colors inline-flex items-center justify-center min-h-[44px] w-full sm:w-auto"
-                >
-                  <span className="truncate">WhatsApp Counselor</span>
-                </Link>
+              <div className="flex flex-col gap-3 sm:gap-4">
+                {/* Primary CTA - Book Free Demo */}
                 <Link
                   href="/demo-booking"
-                  className="border border-white/50 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors inline-flex items-center justify-center min-h-[44px] w-full sm:w-auto"
+                  className="bg-white text-green-600 px-8 py-4 rounded-xl font-bold hover:bg-green-50 transition-all duration-300 inline-flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-[1.02] min-h-[52px] w-full group"
                 >
-                  <span className="truncate">Book Demo Class</span>
+                  <span>Book Free Demo</span>
+                  <ArrowRight className="w-5 h-5 ml-2 flex-shrink-0 group-hover:translate-x-1 transition-transform" />
                 </Link>
+
+                {/* Secondary CTAs */}
+                <div className="flex flex-col xs:flex-row gap-3">
+                  <Link
+                    href="https://wa.me/919311946297?text=Hi%2C%20I%27m%20interested%20in%20Class%2011th%20Biology%20course"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="border-2 border-white/50 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors inline-flex items-center justify-center min-h-[44px] flex-1"
+                  >
+                    WhatsApp Counselor
+                  </Link>
+                  <Link
+                    href="/purchase/class-11"
+                    className="border-2 border-white/50 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors inline-flex items-center justify-center min-h-[44px] flex-1"
+                  >
+                    Enroll Now
+                  </Link>
+                </div>
               </div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8">
