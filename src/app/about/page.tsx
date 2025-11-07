@@ -267,7 +267,7 @@ export default function AboutPage() {
                   <Button
                     variant="primary"
                     size="xl"
-                    className="relative group overflow-hidden bg-gradient-to-r from-teal-500 to-blue-600 hover:from-teal-600 hover:to-blue-700 text-white font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 min-h-11 sm:min-h-[56px] w-full sm:w-auto"
+                    className="relative group overflow-hidden bg-teal-600 hover:bg-teal-700 text-white font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 min-h-11 sm:min-h-[56px] w-full sm:w-auto"
                   >
                     {/* Shimmer effect on hover */}
                     <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000"></div>
@@ -355,47 +355,56 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 shadow-lg border-l-8 border-blue-600 hover:shadow-2xl transition-all duration-500"
+              whileHover={{ y: -8, scale: 1.02 }}
+              className="relative bg-white/70 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 shadow-xl hover:shadow-2xl border border-blue-200/50 hover:border-blue-400/60 transition-all duration-500 overflow-hidden group"
             >
-              <div className="flex items-center mb-6 sm:mb-8">
-                <Target
-                  className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-blue-800 mr-3 sm:mr-4 md:mr-5"
-                  strokeWidth={1.5}
-                />
-                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-blue-900">
-                  Our Mission
-                </h3>
-              </div>
+              {/* Gradient overlay on hover */}
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-teal-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-              <p className="text-base sm:text-lg md:text-base sm:text-lg md:text-xl text-gray-700 leading-[1.8] font-light mb-6 sm:mb-8">
-                To revolutionize education and make high-quality NEET Biology instruction
-                universally accessible, combining traditional teaching excellence with modern
-                learning technologies, ensuring every student achieves their medical career
-                aspirations through proven methodologies.
-              </p>
+              {/* Content wrapper */}
+              <div className="relative z-10">
+                <div className="flex items-center mb-6 sm:mb-8">
+                  <Target
+                    className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-blue-800 mr-3 sm:mr-4 md:mr-5"
+                    strokeWidth={1.5}
+                  />
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-blue-900">
+                    Our Mission
+                  </h3>
+                </div>
 
-              <div className="space-y-4 pt-8 border-t border-gray-200">
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-teal-600 flex-shrink-0 mt-1" />
-                  <span className="text-gray-700 text-lg font-light">Proven curriculum design</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-teal-600 flex-shrink-0 mt-1" />
-                  <span className="text-gray-700 text-lg font-light">
-                    Personalized learning pathways
-                  </span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-teal-600 flex-shrink-0 mt-1" />
-                  <span className="text-gray-700 text-lg font-light">
-                    Technology-enhanced teaching
-                  </span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-teal-600 flex-shrink-0 mt-1" />
-                  <span className="text-gray-700 text-lg font-light">
-                    Outcome-focused assessment
-                  </span>
+                <p className="text-base sm:text-lg md:text-base sm:text-lg md:text-xl text-gray-700 leading-[1.8] font-light mb-6 sm:mb-8">
+                  To revolutionize education and make high-quality NEET Biology instruction
+                  universally accessible, combining traditional teaching excellence with modern
+                  learning technologies, ensuring every student achieves their medical career
+                  aspirations through proven methodologies.
+                </p>
+
+                <div className="space-y-4 pt-8 border-t border-gray-200">
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-teal-600 flex-shrink-0 mt-1" />
+                    <span className="text-gray-700 text-lg font-light">
+                      Proven curriculum design
+                    </span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-teal-600 flex-shrink-0 mt-1" />
+                    <span className="text-gray-700 text-lg font-light">
+                      Personalized learning pathways
+                    </span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-teal-600 flex-shrink-0 mt-1" />
+                    <span className="text-gray-700 text-lg font-light">
+                      Technology-enhanced teaching
+                    </span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-teal-600 flex-shrink-0 mt-1" />
+                    <span className="text-gray-700 text-lg font-light">
+                      Outcome-focused assessment
+                    </span>
+                  </div>
                 </div>
               </div>
             </motion.div>
@@ -405,48 +414,55 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="bg-white rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 shadow-lg border-l-8 border-teal-600 hover:shadow-2xl transition-all duration-500"
+              whileHover={{ y: -8, scale: 1.02 }}
+              className="relative bg-white/70 backdrop-blur-xl rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 shadow-xl hover:shadow-2xl border border-teal-200/50 hover:border-teal-400/60 transition-all duration-500 overflow-hidden group"
             >
-              <div className="flex items-center mb-8">
-                <Lightbulb className="w-16 h-16 text-teal-600 mr-5" strokeWidth={1.5} />
-                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-blue-900">
-                  Our Vision
-                </h3>
-              </div>
+              {/* Gradient overlay on hover */}
+              <div className="absolute inset-0 bg-gradient-to-br from-teal-500/5 via-transparent to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-              <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-[1.8] font-light mb-8">
-                To become{' '}
-                <strong className="font-semibold text-blue-900">
-                  India's most trusted and innovative NEET coaching institute
-                </strong>
-                , recognized for producing confident, competent medical professionals who contribute
-                meaningfully to healthcare advancement and societal well-being.
-              </p>
+              {/* Content wrapper */}
+              <div className="relative z-10">
+                <div className="flex items-center mb-8">
+                  <Lightbulb className="w-16 h-16 text-teal-600 mr-5" strokeWidth={1.5} />
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-blue-900">
+                    Our Vision
+                  </h3>
+                </div>
 
-              <div className="space-y-4 pt-8 border-t border-gray-200">
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-blue-800 flex-shrink-0 mt-1" />
-                  <span className="text-gray-700 text-lg font-light">
-                    National leadership in medical education
-                  </span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-blue-800 flex-shrink-0 mt-1" />
-                  <span className="text-gray-700 text-lg font-light">
-                    International research collaborations
-                  </span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-blue-800 flex-shrink-0 mt-1" />
-                  <span className="text-gray-700 text-lg font-light">
-                    Healthcare innovation pipeline
-                  </span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-blue-800 flex-shrink-0 mt-1" />
-                  <span className="text-gray-700 text-lg font-light">
-                    Societal impact through graduates
-                  </span>
+                <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-[1.8] font-light mb-8">
+                  To become{' '}
+                  <strong className="font-semibold text-blue-900">
+                    India's most trusted and innovative NEET coaching institute
+                  </strong>
+                  , recognized for producing confident, competent medical professionals who
+                  contribute meaningfully to healthcare advancement and societal well-being.
+                </p>
+
+                <div className="space-y-4 pt-8 border-t border-gray-200">
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-blue-800 flex-shrink-0 mt-1" />
+                    <span className="text-gray-700 text-lg font-light">
+                      National leadership in medical education
+                    </span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-blue-800 flex-shrink-0 mt-1" />
+                    <span className="text-gray-700 text-lg font-light">
+                      International research collaborations
+                    </span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-blue-800 flex-shrink-0 mt-1" />
+                    <span className="text-gray-700 text-lg font-light">
+                      Healthcare innovation pipeline
+                    </span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-blue-800 flex-shrink-0 mt-1" />
+                    <span className="text-gray-700 text-lg font-light">
+                      Societal impact through graduates
+                    </span>
+                  </div>
                 </div>
               </div>
             </motion.div>
@@ -478,35 +494,40 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1, duration: 0.6 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-white to-gray-50 border border-gray-200 rounded-3xl p-8 hover:shadow-2xl hover:border-teal-600/30 hover:-translate-y-2 transition-all duration-500 group"
+                className="relative bg-white/60 backdrop-blur-lg border border-purple-200/40 rounded-3xl p-8 shadow-lg hover:shadow-2xl hover:border-purple-400/60 hover:-translate-y-3 hover:scale-105 transition-all duration-500 group overflow-hidden"
               >
-                {/* Icon with Sophisticated Gradient */}
-                <div className="w-20 h-20 bg-gradient-to-br from-blue-700 via-purple-700 to-blue-800 rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                  <value.icon className="w-10 h-10 text-teal-300" strokeWidth={1.5} />
-                </div>
-
-                {/* Title */}
-                <h3 className="text-xl font-bold text-blue-900 mb-4 leading-tight">
-                  {value.title}
-                </h3>
-
-                {/* Description */}
-                <p className="text-base text-gray-600 leading-relaxed mb-6 font-light">
-                  {value.description}
-                </p>
-
-                {/* Metric - Elegant Display */}
-                <div className="bg-gradient-to-br from-blue-700 via-purple-700 to-blue-800 text-white px-4 sm:px-6 py-4 rounded-2xl shadow-md mb-6">
-                  <div className="text-4xl font-bold tabular-nums text-teal-300 leading-none mb-2">
-                    {value.metric}
+                {/* Animated gradient background on hover */}
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-teal-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                {/* Content wrapper for z-index */}
+                <div className="relative z-10">
+                  {/* Icon with Sophisticated Gradient */}
+                  <div className="w-20 h-20 bg-gradient-to-br from-blue-700 via-purple-700 to-blue-800 rounded-2xl flex items-center justify-center mb-6 shadow-xl group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                    <value.icon className="w-10 h-10 text-teal-300" strokeWidth={1.5} />
                   </div>
-                  <div className="text-sm text-white/80 font-light">{value.metricLabel}</div>
-                </div>
 
-                {/* Badge */}
-                <div className="inline-flex items-center bg-teal-500/10 border border-teal-600/30 text-teal-600 px-4 py-2 rounded-full text-xs font-semibold">
-                  <CheckCircle className="w-4 h-4 mr-2" />
-                  Verified Results
+                  {/* Title */}
+                  <h3 className="text-xl font-bold text-blue-900 mb-4 leading-tight group-hover:text-blue-700 transition-colors">
+                    {value.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-base text-gray-600 leading-relaxed mb-6 font-light">
+                    {value.description}
+                  </p>
+
+                  {/* Metric - Elegant Display */}
+                  <div className="bg-gradient-to-br from-blue-700 via-purple-700 to-blue-800 text-white px-4 sm:px-6 py-4 rounded-2xl shadow-lg mb-6 group-hover:shadow-xl transition-shadow">
+                    <div className="text-4xl font-bold tabular-nums text-teal-300 leading-none mb-2">
+                      {value.metric}
+                    </div>
+                    <div className="text-sm text-white/80 font-light">{value.metricLabel}</div>
+                  </div>
+
+                  {/* Badge */}
+                  <div className="inline-flex items-center bg-teal-500/10 border border-teal-600/30 text-teal-600 px-4 py-2 rounded-full text-xs font-semibold group-hover:bg-teal-500/20 transition-colors">
+                    <CheckCircle className="w-4 h-4 mr-2" />
+                    Verified Results
+                  </div>
                 </div>
               </motion.div>
             ))}
@@ -639,7 +660,7 @@ export default function AboutPage() {
 
           <div className="relative">
             {/* Timeline Line - Hidden on mobile, visible on desktop */}
-            <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-[#1e3a5f] via-[#6b8e7f] to-amber-400"></div>
+            <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-600 via-purple-600 to-teal-500"></div>
 
             <div className="space-y-12 lg:space-y-24">
               {milestones.map((milestone, index) => (
@@ -654,29 +675,33 @@ export default function AboutPage() {
                   viewport={{ once: true }}
                 >
                   <div className={`w-full lg:w-1/2 ${index % 2 === 0 ? 'lg:pr-16' : 'lg:pl-16'}`}>
-                    <div className="bg-white rounded-3xl shadow-xl p-10 hover:shadow-2xl transition-all duration-500 border-l-8 border-blue-600 group hover:-translate-y-1">
-                      <div className="flex items-center mb-6">
-                        <div className="w-20 h-20 bg-gradient-to-br from-blue-700 via-purple-700 to-blue-800 rounded-2xl flex items-center justify-center shadow-lg flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                          <milestone.icon className="w-10 h-10 text-teal-300" strokeWidth={1.5} />
-                        </div>
-                        <div className="ml-6">
-                          <div className="text-4xl font-bold text-blue-800 tracking-tight">
-                            {milestone.year}
+                    <div className="relative bg-white/70 backdrop-blur-lg rounded-3xl shadow-xl p-10 hover:shadow-2xl border border-blue-200/50 hover:border-blue-400/60 transition-all duration-500 group hover:-translate-y-2 overflow-hidden">
+                      {/* Hover gradient overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                      <div className="relative z-10">
+                        <div className="flex items-center mb-6">
+                          <div className="w-20 h-20 bg-gradient-to-br from-blue-700 via-purple-700 to-blue-800 rounded-2xl flex items-center justify-center shadow-lg flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                            <milestone.icon className="w-10 h-10 text-teal-300" strokeWidth={1.5} />
+                          </div>
+                          <div className="ml-6">
+                            <div className="text-4xl font-bold text-blue-800 tracking-tight">
+                              {milestone.year}
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <h3 className="text-2xl lg:text-3xl font-bold text-blue-900 mb-4 leading-tight">
-                        {milestone.title}
-                      </h3>
-                      <p className="text-lg lg:text-base sm:text-lg md:text-xl text-gray-700 mb-6 leading-[1.8] font-light">
-                        {milestone.description}
-                      </p>
-                      <div className="bg-gradient-to-br from-[#6b8e7f]/10 to-[#6b8e7f]/5 rounded-2xl p-6 border-l-4 border-teal-600">
-                        <div className="flex items-center">
-                          <CheckCircle className="w-6 h-6 text-teal-600 mr-3 flex-shrink-0" />
-                          <span className="text-blue-900 font-semibold text-base lg:text-lg">
-                            {milestone.stats}
-                          </span>
+                        <h3 className="text-2xl lg:text-3xl font-bold text-blue-900 mb-4 leading-tight">
+                          {milestone.title}
+                        </h3>
+                        <p className="text-lg lg:text-base sm:text-lg md:text-xl text-gray-700 mb-6 leading-[1.8] font-light">
+                          {milestone.description}
+                        </p>
+                        <div className="bg-gradient-to-br from-teal-500/10 to-teal-500/5 rounded-2xl p-6 border-l-4 border-teal-600 backdrop-blur-sm">
+                          <div className="flex items-center">
+                            <CheckCircle className="w-6 h-6 text-teal-600 mr-3 flex-shrink-0" />
+                            <span className="text-blue-900 font-semibold text-base lg:text-lg">
+                              {milestone.stats}
+                            </span>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -684,7 +709,7 @@ export default function AboutPage() {
 
                   {/* Timeline Dot - Only visible on desktop */}
                   <div className="hidden lg:block relative">
-                    <div className="w-6 h-6 bg-gradient-to-br from-[#1e3a5f] to-amber-400 rounded-full z-10 ring-8 ring-white shadow-xl"></div>
+                    <div className="w-6 h-6 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full z-10 ring-8 ring-white shadow-xl"></div>
                   </div>
 
                   <div className="hidden lg:block lg:w-1/2"></div>
@@ -714,35 +739,40 @@ export default function AboutPage() {
             {methodology.map((method, index) => (
               <motion.div
                 key={index}
-                className="bg-gradient-to-br from-white to-gray-50 rounded-3xl shadow-lg p-10 border border-gray-200 hover:shadow-2xl hover:border-teal-600/30 transition-all duration-500"
+                className="relative bg-white/60 backdrop-blur-lg rounded-3xl shadow-lg p-10 border border-purple-200/40 hover:shadow-2xl hover:border-purple-400/60 hover:-translate-y-2 transition-all duration-500 group overflow-hidden"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
+                whileHover={{ scale: 1.02 }}
               >
-                <div className="flex items-start gap-6 mb-8">
-                  <div className="w-20 h-20 bg-gradient-to-br from-blue-700 via-purple-700 to-blue-800 rounded-2xl flex items-center justify-center shadow-lg flex-shrink-0">
-                    <span className="text-3xl font-bold text-teal-300">{method.step}</span>
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-blue-900 mb-3 leading-tight">
-                      {method.title}
-                    </h3>
-                    <p className="text-lg text-gray-700 font-light leading-relaxed">
-                      {method.description}
-                    </p>
-                  </div>
-                </div>
-
-                <div className="space-y-4 pl-2">
-                  {method.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-start gap-3">
-                      <CheckCircle className="w-6 h-6 text-teal-600 flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-700 text-base font-light leading-relaxed">
-                        {feature}
-                      </span>
+                {/* Hover gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-purple-500/5 to-teal-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="relative z-10">
+                  <div className="flex items-start gap-6 mb-8">
+                    <div className="w-20 h-20 bg-gradient-to-br from-blue-700 via-purple-700 to-blue-800 rounded-2xl flex items-center justify-center shadow-xl flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                      <span className="text-3xl font-bold text-teal-300">{method.step}</span>
                     </div>
-                  ))}
+                    <div>
+                      <h3 className="text-2xl font-bold text-blue-900 mb-3 leading-tight">
+                        {method.title}
+                      </h3>
+                      <p className="text-lg text-gray-700 font-light leading-relaxed">
+                        {method.description}
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="space-y-4 pl-2">
+                    {method.features.map((feature, idx) => (
+                      <div key={idx} className="flex items-start gap-3">
+                        <CheckCircle className="w-6 h-6 text-teal-600 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700 text-base font-light leading-relaxed">
+                          {feature}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </motion.div>
             ))}
@@ -798,18 +828,22 @@ export default function AboutPage() {
               {facultyStats.map((stat, index) => (
                 <motion.div
                   key={index}
-                  className="bg-white rounded-3xl p-8 text-center shadow-lg border border-gray-200 hover:shadow-2xl hover:border-teal-600/30 transition-all duration-500"
+                  className="relative bg-white/60 backdrop-blur-lg rounded-3xl p-8 text-center shadow-lg border border-purple-200/40 hover:shadow-2xl hover:border-purple-400/60 hover:-translate-y-2 hover:scale-105 transition-all duration-500 group overflow-hidden"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <div className="text-5xl font-bold text-blue-800 mb-3 tracking-tight">
-                    {stat.number}
-                  </div>
-                  <div className="text-blue-900 font-semibold mb-2 text-lg">{stat.label}</div>
-                  <div className="text-sm text-gray-600 font-light leading-relaxed">
-                    {stat.description}
+                  {/* Hover gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-purple-500/5 to-teal-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="relative z-10">
+                    <div className="text-5xl font-bold text-blue-800 mb-3 tracking-tight">
+                      {stat.number}
+                    </div>
+                    <div className="text-blue-900 font-semibold mb-2 text-lg">{stat.label}</div>
+                    <div className="text-sm text-gray-600 font-light leading-relaxed">
+                      {stat.description}
+                    </div>
                   </div>
                 </motion.div>
               ))}
@@ -872,7 +906,7 @@ export default function AboutPage() {
                 <Button
                   variant="primary"
                   size="xl"
-                  className="bg-gradient-to-r from-teal-500 via-blue-600 to-purple-600 hover:from-teal-600 hover:via-blue-700 hover:to-purple-700 text-white font-semibold shadow-2xl hover:shadow-3xl transition-all duration-300 text-lg px-8 py-4"
+                  className="bg-teal-600 hover:bg-teal-700 text-white font-semibold shadow-2xl hover:shadow-3xl transition-all duration-300 text-lg px-8 py-4"
                 >
                   Book Free Consultation
                   <ArrowRight className="w-5 h-5 ml-2" />
