@@ -586,7 +586,8 @@ export function DemoBookingSystem() {
 
   return (
     <div className="max-w-4xl mx-auto p-4 md:p-6">
-      <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+      {/* Add bottom padding on mobile to account for sticky navigation */}
+      <div className="bg-white rounded-lg shadow-lg overflow-hidden pb-20 md:pb-0">
         {/* Header */}
         <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-4 md:p-6 text-white">
           <h1 className="text-xl md:text-2xl font-bold mb-2">
@@ -692,24 +693,27 @@ export function DemoBookingSystem() {
                   <h3 className="text-lg font-semibold text-gray-900 mb-4">
                     Choose Your Preferred Date
                   </h3>
-                  <div className="flex justify-center">
-                    <DayPicker
-                      mode="single"
-                      selected={selectedDate}
-                      onSelect={(date) => {
-                        setSelectedDate(date)
-                        setSelectedTime('')
-                      }}
-                      disabled={disabledDays}
-                      fromDate={tomorrow}
-                      toDate={twoWeeksFromNow}
-                      modifiersClassNames={{
-                        selected: 'bg-blue-600 text-white hover:bg-blue-700',
-                        today: 'font-bold text-blue-600',
-                        disabled: 'text-gray-300 cursor-not-allowed',
-                      }}
-                      className="border border-gray-200 rounded-lg p-4"
-                    />
+                  {/* Mobile-responsive calendar wrapper */}
+                  <div className="flex justify-center overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0">
+                    <div className="inline-block max-w-full">
+                      <DayPicker
+                        mode="single"
+                        selected={selectedDate}
+                        onSelect={(date) => {
+                          setSelectedDate(date)
+                          setSelectedTime('')
+                        }}
+                        disabled={disabledDays}
+                        fromDate={tomorrow}
+                        toDate={twoWeeksFromNow}
+                        modifiersClassNames={{
+                          selected: 'bg-blue-600 text-white hover:bg-blue-700',
+                          today: 'font-bold text-blue-600',
+                          disabled: 'text-gray-300 cursor-not-allowed',
+                        }}
+                        className="border border-gray-200 rounded-lg p-2 sm:p-4 rdp-mobile-optimized"
+                      />
+                    </div>
                   </div>
                   <p className="text-sm text-gray-500 text-center mt-2">
                     Sundays are not available for booking
@@ -735,7 +739,7 @@ export function DemoBookingSystem() {
                     <h3 className="text-lg font-semibold text-gray-900 mb-4">
                       Available Time Slots
                     </h3>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 max-w-full">
                       {timeSlots.map((slot) => (
                         <div
                           key={slot.id}
@@ -748,7 +752,7 @@ export function DemoBookingSystem() {
                           <button
                             onClick={() => slot.available && setSelectedTime(slot.time)}
                             disabled={!slot.available}
-                            className={`w-full p-4 rounded-lg border-2 text-left transition-all min-h-[44px] touch-manipulation ${
+                            className={`w-full p-3 sm:p-4 rounded-lg border-2 text-left transition-all min-h-[44px] touch-manipulation overflow-hidden ${
                               selectedTime === slot.time
                                 ? 'border-blue-600 bg-blue-50'
                                 : slot.available
@@ -756,8 +760,10 @@ export function DemoBookingSystem() {
                                   : 'border-gray-100 bg-gray-50 cursor-not-allowed opacity-50'
                             }`}
                           >
-                            <div className="flex items-center justify-between mb-2">
-                              <span className="font-medium text-gray-900">{slot.time}</span>
+                            <div className="flex items-center justify-between mb-2 gap-2">
+                              <span className="font-medium text-gray-900 text-sm sm:text-base truncate">
+                                {slot.time}
+                              </span>
                               {slot.available && slot.spotsLeft !== undefined && (
                                 <div className="flex items-center gap-1">
                                   <div
@@ -1167,56 +1173,58 @@ export function DemoBookingSystem() {
             </a>
           </div>
 
-          {/* Navigation Buttons */}
-          <div className="flex justify-between items-center mt-8 pt-6 border-t">
-            <button
-              onClick={handlePrevStep}
-              disabled={currentStep === 1}
-              className="flex items-center gap-2 px-4 md:px-6 py-3 text-gray-600 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors disabled:opacity-50 disabled:cursor-not-allowed min-h-[44px] touch-manipulation"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              <span className="hidden sm:inline">Previous</span>
-              <span className="sm:hidden">Back</span>
-            </button>
+          {/* Navigation Buttons - Sticky on mobile/tablet, always visible */}
+          <div className="sticky bottom-0 left-0 right-0 z-20 bg-white border-t shadow-lg md:shadow-none md:static md:mt-8">
+            <div className="flex justify-between items-center p-4 md:px-0 md:pt-6">
+              <button
+                onClick={handlePrevStep}
+                disabled={currentStep === 1}
+                className="flex items-center gap-2 px-4 md:px-6 py-3 text-gray-600 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors disabled:opacity-50 disabled:cursor-not-allowed min-h-[44px] touch-manipulation"
+              >
+                <ArrowLeft className="w-4 h-4" />
+                <span className="hidden sm:inline">Previous</span>
+                <span className="sm:hidden">Back</span>
+              </button>
 
-            {currentStep < 4 ? (
-              <button
-                onClick={handleNextStep}
-                disabled={
-                  (currentStep === 1 && (!selectedDate || !selectedTime)) ||
-                  (currentStep === 2 &&
-                    (!bookingData.studentName ||
-                      !bookingData.email ||
-                      !bookingData.phone ||
-                      !bookingData.currentClass)) ||
-                  (currentStep === 3 &&
-                    (bookingData.courseInterest.length === 0 || !bookingData.hearAboutUs))
-                }
-                className="flex items-center gap-2 px-4 md:px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed min-h-[44px] touch-manipulation"
-              >
-                Next
-                <ArrowRight className="w-4 h-4" />
-              </button>
-            ) : (
-              <button
-                onClick={handleSubmit}
-                disabled={isSubmitting}
-                className="flex items-center gap-2 px-6 md:px-8 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed min-h-[44px] touch-manipulation"
-              >
-                {isSubmitting ? (
-                  <>
-                    <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                    Booking...
-                  </>
-                ) : (
-                  <>
-                    <CheckCircle className="w-4 h-4" />
-                    <span className="hidden sm:inline">Confirm Booking</span>
-                    <span className="sm:hidden">Confirm</span>
-                  </>
-                )}
-              </button>
-            )}
+              {currentStep < 4 ? (
+                <button
+                  onClick={handleNextStep}
+                  disabled={
+                    (currentStep === 1 && (!selectedDate || !selectedTime)) ||
+                    (currentStep === 2 &&
+                      (!bookingData.studentName ||
+                        !bookingData.email ||
+                        !bookingData.phone ||
+                        !bookingData.currentClass)) ||
+                    (currentStep === 3 &&
+                      (bookingData.courseInterest.length === 0 || !bookingData.hearAboutUs))
+                  }
+                  className="flex items-center gap-2 px-4 md:px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed min-h-[44px] touch-manipulation shadow-md"
+                >
+                  Next
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+              ) : (
+                <button
+                  onClick={handleSubmit}
+                  disabled={isSubmitting}
+                  className="flex items-center gap-2 px-6 md:px-8 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed min-h-[44px] touch-manipulation shadow-md"
+                >
+                  {isSubmitting ? (
+                    <>
+                      <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                      Booking...
+                    </>
+                  ) : (
+                    <>
+                      <CheckCircle className="w-4 h-4" />
+                      <span className="hidden sm:inline">Confirm Booking</span>
+                      <span className="sm:hidden">Confirm</span>
+                    </>
+                  )}
+                </button>
+              )}
+            </div>
           </div>
         </div>
 

@@ -8,6 +8,65 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Mobile-optimized calendar styles */
+@layer components {
+  .rdp-mobile-optimized {
+    @apply w-full;
+  }
+
+  /* Responsive calendar typography and spacing */
+  @media (max-width: 640px) {
+    .rdp-mobile-optimized {
+      font-size: 0.875rem; /* 14px */
+    }
+
+    .rdp-mobile-optimized .rdp-caption {
+      font-size: 1rem; /* 16px */
+      margin-bottom: 0.5rem;
+    }
+
+    .rdp-mobile-optimized .rdp-day {
+      width: 2.25rem; /* 36px */
+      height: 2.25rem; /* 36px */
+      font-size: 0.875rem; /* 14px */
+    }
+
+    .rdp-mobile-optimized .rdp-head_cell {
+      font-size: 0.75rem; /* 12px */
+      padding: 0.25rem;
+    }
+
+    .rdp-mobile-optimized .rdp-cell {
+      padding: 2px;
+    }
+  }
+
+  /* Extra small screens (iPhone SE, etc) */
+  @media (max-width: 375px) {
+    .rdp-mobile-optimized {
+      font-size: 0.8125rem; /* 13px */
+    }
+
+    .rdp-mobile-optimized .rdp-day {
+      width: 2rem; /* 32px */
+      height: 2rem; /* 32px */
+      font-size: 0.8125rem; /* 13px */
+    }
+
+    .rdp-mobile-optimized .rdp-head_cell {
+      font-size: 0.6875rem; /* 11px */
+    }
+  }
+
+  /* Tablet optimization */
+  @media (min-width: 641px) and (max-width: 1024px) {
+    .rdp-mobile-optimized .rdp-day {
+      width: 2.5rem; /* 40px */
+      height: 2.5rem; /* 40px */
+    }
+  }
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
