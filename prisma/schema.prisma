@@ -1572,6 +1572,41 @@ model OtpVerification {
 }
 
 // ============================================
+// AI TUTOR SYSTEM MODELS
+// ============================================
+
+model ChatHistory {
+  id               String   @id @default(cuid())
+
+  // User Identification
+  userId           String?  // Regular paid user
+  freeUserId       String?  // Free trial user
+  sessionId        String   // Frontend session ID
+
+  // Message Details
+  message          String   @db.Text // User question or AI response
+  isUserMessage    Boolean  // true = user, false = AI
+
+  // AI Response Metadata
+  ncertReferences  Json?    // Array of NCERT references
+  relatedTopics    Json?    // Array of related topics
+  confidence       Int?     // Confidence score (0-100)
+  tokensUsed       Int?     // Token count for AI response
+
+  // Context
+  topic            String?  // Biology topic (Cell Biology, Genetics, etc.)
+  difficulty       String?  // easy, medium, hard
+
+  // Timestamps
+  createdAt        DateTime @default(now())
+
+  @@index([userId, createdAt])
+  @@index([freeUserId, createdAt])
+  @@index([sessionId, createdAt])
+  @@map("chat_history")
+}
+
+// ============================================
 // SEO & CONTENT MARKETING SYSTEM MODELS
 // ============================================
 
