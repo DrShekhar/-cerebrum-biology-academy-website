@@ -267,7 +267,7 @@ export class EnhancedFallbackManager {
   }
 
   private handleCircuitBreakerSuccess(provider: string): void {
-    let breaker = this.circuitBreakers.get(provider)
+    const breaker = this.circuitBreakers.get(provider)
     if (!breaker) return
 
     switch (breaker.state) {

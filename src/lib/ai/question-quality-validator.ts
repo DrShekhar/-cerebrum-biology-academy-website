@@ -63,38 +63,38 @@ export class QuestionQualityValidator {
       criterion: 'scientific_accuracy',
       weight: 0.25,
       evaluationMethod: 'terminology_verification',
-      passThreshold: 0.8
+      passThreshold: 0.8,
     },
     {
       criterion: 'conceptual_clarity',
-      weight: 0.20,
+      weight: 0.2,
       evaluationMethod: 'concept_mapping',
-      passThreshold: 0.75
+      passThreshold: 0.75,
     },
     {
       criterion: 'factual_correctness',
       weight: 0.15,
       evaluationMethod: 'knowledge_base_validation',
-      passThreshold: 0.85
+      passThreshold: 0.85,
     },
     {
       criterion: 'context_appropriateness',
       weight: 0.15,
       evaluationMethod: 'domain_relevance',
-      passThreshold: 0.70
+      passThreshold: 0.7,
     },
     {
       criterion: 'currency_relevance',
-      weight: 0.10,
+      weight: 0.1,
       evaluationMethod: 'recency_check',
-      passThreshold: 0.60
+      passThreshold: 0.6,
     },
     {
       criterion: 'cross_topic_integration',
       weight: 0.15,
       evaluationMethod: 'concept_connectivity',
-      passThreshold: 0.65
-    }
+      passThreshold: 0.65,
+    },
   ]
 
   private readonly cognitiveRequirements: Record<string, CognitiveRequirement> = {
@@ -102,77 +102,99 @@ export class QuestionQualityValidator {
       bloomsLevel: 'remember',
       expectedIndicators: ['define', 'list', 'identify', 'name', 'state', 'recall'],
       incompatibleElements: ['analyze', 'evaluate', 'create', 'synthesize'],
-      weight: 1.0
+      weight: 1.0,
     },
     understand: {
       bloomsLevel: 'understand',
       expectedIndicators: ['explain', 'describe', 'interpret', 'summarize', 'classify'],
       incompatibleElements: ['create', 'design', 'develop'],
-      weight: 1.2
+      weight: 1.2,
     },
     apply: {
       bloomsLevel: 'apply',
       expectedIndicators: ['calculate', 'demonstrate', 'solve', 'use', 'apply'],
       incompatibleElements: ['memorize', 'repeat'],
-      weight: 1.4
+      weight: 1.4,
     },
     analyze: {
       bloomsLevel: 'analyze',
       expectedIndicators: ['compare', 'contrast', 'examine', 'differentiate', 'investigate'],
       incompatibleElements: ['memorize', 'repeat', 'copy'],
-      weight: 1.6
+      weight: 1.6,
     },
     evaluate: {
       bloomsLevel: 'evaluate',
       expectedIndicators: ['assess', 'critique', 'judge', 'justify', 'evaluate'],
       incompatibleElements: ['memorize', 'copy', 'list'],
-      weight: 1.8
+      weight: 1.8,
     },
     create: {
       bloomsLevel: 'create',
       expectedIndicators: ['design', 'develop', 'create', 'formulate', 'construct'],
       incompatibleElements: ['memorize', 'copy', 'repeat', 'list'],
-      weight: 2.0
-    }
+      weight: 2.0,
+    },
   }
 
   private readonly languageStandards: LanguageStandard[] = [
     {
       criterion: 'clarity',
-      weight: 0.30,
-      validator: (text: string) => this.assessClarity(text)
+      weight: 0.3,
+      validator: (text: string) => this.assessClarity(text),
     },
     {
       criterion: 'conciseness',
-      weight: 0.20,
-      validator: (text: string) => this.assessConciseness(text)
+      weight: 0.2,
+      validator: (text: string) => this.assessConciseness(text),
     },
     {
       criterion: 'scientific_terminology',
       weight: 0.25,
-      validator: (text: string) => this.assessTerminologyUsage(text)
+      validator: (text: string) => this.assessTerminologyUsage(text),
     },
     {
       criterion: 'grammar_correctness',
       weight: 0.15,
-      validator: (text: string) => this.assessGrammar(text)
+      validator: (text: string) => this.assessGrammar(text),
     },
     {
       criterion: 'readability',
-      weight: 0.10,
-      validator: (text: string) => this.assessReadability(text)
-    }
+      weight: 0.1,
+      validator: (text: string) => this.assessReadability(text),
+    },
   ]
 
   private readonly neetKeywords = [
-    'cell', 'gene', 'DNA', 'RNA', 'protein', 'enzyme', 'hormone', 'neuron',
-    'photosynthesis', 'respiration', 'digestion', 'circulation', 'excretion',
-    'reproduction', 'heredity', 'evolution', 'ecology', 'biodiversity'
+    'cell',
+    'gene',
+    'DNA',
+    'RNA',
+    'protein',
+    'enzyme',
+    'hormone',
+    'neuron',
+    'photosynthesis',
+    'respiration',
+    'digestion',
+    'circulation',
+    'excretion',
+    'reproduction',
+    'heredity',
+    'evolution',
+    'ecology',
+    'biodiversity',
   ]
 
   private readonly biologicalProcesses = [
-    'mitosis', 'meiosis', 'transcription', 'translation', 'glycolysis',
-    'krebs cycle', 'electron transport', 'calvin cycle', 'chemiosmosis'
+    'mitosis',
+    'meiosis',
+    'transcription',
+    'translation',
+    'glycolysis',
+    'krebs cycle',
+    'electron transport',
+    'calvin cycle',
+    'chemiosmosis',
   ]
 
   /**
@@ -197,7 +219,7 @@ export class QuestionQualityValidator {
       neet: neetScore.score,
       language: languageScore.score,
       difficulty: difficultyScore.score,
-      educational: educationalScore.score
+      educational: educationalScore.score,
     })
 
     const feedback = this.generateDetailedFeedback({
@@ -206,7 +228,7 @@ export class QuestionQualityValidator {
       neet: neetScore,
       language: languageScore,
       difficulty: difficultyScore,
-      educational: educationalScore
+      educational: educationalScore,
     })
 
     return {
@@ -217,7 +239,7 @@ export class QuestionQualityValidator {
       languageClarity: languageScore.score,
       difficultyConsistency: difficultyScore.score,
       educationalValue: educationalScore.score,
-      detailedFeedback: feedback
+      detailedFeedback: feedback,
     }
   }
 
@@ -238,7 +260,7 @@ export class QuestionQualityValidator {
 
     return {
       score: totalWeight > 0 ? totalScore / totalWeight : 0,
-      details
+      details,
     }
   }
 
@@ -277,7 +299,7 @@ export class QuestionQualityValidator {
       { error: /plants breathe/i, correction: 'plants respire' },
       { error: /blood is blue/i, correction: 'deoxygenated blood appears darker' },
       { error: /we only use 10% of brain/i, correction: 'brain utilization myth' },
-      { error: /evolution is just a theory/i, correction: 'scientific theory vs common usage' }
+      { error: /evolution is just a theory/i, correction: 'scientific theory vs common usage' },
     ]
 
     for (const errorPattern of commonErrors) {
@@ -287,7 +309,9 @@ export class QuestionQualityValidator {
     }
 
     // Check for proper scientific terminology
-    const terminologyMatches = text.match(/\b(ATP|DNA|RNA|mRNA|tRNA|enzyme|protein|glucose|oxygen|carbon dioxide|mitochondria|chloroplast|ribosome|nucleus|cytoplasm)\b/gi)
+    const terminologyMatches = text.match(
+      /\b(ATP|DNA|RNA|mRNA|tRNA|enzyme|protein|glucose|oxygen|carbon dioxide|mitochondria|chloroplast|ribosome|nucleus|cytoplasm)\b/gi
+    )
     if (terminologyMatches && terminologyMatches.length > 0) {
       score += 0.1
     }
@@ -317,7 +341,8 @@ export class QuestionQualityValidator {
       score += 0.1
 
       // Check for logical connectors
-      const logicalConnectors = /\b(because|therefore|however|moreover|consequently|thus|since|as a result)\b/gi
+      const logicalConnectors =
+        /\b(because|therefore|however|moreover|consequently|thus|since|as a result)\b/gi
       if (logicalConnectors.test(question.explanation)) {
         score += 0.05
       }
@@ -325,7 +350,9 @@ export class QuestionQualityValidator {
 
     // Options quality (for MCQ)
     if (question.options && Array.isArray(question.options)) {
-      const avgOptionLength = question.options.reduce((sum: number, opt: string) => sum + opt.length, 0) / question.options.length
+      const avgOptionLength =
+        question.options.reduce((sum: number, opt: string) => sum + opt.length, 0) /
+        question.options.length
       if (avgOptionLength > 10 && avgOptionLength < 50) {
         score += 0.05
       }
@@ -337,7 +364,10 @@ export class QuestionQualityValidator {
   /**
    * Evaluate cognitive alignment with Bloom's taxonomy
    */
-  private evaluateCognitiveAlignment(question: any, targetLevel: string): { score: number; details: any } {
+  private evaluateCognitiveAlignment(
+    question: any,
+    targetLevel: string
+  ): { score: number; details: any } {
     const requirement = this.cognitiveRequirements[targetLevel]
     if (!requirement) {
       return { score: 0, details: { error: 'Unknown cognitive level' } }
@@ -347,13 +377,13 @@ export class QuestionQualityValidator {
     let score = 0.5
 
     // Check for expected indicators
-    const indicatorMatches = requirement.expectedIndicators.filter(indicator =>
+    const indicatorMatches = requirement.expectedIndicators.filter((indicator) =>
       questionText.includes(indicator.toLowerCase())
     )
     score += (indicatorMatches.length / requirement.expectedIndicators.length) * 0.3
 
     // Check for incompatible elements (penalty)
-    const incompatibleMatches = requirement.incompatibleElements.filter(element =>
+    const incompatibleMatches = requirement.incompatibleElements.filter((element) =>
       questionText.includes(element.toLowerCase())
     )
     score -= (incompatibleMatches.length / requirement.incompatibleElements.length) * 0.2
@@ -368,8 +398,8 @@ export class QuestionQualityValidator {
         indicatorMatches,
         incompatibleMatches,
         complexityScore,
-        targetLevel
-      }
+        targetLevel,
+      },
     }
   }
 
@@ -382,14 +412,14 @@ export class QuestionQualityValidator {
 
     // Check for NEET-specific keywords
     const questionText = `${question.question} ${question.explanation || ''}`.toLowerCase()
-    const keywordMatches = this.neetKeywords.filter(keyword =>
+    const keywordMatches = this.neetKeywords.filter((keyword) =>
       questionText.includes(keyword.toLowerCase())
     )
     score += (keywordMatches.length / this.neetKeywords.length) * 0.3
     details.keywordMatches = keywordMatches
 
     // Check for biological processes
-    const processMatches = this.biologicalProcesses.filter(process =>
+    const processMatches = this.biologicalProcesses.filter((process) =>
       questionText.includes(process.toLowerCase())
     )
     score += (processMatches.length / this.biologicalProcesses.length) * 0.2
@@ -401,8 +431,15 @@ export class QuestionQualityValidator {
     }
 
     // Check for clinical/application context
-    const applicationKeywords = ['patient', 'disease', 'treatment', 'symptom', 'diagnosis', 'clinical']
-    const applicationMatches = applicationKeywords.filter(keyword =>
+    const applicationKeywords = [
+      'patient',
+      'disease',
+      'treatment',
+      'symptom',
+      'diagnosis',
+      'clinical',
+    ]
+    const applicationMatches = applicationKeywords.filter((keyword) =>
       questionText.includes(keyword)
     )
     if (applicationMatches.length > 0) {
@@ -431,7 +468,7 @@ export class QuestionQualityValidator {
 
     return {
       score: totalWeight > 0 ? totalScore / totalWeight : 0,
-      details
+      details,
     }
   }
 
@@ -441,11 +478,12 @@ export class QuestionQualityValidator {
   private assessClarity(text: string): boolean {
     // Check for clear, unambiguous language
     const ambiguousWords = ['maybe', 'perhaps', 'possibly', 'might be', 'could be']
-    const hasAmbiguity = ambiguousWords.some(word => text.toLowerCase().includes(word))
+    const hasAmbiguity = ambiguousWords.some((word) => text.toLowerCase().includes(word))
 
     // Check sentence length (readability)
     const sentences = text.split(/[.!?]+/)
-    const avgSentenceLength = sentences.reduce((sum, s) => sum + s.trim().split(' ').length, 0) / sentences.length
+    const avgSentenceLength =
+      sentences.reduce((sum, s) => sum + s.trim().split(' ').length, 0) / sentences.length
 
     return !hasAmbiguity && avgSentenceLength < 25
   }
@@ -453,7 +491,7 @@ export class QuestionQualityValidator {
   private assessConciseness(text: string): boolean {
     // Check for unnecessary words and redundancy
     const redundantPhrases = ['in order to', 'due to the fact that', 'it is important to note that']
-    const hasRedundancy = redundantPhrases.some(phrase => text.toLowerCase().includes(phrase))
+    const hasRedundancy = redundantPhrases.some((phrase) => text.toLowerCase().includes(phrase))
 
     return !hasRedundancy && text.length < 500
   }
@@ -461,20 +499,28 @@ export class QuestionQualityValidator {
   private assessTerminologyUsage(text: string): boolean {
     // Check for appropriate scientific terminology
     const scientificTerms = text.match(/\b[A-Z][a-z]*(?:[A-Z][a-z]*)*\b/g) || []
-    const biologicalTerms = ['ATP', 'DNA', 'RNA', 'enzyme', 'protein', 'mitochondria', 'chloroplast']
+    const biologicalTerms = [
+      'ATP',
+      'DNA',
+      'RNA',
+      'enzyme',
+      'protein',
+      'mitochondria',
+      'chloroplast',
+    ]
 
-    return biologicalTerms.some(term => text.includes(term)) || scientificTerms.length > 2
+    return biologicalTerms.some((term) => text.includes(term)) || scientificTerms.length > 2
   }
 
   private assessGrammar(text: string): boolean {
     // Basic grammar checks
     const commonErrors = [
-      /\bthere\s+is\s+are\b/i,  // "there is are"
-      /\bwere\s+was\b/i,        // "were was"
-      /\bhas\s+have\b/i         // "has have"
+      /\bthere\s+is\s+are\b/i, // "there is are"
+      /\bwere\s+was\b/i, // "were was"
+      /\bhas\s+have\b/i, // "has have"
     ]
 
-    return !commonErrors.some(pattern => pattern.test(text))
+    return !commonErrors.some((pattern) => pattern.test(text))
   }
 
   private assessReadability(text: string): boolean {
@@ -502,7 +548,9 @@ export class QuestionQualityValidator {
   private checkCurrencyRelevance(text: string): number {
     // Check for recent scientific developments
     const currentTopics = ['CRISPR', 'COVID-19', 'mRNA vaccine', 'gene therapy']
-    const hasCurrentTopic = currentTopics.some(topic => text.toLowerCase().includes(topic.toLowerCase()))
+    const hasCurrentTopic = currentTopics.some((topic) =>
+      text.toLowerCase().includes(topic.toLowerCase())
+    )
     return hasCurrentTopic ? 0.9 : 0.6
   }
 
@@ -510,7 +558,7 @@ export class QuestionQualityValidator {
     // Check for integration of multiple biological concepts
     const questionText = `${question.question} ${question.explanation || ''}`.toLowerCase()
     const topicKeywords = ['cell', 'gene', 'enzyme', 'hormone', 'membrane', 'nucleus']
-    const matchedTopics = topicKeywords.filter(topic => questionText.includes(topic))
+    const matchedTopics = topicKeywords.filter((topic) => questionText.includes(topic))
 
     return Math.min(1, matchedTopics.length / 3)
   }
@@ -523,15 +571,18 @@ export class QuestionQualityValidator {
       apply: 0.6,
       analyze: 0.8,
       evaluate: 0.9,
-      create: 1.0
+      create: 1.0,
     }
 
     return complexityFactors[targetLevel as keyof typeof complexityFactors] || 0.5
   }
 
-  private evaluateDifficultyConsistency(question: any, targetDifficulty: string): { score: number; details: any } {
+  private evaluateDifficultyConsistency(
+    question: any,
+    targetDifficulty: string
+  ): { score: number; details: any } {
     // Evaluate if question difficulty matches target
-    let score = 0.7
+    const score = 0.7
 
     // This would be enhanced with machine learning models
     // For now, using heuristic approaches
@@ -539,7 +590,10 @@ export class QuestionQualityValidator {
     return { score, details: { targetDifficulty } }
   }
 
-  private evaluateEducationalValue(question: any, questionType: string): { score: number; details: any } {
+  private evaluateEducationalValue(
+    question: any,
+    questionType: string
+  ): { score: number; details: any } {
     // Evaluate pedagogical effectiveness
     let score = 0.6
 
@@ -559,15 +613,15 @@ export class QuestionQualityValidator {
   private calculateOverallScore(scores: Record<string, number>): number {
     const weights = {
       content: 0.25,
-      cognitive: 0.20,
-      neet: 0.20,
+      cognitive: 0.2,
+      neet: 0.2,
       language: 0.15,
-      difficulty: 0.10,
-      educational: 0.10
+      difficulty: 0.1,
+      educational: 0.1,
     }
 
     return Object.entries(scores).reduce((total, [key, score]) => {
-      return total + (score * (weights[key as keyof typeof weights] || 0))
+      return total + score * (weights[key as keyof typeof weights] || 0)
     }, 0)
   }
 
@@ -609,7 +663,7 @@ export class QuestionQualityValidator {
       evaluations.content.score,
       evaluations.cognitive.score,
       evaluations.neet.score,
-      evaluations.language.score
+      evaluations.language.score,
     ]
     const minScore = Math.min(...scores)
     const improvementPriority = minScore < 0.5 ? 'high' : minScore < 0.7 ? 'medium' : 'low'
@@ -619,7 +673,7 @@ export class QuestionQualityValidator {
       weaknesses,
       suggestions,
       scientificErrors,
-      improvementPriority
+      improvementPriority,
     }
   }
 }

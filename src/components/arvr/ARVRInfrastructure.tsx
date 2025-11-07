@@ -36,7 +36,7 @@ import {
   Users,
   Star,
   BookOpen,
-  FlaskConical
+  FlaskConical,
 } from 'lucide-react'
 
 interface ARVRCapability {
@@ -89,7 +89,9 @@ interface DeviceCapabilities {
 }
 
 const ARVRInfrastructure: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'experiences' | 'capabilities' | 'setup' | 'preview' | 'settings'>('experiences')
+  const [activeTab, setActiveTab] = useState<
+    'experiences' | 'capabilities' | 'setup' | 'preview' | 'settings'
+  >('experiences')
   const [deviceCapabilities, setDeviceCapabilities] = useState<DeviceCapabilities | null>(null)
   const [selectedExperience, setSelectedExperience] = useState<ImmersiveExperience | null>(null)
   const [isXRSupported, setIsXRSupported] = useState(false)
@@ -107,7 +109,8 @@ const ARVRInfrastructure: React.FC = () => {
     {
       id: 'cell-ar-explorer',
       title: 'AR Cell Explorer',
-      description: 'Explore a 3D plant cell in augmented reality. Walk around, zoom in on organelles, and see them in action.',
+      description:
+        'Explore a 3D plant cell in augmented reality. Walk around, zoom in on organelles, and see them in action.',
       type: 'ar',
       category: 'cell-biology',
       difficulty: 'beginner',
@@ -117,30 +120,31 @@ const ARVRInfrastructure: React.FC = () => {
         'Organelle animations',
         'Voice narration',
         'Hand gesture controls',
-        'Real-time scale adjustment'
+        'Real-time scale adjustment',
       ],
       interactions: [
         { type: 'gaze', description: 'Look at organelles to highlight them', supported: true },
         { type: 'gesture', description: 'Pinch to zoom, tap to select', supported: true },
-        { type: 'voice', description: 'Ask questions about cell components', supported: true }
+        { type: 'voice', description: 'Ask questions about cell components', supported: true },
       ],
       learningObjectives: [
         'Identify major cell organelles',
         'Understand spatial relationships in cells',
-        'Learn organelle functions through interaction'
+        'Learn organelle functions through interaction',
       ],
       requiredCapabilities: ['camera', 'deviceOrientation', 'webAR'],
       assets: [
         { type: '3d-model', size: 15.2, quality: 'high' },
         { type: 'texture', size: 8.7, quality: 'high' },
         { type: 'animation', size: 12.3, quality: 'medium' },
-        { type: 'audio', size: 5.1, quality: 'medium' }
-      ]
+        { type: 'audio', size: 5.1, quality: 'medium' },
+      ],
     },
     {
       id: 'heart-vr-anatomy',
       title: 'VR Human Heart Anatomy',
-      description: 'Immerse yourself inside a beating human heart. Follow blood flow and understand cardiac anatomy.',
+      description:
+        'Immerse yourself inside a beating human heart. Follow blood flow and understand cardiac anatomy.',
       type: 'vr',
       category: 'anatomy',
       difficulty: 'intermediate',
@@ -150,31 +154,32 @@ const ARVRInfrastructure: React.FC = () => {
         'Blood flow visualization',
         'Cardiac cycle simulation',
         'Interactive dissection',
-        'Educational checkpoints'
+        'Educational checkpoints',
       ],
       interactions: [
         { type: 'controller', description: 'Use VR controllers to interact', supported: true },
         { type: 'gaze', description: 'Look around to explore', supported: true },
-        { type: 'voice', description: 'Voice commands for navigation', supported: true }
+        { type: 'voice', description: 'Voice commands for navigation', supported: true },
       ],
       learningObjectives: [
         'Understand heart chamber structure',
         'Learn blood circulation pathways',
         'Observe cardiac cycle phases',
-        'Practice anatomical identification'
+        'Practice anatomical identification',
       ],
       requiredCapabilities: ['webXR', 'deviceOrientation'],
       assets: [
         { type: '3d-model', size: 45.8, quality: 'ultra' },
         { type: 'texture', size: 23.4, quality: 'ultra' },
         { type: 'animation', size: 67.2, quality: 'high' },
-        { type: 'audio', size: 12.8, quality: 'high' }
-      ]
+        { type: 'audio', size: 12.8, quality: 'high' },
+      ],
     },
     {
       id: 'dna-mr-lab',
       title: 'Mixed Reality DNA Lab',
-      description: 'Manipulate DNA molecules in mixed reality. Build, modify, and understand genetic structures.',
+      description:
+        'Manipulate DNA molecules in mixed reality. Build, modify, and understand genetic structures.',
       type: 'mr',
       category: 'molecular',
       difficulty: 'advanced',
@@ -184,31 +189,32 @@ const ARVRInfrastructure: React.FC = () => {
         'Real-time genetic changes',
         'Protein synthesis simulation',
         'Collaborative workspace',
-        'Lab equipment integration'
+        'Lab equipment integration',
       ],
       interactions: [
         { type: 'gesture', description: 'Hand tracking for precise manipulation', supported: true },
         { type: 'voice', description: 'Voice commands for complex operations', supported: true },
-        { type: 'gaze', description: 'Eye tracking for selection', supported: false }
+        { type: 'gaze', description: 'Eye tracking for selection', supported: false },
       ],
       learningObjectives: [
         'Understand DNA structure',
         'Learn genetic manipulation techniques',
         'Explore protein synthesis',
-        'Practice molecular modeling'
+        'Practice molecular modeling',
       ],
       requiredCapabilities: ['webXR', 'camera', 'deviceOrientation'],
       assets: [
         { type: '3d-model', size: 78.5, quality: 'ultra' },
         { type: 'texture', size: 34.7, quality: 'high' },
         { type: 'animation', size: 156.3, quality: 'ultra' },
-        { type: 'audio', size: 18.9, quality: 'high' }
-      ]
+        { type: 'audio', size: 18.9, quality: 'high' },
+      ],
     },
     {
       id: 'ecosystem-ar-field',
       title: 'AR Ecosystem Field Study',
-      description: 'Transform any space into a living ecosystem. Study food chains, biodiversity, and environmental interactions.',
+      description:
+        'Transform any space into a living ecosystem. Study food chains, biodiversity, and environmental interactions.',
       type: 'ar',
       category: 'ecosystem',
       difficulty: 'intermediate',
@@ -218,31 +224,32 @@ const ARVRInfrastructure: React.FC = () => {
         'Species interaction simulation',
         'Environmental parameter control',
         'Data collection tools',
-        'Real-time species tracking'
+        'Real-time species tracking',
       ],
       interactions: [
         { type: 'touch', description: 'Touch screen controls for mobile', supported: true },
         { type: 'gesture', description: 'Air tap gestures', supported: true },
-        { type: 'voice', description: 'Species identification by voice', supported: true }
+        { type: 'voice', description: 'Species identification by voice', supported: true },
       ],
       learningObjectives: [
         'Understand ecosystem dynamics',
         'Learn species relationships',
         'Practice field study methods',
-        'Analyze environmental data'
+        'Analyze environmental data',
       ],
       requiredCapabilities: ['camera', 'webAR', 'deviceOrientation'],
       assets: [
         { type: '3d-model', size: 92.1, quality: 'high' },
         { type: 'texture', size: 56.8, quality: 'high' },
         { type: 'animation', size: 145.7, quality: 'high' },
-        { type: 'audio', size: 28.4, quality: 'medium' }
-      ]
+        { type: 'audio', size: 28.4, quality: 'medium' },
+      ],
     },
     {
       id: 'virtual-lab-sim',
       title: 'Virtual Laboratory Simulation',
-      description: 'Practice biology experiments in a safe virtual environment. No risk, unlimited resources.',
+      description:
+        'Practice biology experiments in a safe virtual environment. No risk, unlimited resources.',
       type: 'vr',
       category: 'lab-simulation',
       difficulty: 'intermediate',
@@ -252,27 +259,31 @@ const ARVRInfrastructure: React.FC = () => {
         'Experiment protocols',
         'Safety training',
         'Result analysis tools',
-        'Progress tracking'
+        'Progress tracking',
       ],
       interactions: [
-        { type: 'controller', description: 'VR controllers for equipment handling', supported: true },
+        {
+          type: 'controller',
+          description: 'VR controllers for equipment handling',
+          supported: true,
+        },
         { type: 'gesture', description: 'Hand tracking for fine manipulation', supported: true },
-        { type: 'voice', description: 'Lab assistant voice commands', supported: true }
+        { type: 'voice', description: 'Lab assistant voice commands', supported: true },
       ],
       learningObjectives: [
         'Master laboratory techniques',
         'Learn equipment usage',
         'Practice safety protocols',
-        'Develop experimental skills'
+        'Develop experimental skills',
       ],
       requiredCapabilities: ['webXR', 'deviceOrientation'],
       assets: [
         { type: '3d-model', size: 134.6, quality: 'ultra' },
         { type: 'texture', size: 67.3, quality: 'ultra' },
         { type: 'animation', size: 89.4, quality: 'high' },
-        { type: 'audio', size: 45.2, quality: 'high' }
-      ]
-    }
+        { type: 'audio', size: 45.2, quality: 'high' },
+      ],
+    },
   ]
 
   useEffect(() => {
@@ -283,14 +294,14 @@ const ARVRInfrastructure: React.FC = () => {
   const detectDeviceCapabilities = async () => {
     const capabilities: DeviceCapabilities = {
       webXR: 'xr' in navigator && 'XRSystem' in window,
-      webAR: 'xr' in navigator && await checkARSupport(),
+      webAR: 'xr' in navigator && (await checkARSupport()),
       deviceOrientation: 'DeviceOrientationEvent' in window,
       camera: await checkCameraAccess(),
       microphone: await checkMicrophoneAccess(),
       accelerometer: 'DeviceMotionEvent' in window,
       gyroscope: 'DeviceOrientationEvent' in window,
       magnetometer: 'ondeviceorientationabsolute' in window,
-      performance: getPerformanceLevel()
+      performance: getPerformanceLevel(),
     }
 
     setDeviceCapabilities(capabilities)
@@ -361,7 +372,7 @@ const ARVRInfrastructure: React.FC = () => {
       const sessionMode = experience.type === 'ar' ? 'immersive-ar' : 'immersive-vr'
       const session = await (navigator as any).xr.requestSession(sessionMode, {
         requiredFeatures: ['local-floor'],
-        optionalFeatures: ['hand-tracking', 'eye-tracking']
+        optionalFeatures: ['hand-tracking', 'eye-tracking'],
       })
 
       setXRSession(session)
@@ -372,7 +383,6 @@ const ARVRInfrastructure: React.FC = () => {
       if (gl) {
         await setupXRRendering(session, gl)
       }
-
     } catch (error) {
       setError(`Failed to start XR session: ${error}`)
     }
@@ -408,7 +418,7 @@ const ARVRInfrastructure: React.FC = () => {
     setError(null)
 
     try {
-      let totalSize = experience.assets.reduce((sum, asset) => sum + asset.size, 0)
+      const totalSize = experience.assets.reduce((sum, asset) => sum + asset.size, 0)
       let downloadedSize = 0
 
       for (const asset of experience.assets) {
@@ -417,11 +427,9 @@ const ARVRInfrastructure: React.FC = () => {
         const chunkSize = asset.size / chunks
 
         for (let i = 0; i < chunks; i++) {
-          await new Promise(resolve => setTimeout(resolve, 100))
+          await new Promise((resolve) => setTimeout(resolve, 100))
           downloadedSize += chunkSize
-          setDownloadProgress(new Map([
-            [experience.id, (downloadedSize / totalSize) * 100]
-          ]))
+          setDownloadProgress(new Map([[experience.id, (downloadedSize / totalSize) * 100]]))
         }
       }
 
@@ -435,30 +443,44 @@ const ARVRInfrastructure: React.FC = () => {
 
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
-      case 'beginner': return 'text-green-600 bg-green-100'
-      case 'intermediate': return 'text-yellow-600 bg-yellow-100'
-      case 'advanced': return 'text-red-600 bg-red-100'
-      default: return 'text-gray-600 bg-gray-100'
+      case 'beginner':
+        return 'text-green-600 bg-green-100'
+      case 'intermediate':
+        return 'text-yellow-600 bg-yellow-100'
+      case 'advanced':
+        return 'text-red-600 bg-red-100'
+      default:
+        return 'text-gray-600 bg-gray-100'
     }
   }
 
   const getTypeColor = (type: string) => {
     switch (type) {
-      case 'ar': return 'text-blue-600 bg-blue-100'
-      case 'vr': return 'text-purple-600 bg-purple-100'
-      case 'mr': return 'text-indigo-600 bg-indigo-100'
-      default: return 'text-gray-600 bg-gray-100'
+      case 'ar':
+        return 'text-blue-600 bg-blue-100'
+      case 'vr':
+        return 'text-purple-600 bg-purple-100'
+      case 'mr':
+        return 'text-indigo-600 bg-indigo-100'
+      default:
+        return 'text-gray-600 bg-gray-100'
     }
   }
 
   const getCategoryIcon = (category: string) => {
     switch (category) {
-      case 'cell-biology': return <Microscope className="w-5 h-5" />
-      case 'anatomy': return <Heart className="w-5 h-5" />
-      case 'molecular': return <Dna className="w-5 h-5" />
-      case 'ecosystem': return <Leaf className="w-5 h-5" />
-      case 'lab-simulation': return <FlaskConical className="w-5 h-5" />
-      default: return <Brain className="w-5 h-5" />
+      case 'cell-biology':
+        return <Microscope className="w-5 h-5" />
+      case 'anatomy':
+        return <Heart className="w-5 h-5" />
+      case 'molecular':
+        return <Dna className="w-5 h-5" />
+      case 'ecosystem':
+        return <Leaf className="w-5 h-5" />
+      case 'lab-simulation':
+        return <FlaskConical className="w-5 h-5" />
+      default:
+        return <Brain className="w-5 h-5" />
     }
   }
 
@@ -479,8 +501,8 @@ const ARVRInfrastructure: React.FC = () => {
           </h1>
         </div>
         <p className="text-gray-600 max-w-3xl mx-auto">
-          Experience biology like never before with immersive AR/VR technologies.
-          Explore cells, anatomy, and molecular structures in 3D space.
+          Experience biology like never before with immersive AR/VR technologies. Explore cells,
+          anatomy, and molecular structures in 3D space.
         </p>
       </motion.div>
 
@@ -492,30 +514,48 @@ const ARVRInfrastructure: React.FC = () => {
             Device Compatibility
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div className={`p-3 rounded-lg border ${deviceCapabilities.webXR ? 'bg-green-50 border-green-200' : 'bg-red-50 border-red-200'}`}>
+            <div
+              className={`p-3 rounded-lg border ${deviceCapabilities.webXR ? 'bg-green-50 border-green-200' : 'bg-red-50 border-red-200'}`}
+            >
               <div className="flex items-center gap-2">
-                <Glasses className={`w-4 h-4 ${deviceCapabilities.webXR ? 'text-green-600' : 'text-red-600'}`} />
+                <Glasses
+                  className={`w-4 h-4 ${deviceCapabilities.webXR ? 'text-green-600' : 'text-red-600'}`}
+                />
                 <span className="text-sm font-medium">WebXR</span>
               </div>
-              <p className={`text-xs mt-1 ${deviceCapabilities.webXR ? 'text-green-600' : 'text-red-600'}`}>
+              <p
+                className={`text-xs mt-1 ${deviceCapabilities.webXR ? 'text-green-600' : 'text-red-600'}`}
+              >
                 {deviceCapabilities.webXR ? 'Supported' : 'Not Supported'}
               </p>
             </div>
-            <div className={`p-3 rounded-lg border ${deviceCapabilities.webAR ? 'bg-green-50 border-green-200' : 'bg-red-50 border-red-200'}`}>
+            <div
+              className={`p-3 rounded-lg border ${deviceCapabilities.webAR ? 'bg-green-50 border-green-200' : 'bg-red-50 border-red-200'}`}
+            >
               <div className="flex items-center gap-2">
-                <Smartphone className={`w-4 h-4 ${deviceCapabilities.webAR ? 'text-green-600' : 'text-red-600'}`} />
+                <Smartphone
+                  className={`w-4 h-4 ${deviceCapabilities.webAR ? 'text-green-600' : 'text-red-600'}`}
+                />
                 <span className="text-sm font-medium">WebAR</span>
               </div>
-              <p className={`text-xs mt-1 ${deviceCapabilities.webAR ? 'text-green-600' : 'text-red-600'}`}>
+              <p
+                className={`text-xs mt-1 ${deviceCapabilities.webAR ? 'text-green-600' : 'text-red-600'}`}
+              >
                 {deviceCapabilities.webAR ? 'Supported' : 'Not Supported'}
               </p>
             </div>
-            <div className={`p-3 rounded-lg border ${deviceCapabilities.camera ? 'bg-green-50 border-green-200' : 'bg-red-50 border-red-200'}`}>
+            <div
+              className={`p-3 rounded-lg border ${deviceCapabilities.camera ? 'bg-green-50 border-green-200' : 'bg-red-50 border-red-200'}`}
+            >
               <div className="flex items-center gap-2">
-                <Eye className={`w-4 h-4 ${deviceCapabilities.camera ? 'text-green-600' : 'text-red-600'}`} />
+                <Eye
+                  className={`w-4 h-4 ${deviceCapabilities.camera ? 'text-green-600' : 'text-red-600'}`}
+                />
                 <span className="text-sm font-medium">Camera</span>
               </div>
-              <p className={`text-xs mt-1 ${deviceCapabilities.camera ? 'text-green-600' : 'text-red-600'}`}>
+              <p
+                className={`text-xs mt-1 ${deviceCapabilities.camera ? 'text-green-600' : 'text-red-600'}`}
+              >
                 {deviceCapabilities.camera ? 'Available' : 'Blocked'}
               </p>
             </div>
@@ -540,7 +580,7 @@ const ARVRInfrastructure: React.FC = () => {
             { id: 'capabilities', label: 'Capabilities', icon: Settings },
             { id: 'setup', label: 'Setup Guide', icon: BookOpen },
             { id: 'preview', label: 'Preview', icon: Eye },
-            { id: 'settings', label: 'Settings', icon: Settings }
+            { id: 'settings', label: 'Settings', icon: Settings },
           ].map(({ id, label, icon: Icon }) => (
             <button
               key={id}
@@ -588,10 +628,14 @@ const ARVRInfrastructure: React.FC = () => {
                         </div>
                       </div>
                       <div className="flex items-center gap-2">
-                        <span className={`px-2 py-1 text-xs rounded-full ${getTypeColor(experience.type)}`}>
+                        <span
+                          className={`px-2 py-1 text-xs rounded-full ${getTypeColor(experience.type)}`}
+                        >
                           {experience.type.toUpperCase()}
                         </span>
-                        <span className={`px-2 py-1 text-xs rounded-full ${getDifficultyColor(experience.difficulty)}`}>
+                        <span
+                          className={`px-2 py-1 text-xs rounded-full ${getDifficultyColor(experience.difficulty)}`}
+                        >
                           {experience.difficulty}
                         </span>
                       </div>
@@ -611,7 +655,9 @@ const ARVRInfrastructure: React.FC = () => {
                         <div className="space-y-1">
                           {experience.interactions.slice(0, 3).map((interaction, index) => (
                             <div key={index} className="flex items-center gap-2">
-                              <div className={`w-2 h-2 rounded-full ${interaction.supported ? 'bg-green-500' : 'bg-red-500'}`} />
+                              <div
+                                className={`w-2 h-2 rounded-full ${interaction.supported ? 'bg-green-500' : 'bg-red-500'}`}
+                              />
                               <span className="text-xs text-gray-600">{interaction.type}</span>
                             </div>
                           ))}
@@ -632,8 +678,9 @@ const ARVRInfrastructure: React.FC = () => {
 
                     <div className="flex items-center justify-between">
                       <div className="text-sm text-gray-600">
-                        Duration: {experience.duration} minutes •
-                        Size: {experience.assets.reduce((sum, asset) => sum + asset.size, 0).toFixed(1)} MB
+                        Duration: {experience.duration} minutes • Size:{' '}
+                        {experience.assets.reduce((sum, asset) => sum + asset.size, 0).toFixed(1)}{' '}
+                        MB
                       </div>
                       <div className="flex items-center gap-2">
                         {downloadProgress.get(experience.id) === 100 ? (
@@ -656,19 +703,20 @@ const ARVRInfrastructure: React.FC = () => {
                           </button>
                         )}
 
-                        {downloadProgress.has(experience.id) && downloadProgress.get(experience.id)! < 100 && (
-                          <div className="flex items-center gap-2">
-                            <div className="w-24 bg-gray-200 rounded-full h-2">
-                              <div
-                                className="bg-blue-600 h-2 rounded-full transition-all duration-300"
-                                style={{ width: `${downloadProgress.get(experience.id)}%` }}
-                              />
+                        {downloadProgress.has(experience.id) &&
+                          downloadProgress.get(experience.id)! < 100 && (
+                            <div className="flex items-center gap-2">
+                              <div className="w-24 bg-gray-200 rounded-full h-2">
+                                <div
+                                  className="bg-blue-600 h-2 rounded-full transition-all duration-300"
+                                  style={{ width: `${downloadProgress.get(experience.id)}%` }}
+                                />
+                              </div>
+                              <span className="text-xs text-gray-600">
+                                {Math.round(downloadProgress.get(experience.id) || 0)}%
+                              </span>
                             </div>
-                            <span className="text-xs text-gray-600">
-                              {Math.round(downloadProgress.get(experience.id) || 0)}%
-                            </span>
-                          </div>
-                        )}
+                          )}
                       </div>
                     </div>
                   </motion.div>
@@ -695,21 +743,48 @@ const ARVRInfrastructure: React.FC = () => {
 
               <div className="space-y-4">
                 {[
-                  { name: 'Marker-based AR', supported: true, description: 'Track QR codes and markers' },
-                  { name: 'Markerless AR', supported: isARSupported, description: 'Track real-world surfaces' },
-                  { name: 'Face tracking', supported: deviceCapabilities?.camera || false, description: 'Track facial features' },
-                  { name: 'Hand tracking', supported: false, description: 'Advanced hand gesture recognition' },
-                  { name: 'Occlusion handling', supported: true, description: 'Objects hide behind real objects' }
+                  {
+                    name: 'Marker-based AR',
+                    supported: true,
+                    description: 'Track QR codes and markers',
+                  },
+                  {
+                    name: 'Markerless AR',
+                    supported: isARSupported,
+                    description: 'Track real-world surfaces',
+                  },
+                  {
+                    name: 'Face tracking',
+                    supported: deviceCapabilities?.camera || false,
+                    description: 'Track facial features',
+                  },
+                  {
+                    name: 'Hand tracking',
+                    supported: false,
+                    description: 'Advanced hand gesture recognition',
+                  },
+                  {
+                    name: 'Occlusion handling',
+                    supported: true,
+                    description: 'Objects hide behind real objects',
+                  },
                 ].map((capability, index) => (
-                  <div key={index} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                  <div
+                    key={index}
+                    className="flex items-center justify-between p-3 bg-gray-50 rounded-lg"
+                  >
                     <div>
                       <div className="flex items-center gap-2">
-                        <div className={`w-3 h-3 rounded-full ${capability.supported ? 'bg-green-500' : 'bg-red-500'}`} />
+                        <div
+                          className={`w-3 h-3 rounded-full ${capability.supported ? 'bg-green-500' : 'bg-red-500'}`}
+                        />
                         <span className="font-medium text-gray-800">{capability.name}</span>
                       </div>
                       <p className="text-sm text-gray-600 mt-1">{capability.description}</p>
                     </div>
-                    <span className={`text-xs px-2 py-1 rounded ${capability.supported ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
+                    <span
+                      className={`text-xs px-2 py-1 rounded ${capability.supported ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}
+                    >
                       {capability.supported ? 'Supported' : 'Not Supported'}
                     </span>
                   </div>
@@ -725,21 +800,44 @@ const ARVRInfrastructure: React.FC = () => {
 
               <div className="space-y-4">
                 {[
-                  { name: '6DOF Tracking', supported: isXRSupported, description: 'Full positional tracking' },
-                  { name: 'Room-scale VR', supported: isXRSupported, description: 'Move around in physical space' },
-                  { name: 'Controller input', supported: isXRSupported, description: 'VR controller support' },
-                  { name: 'Hand tracking', supported: false, description: 'Direct hand interaction' },
-                  { name: 'Eye tracking', supported: false, description: 'Gaze-based interaction' }
+                  {
+                    name: '6DOF Tracking',
+                    supported: isXRSupported,
+                    description: 'Full positional tracking',
+                  },
+                  {
+                    name: 'Room-scale VR',
+                    supported: isXRSupported,
+                    description: 'Move around in physical space',
+                  },
+                  {
+                    name: 'Controller input',
+                    supported: isXRSupported,
+                    description: 'VR controller support',
+                  },
+                  {
+                    name: 'Hand tracking',
+                    supported: false,
+                    description: 'Direct hand interaction',
+                  },
+                  { name: 'Eye tracking', supported: false, description: 'Gaze-based interaction' },
                 ].map((capability, index) => (
-                  <div key={index} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                  <div
+                    key={index}
+                    className="flex items-center justify-between p-3 bg-gray-50 rounded-lg"
+                  >
                     <div>
                       <div className="flex items-center gap-2">
-                        <div className={`w-3 h-3 rounded-full ${capability.supported ? 'bg-green-500' : 'bg-red-500'}`} />
+                        <div
+                          className={`w-3 h-3 rounded-full ${capability.supported ? 'bg-green-500' : 'bg-red-500'}`}
+                        />
                         <span className="font-medium text-gray-800">{capability.name}</span>
                       </div>
                       <p className="text-sm text-gray-600 mt-1">{capability.description}</p>
                     </div>
-                    <span className={`text-xs px-2 py-1 rounded ${capability.supported ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
+                    <span
+                      className={`text-xs px-2 py-1 rounded ${capability.supported ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}
+                    >
                       {capability.supported ? 'Supported' : 'Not Supported'}
                     </span>
                   </div>
@@ -799,7 +897,9 @@ const ARVRInfrastructure: React.FC = () => {
 
               <div className="space-y-6">
                 <div className="border-l-4 border-blue-500 pl-4">
-                  <h4 className="font-semibold text-gray-800 mb-2">Step 1: Check Browser Compatibility</h4>
+                  <h4 className="font-semibold text-gray-800 mb-2">
+                    Step 1: Check Browser Compatibility
+                  </h4>
                   <ul className="text-sm text-gray-600 space-y-1">
                     <li>• Use Chrome 79+ or Firefox 70+ for best WebXR support</li>
                     <li>• Enable WebXR flags in browser settings</li>
@@ -809,7 +909,9 @@ const ARVRInfrastructure: React.FC = () => {
                 </div>
 
                 <div className="border-l-4 border-green-500 pl-4">
-                  <h4 className="font-semibold text-gray-800 mb-2">Step 2: Prepare Your Environment</h4>
+                  <h4 className="font-semibold text-gray-800 mb-2">
+                    Step 2: Prepare Your Environment
+                  </h4>
                   <ul className="text-sm text-gray-600 space-y-1">
                     <li>• Ensure good lighting for AR experiences</li>
                     <li>• Clear physical space for VR (2m x 2m minimum)</li>
@@ -819,7 +921,9 @@ const ARVRInfrastructure: React.FC = () => {
                 </div>
 
                 <div className="border-l-4 border-purple-500 pl-4">
-                  <h4 className="font-semibold text-gray-800 mb-2">Step 3: Select Learning Experience</h4>
+                  <h4 className="font-semibold text-gray-800 mb-2">
+                    Step 3: Select Learning Experience
+                  </h4>
                   <ul className="text-sm text-gray-600 space-y-1">
                     <li>• Start with beginner-level experiences</li>
                     <li>• Download content for offline access</li>
@@ -846,21 +950,23 @@ const ARVRInfrastructure: React.FC = () => {
               <div className="space-y-4">
                 {[
                   {
-                    issue: "AR not detecting surfaces",
-                    solution: "Ensure good lighting, move device slowly, point at textured surfaces"
+                    issue: 'AR not detecting surfaces',
+                    solution:
+                      'Ensure good lighting, move device slowly, point at textured surfaces',
                   },
                   {
-                    issue: "VR tracking is jittery",
-                    solution: "Clean device sensors, ensure stable lighting, restart browser"
+                    issue: 'VR tracking is jittery',
+                    solution: 'Clean device sensors, ensure stable lighting, restart browser',
                   },
                   {
-                    issue: "Low performance/lag",
-                    solution: "Close other applications, reduce quality settings, check internet speed"
+                    issue: 'Low performance/lag',
+                    solution:
+                      'Close other applications, reduce quality settings, check internet speed',
                   },
                   {
-                    issue: "Content not loading",
-                    solution: "Check internet connection, clear browser cache, disable ad blockers"
-                  }
+                    issue: 'Content not loading',
+                    solution: 'Check internet connection, clear browser cache, disable ad blockers',
+                  },
                 ].map((item, index) => (
                   <div key={index} className="p-3 bg-gray-50 rounded-lg">
                     <h5 className="font-medium text-gray-800">{item.issue}</h5>

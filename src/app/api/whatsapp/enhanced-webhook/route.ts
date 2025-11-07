@@ -336,7 +336,7 @@ Examples:
   const aiResponse = await aiRouter.routeRequest(aiRequest)
 
   // Generate visuals if requested
-  let mediaUrls: string[] = []
+  const mediaUrls: string[] = []
   if (state.preferences.includeVisuals && aiRequest.requiresVisuals) {
     try {
       const visualResponse = await visualEngine.generateBiologyDiagram({

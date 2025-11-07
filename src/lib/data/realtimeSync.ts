@@ -348,8 +348,8 @@ export function useRealtimePerformanceMonitor() {
 
   useEffect(() => {
     const startTime = performance.now()
-    let updateCount = 0
-    let errorCount = 0
+    const updateCount = 0
+    const errorCount = 0
 
     const monitor = setInterval(() => {
       const currentTime = performance.now()

@@ -4,7 +4,16 @@
  */
 
 export interface SecurityEvent {
-  type: 'tab_switch' | 'window_blur' | 'fullscreen_exit' | 'context_menu' | 'devtools' | 'copy_paste' | 'screenshot' | 'zoom_change' | 'window_resize'
+  type:
+    | 'tab_switch'
+    | 'window_blur'
+    | 'fullscreen_exit'
+    | 'context_menu'
+    | 'devtools'
+    | 'copy_paste'
+    | 'screenshot'
+    | 'zoom_change'
+    | 'window_resize'
   timestamp: number
   severity: 'low' | 'medium' | 'high' | 'critical'
   details: any
@@ -63,7 +72,7 @@ export class BrowserSecurityManager {
       allowWindowResize: false,
       autoTerminateOnViolation: false,
       warningThreshold: 5,
-      ...config
+      ...config,
     }
   }
 
@@ -105,7 +114,7 @@ export class BrowserSecurityManager {
       if (document.hidden) {
         this.recordViolation('tab_switch', 'high', {
           action: 'tab_switched_away',
-          visibilityState: document.visibilityState
+          visibilityState: document.visibilityState,
         })
       }
     }
@@ -114,7 +123,7 @@ export class BrowserSecurityManager {
     // Window blur detection
     const blurHandler = () => {
       this.recordViolation('window_blur', 'medium', {
-        action: 'window_lost_focus'
+        action: 'window_lost_focus',
       })
     }
     window.addEventListener('blur', blurHandler)
@@ -125,19 +134,33 @@ export class BrowserSecurityManager {
       const forbiddenKeys = [
         'F12', // Dev tools
         'PrintScreen', // Screenshots
-        'Insert' // Screenshots on some systems
+        'Insert', // Screenshots on some systems
       ]
 
       // Prevent Ctrl+combinations
       if (event.ctrlKey || event.metaKey) {
-        const forbiddenCombos = ['c', 'v', 'x', 'a', 's', 'z', 'y', 'f', 'h', 'r', 'shift+i', 'shift+j', 'shift+c']
+        const forbiddenCombos = [
+          'c',
+          'v',
+          'x',
+          'a',
+          's',
+          'z',
+          'y',
+          'f',
+          'h',
+          'r',
+          'shift+i',
+          'shift+j',
+          'shift+c',
+        ]
         const key = event.shiftKey ? `shift+${event.key.toLowerCase()}` : event.key.toLowerCase()
 
         if (forbiddenCombos.includes(key) || !this.config.allowCopyPaste) {
           event.preventDefault()
           this.recordViolation('copy_paste', 'medium', {
             action: 'forbidden_keyboard_combo',
-            keys: key
+            keys: key,
           })
           return false
         }
@@ -148,7 +171,7 @@ export class BrowserSecurityManager {
         event.preventDefault()
         this.recordViolation('devtools', 'high', {
           action: 'forbidden_key_pressed',
-          key: event.key
+          key: event.key,
         })
         return false
       }
@@ -157,7 +180,7 @@ export class BrowserSecurityManager {
       if (event.altKey && event.key === 'Tab') {
         event.preventDefault()
         this.recordViolation('tab_switch', 'high', {
-          action: 'alt_tab_detected'
+          action: 'alt_tab_detected',
         })
         return false
       }
@@ -171,7 +194,7 @@ export class BrowserSecurityManager {
         event.preventDefault()
         this.recordViolation('context_menu', 'low', {
           action: 'right_click_attempted',
-          coordinates: { x: event.clientX, y: event.clientY }
+          coordinates: { x: event.clientX, y: event.clientY },
         })
         return false
       }
@@ -183,7 +206,7 @@ export class BrowserSecurityManager {
     this.fullscreenHandler = () => {
       if (!document.fullscreenElement && this.config.enforceFullscreen) {
         this.recordViolation('fullscreen_exit', 'critical', {
-          action: 'fullscreen_exited'
+          action: 'fullscreen_exited',
         })
 
         // Re-enforce fullscreen after a short delay
@@ -203,8 +226,8 @@ export class BrowserSecurityManager {
           action: 'window_resized',
           dimensions: {
             width: window.innerWidth,
-            height: window.innerHeight
-          }
+            height: window.innerHeight,
+          },
         })
       }
     }
@@ -261,7 +284,7 @@ export class BrowserSecurityManager {
       console.warn('Failed to enter fullscreen:', error)
       this.recordViolation('fullscreen_exit', 'high', {
         action: 'fullscreen_enforcement_failed',
-        error: error instanceof Error ? error.message : 'Unknown error'
+        error: error instanceof Error ? error.message : 'Unknown error',
       })
     }
   }
@@ -289,13 +312,15 @@ export class BrowserSecurityManager {
       const threshold = 160
 
       setInterval(() => {
-        if (window.outerHeight - window.innerHeight > threshold ||
-            window.outerWidth - window.innerWidth > threshold) {
+        if (
+          window.outerHeight - window.innerHeight > threshold ||
+          window.outerWidth - window.innerWidth > threshold
+        ) {
           if (!devtools) {
             devtools = true
             this.recordViolation('devtools', 'critical', {
               action: 'devtools_detected',
-              method: 'window_size_difference'
+              method: 'window_size_difference',
             })
           }
         } else {
@@ -304,14 +329,14 @@ export class BrowserSecurityManager {
       }, 500)
 
       // Console detection
-      let element = new Image()
+      const element = new Image()
       Object.defineProperty(element, 'id', {
         get: () => {
           this.recordViolation('devtools', 'critical', {
             action: 'console_accessed',
-            method: 'image_element_id'
+            method: 'image_element_id',
           })
-        }
+        },
       })
       console.log(element)
     }
@@ -329,7 +354,7 @@ export class BrowserSecurityManager {
       if (endTime - startTime > 100) {
         this.recordViolation('devtools', 'critical', {
           action: 'debugger_detected',
-          timeDifference: endTime - startTime
+          timeDifference: endTime - startTime,
         })
       }
     }
@@ -382,7 +407,7 @@ export class BrowserSecurityManager {
       document.addEventListener('keyup', (event) => {
         if (event.key === 'PrintScreen') {
           this.recordViolation('screenshot', 'high', {
-            action: 'printscreen_detected'
+            action: 'printscreen_detected',
           })
         }
       })
@@ -403,7 +428,7 @@ export class BrowserSecurityManager {
           this.recordViolation('zoom_change', 'medium', {
             action: 'zoom_violation',
             currentZoom,
-            allowedRange: [this.config.minZoomLevel, this.config.maxZoomLevel]
+            allowedRange: [this.config.minZoomLevel, this.config.maxZoomLevel],
           })
         }
         lastZoom = currentZoom
@@ -427,7 +452,7 @@ export class BrowserSecurityManager {
       details,
       timestamp: Date.now(),
       sessionId: this.sessionId,
-      userId: this.userId
+      userId: this.userId,
     }
 
     this.violations.push(event)
@@ -455,7 +480,7 @@ export class BrowserSecurityManager {
 
     // Force submit current answers
     const event = new CustomEvent('forceTestSubmission', {
-      detail: { reason, violations: this.violations }
+      detail: { reason, violations: this.violations },
     })
     window.dispatchEvent(event)
 
@@ -472,7 +497,7 @@ export class BrowserSecurityManager {
       violationCount: this.violations.length,
       violations: this.violations,
       lastViolation: this.violations[this.violations.length - 1] || null,
-      riskLevel: this.calculateRiskLevel()
+      riskLevel: this.calculateRiskLevel(),
     }
   }
 
@@ -493,13 +518,16 @@ export class BrowserSecurityManager {
    * Generate security report
    */
   generateSecurityReport() {
-    const groupedViolations = this.violations.reduce((acc, violation) => {
-      if (!acc[violation.type]) {
-        acc[violation.type] = []
-      }
-      acc[violation.type].push(violation)
-      return acc
-    }, {} as Record<string, SecurityEvent[]>)
+    const groupedViolations = this.violations.reduce(
+      (acc, violation) => {
+        if (!acc[violation.type]) {
+          acc[violation.type] = []
+        }
+        acc[violation.type].push(violation)
+        return acc
+      },
+      {} as Record<string, SecurityEvent[]>
+    )
 
     return {
       sessionId: this.sessionId,
@@ -509,18 +537,21 @@ export class BrowserSecurityManager {
       violationsByType: Object.entries(groupedViolations).map(([type, events]) => ({
         type,
         count: events.length,
-        lastOccurrence: Math.max(...events.map(e => e.timestamp)),
-        severity: events.reduce((max, e) => {
-          const levels = { low: 1, medium: 2, high: 3, critical: 4 }
-          return levels[e.severity] > levels[max] ? e.severity : max
-        }, 'low' as SecurityEvent['severity'])
+        lastOccurrence: Math.max(...events.map((e) => e.timestamp)),
+        severity: events.reduce(
+          (max, e) => {
+            const levels = { low: 1, medium: 2, high: 3, critical: 4 }
+            return levels[e.severity] > levels[max] ? e.severity : max
+          },
+          'low' as SecurityEvent['severity']
+        ),
       })),
-      timeline: this.violations.map(v => ({
+      timeline: this.violations.map((v) => ({
         timestamp: v.timestamp,
         type: v.type,
-        severity: v.severity
+        severity: v.severity,
       })),
-      recommendations: this.generateRecommendations()
+      recommendations: this.generateRecommendations(),
     }
   }
 
@@ -529,7 +560,7 @@ export class BrowserSecurityManager {
    */
   private generateRecommendations(): string[] {
     const recommendations: string[] = []
-    const violationTypes = [...new Set(this.violations.map(v => v.type))]
+    const violationTypes = [...new Set(this.violations.map((v) => v.type))]
 
     if (violationTypes.includes('tab_switch')) {
       recommendations.push('Implement stricter tab monitoring with immediate test termination')
@@ -567,17 +598,14 @@ export class BrowserFingerprinting {
       !!window.localStorage,
       !!window.indexedDB,
       navigator.hardwareConcurrency || 0,
-      navigator.maxTouchPoints || 0
+      navigator.maxTouchPoints || 0,
     ]
 
     // Add WebGL fingerprint if available
     const canvas = document.createElement('canvas')
     const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl')
     if (gl) {
-      components.push(
-        gl.getParameter(gl.RENDERER) || '',
-        gl.getParameter(gl.VENDOR) || ''
-      )
+      components.push(gl.getParameter(gl.RENDERER) || '', gl.getParameter(gl.VENDOR) || '')
     }
 
     // Add audio context fingerprint
@@ -599,7 +627,7 @@ export class BrowserFingerprinting {
     const data = encoder.encode(fingerprint)
     const hashBuffer = await crypto.subtle.digest('SHA-256', data)
     const hashArray = Array.from(new Uint8Array(hashBuffer))
-    return hashArray.map(b => b.toString(16).padStart(2, '0')).join('')
+    return hashArray.map((b) => b.toString(16).padStart(2, '0')).join('')
   }
 
   static async validateFingerprint(sessionFingerprint: string): Promise<boolean> {

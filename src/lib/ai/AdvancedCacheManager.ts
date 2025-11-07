@@ -605,7 +605,7 @@ export class AdvancedCacheManager {
 
     // Quality distribution
     const qualityBuckets = { low: 0, medium: 0, high: 0 }
-    let providerCounts: Record<string, number> = {}
+    const providerCounts: Record<string, number> = {}
 
     for (const entry of this.cache.values()) {
       if (this.isExpired(entry)) continue

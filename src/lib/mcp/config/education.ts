@@ -248,9 +248,9 @@ export class BiologyConfig {
     motivation: MotivationTechnique[]
   } {
     const factors = this.config.adaptiveLearning.personalizeationFactors
-    let recommendedStudyTime = 240 // Default 4 hours
+    const recommendedStudyTime = 240 // Default 4 hours
     const focusAreas: string[] = []
-    let learningStyle = 'visual' // Default
+    const learningStyle = 'visual' // Default
 
     // Analyze personalization factors
     factors.forEach((factor) => {

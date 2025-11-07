@@ -97,7 +97,7 @@ export function MobileChatInterface({
       const reader = response.body?.getReader()
       const decoder = new TextDecoder()
 
-      let assistantMessage: Message = {
+      const assistantMessage: Message = {
         id: (Date.now() + 1).toString(),
         role: 'assistant',
         content: '',

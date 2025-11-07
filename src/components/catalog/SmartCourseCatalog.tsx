@@ -88,7 +88,7 @@ export function SmartCourseCatalog() {
   const [expandedFilters, setExpandedFilters] = useState(false)
 
   const filteredAndSortedCourses = useMemo(() => {
-    let filtered = courses.filter((course) => {
+    const filtered = courses.filter((course) => {
       // Search query filter
       if (filters.searchQuery) {
         const query = filters.searchQuery.toLowerCase()

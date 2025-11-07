@@ -476,7 +476,7 @@ export class UserService {
     try {
       const now = new Date()
       let periodStart: Date
-      let periodEnd: Date = now
+      const periodEnd: Date = now
       let reportPeriod: string
 
       // Calculate period based on report type

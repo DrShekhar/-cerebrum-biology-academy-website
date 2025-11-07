@@ -40,7 +40,7 @@ import {
   RefreshCw,
   CheckCircle2,
   AlertCircle,
-  Info
+  Info,
 } from 'lucide-react'
 
 interface NEETTemplate {
@@ -122,7 +122,7 @@ interface EnhancedTemplateManagerProps {
 const EnhancedTemplateManager: React.FC<EnhancedTemplateManagerProps> = ({
   onTemplateSelect,
   onTemplateCreate,
-  currentTemplate
+  currentTemplate,
 }) => {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
   const [showFilters, setShowFilters] = useState(false)
@@ -142,7 +142,7 @@ const EnhancedTemplateManager: React.FC<EnhancedTemplateManagerProps> = ({
     searchQuery: '',
     showFavoritesOnly: false,
     sortBy: 'rating',
-    sortOrder: 'desc'
+    sortOrder: 'desc',
   })
 
   // Mock NEET templates data (in real app, this would come from API)
@@ -150,7 +150,8 @@ const EnhancedTemplateManager: React.FC<EnhancedTemplateManagerProps> = ({
     {
       id: 'neet_cell_biology_comprehensive',
       name: 'NEET Cell Biology Comprehensive Test',
-      description: 'Complete assessment of cell structure, organelles, and cellular processes for NEET preparation',
+      description:
+        'Complete assessment of cell structure, organelles, and cellular processes for NEET preparation',
       category: 'chapter',
       subject: 'biology',
       class: '11',
@@ -160,7 +161,11 @@ const EnhancedTemplateManager: React.FC<EnhancedTemplateManagerProps> = ({
       totalMarks: 200,
       syllabus: ['Cell: The Unit of Life', 'Biomolecules', 'Cell Cycle and Division'],
       topics: ['Cell Structure', 'Cell Organelles', 'Cell Division', 'Biomolecules'],
-      chapters: ['Chapter 8: Cell - The Unit of Life', 'Chapter 9: Biomolecules', 'Chapter 10: Cell Cycle and Division'],
+      chapters: [
+        'Chapter 8: Cell - The Unit of Life',
+        'Chapter 9: Biomolecules',
+        'Chapter 10: Cell Cycle and Division',
+      ],
       questionDistribution: { mcq: 40, assertion: 5, numerical: 3, matching: 2 },
       difficultyDistribution: { easy: 30, medium: 50, hard: 20 },
       markingScheme: { correct: 4, incorrect: -1, unattempted: 0 },
@@ -173,15 +178,29 @@ const EnhancedTemplateManager: React.FC<EnhancedTemplateManagerProps> = ({
       createdBy: 'NEET Biology Expert',
       createdAt: new Date('2024-01-15'),
       lastUsed: new Date('2024-09-28'),
-      features: ['Previous year questions', 'NCERT based', 'Detailed explanations', 'Time tracking'],
+      features: [
+        'Previous year questions',
+        'NCERT based',
+        'Detailed explanations',
+        'Time tracking',
+      ],
       prerequisites: ['Basic chemistry knowledge', 'Understanding of atomic structure'],
-      learningOutcomes: ['Master cell organelle functions', 'Understand cellular processes', 'Apply knowledge to NEET questions'],
-      instructions: ['Read each question carefully', 'Manage time effectively', 'Review marked questions']
+      learningOutcomes: [
+        'Master cell organelle functions',
+        'Understand cellular processes',
+        'Apply knowledge to NEET questions',
+      ],
+      instructions: [
+        'Read each question carefully',
+        'Manage time effectively',
+        'Review marked questions',
+      ],
     },
     {
       id: 'neet_genetics_heredity_advanced',
       name: 'Genetics & Heredity - Advanced NEET Mock',
-      description: 'High-difficulty mock test focusing on genetics, inheritance patterns, and molecular genetics',
+      description:
+        'High-difficulty mock test focusing on genetics, inheritance patterns, and molecular genetics',
       category: 'mock',
       subject: 'biology',
       class: '12',
@@ -191,7 +210,10 @@ const EnhancedTemplateManager: React.FC<EnhancedTemplateManagerProps> = ({
       totalMarks: 140,
       syllabus: ['Principles of Inheritance', 'Molecular Basis of Inheritance'],
       topics: ['Mendelian Genetics', 'Genetic Disorders', 'DNA Replication', 'Gene Expression'],
-      chapters: ['Chapter 5: Principles of Inheritance', 'Chapter 6: Molecular Basis of Inheritance'],
+      chapters: [
+        'Chapter 5: Principles of Inheritance',
+        'Chapter 6: Molecular Basis of Inheritance',
+      ],
       questionDistribution: { mcq: 28, assertion: 4, numerical: 2, matching: 1 },
       difficultyDistribution: { easy: 15, medium: 45, hard: 40 },
       markingScheme: { correct: 4, incorrect: -1, unattempted: 0 },
@@ -206,13 +228,22 @@ const EnhancedTemplateManager: React.FC<EnhancedTemplateManagerProps> = ({
       lastUsed: new Date('2024-09-27'),
       features: ['NEET pattern', 'Challenging questions', 'Genetic diagrams', 'Problem solving'],
       prerequisites: ['Basic genetics concepts', 'Understanding of DNA structure'],
-      learningOutcomes: ['Solve complex genetic problems', 'Understand inheritance patterns', 'Master molecular genetics'],
-      instructions: ['Focus on genetic cross calculations', 'Draw Punnett squares', 'Analyze pedigree charts']
+      learningOutcomes: [
+        'Solve complex genetic problems',
+        'Understand inheritance patterns',
+        'Master molecular genetics',
+      ],
+      instructions: [
+        'Focus on genetic cross calculations',
+        'Draw Punnett squares',
+        'Analyze pedigree charts',
+      ],
     },
     {
       id: 'neet_human_physiology_quick',
       name: 'Human Physiology Quick Revision',
-      description: 'Rapid revision test covering major human body systems for last-minute preparation',
+      description:
+        'Rapid revision test covering major human body systems for last-minute preparation',
       category: 'revision',
       subject: 'biology',
       class: '12',
@@ -222,7 +253,10 @@ const EnhancedTemplateManager: React.FC<EnhancedTemplateManagerProps> = ({
       totalMarks: 100,
       syllabus: ['Human Physiology'],
       topics: ['Circulatory System', 'Respiratory System', 'Digestive System', 'Nervous System'],
-      chapters: ['Chapter 17: Breathing and Exchange of Gases', 'Chapter 18: Body Fluids and Circulation'],
+      chapters: [
+        'Chapter 17: Breathing and Exchange of Gases',
+        'Chapter 18: Body Fluids and Circulation',
+      ],
       questionDistribution: { mcq: 20, assertion: 3, numerical: 1, matching: 1 },
       difficultyDistribution: { easy: 40, medium: 50, hard: 10 },
       markingScheme: { correct: 4, incorrect: -1, unattempted: 0 },
@@ -237,13 +271,18 @@ const EnhancedTemplateManager: React.FC<EnhancedTemplateManagerProps> = ({
       lastUsed: new Date('2024-09-29'),
       features: ['Quick assessment', 'System-wise coverage', 'Key concepts', 'Memory aids'],
       prerequisites: ['Basic anatomy knowledge', 'Understanding of body systems'],
-      learningOutcomes: ['Recall physiological processes', 'Understand system integration', 'Quick concept review'],
-      instructions: ['Focus on key functions', 'Remember important values', 'Quick recall test']
+      learningOutcomes: [
+        'Recall physiological processes',
+        'Understand system integration',
+        'Quick concept review',
+      ],
+      instructions: ['Focus on key functions', 'Remember important values', 'Quick recall test'],
     },
     {
       id: 'neet_plant_kingdom_diagnostic',
       name: 'Plant Kingdom Diagnostic Assessment',
-      description: 'Diagnostic test to identify knowledge gaps in plant classification and characteristics',
+      description:
+        'Diagnostic test to identify knowledge gaps in plant classification and characteristics',
       category: 'diagnostic',
       subject: 'biology',
       class: '11',
@@ -252,7 +291,14 @@ const EnhancedTemplateManager: React.FC<EnhancedTemplateManagerProps> = ({
       totalQuestions: 30,
       totalMarks: 120,
       syllabus: ['Plant Kingdom'],
-      topics: ['Plant Classification', 'Algae', 'Bryophytes', 'Pteridophytes', 'Gymnosperms', 'Angiosperms'],
+      topics: [
+        'Plant Classification',
+        'Algae',
+        'Bryophytes',
+        'Pteridophytes',
+        'Gymnosperms',
+        'Angiosperms',
+      ],
       chapters: ['Chapter 3: Plant Kingdom'],
       questionDistribution: { mcq: 24, assertion: 3, numerical: 1, matching: 2 },
       difficultyDistribution: { easy: 35, medium: 45, hard: 20 },
@@ -266,15 +312,25 @@ const EnhancedTemplateManager: React.FC<EnhancedTemplateManagerProps> = ({
       createdBy: 'Botany Specialist',
       createdAt: new Date('2024-01-20'),
       lastUsed: new Date('2024-09-25'),
-      features: ['Diagnostic analysis', 'Knowledge gap identification', 'Adaptive questions', 'Performance insights'],
+      features: [
+        'Diagnostic analysis',
+        'Knowledge gap identification',
+        'Adaptive questions',
+        'Performance insights',
+      ],
       prerequisites: ['Basic biology concepts', 'Understanding of classification'],
-      learningOutcomes: ['Identify weak areas', 'Understand plant diversity', 'Master classification systems'],
-      instructions: ['Answer all questions', 'Honest assessment', 'Review weak areas']
+      learningOutcomes: [
+        'Identify weak areas',
+        'Understand plant diversity',
+        'Master classification systems',
+      ],
+      instructions: ['Answer all questions', 'Honest assessment', 'Review weak areas'],
     },
     {
       id: 'neet_ecology_environment_practice',
       name: 'Ecology & Environment Practice Set',
-      description: 'Practice questions on ecological principles, environmental issues, and conservation',
+      description:
+        'Practice questions on ecological principles, environmental issues, and conservation',
       category: 'practice',
       subject: 'biology',
       class: '12',
@@ -284,7 +340,11 @@ const EnhancedTemplateManager: React.FC<EnhancedTemplateManagerProps> = ({
       totalMarks: 160,
       syllabus: ['Ecology and Environment'],
       topics: ['Ecosystem', 'Biodiversity', 'Environmental Issues', 'Conservation'],
-      chapters: ['Chapter 13: Organisms and Populations', 'Chapter 14: Ecosystem', 'Chapter 15: Biodiversity'],
+      chapters: [
+        'Chapter 13: Organisms and Populations',
+        'Chapter 14: Ecosystem',
+        'Chapter 15: Biodiversity',
+      ],
       questionDistribution: { mcq: 32, assertion: 4, numerical: 2, matching: 2 },
       difficultyDistribution: { easy: 25, medium: 55, hard: 20 },
       markingScheme: { correct: 4, incorrect: -1, unattempted: 0 },
@@ -297,11 +357,24 @@ const EnhancedTemplateManager: React.FC<EnhancedTemplateManagerProps> = ({
       createdBy: 'Ecology Expert',
       createdAt: new Date('2024-04-12'),
       lastUsed: new Date('2024-09-20'),
-      features: ['Current environmental issues', 'Real-world applications', 'Case studies', 'Conservation focus'],
+      features: [
+        'Current environmental issues',
+        'Real-world applications',
+        'Case studies',
+        'Conservation focus',
+      ],
       prerequisites: ['Basic ecological concepts', 'Awareness of environmental issues'],
-      learningOutcomes: ['Understand ecological relationships', 'Analyze environmental problems', 'Apply conservation principles'],
-      instructions: ['Consider real-world examples', 'Think about conservation strategies', 'Link theory to practice']
-    }
+      learningOutcomes: [
+        'Understand ecological relationships',
+        'Analyze environmental problems',
+        'Apply conservation principles',
+      ],
+      instructions: [
+        'Consider real-world examples',
+        'Think about conservation strategies',
+        'Link theory to practice',
+      ],
+    },
   ])
 
   const templateCategories: TemplateCategory[] = [
@@ -311,7 +384,7 @@ const EnhancedTemplateManager: React.FC<EnhancedTemplateManagerProps> = ({
       description: 'Focused tests for individual chapters',
       icon: <BookOpen className="w-5 h-5" />,
       color: 'from-blue-500 to-cyan-500',
-      count: templates.filter(t => t.category === 'chapter').length
+      count: templates.filter((t) => t.category === 'chapter').length,
     },
     {
       id: 'mock',
@@ -319,7 +392,7 @@ const EnhancedTemplateManager: React.FC<EnhancedTemplateManagerProps> = ({
       description: 'Full-length NEET simulation tests',
       icon: <Target className="w-5 h-5" />,
       color: 'from-green-500 to-emerald-500',
-      count: templates.filter(t => t.category === 'mock').length
+      count: templates.filter((t) => t.category === 'mock').length,
     },
     {
       id: 'practice',
@@ -327,7 +400,7 @@ const EnhancedTemplateManager: React.FC<EnhancedTemplateManagerProps> = ({
       description: 'Topic-wise practice questions',
       icon: <Zap className="w-5 h-5" />,
       color: 'from-yellow-500 to-orange-500',
-      count: templates.filter(t => t.category === 'practice').length
+      count: templates.filter((t) => t.category === 'practice').length,
     },
     {
       id: 'revision',
@@ -335,7 +408,7 @@ const EnhancedTemplateManager: React.FC<EnhancedTemplateManagerProps> = ({
       description: 'Quick revision and recall tests',
       icon: <RefreshCw className="w-5 h-5" />,
       color: 'from-purple-500 to-pink-500',
-      count: templates.filter(t => t.category === 'revision').length
+      count: templates.filter((t) => t.category === 'revision').length,
     },
     {
       id: 'diagnostic',
@@ -343,19 +416,21 @@ const EnhancedTemplateManager: React.FC<EnhancedTemplateManagerProps> = ({
       description: 'Identify knowledge gaps',
       icon: <Search className="w-5 h-5" />,
       color: 'from-red-500 to-rose-500',
-      count: templates.filter(t => t.category === 'diagnostic').length
-    }
+      count: templates.filter((t) => t.category === 'diagnostic').length,
+    },
   ]
 
   // Filter and sort templates
   const filteredAndSortedTemplates = useMemo(() => {
-    let filtered = templates.filter(template => {
+    const filtered = templates.filter((template) => {
       // Search query
       if (filters.searchQuery) {
         const query = filters.searchQuery.toLowerCase()
-        if (!template.name.toLowerCase().includes(query) &&
-            !template.description.toLowerCase().includes(query) &&
-            !template.tags.some(tag => tag.toLowerCase().includes(query))) {
+        if (
+          !template.name.toLowerCase().includes(query) &&
+          !template.description.toLowerCase().includes(query) &&
+          !template.tags.some((tag) => tag.toLowerCase().includes(query))
+        ) {
           return false
         }
       }
@@ -366,7 +441,11 @@ const EnhancedTemplateManager: React.FC<EnhancedTemplateManagerProps> = ({
       }
 
       // Class filter
-      if (filters.class.length > 0 && !filters.class.includes(template.class) && !filters.class.includes('both')) {
+      if (
+        filters.class.length > 0 &&
+        !filters.class.includes(template.class) &&
+        !filters.class.includes('both')
+      ) {
         return false
       }
 
@@ -381,7 +460,10 @@ const EnhancedTemplateManager: React.FC<EnhancedTemplateManagerProps> = ({
       }
 
       // Question count filter
-      if (template.totalQuestions < filters.questionCount[0] || template.totalQuestions > filters.questionCount[1]) {
+      if (
+        template.totalQuestions < filters.questionCount[0] ||
+        template.totalQuestions > filters.questionCount[1]
+      ) {
         return false
       }
 
@@ -391,7 +473,10 @@ const EnhancedTemplateManager: React.FC<EnhancedTemplateManagerProps> = ({
       }
 
       // Topics filter
-      if (filters.topics.length > 0 && !filters.topics.some(topic => template.topics.includes(topic))) {
+      if (
+        filters.topics.length > 0 &&
+        !filters.topics.some((topic) => template.topics.includes(topic))
+      ) {
         return false
       }
 
@@ -421,7 +506,7 @@ const EnhancedTemplateManager: React.FC<EnhancedTemplateManagerProps> = ({
           comparison = new Date(a.lastUsed).getTime() - new Date(b.lastUsed).getTime()
           break
         case 'difficulty':
-          const difficultyOrder = { 'easy': 1, 'medium': 2, 'hard': 3, 'mixed': 4 }
+          const difficultyOrder = { easy: 1, medium: 2, hard: 3, mixed: 4 }
           comparison = difficultyOrder[a.difficulty] - difficultyOrder[b.difficulty]
           break
         default:
@@ -441,16 +526,21 @@ const EnhancedTemplateManager: React.FC<EnhancedTemplateManagerProps> = ({
 
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
-      case 'easy': return 'bg-green-100 text-green-700 border-green-200'
-      case 'medium': return 'bg-yellow-100 text-yellow-700 border-yellow-200'
-      case 'hard': return 'bg-red-100 text-red-700 border-red-200'
-      case 'mixed': return 'bg-purple-100 text-purple-700 border-purple-200'
-      default: return 'bg-gray-100 text-gray-700 border-gray-200'
+      case 'easy':
+        return 'bg-green-100 text-green-700 border-green-200'
+      case 'medium':
+        return 'bg-yellow-100 text-yellow-700 border-yellow-200'
+      case 'hard':
+        return 'bg-red-100 text-red-700 border-red-200'
+      case 'mixed':
+        return 'bg-purple-100 text-purple-700 border-purple-200'
+      default:
+        return 'bg-gray-100 text-gray-700 border-gray-200'
     }
   }
 
   const getCategoryIcon = (category: string) => {
-    const categoryData = templateCategories.find(c => c.id === category)
+    const categoryData = templateCategories.find((c) => c.id === category)
     return categoryData?.icon || <FileText className="w-4 h-4" />
   }
 
@@ -472,7 +562,8 @@ const EnhancedTemplateManager: React.FC<EnhancedTemplateManagerProps> = ({
               NEET Biology Template Library
             </h3>
             <p className="text-gray-600 mt-2">
-              Professional test templates designed by NEET experts for comprehensive biology preparation
+              Professional test templates designed by NEET experts for comprehensive biology
+              preparation
             </p>
           </div>
 
@@ -518,8 +609,11 @@ const EnhancedTemplateManager: React.FC<EnhancedTemplateManagerProps> = ({
 
         {/* Quick Stats */}
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-          {templateCategories.map(category => (
-            <div key={category.id} className={`bg-gradient-to-r ${category.color} rounded-lg p-4 text-white`}>
+          {templateCategories.map((category) => (
+            <div
+              key={category.id}
+              className={`bg-gradient-to-r ${category.color} rounded-lg p-4 text-white`}
+            >
               <div className="flex items-center gap-3">
                 {category.icon}
                 <div>
@@ -542,7 +636,7 @@ const EnhancedTemplateManager: React.FC<EnhancedTemplateManagerProps> = ({
                 type="text"
                 placeholder="Search templates by name, description, or tags..."
                 value={filters.searchQuery}
-                onChange={(e) => setFilters(prev => ({ ...prev, searchQuery: e.target.value }))}
+                onChange={(e) => setFilters((prev) => ({ ...prev, searchQuery: e.target.value }))}
                 className="w-full pl-10 pr-4 py-3 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
               />
             </div>
@@ -550,7 +644,7 @@ const EnhancedTemplateManager: React.FC<EnhancedTemplateManagerProps> = ({
             <div className="flex items-center gap-2">
               <select
                 value={filters.sortBy}
-                onChange={(e) => setFilters(prev => ({ ...prev, sortBy: e.target.value as any }))}
+                onChange={(e) => setFilters((prev) => ({ ...prev, sortBy: e.target.value as any }))}
                 className="px-3 py-3 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
               >
                 <option value="rating">Sort by Rating</option>
@@ -561,16 +655,29 @@ const EnhancedTemplateManager: React.FC<EnhancedTemplateManagerProps> = ({
               </select>
 
               <button
-                onClick={() => setFilters(prev => ({ ...prev, sortOrder: prev.sortOrder === 'asc' ? 'desc' : 'asc' }))}
+                onClick={() =>
+                  setFilters((prev) => ({
+                    ...prev,
+                    sortOrder: prev.sortOrder === 'asc' ? 'desc' : 'asc',
+                  }))
+                }
                 className="p-3 border rounded-lg hover:bg-gray-50 transition-colors"
               >
-                {filters.sortOrder === 'asc' ? <ArrowUp className="w-4 h-4" /> : <ArrowDown className="w-4 h-4" />}
+                {filters.sortOrder === 'asc' ? (
+                  <ArrowUp className="w-4 h-4" />
+                ) : (
+                  <ArrowDown className="w-4 h-4" />
+                )}
               </button>
 
               <button
-                onClick={() => setFilters(prev => ({ ...prev, showFavoritesOnly: !prev.showFavoritesOnly }))}
+                onClick={() =>
+                  setFilters((prev) => ({ ...prev, showFavoritesOnly: !prev.showFavoritesOnly }))
+                }
                 className={`p-3 border rounded-lg transition-colors ${
-                  filters.showFavoritesOnly ? 'bg-yellow-50 border-yellow-300 text-yellow-700' : 'hover:bg-gray-50'
+                  filters.showFavoritesOnly
+                    ? 'bg-yellow-50 border-yellow-300 text-yellow-700'
+                    : 'hover:bg-gray-50'
                 }`}
               >
                 <Star className="w-4 h-4" />
@@ -594,16 +701,22 @@ const EnhancedTemplateManager: React.FC<EnhancedTemplateManagerProps> = ({
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Category</label>
                     <div className="space-y-1">
-                      {templateCategories.map(category => (
+                      {templateCategories.map((category) => (
                         <label key={category.id} className="flex items-center gap-2 text-sm">
                           <input
                             type="checkbox"
                             checked={filters.category.includes(category.id)}
                             onChange={(e) => {
                               if (e.target.checked) {
-                                setFilters(prev => ({ ...prev, category: [...prev.category, category.id] }))
+                                setFilters((prev) => ({
+                                  ...prev,
+                                  category: [...prev.category, category.id],
+                                }))
                               } else {
-                                setFilters(prev => ({ ...prev, category: prev.category.filter(c => c !== category.id) }))
+                                setFilters((prev) => ({
+                                  ...prev,
+                                  category: prev.category.filter((c) => c !== category.id),
+                                }))
                               }
                             }}
                             className="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
@@ -618,16 +731,22 @@ const EnhancedTemplateManager: React.FC<EnhancedTemplateManagerProps> = ({
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Class</label>
                     <div className="space-y-1">
-                      {['11', '12', 'both'].map(classLevel => (
+                      {['11', '12', 'both'].map((classLevel) => (
                         <label key={classLevel} className="flex items-center gap-2 text-sm">
                           <input
                             type="checkbox"
                             checked={filters.class.includes(classLevel)}
                             onChange={(e) => {
                               if (e.target.checked) {
-                                setFilters(prev => ({ ...prev, class: [...prev.class, classLevel] }))
+                                setFilters((prev) => ({
+                                  ...prev,
+                                  class: [...prev.class, classLevel],
+                                }))
                               } else {
-                                setFilters(prev => ({ ...prev, class: prev.class.filter(c => c !== classLevel) }))
+                                setFilters((prev) => ({
+                                  ...prev,
+                                  class: prev.class.filter((c) => c !== classLevel),
+                                }))
                               }
                             }}
                             className="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
@@ -640,18 +759,26 @@ const EnhancedTemplateManager: React.FC<EnhancedTemplateManagerProps> = ({
 
                   {/* Difficulty Filter */}
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Difficulty</label>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Difficulty
+                    </label>
                     <div className="space-y-1">
-                      {['easy', 'medium', 'hard', 'mixed'].map(difficulty => (
+                      {['easy', 'medium', 'hard', 'mixed'].map((difficulty) => (
                         <label key={difficulty} className="flex items-center gap-2 text-sm">
                           <input
                             type="checkbox"
                             checked={filters.difficulty.includes(difficulty)}
                             onChange={(e) => {
                               if (e.target.checked) {
-                                setFilters(prev => ({ ...prev, difficulty: [...prev.difficulty, difficulty] }))
+                                setFilters((prev) => ({
+                                  ...prev,
+                                  difficulty: [...prev.difficulty, difficulty],
+                                }))
                               } else {
-                                setFilters(prev => ({ ...prev, difficulty: prev.difficulty.filter(d => d !== difficulty) }))
+                                setFilters((prev) => ({
+                                  ...prev,
+                                  difficulty: prev.difficulty.filter((d) => d !== difficulty),
+                                }))
                               }
                             }}
                             className="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
@@ -664,18 +791,26 @@ const EnhancedTemplateManager: React.FC<EnhancedTemplateManagerProps> = ({
 
                   {/* Exam Pattern Filter */}
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Exam Pattern</label>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Exam Pattern
+                    </label>
                     <div className="space-y-1">
-                      {['neet', 'boards', 'jee', 'custom'].map(pattern => (
+                      {['neet', 'boards', 'jee', 'custom'].map((pattern) => (
                         <label key={pattern} className="flex items-center gap-2 text-sm">
                           <input
                             type="checkbox"
                             checked={filters.examPattern.includes(pattern)}
                             onChange={(e) => {
                               if (e.target.checked) {
-                                setFilters(prev => ({ ...prev, examPattern: [...prev.examPattern, pattern] }))
+                                setFilters((prev) => ({
+                                  ...prev,
+                                  examPattern: [...prev.examPattern, pattern],
+                                }))
                               } else {
-                                setFilters(prev => ({ ...prev, examPattern: prev.examPattern.filter(p => p !== pattern) }))
+                                setFilters((prev) => ({
+                                  ...prev,
+                                  examPattern: prev.examPattern.filter((p) => p !== pattern),
+                                }))
                               }
                             }}
                             className="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
@@ -689,20 +824,22 @@ const EnhancedTemplateManager: React.FC<EnhancedTemplateManagerProps> = ({
 
                 <div className="flex justify-end">
                   <button
-                    onClick={() => setFilters({
-                      category: [],
-                      class: [],
-                      difficulty: [],
-                      duration: [30, 300],
-                      questionCount: [10, 200],
-                      examPattern: [],
-                      topics: [],
-                      chapters: [],
-                      searchQuery: '',
-                      showFavoritesOnly: false,
-                      sortBy: 'rating',
-                      sortOrder: 'desc'
-                    })}
+                    onClick={() =>
+                      setFilters({
+                        category: [],
+                        class: [],
+                        difficulty: [],
+                        duration: [30, 300],
+                        questionCount: [10, 200],
+                        examPattern: [],
+                        topics: [],
+                        chapters: [],
+                        searchQuery: '',
+                        showFavoritesOnly: false,
+                        sortBy: 'rating',
+                        sortOrder: 'desc',
+                      })
+                    }
                     className="px-4 py-2 text-sm text-gray-600 hover:text-gray-800 transition-colors"
                   >
                     Clear All Filters
@@ -716,7 +853,7 @@ const EnhancedTemplateManager: React.FC<EnhancedTemplateManagerProps> = ({
         {/* Results Summary */}
         <div className="p-4 bg-gray-50 text-sm text-gray-600">
           Showing {filteredAndSortedTemplates.length} of {templates.length} templates
-          {filters.showFavoritesOnly && " (favorites only)"}
+          {filters.showFavoritesOnly && ' (favorites only)'}
         </div>
       </div>
 
@@ -724,7 +861,7 @@ const EnhancedTemplateManager: React.FC<EnhancedTemplateManagerProps> = ({
       <div className="space-y-4">
         {viewMode === 'grid' ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredAndSortedTemplates.map(template => (
+            {filteredAndSortedTemplates.map((template) => (
               <motion.div
                 key={template.id}
                 layout
@@ -738,7 +875,9 @@ const EnhancedTemplateManager: React.FC<EnhancedTemplateManagerProps> = ({
                   {/* Template Header */}
                   <div className="flex justify-between items-start mb-4">
                     <div className="flex items-center gap-3">
-                      <div className={`p-2 bg-gradient-to-r ${templateCategories.find(c => c.id === template.category)?.color} rounded-lg`}>
+                      <div
+                        className={`p-2 bg-gradient-to-r ${templateCategories.find((c) => c.id === template.category)?.color} rounded-lg`}
+                      >
                         {getCategoryIcon(template.category)}
                       </div>
                       {template.isOfficial && (
@@ -754,10 +893,15 @@ const EnhancedTemplateManager: React.FC<EnhancedTemplateManagerProps> = ({
                         toggleFavorite(template.id)
                       }}
                       className={`p-2 rounded-lg transition-colors ${
-                        template.isFavorite ? 'text-yellow-500 bg-yellow-50' : 'text-gray-400 hover:text-yellow-500 hover:bg-yellow-50'
+                        template.isFavorite
+                          ? 'text-yellow-500 bg-yellow-50'
+                          : 'text-gray-400 hover:text-yellow-500 hover:bg-yellow-50'
                       }`}
                     >
-                      <Star className="w-4 h-4" fill={template.isFavorite ? 'currentColor' : 'none'} />
+                      <Star
+                        className="w-4 h-4"
+                        fill={template.isFavorite ? 'currentColor' : 'none'}
+                      />
                     </button>
                   </div>
 
@@ -767,13 +911,17 @@ const EnhancedTemplateManager: React.FC<EnhancedTemplateManagerProps> = ({
                       <h4 className="font-semibold text-gray-800 group-hover:text-indigo-600 transition-colors line-clamp-2">
                         {template.name}
                       </h4>
-                      <p className="text-sm text-gray-600 mt-1 line-clamp-2">{template.description}</p>
+                      <p className="text-sm text-gray-600 mt-1 line-clamp-2">
+                        {template.description}
+                      </p>
                     </div>
 
                     {/* Quick Stats */}
                     <div className="grid grid-cols-3 gap-3 text-center">
                       <div>
-                        <div className="text-lg font-bold text-gray-800">{template.totalQuestions}</div>
+                        <div className="text-lg font-bold text-gray-800">
+                          {template.totalQuestions}
+                        </div>
                         <div className="text-xs text-gray-500">Questions</div>
                       </div>
                       <div>
@@ -788,7 +936,9 @@ const EnhancedTemplateManager: React.FC<EnhancedTemplateManagerProps> = ({
 
                     {/* Meta Info */}
                     <div className="flex justify-between items-center text-sm">
-                      <span className={`px-2 py-1 rounded border ${getDifficultyColor(template.difficulty)}`}>
+                      <span
+                        className={`px-2 py-1 rounded border ${getDifficultyColor(template.difficulty)}`}
+                      >
                         {template.difficulty}
                       </span>
                       <span className="text-gray-500">Class {template.class}</span>
@@ -808,8 +958,11 @@ const EnhancedTemplateManager: React.FC<EnhancedTemplateManagerProps> = ({
 
                     {/* Tags */}
                     <div className="flex flex-wrap gap-1">
-                      {template.tags.slice(0, 3).map(tag => (
-                        <span key={tag} className="px-2 py-1 bg-gray-100 text-gray-600 rounded text-xs">
+                      {template.tags.slice(0, 3).map((tag) => (
+                        <span
+                          key={tag}
+                          className="px-2 py-1 bg-gray-100 text-gray-600 rounded text-xs"
+                        >
                           {tag}
                         </span>
                       ))}
@@ -838,7 +991,7 @@ const EnhancedTemplateManager: React.FC<EnhancedTemplateManagerProps> = ({
         ) : (
           <div className="bg-white rounded-xl border overflow-hidden">
             <div className="divide-y">
-              {filteredAndSortedTemplates.map(template => (
+              {filteredAndSortedTemplates.map((template) => (
                 <div
                   key={template.id}
                   className="p-6 hover:bg-gray-50 transition-colors cursor-pointer"
@@ -847,7 +1000,9 @@ const EnhancedTemplateManager: React.FC<EnhancedTemplateManagerProps> = ({
                   <div className="flex justify-between items-start">
                     <div className="flex-1">
                       <div className="flex items-center gap-3 mb-2">
-                        <div className={`p-2 bg-gradient-to-r ${templateCategories.find(c => c.id === template.category)?.color} rounded-lg`}>
+                        <div
+                          className={`p-2 bg-gradient-to-r ${templateCategories.find((c) => c.id === template.category)?.color} rounded-lg`}
+                        >
                           {getCategoryIcon(template.category)}
                         </div>
                         <div>
@@ -867,7 +1022,9 @@ const EnhancedTemplateManager: React.FC<EnhancedTemplateManagerProps> = ({
                         <span>{template.totalQuestions} questions</span>
                         <span>{template.duration} minutes</span>
                         <span>{template.totalMarks} marks</span>
-                        <span className={`px-2 py-1 rounded border ${getDifficultyColor(template.difficulty)}`}>
+                        <span
+                          className={`px-2 py-1 rounded border ${getDifficultyColor(template.difficulty)}`}
+                        >
                           {template.difficulty}
                         </span>
                         <span>Class {template.class}</span>
@@ -883,8 +1040,11 @@ const EnhancedTemplateManager: React.FC<EnhancedTemplateManagerProps> = ({
                           <span>{template.usageCount.toLocaleString()}</span>
                         </div>
                         <div className="flex flex-wrap gap-1">
-                          {template.tags.slice(0, 4).map(tag => (
-                            <span key={tag} className="px-2 py-1 bg-gray-100 text-gray-600 rounded text-xs">
+                          {template.tags.slice(0, 4).map((tag) => (
+                            <span
+                              key={tag}
+                              className="px-2 py-1 bg-gray-100 text-gray-600 rounded text-xs"
+                            >
                               {tag}
                             </span>
                           ))}
@@ -899,10 +1059,15 @@ const EnhancedTemplateManager: React.FC<EnhancedTemplateManagerProps> = ({
                           toggleFavorite(template.id)
                         }}
                         className={`p-2 rounded-lg transition-colors ${
-                          template.isFavorite ? 'text-yellow-500 bg-yellow-50' : 'text-gray-400 hover:text-yellow-500 hover:bg-yellow-50'
+                          template.isFavorite
+                            ? 'text-yellow-500 bg-yellow-50'
+                            : 'text-gray-400 hover:text-yellow-500 hover:bg-yellow-50'
                         }`}
                       >
-                        <Star className="w-4 h-4" fill={template.isFavorite ? 'currentColor' : 'none'} />
+                        <Star
+                          className="w-4 h-4"
+                          fill={template.isFavorite ? 'currentColor' : 'none'}
+                        />
                       </button>
                       <button className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors flex items-center gap-2">
                         <Play className="w-4 h-4" />
@@ -925,20 +1090,22 @@ const EnhancedTemplateManager: React.FC<EnhancedTemplateManagerProps> = ({
             </p>
             <div className="space-y-2">
               <button
-                onClick={() => setFilters({
-                  category: [],
-                  class: [],
-                  difficulty: [],
-                  duration: [30, 300],
-                  questionCount: [10, 200],
-                  examPattern: [],
-                  topics: [],
-                  chapters: [],
-                  searchQuery: '',
-                  showFavoritesOnly: false,
-                  sortBy: 'rating',
-                  sortOrder: 'desc'
-                })}
+                onClick={() =>
+                  setFilters({
+                    category: [],
+                    class: [],
+                    difficulty: [],
+                    duration: [30, 300],
+                    questionCount: [10, 200],
+                    examPattern: [],
+                    topics: [],
+                    chapters: [],
+                    searchQuery: '',
+                    showFavoritesOnly: false,
+                    sortBy: 'rating',
+                    sortOrder: 'desc',
+                  })
+                }
                 className="text-indigo-600 hover:text-indigo-700 transition-colors"
               >
                 Clear all filters

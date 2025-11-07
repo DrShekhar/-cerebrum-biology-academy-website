@@ -54,7 +54,7 @@ import {
   MessageSquare,
   Bell,
   Lock,
-  Unlock
+  Unlock,
 } from 'lucide-react'
 
 // Types and Interfaces
@@ -159,7 +159,9 @@ interface ArchiveRule {
 }
 
 const DataManagement: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'export' | 'import' | 'backup' | 'duplicate' | 'archive' | 'bulk' | 'qti' | 'settings'>('export')
+  const [activeTab, setActiveTab] = useState<
+    'export' | 'import' | 'backup' | 'duplicate' | 'archive' | 'bulk' | 'qti' | 'settings'
+  >('export')
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
   const [sortBy, setSortBy] = useState<'name' | 'date' | 'size' | 'usage'>('date')
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc')
@@ -176,7 +178,7 @@ const DataManagement: React.FC = () => {
       icon: FileText,
       features: ['Print-ready', 'Answer keys', 'Layouts', 'Watermarks'],
       fileSize: '2-5 MB',
-      compatibility: ['Adobe Reader', 'Web browsers', 'Mobile devices']
+      compatibility: ['Adobe Reader', 'Web browsers', 'Mobile devices'],
     },
     {
       id: 'docx',
@@ -186,7 +188,7 @@ const DataManagement: React.FC = () => {
       icon: File,
       features: ['Editable text', 'Custom formatting', 'Comments', 'Track changes'],
       fileSize: '1-3 MB',
-      compatibility: ['Microsoft Word', 'Google Docs', 'LibreOffice']
+      compatibility: ['Microsoft Word', 'Google Docs', 'LibreOffice'],
     },
     {
       id: 'xlsx',
@@ -196,7 +198,7 @@ const DataManagement: React.FC = () => {
       icon: Database,
       features: ['Data analysis', 'Formulas', 'Charts', 'Pivot tables'],
       fileSize: '500 KB - 2 MB',
-      compatibility: ['Microsoft Excel', 'Google Sheets', 'LibreOffice Calc']
+      compatibility: ['Microsoft Excel', 'Google Sheets', 'LibreOffice Calc'],
     },
     {
       id: 'qti',
@@ -206,8 +208,8 @@ const DataManagement: React.FC = () => {
       icon: ExternalLink,
       features: ['LMS compatible', 'Standard format', 'Metadata', 'Interoperable'],
       fileSize: '1-10 MB',
-      compatibility: ['Moodle', 'Canvas', 'Blackboard', 'D2L Brightspace']
-    }
+      compatibility: ['Moodle', 'Canvas', 'Blackboard', 'D2L Brightspace'],
+    },
   ])
 
   const [exportJobs, setExportJobs] = useState<ExportJob[]>([
@@ -221,7 +223,7 @@ const DataManagement: React.FC = () => {
       startedAt: new Date(Date.now() - 3600000).toISOString(),
       completedAt: new Date(Date.now() - 3300000).toISOString(),
       downloadUrl: '/downloads/test1.pdf',
-      fileSize: '3.2 MB'
+      fileSize: '3.2 MB',
     },
     {
       id: 'exp2',
@@ -230,8 +232,8 @@ const DataManagement: React.FC = () => {
       testName: 'Cell Biology Questions',
       status: 'processing',
       progress: 65,
-      startedAt: new Date(Date.now() - 300000).toISOString()
-    }
+      startedAt: new Date(Date.now() - 300000).toISOString(),
+    },
   ])
 
   const [importJobs, setImportJobs] = useState<ImportJob[]>([
@@ -247,8 +249,8 @@ const DataManagement: React.FC = () => {
       errors: [],
       warnings: ['3 questions missing difficulty levels'],
       startedAt: new Date(Date.now() - 7200000).toISOString(),
-      completedAt: new Date(Date.now() - 6900000).toISOString()
-    }
+      completedAt: new Date(Date.now() - 6900000).toISOString(),
+    },
   ])
 
   const [backups, setBackups] = useState<Backup[]>([
@@ -263,7 +265,7 @@ const DataManagement: React.FC = () => {
       status: 'completed',
       location: 'Cloud Storage',
       encrypted: true,
-      downloadUrl: '/backups/daily_backup_dec_2024.zip'
+      downloadUrl: '/backups/daily_backup_dec_2024.zip',
     },
     {
       id: 'backup2',
@@ -275,8 +277,8 @@ const DataManagement: React.FC = () => {
       questionCount: 980,
       status: 'completed',
       location: 'Local Storage',
-      encrypted: false
-    }
+      encrypted: false,
+    },
   ])
 
   const [testItems, setTestItems] = useState<TestItem[]>([
@@ -301,7 +303,7 @@ const DataManagement: React.FC = () => {
       size: '2.3 MB',
       version: 3,
       isPublic: true,
-      collaborators: 3
+      collaborators: 3,
     },
     {
       id: 'test2',
@@ -323,7 +325,7 @@ const DataManagement: React.FC = () => {
       size: '1.1 MB',
       version: 1,
       isPublic: false,
-      collaborators: 1
+      collaborators: 1,
     },
     {
       id: 'test3',
@@ -346,8 +348,8 @@ const DataManagement: React.FC = () => {
       size: '1.8 MB',
       version: 2,
       isPublic: true,
-      collaborators: 2
-    }
+      collaborators: 2,
+    },
   ])
 
   const [backupSettings, setBackupSettings] = useState<BackupSettings>({
@@ -358,7 +360,7 @@ const DataManagement: React.FC = () => {
     encryption: true,
     location: 'cloud',
     includeMedia: true,
-    includeAnalytics: false
+    includeAnalytics: false,
   })
 
   const [archiveRules, setArchiveRules] = useState<ArchiveRule[]>([
@@ -370,7 +372,7 @@ const DataManagement: React.FC = () => {
       action: 'archive',
       enabled: true,
       lastRun: new Date(Date.now() - 86400000).toISOString(),
-      itemsProcessed: 12
+      itemsProcessed: 12,
     },
     {
       id: 'rule2',
@@ -379,8 +381,8 @@ const DataManagement: React.FC = () => {
       value: 'No usage in 1 year',
       action: 'delete',
       enabled: false,
-      itemsProcessed: 0
-    }
+      itemsProcessed: 0,
+    },
   ])
 
   // Event Handlers
@@ -389,13 +391,13 @@ const DataManagement: React.FC = () => {
       id: `exp_${Date.now()}`,
       format,
       testId: testIds[0],
-      testName: testItems.find(t => t.id === testIds[0])?.name || 'Unknown Test',
+      testName: testItems.find((t) => t.id === testIds[0])?.name || 'Unknown Test',
       status: 'processing',
       progress: 0,
-      startedAt: new Date().toISOString()
+      startedAt: new Date().toISOString(),
     }
 
-    setExportJobs(prev => [newJob, ...prev])
+    setExportJobs((prev) => [newJob, ...prev])
 
     // Simulate export progress
     let progress = 0
@@ -404,22 +406,26 @@ const DataManagement: React.FC = () => {
       if (progress >= 100) {
         progress = 100
         clearInterval(interval)
-        setExportJobs(prev => prev.map(job =>
-          job.id === newJob.id
-            ? {
-                ...job,
-                status: 'completed',
-                progress: 100,
-                completedAt: new Date().toISOString(),
-                downloadUrl: `/downloads/${job.testName.toLowerCase().replace(/\s+/g, '_')}.${format.toLowerCase()}`,
-                fileSize: `${(Math.random() * 5 + 1).toFixed(1)} MB`
-              }
-            : job
-        ))
+        setExportJobs((prev) =>
+          prev.map((job) =>
+            job.id === newJob.id
+              ? {
+                  ...job,
+                  status: 'completed',
+                  progress: 100,
+                  completedAt: new Date().toISOString(),
+                  downloadUrl: `/downloads/${job.testName.toLowerCase().replace(/\s+/g, '_')}.${format.toLowerCase()}`,
+                  fileSize: `${(Math.random() * 5 + 1).toFixed(1)} MB`,
+                }
+              : job
+          )
+        )
       } else {
-        setExportJobs(prev => prev.map(job =>
-          job.id === newJob.id ? { ...job, progress: Math.round(progress) } : job
-        ))
+        setExportJobs((prev) =>
+          prev.map((job) =>
+            job.id === newJob.id ? { ...job, progress: Math.round(progress) } : job
+          )
+        )
       }
     }, 500)
   }
@@ -436,10 +442,10 @@ const DataManagement: React.FC = () => {
       questionsTotal: Math.floor(Math.random() * 200) + 50,
       errors: [],
       warnings: [],
-      startedAt: new Date().toISOString()
+      startedAt: new Date().toISOString(),
     }
 
-    setImportJobs(prev => [newJob, ...prev])
+    setImportJobs((prev) => [newJob, ...prev])
 
     // Simulate import progress
     let progress = 0
@@ -448,28 +454,32 @@ const DataManagement: React.FC = () => {
       if (progress >= 100) {
         progress = 100
         clearInterval(interval)
-        setImportJobs(prev => prev.map(job =>
-          job.id === newJob.id
-            ? {
-                ...job,
-                status: 'completed',
-                progress: 100,
-                questionsImported: job.questionsTotal,
-                completedAt: new Date().toISOString(),
-                warnings: ['2 questions missing explanations', '1 duplicate question skipped']
-              }
-            : job
-        ))
+        setImportJobs((prev) =>
+          prev.map((job) =>
+            job.id === newJob.id
+              ? {
+                  ...job,
+                  status: 'completed',
+                  progress: 100,
+                  questionsImported: job.questionsTotal,
+                  completedAt: new Date().toISOString(),
+                  warnings: ['2 questions missing explanations', '1 duplicate question skipped'],
+                }
+              : job
+          )
+        )
       } else {
-        setImportJobs(prev => prev.map(job =>
-          job.id === newJob.id
-            ? {
-                ...job,
-                progress: Math.round(progress),
-                questionsImported: Math.round((progress / 100) * job.questionsTotal)
-              }
-            : job
-        ))
+        setImportJobs((prev) =>
+          prev.map((job) =>
+            job.id === newJob.id
+              ? {
+                  ...job,
+                  progress: Math.round(progress),
+                  questionsImported: Math.round((progress / 100) * job.questionsTotal),
+                }
+              : job
+          )
+        )
       }
     }, 800)
   }
@@ -481,19 +491,19 @@ const DataManagement: React.FC = () => {
       type: 'manual',
       size: `${(Math.random() * 50 + 10).toFixed(1)} MB`,
       createdAt: new Date().toISOString(),
-      testCount: testItems.filter(t => t.status === 'active').length,
+      testCount: testItems.filter((t) => t.status === 'active').length,
       questionCount: testItems.reduce((sum, t) => sum + t.questionCount, 0),
       status: 'completed',
       location: backupSettings.location === 'cloud' ? 'Cloud Storage' : 'Local Storage',
       encrypted: backupSettings.encryption,
-      downloadUrl: `/backups/${name.toLowerCase().replace(/\s+/g, '_')}.zip`
+      downloadUrl: `/backups/${name.toLowerCase().replace(/\s+/g, '_')}.zip`,
     }
 
-    setBackups(prev => [newBackup, ...prev])
+    setBackups((prev) => [newBackup, ...prev])
   }
 
   const duplicateTest = (testId: string) => {
-    const originalTest = testItems.find(t => t.id === testId)
+    const originalTest = testItems.find((t) => t.id === testId)
     if (!originalTest) return
 
     const newTest: TestItem = {
@@ -506,37 +516,42 @@ const DataManagement: React.FC = () => {
       usageCount: 0,
       lastUsed: undefined,
       version: 1,
-      collaborators: 1
+      collaborators: 1,
     }
 
-    setTestItems(prev => [newTest, ...prev])
+    setTestItems((prev) => [newTest, ...prev])
   }
 
   const archiveTest = (testId: string) => {
-    setTestItems(prev => prev.map(test =>
-      test.id === testId
-        ? { ...test, status: 'archived', updatedAt: new Date().toISOString() }
-        : test
-    ))
+    setTestItems((prev) =>
+      prev.map((test) =>
+        test.id === testId
+          ? { ...test, status: 'archived', updatedAt: new Date().toISOString() }
+          : test
+      )
+    )
   }
 
   const restoreTest = (testId: string) => {
-    setTestItems(prev => prev.map(test =>
-      test.id === testId
-        ? { ...test, status: 'active', updatedAt: new Date().toISOString() }
-        : test
-    ))
+    setTestItems((prev) =>
+      prev.map((test) =>
+        test.id === testId
+          ? { ...test, status: 'active', updatedAt: new Date().toISOString() }
+          : test
+      )
+    )
   }
 
   const deleteTest = (testId: string) => {
-    setTestItems(prev => prev.filter(test => test.id !== testId))
+    setTestItems((prev) => prev.filter((test) => test.id !== testId))
   }
 
   const getFilteredTests = () => {
-    let filtered = testItems.filter(test =>
-      test.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      test.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      test.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
+    const filtered = testItems.filter(
+      (test) =>
+        test.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        test.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        test.tags.some((tag) => tag.toLowerCase().includes(searchQuery.toLowerCase()))
     )
 
     // Sort
@@ -584,46 +599,67 @@ const DataManagement: React.FC = () => {
       processing: 'blue',
       completed: 'green',
       failed: 'red',
-      partial: 'orange'
+      partial: 'orange',
     }
     return colors[status as keyof typeof colors] || 'gray'
   }
 
   const getStatusBgClass = (status: string) => {
     const color = getStatusColor(status)
-    return color === 'green' ? 'bg-green-100' :
-      color === 'yellow' ? 'bg-yellow-100' :
-      color === 'gray' ? 'bg-gray-100' :
-      color === 'red' ? 'bg-red-100' :
-      color === 'blue' ? 'bg-blue-100' :
-      color === 'orange' ? 'bg-orange-100' : 'bg-gray-100'
+    return color === 'green'
+      ? 'bg-green-100'
+      : color === 'yellow'
+        ? 'bg-yellow-100'
+        : color === 'gray'
+          ? 'bg-gray-100'
+          : color === 'red'
+            ? 'bg-red-100'
+            : color === 'blue'
+              ? 'bg-blue-100'
+              : color === 'orange'
+                ? 'bg-orange-100'
+                : 'bg-gray-100'
   }
 
   const getStatusTextClass = (status: string) => {
     const color = getStatusColor(status)
-    return color === 'green' ? 'text-green-700' :
-      color === 'yellow' ? 'text-yellow-700' :
-      color === 'gray' ? 'text-gray-700' :
-      color === 'red' ? 'text-red-700' :
-      color === 'blue' ? 'text-blue-700' :
-      color === 'orange' ? 'text-orange-700' : 'text-gray-700'
+    return color === 'green'
+      ? 'text-green-700'
+      : color === 'yellow'
+        ? 'text-yellow-700'
+        : color === 'gray'
+          ? 'text-gray-700'
+          : color === 'red'
+            ? 'text-red-700'
+            : color === 'blue'
+              ? 'text-blue-700'
+              : color === 'orange'
+                ? 'text-orange-700'
+                : 'text-gray-700'
   }
 
   const getStatusProgressClass = (status: string) => {
     const color = getStatusColor(status)
-    return color === 'green' ? 'bg-green-500' :
-      color === 'yellow' ? 'bg-yellow-500' :
-      color === 'gray' ? 'bg-gray-500' :
-      color === 'red' ? 'bg-red-500' :
-      color === 'blue' ? 'bg-blue-500' :
-      color === 'orange' ? 'bg-orange-500' : 'bg-gray-500'
+    return color === 'green'
+      ? 'bg-green-500'
+      : color === 'yellow'
+        ? 'bg-yellow-500'
+        : color === 'gray'
+          ? 'bg-gray-500'
+          : color === 'red'
+            ? 'bg-red-500'
+            : color === 'blue'
+              ? 'bg-blue-500'
+              : color === 'orange'
+                ? 'bg-orange-500'
+                : 'bg-gray-500'
   }
 
   const getTypeIcon = (type: string) => {
     const icons = {
       test: BookOpen,
       question_bank: Database,
-      template: Copy
+      template: Copy,
     }
     return icons[type as keyof typeof icons] || BookOpen
   }
@@ -645,19 +681,23 @@ const DataManagement: React.FC = () => {
           </h1>
         </motion.div>
         <p className="text-gray-600 max-w-2xl mx-auto">
-          Comprehensive data management with export, import, backup, and archival capabilities
-          for complete test lifecycle management
+          Comprehensive data management with export, import, backup, and archival capabilities for
+          complete test lifecycle management
         </p>
       </div>
 
       {/* Quick Stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         <div className="bg-white rounded-xl p-4 border text-center">
-          <div className="text-2xl font-bold text-blue-600">{testItems.filter(t => t.status === 'active').length}</div>
+          <div className="text-2xl font-bold text-blue-600">
+            {testItems.filter((t) => t.status === 'active').length}
+          </div>
           <div className="text-sm text-blue-800">Active Tests</div>
         </div>
         <div className="bg-white rounded-xl p-4 border text-center">
-          <div className="text-2xl font-bold text-green-600">{exportJobs.filter(j => j.status === 'completed').length}</div>
+          <div className="text-2xl font-bold text-green-600">
+            {exportJobs.filter((j) => j.status === 'completed').length}
+          </div>
           <div className="text-sm text-green-800">Exports Complete</div>
         </div>
         <div className="bg-white rounded-xl p-4 border text-center">
@@ -665,7 +705,9 @@ const DataManagement: React.FC = () => {
           <div className="text-sm text-purple-800">Backups Available</div>
         </div>
         <div className="bg-white rounded-xl p-4 border text-center">
-          <div className="text-2xl font-bold text-orange-600">{testItems.filter(t => t.status === 'archived').length}</div>
+          <div className="text-2xl font-bold text-orange-600">
+            {testItems.filter((t) => t.status === 'archived').length}
+          </div>
           <div className="text-sm text-orange-800">Archived Items</div>
         </div>
       </div>
@@ -681,7 +723,7 @@ const DataManagement: React.FC = () => {
             { id: 'archive', label: 'Archive', icon: Archive },
             { id: 'bulk', label: 'Bulk Ops', icon: Database },
             { id: 'qti', label: 'QTI Export', icon: ExternalLink },
-            { id: 'settings', label: 'Settings', icon: Settings }
+            { id: 'settings', label: 'Settings', icon: Settings },
           ].map(({ id, label, icon: Icon }) => (
             <button
               key={id}
@@ -721,7 +763,10 @@ const DataManagement: React.FC = () => {
                 {exportFormats.map((format) => {
                   const IconComponent = format.icon
                   return (
-                    <div key={format.id} className="border rounded-lg p-4 hover:shadow-md transition-shadow">
+                    <div
+                      key={format.id}
+                      className="border rounded-lg p-4 hover:shadow-md transition-shadow"
+                    >
                       <div className="flex items-center gap-3 mb-3">
                         <div className="p-2 bg-teal-100 rounded-lg">
                           <IconComponent className="w-6 h-6 text-teal-600" />
@@ -738,22 +783,30 @@ const DataManagement: React.FC = () => {
                         <div className="text-xs text-gray-500">Features:</div>
                         <div className="flex flex-wrap gap-1">
                           {format.features.slice(0, 2).map((feature, index) => (
-                            <span key={index} className="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs">
+                            <span
+                              key={index}
+                              className="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs"
+                            >
                               {feature}
                             </span>
                           ))}
                           {format.features.length > 2 && (
-                            <span className="text-xs text-gray-400">+{format.features.length - 2}</span>
+                            <span className="text-xs text-gray-400">
+                              +{format.features.length - 2}
+                            </span>
                           )}
                         </div>
                       </div>
 
-                      <div className="text-xs text-gray-500 mb-3">
-                        Size: {format.fileSize}
-                      </div>
+                      <div className="text-xs text-gray-500 mb-3">Size: {format.fileSize}</div>
 
                       <button
-                        onClick={() => handleExport(format.name, selectedTests.length > 0 ? selectedTests : ['test1'])}
+                        onClick={() =>
+                          handleExport(
+                            format.name,
+                            selectedTests.length > 0 ? selectedTests : ['test1']
+                          )
+                        }
                         className="w-full bg-teal-600 text-white py-2 rounded-lg hover:bg-teal-700 transition-colors text-sm"
                       >
                         Export as {format.name}
@@ -773,14 +826,19 @@ const DataManagement: React.FC = () => {
 
               <div className="space-y-4">
                 {exportJobs.map((job) => (
-                  <div key={job.id} className="border rounded-lg p-4 hover:shadow-md transition-shadow">
+                  <div
+                    key={job.id}
+                    className="border rounded-lg p-4 hover:shadow-md transition-shadow"
+                  >
                     <div className="flex justify-between items-start mb-3">
                       <div>
                         <h4 className="font-medium text-gray-800">{job.testName}</h4>
                         <p className="text-sm text-gray-600">{job.format} export</p>
                       </div>
                       <div className="flex items-center gap-2">
-                        <span className={`px-2 py-1 rounded text-xs font-medium ${getStatusBgClass(job.status)} ${getStatusTextClass(job.status)}`}>
+                        <span
+                          className={`px-2 py-1 rounded text-xs font-medium ${getStatusBgClass(job.status)} ${getStatusTextClass(job.status)}`}
+                        >
                           {job.status}
                         </span>
                         {job.status === 'completed' && job.downloadUrl && (
@@ -810,9 +868,7 @@ const DataManagement: React.FC = () => {
                       {job.completedAt && (
                         <span>Completed: {new Date(job.completedAt).toLocaleString()}</span>
                       )}
-                      {job.fileSize && (
-                        <span>Size: {job.fileSize}</span>
-                      )}
+                      {job.fileSize && <span>Size: {job.fileSize}</span>}
                     </div>
 
                     {job.error && (
@@ -939,13 +995,20 @@ const DataManagement: React.FC = () => {
 
               <div className="space-y-4">
                 {importJobs.map((job) => (
-                  <div key={job.id} className="border rounded-lg p-4 hover:shadow-md transition-shadow">
+                  <div
+                    key={job.id}
+                    className="border rounded-lg p-4 hover:shadow-md transition-shadow"
+                  >
                     <div className="flex justify-between items-start mb-3">
                       <div>
                         <h4 className="font-medium text-gray-800">{job.fileName}</h4>
-                        <p className="text-sm text-gray-600">{job.format} • {job.fileSize}</p>
+                        <p className="text-sm text-gray-600">
+                          {job.format} • {job.fileSize}
+                        </p>
                       </div>
-                      <span className={`px-2 py-1 rounded text-xs font-medium ${getStatusBgClass(job.status)} ${getStatusTextClass(job.status)}`}>
+                      <span
+                        className={`px-2 py-1 rounded text-xs font-medium ${getStatusBgClass(job.status)} ${getStatusTextClass(job.status)}`}
+                      >
                         {job.status}
                       </span>
                     </div>
@@ -953,7 +1016,9 @@ const DataManagement: React.FC = () => {
                     {/* Progress */}
                     <div className="mb-3">
                       <div className="flex justify-between text-sm text-gray-600 mb-1">
-                        <span>Progress: {job.questionsImported}/{job.questionsTotal} questions</span>
+                        <span>
+                          Progress: {job.questionsImported}/{job.questionsTotal} questions
+                        </span>
                         <span>{job.progress}%</span>
                       </div>
                       <div className="w-full bg-gray-200 rounded-full h-2">
@@ -1069,7 +1134,9 @@ const DataManagement: React.FC = () => {
                     </div>
 
                     <button
-                      onClick={() => createBackup('Manual Backup - ' + new Date().toLocaleDateString())}
+                      onClick={() =>
+                        createBackup('Manual Backup - ' + new Date().toLocaleDateString())
+                      }
                       className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2 justify-center"
                     >
                       <HardDrive className="w-4 h-4" />
@@ -1087,7 +1154,9 @@ const DataManagement: React.FC = () => {
                         <p className="text-xs text-gray-500">Automatically create backups</p>
                       </div>
                       <button
-                        onClick={() => setBackupSettings(prev => ({ ...prev, autoBackup: !prev.autoBackup }))}
+                        onClick={() =>
+                          setBackupSettings((prev) => ({ ...prev, autoBackup: !prev.autoBackup }))
+                        }
                         className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                           backupSettings.autoBackup ? 'bg-blue-600' : 'bg-gray-200'
                         }`}
@@ -1108,7 +1177,12 @@ const DataManagement: React.FC = () => {
                           </label>
                           <select
                             value={backupSettings.frequency}
-                            onChange={(e) => setBackupSettings(prev => ({ ...prev, frequency: e.target.value as any }))}
+                            onChange={(e) =>
+                              setBackupSettings((prev) => ({
+                                ...prev,
+                                frequency: e.target.value as any,
+                              }))
+                            }
                             className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                           >
                             <option value="daily">Daily</option>
@@ -1126,7 +1200,12 @@ const DataManagement: React.FC = () => {
                             min="1"
                             max="365"
                             value={backupSettings.retention}
-                            onChange={(e) => setBackupSettings(prev => ({ ...prev, retention: parseInt(e.target.value) || 30 }))}
+                            onChange={(e) =>
+                              setBackupSettings((prev) => ({
+                                ...prev,
+                                retention: parseInt(e.target.value) || 30,
+                              }))
+                            }
                             className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                           />
                         </div>
@@ -1137,7 +1216,12 @@ const DataManagement: React.FC = () => {
                           </label>
                           <select
                             value={backupSettings.location}
-                            onChange={(e) => setBackupSettings(prev => ({ ...prev, location: e.target.value as any }))}
+                            onChange={(e) =>
+                              setBackupSettings((prev) => ({
+                                ...prev,
+                                location: e.target.value as any,
+                              }))
+                            }
                             className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                           >
                             <option value="local">Local Storage</option>
@@ -1161,22 +1245,33 @@ const DataManagement: React.FC = () => {
 
               <div className="space-y-4">
                 {backups.map((backup) => (
-                  <div key={backup.id} className="border rounded-lg p-4 hover:shadow-md transition-shadow">
+                  <div
+                    key={backup.id}
+                    className="border rounded-lg p-4 hover:shadow-md transition-shadow"
+                  >
                     <div className="flex justify-between items-start mb-3">
                       <div>
                         <h4 className="font-medium text-gray-800 flex items-center gap-2">
                           {backup.name}
                           {backup.encrypted && <Lock className="w-4 h-4 text-green-600" />}
                         </h4>
-                        <p className="text-sm text-gray-600">{backup.location} • {backup.size}</p>
+                        <p className="text-sm text-gray-600">
+                          {backup.location} • {backup.size}
+                        </p>
                       </div>
                       <div className="flex items-center gap-2">
-                        <span className={`px-2 py-1 rounded text-xs font-medium ${getStatusBgClass(backup.status)} ${getStatusTextClass(backup.status)}`}>
+                        <span
+                          className={`px-2 py-1 rounded text-xs font-medium ${getStatusBgClass(backup.status)} ${getStatusTextClass(backup.status)}`}
+                        >
                           {backup.status}
                         </span>
-                        <span className={`px-2 py-1 rounded text-xs font-medium ${
-                          backup.type === 'automatic' ? 'bg-blue-100 text-blue-700' : 'bg-gray-100 text-gray-700'
-                        }`}>
+                        <span
+                          className={`px-2 py-1 rounded text-xs font-medium ${
+                            backup.type === 'automatic'
+                              ? 'bg-blue-100 text-blue-700'
+                              : 'bg-gray-100 text-gray-700'
+                          }`}
+                        >
                           {backup.type}
                         </span>
                       </div>
@@ -1189,9 +1284,7 @@ const DataManagement: React.FC = () => {
                       <div>
                         <span className="font-medium">{backup.questionCount}</span> questions
                       </div>
-                      <div>
-                        Created: {new Date(backup.createdAt).toLocaleDateString()}
-                      </div>
+                      <div>Created: {new Date(backup.createdAt).toLocaleDateString()}</div>
                       <div className="flex items-center gap-1">
                         {backup.encrypted ? (
                           <>
@@ -1259,7 +1352,11 @@ const DataManagement: React.FC = () => {
                     onClick={() => setViewMode(viewMode === 'grid' ? 'list' : 'grid')}
                     className="p-2 border rounded-lg hover:bg-gray-50"
                   >
-                    {viewMode === 'grid' ? <List className="w-4 h-4" /> : <Grid className="w-4 h-4" />}
+                    {viewMode === 'grid' ? (
+                      <List className="w-4 h-4" />
+                    ) : (
+                      <Grid className="w-4 h-4" />
+                    )}
                   </button>
                 </div>
               </div>
@@ -1292,31 +1389,48 @@ const DataManagement: React.FC = () => {
                     onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
                     className="p-2 border rounded-lg hover:bg-gray-50"
                   >
-                    {sortOrder === 'asc' ? <SortAsc className="w-4 h-4" /> : <SortDesc className="w-4 h-4" />}
+                    {sortOrder === 'asc' ? (
+                      <SortAsc className="w-4 h-4" />
+                    ) : (
+                      <SortDesc className="w-4 h-4" />
+                    )}
                   </button>
                 </div>
               </div>
 
               {/* Test Items */}
-              <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4' : 'space-y-4'}>
+              <div
+                className={
+                  viewMode === 'grid'
+                    ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'
+                    : 'space-y-4'
+                }
+              >
                 {getFilteredTests().map((test) => {
                   const TypeIcon = getTypeIcon(test.type)
                   return (
-                    <div key={test.id} className={`border rounded-lg p-4 hover:shadow-md transition-shadow ${
-                      viewMode === 'list' ? 'flex items-center gap-4' : ''
-                    }`}>
+                    <div
+                      key={test.id}
+                      className={`border rounded-lg p-4 hover:shadow-md transition-shadow ${
+                        viewMode === 'list' ? 'flex items-center gap-4' : ''
+                      }`}
+                    >
                       <div className={viewMode === 'list' ? 'flex-1' : ''}>
                         <div className="flex justify-between items-start mb-2">
                           <div className="flex items-center gap-2">
                             <TypeIcon className="w-5 h-5 text-purple-600" />
                             <h4 className="font-medium text-gray-800 truncate">{test.name}</h4>
                           </div>
-                          <span className={`px-2 py-1 rounded text-xs font-medium ${getStatusBgClass(test.status)} ${getStatusTextClass(test.status)}`}>
+                          <span
+                            className={`px-2 py-1 rounded text-xs font-medium ${getStatusBgClass(test.status)} ${getStatusTextClass(test.status)}`}
+                          >
                             {test.status}
                           </span>
                         </div>
 
-                        <p className="text-sm text-gray-600 mb-3 line-clamp-2">{test.description}</p>
+                        <p className="text-sm text-gray-600 mb-3 line-clamp-2">
+                          {test.description}
+                        </p>
 
                         <div className="grid grid-cols-2 gap-2 text-sm text-gray-600 mb-3">
                           <div>{test.questionCount} questions</div>
@@ -1327,7 +1441,10 @@ const DataManagement: React.FC = () => {
 
                         <div className="flex flex-wrap gap-1 mb-3">
                           {test.tags.slice(0, 3).map((tag, index) => (
-                            <span key={index} className="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs">
+                            <span
+                              key={index}
+                              className="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs"
+                            >
                               {tag}
                             </span>
                           ))}
@@ -1393,17 +1510,25 @@ const DataManagement: React.FC = () => {
                       <div>
                         <h4 className="font-medium text-gray-800">{rule.name}</h4>
                         <p className="text-sm text-gray-600">
-                          {rule.condition === 'age' ? 'Archive items older than' :
-                           rule.condition === 'usage' ? 'Archive items with' :
-                           rule.condition === 'status' ? 'Archive items with status' :
-                           'Archive items larger than'} {rule.value}
+                          {rule.condition === 'age'
+                            ? 'Archive items older than'
+                            : rule.condition === 'usage'
+                              ? 'Archive items with'
+                              : rule.condition === 'status'
+                                ? 'Archive items with status'
+                                : 'Archive items larger than'}{' '}
+                          {rule.value}
                         </p>
                       </div>
                       <div className="flex items-center gap-2">
                         <button
-                          onClick={() => setArchiveRules(prev => prev.map(r =>
-                            r.id === rule.id ? { ...r, enabled: !r.enabled } : r
-                          ))}
+                          onClick={() =>
+                            setArchiveRules((prev) =>
+                              prev.map((r) =>
+                                r.id === rule.id ? { ...r, enabled: !r.enabled } : r
+                              )
+                            )
+                          }
                           className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                             rule.enabled ? 'bg-orange-600' : 'bg-gray-200'
                           }`}
@@ -1443,49 +1568,53 @@ const DataManagement: React.FC = () => {
             <div className="bg-white rounded-xl p-6 border">
               <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
                 <Folder className="w-5 h-5 text-gray-600" />
-                Archived Tests ({testItems.filter(t => t.status === 'archived').length})
+                Archived Tests ({testItems.filter((t) => t.status === 'archived').length})
               </h3>
 
               <div className="space-y-4">
-                {testItems.filter(t => t.status === 'archived').map((test) => {
-                  const TypeIcon = getTypeIcon(test.type)
-                  return (
-                    <div key={test.id} className="border rounded-lg p-4 bg-gray-50">
-                      <div className="flex justify-between items-start mb-2">
-                        <div className="flex items-center gap-2">
-                          <TypeIcon className="w-5 h-5 text-gray-500" />
-                          <h4 className="font-medium text-gray-700">{test.name}</h4>
+                {testItems
+                  .filter((t) => t.status === 'archived')
+                  .map((test) => {
+                    const TypeIcon = getTypeIcon(test.type)
+                    return (
+                      <div key={test.id} className="border rounded-lg p-4 bg-gray-50">
+                        <div className="flex justify-between items-start mb-2">
+                          <div className="flex items-center gap-2">
+                            <TypeIcon className="w-5 h-5 text-gray-500" />
+                            <h4 className="font-medium text-gray-700">{test.name}</h4>
+                          </div>
+                          <div className="flex gap-2">
+                            <button
+                              onClick={() => restoreTest(test.id)}
+                              className="text-green-600 hover:text-green-800 text-sm"
+                            >
+                              <RefreshCw className="w-4 h-4 inline mr-1" />
+                              Restore
+                            </button>
+                            <button
+                              onClick={() => deleteTest(test.id)}
+                              className="text-red-600 hover:text-red-800 text-sm"
+                            >
+                              <Trash2 className="w-4 h-4 inline mr-1" />
+                              Delete
+                            </button>
+                          </div>
                         </div>
-                        <div className="flex gap-2">
-                          <button
-                            onClick={() => restoreTest(test.id)}
-                            className="text-green-600 hover:text-green-800 text-sm"
-                          >
-                            <RefreshCw className="w-4 h-4 inline mr-1" />
-                            Restore
-                          </button>
-                          <button
-                            onClick={() => deleteTest(test.id)}
-                            className="text-red-600 hover:text-red-800 text-sm"
-                          >
-                            <Trash2 className="w-4 h-4 inline mr-1" />
-                            Delete
-                          </button>
+
+                        <p className="text-sm text-gray-600 mb-2">{test.description}</p>
+
+                        <div className="flex justify-between items-center text-xs text-gray-500">
+                          <span>Archived: {new Date(test.updatedAt).toLocaleDateString()}</span>
+                          <span>
+                            {test.questionCount} questions • {test.size}
+                          </span>
                         </div>
                       </div>
-
-                      <p className="text-sm text-gray-600 mb-2">{test.description}</p>
-
-                      <div className="flex justify-between items-center text-xs text-gray-500">
-                        <span>Archived: {new Date(test.updatedAt).toLocaleDateString()}</span>
-                        <span>{test.questionCount} questions • {test.size}</span>
-                      </div>
-                    </div>
-                  )
-                })}
+                    )
+                  })}
               </div>
 
-              {testItems.filter(t => t.status === 'archived').length === 0 && (
+              {testItems.filter((t) => t.status === 'archived').length === 0 && (
                 <div className="text-center py-12 text-gray-500">
                   <Archive className="w-12 h-12 mx-auto mb-4 text-gray-300" />
                   <p>No archived tests</p>
@@ -1507,7 +1636,13 @@ const DataManagement: React.FC = () => {
           >
             <div className="text-center py-12 text-gray-500">
               <Settings className="w-12 h-12 mx-auto mb-4 text-gray-300" />
-              <p className="text-lg font-medium mb-2">{activeTab === 'bulk' ? 'Bulk Operations' : activeTab === 'qti' ? 'QTI Export' : 'Settings'}</p>
+              <p className="text-lg font-medium mb-2">
+                {activeTab === 'bulk'
+                  ? 'Bulk Operations'
+                  : activeTab === 'qti'
+                    ? 'QTI Export'
+                    : 'Settings'}
+              </p>
               <p className="text-sm">This feature is coming soon</p>
             </div>
           </motion.div>

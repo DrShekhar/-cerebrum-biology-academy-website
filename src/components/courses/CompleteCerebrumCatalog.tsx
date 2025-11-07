@@ -389,7 +389,7 @@ export function CompleteCerebrumCatalog({ className = '' }: CompleteCerebrumCata
 
   // Filter courses based on selected criteria
   const getFilteredCourses = () => {
-    let allCourses: any[] = []
+    const allCourses: any[] = []
 
     Object.entries(COMPLETE_COURSE_CATALOG).forEach(([seriesKey, series]) => {
       series.courses.forEach((course: any) => {

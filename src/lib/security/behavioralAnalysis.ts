@@ -113,14 +113,13 @@ export class BehavioralAnalyzer {
         y: event.clientY,
         eventType,
         velocity: 0,
-        acceleration: 0
+        acceleration: 0,
       }
 
       if (lastMovement && eventType === 'move') {
         const timeDiff = timestamp - lastMovement.timestamp
         const distance = Math.sqrt(
-          Math.pow(movement.x - lastMovement.x, 2) +
-          Math.pow(movement.y - lastMovement.y, 2)
+          Math.pow(movement.x - lastMovement.x, 2) + Math.pow(movement.y - lastMovement.y, 2)
         )
         movement.velocity = distance / timeDiff
         movement.acceleration = (movement.velocity - (lastMovement.velocity || 0)) / timeDiff
@@ -134,7 +133,7 @@ export class BehavioralAnalyzer {
 
       // Keep only recent movements (last 30 seconds)
       const thirtySecondsAgo = timestamp - 30000
-      this.mouseMovements = this.mouseMovements.filter(m => m.timestamp > thirtySecondsAgo)
+      this.mouseMovements = this.mouseMovements.filter((m) => m.timestamp > thirtySecondsAgo)
     }
 
     document.addEventListener('mousemove', (e) => trackMouse(e, 'move'))
@@ -145,7 +144,7 @@ export class BehavioralAnalyzer {
    * Set up keystroke pattern tracking
    */
   private setupKeystrokeTracking(): void {
-    let keyDownTimes: Map<string, number> = new Map()
+    const keyDownTimes: Map<string, number> = new Map()
     let lastKeystroke: KeystrokePattern | null = null
 
     document.addEventListener('keydown', (event) => {
@@ -165,7 +164,7 @@ export class BehavioralAnalyzer {
         key: event.key,
         keyCode: event.keyCode,
         duration: timestamp - keyDownTime,
-        dwellTime: lastKeystroke ? timestamp - lastKeystroke.timestamp : 0
+        dwellTime: lastKeystroke ? timestamp - lastKeystroke.timestamp : 0,
       }
 
       this.keystrokePatterns.push(keystroke)
@@ -178,7 +177,7 @@ export class BehavioralAnalyzer {
 
       // Keep only recent keystrokes
       const fiveMinutesAgo = timestamp - 300000
-      this.keystrokePatterns = this.keystrokePatterns.filter(k => k.timestamp > fiveMinutesAgo)
+      this.keystrokePatterns = this.keystrokePatterns.filter((k) => k.timestamp > fiveMinutesAgo)
     })
   }
 
@@ -198,7 +197,10 @@ export class BehavioralAnalyzer {
       // Detect rapid scrolling (potential searching behavior)
       if (now - lastScrollTime < 100) {
         if (scrollCount > 10) {
-          this.onSuspiciousActivity('Rapid scrolling detected - possible searching behavior', 'medium')
+          this.onSuspiciousActivity(
+            'Rapid scrolling detected - possible searching behavior',
+            'medium'
+          )
           scrollCount = 0
         }
       } else {
@@ -228,21 +230,25 @@ export class BehavioralAnalyzer {
 
     // Count interactions during this question
     const questionMouseEvents = this.mouseMovements.filter(
-      m => m.timestamp >= this.questionStartTime && m.timestamp <= endTime
+      (m) => m.timestamp >= this.questionStartTime && m.timestamp <= endTime
     )
     const questionKeystrokes = this.keystrokePatterns.filter(
-      k => k.timestamp >= this.questionStartTime && k.timestamp <= endTime
+      (k) => k.timestamp >= this.questionStartTime && k.timestamp <= endTime
     )
 
     const answerPattern: AnswerPattern = {
       questionId,
       timeToFirstInteraction: this.calculateTimeToFirstInteraction(),
       totalTimeSpent,
-      clickCount: questionMouseEvents.filter(m => m.eventType === 'click').length,
+      clickCount: questionMouseEvents.filter((m) => m.eventType === 'click').length,
       keystrokeCount: questionKeystrokes.length,
       changedAnswer,
       finalAnswer: answer,
-      confidence: this.calculateConfidence(totalTimeSpent, questionMouseEvents.length, changedAnswer)
+      confidence: this.calculateConfidence(
+        totalTimeSpent,
+        questionMouseEvents.length,
+        changedAnswer
+      ),
     }
 
     this.answerPatterns.push(answerPattern)
@@ -256,11 +262,9 @@ export class BehavioralAnalyzer {
     const questionStart = this.questionStartTime
     const firstInteraction = Math.min(
       ...this.mouseMovements
-        .filter(m => m.timestamp >= questionStart && m.eventType === 'click')
-        .map(m => m.timestamp),
-      ...this.keystrokePatterns
-        .filter(k => k.timestamp >= questionStart)
-        .map(k => k.timestamp)
+        .filter((m) => m.timestamp >= questionStart && m.eventType === 'click')
+        .map((m) => m.timestamp),
+      ...this.keystrokePatterns.filter((k) => k.timestamp >= questionStart).map((k) => k.timestamp)
     )
 
     return firstInteraction === Infinity ? 0 : firstInteraction - questionStart
@@ -277,7 +281,8 @@ export class BehavioralAnalyzer {
     let score = 0
 
     // Time-based confidence
-    if (timeSpent > 30000 && timeSpent < 180000) score += 2 // 30s to 3min is reasonable
+    if (timeSpent > 30000 && timeSpent < 180000)
+      score += 2 // 30s to 3min is reasonable
     else if (timeSpent > 10000) score += 1
     else score -= 1 // Too fast is suspicious
 
@@ -301,7 +306,7 @@ export class BehavioralAnalyzer {
 
     // Check for robotic patterns (too consistent velocity/acceleration)
     if (recentMovements.length >= 10) {
-      const velocities = recentMovements.map(m => m.velocity)
+      const velocities = recentMovements.map((m) => m.velocity)
       const velocityVariance = this.calculateVariance(velocities)
 
       if (velocityVariance < 0.1) {
@@ -310,7 +315,8 @@ export class BehavioralAnalyzer {
     }
 
     // Check for unusual speed patterns
-    if (movement.velocity > 1000) { // Very fast movement
+    if (movement.velocity > 1000) {
+      // Very fast movement
       this.onSuspiciousActivity('Unusually fast mouse movement', 'medium')
     }
 
@@ -318,12 +324,12 @@ export class BehavioralAnalyzer {
     const lastMovement = recentMovements[recentMovements.length - 2]
     if (lastMovement && movement.eventType === 'move') {
       const distance = Math.sqrt(
-        Math.pow(movement.x - lastMovement.x, 2) +
-        Math.pow(movement.y - lastMovement.y, 2)
+        Math.pow(movement.x - lastMovement.x, 2) + Math.pow(movement.y - lastMovement.y, 2)
       )
       const timeDiff = movement.timestamp - lastMovement.timestamp
 
-      if (distance > 500 && timeDiff < 50) { // Large jump in short time
+      if (distance > 500 && timeDiff < 50) {
+        // Large jump in short time
         this.onSuspiciousActivity('Mouse teleportation detected', 'high')
       }
     }
@@ -337,16 +343,18 @@ export class BehavioralAnalyzer {
 
     if (recentKeystrokes.length >= 10) {
       // Check for consistent timing (robotic typing)
-      const dwellTimes = recentKeystrokes.map(k => k.dwellTime).filter(d => d > 0)
+      const dwellTimes = recentKeystrokes.map((k) => k.dwellTime).filter((d) => d > 0)
       const dwellVariance = this.calculateVariance(dwellTimes)
 
-      if (dwellVariance < 5) { // Very consistent timing
+      if (dwellVariance < 5) {
+        // Very consistent timing
         this.onSuspiciousActivity('Robotic typing pattern detected', 'high')
       }
 
       // Check for unusually fast typing
       const averageDwellTime = dwellTimes.reduce((sum, time) => sum + time, 0) / dwellTimes.length
-      if (averageDwellTime < 50) { // Less than 50ms between keystrokes
+      if (averageDwellTime < 50) {
+        // Less than 50ms between keystrokes
         this.onSuspiciousActivity('Unusually fast typing detected', 'medium')
       }
     }
@@ -362,7 +370,8 @@ export class BehavioralAnalyzer {
    */
   private analyzeAnswerPattern(pattern: AnswerPattern): void {
     // Check for suspiciously fast answers
-    if (pattern.totalTimeSpent < 5000) { // Less than 5 seconds
+    if (pattern.totalTimeSpent < 5000) {
+      // Less than 5 seconds
       this.onSuspiciousActivity('Suspiciously fast answer submission', 'high')
     }
 
@@ -387,17 +396,19 @@ export class BehavioralAnalyzer {
    */
   private analyzeAnswerConsistency(): void {
     const recentPatterns = this.answerPatterns.slice(-10)
-    const times = recentPatterns.map(p => p.totalTimeSpent)
+    const times = recentPatterns.map((p) => p.totalTimeSpent)
     const timeVariance = this.calculateVariance(times)
 
     // Check for unusually consistent timing
-    if (timeVariance < 1000) { // Very low variance in answer times
+    if (timeVariance < 1000) {
+      // Very low variance in answer times
       this.onSuspiciousActivity('Unusually consistent answer timing across questions', 'medium')
     }
 
     // Check for pattern in fast answers
-    const fastAnswers = recentPatterns.filter(p => p.totalTimeSpent < 10000).length
-    if (fastAnswers > 7) { // More than 70% fast answers
+    const fastAnswers = recentPatterns.filter((p) => p.totalTimeSpent < 10000).length
+    if (fastAnswers > 7) {
+      // More than 70% fast answers
       this.onSuspiciousActivity('High percentage of fast answers detected', 'high')
     }
   }
@@ -409,7 +420,7 @@ export class BehavioralAnalyzer {
     if (numbers.length === 0) return 0
 
     const mean = numbers.reduce((sum, num) => sum + num, 0) / numbers.length
-    const squaredDiffs = numbers.map(num => Math.pow(num - mean, 2))
+    const squaredDiffs = numbers.map((num) => Math.pow(num - mean, 2))
     return squaredDiffs.reduce((sum, diff) => sum + diff, 0) / numbers.length
   }
 
@@ -425,11 +436,11 @@ export class BehavioralAnalyzer {
       sessionId: this.sessionId,
       averageMouseSpeed: this.calculateAverageMouseSpeed(),
       typingRhythm: this.getTypingRhythm(),
-      answerTimePattern: this.answerPatterns.map(p => p.totalTimeSpent),
+      answerTimePattern: this.answerPatterns.map((p) => p.totalTimeSpent),
       confidenceLevel: this.calculateOverallConfidence(),
       suspiciousActivities: flags,
       riskScore,
-      isHuman: this.assessHumanLikeness(flags, riskScore)
+      isHuman: this.assessHumanLikeness(flags, riskScore),
     }
   }
 
@@ -438,13 +449,17 @@ export class BehavioralAnalyzer {
    */
   private calculateBehavioralFlags(): BehavioralFlags {
     return {
-      suspiciouslyFastAnswers: this.answerPatterns.filter(p => p.totalTimeSpent < 5000).length,
-      suspiciouslySlow: this.answerPatterns.filter(p => p.totalTimeSpent > 300000).length,
-      unusualMousePatterns: this.mouseMovements.filter(m => m.velocity > 1000).length,
-      inconsistentTypingRhythm: this.keystrokePatterns.filter(k => k.dwellTime < 20 || k.dwellTime > 1000).length,
-      possibleExternalHelp: this.answerPatterns.filter(p => p.timeToFirstInteraction > p.totalTimeSpent * 0.8).length,
+      suspiciouslyFastAnswers: this.answerPatterns.filter((p) => p.totalTimeSpent < 5000).length,
+      suspiciouslySlow: this.answerPatterns.filter((p) => p.totalTimeSpent > 300000).length,
+      unusualMousePatterns: this.mouseMovements.filter((m) => m.velocity > 1000).length,
+      inconsistentTypingRhythm: this.keystrokePatterns.filter(
+        (k) => k.dwellTime < 20 || k.dwellTime > 1000
+      ).length,
+      possibleExternalHelp: this.answerPatterns.filter(
+        (p) => p.timeToFirstInteraction > p.totalTimeSpent * 0.8
+      ).length,
       roboticBehavior: 0, // Calculated separately
-      patternBreaks: 0 // Calculated separately
+      patternBreaks: 0, // Calculated separately
     }
   }
 
@@ -459,11 +474,11 @@ export class BehavioralAnalyzer {
       inconsistentTypingRhythm: 4,
       possibleExternalHelp: 6,
       roboticBehavior: 8,
-      patternBreaks: 3
+      patternBreaks: 3,
     }
 
     return Object.entries(flags).reduce((score, [key, value]) => {
-      return score + (value * weights[key as keyof typeof weights])
+      return score + value * weights[key as keyof typeof weights]
     }, 0)
   }
 
@@ -474,12 +489,10 @@ export class BehavioralAnalyzer {
     if (this.mouseMovements.length === 0) return 0
 
     const velocities = this.mouseMovements
-      .filter(m => m.eventType === 'move' && m.velocity > 0)
-      .map(m => m.velocity)
+      .filter((m) => m.eventType === 'move' && m.velocity > 0)
+      .map((m) => m.velocity)
 
-    return velocities.length > 0
-      ? velocities.reduce((sum, v) => sum + v, 0) / velocities.length
-      : 0
+    return velocities.length > 0 ? velocities.reduce((sum, v) => sum + v, 0) / velocities.length : 0
   }
 
   /**
@@ -487,8 +500,8 @@ export class BehavioralAnalyzer {
    */
   private getTypingRhythm(): number[] {
     return this.keystrokePatterns
-      .filter(k => k.dwellTime > 0)
-      .map(k => k.dwellTime)
+      .filter((k) => k.dwellTime > 0)
+      .map((k) => k.dwellTime)
       .slice(-20) // Last 20 keystrokes
   }
 
@@ -498,12 +511,16 @@ export class BehavioralAnalyzer {
   private calculateOverallConfidence(): number {
     if (this.answerPatterns.length === 0) return 0
 
-    const confidenceScores = this.answerPatterns.map(p => {
+    const confidenceScores = this.answerPatterns.map((p) => {
       switch (p.confidence) {
-        case 'high': return 3
-        case 'medium': return 2
-        case 'low': return 1
-        default: return 0
+        case 'high':
+          return 3
+        case 'medium':
+          return 2
+        case 'low':
+          return 1
+        default:
+          return 0
       }
     })
 
@@ -535,12 +552,12 @@ export class BehavioralAnalyzer {
         userId: this.userId,
         sessionId: this.sessionId,
         startTime: this.questionStartTime,
-        duration: Date.now() - this.questionStartTime
+        duration: Date.now() - this.questionStartTime,
       },
       mouseData: this.mouseMovements,
       keystrokeData: this.keystrokePatterns,
       answerData: this.answerPatterns,
-      profile: this.generateBehavioralProfile()
+      profile: this.generateBehavioralProfile(),
     }
   }
 }

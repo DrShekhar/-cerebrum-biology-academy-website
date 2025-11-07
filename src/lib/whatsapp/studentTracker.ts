@@ -351,7 +351,7 @@ export class StudentTracker {
     const today = new Date()
     today.setHours(0, 0, 0, 0)
 
-    let currentDate = new Date(today)
+    const currentDate = new Date(today)
     let streak = 0
 
     while (streak < 365) {
