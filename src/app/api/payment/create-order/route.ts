@@ -2,10 +2,16 @@ import { NextRequest, NextResponse } from 'next/server'
 import Razorpay from 'razorpay'
 import { prisma } from '@/lib/prisma'
 
-const razorpay = new Razorpay({
-  key_id: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID || '',
-  key_secret: process.env.RAZORPAY_KEY_SECRET || '',
-})
+// Lazy initialization - only create Razorpay instance when actually used
+function getRazorpayInstance() {
+  if (!process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID || !process.env.RAZORPAY_KEY_SECRET) {
+    throw new Error('Razorpay credentials not configured')
+  }
+  return new Razorpay({
+    key_id: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
+    key_secret: process.env.RAZORPAY_KEY_SECRET,
+  })
+}
 
 export async function POST(request: NextRequest) {
   try {
@@ -19,6 +25,8 @@ export async function POST(request: NextRequest) {
       console.error('Razorpay credentials not configured')
       return NextResponse.json({ error: 'Payment service not configured' }, { status: 503 })
     }
+
+    const razorpay = getRazorpayInstance()
 
     const booking = await prisma.demoBooking.findUnique({
       where: { id: bookingId },
