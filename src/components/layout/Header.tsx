@@ -6,9 +6,6 @@ import { usePathname } from 'next/navigation'
 import {
   Menu,
   X,
-  ChevronDown,
-  BookOpen,
-  Award,
   Phone,
   Play,
   BarChart3,
@@ -32,7 +29,6 @@ import { useAuth } from '@/hooks/useAuth'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isCoursesOpen, setIsCoursesOpen] = useState(false)
   const [isAuthOpen, setIsAuthOpen] = useState(false)
   const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(false)
   const [isSearchOpen, setIsSearchOpen] = useState(false)
@@ -42,18 +38,10 @@ const Header = () => {
   // Close mobile menu when route changes
   useEffect(() => {
     setIsMenuOpen(false)
-    setIsCoursesOpen(false)
     setIsAuthOpen(false)
     setIsBurgerMenuOpen(false)
     setIsSearchOpen(false)
   }, [pathname])
-
-  const courseLinks = [
-    { href: '/courses/class-11', label: 'Class 11th NEET', icon: BookOpen },
-    { href: '/courses/class-12', label: 'Class 12th NEET', icon: BookOpen },
-    { href: '/courses/neet-dropper', label: 'Dropper Program', icon: Award },
-    { href: '/courses/class-9-foundation', label: 'Early Bird (9th/10th)', icon: BookOpen },
-  ]
 
   const mainNavigation = [
     {
@@ -66,8 +54,6 @@ const Header = () => {
     {
       href: '/courses',
       label: 'Courses',
-      hasDropdown: true,
-      items: courseLinks,
       priority: 2,
     },
     {
@@ -163,76 +149,7 @@ const Header = () => {
           >
             {mainNavigation.map((item, index) => (
               <div key={index} className="relative">
-                {item.hasDropdown ? (
-                  <div
-                    className="relative"
-                    onMouseEnter={() => {
-                      if (item.label === 'Courses') setIsCoursesOpen(true)
-                    }}
-                    onMouseLeave={() => {
-                      if (item.label === 'Courses') setIsCoursesOpen(false)
-                    }}
-                  >
-                    <Link
-                      href={item.href!}
-                      className={`flex items-center space-x-1 font-medium transition-colors ${
-                        isActive(item.href!) ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'
-                      }`}
-                      aria-current={isActive(item.href!) ? 'page' : undefined}
-                      aria-haspopup="true"
-                      aria-expanded={isCoursesOpen}
-                    >
-                      <span>{item.label}</span>
-                      <ChevronDown className="w-4 h-4" aria-hidden="true" />
-                    </Link>
-
-                    <AnimatePresence>
-                      {item.label === 'Courses' && isCoursesOpen && (
-                        <motion.div
-                          initial={{ opacity: 0, y: -10 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          exit={{ opacity: 0, y: -10 }}
-                          transition={{ duration: 0.2 }}
-                          className="absolute top-full left-0 mt-2 bg-white rounded-lg shadow-xl border border-gray-200 py-3 xs:py-4 z-50 w-64 xs:w-72 min-w-[240px]"
-                          role="menu"
-                          aria-label="Course options"
-                        >
-                          <div className="px-3 xs:px-4">
-                            <div className="mb-2 xs:mb-3">
-                              <h3 className="text-xs xs:text-sm font-semibold text-gray-900 mb-1">
-                                NEET Biology Courses
-                              </h3>
-                              <p className="text-[10px] xs:text-xs text-gray-600">
-                                Choose your program
-                              </p>
-                            </div>
-                            <div className="space-y-1.5 xs:space-y-2">
-                              {item.items?.map((subItem, subIndex) => {
-                                const Icon = subItem.icon
-                                return (
-                                  <Link
-                                    key={subIndex}
-                                    href={subItem.href}
-                                    className="flex items-center space-x-2 xs:space-x-3 p-2.5 xs:p-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors rounded-lg"
-                                    role="menuitem"
-                                  >
-                                    <Icon
-                                      className="w-4 xs:w-5 h-4 xs:h-5 flex-shrink-0"
-                                      aria-hidden="true"
-                                    />
-                                    <span className="font-medium text-xs xs:text-sm">
-                                      {subItem.label}
-                                    </span>
-                                  </Link>
-                                )
-                              })}
-                            </div>
-                          </div>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </div>
-                ) : item.highlight ? (
+                {item.highlight ? (
                   <Link
                     href={item.href!}
                     className={`flex items-center space-x-2 font-semibold px-4 py-2 rounded-lg bg-orange-100 text-orange-700 hover:bg-orange-200 border border-orange-300 transition-all duration-300 ${
@@ -334,68 +251,7 @@ const Header = () => {
                 {/* Regular Navigation Items */}
                 {mainNavigation.map((item, index) => (
                   <div key={index}>
-                    {item.hasDropdown ? (
-                      <div>
-                        <div className="flex items-center">
-                          <Link
-                            href={item.href!}
-                            className={`flex-1 font-medium py-2 transition-colors flex items-center space-x-2 ${
-                              isActive(item.href!)
-                                ? 'text-blue-600'
-                                : 'text-gray-700 hover:text-blue-600'
-                            }`}
-                          >
-                            {item.icon && <item.icon className="w-4 h-4" />}
-                            <span>{item.label}</span>
-                            {item.badge && (
-                              <span className="ml-1 bg-green-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">
-                                {item.badge}
-                              </span>
-                            )}
-                          </Link>
-                          <button
-                            onClick={() => {
-                              if (item.label === 'Courses') setIsCoursesOpen(!isCoursesOpen)
-                            }}
-                            className="p-3 text-gray-500 hover:text-blue-600 min-h-[44px] min-w-[44px] flex items-center justify-center"
-                            aria-label={`Toggle ${item.label} submenu`}
-                            aria-expanded={item.label === 'Courses' && isCoursesOpen}
-                            aria-haspopup="menu"
-                          >
-                            <ChevronDown
-                              className={`w-4 h-4 transition-transform ${
-                                item.label === 'Courses' && isCoursesOpen ? 'rotate-180' : ''
-                              }`}
-                            />
-                          </button>
-                        </div>
-
-                        <AnimatePresence>
-                          {item.label === 'Courses' && isCoursesOpen && (
-                            <motion.div
-                              initial={{ opacity: 0, height: 0 }}
-                              animate={{ opacity: 1, height: 'auto' }}
-                              exit={{ opacity: 0, height: 0 }}
-                              className="ml-3 xs:ml-4 mt-1.5 xs:mt-2 space-y-1.5 xs:space-y-2"
-                            >
-                              {item.items?.map((subItem, subIndex) => {
-                                const Icon = subItem.icon
-                                return (
-                                  <Link
-                                    key={subIndex}
-                                    href={subItem.href}
-                                    className="flex items-center space-x-2 xs:space-x-3 text-gray-600 hover:text-blue-600 py-1.5 xs:py-2 transition-colors"
-                                  >
-                                    <Icon className="w-3.5 xs:w-4 h-3.5 xs:h-4 flex-shrink-0" />
-                                    <span className="text-xs xs:text-sm">{subItem.label}</span>
-                                  </Link>
-                                )
-                              })}
-                            </motion.div>
-                          )}
-                        </AnimatePresence>
-                      </div>
-                    ) : item.highlight ? (
+                    {item.highlight ? (
                       <Link
                         href={item.href!}
                         className="flex items-center space-x-2 font-semibold px-4 py-3 rounded-lg bg-orange-100 text-orange-700 hover:bg-orange-200 border border-orange-300 transition-all duration-300 min-h-[48px]"
