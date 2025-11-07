@@ -22,6 +22,7 @@ import {
   Sparkles,
   Trophy,
   ArrowRight,
+  Search,
 } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { BurgerMenu } from '@/components/navigation/BurgerMenu'
@@ -74,13 +75,6 @@ const Header = () => {
       label: 'Faculty',
       icon: Users,
       priority: 3,
-    },
-    {
-      href: '/demo-booking',
-      label: 'Free Demo',
-      icon: Play,
-      highlight: true,
-      priority: 4,
     },
   ]
 
@@ -272,8 +266,8 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Right Section - Search + CTA Buttons */}
-          <div className="flex items-center space-x-3">
+          {/* Right Section - Enhanced CTA Layout */}
+          <div className="flex items-center gap-3">
             {/* Search Menu */}
             <SearchMenu
               isOpen={isSearchOpen}
@@ -281,37 +275,43 @@ const Header = () => {
               onClose={() => setIsSearchOpen(false)}
             />
 
-            {/* Authentication & CTA Buttons */}
-            <div className="hidden lg:flex items-center space-x-3">
+            {/* Desktop CTA Buttons */}
+            <div className="hidden lg:flex items-center gap-3">
               {/* Student Dashboard Button (for authenticated users) */}
-              {isAuthenticated && (
+              {isAuthenticated ? (
                 <Link
                   href="/student/dashboard"
-                  className="flex items-center space-x-2 px-5 py-2.5 rounded-full font-semibold transition-all duration-300 bg-blue-600 hover:bg-blue-700 text-white shadow-md hover:shadow-lg whitespace-nowrap text-sm"
+                  className="flex items-center gap-2 px-6 py-3 rounded-full font-semibold transition-all duration-300 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white shadow-lg hover:shadow-xl hover:scale-[1.02] whitespace-nowrap"
                 >
                   <BarChart3 className="w-4 h-4" />
                   <span>My Dashboard</span>
                 </Link>
-              )}
-
-              {/* Auth Buttons (show for non-authenticated users) */}
-              {!isAuthenticated && (
+              ) : (
                 <>
-                  {/* Primary CTA - Enroll Now */}
+                  {/* Free Demo - Ghost Button Style */}
                   <Link
-                    href={primaryCTA.href}
-                    className={`flex items-center space-x-2 px-6 py-2.5 rounded-full font-bold transition-all duration-300 shadow-lg hover:shadow-xl whitespace-nowrap text-sm ${primaryCTA.className}`}
+                    href="/demo-booking"
+                    className="flex items-center gap-2 px-5 py-2.5 rounded-full font-medium transition-all duration-300 border-2 border-green-600 text-green-600 hover:bg-green-50 hover:border-green-700 hover:text-green-700 whitespace-nowrap group"
                   >
-                    <span>{primaryCTA.label}</span>
-                    <ArrowRight className="w-4 h-4" />
+                    <Play className="w-4 h-4 transition-transform group-hover:scale-110" />
+                    <span>Free Demo</span>
                   </Link>
 
-                  {/* Combined Sign In Button */}
+                  {/* Primary CTA - Enroll Now (Enhanced) */}
+                  <Link
+                    href={primaryCTA.href}
+                    className="flex items-center gap-2 px-8 py-3 rounded-full font-bold transition-all duration-300 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white shadow-lg hover:shadow-xl hover:scale-[1.02] whitespace-nowrap group"
+                  >
+                    <span>Enroll Now</span>
+                    <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                  </Link>
+
+                  {/* Sign In - Minimal Style */}
                   <Link
                     href="/auth/signin"
-                    className="flex items-center space-x-2 px-5 py-2.5 rounded-full font-semibold transition-all duration-300 bg-blue-600 hover:bg-blue-700 text-white shadow-md hover:shadow-lg whitespace-nowrap text-sm"
+                    className="flex items-center gap-2 px-5 py-2.5 rounded-full font-medium transition-all duration-300 text-blue-700 hover:bg-blue-50 hover:text-blue-800 whitespace-nowrap group"
                   >
-                    <UserPlus className="w-4 h-4" />
+                    <UserPlus className="w-4 h-4 transition-transform group-hover:scale-110" />
                     <span>Sign In</span>
                   </Link>
                 </>
@@ -427,32 +427,38 @@ const Header = () => {
                 {/* Mobile CTA Buttons */}
                 <div className="pt-3 xs:pt-4 border-t border-gray-200 space-y-3">
                   {/* Student Dashboard Button (for authenticated users) */}
-                  {isAuthenticated && (
+                  {isAuthenticated ? (
                     <Link
                       href="/student/dashboard"
-                      className="flex items-center justify-center space-x-2 bg-blue-600 text-white px-6 py-4 rounded-full font-bold hover:bg-blue-700 transition-all duration-300 min-h-[52px] shadow-lg"
+                      className="flex items-center justify-center space-x-2 bg-gradient-to-r from-green-600 to-green-700 text-white px-6 py-4 rounded-full font-bold hover:from-green-700 hover:to-green-800 transition-all duration-300 min-h-[52px] shadow-lg"
                     >
                       <BarChart3 className="w-5 h-5" />
                       <span>My Dashboard</span>
                     </Link>
-                  )}
-
-                  {/* Auth Buttons (show for non-authenticated users) */}
-                  {!isAuthenticated && (
+                  ) : (
                     <>
+                      {/* Free Demo - Ghost Style */}
+                      <Link
+                        href="/demo-booking"
+                        className="flex items-center justify-center space-x-2 border-2 border-green-600 text-green-600 px-6 py-4 rounded-full font-bold hover:bg-green-50 transition-all duration-300 min-h-[52px]"
+                      >
+                        <Play className="w-5 h-5" />
+                        <span>Free Demo</span>
+                      </Link>
+
                       {/* Primary CTA - Enroll Now */}
                       <Link
                         href={primaryCTA.href}
-                        className="flex items-center justify-center space-x-2 bg-green-600 text-white px-6 py-4 rounded-full font-bold hover:bg-green-700 transition-all duration-300 min-h-[52px] shadow-lg"
+                        className="flex items-center justify-center space-x-2 bg-gradient-to-r from-green-600 to-green-700 text-white px-6 py-4 rounded-full font-bold hover:from-green-700 hover:to-green-800 transition-all duration-300 min-h-[52px] shadow-lg"
                       >
                         <span>{primaryCTA.label}</span>
                         <ArrowRight className="w-5 h-5" />
                       </Link>
 
-                      {/* Combined Sign In Button */}
+                      {/* Sign In - Minimal Style */}
                       <Link
                         href="/auth/signin"
-                        className="flex items-center justify-center space-x-2 bg-blue-600 text-white px-6 py-4 rounded-full font-bold hover:bg-blue-700 transition-all duration-300 min-h-[52px] shadow-lg"
+                        className="flex items-center justify-center space-x-2 text-blue-700 hover:bg-blue-50 px-6 py-4 rounded-full font-bold transition-all duration-300 min-h-[52px] border-2 border-blue-700 hover:border-blue-800"
                       >
                         <UserPlus className="w-5 h-5" />
                         <span>Sign In</span>
