@@ -26,13 +26,58 @@ import {
   ChevronUp,
   AlertCircle,
   Info,
+  Trophy,
+  TrendingUp,
+  Lock,
+  Banknote,
+  Wallet,
+  BadgeCheck,
+  RefreshCw,
+  Mail,
 } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
+import ApplicationForm from '@/components/admissions/ApplicationForm'
 
 export default function AdmissionsPage() {
   const [activeStep, setActiveStep] = useState(0)
   const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null)
+  const [showDocSpecs, setShowDocSpecs] = useState(false)
+  const [selectedBatch, setSelectedBatch] = useState<string | null>(null)
+
+  // WhatsApp Configuration
+  const whatsappNumber = '+919876543210'
+  const whatsappLink = `https://wa.me/${whatsappNumber.replace(/\+/g, '')}`
+
+  // Scroll to application form
+  const scrollToApplicationForm = () => {
+    const formElement = document.getElementById('application-form')
+    if (formElement) {
+      formElement.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }
+
+  // Handle batch selection
+  const handleBatchSelection = (batchName: string) => {
+    setSelectedBatch(batchName)
+    scrollToApplicationForm()
+  }
+
+  // Handle WhatsApp contact
+  const handleWhatsAppContact = (message?: string) => {
+    const defaultMessage = 'Hi, I need help with the admission process at Cerebrum Biology Academy.'
+    const encodedMessage = encodeURIComponent(message || defaultMessage)
+    window.open(`${whatsappLink}?text=${encodedMessage}`, '_blank', 'noopener,noreferrer')
+  }
+
+  // Handle brochure download
+  const handleBrochureDownload = () => {
+    // Create a dummy download - in production, this would be a real brochure file
+    const link = document.createElement('a')
+    link.href = '/brochure/cerebrum-admissions-brochure.pdf'
+    link.download = 'Cerebrum-Biology-Academy-Admissions-Brochure.pdf'
+    link.click()
+  }
 
   const admissionSteps = [
     {
@@ -218,6 +263,51 @@ export default function AdmissionsPage() {
     },
   ]
 
+  const paymentOptions = [
+    {
+      title: 'EMI Plans',
+      description: 'Flexible monthly installments',
+      icon: CreditCard,
+      color: 'bg-blue-500',
+      features: [
+        { duration: '3 Months', amount: '₹28,333', period: 'per month' },
+        { duration: '6 Months', amount: '₹14,167', period: 'per month' },
+        { duration: '12 Months', amount: '₹7,083', period: 'per month' },
+      ],
+      badge: 'No Cost EMI',
+    },
+    {
+      title: 'Payment Methods',
+      description: 'Multiple secure payment options',
+      icon: Wallet,
+      color: 'bg-green-500',
+      features: [
+        { name: 'UPI', desc: 'Google Pay, PhonePe, Paytm' },
+        { name: 'Cards', desc: 'Credit & Debit Cards' },
+        { name: 'Net Banking', desc: 'All major banks' },
+        { name: 'Cheque', desc: 'DD/Cheque accepted' },
+      ],
+    },
+    {
+      title: 'Installment Plans',
+      description: 'Pay in parts without interest',
+      icon: Banknote,
+      color: 'bg-purple-500',
+      features: [
+        { plan: 'Two Parts', amount: '50% + 50%', timing: 'At enrollment & mid-term' },
+        { plan: 'Three Parts', amount: '40% + 30% + 30%', timing: 'Quarterly basis' },
+        { plan: 'Custom Plan', amount: 'Discuss with counselor', timing: 'Based on your needs' },
+      ],
+    },
+  ]
+
+  const paymentPartners = [
+    { name: 'Razorpay', trusted: true },
+    { name: 'Paytm', trusted: true },
+    { name: 'PhonePe', trusted: true },
+    { name: 'Google Pay', trusted: true },
+  ]
+
   const faqs = [
     {
       question: 'What is the admission process timeline?',
@@ -292,6 +382,81 @@ export default function AdmissionsPage() {
     },
   ]
 
+  const testimonials = [
+    {
+      name: 'Priya Sharma',
+      batch: 'Dropper Batch 2024',
+      previousScore: 480,
+      newScore: 635,
+      rank: 'AIR 8,450',
+      college: 'AIIMS Bhubaneswar',
+      quote:
+        "The personalized attention and structured approach helped me improve my rank by 50,000. Dr. Shekhar's Biology classes were game-changing!",
+      rating: 5,
+      improvement: '+155',
+    },
+    {
+      name: 'Arjun Patel',
+      batch: 'Target Batch 2024',
+      previousScore: null,
+      newScore: 670,
+      rank: 'AIR 3,240',
+      college: 'JIPMER Puducherry',
+      quote:
+        'Starting from Class 12th with Cerebrum was the best decision. The foundation building approach and regular tests kept me on track throughout the year.',
+      rating: 5,
+      improvement: 'First Attempt',
+    },
+    {
+      name: 'Sneha Reddy',
+      batch: 'Dropper Batch 2024',
+      previousScore: 410,
+      newScore: 598,
+      rank: 'AIR 15,680',
+      college: 'GMC Nagpur',
+      quote:
+        'After failing in my first attempt, I was demotivated. The faculty here not only improved my concepts but also rebuilt my confidence. Biology went from my weakest to strongest subject!',
+      rating: 5,
+      improvement: '+188',
+    },
+    {
+      name: 'Rahul Kumar',
+      batch: 'Foundation Batch 2023-24',
+      previousScore: null,
+      newScore: 685,
+      rank: 'AIR 1,840',
+      college: 'AIIMS Rishikesh',
+      quote:
+        'Two years of systematic preparation with detailed concept building gave me a strong foundation. The regular doubt sessions and personalized study plan were incredibly helpful.',
+      rating: 5,
+      improvement: 'Top 2K',
+    },
+    {
+      name: 'Ananya Singh',
+      batch: 'Crash Course 2024',
+      previousScore: 520,
+      newScore: 612,
+      rank: 'AIR 11,200',
+      college: 'KGMC Lucknow',
+      quote:
+        'With just 6 months before NEET, I needed intensive preparation. The crash course focused on high-yield topics and smart revision strategies that maximized my score.',
+      rating: 5,
+      improvement: '+92',
+    },
+    {
+      name: 'Vikram Joshi',
+      batch: 'Target Batch 2024',
+      previousScore: null,
+      newScore: 642,
+      rank: 'AIR 6,890',
+      college: 'BHU Varanasi',
+      quote:
+        'The test series and detailed performance analysis helped me identify and work on my weak areas. Biology teaching methodology here is outstanding and result-oriented.',
+      rating: 5,
+      improvement: 'Top 7K',
+    },
+  ]
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
@@ -326,6 +491,7 @@ export default function AdmissionsPage() {
                 variant="outline"
                 size="lg"
                 className="border-white text-white hover:bg-white hover:text-blue-600 w-full sm:w-auto"
+                onClick={handleBrochureDownload}
               >
                 <Download className="w-5 h-5 mr-2" />
                 Download Brochure
@@ -334,6 +500,7 @@ export default function AdmissionsPage() {
                 variant="primary"
                 size="lg"
                 className="bg-white text-blue-600 hover:bg-gray-100 w-full sm:w-auto"
+                onClick={scrollToApplicationForm}
               >
                 <Phone className="w-5 h-5 mr-2" />
                 Start Application
@@ -445,13 +612,23 @@ export default function AdmissionsPage() {
 
                         <div className="mt-4 sm:mt-6 flex flex-col sm:flex-row gap-3 sm:gap-4">
                           {index === 0 && (
-                            <Button variant="primary" size="lg" className="w-full sm:w-auto">
+                            <Button
+                              variant="primary"
+                              size="lg"
+                              className="w-full sm:w-auto"
+                              onClick={scrollToApplicationForm}
+                            >
                               <FileText className="w-5 h-5 mr-2 flex-shrink-0" />
                               <span className="truncate">Start Application</span>
                             </Button>
                           )}
-                          <Button variant="outline" size="lg" className="w-full sm:w-auto">
-                            <Phone className="w-5 h-5 mr-2 flex-shrink-0" />
+                          <Button
+                            variant="outline"
+                            size="lg"
+                            className="w-full sm:w-auto"
+                            onClick={() => handleWhatsAppContact()}
+                          >
+                            <MessageSquare className="w-5 h-5 mr-2 flex-shrink-0" />
                             <span className="truncate">Get Help</span>
                           </Button>
                         </div>
@@ -502,6 +679,69 @@ export default function AdmissionsPage() {
                     </li>
                   ))}
                 </ul>
+
+                {req.category === 'Documents Required' && (
+                  <div className="mt-6 pt-6 border-t border-gray-200">
+                    <button
+                      onClick={() => setShowDocSpecs(!showDocSpecs)}
+                      className="flex items-center text-blue-600 hover:text-blue-700 transition-colors group"
+                    >
+                      <Info className="w-4 h-4 mr-2" />
+                      <span className="text-sm font-medium">Document Specifications</span>
+                      <ChevronDown
+                        className={`w-4 h-4 ml-1 transition-transform ${showDocSpecs ? 'rotate-180' : ''}`}
+                      />
+                    </button>
+
+                    <AnimatePresence>
+                      {showDocSpecs && (
+                        <motion.div
+                          className="mt-4 space-y-3"
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: 'auto' }}
+                          exit={{ opacity: 0, height: 0 }}
+                          transition={{ duration: 0.3 }}
+                        >
+                          <div className="bg-blue-50 rounded-lg p-4">
+                            <p className="text-xs text-gray-600 mb-2 font-medium">
+                              File Format Requirements:
+                            </p>
+                            <ul className="space-y-1 text-xs text-gray-600">
+                              <li className="flex items-start">
+                                <span className="mr-2">•</span>
+                                <span>Accepted formats: PDF, JPG, PNG</span>
+                              </li>
+                              <li className="flex items-start">
+                                <span className="mr-2">•</span>
+                                <span>Maximum file size: 5MB per document</span>
+                              </li>
+                              <li className="flex items-start">
+                                <span className="mr-2">•</span>
+                                <span>Minimum resolution: 300 DPI for scanned documents</span>
+                              </li>
+                              <li className="flex items-start">
+                                <span className="mr-2">•</span>
+                                <span>Documents must be clear and legible</span>
+                              </li>
+                              <li className="flex items-start">
+                                <span className="mr-2">•</span>
+                                <span>All certificates must be valid and attested</span>
+                              </li>
+                            </ul>
+                          </div>
+
+                          <div className="flex items-start gap-2 text-xs text-gray-500">
+                            <Shield className="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" />
+                            <span>
+                              All documents are securely stored and protected with 256-bit
+                              encryption
+                            </span>
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                )}
               </motion.div>
             ))}
           </div>
@@ -570,12 +810,162 @@ export default function AdmissionsPage() {
                 <Button
                   variant={batch.popular ? 'primary' : 'outline'}
                   className="w-full text-sm sm:text-base"
+                  onClick={() => handleBatchSelection(batch.name)}
                 >
                   Choose This Batch
                 </Button>
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+      {/* Flexible Payment Options */}
+      <section className="py-12 sm:py-16 md:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-10 sm:mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
+              Flexible Payment Options
+            </h2>
+            <p className="text-base sm:text-lg md:text-xl text-gray-600">
+              Multiple payment plans to suit your financial needs
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-10">
+            {paymentOptions.map((option, index) => (
+              <motion.div
+                key={index}
+                className="bg-white rounded-2xl sm:rounded-3xl shadow-lg p-6 sm:p-8 relative overflow-hidden"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                {option.badge && (
+                  <div className="absolute top-4 right-4">
+                    <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">
+                      {option.badge}
+                    </span>
+                  </div>
+                )}
+
+                <div
+                  className={`w-12 h-12 sm:w-14 sm:h-14 ${option.color} rounded-xl flex items-center justify-center mb-4`}
+                >
+                  <option.icon className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
+                </div>
+
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">{option.title}</h3>
+                <p className="text-sm text-gray-600 mb-6">{option.description}</p>
+
+                <div className="space-y-4">
+                  {option.features.map((feature, idx) => (
+                    <div key={idx} className="border-l-2 border-blue-500 pl-4">
+                      {feature.duration ? (
+                        <>
+                          <div className="flex items-baseline justify-between mb-1">
+                            <span className="text-sm font-semibold text-gray-900">
+                              {feature.duration}
+                            </span>
+                            <span className="text-lg font-bold text-blue-600">
+                              {feature.amount}
+                            </span>
+                          </div>
+                          <p className="text-xs text-gray-500">{feature.period}</p>
+                        </>
+                      ) : feature.name ? (
+                        <>
+                          <div className="text-sm font-semibold text-gray-900 mb-1">
+                            {feature.name}
+                          </div>
+                          <p className="text-xs text-gray-500">{feature.desc}</p>
+                        </>
+                      ) : (
+                        <>
+                          <div className="text-sm font-semibold text-gray-900 mb-1">
+                            {feature.plan}
+                          </div>
+                          <p className="text-xs text-gray-600 mb-1">{feature.amount}</p>
+                          <p className="text-xs text-gray-500">{feature.timing}</p>
+                        </>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div
+            className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl sm:rounded-3xl p-6 sm:p-8"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+          >
+            <div className="text-center mb-6">
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">
+                Trusted Payment Partners
+              </h3>
+              <p className="text-sm text-gray-600">
+                Secure transactions powered by leading payment gateways
+              </p>
+            </div>
+
+            <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-8 mb-6">
+              {paymentPartners.map((partner, index) => (
+                <div key={index} className="flex items-center gap-2">
+                  <BadgeCheck className="w-5 h-5 text-green-600" />
+                  <span className="text-sm font-medium text-gray-700">{partner.name}</span>
+                </div>
+              ))}
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div className="flex items-center gap-3 bg-white rounded-xl p-4">
+                <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Shield className="w-5 h-5 text-green-600" />
+                </div>
+                <div>
+                  <p className="text-xs font-semibold text-gray-900">Secure Payment</p>
+                  <p className="text-xs text-gray-500">256-bit SSL encryption</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3 bg-white rounded-xl p-4">
+                <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Lock className="w-5 h-5 text-blue-600" />
+                </div>
+                <div>
+                  <p className="text-xs font-semibold text-gray-900">100% Data Privacy</p>
+                  <p className="text-xs text-gray-500">Your info is safe</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3 bg-white rounded-xl p-4">
+                <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <RefreshCw className="w-5 h-5 text-purple-600" />
+                </div>
+                <div>
+                  <p className="text-xs font-semibold text-gray-900">Easy Refund Policy</p>
+                  <p className="text-xs text-gray-500">Hassle-free returns</p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.div
+            className="mt-6 text-center text-sm text-gray-600"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+          >
+            <p className="mb-2">
+              Example: Target Batch (₹85,000) | 3 months: ₹28,333 × 3 | 6 months: ₹14,167 × 6 | 12
+              months: ₹7,083 × 12
+            </p>
+            <p className="text-xs text-gray-500">
+              Contact our counselors for customized payment plans tailored to your needs
+            </p>
+          </motion.div>
         </div>
       </section>
 
@@ -613,6 +1003,95 @@ export default function AdmissionsPage() {
                 </p>
                 <div className="text-xl sm:text-2xl font-bold text-green-600">
                   {scholarship.benefit}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Success Stories / Testimonials Section */}
+      <section className="py-12 sm:py-16 md:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-10 sm:mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
+              Success Stories
+            </h2>
+            <p className="text-base sm:text-lg md:text-xl text-gray-600">
+              Real results from real students
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+            {testimonials.map((testimonial, index) => (
+              <motion.div
+                key={index}
+                className="bg-gradient-to-br from-white to-gray-50 rounded-2xl sm:rounded-3xl shadow-lg p-6 sm:p-8 hover:shadow-xl transition-shadow"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                {/* Student Info Header */}
+                <div className="flex items-start gap-4 mb-4 sm:mb-6">
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Award className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-1">
+                      {testimonial.name}
+                    </h3>
+                    <p className="text-xs sm:text-sm text-blue-600 font-medium mb-2">
+                      {testimonial.batch}
+                    </p>
+                    <div className="flex gap-1">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <Star
+                          key={i}
+                          className="w-3 h-3 sm:w-4 sm:h-4 fill-yellow-400 text-yellow-400"
+                        />
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Quote */}
+                <div className="mb-4 sm:mb-6">
+                  <p className="text-sm sm:text-base text-gray-700 italic leading-relaxed">
+                    "{testimonial.quote}"
+                  </p>
+                </div>
+
+                {/* Results */}
+                <div className="border-t border-gray-200 pt-4 sm:pt-6 grid grid-cols-2 gap-4">
+                  <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-3 sm:p-4">
+                    <div className="flex items-center gap-2 mb-1">
+                      <TrendingUp className="w-4 h-4 text-green-600" />
+                      <span className="text-xs text-gray-600 font-medium">Score</span>
+                    </div>
+                    <div className="text-base sm:text-lg font-bold text-gray-900">
+                      {testimonial.previousScore ? (
+                        <span>
+                          {testimonial.previousScore} → {testimonial.newScore}
+                        </span>
+                      ) : (
+                        <span>{testimonial.newScore}</span>
+                      )}
+                    </div>
+                    <div className="text-xs sm:text-sm text-green-600 font-semibold">
+                      {testimonial.improvement}
+                    </div>
+                  </div>
+
+                  <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-xl p-3 sm:p-4">
+                    <div className="flex items-center gap-2 mb-1">
+                      <Trophy className="w-4 h-4 text-blue-600" />
+                      <span className="text-xs text-gray-600 font-medium">Rank</span>
+                    </div>
+                    <div className="text-base sm:text-lg font-bold text-gray-900 mb-1">
+                      {testimonial.rank}
+                    </div>
+                    <div className="text-xs text-gray-600 truncate">{testimonial.college}</div>
+                  </div>
                 </div>
               </motion.div>
             ))}
@@ -692,20 +1171,20 @@ export default function AdmissionsPage() {
               variant="outline"
               size="xl"
               className="border-white text-white hover:bg-white hover:text-green-600 w-full sm:w-auto"
+              onClick={handleBrochureDownload}
             >
               <Download className="w-5 h-5 mr-2" />
               Download Application
             </Button>
-            <Link href="/contact" className="w-full sm:w-auto">
-              <Button
-                variant="primary"
-                size="xl"
-                className="bg-white text-green-600 hover:bg-gray-100 w-full"
-              >
-                Apply Now
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
-            </Link>
+            <Button
+              variant="primary"
+              size="xl"
+              className="bg-white text-green-600 hover:bg-gray-100 w-full sm:w-auto"
+              onClick={scrollToApplicationForm}
+            >
+              Apply Now
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Button>
           </div>
 
           <div className="mt-10 sm:mt-12 grid grid-cols-3 gap-4 sm:gap-6 md:gap-8 text-center">
@@ -726,6 +1205,121 @@ export default function AdmissionsPage() {
           </div>
         </div>
       </section>
+
+      {/* Application Form Section */}
+      <section id="application-form" className="py-12 sm:py-16 md:py-20 bg-white scroll-mt-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-10 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
+              Start Your Application
+            </h2>
+            <p className="text-base sm:text-lg text-gray-600">
+              {selectedBatch
+                ? `You've selected: ${selectedBatch}. Fill out the form below to begin your admission process.`
+                : 'Fill out the form below to begin your admission process'}
+            </p>
+          </div>
+
+          {/* Application Form Component */}
+          <ApplicationForm />
+        </div>
+      </section>
+
+      {/* Contact Information Section */}
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-blue-600 to-purple-600">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-10 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 sm:mb-4">
+              Need Help with Admissions?
+            </h2>
+            <p className="text-base sm:text-lg text-blue-100">
+              Our admission counselors are here to assist you
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+            <motion.a
+              href={`tel:${whatsappNumber}`}
+              className="bg-white/10 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8 text-center hover:bg-white/20 transition-all duration-300 cursor-pointer group"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-white/30 transition-colors">
+                <Phone className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
+              </div>
+              <h3 className="text-lg sm:text-xl font-bold text-white mb-2">Call Us</h3>
+              <p className="text-blue-100 text-sm sm:text-base mb-2">Speak with our counselors</p>
+              <p className="text-white font-semibold text-base sm:text-lg">+91 9876543210</p>
+            </motion.a>
+
+            <motion.button
+              onClick={() => handleWhatsAppContact()}
+              className="bg-white/10 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8 text-center hover:bg-white/20 transition-all duration-300 cursor-pointer group"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-white/30 transition-colors">
+                <MessageSquare className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
+              </div>
+              <h3 className="text-lg sm:text-xl font-bold text-white mb-2">WhatsApp</h3>
+              <p className="text-blue-100 text-sm sm:text-base mb-2">Chat with us instantly</p>
+              <p className="text-white font-semibold text-base sm:text-lg">Click to Chat</p>
+            </motion.button>
+
+            <motion.a
+              href="mailto:admissions@cerebrumbiologyacademy.com"
+              className="bg-white/10 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8 text-center hover:bg-white/20 transition-all duration-300 cursor-pointer group"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-white/30 transition-colors">
+                <Mail className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
+              </div>
+              <h3 className="text-lg sm:text-xl font-bold text-white mb-2">Email Us</h3>
+              <p className="text-blue-100 text-sm sm:text-base mb-2">Send us your queries</p>
+              <p className="text-white font-semibold text-xs sm:text-sm break-all">
+                admissions@cerebrumbiologyacademy.com
+              </p>
+            </motion.a>
+          </div>
+
+          <div className="mt-10 sm:mt-12 text-center">
+            <p className="text-blue-100 text-sm sm:text-base mb-4">
+              Office Hours: Monday - Saturday, 9:00 AM - 7:00 PM
+            </p>
+            <div className="flex flex-wrap justify-center gap-4 text-white text-sm">
+              <div className="flex items-center gap-2">
+                <CheckCircle className="w-4 h-4" />
+                <span>Free Counseling</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle className="w-4 h-4" />
+                <span>Instant Responses</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle className="w-4 h-4" />
+                <span>Expert Guidance</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Floating WhatsApp Button */}
+      <motion.button
+        onClick={() => handleWhatsAppContact()}
+        className="fixed bottom-6 right-6 w-14 h-14 sm:w-16 sm:h-16 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-2xl flex items-center justify-center z-50 group transition-all duration-300"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 1 }}
+      >
+        <MessageSquare className="w-6 h-6 sm:w-7 sm:h-7" />
+        <span className="absolute right-full mr-3 bg-gray-900 text-white px-3 py-2 rounded-lg text-sm font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+          Chat on WhatsApp
+        </span>
+      </motion.button>
     </div>
   )
 }
