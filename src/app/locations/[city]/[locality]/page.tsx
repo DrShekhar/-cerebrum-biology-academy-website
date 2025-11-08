@@ -6,7 +6,6 @@ import { generateLocalityMetadata } from '@/lib/seo/localityMetadata'
 import { generateAllSchemas } from '@/lib/seo/localitySchema'
 import LocalityHero from '@/components/localities/LocalityHero'
 import LocalityFAQ from '@/components/localities/LocalityFAQ'
-import { PricingDisplay } from '@/components/ui/PricingDisplay'
 import {
   MapPin,
   Train,
@@ -298,11 +297,59 @@ export default function LocalityPage({ params }: LocalityPageProps) {
           </p>
 
           <div className="bg-white rounded-3xl shadow-xl p-8">
-            <PricingDisplay
-              courseId="neet-foundation-comprehensive"
-              showCompetitiveAdvantage={true}
-              onEnrollClick={() => (window.location.href = '/admissions')}
-            />
+            {/* Pricing Overview */}
+            <div className="text-center mb-8">
+              <div className="text-4xl font-bold text-blue-600 mb-2">₹48,000 - ₹98,000</div>
+              <p className="text-gray-600 mb-4">
+                Per year • Choose from 3 tiers based on your needs
+              </p>
+
+              <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-6 inline-block">
+                <div className="flex items-center mb-2">
+                  <Award className="w-5 h-5 text-green-600 mr-2" />
+                  <span className="font-medium text-green-800">Best Value in {locality.city}</span>
+                </div>
+                <p className="text-sm text-green-700">
+                  Starting at ₹48K vs competitors' ₹60K+ for similar programs
+                </p>
+              </div>
+            </div>
+
+            {/* Key Features */}
+            <div className="grid md:grid-cols-3 gap-6 mb-8">
+              <div className="text-center p-4 bg-blue-50 rounded-lg">
+                <h4 className="font-semibold text-gray-900 mb-2">Pursuit Series</h4>
+                <div className="text-2xl font-bold text-blue-600 mb-2">₹48K - ₹88K</div>
+                <p className="text-sm text-gray-600">Essential features • 25 students/batch</p>
+              </div>
+              <div className="text-center p-4 bg-purple-50 rounded-lg border-2 border-purple-500">
+                <div className="text-xs font-semibold text-purple-600 mb-2">MOST POPULAR</div>
+                <h4 className="font-semibold text-gray-900 mb-2">Ascent Series</h4>
+                <div className="text-2xl font-bold text-purple-600 mb-2">₹58K - ₹76K</div>
+                <p className="text-sm text-gray-600">Balanced features • 20 students/batch</p>
+              </div>
+              <div className="text-center p-4 bg-green-50 rounded-lg">
+                <h4 className="font-semibold text-gray-900 mb-2">Pinnacle Series</h4>
+                <div className="text-2xl font-bold text-green-600 mb-2">₹98K - ₹1.8L</div>
+                <p className="text-sm text-gray-600">Premium features • 12 students/batch</p>
+              </div>
+            </div>
+
+            {/* Payment Benefits */}
+            <div className="space-y-2 text-sm text-gray-700 mb-8 text-center">
+              <div className="flex items-center justify-center">
+                <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                <span>Flexible EMI options (0% interest available)</span>
+              </div>
+              <div className="flex items-center justify-center">
+                <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                <span>Up to 25% scholarship discounts for meritorious students</span>
+              </div>
+              <div className="flex items-center justify-center">
+                <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                <span>30-day money-back guarantee</span>
+              </div>
+            </div>
 
             <div className="mt-8 text-left">
               <h3 className="text-lg font-semibold text-gray-900 mb-4">
@@ -316,6 +363,15 @@ export default function LocalityPage({ params }: LocalityPageProps) {
                   </div>
                 ))}
               </div>
+            </div>
+
+            <div className="mt-8 text-center">
+              <Link
+                href="/admissions"
+                className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+              >
+                View Detailed Pricing & Enroll
+              </Link>
             </div>
           </div>
         </div>
