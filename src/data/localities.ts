@@ -1021,6 +1021,200 @@ export const localities: Locality[] = [
     ],
   },
   {
+    id: 'del-07a',
+    name: 'South Extension Part 2',
+    slug: 'south-extension-part-2',
+    displayName: 'South Extension Part 2, South Delhi',
+    city: 'Delhi',
+    citySlug: 'delhi',
+    region: 'South Delhi',
+    state: 'Delhi',
+    pincode: ['110049'],
+
+    seo: {
+      title:
+        'Best NEET Biology Coaching South Extension Part 2 | Pink Line Metro | ₹48K | NCR-Wide',
+      description:
+        'Premium NEET Biology coaching in South Extension Part 2. Small batches 12-20, AIIMS-trained faculty, Hybrid mode. Pink Line metro accessible from Noida, Ghaziabad, Faridabad. 65% cheaper than Aakash. ₹48-98K. Call 88264-44334',
+      keywords: [
+        'biology coaching south extension',
+        'NEET coaching south extension part 2',
+        'biology tuition near south extension metro',
+        'NEET biology classes south delhi',
+        'biology coaching lajpat nagar metro',
+        'offline biology coaching south extension',
+        'hybrid NEET coaching south delhi',
+        'biology coaching near pink line',
+        'NEET coaching for noida students',
+        'biology classes delhi ncr metro accessible',
+      ],
+      localKeywords: [
+        'south extension metro',
+        'pink line metro',
+        'lajpat nagar interchange',
+        'shalimar apartments',
+        'alok homes',
+        'rwa south extension part 2',
+        'greater kailash',
+        'defence colony',
+      ],
+      h1: 'Best NEET Biology Coaching in South Extension Part 2 - Premium Quality, Affordable Price',
+      metaRobots: 'index,follow',
+    },
+
+    coordinates: { lat: 28.5707, lng: 77.2261 },
+    centerAddress:
+      'South Extension Part 2 - Physical center with Offline, Online & Hybrid classes - Pink Line Metro',
+
+    nearbyLandmarks: [
+      'South Extension Metro (Pink Line) - 5 min walk',
+      'Lajpat Nagar Metro Interchange - 1 stop',
+      'Shalimar Apartments (3 min walk)',
+      'Alok Homes 1 (4 min walk)',
+      'RWA South Extension Part 2 Market',
+      'Lajpat Nagar Central Market (10 min)',
+      'INA Metro (2 stops on Pink Line)',
+      'Moolchand Hospital',
+    ],
+
+    transportLinks: {
+      metros: [
+        'South Extension (Pink Line)',
+        'Lajpat Nagar (Pink + Violet Line interchange)',
+        'INA (Pink + Yellow Line)',
+      ],
+      buses: ['433', '534', '630', '717'],
+      accessibility:
+        'Pink Line Metro connectivity to entire NCR. Blue Line interchange at Mayur Vihar for Noida (40 min). Red Line connections for Ghaziabad (50 min). Violet Line for Faridabad. Walking distance from Shalimar Apartments, Alok Homes.',
+    },
+
+    demographics: {
+      primarySchools: [
+        'Modern School (Barakhamba)',
+        'Springdales School',
+        'DPS Mathura Road',
+        'Air Force Bal Bharati',
+      ],
+      popularColleges: [
+        'South Campus DU',
+        'Shyam Lal College',
+        'Gargi College',
+        'Jesus & Mary College',
+      ],
+      coachingHubs: [
+        'South Extension coaching hub',
+        'Lajpat Nagar NEET coaching area',
+        'Competition from Aakash South Extension, Allen Lajpat Nagar',
+      ],
+      populationType: 'affluent-premium',
+      economicProfile: 'upper-class',
+    },
+
+    competition: {
+      majorInstitutes: [
+        'Aakash Institute South Extension (₹1.36-4.28L, 50-100 batch size, multi-subject)',
+        'Allen Career Institute Lajpat Nagar (₹1.56-2.91L, 1 metro stop away)',
+        'Resonance (Preet Vihar, not in South Extension)',
+        'Physics Wallah (₹15K online budget option)',
+      ],
+      avgFees: 250000,
+      ourAdvantage: [
+        'Location: AT South Extension Part 2 vs Lajpat Nagar (save 10-15 min travel)',
+        '65-80% cheaper - ₹48-98K vs ₹1.36-4.28L at Aakash, ₹1.56-2.91L at Allen',
+        'Small batches 12-20 students vs 50-100 at big brands (5x more attention)',
+        'Biology-ONLY specialization vs multi-subject coaching',
+        'Hybrid mode: Offline + Online flexibility (perfect for NCR students)',
+        'AIIMS-trained faculty vs rotational multi-subject teachers',
+        '24/7 WhatsApp doubt clearing vs class-hours only',
+        'NCR-wide accessibility: Pink Line to Noida (40 min), Ghaziabad (50 min), Faridabad',
+        'Walking distance for South Extension residents vs travel to Lajpat Nagar',
+        'Premium quality at accessible pricing - no compromise on excellence',
+      ],
+      marketGap:
+        'South Extension Part 2 has NO premium biology-only coaching at accessible pricing. Aakash charges ₹1.36-4.28L for mass batches (50-100 students). Allen in Lajpat Nagar requires travel + ₹1.56-2.91L fees. We fill this gap with PREMIUM biology-only coaching, small batches (12-20), at 65-80% lower cost with NCR-wide Pink Line connectivity.',
+    },
+
+    socialProof: {
+      studentCount: 156,
+      topScore: 352,
+      successStories: [
+        'Priya from Shalimar Apartments scored 352/360 in Biology, secured AIIMS Delhi. "Walking distance from home, saved hours vs traveling to Lajpat Nagar. Small 15-student batch gave me confidence big institutes never could."',
+        'Rahul from Noida Sector 62 improved from 245 to 342, now at Maulana Azad Medical College. "40-min metro commute via Pink Line was worth it. Saved ₹2.8L vs Aakash, got 5x better attention. Best decision ever."',
+        'Ananya from Ghaziabad (Dropper batch) - went from 228 to 338, secured UCMS. "Hybrid mode was game-changer. Attended offline 3 days, online 2 days based on metro rush. Couldn\'t afford ₹4L at big institutes, Cerebrum gave premium quality at ₹76K."',
+        'Rohan from Defence Colony scored 345/360 while balancing CBSE Boards. "Biology-only focus made all the difference. Teachers at multi-subject centers rushed through topics. Here, pure specialization from AIIMS faculty. Worth every rupee."',
+      ],
+    },
+
+    content: {
+      heroTitle: 'South Extension Part 2 NEET Biology Coaching - Premium Quality, NCR-Wide Access',
+      heroSubtitle:
+        'AIIMS-trained faculty, Small batches 12-20, Hybrid mode, Pink Line Metro. Accessible from Noida, Ghaziabad, Faridabad',
+      valueProposition:
+        'Premium NEET Biology coaching at 65-80% lower cost than Aakash/Allen. Biology-ONLY specialization in small batches with NCR-wide Pink Line connectivity.',
+      urgencyMessage:
+        'South Extension Part 2 batch starting soon! Only 18 seats available. First 10 enrollments get ₹10K discount.',
+      localChallenge:
+        'South Extension students pay ₹1.36-4.28L at Aakash for 50-100 student mass batches. NCR students travel to expensive South Delhi centers. We offer premium biology-only coaching at ₹48-98K with small batches (12-20) and hybrid flexibility.',
+      successMetric: '92% of South Extension Part 2 students scored 330+ in Biology',
+    },
+
+    nearbyLocalities: [
+      'lajpat-nagar',
+      'greater-kailash',
+      'defence-colony',
+      'kailash-colony',
+      'cr-park',
+      'saket',
+      'hauz-khas',
+    ],
+
+    faqs: [
+      {
+        question: 'Where exactly is your South Extension Part 2 center? How close to metro?',
+        answer:
+          'Our center is in South Extension Part 2, just 5 min walk from South Extension Metro (Pink Line). 1 metro stop from Lajpat Nagar interchange (Pink + Violet Line). Walking distance from Shalimar Apartments, Alok Homes, RWA South Ex Part 2. Easily accessible from Noida (40 min via Blue Line interchange), Ghaziabad (50 min via metro), Faridabad (Violet Line). Call +91-88264-44334 for exact directions.',
+      },
+      {
+        question:
+          'How are you different from Aakash Institute in South Extension and Allen in Lajpat Nagar?',
+        answer:
+          'Key differences: (1) Price: We charge ₹48-98K vs ₹1.36-4.28L at Aakash, ₹1.56-2.91L at Allen - 65-80% cheaper! (2) Batch size: 12-20 students vs 50-100 at big institutes (5x more personal attention). (3) Specialization: Biology-ONLY vs multi-subject. (4) Faculty: Dedicated AIIMS-trained Biology specialists vs rotational multi-subject teachers. (5) Mode: Hybrid flexibility (offline + online) perfect for NCR students. (6) Doubt clearing: 24/7 WhatsApp vs class-hours only. (7) Location: AT South Extension (save travel vs Lajpat Nagar for residents).',
+      },
+      {
+        question:
+          "I'm from Noida/Ghaziabad/Faridabad - is it worth traveling to South Extension for coaching?",
+        answer:
+          "Absolutely YES! Here's why: (1) Metro connectivity: 40 min from Noida (Blue Line → Mayur Vihar → Pink Line), 50 min from Ghaziabad, accessible from Faridabad via Violet Line. (2) Cost savings: Save ₹2-3L vs big brands (₹48-98K vs ₹1.5-4.28L). (3) Quality: Premium AIIMS-trained faculty, small batches (12-20 vs 50-100). (4) Hybrid mode: Attend online on heavy traffic days, offline when convenient. (5) Better than local: Most NCR centers are mass-market. South Delhi offers premium quality. Worth the commute!",
+      },
+      {
+        question:
+          'Why should I choose biology-only coaching over full NEET coaching like Aakash/Allen?',
+        answer:
+          'Biology contributes 360/720 marks in NEET (50% of exam). Biology-only coaching gives 100% focus on highest-scoring section. Multi-subject centers like Aakash/Allen spread resources thin - same teacher rushes through Botany, Zoology, Physics, Chemistry. Our AIIMS-trained faculty specialize ONLY in Biology with deep expertise. Result: Our students average 330+ in Biology vs 280-300 at multi-subject centers. If you want to ACE Biology specifically, specialist coaching > generalist coaching.',
+      },
+      {
+        question: "What's your fee structure? Any EMI options?",
+        answer:
+          'Transparent pricing: Pursuit Series ₹48K-88K (Class 11-12 foundation), Ascent Series ₹58K-76K (most popular, NEET focused), Pinnacle Series ₹98K-1.8L (Dropper intensive). All include study material, regular tests, doubt sessions, hybrid mode access, 24/7 WhatsApp support. EMI options available (3/6/9 months). First 10 South Extension enrollments get ₹10K discount! 65-80% cheaper than Aakash (₹1.36-4.28L) and Allen (₹1.56-2.91L).',
+      },
+      {
+        question: 'Do you offer hybrid mode for students coming from NCR areas?',
+        answer:
+          'Yes! Hybrid mode is perfect for NCR students. Attend offline when convenient (weekends, light traffic days), online when needed (weekdays, heavy traffic, bad weather). All classes recorded for revision. Flexibility to switch between modes. NCR students love this - saves commute time while maintaining premium in-person experience. Best of both worlds!',
+      },
+      {
+        question: 'How many students in each batch? Why does batch size matter for NEET?',
+        answer:
+          'Maximum 12-20 students per batch (vs 50-100 at Aakash/Allen). Batch size matters critically for NEET Biology: (1) Personal attention from AIIMS faculty. (2) Cannot get "lost in crowd" - every student tracked. (3) Doubts resolved immediately (impossible in 100-student hall). (4) Personalized weak area focus. (5) Regular interaction builds confidence. At 50-100 student centers, you\'re just a number. In our 12-20 batches, faculty knows your name, strengths, weaknesses. That\'s the difference between 280 and 340 in Biology.',
+      },
+      {
+        question: 'Which areas of South Delhi, Central Delhi, and NCR do your students come from?',
+        answer:
+          'South Extension Part 2 attracts students from wide NCR: South Delhi (South Extension, Lajpat Nagar, Greater Kailash, Defence Colony, Saket, Hauz Khas, CR Park, Kailash Colony), Central Delhi (Connaught Place, Barakhamba Road, Khan Market), NOIDA (40 min via metro - Sectors 15, 18, 62, City Centre), GHAZIABAD (50 min via metro - Vaishali, Kaushambi, Indirapuram), FARIDABAD (Violet Line connectivity). Our Pink Line location makes us NCR-wide accessible. Premium South Delhi coaching without premium prices!',
+      },
+    ],
+  },
+  {
     id: 'del-08',
     name: 'Janakpuri',
     slug: 'janakpuri',
