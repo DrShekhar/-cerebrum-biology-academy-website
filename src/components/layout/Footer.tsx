@@ -1,5 +1,6 @@
 'use client'
 
+import { memo } from 'react'
 import { Button } from '@/components/ui/Button'
 import {
   Phone,
@@ -16,7 +17,7 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
 
-export function Footer() {
+export const Footer = memo(function Footer() {
   const currentYear = new Date().getFullYear()
 
   const courseLinks = [
@@ -379,7 +380,7 @@ export function Footer() {
 
       {/* Quick Actions - Floating */}
       <div
-        className="fixed bottom-4 right-4 z-50 flex flex-col space-y-2"
+        className="fixed right-4 z-40 flex flex-col space-y-2 bottom-20 md:bottom-4"
         role="complementary"
         aria-label="Quick contact actions"
       >
@@ -403,4 +404,4 @@ export function Footer() {
       </div>
     </footer>
   )
-}
+})

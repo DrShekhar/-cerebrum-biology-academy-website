@@ -494,7 +494,7 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
               <div className="flex items-center gap-2">
                 {/* WhatsApp */}
                 <motion.a
-                  href="https://wa.me/919876543210"
+                  href="https://wa.me/918826444334"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="hidden sm:flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200"
@@ -505,7 +505,7 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
 
                 {/* Call */}
                 <motion.a
-                  href="tel:+919876543210"
+                  href="tel:+918826444334"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="hidden sm:flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200"
@@ -645,14 +645,14 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
                 {/* Mobile Action Buttons */}
                 <div className="mt-8 space-y-3">
                   <a
-                    href="https://wa.me/919876543210"
+                    href="https://wa.me/918826444334"
                     className="flex items-center justify-center gap-2 w-full bg-green-500 text-white py-3 rounded-xl font-medium"
                   >
                     <MessageCircle className="h-5 w-5" />
                     WhatsApp Us
                   </a>
                   <a
-                    href="tel:+919876543210"
+                    href="tel:+918826444334"
                     className="flex items-center justify-center gap-2 w-full bg-blue-500 text-white py-3 rounded-xl font-medium"
                   >
                     <Phone className="h-5 w-5" />

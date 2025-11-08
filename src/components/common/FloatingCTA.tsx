@@ -83,7 +83,7 @@ export function FloatingCTA() {
   return (
     <>
       {/* Mobile Floating CTA */}
-      <div className="fixed bottom-20 right-4 z-[60] lg:hidden">
+      <div className="fixed bottom-28 right-4 z-[70] lg:hidden">
         <AnimatePresence>
           {isExpanded && (
             <motion.div
@@ -192,7 +192,7 @@ export function FloatingCTA() {
       </motion.button>
 
       {/* Fixed Bottom CTA Bar for Mobile - Hidden when course-specific CTA is present */}
-      <div className="fixed bottom-0 left-0 right-0 z-[45] lg:hidden bg-white border-t border-gray-200 shadow-lg">
+      <div className="fixed bottom-0 left-0 right-0 z-[50] lg:hidden bg-white border-t border-gray-200 shadow-lg">
         <div className="grid grid-cols-3 divide-x divide-gray-200">
           {actions.map((action) => {
             const Icon = action.icon
@@ -217,7 +217,7 @@ export function FloatingCTA() {
       </div>
 
       {/* Spacer for fixed bottom bar */}
-      <div className="h-20 lg:hidden"></div>
+      <div className="h-16 lg:hidden"></div>
     </>
   )
 }

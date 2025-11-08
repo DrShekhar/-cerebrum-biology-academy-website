@@ -381,7 +381,7 @@ export class WhatsAppBusinessAPI {
     // Notify counseling team and send acknowledgment
     await this.sendTextMessage(
       phoneNumber,
-      'Thank you for your interest! Our counselor will call you within 30 minutes. You can also call us directly at +91-9876543210.'
+      'Thank you for your interest! Our counselor will call you within 30 minutes. You can also call us directly at +91-88264-44334.'
     )
 
     // Notify internal team
@@ -549,13 +549,13 @@ export const NEETWhatsAppTemplates = {
     components: [
       {
         type: 'body' as const,
-        text: 'Hi {{1}}! Your NEET Biology demo class is confirmed for {{2}} at {{3}}. Join link: {{4}}. For any queries, call +91-9876543210.',
+        text: 'Hi {{1}}! Your NEET Biology demo class is confirmed for {{2}} at {{3}}. Join link: {{4}}. For any queries, call +91-88264-44334.',
       },
       {
         type: 'buttons' as const,
         buttons: [
           { type: 'url' as const, text: 'Join Demo', url: '{{4}}' },
-          { type: 'phone_number' as const, text: 'Call Support', phone_number: '+919876543210' },
+          { type: 'phone_number' as const, text: 'Call Support', phone_number: '+918826444334' },
         ],
       },
     ],
