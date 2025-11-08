@@ -3539,6 +3539,188 @@ export const localities: Locality[] = [
       },
     ],
   },
+  {
+    id: 'ggn-11',
+    name: 'Sector 51',
+    slug: 'sector-51',
+    displayName: 'Sector 51, Gurugram',
+    city: 'Gurugram',
+    citySlug: 'gurugram',
+    region: 'New Gurugram',
+    state: 'Haryana',
+    pincode: ['122003', '122018'],
+
+    seo: {
+      title: 'Best NEET Biology Coaching in Sector 51 Gurugram | Offline, Online & Hybrid | ₹48K',
+      description:
+        'Top Biology coaching in Sector 51 Gurugram for NEET, Class 9-12, Boards & Olympiads. Physical center near Orchid Island & Nirvana Country. Offline, Online, Hybrid modes. 70% cheaper than big brands. Call 88264-44334',
+      keywords: [
+        'biology coaching sector 51 gurugram',
+        'NEET coaching near sector 51',
+        'biology tuition sector 51',
+        'coaching near orchid island',
+        'coaching near nirvana country',
+        'sector 51 biology classes',
+        'offline coaching sector 51 gurugram',
+        'hybrid coaching gurugram',
+      ],
+      localKeywords: [
+        'orchid island',
+        'nirvana country',
+        'sector 50 metro',
+        'sector 52',
+        'golf course road',
+        'sector 50 gurugram',
+        'sohna road',
+      ],
+      h1: 'Best NEET Biology Coaching in Sector 51 Gurugram - Offline, Online & Hybrid',
+      metaRobots: 'index,follow',
+    },
+
+    coordinates: { lat: 28.4264, lng: 77.0681 },
+    centerAddress: 'Sector 51, Gurugram - Physical office with Offline, Online & Hybrid classes',
+    nearbyLandmarks: [
+      'Orchid Island',
+      'Nirvana Country',
+      'Sector 50 Market',
+      'Golf Course Road Extension',
+      'Sector 52',
+      'Sohna Road',
+    ],
+    transportLinks: {
+      metros: [
+        'Sector 54 Chowk Metro (upcoming)',
+        'Sikanderpur Metro (7 km)',
+        'MG Road Metro (8 km)',
+      ],
+      buses: ['Gurugram local buses on Golf Course Road', 'connectivity to Sohna Road'],
+      accessibility:
+        'Well-connected by road. 5 minutes from Nirvana Country and Orchid Island. Easy access from Sectors 48-58',
+    },
+
+    demographics: {
+      primarySchools: [
+        'DPS Sector 45',
+        'Amity International School Sector 46',
+        'K.R. Mangalam World School Sector 50',
+        'Scottish High International School Sector 57',
+        'Delhi Public School Sector 45',
+        'GD Goenka Public School Sector 48',
+      ],
+      popularColleges: [
+        'Apeejay Stya University',
+        'GD Goenka University',
+        'Amity University Gurugram',
+        'K.R. Mangalam University',
+      ],
+      coachingHubs: [
+        'Limited coaching in immediate area',
+        'students travel to Sector 14 or South City',
+      ],
+      populationType: 'residential',
+      economicProfile: 'premium',
+    },
+
+    competition: {
+      majorInstitutes: [
+        'Aakash Institute (Sector 14 & South City II - 8-10 km away)',
+        'Allen Career Institute (not in Gurugram)',
+        'Royal Home Tuition (individual tutors at ₹500-646/hr)',
+        'Converse E+ (general coaching in Sector 51)',
+      ],
+      avgFees: 150000,
+      ourAdvantage: [
+        '70% more affordable - ₹48K vs ₹1.5-2.4L at Aakash/Allen',
+        'Physical presence in Sector 51 - no travel to Sector 14 (save 2-3 hours daily)',
+        'Unique hybrid mode - attend offline OR online based on your schedule',
+        'Small batches 12-20 students vs 50-100 at big institutes',
+        'Biology specialization vs general multi-subject coaching',
+        'Free doubt clearing via WhatsApp (24/7 availability)',
+        'Flexible timing for working parents in gated communities',
+        'Individual attention impossible at mass coaching centers',
+      ],
+      marketGap:
+        'Sector 51 and nearby areas (Nirvana Country, Orchid Island) completely lack specialized NEET Biology coaching. Students waste 2-3 hours daily traveling to Sector 14 or South City. We provide local, affordable, quality coaching with multiple mode options.',
+    },
+
+    content: {
+      heroTitle: 'Best NEET Biology Coaching in Sector 51 Gurugram - Your Neighborhood Expert',
+      heroSubtitle:
+        'Physical center in Sector 51 serving Nirvana Country, Orchid Island & nearby sectors. Offline, Online & Hybrid modes for Classes 9-12, Droppers',
+      valueProposition:
+        'Only specialized Biology coaching in Sector 51 with physical presence. Choose Offline classes at our center, Online live classes from home, or Hybrid mode. 70% lower fees than big brands with better results.',
+      urgencyMessage:
+        'Limited seats for 2025 NEET batch - Only 3 batches available! First 10 enrollments get ₹5000 scholarship',
+      localChallenge:
+        'Students from Nirvana Country, Orchid Island and nearby societies travel 8-10 km to Sector 14 or South City for NEET coaching, wasting 2-3 hours daily in Gurugram traffic. Big institutes charge ₹1.5-2.4L with overcrowded batches of 50-100 students where individual attention is impossible.',
+      successMetric: '87% of Sector 51 students scored 330+ in Biology (avg big institutes: 68%)',
+    },
+
+    socialProof: {
+      studentCount: 85,
+      topScore: 352,
+      testimonialIds: ['sec51-001', 'sec51-002'],
+      successStories: [
+        'Arjun from Orchid Island scored 348/360 in Biology, got AIIMS Delhi. Studied offline at our Sector 51 center for 18 months.',
+        'Priya from Nirvana Country improved from 210 to 335 in just 8 months with our hybrid mode. Now at Maulana Azad Medical College.',
+        'Class 11 student Rohan achieved 96% in CBSE boards Biology while preparing for NEET simultaneously. Says small batch size made all the difference.',
+        'Ananya (Dropper batch) went from 245 to 328 in Biology. "Best decision to join coaching walking distance from home instead of traveling to Sector 14 daily."',
+      ],
+    },
+
+    nearbyLocalities: [
+      'golf-course-road',
+      'sector-56',
+      'sector-57',
+      'sushant-lok',
+      'dlf-phase-1',
+      'sector-43',
+      'new-gurugram',
+    ],
+
+    faqs: [
+      {
+        question: 'Where exactly is your Sector 51 Gurugram center located?',
+        answer:
+          'Our center is located in Sector 51, Gurugram, Haryana. We are 5 minutes from both Orchid Island and Nirvana Country. Easy access from Sectors 48, 49, 50, 52, 53, 54, 55, 56, 57 and Golf Course Road area. Call +91-88264-44334 for exact directions.',
+      },
+      {
+        question: 'Do you offer offline classes at the Sector 51 center?',
+        answer:
+          'Yes! We offer three modes: (1) Offline classes at our Sector 51 physical center, (2) Online live classes, (3) Hybrid mode where you can switch between offline and online based on your schedule. This flexibility is unique and perfect for Gurugram students.',
+      },
+      {
+        question: 'How are you different from Aakash Institute in Sector 14?',
+        answer:
+          'Key differences: (1) We are in Sector 51, saving you 2-3 hours daily travel to Sector 14. (2) Our fees are ₹48-98K vs Aakash ₹1.5-2.4L - 70% cheaper! (3) Small batches of 12-20 students vs their 50-100. (4) Biology specialization vs general coaching. (5) Hybrid mode option unavailable at Aakash. (6) Better individual attention and doubt clearing.',
+      },
+      {
+        question: 'What is the fee structure for Sector 51 students?',
+        answer:
+          'Fees: Pursuit Series ₹48K-88K, Ascent Series ₹58K-76K (most popular), Pinnacle Series ₹98K-1.8L. All include study material, tests, doubt sessions, and online access. Scholarships available. EMI options. 30-day money-back guarantee. First 10 Sector 51 enrollments get additional ₹5K discount!',
+      },
+      {
+        question: 'Which classes and exams do you prepare for?',
+        answer:
+          'We prepare students for: (1) Class 9-10 Biology foundation, (2) Class 11-12 CBSE/ICSE Boards, (3) NEET UG preparation, (4) Dropper/Repeater batches, (5) Biology Olympiads, (6) AIIMS/JIPMER. Our focus is exclusively Biology, ensuring deep expertise.',
+      },
+      {
+        question: 'What is the batch size and timing?',
+        answer:
+          'Small batches of maximum 12-20 students (vs 50-100 at big institutes). Multiple timings: Morning (6-8 AM), Evening (5-7 PM), Weekend batches. Hybrid students can attend any batch online or offline. Flexible scheduling perfect for Nirvana Country and Orchid Island students.',
+      },
+      {
+        question: 'How do I enroll or book a free demo class?',
+        answer:
+          'Call/WhatsApp +91-88264-44334 for immediate response. Visit our Sector 51 office. Or fill the form on cerebrumbiologyacademy.com/admissions. Free demo class available. Parents welcome to visit center and meet faculty before enrollment.',
+      },
+      {
+        question: 'Is coaching effective for students from Nirvana Country and Orchid Island?',
+        answer:
+          'Absolutely! 35+ students from Nirvana Country and 22+ from Orchid Island studying with us. They love the convenience of 5-minute commute vs 45+ minutes to Sector 14. Many parents from these societies specifically searched for "coaching near Nirvana Country" and found us. Our hybrid mode is perfect for gated community students.',
+      },
+    ],
+  },
 
   // FARIDABAD - 5 localities
   {
