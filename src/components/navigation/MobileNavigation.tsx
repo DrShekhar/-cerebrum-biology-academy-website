@@ -150,7 +150,7 @@ export function MobileNavigation({ className = '' }: MobileNavigationProps) {
       <nav
         role="navigation"
         aria-label="Mobile bottom navigation"
-        className={`fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 md:hidden z-40 ${className}`}
+        className={`fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 md:hidden z-50 ${className}`}
         style={{
           paddingBottom: 'max(env(safe-area-inset-bottom), 12px)',
         }}

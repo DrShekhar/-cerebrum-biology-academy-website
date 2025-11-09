@@ -182,6 +182,78 @@ export const pageMetadata: Record<string, PageMetadata> = {
     ],
     canonical: '/faculty',
   },
+  class9Foundation: {
+    title: 'Class 9 Biology Foundation Course for NEET 2028-2029 | Early Start',
+    description:
+      'Start your NEET journey early with Class 9 biology foundation course. 4-year preparation timeline, age-appropriate teaching, 65% higher success rate. Build strong fundamentals for medical entrance.',
+    keywords: [
+      'class 9 biology foundation',
+      'early NEET preparation class 9',
+      'foundation biology course',
+      'class 9 NEET coaching',
+      'biology for class 9 students',
+      'NEET 2028 preparation',
+      'class 9 medical entrance',
+      'early bird NEET course',
+      'foundation course class 9',
+      'biology foundation program',
+    ],
+    canonical: '/class-9-foundation',
+  },
+  class10Foundation: {
+    title: 'Class 10 Biology Foundation Course - Perfect NEET Head Start',
+    description:
+      'Class 10 NEET foundation course for board students and Class 10 passed. 3-year structured preparation, dual board+NEET focus. Join early bird batch with limited seats.',
+    keywords: [
+      'class 10 NEET preparation',
+      'class 10 biology foundation',
+      'NEET foundation batch',
+      'class 10 biology coaching',
+      'early bird NEET',
+      'class 10 passed NEET course',
+      'board exam NEET preparation',
+      'class 10 medical entrance',
+      'NEET 2027 preparation',
+      'foundation batch class 10',
+    ],
+    canonical: '/class-10-foundation',
+  },
+  earlyNeetPrep: {
+    title: 'Why Start NEET Preparation from Class 9-10? | Early NEET Coaching',
+    description:
+      'Discover why early NEET preparation from Class 9-10 gives 65% higher success rate. Research-backed benefits, parent FAQs, program comparison. Smart parents choose foundation courses.',
+    keywords: [
+      'early NEET preparation',
+      'when to start NEET preparation',
+      'foundation course for NEET',
+      'early bird NEET coaching',
+      'NEET from class 9',
+      'NEET preparation class 9 10',
+      'early start NEET',
+      'NEET foundation program',
+      'best time to start NEET',
+      'early NEET coaching benefits',
+    ],
+    canonical: '/early-neet-preparation',
+  },
+  neetFoundation: {
+    title: 'NEET Foundation Course - Class 9 & 10 Biology Foundation Program',
+    description:
+      'Comprehensive NEET biology foundation program for Class 9-10. Compare programs, choose your timeline, 65% higher success rate. Expert faculty, age-appropriate teaching, research-backed approach.',
+    keywords: [
+      'NEET foundation course',
+      'biology foundation program',
+      'foundation batch for NEET',
+      'early NEET coaching',
+      'foundation classes NEET',
+      'NEET preparation foundation',
+      'class 9 10 NEET foundation',
+      'medical entrance foundation',
+      'biology foundation coaching',
+      'NEET early preparation course',
+    ],
+    canonical: '/neet-foundation-course',
+  },
 }
 
 export function generateMetadata(pageKey: string): PageMetadata {
