@@ -1,9 +1,17 @@
 import React from 'react'
 import { Metadata } from 'next'
-import { AIEducationDashboard } from '@/components/ai/AIEducationDashboard'
+import dynamic from 'next/dynamic'
 import { ToastProvider } from '@/components/ui/Toast'
 import { DashboardErrorBoundary } from '@/components/errors/DashboardErrorBoundary'
+import { DashboardSkeleton } from '@/components/ui/LoadingSkeleton'
 import AIEducationClient from './AIEducationClient'
+
+const AIEducationDashboard = dynamic(
+  () => import('@/components/ai/AIEducationDashboard').then((mod) => mod.AIEducationDashboard),
+  {
+    loading: () => <DashboardSkeleton />,
+  }
+)
 
 export const metadata: Metadata = {
   title: 'AI Education Hub - Cerebrum Biology Academy',
