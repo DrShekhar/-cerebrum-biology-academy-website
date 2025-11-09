@@ -34,7 +34,7 @@ export const Footer = memo(function Footer() {
     { name: 'ICSE Biology', href: '/boards/icse' },
     { name: 'IGCSE Biology', href: '/boards/igcse' },
     { name: 'IB Biology', href: '/boards/ib' },
-    { name: 'State Board Biology', href: '/boards/state' },
+    { name: 'State Board Biology', href: '/boards/state-boards' },
   ]
 
   const servicesLinks = [
@@ -55,21 +55,21 @@ export const Footer = memo(function Footer() {
     { name: 'Results', href: '/results' },
     { name: 'Photo Gallery', href: '/gallery' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Careers', href: '/careers' },
+    { name: 'Careers', href: '/contact' },
   ]
 
   const supportLinks = [
     { name: 'Contact Us', href: '/contact' },
     { name: 'Help Center', href: '/help' },
     { name: 'Book Demo Class', href: '/demo-booking' },
-    { name: 'Download Brochure', href: '/brochure' },
-    { name: 'Fee Structure', href: '/fees' },
-    { name: 'Admission Process', href: '/admission' },
+    { name: 'Download Brochure', href: '/contact' },
+    { name: 'Fee Structure', href: '/courses' },
+    { name: 'Admission Process', href: '/admissions' },
   ]
 
   const legalLinks = [
     { name: 'Privacy Policy', href: '/privacy-policy' },
-    { name: 'Terms of Service', href: '/terms' },
+    { name: 'Terms of Service', href: '/terms-of-service' },
     { name: 'Refund Policy', href: '/refund-policy' },
     { name: 'Disclaimer', href: '/disclaimer' },
   ]
