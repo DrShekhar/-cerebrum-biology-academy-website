@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { withCounselor } from '@/lib/auth/middleware'
 import { prisma } from '@/lib/prisma'
 import { z } from 'zod'
-import type { LeadStage, Priority } from '@prisma/client'
+import type { LeadStage, Priority } from '@/generated/prisma'
 
 const createLeadSchema = z.object({
   studentName: z.string().min(1, 'Student name is required'),

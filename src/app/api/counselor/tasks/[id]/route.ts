@@ -168,5 +168,9 @@ async function handleDELETE(
   }
 }
 
-export const PATCH = withCounselor(handlePATCH)
-export const DELETE = withCounselor(handleDELETE)
+export const PATCH = withCounselor((req: NextRequest, session: any) =>
+  handlePATCH(req, session, { params: Promise.resolve({ id: req.url.split('/').pop() || '' }) })
+)
+export const DELETE = withCounselor((req: NextRequest, session: any) =>
+  handleDELETE(req, session, { params: Promise.resolve({ id: req.url.split('/').pop() || '' }) })
+)
