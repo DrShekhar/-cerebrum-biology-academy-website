@@ -23,14 +23,14 @@ datasource db {
 
 // User Management
 model User {
-  id        String   @id @default(cuid())
-  email     String   @unique
-  phone     String?  @unique
-  name      String
-  role      UserRole @default(STUDENT)
+  id    String   @id @default(cuid())
+  email String   @unique
+  phone String?  @unique
+  name  String
+  role  UserRole @default(STUDENT)
 
   // Authentication
-  passwordHash String?
+  passwordHash  String?
   emailVerified DateTime?
   phoneVerified DateTime?
 
@@ -38,22 +38,32 @@ model User {
   profile Json?
 
   // Timestamps
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
   lastActiveAt DateTime?
 
   // Relations
-  enrollments    Enrollment[]
-  demoBookings   DemoBooking[]
-  payments       Payment[]
-  sessions       Session[]
-  communicationLog CommunicationLog[]
-  materialAccess MaterialAccess[]
-  materialProgress MaterialProgress[]
-  testSessions   TestSession[]
-  userProgress   UserProgress[]
-  performanceReports PerformanceReport[]
+  enrollments           Enrollment[]
+  demoBookings          DemoBooking[]
+  payments              Payment[]
+  sessions              Session[]
+  communicationLog      CommunicationLog[]
+  materialAccess        MaterialAccess[]
+  materialProgress      MaterialProgress[]
+  testSessions          TestSession[]
+  userProgress          UserProgress[]
+  performanceReports    PerformanceReport[]
   userQuestionResponses UserQuestionResponse[]
+
+  // CRM Relations
+  assignedLeads   Lead[]          @relation("CounselorLeads")
+  assignedTasks   Task[]          @relation("AssignedTasks")
+  createdTasks    Task[]          @relation("CreatedTasks")
+  activities      Activity[]      @relation("UserActivities")
+  sentMessages    Communication[] @relation("SentMessages")
+  createdFeePlans FeePlan[]       @relation("CreatedFeePlans")
+  createdOffers   Offer[]         @relation("CreatedOffers")
+  createdNotes    Note[]          @relation("CreatedNotes")
 
   @@map("users")
 }
@@ -70,67 +80,67 @@ model Session {
 
 // Course Management
 model Course {
-  id          String   @id @default(cuid())
+  id          String  @id @default(cuid())
   name        String
   description String?
 
   // Course Details
-  type        CourseType
-  class       StudentClass
-  duration    Int      // in months
-  totalFees   Int      // in paise (₹1 = 100 paise)
+  type      CourseType
+  class     StudentClass
+  duration  Int // in months
+  totalFees Int // in paise (₹1 = 100 paise)
 
   // Course Structure
-  syllabus    Json?
-  features    Json? // String array stored as JSON
+  syllabus Json?
+  features Json? // String array stored as JSON
 
   // Metadata
-  isActive    Boolean  @default(true)
-  sortOrder   Int      @default(0)
+  isActive  Boolean @default(true)
+  sortOrder Int     @default(0)
 
   // Timestamps
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   // Relations
-  enrollments Enrollment[]
+  enrollments  Enrollment[]
   demoBookings DemoBooking[]
-  chapters Chapter[]
-  materials StudyMaterial[]
+  chapters     Chapter[]
+  materials    StudyMaterial[]
 
   @@map("courses")
 }
 
 // Enrollment Management
 model Enrollment {
-  id            String           @id @default(cuid())
-  userId        String
-  courseId      String
+  id       String @id @default(cuid())
+  userId   String
+  courseId String
 
   // Enrollment Details
-  status        EnrollmentStatus @default(PENDING)
-  enrollmentDate DateTime        @default(now())
-  startDate     DateTime?
-  endDate       DateTime?
+  status         EnrollmentStatus @default(PENDING)
+  enrollmentDate DateTime         @default(now())
+  startDate      DateTime?
+  endDate        DateTime?
 
   // Payment Details
-  totalFees     Int              // in paise
-  paidAmount    Int              @default(0)
-  pendingAmount Int              @default(0)
-  paymentPlan   PaymentPlan      @default(FULL)
+  totalFees     Int // in paise
+  paidAmount    Int         @default(0)
+  pendingAmount Int         @default(0)
+  paymentPlan   PaymentPlan @default(FULL)
 
   // Academic Details
-  currentProgress Int            @default(0) // percentage
+  currentProgress Int       @default(0) // percentage
   lastAccessDate  DateTime?
 
   // Timestamps
-  createdAt     DateTime         @default(now())
-  updatedAt     DateTime         @updatedAt
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   // Relations
-  user          User             @relation(fields: [userId], references: [id])
-  course        Course           @relation(fields: [courseId], references: [id])
-  payments      Payment[]
+  user     User      @relation(fields: [userId], references: [id])
+  course   Course    @relation(fields: [courseId], references: [id])
+  payments Payment[]
 
   @@unique([userId, courseId])
   @@index([userId, status])
@@ -142,62 +152,63 @@ model Enrollment {
 
 // Demo Booking Management
 model DemoBooking {
-  id              String              @id @default(cuid())
-  userId          String?
-  courseId        String?
+  id       String  @id @default(cuid())
+  userId   String?
+  courseId String?
 
   // Student Information
-  studentName     String
-  email           String?
-  phone           String
-  studentClass    StudentClass?
+  studentName  String
+  email        String?
+  phone        String
+  studentClass StudentClass?
 
   // Demo Details
-  preferredDate   String
-  preferredTime   String
-  message         String?
-  status          DemoBookingStatus   @default(PENDING)
-  demoType        DemoType            @default(FREE)
+  preferredDate String
+  preferredTime String
+  message       String?
+  status        DemoBookingStatus @default(PENDING)
+  demoType      DemoType          @default(FREE)
 
   // Payment Details (for premium demos)
-  paymentStatus   DemoPaymentStatus   @default(NOT_REQUIRED)
-  paymentAmount   Int?                // in paise
-  razorpayOrderId String?             @unique
-  razorpayPaymentId String?           @unique
+  paymentStatus      DemoPaymentStatus @default(NOT_REQUIRED)
+  paymentAmount      Int? // in paise
+  razorpayOrderId    String?           @unique
+  razorpayPaymentId  String?           @unique
   paymentCompletedAt DateTime?
 
   // Referral Tracking
   referralCodeUsed String?
-  referralDiscount Int?               // discount in rupees
+  referralDiscount Int? // discount in rupees
 
   // Assignment & Follow-up
-  assignedTo      String?
-  followUpDate    DateTime?
-  remindersSent   Int                 @default(0)
+  assignedTo    String?
+  followUpDate  DateTime?
+  remindersSent Int       @default(0)
 
   // Demo Feedback
-  demoCompleted   Boolean             @default(false)
-  demoRating      Int?                // 1-5
-  demoFeedback    String?
-  convertedToEnrollment Boolean       @default(false)
+  demoCompleted         Boolean @default(false)
+  demoRating            Int? // 1-5
+  demoFeedback          String?
+  convertedToEnrollment Boolean @default(false)
 
   // Marketing
-  source          String?             // website, facebook, google_ads, etc.
-  utmSource       String?
-  utmMedium       String?
-  utmCampaign     String?
+  source      String? // website, facebook, google_ads, etc.
+  utmSource   String?
+  utmMedium   String?
+  utmCampaign String?
 
   // Notifications
-  notificationsSent Json?             @default("{\"whatsapp\": false, \"email\": false}")
+  notificationsSent Json? @default("{\"whatsapp\": false, \"email\": false}")
 
   // Timestamps
-  createdAt       DateTime            @default(now())
-  updatedAt       DateTime            @updatedAt
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   // Relations
-  user            User?               @relation(fields: [userId], references: [id])
-  course          Course?             @relation(fields: [courseId], references: [id])
+  user             User?              @relation(fields: [userId], references: [id])
+  course           Course?            @relation(fields: [courseId], references: [id])
   communicationLog CommunicationLog[]
+  lead             Lead?              @relation("DemoBookingLead")
 
   @@index([email])
   @@index([phone])
@@ -209,37 +220,37 @@ model DemoBooking {
 
 // Payment Management
 model Payment {
-  id              String        @id @default(cuid())
-  userId          String
-  enrollmentId    String?
+  id           String  @id @default(cuid())
+  userId       String
+  enrollmentId String?
 
   // Payment Details
-  amount          Int           // in paise
-  currency        String        @default("INR")
-  status          PaymentStatus @default(PENDING)
-  paymentMethod   PaymentMethod
+  amount        Int // in paise
+  currency      String        @default("INR")
+  status        PaymentStatus @default(PENDING)
+  paymentMethod PaymentMethod
 
   // Gateway Details
-  razorpayOrderId    String?   @unique
-  razorpayPaymentId  String?   @unique
-  razorpaySignature  String?
+  razorpayOrderId   String? @unique
+  razorpayPaymentId String? @unique
+  razorpaySignature String?
 
   // Transaction Details
-  transactionId   String?
-  failureReason   String?
+  transactionId String?
+  failureReason String?
 
   // Installment Details
-  installmentNumber Int?       // for EMI payments
+  installmentNumber Int? // for EMI payments
   totalInstallments Int?
 
   // Timestamps
-  createdAt       DateTime      @default(now())
-  updatedAt       DateTime      @updatedAt
-  completedAt     DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  completedAt DateTime?
 
   // Relations
-  user            User          @relation(fields: [userId], references: [id])
-  enrollment      Enrollment?   @relation(fields: [enrollmentId], references: [id])
+  user       User        @relation(fields: [userId], references: [id])
+  enrollment Enrollment? @relation(fields: [enrollmentId], references: [id])
 
   @@index([userId, status])
   @@index([enrollmentId, status])
@@ -250,58 +261,58 @@ model Payment {
 
 // Communication & Marketing
 model CommunicationLog {
-  id              String              @id @default(cuid())
-  userId          String?
-  demoBookingId   String?
+  id            String  @id @default(cuid())
+  userId        String?
+  demoBookingId String?
 
   // Communication Details
-  type            CommunicationType
-  channel         CommunicationChannel
-  content         String
-  subject         String?
+  type    CommunicationType
+  channel CommunicationChannel
+  content String
+  subject String?
 
   // Status
-  status          MessageStatus       @default(SENT)
-  sentAt          DateTime            @default(now())
-  deliveredAt     DateTime?
-  readAt          DateTime?
+  status      MessageStatus @default(SENT)
+  sentAt      DateTime      @default(now())
+  deliveredAt DateTime?
+  readAt      DateTime?
 
   // WhatsApp specific
   whatsappMessageId String?
 
   // Email specific
-  emailMessageId    String?
+  emailMessageId String?
 
   // Template Details
-  templateId      String?
-  templateData    Json?
+  templateId   String?
+  templateData Json?
 
   // Timestamps
-  createdAt       DateTime            @default(now())
+  createdAt DateTime @default(now())
 
   // Relations
-  user            User?               @relation(fields: [userId], references: [id])
-  demoBooking     DemoBooking?        @relation(fields: [demoBookingId], references: [id])
+  user        User?        @relation(fields: [userId], references: [id])
+  demoBooking DemoBooking? @relation(fields: [demoBookingId], references: [id])
 
   @@map("communication_logs")
 }
 
 // Analytics & Tracking
 model AnalyticsEvent {
-  id          String   @id @default(cuid())
-  userId      String?
-  sessionId   String?
+  id        String  @id @default(cuid())
+  userId    String?
+  sessionId String?
 
   // Event Details
-  eventType   String
-  eventName   String
-  properties  Json?
+  eventType  String
+  eventName  String
+  properties Json?
 
   // Page/Context
-  pagePath    String?
-  pageTitle   String?
-  referrer    String?
-  userAgent   String?
+  pagePath  String?
+  pageTitle String?
+  referrer  String?
+  userAgent String?
 
   // Marketing Attribution
   utmSource   String?
@@ -309,12 +320,12 @@ model AnalyticsEvent {
   utmCampaign String?
 
   // Location
-  ipAddress   String?
-  country     String?
-  city        String?
+  ipAddress String?
+  country   String?
+  city      String?
 
   // Timestamps
-  createdAt   DateTime @default(now())
+  createdAt DateTime @default(now())
 
   @@map("analytics_events")
 }
@@ -325,6 +336,7 @@ enum UserRole {
   PARENT
   TEACHER
   ADMIN
+  COUNSELOR
 }
 
 enum CourseType {
@@ -433,42 +445,42 @@ enum MessageStatus {
 // Enhanced Test Generator System Models
 
 model FreeUser {
-  id               String   @id @default(cuid())
-  email            String   @unique
-  name             String?
-  grade            String?  // CLASS_9, CLASS_10, CLASS_11, CLASS_12, DROPPER
-  curriculum       String?  // NEET, CBSE, ICSE, IB, IGCSE
-  school           String?
-  city             String?
+  id         String  @id @default(cuid())
+  email      String  @unique
+  name       String?
+  grade      String? // CLASS_9, CLASS_10, CLASS_11, CLASS_12, DROPPER
+  curriculum String? // NEET, CBSE, ICSE, IB, IGCSE
+  school     String?
+  city       String?
 
   // Progress Tracking
-  totalPoints      Int      @default(0)
-  studyStreak      Int      @default(0)
-  lastActiveDate   DateTime?
+  totalPoints    Int       @default(0)
+  studyStreak    Int       @default(0)
+  lastActiveDate DateTime?
 
   // Performance Analytics
-  averageScore     Float?   // Overall average test score percentage
-  totalTestsTaken  Int      @default(0)
-  bestScore        Float?   // Highest score percentage achieved
-  weakestTopics    Json?    // Array of topics needing improvement
-  strongestTopics  Json?    // Array of mastered topics
+  averageScore    Float? // Overall average test score percentage
+  totalTestsTaken Int    @default(0)
+  bestScore       Float? // Highest score percentage achieved
+  weakestTopics   Json? // Array of topics needing improvement
+  strongestTopics Json? // Array of mastered topics
 
   // Adaptive Learning
-  currentLevel     Int      @default(1) // Difficulty level (1-10)
-  adaptiveData     Json?    // ML model data for personalization
+  currentLevel Int   @default(1) // Difficulty level (1-10)
+  adaptiveData Json? // ML model data for personalization
 
   // Preferences
-  preferences      Json?    // study times, notifications, etc.
+  preferences Json? // study times, notifications, etc.
 
   // Trial Management
   trialStartDate   DateTime  @default(now()) // When trial started
   trialExpiryDate  DateTime? // When trial expires (15 days from start), nullable for existing users
   trialExtended    Boolean   @default(false) // Has trial been extended
   extensionCount   Int       @default(0) // Number of times trial extended
-  upgradedToUserId String?   // Link to User.id if converted to paid user
+  upgradedToUserId String? // Link to User.id if converted to paid user
   isTrialExpired   Boolean   @default(false) // Cache for quick checks
   lastTrialCheck   DateTime  @default(now()) // Last time trial status was checked
-  deviceId         String?   // Unique device identifier for tracking
+  deviceId         String? // Unique device identifier for tracking
   testsTakenCount  Int       @default(0) // Track number of tests (limit 50 during trial)
 
   // Timestamps
@@ -476,14 +488,14 @@ model FreeUser {
   updatedAt        DateTime @updatedAt
 
   // Relations
-  testAttempts     TestAttempt[]
-  testSessions     TestSession[]
-  bookmarks        Bookmark[]
-  studyPlans       StudyPlan[]
-  forumPosts       ForumPost[]
-  achievements     Achievement[]
-  userProgress     UserProgress[]
-  questionResponses UserQuestionResponse[]
+  testAttempts       TestAttempt[]
+  testSessions       TestSession[]
+  bookmarks          Bookmark[]
+  studyPlans         StudyPlan[]
+  forumPosts         ForumPost[]
+  achievements       Achievement[]
+  userProgress       UserProgress[]
+  questionResponses  UserQuestionResponse[]
   performanceReports PerformanceReport[]
 
   @@index([trialExpiryDate, isTrialExpired])
@@ -493,43 +505,43 @@ model FreeUser {
 }
 
 model ChapterNote {
-  id               String   @id @default(cuid())
-  title            String
-  curriculum       String   // NEET, CBSE, ICSE, IB, IGCSE
-  grade            String   // CLASS_9, CLASS_10, CLASS_11, CLASS_12
-  subject          String   @default("Biology")
-  chapter          String
-  topic            String?
+  id         String  @id @default(cuid())
+  title      String
+  curriculum String // NEET, CBSE, ICSE, IB, IGCSE
+  grade      String // CLASS_9, CLASS_10, CLASS_11, CLASS_12
+  subject    String  @default("Biology")
+  chapter    String
+  topic      String?
 
   // Content
-  content          String   // Markdown format
-  summary          String?
-  keyPoints        Json? // String array stored as JSON
-  diagrams         Json? // String array stored as JSON
+  content   String // Markdown format
+  summary   String?
+  keyPoints Json? // String array stored as JSON
+  diagrams  Json? // String array stored as JSON
 
   // Metadata
-  difficulty       String   @default("Medium") // Easy, Medium, Hard
-  estimatedTime    Int?     // Reading time in minutes
-  downloadCount    Int      @default(0)
-  viewCount        Int      @default(0)
-  rating           Float    @default(0)
-  ratingCount      Int      @default(0)
+  difficulty    String @default("Medium") // Easy, Medium, Hard
+  estimatedTime Int? // Reading time in minutes
+  downloadCount Int    @default(0)
+  viewCount     Int    @default(0)
+  rating        Float  @default(0)
+  ratingCount   Int    @default(0)
 
   // SEO
-  slug             String   @unique
-  metaDescription  String?
-  tags             Json? // String array stored as JSON
+  slug            String  @unique
+  metaDescription String?
+  tags            Json? // String array stored as JSON
 
   // Status
-  isPublished      Boolean  @default(false)
-  publishedAt      DateTime?
+  isPublished Boolean   @default(false)
+  publishedAt DateTime?
 
   // Timestamps
-  createdAt        DateTime @default(now())
-  updatedAt        DateTime @updatedAt
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   // Relations
-  bookmarks        Bookmark[]
+  bookmarks Bookmark[]
 
   @@index([curriculum, grade, chapter])
   @@index([slug])
@@ -537,67 +549,67 @@ model ChapterNote {
 }
 
 model Question {
-  id               String   @id @default(cuid())
-  topic            String   // Cell Biology, Genetics, etc.
-  subtopic         String?
-  curriculum       String   // NEET, CBSE, ICSE, IB, IGCSE
-  grade            String   // CLASS_9, CLASS_10, CLASS_11, CLASS_12
-  subject          String   @default("biology") // biology, botany, zoology, physics, chemistry
+  id         String  @id @default(cuid())
+  topic      String // Cell Biology, Genetics, etc.
+  subtopic   String?
+  curriculum String // NEET, CBSE, ICSE, IB, IGCSE
+  grade      String // CLASS_9, CLASS_10, CLASS_11, CLASS_12
+  subject    String  @default("biology") // biology, botany, zoology, physics, chemistry
 
   // Question Details
-  type             QuestionType // MCQ, SHORT_ANSWER, DIAGRAM, TRUE_FALSE
-  difficulty       DifficultyLevel @default(MEDIUM)
-  question         String   // The question text
-  options          Json? // String array stored as JSON for MCQ
-  correctAnswer    String   // The correct answer
-  explanation      String?  // Detailed explanation
-  solutionSteps    Json? // Array of solution steps for complex problems
+  type          QuestionType // MCQ, SHORT_ANSWER, DIAGRAM, TRUE_FALSE
+  difficulty    DifficultyLevel @default(MEDIUM)
+  question      String // The question text
+  options       Json? // String array stored as JSON for MCQ
+  correctAnswer String // The correct answer
+  explanation   String? // Detailed explanation
+  solutionSteps Json? // Array of solution steps for complex problems
 
   // Rich Content Support
-  questionImage    String?  // URL to question image
-  explanationImage String?  // URL to explanation image
-  videoExplanation String?  // URL to video explanation
+  questionImage    String? // URL to question image
+  explanationImage String? // URL to explanation image
+  videoExplanation String? // URL to video explanation
 
   // Metadata
-  source           String?  // NEET_2023, CBSE_2022, etc.
-  examYear         Int?     // Year of the exam
-  marks            Int      @default(1)
-  timeLimit        Int?     // Recommended time in seconds
-  tags             Json?    // String array stored as JSON
-  relatedConcepts  Json?    // Related topics/concepts
-  keywords         Json?    // Searchable keywords
+  source          String? // NEET_2023, CBSE_2022, etc.
+  examYear        Int? // Year of the exam
+  marks           Int     @default(1)
+  timeLimit       Int? // Recommended time in seconds
+  tags            Json? // String array stored as JSON
+  relatedConcepts Json? // Related topics/concepts
+  keywords        Json? // Searchable keywords
 
   // Advanced Analytics
-  totalAttempts    Int      @default(0)
-  correctAttempts  Int      @default(0)
-  averageTime      Int?     // Average time taken in seconds
-  difficultyRating Float?   // User-perceived difficulty (1-5)
-  popularityScore  Float    @default(0) // Algorithm-calculated popularity
+  totalAttempts    Int    @default(0)
+  correctAttempts  Int    @default(0)
+  averageTime      Int? // Average time taken in seconds
+  difficultyRating Float? // User-perceived difficulty (1-5)
+  popularityScore  Float  @default(0) // Algorithm-calculated popularity
 
   // A/B Testing
-  variantId        String?  // For question variants testing
-  conversionRate   Float?   // Performance metric
+  variantId      String? // For question variants testing
+  conversionRate Float? // Performance metric
 
   // Quality Control
-  isActive         Boolean  @default(true)
-  isVerified       Boolean  @default(false)
-  verifiedBy       String?  // Teacher/expert who verified
-  qualityScore     Float?   // AI-generated quality score
-  reportCount      Int      @default(0) // User-reported issues
+  isActive     Boolean @default(true)
+  isVerified   Boolean @default(false)
+  verifiedBy   String? // Teacher/expert who verified
+  qualityScore Float? // AI-generated quality score
+  reportCount  Int     @default(0) // User-reported issues
 
   // SEO and Categorization
-  slug             String?  @unique // URL-friendly identifier
-  category         QuestionCategory @default(PRACTICE)
+  slug     String?          @unique // URL-friendly identifier
+  category QuestionCategory @default(PRACTICE)
 
   // Timestamps
-  createdAt        DateTime @default(now())
-  updatedAt        DateTime @updatedAt
-  lastUsed         DateTime? // Last time used in a test
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  lastUsed  DateTime? // Last time used in a test
 
   // Relations
-  testQuestions    TestQuestion[]
-  questionBank     QuestionBankQuestion[]
-  userResponses    UserQuestionResponse[]
+  testQuestions TestQuestion[]
+  questionBank  QuestionBankQuestion[]
+  userResponses UserQuestionResponse[]
 
   @@index([topic, difficulty])
   @@index([curriculum, grade])
@@ -610,62 +622,62 @@ model Question {
 // Comprehensive Test Management Models
 
 model TestTemplate {
-  id               String   @id @default(cuid())
-  title            String
-  description      String?
-  slug             String   @unique
+  id          String  @id @default(cuid())
+  title       String
+  description String?
+  slug        String  @unique
 
   // Test Configuration
-  type             TestType @default(PRACTICE_TEST)
-  category         TestCategory @default(TOPIC_WISE)
-  difficulty       DifficultyLevel @default(MEDIUM)
-  timeLimit        Int      // In minutes
-  totalQuestions   Int
-  totalMarks       Int
-  passingMarks     Int?
+  type           TestType        @default(PRACTICE_TEST)
+  category       TestCategory    @default(TOPIC_WISE)
+  difficulty     DifficultyLevel @default(MEDIUM)
+  timeLimit      Int // In minutes
+  totalQuestions Int
+  totalMarks     Int
+  passingMarks   Int?
 
   // Content Specification
-  curriculum       String   // NEET, CBSE, etc.
-  grade            String   // CLASS_11, CLASS_12, etc.
-  subject          String   @default("biology")
-  topics           Json     // Array of topics to include
+  curriculum String // NEET, CBSE, etc.
+  grade      String // CLASS_11, CLASS_12, etc.
+  subject    String @default("biology")
+  topics     Json // Array of topics to include
 
   // Advanced Settings
-  negativeMarking  Boolean  @default(false)
-  markingScheme    Json?    // Custom marking rules
+  negativeMarking      Boolean @default(false)
+  markingScheme        Json? // Custom marking rules
   questionDistribution Json? // Topic-wise question distribution
-  instructions     Json?    // Array of instructions
+  instructions         Json? // Array of instructions
 
   // Adaptive Features
-  isAdaptive       Boolean  @default(false)
-  adaptiveSettings Json?    // Adaptive test configuration
+  isAdaptive       Boolean @default(false)
+  adaptiveSettings Json? // Adaptive test configuration
 
   // Analytics & Performance
-  attemptCount     Int      @default(0)
-  averageScore     Float?
-  averageTime      Int?     // Average time taken
-  popularityScore  Float    @default(0)
+  attemptCount    Int    @default(0)
+  averageScore    Float?
+  averageTime     Int? // Average time taken
+  popularityScore Float  @default(0)
 
   // Status & Metadata
-  isActive         Boolean  @default(true)
-  isPremium        Boolean  @default(false)
-  isPublished      Boolean  @default(false)
-  publishedAt      DateTime?
+  isActive    Boolean   @default(true)
+  isPremium   Boolean   @default(false)
+  isPublished Boolean   @default(false)
+  publishedAt DateTime?
 
   // SEO
-  seoTitle         String?
-  seoDescription   String?
-  seoKeywords      Json?
+  seoTitle       String?
+  seoDescription String?
+  seoKeywords    Json?
 
   // Timestamps
-  createdAt        DateTime @default(now())
-  updatedAt        DateTime @updatedAt
-  createdBy        String?  // Admin/teacher who created
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  createdBy String? // Admin/teacher who created
 
   // Relations
-  testSessions     TestSession[]
-  questionBank     QuestionBankQuestion[]
-  testAttempts     TestAttempt[]
+  testSessions TestSession[]
+  questionBank QuestionBankQuestion[]
+  testAttempts TestAttempt[]
 
   @@index([type, category])
   @@index([curriculum, grade])
@@ -675,54 +687,54 @@ model TestTemplate {
 }
 
 model TestSession {
-  id               String   @id @default(cuid())
-  userId           String?  // Can be null for anonymous users
-  freeUserId       String?  // For free users
-  testTemplateId   String
+  id             String  @id @default(cuid())
+  userId         String? // Can be null for anonymous users
+  freeUserId     String? // For free users
+  testTemplateId String
 
   // Session Details
-  sessionToken     String   @unique // For real-time tracking
-  status           TestSessionStatus @default(NOT_STARTED)
+  sessionToken String            @unique // For real-time tracking
+  status       TestSessionStatus @default(NOT_STARTED)
 
   // Timing
-  startedAt        DateTime?
-  pausedAt         DateTime?
-  resumedAt        DateTime?
-  submittedAt      DateTime?
-  timeSpent        Int      @default(0) // Total time in seconds
-  remainingTime    Int?     // Remaining time for paused sessions
+  startedAt     DateTime?
+  pausedAt      DateTime?
+  resumedAt     DateTime?
+  submittedAt   DateTime?
+  timeSpent     Int       @default(0) // Total time in seconds
+  remainingTime Int? // Remaining time for paused sessions
 
   // Current State
-  currentQuestionIndex Int   @default(0)
-  questionsAnswered    Int   @default(0)
+  currentQuestionIndex     Int @default(0)
+  questionsAnswered        Int @default(0)
   questionsMarkedForReview Int @default(0)
 
   // Real-time Monitoring
-  browserInfo      Json?    // Browser, OS, screen size
-  ipAddress        String?
-  locationData     Json?    // Country, city for security
+  browserInfo  Json? // Browser, OS, screen size
+  ipAddress    String?
+  locationData Json? // Country, city for security
 
   // Anti-cheating
-  tabSwitchCount   Int      @default(0)
-  fullscreenExits  Int      @default(0)
-  suspiciousActivity Json?  // Array of suspicious events
-  isProctored      Boolean  @default(false)
+  tabSwitchCount     Int     @default(0)
+  fullscreenExits    Int     @default(0)
+  suspiciousActivity Json? // Array of suspicious events
+  isProctored        Boolean @default(false)
 
   // Final Results (populated after submission)
-  totalScore       Int?
-  percentage       Float?
-  rank             Int?     // Among all test takers
+  totalScore Int?
+  percentage Float?
+  rank       Int? // Among all test takers
 
   // Timestamps
-  createdAt        DateTime @default(now())
-  updatedAt        DateTime @updatedAt
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   // Relations
-  user             User?    @relation(fields: [userId], references: [id])
-  freeUser         FreeUser? @relation(fields: [freeUserId], references: [id])
-  testTemplate     TestTemplate @relation(fields: [testTemplateId], references: [id])
-  responses        UserQuestionResponse[]
-  analytics        TestAnalytics?
+  user         User?                  @relation(fields: [userId], references: [id])
+  freeUser     FreeUser?              @relation(fields: [freeUserId], references: [id])
+  testTemplate TestTemplate           @relation(fields: [testTemplateId], references: [id])
+  responses    UserQuestionResponse[]
+  analytics    TestAnalytics?
 
   @@index([userId, status])
   @@index([freeUserId, status])
@@ -732,45 +744,45 @@ model TestSession {
 }
 
 model TestAttempt {
-  id               String   @id @default(cuid())
-  freeUserId       String
-  testTemplateId   String?  // Link to template if used
+  id             String  @id @default(cuid())
+  freeUserId     String
+  testTemplateId String? // Link to template if used
 
   // Test Configuration
-  title            String   // "Cell Biology Test - Easy"
-  topics           Json?    // String array stored as JSON
-  difficulty       DifficultyLevel @default(MEDIUM)
-  questionCount    Int
-  timeLimit        Int?     // In minutes
+  title         String // "Cell Biology Test - Easy"
+  topics        Json? // String array stored as JSON
+  difficulty    DifficultyLevel @default(MEDIUM)
+  questionCount Int
+  timeLimit     Int? // In minutes
 
   // Results
-  score            Int      // Out of total marks
-  totalMarks       Int
-  percentage       Float
-  timeSpent        Int      // In seconds
-  rank             Int?     // Among all attempts
+  score      Int // Out of total marks
+  totalMarks Int
+  percentage Float
+  timeSpent  Int // In seconds
+  rank       Int? // Among all attempts
 
   // Detailed Analysis
-  topicWiseScore   Json     // { "Cell Biology": 8, "Genetics": 6 }
-  strengthAreas    Json?    // String array stored as JSON
-  weaknessAreas    Json?    // String array stored as JSON
-  recommendations  Json?    // String array stored as JSON
-  improvementAreas Json?    // Specific areas for improvement
+  topicWiseScore   Json // { "Cell Biology": 8, "Genetics": 6 }
+  strengthAreas    Json? // String array stored as JSON
+  weaknessAreas    Json? // String array stored as JSON
+  recommendations  Json? // String array stored as JSON
+  improvementAreas Json? // Specific areas for improvement
 
   // Performance Metrics
-  accuracy         Float?   // Percentage of correct answers
-  speed            Float?   // Questions per minute
-  consistency      Float?   // Variation in performance across topics
+  accuracy    Float? // Percentage of correct answers
+  speed       Float? // Questions per minute
+  consistency Float? // Variation in performance across topics
 
   // Status
-  status           TestStatus @default(IN_PROGRESS)
-  startedAt        DateTime @default(now())
-  submittedAt      DateTime?
+  status      TestStatus @default(IN_PROGRESS)
+  startedAt   DateTime   @default(now())
+  submittedAt DateTime?
 
   // Relations
-  freeUser         FreeUser @relation(fields: [freeUserId], references: [id], onDelete: Cascade)
-  testTemplate     TestTemplate? @relation(fields: [testTemplateId], references: [id])
-  testQuestions    TestQuestion[]
+  freeUser      FreeUser       @relation(fields: [freeUserId], references: [id], onDelete: Cascade)
+  testTemplate  TestTemplate?  @relation(fields: [testTemplateId], references: [id])
+  testQuestions TestQuestion[]
 
   @@index([freeUserId, startedAt])
   @@index([testTemplateId])
@@ -779,24 +791,24 @@ model TestAttempt {
 }
 
 model TestQuestion {
-  id               String   @id @default(cuid())
-  testAttemptId    String
-  questionId       String
+  id            String @id @default(cuid())
+  testAttemptId String
+  questionId    String
 
   // Student Response
-  selectedAnswer   String?
-  isCorrect        Boolean?
-  timeSpent        Int?     // In seconds
-  marksAwarded     Int      @default(0)
-  isMarkedForReview Boolean @default(false)
+  selectedAnswer    String?
+  isCorrect         Boolean?
+  timeSpent         Int? // In seconds
+  marksAwarded      Int      @default(0)
+  isMarkedForReview Boolean  @default(false)
 
   // Additional Analytics
-  attempts         Int      @default(1) // Number of times student changed answer
-  confidenceLevel  Int?     // 1-5 scale if asked
+  attempts        Int  @default(1) // Number of times student changed answer
+  confidenceLevel Int? // 1-5 scale if asked
 
   // Relations
-  testAttempt      TestAttempt @relation(fields: [testAttemptId], references: [id], onDelete: Cascade)
-  question         Question @relation(fields: [questionId], references: [id])
+  testAttempt TestAttempt @relation(fields: [testAttemptId], references: [id], onDelete: Cascade)
+  question    Question    @relation(fields: [questionId], references: [id])
 
   @@unique([testAttemptId, questionId])
   @@map("test_questions")
@@ -805,51 +817,51 @@ model TestQuestion {
 // New Models for Enhanced Functionality
 
 model QuestionBank {
-  id               String   @id @default(cuid())
-  name             String
-  description      String?
-  category         QuestionBankCategory @default(CUSTOM)
+  id          String               @id @default(cuid())
+  name        String
+  description String?
+  category    QuestionBankCategory @default(CUSTOM)
 
   // Configuration
-  curriculum       String   // NEET, CBSE, etc.
-  grade            String   // CLASS_11, CLASS_12, etc.
-  subject          String   @default("biology")
-  topics           Json?    // Array of topics covered
+  curriculum String // NEET, CBSE, etc.
+  grade      String // CLASS_11, CLASS_12, etc.
+  subject    String @default("biology")
+  topics     Json? // Array of topics covered
 
   // Analytics
-  totalQuestions   Int      @default(0)
-  activeQuestions  Int      @default(0)
-  usageCount       Int      @default(0)
+  totalQuestions  Int @default(0)
+  activeQuestions Int @default(0)
+  usageCount      Int @default(0)
 
   // Status
-  isActive         Boolean  @default(true)
-  isPublic         Boolean  @default(false)
+  isActive Boolean @default(true)
+  isPublic Boolean @default(false)
 
   // Timestamps
-  createdAt        DateTime @default(now())
-  updatedAt        DateTime @updatedAt
-  createdBy        String?  // Admin/teacher who created
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  createdBy String? // Admin/teacher who created
 
   // Relations
-  questions        QuestionBankQuestion[]
+  questions QuestionBankQuestion[]
 
   @@map("question_banks")
 }
 
 model QuestionBankQuestion {
-  id               String   @id @default(cuid())
-  questionBankId   String
-  questionId       String
-  testTemplateId   String?  // If part of a test template
+  id             String  @id @default(cuid())
+  questionBankId String
+  questionId     String
+  testTemplateId String? // If part of a test template
 
   // Order and grouping
-  orderIndex       Int      // Position in the bank
-  groupLabel       String?  // Optional grouping (e.g., "Section A")
+  orderIndex Int // Position in the bank
+  groupLabel String? // Optional grouping (e.g., "Section A")
 
   // Relations
-  questionBank     QuestionBank @relation(fields: [questionBankId], references: [id], onDelete: Cascade)
-  question         Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
-  testTemplate     TestTemplate? @relation(fields: [testTemplateId], references: [id])
+  questionBank QuestionBank  @relation(fields: [questionBankId], references: [id], onDelete: Cascade)
+  question     Question      @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  testTemplate TestTemplate? @relation(fields: [testTemplateId], references: [id])
 
   @@unique([questionBankId, questionId])
   @@index([questionBankId, orderIndex])
@@ -857,31 +869,31 @@ model QuestionBankQuestion {
 }
 
 model UserQuestionResponse {
-  id               String   @id @default(cuid())
-  userId           String?  // Regular user
-  freeUserId       String?  // Free user
-  questionId       String
-  testSessionId    String?  // If part of a test session
+  id            String  @id @default(cuid())
+  userId        String? // Regular user
+  freeUserId    String? // Free user
+  questionId    String
+  testSessionId String? // If part of a test session
 
   // Response Details
-  selectedAnswer   String?
-  isCorrect        Boolean?
-  timeSpent        Int?     // In seconds
-  marksAwarded     Int      @default(0)
-  confidence       Int?     // 1-5 scale
+  selectedAnswer String?
+  isCorrect      Boolean?
+  timeSpent      Int? // In seconds
+  marksAwarded   Int      @default(0)
+  confidence     Int? // 1-5 scale
 
   // Context
-  responseMode     ResponseMode @default(TEST_MODE) // TEST_MODE, PRACTICE_MODE, REVIEW_MODE
-  deviceType       String?  // mobile, tablet, desktop
+  responseMode ResponseMode @default(TEST_MODE) // TEST_MODE, PRACTICE_MODE, REVIEW_MODE
+  deviceType   String? // mobile, tablet, desktop
 
   // Timestamps
-  answeredAt       DateTime @default(now())
+  answeredAt DateTime @default(now())
 
   // Relations
-  user             User? @relation(fields: [userId], references: [id])
-  freeUser         FreeUser? @relation(fields: [freeUserId], references: [id])
-  question         Question @relation(fields: [questionId], references: [id])
-  testSession      TestSession? @relation(fields: [testSessionId], references: [id])
+  user        User?        @relation(fields: [userId], references: [id])
+  freeUser    FreeUser?    @relation(fields: [freeUserId], references: [id])
+  question    Question     @relation(fields: [questionId], references: [id])
+  testSession TestSession? @relation(fields: [testSessionId], references: [id])
 
   @@index([userId, answeredAt])
   @@index([freeUserId, answeredAt])
@@ -890,40 +902,40 @@ model UserQuestionResponse {
 }
 
 model UserProgress {
-  id               String   @id @default(cuid())
-  userId           String?  // Regular user
-  freeUserId       String?  // Free user
+  id         String  @id @default(cuid())
+  userId     String? // Regular user
+  freeUserId String? // Free user
 
   // Progress Tracking
-  topic            String   // Cell Biology, Genetics, etc.
-  subtopic         String?
-  curriculum       String   // NEET, CBSE, etc.
-  grade            String   // CLASS_11, CLASS_12, etc.
+  topic      String // Cell Biology, Genetics, etc.
+  subtopic   String?
+  curriculum String // NEET, CBSE, etc.
+  grade      String // CLASS_11, CLASS_12, etc.
 
   // Performance Metrics
-  totalQuestions   Int      @default(0)
-  correctAnswers   Int      @default(0)
-  accuracy         Float    @default(0) // Percentage
-  averageTime      Int?     // Average time per question in seconds
-  improvementRate  Float    @default(0) // Week-over-week improvement
+  totalQuestions  Int   @default(0)
+  correctAnswers  Int   @default(0)
+  accuracy        Float @default(0) // Percentage
+  averageTime     Int? // Average time per question in seconds
+  improvementRate Float @default(0) // Week-over-week improvement
 
   // Difficulty Progression
-  currentLevel     DifficultyLevel @default(EASY)
-  masteryScore     Float    @default(0) // 0-100 scale
+  currentLevel DifficultyLevel @default(EASY)
+  masteryScore Float           @default(0) // 0-100 scale
 
   // Learning Path
-  recommendedNext  Json?    // Array of recommended topics
-  weakAreas        Json?    // Array of areas needing improvement
-  strongAreas      Json?    // Array of mastered areas
+  recommendedNext Json? // Array of recommended topics
+  weakAreas       Json? // Array of areas needing improvement
+  strongAreas     Json? // Array of mastered areas
 
   // Timestamps
-  lastPracticed    DateTime?
-  createdAt        DateTime @default(now())
-  updatedAt        DateTime @updatedAt
+  lastPracticed DateTime?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
 
   // Relations
-  user             User? @relation(fields: [userId], references: [id])
-  freeUser         FreeUser? @relation(fields: [freeUserId], references: [id])
+  user     User?     @relation(fields: [userId], references: [id])
+  freeUser FreeUser? @relation(fields: [freeUserId], references: [id])
 
   @@unique([userId, topic, curriculum, grade])
   @@unique([freeUserId, topic, curriculum, grade])
@@ -932,92 +944,92 @@ model UserProgress {
 }
 
 model TestAnalytics {
-  id               String   @id @default(cuid())
-  testSessionId    String   @unique
+  id            String @id @default(cuid())
+  testSessionId String @unique
 
   // Performance Analytics
-  totalTime        Int      // Total time spent in seconds
-  averageTimePerQ  Float    // Average time per question
+  totalTime          Int // Total time spent in seconds
+  averageTimePerQ    Float // Average time per question
   questionsAttempted Int
-  questionsCorrect Int
-  accuracy         Float    // Percentage correct
+  questionsCorrect   Int
+  accuracy           Float // Percentage correct
 
   // Behavioral Analytics
-  questionsSkipped Int      @default(0)
-  questionsRevisited Int    @default(0)
-  timeDistribution Json     // Time spent on each question
-  answerPattern    Json     // Sequence of answers
+  questionsSkipped   Int  @default(0)
+  questionsRevisited Int  @default(0)
+  timeDistribution   Json // Time spent on each question
+  answerPattern      Json // Sequence of answers
 
   // Difficulty Analysis
-  easyQuestions    Json     // Performance on easy questions
-  mediumQuestions  Json     // Performance on medium questions
-  hardQuestions    Json     // Performance on hard questions
+  easyQuestions   Json // Performance on easy questions
+  mediumQuestions Json // Performance on medium questions
+  hardQuestions   Json // Performance on hard questions
 
   // Topic-wise Performance
-  topicPerformance Json     // Detailed topic-wise analysis
-  strengthTopics   Json     // Array of strong topics
-  weaknessTopics   Json     // Array of weak topics
+  topicPerformance Json // Detailed topic-wise analysis
+  strengthTopics   Json // Array of strong topics
+  weaknessTopics   Json // Array of weak topics
 
   // Comparative Analytics
-  percentileRank   Float?   // Percentile among all test takers
-  averageComparison Float?  // How performance compares to average
+  percentileRank    Float? // Percentile among all test takers
+  averageComparison Float? // How performance compares to average
 
   // Predictive Analytics
-  predictedScore   Float?   // AI-predicted score for similar tests
+  predictedScore       Float? // AI-predicted score for similar tests
   recommendedStudyTime Int? // Recommended study time in hours
 
   // Timestamps
-  analyzedAt       DateTime @default(now())
+  analyzedAt DateTime @default(now())
 
   // Relations
-  testSession      TestSession @relation(fields: [testSessionId], references: [id], onDelete: Cascade)
+  testSession TestSession @relation(fields: [testSessionId], references: [id], onDelete: Cascade)
 
   @@map("test_analytics")
 }
 
 model PerformanceReport {
-  id               String   @id @default(cuid())
-  userId           String?  // Regular user
-  freeUserId       String?  // Free user
+  id         String  @id @default(cuid())
+  userId     String? // Regular user
+  freeUserId String? // Free user
 
   // Report Details
-  reportType       ReportType @default(WEEKLY)
-  reportPeriod     String   // "2024-W1", "2024-01", etc.
+  reportType   ReportType @default(WEEKLY)
+  reportPeriod String // "2024-W1", "2024-01", etc.
 
   // Overall Performance
-  testsAttempted   Int      @default(0)
-  averageScore     Float?
-  totalStudyTime   Int      @default(0) // In minutes
-  improvementRate  Float?   // Percentage improvement
+  testsAttempted  Int    @default(0)
+  averageScore    Float?
+  totalStudyTime  Int    @default(0) // In minutes
+  improvementRate Float? // Percentage improvement
 
   // Subject-wise Performance
-  biologyScore     Float?
-  botanyScore      Float?
-  zoologyScore     Float?
+  biologyScore Float?
+  botanyScore  Float?
+  zoologyScore Float?
 
   // Topic Analysis
-  strongTopics     Json?    // Array of topics with good performance
-  weakTopics       Json?    // Array of topics needing improvement
-  improvingTopics  Json?    // Array of topics showing improvement
+  strongTopics    Json? // Array of topics with good performance
+  weakTopics      Json? // Array of topics needing improvement
+  improvingTopics Json? // Array of topics showing improvement
 
   // Goals and Targets
-  targetScore      Float?   // User-set target score
-  targetDate       DateTime? // Target exam date
-  onTrackStatus    Boolean  @default(true) // Whether on track to meet goals
+  targetScore   Float? // User-set target score
+  targetDate    DateTime? // Target exam date
+  onTrackStatus Boolean   @default(true) // Whether on track to meet goals
 
   // Recommendations
-  studyPlan        Json?    // Recommended study plan
-  focusAreas       Json?    // Areas to focus on
-  practiceTests    Json?    // Recommended tests to take
+  studyPlan     Json? // Recommended study plan
+  focusAreas    Json? // Areas to focus on
+  practiceTests Json? // Recommended tests to take
 
   // Timestamps
-  periodStart      DateTime
-  periodEnd        DateTime
-  generatedAt      DateTime @default(now())
+  periodStart DateTime
+  periodEnd   DateTime
+  generatedAt DateTime @default(now())
 
   // Relations
-  user             User? @relation(fields: [userId], references: [id])
-  freeUser         FreeUser? @relation(fields: [freeUserId], references: [id])
+  user     User?     @relation(fields: [userId], references: [id])
+  freeUser FreeUser? @relation(fields: [freeUserId], references: [id])
 
   @@unique([userId, reportType, reportPeriod])
   @@unique([freeUserId, reportType, reportPeriod])
@@ -1026,123 +1038,123 @@ model PerformanceReport {
 }
 
 model Bookmark {
-  id               String   @id @default(cuid())
-  freeUserId       String
-  chapterNoteId    String
+  id            String @id @default(cuid())
+  freeUserId    String
+  chapterNoteId String
 
   // Metadata
-  notes            String?  // Personal notes by student
-  createdAt        DateTime @default(now())
+  notes     String? // Personal notes by student
+  createdAt DateTime @default(now())
 
   // Relations
-  freeUser         FreeUser @relation(fields: [freeUserId], references: [id], onDelete: Cascade)
-  chapterNote      ChapterNote @relation(fields: [chapterNoteId], references: [id], onDelete: Cascade)
+  freeUser    FreeUser    @relation(fields: [freeUserId], references: [id], onDelete: Cascade)
+  chapterNote ChapterNote @relation(fields: [chapterNoteId], references: [id], onDelete: Cascade)
 
   @@unique([freeUserId, chapterNoteId])
   @@map("bookmarks")
 }
 
 model StudyPlan {
-  id               String   @id @default(cuid())
-  freeUserId       String
+  id         String @id @default(cuid())
+  freeUserId String
 
   // Plan Details
-  title            String   // "NEET 2025 Preparation"
-  targetExam       String   // NEET, CBSE, etc.
-  examDate         DateTime?
+  title      String // "NEET 2025 Preparation"
+  targetExam String // NEET, CBSE, etc.
+  examDate   DateTime?
 
   // Schedule
-  schedule         Json     // Weekly/daily schedule
-  currentWeek      Int      @default(1)
-  totalWeeks       Int
+  schedule    Json // Weekly/daily schedule
+  currentWeek Int  @default(1)
+  totalWeeks  Int
 
   // Progress
-  completedTopics  Json? // String array stored as JSON
-  currentTopic     String?
-  overallProgress  Int      @default(0) // Percentage
+  completedTopics Json? // String array stored as JSON
+  currentTopic    String?
+  overallProgress Int     @default(0) // Percentage
 
   // Status
-  isActive         Boolean  @default(true)
-  createdAt        DateTime @default(now())
-  updatedAt        DateTime @updatedAt
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   // Relations
-  freeUser         FreeUser @relation(fields: [freeUserId], references: [id], onDelete: Cascade)
+  freeUser FreeUser @relation(fields: [freeUserId], references: [id], onDelete: Cascade)
 
   @@map("study_plans")
 }
 
 model ForumPost {
-  id               String   @id @default(cuid())
-  freeUserId       String
+  id         String @id @default(cuid())
+  freeUserId String
 
   // Post Details
-  title            String
-  content          String
-  topic            String   // Biology topic
-  type             PostType @default(QUESTION)
+  title   String
+  content String
+  topic   String // Biology topic
+  type    PostType @default(QUESTION)
 
   // Engagement
-  upvotes          Int      @default(0)
-  views            Int      @default(0)
+  upvotes Int @default(0)
+  views   Int @default(0)
 
   // Status
-  isResolved       Boolean  @default(false)
-  isPinned         Boolean  @default(false)
+  isResolved Boolean @default(false)
+  isPinned   Boolean @default(false)
 
   // Timestamps
-  createdAt        DateTime @default(now())
-  updatedAt        DateTime @updatedAt
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   // Relations
-  freeUser         FreeUser @relation(fields: [freeUserId], references: [id], onDelete: Cascade)
-  replies          ForumReply[]
+  freeUser FreeUser     @relation(fields: [freeUserId], references: [id], onDelete: Cascade)
+  replies  ForumReply[]
 
   @@index([topic, createdAt])
   @@map("forum_posts")
 }
 
 model ForumReply {
-  id               String   @id @default(cuid())
-  postId           String
-  content          String
-  authorName       String   // Anonymous display name
+  id         String @id @default(cuid())
+  postId     String
+  content    String
+  authorName String // Anonymous display name
 
   // Engagement
-  upvotes          Int      @default(0)
-  isAccepted       Boolean  @default(false) // Best answer
+  upvotes    Int     @default(0)
+  isAccepted Boolean @default(false) // Best answer
 
   // Timestamps
-  createdAt        DateTime @default(now())
+  createdAt DateTime @default(now())
 
   // Relations
-  post             ForumPost @relation(fields: [postId], references: [id], onDelete: Cascade)
+  post ForumPost @relation(fields: [postId], references: [id], onDelete: Cascade)
 
   @@map("forum_replies")
 }
 
 model Achievement {
-  id               String   @id @default(cuid())
-  freeUserId       String
+  id         String @id @default(cuid())
+  freeUserId String
 
   // Achievement Details
-  type             AchievementType
-  title            String
-  description      String
-  icon             String?  // Icon URL or name
-  points           Int      @default(0)
+  type        AchievementType
+  title       String
+  description String
+  icon        String? // Icon URL or name
+  points      Int             @default(0)
 
   // Progress (for progressive achievements)
-  currentProgress  Int      @default(0)
-  targetProgress   Int      @default(1)
-  isCompleted      Boolean  @default(false)
+  currentProgress Int     @default(0)
+  targetProgress  Int     @default(1)
+  isCompleted     Boolean @default(false)
 
   // Timestamps
-  earnedAt         DateTime?
-  createdAt        DateTime @default(now())
+  earnedAt  DateTime?
+  createdAt DateTime  @default(now())
 
   // Relations
-  freeUser         FreeUser @relation(fields: [freeUserId], references: [id], onDelete: Cascade)
+  freeUser FreeUser @relation(fields: [freeUserId], references: [id], onDelete: Cascade)
 
   @@map("achievements")
 }
@@ -1261,103 +1273,103 @@ enum AchievementType {
 // ============================================
 
 model Chapter {
-  id              String   @id @default(cuid())
-  courseId        String
+  id       String @id @default(cuid())
+  courseId String
 
   // Chapter Details
-  title           String
-  description     String?
-  orderIndex      Int
+  title       String
+  description String?
+  orderIndex  Int
 
   // Status
-  isActive        Boolean  @default(true)
+  isActive Boolean @default(true)
 
   // Timestamps
-  createdAt       DateTime @default(now())
-  updatedAt       DateTime @updatedAt
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   // Relations
-  course          Course   @relation(fields: [courseId], references: [id], onDelete: Cascade)
-  topics          Topic[]
-  materials       StudyMaterial[]
+  course    Course          @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  topics    Topic[]
+  materials StudyMaterial[]
 
   @@index([courseId, orderIndex])
   @@map("chapters")
 }
 
 model Topic {
-  id              String   @id @default(cuid())
-  chapterId       String
+  id        String @id @default(cuid())
+  chapterId String
 
   // Topic Details
-  title           String
-  description     String?
-  orderIndex      Int
+  title       String
+  description String?
+  orderIndex  Int
 
   // Status
-  isActive        Boolean  @default(true)
+  isActive Boolean @default(true)
 
   // Timestamps
-  createdAt       DateTime @default(now())
-  updatedAt       DateTime @updatedAt
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   // Relations
-  chapter         Chapter  @relation(fields: [chapterId], references: [id], onDelete: Cascade)
-  materials       StudyMaterial[]
+  chapter   Chapter         @relation(fields: [chapterId], references: [id], onDelete: Cascade)
+  materials StudyMaterial[]
 
   @@index([chapterId, orderIndex])
   @@map("topics")
 }
 
 model StudyMaterial {
-  id              String   @id @default(cuid())
+  id String @id @default(cuid())
 
   // Content Details
-  title           String
-  description     String?
-  materialType    MaterialType
+  title        String
+  description  String?
+  materialType MaterialType
 
   // File Information
-  fileUrl         String
-  fileName        String
-  fileSize        Int
-  mimeType        String       @default("application/pdf")
+  fileUrl  String
+  fileName String
+  fileSize Int
+  mimeType String @default("application/pdf")
 
   // Classification
-  courseId        String?
-  chapterId       String?
-  topicId         String?
-  tags            Json?
+  courseId  String?
+  chapterId String?
+  topicId   String?
+  tags      Json?
 
   // Access Control
-  accessLevel     AccessLevel  @default(ENROLLED)
+  accessLevel      AccessLevel @default(ENROLLED)
   requiredCourseId String?
 
   // Organization
-  sortOrder       Int          @default(0)
-  category        String?
+  sortOrder Int     @default(0)
+  category  String?
 
   // Publishing
-  uploadedBy      String
-  isPublished     Boolean      @default(false)
-  publishedAt     DateTime?
+  uploadedBy  String
+  isPublished Boolean   @default(false)
+  publishedAt DateTime?
 
   // Analytics
-  totalDownloads  Int          @default(0)
-  totalViews      Int          @default(0)
-  avgRating       Float        @default(0)
-  ratingCount     Int          @default(0)
+  totalDownloads Int   @default(0)
+  totalViews     Int   @default(0)
+  avgRating      Float @default(0)
+  ratingCount    Int   @default(0)
 
   // Timestamps
-  createdAt       DateTime     @default(now())
-  updatedAt       DateTime     @updatedAt
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   // Relations
-  course          Course?      @relation(fields: [courseId], references: [id])
-  chapter         Chapter?     @relation(fields: [chapterId], references: [id])
-  topic           Topic?       @relation(fields: [topicId], references: [id])
-  materialAccess  MaterialAccess[]
-  progress        MaterialProgress[]
+  course         Course?            @relation(fields: [courseId], references: [id])
+  chapter        Chapter?           @relation(fields: [chapterId], references: [id])
+  topic          Topic?             @relation(fields: [topicId], references: [id])
+  materialAccess MaterialAccess[]
+  progress       MaterialProgress[]
 
   @@index([courseId, isPublished])
   @@index([materialType, accessLevel])
@@ -1366,19 +1378,19 @@ model StudyMaterial {
 }
 
 model MaterialAccess {
-  id              String   @id @default(cuid())
-  materialId      String
-  userId          String
+  id         String @id @default(cuid())
+  materialId String
+  userId     String
 
   // Access Details
-  grantedBy       String
-  grantedAt       DateTime @default(now())
-  expiresAt       DateTime?
-  reason          String?
+  grantedBy String
+  grantedAt DateTime  @default(now())
+  expiresAt DateTime?
+  reason    String?
 
   // Relations
-  material        StudyMaterial @relation(fields: [materialId], references: [id], onDelete: Cascade)
-  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  material StudyMaterial @relation(fields: [materialId], references: [id], onDelete: Cascade)
+  user     User          @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([materialId, userId])
   @@index([userId])
@@ -1386,36 +1398,36 @@ model MaterialAccess {
 }
 
 model MaterialProgress {
-  id              String   @id @default(cuid())
-  materialId      String
-  userId          String
+  id         String @id @default(cuid())
+  materialId String
+  userId     String
 
   // Progress Status
-  status          ProgressStatus @default(NOT_STARTED)
+  status ProgressStatus @default(NOT_STARTED)
 
   // Engagement Tracking
-  firstViewedAt   DateTime?
-  lastViewedAt    DateTime?
-  downloadedAt    DateTime?
-  completedAt     DateTime?
+  firstViewedAt DateTime?
+  lastViewedAt  DateTime?
+  downloadedAt  DateTime?
+  completedAt   DateTime?
 
   // Reading Progress
-  currentPage     Int?
-  totalPages      Int?
-  timeSpent       Int      @default(0)
+  currentPage Int?
+  totalPages  Int?
+  timeSpent   Int  @default(0)
 
   // Student Feedback
-  rating          Int?
-  feedback        String?
-  notes           String?
+  rating   Int?
+  feedback String?
+  notes    String?
 
   // Timestamps
-  createdAt       DateTime @default(now())
-  updatedAt       DateTime @updatedAt
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   // Relations
-  material        StudyMaterial @relation(fields: [materialId], references: [id], onDelete: Cascade)
-  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  material StudyMaterial @relation(fields: [materialId], references: [id], onDelete: Cascade)
+  user     User          @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([materialId, userId])
   @@index([userId, status])
@@ -1424,38 +1436,38 @@ model MaterialProgress {
 }
 
 model ContentNotification {
-  id              String   @id @default(cuid())
+  id String @id @default(cuid())
 
   // Notification Content
-  title           String
-  message         String
-  type            NotificationType
+  title   String
+  message String
+  type    NotificationType
 
   // Target Audience
   targetUserIds   Json?
   targetCourseIds Json?
-  sendToAll       Boolean  @default(false)
+  sendToAll       Boolean @default(false)
 
   // Content Reference
-  materialId      String?
-  courseId        String?
+  materialId String?
+  courseId   String?
 
   // Delivery Channels
-  channels        Json
+  channels Json
 
   // Scheduling
-  scheduledFor    DateTime?
-  sentAt          DateTime?
+  scheduledFor DateTime?
+  sentAt       DateTime?
 
   // Status & Stats
-  status          NotificationStatus @default(DRAFT)
-  recipientCount  Int      @default(0)
-  deliveredCount  Int      @default(0)
-  failedCount     Int      @default(0)
+  status         NotificationStatus @default(DRAFT)
+  recipientCount Int                @default(0)
+  deliveredCount Int                @default(0)
+  failedCount    Int                @default(0)
 
   // Timestamps
-  createdAt       DateTime @default(now())
-  updatedAt       DateTime @updatedAt
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   @@index([status, scheduledFor])
   @@index([materialId])
@@ -1510,15 +1522,15 @@ enum NotificationStatus {
 // ============================================
 
 model ReferralCode {
-  id          String   @id @default(cuid())
-  code        String   @unique
-  userId      String?
-  userEmail   String
-  uses        Int      @default(0)
-  maxUses     Int      @default(10)
-  discount    Int
-  expiresAt   DateTime?
-  createdAt   DateTime @default(now())
+  id        String    @id @default(cuid())
+  code      String    @unique
+  userId    String?
+  userEmail String
+  uses      Int       @default(0)
+  maxUses   Int       @default(10)
+  discount  Int
+  expiresAt DateTime?
+  createdAt DateTime  @default(now())
 
   redemptions ReferralRedemption[]
 
@@ -1528,15 +1540,15 @@ model ReferralCode {
 }
 
 model ReferralRedemption {
-  id             String   @id @default(cuid())
-  referralCodeId String
-  redeemedBy     String
+  id              String   @id @default(cuid())
+  referralCodeId  String
+  redeemedBy      String
   redeemedByEmail String
-  discountGiven  Int
-  bookingId      String?
-  createdAt      DateTime @default(now())
+  discountGiven   Int
+  bookingId       String?
+  createdAt       DateTime @default(now())
 
-  referralCode   ReferralCode @relation(fields: [referralCodeId], references: [id], onDelete: Cascade)
+  referralCode ReferralCode @relation(fields: [referralCodeId], references: [id], onDelete: Cascade)
 
   @@index([referralCodeId])
   @@index([redeemedByEmail])
@@ -1544,12 +1556,12 @@ model ReferralRedemption {
 }
 
 model RescheduleToken {
-  id          String   @id @default(cuid())
-  bookingId   String   @unique
-  token       String   @unique
-  expiresAt   DateTime
-  used        Boolean  @default(false)
-  createdAt   DateTime @default(now())
+  id        String   @id @default(cuid())
+  bookingId String   @unique
+  token     String   @unique
+  expiresAt DateTime
+  used      Boolean  @default(false)
+  createdAt DateTime @default(now())
 
   @@index([token])
   @@index([bookingId])
@@ -1561,7 +1573,7 @@ model OtpVerification {
   id        String   @id @default(cuid())
   mobile    String
   otp       String
-  purpose   String   // registration, login, password_reset, mobile_verification
+  purpose   String // registration, login, password_reset, mobile_verification
   verified  Boolean  @default(false)
   expiresAt DateTime
   attempts  Int      @default(0)
@@ -1579,29 +1591,29 @@ model OtpVerification {
 // ============================================
 
 model ChatHistory {
-  id               String   @id @default(cuid())
+  id String @id @default(cuid())
 
   // User Identification
-  userId           String?  // Regular paid user
-  freeUserId       String?  // Free trial user
-  sessionId        String   // Frontend session ID
+  userId     String? // Regular paid user
+  freeUserId String? // Free trial user
+  sessionId  String // Frontend session ID
 
   // Message Details
-  message          String   @db.Text // User question or AI response
-  isUserMessage    Boolean  // true = user, false = AI
+  message       String  @db.Text // User question or AI response
+  isUserMessage Boolean // true = user, false = AI
 
   // AI Response Metadata
-  ncertReferences  Json?    // Array of NCERT references
-  relatedTopics    Json?    // Array of related topics
-  confidence       Int?     // Confidence score (0-100)
-  tokensUsed       Int?     // Token count for AI response
+  ncertReferences Json? // Array of NCERT references
+  relatedTopics   Json? // Array of related topics
+  confidence      Int? // Confidence score (0-100)
+  tokensUsed      Int? // Token count for AI response
 
   // Context
-  topic            String?  // Biology topic (Cell Biology, Genetics, etc.)
-  difficulty       String?  // easy, medium, hard
+  topic      String? // Biology topic (Cell Biology, Genetics, etc.)
+  difficulty String? // easy, medium, hard
 
   // Timestamps
-  createdAt        DateTime @default(now())
+  createdAt DateTime @default(now())
 
   @@index([userId, createdAt])
   @@index([freeUserId, createdAt])
@@ -1614,51 +1626,51 @@ model ChatHistory {
 // ============================================
 
 model BiologyTopic {
-  id               String   @id @default(cuid())
+  id String @id @default(cuid())
 
   // Basic Information
-  title            String   // "Cell Biology: Structure and Function"
-  slug             String   @unique // "cell-biology-structure-function"
-  content          String   @db.Text // Full markdown content
-  excerpt          String?  // Short preview (150-200 chars)
+  title   String // "Cell Biology: Structure and Function"
+  slug    String  @unique // "cell-biology-structure-function"
+  content String  @db.Text // Full markdown content
+  excerpt String? // Short preview (150-200 chars)
 
   // SEO Optimization
-  metaTitle        String?  // Custom SEO title (60 chars)
-  metaDescription  String?  // Custom meta description (160 chars)
-  keywords         String[] // ["cell", "biology", "mitochondria", "NEET"]
+  metaTitle       String? // Custom SEO title (60 chars)
+  metaDescription String? // Custom meta description (160 chars)
+  keywords        String[] // ["cell", "biology", "mitochondria", "NEET"]
 
   // Classification & Taxonomy
-  curriculum       String   // NEET, CBSE, ICSE, IB, IGCSE
-  grade            String   // CLASS_11, CLASS_12
-  chapter          String   // "Cell: The Unit of Life"
-  difficulty       String   @default("Medium") // Easy, Medium, Hard
+  curriculum String // NEET, CBSE, ICSE, IB, IGCSE
+  grade      String // CLASS_11, CLASS_12
+  chapter    String // "Cell: The Unit of Life"
+  difficulty String @default("Medium") // Easy, Medium, Hard
 
   // Rich Content
-  keyPoints        Json?    // String array of key learning points
-  diagrams         Json?    // Array of image URLs for diagrams
-  videoUrl         String?  // Optional YouTube/Vimeo URL
+  keyPoints Json? // String array of key learning points
+  diagrams  Json? // Array of image URLs for diagrams
+  videoUrl  String? // Optional YouTube/Vimeo URL
 
   // Lead Magnet Association
-  leadMagnetId     String?
-  leadMagnet       LeadMagnet? @relation(fields: [leadMagnetId], references: [id])
+  leadMagnetId String?
+  leadMagnet   LeadMagnet? @relation(fields: [leadMagnetId], references: [id])
 
   // Analytics & Performance
-  viewCount        Int      @default(0)
-  leadConversions  Int      @default(0) // Number of leads captured from this page
-  avgTimeOnPage    Int?     // Average time in seconds
-  bounceRate       Float?   // Percentage
+  viewCount       Int    @default(0)
+  leadConversions Int    @default(0) // Number of leads captured from this page
+  avgTimeOnPage   Int? // Average time in seconds
+  bounceRate      Float? // Percentage
 
   // Publishing
-  isPublished      Boolean  @default(false)
-  publishedAt      DateTime?
-  authorName       String?  @default("Dr. Shekhar C Singh")
+  isPublished Boolean   @default(false)
+  publishedAt DateTime?
+  authorName  String?   @default("Dr. Shekhar C Singh")
 
   // Timestamps
-  createdAt        DateTime @default(now())
-  updatedAt        DateTime @updatedAt
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   // Relations
-  contentLeads     ContentLead[]
+  contentLeads ContentLead[]
 
   @@index([slug])
   @@index([curriculum, grade, chapter])
@@ -1668,108 +1680,108 @@ model BiologyTopic {
 }
 
 model LeadMagnet {
-  id               String   @id @default(cuid())
+  id String @id @default(cuid())
 
   // Lead Magnet Details
-  title            String   // "Cell Biology Complete Notes PDF"
-  description      String   // "Comprehensive 50-page notes covering all NEET topics"
+  title       String // "Cell Biology Complete Notes PDF"
+  description String // "Comprehensive 50-page notes covering all NEET topics"
 
   // File Information
-  fileType         String   // PDF, ZIP, DOC, PPTX
-  fileUrl          String?  // S3/CDN URL (generated after lead capture)
-  fileSize         Int?     // In KB
-  thumbnailUrl     String?  // Preview image
+  fileType     String // PDF, ZIP, DOC, PPTX
+  fileUrl      String? // S3/CDN URL (generated after lead capture)
+  fileSize     Int? // In KB
+  thumbnailUrl String? // Preview image
 
   // Gating Configuration
-  requiresEmail    Boolean  @default(true)
-  requiresWhatsApp Boolean  @default(false)
-  requiresName     Boolean  @default(true)
+  requiresEmail    Boolean @default(true)
+  requiresWhatsApp Boolean @default(false)
+  requiresName     Boolean @default(true)
 
   // Value Proposition
-  features         Json?    // Array of features/benefits
-  previewPages     Int?     // Number of preview pages shown before gating
+  features     Json? // Array of features/benefits
+  previewPages Int? // Number of preview pages shown before gating
 
   // Analytics
-  downloadCount    Int      @default(0)
-  conversionRate   Float?   // Percentage of viewers who download
+  downloadCount  Int    @default(0)
+  conversionRate Float? // Percentage of viewers who download
 
   // Status
-  isActive         Boolean  @default(true)
+  isActive Boolean @default(true)
 
   // Timestamps
-  createdAt        DateTime @default(now())
-  updatedAt        DateTime @updatedAt
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   // Relations
-  topics           BiologyTopic[]
-  leads            ContentLead[]
+  topics BiologyTopic[]
+  leads  ContentLead[]
 
   @@map("lead_magnets")
 }
 
 model ContentLead {
-  id               String   @id @default(cuid())
+  id String @id @default(cuid())
 
   // Contact Information (at least one required)
-  email            String?
-  whatsappNumber   String?  // Format: +919876543210
-  name             String?
+  email          String?
+  whatsappNumber String? // Format: +919876543210
+  name           String?
 
   // Additional Info
-  grade            String?  // CLASS_11, CLASS_12, DROPPER
-  interestedIn     String?  // NEET, CBSE, Both
+  grade        String? // CLASS_11, CLASS_12, DROPPER
+  interestedIn String? // NEET, CBSE, Both
 
   // Source Tracking
-  source           String   // "topic-page", "pdf-download", "notes-request", "homepage-cta"
-  topicSlug        String?  // Which biology topic page they came from
-  leadMagnetId     String?
+  source       String // "topic-page", "pdf-download", "notes-request", "homepage-cta"
+  topicSlug    String? // Which biology topic page they came from
+  leadMagnetId String?
 
   // UTM Parameters (Marketing Attribution)
-  utmSource        String?  // google, facebook, instagram
-  utmMedium        String?  // cpc, organic, social
-  utmCampaign      String?  // summer-2025, neet-prep
-  utmContent       String?  // ad-variant-a
-  utmTerm          String?  // biology notes
+  utmSource   String? // google, facebook, instagram
+  utmMedium   String? // cpc, organic, social
+  utmCampaign String? // summer-2025, neet-prep
+  utmContent  String? // ad-variant-a
+  utmTerm     String? // biology notes
 
   // Referrer Information
-  referrerUrl      String?  // Full URL of referring page
-  landingPage      String?  // First page visited
+  referrerUrl String? // Full URL of referring page
+  landingPage String? // First page visited
 
   // Device & Location
-  deviceType       String?  // mobile, tablet, desktop
-  browser          String?  // Chrome, Safari, Firefox
-  ipAddress        String?
-  country          String?
-  city             String?
+  deviceType String? // mobile, tablet, desktop
+  browser    String? // Chrome, Safari, Firefox
+  ipAddress  String?
+  country    String?
+  city       String?
 
   // Engagement Status
-  downloadCompleted Boolean  @default(false)
+  downloadCompleted Boolean   @default(false)
   downloadedAt      DateTime?
-  emailVerified     Boolean  @default(false)
-  whatsappVerified  Boolean  @default(false)
+  emailVerified     Boolean   @default(false)
+  whatsappVerified  Boolean   @default(false)
 
   // Conversion Tracking
-  convertedToPaid   Boolean  @default(false)
-  convertedAt       DateTime?
-  enrollmentId      String?  // Link to Enrollment if converted
+  convertedToPaid Boolean   @default(false)
+  convertedAt     DateTime?
+  enrollmentId    String? // Link to Enrollment if converted
 
   // Communication Status
-  welcomeEmailSent  Boolean  @default(false)
-  welcomeWhatsAppSent Boolean @default(false)
-  followUpCount     Int      @default(0)
-  lastContactedAt   DateTime?
+  welcomeEmailSent    Boolean   @default(false)
+  welcomeWhatsAppSent Boolean   @default(false)
+  followUpCount       Int       @default(0)
+  lastContactedAt     DateTime?
 
   // Lead Quality Scoring
-  leadScore         Int      @default(0) // 0-100 score
-  leadStage         String   @default("NEW") // NEW, CONTACTED, QUALIFIED, ENROLLED, COLD
+  leadScore Int    @default(0) // 0-100 score
+  leadStage String @default("NEW") // NEW, CONTACTED, QUALIFIED, ENROLLED, COLD
 
   // Timestamps
-  createdAt         DateTime @default(now())
-  updatedAt         DateTime @updatedAt
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   // Relations
-  leadMagnet        LeadMagnet? @relation(fields: [leadMagnetId], references: [id])
-  biologyTopic      BiologyTopic? @relation(fields: [topicSlug], references: [slug])
+  leadMagnet   LeadMagnet?   @relation(fields: [leadMagnetId], references: [id])
+  biologyTopic BiologyTopic? @relation(fields: [topicSlug], references: [slug])
 
   @@index([email])
   @@index([whatsappNumber])
@@ -1779,4 +1791,375 @@ model ContentLead {
   @@index([leadStage, leadScore])
   @@index([convertedToPaid])
   @@map("content_leads")
+}
+
+// ============================================
+// COUNSELOR DASHBOARD CRM SYSTEM
+// ============================================
+
+model Lead {
+  id             String    @id @default(cuid())
+  studentName    String
+  email          String?
+  phone          String
+  courseInterest String
+  stage          LeadStage @default(NEW_LEAD)
+  priority       Priority  @default(WARM)
+  source         String?
+
+  // Assignment
+  assignedToId String
+  assignedTo   User   @relation("CounselorLeads", fields: [assignedToId], references: [id])
+
+  // Timestamps
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+  lastContactedAt DateTime?
+  nextFollowUpAt  DateTime?
+  convertedAt     DateTime?
+  lostAt          DateTime?
+  lostReason      String?
+
+  // Link to demo booking if applicable
+  demoBookingId String?      @unique
+  demoBooking   DemoBooking? @relation("DemoBookingLead", fields: [demoBookingId], references: [id])
+
+  // Relations
+  communications Communication[]
+  offers         Offer[]
+  feePlans       FeePlan[]
+  tasks          Task[]
+  notes          Note[]
+  activities     Activity[]
+
+  @@index([assignedToId, stage])
+  @@index([nextFollowUpAt])
+  @@index([createdAt])
+  @@index([phone])
+  @@index([email])
+  @@map("leads")
+}
+
+enum LeadStage {
+  NEW_LEAD
+  DEMO_SCHEDULED
+  DEMO_COMPLETED
+  OFFER_SENT
+  NEGOTIATING
+  PAYMENT_PLAN_CREATED
+  ENROLLED
+  ACTIVE_STUDENT
+  LOST
+}
+
+enum Priority {
+  HOT
+  WARM
+  COLD
+}
+
+model Communication {
+  id     String @id @default(cuid())
+  leadId String
+  lead   Lead   @relation(fields: [leadId], references: [id], onDelete: Cascade)
+
+  type      CommType
+  direction Direction
+  subject   String?
+  message   String     @db.Text
+  status    CommStatus @default(PENDING)
+
+  sentById String
+  sentBy   User     @relation("SentMessages", fields: [sentById], references: [id])
+  sentAt   DateTime @default(now())
+
+  // WhatsApp specific
+  whatsappMessageId String?
+  templateName      String?
+
+  // Call specific
+  callDuration     Int?
+  callRecordingUrl String?
+
+  // Attachments
+  attachments String[]
+
+  @@index([leadId, sentAt])
+  @@index([sentById])
+  @@map("crm_communications")
+}
+
+enum CommType {
+  WHATSAPP
+  EMAIL
+  CALL
+  SMS
+}
+
+enum Direction {
+  INBOUND
+  OUTBOUND
+}
+
+enum CommStatus {
+  PENDING
+  SENT
+  DELIVERED
+  READ
+  FAILED
+}
+
+model FeePlan {
+  id     String @id @default(cuid())
+  leadId String
+  lead   Lead   @relation(fields: [leadId], references: [id], onDelete: Cascade)
+
+  courseId   String
+  courseName String
+
+  // Pricing
+  baseFee      Decimal      @db.Decimal(10, 2)
+  discount     Decimal      @default(0) @db.Decimal(10, 2)
+  discountType DiscountType @default(PERCENTAGE)
+  totalFee     Decimal      @db.Decimal(10, 2)
+  amountPaid   Decimal      @default(0) @db.Decimal(10, 2)
+  amountDue    Decimal      @db.Decimal(10, 2)
+
+  // Plan details
+  planType             String
+  numberOfInstallments Int
+
+  // Status
+  status FeeStatus @default(PENDING)
+
+  createdById String
+  createdBy   User     @relation("CreatedFeePlans", fields: [createdById], references: [id])
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  installments Installment[]
+  payments     FeePayment[]
+
+  @@index([leadId, status])
+  @@index([createdById])
+  @@map("fee_plans")
+}
+
+enum DiscountType {
+  PERCENTAGE
+  FIXED_AMOUNT
+}
+
+enum FeeStatus {
+  PENDING
+  PARTIAL
+  COMPLETED
+  CANCELLED
+}
+
+model Installment {
+  id        String  @id @default(cuid())
+  feePlanId String
+  feePlan   FeePlan @relation(fields: [feePlanId], references: [id], onDelete: Cascade)
+
+  installmentNumber Int
+  amount            Decimal           @db.Decimal(10, 2)
+  dueDate           DateTime
+  status            PaymentStatusEnum @default(PENDING)
+  paidAt            DateTime?
+  paidAmount        Decimal?          @db.Decimal(10, 2)
+
+  // Payment gateway
+  razorpayOrderId   String?
+  razorpayPaymentId String?
+  paymentLink       String?
+
+  // Reminders
+  remindersSent Json? @default("{\"7_days\": false, \"1_day\": false, \"due_date\": false}")
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([feePlanId, dueDate])
+  @@index([status, dueDate])
+  @@map("installments")
+}
+
+enum PaymentStatusEnum {
+  PENDING
+  PAID
+  OVERDUE
+  FAILED
+}
+
+model FeePayment {
+  id            String  @id @default(cuid())
+  feePlanId     String
+  feePlan       FeePlan @relation(fields: [feePlanId], references: [id])
+  installmentId String?
+
+  amount            Decimal @db.Decimal(10, 2)
+  paymentMethod     String
+  razorpayOrderId   String?
+  razorpayPaymentId String?
+  razorpaySignature String?
+
+  status String
+  paidAt DateTime?
+
+  metadata   Json?
+  receiptUrl String?
+
+  createdAt DateTime @default(now())
+
+  @@index([feePlanId, createdAt])
+  @@map("fee_payments")
+}
+
+model Offer {
+  id     String @id @default(cuid())
+  leadId String
+  lead   Lead   @relation(fields: [leadId], references: [id], onDelete: Cascade)
+
+  // Offer details
+  offerCode     String       @unique
+  offerName     String
+  courseName    String
+  originalPrice Decimal      @db.Decimal(10, 2)
+  discountType  DiscountType
+  discountValue Decimal      @db.Decimal(10, 2)
+  finalPrice    Decimal      @db.Decimal(10, 2)
+
+  // Validity
+  validFrom  DateTime @default(now())
+  validUntil DateTime
+  isActive   Boolean  @default(true)
+
+  // Status
+  status     OfferStatus @default(SENT)
+  sentAt     DateTime    @default(now())
+  viewedAt   DateTime?
+  acceptedAt DateTime?
+
+  // Terms
+  termsConditions String? @db.Text
+  maxUses         Int     @default(1)
+  usesCount       Int     @default(0)
+
+  // Tracking
+  createdById  String
+  createdBy    User    @relation("CreatedOffers", fields: [createdById], references: [id])
+  offerCardUrl String?
+
+  createdAt DateTime @default(now())
+
+  @@index([leadId, status])
+  @@index([validUntil])
+  @@index([createdById])
+  @@map("offers")
+}
+
+enum OfferStatus {
+  DRAFT
+  SENT
+  VIEWED
+  ACCEPTED
+  EXPIRED
+  CANCELLED
+}
+
+model Task {
+  id     String  @id @default(cuid())
+  leadId String?
+  lead   Lead?   @relation(fields: [leadId], references: [id], onDelete: Cascade)
+
+  title       String
+  description String?      @db.Text
+  type        TaskType
+  priority    TaskPriority @default(MEDIUM)
+
+  dueDate DateTime
+  dueTime String?
+
+  status      TaskStatus @default(PENDING)
+  completedAt DateTime?
+
+  assignedToId String
+  assignedTo   User    @relation("AssignedTasks", fields: [assignedToId], references: [id])
+  createdById  String?
+  createdBy    User?   @relation("CreatedTasks", fields: [createdById], references: [id])
+
+  // Automation
+  isAutoGenerated Boolean @default(false)
+  triggerEvent    String?
+
+  // Snooze
+  snoozedUntil DateTime?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([assignedToId, status, dueDate])
+  @@index([dueDate, status])
+  @@index([leadId])
+  @@map("tasks")
+}
+
+enum TaskType {
+  FOLLOW_UP_CALL
+  SEND_WHATSAPP
+  SEND_EMAIL
+  PAYMENT_REMINDER
+  DEMO_FOLLOWUP
+  CUSTOM
+}
+
+enum TaskPriority {
+  HIGH
+  MEDIUM
+  LOW
+}
+
+enum TaskStatus {
+  PENDING
+  IN_PROGRESS
+  COMPLETED
+  SNOOZED
+  CANCELLED
+}
+
+model Activity {
+  id     String  @id @default(cuid())
+  userId String
+  user   User    @relation("UserActivities", fields: [userId], references: [id])
+  leadId String?
+  lead   Lead?   @relation(fields: [leadId], references: [id], onDelete: Cascade)
+
+  action      String
+  description String
+  metadata    Json?
+
+  createdAt DateTime @default(now())
+
+  @@index([userId, createdAt])
+  @@index([createdAt])
+  @@index([leadId])
+  @@map("activities")
+}
+
+model Note {
+  id     String @id @default(cuid())
+  leadId String
+  lead   Lead   @relation(fields: [leadId], references: [id], onDelete: Cascade)
+
+  content String @db.Text
+
+  createdById String
+  createdBy   User     @relation("CreatedNotes", fields: [createdById], references: [id])
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([leadId, createdAt])
+  @@map("notes")
 }
