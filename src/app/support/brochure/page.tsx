@@ -400,7 +400,7 @@ export default function BrochurePage() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/support/demo">
+            <Link href="/demo-booking">
               <Button
                 variant="outline"
                 size="xl"

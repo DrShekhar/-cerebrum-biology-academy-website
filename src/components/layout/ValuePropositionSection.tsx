@@ -266,7 +266,7 @@ export function ValuePropositionSection() {
               Join 2,847+ students who transformed their NEET preparation with our proven framework
             </p>
             <Link
-              href="/support/demo"
+              href="/demo-booking"
               className="inline-block bg-teal-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-teal-700 transition-all duration-300 transform hover:-translate-y-1 shadow-lg"
             >
               Book Your Free Strategy Session

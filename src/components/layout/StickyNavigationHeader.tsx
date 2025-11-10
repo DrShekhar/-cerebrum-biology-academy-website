@@ -516,7 +516,7 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
 
                 {/* Book Demo */}
                 <motion.a
-                  href="/demo"
+                  href="/demo-booking"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="bg-teal-600 hover:bg-teal-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 shadow-lg hover:shadow-xl"
@@ -659,7 +659,7 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
                     Call Now
                   </a>
                   <a
-                    href="/demo"
+                    href="/demo-booking"
                     className="flex items-center justify-center gap-2 w-full bg-teal-600 hover:bg-teal-700 text-white py-3 rounded-xl font-medium"
                   >
                     <Video className="h-5 w-5" />

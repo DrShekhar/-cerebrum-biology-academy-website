@@ -286,7 +286,7 @@ export function UrgencySection() {
             {/* Urgent CTA */}
             <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
               <Link
-                href="/support/demo"
+                href="/demo-booking"
                 className="block w-full bg-gradient-to-r from-red-600 to-orange-600 text-white rounded-2xl p-6 text-center shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
               >
                 <div className="flex items-center justify-center space-x-3 mb-2">

@@ -274,7 +274,7 @@ export function MobileNavigation({ isOpen, onToggle, currentPath = '/' }: Mobile
                     ? 'AIIMS फैकल्टी के साथ लाइव क्लास का अनुभव करें'
                     : 'Experience live classes with AIIMS faculty'}
                 </p>
-                <Link href="/demo" onClick={onToggle}>
+                <Link href="/demo-booking" onClick={onToggle}>
                   <motion.button
                     whileTap={{ scale: 0.98 }}
                     className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 rounded-xl font-semibold mobile-cta"

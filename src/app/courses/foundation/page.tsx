@@ -145,7 +145,7 @@ export default function FoundationCoursePage() {
                 </Link>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <Link
-                    href="/support/demo"
+                    href="/demo-booking"
                     className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors text-center"
                   >
                     Book Free Demo

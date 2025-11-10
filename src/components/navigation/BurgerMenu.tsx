@@ -40,7 +40,7 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 1024)
     }
-    
+
     checkMobile()
     window.addEventListener('resize', checkMobile)
     return () => window.removeEventListener('resize', checkMobile)
@@ -129,10 +129,7 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
         aria-label="Toggle navigation menu"
         aria-expanded={isOpen}
       >
-        <motion.div
-          animate={isOpen ? 'open' : 'closed'}
-          className="relative w-6 h-6"
-        >
+        <motion.div animate={isOpen ? 'open' : 'closed'} className="relative w-6 h-6">
           <motion.span
             variants={{
               closed: { rotate: 0, y: 0 },
@@ -203,7 +200,10 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
                 const isExpanded = expandedSection === section.id
 
                 return (
-                  <div key={section.id} className="border border-gray-200 rounded-xl overflow-hidden">
+                  <div
+                    key={section.id}
+                    className="border border-gray-200 rounded-xl overflow-hidden"
+                  >
                     <button
                       onClick={() => handleSectionToggle(section.id)}
                       className="w-full p-4 flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors duration-200"
@@ -276,9 +276,11 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
             <div className="sticky bottom-0 bg-gradient-to-r from-blue-600 to-purple-600 text-white p-6">
               <div className="text-center">
                 <h3 className="font-bold text-lg mb-2">Ready to Start?</h3>
-                <p className="text-blue-100 text-sm mb-4">Join thousands of successful NEET aspirants</p>
+                <p className="text-blue-100 text-sm mb-4">
+                  Join thousands of successful NEET aspirants
+                </p>
                 <Link
-                  href="/support/demo"
+                  href="/demo-booking"
                   onClick={handleLinkClick}
                   className="inline-flex items-center justify-center w-full bg-white text-blue-600 px-4 py-2 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200"
                 >

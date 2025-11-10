@@ -210,22 +210,302 @@ async function scheduleFollowUpActions(bookingId: string, data: DemoBookingData)
   // 3. Use external service (Zapier, Airtable automations)
 }
 
-// Send immediate notifications to admin team
+// Send immediate notifications to student and admin team
 async function sendImmediateNotifications(bookingData: any) {
-  // In a real implementation, you would:
-  // 1. Send email to admin team
-  // 2. Send WhatsApp message to admin
-  // 3. Create Slack notification
-  // 4. Update admin dashboard in real-time
+  try {
+    console.log('📤 Starting notification process for booking:', bookingData.id)
 
-  console.log('Sending immediate notifications for booking:', bookingData.id)
+    // 1. Send WhatsApp confirmation to student
+    const whatsappResult = await sendWhatsAppConfirmation(bookingData)
 
-  // For now, we'll just log the notification
-  // In production, integrate with:
-  // - Email service (SendGrid, AWS SES)
-  // - WhatsApp Business API
-  // - Slack API
-  // - Real-time dashboard updates
+    // 2. Send Email confirmation to student
+    const emailResult = await sendEmailConfirmation(bookingData)
+
+    // 3. Notify admin team
+    await notifyAdminTeam(bookingData)
+
+    console.log('✅ Notifications sent:', {
+      bookingId: bookingData.id,
+      whatsapp: whatsappResult.success,
+      email: emailResult.success,
+    })
+
+    // Update booking with notification status
+    if (whatsappResult.success || emailResult.success) {
+      await prisma.demoBooking.update({
+        where: { id: bookingData.id },
+        data: {
+          notificationsSent: {
+            whatsapp: whatsappResult.success,
+            email: emailResult.success,
+            timestamp: new Date().toISOString(),
+          },
+        },
+      })
+    }
+  } catch (error) {
+    console.error('❌ Notification error (non-blocking):', error)
+    // Don't throw - notifications failing shouldn't block booking
+  }
+}
+
+// Send WhatsApp confirmation via Interakt
+async function sendWhatsAppConfirmation(bookingData: any) {
+  if (!process.env.INTERAKT_API_KEY) {
+    console.log('⚠️ Interakt not configured, skipping WhatsApp')
+    return { success: false, reason: 'not_configured' }
+  }
+
+  try {
+    // Clean phone number - remove all non-digits and get last 10 digits
+    const cleanPhone = bookingData.phone.replace(/\D/g, '')
+    const phoneNumber = cleanPhone.slice(-10)
+
+    if (phoneNumber.length !== 10) {
+      console.error('❌ Invalid phone number format:', bookingData.phone)
+      return { success: false, reason: 'invalid_phone' }
+    }
+
+    const response = await fetch('https://api.interakt.ai/v1/public/message/', {
+      method: 'POST',
+      headers: {
+        Authorization: `Basic ${Buffer.from(process.env.INTERAKT_API_KEY + ':').toString('base64')}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        countryCode: '+91',
+        phoneNumber: phoneNumber,
+        callbackData: `demo_booking_${bookingData.id}`,
+        type: 'Template',
+        template: {
+          name: 'demo_confirmation',
+          languageCode: 'en',
+          bodyValues: [
+            bookingData.studentName,
+            bookingData.demoType || 'FREE',
+            bookingData.preferredDate,
+            bookingData.preferredTime,
+            'Join link will be sent 30 minutes before class',
+          ],
+        },
+      }),
+    })
+
+    const result = await response.json()
+
+    if (response.ok) {
+      console.log('✅ WhatsApp sent successfully:', result.result?.messageId)
+      return { success: true, messageId: result.result?.messageId }
+    } else {
+      console.error('❌ Interakt API error:', result)
+      return { success: false, error: result }
+    }
+  } catch (error) {
+    console.error('❌ WhatsApp send error:', error)
+    return { success: false, error }
+  }
+}
+
+// Send Email confirmation via Resend
+async function sendEmailConfirmation(bookingData: any) {
+  if (!process.env.RESEND_API_KEY) {
+    console.log('⚠️ Resend not configured, skipping email')
+    return { success: false, reason: 'not_configured' }
+  }
+
+  try {
+    const response = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        from: 'Cerebrum Biology Academy <noreply@cerebrumbiologyacademy.com>',
+        to: bookingData.email,
+        subject: `Demo Class Confirmed - ${bookingData.preferredDate}`,
+        html: generateDemoConfirmationEmail(bookingData),
+      }),
+    })
+
+    const result = await response.json()
+
+    if (response.ok) {
+      console.log('✅ Email sent successfully:', result.id)
+      return { success: true, emailId: result.id }
+    } else {
+      console.error('❌ Resend API error:', result)
+      return { success: false, error: result }
+    }
+  } catch (error) {
+    console.error('❌ Email send error:', error)
+    return { success: false, error }
+  }
+}
+
+// Generate HTML email template
+function generateDemoConfirmationEmail(bookingData: any): string {
+  const coursesList = Array.isArray(bookingData.courseInterest)
+    ? bookingData.courseInterest.join(', ')
+    : bookingData.courseInterest || 'NEET Biology'
+
+  return `
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Demo Class Confirmed</title>
+    </head>
+    <body style="margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: #f3f4f6;">
+      <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff;">
+        <!-- Header -->
+        <div style="background: linear-gradient(135deg, #2563eb 0%, #9333ea 100%); padding: 40px 20px; text-align: center;">
+          <h1 style="color: #ffffff; margin: 0; font-size: 28px;">Demo Class Confirmed! 🎉</h1>
+        </div>
+
+        <!-- Content -->
+        <div style="padding: 40px 20px;">
+          <h2 style="color: #1f2937; margin-top: 0;">Hi ${bookingData.studentName}!</h2>
+          <p style="color: #4b5563; font-size: 16px; line-height: 1.6;">
+            Great news! Your NEET Biology demo class has been successfully confirmed.
+          </p>
+
+          <!-- Demo Details Box -->
+          <div style="background-color: #f9fafb; border-left: 4px solid #2563eb; padding: 20px; margin: 30px 0;">
+            <h3 style="color: #2563eb; margin-top: 0;">📅 Demo Class Details</h3>
+            <table style="width: 100%; border-collapse: collapse;">
+              <tr>
+                <td style="padding: 8px 0; color: #6b7280; font-weight: bold;">Date:</td>
+                <td style="padding: 8px 0; color: #1f2937;">${bookingData.preferredDate}</td>
+              </tr>
+              <tr>
+                <td style="padding: 8px 0; color: #6b7280; font-weight: bold;">Time:</td>
+                <td style="padding: 8px 0; color: #1f2937;">${bookingData.preferredTime}</td>
+              </tr>
+              <tr>
+                <td style="padding: 8px 0; color: #6b7280; font-weight: bold;">Course:</td>
+                <td style="padding: 8px 0; color: #1f2937;">${coursesList}</td>
+              </tr>
+              <tr>
+                <td style="padding: 8px 0; color: #6b7280; font-weight: bold;">Demo Type:</td>
+                <td style="padding: 8px 0; color: #1f2937;">${bookingData.demoType || 'FREE'} Demo</td>
+              </tr>
+              <tr>
+                <td style="padding: 8px 0; color: #6b7280; font-weight: bold;">Duration:</td>
+                <td style="padding: 8px 0; color: #1f2937;">1 Hour</td>
+              </tr>
+            </table>
+          </div>
+
+          <!-- What to Prepare -->
+          <div style="background-color: #dbeafe; padding: 20px; border-radius: 8px; margin: 30px 0;">
+            <h3 style="color: #1e40af; margin-top: 0;">📝 What to Prepare:</h3>
+            <ul style="color: #1e3a8a; line-height: 1.8; margin: 10px 0; padding-left: 20px;">
+              <li>Notebook and pen for taking notes</li>
+              <li>Your NEET biology questions and doubts</li>
+              <li>NEET preparation goals and challenges</li>
+              <li>Quiet environment with stable internet</li>
+            </ul>
+          </div>
+
+          <!-- Topics Covered -->
+          <h3 style="color: #1f2937;">🎯 Topics We'll Cover:</h3>
+          <ul style="color: #4b5563; line-height: 1.8; margin: 10px 0; padding-left: 20px;">
+            <li>NEET Biology syllabus overview</li>
+            <li>High-yield topics and scoring strategies</li>
+            <li>Our unique teaching methodology</li>
+            <li>Previous year question patterns</li>
+            <li>Live doubt clearing session</li>
+          </ul>
+
+          <!-- Join Link Notice -->
+          <div style="background-color: #fef3c7; border-left: 4px solid #f59e0b; padding: 15px; margin: 30px 0;">
+            <p style="margin: 0; color: #92400e; font-size: 14px;">
+              <strong>📱 Join Link:</strong> Will be sent via WhatsApp and Email 30 minutes before the demo class.
+            </p>
+          </div>
+
+          <!-- CTA Button -->
+          <div style="text-align: center; margin: 40px 0;">
+            <a href="https://cerebrumbiologyacademy.com/demo-booking/reschedule?id=${bookingData.id}"
+               style="display: inline-block; background: linear-gradient(135deg, #2563eb 0%, #9333ea 100%);
+                      color: #ffffff; text-decoration: none; padding: 15px 40px; border-radius: 8px;
+                      font-weight: bold; font-size: 16px;">
+              View Booking Details
+            </a>
+          </div>
+
+          <!-- Contact Info -->
+          <div style="background-color: #f9fafb; padding: 20px; border-radius: 8px; text-align: center; margin: 30px 0;">
+            <h3 style="color: #1f2937; margin-top: 0;">Need Help?</h3>
+            <p style="color: #4b5563; margin: 10px 0;">
+              📞 Call/WhatsApp: <strong>+91 93119 46297</strong><br>
+              📧 Email: <strong>info@cerebrumbiologyacademy.com</strong><br>
+              🌐 Website: <strong>cerebrumbiologyacademy.com</strong>
+            </p>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <div style="background-color: #1f2937; padding: 30px 20px; text-align: center;">
+          <p style="color: #9ca3af; font-size: 14px; margin: 0;">
+            © 2025 Cerebrum Biology Academy. All rights reserved.
+          </p>
+          <p style="color: #6b7280; font-size: 12px; margin: 10px 0 0 0;">
+            Gurugram, Haryana, India
+          </p>
+        </div>
+      </div>
+    </body>
+    </html>
+  `
+}
+
+// Notify admin team
+async function notifyAdminTeam(bookingData: any) {
+  if (!process.env.INTERAKT_API_KEY) {
+    console.log('⚠️ Admin notification skipped - Interakt not configured')
+    return
+  }
+
+  const coursesList = Array.isArray(bookingData.courseInterest)
+    ? bookingData.courseInterest.join(', ')
+    : bookingData.courseInterest || 'Not specified'
+
+  const adminMessage = `🆕 NEW DEMO BOOKING
+
+👤 Student: ${bookingData.studentName}
+📞 Phone: ${bookingData.phone}
+📧 Email: ${bookingData.email}
+📅 Date: ${bookingData.preferredDate}
+🕐 Time: ${bookingData.preferredTime}
+💎 Type: ${bookingData.demoType || 'FREE'}
+📚 Course: ${coursesList}
+
+🔗 View: cerebrumbiologyacademy.com/admin/demo-bookings`
+
+  try {
+    await fetch('https://api.interakt.ai/v1/public/message/', {
+      method: 'POST',
+      headers: {
+        Authorization: `Basic ${Buffer.from(process.env.INTERAKT_API_KEY + ':').toString('base64')}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        countryCode: '+91',
+        phoneNumber: '9311946297',
+        type: 'Text',
+        data: {
+          message: adminMessage,
+        },
+      }),
+    })
+
+    console.log('✅ Admin notified via WhatsApp')
+  } catch (error) {
+    console.error('❌ Admin notification failed:', error)
+  }
 }
 
 // Handle GET requests for fetching demo bookings (admin use)

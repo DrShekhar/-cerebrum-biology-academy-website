@@ -112,7 +112,7 @@ export default function NotFound() {
             </Link>
 
             <Link
-              href="/demo"
+              href="/demo-booking"
               className="flex items-center p-4 border border-gray-200 rounded-lg hover:border-primary-300 hover:bg-primary-50 transition-colors group"
             >
               <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center mr-4 group-hover:bg-orange-200">

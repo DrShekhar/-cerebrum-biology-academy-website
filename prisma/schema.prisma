@@ -187,6 +187,9 @@ model DemoBooking {
   utmMedium       String?
   utmCampaign     String?
 
+  // Notifications
+  notificationsSent Json?             @default("{\"whatsapp\": false, \"email\": false}")
+
   // Timestamps
   createdAt       DateTime            @default(now())
   updatedAt       DateTime            @updatedAt

@@ -120,7 +120,7 @@ export default function CoursesError({ error, reset }: ErrorProps) {
           <h2 className="text-2xl font-semibold text-gray-900 mb-6">Explore Our Other Resources</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <Link
-              href="/demo"
+              href="/demo-booking"
               className="flex items-center p-4 border border-gray-200 rounded-lg hover:border-primary-300 hover:bg-primary-50 transition-colors group"
             >
               <div className="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center mr-4 group-hover:bg-emerald-200">
