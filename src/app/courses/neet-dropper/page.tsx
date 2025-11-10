@@ -92,60 +92,64 @@ export default function NEETDropperPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-red-600 to-orange-600 text-white py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-5xl font-bold mb-6">NEET Dropper Course 2025</h1>
-              <p className="text-xl text-red-100 mb-8">
+      <section className="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-8 sm:py-12 md:py-16 lg:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div className="max-w-full">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 break-words">
+                NEET Dropper Course 2025
+              </h1>
+              <p className="text-base sm:text-lg md:text-xl text-purple-100 mb-6 sm:mb-8 break-words">
                 Turn your second chance into your best chance. Intensive one-year program designed
                 specifically for NEET droppers with proven rank improvement strategies.
               </p>
-              <div className="space-y-4">
+              <div className="flex flex-col gap-3 sm:gap-4">
+                {/* Primary CTA - Book Free Demo */}
                 <Link
-                  href="/admissions"
-                  className="block w-full bg-white text-red-600 px-8 py-4 rounded-lg font-semibold hover:bg-red-50 transition-colors text-center"
+                  href="/demo-booking"
+                  className="bg-white text-purple-600 px-8 py-4 rounded-xl font-bold hover:bg-purple-50 transition-all duration-300 inline-flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-[1.02] min-h-[52px] w-full group"
                 >
-                  <span className="inline-flex items-center">
-                    Join Dropper Batch
-                    <ArrowRight className="w-5 h-5 ml-2" />
-                  </span>
+                  <span>Book Free Demo</span>
+                  <ArrowRight className="w-5 h-5 ml-2 flex-shrink-0 group-hover:translate-x-1 transition-transform" />
                 </Link>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+                {/* Secondary CTAs */}
+                <div className="flex flex-col xs:flex-row gap-3">
                   <Link
-                    href="https://wa.me/919876543210"
+                    href="https://wa.me/919311946297?text=Hi%2C%20I%27m%20interested%20in%20NEET%20Dropper%20Course%202025"
                     target="_blank"
-                    className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors text-center"
+                    rel="noopener noreferrer"
+                    className="border-2 border-white/50 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors inline-flex items-center justify-center min-h-[44px] flex-1"
                   >
                     WhatsApp Counselor
                   </Link>
                   <Link
-                    href="/contact"
-                    className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors text-center"
+                    href="/purchase/neet-dropper"
+                    className="border-2 border-white/50 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors inline-flex items-center justify-center min-h-[44px] flex-1"
                   >
-                    Book Counseling
+                    Enroll Now
                   </Link>
                 </div>
               </div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8">
-              <h3 className="text-2xl font-bold mb-6">Dropper Program Highlights</h3>
-              <div className="space-y-4">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8">
+              <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">Course Highlights</h3>
+              <div className="space-y-3 sm:space-y-4">
                 <div className="flex items-center">
-                  <Clock className="w-6 h-6 mr-3 text-red-300" />
-                  <span>12 Months Intensive Program</span>
+                  <Clock className="w-5 h-5 sm:w-6 sm:h-6 mr-3 text-purple-300 flex-shrink-0" />
+                  <span className="text-sm sm:text-base">1 Year Comprehensive Program</span>
                 </div>
                 <div className="flex items-center">
-                  <Users className="w-6 h-6 mr-3 text-red-300" />
-                  <span>Exclusive Dropper Batch</span>
+                  <Users className="w-5 h-5 sm:w-6 sm:h-6 mr-3 text-purple-300 flex-shrink-0" />
+                  <span className="text-sm sm:text-base">Small Batch Size (Max 25 students)</span>
                 </div>
                 <div className="flex items-center">
-                  <Target className="w-6 h-6 mr-3 text-red-300" />
-                  <span>350+ Biology Target Score</span>
+                  <Target className="w-5 h-5 sm:w-6 sm:h-6 mr-3 text-purple-300 flex-shrink-0" />
+                  <span className="text-sm sm:text-base">Complete NCERT + Board Preparation</span>
                 </div>
                 <div className="flex items-center">
-                  <Brain className="w-6 h-6 mr-3 text-red-300" />
-                  <span>Psychology Support Included</span>
+                  <Brain className="w-5 h-5 sm:w-6 sm:h-6 mr-3 text-purple-300 flex-shrink-0" />
+                  <span className="text-sm sm:text-base">NEET Foundation Building</span>
                 </div>
               </div>
             </div>

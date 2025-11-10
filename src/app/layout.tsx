@@ -14,6 +14,7 @@ import { ToastProvider } from '@/components/ui/Toast'
 import { TrialBannerWrapper } from '@/components/trial/TrialBannerWrapper'
 import { SkipToContent } from '@/components/accessibility/SkipToContent'
 import { FocusVisibleStyles } from '@/components/accessibility/FocusVisibleStyles'
+import { FloatingCTA } from '@/components/common/FloatingCTA'
 import './globals.css'
 
 const geistSans = Geist({
@@ -147,6 +148,7 @@ export default function RootLayout({
               <div data-section="mobile-navigation" className="priority-immediate">
                 <MobileNavigation />
               </div>
+              <FloatingCTA />
             </ErrorBoundary>
           </ToastProvider>
         </AuthProvider>
