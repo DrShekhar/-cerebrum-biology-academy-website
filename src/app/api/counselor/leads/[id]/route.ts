@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { withCounselor } from '@/lib/auth/middleware'
 import { prisma } from '@/lib/prisma'
 import { z } from 'zod'
+import { TaskService } from '@/lib/counselor/taskService'
 
 const updateLeadSchema = z.object({
   studentName: z.string().optional(),
@@ -210,6 +211,18 @@ async function handlePATCH(
         description: `Updated lead information`,
       },
     })
+
+    if (validatedData.stage && validatedData.stage !== existingLead.stage) {
+      try {
+        await TaskService.createAutomatedTask({
+          leadId: lead.id,
+          newStage: validatedData.stage as any,
+          counselorId: session.userId,
+        })
+      } catch (error) {
+        console.error('Error creating automated task:', error)
+      }
+    }
 
     return NextResponse.json({
       success: true,
