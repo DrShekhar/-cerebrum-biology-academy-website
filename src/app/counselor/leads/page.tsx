@@ -11,6 +11,7 @@ import {
 import { LeadPipelineColumn } from '@/components/counselor/LeadPipelineColumn'
 import { LeadCard } from '@/components/counselor/LeadCard'
 import { StatsBar } from '@/components/counselor/StatsBar'
+import { CreateLeadModal } from '@/components/counselor/CreateLeadModal'
 
 export type LeadStage =
   | 'NEW_LEAD'
@@ -61,6 +62,7 @@ export default function LeadsPage() {
   const [activeId, setActiveId] = useState<string | null>(null)
   const [searchTerm, setSearchTerm] = useState('')
   const [filterPriority, setFilterPriority] = useState<Priority | 'ALL'>('ALL')
+  const [showCreateModal, setShowCreateModal] = useState(false)
 
   useEffect(() => {
     fetchLeads()
@@ -231,7 +233,10 @@ export default function LeadsPage() {
               </svg>
             </button>
 
-            <button className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors font-medium">
+            <button
+              onClick={() => setShowCreateModal(true)}
+              className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors font-medium"
+            >
               + New Lead
             </button>
           </div>
@@ -265,6 +270,12 @@ export default function LeadsPage() {
           ) : null}
         </DragOverlay>
       </DndContext>
+
+      <CreateLeadModal
+        isOpen={showCreateModal}
+        onClose={() => setShowCreateModal(false)}
+        onSuccess={fetchLeads}
+      />
     </div>
   )
 }
