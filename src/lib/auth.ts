@@ -10,7 +10,7 @@ declare module 'next-auth' {
     id: string
     email: string
     name: string
-    role: 'student' | 'parent' | 'teacher' | 'admin'
+    role: 'student' | 'parent' | 'teacher' | 'admin' | 'counselor'
     profile?: {
       phone?: string
       currentClass?: '10th' | '11th' | '12th' | 'Dropper'
@@ -107,7 +107,12 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
                     id: user.id,
                     email: user.email,
                     name: user.name,
-                    role: user.role.toLowerCase() as 'student' | 'parent' | 'teacher' | 'admin',
+                    role: user.role.toLowerCase() as
+                      | 'student'
+                      | 'parent'
+                      | 'teacher'
+                      | 'admin'
+                      | 'counselor',
                     profile: user.profile as any,
                   }
                 }
@@ -153,7 +158,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       // Send properties to client
       if (token) {
         session.user.id = token.id as string
-        session.user.role = token.role as 'student' | 'parent' | 'teacher' | 'admin'
+        session.user.role = token.role as 'student' | 'parent' | 'teacher' | 'admin' | 'counselor'
         session.user.profile = token.profile as typeof session.user.profile
       }
       return session
@@ -190,7 +195,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
 
 // Helper functions for role-based access
 export async function requireAuth(
-  allowedRoles: string[] = ['student', 'parent', 'teacher', 'admin']
+  allowedRoles: string[] = ['student', 'parent', 'teacher', 'admin', 'counselor']
 ) {
   const session = await auth()
 
@@ -211,6 +216,10 @@ export async function requireStudent() {
 
 export async function requireTeacher() {
   return await requireAuth(['teacher', 'admin'])
+}
+
+export async function requireCounselor() {
+  return await requireAuth(['counselor', 'admin'])
 }
 
 export async function requireAdmin() {

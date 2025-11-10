@@ -52,6 +52,15 @@ export default async function middleware(req: NextRequest) {
     }
   }
 
+  // Protected counselor routes
+  if (pathname.startsWith('/counselor') && pathname !== '/counselor-poc') {
+    if (!hasRole(session) || (session.role !== 'COUNSELOR' && session.role !== 'ADMIN')) {
+      const loginUrl = new URL('/auth/signin', req.url)
+      loginUrl.searchParams.set('returnUrl', pathname)
+      return NextResponse.redirect(loginUrl)
+    }
+  }
+
   // Protected admin routes
   if (pathname.startsWith('/admin') && pathname !== '/admin/login') {
     // Check if user is authenticated and has admin role
@@ -116,6 +125,21 @@ export default async function middleware(req: NextRequest) {
           {
             error: 'Teacher access required',
             message: 'You need teacher privileges to access this resource',
+          },
+          { status: 403 }
+        )
+      )
+    }
+  }
+
+  // Counselor API protection
+  if (pathname.startsWith('/api/counselor/')) {
+    if (!hasRole(session) || (session.role !== 'COUNSELOR' && session.role !== 'ADMIN')) {
+      return addSecurityHeaders(
+        NextResponse.json(
+          {
+            error: 'Counselor access required',
+            message: 'You need counselor privileges to access this resource',
           },
           { status: 403 }
         )
@@ -195,6 +219,7 @@ export const config = {
     '/profile/:path*',
     '/test/:path*',
     '/teacher/:path*',
+    '/counselor/:path*',
 
     // Admin routes
     '/admin/:path*',
@@ -203,6 +228,7 @@ export const config = {
     '/api/auth/:path*',
     '/api/admin/:path*',
     '/api/teacher/:path*',
+    '/api/counselor/:path*',
     '/api/test/:path*',
 
     // All other routes (exclude static files)

@@ -4,7 +4,7 @@ import {
   addSecurityHeaders,
   hasPermission,
   UserSession,
-  UserRole
+  UserRole,
 } from './config'
 
 /**
@@ -18,20 +18,30 @@ export function withAuth(
       const session = await validateUserSession(request)
 
       if (!session.valid) {
-        return addSecurityHeaders(NextResponse.json({
-          error: 'Authentication required',
-          message: 'Please sign in to access this resource',
-          code: 'AUTH_REQUIRED'
-        }, { status: 401 }))
+        return addSecurityHeaders(
+          NextResponse.json(
+            {
+              error: 'Authentication required',
+              message: 'Please sign in to access this resource',
+              code: 'AUTH_REQUIRED',
+            },
+            { status: 401 }
+          )
+        )
       }
 
       return handler(request, session)
     } catch (error) {
       console.error('Auth middleware error:', error)
-      return addSecurityHeaders(NextResponse.json({
-        error: 'Authentication error',
-        message: 'Failed to validate authentication'
-      }, { status: 500 }))
+      return addSecurityHeaders(
+        NextResponse.json(
+          {
+            error: 'Authentication error',
+            message: 'Failed to validate authentication',
+          },
+          { status: 500 }
+        )
+      )
     }
   }
 }
@@ -45,13 +55,18 @@ export function withRole(
 ) {
   return withAuth(async (request: NextRequest, session: UserSession) => {
     if (!session.role || !allowedRoles.includes(session.role)) {
-      return addSecurityHeaders(NextResponse.json({
-        error: 'Access denied',
-        message: 'You do not have permission to access this resource',
-        code: 'INSUFFICIENT_PERMISSIONS',
-        requiredRoles: allowedRoles,
-        userRole: session.role
-      }, { status: 403 }))
+      return addSecurityHeaders(
+        NextResponse.json(
+          {
+            error: 'Access denied',
+            message: 'You do not have permission to access this resource',
+            code: 'INSUFFICIENT_PERMISSIONS',
+            requiredRoles: allowedRoles,
+            userRole: session.role,
+          },
+          { status: 403 }
+        )
+      )
     }
 
     return handler(request, session)
@@ -67,13 +82,18 @@ export function withPermission(
 ) {
   return withAuth(async (request: NextRequest, session: UserSession) => {
     if (!session.role || !hasPermission(session.role, requiredPermission)) {
-      return addSecurityHeaders(NextResponse.json({
-        error: 'Access denied',
-        message: `This action requires the '${requiredPermission}' permission`,
-        code: 'INSUFFICIENT_PERMISSIONS',
-        requiredPermission,
-        userPermissions: session.permissions
-      }, { status: 403 }))
+      return addSecurityHeaders(
+        NextResponse.json(
+          {
+            error: 'Access denied',
+            message: `This action requires the '${requiredPermission}' permission`,
+            code: 'INSUFFICIENT_PERMISSIONS',
+            requiredPermission,
+            userPermissions: session.permissions,
+          },
+          { status: 403 }
+        )
+      )
     }
 
     return handler(request, session)
@@ -125,6 +145,15 @@ export function withStudent(
 }
 
 /**
+ * Counselor-only middleware
+ */
+export function withCounselor(
+  handler: (request: NextRequest, session: UserSession) => Promise<Response>
+) {
+  return withRole(['COUNSELOR', 'ADMIN'], handler)
+}
+
+/**
  * Rate limiting middleware
  */
 export function withRateLimit(
@@ -135,9 +164,8 @@ export function withRateLimit(
   const requestCounts = new Map<string, { count: number; resetTime: number }>()
 
   return async (request: NextRequest): Promise<Response> => {
-    const identifier = request.headers.get('x-forwarded-for') ||
-                      request.headers.get('x-real-ip') ||
-                      'unknown'
+    const identifier =
+      request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip') || 'unknown'
 
     const now = Date.now()
     const windowStart = now - windowMs
@@ -152,11 +180,16 @@ export function withRateLimit(
     // Check current requests
     const currentRequests = requestCounts.get(identifier)
     if (currentRequests && currentRequests.count >= maxRequests) {
-      return addSecurityHeaders(NextResponse.json({
-        error: 'Rate limit exceeded',
-        message: `Too many requests. Maximum ${maxRequests} requests per ${windowMs / 1000} seconds.`,
-        retryAfter: Math.ceil((currentRequests.resetTime - now) / 1000)
-      }, { status: 429 }))
+      return addSecurityHeaders(
+        NextResponse.json(
+          {
+            error: 'Rate limit exceeded',
+            message: `Too many requests. Maximum ${maxRequests} requests per ${windowMs / 1000} seconds.`,
+            retryAfter: Math.ceil((currentRequests.resetTime - now) / 1000),
+          },
+          { status: 429 }
+        )
+      )
     }
 
     // Update request count
@@ -190,24 +223,34 @@ export function withCSRF(
 
     // Check for CSRF token in headers
     if (!csrfToken) {
-      return addSecurityHeaders(NextResponse.json({
-        error: 'CSRF token required',
-        message: 'Missing CSRF protection token'
-      }, { status: 403 }))
+      return addSecurityHeaders(
+        NextResponse.json(
+          {
+            error: 'CSRF token required',
+            message: 'Missing CSRF protection token',
+          },
+          { status: 403 }
+        )
+      )
     }
 
     // Validate origin
     const allowedOrigins = [
       process.env.NEXT_PUBLIC_APP_URL,
       'https://cerebrumbiologyacademy.com',
-      'https://www.cerebrumbiologyacademy.com'
+      'https://www.cerebrumbiologyacademy.com',
     ].filter(Boolean)
 
     if (origin && !allowedOrigins.includes(origin)) {
-      return addSecurityHeaders(NextResponse.json({
-        error: 'Invalid origin',
-        message: 'Request origin not allowed'
-      }, { status: 403 }))
+      return addSecurityHeaders(
+        NextResponse.json(
+          {
+            error: 'Invalid origin',
+            message: 'Request origin not allowed',
+          },
+          { status: 403 }
+        )
+      )
     }
 
     // Get session for handler
@@ -219,9 +262,7 @@ export function withCSRF(
 /**
  * Combine multiple middleware functions
  */
-export function combineMiddleware(
-  ...middlewares: Array<(handler: any) => any>
-) {
+export function combineMiddleware(...middlewares: Array<(handler: any) => any>) {
   return (handler: any) => {
     return middlewares.reduceRight((acc, middleware) => middleware(acc), handler)
   }
@@ -235,15 +276,19 @@ export function withIPWhitelist(
   handler: (request: NextRequest, session?: UserSession) => Promise<Response>
 ) {
   return async (request: NextRequest): Promise<Response> => {
-    const clientIP = request.headers.get('x-forwarded-for') ||
-                    request.headers.get('x-real-ip') ||
-                    'unknown'
+    const clientIP =
+      request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip') || 'unknown'
 
     if (!allowedIPs.includes(clientIP) && process.env.NODE_ENV === 'production') {
-      return addSecurityHeaders(NextResponse.json({
-        error: 'Access denied',
-        message: 'IP address not authorized'
-      }, { status: 403 }))
+      return addSecurityHeaders(
+        NextResponse.json(
+          {
+            error: 'Access denied',
+            message: 'IP address not authorized',
+          },
+          { status: 403 }
+        )
+      )
     }
 
     const session = await validateUserSession(request).catch(() => ({ valid: false }))
@@ -261,16 +306,23 @@ export function withLogging(
     const startTime = Date.now()
     const session = await validateUserSession(request).catch(() => ({ valid: false }))
 
-    console.log(`[${new Date().toISOString()}] ${request.method} ${request.url} - User: ${session.valid ? session.userId : 'anonymous'}`)
+    console.log(
+      `[${new Date().toISOString()}] ${request.method} ${request.url} - User: ${session.valid ? session.userId : 'anonymous'}`
+    )
 
     try {
       const response = await handler(request, session.valid ? session : undefined)
       const duration = Date.now() - startTime
-      console.log(`[${new Date().toISOString()}] ${request.method} ${request.url} - ${response.status} (${duration}ms)`)
+      console.log(
+        `[${new Date().toISOString()}] ${request.method} ${request.url} - ${response.status} (${duration}ms)`
+      )
       return response
     } catch (error) {
       const duration = Date.now() - startTime
-      console.error(`[${new Date().toISOString()}] ${request.method} ${request.url} - ERROR (${duration}ms):`, error)
+      console.error(
+        `[${new Date().toISOString()}] ${request.method} ${request.url} - ERROR (${duration}ms):`,
+        error
+      )
       throw error
     }
   }
@@ -282,6 +334,7 @@ export function withLogging(
 export const protectedRoute = combineMiddleware(withAuth, withLogging)
 export const adminRoute = combineMiddleware(withAdmin, withLogging, withRateLimit(50))
 export const teacherRoute = combineMiddleware(withTeacher, withLogging, withRateLimit(100))
+export const counselorRoute = combineMiddleware(withCounselor, withLogging, withRateLimit(150))
 export const studentRoute = combineMiddleware(withStudent, withLogging, withRateLimit(200))
 export const publicRoute = combineMiddleware(withOptionalAuth, withLogging, withRateLimit(300))
 
@@ -292,6 +345,7 @@ export default {
   withOptionalAuth,
   withAdmin,
   withTeacher,
+  withCounselor,
   withStudent,
   withRateLimit,
   withCSRF,
@@ -301,6 +355,7 @@ export default {
   protectedRoute,
   adminRoute,
   teacherRoute,
+  counselorRoute,
   studentRoute,
-  publicRoute
+  publicRoute,
 }
