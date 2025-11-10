@@ -57,7 +57,6 @@ Complete mobile optimization for Cerebrum Biology Academy CRM with Progressive W
 
 ```tsx
 import { MobileLeadView } from '@/components/counselor/MobileLeadView'
-
 ;<MobileLeadView
   leads={filteredLeads}
   onLeadClick={(lead) => router.push(`/counselor/leads/${lead.id}`)}
@@ -96,7 +95,6 @@ import { MobileLeadView } from '@/components/counselor/MobileLeadView'
 
 ```tsx
 import { BottomSheet } from '@/components/counselor/BottomSheet'
-
 ;<BottomSheet
   isOpen={showDetails}
   onClose={() => setShowDetails(false)}
@@ -139,7 +137,6 @@ import { BottomSheet } from '@/components/counselor/BottomSheet'
 ```tsx
 // Add to counselor layout
 import { MobileInstallPrompt } from '@/components/counselor/MobileInstallPrompt'
-
 ;<MobileInstallPrompt />
 ```
 
@@ -344,46 +341,149 @@ Add to manifest.json:
 
 ---
 
-## Offline Support (Coming Soon)
+## Offline Support
 
-### Service Worker Strategy
+### Service Worker Implementation
+
+We've implemented a comprehensive service worker with offline support for the counselor dashboard.
+
+**Location**: `public/sw.js` (enhanced with counselor routes)
+
+**Features**:
+
+- Cache-first strategy for static assets (icons, images, fonts)
+- Network-first strategy for API calls with offline fallback
+- Stale-while-revalidate for pages
+- IndexedDB queueing for offline actions
+- Background sync for pending updates
+- Counselor-specific route caching
+
+**Cached Routes**:
 
 ```javascript
-// public/sw.js
-self.addEventListener('fetch', (event) => {
-  // Cache-first for static assets
-  if (event.request.url.includes('/icons/') || event.request.url.includes('/fonts/')) {
-    event.respondWith(
-      caches.match(event.request).then((response) => {
-        return response || fetch(event.request)
-      })
-    )
+const CRITICAL_RESOURCES = [
+  '/',
+  '/counselor/leads',
+  '/counselor/tasks',
+  '/manifest.json',
+  '/icons/icon-192.png',
+  '/icons/icon-512.png',
+]
+```
+
+### Offline Queue System
+
+**Location**: `src/lib/offline/offlineQueue.ts`
+
+Client-side utility for queuing actions when offline and syncing when connection is restored.
+
+**Usage Example**:
+
+```tsx
+import { offlineQueue } from '@/lib/offline/offlineQueue'
+
+async function updateLeadStage(leadId: string, newStage: string) {
+  const action = {
+    type: 'UPDATE_LEAD_STAGE',
+    url: `/api/counselor/leads/${leadId}`,
+    method: 'PATCH' as const,
+    body: { stage: newStage },
+    metadata: { leadId, newStage },
   }
 
-  // Network-first for API calls
-  if (event.request.url.includes('/api/')) {
-    event.respondWith(
-      fetch(event.request)
-        .then((response) => {
-          const responseClone = response.clone()
-          caches.open('api-cache').then((cache) => {
-            cache.put(event.request, responseClone)
-          })
-          return response
-        })
-        .catch(() => {
-          return caches.match(event.request)
-        })
-    )
+  try {
+    const response = await fetch(action.url, {
+      method: action.method,
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(action.body),
+    })
+
+    if (!response.ok) throw new Error('Failed to update')
+    return response.json()
+  } catch (error) {
+    if (!navigator.onLine) {
+      await offlineQueue.queueAction(action)
+      showToast('Offline: Changes will sync when you reconnect')
+    } else {
+      throw error
+    }
   }
-})
+}
 ```
 
 ### Offline-First Data Strategy
 
 1. **Read Operations**: Cache with stale-while-revalidate
+   - Serve cached data immediately
+   - Update cache in background
+   - Display "offline" indicator if serving cached data
+
 2. **Write Operations**: Queue when offline, sync when online
+   - Store actions in IndexedDB
+   - Automatic sync when connection restored
+   - Conflict resolution on sync
+
 3. **Background Sync**: Use Background Sync API for pending updates
+   - Automatic retry on network restoration
+   - Batch syncing for efficiency
+   - Client notification on sync complete
+
+### IndexedDB Queue
+
+**Database**: `cerebrum-offline-db`
+**Store**: `pending-actions`
+**Indexes**: `type`, `timestamp`, `url`
+
+**Queued Action Structure**:
+
+```typescript
+{
+  id: number,           // Auto-incremented
+  type: string,        // e.g., 'UPDATE_LEAD_STAGE', 'COMPLETE_TASK'
+  url: string,         // API endpoint
+  method: 'PATCH' | 'POST' | 'DELETE',
+  body: any,           // Request payload
+  headers: Record<string, string>,
+  metadata: any,       // Additional context
+  timestamp: number    // When queued
+}
+```
+
+### Supported Offline Actions
+
+1. **Lead Stage Updates**: Change lead status while offline
+2. **Task Completion**: Mark tasks as complete offline
+3. **Priority Changes**: Update lead priorities
+4. **Follow-up Scheduling**: Set follow-up dates
+5. **Notes Addition**: Add notes to leads
+
+### Testing Offline Mode
+
+1. Open Chrome DevTools → Application → Service Workers
+2. Check "Offline" to simulate offline mode
+3. Try updating a lead stage or completing a task
+4. Observe queued action in console
+5. Uncheck "Offline" to go back online
+6. Service worker will automatically sync queued actions
+
+### Monitoring Sync Status
+
+```tsx
+import { offlineQueue } from '@/lib/offline/offlineQueue'
+
+// Listen for sync completion
+offlineQueue.onSyncComplete((data) => {
+  console.log('Sync completed:', data)
+  showToast('All offline changes synced successfully!')
+  refreshData()
+})
+
+// Check online status
+const isOnline = offlineQueue.isOnline()
+
+// Manually trigger sync
+await offlineQueue.triggerSync()
+```
 
 ---
 
@@ -411,7 +511,6 @@ self.addEventListener('fetch', (event) => {
 ```tsx
 // Image optimization
 import Image from 'next/image'
-
 ;<Image src="/lead-avatar.jpg" width={40} height={40} loading="lazy" placeholder="blur" />
 
 // Component lazy loading
@@ -523,11 +622,12 @@ Target metrics on 4G:
 - ✅ Install prompt
 - ✅ PWA manifest configuration
 
-### Phase 2 (In Progress)
+### Phase 2 (Completed)
 
-- ⏳ Service worker for offline support
-- ⏳ Background sync for queued actions
-- ⏳ Push notification setup
+- ✅ Service worker for offline support
+- ✅ Background sync for queued actions
+- ✅ IndexedDB queue for offline actions
+- ⏳ Push notification setup (pending)
 
 ### Phase 3 (Planned)
 

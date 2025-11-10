@@ -1,7 +1,8 @@
 // Service Worker for Cerebrum Biology Academy
 // Optimized for Indian mobile networks and offline learning
+// Enhanced with counselor CRM offline support
 
-const CACHE_NAME = 'cerebrum-biology-v1';
+const CACHE_NAME = 'cerebrum-biology-v2';
 const OFFLINE_URL = '/offline';
 
 // Critical resources to cache immediately
@@ -11,6 +12,8 @@ const CRITICAL_RESOURCES = [
   '/courses',
   '/mock-tests',
   '/claudechat',
+  '/counselor/leads',
+  '/counselor/tasks',
   '/_next/static/css/app.css',
   '/_next/static/js/app.js',
   '/manifest.json',
@@ -351,20 +354,126 @@ async function handleBackgroundSync() {
   }
 }
 
-// Placeholder functions for offline data management
+// IndexedDB setup for offline data queueing
+const DB_NAME = 'cerebrum-offline-db';
+const DB_VERSION = 1;
+const STORE_NAME = 'pending-actions';
+
+function openDatabase() {
+  return new Promise((resolve, reject) => {
+    const request = indexedDB.open(DB_NAME, DB_VERSION);
+
+    request.onerror = () => reject(request.error);
+    request.onsuccess = () => resolve(request.result);
+
+    request.onupgradeneeded = (event) => {
+      const db = event.target.result;
+
+      // Create object store if it doesn't exist
+      if (!db.objectStoreNames.contains(STORE_NAME)) {
+        const objectStore = db.createObjectStore(STORE_NAME, {
+          keyPath: 'id',
+          autoIncrement: true,
+        });
+
+        objectStore.createIndex('type', 'type', { unique: false });
+        objectStore.createIndex('timestamp', 'timestamp', { unique: false });
+        objectStore.createIndex('url', 'url', { unique: false });
+      }
+    };
+  });
+}
+
+// Get all pending offline actions
 async function getOfflineData() {
-  // Implement IndexedDB or localStorage logic
-  return [];
+  try {
+    const db = await openDatabase();
+    const transaction = db.transaction([STORE_NAME], 'readonly');
+    const objectStore = transaction.objectStore(STORE_NAME);
+
+    return new Promise((resolve, reject) => {
+      const request = objectStore.getAll();
+
+      request.onsuccess = () => resolve(request.result || []);
+      request.onerror = () => reject(request.error);
+    });
+  } catch (error) {
+    console.error('Failed to get offline data:', error);
+    return [];
+  }
 }
 
+// Sync a single offline action
 async function syncOfflineItem(item) {
-  // Implement API sync logic
-  console.log('Syncing offline item:', item);
+  console.log('🔄 Syncing offline item:', item.type);
+
+  try {
+    const response = await fetch(item.url, {
+      method: item.method || 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        ...item.headers,
+      },
+      body: item.body ? JSON.stringify(item.body) : undefined,
+    });
+
+    if (!response.ok) {
+      throw new Error(`Sync failed: ${response.statusText}`);
+    }
+
+    console.log('✅ Successfully synced:', item.type);
+    return response;
+  } catch (error) {
+    console.error('❌ Failed to sync item:', error);
+    throw error;
+  }
 }
 
+// Remove synced item from IndexedDB
 async function removeOfflineItem(id) {
-  // Remove from offline storage
-  console.log('Removing offline item:', id);
+  try {
+    const db = await openDatabase();
+    const transaction = db.transaction([STORE_NAME], 'readwrite');
+    const objectStore = transaction.objectStore(STORE_NAME);
+
+    return new Promise((resolve, reject) => {
+      const request = objectStore.delete(id);
+
+      request.onsuccess = () => {
+        console.log('🗑️ Removed offline item:', id);
+        resolve();
+      };
+      request.onerror = () => reject(request.error);
+    });
+  } catch (error) {
+    console.error('Failed to remove offline item:', error);
+  }
+}
+
+// Add offline action to queue
+async function queueOfflineAction(action) {
+  try {
+    const db = await openDatabase();
+    const transaction = db.transaction([STORE_NAME], 'readwrite');
+    const objectStore = transaction.objectStore(STORE_NAME);
+
+    const actionWithTimestamp = {
+      ...action,
+      timestamp: Date.now(),
+    };
+
+    return new Promise((resolve, reject) => {
+      const request = objectStore.add(actionWithTimestamp);
+
+      request.onsuccess = () => {
+        console.log('📥 Queued offline action:', action.type);
+        resolve(request.result);
+      };
+      request.onerror = () => reject(request.error);
+    });
+  } catch (error) {
+    console.error('Failed to queue offline action:', error);
+  }
 }
 
 // Push notification handling
@@ -448,6 +557,50 @@ self.addEventListener('message', (event) => {
       cacheSize: getCacheSize(),
       networkQuality: getNetworkQuality(),
     });
+  }
+
+  // Handle offline action queueing from client
+  if (event.data && event.data.type === 'QUEUE_ACTION') {
+    const action = event.data.action;
+    queueOfflineAction(action).then(() => {
+      console.log('Action queued successfully:', action.type);
+
+      // Notify client
+      if (event.source) {
+        event.source.postMessage({
+          type: 'ACTION_QUEUED',
+          action: action.type,
+        });
+      }
+    }).catch((error) => {
+      console.error('Failed to queue action:', error);
+
+      if (event.source) {
+        event.source.postMessage({
+          type: 'ACTION_QUEUE_FAILED',
+          error: error.message,
+        });
+      }
+    });
+  }
+
+  if (event.data && event.data.type === 'CLEAR_CACHE') {
+    event.waitUntil(
+      caches.keys().then((cacheNames) => {
+        return Promise.all(
+          cacheNames.map((cacheName) => {
+            if (cacheName.startsWith('cerebrum-')) {
+              return caches.delete(cacheName);
+            }
+          })
+        );
+      }).then(() => {
+        event.ports[0].postMessage({
+          type: 'CACHE_CLEARED',
+          message: 'All caches cleared successfully',
+        });
+      })
+    );
   }
 });
 
