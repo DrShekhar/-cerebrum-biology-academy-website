@@ -434,6 +434,250 @@ export const emailTemplates = {
       </html>
     `
   },
+
+  /**
+   * Class reminder email
+   */
+  classReminder(data: {
+    studentName: string
+    className: string
+    classDate: string
+    classTime: string
+    meetingLink: string
+    meetingPassword: string
+    topic: string
+  }): string {
+    return `
+      <!DOCTYPE html>
+      <html>
+        <head>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Class Reminder</title>
+          ${baseStyles}
+        </head>
+        <body>
+          <div class="container">
+            <div class="header">
+              <h1>Your Class Starts Soon! 📚</h1>
+            </div>
+
+            <div class="content">
+              <h2>Hi ${data.studentName}!</h2>
+              <p>This is a friendly reminder that your <strong>${data.className}</strong> class is starting soon.</p>
+
+              <div class="highlight-box">
+                <h3 style="margin-top: 0; color: #2563eb;">Class Details</h3>
+                <p><strong>📚 Class:</strong> ${data.className}</p>
+                <p><strong>📖 Topic:</strong> ${data.topic}</p>
+                <p><strong>📅 Date:</strong> ${data.classDate}</p>
+                <p><strong>🕐 Time:</strong> ${data.classTime}</p>
+                <p><strong>⏱️ Duration:</strong> 90 minutes</p>
+              </div>
+
+              <div class="info-box">
+                <h4 style="margin-top: 0; color: #1f2937;">Meeting Link & Password</h4>
+                <p><strong>Join URL:</strong><br>
+                <a href="${data.meetingLink}" style="word-break: break-all;">${data.meetingLink}</a></p>
+                <p><strong>Password:</strong> <code style="background: #e5e7eb; padding: 4px 8px; border-radius: 4px; font-family: monospace;">${data.meetingPassword}</code></p>
+              </div>
+
+              <p style="text-align: center;">
+                <a href="${data.meetingLink}" class="button">
+                  Join Class Now
+                </a>
+              </p>
+
+              <div class="info-box">
+                <h4 style="margin-top: 0; color: #1f2937;">Before You Join:</h4>
+                <ul>
+                  <li>✅ Have your notebook and pen ready</li>
+                  <li>✅ Prepare your questions and doubts</li>
+                  <li>✅ Join 5 minutes early to test your connection</li>
+                  <li>✅ Keep distractions minimal</li>
+                </ul>
+              </div>
+
+              <p>See you in class!</p>
+              <p><strong>Team Cerebrum</strong></p>
+            </div>
+
+            <div class="footer">
+              <p>Cerebrum Biology Academy</p>
+              <p>📞 +91 88264 44334 | 🌐 <a href="https://cerebrumbiologyacademy.com">cerebrumbiologyacademy.com</a></p>
+            </div>
+          </div>
+        </body>
+      </html>
+    `
+  },
+
+  /**
+   * Enrollment confirmation email
+   */
+  enrollmentConfirmation(data: {
+    studentName: string
+    courseName: string
+    startDate: string
+    totalAmount: number
+    paidAmount: number
+    remainingAmount: number
+    nextInstallmentDate?: string
+    counselorName: string
+    counselorPhone: string
+  }): string {
+    return `
+      <!DOCTYPE html>
+      <html>
+        <head>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Enrollment Confirmed</title>
+          ${baseStyles}
+        </head>
+        <body>
+          <div class="container">
+            <div class="header">
+              <h1>Welcome to Cerebrum Family! 🎉</h1>
+            </div>
+
+            <div class="content">
+              <h2>Congratulations ${data.studentName}!</h2>
+              <p>Your enrollment in <strong>${data.courseName}</strong> has been confirmed. We're excited to be part of your NEET success journey!</p>
+
+              <div class="highlight-box">
+                <h3 style="margin-top: 0; color: #2563eb;">Enrollment Details</h3>
+                <p><strong>Course:</strong> ${data.courseName}</p>
+                <p><strong>Start Date:</strong> ${data.startDate}</p>
+                <p><strong>Total Fee:</strong> ₹${data.totalAmount.toLocaleString('en-IN')}</p>
+                <p><strong>Paid:</strong> ₹${data.paidAmount.toLocaleString('en-IN')}</p>
+                ${
+                  data.remainingAmount > 0
+                    ? `<p><strong>Remaining:</strong> ₹${data.remainingAmount.toLocaleString('en-IN')}</p>
+                ${data.nextInstallmentDate ? `<p><strong>Next Payment:</strong> ${data.nextInstallmentDate}</p>` : ''}`
+                    : '<p style="color: #166534; font-weight: 600;">✅ Fully Paid</p>'
+                }
+              </div>
+
+              <div class="info-box" style="background: linear-gradient(135deg, #dcfce7, #d1fae5);">
+                <h4 style="margin-top: 0; color: #166534;">What Happens Next?</h4>
+                <ul style="color: #166534;">
+                  <li>📧 You'll receive study material access within 24 hours</li>
+                  <li>📅 Class schedule will be shared via WhatsApp</li>
+                  <li>👥 Join our exclusive student WhatsApp group</li>
+                  <li>📚 Download course resources from student portal</li>
+                  <li>🎯 Get your personalized study plan</li>
+                </ul>
+              </div>
+
+              <div class="info-box">
+                <h4 style="margin-top: 0; color: #1f2937;">Your Dedicated Counselor</h4>
+                <p><strong>Name:</strong> ${data.counselorName}</p>
+                <p><strong>Phone:</strong> <a href="tel:${data.counselorPhone}">${data.counselorPhone}</a></p>
+                <p>Feel free to reach out anytime for support!</p>
+              </div>
+
+              <p style="text-align: center;">
+                <a href="https://wa.me/${data.counselorPhone.replace(/[^0-9]/g, '')}" class="button">
+                  Contact Your Counselor
+                </a>
+              </p>
+
+              <p style="margin-top: 30px;">Welcome aboard! Let's ace NEET together!</p>
+              <p><strong>Team Cerebrum</strong></p>
+            </div>
+
+            <div class="footer">
+              <p>Cerebrum Biology Academy</p>
+              <p>📞 +91 88264 44334 | 🌐 <a href="https://cerebrumbiologyacademy.com">cerebrumbiologyacademy.com</a></p>
+            </div>
+          </div>
+        </body>
+      </html>
+    `
+  },
+
+  /**
+   * Offer expiry reminder email
+   */
+  offerExpiryReminder(data: {
+    studentName: string
+    offerName: string
+    courseName: string
+    discountAmount: number
+    discountPercent: number
+    originalPrice: number
+    finalPrice: number
+    expiryDate: string
+    daysLeft: number
+    offerLink: string
+    counselorName: string
+  }): string {
+    return `
+      <!DOCTYPE html>
+      <html>
+        <head>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Offer Expiring Soon</title>
+          ${baseStyles}
+        </head>
+        <body>
+          <div class="container">
+            <div class="header" style="background: linear-gradient(135deg, #dc2626, #9333ea);">
+              <h1>⏰ Your Offer Expires Soon!</h1>
+            </div>
+
+            <div class="content">
+              <h2>Hi ${data.studentName}!</h2>
+              <p>This is a friendly reminder that your special offer on <strong>${data.courseName}</strong> is expiring soon.</p>
+
+              <div class="highlight-box" style="background: linear-gradient(135deg, #fee2e2, #fce7f3); border-left: 4px solid #dc2626;">
+                <h3 style="margin-top: 0; color: #dc2626;">⏰ ${data.daysLeft} ${data.daysLeft === 1 ? 'Day' : 'Days'} Left!</h3>
+                <p style="color: #dc2626; font-weight: 600; font-size: 18px;">Offer expires on ${data.expiryDate}</p>
+              </div>
+
+              <div class="highlight-box" style="text-align: center;">
+                <h3 style="margin-top: 0; color: #2563eb;">${data.offerName}</h3>
+                <p class="original-price">₹${data.originalPrice.toLocaleString('en-IN')}</p>
+                <p class="price">₹${data.finalPrice.toLocaleString('en-IN')}</p>
+                <p class="savings">Save ₹${data.discountAmount.toLocaleString('en-IN')} (${data.discountPercent}% OFF)</p>
+              </div>
+
+              <div class="info-box">
+                <h4 style="margin-top: 0; color: #1f2937;">Why Enroll Now?</h4>
+                <ul>
+                  <li>🎯 Start your NEET preparation immediately</li>
+                  <li>💰 Save ₹${data.discountAmount.toLocaleString('en-IN')} with this exclusive offer</li>
+                  <li>📚 Get ahead with early access to study material</li>
+                  <li>👥 Join the upcoming batch starting soon</li>
+                  <li>⭐ Limited seats available</li>
+                </ul>
+              </div>
+
+              <p style="text-align: center;">
+                <a href="${data.offerLink}" class="button">
+                  Enroll Now & Save ₹${data.discountAmount.toLocaleString('en-IN')}
+                </a>
+              </p>
+
+              <p style="margin-top: 30px;"><strong>Questions?</strong> Contact ${data.counselorName} anytime!</p>
+              <p>Don't let this opportunity slip away!</p>
+              <p><strong>Team Cerebrum</strong></p>
+            </div>
+
+            <div class="footer">
+              <p>Cerebrum Biology Academy</p>
+              <p>📞 +91 88264 44334 | 🌐 <a href="https://cerebrumbiologyacademy.com">cerebrumbiologyacademy.com</a></p>
+              <p style="font-size: 12px; color: #9ca3af; margin-top: 10px;">
+                This offer expires on ${data.expiryDate}. Terms and conditions apply.
+              </p>
+            </div>
+          </div>
+        </body>
+      </html>
+    `
+  },
 }
 
 export type EmailTemplate = keyof typeof emailTemplates
