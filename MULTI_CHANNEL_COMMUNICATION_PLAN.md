@@ -278,7 +278,7 @@ Create these templates in your Interakt account:
 
    **If joining between March 1 - April 10** (session start period):
    - Pay **quarterly** (every 3 months)
-   - Example: Join March 15, 2026 → Installments: June 5, Sept 5, Dec 5, March 5
+   - Example: Join March 15, 2026 → Installments: March 15, June 5, Sept 5, Dec 5
 
    **If joining after April 10**:
    - **More than 8 months left** in academic year → Pay **alternate months** (5th of every alternate month)
@@ -290,10 +290,10 @@ Create these templates in your Interakt account:
 // Example 1: Join on March 15, 2026 (2026-2027 session)
 // Between March 1 - April 10 → Quarterly
 Installments: [
+  { date: '2026-03-15', amount: 25000, type: 'quarterly' }, // First installment on admission day
   { date: '2026-06-05', amount: 25000, type: 'quarterly' },
   { date: '2026-09-05', amount: 25000, type: 'quarterly' },
   { date: '2026-12-05', amount: 25000, type: 'quarterly' },
-  { date: '2027-03-05', amount: 25000, type: 'quarterly' },
 ]
 
 // Example 2: Join on May 1, 2026 (11 months left > 8 months)
