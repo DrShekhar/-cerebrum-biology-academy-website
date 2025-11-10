@@ -4,7 +4,7 @@
  * Integrates with paymentScheduleService for system-calculated schedules
  */
 
-import prisma from '@/lib/db/prisma'
+import { prisma } from '@/lib/prisma'
 import { notificationService } from '@/lib/notifications/notificationService'
 import { addDays, isBefore, isAfter, differenceInDays, format } from 'date-fns'
 import type { NotificationPriority } from '@/lib/notifications/notificationService'
