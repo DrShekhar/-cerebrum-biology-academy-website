@@ -46,7 +46,7 @@ export default function AdmissionsPage() {
   const [selectedBatch, setSelectedBatch] = useState<string | null>(null)
 
   // WhatsApp Configuration
-  const whatsappNumber = '+919876543210'
+  const whatsappNumber = '+918826444334'
   const whatsappLink = `https://wa.me/${whatsappNumber.replace(/\+/g, '')}`
 
   // Scroll to application form

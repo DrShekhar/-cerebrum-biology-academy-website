@@ -40,6 +40,100 @@ export default function Class10FoundationPage() {
     }
   }
 
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Should I start NEET preparation in Class 10 or after boards?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Both options work! Current Class 10 students can prepare alongside boards with dual preparation strategy. Students who passed Class 10 can start with full focus. Both paths offer 3-year preparation timeline for NEET 2027.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What topics are covered in Class 10 NEET foundation course?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Complete NCERT Class 10 Biology including Life Processes (Nutrition, Respiration, Transportation, Excretion), Control and Coordination, How Do Organisms Reproduce, Heredity and Evolution, Our Environment, and Management of Natural Resources with NEET-oriented teaching.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How long does the Class 10 foundation program last?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'The Class 10 foundation program runs for one full academic year, providing 3 years total preparation time from Class 10 to NEET 2027. This timeline offers perfect balance - not too early, not too late.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What is the fee for Class 10 NEET foundation course?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'The annual fee is ₹24,000 for comprehensive Class 10 NEET foundation course including board exam preparation, NEET concept building, live classes, study materials, and regular assessments.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Can I prepare for Class 10 boards and NEET together?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes! Our dual preparation strategy helps you excel in Class 10 board exams while building NEET foundation simultaneously. We align teaching with board syllabus and add NEET concepts gradually without overwhelming students.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Which Class 10 biology topics are important for NEET?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Life Processes, How Do Organisms Reproduce, and Heredity and Evolution are crucial NEET topics with maximum relevance. These Class 10 concepts form the foundation for advanced Class 11-12 biology and NEET preparation.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Is the Class 10 foundation course online or offline?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'The Class 10 NEET foundation course is available online, providing flexibility for students to learn from anywhere with interactive live classes, recorded sessions, and personalized doubt clearing support.',
+        },
+      },
+    ],
+  }
+
+  const courseSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Course',
+    name: 'Class 10 Biology Foundation Course for NEET 2027',
+    description:
+      'Perfect timing to begin your NEET journey! Class 10 biology foundation program offers 3-year structured pathway to NEET success. Complete NCERT Class 10 Biology coverage aligned with board exams, plus additional NEET foundation topics. Available for current Class 10 students and those who passed boards.',
+    provider: {
+      '@type': 'Organization',
+      name: 'Cerebrum Biology Academy',
+      sameAs: 'https://cerebrumbiologyacademy.com',
+    },
+    courseMode: 'online',
+    educationalLevel: 'Class 10',
+    timeRequired: 'P3Y',
+    offers: {
+      '@type': 'Offer',
+      price: '24000',
+      priceCurrency: 'INR',
+      availability: 'https://schema.org/InStock',
+    },
+    audience: {
+      '@type': 'EducationalAudience',
+      educationalRole: 'student',
+    },
+    hasCourseInstance: {
+      '@type': 'CourseInstance',
+      courseMode: 'online',
+      duration: 'P1Y',
+    },
+  }
+
   const class10Curriculum = [
     {
       unit: 'Unit 1: Life Processes',
@@ -134,6 +228,14 @@ export default function Class10FoundationPage() {
 
   return (
     <div className="min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-emerald-600 via-teal-600 to-cyan-700 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />

@@ -254,6 +254,46 @@ export const pageMetadata: Record<string, PageMetadata> = {
     ],
     canonical: '/neet-foundation-course',
   },
+  kotaVsOnline: {
+    title: 'Kota vs Online NEET Coaching 2025: Complete Comparison | Save ₹2.5L',
+    description:
+      'Kota vs Online NEET coaching comparison: 85% vs 60% success rate, ₹2.5L+ savings, stay home safely. Data-driven analysis every parent must read before choosing. Mental health matters.',
+    keywords: [
+      'kota vs online coaching',
+      'kota online comparison',
+      'NEET coaching kota vs online',
+      'online coaching better than kota',
+      'kota coaching cost vs online',
+      'kota alternative',
+      'online NEET coaching vs kota',
+      'stay home beat kota',
+      'kota vs home coaching',
+      'is online coaching good for NEET',
+      'kota coaching fees comparison',
+      'online vs offline NEET coaching',
+    ],
+    canonical: '/compare/kota-vs-online',
+  },
+  class9VsClass10: {
+    title: 'Class 9 vs Class 10: When to Start NEET Preparation? | 65% Higher Success',
+    description:
+      'Class 9 vs Class 10 NEET preparation start: Research shows 65% higher success rate with Class 9 start. Complete comparison of timeline, stress, results. Make informed decision.',
+    keywords: [
+      'class 9 vs class 10 neet',
+      'when to start NEET preparation',
+      'class 9 or class 10 for NEET',
+      'best time to start NEET',
+      'early NEET preparation class 9 vs 10',
+      'neet preparation timeline',
+      'class 9 vs 10 foundation',
+      'should i start neet from class 9',
+      'when to begin NEET coaching',
+      'class 9 10 comparison NEET',
+      'early start vs late start NEET',
+      'NEET preparation age',
+    ],
+    canonical: '/compare/class-9-vs-class-10-foundation',
+  },
 }
 
 export function generateMetadata(pageKey: string): PageMetadata {

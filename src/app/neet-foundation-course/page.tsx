@@ -41,6 +41,100 @@ export default function NeetFoundationCoursePage() {
     }
   }
 
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'What is NEET foundation course and who should take it?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'NEET foundation course is designed for Class 9-10 students who want to start NEET preparation early. It covers complete NCERT Biology with NEET perspective, uses age-appropriate teaching, and provides 3-4 year preparation timeline for stronger fundamentals and higher success rates.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What is the difference between Class 9 and Class 10 foundation programs?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Class 9 foundation offers 4-year preparation timeline with most relaxed pace, targeting NEET 2028-2029. Class 10 foundation offers 3-year preparation for NEET 2027 with perfect balance. Both cover complete NCERT Biology with NEET-oriented concept building at age-appropriate pace.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How much does the NEET foundation course cost?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'The annual fee for NEET foundation course is ₹24,000, which includes comprehensive biology coaching, live classes, study material, regular assessments, doubt clearing sessions, and personalized attention from expert faculty.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Can students prepare for board exams and NEET foundation together?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes! Our NEET foundation courses are designed to complement school studies. We align with NCERT syllabus, help students excel in board exams, and simultaneously build NEET foundation without overwhelming academic pressure.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What is the success rate of NEET foundation students?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Students who start NEET preparation through foundation courses show 65% higher success rate compared to students who start in Class 11. Early starters develop stronger concepts, better problem-solving skills, and more confidence for NEET exam.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Is NEET foundation course available online?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes, our NEET foundation courses are available online, providing flexibility for students across India. We offer interactive live classes, recorded sessions for revision, regular doubt clearing, and personalized attention from experienced biology faculty.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How long is the NEET foundation course preparation timeline?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'NEET foundation preparation timeline is 3-4 years depending on starting grade. Class 9 students get 4-year timeline, Class 10 students get 3-year timeline. This extended preparation period reduces stress and builds unbeatable fundamentals for NEET success.',
+        },
+      },
+    ],
+  }
+
+  const courseSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Course',
+    name: 'NEET Foundation Course - Complete Biology Preparation for Class 9 & 10',
+    description:
+      'Comprehensive NEET foundation course for Class 9-10 students with 3-4 year preparation timeline. Complete NCERT Biology coverage with NEET perspective, age-appropriate teaching, expert faculty, and stress-free learning environment. Students show 65% higher success rate. Choose between Class 9 (4-year) or Class 10 (3-year) foundation programs.',
+    provider: {
+      '@type': 'Organization',
+      name: 'Cerebrum Biology Academy',
+      sameAs: 'https://cerebrumbiologyacademy.com',
+    },
+    courseMode: 'online',
+    educationalLevel: 'Class 9-10',
+    timeRequired: 'P3Y',
+    offers: {
+      '@type': 'Offer',
+      price: '24000',
+      priceCurrency: 'INR',
+      availability: 'https://schema.org/InStock',
+    },
+    audience: {
+      '@type': 'EducationalAudience',
+      educationalRole: 'student',
+    },
+    hasCourseInstance: {
+      '@type': 'CourseInstance',
+      courseMode: 'online',
+      duration: 'P1Y',
+    },
+  }
+
   const successMetrics = [
     { label: '2K+', sublabel: 'Foundation Students', icon: Users },
     { label: '65%', sublabel: 'Higher Success Rate', icon: Trophy },
@@ -219,6 +313,14 @@ export default function NeetFoundationCoursePage() {
 
   return (
     <div className="min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-purple-600 via-indigo-600 to-blue-700 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />

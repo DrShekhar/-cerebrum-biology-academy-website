@@ -38,6 +38,92 @@ export default function Class9FoundationPage() {
     }
   }
 
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'When should I start NEET preparation - Class 9 or later?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Students who start NEET preparation from Class 9 have 65% higher success rate due to 4-year preparation timeline allowing deeper concept building, reduced stress, and stronger fundamentals. Starting from Class 9 gives students more time to master biology concepts without overwhelming pressure.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What is covered in the Class 9 NEET foundation course?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Our Class 9 Biology foundation course covers complete NCERT Class 9 Biology syllabus including Cell Structure and Functions, Tissues, Diversity in Living Organisms, Why Do We Fall Ill, Natural Resources, and Improvement in Food Resources. All topics are taught with NEET-oriented concept building.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How long is the Class 9 NEET foundation program?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'The Class 9 NEET foundation program runs for the full academic year, providing 4 years of total preparation time from Class 9 to Class 12. This extended timeline reduces pressure and builds strong fundamentals for NEET 2028-2029.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What is the fee for Class 9 NEET foundation course?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'The annual fee for our Class 9 NEET foundation course is ₹24,000, which includes comprehensive biology coaching, live classes, study material, practice tests, and doubt clearing sessions.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Is the Class 9 foundation course conducted online or offline?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Our Class 9 NEET foundation course is available in online mode, allowing students to learn from anywhere with interactive live classes, recorded sessions, and personalized attention from expert biology faculty.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How does early NEET preparation benefit Class 9 students?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Early NEET preparation from Class 9 provides reduced pressure through 4-year timeline, strong fundamental concepts that support Class 11-12 learning, competitive edge with 65% higher success rate, and holistic development without overwhelming academic schedule.',
+        },
+      },
+    ],
+  }
+
+  const courseSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Course',
+    name: 'Class 9 Biology Foundation Course for NEET 2028-2029',
+    description:
+      'Specialized Class 9 biology foundation program for NEET preparation. Build strong fundamentals, develop scientific thinking, and set up for success with 4 years of strategic preparation. Complete NCERT Class 9 Biology coverage with NEET-oriented concept building.',
+    provider: {
+      '@type': 'Organization',
+      name: 'Cerebrum Biology Academy',
+      sameAs: 'https://cerebrumbiologyacademy.com',
+    },
+    courseMode: 'online',
+    educationalLevel: 'Class 9',
+    timeRequired: 'P4Y',
+    offers: {
+      '@type': 'Offer',
+      price: '24000',
+      priceCurrency: 'INR',
+      availability: 'https://schema.org/InStock',
+    },
+    audience: {
+      '@type': 'EducationalAudience',
+      educationalRole: 'student',
+    },
+    hasCourseInstance: {
+      '@type': 'CourseInstance',
+      courseMode: 'online',
+      duration: 'P1Y',
+    },
+  }
+
   const class9Curriculum = [
     {
       unit: 'Unit 1: The Fundamental Unit of Life',
@@ -121,6 +207,14 @@ export default function Class9FoundationPage() {
 
   return (
     <div className="min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />

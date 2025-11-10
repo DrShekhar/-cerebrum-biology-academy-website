@@ -39,6 +39,92 @@ export default function EarlyNeetPreparationPage() {
     }
   }
 
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Why should I start NEET preparation early from Class 9 or Class 10?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Students who start NEET preparation from Class 9-10 show 65% higher success rate compared to those who start in Class 11. Early preparation provides strong conceptual foundation, reduced academic pressure, competitive advantage, and more time for concept mastery without last-minute stress.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What is the ideal time to start NEET preparation - Class 9 or Class 10?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Both Class 9 and Class 10 are excellent times to start NEET preparation. Class 9 offers 4-year timeline with most relaxed pace and maximum concept depth. Class 10 offers perfect 3-year balance. Choose based on your current grade and readiness to begin structured preparation.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How does early NEET preparation reduce stress?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Early NEET preparation spreads learning over 3-4 years instead of cramming everything in 2 years. This allows balanced learning alongside school, proper concept building, regular revision cycles, and eliminates last-minute panic before NEET exam.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What is the success rate of students who start NEET preparation early?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Students who start NEET preparation from Class 9-10 have 65% higher success rate compared to students who start in Class 11. Early starters develop stronger fundamentals, better problem-solving skills, and more confidence for NEET.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Can I balance school studies with early NEET preparation?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes! Early NEET preparation is designed to complement school studies, not compete with it. Our foundation courses align with NCERT syllabus and help students excel in both board exams and build NEET foundation simultaneously without overwhelming pressure.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What are the benefits of starting NEET preparation from Class 9?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Class 9 NEET foundation offers 4-year preparation timeline, most relaxed learning pace, maximum concept depth, highest success probability, strong fundamentals for Class 11-12, reduced pressure, and competitive edge over peers who start late.',
+        },
+      },
+    ],
+  }
+
+  const courseSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Course',
+    name: 'Early NEET Preparation Program - Class 9 & Class 10 Foundation',
+    description:
+      'Start your NEET journey early with our specialized foundation programs for Class 9 and Class 10 students. Students who start early show 65% higher success rate. Choose between 4-year Class 9 foundation or 3-year Class 10 foundation based on your grade. Strong conceptual foundation, reduced academic pressure, and competitive advantage.',
+    provider: {
+      '@type': 'Organization',
+      name: 'Cerebrum Biology Academy',
+      sameAs: 'https://cerebrumbiologyacademy.com',
+    },
+    courseMode: 'online',
+    educationalLevel: 'Class 9-10',
+    timeRequired: 'P3Y',
+    offers: {
+      '@type': 'Offer',
+      price: '24000',
+      priceCurrency: 'INR',
+      availability: 'https://schema.org/InStock',
+    },
+    audience: {
+      '@type': 'EducationalAudience',
+      educationalRole: 'student',
+    },
+    hasCourseInstance: {
+      '@type': 'CourseInstance',
+      courseMode: 'online',
+      duration: 'P1Y',
+    },
+  }
+
   const successStats = [
     { label: '65%', sublabel: 'Higher Success Rate', icon: Trophy },
     { label: '4 Years', sublabel: 'Optimal Timeline', icon: Clock },
@@ -152,6 +238,14 @@ export default function EarlyNeetPreparationPage() {
 
   return (
     <div className="min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-700 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
