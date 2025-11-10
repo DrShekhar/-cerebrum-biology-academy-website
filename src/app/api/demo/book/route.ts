@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from 'next/server'
 import { zoomService } from '@/lib/zoom/zoomService'
 import { whatsappService } from '@/lib/whatsapp/whatsappService'
 import { prisma } from '@/lib/prisma'
+import { emailService } from '@/lib/email/emailService'
+import { emailTemplates } from '@/lib/email/templates'
 
 interface DemoBookingRequest {
   studentName: string
@@ -219,7 +221,7 @@ export async function POST(request: NextRequest) {
     // Step 7: Send email confirmation to student
     let emailSent = false
     try {
-      await sendEmailConfirmation(body, meetingResponse)
+      await sendEmailConfirmation(body, meetingResponse, assignedCounselor.name)
       emailSent = true
 
       // Update notification status
@@ -306,55 +308,36 @@ export async function GET(request: NextRequest) {
   }
 }
 
-async function sendEmailConfirmation(bookingData: DemoBookingRequest, meetingData: any) {
-  // Email service implementation
-  // For MVP, we'll log the email data
-  const emailData = {
+async function sendEmailConfirmation(
+  bookingData: DemoBookingRequest,
+  meetingData: any,
+  counselorName: string
+) {
+  const result = await emailService.send({
     to: bookingData.email,
     subject: 'Demo Class Confirmed - Cerebrum Biology Academy',
-    html: `
-      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-        <div style="background: linear-gradient(135deg, #2563eb, #9333ea); padding: 20px; text-align: center;">
-          <h1 style="color: white; margin: 0;">Demo Class Confirmed! 🎉</h1>
-        </div>
-        
-        <div style="padding: 20px; background: #f9fafb;">
-          <h2 style="color: #1f2937;">Hi ${bookingData.studentName}!</h2>
-          <p style="color: #4b5563;">Your NEET Biology demo class has been successfully scheduled.</p>
-          
-          <div style="background: white; padding: 20px; border-radius: 8px; margin: 20px 0;">
-            <h3 style="color: #2563eb; margin-top: 0;">Class Details:</h3>
-            <p><strong>📅 Date:</strong> ${new Date(bookingData.preferredDate).toLocaleDateString()}</p>
-            <p><strong>🕐 Time:</strong> ${bookingData.preferredTime} (1 hour session)</p>
-            <p><strong>📚 Course:</strong> ${bookingData.courseInterest}</p>
-            <p><strong>👩‍🏫 Faculty:</strong> Dr. Priya Sharma (AIIMS Graduate)</p>
-            <p><strong>📱 Join URL:</strong> ${meetingData.join_url}</p>
-            <p><strong>🔐 Password:</strong> ${meetingData.password}</p>
-          </div>
-          
-          <div style="background: #e0f2fe; padding: 15px; border-radius: 8px; margin: 20px 0;">
-            <h4 style="color: #0277bd; margin-top: 0;">What to Prepare:</h4>
-            <ul style="color: #01579b;">
-              <li>Notebook and pen for taking notes</li>
-              <li>Your biology questions and doubts</li>
-              <li>NEET preparation goals</li>
-              <li>Quiet environment for the class</li>
-            </ul>
-          </div>
-          
-          <div style="text-align: center; margin: 30px 0;">
-            <p style="color: #4b5563;">Join link will also be sent via WhatsApp 30 minutes before the class.</p>
-          </div>
-        </div>
-        
-        <div style="background: #1f2937; padding: 20px; text-align: center; color: white;">
-          <p>📞 Support: +91 88264 44334</p>
-          <p>🌐 Website: cerebrumbiologyacademy.com</p>
-        </div>
-      </div>
-    `,
-  }
+    html: emailTemplates.demoConfirmation({
+      studentName: bookingData.studentName,
+      demoDate: new Date(bookingData.preferredDate).toLocaleDateString('en-IN', {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+      }),
+      demoTime: bookingData.preferredTime,
+      meetingLink: meetingData.join_url,
+      meetingPassword: meetingData.password,
+      counselorName: counselorName,
+    }),
+  })
 
-  console.log('Email confirmation prepared:', emailData)
-  // In production, send actual email using your email service
+  if (result.success) {
+    console.log(`✅ Demo confirmation email sent to ${bookingData.email} via ${result.provider}`)
+  } else {
+    console.error(
+      `❌ Failed to send demo confirmation email to ${bookingData.email}:`,
+      result.error
+    )
+    throw new Error(result.error || 'Failed to send email')
+  }
 }
