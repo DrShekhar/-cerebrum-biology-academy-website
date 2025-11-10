@@ -266,11 +266,55 @@ Create these templates in your Interakt account:
 
 #### Option B: System-Calculated Schedule
 
-**Auto-calculate from purchase date**:
+**Auto-calculate from admission date with intelligent scheduling**:
 
-- **Monthly**: Day 1 (admission), Day 31, Day 61, Day 91...
-- **Alternate Month**: 5th of alternate months
-- **Quarterly**: Every 3 months from admission date
+**Payment Schedule Logic:**
+
+1. **3 Installments**: Day 1 (admission), Day 31, Day 61
+
+2. **Alternate Month**: 5th of alternate months (starting from admission month)
+
+3. **Quarterly/Dynamic** (Academic Year: April 1 - March 31):
+
+   **If joining between March 1 - April 10** (session start period):
+   - Pay **quarterly** (every 3 months)
+   - Example: Join March 15, 2026 → Installments: June 5, Sept 5, Dec 5, March 5
+
+   **If joining after April 10**:
+   - **More than 8 months left** in academic year → Pay **alternate months** (5th of every alternate month)
+   - **Less than 8 months left** in academic year → Pay in **4 monthly installments** starting from Day 1
+
+**Examples:**
+
+```typescript
+// Example 1: Join on March 15, 2026 (2026-2027 session)
+// Between March 1 - April 10 → Quarterly
+Installments: [
+  { date: '2026-06-05', amount: 25000, type: 'quarterly' },
+  { date: '2026-09-05', amount: 25000, type: 'quarterly' },
+  { date: '2026-12-05', amount: 25000, type: 'quarterly' },
+  { date: '2027-03-05', amount: 25000, type: 'quarterly' },
+]
+
+// Example 2: Join on May 1, 2026 (11 months left > 8 months)
+// After April 10 + >8 months left → Alternate months
+Installments: [
+  { date: '2026-07-05', amount: 16666, type: 'alternate_month' },
+  { date: '2026-09-05', amount: 16666, type: 'alternate_month' },
+  { date: '2026-11-05', amount: 16667, type: 'alternate_month' },
+  { date: '2027-01-05', amount: 16667, type: 'alternate_month' },
+  { date: '2027-03-05', amount: 16667, type: 'alternate_month' },
+]
+
+// Example 3: Join on December 1, 2026 (4 months left < 8 months)
+// After April 10 + <8 months left → 4 monthly installments
+Installments: [
+  { date: '2026-12-01', amount: 25000, type: 'monthly' }, // Day 1
+  { date: '2026-12-31', amount: 25000, type: 'monthly' }, // Day 31
+  { date: '2027-01-30', amount: 25000, type: 'monthly' }, // Day 61
+  { date: '2027-03-01', amount: 25000, type: 'monthly' }, // Day 91
+]
+```
 
 **Reminder Logic**:
 
