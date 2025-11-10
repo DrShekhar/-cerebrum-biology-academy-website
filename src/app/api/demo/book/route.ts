@@ -1,9 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { zoomService } from '@/lib/zoom/zoomService'
-import { whatsappService } from '@/lib/whatsapp/whatsappService'
 import { prisma } from '@/lib/prisma'
-import { emailService } from '@/lib/email/emailService'
-import { emailTemplates } from '@/lib/email/templates'
+import { notificationService } from '@/lib/notifications/notificationService'
 
 interface DemoBookingRequest {
   studentName: string
@@ -194,15 +192,28 @@ export async function POST(request: NextRequest) {
       },
     })
 
-    // Step 6: Send immediate WhatsApp confirmation to student
-    let whatsappSent = false
+    // Step 6: Send multi-channel confirmation to student (Email + WhatsApp + SMS)
+    let notificationSent = false
     try {
-      await whatsappService.sendDemoBookingConfirmation(
-        body.phone,
-        body.studentName,
-        new Date(meetingResponse.start_time)
-      )
-      whatsappSent = true
+      const sent = await notificationService.sendDemoConfirmation({
+        studentName: body.studentName,
+        email: body.email,
+        phone: body.phone,
+        demoDate: new Date(body.preferredDate).toLocaleDateString('en-IN', {
+          weekday: 'long',
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+        }),
+        demoTime: body.preferredTime,
+        meetingLink: meetingResponse.join_url,
+        meetingPassword: meetingResponse.password,
+        counselorName: assignedCounselor.name,
+        priority: 'HIGH',
+        channels: ['email', 'whatsapp', 'sms'],
+      })
+
+      notificationSent = sent
 
       // Update notification status
       await prisma.demoBooking.update({
@@ -210,32 +221,13 @@ export async function POST(request: NextRequest) {
         data: {
           notificationsSent: {
             whatsapp: true,
-            email: false,
-          },
-        },
-      })
-    } catch (error) {
-      console.error('WhatsApp confirmation to student failed:', error)
-    }
-
-    // Step 7: Send email confirmation to student
-    let emailSent = false
-    try {
-      await sendEmailConfirmation(body, meetingResponse, assignedCounselor.name)
-      emailSent = true
-
-      // Update notification status
-      await prisma.demoBooking.update({
-        where: { id: demoBooking.id },
-        data: {
-          notificationsSent: {
-            whatsapp: whatsappSent,
             email: true,
+            sms: true,
           },
         },
       })
     } catch (error) {
-      console.error('Email confirmation to student failed:', error)
+      console.error('Multi-channel confirmation to student failed:', error)
     }
 
     // Log successful booking and lead creation
@@ -249,8 +241,7 @@ export async function POST(request: NextRequest) {
       meetingId: meetingResponse.id,
       scheduledTime: meetingResponse.start_time,
       notifications: {
-        whatsapp: whatsappSent,
-        email: emailSent,
+        multiChannelSent: notificationSent,
       },
     })
 
@@ -305,39 +296,5 @@ export async function GET(request: NextRequest) {
       { success: false, error: 'Failed to fetch available slots' },
       { status: 500 }
     )
-  }
-}
-
-async function sendEmailConfirmation(
-  bookingData: DemoBookingRequest,
-  meetingData: any,
-  counselorName: string
-) {
-  const result = await emailService.send({
-    to: bookingData.email,
-    subject: 'Demo Class Confirmed - Cerebrum Biology Academy',
-    html: emailTemplates.demoConfirmation({
-      studentName: bookingData.studentName,
-      demoDate: new Date(bookingData.preferredDate).toLocaleDateString('en-IN', {
-        weekday: 'long',
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric',
-      }),
-      demoTime: bookingData.preferredTime,
-      meetingLink: meetingData.join_url,
-      meetingPassword: meetingData.password,
-      counselorName: counselorName,
-    }),
-  })
-
-  if (result.success) {
-    console.log(`✅ Demo confirmation email sent to ${bookingData.email} via ${result.provider}`)
-  } else {
-    console.error(
-      `❌ Failed to send demo confirmation email to ${bookingData.email}:`,
-      result.error
-    )
-    throw new Error(result.error || 'Failed to send email')
   }
 }
