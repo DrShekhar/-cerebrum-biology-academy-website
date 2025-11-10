@@ -9,6 +9,8 @@ import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { z } from 'zod'
 import crypto from 'crypto'
+import { emailService } from '@/lib/email/emailService'
+import { emailTemplates } from '@/lib/email/templates'
 
 // Generic lead schema - flexible to accommodate different sources
 const genericLeadSchema = z.object({
@@ -453,6 +455,32 @@ export async function POST(request: NextRequest) {
         },
       },
     })
+
+    // Send welcome email (non-blocking)
+    if (leadData.email) {
+      emailService
+        .send({
+          to: leadData.email,
+          subject: 'Welcome to Cerebrum Biology Academy!',
+          html: emailTemplates.leadWelcome({
+            studentName: leadData.studentName,
+            counselorName: counselor.name,
+            counselorPhone: counselor.phone || '+91 88264 44334',
+            counselorEmail: counselor.email,
+            source: `${source}${leadData.metadata?.campaignName ? ` (${leadData.metadata.campaignName})` : ''}`,
+          }),
+        })
+        .then((result) => {
+          if (result.success) {
+            console.log(`📧 Welcome email sent to ${leadData.email} via ${result.provider}`)
+          } else {
+            console.error(`📧 Failed to send welcome email to ${leadData.email}:`, result.error)
+          }
+        })
+        .catch((error) => {
+          console.error(`📧 Email service error:`, error)
+        })
+    }
 
     console.log(`✅ Lead created successfully:`, {
       leadId: lead.id,
