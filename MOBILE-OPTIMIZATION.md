@@ -150,6 +150,81 @@ import { MobileInstallPrompt } from '@/components/counselor/MobileInstallPrompt'
 
 ---
 
+### 4. MobilePaymentView Component (NEW)
+
+**Location**: `src/components/counselor/MobilePaymentView.tsx`
+
+**Features**:
+
+- Mobile-optimized payment/installment tracking
+- Swipeable payment cards with gestures:
+  - Swipe right → Mark as paid
+  - Swipe left → Call student
+  - Tap → View payment details
+- Group payments by Status or Student
+- Visual overdue indicators with border highlighting
+- Payment statistics dashboard (total outstanding, overdue)
+- Status filtering (All, Pending, Overdue, Paid)
+- Reminder tracking display
+- One-tap manual reminder sending
+- Touch-optimized for one-handed operation
+
+**Usage**:
+
+```tsx
+import { MobilePaymentView } from '@/components/counselor/MobilePaymentView'
+
+;<MobilePaymentView
+  payments={installments}
+  onPaymentClick={(payment) => setSelectedPayment(payment)}
+  onMarkAsPaid={(payment) => handleMarkAsPaid(payment)}
+  onSendReminder={(payment) => handleSendReminder(payment)}
+  onCallClick={(payment) => (window.location.href = `tel:${payment.feePlan.lead.phone}`)}
+/>
+```
+
+**Mobile UX Features**:
+
+- Gradient stats header showing total outstanding and overdue amounts
+- Grouped list view by status or student
+- Swipe gestures for quick payment actions
+- Overdue highlighting with red border
+- Days until/past due calculation
+- Installment number tracking
+- Payment reminder status display
+- Empty state for no payments
+
+**Payment Page**:
+
+**Location**: `src/app/counselor/payments/page.tsx`
+
+Complete mobile-responsive payments page with:
+
+- Mobile/desktop view switching via useMediaQuery
+- Status filter buttons (All/Pending/Overdue/Paid)
+- Payment details bottom sheet on mobile
+- Desktop grid view for larger screens
+- Mark as paid functionality with transaction safety
+- Send reminder integration with multi-channel support
+- Loading and error states
+- Real-time payment statistics
+
+**API Endpoints**:
+
+- GET `/api/counselor/payments` - Fetch all installments with filtering
+- GET `/api/counselor/payments?status=OVERDUE` - Filter by status
+- POST `/api/counselor/payments/[id]/mark-paid` - Mark installment as paid
+- POST `/api/counselor/payments/reminders/send` - Send manual reminder
+
+**Integration with Existing Services**:
+
+- Leverages paymentReminderService for automation
+- Uses BottomSheet for payment details on mobile
+- Connects to existing notification system
+- Transaction-safe payment operations with automatic enrollment
+
+---
+
 ## Integration Guide
 
 ### Step 1: Update Counselor Leads Page
@@ -629,9 +704,9 @@ Target metrics on 4G:
 - ✅ IndexedDB queue for offline actions
 - ⏳ Push notification setup (pending)
 
-### Phase 3 (Planned)
+### Phase 3 (In Progress)
 
-- 📋 Mobile-optimized payment reminders UI
+- ✅ Mobile-optimized payment reminders UI
 - 📋 Touch-friendly task management
 - 📋 Mobile dashboard widgets
 - 📋 Haptic feedback integration
