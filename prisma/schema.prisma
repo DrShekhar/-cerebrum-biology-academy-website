@@ -56,14 +56,15 @@ model User {
   userQuestionResponses UserQuestionResponse[]
 
   // CRM Relations
-  assignedLeads   Lead[]          @relation("CounselorLeads")
-  assignedTasks   Task[]          @relation("AssignedTasks")
-  createdTasks    Task[]          @relation("CreatedTasks")
-  activities      Activity[]      @relation("UserActivities")
-  sentMessages    Communication[] @relation("SentMessages")
-  createdFeePlans FeePlan[]       @relation("CreatedFeePlans")
-  createdOffers   Offer[]         @relation("CreatedOffers")
-  createdNotes    Note[]          @relation("CreatedNotes")
+  assignedLeads      Lead[]            @relation("CounselorLeads")
+  assignedTasks      Task[]            @relation("AssignedTasks")
+  createdTasks       Task[]            @relation("CreatedTasks")
+  activities         Activity[]        @relation("UserActivities")
+  sentMessages       Communication[]   @relation("SentMessages")
+  createdFeePlans    FeePlan[]         @relation("CreatedFeePlans")
+  createdOffers      Offer[]           @relation("CreatedOffers")
+  createdNotes       Note[]            @relation("CreatedNotes")
+  messageTemplates   MessageTemplate[] @relation("CreatedTemplates")
 
   @@map("users")
 }
@@ -1921,6 +1922,27 @@ enum CommStatus {
   DELIVERED
   READ
   FAILED
+}
+
+model MessageTemplate {
+  id   String @id @default(cuid())
+  name String
+  type CommType
+
+  subject String?
+  message String @db.Text
+
+  isActive  Boolean @default(true)
+  usageCount Int    @default(0)
+
+  createdById String
+  createdBy   User   @relation("CreatedTemplates", fields: [createdById], references: [id])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([type, isActive])
+  @@map("message_templates")
 }
 
 model FeePlan {

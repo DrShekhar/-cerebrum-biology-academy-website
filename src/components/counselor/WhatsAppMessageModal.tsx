@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import type { Lead } from '@/app/counselor/leads/page'
+import { TemplateLibraryModal } from './TemplateLibraryModal'
 
 interface WhatsAppMessageModalProps {
   lead: Lead
@@ -63,6 +64,7 @@ export function WhatsAppMessageModal({
   const [customMessage, setCustomMessage] = useState('')
   const [sending, setSending] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const [showTemplateLibrary, setShowTemplateLibrary] = useState(false)
 
   if (!isOpen) return null
 
@@ -220,8 +222,24 @@ export function WhatsAppMessageModal({
             </div>
           ) : (
             <div className="space-y-4">
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-sm font-medium text-gray-700">Your Message</span>
+                <button
+                  onClick={() => setShowTemplateLibrary(true)}
+                  className="px-3 py-1.5 bg-indigo-50 text-indigo-700 rounded-lg text-xs font-medium hover:bg-indigo-100 transition-colors flex items-center gap-1"
+                >
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2"
+                    />
+                  </svg>
+                  Browse Templates
+                </button>
+              </div>
               <label className="block">
-                <span className="text-sm font-medium text-gray-700 mb-2 block">Your Message</span>
                 <textarea
                   value={customMessage}
                   onChange={(e) => setCustomMessage(e.target.value)}
@@ -287,6 +305,18 @@ export function WhatsAppMessageModal({
           </div>
         </div>
       </div>
+
+      {/* Template Library Modal */}
+      <TemplateLibraryModal
+        isOpen={showTemplateLibrary}
+        onClose={() => setShowTemplateLibrary(false)}
+        filterType="WHATSAPP"
+        onSelectTemplate={(template) => {
+          setCustomMessage(template.message)
+          setShowTemplateLibrary(false)
+          setMode('custom')
+        }}
+      />
     </div>
   )
 }
