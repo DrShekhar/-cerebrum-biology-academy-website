@@ -69,7 +69,19 @@ export function LeadCard({ lead, isDragging = false, onRefresh }: LeadCardProps)
     }
   }
 
+  const getWhatsAppLink = () => {
+    const cleanPhone = lead.phone.replace(/[^\d+]/g, '')
+    const message = `Hi ${lead.studentName}, this is from Cerebrum Biology Academy. We wanted to follow up regarding your interest in ${lead.courseInterest}. When would be a good time to connect?`
+    const encodedMessage = encodeURIComponent(message)
+    return `https://wa.me/${cleanPhone}?text=${encodedMessage}`
+  }
+
   const handleWhatsAppClick = (e: React.MouseEvent) => {
+    e.stopPropagation()
+    window.open(getWhatsAppLink(), '_blank')
+  }
+
+  const handleWhatsAppModalClick = (e: React.MouseEvent) => {
     e.stopPropagation()
     setIsWhatsAppModalOpen(true)
   }
