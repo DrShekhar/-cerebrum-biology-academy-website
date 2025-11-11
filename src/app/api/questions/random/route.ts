@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { z } from 'zod'
-import { withAuth } from '@/lib/auth/middleware'
+import { validateUserSession } from '@/lib/auth/config'
 import { withRateLimit } from '@/lib/middleware/rateLimit'
 import { logger } from '@/lib/utils/logger'
 
@@ -242,15 +242,20 @@ export async function GET(request: NextRequest) {
       weightByPerformance: searchParams.get('weightByPerformance') === 'true',
     })
 
-    const authResult = await withAuth(request)
-    if (!authResult.success) {
+    const session = await validateUserSession(request)
+    if (!session.valid) {
       return NextResponse.json(
         { error: 'Authentication required', code: 'AUTH_REQUIRED' },
         { status: 401 }
       )
     }
 
-    const { user } = authResult
+    const user = {
+      id: session.userId!,
+      role: session.role!,
+      email: session.email!,
+      name: session.name!,
+    }
 
     // Rate limiting
     const rateLimitResult = await withRateLimit(request, {

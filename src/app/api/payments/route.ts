@@ -9,7 +9,7 @@ import { HyperIntelligentRouter } from '@/lib/api/HyperIntelligentRouter'
 import { getCacheManagers } from '@/lib/cache/CacheConfiguration'
 
 // Initialize payment engine
-const { distributedCache } = getCacheManagers()
+const { distributed: distributedCache } = getCacheManagers()
 const aiRouter = new HyperIntelligentRouter()
 const paymentEngine = new AdvancedPaymentEngine()
 

@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { z } from 'zod'
-import { withAuth } from '@/lib/auth/middleware'
+import { validateUserSession } from '@/lib/auth/config'
 import { withRateLimit } from '@/lib/middleware/rateLimit'
 import { logger } from '@/lib/utils/logger'
 
@@ -77,15 +77,20 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
   try {
     const { id } = await params
 
-    const authResult = await withAuth(request)
-    if (!authResult.success) {
+    const session = await validateUserSession(request)
+    if (!session.valid) {
       return NextResponse.json(
         { error: 'Authentication required', code: 'AUTH_REQUIRED' },
         { status: 401 }
       )
     }
 
-    const { user } = authResult
+    const user = {
+      id: session.userId!,
+      role: session.role!,
+      email: session.email!,
+      name: session.name!,
+    }
 
     if (!checkPermissions(user, 'read')) {
       return NextResponse.json(
@@ -286,15 +291,20 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
     const body = await request.json()
     const validatedData = updateQuestionSchema.parse(body)
 
-    const authResult = await withAuth(request)
-    if (!authResult.success) {
+    const session = await validateUserSession(request)
+    if (!session.valid) {
       return NextResponse.json(
         { error: 'Authentication required', code: 'AUTH_REQUIRED' },
         { status: 401 }
       )
     }
 
-    const { user } = authResult
+    const user = {
+      id: session.userId!,
+      role: session.role!,
+      email: session.email!,
+      name: session.name!,
+    }
 
     // Get existing question to check ownership
     const existingQuestion = await prisma.question.findUnique({
@@ -445,15 +455,20 @@ export async function DELETE(request: NextRequest, { params }: RouteParams) {
   try {
     const { id } = await params
 
-    const authResult = await withAuth(request)
-    if (!authResult.success) {
+    const session = await validateUserSession(request)
+    if (!session.valid) {
       return NextResponse.json(
         { error: 'Authentication required', code: 'AUTH_REQUIRED' },
         { status: 401 }
       )
     }
 
-    const { user } = authResult
+    const user = {
+      id: session.userId!,
+      role: session.role!,
+      email: session.email!,
+      name: session.name!,
+    }
 
     // Get existing question to check ownership and usage
     const existingQuestion = await prisma.question.findUnique({

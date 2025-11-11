@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { z } from 'zod'
-import { withAuth } from '@/lib/auth/middleware'
+import { validateUserSession } from '@/lib/auth/config'
 import { withRateLimit } from '@/lib/middleware/rateLimit'
 import { logger } from '@/lib/utils/logger'
 
@@ -12,7 +12,16 @@ const createQuestionSchema = z.object({
   curriculum: z.string().default('NEET'),
   grade: z.string().default('CLASS_12'),
   subject: z.string().default('biology'),
-  type: z.enum(['MCQ', 'SHORT_ANSWER', 'DIAGRAM', 'TRUE_FALSE', 'FILL_BLANK', 'MULTIPLE_SELECT', 'MATCH_FOLLOWING', 'NUMERICAL']),
+  type: z.enum([
+    'MCQ',
+    'SHORT_ANSWER',
+    'DIAGRAM',
+    'TRUE_FALSE',
+    'FILL_BLANK',
+    'MULTIPLE_SELECT',
+    'MATCH_FOLLOWING',
+    'NUMERICAL',
+  ]),
   difficulty: z.enum(['EASY', 'MEDIUM', 'HARD', 'EXPERT']).default('MEDIUM'),
   question: z.string().min(10, 'Question must be at least 10 characters'),
   options: z.array(z.string()).optional(), // Required for MCQ, optional for others
@@ -29,7 +38,9 @@ const createQuestionSchema = z.object({
   tags: z.array(z.string()).optional(),
   relatedConcepts: z.array(z.string()).optional(),
   keywords: z.array(z.string()).optional(),
-  category: z.enum(['PRACTICE', 'MOCK_TEST', 'PREVIOUS_YEAR', 'CONCEPT_BUILDER', 'COMPETITIVE']).default('PRACTICE')
+  category: z
+    .enum(['PRACTICE', 'MOCK_TEST', 'PREVIOUS_YEAR', 'CONCEPT_BUILDER', 'COMPETITIVE'])
+    .default('PRACTICE'),
 })
 
 // Validation schema for filtering questions
@@ -47,9 +58,11 @@ const questionFiltersSchema = z.object({
   isVerified: z.boolean().optional(),
   page: z.number().min(1).default(1),
   limit: z.number().min(1).max(100).default(20),
-  sortBy: z.enum(['createdAt', 'updatedAt', 'popularityScore', 'difficulty', 'topic']).default('createdAt'),
+  sortBy: z
+    .enum(['createdAt', 'updatedAt', 'popularityScore', 'difficulty', 'topic'])
+    .default('createdAt'),
   sortOrder: z.enum(['asc', 'desc']).default('desc'),
-  search: z.string().optional()
+  search: z.string().optional(),
 })
 
 // Helper function to check permissions
@@ -86,7 +99,7 @@ function buildSearchFilters(filters: any) {
   if (filters.tags) {
     const tags = Array.isArray(filters.tags) ? filters.tags : [filters.tags]
     where.tags = {
-      array_contains: tags
+      array_contains: tags,
     }
   }
 
@@ -94,7 +107,7 @@ function buildSearchFilters(filters: any) {
     where.OR = [
       { question: { contains: filters.search, mode: 'insensitive' } },
       { topic: { contains: filters.search, mode: 'insensitive' } },
-      { explanation: { contains: filters.search, mode: 'insensitive' } }
+      { explanation: { contains: filters.search, mode: 'insensitive' } },
     ]
   }
 
@@ -118,23 +131,30 @@ export async function GET(request: NextRequest) {
       category: searchParams.get('category') || undefined,
       tags: searchParams.get('tags')?.split(',') || undefined,
       isActive: searchParams.get('isActive') ? searchParams.get('isActive') === 'true' : undefined,
-      isVerified: searchParams.get('isVerified') ? searchParams.get('isVerified') === 'true' : undefined,
+      isVerified: searchParams.get('isVerified')
+        ? searchParams.get('isVerified') === 'true'
+        : undefined,
       page: searchParams.get('page') ? parseInt(searchParams.get('page')!) : 1,
       limit: searchParams.get('limit') ? parseInt(searchParams.get('limit')!) : 20,
-      sortBy: searchParams.get('sortBy') as any || 'createdAt',
-      sortOrder: searchParams.get('sortOrder') as any || 'desc',
-      search: searchParams.get('search') || undefined
+      sortBy: (searchParams.get('sortBy') as any) || 'createdAt',
+      sortOrder: (searchParams.get('sortOrder') as any) || 'desc',
+      search: searchParams.get('search') || undefined,
     })
 
-    const authResult = await withAuth(request)
-    if (!authResult.success) {
+    const session = await validateUserSession(request)
+    if (!session.valid) {
       return NextResponse.json(
         { error: 'Authentication required', code: 'AUTH_REQUIRED' },
         { status: 401 }
       )
     }
 
-    const { user } = authResult
+    const user = {
+      id: session.userId!,
+      role: session.role!,
+      email: session.email!,
+      name: session.name!,
+    }
 
     if (!checkPermissions(user, 'read')) {
       return NextResponse.json(
@@ -147,7 +167,7 @@ export async function GET(request: NextRequest) {
     const rateLimitResult = await withRateLimit(request, {
       identifier: user.id,
       limit: 200, // 200 requests per hour
-      window: 3600000
+      window: 3600000,
     })
 
     if (!rateLimitResult.success) {
@@ -179,10 +199,10 @@ export async function GET(request: NextRequest) {
           question: true,
           options: true,
           // Don't include correct answer in list view for students
-          ...(user.role === 'ADMIN' || user.role === 'TEACHER') && {
+          ...((user.role === 'ADMIN' || user.role === 'TEACHER') && {
             correctAnswer: true,
-            explanation: true
-          },
+            explanation: true,
+          }),
           questionImage: true,
           marks: true,
           timeLimit: true,
@@ -197,27 +217,33 @@ export async function GET(request: NextRequest) {
           isActive: true,
           isVerified: true,
           createdAt: true,
-          updatedAt: true
+          updatedAt: true,
         },
         skip,
         take: filters.limit,
         orderBy: {
-          [filters.sortBy]: filters.sortOrder
-        }
+          [filters.sortBy]: filters.sortOrder,
+        },
       }),
-      prisma.question.count({ where })
+      prisma.question.count({ where }),
     ])
 
     // Calculate success rate for each question
-    const questionsWithStats = questions.map(q => ({
+    const questionsWithStats = questions.map((q) => ({
       ...q,
-      successRate: q.totalAttempts > 0 ?
-        Math.round((q.correctAttempts / q.totalAttempts) * 100 * 100) / 100 : 0,
+      successRate:
+        q.totalAttempts > 0
+          ? Math.round((q.correctAttempts / q.totalAttempts) * 100 * 100) / 100
+          : 0,
       // Calculate difficulty rating based on success rate
-      perceivedDifficulty: q.totalAttempts > 10 ?
-        q.correctAttempts / q.totalAttempts > 0.8 ? 'EASY' :
-        q.correctAttempts / q.totalAttempts > 0.5 ? 'MEDIUM' : 'HARD'
-        : q.difficulty
+      perceivedDifficulty:
+        q.totalAttempts > 10
+          ? q.correctAttempts / q.totalAttempts > 0.8
+            ? 'EASY'
+            : q.correctAttempts / q.totalAttempts > 0.5
+              ? 'MEDIUM'
+              : 'HARD'
+          : q.difficulty,
     }))
 
     // Calculate pagination info
@@ -229,18 +255,18 @@ export async function GET(request: NextRequest) {
       prisma.question.findMany({
         select: { topic: true },
         distinct: ['topic'],
-        where: { isActive: true }
+        where: { isActive: true },
       }),
       prisma.question.findMany({
         select: { curriculum: true },
         distinct: ['curriculum'],
-        where: { isActive: true }
+        where: { isActive: true },
       }),
       prisma.question.findMany({
         select: { grade: true },
         distinct: ['grade'],
-        where: { isActive: true }
-      })
+        where: { isActive: true },
+      }),
     ])
 
     const response = {
@@ -253,18 +279,33 @@ export async function GET(request: NextRequest) {
           totalCount,
           limit: filters.limit,
           hasMore,
-          hasPrevious: filters.page > 1
+          hasPrevious: filters.page > 1,
         },
         filters: {
           applied: filters,
           available: {
-            topics: filterOptions[0].map(t => t.topic).sort(),
-            curricula: filterOptions[1].map(c => c.curriculum).sort(),
-            grades: filterOptions[2].map(g => g.grade).sort(),
-            types: ['MCQ', 'SHORT_ANSWER', 'DIAGRAM', 'TRUE_FALSE', 'FILL_BLANK', 'MULTIPLE_SELECT', 'MATCH_FOLLOWING', 'NUMERICAL'],
+            topics: filterOptions[0].map((t) => t.topic).sort(),
+            curricula: filterOptions[1].map((c) => c.curriculum).sort(),
+            grades: filterOptions[2].map((g) => g.grade).sort(),
+            types: [
+              'MCQ',
+              'SHORT_ANSWER',
+              'DIAGRAM',
+              'TRUE_FALSE',
+              'FILL_BLANK',
+              'MULTIPLE_SELECT',
+              'MATCH_FOLLOWING',
+              'NUMERICAL',
+            ],
             difficulties: ['EASY', 'MEDIUM', 'HARD', 'EXPERT'],
-            categories: ['PRACTICE', 'MOCK_TEST', 'PREVIOUS_YEAR', 'CONCEPT_BUILDER', 'COMPETITIVE']
-          }
+            categories: [
+              'PRACTICE',
+              'MOCK_TEST',
+              'PREVIOUS_YEAR',
+              'CONCEPT_BUILDER',
+              'COMPETITIVE',
+            ],
+          },
         },
         statistics: {
           totalActive: await prisma.question.count({ where: { isActive: true } }),
@@ -272,19 +313,18 @@ export async function GET(request: NextRequest) {
           byDifficulty: await prisma.question.groupBy({
             by: ['difficulty'],
             _count: { id: true },
-            where: { isActive: true }
+            where: { isActive: true },
           }),
           byType: await prisma.question.groupBy({
             by: ['type'],
             _count: { id: true },
-            where: { isActive: true }
-          })
-        }
-      }
+            where: { isActive: true },
+          }),
+        },
+      },
     }
 
     return NextResponse.json(response)
-
   } catch (error) {
     logger.error('Error fetching questions:', error)
 
@@ -293,7 +333,7 @@ export async function GET(request: NextRequest) {
         {
           error: 'Invalid query parameters',
           code: 'VALIDATION_ERROR',
-          details: error.errors
+          details: error.errors,
         },
         { status: 400 }
       )
@@ -302,7 +342,7 @@ export async function GET(request: NextRequest) {
     return NextResponse.json(
       {
         error: 'Failed to fetch questions',
-        code: 'INTERNAL_ERROR'
+        code: 'INTERNAL_ERROR',
       },
       { status: 500 }
     )
@@ -315,15 +355,20 @@ export async function POST(request: NextRequest) {
     const body = await request.json()
     const validatedData = createQuestionSchema.parse(body)
 
-    const authResult = await withAuth(request)
-    if (!authResult.success) {
+    const session = await validateUserSession(request)
+    if (!session.valid) {
       return NextResponse.json(
         { error: 'Authentication required', code: 'AUTH_REQUIRED' },
         { status: 401 }
       )
     }
 
-    const { user } = authResult
+    const user = {
+      id: session.userId!,
+      role: session.role!,
+      email: session.email!,
+      name: session.name!,
+    }
 
     if (!checkPermissions(user, 'create')) {
       return NextResponse.json(
@@ -336,7 +381,7 @@ export async function POST(request: NextRequest) {
     const rateLimitResult = await withRateLimit(request, {
       identifier: user.id,
       limit: 50, // 50 question creations per hour
-      window: 3600000
+      window: 3600000,
     })
 
     if (!rateLimitResult.success) {
@@ -347,23 +392,29 @@ export async function POST(request: NextRequest) {
     }
 
     // Validate MCQ questions have options
-    if (validatedData.type === 'MCQ' && (!validatedData.options || validatedData.options.length < 2)) {
+    if (
+      validatedData.type === 'MCQ' &&
+      (!validatedData.options || validatedData.options.length < 2)
+    ) {
       return NextResponse.json(
         {
           error: 'MCQ questions must have at least 2 options',
-          code: 'INVALID_MCQ_OPTIONS'
+          code: 'INVALID_MCQ_OPTIONS',
         },
         { status: 400 }
       )
     }
 
     // Validate correct answer is in options for MCQ
-    if (validatedData.type === 'MCQ' && validatedData.options &&
-        !validatedData.options.includes(validatedData.correctAnswer)) {
+    if (
+      validatedData.type === 'MCQ' &&
+      validatedData.options &&
+      !validatedData.options.includes(validatedData.correctAnswer)
+    ) {
       return NextResponse.json(
         {
           error: 'Correct answer must be one of the provided options',
-          code: 'INVALID_CORRECT_ANSWER'
+          code: 'INVALID_CORRECT_ANSWER',
         },
         { status: 400 }
       )
@@ -382,8 +433,8 @@ export async function POST(request: NextRequest) {
         verifiedBy: user.role === 'ADMIN' ? user.id : undefined,
         qualityScore: 0.8, // Default quality score, could be calculated by AI
         createdAt: new Date(),
-        updatedAt: new Date()
-      }
+        updatedAt: new Date(),
+      },
     })
 
     // Log question creation
@@ -392,7 +443,7 @@ export async function POST(request: NextRequest) {
       topic: question.topic,
       type: question.type,
       difficulty: question.difficulty,
-      createdBy: user.id
+      createdBy: user.id,
     })
 
     return NextResponse.json({
@@ -415,15 +466,14 @@ export async function POST(request: NextRequest) {
           tags: question.tags,
           isActive: question.isActive,
           isVerified: question.isVerified,
-          createdAt: question.createdAt
-        }
+          createdAt: question.createdAt,
+        },
       },
       meta: {
         autoVerified: user.role === 'ADMIN',
-        needsReview: user.role !== 'ADMIN'
-      }
+        needsReview: user.role !== 'ADMIN',
+      },
     })
-
   } catch (error) {
     logger.error('Error creating question:', error)
 
@@ -432,7 +482,7 @@ export async function POST(request: NextRequest) {
         {
           error: 'Validation failed',
           code: 'VALIDATION_ERROR',
-          details: error.errors
+          details: error.errors,
         },
         { status: 400 }
       )
@@ -441,7 +491,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json(
       {
         error: 'Failed to create question',
-        code: 'INTERNAL_ERROR'
+        code: 'INTERNAL_ERROR',
       },
       { status: 500 }
     )

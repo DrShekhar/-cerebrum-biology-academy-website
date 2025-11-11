@@ -62,8 +62,8 @@ function generateInsights(interactions: any[]) {
     {} as Record<string, number>
   )
 
-  const mostPopularElement = Object.entries(elementPopularity).sort(
-    ([, a], [, b]) => (b as number) - (a as number)
+  const mostPopularElement = (Object.entries(elementPopularity) as [string, number][]).sort(
+    ([, a], [, b]) => b - a
   )[0]
 
   const typeDistribution = interactions.reduce(

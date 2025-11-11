@@ -281,7 +281,9 @@ export async function GET(
       if (response.isCorrect) stats.correct++
     })
 
-    const getDifficultyStats = (difficulty: string) => {
+    const getDifficultyStats = (
+      difficulty: string
+    ): { attempted: number; correct: number; accuracy: number } => {
       const stats = difficultyMap.get(difficulty) || { attempted: 0, correct: 0 }
       return {
         attempted: stats.attempted,
