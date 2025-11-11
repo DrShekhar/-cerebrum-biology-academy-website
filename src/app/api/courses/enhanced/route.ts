@@ -16,14 +16,14 @@ const QuerySchema = z.object({
   userId: z.string().optional(),
   includeAnalytics: z
     .string()
-    .transform((val) => val === 'true')
     .optional()
-    .default(false),
+    .default('false')
+    .transform((val) => val === 'true'),
   includeRecommendations: z
     .string()
-    .transform((val) => val === 'true')
     .optional()
-    .default(false),
+    .default('false')
+    .transform((val) => val === 'true'),
 })
 
 // Enhanced course data with animation and real-time metrics

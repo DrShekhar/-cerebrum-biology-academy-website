@@ -80,7 +80,7 @@ async function handlePOST(req: NextRequest, session: any) {
     }
 
     // For download action, return PDF file as response
-    return new NextResponse(result.pdfBuffer, {
+    return new NextResponse(result.pdfBuffer as BodyInit, {
       status: 200,
       headers: {
         'Content-Type': 'application/pdf',

@@ -123,7 +123,7 @@ export async function POST(request: NextRequest) {
         email: body.email,
         phone: body.phone,
         studentClass: body.studentClass as any,
-        preferredDate: body.preferredDate,
+        preferredDate: new Date(body.preferredDate),
         preferredTime: body.preferredTime,
         message: body.previousKnowledge,
         status: 'CONFIRMED',
@@ -196,24 +196,17 @@ export async function POST(request: NextRequest) {
     let notificationSent = false
     try {
       const sent = await notificationService.sendDemoConfirmation({
+        leadId: lead.id,
         studentName: body.studentName,
         email: body.email,
         phone: body.phone,
-        demoDate: new Date(body.preferredDate).toLocaleDateString('en-IN', {
-          weekday: 'long',
-          year: 'numeric',
-          month: 'long',
-          day: 'numeric',
-        }),
-        demoTime: body.preferredTime,
+        demoDate: new Date(body.preferredDate),
         meetingLink: meetingResponse.join_url,
         meetingPassword: meetingResponse.password,
         counselorName: assignedCounselor.name,
-        priority: 'HIGH',
-        channels: ['email', 'whatsapp', 'sms'],
       })
 
-      notificationSent = sent
+      notificationSent = sent.success
 
       // Update notification status
       await prisma.demoBooking.update({

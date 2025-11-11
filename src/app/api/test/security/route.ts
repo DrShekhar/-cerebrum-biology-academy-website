@@ -21,17 +21,11 @@ export async function POST(request: NextRequest) {
       case 'session_validate':
         return await handleSessionValidate(request, data)
       default:
-        return NextResponse.json(
-          { error: 'Invalid action' },
-          { status: 400 }
-        )
+        return NextResponse.json({ error: 'Invalid action' }, { status: 400 })
     }
   } catch (error) {
     console.error('Security API error:', error)
-    return NextResponse.json(
-      { error: 'Internal server error' },
-      { status: 500 }
-    )
+    return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
   }
 }
 
@@ -43,12 +37,12 @@ async function handleAnswerSubmission(request: NextRequest, data: any) {
     userId: data.userId,
     sessionId: data.sessionId,
     questionId: data.questionId,
-    submittedAnswer: data.answer,
+    answer: data.answer,
     submissionTime: Date.now(),
     timeSpent: data.timeSpent,
     clientHash: data.hash,
     ipAddress: clientIP,
-    userAgent
+    userAgent,
   }
 
   const validation = await validationManager.validateSubmission(submission)
@@ -59,7 +53,7 @@ async function handleAnswerSubmission(request: NextRequest, data: any) {
     violations: validation.violations,
     score: validation.score,
     action: validation.action,
-    timestamp: Date.now()
+    timestamp: Date.now(),
   }
 
   // Add security headers
@@ -72,17 +66,14 @@ async function handleAnswerSubmission(request: NextRequest, data: any) {
       {
         error: 'Submission blocked due to security violations',
         violations: validation.violations,
-        action: validation.action
+        action: validation.action,
       },
       { status: 403, headers }
     )
   }
 
   if (validation.action === 'throttle') {
-    return NextResponse.json(
-      response,
-      { status: 429, headers }
-    )
+    return NextResponse.json(response, { status: 429, headers })
   }
 
   return NextResponse.json(response, { headers })
@@ -93,14 +84,11 @@ async function handleHeartbeat(request: NextRequest, data: any) {
 
   // Validate heartbeat rate limiting
   const rateLimitResult = validationManager.checkRateLimit('heartbeat', {
-    sessionId: data.sessionId
+    sessionId: data.sessionId,
   })
 
   if (!rateLimitResult.allowed) {
-    return NextResponse.json(
-      { error: 'Heartbeat rate limit exceeded' },
-      { status: 429 }
-    )
+    return NextResponse.json({ error: 'Heartbeat rate limit exceeded' }, { status: 429 })
   }
 
   // Process heartbeat data
@@ -108,7 +96,7 @@ async function handleHeartbeat(request: NextRequest, data: any) {
     timestamp: Date.now(),
     status: 'active',
     remainingTime: rateLimitResult.resetTime - Date.now(),
-    serverTime: Date.now()
+    serverTime: Date.now(),
   }
 
   return NextResponse.json(heartbeatResponse)
@@ -126,7 +114,7 @@ async function handleViolationReport(request: NextRequest, data: any) {
     severity: data.severity,
     ipAddress: clientIP,
     userAgent,
-    timestamp: Date.now()
+    timestamp: Date.now(),
   })
 
   // Store violation in database or external logging service
@@ -141,13 +129,13 @@ async function handleViolationReport(request: NextRequest, data: any) {
 
     return NextResponse.json({
       action: 'block',
-      message: 'Too many security violations'
+      message: 'Too many security violations',
     })
   }
 
   return NextResponse.json({
     action: 'continue',
-    message: 'Violation logged'
+    message: 'Violation logged',
   })
 }
 
@@ -165,7 +153,7 @@ async function handleSessionRegister(request: NextRequest, data: any) {
       {
         error: 'Concurrent session limit exceeded',
         maxSessions: concurrentCheck.maxConcurrentSessions,
-        currentSessions: concurrentCheck.currentSessions
+        currentSessions: concurrentCheck.currentSessions,
       },
       { status: 403 }
     )
@@ -174,7 +162,7 @@ async function handleSessionRegister(request: NextRequest, data: any) {
   return NextResponse.json({
     sessionId: data.sessionId,
     status: 'registered',
-    timestamp: Date.now()
+    timestamp: Date.now(),
   })
 }
 
@@ -186,18 +174,18 @@ async function handleSessionValidate(request: NextRequest, data: any) {
     userId: data.userId,
     sessionId: data.sessionId,
     questionId: 'session_validate',
-    submittedAnswer: 0,
+    answer: 0,
     submissionTime: Date.now(),
     timeSpent: 0,
     clientHash: data.hash || '',
     ipAddress: clientIP,
-    userAgent: request.headers.get('user-agent') || ''
+    userAgent: request.headers.get('user-agent') || '',
   })
 
   return NextResponse.json({
     isValid: validation.isValid,
     violations: validation.violations,
-    action: validation.action
+    action: validation.action,
   })
 }
 
@@ -228,17 +216,11 @@ export async function GET(request: NextRequest) {
       case 'report':
         return handleReportRequest()
       default:
-        return NextResponse.json(
-          { error: 'Invalid action' },
-          { status: 400 }
-        )
+        return NextResponse.json({ error: 'Invalid action' }, { status: 400 })
     }
   } catch (error) {
     console.error('Security API GET error:', error)
-    return NextResponse.json(
-      { error: 'Internal server error' },
-      { status: 500 }
-    )
+    return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
   }
 }
 

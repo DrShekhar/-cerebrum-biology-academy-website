@@ -6,14 +6,20 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { getCacheManagers } from '@/lib/cache/CacheConfiguration'
 
-const {
-  distributed: distributedCache,
-  query: queryOptimizer,
-  session: sessionManager,
-} = getCacheManagers()
+const cacheManagers = getCacheManagers()
+const distributedCache = cacheManagers.distributed
+const queryOptimizer = cacheManagers.query
+const sessionManager = cacheManagers.session
+
+function ensureCacheAvailable() {
+  if (!distributedCache || !queryOptimizer || !sessionManager) {
+    throw new Error('Cache managers not initialized - Redis required for cache operations')
+  }
+}
 
 export async function POST(request: NextRequest) {
   try {
+    ensureCacheAvailable()
     const { action, data } = await request.json()
 
     switch (action) {
@@ -43,6 +49,7 @@ export async function POST(request: NextRequest) {
 
 export async function GET(request: NextRequest) {
   try {
+    ensureCacheAvailable()
     const { searchParams } = new URL(request.url)
     const type = searchParams.get('type')
 

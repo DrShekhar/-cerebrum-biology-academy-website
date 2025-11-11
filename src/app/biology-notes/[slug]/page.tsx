@@ -38,12 +38,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const topic = await prisma.biologyTopic.findUnique({
     where: { slug: params.slug },
     select: {
-      metaTitle,
-      title,
-      metaDescription,
-      excerpt,
-      keywords,
-      publishedAt,
+      metaTitle: true,
+      title: true,
+      metaDescription: true,
+      excerpt: true,
+      keywords: true,
+      publishedAt: true,
     },
   })
 

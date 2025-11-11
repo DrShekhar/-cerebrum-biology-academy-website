@@ -212,7 +212,7 @@ async function processWebhookEvent(event: WebhookEvent): Promise<any> {
 
     case 'payment.refunded':
     case 'charge.dispute.created':
-      return await handlePaymentRefund(event)
+      return await handlePaymentRefundOrDispute(event)
 
     // Subscription events
     case 'subscription.charged':
@@ -363,6 +363,33 @@ async function handleSubscriptionCancellation(event: WebhookEvent): Promise<any>
 }
 
 /**
+ * Handle payment refund or dispute
+ */
+async function handlePaymentRefundOrDispute(event: WebhookEvent): Promise<any> {
+  const paymentData = event.data
+
+  console.log(`💰 Payment refund/dispute: ${paymentData.id}`)
+
+  // Update payment status
+  await updatePaymentStatus(paymentData.id, 'refunded')
+
+  // Handle refund processing
+  await processRefund(paymentData)
+
+  // Send refund notification
+  await sendRefundNotification(paymentData)
+
+  // Track analytics
+  await trackPaymentAnalytics('payment_refunded', paymentData)
+
+  return {
+    status: 'processed',
+    action: 'refund_processed',
+    payment_id: paymentData.id,
+  }
+}
+
+/**
  * Handle dispute/chargeback
  */
 async function handleDispute(event: WebhookEvent): Promise<any> {
@@ -470,6 +497,14 @@ async function updateChurnAnalytics(data: any) {
 
 async function updateRiskMetrics(data: any) {
   console.log(`⚠️ Updated risk metrics for dispute ${data.id}`)
+}
+
+async function processRefund(paymentData: any) {
+  console.log(`💸 Processing refund for ${paymentData.id}`)
+}
+
+async function sendRefundNotification(paymentData: any) {
+  console.log(`📧 Sent refund notification for ${paymentData.id}`)
 }
 
 async function handleCustomerCreated(event: WebhookEvent) {

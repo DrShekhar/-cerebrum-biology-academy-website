@@ -58,7 +58,7 @@ export class AIMessageHandler {
       const session = await this.sessionManager.getOrCreateSession(from, name)
 
       // Check if user is in a conversation flow (demo booking, etc.)
-      if (session.currentFlow) {
+      if (session.conversationContext.currentFlow) {
         await this.handleConversationFlow(messageData, session)
         return
       }

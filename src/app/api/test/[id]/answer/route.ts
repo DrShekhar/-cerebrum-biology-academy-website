@@ -475,7 +475,15 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
         acc[topic].timeSpent += response.timeSpent || 0
         return acc
       },
-      {} as Record<string, any>
+      {} as Record<
+        string,
+        {
+          total: number
+          correct: number
+          marks: number
+          timeSpent: number
+        }
+      >
     )
 
     return NextResponse.json({
@@ -506,14 +514,19 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
           averageTimePerQuestion:
             responses.length > 0 ? Math.round(totalTime / responses.length) : 0,
         },
-        topicWiseStats: Object.entries(topicStats).map(([topic, stats]) => ({
-          topic,
-          totalQuestions: stats.total,
-          correctAnswers: stats.correct,
-          accuracy: Math.round((stats.correct / stats.total) * 100 * 100) / 100,
-          marks: stats.marks,
-          timeSpent: stats.timeSpent,
-        })),
+        topicWiseStats: Object.entries(topicStats).map(
+          ([topic, stats]: [
+            string,
+            { total: number; correct: number; marks: number; timeSpent: number },
+          ]) => ({
+            topic,
+            totalQuestions: stats.total,
+            correctAnswers: stats.correct,
+            accuracy: Math.round((stats.correct / stats.total) * 100 * 100) / 100,
+            marks: stats.marks,
+            timeSpent: stats.timeSpent,
+          })
+        ),
       },
     })
   } catch (error) {

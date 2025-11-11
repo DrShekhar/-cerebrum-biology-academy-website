@@ -11,7 +11,7 @@ interface VirtualLabExperiment {
   estimatedDuration: number // minutes
   learningObjectives: string[]
   prerequisites: string[]
-  equipment: VirtualEquipment[]
+  equipment: string[] // Equipment IDs that reference VirtualEquipment
   procedures: ExperimentStep[]
   safetyGuidelines: string[]
   expectedResults: ExperimentResult[]
@@ -84,7 +84,7 @@ interface ExperimentStep {
   title: string
   description: string
   instructions: string[]
-  equipment: string[]
+  equipment: string[] // Equipment IDs that reference VirtualEquipment
   materials: string[]
   safety: string[]
   duration: number
@@ -909,10 +909,12 @@ export class VirtualLabEngine {
     }
   }
 
-  private generateEquipmentModels(equipment: VirtualEquipment[], platform: 'ar' | 'vr'): any {
-    return equipment.map((eq) => ({
-      id: eq.id,
-      model: platform === 'ar' ? eq.arModel : eq.vrModel,
+  private generateEquipmentModels(equipment: string[], platform: 'ar' | 'vr'): any {
+    // Equipment are now IDs that reference VirtualEquipment objects
+    // Generate mock equipment models from IDs
+    return equipment.map((equipmentId) => ({
+      id: equipmentId,
+      model: `${platform}_model_${equipmentId}`,
       position: { x: 0, y: 0, z: 0 },
       interactive: true,
     }))

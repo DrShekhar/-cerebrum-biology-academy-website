@@ -22,7 +22,7 @@ export function generateLocalityMetadata(
         index: locality.seo.metaRobots.includes('index'),
         follow: locality.seo.metaRobots.includes('follow'),
         'max-snippet': -1,
-        'max-image-preview': 'large',
+        'max-image-preview': 'large' as const,
         'max-video-preview': -1,
       },
     },

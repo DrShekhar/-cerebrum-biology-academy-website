@@ -40,7 +40,10 @@ export async function POST(request: NextRequest) {
         }
 
         // Convert templateParams to proper components format
-        const components = templateParams
+        const components: Array<{
+          type: 'header' | 'body' | 'footer' | 'button'
+          parameters: Array<{ type: 'text'; text: string }>
+        }> = templateParams
           ? [
               {
                 type: 'body',
