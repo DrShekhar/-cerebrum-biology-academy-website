@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { z } from 'zod'
-import { withAuth } from '@/lib/auth/middleware'
+import { validateUserSession, type UserSession } from '@/lib/auth/config'
 import { withRateLimit } from '@/lib/middleware/rateLimit'
 import { logger } from '@/lib/utils/logger'
 
@@ -129,19 +129,17 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
     const body = await request.json()
     const validatedData = submitAnswerSchema.parse(body)
 
-    const authResult = await withAuth(request)
-    if (!authResult.success) {
+    const session = await validateUserSession(request)
+    if (!session.valid) {
       return NextResponse.json(
         { error: 'Authentication required', code: 'AUTH_REQUIRED' },
         { status: 401 }
       )
     }
 
-    const { user } = authResult
-
     // Rate limiting for answer submission
     const rateLimitResult = await withRateLimit(request, {
-      identifier: user.id,
+      identifier: session.userId!,
       limit: 500, // 500 answer submissions per hour
       window: 3600000,
     })
@@ -157,7 +155,7 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
     const testSession = await prisma.testSession.findUnique({
       where: {
         id: testSessionId,
-        OR: [{ userId: user.id }, { freeUserId: user.id }],
+        OR: [{ userId: session.userId }, { freeUserId: session.userId }],
       },
       include: {
         testTemplate: {
@@ -237,7 +235,9 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
       where: {
         testSessionId,
         questionId: validatedData.questionId,
-        ...(user.role === 'STUDENT' ? { userId: user.id } : { freeUserId: user.id }),
+        ...(session.role === 'STUDENT'
+          ? { userId: session.userId }
+          : { freeUserId: session.userId }),
       },
     })
 
@@ -269,7 +269,9 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
       // Create new response
       userResponse = await prisma.userQuestionResponse.create({
         data: {
-          ...(user.role === 'STUDENT' ? { userId: user.id } : { freeUserId: user.id }),
+          ...(session.role === 'STUDENT'
+            ? { userId: session.userId }
+            : { freeUserId: session.userId }),
           questionId: validatedData.questionId,
           testSessionId,
           selectedAnswer: validatedData.selectedAnswer,
@@ -311,8 +313,8 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
 
     // Update user progress asynchronously
     updateUserProgress(
-      user.id,
-      user.role === 'STUDENT' ? null : user.id,
+      session.userId!,
+      session.role === 'STUDENT' ? null : session.userId!,
       validatedData.questionId,
       isCorrect,
       validatedData.timeSpent || 0
@@ -373,7 +375,7 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
     logger.info('Answer submitted:', {
       testSessionId,
       questionId: validatedData.questionId,
-      userId: user.id,
+      userId: session.userId,
       isCorrect,
       marksAwarded,
       timeSpent: validatedData.timeSpent,
@@ -409,21 +411,19 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
   try {
     const { id: testSessionId } = await params
 
-    const authResult = await withAuth(request)
-    if (!authResult.success) {
+    const session = await validateUserSession(request)
+    if (!session.valid) {
       return NextResponse.json(
         { error: 'Authentication required', code: 'AUTH_REQUIRED' },
         { status: 401 }
       )
     }
 
-    const { user } = authResult
-
     // Verify test session exists and belongs to user
     const testSession = await prisma.testSession.findUnique({
       where: {
         id: testSessionId,
-        OR: [{ userId: user.id }, { freeUserId: user.id }],
+        OR: [{ userId: session.userId }, { freeUserId: session.userId }],
       },
     })
 

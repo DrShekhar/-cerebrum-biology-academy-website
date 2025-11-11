@@ -4,16 +4,16 @@
  * Educational standards and learning objectives
  */
 
-import type {
-  BiologyTopic,
+import {
+  type BiologyTopic,
   BiologyUnit,
-  NEETCurriculum,
-  NEETUnit,
-  NEETChapter,
+  type NEETCurriculum,
+  type NEETUnit,
+  type NEETChapter,
   DifficultyLevel,
-  ExamType,
+  type ExamType,
   TopicImportance,
-  ExamRelevance,
+  type ExamRelevance,
 } from '../types'
 
 export interface BiologyEducationConfig {

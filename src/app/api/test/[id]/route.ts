@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { z } from 'zod'
-import { withAuth } from '@/lib/auth/middleware'
+import { validateUserSession, type UserSession } from '@/lib/auth/config'
 import { withRateLimit } from '@/lib/middleware/rateLimit'
 import { logger } from '@/lib/utils/logger'
 
@@ -48,19 +48,17 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
   try {
     const { id } = await params
 
-    const authResult = await withAuth(request)
-    if (!authResult.success) {
+    const session = await validateUserSession(request)
+    if (!session.valid) {
       return NextResponse.json(
         { error: 'Authentication required', code: 'AUTH_REQUIRED' },
         { status: 401 }
       )
     }
 
-    const { user } = authResult
-
     // Rate limiting
     const rateLimitResult = await withRateLimit(request, {
-      identifier: user.id,
+      identifier: session.userId!,
       limit: 100, // 100 requests per hour for getting test details
       window: 3600000,
     })
@@ -77,8 +75,8 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
       where: {
         id,
         OR: [
-          { userId: user.id },
-          { freeUserId: user.id }, // Support for free users
+          { userId: session.userId },
+          { freeUserId: session.userId }, // Support for free users
         ],
       },
       include: {
@@ -265,7 +263,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
     // Log access
     logger.info('Test session accessed:', {
       testSessionId: id,
-      userId: user.id,
+      userId: session.userId,
       status: testSession.status,
       progress: `${answeredQuestions}/${totalQuestions}`,
     })
@@ -290,19 +288,17 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
     const body = await request.json()
     const validatedData = updateTestSessionSchema.parse(body)
 
-    const authResult = await withAuth(request)
-    if (!authResult.success) {
+    const session = await validateUserSession(request)
+    if (!session.valid) {
       return NextResponse.json(
         { error: 'Authentication required', code: 'AUTH_REQUIRED' },
         { status: 401 }
       )
     }
 
-    const { user } = authResult
-
     // Rate limiting
     const rateLimitResult = await withRateLimit(request, {
-      identifier: user.id,
+      identifier: session.userId!,
       limit: 200, // 200 updates per hour
       window: 3600000,
     })
@@ -318,7 +314,7 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
     const existingSession = await prisma.testSession.findUnique({
       where: {
         id,
-        OR: [{ userId: user.id }, { freeUserId: user.id }],
+        OR: [{ userId: session.userId }, { freeUserId: session.userId }],
       },
     })
 
@@ -403,7 +399,7 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
     // Log update
     logger.info('Test session updated:', {
       testSessionId: id,
-      userId: user.id,
+      userId: session.userId,
       changes: Object.keys(updateData),
       newStatus: updatedSession.status,
     })
@@ -455,21 +451,19 @@ export async function DELETE(request: NextRequest, { params }: RouteParams) {
   try {
     const { id } = await params
 
-    const authResult = await withAuth(request)
-    if (!authResult.success) {
+    const session = await validateUserSession(request)
+    if (!session.valid) {
       return NextResponse.json(
         { error: 'Authentication required', code: 'AUTH_REQUIRED' },
         { status: 401 }
       )
     }
 
-    const { user } = authResult
-
     // Check if test session exists and belongs to user
     const existingSession = await prisma.testSession.findUnique({
       where: {
         id,
-        OR: [{ userId: user.id }, { freeUserId: user.id }],
+        OR: [{ userId: session.userId }, { freeUserId: session.userId }],
       },
     })
 
@@ -512,7 +506,7 @@ export async function DELETE(request: NextRequest, { params }: RouteParams) {
     // Log deletion
     logger.info('Test session deleted:', {
       testSessionId: id,
-      userId: user.id,
+      userId: session.userId,
       previousStatus: existingSession.status,
     })
 

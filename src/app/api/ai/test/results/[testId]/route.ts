@@ -281,16 +281,20 @@ export async function GET(
       if (response.isCorrect) stats.correct++
     })
 
-    const difficultyAnalysis = {
-      easy: difficultyMap.get('EASY') || { attempted: 0, correct: 0, accuracy: 0 },
-      medium: difficultyMap.get('MEDIUM') || { attempted: 0, correct: 0, accuracy: 0 },
-      hard: difficultyMap.get('HARD') || { attempted: 0, correct: 0, accuracy: 0 },
+    const getDifficultyStats = (difficulty: string) => {
+      const stats = difficultyMap.get(difficulty) || { attempted: 0, correct: 0 }
+      return {
+        attempted: stats.attempted,
+        correct: stats.correct,
+        accuracy: stats.attempted > 0 ? (stats.correct / stats.attempted) * 100 : 0,
+      }
     }
 
-    Object.keys(difficultyAnalysis).forEach((key) => {
-      const stats = difficultyAnalysis[key as keyof typeof difficultyAnalysis]
-      stats.accuracy = stats.attempted > 0 ? (stats.correct / stats.attempted) * 100 : 0
-    })
+    const difficultyAnalysis = {
+      easy: getDifficultyStats('EASY'),
+      medium: getDifficultyStats('MEDIUM'),
+      hard: getDifficultyStats('HARD'),
+    }
 
     // Question details
     const questionDetails = session.responses.map((response) => ({

@@ -202,9 +202,6 @@ async function fetchQuestions(
 
     const questions = await prisma.question.findMany({
       where: whereClause,
-      include: {
-        options: false, // Will use JSON field
-      },
       take: count * 2, // Fetch extra for randomization
       orderBy: {
         lastUsed: 'asc', // Prioritize less recently used questions

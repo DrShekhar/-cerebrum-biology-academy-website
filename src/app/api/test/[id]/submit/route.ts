@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { z } from 'zod'
-import { withAuth } from '@/lib/auth/middleware'
+import { validateUserSession, type UserSession } from '@/lib/auth/config'
 import { withRateLimit } from '@/lib/middleware/rateLimit'
 import { logger } from '@/lib/utils/logger'
 
@@ -219,19 +219,17 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
     const body = await request.json()
     const validatedData = submitTestSchema.parse(body)
 
-    const authResult = await withAuth(request)
-    if (!authResult.success) {
+    const session = await validateUserSession(request)
+    if (!session.valid) {
       return NextResponse.json(
         { error: 'Authentication required', code: 'AUTH_REQUIRED' },
         { status: 401 }
       )
     }
 
-    const { user } = authResult
-
     // Rate limiting
     const rateLimitResult = await withRateLimit(request, {
-      identifier: user.id,
+      identifier: session.userId!,
       limit: 10, // 10 test submissions per hour
       window: 3600000,
     })
@@ -247,7 +245,7 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
     const testSession = await prisma.testSession.findUnique({
       where: {
         id: testSessionId,
-        OR: [{ userId: user.id }, { freeUserId: user.id }],
+        OR: [{ userId: session.userId }, { freeUserId: session.userId }],
       },
       include: {
         testTemplate: {
@@ -334,7 +332,9 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
             // Create new response
             await prisma.userQuestionResponse.create({
               data: {
-                ...(user.role === 'STUDENT' ? { userId: user.id } : { freeUserId: user.id }),
+                ...(session.role === 'STUDENT'
+                  ? { userId: session.userId }
+                  : { freeUserId: session.userId }),
                 questionId: answer.questionId,
                 testSessionId,
                 selectedAnswer: answer.selectedAnswer,
@@ -439,7 +439,7 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
     // Log test submission
     logger.info('Test submitted:', {
       testSessionId,
-      userId: user.id,
+      userId: session.userId,
       totalScore,
       percentage: Math.round(percentage * 100) / 100,
       questionsAnswered: responses.length,

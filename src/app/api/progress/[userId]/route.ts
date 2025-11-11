@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { z } from 'zod'
-import { withAuth } from '@/lib/auth/middleware'
+import { validateUserSession } from '@/lib/auth/config'
 import { withRateLimit } from '@/lib/middleware/rateLimit'
 import { logger } from '@/lib/utils/logger'
 
@@ -186,7 +186,7 @@ function generateInsights(userProgress: any[], recentTestSessions: any[], recent
 
     insights.studyPatterns = {
       averageQuestionsPerDay:
-        Object.values(responsesByDay).reduce((sum, count) => sum + count, 0) /
+        (Object.values(responsesByDay) as number[]).reduce((sum, count) => sum + count, 0) /
         Object.keys(responsesByDay).length,
       studyDaysPerWeek:
         Object.keys(responsesByDay).length /
@@ -197,7 +197,8 @@ function generateInsights(userProgress: any[], recentTestSessions: any[], recent
             )
           : 1),
       mostActiveDay: Object.entries(responsesByDay).reduce(
-        (max, [day, count]) => (count > max.count ? { day, count } : max),
+        (max, [day, count]: [string, number]) =>
+          (count as number) > max.count ? { day, count: count as number } : max,
         { day: '', count: 0 }
       ),
     }
@@ -244,15 +245,21 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
       sortOrder: (searchParams.get('sortOrder') as any) || 'desc',
     })
 
-    const authResult = await withAuth(request)
-    if (!authResult.success) {
+    const session = await validateUserSession(request)
+    if (!session.valid) {
       return NextResponse.json(
         { error: 'Authentication required', code: 'AUTH_REQUIRED' },
         { status: 401 }
       )
     }
 
-    const { user } = authResult
+    // UserSession has properties directly, not nested in user object
+    const user = {
+      id: session.userId!,
+      role: session.role!,
+      email: session.email!,
+      name: session.name!,
+    }
 
     // Check access permissions
     if (!checkUserAccess(user, userId)) {
@@ -298,6 +305,8 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
     )
 
     // Group progress data according to groupBy parameter
+    // Type the grouped progress explicitly to avoid 'unknown' type errors
+    type UserProgressItem = (typeof userProgress)[number]
     const groupedProgress = userProgress.reduce(
       (acc, progress) => {
         let key: string
@@ -321,7 +330,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
         acc[key].push(progress)
         return acc
       },
-      {} as Record<string, any[]>
+      {} as Record<string, UserProgressItem[]>
     )
 
     // Calculate aggregate statistics
@@ -389,33 +398,35 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
             : null,
       },
 
-      progressByTopic: Object.entries(groupedProgress).map(([key, progressList]) => ({
-        [filters.groupBy]: key,
-        topics: progressList.map((p) => ({
-          topic: p.topic,
-          subtopic: p.subtopic,
-          curriculum: p.curriculum,
-          grade: p.grade,
-          totalQuestions: p.totalQuestions,
-          correctAnswers: p.correctAnswers,
-          accuracy: Math.round(p.accuracy * 100) / 100,
-          masteryScore: Math.round(p.masteryScore * 100) / 100,
-          currentLevel: p.currentLevel,
-          averageTime: p.averageTime,
-          improvementRate: Math.round(p.improvementRate * 100) / 100,
-          lastPracticed: p.lastPracticed,
-          recommendedNext: p.recommendedNext,
-          weakAreas: p.weakAreas,
-          strongAreas: p.strongAreas,
-        })),
-        aggregateStats: {
-          totalQuestions: progressList.reduce((sum, p) => sum + p.totalQuestions, 0),
-          averageAccuracy:
-            progressList.reduce((sum, p) => sum + p.accuracy, 0) / progressList.length,
-          averageMastery:
-            progressList.reduce((sum, p) => sum + p.masteryScore, 0) / progressList.length,
-        },
-      })),
+      progressByTopic: (Object.entries(groupedProgress) as [string, UserProgressItem[]][]).map(
+        ([key, progressList]) => ({
+          [filters.groupBy]: key,
+          topics: progressList.map((p) => ({
+            topic: p.topic,
+            subtopic: p.subtopic,
+            curriculum: p.curriculum,
+            grade: p.grade,
+            totalQuestions: p.totalQuestions,
+            correctAnswers: p.correctAnswers,
+            accuracy: Math.round(p.accuracy * 100) / 100,
+            masteryScore: Math.round(p.masteryScore * 100) / 100,
+            currentLevel: p.currentLevel,
+            averageTime: p.averageTime,
+            improvementRate: Math.round(p.improvementRate * 100) / 100,
+            lastPracticed: p.lastPracticed,
+            recommendedNext: p.recommendedNext,
+            weakAreas: p.weakAreas,
+            strongAreas: p.strongAreas,
+          })),
+          aggregateStats: {
+            totalQuestions: progressList.reduce((sum, p) => sum + p.totalQuestions, 0),
+            averageAccuracy:
+              progressList.reduce((sum, p) => sum + p.accuracy, 0) / progressList.length,
+            averageMastery:
+              progressList.reduce((sum, p) => sum + p.masteryScore, 0) / progressList.length,
+          },
+        })
+      ),
 
       recentActivity: {
         testSessions: recentTestSessions.map((session) => ({

@@ -80,7 +80,6 @@ export async function GET(
         marks: r.question.marks,
         timeLimit: r.question.timeLimit,
         selectedAnswer: r.selectedAnswer,
-        isMarkedForReview: r.isMarkedForReview,
       })),
     }
 

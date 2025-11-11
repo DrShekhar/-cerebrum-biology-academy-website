@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
-import { withAuth } from '@/lib/auth/middleware'
+import { validateUserSession, type UserSession } from '@/lib/auth/config'
 import { withRateLimit } from '@/lib/middleware/rateLimit'
 import { logger } from '@/lib/utils/logger'
 
@@ -242,19 +242,17 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
     const includeQuestions = searchParams.get('questions') !== 'false'
     const includeComparison = searchParams.get('comparison') !== 'false'
 
-    const authResult = await withAuth(request)
-    if (!authResult.success) {
+    const session = await validateUserSession(request)
+    if (!session.valid) {
       return NextResponse.json(
         { error: 'Authentication required', code: 'AUTH_REQUIRED' },
         { status: 401 }
       )
     }
 
-    const { user } = authResult
-
     // Rate limiting
     const rateLimitResult = await withRateLimit(request, {
-      identifier: user.id,
+      identifier: session.userId!,
       limit: 50, // 50 result requests per hour
       window: 3600000,
     })
@@ -270,7 +268,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
     const testSession = await prisma.testSession.findUnique({
       where: {
         id: testSessionId,
-        OR: [{ userId: user.id }, { freeUserId: user.id }],
+        OR: [{ userId: session.userId }, { freeUserId: session.userId }],
       },
       include: {
         testTemplate: {
@@ -464,7 +462,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
     // Log result access
     logger.info('Test results accessed:', {
       testSessionId,
-      userId: user.id,
+      userId: session.userId,
       includeAnalytics,
       includeQuestions,
       includeComparison,

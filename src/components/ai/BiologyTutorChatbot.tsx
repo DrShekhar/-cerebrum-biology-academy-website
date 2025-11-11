@@ -3,10 +3,14 @@
 import React, { useState, useRef, useEffect } from 'react'
 
 // Type declarations for Web Speech API
+interface SpeechRecognitionConstructor {
+  new (): SpeechRecognition
+}
+
 declare global {
   interface Window {
-    SpeechRecognition: any
-    webkitSpeechRecognition: any
+    SpeechRecognition?: SpeechRecognitionConstructor
+    webkitSpeechRecognition?: SpeechRecognitionConstructor
   }
 }
 import { motion, AnimatePresence } from 'framer-motion'
@@ -56,9 +60,13 @@ interface BiologyQuery {
 interface BiologyResponse {
   answer: string
   explanation: string
-  visualAids?: string[]
+  visualAids?: {
+    mnemonics?: string[]
+    diagrams?: string[]
+  }
   relatedTopics?: string[]
   studyTips?: string[]
+  practiceQuestions?: string[]
   examRelevance?: string
   estimatedStudyTime?: number
   confidence: number
@@ -536,8 +544,8 @@ What would you like to explore today?`,
     } catch (error) {
       const errorMessage: ChatMessage = {
         id: Date.now().toString(),
-        text: `Sorry, I encountered an error processing your request: ${error instanceof Error ? error.message : 'Unknown error'}. Please try again.`,
-        sender: 'bot',
+        type: 'bot',
+        content: `Sorry, I encountered an error processing your request: ${error instanceof Error ? error.message : 'Unknown error'}. Please try again.`,
         timestamp: new Date(),
       }
       setChatState((prev) => ({
@@ -552,8 +560,8 @@ What would you like to explore today?`,
     const topic = data || 'general Biology'
     const practiceMessage: ChatMessage = {
       id: Date.now().toString(),
-      text: `Generating 5 practice questions on ${topic}...`,
-      sender: 'bot',
+      type: 'bot',
+      content: `Generating 5 practice questions on ${topic}...`,
       timestamp: new Date(),
     }
 
@@ -580,10 +588,10 @@ What would you like to explore today?`,
       const result = await response.json()
       const questionsMessage: ChatMessage = {
         id: (Date.now() + 1).toString(),
-        text:
+        type: 'bot',
+        content:
           result.response ||
           'Here are your practice questions:\n\n' + result.questions?.join('\n\n'),
-        sender: 'bot',
         timestamp: new Date(),
       }
 
@@ -600,8 +608,8 @@ What would you like to explore today?`,
   const handleDiagramView = async (data: string) => {
     const diagramMessage: ChatMessage = {
       id: Date.now().toString(),
-      text: `Let me help you understand the diagram for ${data}. You can upload an image using the attachment icon, or I can provide a detailed explanation of common ${data} diagrams.`,
-      sender: 'bot',
+      type: 'bot',
+      content: `Let me help you understand the diagram for ${data}. You can upload an image using the attachment icon, or I can provide a detailed explanation of common ${data} diagrams.`,
       timestamp: new Date(),
       actions: [
         {
@@ -622,8 +630,8 @@ What would you like to explore today?`,
   const handleStudyPlanGeneration = async (data: string) => {
     const planMessage: ChatMessage = {
       id: Date.now().toString(),
-      text: `Creating a personalized study plan for ${data}...`,
-      sender: 'bot',
+      type: 'bot',
+      content: `Creating a personalized study plan for ${data}...`,
       timestamp: new Date(),
     }
 
@@ -650,8 +658,8 @@ What would you like to explore today?`,
       const result = await response.json()
       const studyPlanMessage: ChatMessage = {
         id: (Date.now() + 1).toString(),
-        text: result.response || result.studyPlan,
-        sender: 'bot',
+        type: 'bot',
+        content: result.response || result.studyPlan,
         timestamp: new Date(),
       }
 
@@ -668,8 +676,8 @@ What would you like to explore today?`,
   const handleRelatedTopicExploration = async (data: string) => {
     const relatedMessage: ChatMessage = {
       id: Date.now().toString(),
-      text: `Exploring topics related to ${data}...`,
-      sender: 'bot',
+      type: 'bot',
+      content: `Exploring topics related to ${data}...`,
       timestamp: new Date(),
     }
 
@@ -695,8 +703,8 @@ What would you like to explore today?`,
       const result = await response.json()
       const topicsMessage: ChatMessage = {
         id: (Date.now() + 1).toString(),
-        text: result.response,
-        sender: 'bot',
+        type: 'bot',
+        content: result.response,
         timestamp: new Date(),
         actions: result.relatedTopics?.map((topic: string) => ({
           type: 'related_topic',
@@ -718,8 +726,8 @@ What would you like to explore today?`,
   const handleHumanTutorConnection = (data: string) => {
     const tutorMessage: ChatMessage = {
       id: Date.now().toString(),
-      text: `I understand you'd like to connect with a human tutor${data ? ` for ${data}` : ''}. Our expert biology tutors are available for personalized doubt-solving sessions.\n\nPlease contact our support team at:\n📱 WhatsApp: +91-XXXXXXXXXX\n📧 Email: support@cerebrumbiologyacademy.com\n\nOr I can continue helping you with your questions!`,
-      sender: 'bot',
+      type: 'bot',
+      content: `I understand you'd like to connect with a human tutor${data ? ` for ${data}` : ''}. Our expert biology tutors are available for personalized doubt-solving sessions.\n\nPlease contact our support team at:\n📱 WhatsApp: +91-XXXXXXXXXX\n📧 Email: support@cerebrumbiologyacademy.com\n\nOr I can continue helping you with your questions!`,
       timestamp: new Date(),
       actions: [
         {
