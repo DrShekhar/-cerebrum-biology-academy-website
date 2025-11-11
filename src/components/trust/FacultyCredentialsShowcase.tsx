@@ -20,6 +20,7 @@ import {
   Briefcase,
   Clock,
   TrendingUp,
+  User,
 } from 'lucide-react'
 
 interface FacultyMember {

@@ -34,7 +34,8 @@ import {
   Zap,
   Target,
   Calendar,
-  MapPin
+  MapPin,
+  BarChart3,
 } from 'lucide-react'
 
 // Types and Interfaces
@@ -97,7 +98,9 @@ interface PrintOptions {
 }
 
 const Distribution: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'online' | 'qr' | 'email' | 'sms' | 'lms' | 'embed' | 'offline' | 'print'>('online')
+  const [activeTab, setActiveTab] = useState<
+    'online' | 'qr' | 'email' | 'sms' | 'lms' | 'embed' | 'offline' | 'print'
+  >('online')
   const [distributions, setDistributions] = useState<TestDistribution[]>([])
   const [lmsIntegrations, setLmsIntegrations] = useState<LMSIntegration[]>([])
   const [loading, setLoading] = useState(false)
@@ -111,14 +114,14 @@ const Distribution: React.FC = () => {
     subject: 'You have been invited to take a test',
     message: 'Please click the link below to access your test.',
     scheduleDate: '',
-    sendCopy: true
+    sendCopy: true,
   })
 
   const [smsSettings, setSmsSettings] = useState({
     recipients: '',
     message: 'You have been invited to take a test. Click: ',
     scheduleDate: '',
-    provider: 'twilio'
+    provider: 'twilio',
   })
 
   const [embedOptions, setEmbedOptions] = useState<EmbedOptions>({
@@ -129,7 +132,7 @@ const Distribution: React.FC = () => {
     customCSS: '',
     theme: 'light',
     autoStart: false,
-    responsiveMode: true
+    responsiveMode: true,
   })
 
   const [printOptions, setPrintOptions] = useState<PrintOptions>({
@@ -141,7 +144,7 @@ const Distribution: React.FC = () => {
     fontSize: 'medium',
     margins: '1in',
     watermark: '',
-    headerFooter: true
+    headerFooter: true,
   })
 
   // Mock data initialization
@@ -166,8 +169,8 @@ const Distribution: React.FC = () => {
           views: 120,
           starts: 95,
           completions: 78,
-          averageScore: 85.4
-        }
+          averageScore: 85.4,
+        },
       },
       {
         id: 'dist_2',
@@ -183,9 +186,9 @@ const Distribution: React.FC = () => {
           views: 67,
           starts: 58,
           completions: 45,
-          averageScore: 78.2
-        }
-      }
+          averageScore: 78.2,
+        },
+      },
     ]
 
     const mockLMS: LMSIntegration[] = [
@@ -197,7 +200,7 @@ const Distribution: React.FC = () => {
         baseUrl: 'https://lms.university.edu',
         isConnected: true,
         lastSync: '2024-01-16T10:30:00Z',
-        courseCount: 15
+        courseCount: 15,
       },
       {
         id: 'lms_2',
@@ -207,8 +210,8 @@ const Distribution: React.FC = () => {
         baseUrl: 'https://classroom.google.com',
         isConnected: false,
         lastSync: '2024-01-10T15:20:00Z',
-        courseCount: 8
-      }
+        courseCount: 8,
+      },
     ]
 
     setDistributions(mockDistributions)
@@ -237,11 +240,11 @@ const Distribution: React.FC = () => {
           views: 0,
           starts: 0,
           completions: 0,
-          averageScore: 0
-        }
+          averageScore: 0,
+        },
       }
 
-      setDistributions(prev => [newDistribution, ...prev])
+      setDistributions((prev) => [newDistribution, ...prev])
       setLoading(false)
     }, 1000)
   }
@@ -268,11 +271,11 @@ const Distribution: React.FC = () => {
           views: 0,
           starts: 0,
           completions: 0,
-          averageScore: 0
-        }
+          averageScore: 0,
+        },
       }
 
-      setDistributions(prev => [newDistribution, ...prev])
+      setDistributions((prev) => [newDistribution, ...prev])
       setLoading(false)
     }, 1000)
   }
@@ -288,7 +291,7 @@ const Distribution: React.FC = () => {
         testId: `test_email_${Date.now()}`,
         testTitle: selectedTest || 'Email Test',
         distributionType: 'email',
-        recipients: emailSettings.recipients.split(',').map(email => email.trim()),
+        recipients: emailSettings.recipients.split(',').map((email) => email.trim()),
         subject: emailSettings.subject,
         message: emailSettings.message,
         scheduleDate: emailSettings.scheduleDate,
@@ -299,11 +302,11 @@ const Distribution: React.FC = () => {
           views: 0,
           starts: 0,
           completions: 0,
-          averageScore: 0
-        }
+          averageScore: 0,
+        },
       }
 
-      setDistributions(prev => [newDistribution, ...prev])
+      setDistributions((prev) => [newDistribution, ...prev])
       setLoading(false)
     }, 1500)
   }
@@ -319,7 +322,7 @@ const Distribution: React.FC = () => {
         testId: `test_sms_${Date.now()}`,
         testTitle: selectedTest || 'SMS Test',
         distributionType: 'sms',
-        recipients: smsSettings.recipients.split(',').map(phone => phone.trim()),
+        recipients: smsSettings.recipients.split(',').map((phone) => phone.trim()),
         message: smsSettings.message,
         scheduleDate: smsSettings.scheduleDate,
         status: smsSettings.scheduleDate ? 'scheduled' : 'active',
@@ -329,11 +332,11 @@ const Distribution: React.FC = () => {
           views: 0,
           starts: 0,
           completions: 0,
-          averageScore: 0
-        }
+          averageScore: 0,
+        },
       }
 
-      setDistributions(prev => [newDistribution, ...prev])
+      setDistributions((prev) => [newDistribution, ...prev])
       setLoading(false)
     }, 1500)
   }
@@ -364,27 +367,42 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
   // Get status color
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'active': return 'text-green-600 bg-green-100'
-      case 'scheduled': return 'text-blue-600 bg-blue-100'
-      case 'expired': return 'text-red-600 bg-red-100'
-      case 'paused': return 'text-yellow-600 bg-yellow-100'
-      case 'draft': return 'text-gray-600 bg-gray-100'
-      default: return 'text-gray-600 bg-gray-100'
+      case 'active':
+        return 'text-green-600 bg-green-100'
+      case 'scheduled':
+        return 'text-blue-600 bg-blue-100'
+      case 'expired':
+        return 'text-red-600 bg-red-100'
+      case 'paused':
+        return 'text-yellow-600 bg-yellow-100'
+      case 'draft':
+        return 'text-gray-600 bg-gray-100'
+      default:
+        return 'text-gray-600 bg-gray-100'
     }
   }
 
   // Get distribution type icon
   const getDistributionIcon = (type: string) => {
     switch (type) {
-      case 'online': return Link
-      case 'qr': return QrCode
-      case 'email': return Mail
-      case 'sms': return MessageSquare
-      case 'lms': return BookOpen
-      case 'embed': return Code
-      case 'offline': return Download
-      case 'print': return Printer
-      default: return Globe
+      case 'online':
+        return Link
+      case 'qr':
+        return QrCode
+      case 'email':
+        return Mail
+      case 'sms':
+        return MessageSquare
+      case 'lms':
+        return BookOpen
+      case 'embed':
+        return Code
+      case 'offline':
+        return Download
+      case 'print':
+        return Printer
+      default:
+        return Globe
     }
   }
 
@@ -405,7 +423,8 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
           </h1>
         </motion.div>
         <p className="text-gray-600 max-w-2xl mx-auto">
-          Comprehensive test distribution system with multiple delivery methods, analytics tracking, and integration capabilities
+          Comprehensive test distribution system with multiple delivery methods, analytics tracking,
+          and integration capabilities
         </p>
       </div>
 
@@ -420,7 +439,7 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
             { id: 'lms', label: 'LMS', icon: BookOpen },
             { id: 'embed', label: 'Embed', icon: Code },
             { id: 'offline', label: 'Offline', icon: Download },
-            { id: 'print', label: 'Print', icon: Printer }
+            { id: 'print', label: 'Print', icon: Printer },
           ].map(({ id, label, icon: Icon }) => (
             <button
               key={id}
@@ -519,7 +538,9 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                     <div className="flex items-center justify-between">
                       <div className="flex-1">
                         <p className="text-sm text-emerald-700 font-medium">Generated Link:</p>
-                        <p className="text-emerald-800 font-mono text-sm break-all">{generatedLink}</p>
+                        <p className="text-emerald-800 font-mono text-sm break-all">
+                          {generatedLink}
+                        </p>
                       </div>
                       <button
                         onClick={() => copyToClipboard(generatedLink)}
@@ -541,38 +562,45 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
               </h3>
 
               <div className="space-y-3">
-                {distributions.filter(d => d.distributionType === 'online').map((dist) => (
-                  <div key={dist.id} className="p-4 border rounded-lg hover:bg-gray-50 transition-colors">
-                    <div className="flex items-center justify-between">
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-1">
-                          <h4 className="font-medium text-gray-800">{dist.testTitle}</h4>
-                          <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(dist.status)}`}>
-                            {dist.status}
-                          </span>
+                {distributions
+                  .filter((d) => d.distributionType === 'online')
+                  .map((dist) => (
+                    <div
+                      key={dist.id}
+                      className="p-4 border rounded-lg hover:bg-gray-50 transition-colors"
+                    >
+                      <div className="flex items-center justify-between">
+                        <div className="flex-1">
+                          <div className="flex items-center gap-2 mb-1">
+                            <h4 className="font-medium text-gray-800">{dist.testTitle}</h4>
+                            <span
+                              className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(dist.status)}`}
+                            >
+                              {dist.status}
+                            </span>
+                          </div>
+                          <p className="text-sm text-gray-600 font-mono">{dist.url}</p>
+                          <div className="flex items-center gap-4 text-xs text-gray-500 mt-2">
+                            <span>{dist.analytics.views} views</span>
+                            <span>{dist.analytics.starts} starts</span>
+                            <span>{dist.analytics.completions} completions</span>
+                            <span>Created: {dist.createdAt}</span>
+                          </div>
                         </div>
-                        <p className="text-sm text-gray-600 font-mono">{dist.url}</p>
-                        <div className="flex items-center gap-4 text-xs text-gray-500 mt-2">
-                          <span>{dist.analytics.views} views</span>
-                          <span>{dist.analytics.starts} starts</span>
-                          <span>{dist.analytics.completions} completions</span>
-                          <span>Created: {dist.createdAt}</span>
+                        <div className="flex items-center gap-2">
+                          <button
+                            onClick={() => copyToClipboard(dist.url || '')}
+                            className="p-2 text-gray-400 hover:text-emerald-600 rounded-lg hover:bg-emerald-50 transition-colors"
+                          >
+                            <Copy className="w-4 h-4" />
+                          </button>
+                          <button className="p-2 text-gray-400 hover:text-blue-600 rounded-lg hover:bg-blue-50 transition-colors">
+                            <Eye className="w-4 h-4" />
+                          </button>
                         </div>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <button
-                          onClick={() => copyToClipboard(dist.url || '')}
-                          className="p-2 text-gray-400 hover:text-emerald-600 rounded-lg hover:bg-emerald-50 transition-colors"
-                        >
-                          <Copy className="w-4 h-4" />
-                        </button>
-                        <button className="p-2 text-gray-400 hover:text-blue-600 rounded-lg hover:bg-blue-50 transition-colors">
-                          <Eye className="w-4 h-4" />
-                        </button>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
               </div>
             </div>
           </motion.div>
@@ -624,9 +652,7 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                     </select>
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Format
-                    </label>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">Format</label>
                     <select className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
                       <option value="png">PNG</option>
                       <option value="svg">SVG</option>
@@ -637,8 +663,13 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
 
                 <div>
                   <label className="flex items-center">
-                    <input type="checkbox" className="rounded border-gray-300 text-purple-600 focus:ring-purple-500" />
-                    <span className="ml-2 text-sm text-gray-700">Include test title in QR code</span>
+                    <input
+                      type="checkbox"
+                      className="rounded border-gray-300 text-purple-600 focus:ring-purple-500"
+                    />
+                    <span className="ml-2 text-sm text-gray-700">
+                      Include test title in QR code
+                    </span>
                   </label>
                 </div>
 
@@ -688,30 +719,37 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
               </h3>
 
               <div className="grid grid-cols-2 gap-4">
-                {distributions.filter(d => d.distributionType === 'qr').map((dist) => (
-                  <div key={dist.id} className="p-4 border rounded-lg hover:bg-gray-50 transition-colors">
-                    <div className="w-full h-32 bg-gray-100 rounded-lg mb-3 flex items-center justify-center">
-                      <QrCode className="w-16 h-16 text-gray-400" />
+                {distributions
+                  .filter((d) => d.distributionType === 'qr')
+                  .map((dist) => (
+                    <div
+                      key={dist.id}
+                      className="p-4 border rounded-lg hover:bg-gray-50 transition-colors"
+                    >
+                      <div className="w-full h-32 bg-gray-100 rounded-lg mb-3 flex items-center justify-center">
+                        <QrCode className="w-16 h-16 text-gray-400" />
+                      </div>
+                      <h4 className="font-medium text-sm text-gray-800 mb-1">{dist.testTitle}</h4>
+                      <div className="flex items-center justify-between text-xs text-gray-500">
+                        <span>{dist.analytics.views} scans</span>
+                        <span
+                          className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(dist.status)}`}
+                        >
+                          {dist.status}
+                        </span>
+                      </div>
+                      <div className="flex gap-1 mt-2">
+                        <button className="flex-1 px-2 py-1 text-xs bg-gray-100 hover:bg-gray-200 rounded transition-colors">
+                          <Download className="w-3 h-3 inline mr-1" />
+                          Download
+                        </button>
+                        <button className="flex-1 px-2 py-1 text-xs bg-gray-100 hover:bg-gray-200 rounded transition-colors">
+                          <Eye className="w-3 h-3 inline mr-1" />
+                          View
+                        </button>
+                      </div>
                     </div>
-                    <h4 className="font-medium text-sm text-gray-800 mb-1">{dist.testTitle}</h4>
-                    <div className="flex items-center justify-between text-xs text-gray-500">
-                      <span>{dist.analytics.views} scans</span>
-                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(dist.status)}`}>
-                        {dist.status}
-                      </span>
-                    </div>
-                    <div className="flex gap-1 mt-2">
-                      <button className="flex-1 px-2 py-1 text-xs bg-gray-100 hover:bg-gray-200 rounded transition-colors">
-                        <Download className="w-3 h-3 inline mr-1" />
-                        Download
-                      </button>
-                      <button className="flex-1 px-2 py-1 text-xs bg-gray-100 hover:bg-gray-200 rounded transition-colors">
-                        <Eye className="w-3 h-3 inline mr-1" />
-                        View
-                      </button>
-                    </div>
-                  </div>
-                ))}
+                  ))}
               </div>
             </div>
           </motion.div>
@@ -740,7 +778,9 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                   </label>
                   <textarea
                     value={emailSettings.recipients}
-                    onChange={(e) => setEmailSettings({...emailSettings, recipients: e.target.value})}
+                    onChange={(e) =>
+                      setEmailSettings({ ...emailSettings, recipients: e.target.value })
+                    }
                     placeholder="student1@example.com, student2@example.com"
                     rows={3}
                     className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -748,24 +788,24 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Subject
-                  </label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Subject</label>
                   <input
                     type="text"
                     value={emailSettings.subject}
-                    onChange={(e) => setEmailSettings({...emailSettings, subject: e.target.value})}
+                    onChange={(e) =>
+                      setEmailSettings({ ...emailSettings, subject: e.target.value })
+                    }
                     className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Message
-                  </label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
                   <textarea
                     value={emailSettings.message}
-                    onChange={(e) => setEmailSettings({...emailSettings, message: e.target.value})}
+                    onChange={(e) =>
+                      setEmailSettings({ ...emailSettings, message: e.target.value })
+                    }
                     rows={4}
                     className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
@@ -779,7 +819,9 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                     <input
                       type="datetime-local"
                       value={emailSettings.scheduleDate}
-                      onChange={(e) => setEmailSettings({...emailSettings, scheduleDate: e.target.value})}
+                      onChange={(e) =>
+                        setEmailSettings({ ...emailSettings, scheduleDate: e.target.value })
+                      }
                       className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     />
                   </div>
@@ -788,7 +830,9 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                       <input
                         type="checkbox"
                         checked={emailSettings.sendCopy}
-                        onChange={(e) => setEmailSettings({...emailSettings, sendCopy: e.target.checked})}
+                        onChange={(e) =>
+                          setEmailSettings({ ...emailSettings, sendCopy: e.target.checked })
+                        }
                         className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
                       />
                       <span className="ml-2 text-sm text-gray-700">Send copy to me</span>
@@ -824,39 +868,43 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
               </h3>
 
               <div className="space-y-3">
-                {distributions.filter(d => d.distributionType === 'email').map((dist) => (
-                  <div key={dist.id} className="p-4 border rounded-lg">
-                    <div className="flex items-center justify-between mb-2">
-                      <h4 className="font-medium text-gray-800">{dist.testTitle}</h4>
-                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(dist.status)}`}>
-                        {dist.status}
-                      </span>
+                {distributions
+                  .filter((d) => d.distributionType === 'email')
+                  .map((dist) => (
+                    <div key={dist.id} className="p-4 border rounded-lg">
+                      <div className="flex items-center justify-between mb-2">
+                        <h4 className="font-medium text-gray-800">{dist.testTitle}</h4>
+                        <span
+                          className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(dist.status)}`}
+                        >
+                          {dist.status}
+                        </span>
+                      </div>
+                      <p className="text-sm text-gray-600 mb-2">{dist.subject}</p>
+                      <div className="grid grid-cols-2 gap-4 text-xs text-gray-500">
+                        <div>
+                          <span className="font-medium">Recipients:</span> {dist.recipients.length}
+                        </div>
+                        <div>
+                          <span className="font-medium">Sent:</span> {dist.createdAt}
+                        </div>
+                        <div>
+                          <span className="font-medium">Opens:</span> {dist.analytics.views}
+                        </div>
+                        <div>
+                          <span className="font-medium">Clicks:</span> {dist.analytics.starts}
+                        </div>
+                      </div>
+                      <div className="flex gap-2 mt-3">
+                        <button className="px-3 py-1 text-xs bg-gray-100 hover:bg-gray-200 rounded transition-colors">
+                          View Details
+                        </button>
+                        <button className="px-3 py-1 text-xs bg-gray-100 hover:bg-gray-200 rounded transition-colors">
+                          Resend
+                        </button>
+                      </div>
                     </div>
-                    <p className="text-sm text-gray-600 mb-2">{dist.subject}</p>
-                    <div className="grid grid-cols-2 gap-4 text-xs text-gray-500">
-                      <div>
-                        <span className="font-medium">Recipients:</span> {dist.recipients.length}
-                      </div>
-                      <div>
-                        <span className="font-medium">Sent:</span> {dist.createdAt}
-                      </div>
-                      <div>
-                        <span className="font-medium">Opens:</span> {dist.analytics.views}
-                      </div>
-                      <div>
-                        <span className="font-medium">Clicks:</span> {dist.analytics.starts}
-                      </div>
-                    </div>
-                    <div className="flex gap-2 mt-3">
-                      <button className="px-3 py-1 text-xs bg-gray-100 hover:bg-gray-200 rounded transition-colors">
-                        View Details
-                      </button>
-                      <button className="px-3 py-1 text-xs bg-gray-100 hover:bg-gray-200 rounded transition-colors">
-                        Resend
-                      </button>
-                    </div>
-                  </div>
-                ))}
+                  ))}
               </div>
             </div>
           </motion.div>
@@ -885,7 +933,7 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                   </label>
                   <textarea
                     value={smsSettings.recipients}
-                    onChange={(e) => setSmsSettings({...smsSettings, recipients: e.target.value})}
+                    onChange={(e) => setSmsSettings({ ...smsSettings, recipients: e.target.value })}
                     placeholder="+1234567890, +0987654321"
                     rows={3}
                     className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
@@ -898,7 +946,7 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                   </label>
                   <textarea
                     value={smsSettings.message}
-                    onChange={(e) => setSmsSettings({...smsSettings, message: e.target.value})}
+                    onChange={(e) => setSmsSettings({ ...smsSettings, message: e.target.value })}
                     rows={3}
                     maxLength={160}
                     className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
@@ -915,7 +963,7 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                     </label>
                     <select
                       value={smsSettings.provider}
-                      onChange={(e) => setSmsSettings({...smsSettings, provider: e.target.value})}
+                      onChange={(e) => setSmsSettings({ ...smsSettings, provider: e.target.value })}
                       className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
                     >
                       <option value="twilio">Twilio</option>
@@ -930,7 +978,9 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                     <input
                       type="datetime-local"
                       value={smsSettings.scheduleDate}
-                      onChange={(e) => setSmsSettings({...smsSettings, scheduleDate: e.target.value})}
+                      onChange={(e) =>
+                        setSmsSettings({ ...smsSettings, scheduleDate: e.target.value })
+                      }
                       className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
                     />
                   </div>
@@ -939,9 +989,16 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                 <div className="bg-blue-50 p-4 rounded-lg">
                   <h4 className="font-medium text-blue-800 mb-2">Cost Estimate</h4>
                   <div className="text-sm text-blue-700">
-                    <p>Recipients: {smsSettings.recipients.split(',').filter(r => r.trim()).length}</p>
+                    <p>
+                      Recipients: {smsSettings.recipients.split(',').filter((r) => r.trim()).length}
+                    </p>
                     <p>Cost per SMS: $0.02</p>
-                    <p className="font-medium">Total: ${(smsSettings.recipients.split(',').filter(r => r.trim()).length * 0.02).toFixed(2)}</p>
+                    <p className="font-medium">
+                      Total: $
+                      {(
+                        smsSettings.recipients.split(',').filter((r) => r.trim()).length * 0.02
+                      ).toFixed(2)}
+                    </p>
                   </div>
                 </div>
 
@@ -973,31 +1030,35 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
               </h3>
 
               <div className="space-y-3">
-                {distributions.filter(d => d.distributionType === 'sms').map((dist) => (
-                  <div key={dist.id} className="p-4 border rounded-lg">
-                    <div className="flex items-center justify-between mb-2">
-                      <h4 className="font-medium text-gray-800">{dist.testTitle}</h4>
-                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(dist.status)}`}>
-                        {dist.status}
-                      </span>
+                {distributions
+                  .filter((d) => d.distributionType === 'sms')
+                  .map((dist) => (
+                    <div key={dist.id} className="p-4 border rounded-lg">
+                      <div className="flex items-center justify-between mb-2">
+                        <h4 className="font-medium text-gray-800">{dist.testTitle}</h4>
+                        <span
+                          className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(dist.status)}`}
+                        >
+                          {dist.status}
+                        </span>
+                      </div>
+                      <p className="text-sm text-gray-600 mb-2">{dist.message}</p>
+                      <div className="grid grid-cols-2 gap-4 text-xs text-gray-500">
+                        <div>
+                          <span className="font-medium">Recipients:</span> {dist.recipients.length}
+                        </div>
+                        <div>
+                          <span className="font-medium">Sent:</span> {dist.createdAt}
+                        </div>
+                        <div>
+                          <span className="font-medium">Delivered:</span> {dist.analytics.views}
+                        </div>
+                        <div>
+                          <span className="font-medium">Clicks:</span> {dist.analytics.starts}
+                        </div>
+                      </div>
                     </div>
-                    <p className="text-sm text-gray-600 mb-2">{dist.message}</p>
-                    <div className="grid grid-cols-2 gap-4 text-xs text-gray-500">
-                      <div>
-                        <span className="font-medium">Recipients:</span> {dist.recipients.length}
-                      </div>
-                      <div>
-                        <span className="font-medium">Sent:</span> {dist.createdAt}
-                      </div>
-                      <div>
-                        <span className="font-medium">Delivered:</span> {dist.analytics.views}
-                      </div>
-                      <div>
-                        <span className="font-medium">Clicks:</span> {dist.analytics.starts}
-                      </div>
-                    </div>
-                  </div>
-                ))}
+                  ))}
               </div>
             </div>
           </motion.div>
@@ -1025,7 +1086,9 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                     <div key={lms.id} className="p-4 border rounded-lg">
                       <div className="flex items-center justify-between mb-2">
                         <div className="flex items-center gap-3">
-                          <div className={`w-3 h-3 rounded-full ${lms.isConnected ? 'bg-green-500' : 'bg-red-500'}`} />
+                          <div
+                            className={`w-3 h-3 rounded-full ${lms.isConnected ? 'bg-green-500' : 'bg-red-500'}`}
+                          />
                           <h4 className="font-medium text-gray-800">{lms.name}</h4>
                           <span className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">
                             {lms.type}
@@ -1070,9 +1133,13 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                     </label>
                     <select className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
                       <option value="">Choose LMS...</option>
-                      {lmsIntegrations.filter(lms => lms.isConnected).map(lms => (
-                        <option key={lms.id} value={lms.id}>{lms.name}</option>
-                      ))}
+                      {lmsIntegrations
+                        .filter((lms) => lms.isConnected)
+                        .map((lms) => (
+                          <option key={lms.id} value={lms.id}>
+                            {lms.name}
+                          </option>
+                        ))}
                     </select>
                   </div>
 
@@ -1108,12 +1175,20 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
 
                   <div className="space-y-2">
                     <label className="flex items-center">
-                      <input type="checkbox" className="rounded border-gray-300 text-purple-600 focus:ring-purple-500" />
+                      <input
+                        type="checkbox"
+                        className="rounded border-gray-300 text-purple-600 focus:ring-purple-500"
+                      />
                       <span className="ml-2 text-sm text-gray-700">Sync grades back to LMS</span>
                     </label>
                     <label className="flex items-center">
-                      <input type="checkbox" className="rounded border-gray-300 text-purple-600 focus:ring-purple-500" />
-                      <span className="ml-2 text-sm text-gray-700">Send completion notifications</span>
+                      <input
+                        type="checkbox"
+                        className="rounded border-gray-300 text-purple-600 focus:ring-purple-500"
+                      />
+                      <span className="ml-2 text-sm text-gray-700">
+                        Send completion notifications
+                      </span>
                     </label>
                   </div>
 
@@ -1146,25 +1221,21 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
               <div className="space-y-4">
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Width
-                    </label>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">Width</label>
                     <input
                       type="text"
                       value={embedOptions.width}
-                      onChange={(e) => setEmbedOptions({...embedOptions, width: e.target.value})}
+                      onChange={(e) => setEmbedOptions({ ...embedOptions, width: e.target.value })}
                       placeholder="100%"
                       className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Height
-                    </label>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">Height</label>
                     <input
                       type="text"
                       value={embedOptions.height}
-                      onChange={(e) => setEmbedOptions({...embedOptions, height: e.target.value})}
+                      onChange={(e) => setEmbedOptions({ ...embedOptions, height: e.target.value })}
                       placeholder="600px"
                       className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
                     />
@@ -1172,12 +1243,12 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Theme
-                  </label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Theme</label>
                   <select
                     value={embedOptions.theme}
-                    onChange={(e) => setEmbedOptions({...embedOptions, theme: e.target.value as any})}
+                    onChange={(e) =>
+                      setEmbedOptions({ ...embedOptions, theme: e.target.value as any })
+                    }
                     className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
                   >
                     <option value="light">Light</option>
@@ -1191,7 +1262,9 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                     <input
                       type="checkbox"
                       checked={embedOptions.showHeader}
-                      onChange={(e) => setEmbedOptions({...embedOptions, showHeader: e.target.checked})}
+                      onChange={(e) =>
+                        setEmbedOptions({ ...embedOptions, showHeader: e.target.checked })
+                      }
                       className="rounded border-gray-300 text-green-600 focus:ring-green-500"
                     />
                     <span className="ml-2 text-sm text-gray-700">Show header</span>
@@ -1200,7 +1273,9 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                     <input
                       type="checkbox"
                       checked={embedOptions.showFooter}
-                      onChange={(e) => setEmbedOptions({...embedOptions, showFooter: e.target.checked})}
+                      onChange={(e) =>
+                        setEmbedOptions({ ...embedOptions, showFooter: e.target.checked })
+                      }
                       className="rounded border-gray-300 text-green-600 focus:ring-green-500"
                     />
                     <span className="ml-2 text-sm text-gray-700">Show footer</span>
@@ -1209,7 +1284,9 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                     <input
                       type="checkbox"
                       checked={embedOptions.autoStart}
-                      onChange={(e) => setEmbedOptions({...embedOptions, autoStart: e.target.checked})}
+                      onChange={(e) =>
+                        setEmbedOptions({ ...embedOptions, autoStart: e.target.checked })
+                      }
                       className="rounded border-gray-300 text-green-600 focus:ring-green-500"
                     />
                     <span className="ml-2 text-sm text-gray-700">Auto-start test</span>
@@ -1218,7 +1295,9 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                     <input
                       type="checkbox"
                       checked={embedOptions.responsiveMode}
-                      onChange={(e) => setEmbedOptions({...embedOptions, responsiveMode: e.target.checked})}
+                      onChange={(e) =>
+                        setEmbedOptions({ ...embedOptions, responsiveMode: e.target.checked })
+                      }
                       className="rounded border-gray-300 text-green-600 focus:ring-green-500"
                     />
                     <span className="ml-2 text-sm text-gray-700">Responsive mode</span>
@@ -1226,12 +1305,12 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Custom CSS
-                  </label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Custom CSS</label>
                   <textarea
                     value={embedOptions.customCSS}
-                    onChange={(e) => setEmbedOptions({...embedOptions, customCSS: e.target.value})}
+                    onChange={(e) =>
+                      setEmbedOptions({ ...embedOptions, customCSS: e.target.value })
+                    }
                     placeholder="/* Custom CSS styles */"
                     rows={4}
                     className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent font-mono text-sm"
@@ -1298,7 +1377,9 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
               ) : (
                 <div className="text-center py-8 text-gray-500">
                   <Code className="w-12 h-12 mx-auto mb-4 text-gray-300" />
-                  <p>Configure your embed options and click "Generate Embed Code" to get started.</p>
+                  <p>
+                    Configure your embed options and click "Generate Embed Code" to get started.
+                  </p>
                 </div>
               )}
             </div>
@@ -1346,9 +1427,7 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
 
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Platform
-                    </label>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">Platform</label>
                     <select className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent">
                       <option value="windows">Windows</option>
                       <option value="macos">macOS</option>
@@ -1370,19 +1449,31 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
 
                 <div className="space-y-2">
                   <label className="flex items-center">
-                    <input type="checkbox" className="rounded border-gray-300 text-orange-600 focus:ring-orange-500" />
+                    <input
+                      type="checkbox"
+                      className="rounded border-gray-300 text-orange-600 focus:ring-orange-500"
+                    />
                     <span className="ml-2 text-sm text-gray-700">Include answer key</span>
                   </label>
                   <label className="flex items-center">
-                    <input type="checkbox" className="rounded border-gray-300 text-orange-600 focus:ring-orange-500" />
+                    <input
+                      type="checkbox"
+                      className="rounded border-gray-300 text-orange-600 focus:ring-orange-500"
+                    />
                     <span className="ml-2 text-sm text-gray-700">Allow multiple attempts</span>
                   </label>
                   <label className="flex items-center">
-                    <input type="checkbox" className="rounded border-gray-300 text-orange-600 focus:ring-orange-500" />
+                    <input
+                      type="checkbox"
+                      className="rounded border-gray-300 text-orange-600 focus:ring-orange-500"
+                    />
                     <span className="ml-2 text-sm text-gray-700">Generate results report</span>
                   </label>
                   <label className="flex items-center">
-                    <input type="checkbox" className="rounded border-gray-300 text-orange-600 focus:ring-orange-500" />
+                    <input
+                      type="checkbox"
+                      className="rounded border-gray-300 text-orange-600 focus:ring-orange-500"
+                    />
                     <span className="ml-2 text-sm text-gray-700">Password protect</span>
                   </label>
                 </div>
@@ -1419,17 +1510,20 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                     platform: 'Windows',
                     size: '45.2 MB',
                     downloads: 23,
-                    created: '2024-01-15'
+                    created: '2024-01-15',
                   },
                   {
                     name: 'Cell Biology Quiz',
                     platform: 'Android',
                     size: '32.1 MB',
                     downloads: 12,
-                    created: '2024-01-14'
-                  }
+                    created: '2024-01-14',
+                  },
                 ].map((pkg, index) => (
-                  <div key={index} className="p-4 border rounded-lg hover:bg-gray-50 transition-colors">
+                  <div
+                    key={index}
+                    className="p-4 border rounded-lg hover:bg-gray-50 transition-colors"
+                  >
                     <div className="flex items-center justify-between mb-2">
                       <h4 className="font-medium text-gray-800">{pkg.name}</h4>
                       <span className="px-2 py-1 bg-green-100 text-green-600 text-xs rounded-full">
@@ -1491,7 +1585,9 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                     </label>
                     <select
                       value={printOptions.paperSize}
-                      onChange={(e) => setPrintOptions({...printOptions, paperSize: e.target.value as any})}
+                      onChange={(e) =>
+                        setPrintOptions({ ...printOptions, paperSize: e.target.value as any })
+                      }
                       className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
                     >
                       <option value="A4">A4</option>
@@ -1506,7 +1602,9 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                     </label>
                     <select
                       value={printOptions.orientation}
-                      onChange={(e) => setPrintOptions({...printOptions, orientation: e.target.value as any})}
+                      onChange={(e) =>
+                        setPrintOptions({ ...printOptions, orientation: e.target.value as any })
+                      }
                       className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
                     >
                       <option value="portrait">Portrait</option>
@@ -1523,7 +1621,12 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                     <input
                       type="number"
                       value={printOptions.questionsPerPage}
-                      onChange={(e) => setPrintOptions({...printOptions, questionsPerPage: parseInt(e.target.value)})}
+                      onChange={(e) =>
+                        setPrintOptions({
+                          ...printOptions,
+                          questionsPerPage: parseInt(e.target.value),
+                        })
+                      }
                       min="1"
                       max="20"
                       className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
@@ -1535,7 +1638,9 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                     </label>
                     <select
                       value={printOptions.fontSize}
-                      onChange={(e) => setPrintOptions({...printOptions, fontSize: e.target.value as any})}
+                      onChange={(e) =>
+                        setPrintOptions({ ...printOptions, fontSize: e.target.value as any })
+                      }
                       className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
                     >
                       <option value="small">Small</option>
@@ -1546,13 +1651,11 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Margins
-                  </label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Margins</label>
                   <input
                     type="text"
                     value={printOptions.margins}
-                    onChange={(e) => setPrintOptions({...printOptions, margins: e.target.value})}
+                    onChange={(e) => setPrintOptions({ ...printOptions, margins: e.target.value })}
                     placeholder="1in"
                     className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
                   />
@@ -1565,7 +1668,9 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                   <input
                     type="text"
                     value={printOptions.watermark}
-                    onChange={(e) => setPrintOptions({...printOptions, watermark: e.target.value})}
+                    onChange={(e) =>
+                      setPrintOptions({ ...printOptions, watermark: e.target.value })
+                    }
                     placeholder="CONFIDENTIAL"
                     className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent"
                   />
@@ -1576,7 +1681,9 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                     <input
                       type="checkbox"
                       checked={printOptions.includeAnswerKey}
-                      onChange={(e) => setPrintOptions({...printOptions, includeAnswerKey: e.target.checked})}
+                      onChange={(e) =>
+                        setPrintOptions({ ...printOptions, includeAnswerKey: e.target.checked })
+                      }
                       className="rounded border-gray-300 text-gray-600 focus:ring-gray-500"
                     />
                     <span className="ml-2 text-sm text-gray-700">Include answer key</span>
@@ -1585,7 +1692,9 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                     <input
                       type="checkbox"
                       checked={printOptions.includeInstructions}
-                      onChange={(e) => setPrintOptions({...printOptions, includeInstructions: e.target.checked})}
+                      onChange={(e) =>
+                        setPrintOptions({ ...printOptions, includeInstructions: e.target.checked })
+                      }
                       className="rounded border-gray-300 text-gray-600 focus:ring-gray-500"
                     />
                     <span className="ml-2 text-sm text-gray-700">Include instructions</span>
@@ -1594,7 +1703,9 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                     <input
                       type="checkbox"
                       checked={printOptions.headerFooter}
-                      onChange={(e) => setPrintOptions({...printOptions, headerFooter: e.target.checked})}
+                      onChange={(e) =>
+                        setPrintOptions({ ...printOptions, headerFooter: e.target.checked })
+                      }
                       className="rounded border-gray-300 text-gray-600 focus:ring-gray-500"
                     />
                     <span className="ml-2 text-sm text-gray-700">Include header and footer</span>
@@ -1625,7 +1736,9 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
 
                     <div className="space-y-4">
                       <div className="border-b pb-2">
-                        <p className="font-medium">1. Which of the following is the powerhouse of the cell?</p>
+                        <p className="font-medium">
+                          1. Which of the following is the powerhouse of the cell?
+                        </p>
                         <div className="ml-4 space-y-1 text-sm">
                           <p>a) Nucleus</p>
                           <p>b) Mitochondria</p>
@@ -1703,13 +1816,18 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
           {distributions.slice(0, 5).map((dist) => {
             const Icon = getDistributionIcon(dist.distributionType)
             return (
-              <div key={dist.id} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+              <div
+                key={dist.id}
+                className="flex items-center justify-between p-3 bg-gray-50 rounded-lg"
+              >
                 <div className="flex items-center gap-3">
                   <Icon className="w-5 h-5 text-gray-500" />
                   <div>
                     <h4 className="font-medium text-gray-800">{dist.testTitle}</h4>
                     <div className="flex items-center gap-2 text-sm text-gray-500">
-                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(dist.status)}`}>
+                      <span
+                        className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(dist.status)}`}
+                      >
                         {dist.status}
                       </span>
                       <span>{dist.distributionType}</span>

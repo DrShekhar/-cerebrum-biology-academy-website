@@ -57,10 +57,47 @@ declare global {
     }
   }
 
-  // Google Analytics gtag
+  // Razorpay types
+  interface RazorpayOptions {
+    key: string
+    amount: number
+    currency: string
+    name: string
+    description: string
+    image: string
+    order_id: string
+    handler: (response: {
+      razorpay_payment_id: string
+      razorpay_order_id: string
+      razorpay_signature: string
+    }) => void
+    prefill: {
+      name: string
+      email: string
+      contact: string
+    }
+    notes: {
+      course: string
+      student_name: string
+    }
+    theme: {
+      color: string
+    }
+    modal: {
+      ondismiss: () => void
+    }
+  }
+
+  // Google Analytics gtag and Facebook Pixel fbq
   interface Window {
     gtag: (...args: any[]) => void
     dataLayer: any[]
+    Razorpay: new (options: RazorpayOptions) => {
+      open(): void
+      on(event: string, handler: (response: unknown) => void): void
+    }
+    fbq: (...args: any[]) => void
+    _fbq: any
   }
 
   // Google Analytics gtag function (can be undefined on server)

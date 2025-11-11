@@ -112,7 +112,7 @@ export function ProgressCard({
           opacity: [0, 1, 1, 0],
           scale: [0.8, 1.2, 1.2, 0.8],
           y: [0, -20, -20, -40],
-          transition: { duration: 2, ease: 'easeOut' },
+          transition: { duration: 2, ease: 'easeOut' as const },
         })
 
         setTimeout(() => setIsCelebrating(false), 2000)
@@ -129,7 +129,7 @@ export function ProgressCard({
       scale: 1,
       transition: {
         duration: 0.5,
-        ease: [0.4, 0, 0.2, 1],
+        ease: [0.4, 0, 0.2, 1] as const,
         staggerChildren: 0.1,
       },
     },
@@ -138,7 +138,7 @@ export function ProgressCard({
       scale: 1.02,
       transition: {
         duration: 0.3,
-        ease: [0.4, 0, 0.2, 1],
+        ease: [0.4, 0, 0.2, 1] as const,
       },
     },
   }
@@ -148,7 +148,7 @@ export function ProgressCard({
     animate: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.4, ease: 'easeOut' },
+      transition: { duration: 0.4, ease: 'easeOut' as const },
     },
   }
 

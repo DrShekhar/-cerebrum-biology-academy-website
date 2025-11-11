@@ -122,12 +122,6 @@ const COURSE_PRICING = {
   },
 }
 
-declare global {
-  interface Window {
-    Razorpay: any
-  }
-}
-
 export default function PurchasePage() {
   const params = useParams()
   const router = useRouter()

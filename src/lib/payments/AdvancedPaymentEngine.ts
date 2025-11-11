@@ -1084,7 +1084,7 @@ interface ActiveSubscription {
   user_id: string
   plan_id: string
   status: 'pending' | 'active' | 'past_due' | 'canceled' | 'unpaid'
-  billing_cycle: 'monthly' | 'quarterly' | 'yearly'
+  billing_cycle: 'monthly' | 'quarterly' | 'yearly' | 'lifetime'
   current_period_start: Date
   current_period_end: Date
   pricing_details: any

@@ -51,7 +51,7 @@ export function SecureTestEnvironment({
   questions,
   timeLimit,
   onTestComplete,
-  onSecurityViolation
+  onSecurityViolation,
 }: SecureTestProps) {
   // Test state
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
@@ -71,13 +71,20 @@ export function SecureTestEnvironment({
   const mobileSecurityRef = useRef<MobileSecurityManager | null>(null)
 
   // Security state
-  const [securityStatus, setSecurityStatus] = useState({
+  const [securityStatus, setSecurityStatus] = useState<{
+    browserActive: boolean
+    behavioralActive: boolean
+    sessionActive: boolean
+    mobileActive: boolean
+    violationCount: number
+    riskLevel: 'low' | 'medium' | 'high' | 'critical'
+  }>({
     browserActive: false,
     behavioralActive: false,
     sessionActive: false,
     mobileActive: false,
     violationCount: 0,
-    riskLevel: 'low' as const
+    riskLevel: 'low',
   })
 
   // Current question state
@@ -103,7 +110,7 @@ export function SecureTestEnvironment({
             allowRightClick: false,
             allowDevTools: false,
             autoTerminateOnViolation: false,
-            warningThreshold: 5
+            warningThreshold: 5,
           },
           handleSecurityViolation
         )
@@ -134,7 +141,7 @@ export function SecureTestEnvironment({
               allowScreenRecording: false,
               allowScreenshots: false,
               lockOrientation: true,
-              allowedOrientations: ['portrait']
+              allowedOrientations: ['portrait'],
             },
             handleMobileViolation
           )
@@ -151,7 +158,7 @@ export function SecureTestEnvironment({
             questionsPerUser: questions.length,
             shuffleOptions: true,
             timeBasedUnlock: false,
-            questionTimeLimit: 300 // 5 minutes per question
+            questionTimeLimit: 300, // 5 minutes per question
           })
         }
 
@@ -215,7 +222,7 @@ export function SecureTestEnvironment({
       severity: event.severity,
       description: `${event.type}: ${JSON.stringify(event.details)}`,
       action: event.severity === 'critical' ? 'terminate' : 'warn',
-      timestamp: event.timestamp
+      timestamp: event.timestamp,
     }
 
     processViolation(violation)
@@ -230,7 +237,7 @@ export function SecureTestEnvironment({
       severity,
       description: activity,
       action: severity === 'high' ? 'warn' : 'continue',
-      timestamp: Date.now()
+      timestamp: Date.now(),
     }
 
     processViolation(violation)
@@ -239,13 +246,16 @@ export function SecureTestEnvironment({
   /**
    * Handle session violations
    */
-  const handleSessionViolation = (violation: string, severity: 'low' | 'medium' | 'high' | 'critical') => {
+  const handleSessionViolation = (
+    violation: string,
+    severity: 'low' | 'medium' | 'high' | 'critical'
+  ) => {
     const securityViolation: SecurityViolation = {
       type: 'session',
       severity,
       description: violation,
       action: severity === 'critical' ? 'terminate' : 'warn',
-      timestamp: Date.now()
+      timestamp: Date.now(),
     }
 
     processViolation(securityViolation)
@@ -268,7 +278,7 @@ export function SecureTestEnvironment({
       severity: event.severity,
       description: `${event.type}: ${JSON.stringify(event.details)}`,
       action: event.severity === 'critical' ? 'terminate' : 'warn',
-      timestamp: event.timestamp
+      timestamp: event.timestamp,
     }
 
     processViolation(violation)
@@ -307,7 +317,7 @@ export function SecureTestEnvironment({
       sessionActive: sessionStatus?.isActive || false,
       mobileActive: mobileStatus?.isActive || false,
       violationCount: (browserStatus?.violationCount || 0) + (mobileStatus?.violationCount || 0),
-      riskLevel: browserStatus?.riskLevel || 'low'
+      riskLevel: browserStatus?.riskLevel || 'low',
     })
   }
 
@@ -337,7 +347,7 @@ export function SecureTestEnvironment({
       questionId: question.id,
       selectedAnswer,
       isMarkedForReview,
-      timeTaken: timeTaken / 1000 // Convert to seconds
+      timeTaken: timeTaken / 1000, // Convert to seconds
     }
 
     // Record with behavioral analyzer
@@ -348,11 +358,11 @@ export function SecureTestEnvironment({
     )
 
     // Add to responses
-    setResponses(prev => [...prev, response])
+    setResponses((prev) => [...prev, response])
 
     // Move to next question or complete test
     if (currentQuestionIndex < questions.length - 1) {
-      setCurrentQuestionIndex(prev => prev + 1)
+      setCurrentQuestionIndex((prev) => prev + 1)
       startQuestionTracking(currentQuestionIndex + 1)
     } else {
       completeTest()
@@ -383,7 +393,7 @@ export function SecureTestEnvironment({
 
     // Calculate score
     const score = responses.reduce((total, response) => {
-      const question = questions.find(q => q.id === response.questionId)
+      const question = questions.find((q) => q.id === response.questionId)
       if (question && response.selectedAnswer === question.correctAnswer) {
         return total + question.marks
       }
@@ -394,19 +404,20 @@ export function SecureTestEnvironment({
     const securityReport: SecurityReport = {
       sessionId,
       browserSecurity: browserSecurityRef.current?.generateSecurityReport(),
-      behavioralAnalysis: behavioralAnalyzerRef.current?.generateBehavioralProfile() || {} as BehavioralProfile,
+      behavioralAnalysis:
+        behavioralAnalyzerRef.current?.generateBehavioralProfile() || ({} as BehavioralProfile),
       sessionIntegrity: sessionManagerRef.current?.generateSessionReport(),
       mobileSecurity: mobileSecurityRef.current?.generateMobileSecurityReport(),
       overallRiskLevel: calculateOverallRiskLevel(),
       totalViolations: securityStatus.violationCount,
-      recommendations: generateSecurityRecommendations()
+      recommendations: generateSecurityRecommendations(),
     }
 
     const results: TestResults = {
       responses,
       score,
       timeSpent,
-      securityReport
+      securityReport,
     }
 
     stopSecurity()
@@ -451,7 +462,9 @@ export function SecureTestEnvironment({
    * Check if device is mobile
    */
   const isMobileDevice = (): boolean => {
-    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    )
   }
 
   /**
@@ -461,7 +474,7 @@ export function SecureTestEnvironment({
     if (!isTestActive) return
 
     const timer = setInterval(() => {
-      setTimeRemaining(prev => {
+      setTimeRemaining((prev) => {
         if (prev <= 0) {
           completeTest()
           return 0
@@ -487,8 +500,8 @@ export function SecureTestEnvironment({
         <div className="bg-white rounded-lg shadow-lg p-8 max-w-md w-full text-center">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Secure Test Environment</h2>
           <p className="text-gray-600 mb-6">
-            This test uses advanced security measures to ensure integrity.
-            Please ensure you're in a quiet environment with stable internet.
+            This test uses advanced security measures to ensure integrity. Please ensure you're in a
+            quiet environment with stable internet.
           </p>
           <div className="space-y-2 text-sm text-gray-500 mb-6">
             <div>✓ Browser Security: Active</div>
@@ -533,13 +546,13 @@ export function SecureTestEnvironment({
             <div className="flex items-center space-x-6">
               {/* Security Status */}
               <div className="flex items-center space-x-2">
-                <div className={`w-3 h-3 rounded-full ${securityStatus.riskLevel === 'low' ? 'bg-green-500' : 'bg-red-500'}`}></div>
+                <div
+                  className={`w-3 h-3 rounded-full ${securityStatus.riskLevel === 'low' ? 'bg-green-500' : 'bg-red-500'}`}
+                ></div>
                 <span className="text-sm text-gray-600">Security: {securityStatus.riskLevel}</span>
               </div>
               {/* Timer */}
-              <div className="text-lg font-mono text-gray-900">
-                {formatTime(timeRemaining)}
-              </div>
+              <div className="text-lg font-mono text-gray-900">{formatTime(timeRemaining)}</div>
             </div>
           </div>
         </div>
@@ -594,7 +607,9 @@ export function SecureTestEnvironment({
                     disabled={selectedAnswer === null}
                     className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed"
                   >
-                    {currentQuestionIndex === questions.length - 1 ? 'Submit Test' : 'Next Question'}
+                    {currentQuestionIndex === questions.length - 1
+                      ? 'Submit Test'
+                      : 'Next Question'}
                   </button>
                 </div>
               </div>
@@ -606,17 +621,25 @@ export function SecureTestEnvironment({
         <div className="mt-6 bg-white rounded-lg shadow p-4">
           <h3 className="text-sm font-medium text-gray-900 mb-3">Security Status</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-xs">
-            <div className={`text-center p-2 rounded ${securityStatus.browserActive ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
+            <div
+              className={`text-center p-2 rounded ${securityStatus.browserActive ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}
+            >
               Browser Security
             </div>
-            <div className={`text-center p-2 rounded ${securityStatus.behavioralActive ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
+            <div
+              className={`text-center p-2 rounded ${securityStatus.behavioralActive ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}
+            >
               Behavioral Analysis
             </div>
-            <div className={`text-center p-2 rounded ${securityStatus.sessionActive ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
+            <div
+              className={`text-center p-2 rounded ${securityStatus.sessionActive ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}
+            >
               Session Integrity
             </div>
             {isMobileDevice() && (
-              <div className={`text-center p-2 rounded ${securityStatus.mobileActive ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
+              <div
+                className={`text-center p-2 rounded ${securityStatus.mobileActive ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}
+              >
                 Mobile Security
               </div>
             )}

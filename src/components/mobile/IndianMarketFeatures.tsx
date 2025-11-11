@@ -16,6 +16,7 @@ import {
   Star,
   MapPin,
   Clock,
+  BookOpen,
 } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 
@@ -53,7 +54,7 @@ const SUPPORTED_LANGUAGES: LanguageOption[] = [
 export function IndianMarketFeatures({
   onLanguageChange,
   currentLanguage = 'en',
-  className = ''
+  className = '',
 }: IndianMarketFeaturesProps) {
   const [isOnline, setIsOnline] = useState(true)
   const [networkInfo, setNetworkInfo] = useState<NetworkInfo | null>(null)
@@ -72,7 +73,7 @@ export function IndianMarketFeatures({
           effectiveType: connection.effectiveType,
           downlink: connection.downlink,
           rtt: connection.rtt,
-          saveData: connection.saveData
+          saveData: connection.saveData,
         })
 
         // Auto-enable data saver for slow networks
@@ -132,14 +133,14 @@ export function IndianMarketFeatures({
         en: 'Just scored amazing marks in NEET Biology test on Cerebrum Biology Academy! 🎉📚 Join me: https://cerebrumbiologyacademy.com',
         hi: 'मैंने Cerebrum Biology Academy पर NEET Biology टेस्ट में बेहतरीन अंक प्राप्त किए! 🎉📚 मेरे साथ जुड़ें: https://cerebrumbiologyacademy.com',
       },
-      'course': {
+      course: {
         en: 'Found the best NEET Biology coaching online! 🧬✨ Check out Cerebrum Biology Academy: https://cerebrumbiologyacademy.com',
         hi: 'सबसे अच्छी NEET Biology कोचिंग मिली! 🧬✨ Cerebrum Biology Academy देखें: https://cerebrumbiologyacademy.com',
       },
-      'app': {
+      app: {
         en: 'Using Cerebrum Biology Academy app for NEET preparation! Amazing content by AIIMS faculty 👨‍⚕️📱 Download: https://cerebrumbiologyacademy.com',
         hi: 'NEET की तैयारी के लिए Cerebrum Biology Academy ऐप का उपयोग कर रहा हूं! AIIMS फैकल्टी द्वारा बेहतरीन कंटेंट 👨‍⚕️📱 डाउनलोड करें: https://cerebrumbiologyacademy.com',
-      }
+      },
     }
 
     const message = messages[type][currentLanguage as 'en' | 'hi'] || messages[type].en
@@ -152,11 +153,15 @@ export function IndianMarketFeatures({
     if (!networkInfo) return 'text-gray-500'
 
     switch (networkInfo.effectiveType) {
-      case '4g': return 'text-green-500'
-      case '3g': return 'text-yellow-500'
+      case '4g':
+        return 'text-green-500'
+      case '3g':
+        return 'text-yellow-500'
       case '2g':
-      case 'slow-2g': return 'text-orange-500'
-      default: return 'text-gray-500'
+      case 'slow-2g':
+        return 'text-orange-500'
+      default:
+        return 'text-gray-500'
     }
   }
 
@@ -166,13 +171,17 @@ export function IndianMarketFeatures({
 
     const labels = {
       en: { '4g': '4G', '3g': '3G', '2g': '2G', 'slow-2g': 'Slow 2G' },
-      hi: { '4g': '4G', '3g': '3G', '2g': '2G', 'slow-2g': 'धीमा 2G' }
+      hi: { '4g': '4G', '3g': '3G', '2g': '2G', 'slow-2g': 'धीमा 2G' },
     }
 
-    return labels[currentLanguage as 'en' | 'hi']?.[networkInfo.effectiveType] || networkInfo.effectiveType
+    return (
+      labels[currentLanguage as 'en' | 'hi']?.[networkInfo.effectiveType] ||
+      networkInfo.effectiveType
+    )
   }
 
-  const currentLang = SUPPORTED_LANGUAGES.find(lang => lang.code === currentLanguage) || SUPPORTED_LANGUAGES[0]
+  const currentLang =
+    SUPPORTED_LANGUAGES.find((lang) => lang.code === currentLanguage) || SUPPORTED_LANGUAGES[0]
 
   return (
     <div className={`indian-market-features ${className}`}>
@@ -192,12 +201,14 @@ export function IndianMarketFeatures({
               {isOnline ? <Wifi className="w-4 h-4" /> : <WifiOff className="w-4 h-4" />}
               <span className="text-sm font-medium">
                 {!isOnline
-                  ? (currentLanguage === 'hi' ? 'इंटरनेट कनेक्शन नहीं' : 'No Internet Connection')
-                  : (currentLanguage === 'hi' ? 'डेटा सेवर मोड' : 'Data Saver Mode')}
+                  ? currentLanguage === 'hi'
+                    ? 'इंटरनेट कनेक्शन नहीं'
+                    : 'No Internet Connection'
+                  : currentLanguage === 'hi'
+                    ? 'डेटा सेवर मोड'
+                    : 'Data Saver Mode'}
               </span>
-              <span className={`text-xs ${getNetworkStatusColor()}`}>
-                {getNetworkStatusText()}
-              </span>
+              <span className={`text-xs ${getNetworkStatusColor()}`}>{getNetworkStatusText()}</span>
             </div>
             {isOnline && (
               <Button
@@ -207,8 +218,12 @@ export function IndianMarketFeatures({
                 className="text-xs"
               >
                 {dataSaverMode
-                  ? (currentLanguage === 'hi' ? 'बंद करें' : 'Turn Off')
-                  : (currentLanguage === 'hi' ? 'चालू करें' : 'Turn On')}
+                  ? currentLanguage === 'hi'
+                    ? 'बंद करें'
+                    : 'Turn Off'
+                  : currentLanguage === 'hi'
+                    ? 'चालू करें'
+                    : 'Turn On'}
               </Button>
             )}
           </div>
@@ -236,9 +251,7 @@ export function IndianMarketFeatures({
           className="flex flex-col items-center py-3 h-auto text-green-600 border-green-200 hover:bg-green-50"
         >
           <MessageCircle className="w-5 h-5 mb-1" />
-          <span className="text-xs">
-            {currentLanguage === 'hi' ? 'शेयर' : 'Share'}
-          </span>
+          <span className="text-xs">{currentLanguage === 'hi' ? 'शेयर' : 'Share'}</span>
         </Button>
 
         {/* Call Support */}
@@ -249,9 +262,7 @@ export function IndianMarketFeatures({
           className="flex flex-col items-center py-3 h-auto text-blue-600 border-blue-200 hover:bg-blue-50"
         >
           <Phone className="w-5 h-5 mb-1" />
-          <span className="text-xs">
-            {currentLanguage === 'hi' ? 'कॉल' : 'Call'}
-          </span>
+          <span className="text-xs">{currentLanguage === 'hi' ? 'कॉल' : 'Call'}</span>
         </Button>
 
         {/* Data Usage */}
@@ -264,9 +275,7 @@ export function IndianMarketFeatures({
           }`}
         >
           <Smartphone className="w-5 h-5 mb-1" />
-          <span className="text-xs">
-            {currentLanguage === 'hi' ? 'डेटा' : 'Data'}
-          </span>
+          <span className="text-xs">{currentLanguage === 'hi' ? 'डेटा' : 'Data'}</span>
         </Button>
       </div>
 
@@ -359,7 +368,9 @@ export function IndianMarketFeatures({
                         {currentLanguage === 'hi' ? 'टेस्ट रिजल्ट शेयर करें' : 'Share Test Result'}
                       </div>
                       <div className="text-sm text-gray-600">
-                        {currentLanguage === 'hi' ? 'अपने स्कोर के बारे में बताएं' : 'Tell friends about your score'}
+                        {currentLanguage === 'hi'
+                          ? 'अपने स्कोर के बारे में बताएं'
+                          : 'Tell friends about your score'}
                       </div>
                     </div>
                   </button>
@@ -373,10 +384,14 @@ export function IndianMarketFeatures({
                     </div>
                     <div className="text-left">
                       <div className="font-medium">
-                        {currentLanguage === 'hi' ? 'कोर्स की जानकारी शेयर करें' : 'Share Course Info'}
+                        {currentLanguage === 'hi'
+                          ? 'कोर्स की जानकारी शेयर करें'
+                          : 'Share Course Info'}
                       </div>
                       <div className="text-sm text-gray-600">
-                        {currentLanguage === 'hi' ? 'दोस्तों को कोर्स के बारे में बताएं' : 'Recommend course to friends'}
+                        {currentLanguage === 'hi'
+                          ? 'दोस्तों को कोर्स के बारे में बताएं'
+                          : 'Recommend course to friends'}
                       </div>
                     </div>
                   </button>
@@ -393,7 +408,9 @@ export function IndianMarketFeatures({
                         {currentLanguage === 'hi' ? 'ऐप शेयर करें' : 'Share App'}
                       </div>
                       <div className="text-sm text-gray-600">
-                        {currentLanguage === 'hi' ? 'ऐप डाउनलोड लिंक शेयर करें' : 'Share app download link'}
+                        {currentLanguage === 'hi'
+                          ? 'ऐप डाउनलोड लिंक शेयर करें'
+                          : 'Share app download link'}
                       </div>
                     </div>
                   </button>
@@ -409,7 +426,9 @@ export function IndianMarketFeatures({
         <div className="flex items-center mb-2">
           <MapPin className="w-4 h-4 text-orange-600 mr-2" />
           <span className="text-sm font-medium text-orange-800">
-            {currentLanguage === 'hi' ? 'भारतीय छात्रों के लिए विशेष' : 'Designed for Indian Students'}
+            {currentLanguage === 'hi'
+              ? 'भारतीय छात्रों के लिए विशेष'
+              : 'Designed for Indian Students'}
           </span>
         </div>
         <div className="grid grid-cols-2 gap-4 text-xs">

@@ -4,7 +4,7 @@
  * Supports 50,000+ concurrent students with 24/7 availability
  */
 
-import { MCPServer } from '@modelcontextprotocol/sdk'
+import { Server as MCPServer } from '@modelcontextprotocol/sdk/server/index.js'
 import { Anthropic } from '@anthropic-ai/sdk'
 import { getRedisClient } from '@/lib/cache/redis'
 import WebSocket from 'ws'

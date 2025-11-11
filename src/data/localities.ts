@@ -1106,8 +1106,8 @@ export const localities: Locality[] = [
         'Lajpat Nagar NEET coaching area',
         'Competition from Aakash South Extension, Allen Lajpat Nagar',
       ],
-      populationType: 'affluent-premium',
-      economicProfile: 'upper-class',
+      populationType: 'residential',
+      economicProfile: 'premium',
     },
 
     competition: {
@@ -2196,7 +2196,7 @@ export const localities: Locality[] = [
       popularColleges: ['Delhi University colleges nearby', 'central location'],
       coachingHubs: ['CP coaching area', 'many competitive exam institutes'],
       populationType: 'commercial',
-      economicProfile: 'mixed',
+      economicProfile: 'upper-middle',
     },
 
     competition: {
@@ -6109,7 +6109,7 @@ export const localities: Locality[] = [
       ],
       popularColleges: ['Mithibai College', 'KC College', 'Grant Medical College', 'Nair Hospital'],
       coachingHubs: ['Andheri West coaching zone', 'Lokhandwala institutes'],
-      populationType: 'growing',
+      populationType: 'residential',
       economicProfile: 'premium',
     },
 
@@ -7247,7 +7247,7 @@ export const localities: Locality[] = [
       ],
       popularColleges: ['Somaiya Medical College', 'Grant Medical College', 'KEM Hospital', 'TNMC'],
       coachingHubs: ['Thane West coaching zone', 'No local institutes'],
-      populationType: 'growing',
+      populationType: 'residential',
       economicProfile: 'premium',
     },
 

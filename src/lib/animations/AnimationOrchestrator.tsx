@@ -237,7 +237,7 @@ export const AnimatedCard: React.FC<AnimatedCardProps> = ({
             transition: {
               duration: 0.6,
               delay: index * 0.1,
-              ease: [0.16, 1, 0.3, 1],
+              ease: [0.16, 1, 0.3, 1] as const,
             },
           },
         }
@@ -250,7 +250,7 @@ export const AnimatedCard: React.FC<AnimatedCardProps> = ({
             transition: {
               duration: 0.8,
               delay: index * 0.1,
-              ease: [0.16, 1, 0.3, 1],
+              ease: [0.16, 1, 0.3, 1] as const,
             },
           },
         }
@@ -264,7 +264,7 @@ export const AnimatedCard: React.FC<AnimatedCardProps> = ({
             transition: {
               duration: 0.7,
               delay: index * 0.1,
-              ease: [0.16, 1, 0.3, 1],
+              ease: [0.16, 1, 0.3, 1] as const,
             },
           },
         }
@@ -277,20 +277,20 @@ export const AnimatedCard: React.FC<AnimatedCardProps> = ({
         return {
           scale: 1.02,
           y: -5,
-          transition: { duration: 0.3, ease: [0.16, 1, 0.3, 1] },
+          transition: { duration: 0.3, ease: [0.16, 1, 0.3, 1] as const },
         }
       case 'dramatic':
         return {
           scale: 1.05,
           y: -15,
           rotateX: 5,
-          transition: { duration: 0.3, ease: [0.16, 1, 0.3, 1] },
+          transition: { duration: 0.3, ease: [0.16, 1, 0.3, 1] as const },
         }
       default: // dynamic
         return {
           scale: 1.03,
           y: -8,
-          transition: { duration: 0.3, ease: [0.16, 1, 0.3, 1] },
+          transition: { duration: 0.3, ease: [0.16, 1, 0.3, 1] as const },
         }
     }
   }
@@ -349,7 +349,7 @@ export const PageTransition: React.FC<PageTransitionProps> = ({
           initial: { opacity: 0 },
           animate: { opacity: 1 },
           exit: { opacity: 0 },
-          transition: { duration: 0.4, ease: [0.16, 1, 0.3, 1] },
+          transition: { duration: 0.4, ease: [0.16, 1, 0.3, 1] as const },
         }
       default: // slide
         return direction === 'right'

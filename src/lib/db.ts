@@ -7,12 +7,20 @@ export interface User {
   name: string
   phone?: string
   createdAt: number
+  grade?: string // Student's grade/class
+  role?: 'STUDENT' | 'PARENT' | 'TEACHER' | 'ADMIN' | 'COUNSELOR'
   profile?: {
     class?: '11th' | '12th' | 'Dropper'
     targetYear?: string
     interestedCourses?: string[]
     location?: string
   }
+  enrollments?: Array<{
+    id: string
+    courseId: string
+    status: string
+    enrollmentDate: number
+  }>
 }
 
 export interface DemoBooking {

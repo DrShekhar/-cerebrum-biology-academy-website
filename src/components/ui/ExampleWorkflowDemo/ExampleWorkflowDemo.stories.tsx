@@ -1,3 +1,6 @@
+// TODO: Install @storybook/react to enable this Storybook story
+// This file requires Storybook to be installed: npm install -D @storybook/react
+/*
 import type { Meta, StoryObj } from '@storybook/react'
 import { ExampleWorkflowDemo } from './ExampleWorkflowDemo'
 
@@ -28,9 +31,12 @@ export const WithCustomClass: Story = {
     className: 'border-2 border-blue-500 p-4',
   },
 }
-
 export const WithChildren: Story = {
   args: {
     children: 'Custom content for ExampleWorkflowDemo',
   },
 }
+*/
+
+// Placeholder export to avoid module errors
+export default {}

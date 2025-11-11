@@ -3,7 +3,7 @@
  * Uses advanced ML algorithms to create unique learning paths for each student
  */
 
-import { HyperIntelligentRouter } from './HyperIntelligentRouter'
+import { HyperIntelligentRouter } from '../api/HyperIntelligentRouter'
 import { DistributedCacheManager } from '../cache/DistributedCacheManager'
 
 interface StudentProfile {

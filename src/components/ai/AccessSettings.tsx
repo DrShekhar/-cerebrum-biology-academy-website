@@ -23,7 +23,8 @@ import {
   EyeOff,
   Save,
   Download,
-  Copy
+  Copy,
+  RefreshCw,
 } from 'lucide-react'
 
 // Types and Interfaces
@@ -133,7 +134,9 @@ interface AccessConfiguration {
 }
 
 const AccessSettings: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'schedule' | 'groups' | 'individual' | 'password' | 'ip' | 'device' | 'attempts' | 'grace'>('schedule')
+  const [activeTab, setActiveTab] = useState<
+    'schedule' | 'groups' | 'individual' | 'password' | 'ip' | 'device' | 'attempts' | 'grace'
+  >('schedule')
   const [configuration, setConfiguration] = useState<AccessConfiguration>({
     schedule: {
       startDateTime: '',
@@ -142,7 +145,7 @@ const AccessSettings: React.FC = () => {
       autoStart: true,
       autoEnd: true,
       gracePeriod: 5,
-      bufferTime: 10
+      bufferTime: 10,
     },
     studentGroups: [],
     individualAssignments: [],
@@ -153,7 +156,7 @@ const AccessSettings: React.FC = () => {
       maxAttempts: 3,
       lockoutDuration: 15,
       showHints: false,
-      hints: []
+      hints: [],
     },
     ipRestrictions: [],
     deviceLimitation: {
@@ -164,7 +167,7 @@ const AccessSettings: React.FC = () => {
       sessionTimeout: 120,
       browserRestrictions: [],
       operatingSystemRestrictions: [],
-      deviceFingerprinting: false
+      deviceFingerprinting: false,
     },
     attemptLimits: {
       enabled: false,
@@ -173,7 +176,7 @@ const AccessSettings: React.FC = () => {
       gracePeriodMinutes: 5,
       lockoutBehavior: 'block',
       progressSaving: true,
-      resumeEnabled: false
+      resumeEnabled: false,
     },
     gracePeriod: {
       enabled: true,
@@ -184,14 +187,14 @@ const AccessSettings: React.FC = () => {
       notificationSettings: {
         beforeStart: [24, 2, 0.5],
         beforeEnd: [30, 10, 5],
-        afterEnd: [5, 15]
+        afterEnd: [5, 15],
       },
       emergencyExtension: {
         enabled: false,
         maxExtension: 30,
-        requiresApproval: true
-      }
-    }
+        requiresApproval: true,
+      },
+    },
   })
 
   const [isValidating, setIsValidating] = useState(false)
@@ -244,7 +247,10 @@ const AccessSettings: React.FC = () => {
     }
 
     // Student assignment validation
-    if (configuration.studentGroups.length === 0 && configuration.individualAssignments.length === 0) {
+    if (
+      configuration.studentGroups.length === 0 &&
+      configuration.individualAssignments.length === 0
+    ) {
       errors.push('At least one student group or individual assignment is required')
     }
 
@@ -267,12 +273,12 @@ const AccessSettings: React.FC = () => {
       studentCount: 0,
       students: [],
       createdDate: new Date().toISOString(),
-      lastModified: new Date().toISOString()
+      lastModified: new Date().toISOString(),
     }
 
-    setConfiguration(prev => ({
+    setConfiguration((prev) => ({
       ...prev,
-      studentGroups: [...prev.studentGroups, newGroup]
+      studentGroups: [...prev.studentGroups, newGroup],
     }))
   }
 
@@ -283,12 +289,12 @@ const AccessSettings: React.FC = () => {
       email: '',
       customSettings: {},
       assignedDate: new Date().toISOString(),
-      status: 'pending'
+      status: 'pending',
     }
 
-    setConfiguration(prev => ({
+    setConfiguration((prev) => ({
       ...prev,
-      individualAssignments: [...prev.individualAssignments, newAssignment]
+      individualAssignments: [...prev.individualAssignments, newAssignment],
     }))
   }
 
@@ -299,12 +305,12 @@ const AccessSettings: React.FC = () => {
       ipAddress: '',
       type: 'allow',
       description: '',
-      isActive: true
+      isActive: true,
     }
 
-    setConfiguration(prev => ({
+    setConfiguration((prev) => ({
       ...prev,
-      ipRestrictions: [...prev.ipRestrictions, newRestriction]
+      ipRestrictions: [...prev.ipRestrictions, newRestriction],
     }))
   }
 
@@ -317,19 +323,20 @@ const AccessSettings: React.FC = () => {
         code = Math.random().toString(36).substring(2, 8).toUpperCase()
         break
       case 'complex':
-        code = Math.random().toString(36).substring(2, 12) + Math.random().toString(10).substring(2, 6)
+        code =
+          Math.random().toString(36).substring(2, 12) + Math.random().toString(10).substring(2, 6)
         break
       case 'time-based':
         code = Date.now().toString(36).toUpperCase()
         break
     }
 
-    setConfiguration(prev => ({
+    setConfiguration((prev) => ({
       ...prev,
       passwordProtection: {
         ...prev.passwordProtection,
-        accessCode: code
-      }
+        accessCode: code,
+      },
     }))
   }
 
@@ -360,8 +367,8 @@ const AccessSettings: React.FC = () => {
           </h1>
         </motion.div>
         <p className="text-gray-600 max-w-2xl mx-auto">
-          Configure comprehensive access controls including scheduling, security, student management,
-          and advanced authentication options for your tests
+          Configure comprehensive access controls including scheduling, security, student
+          management, and advanced authentication options for your tests
         </p>
       </div>
 
@@ -376,7 +383,7 @@ const AccessSettings: React.FC = () => {
             { id: 'ip', label: 'IP Control', icon: Globe },
             { id: 'device', label: 'Devices', icon: Smartphone },
             { id: 'attempts', label: 'Attempts', icon: RotateCcw },
-            { id: 'grace', label: 'Grace Period', icon: Timer }
+            { id: 'grace', label: 'Grace Period', icon: Timer },
           ].map(({ id, label, icon: Icon }) => (
             <button
               key={id}
@@ -442,10 +449,12 @@ const AccessSettings: React.FC = () => {
                   <input
                     type="datetime-local"
                     value={configuration.schedule.startDateTime}
-                    onChange={(e) => setConfiguration(prev => ({
-                      ...prev,
-                      schedule: { ...prev.schedule, startDateTime: e.target.value }
-                    }))}
+                    onChange={(e) =>
+                      setConfiguration((prev) => ({
+                        ...prev,
+                        schedule: { ...prev.schedule, startDateTime: e.target.value },
+                      }))
+                    }
                     className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
                   />
                 </div>
@@ -457,24 +466,26 @@ const AccessSettings: React.FC = () => {
                   <input
                     type="datetime-local"
                     value={configuration.schedule.endDateTime}
-                    onChange={(e) => setConfiguration(prev => ({
-                      ...prev,
-                      schedule: { ...prev.schedule, endDateTime: e.target.value }
-                    }))}
+                    onChange={(e) =>
+                      setConfiguration((prev) => ({
+                        ...prev,
+                        schedule: { ...prev.schedule, endDateTime: e.target.value },
+                      }))
+                    }
                     className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Timezone
-                  </label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Timezone</label>
                   <select
                     value={configuration.schedule.timezone}
-                    onChange={(e) => setConfiguration(prev => ({
-                      ...prev,
-                      schedule: { ...prev.schedule, timezone: e.target.value }
-                    }))}
+                    onChange={(e) =>
+                      setConfiguration((prev) => ({
+                        ...prev,
+                        schedule: { ...prev.schedule, timezone: e.target.value },
+                      }))
+                    }
                     className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
                   >
                     <option value="Asia/Kolkata">Asia/Kolkata (IST)</option>
@@ -498,13 +509,17 @@ const AccessSettings: React.FC = () => {
                 <div className="flex items-center justify-between">
                   <div>
                     <label className="text-sm font-medium text-gray-700">Auto Start</label>
-                    <p className="text-xs text-gray-500">Automatically start test at scheduled time</p>
+                    <p className="text-xs text-gray-500">
+                      Automatically start test at scheduled time
+                    </p>
                   </div>
                   <button
-                    onClick={() => setConfiguration(prev => ({
-                      ...prev,
-                      schedule: { ...prev.schedule, autoStart: !prev.schedule.autoStart }
-                    }))}
+                    onClick={() =>
+                      setConfiguration((prev) => ({
+                        ...prev,
+                        schedule: { ...prev.schedule, autoStart: !prev.schedule.autoStart },
+                      }))
+                    }
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                       configuration.schedule.autoStart ? 'bg-green-600' : 'bg-gray-200'
                     }`}
@@ -520,13 +535,17 @@ const AccessSettings: React.FC = () => {
                 <div className="flex items-center justify-between">
                   <div>
                     <label className="text-sm font-medium text-gray-700">Auto End</label>
-                    <p className="text-xs text-gray-500">Automatically end test at scheduled time</p>
+                    <p className="text-xs text-gray-500">
+                      Automatically end test at scheduled time
+                    </p>
                   </div>
                   <button
-                    onClick={() => setConfiguration(prev => ({
-                      ...prev,
-                      schedule: { ...prev.schedule, autoEnd: !prev.schedule.autoEnd }
-                    }))}
+                    onClick={() =>
+                      setConfiguration((prev) => ({
+                        ...prev,
+                        schedule: { ...prev.schedule, autoEnd: !prev.schedule.autoEnd },
+                      }))
+                    }
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                       configuration.schedule.autoEnd ? 'bg-green-600' : 'bg-gray-200'
                     }`}
@@ -548,10 +567,12 @@ const AccessSettings: React.FC = () => {
                     min="0"
                     max="60"
                     value={configuration.schedule.gracePeriod}
-                    onChange={(e) => setConfiguration(prev => ({
-                      ...prev,
-                      schedule: { ...prev.schedule, gracePeriod: parseInt(e.target.value) || 0 }
-                    }))}
+                    onChange={(e) =>
+                      setConfiguration((prev) => ({
+                        ...prev,
+                        schedule: { ...prev.schedule, gracePeriod: parseInt(e.target.value) || 0 },
+                      }))
+                    }
                     className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
                   />
                 </div>
@@ -565,10 +586,12 @@ const AccessSettings: React.FC = () => {
                     min="0"
                     max="120"
                     value={configuration.schedule.bufferTime}
-                    onChange={(e) => setConfiguration(prev => ({
-                      ...prev,
-                      schedule: { ...prev.schedule, bufferTime: parseInt(e.target.value) || 0 }
-                    }))}
+                    onChange={(e) =>
+                      setConfiguration((prev) => ({
+                        ...prev,
+                        schedule: { ...prev.schedule, bufferTime: parseInt(e.target.value) || 0 },
+                      }))
+                    }
                     className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
                   />
                 </div>
@@ -610,7 +633,10 @@ const AccessSettings: React.FC = () => {
               ) : (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   {configuration.studentGroups.map((group, index) => (
-                    <div key={group.id} className="border rounded-lg p-4 hover:shadow-md transition-shadow">
+                    <div
+                      key={group.id}
+                      className="border rounded-lg p-4 hover:shadow-md transition-shadow"
+                    >
                       <div className="flex justify-between items-start mb-3">
                         <h4 className="font-semibold text-gray-800">{group.name}</h4>
                         <div className="flex gap-1">
@@ -623,11 +649,15 @@ const AccessSettings: React.FC = () => {
                         </div>
                       </div>
 
-                      <p className="text-sm text-gray-600 mb-3">{group.description || 'No description'}</p>
+                      <p className="text-sm text-gray-600 mb-3">
+                        {group.description || 'No description'}
+                      </p>
 
                       <div className="flex justify-between items-center text-sm">
                         <span className="text-gray-500">{group.studentCount} students</span>
-                        <span className="text-gray-400">{new Date(group.createdDate).toLocaleDateString()}</span>
+                        <span className="text-gray-400">
+                          {new Date(group.createdDate).toLocaleDateString()}
+                        </span>
                       </div>
                     </div>
                   ))}
@@ -670,20 +700,30 @@ const AccessSettings: React.FC = () => {
               ) : (
                 <div className="space-y-4">
                   {configuration.individualAssignments.map((assignment, index) => (
-                    <div key={assignment.studentId} className="border rounded-lg p-4 hover:shadow-md transition-shadow">
+                    <div
+                      key={assignment.studentId}
+                      className="border rounded-lg p-4 hover:shadow-md transition-shadow"
+                    >
                       <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-center">
                         <div>
-                          <p className="font-medium text-gray-800">{assignment.studentName || 'Unnamed Student'}</p>
+                          <p className="font-medium text-gray-800">
+                            {assignment.studentName || 'Unnamed Student'}
+                          </p>
                           <p className="text-sm text-gray-500">{assignment.email}</p>
                         </div>
 
                         <div className="text-sm">
-                          <span className={`px-2 py-1 rounded text-xs font-medium ${
-                            assignment.status === 'pending' ? 'bg-yellow-100 text-yellow-700' :
-                            assignment.status === 'active' ? 'bg-green-100 text-green-700' :
-                            assignment.status === 'completed' ? 'bg-blue-100 text-blue-700' :
-                            'bg-gray-100 text-gray-700'
-                          }`}>
+                          <span
+                            className={`px-2 py-1 rounded text-xs font-medium ${
+                              assignment.status === 'pending'
+                                ? 'bg-yellow-100 text-yellow-700'
+                                : assignment.status === 'active'
+                                  ? 'bg-green-100 text-green-700'
+                                  : assignment.status === 'completed'
+                                    ? 'bg-blue-100 text-blue-700'
+                                    : 'bg-gray-100 text-gray-700'
+                            }`}
+                          >
                             {assignment.status}
                           </span>
                         </div>
@@ -728,14 +768,21 @@ const AccessSettings: React.FC = () => {
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
                   <div>
-                    <label className="text-sm font-medium text-gray-700">Enable Password Protection</label>
+                    <label className="text-sm font-medium text-gray-700">
+                      Enable Password Protection
+                    </label>
                     <p className="text-xs text-gray-500">Require access code to start test</p>
                   </div>
                   <button
-                    onClick={() => setConfiguration(prev => ({
-                      ...prev,
-                      passwordProtection: { ...prev.passwordProtection, enabled: !prev.passwordProtection.enabled }
-                    }))}
+                    onClick={() =>
+                      setConfiguration((prev) => ({
+                        ...prev,
+                        passwordProtection: {
+                          ...prev.passwordProtection,
+                          enabled: !prev.passwordProtection.enabled,
+                        },
+                      }))
+                    }
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                       configuration.passwordProtection.enabled ? 'bg-red-600' : 'bg-gray-200'
                     }`}
@@ -756,10 +803,15 @@ const AccessSettings: React.FC = () => {
                       </label>
                       <select
                         value={configuration.passwordProtection.codeType}
-                        onChange={(e) => setConfiguration(prev => ({
-                          ...prev,
-                          passwordProtection: { ...prev.passwordProtection, codeType: e.target.value as any }
-                        }))}
+                        onChange={(e) =>
+                          setConfiguration((prev) => ({
+                            ...prev,
+                            passwordProtection: {
+                              ...prev.passwordProtection,
+                              codeType: e.target.value as any,
+                            },
+                          }))
+                        }
                         className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
                       >
                         <option value="simple">Simple (6 characters)</option>
@@ -776,10 +828,15 @@ const AccessSettings: React.FC = () => {
                         <input
                           type="text"
                           value={configuration.passwordProtection.accessCode}
-                          onChange={(e) => setConfiguration(prev => ({
-                            ...prev,
-                            passwordProtection: { ...prev.passwordProtection, accessCode: e.target.value }
-                          }))}
+                          onChange={(e) =>
+                            setConfiguration((prev) => ({
+                              ...prev,
+                              passwordProtection: {
+                                ...prev.passwordProtection,
+                                accessCode: e.target.value,
+                              },
+                            }))
+                          }
                           className="flex-1 px-3 py-2 border rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
                           placeholder="Enter access code"
                         />
@@ -790,7 +847,11 @@ const AccessSettings: React.FC = () => {
                           Generate
                         </button>
                         <button
-                          onClick={() => navigator.clipboard.writeText(configuration.passwordProtection.accessCode)}
+                          onClick={() =>
+                            navigator.clipboard.writeText(
+                              configuration.passwordProtection.accessCode
+                            )
+                          }
                           className="bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
                         >
                           <Copy className="w-4 h-4" />
@@ -808,10 +869,15 @@ const AccessSettings: React.FC = () => {
                           min="1"
                           max="10"
                           value={configuration.passwordProtection.maxAttempts}
-                          onChange={(e) => setConfiguration(prev => ({
-                            ...prev,
-                            passwordProtection: { ...prev.passwordProtection, maxAttempts: parseInt(e.target.value) || 1 }
-                          }))}
+                          onChange={(e) =>
+                            setConfiguration((prev) => ({
+                              ...prev,
+                              passwordProtection: {
+                                ...prev.passwordProtection,
+                                maxAttempts: parseInt(e.target.value) || 1,
+                              },
+                            }))
+                          }
                           className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
                         />
                       </div>
@@ -825,10 +891,15 @@ const AccessSettings: React.FC = () => {
                           min="1"
                           max="120"
                           value={configuration.passwordProtection.lockoutDuration}
-                          onChange={(e) => setConfiguration(prev => ({
-                            ...prev,
-                            passwordProtection: { ...prev.passwordProtection, lockoutDuration: parseInt(e.target.value) || 1 }
-                          }))}
+                          onChange={(e) =>
+                            setConfiguration((prev) => ({
+                              ...prev,
+                              passwordProtection: {
+                                ...prev.passwordProtection,
+                                lockoutDuration: parseInt(e.target.value) || 1,
+                              },
+                            }))
+                          }
                           className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
                         />
                       </div>
@@ -898,7 +969,10 @@ const AccessSettings: React.FC = () => {
               ) : (
                 <div className="space-y-4">
                   {configuration.ipRestrictions.map((restriction, index) => (
-                    <div key={restriction.id} className="border rounded-lg p-4 hover:shadow-md transition-shadow">
+                    <div
+                      key={restriction.id}
+                      className="border rounded-lg p-4 hover:shadow-md transition-shadow"
+                    >
                       <div className="grid grid-cols-1 md:grid-cols-5 gap-4 items-center">
                         <div>
                           <p className="font-medium text-gray-800">{restriction.label}</p>
@@ -910,17 +984,25 @@ const AccessSettings: React.FC = () => {
                         </div>
 
                         <div>
-                          <span className={`px-2 py-1 rounded text-xs font-medium ${
-                            restriction.type === 'allow' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'
-                          }`}>
+                          <span
+                            className={`px-2 py-1 rounded text-xs font-medium ${
+                              restriction.type === 'allow'
+                                ? 'bg-green-100 text-green-700'
+                                : 'bg-red-100 text-red-700'
+                            }`}
+                          >
                             {restriction.type}
                           </span>
                         </div>
 
                         <div>
-                          <span className={`px-2 py-1 rounded text-xs font-medium ${
-                            restriction.isActive ? 'bg-blue-100 text-blue-700' : 'bg-gray-100 text-gray-700'
-                          }`}>
+                          <span
+                            className={`px-2 py-1 rounded text-xs font-medium ${
+                              restriction.isActive
+                                ? 'bg-blue-100 text-blue-700'
+                                : 'bg-gray-100 text-gray-700'
+                            }`}
+                          >
                             {restriction.isActive ? 'Active' : 'Inactive'}
                           </span>
                         </div>
@@ -961,14 +1043,21 @@ const AccessSettings: React.FC = () => {
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
                   <div>
-                    <label className="text-sm font-medium text-gray-700">Enable Device Restrictions</label>
+                    <label className="text-sm font-medium text-gray-700">
+                      Enable Device Restrictions
+                    </label>
                     <p className="text-xs text-gray-500">Limit test access by device type</p>
                   </div>
                   <button
-                    onClick={() => setConfiguration(prev => ({
-                      ...prev,
-                      deviceLimitation: { ...prev.deviceLimitation, enabled: !prev.deviceLimitation.enabled }
-                    }))}
+                    onClick={() =>
+                      setConfiguration((prev) => ({
+                        ...prev,
+                        deviceLimitation: {
+                          ...prev.deviceLimitation,
+                          enabled: !prev.deviceLimitation.enabled,
+                        },
+                      }))
+                    }
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                       configuration.deviceLimitation.enabled ? 'bg-purple-600' : 'bg-gray-200'
                     }`}
@@ -992,10 +1081,15 @@ const AccessSettings: React.FC = () => {
                         min="1"
                         max="10"
                         value={configuration.deviceLimitation.maxDevices}
-                        onChange={(e) => setConfiguration(prev => ({
-                          ...prev,
-                          deviceLimitation: { ...prev.deviceLimitation, maxDevices: parseInt(e.target.value) || 1 }
-                        }))}
+                        onChange={(e) =>
+                          setConfiguration((prev) => ({
+                            ...prev,
+                            deviceLimitation: {
+                              ...prev.deviceLimitation,
+                              maxDevices: parseInt(e.target.value) || 1,
+                            },
+                          }))
+                        }
                         className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                       />
                     </div>
@@ -1004,17 +1098,26 @@ const AccessSettings: React.FC = () => {
                       <div className="flex items-center justify-between">
                         <span className="text-sm text-gray-700">Device Tracking</span>
                         <button
-                          onClick={() => setConfiguration(prev => ({
-                            ...prev,
-                            deviceLimitation: { ...prev.deviceLimitation, deviceTracking: !prev.deviceLimitation.deviceTracking }
-                          }))}
+                          onClick={() =>
+                            setConfiguration((prev) => ({
+                              ...prev,
+                              deviceLimitation: {
+                                ...prev.deviceLimitation,
+                                deviceTracking: !prev.deviceLimitation.deviceTracking,
+                              },
+                            }))
+                          }
                           className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors ${
-                            configuration.deviceLimitation.deviceTracking ? 'bg-purple-600' : 'bg-gray-200'
+                            configuration.deviceLimitation.deviceTracking
+                              ? 'bg-purple-600'
+                              : 'bg-gray-200'
                           }`}
                         >
                           <span
                             className={`inline-block h-3 w-3 transform rounded-full bg-white transition-transform ${
-                              configuration.deviceLimitation.deviceTracking ? 'translate-x-5' : 'translate-x-1'
+                              configuration.deviceLimitation.deviceTracking
+                                ? 'translate-x-5'
+                                : 'translate-x-1'
                             }`}
                           />
                         </button>
@@ -1023,17 +1126,26 @@ const AccessSettings: React.FC = () => {
                       <div className="flex items-center justify-between">
                         <span className="text-sm text-gray-700">Block Multiple Logins</span>
                         <button
-                          onClick={() => setConfiguration(prev => ({
-                            ...prev,
-                            deviceLimitation: { ...prev.deviceLimitation, blockMultipleLogins: !prev.deviceLimitation.blockMultipleLogins }
-                          }))}
+                          onClick={() =>
+                            setConfiguration((prev) => ({
+                              ...prev,
+                              deviceLimitation: {
+                                ...prev.deviceLimitation,
+                                blockMultipleLogins: !prev.deviceLimitation.blockMultipleLogins,
+                              },
+                            }))
+                          }
                           className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors ${
-                            configuration.deviceLimitation.blockMultipleLogins ? 'bg-purple-600' : 'bg-gray-200'
+                            configuration.deviceLimitation.blockMultipleLogins
+                              ? 'bg-purple-600'
+                              : 'bg-gray-200'
                           }`}
                         >
                           <span
                             className={`inline-block h-3 w-3 transform rounded-full bg-white transition-transform ${
-                              configuration.deviceLimitation.blockMultipleLogins ? 'translate-x-5' : 'translate-x-1'
+                              configuration.deviceLimitation.blockMultipleLogins
+                                ? 'translate-x-5'
+                                : 'translate-x-1'
                             }`}
                           />
                         </button>
@@ -1042,17 +1154,26 @@ const AccessSettings: React.FC = () => {
                       <div className="flex items-center justify-between">
                         <span className="text-sm text-gray-700">Device Fingerprinting</span>
                         <button
-                          onClick={() => setConfiguration(prev => ({
-                            ...prev,
-                            deviceLimitation: { ...prev.deviceLimitation, deviceFingerprinting: !prev.deviceLimitation.deviceFingerprinting }
-                          }))}
+                          onClick={() =>
+                            setConfiguration((prev) => ({
+                              ...prev,
+                              deviceLimitation: {
+                                ...prev.deviceLimitation,
+                                deviceFingerprinting: !prev.deviceLimitation.deviceFingerprinting,
+                              },
+                            }))
+                          }
                           className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors ${
-                            configuration.deviceLimitation.deviceFingerprinting ? 'bg-purple-600' : 'bg-gray-200'
+                            configuration.deviceLimitation.deviceFingerprinting
+                              ? 'bg-purple-600'
+                              : 'bg-gray-200'
                           }`}
                         >
                           <span
                             className={`inline-block h-3 w-3 transform rounded-full bg-white transition-transform ${
-                              configuration.deviceLimitation.deviceFingerprinting ? 'translate-x-5' : 'translate-x-1'
+                              configuration.deviceLimitation.deviceFingerprinting
+                                ? 'translate-x-5'
+                                : 'translate-x-1'
                             }`}
                           />
                         </button>
@@ -1068,10 +1189,15 @@ const AccessSettings: React.FC = () => {
                         min="30"
                         max="480"
                         value={configuration.deviceLimitation.sessionTimeout}
-                        onChange={(e) => setConfiguration(prev => ({
-                          ...prev,
-                          deviceLimitation: { ...prev.deviceLimitation, sessionTimeout: parseInt(e.target.value) || 30 }
-                        }))}
+                        onChange={(e) =>
+                          setConfiguration((prev) => ({
+                            ...prev,
+                            deviceLimitation: {
+                              ...prev.deviceLimitation,
+                              sessionTimeout: parseInt(e.target.value) || 30,
+                            },
+                          }))
+                        }
                         className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                       />
                     </div>
@@ -1094,28 +1220,30 @@ const AccessSettings: React.FC = () => {
                       Allowed Browsers
                     </label>
                     <div className="space-y-2">
-                      {['Chrome', 'Firefox', 'Safari', 'Edge'].map(browser => (
+                      {['Chrome', 'Firefox', 'Safari', 'Edge'].map((browser) => (
                         <label key={browser} className="flex items-center gap-2">
                           <input
                             type="checkbox"
-                            checked={configuration.deviceLimitation.browserRestrictions.includes(browser)}
+                            checked={configuration.deviceLimitation.browserRestrictions.includes(
+                              browser
+                            )}
                             onChange={(e) => {
                               const browsers = configuration.deviceLimitation.browserRestrictions
                               if (e.target.checked) {
-                                setConfiguration(prev => ({
+                                setConfiguration((prev) => ({
                                   ...prev,
                                   deviceLimitation: {
                                     ...prev.deviceLimitation,
-                                    browserRestrictions: [...browsers, browser]
-                                  }
+                                    browserRestrictions: [...browsers, browser],
+                                  },
                                 }))
                               } else {
-                                setConfiguration(prev => ({
+                                setConfiguration((prev) => ({
                                   ...prev,
                                   deviceLimitation: {
                                     ...prev.deviceLimitation,
-                                    browserRestrictions: browsers.filter(b => b !== browser)
-                                  }
+                                    browserRestrictions: browsers.filter((b) => b !== browser),
+                                  },
                                 }))
                               }
                             }}
@@ -1132,28 +1260,31 @@ const AccessSettings: React.FC = () => {
                       Allowed Operating Systems
                     </label>
                     <div className="space-y-2">
-                      {['Windows', 'macOS', 'Linux', 'iOS', 'Android'].map(os => (
+                      {['Windows', 'macOS', 'Linux', 'iOS', 'Android'].map((os) => (
                         <label key={os} className="flex items-center gap-2">
                           <input
                             type="checkbox"
-                            checked={configuration.deviceLimitation.operatingSystemRestrictions.includes(os)}
+                            checked={configuration.deviceLimitation.operatingSystemRestrictions.includes(
+                              os
+                            )}
                             onChange={(e) => {
-                              const systems = configuration.deviceLimitation.operatingSystemRestrictions
+                              const systems =
+                                configuration.deviceLimitation.operatingSystemRestrictions
                               if (e.target.checked) {
-                                setConfiguration(prev => ({
+                                setConfiguration((prev) => ({
                                   ...prev,
                                   deviceLimitation: {
                                     ...prev.deviceLimitation,
-                                    operatingSystemRestrictions: [...systems, os]
-                                  }
+                                    operatingSystemRestrictions: [...systems, os],
+                                  },
                                 }))
                               } else {
-                                setConfiguration(prev => ({
+                                setConfiguration((prev) => ({
                                   ...prev,
                                   deviceLimitation: {
                                     ...prev.deviceLimitation,
-                                    operatingSystemRestrictions: systems.filter(s => s !== os)
-                                  }
+                                    operatingSystemRestrictions: systems.filter((s) => s !== os),
+                                  },
                                 }))
                               }
                             }}
@@ -1189,14 +1320,21 @@ const AccessSettings: React.FC = () => {
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
                   <div>
-                    <label className="text-sm font-medium text-gray-700">Enable Attempt Limits</label>
+                    <label className="text-sm font-medium text-gray-700">
+                      Enable Attempt Limits
+                    </label>
                     <p className="text-xs text-gray-500">Restrict number of test attempts</p>
                   </div>
                   <button
-                    onClick={() => setConfiguration(prev => ({
-                      ...prev,
-                      attemptLimits: { ...prev.attemptLimits, enabled: !prev.attemptLimits.enabled }
-                    }))}
+                    onClick={() =>
+                      setConfiguration((prev) => ({
+                        ...prev,
+                        attemptLimits: {
+                          ...prev.attemptLimits,
+                          enabled: !prev.attemptLimits.enabled,
+                        },
+                      }))
+                    }
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                       configuration.attemptLimits.enabled ? 'bg-teal-600' : 'bg-gray-200'
                     }`}
@@ -1220,10 +1358,15 @@ const AccessSettings: React.FC = () => {
                         min="1"
                         max="10"
                         value={configuration.attemptLimits.maxAttempts}
-                        onChange={(e) => setConfiguration(prev => ({
-                          ...prev,
-                          attemptLimits: { ...prev.attemptLimits, maxAttempts: parseInt(e.target.value) || 1 }
-                        }))}
+                        onChange={(e) =>
+                          setConfiguration((prev) => ({
+                            ...prev,
+                            attemptLimits: {
+                              ...prev.attemptLimits,
+                              maxAttempts: parseInt(e.target.value) || 1,
+                            },
+                          }))
+                        }
                         className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                       />
                     </div>
@@ -1234,10 +1377,15 @@ const AccessSettings: React.FC = () => {
                       </label>
                       <select
                         value={configuration.attemptLimits.resetPeriod}
-                        onChange={(e) => setConfiguration(prev => ({
-                          ...prev,
-                          attemptLimits: { ...prev.attemptLimits, resetPeriod: e.target.value as any }
-                        }))}
+                        onChange={(e) =>
+                          setConfiguration((prev) => ({
+                            ...prev,
+                            attemptLimits: {
+                              ...prev.attemptLimits,
+                              resetPeriod: e.target.value as any,
+                            },
+                          }))
+                        }
                         className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                       >
                         <option value="24h">24 Hours</option>
@@ -1253,10 +1401,15 @@ const AccessSettings: React.FC = () => {
                       </label>
                       <select
                         value={configuration.attemptLimits.lockoutBehavior}
-                        onChange={(e) => setConfiguration(prev => ({
-                          ...prev,
-                          attemptLimits: { ...prev.attemptLimits, lockoutBehavior: e.target.value as any }
-                        }))}
+                        onChange={(e) =>
+                          setConfiguration((prev) => ({
+                            ...prev,
+                            attemptLimits: {
+                              ...prev.attemptLimits,
+                              lockoutBehavior: e.target.value as any,
+                            },
+                          }))
+                        }
                         className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                       >
                         <option value="block">Block Access</option>
@@ -1269,17 +1422,26 @@ const AccessSettings: React.FC = () => {
                       <div className="flex items-center justify-between">
                         <span className="text-sm text-gray-700">Save Progress</span>
                         <button
-                          onClick={() => setConfiguration(prev => ({
-                            ...prev,
-                            attemptLimits: { ...prev.attemptLimits, progressSaving: !prev.attemptLimits.progressSaving }
-                          }))}
+                          onClick={() =>
+                            setConfiguration((prev) => ({
+                              ...prev,
+                              attemptLimits: {
+                                ...prev.attemptLimits,
+                                progressSaving: !prev.attemptLimits.progressSaving,
+                              },
+                            }))
+                          }
                           className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors ${
-                            configuration.attemptLimits.progressSaving ? 'bg-teal-600' : 'bg-gray-200'
+                            configuration.attemptLimits.progressSaving
+                              ? 'bg-teal-600'
+                              : 'bg-gray-200'
                           }`}
                         >
                           <span
                             className={`inline-block h-3 w-3 transform rounded-full bg-white transition-transform ${
-                              configuration.attemptLimits.progressSaving ? 'translate-x-5' : 'translate-x-1'
+                              configuration.attemptLimits.progressSaving
+                                ? 'translate-x-5'
+                                : 'translate-x-1'
                             }`}
                           />
                         </button>
@@ -1288,17 +1450,26 @@ const AccessSettings: React.FC = () => {
                       <div className="flex items-center justify-between">
                         <span className="text-sm text-gray-700">Allow Resume</span>
                         <button
-                          onClick={() => setConfiguration(prev => ({
-                            ...prev,
-                            attemptLimits: { ...prev.attemptLimits, resumeEnabled: !prev.attemptLimits.resumeEnabled }
-                          }))}
+                          onClick={() =>
+                            setConfiguration((prev) => ({
+                              ...prev,
+                              attemptLimits: {
+                                ...prev.attemptLimits,
+                                resumeEnabled: !prev.attemptLimits.resumeEnabled,
+                              },
+                            }))
+                          }
                           className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors ${
-                            configuration.attemptLimits.resumeEnabled ? 'bg-teal-600' : 'bg-gray-200'
+                            configuration.attemptLimits.resumeEnabled
+                              ? 'bg-teal-600'
+                              : 'bg-gray-200'
                           }`}
                         >
                           <span
                             className={`inline-block h-3 w-3 transform rounded-full bg-white transition-transform ${
-                              configuration.attemptLimits.resumeEnabled ? 'translate-x-5' : 'translate-x-1'
+                              configuration.attemptLimits.resumeEnabled
+                                ? 'translate-x-5'
+                                : 'translate-x-1'
                             }`}
                           />
                         </button>
@@ -1321,11 +1492,28 @@ const AccessSettings: React.FC = () => {
                   <div className="bg-gray-50 rounded-lg p-4">
                     <h4 className="font-medium text-gray-800 mb-2">Policy Overview</h4>
                     <ul className="text-sm text-gray-600 space-y-1">
-                      <li>• Students can attempt the test {configuration.attemptLimits.maxAttempts} time(s)</li>
-                      <li>• Attempts reset {configuration.attemptLimits.resetPeriod === 'never' ? 'never' : `every ${configuration.attemptLimits.resetPeriod}`}</li>
-                      <li>• When limit reached: {configuration.attemptLimits.lockoutBehavior.replace('_', ' ')}</li>
-                      <li>• Progress saving: {configuration.attemptLimits.progressSaving ? 'Enabled' : 'Disabled'}</li>
-                      <li>• Resume capability: {configuration.attemptLimits.resumeEnabled ? 'Enabled' : 'Disabled'}</li>
+                      <li>
+                        • Students can attempt the test {configuration.attemptLimits.maxAttempts}{' '}
+                        time(s)
+                      </li>
+                      <li>
+                        • Attempts reset{' '}
+                        {configuration.attemptLimits.resetPeriod === 'never'
+                          ? 'never'
+                          : `every ${configuration.attemptLimits.resetPeriod}`}
+                      </li>
+                      <li>
+                        • When limit reached:{' '}
+                        {configuration.attemptLimits.lockoutBehavior.replace('_', ' ')}
+                      </li>
+                      <li>
+                        • Progress saving:{' '}
+                        {configuration.attemptLimits.progressSaving ? 'Enabled' : 'Disabled'}
+                      </li>
+                      <li>
+                        • Resume capability:{' '}
+                        {configuration.attemptLimits.resumeEnabled ? 'Enabled' : 'Disabled'}
+                      </li>
                     </ul>
                   </div>
 
@@ -1369,10 +1557,12 @@ const AccessSettings: React.FC = () => {
                     <p className="text-xs text-gray-500">Allow flexibility in test timing</p>
                   </div>
                   <button
-                    onClick={() => setConfiguration(prev => ({
-                      ...prev,
-                      gracePeriod: { ...prev.gracePeriod, enabled: !prev.gracePeriod.enabled }
-                    }))}
+                    onClick={() =>
+                      setConfiguration((prev) => ({
+                        ...prev,
+                        gracePeriod: { ...prev.gracePeriod, enabled: !prev.gracePeriod.enabled },
+                      }))
+                    }
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                       configuration.gracePeriod.enabled ? 'bg-indigo-600' : 'bg-gray-200'
                     }`}
@@ -1397,10 +1587,15 @@ const AccessSettings: React.FC = () => {
                           min="0"
                           max="60"
                           value={configuration.gracePeriod.beforeStart}
-                          onChange={(e) => setConfiguration(prev => ({
-                            ...prev,
-                            gracePeriod: { ...prev.gracePeriod, beforeStart: parseInt(e.target.value) || 0 }
-                          }))}
+                          onChange={(e) =>
+                            setConfiguration((prev) => ({
+                              ...prev,
+                              gracePeriod: {
+                                ...prev.gracePeriod,
+                                beforeStart: parseInt(e.target.value) || 0,
+                              },
+                            }))
+                          }
                           className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                         />
                       </div>
@@ -1414,10 +1609,15 @@ const AccessSettings: React.FC = () => {
                           min="0"
                           max="60"
                           value={configuration.gracePeriod.afterEnd}
-                          onChange={(e) => setConfiguration(prev => ({
-                            ...prev,
-                            gracePeriod: { ...prev.gracePeriod, afterEnd: parseInt(e.target.value) || 0 }
-                          }))}
+                          onChange={(e) =>
+                            setConfiguration((prev) => ({
+                              ...prev,
+                              gracePeriod: {
+                                ...prev.gracePeriod,
+                                afterEnd: parseInt(e.target.value) || 0,
+                              },
+                            }))
+                          }
                           className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                         />
                       </div>
@@ -1432,31 +1632,49 @@ const AccessSettings: React.FC = () => {
                         min="0"
                         max="50"
                         value={configuration.gracePeriod.lateSubmissionPenalty}
-                        onChange={(e) => setConfiguration(prev => ({
-                          ...prev,
-                          gracePeriod: { ...prev.gracePeriod, lateSubmissionPenalty: parseInt(e.target.value) || 0 }
-                        }))}
+                        onChange={(e) =>
+                          setConfiguration((prev) => ({
+                            ...prev,
+                            gracePeriod: {
+                              ...prev.gracePeriod,
+                              lateSubmissionPenalty: parseInt(e.target.value) || 0,
+                            },
+                          }))
+                        }
                         className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                       />
                     </div>
 
                     <div className="flex items-center justify-between">
                       <div>
-                        <span className="text-sm font-medium text-gray-700">Auto Grade Penalty</span>
-                        <p className="text-xs text-gray-500">Automatically apply penalty to late submissions</p>
+                        <span className="text-sm font-medium text-gray-700">
+                          Auto Grade Penalty
+                        </span>
+                        <p className="text-xs text-gray-500">
+                          Automatically apply penalty to late submissions
+                        </p>
                       </div>
                       <button
-                        onClick={() => setConfiguration(prev => ({
-                          ...prev,
-                          gracePeriod: { ...prev.gracePeriod, autoGradePenalty: !prev.gracePeriod.autoGradePenalty }
-                        }))}
+                        onClick={() =>
+                          setConfiguration((prev) => ({
+                            ...prev,
+                            gracePeriod: {
+                              ...prev.gracePeriod,
+                              autoGradePenalty: !prev.gracePeriod.autoGradePenalty,
+                            },
+                          }))
+                        }
                         className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors ${
-                          configuration.gracePeriod.autoGradePenalty ? 'bg-indigo-600' : 'bg-gray-200'
+                          configuration.gracePeriod.autoGradePenalty
+                            ? 'bg-indigo-600'
+                            : 'bg-gray-200'
                         }`}
                       >
                         <span
                           className={`inline-block h-3 w-3 transform rounded-full bg-white transition-transform ${
-                            configuration.gracePeriod.autoGradePenalty ? 'translate-x-5' : 'translate-x-1'
+                            configuration.gracePeriod.autoGradePenalty
+                              ? 'translate-x-5'
+                              : 'translate-x-1'
                           }`}
                         />
                       </button>
@@ -1477,27 +1695,35 @@ const AccessSettings: React.FC = () => {
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
                     <div>
-                      <span className="text-sm font-medium text-gray-700">Enable Emergency Extension</span>
+                      <span className="text-sm font-medium text-gray-700">
+                        Enable Emergency Extension
+                      </span>
                       <p className="text-xs text-gray-500">Allow emergency time extensions</p>
                     </div>
                     <button
-                      onClick={() => setConfiguration(prev => ({
-                        ...prev,
-                        gracePeriod: {
-                          ...prev.gracePeriod,
-                          emergencyExtension: {
-                            ...prev.gracePeriod.emergencyExtension,
-                            enabled: !prev.gracePeriod.emergencyExtension.enabled
-                          }
-                        }
-                      }))}
+                      onClick={() =>
+                        setConfiguration((prev) => ({
+                          ...prev,
+                          gracePeriod: {
+                            ...prev.gracePeriod,
+                            emergencyExtension: {
+                              ...prev.gracePeriod.emergencyExtension,
+                              enabled: !prev.gracePeriod.emergencyExtension.enabled,
+                            },
+                          },
+                        }))
+                      }
                       className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                        configuration.gracePeriod.emergencyExtension.enabled ? 'bg-red-600' : 'bg-gray-200'
+                        configuration.gracePeriod.emergencyExtension.enabled
+                          ? 'bg-red-600'
+                          : 'bg-gray-200'
                       }`}
                     >
                       <span
                         className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                          configuration.gracePeriod.emergencyExtension.enabled ? 'translate-x-6' : 'translate-x-1'
+                          configuration.gracePeriod.emergencyExtension.enabled
+                            ? 'translate-x-6'
+                            : 'translate-x-1'
                         }`}
                       />
                     </button>
@@ -1514,16 +1740,18 @@ const AccessSettings: React.FC = () => {
                           min="5"
                           max="120"
                           value={configuration.gracePeriod.emergencyExtension.maxExtension}
-                          onChange={(e) => setConfiguration(prev => ({
-                            ...prev,
-                            gracePeriod: {
-                              ...prev.gracePeriod,
-                              emergencyExtension: {
-                                ...prev.gracePeriod.emergencyExtension,
-                                maxExtension: parseInt(e.target.value) || 5
-                              }
-                            }
-                          }))}
+                          onChange={(e) =>
+                            setConfiguration((prev) => ({
+                              ...prev,
+                              gracePeriod: {
+                                ...prev.gracePeriod,
+                                emergencyExtension: {
+                                  ...prev.gracePeriod.emergencyExtension,
+                                  maxExtension: parseInt(e.target.value) || 5,
+                                },
+                              },
+                            }))
+                          }
                           className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
                         />
                       </div>
@@ -1531,23 +1759,30 @@ const AccessSettings: React.FC = () => {
                       <div className="flex items-center justify-between">
                         <span className="text-sm text-gray-700">Requires Approval</span>
                         <button
-                          onClick={() => setConfiguration(prev => ({
-                            ...prev,
-                            gracePeriod: {
-                              ...prev.gracePeriod,
-                              emergencyExtension: {
-                                ...prev.gracePeriod.emergencyExtension,
-                                requiresApproval: !prev.gracePeriod.emergencyExtension.requiresApproval
-                              }
-                            }
-                          }))}
+                          onClick={() =>
+                            setConfiguration((prev) => ({
+                              ...prev,
+                              gracePeriod: {
+                                ...prev.gracePeriod,
+                                emergencyExtension: {
+                                  ...prev.gracePeriod.emergencyExtension,
+                                  requiresApproval:
+                                    !prev.gracePeriod.emergencyExtension.requiresApproval,
+                                },
+                              },
+                            }))
+                          }
                           className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors ${
-                            configuration.gracePeriod.emergencyExtension.requiresApproval ? 'bg-red-600' : 'bg-gray-200'
+                            configuration.gracePeriod.emergencyExtension.requiresApproval
+                              ? 'bg-red-600'
+                              : 'bg-gray-200'
                           }`}
                         >
                           <span
                             className={`inline-block h-3 w-3 transform rounded-full bg-white transition-transform ${
-                              configuration.gracePeriod.emergencyExtension.requiresApproval ? 'translate-x-5' : 'translate-x-1'
+                              configuration.gracePeriod.emergencyExtension.requiresApproval
+                                ? 'translate-x-5'
+                                : 'translate-x-1'
                             }`}
                           />
                         </button>
@@ -1558,10 +1793,19 @@ const AccessSettings: React.FC = () => {
                   <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
                     <h5 className="text-sm font-medium text-blue-800 mb-2">Grace Period Summary</h5>
                     <ul className="text-xs text-blue-700 space-y-1">
-                      <li>• Early access: {configuration.gracePeriod.beforeStart} minutes before start</li>
-                      <li>• Late submission: {configuration.gracePeriod.afterEnd} minutes after end</li>
-                      <li>• Late penalty: {configuration.gracePeriod.lateSubmissionPenalty}% reduction</li>
-                      <li>• Emergency extension: up to {configuration.gracePeriod.emergencyExtension.maxExtension} minutes</li>
+                      <li>
+                        • Early access: {configuration.gracePeriod.beforeStart} minutes before start
+                      </li>
+                      <li>
+                        • Late submission: {configuration.gracePeriod.afterEnd} minutes after end
+                      </li>
+                      <li>
+                        • Late penalty: {configuration.gracePeriod.lateSubmissionPenalty}% reduction
+                      </li>
+                      <li>
+                        • Emergency extension: up to{' '}
+                        {configuration.gracePeriod.emergencyExtension.maxExtension} minutes
+                      </li>
                     </ul>
                   </div>
                 </div>

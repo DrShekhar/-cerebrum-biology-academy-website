@@ -59,6 +59,11 @@ export function useAuth() {
           email,
           name: email.split('@')[0],
           createdAt: Date.now(),
+          phone: undefined,
+          grade: undefined,
+          role: undefined,
+          profile: undefined,
+          enrollments: undefined,
         }
         setCurrentUser(newUser)
         return { success: true }
@@ -159,7 +164,12 @@ export function useAuth() {
           id: data.user.id,
           email: data.user.email || '',
           name: data.user.name || 'User',
+          phone: data.user.phone,
           createdAt: Date.now(),
+          grade: data.user.grade,
+          role: data.user.role,
+          profile: data.user.profile,
+          enrollments: data.user.enrollments,
         }
         setCurrentUser(authenticatedUser)
       }
@@ -173,7 +183,7 @@ export function useAuth() {
     }
   }
 
-  const user = useMemo(() => {
+  const user = useMemo((): User | null => {
     if (currentUser) return currentUser
     if (instantUser) {
       return {
@@ -181,6 +191,11 @@ export function useAuth() {
         email: instantUser.email,
         name: instantUser.email?.split('@')[0] || 'User',
         createdAt: Date.now(),
+        phone: undefined,
+        grade: undefined,
+        role: undefined,
+        profile: undefined,
+        enrollments: undefined,
       }
     }
     return null

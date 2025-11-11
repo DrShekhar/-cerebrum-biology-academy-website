@@ -21,7 +21,8 @@ import { LocationData } from '@/data/locationData'
 import { Button } from '@/components/ui/Button'
 import { Badge } from '@/components/ui/Badge'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
-import { Separator } from '@/components/ui/separator'
+// TODO: Separator component needs to be created at @/components/ui/separator
+// import { Separator } from '@/components/ui/separator'
 
 interface LocationLandingPageProps {
   locationData: LocationData

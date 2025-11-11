@@ -3,13 +3,6 @@
  * Handles Facebook Pixel initialization and event tracking
  */
 
-declare global {
-  interface Window {
-    fbq: any
-    _fbq: any
-  }
-}
-
 export class FacebookPixelService {
   private static isInitialized = false
 

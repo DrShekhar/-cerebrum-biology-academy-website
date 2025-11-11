@@ -184,7 +184,11 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       }
     },
     async signOut(message) {
-      const userEmail = message.session?.user?.email
+      // Handle both token and session types
+      let userEmail: string | undefined
+      if ('session' in message && message.session) {
+        userEmail = (message.session as any).user?.email
+      }
       console.log('User signed out:', userEmail)
 
       // Note: Logout events could be added to audit logger if needed

@@ -35,6 +35,8 @@ import {
   Heart,
   Leaf,
   Dna,
+  ArrowUp,
+  ArrowDown,
   Atom,
   Eye,
   RefreshCw,

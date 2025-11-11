@@ -63,8 +63,8 @@ export const createAdvancedVariants = () => ({
       transition: {
         duration: 0.8,
         delay: i * 0.1,
-        ease: [0.16, 1, 0.3, 1],
-        type: 'spring',
+        ease: [0.16, 1, 0.3, 1] as const,
+        type: 'spring' as const,
         stiffness: 100,
         damping: 15,
       },
@@ -80,7 +80,7 @@ export const createAdvancedVariants = () => ({
       boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
       transition: {
         duration: 0.3,
-        ease: [0.16, 1, 0.3, 1],
+        ease: [0.16, 1, 0.3, 1] as const,
       },
     },
     hover: {
@@ -90,14 +90,14 @@ export const createAdvancedVariants = () => ({
       boxShadow: '0 25px 50px rgba(0,0,0,0.2)',
       transition: {
         duration: 0.3,
-        ease: [0.16, 1, 0.3, 1],
+        ease: [0.16, 1, 0.3, 1] as const,
       },
     },
     tap: {
       scale: 0.98,
       transition: {
         duration: 0.1,
-        ease: [0.4, 0, 0.2, 1],
+        ease: [0.4, 0, 0.2, 1] as const,
       },
     },
   },
@@ -111,7 +111,7 @@ export const createAdvancedVariants = () => ({
       backgroundColor: 'rgba(255,255,255,0.8)',
       transition: {
         duration: 0.2,
-        ease: [0.4, 0, 0.2, 1],
+        ease: [0.4, 0, 0.2, 1] as const,
       },
     },
     selected: {
@@ -121,8 +121,8 @@ export const createAdvancedVariants = () => ({
       backgroundColor: 'rgba(255,255,255,1)',
       transition: {
         duration: 0.4,
-        ease: [0.16, 1, 0.3, 1],
-        type: 'spring',
+        ease: [0.16, 1, 0.3, 1] as const,
+        type: 'spring' as const,
         stiffness: 200,
         damping: 20,
       },
@@ -155,7 +155,7 @@ export const createAdvancedVariants = () => ({
       color: 'rgba(255,255,255,1)',
       transition: {
         duration: 0.3,
-        ease: [0.16, 1, 0.3, 1],
+        ease: [0.16, 1, 0.3, 1] as const,
       },
     },
   },
@@ -171,7 +171,7 @@ export const createAdvancedVariants = () => ({
       height: 'auto',
       transition: {
         duration: 0.5,
-        ease: [0.16, 1, 0.3, 1],
+        ease: [0.16, 1, 0.3, 1] as const,
       },
     },
   },
@@ -183,7 +183,7 @@ export const createAdvancedVariants = () => ({
       transition: {
         duration: 1.5,
         repeat: Infinity,
-        ease: 'easeInOut',
+        ease: 'easeInOut' as const,
       },
     },
   },
@@ -195,7 +195,7 @@ export const createAdvancedVariants = () => ({
       backgroundColor: ['rgba(34,197,94,0.1)', 'rgba(34,197,94,0.2)', 'rgba(34,197,94,0.1)'],
       transition: {
         duration: 0.6,
-        ease: [0.16, 1, 0.3, 1],
+        ease: [0.16, 1, 0.3, 1] as const,
       },
     },
     error: {
@@ -203,7 +203,7 @@ export const createAdvancedVariants = () => ({
       backgroundColor: ['rgba(239,68,68,0.1)', 'rgba(239,68,68,0.2)', 'rgba(239,68,68,0.1)'],
       transition: {
         duration: 0.5,
-        ease: [0.16, 1, 0.3, 1],
+        ease: [0.16, 1, 0.3, 1] as const,
       },
     },
   },
@@ -217,7 +217,7 @@ export const pageTransitions = {
     exit: { y: '-100%', opacity: 0 },
     transition: {
       duration: 0.6,
-      ease: [0.16, 1, 0.3, 1],
+      ease: [0.16, 1, 0.3, 1] as const,
     },
   },
 
@@ -227,7 +227,7 @@ export const pageTransitions = {
     exit: { x: '-100%', opacity: 0 },
     transition: {
       duration: 0.5,
-      ease: [0.16, 1, 0.3, 1],
+      ease: [0.16, 1, 0.3, 1] as const,
     },
   },
 
@@ -237,7 +237,7 @@ export const pageTransitions = {
     exit: { scale: 1.2, opacity: 0 },
     transition: {
       duration: 0.4,
-      ease: [0.16, 1, 0.3, 1],
+      ease: [0.16, 1, 0.3, 1] as const,
     },
   },
 }
@@ -402,7 +402,7 @@ export const componentAnimations = {
     },
     transition: {
       duration: 0.4,
-      ease: [0.16, 1, 0.3, 1],
+      ease: [0.16, 1, 0.3, 1] as const,
       backdropFilter: { duration: 0.3 },
     },
   },

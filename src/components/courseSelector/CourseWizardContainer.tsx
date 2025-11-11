@@ -23,16 +23,26 @@ import { useABTest } from '@/hooks/useABTest'
 import { useCourseAPI } from '@/hooks/useCourseAPI'
 import { usePricingCalculator } from '@/hooks/usePricingCalculator'
 
-import { WizardProgressIndicator } from './wizard/WizardProgressIndicator'
-import { GoalsSelectionStep } from './wizard/steps/GoalsSelectionStep'
-import { BudgetPreferenceStep } from './wizard/steps/BudgetPreferenceStep'
-import { TimeAvailabilityStep } from './wizard/steps/TimeAvailabilityStep'
-import { LocationPreferenceStep } from './wizard/steps/LocationPreferenceStep'
-import { LearningStyleStep } from './wizard/steps/LearningStyleStep'
-import { WeakAreasAssessmentStep } from './wizard/steps/WeakAreasAssessmentStep'
-import { CourseRecommendationsStep } from './wizard/steps/CourseRecommendationsStep'
-import { PricingCalculatorStep } from './wizard/steps/PricingCalculatorStep'
-import { FinalConfirmationStep } from './wizard/steps/FinalConfirmationStep'
+// TODO: These wizard components need to be implemented
+// import { WizardProgressIndicator } from './wizard/WizardProgressIndicator'
+// import { GoalsSelectionStep } from './wizard/steps/GoalsSelectionStep'
+// import { BudgetPreferenceStep } from './wizard/steps/BudgetPreferenceStep'
+// import { TimeAvailabilityStep } from './wizard/steps/TimeAvailabilityStep'
+// import { LocationPreferenceStep } from './wizard/steps/LocationPreferenceStep'
+// import { LearningStyleStep } from './wizard/steps/LearningStyleStep'
+// import { WeakAreasAssessmentStep } from './wizard/steps/WeakAreasAssessmentStep'
+// import { CourseRecommendationsStep } from './wizard/steps/CourseRecommendationsStep'
+// import { PricingCalculatorStep } from './wizard/steps/PricingCalculatorStep'
+// import { FinalConfirmationStep } from './wizard/steps/FinalConfirmationStep'
+
+export interface WizardStepProps {
+  data: any
+  onUpdate: (data: any) => void
+  onNext: () => void
+  onPrev: () => void
+  isValid: boolean
+  variant?: 'default' | 'compact' | 'detailed'
+}
 
 export interface WizardStep {
   id: string
@@ -45,14 +55,26 @@ export interface WizardStep {
   completionWeight: number
 }
 
-export interface WizardStepProps {
-  data: any
-  onUpdate: (data: any) => void
-  onNext: () => void
-  onPrev: () => void
-  isValid: boolean
-  variant?: 'default' | 'compact' | 'detailed'
-}
+// Placeholder components until wizard steps are implemented
+const PlaceholderStep: React.FC<WizardStepProps> = ({ data, onUpdate, onNext, onPrev }) => (
+  <div className="p-8 text-center">
+    <p className="text-gray-600 mb-4">This step component needs to be implemented.</p>
+    <button onClick={onNext} className="px-4 py-2 bg-emerald-600 text-white rounded">
+      Continue
+    </button>
+  </div>
+)
+
+const WizardProgressIndicator: React.FC<any> = () => <div />
+const GoalsSelectionStep = PlaceholderStep
+const BudgetPreferenceStep = PlaceholderStep
+const TimeAvailabilityStep = PlaceholderStep
+const LocationPreferenceStep = PlaceholderStep
+const LearningStyleStep = PlaceholderStep
+const WeakAreasAssessmentStep = PlaceholderStep
+const CourseRecommendationsStep = PlaceholderStep
+const PricingCalculatorStep = PlaceholderStep
+const FinalConfirmationStep = PlaceholderStep
 
 export interface CourseSelectionData {
   goals: {

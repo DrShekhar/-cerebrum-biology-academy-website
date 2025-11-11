@@ -537,6 +537,7 @@ export class TestService {
             totalMarks: session.testTemplate.totalMarks,
             percentage,
             timeSpent: session.timeSpent,
+            topicWiseScore: {},
             status: 'COMPLETED',
             submittedAt: new Date(),
           },
@@ -656,7 +657,7 @@ export class TestService {
       }
 
       // Determine next difficulty based on current performance
-      let nextDifficulty: string
+      let nextDifficulty: 'EASY' | 'MEDIUM' | 'HARD'
       if (currentPerformance >= 80) {
         nextDifficulty = 'HARD'
       } else if (currentPerformance >= 60) {

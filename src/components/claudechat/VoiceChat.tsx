@@ -17,28 +17,6 @@ import {
   MessageCircle,
 } from 'lucide-react'
 
-// Type declaration for SpeechRecognition
-declare global {
-  interface Window {
-    SpeechRecognition: any
-    webkitSpeechRecognition: any
-  }
-}
-
-interface SpeechRecognition extends EventTarget {
-  continuous: boolean
-  interimResults: boolean
-  maxAlternatives: number
-  lang: string
-  start(): void
-  stop(): void
-  abort(): void
-  onresult: ((event: any) => void) | null
-  onerror: ((event: any) => void) | null
-  onend: (() => void) | null
-  onstart: (() => void) | null
-}
-
 interface VoiceMessage {
   id: string
   type: 'user' | 'assistant'

@@ -307,7 +307,7 @@ export function withLogging(
     const session = await validateUserSession(request).catch(() => ({ valid: false }))
 
     console.log(
-      `[${new Date().toISOString()}] ${request.method} ${request.url} - User: ${session.valid ? session.userId : 'anonymous'}`
+      `[${new Date().toISOString()}] ${request.method} ${request.url} - User: ${session.valid && 'userId' in session ? session.userId : 'anonymous'}`
     )
 
     try {

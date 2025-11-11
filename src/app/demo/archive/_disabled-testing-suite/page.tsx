@@ -1,17 +1,17 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { ConversionFunnelChart } from '../../../components/analytics/ConversionFunnelChart'
+import { ConversionFunnelChart } from '../../../../components/analytics/ConversionFunnelChart'
 import {
   HeatmapVisualization,
   InteractiveHeatmap,
   HeatmapStats,
-} from '../../../components/analytics/HeatmapVisualization'
-import { FeedbackModal, QuickFeedbackWidget } from '../../../components/feedback/FeedbackModal'
-import { OptimizationDashboard } from '../../../components/optimization/OptimizationDashboard'
-import { useFeedbackCollection } from '../../../lib/feedback/feedbackCollection'
-import { useHeatmapTracking } from '../../../lib/heatmap/heatmapTracking'
-import { useFunnelAnalytics } from '../../../hooks/useFunnelAnalytics'
+} from '../../../../components/analytics/HeatmapVisualization'
+import { FeedbackModal, QuickFeedbackWidget } from '../../../../components/feedback/FeedbackModal'
+import { OptimizationDashboard } from '../../../../components/optimization/OptimizationDashboard'
+import { useFeedbackCollection } from '../../../../lib/feedback/feedbackCollection'
+import { useHeatmapTracking } from '../../../../lib/heatmap/heatmapTracking'
+import { useFunnelAnalytics } from '../../../../hooks/useFunnelAnalytics'
 
 // Demo data generators
 import {
@@ -19,7 +19,7 @@ import {
   generateDemoHeatmapData,
   generateDemoFeedbackData,
   generateFunnelMetrics,
-} from '../../../lib/demo/demoDataGenerators'
+} from '../../../../lib/demo/demoDataGenerators'
 
 export default function TestingSuiteDemoPage() {
   const [activeDemo, setActiveDemo] = useState<

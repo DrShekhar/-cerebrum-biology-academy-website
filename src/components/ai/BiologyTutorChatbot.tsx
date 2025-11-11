@@ -1,18 +1,6 @@
 'use client'
 
 import React, { useState, useRef, useEffect } from 'react'
-
-// Type declarations for Web Speech API
-interface SpeechRecognitionConstructor {
-  new (): SpeechRecognition
-}
-
-declare global {
-  interface Window {
-    SpeechRecognition?: SpeechRecognitionConstructor
-    webkitSpeechRecognition?: SpeechRecognitionConstructor
-  }
-}
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   MessageCircle,

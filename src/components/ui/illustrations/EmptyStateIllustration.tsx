@@ -20,7 +20,7 @@ export function EmptyStateIllustration({
       transition: {
         duration: 3,
         repeat: Infinity,
-        ease: 'easeInOut',
+        ease: 'easeInOut' as const,
       },
     },
     pulse: {
@@ -28,7 +28,7 @@ export function EmptyStateIllustration({
       transition: {
         duration: 2,
         repeat: Infinity,
-        ease: 'easeInOut',
+        ease: 'easeInOut' as const,
       },
     },
   }
@@ -167,7 +167,7 @@ export function EmptyStateIllustration({
                 }
               : undefined
           }
-          transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+          transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' as const }}
         >
           <circle
             cx="90"

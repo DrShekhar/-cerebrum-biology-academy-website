@@ -4,7 +4,7 @@
  */
 
 import { prisma } from '@/lib/prisma'
-import type { LeadStage } from '@/app/counselor/leads/page'
+import type { LeadStage } from '@prisma/client'
 
 type TaskType =
   | 'FOLLOW_UP'

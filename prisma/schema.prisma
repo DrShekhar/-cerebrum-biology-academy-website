@@ -1178,6 +1178,7 @@ enum DifficultyLevel {
   MEDIUM
   HARD
   EXPERT
+  MIXED
 }
 
 enum QuestionCategory {
@@ -1843,11 +1844,13 @@ model Lead {
 
 enum LeadStage {
   NEW_LEAD
+  CONTACTED
   DEMO_SCHEDULED
   DEMO_COMPLETED
   OFFER_SENT
   NEGOTIATING
   PAYMENT_PLAN_CREATED
+  PAYMENT_PENDING
   ENROLLED
   ACTIVE_STUDENT
   LOST

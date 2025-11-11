@@ -6,7 +6,7 @@ export const premiumAnimations = {
   fadeInUp: {
     initial: { opacity: 0, y: 30 },
     animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] },
+    transition: { duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] as const },
   },
 
   // Premium stagger animations for lists
@@ -26,7 +26,7 @@ export const premiumAnimations = {
       transition: {
         duration: 6,
         repeat: Infinity,
-        ease: 'easeInOut',
+        ease: 'easeInOut' as const,
       },
     },
   },
@@ -36,7 +36,7 @@ export const premiumAnimations = {
     whileHover: {
       scale: 1.02,
       y: -2,
-      transition: { type: 'spring', stiffness: 300, damping: 20 },
+      transition: { type: 'spring' as const, stiffness: 300, damping: 20 },
     },
     whileTap: { scale: 0.98 },
   },
@@ -45,7 +45,7 @@ export const premiumAnimations = {
   academicReveal: {
     initial: { opacity: 0, scale: 0.95 },
     animate: { opacity: 1, scale: 1 },
-    transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
+    transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] as const },
   },
 }
 
