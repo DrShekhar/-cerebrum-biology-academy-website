@@ -7,13 +7,21 @@ import { NextRequest, NextResponse } from 'next/server'
 import { withCounselor } from '@/lib/auth/middleware'
 import { FeePlanService } from '@/lib/counselor/feePlanService'
 
-async function handleGET(
-  req: NextRequest,
-  session: any,
-  context: { params: Promise<{ leadId: string }> }
-) {
+async function handleGET(req: NextRequest, session: any) {
   try {
-    const { leadId } = await context.params
+    // Extract leadId from URL path
+    const pathParts = req.nextUrl.pathname.split('/')
+    const leadId = pathParts[pathParts.length - 1]
+
+    if (!leadId) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: 'Lead ID is required',
+        },
+        { status: 400 }
+      )
+    }
 
     const feePlans = await FeePlanService.getLeadFeePlans(leadId)
 

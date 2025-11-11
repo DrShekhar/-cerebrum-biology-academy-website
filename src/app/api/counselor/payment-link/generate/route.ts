@@ -19,10 +19,15 @@ async function handlePOST(req: NextRequest, session: any) {
   try {
     const body = await req.json()
 
-    const data = generatePaymentLinkSchema.parse(body)
+    const validatedData = generatePaymentLinkSchema.parse(body)
 
-    // Generate payment link
-    const result = await FeePlanService.generateInstallmentPaymentLink(data)
+    // Generate payment link with explicitly typed parameters
+    const result = await FeePlanService.generateInstallmentPaymentLink({
+      installmentId: validatedData.installmentId,
+      studentName: validatedData.studentName,
+      studentEmail: validatedData.studentEmail,
+      studentPhone: validatedData.studentPhone,
+    })
 
     return NextResponse.json({
       success: true,

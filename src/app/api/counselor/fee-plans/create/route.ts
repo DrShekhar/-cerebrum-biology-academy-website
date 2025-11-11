@@ -27,11 +27,21 @@ async function handlePOST(req: NextRequest, session: any) {
     const body = await req.json()
     const counselorId = session.user.id
 
-    const data = createFeePlanSchema.parse(body)
+    const validatedData = createFeePlanSchema.parse(body)
 
-    // Create fee plan
+    // Create fee plan with explicitly typed parameters
     const result = await FeePlanService.createFeePlan({
-      ...data,
+      leadId: validatedData.leadId,
+      courseName: validatedData.courseName,
+      originalAmount: validatedData.originalAmount,
+      discountPercent: validatedData.discountPercent,
+      discountAmount: validatedData.discountAmount,
+      finalAmount: validatedData.finalAmount,
+      numberOfInstallments: validatedData.numberOfInstallments,
+      downPayment: validatedData.downPayment,
+      installmentFrequency: validatedData.installmentFrequency,
+      startDate: validatedData.startDate,
+      notes: validatedData.notes,
       counselorId,
     })
 

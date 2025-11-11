@@ -136,11 +136,13 @@ async function handleGET(req: NextRequest, session: any) {
       {} as Record<string, number>
     )
 
-    const stageDistribution = Object.entries(stageCount).map(([stage, count]) => ({
-      stage: stage.replace(/_/g, ' '),
-      count,
-      percentage: Math.round((count / totalLeads) * 100) || 0,
-    }))
+    const stageDistribution = Object.entries(stageCount).map(
+      ([stage, count]: [string, number]) => ({
+        stage: stage.replace(/_/g, ' '),
+        count,
+        percentage: Math.round((count / totalLeads) * 100) || 0,
+      })
+    )
 
     const totalRevenue = feePlans.reduce((sum, fp) => sum + fp.finalAmount, 0)
     const paidRevenue = payments

@@ -26,11 +26,20 @@ async function handlePOST(req: NextRequest, session: any) {
     const body = await req.json()
     const counselorId = session.user.id
 
-    const data = createOfferSchema.parse(body)
+    const validatedData = createOfferSchema.parse(body)
 
-    // Create offer
+    // Create offer with explicitly typed parameters
     const offer = await FeePlanService.createOffer({
-      ...data,
+      leadId: validatedData.leadId,
+      offerName: validatedData.offerName,
+      description: validatedData.description,
+      discountType: validatedData.discountType,
+      discountValue: validatedData.discountValue,
+      validUntil: validatedData.validUntil,
+      minAmount: validatedData.minAmount,
+      maxDiscount: validatedData.maxDiscount,
+      coursesIncluded: validatedData.coursesIncluded,
+      termsAndConditions: validatedData.termsAndConditions,
       counselorId,
     })
 
