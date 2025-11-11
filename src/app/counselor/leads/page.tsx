@@ -147,6 +147,55 @@ export default function LeadsPage() {
 
   const activeLead = leads.find((lead) => lead.id === activeId)
 
+  const exportToCSV = () => {
+    const headers = [
+      'Student Name',
+      'Email',
+      'Phone',
+      'Course',
+      'Stage',
+      'Priority',
+      'Source',
+      'Created Date',
+      'Last Contacted',
+      'Next Follow-up',
+      'Communications',
+      'Tasks',
+      'Notes',
+    ]
+
+    const csvData = filteredLeads.map((lead) => [
+      lead.studentName,
+      lead.email || '',
+      lead.phone,
+      lead.courseInterest,
+      lead.stage.replace(/_/g, ' '),
+      lead.priority,
+      lead.source?.replace(/_/g, ' ') || '',
+      new Date(lead.createdAt).toLocaleDateString(),
+      lead.lastContactedAt ? new Date(lead.lastContactedAt).toLocaleDateString() : '',
+      lead.nextFollowUpAt ? new Date(lead.nextFollowUpAt).toLocaleDateString() : '',
+      lead._count?.communications?.toString() || '0',
+      lead._count?.tasks?.toString() || '0',
+      lead._count?.notes?.toString() || '0',
+    ])
+
+    const csvContent = [
+      headers.join(','),
+      ...csvData.map((row) => row.map((cell) => `"${cell}"`).join(',')),
+    ].join('\n')
+
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' })
+    const link = document.createElement('a')
+    const url = URL.createObjectURL(blob)
+    link.setAttribute('href', url)
+    link.setAttribute('download', `cerebrum-leads-${new Date().toISOString().split('T')[0]}.csv`)
+    link.style.visibility = 'hidden'
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+  }
+
   if (loading) {
     return (
       <div className="flex items-center justify-center h-96">
@@ -222,6 +271,7 @@ export default function LeadsPage() {
             <button
               onClick={fetchLeads}
               className="px-4 py-2 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
+              title="Refresh"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path
@@ -231,6 +281,22 @@ export default function LeadsPage() {
                   d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
                 />
               </svg>
+            </button>
+
+            <button
+              onClick={exportToCSV}
+              className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors font-medium flex items-center gap-2"
+              title="Export to CSV"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                />
+              </svg>
+              Export
             </button>
 
             <button
