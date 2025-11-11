@@ -9,6 +9,7 @@ import { WhatsAppMessageModal } from './WhatsAppMessageModal'
 import { FeePlanModal } from './FeePlanModal'
 import { SendMessageModal } from './SendMessageModal'
 import { CommunicationHistoryTimeline } from './CommunicationHistoryTimeline'
+import { OfferLetterModal } from './OfferLetterModal'
 
 interface LeadCardProps {
   lead: Lead
@@ -46,6 +47,9 @@ export function LeadCard({ lead, isDragging = false, onRefresh }: LeadCardProps)
   const [isFeePlanModalOpen, setIsFeePlanModalOpen] = useState(false)
   const [isSendMessageModalOpen, setIsSendMessageModalOpen] = useState(false)
   const [isCommHistoryOpen, setIsCommHistoryOpen] = useState(false)
+  const [isOfferLetterModalOpen, setIsOfferLetterModalOpen] = useState(false)
+  const [selectedOfferId, setSelectedOfferId] = useState<string | null>(null)
+  const [selectedFeePlanId, setSelectedFeePlanId] = useState<string | null>(null)
 
   const {
     attributes,
@@ -93,6 +97,58 @@ export function LeadCard({ lead, isDragging = false, onRefresh }: LeadCardProps)
   const handleFeePlanClick = (e: React.MouseEvent) => {
     e.stopPropagation()
     setIsFeePlanModalOpen(true)
+  }
+
+  const handleOfferLetterClick = async (e: React.MouseEvent) => {
+    e.stopPropagation()
+
+    try {
+      // Fetch offers and fee plans for this lead
+      const [offersRes, feePlansRes] = await Promise.all([
+        fetch(`/api/counselor/offers?leadId=${lead.id}`),
+        fetch(`/api/counselor/fee-plans/${lead.id}`),
+      ])
+
+      if (!offersRes.ok || !feePlansRes.ok) {
+        alert('Failed to fetch offer data. Please try again.')
+        return
+      }
+
+      const offersData = await offersRes.json()
+      const feePlansData = await feePlansRes.json()
+
+      const offers = offersData.data || []
+      const feePlans = feePlansData.data || []
+
+      // Check if we have both offers and fee plans
+      if (offers.length === 0) {
+        alert('No offers found for this lead. Please create an offer first.')
+        return
+      }
+
+      if (feePlans.length === 0) {
+        alert('No fee plans found for this lead. Please create a fee plan first.')
+        return
+      }
+
+      // Select the most recent offer and fee plan
+      const latestOffer = offers[0]
+      const latestFeePlan = feePlans[0]
+
+      // Check if offer is still valid
+      if (latestOffer.status === 'EXPIRED' || latestOffer.status === 'REJECTED') {
+        alert(`Cannot generate offer letter. Offer is ${latestOffer.status.toLowerCase()}.`)
+        return
+      }
+
+      // Set IDs and open modal
+      setSelectedOfferId(latestOffer.id)
+      setSelectedFeePlanId(latestFeePlan.id)
+      setIsOfferLetterModalOpen(true)
+    } catch (error) {
+      console.error('Error fetching offer data:', error)
+      alert('Failed to load offer data. Please try again.')
+    }
   }
 
   const handleSuccess = () => {
@@ -314,6 +370,21 @@ export function LeadCard({ lead, isDragging = false, onRefresh }: LeadCardProps)
           </svg>
           Create Fee Plan
         </button>
+
+        <button
+          onClick={handleOfferLetterClick}
+          className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white px-3 py-2 rounded-lg text-xs font-medium transition-colors"
+        >
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+            />
+          </svg>
+          Offer Letter
+        </button>
       </div>
 
       <WhatsAppMessageModal
@@ -343,6 +414,21 @@ export function LeadCard({ lead, isDragging = false, onRefresh }: LeadCardProps)
         onClose={() => setIsCommHistoryOpen(false)}
         studentName={lead.studentName}
       />
+
+      {selectedOfferId && selectedFeePlanId && (
+        <OfferLetterModal
+          isOpen={isOfferLetterModalOpen}
+          onClose={() => {
+            setIsOfferLetterModalOpen(false)
+            setSelectedOfferId(null)
+            setSelectedFeePlanId(null)
+          }}
+          leadId={lead.id}
+          feePlanId={selectedFeePlanId}
+          offerId={selectedOfferId}
+          studentName={lead.studentName}
+        />
+      )}
     </div>
   )
 }
