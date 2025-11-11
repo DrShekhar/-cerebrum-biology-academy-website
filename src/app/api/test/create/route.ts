@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { z } from 'zod'
-import { withAuth } from '@/lib/auth/middleware'
+import { validateUserSession } from '@/lib/auth/config'
 import { withRateLimit } from '@/lib/middleware/rateLimit'
 import { withValidation } from '@/lib/middleware/validation'
 import { logger } from '@/lib/utils/logger'
@@ -9,8 +9,28 @@ import { logger } from '@/lib/utils/logger'
 // Validation schema for test creation
 const createTestSchema = z.object({
   testTemplateId: z.string().optional(),
-  testType: z.enum(['PRACTICE_TEST', 'MOCK_TEST', 'FULL_TEST', 'QUICK_TEST', 'ADAPTIVE_TEST', 'TIMED_TEST', 'DIAGNOSTIC_TEST']).default('PRACTICE_TEST'),
-  category: z.enum(['TOPIC_WISE', 'SUBJECT_WISE', 'FULL_SYLLABUS', 'CHAPTER_WISE', 'DIFFICULTY_WISE', 'PREVIOUS_YEAR', 'MIXED']).default('TOPIC_WISE'),
+  testType: z
+    .enum([
+      'PRACTICE_TEST',
+      'MOCK_TEST',
+      'FULL_TEST',
+      'QUICK_TEST',
+      'ADAPTIVE_TEST',
+      'TIMED_TEST',
+      'DIAGNOSTIC_TEST',
+    ])
+    .default('PRACTICE_TEST'),
+  category: z
+    .enum([
+      'TOPIC_WISE',
+      'SUBJECT_WISE',
+      'FULL_SYLLABUS',
+      'CHAPTER_WISE',
+      'DIFFICULTY_WISE',
+      'PREVIOUS_YEAR',
+      'MIXED',
+    ])
+    .default('TOPIC_WISE'),
   curriculum: z.string().default('NEET'),
   grade: z.string().default('CLASS_12'),
   subject: z.string().default('biology'),
@@ -19,13 +39,15 @@ const createTestSchema = z.object({
   questionCount: z.number().min(1).max(200).default(30),
   timeLimit: z.number().min(1).max(480).default(60), // minutes
   negativeMarking: z.boolean().default(false),
-  customSettings: z.object({
-    isAdaptive: z.boolean().default(false),
-    shuffleQuestions: z.boolean().default(true),
-    showResults: z.boolean().default(true),
-    allowReview: z.boolean().default(true),
-    enableProctoring: z.boolean().default(false)
-  }).optional()
+  customSettings: z
+    .object({
+      isAdaptive: z.boolean().default(false),
+      shuffleQuestions: z.boolean().default(true),
+      showResults: z.boolean().default(true),
+      allowReview: z.boolean().default(true),
+      enableProctoring: z.boolean().default(false),
+    })
+    .optional(),
 })
 
 async function generateTestQuestions(params: {
@@ -48,12 +70,12 @@ async function generateTestQuestions(params: {
         grade,
         subject,
         isActive: true,
-        isVerified: true
+        isVerified: true,
       },
       orderBy: {
-        popularityScore: 'desc'
+        popularityScore: 'desc',
       },
-      take: questionCount * 2 // Get more questions to allow for randomization
+      take: questionCount * 2, // Get more questions to allow for randomization
     })
 
     if (questions.length < questionCount) {
@@ -64,16 +86,18 @@ async function generateTestQuestions(params: {
           curriculum,
           subject,
           isActive: true,
-          isVerified: true
+          isVerified: true,
         },
         orderBy: {
-          popularityScore: 'desc'
+          popularityScore: 'desc',
         },
-        take: questionCount
+        take: questionCount,
       })
 
       if (additionalQuestions.length < questionCount) {
-        throw new Error(`Not enough questions available. Found ${additionalQuestions.length}, need ${questionCount}`)
+        throw new Error(
+          `Not enough questions available. Found ${additionalQuestions.length}, need ${questionCount}`
+        )
       }
 
       return additionalQuestions.slice(0, questionCount)
@@ -94,21 +118,26 @@ export async function POST(request: NextRequest) {
     const validatedData = createTestSchema.parse(body)
 
     // Extract user from auth middleware
-    const authResult = await withAuth(request)
-    if (!authResult.success) {
+    const session = await validateUserSession(request)
+    if (!session.valid) {
       return NextResponse.json(
         { error: 'Authentication required', code: 'AUTH_REQUIRED' },
         { status: 401 }
       )
     }
 
-    const { user } = authResult
+    const user = {
+      id: session.userId!,
+      role: session.role!,
+      email: session.email!,
+      name: session.name!,
+    }
 
     // Rate limiting
     const rateLimitResult = await withRateLimit(request, {
       identifier: user.id,
       limit: 10, // 10 test creations per hour
-      window: 3600000
+      window: 3600000,
     })
 
     if (!rateLimitResult.success) {
@@ -125,7 +154,7 @@ export async function POST(request: NextRequest) {
       questionCount: validatedData.questionCount,
       curriculum: validatedData.curriculum,
       grade: validatedData.grade,
-      subject: validatedData.subject
+      subject: validatedData.subject,
     })
 
     // Create test template if not provided
@@ -151,8 +180,8 @@ export async function POST(request: NextRequest) {
           isAdaptive: validatedData.customSettings?.isAdaptive || false,
           isActive: true,
           isPublished: false, // Auto-generated tests are not published by default
-          createdBy: user.id
-        }
+          createdBy: user.id,
+        },
       })
       testTemplateId = testTemplate.id
     }
@@ -167,9 +196,9 @@ export async function POST(request: NextRequest) {
         remainingTime: validatedData.timeLimit * 60, // Convert to seconds
         browserInfo: {
           userAgent: request.headers.get('user-agent'),
-          ip: request.headers.get('x-forwarded-for') || 'unknown'
+          ip: request.headers.get('x-forwarded-for') || 'unknown',
         },
-        ipAddress: request.headers.get('x-forwarded-for') || 'unknown'
+        ipAddress: request.headers.get('x-forwarded-for') || 'unknown',
       },
       include: {
         testTemplate: {
@@ -185,10 +214,10 @@ export async function POST(request: NextRequest) {
             totalMarks: true,
             topics: true,
             negativeMarking: true,
-            isAdaptive: true
-          }
-        }
-      }
+            isAdaptive: true,
+          },
+        },
+      },
     })
 
     // Create question bank for this test session
@@ -205,8 +234,8 @@ export async function POST(request: NextRequest) {
         activeQuestions: questions.length,
         isActive: true,
         isPublic: false,
-        createdBy: user.id
-      }
+        createdBy: user.id,
+      },
     })
 
     // Add questions to the question bank
@@ -216,8 +245,8 @@ export async function POST(request: NextRequest) {
         questionId: question.id,
         testTemplateId: testTemplateId,
         orderIndex: index,
-        groupLabel: `Question ${index + 1}`
-      }))
+        groupLabel: `Question ${index + 1}`,
+      })),
     })
 
     // Log test creation
@@ -226,15 +255,15 @@ export async function POST(request: NextRequest) {
       userId: user.id,
       testTemplateId,
       questionCount: questions.length,
-      topics: validatedData.topics
+      topics: validatedData.topics,
     })
 
     // Update test template attempt count
     await prisma.testTemplate.update({
       where: { id: testTemplateId },
       data: {
-        attemptCount: { increment: 1 }
-      }
+        attemptCount: { increment: 1 },
+      },
     })
 
     return NextResponse.json({
@@ -247,11 +276,11 @@ export async function POST(request: NextRequest) {
           timeLimit: testSession.testTemplate?.timeLimit,
           remainingTime: testSession.remainingTime,
           currentQuestionIndex: testSession.currentQuestionIndex,
-          testTemplate: testSession.testTemplate
+          testTemplate: testSession.testTemplate,
         },
         questionBank: {
           id: questionBank.id,
-          totalQuestions: questions.length
+          totalQuestions: questions.length,
         },
         questions: questions.map((q, index) => ({
           id: q.id,
@@ -260,17 +289,16 @@ export async function POST(request: NextRequest) {
           difficulty: q.difficulty,
           type: q.type,
           marks: q.marks,
-          timeLimit: q.timeLimit
-        }))
+          timeLimit: q.timeLimit,
+        })),
       },
       meta: {
         questionsGenerated: questions.length,
         requestedQuestions: validatedData.questionCount,
         topics: validatedData.topics,
-        difficulty: validatedData.difficulty
-      }
+        difficulty: validatedData.difficulty,
+      },
     })
-
   } catch (error) {
     logger.error('Error creating test session:', error)
 
@@ -279,7 +307,7 @@ export async function POST(request: NextRequest) {
         {
           error: 'Validation failed',
           code: 'VALIDATION_ERROR',
-          details: error.errors
+          details: error.errors,
         },
         { status: 400 }
       )
@@ -289,7 +317,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json(
         {
           error: error.message,
-          code: 'INSUFFICIENT_QUESTIONS'
+          code: 'INSUFFICIENT_QUESTIONS',
         },
         { status: 400 }
       )
@@ -298,7 +326,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json(
       {
         error: 'Failed to create test session',
-        code: 'INTERNAL_ERROR'
+        code: 'INTERNAL_ERROR',
       },
       { status: 500 }
     )
@@ -308,8 +336,8 @@ export async function POST(request: NextRequest) {
 // GET method to retrieve test creation options
 export async function GET(request: NextRequest) {
   try {
-    const authResult = await withAuth(request)
-    if (!authResult.success) {
+    const session = await validateUserSession(request)
+    if (!session.valid) {
       return NextResponse.json(
         { error: 'Authentication required', code: 'AUTH_REQUIRED' },
         { status: 401 }
@@ -321,39 +349,54 @@ export async function GET(request: NextRequest) {
       prisma.question.findMany({
         select: { topic: true },
         distinct: ['topic'],
-        where: { isActive: true, isVerified: true }
+        where: { isActive: true, isVerified: true },
       }),
       prisma.question.findMany({
         select: { curriculum: true },
         distinct: ['curriculum'],
-        where: { isActive: true, isVerified: true }
+        where: { isActive: true, isVerified: true },
       }),
       prisma.question.findMany({
         select: { grade: true },
         distinct: ['grade'],
-        where: { isActive: true, isVerified: true }
-      })
+        where: { isActive: true, isVerified: true },
+      }),
     ])
 
     return NextResponse.json({
       success: true,
       data: {
-        availableTopics: topics.map(t => t.topic),
-        availableCurricula: curricula.map(c => c.curriculum),
-        availableGrades: grades.map(g => g.grade),
-        testTypes: ['PRACTICE_TEST', 'MOCK_TEST', 'FULL_TEST', 'QUICK_TEST', 'ADAPTIVE_TEST', 'TIMED_TEST', 'DIAGNOSTIC_TEST'],
-        categories: ['TOPIC_WISE', 'SUBJECT_WISE', 'FULL_SYLLABUS', 'CHAPTER_WISE', 'DIFFICULTY_WISE', 'PREVIOUS_YEAR', 'MIXED'],
+        availableTopics: topics.map((t) => t.topic),
+        availableCurricula: curricula.map((c) => c.curriculum),
+        availableGrades: grades.map((g) => g.grade),
+        testTypes: [
+          'PRACTICE_TEST',
+          'MOCK_TEST',
+          'FULL_TEST',
+          'QUICK_TEST',
+          'ADAPTIVE_TEST',
+          'TIMED_TEST',
+          'DIAGNOSTIC_TEST',
+        ],
+        categories: [
+          'TOPIC_WISE',
+          'SUBJECT_WISE',
+          'FULL_SYLLABUS',
+          'CHAPTER_WISE',
+          'DIFFICULTY_WISE',
+          'PREVIOUS_YEAR',
+          'MIXED',
+        ],
         difficulties: ['EASY', 'MEDIUM', 'HARD', 'EXPERT'],
-        subjects: ['biology', 'botany', 'zoology']
-      }
+        subjects: ['biology', 'botany', 'zoology'],
+      },
     })
-
   } catch (error) {
     logger.error('Error fetching test creation options:', error)
     return NextResponse.json(
       {
         error: 'Failed to fetch test creation options',
-        code: 'INTERNAL_ERROR'
+        code: 'INTERNAL_ERROR',
       },
       { status: 500 }
     )
