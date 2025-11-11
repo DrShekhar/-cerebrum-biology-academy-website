@@ -53,7 +53,7 @@ export function CreateLeadModal({ isOpen, onClose, onSuccess }: CreateLeadModalP
           email,
           phone,
           courseInterest,
-          source: source.trim() || 'Manual Entry',
+          source: source.trim() || 'MANUAL_ENTRY',
           priority,
         }),
       })
@@ -240,17 +240,17 @@ export function CreateLeadModal({ isOpen, onClose, onSuccess }: CreateLeadModalP
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
                 disabled={creating}
               >
-                <option value="">Manual Entry</option>
-                <option value="Walk-in">Walk-in</option>
-                <option value="Phone Call">Phone Call</option>
-                <option value="Referral">Referral</option>
-                <option value="WhatsApp">WhatsApp</option>
-                <option value="Email">Email</option>
-                <option value="Social Media">Social Media</option>
-                <option value="Website">Website</option>
-                <option value="Advertisement">Advertisement</option>
-                <option value="Event">Event</option>
-                <option value="Other">Other</option>
+                <option value="MANUAL_ENTRY">Manual Entry</option>
+                <option value="WALK_IN">Walk-in</option>
+                <option value="PHONE_CALL">Phone Call</option>
+                <option value="REFERRAL">Referral</option>
+                <option value="WHATSAPP">WhatsApp</option>
+                <option value="EMAIL">Email</option>
+                <option value="SOCIAL_MEDIA">Social Media</option>
+                <option value="WEBSITE">Website</option>
+                <option value="ADVERTISEMENT">Advertisement</option>
+                <option value="EVENT">Event</option>
+                <option value="OTHER">Other</option>
               </select>
             </div>
 

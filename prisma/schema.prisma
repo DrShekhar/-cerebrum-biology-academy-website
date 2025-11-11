@@ -1804,8 +1804,8 @@ model Lead {
   phone          String
   courseInterest String
   stage          LeadStage @default(NEW_LEAD)
-  priority       Priority  @default(WARM)
-  source         String?
+  priority       Priority   @default(WARM)
+  source         LeadSource @default(MANUAL_ENTRY)
 
   // Assignment
   assignedToId String
@@ -1856,6 +1856,20 @@ enum Priority {
   HOT
   WARM
   COLD
+}
+
+enum LeadSource {
+  MANUAL_ENTRY
+  WALK_IN
+  PHONE_CALL
+  REFERRAL
+  WHATSAPP
+  EMAIL
+  SOCIAL_MEDIA
+  WEBSITE
+  ADVERTISEMENT
+  EVENT
+  OTHER
 }
 
 model Communication {
