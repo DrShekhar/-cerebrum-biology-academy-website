@@ -159,15 +159,14 @@ class PaymentReminderService {
     )
 
     const lead = installment.feePlan.lead
-    const amountFormatted = `₹${Number(installment.amount).toLocaleString('en-IN')}`
 
     const reminderSent = await notificationService.sendPaymentReminder({
       leadId: lead.id,
       studentName: lead.studentName,
       email: lead.email || undefined,
       phone: lead.phone,
-      amount: amountFormatted,
-      dueDate: format(installment.dueDate, 'MMM dd, yyyy'),
+      amount: Number(installment.amount),
+      dueDate: installment.dueDate,
       installmentNumber: installment.installmentNumber,
       isOverdue: true,
       priority: 'URGENT',
@@ -226,7 +225,6 @@ class PaymentReminderService {
     )
 
     const lead = installment.feePlan.lead
-    const amountFormatted = `₹${Number(installment.amount).toLocaleString('en-IN')}`
 
     const priority = this.getPriorityByDaysRemaining(daysUntilDue)
 
@@ -235,8 +233,8 @@ class PaymentReminderService {
       studentName: lead.studentName,
       email: lead.email || undefined,
       phone: lead.phone,
-      amount: amountFormatted,
-      dueDate: format(installment.dueDate, 'MMM dd, yyyy'),
+      amount: Number(installment.amount),
+      dueDate: installment.dueDate,
       installmentNumber: installment.installmentNumber,
       isOverdue: false,
       priority,
@@ -378,7 +376,6 @@ Action Required:
       const now = new Date()
       const daysUntilDue = differenceInDays(installment.dueDate, now)
       const isOverdue = daysUntilDue < 0
-      const amountFormatted = `₹${Number(installment.amount).toLocaleString('en-IN')}`
 
       console.log(
         `📤 Sending manual reminder for ${lead.studentName} - Installment ${installment.installmentNumber}`
@@ -389,8 +386,8 @@ Action Required:
         studentName: lead.studentName,
         email: lead.email || undefined,
         phone: lead.phone,
-        amount: amountFormatted,
-        dueDate: format(installment.dueDate, 'MMM dd, yyyy'),
+        amount: Number(installment.amount),
+        dueDate: installment.dueDate,
         installmentNumber: installment.installmentNumber,
         isOverdue,
         priority: isOverdue ? 'URGENT' : 'MEDIUM',

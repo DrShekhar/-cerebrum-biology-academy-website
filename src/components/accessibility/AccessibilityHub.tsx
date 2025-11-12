@@ -39,7 +39,7 @@ import {
   HelpCircle,
   Accessibility,
   Hand,
-  Navigation
+  Navigation,
 } from 'lucide-react'
 
 interface AccessibilitySettings {
@@ -122,7 +122,9 @@ export const useAccessibility = () => {
 }
 
 const AccessibilityHub: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'profiles' | 'settings' | 'support' | 'testing' | 'guide'>('profiles')
+  const [activeTab, setActiveTab] = useState<
+    'profiles' | 'settings' | 'support' | 'testing' | 'guide'
+  >('profiles')
   const [settings, setSettings] = useState<AccessibilitySettings>({
     // Visual defaults
     highContrast: false,
@@ -166,7 +168,7 @@ const AccessibilityHub: React.FC = () => {
     dyslexiaSupport: false,
     adhd_support: false,
     autismSupport: false,
-    learningDisabilitySupport: false
+    learningDisabilitySupport: false,
   })
 
   const [activeProfile, setActiveProfile] = useState<string | null>(null)
@@ -189,8 +191,8 @@ const AccessibilityHub: React.FC = () => {
         keyboardNavigation: true,
         focusIndicators: true,
         soundEffects: true,
-        voiceGender: 'neutral'
-      }
+        voiceGender: 'neutral',
+      },
     },
     {
       id: 'hearing-impairment',
@@ -205,8 +207,8 @@ const AccessibilityHub: React.FC = () => {
         soundEffects: false,
         backgroundMusic: false,
         focusIndicators: true,
-        translationSupport: true
-      }
+        translationSupport: true,
+      },
     },
     {
       id: 'motor-impairment',
@@ -221,8 +223,8 @@ const AccessibilityHub: React.FC = () => {
         clickHold: true,
         gestureNavigation: false,
         extendedTimeouts: true,
-        simplifiedInterface: true
-      }
+        simplifiedInterface: true,
+      },
     },
     {
       id: 'dyslexia',
@@ -238,8 +240,8 @@ const AccessibilityHub: React.FC = () => {
         simplifiedInterface: true,
         memoryAids: true,
         pictorialSupport: true,
-        easyRead: true
-      }
+        easyRead: true,
+      },
     },
     {
       id: 'adhd',
@@ -255,8 +257,8 @@ const AccessibilityHub: React.FC = () => {
         reducedMotion: true,
         backgroundMusic: false,
         memoryAids: true,
-        cognitiveSupport: true
-      }
+        cognitiveSupport: true,
+      },
     },
     {
       id: 'autism',
@@ -273,8 +275,8 @@ const AccessibilityHub: React.FC = () => {
         soundEffects: false,
         backgroundMusic: false,
         cognitiveSupport: true,
-        memoryAids: true
-      }
+        memoryAids: true,
+      },
     },
     {
       id: 'elderly',
@@ -290,9 +292,9 @@ const AccessibilityHub: React.FC = () => {
         mouseDelay: 300,
         highContrast: true,
         reducedMotion: true,
-        audioDescriptions: true
-      }
-    }
+        audioDescriptions: true,
+      },
+    },
   ]
 
   // Learning accommodations
@@ -303,7 +305,11 @@ const AccessibilityHub: React.FC = () => {
       description: 'Converts all text content to spoken audio',
       type: 'auditory',
       implementation: 'Screen reader integration with natural voice synthesis',
-      benefits: ['Supports visual impairments', 'Aids reading difficulties', 'Multisensory learning']
+      benefits: [
+        'Supports visual impairments',
+        'Aids reading difficulties',
+        'Multisensory learning',
+      ],
     },
     {
       id: 'visual-indicators',
@@ -311,7 +317,7 @@ const AccessibilityHub: React.FC = () => {
       description: 'High-contrast focus indicators and navigation cues',
       type: 'visual',
       implementation: 'CSS-based focus rings, color coding, and visual feedback',
-      benefits: ['Keyboard navigation support', 'Better visual tracking', 'Reduced cognitive load']
+      benefits: ['Keyboard navigation support', 'Better visual tracking', 'Reduced cognitive load'],
     },
     {
       id: 'simplified-navigation',
@@ -319,7 +325,7 @@ const AccessibilityHub: React.FC = () => {
       description: 'Streamlined interface with essential elements only',
       type: 'cognitive',
       implementation: 'Adaptive UI that hides secondary features and reduces complexity',
-      benefits: ['Reduces distractions', 'Easier decision making', 'Better focus']
+      benefits: ['Reduces distractions', 'Easier decision making', 'Better focus'],
     },
     {
       id: 'memory-aids',
@@ -327,7 +333,7 @@ const AccessibilityHub: React.FC = () => {
       description: 'Visual and audio reminders for learning progress',
       type: 'cognitive',
       implementation: 'Progress trackers, bookmarks, and learning path visualization',
-      benefits: ['Supports working memory', 'Progress tracking', 'Learning reinforcement']
+      benefits: ['Supports working memory', 'Progress tracking', 'Learning reinforcement'],
     },
     {
       id: 'multi-language',
@@ -335,26 +341,27 @@ const AccessibilityHub: React.FC = () => {
       description: 'Content available in multiple Indian languages',
       type: 'communication',
       implementation: 'Real-time translation with context-aware biology terminology',
-      benefits: ['Language accessibility', 'Cultural relevance', 'Broader reach']
-    }
+      benefits: ['Language accessibility', 'Cultural relevance', 'Broader reach'],
+    },
   ]
 
   useEffect(() => {
     // Check for system preferences
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
     if (mediaQuery.matches) {
-      setSettings(prev => ({ ...prev, reducedMotion: true }))
+      setSettings((prev) => ({ ...prev, reducedMotion: true }))
     }
 
     const contrastQuery = window.matchMedia('(prefers-contrast: high)')
     if (contrastQuery.matches) {
-      setSettings(prev => ({ ...prev, highContrast: true }))
+      setSettings((prev) => ({ ...prev, highContrast: true }))
     }
 
     // Detect screen reader
-    const screenReaderDetected = window.navigator.userAgent.includes('NVDA') ||
-                                window.navigator.userAgent.includes('JAWS') ||
-                                window.speechSynthesis
+    const screenReaderDetected =
+      window.navigator.userAgent.includes('NVDA') ||
+      window.navigator.userAgent.includes('JAWS') ||
+      !!window.speechSynthesis
     setIsScreenReaderActive(screenReaderDetected)
 
     // Apply settings to document
@@ -400,11 +407,11 @@ const AccessibilityHub: React.FC = () => {
   }
 
   const updateSettings = (newSettings: Partial<AccessibilitySettings>) => {
-    setSettings(prev => ({ ...prev, ...newSettings }))
+    setSettings((prev) => ({ ...prev, ...newSettings }))
   }
 
   const applyProfile = (profile: AccessibilityProfile) => {
-    setSettings(prev => ({ ...prev, ...profile.settings }))
+    setSettings((prev) => ({ ...prev, ...profile.settings }))
     setActiveProfile(profile.id)
   }
 
@@ -442,7 +449,7 @@ const AccessibilityHub: React.FC = () => {
       dyslexiaSupport: false,
       adhd_support: false,
       autismSupport: false,
-      learningDisabilitySupport: false
+      learningDisabilitySupport: false,
     }
     setSettings(defaultSettings)
     setActiveProfile(null)
@@ -474,8 +481,8 @@ const AccessibilityHub: React.FC = () => {
             </h1>
           </div>
           <p className="text-gray-600 max-w-3xl mx-auto">
-            Customize your learning experience with comprehensive accessibility features.
-            We support diverse learning needs and abilities.
+            Customize your learning experience with comprehensive accessibility features. We support
+            diverse learning needs and abilities.
           </p>
         </motion.div>
 
@@ -505,7 +512,9 @@ const AccessibilityHub: React.FC = () => {
               <button
                 onClick={() => updateSettings({ audioDescriptions: !settings.audioDescriptions })}
                 className={`flex items-center gap-2 px-3 py-2 rounded-lg transition-colors ${
-                  settings.audioDescriptions ? 'bg-green-500 text-white' : 'bg-gray-200 text-gray-700'
+                  settings.audioDescriptions
+                    ? 'bg-green-500 text-white'
+                    : 'bg-gray-200 text-gray-700'
                 }`}
               >
                 <Volume2 className="w-4 h-4" />
@@ -530,7 +539,7 @@ const AccessibilityHub: React.FC = () => {
               { id: 'settings', label: 'Settings', icon: Settings },
               { id: 'support', label: 'Support', icon: Lightbulb },
               { id: 'testing', label: 'Testing', icon: Target },
-              { id: 'guide', label: 'Guide', icon: Book }
+              { id: 'guide', label: 'Guide', icon: Book },
             ].map(({ id, label, icon: Icon }) => (
               <button
                 key={id}
@@ -562,8 +571,8 @@ const AccessibilityHub: React.FC = () => {
               <div className="bg-white rounded-xl p-6 border">
                 <h3 className="text-lg font-semibold mb-4">Accessibility Profiles</h3>
                 <p className="text-gray-600 mb-6">
-                  Choose a pre-configured profile that matches your accessibility needs,
-                  or customize individual settings below.
+                  Choose a pre-configured profile that matches your accessibility needs, or
+                  customize individual settings below.
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -579,9 +588,11 @@ const AccessibilityHub: React.FC = () => {
                       }`}
                     >
                       <div className="flex items-center gap-3 mb-3">
-                        <div className={`p-2 rounded-lg ${
-                          activeProfile === profile.id ? 'bg-indigo-100' : 'bg-gray-100'
-                        }`}>
+                        <div
+                          className={`p-2 rounded-lg ${
+                            activeProfile === profile.id ? 'bg-indigo-100' : 'bg-gray-100'
+                          }`}
+                        >
                           {profile.icon}
                         </div>
                         <h4 className="font-semibold text-gray-800">{profile.name}</h4>
@@ -630,9 +641,11 @@ const AccessibilityHub: React.FC = () => {
                         settings.highContrast ? 'bg-indigo-600' : 'bg-gray-200'
                       }`}
                     >
-                      <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                        settings.highContrast ? 'translate-x-6' : 'translate-x-1'
-                      }`} />
+                      <span
+                        className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                          settings.highContrast ? 'translate-x-6' : 'translate-x-1'
+                        }`}
+                      />
                     </button>
                   </div>
 
@@ -660,7 +673,9 @@ const AccessibilityHub: React.FC = () => {
                       max="3"
                       step="0.1"
                       value={settings.magnification}
-                      onChange={(e) => updateSettings({ magnification: parseFloat(e.target.value) })}
+                      onChange={(e) =>
+                        updateSettings({ magnification: parseFloat(e.target.value) })
+                      }
                       className="w-full"
                     />
                   </div>
@@ -673,23 +688,29 @@ const AccessibilityHub: React.FC = () => {
                         settings.reducedMotion ? 'bg-indigo-600' : 'bg-gray-200'
                       }`}
                     >
-                      <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                        settings.reducedMotion ? 'translate-x-6' : 'translate-x-1'
-                      }`} />
+                      <span
+                        className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                          settings.reducedMotion ? 'translate-x-6' : 'translate-x-1'
+                        }`}
+                      />
                     </button>
                   </div>
 
                   <div className="flex items-center justify-between">
-                    <label className="text-sm font-medium text-gray-700">Enhanced Focus Indicators</label>
+                    <label className="text-sm font-medium text-gray-700">
+                      Enhanced Focus Indicators
+                    </label>
                     <button
                       onClick={() => updateSettings({ focusIndicators: !settings.focusIndicators })}
                       className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                         settings.focusIndicators ? 'bg-indigo-600' : 'bg-gray-200'
                       }`}
                     >
-                      <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                        settings.focusIndicators ? 'translate-x-6' : 'translate-x-1'
-                      }`} />
+                      <span
+                        className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                          settings.focusIndicators ? 'translate-x-6' : 'translate-x-1'
+                        }`}
+                      />
                     </button>
                   </div>
                 </div>
@@ -706,14 +727,18 @@ const AccessibilityHub: React.FC = () => {
                   <div className="flex items-center justify-between">
                     <label className="text-sm font-medium text-gray-700">Audio Descriptions</label>
                     <button
-                      onClick={() => updateSettings({ audioDescriptions: !settings.audioDescriptions })}
+                      onClick={() =>
+                        updateSettings({ audioDescriptions: !settings.audioDescriptions })
+                      }
                       className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                         settings.audioDescriptions ? 'bg-indigo-600' : 'bg-gray-200'
                       }`}
                     >
-                      <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                        settings.audioDescriptions ? 'translate-x-6' : 'translate-x-1'
-                      }`} />
+                      <span
+                        className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                          settings.audioDescriptions ? 'translate-x-6' : 'translate-x-1'
+                        }`}
+                      />
                     </button>
                   </div>
 
@@ -748,7 +773,9 @@ const AccessibilityHub: React.FC = () => {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Voice Gender</label>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Voice Gender
+                    </label>
                     <select
                       value={settings.voiceGender}
                       onChange={(e) => updateSettings({ voiceGender: e.target.value as any })}
@@ -768,9 +795,11 @@ const AccessibilityHub: React.FC = () => {
                         settings.soundEffects ? 'bg-indigo-600' : 'bg-gray-200'
                       }`}
                     >
-                      <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                        settings.soundEffects ? 'translate-x-6' : 'translate-x-1'
-                      }`} />
+                      <span
+                        className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                          settings.soundEffects ? 'translate-x-6' : 'translate-x-1'
+                        }`}
+                      />
                     </button>
                   </div>
                 </div>
@@ -785,44 +814,60 @@ const AccessibilityHub: React.FC = () => {
 
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
-                    <label className="text-sm font-medium text-gray-700">Simplified Interface</label>
+                    <label className="text-sm font-medium text-gray-700">
+                      Simplified Interface
+                    </label>
                     <button
-                      onClick={() => updateSettings({ simplifiedInterface: !settings.simplifiedInterface })}
+                      onClick={() =>
+                        updateSettings({ simplifiedInterface: !settings.simplifiedInterface })
+                      }
                       className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                         settings.simplifiedInterface ? 'bg-indigo-600' : 'bg-gray-200'
                       }`}
                     >
-                      <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                        settings.simplifiedInterface ? 'translate-x-6' : 'translate-x-1'
-                      }`} />
+                      <span
+                        className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                          settings.simplifiedInterface ? 'translate-x-6' : 'translate-x-1'
+                        }`}
+                      />
                     </button>
                   </div>
 
                   <div className="flex items-center justify-between">
                     <label className="text-sm font-medium text-gray-700">Extended Timeouts</label>
                     <button
-                      onClick={() => updateSettings({ extendedTimeouts: !settings.extendedTimeouts })}
+                      onClick={() =>
+                        updateSettings({ extendedTimeouts: !settings.extendedTimeouts })
+                      }
                       className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                         settings.extendedTimeouts ? 'bg-indigo-600' : 'bg-gray-200'
                       }`}
                     >
-                      <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                        settings.extendedTimeouts ? 'translate-x-6' : 'translate-x-1'
-                      }`} />
+                      <span
+                        className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                          settings.extendedTimeouts ? 'translate-x-6' : 'translate-x-1'
+                        }`}
+                      />
                     </button>
                   </div>
 
                   <div className="flex items-center justify-between">
-                    <label className="text-sm font-medium text-gray-700">Distraction Reduction</label>
+                    <label className="text-sm font-medium text-gray-700">
+                      Distraction Reduction
+                    </label>
                     <button
-                      onClick={() => updateSettings({ distractionReduction: !settings.distractionReduction })}
+                      onClick={() =>
+                        updateSettings({ distractionReduction: !settings.distractionReduction })
+                      }
                       className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                         settings.distractionReduction ? 'bg-indigo-600' : 'bg-gray-200'
                       }`}
                     >
-                      <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                        settings.distractionReduction ? 'translate-x-6' : 'translate-x-1'
-                      }`} />
+                      <span
+                        className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                          settings.distractionReduction ? 'translate-x-6' : 'translate-x-1'
+                        }`}
+                      />
                     </button>
                   </div>
 
@@ -834,9 +879,11 @@ const AccessibilityHub: React.FC = () => {
                         settings.memoryAids ? 'bg-indigo-600' : 'bg-gray-200'
                       }`}
                     >
-                      <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                        settings.memoryAids ? 'translate-x-6' : 'translate-x-1'
-                      }`} />
+                      <span
+                        className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                          settings.memoryAids ? 'translate-x-6' : 'translate-x-1'
+                        }`}
+                      />
                     </button>
                   </div>
 
@@ -848,9 +895,11 @@ const AccessibilityHub: React.FC = () => {
                         settings.dyslexiaSupport ? 'bg-indigo-600' : 'bg-gray-200'
                       }`}
                     >
-                      <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                        settings.dyslexiaSupport ? 'translate-x-6' : 'translate-x-1'
-                      }`} />
+                      <span
+                        className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                          settings.dyslexiaSupport ? 'translate-x-6' : 'translate-x-1'
+                        }`}
+                      />
                     </button>
                   </div>
 
@@ -862,9 +911,11 @@ const AccessibilityHub: React.FC = () => {
                         settings.adhd_support ? 'bg-indigo-600' : 'bg-gray-200'
                       }`}
                     >
-                      <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                        settings.adhd_support ? 'translate-x-6' : 'translate-x-1'
-                      }`} />
+                      <span
+                        className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                          settings.adhd_support ? 'translate-x-6' : 'translate-x-1'
+                        }`}
+                      />
                     </button>
                   </div>
                 </div>
@@ -879,7 +930,9 @@ const AccessibilityHub: React.FC = () => {
 
                 <div className="space-y-4">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Primary Language</label>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Primary Language
+                    </label>
                     <select
                       value={settings.primaryLanguage}
                       onChange={(e) => updateSettings({ primaryLanguage: e.target.value as any })}
@@ -894,28 +947,36 @@ const AccessibilityHub: React.FC = () => {
                   <div className="flex items-center justify-between">
                     <label className="text-sm font-medium text-gray-700">Translation Support</label>
                     <button
-                      onClick={() => updateSettings({ translationSupport: !settings.translationSupport })}
+                      onClick={() =>
+                        updateSettings({ translationSupport: !settings.translationSupport })
+                      }
                       className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                         settings.translationSupport ? 'bg-indigo-600' : 'bg-gray-200'
                       }`}
                     >
-                      <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                        settings.translationSupport ? 'translate-x-6' : 'translate-x-1'
-                      }`} />
+                      <span
+                        className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                          settings.translationSupport ? 'translate-x-6' : 'translate-x-1'
+                        }`}
+                      />
                     </button>
                   </div>
 
                   <div className="flex items-center justify-between">
-                    <label className="text-sm font-medium text-gray-700">Sign Language Support</label>
+                    <label className="text-sm font-medium text-gray-700">
+                      Sign Language Support
+                    </label>
                     <button
                       onClick={() => updateSettings({ signLanguage: !settings.signLanguage })}
                       className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                         settings.signLanguage ? 'bg-indigo-600' : 'bg-gray-200'
                       }`}
                     >
-                      <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                        settings.signLanguage ? 'translate-x-6' : 'translate-x-1'
-                      }`} />
+                      <span
+                        className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                          settings.signLanguage ? 'translate-x-6' : 'translate-x-1'
+                        }`}
+                      />
                     </button>
                   </div>
 
@@ -927,23 +988,29 @@ const AccessibilityHub: React.FC = () => {
                         settings.easyRead ? 'bg-indigo-600' : 'bg-gray-200'
                       }`}
                     >
-                      <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                        settings.easyRead ? 'translate-x-6' : 'translate-x-1'
-                      }`} />
+                      <span
+                        className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                          settings.easyRead ? 'translate-x-6' : 'translate-x-1'
+                        }`}
+                      />
                     </button>
                   </div>
 
                   <div className="flex items-center justify-between">
                     <label className="text-sm font-medium text-gray-700">Pictorial Support</label>
                     <button
-                      onClick={() => updateSettings({ pictorialSupport: !settings.pictorialSupport })}
+                      onClick={() =>
+                        updateSettings({ pictorialSupport: !settings.pictorialSupport })
+                      }
                       className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                         settings.pictorialSupport ? 'bg-indigo-600' : 'bg-gray-200'
                       }`}
                     >
-                      <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                        settings.pictorialSupport ? 'translate-x-6' : 'translate-x-1'
-                      }`} />
+                      <span
+                        className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                          settings.pictorialSupport ? 'translate-x-6' : 'translate-x-1'
+                        }`}
+                      />
                     </button>
                   </div>
                 </div>
@@ -1005,23 +1072,37 @@ const AccessibilityHub: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="p-4 bg-blue-50 rounded-lg">
                     <h4 className="font-medium text-blue-800 mb-2">📞 Accessibility Helpline</h4>
-                    <p className="text-sm text-blue-700">Get immediate assistance with accessibility features</p>
-                    <button className="mt-2 text-sm text-blue-600 hover:text-blue-800">Contact Support</button>
+                    <p className="text-sm text-blue-700">
+                      Get immediate assistance with accessibility features
+                    </p>
+                    <button className="mt-2 text-sm text-blue-600 hover:text-blue-800">
+                      Contact Support
+                    </button>
                   </div>
                   <div className="p-4 bg-green-50 rounded-lg">
                     <h4 className="font-medium text-green-800 mb-2">📖 User Guide</h4>
-                    <p className="text-sm text-green-700">Comprehensive guide to all accessibility features</p>
-                    <button className="mt-2 text-sm text-green-600 hover:text-green-800">Download Guide</button>
+                    <p className="text-sm text-green-700">
+                      Comprehensive guide to all accessibility features
+                    </p>
+                    <button className="mt-2 text-sm text-green-600 hover:text-green-800">
+                      Download Guide
+                    </button>
                   </div>
                   <div className="p-4 bg-purple-50 rounded-lg">
                     <h4 className="font-medium text-purple-800 mb-2">🎥 Video Tutorials</h4>
                     <p className="text-sm text-purple-700">Step-by-step video instructions</p>
-                    <button className="mt-2 text-sm text-purple-600 hover:text-purple-800">Watch Videos</button>
+                    <button className="mt-2 text-sm text-purple-600 hover:text-purple-800">
+                      Watch Videos
+                    </button>
                   </div>
                   <div className="p-4 bg-orange-50 rounded-lg">
                     <h4 className="font-medium text-orange-800 mb-2">💬 Community Forum</h4>
-                    <p className="text-sm text-orange-700">Connect with other users and share tips</p>
-                    <button className="mt-2 text-sm text-orange-600 hover:text-orange-800">Join Forum</button>
+                    <p className="text-sm text-orange-700">
+                      Connect with other users and share tips
+                    </p>
+                    <button className="mt-2 text-sm text-orange-600 hover:text-orange-800">
+                      Join Forum
+                    </button>
                   </div>
                 </div>
               </div>
@@ -1045,13 +1126,36 @@ const AccessibilityHub: React.FC = () => {
 
                 <div className="grid gap-4">
                   {[
-                    { id: 'contrast', name: 'Color Contrast Test', description: 'Check if text is readable with current settings' },
-                    { id: 'keyboard', name: 'Keyboard Navigation Test', description: 'Verify all elements are accessible via keyboard' },
-                    { id: 'screen-reader', name: 'Screen Reader Test', description: 'Test compatibility with screen reading software' },
-                    { id: 'font-size', name: 'Font Size Test', description: 'Ensure text is large enough to read comfortably' },
-                    { id: 'motion', name: 'Motion Sensitivity Test', description: 'Check for potentially problematic animations' }
+                    {
+                      id: 'contrast',
+                      name: 'Color Contrast Test',
+                      description: 'Check if text is readable with current settings',
+                    },
+                    {
+                      id: 'keyboard',
+                      name: 'Keyboard Navigation Test',
+                      description: 'Verify all elements are accessible via keyboard',
+                    },
+                    {
+                      id: 'screen-reader',
+                      name: 'Screen Reader Test',
+                      description: 'Test compatibility with screen reading software',
+                    },
+                    {
+                      id: 'font-size',
+                      name: 'Font Size Test',
+                      description: 'Ensure text is large enough to read comfortably',
+                    },
+                    {
+                      id: 'motion',
+                      name: 'Motion Sensitivity Test',
+                      description: 'Check for potentially problematic animations',
+                    },
                   ].map((test) => (
-                    <div key={test.id} className="flex items-center justify-between p-4 border rounded-lg">
+                    <div
+                      key={test.id}
+                      className="flex items-center justify-between p-4 border rounded-lg"
+                    >
                       <div>
                         <h4 className="font-medium text-gray-800">{test.name}</h4>
                         <p className="text-sm text-gray-600">{test.description}</p>

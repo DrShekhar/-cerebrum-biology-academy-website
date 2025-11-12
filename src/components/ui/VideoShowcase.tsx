@@ -39,7 +39,7 @@ export function VideoShowcase({
   const [showPlayer, setShowPlayer] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
   const [imageLoaded, setImageLoaded] = useState(false)
-  const videoRef = useRef<HTMLDivElement>(null)
+  const videoRef = useRef<HTMLIFrameElement>(null)
 
   // Generate YouTube embed URL
   const embedUrl = `https://www.youtube.com/embed/${videoId}?${new URLSearchParams({

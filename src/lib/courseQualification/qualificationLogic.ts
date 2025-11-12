@@ -298,8 +298,8 @@ export class CourseQualificationEngine {
     const alternatives = this.generateAlternatives(bestMatch, scores)
 
     return {
-      seriesId: bestMatch.series,
-      planId: bestMatch.plan,
+      seriesId: bestMatch.series as 'pinnacle' | 'ascent' | 'pursuit',
+      planId: bestMatch.plan as 'A' | 'B' | 'C',
       matchScore: bestMatch.score,
       reasoning,
       alternativeOptions: alternatives,

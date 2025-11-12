@@ -318,7 +318,7 @@ export function trackCourseInteraction(
 ) {
   const event: RealtimeEvent = {
     id: crypto.randomUUID(),
-    type: 'user_interaction',
+    type: 'user_joined',
     data: {
       courseId,
       action,

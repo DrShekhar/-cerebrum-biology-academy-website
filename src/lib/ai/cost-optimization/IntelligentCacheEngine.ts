@@ -4,6 +4,7 @@
  * Specifically optimized for Cerebrum Biology Academy's educational content
  */
 
+import Redis from 'ioredis'
 import crypto from 'crypto'
 import { getRedisClient } from '@/lib/cache/redis'
 

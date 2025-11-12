@@ -6,6 +6,7 @@
 
 import { Anthropic } from '@anthropic-ai/sdk'
 import OpenAI from 'openai'
+import Redis from 'ioredis'
 import { getRedisClient } from '@/lib/cache/redis'
 
 interface APIRequest {

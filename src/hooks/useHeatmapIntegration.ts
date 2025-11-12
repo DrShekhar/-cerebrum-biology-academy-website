@@ -394,8 +394,8 @@ function identifyHotspots(
   return Object.entries(elementMap)
     .map(([element, data]) => ({
       element,
-      interactions: data.interactions,
-      types: Array.from(data.types),
+      interactions: data.interactions as number,
+      types: Array.from(data.types) as string[],
     }))
     .sort((a, b) => b.interactions - a.interactions)
     .slice(0, 10) // Top 10 hotspots

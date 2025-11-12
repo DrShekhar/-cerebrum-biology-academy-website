@@ -4,6 +4,7 @@
  * Optimized for educational platform cost control
  */
 
+import Redis from 'ioredis'
 import { getRedisClient } from '@/lib/cache/redis'
 
 interface CostRecord {

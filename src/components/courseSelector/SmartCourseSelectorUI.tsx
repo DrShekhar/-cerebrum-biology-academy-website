@@ -675,9 +675,12 @@ export default function SmartCourseSelectorUI({
             >
               <QuestionCard
                 question={currentQuestion}
-                selectedValue={
-                  answers[currentQuestion.id] || (currentQuestion.type === 'multiple' ? [] : '')
-                }
+                selectedValue={(() => {
+                  const answer = answers[currentQuestion.id]
+                  if (answer === undefined) return currentQuestion.type === 'multiple' ? [] : ''
+                  if (typeof answer === 'number') return String(answer)
+                  return answer
+                })()}
                 onAnswerSelect={(answer) => handleAnswerSelect(currentQuestion.id, answer)}
               />
             </motion.div>

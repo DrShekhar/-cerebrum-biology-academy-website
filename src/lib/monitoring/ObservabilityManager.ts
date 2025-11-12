@@ -3,6 +3,7 @@
  * Comprehensive system health, performance, and business metrics tracking
  */
 
+import Redis from 'ioredis'
 import { getRedisClient } from '@/lib/cache/redis'
 
 interface SystemMetrics {

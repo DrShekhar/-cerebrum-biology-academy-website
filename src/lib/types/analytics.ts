@@ -313,8 +313,13 @@ export interface TopicBreakdown {
 export interface Achievement {
   type: string
   title: string
+  description: string
+  icon?: string
   earnedAt?: Date
   points: number
+  currentProgress?: number
+  targetProgress?: number
+  isCompleted?: boolean
 }
 
 // Real-time Analytics Types

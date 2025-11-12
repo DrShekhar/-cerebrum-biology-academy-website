@@ -20,7 +20,7 @@ export default function AuthForm({
   mode,
   onModeChange,
   redirectTo = '/dashboard',
-  className = ''
+  className = '',
 }: AuthFormProps) {
   const { login, signup, isLoading: authLoading } = useAuth()
   const router = useRouter()
@@ -45,7 +45,7 @@ export default function AuthForm({
     city: '',
     agreeToTerms: false,
     subscribeNewsletter: false,
-    rememberMe: false
+    rememberMe: false,
   })
 
   // Password validation state
@@ -54,7 +54,7 @@ export default function AuthForm({
     hasUppercase: false,
     hasLowercase: false,
     hasNumber: false,
-    hasSpecialChar: false
+    hasSpecialChar: false,
   })
 
   // Validate password in real-time
@@ -65,16 +65,16 @@ export default function AuthForm({
         hasUppercase: /[A-Z]/.test(formData.password),
         hasLowercase: /[a-z]/.test(formData.password),
         hasNumber: /\d/.test(formData.password),
-        hasSpecialChar: /[!@#$%^&*(),.?\":{}|<>]/.test(formData.password)
+        hasSpecialChar: /[!@#$%^&*(),.?\":{}|<>]/.test(formData.password),
       })
     }
   }, [formData.password, mode])
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value, type } = e.target
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: type === 'checkbox' ? (e.target as HTMLInputElement).checked : value
+      [name]: type === 'checkbox' ? (e.target as HTMLInputElement).checked : value,
     }))
     // Clear error when user starts typing
     if (error) setError('')
@@ -112,11 +112,11 @@ export default function AuthForm({
           phone: formData.phone || undefined,
           role: formData.role,
           grade: formData.grade || undefined,
-          curriculum: formData.curriculum as any || undefined,
+          curriculum: (formData.curriculum as any) || undefined,
           school: formData.school || undefined,
           city: formData.city || undefined,
           agreeToTerms: formData.agreeToTerms,
-          subscribeNewsletter: formData.subscribeNewsletter
+          subscribeNewsletter: formData.subscribeNewsletter,
         }
 
         const result = await signup(signupData)
@@ -180,8 +180,7 @@ export default function AuthForm({
           <p className="text-gray-600 mt-2">
             {mode === 'signin'
               ? 'Welcome back! Please sign in to your account'
-              : 'Join thousands of students excelling in biology'
-            }
+              : 'Join thousands of students excelling in biology'}
           </p>
         </div>
 
@@ -215,16 +214,17 @@ export default function AuthForm({
 
               <div>
                 <Label htmlFor="role">I am a *</Label>
-                <Select
+                <select
                   id="role"
                   name="role"
                   value={formData.role}
                   onChange={handleInputChange}
                   required
+                  className="flex h-12 w-full items-center justify-between rounded-lg border border-gray-200 bg-white px-4 py-3 text-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-200"
                 >
                   <option value="STUDENT">Student</option>
                   <option value="PARENT">Parent</option>
-                </Select>
+                </select>
               </div>
             </>
           )}
@@ -289,23 +289,33 @@ export default function AuthForm({
                 <div className="space-y-2">
                   <p className="text-sm font-medium text-gray-700">Password Requirements:</p>
                   <div className="grid grid-cols-2 gap-2 text-xs">
-                    <div className={`flex items-center ${passwordValidation.minLength ? 'text-green-600' : 'text-red-600'}`}>
+                    <div
+                      className={`flex items-center ${passwordValidation.minLength ? 'text-green-600' : 'text-red-600'}`}
+                    >
                       <span className="mr-1">{passwordValidation.minLength ? '✓' : '✗'}</span>
                       8+ characters
                     </div>
-                    <div className={`flex items-center ${passwordValidation.hasUppercase ? 'text-green-600' : 'text-red-600'}`}>
+                    <div
+                      className={`flex items-center ${passwordValidation.hasUppercase ? 'text-green-600' : 'text-red-600'}`}
+                    >
                       <span className="mr-1">{passwordValidation.hasUppercase ? '✓' : '✗'}</span>
                       Uppercase letter
                     </div>
-                    <div className={`flex items-center ${passwordValidation.hasLowercase ? 'text-green-600' : 'text-red-600'}`}>
+                    <div
+                      className={`flex items-center ${passwordValidation.hasLowercase ? 'text-green-600' : 'text-red-600'}`}
+                    >
                       <span className="mr-1">{passwordValidation.hasLowercase ? '✓' : '✗'}</span>
                       Lowercase letter
                     </div>
-                    <div className={`flex items-center ${passwordValidation.hasNumber ? 'text-green-600' : 'text-red-600'}`}>
+                    <div
+                      className={`flex items-center ${passwordValidation.hasNumber ? 'text-green-600' : 'text-red-600'}`}
+                    >
                       <span className="mr-1">{passwordValidation.hasNumber ? '✓' : '✗'}</span>
                       Number
                     </div>
-                    <div className={`flex items-center ${passwordValidation.hasSpecialChar ? 'text-green-600' : 'text-red-600'}`}>
+                    <div
+                      className={`flex items-center ${passwordValidation.hasSpecialChar ? 'text-green-600' : 'text-red-600'}`}
+                    >
                       <span className="mr-1">{passwordValidation.hasSpecialChar ? '✓' : '✗'}</span>
                       Special character
                     </div>
@@ -319,11 +329,12 @@ export default function AuthForm({
                   <div className="grid grid-cols-2 gap-4">
                     <div>
                       <Label htmlFor="grade">Grade/Class</Label>
-                      <Select
+                      <select
                         id="grade"
                         name="grade"
                         value={formData.grade}
                         onChange={handleInputChange}
+                        className="flex h-12 w-full items-center justify-between rounded-lg border border-gray-200 bg-white px-4 py-3 text-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-200"
                       >
                         <option value="">Select Grade</option>
                         <option value="CLASS_9">Class 9</option>
@@ -331,15 +342,16 @@ export default function AuthForm({
                         <option value="CLASS_11">Class 11</option>
                         <option value="CLASS_12">Class 12</option>
                         <option value="DROPPER">Dropper/Repeater</option>
-                      </Select>
+                      </select>
                     </div>
                     <div>
                       <Label htmlFor="curriculum">Curriculum</Label>
-                      <Select
+                      <select
                         id="curriculum"
                         name="curriculum"
                         value={formData.curriculum}
                         onChange={handleInputChange}
+                        className="flex h-12 w-full items-center justify-between rounded-lg border border-gray-200 bg-white px-4 py-3 text-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-200"
                       >
                         <option value="">Select Curriculum</option>
                         <option value="NEET">NEET</option>
@@ -348,7 +360,7 @@ export default function AuthForm({
                         <option value="IB">IB</option>
                         <option value="IGCSE">IGCSE</option>
                         <option value="STATE_BOARD">State Board</option>
-                      </Select>
+                      </select>
                     </div>
                   </div>
 
@@ -391,11 +403,19 @@ export default function AuthForm({
                 />
                 <label htmlFor="agreeToTerms" className="ml-2 text-sm text-gray-700">
                   I agree to the{' '}
-                  <a href="/terms-of-service" className="text-blue-600 hover:underline" target="_blank">
+                  <a
+                    href="/terms-of-service"
+                    className="text-blue-600 hover:underline"
+                    target="_blank"
+                  >
                     Terms of Service
                   </a>{' '}
                   and{' '}
-                  <a href="/privacy-policy" className="text-blue-600 hover:underline" target="_blank">
+                  <a
+                    href="/privacy-policy"
+                    className="text-blue-600 hover:underline"
+                    target="_blank"
+                  >
                     Privacy Policy
                   </a>
                 </label>
@@ -445,8 +465,10 @@ export default function AuthForm({
           >
             {isLoading || authLoading ? (
               <LoadingSpinner size="sm" color="white" />
+            ) : mode === 'signin' ? (
+              'Sign In'
             ) : (
-              mode === 'signin' ? 'Sign In' : 'Create Account'
+              'Create Account'
             )}
           </Button>
         </form>

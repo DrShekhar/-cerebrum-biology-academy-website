@@ -209,11 +209,16 @@ export default function PurchasePage() {
         currency: purchaseData.order.currency,
         name: 'Cerebrum Biology Academy',
         description: courseData.title,
+        image: '/logo.png',
         order_id: purchaseData.order.id,
         prefill: {
           name: purchaseData.user.name,
           email: purchaseData.user.email,
           contact: purchaseData.user.phone,
+        },
+        notes: {
+          courseId: courseId,
+          courseName: courseData.title,
         },
         theme: {
           color: '#16a34a',

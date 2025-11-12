@@ -101,58 +101,56 @@ class OfferLetterService {
         }
       }
 
-      // Prepare offer letter data
+      const originalPrice = Number(offer.originalPrice)
+      const discountValue = Number(offer.discountValue)
+      const finalPrice = Number(offer.finalPrice)
+      const discountAmount = originalPrice - finalPrice
+
+      const defaultTerms = [
+        'This offer is valid only until the date specified above',
+        'Payment schedule must be followed as per the installment plan',
+        'All fees are non-refundable once the course commences',
+        'Students must maintain 75% attendance to remain enrolled',
+        'Any changes to the fee structure must be approved in writing',
+      ]
+
       const offerLetterData: OfferLetterData = {
-        // Lead information
-        studentName: lead.studentName,
-        parentName: lead.parentName || undefined,
-        email: lead.email || '',
-        phone: lead.phone,
-        address: lead.address || undefined,
-
-        // Offer details
         offerId: offer.id,
-        offerDate: offer.createdAt,
-        validUntil: offer.validUntil,
-        courseName: feePlan.courseName || 'NEET Biology Coaching',
-        courseDescription: feePlan.courseDescription || undefined,
-        batchName: feePlan.batchName || undefined,
-        startDate: feePlan.courseStartDate || undefined,
-
-        // Fee details
-        originalAmount: feePlan.originalAmount,
-        discountType: offer.discountType,
-        discountValue: offer.discountValue,
-        discountedAmount: feePlan.totalAmount,
-        totalSavings: feePlan.discountAmount,
-
-        // Installment details
-        installmentCount: feePlan.installmentCount,
+        offerCode: offer.offerCode,
+        validUntil: offer.validUntil.toISOString(),
+        student: {
+          name: lead.studentName,
+          email: lead.email || '',
+          phone: lead.phone,
+        },
+        course: {
+          name: offer.courseName,
+        },
+        fees: {
+          originalPrice,
+          discountType: offer.discountType,
+          discountValue,
+          discountAmount,
+          finalPrice,
+        },
         installments: feePlan.installments.map((inst) => ({
-          number: inst.installmentNumber,
-          dueDate: inst.dueDate,
-          amount: inst.amount,
+          installmentNumber: inst.installmentNumber,
           description:
             inst.installmentNumber === 0
-              ? 'Down Payment'
-              : `Installment ${inst.installmentNumber} of ${feePlan.installmentCount}`,
+              ? 'Down Payment (Due at enrollment)'
+              : `Installment ${inst.installmentNumber} of ${feePlan.numberOfInstallments}`,
+          dueDate: inst.dueDate.toISOString(),
+          amount: Number(inst.amount),
         })),
-
-        // Additional details
-        paymentFrequency: feePlan.frequency,
-        downPaymentAmount: feePlan.downPaymentAmount || undefined,
-        termsAndConditions: offer.terms ? [offer.terms] : undefined,
-        specialNotes: offer.conditions || undefined,
-
-        // Issuer details
-        issuedBy: counselor.id,
-        counselorName: counselor.name || 'Counselor',
-        counselorEmail: counselor.email || undefined,
+        terms: offer.termsConditions ? offer.termsConditions.split('\n') : defaultTerms,
+        counselor: {
+          name: counselor.name || 'Counselor',
+        },
+        generatedDate: new Date().toISOString(),
       }
 
       // Generate PDF using react-pdf/renderer
-      const templateElement = createElement(OfferLetterTemplate, { data: offerLetterData })
-      const pdfInstance = pdf(templateElement)
+      const pdfInstance = pdf(createElement(OfferLetterTemplate, { data: offerLetterData }) as any)
       const pdfBlob = await pdfInstance.toBlob()
 
       // Convert blob to buffer
@@ -267,41 +265,52 @@ class OfferLetterService {
 
       const counselor = lead.assignedTo
 
+      const originalPrice = Number(offer.originalPrice)
+      const discountValue = Number(offer.discountValue)
+      const finalPrice = Number(offer.finalPrice)
+      const discountAmount = originalPrice - finalPrice
+
+      const defaultTerms = [
+        'This offer is valid only until the date specified above',
+        'Payment schedule must be followed as per the installment plan',
+        'All fees are non-refundable once the course commences',
+        'Students must maintain 75% attendance to remain enrolled',
+        'Any changes to the fee structure must be approved in writing',
+      ]
+
       const offerLetterData: OfferLetterData = {
-        studentName: lead.studentName,
-        parentName: lead.parentName || undefined,
-        email: lead.email || '',
-        phone: lead.phone,
-        address: lead.address || undefined,
         offerId: offer.id,
-        offerDate: offer.createdAt,
-        validUntil: offer.validUntil,
-        courseName: feePlan.courseName || 'NEET Biology Coaching',
-        courseDescription: feePlan.courseDescription || undefined,
-        batchName: feePlan.batchName || undefined,
-        startDate: feePlan.courseStartDate || undefined,
-        originalAmount: feePlan.originalAmount,
-        discountType: offer.discountType,
-        discountValue: offer.discountValue,
-        discountedAmount: feePlan.totalAmount,
-        totalSavings: feePlan.discountAmount,
-        installmentCount: feePlan.installmentCount,
+        offerCode: offer.offerCode,
+        validUntil: offer.validUntil.toISOString(),
+        student: {
+          name: lead.studentName,
+          email: lead.email || '',
+          phone: lead.phone,
+        },
+        course: {
+          name: offer.courseName,
+        },
+        fees: {
+          originalPrice,
+          discountType: offer.discountType,
+          discountValue,
+          discountAmount,
+          finalPrice,
+        },
         installments: feePlan.installments.map((inst) => ({
-          number: inst.installmentNumber,
-          dueDate: inst.dueDate,
-          amount: inst.amount,
+          installmentNumber: inst.installmentNumber,
           description:
             inst.installmentNumber === 0
-              ? 'Down Payment'
-              : `Installment ${inst.installmentNumber} of ${feePlan.installmentCount}`,
+              ? 'Down Payment (Due at enrollment)'
+              : `Installment ${inst.installmentNumber} of ${feePlan.numberOfInstallments}`,
+          dueDate: inst.dueDate.toISOString(),
+          amount: Number(inst.amount),
         })),
-        paymentFrequency: feePlan.frequency,
-        downPaymentAmount: feePlan.downPaymentAmount || undefined,
-        termsAndConditions: offer.terms ? [offer.terms] : undefined,
-        specialNotes: offer.conditions || undefined,
-        issuedBy: counselor?.id || '',
-        counselorName: counselor?.name || 'Counselor',
-        counselorEmail: counselor?.email || undefined,
+        terms: offer.termsConditions ? offer.termsConditions.split('\n') : defaultTerms,
+        counselor: {
+          name: counselor?.name || 'Counselor',
+        },
+        generatedDate: new Date().toISOString(),
       }
 
       return {
@@ -350,7 +359,7 @@ class OfferLetterService {
       }
 
       // Check if offer status is appropriate
-      if (offer.status === 'EXPIRED' || offer.status === 'REJECTED') {
+      if (offer.status === 'EXPIRED' || offer.status === 'CANCELLED') {
         return { canGenerate: false, reason: `Offer is ${offer.status.toLowerCase()}` }
       }
 

@@ -7,6 +7,7 @@
 import { Server as MCPServer } from '@modelcontextprotocol/sdk/server/index.js'
 import { Anthropic } from '@anthropic-ai/sdk'
 import { getRedisClient } from '@/lib/cache/redis'
+import Redis from 'ioredis'
 import WebSocket from 'ws'
 import compression from 'compression'
 import helmet from 'helmet'
@@ -23,6 +24,8 @@ import {
   AuditLog,
   MCPError,
   ErrorCode,
+  AuditAction,
+  QueryPriority,
 } from './types'
 
 import { StudentSupportAgent } from './tools/studentSupport'
@@ -228,7 +231,7 @@ export class CerebrumMCPServer {
     const { name, arguments: args } = request.params
 
     // Log the request
-    await this.auditLogger.logAction('tool_request', {
+    await this.auditLogger.logAction(AuditAction.TOOL_REQUEST, {
       toolName: name,
       arguments: args,
       timestamp: new Date(),
@@ -362,7 +365,7 @@ export class CerebrumMCPServer {
       console.log(`📈 Max Connections: ${this.config.maxConnections}`)
 
       // Log server startup
-      await this.auditLogger.logAction('server_start', {
+      await this.auditLogger.logAction(AuditAction.SERVER_START, {
         serverName: this.config.name,
         version: this.config.version,
         port: this.config.port,
@@ -460,7 +463,7 @@ export class CerebrumMCPServer {
       query: payload.message,
       context: payload.context || {},
       timestamp: new Date(),
-      priority: 'medium',
+      priority: QueryPriority.MEDIUM,
     }
 
     // Get response from student support agent
@@ -524,7 +527,7 @@ export class CerebrumMCPServer {
       console.log('🛑 Cerebrum MCP Server stopped successfully')
 
       // Log server shutdown
-      await this.auditLogger.logAction('server_stop', {
+      await this.auditLogger.logAction(AuditAction.SERVER_STOP, {
         serverName: this.config.name,
         uptime: Date.now(),
       })

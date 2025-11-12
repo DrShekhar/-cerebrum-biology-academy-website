@@ -1222,7 +1222,7 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                             </label>
                             <input
                               type="text"
-                              value={rule.triggerAnswer}
+                              value={String(rule.triggerAnswer)}
                               onChange={(e) =>
                                 updateRule('skipLogicRules', rule.id, {
                                   triggerAnswer: e.target.value,

@@ -5,7 +5,14 @@ import { cn } from '@/lib/utils'
 
 // Types for question performance analytics
 interface QuestionTypePerformance {
-  questionType: 'single-correct' | 'assertion-reason' | 'match-following' | 'diagram-based' | 'multiple-correct' | 'numerical' | 'statement-based'
+  questionType:
+    | 'single-correct'
+    | 'assertion-reason'
+    | 'match-following'
+    | 'diagram-based'
+    | 'multiple-correct'
+    | 'numerical'
+    | 'statement-based'
   totalAttempted: number
   totalCorrect: number
   averageTime: number
@@ -29,12 +36,13 @@ interface QuestionTypeAnalyticsProps {
 
 const QuestionTypeAnalytics: React.FC<QuestionTypeAnalyticsProps> = ({
   studentId,
-  timeRange = 'month',
-  className
+  timeRange: initialTimeRange = 'month',
+  className,
 }) => {
   const [performanceData, setPerformanceData] = useState<QuestionTypePerformance[]>([])
   const [loading, setLoading] = useState(true)
   const [selectedType, setSelectedType] = useState<string | null>(null)
+  const [timeRange, setTimeRange] = useState<'week' | 'month' | 'quarter' | 'all'>(initialTimeRange)
 
   // Mock data for demonstration - in real implementation, this would come from API
   useEffect(() => {
@@ -49,11 +57,11 @@ const QuestionTypeAnalytics: React.FC<QuestionTypeAnalyticsProps> = ({
         difficultyBreakdown: {
           easy: { attempted: 60, correct: 58, accuracy: 96.7 },
           medium: { attempted: 70, correct: 63, accuracy: 90 },
-          hard: { attempted: 20, correct: 14, accuracy: 70 }
+          hard: { attempted: 20, correct: 14, accuracy: 70 },
         },
         strengths: ['Quick recall', 'Strong NCERT foundation'],
         weaknesses: ['Complex application questions'],
-        recommendations: ['Practice more hard-level questions', 'Focus on conceptual clarity']
+        recommendations: ['Practice more hard-level questions', 'Focus on conceptual clarity'],
       },
       {
         questionType: 'assertion-reason',
@@ -65,11 +73,11 @@ const QuestionTypeAnalytics: React.FC<QuestionTypeAnalyticsProps> = ({
         difficultyBreakdown: {
           easy: { attempted: 15, correct: 14, accuracy: 93.3 },
           medium: { attempted: 25, correct: 16, accuracy: 64 },
-          hard: { attempted: 5, correct: 2, accuracy: 40 }
+          hard: { attempted: 5, correct: 2, accuracy: 40 },
         },
         strengths: ['Understanding assertions', 'Basic reasoning'],
         weaknesses: ['Complex causal relationships', 'Advanced reasoning'],
-        recommendations: ['Practice logical reasoning', 'Study cause-effect relationships']
+        recommendations: ['Practice logical reasoning', 'Study cause-effect relationships'],
       },
       {
         questionType: 'match-following',
@@ -81,11 +89,11 @@ const QuestionTypeAnalytics: React.FC<QuestionTypeAnalyticsProps> = ({
         difficultyBreakdown: {
           easy: { attempted: 12, correct: 11, accuracy: 91.7 },
           medium: { attempted: 15, correct: 12, accuracy: 80 },
-          hard: { attempted: 3, correct: 2, accuracy: 66.7 }
+          hard: { attempted: 3, correct: 2, accuracy: 66.7 },
         },
         strengths: ['Pattern recognition', 'Systematic matching'],
         weaknesses: ['Time management', 'Complex relationships'],
-        recommendations: ['Practice timed matching exercises', 'Learn shortcut techniques']
+        recommendations: ['Practice timed matching exercises', 'Learn shortcut techniques'],
       },
       {
         questionType: 'diagram-based',
@@ -97,11 +105,11 @@ const QuestionTypeAnalytics: React.FC<QuestionTypeAnalyticsProps> = ({
         difficultyBreakdown: {
           easy: { attempted: 15, correct: 13, accuracy: 86.7 },
           medium: { attempted: 20, correct: 13, accuracy: 65 },
-          hard: { attempted: 5, correct: 2, accuracy: 40 }
+          hard: { attempted: 5, correct: 2, accuracy: 40 },
         },
         strengths: ['Basic structure identification', 'Label recognition'],
         weaknesses: ['Function analysis', 'Complex diagrams'],
-        recommendations: ['Practice more diagram interpretation', 'Study anatomical details']
+        recommendations: ['Practice more diagram interpretation', 'Study anatomical details'],
       },
       {
         questionType: 'multiple-correct',
@@ -113,11 +121,11 @@ const QuestionTypeAnalytics: React.FC<QuestionTypeAnalyticsProps> = ({
         difficultyBreakdown: {
           easy: { attempted: 10, correct: 8, accuracy: 80 },
           medium: { attempted: 12, correct: 6, accuracy: 50 },
-          hard: { attempted: 3, correct: 1, accuracy: 33.3 }
+          hard: { attempted: 3, correct: 1, accuracy: 33.3 },
         },
         strengths: ['Identifying obvious answers', 'Partial marking strategy'],
         weaknesses: ['Avoiding negative marking', 'Complete accuracy'],
-        recommendations: ['Practice elimination techniques', 'Study marking schemes']
+        recommendations: ['Practice elimination techniques', 'Study marking schemes'],
       },
       {
         questionType: 'numerical',
@@ -129,11 +137,11 @@ const QuestionTypeAnalytics: React.FC<QuestionTypeAnalyticsProps> = ({
         difficultyBreakdown: {
           easy: { attempted: 8, correct: 7, accuracy: 87.5 },
           medium: { attempted: 10, correct: 4, accuracy: 40 },
-          hard: { attempted: 2, correct: 1, accuracy: 50 }
+          hard: { attempted: 2, correct: 1, accuracy: 50 },
         },
         strengths: ['Basic calculations', 'Formula application'],
         weaknesses: ['Complex multi-step problems', 'Time pressure'],
-        recommendations: ['Practice calculation speed', 'Learn formula shortcuts']
+        recommendations: ['Practice calculation speed', 'Learn formula shortcuts'],
       },
       {
         questionType: 'statement-based',
@@ -145,12 +153,12 @@ const QuestionTypeAnalytics: React.FC<QuestionTypeAnalyticsProps> = ({
         difficultyBreakdown: {
           easy: { attempted: 15, correct: 13, accuracy: 86.7 },
           medium: { attempted: 15, correct: 9, accuracy: 60 },
-          hard: { attempted: 5, correct: 2, accuracy: 40 }
+          hard: { attempted: 5, correct: 2, accuracy: 40 },
         },
         strengths: ['Individual statement evaluation', 'True/false identification'],
         weaknesses: ['Complex logical relationships', 'Combined evaluation'],
-        recommendations: ['Practice statement analysis', 'Study logical reasoning']
-      }
+        recommendations: ['Practice statement analysis', 'Study logical reasoning'],
+      },
     ]
 
     // Simulate loading delay
@@ -167,8 +175,8 @@ const QuestionTypeAnalytics: React.FC<QuestionTypeAnalyticsProps> = ({
       'match-following': 'Match Following',
       'diagram-based': 'Diagram Based',
       'multiple-correct': 'Multiple Correct',
-      'numerical': 'Numerical',
-      'statement-based': 'Statement Based'
+      numerical: 'Numerical',
+      'statement-based': 'Statement Based',
     }
     return labels[type] || type
   }
@@ -180,8 +188,8 @@ const QuestionTypeAnalytics: React.FC<QuestionTypeAnalyticsProps> = ({
       'match-following': 'orange',
       'diagram-based': 'cyan',
       'multiple-correct': 'emerald',
-      'numerical': 'indigo',
-      'statement-based': 'teal'
+      numerical: 'indigo',
+      'statement-based': 'teal',
     }
     return colors[type] || 'gray'
   }
@@ -195,7 +203,7 @@ const QuestionTypeAnalytics: React.FC<QuestionTypeAnalyticsProps> = ({
 
   if (loading) {
     return (
-      <div className={cn("p-6 bg-white rounded-lg shadow-sm border border-gray-200", className)}>
+      <div className={cn('p-6 bg-white rounded-lg shadow-sm border border-gray-200', className)}>
         <div className="animate-pulse">
           <div className="h-6 bg-gray-200 rounded mb-4 w-1/3"></div>
           <div className="space-y-3">
@@ -209,7 +217,7 @@ const QuestionTypeAnalytics: React.FC<QuestionTypeAnalyticsProps> = ({
   }
 
   return (
-    <div className={cn("p-6 bg-white rounded-lg shadow-sm border border-gray-200", className)}>
+    <div className={cn('p-6 bg-white rounded-lg shadow-sm border border-gray-200', className)}>
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-xl font-bold text-gray-900">Question Type Performance</h2>
@@ -240,16 +248,20 @@ const QuestionTypeAnalytics: React.FC<QuestionTypeAnalyticsProps> = ({
           <p className="text-2xl font-bold text-green-900">
             {Math.round(
               (performanceData.reduce((sum, data) => sum + data.totalCorrect, 0) /
-               performanceData.reduce((sum, data) => sum + data.totalAttempted, 0)) * 100
-            )}%
+                performanceData.reduce((sum, data) => sum + data.totalAttempted, 0)) *
+                100
+            )}
+            %
           </p>
         </div>
         <div className="p-4 bg-purple-50 rounded-lg border border-purple-200">
           <h3 className="text-sm font-medium text-purple-800 mb-1">Average Time</h3>
           <p className="text-2xl font-bold text-purple-900">
             {Math.round(
-              performanceData.reduce((sum, data) => sum + data.averageTime, 0) / performanceData.length
-            )}s
+              performanceData.reduce((sum, data) => sum + data.averageTime, 0) /
+                performanceData.length
+            )}
+            s
           </p>
         </div>
       </div>
@@ -265,41 +277,41 @@ const QuestionTypeAnalytics: React.FC<QuestionTypeAnalyticsProps> = ({
               key={index}
               onClick={() => setSelectedType(isSelected ? null : data.questionType)}
               className={cn(
-                "p-4 border rounded-lg transition-all duration-200 cursor-pointer",
+                'p-4 border rounded-lg transition-all duration-200 cursor-pointer',
                 isSelected
-                  ? "border-blue-500 bg-blue-50 shadow-md"
-                  : "border-gray-200 hover:border-gray-300 hover:shadow-sm"
+                  ? 'border-blue-500 bg-blue-50 shadow-md'
+                  : 'border-gray-200 hover:border-gray-300 hover:shadow-sm'
               )}
             >
               <div className="flex items-center justify-between mb-3">
                 <div className="flex items-center gap-3">
-                  <span className={cn(
-                    "px-3 py-1 rounded-full text-sm font-medium",
-                    `bg-${color}-100 text-${color}-800`
-                  )}>
+                  <span
+                    className={cn(
+                      'px-3 py-1 rounded-full text-sm font-medium',
+                      `bg-${color}-100 text-${color}-800`
+                    )}
+                  >
                     {getQuestionTypeLabel(data.questionType)}
                   </span>
-                  <span className="text-gray-600 text-sm">
-                    {data.totalAttempted} attempted
-                  </span>
+                  <span className="text-gray-600 text-sm">{data.totalAttempted} attempted</span>
                 </div>
                 <div className="flex items-center gap-4">
-                  <span className={cn(
-                    "px-2 py-1 rounded text-sm font-medium",
-                    getAccuracyColor(data.accuracyPercentage)
-                  )}>
+                  <span
+                    className={cn(
+                      'px-2 py-1 rounded text-sm font-medium',
+                      getAccuracyColor(data.accuracyPercentage)
+                    )}
+                  >
                     {data.accuracyPercentage.toFixed(1)}%
                   </span>
-                  <span className="text-gray-500 text-sm">
-                    {data.averageTime}s avg
-                  </span>
+                  <span className="text-gray-500 text-sm">{data.averageTime}s avg</span>
                 </div>
               </div>
 
               {/* Progress Bar */}
               <div className="w-full bg-gray-200 rounded-full h-2 mb-3">
                 <div
-                  className={cn("h-2 rounded-full", `bg-${color}-500`)}
+                  className={cn('h-2 rounded-full', `bg-${color}-500`)}
                   style={{ width: `${data.accuracyPercentage}%` }}
                 ></div>
               </div>

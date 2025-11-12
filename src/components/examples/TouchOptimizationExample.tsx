@@ -240,13 +240,12 @@ function CourseDetailsForm({
         </select>
       </div>
 
-      <TouchTarget
-        variant="heavy"
-        className="w-full bg-gradient-to-r from-emerald-500 to-blue-500 text-white font-semibold py-4 rounded-xl mt-6"
-        onClick={handleSubmit}
+      <button
+        type="submit"
+        className="w-full bg-gradient-to-r from-emerald-500 to-blue-500 text-white font-semibold py-4 rounded-xl mt-6 min-h-[48px] active:scale-95 transition-transform"
       >
         Complete Enrollment
-      </TouchTarget>
+      </button>
     </TouchForm>
   )
 }

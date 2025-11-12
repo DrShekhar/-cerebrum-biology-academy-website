@@ -11,9 +11,9 @@ import {
  * Authentication middleware for API routes
  */
 export function withAuth(
-  handler: (request: NextRequest, session: UserSession) => Promise<Response>
+  handler: (request: NextRequest, session: UserSession, context?: any) => Promise<Response>
 ) {
-  return async (request: NextRequest): Promise<Response> => {
+  return async (request: NextRequest, context?: any): Promise<Response> => {
     try {
       const session = await validateUserSession(request)
 
@@ -30,7 +30,7 @@ export function withAuth(
         )
       }
 
-      return handler(request, session)
+      return handler(request, session, context)
     } catch (error) {
       console.error('Auth middleware error:', error)
       return addSecurityHeaders(
@@ -51,9 +51,9 @@ export function withAuth(
  */
 export function withRole(
   allowedRoles: UserRole[],
-  handler: (request: NextRequest, session: UserSession) => Promise<Response>
+  handler: (request: NextRequest, session: UserSession, context?: any) => Promise<Response>
 ) {
-  return withAuth(async (request: NextRequest, session: UserSession) => {
+  return withAuth(async (request: NextRequest, session: UserSession, context?: any) => {
     if (!session.role || !allowedRoles.includes(session.role)) {
       return addSecurityHeaders(
         NextResponse.json(
@@ -69,7 +69,7 @@ export function withRole(
       )
     }
 
-    return handler(request, session)
+    return handler(request, session, context)
   })
 }
 
@@ -148,7 +148,7 @@ export function withStudent(
  * Counselor-only middleware
  */
 export function withCounselor(
-  handler: (request: NextRequest, session: UserSession) => Promise<Response>
+  handler: (request: NextRequest, session: UserSession, context?: any) => Promise<Response>
 ) {
   return withRole(['COUNSELOR', 'ADMIN'], handler)
 }

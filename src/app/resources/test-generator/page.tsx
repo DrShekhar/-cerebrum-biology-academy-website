@@ -32,7 +32,7 @@ import {
   ArrowRight,
   ArrowLeft,
   Star,
-  Lightbulb
+  Lightbulb,
 } from 'lucide-react'
 import { ClassSelection } from '@/components/mockTests/ClassSelection'
 import { TestEngine } from '@/components/mockTests/TestEngine'
@@ -41,7 +41,7 @@ import {
   class11Chapters,
   class12Chapters,
   phase1PriorityTopics,
-  questionBankStructure
+  questionBankStructure,
 } from '@/data/ncertBiologyContentDatabase'
 import {
   cellBiologyQuestions,
@@ -50,7 +50,7 @@ import {
   diagramBasedQuestions,
   multipleCorrectQuestions,
   numericalQuestions,
-  statementBasedQuestions
+  statementBasedQuestions,
 } from '@/data/neetQuestionBank'
 import { mockTests, getTestsByDifficulty, getTestsBySubject } from '@/data/mockTests'
 import type { MockTest, Question, TestResponse, TestAttempt } from '@/types/mockTest'
@@ -96,17 +96,19 @@ const getQuestionCountForTopic = (topicName: string): number => {
     ...diagramBasedQuestions,
     ...multipleCorrectQuestions,
     ...numericalQuestions,
-    ...statementBasedQuestions
+    ...statementBasedQuestions,
   ]
 
   // Count questions that match the topic
-  const topicCount = allQuestions.filter(question => {
+  const topicCount = allQuestions.filter((question) => {
     const questionTopic = question.topicId || question.tags?.join(' ') || ''
-    return questionTopic.toLowerCase().includes(topicName.toLowerCase()) ||
-           topicName.toLowerCase().includes('cell') && questionTopic.includes('cell') ||
-           topicName.toLowerCase().includes('protein') && questionTopic.includes('protein') ||
-           topicName.toLowerCase().includes('lipid') && questionTopic.includes('lipid') ||
-           topicName.toLowerCase().includes('nucleic') && questionTopic.includes('nucleic')
+    return (
+      questionTopic.toLowerCase().includes(topicName.toLowerCase()) ||
+      (topicName.toLowerCase().includes('cell') && questionTopic.includes('cell')) ||
+      (topicName.toLowerCase().includes('protein') && questionTopic.includes('protein')) ||
+      (topicName.toLowerCase().includes('lipid') && questionTopic.includes('lipid')) ||
+      (topicName.toLowerCase().includes('nucleic') && questionTopic.includes('nucleic'))
+    )
   }).length
 
   // Return mock data if no exact match (so users can proceed)
@@ -115,8 +117,12 @@ const getQuestionCountForTopic = (topicName: string): number => {
 
 export default function TestGeneratorPage() {
   // State management
-  const [currentStep, setCurrentStep] = useState<'class' | 'configure' | 'preview' | 'test' | 'results'>('class')
-  const [selectedClass, setSelectedClass] = useState<'class-11' | 'class-12' | 'dropper' | null>(null)
+  const [currentStep, setCurrentStep] = useState<
+    'class' | 'configure' | 'preview' | 'test' | 'results'
+  >('class')
+  const [selectedClass, setSelectedClass] = useState<'class-11' | 'class-12' | 'dropper' | null>(
+    null
+  )
   const [isGenerating, setIsGenerating] = useState(false)
   const [generationProgress, setGenerationProgress] = useState(0)
   const [generatedTest, setGeneratedTest] = useState<MockTest | null>(null)
@@ -138,12 +144,12 @@ export default function TestGeneratorPage() {
       singleCorrect: 80,
       assertionReason: 15,
       matchFollowing: 3,
-      diagramBased: 2
+      diagramBased: 2,
     },
     includeYearQuestions: true,
     yearRange: ['2020', '2021', '2022', '2023'],
     adaptiveMode: false,
-    negativeMarking: true
+    negativeMarking: true,
   })
 
   // Chapter and topic management
@@ -155,26 +161,31 @@ export default function TestGeneratorPage() {
   // Available topic data based on class
   useEffect(() => {
     if (selectedClass) {
-      const chapters = selectedClass === 'class-11' ? class11Chapters :
-                     selectedClass === 'class-12' ? class12Chapters :
-                     [...class11Chapters, ...class12Chapters]
+      const chapters =
+        selectedClass === 'class-11'
+          ? class11Chapters
+          : selectedClass === 'class-12'
+            ? class12Chapters
+            : [...class11Chapters, ...class12Chapters]
 
-      const formattedChapters = chapters.map(ch => ({
+      const formattedChapters = chapters.map((ch) => ({
         id: ch.id,
         name: ch.name,
         class: ch.class,
         unit: ch.unit,
         weightage: ch.weightageInNEET,
         topics: phase1PriorityTopics
-          .filter(topic => topic.chapterId === ch.id)
-          .flatMap(topic => topic.subtopics.map(subtopic => ({
-            name: subtopic,
-            questionCount: getQuestionCountForTopic(subtopic)
-          })))
+          .filter((topic) => topic.chapterId === ch.id)
+          .flatMap((topic) =>
+            topic.subtopics.map((subtopic) => ({
+              name: subtopic,
+              questionCount: getQuestionCountForTopic(subtopic),
+            }))
+          ),
       }))
 
       setAvailableChapters(formattedChapters)
-      setTestConfig(prev => ({ ...prev, class: selectedClass }))
+      setTestConfig((prev) => ({ ...prev, class: selectedClass }))
     }
   }, [selectedClass])
 
@@ -195,13 +206,13 @@ export default function TestGeneratorPage() {
 
     // Update topics based on selected chapters
     const relevantTopics = availableChapters
-      .filter(ch => newSelected.has(ch.id))
-      .flatMap(ch => ch.topics.map(t => t.name))
+      .filter((ch) => newSelected.has(ch.id))
+      .flatMap((ch) => ch.topics.map((t) => t.name))
 
-    setTestConfig(prev => ({
+    setTestConfig((prev) => ({
       ...prev,
       chapters: Array.from(newSelected),
-      topics: relevantTopics
+      topics: relevantTopics,
     }))
   }
 
@@ -213,7 +224,7 @@ export default function TestGeneratorPage() {
       newSelected.add(topic)
     }
     setSelectedTopics(newSelected)
-    setTestConfig(prev => ({ ...prev, topics: Array.from(newSelected) }))
+    setTestConfig((prev) => ({ ...prev, topics: Array.from(newSelected) }))
   }
 
   const handleGenerateTest = async () => {
@@ -228,7 +239,7 @@ export default function TestGeneratorPage() {
     try {
       // Simulate AI generation with progress
       for (let i = 0; i <= 100; i += 10) {
-        await new Promise(resolve => setTimeout(resolve, 300))
+        await new Promise((resolve) => setTimeout(resolve, 300))
         setGenerationProgress(i)
       }
 
@@ -258,13 +269,14 @@ export default function TestGeneratorPage() {
         duration: testConfig.duration,
         totalQuestions: testConfig.totalQuestions,
         totalMarks: testConfig.totalMarks,
-        questions: generatedTestData.questions.map(q => ({
+        questions: generatedTestData.questions.map((q) => ({
           id: q.id,
           questionText: q.question,
-          options: q.options?.map((opt, idx) => ({
-            id: String.fromCharCode(97 + idx), // a, b, c, d
-            text: opt
-          })) || [],
+          options:
+            q.options?.map((opt, idx) => ({
+              id: String.fromCharCode(97 + idx), // a, b, c, d
+              text: opt,
+            })) || [],
           correctAnswer: q.correctAnswer,
           explanation: q.explanation || 'Detailed explanation will be provided.',
           difficulty: q.difficulty,
@@ -276,7 +288,7 @@ export default function TestGeneratorPage() {
           marks: q.marks,
           timeAllocated: q.timeLimit || 120,
           keywords: q.tags || [],
-          relatedConcepts: q.relatedConcepts || []
+          relatedConcepts: q.relatedConcepts || [],
         })),
         difficulty: testConfig.difficulty,
         topics: testConfig.topics,
@@ -284,9 +296,11 @@ export default function TestGeneratorPage() {
           `This test contains ${testConfig.totalQuestions} questions`,
           `Time limit: ${testConfig.duration} minutes`,
           'Each question carries 4 marks',
-          testConfig.negativeMarking ? 'Negative marking: -1 for incorrect answers' : 'No negative marking',
+          testConfig.negativeMarking
+            ? 'Negative marking: -1 for incorrect answers'
+            : 'No negative marking',
           'You can mark questions for review and come back to them later',
-          'Ensure stable internet connection throughout the test'
+          'Ensure stable internet connection throughout the test',
         ],
         isActive: true,
         isPremium: false,
@@ -297,35 +311,36 @@ export default function TestGeneratorPage() {
           minimumClass: 'class-11',
           recommendedFor: [testConfig.class || 'class-12'],
           difficultyByClass: {
-            'class-11': testConfig.difficulty,
-            'class-12': testConfig.difficulty,
-            'dropper': testConfig.difficulty
-          }
+            'class-11': testConfig.difficulty === 'mixed' ? 'medium' : testConfig.difficulty,
+            'class-12': testConfig.difficulty === 'mixed' ? 'medium' : testConfig.difficulty,
+            dropper: testConfig.difficulty === 'mixed' ? 'hard' : testConfig.difficulty,
+          },
         },
         adaptiveSettings: {
           enableAdaptive: testConfig.adaptiveMode,
           questionPoolByClass: {
-            'class-11': generatedTestData.questions.slice(0, Math.floor(testConfig.totalQuestions * 0.6)).map(q => q.id),
-            'class-12': generatedTestData.questions.map(q => q.id),
-            'dropper': generatedTestData.questions.map(q => q.id)
+            'class-11': generatedTestData.questions
+              .slice(0, Math.floor(testConfig.totalQuestions * 0.6))
+              .map((q) => q.id),
+            'class-12': generatedTestData.questions.map((q) => q.id),
+            dropper: generatedTestData.questions.map((q) => q.id),
           },
           progressionRules: {
             easyToMediumThreshold: 70,
-            mediumToHardThreshold: 85
-          }
+            mediumToHardThreshold: 85,
+          },
         },
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString(),
         seoMetadata: {
           title: `${testConfig.title} | Custom NEET Biology Test`,
           description: testConfig.description,
-          keywords: testConfig.topics
-        }
+          keywords: testConfig.topics,
+        },
       }
 
       setGeneratedTest(mockTest)
       setCurrentStep('preview')
-
     } catch (error) {
       console.error('Failed to generate test:', error)
       alert('Failed to generate test. Please try again.')
@@ -345,8 +360,8 @@ export default function TestGeneratorPage() {
     if (!generatedTest) return
 
     // Calculate results
-    const correctAnswers = responses.filter(r => r.isCorrect).length
-    const incorrectAnswers = responses.filter(r => !r.isCorrect && r.selectedAnswer).length
+    const correctAnswers = responses.filter((r) => r.isCorrect).length
+    const incorrectAnswers = responses.filter((r) => !r.isCorrect && r.selectedAnswer).length
     const unattempted = generatedTest.totalQuestions - responses.length
 
     const totalMarks = correctAnswers * 4 + (testConfig.negativeMarking ? incorrectAnswers * -1 : 0)
@@ -369,7 +384,7 @@ export default function TestGeneratorPage() {
         incorrect: incorrectAnswers,
         unattempted,
         totalMarks,
-        percentage
+        percentage,
       },
       analytics: {
         subjectWise: [],
@@ -377,17 +392,19 @@ export default function TestGeneratorPage() {
         difficultyWise: [],
         timeAnalysis: {
           averageTimePerQuestion: timeTaken / responses.length,
-          questionsRushed: responses.filter(r => r.timeTaken < 30).length,
-          questionsOvertime: responses.filter(r => r.timeTaken > 180).length
-        }
+          questionsRushed: responses.filter((r) => r.timeTaken < 30).length,
+          questionsOvertime: responses.filter((r) => r.timeTaken > 180).length,
+        },
       },
       suggestions: [
-        percentage >= 80 ? 'Excellent performance! Keep practicing advanced topics.' :
-        percentage >= 60 ? 'Good score! Focus on improving weak areas.' :
-        'Need more practice. Review concepts and try again.'
+        percentage >= 80
+          ? 'Excellent performance! Keep practicing advanced topics.'
+          : percentage >= 60
+            ? 'Good score! Focus on improving weak areas.'
+            : 'Need more practice. Review concepts and try again.',
       ],
       weakAreas: [],
-      strongAreas: []
+      strongAreas: [],
     }
 
     setTestAttempt(attempt)
@@ -418,39 +435,51 @@ export default function TestGeneratorPage() {
                 <Brain className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h1 className="text-2xl font-bold text-gray-900">
-                  🧬 NEET Biology Test Generator
-                </h1>
+                <h1 className="text-2xl font-bold text-gray-900">🧬 NEET Biology Test Generator</h1>
                 <p className="text-gray-600">AI-powered personalized test creation</p>
               </div>
             </div>
 
             {/* Progress Indicator */}
             <div className="hidden md:flex items-center space-x-2">
-              <div className={`flex items-center space-x-2 px-3 py-1 rounded-full ${
-                currentStep === 'class' ? 'bg-blue-100 text-blue-700' : 'bg-gray-100 text-gray-500'
-              }`}>
+              <div
+                className={`flex items-center space-x-2 px-3 py-1 rounded-full ${
+                  currentStep === 'class'
+                    ? 'bg-blue-100 text-blue-700'
+                    : 'bg-gray-100 text-gray-500'
+                }`}
+              >
                 <GraduationCap className="w-4 h-4" />
                 <span className="text-sm font-medium">Class</span>
               </div>
               <ChevronRight className="w-4 h-4 text-gray-400" />
-              <div className={`flex items-center space-x-2 px-3 py-1 rounded-full ${
-                currentStep === 'configure' ? 'bg-blue-100 text-blue-700' : 'bg-gray-100 text-gray-500'
-              }`}>
+              <div
+                className={`flex items-center space-x-2 px-3 py-1 rounded-full ${
+                  currentStep === 'configure'
+                    ? 'bg-blue-100 text-blue-700'
+                    : 'bg-gray-100 text-gray-500'
+                }`}
+              >
                 <Settings className="w-4 h-4" />
                 <span className="text-sm font-medium">Configure</span>
               </div>
               <ChevronRight className="w-4 h-4 text-gray-400" />
-              <div className={`flex items-center space-x-2 px-3 py-1 rounded-full ${
-                currentStep === 'preview' ? 'bg-blue-100 text-blue-700' : 'bg-gray-100 text-gray-500'
-              }`}>
+              <div
+                className={`flex items-center space-x-2 px-3 py-1 rounded-full ${
+                  currentStep === 'preview'
+                    ? 'bg-blue-100 text-blue-700'
+                    : 'bg-gray-100 text-gray-500'
+                }`}
+              >
                 <Eye className="w-4 h-4" />
                 <span className="text-sm font-medium">Preview</span>
               </div>
               <ChevronRight className="w-4 h-4 text-gray-400" />
-              <div className={`flex items-center space-x-2 px-3 py-1 rounded-full ${
-                currentStep === 'test' ? 'bg-blue-100 text-blue-700' : 'bg-gray-100 text-gray-500'
-              }`}>
+              <div
+                className={`flex items-center space-x-2 px-3 py-1 rounded-full ${
+                  currentStep === 'test' ? 'bg-blue-100 text-blue-700' : 'bg-gray-100 text-gray-500'
+                }`}
+              >
                 <Play className="w-4 h-4" />
                 <span className="text-sm font-medium">Test</span>
               </div>
@@ -471,10 +500,7 @@ export default function TestGeneratorPage() {
               transition={{ duration: 0.5 }}
               className="py-12"
             >
-              <ClassSelection
-                onClassSelect={handleClassSelect}
-                selectedClass={selectedClass}
-              />
+              <ClassSelection onClassSelect={handleClassSelect} selectedClass={selectedClass} />
             </motion.div>
           )}
 
@@ -505,7 +531,9 @@ export default function TestGeneratorPage() {
                         <input
                           type="text"
                           value={testConfig.title}
-                          onChange={(e) => setTestConfig(prev => ({ ...prev, title: e.target.value }))}
+                          onChange={(e) =>
+                            setTestConfig((prev) => ({ ...prev, title: e.target.value }))
+                          }
                           className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                         />
                       </div>
@@ -516,7 +544,9 @@ export default function TestGeneratorPage() {
                         </label>
                         <select
                           value={testConfig.subject}
-                          onChange={(e) => setTestConfig(prev => ({ ...prev, subject: e.target.value as any }))}
+                          onChange={(e) =>
+                            setTestConfig((prev) => ({ ...prev, subject: e.target.value as any }))
+                          }
                           className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                         >
                           <option value="biology">General Biology</option>
@@ -532,7 +562,12 @@ export default function TestGeneratorPage() {
                         </label>
                         <select
                           value={testConfig.difficulty}
-                          onChange={(e) => setTestConfig(prev => ({ ...prev, difficulty: e.target.value as any }))}
+                          onChange={(e) =>
+                            setTestConfig((prev) => ({
+                              ...prev,
+                              difficulty: e.target.value as any,
+                            }))
+                          }
                           className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                         >
                           <option value="easy">Easy (Foundation)</option>
@@ -551,7 +586,12 @@ export default function TestGeneratorPage() {
                           min="30"
                           max="300"
                           value={testConfig.duration}
-                          onChange={(e) => setTestConfig(prev => ({ ...prev, duration: parseInt(e.target.value) }))}
+                          onChange={(e) =>
+                            setTestConfig((prev) => ({
+                              ...prev,
+                              duration: parseInt(e.target.value),
+                            }))
+                          }
                           className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                         />
                       </div>
@@ -565,11 +605,13 @@ export default function TestGeneratorPage() {
                           min="10"
                           max="100"
                           value={testConfig.totalQuestions}
-                          onChange={(e) => setTestConfig(prev => ({
-                            ...prev,
-                            totalQuestions: parseInt(e.target.value),
-                            totalMarks: parseInt(e.target.value) * 4
-                          }))}
+                          onChange={(e) =>
+                            setTestConfig((prev) => ({
+                              ...prev,
+                              totalQuestions: parseInt(e.target.value),
+                              totalMarks: parseInt(e.target.value) * 4,
+                            }))
+                          }
                           className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                         />
                       </div>
@@ -595,7 +637,12 @@ export default function TestGeneratorPage() {
                           <input
                             type="checkbox"
                             checked={testConfig.negativeMarking}
-                            onChange={(e) => setTestConfig(prev => ({ ...prev, negativeMarking: e.target.checked }))}
+                            onChange={(e) =>
+                              setTestConfig((prev) => ({
+                                ...prev,
+                                negativeMarking: e.target.checked,
+                              }))
+                            }
                             className="w-5 h-5 text-blue-600 rounded focus:ring-blue-500"
                           />
                           <span className="text-gray-700">Enable Negative Marking (-1)</span>
@@ -605,7 +652,9 @@ export default function TestGeneratorPage() {
                           <input
                             type="checkbox"
                             checked={testConfig.adaptiveMode}
-                            onChange={(e) => setTestConfig(prev => ({ ...prev, adaptiveMode: e.target.checked }))}
+                            onChange={(e) =>
+                              setTestConfig((prev) => ({ ...prev, adaptiveMode: e.target.checked }))
+                            }
                             className="w-5 h-5 text-blue-600 rounded focus:ring-blue-500"
                           />
                           <span className="text-gray-700">Adaptive Difficulty</span>
@@ -615,7 +664,12 @@ export default function TestGeneratorPage() {
                           <input
                             type="checkbox"
                             checked={testConfig.includeYearQuestions}
-                            onChange={(e) => setTestConfig(prev => ({ ...prev, includeYearQuestions: e.target.checked }))}
+                            onChange={(e) =>
+                              setTestConfig((prev) => ({
+                                ...prev,
+                                includeYearQuestions: e.target.checked,
+                              }))
+                            }
                             className="w-5 h-5 text-blue-600 rounded focus:ring-blue-500"
                           />
                           <span className="text-gray-700">Include Previous Year Questions</span>
@@ -657,7 +711,8 @@ export default function TestGeneratorPage() {
                               <div className="text-left">
                                 <h3 className="font-semibold text-gray-900">{chapter.name}</h3>
                                 <p className="text-sm text-gray-600">
-                                  Class {chapter.class} • {chapter.unit} • {chapter.weightage}% weightage in NEET
+                                  Class {chapter.class} • {chapter.unit} • {chapter.weightage}%
+                                  weightage in NEET
                                 </p>
                               </div>
                             </div>
@@ -672,7 +727,10 @@ export default function TestGeneratorPage() {
                             <div className="px-6 pb-4">
                               <div className="grid md:grid-cols-2 gap-2">
                                 {chapter.topics.map((topic) => (
-                                  <label key={topic.name} className="flex items-center justify-between p-2 hover:bg-gray-50 rounded">
+                                  <label
+                                    key={topic.name}
+                                    className="flex items-center justify-between p-2 hover:bg-gray-50 rounded"
+                                  >
                                     <div className="flex items-center space-x-2">
                                       <input
                                         type="checkbox"
@@ -736,19 +794,27 @@ export default function TestGeneratorPage() {
                     <div className="space-y-3">
                       <div className="flex justify-between items-center">
                         <span className="text-gray-600">Single Correct:</span>
-                        <span className="font-semibold">{testConfig.questionTypes.singleCorrect}%</span>
+                        <span className="font-semibold">
+                          {testConfig.questionTypes.singleCorrect}%
+                        </span>
                       </div>
                       <div className="flex justify-between items-center">
                         <span className="text-gray-600">Assertion-Reason:</span>
-                        <span className="font-semibold">{testConfig.questionTypes.assertionReason}%</span>
+                        <span className="font-semibold">
+                          {testConfig.questionTypes.assertionReason}%
+                        </span>
                       </div>
                       <div className="flex justify-between items-center">
                         <span className="text-gray-600">Match Following:</span>
-                        <span className="font-semibold">{testConfig.questionTypes.matchFollowing}%</span>
+                        <span className="font-semibold">
+                          {testConfig.questionTypes.matchFollowing}%
+                        </span>
                       </div>
                       <div className="flex justify-between items-center">
                         <span className="text-gray-600">Diagram Based:</span>
-                        <span className="font-semibold">{testConfig.questionTypes.diagramBased}%</span>
+                        <span className="font-semibold">
+                          {testConfig.questionTypes.diagramBased}%
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -813,17 +879,23 @@ export default function TestGeneratorPage() {
                   <div className="grid md:grid-cols-3 gap-6 mb-8">
                     <div className="bg-blue-50 rounded-2xl p-6 text-center">
                       <Clock className="w-8 h-8 text-blue-600 mx-auto mb-2" />
-                      <div className="text-2xl font-bold text-gray-900">{generatedTest.duration} min</div>
+                      <div className="text-2xl font-bold text-gray-900">
+                        {generatedTest.duration} min
+                      </div>
                       <div className="text-gray-600">Duration</div>
                     </div>
                     <div className="bg-green-50 rounded-2xl p-6 text-center">
                       <BookOpen className="w-8 h-8 text-green-600 mx-auto mb-2" />
-                      <div className="text-2xl font-bold text-gray-900">{generatedTest.totalQuestions}</div>
+                      <div className="text-2xl font-bold text-gray-900">
+                        {generatedTest.totalQuestions}
+                      </div>
                       <div className="text-gray-600">Questions</div>
                     </div>
                     <div className="bg-purple-50 rounded-2xl p-6 text-center">
                       <Target className="w-8 h-8 text-purple-600 mx-auto mb-2" />
-                      <div className="text-2xl font-bold text-gray-900">{generatedTest.totalMarks}</div>
+                      <div className="text-2xl font-bold text-gray-900">
+                        {generatedTest.totalMarks}
+                      </div>
                       <div className="text-gray-600">Total Marks</div>
                     </div>
                   </div>
@@ -841,10 +913,7 @@ export default function TestGeneratorPage() {
                   </div>
 
                   <div className="flex justify-center space-x-4">
-                    <Button
-                      variant="outline"
-                      onClick={() => setCurrentStep('configure')}
-                    >
+                    <Button variant="outline" onClick={() => setCurrentStep('configure')}>
                       <ArrowLeft className="w-5 h-5 mr-2" />
                       Back to Configuration
                     </Button>
@@ -870,10 +939,14 @@ export default function TestGeneratorPage() {
             />
           )}
 
-          {currentStep === 'results' && testAttempt && (
+          {currentStep === 'results' && testAttempt && generatedTest && (
             <TestResults
-              attempt={testAttempt}
-              onClose={handleResultsClose}
+              test={generatedTest}
+              responses={testAttempt.responses}
+              timeTaken={testAttempt.duration}
+              userClass={testAttempt.userClass}
+              onRetakeTest={handleResultsClose}
+              onBackToTests={handleResultsClose}
             />
           )}
         </AnimatePresence>

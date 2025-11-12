@@ -423,6 +423,9 @@ export enum AuditAction {
   PAYMENT = 'payment',
   DATA_ACCESS = 'data_access',
   CONFIGURATION_CHANGE = 'configuration_change',
+  TOOL_REQUEST = 'tool_request',
+  SERVER_START = 'server_start',
+  SERVER_STOP = 'server_stop',
 }
 
 export enum AuditStatus {

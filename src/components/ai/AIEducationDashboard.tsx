@@ -162,7 +162,10 @@ export function AIEducationDashboard() {
       text: string
       sender: 'user' | 'ai'
       timestamp: Date
-      type?: 'text' | 'explanation' | 'recommendation'
+      type?: 'text' | 'explanation' | 'recommendation' | 'image' | 'voice'
+      imageUrl?: string
+      analysis?: any
+      audioUrl?: string
     }>
   >([])
   const [chatInput, setChatInput] = useState('')

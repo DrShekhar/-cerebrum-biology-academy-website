@@ -29,7 +29,7 @@ import {
   Lightbulb,
   Bookmark,
   History,
-  Star
+  Star,
 } from 'lucide-react'
 
 // Import our enhanced components
@@ -126,7 +126,7 @@ const EnhancedTestGenerationInterface: React.FC = () => {
     totalQuestions: 50,
     topics: [],
     questionTypes: { mcq: 70, assertion: 20, numerical: 10, matching: 0 },
-    difficulty: 'medium'
+    difficulty: 'medium',
   })
 
   // UI state
@@ -140,7 +140,7 @@ const EnhancedTestGenerationInterface: React.FC = () => {
     accessibilityMode: false,
     fontSize: 'md',
     showMiniMap: false,
-    autoSave: true
+    autoSave: true,
   })
 
   // Generation state
@@ -197,7 +197,7 @@ const EnhancedTestGenerationInterface: React.FC = () => {
             break
           case 'b':
             e.preventDefault()
-            setUISettings(prev => ({ ...prev, sidebarCollapsed: !prev.sidebarCollapsed }))
+            setUISettings((prev) => ({ ...prev, sidebarCollapsed: !prev.sidebarCollapsed }))
             break
         }
       }
@@ -213,14 +213,14 @@ const EnhancedTestGenerationInterface: React.FC = () => {
       ...notification,
       id: `notification_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
       timestamp: new Date(),
-      isRead: false
+      isRead: false,
     }
 
-    setNotifications(prev => [newNotification, ...prev.slice(0, 9)]) // Keep only 10 notifications
+    setNotifications((prev) => [newNotification, ...prev.slice(0, 9)]) // Keep only 10 notifications
   }
 
   const markNotificationAsRead = (id: string) => {
-    setNotifications(prev => prev.map(n => n.id === id ? { ...n, isRead: true } : n))
+    setNotifications((prev) => prev.map((n) => (n.id === id ? { ...n, isRead: true } : n)))
   }
 
   const clearNotifications = () => {
@@ -231,12 +231,12 @@ const EnhancedTestGenerationInterface: React.FC = () => {
   const handleSave = async (silent = false) => {
     try {
       // Simulate save operation
-      await new Promise(resolve => setTimeout(resolve, 1000))
+      await new Promise((resolve) => setTimeout(resolve, 1000))
 
       const updatedConfig = {
         ...testConfiguration,
         questions,
-        lastModified: new Date().toISOString()
+        lastModified: new Date().toISOString(),
       }
 
       setTestConfiguration(updatedConfig)
@@ -246,14 +246,14 @@ const EnhancedTestGenerationInterface: React.FC = () => {
         addNotification({
           type: 'success',
           title: 'Test Saved',
-          message: 'Your test configuration has been saved successfully.'
+          message: 'Your test configuration has been saved successfully.',
         })
       }
     } catch (error) {
       addNotification({
         type: 'error',
         title: 'Save Failed',
-        message: 'Failed to save test configuration. Please try again.'
+        message: 'Failed to save test configuration. Please try again.',
       })
     }
   }
@@ -263,16 +263,16 @@ const EnhancedTestGenerationInterface: React.FC = () => {
       addNotification({
         type: 'warning',
         title: 'No Questions',
-        message: 'Generate some questions first to preview the test.'
+        message: 'Generate some questions first to preview the test.',
       })
       return
     }
 
-    setUISettings(prev => ({ ...prev, showPreview: true }))
+    setUISettings((prev) => ({ ...prev, showPreview: true }))
     addNotification({
       type: 'info',
       title: 'Preview Mode',
-      message: 'Now viewing test in preview mode.'
+      message: 'Now viewing test in preview mode.',
     })
   }
 
@@ -281,7 +281,7 @@ const EnhancedTestGenerationInterface: React.FC = () => {
       addNotification({
         type: 'warning',
         title: 'No Topics Selected',
-        message: 'Please select at least one topic before generating questions.'
+        message: 'Please select at least one topic before generating questions.',
       })
       return
     }
@@ -292,35 +292,48 @@ const EnhancedTestGenerationInterface: React.FC = () => {
     try {
       // Simulate question generation with progress
       for (let i = 0; i <= 100; i += 10) {
-        await new Promise(resolve => setTimeout(resolve, 200))
+        await new Promise((resolve) => setTimeout(resolve, 200))
         setGenerationProgress(i)
       }
 
       // Generate sample questions
-      const newQuestions: Question[] = Array.from({ length: testConfiguration.totalQuestions }, (_, index) => ({
-        id: `generated_${Date.now()}_${index}`,
-        question: `Generated question ${index + 1} about ${testConfiguration.topics[index % testConfiguration.topics.length]}`,
-        type: 'mcq' as const,
-        options: [
-          'Option A - First choice',
-          'Option B - Second choice',
-          'Option C - Third choice',
-          'Option D - Fourth choice'
-        ],
-        correctAnswer: 'Option A - First choice',
-        explanation: `This is the explanation for question ${index + 1}. It covers the key concepts and reasoning behind the correct answer.`,
-        difficulty: ['easy', 'medium', 'hard'][index % 3] as any,
-        topic: testConfiguration.topics[index % testConfiguration.topics.length],
-        subtopic: `Subtopic ${index % 3 + 1}`,
-        chapter: `Chapter ${Math.floor(index / 5) + 1}`,
-        marks: 4,
-        estimatedTime: 90 + (index % 3) * 30,
-        bloomsLevel: ['remember', 'understand', 'apply', 'analyze'][index % 4],
-        learningObjectives: [`Understand key concept ${index + 1}`, `Apply knowledge to solve problems`],
-        tags: [testConfiguration.topics[index % testConfiguration.topics.length].toLowerCase(), 'generated', 'neet'],
-        hints: [`Think about the fundamental principles`, `Consider the relationship between concepts`],
-        commonMistakes: [`Don't confuse with similar concept`, `Remember the key distinction`]
-      }))
+      const newQuestions: Question[] = Array.from(
+        { length: testConfiguration.totalQuestions },
+        (_, index) => ({
+          id: `generated_${Date.now()}_${index}`,
+          question: `Generated question ${index + 1} about ${testConfiguration.topics[index % testConfiguration.topics.length]}`,
+          type: 'mcq' as const,
+          options: [
+            'Option A - First choice',
+            'Option B - Second choice',
+            'Option C - Third choice',
+            'Option D - Fourth choice',
+          ],
+          correctAnswer: 'Option A - First choice',
+          explanation: `This is the explanation for question ${index + 1}. It covers the key concepts and reasoning behind the correct answer.`,
+          difficulty: ['easy', 'medium', 'hard'][index % 3] as any,
+          topic: testConfiguration.topics[index % testConfiguration.topics.length],
+          subtopic: `Subtopic ${(index % 3) + 1}`,
+          chapter: `Chapter ${Math.floor(index / 5) + 1}`,
+          marks: 4,
+          estimatedTime: 90 + (index % 3) * 30,
+          bloomsLevel: ['remember', 'understand', 'apply', 'analyze'][index % 4],
+          learningObjectives: [
+            `Understand key concept ${index + 1}`,
+            `Apply knowledge to solve problems`,
+          ],
+          tags: [
+            testConfiguration.topics[index % testConfiguration.topics.length].toLowerCase(),
+            'generated',
+            'neet',
+          ],
+          hints: [
+            `Think about the fundamental principles`,
+            `Consider the relationship between concepts`,
+          ],
+          commonMistakes: [`Don't confuse with similar concept`, `Remember the key distinction`],
+        })
+      )
 
       setQuestions(newQuestions)
 
@@ -330,15 +343,14 @@ const EnhancedTestGenerationInterface: React.FC = () => {
         message: `Successfully generated ${newQuestions.length} questions using AI.`,
         action: {
           label: 'Preview',
-          onClick: handlePreview
-        }
+          onClick: handlePreview,
+        },
       })
-
     } catch (error) {
       addNotification({
         type: 'error',
         title: 'Generation Failed',
-        message: 'Failed to generate questions. Please try again.'
+        message: 'Failed to generate questions. Please try again.',
       })
     } finally {
       setIsGenerating(false)
@@ -351,18 +363,18 @@ const EnhancedTestGenerationInterface: React.FC = () => {
 
     try {
       // Simulate bulk generation
-      await new Promise(resolve => setTimeout(resolve, 3000))
+      await new Promise((resolve) => setTimeout(resolve, 3000))
 
       addNotification({
         type: 'success',
         title: 'Bulk Generation Complete',
-        message: `Generated ${criteria.totalQuestions} questions across ${criteria.topics.length} topics.`
+        message: `Generated ${criteria.totalQuestions} questions across ${criteria.topics.length} topics.`,
       })
     } catch (error) {
       addNotification({
         type: 'error',
         title: 'Bulk Generation Failed',
-        message: 'Failed to generate questions in bulk. Please try again.'
+        message: 'Failed to generate questions in bulk. Please try again.',
       })
     } finally {
       setIsGenerating(false)
@@ -370,26 +382,26 @@ const EnhancedTestGenerationInterface: React.FC = () => {
   }
 
   const handleTemplateSelect = (template: any) => {
-    setTestConfiguration(prev => ({
+    setTestConfiguration((prev) => ({
       ...prev,
       title: template.name,
       description: template.description,
       duration: template.duration,
       totalQuestions: template.totalQuestions,
       totalMarks: template.totalMarks,
-      topics: template.topics
+      topics: template.topics,
     }))
 
     addNotification({
       type: 'success',
       title: 'Template Applied',
-      message: `Applied template: ${template.name}`
+      message: `Applied template: ${template.name}`,
     })
   }
 
   const handleQuestionEdit = (questionId: string) => {
     // Find and edit question
-    const questionIndex = questions.findIndex(q => q.id === questionId)
+    const questionIndex = questions.findIndex((q) => q.id === questionId)
     if (questionIndex !== -1) {
       setCurrentQuestionIndex(questionIndex)
       setActiveTab('edit')
@@ -397,14 +409,14 @@ const EnhancedTestGenerationInterface: React.FC = () => {
   }
 
   const updateUISettings = (updates: Partial<UISettings>) => {
-    setUISettings(prev => ({ ...prev, ...updates }))
+    setUISettings((prev) => ({ ...prev, ...updates }))
   }
 
   // Render mobile version for mobile devices
   if (isMobile) {
     return (
       <MobileOptimizedTestCreator
-        onConfigurationChange={(config) => setTestConfiguration(prev => ({ ...prev, ...config }))}
+        onConfigurationChange={(config) => setTestConfiguration((prev) => ({ ...prev, ...config }))}
         onPreview={handlePreview}
         onSave={() => handleSave()}
         onGenerate={handleGenerate}
@@ -421,7 +433,9 @@ const EnhancedTestGenerationInterface: React.FC = () => {
         activeTab={activeTab}
         onTabChange={setActiveTab}
         isCollapsed={uiSettings.sidebarCollapsed}
-        onToggleCollapse={() => updateUISettings({ sidebarCollapsed: !uiSettings.sidebarCollapsed })}
+        onToggleCollapse={() =>
+          updateUISettings({ sidebarCollapsed: !uiSettings.sidebarCollapsed })
+        }
         showBreadcrumbs={true}
         showProgress={true}
         allowPinning={true}
@@ -437,7 +451,8 @@ const EnhancedTestGenerationInterface: React.FC = () => {
               <div>
                 <h1 className="text-xl font-semibold text-gray-800">{testConfiguration.title}</h1>
                 <p className="text-sm text-gray-600">
-                  {questions.length} questions • {testConfiguration.totalMarks} marks • {testConfiguration.duration} minutes
+                  {questions.length} questions • {testConfiguration.totalMarks} marks •{' '}
+                  {testConfiguration.duration} minutes
                 </p>
               </div>
 
@@ -533,7 +548,9 @@ const EnhancedTestGenerationInterface: React.FC = () => {
 
         {/* Main Content Grid */}
         <div className="flex-1 overflow-hidden">
-          <div className={`h-full ${uiSettings.showPreview ? 'grid grid-cols-2 gap-4 p-4' : 'p-4'}`}>
+          <div
+            className={`h-full ${uiSettings.showPreview ? 'grid grid-cols-2 gap-4 p-4' : 'p-4'}`}
+          >
             {/* Primary Content Area */}
             <div className="space-y-6 overflow-y-auto">
               <AnimatePresence mode="wait">
@@ -547,7 +564,9 @@ const EnhancedTestGenerationInterface: React.FC = () => {
                     <div className="bg-white rounded-xl p-6 border">
                       <h3 className="text-lg font-semibold mb-4">Test Configuration</h3>
                       {/* Basic configuration form would go here */}
-                      <p className="text-gray-600">Configure your test settings, duration, and basic parameters.</p>
+                      <p className="text-gray-600">
+                        Configure your test settings, duration, and basic parameters.
+                      </p>
                     </div>
                   </motion.div>
                 )}
@@ -576,7 +595,7 @@ const EnhancedTestGenerationInterface: React.FC = () => {
                   >
                     <BatchOperationsPanel
                       questions={questions}
-                      onQuestionsUpdate={setQuestions}
+                      onQuestionsUpdate={(updatedQuestions) => setQuestions(updatedQuestions)}
                       onBulkGenerate={handleBulkGenerate}
                       isGenerating={isGenerating}
                     />
@@ -626,30 +645,43 @@ const EnhancedTestGenerationInterface: React.FC = () => {
             exit={{ opacity: 0, x: 300 }}
             className="fixed top-4 right-4 space-y-2 z-50"
           >
-            {notifications.slice(0, 3).map(notification => (
+            {notifications.slice(0, 3).map((notification) => (
               <motion.div
                 key={notification.id}
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 className={`max-w-sm bg-white border rounded-lg p-4 shadow-lg ${
-                  notification.type === 'error' ? 'border-red-200' :
-                  notification.type === 'warning' ? 'border-yellow-200' :
-                  notification.type === 'success' ? 'border-green-200' :
-                  'border-blue-200'
+                  notification.type === 'error'
+                    ? 'border-red-200'
+                    : notification.type === 'warning'
+                      ? 'border-yellow-200'
+                      : notification.type === 'success'
+                        ? 'border-green-200'
+                        : 'border-blue-200'
                 }`}
               >
                 <div className="flex items-start gap-3">
-                  <div className={`mt-0.5 ${
-                    notification.type === 'error' ? 'text-red-500' :
-                    notification.type === 'warning' ? 'text-yellow-500' :
-                    notification.type === 'success' ? 'text-green-500' :
-                    'text-blue-500'
-                  }`}>
-                    {notification.type === 'error' ? <AlertTriangle className="w-5 h-5" /> :
-                     notification.type === 'warning' ? <AlertTriangle className="w-5 h-5" /> :
-                     notification.type === 'success' ? <CheckCircle2 className="w-5 h-5" /> :
-                     <Info className="w-5 h-5" />}
+                  <div
+                    className={`mt-0.5 ${
+                      notification.type === 'error'
+                        ? 'text-red-500'
+                        : notification.type === 'warning'
+                          ? 'text-yellow-500'
+                          : notification.type === 'success'
+                            ? 'text-green-500'
+                            : 'text-blue-500'
+                    }`}
+                  >
+                    {notification.type === 'error' ? (
+                      <AlertTriangle className="w-5 h-5" />
+                    ) : notification.type === 'warning' ? (
+                      <AlertTriangle className="w-5 h-5" />
+                    ) : notification.type === 'success' ? (
+                      <CheckCircle2 className="w-5 h-5" />
+                    ) : (
+                      <Info className="w-5 h-5" />
+                    )}
                   </div>
 
                   <div className="flex-1 min-w-0">

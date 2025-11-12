@@ -34,27 +34,27 @@ export default function UserProfileDashboard({ className = '' }: UserProfileDash
         notifications: {
           email: true,
           sms: false,
-          push: false
+          push: false,
         },
         privacy: {
           profileVisible: false,
           progressVisible: true,
-          allowContactFromTeachers: true
+          allowContactFromTeachers: true,
         },
         study: {
           preferredStudyTime: 'EVENING',
           dailyStudyGoal: 120,
-          reminderFrequency: 'DAILY'
-        }
-      }
-    }
+          reminderFrequency: 'DAILY',
+        },
+      },
+    },
   })
 
   const [passwordData, setPasswordData] = useState({
     currentPassword: '',
     newPassword: '',
     confirmPassword: '',
-    logoutOtherDevices: false
+    logoutOtherDevices: false,
   })
 
   // Initialize profile data when user loads
@@ -74,31 +74,34 @@ export default function UserProfileDashboard({ className = '' }: UserProfileDash
             notifications: {
               email: user.profile?.preferences?.notifications?.email ?? true,
               sms: user.profile?.preferences?.notifications?.sms ?? false,
-              push: user.profile?.preferences?.notifications?.push ?? false
+              push: user.profile?.preferences?.notifications?.push ?? false,
             },
             privacy: {
               profileVisible: user.profile?.preferences?.privacy?.profileVisible ?? false,
               progressVisible: user.profile?.preferences?.privacy?.progressVisible ?? true,
-              allowContactFromTeachers: user.profile?.preferences?.privacy?.allowContactFromTeachers ?? true
+              allowContactFromTeachers:
+                user.profile?.preferences?.privacy?.allowContactFromTeachers ?? true,
             },
             study: {
               preferredStudyTime: user.profile?.preferences?.study?.preferredStudyTime || 'EVENING',
               dailyStudyGoal: user.profile?.preferences?.study?.dailyStudyGoal || 120,
-              reminderFrequency: user.profile?.preferences?.study?.reminderFrequency || 'DAILY'
-            }
-          }
-        }
+              reminderFrequency: user.profile?.preferences?.study?.reminderFrequency || 'DAILY',
+            },
+          },
+        },
       })
     }
   }, [user])
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
+  ) => {
     const { name, value, type } = e.target
     const checked = (e.target as HTMLInputElement).checked
 
     if (name.includes('.')) {
       const keys = name.split('.')
-      setProfileData(prev => {
+      setProfileData((prev) => {
         const updated = { ...prev }
         let current: any = updated
         for (let i = 0; i < keys.length - 1; i++) {
@@ -108,9 +111,9 @@ export default function UserProfileDashboard({ className = '' }: UserProfileDash
         return updated
       })
     } else {
-      setProfileData(prev => ({
+      setProfileData((prev) => ({
         ...prev,
-        [name]: type === 'checkbox' ? checked : value
+        [name]: type === 'checkbox' ? checked : value,
       }))
     }
 
@@ -119,9 +122,9 @@ export default function UserProfileDashboard({ className = '' }: UserProfileDash
 
   const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type } = e.target
-    setPasswordData(prev => ({
+    setPasswordData((prev) => ({
       ...prev,
-      [name]: type === 'checkbox' ? (e.target as HTMLInputElement).checked : value
+      [name]: type === 'checkbox' ? (e.target as HTMLInputElement).checked : value,
     }))
   }
 
@@ -161,7 +164,7 @@ export default function UserProfileDashboard({ className = '' }: UserProfileDash
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(passwordData),
-        credentials: 'include'
+        credentials: 'include',
       })
 
       const data = await response.json()
@@ -173,7 +176,7 @@ export default function UserProfileDashboard({ className = '' }: UserProfileDash
           currentPassword: '',
           newPassword: '',
           confirmPassword: '',
-          logoutOtherDevices: false
+          logoutOtherDevices: false,
         })
       } else {
         setError(data.message || 'Failed to change password')
@@ -203,7 +206,12 @@ export default function UserProfileDashboard({ className = '' }: UserProfileDash
             <div>
               <h1 className="text-3xl font-bold">Welcome, {user.name}!</h1>
               <p className="text-blue-100 mt-1">
-                {user.role === 'STUDENT' ? 'Student' : user.role === 'PARENT' ? 'Parent' : user.role} • {user.email}
+                {user.role === 'STUDENT'
+                  ? 'Student'
+                  : user.role === 'PARENT'
+                    ? 'Parent'
+                    : user.role}{' '}
+                • {user.email}
               </p>
             </div>
             <div className="text-right">
@@ -294,11 +302,12 @@ export default function UserProfileDashboard({ className = '' }: UserProfileDash
                     <div>
                       <Label htmlFor="profile.grade">Grade/Class</Label>
                       {isEditing ? (
-                        <Select
+                        <select
                           id="profile.grade"
                           name="profile.grade"
                           value={profileData.profile.grade}
                           onChange={handleInputChange}
+                          className="flex h-12 w-full items-center justify-between rounded-lg border border-gray-200 bg-white px-4 py-3 text-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-200"
                         >
                           <option value="">Select Grade</option>
                           <option value="CLASS_9">Class 9</option>
@@ -306,20 +315,23 @@ export default function UserProfileDashboard({ className = '' }: UserProfileDash
                           <option value="CLASS_11">Class 11</option>
                           <option value="CLASS_12">Class 12</option>
                           <option value="DROPPER">Dropper/Repeater</option>
-                        </Select>
+                        </select>
                       ) : (
-                        <p className="mt-1 text-gray-900">{profileData.profile.grade || 'Not provided'}</p>
+                        <p className="mt-1 text-gray-900">
+                          {profileData.profile.grade || 'Not provided'}
+                        </p>
                       )}
                     </div>
 
                     <div>
                       <Label htmlFor="profile.curriculum">Curriculum</Label>
                       {isEditing ? (
-                        <Select
+                        <select
                           id="profile.curriculum"
                           name="profile.curriculum"
                           value={profileData.profile.curriculum}
                           onChange={handleInputChange}
+                          className="flex h-12 w-full items-center justify-between rounded-lg border border-gray-200 bg-white px-4 py-3 text-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-200"
                         >
                           <option value="">Select Curriculum</option>
                           <option value="NEET">NEET</option>
@@ -328,9 +340,11 @@ export default function UserProfileDashboard({ className = '' }: UserProfileDash
                           <option value="IB">IB</option>
                           <option value="IGCSE">IGCSE</option>
                           <option value="STATE_BOARD">State Board</option>
-                        </Select>
+                        </select>
                       ) : (
-                        <p className="mt-1 text-gray-900">{profileData.profile.curriculum || 'Not provided'}</p>
+                        <p className="mt-1 text-gray-900">
+                          {profileData.profile.curriculum || 'Not provided'}
+                        </p>
                       )}
                     </div>
 
@@ -345,7 +359,9 @@ export default function UserProfileDashboard({ className = '' }: UserProfileDash
                           placeholder="Enter your school name"
                         />
                       ) : (
-                        <p className="mt-1 text-gray-900">{profileData.profile.school || 'Not provided'}</p>
+                        <p className="mt-1 text-gray-900">
+                          {profileData.profile.school || 'Not provided'}
+                        </p>
                       )}
                     </div>
 
@@ -360,7 +376,9 @@ export default function UserProfileDashboard({ className = '' }: UserProfileDash
                           placeholder="Enter your city"
                         />
                       ) : (
-                        <p className="mt-1 text-gray-900">{profileData.profile.city || 'Not provided'}</p>
+                        <p className="mt-1 text-gray-900">
+                          {profileData.profile.city || 'Not provided'}
+                        </p>
                       )}
                     </div>
                   </>
@@ -393,26 +411,33 @@ export default function UserProfileDashboard({ className = '' }: UserProfileDash
                 <h2 className="text-xl font-semibold mb-4">Study Preferences</h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   <div>
-                    <Label htmlFor="profile.preferences.study.preferredStudyTime">Preferred Study Time</Label>
+                    <Label htmlFor="profile.preferences.study.preferredStudyTime">
+                      Preferred Study Time
+                    </Label>
                     {isEditing ? (
-                      <Select
+                      <select
                         id="profile.preferences.study.preferredStudyTime"
                         name="profile.preferences.study.preferredStudyTime"
                         value={profileData.profile.preferences.study.preferredStudyTime}
                         onChange={handleInputChange}
+                        className="flex h-12 w-full items-center justify-between rounded-lg border border-gray-200 bg-white px-4 py-3 text-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-200"
                       >
                         <option value="MORNING">Morning</option>
                         <option value="AFTERNOON">Afternoon</option>
                         <option value="EVENING">Evening</option>
                         <option value="NIGHT">Night</option>
-                      </Select>
+                      </select>
                     ) : (
-                      <p className="mt-1 text-gray-900">{profileData.profile.preferences.study.preferredStudyTime}</p>
+                      <p className="mt-1 text-gray-900">
+                        {profileData.profile.preferences.study.preferredStudyTime}
+                      </p>
                     )}
                   </div>
 
                   <div>
-                    <Label htmlFor="profile.preferences.study.dailyStudyGoal">Daily Study Goal (minutes)</Label>
+                    <Label htmlFor="profile.preferences.study.dailyStudyGoal">
+                      Daily Study Goal (minutes)
+                    </Label>
                     {isEditing ? (
                       <Input
                         id="profile.preferences.study.dailyStudyGoal"
@@ -424,25 +449,32 @@ export default function UserProfileDashboard({ className = '' }: UserProfileDash
                         onChange={handleInputChange}
                       />
                     ) : (
-                      <p className="mt-1 text-gray-900">{profileData.profile.preferences.study.dailyStudyGoal} minutes</p>
+                      <p className="mt-1 text-gray-900">
+                        {profileData.profile.preferences.study.dailyStudyGoal} minutes
+                      </p>
                     )}
                   </div>
 
                   <div>
-                    <Label htmlFor="profile.preferences.study.reminderFrequency">Reminder Frequency</Label>
+                    <Label htmlFor="profile.preferences.study.reminderFrequency">
+                      Reminder Frequency
+                    </Label>
                     {isEditing ? (
-                      <Select
+                      <select
                         id="profile.preferences.study.reminderFrequency"
                         name="profile.preferences.study.reminderFrequency"
                         value={profileData.profile.preferences.study.reminderFrequency}
                         onChange={handleInputChange}
+                        className="flex h-12 w-full items-center justify-between rounded-lg border border-gray-200 bg-white px-4 py-3 text-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-200"
                       >
                         <option value="NEVER">Never</option>
                         <option value="DAILY">Daily</option>
                         <option value="WEEKLY">Weekly</option>
-                      </Select>
+                      </select>
                     ) : (
-                      <p className="mt-1 text-gray-900">{profileData.profile.preferences.study.reminderFrequency}</p>
+                      <p className="mt-1 text-gray-900">
+                        {profileData.profile.preferences.study.reminderFrequency}
+                      </p>
                     )}
                   </div>
                 </div>
@@ -454,7 +486,9 @@ export default function UserProfileDashboard({ className = '' }: UserProfileDash
               <h2 className="text-xl font-semibold mb-4">Privacy Settings</h2>
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
-                  <Label htmlFor="profile.preferences.privacy.profileVisible">Make profile visible to other students</Label>
+                  <Label htmlFor="profile.preferences.privacy.profileVisible">
+                    Make profile visible to other students
+                  </Label>
                   <input
                     id="profile.preferences.privacy.profileVisible"
                     name="profile.preferences.privacy.profileVisible"
@@ -467,7 +501,9 @@ export default function UserProfileDashboard({ className = '' }: UserProfileDash
                 </div>
 
                 <div className="flex items-center justify-between">
-                  <Label htmlFor="profile.preferences.privacy.progressVisible">Show progress to parents/teachers</Label>
+                  <Label htmlFor="profile.preferences.privacy.progressVisible">
+                    Show progress to parents/teachers
+                  </Label>
                   <input
                     id="profile.preferences.privacy.progressVisible"
                     name="profile.preferences.privacy.progressVisible"
@@ -480,7 +516,9 @@ export default function UserProfileDashboard({ className = '' }: UserProfileDash
                 </div>
 
                 <div className="flex items-center justify-between">
-                  <Label htmlFor="profile.preferences.privacy.allowContactFromTeachers">Allow contact from teachers</Label>
+                  <Label htmlFor="profile.preferences.privacy.allowContactFromTeachers">
+                    Allow contact from teachers
+                  </Label>
                   <input
                     id="profile.preferences.privacy.allowContactFromTeachers"
                     name="profile.preferences.privacy.allowContactFromTeachers"
@@ -577,7 +615,9 @@ export default function UserProfileDashboard({ className = '' }: UserProfileDash
                 <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
                   <div>
                     <h3 className="font-medium">Account</h3>
-                    <p className="text-sm text-gray-600">Permanently delete your account and all data</p>
+                    <p className="text-sm text-gray-600">
+                      Permanently delete your account and all data
+                    </p>
                   </div>
                   <Button
                     onClick={logout}

@@ -482,7 +482,7 @@ class UnifiedAIClient {
       }
     } catch (error) {
       // Handle unexpected errors at the method level
-      logger.error('Unexpected error in executeRequest:', error)
+      console.error('Unexpected error in executeRequest:', error)
       throw error
     }
   }

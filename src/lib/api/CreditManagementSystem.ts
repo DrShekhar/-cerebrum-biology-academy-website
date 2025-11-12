@@ -4,6 +4,7 @@
  * Handles subscription tiers and billing
  */
 
+import Redis from 'ioredis'
 import { getRedisClient } from '@/lib/cache/redis'
 
 interface StudentCredits {

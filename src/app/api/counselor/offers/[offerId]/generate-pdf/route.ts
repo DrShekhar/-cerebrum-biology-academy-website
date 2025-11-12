@@ -1,41 +1,30 @@
-/**
- * API Route: Generate Offer Letter PDF
- * POST /api/counselor/offers/[offerId]/generate-pdf - Generate and download offer letter PDF
- */
-
 import { NextRequest, NextResponse } from 'next/server'
+import { z } from 'zod'
 import { withCounselor } from '@/lib/auth/middleware'
 import { offerLetterService } from '@/lib/documents/offerLetterService'
-import { z } from 'zod'
 
-// Request schema
 const generatePDFSchema = z.object({
-  leadId: z.string(),
-  feePlanId: z.string(),
-  action: z.enum(['download', 'preview']).default('download'),
+  leadId: z.string().min(1, 'Lead ID is required'),
+  feePlanId: z.string().min(1, 'Fee Plan ID is required'),
 })
 
-async function handlePOST(req: NextRequest, session: any) {
+async function handlePOST(
+  req: NextRequest,
+  session: any,
+  context: { params: Promise<{ offerId: string }> }
+) {
   try {
-    // Extract offerId from URL path
-    const pathParts = req.nextUrl.pathname.split('/')
-    const offerId = pathParts[pathParts.indexOf('offers') + 1]
+    const { offerId } = await context.params
 
-    if (!offerId || offerId === 'route') {
-      return NextResponse.json(
-        {
-          success: false,
-          error: 'Offer ID is required',
-        },
-        { status: 400 }
-      )
+    if (!offerId) {
+      return NextResponse.json({ success: false, error: 'Offer ID is required' }, { status: 400 })
     }
 
-    // Parse request body
     const body = await req.json()
     const validatedData = generatePDFSchema.parse(body)
 
-    // Check if offer letter can be generated
+    const counselorId = session.user.id
+
     const eligibility = await offerLetterService.canGenerateOfferLetter(
       validatedData.leadId,
       validatedData.feePlanId,
@@ -52,12 +41,11 @@ async function handlePOST(req: NextRequest, session: any) {
       )
     }
 
-    // Generate the PDF
     const result = await offerLetterService.generateOfferLetter({
       leadId: validatedData.leadId,
       feePlanId: validatedData.feePlanId,
       offerId,
-      userId: session.user.id,
+      userId: counselorId,
     })
 
     if (!result.success || !result.pdfBuffer) {
@@ -70,25 +58,21 @@ async function handlePOST(req: NextRequest, session: any) {
       )
     }
 
-    // For preview action, return base64 encoded PDF
-    if (validatedData.action === 'preview') {
-      return NextResponse.json({
-        success: true,
-        pdfBase64: result.pdfBase64,
-        fileName: result.fileName,
-      })
-    }
+    const headers = new Headers()
+    headers.set('Content-Type', 'application/pdf')
+    headers.set('Content-Disposition', `attachment; filename="${result.fileName}"`)
+    headers.set('Content-Length', result.pdfBuffer.length.toString())
+    headers.set('Cache-Control', 'no-cache, no-store, must-revalidate')
+    headers.set('Pragma', 'no-cache')
+    headers.set('Expires', '0')
 
-    // For download action, return PDF file as response
-    return new NextResponse(result.pdfBuffer as BodyInit, {
+    return new NextResponse(result.pdfBuffer as unknown as BodyInit, {
       status: 200,
-      headers: {
-        'Content-Type': 'application/pdf',
-        'Content-Disposition': `attachment; filename="${result.fileName}"`,
-        'Content-Length': result.pdfBuffer.length.toString(),
-      },
+      headers,
     })
   } catch (error) {
+    console.error('Generate PDF error:', error)
+
     if (error instanceof z.ZodError) {
       return NextResponse.json(
         {
@@ -100,71 +84,10 @@ async function handlePOST(req: NextRequest, session: any) {
       )
     }
 
-    console.error('Error generating offer letter PDF:', error)
     return NextResponse.json(
       {
         success: false,
-        error: error instanceof Error ? error.message : 'Failed to generate offer letter',
-      },
-      { status: 500 }
-    )
-  }
-}
-
-async function handleGET(req: NextRequest, session: any) {
-  try {
-    // Extract offerId from URL path
-    const pathParts = req.nextUrl.pathname.split('/')
-    const offerId = pathParts[pathParts.indexOf('offers') + 1]
-
-    if (!offerId || offerId === 'route') {
-      return NextResponse.json(
-        {
-          success: false,
-          error: 'Offer ID is required',
-        },
-        { status: 400 }
-      )
-    }
-
-    // Get query parameters
-    const searchParams = Object.fromEntries(req.nextUrl.searchParams.entries())
-    const leadId = searchParams.leadId
-    const feePlanId = searchParams.feePlanId
-
-    if (!leadId || !feePlanId) {
-      return NextResponse.json(
-        {
-          success: false,
-          error: 'leadId and feePlanId query parameters are required',
-        },
-        { status: 400 }
-      )
-    }
-
-    // Get preview data (without generating PDF)
-    const result = await offerLetterService.getOfferLetterPreviewData(leadId, feePlanId, offerId)
-
-    if (!result.success) {
-      return NextResponse.json(
-        {
-          success: false,
-          error: result.error || 'Failed to get preview data',
-        },
-        { status: 500 }
-      )
-    }
-
-    return NextResponse.json({
-      success: true,
-      data: result.data,
-    })
-  } catch (error) {
-    console.error('Error getting offer letter preview data:', error)
-    return NextResponse.json(
-      {
-        success: false,
-        error: error instanceof Error ? error.message : 'Failed to get preview data',
+        error: error instanceof Error ? error.message : 'Failed to generate PDF',
       },
       { status: 500 }
     )
@@ -172,4 +95,3 @@ async function handleGET(req: NextRequest, session: any) {
 }
 
 export const POST = withCounselor(handlePOST)
-export const GET = withCounselor(handleGET)

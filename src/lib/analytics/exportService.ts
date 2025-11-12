@@ -15,7 +15,7 @@ export class ExportService {
     const summary = {
       totalRecords: performanceData.totalTests,
       dateRange: `${options.timeRange.from.toLocaleDateString()} - ${options.timeRange.to.toLocaleDateString()}`,
-      generatedAt: new Date()
+      generatedAt: new Date(),
     }
 
     // Prepare data for export
@@ -23,60 +23,60 @@ export class ExportService {
       {
         section: 'Overview',
         metric: 'Total Tests',
-        value: performanceData.totalTests
+        value: performanceData.totalTests,
       },
       {
         section: 'Overview',
         metric: 'Completed Tests',
-        value: performanceData.completedTests
+        value: performanceData.completedTests,
       },
       {
         section: 'Overview',
         metric: 'Average Score (%)',
-        value: Math.round(performanceData.averageScore * 100) / 100
+        value: Math.round(performanceData.averageScore * 100) / 100,
       },
       {
         section: 'Overview',
         metric: 'Total Study Time (minutes)',
-        value: Math.round(performanceData.totalStudyTime / 60)
+        value: Math.round(performanceData.totalStudyTime / 60),
       },
       {
         section: 'Overview',
         metric: 'Current Streak (days)',
-        value: performanceData.currentStreak
+        value: performanceData.currentStreak,
       },
       {
         section: 'Overview',
         metric: 'Total Points',
-        value: performanceData.totalPoints
-      }
+        value: performanceData.totalPoints,
+      },
     ]
 
     // Add topic performance data
-    performanceData.topicPerformance.forEach(topic => {
+    performanceData.topicPerformance.forEach((topic) => {
       data.push({
         section: 'Topic Performance',
         metric: `${topic.topic} - Accuracy (%)`,
-        value: Math.round(topic.accuracy * 100) / 100
+        value: Math.round(topic.accuracy * 100) / 100,
       })
       data.push({
         section: 'Topic Performance',
         metric: `${topic.topic} - Questions Attempted`,
-        value: topic.totalQuestions
+        value: topic.totalQuestions,
       })
       data.push({
         section: 'Topic Performance',
         metric: `${topic.topic} - Average Time (seconds)`,
-        value: Math.round(topic.averageTime)
+        value: Math.round(topic.averageTime),
       })
     })
 
     // Add achievements
-    performanceData.achievements.forEach(achievement => {
+    performanceData.achievements.forEach((achievement) => {
       data.push({
         section: 'Achievements',
         metric: achievement.title,
-        value: achievement.earnedAt ? 'Earned' : 'Not Earned'
+        value: achievement.earnedAt ? 1 : 0,
       })
     })
 
@@ -90,8 +90,8 @@ export class ExportService {
           options: {
             title: 'Performance Progress Over Time',
             xAxis: 'Date',
-            yAxis: 'Score (%)'
-          }
+            yAxis: 'Score (%)',
+          },
         },
         topicPerformance: {
           type: 'bar',
@@ -99,16 +99,16 @@ export class ExportService {
           options: {
             title: 'Topic-wise Performance',
             xAxis: 'Topics',
-            yAxis: 'Accuracy (%)'
-          }
-        }
+            yAxis: 'Accuracy (%)',
+          },
+        },
       }
     }
 
     return {
       summary,
       data,
-      charts
+      charts,
     }
   }
 
@@ -121,45 +121,45 @@ export class ExportService {
     const summary = {
       totalRecords: sessionData.questionAnalysis.length,
       dateRange: `Test completed on ${sessionData.submittedAt?.toLocaleDateString() || 'N/A'}`,
-      generatedAt: new Date()
+      generatedAt: new Date(),
     }
 
     const data = [
       {
         section: 'Test Overview',
         metric: 'Test Title',
-        value: sessionData.title
+        value: sessionData.title,
       },
       {
         section: 'Test Overview',
         metric: 'Total Questions',
-        value: sessionData.totalQuestions
+        value: sessionData.totalQuestions,
       },
       {
         section: 'Test Overview',
         metric: 'Correct Answers',
-        value: sessionData.correctAnswers
+        value: sessionData.correctAnswers,
       },
       {
         section: 'Test Overview',
         metric: 'Accuracy (%)',
-        value: Math.round(sessionData.accuracy * 100) / 100
+        value: Math.round(sessionData.accuracy * 100) / 100,
       },
       {
         section: 'Test Overview',
         metric: 'Score',
-        value: `${sessionData.score}/${sessionData.totalMarks}`
+        value: `${sessionData.score}/${sessionData.totalMarks}`,
       },
       {
         section: 'Test Overview',
         metric: 'Percentage (%)',
-        value: Math.round(sessionData.percentage * 100) / 100
+        value: Math.round(sessionData.percentage * 100) / 100,
       },
       {
         section: 'Test Overview',
         metric: 'Time Spent (minutes)',
-        value: Math.round(sessionData.timeSpent / 60)
-      }
+        value: Math.round(sessionData.timeSpent / 60),
+      },
     ]
 
     // Add question-wise analysis
@@ -167,36 +167,36 @@ export class ExportService {
       data.push({
         section: 'Question Analysis',
         metric: `Q${index + 1} - Topic`,
-        value: question.topic
+        value: question.topic,
       })
       data.push({
         section: 'Question Analysis',
         metric: `Q${index + 1} - Difficulty`,
-        value: question.difficulty
+        value: question.difficulty,
       })
       data.push({
         section: 'Question Analysis',
         metric: `Q${index + 1} - Result`,
-        value: question.isCorrect ? 'Correct' : 'Incorrect'
+        value: question.isCorrect ? 'Correct' : 'Incorrect',
       })
       data.push({
         section: 'Question Analysis',
         metric: `Q${index + 1} - Time Spent (seconds)`,
-        value: question.timeSpent
+        value: question.timeSpent,
       })
     })
 
     // Add topic breakdown
-    sessionData.topicBreakdown.forEach(topic => {
+    sessionData.topicBreakdown.forEach((topic) => {
       data.push({
         section: 'Topic Breakdown',
         metric: `${topic.topic} - Correct/Total`,
-        value: `${topic.correct}/${topic.total}`
+        value: `${topic.correct}/${topic.total}`,
       })
       data.push({
         section: 'Topic Breakdown',
         metric: `${topic.topic} - Accuracy (%)`,
-        value: Math.round((topic.correct / topic.total) * 100)
+        value: Math.round((topic.correct / topic.total) * 100),
       })
     })
 
@@ -209,8 +209,8 @@ export class ExportService {
           data: this.prepareTopicBreakdownChart(sessionData.topicBreakdown),
           options: {
             title: 'Topic-wise Question Distribution',
-            showLabels: true
-          }
+            showLabels: true,
+          },
         },
         difficultyAnalysis: {
           type: 'bar',
@@ -218,16 +218,16 @@ export class ExportService {
           options: {
             title: 'Performance by Difficulty Level',
             xAxis: 'Difficulty',
-            yAxis: 'Accuracy (%)'
-          }
-        }
+            yAxis: 'Accuracy (%)',
+          },
+        },
       }
     }
 
     return {
       summary,
       data,
-      charts
+      charts,
     }
   }
 
@@ -238,7 +238,7 @@ export class ExportService {
     const students = await db.freeUser.findMany({
       where: {
         grade,
-        ...(options.filters?.grade && { grade: options.filters.grade })
+        ...(options.filters?.grade && { grade: options.filters.grade }),
       },
       include: {
         testAttempts: {
@@ -246,25 +246,27 @@ export class ExportService {
             status: 'COMPLETED',
             submittedAt: {
               gte: options.timeRange.from,
-              lte: options.timeRange.to
-            }
-          }
-        }
-      }
+              lte: options.timeRange.to,
+            },
+          },
+        },
+      },
     })
 
     const summary = {
       totalRecords: students.length,
       dateRange: `${options.timeRange.from.toLocaleDateString()} - ${options.timeRange.to.toLocaleDateString()}`,
-      generatedAt: new Date()
+      generatedAt: new Date(),
     }
 
     const data: any[] = []
 
     // Class overview
     const totalTests = students.reduce((sum, student) => sum + student.testAttempts.length, 0)
-    const totalScore = students.reduce((sum, student) =>
-      sum + student.testAttempts.reduce((testSum, test) => testSum + test.percentage, 0), 0
+    const totalScore = students.reduce(
+      (sum, student) =>
+        sum + student.testAttempts.reduce((testSum, test) => testSum + test.percentage, 0),
+      0
     )
     const classAverage = totalTests > 0 ? totalScore / totalTests : 0
 
@@ -272,36 +274,37 @@ export class ExportService {
       {
         section: 'Class Overview',
         metric: 'Total Students',
-        value: students.length
+        value: students.length,
       },
       {
         section: 'Class Overview',
         metric: 'Total Tests Completed',
-        value: totalTests
+        value: totalTests,
       },
       {
         section: 'Class Overview',
         metric: 'Class Average (%)',
-        value: Math.round(classAverage * 100) / 100
+        value: Math.round(classAverage * 100) / 100,
       }
     )
 
     // Student-wise performance
-    students.forEach(student => {
+    students.forEach((student) => {
       const studentTests = student.testAttempts
-      const studentAverage = studentTests.length > 0
-        ? studentTests.reduce((sum, test) => sum + test.percentage, 0) / studentTests.length
-        : 0
+      const studentAverage =
+        studentTests.length > 0
+          ? studentTests.reduce((sum, test) => sum + test.percentage, 0) / studentTests.length
+          : 0
 
       data.push({
         section: 'Student Performance',
         metric: `${student.name || 'Anonymous'} - Tests Completed`,
-        value: studentTests.length
+        value: studentTests.length,
       })
       data.push({
         section: 'Student Performance',
         metric: `${student.name || 'Anonymous'} - Average Score (%)`,
-        value: Math.round(studentAverage * 100) / 100
+        value: Math.round(studentAverage * 100) / 100,
       })
     })
 
@@ -315,8 +318,8 @@ export class ExportService {
           options: {
             title: 'Score Distribution',
             xAxis: 'Score Range',
-            yAxis: 'Number of Students'
-          }
+            yAxis: 'Number of Students',
+          },
         },
         studentProgress: {
           type: 'line',
@@ -324,16 +327,16 @@ export class ExportService {
           options: {
             title: 'Student Progress Over Time',
             xAxis: 'Date',
-            yAxis: 'Average Score (%)'
-          }
-        }
+            yAxis: 'Average Score (%)',
+          },
+        },
       }
     }
 
     return {
       summary,
       data,
-      charts
+      charts,
     }
   }
 
@@ -359,11 +362,11 @@ export class ExportService {
     const headers = ['Section', 'Metric', 'Value']
     const rows = [headers]
 
-    exportData.data.forEach(row => {
+    exportData.data.forEach((row) => {
       rows.push([row.section, row.metric, String(row.value)])
     })
 
-    return rows.map(row => row.join(',')).join('\n')
+    return rows.map((row) => row.join(',')).join('\n')
   }
 
   /**
@@ -374,54 +377,76 @@ export class ExportService {
     return {
       sheets: {
         'Performance Data': exportData.data,
-        'Summary': [
+        Summary: [
           { field: 'Total Records', value: exportData.summary.totalRecords },
           { field: 'Date Range', value: exportData.summary.dateRange },
-          { field: 'Generated At', value: exportData.summary.generatedAt.toISOString() }
-        ]
-      }
+          { field: 'Generated At', value: exportData.summary.generatedAt.toISOString() },
+        ],
+      },
     }
   }
 
   // Chart preparation methods
   private prepareProgressTrendChart(progressData: any[]): ChartData {
     return {
-      labels: progressData.map(point => point.date.toLocaleDateString()),
-      datasets: [{
-        label: 'Score (%)',
-        data: progressData.map(point => Math.round(point.score * 100) / 100),
-        borderColor: '#3B82F6',
-        backgroundColor: 'rgba(59, 130, 246, 0.1)',
-        fill: true
-      }]
+      labels: progressData.map((point) => point.date.toLocaleDateString()),
+      datasets: [
+        {
+          label: 'Score (%)',
+          data: progressData.map((point) => Math.round(point.score * 100) / 100),
+          borderColor: '#3B82F6',
+          backgroundColor: 'rgba(59, 130, 246, 0.1)',
+          fill: true,
+        },
+      ],
     }
   }
 
   private prepareTopicPerformanceChart(topicData: any[]): ChartData {
     return {
-      labels: topicData.map(topic => topic.topic),
-      datasets: [{
-        label: 'Accuracy (%)',
-        data: topicData.map(topic => Math.round(topic.accuracy * 100) / 100),
-        backgroundColor: [
-          '#3B82F6', '#10B981', '#F59E0B', '#EF4444', '#8B5CF6',
-          '#06B6D4', '#84CC16', '#F97316', '#EC4899', '#6366F1'
-        ]
-      }]
+      labels: topicData.map((topic) => topic.topic),
+      datasets: [
+        {
+          label: 'Accuracy (%)',
+          data: topicData.map((topic) => Math.round(topic.accuracy * 100) / 100),
+          backgroundColor: [
+            '#3B82F6',
+            '#10B981',
+            '#F59E0B',
+            '#EF4444',
+            '#8B5CF6',
+            '#06B6D4',
+            '#84CC16',
+            '#F97316',
+            '#EC4899',
+            '#6366F1',
+          ],
+        },
+      ],
     }
   }
 
   private prepareTopicBreakdownChart(topicData: any[]): ChartData {
     return {
-      labels: topicData.map(topic => topic.topic),
-      datasets: [{
-        label: 'Questions',
-        data: topicData.map(topic => topic.total),
-        backgroundColor: [
-          '#3B82F6', '#10B981', '#F59E0B', '#EF4444', '#8B5CF6',
-          '#06B6D4', '#84CC16', '#F97316', '#EC4899', '#6366F1'
-        ]
-      }]
+      labels: topicData.map((topic) => topic.topic),
+      datasets: [
+        {
+          label: 'Questions',
+          data: topicData.map((topic) => topic.total),
+          backgroundColor: [
+            '#3B82F6',
+            '#10B981',
+            '#F59E0B',
+            '#EF4444',
+            '#8B5CF6',
+            '#06B6D4',
+            '#84CC16',
+            '#F97316',
+            '#EC4899',
+            '#6366F1',
+          ],
+        },
+      ],
     }
   }
 
@@ -429,10 +454,10 @@ export class ExportService {
     const difficultyStats = {
       Easy: { correct: 0, total: 0 },
       Medium: { correct: 0, total: 0 },
-      Hard: { correct: 0, total: 0 }
+      Hard: { correct: 0, total: 0 },
     }
 
-    questionData.forEach(question => {
+    questionData.forEach((question) => {
       const difficulty = question.difficulty as keyof typeof difficultyStats
       if (difficultyStats[difficulty]) {
         difficultyStats[difficulty].total++
@@ -444,13 +469,15 @@ export class ExportService {
 
     return {
       labels: Object.keys(difficultyStats),
-      datasets: [{
-        label: 'Accuracy (%)',
-        data: Object.values(difficultyStats).map(stats =>
-          stats.total > 0 ? Math.round((stats.correct / stats.total) * 100) : 0
-        ),
-        backgroundColor: ['#10B981', '#F59E0B', '#EF4444']
-      }]
+      datasets: [
+        {
+          label: 'Accuracy (%)',
+          data: Object.values(difficultyStats).map((stats) =>
+            stats.total > 0 ? Math.round((stats.correct / stats.total) * 100) : 0
+          ),
+          backgroundColor: ['#10B981', '#F59E0B', '#EF4444'],
+        },
+      ],
     }
   }
 
@@ -460,14 +487,15 @@ export class ExportService {
       '21-40': 0,
       '41-60': 0,
       '61-80': 0,
-      '81-100': 0
+      '81-100': 0,
     }
 
-    students.forEach(student => {
+    students.forEach((student) => {
       if (student.testAttempts.length === 0) return
 
-      const average = student.testAttempts.reduce((sum: number, test: any) =>
-        sum + test.percentage, 0) / student.testAttempts.length
+      const average =
+        student.testAttempts.reduce((sum: number, test: any) => sum + test.percentage, 0) /
+        student.testAttempts.length
 
       if (average <= 20) scoreRanges['0-20']++
       else if (average <= 40) scoreRanges['21-40']++
@@ -478,11 +506,13 @@ export class ExportService {
 
     return {
       labels: Object.keys(scoreRanges),
-      datasets: [{
-        label: 'Students',
-        data: Object.values(scoreRanges),
-        backgroundColor: '#3B82F6'
-      }]
+      datasets: [
+        {
+          label: 'Students',
+          data: Object.values(scoreRanges),
+          backgroundColor: '#3B82F6',
+        },
+      ],
     }
   }
 
@@ -491,14 +521,16 @@ export class ExportService {
     const dates = this.getLast30Days()
 
     return {
-      labels: dates.map(date => date.toLocaleDateString()),
-      datasets: [{
-        label: 'Class Average (%)',
-        data: dates.map(() => Math.random() * 100), // Placeholder data
-        borderColor: '#3B82F6',
-        backgroundColor: 'rgba(59, 130, 246, 0.1)',
-        fill: true
-      }]
+      labels: dates.map((date) => date.toLocaleDateString()),
+      datasets: [
+        {
+          label: 'Class Average (%)',
+          data: dates.map(() => Math.random() * 100), // Placeholder data
+          borderColor: '#3B82F6',
+          backgroundColor: 'rgba(59, 130, 246, 0.1)',
+          fill: true,
+        },
+      ],
     }
   }
 
@@ -552,13 +584,17 @@ export class ExportService {
               </tr>
             </thead>
             <tbody>
-              ${exportData.data.map(row => `
+              ${exportData.data
+                .map(
+                  (row) => `
                 <tr>
                   <td>${row.section}</td>
                   <td>${row.metric}</td>
                   <td>${row.value}</td>
                 </tr>
-              `).join('')}
+              `
+                )
+                .join('')}
             </tbody>
           </table>
         </div>

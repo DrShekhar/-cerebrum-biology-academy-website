@@ -78,18 +78,35 @@ export class TestService {
     try {
       const template = await prisma.testTemplate.create({
         data: {
-          ...data,
+          title: data.title,
+          description: data.description,
+          slug: data.slug,
+          type: data.type as any,
+          category: data.category as any,
+          difficulty: data.difficulty as any,
+          timeLimit: data.timeLimit,
+          totalQuestions: data.totalQuestions,
+          totalMarks: data.totalMarks,
+          passingMarks: data.passingMarks,
+          curriculum: data.curriculum,
+          grade: data.grade,
+          subject: data.subject,
           topics: JSON.stringify(data.topics),
+          negativeMarking: data.negativeMarking ?? false,
           markingScheme: data.markingScheme ? JSON.stringify(data.markingScheme) : null,
           questionDistribution: data.questionDistribution
             ? JSON.stringify(data.questionDistribution)
             : null,
           instructions: data.instructions ? JSON.stringify(data.instructions) : null,
+          isAdaptive: data.isAdaptive ?? false,
           adaptiveSettings: data.adaptiveSettings ? JSON.stringify(data.adaptiveSettings) : null,
+          isPremium: data.isPremium ?? false,
+          seoTitle: data.seoTitle,
+          seoDescription: data.seoDescription,
           seoKeywords: data.seoKeywords ? JSON.stringify(data.seoKeywords) : null,
           isActive: true,
           isPublished: false,
-          createdAt: new Date(),
+          createdBy: data.createdBy,
         },
       })
 
@@ -651,7 +668,13 @@ export class TestService {
     currentPerformance: number
   ): Promise<Question | null> {
     try {
-      const session = await this.getTestSession(sessionToken)
+      const session = await prisma.testSession.findUnique({
+        where: { sessionToken },
+        include: {
+          testTemplate: true,
+        },
+      })
+
       if (!session || !session.testTemplate) {
         return null
       }
@@ -822,8 +845,6 @@ export class TestService {
           data: { status: 'EXPIRED' },
         })
 
-        // Remove from cache
-        await TestSessionCacheService.removeActiveTest(session.sessionToken)
         cleanedCount++
       }
 

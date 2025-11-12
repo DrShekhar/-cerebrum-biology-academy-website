@@ -3,6 +3,7 @@
  * Achieves 70% cost reduction through intelligent caching strategy
  */
 
+import Redis from 'ioredis'
 import { getRedisClient } from '@/lib/cache/redis'
 
 interface CacheEntry {

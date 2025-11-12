@@ -39,6 +39,12 @@ import {
   FlaskConical,
 } from 'lucide-react'
 
+// WebXR Type Declarations
+type XRSession = any
+type XRWebGLLayer = any
+type XRFrame = any
+type XRViewerPose = any
+
 interface ARVRCapability {
   id: string
   name: string

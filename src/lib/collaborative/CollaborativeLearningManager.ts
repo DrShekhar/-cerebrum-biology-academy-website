@@ -4,6 +4,7 @@
  */
 
 import { WebSocketServer, WebSocket } from 'ws'
+import Redis from 'ioredis'
 import { getRedisClient } from '@/lib/cache/redis'
 
 interface StudyRoom {

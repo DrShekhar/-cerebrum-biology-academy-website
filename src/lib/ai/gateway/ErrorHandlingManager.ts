@@ -3,6 +3,7 @@
  * Automatically detects, categorizes, and heals system errors
  */
 
+import Redis from 'ioredis'
 import { getRedisClient } from '@/lib/cache/redis'
 
 interface ErrorPattern {

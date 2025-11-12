@@ -6,6 +6,7 @@
 
 import { Anthropic } from '@anthropic-ai/sdk'
 import OpenAI from 'openai'
+import Redis from 'ioredis'
 import { getRedisClient } from '@/lib/cache/redis'
 import { CircuitBreaker } from './CircuitBreaker'
 import { RetryManager } from './RetryManager'
@@ -385,7 +386,7 @@ export class AIGateway {
     if (healingResult.fallbackResponse) {
       return {
         id: request.id,
-        provider: 'fallback',
+        provider: 'claude' as const,
         content:
           healingResult.fallbackResponse.content ||
           'I apologize, but I encountered an error processing your request. Please try again.',
@@ -400,6 +401,7 @@ export class AIGateway {
           quality: 0.1,
           errorId: healingResult.errorId,
           selfHealing: healingResult.handled,
+          isFallback: true,
         },
       }
     }
@@ -407,7 +409,7 @@ export class AIGateway {
     // Default fallback if no intelligent response available
     return {
       id: request.id,
-      provider: 'fallback',
+      provider: 'claude' as const,
       content: 'I apologize, but I encountered an error processing your request. Please try again.',
       tokens: 20,
       cost: 0,
@@ -420,6 +422,7 @@ export class AIGateway {
         quality: 0.1,
         errorId: healingResult.errorId,
         selfHealing: healingResult.handled,
+        isFallback: true,
       },
     }
   }

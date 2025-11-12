@@ -3,6 +3,7 @@
  * Tracks metrics, latency, costs, and provides observability
  */
 
+import Redis from 'ioredis'
 import { getRedisClient } from '@/lib/cache/redis'
 
 interface RequestMetric {

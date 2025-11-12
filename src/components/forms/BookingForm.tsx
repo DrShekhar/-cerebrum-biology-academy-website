@@ -223,15 +223,22 @@ export function BookingForm({ type = 'demo', onSubmit }: BookingFormProps) {
             <BookOpen className="w-4 h-4 inline mr-2" />
             Course of Interest *
           </label>
-          <Select
+          <select
             id="course"
-            options={courseOptions}
             value={formData.course}
             onChange={(e) => handleInputChange('course', e.target.value)}
-            className={
-              errors.course ? 'border-red-500 focus:border-red-500 focus:ring-red-200' : ''
-            }
-          />
+            className={`flex h-12 w-full items-center justify-between rounded-lg border bg-white px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-200 ${
+              errors.course
+                ? 'border-red-500 focus:border-red-500 focus:ring-red-200'
+                : 'border-gray-200 focus:border-blue-500 focus:ring-blue-200'
+            }`}
+          >
+            {courseOptions.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            ))}
+          </select>
           {errors.course && <p className="text-red-500 text-sm mt-1">{errors.course}</p>}
         </div>
 
@@ -242,14 +249,20 @@ export function BookingForm({ type = 'demo', onSubmit }: BookingFormProps) {
               <Clock className="w-4 h-4 inline mr-2" />
               Preferred Time
             </label>
-            <Select
+            <select
               id="preferredTime"
-              options={preferredTimeOptions}
               value={formData.preferredTime || ''}
               onChange={(e) =>
                 handleInputChange('preferredTime' as keyof ContactForm, e.target.value)
               }
-            />
+              className="flex h-12 w-full items-center justify-between rounded-lg border border-gray-200 bg-white px-4 py-3 text-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-200"
+            >
+              {preferredTimeOptions.map((option) => (
+                <option key={option.value} value={option.value}>
+                  {option.label}
+                </option>
+              ))}
+            </select>
           </div>
         )}
 

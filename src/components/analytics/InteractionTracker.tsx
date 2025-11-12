@@ -266,8 +266,11 @@ export function InteractionTracker({
         : null,
       timing: {
         domContentLoaded:
-          performance.getEntriesByType('navigation')[0]?.domContentLoadedEventEnd || 0,
-        loadComplete: performance.getEntriesByType('navigation')[0]?.loadEventEnd || 0,
+          (performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming)
+            ?.domContentLoadedEventEnd || 0,
+        loadComplete:
+          (performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming)
+            ?.loadEventEnd || 0,
       },
     }
 
