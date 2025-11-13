@@ -7,7 +7,29 @@
 
 // Mock Prisma client for Edge Runtime fallback
 class MockPrismaClient {
-  user = {
+  users = {
+    findUnique: async () => null,
+    findMany: async () => [],
+    create: async () => null,
+    update: async () => null,
+    delete: async () => null,
+  }
+  leads = {
+    findUnique: async () => null,
+    findMany: async () => [],
+    create: async () => null,
+    update: async () => null,
+    delete: async () => null,
+    count: async () => 0,
+  }
+  fee_plans = {
+    findUnique: async () => null,
+    findMany: async () => [],
+    create: async () => null,
+    update: async () => null,
+    delete: async () => null,
+  }
+  installments = {
     findUnique: async () => null,
     findMany: async () => [],
     create: async () => null,
