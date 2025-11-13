@@ -374,6 +374,15 @@ export const Footer = memo(function Footer() {
                   {index < legalLinks.length - 1 && <span className="text-gray-600 ml-4">|</span>}
                 </span>
               ))}
+              <span className="flex items-center">
+                <span className="text-gray-600 ml-4">|</span>
+                <Link
+                  href="/portal"
+                  className="text-gray-400 hover:text-white transition-colors ml-4"
+                >
+                  Staff Login
+                </Link>
+              </span>
             </div>
           </div>
         </div>
