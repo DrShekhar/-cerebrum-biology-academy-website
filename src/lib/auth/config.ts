@@ -199,15 +199,41 @@ export function hasPermission(userRole: UserRole, permission: string): boolean {
  */
 export async function validateUserSession(request: NextRequest): Promise<UserSession> {
   try {
-    console.log('🔍 [NEW] validateUserSession() called - JWT decode version')
+    console.log('🔍 [v3] validateUserSession() - Using NextAuth auth() helper')
+
+    // IMPORTANT: In Next.js 15 App Router, we should use auth() from NextAuth
+    // instead of manually parsing cookies, as it handles the session correctly
+    try {
+      const { auth: getSession } = await import('@/lib/auth')
+      const session = await getSession()
+
+      console.log('🔐 NextAuth session from auth():', !!session)
+      console.log('👤 User from session:', session?.user?.email, session?.user?.role)
+
+      if (session && session.user) {
+        return {
+          valid: true,
+          userId: session.user.id,
+          role: session.user.role.toUpperCase() as UserRole,
+          email: session.user.email,
+          name: session.user.name,
+          expiresAt: new Date(Date.now() + 8 * 60 * 60 * 1000),
+          permissions: getUserPermissions(session.user.role.toUpperCase() as UserRole),
+        }
+      }
+    } catch (authError) {
+      console.error('❌ NextAuth auth() error:', authError)
+    }
+
+    // Fallback: Try manual cookie parsing (for backward compatibility)
     console.log(
       '📋 All cookies:',
       request.cookies.getAll().map((c) => c.name)
     )
 
-    // First, try NextAuth session (for counselor/admin login via NextAuth)
-    // NextAuth uses JWT strategy with a signed JWT token
     const nextAuthTokenCookie =
+      request.cookies.get('__Secure-authjs.session-token') ||
+      request.cookies.get('authjs.session-token') ||
       request.cookies.get('next-auth.session-token') ||
       request.cookies.get('__Secure-next-auth.session-token')
 

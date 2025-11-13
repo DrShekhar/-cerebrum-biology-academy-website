@@ -67,7 +67,7 @@ async function handleGET(request: NextRequest, session: any) {
     const leads = await prisma.leads.findMany({
       where,
       include: {
-        communications: {
+        crm_communications: {
           take: 5,
           orderBy: { sentAt: 'desc' },
         },
@@ -98,7 +98,7 @@ async function handleGET(request: NextRequest, session: any) {
         },
         _count: {
           select: {
-            communications: true,
+            crm_communications: true,
             notes: true,
             tasks: true,
           },
