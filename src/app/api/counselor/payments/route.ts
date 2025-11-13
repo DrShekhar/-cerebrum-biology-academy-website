@@ -14,15 +14,15 @@ export async function GET(request: NextRequest) {
     }
 
     if (leadId) {
-      whereClause.feePlan = {
+      whereClause.fee_plans = {
         leadId,
       }
     }
 
-    const installments = await prisma.installment.findMany({
+    const installments = await prisma.installments.findMany({
       where: whereClause,
       include: {
-        feePlan: {
+        fee_plans: {
           include: {
             lead: {
               select: {
@@ -46,13 +46,13 @@ export async function GET(request: NextRequest) {
       status: inst.status,
       remindersSent: inst.remindersSent as Record<string, string> | undefined,
       feePlan: {
-        id: inst.feePlan.id,
-        courseName: inst.feePlan.courseName,
+        id: inst.fee_plans.id,
+        courseName: inst.fee_plans.courseName,
         lead: {
-          id: inst.feePlan.lead.id,
-          studentName: inst.feePlan.lead.studentName,
-          phone: inst.feePlan.lead.phone,
-          email: inst.feePlan.lead.email,
+          id: inst.fee_plans.lead.id,
+          studentName: inst.fee_plans.lead.studentName,
+          phone: inst.fee_plans.lead.phone,
+          email: inst.fee_plans.lead.email,
         },
       },
     }))

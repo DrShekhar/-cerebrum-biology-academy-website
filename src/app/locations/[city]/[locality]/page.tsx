@@ -23,10 +23,10 @@ import {
 } from 'lucide-react'
 
 interface LocalityPageProps {
-  params: {
+  params: Promise<{
     city: string
     locality: string
-  }
+  }>
 }
 
 // Generate static paths for all 51 localities
@@ -41,7 +41,8 @@ export async function generateStaticParams() {
 
 // Generate metadata for SEO
 export async function generateMetadata({ params }: LocalityPageProps): Promise<Metadata> {
-  const locality = getLocalityBySlug(params.locality)
+  const resolvedParams = await params
+  const locality = getLocalityBySlug(resolvedParams.locality)
 
   if (!locality) {
     return {
@@ -52,8 +53,9 @@ export async function generateMetadata({ params }: LocalityPageProps): Promise<M
   return generateLocalityMetadata(locality)
 }
 
-export default function LocalityPage({ params }: LocalityPageProps) {
-  const locality = getLocalityBySlug(params.locality)
+export default async function LocalityPage({ params }: LocalityPageProps) {
+  const resolvedParams = await params
+  const locality = getLocalityBySlug(resolvedParams.locality)
 
   if (!locality) {
     notFound()

@@ -432,20 +432,20 @@ export class TaskService {
       const threeDaysFromNow = new Date()
       threeDaysFromNow.setDate(threeDaysFromNow.getDate() + 3)
 
-      const dueInstallments = await prisma.installment.findMany({
+      const dueInstallments = await prisma.installments.findMany({
         where: {
           status: 'PENDING',
           dueDate: {
             lte: threeDaysFromNow,
           },
-          feePlan: {
+          fee_plans: {
             lead: {
               assignedToId: counselorId,
             },
           },
         },
         include: {
-          feePlan: {
+          fee_plans: {
             include: {
               lead: {
                 select: {
@@ -464,7 +464,7 @@ export class TaskService {
       for (const installment of dueInstallments) {
         const existingTask = await prisma.task.findFirst({
           where: {
-            leadId: installment.feePlan.leadId,
+            leadId: installment.fee_plans.leadId,
             type: 'PAYMENT_REMINDER',
             status: {
               notIn: ['COMPLETED', 'CANCELLED'],
@@ -477,13 +477,13 @@ export class TaskService {
 
         if (!existingTask) {
           const task = await this.createTask({
-            leadId: installment.feePlan.leadId,
-            title: `Payment Reminder - ${installment.feePlan.courseName}`,
-            description: `Installment ${installment.installmentNumber} of ₹${installment.amount.toLocaleString('en-IN')} is due on ${installment.dueDate.toLocaleDateString()}. Send payment link to ${installment.feePlan.lead.studentName}.`,
+            leadId: installment.fee_plans.leadId,
+            title: `Payment Reminder - ${installment.fee_plans.courseName}`,
+            description: `Installment ${installment.installmentNumber} of ₹${installment.amount.toLocaleString('en-IN')} is due on ${installment.dueDate.toLocaleDateString()}. Send payment link to ${installment.fee_plans.lead.studentName}.`,
             type: 'PAYMENT_REMINDER',
             priority: 'URGENT',
             dueDate: new Date(installment.dueDate),
-            assignedToId: installment.feePlan.lead.assignedToId || counselorId,
+            assignedToId: installment.fee_plans.lead.assignedToId || counselorId,
           })
 
           createdTasks.push(task)

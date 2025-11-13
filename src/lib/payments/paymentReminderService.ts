@@ -68,7 +68,7 @@ class PaymentReminderService {
         `📅 Payment Reminder Automation Started - Checking installments up to ${format(checkUntil, 'MMM dd, yyyy')}`
       )
 
-      const pendingInstallments = await prisma.installment.findMany({
+      const pendingInstallments = await prisma.installments.findMany({
         where: {
           status: {
             in: ['PENDING', 'OVERDUE'],
@@ -78,7 +78,7 @@ class PaymentReminderService {
           },
         },
         include: {
-          feePlan: {
+          fee_plans: {
             include: {
               lead: {
                 include: {
@@ -155,10 +155,10 @@ class PaymentReminderService {
     }
 
     console.log(
-      `🚨 Sending OVERDUE reminder for ${installment.feePlan.lead.studentName} - Installment ${installment.installmentNumber} (${daysOverdue} days overdue)`
+      `🚨 Sending OVERDUE reminder for ${installment.fee_plans.lead.studentName} - Installment ${installment.installmentNumber} (${daysOverdue} days overdue)`
     )
 
-    const lead = installment.feePlan.lead
+    const lead = installment.fee_plans.lead
 
     const reminderSent = await notificationService.sendPaymentReminder({
       leadId: lead.id,
@@ -174,7 +174,7 @@ class PaymentReminderService {
     })
 
     if (reminderSent) {
-      await prisma.installment.update({
+      await prisma.installments.update({
         where: { id: installment.id },
         data: {
           remindersSent: {
@@ -185,7 +185,7 @@ class PaymentReminderService {
       })
 
       if (remindersSent.overdue === undefined) {
-        await prisma.installment.update({
+        await prisma.installments.update({
           where: { id: installment.id },
           data: { status: 'OVERDUE' },
         })
@@ -221,10 +221,10 @@ class PaymentReminderService {
     }
 
     console.log(
-      `⏰ Sending ${daysUntilDue}-day reminder for ${installment.feePlan.lead.studentName} - Installment ${installment.installmentNumber}`
+      `⏰ Sending ${daysUntilDue}-day reminder for ${installment.fee_plans.lead.studentName} - Installment ${installment.installmentNumber}`
     )
 
-    const lead = installment.feePlan.lead
+    const lead = installment.fee_plans.lead
 
     const priority = this.getPriorityByDaysRemaining(daysUntilDue)
 
@@ -242,7 +242,7 @@ class PaymentReminderService {
     })
 
     if (reminderSent) {
-      await prisma.installment.update({
+      await prisma.installments.update({
         where: { id: installment.id },
         data: {
           remindersSent: {
@@ -352,10 +352,10 @@ Action Required:
     channels: ('email' | 'whatsapp' | 'sms')[] = ['whatsapp', 'email']
   ): Promise<boolean> {
     try {
-      const installment = await prisma.installment.findUnique({
+      const installment = await prisma.installments.findUnique({
         where: { id: installmentId },
         include: {
-          feePlan: {
+          fee_plans: {
             include: {
               lead: true,
             },
@@ -372,7 +372,7 @@ Action Required:
         return false
       }
 
-      const lead = installment.feePlan.lead
+      const lead = installment.fee_plans.lead
       const now = new Date()
       const daysUntilDue = differenceInDays(installment.dueDate, now)
       const isOverdue = daysUntilDue < 0
@@ -397,7 +397,7 @@ Action Required:
       if (reminderSent) {
         const remindersSent = (installment.remindersSent as any) || {}
 
-        await prisma.installment.update({
+        await prisma.installments.update({
           where: { id: installmentId },
           data: {
             remindersSent: {
@@ -444,7 +444,7 @@ Action Required:
   ): Promise<void> {
     try {
       await prisma.$transaction(async (tx) => {
-        const installment = await tx.installment.update({
+        const installment = await tx.installments.update({
           where: { id: installmentId },
           data: {
             status: 'PAID',
@@ -453,7 +453,7 @@ Action Required:
             razorpayPaymentId: paymentDetails.razorpayPaymentId,
           },
           include: {
-            feePlan: {
+            fee_plans: {
               include: {
                 installments: true,
                 lead: true,
@@ -462,7 +462,7 @@ Action Required:
           },
         })
 
-        await tx.feePayment.create({
+        await tx.fee_payments.create({
           data: {
             feePlanId: installment.feePlanId,
             installmentId: installment.id,
@@ -474,25 +474,26 @@ Action Required:
           },
         })
 
-        const updatedAmountPaid = Number(installment.feePlan.amountPaid) + paymentDetails.paidAmount
+        const updatedAmountPaid =
+          Number(installment.fee_plans.amountPaid) + paymentDetails.paidAmount
 
-        await tx.feePlan.update({
+        await tx.fee_plans.update({
           where: { id: installment.feePlanId },
           data: {
             amountPaid: updatedAmountPaid,
-            amountDue: Number(installment.feePlan.totalFee) - updatedAmountPaid,
+            amountDue: Number(installment.fee_plans.totalFee) - updatedAmountPaid,
             status:
-              updatedAmountPaid >= Number(installment.feePlan.totalFee) ? 'COMPLETED' : 'PARTIAL',
+              updatedAmountPaid >= Number(installment.fee_plans.totalFee) ? 'COMPLETED' : 'PARTIAL',
           },
         })
 
-        const allPaid = installment.feePlan.installments.every(
+        const allPaid = installment.fee_plans.installments.every(
           (inst) => inst.status === 'PAID' || inst.id === installmentId
         )
 
-        if (allPaid && installment.feePlan.lead.stage !== 'ENROLLED') {
+        if (allPaid && installment.fee_plans.lead.stage !== 'ENROLLED') {
           await tx.lead.update({
-            where: { id: installment.feePlan.leadId },
+            where: { id: installment.fee_plans.leadId },
             data: {
               stage: 'ENROLLED',
               convertedAt: new Date(),
@@ -502,25 +503,25 @@ Action Required:
           await tx.activity.create({
             data: {
               userId: paymentDetails.userId,
-              leadId: installment.feePlan.leadId,
+              leadId: installment.fee_plans.leadId,
               action: 'LEAD_ENROLLED',
               description: `Lead converted to ENROLLED - All payments completed`,
               metadata: {
                 feePlanId: installment.feePlanId,
-                totalAmount: Number(installment.feePlan.totalFee),
+                totalAmount: Number(installment.fee_plans.totalFee),
               },
             },
           })
 
           console.log(
-            `🎉 Lead ${installment.feePlan.lead.studentName} ENROLLED - All payments completed!`
+            `🎉 Lead ${installment.fee_plans.lead.studentName} ENROLLED - All payments completed!`
           )
         }
 
         await tx.activity.create({
           data: {
             userId: paymentDetails.userId,
-            leadId: installment.feePlan.leadId,
+            leadId: installment.fee_plans.leadId,
             action: 'PAYMENT_RECEIVED',
             description: `Payment received for Installment ${installment.installmentNumber} - ₹${paymentDetails.paidAmount.toLocaleString('en-IN')}`,
             metadata: {
@@ -546,9 +547,9 @@ Action Required:
     const now = new Date()
     const sevenDaysFromNow = addDays(now, 7)
 
-    const installments = await prisma.installment.findMany({
+    const installments = await prisma.installments.findMany({
       where: {
-        feePlan: {
+        fee_plans: {
           leadId,
         },
         status: {
@@ -559,7 +560,7 @@ Action Required:
         },
       },
       include: {
-        feePlan: {
+        fee_plans: {
           include: {
             lead: true,
           },
@@ -596,7 +597,7 @@ Action Required:
   }> {
     const now = new Date()
 
-    const overdueInstallments = await prisma.installment.findMany({
+    const overdueInstallments = await prisma.installments.findMany({
       where: {
         status: {
           in: ['PENDING', 'OVERDUE'],
@@ -606,7 +607,7 @@ Action Required:
         },
       },
       include: {
-        feePlan: {
+        fee_plans: {
           include: {
             lead: true,
           },
@@ -622,7 +623,7 @@ Action Required:
     let totalAmount = 0
 
     for (const inst of overdueInstallments) {
-      const lead = inst.feePlan.lead
+      const lead = inst.fee_plans.lead
       const amount = Number(inst.amount)
       totalAmount += amount
 
