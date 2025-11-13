@@ -64,7 +64,7 @@ async function handleGET(request: NextRequest, session: any) {
       ]
     }
 
-    const leads = await prisma.lead.findMany({
+    const leads = await prisma.leads.findMany({
       where,
       include: {
         communications: {
@@ -79,7 +79,7 @@ async function handleGET(request: NextRequest, session: any) {
           },
           orderBy: { createdAt: 'desc' },
         },
-        feePlans: {
+        fee_plans: {
           where: {
             status: {
               in: ['PENDING', 'PARTIAL'],
@@ -130,7 +130,7 @@ async function handlePOST(request: NextRequest, session: any) {
     const body = await request.json()
     const validatedData = createLeadSchema.parse(body)
 
-    const lead = await prisma.lead.create({
+    const lead = await prisma.leads.create({
       data: {
         ...validatedData,
         assignedToId: session.userId,
@@ -138,7 +138,7 @@ async function handlePOST(request: NextRequest, session: any) {
         priority: validatedData.priority || 'WARM',
       },
       include: {
-        assignedTo: {
+        users: {
           select: {
             id: true,
             name: true,
@@ -148,7 +148,7 @@ async function handlePOST(request: NextRequest, session: any) {
       },
     })
 
-    await prisma.activity.create({
+    await prisma.activities.create({
       data: {
         userId: session.userId,
         leadId: lead.id,

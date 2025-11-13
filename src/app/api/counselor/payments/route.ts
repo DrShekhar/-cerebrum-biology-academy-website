@@ -24,14 +24,7 @@ export async function GET(request: NextRequest) {
       include: {
         fee_plans: {
           include: {
-            leads: {
-              select: {
-                id: true,
-                studentName: true,
-                phone: true,
-                email: true,
-              },
-            },
+            leads: true,
           },
         },
       },

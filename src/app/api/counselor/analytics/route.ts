@@ -28,14 +28,14 @@ async function handleGET(req: NextRequest, session: any) {
       payments,
       leadsThisWeek,
     ] = await Promise.all([
-      prisma.lead.count({
+      prisma.leads.count({
         where: {
           assignedToId: counselorId,
           createdAt: { gte: startDate },
         },
       }),
 
-      prisma.lead.count({
+      prisma.leads.count({
         where: {
           assignedToId: counselorId,
           stage: {
@@ -45,7 +45,7 @@ async function handleGET(req: NextRequest, session: any) {
         },
       }),
 
-      prisma.lead.count({
+      prisma.leads.count({
         where: {
           assignedToId: counselorId,
           stage: { in: ['ENROLLED', 'ACTIVE_STUDENT'] },
@@ -53,7 +53,7 @@ async function handleGET(req: NextRequest, session: any) {
         },
       }),
 
-      prisma.lead.count({
+      prisma.leads.count({
         where: {
           assignedToId: counselorId,
           stage: 'LOST',
@@ -61,7 +61,7 @@ async function handleGET(req: NextRequest, session: any) {
         },
       }),
 
-      prisma.lead.findMany({
+      prisma.leads.findMany({
         where: {
           assignedToId: counselorId,
           createdAt: { gte: startDate },
@@ -73,9 +73,9 @@ async function handleGET(req: NextRequest, session: any) {
         },
       }),
 
-      prisma.feePlan.findMany({
+      prisma.fee_plans.findMany({
         where: {
-          lead: {
+          leads: {
             assignedToId: counselorId,
           },
           createdAt: { gte: startDate },
@@ -86,11 +86,11 @@ async function handleGET(req: NextRequest, session: any) {
         },
       }),
 
-      prisma.feePayment.findMany({
+      prisma.fee_payments.findMany({
         where: {
-          installment: {
-            feePlan: {
-              lead: {
+          installments: {
+            fee_plans: {
+              leads: {
                 assignedToId: counselorId,
               },
             },
@@ -103,7 +103,7 @@ async function handleGET(req: NextRequest, session: any) {
         },
       }),
 
-      prisma.lead.findMany({
+      prisma.leads.findMany({
         where: {
           assignedToId: counselorId,
           createdAt: {

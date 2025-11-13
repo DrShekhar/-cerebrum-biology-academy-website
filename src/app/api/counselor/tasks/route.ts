@@ -55,10 +55,10 @@ async function handleGET(request: NextRequest, session: any) {
       }
     }
 
-    const tasks = await prisma.task.findMany({
+    const tasks = await prisma.tasks.findMany({
       where,
       include: {
-        lead: {
+        leads: {
           select: {
             id: true,
             studentName: true,
@@ -67,7 +67,7 @@ async function handleGET(request: NextRequest, session: any) {
             stage: true,
           },
         },
-        assignedTo: {
+        users: {
           select: {
             id: true,
             name: true,
@@ -102,7 +102,7 @@ async function handlePOST(request: NextRequest, session: any) {
     const validatedData = createTaskSchema.parse(body)
 
     if (validatedData.leadId) {
-      const lead = await prisma.lead.findUnique({
+      const lead = await prisma.leads.findUnique({
         where: { id: validatedData.leadId },
         select: { assignedToId: true },
       })
@@ -128,7 +128,7 @@ async function handlePOST(request: NextRequest, session: any) {
       }
     }
 
-    const task = await prisma.task.create({
+    const task = await prisma.tasks.create({
       data: {
         ...validatedData,
         dueDate: new Date(validatedData.dueDate),
@@ -136,7 +136,7 @@ async function handlePOST(request: NextRequest, session: any) {
         status: 'TODO',
       },
       include: {
-        lead: {
+        leads: {
           select: {
             id: true,
             studentName: true,
@@ -146,7 +146,7 @@ async function handlePOST(request: NextRequest, session: any) {
     })
 
     if (validatedData.leadId) {
-      await prisma.activity.create({
+      await prisma.activities.create({
         data: {
           userId: session.userId,
           leadId: validatedData.leadId,

@@ -2,7 +2,7 @@ import NextAuth from 'next-auth'
 import Credentials from 'next-auth/providers/credentials'
 import bcrypt from 'bcryptjs'
 import { z } from 'zod'
-import { prisma } from './prisma-edge-safe'
+import { prisma } from './prisma'
 import { logLogin, logFailedLogin, logAdminAccess } from './security/auditLogger'
 
 declare module 'next-auth' {
@@ -61,6 +61,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         password: { label: 'Password', type: 'password' },
       },
       async authorize(credentials) {
+        console.log('🚀 authorize() called with email:', credentials?.email)
+
         if (!credentials?.email || !credentials?.password) {
           throw new Error('Email and password are required')
         }
@@ -71,6 +73,10 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
             email: credentials.email,
             password: credentials.password,
           })
+
+          console.log('✅ Credentials validated successfully')
+          console.log('🔧 Prisma available:', !!prisma)
+          console.log('🔧 Admin email from env:', ADMIN_CREDENTIALS.email)
 
           // First check if it's the hardcoded admin credentials (fallback)
           if (validatedData.email === ADMIN_CREDENTIALS.email) {
@@ -92,9 +98,12 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
           // Try to find user in database if Prisma is available
           if (prisma) {
             try {
+              console.log('🔍 Looking up user:', validatedData.email)
               const user = await prisma.users.findUnique({
                 where: { email: validatedData.email },
               })
+
+              console.log('👤 User found:', !!user, user ? `Role: ${user.role}` : 'No user')
 
               if (user && user.passwordHash) {
                 const isValidPassword = await bcrypt.compare(
@@ -102,7 +111,10 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
                   user.passwordHash
                 )
 
+                console.log('🔐 Password valid:', isValidPassword)
+
                 if (isValidPassword) {
+                  console.log('✅ Login successful for:', user.email, user.role)
                   return {
                     id: user.id,
                     email: user.email,
@@ -115,7 +127,11 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
                       | 'counselor',
                     profile: user.profile as any,
                   }
+                } else {
+                  console.log('❌ Password mismatch for:', user.email)
                 }
+              } else {
+                console.log('❌ User not found or no password hash')
               }
             } catch (dbError) {
               console.warn('Database query failed, falling back to hardcoded admin:', dbError)
