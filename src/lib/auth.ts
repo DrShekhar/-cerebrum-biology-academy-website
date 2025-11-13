@@ -92,7 +92,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
           // Try to find user in database if Prisma is available
           if (prisma) {
             try {
-              const user = await prisma.user.findUnique({
+              const user = await prisma.users.findUnique({
                 where: { email: validatedData.email },
               })
 
