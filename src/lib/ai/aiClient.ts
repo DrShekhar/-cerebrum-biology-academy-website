@@ -1,7 +1,7 @@
 // Unified AI Client for Cerebrum Biology Academy
 // Handles OpenAI, Anthropic Claude, and Google AI integrations
 
-import { aiConfig, AIProviderConfig } from './aiConfig'
+import { aiConfig, type AIProviderConfig } from './aiConfig'
 import AIDebugger from './aiDebugger'
 import { performanceMonitor } from './performanceMonitor'
 import { smartProviderSelector, TaskAnalysis, SelectionCriteria } from './SmartProviderSelector'
@@ -9,6 +9,9 @@ import { advancedCacheManager } from './AdvancedCacheManager'
 import { qualityAssurance, type QualityReport } from './QualityAssurancePipeline'
 import { costDashboard } from './CostOptimizationDashboard'
 import { fallbackManager } from './EnhancedFallbackManager'
+
+// Re-export QualityReport for other modules
+export type { QualityReport }
 
 export interface AIRequest {
   prompt: string

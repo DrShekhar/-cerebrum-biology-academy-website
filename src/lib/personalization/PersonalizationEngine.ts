@@ -463,7 +463,7 @@ export class PersonalizationEngine {
     switch (learningStyle.primary) {
       case 'visual':
         score += course.delivery.recordedContent > 300 ? 20 : 10
-        score += course.content.practicalWeightage > 3 ? 10 : 5
+        score += (course.content.biologyFocus.practicalWeightage || 0) > 3 ? 10 : 5
         break
       case 'auditory':
         score += course.delivery.liveClasses > 200 ? 20 : 10
@@ -471,7 +471,7 @@ export class PersonalizationEngine {
         break
       case 'kinesthetic':
         score += course.delivery.practicalSessions > 30 ? 25 : 10
-        score += course.content.practicalWeightage > 5 ? 15 : 5
+        score += (course.content.biologyFocus.practicalWeightage || 0) > 5 ? 15 : 5
         break
       case 'reading':
         score += course.delivery.recordedContent > 250 ? 15 : 10
@@ -693,7 +693,7 @@ export class PersonalizationEngine {
     Object.values(biologyWeakAreas.botany).forEach((level) => {
       if (level === 'weak') {
         totalWeakAreas++
-        relevantContent += course.content.biologyFocus.botanyWeightage * 0.2 // 20% per weak area in botany
+        relevantContent += (course.content.biologyFocus.botanyWeightage || 0) * 0.2 // 20% per weak area in botany
       }
     })
 
@@ -701,7 +701,7 @@ export class PersonalizationEngine {
     Object.values(biologyWeakAreas.zoology).forEach((level) => {
       if (level === 'weak') {
         totalWeakAreas++
-        relevantContent += course.content.biologyFocus.zoologyWeightage * 0.25 // 25% per weak area in zoology
+        relevantContent += (course.content.biologyFocus.zoologyWeightage || 0) * 0.25 // 25% per weak area in zoology
       }
     })
 
@@ -709,7 +709,7 @@ export class PersonalizationEngine {
     Object.values(biologyWeakAreas.cellBiology).forEach((level) => {
       if (level === 'weak') {
         totalWeakAreas++
-        relevantContent += course.content.biologyFocus.cellBiologyWeightage * 0.25 // 25% per weak area in cell biology
+        relevantContent += (course.content.biologyFocus.cellBiologyWeightage || 0) * 0.25 // 25% per weak area in cell biology
       }
     })
 
@@ -717,7 +717,7 @@ export class PersonalizationEngine {
     Object.values(biologyWeakAreas.generalTopics).forEach((level) => {
       if (level === 'weak') {
         totalWeakAreas++
-        relevantContent += course.content.biologyFocus.practicalWeightage * 0.3 // 30% per weak area in general
+        relevantContent += (course.content.biologyFocus.practicalWeightage || 0) * 0.3 // 30% per weak area in general
       }
     })
 
@@ -780,7 +780,8 @@ export class PersonalizationEngine {
 
     // Analyze strong match factors
     Object.entries(matchFactors).forEach(([factor, score]) => {
-      if (score >= 80) {
+      const numScore = Number(score)
+      if (numScore >= 80) {
         switch (factor) {
           case 'academicFit':
             strengths.push('Excellent alignment with your academic performance level')
@@ -800,7 +801,7 @@ export class PersonalizationEngine {
             personalizedFeatures.push('Focused attention on your challenging topics')
             break
         }
-      } else if (score < 60) {
+      } else if (numScore < 60) {
         switch (factor) {
           case 'academicFit':
             considerations.push('Course difficulty may not match your current performance level')
@@ -838,7 +839,7 @@ export class PersonalizationEngine {
   // Calculate predicted outcomes
   private calculatePredictedOutcomes(course: CourseData, matchFactors: any): any {
     const avgMatchScore =
-      Object.values(matchFactors).reduce((a: number, b: number) => a + b, 0) /
+      Object.values(matchFactors).reduce((a: number, b: unknown) => a + Number(b), 0) /
       Object.keys(matchFactors).length
 
     // Success probability based on match percentage and course success rate
@@ -846,22 +847,24 @@ export class PersonalizationEngine {
 
     // Expected improvement
     let expectedImprovement = course.outcomes.averageImprovement
-    if (matchFactors.contentRelevance > 80) expectedImprovement *= 1.2
-    if (matchFactors.learningStyleFit > 80) expectedImprovement *= 1.1
-    if (matchFactors.academicFit < 60) expectedImprovement *= 0.8
+    if (Number(matchFactors.contentRelevance) > 80) expectedImprovement *= 1.2
+    if (Number(matchFactors.learningStyleFit) > 80) expectedImprovement *= 1.1
+    if (Number(matchFactors.academicFit) < 60) expectedImprovement *= 0.8
 
     // Time to target
     let timeToTarget = course.outcomes.typicalTimeline
-    if (matchFactors.timeConstraintsFit < 60) timeToTarget *= 1.2
+    if (Number(matchFactors.timeConstraintsFit) < 60) timeToTarget *= 1.2
     if (this.profile.academicPerformance.improvementTrend === 'improving') timeToTarget *= 0.9
 
     // Risk factors
     const riskFactors = []
-    if (matchFactors.budgetFit < 60) riskFactors.push('Budget constraints may affect commitment')
-    if (matchFactors.timeConstraintsFit < 60)
+    if (Number(matchFactors.budgetFit) < 60)
+      riskFactors.push('Budget constraints may affect commitment')
+    if (Number(matchFactors.timeConstraintsFit) < 60)
       riskFactors.push('Time management challenges possible')
-    if (matchFactors.academicFit < 70) riskFactors.push('Academic level mismatch may slow progress')
-    if (matchFactors.deliveryPreferenceFit < 60)
+    if (Number(matchFactors.academicFit) < 70)
+      riskFactors.push('Academic level mismatch may slow progress')
+    if (Number(matchFactors.deliveryPreferenceFit) < 60)
       riskFactors.push('Delivery format may not be optimal')
 
     return {

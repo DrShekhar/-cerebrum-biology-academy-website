@@ -29,7 +29,7 @@ async function testDatabaseConnection() {
 async function testQueryQuestions() {
   console.log('\nTesting question queries...')
   try {
-    const questions = await db.question.findMany({
+    const questions = await db.questions.findMany({
       where: {
         isActive: true,
         topic: {
@@ -61,7 +61,7 @@ async function testQueryQuestions() {
 async function testQueryStudentProgress() {
   console.log('\nTesting student progress queries...')
   try {
-    const progress = await db.userProgress.findMany({
+    const progress = await db.user_progress.findMany({
       where: {
         accuracy: {
           lt: 60,
@@ -95,7 +95,7 @@ async function testQueryStudentProgress() {
 async function testQueryChapterNotes() {
   console.log('\nTesting chapter notes queries...')
   try {
-    const notes = await db.chapterNote.findMany({
+    const notes = await db.chapter_notes.findMany({
       where: {
         isPublished: true,
         subject: 'Biology',

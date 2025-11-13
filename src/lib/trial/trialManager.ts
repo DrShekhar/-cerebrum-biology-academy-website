@@ -62,23 +62,25 @@ export async function initializeTrial(options: CreateTrialOptions): Promise<Tria
   let freeUser
 
   try {
-    freeUser = await prisma.freeUser.create({
+    freeUser = await prisma.free_users.create({
       data: {
+        id: `free_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`,
         email,
         name: options.name || 'Guest User',
-        grade: options.grade,
-        curriculum: options.curriculum,
+        grade: options.grade || '',
+        curriculum: options.curriculum || '',
         deviceId,
         trialStartDate: startDate,
         trialExpiryDate: expiryDate,
         isTrialExpired: false,
         lastTrialCheck: startDate,
         testsTakenCount: 0,
+        updatedAt: startDate,
       },
     })
   } catch (error: any) {
     if (error.code === 'P2002' && error.meta?.target?.includes('email')) {
-      freeUser = await prisma.freeUser.findUnique({
+      freeUser = await prisma.free_users.findUnique({
         where: { email },
       })
 
@@ -107,7 +109,7 @@ export async function initializeTrial(options: CreateTrialOptions): Promise<Tria
 }
 
 export async function checkTrialStatus(freeUserId: string): Promise<TrialStatus | null> {
-  const freeUser = await prisma.freeUser.findUnique({
+  const freeUser = await prisma.free_users.findUnique({
     where: { id: freeUserId },
     select: {
       id: true,
@@ -126,7 +128,7 @@ export async function checkTrialStatus(freeUserId: string): Promise<TrialStatus 
 
   if (!freeUser.trialExpiryDate) {
     const expiryDate = calculateTrialExpiry(freeUser.trialStartDate)
-    await prisma.freeUser.update({
+    await prisma.free_users.update({
       where: { id: freeUserId },
       data: { trialExpiryDate: expiryDate },
     })
@@ -138,7 +140,7 @@ export async function checkTrialStatus(freeUserId: string): Promise<TrialStatus 
   const isExpired = daysRemaining <= 0 || freeUser.testsTakenCount >= MAX_TRIAL_TESTS
 
   if (freeUser.isTrialExpired !== isExpired) {
-    await prisma.freeUser.update({
+    await prisma.free_users.update({
       where: { id: freeUserId },
       data: {
         isTrialExpired: isExpired,
@@ -161,7 +163,7 @@ export async function checkTrialStatus(freeUserId: string): Promise<TrialStatus 
 }
 
 export async function extendTrial(freeUserId: string, days: number = 7): Promise<void> {
-  const freeUser = await prisma.freeUser.findUnique({
+  const freeUser = await prisma.free_users.findUnique({
     where: { id: freeUserId },
     select: {
       id: true,
@@ -183,7 +185,7 @@ export async function extendTrial(freeUserId: string, days: number = 7): Promise
   const newExpiryDate = new Date(currentExpiryDate)
   newExpiryDate.setDate(newExpiryDate.getDate() + days)
 
-  await prisma.freeUser.update({
+  await prisma.free_users.update({
     where: { id: freeUserId },
     data: {
       trialExpiryDate: newExpiryDate,
@@ -196,14 +198,14 @@ export async function extendTrial(freeUserId: string, days: number = 7): Promise
 }
 
 export async function convertToFullUser(freeUserId: string, userId: string): Promise<void> {
-  const freeUser = await prisma.freeUser.findUnique({
+  const freeUser = await prisma.free_users.findUnique({
     where: { id: freeUserId },
     include: {
-      testAttempts: true,
-      testSessions: true,
-      userProgress: true,
-      questionResponses: true,
-      performanceReports: true,
+      test_attempts: true,
+      test_sessions: true,
+      user_progress: true,
+      user_question_responses: true,
+      performance_reports: true,
     },
   })
 
@@ -212,7 +214,7 @@ export async function convertToFullUser(freeUserId: string, userId: string): Pro
   }
 
   await prisma.$transaction(async (tx) => {
-    await tx.freeUser.update({
+    await tx.free_users.update({
       where: { id: freeUserId },
       data: {
         upgradedToUserId: userId,
@@ -220,22 +222,22 @@ export async function convertToFullUser(freeUserId: string, userId: string): Pro
       },
     })
 
-    await tx.testSession.updateMany({
+    await tx.test_sessions.updateMany({
       where: { freeUserId },
       data: { userId },
     })
 
-    await tx.userQuestionResponse.updateMany({
+    await tx.user_question_responses.updateMany({
       where: { freeUserId },
       data: { userId },
     })
 
-    await tx.userProgress.updateMany({
+    await tx.user_progress.updateMany({
       where: { freeUserId },
       data: { userId },
     })
 
-    await tx.performanceReport.updateMany({
+    await tx.performance_reports.updateMany({
       where: { freeUserId },
       data: { userId },
     })
@@ -243,7 +245,7 @@ export async function convertToFullUser(freeUserId: string, userId: string): Pro
 }
 
 export async function incrementTestCount(freeUserId: string): Promise<number> {
-  const updated = await prisma.freeUser.update({
+  const updated = await prisma.free_users.update({
     where: { id: freeUserId },
     data: {
       testsTakenCount: {
@@ -290,10 +292,10 @@ export async function getTrialStatistics(freeUserId: string): Promise<{
   weakTopics: string[]
   testsCompleted: number
 }> {
-  const freeUser = await prisma.freeUser.findUnique({
+  const freeUser = await prisma.free_users.findUnique({
     where: { id: freeUserId },
     include: {
-      testAttempts: {
+      test_attempts: {
         orderBy: { startedAt: 'desc' },
         take: 20,
       },
@@ -304,7 +306,7 @@ export async function getTrialStatistics(freeUserId: string): Promise<{
     throw new Error('Free user not found')
   }
 
-  const totalStudyTime = freeUser.testAttempts.reduce((acc, attempt) => acc + attempt.timeSpent, 0)
+  const totalStudyTime = freeUser.test_attempts.reduce((acc, attempt) => acc + attempt.timeSpent, 0)
   const averageScore = freeUser.averageScore || 0
   const strongTopics = (freeUser.strongestTopics as string[]) || []
   const weakTopics = (freeUser.weakestTopics as string[]) || []

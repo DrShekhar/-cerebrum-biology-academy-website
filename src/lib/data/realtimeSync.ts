@@ -152,7 +152,7 @@ export function useRealtimeData<T>(
   const [data, setData] = useState<T>(initialData)
   const [isConnected, setIsConnected] = useState(false)
   const [error, setError] = useState<string | null>(null)
-  const animationFrameRef = useRef<number>()
+  const animationFrameRef = useRef<number | undefined>(undefined)
   const pendingUpdatesRef = useRef<T[]>([])
 
   const {

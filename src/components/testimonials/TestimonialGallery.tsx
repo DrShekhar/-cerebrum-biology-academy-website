@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { Button } from '@/components/ui/Button'
 import { VideoTestimonial } from './VideoTestimonial'
 import { ScoreComparison } from './ScoreComparison'
@@ -61,10 +61,10 @@ interface TestimonialGalleryProps {
   subtitle?: string
 }
 
-export function TestimonialGallery({ 
-  testimonials, 
-  title = "Student Success Stories",
-  subtitle = "Real stories, real results from our NEET achievers"
+export function TestimonialGallery({
+  testimonials,
+  title = 'Student Success Stories',
+  subtitle = 'Real stories, real results from our NEET achievers',
 }: TestimonialGalleryProps) {
   const [filteredTestimonials, setFilteredTestimonials] = useState(testimonials)
   const [selectedCategory, setSelectedCategory] = useState<string>('all')
@@ -77,10 +77,26 @@ export function TestimonialGallery({
 
   const categories = [
     { id: 'all', label: 'All Stories', count: testimonials.length },
-    { id: 'topper', label: 'Top Rankers', count: testimonials.filter(t => t.category === 'topper').length },
-    { id: 'improvement', label: 'Best Improvement', count: testimonials.filter(t => t.category === 'improvement').length },
-    { id: 'dropper', label: 'Dropper Success', count: testimonials.filter(t => t.category === 'dropper').length },
-    { id: 'repeater', label: 'Repeater Success', count: testimonials.filter(t => t.category === 'repeater').length },
+    {
+      id: 'topper',
+      label: 'Top Rankers',
+      count: testimonials.filter((t) => t.category === 'topper').length,
+    },
+    {
+      id: 'improvement',
+      label: 'Best Improvement',
+      count: testimonials.filter((t) => t.category === 'improvement').length,
+    },
+    {
+      id: 'dropper',
+      label: 'Dropper Success',
+      count: testimonials.filter((t) => t.category === 'dropper').length,
+    },
+    {
+      id: 'repeater',
+      label: 'Repeater Success',
+      count: testimonials.filter((t) => t.category === 'repeater').length,
+    },
   ]
 
   const types = [
@@ -91,23 +107,24 @@ export function TestimonialGallery({
   ]
 
   // Filter logic
-  useState(() => {
+  useEffect(() => {
     let filtered = testimonials
 
     if (selectedCategory !== 'all') {
-      filtered = filtered.filter(t => t.category === selectedCategory)
+      filtered = filtered.filter((t) => t.category === selectedCategory)
     }
 
     if (selectedType !== 'all') {
-      filtered = filtered.filter(t => t.type === selectedType)
+      filtered = filtered.filter((t) => t.type === selectedType)
     }
 
     if (searchTerm) {
-      filtered = filtered.filter(t => 
-        t.studentName.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        t.college.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        t.location.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        t.school.toLowerCase().includes(searchTerm.toLowerCase())
+      filtered = filtered.filter(
+        (t) =>
+          t.studentName.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          t.college.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          t.location.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          t.school.toLowerCase().includes(searchTerm.toLowerCase())
       )
     }
 
@@ -213,7 +230,9 @@ export function TestimonialGallery({
             <button
               onClick={() => setViewMode('grid')}
               className={`p-2 rounded-lg ${
-                viewMode === 'grid' ? 'bg-blue-100 text-blue-600' : 'text-gray-600 hover:bg-gray-100'
+                viewMode === 'grid'
+                  ? 'bg-blue-100 text-blue-600'
+                  : 'text-gray-600 hover:bg-gray-100'
               }`}
             >
               <Grid className="w-5 h-5" />
@@ -221,7 +240,9 @@ export function TestimonialGallery({
             <button
               onClick={() => setViewMode('list')}
               className={`p-2 rounded-lg ${
-                viewMode === 'list' ? 'bg-blue-100 text-blue-600' : 'text-gray-600 hover:bg-gray-100'
+                viewMode === 'list'
+                  ? 'bg-blue-100 text-blue-600'
+                  : 'text-gray-600 hover:bg-gray-100'
               }`}
             >
               <List className="w-5 h-5" />
@@ -263,27 +284,33 @@ export function TestimonialGallery({
                         quote={testimonial.quote}
                       />
                     )}
-                    
-                    {testimonial.type === 'score' && testimonial.beforeScore && testimonial.afterScore && (
-                      <ScoreComparison
-                        studentName={testimonial.studentName}
-                        beforeScore={testimonial.beforeScore}
-                        afterScore={testimonial.afterScore}
-                        timeframe="12 months"
-                        rank={{ after: testimonial.rank }}
-                        animated={false}
-                      />
-                    )}
+
+                    {testimonial.type === 'score' &&
+                      testimonial.beforeScore &&
+                      testimonial.afterScore && (
+                        <ScoreComparison
+                          studentName={testimonial.studentName}
+                          beforeScore={testimonial.beforeScore}
+                          afterScore={testimonial.afterScore}
+                          timeframe="12 months"
+                          rank={{ after: testimonial.rank }}
+                          animated={false}
+                        />
+                      )}
 
                     {testimonial.type === 'written' && (
                       <div className="bg-white rounded-3xl shadow-lg p-6">
                         <div className="flex items-center justify-between mb-4">
                           <div>
-                            <h3 className="text-xl font-bold text-gray-900">{testimonial.studentName}</h3>
+                            <h3 className="text-xl font-bold text-gray-900">
+                              {testimonial.studentName}
+                            </h3>
                             <p className="text-blue-600 font-medium">{testimonial.college}</p>
                           </div>
                           <div className="text-right">
-                            <div className="text-2xl font-bold text-green-600">{testimonial.neetScore}</div>
+                            <div className="text-2xl font-bold text-green-600">
+                              {testimonial.neetScore}
+                            </div>
                             <div className="text-sm text-gray-600">NEET Score</div>
                           </div>
                         </div>
@@ -310,7 +337,10 @@ export function TestimonialGallery({
                         <div className="flex items-center justify-between">
                           <div className="flex items-center">
                             {[1, 2, 3, 4, 5].map((star) => (
-                              <Star key={star} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                              <Star
+                                key={star}
+                                className="w-4 h-4 fill-yellow-400 text-yellow-400"
+                              />
                             ))}
                           </div>
                           <div className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">
@@ -335,7 +365,9 @@ export function TestimonialGallery({
                   >
                     <div className="grid md:grid-cols-3 gap-6 items-center">
                       <div>
-                        <h3 className="text-xl font-bold text-gray-900 mb-2">{testimonial.studentName}</h3>
+                        <h3 className="text-xl font-bold text-gray-900 mb-2">
+                          {testimonial.studentName}
+                        </h3>
                         <p className="text-blue-600 font-medium mb-1">{testimonial.college}</p>
                         <div className="text-sm text-gray-600 space-y-1">
                           <div className="flex items-center">
@@ -348,15 +380,17 @@ export function TestimonialGallery({
                           </div>
                         </div>
                       </div>
-                      
+
                       <div className="text-center">
-                        <div className="text-3xl font-bold text-green-600 mb-1">{testimonial.neetScore}</div>
+                        <div className="text-3xl font-bold text-green-600 mb-1">
+                          {testimonial.neetScore}
+                        </div>
                         <div className="text-sm text-gray-600 mb-2">NEET Score</div>
                         <div className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">
                           +{testimonial.improvement} improvement
                         </div>
                       </div>
-                      
+
                       <div>
                         <blockquote className="text-gray-700 italic mb-4">
                           &ldquo;{testimonial.quote.substring(0, 120)}...&rdquo;
@@ -364,7 +398,10 @@ export function TestimonialGallery({
                         <div className="flex items-center justify-between">
                           <div className="flex items-center">
                             {[1, 2, 3, 4, 5].map((star) => (
-                              <Star key={star} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                              <Star
+                                key={star}
+                                className="w-4 h-4 fill-yellow-400 text-yellow-400"
+                              />
                             ))}
                           </div>
                           <Button variant="outline" size="sm">
@@ -388,7 +425,7 @@ export function TestimonialGallery({
             <Target className="w-16 h-16 text-gray-400 mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-gray-900 mb-2">No stories found</h3>
             <p className="text-gray-600 mb-6">Try adjusting your filters or search terms</p>
-            <Button 
+            <Button
               onClick={() => {
                 setSelectedCategory('all')
                 setSelectedType('all')
@@ -412,7 +449,7 @@ export function TestimonialGallery({
           >
             <ChevronLeft className="w-5 h-5" />
           </button>
-          
+
           {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
             <button
               key={page}
@@ -426,7 +463,7 @@ export function TestimonialGallery({
               {page}
             </button>
           ))}
-          
+
           <button
             onClick={() => handlePageChange(currentPage + 1)}
             disabled={currentPage === totalPages}

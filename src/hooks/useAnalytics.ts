@@ -61,8 +61,8 @@ const DEFAULT_CONFIG: AnalyticsConfig = {
 
 export const useAnalytics = (config: AnalyticsConfig = {}) => {
   const finalConfig = { ...DEFAULT_CONFIG, ...config }
-  const sessionId = useRef<string>()
-  const userId = useRef<string>()
+  const sessionId = useRef<string | undefined>(undefined)
+  const userId = useRef<string | undefined>(undefined)
   const eventQueue = useRef<AnalyticsEvent[]>([])
   const isInitialized = useRef(false)
 
@@ -84,13 +84,16 @@ export const useAnalytics = (config: AnalyticsConfig = {}) => {
     }
   }, [])
 
-  const trackPageView = useCallback((page: string, title?: string) => {
-    trackEvent('page_view', {
-      page_title: title || (typeof document !== 'undefined' ? document.title : ''),
-      page_location: typeof window !== 'undefined' ? window.location.href : '',
-      page_path: page,
-    })
-  }, [])
+  const trackPageView = useCallback(
+    (page: string, title?: string) => {
+      trackEvent('page_view', {
+        page_title: title || (typeof document !== 'undefined' ? document.title : ''),
+        page_location: typeof window !== 'undefined' ? window.location.href : '',
+        page_path: page,
+      })
+    },
+    [trackEvent]
+  )
 
   const trackCourseEnrollment = useCallback(
     (courseId: string, courseName: string, amount: number) => {
@@ -100,7 +103,7 @@ export const useAnalytics = (config: AnalyticsConfig = {}) => {
         course_name: courseName,
       })
     },
-    []
+    [trackEnrollment, trackConversion]
   )
 
   const trackDemoRequest = useCallback((studentName: string, course: string, phone?: string) => {

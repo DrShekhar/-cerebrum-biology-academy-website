@@ -19,7 +19,7 @@ import { ErrorHandlingManager } from './ErrorHandlingManager'
 interface AIProvider {
   id: 'claude' | 'openai'
   name: string
-  client: Anthropic | OpenAI
+  client: Anthropic | OpenAI | null
   healthCheck: () => Promise<boolean>
   costPerToken: number
   maxTokens: number
@@ -27,7 +27,7 @@ interface AIProvider {
   priority: number
 }
 
-interface AIRequest {
+export interface AIRequest {
   id: string
   userId: string
   prompt: string
@@ -240,6 +240,7 @@ export class AIGateway {
         tokens: response.tokens,
         cost: response.cost,
         success: true,
+        timestamp: Date.now(),
       })
 
       return response
@@ -265,7 +266,7 @@ export class AIGateway {
     // Cost optimization logic
     const optimizedProvider = this.costOptimizer.selectProvider(healthyProviders, request)
 
-    return optimizedProvider || healthyProviders[0]
+    return (optimizedProvider as AIProvider | null) || healthyProviders[0]
   }
 
   private async executeWithCircuitBreaker(
@@ -380,6 +381,7 @@ export class AIGateway {
       success: false,
       error: error.message,
       userId: request.userId,
+      timestamp: Date.now(),
     })
 
     // Use intelligent fallback response from error handler
@@ -399,10 +401,10 @@ export class AIGateway {
           model: 'fallback',
           confidence: 0.1,
           quality: 0.1,
-          errorId: healingResult.errorId,
           selfHealing: healingResult.handled,
           isFallback: true,
-        },
+          ...(healingResult.errorId && { errorId: healingResult.errorId }),
+        } as any,
       }
     }
 
@@ -420,10 +422,10 @@ export class AIGateway {
         model: 'fallback',
         confidence: 0.1,
         quality: 0.1,
-        errorId: healingResult.errorId,
         selfHealing: healingResult.handled,
         isFallback: true,
-      },
+        ...(healingResult.errorId && { errorId: healingResult.errorId }),
+      } as any,
     }
   }
 
@@ -571,7 +573,7 @@ export class AIGateway {
 
   private async isProviderHealthy(providerId: string): Promise<boolean> {
     const circuitBreaker = this.circuitBreakers.get(providerId)
-    return circuitBreaker?.state !== 'OPEN'
+    return circuitBreaker?.currentState !== 'OPEN'
   }
 
   private enhanceResponse(response: AIResponse, enhancements: Partial<AIResponse>): AIResponse {
@@ -600,7 +602,8 @@ export class AIGateway {
    * Get real-time gateway metrics
    */
   async getMetrics(): Promise<GatewayMetrics> {
-    return await this.performanceMonitor.getMetrics()
+    const metrics = await this.performanceMonitor.getMetrics()
+    return metrics as GatewayMetrics
   }
 
   /**
@@ -608,6 +611,30 @@ export class AIGateway {
    */
   async getErrorMetrics() {
     return await this.errorHandlingManager.getErrorMetrics()
+  }
+
+  /**
+   * Generate AI response (simplified interface for other modules)
+   */
+  async generateResponse(params: {
+    prompt: string
+    provider: 'claude' | 'openai'
+    model: string
+    temperature: number
+    maxTokens: number
+  }): Promise<string> {
+    const request: AIRequest = {
+      id: `gen_${Date.now()}_${Math.random().toString(36).substring(7)}`,
+      userId: 'system',
+      prompt: params.prompt,
+      maxTokens: params.maxTokens,
+      temperature: params.temperature,
+      preferredProvider: params.provider,
+      priority: 'medium',
+    }
+
+    const response = await this.processRequest(request)
+    return response.content || ''
   }
 
   /**

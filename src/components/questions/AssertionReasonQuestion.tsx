@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 import { cn } from '@/lib/utils'
-import { AssertionReasonQuestion } from '@/data/neetQuestionBank'
+import type { AssertionReasonQuestion } from '@/data/neetQuestionBank'
 
 interface AssertionReasonQuestionProps {
   question: AssertionReasonQuestion
@@ -19,7 +19,7 @@ const AssertionReasonQuestion: React.FC<AssertionReasonQuestionProps> = ({
   onAnswerSelect,
   showExplanation = false,
   isReviewMode = false,
-  questionNumber = 1
+  questionNumber = 1,
 }) => {
   const [hoveredOption, setHoveredOption] = useState<string | null>(null)
 
@@ -37,17 +37,19 @@ const AssertionReasonQuestion: React.FC<AssertionReasonQuestionProps> = ({
           <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">
             Assertion-Reason
           </span>
-          <span className="text-gray-500 text-sm">
-            Question {questionNumber}
-          </span>
+          <span className="text-gray-500 text-sm">Question {questionNumber}</span>
         </div>
         <div className="flex items-center gap-2">
-          <span className={cn(
-            "px-2 py-1 rounded text-xs font-medium",
-            question.difficulty === 'easy' ? "bg-green-100 text-green-800" :
-            question.difficulty === 'medium' ? "bg-yellow-100 text-yellow-800" :
-            "bg-red-100 text-red-800"
-          )}>
+          <span
+            className={cn(
+              'px-2 py-1 rounded text-xs font-medium',
+              question.difficulty === 'easy'
+                ? 'bg-green-100 text-green-800'
+                : question.difficulty === 'medium'
+                  ? 'bg-yellow-100 text-yellow-800'
+                  : 'bg-red-100 text-red-800'
+            )}
+          >
             {question.difficulty.charAt(0).toUpperCase() + question.difficulty.slice(1)}
           </span>
           <span className="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">
@@ -105,56 +107,54 @@ const AssertionReasonQuestion: React.FC<AssertionReasonQuestionProps> = ({
               onMouseLeave={() => setHoveredOption(null)}
               disabled={showExplanation || isReviewMode}
               className={cn(
-                "w-full text-left p-4 rounded-lg border-2 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500",
+                'w-full text-left p-4 rounded-lg border-2 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500',
                 // Base styles
-                "hover:shadow-md",
+                'hover:shadow-md',
                 // Selected state
                 isSelected
                   ? showExplanation
                     ? isCorrect
-                      ? "border-green-500 bg-green-50 text-green-900 shadow-lg"
-                      : "border-red-500 bg-red-50 text-red-900 shadow-lg"
-                    : "border-purple-500 bg-purple-50 text-purple-900 shadow-lg"
+                      ? 'border-green-500 bg-green-50 text-green-900 shadow-lg'
+                      : 'border-red-500 bg-red-50 text-red-900 shadow-lg'
+                    : 'border-purple-500 bg-purple-50 text-purple-900 shadow-lg'
                   : // Correct answer highlighting in explanation mode
                     showExplanation && isCorrect
-                    ? "border-green-500 bg-green-50 text-green-900 shadow-lg"
+                    ? 'border-green-500 bg-green-50 text-green-900 shadow-lg'
                     : // Default state
                       isHovered
-                      ? "border-purple-300 bg-purple-25 shadow-md"
-                      : "border-gray-200 hover:border-purple-300 hover:bg-gray-50",
+                      ? 'border-purple-300 bg-purple-25 shadow-md'
+                      : 'border-gray-200 hover:border-purple-300 hover:bg-gray-50',
                 // Disabled state
-                (showExplanation || isReviewMode) && "cursor-not-allowed"
+                (showExplanation || isReviewMode) && 'cursor-not-allowed'
               )}
               aria-label={`Option ${optionLabel}: ${option}`}
               role="radio"
               aria-checked={isSelected}
             >
               <div className="flex items-start gap-3">
-                <span className={cn(
-                  "w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-1",
-                  isSelected
-                    ? showExplanation
-                      ? isCorrect
-                        ? "bg-green-500 text-white"
-                        : "bg-red-500 text-white"
-                      : "bg-purple-500 text-white"
-                    : showExplanation && isCorrect
-                      ? "bg-green-500 text-white"
-                      : isHovered
-                        ? "bg-purple-200 text-purple-800"
-                        : "bg-gray-200 text-gray-700"
-                )}>
+                <span
+                  className={cn(
+                    'w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-1',
+                    isSelected
+                      ? showExplanation
+                        ? isCorrect
+                          ? 'bg-green-500 text-white'
+                          : 'bg-red-500 text-white'
+                        : 'bg-purple-500 text-white'
+                      : showExplanation && isCorrect
+                        ? 'bg-green-500 text-white'
+                        : isHovered
+                          ? 'bg-purple-200 text-purple-800'
+                          : 'bg-gray-200 text-gray-700'
+                  )}
+                >
                   {optionLabel}
                 </span>
                 <span className="flex-1 leading-relaxed text-base">{option}</span>
                 {showExplanation && (
                   <div className="flex-shrink-0">
-                    {isCorrect && (
-                      <span className="text-green-600 text-xl">✓</span>
-                    )}
-                    {isSelected && !isCorrect && (
-                      <span className="text-red-600 text-xl">✗</span>
-                    )}
+                    {isCorrect && <span className="text-green-600 text-xl">✓</span>}
+                    {isSelected && !isCorrect && <span className="text-red-600 text-xl">✗</span>}
                   </div>
                 )}
               </div>
@@ -167,7 +167,8 @@ const AssertionReasonQuestion: React.FC<AssertionReasonQuestionProps> = ({
       {!showExplanation && !isReviewMode && (
         <div className="bg-gray-50 p-4 rounded-lg border border-gray-200 mb-6">
           <p className="text-sm text-gray-600">
-            <strong>Instructions:</strong> Choose the correct relationship between the assertion and reason statements above.
+            <strong>Instructions:</strong> Choose the correct relationship between the assertion and
+            reason statements above.
           </p>
         </div>
       )}

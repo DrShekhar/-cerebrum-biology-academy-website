@@ -1,5 +1,5 @@
 import Redis from 'ioredis'
-import type { Question, TestTemplate, TestSession, UserProgress } from '@/generated/prisma'
+import type { questions, test_templates, test_sessions, user_progress } from '@/generated/prisma'
 
 // Check if Redis is enabled via environment variable
 const isRedisEnabled = process.env.REDIS_ENABLED === 'true' && process.env.REDIS_URL
@@ -53,9 +53,7 @@ const createRedisClient = () => {
 
     // Connection pool configuration for 10,000+ concurrent users
     maxRetriesPerRequest: 3,
-    retryDelayOnFailover: 100,
     enableReadyCheck: true,
-    maxLoadingTimeout: 1000,
 
     // Performance optimizations
     lazyConnect: true,
@@ -69,7 +67,7 @@ const createRedisClient = () => {
 
     // Key prefix for multi-tenant support
     keyPrefix: 'cerebrum:',
-  })
+  } as any)
 
   // Connection event handlers
   client.on('connect', () => {
@@ -169,13 +167,13 @@ export const CacheTTL = {
 // Question caching service
 export class QuestionCacheService {
   // Cache a single question
-  static async cacheQuestion(question: Question): Promise<void> {
+  static async cacheQuestion(question: questions): Promise<void> {
     const key = CacheKeys.question(question.id)
     await redis.setex(key, CacheTTL.QUESTION, JSON.stringify(question))
   }
 
   // Get cached question
-  static async getQuestion(id: string): Promise<Question | null> {
+  static async getQuestion(id: string): Promise<questions | null> {
     const key = CacheKeys.question(id)
     const cached = await redis.get(key)
     return cached ? JSON.parse(cached) : null
@@ -184,17 +182,17 @@ export class QuestionCacheService {
   // Cache questions by topic with pagination
   static async cacheQuestionsByTopic(
     topic: string,
-    questions: Question[],
+    questionsList: questions[],
     difficulty?: string,
     page: number = 1
   ): Promise<void> {
     const key = CacheKeys.questionsByTopic(topic, difficulty)
     const pageKey = `${key}:page:${page}`
-    await redis.setex(pageKey, CacheTTL.QUESTION_LIST, JSON.stringify(questions))
+    await redis.setex(pageKey, CacheTTL.QUESTION_LIST, JSON.stringify(questionsList))
 
     // Cache total count
     const countKey = `${key}:count`
-    await redis.setex(countKey, CacheTTL.QUESTION_LIST, questions.length.toString())
+    await redis.setex(countKey, CacheTTL.QUESTION_LIST, questionsList.length.toString())
   }
 
   // Get cached questions by topic
@@ -202,7 +200,7 @@ export class QuestionCacheService {
     topic: string,
     difficulty?: string,
     page: number = 1
-  ): Promise<Question[] | null> {
+  ): Promise<questions[] | null> {
     const key = CacheKeys.questionsByTopic(topic, difficulty)
     const pageKey = `${key}:page:${page}`
     const cached = await redis.get(pageKey)
@@ -211,16 +209,16 @@ export class QuestionCacheService {
 
   // Cache random questions with filters
   static async cacheRandomQuestions(
-    questions: Question[],
+    questionsList: questions[],
     filters: Record<string, any>
   ): Promise<void> {
     const filterHash = Buffer.from(JSON.stringify(filters)).toString('base64')
     const key = CacheKeys.randomQuestions(filterHash)
-    await redis.setex(key, CacheTTL.QUESTION_LIST, JSON.stringify(questions))
+    await redis.setex(key, CacheTTL.QUESTION_LIST, JSON.stringify(questionsList))
   }
 
   // Get cached random questions
-  static async getRandomQuestions(filters: Record<string, any>): Promise<Question[] | null> {
+  static async getRandomQuestions(filters: Record<string, any>): Promise<questions[] | null> {
     const filterHash = Buffer.from(JSON.stringify(filters)).toString('base64')
     const key = CacheKeys.randomQuestions(filterHash)
     const cached = await redis.get(key)
@@ -240,7 +238,7 @@ export class QuestionCacheService {
 // Test template caching service
 export class TestTemplateCacheService {
   // Cache test template
-  static async cacheTestTemplate(template: TestTemplate): Promise<void> {
+  static async cacheTestTemplate(template: test_templates): Promise<void> {
     const idKey = CacheKeys.testTemplate(template.id)
     const slugKey = CacheKeys.testTemplateBySlug(template.slug)
 
@@ -252,27 +250,27 @@ export class TestTemplateCacheService {
   }
 
   // Get cached test template by ID
-  static async getTestTemplate(id: string): Promise<TestTemplate | null> {
+  static async getTestTemplate(id: string): Promise<test_templates | null> {
     const key = CacheKeys.testTemplate(id)
     const cached = await redis.get(key)
     return cached ? JSON.parse(cached) : null
   }
 
   // Get cached test template by slug
-  static async getTestTemplateBySlug(slug: string): Promise<TestTemplate | null> {
+  static async getTestTemplateBySlug(slug: string): Promise<test_templates | null> {
     const key = CacheKeys.testTemplateBySlug(slug)
     const cached = await redis.get(key)
     return cached ? JSON.parse(cached) : null
   }
 
   // Cache popular tests
-  static async cachePopularTests(tests: TestTemplate[]): Promise<void> {
+  static async cachePopularTests(tests: test_templates[]): Promise<void> {
     const key = CacheKeys.popularTests()
     await redis.setex(key, CacheTTL.TEST_TEMPLATE, JSON.stringify(tests))
   }
 
   // Get cached popular tests
-  static async getPopularTests(): Promise<TestTemplate[] | null> {
+  static async getPopularTests(): Promise<test_templates[] | null> {
     const key = CacheKeys.popularTests()
     const cached = await redis.get(key)
     return cached ? JSON.parse(cached) : null
@@ -280,7 +278,7 @@ export class TestTemplateCacheService {
 
   // Cache test templates list with filters
   static async cacheTestTemplatesList(
-    tests: TestTemplate[],
+    tests: test_templates[],
     filters: Record<string, any>
   ): Promise<void> {
     const filterHash = Buffer.from(JSON.stringify(filters)).toString('base64')
@@ -289,7 +287,9 @@ export class TestTemplateCacheService {
   }
 
   // Get cached test templates list
-  static async getTestTemplatesList(filters: Record<string, any>): Promise<TestTemplate[] | null> {
+  static async getTestTemplatesList(
+    filters: Record<string, any>
+  ): Promise<test_templates[] | null> {
     const filterHash = Buffer.from(JSON.stringify(filters)).toString('base64')
     const key = CacheKeys.testTemplatesList(filterHash)
     const cached = await redis.get(key)
@@ -300,7 +300,7 @@ export class TestTemplateCacheService {
 // Test session caching service (critical for real-time performance)
 export class TestSessionCacheService {
   // Cache active test session
-  static async cacheTestSession(session: TestSession): Promise<void> {
+  static async cacheTestSession(session: test_sessions): Promise<void> {
     const sessionKey = CacheKeys.testSession(session.sessionToken)
     const userKey = CacheKeys.activeTestSession(session.userId || session.freeUserId || '')
 
@@ -312,7 +312,7 @@ export class TestSessionCacheService {
   }
 
   // Get cached test session
-  static async getTestSession(sessionToken: string): Promise<TestSession | null> {
+  static async getTestSession(sessionToken: string): Promise<test_sessions | null> {
     const key = CacheKeys.testSession(sessionToken)
     const cached = await redis.get(key)
     return cached ? JSON.parse(cached) : null
@@ -343,7 +343,7 @@ export class TestSessionCacheService {
   // Update session progress (atomic operation)
   static async updateSessionProgress(
     sessionToken: string,
-    progress: Partial<TestSession>
+    progress: Partial<test_sessions>
   ): Promise<void> {
     const session = await this.getTestSession(sessionToken)
     if (session) {
@@ -382,13 +382,13 @@ export class UserCacheService {
   }
 
   // Cache user progress
-  static async cacheUserProgress(progress: UserProgress): Promise<void> {
+  static async cacheUserProgress(progress: user_progress): Promise<void> {
     const key = CacheKeys.userProgress(progress.userId || progress.freeUserId || '', progress.topic)
     await redis.setex(key, CacheTTL.USER_PROGRESS, JSON.stringify(progress))
   }
 
   // Get cached user progress
-  static async getUserProgress(userId: string, topic: string): Promise<UserProgress | null> {
+  static async getUserProgress(userId: string, topic: string): Promise<user_progress | null> {
     const key = CacheKeys.userProgress(userId, topic)
     const cached = await redis.get(key)
     return cached ? JSON.parse(cached) : null

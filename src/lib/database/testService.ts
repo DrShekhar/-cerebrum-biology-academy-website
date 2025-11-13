@@ -5,12 +5,12 @@ import {
   AnalyticsCacheService,
 } from '../cache/redis'
 import type {
-  TestTemplate,
-  TestSession,
-  TestAttempt,
-  Question,
-  UserQuestionResponse,
-  TestAnalytics,
+  test_templates,
+  test_sessions,
+  test_attempts,
+  questions,
+  user_question_responses,
+  test_analytics,
   Prisma,
 } from '@/generated/prisma'
 
@@ -74,9 +74,9 @@ export interface TestFilters {
 
 export class TestService {
   // Test Template Management
-  static async createTestTemplate(data: CreateTestTemplateInput): Promise<TestTemplate> {
+  static async createTestTemplate(data: CreateTestTemplateInput): Promise<test_templates> {
     try {
-      const template = await prisma.testTemplate.create({
+      const template = await prisma.test_templates.create({
         data: {
           title: data.title,
           description: data.description,
@@ -107,7 +107,7 @@ export class TestService {
           isActive: true,
           isPublished: false,
           createdBy: data.createdBy,
-        },
+        } as any,
       })
 
       // Cache the new template
@@ -120,7 +120,7 @@ export class TestService {
     }
   }
 
-  static async getTestTemplateById(id: string): Promise<TestTemplate | null> {
+  static async getTestTemplateById(id: string): Promise<test_templates | null> {
     try {
       // Try cache first
       const cached = await TestTemplateCacheService.getTestTemplate(id)
@@ -129,12 +129,12 @@ export class TestService {
       }
 
       // OPTIMIZED: Single query with eager loading to prevent N+1
-      const template = await prisma.testTemplate.findUnique({
+      const template = await prisma.test_templates.findUnique({
         where: { id },
         include: {
-          questionBank: {
+          question_bank_questions: {
             include: {
-              question: {
+              questions: {
                 // Select only necessary fields to reduce data transfer
                 select: {
                   id: true,
@@ -166,7 +166,7 @@ export class TestService {
     }
   }
 
-  static async getTestTemplateBySlug(slug: string): Promise<TestTemplate | null> {
+  static async getTestTemplateBySlug(slug: string): Promise<test_templates | null> {
     try {
       // Try cache first
       const cached = await TestTemplateCacheService.getTestTemplateBySlug(slug)
@@ -175,12 +175,12 @@ export class TestService {
       }
 
       // OPTIMIZED: Single query with eager loading to prevent N+1
-      const template = await prisma.testTemplate.findUnique({
+      const template = await prisma.test_templates.findUnique({
         where: { slug },
         include: {
-          questionBank: {
+          question_bank_questions: {
             include: {
-              question: {
+              questions: {
                 // Select only necessary fields to reduce data transfer
                 select: {
                   id: true,
@@ -216,7 +216,7 @@ export class TestService {
     filters: TestFilters = {},
     page: number = 1,
     limit: number = 20
-  ): Promise<{ templates: TestTemplate[]; total: number; hasMore: boolean }> {
+  ): Promise<{ templates: test_templates[]; total: number; hasMore: boolean }> {
     try {
       // Try cache first
       const cached = await TestTemplateCacheService.getTestTemplatesList(filters)
@@ -233,7 +233,7 @@ export class TestService {
       }
 
       // Build where clause
-      const where: Prisma.TestTemplateWhereInput = {
+      const where: Prisma.test_templatesWhereInput = {
         isActive: filters.isActive ?? true,
         isPublished: true,
       }
@@ -255,12 +255,12 @@ export class TestService {
 
       // Get paginated results
       const [templates, total] = await Promise.all([
-        prisma.testTemplate.findMany({
+        prisma.test_templates.findMany({
           where,
           orderBy: [{ popularityScore: 'desc' }, { createdAt: 'desc' }],
           ...DatabaseUtils.getPaginationParams(page, limit),
         }),
-        prisma.testTemplate.count({ where }),
+        prisma.test_templates.count({ where }),
       ])
 
       // Cache the results
@@ -277,7 +277,7 @@ export class TestService {
     }
   }
 
-  static async getPopularTests(limit: number = 10): Promise<TestTemplate[]> {
+  static async getPopularTests(limit: number = 10): Promise<test_templates[]> {
     try {
       // Try cache first
       const cached = await TestTemplateCacheService.getPopularTests()
@@ -285,7 +285,7 @@ export class TestService {
         return cached.slice(0, limit)
       }
 
-      const templates = await prisma.testTemplate.findMany({
+      const templates = await prisma.test_templates.findMany({
         where: {
           isActive: true,
           isPublished: true,
@@ -304,7 +304,7 @@ export class TestService {
   }
 
   // Test Session Management
-  static async startTestSession(data: StartTestSessionInput): Promise<TestSession | null> {
+  static async startTestSession(data: StartTestSessionInput): Promise<test_sessions | null> {
     try {
       // Check if user has an active session
       const userId = data.userId || data.freeUserId || ''
@@ -320,7 +320,7 @@ export class TestService {
       // Generate unique session token
       const sessionToken = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
 
-      const session = await prisma.testSession.create({
+      const session = await prisma.test_sessions.create({
         data: {
           userId: data.userId,
           freeUserId: data.freeUserId,
@@ -330,7 +330,7 @@ export class TestService {
           browserInfo: data.browserInfo ? JSON.stringify(data.browserInfo) : null,
           ipAddress: data.ipAddress,
           locationData: data.locationData ? JSON.stringify(data.locationData) : null,
-        },
+        } as any,
       })
 
       // Cache the session
@@ -346,7 +346,7 @@ export class TestService {
     }
   }
 
-  static async getTestSession(sessionToken: string): Promise<TestSession | null> {
+  static async getTestSession(sessionToken: string): Promise<test_sessions | null> {
     try {
       // Try cache first
       const cached = await TestSessionCacheService.getTestSession(sessionToken)
@@ -356,13 +356,13 @@ export class TestService {
 
       // OPTIMIZED: Single query with eager loading to prevent N+1
       // This prevents separate queries for each response's question
-      const session = await prisma.testSession.findUnique({
+      const session = await prisma.test_sessions.findUnique({
         where: { sessionToken },
         include: {
-          testTemplate: true,
-          responses: {
+          test_templates: true,
+          user_question_responses: {
             include: {
-              question: {
+              questions: {
                 // Select only necessary fields to reduce data transfer
                 select: {
                   id: true,
@@ -397,10 +397,10 @@ export class TestService {
 
   static async updateTestSession(
     sessionToken: string,
-    updates: Partial<TestSession>
-  ): Promise<TestSession | null> {
+    updates: Partial<test_sessions>
+  ): Promise<test_sessions | null> {
     try {
-      const session = await prisma.testSession.update({
+      const session = await prisma.test_sessions.update({
         where: { sessionToken },
         data: {
           ...updates,
@@ -418,7 +418,7 @@ export class TestService {
     }
   }
 
-  static async submitAnswer(data: SubmitAnswerInput): Promise<UserQuestionResponse | null> {
+  static async submitAnswer(data: SubmitAnswerInput): Promise<user_question_responses | null> {
     try {
       // Get the test session
       const session = await this.getTestSession(data.sessionToken)
@@ -427,7 +427,7 @@ export class TestService {
       }
 
       // Get the question to check correct answer
-      const question = await prisma.question.findUnique({
+      const question = await prisma.questions.findUnique({
         where: { id: data.questionId },
       })
 
@@ -438,7 +438,7 @@ export class TestService {
       const isCorrect = question.correctAnswer === data.selectedAnswer
 
       // Create the response
-      const response = await prisma.userQuestionResponse.create({
+      const response = await prisma.user_question_responses.create({
         data: {
           userId: session.userId,
           freeUserId: session.freeUserId,
@@ -450,7 +450,7 @@ export class TestService {
           confidence: data.confidence,
           responseMode: 'TEST_MODE',
           marksAwarded: isCorrect ? question.marks : 0,
-        },
+        } as any,
       })
 
       // Update session progress
@@ -477,18 +477,18 @@ export class TestService {
     }
   }
 
-  static async submitTest(sessionToken: string): Promise<TestSession | null> {
+  static async submitTest(sessionToken: string): Promise<test_sessions | null> {
     try {
       return await DatabaseUtils.transaction(async (tx) => {
         // OPTIMIZED: Get the test session with responses in a single query
         // This prevents N+1 by eager loading all questions at once
-        const session = await tx.testSession.findUnique({
+        const session = await tx.test_sessions.findUnique({
           where: { sessionToken },
           include: {
-            testTemplate: true,
-            responses: {
+            test_templates: true,
+            user_question_responses: {
               include: {
-                question: {
+                questions: {
                   // Only select fields needed for scoring
                   select: {
                     id: true,
@@ -503,7 +503,7 @@ export class TestService {
           },
         })
 
-        if (!session || !session.testTemplate) {
+        if (!session || !session.test_templates) {
           throw new Error('Test session not found')
         }
 
@@ -511,13 +511,13 @@ export class TestService {
         let totalScore = 0
         let correctAnswers = 0
 
-        for (const response of session.responses) {
+        for (const response of session.user_question_responses) {
           if (response.isCorrect) {
-            totalScore += response.question.marks
+            totalScore += response.questions.marks
             correctAnswers++
-          } else if (session.testTemplate.negativeMarking) {
+          } else if (session.test_templates.negativeMarking) {
             // Apply negative marking if enabled
-            const markingScheme = session.testTemplate.markingScheme as any
+            const markingScheme = session.test_templates.markingScheme as any
             if (markingScheme?.incorrect) {
               totalScore += markingScheme.incorrect // This should be negative
             }
@@ -525,12 +525,12 @@ export class TestService {
         }
 
         const percentage =
-          session.testTemplate.totalMarks > 0
-            ? (totalScore / session.testTemplate.totalMarks) * 100
+          session.test_templates.totalMarks > 0
+            ? (totalScore / session.test_templates.totalMarks) * 100
             : 0
 
         // Update session with final results
-        const updatedSession = await tx.testSession.update({
+        const updatedSession = await tx.test_sessions.update({
           where: { sessionToken },
           data: {
             status: 'COMPLETED',
@@ -541,27 +541,27 @@ export class TestService {
         })
 
         // Create test attempt record
-        await tx.testAttempt.create({
+        await tx.test_attempts.create({
           data: {
             freeUserId: session.freeUserId,
             testTemplateId: session.testTemplateId,
-            title: session.testTemplate.title,
-            topics: session.testTemplate.topics,
-            difficulty: session.testTemplate.difficulty,
-            questionCount: session.testTemplate.totalQuestions,
-            timeLimit: session.testTemplate.timeLimit,
+            title: session.test_templates.title,
+            topics: session.test_templates.topics,
+            difficulty: session.test_templates.difficulty,
+            questionCount: session.test_templates.totalQuestions,
+            timeLimit: session.test_templates.timeLimit,
             score: totalScore,
-            totalMarks: session.testTemplate.totalMarks,
+            totalMarks: session.test_templates.totalMarks,
             percentage,
             timeSpent: session.timeSpent,
             topicWiseScore: {},
             status: 'COMPLETED',
             submittedAt: new Date(),
-          },
+          } as any,
         })
 
         // Update template attempt count
-        await tx.testTemplate.update({
+        await tx.test_templates.update({
           where: { id: session.testTemplateId },
           data: {
             attemptCount: {
@@ -579,7 +579,7 @@ export class TestService {
   }
 
   // Question Management for Tests
-  static async getQuestionsForTest(testTemplateId: string, count?: number): Promise<Question[]> {
+  static async getQuestionsForTest(testTemplateId: string, count?: number): Promise<questions[]> {
     try {
       const template = await this.getTestTemplateById(testTemplateId)
       if (!template) {
@@ -590,11 +590,11 @@ export class TestService {
       const topics = JSON.parse(template.topics as string) as string[]
 
       // Get questions based on template configuration
-      let questions: Question[] = []
+      let questions: questions[] = []
 
       if (template.isAdaptive) {
         // For adaptive tests, start with medium difficulty
-        questions = await prisma.question.findMany({
+        questions = await prisma.questions.findMany({
           where: {
             topic: { in: topics },
             curriculum: template.curriculum,
@@ -618,7 +618,7 @@ export class TestService {
         if (distribution) {
           // Get questions based on topic distribution
           for (const [topic, topicCount] of Object.entries(distribution)) {
-            const topicQuestions = await prisma.question.findMany({
+            const topicQuestions = await prisma.questions.findMany({
               where: {
                 topic: topic,
                 curriculum: template.curriculum,
@@ -637,7 +637,7 @@ export class TestService {
           }
         } else {
           // Get random questions from all topics
-          questions = await prisma.question.findMany({
+          questions = await prisma.questions.findMany({
             where: {
               topic: { in: topics },
               curriculum: template.curriculum,
@@ -666,16 +666,16 @@ export class TestService {
   static async getAdaptiveNextQuestion(
     sessionToken: string,
     currentPerformance: number
-  ): Promise<Question | null> {
+  ): Promise<questions | null> {
     try {
-      const session = await prisma.testSession.findUnique({
+      const session = await prisma.test_sessions.findUnique({
         where: { sessionToken },
         include: {
-          testTemplate: true,
+          test_templates: true,
         },
       })
 
-      if (!session || !session.testTemplate) {
+      if (!session || !session.test_templates) {
         return null
       }
 
@@ -689,22 +689,22 @@ export class TestService {
         nextDifficulty = 'EASY'
       }
 
-      const topics = JSON.parse(session.testTemplate.topics as string) as string[]
+      const topics = JSON.parse(session.test_templates.topics as string) as string[]
 
       // Get answered question IDs to avoid repetition
-      const answeredQuestions = await prisma.userQuestionResponse.findMany({
+      const answeredQuestions = await prisma.user_question_responses.findMany({
         where: { testSessionId: session.id },
         select: { questionId: true },
       })
 
       const answeredIds = answeredQuestions.map((q) => q.questionId)
 
-      const question = await prisma.question.findFirst({
+      const question = await prisma.questions.findFirst({
         where: {
           topic: { in: topics },
-          curriculum: session.testTemplate.curriculum,
-          grade: session.testTemplate.grade,
-          subject: session.testTemplate.subject,
+          curriculum: session.test_templates.curriculum,
+          grade: session.test_templates.grade,
+          subject: session.test_templates.subject,
           difficulty: nextDifficulty,
           id: { notIn: answeredIds },
           isActive: true,
@@ -723,15 +723,15 @@ export class TestService {
   }
 
   // Analytics and Performance
-  static async generateTestAnalytics(sessionId: string): Promise<TestAnalytics | null> {
+  static async generateTestAnalytics(sessionId: string): Promise<test_analytics | null> {
     try {
-      const session = await prisma.testSession.findUnique({
+      const session = await prisma.test_sessions.findUnique({
         where: { id: sessionId },
         include: {
-          testTemplate: true,
-          responses: {
+          test_templates: true,
+          user_question_responses: {
             include: {
-              question: true,
+              questions: true,
             },
           },
         },
@@ -741,7 +741,7 @@ export class TestService {
         return null
       }
 
-      const responses = session.responses
+      const responses = session.user_question_responses
       const totalQuestions = responses.length
       const correctAnswers = responses.filter((r) => r.isCorrect).length
       const accuracy = totalQuestions > 0 ? (correctAnswers / totalQuestions) * 100 : 0
@@ -760,7 +760,7 @@ export class TestService {
       }
 
       responses.forEach((response) => {
-        const difficulty = response.question.difficulty.toLowerCase()
+        const difficulty = response.questions.difficulty.toLowerCase()
         if (difficulty in difficultyPerformance) {
           difficultyPerformance[difficulty as keyof typeof difficultyPerformance].attempted++
           if (response.isCorrect) {
@@ -772,7 +772,7 @@ export class TestService {
       // Calculate topic-wise performance
       const topicPerformance: Record<string, { attempted: number; correct: number }> = {}
       responses.forEach((response) => {
-        const topic = response.question.topic
+        const topic = response.questions.topic
         if (!topicPerformance[topic]) {
           topicPerformance[topic] = { attempted: 0, correct: 0 }
         }
@@ -782,7 +782,7 @@ export class TestService {
         }
       })
 
-      const analytics = await prisma.testAnalytics.create({
+      const analytics = await prisma.test_analytics.create({
         data: {
           testSessionId: sessionId,
           totalTime: session.timeSpent,
@@ -806,7 +806,7 @@ export class TestService {
               .filter(([_, perf]) => perf.attempted > 0 && perf.correct / perf.attempted < 0.6)
               .map(([topic]) => topic)
           ),
-        },
+        } as any,
       })
 
       return analytics
@@ -829,7 +829,7 @@ export class TestService {
   // Cleanup and maintenance
   static async cleanupExpiredSessions(): Promise<number> {
     try {
-      const expiredSessions = await prisma.testSession.findMany({
+      const expiredSessions = await prisma.test_sessions.findMany({
         where: {
           status: { in: ['IN_PROGRESS', 'PAUSED'] },
           updatedAt: {
@@ -840,7 +840,7 @@ export class TestService {
 
       let cleanedCount = 0
       for (const session of expiredSessions) {
-        await prisma.testSession.update({
+        await prisma.test_sessions.update({
           where: { id: session.id },
           data: { status: 'EXPIRED' },
         })
@@ -858,9 +858,9 @@ export class TestService {
   static async updatePopularityScores(): Promise<void> {
     try {
       // Update test template popularity scores
-      const templates = await prisma.testTemplate.findMany({
+      const templates = await prisma.test_templates.findMany({
         include: {
-          testSessions: {
+          test_sessions: {
             where: {
               createdAt: {
                 gte: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000), // Last 30 days
@@ -871,10 +871,10 @@ export class TestService {
       })
 
       for (const template of templates) {
-        const recentAttempts = template.testSessions.length
+        const recentAttempts = template.test_sessions.length
         const popularityScore = Math.log(recentAttempts + 1) * template.attemptCount
 
-        await prisma.testTemplate.update({
+        await prisma.test_templates.update({
           where: { id: template.id },
           data: { popularityScore },
         })

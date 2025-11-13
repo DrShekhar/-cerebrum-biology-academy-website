@@ -376,14 +376,12 @@ export function SecondChanceNEETLanding({
                     />
                   </div>
 
-                  <PremiumButton
+                  <button
                     type="submit"
-                    variant="medical"
-                    size="lg"
-                    className="w-full py-4 text-lg font-bold"
+                    className="w-full py-4 text-lg font-bold bg-gradient-to-r from-green-600 via-teal-700 to-blue-800 text-white shadow-lg shadow-green-500/25 px-8 rounded-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-opacity-50"
                   >
                     Get My Success Plan
-                  </PremiumButton>
+                  </button>
                 </form>
 
                 <div className="mt-4 text-center text-sm text-gray-500">

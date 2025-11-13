@@ -99,16 +99,19 @@ export class ClaudeChatEngine extends EventEmitter {
         emotion: 'explaining',
       })
 
-      // 4. Track interaction
-      this.analyticsEngine.trackVoiceInteraction(voiceInput, response)
-
-      return {
+      // 4. Construct AI response
+      const aiResponse: AIResponse = {
         text: response.text,
         voiceAudio: voiceAudio.url,
         visualAids: response.diagrams,
         confidence: response.confidence,
         followUpQuestions: response.followUpQuestions,
       }
+
+      // 5. Track interaction
+      this.analyticsEngine.trackVoiceInteraction(voiceInput, aiResponse)
+
+      return aiResponse
     } catch (error) {
       console.error('Voice processing error:', error)
       throw error
@@ -320,6 +323,20 @@ export class BiologyAI {
     })
 
     return response
+  }
+
+  async generateImageExplanation(analysis: ImageAnalysis): Promise<string> {
+    // Generate explanation text from image analysis
+    const response = await this.callAnthropicAPI({
+      prompt: `As Shekhar Sir, explain this biology diagram in simple terms:
+      Concepts detected: ${analysis.concepts.join(', ')}
+      Related topics: ${analysis.relatedTopics.join(', ')}
+
+      Provide a clear, encouraging explanation suitable for NEET students.`,
+      model: 'claude-3-sonnet',
+    })
+
+    return response.text || response
   }
 
   async analyzeBiologyImage(imageFile: File): Promise<ImageAnalysis> {

@@ -510,6 +510,18 @@ export class CacheManager {
   }
 
   /**
+   * Update cache warming statistics
+   */
+  private async updateCacheWarmingStats(cacheKey: string, entry: CacheEntry): Promise<void> {
+    // This method is called from set() to track cache warming
+    try {
+      await this.redis.hincrby('cache:warming:stats', cacheKey, 1)
+    } catch (error) {
+      console.warn('Failed to update cache warming stats:', error)
+    }
+  }
+
+  /**
    * Invalidate cache entries by tags
    */
   private async invalidateByTags(tags: string[]): Promise<number> {

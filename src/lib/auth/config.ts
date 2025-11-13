@@ -4,8 +4,10 @@ import { validateAdminSession, AdminSession } from './admin-auth'
 import jwt from 'jsonwebtoken'
 import bcrypt from 'bcryptjs'
 import { prisma } from '@/lib/prisma'
-import type { User, UserRole } from '@/generated/prisma'
+import type { UserRole as PrismaUserRole } from '@/generated/prisma'
 import { cookies } from 'next/headers'
+
+export type UserRole = PrismaUserRole
 
 // Environment variables validation
 // Lazy validation - secrets are checked when actually used, not at module load time
@@ -28,8 +30,8 @@ const getJWTRefreshSecret = () => {
 
 const JWT_SECRET = getJWTSecret()
 const JWT_REFRESH_SECRET = getJWTRefreshSecret()
-const JWT_EXPIRES_IN = process.env.JWT_EXPIRES_IN || '15m'
-const JWT_REFRESH_EXPIRES_IN = process.env.JWT_REFRESH_EXPIRES_IN || '7d'
+const JWT_EXPIRES_IN: string = process.env.JWT_EXPIRES_IN || '15m'
+const JWT_REFRESH_EXPIRES_IN: string = process.env.JWT_REFRESH_EXPIRES_IN || '7d'
 
 export interface UserSession {
   valid: boolean
@@ -99,11 +101,13 @@ export class PasswordUtils {
  */
 export class TokenUtils {
   static generateAccessToken(payload: Omit<JWTPayload, 'iat' | 'exp'>): string {
-    return jwt.sign(payload, JWT_SECRET, { expiresIn: JWT_EXPIRES_IN })
+    return jwt.sign(payload as any, JWT_SECRET, { expiresIn: JWT_EXPIRES_IN } as any)
   }
 
   static generateRefreshToken(payload: Omit<RefreshTokenPayload, 'iat' | 'exp'>): string {
-    return jwt.sign(payload, JWT_REFRESH_SECRET, { expiresIn: JWT_REFRESH_EXPIRES_IN })
+    return jwt.sign(payload as any, JWT_REFRESH_SECRET, {
+      expiresIn: JWT_REFRESH_EXPIRES_IN,
+    } as any)
   }
 
   static verifyAccessToken(token: string): JWTPayload | null {
@@ -289,9 +293,12 @@ export function optionalAuth(
  * Session management utilities
  */
 export class SessionManager {
-  static async createSession(
-    user: User
-  ): Promise<{ accessToken: string; refreshToken: string; sessionId: string }> {
+  static async createSession(user: {
+    id: string
+    email: string
+    role: UserRole
+    name: string
+  }): Promise<{ accessToken: string; refreshToken: string; sessionId: string }> {
     const sessionId = TokenUtils.generateSessionId()
 
     // Create session in database

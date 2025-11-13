@@ -105,7 +105,7 @@ export function PremiumButton({
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
       onTapStart={() => setIsPressed(true)}
-      onTapEnd={() => setIsPressed(false)}
+      onTap={() => setIsPressed(false)}
       whileHover={{ scale: 1.02, y: -1 }}
       whileTap={{ scale: 0.98 }}
       transition={{ type: 'spring', stiffness: 300, damping: 20 }}

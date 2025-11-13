@@ -3,19 +3,30 @@
  * Comprehensive set of UI components for different question types
  */
 
-// Question Components
-export { default as AssertionReasonQuestion } from './AssertionReasonQuestion'
-export { default as MatchTheFollowingQuestion } from './MatchTheFollowingQuestion'
-export { default as DiagramBasedQuestion } from './DiagramBasedQuestion'
-export { default as MultipleCorrectQuestion } from './MultipleCorrectQuestion'
-export { default as NumericalQuestion } from './NumericalQuestion'
-export { default as StatementBasedQuestion } from './StatementBasedQuestion'
+// Question Components - Re-export with named exports
+import AssertionReasonQuestionComponent from './AssertionReasonQuestion'
+import MatchTheFollowingQuestionComponent from './MatchTheFollowingQuestion'
+import DiagramBasedQuestionComponent from './DiagramBasedQuestion'
+import MultipleCorrectQuestionComponent from './MultipleCorrectQuestion'
+import NumericalQuestionComponent from './NumericalQuestion'
+import StatementBasedQuestionComponent from './StatementBasedQuestion'
+
+export const AssertionReasonQuestion = AssertionReasonQuestionComponent
+export const MatchTheFollowingQuestion = MatchTheFollowingQuestionComponent
+export const DiagramBasedQuestion = DiagramBasedQuestionComponent
+export const MultipleCorrectQuestion = MultipleCorrectQuestionComponent
+export const NumericalQuestion = NumericalQuestionComponent
+export const StatementBasedQuestion = StatementBasedQuestionComponent
 
 // Main Question Renderer
 export { default as AdvancedQuestionRenderer } from '../test-generator/AdvancedQuestionRenderer'
 
 // Accessibility Components
-export { default as QuestionAccessibility, useQuestionAccessibility, useHighContrastMode } from '../accessibility/QuestionAccessibility'
+export {
+  default as QuestionAccessibility,
+  useQuestionAccessibility,
+  useHighContrastMode,
+} from '../accessibility/QuestionAccessibility'
 
 // Analytics Components
 export { default as QuestionTypeAnalytics } from '../analytics/QuestionTypeAnalytics'
@@ -28,19 +39,13 @@ export type {
   DiagramBasedQuestion as DiagramBasedQuestionType,
   MultipleCorrectQuestion as MultipleCorrectQuestionType,
   NumericalQuestion as NumericalQuestionType,
-  StatementBasedQuestion as StatementBasedQuestionType
+  StatementBasedQuestion as StatementBasedQuestionType,
 } from '../../data/neetQuestionBank'
 
 // Question Data
-export {
-  allQuestionBanks,
-  allAdvancedQuestions,
-  advancedQuestionStats
-} from '../../data/neetQuestionBank'
+export { allQuestionBanks } from '../../data/neetQuestionBank'
 
-export {
-  allAdvancedQuestions as advancedQuestionData
-} from '../../data/advancedQuestions'
+export { allAdvancedQuestions } from '../../data/advancedQuestions'
 
 /**
  * Question Type Registry
@@ -51,9 +56,9 @@ export const QUESTION_TYPE_COMPONENTS = {
   'match-following': 'MatchTheFollowingQuestion',
   'diagram-based': 'DiagramBasedQuestion',
   'multiple-correct': 'MultipleCorrectQuestion',
-  'numerical': 'NumericalQuestion',
+  numerical: 'NumericalQuestion',
   'statement-based': 'StatementBasedQuestion',
-  'single-correct': 'SingleCorrectQuestion' // handled by AdvancedQuestionRenderer
+  'single-correct': 'SingleCorrectQuestion', // handled by AdvancedQuestionRenderer
 } as const
 
 /**
@@ -69,7 +74,7 @@ export const QUESTION_TYPE_METADATA = {
     difficulty: 'Easy to Medium',
     timeRange: '30-60 seconds',
     markingScheme: '+4 for correct, -1 for incorrect',
-    tips: ['Read all options carefully', 'Eliminate obviously wrong choices', 'Look for keywords']
+    tips: ['Read all options carefully', 'Eliminate obviously wrong choices', 'Look for keywords'],
   },
   'assertion-reason': {
     label: 'Assertion-Reason',
@@ -79,7 +84,7 @@ export const QUESTION_TYPE_METADATA = {
     difficulty: 'Medium to Hard',
     timeRange: '60-120 seconds',
     markingScheme: '+4 for correct, -1 for incorrect',
-    tips: ['Check if both statements are true', 'Determine causal relationship', 'Read carefully']
+    tips: ['Check if both statements are true', 'Determine causal relationship', 'Read carefully'],
   },
   'match-following': {
     label: 'Match the Following',
@@ -89,7 +94,7 @@ export const QUESTION_TYPE_METADATA = {
     difficulty: 'Medium',
     timeRange: '90-150 seconds',
     markingScheme: '+4 for correct, -1 for incorrect',
-    tips: ['Match obvious pairs first', 'Use process of elimination', 'Check all combinations']
+    tips: ['Match obvious pairs first', 'Use process of elimination', 'Check all combinations'],
   },
   'diagram-based': {
     label: 'Diagram Based',
@@ -99,7 +104,11 @@ export const QUESTION_TYPE_METADATA = {
     difficulty: 'Medium to Hard',
     timeRange: '60-120 seconds',
     markingScheme: '+4 for correct, -1 for incorrect',
-    tips: ['Study the diagram carefully', 'Identify key structures', 'Relate structure to function']
+    tips: [
+      'Study the diagram carefully',
+      'Identify key structures',
+      'Relate structure to function',
+    ],
   },
   'multiple-correct': {
     label: 'Multiple Correct',
@@ -109,9 +118,9 @@ export const QUESTION_TYPE_METADATA = {
     difficulty: 'Hard',
     timeRange: '90-150 seconds',
     markingScheme: '+4 for all correct, +2 for partial, -1 for any wrong',
-    tips: ['Evaluate each option independently', 'Avoid negative marking', 'Be conservative']
+    tips: ['Evaluate each option independently', 'Avoid negative marking', 'Be conservative'],
   },
-  'numerical': {
+  numerical: {
     label: 'Numerical',
     description: 'Calculate and enter numerical answers',
     color: 'indigo',
@@ -119,7 +128,7 @@ export const QUESTION_TYPE_METADATA = {
     difficulty: 'Medium to Hard',
     timeRange: '120-180 seconds',
     markingScheme: '+4 for correct, 0 for incorrect',
-    tips: ['Double-check calculations', 'Watch for units', 'Use approximations when helpful']
+    tips: ['Double-check calculations', 'Watch for units', 'Use approximations when helpful'],
   },
   'statement-based': {
     label: 'Statement Based',
@@ -129,8 +138,12 @@ export const QUESTION_TYPE_METADATA = {
     difficulty: 'Medium to Hard',
     timeRange: '90-150 seconds',
     markingScheme: '+4 for correct, -1 for incorrect',
-    tips: ['Evaluate each statement separately', 'Check logical relationships', 'Read options carefully']
-  }
+    tips: [
+      'Evaluate each statement separately',
+      'Check logical relationships',
+      'Read options carefully',
+    ],
+  },
 } as const
 
 /**
@@ -144,8 +157,8 @@ export const QUESTION_TYPE_STATS = {
     'match-following': 5,
     'diagram-based': 5,
     'multiple-correct': 3,
-    'numerical': 1,
-    'statement-based': 1
+    numerical: 1,
+    'statement-based': 1,
   },
   averageTime: {
     'single-correct': 45,
@@ -153,14 +166,14 @@ export const QUESTION_TYPE_STATS = {
     'match-following': 120,
     'diagram-based': 85,
     'multiple-correct': 110,
-    'numerical': 140,
-    'statement-based': 100
+    numerical: 140,
+    'statement-based': 100,
   },
   difficultyDistribution: {
     easy: 40,
     medium: 40,
-    hard: 20
-  }
+    hard: 20,
+  },
 } as const
 
 /**
@@ -177,5 +190,5 @@ export const ACCESSIBILITY_FEATURES = [
   'Alternative text for all images',
   'Proper heading structure',
   'Color-blind friendly design',
-  'Scalable text and UI elements'
+  'Scalable text and UI elements',
 ] as const

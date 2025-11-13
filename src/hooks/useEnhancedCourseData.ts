@@ -116,10 +116,13 @@ export function useEnhancedCourseData(options: UseEnhancedCourseDataOptions) {
           if (cached && !cached.isStale) {
             setState((prev) => ({
               ...prev,
-              ...cached.data.data,
+              courses: cached.data.data.courses as EnhancedCourseData[],
+              recommendations: cached.data.data.recommendations || [],
+              analytics: cached.data.data.analytics,
               isLoading: false,
               lastUpdated: cached.data.metadata.timestamp,
               cacheStatus: 'hit',
+              error: null,
             }))
             return cached.data
           }
@@ -153,7 +156,7 @@ export function useEnhancedCourseData(options: UseEnhancedCourseDataOptions) {
         // Update state
         setState((prev) => ({
           ...prev,
-          courses: data.data.courses,
+          courses: data.data.courses as EnhancedCourseData[],
           recommendations: data.data.recommendations,
           analytics: data.data.analytics,
           isLoading: false,
@@ -163,7 +166,7 @@ export function useEnhancedCourseData(options: UseEnhancedCourseDataOptions) {
         }))
 
         // Trigger callback
-        onDataUpdate?.(data.data.courses)
+        onDataUpdate?.(data.data.courses as EnhancedCourseData[])
 
         return data
       } catch (error) {
@@ -276,7 +279,9 @@ export function useEnhancedCourseData(options: UseEnhancedCourseDataOptions) {
       return [...state.courses].sort((a, b) => {
         switch (criteria) {
           case 'popularity':
-            return (b.realTimeStats?.popularityScore || 0) - (a.realTimeStats?.popularityScore || 0)
+            return (
+              (b.realTimeStats?.recentEnrollments || 0) - (a.realTimeStats?.recentEnrollments || 0)
+            )
           case 'price':
             return (a.plans?.[0]?.price || 0) - (b.plans?.[0]?.price || 0)
           case 'rating':

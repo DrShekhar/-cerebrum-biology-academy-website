@@ -27,7 +27,7 @@ function courseSelectorReducer(
         selectedClass: action.payload,
         lastInteraction: Date.now(),
         // Clear selections when changing class
-        selectedPlans: {},
+        selectedPlans: {} as Record<SeriesType, PlanSelection>,
         selectedPlan: null,
       }
 
@@ -50,15 +50,20 @@ function courseSelectorReducer(
         lastInteraction: Date.now(),
       }
 
-    case 'CLEAR_SELECTION':
-      const { [action.payload]: removed, ...remainingPlans } = state.selectedPlans
+    case 'CLEAR_SELECTION': {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      const { [action.payload]: _removed, ...remainingPlans } = state.selectedPlans
+      const typedRemainingPlans = remainingPlans as Record<SeriesType, PlanSelection>
       return {
         ...state,
-        selectedPlans: remainingPlans,
+        selectedPlans: typedRemainingPlans,
         selectedPlan:
-          Object.keys(remainingPlans).length > 0 ? Object.values(remainingPlans)[0] : null,
+          Object.keys(typedRemainingPlans).length > 0
+            ? Object.values(typedRemainingPlans)[0]
+            : null,
         lastInteraction: Date.now(),
       }
+    }
 
     case 'SET_SEARCH':
       return {

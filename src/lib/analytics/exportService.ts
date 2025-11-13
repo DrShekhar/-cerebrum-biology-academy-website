@@ -387,7 +387,7 @@ export class ExportService {
   }
 
   // Chart preparation methods
-  private prepareProgressTrendChart(progressData: any[]): ChartData {
+  private prepareProgressTrendChart(progressData: any[]): any {
     return {
       labels: progressData.map((point) => point.date.toLocaleDateString()),
       datasets: [
@@ -402,7 +402,7 @@ export class ExportService {
     }
   }
 
-  private prepareTopicPerformanceChart(topicData: any[]): ChartData {
+  private prepareTopicPerformanceChart(topicData: any[]): any {
     return {
       labels: topicData.map((topic) => topic.topic),
       datasets: [
@@ -426,7 +426,7 @@ export class ExportService {
     }
   }
 
-  private prepareTopicBreakdownChart(topicData: any[]): ChartData {
+  private prepareTopicBreakdownChart(topicData: any[]): any {
     return {
       labels: topicData.map((topic) => topic.topic),
       datasets: [
@@ -450,7 +450,7 @@ export class ExportService {
     }
   }
 
-  private prepareDifficultyChart(questionData: any[]): ChartData {
+  private prepareDifficultyChart(questionData: any[]): any {
     const difficultyStats = {
       Easy: { correct: 0, total: 0 },
       Medium: { correct: 0, total: 0 },
@@ -481,7 +481,7 @@ export class ExportService {
     }
   }
 
-  private prepareClassDistributionChart(students: any[]): ChartData {
+  private prepareClassDistributionChart(students: any[]): any {
     const scoreRanges = {
       '0-20': 0,
       '21-40': 0,
@@ -516,7 +516,7 @@ export class ExportService {
     }
   }
 
-  private prepareStudentProgressChart(students: any[]): ChartData {
+  private prepareStudentProgressChart(students: any[]): any {
     // Simplified version - would need more complex logic for actual implementation
     const dates = this.getLast30Days()
 

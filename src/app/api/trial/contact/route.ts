@@ -15,8 +15,9 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    await prisma.analyticsEvent.create({
+    await prisma.analytics_events.create({
       data: {
+        id: `evt_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
         eventType: 'trial',
         eventName: 'trial_extension_request',
         properties: {

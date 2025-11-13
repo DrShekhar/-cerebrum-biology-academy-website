@@ -20,10 +20,10 @@ export async function GET(
     }
 
     // Fetch test session
-    const session = await prisma.testSession.findUnique({
+    const session = await prisma.test_sessions.findUnique({
       where: { id: testId },
       include: {
-        testTemplate: {
+        test_templates: {
           select: {
             title: true,
             description: true,
@@ -33,9 +33,9 @@ export async function GET(
             instructions: true,
           },
         },
-        responses: {
+        user_question_responses: {
           include: {
-            question: {
+            questions: {
               select: {
                 id: true,
                 question: true,
@@ -67,18 +67,18 @@ export async function GET(
       remainingTime: session.remainingTime,
       currentQuestionIndex: session.currentQuestionIndex,
       questionsAnswered: session.questionsAnswered,
-      template: session.testTemplate,
-      questions: session.responses.map((r) => ({
-        id: r.question.id,
-        question: r.question.question,
-        options: Array.isArray(r.question.options)
-          ? r.question.options
-          : JSON.parse((r.question.options as string) || '[]'),
-        topic: r.question.topic,
-        subtopic: r.question.subtopic,
-        difficulty: r.question.difficulty,
-        marks: r.question.marks,
-        timeLimit: r.question.timeLimit,
+      template: session.test_templates,
+      questions: session.user_question_responses.map((r) => ({
+        id: r.questions.id,
+        question: r.questions.question,
+        options: Array.isArray(r.questions.options)
+          ? r.questions.options
+          : JSON.parse((r.questions.options as string) || '[]'),
+        topic: r.questions.topic,
+        subtopic: r.questions.subtopic,
+        difficulty: r.questions.difficulty,
+        marks: r.questions.marks,
+        timeLimit: r.questions.timeLimit,
         selectedAnswer: r.selectedAnswer,
       })),
     }
@@ -110,7 +110,7 @@ export async function PATCH(
       fullscreenExits,
     } = body
 
-    const session = await prisma.testSession.update({
+    const session = await prisma.test_sessions.update({
       where: { id: testId },
       data: {
         currentQuestionIndex,

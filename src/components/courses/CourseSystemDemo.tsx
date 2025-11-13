@@ -10,23 +10,17 @@ import { ClassLevel, CourseSeries } from '@/types/courseSystem'
 import { getCoursesByClass } from '@/utils/courseUtils'
 import { Button } from '@/components/ui/Button'
 import { motion } from 'framer-motion'
-import { 
-  BookOpen, 
-  CreditCard, 
-  Grid3x3, 
-  BarChart3,
-  ChevronDown,
-  CheckCircle,
-} from 'lucide-react'
+import { BookOpen, CreditCard, Grid3x3, BarChart3, ChevronDown, CheckCircle } from 'lucide-react'
 
 export function CourseSystemDemo() {
   const [selectedClass, setSelectedClass] = useState<ClassLevel | 'all'>('11th')
   const [selectedTier, setSelectedTier] = useState<CourseSeries>('ascent')
-  const [activeComponent, setActiveComponent] = useState<'filter' | 'cards' | 'comparison' | 'payment'>('filter')
+  const [activeComponent, setActiveComponent] = useState<
+    'filter' | 'cards' | 'comparison' | 'payment'
+  >('filter')
 
-  const filteredCourses = selectedClass === 'all' 
-    ? coursePrograms 
-    : getCoursesByClass(selectedClass)
+  const filteredCourses =
+    selectedClass === 'all' ? coursePrograms : getCoursesByClass(selectedClass)
 
   const sampleCourse = coursePrograms[2] // Class 11th course
 
@@ -75,9 +69,7 @@ export function CourseSystemDemo() {
               <BookOpen className="w-4 h-4 mr-2" />
               Course System Components Demo
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Interactive Course System
-            </h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Interactive Course System</h1>
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
               Comprehensive class-wise course navigation with 3-tier pricing system
             </p>
@@ -88,35 +80,37 @@ export function CourseSystemDemo() {
       <div className="max-w-7xl mx-auto px-4 py-12">
         {/* Component Navigation */}
         <div className="mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-            Explore Components
-          </h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Explore Components</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {components.map((component) => {
               const Icon = component.icon
               const isActive = activeComponent === component.id
-              
+
               return (
                 <motion.button
                   key={component.id}
                   onClick={() => setActiveComponent(component.id as any)}
                   className={`
                     p-6 rounded-2xl border-2 transition-all duration-300 text-left
-                    ${isActive 
-                      ? 'border-blue-500 bg-blue-50 shadow-lg scale-105' 
-                      : 'border-gray-200 bg-white hover:border-gray-300 hover:shadow-md'
+                    ${
+                      isActive
+                        ? 'border-blue-500 bg-blue-50 shadow-lg scale-105'
+                        : 'border-gray-200 bg-white hover:border-gray-300 hover:shadow-md'
                     }
                   `}
                   whileHover={!isActive ? { y: -2 } : {}}
                   whileTap={{ scale: 0.98 }}
                 >
-                  <div className={`
+                  <div
+                    className={`
                     w-12 h-12 rounded-xl mb-4 flex items-center justify-center
-                    ${isActive 
-                      ? `bg-gradient-to-r ${component.color} text-white` 
-                      : 'bg-gray-100 text-gray-600'
+                    ${
+                      isActive
+                        ? `bg-gradient-to-r ${component.color} text-white`
+                        : 'bg-gray-100 text-gray-600'
                     }
-                  `}>
+                  `}
+                  >
                     <Icon className="w-6 h-6" />
                   </div>
                   <h3 className={`font-bold mb-2 ${isActive ? 'text-blue-900' : 'text-gray-900'}`}>
@@ -146,17 +140,19 @@ export function CourseSystemDemo() {
           className="bg-white rounded-3xl shadow-xl overflow-hidden"
         >
           {/* Component Header */}
-          <div className={`
+          <div
+            className={`
             px-8 py-6 bg-gradient-to-r text-white
-            ${components.find(c => c.id === activeComponent)?.color || 'from-gray-500 to-gray-600'}
-          `}>
+            ${components.find((c) => c.id === activeComponent)?.color || 'from-gray-500 to-gray-600'}
+          `}
+          >
             <div className="flex items-center justify-between">
               <div>
                 <h3 className="text-2xl font-bold mb-2">
-                  {components.find(c => c.id === activeComponent)?.name}
+                  {components.find((c) => c.id === activeComponent)?.name}
                 </h3>
                 <p className="opacity-90">
-                  {components.find(c => c.id === activeComponent)?.description}
+                  {components.find((c) => c.id === activeComponent)?.description}
                 </p>
               </div>
               <div className="text-right">
@@ -172,6 +168,13 @@ export function CourseSystemDemo() {
               <ClassFilterNav
                 selectedClass={selectedClass}
                 onClassSelect={setSelectedClass}
+                courseCounts={{
+                  '9th': 2,
+                  '10th': 2,
+                  '11th': 3,
+                  '12th': 3,
+                  Dropper: 2,
+                }}
               />
             )}
 
@@ -184,16 +187,7 @@ export function CourseSystemDemo() {
                 </div>
                 <div className="grid lg:grid-cols-2 gap-8">
                   {filteredCourses.slice(0, 2).map((course) => (
-                    <CourseCard
-                      key={course.id}
-                      course={course}
-                      selectedTier={selectedTier}
-                      onTierChange={setSelectedTier}
-                      onEnroll={(courseId, tier) => 
-                        alert(`Enrollment demo: ${courseId} - ${tier} tier`)
-                      }
-                      showComparison={true}
-                    />
+                    <CourseCard key={course.id} course={course} selectedTier={selectedTier} />
                   ))}
                 </div>
               </div>
@@ -210,10 +204,7 @@ export function CourseSystemDemo() {
             {activeComponent === 'payment' && sampleCourse && (
               <PaymentOptionsDisplay
                 paymentOptions={sampleCourse.tiers[selectedTier].payment}
-                courseName={sampleCourse.name}
-                onSelectPaymentPlan={(plan) => 
-                  alert(`Payment plan selected: ${plan}`)
-                }
+                tier={selectedTier}
               />
             )}
           </div>

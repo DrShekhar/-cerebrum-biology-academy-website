@@ -32,6 +32,9 @@ export function DemoBookingForm({ onSuccess, className = '' }: DemoBookingFormPr
     preferredTime: '',
     courseInterest: 'class-12-biology',
     message: '',
+    specificTopics: [] as string[],
+    studentClass: '',
+    previousKnowledge: '',
   })
   const [availableSlots, setAvailableSlots] = useState<string[]>([])
   const [isLoading, setIsLoading] = useState(false)

@@ -217,8 +217,8 @@ export default function PurchasePage() {
           contact: purchaseData.user.phone,
         },
         notes: {
-          courseId: courseId,
-          courseName: courseData.title,
+          course: courseData.title,
+          student_name: purchaseData.user.name,
         },
         theme: {
           color: '#16a34a',

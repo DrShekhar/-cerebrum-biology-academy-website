@@ -696,12 +696,7 @@ Want me to explain any specific part in more detail?`
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3 }}
                       >
-                        <AnalysisResultDisplay
-                          result={message.metadata.analysisResult}
-                          onPlayAudio={() => playAudioMessage(message.id)}
-                          onStopAudio={stopAudioMessage}
-                          isAudioPlaying={currentPlayingMessage === message.id && isPlayingAudio}
-                        />
+                        <AnalysisResultDisplay result={message.metadata.analysisResult} />
                       </motion.div>
                     )}
                   </div>

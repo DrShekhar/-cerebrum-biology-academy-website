@@ -26,7 +26,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Update test session to started
-    const session = await prisma.testSession.update({
+    const session = await prisma.test_sessions.update({
       where: { id: testId },
       data: {
         status: 'IN_PROGRESS',
@@ -34,7 +34,7 @@ export async function POST(request: NextRequest) {
         updatedAt: new Date(),
       },
       include: {
-        testTemplate: true,
+        test_templates: true,
       },
     })
 

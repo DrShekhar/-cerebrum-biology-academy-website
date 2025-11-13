@@ -45,7 +45,7 @@ export default async function BiologyNotesIndexPage() {
   }> = []
 
   try {
-    topics = await prisma.biologyTopic.findMany({
+    topics = await prisma.biology_topics.findMany({
       where: { isPublished: true },
       select: {
         id: true,

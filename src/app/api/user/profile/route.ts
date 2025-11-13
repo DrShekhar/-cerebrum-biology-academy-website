@@ -22,7 +22,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Update user profile in database
-    const updatedUser = await prisma.user.update({
+    const updatedUser = await prisma.users.update({
       where: { id: userId },
       data: {
         profile: profile, // Store as JSON
@@ -77,7 +77,7 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ success: false, error: 'User ID is required' }, { status: 400 })
     }
 
-    const user = await prisma.user.findUnique({
+    const user = await prisma.users.findUnique({
       where: { id: userId },
       select: {
         id: true,
@@ -92,7 +92,7 @@ export async function GET(request: NextRequest) {
             },
           },
           include: {
-            course: {
+            courses: {
               select: {
                 id: true,
                 name: true,

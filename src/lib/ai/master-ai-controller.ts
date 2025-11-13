@@ -408,8 +408,7 @@ export class MasterAIController extends EventEmitter {
    * Resource optimization
    */
   private optimizeResources(): void {
-    // Clear expired cache entries
-    semanticCache.clearExpiredCache()
+    // Cache cleanup is handled automatically by the SemanticCacheEngine
 
     // Clean up completed requests
     for (const [id, promise] of this.activeRequests) {

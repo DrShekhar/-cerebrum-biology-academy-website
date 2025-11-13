@@ -264,7 +264,7 @@ class PerformancePredictionAI {
     const cached = await this.cache.get(cacheKey)
 
     if (cached) {
-      return JSON.parse(cached)
+      return JSON.parse(cached as string)
     }
 
     try {
@@ -282,14 +282,16 @@ class PerformancePredictionAI {
       this.predictions.set(studentId, prediction)
 
       return prediction
-
     } catch (error) {
       console.error('Performance prediction failed:', error)
       throw new Error('Failed to generate performance prediction')
     }
   }
 
-  private async generateAIPrediction(studentData: StudentPerformanceData, examDate?: Date): Promise<PredictionResult> {
+  private async generateAIPrediction(
+    studentData: StudentPerformanceData,
+    examDate?: Date
+  ): Promise<PredictionResult> {
     const analysisPrompt = `
 You are an advanced AI education analyst specializing in Indian competitive exam predictions with 94.2% accuracy rate.
 
@@ -392,12 +394,12 @@ Base your predictions on:
 Provide actionable insights that can help improve the predicted outcome.
 `
 
-    const response = await this.aiGateway.generateResponse({
+    const response: string = await this.aiGateway.generateResponse({
       prompt: analysisPrompt,
-      provider: aiConfig.getBestProvider(),
+      provider: aiConfig.getBestProvider() as 'claude' | 'openai',
       model: 'premium',
       temperature: 0.3,
-      maxTokens: 3000
+      maxTokens: 3000,
     })
 
     const aiAnalysis = JSON.parse(response)
@@ -410,7 +412,7 @@ Provide actionable insights that can help improve the predicted outcome.
       predictions: {
         examScore: aiAnalysis.examScore,
         readiness: aiAnalysis.readiness,
-        success: aiAnalysis.success
+        success: aiAnalysis.success,
       },
       analytics: aiAnalysis.analytics,
       recommendations: aiAnalysis.recommendations,
@@ -420,15 +422,20 @@ Provide actionable insights that can help improve the predicted outcome.
         modelVersion: '2.1.0',
         dataPoints: this.calculateDataPoints(studentData),
         lastUpdated: new Date(),
-        confidence: aiAnalysis.readiness.confidence
-      }
+        confidence: aiAnalysis.readiness.confidence,
+      },
     }
 
     return prediction
   }
 
-  private async generateStudyPlan(studentData: StudentPerformanceData, examDate?: Date): Promise<PredictionResult['studyPlan']> {
-    const daysUntilExam = examDate ? Math.ceil((examDate.getTime() - Date.now()) / (1000 * 60 * 60 * 24)) : 180
+  private async generateStudyPlan(
+    studentData: StudentPerformanceData,
+    examDate?: Date
+  ): Promise<PredictionResult['studyPlan']> {
+    const daysUntilExam = examDate
+      ? Math.ceil((examDate.getTime() - Date.now()) / (1000 * 60 * 60 * 24))
+      : 180
 
     const studyPlanPrompt = `
 Create a personalized study plan for this student:
@@ -448,12 +455,12 @@ Create a comprehensive study plan optimized for this student's profile and time 
 Provide response in JSON format with daily, weekly, and monthly plans.
 `
 
-    const response = await this.aiGateway.generateResponse({
+    const response: string = await this.aiGateway.generateResponse({
       prompt: studyPlanPrompt,
-      provider: 'anthropic',
+      provider: 'claude' as const,
       model: 'default',
       temperature: 0.5,
-      maxTokens: 2000
+      maxTokens: 2000,
     })
 
     // Parse and structure study plan
@@ -461,13 +468,16 @@ Provide response in JSON format with daily, weekly, and monthly plans.
       daily: this.generateDailyPlans(studentData, daysUntilExam),
       weekly: this.generateWeeklyGoals(studentData, daysUntilExam),
       monthly: this.generateMonthlyMilestones(studentData, daysUntilExam),
-      examPrep: this.generateExamPrepPlan(studentData, daysUntilExam)
+      examPrep: this.generateExamPrepPlan(studentData, daysUntilExam),
     }
 
     return studyPlan
   }
 
-  private generateDailyPlans(studentData: StudentPerformanceData, daysUntilExam: number): DailyStudyPlan[] {
+  private generateDailyPlans(
+    studentData: StudentPerformanceData,
+    daysUntilExam: number
+  ): DailyStudyPlan[] {
     const plans: DailyStudyPlan[] = []
 
     // Generate plans for next 30 days
@@ -482,7 +492,7 @@ Provide response in JSON format with daily, weekly, and monthly plans.
         breaks: Math.floor(studentData.learning.studyHours * 2), // 2 breaks per hour
         revision: this.getRevisionTopics(studentData, i),
         practice: this.getPracticeTopics(studentData, i),
-        assessment: i % 7 === 6 // Weekly assessment
+        assessment: i % 7 === 6, // Weekly assessment
       }
 
       plans.push(plan)
@@ -491,7 +501,10 @@ Provide response in JSON format with daily, weekly, and monthly plans.
     return plans
   }
 
-  private generateStudySessions(studentData: StudentPerformanceData, dayIndex: number): StudySession[] {
+  private generateStudySessions(
+    studentData: StudentPerformanceData,
+    dayIndex: number
+  ): StudySession[] {
     const sessions: StudySession[] = []
     const totalMinutes = studentData.learning.studyHours * 60
     const sessionLength = Math.min(studentData.learning.attentionSpan, 90)
@@ -504,7 +517,7 @@ Provide response in JSON format with daily, weekly, and monthly plans.
         duration: sessionLength,
         type: this.getSessionType(i, numberOfSessions),
         resources: ['Notes', 'Practice Questions', 'Videos'],
-        goals: [`Master ${this.getTopicForSession(studentData, dayIndex, i)}`]
+        goals: [`Master ${this.getTopicForSession(studentData, dayIndex, i)}`],
       }
 
       sessions.push(session)
@@ -513,15 +526,25 @@ Provide response in JSON format with daily, weekly, and monthly plans.
     return sessions
   }
 
-  private getTopicForSession(studentData: StudentPerformanceData, dayIndex: number, sessionIndex: number): string {
+  private getTopicForSession(
+    studentData: StudentPerformanceData,
+    dayIndex: number,
+    sessionIndex: number
+  ): string {
     const topics = [
-      'Cell Biology', 'Genetics', 'Ecology', 'Human Physiology',
-      'Plant Biology', 'Evolution', 'Biotechnology', 'Molecular Biology'
+      'Cell Biology',
+      'Genetics',
+      'Ecology',
+      'Human Physiology',
+      'Plant Biology',
+      'Evolution',
+      'Biotechnology',
+      'Molecular Biology',
     ]
 
     // Rotate topics based on weak areas priority
     const weakTopics = studentData.academic.subjectWeaknesses
-    const allTopics = [...weakTopics, ...topics.filter(t => !weakTopics.includes(t))]
+    const allTopics = [...weakTopics, ...topics.filter((t) => !weakTopics.includes(t))]
 
     return allTopics[(dayIndex + sessionIndex) % allTopics.length]
   }
@@ -543,7 +566,10 @@ Provide response in JSON format with daily, weekly, and monthly plans.
     return studentData.academic.subjectWeaknesses.slice(0, 2)
   }
 
-  private generateWeeklyGoals(studentData: StudentPerformanceData, daysUntilExam: number): WeeklyGoal[] {
+  private generateWeeklyGoals(
+    studentData: StudentPerformanceData,
+    daysUntilExam: number
+  ): WeeklyGoal[] {
     const weeks = Math.ceil(Math.min(daysUntilExam, 90) / 7) // Next 3 months
     const goals: WeeklyGoal[] = []
 
@@ -554,9 +580,9 @@ Provide response in JSON format with daily, weekly, and monthly plans.
         assessments: [`Week ${week} Test`],
         targets: new Map([
           ['accuracy', 75 + week * 2],
-          ['speed', 60 + week]
+          ['speed', 60 + week],
         ]),
-        milestones: [`Complete Chapter ${week}`]
+        milestones: [`Complete Chapter ${week}`],
       }
 
       goals.push(goal)
@@ -565,7 +591,10 @@ Provide response in JSON format with daily, weekly, and monthly plans.
     return goals
   }
 
-  private generateMonthlyMilestones(studentData: StudentPerformanceData, daysUntilExam: number): MonthlyMilestone[] {
+  private generateMonthlyMilestones(
+    studentData: StudentPerformanceData,
+    daysUntilExam: number
+  ): MonthlyMilestone[] {
     const months = Math.ceil(Math.min(daysUntilExam, 180) / 30) // Next 6 months
     const milestones: MonthlyMilestone[] = []
 
@@ -575,7 +604,7 @@ Provide response in JSON format with daily, weekly, and monthly plans.
         majorTopics: [`Major Topic ${month}`],
         examSimulations: month * 2,
         targetScore: 60 + month * 10,
-        skillDevelopment: [`Skill ${month}`]
+        skillDevelopment: [`Skill ${month}`],
       }
 
       milestones.push(milestone)
@@ -584,7 +613,10 @@ Provide response in JSON format with daily, weekly, and monthly plans.
     return milestones
   }
 
-  private generateExamPrepPlan(studentData: StudentPerformanceData, daysUntilExam: number): ExamPrepPlan {
+  private generateExamPrepPlan(
+    studentData: StudentPerformanceData,
+    daysUntilExam: number
+  ): ExamPrepPlan {
     return {
       timeline: daysUntilExam,
       phases: [
@@ -593,22 +625,25 @@ Provide response in JSON format with daily, weekly, and monthly plans.
           duration: Math.floor(daysUntilExam * 0.6),
           focus: ['Concept Building', 'Basic Problem Solving'],
           activities: ['Theory Study', 'Basic Practice'],
-          targets: new Map([['accuracy', 70]])
+          targets: new Map([['accuracy', 70]]),
         },
         {
           phase: 'Intensive Practice',
           duration: Math.floor(daysUntilExam * 0.3),
           focus: ['Advanced Problems', 'Speed Building'],
           activities: ['Mock Tests', 'Timed Practice'],
-          targets: new Map([['accuracy', 85], ['speed', 80]])
+          targets: new Map([
+            ['accuracy', 85],
+            ['speed', 80],
+          ]),
         },
         {
           phase: 'Final Preparation',
           duration: Math.floor(daysUntilExam * 0.1),
           focus: ['Revision', 'Confidence Building'],
           activities: ['Quick Revision', 'Light Practice'],
-          targets: new Map([['confidence', 90]])
-        }
+          targets: new Map([['confidence', 90]]),
+        },
       ],
       mockTests: [],
       revision: [],
@@ -616,16 +651,18 @@ Provide response in JSON format with daily, weekly, and monthly plans.
         lastWeek: ['Complete Revision', 'Mock Tests'],
         lastDay: ['Light Revision', 'Relaxation'],
         examDay: ['Early Morning Revision', 'Positive Mindset'],
-        contingency: ['Alternative Study Methods', 'Stress Management']
-      }
+        contingency: ['Alternative Study Methods', 'Stress Management'],
+      },
     }
   }
 
   private calculateDataPoints(studentData: StudentPerformanceData): number {
-    return studentData.performance.assessmentScores.length +
-           studentData.performance.progressTrends.length +
-           studentData.performance.timeSpentTopics.size +
-           10 // Base profile data points
+    return (
+      studentData.performance.assessmentScores.length +
+      studentData.performance.progressTrends.length +
+      studentData.performance.timeSpentTopics.size +
+      10
+    ) // Base profile data points
   }
 
   // Data management methods
@@ -653,7 +690,10 @@ Provide response in JSON format with daily, weekly, and monthly plans.
     }
   }
 
-  async getPerformanceTrends(studentId: string, timeframe: 'week' | 'month' | 'quarter'): Promise<ProgressTrend[]> {
+  async getPerformanceTrends(
+    studentId: string,
+    timeframe: 'week' | 'month' | 'quarter'
+  ): Promise<ProgressTrend[]> {
     const data = this.studentData.get(studentId)
     if (!data) return []
 
@@ -672,7 +712,7 @@ Provide response in JSON format with daily, weekly, and monthly plans.
         break
     }
 
-    return data.performance.progressTrends.filter(trend => trend.date >= cutoff)
+    return data.performance.progressTrends.filter((trend) => trend.date >= cutoff)
   }
 
   async generateInsights(studentId: string): Promise<AnalyticsInsight[]> {
@@ -689,7 +729,7 @@ Provide response in JSON format with daily, weekly, and monthly plans.
         evidence: [`Improvement rate: ${(data.performance.improvementRate * 100).toFixed(1)}%`],
         confidence: 0.8,
         actionable: true,
-        priority: 'high'
+        priority: 'high',
       })
     }
 
@@ -701,7 +741,7 @@ Provide response in JSON format with daily, weekly, and monthly plans.
         evidence: [`${data.engagement.platformUsage} hours per week`],
         confidence: 0.9,
         actionable: false,
-        priority: 'medium'
+        priority: 'medium',
       })
     }
 

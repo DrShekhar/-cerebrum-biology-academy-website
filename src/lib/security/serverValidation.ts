@@ -86,8 +86,8 @@ export class ServerValidationManager {
         action: 'throttle',
         parameters: {
           maxSubmissionsPerMinute: 10,
-          windowMs: 60000
-        }
+          windowMs: 60000,
+        },
       },
       {
         name: 'answer_time_validation',
@@ -97,8 +97,8 @@ export class ServerValidationManager {
         parameters: {
           minTimeSeconds: 5,
           maxTimeSeconds: 300,
-          outlierThreshold: 2.5 // standard deviations
-        }
+          outlierThreshold: 2.5, // standard deviations
+        },
       },
       {
         name: 'concurrent_session_limit',
@@ -107,8 +107,8 @@ export class ServerValidationManager {
         action: 'block',
         parameters: {
           maxSessionsPerUser: 1,
-          maxSessionsPerIP: 3
-        }
+          maxSessionsPerIP: 3,
+        },
       },
       {
         name: 'sequential_submission_pattern',
@@ -117,8 +117,8 @@ export class ServerValidationManager {
         action: 'warn',
         parameters: {
           maxConsecutiveFastAnswers: 5,
-          fastAnswerThreshold: 10 // seconds
-        }
+          fastAnswerThreshold: 10, // seconds
+        },
       },
       {
         name: 'ip_geolocation_validation',
@@ -128,8 +128,8 @@ export class ServerValidationManager {
         parameters: {
           allowVPN: false,
           allowTor: false,
-          maxLocationChanges: 2
-        }
+          maxLocationChanges: 2,
+        },
       },
       {
         name: 'user_agent_consistency',
@@ -137,8 +137,8 @@ export class ServerValidationManager {
         severity: 'medium',
         action: 'warn',
         parameters: {
-          allowUserAgentChanges: false
-        }
+          allowUserAgentChanges: false,
+        },
       },
       {
         name: 'answer_pattern_analysis',
@@ -147,12 +147,12 @@ export class ServerValidationManager {
         action: 'warn',
         parameters: {
           maxSimilarityScore: 0.8,
-          minimumAnswersForAnalysis: 10
-        }
-      }
+          minimumAnswersForAnalysis: 10,
+        },
+      },
     ]
 
-    defaultRules.forEach(rule => {
+    defaultRules.forEach((rule) => {
       this.validationRules.set(rule.name, rule)
     })
   }
@@ -170,7 +170,7 @@ export class ServerValidationManager {
       keyGenerator: (req) => `${req.userId}:${req.sessionId}`,
       onLimitReached: (req, res) => {
         console.warn(`Rate limit exceeded for user ${req.userId}`)
-      }
+      },
     })
 
     // Heartbeat rate limiter
@@ -182,7 +182,7 @@ export class ServerValidationManager {
       keyGenerator: (req) => req.sessionId,
       onLimitReached: (req, res) => {
         console.warn(`Heartbeat rate limit exceeded for session ${req.sessionId}`)
-      }
+      },
     })
 
     // Question request limiter
@@ -194,7 +194,7 @@ export class ServerValidationManager {
       keyGenerator: (req) => `${req.userId}:${req.questionId}`,
       onLimitReached: (req, res) => {
         console.warn(`Question request rate limit exceeded for user ${req.userId}`)
-      }
+      },
     })
   }
 
@@ -209,7 +209,7 @@ export class ServerValidationManager {
     // Check rate limiting
     const rateLimitResult = this.checkRateLimit('submission', {
       userId: submission.userId,
-      sessionId: submission.sessionId
+      sessionId: submission.sessionId,
     })
 
     if (!rateLimitResult.allowed) {
@@ -231,10 +231,7 @@ export class ServerValidationManager {
     }
 
     // Check concurrent sessions
-    const concurrentCheck = this.checkConcurrentSessions(
-      submission.userId,
-      submission.ipAddress
-    )
+    const concurrentCheck = this.checkConcurrentSessions(submission.userId, submission.ipAddress)
 
     if (concurrentCheck.isViolation) {
       violations.push('Concurrent session limit exceeded')
@@ -290,15 +287,18 @@ export class ServerValidationManager {
         concurrentSessions: concurrentCheck,
         ipValidation,
         patternAnalysis,
-        userAgentCheck
-      }
+        userAgentCheck,
+      },
     }
   }
 
   /**
    * Check rate limiting for a specific type
    */
-  checkRateLimit(type: string, request: any): { allowed: boolean; remaining: number; resetTime: number } {
+  checkRateLimit(
+    type: string,
+    request: any
+  ): { allowed: boolean; remaining: number; resetTime: number } {
     const config = this.rateLimiters.get(type)
     if (!config) {
       return { allowed: true, remaining: Infinity, resetTime: 0 }
@@ -312,7 +312,7 @@ export class ServerValidationManager {
     let requests = this.submissionHistory.get(key) || []
 
     // Filter out old requests
-    requests = requests.filter(timestamp => timestamp > windowStart)
+    requests = requests.filter((timestamp) => timestamp > windowStart)
 
     const allowed = requests.length < config.maxRequests
 
@@ -326,7 +326,7 @@ export class ServerValidationManager {
     return {
       allowed,
       remaining: Math.max(0, config.maxRequests - requests.length),
-      resetTime: Math.min(...requests) + config.windowMs
+      resetTime: Math.min(...requests) + config.windowMs,
     }
   }
 
@@ -360,7 +360,7 @@ export class ServerValidationManager {
         expectedMaxTime: maxTimeSeconds * 1000,
         averageTime: this.calculateAverage(timings),
         isOutlier: true,
-        suspicionLevel: 'high'
+        suspicionLevel: 'high',
       }
     }
 
@@ -373,7 +373,7 @@ export class ServerValidationManager {
         expectedMaxTime: maxTimeSeconds * 1000,
         averageTime: this.calculateAverage(timings),
         isOutlier: true,
-        suspicionLevel: 'medium'
+        suspicionLevel: 'medium',
       }
     }
 
@@ -392,7 +392,7 @@ export class ServerValidationManager {
           expectedMaxTime: maxTimeSeconds * 1000,
           averageTime: average,
           isOutlier: true,
-          suspicionLevel: zScore > outlierThreshold * 2 ? 'high' : 'medium'
+          suspicionLevel: zScore > outlierThreshold * 2 ? 'high' : 'medium',
         }
       }
     }
@@ -405,7 +405,7 @@ export class ServerValidationManager {
       expectedMaxTime: maxTimeSeconds * 1000,
       averageTime: this.calculateAverage(timings),
       isOutlier: false,
-      suspicionLevel: 'none'
+      suspicionLevel: 'none',
     }
   }
 
@@ -429,7 +429,7 @@ export class ServerValidationManager {
       ipAddress,
       maxConcurrentSessions: Math.min(maxSessionsPerUser, maxSessionsPerIP),
       currentSessions: Math.max(userSessions.size, ipSessions.size),
-      isViolation
+      isViolation,
     }
   }
 
@@ -453,7 +453,7 @@ export class ServerValidationManager {
         isValid: false,
         reason: 'IP address is blacklisted',
         severity: 'high',
-        metadata: { blacklisted: true }
+        metadata: { blacklisted: true },
       }
     }
 
@@ -463,7 +463,7 @@ export class ServerValidationManager {
         isValid: false,
         reason: 'Invalid IP address format',
         severity: 'medium',
-        metadata: { invalidFormat: true }
+        metadata: { invalidFormat: true },
       }
     }
 
@@ -473,7 +473,7 @@ export class ServerValidationManager {
         isValid: false,
         reason: 'Private IP address not allowed',
         severity: 'medium',
-        metadata: { privateIP: true }
+        metadata: { privateIP: true },
       }
     }
 
@@ -506,7 +506,7 @@ export class ServerValidationManager {
       questionId: submission.questionId,
       timeSpent: submission.timeSpent,
       submissionTime: submission.submissionTime,
-      answer: submission.answer
+      answer: submission.answer,
     })
 
     // Keep last 20 submissions
@@ -515,16 +515,17 @@ export class ServerValidationManager {
 
     if (submissions.length >= 5) {
       // Check for consistent timing patterns
-      const timings = submissions.map(s => s.timeSpent)
+      const timings = submissions.map((s) => s.timeSpent)
       const timingVariance = this.calculateVariance(timings)
 
-      if (timingVariance < 1000) { // Very consistent timing
+      if (timingVariance < 1000) {
+        // Very consistent timing
         patterns.push('Consistent timing pattern')
         suspicionScore += 5
       }
 
       // Check for sequential answer patterns
-      const answers = submissions.slice(-10).map(s => s.answer)
+      const answers = submissions.slice(-10).map((s) => s.answer)
       const sequentialPattern = this.detectSequentialPattern(answers)
 
       if (sequentialPattern) {
@@ -535,11 +536,12 @@ export class ServerValidationManager {
       // Check for rapid consecutive submissions
       const intervals = []
       for (let i = 1; i < submissions.length; i++) {
-        intervals.push(submissions[i].submissionTime - submissions[i-1].submissionTime)
+        intervals.push(submissions[i].submissionTime - submissions[i - 1].submissionTime)
       }
 
       const averageInterval = this.calculateAverage(intervals)
-      if (averageInterval < 10000) { // Less than 10 seconds between submissions
+      if (averageInterval < 10000) {
+        // Less than 10 seconds between submissions
         patterns.push('Rapid consecutive submissions')
         suspicionScore += 8
       }
@@ -548,14 +550,17 @@ export class ServerValidationManager {
     return {
       isSuspicious: suspicionScore > 10,
       patterns,
-      confidence: Math.min(suspicionScore / 20, 1)
+      confidence: Math.min(suspicionScore / 20, 1),
     }
   }
 
   /**
    * Validate user agent consistency
    */
-  validateUserAgent(userId: string, userAgent: string): {
+  validateUserAgent(
+    userId: string,
+    userAgent: string
+  ): {
     isConsistent: boolean
     previousUserAgent?: string
     changeCount: number
@@ -564,21 +569,24 @@ export class ServerValidationManager {
 
     if (!rule.parameters.allowUserAgentChanges) {
       const key = `ua_${userId}`
-      const stored = this.submissionHistory.get(key)
+      const stored = this.submissionHistory.get(key) as unknown as
+        | { userAgent: string; changeCount: number }
+        | undefined
 
       if (!stored) {
-        this.submissionHistory.set(key, { userAgent, changeCount: 0 })
+        this.submissionHistory.set(key, { userAgent, changeCount: 0 } as any)
         return { isConsistent: true, changeCount: 0 }
       }
 
       if (stored.userAgent !== userAgent) {
+        const previousUserAgent = stored.userAgent
         stored.changeCount++
         stored.userAgent = userAgent
 
         return {
           isConsistent: false,
-          previousUserAgent: stored.userAgent,
-          changeCount: stored.changeCount
+          previousUserAgent,
+          changeCount: stored.changeCount,
         }
       }
 
@@ -597,7 +605,7 @@ export class ServerValidationManager {
     const dataBytes = encoder.encode(data)
     const hashBuffer = await crypto.subtle.digest('SHA-256', dataBytes)
     const hashArray = Array.from(new Uint8Array(hashBuffer))
-    return hashArray.map(b => b.toString(16).padStart(2, '0')).join('')
+    return hashArray.map((b) => b.toString(16).padStart(2, '0')).join('')
   }
 
   /**
@@ -609,14 +617,14 @@ export class ServerValidationManager {
       `user_${submission.userId}`,
       `session_${submission.sessionId}`,
       `ip_${submission.ipAddress}`,
-      `question_${submission.questionId}`
+      `question_${submission.questionId}`,
     ]
 
-    keys.forEach(key => {
+    keys.forEach((key) => {
       const history = this.submissionHistory.get(key) || []
       history.push({
         timestamp: Date.now(),
-        submission
+        submission,
       })
 
       // Keep last 100 entries
@@ -669,14 +677,14 @@ export class ServerValidationManager {
   private calculateVariance(numbers: number[]): number {
     if (numbers.length === 0) return 0
     const avg = this.calculateAverage(numbers)
-    const squaredDiffs = numbers.map(num => Math.pow(num - avg, 2))
+    const squaredDiffs = numbers.map((num) => Math.pow(num - avg, 2))
     return this.calculateAverage(squaredDiffs)
   }
 
   private calculateStandardDeviation(numbers: number[], average?: number): number {
     if (numbers.length === 0) return 0
     const avg = average ?? this.calculateAverage(numbers)
-    const squaredDiffs = numbers.map(num => Math.pow(num - avg, 2))
+    const squaredDiffs = numbers.map((num) => Math.pow(num - avg, 2))
     const variance = this.calculateAverage(squaredDiffs)
     return Math.sqrt(variance)
   }
@@ -689,15 +697,16 @@ export class ServerValidationManager {
     let descending = true
 
     for (let i = 1; i < answers.length; i++) {
-      if (answers[i] !== answers[i-1] + 1) ascending = false
-      if (answers[i] !== answers[i-1] - 1) descending = false
+      if (answers[i] !== answers[i - 1] + 1) ascending = false
+      if (answers[i] !== answers[i - 1] - 1) descending = false
     }
 
     return ascending || descending
   }
 
   private isValidIPAddress(ip: string): boolean {
-    const ipv4Regex = /^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/
+    const ipv4Regex =
+      /^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/
     const ipv6Regex = /^(?:[0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}$/
     return ipv4Regex.test(ip) || ipv6Regex.test(ip)
   }
@@ -708,10 +717,10 @@ export class ServerValidationManager {
       /^172\.(1[6-9]|2[0-9]|3[0-1])\./,
       /^192\.168\./,
       /^127\./,
-      /^169\.254\./
+      /^169\.254\./,
     ]
 
-    return privateRanges.some(range => range.test(ip))
+    return privateRanges.some((range) => range.test(ip))
   }
 
   /**
@@ -733,18 +742,22 @@ export class ServerValidationManager {
    */
   getValidationStats() {
     return {
-      totalValidations: Array.from(this.submissionHistory.values())
-        .reduce((sum, history) => sum + history.length, 0),
-      activeSessions: Array.from(this.userSessions.values())
-        .reduce((sum, sessions) => sum + sessions.size, 0),
+      totalValidations: Array.from(this.submissionHistory.values()).reduce(
+        (sum, history) => sum + history.length,
+        0
+      ),
+      activeSessions: Array.from(this.userSessions.values()).reduce(
+        (sum, sessions) => sum + sessions.size,
+        0
+      ),
       uniqueIPs: this.sessionRegistry.size,
       whitelistedIPs: this.ipWhitelist.size,
       blacklistedIPs: this.ipBlacklist.size,
       ruleStatus: Array.from(this.validationRules.entries()).map(([name, rule]) => ({
         name,
         enabled: rule.enabled,
-        severity: rule.severity
-      }))
+        severity: rule.severity,
+      })),
     }
   }
 
@@ -771,10 +784,10 @@ export class ServerValidationManager {
       recentViolations: this.getRecentViolations(),
       topViolatingIPs: this.getTopViolatingIPs(),
       systemHealth: {
-        rulesActive: Array.from(this.validationRules.values()).filter(r => r.enabled).length,
+        rulesActive: Array.from(this.validationRules.values()).filter((r) => r.enabled).length,
         totalRules: this.validationRules.size,
-        rateLimitersActive: this.rateLimiters.size
-      }
+        rateLimitersActive: this.rateLimiters.size,
+      },
     }
   }
 

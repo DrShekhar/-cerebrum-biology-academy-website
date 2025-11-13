@@ -1,13 +1,6 @@
 import { prisma, DatabaseUtils } from './connection'
 import { AnalyticsCacheService } from '../cache/redis'
-import type {
-  TestSession,
-  TestAttempt,
-  UserProgress,
-  Question,
-  PerformanceReport,
-  Prisma
-} from '@/generated/prisma'
+import { Prisma } from '@/generated/prisma'
 
 export interface GlobalStats {
   totalUsers: number
@@ -63,8 +56,8 @@ export class AnalyticsService {
     try {
       // Try cache first
       const cached = await AnalyticsCacheService.getGlobalStats()
-      if (cached) {
-        return cached
+      if (cached && typeof cached === 'object' && 'totalUsers' in cached) {
+        return cached as GlobalStats
       }
 
       const now = new Date()
@@ -83,59 +76,61 @@ export class AnalyticsService {
         recentAttempts,
         topicCounts,
         topPerformers,
-        onlineUsers
+        onlineUsers,
       ] = await Promise.all([
-        prisma.freeUser.count(),
-        prisma.testAttempt.count(),
-        prisma.question.count({ where: { isActive: true } }),
-        prisma.testAttempt.count({
-          where: { startedAt: { gte: today } }
+        prisma.free_users.count(),
+        prisma.test_attempts.count(),
+        prisma.questions.count({ where: { isActive: true } }),
+        prisma.test_attempts.count({
+          where: { startedAt: { gte: today } },
         }),
-        prisma.testAttempt.count({
-          where: { startedAt: { gte: weekAgo } }
+        prisma.test_attempts.count({
+          where: { startedAt: { gte: weekAgo } },
         }),
-        prisma.testAttempt.count({
-          where: { startedAt: { gte: monthAgo } }
-        }),
-        prisma.testAttempt.findMany({
+        prisma.test_attempts.count({
           where: { startedAt: { gte: monthAgo } },
-          select: { percentage: true, timeSpent: true }
         }),
-        prisma.testAttempt.groupBy({
+        prisma.test_attempts.findMany({
+          where: { startedAt: { gte: monthAgo } },
+          select: { percentage: true, timeSpent: true },
+        }),
+        prisma.test_attempts.groupBy({
           by: ['topicWiseScore'],
           _count: true,
-          where: { startedAt: { gte: monthAgo } }
+          where: { startedAt: { gte: monthAgo } },
         }),
-        prisma.freeUser.findMany({
+        prisma.free_users.findMany({
           orderBy: { averageScore: 'desc' },
           take: 10,
-          select: { id: true, name: true, averageScore: true }
+          select: { id: true, name: true, averageScore: true },
         }),
-        AnalyticsCacheService.getOnlineUsersCount()
+        AnalyticsCacheService.getOnlineUsersCount(),
       ])
 
       // Calculate averages
-      const averageTestScore = recentAttempts.length > 0
-        ? recentAttempts.reduce((sum, test) => sum + test.percentage, 0) / recentAttempts.length
-        : 0
+      const averageTestScore =
+        recentAttempts.length > 0
+          ? recentAttempts.reduce((sum, test) => sum + test.percentage, 0) / recentAttempts.length
+          : 0
 
-      const averageTestTime = recentAttempts.length > 0
-        ? recentAttempts.reduce((sum, test) => sum + test.timeSpent, 0) / recentAttempts.length
-        : 0
+      const averageTestTime =
+        recentAttempts.length > 0
+          ? recentAttempts.reduce((sum, test) => sum + test.timeSpent, 0) / recentAttempts.length
+          : 0
 
       // Process topic popularity
       const topicPopularity: Record<string, number> = {}
-      topicCounts.forEach(group => {
+      topicCounts.forEach((group) => {
         if (group.topicWiseScore) {
           const topics = group.topicWiseScore as Record<string, number>
-          Object.keys(topics).forEach(topic => {
+          Object.keys(topics).forEach((topic) => {
             topicPopularity[topic] = (topicPopularity[topic] || 0) + group._count
           })
         }
       })
 
       const mostPopularTopics = Object.entries(topicPopularity)
-        .sort(([,a], [,b]) => b - a)
+        .sort(([, a], [, b]) => b - a)
         .slice(0, 10)
         .map(([topic, count]) => ({ topic, count }))
 
@@ -150,11 +145,11 @@ export class AnalyticsService {
         averageTestTime,
         mostPopularTopics,
         activeUsers: onlineUsers,
-        topPerformers: topPerformers.map(user => ({
+        topPerformers: topPerformers.map((user) => ({
           userId: user.id,
           name: user.name || 'Anonymous',
-          score: user.averageScore || 0
-        }))
+          score: user.averageScore || 0,
+        })),
       }
 
       // Cache the results
@@ -174,7 +169,7 @@ export class AnalyticsService {
         averageTestTime: 0,
         mostPopularTopics: [],
         activeUsers: 0,
-        topPerformers: []
+        topPerformers: [],
       }
     }
   }
@@ -185,17 +180,17 @@ export class AnalyticsService {
       const monthAgo = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000)
 
       // Get test attempts for this topic
-      const attempts = await prisma.testAttempt.findMany({
+      const attempts = await prisma.test_attempts.findMany({
         where: {
           startedAt: { gte: monthAgo },
-          topicWiseScore: { path: [topic], not: Prisma.AnyNull }
+          topicWiseScore: { path: [topic], not: Prisma.AnyNull },
         },
         select: {
           topicWiseScore: true,
           timeSpent: true,
           startedAt: true,
-          difficulty: true
-        }
+          difficulty: true,
+        },
       })
 
       if (attempts.length === 0) {
@@ -204,36 +199,37 @@ export class AnalyticsService {
 
       // Calculate metrics
       const topicScores = attempts
-        .map(attempt => {
+        .map((attempt) => {
           const scores = attempt.topicWiseScore as Record<string, number>
           return scores[topic] || 0
         })
-        .filter(score => score > 0)
+        .filter((score) => score > 0)
 
       const averageScore = topicScores.reduce((sum, score) => sum + score, 0) / topicScores.length
-      const averageTime = attempts.reduce((sum, attempt) => sum + attempt.timeSpent, 0) / attempts.length
+      const averageTime =
+        attempts.reduce((sum, attempt) => sum + attempt.timeSpent, 0) / attempts.length
 
       // Difficulty distribution
       const difficultyDistribution: Record<string, number> = {}
-      attempts.forEach(attempt => {
+      attempts.forEach((attempt) => {
         const difficulty = attempt.difficulty
         difficultyDistribution[difficulty] = (difficultyDistribution[difficulty] || 0) + 1
       })
 
       // Get popular questions for this topic
-      const popularQuestions = await prisma.question.findMany({
+      const popularQuestions = await prisma.questions.findMany({
         where: {
           topic,
-          isActive: true
+          isActive: true,
         },
         orderBy: { totalAttempts: 'desc' },
         take: 5,
-        select: { id: true, question: true, totalAttempts: true }
+        select: { id: true, question: true, totalAttempts: true },
       })
 
       // Improvement trend (last 30 days)
       const dailyScores: Record<string, number[]> = {}
-      attempts.forEach(attempt => {
+      attempts.forEach((attempt) => {
         const date = attempt.startedAt.toISOString().split('T')[0]
         const scores = attempt.topicWiseScore as Record<string, number>
         const score = scores[topic]
@@ -249,7 +245,7 @@ export class AnalyticsService {
       const improvementTrend = Object.entries(dailyScores)
         .map(([date, scores]) => ({
           date,
-          averageScore: scores.reduce((sum, score) => sum + score, 0) / scores.length
+          averageScore: scores.reduce((sum, score) => sum + score, 0) / scores.length,
         }))
         .sort((a, b) => a.date.localeCompare(b.date))
 
@@ -259,12 +255,12 @@ export class AnalyticsService {
         averageScore,
         averageTime,
         difficultyDistribution,
-        popularQuestions: popularQuestions.map(q => ({
+        popularQuestions: popularQuestions.map((q) => ({
           id: q.id,
           title: q.question.substring(0, 50) + '...',
-          attempts: q.totalAttempts
+          attempts: q.totalAttempts,
         })),
-        improvementTrend
+        improvementTrend,
       }
     } catch (error) {
       console.error('Failed to fetch topic analytics:', error)
@@ -282,12 +278,12 @@ export class AnalyticsService {
       const monthAgo = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000)
 
       // Get user's test attempts
-      const testAttempts = await prisma.testAttempt.findMany({
+      const testAttempts = await prisma.test_attempts.findMany({
         where: {
           ...whereClause,
-          startedAt: { gte: monthAgo }
+          startedAt: { gte: monthAgo },
         },
-        orderBy: { startedAt: 'desc' }
+        orderBy: { startedAt: 'desc' },
       })
 
       if (testAttempts.length === 0) {
@@ -297,12 +293,13 @@ export class AnalyticsService {
       // Calculate basic metrics
       const totalTests = testAttempts.length
       const averageScore = testAttempts.reduce((sum, test) => sum + test.percentage, 0) / totalTests
-      const bestScore = Math.max(...testAttempts.map(test => test.percentage))
+      const bestScore = Math.max(...testAttempts.map((test) => test.percentage))
       const totalStudyTime = testAttempts.reduce((sum, test) => sum + test.timeSpent, 0) / 60 // Convert to minutes
 
       // Calculate consistency score (lower standard deviation = higher consistency)
-      const scores = testAttempts.map(test => test.percentage)
-      const variance = scores.reduce((sum, score) => sum + Math.pow(score - averageScore, 2), 0) / scores.length
+      const scores = testAttempts.map((test) => test.percentage)
+      const variance =
+        scores.reduce((sum, score) => sum + Math.pow(score - averageScore, 2), 0) / scores.length
       const standardDeviation = Math.sqrt(variance)
       const consistencyScore = Math.max(0, 100 - standardDeviation) // Inverse of standard deviation
 
@@ -313,8 +310,10 @@ export class AnalyticsService {
         const earlierTests = testAttempts.slice(midPoint)
         const recentTests = testAttempts.slice(0, midPoint)
 
-        const earlierAvg = earlierTests.reduce((sum, test) => sum + test.percentage, 0) / earlierTests.length
-        const recentAvg = recentTests.reduce((sum, test) => sum + test.percentage, 0) / recentTests.length
+        const earlierAvg =
+          earlierTests.reduce((sum, test) => sum + test.percentage, 0) / earlierTests.length
+        const recentAvg =
+          recentTests.reduce((sum, test) => sum + test.percentage, 0) / recentTests.length
 
         improvementRate = recentAvg - earlierAvg
       }
@@ -322,7 +321,7 @@ export class AnalyticsService {
       // Analyze topic performance
       const topicPerformance: Record<string, { scores: number[]; totalTime: number }> = {}
 
-      testAttempts.forEach(attempt => {
+      testAttempts.forEach((attempt) => {
         if (attempt.topicWiseScore) {
           const scores = attempt.topicWiseScore as Record<string, number>
           Object.entries(scores).forEach(([topic, score]) => {
@@ -339,26 +338,28 @@ export class AnalyticsService {
       const topicAverages = Object.entries(topicPerformance).map(([topic, data]) => ({
         topic,
         average: data.scores.reduce((sum, score) => sum + score, 0) / data.scores.length,
-        attempts: data.scores.length
+        attempts: data.scores.length,
       }))
 
       const strongTopics = topicAverages
-        .filter(t => t.average >= 80 && t.attempts >= 2)
+        .filter((t) => t.average >= 80 && t.attempts >= 2)
         .sort((a, b) => b.average - a.average)
         .slice(0, 3)
-        .map(t => t.topic)
+        .map((t) => t.topic)
 
       const weakTopics = topicAverages
-        .filter(t => t.average < 60 && t.attempts >= 2)
+        .filter((t) => t.average < 60 && t.attempts >= 2)
         .sort((a, b) => a.average - b.average)
         .slice(0, 3)
-        .map(t => t.topic)
+        .map((t) => t.topic)
 
       // Generate recommended actions
       const recommendedActions: string[] = []
 
       if (averageScore < 60) {
-        recommendedActions.push('Focus on fundamental concepts before attempting advanced questions')
+        recommendedActions.push(
+          'Focus on fundamental concepts before attempting advanced questions'
+        )
       }
 
       if (consistencyScore < 70) {
@@ -374,12 +375,14 @@ export class AnalyticsService {
       }
 
       if (strongTopics.length > 0) {
-        recommendedActions.push(`Build on your strength in ${strongTopics[0]} with advanced questions`)
+        recommendedActions.push(
+          `Build on your strength in ${strongTopics[0]} with advanced questions`
+        )
       }
 
       // Generate learning path
       const learningPath = topicAverages
-        .filter(t => t.average < 80)
+        .filter((t) => t.average < 80)
         .sort((a, b) => {
           // Prioritize topics with more attempts but lower scores
           const aPriority = (1 / (a.average + 1)) * a.attempts
@@ -390,7 +393,7 @@ export class AnalyticsService {
         .map((t, index) => ({
           topic: t.topic,
           priority: index + 1,
-          estimatedTime: Math.max(30, Math.round((100 - t.average) * 2)) // 30-200 minutes based on performance gap
+          estimatedTime: Math.max(30, Math.round((100 - t.average) * 2)), // 30-200 minutes based on performance gap
         }))
 
       return {
@@ -404,7 +407,7 @@ export class AnalyticsService {
         strongTopics,
         weakTopics,
         recommendedActions,
-        learningPath
+        learningPath,
       }
     } catch (error) {
       console.error('Failed to fetch user performance analytics:', error)
@@ -435,30 +438,32 @@ export class AnalyticsService {
           break
       }
 
-      const whereClause = dateFilter ? {
-        testAttempts: {
-          some: {
-            startedAt: { gte: dateFilter }
+      const whereClause = dateFilter
+        ? {
+            test_attempts: {
+              some: {
+                startedAt: { gte: dateFilter },
+              },
+            },
           }
-        }
-      } : {}
+        : {}
 
-      const users = await prisma.freeUser.findMany({
+      const users = await prisma.free_users.findMany({
         where: whereClause,
         include: {
-          testAttempts: {
+          test_attempts: {
             where: dateFilter ? { startedAt: { gte: dateFilter } } : {},
-            select: { percentage: true, startedAt: true }
-          }
+            select: { percentage: true, startedAt: true },
+          },
         },
         orderBy: { averageScore: 'desc' },
-        take: limit
+        take: limit,
       })
 
       const leaderboard: LeaderboardEntry[] = users
-        .filter(user => user.testAttempts.length > 0)
+        .filter((user) => user.test_attempts.length > 0)
         .map((user, index) => {
-          const scores = user.testAttempts.map(attempt => attempt.percentage)
+          const scores = user.test_attempts.map((attempt) => attempt.percentage)
           const averageScore = scores.reduce((sum, score) => sum + score, 0) / scores.length
 
           // Assign badges based on performance
@@ -473,10 +478,10 @@ export class AnalyticsService {
             userId: user.id,
             name: user.name || 'Anonymous',
             score: Math.round(averageScore),
-            testsCompleted: user.testAttempts.length,
+            testsCompleted: user.test_attempts.length,
             averageScore: Math.round(averageScore),
             rank: index + 1,
-            badge
+            badge,
           }
         })
 
@@ -507,14 +512,15 @@ export class AnalyticsService {
       }
 
       // Track in analytics events
-      await prisma.analyticsEvent.create({
+      await prisma.analytics_events.create({
         data: {
-          userId: null, // This might be a regular user ID
+          id: `evt_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+          userId: null,
           eventType: 'user_activity',
           eventName: activity.type,
-          properties: activity.metadata ? JSON.stringify(activity.metadata) : null,
-          createdAt: new Date()
-        }
+          properties: activity.metadata || null,
+          createdAt: new Date(),
+        },
       })
     } catch (error) {
       console.error('Failed to track user activity:', error)
@@ -536,23 +542,23 @@ export class AnalyticsService {
     try {
       const dateFilter = new Date(Date.now() - timeRange * 24 * 60 * 60 * 1000)
 
-      const where: Prisma.UserQuestionResponseWhereInput = {
-        answeredAt: { gte: dateFilter }
+      const where: Prisma.user_question_responsesWhereInput = {
+        answeredAt: { gte: dateFilter },
       }
 
       if (questionId) {
         where.questionId = questionId
       } else if (topic) {
-        where.question = { topic }
+        where.questions = { topic }
       }
 
-      const responses = await prisma.userQuestionResponse.findMany({
+      const responses = await prisma.user_question_responses.findMany({
         where,
-        include: { question: true }
+        include: { questions: true },
       })
 
       const totalAttempts = responses.length
-      const correctResponses = responses.filter(r => r.isCorrect).length
+      const correctResponses = responses.filter((r) => r.isCorrect).length
       const accuracy = totalAttempts > 0 ? (correctResponses / totalAttempts) * 100 : 0
 
       const totalTime = responses.reduce((sum, r) => sum + (r.timeSpent || 0), 0)
@@ -560,21 +566,21 @@ export class AnalyticsService {
 
       // Difficulty distribution
       const difficultyDistribution: Record<string, number> = {}
-      responses.forEach(response => {
-        const difficulty = response.question.difficulty
+      responses.forEach((response) => {
+        const difficulty = response.questions.difficulty
         difficultyDistribution[difficulty] = (difficultyDistribution[difficulty] || 0) + 1
       })
 
       // Top mistakes (questions with highest error rate)
       const questionErrors: Record<string, { total: number; errors: number; question: string }> = {}
 
-      responses.forEach(response => {
+      responses.forEach((response) => {
         const qId = response.questionId
         if (!questionErrors[qId]) {
           questionErrors[qId] = {
             total: 0,
             errors: 0,
-            question: response.question.question
+            question: response.questions.question,
           }
         }
         questionErrors[qId].total++
@@ -588,7 +594,7 @@ export class AnalyticsService {
         .map(([qId, data]) => ({
           questionId: qId,
           errorRate: (data.errors / data.total) * 100,
-          question: data.question.substring(0, 100) + '...'
+          question: data.question.substring(0, 100) + '...',
         }))
         .sort((a, b) => b.errorRate - a.errorRate)
         .slice(0, 10)
@@ -598,7 +604,7 @@ export class AnalyticsService {
         accuracy,
         averageTime,
         difficultyDistribution,
-        topMistakes
+        topMistakes,
       }
     } catch (error) {
       console.error('Failed to fetch question analytics:', error)
@@ -607,7 +613,7 @@ export class AnalyticsService {
         accuracy: 0,
         averageTime: 0,
         difficultyDistribution: {},
-        topMistakes: []
+        topMistakes: [],
       }
     }
   }
@@ -627,8 +633,8 @@ export class AnalyticsService {
     try {
       const dateFilter = new Date(Date.now() - timeRange * 24 * 60 * 60 * 1000)
 
-      const where: Prisma.TestAttemptWhereInput = {
-        startedAt: { gte: dateFilter }
+      const where: Prisma.test_attemptsWhereInput = {
+        startedAt: { gte: dateFilter },
       }
 
       if (testTemplateId) {
@@ -636,39 +642,41 @@ export class AnalyticsService {
       }
 
       const [attempts, sessions] = await Promise.all([
-        prisma.testAttempt.findMany({
+        prisma.test_attempts.findMany({
           where,
-          include: { testTemplate: true }
+          include: { test_templates: true },
         }),
-        prisma.testSession.findMany({
+        prisma.test_sessions.findMany({
           where: {
             testTemplateId: testTemplateId || undefined,
-            createdAt: { gte: dateFilter }
-          }
-        })
+            createdAt: { gte: dateFilter },
+          },
+        }),
       ])
 
       const totalAttempts = attempts.length
-      const completedAttempts = attempts.filter(a => a.status === 'COMPLETED').length
+      const completedAttempts = attempts.filter((a) => a.status === 'COMPLETED').length
       const completionRate = totalAttempts > 0 ? (completedAttempts / totalAttempts) * 100 : 0
 
-      const completedTests = attempts.filter(a => a.status === 'COMPLETED')
-      const averageScore = completedTests.length > 0
-        ? completedTests.reduce((sum, test) => sum + test.percentage, 0) / completedTests.length
-        : 0
+      const completedTests = attempts.filter((a) => a.status === 'COMPLETED')
+      const averageScore =
+        completedTests.length > 0
+          ? completedTests.reduce((sum, test) => sum + test.percentage, 0) / completedTests.length
+          : 0
 
-      const averageTime = completedTests.length > 0
-        ? completedTests.reduce((sum, test) => sum + test.timeSpent, 0) / completedTests.length
-        : 0
+      const averageTime =
+        completedTests.length > 0
+          ? completedTests.reduce((sum, test) => sum + test.timeSpent, 0) / completedTests.length
+          : 0
 
       // Pass rate (assuming 60% is passing)
-      const passedTests = completedTests.filter(test => test.percentage >= 60).length
+      const passedTests = completedTests.filter((test) => test.percentage >= 60).length
       const passRate = completedTests.length > 0 ? (passedTests / completedTests.length) * 100 : 0
 
       // Difficulty effectiveness
       const difficultyEffectiveness: Record<string, { attempts: number; averageScore: number }> = {}
 
-      completedTests.forEach(test => {
+      completedTests.forEach((test) => {
         const difficulty = test.difficulty
         if (!difficultyEffectiveness[difficulty]) {
           difficultyEffectiveness[difficulty] = { attempts: 0, averageScore: 0 }
@@ -678,7 +686,7 @@ export class AnalyticsService {
       })
 
       // Calculate averages for each difficulty
-      Object.keys(difficultyEffectiveness).forEach(difficulty => {
+      Object.keys(difficultyEffectiveness).forEach((difficulty) => {
         const data = difficultyEffectiveness[difficulty]
         data.averageScore = data.averageScore / data.attempts
       })
@@ -689,7 +697,7 @@ export class AnalyticsService {
         averageScore,
         averageTime,
         passRate,
-        difficultyEffectiveness
+        difficultyEffectiveness,
       }
     } catch (error) {
       console.error('Failed to fetch test analytics:', error)
@@ -699,7 +707,7 @@ export class AnalyticsService {
         averageScore: 0,
         averageTime: 0,
         passRate: 0,
-        difficultyEffectiveness: {}
+        difficultyEffectiveness: {},
       }
     }
   }
@@ -709,10 +717,10 @@ export class AnalyticsService {
     try {
       const cutoffDate = new Date(Date.now() - daysToKeep * 24 * 60 * 60 * 1000)
 
-      const result = await prisma.analyticsEvent.deleteMany({
+      const result = await prisma.analytics_events.deleteMany({
         where: {
-          createdAt: { lt: cutoffDate }
-        }
+          createdAt: { lt: cutoffDate },
+        },
       })
 
       console.log(`Cleaned up ${result.count} old analytics events`)
@@ -737,50 +745,51 @@ export class AnalyticsService {
 
       const yesterday = new Date(today.getTime() - 24 * 60 * 60 * 1000)
 
-      const [
-        onlineUsers,
-        activeTests,
-        todayTests,
-        yesterdayTests,
-        todayScores
-      ] = await Promise.all([
-        AnalyticsCacheService.getOnlineUsersCount(),
-        AnalyticsCacheService.getActiveTestsCount(),
-        prisma.testAttempt.findMany({
-          where: {
-            startedAt: { gte: today },
-            status: 'COMPLETED'
-          },
-          select: { percentage: true }
-        }),
-        prisma.testAttempt.count({
-          where: {
-            startedAt: { gte: yesterday, lt: today },
-            status: 'COMPLETED'
-          }
-        }),
-        prisma.testAttempt.findMany({
-          where: {
-            startedAt: { gte: today },
-            status: 'COMPLETED'
-          },
-          select: { percentage: true }
-        })
-      ])
+      const [onlineUsers, activeTests, todayTests, yesterdayTests, todayScores] = await Promise.all(
+        [
+          AnalyticsCacheService.getOnlineUsersCount(),
+          AnalyticsCacheService.getActiveTestsCount(),
+          prisma.test_attempts.findMany({
+            where: {
+              startedAt: { gte: today },
+              status: 'COMPLETED',
+            },
+            select: { percentage: true },
+          }),
+          prisma.test_attempts.count({
+            where: {
+              startedAt: { gte: yesterday, lt: today },
+              status: 'COMPLETED',
+            },
+          }),
+          prisma.test_attempts.findMany({
+            where: {
+              startedAt: { gte: today },
+              status: 'COMPLETED',
+            },
+            select: { percentage: true },
+          }),
+        ]
+      )
 
       const testsCompletedToday = todayTests.length
-      const averageScoreToday = todayTests.length > 0
-        ? todayTests.reduce((sum, test) => sum + test.percentage, 0) / todayTests.length
-        : 0
+      const averageScoreToday =
+        todayTests.length > 0
+          ? todayTests.reduce((sum, test) => sum + test.percentage, 0) / todayTests.length
+          : 0
 
       // Calculate trends
-      const testTrend = testsCompletedToday > yesterdayTests ? 'up' :
-                      testsCompletedToday < yesterdayTests ? 'down' : 'stable'
+      const testTrend =
+        testsCompletedToday > yesterdayTests
+          ? 'up'
+          : testsCompletedToday < yesterdayTests
+            ? 'down'
+            : 'stable'
 
       const recentActivity = [
         { type: 'Tests Completed', count: testsCompletedToday, trend: testTrend as any },
         { type: 'Online Users', count: onlineUsers, trend: 'stable' as any },
-        { type: 'Active Tests', count: activeTests, trend: 'stable' as any }
+        { type: 'Active Tests', count: activeTests, trend: 'stable' as any },
       ]
 
       return {
@@ -788,7 +797,7 @@ export class AnalyticsService {
         activeTests,
         testsCompletedToday,
         averageScoreToday,
-        recentActivity
+        recentActivity,
       }
     } catch (error) {
       console.error('Failed to fetch dashboard data:', error)
@@ -797,7 +806,7 @@ export class AnalyticsService {
         activeTests: 0,
         testsCompletedToday: 0,
         averageScoreToday: 0,
-        recentActivity: []
+        recentActivity: [],
       }
     }
   }

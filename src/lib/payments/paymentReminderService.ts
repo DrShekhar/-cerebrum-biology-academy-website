@@ -416,7 +416,7 @@ Action Required:
             metadata: {
               installmentId,
               channels,
-              amount: amountFormatted,
+              amount: Number(installment.amount).toLocaleString('en-IN'),
             },
           },
         })

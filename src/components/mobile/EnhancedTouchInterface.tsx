@@ -69,11 +69,14 @@ export function EnhancedTouchInterface({
       label: 'View Courses',
       hindi: 'कोर्सेज देखें',
       icon: BookOpenIcon,
-      action: () =>
+      action: () => {
+        const coursesElement = document.querySelector('#courses')
+        const offsetTop = coursesElement instanceof HTMLElement ? coursesElement.offsetTop : 800
         window.scrollTo({
-          top: document.querySelector('#courses')?.offsetTop || 800,
+          top: offsetTop,
           behavior: 'smooth',
-        }),
+        })
+      },
       color: 'bg-gradient-to-r from-purple-500 to-purple-600',
       priority: 'medium',
     },

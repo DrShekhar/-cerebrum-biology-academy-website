@@ -595,7 +595,9 @@ const EnhancedTestGenerationInterface: React.FC = () => {
                   >
                     <BatchOperationsPanel
                       questions={questions}
-                      onQuestionsUpdate={(updatedQuestions) => setQuestions(updatedQuestions)}
+                      onQuestionsUpdate={(updatedQuestions: Question[]) =>
+                        setQuestions(updatedQuestions)
+                      }
                       onBulkGenerate={handleBulkGenerate}
                       isGenerating={isGenerating}
                     />

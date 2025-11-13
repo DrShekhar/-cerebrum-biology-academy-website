@@ -83,7 +83,7 @@ export async function calculateSyllabusCompletion(
       distinct: ['topic', 'subtopic'],
     })
 
-    const uniqueTopics = new Set(
+    const uniqueTopics = new Set<string>(
       allTopics.map((q) => (q.subtopic ? `${q.topic}:${q.subtopic}` : q.topic))
     )
     const totalTopics = uniqueTopics.size
@@ -117,8 +117,8 @@ export async function calculateSyllabusCompletion(
       progressMap.set(key, progress)
     }
 
-    for (const topicKey of uniqueTopics) {
-      const progress = progressMap.get(topicKey)
+    for (const topicKey of Array.from(uniqueTopics)) {
+      const progress = progressMap.get(topicKey) as any
 
       if (!progress) {
         unstartedTopics++

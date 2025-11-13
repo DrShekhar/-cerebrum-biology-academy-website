@@ -10,8 +10,9 @@ export interface TrialEventData {
 
 export async function trackTrialEvent(data: TrialEventData): Promise<void> {
   try {
-    await prisma.analyticsEvent.create({
+    await prisma.analytics_events.create({
       data: {
+        id: `evt_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`,
         eventType: 'trial',
         eventName: data.eventName,
         userId: data.freeUserId,

@@ -8,31 +8,34 @@ export { TestService } from './testService'
 export { QuestionService } from './questionService'
 export { AnalyticsService } from './analyticsService'
 
+// Import for internal use
+import { checkDatabaseConnection } from './connection'
+import { UserService } from './userService'
+import { TestService } from './testService'
+import { QuestionService } from './questionService'
+import { AnalyticsService } from './analyticsService'
+
 // Type Exports
 export type {
   CreateFreeUserInput,
   UpdateUserProgressInput,
-  UserPerformanceMetrics
+  UserPerformanceMetrics,
 } from './userService'
 
 export type {
   CreateTestTemplateInput,
   StartTestSessionInput,
   SubmitAnswerInput,
-  TestFilters
+  TestFilters,
 } from './testService'
 
-export type {
-  CreateQuestionInput,
-  QuestionFilters,
-  RandomQuestionFilters
-} from './questionService'
+export type { CreateQuestionInput, QuestionFilters, RandomQuestionFilters } from './questionService'
 
 export type {
   GlobalStats,
   TopicAnalytics,
   UserPerformanceAnalytics,
-  LeaderboardEntry
+  LeaderboardEntry,
 } from './analyticsService'
 
 // Database Health Check
@@ -48,19 +51,19 @@ export async function healthCheck(): Promise<{
       UserService.getFreeUserById('test'),
       TestService.getTestTemplateById('test'),
       QuestionService.getQuestionById('test'),
-      AnalyticsService.getGlobalStats()
+      AnalyticsService.getGlobalStats(),
     ])
 
     const services = {
       userService: serviceTests[0].status === 'fulfilled',
       testService: serviceTests[1].status === 'fulfilled',
       questionService: serviceTests[2].status === 'fulfilled',
-      analyticsService: serviceTests[3].status === 'fulfilled'
+      analyticsService: serviceTests[3].status === 'fulfilled',
     }
 
     return {
       database: dbHealth,
-      services
+      services,
     }
   } catch (error) {
     console.error('Database health check failed:', error)
@@ -70,8 +73,8 @@ export async function healthCheck(): Promise<{
         userService: false,
         testService: false,
         questionService: false,
-        analyticsService: false
-      }
+        analyticsService: false,
+      },
     }
   }
 }

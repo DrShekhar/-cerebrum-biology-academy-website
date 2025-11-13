@@ -342,12 +342,10 @@ export function InstantEnrollment({
               </div>
 
               <div className="space-y-3 pt-4">
-                <PremiumButton
+                <button
                   type="submit"
-                  variant="medical"
-                  size="lg"
                   disabled={loading}
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-4"
+                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-4 px-8 text-lg rounded-xl font-semibold transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-opacity-50 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
                 >
                   {loading ? (
                     <div className="flex items-center gap-2">
@@ -356,11 +354,11 @@ export function InstantEnrollment({
                     </div>
                   ) : (
                     <>
-                      <CreditCardIcon className="h-5 w-5" />
+                      <CreditCardIcon className="h-5 w-5 mr-2" />
                       Proceed to Payment - ₹{pricing.final.toLocaleString()}
                     </>
                   )}
-                </PremiumButton>
+                </button>
 
                 <button
                   type="button"

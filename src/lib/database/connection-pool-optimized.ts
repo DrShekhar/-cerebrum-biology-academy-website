@@ -80,8 +80,8 @@ export class AdvancedConnectionPoolManager extends EventEmitter {
         released: 0,
         created: 0,
         destroyed: 0,
-        timeout: 0
-      }
+        timeout: 0,
+      },
     }
   }
 
@@ -89,33 +89,25 @@ export class AdvancedConnectionPoolManager extends EventEmitter {
     // Primary pool configuration for writes
     const primaryConfig: PoolConfig = {
       connectionString: process.env.DATABASE_URL,
-      max: 30, // Maximum connections for primary
-      min: 10, // Minimum connections to maintain
-      acquireTimeoutMillis: 30000,
-      createTimeoutMillis: 30000,
-      destroyTimeoutMillis: 5000,
+      max: 30,
+      min: 10,
+      connectionTimeoutMillis: 30000,
       idleTimeoutMillis: 30000,
-      reapIntervalMillis: 1000,
-      createRetryIntervalMillis: 200,
-
-      // Advanced PostgreSQL-specific settings
       statement_timeout: 30000,
       query_timeout: 30000,
-      connectionTimeoutMillis: 2000,
       idle_in_transaction_session_timeout: 10000,
-
-      // SSL configuration for production
-      ssl: process.env.NODE_ENV === 'production' ? {
-        rejectUnauthorized: false,
-        ca: process.env.DATABASE_CA_CERT,
-        cert: process.env.DATABASE_CLIENT_CERT,
-        key: process.env.DATABASE_CLIENT_KEY
-      } : false,
-
-      // Connection configuration
       application_name: `cerebrum_${process.env.NODE_ENV}_primary`,
       keepAlive: true,
       keepAliveInitialDelayMillis: 10000,
+      ssl:
+        process.env.NODE_ENV === 'production'
+          ? {
+              rejectUnauthorized: false,
+              ca: process.env.DATABASE_CA_CERT,
+              cert: process.env.DATABASE_CLIENT_CERT,
+              key: process.env.DATABASE_CLIENT_KEY,
+            }
+          : false,
     }
 
     this.primaryPool = new Pool(primaryConfig)
@@ -136,26 +128,21 @@ export class AdvancedConnectionPoolManager extends EventEmitter {
     readReplicaUrls.forEach((url, index) => {
       const replicaConfig: PoolConfig = {
         connectionString: url,
-        max: 20, // Fewer connections per replica
+        max: 20,
         min: 5,
-        acquireTimeoutMillis: 15000, // Shorter timeout for reads
-        createTimeoutMillis: 15000,
-        destroyTimeoutMillis: 3000,
-        idleTimeoutMillis: 60000, // Longer idle time for read replicas
-        reapIntervalMillis: 1000,
-        createRetryIntervalMillis: 200,
-
-        statement_timeout: 20000, // Shorter timeout for reads
+        connectionTimeoutMillis: 15000,
+        idleTimeoutMillis: 60000,
+        statement_timeout: 20000,
         query_timeout: 20000,
-        connectionTimeoutMillis: 1500,
-
-        ssl: process.env.NODE_ENV === 'production' ? {
-          rejectUnauthorized: false
-        } : false,
-
         application_name: `cerebrum_${process.env.NODE_ENV}_replica_${index + 1}`,
         keepAlive: true,
         keepAliveInitialDelayMillis: 10000,
+        ssl:
+          process.env.NODE_ENV === 'production'
+            ? {
+                rejectUnauthorized: false,
+              }
+            : false,
       }
 
       const replicaPool = new Pool(replicaConfig)
@@ -172,7 +159,7 @@ export class AdvancedConnectionPoolManager extends EventEmitter {
 
     return replicasEnv
       .split(',')
-      .map(url => url.trim())
+      .map((url) => url.trim())
       .filter(Boolean)
   }
 
@@ -207,11 +194,7 @@ export class AdvancedConnectionPoolManager extends EventEmitter {
   /**
    * Execute a query with intelligent read/write routing
    */
-  async executeQuery<T>(
-    query: string,
-    params: any[] = [],
-    options: QueryOptions = {}
-  ): Promise<T> {
+  async executeQuery<T>(query: string, params: any[] = [], options: QueryOptions = {}): Promise<T> {
     const startTime = performance.now()
     const isReadQuery = this.isReadOnlyQuery(query)
     const pool = this.selectOptimalPool(isReadQuery, options.priority)
@@ -253,7 +236,7 @@ export class AdvancedConnectionPoolManager extends EventEmitter {
         console.error(`Query failed (attempt ${retryCount + 1}/${maxRetries + 1}):`, {
           query: query.substring(0, 100),
           error: error instanceof Error ? error.message : error,
-          executionTime: `${executionTime.toFixed(2)}ms`
+          executionTime: `${executionTime.toFixed(2)}ms`,
         })
 
         // Retry logic for specific errors
@@ -341,9 +324,9 @@ export class AdvancedConnectionPoolManager extends EventEmitter {
       // Execute all queries in a single transaction
       try {
         const transactionResults = await this.executeTransaction(
-          queries.map(q => ({ query: q.query, params: q.params }))
+          queries.map((q) => ({ query: q.query, params: q.params }))
         )
-        return transactionResults.map(data => ({ success: true, data: data as T }))
+        return transactionResults.map((data) => ({ success: true, data: data as T }))
       } catch (error) {
         return queries.map(() => ({ success: false, error: error as Error }))
       }
@@ -404,9 +387,9 @@ export class AdvancedConnectionPoolManager extends EventEmitter {
 
     while (hasMore) {
       const paginatedQuery = `${query} LIMIT ${batchSize} OFFSET ${offset}`
-      const batch = await this.executeQuery(paginatedQuery, params, { timeout })
+      const batch = await this.executeQuery<any[]>(paginatedQuery, params, { timeout })
 
-      if (batch.length === 0) {
+      if (!Array.isArray(batch) || batch.length === 0) {
         hasMore = false
       } else {
         yield batch
@@ -418,8 +401,10 @@ export class AdvancedConnectionPoolManager extends EventEmitter {
 
   private isReadOnlyQuery(query: string): boolean {
     const normalizedQuery = query.trim().toUpperCase()
-    return normalizedQuery.startsWith('SELECT') ||
-           normalizedQuery.startsWith('WITH') && normalizedQuery.includes('SELECT')
+    return (
+      normalizedQuery.startsWith('SELECT') ||
+      (normalizedQuery.startsWith('WITH') && normalizedQuery.includes('SELECT'))
+    )
   }
 
   private selectOptimalPool(isReadQuery: boolean, priority?: string): Pool {
@@ -482,24 +467,26 @@ export class AdvancedConnectionPoolManager extends EventEmitter {
       'ETIMEDOUT',
       'connection terminated unexpectedly',
       'server closed the connection unexpectedly',
-      'Connection timeout'
+      'Connection timeout',
     ]
 
     const errorMessage = error.message || error.toString()
-    return retryableErrors.some(retryableError =>
+    return retryableErrors.some((retryableError) =>
       errorMessage.toLowerCase().includes(retryableError.toLowerCase())
     )
   }
 
   private delay(ms: number): Promise<void> {
-    return new Promise(resolve => setTimeout(resolve, ms))
+    return new Promise((resolve) => setTimeout(resolve, ms))
   }
 
   private updateMetrics(query: string, executionTime: number, success: boolean): void {
     this.metrics.totalQueries++
 
     if (success) {
-      this.metrics.avgQueryTime = (this.metrics.avgQueryTime * (this.metrics.totalQueries - 1) + executionTime) / this.metrics.totalQueries
+      this.metrics.avgQueryTime =
+        (this.metrics.avgQueryTime * (this.metrics.totalQueries - 1) + executionTime) /
+        this.metrics.totalQueries
     }
 
     // Update pool statistics
@@ -512,9 +499,9 @@ export class AdvancedConnectionPoolManager extends EventEmitter {
     let idleConnections = 0
     let waitingRequests = 0
 
-    this.pools.forEach(pool => {
+    this.pools.forEach((pool) => {
       totalConnections += pool.totalCount
-      activeConnections += (pool.totalCount - pool.idleCount)
+      activeConnections += pool.totalCount - pool.idleCount
       idleConnections += pool.idleCount
       waitingRequests += pool.waitingCount
     })
@@ -530,7 +517,7 @@ export class AdvancedConnectionPoolManager extends EventEmitter {
       query: query.substring(0, 200),
       executionTime,
       timestamp: new Date(),
-      stackTrace: process.env.NODE_ENV === 'development' ? new Error().stack : undefined
+      stackTrace: process.env.NODE_ENV === 'development' ? new Error().stack : undefined,
     })
 
     // Keep only last 100 slow queries
@@ -542,12 +529,12 @@ export class AdvancedConnectionPoolManager extends EventEmitter {
     this.emit('query:slow', {
       query: query.substring(0, 200),
       executionTime,
-      tags
+      tags,
     })
 
     console.warn(`🐌 Slow query detected (${executionTime.toFixed(2)}ms):`, {
       query: query.substring(0, 100),
-      tags
+      tags,
     })
   }
 
@@ -570,7 +557,7 @@ export class AdvancedConnectionPoolManager extends EventEmitter {
           responseTime,
           activeConnections: pool.totalCount - pool.idleCount,
           totalConnections: pool.totalCount,
-          waitingRequests: pool.waitingCount
+          waitingRequests: pool.waitingCount,
         }
       } catch (error) {
         return {
@@ -579,13 +566,13 @@ export class AdvancedConnectionPoolManager extends EventEmitter {
           error: error instanceof Error ? error.message : 'Unknown error',
           activeConnections: pool.totalCount - pool.idleCount,
           totalConnections: pool.totalCount,
-          waitingRequests: pool.waitingCount
+          waitingRequests: pool.waitingCount,
         }
       }
     })
 
     const healthResults = await Promise.all(healthPromises)
-    const unhealthyPools = healthResults.filter(result => !result.healthy)
+    const unhealthyPools = healthResults.filter((result) => !result.healthy)
 
     if (unhealthyPools.length > 0) {
       console.error('❌ Unhealthy database pools detected:', unhealthyPools)
@@ -632,12 +619,12 @@ export class AdvancedConnectionPoolManager extends EventEmitter {
       totalConnections: pool.totalCount,
       activeConnections: pool.totalCount - pool.idleCount,
       idleConnections: pool.idleCount,
-      waitingRequests: pool.waitingCount
+      waitingRequests: pool.waitingCount,
     }))
 
     return {
       ...this.metrics,
-      pools: poolMetrics
+      pools: poolMetrics,
     }
   }
 
@@ -674,8 +661,8 @@ export class AdvancedConnectionPoolManager extends EventEmitter {
             total: pool.totalCount,
             active: pool.totalCount - pool.idleCount,
             idle: pool.idleCount,
-            waiting: pool.waitingCount
-          }
+            waiting: pool.waitingCount,
+          },
         }
       } catch (error) {
         return {
@@ -686,14 +673,14 @@ export class AdvancedConnectionPoolManager extends EventEmitter {
             total: pool.totalCount,
             active: pool.totalCount - pool.idleCount,
             idle: pool.idleCount,
-            waiting: pool.waitingCount
-          }
+            waiting: pool.waitingCount,
+          },
         }
       }
     })
 
     const pools = await Promise.all(poolPromises)
-    const healthyPools = pools.filter(p => p.status === 'healthy')
+    const healthyPools = pools.filter((p) => p.status === 'healthy')
 
     let overall: 'healthy' | 'degraded' | 'unhealthy'
     if (healthyPools.length === pools.length) {
@@ -707,7 +694,7 @@ export class AdvancedConnectionPoolManager extends EventEmitter {
     return {
       overall,
       pools,
-      metrics: this.metrics
+      metrics: this.metrics,
     }
   }
 
@@ -726,7 +713,7 @@ export class AdvancedConnectionPoolManager extends EventEmitter {
     }
 
     // Close all pools
-    const shutdownPromises = Array.from(this.pools.values()).map(pool => pool.end())
+    const shutdownPromises = Array.from(this.pools.values()).map((pool) => pool.end())
     await Promise.all(shutdownPromises)
 
     console.log('✅ All connection pools closed')

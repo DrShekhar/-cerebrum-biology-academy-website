@@ -66,12 +66,12 @@ async function calculateScore(
   topicWise: Record<string, { correct: number; total: number }>
 }> {
   // Fetch test questions
-  const session = await prisma.testSession.findUnique({
+  const session = await prisma.test_sessions.findUnique({
     where: { id: testId },
     include: {
-      responses: {
+      user_question_responses: {
         include: {
-          question: true,
+          questions: true,
         },
       },
     },
@@ -88,7 +88,7 @@ async function calculateScore(
 
   // Get all questions for this test
   const questionIds = Object.keys(answers)
-  const questions = await prisma.question.findMany({
+  const questions = await prisma.questions.findMany({
     where: { id: { in: questionIds } },
   })
 
@@ -117,10 +117,10 @@ async function calculateScore(
     }
 
     // Save user response
-    await prisma.userQuestionResponse.create({
+    await prisma.user_question_responses.create({
       data: {
-        userId: session.userId || undefined,
-        freeUserId: session.freeUserId || undefined,
+        id: `response_${Date.now()}_${Math.random().toString(36).substr(2, 9)}_${question.id}`,
+        ...(session.userId ? { userId: session.userId } : { freeUserId: session.freeUserId! }),
         questionId: question.id,
         testSessionId: testId,
         selectedAnswer: studentAnswer,
@@ -232,7 +232,7 @@ async function updateStudentProgress(
   for (const [topic, data] of Object.entries(topicWise)) {
     const accuracy = (data.correct / data.total) * 100
 
-    const existing = await prisma.userProgress.findFirst({
+    const existing = await prisma.user_progress.findFirst({
       where: {
         OR: [{ userId: studentId }, { freeUserId: studentId }],
         topic,
@@ -246,7 +246,7 @@ async function updateStudentProgress(
       const newCorrect = existing.correctAnswers + data.correct
       const newAccuracy = (newCorrect / newTotal) * 100
 
-      await prisma.userProgress.update({
+      await prisma.user_progress.update({
         where: { id: existing.id },
         data: {
           totalQuestions: newTotal,
@@ -258,10 +258,10 @@ async function updateStudentProgress(
       })
     } else {
       // Create new progress entry
-      await prisma.userProgress.create({
+      await prisma.user_progress.create({
         data: {
-          userId: studentId.startsWith('user_') ? studentId : undefined,
-          freeUserId: studentId.startsWith('free_') ? studentId : undefined,
+          id: `progress_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+          ...(studentId.startsWith('user_') ? { userId: studentId } : { freeUserId: studentId }),
           topic,
           curriculum: 'NEET',
           grade: 'CLASS_12',
@@ -269,6 +269,7 @@ async function updateStudentProgress(
           correctAnswers: data.correct,
           accuracy,
           lastPracticed: new Date(),
+          updatedAt: new Date(),
         },
       })
     }
@@ -298,7 +299,7 @@ export async function POST(request: NextRequest) {
     const totalQuestions = Object.keys(answers).length
 
     // Update test session
-    await prisma.testSession.update({
+    await prisma.test_sessions.update({
       where: { id: testId },
       data: {
         status: 'COMPLETED',

@@ -203,13 +203,13 @@ export async function GET(
     }
 
     // Fetch test session with all details
-    const session = await prisma.testSession.findUnique({
+    const session = await prisma.test_sessions.findUnique({
       where: { id: testId },
       include: {
-        testTemplate: true,
-        responses: {
+        test_templates: true,
+        user_question_responses: {
           include: {
-            question: true,
+            questions: true,
           },
         },
       },
@@ -226,9 +226,11 @@ export async function GET(
     const studentId = session.userId || session.freeUserId || ''
 
     // Calculate performance metrics
-    const totalQuestions = session.responses.length
-    const correctAnswers = session.responses.filter((r) => r.isCorrect).length
-    const incorrectAnswers = session.responses.filter((r) => r.isCorrect === false).length
+    const totalQuestions = session.user_question_responses.length
+    const correctAnswers = session.user_question_responses.filter((r) => r.isCorrect).length
+    const incorrectAnswers = session.user_question_responses.filter(
+      (r) => r.isCorrect === false
+    ).length
     const unattempted = totalQuestions - (correctAnswers + incorrectAnswers)
 
     // Topic-wise analysis
@@ -242,8 +244,8 @@ export async function GET(
       }
     >()
 
-    session.responses.forEach((response) => {
-      const topic = response.question.topic
+    session.user_question_responses.forEach((response) => {
+      const topic = response.questions.topic
       if (!topicMap.has(topic)) {
         topicMap.set(topic, {
           attempted: 0,
@@ -271,8 +273,8 @@ export async function GET(
 
     // Difficulty-wise analysis
     const difficultyMap = new Map<string, { attempted: number; correct: number }>()
-    session.responses.forEach((response) => {
-      const difficulty = response.question.difficulty
+    session.user_question_responses.forEach((response) => {
+      const difficulty = response.questions.difficulty
       if (!difficultyMap.has(difficulty)) {
         difficultyMap.set(difficulty, { attempted: 0, correct: 0 })
       }
@@ -299,21 +301,21 @@ export async function GET(
     }
 
     // Question details
-    const questionDetails = session.responses.map((response) => ({
-      questionId: response.question.id,
-      question: response.question.question,
-      topic: response.question.topic,
-      difficulty: response.question.difficulty,
+    const questionDetails = session.user_question_responses.map((response) => ({
+      questionId: response.questions.id,
+      question: response.questions.question,
+      topic: response.questions.topic,
+      difficulty: response.questions.difficulty,
       yourAnswer: response.selectedAnswer || 'Not attempted',
-      correctAnswer: response.question.correctAnswer,
+      correctAnswer: response.questions.correctAnswer,
       isCorrect: response.isCorrect || false,
-      explanation: response.question.explanation,
+      explanation: response.questions.explanation,
       marksAwarded: response.marksAwarded,
       timeSpent: response.timeSpent || 0,
     }))
 
     // Fetch previous tests for trend analysis
-    const previousTests = await prisma.testSession.findMany({
+    const previousTests = await prisma.test_sessions.findMany({
       where: {
         OR: [{ userId: studentId }, { freeUserId: studentId }],
         status: 'COMPLETED',
@@ -333,7 +335,7 @@ export async function GET(
       studentId,
       {
         totalScore: session.totalScore || 0,
-        totalMarks: session.testTemplate?.totalMarks || 0,
+        totalMarks: session.test_templates?.totalMarks || 0,
         percentage: session.percentage || 0,
         correctAnswers,
         incorrectAnswers,
@@ -355,14 +357,14 @@ export async function GET(
     const results: DetailedResults = {
       testId,
       testInfo: {
-        title: session.testTemplate?.title || 'Practice Test',
+        title: session.test_templates?.title || 'Practice Test',
         completedAt: session.submittedAt?.toISOString() || '',
-        duration: session.testTemplate?.timeLimit || 60,
+        duration: session.test_templates?.timeLimit || 60,
         totalQuestions,
       },
       performance: {
         totalScore: session.totalScore || 0,
-        totalMarks: session.testTemplate?.totalMarks || 0,
+        totalMarks: session.test_templates?.totalMarks || 0,
         percentage: session.percentage || 0,
         correctAnswers,
         incorrectAnswers,

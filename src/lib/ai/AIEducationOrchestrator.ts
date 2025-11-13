@@ -19,6 +19,7 @@ import {
 import { AdaptiveLearningEngine } from './AdaptiveLearningEngine'
 import { AIGateway } from './gateway/AIGateway'
 import { DistributedCacheManager } from '../cache/DistributedCacheManager'
+import { HyperIntelligentRouter } from '../api/HyperIntelligentRouter'
 
 export interface StudentProfile {
   id: string
@@ -183,7 +184,8 @@ class AIEducationOrchestrator {
   constructor() {
     this.aiGateway = new AIGateway()
     this.cache = new DistributedCacheManager()
-    this.adaptiveLearning = new AdaptiveLearningEngine()
+    const aiRouter = new HyperIntelligentRouter()
+    this.adaptiveLearning = new AdaptiveLearningEngine(aiRouter, this.cache)
   }
 
   static getInstance(): AIEducationOrchestrator {
@@ -231,6 +233,9 @@ class AIEducationOrchestrator {
         timestamp: new Date(),
       }
 
+      // Type assertion for timestamp since we know it's being passed correctly
+      const queryTimestamp = query.timestamp as Date
+
       // Get AI response
       const response = await biologyTutor.resolveDoubt(query)
 
@@ -247,7 +252,7 @@ class AIEducationOrchestrator {
         activity: 'doubt_resolution',
         topic: query.topic || 'general',
         success: response.confidence > 0.7,
-        timeSpent: response.estimatedStudyTime,
+        timeSpent: response.estimatedStudyTime || 0,
       })
 
       // Generate follow-up suggestions
@@ -568,8 +573,10 @@ class AIEducationOrchestrator {
   ): string[] {
     const plan: string[] = []
 
-    if ('estimatedReadTime' in material.metadata) {
-      plan.push(`Estimated study time: ${material.metadata.estimatedReadTime} minutes`)
+    // Check if material has metadata with estimatedReadTime
+    if ('metadata' in material && material.metadata && 'estimatedReadTime' in material.metadata) {
+      const metadata = material.metadata as StudyMaterial['metadata']
+      plan.push(`Estimated study time: ${metadata.estimatedReadTime} minutes`)
     }
 
     plan.push('Read through the material carefully')

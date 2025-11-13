@@ -715,10 +715,13 @@ export function ComprehensiveContactPage({
                         required
                       />
 
-                      <PremiumButton type="submit" variant="medical" size="lg" className="w-full">
+                      <button
+                        type="submit"
+                        className="w-full bg-gradient-to-r from-green-600 via-teal-700 to-blue-800 text-white shadow-lg shadow-green-500/25 px-8 py-4 text-lg rounded-xl font-semibold transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-opacity-50 hover:scale-102 flex items-center justify-center"
+                      >
                         <EnvelopeIcon className="w-5 h-5 mr-3" />
                         Send Inquiry
-                      </PremiumButton>
+                      </button>
                     </form>
                   </div>
                 </div>

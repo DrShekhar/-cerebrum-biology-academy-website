@@ -96,7 +96,11 @@ export function SuccessAnalytics({ data }: SuccessAnalyticsProps) {
     </motion.div>
   )
 
-  const tabs = [
+  const tabs: Array<{
+    id: 'overview' | 'subjects' | 'batches' | 'colleges'
+    label: string
+    icon: React.ComponentType<any>
+  }> = [
     { id: 'overview', label: 'Overview', icon: BarChart3 },
     { id: 'subjects', label: 'Subject Analysis', icon: BookOpen },
     { id: 'batches', label: 'Batch Performance', icon: Users },

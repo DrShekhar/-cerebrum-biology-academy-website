@@ -211,7 +211,6 @@ class NotificationService {
             const whatsappResult = await whatsappService.sendMessage({
               phone: request.phone,
               message: request.whatsappData!.message,
-              studentName: request.studentName,
             })
             result.channels.whatsapp = {
               success: whatsappResult,
@@ -381,43 +380,72 @@ class NotificationService {
   async sendPaymentReminder(data: {
     leadId?: string
     studentName: string
-    email: string
+    email?: string
     phone: string
     amount: number
     dueDate: Date
     installmentNumber: number
-    courseName: string
-    paymentLink: string
-    daysUntilDue: number
-  }): Promise<NotificationResult> {
-    // Determine priority based on days until due
-    let priority: NotificationPriority = 'LOW'
-    if (data.daysUntilDue <= 0)
-      priority = 'URGENT' // Overdue or due today
-    else if (data.daysUntilDue === 1) priority = 'HIGH'
-    else if (data.daysUntilDue <= 3) priority = 'MEDIUM'
+    courseName?: string
+    paymentLink?: string
+    daysUntilDue?: number
+    isOverdue?: boolean
+    priority?: NotificationPriority
+    channels?: ('email' | 'whatsapp' | 'sms')[]
+  }): Promise<boolean> {
+    // Determine priority based on days until due or isOverdue flag
+    let priority: NotificationPriority = data.priority || 'LOW'
+    if (!data.priority) {
+      if (data.isOverdue || (data.daysUntilDue !== undefined && data.daysUntilDue <= 0)) {
+        priority = 'URGENT'
+      } else if (data.daysUntilDue === 1) {
+        priority = 'HIGH'
+      } else if (data.daysUntilDue !== undefined && data.daysUntilDue <= 3) {
+        priority = 'MEDIUM'
+      }
+    }
 
-    return this.send({
+    const daysUntilDue = data.daysUntilDue ?? 0
+    const paymentLink = data.paymentLink || '#'
+
+    const result = await this.send({
       leadId: data.leadId,
       studentName: data.studentName,
       email: data.email,
       phone: data.phone,
       type: 'PAYMENT_REMINDER',
       priority,
-      emailData: {
-        subject: `Payment Reminder - Installment #${data.installmentNumber} Due ${data.daysUntilDue === 0 ? 'Today' : `in ${data.daysUntilDue} days`}`,
-        html: this.generatePaymentReminderEmail(data),
-      },
+      emailData: data.email
+        ? {
+            subject: `Payment Reminder - Installment #${data.installmentNumber} ${data.isOverdue ? 'Overdue' : daysUntilDue === 0 ? 'Due Today' : `Due in ${daysUntilDue} days`}`,
+            html: this.generatePaymentReminderEmail({
+              studentName: data.studentName,
+              amount: data.amount,
+              dueDate: data.dueDate,
+              installmentNumber: data.installmentNumber,
+              courseName: data.courseName || 'Course',
+              paymentLink,
+            }),
+          }
+        : undefined,
       whatsappData: {
-        message: `Hi ${data.studentName}! Reminder: Installment #${data.installmentNumber} of ₹${data.amount.toLocaleString('en-IN')} is due on ${data.dueDate.toLocaleDateString()}. Pay now: ${data.paymentLink}`,
+        message: `Hi ${data.studentName}! Reminder: Installment #${data.installmentNumber} of ₹${data.amount.toLocaleString('en-IN')} is due on ${data.dueDate.toLocaleDateString()}. Pay now: ${paymentLink}`,
       },
       smsData:
         priority === 'HIGH' || priority === 'URGENT'
           ? {
-              message: `CEREBRUM: Payment of Rs.${data.amount} due ${data.daysUntilDue === 0 ? 'TODAY' : `in ${data.daysUntilDue} days`}. Pay: ${data.paymentLink}`,
+              message: `CEREBRUM: Payment of Rs.${data.amount} due ${data.isOverdue ? 'OVERDUE' : daysUntilDue === 0 ? 'TODAY' : `in ${daysUntilDue} days`}. Pay: ${paymentLink}`,
             }
           : undefined,
+      customChannels: data.channels
+        ? {
+            email: data.channels.includes('email'),
+            whatsapp: data.channels.includes('whatsapp'),
+            sms: data.channels.includes('sms'),
+          }
+        : undefined,
     })
+
+    return result.success
   }
 
   /**

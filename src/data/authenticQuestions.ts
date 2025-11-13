@@ -1350,7 +1350,6 @@ export const class11Questions: AuthenticQuestion[] = [
     topicId: 'topic-11-8-nucleus',
     chapterId: 'ch-11-8',
     classId: 'class-11',
-    classId: 'class-11',
     question: 'The nucleus is bounded by a double membrane called:',
     options: ['Plasma membrane', 'Nuclear envelope', 'Tonoplast', 'Cristae'],
     correctAnswer: 'Nuclear envelope',
@@ -2697,7 +2696,7 @@ export const class11Questions: AuthenticQuestion[] = [
     ],
     correctAnswer: 'Presence of meristems at various locations',
     explanation:
-      'Plants have indeterminate or open growth due to the presence of meristems at different locations like root apex, shoot apex, and vascular cambium. These meristematic regions retain the capacity for continuous cell division throughout the plant\'s life, unlike animals which show determinate growth.',
+      "Plants have indeterminate or open growth due to the presence of meristems at different locations like root apex, shoot apex, and vascular cambium. These meristematic regions retain the capacity for continuous cell division throughout the plant's life, unlike animals which show determinate growth.",
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 13, Page 167',
     previousYearFrequency: 11,
@@ -2712,12 +2711,7 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-13',
     classId: 'class-11',
     question: 'Root apical meristem and shoot apical meristem are responsible for:',
-    options: [
-      'Secondary growth',
-      'Primary growth',
-      'Lateral growth',
-      'Girth increase',
-    ],
+    options: ['Secondary growth', 'Primary growth', 'Lateral growth', 'Girth increase'],
     correctAnswer: 'Primary growth',
     explanation:
       'Root apical meristem (RAM) at the root tip and shoot apical meristem (SAM) at the shoot tip are responsible for primary growth, which increases the length of the plant. They contribute to the formation of primary plant body. Secondary growth (increase in girth) is caused by lateral meristems like vascular cambium and cork cambium.',
@@ -2735,12 +2729,7 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-13',
     classId: 'class-11',
     question: 'Which meristem is responsible for increase in girth of stem and root?',
-    options: [
-      'Apical meristem',
-      'Intercalary meristem',
-      'Lateral meristem',
-      'Primary meristem',
-    ],
+    options: ['Apical meristem', 'Intercalary meristem', 'Lateral meristem', 'Primary meristem'],
     correctAnswer: 'Lateral meristem',
     explanation:
       'Lateral meristems (vascular cambium and cork cambium) are responsible for secondary growth, which increases the girth or thickness of stems and roots in dicotyledonous plants and gymnosperms. They are cylindrical meristems located parallel to the sides of organs in which they occur.',
@@ -2871,12 +2860,7 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-13',
     classId: 'class-11',
     question: 'Maximum cell enlargement occurs during which phase of growth?',
-    options: [
-      'Meristematic phase',
-      'Elongation phase',
-      'Maturation phase',
-      'All phases equally',
-    ],
+    options: ['Meristematic phase', 'Elongation phase', 'Maturation phase', 'All phases equally'],
     correctAnswer: 'Elongation phase',
     explanation:
       'During the elongation phase, cells show maximum enlargement in size. This increase is primarily due to increased vacuolation - uptake of water into the newly formed vacuole leads to enlargement of cells. The cell wall also becomes thickened during this phase. Cell enlargement can increase cell size by several thousand times.',
@@ -2984,14 +2968,8 @@ export const class11Questions: AuthenticQuestion[] = [
     topicId: 'topic-11-13-measurement',
     chapterId: 'ch-11-13',
     classId: 'class-11',
-    classId: 'class-11',
     question: 'The formula Lt = L0 + rt represents which type of growth?',
-    options: [
-      'Geometric growth',
-      'Exponential growth',
-      'Arithmetic growth',
-      'Sigmoid growth',
-    ],
+    options: ['Geometric growth', 'Exponential growth', 'Arithmetic growth', 'Sigmoid growth'],
     correctAnswer: 'Arithmetic growth',
     explanation:
       'The formula Lt = L0 + rt represents arithmetic growth, where Lt is the length at time t, L0 is the initial length, r is the growth rate, and t is time. In arithmetic growth, only one daughter cell continues to divide while the other differentiates and matures. Example: elongation of root at constant rate.',
@@ -3028,12 +3006,7 @@ export const class11Questions: AuthenticQuestion[] = [
     classId: 'class-11',
     question:
       'If a root elongates at a constant rate of 2cm per day, what type of growth is it exhibiting?',
-    options: [
-      'Arithmetic growth',
-      'Geometric growth',
-      'Exponential growth',
-      'Sigmoid growth',
-    ],
+    options: ['Arithmetic growth', 'Geometric growth', 'Exponential growth', 'Sigmoid growth'],
     correctAnswer: 'Arithmetic growth',
     explanation:
       'When growth occurs at a constant rate (constant amount added per unit time), it is arithmetic growth. In this example, 2cm is added every day regardless of the current length. On plotting, arithmetic growth gives a linear curve. This is typical of elongating roots where only cells at the tip divide.',
@@ -3352,8 +3325,7 @@ export const class11Questions: AuthenticQuestion[] = [
     topicId: 'topic-11-13-auxins',
     chapterId: 'ch-11-13',
     classId: 'class-11',
-    question:
-      'Which synthetic auxin is widely used as a herbicide to kill dicotyledonous weeds?',
+    question: 'Which synthetic auxin is widely used as a herbicide to kill dicotyledonous weeds?',
     options: ['IAA', 'NAA', '2,4-D', 'IBA'],
     correctAnswer: '2,4-D',
     explanation:
@@ -3496,7 +3468,8 @@ export const class11Questions: AuthenticQuestion[] = [
     topicId: 'topic-11-13-gibberellins',
     chapterId: 'ch-11-13',
     classId: 'class-11',
-    question: 'Gibberellins can replace the requirement of cold treatment in certain plants. This means they can:',
+    question:
+      'Gibberellins can replace the requirement of cold treatment in certain plants. This means they can:',
     options: [
       'Induce dormancy',
       'Break seed dormancy and promote germination',
@@ -3539,7 +3512,12 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-13',
     classId: 'class-11',
     question: 'The term "cytokinin" was coined because these hormones promote:',
-    options: ['Cell elongation', 'Cytokinesis (cell division)', 'Cell wall formation', 'Cell death'],
+    options: [
+      'Cell elongation',
+      'Cytokinesis (cell division)',
+      'Cell wall formation',
+      'Cell death',
+    ],
     correctAnswer: 'Cytokinesis (cell division)',
     explanation:
       'Cytokinins were named for their role in promoting cytokinesis (cell division). They were discovered by F. Skoog and his co-workers in the 1950s. Kinetin (a modified form of adenine) was the first natural cytokinin to be discovered. Zeatin is the most common naturally occurring cytokinin, found in corn kernels and coconut milk.',
@@ -3604,12 +3582,7 @@ export const class11Questions: AuthenticQuestion[] = [
     classId: 'class-11',
     question:
       'In tissue culture, the ratio of auxin to cytokinin determines cell fate. A high auxin:cytokinin ratio promotes:',
-    options: [
-      'Root formation',
-      'Shoot formation',
-      'Callus formation only',
-      'Flower formation',
-    ],
+    options: ['Root formation', 'Shoot formation', 'Callus formation only', 'Flower formation'],
     correctAnswer: 'Root formation',
     explanation:
       'In plant tissue culture, the auxin:cytokinin ratio is critical for determining developmental pathways. High auxin:cytokinin ratio promotes root formation, while low auxin:cytokinin ratio (or high cytokinin) promotes shoot formation. Balanced amounts of both promote callus (undifferentiated cell mass) formation. This principle is fundamental to plant regeneration in vitro.',
@@ -3747,7 +3720,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Which of the following organisms uses gills as the respiratory organ?',
     options: ['Insects', 'Fishes', 'Birds', 'Earthworms'],
     correctAnswer: 'Fishes',
-    explanation: 'Fishes use gills as respiratory organs for breathing in water. Gills are vascularized structures that facilitate gas exchange in aquatic environments, as mentioned in NCERT Class 12 Chapter 14.',
+    explanation:
+      'Fishes use gills as respiratory organs for breathing in water. Gills are vascularized structures that facilitate gas exchange in aquatic environments, as mentioned in NCERT Class 12 Chapter 14.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 12, Chapter 14, Page 183',
     previousYearFrequency: 10,
@@ -3764,7 +3738,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The opening of the trachea into the larynx is called:',
     options: ['Epiglottis', 'Glottis', 'Pharynx', 'Bronchiole'],
     correctAnswer: 'Glottis',
-    explanation: 'Glottis is the opening of the trachea into the larynx. It is covered by the epiglottis during swallowing to prevent food from entering the respiratory tract, as described in NCERT.',
+    explanation:
+      'Glottis is the opening of the trachea into the larynx. It is covered by the epiglottis during swallowing to prevent food from entering the respiratory tract, as described in NCERT.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 12, Chapter 14, Page 184',
     previousYearFrequency: 12,
@@ -3778,10 +3753,16 @@ export const class11Questions: AuthenticQuestion[] = [
     topicId: 'topic-12-14-respiration',
     chapterId: 'ch-12-14',
     classId: 'class-12',
-    question: 'Which cartilage forms the Adam\'s apple in human males?',
-    options: ['Cricoid cartilage', 'Thyroid cartilage', 'Arytenoid cartilage', 'Epiglottic cartilage'],
+    question: "Which cartilage forms the Adam's apple in human males?",
+    options: [
+      'Cricoid cartilage',
+      'Thyroid cartilage',
+      'Arytenoid cartilage',
+      'Epiglottic cartilage',
+    ],
     correctAnswer: 'Thyroid cartilage',
-    explanation: 'The thyroid cartilage is the largest cartilage of the larynx and forms the Adam\'s apple, which is more prominent in males. This is mentioned in NCERT Class 12 Chapter 14.',
+    explanation:
+      "The thyroid cartilage is the largest cartilage of the larynx and forms the Adam's apple, which is more prominent in males. This is mentioned in NCERT Class 12 Chapter 14.",
     difficulty: 'Easy',
     ncertPageReference: 'Class 12, Chapter 14, Page 184',
     previousYearFrequency: 11,
@@ -3798,7 +3779,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The primary site of gas exchange in the human respiratory system is:',
     options: ['Bronchi', 'Bronchioles', 'Alveoli', 'Trachea'],
     correctAnswer: 'Alveoli',
-    explanation: 'Alveoli are the primary sites of gas exchange in the lungs. They are thin-walled, vascularized structures that provide a large surface area for efficient diffusion of O2 and CO2, as described in NCERT.',
+    explanation:
+      'Alveoli are the primary sites of gas exchange in the lungs. They are thin-walled, vascularized structures that provide a large surface area for efficient diffusion of O2 and CO2, as described in NCERT.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 12, Chapter 14, Page 185',
     previousYearFrequency: 15,
@@ -3815,7 +3797,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Insects have a respiratory system consisting of:',
     options: ['Gills', 'Lungs', 'Tracheal system', 'Book lungs'],
     correctAnswer: 'Tracheal system',
-    explanation: 'Insects use a tracheal system for respiration, consisting of a network of tubes that deliver oxygen directly to tissues without using blood for transport, as mentioned in NCERT Class 12 Chapter 14.',
+    explanation:
+      'Insects use a tracheal system for respiration, consisting of a network of tubes that deliver oxygen directly to tissues without using blood for transport, as mentioned in NCERT Class 12 Chapter 14.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 12, Chapter 14, Page 183',
     previousYearFrequency: 9,
@@ -3832,7 +3815,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The thin, double-layered membrane covering the lungs is called:',
     options: ['Pericardium', 'Peritoneum', 'Pleura', 'Perichondrium'],
     correctAnswer: 'Pleura',
-    explanation: 'Pleura is the double-layered membrane covering the lungs. The pleural fluid between the layers reduces friction during breathing movements, as described in NCERT Class 12 Chapter 14.',
+    explanation:
+      'Pleura is the double-layered membrane covering the lungs. The pleural fluid between the layers reduces friction during breathing movements, as described in NCERT Class 12 Chapter 14.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 12, Chapter 14, Page 184',
     previousYearFrequency: 10,
@@ -3846,10 +3830,12 @@ export const class11Questions: AuthenticQuestion[] = [
     topicId: 'topic-12-14-respiration',
     chapterId: 'ch-12-14',
     classId: 'class-12',
-    question: 'Which of the following structures prevents food from entering the larynx during swallowing?',
+    question:
+      'Which of the following structures prevents food from entering the larynx during swallowing?',
     options: ['Glottis', 'Epiglottis', 'Pharynx', 'Uvula'],
     correctAnswer: 'Epiglottis',
-    explanation: 'The epiglottis is a cartilaginous flap that covers the glottis during swallowing, preventing food from entering the respiratory passage, as mentioned in NCERT Class 12 Chapter 14.',
+    explanation:
+      'The epiglottis is a cartilaginous flap that covers the glottis during swallowing, preventing food from entering the respiratory passage, as mentioned in NCERT Class 12 Chapter 14.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 12, Chapter 14, Page 184',
     previousYearFrequency: 13,
@@ -3864,9 +3850,15 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-12-14',
     classId: 'class-12',
     question: 'The trachea divides into right and left primary bronchi at the level of:',
-    options: ['2nd thoracic vertebra', '5th thoracic vertebra', '7th cervical vertebra', '1st lumbar vertebra'],
+    options: [
+      '2nd thoracic vertebra',
+      '5th thoracic vertebra',
+      '7th cervical vertebra',
+      '1st lumbar vertebra',
+    ],
     correctAnswer: '5th thoracic vertebra',
-    explanation: 'The trachea bifurcates into the right and left primary bronchi at the level of the 5th thoracic vertebra, as described in NCERT Class 12 Chapter 14.',
+    explanation:
+      'The trachea bifurcates into the right and left primary bronchi at the level of the 5th thoracic vertebra, as described in NCERT Class 12 Chapter 14.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 12, Chapter 14, Page 184',
     previousYearFrequency: 8,
@@ -3881,9 +3873,15 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-12-14',
     classId: 'class-12',
     question: 'The walls of the alveoli are made up of which type of epithelium?',
-    options: ['Cuboidal epithelium', 'Columnar epithelium', 'Squamous epithelium', 'Stratified epithelium'],
+    options: [
+      'Cuboidal epithelium',
+      'Columnar epithelium',
+      'Squamous epithelium',
+      'Stratified epithelium',
+    ],
     correctAnswer: 'Squamous epithelium',
-    explanation: 'Alveolar walls are composed of thin squamous epithelium, which facilitates efficient gas exchange by minimizing the diffusion distance between air and blood, as mentioned in NCERT.',
+    explanation:
+      'Alveolar walls are composed of thin squamous epithelium, which facilitates efficient gas exchange by minimizing the diffusion distance between air and blood, as mentioned in NCERT.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 12, Chapter 14, Page 185',
     previousYearFrequency: 12,
@@ -3897,10 +3895,12 @@ export const class11Questions: AuthenticQuestion[] = [
     topicId: 'topic-12-14-respiration',
     chapterId: 'ch-12-14',
     classId: 'class-12',
-    question: 'The human lungs are divided into lobes. The right lung has ___ lobes and the left lung has ___ lobes.',
+    question:
+      'The human lungs are divided into lobes. The right lung has ___ lobes and the left lung has ___ lobes.',
     options: ['2, 3', '3, 2', '3, 3', '2, 2'],
     correctAnswer: '3, 2',
-    explanation: 'The right lung has three lobes (superior, middle, and inferior) while the left lung has two lobes (superior and inferior). The left lung is smaller to accommodate the heart, as described in NCERT Class 12 Chapter 14.',
+    explanation:
+      'The right lung has three lobes (superior, middle, and inferior) while the left lung has two lobes (superior and inferior). The left lung is smaller to accommodate the heart, as described in NCERT Class 12 Chapter 14.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 12, Chapter 14, Page 184',
     previousYearFrequency: 11,
@@ -3915,9 +3915,15 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-12-14',
     classId: 'class-12',
     question: 'Inspiration occurs when:',
-    options: ['Intrapulmonary pressure is greater than atmospheric pressure', 'Intrapulmonary pressure is less than atmospheric pressure', 'Intrapulmonary pressure equals atmospheric pressure', 'Intrapleural pressure equals atmospheric pressure'],
+    options: [
+      'Intrapulmonary pressure is greater than atmospheric pressure',
+      'Intrapulmonary pressure is less than atmospheric pressure',
+      'Intrapulmonary pressure equals atmospheric pressure',
+      'Intrapleural pressure equals atmospheric pressure',
+    ],
     correctAnswer: 'Intrapulmonary pressure is less than atmospheric pressure',
-    explanation: 'During inspiration, contraction of the diaphragm and external intercostal muscles increases thoracic volume, which decreases intrapulmonary pressure below atmospheric pressure, causing air to flow in, as described in NCERT.',
+    explanation:
+      'During inspiration, contraction of the diaphragm and external intercostal muscles increases thoracic volume, which decreases intrapulmonary pressure below atmospheric pressure, causing air to flow in, as described in NCERT.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 12, Chapter 14, Page 185-186',
     previousYearFrequency: 14,
@@ -3932,9 +3938,15 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-12-14',
     classId: 'class-12',
     question: 'Which muscle is primarily responsible for normal inspiration?',
-    options: ['External intercostal muscles', 'Diaphragm', 'Internal intercostal muscles', 'Abdominal muscles'],
+    options: [
+      'External intercostal muscles',
+      'Diaphragm',
+      'Internal intercostal muscles',
+      'Abdominal muscles',
+    ],
     correctAnswer: 'Diaphragm',
-    explanation: 'The diaphragm is the primary muscle of inspiration. Its contraction causes it to flatten and move downward, increasing thoracic volume and decreasing intrapulmonary pressure, as mentioned in NCERT Class 12 Chapter 14.',
+    explanation:
+      'The diaphragm is the primary muscle of inspiration. Its contraction causes it to flatten and move downward, increasing thoracic volume and decreasing intrapulmonary pressure, as mentioned in NCERT Class 12 Chapter 14.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 12, Chapter 14, Page 185-186',
     previousYearFrequency: 13,
@@ -3949,9 +3961,15 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-12-14',
     classId: 'class-12',
     question: 'Normal expiration during quiet breathing is:',
-    options: ['An active process involving muscle contraction', 'A passive process due to elastic recoil of lungs', 'Dependent on abdominal muscle contraction', 'Controlled by internal intercostal muscles'],
+    options: [
+      'An active process involving muscle contraction',
+      'A passive process due to elastic recoil of lungs',
+      'Dependent on abdominal muscle contraction',
+      'Controlled by internal intercostal muscles',
+    ],
     correctAnswer: 'A passive process due to elastic recoil of lungs',
-    explanation: 'Normal expiration is a passive process. When inspiratory muscles relax, the elastic recoil of the lungs and thoracic wall causes thoracic volume to decrease and intrapulmonary pressure to increase, forcing air out, as described in NCERT.',
+    explanation:
+      'Normal expiration is a passive process. When inspiratory muscles relax, the elastic recoil of the lungs and thoracic wall causes thoracic volume to decrease and intrapulmonary pressure to increase, forcing air out, as described in NCERT.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 12, Chapter 14, Page 186',
     previousYearFrequency: 12,
@@ -3966,9 +3984,15 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-12-14',
     classId: 'class-12',
     question: 'Forceful expiration involves the contraction of:',
-    options: ['Diaphragm and external intercostal muscles', 'Internal intercostal muscles and abdominal muscles', 'Only the diaphragm', 'Only external intercostal muscles'],
+    options: [
+      'Diaphragm and external intercostal muscles',
+      'Internal intercostal muscles and abdominal muscles',
+      'Only the diaphragm',
+      'Only external intercostal muscles',
+    ],
     correctAnswer: 'Internal intercostal muscles and abdominal muscles',
-    explanation: 'Forceful expiration is an active process involving contraction of internal intercostal muscles and abdominal muscles, which decreases thoracic volume more rapidly and forcefully than passive expiration, as mentioned in NCERT.',
+    explanation:
+      'Forceful expiration is an active process involving contraction of internal intercostal muscles and abdominal muscles, which decreases thoracic volume more rapidly and forcefully than passive expiration, as mentioned in NCERT.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 12, Chapter 14, Page 186',
     previousYearFrequency: 10,
@@ -3983,9 +4007,15 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-12-14',
     classId: 'class-12',
     question: 'The intrapleural pressure is always:',
-    options: ['Greater than atmospheric pressure', 'Equal to atmospheric pressure', 'Less than atmospheric pressure', 'Equal to intrapulmonary pressure'],
+    options: [
+      'Greater than atmospheric pressure',
+      'Equal to atmospheric pressure',
+      'Less than atmospheric pressure',
+      'Equal to intrapulmonary pressure',
+    ],
     correctAnswer: 'Less than atmospheric pressure',
-    explanation: 'Intrapleural pressure (pressure in the pleural cavity) is always negative or less than atmospheric pressure. This negative pressure keeps the lungs inflated and prevents lung collapse, as described in NCERT Class 12 Chapter 14.',
+    explanation:
+      'Intrapleural pressure (pressure in the pleural cavity) is always negative or less than atmospheric pressure. This negative pressure keeps the lungs inflated and prevents lung collapse, as described in NCERT Class 12 Chapter 14.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 12, Chapter 14, Page 186',
     previousYearFrequency: 11,
@@ -4000,9 +4030,15 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-12-14',
     classId: 'class-12',
     question: 'Pneumothorax is a condition in which:',
-    options: ['Air enters the pleural cavity', 'Lungs become infected', 'Alveoli are damaged', 'Bronchi become inflamed'],
+    options: [
+      'Air enters the pleural cavity',
+      'Lungs become infected',
+      'Alveoli are damaged',
+      'Bronchi become inflamed',
+    ],
     correctAnswer: 'Air enters the pleural cavity',
-    explanation: 'Pneumothorax occurs when air enters the pleural cavity, equalizing intrapleural pressure with atmospheric pressure. This eliminates the pressure gradient needed to keep lungs inflated, causing lung collapse, as mentioned in NCERT.',
+    explanation:
+      'Pneumothorax occurs when air enters the pleural cavity, equalizing intrapleural pressure with atmospheric pressure. This eliminates the pressure gradient needed to keep lungs inflated, causing lung collapse, as mentioned in NCERT.',
     difficulty: 'Hard',
     ncertPageReference: 'Class 12, Chapter 14, Page 186',
     previousYearFrequency: 9,
@@ -4017,9 +4053,15 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-12-14',
     classId: 'class-12',
     question: 'During inspiration, which of the following occurs?',
-    options: ['Diaphragm relaxes and moves upward', 'Thoracic volume decreases', 'Intrapulmonary pressure decreases', 'Internal intercostal muscles contract'],
+    options: [
+      'Diaphragm relaxes and moves upward',
+      'Thoracic volume decreases',
+      'Intrapulmonary pressure decreases',
+      'Internal intercostal muscles contract',
+    ],
     correctAnswer: 'Intrapulmonary pressure decreases',
-    explanation: 'During inspiration, contraction of the diaphragm and external intercostal muscles increases thoracic volume, which decreases intrapulmonary pressure below atmospheric pressure according to Boyle\'s law, as described in NCERT.',
+    explanation:
+      "During inspiration, contraction of the diaphragm and external intercostal muscles increases thoracic volume, which decreases intrapulmonary pressure below atmospheric pressure according to Boyle's law, as described in NCERT.",
     difficulty: 'Medium',
     ncertPageReference: 'Class 12, Chapter 14, Page 185-186',
     previousYearFrequency: 13,
@@ -4033,10 +4075,12 @@ export const class11Questions: AuthenticQuestion[] = [
     topicId: 'topic-12-14-respiration',
     chapterId: 'ch-12-14',
     classId: 'class-12',
-    question: 'The pressure gradient between the atmosphere and alveoli during normal breathing is approximately:',
+    question:
+      'The pressure gradient between the atmosphere and alveoli during normal breathing is approximately:',
     options: ['1-2 mm Hg', '10-15 mm Hg', '50-60 mm Hg', '100-150 mm Hg'],
     correctAnswer: '1-2 mm Hg',
-    explanation: 'During normal quiet breathing, the pressure difference between atmospheric pressure and intrapulmonary pressure is only about 1-2 mm Hg, which is sufficient to move air in and out of the lungs, as mentioned in NCERT Class 12 Chapter 14.',
+    explanation:
+      'During normal quiet breathing, the pressure difference between atmospheric pressure and intrapulmonary pressure is only about 1-2 mm Hg, which is sufficient to move air in and out of the lungs, as mentioned in NCERT Class 12 Chapter 14.',
     difficulty: 'Hard',
     ncertPageReference: 'Class 12, Chapter 14, Page 186',
     previousYearFrequency: 8,
@@ -4051,9 +4095,15 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-12-14',
     classId: 'class-12',
     question: 'Tidal Volume (TV) is defined as:',
-    options: ['Volume of air inspired or expired during normal breathing', 'Maximum volume of air that can be inspired after normal inspiration', 'Maximum volume of air that can be expired after normal expiration', 'Volume of air remaining in lungs after maximum expiration'],
+    options: [
+      'Volume of air inspired or expired during normal breathing',
+      'Maximum volume of air that can be inspired after normal inspiration',
+      'Maximum volume of air that can be expired after normal expiration',
+      'Volume of air remaining in lungs after maximum expiration',
+    ],
     correctAnswer: 'Volume of air inspired or expired during normal breathing',
-    explanation: 'Tidal Volume (TV) is the volume of air inspired or expired during normal quiet breathing, approximately 500 mL in a healthy adult male, as described in NCERT Class 12 Chapter 14.',
+    explanation:
+      'Tidal Volume (TV) is the volume of air inspired or expired during normal quiet breathing, approximately 500 mL in a healthy adult male, as described in NCERT Class 12 Chapter 14.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 12, Chapter 14, Page 186',
     previousYearFrequency: 15,
@@ -4070,7 +4120,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The normal Tidal Volume in a healthy adult male is approximately:',
     options: ['500 mL', '1000 mL', '2500 mL', '3500 mL'],
     correctAnswer: '500 mL',
-    explanation: 'The normal Tidal Volume (TV) in a healthy adult male is approximately 500 mL. This represents the volume of air moved in or out during each normal breath, as mentioned in NCERT Class 12 Chapter 14.',
+    explanation:
+      'The normal Tidal Volume (TV) in a healthy adult male is approximately 500 mL. This represents the volume of air moved in or out during each normal breath, as mentioned in NCERT Class 12 Chapter 14.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 12, Chapter 14, Page 186-187',
     previousYearFrequency: 14,
@@ -4085,9 +4136,15 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-12-14',
     classId: 'class-12',
     question: 'Inspiratory Reserve Volume (IRV) is:',
-    options: ['Volume of air inspired during normal breathing', 'Additional volume of air that can be inspired by forceful inspiration', 'Volume of air remaining after normal expiration', 'Volume of air that can be expired after normal expiration'],
+    options: [
+      'Volume of air inspired during normal breathing',
+      'Additional volume of air that can be inspired by forceful inspiration',
+      'Volume of air remaining after normal expiration',
+      'Volume of air that can be expired after normal expiration',
+    ],
     correctAnswer: 'Additional volume of air that can be inspired by forceful inspiration',
-    explanation: 'Inspiratory Reserve Volume (IRV) is the additional volume of air that can be inspired by forceful inspiration after a normal tidal inspiration, approximately 2500-3000 mL, as described in NCERT Class 12 Chapter 14.',
+    explanation:
+      'Inspiratory Reserve Volume (IRV) is the additional volume of air that can be inspired by forceful inspiration after a normal tidal inspiration, approximately 2500-3000 mL, as described in NCERT Class 12 Chapter 14.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 12, Chapter 14, Page 186-187',
     previousYearFrequency: 12,
@@ -4102,9 +4159,15 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-12-14',
     classId: 'class-12',
     question: 'Expiratory Reserve Volume (ERV) represents:',
-    options: ['Volume of air expired during normal breathing', 'Volume of air remaining in lungs after normal expiration', 'Additional volume of air that can be expired by forceful expiration', 'Volume of air that remains in lungs even after forceful expiration'],
+    options: [
+      'Volume of air expired during normal breathing',
+      'Volume of air remaining in lungs after normal expiration',
+      'Additional volume of air that can be expired by forceful expiration',
+      'Volume of air that remains in lungs even after forceful expiration',
+    ],
     correctAnswer: 'Additional volume of air that can be expired by forceful expiration',
-    explanation: 'Expiratory Reserve Volume (ERV) is the additional volume of air that can be expired by forceful expiration after a normal tidal expiration, approximately 1000-1100 mL, as mentioned in NCERT Class 12 Chapter 14.',
+    explanation:
+      'Expiratory Reserve Volume (ERV) is the additional volume of air that can be expired by forceful expiration after a normal tidal expiration, approximately 1000-1100 mL, as mentioned in NCERT Class 12 Chapter 14.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 12, Chapter 14, Page 186-187',
     previousYearFrequency: 11,
@@ -4121,7 +4184,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Residual Volume (RV) is approximately:',
     options: ['500 mL', '1000 mL', '1200 mL', '2500 mL'],
     correctAnswer: '1200 mL',
-    explanation: 'Residual Volume (RV) is the volume of air remaining in the lungs even after the most forceful expiration, approximately 1100-1200 mL. RV prevents lungs from collapsing, as described in NCERT Class 12 Chapter 14.',
+    explanation:
+      'Residual Volume (RV) is the volume of air remaining in the lungs even after the most forceful expiration, approximately 1100-1200 mL. RV prevents lungs from collapsing, as described in NCERT Class 12 Chapter 14.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 12, Chapter 14, Page 186-187',
     previousYearFrequency: 10,
@@ -4138,7 +4202,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Vital Capacity (VC) is calculated as:',
     options: ['TV + IRV', 'TV + ERV', 'TV + IRV + ERV', 'TV + IRV + ERV + RV'],
     correctAnswer: 'TV + IRV + ERV',
-    explanation: 'Vital Capacity (VC) is the maximum volume of air that can be breathed out after a maximum inspiration. VC = TV + IRV + ERV, approximately 3500-4500 mL in healthy adult males, as described in NCERT Class 12 Chapter 14.',
+    explanation:
+      'Vital Capacity (VC) is the maximum volume of air that can be breathed out after a maximum inspiration. VC = TV + IRV + ERV, approximately 3500-4500 mL in healthy adult males, as described in NCERT Class 12 Chapter 14.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 12, Chapter 14, Page 187',
     previousYearFrequency: 14,
@@ -4155,7 +4220,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Total Lung Capacity (TLC) in a healthy adult male is approximately:',
     options: ['3500 mL', '4500 mL', '5000-6000 mL', '7000-8000 mL'],
     correctAnswer: '5000-6000 mL',
-    explanation: 'Total Lung Capacity (TLC) is the total volume of air accommodated in the lungs at the end of maximum inspiration. TLC = VC + RV, approximately 5000-6000 mL in healthy adult males, as mentioned in NCERT Class 12 Chapter 14.',
+    explanation:
+      'Total Lung Capacity (TLC) is the total volume of air accommodated in the lungs at the end of maximum inspiration. TLC = VC + RV, approximately 5000-6000 mL in healthy adult males, as mentioned in NCERT Class 12 Chapter 14.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 12, Chapter 14, Page 187',
     previousYearFrequency: 12,
@@ -4169,10 +4235,12 @@ export const class11Questions: AuthenticQuestion[] = [
     topicId: 'topic-12-14-respiration',
     chapterId: 'ch-12-14',
     classId: 'class-12',
-    question: 'If a person has TV = 500 mL, IRV = 3000 mL, and ERV = 1000 mL, what is their Vital Capacity?',
+    question:
+      'If a person has TV = 500 mL, IRV = 3000 mL, and ERV = 1000 mL, what is their Vital Capacity?',
     options: ['3500 mL', '4000 mL', '4500 mL', '5000 mL'],
     correctAnswer: '4500 mL',
-    explanation: 'Vital Capacity (VC) = TV + IRV + ERV = 500 + 3000 + 1000 = 4500 mL. This represents the maximum volume of air that can be expired after maximum inspiration, as described in NCERT Class 12 Chapter 14.',
+    explanation:
+      'Vital Capacity (VC) = TV + IRV + ERV = 500 + 3000 + 1000 = 4500 mL. This represents the maximum volume of air that can be expired after maximum inspiration, as described in NCERT Class 12 Chapter 14.',
     difficulty: 'Hard',
     ncertPageReference: 'Class 12, Chapter 14, Page 187',
     previousYearFrequency: 11,
@@ -4189,7 +4257,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Exchange of gases in the lungs occurs primarily by:',
     options: ['Active transport', 'Facilitated diffusion', 'Simple diffusion', 'Osmosis'],
     correctAnswer: 'Simple diffusion',
-    explanation: 'Gas exchange in the lungs occurs by simple diffusion along the concentration gradient. O2 diffuses from alveoli (high concentration) to blood (low concentration), while CO2 diffuses from blood to alveoli, as described in NCERT.',
+    explanation:
+      'Gas exchange in the lungs occurs by simple diffusion along the concentration gradient. O2 diffuses from alveoli (high concentration) to blood (low concentration), while CO2 diffuses from blood to alveoli, as described in NCERT.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 12, Chapter 14, Page 187',
     previousYearFrequency: 13,
@@ -4206,7 +4275,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The partial pressure of oxygen in atmospheric air is approximately:',
     options: ['104 mm Hg', '159 mm Hg', '40 mm Hg', '46 mm Hg'],
     correctAnswer: '159 mm Hg',
-    explanation: 'The partial pressure of oxygen (pO2) in atmospheric air at sea level is approximately 159 mm Hg. Oxygen constitutes about 21% of atmospheric air, as mentioned in NCERT Class 12 Chapter 14.',
+    explanation:
+      'The partial pressure of oxygen (pO2) in atmospheric air at sea level is approximately 159 mm Hg. Oxygen constitutes about 21% of atmospheric air, as mentioned in NCERT Class 12 Chapter 14.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 12, Chapter 14, Page 187',
     previousYearFrequency: 10,
@@ -4223,7 +4293,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The partial pressure of oxygen in alveolar air is approximately:',
     options: ['40 mm Hg', '95 mm Hg', '104 mm Hg', '159 mm Hg'],
     correctAnswer: '104 mm Hg',
-    explanation: 'The partial pressure of oxygen (pO2) in alveolar air is approximately 104 mm Hg. This is lower than atmospheric oxygen because of mixing with residual air and oxygen consumption, as described in NCERT Class 12 Chapter 14.',
+    explanation:
+      'The partial pressure of oxygen (pO2) in alveolar air is approximately 104 mm Hg. This is lower than atmospheric oxygen because of mixing with residual air and oxygen consumption, as described in NCERT Class 12 Chapter 14.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 12, Chapter 14, Page 187-188',
     previousYearFrequency: 12,
@@ -4240,7 +4311,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The partial pressure of CO2 in deoxygenated blood is approximately:',
     options: ['40 mm Hg', '45 mm Hg', '95 mm Hg', '104 mm Hg'],
     correctAnswer: '45 mm Hg',
-    explanation: 'The partial pressure of CO2 (pCO2) in deoxygenated blood returning to the lungs is approximately 45 mm Hg, which is higher than alveolar pCO2 (40 mm Hg), enabling CO2 diffusion into alveoli, as mentioned in NCERT.',
+    explanation:
+      'The partial pressure of CO2 (pCO2) in deoxygenated blood returning to the lungs is approximately 45 mm Hg, which is higher than alveolar pCO2 (40 mm Hg), enabling CO2 diffusion into alveoli, as mentioned in NCERT.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 12, Chapter 14, Page 187-188',
     previousYearFrequency: 11,
@@ -4255,9 +4327,15 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-12-14',
     classId: 'class-12',
     question: 'The diffusion of gases across the respiratory membrane depends on:',
-    options: ['Thickness of the membrane only', 'Partial pressure gradient only', 'Solubility of gases only', 'Partial pressure gradient, solubility, and membrane thickness'],
+    options: [
+      'Thickness of the membrane only',
+      'Partial pressure gradient only',
+      'Solubility of gases only',
+      'Partial pressure gradient, solubility, and membrane thickness',
+    ],
     correctAnswer: 'Partial pressure gradient, solubility, and membrane thickness',
-    explanation: 'Gas diffusion across the respiratory membrane depends on multiple factors: partial pressure gradient (driving force), solubility of gases in membrane, membrane thickness, and surface area available for diffusion, as described in NCERT Class 12 Chapter 14.',
+    explanation:
+      'Gas diffusion across the respiratory membrane depends on multiple factors: partial pressure gradient (driving force), solubility of gases in membrane, membrane thickness, and surface area available for diffusion, as described in NCERT Class 12 Chapter 14.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 12, Chapter 14, Page 187-188',
     previousYearFrequency: 13,
@@ -4274,7 +4352,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The thickness of the diffusion membrane in the alveoli is approximately:',
     options: ['Less than 1 mm', '0.5 mm', '2-3 mm', 'About 5 mm'],
     correctAnswer: 'Less than 1 mm',
-    explanation: 'The total thickness of the diffusion membrane (alveolar epithelium, basement membrane, and capillary endothelium) is less than 1 mm, facilitating rapid gas exchange between alveolar air and blood, as mentioned in NCERT Class 12 Chapter 14.',
+    explanation:
+      'The total thickness of the diffusion membrane (alveolar epithelium, basement membrane, and capillary endothelium) is less than 1 mm, facilitating rapid gas exchange between alveolar air and blood, as mentioned in NCERT Class 12 Chapter 14.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 12, Chapter 14, Page 188',
     previousYearFrequency: 9,
@@ -4288,10 +4367,12 @@ export const class11Questions: AuthenticQuestion[] = [
     topicId: 'topic-12-14-respiration',
     chapterId: 'ch-12-14',
     classId: 'class-12',
-    question: 'Which gas has a higher solubility in blood and diffuses more rapidly despite a smaller pressure gradient?',
+    question:
+      'Which gas has a higher solubility in blood and diffuses more rapidly despite a smaller pressure gradient?',
     options: ['Oxygen', 'Nitrogen', 'Carbon dioxide', 'Hydrogen'],
     correctAnswer: 'Carbon dioxide',
-    explanation: 'Carbon dioxide has about 20-25 times higher solubility in blood than oxygen. Therefore, CO2 diffuses rapidly across the respiratory membrane despite having a much smaller pressure gradient (5 mm Hg) compared to O2 (60 mm Hg), as described in NCERT.',
+    explanation:
+      'Carbon dioxide has about 20-25 times higher solubility in blood than oxygen. Therefore, CO2 diffuses rapidly across the respiratory membrane despite having a much smaller pressure gradient (5 mm Hg) compared to O2 (60 mm Hg), as described in NCERT.',
     difficulty: 'Hard',
     ncertPageReference: 'Class 12, Chapter 14, Page 188',
     previousYearFrequency: 12,
@@ -4308,7 +4389,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The pressure gradient for oxygen diffusion from alveoli to blood is approximately:',
     options: ['5 mm Hg', '40 mm Hg', '60 mm Hg', '104 mm Hg'],
     correctAnswer: '60 mm Hg',
-    explanation: 'The pressure gradient for O2 diffusion from alveoli to blood is approximately 60 mm Hg (alveolar pO2 = 104 mm Hg, deoxygenated blood pO2 = 40 mm Hg). This gradient drives oxygen diffusion into blood, as mentioned in NCERT Class 12 Chapter 14.',
+    explanation:
+      'The pressure gradient for O2 diffusion from alveoli to blood is approximately 60 mm Hg (alveolar pO2 = 104 mm Hg, deoxygenated blood pO2 = 40 mm Hg). This gradient drives oxygen diffusion into blood, as mentioned in NCERT Class 12 Chapter 14.',
     difficulty: 'Hard',
     ncertPageReference: 'Class 12, Chapter 14, Page 187-188',
     previousYearFrequency: 10,
@@ -4325,7 +4407,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Approximately what percentage of oxygen is transported by haemoglobin in blood?',
     options: ['3%', '7%', '20%', '97%'],
     correctAnswer: '97%',
-    explanation: 'Approximately 97% of oxygen is transported by haemoglobin as oxyhaemoglobin in red blood cells, while only about 3% is carried in dissolved form in plasma, as described in NCERT Class 12 Chapter 14.',
+    explanation:
+      'Approximately 97% of oxygen is transported by haemoglobin as oxyhaemoglobin in red blood cells, while only about 3% is carried in dissolved form in plasma, as described in NCERT Class 12 Chapter 14.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 12, Chapter 14, Page 188',
     previousYearFrequency: 13,
@@ -4342,7 +4425,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Each haemoglobin molecule can bind a maximum of how many oxygen molecules?',
     options: ['1', '2', '4', '8'],
     correctAnswer: '4',
-    explanation: 'Each haemoglobin molecule consists of four haem groups and can bind a maximum of four oxygen molecules (one O2 per haem). The binding is cooperative, as mentioned in NCERT Class 12 Chapter 14.',
+    explanation:
+      'Each haemoglobin molecule consists of four haem groups and can bind a maximum of four oxygen molecules (one O2 per haem). The binding is cooperative, as mentioned in NCERT Class 12 Chapter 14.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 12, Chapter 14, Page 188',
     previousYearFrequency: 14,
@@ -4359,7 +4443,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The oxygen-haemoglobin dissociation curve is:',
     options: ['Linear', 'Sigmoidal (S-shaped)', 'Hyperbolic', 'Exponential'],
     correctAnswer: 'Sigmoidal (S-shaped)',
-    explanation: 'The oxygen-haemoglobin dissociation curve is sigmoidal or S-shaped due to the cooperative binding of oxygen to haemoglobin. Binding of one oxygen molecule increases the affinity for subsequent oxygen molecules, as described in NCERT Class 12 Chapter 14.',
+    explanation:
+      'The oxygen-haemoglobin dissociation curve is sigmoidal or S-shaped due to the cooperative binding of oxygen to haemoglobin. Binding of one oxygen molecule increases the affinity for subsequent oxygen molecules, as described in NCERT Class 12 Chapter 14.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 12, Chapter 14, Page 189',
     previousYearFrequency: 15,
@@ -4374,9 +4459,15 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-12-14',
     classId: 'class-12',
     question: 'Which factor causes a right shift in the oxygen-haemoglobin dissociation curve?',
-    options: ['Decrease in temperature', 'Decrease in CO2 concentration', 'Decrease in H+ concentration', 'Increase in temperature'],
+    options: [
+      'Decrease in temperature',
+      'Decrease in CO2 concentration',
+      'Decrease in H+ concentration',
+      'Increase in temperature',
+    ],
     correctAnswer: 'Increase in temperature',
-    explanation: 'Increase in temperature, CO2 concentration, or H+ concentration (decreased pH) causes a right shift in the oxygen dissociation curve, reducing haemoglobin\'s affinity for oxygen and promoting oxygen release to tissues, as mentioned in NCERT.',
+    explanation:
+      "Increase in temperature, CO2 concentration, or H+ concentration (decreased pH) causes a right shift in the oxygen dissociation curve, reducing haemoglobin's affinity for oxygen and promoting oxygen release to tissues, as mentioned in NCERT.",
     difficulty: 'Hard',
     ncertPageReference: 'Class 12, Chapter 14, Page 189',
     previousYearFrequency: 13,
@@ -4391,9 +4482,15 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-12-14',
     classId: 'class-12',
     question: 'The Bohr effect refers to:',
-    options: ['Effect of oxygen on CO2 transport', 'Effect of CO2 and H+ on oxygen binding to haemoglobin', 'Effect of temperature on respiration rate', 'Effect of altitude on breathing'],
+    options: [
+      'Effect of oxygen on CO2 transport',
+      'Effect of CO2 and H+ on oxygen binding to haemoglobin',
+      'Effect of temperature on respiration rate',
+      'Effect of altitude on breathing',
+    ],
     correctAnswer: 'Effect of CO2 and H+ on oxygen binding to haemoglobin',
-    explanation: 'The Bohr effect describes how increased CO2 and H+ concentration (decreased pH) reduces haemoglobin\'s affinity for oxygen, facilitating oxygen release to metabolically active tissues, as described in NCERT Class 12 Chapter 14.',
+    explanation:
+      "The Bohr effect describes how increased CO2 and H+ concentration (decreased pH) reduces haemoglobin's affinity for oxygen, facilitating oxygen release to metabolically active tissues, as described in NCERT Class 12 Chapter 14.",
     difficulty: 'Medium',
     ncertPageReference: 'Class 12, Chapter 14, Page 189',
     previousYearFrequency: 14,
@@ -4408,9 +4505,15 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-12-14',
     classId: 'class-12',
     question: 'In tissues with high metabolic activity, oxygen dissociation from haemoglobin is:',
-    options: ['Decreased due to high O2 concentration', 'Increased due to high CO2 and H+ concentration', 'Not affected by metabolic activity', 'Decreased due to low temperature'],
+    options: [
+      'Decreased due to high O2 concentration',
+      'Increased due to high CO2 and H+ concentration',
+      'Not affected by metabolic activity',
+      'Decreased due to low temperature',
+    ],
     correctAnswer: 'Increased due to high CO2 and H+ concentration',
-    explanation: 'Metabolically active tissues produce more CO2 and H+ ions, which decrease pH and reduce haemoglobin\'s oxygen affinity (Bohr effect), promoting oxygen dissociation and delivery to tissues, as mentioned in NCERT Class 12 Chapter 14.',
+    explanation:
+      "Metabolically active tissues produce more CO2 and H+ ions, which decrease pH and reduce haemoglobin's oxygen affinity (Bohr effect), promoting oxygen dissociation and delivery to tissues, as mentioned in NCERT Class 12 Chapter 14.",
     difficulty: 'Hard',
     ncertPageReference: 'Class 12, Chapter 14, Page 189',
     previousYearFrequency: 11,
@@ -4427,7 +4530,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Approximately what percentage of CO2 is transported as bicarbonate ions in blood?',
     options: ['7%', '20-25%', '70%', '97%'],
     correctAnswer: '70%',
-    explanation: 'About 70% of CO2 is transported as bicarbonate ions (HCO3-) in blood plasma. About 20-25% is carried by haemoglobin as carbamino-haemoglobin, and 7% is dissolved in plasma, as described in NCERT Class 12 Chapter 14.',
+    explanation:
+      'About 70% of CO2 is transported as bicarbonate ions (HCO3-) in blood plasma. About 20-25% is carried by haemoglobin as carbamino-haemoglobin, and 7% is dissolved in plasma, as described in NCERT Class 12 Chapter 14.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 12, Chapter 14, Page 189-190',
     previousYearFrequency: 14,
@@ -4444,7 +4548,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The enzyme carbonic anhydrase is present in:',
     options: ['Blood plasma', 'Red blood cells', 'White blood cells', 'Platelets'],
     correctAnswer: 'Red blood cells',
-    explanation: 'Carbonic anhydrase is an enzyme present in red blood cells that catalyzes the reversible reaction: CO2 + H2O ⇌ H2CO3 ⇌ H+ + HCO3-. This facilitates rapid CO2 transport as bicarbonate, as mentioned in NCERT Class 12 Chapter 14.',
+    explanation:
+      'Carbonic anhydrase is an enzyme present in red blood cells that catalyzes the reversible reaction: CO2 + H2O ⇌ H2CO3 ⇌ H+ + HCO3-. This facilitates rapid CO2 transport as bicarbonate, as mentioned in NCERT Class 12 Chapter 14.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 12, Chapter 14, Page 189-190',
     previousYearFrequency: 13,
@@ -4461,7 +4566,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'CO2 combines with haemoglobin to form:',
     options: ['Oxyhaemoglobin', 'Carbamino-haemoglobin', 'Carboxy-haemoglobin', 'Methaemoglobin'],
     correctAnswer: 'Carbamino-haemoglobin',
-    explanation: 'CO2 binds to the amino groups of haemoglobin (primarily the globin part, not haem) to form carbamino-haemoglobin. This accounts for about 20-25% of CO2 transport, as described in NCERT Class 12 Chapter 14.',
+    explanation:
+      'CO2 binds to the amino groups of haemoglobin (primarily the globin part, not haem) to form carbamino-haemoglobin. This accounts for about 20-25% of CO2 transport, as described in NCERT Class 12 Chapter 14.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 12, Chapter 14, Page 189-190',
     previousYearFrequency: 12,
@@ -4475,10 +4581,12 @@ export const class11Questions: AuthenticQuestion[] = [
     topicId: 'topic-12-14-respiration',
     chapterId: 'ch-12-14',
     classId: 'class-12',
-    question: 'In tissues, CO2 diffuses into blood and forms H2CO3, which dissociates into H+ and HCO3-. The H+ ions are buffered by:',
+    question:
+      'In tissues, CO2 diffuses into blood and forms H2CO3, which dissociates into H+ and HCO3-. The H+ ions are buffered by:',
     options: ['Plasma proteins', 'Haemoglobin', 'White blood cells', 'Platelets'],
     correctAnswer: 'Haemoglobin',
-    explanation: 'The H+ ions produced from carbonic acid dissociation are buffered by haemoglobin in RBCs, preventing pH changes. Deoxygenated haemoglobin is a better buffer than oxyhaemoglobin, as mentioned in NCERT Class 12 Chapter 14.',
+    explanation:
+      'The H+ ions produced from carbonic acid dissociation are buffered by haemoglobin in RBCs, preventing pH changes. Deoxygenated haemoglobin is a better buffer than oxyhaemoglobin, as mentioned in NCERT Class 12 Chapter 14.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 12, Chapter 14, Page 189-190',
     previousYearFrequency: 10,
@@ -4493,9 +4601,15 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-12-14',
     classId: 'class-12',
     question: 'The chloride shift (Hamburger phenomenon) refers to:',
-    options: ['Movement of Cl- from plasma into RBCs', 'Movement of Cl- from RBCs into plasma', 'Movement of HCO3- from RBCs into plasma', 'Movement of CO2 from tissues into blood'],
+    options: [
+      'Movement of Cl- from plasma into RBCs',
+      'Movement of Cl- from RBCs into plasma',
+      'Movement of HCO3- from RBCs into plasma',
+      'Movement of CO2 from tissues into blood',
+    ],
     correctAnswer: 'Movement of Cl- from plasma into RBCs',
-    explanation: 'The chloride shift refers to the movement of Cl- ions from plasma into RBCs in exchange for HCO3- ions moving out. This maintains electrical neutrality during CO2 transport as bicarbonate, as described in NCERT Class 12 Chapter 14.',
+    explanation:
+      'The chloride shift refers to the movement of Cl- ions from plasma into RBCs in exchange for HCO3- ions moving out. This maintains electrical neutrality during CO2 transport as bicarbonate, as described in NCERT Class 12 Chapter 14.',
     difficulty: 'Hard',
     ncertPageReference: 'Class 12, Chapter 14, Page 190',
     previousYearFrequency: 11,
@@ -4509,10 +4623,12 @@ export const class11Questions: AuthenticQuestion[] = [
     topicId: 'topic-12-14-respiration',
     chapterId: 'ch-12-14',
     classId: 'class-12',
-    question: 'At the alveolar level, HCO3- from plasma combines with H+ to form H2CO3, which is converted to CO2 and H2O by carbonic anhydrase. This process is known as:',
+    question:
+      'At the alveolar level, HCO3- from plasma combines with H+ to form H2CO3, which is converted to CO2 and H2O by carbonic anhydrase. This process is known as:',
     options: ['Forward reaction', 'Reverse reaction', 'Bohr effect', 'Haldane effect'],
     correctAnswer: 'Reverse reaction',
-    explanation: 'In the lungs, the reverse reaction occurs: HCO3- + H+ → H2CO3 → CO2 + H2O. The CO2 then diffuses into alveoli and is exhaled. This reversal is facilitated by low pCO2 in alveoli, as mentioned in NCERT Class 12 Chapter 14.',
+    explanation:
+      'In the lungs, the reverse reaction occurs: HCO3- + H+ → H2CO3 → CO2 + H2O. The CO2 then diffuses into alveoli and is exhaled. This reversal is facilitated by low pCO2 in alveoli, as mentioned in NCERT Class 12 Chapter 14.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 12, Chapter 14, Page 190',
     previousYearFrequency: 9,
@@ -4529,7 +4645,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The primary respiratory control center is located in:',
     options: ['Cerebral cortex', 'Cerebellum', 'Medulla oblongata', 'Pons'],
     correctAnswer: 'Medulla oblongata',
-    explanation: 'The primary respiratory control center is located in the medulla oblongata of the brain stem. It contains respiratory rhythm centers that regulate the basic rhythm of respiration, as described in NCERT Class 12 Chapter 14.',
+    explanation:
+      'The primary respiratory control center is located in the medulla oblongata of the brain stem. It contains respiratory rhythm centers that regulate the basic rhythm of respiration, as described in NCERT Class 12 Chapter 14.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 12, Chapter 14, Page 190-191',
     previousYearFrequency: 14,
@@ -4546,7 +4663,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The pneumotaxic center is located in the:',
     options: ['Medulla oblongata', 'Pons', 'Cerebellum', 'Hypothalamus'],
     correctAnswer: 'Pons',
-    explanation: 'The pneumotaxic center is located in the pons region of the brain. It moderates the functions of the respiratory rhythm center and can reduce the duration of inspiration, thereby altering the respiratory rate, as mentioned in NCERT Class 12 Chapter 14.',
+    explanation:
+      'The pneumotaxic center is located in the pons region of the brain. It moderates the functions of the respiratory rhythm center and can reduce the duration of inspiration, thereby altering the respiratory rate, as mentioned in NCERT Class 12 Chapter 14.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 12, Chapter 14, Page 191',
     previousYearFrequency: 12,
@@ -4561,9 +4679,15 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-12-14',
     classId: 'class-12',
     question: 'The most important factor that regulates respiration is:',
-    options: ['Oxygen concentration in blood', 'Carbon dioxide concentration in blood', 'Nitrogen concentration in blood', 'Blood pressure'],
+    options: [
+      'Oxygen concentration in blood',
+      'Carbon dioxide concentration in blood',
+      'Nitrogen concentration in blood',
+      'Blood pressure',
+    ],
     correctAnswer: 'Carbon dioxide concentration in blood',
-    explanation: 'Carbon dioxide concentration (and resulting H+ concentration/pH) is the most important factor regulating respiration. Increased CO2 stimulates chemoreceptors, which signal respiratory centers to increase breathing rate and depth, as described in NCERT Class 12 Chapter 14.',
+    explanation:
+      'Carbon dioxide concentration (and resulting H+ concentration/pH) is the most important factor regulating respiration. Increased CO2 stimulates chemoreceptors, which signal respiratory centers to increase breathing rate and depth, as described in NCERT Class 12 Chapter 14.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 12, Chapter 14, Page 191',
     previousYearFrequency: 15,
@@ -4578,9 +4702,15 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-12-14',
     classId: 'class-12',
     question: 'Asthma is a respiratory disorder characterized by:',
-    options: ['Inflammation and narrowing of bronchi and bronchioles', 'Damage to alveolar walls', 'Infection of the lungs', 'Fluid accumulation in pleural cavity'],
+    options: [
+      'Inflammation and narrowing of bronchi and bronchioles',
+      'Damage to alveolar walls',
+      'Infection of the lungs',
+      'Fluid accumulation in pleural cavity',
+    ],
     correctAnswer: 'Inflammation and narrowing of bronchi and bronchioles',
-    explanation: 'Asthma is characterized by inflammation and narrowing (bronchoconstriction) of the bronchi and bronchioles, leading to difficulty in breathing, wheezing, and coughing. It is often triggered by allergens, pollution, or cold air, as described in NCERT Class 12 Chapter 14.',
+    explanation:
+      'Asthma is characterized by inflammation and narrowing (bronchoconstriction) of the bronchi and bronchioles, leading to difficulty in breathing, wheezing, and coughing. It is often triggered by allergens, pollution, or cold air, as described in NCERT Class 12 Chapter 14.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 12, Chapter 14, Page 191-192',
     previousYearFrequency: 13,
@@ -4604,14 +4734,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'What percentage of blood does plasma constitute in a healthy individual?',
     options: ['45%', '50%', '55%', '60%'],
     correctAnswer: '55%',
-    explanation: 'According to NCERT, plasma is a straw-colored viscous fluid constituting nearly 55% of blood, while formed elements (RBCs, WBCs, platelets) constitute the remaining 45%.',
+    explanation:
+      'According to NCERT, plasma is a straw-colored viscous fluid constituting nearly 55% of blood, while formed elements (RBCs, WBCs, platelets) constitute the remaining 45%.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 18, Page 193',
     previousYearFrequency: 12,
     conceptualLinks: ['blood-composition', 'plasma', 'formed-elements'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q11-batch7-002',
@@ -4621,14 +4752,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Which plasma protein is primarily responsible for blood clotting?',
     options: ['Albumin', 'Globulin', 'Fibrinogen', 'Prothrombin'],
     correctAnswer: 'Fibrinogen',
-    explanation: 'Fibrinogen is the major plasma protein needed for clotting or coagulation of blood. During clotting, fibrinogens are converted to fibrins by the enzyme thrombin, forming a network that traps blood cells.',
+    explanation:
+      'Fibrinogen is the major plasma protein needed for clotting or coagulation of blood. During clotting, fibrinogens are converted to fibrins by the enzyme thrombin, forming a network that traps blood cells.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 18, Page 193-194',
     previousYearFrequency: 15,
     conceptualLinks: ['plasma-proteins', 'blood-clotting', 'fibrinogen'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch7-003',
@@ -4638,14 +4770,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'What is the normal RBC count in a healthy adult male per mm³ of blood?',
     options: ['3-4 million', '5-5.5 million', '6-8 million', '10-12 million'],
     correctAnswer: '5-5.5 million',
-    explanation: 'A healthy adult man has, on average, 5 million to 5.5 million RBCs per mm³ of blood. RBCs are the most abundant cells in blood and contain hemoglobin for oxygen transport.',
+    explanation:
+      'A healthy adult man has, on average, 5 million to 5.5 million RBCs per mm³ of blood. RBCs are the most abundant cells in blood and contain hemoglobin for oxygen transport.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 18, Page 194',
     previousYearFrequency: 13,
     conceptualLinks: ['erythrocytes', 'RBC-count', 'blood-cells'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q11-batch7-004',
@@ -4655,14 +4788,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'What is the average lifespan of a human red blood cell?',
     options: ['60 days', '90 days', '120 days', '150 days'],
     correctAnswer: '120 days',
-    explanation: 'RBCs have an average lifespan of 120 days, after which they are destroyed in the spleen, which is also known as the graveyard of RBCs.',
+    explanation:
+      'RBCs have an average lifespan of 120 days, after which they are destroyed in the spleen, which is also known as the graveyard of RBCs.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 18, Page 194',
     previousYearFrequency: 14,
     conceptualLinks: ['RBC-lifespan', 'spleen', 'erythrocytes'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch7-005',
@@ -4672,14 +4806,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Which type of white blood cell is most abundant in human blood?',
     options: ['Lymphocytes', 'Monocytes', 'Neutrophils', 'Eosinophils'],
     correctAnswer: 'Neutrophils',
-    explanation: 'Neutrophils are the most abundant WBCs, constituting 60-65% of total WBCs. They are phagocytic cells that destroy foreign organisms entering the body.',
+    explanation:
+      'Neutrophils are the most abundant WBCs, constituting 60-65% of total WBCs. They are phagocytic cells that destroy foreign organisms entering the body.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 18, Page 194',
     previousYearFrequency: 16,
     conceptualLinks: ['leucocytes', 'neutrophils', 'granulocytes'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch7-006',
@@ -4689,31 +4824,34 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'What is the normal WBC count in human blood per mm³?',
     options: ['2000-4000', '6000-8000', '10000-12000', '15000-20000'],
     correctAnswer: '6000-8000',
-    explanation: 'The normal WBC count in human blood averages 6000-8000 per mm³. WBCs are nucleated cells that are relatively fewer in number compared to RBCs.',
+    explanation:
+      'The normal WBC count in human blood averages 6000-8000 per mm³. WBCs are nucleated cells that are relatively fewer in number compared to RBCs.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 18, Page 194',
     previousYearFrequency: 11,
     conceptualLinks: ['WBC-count', 'leucocytes', 'blood-cells'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q11-batch7-007',
     topicId: 'topic-11-18-circulation',
     chapterId: 'ch-11-18',
     classId: 'class-11',
-    question: 'Which component of blood is described as "cell fragments produced from megakaryocytes"?',
+    question:
+      'Which component of blood is described as "cell fragments produced from megakaryocytes"?',
     options: ['Erythrocytes', 'Lymphocytes', 'Platelets', 'Monocytes'],
     correctAnswer: 'Platelets',
-    explanation: 'Platelets (thrombocytes) are cell fragments produced from megakaryocytes, which are special cells in the bone marrow. Blood normally contains 1,50,000-3,50,000 platelets per mm³.',
+    explanation:
+      'Platelets (thrombocytes) are cell fragments produced from megakaryocytes, which are special cells in the bone marrow. Blood normally contains 1,50,000-3,50,000 platelets per mm³.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 18, Page 195',
     previousYearFrequency: 13,
     conceptualLinks: ['platelets', 'thrombocytes', 'megakaryocytes'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch7-008',
@@ -4723,31 +4861,34 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'What percentage of plasma is water?',
     options: ['70-75%', '80-85%', '90-92%', '95-98%'],
     correctAnswer: '90-92%',
-    explanation: 'According to NCERT, 90-92% of plasma is water, while proteins contribute 6-8%. This high water content allows plasma to transport dissolved substances efficiently.',
+    explanation:
+      'According to NCERT, 90-92% of plasma is water, while proteins contribute 6-8%. This high water content allows plasma to transport dissolved substances efficiently.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 18, Page 193',
     previousYearFrequency: 10,
     conceptualLinks: ['plasma-composition', 'water-content', 'blood'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch7-009',
     topicId: 'topic-11-18-circulation',
     chapterId: 'ch-11-18',
     classId: 'class-11',
-    question: 'Which type of granulocyte is associated with allergic reactions and has a percentage of 2-3% among WBCs?',
+    question:
+      'Which type of granulocyte is associated with allergic reactions and has a percentage of 2-3% among WBCs?',
     options: ['Neutrophils', 'Basophils', 'Eosinophils', 'Monocytes'],
     correctAnswer: 'Eosinophils',
-    explanation: 'Eosinophils constitute 2-3% of total WBCs. They resist infections and are also associated with allergic reactions. They are a type of granulocyte.',
+    explanation:
+      'Eosinophils constitute 2-3% of total WBCs. They resist infections and are also associated with allergic reactions. They are a type of granulocyte.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 18, Page 194-195',
     previousYearFrequency: 12,
     conceptualLinks: ['eosinophils', 'granulocytes', 'allergic-reactions'],
     timeEstimate: 50,
     bloomsLevel: 'Understand',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch7-010',
@@ -4755,16 +4896,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-18',
     classId: 'class-11',
     question: 'Which of the following is NOT a function of basophils?',
-    options: ['Secretion of histamine', 'Secretion of heparin', 'Phagocytosis of foreign organisms', 'Involvement in inflammatory reactions'],
+    options: [
+      'Secretion of histamine',
+      'Secretion of heparin',
+      'Phagocytosis of foreign organisms',
+      'Involvement in inflammatory reactions',
+    ],
     correctAnswer: 'Phagocytosis of foreign organisms',
-    explanation: 'Basophils secrete histamine, serotonin, and heparin, and are involved in inflammatory reactions. However, phagocytosis is performed by neutrophils and monocytes, not basophils. Basophils are the least abundant WBCs (0.5-1%).',
+    explanation:
+      'Basophils secrete histamine, serotonin, and heparin, and are involved in inflammatory reactions. However, phagocytosis is performed by neutrophils and monocytes, not basophils. Basophils are the least abundant WBCs (0.5-1%).',
     difficulty: 'Hard',
     ncertPageReference: 'Class 11, Chapter 18, Page 194',
     previousYearFrequency: 9,
     conceptualLinks: ['basophils', 'WBC-functions', 'phagocytosis'],
     timeEstimate: 60,
     bloomsLevel: 'Analyze',
-    weightage: 5.5
+    weightage: 5.5,
   },
 
   // Lymph and Lymphatic System (5 questions)
@@ -4776,31 +4923,34 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'What is the fluid released from blood capillaries into tissue spaces called?',
     options: ['Lymph', 'Plasma', 'Interstitial fluid', 'Serum'],
     correctAnswer: 'Interstitial fluid',
-    explanation: 'As blood passes through capillaries in tissues, water and small water-soluble substances move out into spaces between cells, leaving larger proteins and formed elements behind. This fluid is called interstitial fluid or tissue fluid.',
+    explanation:
+      'As blood passes through capillaries in tissues, water and small water-soluble substances move out into spaces between cells, leaving larger proteins and formed elements behind. This fluid is called interstitial fluid or tissue fluid.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 18, Page 197',
     previousYearFrequency: 11,
     conceptualLinks: ['tissue-fluid', 'interstitial-fluid', 'lymph'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch7-012',
     topicId: 'topic-11-18-circulation',
     chapterId: 'ch-11-18',
     classId: 'class-11',
-    question: 'Which cells are specially abundant in lymph and are responsible for immune responses?',
+    question:
+      'Which cells are specially abundant in lymph and are responsible for immune responses?',
     options: ['Erythrocytes', 'Platelets', 'Lymphocytes', 'Neutrophils'],
     correctAnswer: 'Lymphocytes',
-    explanation: 'Lymph is a colorless fluid containing specialized lymphocytes which are responsible for immune responses of the body. This is a key distinguishing feature of lymph.',
+    explanation:
+      'Lymph is a colorless fluid containing specialized lymphocytes which are responsible for immune responses of the body. This is a key distinguishing feature of lymph.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 18, Page 197',
     previousYearFrequency: 14,
     conceptualLinks: ['lymph', 'lymphocytes', 'immune-response'],
     timeEstimate: 40,
     bloomsLevel: 'Understand',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch7-013',
@@ -4810,14 +4960,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Where are fats absorbed in the intestinal villi?',
     options: ['Blood capillaries', 'Lacteals containing lymph', 'Arterioles', 'Venules'],
     correctAnswer: 'Lacteals containing lymph',
-    explanation: 'Fats are absorbed through lymph in the lacteals present in the intestinal villi. Lymph is also an important carrier for nutrients and hormones.',
+    explanation:
+      'Fats are absorbed through lymph in the lacteals present in the intestinal villi. Lymph is also an important carrier for nutrients and hormones.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 18, Page 197',
     previousYearFrequency: 13,
     conceptualLinks: ['lymph', 'lacteals', 'fat-absorption'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch7-014',
@@ -4827,14 +4978,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The lymphatic system collects tissue fluid and drains it back to which structures?',
     options: ['Arteries', 'Major veins', 'Capillaries', 'Heart chambers directly'],
     correctAnswer: 'Major veins',
-    explanation: 'An elaborate network of vessels called the lymphatic system collects the interstitial/tissue fluid and drains it back to the major veins, thus returning it to the blood circulation.',
+    explanation:
+      'An elaborate network of vessels called the lymphatic system collects the interstitial/tissue fluid and drains it back to the major veins, thus returning it to the blood circulation.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 18, Page 197',
     previousYearFrequency: 10,
     conceptualLinks: ['lymphatic-system', 'lymph-drainage', 'veins'],
     timeEstimate: 50,
     bloomsLevel: 'Understand',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch7-015',
@@ -4842,16 +4994,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-18',
     classId: 'class-11',
     question: 'Which statement best distinguishes lymph from blood?',
-    options: ['Lymph contains no cells at all', 'Lymph is similar to blood except for lower protein content and formed elements', 'Lymph has higher protein content than blood', 'Lymph contains more RBCs than blood'],
+    options: [
+      'Lymph contains no cells at all',
+      'Lymph is similar to blood except for lower protein content and formed elements',
+      'Lymph has higher protein content than blood',
+      'Lymph contains more RBCs than blood',
+    ],
     correctAnswer: 'Lymph is similar to blood except for lower protein content and formed elements',
-    explanation: 'Lymph is almost similar to blood except for the protein content and the formed elements. It has the same mineral distribution as plasma but lacks most proteins and RBCs that remain in blood vessels.',
+    explanation:
+      'Lymph is almost similar to blood except for the protein content and the formed elements. It has the same mineral distribution as plasma but lacks most proteins and RBCs that remain in blood vessels.',
     difficulty: 'Hard',
     ncertPageReference: 'Class 11, Chapter 18, Page 197',
     previousYearFrequency: 8,
     conceptualLinks: ['lymph-composition', 'blood-vs-lymph', 'tissue-fluid'],
     timeEstimate: 60,
     bloomsLevel: 'Analyze',
-    weightage: 5.0
+    weightage: 5.0,
   },
 
   // Heart Anatomy and Structure (8 questions)
@@ -4863,14 +5021,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'How many chambers does the human heart have?',
     options: ['Two', 'Three', 'Four', 'Five'],
     correctAnswer: 'Four',
-    explanation: 'The human heart has four chambers: two relatively small upper chambers called atria and two larger lower chambers called ventricles.',
+    explanation:
+      'The human heart has four chambers: two relatively small upper chambers called atria and two larger lower chambers called ventricles.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 18, Page 198',
     previousYearFrequency: 18,
     conceptualLinks: ['heart-anatomy', 'heart-chambers', 'atria-ventricles'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q11-batch7-017',
@@ -4880,14 +5039,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'What is the name of the double-walled membranous bag that protects the heart?',
     options: ['Pleura', 'Peritoneum', 'Pericardium', 'Meninges'],
     correctAnswer: 'Pericardium',
-    explanation: 'The heart is protected by a double-walled membranous bag called the pericardium, which encloses the pericardial fluid. The heart is located in the thoracic cavity between the lungs.',
+    explanation:
+      'The heart is protected by a double-walled membranous bag called the pericardium, which encloses the pericardial fluid. The heart is located in the thoracic cavity between the lungs.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 18, Page 198',
     previousYearFrequency: 12,
     conceptualLinks: ['pericardium', 'heart-protection', 'heart-anatomy'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch7-018',
@@ -4897,14 +5057,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Which valve guards the opening between the right atrium and right ventricle?',
     options: ['Bicuspid valve', 'Tricuspid valve', 'Mitral valve', 'Semilunar valve'],
     correctAnswer: 'Tricuspid valve',
-    explanation: 'The opening between the right atrium and right ventricle is guarded by a valve formed of three muscular flaps or cusps called the tricuspid valve.',
+    explanation:
+      'The opening between the right atrium and right ventricle is guarded by a valve formed of three muscular flaps or cusps called the tricuspid valve.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 18, Page 198',
     previousYearFrequency: 15,
     conceptualLinks: ['heart-valves', 'tricuspid-valve', 'heart-anatomy'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch7-019',
@@ -4914,14 +5075,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'What is another name for the bicuspid valve?',
     options: ['Tricuspid valve', 'Mitral valve', 'Semilunar valve', 'Aortic valve'],
     correctAnswer: 'Mitral valve',
-    explanation: 'The bicuspid valve, also called the mitral valve, guards the opening between the left atrium and left ventricle. It has two cusps, unlike the tricuspid valve which has three.',
+    explanation:
+      'The bicuspid valve, also called the mitral valve, guards the opening between the left atrium and left ventricle. It has two cusps, unlike the tricuspid valve which has three.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 18, Page 198',
     previousYearFrequency: 11,
     conceptualLinks: ['bicuspid-valve', 'mitral-valve', 'heart-valves'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q11-batch7-020',
@@ -4929,16 +5091,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-18',
     classId: 'class-11',
     question: 'Where is the sino-atrial node (SAN) located in the heart?',
-    options: ['Left atrium', 'Right upper corner of right atrium', 'Right ventricle', 'Left ventricle'],
+    options: [
+      'Left atrium',
+      'Right upper corner of right atrium',
+      'Right ventricle',
+      'Left ventricle',
+    ],
     correctAnswer: 'Right upper corner of right atrium',
-    explanation: 'A patch of nodal tissue called the sino-atrial node (SAN) is present in the right upper corner of the right atrium. It is the pacemaker of the heart.',
+    explanation:
+      'A patch of nodal tissue called the sino-atrial node (SAN) is present in the right upper corner of the right atrium. It is the pacemaker of the heart.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 18, Page 199',
     previousYearFrequency: 16,
     conceptualLinks: ['SAN', 'sino-atrial-node', 'pacemaker'],
     timeEstimate: 40,
     bloomsLevel: 'Understand',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch7-021',
@@ -4946,16 +5114,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-18',
     classId: 'class-11',
     question: 'What separates the right and left ventricles?',
-    options: ['Interatrial septum', 'Interventricular septum', 'Atrioventricular septum', 'Pericardium'],
+    options: [
+      'Interatrial septum',
+      'Interventricular septum',
+      'Atrioventricular septum',
+      'Pericardium',
+    ],
     correctAnswer: 'Interventricular septum',
-    explanation: 'A thick-walled interventricular septum separates the left and right ventricles. The interatrial septum is a thin muscular wall that separates the two atria.',
+    explanation:
+      'A thick-walled interventricular septum separates the left and right ventricles. The interatrial septum is a thin muscular wall that separates the two atria.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 18, Page 198',
     previousYearFrequency: 13,
     conceptualLinks: ['heart-septum', 'interventricular-septum', 'heart-anatomy'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch7-022',
@@ -4963,16 +5137,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-18',
     classId: 'class-11',
     question: 'What is the function of semilunar valves in the heart?',
-    options: ['Allow blood flow from atria to ventricles', 'Prevent backflow of blood from pulmonary artery and aorta into ventricles', 'Separate right and left heart chambers', 'Control heart rate'],
+    options: [
+      'Allow blood flow from atria to ventricles',
+      'Prevent backflow of blood from pulmonary artery and aorta into ventricles',
+      'Separate right and left heart chambers',
+      'Control heart rate',
+    ],
     correctAnswer: 'Prevent backflow of blood from pulmonary artery and aorta into ventricles',
-    explanation: 'Semilunar valves are provided at the openings of right and left ventricles into the pulmonary artery and aorta respectively. They prevent backflow of blood into the ventricles.',
+    explanation:
+      'Semilunar valves are provided at the openings of right and left ventricles into the pulmonary artery and aorta respectively. They prevent backflow of blood into the ventricles.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 18, Page 198-199',
     previousYearFrequency: 14,
     conceptualLinks: ['semilunar-valves', 'valve-function', 'blood-flow'],
     timeEstimate: 50,
     bloomsLevel: 'Understand',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch7-023',
@@ -4980,16 +5160,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-18',
     classId: 'class-11',
     question: 'Why are the walls of ventricles much thicker than those of atria?',
-    options: ['Ventricles receive more blood', 'Ventricles need to pump blood with greater force over longer distances', 'Ventricles are larger in size', 'Ventricles contain more valves'],
+    options: [
+      'Ventricles receive more blood',
+      'Ventricles need to pump blood with greater force over longer distances',
+      'Ventricles are larger in size',
+      'Ventricles contain more valves',
+    ],
     correctAnswer: 'Ventricles need to pump blood with greater force over longer distances',
-    explanation: 'The walls of ventricles are much thicker than those of atria because ventricles need to generate higher pressure to pump blood to the lungs and throughout the body, whereas atria only need to push blood into ventricles.',
+    explanation:
+      'The walls of ventricles are much thicker than those of atria because ventricles need to generate higher pressure to pump blood to the lungs and throughout the body, whereas atria only need to push blood into ventricles.',
     difficulty: 'Hard',
     ncertPageReference: 'Class 11, Chapter 18, Page 199',
     previousYearFrequency: 10,
     conceptualLinks: ['ventricular-wall', 'heart-structure', 'cardiac-muscles'],
     timeEstimate: 60,
     bloomsLevel: 'Analyze',
-    weightage: 5.5
+    weightage: 5.5,
   },
 
   // Cardiac Cycle and Heart Sounds (7 questions)
@@ -5001,14 +5187,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'What is the duration of one cardiac cycle if the heart beats 72 times per minute?',
     options: ['0.6 seconds', '0.8 seconds', '1.0 seconds', '1.2 seconds'],
     correctAnswer: '0.8 seconds',
-    explanation: 'The heart beats 72 times per minute, meaning 72 cardiac cycles occur per minute. Therefore, the duration of one cardiac cycle is 60/72 = 0.8 seconds.',
+    explanation:
+      'The heart beats 72 times per minute, meaning 72 cardiac cycles occur per minute. Therefore, the duration of one cardiac cycle is 60/72 = 0.8 seconds.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 18, Page 200',
     previousYearFrequency: 15,
     conceptualLinks: ['cardiac-cycle', 'heart-rate', 'cycle-duration'],
     timeEstimate: 50,
     bloomsLevel: 'Apply',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch7-025',
@@ -5018,14 +5205,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'What is the volume of blood pumped out by each ventricle per cardiac cycle called?',
     options: ['Cardiac output', 'Stroke volume', 'Heart rate', 'Systolic volume'],
     correctAnswer: 'Stroke volume',
-    explanation: 'During a cardiac cycle, each ventricle pumps out approximately 70 mL of blood, which is called the stroke volume or beat volume.',
+    explanation:
+      'During a cardiac cycle, each ventricle pumps out approximately 70 mL of blood, which is called the stroke volume or beat volume.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 18, Page 200',
     previousYearFrequency: 17,
     conceptualLinks: ['stroke-volume', 'cardiac-cycle', 'blood-volume'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch7-026',
@@ -5033,16 +5221,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-18',
     classId: 'class-11',
     question: 'What is the average cardiac output in a healthy individual?',
-    options: ['3 litres per minute', '5 litres per minute', '7 litres per minute', '10 litres per minute'],
+    options: [
+      '3 litres per minute',
+      '5 litres per minute',
+      '7 litres per minute',
+      '10 litres per minute',
+    ],
     correctAnswer: '5 litres per minute',
-    explanation: 'Cardiac output is the volume of blood pumped out by each ventricle per minute. It equals stroke volume (70 mL) multiplied by heart rate (72 beats/min), which averages 5000 mL or 5 litres.',
+    explanation:
+      'Cardiac output is the volume of blood pumped out by each ventricle per minute. It equals stroke volume (70 mL) multiplied by heart rate (72 beats/min), which averages 5000 mL or 5 litres.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 18, Page 200',
     previousYearFrequency: 14,
     conceptualLinks: ['cardiac-output', 'stroke-volume', 'heart-rate'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch7-027',
@@ -5050,50 +5244,60 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-18',
     classId: 'class-11',
     question: 'What causes the first heart sound "lub"?',
-    options: ['Closure of semilunar valves', 'Closure of tricuspid and bicuspid valves', 'Opening of atrioventricular valves', 'Contraction of atria'],
+    options: [
+      'Closure of semilunar valves',
+      'Closure of tricuspid and bicuspid valves',
+      'Opening of atrioventricular valves',
+      'Contraction of atria',
+    ],
     correctAnswer: 'Closure of tricuspid and bicuspid valves',
-    explanation: 'The first heart sound (lub) is associated with the closure of the tricuspid and bicuspid valves during ventricular systole. The second sound (dub) is from closure of semilunar valves.',
+    explanation:
+      'The first heart sound (lub) is associated with the closure of the tricuspid and bicuspid valves during ventricular systole. The second sound (dub) is from closure of semilunar valves.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 18, Page 200',
     previousYearFrequency: 16,
     conceptualLinks: ['heart-sounds', 'valve-closure', 'cardiac-cycle'],
     timeEstimate: 50,
     bloomsLevel: 'Understand',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch7-028',
     topicId: 'topic-11-18-circulation',
     chapterId: 'ch-11-18',
     classId: 'class-11',
-    question: 'During which phase of the cardiac cycle do all four chambers of the heart relax simultaneously?',
+    question:
+      'During which phase of the cardiac cycle do all four chambers of the heart relax simultaneously?',
     options: ['Atrial systole', 'Ventricular systole', 'Joint diastole', 'Atrial diastole'],
     correctAnswer: 'Joint diastole',
-    explanation: 'During joint diastole, all four chambers of the heart are in a relaxed state. Blood flows from pulmonary veins and vena cava into ventricles through the atria as tricuspid and bicuspid valves are open.',
+    explanation:
+      'During joint diastole, all four chambers of the heart are in a relaxed state. Blood flows from pulmonary veins and vena cava into ventricles through the atria as tricuspid and bicuspid valves are open.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 18, Page 199',
     previousYearFrequency: 12,
     conceptualLinks: ['joint-diastole', 'cardiac-cycle', 'heart-relaxation'],
     timeEstimate: 50,
     bloomsLevel: 'Understand',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch7-029',
     topicId: 'topic-11-18-circulation',
     chapterId: 'ch-11-18',
     classId: 'class-11',
-    question: 'By what percentage does atrial systole increase the flow of blood into the ventricles?',
+    question:
+      'By what percentage does atrial systole increase the flow of blood into the ventricles?',
     options: ['10%', '20%', '30%', '40%'],
     correctAnswer: '30%',
-    explanation: 'According to NCERT, atrial systole (simultaneous contraction of both atria) increases the flow of blood into the ventricles by about 30%.',
+    explanation:
+      'According to NCERT, atrial systole (simultaneous contraction of both atria) increases the flow of blood into the ventricles by about 30%.',
     difficulty: 'Hard',
     ncertPageReference: 'Class 11, Chapter 18, Page 199',
     previousYearFrequency: 8,
     conceptualLinks: ['atrial-systole', 'cardiac-cycle', 'blood-flow'],
     timeEstimate: 60,
     bloomsLevel: 'Remember',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch7-030',
@@ -5101,16 +5305,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-18',
     classId: 'class-11',
     question: 'What happens immediately after ventricular systole begins?',
-    options: ['Semilunar valves open', 'Tricuspid and bicuspid valves close and atria relax', 'Atria contract', 'All chambers relax'],
+    options: [
+      'Semilunar valves open',
+      'Tricuspid and bicuspid valves close and atria relax',
+      'Atria contract',
+      'All chambers relax',
+    ],
     correctAnswer: 'Tricuspid and bicuspid valves close and atria relax',
-    explanation: 'When ventricular systole begins, the increased ventricular pressure causes closure of tricuspid and bicuspid valves (preventing backflow). Simultaneously, the atria undergo relaxation (diastole).',
+    explanation:
+      'When ventricular systole begins, the increased ventricular pressure causes closure of tricuspid and bicuspid valves (preventing backflow). Simultaneously, the atria undergo relaxation (diastole).',
     difficulty: 'Hard',
     ncertPageReference: 'Class 11, Chapter 18, Page 199-200',
     previousYearFrequency: 9,
     conceptualLinks: ['ventricular-systole', 'valve-action', 'cardiac-cycle'],
     timeEstimate: 70,
     bloomsLevel: 'Analyze',
-    weightage: 5.5
+    weightage: 5.5,
   },
 
   // ECG and Cardiac Output (5 questions)
@@ -5120,16 +5330,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-18',
     classId: 'class-11',
     question: 'What does the P-wave in an ECG represent?',
-    options: ['Depolarization of ventricles', 'Depolarization of atria', 'Repolarization of ventricles', 'Repolarization of atria'],
+    options: [
+      'Depolarization of ventricles',
+      'Depolarization of atria',
+      'Repolarization of ventricles',
+      'Repolarization of atria',
+    ],
     correctAnswer: 'Depolarization of atria',
-    explanation: 'The P-wave represents the electrical excitation or depolarization of the atria, which leads to the contraction of both atria.',
+    explanation:
+      'The P-wave represents the electrical excitation or depolarization of the atria, which leads to the contraction of both atria.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 18, Page 201',
     previousYearFrequency: 18,
     conceptualLinks: ['ECG', 'P-wave', 'atrial-depolarization'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch7-032',
@@ -5137,16 +5353,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-18',
     classId: 'class-11',
     question: 'The QRS complex in an ECG represents which electrical event?',
-    options: ['Atrial depolarization', 'Ventricular depolarization', 'Ventricular repolarization', 'Atrial repolarization'],
+    options: [
+      'Atrial depolarization',
+      'Ventricular depolarization',
+      'Ventricular repolarization',
+      'Atrial repolarization',
+    ],
     correctAnswer: 'Ventricular depolarization',
-    explanation: 'The QRS complex represents the depolarization of the ventricles, which initiates ventricular contraction. The contraction starts shortly after Q and marks the beginning of systole.',
+    explanation:
+      'The QRS complex represents the depolarization of the ventricles, which initiates ventricular contraction. The contraction starts shortly after Q and marks the beginning of systole.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 18, Page 201',
     previousYearFrequency: 17,
     conceptualLinks: ['ECG', 'QRS-complex', 'ventricular-depolarization'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch7-033',
@@ -5154,16 +5376,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-18',
     classId: 'class-11',
     question: 'What does the T-wave in an ECG signify?',
-    options: ['Beginning of systole', 'End of systole', 'Beginning of diastole', 'Atrial contraction'],
+    options: [
+      'Beginning of systole',
+      'End of systole',
+      'Beginning of diastole',
+      'Atrial contraction',
+    ],
     correctAnswer: 'End of systole',
-    explanation: 'The T-wave represents the return of ventricles from excited to normal state (repolarization). The end of the T-wave marks the end of systole.',
+    explanation:
+      'The T-wave represents the return of ventricles from excited to normal state (repolarization). The end of the T-wave marks the end of systole.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 18, Page 201',
     previousYearFrequency: 15,
     conceptualLinks: ['ECG', 'T-wave', 'ventricular-repolarization'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch7-034',
@@ -5171,16 +5399,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-18',
     classId: 'class-11',
     question: 'How can heart rate be determined from an ECG?',
-    options: ['By counting P-waves per unit time', 'By counting QRS complexes per unit time', 'By counting T-waves per unit time', 'By measuring the height of R-wave'],
+    options: [
+      'By counting P-waves per unit time',
+      'By counting QRS complexes per unit time',
+      'By counting T-waves per unit time',
+      'By measuring the height of R-wave',
+    ],
     correctAnswer: 'By counting QRS complexes per unit time',
-    explanation: 'By counting the number of QRS complexes that occur in a given time period, one can determine the heartbeat rate of an individual, as each QRS represents one ventricular contraction.',
+    explanation:
+      'By counting the number of QRS complexes that occur in a given time period, one can determine the heartbeat rate of an individual, as each QRS represents one ventricular contraction.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 18, Page 201',
     previousYearFrequency: 13,
     conceptualLinks: ['ECG', 'heart-rate', 'QRS-complex'],
     timeEstimate: 50,
     bloomsLevel: 'Apply',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch7-035',
@@ -5188,16 +5422,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-18',
     classId: 'class-11',
     question: 'Why is ECG clinically significant?',
-    options: ['It measures blood pressure', 'Deviations from normal shape indicate possible abnormalities or diseases', 'It shows oxygen levels in blood', 'It measures cardiac output directly'],
+    options: [
+      'It measures blood pressure',
+      'Deviations from normal shape indicate possible abnormalities or diseases',
+      'It shows oxygen levels in blood',
+      'It measures cardiac output directly',
+    ],
     correctAnswer: 'Deviations from normal shape indicate possible abnormalities or diseases',
-    explanation: 'Since ECGs from different individuals have roughly the same shape for a given lead configuration, any deviation from this shape indicates a possible abnormality or disease, making it of great clinical significance.',
+    explanation:
+      'Since ECGs from different individuals have roughly the same shape for a given lead configuration, any deviation from this shape indicates a possible abnormality or disease, making it of great clinical significance.',
     difficulty: 'Hard',
     ncertPageReference: 'Class 11, Chapter 18, Page 201',
     previousYearFrequency: 11,
     conceptualLinks: ['ECG', 'clinical-diagnosis', 'heart-abnormalities'],
     timeEstimate: 55,
     bloomsLevel: 'Analyze',
-    weightage: 5.5
+    weightage: 5.5,
   },
 
   // Blood Circulation Pathways (8 questions)
@@ -5207,16 +5447,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-18',
     classId: 'class-11',
     question: 'Which type of circulatory system is present in annelids and chordates?',
-    options: ['Open circulatory system', 'Closed circulatory system', 'Partial circulatory system', 'Mixed circulatory system'],
+    options: [
+      'Open circulatory system',
+      'Closed circulatory system',
+      'Partial circulatory system',
+      'Mixed circulatory system',
+    ],
     correctAnswer: 'Closed circulatory system',
-    explanation: 'Annelids and chordates have a closed circulatory system in which blood pumped by the heart is always circulated through a closed network of blood vessels. This allows more precise regulation of blood flow.',
+    explanation:
+      'Annelids and chordates have a closed circulatory system in which blood pumped by the heart is always circulated through a closed network of blood vessels. This allows more precise regulation of blood flow.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 18, Page 197',
     previousYearFrequency: 12,
     conceptualLinks: ['closed-circulation', 'circulatory-patterns', 'blood-vessels'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch7-037',
@@ -5226,31 +5472,39 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'What type of blood does the pulmonary artery carry?',
     options: ['Oxygenated blood', 'Deoxygenated blood', 'Mixed blood', 'Blood without CO2'],
     correctAnswer: 'Deoxygenated blood',
-    explanation: 'The blood pumped by the right ventricle enters the pulmonary artery and is deoxygenated. It is passed to the lungs for oxygenation. This is an exception where an artery carries deoxygenated blood.',
+    explanation:
+      'The blood pumped by the right ventricle enters the pulmonary artery and is deoxygenated. It is passed to the lungs for oxygenation. This is an exception where an artery carries deoxygenated blood.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 18, Page 201',
     previousYearFrequency: 14,
     conceptualLinks: ['pulmonary-circulation', 'pulmonary-artery', 'deoxygenated-blood'],
     timeEstimate: 40,
     bloomsLevel: 'Understand',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch7-038',
     topicId: 'topic-11-18-circulation',
     chapterId: 'ch-11-18',
     classId: 'class-11',
-    question: 'The pathway of blood from the right ventricle to lungs and back to the left atrium is called:',
-    options: ['Systemic circulation', 'Pulmonary circulation', 'Coronary circulation', 'Hepatic portal circulation'],
+    question:
+      'The pathway of blood from the right ventricle to lungs and back to the left atrium is called:',
+    options: [
+      'Systemic circulation',
+      'Pulmonary circulation',
+      'Coronary circulation',
+      'Hepatic portal circulation',
+    ],
     correctAnswer: 'Pulmonary circulation',
-    explanation: 'Pulmonary circulation is the pathway where deoxygenated blood from right ventricle enters pulmonary artery, goes to lungs for oxygenation, and returns via pulmonary veins to the left atrium.',
+    explanation:
+      'Pulmonary circulation is the pathway where deoxygenated blood from right ventricle enters pulmonary artery, goes to lungs for oxygenation, and returns via pulmonary veins to the left atrium.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 18, Page 201',
     previousYearFrequency: 16,
     conceptualLinks: ['pulmonary-circulation', 'double-circulation', 'blood-pathway'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch7-039',
@@ -5258,16 +5512,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-18',
     classId: 'class-11',
     question: 'What is the function of systemic circulation?',
-    options: ['To oxygenate blood in lungs', 'To provide nutrients and O2 to tissues and remove CO2 and waste', 'To carry blood to the heart only', 'To filter blood in kidneys'],
+    options: [
+      'To oxygenate blood in lungs',
+      'To provide nutrients and O2 to tissues and remove CO2 and waste',
+      'To carry blood to the heart only',
+      'To filter blood in kidneys',
+    ],
     correctAnswer: 'To provide nutrients and O2 to tissues and remove CO2 and waste',
-    explanation: 'Systemic circulation provides nutrients, O2 and other essential substances to the tissues and takes CO2 and other harmful substances away for elimination. Blood flows from left ventricle through aorta to body tissues.',
+    explanation:
+      'Systemic circulation provides nutrients, O2 and other essential substances to the tissues and takes CO2 and other harmful substances away for elimination. Blood flows from left ventricle through aorta to body tissues.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 18, Page 201',
     previousYearFrequency: 13,
     conceptualLinks: ['systemic-circulation', 'tissue-perfusion', 'gas-exchange'],
     timeEstimate: 50,
     bloomsLevel: 'Understand',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch7-040',
@@ -5275,16 +5535,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-18',
     classId: 'class-11',
     question: 'What is the hepatic portal system?',
-    options: ['Circulation between heart and liver', 'Vascular connection between digestive tract and liver', 'Blood supply to hepatic veins', 'Circulation in the portal vein only'],
+    options: [
+      'Circulation between heart and liver',
+      'Vascular connection between digestive tract and liver',
+      'Blood supply to hepatic veins',
+      'Circulation in the portal vein only',
+    ],
     correctAnswer: 'Vascular connection between digestive tract and liver',
-    explanation: 'A unique vascular connection exists between the digestive tract and liver called the hepatic portal system. The hepatic portal vein carries blood from intestine to liver before it reaches systemic circulation.',
+    explanation:
+      'A unique vascular connection exists between the digestive tract and liver called the hepatic portal system. The hepatic portal vein carries blood from intestine to liver before it reaches systemic circulation.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 18, Page 202',
     previousYearFrequency: 11,
     conceptualLinks: ['hepatic-portal', 'liver-circulation', 'portal-system'],
     timeEstimate: 55,
     bloomsLevel: 'Understand',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch7-041',
@@ -5292,16 +5558,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-18',
     classId: 'class-11',
     question: 'The coronary system of blood vessels is exclusively meant for:',
-    options: ['Brain circulation', 'Circulation to and from cardiac musculature', 'Kidney filtration', 'Lung oxygenation'],
+    options: [
+      'Brain circulation',
+      'Circulation to and from cardiac musculature',
+      'Kidney filtration',
+      'Lung oxygenation',
+    ],
     correctAnswer: 'Circulation to and from cardiac musculature',
-    explanation: 'A special coronary system of blood vessels is present in our body exclusively for the circulation of blood to and from the cardiac musculature, ensuring the heart muscle receives adequate oxygen and nutrients.',
+    explanation:
+      'A special coronary system of blood vessels is present in our body exclusively for the circulation of blood to and from the cardiac musculature, ensuring the heart muscle receives adequate oxygen and nutrients.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 18, Page 202',
     previousYearFrequency: 15,
     conceptualLinks: ['coronary-circulation', 'cardiac-muscle', 'heart-blood-supply'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch7-042',
@@ -5311,14 +5583,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Which layer of blood vessels is comparatively thin in veins compared to arteries?',
     options: ['Tunica intima', 'Tunica media', 'Tunica externa', 'All layers are equal'],
     correctAnswer: 'Tunica media',
-    explanation: 'Blood vessels have three layers: tunica intima (inner endothelium), tunica media (middle muscle/elastic layer), and tunica externa (outer connective tissue). The tunica media is comparatively thin in veins.',
+    explanation:
+      'Blood vessels have three layers: tunica intima (inner endothelium), tunica media (middle muscle/elastic layer), and tunica externa (outer connective tissue). The tunica media is comparatively thin in veins.',
     difficulty: 'Hard',
     ncertPageReference: 'Class 11, Chapter 18, Page 201',
     previousYearFrequency: 9,
     conceptualLinks: ['blood-vessel-structure', 'vein-anatomy', 'tunica-media'],
     timeEstimate: 60,
     bloomsLevel: 'Analyze',
-    weightage: 5.5
+    weightage: 5.5,
   },
   {
     id: 'q11-batch7-043',
@@ -5326,16 +5599,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-18',
     classId: 'class-11',
     question: 'In which organisms does incomplete double circulation occur?',
-    options: ['Fishes', 'Amphibians and reptiles (except crocodiles)', 'Birds and mammals', 'Crocodiles only'],
+    options: [
+      'Fishes',
+      'Amphibians and reptiles (except crocodiles)',
+      'Birds and mammals',
+      'Crocodiles only',
+    ],
     correctAnswer: 'Amphibians and reptiles (except crocodiles)',
-    explanation: 'In amphibians and reptiles, oxygenated and deoxygenated blood get mixed in the single ventricle which pumps out mixed blood, resulting in incomplete double circulation. Birds, mammals and crocodiles have complete double circulation.',
+    explanation:
+      'In amphibians and reptiles, oxygenated and deoxygenated blood get mixed in the single ventricle which pumps out mixed blood, resulting in incomplete double circulation. Birds, mammals and crocodiles have complete double circulation.',
     difficulty: 'Hard',
     ncertPageReference: 'Class 11, Chapter 18, Page 197',
     previousYearFrequency: 10,
     conceptualLinks: ['incomplete-circulation', 'amphibian-heart', 'reptilian-circulation'],
     timeEstimate: 65,
     bloomsLevel: 'Analyze',
-    weightage: 6.0
+    weightage: 6.0,
   },
 
   // Blood Pressure and Regulation (7 questions)
@@ -5347,14 +5626,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'What is the normal blood pressure in a healthy individual?',
     options: ['100/70 mm Hg', '120/80 mm Hg', '140/90 mm Hg', '160/100 mm Hg'],
     correctAnswer: '120/80 mm Hg',
-    explanation: 'Normal blood pressure is 120/80 mm Hg, where 120 is systolic (pumping) pressure and 80 is diastolic (resting) pressure. Blood pressure of 140/90 or higher indicates hypertension.',
+    explanation:
+      'Normal blood pressure is 120/80 mm Hg, where 120 is systolic (pumping) pressure and 80 is diastolic (resting) pressure. Blood pressure of 140/90 or higher indicates hypertension.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 18, Page 202',
     previousYearFrequency: 17,
     conceptualLinks: ['blood-pressure', 'systolic-pressure', 'diastolic-pressure'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch7-045',
@@ -5362,33 +5642,41 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-18',
     classId: 'class-11',
     question: 'Why is the human heart called myogenic?',
-    options: ['It is derived from mesoderm', 'It is auto-regulated by specialized nodal tissue', 'It has multiple chambers', 'It pumps blood continuously'],
+    options: [
+      'It is derived from mesoderm',
+      'It is auto-regulated by specialized nodal tissue',
+      'It has multiple chambers',
+      'It pumps blood continuously',
+    ],
     correctAnswer: 'It is auto-regulated by specialized nodal tissue',
-    explanation: 'Normal activities of the heart are regulated intrinsically (auto-regulated) by specialized muscles (nodal tissue), hence the heart is called myogenic. The SAN, AVN, and other nodal tissues generate impulses without external stimulation.',
+    explanation:
+      'Normal activities of the heart are regulated intrinsically (auto-regulated) by specialized muscles (nodal tissue), hence the heart is called myogenic. The SAN, AVN, and other nodal tissues generate impulses without external stimulation.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 18, Page 202',
     previousYearFrequency: 16,
     conceptualLinks: ['myogenic-heart', 'auto-regulation', 'nodal-tissue'],
     timeEstimate: 50,
     bloomsLevel: 'Understand',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch7-046',
     topicId: 'topic-11-18-circulation',
     chapterId: 'ch-11-18',
     classId: 'class-11',
-    question: 'Which part of the autonomic nervous system can increase heart rate and cardiac output?',
+    question:
+      'Which part of the autonomic nervous system can increase heart rate and cardiac output?',
     options: ['Parasympathetic nerves', 'Sympathetic nerves', 'Somatic nerves', 'Sensory nerves'],
     correctAnswer: 'Sympathetic nerves',
-    explanation: 'Neural signals through sympathetic nerves (part of ANS) can increase the rate of heartbeat, strength of ventricular contraction, and thereby the cardiac output. Parasympathetic signals have the opposite effect.',
+    explanation:
+      'Neural signals through sympathetic nerves (part of ANS) can increase the rate of heartbeat, strength of ventricular contraction, and thereby the cardiac output. Parasympathetic signals have the opposite effect.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 18, Page 202',
     previousYearFrequency: 14,
     conceptualLinks: ['sympathetic-nervous-system', 'heart-regulation', 'ANS'],
     timeEstimate: 50,
     bloomsLevel: 'Understand',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch7-047',
@@ -5396,33 +5684,41 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-18',
     classId: 'class-11',
     question: 'What effect do parasympathetic neural signals have on cardiac function?',
-    options: ['Increase heart rate', 'Decrease heart rate and cardiac output', 'Increase stroke volume', 'No effect on heart'],
+    options: [
+      'Increase heart rate',
+      'Decrease heart rate and cardiac output',
+      'Increase stroke volume',
+      'No effect on heart',
+    ],
     correctAnswer: 'Decrease heart rate and cardiac output',
-    explanation: 'Parasympathetic neural signals (component of ANS) decrease the rate of heartbeat, speed of conduction of action potential, and thereby the cardiac output, opposite to sympathetic effects.',
+    explanation:
+      'Parasympathetic neural signals (component of ANS) decrease the rate of heartbeat, speed of conduction of action potential, and thereby the cardiac output, opposite to sympathetic effects.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 18, Page 202',
     previousYearFrequency: 12,
     conceptualLinks: ['parasympathetic-system', 'heart-regulation', 'cardiac-output'],
     timeEstimate: 50,
     bloomsLevel: 'Understand',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch7-048',
     topicId: 'topic-11-18-circulation',
     chapterId: 'ch-11-18',
     classId: 'class-11',
-    question: 'Which neural center can moderate cardiac function through the autonomic nervous system?',
+    question:
+      'Which neural center can moderate cardiac function through the autonomic nervous system?',
     options: ['Cerebrum', 'Cerebellum', 'Medulla oblongata', 'Hypothalamus'],
     correctAnswer: 'Medulla oblongata',
-    explanation: 'A special neural center in the medulla oblongata can moderate cardiac function through the autonomic nervous system (ANS), coordinating sympathetic and parasympathetic control of the heart.',
+    explanation:
+      'A special neural center in the medulla oblongata can moderate cardiac function through the autonomic nervous system (ANS), coordinating sympathetic and parasympathetic control of the heart.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 18, Page 202',
     previousYearFrequency: 11,
     conceptualLinks: ['medulla-oblongata', 'cardiac-control', 'nervous-regulation'],
     timeEstimate: 45,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch7-049',
@@ -5432,31 +5728,39 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Which hormones can increase cardiac output?',
     options: ['Insulin', 'Thyroxine', 'Adrenal medullary hormones', 'Growth hormone'],
     correctAnswer: 'Adrenal medullary hormones',
-    explanation: 'Adrenal medullary hormones (epinephrine and norepinephrine) can increase cardiac output by increasing heart rate and force of contraction, similar to sympathetic stimulation.',
+    explanation:
+      'Adrenal medullary hormones (epinephrine and norepinephrine) can increase cardiac output by increasing heart rate and force of contraction, similar to sympathetic stimulation.',
     difficulty: 'Hard',
     ncertPageReference: 'Class 11, Chapter 18, Page 202',
     previousYearFrequency: 10,
     conceptualLinks: ['adrenal-hormones', 'cardiac-output', 'hormonal-regulation'],
     timeEstimate: 55,
     bloomsLevel: 'Understand',
-    weightage: 5.5
+    weightage: 5.5,
   },
   {
     id: 'q11-batch7-050',
     topicId: 'topic-11-18-circulation',
     chapterId: 'ch-11-18',
     classId: 'class-11',
-    question: 'Coronary artery disease (atherosclerosis) is caused by deposits of which substances that narrow the lumen of arteries?',
-    options: ['Only cholesterol', 'Calcium, fat, cholesterol and fibrous tissues', 'Only calcium', 'Blood clots only'],
+    question:
+      'Coronary artery disease (atherosclerosis) is caused by deposits of which substances that narrow the lumen of arteries?',
+    options: [
+      'Only cholesterol',
+      'Calcium, fat, cholesterol and fibrous tissues',
+      'Only calcium',
+      'Blood clots only',
+    ],
     correctAnswer: 'Calcium, fat, cholesterol and fibrous tissues',
-    explanation: 'Coronary artery disease is caused by deposits of calcium, fat, cholesterol and fibrous tissues, which make the lumen of arteries narrower, affecting blood supply to the heart muscle.',
+    explanation:
+      'Coronary artery disease is caused by deposits of calcium, fat, cholesterol and fibrous tissues, which make the lumen of arteries narrower, affecting blood supply to the heart muscle.',
     difficulty: 'Hard',
     ncertPageReference: 'Class 11, Chapter 18, Page 203',
     previousYearFrequency: 13,
     conceptualLinks: ['coronary-artery-disease', 'atherosclerosis', 'circulatory-disorders'],
     timeEstimate: 60,
     bloomsLevel: 'Analyze',
-    weightage: 6.0
+    weightage: 6.0,
   },
 
   // ============================================================================
@@ -5472,7 +5776,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'What is the primary difference between aerobic and anaerobic respiration?',
     options: ['Presence of oxygen', 'Type of substrate', 'Location in cell', 'ATP yield'],
     correctAnswer: 'Presence of oxygen',
-    explanation: 'NCERT defines aerobic respiration as the process that occurs in the presence of oxygen, while anaerobic respiration occurs in the absence of oxygen. This is the fundamental difference between the two types.',
+    explanation:
+      'NCERT defines aerobic respiration as the process that occurs in the presence of oxygen, while anaerobic respiration occurs in the absence of oxygen. This is the fundamental difference between the two types.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 12, Page 153',
     previousYearFrequency: 15,
@@ -5487,9 +5792,15 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-14',
     classId: 'class-11',
     question: 'Which of the following statements about aerobic respiration is correct?',
-    options: ['Occurs only in mitochondria', 'Complete oxidation of glucose', 'Produces lactic acid', 'Yields 2 ATP per glucose'],
+    options: [
+      'Occurs only in mitochondria',
+      'Complete oxidation of glucose',
+      'Produces lactic acid',
+      'Yields 2 ATP per glucose',
+    ],
     correctAnswer: 'Complete oxidation of glucose',
-    explanation: 'Aerobic respiration involves the complete oxidation of glucose into CO₂ and H₂O in the presence of oxygen, yielding approximately 38 ATP molecules per glucose molecule.',
+    explanation:
+      'Aerobic respiration involves the complete oxidation of glucose into CO₂ and H₂O in the presence of oxygen, yielding approximately 38 ATP molecules per glucose molecule.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 12, Page 154',
     previousYearFrequency: 14,
@@ -5506,7 +5817,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'In anaerobic respiration in yeast, glucose is converted into:',
     options: ['Lactic acid and CO₂', 'Ethanol and CO₂', 'Acetic acid and H₂O', 'Pyruvic acid only'],
     correctAnswer: 'Ethanol and CO₂',
-    explanation: 'In yeast and some plant cells under anaerobic conditions, glucose is converted to ethanol and carbon dioxide through alcoholic fermentation. This is different from lactic acid fermentation in muscles.',
+    explanation:
+      'In yeast and some plant cells under anaerobic conditions, glucose is converted to ethanol and carbon dioxide through alcoholic fermentation. This is different from lactic acid fermentation in muscles.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 12, Page 166',
     previousYearFrequency: 20,
@@ -5523,7 +5835,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Which process is common to both aerobic and anaerobic respiration?',
     options: ['Krebs cycle', 'Glycolysis', 'Electron transport chain', 'Oxidative phosphorylation'],
     correctAnswer: 'Glycolysis',
-    explanation: 'Glycolysis is the common pathway for both aerobic and anaerobic respiration. It occurs in the cytoplasm and breaks down glucose into pyruvate, yielding 2 ATP and 2 NADH.',
+    explanation:
+      'Glycolysis is the common pathway for both aerobic and anaerobic respiration. It occurs in the cytoplasm and breaks down glucose into pyruvate, yielding 2 ATP and 2 NADH.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 12, Page 155',
     previousYearFrequency: 17,
@@ -5538,9 +5851,15 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-14',
     classId: 'class-11',
     question: 'Why is aerobic respiration more efficient than anaerobic respiration?',
-    options: ['Uses less oxygen', 'Produces more CO₂', 'Complete oxidation yields more ATP', 'Occurs faster'],
+    options: [
+      'Uses less oxygen',
+      'Produces more CO₂',
+      'Complete oxidation yields more ATP',
+      'Occurs faster',
+    ],
     correctAnswer: 'Complete oxidation yields more ATP',
-    explanation: 'Aerobic respiration is more efficient because glucose is completely oxidized to CO₂ and H₂O, yielding approximately 38 ATP compared to only 2 ATP in anaerobic respiration.',
+    explanation:
+      'Aerobic respiration is more efficient because glucose is completely oxidized to CO₂ and H₂O, yielding approximately 38 ATP compared to only 2 ATP in anaerobic respiration.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 12, Page 164',
     previousYearFrequency: 13,
@@ -5559,7 +5878,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Where does glycolysis occur in a eukaryotic cell?',
     options: ['Mitochondrial matrix', 'Cytoplasm', 'Inner mitochondrial membrane', 'Chloroplast'],
     correctAnswer: 'Cytoplasm',
-    explanation: 'NCERT clearly states that glycolysis occurs in the cytoplasm of the cell and is present in all living organisms. This is the initial stage of cellular respiration.',
+    explanation:
+      'NCERT clearly states that glycolysis occurs in the cytoplasm of the cell and is present in all living organisms. This is the initial stage of cellular respiration.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 12, Page 155',
     previousYearFrequency: 18,
@@ -5576,7 +5896,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'How many ATP molecules are produced during glycolysis per glucose molecule?',
     options: ['2', '4', '6', '8'],
     correctAnswer: '4',
-    explanation: 'During glycolysis, 4 ATP molecules are produced (2 each from 2 molecules of 1,3-bisphosphoglycerate and 2 from phosphoenolpyruvate). However, net gain is 2 ATP as 2 ATP are consumed in the preparatory phase.',
+    explanation:
+      'During glycolysis, 4 ATP molecules are produced (2 each from 2 molecules of 1,3-bisphosphoglycerate and 2 from phosphoenolpyruvate). However, net gain is 2 ATP as 2 ATP are consumed in the preparatory phase.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 12, Page 157',
     previousYearFrequency: 16,
@@ -5593,7 +5914,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'What is the net gain of ATP molecules in glycolysis?',
     options: ['1 ATP', '2 ATP', '4 ATP', '6 ATP'],
     correctAnswer: '2 ATP',
-    explanation: 'Net gain of ATP in glycolysis is 2 ATP molecules. Although 4 ATP are produced, 2 ATP are consumed during phosphorylation steps in the preparatory phase.',
+    explanation:
+      'Net gain of ATP in glycolysis is 2 ATP molecules. Although 4 ATP are produced, 2 ATP are consumed during phosphorylation steps in the preparatory phase.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 12, Page 157',
     previousYearFrequency: 19,
@@ -5610,7 +5932,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Which molecule is the end product of glycolysis?',
     options: ['Glucose', 'Acetyl CoA', 'Pyruvic acid', 'Lactic acid'],
     correctAnswer: 'Pyruvic acid',
-    explanation: 'Glycolysis converts one glucose molecule (6-carbon) into two molecules of pyruvic acid (3-carbon each). Pyruvate then enters the mitochondria for further oxidation in aerobic conditions.',
+    explanation:
+      'Glycolysis converts one glucose molecule (6-carbon) into two molecules of pyruvic acid (3-carbon each). Pyruvate then enters the mitochondria for further oxidation in aerobic conditions.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 12, Page 156',
     previousYearFrequency: 21,
@@ -5627,7 +5950,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'How many NADH molecules are formed during glycolysis of one glucose molecule?',
     options: ['1', '2', '3', '4'],
     correctAnswer: '2',
-    explanation: 'Two molecules of NADH are formed during glycolysis when 2 molecules of glyceraldehyde-3-phosphate are oxidized to 1,3-bisphosphoglycerate. These NADH molecules carry electrons to the ETS.',
+    explanation:
+      'Two molecules of NADH are formed during glycolysis when 2 molecules of glyceraldehyde-3-phosphate are oxidized to 1,3-bisphosphoglycerate. These NADH molecules carry electrons to the ETS.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 12, Page 157',
     previousYearFrequency: 15,
@@ -5644,7 +5968,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Which enzyme catalyzes the first step of glycolysis?',
     options: ['Phosphofructokinase', 'Hexokinase', 'Pyruvate kinase', 'Aldolase'],
     correctAnswer: 'Hexokinase',
-    explanation: 'Hexokinase catalyzes the first step of glycolysis, phosphorylating glucose to glucose-6-phosphate using ATP. This step traps glucose inside the cell.',
+    explanation:
+      'Hexokinase catalyzes the first step of glycolysis, phosphorylating glucose to glucose-6-phosphate using ATP. This step traps glucose inside the cell.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 12, Page 156',
     previousYearFrequency: 12,
@@ -5661,7 +5986,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'In which phase of glycolysis is ATP consumed?',
     options: ['Energy payoff phase', 'Preparatory phase', 'Oxidation phase', 'All phases'],
     correctAnswer: 'Preparatory phase',
-    explanation: 'ATP is consumed in the preparatory phase of glycolysis during the phosphorylation of glucose and fructose-6-phosphate. Two ATP molecules are used in this phase.',
+    explanation:
+      'ATP is consumed in the preparatory phase of glycolysis during the phosphorylation of glucose and fructose-6-phosphate. Two ATP molecules are used in this phase.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 12, Page 156',
     previousYearFrequency: 11,
@@ -5676,9 +6002,15 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-14',
     classId: 'class-11',
     question: 'What happens to pyruvic acid under aerobic conditions?',
-    options: ['Converted to lactic acid', 'Converted to ethanol', 'Enters mitochondria for oxidation', 'Remains in cytoplasm'],
+    options: [
+      'Converted to lactic acid',
+      'Converted to ethanol',
+      'Enters mitochondria for oxidation',
+      'Remains in cytoplasm',
+    ],
     correctAnswer: 'Enters mitochondria for oxidation',
-    explanation: 'Under aerobic conditions, pyruvic acid enters the mitochondria where it is oxidatively decarboxylated to acetyl CoA, which then enters the Krebs cycle.',
+    explanation:
+      'Under aerobic conditions, pyruvic acid enters the mitochondria where it is oxidatively decarboxylated to acetyl CoA, which then enters the Krebs cycle.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 12, Page 158',
     previousYearFrequency: 14,
@@ -5695,7 +6027,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Which of the following statements about glycolysis is INCORRECT?',
     options: ['Occurs in cytoplasm', 'Requires oxygen', 'Produces pyruvate', 'Net gain of 2 ATP'],
     correctAnswer: 'Requires oxygen',
-    explanation: 'Glycolysis does NOT require oxygen. It is an anaerobic process that occurs in the cytoplasm. This is why glycolysis is common to both aerobic and anaerobic respiration.',
+    explanation:
+      'Glycolysis does NOT require oxygen. It is an anaerobic process that occurs in the cytoplasm. This is why glycolysis is common to both aerobic and anaerobic respiration.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 12, Page 155',
     previousYearFrequency: 13,
@@ -5712,7 +6045,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The rate-limiting enzyme of glycolysis is:',
     options: ['Hexokinase', 'Phosphofructokinase', 'Pyruvate kinase', 'Aldolase'],
     correctAnswer: 'Phosphofructokinase',
-    explanation: 'Phosphofructokinase (PFK) is the most important rate-limiting enzyme of glycolysis. It catalyzes the phosphorylation of fructose-6-phosphate to fructose-1,6-bisphosphate and is regulated by ATP and citrate.',
+    explanation:
+      'Phosphofructokinase (PFK) is the most important rate-limiting enzyme of glycolysis. It catalyzes the phosphorylation of fructose-6-phosphate to fructose-1,6-bisphosphate and is regulated by ATP and citrate.',
     difficulty: 'Hard',
     ncertPageReference: 'Class 11, Chapter 12, Page 156',
     previousYearFrequency: 9,
@@ -5729,9 +6063,15 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-14',
     classId: 'class-11',
     question: 'Where does the Krebs cycle occur?',
-    options: ['Cytoplasm', 'Inner mitochondrial membrane', 'Mitochondrial matrix', 'Outer mitochondrial membrane'],
+    options: [
+      'Cytoplasm',
+      'Inner mitochondrial membrane',
+      'Mitochondrial matrix',
+      'Outer mitochondrial membrane',
+    ],
     correctAnswer: 'Mitochondrial matrix',
-    explanation: 'The Krebs cycle (also called citric acid cycle or TCA cycle) occurs in the mitochondrial matrix. All the enzymes of this cycle are located in the matrix.',
+    explanation:
+      'The Krebs cycle (also called citric acid cycle or TCA cycle) occurs in the mitochondrial matrix. All the enzymes of this cycle are located in the matrix.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 12, Page 158',
     previousYearFrequency: 17,
@@ -5748,7 +6088,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'What is the first product formed when acetyl CoA enters the Krebs cycle?',
     options: ['Oxaloacetic acid', 'Citric acid', 'α-ketoglutaric acid', 'Succinic acid'],
     correctAnswer: 'Citric acid',
-    explanation: 'When acetyl CoA (2-carbon) combines with oxaloacetic acid (4-carbon), it forms citric acid (6-carbon). This is the first step of the Krebs cycle, catalyzed by citrate synthase.',
+    explanation:
+      'When acetyl CoA (2-carbon) combines with oxaloacetic acid (4-carbon), it forms citric acid (6-carbon). This is the first step of the Krebs cycle, catalyzed by citrate synthase.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 12, Page 159',
     previousYearFrequency: 15,
@@ -5765,7 +6106,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'How many CO₂ molecules are released per turn of the Krebs cycle?',
     options: ['1', '2', '3', '4'],
     correctAnswer: '2',
-    explanation: 'Two molecules of CO₂ are released during one turn of the Krebs cycle - one during the conversion of isocitrate to α-ketoglutarate, and another during α-ketoglutarate to succinyl CoA.',
+    explanation:
+      'Two molecules of CO₂ are released during one turn of the Krebs cycle - one during the conversion of isocitrate to α-ketoglutarate, and another during α-ketoglutarate to succinyl CoA.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 12, Page 159',
     previousYearFrequency: 18,
@@ -5782,7 +6124,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'How many NADH molecules are produced per turn of the Krebs cycle?',
     options: ['1', '2', '3', '4'],
     correctAnswer: '3',
-    explanation: 'Three NADH molecules are produced during one turn of the Krebs cycle at three oxidation steps: isocitrate to α-ketoglutarate, α-ketoglutarate to succinyl CoA, and malate to oxaloacetate.',
+    explanation:
+      'Three NADH molecules are produced during one turn of the Krebs cycle at three oxidation steps: isocitrate to α-ketoglutarate, α-ketoglutarate to succinyl CoA, and malate to oxaloacetate.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 12, Page 160',
     previousYearFrequency: 16,
@@ -5799,7 +6142,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'How many FADH₂ molecules are formed per turn of the Krebs cycle?',
     options: ['1', '2', '3', '4'],
     correctAnswer: '1',
-    explanation: 'One molecule of FADH₂ is formed during the Krebs cycle when succinate is oxidized to fumarate by the enzyme succinate dehydrogenase.',
+    explanation:
+      'One molecule of FADH₂ is formed during the Krebs cycle when succinate is oxidized to fumarate by the enzyme succinate dehydrogenase.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 12, Page 160',
     previousYearFrequency: 14,
@@ -5816,7 +6160,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'How many ATP/GTP molecules are directly produced in one turn of the Krebs cycle?',
     options: ['1', '2', '3', '4'],
     correctAnswer: '1',
-    explanation: 'One molecule of GTP (equivalent to ATP) is produced by substrate-level phosphorylation during the conversion of succinyl CoA to succinate in the Krebs cycle.',
+    explanation:
+      'One molecule of GTP (equivalent to ATP) is produced by substrate-level phosphorylation during the conversion of succinyl CoA to succinate in the Krebs cycle.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 12, Page 160',
     previousYearFrequency: 13,
@@ -5830,10 +6175,12 @@ export const class11Questions: AuthenticQuestion[] = [
     topicId: 'topic-11-14-respiration',
     chapterId: 'ch-11-14',
     classId: 'class-11',
-    question: 'Which molecule acts as the electron acceptor that gets regenerated in the Krebs cycle?',
+    question:
+      'Which molecule acts as the electron acceptor that gets regenerated in the Krebs cycle?',
     options: ['Acetyl CoA', 'Pyruvic acid', 'Oxaloacetic acid', 'Citric acid'],
     correctAnswer: 'Oxaloacetic acid',
-    explanation: 'Oxaloacetic acid (OAA) is regenerated at the end of the Krebs cycle. It acts as an electron acceptor and combines with acetyl CoA to start the next turn of the cycle.',
+    explanation:
+      'Oxaloacetic acid (OAA) is regenerated at the end of the Krebs cycle. It acts as an electron acceptor and combines with acetyl CoA to start the next turn of the cycle.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 12, Page 159',
     previousYearFrequency: 11,
@@ -5850,7 +6197,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Before entering the Krebs cycle, pyruvic acid is converted to:',
     options: ['Acetyl CoA', 'Citric acid', 'Oxaloacetic acid', 'α-ketoglutaric acid'],
     correctAnswer: 'Acetyl CoA',
-    explanation: 'Pyruvic acid undergoes oxidative decarboxylation to form acetyl CoA. This reaction releases one CO₂ and one NADH, and is catalyzed by the pyruvate dehydrogenase complex.',
+    explanation:
+      'Pyruvic acid undergoes oxidative decarboxylation to form acetyl CoA. This reaction releases one CO₂ and one NADH, and is catalyzed by the pyruvate dehydrogenase complex.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 12, Page 158',
     previousYearFrequency: 19,
@@ -5865,9 +6213,15 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-14',
     classId: 'class-11',
     question: 'The enzyme succinate dehydrogenase is located in the:',
-    options: ['Cytoplasm', 'Mitochondrial matrix', 'Inner mitochondrial membrane', 'Outer mitochondrial membrane'],
+    options: [
+      'Cytoplasm',
+      'Mitochondrial matrix',
+      'Inner mitochondrial membrane',
+      'Outer mitochondrial membrane',
+    ],
     correctAnswer: 'Inner mitochondrial membrane',
-    explanation: 'Succinate dehydrogenase is unique as it is the only enzyme of the Krebs cycle that is embedded in the inner mitochondrial membrane. It is also part of Complex II of the ETS.',
+    explanation:
+      'Succinate dehydrogenase is unique as it is the only enzyme of the Krebs cycle that is embedded in the inner mitochondrial membrane. It is also part of Complex II of the ETS.',
     difficulty: 'Hard',
     ncertPageReference: 'Class 11, Chapter 12, Page 160',
     previousYearFrequency: 8,
@@ -5882,9 +6236,15 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-14',
     classId: 'class-11',
     question: 'Why is the Krebs cycle also called a citric acid cycle?',
-    options: ['Citric acid is the end product', 'Citric acid is the first stable product', 'Citric acid provides energy', 'Citric acid donates electrons'],
+    options: [
+      'Citric acid is the end product',
+      'Citric acid is the first stable product',
+      'Citric acid provides energy',
+      'Citric acid donates electrons',
+    ],
     correctAnswer: 'Citric acid is the first stable product',
-    explanation: 'The Krebs cycle is called the citric acid cycle because citric acid (6-carbon) is the first stable product formed when acetyl CoA combines with oxaloacetic acid.',
+    explanation:
+      'The Krebs cycle is called the citric acid cycle because citric acid (6-carbon) is the first stable product formed when acetyl CoA combines with oxaloacetic acid.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 12, Page 159',
     previousYearFrequency: 10,
@@ -5901,9 +6261,15 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-14',
     classId: 'class-11',
     question: 'Where is the electron transport system (ETS) located?',
-    options: ['Cytoplasm', 'Mitochondrial matrix', 'Inner mitochondrial membrane', 'Outer mitochondrial membrane'],
+    options: [
+      'Cytoplasm',
+      'Mitochondrial matrix',
+      'Inner mitochondrial membrane',
+      'Outer mitochondrial membrane',
+    ],
     correctAnswer: 'Inner mitochondrial membrane',
-    explanation: 'The electron transport system is located in the inner mitochondrial membrane. It consists of complexes I, II, III, and IV that transfer electrons from NADH and FADH₂ to oxygen.',
+    explanation:
+      'The electron transport system is located in the inner mitochondrial membrane. It consists of complexes I, II, III, and IV that transfer electrons from NADH and FADH₂ to oxygen.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 12, Page 161',
     previousYearFrequency: 16,
@@ -5920,7 +6286,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'What is the final electron acceptor in the electron transport chain?',
     options: ['NAD⁺', 'FAD', 'Oxygen', 'Cytochrome c'],
     correctAnswer: 'Oxygen',
-    explanation: 'Molecular oxygen (O₂) is the final electron acceptor in aerobic respiration. It accepts electrons at Complex IV and combines with H⁺ ions to form water.',
+    explanation:
+      'Molecular oxygen (O₂) is the final electron acceptor in aerobic respiration. It accepts electrons at Complex IV and combines with H⁺ ions to form water.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 12, Page 161',
     previousYearFrequency: 20,
@@ -5937,7 +6304,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'How many ATP molecules are produced when one NADH is oxidized through ETS?',
     options: ['1', '2', '3', '4'],
     correctAnswer: '3',
-    explanation: 'According to NCERT, oxidation of one NADH through the electron transport system produces approximately 3 ATP molecules through oxidative phosphorylation.',
+    explanation:
+      'According to NCERT, oxidation of one NADH through the electron transport system produces approximately 3 ATP molecules through oxidative phosphorylation.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 12, Page 162',
     previousYearFrequency: 15,
@@ -5954,7 +6322,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'How many ATP molecules are produced when one FADH₂ is oxidized through ETS?',
     options: ['1', '2', '3', '4'],
     correctAnswer: '2',
-    explanation: 'Oxidation of one FADH₂ through the electron transport system produces approximately 2 ATP molecules. FADH₂ enters at Complex II, bypassing Complex I, thus producing fewer ATP than NADH.',
+    explanation:
+      'Oxidation of one FADH₂ through the electron transport system produces approximately 2 ATP molecules. FADH₂ enters at Complex II, bypassing Complex I, thus producing fewer ATP than NADH.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 12, Page 162',
     previousYearFrequency: 13,
@@ -5969,9 +6338,15 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-14',
     classId: 'class-11',
     question: 'What is the role of oxygen in aerobic respiration?',
-    options: ['Substrate for glycolysis', 'Final electron acceptor', 'Enzyme activator', 'Carbon source'],
+    options: [
+      'Substrate for glycolysis',
+      'Final electron acceptor',
+      'Enzyme activator',
+      'Carbon source',
+    ],
     correctAnswer: 'Final electron acceptor',
-    explanation: 'Oxygen serves as the final electron acceptor in the electron transport chain. Without oxygen, the ETS stops, NADH and FADH₂ cannot be reoxidized, and ATP production halts.',
+    explanation:
+      'Oxygen serves as the final electron acceptor in the electron transport chain. Without oxygen, the ETS stops, NADH and FADH₂ cannot be reoxidized, and ATP production halts.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 12, Page 161',
     previousYearFrequency: 14,
@@ -5986,9 +6361,15 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-14',
     classId: 'class-11',
     question: 'What is oxidative phosphorylation?',
-    options: ['ATP synthesis using oxygen', 'ATP synthesis coupled to electron transport', 'Phosphorylation in cytoplasm', 'Direct ATP production in Krebs cycle'],
+    options: [
+      'ATP synthesis using oxygen',
+      'ATP synthesis coupled to electron transport',
+      'Phosphorylation in cytoplasm',
+      'Direct ATP production in Krebs cycle',
+    ],
     correctAnswer: 'ATP synthesis coupled to electron transport',
-    explanation: 'Oxidative phosphorylation is the process where ATP synthesis is coupled to electron transport through the ETS. The energy released during electron transport is used to pump protons, creating a gradient that drives ATP synthesis.',
+    explanation:
+      'Oxidative phosphorylation is the process where ATP synthesis is coupled to electron transport through the ETS. The energy released during electron transport is used to pump protons, creating a gradient that drives ATP synthesis.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 12, Page 161',
     previousYearFrequency: 12,
@@ -6005,7 +6386,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The chemiosmotic hypothesis was proposed by:',
     options: ['Calvin', 'Krebs', 'Peter Mitchell', 'Blackman'],
     correctAnswer: 'Peter Mitchell',
-    explanation: 'Peter Mitchell proposed the chemiosmotic hypothesis to explain ATP synthesis in oxidative phosphorylation. He was awarded the Nobel Prize for this work in 1978.',
+    explanation:
+      'Peter Mitchell proposed the chemiosmotic hypothesis to explain ATP synthesis in oxidative phosphorylation. He was awarded the Nobel Prize for this work in 1978.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 12, Page 162',
     previousYearFrequency: 10,
@@ -6020,9 +6402,15 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-14',
     classId: 'class-11',
     question: 'The enzyme ATP synthase is located in the:',
-    options: ['Cytoplasm', 'Mitochondrial matrix', 'Inner mitochondrial membrane', 'Outer mitochondrial membrane'],
+    options: [
+      'Cytoplasm',
+      'Mitochondrial matrix',
+      'Inner mitochondrial membrane',
+      'Outer mitochondrial membrane',
+    ],
     correctAnswer: 'Inner mitochondrial membrane',
-    explanation: 'ATP synthase (also called Complex V or F₀F₁ ATPase) is embedded in the inner mitochondrial membrane. It uses the proton gradient to synthesize ATP from ADP and Pi.',
+    explanation:
+      'ATP synthase (also called Complex V or F₀F₁ ATPase) is embedded in the inner mitochondrial membrane. It uses the proton gradient to synthesize ATP from ADP and Pi.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 12, Page 162',
     previousYearFrequency: 11,
@@ -6036,10 +6424,12 @@ export const class11Questions: AuthenticQuestion[] = [
     topicId: 'topic-11-14-respiration',
     chapterId: 'ch-11-14',
     classId: 'class-11',
-    question: 'What is the net gain of ATP from complete oxidation of one glucose molecule in aerobic respiration?',
+    question:
+      'What is the net gain of ATP from complete oxidation of one glucose molecule in aerobic respiration?',
     options: ['2 ATP', '30 ATP', '38 ATP', '40 ATP'],
     correctAnswer: '38 ATP',
-    explanation: 'Complete oxidation of one glucose molecule in aerobic respiration yields approximately 38 ATP: 2 from glycolysis, 2 from Krebs cycle, and 34 from oxidative phosphorylation (ETS).',
+    explanation:
+      'Complete oxidation of one glucose molecule in aerobic respiration yields approximately 38 ATP: 2 from glycolysis, 2 from Krebs cycle, and 34 from oxidative phosphorylation (ETS).',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 12, Page 164',
     previousYearFrequency: 17,
@@ -6056,7 +6446,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'What creates the proton gradient across the inner mitochondrial membrane?',
     options: ['ATP synthase', 'Krebs cycle', 'Electron transport complexes', 'Glycolysis'],
     correctAnswer: 'Electron transport complexes',
-    explanation: 'The electron transport complexes (I, III, and IV) pump protons from the matrix to the intermembrane space, creating an electrochemical gradient. This gradient drives ATP synthesis through ATP synthase.',
+    explanation:
+      'The electron transport complexes (I, III, and IV) pump protons from the matrix to the intermembrane space, creating an electrochemical gradient. This gradient drives ATP synthesis through ATP synthase.',
     difficulty: 'Hard',
     ncertPageReference: 'Class 11, Chapter 12, Page 162',
     previousYearFrequency: 9,
@@ -6073,9 +6464,15 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-14',
     classId: 'class-11',
     question: 'What is respiratory quotient (RQ)?',
-    options: ['Ratio of O₂ consumed to CO₂ released', 'Ratio of CO₂ released to O₂ consumed', 'Ratio of ATP produced to O₂ consumed', 'Ratio of glucose used to CO₂ released'],
+    options: [
+      'Ratio of O₂ consumed to CO₂ released',
+      'Ratio of CO₂ released to O₂ consumed',
+      'Ratio of ATP produced to O₂ consumed',
+      'Ratio of glucose used to CO₂ released',
+    ],
     correctAnswer: 'Ratio of CO₂ released to O₂ consumed',
-    explanation: 'Respiratory quotient (RQ) is defined as the ratio of the volume of CO₂ released to the volume of O₂ consumed during respiration. It varies depending on the respiratory substrate.',
+    explanation:
+      'Respiratory quotient (RQ) is defined as the ratio of the volume of CO₂ released to the volume of O₂ consumed during respiration. It varies depending on the respiratory substrate.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 12, Page 165',
     previousYearFrequency: 16,
@@ -6092,7 +6489,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'What is the RQ value for carbohydrates?',
     options: ['0.7', '0.8', '1.0', '1.2'],
     correctAnswer: '1.0',
-    explanation: 'The RQ for carbohydrates is 1.0 because equal volumes of CO₂ are released and O₂ are consumed. For glucose: C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O, RQ = 6CO₂/6O₂ = 1.0.',
+    explanation:
+      'The RQ for carbohydrates is 1.0 because equal volumes of CO₂ are released and O₂ are consumed. For glucose: C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O, RQ = 6CO₂/6O₂ = 1.0.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 12, Page 165',
     previousYearFrequency: 18,
@@ -6109,7 +6507,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'What is the RQ value for fats/lipids?',
     options: ['0.5', '0.7', '1.0', '1.3'],
     correctAnswer: '0.7',
-    explanation: 'The RQ for fats is approximately 0.7 because fats require more oxygen relative to the CO₂ produced. Fats are more reduced compounds and require more oxygen for complete oxidation.',
+    explanation:
+      'The RQ for fats is approximately 0.7 because fats require more oxygen relative to the CO₂ produced. Fats are more reduced compounds and require more oxygen for complete oxidation.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 12, Page 165',
     previousYearFrequency: 15,
@@ -6126,7 +6525,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'When organic acids are respiratory substrates, the RQ value is:',
     options: ['Less than 1', 'Equal to 1', 'Greater than 1', 'Zero'],
     correctAnswer: 'Greater than 1',
-    explanation: 'When organic acids like malic acid or oxalic acid are used as respiratory substrates, the RQ is greater than 1 because they are already partially oxidized and contain more oxygen than carbohydrates.',
+    explanation:
+      'When organic acids like malic acid or oxalic acid are used as respiratory substrates, the RQ is greater than 1 because they are already partially oxidized and contain more oxygen than carbohydrates.',
     difficulty: 'Hard',
     ncertPageReference: 'Class 11, Chapter 12, Page 165',
     previousYearFrequency: 10,
@@ -6143,7 +6543,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Which respiratory substrate requires the most oxygen for complete oxidation?',
     options: ['Carbohydrates', 'Proteins', 'Fats', 'Organic acids'],
     correctAnswer: 'Fats',
-    explanation: 'Fats require the most oxygen for complete oxidation because they are highly reduced compounds with many C-H bonds. This is reflected in their low RQ value of 0.7.',
+    explanation:
+      'Fats require the most oxygen for complete oxidation because they are highly reduced compounds with many C-H bonds. This is reflected in their low RQ value of 0.7.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 12, Page 165',
     previousYearFrequency: 12,
@@ -6160,9 +6561,15 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-14',
     classId: 'class-11',
     question: 'What is fermentation?',
-    options: ['Aerobic breakdown of glucose', 'Incomplete oxidation of glucose without oxygen', 'Complete oxidation in mitochondria', 'Photosynthetic process'],
+    options: [
+      'Aerobic breakdown of glucose',
+      'Incomplete oxidation of glucose without oxygen',
+      'Complete oxidation in mitochondria',
+      'Photosynthetic process',
+    ],
     correctAnswer: 'Incomplete oxidation of glucose without oxygen',
-    explanation: 'Fermentation is the incomplete oxidation of glucose or other organic compounds in the absence of oxygen. It yields much less energy (2 ATP) compared to aerobic respiration.',
+    explanation:
+      'Fermentation is the incomplete oxidation of glucose or other organic compounds in the absence of oxygen. It yields much less energy (2 ATP) compared to aerobic respiration.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 12, Page 166',
     previousYearFrequency: 14,
@@ -6179,7 +6586,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'In lactic acid fermentation, pyruvic acid is converted to:',
     options: ['Ethanol', 'Lactic acid', 'Acetic acid', 'Citric acid'],
     correctAnswer: 'Lactic acid',
-    explanation: 'In lactic acid fermentation (occurring in muscle cells under oxygen deficit), pyruvic acid is reduced to lactic acid by the enzyme lactate dehydrogenase, regenerating NAD⁺ for glycolysis to continue.',
+    explanation:
+      'In lactic acid fermentation (occurring in muscle cells under oxygen deficit), pyruvic acid is reduced to lactic acid by the enzyme lactate dehydrogenase, regenerating NAD⁺ for glycolysis to continue.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 12, Page 166',
     previousYearFrequency: 17,
@@ -6196,7 +6604,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Alcoholic fermentation produces:',
     options: ['Ethanol and O₂', 'Ethanol and CO₂', 'Methanol and CO₂', 'Lactic acid and CO₂'],
     correctAnswer: 'Ethanol and CO₂',
-    explanation: 'In alcoholic fermentation (in yeast), pyruvic acid is first decarboxylated to acetaldehyde (releasing CO₂), which is then reduced to ethanol. This process is used in brewing and baking industries.',
+    explanation:
+      'In alcoholic fermentation (in yeast), pyruvic acid is first decarboxylated to acetaldehyde (releasing CO₂), which is then reduced to ethanol. This process is used in brewing and baking industries.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 12, Page 166',
     previousYearFrequency: 19,
@@ -6211,9 +6620,15 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-14',
     classId: 'class-11',
     question: 'Why is fermentation considered inefficient?',
-    options: ['Takes too long', 'Requires enzymes', 'Yields only 2 ATP per glucose', 'Produces toxic products'],
+    options: [
+      'Takes too long',
+      'Requires enzymes',
+      'Yields only 2 ATP per glucose',
+      'Produces toxic products',
+    ],
     correctAnswer: 'Yields only 2 ATP per glucose',
-    explanation: 'Fermentation is inefficient because it yields only 2 ATP molecules per glucose (from glycolysis alone), compared to 38 ATP in aerobic respiration. Most energy remains locked in the fermentation products.',
+    explanation:
+      'Fermentation is inefficient because it yields only 2 ATP molecules per glucose (from glycolysis alone), compared to 38 ATP in aerobic respiration. Most energy remains locked in the fermentation products.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 12, Page 166',
     previousYearFrequency: 11,
@@ -6230,7 +6645,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'What is the main purpose of fermentation in cells?',
     options: ['Produce CO₂', 'Produce ethanol', 'Regenerate NAD⁺ for glycolysis', 'Store energy'],
     correctAnswer: 'Regenerate NAD⁺ for glycolysis',
-    explanation: 'The main purpose of fermentation is to regenerate NAD⁺ from NADH so that glycolysis can continue producing ATP in the absence of oxygen. Without NAD⁺ regeneration, glycolysis would stop.',
+    explanation:
+      'The main purpose of fermentation is to regenerate NAD⁺ from NADH so that glycolysis can continue producing ATP in the absence of oxygen. Without NAD⁺ regeneration, glycolysis would stop.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 12, Page 166',
     previousYearFrequency: 13,
@@ -6247,9 +6663,15 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-14',
     classId: 'class-11',
     question: 'What are respiratory substrates?',
-    options: ['Only glucose', 'Only carbohydrates', 'Any organic compound used in respiration', 'Only proteins'],
+    options: [
+      'Only glucose',
+      'Only carbohydrates',
+      'Any organic compound used in respiration',
+      'Only proteins',
+    ],
     correctAnswer: 'Any organic compound used in respiration',
-    explanation: 'Respiratory substrates are organic compounds that can be oxidized during respiration to release energy. These include carbohydrates, fats, proteins, and organic acids.',
+    explanation:
+      'Respiratory substrates are organic compounds that can be oxidized during respiration to release energy. These include carbohydrates, fats, proteins, and organic acids.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 12, Page 165',
     previousYearFrequency: 12,
@@ -6266,7 +6688,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Which is the most common respiratory substrate?',
     options: ['Proteins', 'Fats', 'Carbohydrates', 'Nucleic acids'],
     correctAnswer: 'Carbohydrates',
-    explanation: 'Carbohydrates, particularly glucose, are the most common respiratory substrates because they are readily available and easily mobilized for energy production.',
+    explanation:
+      'Carbohydrates, particularly glucose, are the most common respiratory substrates because they are readily available and easily mobilized for energy production.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 12, Page 165',
     previousYearFrequency: 16,
@@ -6283,7 +6706,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Which respiratory substrate yields the maximum energy per gram?',
     options: ['Carbohydrates', 'Proteins', 'Fats', 'Nucleic acids'],
     correctAnswer: 'Fats',
-    explanation: 'Fats yield the maximum energy per gram (approximately 9 kcal/g) compared to carbohydrates and proteins (approximately 4 kcal/g each) because they are highly reduced compounds with many C-H bonds.',
+    explanation:
+      'Fats yield the maximum energy per gram (approximately 9 kcal/g) compared to carbohydrates and proteins (approximately 4 kcal/g each) because they are highly reduced compounds with many C-H bonds.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 12, Page 165',
     previousYearFrequency: 13,
@@ -6300,7 +6724,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'When proteins are used as respiratory substrates, they are first broken down into:',
     options: ['Glucose', 'Fatty acids', 'Amino acids', 'Pyruvic acid'],
     correctAnswer: 'Amino acids',
-    explanation: 'Proteins are first hydrolyzed into amino acids. These amino acids are then deaminated (amino group removed), and the remaining carbon skeletons enter the respiratory pathway at various points.',
+    explanation:
+      'Proteins are first hydrolyzed into amino acids. These amino acids are then deaminated (amino group removed), and the remaining carbon skeletons enter the respiratory pathway at various points.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 12, Page 165',
     previousYearFrequency: 11,
@@ -6317,7 +6742,8 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Fats are broken down to which molecules before entering the respiratory pathway?',
     options: ['Glucose', 'Amino acids', 'Glycerol and fatty acids', 'Pyruvic acid'],
     correctAnswer: 'Glycerol and fatty acids',
-    explanation: 'Fats are first hydrolyzed to glycerol and fatty acids. Glycerol enters glycolysis after conversion to PGAL, while fatty acids undergo beta-oxidation to form acetyl CoA, which enters the Krebs cycle.',
+    explanation:
+      'Fats are first hydrolyzed to glycerol and fatty acids. Glycerol enters glycolysis after conversion to PGAL, while fatty acids undergo beta-oxidation to form acetyl CoA, which enters the Krebs cycle.',
     difficulty: 'Hard',
     ncertPageReference: 'Class 11, Chapter 12, Page 165',
     previousYearFrequency: 9,
@@ -6337,44 +6763,48 @@ export const class11Questions: AuthenticQuestion[] = [
     topicId: 'topic-11-13-growth',
     chapterId: 'ch-11-13',
     classId: 'class-11',
-    question: 'Growth is defined as an irreversible permanent increase in size of an organ or its parts. Which of the following is NOT a characteristic of growth?',
+    question:
+      'Growth is defined as an irreversible permanent increase in size of an organ or its parts. Which of the following is NOT a characteristic of growth?',
     options: [
       'Increase in protoplasmic material',
       'Accompanied by metabolic processes',
       'Reversible increase in cell size',
-      'Requires energy expenditure'
+      'Requires energy expenditure',
     ],
     correctAnswer: 'Reversible increase in cell size',
-    explanation: 'Growth is defined as an irreversible permanent increase in size. It cannot be reversed, making it a fundamental characteristic that distinguishes growth from temporary swelling. As stated in Class 11, Chapter 13, Page 167, growth is accompanied by metabolic processes at the expense of energy and involves increase in protoplasmic material.',
+    explanation:
+      'Growth is defined as an irreversible permanent increase in size. It cannot be reversed, making it a fundamental characteristic that distinguishes growth from temporary swelling. As stated in Class 11, Chapter 13, Page 167, growth is accompanied by metabolic processes at the expense of energy and involves increase in protoplasmic material.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 13, Page 167',
     previousYearFrequency: 15,
     conceptualLinks: ['Definition of growth', 'Growth characteristics', 'Metabolic processes'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch9-002',
     topicId: 'topic-11-13-growth',
     chapterId: 'ch-11-13',
     classId: 'class-11',
-    question: 'Plant growth is unique because plants retain the capacity for unlimited growth throughout their life. This is due to the presence of:',
+    question:
+      'Plant growth is unique because plants retain the capacity for unlimited growth throughout their life. This is due to the presence of:',
     options: [
       'Permanent tissues',
       'Meristems at certain locations',
       'Differentiated cells',
-      'Secondary xylem'
+      'Secondary xylem',
     ],
     correctAnswer: 'Meristems at certain locations',
-    explanation: 'Plants retain the capacity for unlimited growth due to the presence of meristems at certain locations in their body. According to Class 11, Chapter 13, Page 167, cells of meristems have the capacity to divide and self-perpetuate, leading to the open form of growth where new cells are always being added.',
+    explanation:
+      'Plants retain the capacity for unlimited growth due to the presence of meristems at certain locations in their body. According to Class 11, Chapter 13, Page 167, cells of meristems have the capacity to divide and self-perpetuate, leading to the open form of growth where new cells are always being added.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 13, Page 167',
     previousYearFrequency: 18,
     conceptualLinks: ['Indeterminate growth', 'Meristems', 'Open growth'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch9-003',
@@ -6386,17 +6816,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'Meristematic, elongation, and maturation',
       'Germination, vegetative, and reproductive',
       'Primary, secondary, and tertiary',
-      'Division, expansion, and death'
+      'Division, expansion, and death',
     ],
     correctAnswer: 'Meristematic, elongation, and maturation',
-    explanation: 'According to Class 11, Chapter 13, Page 168, the period of growth is generally divided into three phases: meristematic, elongation, and maturation. These phases can be observed in root tips where constantly dividing cells represent the meristematic phase, followed by elongation and then maturation.',
+    explanation:
+      'According to Class 11, Chapter 13, Page 168, the period of growth is generally divided into three phases: meristematic, elongation, and maturation. These phases can be observed in root tips where constantly dividing cells represent the meristematic phase, followed by elongation and then maturation.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 13, Page 168',
     previousYearFrequency: 19,
     conceptualLinks: ['Growth phases', 'Root growth', 'Cell division'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch9-004',
@@ -6408,39 +6839,37 @@ export const class11Questions: AuthenticQuestion[] = [
       'Large vacuoles and thick cell walls',
       'Rich protoplasm, large nuclei, and thin cellulosic walls',
       'Dead protoplasm and lignified walls',
-      'Small nuclei and no plasmodesmatal connections'
+      'Small nuclei and no plasmodesmatal connections',
     ],
     correctAnswer: 'Rich protoplasm, large nuclei, and thin cellulosic walls',
-    explanation: 'As described in Class 11, Chapter 13, Page 168, cells in the meristematic phase are rich in protoplasm, possess large conspicuous nuclei, and their cell walls are primary in nature, thin and cellulosic with abundant plasmodesmatal connections.',
+    explanation:
+      'As described in Class 11, Chapter 13, Page 168, cells in the meristematic phase are rich in protoplasm, possess large conspicuous nuclei, and their cell walls are primary in nature, thin and cellulosic with abundant plasmodesmatal connections.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 13, Page 168',
     previousYearFrequency: 14,
     conceptualLinks: ['Meristematic cells', 'Cell characteristics', 'Growth phases'],
     timeEstimate: 40,
     bloomsLevel: 'Understand',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch9-005',
     topicId: 'topic-11-13-growth',
     chapterId: 'ch-11-13',
     classId: 'class-11',
-    question: 'A sigmoid growth curve shows three distinct phases. The initial slow growth phase is called:',
-    options: [
-      'Exponential phase',
-      'Log phase',
-      'Lag phase',
-      'Stationary phase'
-    ],
+    question:
+      'A sigmoid growth curve shows three distinct phases. The initial slow growth phase is called:',
+    options: ['Exponential phase', 'Log phase', 'Lag phase', 'Stationary phase'],
     correctAnswer: 'Lag phase',
-    explanation: 'According to Class 11, Chapter 13, Page 170, in most systems showing geometric growth, the initial growth is slow (lag phase), and it increases rapidly thereafter at an exponential rate (log or exponential phase), finally slowing down to a stationary phase. This creates a typical sigmoid or S-curve.',
+    explanation:
+      'According to Class 11, Chapter 13, Page 170, in most systems showing geometric growth, the initial growth is slow (lag phase), and it increases rapidly thereafter at an exponential rate (log or exponential phase), finally slowing down to a stationary phase. This creates a typical sigmoid or S-curve.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 13, Page 170',
     previousYearFrequency: 17,
     conceptualLinks: ['Sigmoid curve', 'Growth rates', 'Growth phases'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch9-006',
@@ -6452,39 +6881,42 @@ export const class11Questions: AuthenticQuestion[] = [
       'Both daughter cells continue to divide',
       'Only one daughter cell continues to divide while the other differentiates',
       'Neither daughter cell divides',
-      'Both daughter cells differentiate immediately'
+      'Both daughter cells differentiate immediately',
     ],
     correctAnswer: 'Only one daughter cell continues to divide while the other differentiates',
-    explanation: 'As stated in Class 11, Chapter 13, Page 170, in arithmetic growth, following mitotic cell division, only one daughter cell continues to divide while the other differentiates and matures. This is exemplified by a root elongating at a constant rate, producing a linear curve when length is plotted against time.',
+    explanation:
+      'As stated in Class 11, Chapter 13, Page 170, in arithmetic growth, following mitotic cell division, only one daughter cell continues to divide while the other differentiates and matures. This is exemplified by a root elongating at a constant rate, producing a linear curve when length is plotted against time.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 13, Page 170',
     previousYearFrequency: 13,
     conceptualLinks: ['Arithmetic growth', 'Cell division', 'Growth patterns'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch9-007',
     topicId: 'topic-11-13-growth',
     chapterId: 'ch-11-13',
     classId: 'class-11',
-    question: 'Growth can be measured by various parameters. One maize root apical meristem can give rise to more than 17,500 new cells per hour. This represents growth measured as:',
+    question:
+      'Growth can be measured by various parameters. One maize root apical meristem can give rise to more than 17,500 new cells per hour. This represents growth measured as:',
     options: [
       'Increase in length',
       'Increase in cell number',
       'Increase in surface area',
-      'Increase in dry weight'
+      'Increase in dry weight',
     ],
     correctAnswer: 'Increase in cell number',
-    explanation: 'According to Class 11, Chapter 13, Page 168, growth is measured by various parameters including increase in fresh weight, dry weight, length, area, volume, and cell number. The example of maize root apical meristem producing 17,500 new cells per hour specifically expresses growth as increase in cell number.',
+    explanation:
+      'According to Class 11, Chapter 13, Page 168, growth is measured by various parameters including increase in fresh weight, dry weight, length, area, volume, and cell number. The example of maize root apical meristem producing 17,500 new cells per hour specifically expresses growth as increase in cell number.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 13, Page 168',
     previousYearFrequency: 12,
     conceptualLinks: ['Growth measurement', 'Cell division', 'Growth parameters'],
     timeEstimate: 40,
     bloomsLevel: 'Apply',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch9-008',
@@ -6496,17 +6928,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'Water for cell enlargement',
       'Oxygen for releasing metabolic energy',
       'Continuous darkness',
-      'Nutrients for protoplasm synthesis'
+      'Nutrients for protoplasm synthesis',
     ],
     correctAnswer: 'Continuous darkness',
-    explanation: 'Class 11, Chapter 13, Page 171 states that essential conditions for growth include water (for cell enlargement and turgidity), oxygen (for releasing metabolic energy), and nutrients (for synthesis of protoplasm and as energy source). While light affects certain growth phases, continuous darkness is not a requirement for growth.',
+    explanation:
+      'Class 11, Chapter 13, Page 171 states that essential conditions for growth include water (for cell enlargement and turgidity), oxygen (for releasing metabolic energy), and nutrients (for synthesis of protoplasm and as energy source). While light affects certain growth phases, continuous darkness is not a requirement for growth.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 13, Page 171',
     previousYearFrequency: 11,
     conceptualLinks: ['Growth conditions', 'Environmental factors', 'Growth requirements'],
     timeEstimate: 35,
     bloomsLevel: 'Understand',
-    weightage: 4.0
+    weightage: 4.0,
   },
 
   // Plant Growth Regulators - Auxins (8 questions)
@@ -6515,66 +6948,62 @@ export const class11Questions: AuthenticQuestion[] = [
     topicId: 'topic-11-13-growth',
     chapterId: 'ch-11-13',
     classId: 'class-11',
-    question: 'Auxins were first isolated from human urine. The term auxin is derived from the Greek word "auxein" meaning:',
-    options: [
-      'To divide',
-      'To grow',
-      'To differentiate',
-      'To mature'
-    ],
+    question:
+      'Auxins were first isolated from human urine. The term auxin is derived from the Greek word "auxein" meaning:',
+    options: ['To divide', 'To grow', 'To differentiate', 'To mature'],
     correctAnswer: 'To grow',
-    explanation: 'According to Class 11, Chapter 13, Page 175, auxins derive their name from the Greek word "auxein" meaning "to grow". Auxin was first isolated from human urine, and the term is applied to indole-3-acetic acid (IAA) and other natural and synthetic compounds with growth regulating properties.',
+    explanation:
+      'According to Class 11, Chapter 13, Page 175, auxins derive their name from the Greek word "auxein" meaning "to grow". Auxin was first isolated from human urine, and the term is applied to indole-3-acetic acid (IAA) and other natural and synthetic compounds with growth regulating properties.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 13, Page 175',
     previousYearFrequency: 10,
     conceptualLinks: ['Auxins', 'Plant hormones', 'Etymology'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q11-batch9-010',
     topicId: 'topic-11-13-growth',
     chapterId: 'ch-11-13',
     classId: 'class-11',
-    question: 'The discovery of auxins was based on experiments with coleoptiles showing phototropism. Who isolated auxin from tips of coleoptiles of oat seedlings?',
-    options: [
-      'Charles Darwin',
-      'F.W. Went',
-      'E. Kurosawa',
-      'F. Skoog'
-    ],
+    question:
+      'The discovery of auxins was based on experiments with coleoptiles showing phototropism. Who isolated auxin from tips of coleoptiles of oat seedlings?',
+    options: ['Charles Darwin', 'F.W. Went', 'E. Kurosawa', 'F. Skoog'],
     correctAnswer: 'F.W. Went',
-    explanation: 'As mentioned in Class 11, Chapter 13, Page 174, auxin was isolated by F.W. Went from tips of coleoptiles of oat seedlings. This followed observations by Charles Darwin and Francis Darwin on phototropism in canary grass coleoptiles, where they concluded that the tip of coleoptile was the site of transmittable influence.',
+    explanation:
+      'As mentioned in Class 11, Chapter 13, Page 174, auxin was isolated by F.W. Went from tips of coleoptiles of oat seedlings. This followed observations by Charles Darwin and Francis Darwin on phototropism in canary grass coleoptiles, where they concluded that the tip of coleoptile was the site of transmittable influence.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 13, Page 174',
     previousYearFrequency: 13,
     conceptualLinks: ['Auxin discovery', 'Plant hormones history', 'Phototropism'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch9-011',
     topicId: 'topic-11-13-growth',
     chapterId: 'ch-11-13',
     classId: 'class-11',
-    question: 'Which of the following is a synthetic auxin widely used to kill dicotyledonous weeds without affecting mature monocotyledonous plants?',
+    question:
+      'Which of the following is a synthetic auxin widely used to kill dicotyledonous weeds without affecting mature monocotyledonous plants?',
     options: [
       'IAA (Indole-3-acetic acid)',
       'IBA (Indole butyric acid)',
       '2,4-D (2,4-dichlorophenoxyacetic acid)',
-      'GA3 (Gibberellic acid)'
+      'GA3 (Gibberellic acid)',
     ],
     correctAnswer: '2,4-D (2,4-dichlorophenoxyacetic acid)',
-    explanation: 'According to Class 11, Chapter 13, Page 175-176, 2,4-D is a synthetic auxin widely used to kill dicotyledonous weeds and does not affect mature monocotyledonous plants. It is used to prepare weed-free lawns by gardeners. NAA and 2,4-D are synthetic auxins, while IAA and IBA are natural auxins.',
+    explanation:
+      'According to Class 11, Chapter 13, Page 175-176, 2,4-D is a synthetic auxin widely used to kill dicotyledonous weeds and does not affect mature monocotyledonous plants. It is used to prepare weed-free lawns by gardeners. NAA and 2,4-D are synthetic auxins, while IAA and IBA are natural auxins.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 13, Page 175-176',
     previousYearFrequency: 16,
     conceptualLinks: ['Synthetic auxins', 'Herbicides', 'Weed control'],
     timeEstimate: 45,
     bloomsLevel: 'Apply',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch9-012',
@@ -6586,17 +7015,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'Root growth is faster than shoot growth',
       'The growing apical bud inhibits the growth of lateral buds',
       'Apical meristem produces only one type of tissue',
-      'Terminal flowers bloom before lateral flowers'
+      'Terminal flowers bloom before lateral flowers',
     ],
     correctAnswer: 'The growing apical bud inhibits the growth of lateral buds',
-    explanation: 'As described in Class 11, Chapter 13, Page 175, in most higher plants, the growing apical bud inhibits the growth of the lateral (axillary) buds, a phenomenon called apical dominance. Removal of shoot tips (decapitation) usually results in the growth of lateral buds, which is widely applied in tea plantations and hedge-making.',
+    explanation:
+      'As described in Class 11, Chapter 13, Page 175, in most higher plants, the growing apical bud inhibits the growth of the lateral (axillary) buds, a phenomenon called apical dominance. Removal of shoot tips (decapitation) usually results in the growth of lateral buds, which is widely applied in tea plantations and hedge-making.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 13, Page 175',
     previousYearFrequency: 20,
     conceptualLinks: ['Apical dominance', 'Auxins', 'Lateral bud growth'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch9-013',
@@ -6604,21 +7034,17 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-13',
     classId: 'class-11',
     question: 'Auxins help initiate rooting in stem cuttings. This application is widely used for:',
-    options: [
-      'Seed germination',
-      'Fruit ripening',
-      'Plant propagation',
-      'Leaf senescence'
-    ],
+    options: ['Seed germination', 'Fruit ripening', 'Plant propagation', 'Leaf senescence'],
     correctAnswer: 'Plant propagation',
-    explanation: 'According to Class 11, Chapter 13, Page 175, auxins help to initiate rooting in stem cuttings, an application widely used for plant propagation. This is one of the extensive uses of auxins in agricultural and horticultural practices.',
+    explanation:
+      'According to Class 11, Chapter 13, Page 175, auxins help to initiate rooting in stem cuttings, an application widely used for plant propagation. This is one of the extensive uses of auxins in agricultural and horticultural practices.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 13, Page 175',
     previousYearFrequency: 15,
     conceptualLinks: ['Auxin applications', 'Rooting', 'Plant propagation'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch9-014',
@@ -6626,21 +7052,17 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-13',
     classId: 'class-11',
     question: 'Auxins induce parthenocarpy (development of fruit without fertilization) in:',
-    options: [
-      'Rice',
-      'Wheat',
-      'Tomatoes',
-      'Cotton'
-    ],
+    options: ['Rice', 'Wheat', 'Tomatoes', 'Cotton'],
     correctAnswer: 'Tomatoes',
-    explanation: 'As mentioned in Class 11, Chapter 13, Page 176, auxins induce parthenocarpy, for example, in tomatoes. Parthenocarpy is the development of fruit without fertilization, resulting in seedless fruits. This is one of the important physiological effects of auxins.',
+    explanation:
+      'As mentioned in Class 11, Chapter 13, Page 176, auxins induce parthenocarpy, for example, in tomatoes. Parthenocarpy is the development of fruit without fertilization, resulting in seedless fruits. This is one of the important physiological effects of auxins.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 13, Page 176',
     previousYearFrequency: 14,
     conceptualLinks: ['Parthenocarpy', 'Auxins', 'Seedless fruits'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch9-015',
@@ -6652,39 +7074,37 @@ export const class11Questions: AuthenticQuestion[] = [
       'They promote abscission at all stages',
       'They prevent abscission at early stages but promote it in older tissues',
       'They have no effect on abscission',
-      'They only prevent abscission in all stages'
+      'They only prevent abscission in all stages',
     ],
     correctAnswer: 'They prevent abscission at early stages but promote it in older tissues',
-    explanation: 'According to Class 11, Chapter 13, Page 175, auxins help to prevent fruit and leaf drop at early stages but promote the abscission of older mature leaves and fruits. This dual role shows the complex nature of auxin action depending on the developmental stage.',
+    explanation:
+      'According to Class 11, Chapter 13, Page 175, auxins help to prevent fruit and leaf drop at early stages but promote the abscission of older mature leaves and fruits. This dual role shows the complex nature of auxin action depending on the developmental stage.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 13, Page 175',
     previousYearFrequency: 12,
     conceptualLinks: ['Auxins', 'Abscission', 'Fruit drop'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch9-016',
     topicId: 'topic-11-13-growth',
     chapterId: 'ch-11-13',
     classId: 'class-11',
-    question: 'Plant growth regulators can be broadly divided into two groups based on their functions. Which group includes auxins, gibberellins, and cytokinins?',
-    options: [
-      'Growth inhibitors',
-      'Growth promoters',
-      'Stress hormones',
-      'Abscission factors'
-    ],
+    question:
+      'Plant growth regulators can be broadly divided into two groups based on their functions. Which group includes auxins, gibberellins, and cytokinins?',
+    options: ['Growth inhibitors', 'Growth promoters', 'Stress hormones', 'Abscission factors'],
     correctAnswer: 'Growth promoters',
-    explanation: 'As stated in Class 11, Chapter 13, Page 174, PGRs can be broadly divided into two groups. One group includes growth promoting activities and are called plant growth promoters, e.g., auxins, gibberellins, and cytokinins. The other group includes growth inhibiting activities like ABA.',
+    explanation:
+      'As stated in Class 11, Chapter 13, Page 174, PGRs can be broadly divided into two groups. One group includes growth promoting activities and are called plant growth promoters, e.g., auxins, gibberellins, and cytokinins. The other group includes growth inhibiting activities like ABA.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 13, Page 174',
     previousYearFrequency: 16,
     conceptualLinks: ['PGR classification', 'Growth promoters', 'Plant hormones'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
 
   // Plant Growth Regulators - Gibberellins (7 questions)
@@ -6693,88 +7113,91 @@ export const class11Questions: AuthenticQuestion[] = [
     topicId: 'topic-11-13-growth',
     chapterId: 'ch-11-13',
     classId: 'class-11',
-    question: 'The discovery of gibberellins was based on the study of the "bakanae" (foolish seedling) disease of rice caused by the fungus:',
+    question:
+      'The discovery of gibberellins was based on the study of the "bakanae" (foolish seedling) disease of rice caused by the fungus:',
     options: [
       'Aspergillus niger',
       'Gibberella fujikuroi',
       'Penicillium notatum',
-      'Rhizopus stolonifer'
+      'Rhizopus stolonifer',
     ],
     correctAnswer: 'Gibberella fujikuroi',
-    explanation: 'As described in Class 11, Chapter 13, Page 175, the "bakanae" (foolish seedling) disease of rice seedlings was caused by a fungal pathogen Gibberella fujikuroi. E. Kurosawa (1926) reported that rice seedlings showed disease symptoms when treated with sterile filtrates of the fungus, and the active substances were later identified as gibberellic acid.',
+    explanation:
+      'As described in Class 11, Chapter 13, Page 175, the "bakanae" (foolish seedling) disease of rice seedlings was caused by a fungal pathogen Gibberella fujikuroi. E. Kurosawa (1926) reported that rice seedlings showed disease symptoms when treated with sterile filtrates of the fungus, and the active substances were later identified as gibberellic acid.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 13, Page 175',
     previousYearFrequency: 17,
     conceptualLinks: ['Gibberellin discovery', 'Bakanae disease', 'Plant hormones'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch9-018',
     topicId: 'topic-11-13-growth',
     chapterId: 'ch-11-13',
     classId: 'class-11',
-    question: 'There are more than 100 gibberellins reported from different organisms. Which form was one of the first to be discovered and remains the most intensively studied?',
-    options: [
-      'GA1',
-      'GA2',
-      'GA3 (Gibberellic acid)',
-      'GA5'
-    ],
+    question:
+      'There are more than 100 gibberellins reported from different organisms. Which form was one of the first to be discovered and remains the most intensively studied?',
+    options: ['GA1', 'GA2', 'GA3 (Gibberellic acid)', 'GA5'],
     correctAnswer: 'GA3 (Gibberellic acid)',
-    explanation: 'According to Class 11, Chapter 13, Page 176, Gibberellic acid (GA3) was one of the first gibberellins to be discovered and remains the most intensively studied form. There are more than 100 gibberellins denoted as GA1, GA2, GA3, and so on, and all GAs are acidic.',
+    explanation:
+      'According to Class 11, Chapter 13, Page 176, Gibberellic acid (GA3) was one of the first gibberellins to be discovered and remains the most intensively studied form. There are more than 100 gibberellins denoted as GA1, GA2, GA3, and so on, and all GAs are acidic.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 13, Page 176',
     previousYearFrequency: 13,
     conceptualLinks: ['Gibberellins', 'GA3', 'Plant hormones'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch9-019',
     topicId: 'topic-11-13-growth',
     chapterId: 'ch-11-13',
     classId: 'class-11',
-    question: 'Gibberellins are used to increase the length of grape stalks. This is due to their ability to:',
+    question:
+      'Gibberellins are used to increase the length of grape stalks. This is due to their ability to:',
     options: [
       'Promote cell division only',
       'Cause an increase in length of axis',
       'Inhibit lateral bud growth',
-      'Prevent fruit ripening'
+      'Prevent fruit ripening',
     ],
     correctAnswer: 'Cause an increase in length of axis',
-    explanation: 'As stated in Class 11, Chapter 13, Page 176, gibberellins produce a wide range of physiological responses in plants. Their ability to cause an increase in length of axis is used to increase the length of grape stalks. Gibberellins also cause fruits like apple to elongate and improve their shape.',
+    explanation:
+      'As stated in Class 11, Chapter 13, Page 176, gibberellins produce a wide range of physiological responses in plants. Their ability to cause an increase in length of axis is used to increase the length of grape stalks. Gibberellins also cause fruits like apple to elongate and improve their shape.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 13, Page 176',
     previousYearFrequency: 14,
     conceptualLinks: ['Gibberellins', 'Axis elongation', 'Commercial applications'],
     timeEstimate: 40,
     bloomsLevel: 'Understand',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch9-020',
     topicId: 'topic-11-13-growth',
     chapterId: 'ch-11-13',
     classId: 'class-11',
-    question: 'Spraying sugarcane crop with gibberellins increases the length of the stem. This can increase the yield by as much as:',
+    question:
+      'Spraying sugarcane crop with gibberellins increases the length of the stem. This can increase the yield by as much as:',
     options: [
       '5 tonnes per acre',
       '10 tonnes per acre',
       '20 tonnes per acre',
-      '30 tonnes per acre'
+      '30 tonnes per acre',
     ],
     correctAnswer: '20 tonnes per acre',
-    explanation: 'According to Class 11, Chapter 13, Page 176, sugarcane stores carbohydrate as sugar in their stems. Spraying sugarcane crop with gibberellins increases the length of the stem, thus increasing the yield by as much as 20 tonnes per acre. This is a significant commercial application of gibberellins.',
+    explanation:
+      'According to Class 11, Chapter 13, Page 176, sugarcane stores carbohydrate as sugar in their stems. Spraying sugarcane crop with gibberellins increases the length of the stem, thus increasing the yield by as much as 20 tonnes per acre. This is a significant commercial application of gibberellins.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 13, Page 176',
     previousYearFrequency: 11,
     conceptualLinks: ['Gibberellins', 'Sugarcane', 'Agricultural applications'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch9-021',
@@ -6786,17 +7209,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'Formation of lateral branches',
       'Internode elongation just prior to flowering',
       'Root elongation',
-      'Fruit development without fertilization'
+      'Fruit development without fertilization',
     ],
     correctAnswer: 'Internode elongation just prior to flowering',
-    explanation: 'As mentioned in Class 11, Chapter 13, Page 176, gibberellins promote bolting (internode elongation just prior to flowering) in beet, cabbages, and many plants with rosette habit. This is one of the characteristic physiological effects of gibberellins on plant development.',
+    explanation:
+      'As mentioned in Class 11, Chapter 13, Page 176, gibberellins promote bolting (internode elongation just prior to flowering) in beet, cabbages, and many plants with rosette habit. This is one of the characteristic physiological effects of gibberellins on plant development.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 13, Page 176',
     previousYearFrequency: 16,
     conceptualLinks: ['Bolting', 'Gibberellins', 'Rosette plants'],
     timeEstimate: 45,
     bloomsLevel: 'Remember',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch9-022',
@@ -6804,21 +7228,17 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-13',
     classId: 'class-11',
     question: 'GA3 is used to speed up which process in the brewing industry?',
-    options: [
-      'Fermentation',
-      'Malting process',
-      'Distillation',
-      'Bottling'
-    ],
+    options: ['Fermentation', 'Malting process', 'Distillation', 'Bottling'],
     correctAnswer: 'Malting process',
-    explanation: 'According to Class 11, Chapter 13, Page 176, GA3 is used to speed up the malting process in the brewing industry. This is one of the commercial applications of gibberellins demonstrating their importance in industrial processes.',
+    explanation:
+      'According to Class 11, Chapter 13, Page 176, GA3 is used to speed up the malting process in the brewing industry. This is one of the commercial applications of gibberellins demonstrating their importance in industrial processes.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 13, Page 176',
     previousYearFrequency: 10,
     conceptualLinks: ['Gibberellins', 'Malting', 'Industrial applications'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q11-batch9-023',
@@ -6830,17 +7250,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'Delays maturity period',
       'Hastens the maturity period leading to early seed production',
       'Prevents seed formation',
-      'Promotes only vegetative growth'
+      'Promotes only vegetative growth',
     ],
     correctAnswer: 'Hastens the maturity period leading to early seed production',
-    explanation: 'As stated in Class 11, Chapter 13, Page 176, spraying juvenile conifers with GAs hastens the maturity period, thus leading to early seed production. This demonstrates the role of gibberellins in plant development and maturation processes.',
+    explanation:
+      'As stated in Class 11, Chapter 13, Page 176, spraying juvenile conifers with GAs hastens the maturity period, thus leading to early seed production. This demonstrates the role of gibberellins in plant development and maturation processes.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 13, Page 176',
     previousYearFrequency: 12,
     conceptualLinks: ['Gibberellins', 'Maturity', 'Seed production'],
     timeEstimate: 40,
     bloomsLevel: 'Understand',
-    weightage: 4.5
+    weightage: 4.5,
   },
 
   // Plant Growth Regulators - Cytokinins (6 questions)
@@ -6850,21 +7271,17 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-13',
     classId: 'class-11',
     question: 'Cytokinins were discovered as kinetin, which is a modified form of which purine?',
-    options: [
-      'Guanine',
-      'Adenine',
-      'Cytosine',
-      'Thymine'
-    ],
+    options: ['Guanine', 'Adenine', 'Cytosine', 'Thymine'],
     correctAnswer: 'Adenine',
-    explanation: 'According to Class 11, Chapter 13, Page 176, cytokinins have specific effects on cytokinesis and were discovered as kinetin, a modified form of adenine (a purine), from autoclaved herring sperm DNA. Kinetin does not occur naturally in plants.',
+    explanation:
+      'According to Class 11, Chapter 13, Page 176, cytokinins have specific effects on cytokinesis and were discovered as kinetin, a modified form of adenine (a purine), from autoclaved herring sperm DNA. Kinetin does not occur naturally in plants.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 13, Page 176',
     previousYearFrequency: 14,
     conceptualLinks: ['Cytokinins', 'Kinetin', 'Adenine derivatives'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch9-025',
@@ -6872,21 +7289,17 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-13',
     classId: 'class-11',
     question: 'Zeatin is a naturally occurring cytokinin that was isolated from:',
-    options: [
-      'Human urine',
-      'Fungal cultures',
-      'Corn kernels and coconut milk',
-      'Rice seedlings'
-    ],
+    options: ['Human urine', 'Fungal cultures', 'Corn kernels and coconut milk', 'Rice seedlings'],
     correctAnswer: 'Corn kernels and coconut milk',
-    explanation: 'As mentioned in Class 11, Chapter 13, Page 176, the search for natural substances with cytokinin-like activities led to the isolation of zeatin from corn kernels and coconut milk. Since the discovery of zeatin, several naturally occurring cytokinins have been identified.',
+    explanation:
+      'As mentioned in Class 11, Chapter 13, Page 176, the search for natural substances with cytokinin-like activities led to the isolation of zeatin from corn kernels and coconut milk. Since the discovery of zeatin, several naturally occurring cytokinins have been identified.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 13, Page 176',
     previousYearFrequency: 13,
     conceptualLinks: ['Zeatin', 'Natural cytokinins', 'Plant hormones'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch9-026',
@@ -6898,39 +7311,42 @@ export const class11Questions: AuthenticQuestion[] = [
       'Cells are undergoing senescence',
       'Rapid cell division occurs',
       'Only mature cells are present',
-      'Water stress is high'
+      'Water stress is high',
     ],
     correctAnswer: 'Rapid cell division occurs',
-    explanation: 'According to Class 11, Chapter 13, Page 177, natural cytokinins are synthesized in regions where rapid cell division occurs, for example, root apices, developing shoot buds, and young fruits. This correlates with their primary function of promoting cytokinesis.',
+    explanation:
+      'According to Class 11, Chapter 13, Page 177, natural cytokinins are synthesized in regions where rapid cell division occurs, for example, root apices, developing shoot buds, and young fruits. This correlates with their primary function of promoting cytokinesis.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 13, Page 177',
     previousYearFrequency: 15,
     conceptualLinks: ['Cytokinins', 'Cell division', 'Synthesis sites'],
     timeEstimate: 30,
     bloomsLevel: 'Understand',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch9-027',
     topicId: 'topic-11-13-growth',
     chapterId: 'ch-11-13',
     classId: 'class-11',
-    question: 'Cytokinins help overcome apical dominance. What effect does this have on plant growth?',
+    question:
+      'Cytokinins help overcome apical dominance. What effect does this have on plant growth?',
     options: [
       'Inhibits all lateral growth',
       'Promotes lateral shoot growth',
       'Promotes only root growth',
-      'Delays flowering'
+      'Delays flowering',
     ],
     correctAnswer: 'Promotes lateral shoot growth',
-    explanation: 'As stated in Class 11, Chapter 13, Page 177, cytokinins help overcome apical dominance and promote lateral shoot growth and adventitious shoot formation. This is opposite to the effect of auxins, which maintain apical dominance.',
+    explanation:
+      'As stated in Class 11, Chapter 13, Page 177, cytokinins help overcome apical dominance and promote lateral shoot growth and adventitious shoot formation. This is opposite to the effect of auxins, which maintain apical dominance.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 13, Page 177',
     previousYearFrequency: 16,
     conceptualLinks: ['Cytokinins', 'Apical dominance', 'Lateral growth'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch9-028',
@@ -6942,39 +7358,37 @@ export const class11Questions: AuthenticQuestion[] = [
       'Early fruit ripening',
       'Stomatal closure',
       'Delay of leaf senescence',
-      'Root elongation'
+      'Root elongation',
     ],
     correctAnswer: 'Delay of leaf senescence',
-    explanation: 'According to Class 11, Chapter 13, Page 177, cytokinins promote nutrient mobilisation which helps in the delay of leaf senescence. They also help to produce new leaves and chloroplasts in leaves. This anti-senescence effect is one of the important physiological roles of cytokinins.',
+    explanation:
+      'According to Class 11, Chapter 13, Page 177, cytokinins promote nutrient mobilisation which helps in the delay of leaf senescence. They also help to produce new leaves and chloroplasts in leaves. This anti-senescence effect is one of the important physiological roles of cytokinins.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 13, Page 177',
     previousYearFrequency: 18,
     conceptualLinks: ['Cytokinins', 'Senescence', 'Nutrient mobilisation'],
     timeEstimate: 40,
     bloomsLevel: 'Understand',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch9-029',
     topicId: 'topic-11-13-growth',
     chapterId: 'ch-11-13',
     classId: 'class-11',
-    question: 'Plant growth regulators can be broadly divided into two groups based on their functions. Which group includes auxins, gibberellins, and cytokinins?',
-    options: [
-      'Growth inhibitors',
-      'Growth promoters',
-      'Stress hormones',
-      'Abscission factors'
-    ],
+    question:
+      'Plant growth regulators can be broadly divided into two groups based on their functions. Which group includes auxins, gibberellins, and cytokinins?',
+    options: ['Growth inhibitors', 'Growth promoters', 'Stress hormones', 'Abscission factors'],
     correctAnswer: 'Growth promoters',
-    explanation: 'As stated in Class 11, Chapter 13, Page 174, PGRs can be broadly divided into two groups. One group includes growth promoting activities and are called plant growth promoters, e.g., auxins, gibberellins, and cytokinins. The other group includes growth inhibiting activities like ABA.',
+    explanation:
+      'As stated in Class 11, Chapter 13, Page 174, PGRs can be broadly divided into two groups. One group includes growth promoting activities and are called plant growth promoters, e.g., auxins, gibberellins, and cytokinins. The other group includes growth inhibiting activities like ABA.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 13, Page 174',
     previousYearFrequency: 16,
     conceptualLinks: ['PGR classification', 'Growth promoters', 'Plant hormones'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
 
   // Plant Growth Regulators - Ethylene & ABA (6 questions)
@@ -6988,39 +7402,42 @@ export const class11Questions: AuthenticQuestion[] = [
       'Active cell division',
       'Senescence and ripening',
       'Meristematic growth',
-      'Primary differentiation'
+      'Primary differentiation',
     ],
     correctAnswer: 'Senescence and ripening',
-    explanation: 'As mentioned in Class 11, Chapter 13, Page 177, ethylene is a simple gaseous PGR that is synthesized in large amounts by tissues undergoing senescence and ripening fruits. This timing of synthesis is consistent with its role in promoting these processes.',
+    explanation:
+      'As mentioned in Class 11, Chapter 13, Page 177, ethylene is a simple gaseous PGR that is synthesized in large amounts by tissues undergoing senescence and ripening fruits. This timing of synthesis is consistent with its role in promoting these processes.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 13, Page 177',
     previousYearFrequency: 17,
     conceptualLinks: ['Ethylene', 'Senescence', 'Fruit ripening'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch9-031',
     topicId: 'topic-11-13-growth',
     chapterId: 'ch-11-13',
     classId: 'class-11',
-    question: 'Ethylene enhances the respiration rate during ripening of fruits. This rise in rate of respiration is called:',
+    question:
+      'Ethylene enhances the respiration rate during ripening of fruits. This rise in rate of respiration is called:',
     options: [
       'Photosynthetic climax',
       'Respiratory climactic',
       'Oxidative burst',
-      'Metabolic acceleration'
+      'Metabolic acceleration',
     ],
     correctAnswer: 'Respiratory climactic',
-    explanation: 'According to Class 11, Chapter 13, Page 177, ethylene is highly effective in fruit ripening and enhances the respiration rate during ripening of the fruits. This rise in rate of respiration is called respiratory climactic, which is characteristic of climacteric fruits.',
+    explanation:
+      'According to Class 11, Chapter 13, Page 177, ethylene is highly effective in fruit ripening and enhances the respiration rate during ripening of the fruits. This rise in rate of respiration is called respiratory climactic, which is characteristic of climacteric fruits.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 13, Page 177',
     previousYearFrequency: 12,
     conceptualLinks: ['Ethylene', 'Fruit ripening', 'Respiration'],
     timeEstimate: 45,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch9-032',
@@ -7028,21 +7445,17 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-13',
     classId: 'class-11',
     question: 'The most widely used compound as a source of ethylene in agriculture is:',
-    options: [
-      'Ethylene gas cylinders',
-      'Ethephon',
-      'Ethanol',
-      'Ethyl acetate'
-    ],
+    options: ['Ethylene gas cylinders', 'Ethephon', 'Ethanol', 'Ethyl acetate'],
     correctAnswer: 'Ethephon',
-    explanation: 'As mentioned in Class 11, Chapter 13, Page 177, the most widely used compound as source of ethylene is ethephon. Ethephon in an aqueous solution is readily absorbed and transported within the plant and releases ethylene slowly, making it practical for agricultural applications.',
+    explanation:
+      'As mentioned in Class 11, Chapter 13, Page 177, the most widely used compound as source of ethylene is ethephon. Ethephon in an aqueous solution is readily absorbed and transported within the plant and releases ethylene slowly, making it practical for agricultural applications.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 13, Page 177',
     previousYearFrequency: 15,
     conceptualLinks: ['Ethephon', 'Ethylene source', 'Agricultural applications'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch9-033',
@@ -7054,17 +7467,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'Cell division and elongation',
       'Photosynthesis and respiration',
       'Abscission and dormancy',
-      'Flowering and fruiting'
+      'Flowering and fruiting',
     ],
     correctAnswer: 'Abscission and dormancy',
-    explanation: 'As stated in Class 11, Chapter 13, Page 177, abscisic acid (ABA) was discovered for its role in regulating abscission and dormancy. However, like other PGRs, it also has other wide-ranging effects on plant growth and development.',
+    explanation:
+      'As stated in Class 11, Chapter 13, Page 177, abscisic acid (ABA) was discovered for its role in regulating abscission and dormancy. However, like other PGRs, it also has other wide-ranging effects on plant growth and development.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 13, Page 177',
     previousYearFrequency: 19,
     conceptualLinks: ['ABA', 'Abscission', 'Dormancy'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch9-034',
@@ -7076,17 +7490,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'Is produced only under stress',
       'Stimulates closure of stomata and increases tolerance to stress',
       'Causes stress in plants',
-      'Inhibits all plant growth'
+      'Inhibits all plant growth',
     ],
     correctAnswer: 'Stimulates closure of stomata and increases tolerance to stress',
-    explanation: 'According to Class 11, Chapter 13, Page 177, ABA stimulates the closure of stomata and increases the tolerance of plants to various kinds of stresses. Therefore, it is also called the stress hormone. This function is crucial for plant survival under adverse conditions.',
+    explanation:
+      'According to Class 11, Chapter 13, Page 177, ABA stimulates the closure of stomata and increases the tolerance of plants to various kinds of stresses. Therefore, it is also called the stress hormone. This function is crucial for plant survival under adverse conditions.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 13, Page 177',
     previousYearFrequency: 21,
     conceptualLinks: ['ABA', 'Stress hormone', 'Stomatal closure'],
     timeEstimate: 40,
     bloomsLevel: 'Understand',
-    weightage: 5.5
+    weightage: 5.5,
   },
   {
     id: 'q11-batch9-035',
@@ -7098,17 +7513,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'Promotes seed germination',
       'Inhibits seed germination',
       'Accelerates germination',
-      'Has no effect on germination'
+      'Has no effect on germination',
     ],
     correctAnswer: 'Inhibits seed germination',
-    explanation: 'As mentioned in Class 11, Chapter 13, Page 177, ABA inhibits seed germination. It plays an important role in seed development, maturation, and dormancy. By inducing dormancy, ABA helps seeds to withstand desiccation and other factors unfavourable for growth.',
+    explanation:
+      'As mentioned in Class 11, Chapter 13, Page 177, ABA inhibits seed germination. It plays an important role in seed development, maturation, and dormancy. By inducing dormancy, ABA helps seeds to withstand desiccation and other factors unfavourable for growth.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 13, Page 177',
     previousYearFrequency: 20,
     conceptualLinks: ['ABA', 'Seed germination', 'Dormancy'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 5.0
+    weightage: 5.0,
   },
 
   // Photoperiodism (5 questions)
@@ -7122,17 +7538,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'Light intensity',
       'Light quality (wavelength)',
       'Relative lengths of day and night',
-      'Total amount of light received'
+      'Total amount of light received',
     ],
     correctAnswer: 'Relative lengths of day and night',
-    explanation: 'Photoperiodism is the physiological response of plants to the relative lengths of day and night periods. As mentioned in Class 11, Chapter 13, Page 178, extrinsic factors like light and temperature control plant growth and development via PGR, affecting events like flowering.',
+    explanation:
+      'Photoperiodism is the physiological response of plants to the relative lengths of day and night periods. As mentioned in Class 11, Chapter 13, Page 178, extrinsic factors like light and temperature control plant growth and development via PGR, affecting events like flowering.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 13, Page 178',
     previousYearFrequency: 18,
     conceptualLinks: ['Photoperiodism', 'Day length', 'Flowering'],
     timeEstimate: 40,
     bloomsLevel: 'Understand',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch9-037',
@@ -7144,17 +7561,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'Day length is longer than a critical period',
       'Day length is shorter than a critical period',
       'Day and night are equal',
-      'Day length does not matter'
+      'Day length does not matter',
     ],
     correctAnswer: 'Day length is shorter than a critical period',
-    explanation: 'Short-day plants require day lengths shorter than a critical period (or night lengths longer than a critical period) to initiate flowering. These plants typically flower in late summer or fall when days become shorter.',
+    explanation:
+      'Short-day plants require day lengths shorter than a critical period (or night lengths longer than a critical period) to initiate flowering. These plants typically flower in late summer or fall when days become shorter.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 13, Page 178',
     previousYearFrequency: 19,
     conceptualLinks: ['Short-day plants', 'Photoperiodism', 'Critical day length'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch9-038',
@@ -7166,17 +7584,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'Nights are longer than a critical period',
       'Days are longer than a critical period',
       'Day length is less than 12 hours',
-      'Temperature is high'
+      'Temperature is high',
     ],
     correctAnswer: 'Days are longer than a critical period',
-    explanation: 'Long-day plants require day lengths longer than a critical period (or night lengths shorter than a critical period) to flower. These plants typically bloom in late spring or early summer when days are longest.',
+    explanation:
+      'Long-day plants require day lengths longer than a critical period (or night lengths shorter than a critical period) to flower. These plants typically bloom in late spring or early summer when days are longest.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 13, Page 178',
     previousYearFrequency: 17,
     conceptualLinks: ['Long-day plants', 'Photoperiodism', 'Flowering'],
     timeEstimate: 40,
     bloomsLevel: 'Understand',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch9-039',
@@ -7188,17 +7607,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'Never flower',
       'Flower regardless of day length',
       'Only flower in complete darkness',
-      'Require exactly 12 hours of light'
+      'Require exactly 12 hours of light',
     ],
     correctAnswer: 'Flower regardless of day length',
-    explanation: 'Day-neutral plants flower regardless of day length. Their flowering is not dependent on photoperiod but may be influenced by other factors such as temperature, plant age, or nutrition.',
+    explanation:
+      'Day-neutral plants flower regardless of day length. Their flowering is not dependent on photoperiod but may be influenced by other factors such as temperature, plant age, or nutrition.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 13, Page 178',
     previousYearFrequency: 14,
     conceptualLinks: ['Day-neutral plants', 'Photoperiodism', 'Flowering'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch9-040',
@@ -7206,21 +7626,17 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-13',
     classId: 'class-11',
     question: 'The site of perception of light/dark duration in most plants is:',
-    options: [
-      'Roots',
-      'Stems',
-      'Leaves',
-      'Flowers'
-    ],
+    options: ['Roots', 'Stems', 'Leaves', 'Flowers'],
     correctAnswer: 'Leaves',
-    explanation: 'Leaves are the site of perception of photoperiodic signals. The leaves perceive the light/dark cycles and transmit a signal to the shoot apex where flowering is induced. This is why defoliated plants cannot respond to photoperiodic cycles.',
+    explanation:
+      'Leaves are the site of perception of photoperiodic signals. The leaves perceive the light/dark cycles and transmit a signal to the shoot apex where flowering is induced. This is why defoliated plants cannot respond to photoperiodic cycles.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 13, Page 179',
     previousYearFrequency: 15,
     conceptualLinks: ['Photoperiodism', 'Leaf perception', 'Flowering signal'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 5.0
+    weightage: 5.0,
   },
 
   // Vernalization (5 questions)
@@ -7234,17 +7650,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'Treatment with plant hormones to induce flowering',
       'Cold treatment required for flowering in some plants',
       'Exposure to long days to induce flowering',
-      'Removal of shoot tips to promote branching'
+      'Removal of shoot tips to promote branching',
     ],
     correctAnswer: 'Cold treatment required for flowering in some plants',
-    explanation: 'Vernalization is the promotion of flowering by exposure to low temperature (cold treatment). Many plants, particularly biennials and winter annuals, require a period of cold temperature to flower. This ensures flowering occurs at the appropriate season.',
+    explanation:
+      'Vernalization is the promotion of flowering by exposure to low temperature (cold treatment). Many plants, particularly biennials and winter annuals, require a period of cold temperature to flower. This ensures flowering occurs at the appropriate season.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 13, Page 178',
     previousYearFrequency: 20,
     conceptualLinks: ['Vernalization', 'Cold treatment', 'Flowering induction'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch9-042',
@@ -7252,21 +7669,17 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-13',
     classId: 'class-11',
     question: 'Plants that require vernalization are typically:',
-    options: [
-      'Tropical plants',
-      'Desert plants',
-      'Biennials and winter annuals',
-      'Aquatic plants'
-    ],
+    options: ['Tropical plants', 'Desert plants', 'Biennials and winter annuals', 'Aquatic plants'],
     correctAnswer: 'Biennials and winter annuals',
-    explanation: 'Biennials and winter annuals typically require vernalization (cold treatment) to flower. These plants germinate in fall, experience winter cold, and then flower in spring. The cold requirement prevents premature flowering.',
+    explanation:
+      'Biennials and winter annuals typically require vernalization (cold treatment) to flower. These plants germinate in fall, experience winter cold, and then flower in spring. The cold requirement prevents premature flowering.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 13, Page 178',
     previousYearFrequency: 13,
     conceptualLinks: ['Vernalization', 'Biennials', 'Winter annuals'],
     timeEstimate: 40,
     bloomsLevel: 'Understand',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch9-043',
@@ -7274,21 +7687,17 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-13',
     classId: 'class-11',
     question: 'The site of cold perception in vernalization is usually the:',
-    options: [
-      'Leaves only',
-      'Root tips only',
-      'Shoot apical meristem',
-      'Mature stems'
-    ],
+    options: ['Leaves only', 'Root tips only', 'Shoot apical meristem', 'Mature stems'],
     correctAnswer: 'Shoot apical meristem',
-    explanation: 'The shoot apical meristem is the primary site of cold perception in vernalization. The cold treatment modifies the meristem, making it competent to respond to floral inductive signals, leading to flowering when other conditions are met.',
+    explanation:
+      'The shoot apical meristem is the primary site of cold perception in vernalization. The cold treatment modifies the meristem, making it competent to respond to floral inductive signals, leading to flowering when other conditions are met.',
     difficulty: 'Hard',
     ncertPageReference: 'Class 11, Chapter 13, Page 178',
     previousYearFrequency: 11,
     conceptualLinks: ['Vernalization', 'Meristem', 'Cold perception'],
     timeEstimate: 55,
     bloomsLevel: 'Analyze',
-    weightage: 5.5
+    weightage: 5.5,
   },
   {
     id: 'q11-batch9-044',
@@ -7296,43 +7705,41 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-13',
     classId: 'class-11',
     question: 'In most situations, ABA acts as an antagonist to:',
-    options: [
-      'Auxins',
-      'Gibberellins',
-      'Cytokinins',
-      'Ethylene'
-    ],
+    options: ['Auxins', 'Gibberellins', 'Cytokinins', 'Ethylene'],
     correctAnswer: 'Gibberellins',
-    explanation: 'According to Class 11, Chapter 13, Page 178, in most situations, ABA acts as an antagonist to GAs (gibberellins). While gibberellins promote growth and germination, ABA inhibits these processes, demonstrating the antagonistic relationship between these two plant growth regulators.',
+    explanation:
+      'According to Class 11, Chapter 13, Page 178, in most situations, ABA acts as an antagonist to GAs (gibberellins). While gibberellins promote growth and germination, ABA inhibits these processes, demonstrating the antagonistic relationship between these two plant growth regulators.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 13, Page 178',
     previousYearFrequency: 17,
     conceptualLinks: ['ABA', 'Gibberellins', 'Antagonism'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 5.5
+    weightage: 5.5,
   },
   {
     id: 'q11-batch9-045',
     topicId: 'topic-11-13-growth',
     chapterId: 'ch-11-13',
     classId: 'class-11',
-    question: 'Ethylene promotes rapid internode/petiole elongation in deep water rice plants. This helps the plant to:',
+    question:
+      'Ethylene promotes rapid internode/petiole elongation in deep water rice plants. This helps the plant to:',
     options: [
       'Absorb more nutrients',
       'Keep leaves/upper parts of shoot above water',
       'Produce more flowers',
-      'Develop stronger roots'
+      'Develop stronger roots',
     ],
     correctAnswer: 'Keep leaves/upper parts of shoot above water',
-    explanation: 'According to Class 11, Chapter 13, Page 177, ethylene promotes rapid internode/petiole elongation in deep water rice plants. This helps leaves/upper parts of the shoot to remain above water, which is crucial for photosynthesis and survival in flooded conditions.',
+    explanation:
+      'According to Class 11, Chapter 13, Page 177, ethylene promotes rapid internode/petiole elongation in deep water rice plants. This helps leaves/upper parts of the shoot to remain above water, which is crucial for photosynthesis and survival in flooded conditions.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 13, Page 177',
     previousYearFrequency: 13,
     conceptualLinks: ['Ethylene', 'Deep water rice', 'Adaptation'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 5.0
+    weightage: 5.0,
   },
 
   // Seed Dormancy & Germination (5 questions)
@@ -7346,83 +7753,80 @@ export const class11Questions: AuthenticQuestion[] = [
       'Active growth under unfavorable conditions',
       'Suspended growth or rest',
       'Rapid cell division',
-      'Continuous germination'
+      'Continuous germination',
     ],
     correctAnswer: 'Suspended growth or rest',
-    explanation: 'According to Class 11, Chapter 13, Page 166, in the absence of favorable conditions, seeds do not germinate and go into a period of suspended growth or rest (dormancy). Once favorable conditions return, seeds resume metabolic activities and growth takes place.',
+    explanation:
+      'According to Class 11, Chapter 13, Page 166, in the absence of favorable conditions, seeds do not germinate and go into a period of suspended growth or rest (dormancy). Once favorable conditions return, seeds resume metabolic activities and growth takes place.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 13, Page 166',
     previousYearFrequency: 18,
     conceptualLinks: ['Seed dormancy', 'Suspended growth', 'Germination'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch9-047',
     topicId: 'topic-11-13-growth',
     chapterId: 'ch-11-13',
     classId: 'class-11',
-    question: 'Which plant growth regulator is primarily responsible for maintaining seed dormancy?',
-    options: [
-      'Auxin',
-      'Gibberellin',
-      'Cytokinin',
-      'Abscisic acid'
-    ],
+    question:
+      'Which plant growth regulator is primarily responsible for maintaining seed dormancy?',
+    options: ['Auxin', 'Gibberellin', 'Cytokinin', 'Abscisic acid'],
     correctAnswer: 'Abscisic acid',
-    explanation: 'As stated in Class 11, Chapter 13, Page 177-178, ABA plays an important role in seed development, maturation, and dormancy. By inducing dormancy, ABA helps seeds to withstand desiccation and other factors unfavourable for growth.',
+    explanation:
+      'As stated in Class 11, Chapter 13, Page 177-178, ABA plays an important role in seed development, maturation, and dormancy. By inducing dormancy, ABA helps seeds to withstand desiccation and other factors unfavourable for growth.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 13, Page 177-178',
     previousYearFrequency: 19,
     conceptualLinks: ['Seed dormancy', 'ABA', 'Germination inhibition'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch9-048',
     topicId: 'topic-11-13-growth',
     chapterId: 'ch-11-13',
     classId: 'class-11',
-    question: 'Seed germination requires favorable conditions. Which of the following is generally required for germination?',
+    question:
+      'Seed germination requires favorable conditions. Which of the following is generally required for germination?',
     options: [
       'Continuous light only',
       'High temperature only',
       'Water, oxygen, and suitable temperature',
-      'Complete darkness'
+      'Complete darkness',
     ],
     correctAnswer: 'Water, oxygen, and suitable temperature',
-    explanation: 'According to Class 11, Chapter 13, Page 166, the seed germinates when favorable conditions for growth exist in the environment. These conditions typically include adequate water (for rehydration and metabolic activities), oxygen (for respiration), and suitable temperature (for enzymatic activities).',
+    explanation:
+      'According to Class 11, Chapter 13, Page 166, the seed germinates when favorable conditions for growth exist in the environment. These conditions typically include adequate water (for rehydration and metabolic activities), oxygen (for respiration), and suitable temperature (for enzymatic activities).',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 13, Page 166',
     previousYearFrequency: 16,
     conceptualLinks: ['Seed germination', 'Environmental conditions', 'Growth requirements'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch9-049',
     topicId: 'topic-11-13-growth',
     chapterId: 'ch-11-13',
     classId: 'class-11',
-    question: 'Which plant growth regulator can break seed dormancy and promote germination by antagonizing the effects of ABA?',
-    options: [
-      'Ethylene',
-      'Gibberellin',
-      'Auxin',
-      'Cytokinin'
-    ],
+    question:
+      'Which plant growth regulator can break seed dormancy and promote germination by antagonizing the effects of ABA?',
+    options: ['Ethylene', 'Gibberellin', 'Auxin', 'Cytokinin'],
     correctAnswer: 'Gibberellin',
-    explanation: 'As mentioned in Class 11, Chapter 13, Page 178, in most situations, ABA acts as an antagonist to gibberellins. While ABA maintains seed dormancy and inhibits germination, gibberellins can break dormancy and promote seed germination. This antagonistic relationship is important in controlling the germination process.',
+    explanation:
+      'As mentioned in Class 11, Chapter 13, Page 178, in most situations, ABA acts as an antagonist to gibberellins. While ABA maintains seed dormancy and inhibits germination, gibberellins can break dormancy and promote seed germination. This antagonistic relationship is important in controlling the germination process.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 13, Page 178',
     previousYearFrequency: 21,
     conceptualLinks: ['Seed germination', 'Gibberellins', 'Breaking dormancy', 'ABA antagonism'],
     timeEstimate: 50,
     bloomsLevel: 'Analyze',
-    weightage: 6.0
+    weightage: 6.0,
   },
   {
     id: 'q11-batch9-050',
@@ -7430,21 +7834,17 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-13',
     classId: 'class-11',
     question: 'Ethephon promotes female flowers in cucumbers. This results in:',
-    options: [
-      'Decreased yield',
-      'Increased yield',
-      'No change in yield',
-      'Only male flowers'
-    ],
+    options: ['Decreased yield', 'Increased yield', 'No change in yield', 'Only male flowers'],
     correctAnswer: 'Increased yield',
-    explanation: 'According to Class 11, Chapter 13, Page 177, ethephon promotes female flowers in cucumbers, thereby increasing the yield. Since female flowers develop into fruits, increasing their number directly enhances crop productivity.',
+    explanation:
+      'According to Class 11, Chapter 13, Page 177, ethephon promotes female flowers in cucumbers, thereby increasing the yield. Since female flowers develop into fruits, increasing their number directly enhances crop productivity.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 13, Page 177',
     previousYearFrequency: 14,
     conceptualLinks: ['Ethephon', 'Sex expression', 'Cucumber yield'],
     timeEstimate: 40,
     bloomsLevel: 'Apply',
-    weightage: 4.5
+    weightage: 4.5,
   },
 
   // ============================================================================
@@ -7456,286 +7856,298 @@ export const class11Questions: AuthenticQuestion[] = [
     topicId: 'topic-11-11-photosynthesis',
     chapterId: 'ch-11-11',
     classId: 'class-11',
-    question: 'Photosynthesis is described as a physico-chemical process by which plants use light energy to drive the synthesis of which of the following?',
-    options: [
-      'Inorganic compounds',
-      'Organic compounds',
-      'Mineral salts',
-      'Water molecules'
-    ],
+    question:
+      'Photosynthesis is described as a physico-chemical process by which plants use light energy to drive the synthesis of which of the following?',
+    options: ['Inorganic compounds', 'Organic compounds', 'Mineral salts', 'Water molecules'],
     correctAnswer: 'Organic compounds',
-    explanation: 'According to NCERT Class 11 Chapter 11 Page 133, photosynthesis is a physico-chemical process by which plants use light energy to drive the synthesis of organic compounds. This is the fundamental anabolic process converting light energy to chemical energy.',
+    explanation:
+      'According to NCERT Class 11 Chapter 11 Page 133, photosynthesis is a physico-chemical process by which plants use light energy to drive the synthesis of organic compounds. This is the fundamental anabolic process converting light energy to chemical energy.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 11, Page 133',
     previousYearFrequency: 12,
     conceptualLinks: ['Autotrophic nutrition', 'Energy conversion', 'Anabolic process'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch10-002',
     topicId: 'topic-11-11-photosynthesis',
     chapterId: 'ch-11-11',
     classId: 'class-11',
-    question: 'What are the two main reasons why photosynthesis is considered important for life on Earth?',
+    question:
+      'What are the two main reasons why photosynthesis is considered important for life on Earth?',
     options: [
       'Primary source of food and oxygen release',
       'Water production and carbon dioxide release',
       'Nitrogen fixation and mineral absorption',
-      'Soil formation and temperature regulation'
+      'Soil formation and temperature regulation',
     ],
     correctAnswer: 'Primary source of food and oxygen release',
-    explanation: 'NCERT Page 133 clearly states that photosynthesis is important due to two reasons: it is the primary source of all food on earth and it is responsible for the release of oxygen into the atmosphere by green plants.',
+    explanation:
+      'NCERT Page 133 clearly states that photosynthesis is important due to two reasons: it is the primary source of all food on earth and it is responsible for the release of oxygen into the atmosphere by green plants.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 11, Page 133',
     previousYearFrequency: 15,
     conceptualLinks: ['Oxygen evolution', 'Food production', 'Ecological importance'],
     timeEstimate: 32,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch10-003',
     topicId: 'topic-11-11-photosynthesis',
     chapterId: 'ch-11-11',
     classId: 'class-11',
-    question: 'Joseph Priestley\'s experiment with a mint plant in a bell jar demonstrated that plants restore what to the air?',
+    question:
+      "Joseph Priestley's experiment with a mint plant in a bell jar demonstrated that plants restore what to the air?",
     options: [
       'Carbon dioxide removed by animals',
       'Oxygen removed by breathing animals and burning candles',
       'Nitrogen removed by combustion',
-      'Hydrogen removed by respiration'
+      'Hydrogen removed by respiration',
     ],
     correctAnswer: 'Oxygen removed by breathing animals and burning candles',
-    explanation: 'According to NCERT Page 134, Priestley observed that when a mint plant was placed in a bell jar, the mouse stayed alive and the candle continued to burn. He hypothesized that plants restore to the air whatever breathing animals and burning candles remove.',
+    explanation:
+      'According to NCERT Page 134, Priestley observed that when a mint plant was placed in a bell jar, the mouse stayed alive and the candle continued to burn. He hypothesized that plants restore to the air whatever breathing animals and burning candles remove.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 11, Page 134',
     previousYearFrequency: 10,
     conceptualLinks: ['Historical experiments', 'Oxygen production', 'Gas exchange'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q11-batch10-004',
     topicId: 'topic-11-11-photosynthesis',
     chapterId: 'ch-11-11',
     classId: 'class-11',
-    question: 'Jan Ingenhousz\'s experiment with aquatic plants showed that oxygen bubbles were formed only under which condition?',
+    question:
+      "Jan Ingenhousz's experiment with aquatic plants showed that oxygen bubbles were formed only under which condition?",
     options: [
       'In the dark around all parts',
       'In bright sunlight around green parts only',
       'In dim light around roots',
-      'At night around flowers'
+      'At night around flowers',
     ],
     correctAnswer: 'In bright sunlight around green parts only',
-    explanation: 'NCERT Page 134 states that Ingenhousz showed in an elegant experiment with an aquatic plant that in bright sunlight, small bubbles (later identified as oxygen) were formed around the green parts while in the dark they did not, proving sunlight and green parts are essential.',
+    explanation:
+      'NCERT Page 134 states that Ingenhousz showed in an elegant experiment with an aquatic plant that in bright sunlight, small bubbles (later identified as oxygen) were formed around the green parts while in the dark they did not, proving sunlight and green parts are essential.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 11, Page 134',
     previousYearFrequency: 9,
     conceptualLinks: ['Light requirement', 'Oxygen evolution', 'Chlorophyll importance'],
     timeEstimate: 33,
     bloomsLevel: 'Remember',
-    weightage: 3.8
+    weightage: 3.8,
   },
   {
     id: 'q11-batch10-005',
     topicId: 'topic-11-11-photosynthesis',
     chapterId: 'ch-11-11',
     classId: 'class-11',
-    question: 'Julius von Sachs provided evidence that glucose produced during photosynthesis is usually stored in which form?',
-    options: [
-      'Cellulose',
-      'Sucrose',
-      'Starch',
-      'Glycogen'
-    ],
+    question:
+      'Julius von Sachs provided evidence that glucose produced during photosynthesis is usually stored in which form?',
+    options: ['Cellulose', 'Sucrose', 'Starch', 'Glycogen'],
     correctAnswer: 'Starch',
-    explanation: 'According to NCERT Page 135, Julius von Sachs provided evidence for production of glucose when plants grow, and his studies showed that glucose is usually stored as starch. He found that the green parts in plants is where glucose is made and stored as starch.',
+    explanation:
+      'According to NCERT Page 135, Julius von Sachs provided evidence for production of glucose when plants grow, and his studies showed that glucose is usually stored as starch. He found that the green parts in plants is where glucose is made and stored as starch.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 11, Page 135',
     previousYearFrequency: 14,
     conceptualLinks: ['Carbohydrate storage', 'Starch test', 'Glucose conversion'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 4.2
+    weightage: 4.2,
   },
   {
     id: 'q11-batch10-006',
     topicId: 'topic-11-11-photosynthesis',
     chapterId: 'ch-11-11',
     classId: 'class-11',
-    question: 'Within the chloroplast, which structural components are responsible for trapping light energy and synthesizing ATP and NADPH?',
+    question:
+      'Within the chloroplast, which structural components are responsible for trapping light energy and synthesizing ATP and NADPH?',
     options: [
       'Stroma matrix',
       'Outer membrane',
       'Membrane system (grana and thylakoids)',
-      'Ribosomes'
+      'Ribosomes',
     ],
     correctAnswer: 'Membrane system (grana and thylakoids)',
-    explanation: 'NCERT Page 136 clearly explains that within the chloroplast, the membrane system consisting of grana, stroma lamellae is responsible for trapping the light energy and also for the synthesis of ATP and NADPH in the light reactions.',
+    explanation:
+      'NCERT Page 136 clearly explains that within the chloroplast, the membrane system consisting of grana, stroma lamellae is responsible for trapping the light energy and also for the synthesis of ATP and NADPH in the light reactions.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 11, Page 136',
     previousYearFrequency: 16,
     conceptualLinks: ['Chloroplast structure', 'Light reactions', 'Membrane organization'],
     timeEstimate: 40,
     bloomsLevel: 'Understand',
-    weightage: 4.8
+    weightage: 4.8,
   },
   {
     id: 'q11-batch10-007',
     topicId: 'topic-11-11-photosynthesis',
     chapterId: 'ch-11-11',
     classId: 'class-11',
-    question: 'In the stroma of chloroplasts, which type of reactions occur that synthesize sugars?',
+    question:
+      'In the stroma of chloroplasts, which type of reactions occur that synthesize sugars?',
     options: [
       'Light-dependent photochemical reactions',
       'Enzymatic biosynthetic reactions (Calvin cycle)',
       'Protein synthesis reactions',
-      'Lipid metabolism reactions'
+      'Lipid metabolism reactions',
     ],
     correctAnswer: 'Enzymatic biosynthetic reactions (Calvin cycle)',
-    explanation: 'According to NCERT Page 136, in the stroma, enzymatic reactions synthesize sugar, which in turn forms starch. These are the biosynthetic carbon reactions (Calvin cycle) that use ATP and NADPH from light reactions.',
+    explanation:
+      'According to NCERT Page 136, in the stroma, enzymatic reactions synthesize sugar, which in turn forms starch. These are the biosynthetic carbon reactions (Calvin cycle) that use ATP and NADPH from light reactions.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 11, Page 136',
     previousYearFrequency: 13,
     conceptualLinks: ['Dark reactions', 'Carbon fixation', 'Stroma function'],
     timeEstimate: 42,
     bloomsLevel: 'Understand',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch10-008',
     topicId: 'topic-11-11-photosynthesis',
     chapterId: 'ch-11-11',
     classId: 'class-11',
-    question: 'How many types of pigments are typically separated from leaf extracts through paper chromatography?',
-    options: [
-      'Two pigments',
-      'Three pigments',
-      'Four pigments',
-      'Five pigments'
-    ],
+    question:
+      'How many types of pigments are typically separated from leaf extracts through paper chromatography?',
+    options: ['Two pigments', 'Three pigments', 'Four pigments', 'Five pigments'],
     correctAnswer: 'Four pigments',
-    explanation: 'NCERT Page 137 states that a chromatographic separation of leaf pigments shows four pigments: Chlorophyll a (bright or blue green), chlorophyll b (yellow green), xanthophylls (yellow), and carotenoids (yellow to yellow-orange).',
+    explanation:
+      'NCERT Page 137 states that a chromatographic separation of leaf pigments shows four pigments: Chlorophyll a (bright or blue green), chlorophyll b (yellow green), xanthophylls (yellow), and carotenoids (yellow to yellow-orange).',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 11, Page 137',
     previousYearFrequency: 11,
     conceptualLinks: ['Photosynthetic pigments', 'Chromatography', 'Pigment diversity'],
     timeEstimate: 32,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch10-009',
     topicId: 'topic-11-11-photosynthesis',
     chapterId: 'ch-11-11',
     classId: 'class-11',
-    question: 'Chlorophyll a shows maximum absorption in which two regions of the visible spectrum?',
+    question:
+      'Chlorophyll a shows maximum absorption in which two regions of the visible spectrum?',
     options: [
       'Green and yellow regions',
       'Blue and red regions',
       'Orange and violet regions',
-      'Yellow and orange regions'
+      'Yellow and orange regions',
     ],
     correctAnswer: 'Blue and red regions',
-    explanation: 'According to NCERT Page 137, the absorption spectrum graph shows that chlorophyll a shows maximum absorption in the blue and red regions of the spectrum, and these wavelengths also show higher rates of photosynthesis, confirming chlorophyll a as the chief pigment.',
+    explanation:
+      'According to NCERT Page 137, the absorption spectrum graph shows that chlorophyll a shows maximum absorption in the blue and red regions of the spectrum, and these wavelengths also show higher rates of photosynthesis, confirming chlorophyll a as the chief pigment.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 11, Page 137',
     previousYearFrequency: 17,
     conceptualLinks: ['Absorption spectrum', 'Action spectrum', 'Light quality'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch10-010',
     topicId: 'topic-11-11-photosynthesis',
     chapterId: 'ch-11-11',
     classId: 'class-11',
-    question: 'What are the roles of accessory pigments like chlorophyll b, xanthophylls, and carotenoids in photosynthesis?',
+    question:
+      'What are the roles of accessory pigments like chlorophyll b, xanthophylls, and carotenoids in photosynthesis?',
     options: [
       'They only provide green color to leaves',
       'They absorb light and transfer energy to chlorophyll a, and protect it from photo-oxidation',
       'They directly reduce NADP+ to NADPH',
-      'They split water molecules'
+      'They split water molecules',
     ],
-    correctAnswer: 'They absorb light and transfer energy to chlorophyll a, and protect it from photo-oxidation',
-    explanation: 'NCERT Page 138 explains that accessory pigments absorb light and transfer the energy to chlorophyll a. They enable a wider range of wavelengths to be utilized for photosynthesis and also protect chlorophyll a from photo-oxidation.',
+    correctAnswer:
+      'They absorb light and transfer energy to chlorophyll a, and protect it from photo-oxidation',
+    explanation:
+      'NCERT Page 138 explains that accessory pigments absorb light and transfer the energy to chlorophyll a. They enable a wider range of wavelengths to be utilized for photosynthesis and also protect chlorophyll a from photo-oxidation.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 11, Page 138',
     previousYearFrequency: 14,
     conceptualLinks: ['Accessory pigments', 'Energy transfer', 'Photoprotection'],
     timeEstimate: 48,
     bloomsLevel: 'Understand',
-    weightage: 4.7
+    weightage: 4.7,
   },
   {
     id: 'q11-batch10-011',
     topicId: 'topic-11-11-photosynthesis',
     chapterId: 'ch-11-11',
     classId: 'class-11',
-    question: 'The light harvesting complex (LHC) within photosystems consists of all the following EXCEPT:',
+    question:
+      'The light harvesting complex (LHC) within photosystems consists of all the following EXCEPT:',
     options: [
       'Hundreds of pigment molecules bound to proteins',
       'Chlorophyll b and accessory pigments',
       'One molecule of chlorophyll a forming reaction centre',
-      'Multiple reaction centre chlorophyll molecules'
+      'Multiple reaction centre chlorophyll molecules',
     ],
     correctAnswer: 'Multiple reaction centre chlorophyll molecules',
-    explanation: 'According to NCERT Page 138, each photosystem has all the pigments (except one molecule of chlorophyll a) forming a light harvesting system called antennae. The single chlorophyll a molecule forms the reaction centre, not multiple molecules.',
+    explanation:
+      'According to NCERT Page 138, each photosystem has all the pigments (except one molecule of chlorophyll a) forming a light harvesting system called antennae. The single chlorophyll a molecule forms the reaction centre, not multiple molecules.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 11, Page 138',
     previousYearFrequency: 12,
     conceptualLinks: ['Photosystem structure', 'Antenna complex', 'Reaction centre'],
     timeEstimate: 50,
     bloomsLevel: 'Understand',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch10-012',
     topicId: 'topic-11-11-photosynthesis',
     chapterId: 'ch-11-11',
     classId: 'class-11',
-    question: 'In Photosystem I, the reaction centre chlorophyll a has an absorption peak at which wavelength?',
+    question:
+      'In Photosystem I, the reaction centre chlorophyll a has an absorption peak at which wavelength?',
     options: [
       '680 nm, called P680',
       '700 nm, called P700',
       '650 nm, called P650',
-      '750 nm, called P750'
+      '750 nm, called P750',
     ],
     correctAnswer: '700 nm, called P700',
-    explanation: 'NCERT Page 138 clearly states that in PS I the reaction centre chlorophyll a has an absorption peak at 700 nm, hence is called P700, while in PS II it has absorption maxima at 680 nm and is called P680.',
+    explanation:
+      'NCERT Page 138 clearly states that in PS I the reaction centre chlorophyll a has an absorption peak at 700 nm, hence is called P700, while in PS II it has absorption maxima at 680 nm and is called P680.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 11, Page 138',
     previousYearFrequency: 18,
     conceptualLinks: ['PS I', 'P700', 'Reaction centre'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 5.2
+    weightage: 5.2,
   },
   {
     id: 'q11-batch10-013',
     topicId: 'topic-11-11-photosynthesis',
     chapterId: 'ch-11-11',
     classId: 'class-11',
-    question: 'In Photosystem II, when the reaction centre chlorophyll P680 absorbs 680 nm red light, what happens to the electrons?',
+    question:
+      'In Photosystem II, when the reaction centre chlorophyll P680 absorbs 680 nm red light, what happens to the electrons?',
     options: [
       'They are transferred to water molecules',
       'They become excited and are picked up by an electron acceptor',
       'They move to the stroma',
-      'They reduce oxygen to water'
+      'They reduce oxygen to water',
     ],
     correctAnswer: 'They become excited and are picked up by an electron acceptor',
-    explanation: 'According to NCERT Page 138, in photosystem II the reaction centre chlorophyll a absorbs 680 nm wavelength causing electrons to become excited and jump into an orbit farther from the nucleus. These electrons are picked up by an electron acceptor.',
+    explanation:
+      'According to NCERT Page 138, in photosystem II the reaction centre chlorophyll a absorbs 680 nm wavelength causing electrons to become excited and jump into an orbit farther from the nucleus. These electrons are picked up by an electron acceptor.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 11, Page 138',
     previousYearFrequency: 15,
     conceptualLinks: ['Electron excitation', 'PS II', 'Electron transport'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 4.8
+    weightage: 4.8,
   },
   {
     id: 'q11-batch10-014',
@@ -7747,39 +8159,43 @@ export const class11Questions: AuthenticQuestion[] = [
       'The zigzag movement of electrons through thylakoids',
       'The characteristic Z-shaped pattern when carriers are arranged on a redox potential scale',
       'The presence of zinc in the electron carriers',
-      'The Z-shaped structure of chloroplasts'
+      'The Z-shaped structure of chloroplasts',
     ],
-    correctAnswer: 'The characteristic Z-shaped pattern when carriers are arranged on a redox potential scale',
-    explanation: 'NCERT Page 139 explains that the whole scheme of electron transfer from PS II uphill to acceptor, down to PS I, excitation, transfer to another acceptor, and finally downhill to NADP+ is called Z scheme. This shape forms when all carriers are placed in sequence on a redox potential scale.',
+    correctAnswer:
+      'The characteristic Z-shaped pattern when carriers are arranged on a redox potential scale',
+    explanation:
+      'NCERT Page 139 explains that the whole scheme of electron transfer from PS II uphill to acceptor, down to PS I, excitation, transfer to another acceptor, and finally downhill to NADP+ is called Z scheme. This shape forms when all carriers are placed in sequence on a redox potential scale.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 11, Page 139',
     previousYearFrequency: 13,
     conceptualLinks: ['Electron transport', 'Redox potential', 'Z-scheme'],
     timeEstimate: 48,
     bloomsLevel: 'Understand',
-    weightage: 4.6
+    weightage: 4.6,
   },
   {
     id: 'q11-batch10-015',
     topicId: 'topic-11-11-photosynthesis',
     chapterId: 'ch-11-11',
     classId: 'class-11',
-    question: 'The splitting of water molecule during photosynthesis is associated with which photosystem?',
+    question:
+      'The splitting of water molecule during photosynthesis is associated with which photosystem?',
     options: [
       'Only Photosystem I',
       'Only Photosystem II',
       'Both PS I and PS II equally',
-      'Neither photosystem'
+      'Neither photosystem',
     ],
     correctAnswer: 'Only Photosystem II',
-    explanation: 'NCERT Page 139 clearly states that the splitting of water is associated with PS II. Water is split into 2H+, [O], and electrons. The electrons replace those removed from PS II, and this creates oxygen, one of the net products of photosynthesis.',
+    explanation:
+      'NCERT Page 139 clearly states that the splitting of water is associated with PS II. Water is split into 2H+, [O], and electrons. The electrons replace those removed from PS II, and this creates oxygen, one of the net products of photosynthesis.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 11, Page 139',
     previousYearFrequency: 19,
     conceptualLinks: ['Water photolysis', 'PS II', 'Oxygen evolution'],
     timeEstimate: 32,
     bloomsLevel: 'Remember',
-    weightage: 5.5
+    weightage: 5.5,
   },
   {
     id: 'q11-batch10-016',
@@ -7787,21 +8203,17 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-11',
     classId: 'class-11',
     question: 'What is the equation representing the splitting of water during photosynthesis?',
-    options: [
-      '2H₂O → 2H₂ + O₂',
-      '2H₂O → 4H⁺ + O₂ + 4e⁻',
-      'H₂O → H⁺ + OH⁻',
-      '4H₂O → 2H₂ + 2O₂'
-    ],
+    options: ['2H₂O → 2H₂ + O₂', '2H₂O → 4H⁺ + O₂ + 4e⁻', 'H₂O → H⁺ + OH⁻', '4H₂O → 2H₂ + 2O₂'],
     correctAnswer: '2H₂O → 4H⁺ + O₂ + 4e⁻',
-    explanation: 'According to NCERT Page 139, the equation for water splitting is: 2H₂O → 4H⁺ + O₂ + 4e⁻. This process creates oxygen (net product), protons, and electrons that replace those removed from photosystem II.',
+    explanation:
+      'According to NCERT Page 139, the equation for water splitting is: 2H₂O → 4H⁺ + O₂ + 4e⁻. This process creates oxygen (net product), protons, and electrons that replace those removed from photosystem II.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 11, Page 139',
     previousYearFrequency: 16,
     conceptualLinks: ['Photolysis', 'Oxygen release', 'Hill reaction'],
     timeEstimate: 44,
     bloomsLevel: 'Apply',
-    weightage: 4.9
+    weightage: 4.9,
   },
   {
     id: 'q11-batch10-017',
@@ -7809,43 +8221,41 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-11',
     classId: 'class-11',
     question: 'In non-cyclic photophosphorylation, which products are synthesized?',
-    options: [
-      'Only ATP',
-      'Only NADPH',
-      'Both ATP and NADPH',
-      'Only oxygen'
-    ],
+    options: ['Only ATP', 'Only NADPH', 'Both ATP and NADPH', 'Only oxygen'],
     correctAnswer: 'Both ATP and NADPH',
-    explanation: 'NCERT Page 140 states that when the two photosystems work in series (PS II then PS I), non-cyclic photophosphorylation occurs. Both ATP and NADPH + H⁺ are synthesized by this kind of electron flow.',
+    explanation:
+      'NCERT Page 140 states that when the two photosystems work in series (PS II then PS I), non-cyclic photophosphorylation occurs. Both ATP and NADPH + H⁺ are synthesized by this kind of electron flow.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 11, Page 140',
     previousYearFrequency: 20,
     conceptualLinks: ['Non-cyclic photophosphorylation', 'ATP synthesis', 'NADPH formation'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 5.8
+    weightage: 5.8,
   },
   {
     id: 'q11-batch10-018',
     topicId: 'topic-11-11-photosynthesis',
     chapterId: 'ch-11-11',
     classId: 'class-11',
-    question: 'In cyclic photophosphorylation, which photosystem is functional and what product is formed?',
+    question:
+      'In cyclic photophosphorylation, which photosystem is functional and what product is formed?',
     options: [
       'PS II functional; only NADPH formed',
       'PS I functional; only ATP formed',
       'Both PS I and II functional; both ATP and NADPH formed',
-      'PS II functional; only ATP formed'
+      'PS II functional; only ATP formed',
     ],
     correctAnswer: 'PS I functional; only ATP formed',
-    explanation: 'According to NCERT Page 140, when only PS I is functional, the electron is circulated within the photosystem and phosphorylation occurs due to cyclic flow. The cyclic flow results only in the synthesis of ATP, but not of NADPH + H⁺.',
+    explanation:
+      'According to NCERT Page 140, when only PS I is functional, the electron is circulated within the photosystem and phosphorylation occurs due to cyclic flow. The cyclic flow results only in the synthesis of ATP, but not of NADPH + H⁺.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 11, Page 140',
     previousYearFrequency: 18,
     conceptualLinks: ['Cyclic photophosphorylation', 'PS I', 'ATP synthesis'],
     timeEstimate: 46,
     bloomsLevel: 'Understand',
-    weightage: 5.2
+    weightage: 5.2,
   },
   {
     id: 'q11-batch10-019',
@@ -7857,83 +8267,80 @@ export const class11Questions: AuthenticQuestion[] = [
       'Grana membranes only',
       'Stroma lamellae which lack PS II and NADP reductase',
       'Outer chloroplast membrane',
-      'Stroma matrix'
+      'Stroma matrix',
     ],
     correctAnswer: 'Stroma lamellae which lack PS II and NADP reductase',
-    explanation: 'NCERT Page 140 explains that a possible location for cyclic photophosphorylation is in the stroma lamellae. While grana membranes have both PS I and PS II, the stroma lamellae membranes lack PS II as well as NADP reductase enzyme.',
+    explanation:
+      'NCERT Page 140 explains that a possible location for cyclic photophosphorylation is in the stroma lamellae. While grana membranes have both PS I and PS II, the stroma lamellae membranes lack PS II as well as NADP reductase enzyme.',
     difficulty: 'Hard',
     ncertPageReference: 'Class 11, Chapter 11, Page 140',
     previousYearFrequency: 11,
     conceptualLinks: ['Stroma lamellae', 'Cyclic pathway', 'Membrane specialization'],
     timeEstimate: 55,
     bloomsLevel: 'Analyze',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch10-020',
     topicId: 'topic-11-11-photosynthesis',
     chapterId: 'ch-11-11',
     classId: 'class-11',
-    question: 'According to the chemiosmotic hypothesis, ATP synthesis in chloroplasts is linked to:',
+    question:
+      'According to the chemiosmotic hypothesis, ATP synthesis in chloroplasts is linked to:',
     options: [
       'Electron transport only',
       'Development of a proton gradient across thylakoid membrane',
       'Direct light energy absorption',
-      'Carbon dioxide fixation'
+      'Carbon dioxide fixation',
     ],
     correctAnswer: 'Development of a proton gradient across thylakoid membrane',
-    explanation: 'NCERT Page 140 states that the chemiosmotic hypothesis explains ATP synthesis mechanism. ATP synthesis is linked to development of a proton gradient across the thylakoid membrane, with proton accumulation towards the inside (lumen).',
+    explanation:
+      'NCERT Page 140 states that the chemiosmotic hypothesis explains ATP synthesis mechanism. ATP synthesis is linked to development of a proton gradient across the thylakoid membrane, with proton accumulation towards the inside (lumen).',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 11, Page 140',
     previousYearFrequency: 17,
     conceptualLinks: ['Chemiosmosis', 'Proton gradient', 'ATP synthase'],
     timeEstimate: 47,
     bloomsLevel: 'Understand',
-    weightage: 5.4
+    weightage: 5.4,
   },
   {
     id: 'q11-batch10-021',
     topicId: 'topic-11-11-photosynthesis',
     chapterId: 'ch-11-11',
     classId: 'class-11',
-    question: 'The ATP synthase enzyme in chloroplasts consists of two parts. Which part is embedded in the thylakoid membrane forming a transmembrane channel?',
-    options: [
-      'CF₁ part',
-      'CF₀ part',
-      'Both CF₀ and CF₁ equally',
-      'Neither part'
-    ],
+    question:
+      'The ATP synthase enzyme in chloroplasts consists of two parts. Which part is embedded in the thylakoid membrane forming a transmembrane channel?',
+    options: ['CF₁ part', 'CF₀ part', 'Both CF₀ and CF₁ equally', 'Neither part'],
     correctAnswer: 'CF₀ part',
-    explanation: 'According to NCERT Page 142, the ATP synthase enzyme consists of two parts: CF₀ is embedded in the thylakoid membrane and forms a transmembrane channel for facilitated diffusion of protons. CF₁ protrudes on the outer surface facing the stroma.',
+    explanation:
+      'According to NCERT Page 142, the ATP synthase enzyme consists of two parts: CF₀ is embedded in the thylakoid membrane and forms a transmembrane channel for facilitated diffusion of protons. CF₁ protrudes on the outer surface facing the stroma.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 11, Page 142',
     previousYearFrequency: 14,
     conceptualLinks: ['ATP synthase', 'CF₀-CF₁ complex', 'Proton channel'],
     timeEstimate: 48,
     bloomsLevel: 'Understand',
-    weightage: 4.8
+    weightage: 4.8,
   },
   {
     id: 'q11-batch10-022',
     topicId: 'topic-11-11-photosynthesis',
     chapterId: 'ch-11-11',
     classId: 'class-11',
-    question: 'Which scientist used radioactive ¹⁴C to discover that the first CO₂ fixation product in photosynthesis was a 3-carbon organic acid?',
-    options: [
-      'Joseph Priestley',
-      'Julius von Sachs',
-      'Melvin Calvin',
-      'Jan Ingenhousz'
-    ],
+    question:
+      'Which scientist used radioactive ¹⁴C to discover that the first CO₂ fixation product in photosynthesis was a 3-carbon organic acid?',
+    options: ['Joseph Priestley', 'Julius von Sachs', 'Melvin Calvin', 'Jan Ingenhousz'],
     correctAnswer: 'Melvin Calvin',
-    explanation: 'NCERT Page 142 mentions that Melvin Calvin used radioactive ¹⁴C in algal photosynthesis studies which led to the discovery that the first CO₂ fixation product was 3-phosphoglyceric acid (PGA), a 3-carbon organic acid.',
+    explanation:
+      'NCERT Page 142 mentions that Melvin Calvin used radioactive ¹⁴C in algal photosynthesis studies which led to the discovery that the first CO₂ fixation product was 3-phosphoglyceric acid (PGA), a 3-carbon organic acid.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 11, Page 142',
     previousYearFrequency: 13,
     conceptualLinks: ['Calvin cycle', 'Radioactive tracers', 'PGA'],
     timeEstimate: 33,
     bloomsLevel: 'Remember',
-    weightage: 4.3
+    weightage: 4.3,
   },
   {
     id: 'q11-batch10-023',
@@ -7945,259 +8352,257 @@ export const class11Questions: AuthenticQuestion[] = [
       'Phosphoenolpyruvate (PEP)',
       'Oxaloacetic acid (OAA)',
       'Ribulose bisphosphate (RuBP)',
-      '3-phosphoglyceric acid (PGA)'
+      '3-phosphoglyceric acid (PGA)',
     ],
     correctAnswer: 'Ribulose bisphosphate (RuBP)',
-    explanation: 'According to NCERT Page 143, the acceptor molecule for CO₂ was discovered to be a 5-carbon ketose sugar, ribulose bisphosphate (RuBP). This was unexpected as scientists initially believed the acceptor would be a 2-carbon compound.',
+    explanation:
+      'According to NCERT Page 143, the acceptor molecule for CO₂ was discovered to be a 5-carbon ketose sugar, ribulose bisphosphate (RuBP). This was unexpected as scientists initially believed the acceptor would be a 2-carbon compound.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 11, Page 143',
     previousYearFrequency: 21,
     conceptualLinks: ['CO₂ acceptor', 'RuBP', 'Calvin cycle'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 6.0
+    weightage: 6.0,
   },
   {
     id: 'q11-batch10-024',
     topicId: 'topic-11-11-photosynthesis',
     chapterId: 'ch-11-11',
     classId: 'class-11',
-    question: 'The Calvin cycle can be described under three main stages. Which of the following is NOT one of these stages?',
-    options: [
-      'Carboxylation',
-      'Reduction',
-      'Regeneration',
-      'Oxidation'
-    ],
+    question:
+      'The Calvin cycle can be described under three main stages. Which of the following is NOT one of these stages?',
+    options: ['Carboxylation', 'Reduction', 'Regeneration', 'Oxidation'],
     correctAnswer: 'Oxidation',
-    explanation: 'NCERT Page 143 clearly states that for ease of understanding, the Calvin cycle can be described under three stages: carboxylation, reduction, and regeneration. Oxidation is not a stage of the Calvin cycle.',
+    explanation:
+      'NCERT Page 143 clearly states that for ease of understanding, the Calvin cycle can be described under three stages: carboxylation, reduction, and regeneration. Oxidation is not a stage of the Calvin cycle.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 11, Page 143',
     previousYearFrequency: 15,
     conceptualLinks: ['Calvin cycle stages', 'Carbon fixation', 'Biosynthetic pathway'],
     timeEstimate: 32,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch10-025',
     topicId: 'topic-11-11-photosynthesis',
     chapterId: 'ch-11-11',
     classId: 'class-11',
-    question: 'In the carboxylation step of the Calvin cycle, which enzyme catalyzes the fixation of CO₂ to RuBP?',
+    question:
+      'In the carboxylation step of the Calvin cycle, which enzyme catalyzes the fixation of CO₂ to RuBP?',
     options: [
       'PEP carboxylase',
       'Carbonic anhydrase',
       'RuBP carboxylase-oxygenase (RuBisCO)',
-      'Hexokinase'
+      'Hexokinase',
     ],
     correctAnswer: 'RuBP carboxylase-oxygenase (RuBisCO)',
-    explanation: 'According to NCERT Page 143, carboxylation is catalyzed by the enzyme RuBP carboxylase which results in formation of two molecules of 3-PGA. Since this enzyme also has oxygenation activity, it is more correctly called RuBP carboxylase-oxygenase or RuBisCO.',
+    explanation:
+      'According to NCERT Page 143, carboxylation is catalyzed by the enzyme RuBP carboxylase which results in formation of two molecules of 3-PGA. Since this enzyme also has oxygenation activity, it is more correctly called RuBP carboxylase-oxygenase or RuBisCO.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 11, Page 143',
     previousYearFrequency: 19,
     conceptualLinks: ['RuBisCO', 'Carboxylation', 'Most abundant enzyme'],
     timeEstimate: 40,
     bloomsLevel: 'Understand',
-    weightage: 5.5
+    weightage: 5.5,
   },
   {
     id: 'q11-batch10-026',
     topicId: 'topic-11-11-photosynthesis',
     chapterId: 'ch-11-11',
     classId: 'class-11',
-    question: 'In the reduction phase of the Calvin cycle, how many molecules of ATP and NADPH are required per CO₂ molecule fixed?',
-    options: [
-      '1 ATP and 1 NADPH',
-      '2 ATP and 2 NADPH',
-      '3 ATP and 2 NADPH',
-      '2 ATP and 1 NADPH'
-    ],
+    question:
+      'In the reduction phase of the Calvin cycle, how many molecules of ATP and NADPH are required per CO₂ molecule fixed?',
+    options: ['1 ATP and 1 NADPH', '2 ATP and 2 NADPH', '3 ATP and 2 NADPH', '2 ATP and 1 NADPH'],
     correctAnswer: '2 ATP and 2 NADPH',
-    explanation: 'NCERT Page 144 states that the reduction steps involve utilization of 2 molecules of ATP for phosphorylation and 2 of NADPH for reduction per CO₂ molecule fixed in the pathway leading to glucose formation.',
+    explanation:
+      'NCERT Page 144 states that the reduction steps involve utilization of 2 molecules of ATP for phosphorylation and 2 of NADPH for reduction per CO₂ molecule fixed in the pathway leading to glucose formation.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 11, Page 144',
     previousYearFrequency: 17,
     conceptualLinks: ['Reduction phase', 'ATP requirement', 'NADPH utilization'],
     timeEstimate: 45,
     bloomsLevel: 'Apply',
-    weightage: 5.2
+    weightage: 5.2,
   },
   {
     id: 'q11-batch10-027',
     topicId: 'topic-11-11-photosynthesis',
     chapterId: 'ch-11-11',
     classId: 'class-11',
-    question: 'How many molecules of CO₂ need to be fixed and how many turns of the Calvin cycle are required to form one molecule of glucose?',
+    question:
+      'How many molecules of CO₂ need to be fixed and how many turns of the Calvin cycle are required to form one molecule of glucose?',
     options: [
       '3 CO₂ molecules and 3 turns',
       '6 CO₂ molecules and 6 turns',
       '12 CO₂ molecules and 12 turns',
-      '1 CO₂ molecule and 1 turn'
+      '1 CO₂ molecule and 1 turn',
     ],
     correctAnswer: '6 CO₂ molecules and 6 turns',
-    explanation: 'According to NCERT Page 144, the fixation of six molecules of CO₂ and 6 turns of the cycle are required for the formation of one molecule of glucose from the pathway. This is because glucose is a 6-carbon sugar.',
+    explanation:
+      'According to NCERT Page 144, the fixation of six molecules of CO₂ and 6 turns of the cycle are required for the formation of one molecule of glucose from the pathway. This is because glucose is a 6-carbon sugar.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 11, Page 144',
     previousYearFrequency: 16,
     conceptualLinks: ['Glucose synthesis', 'Calvin cycle turns', 'Carbon balance'],
     timeEstimate: 48,
     bloomsLevel: 'Apply',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch10-028',
     topicId: 'topic-11-11-photosynthesis',
     chapterId: 'ch-11-11',
     classId: 'class-11',
-    question: 'In the regeneration phase of the Calvin cycle, how many ATP molecules are required to regenerate one molecule of RuBP?',
-    options: [
-      'Zero ATP',
-      'One ATP for phosphorylation',
-      'Two ATP',
-      'Three ATP'
-    ],
+    question:
+      'In the regeneration phase of the Calvin cycle, how many ATP molecules are required to regenerate one molecule of RuBP?',
+    options: ['Zero ATP', 'One ATP for phosphorylation', 'Two ATP', 'Three ATP'],
     correctAnswer: 'One ATP for phosphorylation',
-    explanation: 'NCERT Page 144 states that regeneration of the CO₂ acceptor molecule RuBP is crucial for the cycle to continue. The regeneration steps require one ATP for phosphorylation to form RuBP.',
+    explanation:
+      'NCERT Page 144 states that regeneration of the CO₂ acceptor molecule RuBP is crucial for the cycle to continue. The regeneration steps require one ATP for phosphorylation to form RuBP.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 11, Page 144',
     previousYearFrequency: 13,
     conceptualLinks: ['RuBP regeneration', 'ATP utilization', 'Cycle continuation'],
     timeEstimate: 44,
     bloomsLevel: 'Understand',
-    weightage: 4.6
+    weightage: 4.6,
   },
   {
     id: 'q11-batch10-029',
     topicId: 'topic-11-11-photosynthesis',
     chapterId: 'ch-11-11',
     classId: 'class-11',
-    question: 'For every CO₂ molecule entering the Calvin cycle, what is the total requirement of ATP and NADPH?',
-    options: [
-      '2 ATP and 2 NADPH',
-      '3 ATP and 2 NADPH',
-      '2 ATP and 3 NADPH',
-      '3 ATP and 3 NADPH'
-    ],
+    question:
+      'For every CO₂ molecule entering the Calvin cycle, what is the total requirement of ATP and NADPH?',
+    options: ['2 ATP and 2 NADPH', '3 ATP and 2 NADPH', '2 ATP and 3 NADPH', '3 ATP and 3 NADPH'],
     correctAnswer: '3 ATP and 2 NADPH',
-    explanation: 'According to NCERT Page 145, for every CO₂ molecule entering the Calvin cycle, 3 molecules of ATP and 2 of NADPH are required (2 ATP for reduction, 1 ATP for regeneration, and 2 NADPH for reduction).',
+    explanation:
+      'According to NCERT Page 145, for every CO₂ molecule entering the Calvin cycle, 3 molecules of ATP and 2 of NADPH are required (2 ATP for reduction, 1 ATP for regeneration, and 2 NADPH for reduction).',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 11, Page 145',
     previousYearFrequency: 18,
     conceptualLinks: ['Energy requirements', 'Calvin cycle energetics', 'ATP:NADPH ratio'],
     timeEstimate: 50,
     bloomsLevel: 'Apply',
-    weightage: 5.3
+    weightage: 5.3,
   },
   {
     id: 'q11-batch10-030',
     topicId: 'topic-11-11-photosynthesis',
     chapterId: 'ch-11-11',
     classId: 'class-11',
-    question: 'To make one molecule of glucose, how many total ATP and NADPH molecules are required through the Calvin pathway?',
+    question:
+      'To make one molecule of glucose, how many total ATP and NADPH molecules are required through the Calvin pathway?',
     options: [
       '12 ATP and 12 NADPH',
       '18 ATP and 12 NADPH',
       '12 ATP and 18 NADPH',
-      '18 ATP and 18 NADPH'
+      '18 ATP and 18 NADPH',
     ],
     correctAnswer: '18 ATP and 12 NADPH',
-    explanation: 'NCERT Page 145 shows the input-output table: To make one glucose molecule, 6 CO₂ molecules enter, requiring 18 ATP (3×6) and 12 NADPH (2×6), which are converted to 18 ADP and 12 NADP+.',
+    explanation:
+      'NCERT Page 145 shows the input-output table: To make one glucose molecule, 6 CO₂ molecules enter, requiring 18 ATP (3×6) and 12 NADPH (2×6), which are converted to 18 ADP and 12 NADP+.',
     difficulty: 'Hard',
     ncertPageReference: 'Class 11, Chapter 11, Page 145',
     previousYearFrequency: 15,
     conceptualLinks: ['Glucose synthesis', 'Total energy cost', 'Stoichiometry'],
     timeEstimate: 58,
     bloomsLevel: 'Apply',
-    weightage: 5.5
+    weightage: 5.5,
   },
   {
     id: 'q11-batch10-031',
     topicId: 'topic-11-11-photosynthesis',
     chapterId: 'ch-11-11',
     classId: 'class-11',
-    question: 'C₄ plants have a special type of leaf anatomy. What are the particularly large cells around the vascular bundles called?',
+    question:
+      'C₄ plants have a special type of leaf anatomy. What are the particularly large cells around the vascular bundles called?',
     options: [
       'Palisade cells',
       'Spongy mesophyll cells',
       'Bundle sheath cells with Kranz anatomy',
-      'Guard cells'
+      'Guard cells',
     ],
     correctAnswer: 'Bundle sheath cells with Kranz anatomy',
-    explanation: 'According to NCERT Page 145, the particularly large cells around the vascular bundles of C₄ plants are called bundle sheath cells, and the leaves which have such anatomy are said to have \'Kranz\' anatomy (\'Kranz\' means \'wreath\').',
+    explanation:
+      "According to NCERT Page 145, the particularly large cells around the vascular bundles of C₄ plants are called bundle sheath cells, and the leaves which have such anatomy are said to have 'Kranz' anatomy ('Kranz' means 'wreath').",
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 11, Page 145',
     previousYearFrequency: 20,
     conceptualLinks: ['Kranz anatomy', 'Bundle sheath', 'C₄ plants'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 5.5
+    weightage: 5.5,
   },
   {
     id: 'q11-batch10-032',
     topicId: 'topic-11-11-photosynthesis',
     chapterId: 'ch-11-11',
     classId: 'class-11',
-    question: 'The bundle sheath cells in C₄ plants are characterized by all of the following EXCEPT:',
+    question:
+      'The bundle sheath cells in C₄ plants are characterized by all of the following EXCEPT:',
     options: [
       'Large number of chloroplasts',
       'Thick walls impervious to gaseous exchange',
       'No intercellular spaces',
-      'Presence of large intercellular air spaces'
+      'Presence of large intercellular air spaces',
     ],
     correctAnswer: 'Presence of large intercellular air spaces',
-    explanation: 'NCERT Page 145 describes bundle sheath cells as characterized by having a large number of chloroplasts, thick walls impervious to gaseous exchange, and NO intercellular spaces. Large air spaces would contradict their structure.',
+    explanation:
+      'NCERT Page 145 describes bundle sheath cells as characterized by having a large number of chloroplasts, thick walls impervious to gaseous exchange, and NO intercellular spaces. Large air spaces would contradict their structure.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 11, Page 145',
     previousYearFrequency: 12,
     conceptualLinks: ['Bundle sheath characteristics', 'Cell structure', 'Gas exchange'],
     timeEstimate: 46,
     bloomsLevel: 'Understand',
-    weightage: 4.8
+    weightage: 4.8,
   },
   {
     id: 'q11-batch10-033',
     topicId: 'topic-11-11-photosynthesis',
     chapterId: 'ch-11-11',
     classId: 'class-11',
-    question: 'In the C₄ pathway (Hatch and Slack pathway), what is the primary CO₂ acceptor molecule?',
+    question:
+      'In the C₄ pathway (Hatch and Slack pathway), what is the primary CO₂ acceptor molecule?',
     options: [
       'Ribulose bisphosphate (RuBP)',
       'Phosphoenolpyruvate (PEP)',
       '3-phosphoglyceric acid (PGA)',
-      'Oxaloacetic acid (OAA)'
+      'Oxaloacetic acid (OAA)',
     ],
     correctAnswer: 'Phosphoenolpyruvate (PEP)',
-    explanation: 'According to NCERT Page 146, in the C₄ pathway the primary CO₂ acceptor is a 3-carbon molecule phosphoenolpyruvate (PEP) present in the mesophyll cells. The enzyme responsible is PEP carboxylase or PEPcase.',
+    explanation:
+      'According to NCERT Page 146, in the C₄ pathway the primary CO₂ acceptor is a 3-carbon molecule phosphoenolpyruvate (PEP) present in the mesophyll cells. The enzyme responsible is PEP carboxylase or PEPcase.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 11, Page 146',
     previousYearFrequency: 19,
     conceptualLinks: ['C₄ pathway', 'PEP', 'Primary acceptor'],
     timeEstimate: 42,
     bloomsLevel: 'Understand',
-    weightage: 5.4
+    weightage: 5.4,
   },
   {
     id: 'q11-batch10-034',
     topicId: 'topic-11-11-photosynthesis',
     chapterId: 'ch-11-11',
     classId: 'class-11',
-    question: 'Which enzyme catalyzes the first CO₂ fixation step in the mesophyll cells of C₄ plants?',
-    options: [
-      'RuBisCO',
-      'PEP carboxylase (PEPcase)',
-      'Carbonic anhydrase',
-      'Phosphofructokinase'
-    ],
+    question:
+      'Which enzyme catalyzes the first CO₂ fixation step in the mesophyll cells of C₄ plants?',
+    options: ['RuBisCO', 'PEP carboxylase (PEPcase)', 'Carbonic anhydrase', 'Phosphofructokinase'],
     correctAnswer: 'PEP carboxylase (PEPcase)',
-    explanation: 'NCERT Page 146 states that the enzyme responsible for CO₂ fixation to PEP in mesophyll cells is PEP carboxylase or PEPcase. It is important that mesophyll cells lack RuBisCO enzyme.',
+    explanation:
+      'NCERT Page 146 states that the enzyme responsible for CO₂ fixation to PEP in mesophyll cells is PEP carboxylase or PEPcase. It is important that mesophyll cells lack RuBisCO enzyme.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 11, Page 146',
     previousYearFrequency: 17,
     conceptualLinks: ['PEPcase', 'C₄ fixation', 'Mesophyll function'],
     timeEstimate: 44,
     bloomsLevel: 'Understand',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch10-035',
@@ -8209,17 +8614,18 @@ export const class11Questions: AuthenticQuestion[] = [
       '3-phosphoglyceric acid (PGA)',
       'Oxaloacetic acid (OAA)',
       'Malic acid',
-      'Aspartic acid'
+      'Aspartic acid',
     ],
     correctAnswer: 'Oxaloacetic acid (OAA)',
-    explanation: 'According to NCERT Page 146, when PEP combines with CO₂ in the presence of PEPcase, the C₄ acid OAA (oxaloacetic acid) is formed in the mesophyll cells. It then forms other 4-carbon compounds like malic acid or aspartic acid.',
+    explanation:
+      'According to NCERT Page 146, when PEP combines with CO₂ in the presence of PEPcase, the C₄ acid OAA (oxaloacetic acid) is formed in the mesophyll cells. It then forms other 4-carbon compounds like malic acid or aspartic acid.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 11, Page 146',
     previousYearFrequency: 18,
     conceptualLinks: ['OAA', 'C₄ product', 'First stable product'],
     timeEstimate: 33,
     bloomsLevel: 'Remember',
-    weightage: 5.2
+    weightage: 5.2,
   },
   {
     id: 'q11-batch10-036',
@@ -8231,39 +8637,42 @@ export const class11Questions: AuthenticQuestion[] = [
       'Only in mesophyll cells',
       'Only in bundle sheath cells',
       'Equally in both mesophyll and bundle sheath cells',
-      'In epidermal cells'
+      'In epidermal cells',
     ],
     correctAnswer: 'Only in bundle sheath cells',
-    explanation: 'NCERT Page 147 clearly states that in C₄ plants the Calvin pathway does not take place in mesophyll cells but does so only in the bundle sheath cells, which are rich in RuBisCO enzyme but lack PEPcase.',
+    explanation:
+      'NCERT Page 147 clearly states that in C₄ plants the Calvin pathway does not take place in mesophyll cells but does so only in the bundle sheath cells, which are rich in RuBisCO enzyme but lack PEPcase.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 11, Page 147',
     previousYearFrequency: 19,
     conceptualLinks: ['Bundle sheath function', 'Calvin cycle location', 'Spatial separation'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 5.6
+    weightage: 5.6,
   },
   {
     id: 'q11-batch10-037',
     topicId: 'topic-11-11-photosynthesis',
     chapterId: 'ch-11-11',
     classId: 'class-11',
-    question: 'Photorespiration is a process where RuBisCO acts as an oxygenase instead of carboxylase. What are the products when RuBP binds with O₂?',
+    question:
+      'Photorespiration is a process where RuBisCO acts as an oxygenase instead of carboxylase. What are the products when RuBP binds with O₂?',
     options: [
       'Two molecules of 3-PGA',
       'One molecule of phosphoglycerate and one of phosphoglycolate (2C)',
       'Two molecules of oxaloacetic acid',
-      'One glucose molecule'
+      'One glucose molecule',
     ],
     correctAnswer: 'One molecule of phosphoglycerate and one of phosphoglycolate (2C)',
-    explanation: 'According to NCERT Page 147, in photorespiration when O₂ binds to RuBisCO, the RuBP instead of being converted to 2 molecules of PGA binds with O₂ to form one molecule of phosphoglycerate and phosphoglycolate (2 Carbon).',
+    explanation:
+      'According to NCERT Page 147, in photorespiration when O₂ binds to RuBisCO, the RuBP instead of being converted to 2 molecules of PGA binds with O₂ to form one molecule of phosphoglycerate and phosphoglycolate (2 Carbon).',
     difficulty: 'Hard',
     ncertPageReference: 'Class 11, Chapter 11, Page 147',
     previousYearFrequency: 14,
     conceptualLinks: ['Photorespiration', 'Oxygenase activity', 'RuBisCO dual function'],
     timeEstimate: 56,
     bloomsLevel: 'Analyze',
-    weightage: 5.2
+    weightage: 5.2,
   },
   {
     id: 'q11-batch10-038',
@@ -8275,17 +8684,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'Synthesis of sugars and ATP',
       'Release of CO₂ with utilization of ATP, no sugar or ATP synthesis',
       'Increased oxygen consumption and glucose production',
-      'Enhanced NADPH production'
+      'Enhanced NADPH production',
     ],
     correctAnswer: 'Release of CO₂ with utilization of ATP, no sugar or ATP synthesis',
-    explanation: 'NCERT Page 147 explains that in the photorespiratory pathway, there is neither synthesis of sugars nor of ATP. Rather it results in the release of CO₂ with the utilization of ATP. There is no synthesis of ATP or NADPH.',
+    explanation:
+      'NCERT Page 147 explains that in the photorespiratory pathway, there is neither synthesis of sugars nor of ATP. Rather it results in the release of CO₂ with the utilization of ATP. There is no synthesis of ATP or NADPH.',
     difficulty: 'Hard',
     ncertPageReference: 'Class 11, Chapter 11, Page 147',
     previousYearFrequency: 13,
     conceptualLinks: ['Photorespiration wasteful', 'No productivity', 'Energy loss'],
     timeEstimate: 58,
     bloomsLevel: 'Analyze',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch10-039',
@@ -8297,61 +8707,61 @@ export const class11Questions: AuthenticQuestion[] = [
       'They lack RuBisCO enzyme',
       'They increase CO₂ concentration at enzyme site by breaking down C₄ acids',
       'They prevent oxygen from entering cells',
-      'They have no chloroplasts in bundle sheath'
+      'They have no chloroplasts in bundle sheath',
     ],
     correctAnswer: 'They increase CO₂ concentration at enzyme site by breaking down C₄ acids',
-    explanation: 'According to NCERT Page 147, C₄ plants have a mechanism that increases CO₂ concentration at the enzyme site. When C₄ acid from mesophyll is broken down in bundle sheath cells, CO₂ is released, ensuring RuBisCO functions as carboxylase, minimizing oxygenase activity.',
+    explanation:
+      'According to NCERT Page 147, C₄ plants have a mechanism that increases CO₂ concentration at the enzyme site. When C₄ acid from mesophyll is broken down in bundle sheath cells, CO₂ is released, ensuring RuBisCO functions as carboxylase, minimizing oxygenase activity.',
     difficulty: 'Hard',
     ncertPageReference: 'Class 11, Chapter 11, Page 147',
     previousYearFrequency: 16,
     conceptualLinks: ['C₄ advantage', 'CO₂ concentration mechanism', 'No photorespiration'],
     timeEstimate: 60,
     bloomsLevel: 'Analyze',
-    weightage: 5.8
+    weightage: 5.8,
   },
   {
     id: 'q11-batch10-040',
     topicId: 'topic-11-11-photosynthesis',
     chapterId: 'ch-11-11',
     classId: 'class-11',
-    question: 'Which factor proposed by Blackman\'s Law of Limiting Factors determines the rate of photosynthesis?',
+    question:
+      "Which factor proposed by Blackman's Law of Limiting Factors determines the rate of photosynthesis?",
     options: [
       'The factor present in maximum quantity',
       'The factor which is nearest to its minimal value',
       'The factor with highest concentration',
-      'All factors equally'
+      'All factors equally',
     ],
     correctAnswer: 'The factor which is nearest to its minimal value',
-    explanation: 'NCERT Page 149 explains Blackman\'s (1905) Law of Limiting Factors: If a chemical process is affected by more than one factor, then its rate will be determined by the factor which is nearest to its minimal value.',
+    explanation:
+      "NCERT Page 149 explains Blackman's (1905) Law of Limiting Factors: If a chemical process is affected by more than one factor, then its rate will be determined by the factor which is nearest to its minimal value.",
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 11, Page 149',
     previousYearFrequency: 15,
-    conceptualLinks: ['Limiting factors', 'Blackman\'s law', 'Rate-limiting step'],
+    conceptualLinks: ['Limiting factors', "Blackman's law", 'Rate-limiting step'],
     timeEstimate: 50,
     bloomsLevel: 'Understand',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch10-041',
     topicId: 'topic-11-11-photosynthesis',
     chapterId: 'ch-11-11',
     classId: 'class-11',
-    question: 'At what percentage of full sunlight does light saturation occur for photosynthesis in most plants?',
-    options: [
-      '5 per cent',
-      '10 per cent',
-      '25 per cent',
-      '50 per cent'
-    ],
+    question:
+      'At what percentage of full sunlight does light saturation occur for photosynthesis in most plants?',
+    options: ['5 per cent', '10 per cent', '25 per cent', '50 per cent'],
     correctAnswer: '10 per cent',
-    explanation: 'According to NCERT Page 149, light saturation occurs at 10 per cent of the full sunlight. Hence, except for plants in shade or dense forests, light is rarely a limiting factor in nature.',
+    explanation:
+      'According to NCERT Page 149, light saturation occurs at 10 per cent of the full sunlight. Hence, except for plants in shade or dense forests, light is rarely a limiting factor in nature.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 11, Page 149',
     previousYearFrequency: 11,
     conceptualLinks: ['Light saturation', 'Light intensity', 'Limiting factor'],
     timeEstimate: 44,
     bloomsLevel: 'Understand',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch10-042',
@@ -8363,61 +8773,61 @@ export const class11Questions: AuthenticQuestion[] = [
       'Between 0.3 and 0.4 per cent',
       'Between 0.03 and 0.04 per cent',
       'Between 3 and 4 per cent',
-      'Between 0.003 and 0.004 per cent'
+      'Between 0.003 and 0.004 per cent',
     ],
     correctAnswer: 'Between 0.03 and 0.04 per cent',
-    explanation: 'NCERT Page 150 states that carbon dioxide is the major limiting factor for photosynthesis. The concentration of CO₂ is very low in the atmosphere (between 0.03 and 0.04 per cent).',
+    explanation:
+      'NCERT Page 150 states that carbon dioxide is the major limiting factor for photosynthesis. The concentration of CO₂ is very low in the atmosphere (between 0.03 and 0.04 per cent).',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 11, Page 150',
     previousYearFrequency: 12,
     conceptualLinks: ['CO₂ concentration', 'Atmospheric gases', 'Limiting factor'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 4.2
+    weightage: 4.2,
   },
   {
     id: 'q11-batch10-043',
     topicId: 'topic-11-11-photosynthesis',
     chapterId: 'ch-11-11',
     classId: 'class-11',
-    question: 'At high light intensities, C₄ plants show saturation at approximately what CO₂ concentration?',
-    options: [
-      '180 µL L⁻¹',
-      '260 µL L⁻¹',
-      '360 µL L⁻¹',
-      '450 µL L⁻¹'
-    ],
+    question:
+      'At high light intensities, C₄ plants show saturation at approximately what CO₂ concentration?',
+    options: ['180 µL L⁻¹', '260 µL L⁻¹', '360 µL L⁻¹', '450 µL L⁻¹'],
     correctAnswer: '360 µL L⁻¹',
-    explanation: 'According to NCERT Page 150, at high light intensities, C₄ plants show saturation at about 360 µL L⁻¹ while C₃ plants respond to increased CO₂ concentration and saturation is seen only beyond 450 µL L⁻¹.',
+    explanation:
+      'According to NCERT Page 150, at high light intensities, C₄ plants show saturation at about 360 µL L⁻¹ while C₃ plants respond to increased CO₂ concentration and saturation is seen only beyond 450 µL L⁻¹.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 11, Page 150',
     previousYearFrequency: 10,
     conceptualLinks: ['C₄ saturation', 'CO₂ response', 'Photosynthetic efficiency'],
     timeEstimate: 48,
     bloomsLevel: 'Apply',
-    weightage: 4.6
+    weightage: 4.6,
   },
   {
     id: 'q11-batch10-044',
     topicId: 'topic-11-11-photosynthesis',
     chapterId: 'ch-11-11',
     classId: 'class-11',
-    question: 'The fact that C₃ plants respond to higher CO₂ concentrations has been commercially utilized for which greenhouse crops?',
+    question:
+      'The fact that C₃ plants respond to higher CO₂ concentrations has been commercially utilized for which greenhouse crops?',
     options: [
       'Wheat and rice',
       'Tomatoes and bell pepper',
       'Sugarcane and maize',
-      'Potato and onion'
+      'Potato and onion',
     ],
     correctAnswer: 'Tomatoes and bell pepper',
-    explanation: 'NCERT Page 150 mentions that C₃ plants respond to higher CO₂ concentration by showing increased rates of photosynthesis. This has been used for greenhouse crops such as tomatoes and bell pepper, which are grown in CO₂ enriched atmosphere for higher yields.',
+    explanation:
+      'NCERT Page 150 mentions that C₃ plants respond to higher CO₂ concentration by showing increased rates of photosynthesis. This has been used for greenhouse crops such as tomatoes and bell pepper, which are grown in CO₂ enriched atmosphere for higher yields.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 11, Page 150',
     previousYearFrequency: 8,
     conceptualLinks: ['CO₂ enrichment', 'Commercial application', 'Greenhouse cultivation'],
     timeEstimate: 33,
     bloomsLevel: 'Remember',
-    weightage: 3.8
+    weightage: 3.8,
   },
   {
     id: 'q11-batch10-045',
@@ -8429,17 +8839,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'Light reactions occur in the dark',
       'Dark reactions are enzymatic and temperature-controlled',
       'Light reactions produce heat',
-      'Dark reactions require no energy'
+      'Dark reactions require no energy',
     ],
     correctAnswer: 'Dark reactions are enzymatic and temperature-controlled',
-    explanation: 'According to NCERT Page 150, the dark reactions being enzymatic are temperature-controlled. Though the light reactions are also temperature sensitive, they are affected to a much lesser extent than the enzymatic dark reactions.',
+    explanation:
+      'According to NCERT Page 150, the dark reactions being enzymatic are temperature-controlled. Though the light reactions are also temperature sensitive, they are affected to a much lesser extent than the enzymatic dark reactions.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 11, Page 150',
     previousYearFrequency: 13,
     conceptualLinks: ['Temperature effect', 'Enzyme kinetics', 'Dark reactions'],
     timeEstimate: 46,
     bloomsLevel: 'Understand',
-    weightage: 4.8
+    weightage: 4.8,
   },
   {
     id: 'q11-batch10-046',
@@ -8451,39 +8862,43 @@ export const class11Questions: AuthenticQuestion[] = [
       'During the day when stomata are open',
       'At night when stomata are open',
       'Continuously throughout 24 hours',
-      'Only at dawn'
+      'Only at dawn',
     ],
     correctAnswer: 'At night when stomata are open',
-    explanation: 'CAM plants are adapted to arid conditions. They open stomata at night to minimize water loss, fix CO₂ into organic acids (like malic acid), and then use this stored CO₂ during the day for the Calvin cycle when stomata are closed. This is mentioned in the context of photorespiration and alternative pathways in NCERT Page 147-148 discussions.',
+    explanation:
+      'CAM plants are adapted to arid conditions. They open stomata at night to minimize water loss, fix CO₂ into organic acids (like malic acid), and then use this stored CO₂ during the day for the Calvin cycle when stomata are closed. This is mentioned in the context of photorespiration and alternative pathways in NCERT Page 147-148 discussions.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 11, Page 147-148',
     previousYearFrequency: 14,
     conceptualLinks: ['CAM pathway', 'Water conservation', 'Temporal separation'],
     timeEstimate: 48,
     bloomsLevel: 'Understand',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch10-047',
     topicId: 'topic-11-11-photosynthesis',
     chapterId: 'ch-11-11',
     classId: 'class-11',
-    question: 'Which of the following best describes the relationship between photorespiration and temperature in C₃ plants?',
+    question:
+      'Which of the following best describes the relationship between photorespiration and temperature in C₃ plants?',
     options: [
       'Photorespiration decreases at higher temperatures',
       'Photorespiration increases at higher temperatures due to increased oxygenase activity of RuBisCO',
       'Temperature has no effect on photorespiration',
-      'Photorespiration only occurs at low temperatures'
+      'Photorespiration only occurs at low temperatures',
     ],
-    correctAnswer: 'Photorespiration increases at higher temperatures due to increased oxygenase activity of RuBisCO',
-    explanation: 'Based on NCERT Page 147 and 150, photorespiration occurs when O₂ binds to RuBisCO. At higher temperatures, the solubility of CO₂ decreases more than O₂, and RuBisCO\'s affinity for O₂ increases, leading to more photorespiration. C₄ plants with higher temperature optimum avoid this problem.',
+    correctAnswer:
+      'Photorespiration increases at higher temperatures due to increased oxygenase activity of RuBisCO',
+    explanation:
+      "Based on NCERT Page 147 and 150, photorespiration occurs when O₂ binds to RuBisCO. At higher temperatures, the solubility of CO₂ decreases more than O₂, and RuBisCO's affinity for O₂ increases, leading to more photorespiration. C₄ plants with higher temperature optimum avoid this problem.",
     difficulty: 'Hard',
     ncertPageReference: 'Class 11, Chapter 11, Page 147, 150',
     previousYearFrequency: 11,
     conceptualLinks: ['Photorespiration', 'Temperature effect', 'C₃ vs C₄'],
     timeEstimate: 57,
     bloomsLevel: 'Analyze',
-    weightage: 5.3
+    weightage: 5.3,
   },
   {
     id: 'q11-batch10-048',
@@ -8495,39 +8910,47 @@ export const class11Questions: AuthenticQuestion[] = [
       'Spatial separation of initial CO₂ fixation and Calvin cycle',
       'Temporal separation of initial CO₂ fixation and Calvin cycle',
       'No Kranz anatomy and fix CO₂ only during day',
-      'High rates of photorespiration'
+      'High rates of photorespiration',
     ],
     correctAnswer: 'Temporal separation of initial CO₂ fixation and Calvin cycle',
-    explanation: 'While C₄ plants show spatial separation (mesophyll vs bundle sheath cells), CAM plants show temporal separation - they fix CO₂ at night into organic acids and run Calvin cycle during the day. This is evident from the discussion of alternative pathways in NCERT Pages 147-148.',
+    explanation:
+      'While C₄ plants show spatial separation (mesophyll vs bundle sheath cells), CAM plants show temporal separation - they fix CO₂ at night into organic acids and run Calvin cycle during the day. This is evident from the discussion of alternative pathways in NCERT Pages 147-148.',
     difficulty: 'Hard',
     ncertPageReference: 'Class 11, Chapter 11, Page 147-148',
     previousYearFrequency: 10,
     conceptualLinks: ['CAM mechanism', 'C₄ comparison', 'Adaptation strategies'],
     timeEstimate: 60,
     bloomsLevel: 'Analyze',
-    weightage: 5.5
+    weightage: 5.5,
   },
   {
     id: 'q11-batch10-049',
     topicId: 'topic-11-11-photosynthesis',
     chapterId: 'ch-11-11',
     classId: 'class-11',
-    question: 'Which statement correctly explains why cyclic photophosphorylation might occur in addition to non-cyclic photophosphorylation?',
+    question:
+      'Which statement correctly explains why cyclic photophosphorylation might occur in addition to non-cyclic photophosphorylation?',
     options: [
       'To produce only NADPH without ATP',
       'To meet the difference in ATP and NADPH requirements, as Calvin cycle needs 3 ATP but 2 NADPH per CO₂',
       'To reduce oxygen production',
-      'To increase glucose synthesis directly'
+      'To increase glucose synthesis directly',
     ],
-    correctAnswer: 'To meet the difference in ATP and NADPH requirements, as Calvin cycle needs 3 ATP but 2 NADPH per CO₂',
-    explanation: 'NCERT Page 145 explicitly states: "It is probably to meet this difference in number of ATP and NADPH used in the dark reaction that the cyclic phosphorylation takes place." Non-cyclic produces ATP and NADPH in roughly 1:1 ratio, but Calvin cycle needs 3:2 ratio.',
+    correctAnswer:
+      'To meet the difference in ATP and NADPH requirements, as Calvin cycle needs 3 ATP but 2 NADPH per CO₂',
+    explanation:
+      'NCERT Page 145 explicitly states: "It is probably to meet this difference in number of ATP and NADPH used in the dark reaction that the cyclic phosphorylation takes place." Non-cyclic produces ATP and NADPH in roughly 1:1 ratio, but Calvin cycle needs 3:2 ratio.',
     difficulty: 'Hard',
     ncertPageReference: 'Class 11, Chapter 11, Page 145',
     previousYearFrequency: 12,
-    conceptualLinks: ['Cyclic photophosphorylation', 'ATP:NADPH ratio', 'Calvin cycle requirements'],
+    conceptualLinks: [
+      'Cyclic photophosphorylation',
+      'ATP:NADPH ratio',
+      'Calvin cycle requirements',
+    ],
     timeEstimate: 58,
     bloomsLevel: 'Analyze',
-    weightage: 5.6
+    weightage: 5.6,
   },
   {
     id: 'q11-batch10-050',
@@ -8539,17 +8962,19 @@ export const class11Questions: AuthenticQuestion[] = [
       'By directly inhibiting RuBisCO enzyme',
       'By causing stomata to close, reducing CO₂ availability and causing leaves to wilt',
       'By increasing chlorophyll breakdown',
-      'By enhancing photorespiration only'
+      'By enhancing photorespiration only',
     ],
-    correctAnswer: 'By causing stomata to close, reducing CO₂ availability and causing leaves to wilt',
-    explanation: 'According to NCERT Page 150, water stress causes stomata to close, hence reducing CO₂ availability. Besides, water stress also makes leaves wilt, thus reducing the surface area of leaves and their metabolic activity as well.',
+    correctAnswer:
+      'By causing stomata to close, reducing CO₂ availability and causing leaves to wilt',
+    explanation:
+      'According to NCERT Page 150, water stress causes stomata to close, hence reducing CO₂ availability. Besides, water stress also makes leaves wilt, thus reducing the surface area of leaves and their metabolic activity as well.',
     difficulty: 'Hard',
     ncertPageReference: 'Class 11, Chapter 11, Page 150',
     previousYearFrequency: 13,
     conceptualLinks: ['Water stress', 'Stomatal closure', 'Indirect effects'],
     timeEstimate: 56,
     bloomsLevel: 'Analyze',
-    weightage: 5.4
+    weightage: 5.4,
   },
 
   // ============================================================================
@@ -8566,17 +8991,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'Active transport of ions against concentration gradient',
       'Facilitated diffusion through carrier proteins',
       'Pumping of protons across membrane',
-      'Transport of sugars against concentration gradient'
+      'Transport of sugars against concentration gradient',
     ],
     correctAnswer: 'Facilitated diffusion through carrier proteins',
-    explanation: 'According to NCERT page 165, facilitated diffusion is a passive process that occurs along the concentration gradient through specific membrane proteins without energy expenditure. In contrast, active transport (options A, C, and D) requires energy in the form of ATP to move substances against their concentration gradient.',
+    explanation:
+      'According to NCERT page 165, facilitated diffusion is a passive process that occurs along the concentration gradient through specific membrane proteins without energy expenditure. In contrast, active transport (options A, C, and D) requires energy in the form of ATP to move substances against their concentration gradient.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 11, Page 165',
     previousYearFrequency: 18,
     conceptualLinks: ['facilitated diffusion', 'passive transport', 'membrane proteins'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch11-002',
@@ -8588,61 +9014,56 @@ export const class11Questions: AuthenticQuestion[] = [
       'Only solute concentration',
       'Only pressure',
       'Both solute concentration and pressure',
-      'Neither solute concentration nor pressure'
+      'Neither solute concentration nor pressure',
     ],
     correctAnswer: 'Both solute concentration and pressure',
-    explanation: 'NCERT page 166 clearly states that water potential (Ψw) has two components: solute potential (Ψs) and pressure potential (Ψp). The equation is Ψw = Ψs + Ψp. Both solute concentration (affecting Ψs) and pressure (Ψp) determine the overall water potential of a solution.',
+    explanation:
+      'NCERT page 166 clearly states that water potential (Ψw) has two components: solute potential (Ψs) and pressure potential (Ψp). The equation is Ψw = Ψs + Ψp. Both solute concentration (affecting Ψs) and pressure (Ψp) determine the overall water potential of a solution.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 11, Page 166',
     previousYearFrequency: 22,
     conceptualLinks: ['water potential', 'solute potential', 'pressure potential'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch11-003',
     topicId: 'topic-11-10-transport',
     chapterId: 'ch-11-10',
     classId: 'class-11',
-    question: 'In which type of transport do molecules move from a region of higher concentration to a region of lower concentration through specific membrane proteins?',
-    options: [
-      'Simple diffusion',
-      'Facilitated diffusion',
-      'Active transport',
-      'Osmosis'
-    ],
+    question:
+      'In which type of transport do molecules move from a region of higher concentration to a region of lower concentration through specific membrane proteins?',
+    options: ['Simple diffusion', 'Facilitated diffusion', 'Active transport', 'Osmosis'],
     correctAnswer: 'Facilitated diffusion',
-    explanation: 'NCERT page 165 describes facilitated diffusion as the passive movement of substances down their concentration gradient through specific transport proteins (carrier proteins or channel proteins) in the membrane. This differs from simple diffusion which does not require proteins, and active transport which moves substances against the gradient.',
+    explanation:
+      'NCERT page 165 describes facilitated diffusion as the passive movement of substances down their concentration gradient through specific transport proteins (carrier proteins or channel proteins) in the membrane. This differs from simple diffusion which does not require proteins, and active transport which moves substances against the gradient.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 11, Page 165',
     previousYearFrequency: 20,
     conceptualLinks: ['facilitated diffusion', 'carrier proteins', 'channel proteins'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch11-004',
     topicId: 'topic-11-10-transport',
     chapterId: 'ch-11-10',
     classId: 'class-11',
-    question: 'The water potential of pure water at standard temperature and atmospheric pressure is:',
-    options: [
-      'Zero',
-      'Positive',
-      'Negative',
-      'Variable'
-    ],
+    question:
+      'The water potential of pure water at standard temperature and atmospheric pressure is:',
+    options: ['Zero', 'Positive', 'Negative', 'Variable'],
     correctAnswer: 'Zero',
-    explanation: 'According to NCERT page 166, the water potential of pure water at standard temperature and atmospheric pressure is taken as zero. Addition of solutes decreases water potential (makes it negative), while increase in pressure increases water potential (makes it positive).',
+    explanation:
+      'According to NCERT page 166, the water potential of pure water at standard temperature and atmospheric pressure is taken as zero. Addition of solutes decreases water potential (makes it negative), while increase in pressure increases water potential (makes it positive).',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 11, Page 166',
     previousYearFrequency: 25,
     conceptualLinks: ['water potential', 'pure water', 'standard conditions'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 5.5
+    weightage: 5.5,
   },
   {
     id: 'q11-batch11-005',
@@ -8654,17 +9075,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'It requires energy in the form of ATP',
       'It occurs only in living cells',
       'It is a slow process and depends on living system',
-      'It is a passive process and does not require energy'
+      'It is a passive process and does not require energy',
     ],
     correctAnswer: 'It is a passive process and does not require energy',
-    explanation: 'NCERT page 165 states that diffusion is a passive process that does not require energy expenditure. It occurs due to random molecular motion and can occur in both living and dead cells. The process continues until equilibrium is reached.',
+    explanation:
+      'NCERT page 165 states that diffusion is a passive process that does not require energy expenditure. It occurs due to random molecular motion and can occur in both living and dead cells. The process continues until equilibrium is reached.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 11, Page 165',
     previousYearFrequency: 15,
     conceptualLinks: ['diffusion', 'passive transport', 'no energy required'],
     timeEstimate: 40,
     bloomsLevel: 'Understand',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch11-006',
@@ -8676,17 +9098,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'Movement against concentration gradient',
       'Requirement of ATP',
       'Involvement of carrier proteins',
-      'Movement from lower to higher water potential'
+      'Movement from lower to higher water potential',
     ],
     correctAnswer: 'Movement from lower to higher water potential',
-    explanation: 'According to NCERT page 165, active transport involves movement of ions or molecules against concentration gradient using ATP and carrier proteins. However, active transport is described in terms of concentration gradients, not water potential gradients. Water potential is specifically related to water movement.',
+    explanation:
+      'According to NCERT page 165, active transport involves movement of ions or molecules against concentration gradient using ATP and carrier proteins. However, active transport is described in terms of concentration gradients, not water potential gradients. Water potential is specifically related to water movement.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 11, Page 165',
     previousYearFrequency: 12,
     conceptualLinks: ['active transport', 'ATP requirement', 'concentration gradient'],
     timeEstimate: 50,
     bloomsLevel: 'Analyze',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch11-007',
@@ -8698,17 +9121,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'Move out of the cell',
       'Move into the cell',
       'Not move at all',
-      'Move in both directions equally'
+      'Move in both directions equally',
     ],
     correctAnswer: 'Move into the cell',
-    explanation: 'NCERT page 167 explains that in a hypotonic solution (lower solute concentration outside), the water potential outside is higher than inside the cell. Water moves from higher to lower water potential, so water enters the cell, causing it to swell and become turgid.',
+    explanation:
+      'NCERT page 167 explains that in a hypotonic solution (lower solute concentration outside), the water potential outside is higher than inside the cell. Water moves from higher to lower water potential, so water enters the cell, causing it to swell and become turgid.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 11, Page 167',
     previousYearFrequency: 20,
     conceptualLinks: ['hypotonic solution', 'water movement', 'turgidity'],
     timeEstimate: 45,
     bloomsLevel: 'Apply',
-    weightage: 5.5
+    weightage: 5.5,
   },
   {
     id: 'q11-batch11-008',
@@ -8716,21 +9140,17 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-10',
     classId: 'class-11',
     question: 'Plasmolysis occurs when a plant cell is placed in:',
-    options: [
-      'Hypotonic solution',
-      'Isotonic solution',
-      'Hypertonic solution',
-      'Pure water'
-    ],
+    options: ['Hypotonic solution', 'Isotonic solution', 'Hypertonic solution', 'Pure water'],
     correctAnswer: 'Hypertonic solution',
-    explanation: 'NCERT page 167 describes plasmolysis as the process where the protoplasm shrinks away from the cell wall due to water loss. This occurs when a cell is placed in a hypertonic solution (higher solute concentration outside), causing water to move out of the cell.',
+    explanation:
+      'NCERT page 167 describes plasmolysis as the process where the protoplasm shrinks away from the cell wall due to water loss. This occurs when a cell is placed in a hypertonic solution (higher solute concentration outside), causing water to move out of the cell.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 11, Page 167',
     previousYearFrequency: 24,
     conceptualLinks: ['plasmolysis', 'hypertonic solution', 'water loss'],
     timeEstimate: 35,
     bloomsLevel: 'Understand',
-    weightage: 6.0
+    weightage: 6.0,
   },
   {
     id: 'q11-batch11-009',
@@ -8742,39 +9162,37 @@ export const class11Questions: AuthenticQuestion[] = [
       'Pressure required to prevent water movement',
       'Pressure that develops in a solution',
       'Negative pressure in xylem',
-      'Turgor pressure in cells'
+      'Turgor pressure in cells',
     ],
     correctAnswer: 'Pressure required to prevent water movement',
-    explanation: 'According to NCERT page 166, osmotic pressure is the pressure that must be applied to a solution to prevent the inward flow of water across a semipermeable membrane. It is numerically equivalent to the osmotic potential but opposite in sign.',
+    explanation:
+      'According to NCERT page 166, osmotic pressure is the pressure that must be applied to a solution to prevent the inward flow of water across a semipermeable membrane. It is numerically equivalent to the osmotic potential but opposite in sign.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 11, Page 166',
     previousYearFrequency: 16,
     conceptualLinks: ['osmotic pressure', 'osmotic potential', 'water movement'],
     timeEstimate: 50,
     bloomsLevel: 'Understand',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch11-010',
     topicId: 'topic-11-10-transport',
     chapterId: 'ch-11-10',
     classId: 'class-11',
-    question: 'The relationship between water potential (Ψw), solute potential (Ψs), and pressure potential (Ψp) is:',
-    options: [
-      'Ψw = Ψs - Ψp',
-      'Ψw = Ψs + Ψp',
-      'Ψw = Ψp - Ψs',
-      'Ψw = Ψs × Ψp'
-    ],
+    question:
+      'The relationship between water potential (Ψw), solute potential (Ψs), and pressure potential (Ψp) is:',
+    options: ['Ψw = Ψs - Ψp', 'Ψw = Ψs + Ψp', 'Ψw = Ψp - Ψs', 'Ψw = Ψs × Ψp'],
     correctAnswer: 'Ψw = Ψs + Ψp',
-    explanation: 'NCERT page 166 provides the equation for water potential: Ψw = Ψs + Ψp, where Ψw is water potential, Ψs is solute potential (osmotic potential), and Ψp is pressure potential. This fundamental equation describes how both solute concentration and pressure affect water potential.',
+    explanation:
+      'NCERT page 166 provides the equation for water potential: Ψw = Ψs + Ψp, where Ψw is water potential, Ψs is solute potential (osmotic potential), and Ψp is pressure potential. This fundamental equation describes how both solute concentration and pressure affect water potential.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 11, Page 166',
     previousYearFrequency: 22,
     conceptualLinks: ['water potential equation', 'solute potential', 'pressure potential'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 6.5
+    weightage: 6.5,
   },
   {
     id: 'q11-batch11-011',
@@ -8786,17 +9204,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'Pressure exerted by cell wall on protoplast',
       'Pressure exerted by protoplast on cell wall',
       'Negative pressure in xylem',
-      'Osmotic pressure of cell sap'
+      'Osmotic pressure of cell sap',
     ],
     correctAnswer: 'Pressure exerted by protoplast on cell wall',
-    explanation: 'NCERT page 167 defines turgor pressure as the pressure exerted by the protoplast against the cell wall due to water uptake. It is a positive pressure that makes the cell turgid and is responsible for maintaining the rigidity of herbaceous plants.',
+    explanation:
+      'NCERT page 167 defines turgor pressure as the pressure exerted by the protoplast against the cell wall due to water uptake. It is a positive pressure that makes the cell turgid and is responsible for maintaining the rigidity of herbaceous plants.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 11, Page 167',
     previousYearFrequency: 19,
     conceptualLinks: ['turgor pressure', 'cell turgidity', 'protoplast'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch11-012',
@@ -8804,21 +9223,17 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-10',
     classId: 'class-11',
     question: 'Which condition represents a fully turgid plant cell?',
-    options: [
-      'Ψw = Ψs',
-      'Ψp = 0',
-      'Ψw = 0',
-      'Ψs = -Ψp'
-    ],
+    options: ['Ψw = Ψs', 'Ψp = 0', 'Ψw = 0', 'Ψs = -Ψp'],
     correctAnswer: 'Ψw = 0',
-    explanation: 'According to NCERT page 167, a fully turgid cell has water potential (Ψw) equal to zero. At this point, no net water movement occurs. Since Ψw = Ψs + Ψp, when Ψw = 0, the positive pressure potential exactly balances the negative solute potential.',
+    explanation:
+      'According to NCERT page 167, a fully turgid cell has water potential (Ψw) equal to zero. At this point, no net water movement occurs. Since Ψw = Ψs + Ψp, when Ψw = 0, the positive pressure potential exactly balances the negative solute potential.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 11, Page 167',
     previousYearFrequency: 14,
     conceptualLinks: ['turgid cell', 'water potential zero', 'equilibrium'],
     timeEstimate: 55,
     bloomsLevel: 'Apply',
-    weightage: 6.0
+    weightage: 6.0,
   },
   {
     id: 'q11-batch11-013',
@@ -8826,43 +9241,36 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-10',
     classId: 'class-11',
     question: 'During plasmolysis, the first structure to separate from the cell wall is:',
-    options: [
-      'Cell membrane',
-      'Nucleus',
-      'Chloroplast',
-      'Mitochondria'
-    ],
+    options: ['Cell membrane', 'Nucleus', 'Chloroplast', 'Mitochondria'],
     correctAnswer: 'Cell membrane',
-    explanation: 'NCERT page 167 explains that during plasmolysis, water moves out of the cell causing the protoplast to shrink. The cell membrane, being the outermost boundary of the protoplast, is the first structure to separate from the rigid cell wall.',
+    explanation:
+      'NCERT page 167 explains that during plasmolysis, water moves out of the cell causing the protoplast to shrink. The cell membrane, being the outermost boundary of the protoplast, is the first structure to separate from the rigid cell wall.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 11, Page 167',
     previousYearFrequency: 11,
     conceptualLinks: ['plasmolysis', 'cell membrane', 'protoplast shrinkage'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch11-014',
     topicId: 'topic-11-10-transport',
     chapterId: 'ch-11-10',
     classId: 'class-11',
-    question: 'If a plant cell has a solute potential of -800 kPa and a pressure potential of +400 kPa, what is its water potential?',
-    options: [
-      '-1200 kPa',
-      '-400 kPa',
-      '+400 kPa',
-      '+1200 kPa'
-    ],
+    question:
+      'If a plant cell has a solute potential of -800 kPa and a pressure potential of +400 kPa, what is its water potential?',
+    options: ['-1200 kPa', '-400 kPa', '+400 kPa', '+1200 kPa'],
     correctAnswer: '-400 kPa',
-    explanation: 'Using the equation from NCERT page 166, Ψw = Ψs + Ψp. Therefore, Ψw = (-800) + (+400) = -400 kPa. This calculation demonstrates how the positive pressure potential partially offsets the negative solute potential.',
+    explanation:
+      'Using the equation from NCERT page 166, Ψw = Ψs + Ψp. Therefore, Ψw = (-800) + (+400) = -400 kPa. This calculation demonstrates how the positive pressure potential partially offsets the negative solute potential.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 11, Page 166',
     previousYearFrequency: 18,
     conceptualLinks: ['water potential calculation', 'numerical problem', 'Ψw equation'],
     timeEstimate: 50,
     bloomsLevel: 'Apply',
-    weightage: 6.5
+    weightage: 6.5,
   },
   {
     id: 'q11-batch11-015',
@@ -8874,17 +9282,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'Loss of water from plasmolyzed cells',
       'Recovery of plasmolyzed cells when placed in hypotonic solution',
       'Death of plasmolyzed cells',
-      'Bursting of cells due to excess water'
+      'Bursting of cells due to excess water',
     ],
     correctAnswer: 'Recovery of plasmolyzed cells when placed in hypotonic solution',
-    explanation: 'NCERT page 167 mentions that plasmolysis is reversible. When plasmolyzed cells are placed in a hypotonic solution or water, water re-enters the cells and the protoplast expands back to its original position. This recovery process is called deplasmolysis.',
+    explanation:
+      'NCERT page 167 mentions that plasmolysis is reversible. When plasmolyzed cells are placed in a hypotonic solution or water, water re-enters the cells and the protoplast expands back to its original position. This recovery process is called deplasmolysis.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 11, Page 167',
     previousYearFrequency: 10,
     conceptualLinks: ['deplasmolysis', 'reversible process', 'recovery'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch11-016',
@@ -8896,17 +9305,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'Transpiration pull from leaves',
       'Active absorption of minerals creating positive pressure',
       'Cohesion between water molecules',
-      'Atmospheric pressure'
+      'Atmospheric pressure',
     ],
     correctAnswer: 'Active absorption of minerals creating positive pressure',
-    explanation: 'NCERT page 168 explains that root pressure develops due to active absorption of ions from the soil by root cells. This creates a lower water potential in root xylem, causing water to move in and generate a positive hydrostatic pressure that pushes water upward.',
+    explanation:
+      'NCERT page 168 explains that root pressure develops due to active absorption of ions from the soil by root cells. This creates a lower water potential in root xylem, causing water to move in and generate a positive hydrostatic pressure that pushes water upward.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 11, Page 168',
     previousYearFrequency: 21,
     conceptualLinks: ['root pressure', 'active absorption', 'positive pressure'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 6.0
+    weightage: 6.0,
   },
   {
     id: 'q11-batch11-017',
@@ -8918,17 +9328,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'High transpiration rate',
       'Root pressure when transpiration is low',
       'Atmospheric pressure',
-      'Osmosis in leaves'
+      'Osmosis in leaves',
     ],
     correctAnswer: 'Root pressure when transpiration is low',
-    explanation: 'According to NCERT page 168, guttation is the loss of water in liquid form through hydathodes at the leaf margins. It occurs when root pressure is high and transpiration is low or absent (typically at night or early morning when humidity is high).',
+    explanation:
+      'According to NCERT page 168, guttation is the loss of water in liquid form through hydathodes at the leaf margins. It occurs when root pressure is high and transpiration is low or absent (typically at night or early morning when humidity is high).',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 11, Page 168',
     previousYearFrequency: 17,
     conceptualLinks: ['guttation', 'hydathodes', 'root pressure'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 5.5
+    weightage: 5.5,
   },
   {
     id: 'q11-batch11-018',
@@ -8936,21 +9347,17 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-10',
     classId: 'class-11',
     question: 'The maximum value of root pressure is approximately:',
-    options: [
-      '+2 bars',
-      '+20 bars',
-      '-2 bars',
-      '-20 bars'
-    ],
+    options: ['+2 bars', '+20 bars', '-2 bars', '-20 bars'],
     correctAnswer: '+2 bars',
-    explanation: 'NCERT page 168 states that root pressure is usually not more than +2 bars. This positive pressure is insufficient to account for water transport to great heights in tall trees, which is why the transpiration pull mechanism is considered more important.',
+    explanation:
+      'NCERT page 168 states that root pressure is usually not more than +2 bars. This positive pressure is insufficient to account for water transport to great heights in tall trees, which is why the transpiration pull mechanism is considered more important.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 11, Page 168',
     previousYearFrequency: 13,
     conceptualLinks: ['root pressure magnitude', '+2 bars', 'limitations'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch11-019',
@@ -8962,17 +9369,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'Root pressure theory',
       'Capillary theory',
       'Cohesion-tension theory',
-      'Imbibition theory'
+      'Imbibition theory',
     ],
     correctAnswer: 'Cohesion-tension theory',
-    explanation: 'NCERT page 169 describes the cohesion-tension theory (also called transpiration pull theory) as the most widely accepted mechanism for water ascent in tall trees. It involves transpiration creating tension in leaves, cohesion between water molecules, and adhesion to xylem walls.',
+    explanation:
+      'NCERT page 169 describes the cohesion-tension theory (also called transpiration pull theory) as the most widely accepted mechanism for water ascent in tall trees. It involves transpiration creating tension in leaves, cohesion between water molecules, and adhesion to xylem walls.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 11, Page 169',
     previousYearFrequency: 23,
     conceptualLinks: ['cohesion-tension theory', 'transpiration pull', 'tall trees'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 7.0
+    weightage: 7.0,
   },
   {
     id: 'q11-batch11-020',
@@ -8984,17 +9392,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'Root pressure',
       'Transpiration from leaves',
       'Capillary action',
-      'Atmospheric pressure'
+      'Atmospheric pressure',
     ],
     correctAnswer: 'Transpiration from leaves',
-    explanation: 'According to NCERT page 169, transpiration creates a suction force (tension or negative pressure) in the leaf xylem. This tension is transmitted downward through the continuous water column due to cohesion, pulling water up from roots to leaves.',
+    explanation:
+      'According to NCERT page 169, transpiration creates a suction force (tension or negative pressure) in the leaf xylem. This tension is transmitted downward through the continuous water column due to cohesion, pulling water up from roots to leaves.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 11, Page 169',
     previousYearFrequency: 20,
     conceptualLinks: ['transpiration driving force', 'suction', 'tension'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 6.5
+    weightage: 6.5,
   },
   {
     id: 'q11-batch11-021',
@@ -9002,21 +9411,17 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-10',
     classId: 'class-11',
     question: 'Cohesion of water molecules is due to:',
-    options: [
-      'Ionic bonds',
-      'Hydrogen bonds',
-      'Covalent bonds',
-      'Van der Waals forces'
-    ],
+    options: ['Ionic bonds', 'Hydrogen bonds', 'Covalent bonds', 'Van der Waals forces'],
     correctAnswer: 'Hydrogen bonds',
-    explanation: 'NCERT page 169 explains that cohesion refers to the mutual attraction between water molecules through hydrogen bonding. This property allows water to form a continuous column in xylem vessels without breaking, even under tension.',
+    explanation:
+      'NCERT page 169 explains that cohesion refers to the mutual attraction between water molecules through hydrogen bonding. This property allows water to form a continuous column in xylem vessels without breaking, even under tension.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 11, Page 169',
     previousYearFrequency: 16,
     conceptualLinks: ['cohesion', 'hydrogen bonds', 'water molecules'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch11-022',
@@ -9028,17 +9433,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'Cohesion and adhesion properties of water',
       'High root pressure',
       'Thick xylem walls',
-      'Presence of lignin'
+      'Presence of lignin',
     ],
     correctAnswer: 'Cohesion and adhesion properties of water',
-    explanation: 'NCERT page 169 states that cohesion (attraction between water molecules) and adhesion (attraction between water and xylem walls) together maintain the continuity of the water column. These properties allow water to withstand the tension created by transpiration without the column breaking.',
+    explanation:
+      'NCERT page 169 states that cohesion (attraction between water molecules) and adhesion (attraction between water and xylem walls) together maintain the continuity of the water column. These properties allow water to withstand the tension created by transpiration without the column breaking.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 11, Page 169',
     previousYearFrequency: 19,
     conceptualLinks: ['cohesion', 'adhesion', 'continuous water column'],
     timeEstimate: 50,
     bloomsLevel: 'Understand',
-    weightage: 6.0
+    weightage: 6.0,
   },
   {
     id: 'q11-batch11-023',
@@ -9050,17 +9456,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'Living cells with cytoplasm',
       'Dead cells with lignified walls and no end walls',
       'Living cells with thin walls',
-      'Dead cells with intact end walls'
+      'Dead cells with intact end walls',
     ],
     correctAnswer: 'Dead cells with lignified walls and no end walls',
-    explanation: 'NCERT page 169 describes xylem vessels as dead, tubular structures with lignified walls and perforated or absent end walls. These features provide mechanical strength and allow unobstructed water flow, making them ideal conduits for water transport.',
+    explanation:
+      'NCERT page 169 describes xylem vessels as dead, tubular structures with lignified walls and perforated or absent end walls. These features provide mechanical strength and allow unobstructed water flow, making them ideal conduits for water transport.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 11, Page 169',
     previousYearFrequency: 15,
     conceptualLinks: ['xylem vessels', 'lignified walls', 'dead cells'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 5.5
+    weightage: 5.5,
   },
   {
     id: 'q11-batch11-024',
@@ -9072,17 +9479,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'Positive pressure',
       'Zero pressure',
       'Negative pressure (tension)',
-      'Variable pressure'
+      'Variable pressure',
     ],
     correctAnswer: 'Negative pressure (tension)',
-    explanation: 'According to NCERT page 169, transpiration during the day creates a tension (negative pressure) in the xylem. This tension can be several atmospheres and is responsible for pulling water up from the roots to the leaves through the cohesive water column.',
+    explanation:
+      'According to NCERT page 169, transpiration during the day creates a tension (negative pressure) in the xylem. This tension can be several atmospheres and is responsible for pulling water up from the roots to the leaves through the cohesive water column.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 11, Page 169',
     previousYearFrequency: 17,
     conceptualLinks: ['xylem tension', 'negative pressure', 'daytime'],
     timeEstimate: 45,
     bloomsLevel: 'Apply',
-    weightage: 6.0
+    weightage: 6.0,
   },
   {
     id: 'q11-batch11-025',
@@ -9094,17 +9502,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'Increase in stem diameter during transpiration',
       'Decrease in stem diameter during transpiration',
       'Guttation in early morning',
-      'Root pressure measurement'
+      'Root pressure measurement',
     ],
     correctAnswer: 'Decrease in stem diameter during transpiration',
-    explanation: 'NCERT page 169 mentions that during active transpiration, the tension in xylem vessels causes them to contract slightly, resulting in a measurable decrease in stem diameter. This observation supports the cohesion-tension theory by demonstrating the negative pressure in xylem.',
+    explanation:
+      'NCERT page 169 mentions that during active transpiration, the tension in xylem vessels causes them to contract slightly, resulting in a measurable decrease in stem diameter. This observation supports the cohesion-tension theory by demonstrating the negative pressure in xylem.',
     difficulty: 'Hard',
     ncertPageReference: 'Class 11, Chapter 11, Page 169',
     previousYearFrequency: 12,
     conceptualLinks: ['evidence', 'stem diameter decrease', 'xylem contraction'],
     timeEstimate: 60,
     bloomsLevel: 'Analyze',
-    weightage: 7.0
+    weightage: 7.0,
   },
   {
     id: 'q11-batch11-026',
@@ -9116,17 +9525,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'Loss of water in liquid form through hydathodes',
       'Loss of water as vapor through stomata and other aerial parts',
       'Absorption of water by roots',
-      'Transport of water through xylem'
+      'Transport of water through xylem',
     ],
     correctAnswer: 'Loss of water as vapor through stomata and other aerial parts',
-    explanation: 'NCERT page 170 defines transpiration as the loss of water in the form of water vapor from the aerial parts of the plant, primarily through stomata. It differs from guttation which involves liquid water loss.',
+    explanation:
+      'NCERT page 170 defines transpiration as the loss of water in the form of water vapor from the aerial parts of the plant, primarily through stomata. It differs from guttation which involves liquid water loss.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 11, Page 170',
     previousYearFrequency: 22,
     conceptualLinks: ['transpiration definition', 'water vapor', 'stomata'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 5.5
+    weightage: 5.5,
   },
   {
     id: 'q11-batch11-027',
@@ -9134,21 +9544,17 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-10',
     classId: 'class-11',
     question: 'The majority of transpiration in plants occurs through:',
-    options: [
-      'Cuticle',
-      'Lenticels',
-      'Stomata',
-      'Bark'
-    ],
+    options: ['Cuticle', 'Lenticels', 'Stomata', 'Bark'],
     correctAnswer: 'Stomata',
-    explanation: 'According to NCERT page 170, stomatal transpiration accounts for approximately 90-95% of total transpiration in plants. Cuticular and lenticular transpiration contribute much smaller amounts (5-10% and less than 1% respectively).',
+    explanation:
+      'According to NCERT page 170, stomatal transpiration accounts for approximately 90-95% of total transpiration in plants. Cuticular and lenticular transpiration contribute much smaller amounts (5-10% and less than 1% respectively).',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 11, Page 170',
     previousYearFrequency: 24,
     conceptualLinks: ['stomatal transpiration', '90-95%', 'major pathway'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 6.0
+    weightage: 6.0,
   },
   {
     id: 'q11-batch11-028',
@@ -9160,17 +9566,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'Stomatal transpiration',
       'Cuticular transpiration',
       'Lenticular transpiration',
-      'Bark transpiration'
+      'Bark transpiration',
     ],
     correctAnswer: 'Cuticular transpiration',
-    explanation: 'NCERT page 170 describes cuticular transpiration as water loss through the cuticle, the waxy covering on the leaf epidermis. Though the cuticle is largely impermeable, it still allows minimal water vapor loss (about 5-10% of total transpiration).',
+    explanation:
+      'NCERT page 170 describes cuticular transpiration as water loss through the cuticle, the waxy covering on the leaf epidermis. Though the cuticle is largely impermeable, it still allows minimal water vapor loss (about 5-10% of total transpiration).',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 11, Page 170',
     previousYearFrequency: 18,
     conceptualLinks: ['cuticular transpiration', 'cuticle', 'waxy covering'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch11-029',
@@ -9178,21 +9585,17 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-10',
     classId: 'class-11',
     question: 'Lenticular transpiration occurs through:',
-    options: [
-      'Stomata in leaves',
-      'Cuticle of leaves',
-      'Lenticels in woody stems',
-      'Root hairs'
-    ],
+    options: ['Stomata in leaves', 'Cuticle of leaves', 'Lenticels in woody stems', 'Root hairs'],
     correctAnswer: 'Lenticels in woody stems',
-    explanation: 'NCERT page 170 mentions lenticular transpiration as water loss through lenticels, which are small openings in the bark of woody stems and older branches. This type accounts for less than 1% of total transpiration.',
+    explanation:
+      'NCERT page 170 mentions lenticular transpiration as water loss through lenticels, which are small openings in the bark of woody stems and older branches. This type accounts for less than 1% of total transpiration.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 11, Page 170',
     previousYearFrequency: 14,
     conceptualLinks: ['lenticular transpiration', 'lenticels', 'woody stems'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch11-030',
@@ -9204,17 +9607,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'Upper surface of leaves',
       'Lower surface of leaves',
       'Equally distributed on both surfaces',
-      'Stem epidermis'
+      'Stem epidermis',
     ],
     correctAnswer: 'Lower surface of leaves',
-    explanation: 'NCERT page 171 states that in most dicot plants, stomata are more numerous on the lower (abaxial) surface of leaves. This distribution helps reduce water loss as the lower surface is less exposed to direct sunlight and wind.',
+    explanation:
+      'NCERT page 171 states that in most dicot plants, stomata are more numerous on the lower (abaxial) surface of leaves. This distribution helps reduce water loss as the lower surface is less exposed to direct sunlight and wind.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 11, Page 171',
     previousYearFrequency: 16,
     conceptualLinks: ['stomatal distribution', 'lower surface', 'abaxial'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch11-031',
@@ -9222,21 +9626,17 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-10',
     classId: 'class-11',
     question: 'Each stoma is bordered by:',
-    options: [
-      'One guard cell',
-      'Two guard cells',
-      'Three guard cells',
-      'Four guard cells'
-    ],
+    options: ['One guard cell', 'Two guard cells', 'Three guard cells', 'Four guard cells'],
     correctAnswer: 'Two guard cells',
-    explanation: 'According to NCERT page 171, each stoma consists of a pore surrounded by two specialized kidney-shaped (or dumb-bell shaped in grasses) epidermal cells called guard cells. These guard cells regulate the opening and closing of the stomatal pore.',
+    explanation:
+      'According to NCERT page 171, each stoma consists of a pore surrounded by two specialized kidney-shaped (or dumb-bell shaped in grasses) epidermal cells called guard cells. These guard cells regulate the opening and closing of the stomatal pore.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 11, Page 171',
     previousYearFrequency: 21,
     conceptualLinks: ['guard cells', 'two cells', 'stomatal structure'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch11-032',
@@ -9248,17 +9648,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'Decrease in turgor pressure of guard cells',
       'Increase in turgor pressure of guard cells',
       'Decrease in turgor pressure of epidermal cells',
-      'Increase in atmospheric pressure'
+      'Increase in atmospheric pressure',
     ],
     correctAnswer: 'Increase in turgor pressure of guard cells',
-    explanation: 'NCERT page 171 explains that stomata open when guard cells take up water, become turgid, and bulge outward due to their unique wall thickening pattern. The increased turgor pressure in guard cells causes the stomatal pore to open.',
+    explanation:
+      'NCERT page 171 explains that stomata open when guard cells take up water, become turgid, and bulge outward due to their unique wall thickening pattern. The increased turgor pressure in guard cells causes the stomatal pore to open.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 11, Page 171',
     previousYearFrequency: 23,
     conceptualLinks: ['stomatal opening', 'turgor pressure increase', 'guard cell turgidity'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 6.5
+    weightage: 6.5,
   },
   {
     id: 'q11-batch11-033',
@@ -9266,21 +9667,17 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-10',
     classId: 'class-11',
     question: 'Guard cells differ from other epidermal cells in having:',
-    options: [
-      'No chloroplasts',
-      'Chloroplasts',
-      'Larger vacuoles',
-      'Thicker cuticle'
-    ],
+    options: ['No chloroplasts', 'Chloroplasts', 'Larger vacuoles', 'Thicker cuticle'],
     correctAnswer: 'Chloroplasts',
-    explanation: 'NCERT page 171 mentions that guard cells contain chloroplasts, unlike other epidermal cells. These chloroplasts can perform photosynthesis to produce sugars, which can lower the water potential and affect stomatal opening.',
+    explanation:
+      'NCERT page 171 mentions that guard cells contain chloroplasts, unlike other epidermal cells. These chloroplasts can perform photosynthesis to produce sugars, which can lower the water potential and affect stomatal opening.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 11, Page 171',
     previousYearFrequency: 17,
     conceptualLinks: ['guard cells', 'chloroplasts', 'unique feature'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 5.5
+    weightage: 5.5,
   },
   {
     id: 'q11-batch11-034',
@@ -9292,17 +9689,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'Conversion of starch to sugar',
       'Conversion of sugar to starch',
       'Breakdown of proteins',
-      'Synthesis of lipids'
+      'Synthesis of lipids',
     ],
     correctAnswer: 'Conversion of starch to sugar',
-    explanation: 'According to NCERT page 171, during the day, starch in guard cells is converted to sugar (glucose). This increases the solute concentration in guard cells, lowering their water potential, causing water to enter and guard cells to become turgid, opening the stomata.',
+    explanation:
+      'According to NCERT page 171, during the day, starch in guard cells is converted to sugar (glucose). This increases the solute concentration in guard cells, lowering their water potential, causing water to enter and guard cells to become turgid, opening the stomata.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 11, Page 171',
     previousYearFrequency: 19,
     conceptualLinks: ['starch to sugar', 'stomatal mechanism', 'water potential decrease'],
     timeEstimate: 50,
     bloomsLevel: 'Understand',
-    weightage: 6.0
+    weightage: 6.0,
   },
   {
     id: 'q11-batch11-035',
@@ -9310,21 +9708,17 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-10',
     classId: 'class-11',
     question: 'The ion most associated with stomatal opening is:',
-    options: [
-      'Calcium (Ca²⁺)',
-      'Magnesium (Mg²⁺)',
-      'Potassium (K⁺)',
-      'Sodium (Na⁺)'
-    ],
+    options: ['Calcium (Ca²⁺)', 'Magnesium (Mg²⁺)', 'Potassium (K⁺)', 'Sodium (Na⁺)'],
     correctAnswer: 'Potassium (K⁺)',
-    explanation: 'NCERT page 171 describes that active uptake of potassium ions (K⁺) by guard cells is a key mechanism in stomatal opening. The accumulation of K⁺ lowers the water potential, causing water influx and turgor-driven opening of stomata.',
+    explanation:
+      'NCERT page 171 describes that active uptake of potassium ions (K⁺) by guard cells is a key mechanism in stomatal opening. The accumulation of K⁺ lowers the water potential, causing water influx and turgor-driven opening of stomata.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 11, Page 171',
     previousYearFrequency: 22,
     conceptualLinks: ['potassium ions', 'K⁺ uptake', 'stomatal mechanism'],
     timeEstimate: 45,
     bloomsLevel: 'Remember',
-    weightage: 6.5
+    weightage: 6.5,
   },
   {
     id: 'q11-batch11-036',
@@ -9332,21 +9726,17 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-10',
     classId: 'class-11',
     question: 'Which factor does NOT directly affect the rate of transpiration?',
-    options: [
-      'Light intensity',
-      'Atmospheric humidity',
-      'Wind velocity',
-      'Soil pH'
-    ],
+    options: ['Light intensity', 'Atmospheric humidity', 'Wind velocity', 'Soil pH'],
     correctAnswer: 'Soil pH',
-    explanation: 'NCERT page 172 lists the major factors affecting transpiration as light, temperature, humidity, wind speed, and atmospheric pressure. Soil pH, while affecting nutrient availability and plant growth, does not directly influence the transpiration rate.',
+    explanation:
+      'NCERT page 172 lists the major factors affecting transpiration as light, temperature, humidity, wind speed, and atmospheric pressure. Soil pH, while affecting nutrient availability and plant growth, does not directly influence the transpiration rate.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 11, Page 172',
     previousYearFrequency: 13,
     conceptualLinks: ['transpiration factors', 'indirect effect', 'soil pH'],
     timeEstimate: 50,
     bloomsLevel: 'Analyze',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch11-037',
@@ -9358,17 +9748,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'Increase transpiration rate',
       'Decrease transpiration rate',
       'Not affect transpiration rate',
-      'Stop transpiration completely'
+      'Stop transpiration completely',
     ],
     correctAnswer: 'Decrease transpiration rate',
-    explanation: 'According to NCERT page 172, high atmospheric humidity reduces the water potential gradient between the leaf and atmosphere. This decreases the rate of water vapor diffusion from the leaf, thereby reducing transpiration rate.',
+    explanation:
+      'According to NCERT page 172, high atmospheric humidity reduces the water potential gradient between the leaf and atmosphere. This decreases the rate of water vapor diffusion from the leaf, thereby reducing transpiration rate.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 11, Page 172',
     previousYearFrequency: 20,
     conceptualLinks: ['humidity effect', 'gradient reduction', 'transpiration decrease'],
     timeEstimate: 45,
     bloomsLevel: 'Apply',
-    weightage: 5.5
+    weightage: 5.5,
   },
   {
     id: 'q11-batch11-038',
@@ -9380,17 +9771,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'Directly evaporating water from leaves',
       'Causing stomatal opening',
       'Increasing root pressure',
-      'Decreasing humidity'
+      'Decreasing humidity',
     ],
     correctAnswer: 'Causing stomatal opening',
-    explanation: 'NCERT page 172 explains that light stimulates stomatal opening through photosynthesis and other light-dependent processes in guard cells. Since most transpiration occurs through stomata, light indirectly increases transpiration by opening stomata.',
+    explanation:
+      'NCERT page 172 explains that light stimulates stomatal opening through photosynthesis and other light-dependent processes in guard cells. Since most transpiration occurs through stomata, light indirectly increases transpiration by opening stomata.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 11, Page 172',
     previousYearFrequency: 18,
     conceptualLinks: ['light effect', 'stomatal opening', 'indirect mechanism'],
     timeEstimate: 50,
     bloomsLevel: 'Understand',
-    weightage: 6.0
+    weightage: 6.0,
   },
   {
     id: 'q11-batch11-039',
@@ -9402,17 +9794,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'Opening stomata',
       'Removing humid air layer around leaves',
       'Increasing temperature',
-      'Increasing atmospheric pressure'
+      'Increasing atmospheric pressure',
     ],
     correctAnswer: 'Removing humid air layer around leaves',
-    explanation: 'According to NCERT page 172, wind removes the saturated air layer (boundary layer) from around the leaf surface, replacing it with drier air. This maintains a steep water potential gradient and increases the transpiration rate.',
+    explanation:
+      'According to NCERT page 172, wind removes the saturated air layer (boundary layer) from around the leaf surface, replacing it with drier air. This maintains a steep water potential gradient and increases the transpiration rate.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 11, Page 172',
     previousYearFrequency: 16,
     conceptualLinks: ['wind effect', 'boundary layer removal', 'gradient maintenance'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 5.5
+    weightage: 5.5,
   },
   {
     id: 'q11-batch11-040',
@@ -9424,17 +9817,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'Both require closed stomata',
       'Both require open stomata',
       'They occur in opposite directions',
-      'They are completely independent'
+      'They are completely independent',
     ],
     correctAnswer: 'Both require open stomata',
-    explanation: 'NCERT page 172 discusses the dilemma that plants face: stomata must be open for CO₂ uptake required for photosynthesis, but this simultaneously causes water loss through transpiration. Both processes require open stomata, creating a compromise between carbon gain and water loss.',
+    explanation:
+      'NCERT page 172 discusses the dilemma that plants face: stomata must be open for CO₂ uptake required for photosynthesis, but this simultaneously causes water loss through transpiration. Both processes require open stomata, creating a compromise between carbon gain and water loss.',
     difficulty: 'Hard',
     ncertPageReference: 'Class 11, Chapter 11, Page 172',
     previousYearFrequency: 14,
     conceptualLinks: ['transpiration-photosynthesis link', 'stomatal dilemma', 'compromise'],
     timeEstimate: 55,
     bloomsLevel: 'Analyze',
-    weightage: 7.0
+    weightage: 7.0,
   },
   {
     id: 'q11-batch11-041',
@@ -9446,17 +9840,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'A passive process through diffusion',
       'An active process requiring energy',
       'Dependent only on transpiration',
-      'Independent of concentration gradients'
+      'Independent of concentration gradients',
     ],
     correctAnswer: 'An active process requiring energy',
-    explanation: 'NCERT page 173 explains that mineral uptake by root cells is largely an active process. Minerals are often present in higher concentrations inside root cells than in soil solution, requiring active transport against the concentration gradient using metabolic energy (ATP).',
+    explanation:
+      'NCERT page 173 explains that mineral uptake by root cells is largely an active process. Minerals are often present in higher concentrations inside root cells than in soil solution, requiring active transport against the concentration gradient using metabolic energy (ATP).',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 11, Page 173',
     previousYearFrequency: 19,
     conceptualLinks: ['mineral absorption', 'active transport', 'ATP requirement'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 6.0
+    weightage: 6.0,
   },
   {
     id: 'q11-batch11-042',
@@ -9468,17 +9863,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'Cytoplasm and plasmodesmata',
       'Cell walls and intercellular spaces',
       'Vacuoles only',
-      'Phloem vessels'
+      'Phloem vessels',
     ],
     correctAnswer: 'Cell walls and intercellular spaces',
-    explanation: 'According to NCERT page 173, the apoplast pathway involves movement of water and dissolved minerals through the cell walls and intercellular spaces without crossing any membranes. This pathway is blocked at the endodermis by the Casparian strip.',
+    explanation:
+      'According to NCERT page 173, the apoplast pathway involves movement of water and dissolved minerals through the cell walls and intercellular spaces without crossing any membranes. This pathway is blocked at the endodermis by the Casparian strip.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 11, Page 173',
     previousYearFrequency: 21,
     conceptualLinks: ['apoplast pathway', 'cell walls', 'extracellular route'],
     timeEstimate: 50,
     bloomsLevel: 'Understand',
-    weightage: 6.5
+    weightage: 6.5,
   },
   {
     id: 'q11-batch11-043',
@@ -9490,17 +9886,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'Cell walls only',
       'Intercellular spaces',
       'Cytoplasm connected by plasmodesmata',
-      'Xylem vessels'
+      'Xylem vessels',
     ],
     correctAnswer: 'Cytoplasm connected by plasmodesmata',
-    explanation: 'NCERT page 173 describes the symplast pathway as movement through the living cytoplasm of cells, with adjacent cells connected through plasmodesmata. This pathway requires crossing the cell membrane initially and allows selective uptake of minerals.',
+    explanation:
+      'NCERT page 173 describes the symplast pathway as movement through the living cytoplasm of cells, with adjacent cells connected through plasmodesmata. This pathway requires crossing the cell membrane initially and allows selective uptake of minerals.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 11, Page 173',
     previousYearFrequency: 20,
     conceptualLinks: ['symplast pathway', 'cytoplasm', 'plasmodesmata'],
     timeEstimate: 50,
     bloomsLevel: 'Understand',
-    weightage: 6.5
+    weightage: 6.5,
   },
   {
     id: 'q11-batch11-044',
@@ -9512,17 +9909,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'Facilitates apoplast transport',
       'Blocks apoplast pathway and forces symplast route',
       'Prevents all mineral uptake',
-      'Only allows water movement'
+      'Only allows water movement',
     ],
     correctAnswer: 'Blocks apoplast pathway and forces symplast route',
-    explanation: 'NCERT page 173 explains that the Casparian strip is a waxy, suberized band in endodermal cell walls that blocks the apoplast pathway. This forces water and minerals to pass through the cell membrane and cytoplasm (symplast), allowing selective uptake into the xylem.',
+    explanation:
+      'NCERT page 173 explains that the Casparian strip is a waxy, suberized band in endodermal cell walls that blocks the apoplast pathway. This forces water and minerals to pass through the cell membrane and cytoplasm (symplast), allowing selective uptake into the xylem.',
     difficulty: 'Hard',
     ncertPageReference: 'Class 11, Chapter 11, Page 173',
     previousYearFrequency: 17,
     conceptualLinks: ['Casparian strip', 'endodermis', 'selective barrier'],
     timeEstimate: 55,
     bloomsLevel: 'Analyze',
-    weightage: 7.0
+    weightage: 7.0,
   },
   {
     id: 'q11-batch11-045',
@@ -9534,39 +9932,42 @@ export const class11Questions: AuthenticQuestion[] = [
       'Only channel proteins',
       'Only carrier proteins',
       'Both channel and carrier proteins',
-      'Neither channel nor carrier proteins'
+      'Neither channel nor carrier proteins',
     ],
     correctAnswer: 'Both channel and carrier proteins',
-    explanation: 'According to NCERT page 173, mineral uptake across membranes involves both channel proteins (for facilitated diffusion) and carrier proteins (for both facilitated diffusion and active transport). These proteins provide selectivity and can move minerals against concentration gradients when coupled with ATP.',
+    explanation:
+      'According to NCERT page 173, mineral uptake across membranes involves both channel proteins (for facilitated diffusion) and carrier proteins (for both facilitated diffusion and active transport). These proteins provide selectivity and can move minerals against concentration gradients when coupled with ATP.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 11, Page 173',
     previousYearFrequency: 15,
     conceptualLinks: ['transport proteins', 'channel proteins', 'carrier proteins'],
     timeEstimate: 50,
     bloomsLevel: 'Remember',
-    weightage: 5.5
+    weightage: 5.5,
   },
   {
     id: 'q11-batch11-046',
     topicId: 'topic-11-10-transport',
     chapterId: 'ch-11-10',
     classId: 'class-11',
-    question: 'Once minerals reach the xylem in roots, they are transported to shoots primarily by:',
+    question:
+      'Once minerals reach the xylem in roots, they are transported to shoots primarily by:',
     options: [
       'Active transport only',
       'Mass flow with transpiration stream',
       'Diffusion only',
-      'Root pressure only'
+      'Root pressure only',
     ],
     correctAnswer: 'Mass flow with transpiration stream',
-    explanation: 'NCERT page 174 states that after minerals are actively loaded into xylem vessels in the root, they are transported upward to shoots primarily through mass flow along with the transpiration stream. The minerals move passively once in the xylem.',
+    explanation:
+      'NCERT page 174 states that after minerals are actively loaded into xylem vessels in the root, they are transported upward to shoots primarily through mass flow along with the transpiration stream. The minerals move passively once in the xylem.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 11, Page 174',
     previousYearFrequency: 16,
     conceptualLinks: ['xylem transport', 'mass flow', 'transpiration stream'],
     timeEstimate: 50,
     bloomsLevel: 'Understand',
-    weightage: 6.0
+    weightage: 6.0,
   },
   {
     id: 'q11-batch11-047',
@@ -9574,43 +9975,36 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-10',
     classId: 'class-11',
     question: 'Phloem transports:',
-    options: [
-      'Only water',
-      'Only minerals',
-      'Organic nutrients, mainly sucrose',
-      'Only gases'
-    ],
+    options: ['Only water', 'Only minerals', 'Organic nutrients, mainly sucrose', 'Only gases'],
     correctAnswer: 'Organic nutrients, mainly sucrose',
-    explanation: 'According to NCERT page 174, phloem is responsible for translocation of organic nutrients, primarily sucrose, from source to sink. It also transports amino acids, hormones, and other organic substances, but carbohydrates (mainly sucrose) constitute the bulk of transported material.',
+    explanation:
+      'According to NCERT page 174, phloem is responsible for translocation of organic nutrients, primarily sucrose, from source to sink. It also transports amino acids, hormones, and other organic substances, but carbohydrates (mainly sucrose) constitute the bulk of transported material.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 11, Page 174',
     previousYearFrequency: 23,
     conceptualLinks: ['phloem transport', 'sucrose', 'organic nutrients'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 6.0
+    weightage: 6.0,
   },
   {
     id: 'q11-batch11-048',
     topicId: 'topic-11-10-transport',
     chapterId: 'ch-11-10',
     classId: 'class-11',
-    question: 'The pressure flow hypothesis (mass flow hypothesis) for phloem transport was proposed by:',
-    options: [
-      'Darwin',
-      'Munch',
-      'Calvin',
-      'Dixon'
-    ],
+    question:
+      'The pressure flow hypothesis (mass flow hypothesis) for phloem transport was proposed by:',
+    options: ['Darwin', 'Munch', 'Calvin', 'Dixon'],
     correctAnswer: 'Munch',
-    explanation: 'NCERT page 175 credits Ernst Munch with proposing the pressure flow hypothesis (also called mass flow hypothesis) in 1930. This hypothesis explains phloem transport as driven by a pressure gradient between source and sink regions.',
+    explanation:
+      'NCERT page 175 credits Ernst Munch with proposing the pressure flow hypothesis (also called mass flow hypothesis) in 1930. This hypothesis explains phloem transport as driven by a pressure gradient between source and sink regions.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 11, Page 175',
     previousYearFrequency: 12,
     conceptualLinks: ['Munch', 'pressure flow hypothesis', 'mass flow'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch11-049',
@@ -9622,39 +10016,42 @@ export const class11Questions: AuthenticQuestion[] = [
       'Region of sugar consumption',
       'Region of sugar production or storage release',
       'Root tissues only',
-      'Xylem vessels'
+      'Xylem vessels',
     ],
     correctAnswer: 'Region of sugar production or storage release',
-    explanation: 'NCERT page 175 defines the source as any region where sugars are produced (such as photosynthesizing leaves) or released from storage (such as storage organs during germination). Sources load sugars into phloem, creating high osmotic pressure.',
+    explanation:
+      'NCERT page 175 defines the source as any region where sugars are produced (such as photosynthesizing leaves) or released from storage (such as storage organs during germination). Sources load sugars into phloem, creating high osmotic pressure.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 11, Page 175',
     previousYearFrequency: 18,
     conceptualLinks: ['source definition', 'sugar production', 'phloem loading'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 6.5
+    weightage: 6.5,
   },
   {
     id: 'q11-batch11-050',
     topicId: 'topic-11-10-transport',
     chapterId: 'ch-11-10',
     classId: 'class-11',
-    question: 'According to the pressure flow hypothesis, phloem sap moves from source to sink because:',
+    question:
+      'According to the pressure flow hypothesis, phloem sap moves from source to sink because:',
     options: [
       'Active transport throughout the path',
       'Pressure gradient created by osmosis at source and sink',
       'Transpiration pull from leaves',
-      'Root pressure'
+      'Root pressure',
     ],
     correctAnswer: 'Pressure gradient created by osmosis at source and sink',
-    explanation: 'NCERT page 175 explains that sugars are actively loaded at the source, water follows by osmosis creating high turgor pressure. At the sink, sugars are unloaded, water leaves, creating low pressure. This pressure gradient drives mass flow of phloem sap from source to sink.',
+    explanation:
+      'NCERT page 175 explains that sugars are actively loaded at the source, water follows by osmosis creating high turgor pressure. At the sink, sugars are unloaded, water leaves, creating low pressure. This pressure gradient drives mass flow of phloem sap from source to sink.',
     difficulty: 'Hard',
     ncertPageReference: 'Class 11, Chapter 11, Page 175',
     previousYearFrequency: 19,
     conceptualLinks: ['pressure gradient', 'osmotic mechanism', 'source to sink flow'],
     timeEstimate: 60,
     bloomsLevel: 'Analyze',
-    weightage: 8.0
+    weightage: 8.0,
   },
 
   // ============================================================================
@@ -9665,34 +10062,38 @@ export const class11Questions: AuthenticQuestion[] = [
     topicId: 'topic-11-14-breathing',
     chapterId: 'ch-11-14',
     classId: 'class-11',
-    question: 'Which of the following organisms exchange O₂ and CO₂ by simple diffusion over their entire body surface?',
+    question:
+      'Which of the following organisms exchange O₂ and CO₂ by simple diffusion over their entire body surface?',
     options: ['Earthworms', 'Sponges and coelenterates', 'Insects', 'Amphibians'],
     correctAnswer: 'Sponges and coelenterates',
-    explanation: 'According to NCERT page 183, lower invertebrates like sponges, coelenterates, flatworms, etc., exchange O₂ with CO₂ by simple diffusion over their entire body surface.',
+    explanation:
+      'According to NCERT page 183, lower invertebrates like sponges, coelenterates, flatworms, etc., exchange O₂ with CO₂ by simple diffusion over their entire body surface.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 14, Page 183',
     previousYearFrequency: 12,
     conceptualLinks: ['Respiratory Organs', 'Gas Exchange', 'Lower Invertebrates'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 3.0
+    weightage: 3.0,
   },
   {
     id: 'q11-batch12-002',
     topicId: 'topic-11-14-breathing',
     chapterId: 'ch-11-14',
     classId: 'class-11',
-    question: 'What is the network of tubes called that insects use to transport atmospheric air within their body?',
+    question:
+      'What is the network of tubes called that insects use to transport atmospheric air within their body?',
     options: ['Bronchioles', 'Tracheal tubes', 'Alveolar ducts', 'Gill filaments'],
     correctAnswer: 'Tracheal tubes',
-    explanation: 'As stated on NCERT page 183, insects have a network of tubes called tracheal tubes to transport atmospheric air within the body.',
+    explanation:
+      'As stated on NCERT page 183, insects have a network of tubes called tracheal tubes to transport atmospheric air within the body.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 14, Page 183',
     previousYearFrequency: 15,
     conceptualLinks: ['Respiratory Organs', 'Insects', 'Tracheal System'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q11-batch12-003',
@@ -9702,31 +10103,34 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The pharynx is a common passage for:',
     options: ['Food only', 'Air only', 'Both food and air', 'Neither food nor air'],
     correctAnswer: 'Both food and air',
-    explanation: 'According to NCERT page 184, the nasal chamber opens into the pharynx, a portion of which is the common passage for food and air.',
+    explanation:
+      'According to NCERT page 184, the nasal chamber opens into the pharynx, a portion of which is the common passage for food and air.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 14, Page 184',
     previousYearFrequency: 18,
     conceptualLinks: ['Human Respiratory System', 'Pharynx', 'Anatomy'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch12-004',
     topicId: 'topic-11-14-breathing',
     chapterId: 'ch-11-14',
     classId: 'class-11',
-    question: 'Which cartilaginous flap prevents the entry of food into the larynx during swallowing?',
+    question:
+      'Which cartilaginous flap prevents the entry of food into the larynx during swallowing?',
     options: ['Glottis', 'Epiglottis', 'Thyroid cartilage', 'Cricoid cartilage'],
     correctAnswer: 'Epiglottis',
-    explanation: 'NCERT page 184 states that during swallowing, glottis can be covered by a thin elastic cartilaginous flap called epiglottis to prevent the entry of food into the larynx.',
+    explanation:
+      'NCERT page 184 states that during swallowing, glottis can be covered by a thin elastic cartilaginous flap called epiglottis to prevent the entry of food into the larynx.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 14, Page 184',
     previousYearFrequency: 22,
     conceptualLinks: ['Human Respiratory System', 'Epiglottis', 'Larynx'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch12-005',
@@ -9734,16 +10138,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-14',
     classId: 'class-11',
     question: 'At which level does the trachea divide into right and left primary bronchi?',
-    options: ['3rd thoracic vertebra', '5th thoracic vertebra', '7th thoracic vertebra', '9th thoracic vertebra'],
+    options: [
+      '3rd thoracic vertebra',
+      '5th thoracic vertebra',
+      '7th thoracic vertebra',
+      '9th thoracic vertebra',
+    ],
     correctAnswer: '5th thoracic vertebra',
-    explanation: 'According to NCERT page 184, trachea is a straight tube extending up to the mid-thoracic cavity, which divides at the level of 5th thoracic vertebra into a right and left primary bronchi.',
+    explanation:
+      'According to NCERT page 184, trachea is a straight tube extending up to the mid-thoracic cavity, which divides at the level of 5th thoracic vertebra into a right and left primary bronchi.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 14, Page 184',
     previousYearFrequency: 14,
     conceptualLinks: ['Human Respiratory System', 'Trachea', 'Bronchi'],
     timeEstimate: 45,
     bloomsLevel: 'Remember',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch12-006',
@@ -9751,16 +10161,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-14',
     classId: 'class-11',
     question: 'The alveoli are described as:',
-    options: ['Thick-walled muscular structures', 'Very thin, irregular-walled and vascularised bag-like structures', 'Cartilaginous rings', 'Ciliated epithelial tubes'],
+    options: [
+      'Thick-walled muscular structures',
+      'Very thin, irregular-walled and vascularised bag-like structures',
+      'Cartilaginous rings',
+      'Ciliated epithelial tubes',
+    ],
     correctAnswer: 'Very thin, irregular-walled and vascularised bag-like structures',
-    explanation: 'NCERT page 184 describes alveoli as very thin, irregular-walled and vascularised bag-like structures that arise from terminal bronchioles.',
+    explanation:
+      'NCERT page 184 describes alveoli as very thin, irregular-walled and vascularised bag-like structures that arise from terminal bronchioles.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 14, Page 184',
     previousYearFrequency: 20,
     conceptualLinks: ['Human Respiratory System', 'Alveoli', 'Structure'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch12-007',
@@ -9770,14 +10186,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'What is the function of pleural fluid between the two pleural membranes?',
     options: ['Gas exchange', 'Reduce friction on lung surface', 'Produce mucus', 'Filter air'],
     correctAnswer: 'Reduce friction on lung surface',
-    explanation: 'According to NCERT page 184, the two lungs are covered by a double layered pleura, with pleural fluid between them which reduces friction on the lung-surface.',
+    explanation:
+      'According to NCERT page 184, the two lungs are covered by a double layered pleura, with pleural fluid between them which reduces friction on the lung-surface.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 14, Page 184',
     previousYearFrequency: 16,
     conceptualLinks: ['Human Respiratory System', 'Pleura', 'Pleural Fluid'],
     timeEstimate: 30,
     bloomsLevel: 'Understand',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch12-008',
@@ -9785,16 +10202,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-14',
     classId: 'class-11',
     question: 'Which part of the respiratory system constitutes the conducting part?',
-    options: ['Alveoli and their ducts', 'External nostrils to terminal bronchioles', 'Only the trachea', 'Only the bronchi'],
+    options: [
+      'Alveoli and their ducts',
+      'External nostrils to terminal bronchioles',
+      'Only the trachea',
+      'Only the bronchi',
+    ],
     correctAnswer: 'External nostrils to terminal bronchioles',
-    explanation: 'NCERT page 185 states that the part starting with the external nostrils up to the terminal bronchioles constitute the conducting part whereas the alveoli and their ducts form the respiratory or exchange part.',
+    explanation:
+      'NCERT page 185 states that the part starting with the external nostrils up to the terminal bronchioles constitute the conducting part whereas the alveoli and their ducts form the respiratory or exchange part.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 14, Page 185',
     previousYearFrequency: 12,
     conceptualLinks: ['Human Respiratory System', 'Conducting Part', 'Exchange Part'],
     timeEstimate: 40,
     bloomsLevel: 'Understand',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch12-009',
@@ -9804,14 +10227,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The thoracic chamber is formed dorsally by:',
     options: ['Sternum', 'Ribs', 'Vertebral column', 'Diaphragm'],
     correctAnswer: 'Vertebral column',
-    explanation: 'According to NCERT page 185, the thoracic chamber is formed dorsally by the vertebral column, ventrally by the sternum, laterally by the ribs and on the lower side by the dome-shaped diaphragm.',
+    explanation:
+      'According to NCERT page 185, the thoracic chamber is formed dorsally by the vertebral column, ventrally by the sternum, laterally by the ribs and on the lower side by the dome-shaped diaphragm.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 14, Page 185',
     previousYearFrequency: 10,
     conceptualLinks: ['Human Respiratory System', 'Thoracic Chamber', 'Anatomy'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q11-batch12-010',
@@ -9821,14 +10245,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'How many steps are involved in respiration as described in NCERT?',
     options: ['Three', 'Four', 'Five', 'Six'],
     correctAnswer: 'Five',
-    explanation: 'NCERT page 185 lists five steps: (i) Breathing, (ii) Diffusion across alveolar membrane, (iii) Transport by blood, (iv) Diffusion between blood and tissues, (v) Cellular respiration.',
+    explanation:
+      'NCERT page 185 lists five steps: (i) Breathing, (ii) Diffusion across alveolar membrane, (iii) Transport by blood, (iv) Diffusion between blood and tissues, (v) Cellular respiration.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 14, Page 185',
     previousYearFrequency: 15,
     conceptualLinks: ['Respiration', 'Steps', 'Process'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch12-011',
@@ -9836,16 +10261,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-14',
     classId: 'class-11',
     question: 'Inspiration occurs when the intra-pulmonary pressure is:',
-    options: ['Equal to atmospheric pressure', 'Higher than atmospheric pressure', 'Less than atmospheric pressure', 'Independent of atmospheric pressure'],
+    options: [
+      'Equal to atmospheric pressure',
+      'Higher than atmospheric pressure',
+      'Less than atmospheric pressure',
+      'Independent of atmospheric pressure',
+    ],
     correctAnswer: 'Less than atmospheric pressure',
-    explanation: 'NCERT page 185 states that inspiration can occur if the pressure within the lungs (intra-pulmonary pressure) is less than the atmospheric pressure, creating a negative pressure gradient.',
+    explanation:
+      'NCERT page 185 states that inspiration can occur if the pressure within the lungs (intra-pulmonary pressure) is less than the atmospheric pressure, creating a negative pressure gradient.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 14, Page 185',
     previousYearFrequency: 20,
     conceptualLinks: ['Mechanism of Breathing', 'Inspiration', 'Pressure Gradient'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 5.5
+    weightage: 5.5,
   },
   {
     id: 'q11-batch12-012',
@@ -9853,50 +10284,70 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-14',
     classId: 'class-11',
     question: 'Which muscles help in generating pressure gradients for breathing?',
-    options: ['Cardiac muscles', 'Diaphragm and intercostal muscles', 'Smooth muscles only', 'Abdominal muscles only'],
+    options: [
+      'Cardiac muscles',
+      'Diaphragm and intercostal muscles',
+      'Smooth muscles only',
+      'Abdominal muscles only',
+    ],
     correctAnswer: 'Diaphragm and intercostal muscles',
-    explanation: 'According to NCERT page 185, the diaphragm and a specialised set of muscles – external and internal intercostals between the ribs, help in generation of pressure gradients.',
+    explanation:
+      'According to NCERT page 185, the diaphragm and a specialised set of muscles – external and internal intercostals between the ribs, help in generation of pressure gradients.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 14, Page 185',
     previousYearFrequency: 18,
     conceptualLinks: ['Mechanism of Breathing', 'Muscles', 'Diaphragm'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch12-013',
     topicId: 'topic-11-14-breathing',
     chapterId: 'ch-11-14',
     classId: 'class-11',
-    question: 'Contraction of the diaphragm increases the volume of thoracic chamber in which axis?',
-    options: ['Lateral axis', 'Dorso-ventral axis', 'Antero-posterior axis', 'All three axes equally'],
+    question:
+      'Contraction of the diaphragm increases the volume of thoracic chamber in which axis?',
+    options: [
+      'Lateral axis',
+      'Dorso-ventral axis',
+      'Antero-posterior axis',
+      'All three axes equally',
+    ],
     correctAnswer: 'Antero-posterior axis',
-    explanation: 'NCERT page 185 states that inspiration is initiated by the contraction of diaphragm which increases the volume of thoracic chamber in the antero-posterior axis.',
+    explanation:
+      'NCERT page 185 states that inspiration is initiated by the contraction of diaphragm which increases the volume of thoracic chamber in the antero-posterior axis.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 14, Page 185-186',
     previousYearFrequency: 14,
     conceptualLinks: ['Mechanism of Breathing', 'Diaphragm', 'Inspiration'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch12-014',
     topicId: 'topic-11-14-breathing',
     chapterId: 'ch-11-14',
     classId: 'class-11',
-    question: 'Contraction of external inter-costal muscles increases thoracic volume in which axis?',
-    options: ['Antero-posterior axis', 'Dorso-ventral axis', 'Medio-lateral axis', 'Superior-inferior axis'],
+    question:
+      'Contraction of external inter-costal muscles increases thoracic volume in which axis?',
+    options: [
+      'Antero-posterior axis',
+      'Dorso-ventral axis',
+      'Medio-lateral axis',
+      'Superior-inferior axis',
+    ],
     correctAnswer: 'Dorso-ventral axis',
-    explanation: 'According to NCERT page 186, the contraction of external inter-costal muscles lifts up the ribs and the sternum causing an increase in the volume of the thoracic chamber in the dorso-ventral axis.',
+    explanation:
+      'According to NCERT page 186, the contraction of external inter-costal muscles lifts up the ribs and the sternum causing an increase in the volume of the thoracic chamber in the dorso-ventral axis.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 14, Page 186',
     previousYearFrequency: 12,
     conceptualLinks: ['Mechanism of Breathing', 'Intercostal Muscles', 'Inspiration'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch12-015',
@@ -9906,14 +10357,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'On average, a healthy human breathes how many times per minute?',
     options: ['6-8 times', '12-16 times', '20-24 times', '30-35 times'],
     correctAnswer: '12-16 times',
-    explanation: 'NCERT page 186 states that on an average, a healthy human breathes 12-16 times/minute.',
+    explanation:
+      'NCERT page 186 states that on an average, a healthy human breathes 12-16 times/minute.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 14, Page 186',
     previousYearFrequency: 22,
     conceptualLinks: ['Mechanism of Breathing', 'Respiratory Rate', 'Normal Values'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch12-016',
@@ -9923,14 +10375,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'What is the approximate value of Tidal Volume (TV)?',
     options: ['200 mL', '500 mL', '1000 mL', '2500 mL'],
     correctAnswer: '500 mL',
-    explanation: 'According to NCERT page 186, Tidal Volume is the volume of air inspired or expired during a normal respiration and is approximately 500 mL.',
+    explanation:
+      'According to NCERT page 186, Tidal Volume is the volume of air inspired or expired during a normal respiration and is approximately 500 mL.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 14, Page 186',
     previousYearFrequency: 25,
     conceptualLinks: ['Respiratory Volumes', 'Tidal Volume', 'Spirometry'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch12-017',
@@ -9940,14 +10393,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The Inspiratory Reserve Volume (IRV) averages:',
     options: ['500 mL', '1000-1100 mL', '2500-3000 mL', '6000-8000 mL'],
     correctAnswer: '2500-3000 mL',
-    explanation: 'NCERT page 186 states that Inspiratory Reserve Volume is the additional air a person can inspire by forcible inspiration and averages 2500 mL to 3000 mL.',
+    explanation:
+      'NCERT page 186 states that Inspiratory Reserve Volume is the additional air a person can inspire by forcible inspiration and averages 2500 mL to 3000 mL.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 14, Page 186',
     previousYearFrequency: 18,
     conceptualLinks: ['Respiratory Volumes', 'IRV', 'Spirometry'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch12-018',
@@ -9957,14 +10411,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'What is the average Expiratory Reserve Volume (ERV)?',
     options: ['500 mL', '1000-1100 mL', '1500-2000 mL', '2500-3000 mL'],
     correctAnswer: '1000-1100 mL',
-    explanation: 'According to NCERT page 186, Expiratory Reserve Volume is the volume a person can expire by forcible expiration and averages 1000 mL to 1100 mL.',
+    explanation:
+      'According to NCERT page 186, Expiratory Reserve Volume is the volume a person can expire by forcible expiration and averages 1000 mL to 1100 mL.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 14, Page 186',
     previousYearFrequency: 16,
     conceptualLinks: ['Respiratory Volumes', 'ERV', 'Spirometry'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch12-019',
@@ -9974,14 +10429,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Residual Volume (RV) averages approximately:',
     options: ['500-600 mL', '1100-1200 mL', '2000-2200 mL', '3000-3200 mL'],
     correctAnswer: '1100-1200 mL',
-    explanation: 'NCERT page 187 states that Residual Volume is the volume of air remaining in the lungs even after a forcible expiration and averages 1100 mL to 1200 mL.',
+    explanation:
+      'NCERT page 187 states that Residual Volume is the volume of air remaining in the lungs even after a forcible expiration and averages 1100 mL to 1200 mL.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 14, Page 187',
     previousYearFrequency: 15,
     conceptualLinks: ['Respiratory Volumes', 'Residual Volume', 'Spirometry'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch12-020',
@@ -9991,14 +10447,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Inspiratory Capacity (IC) is the sum of:',
     options: ['TV + ERV', 'TV + IRV', 'ERV + RV', 'IRV + ERV'],
     correctAnswer: 'TV + IRV',
-    explanation: 'According to NCERT page 187, Inspiratory Capacity is the total volume of air a person can inspire after a normal expiration and includes tidal volume and inspiratory reserve volume (TV+IRV).',
+    explanation:
+      'According to NCERT page 187, Inspiratory Capacity is the total volume of air a person can inspire after a normal expiration and includes tidal volume and inspiratory reserve volume (TV+IRV).',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 14, Page 187',
     previousYearFrequency: 20,
     conceptualLinks: ['Respiratory Capacities', 'Inspiratory Capacity', 'Calculations'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 5.5
+    weightage: 5.5,
   },
   {
     id: 'q11-batch12-021',
@@ -10008,14 +10465,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Functional Residual Capacity (FRC) includes:',
     options: ['TV + IRV', 'ERV + RV', 'TV + ERV', 'IRV + ERV + TV'],
     correctAnswer: 'ERV + RV',
-    explanation: 'NCERT page 187 states that Functional Residual Capacity is the volume of air that will remain in the lungs after a normal expiration and includes ERV+RV.',
+    explanation:
+      'NCERT page 187 states that Functional Residual Capacity is the volume of air that will remain in the lungs after a normal expiration and includes ERV+RV.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 14, Page 187',
     previousYearFrequency: 17,
     conceptualLinks: ['Respiratory Capacities', 'FRC', 'Calculations'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 5.5
+    weightage: 5.5,
   },
   {
     id: 'q11-batch12-022',
@@ -10025,14 +10483,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Vital Capacity (VC) includes:',
     options: ['TV + IRV only', 'ERV + TV + IRV', 'All lung volumes including RV', 'Only IRV + ERV'],
     correctAnswer: 'ERV + TV + IRV',
-    explanation: 'According to NCERT page 187, Vital Capacity is the maximum volume of air a person can breathe in after a forced expiration and includes ERV, TV and IRV.',
+    explanation:
+      'According to NCERT page 187, Vital Capacity is the maximum volume of air a person can breathe in after a forced expiration and includes ERV, TV and IRV.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 14, Page 187',
     previousYearFrequency: 24,
     conceptualLinks: ['Respiratory Capacities', 'Vital Capacity', 'Calculations'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 6.0
+    weightage: 6.0,
   },
   {
     id: 'q11-batch12-023',
@@ -10042,14 +10501,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Total Lung Capacity (TLC) equals:',
     options: ['VC only', 'VC + RV', 'TV + IRV + ERV', 'IRV + ERV only'],
     correctAnswer: 'VC + RV',
-    explanation: 'NCERT page 187 states that Total Lung Capacity is the total volume of air accommodated in the lungs at the end of a forced inspiration, which equals vital capacity + residual volume.',
+    explanation:
+      'NCERT page 187 states that Total Lung Capacity is the total volume of air accommodated in the lungs at the end of a forced inspiration, which equals vital capacity + residual volume.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 14, Page 187',
     previousYearFrequency: 19,
     conceptualLinks: ['Respiratory Capacities', 'Total Lung Capacity', 'Calculations'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 6.0
+    weightage: 6.0,
   },
   {
     id: 'q11-batch12-024',
@@ -10066,7 +10526,7 @@ export const class11Questions: AuthenticQuestion[] = [
     conceptualLinks: ['Exchange of Gases', 'Alveoli', 'Gas Exchange'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch12-025',
@@ -10074,16 +10534,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-14',
     classId: 'class-11',
     question: 'Exchange of gases occurs mainly based on:',
-    options: ['Active transport', 'Facilitated diffusion', 'Pressure/concentration gradient', 'Osmosis'],
+    options: [
+      'Active transport',
+      'Facilitated diffusion',
+      'Pressure/concentration gradient',
+      'Osmosis',
+    ],
     correctAnswer: 'Pressure/concentration gradient',
-    explanation: 'NCERT page 187 states that O₂ and CO₂ are exchanged by simple diffusion mainly based on pressure/concentration gradient.',
+    explanation:
+      'NCERT page 187 states that O₂ and CO₂ are exchanged by simple diffusion mainly based on pressure/concentration gradient.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 14, Page 187',
     previousYearFrequency: 21,
     conceptualLinks: ['Exchange of Gases', 'Diffusion', 'Mechanism'],
     timeEstimate: 40,
     bloomsLevel: 'Understand',
-    weightage: 5.5
+    weightage: 5.5,
   },
   {
     id: 'q11-batch12-026',
@@ -10093,14 +10559,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'What is the partial pressure of oxygen (pO₂) in atmospheric air?',
     options: ['104 mm Hg', '159 mm Hg', '95 mm Hg', '40 mm Hg'],
     correctAnswer: '159 mm Hg',
-    explanation: 'According to Table 14.1 on NCERT page 187, the partial pressure of oxygen in atmospheric air is 159 mm Hg.',
+    explanation:
+      'According to Table 14.1 on NCERT page 187, the partial pressure of oxygen in atmospheric air is 159 mm Hg.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 14, Page 187',
     previousYearFrequency: 18,
     conceptualLinks: ['Exchange of Gases', 'Partial Pressure', 'Oxygen'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch12-027',
@@ -10110,14 +10577,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The partial pressure of oxygen (pO₂) in alveoli is:',
     options: ['40 mm Hg', '95 mm Hg', '104 mm Hg', '159 mm Hg'],
     correctAnswer: '104 mm Hg',
-    explanation: 'Table 14.1 on NCERT page 187 shows that the partial pressure of oxygen in alveoli is 104 mm Hg.',
+    explanation:
+      'Table 14.1 on NCERT page 187 shows that the partial pressure of oxygen in alveoli is 104 mm Hg.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 14, Page 187',
     previousYearFrequency: 20,
     conceptualLinks: ['Exchange of Gases', 'Partial Pressure', 'Alveoli'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 5.5
+    weightage: 5.5,
   },
   {
     id: 'q11-batch12-028',
@@ -10127,14 +10595,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The solubility of CO₂ is how many times higher than that of O₂?',
     options: ['5-10 times', '10-15 times', '20-25 times', '30-35 times'],
     correctAnswer: '20-25 times',
-    explanation: 'According to NCERT page 188, the solubility of CO₂ is 20-25 times higher than that of O₂.',
+    explanation:
+      'According to NCERT page 188, the solubility of CO₂ is 20-25 times higher than that of O₂.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 14, Page 188',
     previousYearFrequency: 22,
     conceptualLinks: ['Exchange of Gases', 'Solubility', 'CO2 vs O2'],
     timeEstimate: 45,
     bloomsLevel: 'Remember',
-    weightage: 6.0
+    weightage: 6.0,
   },
   {
     id: 'q11-batch12-029',
@@ -10144,14 +10613,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The diffusion membrane is made up of how many major layers?',
     options: ['One', 'Two', 'Three', 'Four'],
     correctAnswer: 'Three',
-    explanation: 'NCERT page 188 states that the diffusion membrane is made up of three major layers: thin squamous epithelium of alveoli, endothelium of alveolar capillaries, and basement substance.',
+    explanation:
+      'NCERT page 188 states that the diffusion membrane is made up of three major layers: thin squamous epithelium of alveoli, endothelium of alveolar capillaries, and basement substance.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 14, Page 188',
     previousYearFrequency: 16,
     conceptualLinks: ['Exchange of Gases', 'Diffusion Membrane', 'Structure'],
     timeEstimate: 45,
     bloomsLevel: 'Remember',
-    weightage: 5.5
+    weightage: 5.5,
   },
   {
     id: 'q11-batch12-030',
@@ -10161,14 +10631,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'About what percentage of O₂ is transported by RBCs in the blood?',
     options: ['70%', '80%', '90%', '97%'],
     correctAnswer: '97%',
-    explanation: 'According to NCERT page 189, about 97 per cent of O₂ is transported by RBCs in the blood, while the remaining 3 per cent is carried in a dissolved state through the plasma.',
+    explanation:
+      'According to NCERT page 189, about 97 per cent of O₂ is transported by RBCs in the blood, while the remaining 3 per cent is carried in a dissolved state through the plasma.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 14, Page 189',
     previousYearFrequency: 19,
     conceptualLinks: ['Transport of Gases', 'Oxygen Transport', 'RBCs'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 5.5
+    weightage: 5.5,
   },
   {
     id: 'q11-batch12-031',
@@ -10178,14 +10649,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'What percentage of CO₂ is carried as bicarbonate?',
     options: ['7%', '20-25%', '70%', '97%'],
     correctAnswer: '70%',
-    explanation: 'NCERT page 189 states that nearly 20-25 per cent of CO₂ is transported by RBCs whereas 70 per cent of it is carried as bicarbonate.',
+    explanation:
+      'NCERT page 189 states that nearly 20-25 per cent of CO₂ is transported by RBCs whereas 70 per cent of it is carried as bicarbonate.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 14, Page 189',
     previousYearFrequency: 21,
     conceptualLinks: ['Transport of Gases', 'Carbon Dioxide Transport', 'Bicarbonate'],
     timeEstimate: 45,
     bloomsLevel: 'Remember',
-    weightage: 6.0
+    weightage: 6.0,
   },
   {
     id: 'q11-batch12-032',
@@ -10195,14 +10667,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Each haemoglobin molecule can carry a maximum of how many molecules of O₂?',
     options: ['Two', 'Four', 'Six', 'Eight'],
     correctAnswer: 'Four',
-    explanation: 'According to NCERT page 189, each haemoglobin molecule can carry a maximum of four molecules of O₂.',
+    explanation:
+      'According to NCERT page 189, each haemoglobin molecule can carry a maximum of four molecules of O₂.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 14, Page 189',
     previousYearFrequency: 24,
     conceptualLinks: ['Transport of Gases', 'Haemoglobin', 'Oxygen Binding'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch12-033',
@@ -10212,14 +10685,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The oxygen dissociation curve is:',
     options: ['Linear', 'Parabolic', 'Sigmoid', 'Hyperbolic'],
     correctAnswer: 'Sigmoid',
-    explanation: 'NCERT page 189 states that a sigmoid curve is obtained when percentage saturation of haemoglobin with O₂ is plotted against the pO₂, called the Oxygen dissociation curve.',
+    explanation:
+      'NCERT page 189 states that a sigmoid curve is obtained when percentage saturation of haemoglobin with O₂ is plotted against the pO₂, called the Oxygen dissociation curve.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 14, Page 189',
     previousYearFrequency: 23,
     conceptualLinks: ['Transport of Gases', 'Oxygen Dissociation Curve', 'Haemoglobin'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 6.5
+    weightage: 6.5,
   },
   {
     id: 'q11-batch12-034',
@@ -10227,16 +10701,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-14',
     classId: 'class-11',
     question: 'In the alveoli, factors favourable for oxyhaemoglobin formation include:',
-    options: ['Low pO₂, high pCO₂', 'High pO₂, low pCO₂', 'High pO₂, high pCO₂', 'Low pO₂, low pCO₂'],
+    options: [
+      'Low pO₂, high pCO₂',
+      'High pO₂, low pCO₂',
+      'High pO₂, high pCO₂',
+      'Low pO₂, low pCO₂',
+    ],
     correctAnswer: 'High pO₂, low pCO₂',
-    explanation: 'According to NCERT page 189, in the alveoli where there is high pO₂, low pCO₂, lesser H⁺ concentration and lower temperature, the factors are all favourable for the formation of oxyhaemoglobin.',
+    explanation:
+      'According to NCERT page 189, in the alveoli where there is high pO₂, low pCO₂, lesser H⁺ concentration and lower temperature, the factors are all favourable for the formation of oxyhaemoglobin.',
     difficulty: 'Hard',
     ncertPageReference: 'Class 11, Chapter 14, Page 189',
     previousYearFrequency: 18,
     conceptualLinks: ['Transport of Gases', 'Oxyhaemoglobin', 'Alveoli'],
     timeEstimate: 50,
     bloomsLevel: 'Analyze',
-    weightage: 7.0
+    weightage: 7.0,
   },
   {
     id: 'q11-batch12-035',
@@ -10246,14 +10726,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Every 100 ml of oxygenated blood can deliver approximately how much O₂ to tissues?',
     options: ['2 ml', '5 ml', '10 ml', '15 ml'],
     correctAnswer: '5 ml',
-    explanation: 'NCERT page 189 states that every 100 ml of oxygenated blood can deliver around 5 ml of O₂ to the tissues under normal physiological conditions.',
+    explanation:
+      'NCERT page 189 states that every 100 ml of oxygenated blood can deliver around 5 ml of O₂ to the tissues under normal physiological conditions.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 14, Page 189',
     previousYearFrequency: 17,
     conceptualLinks: ['Transport of Gases', 'Oxygen Delivery', 'Blood'],
     timeEstimate: 45,
     bloomsLevel: 'Remember',
-    weightage: 5.5
+    weightage: 5.5,
   },
   {
     id: 'q11-batch12-036',
@@ -10263,14 +10744,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'CO₂ is carried by haemoglobin as:',
     options: ['Oxyhaemoglobin', 'Carbamino-haemoglobin', 'Methaemoglobin', 'Deoxyhaemoglobin'],
     correctAnswer: 'Carbamino-haemoglobin',
-    explanation: 'According to NCERT page 189, CO₂ is carried by haemoglobin as carbamino-haemoglobin (about 20-25 per cent).',
+    explanation:
+      'According to NCERT page 189, CO₂ is carried by haemoglobin as carbamino-haemoglobin (about 20-25 per cent).',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 14, Page 189',
     previousYearFrequency: 22,
     conceptualLinks: ['Transport of Gases', 'Carbon Dioxide', 'Haemoglobin'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch12-037',
@@ -10280,31 +10762,34 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The enzyme carbonic anhydrase is present in high concentration in:',
     options: ['Plasma', 'RBCs', 'WBCs', 'Platelets'],
     correctAnswer: 'RBCs',
-    explanation: 'NCERT page 190 states that RBCs contain a very high concentration of the enzyme carbonic anhydrase, while minute quantities are present in plasma.',
+    explanation:
+      'NCERT page 190 states that RBCs contain a very high concentration of the enzyme carbonic anhydrase, while minute quantities are present in plasma.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 14, Page 190',
     previousYearFrequency: 20,
     conceptualLinks: ['Transport of Gases', 'Carbonic Anhydrase', 'RBCs'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 5.5
+    weightage: 5.5,
   },
   {
     id: 'q11-batch12-038',
     topicId: 'topic-11-14-breathing',
     chapterId: 'ch-11-14',
     classId: 'class-11',
-    question: 'Every 100 ml of deoxygenated blood delivers approximately how much CO₂ to the alveoli?',
+    question:
+      'Every 100 ml of deoxygenated blood delivers approximately how much CO₂ to the alveoli?',
     options: ['2 ml', '4 ml', '7 ml', '10 ml'],
     correctAnswer: '4 ml',
-    explanation: 'According to NCERT page 190, every 100 ml of deoxygenated blood delivers approximately 4 ml of CO₂ to the alveoli.',
+    explanation:
+      'According to NCERT page 190, every 100 ml of deoxygenated blood delivers approximately 4 ml of CO₂ to the alveoli.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 14, Page 190',
     previousYearFrequency: 15,
     conceptualLinks: ['Transport of Gases', 'Carbon Dioxide', 'Blood'],
     timeEstimate: 45,
     bloomsLevel: 'Remember',
-    weightage: 5.5
+    weightage: 5.5,
   },
   {
     id: 'q11-batch12-039',
@@ -10314,14 +10799,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The respiratory rhythm centre is present in which region of the brain?',
     options: ['Cerebrum', 'Cerebellum', 'Medulla', 'Pons'],
     correctAnswer: 'Medulla',
-    explanation: 'NCERT page 190 states that a specialised centre present in the medulla region of the brain called respiratory rhythm centre is primarily responsible for regulation of respiration.',
+    explanation:
+      'NCERT page 190 states that a specialised centre present in the medulla region of the brain called respiratory rhythm centre is primarily responsible for regulation of respiration.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 14, Page 190',
     previousYearFrequency: 24,
     conceptualLinks: ['Regulation of Respiration', 'Respiratory Rhythm Centre', 'Brain'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch12-040',
@@ -10331,14 +10817,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The pneumotaxic centre is located in which region of the brain?',
     options: ['Medulla', 'Pons', 'Hypothalamus', 'Thalamus'],
     correctAnswer: 'Pons',
-    explanation: 'According to NCERT page 190, the pneumotaxic centre is present in the pons region of the brain and can moderate the functions of the respiratory rhythm centre.',
+    explanation:
+      'According to NCERT page 190, the pneumotaxic centre is present in the pons region of the brain and can moderate the functions of the respiratory rhythm centre.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 14, Page 190',
     previousYearFrequency: 21,
     conceptualLinks: ['Regulation of Respiration', 'Pneumotaxic Centre', 'Brain'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch12-041',
@@ -10348,31 +10835,39 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The chemosensitive area is highly sensitive to:',
     options: ['Oxygen only', 'CO₂ and hydrogen ions', 'Nitrogen', 'Carbon monoxide'],
     correctAnswer: 'CO₂ and hydrogen ions',
-    explanation: 'NCERT page 190 states that a chemosensitive area situated adjacent to the rhythm centre is highly sensitive to CO₂ and hydrogen ions.',
+    explanation:
+      'NCERT page 190 states that a chemosensitive area situated adjacent to the rhythm centre is highly sensitive to CO₂ and hydrogen ions.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 14, Page 190',
     previousYearFrequency: 19,
     conceptualLinks: ['Regulation of Respiration', 'Chemosensitive Area', 'CO2'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 6.0
+    weightage: 6.0,
   },
   {
     id: 'q11-batch12-042',
     topicId: 'topic-11-14-breathing',
     chapterId: 'ch-11-14',
     classId: 'class-11',
-    question: 'Receptors that can recognize changes in CO₂ and H⁺ concentration are associated with:',
-    options: ['Pulmonary artery only', 'Aortic arch and carotid artery', 'Superior vena cava', 'Renal artery'],
+    question:
+      'Receptors that can recognize changes in CO₂ and H⁺ concentration are associated with:',
+    options: [
+      'Pulmonary artery only',
+      'Aortic arch and carotid artery',
+      'Superior vena cava',
+      'Renal artery',
+    ],
     correctAnswer: 'Aortic arch and carotid artery',
-    explanation: 'According to NCERT page 190, receptors associated with aortic arch and carotid artery can recognise changes in CO₂ and H⁺ concentration and send signals to the rhythm centre.',
+    explanation:
+      'According to NCERT page 190, receptors associated with aortic arch and carotid artery can recognise changes in CO₂ and H⁺ concentration and send signals to the rhythm centre.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 14, Page 190',
     previousYearFrequency: 14,
     conceptualLinks: ['Regulation of Respiration', 'Chemoreceptors', 'Blood Vessels'],
     timeEstimate: 50,
     bloomsLevel: 'Understand',
-    weightage: 6.5
+    weightage: 6.5,
   },
   {
     id: 'q11-batch12-043',
@@ -10380,16 +10875,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-14',
     classId: 'class-11',
     question: 'The role of oxygen in regulation of respiratory rhythm is:',
-    options: ['Very significant', 'Moderately significant', 'Quite insignificant', 'The primary regulator'],
+    options: [
+      'Very significant',
+      'Moderately significant',
+      'Quite insignificant',
+      'The primary regulator',
+    ],
     correctAnswer: 'Quite insignificant',
-    explanation: 'NCERT page 190 clearly states that the role of oxygen in the regulation of respiratory rhythm is quite insignificant.',
+    explanation:
+      'NCERT page 190 clearly states that the role of oxygen in the regulation of respiratory rhythm is quite insignificant.',
     difficulty: 'Hard',
     ncertPageReference: 'Class 11, Chapter 14, Page 190',
     previousYearFrequency: 12,
     conceptualLinks: ['Regulation of Respiration', 'Oxygen', 'Respiratory Control'],
     timeEstimate: 50,
     bloomsLevel: 'Understand',
-    weightage: 7.0
+    weightage: 7.0,
   },
   {
     id: 'q11-batch12-044',
@@ -10397,16 +10898,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-14',
     classId: 'class-11',
     question: 'Asthma is characterized by:',
-    options: ['Damaged alveolar walls', 'Inflammation of bronchi and bronchioles', 'Fibrosis of lung tissue', 'Collapsed bronchi'],
+    options: [
+      'Damaged alveolar walls',
+      'Inflammation of bronchi and bronchioles',
+      'Fibrosis of lung tissue',
+      'Collapsed bronchi',
+    ],
     correctAnswer: 'Inflammation of bronchi and bronchioles',
-    explanation: 'According to NCERT page 190, asthma is a difficulty in breathing causing wheezing due to inflammation of bronchi and bronchioles.',
+    explanation:
+      'According to NCERT page 190, asthma is a difficulty in breathing causing wheezing due to inflammation of bronchi and bronchioles.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 14, Page 190',
     previousYearFrequency: 23,
     conceptualLinks: ['Disorders', 'Asthma', 'Respiratory Diseases'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch12-045',
@@ -10414,16 +10921,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-14',
     classId: 'class-11',
     question: 'Emphysema is characterized by:',
-    options: ['Inflammation of bronchioles', 'Damaged alveolar walls', 'Excess mucus production', 'Bacterial infection'],
+    options: [
+      'Inflammation of bronchioles',
+      'Damaged alveolar walls',
+      'Excess mucus production',
+      'Bacterial infection',
+    ],
     correctAnswer: 'Damaged alveolar walls',
-    explanation: 'NCERT page 190 states that emphysema is a chronic disorder in which alveolar walls are damaged due to which respiratory surface is decreased.',
+    explanation:
+      'NCERT page 190 states that emphysema is a chronic disorder in which alveolar walls are damaged due to which respiratory surface is decreased.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 14, Page 190',
     previousYearFrequency: 20,
     conceptualLinks: ['Disorders', 'Emphysema', 'Respiratory Diseases'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 5.5
+    weightage: 5.5,
   },
   {
     id: 'q11-batch12-046',
@@ -10433,14 +10946,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'One of the major causes of emphysema is:',
     options: ['Pollution', 'Cigarette smoking', 'Genetic factors', 'Bacterial infection'],
     correctAnswer: 'Cigarette smoking',
-    explanation: 'According to NCERT page 190, one of the major causes of emphysema is cigarette smoking.',
+    explanation:
+      'According to NCERT page 190, one of the major causes of emphysema is cigarette smoking.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 14, Page 190',
     previousYearFrequency: 25,
     conceptualLinks: ['Disorders', 'Emphysema', 'Risk Factors'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch12-047',
@@ -10448,16 +10962,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-14',
     classId: 'class-11',
     question: 'Occupational respiratory disorders are common in industries involving:',
-    options: ['Chemical processing', 'Grinding or stone-breaking', 'Food processing', 'Textile manufacturing'],
+    options: [
+      'Chemical processing',
+      'Grinding or stone-breaking',
+      'Food processing',
+      'Textile manufacturing',
+    ],
     correctAnswer: 'Grinding or stone-breaking',
-    explanation: 'NCERT page 191 states that in certain industries, especially those involving grinding or stone-breaking, so much dust is produced that it can cause occupational respiratory disorders.',
+    explanation:
+      'NCERT page 191 states that in certain industries, especially those involving grinding or stone-breaking, so much dust is produced that it can cause occupational respiratory disorders.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 14, Page 191',
     previousYearFrequency: 11,
     conceptualLinks: ['Disorders', 'Occupational Diseases', 'Environmental Health'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch12-048',
@@ -10465,16 +10985,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-14',
     classId: 'class-11',
     question: 'Fibrosis in occupational respiratory disorders refers to:',
-    options: ['Inflammation of alveoli', 'Proliferation of fibrous tissues', 'Destruction of cilia', 'Excess mucus secretion'],
+    options: [
+      'Inflammation of alveoli',
+      'Proliferation of fibrous tissues',
+      'Destruction of cilia',
+      'Excess mucus secretion',
+    ],
     correctAnswer: 'Proliferation of fibrous tissues',
-    explanation: 'According to NCERT page 191, long exposure to dust can give rise to inflammation leading to fibrosis (proliferation of fibrous tissues) causing serious lung damage.',
+    explanation:
+      'According to NCERT page 191, long exposure to dust can give rise to inflammation leading to fibrosis (proliferation of fibrous tissues) causing serious lung damage.',
     difficulty: 'Hard',
     ncertPageReference: 'Class 11, Chapter 14, Page 191',
     previousYearFrequency: 9,
     conceptualLinks: ['Disorders', 'Fibrosis', 'Pathology'],
     timeEstimate: 50,
     bloomsLevel: 'Understand',
-    weightage: 6.5
+    weightage: 6.5,
   },
   {
     id: 'q11-batch12-049',
@@ -10482,16 +11008,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-14',
     classId: 'class-11',
     question: 'Which type of respiration involves the use of moist skin in frogs?',
-    options: ['Pulmonary respiration', 'Branchial respiration', 'Cutaneous respiration', 'Tracheal respiration'],
+    options: [
+      'Pulmonary respiration',
+      'Branchial respiration',
+      'Cutaneous respiration',
+      'Tracheal respiration',
+    ],
     correctAnswer: 'Cutaneous respiration',
-    explanation: 'NCERT page 183 states that amphibians like frogs can respire through their moist skin, which is called cutaneous respiration.',
+    explanation:
+      'NCERT page 183 states that amphibians like frogs can respire through their moist skin, which is called cutaneous respiration.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 14, Page 183',
     previousYearFrequency: 17,
     conceptualLinks: ['Respiratory Organs', 'Amphibians', 'Types of Respiration'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch12-050',
@@ -10501,14 +11033,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Which structure is called the "sound box"?',
     options: ['Pharynx', 'Trachea', 'Larynx', 'Epiglottis'],
     correctAnswer: 'Larynx',
-    explanation: 'According to NCERT page 184, larynx is a cartilaginous box which helps in sound production and hence is called the sound box.',
+    explanation:
+      'According to NCERT page 184, larynx is a cartilaginous box which helps in sound production and hence is called the sound box.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 14, Page 184',
     previousYearFrequency: 20,
     conceptualLinks: ['Human Respiratory System', 'Larynx', 'Anatomy'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
 
   // ============================================================================
@@ -10522,14 +11055,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'What percentage of blood is constituted by plasma?',
     options: ['45%', '55%', '65%', '75%'],
     correctAnswer: '55%',
-    explanation: 'Plasma is a straw coloured, viscous fluid constituting nearly 55 per cent of the blood, while formed elements constitute nearly 45 per cent. (Class 11, Chapter 15, Page 193)',
+    explanation:
+      'Plasma is a straw coloured, viscous fluid constituting nearly 55 per cent of the blood, while formed elements constitute nearly 45 per cent. (Class 11, Chapter 15, Page 193)',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 15, Page 193',
     previousYearFrequency: 15,
     conceptualLinks: ['Blood composition', 'Plasma properties', 'Formed elements'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 3.0
+    weightage: 3.0,
   },
   {
     id: 'q11-batch13-002',
@@ -10539,14 +11073,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Which protein in plasma is primarily responsible for blood clotting?',
     options: ['Albumin', 'Globulin', 'Fibrinogen', 'Haemoglobin'],
     correctAnswer: 'Fibrinogen',
-    explanation: 'Fibrinogen is one of the major plasma proteins needed for clotting or coagulation of blood. Plasma without the clotting factors is called serum. (Class 11, Chapter 15, Page 193-194)',
+    explanation:
+      'Fibrinogen is one of the major plasma proteins needed for clotting or coagulation of blood. Plasma without the clotting factors is called serum. (Class 11, Chapter 15, Page 193-194)',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 15, Page 193-194',
     previousYearFrequency: 20,
     conceptualLinks: ['Plasma proteins', 'Blood coagulation', 'Serum'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch13-003',
@@ -10556,14 +11091,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'What is the normal RBC count in a healthy adult man per mm³ of blood?',
     options: ['3-4 million', '5-5.5 million', '7-8 million', '10-12 million'],
     correctAnswer: '5-5.5 million',
-    explanation: 'A healthy adult man has, on an average, 5 millions to 5.5 millions of RBCs mm⁻³ of blood. RBCs are the most abundant cells in blood. (Class 11, Chapter 15, Page 194)',
+    explanation:
+      'A healthy adult man has, on an average, 5 millions to 5.5 millions of RBCs mm⁻³ of blood. RBCs are the most abundant cells in blood. (Class 11, Chapter 15, Page 194)',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 15, Page 194',
     previousYearFrequency: 18,
     conceptualLinks: ['Erythrocytes', 'Blood composition', 'RBC count'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q11-batch13-004',
@@ -10573,31 +11109,34 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'What is the average lifespan of red blood cells?',
     options: ['60 days', '90 days', '120 days', '150 days'],
     correctAnswer: '120 days',
-    explanation: 'RBCs have an average life span of 120 days after which they are destroyed in the spleen (graveyard of RBCs). (Class 11, Chapter 15, Page 194)',
+    explanation:
+      'RBCs have an average life span of 120 days after which they are destroyed in the spleen (graveyard of RBCs). (Class 11, Chapter 15, Page 194)',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 15, Page 194',
     previousYearFrequency: 22,
     conceptualLinks: ['RBC lifespan', 'Spleen function', 'Erythrocyte destruction'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch13-005',
     topicId: 'topic-11-15-circulation',
     chapterId: 'ch-11-15',
     classId: 'class-11',
-    question: 'What is the normal range of haemoglobin in a healthy individual per 100 ml of blood?',
+    question:
+      'What is the normal range of haemoglobin in a healthy individual per 100 ml of blood?',
     options: ['8-10 gms', '12-16 gms', '18-22 gms', '24-28 gms'],
     correctAnswer: '12-16 gms',
-    explanation: 'A healthy individual has 12-16 gms of haemoglobin in every 100 ml of blood. Haemoglobin is a red coloured, iron containing complex protein that plays a significant role in transport of respiratory gases. (Class 11, Chapter 15, Page 194)',
+    explanation:
+      'A healthy individual has 12-16 gms of haemoglobin in every 100 ml of blood. Haemoglobin is a red coloured, iron containing complex protein that plays a significant role in transport of respiratory gases. (Class 11, Chapter 15, Page 194)',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 15, Page 194',
     previousYearFrequency: 20,
     conceptualLinks: ['Haemoglobin', 'Oxygen transport', 'RBC function'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q11-batch13-006',
@@ -10607,14 +11146,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'What is the normal WBC count in blood per mm³?',
     options: ['2000-4000', '6000-8000', '10000-12000', '15000-20000'],
     correctAnswer: '6000-8000',
-    explanation: 'Leucocytes are relatively lesser in number which averages 6000-8000 mm⁻³ of blood. They are nucleated and colourless due to lack of haemoglobin. (Class 11, Chapter 15, Page 194)',
+    explanation:
+      'Leucocytes are relatively lesser in number which averages 6000-8000 mm⁻³ of blood. They are nucleated and colourless due to lack of haemoglobin. (Class 11, Chapter 15, Page 194)',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 15, Page 194',
     previousYearFrequency: 17,
     conceptualLinks: ['Leucocytes', 'WBC count', 'Blood composition'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q11-batch13-007',
@@ -10624,14 +11164,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Which of the following WBCs is most abundant in human blood?',
     options: ['Basophils', 'Eosinophils', 'Neutrophils', 'Monocytes'],
     correctAnswer: 'Neutrophils',
-    explanation: 'Neutrophils are the most abundant cells (60-65 per cent) of the total WBCs. They are phagocytic cells which destroy foreign organisms entering the body. (Class 11, Chapter 15, Page 194)',
+    explanation:
+      'Neutrophils are the most abundant cells (60-65 per cent) of the total WBCs. They are phagocytic cells which destroy foreign organisms entering the body. (Class 11, Chapter 15, Page 194)',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 15, Page 194',
     previousYearFrequency: 25,
     conceptualLinks: ['Granulocytes', 'WBC types', 'Phagocytosis'],
     timeEstimate: 40,
     bloomsLevel: 'Understand',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch13-008',
@@ -10641,14 +11182,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Which WBC is least abundant in human blood?',
     options: ['Neutrophils', 'Lymphocytes', 'Basophils', 'Eosinophils'],
     correctAnswer: 'Basophils',
-    explanation: 'Basophils are the least (0.5-1 per cent) among the WBCs. They secrete histamine, serotonin, heparin, etc., and are involved in inflammatory reactions. (Class 11, Chapter 15, Page 194)',
+    explanation:
+      'Basophils are the least (0.5-1 per cent) among the WBCs. They secrete histamine, serotonin, heparin, etc., and are involved in inflammatory reactions. (Class 11, Chapter 15, Page 194)',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 15, Page 194',
     previousYearFrequency: 18,
     conceptualLinks: ['WBC types', 'Basophil function', 'Inflammatory response'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch13-009',
@@ -10658,14 +11200,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Which cells are responsible for immune responses of the body?',
     options: ['Neutrophils', 'Monocytes', 'Lymphocytes', 'Eosinophils'],
     correctAnswer: 'Lymphocytes',
-    explanation: 'Lymphocytes (20-25 per cent) are of two major types – B and T forms. Both B and T lymphocytes are responsible for immune responses of the body. (Class 11, Chapter 15, Page 195)',
+    explanation:
+      'Lymphocytes (20-25 per cent) are of two major types – B and T forms. Both B and T lymphocytes are responsible for immune responses of the body. (Class 11, Chapter 15, Page 195)',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 15, Page 195',
     previousYearFrequency: 24,
     conceptualLinks: ['Immunity', 'B lymphocytes', 'T lymphocytes'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch13-010',
@@ -10675,14 +11218,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'What is the normal platelet count in blood per mm³?',
     options: ['50,000-100,000', '150,000-350,000', '500,000-700,000', '800,000-1,000,000'],
     correctAnswer: '150,000-350,000',
-    explanation: 'Blood normally contains 1,500,00-3,500,00 platelets mm⁻³. Platelets are cell fragments produced from megakaryocytes in the bone marrow. (Class 11, Chapter 15, Page 195)',
+    explanation:
+      'Blood normally contains 1,500,00-3,500,00 platelets mm⁻³. Platelets are cell fragments produced from megakaryocytes in the bone marrow. (Class 11, Chapter 15, Page 195)',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 15, Page 195',
     previousYearFrequency: 16,
     conceptualLinks: ['Thrombocytes', 'Blood coagulation', 'Megakaryocytes'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q11-batch13-011',
@@ -10692,14 +11236,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'A person with blood group AB can receive blood from which of the following donors?',
     options: ['Only AB', 'Only A and B', 'Only O', 'AB, A, B, and O'],
     correctAnswer: 'AB, A, B, and O',
-    explanation: 'Persons with AB group can accept blood from persons with AB as well as the other groups of blood (A, B, O). Therefore, such persons are called universal recipients as they have no antibodies in plasma. (Class 11, Chapter 15, Page 195)',
+    explanation:
+      'Persons with AB group can accept blood from persons with AB as well as the other groups of blood (A, B, O). Therefore, such persons are called universal recipients as they have no antibodies in plasma. (Class 11, Chapter 15, Page 195)',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 15, Page 195',
     previousYearFrequency: 28,
     conceptualLinks: ['ABO system', 'Blood transfusion', 'Universal recipient'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch13-012',
@@ -10709,14 +11254,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Which blood group is called the universal donor?',
     options: ['A', 'B', 'AB', 'O'],
     correctAnswer: 'O',
-    explanation: 'Group O blood can be donated to persons with any other blood group and hence O group individuals are called universal donors as they have no antigens on RBCs. (Class 11, Chapter 15, Page 195)',
+    explanation:
+      'Group O blood can be donated to persons with any other blood group and hence O group individuals are called universal donors as they have no antigens on RBCs. (Class 11, Chapter 15, Page 195)',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 15, Page 195',
     previousYearFrequency: 26,
     conceptualLinks: ['ABO grouping', 'Blood donation', 'Antigens'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch13-013',
@@ -10726,14 +11272,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'What percentage of humans are Rh positive?',
     options: ['Nearly 50%', 'Nearly 60%', 'Nearly 80%', 'Nearly 95%'],
     correctAnswer: 'Nearly 80%',
-    explanation: 'The Rh antigen similar to one present in Rhesus monkeys is observed on the surface of RBCs of majority (nearly 80 per cent) of humans. Such individuals are called Rh positive (Rh+ve). (Class 11, Chapter 15, Page 196)',
+    explanation:
+      'The Rh antigen similar to one present in Rhesus monkeys is observed on the surface of RBCs of majority (nearly 80 per cent) of humans. Such individuals are called Rh positive (Rh+ve). (Class 11, Chapter 15, Page 196)',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 15, Page 196',
     previousYearFrequency: 12,
     conceptualLinks: ['Rh factor', 'Rh antigen', 'Blood grouping'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 3.0
+    weightage: 3.0,
   },
   {
     id: 'q11-batch13-014',
@@ -10741,16 +11288,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-15',
     classId: 'class-11',
     question: 'Erythroblastosis foetalis occurs when:',
-    options: ['Mother is Rh+ and foetus is Rh-', 'Mother is Rh- and foetus is Rh+', 'Both mother and foetus are Rh+', 'Both mother and foetus are Rh-'],
+    options: [
+      'Mother is Rh+ and foetus is Rh-',
+      'Mother is Rh- and foetus is Rh+',
+      'Both mother and foetus are Rh+',
+      'Both mother and foetus are Rh-',
+    ],
     correctAnswer: 'Mother is Rh- and foetus is Rh+',
-    explanation: 'Erythroblastosis foetalis occurs due to Rh incompatibility between Rh-ve mother and Rh+ve foetus. Rh antibodies from mother can leak into foetal blood and destroy foetal RBCs, causing severe anaemia and jaundice. (Class 11, Chapter 15, Page 196)',
+    explanation:
+      'Erythroblastosis foetalis occurs due to Rh incompatibility between Rh-ve mother and Rh+ve foetus. Rh antibodies from mother can leak into foetal blood and destroy foetal RBCs, causing severe anaemia and jaundice. (Class 11, Chapter 15, Page 196)',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 15, Page 196',
     previousYearFrequency: 30,
     conceptualLinks: ['Rh incompatibility', 'Pregnancy complications', 'Antibody formation'],
     timeEstimate: 50,
     bloomsLevel: 'Understand',
-    weightage: 5.5
+    weightage: 5.5,
   },
   {
     id: 'q11-batch13-015',
@@ -10760,14 +11313,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Which enzyme converts fibrinogen to fibrin during blood clotting?',
     options: ['Thrombokinase', 'Prothrombin', 'Thrombin', 'Heparin'],
     correctAnswer: 'Thrombin',
-    explanation: 'Fibrins are formed by the conversion of inactive fibrinogens in the plasma by the enzyme thrombin. Thrombins, in turn are formed from prothrombin by the enzyme complex thrombokinase. (Class 11, Chapter 15, Page 196)',
+    explanation:
+      'Fibrins are formed by the conversion of inactive fibrinogens in the plasma by the enzyme thrombin. Thrombins, in turn are formed from prothrombin by the enzyme complex thrombokinase. (Class 11, Chapter 15, Page 196)',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 15, Page 196',
     previousYearFrequency: 27,
     conceptualLinks: ['Coagulation cascade', 'Clotting factors', 'Fibrin formation'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch13-016',
@@ -10777,14 +11331,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The fluid present in the lymphatic system is called:',
     options: ['Plasma', 'Serum', 'Lymph', 'Interstitial fluid'],
     correctAnswer: 'Lymph',
-    explanation: 'The fluid present in the lymphatic system is called lymph. It is a colourless fluid containing specialised lymphocytes which are responsible for immune responses. (Class 11, Chapter 15, Page 197)',
+    explanation:
+      'The fluid present in the lymphatic system is called lymph. It is a colourless fluid containing specialised lymphocytes which are responsible for immune responses. (Class 11, Chapter 15, Page 197)',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 15, Page 197',
     previousYearFrequency: 14,
     conceptualLinks: ['Lymphatic system', 'Tissue fluid', 'Immune response'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q11-batch13-017',
@@ -10794,14 +11349,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Fats are absorbed through lymph in the:',
     options: ['Villi', 'Lacteals', 'Capillaries', 'Venules'],
     correctAnswer: 'Lacteals',
-    explanation: 'Fats are absorbed through lymph in the lacteals present in the intestinal villi. Lymph is also an important carrier for nutrients, hormones, etc. (Class 11, Chapter 15, Page 197)',
+    explanation:
+      'Fats are absorbed through lymph in the lacteals present in the intestinal villi. Lymph is also an important carrier for nutrients, hormones, etc. (Class 11, Chapter 15, Page 197)',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 15, Page 197',
     previousYearFrequency: 19,
     conceptualLinks: ['Fat absorption', 'Intestinal villi', 'Lymphatic function'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch13-018',
@@ -10809,16 +11365,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-15',
     classId: 'class-11',
     question: 'Which organisms have an open circulatory system?',
-    options: ['Annelids and chordates', 'Arthropods and molluscs', 'Birds and mammals', 'Amphibians and reptiles'],
+    options: [
+      'Annelids and chordates',
+      'Arthropods and molluscs',
+      'Birds and mammals',
+      'Amphibians and reptiles',
+    ],
     correctAnswer: 'Arthropods and molluscs',
-    explanation: 'Open circulatory system is present in arthropods and molluscs in which blood pumped by the heart passes through large vessels into open spaces or body cavities called sinuses. (Class 11, Chapter 15, Page 197)',
+    explanation:
+      'Open circulatory system is present in arthropods and molluscs in which blood pumped by the heart passes through large vessels into open spaces or body cavities called sinuses. (Class 11, Chapter 15, Page 197)',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 15, Page 197',
     previousYearFrequency: 21,
     conceptualLinks: ['Circulatory patterns', 'Open circulation', 'Sinuses'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch13-019',
@@ -10828,14 +11390,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'How many chambers are present in the fish heart?',
     options: ['2', '3', '4', '5'],
     correctAnswer: '2',
-    explanation: 'Fishes have a 2-chambered heart with an atrium and a ventricle. The heart pumps out deoxygenated blood which is oxygenated by the gills (single circulation). (Class 11, Chapter 15, Page 197)',
+    explanation:
+      'Fishes have a 2-chambered heart with an atrium and a ventricle. The heart pumps out deoxygenated blood which is oxygenated by the gills (single circulation). (Class 11, Chapter 15, Page 197)',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 15, Page 197',
     previousYearFrequency: 16,
     conceptualLinks: ['Heart evolution', 'Single circulation', 'Fish circulatory system'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q11-batch13-020',
@@ -10845,14 +11408,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The heart is protected by a double walled membranous bag called:',
     options: ['Pleura', 'Pericardium', 'Peritoneum', 'Meninges'],
     correctAnswer: 'Pericardium',
-    explanation: 'The heart is protected by a double walled membranous bag, pericardium, enclosing the pericardial fluid. It is situated in the thoracic cavity between the two lungs. (Class 11, Chapter 15, Page 198)',
+    explanation:
+      'The heart is protected by a double walled membranous bag, pericardium, enclosing the pericardial fluid. It is situated in the thoracic cavity between the two lungs. (Class 11, Chapter 15, Page 198)',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 15, Page 198',
     previousYearFrequency: 15,
     conceptualLinks: ['Heart anatomy', 'Pericardial cavity', 'Heart protection'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q11-batch13-021',
@@ -10862,14 +11426,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The valve between the right atrium and right ventricle is:',
     options: ['Bicuspid valve', 'Tricuspid valve', 'Mitral valve', 'Semilunar valve'],
     correctAnswer: 'Tricuspid valve',
-    explanation: 'The opening between the right atrium and the right ventricle is guarded by a valve formed of three muscular flaps or cusps, the tricuspid valve. (Class 11, Chapter 15, Page 198)',
+    explanation:
+      'The opening between the right atrium and the right ventricle is guarded by a valve formed of three muscular flaps or cusps, the tricuspid valve. (Class 11, Chapter 15, Page 198)',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 15, Page 198',
     previousYearFrequency: 23,
     conceptualLinks: ['Heart valves', 'Atrioventricular valves', 'Heart anatomy'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch13-022',
@@ -10879,14 +11444,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The bicuspid valve is also known as:',
     options: ['Aortic valve', 'Pulmonary valve', 'Mitral valve', 'Tricuspid valve'],
     correctAnswer: 'Mitral valve',
-    explanation: 'The bicuspid or mitral valve guards the opening between the left atrium and the left ventricle. It has two muscular flaps or cusps. (Class 11, Chapter 15, Page 198)',
+    explanation:
+      'The bicuspid or mitral valve guards the opening between the left atrium and the left ventricle. It has two muscular flaps or cusps. (Class 11, Chapter 15, Page 198)',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 15, Page 198',
     previousYearFrequency: 17,
     conceptualLinks: ['Heart valves', 'Left atrioventricular valve', 'Valve structure'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q11-batch13-023',
@@ -10896,14 +11462,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The pacemaker of the heart is:',
     options: ['AVN', 'SAN', 'Bundle of His', 'Purkinje fibres'],
     correctAnswer: 'SAN',
-    explanation: 'The SAN (sino-atrial node) can generate the maximum number of action potentials, 70-75 min⁻¹, and is responsible for initiating and maintaining the rhythmic contractile activity of the heart. Therefore, it is called the pacemaker. (Class 11, Chapter 15, Page 199)',
+    explanation:
+      'The SAN (sino-atrial node) can generate the maximum number of action potentials, 70-75 min⁻¹, and is responsible for initiating and maintaining the rhythmic contractile activity of the heart. Therefore, it is called the pacemaker. (Class 11, Chapter 15, Page 199)',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 15, Page 199',
     previousYearFrequency: 30,
     conceptualLinks: ['Nodal tissue', 'Action potential', 'Heart rhythm'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch13-024',
@@ -10913,14 +11480,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The normal heart rate in humans is:',
     options: ['50-60 beats/min', '70-75 beats/min', '90-100 beats/min', '110-120 beats/min'],
     correctAnswer: '70-75 beats/min',
-    explanation: 'Our heart normally beats 70-75 times in a minute (average 72 beats min⁻¹). The SAN can generate the maximum number of action potentials, 70-75 min⁻¹. (Class 11, Chapter 15, Page 199)',
+    explanation:
+      'Our heart normally beats 70-75 times in a minute (average 72 beats min⁻¹). The SAN can generate the maximum number of action potentials, 70-75 min⁻¹. (Class 11, Chapter 15, Page 199)',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 15, Page 199',
     previousYearFrequency: 18,
     conceptualLinks: ['Heart rate', 'Cardiac function', 'SAN activity'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q11-batch13-025',
@@ -10930,31 +11498,34 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The duration of one cardiac cycle is approximately:',
     options: ['0.4 seconds', '0.8 seconds', '1.2 seconds', '1.6 seconds'],
     correctAnswer: '0.8 seconds',
-    explanation: 'The heart beats 72 times per minute. From this it could be deduced that the duration of a cardiac cycle is 0.8 seconds (60 seconds ÷ 72 beats). (Class 11, Chapter 15, Page 200)',
+    explanation:
+      'The heart beats 72 times per minute. From this it could be deduced that the duration of a cardiac cycle is 0.8 seconds (60 seconds ÷ 72 beats). (Class 11, Chapter 15, Page 200)',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 15, Page 200',
     previousYearFrequency: 22,
     conceptualLinks: ['Cardiac cycle', 'Heart rate', 'Systole and diastole'],
     timeEstimate: 45,
     bloomsLevel: 'Apply',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch13-026',
     topicId: 'topic-11-15-circulation',
     chapterId: 'ch-11-15',
     classId: 'class-11',
-    question: 'The volume of blood pumped out by each ventricle during one cardiac cycle is called:',
+    question:
+      'The volume of blood pumped out by each ventricle during one cardiac cycle is called:',
     options: ['Cardiac output', 'Stroke volume', 'Minute volume', 'Total volume'],
     correctAnswer: 'Stroke volume',
-    explanation: 'During a cardiac cycle, each ventricle pumps out approximately 70 mL of blood which is called the stroke volume. (Class 11, Chapter 15, Page 200)',
+    explanation:
+      'During a cardiac cycle, each ventricle pumps out approximately 70 mL of blood which is called the stroke volume. (Class 11, Chapter 15, Page 200)',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 15, Page 200',
     previousYearFrequency: 24,
     conceptualLinks: ['Cardiac output', 'Ventricular function', 'Blood volume'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch13-027',
@@ -10964,14 +11535,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The cardiac output of a healthy individual is approximately:',
     options: ['2.5 litres', '5 litres', '7.5 litres', '10 litres'],
     correctAnswer: '5 litres',
-    explanation: 'Cardiac output is the volume of blood pumped out by each ventricle per minute and averages 5000 mL or 5 litres in a healthy individual. It equals stroke volume multiplied by heart rate (70 mL × 72 beats/min ≈ 5000 mL). (Class 11, Chapter 15, Page 200)',
+    explanation:
+      'Cardiac output is the volume of blood pumped out by each ventricle per minute and averages 5000 mL or 5 litres in a healthy individual. It equals stroke volume multiplied by heart rate (70 mL × 72 beats/min ≈ 5000 mL). (Class 11, Chapter 15, Page 200)',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 15, Page 200',
     previousYearFrequency: 26,
     conceptualLinks: ['Cardiac output calculation', 'Stroke volume', 'Heart rate'],
     timeEstimate: 45,
     bloomsLevel: 'Apply',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch13-028',
@@ -10979,16 +11551,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-15',
     classId: 'class-11',
     question: 'The first heart sound (lub) is associated with:',
-    options: ['Closure of semilunar valves', 'Closure of tricuspid and bicuspid valves', 'Opening of semilunar valves', 'Opening of tricuspid and bicuspid valves'],
+    options: [
+      'Closure of semilunar valves',
+      'Closure of tricuspid and bicuspid valves',
+      'Opening of semilunar valves',
+      'Opening of tricuspid and bicuspid valves',
+    ],
     correctAnswer: 'Closure of tricuspid and bicuspid valves',
-    explanation: 'During each cardiac cycle, the first heart sound (lub) is associated with the closure of the tricuspid and bicuspid valves whereas the second heart sound (dub) is associated with the closure of the semilunar valves. (Class 11, Chapter 15, Page 200)',
+    explanation:
+      'During each cardiac cycle, the first heart sound (lub) is associated with the closure of the tricuspid and bicuspid valves whereas the second heart sound (dub) is associated with the closure of the semilunar valves. (Class 11, Chapter 15, Page 200)',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 15, Page 200',
     previousYearFrequency: 25,
     conceptualLinks: ['Heart sounds', 'Valve closure', 'Cardiac auscultation'],
     timeEstimate: 40,
     bloomsLevel: 'Understand',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch13-029',
@@ -10996,16 +11574,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-15',
     classId: 'class-11',
     question: 'In an ECG, the P-wave represents:',
-    options: ['Ventricular depolarisation', 'Atrial depolarisation', 'Ventricular repolarisation', 'Atrial repolarisation'],
+    options: [
+      'Ventricular depolarisation',
+      'Atrial depolarisation',
+      'Ventricular repolarisation',
+      'Atrial repolarisation',
+    ],
     correctAnswer: 'Atrial depolarisation',
-    explanation: 'The P-wave represents the electrical excitation (or depolarisation) of the atria, which leads to the contraction of both the atria. (Class 11, Chapter 15, Page 201)',
+    explanation:
+      'The P-wave represents the electrical excitation (or depolarisation) of the atria, which leads to the contraction of both the atria. (Class 11, Chapter 15, Page 201)',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 15, Page 201',
     previousYearFrequency: 28,
     conceptualLinks: ['ECG interpretation', 'Atrial contraction', 'Electrical activity'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch13-030',
@@ -11013,16 +11597,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-15',
     classId: 'class-11',
     question: 'The QRS complex in ECG represents:',
-    options: ['Atrial depolarisation', 'Ventricular depolarisation', 'Atrial repolarisation', 'Ventricular repolarisation'],
+    options: [
+      'Atrial depolarisation',
+      'Ventricular depolarisation',
+      'Atrial repolarisation',
+      'Ventricular repolarisation',
+    ],
     correctAnswer: 'Ventricular depolarisation',
-    explanation: 'The QRS complex represents the depolarisation of the ventricles, which initiates the ventricular contraction. The contraction starts shortly after Q and marks the beginning of the systole. (Class 11, Chapter 15, Page 201)',
+    explanation:
+      'The QRS complex represents the depolarisation of the ventricles, which initiates the ventricular contraction. The contraction starts shortly after Q and marks the beginning of the systole. (Class 11, Chapter 15, Page 201)',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 15, Page 201',
     previousYearFrequency: 30,
     conceptualLinks: ['ECG waves', 'Ventricular systole', 'Cardiac electrical activity'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 5.5
+    weightage: 5.5,
   },
   {
     id: 'q11-batch13-031',
@@ -11030,16 +11620,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-15',
     classId: 'class-11',
     question: 'The T-wave in ECG indicates:',
-    options: ['Atrial depolarisation', 'Ventricular depolarisation', 'Ventricular repolarisation', 'Atrial repolarisation'],
+    options: [
+      'Atrial depolarisation',
+      'Ventricular depolarisation',
+      'Ventricular repolarisation',
+      'Atrial repolarisation',
+    ],
     correctAnswer: 'Ventricular repolarisation',
-    explanation: 'The T-wave represents the return of the ventricles from excited to normal state (repolarisation). The end of the T-wave marks the end of systole. (Class 11, Chapter 15, Page 201)',
+    explanation:
+      'The T-wave represents the return of the ventricles from excited to normal state (repolarisation). The end of the T-wave marks the end of systole. (Class 11, Chapter 15, Page 201)',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 15, Page 201',
     previousYearFrequency: 27,
     conceptualLinks: ['ECG interpretation', 'Ventricular relaxation', 'Diastole'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch13-032',
@@ -11047,16 +11643,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-15',
     classId: 'class-11',
     question: 'The three layers of blood vessels from inside to outside are:',
-    options: ['Tunica externa, tunica media, tunica intima', 'Tunica intima, tunica externa, tunica media', 'Tunica intima, tunica media, tunica externa', 'Tunica media, tunica intima, tunica externa'],
+    options: [
+      'Tunica externa, tunica media, tunica intima',
+      'Tunica intima, tunica externa, tunica media',
+      'Tunica intima, tunica media, tunica externa',
+      'Tunica media, tunica intima, tunica externa',
+    ],
     correctAnswer: 'Tunica intima, tunica media, tunica externa',
-    explanation: 'Each artery and vein consists of three layers: an inner lining of squamous endothelium (tunica intima), a middle layer of smooth muscle and elastic fibres (tunica media), and an external layer of fibrous connective tissue (tunica externa). (Class 11, Chapter 15, Page 201)',
+    explanation:
+      'Each artery and vein consists of three layers: an inner lining of squamous endothelium (tunica intima), a middle layer of smooth muscle and elastic fibres (tunica media), and an external layer of fibrous connective tissue (tunica externa). (Class 11, Chapter 15, Page 201)',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 15, Page 201',
     previousYearFrequency: 19,
     conceptualLinks: ['Blood vessel structure', 'Arterial wall', 'Venous wall'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch13-033',
@@ -11064,16 +11666,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-15',
     classId: 'class-11',
     question: 'The pathway of blood from heart to lungs and back to heart is called:',
-    options: ['Systemic circulation', 'Pulmonary circulation', 'Coronary circulation', 'Hepatic circulation'],
+    options: [
+      'Systemic circulation',
+      'Pulmonary circulation',
+      'Coronary circulation',
+      'Hepatic circulation',
+    ],
     correctAnswer: 'Pulmonary circulation',
-    explanation: 'The deoxygenated blood pumped into the pulmonary artery is passed on to the lungs from where the oxygenated blood is carried by the pulmonary veins into the left atrium. This pathway constitutes the pulmonary circulation. (Class 11, Chapter 15, Page 201)',
+    explanation:
+      'The deoxygenated blood pumped into the pulmonary artery is passed on to the lungs from where the oxygenated blood is carried by the pulmonary veins into the left atrium. This pathway constitutes the pulmonary circulation. (Class 11, Chapter 15, Page 201)',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 15, Page 201',
     previousYearFrequency: 23,
     conceptualLinks: ['Double circulation', 'Lung oxygenation', 'Blood pathways'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch13-034',
@@ -11083,14 +11691,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The hepatic portal vein carries blood from:',
     options: ['Liver to heart', 'Heart to liver', 'Intestine to liver', 'Liver to intestine'],
     correctAnswer: 'Intestine to liver',
-    explanation: 'A unique vascular connection exists between the digestive tract and liver called hepatic portal system. The hepatic portal vein carries blood from intestine to the liver before it is delivered to the systemic circulation. (Class 11, Chapter 15, Page 202)',
+    explanation:
+      'A unique vascular connection exists between the digestive tract and liver called hepatic portal system. The hepatic portal vein carries blood from intestine to the liver before it is delivered to the systemic circulation. (Class 11, Chapter 15, Page 202)',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 15, Page 202',
     previousYearFrequency: 24,
     conceptualLinks: ['Portal system', 'Hepatic circulation', 'Nutrient absorption'],
     timeEstimate: 40,
     bloomsLevel: 'Understand',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch13-035',
@@ -11098,16 +11707,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-15',
     classId: 'class-11',
     question: 'The heart is called myogenic because:',
-    options: ['It is made of muscles', 'It is regulated by medulla oblongata', 'It is auto-regulated by specialised muscles', 'It responds to hormones'],
+    options: [
+      'It is made of muscles',
+      'It is regulated by medulla oblongata',
+      'It is auto-regulated by specialised muscles',
+      'It responds to hormones',
+    ],
     correctAnswer: 'It is auto-regulated by specialised muscles',
-    explanation: 'Normal activities of the heart are regulated intrinsically, i.e., auto regulated by specialised muscles (nodal tissue), hence the heart is called myogenic. (Class 11, Chapter 15, Page 202)',
+    explanation:
+      'Normal activities of the heart are regulated intrinsically, i.e., auto regulated by specialised muscles (nodal tissue), hence the heart is called myogenic. (Class 11, Chapter 15, Page 202)',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 15, Page 202',
     previousYearFrequency: 26,
     conceptualLinks: ['Myogenic heart', 'Nodal tissue', 'Heart regulation'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch13-036',
@@ -11115,16 +11730,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-15',
     classId: 'class-11',
     question: 'Sympathetic nerves increase:',
-    options: ['Only heart rate', 'Only strength of contraction', 'Both heart rate and strength of contraction', 'Neither heart rate nor strength of contraction'],
+    options: [
+      'Only heart rate',
+      'Only strength of contraction',
+      'Both heart rate and strength of contraction',
+      'Neither heart rate nor strength of contraction',
+    ],
     correctAnswer: 'Both heart rate and strength of contraction',
-    explanation: 'Neural signals through the sympathetic nerves (part of ANS) can increase the rate of heart beat, the strength of ventricular contraction and thereby the cardiac output. (Class 11, Chapter 15, Page 202)',
+    explanation:
+      'Neural signals through the sympathetic nerves (part of ANS) can increase the rate of heart beat, the strength of ventricular contraction and thereby the cardiac output. (Class 11, Chapter 15, Page 202)',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 15, Page 202',
     previousYearFrequency: 21,
     conceptualLinks: ['Autonomic nervous system', 'Sympathetic stimulation', 'Cardiac regulation'],
     timeEstimate: 40,
     bloomsLevel: 'Understand',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch13-037',
@@ -11134,14 +11755,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Normal blood pressure in humans is:',
     options: ['100/60 mm Hg', '120/80 mm Hg', '140/90 mm Hg', '160/100 mm Hg'],
     correctAnswer: '120/80 mm Hg',
-    explanation: 'Hypertension is the term for blood pressure that is higher than normal (120/80). In this measurement, 120 mm Hg is the systolic or pumping pressure and 80 mm Hg is the diastolic or resting pressure. (Class 11, Chapter 15, Page 202)',
+    explanation:
+      'Hypertension is the term for blood pressure that is higher than normal (120/80). In this measurement, 120 mm Hg is the systolic or pumping pressure and 80 mm Hg is the diastolic or resting pressure. (Class 11, Chapter 15, Page 202)',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 15, Page 202',
     previousYearFrequency: 20,
     conceptualLinks: ['Blood pressure', 'Systolic pressure', 'Diastolic pressure'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch13-038',
@@ -11151,14 +11773,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Coronary artery disease is often referred to as:',
     options: ['Thrombosis', 'Atherosclerosis', 'Embolism', 'Ischaemia'],
     correctAnswer: 'Atherosclerosis',
-    explanation: 'Coronary Artery Disease, often referred to as atherosclerosis, affects the vessels that supply blood to the heart muscle. It is caused by deposits of calcium, fat, cholesterol and fibrous tissues, which makes the lumen of arteries narrower. (Class 11, Chapter 15, Page 203)',
+    explanation:
+      'Coronary Artery Disease, often referred to as atherosclerosis, affects the vessels that supply blood to the heart muscle. It is caused by deposits of calcium, fat, cholesterol and fibrous tissues, which makes the lumen of arteries narrower. (Class 11, Chapter 15, Page 203)',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 15, Page 203',
     previousYearFrequency: 25,
     conceptualLinks: ['CAD', 'Arterial blockage', 'Cholesterol deposits'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch13-039',
@@ -11166,16 +11789,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-15',
     classId: 'class-11',
     question: 'Which of the following best describes angina pectoris?',
-    options: ['Heart stops beating', 'Acute chest pain due to insufficient oxygen to heart', 'Complete heart failure', 'Heart attack with muscle damage'],
+    options: [
+      'Heart stops beating',
+      'Acute chest pain due to insufficient oxygen to heart',
+      'Complete heart failure',
+      'Heart attack with muscle damage',
+    ],
     correctAnswer: 'Acute chest pain due to insufficient oxygen to heart',
-    explanation: 'Angina pectoris is a symptom of acute chest pain that appears when not enough oxygen is reaching the heart muscle. It occurs due to conditions that affect the blood flow. (Class 11, Chapter 15, Page 203)',
+    explanation:
+      'Angina pectoris is a symptom of acute chest pain that appears when not enough oxygen is reaching the heart muscle. It occurs due to conditions that affect the blood flow. (Class 11, Chapter 15, Page 203)',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 15, Page 203',
     previousYearFrequency: 22,
     conceptualLinks: ['Angina', 'Myocardial ischaemia', 'Chest pain'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch13-040',
@@ -11183,16 +11812,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-15',
     classId: 'class-11',
     question: 'Which cells are phagocytic in nature?',
-    options: ['Lymphocytes and basophils', 'Neutrophils and monocytes', 'Eosinophils and basophils', 'RBCs and platelets'],
+    options: [
+      'Lymphocytes and basophils',
+      'Neutrophils and monocytes',
+      'Eosinophils and basophils',
+      'RBCs and platelets',
+    ],
     correctAnswer: 'Neutrophils and monocytes',
-    explanation: 'Neutrophils and monocytes (6-8 per cent) are phagocytic cells which destroy foreign organisms entering the body. Neutrophils constitute 60-65% of total WBCs. (Class 11, Chapter 15, Page 194)',
+    explanation:
+      'Neutrophils and monocytes (6-8 per cent) are phagocytic cells which destroy foreign organisms entering the body. Neutrophils constitute 60-65% of total WBCs. (Class 11, Chapter 15, Page 194)',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 15, Page 194',
     previousYearFrequency: 23,
     conceptualLinks: ['Phagocytosis', 'WBC function', 'Immunity'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch13-041',
@@ -11202,14 +11837,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Which cells are associated with allergic reactions?',
     options: ['Neutrophils', 'Monocytes', 'Eosinophils', 'Lymphocytes'],
     correctAnswer: 'Eosinophils',
-    explanation: 'Eosinophils (2-3 per cent) resist infections and are also associated with allergic reactions. They are a type of granulocyte. (Class 11, Chapter 15, Page 194)',
+    explanation:
+      'Eosinophils (2-3 per cent) resist infections and are also associated with allergic reactions. They are a type of granulocyte. (Class 11, Chapter 15, Page 194)',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 15, Page 194',
     previousYearFrequency: 19,
     conceptualLinks: ['Eosinophils', 'Allergic response', 'WBC types'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch13-042',
@@ -11219,14 +11855,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Basophils secrete all of the following EXCEPT:',
     options: ['Histamine', 'Serotonin', 'Heparin', 'Antibodies'],
     correctAnswer: 'Antibodies',
-    explanation: 'Basophils secrete histamine, serotonin, heparin, etc., and are involved in inflammatory reactions. They constitute 0.5-1% of WBCs. Antibodies are produced by lymphocytes, not basophils. (Class 11, Chapter 15, Page 194)',
+    explanation:
+      'Basophils secrete histamine, serotonin, heparin, etc., and are involved in inflammatory reactions. They constitute 0.5-1% of WBCs. Antibodies are produced by lymphocytes, not basophils. (Class 11, Chapter 15, Page 194)',
     difficulty: 'Hard',
     ncertPageReference: 'Class 11, Chapter 15, Page 194',
     previousYearFrequency: 16,
     conceptualLinks: ['Basophil function', 'Inflammatory mediators', 'WBC secretions'],
     timeEstimate: 50,
     bloomsLevel: 'Analyze',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch13-043',
@@ -11236,14 +11873,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Reduction in platelet number leads to:',
     options: ['Anaemia', 'Clotting disorders', 'Infection', 'Immunity loss'],
     correctAnswer: 'Clotting disorders',
-    explanation: 'Platelets can release a variety of substances most of which are involved in the coagulation or clotting of blood. A reduction in their number can lead to clotting disorders which will lead to excessive loss of blood from the body. (Class 11, Chapter 15, Page 195)',
+    explanation:
+      'Platelets can release a variety of substances most of which are involved in the coagulation or clotting of blood. A reduction in their number can lead to clotting disorders which will lead to excessive loss of blood from the body. (Class 11, Chapter 15, Page 195)',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 15, Page 195',
     previousYearFrequency: 18,
     conceptualLinks: ['Thrombocytopenia', 'Blood clotting', 'Platelet function'],
     timeEstimate: 40,
     bloomsLevel: 'Understand',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch13-044',
@@ -11253,14 +11891,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'A person with blood group A has which antibodies in plasma?',
     options: ['Anti-A', 'Anti-B', 'Both anti-A and anti-B', 'No antibodies'],
     correctAnswer: 'Anti-B',
-    explanation: 'According to the ABO grouping table, a person with blood group A has antigen A on RBCs and antibody anti-B in plasma. This prevents them from receiving B or AB blood. (Class 11, Chapter 15, Page 195)',
+    explanation:
+      'According to the ABO grouping table, a person with blood group A has antigen A on RBCs and antibody anti-B in plasma. This prevents them from receiving B or AB blood. (Class 11, Chapter 15, Page 195)',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 15, Page 195',
     previousYearFrequency: 24,
     conceptualLinks: ['ABO system', 'Blood group antigens', 'Antibodies'],
     timeEstimate: 40,
     bloomsLevel: 'Understand',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch13-045',
@@ -11270,14 +11909,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Which ion plays a very important role in blood clotting?',
     options: ['Sodium', 'Potassium', 'Calcium', 'Magnesium'],
     correctAnswer: 'Calcium',
-    explanation: 'Calcium ions play a very important role in clotting. The coagulation cascade involves multiple factors and requires calcium for various enzymatic reactions. (Class 11, Chapter 15, Page 196)',
+    explanation:
+      'Calcium ions play a very important role in clotting. The coagulation cascade involves multiple factors and requires calcium for various enzymatic reactions. (Class 11, Chapter 15, Page 196)',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 15, Page 196',
     previousYearFrequency: 20,
     conceptualLinks: ['Blood coagulation', 'Clotting factors', 'Calcium function'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch13-046',
@@ -11287,14 +11927,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Incomplete double circulation is found in:',
     options: ['Fishes', 'Amphibians and reptiles', 'Birds and mammals', 'Only crocodiles'],
     correctAnswer: 'Amphibians and reptiles',
-    explanation: 'In amphibians and reptiles (except crocodiles), oxygenated and deoxygenated blood get mixed up in the single ventricle which pumps out mixed blood (incomplete double circulation). They have a 3-chambered heart. (Class 11, Chapter 15, Page 197)',
+    explanation:
+      'In amphibians and reptiles (except crocodiles), oxygenated and deoxygenated blood get mixed up in the single ventricle which pumps out mixed blood (incomplete double circulation). They have a 3-chambered heart. (Class 11, Chapter 15, Page 197)',
     difficulty: 'Hard',
     ncertPageReference: 'Class 11, Chapter 15, Page 197',
     previousYearFrequency: 27,
     conceptualLinks: ['Heart evolution', 'Circulation patterns', 'Vertebrate heart'],
     timeEstimate: 55,
     bloomsLevel: 'Analyze',
-    weightage: 5.5
+    weightage: 5.5,
   },
   {
     id: 'q11-batch13-047',
@@ -11304,14 +11945,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The inter-ventricular septum is:',
     options: ['Thin-walled', 'Thick-walled', 'Absent in humans', 'Made of fibrous tissue only'],
     correctAnswer: 'Thick-walled',
-    explanation: 'A thick-walled inter-ventricular septum separates the left and the right ventricles, whereas a thin muscular wall called the inter-atrial septum separates the right and left atria. (Class 11, Chapter 15, Page 198)',
+    explanation:
+      'A thick-walled inter-ventricular septum separates the left and the right ventricles, whereas a thin muscular wall called the inter-atrial septum separates the right and left atria. (Class 11, Chapter 15, Page 198)',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 15, Page 198',
     previousYearFrequency: 14,
     conceptualLinks: ['Heart structure', 'Septa', 'Ventricular separation'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q11-batch13-048',
@@ -11319,16 +11961,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-15',
     classId: 'class-11',
     question: 'During joint diastole:',
-    options: ['All chambers are relaxed', 'Only ventricles are relaxed', 'Only atria are relaxed', 'All chambers are contracted'],
+    options: [
+      'All chambers are relaxed',
+      'Only ventricles are relaxed',
+      'Only atria are relaxed',
+      'All chambers are contracted',
+    ],
     correctAnswer: 'All chambers are relaxed',
-    explanation: 'To begin the cardiac cycle, all the four chambers of heart are in a relaxed state, i.e., they are in joint diastole. Blood flows from pulmonary veins and vena cava into the ventricles through the atria. (Class 11, Chapter 15, Page 199)',
+    explanation:
+      'To begin the cardiac cycle, all the four chambers of heart are in a relaxed state, i.e., they are in joint diastole. Blood flows from pulmonary veins and vena cava into the ventricles through the atria. (Class 11, Chapter 15, Page 199)',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 15, Page 199',
     previousYearFrequency: 17,
     conceptualLinks: ['Cardiac cycle', 'Diastole', 'Heart relaxation'],
     timeEstimate: 40,
     bloomsLevel: 'Understand',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch13-049',
@@ -11336,16 +11984,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-15',
     classId: 'class-11',
     question: 'Parasympathetic stimulation of the heart causes:',
-    options: ['Increased heart rate', 'Decreased heart rate', 'No change in heart rate', 'Irregular heart rate'],
+    options: [
+      'Increased heart rate',
+      'Decreased heart rate',
+      'No change in heart rate',
+      'Irregular heart rate',
+    ],
     correctAnswer: 'Decreased heart rate',
-    explanation: 'Parasympathetic neural signals (component of ANS) decrease the rate of heart beat, speed of conduction of action potential and thereby the cardiac output. This is opposite to sympathetic stimulation. (Class 11, Chapter 15, Page 202)',
+    explanation:
+      'Parasympathetic neural signals (component of ANS) decrease the rate of heart beat, speed of conduction of action potential and thereby the cardiac output. This is opposite to sympathetic stimulation. (Class 11, Chapter 15, Page 202)',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 15, Page 202',
     previousYearFrequency: 21,
     conceptualLinks: ['ANS regulation', 'Parasympathetic nervous system', 'Heart rate control'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch13-050',
@@ -11353,16 +12007,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-15',
     classId: 'class-11',
     question: 'Which of the following correctly describes the clotting cascade?',
-    options: ['Fibrin → Fibrinogen → Thrombin → Prothrombin', 'Prothrombin → Thrombin → Fibrinogen → Fibrin', 'Thrombin → Prothrombin → Fibrin → Fibrinogen', 'Fibrinogen → Fibrin → Prothrombin → Thrombin'],
+    options: [
+      'Fibrin → Fibrinogen → Thrombin → Prothrombin',
+      'Prothrombin → Thrombin → Fibrinogen → Fibrin',
+      'Thrombin → Prothrombin → Fibrin → Fibrinogen',
+      'Fibrinogen → Fibrin → Prothrombin → Thrombin',
+    ],
     correctAnswer: 'Prothrombin → Thrombin → Fibrinogen → Fibrin',
-    explanation: 'The clotting cascade proceeds as follows: Prothrombin is converted to Thrombin by thrombokinase enzyme complex, then Thrombin converts inactive Fibrinogen to Fibrin threads which form the clot network. (Class 11, Chapter 15, Page 196)',
+    explanation:
+      'The clotting cascade proceeds as follows: Prothrombin is converted to Thrombin by thrombokinase enzyme complex, then Thrombin converts inactive Fibrinogen to Fibrin threads which form the clot network. (Class 11, Chapter 15, Page 196)',
     difficulty: 'Hard',
     ncertPageReference: 'Class 11, Chapter 15, Page 196',
     previousYearFrequency: 28,
     conceptualLinks: ['Coagulation mechanism', 'Clotting factors', 'Cascade process'],
     timeEstimate: 60,
     bloomsLevel: 'Analyze',
-    weightage: 6.0
+    weightage: 6.0,
   },
 
   // ============================================================================
@@ -11373,17 +12033,24 @@ export const class11Questions: AuthenticQuestion[] = [
     topicId: 'topic-11-16-excretion',
     chapterId: 'ch-11-16',
     classId: 'class-11',
-    question: 'Which of the following is the most toxic nitrogenous waste requiring large amounts of water for elimination?',
+    question:
+      'Which of the following is the most toxic nitrogenous waste requiring large amounts of water for elimination?',
     options: ['Urea', 'Uric acid', 'Ammonia', 'Creatinine'],
     correctAnswer: 'Ammonia',
-    explanation: 'Ammonia is the most toxic form of nitrogenous waste and requires large amounts of water for its elimination, whereas uric acid is the least toxic and can be removed with minimum water loss. Reference: Class 11, Chapter 16, Page 205',
+    explanation:
+      'Ammonia is the most toxic form of nitrogenous waste and requires large amounts of water for its elimination, whereas uric acid is the least toxic and can be removed with minimum water loss. Reference: Class 11, Chapter 16, Page 205',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 16, Page 205',
     previousYearFrequency: 25,
-    conceptualLinks: ['Ammonotelism', 'Nitrogenous waste elimination', 'Water conservation', 'Terrestrial adaptation'],
+    conceptualLinks: [
+      'Ammonotelism',
+      'Nitrogenous waste elimination',
+      'Water conservation',
+      'Terrestrial adaptation',
+    ],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q11-batch14-002',
@@ -11393,14 +12060,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Animals that excrete nitrogenous wastes primarily as urea are called:',
     options: ['Ammonotelic', 'Ureotelic', 'Uricotelic', 'Aminotelic'],
     correctAnswer: 'Ureotelic',
-    explanation: 'Mammals, many terrestrial amphibians and marine fishes mainly excrete urea and are called ureotelic animals. Ammonia produced by metabolism is converted into urea in the liver. Reference: Class 11, Chapter 16, Page 205',
+    explanation:
+      'Mammals, many terrestrial amphibians and marine fishes mainly excrete urea and are called ureotelic animals. Ammonia produced by metabolism is converted into urea in the liver. Reference: Class 11, Chapter 16, Page 205',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 16, Page 205',
     previousYearFrequency: 28,
     conceptualLinks: ['Ureotelism', 'Urea excretion', 'Liver function', 'Nitrogenous wastes'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q11-batch14-003',
@@ -11408,16 +12076,27 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-16',
     classId: 'class-11',
     question: 'Which among the following animals are uricotelic?',
-    options: ['Bony fishes and aquatic amphibians', 'Mammals and terrestrial amphibians', 'Reptiles, birds, and insects', 'Marine fishes and mammals'],
+    options: [
+      'Bony fishes and aquatic amphibians',
+      'Mammals and terrestrial amphibians',
+      'Reptiles, birds, and insects',
+      'Marine fishes and mammals',
+    ],
     correctAnswer: 'Reptiles, birds, and insects',
-    explanation: 'Reptiles, birds, land snails and insects excrete nitrogenous wastes as uric acid in the form of pellet or paste with minimum water loss and are called uricotelic animals. Reference: Class 11, Chapter 16, Page 205',
+    explanation:
+      'Reptiles, birds, land snails and insects excrete nitrogenous wastes as uric acid in the form of pellet or paste with minimum water loss and are called uricotelic animals. Reference: Class 11, Chapter 16, Page 205',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 16, Page 205',
     previousYearFrequency: 26,
-    conceptualLinks: ['Uricotelism', 'Water conservation', 'Uric acid excretion', 'Terrestrial adaptation'],
+    conceptualLinks: [
+      'Uricotelism',
+      'Water conservation',
+      'Uric acid excretion',
+      'Terrestrial adaptation',
+    ],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q11-batch14-004',
@@ -11427,14 +12106,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The excretory structures in Platyhelminthes are:',
     options: ['Nephridia', 'Malpighian tubules', 'Protonephridia or flame cells', 'Green glands'],
     correctAnswer: 'Protonephridia or flame cells',
-    explanation: 'Protonephridia or flame cells are the excretory structures in Platyhelminthes (flatworms), rotifers, some annelids and Amphioxus. They are primarily concerned with osmoregulation. Reference: Class 11, Chapter 16, Page 206',
+    explanation:
+      'Protonephridia or flame cells are the excretory structures in Platyhelminthes (flatworms), rotifers, some annelids and Amphioxus. They are primarily concerned with osmoregulation. Reference: Class 11, Chapter 16, Page 206',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 16, Page 206',
     previousYearFrequency: 18,
     conceptualLinks: ['Protonephridia', 'Flame cells', 'Osmoregulation', 'Invertebrate excretion'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 3.0
+    weightage: 3.0,
   },
   {
     id: 'q11-batch14-005',
@@ -11444,14 +12124,20 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Malpighian tubules are the excretory organs of:',
     options: ['Earthworms', 'Cockroaches', 'Prawns', 'Planaria'],
     correctAnswer: 'Cockroaches',
-    explanation: 'Malpighian tubules are the excretory structures of most insects including cockroaches. They help in removal of nitrogenous wastes and osmoregulation. Reference: Class 11, Chapter 16, Page 206',
+    explanation:
+      'Malpighian tubules are the excretory structures of most insects including cockroaches. They help in removal of nitrogenous wastes and osmoregulation. Reference: Class 11, Chapter 16, Page 206',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 16, Page 206',
     previousYearFrequency: 22,
-    conceptualLinks: ['Malpighian tubules', 'Insect excretion', 'Osmoregulation', 'Nitrogenous waste removal'],
+    conceptualLinks: [
+      'Malpighian tubules',
+      'Insect excretion',
+      'Osmoregulation',
+      'Nitrogenous waste removal',
+    ],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q11-batch14-006',
@@ -11461,31 +12147,39 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Each kidney of an adult human measures approximately:',
     options: ['5-7 cm in length', '10-12 cm in length', '15-17 cm in length', '20-22 cm in length'],
     correctAnswer: '10-12 cm in length',
-    explanation: 'Each kidney of an adult human measures 10-12 cm in length, 5-7 cm in width, 2-3 cm in thickness with an average weight of 120-170 g. Reference: Class 11, Chapter 16, Page 206',
+    explanation:
+      'Each kidney of an adult human measures 10-12 cm in length, 5-7 cm in width, 2-3 cm in thickness with an average weight of 120-170 g. Reference: Class 11, Chapter 16, Page 206',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 16, Page 206',
     previousYearFrequency: 15,
-    conceptualLinks: ['Kidney anatomy', 'Human excretory system', 'Kidney dimensions', 'Renal structure'],
+    conceptualLinks: [
+      'Kidney anatomy',
+      'Human excretory system',
+      'Kidney dimensions',
+      'Renal structure',
+    ],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 3.0
+    weightage: 3.0,
   },
   {
     id: 'q11-batch14-007',
     topicId: 'topic-11-16-excretion',
     chapterId: 'ch-11-16',
     classId: 'class-11',
-    question: 'The notch on the inner concave surface of kidney through which ureter, blood vessels and nerves enter is called:',
+    question:
+      'The notch on the inner concave surface of kidney through which ureter, blood vessels and nerves enter is called:',
     options: ['Renal pelvis', 'Hilum', 'Calyx', 'Column of Bertini'],
     correctAnswer: 'Hilum',
-    explanation: 'Towards the centre of the inner concave surface of the kidney is a notch called hilum through which ureter, blood vessels and nerves enter. Reference: Class 11, Chapter 16, Page 206',
+    explanation:
+      'Towards the centre of the inner concave surface of the kidney is a notch called hilum through which ureter, blood vessels and nerves enter. Reference: Class 11, Chapter 16, Page 206',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 16, Page 206',
     previousYearFrequency: 20,
     conceptualLinks: ['Hilum', 'Kidney structure', 'Renal anatomy', 'Blood supply to kidney'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q11-batch14-008',
@@ -11495,31 +12189,34 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The two zones inside the kidney are:',
     options: ['Cortex and pelvis', 'Cortex and medulla', 'Medulla and calyx', 'Pelvis and pyramid'],
     correctAnswer: 'Cortex and medulla',
-    explanation: 'Inside the kidney, there are two zones - an outer cortex and an inner medulla. The medulla is divided into conical masses called medullary pyramids. Reference: Class 11, Chapter 16, Page 206',
+    explanation:
+      'Inside the kidney, there are two zones - an outer cortex and an inner medulla. The medulla is divided into conical masses called medullary pyramids. Reference: Class 11, Chapter 16, Page 206',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 16, Page 206',
     previousYearFrequency: 24,
     conceptualLinks: ['Kidney cortex', 'Kidney medulla', 'Renal anatomy', 'Medullary pyramids'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q11-batch14-009',
     topicId: 'topic-11-16-excretion',
     chapterId: 'ch-11-16',
     classId: 'class-11',
-    question: 'The cortical portions projecting between the medullary pyramids in the kidney are called:',
+    question:
+      'The cortical portions projecting between the medullary pyramids in the kidney are called:',
     options: ['Renal pelvis', 'Calyces', 'Columns of Bertini', 'Renal corpuscles'],
     correctAnswer: 'Columns of Bertini',
-    explanation: 'The cortex extends in between the medullary pyramids as renal columns called Columns of Bertini. Reference: Class 11, Chapter 16, Page 207',
+    explanation:
+      'The cortex extends in between the medullary pyramids as renal columns called Columns of Bertini. Reference: Class 11, Chapter 16, Page 207',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 16, Page 207',
     previousYearFrequency: 16,
     conceptualLinks: ['Columns of Bertini', 'Renal columns', 'Kidney cortex', 'Medullary pyramids'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 3.0
+    weightage: 3.0,
   },
   {
     id: 'q11-batch14-010',
@@ -11529,14 +12226,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The functional unit of kidney is:',
     options: ['Glomerulus', 'Bowman capsule', 'Nephron', 'Collecting duct'],
     correctAnswer: 'Nephron',
-    explanation: 'Each kidney has nearly one million complex tubular structures called nephrons, which are the functional units. Each nephron has two parts - the glomerulus and the renal tubule. Reference: Class 11, Chapter 16, Page 207',
+    explanation:
+      'Each kidney has nearly one million complex tubular structures called nephrons, which are the functional units. Each nephron has two parts - the glomerulus and the renal tubule. Reference: Class 11, Chapter 16, Page 207',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 16, Page 207',
     previousYearFrequency: 30,
     conceptualLinks: ['Nephron', 'Functional unit', 'Kidney structure', 'Urine formation'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch14-011',
@@ -11546,14 +12244,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The tuft of capillaries formed by the afferent arteriole in the nephron is called:',
     options: ['Vasa recta', 'Peritubular capillaries', 'Glomerulus', 'Efferent arteriole'],
     correctAnswer: 'Glomerulus',
-    explanation: 'Glomerulus is a tuft of capillaries formed by the afferent arteriole - a fine branch of renal artery. Blood from the glomerulus is carried away by an efferent arteriole. Reference: Class 11, Chapter 16, Page 207',
+    explanation:
+      'Glomerulus is a tuft of capillaries formed by the afferent arteriole - a fine branch of renal artery. Blood from the glomerulus is carried away by an efferent arteriole. Reference: Class 11, Chapter 16, Page 207',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 16, Page 207',
     previousYearFrequency: 27,
     conceptualLinks: ['Glomerulus', 'Capillary tuft', 'Afferent arteriole', 'Blood filtration'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q11-batch14-012',
@@ -11563,14 +12262,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The double-walled cup-like structure that encloses the glomerulus is:',
     options: ['Renal tubule', 'Bowman capsule', 'Henle loop', 'Collecting duct'],
     correctAnswer: 'Bowman capsule',
-    explanation: 'The renal tubule begins with a double walled cup-like structure called Bowman capsule, which encloses the glomerulus. Glomerulus along with Bowman capsule is called the malpighian body or renal corpuscle. Reference: Class 11, Chapter 16, Page 207',
+    explanation:
+      'The renal tubule begins with a double walled cup-like structure called Bowman capsule, which encloses the glomerulus. Glomerulus along with Bowman capsule is called the malpighian body or renal corpuscle. Reference: Class 11, Chapter 16, Page 207',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 16, Page 207',
     previousYearFrequency: 26,
     conceptualLinks: ['Bowman capsule', 'Glomerulus', 'Malpighian body', 'Renal corpuscle'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q11-batch14-013',
@@ -11578,16 +12278,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-16',
     classId: 'class-11',
     question: 'The highly coiled network following Bowman capsule is called:',
-    options: ['Distal convoluted tubule', 'Proximal convoluted tubule', 'Loop of Henle', 'Collecting duct'],
+    options: [
+      'Distal convoluted tubule',
+      'Proximal convoluted tubule',
+      'Loop of Henle',
+      'Collecting duct',
+    ],
     correctAnswer: 'Proximal convoluted tubule',
-    explanation: 'The tubule continues further from Bowman capsule to form a highly coiled network - proximal convoluted tubule (PCT). Reference: Class 11, Chapter 16, Page 207',
+    explanation:
+      'The tubule continues further from Bowman capsule to form a highly coiled network - proximal convoluted tubule (PCT). Reference: Class 11, Chapter 16, Page 207',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 16, Page 207',
     previousYearFrequency: 23,
     conceptualLinks: ['Proximal convoluted tubule', 'PCT', 'Nephron structure', 'Renal tubule'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q11-batch14-014',
@@ -11595,16 +12301,27 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-16',
     classId: 'class-11',
     question: 'Which part of the nephron has a descending and ascending limb?',
-    options: ['Proximal convoluted tubule', 'Henle loop', 'Distal convoluted tubule', 'Collecting duct'],
+    options: [
+      'Proximal convoluted tubule',
+      'Henle loop',
+      'Distal convoluted tubule',
+      'Collecting duct',
+    ],
     correctAnswer: 'Henle loop',
-    explanation: 'A hairpin shaped Henle loop is the next part of the tubule which has a descending and an ascending limb. The ascending limb continues as distal convoluted tubule. Reference: Class 11, Chapter 16, Page 208',
+    explanation:
+      'A hairpin shaped Henle loop is the next part of the tubule which has a descending and an ascending limb. The ascending limb continues as distal convoluted tubule. Reference: Class 11, Chapter 16, Page 208',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 16, Page 208',
     previousYearFrequency: 25,
-    conceptualLinks: ['Henle loop', 'Descending limb', 'Ascending limb', 'Counter-current mechanism'],
+    conceptualLinks: [
+      'Henle loop',
+      'Descending limb',
+      'Ascending limb',
+      'Counter-current mechanism',
+    ],
     timeEstimate: 40,
     bloomsLevel: 'Understand',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch14-015',
@@ -11612,33 +12329,51 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-16',
     classId: 'class-11',
     question: 'Nephrons with long loops of Henle that run deep into the medulla are called:',
-    options: ['Cortical nephrons', 'Juxtamedullary nephrons', 'Medullary nephrons', 'Peritubular nephrons'],
+    options: [
+      'Cortical nephrons',
+      'Juxtamedullary nephrons',
+      'Medullary nephrons',
+      'Peritubular nephrons',
+    ],
     correctAnswer: 'Juxtamedullary nephrons',
-    explanation: 'In some nephrons, the loop of Henle is very long and runs deep into the medulla. These nephrons are called juxtamedullary nephrons. Cortical nephrons have short loops extending only little into medulla. Reference: Class 11, Chapter 16, Page 208',
+    explanation:
+      'In some nephrons, the loop of Henle is very long and runs deep into the medulla. These nephrons are called juxtamedullary nephrons. Cortical nephrons have short loops extending only little into medulla. Reference: Class 11, Chapter 16, Page 208',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 16, Page 208',
     previousYearFrequency: 22,
-    conceptualLinks: ['Juxtamedullary nephrons', 'Cortical nephrons', 'Loop of Henle', 'Urine concentration'],
+    conceptualLinks: [
+      'Juxtamedullary nephrons',
+      'Cortical nephrons',
+      'Loop of Henle',
+      'Urine concentration',
+    ],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch14-016',
     topicId: 'topic-11-16-excretion',
     chapterId: 'ch-11-16',
     classId: 'class-11',
-    question: 'The fine capillary network around the renal tubule formed from efferent arteriole is called:',
+    question:
+      'The fine capillary network around the renal tubule formed from efferent arteriole is called:',
     options: ['Glomerulus', 'Vasa recta', 'Peritubular capillaries', 'Afferent arteriole'],
     correctAnswer: 'Peritubular capillaries',
-    explanation: 'The efferent arteriole emerging from the glomerulus forms a fine capillary network around the renal tubule called the peritubular capillaries. Reference: Class 11, Chapter 16, Page 208',
+    explanation:
+      'The efferent arteriole emerging from the glomerulus forms a fine capillary network around the renal tubule called the peritubular capillaries. Reference: Class 11, Chapter 16, Page 208',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 16, Page 208',
     previousYearFrequency: 19,
-    conceptualLinks: ['Peritubular capillaries', 'Efferent arteriole', 'Reabsorption', 'Tubular secretion'],
+    conceptualLinks: [
+      'Peritubular capillaries',
+      'Efferent arteriole',
+      'Reabsorption',
+      'Tubular secretion',
+    ],
     timeEstimate: 40,
     bloomsLevel: 'Understand',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q11-batch14-017',
@@ -11648,14 +12383,20 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The U-shaped vessel that runs parallel to the Henle loop is:',
     options: ['Afferent arteriole', 'Efferent arteriole', 'Vasa recta', 'Peritubular capillary'],
     correctAnswer: 'Vasa recta',
-    explanation: 'A minute vessel of the peritubular network runs parallel to the Henle loop forming a U-shaped vasa recta. Vasa recta is absent or highly reduced in cortical nephrons. Reference: Class 11, Chapter 16, Page 208',
+    explanation:
+      'A minute vessel of the peritubular network runs parallel to the Henle loop forming a U-shaped vasa recta. Vasa recta is absent or highly reduced in cortical nephrons. Reference: Class 11, Chapter 16, Page 208',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 16, Page 208',
     previousYearFrequency: 21,
-    conceptualLinks: ['Vasa recta', 'Counter-current mechanism', 'Henle loop', 'Urine concentration'],
+    conceptualLinks: [
+      'Vasa recta',
+      'Counter-current mechanism',
+      'Henle loop',
+      'Urine concentration',
+    ],
     timeEstimate: 40,
     bloomsLevel: 'Understand',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch14-018',
@@ -11663,16 +12404,27 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-16',
     classId: 'class-11',
     question: 'The three main processes involved in urine formation are:',
-    options: ['Filtration, absorption and excretion', 'Filtration, reabsorption and secretion', 'Absorption, secretion and excretion', 'Diffusion, osmosis and active transport'],
+    options: [
+      'Filtration, absorption and excretion',
+      'Filtration, reabsorption and secretion',
+      'Absorption, secretion and excretion',
+      'Diffusion, osmosis and active transport',
+    ],
     correctAnswer: 'Filtration, reabsorption and secretion',
-    explanation: 'Urine formation involves three main processes namely, glomerular filtration, reabsorption and secretion, that takes place in different parts of the nephron. Reference: Class 11, Chapter 16, Page 208',
+    explanation:
+      'Urine formation involves three main processes namely, glomerular filtration, reabsorption and secretion, that takes place in different parts of the nephron. Reference: Class 11, Chapter 16, Page 208',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 16, Page 208',
     previousYearFrequency: 28,
-    conceptualLinks: ['Glomerular filtration', 'Tubular reabsorption', 'Tubular secretion', 'Urine formation'],
+    conceptualLinks: [
+      'Glomerular filtration',
+      'Tubular reabsorption',
+      'Tubular secretion',
+      'Urine formation',
+    ],
     timeEstimate: 40,
     bloomsLevel: 'Understand',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch14-019',
@@ -11682,31 +12434,39 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'On average, how much blood is filtered by the kidneys per minute?',
     options: ['500-600 ml', '800-900 ml', '1100-1200 ml', '1500-1600 ml'],
     correctAnswer: '1100-1200 ml',
-    explanation: 'On an average, 1100-1200 ml of blood is filtered by the kidneys per minute which constitutes roughly 1/5th of the blood pumped out by each ventricle of the heart in a minute. Reference: Class 11, Chapter 16, Page 208',
+    explanation:
+      'On an average, 1100-1200 ml of blood is filtered by the kidneys per minute which constitutes roughly 1/5th of the blood pumped out by each ventricle of the heart in a minute. Reference: Class 11, Chapter 16, Page 208',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 16, Page 208',
     previousYearFrequency: 24,
-    conceptualLinks: ['Renal blood flow', 'Glomerular filtration', 'Cardiac output', 'Kidney function'],
+    conceptualLinks: [
+      'Renal blood flow',
+      'Glomerular filtration',
+      'Cardiac output',
+      'Kidney function',
+    ],
     timeEstimate: 45,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch14-020',
     topicId: 'topic-11-16-excretion',
     chapterId: 'ch-11-16',
     classId: 'class-11',
-    question: 'The epithelial cells of Bowman capsule that are arranged to leave minute filtration slits are called:',
+    question:
+      'The epithelial cells of Bowman capsule that are arranged to leave minute filtration slits are called:',
     options: ['Endothelial cells', 'Podocytes', 'Mesangial cells', 'Juxtaglomerular cells'],
     correctAnswer: 'Podocytes',
-    explanation: 'The epithelial cells of Bowman capsule called podocytes are arranged in an intricate manner to leave some minute spaces called filtration slits or slit pores through which blood is filtered. Reference: Class 11, Chapter 16, Page 208',
+    explanation:
+      'The epithelial cells of Bowman capsule called podocytes are arranged in an intricate manner to leave some minute spaces called filtration slits or slit pores through which blood is filtered. Reference: Class 11, Chapter 16, Page 208',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 16, Page 208',
     previousYearFrequency: 20,
     conceptualLinks: ['Podocytes', 'Filtration slits', 'Bowman capsule', 'Ultrafiltration'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch14-021',
@@ -11716,14 +12476,20 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Which component of blood is NOT filtered through glomerular membranes?',
     options: ['Water', 'Glucose', 'Proteins', 'Amino acids'],
     correctAnswer: 'Proteins',
-    explanation: 'Blood is filtered so finely through the glomerular membranes that almost all constituents of plasma except proteins pass onto the lumen of Bowman capsule. Therefore, it is considered as a process of ultrafiltration. Reference: Class 11, Chapter 16, Page 208',
+    explanation:
+      'Blood is filtered so finely through the glomerular membranes that almost all constituents of plasma except proteins pass onto the lumen of Bowman capsule. Therefore, it is considered as a process of ultrafiltration. Reference: Class 11, Chapter 16, Page 208',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 16, Page 208',
     previousYearFrequency: 26,
-    conceptualLinks: ['Ultrafiltration', 'Glomerular filtration', 'Plasma proteins', 'Filtration barrier'],
+    conceptualLinks: [
+      'Ultrafiltration',
+      'Glomerular filtration',
+      'Plasma proteins',
+      'Filtration barrier',
+    ],
     timeEstimate: 40,
     bloomsLevel: 'Understand',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch14-022',
@@ -11733,14 +12499,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The Glomerular Filtration Rate (GFR) in a healthy individual is approximately:',
     options: ['75 ml/minute', '100 ml/minute', '125 ml/minute', '150 ml/minute'],
     correctAnswer: '125 ml/minute',
-    explanation: 'GFR in a healthy individual is approximately 125 ml/minute, i.e., 180 litres per day. This is the amount of filtrate formed by the kidneys per minute. Reference: Class 11, Chapter 16, Page 209',
+    explanation:
+      'GFR in a healthy individual is approximately 125 ml/minute, i.e., 180 litres per day. This is the amount of filtrate formed by the kidneys per minute. Reference: Class 11, Chapter 16, Page 209',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 16, Page 209',
     previousYearFrequency: 29,
     conceptualLinks: ['GFR', 'Glomerular filtration rate', 'Kidney function', 'Filtrate formation'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch14-023',
@@ -11750,14 +12517,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The specialized region that plays a significant role in regulation of GFR is:',
     options: ['Macula densa', 'Juxtaglomerular apparatus (JGA)', 'Mesangial cells', 'Podocytes'],
     correctAnswer: 'Juxtaglomerular apparatus (JGA)',
-    explanation: 'JGA is a special sensitive region formed by cellular modifications in the distal convoluted tubule and the afferent arteriole at their contact location. A fall in GFR can activate JG cells to release renin. Reference: Class 11, Chapter 16, Page 209',
+    explanation:
+      'JGA is a special sensitive region formed by cellular modifications in the distal convoluted tubule and the afferent arteriole at their contact location. A fall in GFR can activate JG cells to release renin. Reference: Class 11, Chapter 16, Page 209',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 16, Page 209',
     previousYearFrequency: 27,
     conceptualLinks: ['JGA', 'GFR regulation', 'Renin release', 'Autoregulation'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch14-024',
@@ -11767,14 +12535,20 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'What percentage of the filtrate is reabsorbed by the renal tubules?',
     options: ['75%', '85%', '99%', '50%'],
     correctAnswer: '99%',
-    explanation: 'A comparison of the volume of filtrate formed per day (180 litres) with urine released (1.5 litres) suggests that nearly 99% of the filtrate has to be reabsorbed by the renal tubules. Reference: Class 11, Chapter 16, Page 209',
+    explanation:
+      'A comparison of the volume of filtrate formed per day (180 litres) with urine released (1.5 litres) suggests that nearly 99% of the filtrate has to be reabsorbed by the renal tubules. Reference: Class 11, Chapter 16, Page 209',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 16, Page 209',
     previousYearFrequency: 25,
-    conceptualLinks: ['Reabsorption', 'Tubular reabsorption', 'Water conservation', 'Filtrate volume'],
+    conceptualLinks: [
+      'Reabsorption',
+      'Tubular reabsorption',
+      'Water conservation',
+      'Filtrate volume',
+    ],
     timeEstimate: 40,
     bloomsLevel: 'Understand',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch14-025',
@@ -11782,50 +12556,75 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-16',
     classId: 'class-11',
     question: 'Which substances are actively reabsorbed in the filtrate?',
-    options: ['Nitrogenous wastes', 'Glucose and amino acids', 'Urea and uric acid', 'Carbon dioxide'],
+    options: [
+      'Nitrogenous wastes',
+      'Glucose and amino acids',
+      'Urea and uric acid',
+      'Carbon dioxide',
+    ],
     correctAnswer: 'Glucose and amino acids',
-    explanation: 'Substances like glucose, amino acids, Na+ in the filtrate are reabsorbed actively whereas nitrogenous wastes are absorbed by passive transport. Reference: Class 11, Chapter 16, Page 209',
+    explanation:
+      'Substances like glucose, amino acids, Na+ in the filtrate are reabsorbed actively whereas nitrogenous wastes are absorbed by passive transport. Reference: Class 11, Chapter 16, Page 209',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 16, Page 209',
     previousYearFrequency: 23,
-    conceptualLinks: ['Active reabsorption', 'Glucose reabsorption', 'Amino acid transport', 'Tubular function'],
+    conceptualLinks: [
+      'Active reabsorption',
+      'Glucose reabsorption',
+      'Amino acid transport',
+      'Tubular function',
+    ],
     timeEstimate: 40,
     bloomsLevel: 'Understand',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch14-026',
     topicId: 'topic-11-16-excretion',
     chapterId: 'ch-11-16',
     classId: 'class-11',
-    question: 'During urine formation, which substances are secreted by tubular cells into the filtrate?',
-    options: ['Glucose, amino acids and water', 'H+, K+ and ammonia', 'Proteins and lipids', 'Oxygen and carbon dioxide'],
+    question:
+      'During urine formation, which substances are secreted by tubular cells into the filtrate?',
+    options: [
+      'Glucose, amino acids and water',
+      'H+, K+ and ammonia',
+      'Proteins and lipids',
+      'Oxygen and carbon dioxide',
+    ],
     correctAnswer: 'H+, K+ and ammonia',
-    explanation: 'During urine formation, the tubular cells secrete substances like H+, K+ and ammonia into the filtrate. Tubular secretion helps in maintenance of ionic and acid-base balance of body fluids. Reference: Class 11, Chapter 16, Page 209',
+    explanation:
+      'During urine formation, the tubular cells secrete substances like H+, K+ and ammonia into the filtrate. Tubular secretion helps in maintenance of ionic and acid-base balance of body fluids. Reference: Class 11, Chapter 16, Page 209',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 16, Page 209',
     previousYearFrequency: 24,
     conceptualLinks: ['Tubular secretion', 'Ionic balance', 'Acid-base balance', 'pH regulation'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch14-027',
     topicId: 'topic-11-16-excretion',
     chapterId: 'ch-11-16',
     classId: 'class-11',
-    question: 'PCT is lined by which type of epithelium that increases surface area for reabsorption?',
-    options: ['Simple squamous epithelium', 'Simple cuboidal brush border epithelium', 'Stratified epithelium', 'Columnar epithelium'],
+    question:
+      'PCT is lined by which type of epithelium that increases surface area for reabsorption?',
+    options: [
+      'Simple squamous epithelium',
+      'Simple cuboidal brush border epithelium',
+      'Stratified epithelium',
+      'Columnar epithelium',
+    ],
     correctAnswer: 'Simple cuboidal brush border epithelium',
-    explanation: 'PCT is lined by simple cuboidal brush border epithelium which increases the surface area for reabsorption. Nearly all essential nutrients and 70-80% of electrolytes and water are reabsorbed by this segment. Reference: Class 11, Chapter 16, Page 209',
+    explanation:
+      'PCT is lined by simple cuboidal brush border epithelium which increases the surface area for reabsorption. Nearly all essential nutrients and 70-80% of electrolytes and water are reabsorbed by this segment. Reference: Class 11, Chapter 16, Page 209',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 16, Page 209',
     previousYearFrequency: 18,
     conceptualLinks: ['PCT structure', 'Brush border', 'Reabsorption', 'Epithelial cells'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch14-028',
@@ -11835,14 +12634,20 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'What percentage of electrolytes and water are reabsorbed by PCT?',
     options: ['40-50%', '50-60%', '70-80%', '90-95%'],
     correctAnswer: '70-80%',
-    explanation: 'Nearly all essential nutrients and 70-80% of electrolytes and water are reabsorbed by PCT. PCT also maintains pH and ionic balance by selective secretion of H+ and ammonia. Reference: Class 11, Chapter 16, Page 209',
+    explanation:
+      'Nearly all essential nutrients and 70-80% of electrolytes and water are reabsorbed by PCT. PCT also maintains pH and ionic balance by selective secretion of H+ and ammonia. Reference: Class 11, Chapter 16, Page 209',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 16, Page 209',
     previousYearFrequency: 20,
-    conceptualLinks: ['PCT reabsorption', 'Water reabsorption', 'Electrolyte balance', 'Tubular function'],
+    conceptualLinks: [
+      'PCT reabsorption',
+      'Water reabsorption',
+      'Electrolyte balance',
+      'Tubular function',
+    ],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q11-batch14-029',
@@ -11850,16 +12655,27 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-16',
     classId: 'class-11',
     question: 'The descending limb of loop of Henle is:',
-    options: ['Permeable to water and electrolytes', 'Impermeable to both water and electrolytes', 'Permeable to water but impermeable to electrolytes', 'Impermeable to water but permeable to electrolytes'],
+    options: [
+      'Permeable to water and electrolytes',
+      'Impermeable to both water and electrolytes',
+      'Permeable to water but impermeable to electrolytes',
+      'Impermeable to water but permeable to electrolytes',
+    ],
     correctAnswer: 'Permeable to water but impermeable to electrolytes',
-    explanation: 'The descending limb of loop of Henle is permeable to water but almost impermeable to electrolytes. This concentrates the filtrate as it moves down. Reference: Class 11, Chapter 16, Page 209',
+    explanation:
+      'The descending limb of loop of Henle is permeable to water but almost impermeable to electrolytes. This concentrates the filtrate as it moves down. Reference: Class 11, Chapter 16, Page 209',
     difficulty: 'Hard',
     ncertPageReference: 'Class 11, Chapter 16, Page 209',
     previousYearFrequency: 26,
-    conceptualLinks: ['Descending limb', 'Water permeability', 'Counter-current mechanism', 'Urine concentration'],
+    conceptualLinks: [
+      'Descending limb',
+      'Water permeability',
+      'Counter-current mechanism',
+      'Urine concentration',
+    ],
     timeEstimate: 50,
     bloomsLevel: 'Analyze',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch14-030',
@@ -11867,16 +12683,27 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-16',
     classId: 'class-11',
     question: 'The ascending limb of loop of Henle is:',
-    options: ['Permeable to water and electrolytes', 'Impermeable to water but allows transport of electrolytes', 'Permeable to water but impermeable to electrolytes', 'Impermeable to both water and electrolytes'],
+    options: [
+      'Permeable to water and electrolytes',
+      'Impermeable to water but allows transport of electrolytes',
+      'Permeable to water but impermeable to electrolytes',
+      'Impermeable to both water and electrolytes',
+    ],
     correctAnswer: 'Impermeable to water but allows transport of electrolytes',
-    explanation: 'The ascending limb is impermeable to water but allows transport of electrolytes actively or passively. As concentrated filtrate passes upward, it gets diluted due to passage of electrolytes to medullary fluid. Reference: Class 11, Chapter 16, Page 209',
+    explanation:
+      'The ascending limb is impermeable to water but allows transport of electrolytes actively or passively. As concentrated filtrate passes upward, it gets diluted due to passage of electrolytes to medullary fluid. Reference: Class 11, Chapter 16, Page 209',
     difficulty: 'Hard',
     ncertPageReference: 'Class 11, Chapter 16, Page 209',
     previousYearFrequency: 27,
-    conceptualLinks: ['Ascending limb', 'Electrolyte transport', 'Filtrate dilution', 'Counter-current system'],
+    conceptualLinks: [
+      'Ascending limb',
+      'Electrolyte transport',
+      'Filtrate dilution',
+      'Counter-current system',
+    ],
     timeEstimate: 50,
     bloomsLevel: 'Analyze',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch14-031',
@@ -11886,31 +12713,44 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Which part of the nephron performs conditional reabsorption of Na+ and water?',
     options: ['PCT', 'Henle loop', 'DCT', 'Bowman capsule'],
     correctAnswer: 'DCT',
-    explanation: 'Conditional reabsorption of Na+ and water takes place in DCT. DCT is also capable of reabsorption of HCO3- and selective secretion of H+, K+ ions and NH3 to maintain pH and Na-K balance. Reference: Class 11, Chapter 16, Page 209',
+    explanation:
+      'Conditional reabsorption of Na+ and water takes place in DCT. DCT is also capable of reabsorption of HCO3- and selective secretion of H+, K+ ions and NH3 to maintain pH and Na-K balance. Reference: Class 11, Chapter 16, Page 209',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 16, Page 209',
     previousYearFrequency: 21,
-    conceptualLinks: ['DCT', 'Conditional reabsorption', 'Sodium-potassium balance', 'Hormonal regulation'],
+    conceptualLinks: [
+      'DCT',
+      'Conditional reabsorption',
+      'Sodium-potassium balance',
+      'Hormonal regulation',
+    ],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch14-032',
     topicId: 'topic-11-16-excretion',
     chapterId: 'ch-11-16',
     classId: 'class-11',
-    question: 'Large amounts of water can be reabsorbed from which segment to produce concentrated urine?',
-    options: ['PCT', 'Descending limb of Henle loop', 'Ascending limb of Henle loop', 'Collecting duct'],
+    question:
+      'Large amounts of water can be reabsorbed from which segment to produce concentrated urine?',
+    options: [
+      'PCT',
+      'Descending limb of Henle loop',
+      'Ascending limb of Henle loop',
+      'Collecting duct',
+    ],
     correctAnswer: 'Collecting duct',
-    explanation: 'The collecting duct extends from cortex to inner medulla. Large amounts of water could be reabsorbed from this region to produce a concentrated urine. It also maintains pH and ionic balance by selective secretion of H+ and K+ ions. Reference: Class 11, Chapter 16, Page 210',
+    explanation:
+      'The collecting duct extends from cortex to inner medulla. Large amounts of water could be reabsorbed from this region to produce a concentrated urine. It also maintains pH and ionic balance by selective secretion of H+ and K+ ions. Reference: Class 11, Chapter 16, Page 210',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 16, Page 210',
     previousYearFrequency: 25,
     conceptualLinks: ['Collecting duct', 'Water reabsorption', 'Concentrated urine', 'ADH action'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch14-033',
@@ -11918,16 +12758,27 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-16',
     classId: 'class-11',
     question: 'The osmolarity gradient in the kidney interstitium ranges from:',
-    options: ['100 to 600 mOsmolL-1', '300 to 1200 mOsmolL-1', '500 to 1500 mOsmolL-1', '200 to 800 mOsmolL-1'],
+    options: [
+      '100 to 600 mOsmolL-1',
+      '300 to 1200 mOsmolL-1',
+      '500 to 1500 mOsmolL-1',
+      '200 to 800 mOsmolL-1',
+    ],
     correctAnswer: '300 to 1200 mOsmolL-1',
-    explanation: 'The counter-current mechanism maintains an increasing osmolarity towards the inner medullary interstitium from 300 mOsmolL-1 in the cortex to about 1200 mOsmolL-1 in the inner medulla. Reference: Class 11, Chapter 16, Page 211',
+    explanation:
+      'The counter-current mechanism maintains an increasing osmolarity towards the inner medullary interstitium from 300 mOsmolL-1 in the cortex to about 1200 mOsmolL-1 in the inner medulla. Reference: Class 11, Chapter 16, Page 211',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 16, Page 211',
     previousYearFrequency: 23,
-    conceptualLinks: ['Osmolarity gradient', 'Medullary interstitium', 'Counter-current mechanism', 'Urine concentration'],
+    conceptualLinks: [
+      'Osmolarity gradient',
+      'Medullary interstitium',
+      'Counter-current mechanism',
+      'Urine concentration',
+    ],
     timeEstimate: 45,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch14-034',
@@ -11935,16 +12786,27 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-16',
     classId: 'class-11',
     question: 'The medullary osmolarity gradient is mainly caused by:',
-    options: ['Glucose and proteins', 'NaCl and urea', 'Amino acids and glucose', 'Creatinine and uric acid'],
+    options: [
+      'Glucose and proteins',
+      'NaCl and urea',
+      'Amino acids and glucose',
+      'Creatinine and uric acid',
+    ],
     correctAnswer: 'NaCl and urea',
-    explanation: 'The osmolarity gradient in the medullary interstitium is mainly caused by NaCl and urea. NaCl is transported by the ascending limb of Henle loop and small amounts of urea enter the thin segment of ascending limb. Reference: Class 11, Chapter 16, Page 211',
+    explanation:
+      'The osmolarity gradient in the medullary interstitium is mainly caused by NaCl and urea. NaCl is transported by the ascending limb of Henle loop and small amounts of urea enter the thin segment of ascending limb. Reference: Class 11, Chapter 16, Page 211',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 16, Page 211',
     previousYearFrequency: 22,
-    conceptualLinks: ['NaCl transport', 'Urea recycling', 'Osmotic gradient', 'Counter-current system'],
+    conceptualLinks: [
+      'NaCl transport',
+      'Urea recycling',
+      'Osmotic gradient',
+      'Counter-current system',
+    ],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch14-035',
@@ -11952,33 +12814,51 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-16',
     classId: 'class-11',
     question: 'The counter-current mechanism operates between:',
-    options: ['PCT and DCT', 'Two limbs of Henle loop and vasa recta', 'Glomerulus and Bowman capsule', 'Afferent and efferent arterioles'],
+    options: [
+      'PCT and DCT',
+      'Two limbs of Henle loop and vasa recta',
+      'Glomerulus and Bowman capsule',
+      'Afferent and efferent arterioles',
+    ],
     correctAnswer: 'Two limbs of Henle loop and vasa recta',
-    explanation: 'A counter current mechanism operates between the two limbs of loop of Henle and those of vasa recta. The proximity and counter current in them help maintain the increasing osmolarity towards inner medulla. Reference: Class 11, Chapter 16, Page 210-211',
+    explanation:
+      'A counter current mechanism operates between the two limbs of loop of Henle and those of vasa recta. The proximity and counter current in them help maintain the increasing osmolarity towards inner medulla. Reference: Class 11, Chapter 16, Page 210-211',
     difficulty: 'Hard',
     ncertPageReference: 'Class 11, Chapter 16, Page 210-211',
     previousYearFrequency: 28,
-    conceptualLinks: ['Counter-current mechanism', 'Henle loop', 'Vasa recta', 'Urine concentration'],
+    conceptualLinks: [
+      'Counter-current mechanism',
+      'Henle loop',
+      'Vasa recta',
+      'Urine concentration',
+    ],
     timeEstimate: 50,
     bloomsLevel: 'Analyze',
-    weightage: 5.5
+    weightage: 5.5,
   },
   {
     id: 'q11-batch14-036',
     topicId: 'topic-11-16-excretion',
     chapterId: 'ch-11-16',
     classId: 'class-11',
-    question: 'Human kidneys can produce urine concentrated up to how many times the initial filtrate?',
+    question:
+      'Human kidneys can produce urine concentrated up to how many times the initial filtrate?',
     options: ['2 times', '4 times', '6 times', '8 times'],
     correctAnswer: '4 times',
-    explanation: 'Human kidneys can produce urine nearly four times concentrated than the initial filtrate formed, thanks to the concentration gradient maintained by the counter-current mechanism. Reference: Class 11, Chapter 16, Page 212',
+    explanation:
+      'Human kidneys can produce urine nearly four times concentrated than the initial filtrate formed, thanks to the concentration gradient maintained by the counter-current mechanism. Reference: Class 11, Chapter 16, Page 212',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 16, Page 212',
     previousYearFrequency: 20,
-    conceptualLinks: ['Urine concentration', 'Counter-current mechanism', 'Water conservation', 'Osmolarity'],
+    conceptualLinks: [
+      'Urine concentration',
+      'Counter-current mechanism',
+      'Water conservation',
+      'Osmolarity',
+    ],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q11-batch14-037',
@@ -11988,14 +12868,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Which hormone facilitates water reabsorption from latter parts of the tubule?',
     options: ['Aldosterone', 'ADH (Vasopressin)', 'Renin', 'ANF'],
     correctAnswer: 'ADH (Vasopressin)',
-    explanation: 'Osmoreceptors can stimulate the hypothalamus to release antidiuretic hormone (ADH) or vasopressin from the neurohypophysis. ADH facilitates water reabsorption from latter parts of tubule, thereby preventing diuresis. Reference: Class 11, Chapter 16, Page 212',
+    explanation:
+      'Osmoreceptors can stimulate the hypothalamus to release antidiuretic hormone (ADH) or vasopressin from the neurohypophysis. ADH facilitates water reabsorption from latter parts of tubule, thereby preventing diuresis. Reference: Class 11, Chapter 16, Page 212',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 16, Page 212',
     previousYearFrequency: 30,
     conceptualLinks: ['ADH', 'Vasopressin', 'Water reabsorption', 'Hypothalamus'],
     timeEstimate: 40,
     bloomsLevel: 'Understand',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch14-038',
@@ -12005,14 +12886,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'JG cells release which enzyme when there is a fall in GFR?',
     options: ['Pepsin', 'Renin', 'Lipase', 'Amylase'],
     correctAnswer: 'Renin',
-    explanation: 'A fall in glomerular blood flow/pressure/GFR can activate the JG cells to release renin which converts angiotensinogen to angiotensin I and further to angiotensin II. Reference: Class 11, Chapter 16, Page 212',
+    explanation:
+      'A fall in glomerular blood flow/pressure/GFR can activate the JG cells to release renin which converts angiotensinogen to angiotensin I and further to angiotensin II. Reference: Class 11, Chapter 16, Page 212',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 16, Page 212',
     previousYearFrequency: 27,
     conceptualLinks: ['Renin', 'JGA', 'RAAS', 'GFR regulation'],
     timeEstimate: 40,
     bloomsLevel: 'Understand',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch14-039',
@@ -12022,14 +12904,20 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Angiotensin II activates the adrenal cortex to release:',
     options: ['ADH', 'Renin', 'Aldosterone', 'ANF'],
     correctAnswer: 'Aldosterone',
-    explanation: 'Angiotensin II, being a powerful vasoconstrictor, increases glomerular blood pressure and GFR. It also activates the adrenal cortex to release Aldosterone which causes reabsorption of Na+ and water from distal tubule. Reference: Class 11, Chapter 16, Page 212',
+    explanation:
+      'Angiotensin II, being a powerful vasoconstrictor, increases glomerular blood pressure and GFR. It also activates the adrenal cortex to release Aldosterone which causes reabsorption of Na+ and water from distal tubule. Reference: Class 11, Chapter 16, Page 212',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 16, Page 212',
     previousYearFrequency: 26,
-    conceptualLinks: ['Aldosterone', 'Angiotensin II', 'Renin-Angiotensin mechanism', 'Sodium reabsorption'],
+    conceptualLinks: [
+      'Aldosterone',
+      'Angiotensin II',
+      'Renin-Angiotensin mechanism',
+      'Sodium reabsorption',
+    ],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch14-040',
@@ -12037,16 +12925,27 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-16',
     classId: 'class-11',
     question: 'Atrial Natriuretic Factor (ANF) causes:',
-    options: ['Vasoconstriction and increased blood pressure', 'Vasodilation and decreased blood pressure', 'Increased GFR only', 'Decreased water reabsorption only'],
+    options: [
+      'Vasoconstriction and increased blood pressure',
+      'Vasodilation and decreased blood pressure',
+      'Increased GFR only',
+      'Decreased water reabsorption only',
+    ],
     correctAnswer: 'Vasodilation and decreased blood pressure',
-    explanation: 'An increase in blood flow to the atria can cause release of ANF. ANF causes vasodilation (dilation of blood vessels) and thereby decreases blood pressure. ANF acts as a check on the renin-angiotensin mechanism. Reference: Class 11, Chapter 16, Page 212',
+    explanation:
+      'An increase in blood flow to the atria can cause release of ANF. ANF causes vasodilation (dilation of blood vessels) and thereby decreases blood pressure. ANF acts as a check on the renin-angiotensin mechanism. Reference: Class 11, Chapter 16, Page 212',
     difficulty: 'Hard',
     ncertPageReference: 'Class 11, Chapter 16, Page 212',
     previousYearFrequency: 24,
-    conceptualLinks: ['ANF', 'Vasodilation', 'Blood pressure regulation', 'Counter-regulatory mechanism'],
+    conceptualLinks: [
+      'ANF',
+      'Vasodilation',
+      'Blood pressure regulation',
+      'Counter-regulatory mechanism',
+    ],
     timeEstimate: 50,
     bloomsLevel: 'Analyze',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch14-041',
@@ -12056,14 +12955,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The process of release of urine is called:',
     options: ['Urination', 'Micturition', 'Defecation', 'Excretion'],
     correctAnswer: 'Micturition',
-    explanation: 'The process of release of urine is called micturition and the neural mechanisms causing it is called the micturition reflex. It is initiated by stretching of urinary bladder as it fills with urine. Reference: Class 11, Chapter 16, Page 212-213',
+    explanation:
+      'The process of release of urine is called micturition and the neural mechanisms causing it is called the micturition reflex. It is initiated by stretching of urinary bladder as it fills with urine. Reference: Class 11, Chapter 16, Page 212-213',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 16, Page 212-213',
     previousYearFrequency: 22,
     conceptualLinks: ['Micturition', 'Micturition reflex', 'Urinary bladder', 'CNS control'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q11-batch14-042',
@@ -12073,14 +12973,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'An adult human excretes on average how much urine per day?',
     options: ['0.5 to 1 litre', '1 to 1.5 litres', '2 to 2.5 litres', '3 to 3.5 litres'],
     correctAnswer: '1 to 1.5 litres',
-    explanation: 'An adult human excretes, on an average, 1 to 1.5 litres of urine per day. The urine is a light yellow colored watery fluid which is slightly acidic (pH-6.0). Reference: Class 11, Chapter 16, Page 213',
+    explanation:
+      'An adult human excretes, on an average, 1 to 1.5 litres of urine per day. The urine is a light yellow colored watery fluid which is slightly acidic (pH-6.0). Reference: Class 11, Chapter 16, Page 213',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 16, Page 213',
     previousYearFrequency: 19,
     conceptualLinks: ['Urine volume', 'Daily excretion', 'Urine characteristics', 'Fluid balance'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 3.0
+    weightage: 3.0,
   },
   {
     id: 'q11-batch14-043',
@@ -12090,14 +12991,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The pH of normal human urine is approximately:',
     options: ['4.0', '6.0', '7.4', '8.0'],
     correctAnswer: '6.0',
-    explanation: 'The urine formed is a light yellow colored watery fluid which is slightly acidic (pH-6.0) and has a characteristic odour. Reference: Class 11, Chapter 16, Page 213',
+    explanation:
+      'The urine formed is a light yellow colored watery fluid which is slightly acidic (pH-6.0) and has a characteristic odour. Reference: Class 11, Chapter 16, Page 213',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 16, Page 213',
     previousYearFrequency: 17,
     conceptualLinks: ['Urine pH', 'Acid-base balance', 'Urine characteristics', 'Normal values'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 3.0
+    weightage: 3.0,
   },
   {
     id: 'q11-batch14-044',
@@ -12107,14 +13009,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'On average, how much urea is excreted per day by an adult human?',
     options: ['10-15 gm', '15-20 gm', '25-30 gm', '35-40 gm'],
     correctAnswer: '25-30 gm',
-    explanation: 'On an average, 25-30 gm of urea is excreted out per day. Various conditions can affect the characteristics of urine which helps in clinical diagnosis. Reference: Class 11, Chapter 16, Page 213',
+    explanation:
+      'On an average, 25-30 gm of urea is excreted out per day. Various conditions can affect the characteristics of urine which helps in clinical diagnosis. Reference: Class 11, Chapter 16, Page 213',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 16, Page 213',
     previousYearFrequency: 18,
     conceptualLinks: ['Urea excretion', 'Nitrogenous waste', 'Daily output', 'Protein metabolism'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q11-batch14-045',
@@ -12124,14 +13027,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Presence of glucose in urine (Glycosuria) is indicative of:',
     options: ['Kidney failure', 'Diabetes mellitus', 'Uremia', 'Glomerulonephritis'],
     correctAnswer: 'Diabetes mellitus',
-    explanation: 'Presence of glucose (Glycosuria) and ketone bodies (Ketonuria) in urine are indicative of diabetes mellitus. Analysis of urine helps in clinical diagnosis of many metabolic disorders. Reference: Class 11, Chapter 16, Page 213',
+    explanation:
+      'Presence of glucose (Glycosuria) and ketone bodies (Ketonuria) in urine are indicative of diabetes mellitus. Analysis of urine helps in clinical diagnosis of many metabolic disorders. Reference: Class 11, Chapter 16, Page 213',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 16, Page 213',
     previousYearFrequency: 23,
     conceptualLinks: ['Glycosuria', 'Diabetes mellitus', 'Urine analysis', 'Clinical diagnosis'],
     timeEstimate: 40,
     bloomsLevel: 'Understand',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch14-046',
@@ -12141,14 +13045,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Approximately how much CO2 is removed by lungs per minute?',
     options: ['100 mL', '200 mL', '300 mL', '400 mL'],
     correctAnswer: '200 mL',
-    explanation: 'Lungs remove large amounts of CO2 (approximately 200 mL/minute) and also significant quantities of water every day. Lungs assist kidneys in excretion. Reference: Class 11, Chapter 16, Page 213',
+    explanation:
+      'Lungs remove large amounts of CO2 (approximately 200 mL/minute) and also significant quantities of water every day. Lungs assist kidneys in excretion. Reference: Class 11, Chapter 16, Page 213',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 16, Page 213',
     previousYearFrequency: 15,
     conceptualLinks: ['Lung excretion', 'CO2 elimination', 'Respiratory system', 'Gaseous waste'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q11-batch14-047',
@@ -12158,14 +13063,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Accumulation of urea in blood due to kidney malfunction is called:',
     options: ['Glycosuria', 'Ketonuria', 'Uremia', 'Nephritis'],
     correctAnswer: 'Uremia',
-    explanation: 'Malfunctioning of kidneys can lead to accumulation of urea in blood, a condition called uremia, which is highly harmful and may lead to kidney failure. In such patients, hemodialysis is required. Reference: Class 11, Chapter 16, Page 213',
+    explanation:
+      'Malfunctioning of kidneys can lead to accumulation of urea in blood, a condition called uremia, which is highly harmful and may lead to kidney failure. In such patients, hemodialysis is required. Reference: Class 11, Chapter 16, Page 213',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 16, Page 213',
     previousYearFrequency: 24,
     conceptualLinks: ['Uremia', 'Kidney failure', 'Hemodialysis', 'Renal disorders'],
     timeEstimate: 40,
     bloomsLevel: 'Understand',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch14-048',
@@ -12175,14 +13081,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The process used to remove urea from blood in case of kidney failure is:',
     options: ['Kidney transplantation', 'Hemodialysis', 'Blood transfusion', 'Plasmapheresis'],
     correctAnswer: 'Hemodialysis',
-    explanation: 'In uremic patients, urea can be removed by hemodialysis. Blood is pumped into a dialyzing unit (artificial kidney) containing cellophane tube surrounded by dialysing fluid. Nitrogenous wastes move out based on concentration gradient. Reference: Class 11, Chapter 16, Page 213-214',
+    explanation:
+      'In uremic patients, urea can be removed by hemodialysis. Blood is pumped into a dialyzing unit (artificial kidney) containing cellophane tube surrounded by dialysing fluid. Nitrogenous wastes move out based on concentration gradient. Reference: Class 11, Chapter 16, Page 213-214',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 16, Page 213-214',
     previousYearFrequency: 25,
     conceptualLinks: ['Hemodialysis', 'Artificial kidney', 'Uremia treatment', 'Dialysis'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch14-049',
@@ -12192,14 +13099,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Stone or insoluble mass of crystallized salts formed within the kidney is called:',
     options: ['Glomerulonephritis', 'Renal calculi', 'Uremia', 'Nephritis'],
     correctAnswer: 'Renal calculi',
-    explanation: 'Renal calculi is the condition where stone or insoluble mass of crystallised salts (oxalates, etc.) are formed within the kidney. This is a disorder of the excretory system. Reference: Class 11, Chapter 16, Page 214',
+    explanation:
+      'Renal calculi is the condition where stone or insoluble mass of crystallised salts (oxalates, etc.) are formed within the kidney. This is a disorder of the excretory system. Reference: Class 11, Chapter 16, Page 214',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 16, Page 214',
     previousYearFrequency: 20,
     conceptualLinks: ['Renal calculi', 'Kidney stones', 'Oxalates', 'Renal disorders'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q11-batch14-050',
@@ -12207,16 +13115,27 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-16',
     classId: 'class-11',
     question: 'Which of the following statements about the counter-current mechanism is correct?',
-    options: ['Flow in both limbs of Henle loop is in the same direction', 'It helps dilute the urine', 'It maintains concentration gradient in medullary interstitium', 'It occurs only in cortical nephrons'],
+    options: [
+      'Flow in both limbs of Henle loop is in the same direction',
+      'It helps dilute the urine',
+      'It maintains concentration gradient in medullary interstitium',
+      'It occurs only in cortical nephrons',
+    ],
     correctAnswer: 'It maintains concentration gradient in medullary interstitium',
-    explanation: 'The counter-current mechanism operates between the two limbs of Henle loop and vasa recta. The flow in opposite directions and proximity help maintain an increasing osmolarity gradient towards inner medullary interstitium (300 to 1200 mOsmolL-1). Reference: Class 11, Chapter 16, Page 210-211',
+    explanation:
+      'The counter-current mechanism operates between the two limbs of Henle loop and vasa recta. The flow in opposite directions and proximity help maintain an increasing osmolarity gradient towards inner medullary interstitium (300 to 1200 mOsmolL-1). Reference: Class 11, Chapter 16, Page 210-211',
     difficulty: 'Hard',
     ncertPageReference: 'Class 11, Chapter 16, Page 210-211',
     previousYearFrequency: 28,
-    conceptualLinks: ['Counter-current mechanism', 'Osmolarity gradient', 'Urine concentration', 'Henle loop function'],
+    conceptualLinks: [
+      'Counter-current mechanism',
+      'Osmolarity gradient',
+      'Urine concentration',
+      'Henle loop function',
+    ],
     timeEstimate: 55,
     bloomsLevel: 'Analyze',
-    weightage: 6.0
+    weightage: 6.0,
   },
 
   // ============================================================================
@@ -12232,17 +13151,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'All movements are locomotions but all locomotions are not movements',
       'All locomotions are movements but all movements are not locomotions',
       'Locomotion and movement are the same phenomenon',
-      'Movement occurs only in unicellular organisms while locomotion occurs in multicellular organisms'
+      'Movement occurs only in unicellular organisms while locomotion occurs in multicellular organisms',
     ],
     correctAnswer: 'All locomotions are movements but all movements are not locomotions',
-    explanation: 'According to NCERT, locomotion refers to voluntary movements that result in a change of place or location. All locomotions are movements, but all movements (like streaming of protoplasm) are not locomotions.',
+    explanation:
+      'According to NCERT, locomotion refers to voluntary movements that result in a change of place or location. All locomotions are movements, but all movements (like streaming of protoplasm) are not locomotions.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 17, Page 217',
     previousYearFrequency: 12,
     conceptualLinks: ['Types of movement', 'Voluntary movements', 'Locomotory movements'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q11-batch15-002',
@@ -12254,17 +13174,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'Amoeboid, ciliary and muscular',
       'Flagellar, ciliary and muscular',
       'Amoeboid, flagellar and ciliary',
-      'Protoplasmic, muscular and ciliary'
+      'Protoplasmic, muscular and ciliary',
     ],
     correctAnswer: 'Amoeboid, ciliary and muscular',
-    explanation: 'NCERT clearly states that cells of the human body exhibit three main types of movements: amoeboid, ciliary and muscular movements.',
+    explanation:
+      'NCERT clearly states that cells of the human body exhibit three main types of movements: amoeboid, ciliary and muscular movements.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 17, Page 217',
     previousYearFrequency: 18,
     conceptualLinks: ['Types of movement', 'Cell movements', 'Human body movements'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch15-003',
@@ -12276,17 +13197,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'Neurons and glial cells',
       'Macrophages and leucocytes',
       'Epithelial cells and fibroblasts',
-      'Red blood cells and platelets'
+      'Red blood cells and platelets',
     ],
     correctAnswer: 'Macrophages and leucocytes',
-    explanation: 'According to NCERT page 218, some specialized cells like macrophages and leucocytes in blood exhibit amoeboid movement, which is effected by pseudopodia formed by streaming of protoplasm.',
+    explanation:
+      'According to NCERT page 218, some specialized cells like macrophages and leucocytes in blood exhibit amoeboid movement, which is effected by pseudopodia formed by streaming of protoplasm.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 17, Page 218',
     previousYearFrequency: 15,
     conceptualLinks: ['Amoeboid movement', 'Pseudopodia', 'Cytoskeletal elements'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q11-batch15-004',
@@ -12294,21 +13216,17 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-17',
     classId: 'class-11',
     question: 'Cytoskeletal elements involved in amoeboid movement include:',
-    options: [
-      'Microtubules',
-      'Intermediate filaments',
-      'Microfilaments',
-      'All of the above'
-    ],
+    options: ['Microtubules', 'Intermediate filaments', 'Microfilaments', 'All of the above'],
     correctAnswer: 'Microfilaments',
-    explanation: 'NCERT page 218 mentions that cytoskeletal elements like microfilaments are involved in amoeboid movement.',
+    explanation:
+      'NCERT page 218 mentions that cytoskeletal elements like microfilaments are involved in amoeboid movement.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 17, Page 218',
     previousYearFrequency: 10,
     conceptualLinks: ['Amoeboid movement', 'Cytoskeleton', 'Cell structure'],
     timeEstimate: 45,
     bloomsLevel: 'Remember',
-    weightage: 3.0
+    weightage: 3.0,
   },
   {
     id: 'q11-batch15-005',
@@ -12320,17 +13238,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'Absorption of oxygen',
       'Removing dust particles and foreign substances',
       'Production of mucus',
-      'Gaseous exchange'
+      'Gaseous exchange',
     ],
     correctAnswer: 'Removing dust particles and foreign substances',
-    explanation: 'NCERT page 218 states that coordinated movements of cilia in the trachea help in removing dust particles and some foreign substances inhaled along with atmospheric air.',
+    explanation:
+      'NCERT page 218 states that coordinated movements of cilia in the trachea help in removing dust particles and some foreign substances inhaled along with atmospheric air.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 17, Page 218',
     previousYearFrequency: 16,
     conceptualLinks: ['Ciliary movement', 'Respiratory system', 'Ciliated epithelium'],
     timeEstimate: 40,
     bloomsLevel: 'Understand',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch15-006',
@@ -12338,21 +13257,17 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-17',
     classId: 'class-11',
     question: 'What percentage of body weight is contributed by muscles in a human adult?',
-    options: [
-      '20-30%',
-      '30-40%',
-      '40-50%',
-      '50-60%'
-    ],
+    options: ['20-30%', '30-40%', '40-50%', '50-60%'],
     correctAnswer: '40-50%',
-    explanation: 'According to NCERT page 218, about 40-50 percent of the body weight of a human adult is contributed by muscles.',
+    explanation:
+      'According to NCERT page 218, about 40-50 percent of the body weight of a human adult is contributed by muscles.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 17, Page 218',
     previousYearFrequency: 8,
     conceptualLinks: ['Muscle tissue', 'Body composition', 'Mesodermal origin'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 3.0
+    weightage: 3.0,
   },
   {
     id: 'q11-batch15-007',
@@ -12360,21 +13275,17 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-17',
     classId: 'class-11',
     question: 'Which of the following is NOT a special property of muscles?',
-    options: [
-      'Excitability',
-      'Contractility',
-      'Conductivity',
-      'Extensibility and elasticity'
-    ],
+    options: ['Excitability', 'Contractility', 'Conductivity', 'Extensibility and elasticity'],
     correctAnswer: 'Conductivity',
-    explanation: 'NCERT page 218 mentions that muscles have special properties like excitability, contractility, extensibility and elasticity. Conductivity is not mentioned as a special property of muscles.',
+    explanation:
+      'NCERT page 218 mentions that muscles have special properties like excitability, contractility, extensibility and elasticity. Conductivity is not mentioned as a special property of muscles.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 17, Page 218',
     previousYearFrequency: 12,
     conceptualLinks: ['Muscle properties', 'Muscle physiology', 'Contractile tissue'],
     timeEstimate: 50,
     bloomsLevel: 'Understand',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch15-008',
@@ -12386,17 +13297,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'Smooth muscles and involuntary muscles',
       'Striated muscles and voluntary muscles',
       'Cardiac muscles and involuntary muscles',
-      'Non-striated muscles and voluntary muscles'
+      'Non-striated muscles and voluntary muscles',
     ],
     correctAnswer: 'Striated muscles and voluntary muscles',
-    explanation: 'NCERT page 218 states that skeletal muscles have a striped appearance under microscope (striated muscles) and their activities are under voluntary control of nervous system (voluntary muscles).',
+    explanation:
+      'NCERT page 218 states that skeletal muscles have a striped appearance under microscope (striated muscles) and their activities are under voluntary control of nervous system (voluntary muscles).',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 17, Page 218',
     previousYearFrequency: 20,
     conceptualLinks: ['Skeletal muscle', 'Muscle types', 'Voluntary control'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch15-009',
@@ -12408,17 +13320,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'Skeletal components of the body',
       'Heart walls',
       'Inner walls of hollow visceral organs',
-      'Blood vessels only'
+      'Blood vessels only',
     ],
     correctAnswer: 'Inner walls of hollow visceral organs',
-    explanation: 'According to NCERT page 218, visceral muscles are located in the inner walls of hollow visceral organs like alimentary canal and reproductive tract.',
+    explanation:
+      'According to NCERT page 218, visceral muscles are located in the inner walls of hollow visceral organs like alimentary canal and reproductive tract.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 17, Page 218',
     previousYearFrequency: 14,
     conceptualLinks: ['Visceral muscles', 'Smooth muscles', 'Involuntary muscles'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q11-batch15-010',
@@ -12426,21 +13339,17 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-17',
     classId: 'class-11',
     question: 'Which type of muscle is both striated and involuntary?',
-    options: [
-      'Skeletal muscle',
-      'Smooth muscle',
-      'Cardiac muscle',
-      'Visceral muscle'
-    ],
+    options: ['Skeletal muscle', 'Smooth muscle', 'Cardiac muscle', 'Visceral muscle'],
     correctAnswer: 'Cardiac muscle',
-    explanation: 'NCERT page 219 clearly states that cardiac muscles are striated in appearance but involuntary in nature as the nervous system does not control their activities directly.',
+    explanation:
+      'NCERT page 219 clearly states that cardiac muscles are striated in appearance but involuntary in nature as the nervous system does not control their activities directly.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 17, Page 219',
     previousYearFrequency: 22,
     conceptualLinks: ['Cardiac muscle', 'Muscle types', 'Heart structure'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch15-011',
@@ -12448,21 +13357,17 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-17',
     classId: 'class-11',
     question: 'The plasma membrane of a muscle fibre is called:',
-    options: [
-      'Sarcolemma',
-      'Sarcoplasm',
-      'Sarcoplasmic reticulum',
-      'Sarcomere'
-    ],
+    options: ['Sarcolemma', 'Sarcoplasm', 'Sarcoplasmic reticulum', 'Sarcomere'],
     correctAnswer: 'Sarcolemma',
-    explanation: 'NCERT page 219 states that the muscle fibre is lined by the plasma membrane called sarcolemma enclosing the sarcoplasm.',
+    explanation:
+      'NCERT page 219 states that the muscle fibre is lined by the plasma membrane called sarcolemma enclosing the sarcoplasm.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 17, Page 219',
     previousYearFrequency: 18,
     conceptualLinks: ['Muscle fibre structure', 'Sarcolemma', 'Plasma membrane'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q11-batch15-012',
@@ -12474,17 +13379,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'It has a single nucleus',
       'The sarcoplasm contains many nuclei',
       'It has no nucleus',
-      'It has two nuclei'
+      'It has two nuclei',
     ],
     correctAnswer: 'The sarcoplasm contains many nuclei',
-    explanation: 'According to NCERT page 219, muscle fibre is a syncitium as the sarcoplasm contains many nuclei.',
+    explanation:
+      'According to NCERT page 219, muscle fibre is a syncitium as the sarcoplasm contains many nuclei.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 17, Page 219',
     previousYearFrequency: 16,
     conceptualLinks: ['Muscle fibre', 'Syncytium', 'Multinucleated cells'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch15-013',
@@ -12492,21 +13398,17 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-17',
     classId: 'class-11',
     question: 'The storehouse of calcium ions in muscle fibres is:',
-    options: [
-      'Sarcolemma',
-      'Sarcoplasm',
-      'Sarcoplasmic reticulum',
-      'Sarcomere'
-    ],
+    options: ['Sarcolemma', 'Sarcoplasm', 'Sarcoplasmic reticulum', 'Sarcomere'],
     correctAnswer: 'Sarcoplasmic reticulum',
-    explanation: 'NCERT page 219 clearly states that the sarcoplasmic reticulum (endoplasmic reticulum) of the muscle fibres is the store house of calcium ions.',
+    explanation:
+      'NCERT page 219 clearly states that the sarcoplasmic reticulum (endoplasmic reticulum) of the muscle fibres is the store house of calcium ions.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 17, Page 219',
     previousYearFrequency: 25,
     conceptualLinks: ['Sarcoplasmic reticulum', 'Calcium storage', 'Muscle contraction'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch15-014',
@@ -12518,17 +13420,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'Troponin and tropomyosin',
       'Actin and myosin',
       'Meromyosin and troponin',
-      'Globular actin and tropomyosin'
+      'Globular actin and tropomyosin',
     ],
     correctAnswer: 'Actin and myosin',
-    explanation: 'NCERT page 219 mentions that the striated appearance is due to the distribution pattern of two important proteins - Actin and Myosin.',
+    explanation:
+      'NCERT page 219 mentions that the striated appearance is due to the distribution pattern of two important proteins - Actin and Myosin.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 17, Page 219',
     previousYearFrequency: 28,
     conceptualLinks: ['Actin', 'Myosin', 'Contractile proteins', 'Striation'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 5.5
+    weightage: 5.5,
   },
   {
     id: 'q11-batch15-015',
@@ -12536,21 +13439,17 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-17',
     classId: 'class-11',
     question: 'The light bands in a myofibril are called:',
-    options: [
-      'A band or Anisotropic band',
-      'I band or Isotropic band',
-      'H zone',
-      'M line'
-    ],
+    options: ['A band or Anisotropic band', 'I band or Isotropic band', 'H zone', 'M line'],
     correctAnswer: 'I band or Isotropic band',
-    explanation: 'NCERT page 219 states that the light bands contain actin and are called I-band or Isotropic band.',
+    explanation:
+      'NCERT page 219 states that the light bands contain actin and are called I-band or Isotropic band.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 17, Page 219',
     previousYearFrequency: 20,
     conceptualLinks: ['I band', 'Actin filaments', 'Sarcomere structure'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch15-016',
@@ -12558,21 +13457,17 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-17',
     classId: 'class-11',
     question: 'The dark band in a myofibril is called:',
-    options: [
-      'I band or Isotropic band',
-      'H zone',
-      'A band or Anisotropic band',
-      'Z line'
-    ],
+    options: ['I band or Isotropic band', 'H zone', 'A band or Anisotropic band', 'Z line'],
     correctAnswer: 'A band or Anisotropic band',
-    explanation: 'According to NCERT page 219-220, the dark band is called A or Anisotropic band and contains myosin.',
+    explanation:
+      'According to NCERT page 219-220, the dark band is called A or Anisotropic band and contains myosin.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 17, Page 219-220',
     previousYearFrequency: 20,
     conceptualLinks: ['A band', 'Myosin filaments', 'Sarcomere structure'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch15-017',
@@ -12580,21 +13475,17 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-17',
     classId: 'class-11',
     question: 'The elastic fibre that bisects the I band is called:',
-    options: [
-      'M line',
-      'Z line',
-      'H zone',
-      'A band'
-    ],
+    options: ['M line', 'Z line', 'H zone', 'A band'],
     correctAnswer: 'Z line',
-    explanation: 'NCERT page 220 mentions that in the centre of each I band is an elastic fibre called Z line which bisects it, and thin filaments are firmly attached to the Z line.',
+    explanation:
+      'NCERT page 220 mentions that in the centre of each I band is an elastic fibre called Z line which bisects it, and thin filaments are firmly attached to the Z line.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 17, Page 220',
     previousYearFrequency: 18,
     conceptualLinks: ['Z line', 'I band', 'Sarcomere boundaries'],
     timeEstimate: 45,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch15-018',
@@ -12602,21 +13493,17 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-17',
     classId: 'class-11',
     question: 'The functional unit of contraction in a muscle fibre is:',
-    options: [
-      'Myofibril',
-      'Sarcomere',
-      'Myofilament',
-      'Fascicle'
-    ],
+    options: ['Myofibril', 'Sarcomere', 'Myofilament', 'Fascicle'],
     correctAnswer: 'Sarcomere',
-    explanation: 'NCERT page 220 clearly states that the portion of the myofibril between two successive Z lines is considered as the functional unit of contraction and is called a sarcomere.',
+    explanation:
+      'NCERT page 220 clearly states that the portion of the myofibril between two successive Z lines is considered as the functional unit of contraction and is called a sarcomere.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 17, Page 220',
     previousYearFrequency: 30,
     conceptualLinks: ['Sarcomere', 'Functional unit', 'Muscle contraction'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 6.0
+    weightage: 6.0,
   },
   {
     id: 'q11-batch15-019',
@@ -12628,17 +13515,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'The region where only thin filaments are present',
       'The central part of thick filament not overlapped by thin filaments',
       'The region where Z lines are present',
-      'The area where M line is absent'
+      'The area where M line is absent',
     ],
     correctAnswer: 'The central part of thick filament not overlapped by thin filaments',
-    explanation: 'According to NCERT page 220, the central part of thick filament not overlapped by thin filaments is called the H zone.',
+    explanation:
+      'According to NCERT page 220, the central part of thick filament not overlapped by thin filaments is called the H zone.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 17, Page 220',
     previousYearFrequency: 16,
     conceptualLinks: ['H zone', 'Sarcomere structure', 'Thick filaments'],
     timeEstimate: 50,
     bloomsLevel: 'Understand',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch15-020',
@@ -12646,43 +13534,36 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-17',
     classId: 'class-11',
     question: 'Each F actin is a polymer of monomeric:',
-    options: [
-      'Troponin',
-      'Tropomyosin',
-      'G (Globular) actin',
-      'Meromyosin'
-    ],
+    options: ['Troponin', 'Tropomyosin', 'G (Globular) actin', 'Meromyosin'],
     correctAnswer: 'G (Globular) actin',
-    explanation: 'NCERT page 221 states that each F actin is a polymer of monomeric G (Globular) actins.',
+    explanation:
+      'NCERT page 221 states that each F actin is a polymer of monomeric G (Globular) actins.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 17, Page 221',
     previousYearFrequency: 15,
     conceptualLinks: ['F actin', 'G actin', 'Actin structure'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q11-batch15-021',
     topicId: 'topic-11-17-locomotion',
     chapterId: 'ch-11-17',
     classId: 'class-11',
-    question: 'In the resting state, which protein masks the active binding sites for myosin on actin filaments?',
-    options: [
-      'Tropomyosin',
-      'Troponin',
-      'Meromyosin',
-      'G actin'
-    ],
+    question:
+      'In the resting state, which protein masks the active binding sites for myosin on actin filaments?',
+    options: ['Tropomyosin', 'Troponin', 'Meromyosin', 'G actin'],
     correctAnswer: 'Troponin',
-    explanation: 'According to NCERT page 221, in the resting state a subunit of troponin masks the active binding sites for myosin on the actin filaments.',
+    explanation:
+      'According to NCERT page 221, in the resting state a subunit of troponin masks the active binding sites for myosin on the actin filaments.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 17, Page 221',
     previousYearFrequency: 24,
     conceptualLinks: ['Troponin', 'Actin binding sites', 'Muscle relaxation'],
     timeEstimate: 50,
     bloomsLevel: 'Understand',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch15-022',
@@ -12694,17 +13575,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'Head and tail',
       'Globular head with short arm and tail',
       'Two heads',
-      'Head and middle region'
+      'Head and middle region',
     ],
     correctAnswer: 'Globular head with short arm and tail',
-    explanation: 'NCERT page 221 mentions that each meromyosin has two important parts: a globular head with a short arm and a tail, the former being called heavy meromyosin (HMM) and the latter, light meromyosin (LMM).',
+    explanation:
+      'NCERT page 221 mentions that each meromyosin has two important parts: a globular head with a short arm and a tail, the former being called heavy meromyosin (HMM) and the latter, light meromyosin (LMM).',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 17, Page 221',
     previousYearFrequency: 14,
     conceptualLinks: ['Meromyosin', 'Myosin structure', 'HMM and LMM'],
     timeEstimate: 50,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch15-023',
@@ -12716,17 +13598,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'Only ATP binding sites',
       'Only actin binding sites',
       'ATPase enzyme, ATP binding sites and active sites for actin',
-      'Only ATPase enzyme'
+      'Only ATPase enzyme',
     ],
     correctAnswer: 'ATPase enzyme, ATP binding sites and active sites for actin',
-    explanation: 'According to NCERT page 221, the globular head is an active ATPase enzyme and has binding sites for ATP and active sites for actin.',
+    explanation:
+      'According to NCERT page 221, the globular head is an active ATPase enzyme and has binding sites for ATP and active sites for actin.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 17, Page 221',
     previousYearFrequency: 22,
     conceptualLinks: ['Myosin head', 'ATPase activity', 'Cross bridge formation'],
     timeEstimate: 55,
     bloomsLevel: 'Understand',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch15-024',
@@ -12738,17 +13621,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'Shortening of actin filaments',
       'Shortening of myosin filaments',
       'Sliding of thin filaments over thick filaments',
-      'Sliding of thick filaments over thin filaments'
+      'Sliding of thick filaments over thin filaments',
     ],
     correctAnswer: 'Sliding of thin filaments over thick filaments',
-    explanation: 'NCERT page 221 states that sliding filament theory explains that contraction of a muscle fibre takes place by the sliding of the thin filaments over the thick filaments.',
+    explanation:
+      'NCERT page 221 states that sliding filament theory explains that contraction of a muscle fibre takes place by the sliding of the thin filaments over the thick filaments.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 17, Page 221',
     previousYearFrequency: 30,
     conceptualLinks: ['Sliding filament theory', 'Muscle contraction', 'Filament sliding'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 6.0
+    weightage: 6.0,
   },
   {
     id: 'q11-batch15-025',
@@ -12760,17 +13644,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'Synapse',
       'Neuromuscular junction or motor-end plate',
       'Gap junction',
-      'Tight junction'
+      'Tight junction',
     ],
     correctAnswer: 'Neuromuscular junction or motor-end plate',
-    explanation: 'According to NCERT page 222, the junction between a motor neuron and the sarcolemma of the muscle fibre is called the neuromuscular junction or motor-end plate.',
+    explanation:
+      'According to NCERT page 222, the junction between a motor neuron and the sarcolemma of the muscle fibre is called the neuromuscular junction or motor-end plate.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 17, Page 222',
     previousYearFrequency: 20,
     conceptualLinks: ['Neuromuscular junction', 'Motor neuron', 'Muscle stimulation'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch15-026',
@@ -12778,21 +13663,17 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-17',
     classId: 'class-11',
     question: 'The neurotransmitter released at the neuromuscular junction is:',
-    options: [
-      'Dopamine',
-      'Serotonin',
-      'Acetylcholine',
-      'Norepinephrine'
-    ],
+    options: ['Dopamine', 'Serotonin', 'Acetylcholine', 'Norepinephrine'],
     correctAnswer: 'Acetylcholine',
-    explanation: 'NCERT page 222 clearly states that a neural signal reaching the neuromuscular junction releases a neurotransmitter (Acetylcholine) which generates an action potential in the sarcolemma.',
+    explanation:
+      'NCERT page 222 clearly states that a neural signal reaching the neuromuscular junction releases a neurotransmitter (Acetylcholine) which generates an action potential in the sarcolemma.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 17, Page 222',
     previousYearFrequency: 25,
     conceptualLinks: ['Acetylcholine', 'Neurotransmitter', 'Neuromuscular junction'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch15-027',
@@ -12804,17 +13685,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'Both I band and A band get reduced',
       'I bands get reduced while A bands retain their length',
       'A bands get reduced while I bands retain their length',
-      'Both I band and A band retain their length'
+      'Both I band and A band retain their length',
     ],
     correctAnswer: 'I bands get reduced while A bands retain their length',
-    explanation: 'NCERT page 222 explicitly states that during shortening of the muscle (contraction), the I bands get reduced, whereas the A bands retain the length.',
+    explanation:
+      'NCERT page 222 explicitly states that during shortening of the muscle (contraction), the I bands get reduced, whereas the A bands retain the length.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 17, Page 222',
     previousYearFrequency: 26,
     conceptualLinks: ['Muscle contraction', 'Sarcomere changes', 'Sliding filament theory'],
     timeEstimate: 55,
     bloomsLevel: 'Analyze',
-    weightage: 5.5
+    weightage: 5.5,
   },
   {
     id: 'q11-batch15-028',
@@ -12826,17 +13708,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'It provides energy for contraction',
       'It binds to troponin and exposes myosin binding sites on actin',
       'It breaks down ATP',
-      'It forms cross bridges directly'
+      'It forms cross bridges directly',
     ],
     correctAnswer: 'It binds to troponin and exposes myosin binding sites on actin',
-    explanation: 'According to NCERT page 222, increase in Ca++ level leads to binding of calcium with a subunit of troponin on actin filaments and thereby removes the masking of active sites for myosin.',
+    explanation:
+      'According to NCERT page 222, increase in Ca++ level leads to binding of calcium with a subunit of troponin on actin filaments and thereby removes the masking of active sites for myosin.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 17, Page 222',
     previousYearFrequency: 28,
     conceptualLinks: ['Calcium ions', 'Troponin', 'Muscle contraction mechanism'],
     timeEstimate: 55,
     bloomsLevel: 'Understand',
-    weightage: 5.5
+    weightage: 5.5,
   },
   {
     id: 'q11-batch15-029',
@@ -12848,17 +13731,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'GTP hydrolysis',
       'ATP hydrolysis',
       'Glucose oxidation directly',
-      'Creatine phosphate only'
+      'Creatine phosphate only',
     ],
     correctAnswer: 'ATP hydrolysis',
-    explanation: 'NCERT page 222 mentions that utilizing the energy from ATP hydrolysis, the myosin head binds to exposed active sites on actin to form a cross bridge.',
+    explanation:
+      'NCERT page 222 mentions that utilizing the energy from ATP hydrolysis, the myosin head binds to exposed active sites on actin to form a cross bridge.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 17, Page 222',
     previousYearFrequency: 22,
     conceptualLinks: ['ATP hydrolysis', 'Energy for contraction', 'Cross bridge formation'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch15-030',
@@ -12870,17 +13754,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'ATP is completely depleted',
       'Ca++ ions are pumped back to sarcoplasmic reticulum',
       'Acetylcholine is released',
-      'Action potential spreads through sarcolemma'
+      'Action potential spreads through sarcolemma',
     ],
     correctAnswer: 'Ca++ ions are pumped back to sarcoplasmic reticulum',
-    explanation: 'According to NCERT page 223, the process continues till Ca++ ions are pumped back to the sarcoplasmic cisternae resulting in the masking of actin filaments, causing relaxation.',
+    explanation:
+      'According to NCERT page 223, the process continues till Ca++ ions are pumped back to the sarcoplasmic cisternae resulting in the masking of actin filaments, causing relaxation.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 17, Page 223',
     previousYearFrequency: 18,
     conceptualLinks: ['Muscle relaxation', 'Calcium pumping', 'Sarcoplasmic reticulum'],
     timeEstimate: 50,
     bloomsLevel: 'Understand',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch15-031',
@@ -12892,17 +13777,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'Depletion of ATP',
       'Accumulation of lactic acid due to anaerobic breakdown of glycogen',
       'Lack of oxygen supply',
-      'Depletion of calcium ions'
+      'Depletion of calcium ions',
     ],
     correctAnswer: 'Accumulation of lactic acid due to anaerobic breakdown of glycogen',
-    explanation: 'NCERT page 223 states that repeated activation of muscles can lead to accumulation of lactic acid due to anaerobic breakdown of glycogen in them, causing fatigue.',
+    explanation:
+      'NCERT page 223 states that repeated activation of muscles can lead to accumulation of lactic acid due to anaerobic breakdown of glycogen in them, causing fatigue.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 17, Page 223',
     previousYearFrequency: 20,
     conceptualLinks: ['Muscle fatigue', 'Lactic acid', 'Anaerobic respiration'],
     timeEstimate: 50,
     bloomsLevel: 'Understand',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch15-032',
@@ -12910,21 +13796,17 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-17',
     classId: 'class-11',
     question: 'The red coloured oxygen storing pigment in muscles is:',
-    options: [
-      'Haemoglobin',
-      'Cytochrome',
-      'Myoglobin',
-      'Ferritin'
-    ],
+    options: ['Haemoglobin', 'Cytochrome', 'Myoglobin', 'Ferritin'],
     correctAnswer: 'Myoglobin',
-    explanation: 'According to NCERT page 223, muscle contains a red coloured oxygen storing pigment called myoglobin.',
+    explanation:
+      'According to NCERT page 223, muscle contains a red coloured oxygen storing pigment called myoglobin.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 17, Page 223',
     previousYearFrequency: 18,
     conceptualLinks: ['Myoglobin', 'Oxygen storage', 'Red muscle fibres'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch15-033',
@@ -12936,17 +13818,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'Low myoglobin content and few mitochondria',
       'High myoglobin content and plenty of mitochondria',
       'No myoglobin and high sarcoplasmic reticulum',
-      'Low myoglobin and high sarcoplasmic reticulum'
+      'Low myoglobin and high sarcoplasmic reticulum',
     ],
     correctAnswer: 'High myoglobin content and plenty of mitochondria',
-    explanation: 'NCERT page 223 mentions that red fibres have high myoglobin content and contain plenty of mitochondria which can utilize large amounts of stored oxygen for ATP production.',
+    explanation:
+      'NCERT page 223 mentions that red fibres have high myoglobin content and contain plenty of mitochondria which can utilize large amounts of stored oxygen for ATP production.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 17, Page 223',
     previousYearFrequency: 16,
     conceptualLinks: ['Red muscle fibres', 'Myoglobin', 'Aerobic muscles'],
     timeEstimate: 50,
     bloomsLevel: 'Understand',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch15-034',
@@ -12958,17 +13841,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'More myoglobin and more mitochondria',
       'Less myoglobin and fewer mitochondria but high sarcoplasmic reticulum',
       'More myoglobin and fewer mitochondria',
-      'Same myoglobin content but different mitochondria'
+      'Same myoglobin content but different mitochondria',
     ],
     correctAnswer: 'Less myoglobin and fewer mitochondria but high sarcoplasmic reticulum',
-    explanation: 'According to NCERT page 223, white fibres possess very less quantity of myoglobin, few mitochondria, but high amount of sarcoplasmic reticulum.',
+    explanation:
+      'According to NCERT page 223, white fibres possess very less quantity of myoglobin, few mitochondria, but high amount of sarcoplasmic reticulum.',
     difficulty: 'Hard',
     ncertPageReference: 'Class 11, Chapter 17, Page 223',
     previousYearFrequency: 12,
     conceptualLinks: ['White muscle fibres', 'Anaerobic muscles', 'Muscle metabolism'],
     timeEstimate: 60,
     bloomsLevel: 'Analyze',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch15-035',
@@ -12976,21 +13860,17 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-17',
     classId: 'class-11',
     question: 'How many bones are present in the human skeletal system?',
-    options: [
-      '200',
-      '204',
-      '206',
-      '208'
-    ],
+    options: ['200', '204', '206', '208'],
     correctAnswer: '206',
-    explanation: 'NCERT page 224 clearly states that in human beings, the skeletal system is made up of 206 bones and a few cartilages.',
+    explanation:
+      'NCERT page 224 clearly states that in human beings, the skeletal system is made up of 206 bones and a few cartilages.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 17, Page 224',
     previousYearFrequency: 15,
     conceptualLinks: ['Skeletal system', 'Number of bones', 'Human skeleton'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q11-batch15-036',
@@ -12998,21 +13878,17 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-17',
     classId: 'class-11',
     question: 'The axial skeleton comprises of:',
-    options: [
-      '126 bones',
-      '80 bones',
-      '60 bones',
-      '100 bones'
-    ],
+    options: ['126 bones', '80 bones', '60 bones', '100 bones'],
     correctAnswer: '80 bones',
-    explanation: 'According to NCERT page 224, axial skeleton comprises 80 bones distributed along the main axis of the body.',
+    explanation:
+      'According to NCERT page 224, axial skeleton comprises 80 bones distributed along the main axis of the body.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 17, Page 224',
     previousYearFrequency: 14,
     conceptualLinks: ['Axial skeleton', 'Skeletal divisions', 'Bone count'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q11-batch15-037',
@@ -13020,21 +13896,17 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-17',
     classId: 'class-11',
     question: 'The skull is composed of how many bones?',
-    options: [
-      '20',
-      '21',
-      '22',
-      '24'
-    ],
+    options: ['20', '21', '22', '24'],
     correctAnswer: '22',
-    explanation: 'NCERT page 224 states that the skull is composed of two sets of bones - cranial and facial, that totals to 22 bones.',
+    explanation:
+      'NCERT page 224 states that the skull is composed of two sets of bones - cranial and facial, that totals to 22 bones.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 17, Page 224',
     previousYearFrequency: 18,
     conceptualLinks: ['Skull', 'Cranial bones', 'Facial bones'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch15-038',
@@ -13042,21 +13914,17 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-17',
     classId: 'class-11',
     question: 'The number of cranial bones is:',
-    options: [
-      '6',
-      '7',
-      '8',
-      '9'
-    ],
+    options: ['6', '7', '8', '9'],
     correctAnswer: '8',
-    explanation: 'According to NCERT page 224, cranial bones are 8 in number and form the hard protective outer covering (cranium) for the brain.',
+    explanation:
+      'According to NCERT page 224, cranial bones are 8 in number and form the hard protective outer covering (cranium) for the brain.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 17, Page 224',
     previousYearFrequency: 16,
     conceptualLinks: ['Cranial bones', 'Cranium', 'Skull structure'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch15-039',
@@ -13064,21 +13932,17 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-17',
     classId: 'class-11',
     question: 'The three tiny bones present in each middle ear are collectively called:',
-    options: [
-      'Auditory ossicles',
-      'Ear ossicles',
-      'Middle ear bones',
-      'Tympanic bones'
-    ],
+    options: ['Auditory ossicles', 'Ear ossicles', 'Middle ear bones', 'Tympanic bones'],
     correctAnswer: 'Ear ossicles',
-    explanation: 'NCERT page 224 mentions that each middle ear contains three tiny bones - Malleus, Incus and Stapes, collectively called Ear Ossicles.',
+    explanation:
+      'NCERT page 224 mentions that each middle ear contains three tiny bones - Malleus, Incus and Stapes, collectively called Ear Ossicles.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 17, Page 224',
     previousYearFrequency: 12,
     conceptualLinks: ['Ear ossicles', 'Malleus', 'Incus', 'Stapes'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q11-batch15-040',
@@ -13090,17 +13954,18 @@ export const class11Questions: AuthenticQuestion[] = [
       'One occipital condyle (monocondylic)',
       'Two occipital condyles (dicondylic)',
       'Three occipital condyles (tricondylic)',
-      'No condyles'
+      'No condyles',
     ],
     correctAnswer: 'Two occipital condyles (dicondylic)',
-    explanation: 'According to NCERT page 225, the skull region articulates with superior region of vertebral column with help of two occipital condyles (dicondylic skull).',
+    explanation:
+      'According to NCERT page 225, the skull region articulates with superior region of vertebral column with help of two occipital condyles (dicondylic skull).',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 17, Page 225',
     previousYearFrequency: 20,
     conceptualLinks: ['Occipital condyles', 'Dicondylic skull', 'Skull-vertebral articulation'],
     timeEstimate: 50,
     bloomsLevel: 'Understand',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch15-041',
@@ -13108,43 +13973,41 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-17',
     classId: 'class-11',
     question: 'The vertebral column is formed by how many vertebrae?',
-    options: [
-      '24',
-      '25',
-      '26',
-      '27'
-    ],
+    options: ['24', '25', '26', '27'],
     correctAnswer: '26',
-    explanation: 'NCERT page 225 states that the vertebral column is formed by 26 serially arranged units called vertebrae.',
+    explanation:
+      'NCERT page 225 states that the vertebral column is formed by 26 serially arranged units called vertebrae.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 17, Page 225',
     previousYearFrequency: 16,
     conceptualLinks: ['Vertebral column', 'Vertebrae', 'Axial skeleton'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch15-042',
     topicId: 'topic-11-17-locomotion',
     chapterId: 'ch-11-17',
     classId: 'class-11',
-    question: 'The vertebral column is differentiated into how many regions in the following order from skull?',
+    question:
+      'The vertebral column is differentiated into how many regions in the following order from skull?',
     options: [
       'Cervical (7), thoracic (12), lumbar (5), sacral (1-fused), coccygeal (1-fused)',
       'Thoracic (12), cervical (7), lumbar (5), sacral (1-fused), coccygeal (1-fused)',
       'Cervical (7), lumbar (5), thoracic (12), sacral (1-fused), coccygeal (1-fused)',
-      'Cervical (5), thoracic (12), lumbar (7), sacral (1-fused), coccygeal (1-fused)'
+      'Cervical (5), thoracic (12), lumbar (7), sacral (1-fused), coccygeal (1-fused)',
     ],
     correctAnswer: 'Cervical (7), thoracic (12), lumbar (5), sacral (1-fused), coccygeal (1-fused)',
-    explanation: 'According to NCERT page 225, the vertebral column is differentiated into cervical (7), thoracic (12), lumbar (5), sacral (1-fused) and coccygeal (1-fused) regions starting from the skull.',
+    explanation:
+      'According to NCERT page 225, the vertebral column is differentiated into cervical (7), thoracic (12), lumbar (5), sacral (1-fused) and coccygeal (1-fused) regions starting from the skull.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 17, Page 225',
     previousYearFrequency: 22,
     conceptualLinks: ['Vertebral regions', 'Vertebral column', 'Regional differentiation'],
     timeEstimate: 55,
     bloomsLevel: 'Remember',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch15-043',
@@ -13152,12 +14015,7 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-17',
     classId: 'class-11',
     question: 'How many pairs of ribs are present in humans?',
-    options: [
-      '10',
-      '11',
-      '12',
-      '13'
-    ],
+    options: ['10', '11', '12', '13'],
     correctAnswer: '12',
     explanation: 'NCERT page 225 clearly states that there are 12 pairs of ribs.',
     difficulty: 'Easy',
@@ -13166,7 +14024,7 @@ export const class11Questions: AuthenticQuestion[] = [
     conceptualLinks: ['Ribs', 'Rib cage', 'Thoracic skeleton'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch15-044',
@@ -13174,21 +14032,17 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-17',
     classId: 'class-11',
     question: 'Each rib has two articulation surfaces on its dorsal end and is hence called:',
-    options: [
-      'Monocephalic',
-      'Bicephalic',
-      'Tricephalic',
-      'Polycephalic'
-    ],
+    options: ['Monocephalic', 'Bicephalic', 'Tricephalic', 'Polycephalic'],
     correctAnswer: 'Bicephalic',
-    explanation: 'According to NCERT page 225, each rib has two articulation surfaces on its dorsal end and is hence called bicephalic.',
+    explanation:
+      'According to NCERT page 225, each rib has two articulation surfaces on its dorsal end and is hence called bicephalic.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 17, Page 225',
     previousYearFrequency: 14,
     conceptualLinks: ['Bicephalic ribs', 'Rib structure', 'Articulation surfaces'],
     timeEstimate: 45,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q11-batch15-045',
@@ -13200,17 +14054,18 @@ export const class11Questions: AuthenticQuestion[] = [
       '8th and 9th pairs',
       '9th and 10th pairs',
       '10th and 11th pairs',
-      '11th and 12th pairs'
+      '11th and 12th pairs',
     ],
     correctAnswer: '11th and 12th pairs',
-    explanation: 'NCERT page 225 states that last 2 pairs (11th and 12th) of ribs are not connected ventrally and are therefore called floating ribs.',
+    explanation:
+      'NCERT page 225 states that last 2 pairs (11th and 12th) of ribs are not connected ventrally and are therefore called floating ribs.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 17, Page 225',
     previousYearFrequency: 20,
     conceptualLinks: ['Floating ribs', 'Rib types', 'Thoracic skeleton'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch15-046',
@@ -13218,12 +14073,7 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-17',
     classId: 'class-11',
     question: 'Each limb in the appendicular skeleton is made of how many bones?',
-    options: [
-      '28',
-      '29',
-      '30',
-      '32'
-    ],
+    options: ['28', '29', '30', '32'],
     correctAnswer: '30',
     explanation: 'According to NCERT page 225, each limb is made of 30 bones.',
     difficulty: 'Easy',
@@ -13232,7 +14082,7 @@ export const class11Questions: AuthenticQuestion[] = [
     conceptualLinks: ['Appendicular skeleton', 'Limb bones', 'Bone count'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 3.0
+    weightage: 3.0,
   },
   {
     id: 'q11-batch15-047',
@@ -13240,21 +14090,17 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-17',
     classId: 'class-11',
     question: 'The cavity in the pelvic girdle where the thigh bone articulates is called:',
-    options: [
-      'Glenoid cavity',
-      'Acetabulum',
-      'Obturator foramen',
-      'Pelvic cavity'
-    ],
+    options: ['Glenoid cavity', 'Acetabulum', 'Obturator foramen', 'Pelvic cavity'],
     correctAnswer: 'Acetabulum',
-    explanation: 'NCERT page 226 mentions that at the point of fusion of ilium, ischium and pubis is a cavity called acetabulum to which the thigh bone articulates.',
+    explanation:
+      'NCERT page 226 mentions that at the point of fusion of ilium, ischium and pubis is a cavity called acetabulum to which the thigh bone articulates.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 17, Page 226',
     previousYearFrequency: 18,
     conceptualLinks: ['Acetabulum', 'Pelvic girdle', 'Hip joint'],
     timeEstimate: 45,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch15-048',
@@ -13262,43 +14108,36 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-17',
     classId: 'class-11',
     question: 'Which type of joint does not allow any movement?',
-    options: [
-      'Synovial joint',
-      'Cartilaginous joint',
-      'Fibrous joint',
-      'Ball and socket joint'
-    ],
+    options: ['Synovial joint', 'Cartilaginous joint', 'Fibrous joint', 'Ball and socket joint'],
     correctAnswer: 'Fibrous joint',
-    explanation: 'According to NCERT page 227, fibrous joints do not allow any movement. This type is shown by flat skull bones which fuse end-to-end with dense fibrous connective tissues in form of sutures.',
+    explanation:
+      'According to NCERT page 227, fibrous joints do not allow any movement. This type is shown by flat skull bones which fuse end-to-end with dense fibrous connective tissues in form of sutures.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 17, Page 227',
     previousYearFrequency: 16,
     conceptualLinks: ['Fibrous joints', 'Joint types', 'Immovable joints'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch15-049',
     topicId: 'topic-11-17-locomotion',
     chapterId: 'ch-11-17',
     classId: 'class-11',
-    question: 'Which disorder is characterized by inflammation of joints due to accumulation of uric acid crystals?',
-    options: [
-      'Arthritis',
-      'Osteoporosis',
-      'Gout',
-      'Tetany'
-    ],
+    question:
+      'Which disorder is characterized by inflammation of joints due to accumulation of uric acid crystals?',
+    options: ['Arthritis', 'Osteoporosis', 'Gout', 'Tetany'],
     correctAnswer: 'Gout',
-    explanation: 'NCERT page 227 defines gout as inflammation of joints due to accumulation of uric acid crystals.',
+    explanation:
+      'NCERT page 227 defines gout as inflammation of joints due to accumulation of uric acid crystals.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 17, Page 227',
     previousYearFrequency: 15,
     conceptualLinks: ['Gout', 'Joint disorders', 'Uric acid'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch15-050',
@@ -13310,17 +14149,19 @@ export const class11Questions: AuthenticQuestion[] = [
       'Progressive degeneration of skeletal muscle due to genetic disorder',
       'Auto immune disorder affecting neuromuscular junction leading to fatigue and paralysis',
       'Rapid spasms in muscle due to low calcium',
-      'Age-related decreased bone mass'
+      'Age-related decreased bone mass',
     ],
-    correctAnswer: 'Auto immune disorder affecting neuromuscular junction leading to fatigue and paralysis',
-    explanation: 'According to NCERT page 227, myasthenia gravis is an auto immune disorder affecting neuromuscular junction leading to fatigue, weakening and paralysis of skeletal muscle.',
+    correctAnswer:
+      'Auto immune disorder affecting neuromuscular junction leading to fatigue and paralysis',
+    explanation:
+      'According to NCERT page 227, myasthenia gravis is an auto immune disorder affecting neuromuscular junction leading to fatigue, weakening and paralysis of skeletal muscle.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 17, Page 227',
     previousYearFrequency: 18,
     conceptualLinks: ['Myasthenia gravis', 'Neuromuscular junction', 'Muscle disorders'],
     timeEstimate: 50,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
 
   // ============================================================================
@@ -13332,16 +14173,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-18',
     classId: 'class-11',
     question: 'What is the primary function of coordination in the human body?',
-    options: ['To increase metabolic rate', 'To ensure two or more organs interact and complement each other\'s functions', 'To produce hormones', 'To transmit genetic information'],
-    correctAnswer: 'To ensure two or more organs interact and complement each other\'s functions',
-    explanation: 'Coordination is the process through which two or more organs interact and complement the functions of one another to maintain homeostasis. The neural and endocrine systems jointly coordinate all activities of organs.',
+    options: [
+      'To increase metabolic rate',
+      "To ensure two or more organs interact and complement each other's functions",
+      'To produce hormones',
+      'To transmit genetic information',
+    ],
+    correctAnswer: "To ensure two or more organs interact and complement each other's functions",
+    explanation:
+      'Coordination is the process through which two or more organs interact and complement the functions of one another to maintain homeostasis. The neural and endocrine systems jointly coordinate all activities of organs.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 18, Page 230',
     previousYearFrequency: 8,
     conceptualLinks: ['Homeostasis', 'Neural system', 'Endocrine system'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 3.0
+    weightage: 3.0,
   },
   {
     id: 'q11-batch16-002',
@@ -13351,14 +14198,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Which cells are the functional units of the neural system?',
     options: ['Nephrons', 'Neurons', 'Hepatocytes', 'Erythrocytes'],
     correctAnswer: 'Neurons',
-    explanation: 'Neurons are highly specialized cells that can detect, receive, and transmit different kinds of stimuli. They are the structural and functional units of the neural system.',
+    explanation:
+      'Neurons are highly specialized cells that can detect, receive, and transmit different kinds of stimuli. They are the structural and functional units of the neural system.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 18, Page 231',
     previousYearFrequency: 12,
     conceptualLinks: ['Neural system', 'Nerve impulse', 'Excitable cells'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q11-batch16-003',
@@ -13366,16 +14214,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-18',
     classId: 'class-11',
     question: 'The human central neural system (CNS) includes which of the following?',
-    options: ['Brain and spinal cord', 'Brain and peripheral nerves', 'Spinal cord and ganglia', 'All nerves of the body'],
+    options: [
+      'Brain and spinal cord',
+      'Brain and peripheral nerves',
+      'Spinal cord and ganglia',
+      'All nerves of the body',
+    ],
     correctAnswer: 'Brain and spinal cord',
-    explanation: 'The CNS includes the brain and the spinal cord and is the site of information processing and control. The peripheral neural system comprises all the nerves associated with the CNS.',
+    explanation:
+      'The CNS includes the brain and the spinal cord and is the site of information processing and control. The peripheral neural system comprises all the nerves associated with the CNS.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 18, Page 231',
     previousYearFrequency: 15,
     conceptualLinks: ['Central neural system', 'Brain', 'Spinal cord'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch16-004',
@@ -13383,16 +14237,17 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-18',
     classId: 'class-11',
     question: 'What are the granular bodies found in the cytoplasm of the neuron cell body called?',
-    options: ['Ribosomal granules', 'Nissl\'s granules', 'Mitochondrial granules', 'Golgi granules'],
-    correctAnswer: 'Nissl\'s granules',
-    explanation: 'The cell body of a neuron contains cytoplasm with typical cell organelles and certain granular bodies called Nissl\'s granules, which are also present in dendrites.',
+    options: ['Ribosomal granules', "Nissl's granules", 'Mitochondrial granules', 'Golgi granules'],
+    correctAnswer: "Nissl's granules",
+    explanation:
+      "The cell body of a neuron contains cytoplasm with typical cell organelles and certain granular bodies called Nissl's granules, which are also present in dendrites.",
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 18, Page 231',
     previousYearFrequency: 10,
     conceptualLinks: ['Neuron structure', 'Cell body', 'Dendrites'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q11-batch16-005',
@@ -13402,14 +14257,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Which nerve fibres transmit impulses from tissues/organs to the CNS?',
     options: ['Efferent fibres', 'Afferent fibres', 'Motor fibres', 'Autonomic fibres'],
     correctAnswer: 'Afferent fibres',
-    explanation: 'The afferent nerve fibres transmit impulses from tissues/organs to the CNS, while efferent fibres transmit regulatory impulses from the CNS to peripheral tissues/organs.',
+    explanation:
+      'The afferent nerve fibres transmit impulses from tissues/organs to the CNS, while efferent fibres transmit regulatory impulses from the CNS to peripheral tissues/organs.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 18, Page 231',
     previousYearFrequency: 18,
     conceptualLinks: ['Peripheral nervous system', 'Sensory pathways', 'CNS'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch16-006',
@@ -13419,31 +14275,34 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Which part of the neuron transmits impulses towards the cell body?',
     options: ['Axon', 'Dendrites', 'Synaptic knob', 'Node of Ranvier'],
     correctAnswer: 'Dendrites',
-    explanation: 'Dendrites are short fibres that branch repeatedly and project out of the cell body. These fibres transmit impulses towards the cell body, while axons transmit impulses away from the cell body.',
+    explanation:
+      'Dendrites are short fibres that branch repeatedly and project out of the cell body. These fibres transmit impulses towards the cell body, while axons transmit impulses away from the cell body.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 18, Page 231-232',
     previousYearFrequency: 14,
     conceptualLinks: ['Neuron structure', 'Impulse transmission', 'Cell body'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q11-batch16-007',
     topicId: 'topic-11-18-neural',
     chapterId: 'ch-11-18',
     classId: 'class-11',
-    question: 'How many sodium ions are transported outward by the sodium-potassium pump for every two potassium ions moved inward?',
+    question:
+      'How many sodium ions are transported outward by the sodium-potassium pump for every two potassium ions moved inward?',
     options: ['1 Na+', '2 Na+', '3 Na+', '4 Na+'],
     correctAnswer: '3 Na+',
-    explanation: 'The sodium-potassium pump maintains ionic gradients by actively transporting 3 Na+ outwards for 2 K+ into the cell, creating the resting potential across the neural membrane.',
+    explanation:
+      'The sodium-potassium pump maintains ionic gradients by actively transporting 3 Na+ outwards for 2 K+ into the cell, creating the resting potential across the neural membrane.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 18, Page 232',
     previousYearFrequency: 22,
     conceptualLinks: ['Sodium-potassium pump', 'Resting potential', 'Active transport'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch16-008',
@@ -13453,14 +14312,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'What are the gaps between two adjacent myelin sheaths called?',
     options: ['Synaptic clefts', 'Nodes of Ranvier', 'Schwann gaps', 'Neural gaps'],
     correctAnswer: 'Nodes of Ranvier',
-    explanation: 'Myelinated nerve fibres are enveloped with Schwann cells that form a myelin sheath around the axon. The gaps between two adjacent myelin sheaths are called nodes of Ranvier.',
+    explanation:
+      'Myelinated nerve fibres are enveloped with Schwann cells that form a myelin sheath around the axon. The gaps between two adjacent myelin sheaths are called nodes of Ranvier.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 18, Page 232',
     previousYearFrequency: 16,
     conceptualLinks: ['Myelinated nerve fibres', 'Schwann cells', 'Saltatory conduction'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch16-009',
@@ -13468,50 +14328,60 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-18',
     classId: 'class-11',
     question: 'Which type of neurons have one axon and two or more dendrites?',
-    options: ['Unipolar neurons', 'Bipolar neurons', 'Multipolar neurons', 'Pseudounipolar neurons'],
+    options: [
+      'Unipolar neurons',
+      'Bipolar neurons',
+      'Multipolar neurons',
+      'Pseudounipolar neurons',
+    ],
     correctAnswer: 'Multipolar neurons',
-    explanation: 'Based on the number of axons and dendrites, neurons are divided into multipolar (with one axon and two or more dendrites, found in cerebral cortex), bipolar (one axon and one dendrite), and unipolar (one axon only).',
+    explanation:
+      'Based on the number of axons and dendrites, neurons are divided into multipolar (with one axon and two or more dendrites, found in cerebral cortex), bipolar (one axon and one dendrite), and unipolar (one axon only).',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 18, Page 232',
     previousYearFrequency: 12,
     conceptualLinks: ['Neuron types', 'Cerebral cortex', 'Neural structure'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q11-batch16-010',
     topicId: 'topic-11-18-neural',
     chapterId: 'ch-11-18',
     classId: 'class-11',
-    question: 'The electrical potential difference across the resting plasma membrane of a neuron is called:',
+    question:
+      'The electrical potential difference across the resting plasma membrane of a neuron is called:',
     options: ['Action potential', 'Resting potential', 'Threshold potential', 'Graded potential'],
     correctAnswer: 'Resting potential',
-    explanation: 'The resting potential is the electrical potential difference across the resting plasma membrane. The outer surface possesses a positive charge while the inner surface is negatively charged.',
+    explanation:
+      'The resting potential is the electrical potential difference across the resting plasma membrane. The outer surface possesses a positive charge while the inner surface is negatively charged.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 18, Page 233',
     previousYearFrequency: 25,
     conceptualLinks: ['Membrane potential', 'Polarization', 'Nerve impulse'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch16-011',
     topicId: 'topic-11-18-neural',
     chapterId: 'ch-11-18',
     classId: 'class-11',
-    question: 'The bulb-like structure at the end of axon terminals that contains neurotransmitters is called:',
+    question:
+      'The bulb-like structure at the end of axon terminals that contains neurotransmitters is called:',
     options: ['Dendrite terminal', 'Synaptic knob', 'Cell body', 'Axon hillock'],
     correctAnswer: 'Synaptic knob',
-    explanation: 'Each branch of the axon terminates as a bulb-like structure called synaptic knob which possesses synaptic vesicles containing chemicals called neurotransmitters.',
+    explanation:
+      'Each branch of the axon terminates as a bulb-like structure called synaptic knob which possesses synaptic vesicles containing chemicals called neurotransmitters.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 18, Page 232',
     previousYearFrequency: 14,
     conceptualLinks: ['Axon terminal', 'Neurotransmitters', 'Synapse'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q11-batch16-012',
@@ -13519,16 +14389,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-18',
     classId: 'class-11',
     question: 'The autonomic neural system is further classified into which two systems?',
-    options: ['Somatic and visceral', 'Sympathetic and parasympathetic', 'Central and peripheral', 'Afferent and efferent'],
+    options: [
+      'Somatic and visceral',
+      'Sympathetic and parasympathetic',
+      'Central and peripheral',
+      'Afferent and efferent',
+    ],
     correctAnswer: 'Sympathetic and parasympathetic',
-    explanation: 'The autonomic neural system transmits impulses from the CNS to involuntary organs and smooth muscles. It is further classified into sympathetic neural system and parasympathetic neural system.',
+    explanation:
+      'The autonomic neural system transmits impulses from the CNS to involuntary organs and smooth muscles. It is further classified into sympathetic neural system and parasympathetic neural system.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 18, Page 231',
     previousYearFrequency: 20,
     conceptualLinks: ['Autonomic nervous system', 'Involuntary control', 'Smooth muscles'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch16-013',
@@ -13538,14 +14414,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Which part of the brain forms the major part of the human brain?',
     options: ['Cerebellum', 'Cerebrum', 'Medulla', 'Thalamus'],
     correctAnswer: 'Cerebrum',
-    explanation: 'Cerebrum forms the major part of the human brain. It is longitudinally divided into two cerebral hemispheres connected by the corpus callosum.',
+    explanation:
+      'Cerebrum forms the major part of the human brain. It is longitudinally divided into two cerebral hemispheres connected by the corpus callosum.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 18, Page 236',
     previousYearFrequency: 18,
     conceptualLinks: ['Forebrain', 'Cerebral hemispheres', 'Grey matter'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch16-014',
@@ -13555,31 +14432,39 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The tract of nerve fibres that connects the two cerebral hemispheres is called:',
     options: ['Cerebral aqueduct', 'Corpus callosum', 'Corpora quadrigemina', 'Cerebral peduncle'],
     correctAnswer: 'Corpus callosum',
-    explanation: 'The two cerebral hemispheres are connected by a tract of nerve fibres called corpus callosum, which facilitates communication between the two halves.',
+    explanation:
+      'The two cerebral hemispheres are connected by a tract of nerve fibres called corpus callosum, which facilitates communication between the two halves.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 18, Page 236',
     previousYearFrequency: 16,
     conceptualLinks: ['Cerebral hemispheres', 'Brain structure', 'Neural connections'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q11-batch16-015',
     topicId: 'topic-11-18-neural',
     chapterId: 'ch-11-18',
     classId: 'class-11',
-    question: 'When a neuron is resting, the axonal membrane is comparatively more permeable to which ion?',
-    options: ['Sodium ions (Na+)', 'Potassium ions (K+)', 'Calcium ions (Ca2+)', 'Chloride ions (Cl-)'],
+    question:
+      'When a neuron is resting, the axonal membrane is comparatively more permeable to which ion?',
+    options: [
+      'Sodium ions (Na+)',
+      'Potassium ions (K+)',
+      'Calcium ions (Ca2+)',
+      'Chloride ions (Cl-)',
+    ],
     correctAnswer: 'Potassium ions (K+)',
-    explanation: 'When a neuron is not conducting any impulse (resting), the axonal membrane is comparatively more permeable to potassium ions (K+) and nearly impermeable to sodium ions (Na+).',
+    explanation:
+      'When a neuron is not conducting any impulse (resting), the axonal membrane is comparatively more permeable to potassium ions (K+) and nearly impermeable to sodium ions (Na+).',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 18, Page 232',
     previousYearFrequency: 28,
     conceptualLinks: ['Resting potential', 'Ion permeability', 'Membrane potential'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch16-016',
@@ -13587,33 +14472,41 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-18',
     classId: 'class-11',
     question: 'What happens when a stimulus is applied to a polarized neural membrane?',
-    options: ['The membrane becomes impermeable to all ions', 'The membrane becomes freely permeable to Na+ causing depolarization', 'The membrane becomes freely permeable to K+ causing hyperpolarization', 'The membrane maintains its polarized state'],
+    options: [
+      'The membrane becomes impermeable to all ions',
+      'The membrane becomes freely permeable to Na+ causing depolarization',
+      'The membrane becomes freely permeable to K+ causing hyperpolarization',
+      'The membrane maintains its polarized state',
+    ],
     correctAnswer: 'The membrane becomes freely permeable to Na+ causing depolarization',
-    explanation: 'When a stimulus is applied at a site on the polarized membrane, it becomes freely permeable to Na+. This leads to rapid influx of Na+ followed by reversal of polarity (depolarization), generating an action potential.',
+    explanation:
+      'When a stimulus is applied at a site on the polarized membrane, it becomes freely permeable to Na+. This leads to rapid influx of Na+ followed by reversal of polarity (depolarization), generating an action potential.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 18, Page 233',
     previousYearFrequency: 32,
     conceptualLinks: ['Depolarization', 'Action potential', 'Nerve impulse generation'],
     timeEstimate: 50,
     bloomsLevel: 'Understand',
-    weightage: 5.5
+    weightage: 5.5,
   },
   {
     id: 'q11-batch16-017',
     topicId: 'topic-11-18-neural',
     chapterId: 'ch-11-18',
     classId: 'class-11',
-    question: 'The junction through which a nerve impulse is transmitted from one neuron to another is called:',
+    question:
+      'The junction through which a nerve impulse is transmitted from one neuron to another is called:',
     options: ['Neuromuscular junction', 'Gap junction', 'Synapse', 'Tight junction'],
     correctAnswer: 'Synapse',
-    explanation: 'A synapse is a junction formed by the membranes of a pre-synaptic neuron and a post-synaptic neuron, which may or may not be separated by a gap called synaptic cleft.',
+    explanation:
+      'A synapse is a junction formed by the membranes of a pre-synaptic neuron and a post-synaptic neuron, which may or may not be separated by a gap called synaptic cleft.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 18, Page 234',
     previousYearFrequency: 30,
     conceptualLinks: ['Impulse transmission', 'Neurotransmitters', 'Chemical synapse'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch16-018',
@@ -13621,33 +14514,41 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-18',
     classId: 'class-11',
     question: 'Which type of synapse allows for faster impulse transmission?',
-    options: ['Chemical synapse', 'Electrical synapse', 'Both have equal speed', 'Neither allows impulse transmission'],
+    options: [
+      'Chemical synapse',
+      'Electrical synapse',
+      'Both have equal speed',
+      'Neither allows impulse transmission',
+    ],
     correctAnswer: 'Electrical synapse',
-    explanation: 'At electrical synapses, the membranes of pre- and post-synaptic neurons are in very close proximity, and electrical current can flow directly. Impulse transmission across an electrical synapse is always faster than across a chemical synapse.',
+    explanation:
+      'At electrical synapses, the membranes of pre- and post-synaptic neurons are in very close proximity, and electrical current can flow directly. Impulse transmission across an electrical synapse is always faster than across a chemical synapse.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 18, Page 234',
     previousYearFrequency: 24,
     conceptualLinks: ['Synapse types', 'Impulse transmission speed', 'Neural communication'],
     timeEstimate: 50,
     bloomsLevel: 'Understand',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch16-019',
     topicId: 'topic-11-18-neural',
     chapterId: 'ch-11-18',
     classId: 'class-11',
-    question: 'The chemicals involved in the transmission of impulses at chemical synapses are called:',
+    question:
+      'The chemicals involved in the transmission of impulses at chemical synapses are called:',
     options: ['Hormones', 'Enzymes', 'Neurotransmitters', 'Antibodies'],
     correctAnswer: 'Neurotransmitters',
-    explanation: 'Chemicals called neurotransmitters are involved in the transmission of impulses at chemical synapses. They are stored in synaptic vesicles at the axon terminals.',
+    explanation:
+      'Chemicals called neurotransmitters are involved in the transmission of impulses at chemical synapses. They are stored in synaptic vesicles at the axon terminals.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 18, Page 234',
     previousYearFrequency: 26,
     conceptualLinks: ['Chemical synapse', 'Synaptic transmission', 'Acetylcholine'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch16-020',
@@ -13655,16 +14556,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-18',
     classId: 'class-11',
     question: 'The forebrain consists of which three structures?',
-    options: ['Cerebrum, pons, medulla', 'Cerebrum, thalamus, hypothalamus', 'Thalamus, pons, cerebellum', 'Hypothalamus, medulla, cerebellum'],
+    options: [
+      'Cerebrum, pons, medulla',
+      'Cerebrum, thalamus, hypothalamus',
+      'Thalamus, pons, cerebellum',
+      'Hypothalamus, medulla, cerebellum',
+    ],
     correctAnswer: 'Cerebrum, thalamus, hypothalamus',
-    explanation: 'The forebrain consists of cerebrum, thalamus, and hypothalamus. The cerebrum forms the major part, while thalamus is a coordinating center and hypothalamus controls body temperature, eating, and drinking.',
+    explanation:
+      'The forebrain consists of cerebrum, thalamus, and hypothalamus. The cerebrum forms the major part, while thalamus is a coordinating center and hypothalamus controls body temperature, eating, and drinking.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 18, Page 236',
     previousYearFrequency: 22,
     conceptualLinks: ['Brain divisions', 'Forebrain structure', 'Neural organization'],
     timeEstimate: 50,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch16-021',
@@ -13672,33 +14579,41 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-18',
     classId: 'class-11',
     question: 'The cerebral cortex is referred to as grey matter because:',
-    options: ['It contains myelin sheaths', 'Neuron cell bodies are concentrated there', 'It lacks blood supply', 'It contains only glial cells'],
+    options: [
+      'It contains myelin sheaths',
+      'Neuron cell bodies are concentrated there',
+      'It lacks blood supply',
+      'It contains only glial cells',
+    ],
     correctAnswer: 'Neuron cell bodies are concentrated there',
-    explanation: 'The cerebral cortex is referred to as grey matter due to its greyish appearance. The neuron cell bodies are concentrated here, giving it this characteristic color.',
+    explanation:
+      'The cerebral cortex is referred to as grey matter due to its greyish appearance. The neuron cell bodies are concentrated here, giving it this characteristic color.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 18, Page 236',
     previousYearFrequency: 20,
     conceptualLinks: ['Cerebral cortex', 'Grey matter', 'White matter'],
     timeEstimate: 50,
     bloomsLevel: 'Understand',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch16-022',
     topicId: 'topic-11-18-neural',
     chapterId: 'ch-11-18',
     classId: 'class-11',
-    question: 'Which brain structure is responsible for regulating body temperature, urge for eating and drinking?',
+    question:
+      'Which brain structure is responsible for regulating body temperature, urge for eating and drinking?',
     options: ['Cerebrum', 'Thalamus', 'Hypothalamus', 'Medulla'],
     correctAnswer: 'Hypothalamus',
-    explanation: 'The hypothalamus lies at the base of the thalamus and contains a number of centers which control body temperature, urge for eating and drinking. It also contains neurosecretory cells.',
+    explanation:
+      'The hypothalamus lies at the base of the thalamus and contains a number of centers which control body temperature, urge for eating and drinking. It also contains neurosecretory cells.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 18, Page 236',
     previousYearFrequency: 30,
     conceptualLinks: ['Hypothalamus', 'Thermoregulation', 'Homeostasis'],
     timeEstimate: 45,
     bloomsLevel: 'Remember',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch16-023',
@@ -13706,33 +14621,41 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-18',
     classId: 'class-11',
     question: 'The hindbrain comprises which three structures?',
-    options: ['Cerebrum, cerebellum, medulla', 'Pons, cerebellum, medulla', 'Thalamus, pons, medulla', 'Hypothalamus, cerebellum, pons'],
+    options: [
+      'Cerebrum, cerebellum, medulla',
+      'Pons, cerebellum, medulla',
+      'Thalamus, pons, medulla',
+      'Hypothalamus, cerebellum, pons',
+    ],
     correctAnswer: 'Pons, cerebellum, medulla',
-    explanation: 'The hindbrain comprises pons, cerebellum, and medulla (medulla oblongata). Together with midbrain, they form connections vital for coordination and control.',
+    explanation:
+      'The hindbrain comprises pons, cerebellum, and medulla (medulla oblongata). Together with midbrain, they form connections vital for coordination and control.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 18, Page 236',
     previousYearFrequency: 24,
     conceptualLinks: ['Hindbrain', 'Brain stem', 'Neural coordination'],
     timeEstimate: 45,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch16-024',
     topicId: 'topic-11-18-neural',
     chapterId: 'ch-11-18',
     classId: 'class-11',
-    question: 'Which part of the brain controls respiration, cardiovascular reflexes, and gastric secretions?',
+    question:
+      'Which part of the brain controls respiration, cardiovascular reflexes, and gastric secretions?',
     options: ['Cerebrum', 'Cerebellum', 'Medulla oblongata', 'Thalamus'],
     correctAnswer: 'Medulla oblongata',
-    explanation: 'The medulla of the brain is connected to the spinal cord and contains centres which control respiration, cardiovascular reflexes, and gastric secretions.',
+    explanation:
+      'The medulla of the brain is connected to the spinal cord and contains centres which control respiration, cardiovascular reflexes, and gastric secretions.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 18, Page 236',
     previousYearFrequency: 28,
     conceptualLinks: ['Medulla oblongata', 'Involuntary actions', 'Vital functions'],
     timeEstimate: 50,
     bloomsLevel: 'Remember',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch16-025',
@@ -13740,16 +14663,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-18',
     classId: 'class-11',
     question: 'The three cranial meninges covering the brain from outer to inner are:',
-    options: ['Pia mater, arachnoid, dura mater', 'Dura mater, arachnoid, pia mater', 'Arachnoid, dura mater, pia mater', 'Dura mater, pia mater, arachnoid'],
+    options: [
+      'Pia mater, arachnoid, dura mater',
+      'Dura mater, arachnoid, pia mater',
+      'Arachnoid, dura mater, pia mater',
+      'Dura mater, pia mater, arachnoid',
+    ],
     correctAnswer: 'Dura mater, arachnoid, pia mater',
-    explanation: 'Inside the skull, the brain is covered by cranial meninges consisting of an outer layer called dura mater, a very thin middle layer called arachnoid, and an inner layer called pia mater which is in contact with brain tissue.',
+    explanation:
+      'Inside the skull, the brain is covered by cranial meninges consisting of an outer layer called dura mater, a very thin middle layer called arachnoid, and an inner layer called pia mater which is in contact with brain tissue.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 18, Page 235',
     previousYearFrequency: 18,
     conceptualLinks: ['Brain protection', 'Meninges', 'CNS covering'],
     timeEstimate: 55,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch16-026',
@@ -13757,16 +14686,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-18',
     classId: 'class-11',
     question: 'During depolarization of a neural membrane, which of the following occurs?',
-    options: ['Outer surface becomes positive, inner surface becomes negative', 'Outer surface becomes negative, inner surface becomes positive', 'Both surfaces become positive', 'Both surfaces become negative'],
+    options: [
+      'Outer surface becomes positive, inner surface becomes negative',
+      'Outer surface becomes negative, inner surface becomes positive',
+      'Both surfaces become positive',
+      'Both surfaces become negative',
+    ],
     correctAnswer: 'Outer surface becomes negative, inner surface becomes positive',
-    explanation: 'During depolarization, rapid influx of Na+ causes reversal of polarity - the outer surface of the membrane becomes negatively charged and the inner side becomes positively charged.',
+    explanation:
+      'During depolarization, rapid influx of Na+ causes reversal of polarity - the outer surface of the membrane becomes negatively charged and the inner side becomes positively charged.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 18, Page 233',
     previousYearFrequency: 35,
     conceptualLinks: ['Depolarization', 'Action potential', 'Polarity reversal'],
     timeEstimate: 55,
     bloomsLevel: 'Understand',
-    weightage: 5.5
+    weightage: 5.5,
   },
   {
     id: 'q11-batch16-027',
@@ -13774,16 +14709,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-18',
     classId: 'class-11',
     question: 'The association areas of the cerebral cortex are responsible for:',
-    options: ['Only motor functions', 'Only sensory functions', 'Complex functions like intersensory associations, memory, and communication', 'Only reflex actions'],
+    options: [
+      'Only motor functions',
+      'Only sensory functions',
+      'Complex functions like intersensory associations, memory, and communication',
+      'Only reflex actions',
+    ],
     correctAnswer: 'Complex functions like intersensory associations, memory, and communication',
-    explanation: 'The cerebral cortex contains motor areas, sensory areas, and large regions called association areas that are neither clearly sensory nor motor. These are responsible for complex functions like intersensory associations, memory, and communication.',
+    explanation:
+      'The cerebral cortex contains motor areas, sensory areas, and large regions called association areas that are neither clearly sensory nor motor. These are responsible for complex functions like intersensory associations, memory, and communication.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 18, Page 236',
     previousYearFrequency: 22,
     conceptualLinks: ['Cerebral cortex', 'Association areas', 'Higher brain functions'],
     timeEstimate: 55,
     bloomsLevel: 'Understand',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch16-028',
@@ -13793,14 +14734,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Bipolar neurons are found in which structure?',
     options: ['Cerebral cortex', 'Retina of eye', 'Spinal cord', 'Medulla oblongata'],
     correctAnswer: 'Retina of eye',
-    explanation: 'Bipolar neurons have one axon and one dendrite and are found in the retina of the eye. Multipolar neurons are found in cerebral cortex, and unipolar neurons are usually found in embryonic stage.',
+    explanation:
+      'Bipolar neurons have one axon and one dendrite and are found in the retina of the eye. Multipolar neurons are found in cerebral cortex, and unipolar neurons are usually found in embryonic stage.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 18, Page 232',
     previousYearFrequency: 16,
     conceptualLinks: ['Neuron types', 'Retina', 'Sensory neurons'],
     timeEstimate: 50,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch16-029',
@@ -13810,14 +14752,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The canal that passes through the midbrain is called:',
     options: ['Central canal', 'Cerebral aqueduct', 'Spinal canal', 'Vertebral canal'],
     correctAnswer: 'Cerebral aqueduct',
-    explanation: 'The midbrain is located between the thalamus/hypothalamus of the forebrain and pons of the hindbrain. A canal called the cerebral aqueduct passes through the midbrain.',
+    explanation:
+      'The midbrain is located between the thalamus/hypothalamus of the forebrain and pons of the hindbrain. A canal called the cerebral aqueduct passes through the midbrain.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 18, Page 236',
     previousYearFrequency: 12,
     conceptualLinks: ['Midbrain', 'Brain structure', 'CSF circulation'],
     timeEstimate: 45,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q11-batch16-030',
@@ -13825,16 +14768,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-18',
     classId: 'class-11',
     question: 'The white matter in the cerebral hemisphere consists of:',
-    options: ['Neuron cell bodies', 'Myelinated nerve fibres', 'Unmyelinated nerve fibres', 'Grey matter'],
+    options: [
+      'Neuron cell bodies',
+      'Myelinated nerve fibres',
+      'Unmyelinated nerve fibres',
+      'Grey matter',
+    ],
     correctAnswer: 'Myelinated nerve fibres',
-    explanation: 'Fibres of the tracts covered with myelin sheath constitute the inner part of cerebral hemisphere. They give an opaque white appearance to the layer and hence is called white matter.',
+    explanation:
+      'Fibres of the tracts covered with myelin sheath constitute the inner part of cerebral hemisphere. They give an opaque white appearance to the layer and hence is called white matter.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 18, Page 236',
     previousYearFrequency: 20,
     conceptualLinks: ['White matter', 'Myelin sheath', 'Cerebral hemisphere'],
     timeEstimate: 50,
     bloomsLevel: 'Understand',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch16-031',
@@ -13842,16 +14791,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-18',
     classId: 'class-11',
     question: 'What is the role of thalamus in the brain?',
-    options: ['Controls body temperature', 'Major coordinating centre for sensory and motor signaling', 'Controls respiration', 'Maintains balance and posture'],
+    options: [
+      'Controls body temperature',
+      'Major coordinating centre for sensory and motor signaling',
+      'Controls respiration',
+      'Maintains balance and posture',
+    ],
     correctAnswer: 'Major coordinating centre for sensory and motor signaling',
-    explanation: 'The cerebrum wraps around a structure called thalamus, which is a major coordinating centre for sensory and motor signaling in the brain.',
+    explanation:
+      'The cerebrum wraps around a structure called thalamus, which is a major coordinating centre for sensory and motor signaling in the brain.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 18, Page 236',
     previousYearFrequency: 24,
     conceptualLinks: ['Thalamus', 'Sensory relay', 'Motor coordination'],
     timeEstimate: 50,
     bloomsLevel: 'Understand',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch16-032',
@@ -13861,14 +14816,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The somatic neural system relays impulses from the CNS to:',
     options: ['Smooth muscles', 'Cardiac muscles', 'Skeletal muscles', 'Involuntary organs'],
     correctAnswer: 'Skeletal muscles',
-    explanation: 'The PNS is divided into somatic neural system and autonomic neural system. The somatic neural system relays impulses from the CNS to skeletal muscles, while autonomic system controls involuntary organs.',
+    explanation:
+      'The PNS is divided into somatic neural system and autonomic neural system. The somatic neural system relays impulses from the CNS to skeletal muscles, while autonomic system controls involuntary organs.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 18, Page 231',
     previousYearFrequency: 26,
     conceptualLinks: ['Somatic nervous system', 'Voluntary control', 'Skeletal muscles'],
     timeEstimate: 50,
     bloomsLevel: 'Understand',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch16-033',
@@ -13876,16 +14832,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-18',
     classId: 'class-11',
     question: 'Which structure in the midbrain consists of four round swellings (lobes)?',
-    options: ['Corpus callosum', 'Corpora quadrigemina', 'Cerebral peduncles', 'Superior colliculi'],
+    options: [
+      'Corpus callosum',
+      'Corpora quadrigemina',
+      'Cerebral peduncles',
+      'Superior colliculi',
+    ],
     correctAnswer: 'Corpora quadrigemina',
-    explanation: 'The dorsal portion of the midbrain consists mainly of four round swellings (lobes) called corpora quadrigemina, involved in visual and auditory reflexes.',
+    explanation:
+      'The dorsal portion of the midbrain consists mainly of four round swellings (lobes) called corpora quadrigemina, involved in visual and auditory reflexes.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 18, Page 236',
     previousYearFrequency: 14,
     conceptualLinks: ['Midbrain', 'Corpora quadrigemina', 'Sensory integration'],
     timeEstimate: 50,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch16-034',
@@ -13893,16 +14855,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-18',
     classId: 'class-11',
     question: 'Pons in the hindbrain consists of:',
-    options: ['Centres controlling respiration', 'Fibre tracts that interconnect different regions of brain', 'Cell bodies regulating balance', 'Neurosecretory cells'],
+    options: [
+      'Centres controlling respiration',
+      'Fibre tracts that interconnect different regions of brain',
+      'Cell bodies regulating balance',
+      'Neurosecretory cells',
+    ],
     correctAnswer: 'Fibre tracts that interconnect different regions of brain',
-    explanation: 'Pons consists of fibre tracts that interconnect different regions of the brain, serving as a bridge between various parts of the nervous system.',
+    explanation:
+      'Pons consists of fibre tracts that interconnect different regions of the brain, serving as a bridge between various parts of the nervous system.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 18, Page 236',
     previousYearFrequency: 18,
     conceptualLinks: ['Pons', 'Brain stem', 'Neural pathways'],
     timeEstimate: 50,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch16-035',
@@ -13910,16 +14878,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-18',
     classId: 'class-11',
     question: 'Why does the cerebellum have a very convoluted surface?',
-    options: ['To reduce its size', 'To provide additional space for many more neurons', 'To increase blood flow', 'To protect it from injury'],
+    options: [
+      'To reduce its size',
+      'To provide additional space for many more neurons',
+      'To increase blood flow',
+      'To protect it from injury',
+    ],
     correctAnswer: 'To provide additional space for many more neurons',
-    explanation: 'Cerebellum has a very convoluted surface in order to provide the additional space for many more neurons, enabling it to perform complex coordination functions.',
+    explanation:
+      'Cerebellum has a very convoluted surface in order to provide the additional space for many more neurons, enabling it to perform complex coordination functions.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 18, Page 236',
     previousYearFrequency: 15,
     conceptualLinks: ['Cerebellum', 'Surface area', 'Neural organization'],
     timeEstimate: 55,
     bloomsLevel: 'Understand',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch16-036',
@@ -13927,33 +14901,46 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-18',
     classId: 'class-11',
     question: 'The limbic system along with hypothalamus is involved in:',
-    options: ['Regulation of respiration', 'Regulation of sexual behaviour and emotional reactions', 'Control of voluntary movements', 'Regulation of blood pressure'],
+    options: [
+      'Regulation of respiration',
+      'Regulation of sexual behaviour and emotional reactions',
+      'Control of voluntary movements',
+      'Regulation of blood pressure',
+    ],
     correctAnswer: 'Regulation of sexual behaviour and emotional reactions',
-    explanation: 'The limbic system (including amygdala, hippocampus) along with hypothalamus is involved in regulation of sexual behaviour, expression of emotional reactions (excitement, pleasure, rage, fear), and motivation.',
+    explanation:
+      'The limbic system (including amygdala, hippocampus) along with hypothalamus is involved in regulation of sexual behaviour, expression of emotional reactions (excitement, pleasure, rage, fear), and motivation.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 18, Page 236',
     previousYearFrequency: 22,
     conceptualLinks: ['Limbic system', 'Emotions', 'Behaviour'],
     timeEstimate: 55,
     bloomsLevel: 'Understand',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch16-037',
     topicId: 'topic-11-18-neural',
     chapterId: 'ch-11-18',
     classId: 'class-11',
-    question: 'When an action potential arrives at the axon terminal, what happens to the synaptic vesicles?',
-    options: ['They dissolve', 'They move towards the membrane and fuse with it, releasing neurotransmitters', 'They move away from the membrane', 'They multiply in number'],
+    question:
+      'When an action potential arrives at the axon terminal, what happens to the synaptic vesicles?',
+    options: [
+      'They dissolve',
+      'They move towards the membrane and fuse with it, releasing neurotransmitters',
+      'They move away from the membrane',
+      'They multiply in number',
+    ],
     correctAnswer: 'They move towards the membrane and fuse with it, releasing neurotransmitters',
-    explanation: 'When an impulse arrives at the axon terminal, it stimulates the movement of synaptic vesicles towards the membrane where they fuse with the plasma membrane and release their neurotransmitters in the synaptic cleft.',
+    explanation:
+      'When an impulse arrives at the axon terminal, it stimulates the movement of synaptic vesicles towards the membrane where they fuse with the plasma membrane and release their neurotransmitters in the synaptic cleft.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 18, Page 234-235',
     previousYearFrequency: 28,
     conceptualLinks: ['Synaptic transmission', 'Neurotransmitter release', 'Exocytosis'],
     timeEstimate: 60,
     bloomsLevel: 'Understand',
-    weightage: 5.5
+    weightage: 5.5,
   },
   {
     id: 'q11-batch16-038',
@@ -13961,16 +14948,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-18',
     classId: 'class-11',
     question: 'After neurotransmitters are released into the synaptic cleft, they:',
-    options: ['Remain in the cleft permanently', 'Bind to specific receptors on the post-synaptic membrane', 'Enter the pre-synaptic neuron', 'Destroy the synaptic cleft'],
+    options: [
+      'Remain in the cleft permanently',
+      'Bind to specific receptors on the post-synaptic membrane',
+      'Enter the pre-synaptic neuron',
+      'Destroy the synaptic cleft',
+    ],
     correctAnswer: 'Bind to specific receptors on the post-synaptic membrane',
-    explanation: 'The released neurotransmitters bind to their specific receptors present on the post-synaptic membrane. This binding opens ion channels allowing the entry of ions which can generate a new potential.',
+    explanation:
+      'The released neurotransmitters bind to their specific receptors present on the post-synaptic membrane. This binding opens ion channels allowing the entry of ions which can generate a new potential.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 18, Page 235',
     previousYearFrequency: 25,
     conceptualLinks: ['Neurotransmitter binding', 'Receptors', 'Post-synaptic potential'],
     timeEstimate: 55,
     bloomsLevel: 'Understand',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch16-039',
@@ -13978,16 +14971,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-18',
     classId: 'class-11',
     question: 'How does repolarization occur after an action potential?',
-    options: ['By influx of Na+ ions', 'By efflux of K+ ions restoring the resting potential', 'By influx of Ca2+ ions', 'By blocking all ion channels'],
+    options: [
+      'By influx of Na+ ions',
+      'By efflux of K+ ions restoring the resting potential',
+      'By influx of Ca2+ ions',
+      'By blocking all ion channels',
+    ],
     correctAnswer: 'By efflux of K+ ions restoring the resting potential',
-    explanation: 'The stimulus-induced permeability to Na+ is short-lived and quickly followed by a rise in permeability to K+. K+ diffuses outside the membrane and restores the resting potential (repolarization).',
+    explanation:
+      'The stimulus-induced permeability to Na+ is short-lived and quickly followed by a rise in permeability to K+. K+ diffuses outside the membrane and restores the resting potential (repolarization).',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 18, Page 233',
     previousYearFrequency: 30,
     conceptualLinks: ['Repolarization', 'Potassium efflux', 'Resting potential restoration'],
     timeEstimate: 60,
     bloomsLevel: 'Understand',
-    weightage: 5.5
+    weightage: 5.5,
   },
   {
     id: 'q11-batch16-040',
@@ -13995,33 +14994,46 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-18',
     classId: 'class-11',
     question: 'The brain stem is formed by which three regions?',
-    options: ['Forebrain, midbrain, hindbrain', 'Cerebrum, cerebellum, medulla', 'Midbrain, pons, medulla oblongata', 'Thalamus, hypothalamus, pons'],
+    options: [
+      'Forebrain, midbrain, hindbrain',
+      'Cerebrum, cerebellum, medulla',
+      'Midbrain, pons, medulla oblongata',
+      'Thalamus, hypothalamus, pons',
+    ],
     correctAnswer: 'Midbrain, pons, medulla oblongata',
-    explanation: 'Three major regions make up the brain stem: midbrain, pons, and medulla oblongata. Brain stem forms the connections between the brain and spinal cord.',
+    explanation:
+      'Three major regions make up the brain stem: midbrain, pons, and medulla oblongata. Brain stem forms the connections between the brain and spinal cord.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 18, Page 236',
     previousYearFrequency: 20,
     conceptualLinks: ['Brain stem', 'CNS organization', 'Neural connections'],
     timeEstimate: 50,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch16-041',
     topicId: 'topic-11-18-neural',
     chapterId: 'ch-11-18',
     classId: 'class-11',
-    question: 'Analyze the sequence of events during nerve impulse conduction. If site A is depolarized, what causes site B to depolarize next?',
-    options: ['Chemical signals from site A', 'Current flow on inner surface from A to B and outer surface from B to A', 'Mechanical pressure', 'Temperature changes'],
+    question:
+      'Analyze the sequence of events during nerve impulse conduction. If site A is depolarized, what causes site B to depolarize next?',
+    options: [
+      'Chemical signals from site A',
+      'Current flow on inner surface from A to B and outer surface from B to A',
+      'Mechanical pressure',
+      'Temperature changes',
+    ],
     correctAnswer: 'Current flow on inner surface from A to B and outer surface from B to A',
-    explanation: 'When site A is depolarized, current flows on the inner surface from site A to site B, and on the outer surface from B to A to complete the circuit. This causes reversal of polarity at site B, generating an action potential there.',
+    explanation:
+      'When site A is depolarized, current flows on the inner surface from site A to site B, and on the outer surface from B to A to complete the circuit. This causes reversal of polarity at site B, generating an action potential there.',
     difficulty: 'Hard',
     ncertPageReference: 'Class 11, Chapter 18, Page 233',
     previousYearFrequency: 32,
     conceptualLinks: ['Impulse propagation', 'Local current flow', 'Wave of depolarization'],
     timeEstimate: 70,
     bloomsLevel: 'Analyze',
-    weightage: 6.5
+    weightage: 6.5,
   },
   {
     id: 'q11-batch16-042',
@@ -14029,152 +15041,220 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-18',
     classId: 'class-11',
     question: 'Which of the following best explains why neurons are called excitable cells?',
-    options: ['They produce hormones', 'They can divide rapidly', 'Their membranes are in a polarised state with differential ion concentration gradients', 'They contain many mitochondria'],
-    correctAnswer: 'Their membranes are in a polarised state with differential ion concentration gradients',
-    explanation: 'Neurons are excitable cells because their membranes are in a polarised state due to differential concentration gradients of ions across the membrane, maintained by selective ion channels and sodium-potassium pump.',
+    options: [
+      'They produce hormones',
+      'They can divide rapidly',
+      'Their membranes are in a polarised state with differential ion concentration gradients',
+      'They contain many mitochondria',
+    ],
+    correctAnswer:
+      'Their membranes are in a polarised state with differential ion concentration gradients',
+    explanation:
+      'Neurons are excitable cells because their membranes are in a polarised state due to differential concentration gradients of ions across the membrane, maintained by selective ion channels and sodium-potassium pump.',
     difficulty: 'Hard',
     ncertPageReference: 'Class 11, Chapter 18, Page 232',
     previousYearFrequency: 28,
     conceptualLinks: ['Excitability', 'Membrane polarization', 'Ion gradients'],
     timeEstimate: 65,
     bloomsLevel: 'Analyze',
-    weightage: 6.0
+    weightage: 6.0,
   },
   {
     id: 'q11-batch16-043',
     topicId: 'topic-11-18-neural',
     chapterId: 'ch-11-18',
     classId: 'class-11',
-    question: 'During physical exercise, multiple organ systems must coordinate. Which statement best describes the role of the neural system in this coordination?',
-    options: ['It provides slow, long-lasting hormonal control', 'It provides organized point-to-point connections for quick coordination', 'It only controls voluntary movements', 'It functions independently of other systems'],
+    question:
+      'During physical exercise, multiple organ systems must coordinate. Which statement best describes the role of the neural system in this coordination?',
+    options: [
+      'It provides slow, long-lasting hormonal control',
+      'It provides organized point-to-point connections for quick coordination',
+      'It only controls voluntary movements',
+      'It functions independently of other systems',
+    ],
     correctAnswer: 'It provides organized point-to-point connections for quick coordination',
-    explanation: 'The neural system provides an organised network of point-to-point connections for quick coordination during activities like exercise, while the endocrine system provides chemical integration through hormones.',
+    explanation:
+      'The neural system provides an organised network of point-to-point connections for quick coordination during activities like exercise, while the endocrine system provides chemical integration through hormones.',
     difficulty: 'Hard',
     ncertPageReference: 'Class 11, Chapter 18, Page 230',
     previousYearFrequency: 24,
     conceptualLinks: ['Neural coordination', 'Homeostasis', 'System integration'],
     timeEstimate: 70,
     bloomsLevel: 'Analyze',
-    weightage: 6.5
+    weightage: 6.5,
   },
   {
     id: 'q11-batch16-044',
     topicId: 'topic-11-18-neural',
     chapterId: 'ch-11-18',
     classId: 'class-11',
-    question: 'Why are unmyelinated nerve fibres commonly found in the autonomic and somatic neural systems?',
-    options: ['They conduct impulses faster than myelinated fibres', 'They are suitable for involuntary and voluntary control requiring different conduction properties', 'They consume less energy', 'They are easier to regenerate'],
-    correctAnswer: 'They are suitable for involuntary and voluntary control requiring different conduction properties',
-    explanation: 'Unmyelinated nerve fibres are enclosed by Schwann cells that do not form a myelin sheath. They are commonly found in autonomous and somatic neural systems where specific conduction velocities are required for proper function.',
+    question:
+      'Why are unmyelinated nerve fibres commonly found in the autonomic and somatic neural systems?',
+    options: [
+      'They conduct impulses faster than myelinated fibres',
+      'They are suitable for involuntary and voluntary control requiring different conduction properties',
+      'They consume less energy',
+      'They are easier to regenerate',
+    ],
+    correctAnswer:
+      'They are suitable for involuntary and voluntary control requiring different conduction properties',
+    explanation:
+      'Unmyelinated nerve fibres are enclosed by Schwann cells that do not form a myelin sheath. They are commonly found in autonomous and somatic neural systems where specific conduction velocities are required for proper function.',
     difficulty: 'Hard',
     ncertPageReference: 'Class 11, Chapter 18, Page 232',
     previousYearFrequency: 16,
     conceptualLinks: ['Myelination', 'Nerve conduction', 'ANS and SNS'],
     timeEstimate: 75,
     bloomsLevel: 'Analyze',
-    weightage: 6.5
+    weightage: 6.5,
   },
   {
     id: 'q11-batch16-045',
     topicId: 'topic-11-18-neural',
     chapterId: 'ch-11-18',
     classId: 'class-11',
-    question: 'Evaluate the significance of the sodium-potassium pump in maintaining neuronal function. What would happen if this pump failed?',
-    options: ['Only resting potential would be affected', 'The neuron could not maintain ionic gradients and would lose excitability', 'The neuron would function normally', 'Only action potential generation would be affected'],
+    question:
+      'Evaluate the significance of the sodium-potassium pump in maintaining neuronal function. What would happen if this pump failed?',
+    options: [
+      'Only resting potential would be affected',
+      'The neuron could not maintain ionic gradients and would lose excitability',
+      'The neuron would function normally',
+      'Only action potential generation would be affected',
+    ],
     correctAnswer: 'The neuron could not maintain ionic gradients and would lose excitability',
-    explanation: 'The sodium-potassium pump actively transports 3 Na+ out for 2 K+ in, maintaining the ionic gradients essential for resting potential. Without it, gradients would dissipate, resting potential would be lost, and the neuron would lose its excitability.',
+    explanation:
+      'The sodium-potassium pump actively transports 3 Na+ out for 2 K+ in, maintaining the ionic gradients essential for resting potential. Without it, gradients would dissipate, resting potential would be lost, and the neuron would lose its excitability.',
     difficulty: 'Hard',
     ncertPageReference: 'Class 11, Chapter 18, Page 232',
     previousYearFrequency: 35,
     conceptualLinks: ['Sodium-potassium pump', 'Active transport', 'Neuronal excitability'],
     timeEstimate: 80,
     bloomsLevel: 'Evaluate',
-    weightage: 7.5
+    weightage: 7.5,
   },
   {
     id: 'q11-batch16-046',
     topicId: 'topic-11-18-neural',
     chapterId: 'ch-11-18',
     classId: 'class-11',
-    question: 'Consider the organization of the cerebral cortex. How does the arrangement of grey matter externally and white matter internally reflect functional efficiency?',
-    options: ['It has no functional significance', 'External grey matter maximizes synaptic connections while internal white matter provides rapid inter-regional communication', 'It is only for structural support', 'It minimizes brain size'],
-    correctAnswer: 'External grey matter maximizes synaptic connections while internal white matter provides rapid inter-regional communication',
-    explanation: 'Grey matter (cell bodies) on the surface maximizes processing and synaptic connections. White matter (myelinated tracts) internally provides rapid communication between different regions, optimizing both local processing and long-distance connectivity.',
+    question:
+      'Consider the organization of the cerebral cortex. How does the arrangement of grey matter externally and white matter internally reflect functional efficiency?',
+    options: [
+      'It has no functional significance',
+      'External grey matter maximizes synaptic connections while internal white matter provides rapid inter-regional communication',
+      'It is only for structural support',
+      'It minimizes brain size',
+    ],
+    correctAnswer:
+      'External grey matter maximizes synaptic connections while internal white matter provides rapid inter-regional communication',
+    explanation:
+      'Grey matter (cell bodies) on the surface maximizes processing and synaptic connections. White matter (myelinated tracts) internally provides rapid communication between different regions, optimizing both local processing and long-distance connectivity.',
     difficulty: 'Hard',
     ncertPageReference: 'Class 11, Chapter 18, Page 236',
     previousYearFrequency: 22,
     conceptualLinks: ['Brain organization', 'Grey matter', 'White matter', 'Neural processing'],
     timeEstimate: 85,
     bloomsLevel: 'Evaluate',
-    weightage: 7.5
+    weightage: 7.5,
   },
   {
     id: 'q11-batch16-047',
     topicId: 'topic-11-18-neural',
     chapterId: 'ch-11-18',
     classId: 'class-11',
-    question: 'Compare electrical and chemical synapses. Under what conditions might electrical synapses be more advantageous despite being rare in the human nervous system?',
-    options: ['When slower response is needed', 'When rapid, synchronized transmission is essential without delay', 'When chemical modulation is required', 'When long-distance transmission is needed'],
+    question:
+      'Compare electrical and chemical synapses. Under what conditions might electrical synapses be more advantageous despite being rare in the human nervous system?',
+    options: [
+      'When slower response is needed',
+      'When rapid, synchronized transmission is essential without delay',
+      'When chemical modulation is required',
+      'When long-distance transmission is needed',
+    ],
     correctAnswer: 'When rapid, synchronized transmission is essential without delay',
-    explanation: 'Electrical synapses allow direct current flow and faster transmission. They would be advantageous for rapid, synchronized responses where speed is critical and the flexibility of chemical modulation is not required, though they are rare in humans.',
+    explanation:
+      'Electrical synapses allow direct current flow and faster transmission. They would be advantageous for rapid, synchronized responses where speed is critical and the flexibility of chemical modulation is not required, though they are rare in humans.',
     difficulty: 'Hard',
     ncertPageReference: 'Class 11, Chapter 18, Page 234',
     previousYearFrequency: 26,
     conceptualLinks: ['Synapse types', 'Neural transmission', 'Synaptic speed'],
     timeEstimate: 80,
     bloomsLevel: 'Evaluate',
-    weightage: 7.0
+    weightage: 7.0,
   },
   {
     id: 'q11-batch16-048',
     topicId: 'topic-11-18-neural',
     chapterId: 'ch-11-18',
     classId: 'class-11',
-    question: 'Analyze the structural relationship between the hypothalamus and pituitary gland. Why is the hypothalamus considered a neuroendocrine interface?',
-    options: ['It only produces neural signals', 'It contains neurosecretory cells that secrete hormones, linking neural and endocrine systems', 'It only produces hormones', 'It has no connection to the endocrine system'],
-    correctAnswer: 'It contains neurosecretory cells that secrete hormones, linking neural and endocrine systems',
-    explanation: 'The hypothalamus contains several groups of neurosecretory cells which secrete hypothalamic hormones. This makes it a neuroendocrine interface, integrating neural signals and hormonal responses for coordinated body function.',
+    question:
+      'Analyze the structural relationship between the hypothalamus and pituitary gland. Why is the hypothalamus considered a neuroendocrine interface?',
+    options: [
+      'It only produces neural signals',
+      'It contains neurosecretory cells that secrete hormones, linking neural and endocrine systems',
+      'It only produces hormones',
+      'It has no connection to the endocrine system',
+    ],
+    correctAnswer:
+      'It contains neurosecretory cells that secrete hormones, linking neural and endocrine systems',
+    explanation:
+      'The hypothalamus contains several groups of neurosecretory cells which secrete hypothalamic hormones. This makes it a neuroendocrine interface, integrating neural signals and hormonal responses for coordinated body function.',
     difficulty: 'Hard',
     ncertPageReference: 'Class 11, Chapter 18, Page 236',
     previousYearFrequency: 30,
     conceptualLinks: ['Hypothalamus', 'Neuroendocrine system', 'Hormone secretion'],
     timeEstimate: 75,
     bloomsLevel: 'Analyze',
-    weightage: 7.0
+    weightage: 7.0,
   },
   {
     id: 'q11-batch16-049',
     topicId: 'topic-11-18-neural',
     chapterId: 'ch-11-18',
     classId: 'class-11',
-    question: 'Why can the new potential developed at the post-synaptic neuron be either excitatory or inhibitory after neurotransmitter binding?',
-    options: ['All neurotransmitters produce the same effect', 'Different neurotransmitters and receptors can either depolarize (excite) or hyperpolarize (inhibit) the post-synaptic membrane', 'The effect is random', 'Only the pre-synaptic neuron determines the effect'],
-    correctAnswer: 'Different neurotransmitters and receptors can either depolarize (excite) or hyperpolarize (inhibit) the post-synaptic membrane',
-    explanation: 'Neurotransmitter binding opens specific ion channels depending on the receptor type. Some combinations lead to depolarization (excitatory), while others cause hyperpolarization (inhibitory), allowing for complex neural integration and control.',
+    question:
+      'Why can the new potential developed at the post-synaptic neuron be either excitatory or inhibitory after neurotransmitter binding?',
+    options: [
+      'All neurotransmitters produce the same effect',
+      'Different neurotransmitters and receptors can either depolarize (excite) or hyperpolarize (inhibit) the post-synaptic membrane',
+      'The effect is random',
+      'Only the pre-synaptic neuron determines the effect',
+    ],
+    correctAnswer:
+      'Different neurotransmitters and receptors can either depolarize (excite) or hyperpolarize (inhibit) the post-synaptic membrane',
+    explanation:
+      'Neurotransmitter binding opens specific ion channels depending on the receptor type. Some combinations lead to depolarization (excitatory), while others cause hyperpolarization (inhibitory), allowing for complex neural integration and control.',
     difficulty: 'Hard',
     ncertPageReference: 'Class 11, Chapter 18, Page 235',
     previousYearFrequency: 28,
     conceptualLinks: ['Post-synaptic potential', 'Excitation and inhibition', 'Neural integration'],
     timeEstimate: 80,
     bloomsLevel: 'Analyze',
-    weightage: 7.5
+    weightage: 7.5,
   },
   {
     id: 'q11-batch16-050',
     topicId: 'topic-11-18-neural',
     chapterId: 'ch-11-18',
     classId: 'class-11',
-    question: 'Evaluate the importance of the brain being divided into specialized regions (forebrain, midbrain, hindbrain) rather than being a uniform structure.',
-    options: ['It has no functional advantage', 'Specialization allows division of labor with different regions handling specific functions efficiently while maintaining integration', 'It only increases brain size', 'It makes the brain more vulnerable to damage'],
-    correctAnswer: 'Specialization allows division of labor with different regions handling specific functions efficiently while maintaining integration',
-    explanation: 'Regional specialization (forebrain for higher functions, midbrain for integration, hindbrain for vital functions) allows efficient processing through division of labor while interconnections via brain stem maintain integration. This optimizes both specialized and coordinated functions.',
+    question:
+      'Evaluate the importance of the brain being divided into specialized regions (forebrain, midbrain, hindbrain) rather than being a uniform structure.',
+    options: [
+      'It has no functional advantage',
+      'Specialization allows division of labor with different regions handling specific functions efficiently while maintaining integration',
+      'It only increases brain size',
+      'It makes the brain more vulnerable to damage',
+    ],
+    correctAnswer:
+      'Specialization allows division of labor with different regions handling specific functions efficiently while maintaining integration',
+    explanation:
+      'Regional specialization (forebrain for higher functions, midbrain for integration, hindbrain for vital functions) allows efficient processing through division of labor while interconnections via brain stem maintain integration. This optimizes both specialized and coordinated functions.',
     difficulty: 'Hard',
     ncertPageReference: 'Class 11, Chapter 18, Page 235-236',
     previousYearFrequency: 20,
     conceptualLinks: ['Brain organization', 'Functional specialization', 'Neural integration'],
     timeEstimate: 90,
     bloomsLevel: 'Evaluate',
-    weightage: 8.0
+    weightage: 8.0,
   },
 
   // ============================================================================
@@ -14185,17 +15265,25 @@ export const class11Questions: AuthenticQuestion[] = [
     topicId: 'topic-11-19-chemical',
     chapterId: 'ch-11-19',
     classId: 'class-11',
-    question: 'Which of the following is the correct definition of hormones according to the modern scientific definition?',
-    options: ['Chemicals produced only by endocrine glands', 'Non-nutrient chemicals which act as intercellular messengers and are produced in trace amounts', 'Nutrient chemicals that regulate body functions', 'Chemicals secreted by exocrine glands into ducts'],
-    correctAnswer: 'Non-nutrient chemicals which act as intercellular messengers and are produced in trace amounts',
-    explanation: 'According to NCERT, the modern definition of hormones states that hormones are non-nutrient chemicals which act as intercellular messengers and are produced in trace amounts. This definition covers molecules in addition to those secreted by organized endocrine glands.',
+    question:
+      'Which of the following is the correct definition of hormones according to the modern scientific definition?',
+    options: [
+      'Chemicals produced only by endocrine glands',
+      'Non-nutrient chemicals which act as intercellular messengers and are produced in trace amounts',
+      'Nutrient chemicals that regulate body functions',
+      'Chemicals secreted by exocrine glands into ducts',
+    ],
+    correctAnswer:
+      'Non-nutrient chemicals which act as intercellular messengers and are produced in trace amounts',
+    explanation:
+      'According to NCERT, the modern definition of hormones states that hormones are non-nutrient chemicals which act as intercellular messengers and are produced in trace amounts. This definition covers molecules in addition to those secreted by organized endocrine glands.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 19, Page 239',
     previousYearFrequency: 12,
     conceptualLinks: ['Hormones', 'Chemical coordination', 'Endocrine system'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 3.0
+    weightage: 3.0,
   },
   {
     id: 'q11-batch17-002',
@@ -14203,16 +15291,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-19',
     classId: 'class-11',
     question: 'Endocrine glands are also known as ductless glands because they',
-    options: ['Have ducts that open into blood vessels', 'Lack ducts and release hormones directly into blood', 'Have internal ducts only', 'Store hormones in ducts'],
+    options: [
+      'Have ducts that open into blood vessels',
+      'Lack ducts and release hormones directly into blood',
+      'Have internal ducts only',
+      'Store hormones in ducts',
+    ],
     correctAnswer: 'Lack ducts and release hormones directly into blood',
-    explanation: 'Endocrine glands lack ducts and are hence called ductless glands. Their secretions (hormones) are released directly into the blood and transported to distantly located target organs.',
+    explanation:
+      'Endocrine glands lack ducts and are hence called ductless glands. Their secretions (hormones) are released directly into the blood and transported to distantly located target organs.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 19, Page 239',
     previousYearFrequency: 15,
     conceptualLinks: ['Endocrine glands', 'Exocrine glands', 'Hormones'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 3.0
+    weightage: 3.0,
   },
   {
     id: 'q11-batch17-003',
@@ -14222,31 +15316,39 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The hypothalamus is the basal part of which brain region?',
     options: ['Cerebrum', 'Cerebellum', 'Diencephalon of forebrain', 'Medulla oblongata'],
     correctAnswer: 'Diencephalon of forebrain',
-    explanation: 'The hypothalamus is the basal part of diencephalon, forebrain and it regulates a wide spectrum of body functions. It contains neurosecretory cells that produce hormones.',
+    explanation:
+      'The hypothalamus is the basal part of diencephalon, forebrain and it regulates a wide spectrum of body functions. It contains neurosecretory cells that produce hormones.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 19, Page 240',
     previousYearFrequency: 10,
     conceptualLinks: ['Hypothalamus', 'Brain anatomy', 'Neuroendocrine system'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 3.0
+    weightage: 3.0,
   },
   {
     id: 'q11-batch17-004',
     topicId: 'topic-11-19-chemical',
     chapterId: 'ch-11-19',
     classId: 'class-11',
-    question: 'Which hormone from the hypothalamus inhibits the release of growth hormone from the pituitary?',
-    options: ['Gonadotrophin releasing hormone (GnRH)', 'Somatostatin', 'Thyrotropin releasing hormone', 'Corticotropin releasing hormone'],
+    question:
+      'Which hormone from the hypothalamus inhibits the release of growth hormone from the pituitary?',
+    options: [
+      'Gonadotrophin releasing hormone (GnRH)',
+      'Somatostatin',
+      'Thyrotropin releasing hormone',
+      'Corticotropin releasing hormone',
+    ],
     correctAnswer: 'Somatostatin',
-    explanation: 'Somatostatin from the hypothalamus inhibits the release of growth hormone from the pituitary. It is an example of an inhibiting hormone produced by the hypothalamus.',
+    explanation:
+      'Somatostatin from the hypothalamus inhibits the release of growth hormone from the pituitary. It is an example of an inhibiting hormone produced by the hypothalamus.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 19, Page 240',
     previousYearFrequency: 18,
     conceptualLinks: ['Hypothalamus', 'Inhibiting hormones', 'Growth hormone regulation'],
     timeEstimate: 45,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch17-005',
@@ -14256,31 +15358,39 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The pituitary gland is located in a bony cavity called',
     options: ['Foramen magnum', 'Sella turcica', 'Cranial fossa', 'Vertebral canal'],
     correctAnswer: 'Sella turcica',
-    explanation: 'The pituitary gland is located in a bony cavity called sella turcica and is attached to hypothalamus by a stalk.',
+    explanation:
+      'The pituitary gland is located in a bony cavity called sella turcica and is attached to hypothalamus by a stalk.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 19, Page 241',
     previousYearFrequency: 8,
     conceptualLinks: ['Pituitary gland', 'Skull anatomy', 'Endocrine system'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 3.0
+    weightage: 3.0,
   },
   {
     id: 'q11-batch17-006',
     topicId: 'topic-11-19-chemical',
     chapterId: 'ch-11-19',
     classId: 'class-11',
-    question: 'Which of the following hormones is NOT secreted by the anterior pituitary (pars distalis)?',
-    options: ['Growth hormone (GH)', 'Prolactin (PRL)', 'Oxytocin', 'Thyroid stimulating hormone (TSH)'],
+    question:
+      'Which of the following hormones is NOT secreted by the anterior pituitary (pars distalis)?',
+    options: [
+      'Growth hormone (GH)',
+      'Prolactin (PRL)',
+      'Oxytocin',
+      'Thyroid stimulating hormone (TSH)',
+    ],
     correctAnswer: 'Oxytocin',
-    explanation: 'Oxytocin is stored and released by the posterior pituitary (neurohypophysis), not the anterior pituitary. The anterior pituitary secretes GH, PRL, TSH, ACTH, LH, and FSH.',
+    explanation:
+      'Oxytocin is stored and released by the posterior pituitary (neurohypophysis), not the anterior pituitary. The anterior pituitary secretes GH, PRL, TSH, ACTH, LH, and FSH.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 19, Page 241',
     previousYearFrequency: 22,
     conceptualLinks: ['Pituitary hormones', 'Anterior pituitary', 'Posterior pituitary'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch17-007',
@@ -14290,14 +15400,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Over-secretion of growth hormone in adults, especially in middle age, results in',
     options: ['Gigantism', 'Dwarfism', 'Acromegaly', 'Cretinism'],
     correctAnswer: 'Acromegaly',
-    explanation: 'Excess secretion of growth hormone in adults especially in middle age can result in severe disfigurement (especially of the face) called Acromegaly. In contrast, over-secretion during childhood causes gigantism.',
+    explanation:
+      'Excess secretion of growth hormone in adults especially in middle age can result in severe disfigurement (especially of the face) called Acromegaly. In contrast, over-secretion during childhood causes gigantism.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 19, Page 241',
     previousYearFrequency: 28,
     conceptualLinks: ['Growth hormone disorders', 'Acromegaly', 'Pituitary disorders'],
     timeEstimate: 45,
     bloomsLevel: 'Remember',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch17-008',
@@ -14307,14 +15418,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Low secretion of growth hormone results in',
     options: ['Gigantism', 'Pituitary dwarfism', 'Acromegaly', 'Myxedema'],
     correctAnswer: 'Pituitary dwarfism',
-    explanation: 'Low secretion of GH results in stunted growth resulting in pituitary dwarfism. This occurs when there is hyposecretion of growth hormone during childhood.',
+    explanation:
+      'Low secretion of GH results in stunted growth resulting in pituitary dwarfism. This occurs when there is hyposecretion of growth hormone during childhood.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 19, Page 241',
     previousYearFrequency: 25,
     conceptualLinks: ['Growth hormone', 'Dwarfism', 'Hyposecretion disorders'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch17-009',
@@ -14324,14 +15436,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Which hormone regulates the growth of mammary glands and formation of milk?',
     options: ['Oxytocin', 'Prolactin', 'Estrogen', 'Progesterone'],
     correctAnswer: 'Prolactin',
-    explanation: 'Prolactin regulates the growth of the mammary glands and formation of milk in them. It is secreted by the anterior pituitary.',
+    explanation:
+      'Prolactin regulates the growth of the mammary glands and formation of milk in them. It is secreted by the anterior pituitary.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 19, Page 241',
     previousYearFrequency: 20,
     conceptualLinks: ['Prolactin', 'Lactation', 'Mammary glands'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q11-batch17-010',
@@ -14339,33 +15452,41 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-19',
     classId: 'class-11',
     question: 'LH and FSH are called gonadotrophins because they',
-    options: ['Are produced by gonads', 'Stimulate gonadal activity', 'Inhibit gonadal function', 'Are stored in gonads'],
+    options: [
+      'Are produced by gonads',
+      'Stimulate gonadal activity',
+      'Inhibit gonadal function',
+      'Are stored in gonads',
+    ],
     correctAnswer: 'Stimulate gonadal activity',
-    explanation: 'LH and FSH stimulate gonadal activity and hence are called gonadotrophins. They regulate reproductive functions in both males and females.',
+    explanation:
+      'LH and FSH stimulate gonadal activity and hence are called gonadotrophins. They regulate reproductive functions in both males and females.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 19, Page 241',
     previousYearFrequency: 17,
     conceptualLinks: ['Gonadotrophins', 'LH', 'FSH', 'Reproductive hormones'],
     timeEstimate: 40,
     bloomsLevel: 'Understand',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch17-011',
     topicId: 'topic-11-19-chemical',
     chapterId: 'ch-11-19',
     classId: 'class-11',
-    question: 'Oxytocin and vasopressin are synthesized by which structure but stored in the posterior pituitary?',
+    question:
+      'Oxytocin and vasopressin are synthesized by which structure but stored in the posterior pituitary?',
     options: ['Anterior pituitary', 'Hypothalamus', 'Pineal gland', 'Thalamus'],
     correctAnswer: 'Hypothalamus',
-    explanation: 'Oxytocin and vasopressin are actually synthesised by the hypothalamus and are transported axonally to neurohypophysis (posterior pituitary) where they are stored and released.',
+    explanation:
+      'Oxytocin and vasopressin are actually synthesised by the hypothalamus and are transported axonally to neurohypophysis (posterior pituitary) where they are stored and released.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 19, Page 241',
     previousYearFrequency: 24,
     conceptualLinks: ['Hypothalamus', 'Posterior pituitary', 'Neurohormones'],
     timeEstimate: 50,
     bloomsLevel: 'Understand',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch17-012',
@@ -14373,16 +15494,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-19',
     classId: 'class-11',
     question: 'Vasopressin is also called anti-diuretic hormone (ADH) because it',
-    options: ['Increases water loss through urine', 'Stimulates resorption of water and electrolytes reducing water loss', 'Increases urine production', 'Decreases blood pressure'],
+    options: [
+      'Increases water loss through urine',
+      'Stimulates resorption of water and electrolytes reducing water loss',
+      'Increases urine production',
+      'Decreases blood pressure',
+    ],
     correctAnswer: 'Stimulates resorption of water and electrolytes reducing water loss',
-    explanation: 'Vasopressin acts mainly at the kidney and stimulates resorption of water and electrolytes by the distal tubules and thereby reduces loss of water through urine (diuresis). Hence, it is called anti-diuretic hormone.',
+    explanation:
+      'Vasopressin acts mainly at the kidney and stimulates resorption of water and electrolytes by the distal tubules and thereby reduces loss of water through urine (diuresis). Hence, it is called anti-diuretic hormone.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 19, Page 242',
     previousYearFrequency: 30,
     conceptualLinks: ['Vasopressin', 'ADH', 'Water balance', 'Kidney function'],
     timeEstimate: 50,
     bloomsLevel: 'Understand',
-    weightage: 5.5
+    weightage: 5.5,
   },
   {
     id: 'q11-batch17-013',
@@ -14390,16 +15517,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-19',
     classId: 'class-11',
     question: 'Diabetes insipidus is caused by',
-    options: ['Excess insulin secretion', 'Impaired synthesis or release of ADH', 'Excess ADH secretion', 'Lack of insulin'],
+    options: [
+      'Excess insulin secretion',
+      'Impaired synthesis or release of ADH',
+      'Excess ADH secretion',
+      'Lack of insulin',
+    ],
     correctAnswer: 'Impaired synthesis or release of ADH',
-    explanation: 'An impairment affecting synthesis or release of ADH results in a diminished ability of the kidney to conserve water leading to water loss and dehydration. This condition is known as Diabetes Insipidus.',
+    explanation:
+      'An impairment affecting synthesis or release of ADH results in a diminished ability of the kidney to conserve water leading to water loss and dehydration. This condition is known as Diabetes Insipidus.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 19, Page 242',
     previousYearFrequency: 26,
     conceptualLinks: ['Diabetes insipidus', 'ADH deficiency', 'Water balance disorders'],
     timeEstimate: 50,
     bloomsLevel: 'Understand',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch17-014',
@@ -14409,14 +15542,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The pineal gland secretes which hormone that regulates the 24-hour diurnal rhythm?',
     options: ['Serotonin', 'Melatonin', 'Dopamine', 'Thyroxine'],
     correctAnswer: 'Melatonin',
-    explanation: 'Pineal gland secretes melatonin which plays a very important role in the regulation of a 24-hour (diurnal) rhythm of our body, including sleep-wake cycle and body temperature.',
+    explanation:
+      'Pineal gland secretes melatonin which plays a very important role in the regulation of a 24-hour (diurnal) rhythm of our body, including sleep-wake cycle and body temperature.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 19, Page 242',
     previousYearFrequency: 22,
     conceptualLinks: ['Pineal gland', 'Melatonin', 'Circadian rhythm', 'Biological clock'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch17-015',
@@ -14426,14 +15560,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The thyroid gland is composed of two lobes interconnected by',
     options: ['Ligament', 'Isthmus', 'Duct', 'Nerve'],
     correctAnswer: 'Isthmus',
-    explanation: 'The thyroid gland is composed of two lobes which are located on either side of the trachea. Both the lobes are interconnected with a thin flap of connective tissue called isthmus.',
+    explanation:
+      'The thyroid gland is composed of two lobes which are located on either side of the trachea. Both the lobes are interconnected with a thin flap of connective tissue called isthmus.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 19, Page 242',
     previousYearFrequency: 10,
     conceptualLinks: ['Thyroid anatomy', 'Isthmus', 'Thyroid structure'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 3.0
+    weightage: 3.0,
   },
   {
     id: 'q11-batch17-016',
@@ -14441,16 +15576,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-19',
     classId: 'class-11',
     question: 'Which two hormones are synthesized by the follicular cells of the thyroid?',
-    options: ['Thyroxine (T4) and Triiodothyronine (T3)', 'Calcitonin and PTH', 'TSH and T4', 'T3 and PTH'],
+    options: [
+      'Thyroxine (T4) and Triiodothyronine (T3)',
+      'Calcitonin and PTH',
+      'TSH and T4',
+      'T3 and PTH',
+    ],
     correctAnswer: 'Thyroxine (T4) and Triiodothyronine (T3)',
-    explanation: 'The follicular cells of thyroid synthesise two hormones: tetraiodothyronine or thyroxine (T4) and triiodothyronine (T3). Iodine is essential for their synthesis.',
+    explanation:
+      'The follicular cells of thyroid synthesise two hormones: tetraiodothyronine or thyroxine (T4) and triiodothyronine (T3). Iodine is essential for their synthesis.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 19, Page 242',
     previousYearFrequency: 28,
     conceptualLinks: ['Thyroid hormones', 'T3', 'T4', 'Iodine'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch17-017',
@@ -14458,50 +15599,60 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-19',
     classId: 'class-11',
     question: 'Deficiency of iodine in the diet results in',
-    options: ['Hyperthyroidism and weight gain', 'Hypothyroidism and goitre', 'Diabetes mellitus', 'Addison disease'],
+    options: [
+      'Hyperthyroidism and weight gain',
+      'Hypothyroidism and goitre',
+      'Diabetes mellitus',
+      'Addison disease',
+    ],
     correctAnswer: 'Hypothyroidism and goitre',
-    explanation: 'Deficiency of iodine in our diet results in hypothyroidism and enlargement of the thyroid gland, commonly called goitre. Iodine is essential for thyroid hormone synthesis.',
+    explanation:
+      'Deficiency of iodine in our diet results in hypothyroidism and enlargement of the thyroid gland, commonly called goitre. Iodine is essential for thyroid hormone synthesis.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 19, Page 242',
     previousYearFrequency: 32,
     conceptualLinks: ['Iodine deficiency', 'Goitre', 'Hypothyroidism'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch17-018',
     topicId: 'topic-11-19-chemical',
     chapterId: 'ch-11-19',
     classId: 'class-11',
-    question: 'Hypothyroidism during pregnancy causes defective development leading to stunted growth, mental retardation and low IQ. This condition is called',
+    question:
+      'Hypothyroidism during pregnancy causes defective development leading to stunted growth, mental retardation and low IQ. This condition is called',
     options: ['Myxedema', 'Cretinism', 'Graves disease', 'Acromegaly'],
     correctAnswer: 'Cretinism',
-    explanation: 'Hypothyroidism during pregnancy causes defective development and maturation of the growing baby leading to stunted growth (cretinism), mental retardation, low intelligence quotient, abnormal skin, deaf-mutism, etc.',
+    explanation:
+      'Hypothyroidism during pregnancy causes defective development and maturation of the growing baby leading to stunted growth (cretinism), mental retardation, low intelligence quotient, abnormal skin, deaf-mutism, etc.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 19, Page 242-243',
     previousYearFrequency: 35,
     conceptualLinks: ['Cretinism', 'Hypothyroidism', 'Congenital disorders'],
     timeEstimate: 50,
     bloomsLevel: 'Remember',
-    weightage: 6.0
+    weightage: 6.0,
   },
   {
     id: 'q11-batch17-019',
     topicId: 'topic-11-19-chemical',
     chapterId: 'ch-11-19',
     classId: 'class-11',
-    question: 'Exophthalmic goitre characterized by enlargement of thyroid gland and protrusion of eyeballs is also known as',
+    question:
+      'Exophthalmic goitre characterized by enlargement of thyroid gland and protrusion of eyeballs is also known as',
     options: ['Addison disease', 'Cushing syndrome', 'Graves disease', 'Diabetes insipidus'],
     correctAnswer: 'Graves disease',
-    explanation: 'Exopthalmic goitre is a form of hyperthyroidism, characterised by enlargement of the thyroid gland, protrusion of the eyeballs, increased basal metabolic rate, and weight loss, also called Graves disease.',
+    explanation:
+      'Exopthalmic goitre is a form of hyperthyroidism, characterised by enlargement of the thyroid gland, protrusion of the eyeballs, increased basal metabolic rate, and weight loss, also called Graves disease.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 19, Page 243',
     previousYearFrequency: 28,
     conceptualLinks: ['Graves disease', 'Hyperthyroidism', 'Exophthalmos'],
     timeEstimate: 50,
     bloomsLevel: 'Remember',
-    weightage: 5.5
+    weightage: 5.5,
   },
   {
     id: 'q11-batch17-020',
@@ -14509,16 +15660,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-19',
     classId: 'class-11',
     question: 'Thyrocalcitonin (TCT) hormone regulates blood calcium levels by',
-    options: ['Increasing calcium levels', 'Decreasing calcium levels', 'Maintaining constant calcium levels', 'Having no effect on calcium'],
+    options: [
+      'Increasing calcium levels',
+      'Decreasing calcium levels',
+      'Maintaining constant calcium levels',
+      'Having no effect on calcium',
+    ],
     correctAnswer: 'Decreasing calcium levels',
-    explanation: 'Thyroid gland also secretes a protein hormone called thyrocalcitonin (TCT) which regulates the blood calcium levels by decreasing it.',
+    explanation:
+      'Thyroid gland also secretes a protein hormone called thyrocalcitonin (TCT) which regulates the blood calcium levels by decreasing it.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 19, Page 243',
     previousYearFrequency: 24,
     conceptualLinks: ['Thyrocalcitonin', 'Calcitonin', 'Calcium regulation'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch17-021',
@@ -14528,14 +15685,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'How many parathyroid glands are present in humans?',
     options: ['Two', 'Three', 'Four', 'Six'],
     correctAnswer: 'Four',
-    explanation: 'In humans, four parathyroid glands are present on the back side of the thyroid gland, one pair each in the two lobes of the thyroid gland.',
+    explanation:
+      'In humans, four parathyroid glands are present on the back side of the thyroid gland, one pair each in the two lobes of the thyroid gland.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 19, Page 243',
     previousYearFrequency: 15,
     conceptualLinks: ['Parathyroid glands', 'Endocrine anatomy'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 3.0
+    weightage: 3.0,
   },
   {
     id: 'q11-batch17-022',
@@ -14543,16 +15701,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-19',
     classId: 'class-11',
     question: 'Parathyroid hormone (PTH) is classified as a hypercalcemic hormone because it',
-    options: ['Decreases blood calcium levels', 'Increases blood calcium levels', 'Maintains calcium balance', 'Removes calcium from bones'],
+    options: [
+      'Decreases blood calcium levels',
+      'Increases blood calcium levels',
+      'Maintains calcium balance',
+      'Removes calcium from bones',
+    ],
     correctAnswer: 'Increases blood calcium levels',
-    explanation: 'PTH is a hypercalcemic hormone, i.e., it increases the blood Ca2+ levels. It acts on bones stimulating bone resorption, stimulates reabsorption of Ca2+ by renal tubules, and increases Ca2+ absorption from digested food.',
+    explanation:
+      'PTH is a hypercalcemic hormone, i.e., it increases the blood Ca2+ levels. It acts on bones stimulating bone resorption, stimulates reabsorption of Ca2+ by renal tubules, and increases Ca2+ absorption from digested food.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 19, Page 243',
     previousYearFrequency: 30,
     conceptualLinks: ['PTH', 'Hypercalcemic hormone', 'Calcium homeostasis'],
     timeEstimate: 50,
     bloomsLevel: 'Understand',
-    weightage: 5.5
+    weightage: 5.5,
   },
   {
     id: 'q11-batch17-023',
@@ -14560,16 +15724,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-19',
     classId: 'class-11',
     question: 'The thymus gland is located',
-    options: ['In the neck region', 'Between lungs behind sternum on ventral side of aorta', 'Above the kidneys', 'In the brain'],
+    options: [
+      'In the neck region',
+      'Between lungs behind sternum on ventral side of aorta',
+      'Above the kidneys',
+      'In the brain',
+    ],
     correctAnswer: 'Between lungs behind sternum on ventral side of aorta',
-    explanation: 'The thymus gland is a lobular structure located between lungs behind sternum on the ventral side of aorta. It plays a major role in immune system development.',
+    explanation:
+      'The thymus gland is a lobular structure located between lungs behind sternum on the ventral side of aorta. It plays a major role in immune system development.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 19, Page 243',
     previousYearFrequency: 12,
     conceptualLinks: ['Thymus', 'Thymus location', 'Endocrine anatomy'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q11-batch17-024',
@@ -14579,31 +15749,34 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Thymosins play a major role in the differentiation of which cells?',
     options: ['B-lymphocytes', 'T-lymphocytes', 'Red blood cells', 'Platelets'],
     correctAnswer: 'T-lymphocytes',
-    explanation: 'Thymosins play a major role in the differentiation of T-lymphocytes, which provide cell-mediated immunity. They also promote production of antibodies for humoral immunity.',
+    explanation:
+      'Thymosins play a major role in the differentiation of T-lymphocytes, which provide cell-mediated immunity. They also promote production of antibodies for humoral immunity.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 19, Page 243',
     previousYearFrequency: 20,
     conceptualLinks: ['Thymosins', 'T-lymphocytes', 'Cell-mediated immunity'],
     timeEstimate: 45,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch17-025',
     topicId: 'topic-11-19-chemical',
     chapterId: 'ch-11-19',
     classId: 'class-11',
-    question: 'The adrenal gland is composed of two distinct regions. Which region is centrally located?',
+    question:
+      'The adrenal gland is composed of two distinct regions. Which region is centrally located?',
     options: ['Adrenal cortex', 'Adrenal medulla', 'Zona glomerulosa', 'Zona reticularis'],
     correctAnswer: 'Adrenal medulla',
-    explanation: 'The adrenal gland is composed of two types of tissues. The centrally located tissue is called the adrenal medulla, and outside this lies the adrenal cortex.',
+    explanation:
+      'The adrenal gland is composed of two types of tissues. The centrally located tissue is called the adrenal medulla, and outside this lies the adrenal cortex.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 19, Page 244',
     previousYearFrequency: 18,
     conceptualLinks: ['Adrenal gland', 'Adrenal medulla', 'Adrenal cortex'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch17-026',
@@ -14613,14 +15786,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Adrenaline and noradrenaline are commonly called',
     options: ['Glucocorticoids', 'Mineralocorticoids', 'Catecholamines', 'Androgens'],
     correctAnswer: 'Catecholamines',
-    explanation: 'The adrenal medulla secretes adrenaline (epinephrine) and noradrenaline (norepinephrine), which are commonly called catecholamines. They are emergency hormones or hormones of Fight or Flight.',
+    explanation:
+      'The adrenal medulla secretes adrenaline (epinephrine) and noradrenaline (norepinephrine), which are commonly called catecholamines. They are emergency hormones or hormones of Fight or Flight.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 19, Page 244',
     previousYearFrequency: 25,
     conceptualLinks: ['Catecholamines', 'Adrenaline', 'Noradrenaline', 'Emergency hormones'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch17-027',
@@ -14628,16 +15802,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-19',
     classId: 'class-11',
     question: 'Which of the following is NOT an effect of adrenaline and noradrenaline?',
-    options: ['Increased alertness and pupilary dilation', 'Increased heart beat and respiration rate', 'Decreased blood glucose levels', 'Piloerection and sweating'],
+    options: [
+      'Increased alertness and pupilary dilation',
+      'Increased heart beat and respiration rate',
+      'Decreased blood glucose levels',
+      'Piloerection and sweating',
+    ],
     correctAnswer: 'Decreased blood glucose levels',
-    explanation: 'Adrenaline and noradrenaline increase alertness, pupilary dilation, piloerection, sweating, heart beat, respiration rate, and stimulate breakdown of glycogen resulting in increased blood glucose. They do not decrease glucose levels.',
+    explanation:
+      'Adrenaline and noradrenaline increase alertness, pupilary dilation, piloerection, sweating, heart beat, respiration rate, and stimulate breakdown of glycogen resulting in increased blood glucose. They do not decrease glucose levels.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 19, Page 244-245',
     previousYearFrequency: 22,
     conceptualLinks: ['Catecholamines', 'Fight or flight response', 'Adrenaline effects'],
     timeEstimate: 60,
     bloomsLevel: 'Understand',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch17-028',
@@ -14645,16 +15825,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-19',
     classId: 'class-11',
     question: 'The three layers of the adrenal cortex from inner to outer are',
-    options: ['Zona glomerulosa, zona fasciculata, zona reticularis', 'Zona reticularis, zona fasciculata, zona glomerulosa', 'Zona fasciculata, zona reticularis, zona glomerulosa', 'Zona glomerulosa, zona reticularis, zona fasciculata'],
+    options: [
+      'Zona glomerulosa, zona fasciculata, zona reticularis',
+      'Zona reticularis, zona fasciculata, zona glomerulosa',
+      'Zona fasciculata, zona reticularis, zona glomerulosa',
+      'Zona glomerulosa, zona reticularis, zona fasciculata',
+    ],
     correctAnswer: 'Zona reticularis, zona fasciculata, zona glomerulosa',
-    explanation: 'The adrenal cortex can be divided into three layers: zona reticularis (inner layer), zona fasciculata (middle layer) and zona glomerulosa (outer layer).',
+    explanation:
+      'The adrenal cortex can be divided into three layers: zona reticularis (inner layer), zona fasciculata (middle layer) and zona glomerulosa (outer layer).',
     difficulty: 'Hard',
     ncertPageReference: 'Class 11, Chapter 19, Page 245',
     previousYearFrequency: 15,
     conceptualLinks: ['Adrenal cortex', 'Adrenal layers', 'Corticoid secretion'],
     timeEstimate: 60,
     bloomsLevel: 'Remember',
-    weightage: 6.0
+    weightage: 6.0,
   },
   {
     id: 'q11-batch17-029',
@@ -14664,14 +15850,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Cortisol is the main',
     options: ['Mineralocorticoid', 'Glucocorticoid', 'Androgen', 'Catecholamine'],
     correctAnswer: 'Glucocorticoid',
-    explanation: 'The corticoids which are involved in carbohydrate metabolism are called glucocorticoids. In our body, cortisol is the main glucocorticoid.',
+    explanation:
+      'The corticoids which are involved in carbohydrate metabolism are called glucocorticoids. In our body, cortisol is the main glucocorticoid.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 19, Page 245',
     previousYearFrequency: 28,
     conceptualLinks: ['Cortisol', 'Glucocorticoids', 'Adrenal hormones'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch17-030',
@@ -14681,31 +15868,34 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Aldosterone is the main mineralocorticoid that primarily acts on',
     options: ['Liver cells', 'Muscle cells', 'Renal tubules', 'Brain cells'],
     correctAnswer: 'Renal tubules',
-    explanation: 'Aldosterone is the main mineralocorticoid in our body. It acts mainly at the renal tubules and stimulates the reabsorption of Na+ and water and excretion of K+ and phosphate ions.',
+    explanation:
+      'Aldosterone is the main mineralocorticoid in our body. It acts mainly at the renal tubules and stimulates the reabsorption of Na+ and water and excretion of K+ and phosphate ions.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 19, Page 245',
     previousYearFrequency: 26,
     conceptualLinks: ['Aldosterone', 'Mineralocorticoids', 'Electrolyte balance'],
     timeEstimate: 50,
     bloomsLevel: 'Understand',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch17-031',
     topicId: 'topic-11-19-chemical',
     chapterId: 'ch-11-19',
     classId: 'class-11',
-    question: 'Underproduction of hormones by the adrenal cortex causes acute weakness and fatigue leading to',
+    question:
+      'Underproduction of hormones by the adrenal cortex causes acute weakness and fatigue leading to',
     options: ['Cushing syndrome', 'Addison disease', 'Graves disease', 'Diabetes insipidus'],
     correctAnswer: 'Addison disease',
-    explanation: 'Underproduction of hormones by the adrenal cortex alters carbohydrate metabolism causing acute weakness and fatigue leading to a disease called Addison disease.',
+    explanation:
+      'Underproduction of hormones by the adrenal cortex alters carbohydrate metabolism causing acute weakness and fatigue leading to a disease called Addison disease.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 19, Page 244',
     previousYearFrequency: 24,
     conceptualLinks: ['Addison disease', 'Adrenal insufficiency', 'Hypocortisolism'],
     timeEstimate: 50,
     bloomsLevel: 'Remember',
-    weightage: 5.5
+    weightage: 5.5,
   },
   {
     id: 'q11-batch17-032',
@@ -14715,14 +15905,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The endocrine pancreas consists of',
     options: ['Acinar cells', 'Islets of Langerhans', 'Duct cells', 'Stromal tissue only'],
     correctAnswer: 'Islets of Langerhans',
-    explanation: 'The endocrine pancreas consists of Islets of Langerhans. There are about 1 to 2 million Islets of Langerhans in a normal human pancreas representing only 1 to 2 per cent of the pancreatic tissue.',
+    explanation:
+      'The endocrine pancreas consists of Islets of Langerhans. There are about 1 to 2 million Islets of Langerhans in a normal human pancreas representing only 1 to 2 per cent of the pancreatic tissue.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 19, Page 245',
     previousYearFrequency: 22,
     conceptualLinks: ['Islets of Langerhans', 'Endocrine pancreas', 'Pancreatic hormones'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q11-batch17-033',
@@ -14732,14 +15923,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Which cells of the Islets of Langerhans secrete insulin?',
     options: ['Alpha cells', 'Beta cells', 'Delta cells', 'Gamma cells'],
     correctAnswer: 'Beta cells',
-    explanation: 'The two main types of cells in the Islet of Langerhans are alpha-cells and beta-cells. The alpha-cells secrete glucagon, while the beta-cells secrete insulin.',
+    explanation:
+      'The two main types of cells in the Islet of Langerhans are alpha-cells and beta-cells. The alpha-cells secrete glucagon, while the beta-cells secrete insulin.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 19, Page 245',
     previousYearFrequency: 30,
     conceptualLinks: ['Beta cells', 'Insulin', 'Islets of Langerhans'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch17-034',
@@ -14747,16 +15939,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-19',
     classId: 'class-11',
     question: 'Glucagon is classified as a hyperglycemic hormone because it',
-    options: ['Decreases blood glucose levels', 'Increases blood glucose levels', 'Maintains constant glucose levels', 'Converts glucose to glycogen'],
+    options: [
+      'Decreases blood glucose levels',
+      'Increases blood glucose levels',
+      'Maintains constant glucose levels',
+      'Converts glucose to glycogen',
+    ],
     correctAnswer: 'Increases blood glucose levels',
-    explanation: 'Glucagon acts mainly on liver cells and stimulates glycogenolysis resulting in increased blood sugar (hyperglycemia). It also stimulates gluconeogenesis. Thus, glucagon is a hyperglycemic hormone.',
+    explanation:
+      'Glucagon acts mainly on liver cells and stimulates glycogenolysis resulting in increased blood sugar (hyperglycemia). It also stimulates gluconeogenesis. Thus, glucagon is a hyperglycemic hormone.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 19, Page 245',
     previousYearFrequency: 32,
     conceptualLinks: ['Glucagon', 'Hyperglycemia', 'Blood glucose regulation'],
     timeEstimate: 50,
     bloomsLevel: 'Understand',
-    weightage: 5.5
+    weightage: 5.5,
   },
   {
     id: 'q11-batch17-035',
@@ -14764,16 +15962,22 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-19',
     classId: 'class-11',
     question: 'Insulin acts mainly on which two types of cells?',
-    options: ['Neurons and muscle cells', 'Hepatocytes and adipocytes', 'Blood cells and bone cells', 'Epithelial and connective tissue cells'],
+    options: [
+      'Neurons and muscle cells',
+      'Hepatocytes and adipocytes',
+      'Blood cells and bone cells',
+      'Epithelial and connective tissue cells',
+    ],
     correctAnswer: 'Hepatocytes and adipocytes',
-    explanation: 'Insulin acts mainly on hepatocytes (liver cells) and adipocytes (cells of adipose tissue), and enhances cellular glucose uptake and utilisation, resulting in decreased blood glucose levels.',
+    explanation:
+      'Insulin acts mainly on hepatocytes (liver cells) and adipocytes (cells of adipose tissue), and enhances cellular glucose uptake and utilisation, resulting in decreased blood glucose levels.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 19, Page 245-246',
     previousYearFrequency: 25,
     conceptualLinks: ['Insulin', 'Target cells', 'Glucose metabolism'],
     timeEstimate: 50,
     bloomsLevel: 'Remember',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch17-036',
@@ -14783,14 +15987,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Prolonged hyperglycemia leads to a disorder called',
     options: ['Diabetes insipidus', 'Diabetes mellitus', 'Addison disease', 'Graves disease'],
     correctAnswer: 'Diabetes mellitus',
-    explanation: 'Prolonged hyperglycemia leads to a complex disorder called diabetes mellitus which is associated with loss of glucose through urine and formation of harmful compounds known as ketone bodies.',
+    explanation:
+      'Prolonged hyperglycemia leads to a complex disorder called diabetes mellitus which is associated with loss of glucose through urine and formation of harmful compounds known as ketone bodies.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 19, Page 246',
     previousYearFrequency: 40,
     conceptualLinks: ['Diabetes mellitus', 'Hyperglycemia', 'Insulin deficiency'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 6.5
+    weightage: 6.5,
   },
   {
     id: 'q11-batch17-037',
@@ -14800,14 +16005,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'The Leydig cells or interstitial cells of testis produce',
     options: ['Sperm cells', 'Androgens mainly testosterone', 'Estrogen', 'Progesterone'],
     correctAnswer: 'Androgens mainly testosterone',
-    explanation: 'The Leydig cells or interstitial cells, which are present in the intertubular spaces of testis, produce a group of hormones called androgens mainly testosterone.',
+    explanation:
+      'The Leydig cells or interstitial cells, which are present in the intertubular spaces of testis, produce a group of hormones called androgens mainly testosterone.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 19, Page 246',
     previousYearFrequency: 28,
     conceptualLinks: ['Leydig cells', 'Testosterone', 'Androgens'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch17-038',
@@ -14817,14 +16023,15 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'Androgens play a major stimulatory role in',
     options: ['Oogenesis', 'Spermatogenesis', 'Menstrual cycle', 'Lactation'],
     correctAnswer: 'Spermatogenesis',
-    explanation: 'Androgens play a major stimulatory role in the process of spermatogenesis (formation of spermatozoa). They also regulate male accessory sex organs and male sexual behaviour.',
+    explanation:
+      'Androgens play a major stimulatory role in the process of spermatogenesis (formation of spermatozoa). They also regulate male accessory sex organs and male sexual behaviour.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 19, Page 246',
     previousYearFrequency: 24,
     conceptualLinks: ['Androgens', 'Spermatogenesis', 'Male reproduction'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch17-039',
@@ -14834,99 +16041,115 @@ export const class11Questions: AuthenticQuestion[] = [
     question: 'After ovulation, the ruptured follicle is converted to a structure called',
     options: ['Graafian follicle', 'Corpus luteum', 'Primary follicle', 'Zona pellucida'],
     correctAnswer: 'Corpus luteum',
-    explanation: 'After ovulation, the ruptured follicle is converted to a structure called corpus luteum, which secretes mainly progesterone.',
+    explanation:
+      'After ovulation, the ruptured follicle is converted to a structure called corpus luteum, which secretes mainly progesterone.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 19, Page 246',
     previousYearFrequency: 22,
     conceptualLinks: ['Corpus luteum', 'Ovulation', 'Progesterone'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch17-040',
     topicId: 'topic-11-19-chemical',
     chapterId: 'ch-11-19',
     classId: 'class-11',
-    question: 'Which hormone supports pregnancy and stimulates formation of alveoli in mammary glands?',
+    question:
+      'Which hormone supports pregnancy and stimulates formation of alveoli in mammary glands?',
     options: ['Estrogen', 'Oxytocin', 'Progesterone', 'Prolactin'],
     correctAnswer: 'Progesterone',
-    explanation: 'Progesterone supports pregnancy. It also acts on the mammary glands and stimulates the formation of alveoli (sac-like structures which store milk) and milk secretion.',
+    explanation:
+      'Progesterone supports pregnancy. It also acts on the mammary glands and stimulates the formation of alveoli (sac-like structures which store milk) and milk secretion.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 19, Page 247',
     previousYearFrequency: 26,
     conceptualLinks: ['Progesterone', 'Pregnancy', 'Mammary glands'],
     timeEstimate: 45,
     bloomsLevel: 'Remember',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch17-041',
     topicId: 'topic-11-19-chemical',
     chapterId: 'ch-11-19',
     classId: 'class-11',
-    question: 'The atrial wall of heart secretes which peptide hormone that decreases blood pressure?',
+    question:
+      'The atrial wall of heart secretes which peptide hormone that decreases blood pressure?',
     options: ['Erythropoietin', 'Atrial natriuretic factor (ANF)', 'Gastrin', 'Secretin'],
     correctAnswer: 'Atrial natriuretic factor (ANF)',
-    explanation: 'The atrial wall of our heart secretes a very important peptide hormone called atrial natriuretic factor (ANF), which decreases blood pressure. When blood pressure is increased, ANF is secreted which causes dilation of blood vessels.',
+    explanation:
+      'The atrial wall of our heart secretes a very important peptide hormone called atrial natriuretic factor (ANF), which decreases blood pressure. When blood pressure is increased, ANF is secreted which causes dilation of blood vessels.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 19, Page 247',
     previousYearFrequency: 20,
     conceptualLinks: ['ANF', 'Blood pressure regulation', 'Cardiac hormones'],
     timeEstimate: 50,
     bloomsLevel: 'Remember',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch17-042',
     topicId: 'topic-11-19-chemical',
     chapterId: 'ch-11-19',
     classId: 'class-11',
-    question: 'The juxtaglomerular cells of kidney produce which hormone that stimulates RBC formation?',
+    question:
+      'The juxtaglomerular cells of kidney produce which hormone that stimulates RBC formation?',
     options: ['Renin', 'Erythropoietin', 'ANF', 'Calcitonin'],
     correctAnswer: 'Erythropoietin',
-    explanation: 'The juxtaglomerular cells of kidney produce a peptide hormone called erythropoietin which stimulates erythropoiesis (formation of RBC).',
+    explanation:
+      'The juxtaglomerular cells of kidney produce a peptide hormone called erythropoietin which stimulates erythropoiesis (formation of RBC).',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 19, Page 247',
     previousYearFrequency: 25,
     conceptualLinks: ['Erythropoietin', 'Kidney hormones', 'Erythropoiesis'],
     timeEstimate: 50,
     bloomsLevel: 'Remember',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch17-043',
     topicId: 'topic-11-19-chemical',
     chapterId: 'ch-11-19',
     classId: 'class-11',
-    question: 'Which gastrointestinal hormone stimulates secretion of HCl and pepsinogen from gastric glands?',
+    question:
+      'Which gastrointestinal hormone stimulates secretion of HCl and pepsinogen from gastric glands?',
     options: ['Secretin', 'Cholecystokinin (CCK)', 'Gastrin', 'Gastric inhibitory peptide (GIP)'],
     correctAnswer: 'Gastrin',
-    explanation: 'Gastrin acts on the gastric glands and stimulates the secretion of hydrochloric acid and pepsinogen. It is one of the four major peptide hormones secreted by the gastrointestinal tract.',
+    explanation:
+      'Gastrin acts on the gastric glands and stimulates the secretion of hydrochloric acid and pepsinogen. It is one of the four major peptide hormones secreted by the gastrointestinal tract.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 19, Page 247',
     previousYearFrequency: 22,
     conceptualLinks: ['Gastrin', 'Gastric secretion', 'GI hormones'],
     timeEstimate: 50,
     bloomsLevel: 'Remember',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch17-044',
     topicId: 'topic-11-19-chemical',
     chapterId: 'ch-11-19',
     classId: 'class-11',
-    question: 'Cholecystokinin (CCK) acts on both pancreas and gall bladder to stimulate secretion of',
-    options: ['Water and bicarbonate', 'HCl and pepsinogen', 'Pancreatic enzymes and bile juice', 'Only gastric juice'],
+    question:
+      'Cholecystokinin (CCK) acts on both pancreas and gall bladder to stimulate secretion of',
+    options: [
+      'Water and bicarbonate',
+      'HCl and pepsinogen',
+      'Pancreatic enzymes and bile juice',
+      'Only gastric juice',
+    ],
     correctAnswer: 'Pancreatic enzymes and bile juice',
-    explanation: 'CCK acts on both pancreas and gall bladder and stimulates the secretion of pancreatic enzymes and bile juice, respectively.',
+    explanation:
+      'CCK acts on both pancreas and gall bladder and stimulates the secretion of pancreatic enzymes and bile juice, respectively.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 19, Page 247',
     previousYearFrequency: 18,
     conceptualLinks: ['CCK', 'Pancreatic secretion', 'Bile secretion'],
     timeEstimate: 55,
     bloomsLevel: 'Remember',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch17-045',
@@ -14934,67 +16157,94 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-19',
     classId: 'class-11',
     question: 'Hormone receptors present inside the target cell, mostly in the nucleus, are called',
-    options: ['Membrane-bound receptors', 'Intracellular receptors', 'Surface receptors', 'Peripheral receptors'],
+    options: [
+      'Membrane-bound receptors',
+      'Intracellular receptors',
+      'Surface receptors',
+      'Peripheral receptors',
+    ],
     correctAnswer: 'Intracellular receptors',
-    explanation: 'Hormone receptors present on the cell membrane are called membrane-bound receptors and the receptors present inside the target cell are called intracellular receptors, mostly nuclear receptors (present in the nucleus).',
+    explanation:
+      'Hormone receptors present on the cell membrane are called membrane-bound receptors and the receptors present inside the target cell are called intracellular receptors, mostly nuclear receptors (present in the nucleus).',
     difficulty: 'Easy',
     ncertPageReference: 'Class 11, Chapter 19, Page 247',
     previousYearFrequency: 16,
     conceptualLinks: ['Hormone receptors', 'Intracellular receptors', 'Mechanism of action'],
     timeEstimate: 45,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q11-batch17-046',
     topicId: 'topic-11-19-chemical',
     chapterId: 'ch-11-19',
     classId: 'class-11',
-    question: 'Based on chemical nature, hormones can be divided into groups. Which of the following is NOT a chemical category of hormones?',
-    options: ['Peptide, polypeptide, protein hormones', 'Steroids', 'Nucleic acids', 'Amino-acid derivatives'],
+    question:
+      'Based on chemical nature, hormones can be divided into groups. Which of the following is NOT a chemical category of hormones?',
+    options: [
+      'Peptide, polypeptide, protein hormones',
+      'Steroids',
+      'Nucleic acids',
+      'Amino-acid derivatives',
+    ],
     correctAnswer: 'Nucleic acids',
-    explanation: 'On the basis of chemical nature, hormones are divided into: (i) peptide, polypeptide, protein hormones (ii) steroids (iii) iodothyronines (thyroid hormones) (iv) amino-acid derivatives. Nucleic acids are not a category of hormones.',
+    explanation:
+      'On the basis of chemical nature, hormones are divided into: (i) peptide, polypeptide, protein hormones (ii) steroids (iii) iodothyronines (thyroid hormones) (iv) amino-acid derivatives. Nucleic acids are not a category of hormones.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 19, Page 248',
     previousYearFrequency: 14,
     conceptualLinks: ['Hormone classification', 'Chemical nature', 'Hormone types'],
     timeEstimate: 55,
     bloomsLevel: 'Understand',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q11-batch17-047',
     topicId: 'topic-11-19-chemical',
     chapterId: 'ch-11-19',
     classId: 'class-11',
-    question: 'Hormones which interact with membrane-bound receptors generate which of the following inside the cell?',
-    options: ['Direct gene expression', 'Second messengers like cyclic AMP, IP3, Ca++', 'Primary messengers', 'Protein synthesis directly'],
+    question:
+      'Hormones which interact with membrane-bound receptors generate which of the following inside the cell?',
+    options: [
+      'Direct gene expression',
+      'Second messengers like cyclic AMP, IP3, Ca++',
+      'Primary messengers',
+      'Protein synthesis directly',
+    ],
     correctAnswer: 'Second messengers like cyclic AMP, IP3, Ca++',
-    explanation: 'Hormones which interact with membrane-bound receptors normally do not enter the target cell, but generate second messengers (e.g., cyclic AMP, IP3, Ca++) which in turn regulate cellular metabolism.',
+    explanation:
+      'Hormones which interact with membrane-bound receptors normally do not enter the target cell, but generate second messengers (e.g., cyclic AMP, IP3, Ca++) which in turn regulate cellular metabolism.',
     difficulty: 'Hard',
     ncertPageReference: 'Class 11, Chapter 19, Page 248',
     previousYearFrequency: 28,
     conceptualLinks: ['Second messengers', 'Membrane receptors', 'Signal transduction'],
     timeEstimate: 70,
     bloomsLevel: 'Understand',
-    weightage: 7.0
+    weightage: 7.0,
   },
   {
     id: 'q11-batch17-048',
     topicId: 'topic-11-19-chemical',
     chapterId: 'ch-11-19',
     classId: 'class-11',
-    question: 'Steroid hormones and iodothyronines interact with intracellular receptors and primarily regulate',
-    options: ['Second messenger production', 'Membrane permeability only', 'Gene expression or chromosome function', 'Enzyme activation at membrane'],
+    question:
+      'Steroid hormones and iodothyronines interact with intracellular receptors and primarily regulate',
+    options: [
+      'Second messenger production',
+      'Membrane permeability only',
+      'Gene expression or chromosome function',
+      'Enzyme activation at membrane',
+    ],
     correctAnswer: 'Gene expression or chromosome function',
-    explanation: 'Hormones which interact with intracellular receptors (e.g., steroid hormones, iodothyronines, etc.) mostly regulate gene expression or chromosome function by the interaction of hormone-receptor complex with the genome.',
+    explanation:
+      'Hormones which interact with intracellular receptors (e.g., steroid hormones, iodothyronines, etc.) mostly regulate gene expression or chromosome function by the interaction of hormone-receptor complex with the genome.',
     difficulty: 'Hard',
     ncertPageReference: 'Class 11, Chapter 19, Page 248',
     previousYearFrequency: 24,
     conceptualLinks: ['Steroid hormones', 'Gene expression', 'Nuclear receptors'],
     timeEstimate: 70,
     bloomsLevel: 'Understand',
-    weightage: 7.5
+    weightage: 7.5,
   },
   {
     id: 'q11-batch17-049',
@@ -15002,33 +16252,51 @@ export const class11Questions: AuthenticQuestion[] = [
     chapterId: 'ch-11-19',
     classId: 'class-11',
     question: 'Which of the following statements about hormone action is correct?',
-    options: ['All hormones enter target cells directly', 'Each receptor can bind to multiple different hormones', 'Each receptor is specific to one hormone only', 'Hormones do not require receptors'],
+    options: [
+      'All hormones enter target cells directly',
+      'Each receptor can bind to multiple different hormones',
+      'Each receptor is specific to one hormone only',
+      'Hormones do not require receptors',
+    ],
     correctAnswer: 'Each receptor is specific to one hormone only',
-    explanation: 'Hormones produce their effects by binding to specific proteins called hormone receptors. Each receptor is specific to one hormone only and hence receptors are specific. This specificity ensures proper hormone action.',
+    explanation:
+      'Hormones produce their effects by binding to specific proteins called hormone receptors. Each receptor is specific to one hormone only and hence receptors are specific. This specificity ensures proper hormone action.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 11, Chapter 19, Page 247',
     previousYearFrequency: 20,
     conceptualLinks: ['Hormone receptors', 'Receptor specificity', 'Hormone-receptor complex'],
     timeEstimate: 55,
     bloomsLevel: 'Understand',
-    weightage: 5.5
+    weightage: 5.5,
   },
   {
     id: 'q11-batch17-050',
     topicId: 'topic-11-19-chemical',
     chapterId: 'ch-11-19',
     classId: 'class-11',
-    question: 'A patient presents with symptoms of weight loss, increased basal metabolic rate, protrusion of eyeballs, and enlarged thyroid gland. This condition is most likely',
-    options: ['Hypothyroidism with goitre', 'Graves disease (Exophthalmic goitre)', 'Cretinism', 'Myxedema'],
+    question:
+      'A patient presents with symptoms of weight loss, increased basal metabolic rate, protrusion of eyeballs, and enlarged thyroid gland. This condition is most likely',
+    options: [
+      'Hypothyroidism with goitre',
+      'Graves disease (Exophthalmic goitre)',
+      'Cretinism',
+      'Myxedema',
+    ],
     correctAnswer: 'Graves disease (Exophthalmic goitre)',
-    explanation: 'Exophthalmic goitre is a form of hyperthyroidism, characterised by enlargement of the thyroid gland, protrusion of the eyeballs, increased basal metabolic rate, and weight loss, also called Graves disease. This distinguishes it from hypothyroid conditions.',
+    explanation:
+      'Exophthalmic goitre is a form of hyperthyroidism, characterised by enlargement of the thyroid gland, protrusion of the eyeballs, increased basal metabolic rate, and weight loss, also called Graves disease. This distinguishes it from hypothyroid conditions.',
     difficulty: 'Hard',
     ncertPageReference: 'Class 11, Chapter 19, Page 243',
     previousYearFrequency: 35,
-    conceptualLinks: ['Graves disease', 'Hyperthyroidism', 'Clinical diagnosis', 'Thyroid disorders'],
+    conceptualLinks: [
+      'Graves disease',
+      'Hyperthyroidism',
+      'Clinical diagnosis',
+      'Thyroid disorders',
+    ],
     timeEstimate: 90,
     bloomsLevel: 'Analyze',
-    weightage: 8.0
+    weightage: 8.0,
   },
 ]
 
@@ -16062,16 +17330,22 @@ export const class12Questions: AuthenticQuestion[] = [
     chapterId: 'ch-12-7',
     classId: 'class-12',
     question: 'Which of the following bacteria is responsible for causing typhoid fever in humans?',
-    options: ['Streptococcus pneumoniae', 'Salmonella typhi', 'Haemophilus influenzae', 'Mycobacterium tuberculosis'],
+    options: [
+      'Streptococcus pneumoniae',
+      'Salmonella typhi',
+      'Haemophilus influenzae',
+      'Mycobacterium tuberculosis',
+    ],
     correctAnswer: 'Salmonella typhi',
-    explanation: 'Salmonella typhi is the pathogenic bacterium that causes typhoid fever. These pathogens enter the small intestine through contaminated food and water, then migrate to other organs through blood. The disease is characterized by sustained high fever (39-40°C), weakness, stomach pain, and constipation.',
+    explanation:
+      'Salmonella typhi is the pathogenic bacterium that causes typhoid fever. These pathogens enter the small intestine through contaminated food and water, then migrate to other organs through blood. The disease is characterized by sustained high fever (39-40°C), weakness, stomach pain, and constipation.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 12, Chapter 7, Page 130',
     previousYearFrequency: 15,
     conceptualLinks: ['typhoid', 'bacterial-diseases', 'salmonella-typhi'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q12-batch6-002',
@@ -16081,65 +17355,82 @@ export const class12Questions: AuthenticQuestion[] = [
     question: 'The confirmatory test for typhoid fever is:',
     options: ['ELISA test', 'Widal test', 'Mantoux test', 'Western blot'],
     correctAnswer: 'Widal test',
-    explanation: 'Widal test is the confirmatory diagnostic test for typhoid fever. NCERT mentions Mary Mallon (Typhoid Mary) as a classic case who was a typhoid carrier and spread the disease through food she prepared.',
+    explanation:
+      'Widal test is the confirmatory diagnostic test for typhoid fever. NCERT mentions Mary Mallon (Typhoid Mary) as a classic case who was a typhoid carrier and spread the disease through food she prepared.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 12, Chapter 7, Page 131',
     previousYearFrequency: 12,
     conceptualLinks: ['typhoid-diagnosis', 'widal-test', 'disease-detection'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q12-batch6-003',
     topicId: 'topic-12-7-health',
     chapterId: 'ch-12-7',
     classId: 'class-12',
-    question: 'Which of the following pathogens infects the alveoli of lungs causing them to fill with fluid?',
-    options: ['Salmonella typhi', 'Plasmodium vivax', 'Streptococcus pneumoniae and Haemophilus influenzae', 'Entamoeba histolytica'],
+    question:
+      'Which of the following pathogens infects the alveoli of lungs causing them to fill with fluid?',
+    options: [
+      'Salmonella typhi',
+      'Plasmodium vivax',
+      'Streptococcus pneumoniae and Haemophilus influenzae',
+      'Entamoeba histolytica',
+    ],
     correctAnswer: 'Streptococcus pneumoniae and Haemophilus influenzae',
-    explanation: 'Bacteria like Streptococcus pneumoniae and Haemophilus influenzae cause pneumonia by infecting the alveoli (air-filled sacs) of the lungs. The alveoli get filled with fluid leading to severe respiratory problems. Symptoms include fever, chills, cough, headache, and in severe cases, lips and fingernails may turn gray to bluish.',
+    explanation:
+      'Bacteria like Streptococcus pneumoniae and Haemophilus influenzae cause pneumonia by infecting the alveoli (air-filled sacs) of the lungs. The alveoli get filled with fluid leading to severe respiratory problems. Symptoms include fever, chills, cough, headache, and in severe cases, lips and fingernails may turn gray to bluish.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 12, Chapter 7, Page 131',
     previousYearFrequency: 14,
     conceptualLinks: ['pneumonia', 'respiratory-diseases', 'bacterial-infection'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q12-batch6-004',
     topicId: 'topic-12-7-health',
     chapterId: 'ch-12-7',
     classId: 'class-12',
-    question: 'The most infectious human ailment caused by Rhino viruses that affects the nose and respiratory passage is:',
+    question:
+      'The most infectious human ailment caused by Rhino viruses that affects the nose and respiratory passage is:',
     options: ['Pneumonia', 'Common cold', 'Tuberculosis', 'Diphtheria'],
     correctAnswer: 'Common cold',
-    explanation: 'Rhino viruses cause the common cold, one of the most infectious human ailments. They infect the nose and respiratory passage but not the lungs. The disease is characterized by nasal congestion and discharge, sore throat, hoarseness, cough, headache, and tiredness, usually lasting 3-7 days.',
+    explanation:
+      'Rhino viruses cause the common cold, one of the most infectious human ailments. They infect the nose and respiratory passage but not the lungs. The disease is characterized by nasal congestion and discharge, sore throat, hoarseness, cough, headache, and tiredness, usually lasting 3-7 days.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 12, Chapter 7, Page 131',
     previousYearFrequency: 10,
     conceptualLinks: ['common-cold', 'viral-diseases', 'rhino-viruses'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q12-batch6-005',
     topicId: 'topic-12-7-health',
     chapterId: 'ch-12-7',
     classId: 'class-12',
-    question: 'Which species of Plasmodium causes the most serious and potentially fatal form of malaria?',
-    options: ['Plasmodium vivax', 'Plasmodium malariae', 'Plasmodium falciparum', 'Plasmodium ovale'],
+    question:
+      'Which species of Plasmodium causes the most serious and potentially fatal form of malaria?',
+    options: [
+      'Plasmodium vivax',
+      'Plasmodium malariae',
+      'Plasmodium falciparum',
+      'Plasmodium ovale',
+    ],
     correctAnswer: 'Plasmodium falciparum',
-    explanation: 'Plasmodium falciparum causes malignant malaria, which is the most serious form and can be fatal. NCERT specifically mentions that different species (P. vivax, P. malariae, and P. falciparum) cause different types of malaria, but P. falciparum causes the most dangerous form.',
+    explanation:
+      'Plasmodium falciparum causes malignant malaria, which is the most serious form and can be fatal. NCERT specifically mentions that different species (P. vivax, P. malariae, and P. falciparum) cause different types of malaria, but P. falciparum causes the most dangerous form.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 12, Chapter 7, Page 131',
     previousYearFrequency: 16,
     conceptualLinks: ['malaria', 'plasmodium-species', 'protozoan-diseases'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q12-batch6-006',
@@ -16147,50 +17438,65 @@ export const class12Questions: AuthenticQuestion[] = [
     chapterId: 'ch-12-7',
     classId: 'class-12',
     question: 'Haemozoin, the toxic substance released during malaria infection, is produced from:',
-    options: ['Breakdown of liver cells', 'Rupture of red blood cells', 'Breakdown of white blood cells', 'Destruction of platelets'],
+    options: [
+      'Breakdown of liver cells',
+      'Rupture of red blood cells',
+      'Breakdown of white blood cells',
+      'Destruction of platelets',
+    ],
     correctAnswer: 'Rupture of red blood cells',
-    explanation: 'Haemozoin is a toxic substance released when red blood cells rupture during malaria infection. The Plasmodium parasites multiply within RBCs and their rupture releases haemozoin, which is responsible for the characteristic chill and high fever recurring every three to four days in malaria patients.',
+    explanation:
+      'Haemozoin is a toxic substance released when red blood cells rupture during malaria infection. The Plasmodium parasites multiply within RBCs and their rupture releases haemozoin, which is responsible for the characteristic chill and high fever recurring every three to four days in malaria patients.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 12, Chapter 7, Page 131',
     previousYearFrequency: 13,
     conceptualLinks: ['malaria-pathology', 'haemozoin', 'rbc-rupture'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q12-batch6-007',
     topicId: 'topic-12-7-health',
     chapterId: 'ch-12-7',
     classId: 'class-12',
-    question: 'The female Anopheles mosquito acts as the vector for malaria. In the life cycle of Plasmodium, sporozoites are:',
-    options: ['Found in human liver cells', 'Stored in mosquito salivary glands', 'Present in human blood', 'Formed in mosquito gut'],
+    question:
+      'The female Anopheles mosquito acts as the vector for malaria. In the life cycle of Plasmodium, sporozoites are:',
+    options: [
+      'Found in human liver cells',
+      'Stored in mosquito salivary glands',
+      'Present in human blood',
+      'Formed in mosquito gut',
+    ],
     correctAnswer: 'Stored in mosquito salivary glands',
-    explanation: 'Sporozoites are the infectious form of Plasmodium that are stored in the salivary glands of female Anopheles mosquito. When the mosquito bites a human, these sporozoites are introduced into the human body, initiating the infection. The parasite requires two hosts (human and mosquito) to complete its life cycle.',
+    explanation:
+      'Sporozoites are the infectious form of Plasmodium that are stored in the salivary glands of female Anopheles mosquito. When the mosquito bites a human, these sporozoites are introduced into the human body, initiating the infection. The parasite requires two hosts (human and mosquito) to complete its life cycle.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 12, Chapter 7, Page 131',
     previousYearFrequency: 14,
     conceptualLinks: ['malaria-life-cycle', 'sporozoites', 'vector-transmission'],
     timeEstimate: 50,
     bloomsLevel: 'Understand',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q12-batch6-008',
     topicId: 'topic-12-7-health',
     chapterId: 'ch-12-7',
     classId: 'class-12',
-    question: 'Entamoeba histolytica causes amoebiasis by parasitizing which part of the human digestive system?',
+    question:
+      'Entamoeba histolytica causes amoebiasis by parasitizing which part of the human digestive system?',
     options: ['Small intestine', 'Stomach', 'Large intestine', 'Rectum'],
     correctAnswer: 'Large intestine',
-    explanation: 'Entamoeba histolytica is a protozoan parasite in the large intestine of humans, causing amoebiasis (amoebic dysentery). Symptoms include constipation, abdominal pain and cramps, and stools with excess mucous and blood clots. The parasite is transmitted through contaminated food and water, with houseflies acting as mechanical carriers.',
+    explanation:
+      'Entamoeba histolytica is a protozoan parasite in the large intestine of humans, causing amoebiasis (amoebic dysentery). Symptoms include constipation, abdominal pain and cramps, and stools with excess mucous and blood clots. The parasite is transmitted through contaminated food and water, with houseflies acting as mechanical carriers.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 12, Chapter 7, Page 132',
     previousYearFrequency: 11,
     conceptualLinks: ['amoebiasis', 'entamoeba', 'protozoan-diseases'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q12-batch6-009',
@@ -16198,16 +17504,22 @@ export const class12Questions: AuthenticQuestion[] = [
     chapterId: 'ch-12-7',
     classId: 'class-12',
     question: 'Elephantiasis or filariasis is caused by which of the following helminths?',
-    options: ['Ascaris lumbricoides', 'Wuchereria bancrofti and W. malayi', 'Taenia solium', 'Ancylostoma duodenale'],
+    options: [
+      'Ascaris lumbricoides',
+      'Wuchereria bancrofti and W. malayi',
+      'Taenia solium',
+      'Ancylostoma duodenale',
+    ],
     correctAnswer: 'Wuchereria bancrofti and W. malayi',
-    explanation: 'Wuchereria (W. bancrofti and W. malayi) are filarial worms that cause elephantiasis or filariasis. They cause chronic inflammation of lymphatic vessels of lower limbs, often affecting genital organs as well, resulting in gross deformities. The pathogens are transmitted through the bite of female mosquito vectors.',
+    explanation:
+      'Wuchereria (W. bancrofti and W. malayi) are filarial worms that cause elephantiasis or filariasis. They cause chronic inflammation of lymphatic vessels of lower limbs, often affecting genital organs as well, resulting in gross deformities. The pathogens are transmitted through the bite of female mosquito vectors.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 12, Chapter 7, Page 133',
     previousYearFrequency: 15,
     conceptualLinks: ['filariasis', 'elephantiasis', 'wuchereria'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q12-batch6-010',
@@ -16215,16 +17527,22 @@ export const class12Questions: AuthenticQuestion[] = [
     chapterId: 'ch-12-7',
     classId: 'class-12',
     question: 'Ringworm disease in humans is caused by fungi belonging to which genera?',
-    options: ['Candida, Aspergillus and Penicillium', 'Microsporum, Trichophyton and Epidermophyton', 'Mucor, Rhizopus and Saccharomyces', 'Alternaria, Claviceps and Ustilago'],
+    options: [
+      'Candida, Aspergillus and Penicillium',
+      'Microsporum, Trichophyton and Epidermophyton',
+      'Mucor, Rhizopus and Saccharomyces',
+      'Alternaria, Claviceps and Ustilago',
+    ],
     correctAnswer: 'Microsporum, Trichophyton and Epidermophyton',
-    explanation: 'Many fungi belonging to the genera Microsporum, Trichophyton and Epidermophyton cause ringworm, one of the most common infectious diseases in humans. The disease is characterized by dry, scaly lesions on skin, nails, and scalp with intense itching. Heat and moisture help these fungi grow, making them thrive in skin folds.',
+    explanation:
+      'Many fungi belonging to the genera Microsporum, Trichophyton and Epidermophyton cause ringworm, one of the most common infectious diseases in humans. The disease is characterized by dry, scaly lesions on skin, nails, and scalp with intense itching. Heat and moisture help these fungi grow, making them thrive in skin folds.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 12, Chapter 7, Page 133',
     previousYearFrequency: 12,
     conceptualLinks: ['ringworm', 'fungal-diseases', 'dermatophytes'],
     timeEstimate: 45,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
 
   // Immunity - Innate & Acquired (8 questions)
@@ -16233,17 +17551,19 @@ export const class12Questions: AuthenticQuestion[] = [
     topicId: 'topic-12-7-health',
     chapterId: 'ch-12-7',
     classId: 'class-12',
-    question: 'The overall ability of the host to fight disease-causing organisms, conferred by the immune system, is called:',
+    question:
+      'The overall ability of the host to fight disease-causing organisms, conferred by the immune system, is called:',
     options: ['Resistance', 'Immunity', 'Tolerance', 'Protection'],
     correctAnswer: 'Immunity',
-    explanation: 'Immunity is defined as the overall ability of the host to fight disease-causing organisms, conferred by the immune system. The body is able to defend itself from most foreign agents through two types of immunity: innate immunity (present at birth) and acquired immunity (develops during lifetime).',
+    explanation:
+      'Immunity is defined as the overall ability of the host to fight disease-causing organisms, conferred by the immune system. The body is able to defend itself from most foreign agents through two types of immunity: innate immunity (present at birth) and acquired immunity (develops during lifetime).',
     difficulty: 'Easy',
     ncertPageReference: 'Class 12, Chapter 7, Page 134',
     previousYearFrequency: 10,
     conceptualLinks: ['immunity-definition', 'immune-system', 'host-defense'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q12-batch6-012',
@@ -16251,50 +17571,65 @@ export const class12Questions: AuthenticQuestion[] = [
     chapterId: 'ch-12-7',
     classId: 'class-12',
     question: 'Which of the following is NOT a component of innate immunity?',
-    options: ['Physical barriers like skin', 'Polymorpho-nuclear leukocytes (PMNL-neutrophils)', 'Antibodies produced by B-lymphocytes', 'Acid in stomach'],
+    options: [
+      'Physical barriers like skin',
+      'Polymorpho-nuclear leukocytes (PMNL-neutrophils)',
+      'Antibodies produced by B-lymphocytes',
+      'Acid in stomach',
+    ],
     correctAnswer: 'Antibodies produced by B-lymphocytes',
-    explanation: 'Antibodies produced by B-lymphocytes are part of acquired immunity, not innate immunity. Innate immunity consists of four types of barriers: physical (skin, mucus), physiological (stomach acid, saliva, tears), cellular (PMNL, macrophages, natural killer cells), and cytokine barriers (interferons).',
+    explanation:
+      'Antibodies produced by B-lymphocytes are part of acquired immunity, not innate immunity. Innate immunity consists of four types of barriers: physical (skin, mucus), physiological (stomach acid, saliva, tears), cellular (PMNL, macrophages, natural killer cells), and cytokine barriers (interferons).',
     difficulty: 'Medium',
     ncertPageReference: 'Class 12, Chapter 7, Page 134',
     previousYearFrequency: 16,
     conceptualLinks: ['innate-immunity', 'immune-barriers', 'non-specific-defense'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q12-batch6-013',
     topicId: 'topic-12-7-health',
     chapterId: 'ch-12-7',
     classId: 'class-12',
-    question: 'Interferons, which protect non-infected cells from viral infection, are secreted by:',
+    question:
+      'Interferons, which protect non-infected cells from viral infection, are secreted by:',
     options: ['Macrophages', 'B-lymphocytes', 'Virus-infected cells', 'Natural killer cells'],
     correctAnswer: 'Virus-infected cells',
-    explanation: 'Interferons are proteins secreted by virus-infected cells that protect non-infected cells from further viral infection. They form part of the cytokine barriers in innate immunity. This is a non-specific defense mechanism present from birth.',
+    explanation:
+      'Interferons are proteins secreted by virus-infected cells that protect non-infected cells from further viral infection. They form part of the cytokine barriers in innate immunity. This is a non-specific defense mechanism present from birth.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 12, Chapter 7, Page 135',
     previousYearFrequency: 13,
     conceptualLinks: ['interferons', 'cytokine-barriers', 'viral-defense'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q12-batch6-014',
     topicId: 'topic-12-7-health',
     chapterId: 'ch-12-7',
     classId: 'class-12',
-    question: 'The key characteristic that distinguishes acquired immunity from innate immunity is:',
-    options: ['It is present at birth', 'It is pathogen-specific and has memory', 'It involves physical barriers', 'It acts immediately'],
+    question:
+      'The key characteristic that distinguishes acquired immunity from innate immunity is:',
+    options: [
+      'It is present at birth',
+      'It is pathogen-specific and has memory',
+      'It involves physical barriers',
+      'It acts immediately',
+    ],
     correctAnswer: 'It is pathogen-specific and has memory',
-    explanation: 'Acquired immunity is pathogen-specific and characterized by memory. When the body encounters a pathogen for the first time, it produces a primary response of low intensity. Subsequent encounters with the same pathogen elicit a highly intensified secondary or anamnestic response because the body has memory of the first encounter.',
+    explanation:
+      'Acquired immunity is pathogen-specific and characterized by memory. When the body encounters a pathogen for the first time, it produces a primary response of low intensity. Subsequent encounters with the same pathogen elicit a highly intensified secondary or anamnestic response because the body has memory of the first encounter.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 12, Chapter 7, Page 135',
     previousYearFrequency: 17,
     conceptualLinks: ['acquired-immunity', 'immunological-memory', 'specific-immunity'],
     timeEstimate: 50,
     bloomsLevel: 'Understand',
-    weightage: 5.5
+    weightage: 5.5,
   },
   {
     id: 'q12-batch6-015',
@@ -16302,33 +17637,41 @@ export const class12Questions: AuthenticQuestion[] = [
     chapterId: 'ch-12-7',
     classId: 'class-12',
     question: 'Active immunity is characterized by:',
-    options: ['Immediate response to antigens', 'Direct injection of ready-made antibodies', 'Production of antibodies by the host body when exposed to antigens', 'Transfer of antibodies from mother to fetus'],
+    options: [
+      'Immediate response to antigens',
+      'Direct injection of ready-made antibodies',
+      'Production of antibodies by the host body when exposed to antigens',
+      'Transfer of antibodies from mother to fetus',
+    ],
     correctAnswer: 'Production of antibodies by the host body when exposed to antigens',
-    explanation: 'Active immunity occurs when a host is exposed to antigens (living/dead microbes or proteins) and antibodies are produced in the host body. This type of immunity is slow and takes time to give full effective response. It can be induced through immunisation (deliberate injection of microbes) or natural infection.',
+    explanation:
+      'Active immunity occurs when a host is exposed to antigens (living/dead microbes or proteins) and antibodies are produced in the host body. This type of immunity is slow and takes time to give full effective response. It can be induced through immunisation (deliberate injection of microbes) or natural infection.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 12, Chapter 7, Page 136',
     previousYearFrequency: 15,
     conceptualLinks: ['active-immunity', 'antibody-production', 'immunisation'],
     timeEstimate: 50,
     bloomsLevel: 'Understand',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q12-batch6-016',
     topicId: 'topic-12-7-health',
     chapterId: 'ch-12-7',
     classId: 'class-12',
-    question: 'Colostrum, the yellowish fluid secreted by mother during initial days of lactation, provides passive immunity to the infant through:',
+    question:
+      'Colostrum, the yellowish fluid secreted by mother during initial days of lactation, provides passive immunity to the infant through:',
     options: ['IgG antibodies', 'IgM antibodies', 'IgA antibodies', 'IgE antibodies'],
     correctAnswer: 'IgA antibodies',
-    explanation: 'Colostrum secreted by the mother during the initial days of lactation has abundant IgA antibodies to protect the infant. This is an example of passive immunity where ready-made antibodies are directly given to protect the body. The foetus also receives antibodies from mother through the placenta during pregnancy.',
+    explanation:
+      'Colostrum secreted by the mother during the initial days of lactation has abundant IgA antibodies to protect the infant. This is an example of passive immunity where ready-made antibodies are directly given to protect the body. The foetus also receives antibodies from mother through the placenta during pregnancy.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 12, Chapter 7, Page 136',
     previousYearFrequency: 14,
     conceptualLinks: ['passive-immunity', 'colostrum', 'maternal-antibodies'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q12-batch6-017',
@@ -16336,16 +17679,22 @@ export const class12Questions: AuthenticQuestion[] = [
     chapterId: 'ch-12-7',
     classId: 'class-12',
     question: 'The principle of immunisation or vaccination is based on the property of:',
-    options: ['Contact inhibition', 'Memory of the immune system', 'Phagocytosis', 'Complement activation'],
+    options: [
+      'Contact inhibition',
+      'Memory of the immune system',
+      'Phagocytosis',
+      'Complement activation',
+    ],
     correctAnswer: 'Memory of the immune system',
-    explanation: 'The principle of immunisation/vaccination is based on the memory property of the immune system. Vaccines (antigenic proteins or inactivated/weakened pathogens) are introduced into the body, which generate memory B and T-cells. These cells recognize the pathogen quickly on subsequent exposure and overwhelm invaders with massive antibody production.',
+    explanation:
+      'The principle of immunisation/vaccination is based on the memory property of the immune system. Vaccines (antigenic proteins or inactivated/weakened pathogens) are introduced into the body, which generate memory B and T-cells. These cells recognize the pathogen quickly on subsequent exposure and overwhelm invaders with massive antibody production.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 12, Chapter 7, Page 136',
     previousYearFrequency: 18,
     conceptualLinks: ['vaccination', 'immunological-memory', 'prophylaxis'],
     timeEstimate: 50,
     bloomsLevel: 'Understand',
-    weightage: 5.5
+    weightage: 5.5,
   },
   {
     id: 'q12-batch6-018',
@@ -16355,14 +17704,15 @@ export const class12Questions: AuthenticQuestion[] = [
     question: 'An example of auto-immune disease mentioned in NCERT is:',
     options: ['Diabetes mellitus', 'Rheumatoid arthritis', 'Hypertension', 'Atherosclerosis'],
     correctAnswer: 'Rheumatoid arthritis',
-    explanation: 'Rheumatoid arthritis is mentioned as an example of auto-immune disease in NCERT. Auto-immune diseases occur when, due to genetic and other unknown reasons, the body attacks its own self-cells, resulting in damage to the body. This happens despite the immune system ability to differentiate self from non-self.',
+    explanation:
+      'Rheumatoid arthritis is mentioned as an example of auto-immune disease in NCERT. Auto-immune diseases occur when, due to genetic and other unknown reasons, the body attacks its own self-cells, resulting in damage to the body. This happens despite the immune system ability to differentiate self from non-self.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 12, Chapter 7, Page 137',
     previousYearFrequency: 12,
     conceptualLinks: ['auto-immunity', 'rheumatoid-arthritis', 'self-attack'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
 
   // Immune System Components (7 questions)
@@ -16371,17 +17721,24 @@ export const class12Questions: AuthenticQuestion[] = [
     topicId: 'topic-12-7-health',
     chapterId: 'ch-12-7',
     classId: 'class-12',
-    question: 'The two types of lymphocytes that carry out primary and secondary immune responses are:',
-    options: ['Neutrophils and monocytes', 'B-lymphocytes and T-lymphocytes', 'Eosinophils and basophils', 'Macrophages and dendritic cells'],
+    question:
+      'The two types of lymphocytes that carry out primary and secondary immune responses are:',
+    options: [
+      'Neutrophils and monocytes',
+      'B-lymphocytes and T-lymphocytes',
+      'Eosinophils and basophils',
+      'Macrophages and dendritic cells',
+    ],
     correctAnswer: 'B-lymphocytes and T-lymphocytes',
-    explanation: 'B-lymphocytes and T-lymphocytes are the two special types of lymphocytes that carry out primary and secondary immune responses. B-lymphocytes produce antibodies (humoral immune response) while T-lymphocytes themselves do not secrete antibodies but help B cells produce them and mediate cell-mediated immunity (CMI).',
+    explanation:
+      'B-lymphocytes and T-lymphocytes are the two special types of lymphocytes that carry out primary and secondary immune responses. B-lymphocytes produce antibodies (humoral immune response) while T-lymphocytes themselves do not secrete antibodies but help B cells produce them and mediate cell-mediated immunity (CMI).',
     difficulty: 'Easy',
     ncertPageReference: 'Class 12, Chapter 7, Page 135',
     previousYearFrequency: 14,
     conceptualLinks: ['lymphocytes', 'b-cells', 't-cells'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q12-batch6-020',
@@ -16389,16 +17746,22 @@ export const class12Questions: AuthenticQuestion[] = [
     chapterId: 'ch-12-7',
     classId: 'class-12',
     question: 'An antibody molecule is represented as H2L2 because it has:',
-    options: ['2 heavy chains and 2 light chains', '2 hydrogen bonds and 2 lipid chains', '2 hinge regions and 2 loops', '2 helper cells and 2 lymphoid cells'],
+    options: [
+      '2 heavy chains and 2 light chains',
+      '2 hydrogen bonds and 2 lipid chains',
+      '2 hinge regions and 2 loops',
+      '2 helper cells and 2 lymphoid cells',
+    ],
     correctAnswer: '2 heavy chains and 2 light chains',
-    explanation: 'Each antibody molecule has four peptide chains - two small called light chains and two longer called heavy chains. Hence, an antibody is represented as H2L2. Different types of antibodies (IgA, IgM, IgE, IgG) are produced in the body, and these are found in blood as part of humoral immune response.',
+    explanation:
+      'Each antibody molecule has four peptide chains - two small called light chains and two longer called heavy chains. Hence, an antibody is represented as H2L2. Different types of antibodies (IgA, IgM, IgE, IgG) are produced in the body, and these are found in blood as part of humoral immune response.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 12, Chapter 7, Page 135',
     previousYearFrequency: 13,
     conceptualLinks: ['antibody-structure', 'immunoglobulin', 'h2l2'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q12-batch6-021',
@@ -16408,82 +17771,101 @@ export const class12Questions: AuthenticQuestion[] = [
     question: 'Cell-mediated immunity (CMI) is primarily mediated by:',
     options: ['B-lymphocytes', 'T-lymphocytes', 'Natural killer cells', 'Macrophages'],
     correctAnswer: 'T-lymphocytes',
-    explanation: 'T-lymphocytes mediate cell-mediated immunity (CMI). This is one of the two types of acquired immune response, the other being antibody-mediated (humoral) response. CMI is responsible for graft rejection during organ transplantation, as the body can differentiate self from non-self.',
+    explanation:
+      'T-lymphocytes mediate cell-mediated immunity (CMI). This is one of the two types of acquired immune response, the other being antibody-mediated (humoral) response. CMI is responsible for graft rejection during organ transplantation, as the body can differentiate self from non-self.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 12, Chapter 7, Page 135',
     previousYearFrequency: 15,
     conceptualLinks: ['cmi', 't-lymphocytes', 'cell-mediated-immunity'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q12-batch6-022',
     topicId: 'topic-12-7-health',
     chapterId: 'ch-12-7',
     classId: 'class-12',
-    question: 'The primary lymphoid organs where immature lymphocytes differentiate into antigen-sensitive lymphocytes are:',
-    options: ['Spleen and lymph nodes', 'Bone marrow and thymus', 'Tonsils and Peyer patches', 'Appendix and MALT'],
+    question:
+      'The primary lymphoid organs where immature lymphocytes differentiate into antigen-sensitive lymphocytes are:',
+    options: [
+      'Spleen and lymph nodes',
+      'Bone marrow and thymus',
+      'Tonsils and Peyer patches',
+      'Appendix and MALT',
+    ],
     correctAnswer: 'Bone marrow and thymus',
-    explanation: 'The primary lymphoid organs are bone marrow and thymus, where immature lymphocytes differentiate into antigen-sensitive lymphocytes. After maturation, lymphocytes migrate to secondary lymphoid organs (spleen, lymph nodes, tonsils, Peyers patches, appendix) where they interact with antigens and proliferate to become effector cells.',
+    explanation:
+      'The primary lymphoid organs are bone marrow and thymus, where immature lymphocytes differentiate into antigen-sensitive lymphocytes. After maturation, lymphocytes migrate to secondary lymphoid organs (spleen, lymph nodes, tonsils, Peyers patches, appendix) where they interact with antigens and proliferate to become effector cells.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 12, Chapter 7, Page 137-138',
     previousYearFrequency: 16,
     conceptualLinks: ['lymphoid-organs', 'bone-marrow', 'thymus'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q12-batch6-023',
     topicId: 'topic-12-7-health',
     chapterId: 'ch-12-7',
     classId: 'class-12',
-    question: 'The thymus gland, located near the heart and beneath the breastbone, shows which characteristic change with age?',
-    options: ['Increases in size continuously', 'Reduces in size with age and becomes very small by puberty', 'Remains constant in size throughout life', 'Enlarges during adulthood'],
+    question:
+      'The thymus gland, located near the heart and beneath the breastbone, shows which characteristic change with age?',
+    options: [
+      'Increases in size continuously',
+      'Reduces in size with age and becomes very small by puberty',
+      'Remains constant in size throughout life',
+      'Enlarges during adulthood',
+    ],
     correctAnswer: 'Reduces in size with age and becomes very small by puberty',
-    explanation: 'The thymus is quite large at birth but keeps reducing in size with age. By the time puberty is attained, it reduces to a very small size. The thymus provides micro-environments for the development and maturation of T-lymphocytes.',
+    explanation:
+      'The thymus is quite large at birth but keeps reducing in size with age. By the time puberty is attained, it reduces to a very small size. The thymus provides micro-environments for the development and maturation of T-lymphocytes.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 12, Chapter 7, Page 138',
     previousYearFrequency: 11,
     conceptualLinks: ['thymus', 'age-related-changes', 'lymphoid-organs'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q12-batch6-024',
     topicId: 'topic-12-7-health',
     chapterId: 'ch-12-7',
     classId: 'class-12',
-    question: 'MALT (Mucosa-associated lymphoid tissue) constitutes approximately what percentage of total lymphoid tissue in human body?',
+    question:
+      'MALT (Mucosa-associated lymphoid tissue) constitutes approximately what percentage of total lymphoid tissue in human body?',
     options: ['10 per cent', '25 per cent', '50 per cent', '75 per cent'],
     correctAnswer: '50 per cent',
-    explanation: 'MALT (Mucosa-associated lymphoid tissue) is located within the lining of major tracts (respiratory, digestive and urogenital tracts) and constitutes about 50 per cent of the lymphoid tissue in human body. This positioning helps protect the body at entry points for pathogens.',
+    explanation:
+      'MALT (Mucosa-associated lymphoid tissue) is located within the lining of major tracts (respiratory, digestive and urogenital tracts) and constitutes about 50 per cent of the lymphoid tissue in human body. This positioning helps protect the body at entry points for pathogens.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 12, Chapter 7, Page 138',
     previousYearFrequency: 10,
     conceptualLinks: ['malt', 'lymphoid-tissue', 'mucosal-immunity'],
     timeEstimate: 45,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q12-batch6-025',
     topicId: 'topic-12-7-health',
     chapterId: 'ch-12-7',
     classId: 'class-12',
-    question: 'The exaggerated response of the immune system to certain environmental antigens, producing IgE type antibodies, is called:',
+    question:
+      'The exaggerated response of the immune system to certain environmental antigens, producing IgE type antibodies, is called:',
     options: ['Auto-immunity', 'Allergy', 'Immunodeficiency', 'Tolerance'],
     correctAnswer: 'Allergy',
-    explanation: 'Allergy is the exaggerated response of the immune system to certain antigens (allergens) present in the environment. The antibodies produced are of IgE type. Common allergens include mites in dust, pollens, and animal dander. Symptoms include sneezing, watery eyes, running nose, and difficulty breathing due to release of histamine and serotonin from mast cells.',
+    explanation:
+      'Allergy is the exaggerated response of the immune system to certain antigens (allergens) present in the environment. The antibodies produced are of IgE type. Common allergens include mites in dust, pollens, and animal dander. Symptoms include sneezing, watery eyes, running nose, and difficulty breathing due to release of histamine and serotonin from mast cells.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 12, Chapter 7, Page 137',
     previousYearFrequency: 13,
     conceptualLinks: ['allergy', 'ige-antibodies', 'hypersensitivity'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
 
   // AIDS (8 questions)
@@ -16493,16 +17875,22 @@ export const class12Questions: AuthenticQuestion[] = [
     chapterId: 'ch-12-7',
     classId: 'class-12',
     question: 'AIDS stands for:',
-    options: ['Acquired Immunity Deficiency Syndrome', 'Acquired Immuno Deficiency Syndrome', 'Active Immuno Deficiency Syndrome', 'Auto Immuno Deficiency Syndrome'],
+    options: [
+      'Acquired Immunity Deficiency Syndrome',
+      'Acquired Immuno Deficiency Syndrome',
+      'Active Immuno Deficiency Syndrome',
+      'Auto Immuno Deficiency Syndrome',
+    ],
     correctAnswer: 'Acquired Immuno Deficiency Syndrome',
-    explanation: 'AIDS stands for Acquired Immuno Deficiency Syndrome. "Acquired" means deficiency of immune system acquired during lifetime (not congenital). "Syndrome" means a group of symptoms. AIDS was first reported in 1981 and has since spread worldwide, killing more than 25 million persons.',
+    explanation:
+      'AIDS stands for Acquired Immuno Deficiency Syndrome. "Acquired" means deficiency of immune system acquired during lifetime (not congenital). "Syndrome" means a group of symptoms. AIDS was first reported in 1981 and has since spread worldwide, killing more than 25 million persons.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 12, Chapter 7, Page 138',
     previousYearFrequency: 12,
     conceptualLinks: ['aids-definition', 'hiv', 'immunodeficiency'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q12-batch6-027',
@@ -16512,14 +17900,15 @@ export const class12Questions: AuthenticQuestion[] = [
     question: 'HIV (Human Immuno deficiency Virus) belongs to which group of viruses?',
     options: ['DNA viruses', 'Retroviruses', 'Bacteriophages', 'Plant viruses'],
     correctAnswer: 'Retroviruses',
-    explanation: 'HIV is a member of a group of viruses called retroviruses, which have an envelope enclosing the RNA genome. The virus contains the enzyme reverse transcriptase that converts RNA genome into viral DNA, which then gets incorporated into the host cells DNA.',
+    explanation:
+      'HIV is a member of a group of viruses called retroviruses, which have an envelope enclosing the RNA genome. The virus contains the enzyme reverse transcriptase that converts RNA genome into viral DNA, which then gets incorporated into the host cells DNA.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 12, Chapter 7, Page 138',
     previousYearFrequency: 16,
     conceptualLinks: ['hiv', 'retrovirus', 'rna-virus'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q12-batch6-028',
@@ -16527,16 +17916,22 @@ export const class12Questions: AuthenticQuestion[] = [
     chapterId: 'ch-12-7',
     classId: 'class-12',
     question: 'Which of the following is NOT a mode of HIV transmission?',
-    options: ['Sexual contact with infected person', 'Sharing infected needles in intravenous drug use', 'Mere touch or physical contact with infected person', 'Transfusion of contaminated blood'],
+    options: [
+      'Sexual contact with infected person',
+      'Sharing infected needles in intravenous drug use',
+      'Mere touch or physical contact with infected person',
+      'Transfusion of contaminated blood',
+    ],
     correctAnswer: 'Mere touch or physical contact with infected person',
-    explanation: 'HIV/AIDS is not spread by mere touch or physical contact; it spreads only through body fluids. Transmission occurs through: (a) sexual contact with infected person, (b) transfusion of contaminated blood, (c) sharing infected needles (intravenous drug abuse), and (d) from infected mother to child through placenta.',
+    explanation:
+      'HIV/AIDS is not spread by mere touch or physical contact; it spreads only through body fluids. Transmission occurs through: (a) sexual contact with infected person, (b) transfusion of contaminated blood, (c) sharing infected needles (intravenous drug abuse), and (d) from infected mother to child through placenta.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 12, Chapter 7, Page 138-139',
     previousYearFrequency: 17,
     conceptualLinks: ['hiv-transmission', 'body-fluids', 'infection-routes'],
     timeEstimate: 40,
     bloomsLevel: 'Understand',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q12-batch6-029',
@@ -16544,33 +17939,41 @@ export const class12Questions: AuthenticQuestion[] = [
     chapterId: 'ch-12-7',
     classId: 'class-12',
     question: 'The time-lag between HIV infection and appearance of AIDS symptoms may vary from:',
-    options: ['Few days to few weeks', 'Few weeks to few months', 'Few months to many years (usually 5-10 years)', 'More than 20 years always'],
+    options: [
+      'Few days to few weeks',
+      'Few weeks to few months',
+      'Few months to many years (usually 5-10 years)',
+      'More than 20 years always',
+    ],
     correctAnswer: 'Few months to many years (usually 5-10 years)',
-    explanation: 'There is always a time-lag between HIV infection and appearance of AIDS symptoms. This period may vary from a few months to many years, usually 5-10 years. During this period, the infected person may appear healthy but can transmit the virus to others.',
+    explanation:
+      'There is always a time-lag between HIV infection and appearance of AIDS symptoms. This period may vary from a few months to many years, usually 5-10 years. During this period, the infected person may appear healthy but can transmit the virus to others.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 12, Chapter 7, Page 139',
     previousYearFrequency: 14,
     conceptualLinks: ['aids-latency', 'incubation-period', 'hiv-progression'],
     timeEstimate: 45,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q12-batch6-030',
     topicId: 'topic-12-7-health',
     chapterId: 'ch-12-7',
     classId: 'class-12',
-    question: 'After HIV enters the body, it primarily infects which cells, leading to progressive decrease in their numbers?',
+    question:
+      'After HIV enters the body, it primarily infects which cells, leading to progressive decrease in their numbers?',
     options: ['B-lymphocytes', 'Natural killer cells', 'Helper T-lymphocytes (TH)', 'Neutrophils'],
     correctAnswer: 'Helper T-lymphocytes (TH)',
-    explanation: 'HIV enters helper T-lymphocytes (TH), replicates and produces progeny viruses. The progeny viruses attack other helper T-lymphocytes, leading to progressive decrease in their number. Due to this decrease, the person becomes immuno-deficient and unable to protect against infections from bacteria (especially Mycobacterium), viruses, fungi, and parasites like Toxoplasma.',
+    explanation:
+      'HIV enters helper T-lymphocytes (TH), replicates and produces progeny viruses. The progeny viruses attack other helper T-lymphocytes, leading to progressive decrease in their number. Due to this decrease, the person becomes immuno-deficient and unable to protect against infections from bacteria (especially Mycobacterium), viruses, fungi, and parasites like Toxoplasma.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 12, Chapter 7, Page 140',
     previousYearFrequency: 18,
     conceptualLinks: ['hiv-pathology', 'helper-t-cells', 'cd4-depletion'],
     timeEstimate: 50,
     bloomsLevel: 'Understand',
-    weightage: 5.5
+    weightage: 5.5,
   },
   {
     id: 'q12-batch6-031',
@@ -16578,33 +17981,46 @@ export const class12Questions: AuthenticQuestion[] = [
     chapterId: 'ch-12-7',
     classId: 'class-12',
     question: 'The widely used diagnostic test for AIDS mentioned in NCERT is:',
-    options: ['PCR (Polymerase Chain Reaction)', 'ELISA (Enzyme Linked Immuno-Sorbent Assay)', 'Western Blot', 'Widal Test'],
+    options: [
+      'PCR (Polymerase Chain Reaction)',
+      'ELISA (Enzyme Linked Immuno-Sorbent Assay)',
+      'Western Blot',
+      'Widal Test',
+    ],
     correctAnswer: 'ELISA (Enzyme Linked Immuno-Sorbent Assay)',
-    explanation: 'ELISA (Enzyme Linked Immuno-Sorbent Assay) is mentioned as a widely used diagnostic test for AIDS. Treatment with anti-retroviral drugs is only partially effective - they can prolong life but cannot prevent death, which is inevitable without cure.',
+    explanation:
+      'ELISA (Enzyme Linked Immuno-Sorbent Assay) is mentioned as a widely used diagnostic test for AIDS. Treatment with anti-retroviral drugs is only partially effective - they can prolong life but cannot prevent death, which is inevitable without cure.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 12, Chapter 7, Page 140',
     previousYearFrequency: 15,
     conceptualLinks: ['aids-diagnosis', 'elisa', 'hiv-testing'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q12-batch6-032',
     topicId: 'topic-12-7-health',
     chapterId: 'ch-12-7',
     classId: 'class-12',
-    question: 'NACO, which is working to educate people about AIDS prevention in India, stands for:',
-    options: ['National AIDS Control Organisation', 'National Awareness Campaign Organisation', 'National Anti-infection Control Organisation', 'National Association for Community Outreach'],
+    question:
+      'NACO, which is working to educate people about AIDS prevention in India, stands for:',
+    options: [
+      'National AIDS Control Organisation',
+      'National Awareness Campaign Organisation',
+      'National Anti-infection Control Organisation',
+      'National Association for Community Outreach',
+    ],
     correctAnswer: 'National AIDS Control Organisation',
-    explanation: 'NACO stands for National AIDS Control Organisation. In India, NACO and various NGOs are working to educate people about AIDS. WHO has also started numerous programmes to prevent HIV infection spread, including making blood safe, ensuring use of disposable needles, free condom distribution, and controlling drug abuse.',
+    explanation:
+      'NACO stands for National AIDS Control Organisation. In India, NACO and various NGOs are working to educate people about AIDS. WHO has also started numerous programmes to prevent HIV infection spread, including making blood safe, ensuring use of disposable needles, free condom distribution, and controlling drug abuse.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 12, Chapter 7, Page 140',
     previousYearFrequency: 10,
     conceptualLinks: ['naco', 'aids-prevention', 'public-health'],
     timeEstimate: 30,
     bloomsLevel: 'Remember',
-    weightage: 3.5
+    weightage: 3.5,
   },
   {
     id: 'q12-batch6-033',
@@ -16614,14 +18030,15 @@ export const class12Questions: AuthenticQuestion[] = [
     question: 'The enzyme present in HIV that converts RNA genome into viral DNA is:',
     options: ['DNA polymerase', 'RNA polymerase', 'Reverse transcriptase', 'DNA ligase'],
     correctAnswer: 'Reverse transcriptase',
-    explanation: 'After HIV enters macrophages, the RNA genome of the virus replicates to form viral DNA with the help of the enzyme reverse transcriptase. This viral DNA gets incorporated into the host cells DNA and directs infected cells to produce virus particles. Macrophages thus act like HIV factories.',
+    explanation:
+      'After HIV enters macrophages, the RNA genome of the virus replicates to form viral DNA with the help of the enzyme reverse transcriptase. This viral DNA gets incorporated into the host cells DNA and directs infected cells to produce virus particles. Macrophages thus act like HIV factories.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 12, Chapter 7, Page 140',
     previousYearFrequency: 16,
     conceptualLinks: ['reverse-transcriptase', 'retrovirus', 'hiv-replication'],
     timeEstimate: 45,
     bloomsLevel: 'Remember',
-    weightage: 5.0
+    weightage: 5.0,
   },
 
   // Cancer (8 questions)
@@ -16630,85 +18047,95 @@ export const class12Questions: AuthenticQuestion[] = [
     topicId: 'topic-12-7-health',
     chapterId: 'ch-12-7',
     classId: 'class-12',
-    question: 'Normal cells show a property that inhibits their uncontrolled growth when in contact with other cells. This property is called:',
+    question:
+      'Normal cells show a property that inhibits their uncontrolled growth when in contact with other cells. This property is called:',
     options: ['Cell adhesion', 'Contact inhibition', 'Cell differentiation', 'Apoptosis'],
     correctAnswer: 'Contact inhibition',
-    explanation: 'Normal cells show a property called contact inhibition by virtue of which contact with other cells inhibits their uncontrolled growth. Cancer cells appear to have lost this property, and as a result, cancerous cells continue to divide giving rise to masses of cells called tumors.',
+    explanation:
+      'Normal cells show a property called contact inhibition by virtue of which contact with other cells inhibits their uncontrolled growth. Cancer cells appear to have lost this property, and as a result, cancerous cells continue to divide giving rise to masses of cells called tumors.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 12, Chapter 7, Page 141',
     previousYearFrequency: 17,
     conceptualLinks: ['contact-inhibition', 'cancer-cells', 'cell-growth-regulation'],
     timeEstimate: 50,
     bloomsLevel: 'Understand',
-    weightage: 5.5
+    weightage: 5.5,
   },
   {
     id: 'q12-batch6-035',
     topicId: 'topic-12-7-health',
     chapterId: 'ch-12-7',
     classId: 'class-12',
-    question: 'Which type of tumor remains confined to original location and does not spread to other body parts?',
+    question:
+      'Which type of tumor remains confined to original location and does not spread to other body parts?',
     options: ['Malignant tumor', 'Benign tumor', 'Metastatic tumor', 'Neoplastic tumor'],
     correctAnswer: 'Benign tumor',
-    explanation: 'Benign tumors normally remain confined to their original location, do not spread to other parts of the body, and cause little damage. In contrast, malignant tumors are masses of rapidly proliferating neoplastic cells that invade and damage surrounding normal tissues and can spread to distant sites (metastasis).',
+    explanation:
+      'Benign tumors normally remain confined to their original location, do not spread to other parts of the body, and cause little damage. In contrast, malignant tumors are masses of rapidly proliferating neoplastic cells that invade and damage surrounding normal tissues and can spread to distant sites (metastasis).',
     difficulty: 'Easy',
     ncertPageReference: 'Class 12, Chapter 7, Page 141',
     previousYearFrequency: 14,
     conceptualLinks: ['benign-tumor', 'malignant-tumor', 'tumor-types'],
     timeEstimate: 40,
     bloomsLevel: 'Understand',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q12-batch6-036',
     topicId: 'topic-12-7-health',
     chapterId: 'ch-12-7',
     classId: 'class-12',
-    question: 'The property of malignant tumor cells to slough off, reach distant sites through blood, and start new tumors is called:',
+    question:
+      'The property of malignant tumor cells to slough off, reach distant sites through blood, and start new tumors is called:',
     options: ['Angiogenesis', 'Metastasis', 'Apoptosis', 'Differentiation'],
     correctAnswer: 'Metastasis',
-    explanation: 'Metastasis is the most feared property of malignant tumors. Cells sloughed from malignant tumors reach distant sites through blood, and wherever they get lodged in the body, they start a new tumor. This spreading ability makes malignant tumors particularly dangerous and difficult to treat.',
+    explanation:
+      'Metastasis is the most feared property of malignant tumors. Cells sloughed from malignant tumors reach distant sites through blood, and wherever they get lodged in the body, they start a new tumor. This spreading ability makes malignant tumors particularly dangerous and difficult to treat.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 12, Chapter 7, Page 141',
     previousYearFrequency: 16,
     conceptualLinks: ['metastasis', 'cancer-spread', 'malignant-tumor'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q12-batch6-037',
     topicId: 'topic-12-7-health',
     chapterId: 'ch-12-7',
     classId: 'class-12',
-    question: 'Agents that can induce transformation of normal cells into cancerous neoplastic cells are called:',
+    question:
+      'Agents that can induce transformation of normal cells into cancerous neoplastic cells are called:',
     options: ['Pathogens', 'Allergens', 'Carcinogens', 'Antigens'],
     correctAnswer: 'Carcinogens',
-    explanation: 'Carcinogens are physical, chemical, or biological agents that can induce transformation of normal cells into cancerous neoplastic cells. Examples include ionising radiations (X-rays, gamma rays), non-ionizing radiations (UV), chemical carcinogens in tobacco smoke, and oncogenic viruses.',
+    explanation:
+      'Carcinogens are physical, chemical, or biological agents that can induce transformation of normal cells into cancerous neoplastic cells. Examples include ionising radiations (X-rays, gamma rays), non-ionizing radiations (UV), chemical carcinogens in tobacco smoke, and oncogenic viruses.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 12, Chapter 7, Page 141',
     previousYearFrequency: 15,
     conceptualLinks: ['carcinogens', 'cancer-causation', 'oncogenic-agents'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q12-batch6-038',
     topicId: 'topic-12-7-health',
     chapterId: 'ch-12-7',
     classId: 'class-12',
-    question: 'Chemical carcinogens present in tobacco smoke have been identified as a major cause of:',
+    question:
+      'Chemical carcinogens present in tobacco smoke have been identified as a major cause of:',
     options: ['Liver cancer', 'Lung cancer', 'Blood cancer', 'Bone cancer'],
     correctAnswer: 'Lung cancer',
-    explanation: 'Chemical carcinogens present in tobacco smoke have been identified as a major cause of lung cancer. Ionising radiations like X-rays and gamma rays, and non-ionizing radiations like UV, cause DNA damage leading to neoplastic transformation.',
+    explanation:
+      'Chemical carcinogens present in tobacco smoke have been identified as a major cause of lung cancer. Ionising radiations like X-rays and gamma rays, and non-ionizing radiations like UV, cause DNA damage leading to neoplastic transformation.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 12, Chapter 7, Page 141',
     previousYearFrequency: 13,
     conceptualLinks: ['lung-cancer', 'tobacco-carcinogens', 'smoking'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q12-batch6-039',
@@ -16716,33 +18143,46 @@ export const class12Questions: AuthenticQuestion[] = [
     chapterId: 'ch-12-7',
     classId: 'class-12',
     question: 'Cellular oncogenes (c-onc) or proto oncogenes are:',
-    options: ['Genes found only in cancer cells', 'Viral genes that cause cancer', 'Genes present in normal cells that can lead to cancer when activated', 'Bacterial genes'],
+    options: [
+      'Genes found only in cancer cells',
+      'Viral genes that cause cancer',
+      'Genes present in normal cells that can lead to cancer when activated',
+      'Bacterial genes',
+    ],
     correctAnswer: 'Genes present in normal cells that can lead to cancer when activated',
-    explanation: 'Cellular oncogenes (c-onc) or proto oncogenes are genes present in normal cells which, when activated under certain conditions, could lead to oncogenic transformation of the cells. Cancer-causing viruses (oncogenic viruses) have genes called viral oncogenes.',
+    explanation:
+      'Cellular oncogenes (c-onc) or proto oncogenes are genes present in normal cells which, when activated under certain conditions, could lead to oncogenic transformation of the cells. Cancer-causing viruses (oncogenic viruses) have genes called viral oncogenes.',
     difficulty: 'Hard',
     ncertPageReference: 'Class 12, Chapter 7, Page 141',
     previousYearFrequency: 11,
     conceptualLinks: ['proto-oncogenes', 'oncogenes', 'cancer-genetics'],
     timeEstimate: 60,
     bloomsLevel: 'Understand',
-    weightage: 6.0
+    weightage: 6.0,
   },
   {
     id: 'q12-batch6-040',
     topicId: 'topic-12-7-health',
     chapterId: 'ch-12-7',
     classId: 'class-12',
-    question: 'Which of the following techniques uses strong magnetic fields and non-ionising radiations to detect pathological changes in living tissue?',
-    options: ['Radiography', 'CT (Computed Tomography)', 'MRI (Magnetic Resonance Imaging)', 'Biopsy'],
+    question:
+      'Which of the following techniques uses strong magnetic fields and non-ionising radiations to detect pathological changes in living tissue?',
+    options: [
+      'Radiography',
+      'CT (Computed Tomography)',
+      'MRI (Magnetic Resonance Imaging)',
+      'Biopsy',
+    ],
     correctAnswer: 'MRI (Magnetic Resonance Imaging)',
-    explanation: 'MRI (Magnetic Resonance Imaging) uses strong magnetic fields and non-ionising radiations to accurately detect pathological and physiological changes in living tissue. CT uses X-rays to generate three-dimensional images. Both are useful for detecting cancers of internal organs.',
+    explanation:
+      'MRI (Magnetic Resonance Imaging) uses strong magnetic fields and non-ionising radiations to accurately detect pathological and physiological changes in living tissue. CT uses X-rays to generate three-dimensional images. Both are useful for detecting cancers of internal organs.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 12, Chapter 7, Page 141',
     previousYearFrequency: 12,
     conceptualLinks: ['mri', 'cancer-detection', 'imaging-techniques'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q12-batch6-041',
@@ -16752,14 +18192,15 @@ export const class12Questions: AuthenticQuestion[] = [
     question: 'The common approaches for treatment of cancer include all EXCEPT:',
     options: ['Surgery', 'Radiation therapy', 'Immunotherapy', 'Antibiotic therapy'],
     correctAnswer: 'Antibiotic therapy',
-    explanation: 'The common approaches for cancer treatment are surgery, radiation therapy, and immunotherapy. In radiotherapy, tumor cells are lethally irradiated. Chemotherapeutic drugs kill cancerous cells. Biological response modifiers like α-interferon activate the immune system. Most cancers are treated by combination of surgery, radiotherapy and chemotherapy.',
+    explanation:
+      'The common approaches for cancer treatment are surgery, radiation therapy, and immunotherapy. In radiotherapy, tumor cells are lethally irradiated. Chemotherapeutic drugs kill cancerous cells. Biological response modifiers like α-interferon activate the immune system. Most cancers are treated by combination of surgery, radiotherapy and chemotherapy.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 12, Chapter 7, Page 142',
     previousYearFrequency: 10,
     conceptualLinks: ['cancer-treatment', 'radiotherapy', 'chemotherapy'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 4.5
+    weightage: 4.5,
   },
 
   // Drugs & Alcohol Abuse (9 questions)
@@ -16768,17 +18209,19 @@ export const class12Questions: AuthenticQuestion[] = [
     topicId: 'topic-12-7-health',
     chapterId: 'ch-12-7',
     classId: 'class-12',
-    question: 'Heroin (smack), chemically known as diacetylmorphine, is obtained by acetylation of morphine extracted from:',
+    question:
+      'Heroin (smack), chemically known as diacetylmorphine, is obtained by acetylation of morphine extracted from:',
     options: ['Cannabis sativa', 'Erythroxylum coca', 'Papaver somniferum', 'Atropa belladona'],
     correctAnswer: 'Papaver somniferum',
-    explanation: 'Heroin (smack) is chemically diacetylmorphine, a white, odourless, bitter crystalline compound obtained by acetylation of morphine. Morphine is extracted from the latex of poppy plant Papaver somniferum. Heroin is an opioid that binds to opioid receptors in CNS and gastrointestinal tract.',
+    explanation:
+      'Heroin (smack) is chemically diacetylmorphine, a white, odourless, bitter crystalline compound obtained by acetylation of morphine. Morphine is extracted from the latex of poppy plant Papaver somniferum. Heroin is an opioid that binds to opioid receptors in CNS and gastrointestinal tract.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 12, Chapter 7, Page 142-143',
     previousYearFrequency: 14,
     conceptualLinks: ['heroin', 'opioids', 'poppy-plant'],
     timeEstimate: 40,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q12-batch6-043',
@@ -16788,14 +18231,15 @@ export const class12Questions: AuthenticQuestion[] = [
     question: 'Natural cannabinoids are obtained from the inflorescences of which plant?',
     options: ['Papaver somniferum', 'Cannabis sativa', 'Erythroxylum coca', 'Datura stramonium'],
     correctAnswer: 'Cannabis sativa',
-    explanation: 'Natural cannabinoids are obtained from the inflorescences of Cannabis sativa plant. The flower tops, leaves, and resin are used in various combinations to produce marijuana, hashish, charas, and ganja. These are known for their effects on the cardiovascular system and are generally taken by inhalation and oral ingestion.',
+    explanation:
+      'Natural cannabinoids are obtained from the inflorescences of Cannabis sativa plant. The flower tops, leaves, and resin are used in various combinations to produce marijuana, hashish, charas, and ganja. These are known for their effects on the cardiovascular system and are generally taken by inhalation and oral ingestion.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 12, Chapter 7, Page 143',
     previousYearFrequency: 16,
     conceptualLinks: ['cannabinoids', 'cannabis-sativa', 'marijuana'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q12-batch6-044',
@@ -16805,14 +18249,15 @@ export const class12Questions: AuthenticQuestion[] = [
     question: 'Cocaine, commonly called coke or crack, is obtained from which plant?',
     options: ['Cannabis sativa', 'Papaver somniferum', 'Erythroxylum coca', 'Atropa belladona'],
     correctAnswer: 'Erythroxylum coca',
-    explanation: 'Cocaine is a coca alkaloid obtained from coca plant Erythroxylum coca, native to South America. It interferes with the transport of neurotransmitter dopamine and is usually snorted. It has potent stimulating action on CNS, producing euphoria and increased energy. Excessive dosage causes hallucinations.',
+    explanation:
+      'Cocaine is a coca alkaloid obtained from coca plant Erythroxylum coca, native to South America. It interferes with the transport of neurotransmitter dopamine and is usually snorted. It has potent stimulating action on CNS, producing euphoria and increased energy. Excessive dosage causes hallucinations.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 12, Chapter 7, Page 143',
     previousYearFrequency: 13,
     conceptualLinks: ['cocaine', 'coca-alkaloid', 'stimulant'],
     timeEstimate: 35,
     bloomsLevel: 'Remember',
-    weightage: 4.0
+    weightage: 4.0,
   },
   {
     id: 'q12-batch6-045',
@@ -16820,16 +18265,23 @@ export const class12Questions: AuthenticQuestion[] = [
     chapterId: 'ch-12-7',
     classId: 'class-12',
     question: 'Nicotine, the alkaloid present in tobacco, causes which of the following effects?',
-    options: ['Decreases blood pressure and heart rate', 'Stimulates adrenal gland to release adrenaline and nor-adrenaline, raising blood pressure and heart rate', 'Has no effect on cardiovascular system', 'Dilates blood vessels'],
-    correctAnswer: 'Stimulates adrenal gland to release adrenaline and nor-adrenaline, raising blood pressure and heart rate',
-    explanation: 'Nicotine stimulates adrenal gland to release adrenaline and nor-adrenaline into blood circulation, both of which raise blood pressure and increase heart rate. Smoking also increases carbon monoxide content in blood, reducing haembound oxygen concentration, causing oxygen deficiency in the body.',
+    options: [
+      'Decreases blood pressure and heart rate',
+      'Stimulates adrenal gland to release adrenaline and nor-adrenaline, raising blood pressure and heart rate',
+      'Has no effect on cardiovascular system',
+      'Dilates blood vessels',
+    ],
+    correctAnswer:
+      'Stimulates adrenal gland to release adrenaline and nor-adrenaline, raising blood pressure and heart rate',
+    explanation:
+      'Nicotine stimulates adrenal gland to release adrenaline and nor-adrenaline into blood circulation, both of which raise blood pressure and increase heart rate. Smoking also increases carbon monoxide content in blood, reducing haembound oxygen concentration, causing oxygen deficiency in the body.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 12, Chapter 7, Page 144',
     previousYearFrequency: 15,
     conceptualLinks: ['nicotine', 'tobacco-effects', 'cardiovascular-effects'],
     timeEstimate: 50,
     bloomsLevel: 'Understand',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q12-batch6-046',
@@ -16839,82 +18291,111 @@ export const class12Questions: AuthenticQuestion[] = [
     question: 'Smoking is associated with increased incidence of all the following cancers EXCEPT:',
     options: ['Lung cancer', 'Urinary bladder cancer', 'Throat cancer', 'Liver cancer'],
     correctAnswer: 'Liver cancer',
-    explanation: 'Smoking is associated with increased incidence of cancers of lung, urinary bladder, and throat, as well as bronchitis, emphysema, coronary heart disease, and gastric ulcer. Tobacco chewing is associated with increased risk of cancer of the oral cavity. However, liver cancer is not specifically mentioned as associated with smoking in NCERT.',
+    explanation:
+      'Smoking is associated with increased incidence of cancers of lung, urinary bladder, and throat, as well as bronchitis, emphysema, coronary heart disease, and gastric ulcer. Tobacco chewing is associated with increased risk of cancer of the oral cavity. However, liver cancer is not specifically mentioned as associated with smoking in NCERT.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 12, Chapter 7, Page 144',
     previousYearFrequency: 11,
     conceptualLinks: ['smoking-diseases', 'tobacco-related-cancers', 'health-hazards'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q12-batch6-047',
     topicId: 'topic-12-7-health',
     chapterId: 'ch-12-7',
     classId: 'class-12',
-    question: 'Adolescence, the period between 12-18 years, is vulnerable for drug abuse because of all the following reasons EXCEPT:',
-    options: ['Curiosity and experimentation', 'Peer pressure', 'Academic and examination stress', 'Fully developed decision-making abilities'],
+    question:
+      'Adolescence, the period between 12-18 years, is vulnerable for drug abuse because of all the following reasons EXCEPT:',
+    options: [
+      'Curiosity and experimentation',
+      'Peer pressure',
+      'Academic and examination stress',
+      'Fully developed decision-making abilities',
+    ],
     correctAnswer: 'Fully developed decision-making abilities',
-    explanation: 'Adolescence (12-18 years) is a vulnerable phase for drug/alcohol abuse due to curiosity, experimentation, peer pressure, stress from academics, and the perception that its "cool" to use drugs. Adolescents do NOT have fully developed decision-making abilities, which contributes to their vulnerability. Other factors include unstable family structures and media influence.',
+    explanation:
+      'Adolescence (12-18 years) is a vulnerable phase for drug/alcohol abuse due to curiosity, experimentation, peer pressure, stress from academics, and the perception that its "cool" to use drugs. Adolescents do NOT have fully developed decision-making abilities, which contributes to their vulnerability. Other factors include unstable family structures and media influence.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 12, Chapter 7, Page 144',
     previousYearFrequency: 12,
     conceptualLinks: ['adolescence', 'drug-abuse-causes', 'peer-pressure'],
     timeEstimate: 50,
     bloomsLevel: 'Understand',
-    weightage: 4.5
+    weightage: 4.5,
   },
   {
     id: 'q12-batch6-048',
     topicId: 'topic-12-7-health',
     chapterId: 'ch-12-7',
     classId: 'class-12',
-    question: 'Addiction to drugs is characterized by psychological attachment to certain effects like euphoria. With repeated use, tolerance level increases leading to:',
-    options: ['Decreased drug intake', 'Receptors responding to lower doses', 'Greater intake and dependence', 'Automatic recovery'],
+    question:
+      'Addiction to drugs is characterized by psychological attachment to certain effects like euphoria. With repeated use, tolerance level increases leading to:',
+    options: [
+      'Decreased drug intake',
+      'Receptors responding to lower doses',
+      'Greater intake and dependence',
+      'Automatic recovery',
+    ],
     correctAnswer: 'Greater intake and dependence',
-    explanation: 'Addiction is psychological attachment to effects like euphoria associated with drugs. With repeated use, tolerance level of receptors increases, so they respond only to higher doses of drugs/alcohol, leading to greater intake and addiction. The addictive potential pulls users into a vicious circle from which they may not be able to escape without help.',
+    explanation:
+      'Addiction is psychological attachment to effects like euphoria associated with drugs. With repeated use, tolerance level of receptors increases, so they respond only to higher doses of drugs/alcohol, leading to greater intake and addiction. The addictive potential pulls users into a vicious circle from which they may not be able to escape without help.',
     difficulty: 'Hard',
     ncertPageReference: 'Class 12, Chapter 7, Page 145',
     previousYearFrequency: 14,
     conceptualLinks: ['addiction', 'drug-tolerance', 'dependence'],
     timeEstimate: 60,
     bloomsLevel: 'Analyze',
-    weightage: 5.5
+    weightage: 5.5,
   },
   {
     id: 'q12-batch6-049',
     topicId: 'topic-12-7-health',
     chapterId: 'ch-12-7',
     classId: 'class-12',
-    question: 'Withdrawal syndrome, which occurs when regular dose of drugs/alcohol is abruptly discontinued, is characterized by:',
-    options: ['Feeling of well-being and euphoria', 'Anxiety, shakiness, nausea and sweating', 'Increased appetite and energy', 'Improved mental clarity'],
+    question:
+      'Withdrawal syndrome, which occurs when regular dose of drugs/alcohol is abruptly discontinued, is characterized by:',
+    options: [
+      'Feeling of well-being and euphoria',
+      'Anxiety, shakiness, nausea and sweating',
+      'Increased appetite and energy',
+      'Improved mental clarity',
+    ],
     correctAnswer: 'Anxiety, shakiness, nausea and sweating',
-    explanation: 'Dependence leads to withdrawal syndrome when regular dose is abruptly discontinued. This is characterized by anxiety, shakiness, nausea, and sweating, which may be relieved when use is resumed. In severe cases, withdrawal symptoms can be life-threatening and the person may need medical supervision.',
+    explanation:
+      'Dependence leads to withdrawal syndrome when regular dose is abruptly discontinued. This is characterized by anxiety, shakiness, nausea, and sweating, which may be relieved when use is resumed. In severe cases, withdrawal symptoms can be life-threatening and the person may need medical supervision.',
     difficulty: 'Medium',
     ncertPageReference: 'Class 12, Chapter 7, Page 145',
     previousYearFrequency: 13,
     conceptualLinks: ['withdrawal-syndrome', 'drug-dependence', 'addiction-symptoms'],
     timeEstimate: 50,
     bloomsLevel: 'Understand',
-    weightage: 5.0
+    weightage: 5.0,
   },
   {
     id: 'q12-batch6-050',
     topicId: 'topic-12-7-health',
     chapterId: 'ch-12-7',
     classId: 'class-12',
-    question: 'Intravenous drug users who share infected needles and syringes are at high risk of acquiring:',
-    options: ['Malaria and typhoid', 'AIDS and Hepatitis B', 'Tuberculosis and pneumonia', 'Cancer and diabetes'],
+    question:
+      'Intravenous drug users who share infected needles and syringes are at high risk of acquiring:',
+    options: [
+      'Malaria and typhoid',
+      'AIDS and Hepatitis B',
+      'Tuberculosis and pneumonia',
+      'Cancer and diabetes',
+    ],
     correctAnswer: 'AIDS and Hepatitis B',
-    explanation: 'Those who take drugs intravenously by sharing infected needles and syringes are much more likely to acquire serious infections like AIDS and Hepatitis B. The viruses responsible for these diseases are transferred from person to person through sharing of infected needles. Both infections are chronic, ultimately fatal, and can be transmitted through sexual contact or infected blood.',
+    explanation:
+      'Those who take drugs intravenously by sharing infected needles and syringes are much more likely to acquire serious infections like AIDS and Hepatitis B. The viruses responsible for these diseases are transferred from person to person through sharing of infected needles. Both infections are chronic, ultimately fatal, and can be transmitted through sexual contact or infected blood.',
     difficulty: 'Easy',
     ncertPageReference: 'Class 12, Chapter 7, Page 146',
     previousYearFrequency: 17,
     conceptualLinks: ['intravenous-drug-use', 'hiv-transmission', 'hepatitis-b'],
     timeEstimate: 45,
     bloomsLevel: 'Understand',
-    weightage: 5.0
+    weightage: 5.0,
   },
 ]
 

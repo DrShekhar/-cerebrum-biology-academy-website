@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import {
   DndContext,
   DragOverlay,
@@ -11,6 +11,8 @@ import {
   useSensors,
   DragStartEvent,
   DragEndEvent,
+  useDraggable,
+  useDroppable,
 } from '@dnd-kit/core'
 import { formatDistanceToNow } from 'date-fns'
 
@@ -61,6 +63,118 @@ const STAGE_COLUMNS: { id: LeadStage; title: string; color: string }[] = [
   { id: 'ENROLLED', title: 'Enrolled', color: 'bg-green-100' },
   { id: 'ACTIVE_STUDENT', title: 'Active', color: 'bg-emerald-100' },
 ]
+
+// Draggable Lead Card Component
+function DraggableLeadCard({ lead }: { lead: Lead }) {
+  const { attributes, listeners, setNodeRef, transform, isDragging } = useDraggable({
+    id: lead.id,
+  })
+
+  const style = transform
+    ? {
+        transform: `translate3d(${transform.x}px, ${transform.y}px, 0)`,
+        opacity: isDragging ? 0.5 : 1,
+      }
+    : undefined
+
+  return (
+    <div
+      ref={setNodeRef}
+      style={style}
+      {...attributes}
+      {...listeners}
+      className="bg-white border border-gray-200 rounded-lg p-3 cursor-move hover:shadow-md transition-shadow"
+    >
+      <div className="flex items-start justify-between mb-2">
+        <h4 className="font-medium text-gray-900">{lead.studentName}</h4>
+        <span
+          className={`text-xs px-2 py-0.5 rounded-full font-medium ${
+            lead.priority === 'HOT'
+              ? 'bg-red-100 text-red-700'
+              : lead.priority === 'WARM'
+                ? 'bg-yellow-100 text-yellow-700'
+                : lead.priority === 'URGENT'
+                  ? 'bg-purple-100 text-purple-700'
+                  : 'bg-gray-100 text-gray-700'
+          }`}
+        >
+          {lead.priority === 'HOT' && '🔥'}
+          {lead.priority === 'WARM' && '⚡'}
+          {lead.priority === 'COLD' && '❄️'}
+          {lead.priority === 'URGENT' && '🚨'} {lead.priority}
+        </span>
+      </div>
+
+      <div className="text-xs text-gray-600 space-y-1 mb-2">
+        <div className="flex items-center gap-1">
+          <span>📧</span>
+          <span className="truncate">{lead.email}</span>
+        </div>
+        <div className="flex items-center gap-1">
+          <span>📞</span>
+          <span>{lead.phone}</span>
+        </div>
+        <div className="flex items-center gap-1">
+          <span>🏫</span>
+          <span className="truncate">{lead.school}</span>
+        </div>
+        <div className="flex items-center gap-1">
+          <span>📍</span>
+          <span>{lead.city}</span>
+        </div>
+      </div>
+
+      {lead.followUpDate && (
+        <div className="text-xs text-gray-600 mb-2">
+          📅 Follow-up: {formatDistanceToNow(new Date(lead.followUpDate), { addSuffix: true })}
+        </div>
+      )}
+
+      <div className="flex gap-2 text-xs text-gray-500">
+        <span>💬 {lead._count.communications}</span>
+        <span>✅ {lead._count.tasks}</span>
+        <span>📝 {lead._count.notes}</span>
+      </div>
+    </div>
+  )
+}
+
+// Droppable Column Component
+function DroppableColumn({
+  id,
+  title,
+  children,
+}: {
+  id: string
+  title: string
+  children: React.ReactNode
+}) {
+  const { setNodeRef, isOver } = useDroppable({
+    id,
+  })
+
+  const columnLeads = React.Children.toArray(children).filter(
+    (child) => React.isValidElement(child) && child.type === DraggableLeadCard
+  )
+
+  return (
+    <div
+      ref={setNodeRef}
+      className={`w-80 flex-shrink-0 bg-white rounded-lg border-2 p-4 transition-colors ${
+        isOver ? 'border-indigo-500 bg-indigo-50' : 'border-gray-200'
+      }`}
+    >
+      <div className="flex items-center justify-between mb-3">
+        <h3 className="font-semibold text-gray-900">{title}</h3>
+        <span className="bg-gray-100 text-gray-700 px-2 py-0.5 rounded-full text-xs font-medium">
+          {columnLeads.length}
+        </span>
+      </div>
+
+      <div className="space-y-3">{children}</div>
+    </div>
+  )
+}
 
 export default function CounselorDemoPage() {
   const [leads, setLeads] = useState<Lead[]>([])
@@ -248,86 +362,16 @@ export default function CounselorDemoPage() {
             {STAGE_COLUMNS.map((column) => {
               const columnLeads = getLeadsByStage(column.id)
               return (
-                <div
-                  key={column.id}
-                  id={column.id}
-                  className="w-80 flex-shrink-0 bg-white rounded-lg border border-gray-200 p-4"
-                >
-                  <div className="flex items-center justify-between mb-3">
-                    <h3 className="font-semibold text-gray-900">{column.title}</h3>
-                    <span className="bg-gray-100 text-gray-700 px-2 py-0.5 rounded-full text-xs font-medium">
-                      {columnLeads.length}
-                    </span>
-                  </div>
-
-                  <div className="space-y-3">
-                    {columnLeads.map((lead) => (
-                      <div
-                        key={lead.id}
-                        id={lead.id}
-                        className="bg-white border border-gray-200 rounded-lg p-3 cursor-move hover:shadow-md transition-shadow"
-                      >
-                        <div className="flex items-start justify-between mb-2">
-                          <h4 className="font-medium text-gray-900">{lead.studentName}</h4>
-                          <span
-                            className={`text-xs px-2 py-0.5 rounded-full font-medium ${
-                              lead.priority === 'HOT'
-                                ? 'bg-red-100 text-red-700'
-                                : lead.priority === 'WARM'
-                                  ? 'bg-yellow-100 text-yellow-700'
-                                  : lead.priority === 'URGENT'
-                                    ? 'bg-purple-100 text-purple-700'
-                                    : 'bg-gray-100 text-gray-700'
-                            }`}
-                          >
-                            {lead.priority === 'HOT' && '🔥'}
-                            {lead.priority === 'WARM' && '⚡'}
-                            {lead.priority === 'COLD' && '❄️'}
-                            {lead.priority === 'URGENT' && '🚨'} {lead.priority}
-                          </span>
-                        </div>
-
-                        <div className="text-xs text-gray-600 space-y-1 mb-2">
-                          <div className="flex items-center gap-1">
-                            <span>📧</span>
-                            <span className="truncate">{lead.email}</span>
-                          </div>
-                          <div className="flex items-center gap-1">
-                            <span>📞</span>
-                            <span>{lead.phone}</span>
-                          </div>
-                          <div className="flex items-center gap-1">
-                            <span>🏫</span>
-                            <span className="truncate">{lead.school}</span>
-                          </div>
-                          <div className="flex items-center gap-1">
-                            <span>📍</span>
-                            <span>{lead.city}</span>
-                          </div>
-                        </div>
-
-                        {lead.followUpDate && (
-                          <div className="text-xs text-gray-600 mb-2">
-                            📅 Follow-up:{' '}
-                            {formatDistanceToNow(new Date(lead.followUpDate), { addSuffix: true })}
-                          </div>
-                        )}
-
-                        <div className="flex gap-2 text-xs text-gray-500">
-                          <span>💬 {lead._count.communications}</span>
-                          <span>✅ {lead._count.tasks}</span>
-                          <span>📝 {lead._count.notes}</span>
-                        </div>
-                      </div>
-                    ))}
-
-                    {columnLeads.length === 0 && (
-                      <div className="text-center py-8 text-gray-400 text-sm">
-                        No leads in this stage
-                      </div>
-                    )}
-                  </div>
-                </div>
+                <DroppableColumn key={column.id} id={column.id} title={column.title}>
+                  {columnLeads.map((lead) => (
+                    <DraggableLeadCard key={lead.id} lead={lead} />
+                  ))}
+                  {columnLeads.length === 0 && (
+                    <div className="text-center py-8 text-gray-400 text-sm">
+                      No leads in this stage
+                    </div>
+                  )}
+                </DroppableColumn>
               )
             })}
           </div>

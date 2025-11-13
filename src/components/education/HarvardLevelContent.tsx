@@ -197,6 +197,7 @@ export function HarvardLevelContent({ className = '' }: HarvardLevelContentProps
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
+              onClick={() => setSelectedModule(selectedModule === module.id ? null : module.id)}
             >
               <PremiumCard
                 variant="hover"
@@ -204,7 +205,6 @@ export function HarvardLevelContent({ className = '' }: HarvardLevelContentProps
                 className={`h-full cursor-pointer transition-all duration-300 ${
                   selectedModule === module.id ? 'ring-2 ring-blue-500 shadow-xl' : ''
                 }`}
-                onClick={() => setSelectedModule(selectedModule === module.id ? null : module.id)}
               >
                 <div className="space-y-6">
                   {/* Module Header */}

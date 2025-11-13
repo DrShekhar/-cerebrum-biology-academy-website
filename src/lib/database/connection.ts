@@ -2,7 +2,7 @@ import { PrismaClient } from '@/generated/prisma'
 
 // Global variable to store the Prisma client instance
 declare global {
-  var __prisma: PrismaClient | undefined
+  var __prisma: ReturnType<typeof createPrismaClient> | undefined
 }
 
 // Connection configuration optimized for high concurrency
@@ -33,7 +33,7 @@ const createPrismaClient = () => {
         const end = Date.now()
 
         // Log slow queries in production
-        if (process.env.NODE_ENV === 'production' && (end - start) > 1000) {
+        if (process.env.NODE_ENV === 'production' && end - start > 1000) {
           console.warn(`Slow query detected: ${model}.${operation} took ${end - start}ms`)
         }
 
@@ -80,10 +80,7 @@ export const DatabaseUtils = {
   },
 
   // Transaction wrapper with retry logic
-  async transaction<T>(
-    operations: (tx: typeof prisma) => Promise<T>,
-    maxRetries: number = 3
-  ): Promise<T> {
+  async transaction<T>(operations: (tx: any) => Promise<T>, maxRetries: number = 3): Promise<T> {
     let attempt = 0
 
     while (attempt < maxRetries) {
@@ -102,7 +99,7 @@ export const DatabaseUtils = {
 
         // Exponential backoff
         const delay = Math.pow(2, attempt) * 100
-        await new Promise(resolve => setTimeout(resolve, delay))
+        await new Promise((resolve) => setTimeout(resolve, delay))
       }
     }
 
@@ -110,11 +107,7 @@ export const DatabaseUtils = {
   },
 
   // Bulk operations with batching
-  async bulkCreate<T>(
-    model: string,
-    data: T[],
-    batchSize: number = 1000
-  ): Promise<number> {
+  async bulkCreate<T>(model: string, data: T[], batchSize: number = 1000): Promise<number> {
     let totalCreated = 0
 
     for (let i = 0; i < data.length; i += batchSize) {
@@ -150,7 +143,7 @@ export const DatabaseUtils = {
     if (!searchTerm) return {}
 
     return {
-      OR: fields.map(field => ({
+      OR: fields.map((field) => ({
         [field]: {
           contains: searchTerm,
           mode: 'insensitive',
@@ -160,11 +153,7 @@ export const DatabaseUtils = {
   },
 
   // Date range filter helper
-  buildDateRangeFilter(
-    field: string,
-    startDate?: Date,
-    endDate?: Date
-  ): any {
+  buildDateRangeFilter(field: string, startDate?: Date, endDate?: Date): any {
     const filter: any = {}
 
     if (startDate || endDate) {

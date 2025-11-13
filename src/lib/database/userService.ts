@@ -1,6 +1,12 @@
 import { prisma, DatabaseUtils } from './connection'
 import { UserCacheService } from '../cache/redis'
-import type { User, FreeUser, UserProgress, PerformanceReport, Prisma } from '@/generated/prisma'
+import type {
+  users,
+  free_users,
+  user_progress,
+  performance_reports,
+  Prisma,
+} from '@/generated/prisma'
 
 export interface CreateFreeUserInput {
   email: string
@@ -36,14 +42,14 @@ export interface UserPerformanceMetrics {
 
 export class UserService {
   // Free User Management
-  static async createFreeUser(data: CreateFreeUserInput): Promise<FreeUser> {
+  static async createFreeUser(data: CreateFreeUserInput): Promise<free_users> {
     try {
-      const user = await prisma.freeUser.create({
+      const user = await prisma.free_users.create({
         data: {
           ...data,
           registrationDate: new Date(),
           preferences: data.preferences ? JSON.stringify(data.preferences) : null,
-        },
+        } as any,
       })
 
       // Initialize user progress for common topics
@@ -60,7 +66,7 @@ export class UserService {
     }
   }
 
-  static async getFreeUserById(id: string): Promise<FreeUser | null> {
+  static async getFreeUserById(id: string): Promise<free_users | null> {
     try {
       // Try cache first
       const cached = await UserCacheService.getUserSession(id)
@@ -69,10 +75,10 @@ export class UserService {
       }
 
       // OPTIMIZED: Single query with all related data to prevent N+1
-      const user = await prisma.freeUser.findUnique({
+      const user = await prisma.free_users.findUnique({
         where: { id },
         include: {
-          testAttempts: {
+          test_attempts: {
             orderBy: { startedAt: 'desc' },
             take: 5,
             // Select only necessary fields to reduce data transfer
@@ -89,7 +95,7 @@ export class UserService {
               status: true,
             },
           },
-          userProgress: {
+          user_progress: {
             orderBy: { lastPracticed: 'desc' },
             // Select only necessary fields
             select: {
@@ -133,13 +139,13 @@ export class UserService {
     }
   }
 
-  static async getFreeUserByEmail(email: string): Promise<FreeUser | null> {
+  static async getFreeUserByEmail(email: string): Promise<free_users | null> {
     try {
       // OPTIMIZED: Single query with selective field loading
-      return await prisma.freeUser.findUnique({
+      return await prisma.free_users.findUnique({
         where: { email },
         include: {
-          userProgress: {
+          user_progress: {
             // Select only necessary fields
             select: {
               id: true,
@@ -150,7 +156,7 @@ export class UserService {
               lastPracticed: true,
             },
           },
-          testAttempts: {
+          test_attempts: {
             orderBy: { startedAt: 'desc' },
             take: 3,
             // Select only necessary fields
@@ -174,9 +180,9 @@ export class UserService {
   static async updateFreeUser(
     id: string,
     data: Partial<CreateFreeUserInput>
-  ): Promise<FreeUser | null> {
+  ): Promise<free_users | null> {
     try {
-      const user = await prisma.freeUser.update({
+      const user = await prisma.free_users.update({
         where: { id },
         data: {
           ...data,
@@ -225,8 +231,8 @@ export class UserService {
     }))
 
     try {
-      await prisma.userProgress.createMany({
-        data: progressData,
+      await prisma.user_progress.createMany({
+        data: progressData as any,
         skipDuplicates: true,
       })
     } catch (error) {
@@ -234,7 +240,7 @@ export class UserService {
     }
   }
 
-  static async updateUserProgress(data: UpdateUserProgressInput): Promise<UserProgress | null> {
+  static async updateUserProgress(data: UpdateUserProgressInput): Promise<user_progress | null> {
     try {
       const accuracy =
         data.totalQuestions > 0 ? (data.correctAnswers / data.totalQuestions) * 100 : 0
@@ -247,7 +253,7 @@ export class UserService {
 
       const currentLevel = accuracy >= 80 ? 'HARD' : accuracy >= 60 ? 'MEDIUM' : 'EASY'
 
-      const progress = await prisma.userProgress.upsert({
+      const progress = await prisma.user_progress.upsert({
         where: {
           userId_topic_curriculum_grade: data.userId
             ? {
@@ -276,7 +282,7 @@ export class UserService {
           masteryScore,
           lastPracticed: new Date(),
           updatedAt: new Date(),
-        },
+        } as any,
         create: {
           userId: data.userId,
           freeUserId: data.freeUserId,
@@ -291,7 +297,7 @@ export class UserService {
           currentLevel,
           masteryScore,
           lastPracticed: new Date(),
-        },
+        } as any,
       })
 
       // Cache updated progress
@@ -308,11 +314,11 @@ export class UserService {
   static async getUserProgress(
     userId: string,
     isFreeUser: boolean = true
-  ): Promise<UserProgress[]> {
+  ): Promise<user_progress[]> {
     try {
       const whereClause = isFreeUser ? { freeUserId: userId } : { userId }
 
-      return await prisma.userProgress.findMany({
+      return await prisma.user_progress.findMany({
         where: whereClause,
         orderBy: [{ masteryScore: 'desc' }, { lastPracticed: 'desc' }],
       })
@@ -326,7 +332,7 @@ export class UserService {
     userId: string,
     topic: string,
     isFreeUser: boolean = true
-  ): Promise<UserProgress | null> {
+  ): Promise<user_progress | null> {
     try {
       // Try cache first
       const cached = await UserCacheService.getUserProgress(userId, topic)
@@ -336,7 +342,7 @@ export class UserService {
 
       const whereClause = isFreeUser ? { freeUserId: userId } : { userId }
 
-      const progress = await prisma.userProgress.findFirst({
+      const progress = await prisma.user_progress.findFirst({
         where: {
           ...whereClause,
           topic,
@@ -362,15 +368,15 @@ export class UserService {
     try {
       // Try cache first
       const cached = await UserCacheService.getUserPerformance(userId)
-      if (cached) {
-        return cached
+      if (cached && typeof cached === 'object' && 'averageScore' in cached) {
+        return cached as UserPerformanceMetrics
       }
 
       const whereClause = isFreeUser ? { freeUserId: userId } : { userId }
 
       // OPTIMIZED: Single query with selective fields to reduce data transfer
       const [testAttempts, userProgress] = await Promise.all([
-        prisma.testAttempt.findMany({
+        prisma.test_attempts.findMany({
           where: whereClause,
           orderBy: { startedAt: 'desc' },
           take: 50,
@@ -382,7 +388,7 @@ export class UserService {
             topicWiseScore: true,
           },
         }),
-        prisma.userProgress.findMany({
+        prisma.user_progress.findMany({
           where: whereClause,
           orderBy: { masteryScore: 'desc' },
           // Select only fields needed for metrics
@@ -472,7 +478,7 @@ export class UserService {
     userId: string,
     reportType: 'DAILY' | 'WEEKLY' | 'MONTHLY',
     isFreeUser: boolean = true
-  ): Promise<PerformanceReport | null> {
+  ): Promise<performance_reports | null> {
     try {
       const now = new Date()
       let periodStart: Date
@@ -502,7 +508,7 @@ export class UserService {
       const whereClause = isFreeUser ? { freeUserId: userId } : { userId }
 
       // OPTIMIZED: Get test attempts with only necessary template fields
-      const testAttempts = await prisma.testAttempt.findMany({
+      const testAttempts = await prisma.test_attempts.findMany({
         where: {
           ...whereClause,
           startedAt: {
@@ -511,7 +517,7 @@ export class UserService {
           },
         },
         include: {
-          testTemplate: {
+          test_templates: {
             // Select only necessary fields from template
             select: {
               id: true,
@@ -532,9 +538,9 @@ export class UserService {
       const totalStudyTime = testAttempts.reduce((sum, test) => sum + test.timeSpent, 0) / 60 // Convert to minutes
 
       // Calculate subject-wise scores
-      const biologyTests = testAttempts.filter((t) => t.testTemplate?.subject === 'biology')
-      const botanyTests = testAttempts.filter((t) => t.testTemplate?.subject === 'botany')
-      const zoologyTests = testAttempts.filter((t) => t.testTemplate?.subject === 'zoology')
+      const biologyTests = testAttempts.filter((t) => t.test_templates?.subject === 'biology')
+      const botanyTests = testAttempts.filter((t) => t.test_templates?.subject === 'botany')
+      const zoologyTests = testAttempts.filter((t) => t.test_templates?.subject === 'zoology')
 
       const biologyScore =
         biologyTests.length > 0
@@ -588,7 +594,7 @@ export class UserService {
         .map((item) => item.topic)
 
       // Create the report
-      const report = await prisma.performanceReport.create({
+      const report = await prisma.performance_reports.create({
         data: {
           userId: isFreeUser ? undefined : userId,
           freeUserId: isFreeUser ? userId : undefined,
@@ -604,7 +610,7 @@ export class UserService {
           weakTopics: JSON.stringify(weakTopics),
           periodStart,
           periodEnd,
-        },
+        } as any,
       })
 
       return report
@@ -632,7 +638,7 @@ export class UserService {
       const thirtyDaysAgo = new Date()
       thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30)
 
-      const recentAttempts = await prisma.testAttempt.findMany({
+      const recentAttempts = await prisma.test_attempts.findMany({
         where: {
           ...whereClause,
           startedAt: {
@@ -731,10 +737,10 @@ export class UserService {
   // Bulk operations for admin use
   static async bulkUpdateUserLevels(): Promise<number> {
     try {
-      const users = await prisma.freeUser.findMany({
+      const users = await prisma.free_users.findMany({
         include: {
-          userProgress: true,
-          testAttempts: {
+          user_progress: true,
+          test_attempts: {
             orderBy: { startedAt: 'desc' },
             take: 10,
           },
@@ -744,13 +750,13 @@ export class UserService {
       let updatedCount = 0
 
       for (const user of users) {
-        if (user.testAttempts.length === 0) continue
+        if (user.test_attempts.length === 0) continue
 
         const averageScore =
-          user.testAttempts.reduce((sum, test) => sum + test.percentage, 0) /
-          user.testAttempts.length
-        const totalTests = user.testAttempts.length
-        const bestScore = Math.max(...user.testAttempts.map((test) => test.percentage))
+          user.test_attempts.reduce((sum, test) => sum + test.percentage, 0) /
+          user.test_attempts.length
+        const totalTests = user.test_attempts.length
+        const bestScore = Math.max(...user.test_attempts.map((test) => test.percentage))
 
         // Calculate new level based on performance
         let newLevel = 1
@@ -761,7 +767,7 @@ export class UserService {
         else if (totalTests >= 3) newLevel = 2
 
         if (user.currentLevel !== newLevel) {
-          await prisma.freeUser.update({
+          await prisma.free_users.update({
             where: { id: user.id },
             data: {
               currentLevel: newLevel,

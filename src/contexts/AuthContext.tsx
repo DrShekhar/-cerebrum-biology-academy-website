@@ -276,6 +276,15 @@ function getUserPermissions(role: UserRole): string[] {
       'class:manage',
       'assignment:create',
     ],
+    COUNSELOR: [
+      'student:view',
+      'progress:view',
+      'demo:book',
+      'enrollment:view',
+      'reports:view',
+      'student:communicate',
+      'counseling:provide',
+    ],
     ADMIN: [
       '*', // All permissions
     ],

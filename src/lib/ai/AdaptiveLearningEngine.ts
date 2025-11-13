@@ -243,7 +243,11 @@ export class AdaptiveLearningEngine {
       priority: 'high' as const,
       requiresVisuals: true,
       language: 'english' as const,
-      studentLevel: profile.academicProfile.currentLevel,
+      studentLevel: profile.academicProfile.currentLevel as
+        | 'beginner'
+        | 'intermediate'
+        | 'advanced'
+        | 'expert',
     }
 
     const aiResponse = await this.aiRouter.routeRequest(aiRequest)
@@ -365,7 +369,7 @@ export class AdaptiveLearningEngine {
    */
   async processLearningActivity(
     sessionId: string,
-    activity: Omit<LearningActivity, 'activityId' | 'startTime' | 'endTime' | 'duration'>
+    activity: Omit<LearningActivity, 'activityId' | 'startTime' | 'endTime'>
   ): Promise<{
     adaptations: AdaptationEvent[]
     recommendations: string[]
@@ -378,9 +382,8 @@ export class AdaptiveLearningEngine {
     const completedActivity: LearningActivity = {
       ...activity,
       activityId,
-      startTime: new Date(Date.now() - (activity.duration || 0)),
+      startTime: new Date(Date.now() - (activity.duration || 0) * 1000),
       endTime: new Date(),
-      duration: activity.duration || 0,
     }
 
     session.activities.push(completedActivity)

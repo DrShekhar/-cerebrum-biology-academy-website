@@ -13,13 +13,21 @@ interface APIRequest {
   id: string
   userId: string
   content: string
-  type: 'quick_answer' | 'complex_reasoning' | 'diagram_analysis' | 'formula_explanation'
+  type:
+    | 'quick_answer'
+    | 'complex_reasoning'
+    | 'diagram_analysis'
+    | 'formula_explanation'
+    | 'learning_path_generation'
+    | 'content_recommendation'
+    | 'pattern_analysis'
+    | 'profile_assessment'
   context?: any
   priority: 'low' | 'medium' | 'high' | 'critical'
   maxTokens?: number
   requiresVisuals?: boolean
   language: 'english' | 'hindi' | 'hinglish'
-  studentLevel: 'beginner' | 'intermediate' | 'advanced' | 'neet'
+  studentLevel: 'beginner' | 'intermediate' | 'advanced' | 'neet' | 'expert'
 }
 
 interface APIResponse {
@@ -381,10 +389,6 @@ export class HyperIntelligentRouter {
           content: prompt,
         },
       ],
-      // Undocumented: Enable prompt caching for repeated patterns
-      extra: {
-        cache_control: { type: 'ephemeral' },
-      },
     })
 
     const content = response.content[0]

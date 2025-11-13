@@ -191,9 +191,12 @@ const VoiceIntegrationHub: React.FC = () => {
 
   const initializeAudioContext = async () => {
     try {
-      audioContextRef.current = new (window.AudioContext || window.webkitAudioContext)()
-      analyserRef.current = audioContextRef.current.createAnalyser()
-      analyserRef.current.fftSize = 256
+      const AudioContextClass = window.AudioContext || (window as any).webkitAudioContext
+      if (AudioContextClass) {
+        audioContextRef.current = new AudioContextClass()
+        analyserRef.current = audioContextRef.current.createAnalyser()
+        analyserRef.current.fftSize = 256
+      }
     } catch (error) {
       console.error('Error initializing audio context:', error)
     }

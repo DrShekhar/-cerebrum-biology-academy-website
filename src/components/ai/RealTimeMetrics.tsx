@@ -26,7 +26,7 @@ import {
   CheckCircle,
   AlertTriangle,
   Info,
-  X
+  X,
 } from 'lucide-react'
 
 interface MetricData {
@@ -89,7 +89,7 @@ export function RealTimeMetrics() {
       changePercent: 6.9,
       icon: <Users className="w-4 h-4" />,
       color: 'blue',
-      format: 'number'
+      format: 'number',
     },
     {
       id: 'doubts_resolved',
@@ -101,7 +101,7 @@ export function RealTimeMetrics() {
       changePercent: 10.5,
       icon: <Brain className="w-4 h-4" />,
       color: 'purple',
-      format: 'number'
+      format: 'number',
     },
     {
       id: 'avg_response_time',
@@ -113,7 +113,7 @@ export function RealTimeMetrics() {
       changePercent: -17.9,
       icon: <Zap className="w-4 h-4" />,
       color: 'green',
-      format: 'time'
+      format: 'time',
     },
     {
       id: 'test_completion_rate',
@@ -125,7 +125,7 @@ export function RealTimeMetrics() {
       changePercent: 3.9,
       icon: <Target className="w-4 h-4" />,
       color: 'orange',
-      format: 'percentage'
+      format: 'percentage',
     },
     {
       id: 'avg_accuracy',
@@ -137,7 +137,7 @@ export function RealTimeMetrics() {
       changePercent: 1.8,
       icon: <CheckCircle className="w-4 h-4" />,
       color: 'indigo',
-      format: 'percentage'
+      format: 'percentage',
     },
     {
       id: 'study_time',
@@ -149,18 +149,53 @@ export function RealTimeMetrics() {
       changePercent: 9.3,
       icon: <Clock className="w-4 h-4" />,
       color: 'teal',
-      format: 'time'
-    }
+      format: 'time',
+    },
   ])
 
   // System Health Metrics
   const [systemMetrics, setSystemMetrics] = useState<SystemMetric[]>([
     { id: 'cpu_usage', name: 'CPU Usage', value: 45, status: 'healthy', threshold: 80, unit: '%' },
-    { id: 'memory_usage', name: 'Memory Usage', value: 62, status: 'healthy', threshold: 85, unit: '%' },
-    { id: 'response_time', name: 'API Response Time', value: 120, status: 'healthy', threshold: 500, unit: 'ms' },
-    { id: 'error_rate', name: 'Error Rate', value: 0.8, status: 'healthy', threshold: 5, unit: '%' },
-    { id: 'database_conn', name: 'DB Connections', value: 23, status: 'healthy', threshold: 100, unit: 'conns' },
-    { id: 'cache_hit_rate', name: 'Cache Hit Rate', value: 94.5, status: 'healthy', threshold: 90, unit: '%' }
+    {
+      id: 'memory_usage',
+      name: 'Memory Usage',
+      value: 62,
+      status: 'healthy',
+      threshold: 85,
+      unit: '%',
+    },
+    {
+      id: 'response_time',
+      name: 'API Response Time',
+      value: 120,
+      status: 'healthy',
+      threshold: 500,
+      unit: 'ms',
+    },
+    {
+      id: 'error_rate',
+      name: 'Error Rate',
+      value: 0.8,
+      status: 'healthy',
+      threshold: 5,
+      unit: '%',
+    },
+    {
+      id: 'database_conn',
+      name: 'DB Connections',
+      value: 23,
+      status: 'healthy',
+      threshold: 100,
+      unit: 'conns',
+    },
+    {
+      id: 'cache_hit_rate',
+      name: 'Cache Hit Rate',
+      value: 94.5,
+      status: 'healthy',
+      threshold: 90,
+      unit: '%',
+    },
   ])
 
   // Real-time Activity Feed
@@ -171,7 +206,7 @@ export function RealTimeMetrics() {
       user: 'Priya S.',
       description: 'Cell division query resolved in 2.1s',
       timestamp: new Date(Date.now() - 1000 * 30),
-      metadata: { topic: 'Cell Biology', difficulty: 'Medium' }
+      metadata: { topic: 'Cell Biology', difficulty: 'Medium' },
     },
     {
       id: '2',
@@ -179,7 +214,7 @@ export function RealTimeMetrics() {
       user: 'Arjun K.',
       description: 'Genetics mock test - Score: 85%',
       timestamp: new Date(Date.now() - 1000 * 45),
-      metadata: { score: 85, questions: 40, time: '35 mins' }
+      metadata: { score: 85, questions: 40, time: '35 mins' },
     },
     {
       id: '3',
@@ -187,7 +222,7 @@ export function RealTimeMetrics() {
       user: 'Sneha R.',
       description: 'Started study session',
       timestamp: new Date(Date.now() - 1000 * 62),
-      metadata: { location: 'Mumbai' }
+      metadata: { location: 'Mumbai' },
     },
     {
       id: '4',
@@ -195,7 +230,7 @@ export function RealTimeMetrics() {
       user: 'Vikram M.',
       description: 'Unlocked "Genetics Master" badge',
       timestamp: new Date(Date.now() - 1000 * 78),
-      metadata: { badge: 'Genetics Master', streak: 7 }
+      metadata: { badge: 'Genetics Master', streak: 7 },
     },
     {
       id: '5',
@@ -203,8 +238,8 @@ export function RealTimeMetrics() {
       user: 'System',
       description: 'Image analysis timeout (resolved)',
       timestamp: new Date(Date.now() - 1000 * 95),
-      metadata: { error_code: 'TIMEOUT_001', resolved: true }
-    }
+      metadata: { error_code: 'TIMEOUT_001', resolved: true },
+    },
   ])
 
   // Live Alerts
@@ -215,7 +250,7 @@ export function RealTimeMetrics() {
       title: 'Performance Improved',
       message: 'Average response time decreased by 18% in the last hour',
       timestamp: new Date(Date.now() - 1000 * 300),
-      dismissed: false
+      dismissed: false,
     },
     {
       id: '2',
@@ -223,11 +258,11 @@ export function RealTimeMetrics() {
       title: 'Peak Usage Detected',
       message: '247 concurrent users - highest today',
       timestamp: new Date(Date.now() - 1000 * 600),
-      dismissed: false
-    }
+      dismissed: false,
+    },
   ])
 
-  const intervalRef = useRef<NodeJS.Timeout>()
+  const intervalRef = useRef<NodeJS.Timeout | null>(null)
 
   // Simulate real-time updates
   useEffect(() => {
@@ -235,88 +270,101 @@ export function RealTimeMetrics() {
       setIsRefreshing(true)
 
       // Update performance metrics with realistic variations
-      setPerformanceMetrics(prev => prev.map(metric => {
-        const variation = (Math.random() - 0.5) * 0.1 // ±5% variation
-        let newValue = metric.value * (1 + variation)
+      setPerformanceMetrics((prev) =>
+        prev.map((metric) => {
+          const variation = (Math.random() - 0.5) * 0.1 // ±5% variation
+          let newValue = metric.value * (1 + variation)
 
-        // Apply realistic constraints
-        switch (metric.id) {
-          case 'active_users':
-            newValue = Math.max(200, Math.min(500, Math.round(newValue)))
-            break
-          case 'doubts_resolved':
-            newValue = Math.max(20, Math.min(80, Math.round(newValue)))
-            break
-          case 'avg_response_time':
-            newValue = Math.max(1.0, Math.min(5.0, Number(newValue.toFixed(1))))
-            break
-          case 'test_completion_rate':
-            newValue = Math.max(70, Math.min(95, Number(newValue.toFixed(1))))
-            break
-          case 'avg_accuracy':
-            newValue = Math.max(65, Math.min(90, Number(newValue.toFixed(1))))
-            break
-          case 'study_time':
-            newValue = Math.max(3.0, Math.min(8.0, Number(newValue.toFixed(1))))
-            break
-        }
+          // Apply realistic constraints
+          switch (metric.id) {
+            case 'active_users':
+              newValue = Math.max(200, Math.min(500, Math.round(newValue)))
+              break
+            case 'doubts_resolved':
+              newValue = Math.max(20, Math.min(80, Math.round(newValue)))
+              break
+            case 'avg_response_time':
+              newValue = Math.max(1.0, Math.min(5.0, Number(newValue.toFixed(1))))
+              break
+            case 'test_completion_rate':
+              newValue = Math.max(70, Math.min(95, Number(newValue.toFixed(1))))
+              break
+            case 'avg_accuracy':
+              newValue = Math.max(65, Math.min(90, Number(newValue.toFixed(1))))
+              break
+            case 'study_time':
+              newValue = Math.max(3.0, Math.min(8.0, Number(newValue.toFixed(1))))
+              break
+          }
 
-        const changePercent = ((newValue - metric.previousValue) / metric.previousValue) * 100
-        const trend = changePercent > 1 ? 'up' : changePercent < -1 ? 'down' : 'stable'
+          const changePercent = ((newValue - metric.previousValue) / metric.previousValue) * 100
+          const trend = changePercent > 1 ? 'up' : changePercent < -1 ? 'down' : 'stable'
 
-        return {
-          ...metric,
-          previousValue: metric.value,
-          value: newValue,
-          changePercent: Number(changePercent.toFixed(1)),
-          trend
-        }
-      }))
+          return {
+            ...metric,
+            previousValue: metric.value,
+            value: newValue,
+            changePercent: Number(changePercent.toFixed(1)),
+            trend,
+          }
+        })
+      )
 
       // Update system metrics
-      setSystemMetrics(prev => prev.map(metric => {
-        const variation = (Math.random() - 0.5) * 0.2
-        let newValue = metric.value * (1 + variation)
+      setSystemMetrics((prev) =>
+        prev.map((metric) => {
+          const variation = (Math.random() - 0.5) * 0.2
+          let newValue = metric.value * (1 + variation)
 
-        // Apply realistic constraints
-        switch (metric.id) {
-          case 'cpu_usage':
-          case 'memory_usage':
-            newValue = Math.max(20, Math.min(90, Number(newValue.toFixed(1))))
-            break
-          case 'response_time':
-            newValue = Math.max(80, Math.min(400, Math.round(newValue)))
-            break
-          case 'error_rate':
-            newValue = Math.max(0.1, Math.min(3.0, Number(newValue.toFixed(1))))
-            break
-          case 'database_conn':
-            newValue = Math.max(15, Math.min(80, Math.round(newValue)))
-            break
-          case 'cache_hit_rate':
-            newValue = Math.max(85, Math.min(98, Number(newValue.toFixed(1))))
-            break
-        }
+          // Apply realistic constraints
+          switch (metric.id) {
+            case 'cpu_usage':
+            case 'memory_usage':
+              newValue = Math.max(20, Math.min(90, Number(newValue.toFixed(1))))
+              break
+            case 'response_time':
+              newValue = Math.max(80, Math.min(400, Math.round(newValue)))
+              break
+            case 'error_rate':
+              newValue = Math.max(0.1, Math.min(3.0, Number(newValue.toFixed(1))))
+              break
+            case 'database_conn':
+              newValue = Math.max(15, Math.min(80, Math.round(newValue)))
+              break
+            case 'cache_hit_rate':
+              newValue = Math.max(85, Math.min(98, Number(newValue.toFixed(1))))
+              break
+          }
 
-        const status = newValue > metric.threshold
-          ? (metric.id === 'cache_hit_rate' ? 'healthy' : 'warning')
-          : (metric.id === 'cache_hit_rate' ? 'warning' : 'healthy')
+          const status =
+            newValue > metric.threshold
+              ? metric.id === 'cache_hit_rate'
+                ? 'healthy'
+                : 'warning'
+              : metric.id === 'cache_hit_rate'
+                ? 'warning'
+                : 'healthy'
 
-        return { ...metric, value: newValue, status }
-      }))
+          return { ...metric, value: newValue, status }
+        })
+      )
 
       // Occasionally add new activity
       if (Math.random() < 0.3) {
         const newActivity: ActivityEvent = {
           id: Date.now().toString(),
-          type: ['doubt_resolved', 'test_completed', 'login', 'achievement'][Math.floor(Math.random() * 4)] as any,
-          user: ['Priya S.', 'Arjun K.', 'Sneha R.', 'Vikram M.', 'Ravi P.', 'Kavya N.'][Math.floor(Math.random() * 6)],
+          type: ['doubt_resolved', 'test_completed', 'login', 'achievement'][
+            Math.floor(Math.random() * 4)
+          ] as any,
+          user: ['Priya S.', 'Arjun K.', 'Sneha R.', 'Vikram M.', 'Ravi P.', 'Kavya N.'][
+            Math.floor(Math.random() * 6)
+          ],
           description: 'New activity detected',
           timestamp: new Date(),
-          metadata: {}
+          metadata: {},
         }
 
-        setActivityFeed(prev => [newActivity, ...prev.slice(0, 9)])
+        setActivityFeed((prev) => [newActivity, ...prev.slice(0, 9)])
       }
 
       setLastUpdated(new Date())
@@ -375,9 +423,9 @@ export function RealTimeMetrics() {
   }
 
   const dismissAlert = (alertId: string) => {
-    setAlerts(prev => prev.map(alert =>
-      alert.id === alertId ? { ...alert, dismissed: true } : alert
-    ))
+    setAlerts((prev) =>
+      prev.map((alert) => (alert.id === alertId ? { ...alert, dismissed: true } : alert))
+    )
   }
 
   return (
@@ -443,39 +491,49 @@ export function RealTimeMetrics() {
 
       {/* Live Alerts */}
       <AnimatePresence>
-        {alerts.filter(alert => !alert.dismissed).map((alert) => (
-          <motion.div
-            key={alert.id}
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className={`flex items-center justify-between p-4 rounded-lg border ${
-              alert.type === 'error' ? 'bg-red-50 border-red-200 text-red-800' :
-              alert.type === 'warning' ? 'bg-yellow-50 border-yellow-200 text-yellow-800' :
-              alert.type === 'success' ? 'bg-green-50 border-green-200 text-green-800' :
-              'bg-blue-50 border-blue-200 text-blue-800'
-            }`}
-          >
-            <div className="flex items-center space-x-3">
-              <div className="flex-shrink-0">
-                {alert.type === 'error' ? <AlertTriangle className="w-5 h-5" /> :
-                 alert.type === 'warning' ? <AlertTriangle className="w-5 h-5" /> :
-                 alert.type === 'success' ? <CheckCircle className="w-5 h-5" /> :
-                 <Info className="w-5 h-5" />}
-              </div>
-              <div>
-                <h4 className="font-medium">{alert.title}</h4>
-                <p className="text-sm opacity-90">{alert.message}</p>
-              </div>
-            </div>
-            <button
-              onClick={() => dismissAlert(alert.id)}
-              className="flex-shrink-0 p-1 rounded-md hover:bg-white/50 transition-colors"
+        {alerts
+          .filter((alert) => !alert.dismissed)
+          .map((alert) => (
+            <motion.div
+              key={alert.id}
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              className={`flex items-center justify-between p-4 rounded-lg border ${
+                alert.type === 'error'
+                  ? 'bg-red-50 border-red-200 text-red-800'
+                  : alert.type === 'warning'
+                    ? 'bg-yellow-50 border-yellow-200 text-yellow-800'
+                    : alert.type === 'success'
+                      ? 'bg-green-50 border-green-200 text-green-800'
+                      : 'bg-blue-50 border-blue-200 text-blue-800'
+              }`}
             >
-              <X className="w-4 h-4" />
-            </button>
-          </motion.div>
-        ))}
+              <div className="flex items-center space-x-3">
+                <div className="flex-shrink-0">
+                  {alert.type === 'error' ? (
+                    <AlertTriangle className="w-5 h-5" />
+                  ) : alert.type === 'warning' ? (
+                    <AlertTriangle className="w-5 h-5" />
+                  ) : alert.type === 'success' ? (
+                    <CheckCircle className="w-5 h-5" />
+                  ) : (
+                    <Info className="w-5 h-5" />
+                  )}
+                </div>
+                <div>
+                  <h4 className="font-medium">{alert.title}</h4>
+                  <p className="text-sm opacity-90">{alert.message}</p>
+                </div>
+              </div>
+              <button
+                onClick={() => dismissAlert(alert.id)}
+                className="flex-shrink-0 p-1 rounded-md hover:bg-white/50 transition-colors"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            </motion.div>
+          ))}
       </AnimatePresence>
 
       {/* Performance Metrics Grid */}
@@ -489,31 +547,54 @@ export function RealTimeMetrics() {
             className="bg-white rounded-xl p-6 border border-gray-200 shadow-sm hover:shadow-md transition-shadow"
           >
             <div className="flex items-center justify-between mb-4">
-              <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${
-                metric.color === 'blue' ? 'bg-blue-100' :
-                metric.color === 'purple' ? 'bg-purple-100' :
-                metric.color === 'green' ? 'bg-green-100' :
-                metric.color === 'orange' ? 'bg-orange-100' :
-                metric.color === 'indigo' ? 'bg-indigo-100' :
-                metric.color === 'teal' ? 'bg-teal-100' : 'bg-gray-100'
-              }`}>
-                <div className={`${
-                  metric.color === 'blue' ? 'text-blue-600' :
-                  metric.color === 'purple' ? 'text-purple-600' :
-                  metric.color === 'green' ? 'text-green-600' :
-                  metric.color === 'orange' ? 'text-orange-600' :
-                  metric.color === 'indigo' ? 'text-indigo-600' :
-                  metric.color === 'teal' ? 'text-teal-600' : 'text-gray-600'
-                }`}>
+              <div
+                className={`w-10 h-10 rounded-lg flex items-center justify-center ${
+                  metric.color === 'blue'
+                    ? 'bg-blue-100'
+                    : metric.color === 'purple'
+                      ? 'bg-purple-100'
+                      : metric.color === 'green'
+                        ? 'bg-green-100'
+                        : metric.color === 'orange'
+                          ? 'bg-orange-100'
+                          : metric.color === 'indigo'
+                            ? 'bg-indigo-100'
+                            : metric.color === 'teal'
+                              ? 'bg-teal-100'
+                              : 'bg-gray-100'
+                }`}
+              >
+                <div
+                  className={`${
+                    metric.color === 'blue'
+                      ? 'text-blue-600'
+                      : metric.color === 'purple'
+                        ? 'text-purple-600'
+                        : metric.color === 'green'
+                          ? 'text-green-600'
+                          : metric.color === 'orange'
+                            ? 'text-orange-600'
+                            : metric.color === 'indigo'
+                              ? 'text-indigo-600'
+                              : metric.color === 'teal'
+                                ? 'text-teal-600'
+                                : 'text-gray-600'
+                  }`}
+                >
                   {metric.icon}
                 </div>
               </div>
               <div className="flex items-center space-x-1">
                 {getTrendIcon(metric.trend)}
-                <span className={`text-sm font-medium ${
-                  metric.trend === 'up' ? 'text-green-600' :
-                  metric.trend === 'down' ? 'text-red-600' : 'text-gray-500'
-                }`}>
+                <span
+                  className={`text-sm font-medium ${
+                    metric.trend === 'up'
+                      ? 'text-green-600'
+                      : metric.trend === 'down'
+                        ? 'text-red-600'
+                        : 'text-gray-500'
+                  }`}
+                >
                   {Math.abs(metric.changePercent)}%
                 </span>
               </div>
@@ -548,23 +629,32 @@ export function RealTimeMetrics() {
                     <div className="w-24 bg-gray-200 rounded-full h-2">
                       <div
                         className={`h-2 rounded-full transition-all duration-500 ${
-                          metric.status === 'healthy' ? 'bg-green-500' :
-                          metric.status === 'warning' ? 'bg-yellow-500' : 'bg-red-500'
+                          metric.status === 'healthy'
+                            ? 'bg-green-500'
+                            : metric.status === 'warning'
+                              ? 'bg-yellow-500'
+                              : 'bg-red-500'
                         }`}
                         style={{
-                          width: `${Math.min((metric.value / metric.threshold) * 100, 100)}%`
+                          width: `${Math.min((metric.value / metric.threshold) * 100, 100)}%`,
                         }}
                       ></div>
                     </div>
                     <span className="text-xs text-gray-500">
-                      {metric.value}{metric.unit}
+                      {metric.value}
+                      {metric.unit}
                     </span>
                   </div>
                 </div>
-                <div className={`w-2 h-2 rounded-full ${
-                  metric.status === 'healthy' ? 'bg-green-500' :
-                  metric.status === 'warning' ? 'bg-yellow-500' : 'bg-red-500'
-                }`}></div>
+                <div
+                  className={`w-2 h-2 rounded-full ${
+                    metric.status === 'healthy'
+                      ? 'bg-green-500'
+                      : metric.status === 'warning'
+                        ? 'bg-yellow-500'
+                        : 'bg-red-500'
+                  }`}
+                ></div>
               </div>
             ))}
           </div>
@@ -585,16 +675,12 @@ export function RealTimeMetrics() {
                 transition={{ delay: index * 0.05 }}
                 className="flex items-start space-x-3 p-3 bg-gray-50 rounded-lg"
               >
-                <div className="flex-shrink-0 mt-0.5">
-                  {getActivityIcon(activity.type)}
-                </div>
+                <div className="flex-shrink-0 mt-0.5">{getActivityIcon(activity.type)}</div>
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center justify-between">
-                    <p className="text-sm font-medium text-gray-900 truncate">
-                      {activity.user}
-                    </p>
+                    <p className="text-sm font-medium text-gray-900 truncate">{activity.user}</p>
                     <p className="text-xs text-gray-500">
-                      {new Intl.RelativeTimeFormat().format(
+                      {new Intl.RelativeTimeFormat('en', { numeric: 'auto' }).format(
                         Math.round((activity.timestamp.getTime() - Date.now()) / (1000 * 60)),
                         'minute'
                       )}
@@ -603,11 +689,13 @@ export function RealTimeMetrics() {
                   <p className="text-sm text-gray-600">{activity.description}</p>
                   {activity.metadata && Object.keys(activity.metadata).length > 0 && (
                     <div className="text-xs text-gray-500 mt-1">
-                      {Object.entries(activity.metadata).slice(0, 2).map(([key, value]) => (
-                        <span key={key} className="mr-3">
-                          {key}: {String(value)}
-                        </span>
-                      ))}
+                      {Object.entries(activity.metadata)
+                        .slice(0, 2)
+                        .map(([key, value]) => (
+                          <span key={key} className="mr-3">
+                            {key}: {String(value)}
+                          </span>
+                        ))}
                     </div>
                   )}
                 </div>

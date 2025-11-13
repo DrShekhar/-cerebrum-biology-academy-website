@@ -67,8 +67,8 @@ export class SecurityManager {
       // Generate random IV for each encryption
       const iv = crypto.randomBytes(this.IV_LENGTH)
 
-      // Create cipher
-      const cipher = crypto.createCipher(this.ENCRYPTION_ALGORITHM, this.encryptionKey)
+      // Create cipher with IV
+      const cipher = crypto.createCipheriv(this.ENCRYPTION_ALGORITHM, this.encryptionKey, iv)
       cipher.setAAD(Buffer.from('cerebrum-biology-academy')) // Additional authenticated data
 
       // Encrypt data
@@ -101,8 +101,13 @@ export class SecurityManager {
         throw new Error('Invalid encrypted data format')
       }
 
-      // Create decipher
-      const decipher = crypto.createDecipher(encryptedData.algorithm, this.encryptionKey)
+      // Create decipher with IV
+      const iv = Buffer.from(encryptedData.iv, 'hex')
+      const decipher = crypto.createDecipheriv(
+        encryptedData.algorithm,
+        this.encryptionKey,
+        iv
+      ) as crypto.DecipherGCM
 
       decipher.setAAD(Buffer.from('cerebrum-biology-academy'))
       decipher.setAuthTag(Buffer.from(encryptedData.tag, 'hex'))
@@ -134,7 +139,7 @@ export class SecurityManager {
       const token = jwt.sign(tokenPayload, this.jwtSecret, {
         expiresIn,
         algorithm: 'HS256',
-      })
+      } as jwt.SignOptions)
 
       this.logSecurityEvent('token_generated', payload.userId || 'system', true, {
         tokenType: 'auth',

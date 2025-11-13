@@ -4,7 +4,16 @@
  */
 
 export interface MobileSecurityEvent {
-  type: 'app_switch' | 'screen_record' | 'screenshot' | 'orientation_change' | 'notification' | 'proximity' | 'battery_low' | 'call_incoming' | 'split_screen'
+  type:
+    | 'app_switch'
+    | 'screen_record'
+    | 'screenshot'
+    | 'orientation_change'
+    | 'notification'
+    | 'proximity'
+    | 'battery_low'
+    | 'call_incoming'
+    | 'split_screen'
   timestamp: number
   severity: 'low' | 'medium' | 'high' | 'critical'
   details: any
@@ -106,7 +115,7 @@ export class MobileSecurityManager {
       requireFullscreenMode: true,
       monitorRunningApps: true,
       detectJailbreakRoot: true,
-      ...config
+      ...config,
     }
 
     this.deviceInfo = this.getDeviceInfo()
@@ -231,7 +240,7 @@ export class MobileSecurityManager {
       toApp,
       duration,
       timestamp,
-      isBackgroundMode
+      isBackgroundMode,
     }
 
     this.appSwitchHistory.push(switchEvent)
@@ -242,20 +251,20 @@ export class MobileSecurityManager {
         action: 'app_switched_away',
         fromApp,
         toApp,
-        duration
+        duration,
       })
     }
 
     // Check app switch limits
     const recentSwitches = this.appSwitchHistory.filter(
-      event => timestamp - event.timestamp < 300000 // Last 5 minutes
+      (event) => timestamp - event.timestamp < 300000 // Last 5 minutes
     ).length
 
     if (recentSwitches > this.config.maxAppSwitches) {
       this.recordViolation('app_switch', 'high', {
         action: 'too_many_app_switches',
         count: recentSwitches,
-        limit: this.config.maxAppSwitches
+        limit: this.config.maxAppSwitches,
       })
     }
 
@@ -275,7 +284,7 @@ export class MobileSecurityManager {
           if (this.detectScreenRecording()) {
             this.recordViolation('screen_record', 'critical', {
               action: 'screen_recording_detected',
-              platform: 'iOS'
+              platform: 'iOS',
             })
           }
         }, 5000)
@@ -323,7 +332,7 @@ export class MobileSecurityManager {
       'com.mobizen.mirroring.uimode',
       'com.screenrecorder.android',
       'com.hecorat.screenrecorder.free',
-      'com.kimcy929.screenrecorder'
+      'com.kimcy929.screenrecorder',
     ]
 
     // This would require native app integration to check running apps
@@ -345,10 +354,11 @@ export class MobileSecurityManager {
     // Monitor touch patterns that might indicate screen recording setup
     document.addEventListener('touchstart', () => {
       screenActivityCount++
-      if (screenActivityCount > 50) { // Unusually high activity
+      if (screenActivityCount > 50) {
+        // Unusually high activity
         this.recordViolation('screen_record', 'medium', {
           action: 'suspicious_touch_activity',
-          count: screenActivityCount
+          count: screenActivityCount,
         })
       }
     })
@@ -388,12 +398,14 @@ export class MobileSecurityManager {
     // Monitor for screenshot key combinations
     document.addEventListener('keydown', (event) => {
       // iOS screenshot: Home + Power or Volume Up + Power
-      if (event.key === 'PrintScreen' ||
-          (event.metaKey && event.key === 'Shift') ||
-          (event.ctrlKey && event.key === 'Shift')) {
+      if (
+        event.key === 'PrintScreen' ||
+        (event.metaKey && event.key === 'Shift') ||
+        (event.ctrlKey && event.key === 'Shift')
+      ) {
         this.recordViolation('screenshot', 'high', {
           action: 'screenshot_key_combination',
-          keys: `${event.metaKey ? 'Meta+' : ''}${event.ctrlKey ? 'Ctrl+' : ''}${event.key}`
+          keys: `${event.metaKey ? 'Meta+' : ''}${event.ctrlKey ? 'Ctrl+' : ''}${event.key}`,
         })
       }
     })
@@ -416,7 +428,7 @@ export class MobileSecurityManager {
         this.recordViolation('screenshot', 'medium', {
           action: 'multi_touch_gesture',
           touchCount,
-          duration: Date.now() - touchStartTime
+          duration: Date.now() - touchStartTime,
         })
       }
       touchCount = 0
@@ -467,9 +479,10 @@ export class MobileSecurityManager {
   private setupOrientationLock(): void {
     const lockOrientation = () => {
       try {
-        if (screen.orientation && screen.orientation.lock) {
+        if (screen.orientation && 'lock' in screen.orientation) {
           const orientation = this.config.allowedOrientations[0]
-          screen.orientation.lock(orientation).catch(error => {
+          const orientationLockType = `${orientation}-primary` as any
+          ;(screen.orientation.lock as any)(orientationLockType).catch((error: any) => {
             console.warn('Could not lock screen orientation:', error)
           })
         }
@@ -489,7 +502,7 @@ export class MobileSecurityManager {
         this.recordViolation('orientation_change', 'medium', {
           action: 'orientation_violation',
           currentOrientation,
-          allowedOrientations: this.config.allowedOrientations
+          allowedOrientations: this.config.allowedOrientations,
         })
 
         // Try to lock orientation again
@@ -512,7 +525,7 @@ export class MobileSecurityManager {
           const proximityEvent: ProximityEvent = {
             isNear: sensor.near,
             timestamp: Date.now(),
-            distance: sensor.distance
+            distance: sensor.distance,
           }
 
           this.proximityHistory.push(proximityEvent)
@@ -520,7 +533,7 @@ export class MobileSecurityManager {
           if (sensor.near) {
             this.recordViolation('proximity', 'low', {
               action: 'proximity_detected',
-              distance: sensor.distance
+              distance: sensor.distance,
             })
           }
 
@@ -542,11 +555,11 @@ export class MobileSecurityManager {
     if (this.config.blockNotifications) {
       // Request notification permission to detect if notifications are enabled
       if ('Notification' in window) {
-        Notification.requestPermission().then(permission => {
+        Notification.requestPermission().then((permission) => {
           if (permission === 'granted') {
             this.recordViolation('notification', 'low', {
               action: 'notifications_enabled',
-              permission
+              permission,
             })
           }
         })
@@ -564,7 +577,7 @@ export class MobileSecurityManager {
     // Monitor for vibration API usage (could indicate notifications)
     const originalVibrate = navigator.vibrate
     if (originalVibrate) {
-      navigator.vibrate = function(pattern) {
+      navigator.vibrate = function (pattern) {
         // Log vibration events
         console.warn('Vibration detected during test')
         return originalVibrate.call(navigator, pattern)
@@ -572,12 +585,13 @@ export class MobileSecurityManager {
     }
 
     // Monitor for audio context creation (notification sounds)
-    const originalAudioContext = window.AudioContext
+    const originalAudioContext = window.AudioContext || (window as any).webkitAudioContext
     if (originalAudioContext) {
-      window.AudioContext = function(...args) {
+      const OriginalConstructor = originalAudioContext
+      window.AudioContext = function (this: AudioContext, ...args: any[]) {
         console.warn('Audio context created during test')
-        return new originalAudioContext(...args)
-      }
+        return new OriginalConstructor(...(args as [AudioContextOptions?]))
+      } as any
     }
   }
 
@@ -605,7 +619,7 @@ export class MobileSecurityManager {
       'cydia://',
       'file:///Applications/Cydia.app',
       'file:///usr/sbin/sshd',
-      'file:///etc/apt'
+      'file:///etc/apt',
     ]
 
     // This would require native app integration for proper detection
@@ -630,28 +644,31 @@ export class MobileSecurityManager {
    */
   private setupBatteryMonitoring(): void {
     if ('getBattery' in navigator) {
-      (navigator as any).getBattery().then((battery: any) => {
-        this.deviceInfo.batteryLevel = battery.level * 100
-        this.deviceInfo.isCharging = battery.charging
-
-        battery.addEventListener('levelchange', () => {
+      ;(navigator as any)
+        .getBattery()
+        .then((battery: any) => {
           this.deviceInfo.batteryLevel = battery.level * 100
-
-          // Warn if battery is critically low
-          if (battery.level < 0.1) {
-            this.recordViolation('battery_low', 'medium', {
-              action: 'critical_battery_level',
-              level: battery.level * 100
-            })
-          }
-        })
-
-        battery.addEventListener('chargingchange', () => {
           this.deviceInfo.isCharging = battery.charging
+
+          battery.addEventListener('levelchange', () => {
+            this.deviceInfo.batteryLevel = battery.level * 100
+
+            // Warn if battery is critically low
+            if (battery.level < 0.1) {
+              this.recordViolation('battery_low', 'medium', {
+                action: 'critical_battery_level',
+                level: battery.level * 100,
+              })
+            }
+          })
+
+          battery.addEventListener('chargingchange', () => {
+            this.deviceInfo.isCharging = battery.charging
+          })
         })
-      }).catch((error: any) => {
-        console.warn('Battery API not available:', error)
-      })
+        .catch((error: any) => {
+          console.warn('Battery API not available:', error)
+        })
     }
   }
 
@@ -675,7 +692,7 @@ export class MobileSecurityManager {
           this.recordViolation('split_screen', 'medium', {
             action: 'split_screen_boundary_touch',
             touchY,
-            screenHeight
+            screenHeight,
           })
         }
       }
@@ -684,7 +701,7 @@ export class MobileSecurityManager {
       if (event.touches.length > 1) {
         this.recordViolation('app_switch', 'low', {
           action: 'multi_touch_detected',
-          touchCount: event.touches.length
+          touchCount: event.touches.length,
         })
       }
     }
@@ -699,7 +716,7 @@ export class MobileSecurityManager {
       if (touchDuration > 5000) {
         this.recordViolation('app_switch', 'low', {
           action: 'long_touch_detected',
-          duration: touchDuration
+          duration: touchDuration,
         })
       }
     })
@@ -718,10 +735,10 @@ export class MobileSecurityManager {
       deviceModel: this.extractDeviceModel(userAgent, platform),
       screenResolution: {
         width: window.screen.width,
-        height: window.screen.height
+        height: window.screen.height,
       },
       orientation: this.getCurrentOrientation(),
-      networkType: this.getNetworkType()
+      networkType: this.getNetworkType(),
     }
   }
 
@@ -788,9 +805,10 @@ export class MobileSecurityManager {
   private getNetworkType(): 'wifi' | 'cellular' | 'offline' {
     if (!navigator.onLine) return 'offline'
 
-    const connection = (navigator as any).connection ||
-                      (navigator as any).mozConnection ||
-                      (navigator as any).webkitConnection
+    const connection =
+      (navigator as any).connection ||
+      (navigator as any).mozConnection ||
+      (navigator as any).webkitConnection
 
     if (connection) {
       if (connection.type === 'wifi') return 'wifi'
@@ -804,9 +822,11 @@ export class MobileSecurityManager {
    * Check if device is mobile
    */
   private isMobileDevice(): boolean {
-    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
-           ('ontouchstart' in window) ||
-           (navigator.maxTouchPoints > 0)
+    return (
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
+      'ontouchstart' in window ||
+      navigator.maxTouchPoints > 0
+    )
   }
 
   /**
@@ -824,7 +844,7 @@ export class MobileSecurityManager {
       timestamp: Date.now(),
       sessionId: this.sessionId,
       userId: this.userId,
-      deviceInfo: this.deviceInfo
+      deviceInfo: this.deviceInfo,
     }
 
     this.violations.push(event)
@@ -859,7 +879,7 @@ export class MobileSecurityManager {
   private restoreDeviceSettings(): void {
     try {
       // Unlock orientation
-      if (screen.orientation && screen.orientation.unlock) {
+      if (screen.orientation && 'unlock' in screen.orientation) {
         screen.orientation.unlock()
       }
     } catch (error) {
@@ -879,7 +899,7 @@ export class MobileSecurityManager {
       appSwitchCount: this.appSwitchHistory.length,
       lastAppSwitch: this.appSwitchHistory[this.appSwitchHistory.length - 1] || null,
       orientationLock: this.orientationLock,
-      proximityEvents: this.proximityHistory.length
+      proximityEvents: this.proximityHistory.length,
     }
   }
 
@@ -887,13 +907,16 @@ export class MobileSecurityManager {
    * Generate mobile security report
    */
   generateMobileSecurityReport() {
-    const violationsByType = this.violations.reduce((acc, violation) => {
-      if (!acc[violation.type]) {
-        acc[violation.type] = []
-      }
-      acc[violation.type].push(violation)
-      return acc
-    }, {} as Record<string, MobileSecurityEvent[]>)
+    const violationsByType = this.violations.reduce(
+      (acc, violation) => {
+        if (!acc[violation.type]) {
+          acc[violation.type] = []
+        }
+        acc[violation.type].push(violation)
+        return acc
+      },
+      {} as Record<string, MobileSecurityEvent[]>
+    )
 
     return {
       sessionId: this.sessionId,
@@ -903,11 +926,14 @@ export class MobileSecurityManager {
       violationsByType: Object.entries(violationsByType).map(([type, events]) => ({
         type,
         count: events.length,
-        lastOccurrence: Math.max(...events.map(e => e.timestamp)),
-        severity: events.reduce((max, e) => {
-          const levels = { low: 1, medium: 2, high: 3, critical: 4 }
-          return levels[e.severity] > levels[max] ? e.severity : max
-        }, 'low' as MobileSecurityEvent['severity'])
+        lastOccurrence: Math.max(...events.map((e) => e.timestamp)),
+        severity: events.reduce(
+          (max, e) => {
+            const levels = { low: 1, medium: 2, high: 3, critical: 4 }
+            return levels[e.severity] > levels[max] ? e.severity : max
+          },
+          'low' as MobileSecurityEvent['severity']
+        ),
       })),
       appSwitchHistory: this.appSwitchHistory,
       securityFeatures: {
@@ -915,9 +941,9 @@ export class MobileSecurityManager {
         screenRecordingBlocked: !this.config.allowScreenRecording,
         screenshotsBlocked: !this.config.allowScreenshots,
         orientationLocked: this.config.lockOrientation,
-        notificationsBlocked: this.config.blockNotifications
+        notificationsBlocked: this.config.blockNotifications,
       },
-      recommendations: this.generateMobileRecommendations()
+      recommendations: this.generateMobileRecommendations(),
     }
   }
 
@@ -926,7 +952,7 @@ export class MobileSecurityManager {
    */
   private generateMobileRecommendations(): string[] {
     const recommendations: string[] = []
-    const violationTypes = [...new Set(this.violations.map(v => v.type))]
+    const violationTypes = [...new Set(this.violations.map((v) => v.type))]
 
     if (violationTypes.includes('app_switch')) {
       recommendations.push('Consider implementing stricter app switching penalties')

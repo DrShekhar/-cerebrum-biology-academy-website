@@ -10,7 +10,7 @@ let Redis: any = null
 
 // Check if we're in Edge Runtime before attempting any imports
 const isEdgeRuntime =
-  typeof EdgeRuntime !== 'undefined' ||
+  (typeof globalThis !== 'undefined' && 'EdgeRuntime' in globalThis) ||
   typeof process === 'undefined' ||
   !process.nextTick ||
   typeof window !== 'undefined'
@@ -39,10 +39,13 @@ interface CacheConfig {
   defaultTTL: number
   compressionThreshold: number
   prefixes: {
-    student: string
-    question: string
-    session: string
-    analytics: string
+    student?: string
+    question?: string
+    session?: string
+    analytics?: string
+    query?: string
+    assessment?: string
+    content?: string
   }
 }
 
@@ -205,11 +208,11 @@ export class DistributedCacheManager {
       }
 
       // Decompress if needed
-      const data = entry.compressed ? await this.decompress(entry.data) : entry.data
+      const data = entry.compressed ? await this.decompress(entry.data as string) : entry.data
 
       this.stats.hits++
       this.updateStats(startTime)
-      return data
+      return data as T
     } catch (error) {
       console.error('Cache get error:', error)
       this.stats.misses++
@@ -232,7 +235,7 @@ export class DistributedCacheManager {
       const shouldCompress = serializedData.length > this.config.compressionThreshold
 
       const entry: CacheEntry<T> = {
-        data: shouldCompress ? await this.compress(data) : data,
+        data: (shouldCompress ? await this.compress(data) : data) as any,
         timestamp: Date.now(),
         ttl: ttl || this.config.defaultTTL,
         version: this.generateVersion(),
@@ -297,9 +300,11 @@ export class DistributedCacheManager {
             continue
           }
 
-          const decompressedData = entry.compressed ? await this.decompress(entry.data) : entry.data
+          const decompressedData = entry.compressed
+            ? await this.decompress(entry.data as string)
+            : entry.data
 
-          result.set(key, decompressedData)
+          result.set(key, decompressedData as T)
           this.stats.hits++
         } catch (parseError) {
           console.error('Parse error for key', key, parseError)
@@ -330,7 +335,7 @@ export class DistributedCacheManager {
         const shouldCompress = serializedData.length > this.config.compressionThreshold
 
         const entry: CacheEntry<T> = {
-          data: shouldCompress ? await this.compress(data) : data,
+          data: (shouldCompress ? await this.compress(data) : data) as any,
           timestamp: Date.now(),
           ttl: ttl || this.config.defaultTTL,
           version: this.generateVersion(),
@@ -526,7 +531,7 @@ export class DistributedCacheManager {
 
   // Private helper methods
 
-  private getRandomReplica(): Redis {
+  private getRandomReplica(): any {
     if (this.replicaRedis.length === 0) {
       return this.primaryRedis
     }
@@ -571,7 +576,7 @@ export class DistributedCacheManager {
     this.stats.hitRate = (this.stats.hits / totalRequests) * 100
   }
 
-  private async checkRedisHealth(redis: Redis): Promise<boolean> {
+  private async checkRedisHealth(redis: any): Promise<boolean> {
     try {
       const result = await redis.ping()
       return result === 'PONG'
@@ -584,7 +589,7 @@ export class DistributedCacheManager {
    * Generate cache key with prefix
    */
   generateKey(type: keyof CacheConfig['prefixes'], identifier: string, suffix?: string): string {
-    const prefix = this.config.prefixes[type]
+    const prefix = this.config.prefixes[type] || type
     const key = `${prefix}:${identifier}`
     return suffix ? `${key}:${suffix}` : key
   }

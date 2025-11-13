@@ -149,7 +149,7 @@ const Header = () => {
           >
             {mainNavigation.map((item, index) => (
               <div key={index} className="relative">
-                {item.highlight ? (
+                {'highlight' in item && item.highlight ? (
                   <Link
                     href={item.href!}
                     className={`flex items-center space-x-2 font-semibold px-4 py-2 rounded-lg bg-orange-100 text-orange-700 hover:bg-orange-200 border border-orange-300 transition-all duration-300 ${
@@ -251,7 +251,7 @@ const Header = () => {
                 {/* Regular Navigation Items */}
                 {mainNavigation.map((item, index) => (
                   <div key={index}>
-                    {item.highlight ? (
+                    {'highlight' in item && item.highlight ? (
                       <Link
                         href={item.href!}
                         className="flex items-center space-x-2 font-semibold px-4 py-3 rounded-lg bg-orange-100 text-orange-700 hover:bg-orange-200 border border-orange-300 transition-all duration-300 min-h-[48px]"

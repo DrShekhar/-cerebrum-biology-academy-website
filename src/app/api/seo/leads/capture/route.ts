@@ -31,7 +31,7 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    const topic = await prisma.biologyTopic.findUnique({
+    const topic = await prisma.biology_topics.findUnique({
       where: { slug: validatedData.topicSlug },
       select: { slug: true, id: true },
     })
@@ -40,7 +40,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Topic not found' }, { status: 404 })
     }
 
-    const leadMagnet = await prisma.leadMagnet.findUnique({
+    const leadMagnet = await prisma.lead_magnets.findUnique({
       where: { id: validatedData.leadMagnetId },
       select: { id: true, fileUrl: true, requiresEmail: true, requiresWhatsApp: true },
     })
@@ -64,30 +64,32 @@ export async function POST(request: NextRequest) {
       ? 'MOBILE'
       : 'DESKTOP'
 
-    const contentLead = await prisma.contentLead.create({
+    const contentLead = await prisma.content_leads.create({
       data: {
-        email: validatedData.email || null,
-        whatsappNumber: validatedData.whatsappNumber || null,
+        id: `lead_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+        email: validatedData.email || undefined,
+        whatsappNumber: validatedData.whatsappNumber || undefined,
         name: validatedData.name,
         source: validatedData.source,
         topicSlug: validatedData.topicSlug,
         leadMagnetId: validatedData.leadMagnetId,
-        utmSource: validatedData.utmSource || null,
-        utmMedium: validatedData.utmMedium || null,
-        utmCampaign: validatedData.utmCampaign || null,
-        referrerUrl: validatedData.referrer || null,
+        utmSource: validatedData.utmSource || undefined,
+        utmMedium: validatedData.utmMedium || undefined,
+        utmCampaign: validatedData.utmCampaign || undefined,
+        referrerUrl: validatedData.referrer || undefined,
         deviceType: deviceType,
         leadStage: 'NEW',
         leadScore: 10,
+        updatedAt: new Date(),
       },
     })
 
     await Promise.all([
-      prisma.biologyTopic.update({
+      prisma.biology_topics.update({
         where: { id: topic.id },
         data: { leadConversions: { increment: 1 } },
       }),
-      prisma.leadMagnet.update({
+      prisma.lead_magnets.update({
         where: { id: leadMagnet.id },
         data: { downloadCount: { increment: 1 } },
       }),

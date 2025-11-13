@@ -121,7 +121,7 @@ export function ProgressCard({
     setPreviousValue(value)
   }, [value, previousValue, isMilestoneReached, iconControls, celebrationControls])
 
-  const cardVariants = {
+  const cardAnimationVariants = {
     initial: { opacity: 0, y: 20, scale: 0.95 },
     animate: {
       opacity: 1,
@@ -154,7 +154,7 @@ export function ProgressCard({
 
   return (
     <motion.div
-      variants={cardVariants}
+      variants={cardAnimationVariants}
       initial="initial"
       animate="animate"
       whileHover="hover"

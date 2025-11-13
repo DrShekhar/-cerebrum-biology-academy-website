@@ -38,8 +38,21 @@ interface QuestionPool {
   total_questions: number
   categories: QuestionCategory[]
   difficulty_distribution: DifficultyDistribution
-  question_types: QuestionType[]
-  validation_rules: ValidationRule[]
+  question_types: Array<
+    | 'mcq'
+    | 'multiple_select'
+    | 'true_false'
+    | 'fill_blank'
+    | 'short_answer'
+    | 'essay'
+    | 'drag_drop'
+    | 'diagram_label'
+    | 'calculation'
+    | 'simulation'
+    | 'voice_response'
+    | 'drawing'
+  >
+  validation_rules: any[]
 }
 
 interface QuestionCategory {
@@ -567,11 +580,11 @@ export class AutomatedAssessmentEngine {
     console.log(`🧠 Creating AI-powered adaptive assessment: ${config.title}`)
 
     // Use AI to generate optimized question selection and adaptive rules
-    const aiRequest = {
+    const aiRequest: any = {
       id: `assessment_${Date.now()}`,
       userId: 'system',
       content: `Create adaptive assessment for ${config.subject} covering topics: ${config.topics.join(', ')}`,
-      type: 'assessment_generation' as const,
+      type: 'complex_reasoning',
       context: {
         targetDifficulty: config.target_difficulty,
         learningObjectives: config.learning_objectives,
@@ -621,7 +634,7 @@ export class AutomatedAssessmentEngine {
 
     // Cache assessment for quick access
     await this.cacheManager.set(
-      this.cacheManager.generateKey('assessment', assessmentId),
+      `assessment:${assessmentId}`,
       assessment,
       86400 // 24 hours
     )
@@ -864,11 +877,11 @@ export class AutomatedAssessmentEngine {
   }): Promise<AssessmentQuestion[]> {
     console.log(`🤖 Generating AI-powered questions for topic: ${prompt.topic}`)
 
-    const aiRequest = {
+    const aiRequest: any = {
       id: `question_gen_${Date.now()}`,
       userId: 'system',
       content: `Generate high-quality assessment questions for ${prompt.topic}`,
-      type: 'question_generation' as const,
+      type: 'complex_reasoning',
       context: {
         difficulty: prompt.difficulty,
         questionType: prompt.question_type,
@@ -921,11 +934,11 @@ export class AutomatedAssessmentEngine {
     const sessionData = await this.collectSessionData(assessmentId)
 
     // AI-powered effectiveness analysis
-    const aiRequest = {
+    const aiRequest: any = {
       id: `analysis_${Date.now()}`,
       userId: 'system',
       content: `Analyze assessment effectiveness and provide improvement recommendations`,
-      type: 'assessment_analysis' as const,
+      type: 'complex_reasoning',
       context: {
         assessmentData: assessment,
         sessionData,
@@ -1124,11 +1137,11 @@ export class AutomatedAssessmentEngine {
     studentId: string
   ): Promise<ResponseAnalysis> {
     // AI-powered response evaluation
-    const aiRequest = {
+    const aiRequest: any = {
       id: `eval_${Date.now()}`,
       userId: studentId,
       content: `Evaluate student response: ${JSON.stringify(response)}`,
-      type: 'response_evaluation' as const,
+      type: 'complex_reasoning',
       context: {
         question,
         expectedAnswer: question.answer_key,
@@ -1403,7 +1416,7 @@ export class AutomatedAssessmentEngine {
     results: AssessmentResults
   ): Promise<void> {
     await this.cacheManager.set(
-      this.cacheManager.generateKey('assessment', `results:${sessionId}`),
+      `assessment:results:${sessionId}`,
       results,
       604800 // 1 week
     )

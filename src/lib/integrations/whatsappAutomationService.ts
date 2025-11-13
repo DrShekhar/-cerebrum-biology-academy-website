@@ -420,6 +420,66 @@ export class WhatsAppAutomationService {
   }
 
   /**
+   * Weekly Motivation Scheduling
+   */
+  private static async scheduleWeeklyMotivation(studentData: {
+    userId: string
+    phone: string
+    name: string
+  }) {
+    const motivationalMessages = [
+      `🌟 Weekly Motivation: Success is the sum of small efforts repeated day in and day out. Keep pushing forward, ${studentData.name}!`,
+      `💪 Remember: Every expert was once a beginner. Your NEET journey is unique and you're making progress every day!`,
+      `🎯 This week's focus: Stay consistent with your studies. Small daily progress leads to big results!`,
+    ]
+
+    const randomMessage =
+      motivationalMessages[Math.floor(Math.random() * motivationalMessages.length)]
+
+    await this.scheduleMessage({
+      userId: studentData.userId,
+      phone: studentData.phone,
+      delay: 0,
+      messageType: 'text',
+      content: randomMessage,
+    })
+  }
+
+  /**
+   * Progress Check-ins Scheduling
+   */
+  private static async scheduleProgressCheckins(studentData: {
+    userId: string
+    phone: string
+    name: string
+  }) {
+    await this.scheduleMessage({
+      userId: studentData.userId,
+      phone: studentData.phone,
+      delay: 0,
+      messageType: 'text',
+      content: `Hi ${studentData.name}! 📊\n\nTime for your bi-weekly progress check-in. How are your studies going?\n\nReply with:\n1 - Excellent\n2 - Good\n3 - Need help\n\nWe're here to support you! 💪`,
+    })
+  }
+
+  /**
+   * Parent Updates Scheduling
+   */
+  private static async scheduleParentUpdates(studentData: {
+    userId: string
+    phone: string
+    name: string
+  }) {
+    await this.scheduleMessage({
+      userId: studentData.userId,
+      phone: studentData.phone,
+      delay: 0,
+      messageType: 'text',
+      content: `📈 Monthly Progress Update for ${studentData.name}\n\nDear Parents,\n\nYour child is making steady progress in their NEET preparation. Detailed report will be shared soon.\n\nFor queries, contact: +91-88264-44334`,
+    })
+  }
+
+  /**
    * Quick Action Handlers
    */
   private static async handleCounselingBooking(actionData: any) {
@@ -479,6 +539,68 @@ export class WhatsAppAutomationService {
           text: 'All Materials',
         },
       ]
+    )
+  }
+
+  private static async handleBatchTimingInquiry(actionData: any) {
+    return WhatsAppBusinessService.sendInteractiveMessage(
+      actionData.phone,
+      '⏰ Batch Timings',
+      'Our batches are scheduled at convenient times:',
+      'Choose the batch that suits you best',
+      [
+        {
+          type: 'reply',
+          reply: { id: 'morning_batch', title: 'Morning 6-8 AM' },
+        },
+        {
+          type: 'reply',
+          reply: { id: 'evening_batch', title: 'Evening 6-8 PM' },
+        },
+        {
+          type: 'url',
+          url: 'https://cerebrumbiologyacademy.com/batches',
+          text: 'View All Batches',
+        },
+      ]
+    )
+  }
+
+  private static async handleFeePayment(actionData: any) {
+    return WhatsAppBusinessService.sendInteractiveMessage(
+      actionData.phone,
+      '💰 Fee Payment',
+      'Multiple payment options available:',
+      'Choose your preferred payment method',
+      [
+        {
+          type: 'url',
+          url: 'https://cerebrumbiologyacademy.com/payment',
+          text: 'Pay Online',
+        },
+        {
+          type: 'reply',
+          reply: { id: 'emi_option', title: 'EMI Options' },
+        },
+        {
+          type: 'reply',
+          reply: { id: 'fee_structure', title: 'Fee Structure' },
+        },
+      ]
+    )
+  }
+
+  private static async handleAttendanceMarking(actionData: any) {
+    return WhatsAppBusinessService.sendTextMessage(
+      actionData.phone,
+      "✅ Attendance Marked Successfully!\n\nYour attendance has been recorded for today's session.\n\nAttendance: 95%\nClasses Attended: 38/40\n\nKeep up the great work! 🎯"
+    )
+  }
+
+  private static async handleDoubtSubmission(actionData: any) {
+    return WhatsAppBusinessService.sendTextMessage(
+      actionData.phone,
+      "❓ Submit Your Doubt\n\nPlease type your Biology doubt and our expert faculty will resolve it within 24 hours.\n\nYou can also:\n📸 Send images of your question\n🎥 Schedule a live doubt session\n\nWe're here to help! 👨‍🏫"
     )
   }
 

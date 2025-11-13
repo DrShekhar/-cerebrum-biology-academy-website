@@ -201,7 +201,7 @@ class ContentIntelligence {
     const cached = await this.cache.get(cacheKey)
 
     if (cached) {
-      return JSON.parse(cached)
+      return JSON.parse(cached as string)
     }
 
     try {
@@ -214,7 +214,6 @@ class ContentIntelligence {
       this.generatedContent.set(notes.id, notes)
 
       return notes
-
     } catch (error) {
       console.error('Study notes generation failed:', error)
       throw new Error('Failed to generate study notes')
@@ -301,25 +300,28 @@ Create comprehensive study notes with the following structure:
    - Critical facts
    - Must-remember points
 
-${params.language === 'bilingual' ? `
+${
+  params.language === 'bilingual'
+    ? `
 8. **Bilingual Terminology**
    - English-Hindi translation of key terms
    - Pronunciation guides
    - Regional variations in terminology
-` : ''}
+`
+    : ''
+}
 
 Format the response as detailed, well-structured content that students can use for effective studying.
 `
 
-    const response = await this.aiGateway.generateResponse({
+    const response: string = await this.aiGateway.generateResponse({
       prompt: `${systemPrompt}\n\n${userPrompt}`,
-      provider: aiConfig.getBestProvider(),
+      provider: aiConfig.getBestProvider() as 'claude' | 'openai',
       model: 'default',
       temperature: 0.7,
-      maxTokens: 3000
+      maxTokens: 3000,
     })
 
-    // Parse and structure the response
     const notes: StudyMaterial = {
       id: `notes_${Date.now()}`,
       type: 'notes',
@@ -338,33 +340,33 @@ Format the response as detailed, well-structured content that students can use f
         examRelevance: this.calculateExamRelevance(params.topic, params.curriculum),
         createdAt: new Date(),
         lastUpdated: new Date(),
-        version: '1.0'
+        version: '1.0',
       },
       structure: {
         sections: this.parseContentSections(response),
         keyPoints: this.extractKeyPoints(response),
         examples: this.extractExamples(response),
         applications: this.extractApplications(response),
-        commonMistakes: this.extractCommonMistakes(response)
+        commonMistakes: this.extractCommonMistakes(response),
       },
       multimedia: {
         diagrams: this.suggestDiagrams(params.topic),
         animations: [],
         videos: [],
-        interactiveElements: []
+        interactiveElements: [],
       },
       personalization: {
         learningStyle: params.learningStyle,
         adaptedFor: [],
         difficultyLevel: this.mapDifficultyToNumber(params.difficulty),
-        prerequisites: this.identifyPrerequisites(params.topic)
+        prerequisites: this.identifyPrerequisites(params.topic),
       },
       analytics: {
         usage: 0,
         effectiveness: 0,
         studentFeedback: 0,
-        comprehensionRate: 0
-      }
+        comprehensionRate: 0,
+      },
     }
 
     return notes
@@ -382,7 +384,7 @@ Format the response as detailed, well-structured content that students can use f
     const cached = await this.cache.get(cacheKey)
 
     if (cached) {
-      return JSON.parse(cached)
+      return JSON.parse(cached as string)
     }
 
     const diagramPrompt = `
@@ -442,12 +444,12 @@ Provide the diagram specification in JSON format:
 `
 
     try {
-      const response = await this.aiGateway.generateResponse({
+      const response: string = await this.aiGateway.generateResponse({
         prompt: diagramPrompt,
-        provider: aiConfig.getBestProvider(),
+        provider: aiConfig.getBestProvider() as 'claude' | 'openai',
         model: 'default',
         temperature: 0.5,
-        maxTokens: 2000
+        maxTokens: 2000,
       })
 
       const parsed = JSON.parse(response)
@@ -463,16 +465,15 @@ Provide the diagram specification in JSON format:
         style: {
           layout: this.inferLayout(params.diagramType),
           colorScheme: 'educational',
-          complexity: params.complexity
+          complexity: params.complexity,
         },
-        annotations: parsed.annotations || { callouts: [], explanations: [], mnemonics: [] }
+        annotations: parsed.annotations || { callouts: [], explanations: [], mnemonics: [] },
       }
 
       // Cache for 30 days
       await this.cache.set(cacheKey, JSON.stringify(diagram), 2592000)
 
       return diagram
-
     } catch (error) {
       console.error('Diagram generation failed:', error)
       throw new Error('Failed to generate diagram specification')
@@ -515,12 +516,12 @@ Format as JSON:
 `
 
     try {
-      const response = await this.aiGateway.generateResponse({
+      const response: string = await this.aiGateway.generateResponse({
         prompt: mnemonicPrompt,
-        provider: aiConfig.getBestProvider(),
+        provider: aiConfig.getBestProvider() as 'claude' | 'openai',
         model: 'default',
         temperature: 0.8,
-        maxTokens: 800
+        maxTokens: 800,
       })
 
       const parsed = JSON.parse(response)
@@ -536,13 +537,12 @@ Format as JSON:
         difficulty: params.difficulty,
         language: params.language,
         usage: 0,
-        studentRating: 0
+        studentRating: 0,
       }
 
       this.mnemonics.set(mnemonic.id, mnemonic)
 
       return mnemonic
-
     } catch (error) {
       console.error('Mnemonic generation failed:', error)
       throw new Error('Failed to generate mnemonic device')
@@ -571,8 +571,8 @@ Format as JSON:
         curriculum: params.curriculum,
         grade: params.grade,
         complexity: params.depth,
-        createdAt: new Date()
-      }
+        createdAt: new Date(),
+      },
     }
 
     this.conceptMaps.set(conceptMap.id, conceptMap)
@@ -588,7 +588,15 @@ Format as JSON:
 
   private extractVisualElements(content: string): string[] {
     const elements: string[] = []
-    const visualKeywords = ['diagram', 'flowchart', 'table', 'graph', 'chart', 'figure', 'illustration']
+    const visualKeywords = [
+      'diagram',
+      'flowchart',
+      'table',
+      'graph',
+      'chart',
+      'figure',
+      'illustration',
+    ]
 
     for (const keyword of visualKeywords) {
       if (content.toLowerCase().includes(keyword)) {
@@ -610,18 +618,18 @@ Format as JSON:
   private calculateExamRelevance(topic: string, curriculum: string): number {
     // Implementation for calculating exam relevance score
     const relevanceMap: Record<string, Record<string, number>> = {
-      'NEET': {
-        'genetics': 10,
+      NEET: {
+        genetics: 10,
         'cell-biology': 9,
-        'ecology': 7,
-        'human-physiology': 10
+        ecology: 7,
+        'human-physiology': 10,
       },
-      'CBSE': {
-        'genetics': 9,
+      CBSE: {
+        genetics: 9,
         'cell-biology': 8,
-        'ecology': 8,
-        'human-physiology': 9
-      }
+        ecology: 8,
+        'human-physiology': 9,
+      },
     }
 
     return relevanceMap[curriculum]?.[topic.toLowerCase()] || 5
@@ -658,7 +666,7 @@ Format as JSON:
   }
 
   private mapDifficultyToNumber(difficulty: string): number {
-    const map = { 'basic': 3, 'intermediate': 6, 'advanced': 9 }
+    const map = { basic: 3, intermediate: 6, advanced: 9 }
     return map[difficulty as keyof typeof map] || 5
   }
 
@@ -669,12 +677,12 @@ Format as JSON:
 
   private inferLayout(diagramType: DiagramSpec['type']): DiagramSpec['style']['layout'] {
     const layoutMap: Record<DiagramSpec['type'], DiagramSpec['style']['layout']> = {
-      'structure': 'hierarchical',
-      'process': 'horizontal',
-      'cycle': 'circular',
-      'comparison': 'horizontal',
-      'hierarchy': 'hierarchical',
-      'network': 'hierarchical'
+      structure: 'hierarchical',
+      process: 'horizontal',
+      cycle: 'circular',
+      comparison: 'horizontal',
+      hierarchy: 'hierarchical',
+      network: 'hierarchical',
     }
 
     return layoutMap[diagramType] || 'hierarchical'
@@ -695,17 +703,23 @@ Format as JSON:
   }): Promise<StudyMaterial[]> {
     const materials = Array.from(this.generatedContent.values())
 
-    return materials.filter(material => {
-      return (!query.topic || material.metadata.topic.toLowerCase().includes(query.topic.toLowerCase())) &&
-             (!query.curriculum || material.metadata.curriculum === query.curriculum) &&
-             (!query.grade || material.metadata.grade === query.grade) &&
-             (!query.type || material.type === query.type) &&
-             (!query.difficulty || material.metadata.difficulty === query.difficulty) &&
-             (!query.language || material.metadata.language === query.language)
+    return materials.filter((material) => {
+      return (
+        (!query.topic ||
+          material.metadata.topic.toLowerCase().includes(query.topic.toLowerCase())) &&
+        (!query.curriculum || material.metadata.curriculum === query.curriculum) &&
+        (!query.grade || material.metadata.grade === query.grade) &&
+        (!query.type || material.type === query.type) &&
+        (!query.difficulty || material.metadata.difficulty === query.difficulty) &&
+        (!query.language || material.metadata.language === query.language)
+      )
     })
   }
 
-  async updateContentAnalytics(contentId: string, analytics: Partial<StudyMaterial['analytics']>): Promise<void> {
+  async updateContentAnalytics(
+    contentId: string,
+    analytics: Partial<StudyMaterial['analytics']>
+  ): Promise<void> {
     const material = this.generatedContent.get(contentId)
     if (material) {
       Object.assign(material.analytics, analytics)

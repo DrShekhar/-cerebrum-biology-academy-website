@@ -596,7 +596,7 @@ export class StudyRoomEngine extends EventEmitter {
 
     // Cache room for persistence
     await this.cacheManager.set(
-      this.cacheManager.generateKey('study_room', roomId),
+      this.cacheManager.generateKey('session', roomId),
       room,
       86400 // 24 hours
     )

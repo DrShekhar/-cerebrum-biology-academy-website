@@ -62,6 +62,17 @@ export interface ContactSubmission {
   createdAt: number
 }
 
+export interface MarketingLead {
+  id: string
+  name: string
+  email: string
+  phone: string
+  source: string
+  status: 'new' | 'contacted' | 'qualified' | 'converted' | 'lost'
+  createdAt: number
+  updatedAt: number
+}
+
 // Initialize the database
 // You'll need to get your app ID from InstantDB dashboard
 const rawAppId = process.env.NEXT_PUBLIC_INSTANT_APP_ID as string

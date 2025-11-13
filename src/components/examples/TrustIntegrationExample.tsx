@@ -2,7 +2,6 @@
 
 import React from 'react'
 import { TrustInjections, TrustWrapper } from '@/components/conversion/TrustInjections'
-import { SmartButton } from '@/components/ui/LoadingStates'
 
 /**
  * Example implementations showing how to integrate trust elements
@@ -46,13 +45,12 @@ export function CourseCardWithTrust() {
           <TrustWrapper position="near-enroll" />
 
           {/* Enrollment Button */}
-          <SmartButton
-            variant="primary"
-            className="w-full mb-4"
+          <button
+            className="w-full mb-4 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
             onClick={() => console.log('Enroll clicked')}
           >
             Enroll Now
-          </SmartButton>
+          </button>
 
           {/* Security Badges */}
           <TrustWrapper position="security" />
@@ -162,13 +160,16 @@ export function PricingPageWithTrust() {
             {plan.popular && <TrustWrapper position="near-enroll" />}
 
             {/* CTA Button */}
-            <SmartButton
-              variant={plan.popular ? 'primary' : 'secondary'}
-              className="w-full"
+            <button
+              className={`w-full font-semibold py-3 px-6 rounded-lg transition-colors ${
+                plan.popular
+                  ? 'bg-purple-600 hover:bg-purple-700 text-white'
+                  : 'bg-gray-200 hover:bg-gray-300 text-gray-800'
+              }`}
               onClick={() => console.log(`${plan.name} selected`)}
             >
               Choose {plan.name}
-            </SmartButton>
+            </button>
           </div>
         ))}
       </div>
@@ -256,14 +257,12 @@ export function EnrollmentFormWithTrust() {
         <TrustWrapper position="near-enroll" />
 
         {/* Payment Button */}
-        <SmartButton
-          variant="primary"
-          className="w-full"
-          size="lg"
+        <button
+          className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-4 px-6 rounded-lg transition-colors text-lg"
           onClick={() => console.log('Payment initiated')}
         >
           Proceed to Payment ₹15,999
-        </SmartButton>
+        </button>
 
         {/* Security Badges */}
         <TrustWrapper position="security" />
@@ -298,23 +297,19 @@ export function HeroWithTrust() {
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-          <SmartButton
-            variant="primary"
-            size="lg"
-            className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600"
+          <button
+            className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-semibold py-4 px-8 rounded-lg transition-colors text-lg"
             onClick={() => console.log('Start free trial')}
           >
             Start Free Trial
-          </SmartButton>
+          </button>
 
-          <SmartButton
-            variant="secondary"
-            size="lg"
-            className="bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20"
+          <button
+            className="bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 text-white font-semibold py-4 px-8 rounded-lg transition-colors text-lg"
             onClick={() => console.log('Book demo')}
           >
             Book Demo Class
-          </SmartButton>
+          </button>
         </div>
 
         {/* Trust Elements */}

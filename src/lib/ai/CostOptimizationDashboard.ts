@@ -4,7 +4,10 @@
  */
 
 import { TaskAnalysis } from './SmartProviderSelector'
-import { QualityReport } from './QualityAssurancePipeline'
+import type { QualityReport } from './QualityAssurancePipeline'
+
+// Re-export for other modules
+export type { QualityReport }
 
 interface CostMetrics {
   totalCost: number

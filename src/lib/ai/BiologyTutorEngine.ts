@@ -132,56 +132,62 @@ class BiologyTutorEngine {
   private initializeKnowledgeBase(): BiologyKnowledgeBase {
     return {
       topics: new Map([
-        ['cell-biology', {
-          name: 'Cell Biology',
-          curriculum: ['NEET', 'CBSE', 'ICSE', 'IB'],
-          grade: ['11', '12'],
-          prerequisites: ['basic-chemistry'],
-          subtopics: ['cell-structure', 'cell-division', 'cell-cycle', 'biomolecules'],
-          importanceScore: 9.5,
-          examFrequency: 95,
-          averageDifficulty: 7.2,
-          commonQuestions: [
-            'Difference between prokaryotic and eukaryotic cells',
-            'Phases of mitosis and meiosis',
-            'Structure and function of cell organelles'
-          ],
-          keyPoints: [
-            'Cell is the basic unit of life',
-            'Mitochondria is powerhouse of cell',
-            'DNA replication occurs in S phase'
-          ],
-          diagrams: ['cell-structure', 'mitosis-phases', 'meiosis-stages'],
-          realWorldApplications: ['Cancer research', 'Genetic engineering', 'Stem cell therapy']
-        }],
-        ['genetics', {
-          name: 'Genetics',
-          curriculum: ['NEET', 'CBSE', 'ICSE', 'IB'],
-          grade: ['12'],
-          prerequisites: ['cell-biology', 'molecular-biology'],
-          subtopics: ['mendelian-genetics', 'molecular-genetics', 'population-genetics'],
-          importanceScore: 9.8,
-          examFrequency: 98,
-          averageDifficulty: 8.5,
-          commonQuestions: [
-            'Monohybrid and dihybrid crosses',
-            'DNA replication mechanism',
-            'Gene expression and regulation'
-          ],
-          keyPoints: [
-            'Genes determine traits',
-            'DNA is double helix structure',
-            'Central dogma: DNA → RNA → Protein'
-          ],
-          diagrams: ['dna-structure', 'replication-fork', 'transcription-translation'],
-          realWorldApplications: ['Genetic counseling', 'Gene therapy', 'GMO crops']
-        }]
+        [
+          'cell-biology',
+          {
+            name: 'Cell Biology',
+            curriculum: ['NEET', 'CBSE', 'ICSE', 'IB'],
+            grade: ['11', '12'],
+            prerequisites: ['basic-chemistry'],
+            subtopics: ['cell-structure', 'cell-division', 'cell-cycle', 'biomolecules'],
+            importanceScore: 9.5,
+            examFrequency: 95,
+            averageDifficulty: 7.2,
+            commonQuestions: [
+              'Difference between prokaryotic and eukaryotic cells',
+              'Phases of mitosis and meiosis',
+              'Structure and function of cell organelles',
+            ],
+            keyPoints: [
+              'Cell is the basic unit of life',
+              'Mitochondria is powerhouse of cell',
+              'DNA replication occurs in S phase',
+            ],
+            diagrams: ['cell-structure', 'mitosis-phases', 'meiosis-stages'],
+            realWorldApplications: ['Cancer research', 'Genetic engineering', 'Stem cell therapy'],
+          },
+        ],
+        [
+          'genetics',
+          {
+            name: 'Genetics',
+            curriculum: ['NEET', 'CBSE', 'ICSE', 'IB'],
+            grade: ['12'],
+            prerequisites: ['cell-biology', 'molecular-biology'],
+            subtopics: ['mendelian-genetics', 'molecular-genetics', 'population-genetics'],
+            importanceScore: 9.8,
+            examFrequency: 98,
+            averageDifficulty: 8.5,
+            commonQuestions: [
+              'Monohybrid and dihybrid crosses',
+              'DNA replication mechanism',
+              'Gene expression and regulation',
+            ],
+            keyPoints: [
+              'Genes determine traits',
+              'DNA is double helix structure',
+              'Central dogma: DNA → RNA → Protein',
+            ],
+            diagrams: ['dna-structure', 'replication-fork', 'transcription-translation'],
+            realWorldApplications: ['Genetic counseling', 'Gene therapy', 'GMO crops'],
+          },
+        ],
       ]),
       concepts: new Map(),
       examPatterns: new Map(),
       commonMistakes: new Map(),
       mnemonics: new Map(),
-      diagrams: new Map()
+      diagrams: new Map(),
     }
   }
 
@@ -193,7 +199,7 @@ class BiologyTutorEngine {
 
       if (cachedResponse) {
         console.log('🎯 Returning cached biology response')
-        return JSON.parse(cachedResponse)
+        return JSON.parse(cachedResponse as string)
       }
 
       // Analyze query and determine best approach
@@ -209,7 +215,6 @@ class BiologyTutorEngine {
       this.addToHistory(query.studentId, response)
 
       return response
-
     } catch (error) {
       console.error('❌ Biology tutor error:', error)
       return this.generateFallbackResponse(query)
@@ -240,12 +245,12 @@ class BiologyTutorEngine {
     }
     `
 
-    const analysisResult = await this.aiGateway.generateResponse({
+    const analysisResult: string = await this.aiGateway.generateResponse({
       prompt: analysisPrompt,
-      provider: 'anthropic',
+      provider: 'claude' as const,
       model: 'fast',
       temperature: 0.3,
-      maxTokens: 1000
+      maxTokens: 1000,
     })
 
     try {
@@ -257,12 +262,15 @@ class BiologyTutorEngine {
         queryIntent: 'concept_clarification',
         responseStrategy: 'detailed_explanation',
         examRelevance: 'medium',
-        timeEstimate: 15
+        timeEstimate: 15,
       }
     }
   }
 
-  private async generateBiologyResponse(query: BiologyQuery, analysis: any): Promise<BiologyResponse> {
+  private async generateBiologyResponse(
+    query: BiologyQuery,
+    analysis: any
+  ): Promise<BiologyResponse> {
     const systemPrompt = `You are Dr. Bio, an expert Biology teacher specializing in ${query.curriculum} curriculum for Grade ${query.grade}.
 
     Student Profile:
@@ -312,15 +320,14 @@ class BiologyTutorEngine {
     Format your response to be student-friendly and engaging.
     `
 
-    const aiResponse = await this.aiGateway.generateResponse({
+    const aiResponse: string = await this.aiGateway.generateResponse({
       prompt: `${systemPrompt}\n\n${userPrompt}`,
-      provider: aiConfig.getBestProvider(),
+      provider: aiConfig.getBestProvider() as 'claude' | 'openai',
       model: 'default',
       temperature: 0.7,
-      maxTokens: 2000
+      maxTokens: 2000,
     })
 
-    // Parse and structure the response
     const response: BiologyResponse = {
       id: `bio_response_${Date.now()}`,
       queryId: query.id,
@@ -329,7 +336,7 @@ class BiologyTutorEngine {
       visualAids: {
         diagrams: this.extractDiagrams(query.topic || ''),
         flowcharts: this.extractFlowcharts(query.topic || ''),
-        mnemonics: this.extractMnemonics(aiResponse)
+        mnemonics: this.extractMnemonics(aiResponse),
       },
       relatedTopics: this.getRelatedTopics(query.topic || ''),
       practiceQuestions: this.generatePracticeQuestions(query),
@@ -338,14 +345,14 @@ class BiologyTutorEngine {
         importance: analysis.examRelevance || 'medium',
         examWeight: this.getExamWeight(query.topic || '', query.curriculum),
         frequencyInExams: this.getExamFrequency(query.topic || '', query.curriculum),
-        yearlyTrends: []
+        yearlyTrends: [],
       },
       followUpSuggestions: this.generateFollowUpSuggestions(query, analysis),
       estimatedStudyTime: analysis.timeEstimate || 15,
       difficulty: analysis.difficultyLevel || 5,
       confidence: 0.85,
       sources: ['NCERT', 'Campbell Biology', 'Lehninger Biochemistry'],
-      timestamp: new Date()
+      timestamp: new Date(),
     }
 
     return response
@@ -357,7 +364,10 @@ class BiologyTutorEngine {
 
   private extractAnswer(aiResponse: string): string {
     const lines = aiResponse.split('\n')
-    return lines.find(line => line.trim() && !line.startsWith('#'))?.trim() || aiResponse.substring(0, 200)
+    return (
+      lines.find((line) => line.trim() && !line.startsWith('#'))?.trim() ||
+      aiResponse.substring(0, 200)
+    )
   }
 
   private extractExplanation(aiResponse: string): string {
@@ -373,8 +383,8 @@ class BiologyTutorEngine {
     // Map topics to relevant flowcharts
     const flowchartMap: Record<string, string[]> = {
       'cell-division': ['mitosis-flowchart', 'meiosis-flowchart'],
-      'photosynthesis': ['light-reaction-flowchart', 'calvin-cycle-flowchart'],
-      'respiration': ['glycolysis-flowchart', 'krebs-cycle-flowchart']
+      photosynthesis: ['light-reaction-flowchart', 'calvin-cycle-flowchart'],
+      respiration: ['glycolysis-flowchart', 'krebs-cycle-flowchart'],
     }
     return flowchartMap[topic.toLowerCase()] || []
   }
@@ -402,10 +412,10 @@ class BiologyTutorEngine {
       `What are the key features of ${query.topic}?`,
       `Explain the significance of ${query.topic} in Biology.`,
       `Compare and contrast different aspects of ${query.topic}.`,
-      `What are the practical applications of ${query.topic}?`
+      `What are the practical applications of ${query.topic}?`,
     ]
 
-    return baseQuestions.map(q => q.replace('${query.topic}', query.topic || 'this concept'))
+    return baseQuestions.map((q) => q.replace('${query.topic}', query.topic || 'this concept'))
   }
 
   private extractStudyTips(aiResponse: string): string[] {
@@ -413,33 +423,39 @@ class BiologyTutorEngine {
     const lines = aiResponse.split('\n')
 
     for (const line of lines) {
-      if (line.toLowerCase().includes('tip') || line.toLowerCase().includes('study') || line.toLowerCase().includes('remember')) {
+      if (
+        line.toLowerCase().includes('tip') ||
+        line.toLowerCase().includes('study') ||
+        line.toLowerCase().includes('remember')
+      ) {
         tips.push(line.trim())
       }
     }
 
-    return tips.length > 0 ? tips : [
-      'Create visual diagrams to understand the concept',
-      'Practice with past year questions',
-      'Make flashcards for key terms',
-      'Teach the concept to someone else'
-    ]
+    return tips.length > 0
+      ? tips
+      : [
+          'Create visual diagrams to understand the concept',
+          'Practice with past year questions',
+          'Make flashcards for key terms',
+          'Teach the concept to someone else',
+        ]
   }
 
   private getExamWeight(topic: string, curriculum: string): number {
     const weights: Record<string, Record<string, number>> = {
-      'NEET': {
+      NEET: {
         'cell-biology': 15,
-        'genetics': 20,
-        'ecology': 10,
-        'human-physiology': 25
+        genetics: 20,
+        ecology: 10,
+        'human-physiology': 25,
       },
-      'CBSE': {
+      CBSE: {
         'cell-biology': 12,
-        'genetics': 18,
-        'ecology': 15,
-        'human-physiology': 20
-      }
+        genetics: 18,
+        ecology: 15,
+        'human-physiology': 20,
+      },
     }
 
     return weights[curriculum]?.[topic.toLowerCase()] || 10
@@ -456,7 +472,7 @@ class BiologyTutorEngine {
       'Do you want practice questions on this concept?',
       'Should I explain the exam pattern for this topic?',
       'Would you like mnemonics to remember key points?',
-      'Do you need help with related mathematical calculations?'
+      'Do you need help with related mathematical calculations?',
     ]
   }
 
@@ -478,31 +494,33 @@ class BiologyTutorEngine {
     return {
       id: `fallback_${Date.now()}`,
       queryId: query.id,
-      answer: "I'm having trouble processing your question right now. Let me help you in a different way.",
-      explanation: "Please try rephrasing your question or contact our human tutors for immediate assistance.",
+      answer:
+        "I'm having trouble processing your question right now. Let me help you in a different way.",
+      explanation:
+        'Please try rephrasing your question or contact our human tutors for immediate assistance.',
       relatedTopics: [],
       practiceQuestions: [],
       studyTips: [
         'Try breaking down complex questions into smaller parts',
         'Use specific Biology terminology in your questions',
-        'Mention the chapter or topic you\'re studying'
+        "Mention the chapter or topic you're studying",
       ],
       examRelevance: {
         importance: 'medium',
         examWeight: 10,
         frequencyInExams: 50,
-        yearlyTrends: []
+        yearlyTrends: [],
       },
       followUpSuggestions: [
         'Can you rephrase your question?',
         'Would you like to speak with a human tutor?',
-        'Do you want to explore related topics?'
+        'Do you want to explore related topics?',
       ],
       estimatedStudyTime: 10,
       difficulty: 5,
       confidence: 0.5,
       sources: [],
-      timestamp: new Date()
+      timestamp: new Date(),
     }
   }
 
@@ -512,12 +530,12 @@ class BiologyTutorEngine {
 
     return {
       totalQueries: history.length,
-      topicsExplored: [...new Set(history.map(r => r.queryId))],
+      topicsExplored: [...new Set(history.map((r) => r.queryId))],
       averageDifficulty: history.reduce((sum, r) => sum + r.difficulty, 0) / history.length,
       strongTopics: [],
       weakTopics: [],
       recommendedStudyTime: 30,
-      progressScore: 0.75
+      progressScore: 0.75,
     }
   }
 
@@ -533,7 +551,7 @@ class BiologyTutorEngine {
       monthlyGoals: [],
       practiceSchedule: [],
       revisionPlan: [],
-      mockTestSchedule: []
+      mockTestSchedule: [],
     }
   }
 }

@@ -179,7 +179,7 @@ class AssessmentAI {
       bloomsLevel: 'remember',
       examWeight: 4,
       timeAllocation: 1,
-      tags: ['organelles', 'cell-membrane', 'nucleus']
+      tags: ['organelles', 'cell-membrane', 'nucleus'],
     })
 
     this.questionTemplates.set('genetics-numerical-hard', {
@@ -193,7 +193,7 @@ class AssessmentAI {
       bloomsLevel: 'apply',
       examWeight: 4,
       timeAllocation: 5,
-      tags: ['hardy-weinberg', 'allele-frequency', 'calculations']
+      tags: ['hardy-weinberg', 'allele-frequency', 'calculations'],
     })
 
     // Add more templates for different topics and types
@@ -212,7 +212,7 @@ class AssessmentAI {
     const cached = await this.cache.get(cacheKey)
 
     if (cached) {
-      return JSON.parse(cached)
+      return JSON.parse(cached as string)
     }
 
     const questions: GeneratedQuestion[] = []
@@ -224,7 +224,7 @@ class AssessmentAI {
           grade: params.grade,
           topics: params.topics,
           difficulty: params.difficulty,
-          types: params.types
+          types: params.types,
         })
 
         if (question) {
@@ -256,17 +256,16 @@ class AssessmentAI {
     const aiPrompt = this.buildQuestionGenerationPrompt(template, params)
 
     try {
-      const response = await this.aiGateway.generateResponse({
+      const response: string = await this.aiGateway.generateResponse({
         prompt: aiPrompt,
-        provider: aiConfig.getBestProvider(),
+        provider: aiConfig.getBestProvider() as 'claude' | 'openai',
         model: 'default',
         temperature: 0.8,
-        maxTokens: 1500
+        maxTokens: 1500,
       })
 
       const parsedQuestion = this.parseAIResponse(response, template)
       return parsedQuestion
-
     } catch (error) {
       console.error('AI question generation failed:', error)
       return null
@@ -274,9 +273,10 @@ class AssessmentAI {
   }
 
   private selectQuestionTemplate(params: any): QuestionTemplate | null {
-    const availableTemplates = Array.from(this.questionTemplates.values()).filter(template => {
-      return template.curriculum.includes(params.curriculum) &&
-             template.grade.includes(params.grade)
+    const availableTemplates = Array.from(this.questionTemplates.values()).filter((template) => {
+      return (
+        template.curriculum.includes(params.curriculum) && template.grade.includes(params.grade)
+      )
     })
 
     if (availableTemplates.length === 0) return null
@@ -316,28 +316,40 @@ Requirements:
 5. Scientifically accurate
 6. Exam-relevant
 
-${template.type === 'mcq' ? `
+${
+  template.type === 'mcq'
+    ? `
 Format as MCQ with:
 - Clear question stem
 - 4 options (A, B, C, D)
 - Only one correct answer
 - Plausible distractors
 - Avoid "all of the above" or "none of the above"
-` : ''}
+`
+    : ''
+}
 
-${template.type === 'short_answer' ? `
+${
+  template.type === 'short_answer'
+    ? `
 Format as short answer (2-3 marks):
 - Clear question
 - Expected answer length: 50-100 words
 - Specific marking points
-` : ''}
+`
+    : ''
+}
 
-${template.type === 'diagram' ? `
+${
+  template.type === 'diagram'
+    ? `
 Format as diagram-based question:
 - Clear instructions for diagram
 - Specific labeling requirements
 - Related concept questions
-` : ''}
+`
+    : ''
+}
 
 Provide response in JSON format:
 {
@@ -388,27 +400,29 @@ Provide response in JSON format:
           aiProvider: aiConfig.getBestProvider(),
           confidence: 0.8,
           reviewStatus: 'pending',
-          usageCount: 0
-        }
+          usageCount: 0,
+        },
       }
 
       // Store generated question
       this.generatedQuestions.set(question.id, question)
 
       return question
-
     } catch (error) {
       console.error('Failed to parse AI response:', error)
       return null
     }
   }
 
-  async evaluateAnswer(answer: StudentAnswer, question: GeneratedQuestion): Promise<AnswerEvaluation> {
+  async evaluateAnswer(
+    answer: StudentAnswer,
+    question: GeneratedQuestion
+  ): Promise<AnswerEvaluation> {
     const cacheKey = `eval_${answer.questionId}_${Buffer.from(answer.answer.toString()).toString('base64').substring(0, 20)}`
     const cached = await this.cache.get(cacheKey)
 
     if (cached) {
-      return JSON.parse(cached)
+      return JSON.parse(cached as string)
     }
 
     try {
@@ -418,14 +432,16 @@ Provide response in JSON format:
       await this.cache.set(cacheKey, JSON.stringify(evaluation), 86400)
 
       return evaluation
-
     } catch (error) {
       console.error('Answer evaluation failed:', error)
       return this.generateFallbackEvaluation(answer, question)
     }
   }
 
-  private async performAIEvaluation(answer: StudentAnswer, question: GeneratedQuestion): Promise<AnswerEvaluation> {
+  private async performAIEvaluation(
+    answer: StudentAnswer,
+    question: GeneratedQuestion
+  ): Promise<AnswerEvaluation> {
     const evaluationPrompt = `
 You are an expert Biology teacher evaluating a student's answer.
 
@@ -476,12 +492,12 @@ Provide detailed evaluation in JSON format:
 }
 `
 
-    const response = await this.aiGateway.generateResponse({
+    const response: string = await this.aiGateway.generateResponse({
       prompt: evaluationPrompt,
-      provider: aiConfig.getBestProvider(),
+      provider: aiConfig.getBestProvider() as 'claude' | 'openai',
       model: 'default',
       temperature: 0.3,
-      maxTokens: 1500
+      maxTokens: 1500,
     })
 
     const parsed = JSON.parse(response)
@@ -502,17 +518,20 @@ Provide detailed evaluation in JSON format:
         evaluatedAt: new Date(),
         aiProvider: aiConfig.getBestProvider(),
         confidence: 0.85,
-        humanReviewRequired: parsed.score < 30 || parsed.score > 95 // Edge cases need human review
-      }
+        humanReviewRequired: parsed.score < 30 || parsed.score > 95, // Edge cases need human review
+      },
     }
 
     return evaluation
   }
 
-  private generateFallbackEvaluation(answer: StudentAnswer, question: GeneratedQuestion): AnswerEvaluation {
+  private generateFallbackEvaluation(
+    answer: StudentAnswer,
+    question: GeneratedQuestion
+  ): AnswerEvaluation {
     // Basic evaluation for when AI fails
-    const isCorrect = answer.answer.toString().toLowerCase().trim() ===
-                     question.correctAnswer.toLowerCase().trim()
+    const isCorrect =
+      answer.answer.toString().toLowerCase().trim() === question.correctAnswer.toLowerCase().trim()
 
     return {
       id: `eval_fallback_${Date.now()}`,
@@ -527,29 +546,29 @@ Provide detailed evaluation in JSON format:
         weaknesses: isCorrect ? [] : ['Answer does not match expected response'],
         misconceptions: [],
         improvements: isCorrect ? [] : ['Review the concept and try again'],
-        conceptualGaps: []
+        conceptualGaps: [],
       },
-      detailedFeedback: isCorrect ?
-        'Well done! Your answer is correct.' :
-        'Your answer is incorrect. Please review the concept and try again.',
+      detailedFeedback: isCorrect
+        ? 'Well done! Your answer is correct.'
+        : 'Your answer is incorrect. Please review the concept and try again.',
       partialCredits: {
         concept: isCorrect ? 25 : 0,
         application: isCorrect ? 25 : 0,
         reasoning: isCorrect ? 25 : 0,
-        presentation: isCorrect ? 25 : 0
+        presentation: isCorrect ? 25 : 0,
       },
       nextSteps: {
         recommendedTopics: isCorrect ? [] : [question.topic],
         practiceQuestions: [],
         studyMaterials: [],
-        tutoring: !isCorrect
+        tutoring: !isCorrect,
       },
       metadata: {
         evaluatedAt: new Date(),
         aiProvider: 'fallback',
         confidence: 0.5,
-        humanReviewRequired: true
-      }
+        humanReviewRequired: true,
+      },
     }
   }
 
@@ -570,7 +589,7 @@ Provide detailed evaluation in JSON format:
       grade: params.grade,
       topics: params.topic ? [params.topic] : undefined,
       difficulty: params.difficulty || 'mixed',
-      timeLimit: params.timeLimit
+      timeLimit: params.timeLimit,
     })
 
     const session: AssessmentSession = {
@@ -589,7 +608,7 @@ Provide detailed evaluation in JSON format:
         difficulty: params.difficulty || 'mixed',
         includeNegativeMarking: params.type === 'mock' || params.type === 'full_test',
         allowReview: params.type === 'practice',
-        showAnswersImmediately: params.type === 'practice'
+        showAnswersImmediately: params.type === 'practice',
       },
       results: {
         totalScore: 0,
@@ -598,7 +617,7 @@ Provide detailed evaluation in JSON format:
         accuracy: 0,
         timeEfficiency: 0,
         topicWiseScore: new Map(),
-        difficultyWiseScore: new Map()
+        difficultyWiseScore: new Map(),
       },
       analytics: {
         strengths: [],
@@ -606,12 +625,12 @@ Provide detailed evaluation in JSON format:
         improvementAreas: [],
         readinessScore: 0,
         predictedScore: 0,
-        studyRecommendations: []
+        studyRecommendations: [],
       },
       status: 'created',
       timestamps: {
-        createdAt: new Date()
-      }
+        createdAt: new Date(),
+      },
     }
 
     return session
@@ -627,25 +646,32 @@ Provide detailed evaluation in JSON format:
   }
 
   // Performance analytics methods
-  async getStudentPerformanceAnalytics(studentId: string, timeframe: 'week' | 'month' | 'all'): Promise<any> {
+  async getStudentPerformanceAnalytics(
+    studentId: string,
+    timeframe: 'week' | 'month' | 'all'
+  ): Promise<any> {
     // Implementation for comprehensive performance analytics
     return {
       overallProgress: 0.75,
       strongTopics: [],
       weakTopics: [],
       improvementTrends: [],
-      readinessScore: 0.80,
-      predictions: {}
+      readinessScore: 0.8,
+      predictions: {},
     }
   }
 
-  async generatePersonalizedStudyPlan(studentId: string, targetExam: string, timeframe: number): Promise<any> {
+  async generatePersonalizedStudyPlan(
+    studentId: string,
+    targetExam: string,
+    timeframe: number
+  ): Promise<any> {
     // Implementation for AI-generated personalized study plans
     return {
       dailySchedule: {},
       weeklyGoals: [],
       practiceSchedule: [],
-      revisionPlan: {}
+      revisionPlan: {},
     }
   }
 }

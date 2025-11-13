@@ -73,7 +73,7 @@ interface TestGenerationResponse {
  */
 async function getStudentWeakAreas(studentId: string) {
   try {
-    const weakAreas = await prisma.userProgress.findMany({
+    const weakAreas = await prisma.user_progress.findMany({
       where: {
         OR: [{ userId: studentId }, { freeUserId: studentId }],
         accuracy: { lt: 60 },
@@ -101,7 +101,7 @@ async function getStudentWeakAreas(studentId: string) {
  */
 async function getStudentPerformance(studentId: string) {
   try {
-    const recentTests = await prisma.testSession.findMany({
+    const recentTests = await prisma.test_sessions.findMany({
       where: {
         OR: [{ userId: studentId }, { freeUserId: studentId }],
         status: 'COMPLETED',
@@ -112,7 +112,7 @@ async function getStudentPerformance(studentId: string) {
         totalScore: true,
         percentage: true,
         submittedAt: true,
-        testTemplate: {
+        test_templates: {
           select: {
             title: true,
             topics: true,
@@ -200,7 +200,7 @@ async function fetchQuestions(
       whereClause.difficulty = difficultyLevel.toUpperCase()
     }
 
-    const questions = await prisma.question.findMany({
+    const questions = await prisma.questions.findMany({
       where: whereClause,
       take: count * 2, // Fetch extra for randomization
       orderBy: {
@@ -495,10 +495,12 @@ export async function POST(request: NextRequest) {
     }))
 
     // Create test session in database
-    const testSession = await prisma.testSession.create({
+    const testSession = await prisma.test_sessions.create({
       data: {
-        userId: body.studentId.startsWith('user_') ? body.studentId : undefined,
-        freeUserId: body.studentId.startsWith('free_') ? body.studentId : undefined,
+        id: `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+        ...(body.studentId.startsWith('user_')
+          ? { userId: body.studentId }
+          : { freeUserId: body.studentId }),
         testTemplateId: 'ai-generated-' + Date.now(),
         sessionToken: `test_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
         status: 'NOT_STARTED',

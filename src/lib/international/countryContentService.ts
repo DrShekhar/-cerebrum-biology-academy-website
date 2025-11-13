@@ -36,6 +36,7 @@ export interface CountryContactInfo {
   address: string
   hours: string
   preferredContact: string
+  timezone: string
 }
 
 export interface SocialProof {
@@ -99,6 +100,7 @@ class CountryContentService {
         address: 'Delhi NCR Headquarters + 12 coaching hubs across India',
         hours: 'Mon-Sat: 9 AM - 8 PM IST',
         preferredContact: 'WhatsApp or Phone Call',
+        timezone: 'Asia/Kolkata',
       },
       socialProof: {
         totalStudents: 10000,
@@ -158,6 +160,7 @@ class CountryContentService {
         address: 'Available Nationwide - Online Classes',
         hours: '24/7 Support Available (EST/PST friendly)',
         preferredContact: 'Email or WhatsApp',
+        timezone: 'America/New_York',
       },
       socialProof: {
         totalStudents: 500,
@@ -223,6 +226,7 @@ class CountryContentService {
         address: 'London Office + Online Classes',
         hours: 'Mon-Fri: 9 AM - 6 PM GMT',
         preferredContact: 'Email or WhatsApp',
+        timezone: 'Europe/London',
       },
       socialProof: {
         totalStudents: 300,
@@ -282,6 +286,7 @@ class CountryContentService {
         address: 'Sydney Office + Online Classes',
         hours: 'Mon-Fri: 9 AM - 6 PM AEDT',
         preferredContact: 'Email or WhatsApp',
+        timezone: 'Australia/Sydney',
       },
       socialProof: {
         totalStudents: 200,
@@ -347,6 +352,7 @@ class CountryContentService {
         address: 'Toronto Office + Online Classes',
         hours: 'Mon-Fri: 9 AM - 6 PM EST/PST',
         preferredContact: 'Email or WhatsApp',
+        timezone: 'America/Toronto',
       },
       socialProof: {
         totalStudents: 250,
@@ -412,6 +418,7 @@ class CountryContentService {
         address: 'Dubai Office: Business Bay, Abu Dhabi Center: Al Maryah Island',
         hours: 'Sun-Thu: 9 AM - 6 PM GST, Fri-Sat: Weekend Classes',
         preferredContact: 'WhatsApp preferred',
+        timezone: 'Asia/Dubai',
       },
       socialProof: {
         totalStudents: 300,
@@ -476,6 +483,7 @@ class CountryContentService {
         address: 'Singapore Office: Raffles Place + Online Classes',
         hours: 'Mon-Fri: 9 AM - 6 PM SGT, Weekend sessions available',
         preferredContact: 'Email or WhatsApp',
+        timezone: 'Asia/Singapore',
       },
       socialProof: {
         totalStudents: 150,

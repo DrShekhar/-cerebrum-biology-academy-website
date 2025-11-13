@@ -285,15 +285,16 @@ export function ExploratoryFlow({ onCounselingBook, className = '' }: Explorator
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
+                onClick={() => handleCourseToggle(course.id)}
+                className="cursor-pointer"
               >
                 <PremiumCard
                   variant="luxury"
-                  className={`h-full cursor-pointer transition-all duration-300 ${
+                  className={`h-full transition-all duration-300 ${
                     selectedCourses.includes(course.id)
                       ? 'ring-2 ring-blue-500 bg-blue-50'
                       : 'hover:shadow-xl'
                   }`}
-                  onClick={() => handleCourseToggle(course.id)}
                 >
                   <div className="p-6 space-y-4">
                     {/* Course Header */}

@@ -247,7 +247,8 @@ export const usePricingCalculator = () => {
     (
       totalAmount: number,
       planType: PricingPlan['type'],
-      startDate: Date = new Date()
+      startDate: Date = new Date(),
+      paymentPreference?: string
     ): PricingInstallment[] => {
       const installments: PricingInstallment[] = []
 
@@ -290,7 +291,7 @@ export const usePricingCalculator = () => {
 
         case 'custom':
           // Custom plan based on user preferences
-          const customInstallments = selectionData?.budget?.paymentPreference === 'flexible' ? 6 : 3
+          const customInstallments = paymentPreference === 'flexible' ? 6 : 3
           const customAmount = Math.ceil(totalAmount / customInstallments)
           for (let i = 0; i < customInstallments; i++) {
             installments.push({
@@ -364,7 +365,12 @@ export const usePricingCalculator = () => {
             name: 'Full Payment',
             type: 'full-payment',
             totalAmount: finalAmount * 0.95, // 5% discount for full payment
-            installments: generateInstallments(finalAmount * 0.95, 'full-payment'),
+            installments: generateInstallments(
+              finalAmount * 0.95,
+              'full-payment',
+              undefined,
+              selectionData.budget.paymentPreference
+            ),
             processingFee: fees.processing,
             discount: {
               amount: finalAmount * 0.05,
@@ -380,7 +386,12 @@ export const usePricingCalculator = () => {
             name: 'Quarterly Payment',
             type: 'quarterly',
             totalAmount: finalAmount * 1.02, // 2% convenience fee
-            installments: generateInstallments(finalAmount * 1.02, 'quarterly'),
+            installments: generateInstallments(
+              finalAmount * 1.02,
+              'quarterly',
+              undefined,
+              selectionData.budget.paymentPreference
+            ),
             processingFee: fees.processing,
             discount: {
               amount: 0,
@@ -395,7 +406,12 @@ export const usePricingCalculator = () => {
             name: 'Monthly EMI',
             type: 'monthly',
             totalAmount: finalAmount * 1.05, // 5% convenience fee
-            installments: generateInstallments(finalAmount * 1.05, 'monthly'),
+            installments: generateInstallments(
+              finalAmount * 1.05,
+              'monthly',
+              undefined,
+              selectionData.budget.paymentPreference
+            ),
             processingFee: fees.processing,
             discount: {
               amount: 0,
@@ -410,7 +426,12 @@ export const usePricingCalculator = () => {
             name: 'Custom Plan',
             type: 'custom',
             totalAmount: finalAmount * 1.03, // 3% convenience fee
-            installments: generateInstallments(finalAmount * 1.03, 'custom'),
+            installments: generateInstallments(
+              finalAmount * 1.03,
+              'custom',
+              undefined,
+              selectionData.budget.paymentPreference
+            ),
             processingFee: fees.processing,
             discount: {
               amount: 0,

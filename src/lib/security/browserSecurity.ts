@@ -604,8 +604,12 @@ export class BrowserFingerprinting {
     // Add WebGL fingerprint if available
     const canvas = document.createElement('canvas')
     const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl')
-    if (gl) {
-      components.push(gl.getParameter(gl.RENDERER) || '', gl.getParameter(gl.VENDOR) || '')
+    if (gl && gl instanceof WebGLRenderingContext) {
+      const RENDERER = 0x1f01
+      const VENDOR = 0x1f00
+      const renderer = gl.getParameter(RENDERER)
+      const vendor = gl.getParameter(VENDOR)
+      components.push(renderer ? String(renderer) : '', vendor ? String(vendor) : '')
     }
 
     // Add audio context fingerprint

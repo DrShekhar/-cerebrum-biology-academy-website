@@ -41,7 +41,7 @@ import {
 
 // WebXR Type Declarations
 type XRSession = any
-type XRWebGLLayer = any
+type XRWebGLLayerType = any
 type XRFrame = any
 type XRViewerPose = any
 
@@ -396,6 +396,7 @@ const ARVRInfrastructure: React.FC = () => {
 
   const setupXRRendering = async (session: XRSession, gl: WebGL2RenderingContext) => {
     // Initialize WebXR rendering
+    const XRWebGLLayer = (window as any).XRWebGLLayer as XRWebGLLayerType
     const xrGLLayer = new XRWebGLLayer(session, gl)
     await session.updateRenderState({ baseLayer: xrGLLayer })
 

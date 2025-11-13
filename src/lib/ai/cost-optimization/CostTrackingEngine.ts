@@ -45,7 +45,7 @@ interface BudgetAlert {
   autoActions?: string[]
 }
 
-interface CostMetrics {
+export interface CostMetrics {
   daily: {
     spend: number
     requests: number
@@ -468,6 +468,7 @@ export class CostTrackingEngine {
     requests: number
     averageCost: number
     savings: number
+    budgetUtilization: number
   } {
     const spend = records.reduce((sum, r) => sum + r.cost, 0)
     const requests = records.length
@@ -479,7 +480,7 @@ export class CostTrackingEngine {
       return sum + this.estimateRequestCost(r)
     }, 0)
 
-    return { spend, requests, averageCost, savings }
+    return { spend, requests, averageCost, savings, budgetUtilization: 0 }
   }
 
   /**

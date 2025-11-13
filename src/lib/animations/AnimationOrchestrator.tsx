@@ -75,7 +75,7 @@ export function AnimationOrchestrator({
                     ? document.querySelector(target)
                     : registeredElements.current.get(anim.target)?.current
 
-                  if (element) {
+                  if (element && element instanceof HTMLElement) {
                     // Apply animation based on type
                     element.style.transition = `all ${phase.duration * globalTimingRef.current}s ${appleAnimations.easing.appleDefault}`
                   }

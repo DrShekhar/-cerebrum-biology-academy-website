@@ -332,11 +332,23 @@ export function withLogging(
  * Common middleware combinations
  */
 export const protectedRoute = combineMiddleware(withAuth, withLogging)
-export const adminRoute = combineMiddleware(withAdmin, withLogging, withRateLimit(50))
-export const teacherRoute = combineMiddleware(withTeacher, withLogging, withRateLimit(100))
-export const counselorRoute = combineMiddleware(withCounselor, withLogging, withRateLimit(150))
-export const studentRoute = combineMiddleware(withStudent, withLogging, withRateLimit(200))
-export const publicRoute = combineMiddleware(withOptionalAuth, withLogging, withRateLimit(300))
+export const adminRoute = combineMiddleware(withAdmin, withLogging, (handler) =>
+  withRateLimit(50, 60000, handler)
+)
+export const teacherRoute = combineMiddleware(withTeacher, withLogging, (handler) =>
+  withRateLimit(100, 60000, handler)
+)
+export const counselorRoute = combineMiddleware(withCounselor, withLogging, (handler) =>
+  withRateLimit(150, 60000, handler)
+)
+export const studentRoute = combineMiddleware(withStudent, withLogging, (handler) =>
+  withRateLimit(200, 60000, handler)
+)
+export const publicRoute = combineMiddleware(withOptionalAuth, withLogging, (handler) =>
+  withRateLimit(300, 60000, handler)
+)
+
+export type { UserRole } from './config'
 
 export default {
   withAuth,

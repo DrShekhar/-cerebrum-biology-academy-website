@@ -382,7 +382,7 @@ const CourseWizardContainer: React.FC = () => {
             steps={wizardSteps}
             currentStep={currentStep}
             completionPercentage={completionPercentage}
-            variant={variant}
+            variant={(variant as 'default' | 'compact' | 'detailed') || 'default'}
           />
         </div>
 
@@ -428,11 +428,11 @@ const CourseWizardContainer: React.FC = () => {
                 >
                   <StepComponent
                     data={selectionData}
-                    onUpdate={handleDataUpdate}
+                    onUpdate={(data) => handleDataUpdate(currentStepData.id, data)}
                     onNext={handleNext}
                     onPrev={handlePrev}
                     isValid={isStepValid(currentStep)}
-                    variant={variant}
+                    variant={(variant as 'default' | 'compact' | 'detailed') || 'default'}
                   />
                 </motion.div>
               </AnimatePresence>

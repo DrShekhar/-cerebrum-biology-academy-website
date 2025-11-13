@@ -185,7 +185,7 @@ class AdaptiveTestingEngine {
       targetSE: 0.3,
       targetInformation: 10,
       timeLimit: 60,
-      masteryThreshold: 0.8
+      masteryThreshold: 0.8,
     },
     adaptation: {
       algorithm: 'cat_hybrid',
@@ -193,20 +193,20 @@ class AdaptiveTestingEngine {
       contentBalancing: true,
       realTimeAdjustment: true,
       gapDetection: true,
-      personalizedSequencing: true
+      personalizedSequencing: true,
     },
     performance: {
       cacheResults: true,
       batchSize: 5,
       maxConcurrentSessions: 100,
-      enablePredictiveLoading: true
+      enablePredictiveLoading: true,
     },
     reporting: {
       generateDetailedReport: true,
       includeGapAnalysis: true,
       includePredictions: true,
-      enableRealTimeAnalytics: true
-    }
+      enableRealTimeAnalytics: true,
+    },
   }
 
   constructor() {
@@ -214,7 +214,7 @@ class AdaptiveTestingEngine {
       activeSessions: new Map(),
       sessionHistory: new Map(),
       performanceCache: new Map(),
-      analyticsCollector: {}
+      analyticsCollector: {},
     }
   }
 
@@ -243,7 +243,6 @@ class AdaptiveTestingEngine {
 
       this.initialized = true
       console.log('Adaptive Testing Engine initialized successfully')
-
     } catch (error) {
       console.error('Failed to initialize Adaptive Testing Engine:', error)
       throw error
@@ -317,7 +316,7 @@ class AdaptiveTestingEngine {
           informationGained: 0,
           estimationMethod: 'EAP',
           convergence: false,
-          iterations: 0
+          iterations: 0,
         },
         progressMetrics: {
           itemsCompleted: 0,
@@ -325,33 +324,33 @@ class AdaptiveTestingEngine {
           timeElapsed: 0,
           accuracyTrend: 'stable',
           engagementLevel: 0.8,
-          difficultyProgression: []
+          difficultyProgression: [],
         },
         adaptations: {
           difficultyAdjustments: 0,
           timeExtensions: 0,
           contentRedirections: 0,
-          interventions: []
+          interventions: [],
         },
         gapAnalysis: null,
         predictions: {
           finalScore: 50,
           timeToCompletion: config.termination!.timeLimit!,
           masteryLevel: 'Developing',
-          riskAreas: []
+          riskAreas: [],
         },
         timestamps: {
           created: new Date(),
           started: null,
           lastActivity: new Date(),
-          completed: null
+          completed: null,
         },
         settings: {
           enableRealTimeAdaptation: config.adaptation!.realTimeAdjustment!,
           enableGapDetection: config.adaptation!.gapDetection!,
           enablePersonalizedSequencing: config.adaptation!.personalizedSequencing!,
-          debugMode: false
-        }
+          debugMode: false,
+        },
       }
 
       // Store session
@@ -360,11 +359,10 @@ class AdaptiveTestingEngine {
       // Log session creation
       this.logSessionEvent(sessionId, 'session_created', {
         studentId,
-        configuration: config
+        configuration: config,
       })
 
       return session
-
     } catch (error) {
       console.error('Failed to create adaptive test session:', error)
       throw new Error(`Session creation failed: ${error.message}`)
@@ -405,15 +403,14 @@ class AdaptiveTestingEngine {
       // Log session start
       this.logSessionEvent(sessionId, 'session_started', {
         firstItem: firstItemResult.item?.id,
-        estimatedTime: session.configuration.termination!.timeLimit
+        estimatedTime: session.configuration.termination!.timeLimit,
       })
 
       return {
         session,
         firstItem: firstItemResult.item,
-        instructions
+        instructions,
       }
-
     } catch (error) {
       console.error('Failed to start session:', error)
       session.state = 'terminated'
@@ -451,7 +448,7 @@ class AdaptiveTestingEngine {
         response,
         responseTime,
         confidence,
-        timestamp: new Date()
+        timestamp: new Date(),
       }
 
       // Add to session
@@ -529,7 +526,7 @@ class AdaptiveTestingEngine {
         responseTime,
         abilityUpdate: catResult.updatedAbility.theta,
         nextItem: nextItem?.id,
-        sessionComplete
+        sessionComplete,
       })
 
       return {
@@ -538,9 +535,8 @@ class AdaptiveTestingEngine {
         sessionComplete,
         adaptations,
         insights,
-        recommendations
+        recommendations,
       }
-
     } catch (error) {
       console.error('Failed to process response:', error)
       throw error
@@ -578,25 +574,28 @@ class AdaptiveTestingEngine {
         ...performanceDashboard.summary,
         learningPhase: session.performanceProfile.learningCurve.currentPhase,
         masteryAreas: learningPatterns.masteryAreas,
-        strugglingAreas: learningPatterns.strugglingAreas
+        strugglingAreas: learningPatterns.strugglingAreas,
       },
       adaptations: {
-        total: Object.values(session.adaptations).reduce((sum, val) =>
-          typeof val === 'number' ? sum + val : sum, 0),
+        total: Object.values(session.adaptations)
+          .filter((val): val is number => typeof val === 'number')
+          .reduce((sum, val) => sum + val, 0),
         recent: session.adaptations.interventions.slice(-3),
-        effectiveness: this.calculateAdaptationEffectiveness(session)
+        effectiveness: this.calculateAdaptationEffectiveness(session),
       },
       predictions: {
         ...performanceDashboard.predictions,
         learningVelocity: learningPatterns.learningVelocity,
-        stabilityIndex: learningPatterns.stabilityIndex
+        stabilityIndex: learningPatterns.stabilityIndex,
       },
-      gaps: session.gapAnalysis ? {
-        totalGaps: session.gapAnalysis.summary.totalGaps,
-        criticalGaps: session.gapAnalysis.summary.criticalGaps,
-        recommendations: session.gapAnalysis.recommendations.immediate
-      } : null,
-      recommendations: performanceDashboard.recommendations
+      gaps: session.gapAnalysis
+        ? {
+            totalGaps: session.gapAnalysis.summary.totalGaps,
+            criticalGaps: session.gapAnalysis.summary.criticalGaps,
+            recommendations: session.gapAnalysis.recommendations.immediate,
+          }
+        : null,
+      recommendations: performanceDashboard.recommendations,
     }
   }
 
@@ -642,11 +641,10 @@ class AdaptiveTestingEngine {
         finalScore: result.finalResults.scaledScore,
         itemsCompleted: result.performance.itemsCompleted,
         totalTime: result.performance.totalTime,
-        adaptations: result.adaptations.totalAdjustments
+        adaptations: result.adaptations.totalAdjustments,
       })
 
       return result
-
     } catch (error) {
       console.error('Failed to complete session:', error)
       session.state = 'terminated'
@@ -705,10 +703,12 @@ class AdaptiveTestingEngine {
   } {
     const session = this.getSession(sessionId)
 
-    const timeElapsed = session.timestamps.started ?
-      (Date.now() - session.timestamps.started.getTime()) / (1000 * 60) : 0
+    const timeElapsed = session.timestamps.started
+      ? (Date.now() - session.timestamps.started.getTime()) / (1000 * 60)
+      : 0
 
-    const estimatedTimeRemaining = Math.max(0,
+    const estimatedTimeRemaining = Math.max(
+      0,
       session.configuration.termination!.timeLimit! - timeElapsed
     )
 
@@ -718,7 +718,7 @@ class AdaptiveTestingEngine {
       timeElapsed,
       itemsCompleted: session.progressMetrics.itemsCompleted,
       currentAbility: session.currentAbility.theta,
-      estimatedTimeRemaining
+      estimatedTimeRemaining,
     }
   }
 
@@ -741,18 +741,20 @@ class AdaptiveTestingEngine {
     this.sessionManager.analyticsCollector = {
       events: [],
       metrics: new Map(),
-      startTime: new Date()
+      startTime: new Date(),
     }
   }
 
-  private mergeConfiguration(config: Partial<AdaptiveTestConfiguration>): AdaptiveTestConfiguration {
+  private mergeConfiguration(
+    config: Partial<AdaptiveTestConfiguration>
+  ): AdaptiveTestConfiguration {
     return {
       ...this.DEFAULT_CONFIG,
       ...config,
       termination: { ...this.DEFAULT_CONFIG.termination!, ...config.termination },
       adaptation: { ...this.DEFAULT_CONFIG.adaptation!, ...config.adaptation },
       performance: { ...this.DEFAULT_CONFIG.performance!, ...config.performance },
-      reporting: { ...this.DEFAULT_CONFIG.reporting!, ...config.reporting }
+      reporting: { ...this.DEFAULT_CONFIG.reporting!, ...config.reporting },
     } as AdaptiveTestConfiguration
   }
 
@@ -786,32 +788,32 @@ class AdaptiveTestingEngine {
         enabled: config.adaptation!.contentBalancing!,
         topicWeights: new Map(),
         difficultyDistribution: { easy: 30, medium: 50, hard: 20 },
-        bloomsLevelBalance: true
+        bloomsLevelBalance: true,
       },
       exposureControl: {
         enabled: true,
         maxExposureRate: 0.2,
-        stratificationLevels: 5
+        stratificationLevels: 5,
       },
       timeManagement: {
         adaptiveTime: true,
         baseTimePerItem: 60,
         difficultyTimeMultiplier: 0.3,
         maximumTimePerItem: 180,
-        warningTimeThreshold: 30
+        warningTimeThreshold: 30,
       },
       terminationCriteria: {
         standardErrorBased: true,
         informationBased: true,
         confidenceBased: true,
-        minimumConfidenceLevel: 0.8
+        minimumConfidenceLevel: 0.8,
       },
       realTimeAnalysis: {
         performancePrediction: true,
         learningGapDetection: true,
         difficultyCalibration: true,
-        responseTimeAnalysis: true
-      }
+        responseTimeAnalysis: true,
+      },
     }
   }
 
@@ -829,7 +831,7 @@ class AdaptiveTestingEngine {
       `This test will adapt to your performance in real-time.`,
       `You will answer between ${session.configuration.termination!.minItems} and ${session.configuration.termination!.maxItems} questions.`,
       'Take your time and do your best on each question.',
-      'The test will automatically adjust difficulty based on your responses.'
+      'The test will automatically adjust difficulty based on your responses.',
     ]
 
     if (session.settings.enableGapDetection) {
@@ -847,7 +849,8 @@ class AdaptiveTestingEngine {
     const metrics = session.progressMetrics
 
     metrics.itemsCompleted = session.responses.length
-    metrics.estimatedCompletion = (metrics.itemsCompleted / session.configuration.termination!.maxItems!) * 100
+    metrics.estimatedCompletion =
+      (metrics.itemsCompleted / session.configuration.termination!.maxItems!) * 100
 
     if (session.timestamps.started) {
       metrics.timeElapsed = (Date.now() - session.timestamps.started.getTime()) / (1000 * 60)
@@ -857,8 +860,8 @@ class AdaptiveTestingEngine {
     if (session.responses.length >= 5) {
       const recent = session.responses.slice(-5)
       const early = session.responses.slice(0, 5)
-      const recentAccuracy = recent.filter(r => r.response).length / recent.length
-      const earlyAccuracy = early.filter(r => r.response).length / early.length
+      const recentAccuracy = recent.filter((r) => r.response).length / recent.length
+      const earlyAccuracy = early.filter((r) => r.response).length / early.length
 
       if (recentAccuracy > earlyAccuracy + 0.1) {
         metrics.accuracyTrend = 'improving'
@@ -900,12 +903,19 @@ class AdaptiveTestingEngine {
   private generateRealTimeInsights(session: AdaptiveTestSession): any {
     return {
       currentLevel: this.getAbilityLevel(session.currentAbility.theta),
-      progressRate: session.progressMetrics.estimatedCompletion / Math.max(1, session.progressMetrics.timeElapsed),
-      engagementStatus: session.progressMetrics.engagementLevel > 0.7 ? 'high' :
-                       session.progressMetrics.engagementLevel > 0.4 ? 'moderate' : 'low',
-      adaptationCount: Object.values(session.adaptations).reduce((sum, val) =>
-        typeof val === 'number' ? sum + val : sum, 0),
-      riskFactors: this.identifyRiskFactors(session)
+      progressRate:
+        session.progressMetrics.estimatedCompletion /
+        Math.max(1, session.progressMetrics.timeElapsed),
+      engagementStatus:
+        session.progressMetrics.engagementLevel > 0.7
+          ? 'high'
+          : session.progressMetrics.engagementLevel > 0.4
+            ? 'moderate'
+            : 'low',
+      adaptationCount: Object.values(session.adaptations)
+        .filter((val): val is number => typeof val === 'number')
+        .reduce((sum, val) => sum + val, 0),
+      riskFactors: this.identifyRiskFactors(session),
     }
   }
 
@@ -947,7 +957,7 @@ class AdaptiveTestingEngine {
       finalScore: scoreReport.scaledScore,
       timeToCompletion: 0, // Test is complete
       masteryLevel: scoreReport.abilityLevel,
-      riskAreas: scoreReport.weaknesses
+      riskAreas: scoreReport.weaknesses,
     }
   }
 
@@ -958,10 +968,14 @@ class AdaptiveTestingEngine {
       session.administeredItems
     )
 
-    const totalTime = session.timestamps.completed && session.timestamps.started ?
-      (session.timestamps.completed.getTime() - session.timestamps.started.getTime()) / (1000 * 60) : 0
+    const totalTime =
+      session.timestamps.completed && session.timestamps.started
+        ? (session.timestamps.completed.getTime() - session.timestamps.started.getTime()) /
+          (1000 * 60)
+        : 0
 
-    const accuracy = session.responses.filter(r => r.response).length / Math.max(1, session.responses.length)
+    const accuracy =
+      session.responses.filter((r) => r.response).length / Math.max(1, session.responses.length)
 
     return {
       sessionId: session.id,
@@ -971,53 +985,59 @@ class AdaptiveTestingEngine {
         scaledScore: scoreReport.scaledScore,
         percentileRank: scoreReport.percentile,
         masteryLevel: scoreReport.abilityLevel,
-        topicScores: new Map() // Would calculate from responses
+        topicScores: new Map(), // Would calculate from responses
       },
       performance: {
         itemsCompleted: session.responses.length,
         totalTime,
         averageItemTime: totalTime / Math.max(1, session.responses.length),
         accuracy,
-        efficiency: accuracy * (session.responses.length / Math.max(1, totalTime))
+        efficiency: accuracy * (session.responses.length / Math.max(1, totalTime)),
       },
       adaptations: {
-        totalAdjustments: Object.values(session.adaptations).reduce((sum, val) =>
-          typeof val === 'number' ? sum + val : sum, 0),
+        totalAdjustments: Object.values(session.adaptations)
+          .filter((val): val is number => typeof val === 'number')
+          .reduce((sum, val) => sum + val, 0),
         adaptationTypes: ['difficulty_adjustment', 'time_extension', 'content_redirection'],
         interventions: session.adaptations.interventions,
-        personalizations: [] // Would come from personalized sequencing
+        personalizations: [], // Would come from personalized sequencing
       },
-      gaps: session.gapAnalysis ? {
-        identifiedGaps: session.gapAnalysis.detailedGaps.map(g => g.topic),
-        criticalGaps: session.gapAnalysis.detailedGaps.filter(g => g.severity > 0.7).map(g => g.topic),
-        recommendations: session.gapAnalysis.recommendations.immediate,
-        remediationPlan: session.gapAnalysis.remediationPlan
-      } : {
-        identifiedGaps: [],
-        criticalGaps: [],
-        recommendations: [],
-        remediationPlan: null
-      },
+      gaps: session.gapAnalysis
+        ? {
+            identifiedGaps: session.gapAnalysis.detailedGaps.map((g) => g.topic),
+            criticalGaps: session.gapAnalysis.detailedGaps
+              .filter((g) => g.severity > 0.7)
+              .map((g) => g.topic),
+            recommendations: session.gapAnalysis.recommendations.immediate,
+            remediationPlan: session.gapAnalysis.remediationPlan,
+          }
+        : {
+            identifiedGaps: [],
+            criticalGaps: [],
+            recommendations: [],
+            remediationPlan: null,
+          },
       predictions: {
         futurePerformance: scoreReport.scaledScore,
         readinessLevel: scoreReport.abilityLevel,
         riskFactors: scoreReport.weaknesses,
-        strengths: scoreReport.strengths
+        strengths: scoreReport.strengths,
       },
       diagnostics: {
         algorithmPerformance: {
           convergence: session.currentAbility.convergence,
           iterations: session.currentAbility.iterations,
-          finalSE: session.currentAbility.standardError
+          finalSE: session.currentAbility.standardError,
         },
         adaptationEffectiveness: this.calculateAdaptationEffectiveness(session),
         systemMetrics: {
           sessionDuration: totalTime,
           responseRate: session.responses.length / Math.max(1, totalTime),
-          systemAdaptations: Object.values(session.adaptations).reduce((sum, val) =>
-            typeof val === 'number' ? sum + val : sum, 0)
-        }
-      }
+          systemAdaptations: Object.values(session.adaptations)
+            .filter((val): val is number => typeof val === 'number')
+            .reduce((sum, val) => sum + val, 0),
+        },
+      },
     }
   }
 
@@ -1050,7 +1070,7 @@ class AdaptiveTestingEngine {
       sessionId,
       event,
       timestamp: new Date(),
-      data
+      data,
     }
 
     this.sessionManager.analyticsCollector.events.push(logEntry)
@@ -1094,15 +1114,15 @@ class AdaptiveTestingEngine {
 
   private calculateAdaptationEffectiveness(session: AdaptiveTestSession): number {
     // Simplified calculation - would be more sophisticated in practice
-    const totalAdaptations = Object.values(session.adaptations).reduce((sum, val) =>
-      typeof val === 'number' ? sum + val : sum, 0
-    )
+    const totalAdaptations = Object.values(session.adaptations)
+      .filter((val): val is number => typeof val === 'number')
+      .reduce((sum, val) => sum + val, 0)
 
     if (totalAdaptations === 0) return 1.0
 
     // Measure if adaptations led to improved performance
     const performanceImprovement = session.progressMetrics.accuracyTrend === 'improving' ? 0.8 : 0.5
-    return Math.min(1.0, performanceImprovement + (0.1 * Math.min(5, totalAdaptations)))
+    return Math.min(1.0, performanceImprovement + 0.1 * Math.min(5, totalAdaptations))
   }
 }
 

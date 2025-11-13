@@ -70,9 +70,9 @@ export class VoiceSynthesis {
       const openai = this.ensureOpenAI()
       const response = await openai.audio.speech.create({
         model: 'tts-1-hd', // High quality model
-        voice: voiceModel,
+        voice: voiceModel as any,
         input: optimizedText,
-        response_format: request.format || 'mp3',
+        response_format: (request.format || 'mp3') as 'mp3' | 'opus' | 'aac' | 'flac',
         speed: this.getSpeedValue(request.speed),
       })
 

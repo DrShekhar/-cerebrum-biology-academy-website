@@ -280,11 +280,12 @@ export function generateErrorFingerprint(error: Error, context?: ErrorContext): 
 export function logError(error: unknown, context?: ErrorContext) {
   const actualError = error instanceof Error ? error : new Error(String(error))
 
+  const fingerprint = generateErrorFingerprint(actualError, context)
   const errorInfo = {
     name: actualError.name,
     message: actualError.message,
     stack: actualError.stack,
-    fingerprint: generateErrorFingerprint(actualError, context),
+    fingerprint,
     context,
     timestamp: new Date().toISOString(),
     environment: process.env.NODE_ENV,
@@ -299,11 +300,24 @@ export function logError(error: unknown, context?: ErrorContext) {
     // Client-side error reporting
     import('@/lib/monitoring/errorMonitoring')
       .then(({ errorMonitoring }) => {
+        // Convert ErrorContext to monitoring ErrorContext format
+        const monitoringContext = {
+          user: context?.userId ? { id: context.userId } : undefined,
+          request: context?.url
+            ? {
+                url: context.url,
+                userAgent: context.userAgent || '',
+                timestamp: context.timestamp || new Date().toISOString(),
+              }
+            : undefined,
+          application: {
+            environment: process.env.NODE_ENV || 'development',
+            version: '1.0.0',
+          },
+          custom: context,
+        }
         errorMonitoring
-          .reportErrorWithRateLimit(actualError, {
-            custom: context,
-            fingerprint: errorInfo.fingerprint,
-          })
+          .reportErrorWithRateLimit(actualError, monitoringContext)
           .catch(console.error)
       })
       .catch(console.error)
@@ -319,7 +333,7 @@ export function logError(error: unknown, context?: ErrorContext) {
           name: errorInfo.name,
           message: errorInfo.message,
           stack: errorInfo.stack,
-          fingerprint: errorInfo.fingerprint,
+          fingerprint,
           context: errorInfo.context,
           timestamp: errorInfo.timestamp,
           environment: errorInfo.environment,

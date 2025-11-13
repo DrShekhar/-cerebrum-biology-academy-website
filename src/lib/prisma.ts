@@ -25,7 +25,7 @@ function createPrismaClient() {
   try {
     // Detect Edge Runtime and return mock client to avoid process.nextTick errors
     if (
-      typeof EdgeRuntime !== 'undefined' ||
+      typeof (globalThis as any).EdgeRuntime !== 'undefined' ||
       (globalThis as any).EdgeRuntime ||
       typeof process.nextTick !== 'function'
     ) {

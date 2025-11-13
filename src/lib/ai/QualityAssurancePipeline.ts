@@ -6,14 +6,14 @@
 import { TaskAnalysis } from './SmartProviderSelector'
 
 interface QualityMetrics {
-  accuracy: number          // 0-1, factual correctness
-  relevance: number         // 0-1, relevance to question
-  clarity: number           // 0-1, readability and structure
-  completeness: number      // 0-1, thoroughness of answer
-  educationalValue: number  // 0-1, learning effectiveness
-  biologySpecific: number   // 0-1, biology domain accuracy
-  neetAlignment: number     // 0-1, NEET exam relevance
-  safety: number           // 0-1, content safety score
+  accuracy: number // 0-1, factual correctness
+  relevance: number // 0-1, relevance to question
+  clarity: number // 0-1, readability and structure
+  completeness: number // 0-1, thoroughness of answer
+  educationalValue: number // 0-1, learning effectiveness
+  biologySpecific: number // 0-1, biology domain accuracy
+  neetAlignment: number // 0-1, NEET exam relevance
+  safety: number // 0-1, content safety score
 }
 
 interface QualityReport {
@@ -72,7 +72,7 @@ export class QualityAssurancePipeline {
         educationalScore,
         biologyScore,
         neetScore,
-        safetyScore
+        safetyScore,
       ] = await Promise.all([
         this.assessAccuracy(context),
         this.assessRelevance(context),
@@ -81,7 +81,7 @@ export class QualityAssurancePipeline {
         this.assessEducationalValue(context),
         this.assessBiologySpecificity(context),
         this.assessNEETAlignment(context),
-        this.assessSafety(context)
+        this.assessSafety(context),
       ])
 
       const metrics: QualityMetrics = {
@@ -92,7 +92,7 @@ export class QualityAssurancePipeline {
         educationalValue: educationalScore,
         biologySpecific: biologyScore,
         neetAlignment: neetScore,
-        safety: safetyScore
+        safety: safetyScore,
       }
 
       // Calculate weighted overall score
@@ -112,12 +112,13 @@ export class QualityAssurancePipeline {
         flags,
         recommendations,
         passesThreshold: overallScore >= this.qualityThreshold,
-        processingTime: Date.now() - startTime
+        processingTime: Date.now() - startTime,
       }
 
-      console.log(`QA Assessment completed: ${overallScore.toFixed(2)} (${report.processingTime}ms)`)
+      console.log(
+        `QA Assessment completed: ${overallScore.toFixed(2)} (${report.processingTime}ms)`
+      )
       return report
-
     } catch (error) {
       console.error('Quality assessment failed:', error)
       return this.createFailureReport(Date.now() - startTime)
@@ -139,7 +140,7 @@ export class QualityAssurancePipeline {
       { pattern: /photosynthesis only occurs.*day/i, penalty: -0.2 },
       { pattern: /humans have.*gills/i, penalty: -0.5 },
       { pattern: /dna.*rna.*same/i, penalty: -0.3 },
-      { pattern: /all bacteria.*harmful/i, penalty: -0.2 }
+      { pattern: /all bacteria.*harmful/i, penalty: -0.2 },
     ]
 
     for (const misconception of misconceptions) {
@@ -159,7 +160,7 @@ export class QualityAssurancePipeline {
       /natural selection/i,
       /cell theory/i,
       /mendel.*laws/i,
-      /darwin.*evolution/i
+      /darwin.*evolution/i,
     ]
 
     for (const principle of scientificPrinciples) {
@@ -183,7 +184,7 @@ export class QualityAssurancePipeline {
     const responseTerms = this.extractKeyTerms(response)
 
     // Calculate term overlap
-    const overlap = promptTerms.filter(term => responseTerms.includes(term))
+    const overlap = promptTerms.filter((term) => responseTerms.includes(term))
     const termRelevance = overlap.length / Math.max(promptTerms.length, 1)
 
     // Check if response directly addresses the question type
@@ -192,7 +193,7 @@ export class QualityAssurancePipeline {
       { pattern: /how does/i, expectation: /process|mechanism|works by/i },
       { pattern: /why/i, expectation: /because|reason|due to/i },
       { pattern: /compare/i, expectation: /difference|similar|unlike/i },
-      { pattern: /explain/i, expectation: /description|explanation/i }
+      { pattern: /explain/i, expectation: /description|explanation/i },
     ]
 
     let questionTypeScore = 0.5
@@ -208,7 +209,7 @@ export class QualityAssurancePipeline {
     }
 
     // Weight the scores
-    return (termRelevance * 0.6) + (questionTypeScore * 0.4)
+    return termRelevance * 0.6 + questionTypeScore * 0.4
   }
 
   /**
@@ -219,8 +220,9 @@ export class QualityAssurancePipeline {
     let score = 0.5
 
     // Check sentence length (optimal: 15-25 words)
-    const sentences = response.split(/[.!?]+/).filter(s => s.trim().length > 0)
-    const avgSentenceLength = sentences.reduce((sum, s) => sum + s.split(' ').length, 0) / sentences.length
+    const sentences = response.split(/[.!?]+/).filter((s) => s.trim().length > 0)
+    const avgSentenceLength =
+      sentences.reduce((sum, s) => sum + s.split(' ').length, 0) / sentences.length
 
     if (avgSentenceLength >= 15 && avgSentenceLength <= 25) {
       score += 0.2
@@ -231,10 +233,10 @@ export class QualityAssurancePipeline {
     // Check for structure indicators
     const structureIndicators = [
       /first|second|third|finally/i,
-      /\n\s*[-*•]\s/,  // Bullet points
-      /\n\s*\d+\./,    // Numbered lists
+      /\n\s*[-*•]\s/, // Bullet points
+      /\n\s*\d+\./, // Numbered lists
       /step \d+/i,
-      /in summary|in conclusion/i
+      /in summary|in conclusion/i,
     ]
 
     let structureScore = 0
@@ -248,18 +250,21 @@ export class QualityAssurancePipeline {
 
     // Penalize for excessive jargon without explanation
     const jargonTerms = [
-      'mitochondria', 'photosynthesis', 'respiration', 'chromosome',
-      'enzyme', 'protein', 'genetics', 'evolution'
+      'mitochondria',
+      'photosynthesis',
+      'respiration',
+      'chromosome',
+      'enzyme',
+      'protein',
+      'genetics',
+      'evolution',
     ]
 
     let unexplainedJargon = 0
     for (const term of jargonTerms) {
       if (response.toLowerCase().includes(term)) {
         // Check if term is explained
-        const explanationPattern = new RegExp(
-          `${term}.*(?:is|are|means|refers to|defined as)`,
-          'i'
-        )
+        const explanationPattern = new RegExp(`${term}.*(?:is|are|means|refers to|defined as)`, 'i')
         if (!explanationPattern.test(response)) {
           unexplainedJargon++
         }
@@ -286,7 +291,7 @@ export class QualityAssurancePipeline {
     const expectedLengths = {
       low: { min: 50, ideal: 150 },
       medium: { min: 100, ideal: 300 },
-      high: { min: 200, ideal: 500 }
+      high: { min: 200, ideal: 500 },
     }
 
     const complexity = context.taskAnalysis.complexity
@@ -309,9 +314,7 @@ export class QualityAssurancePipeline {
 
       for (const part of parts) {
         const keyTerms = this.extractKeyTerms(part)
-        const addressed = keyTerms.some(term =>
-          response.toLowerCase().includes(term)
-        )
+        const addressed = keyTerms.some((term) => response.toLowerCase().includes(term))
         if (addressed) addressedParts++
       }
 
@@ -342,7 +345,7 @@ export class QualityAssurancePipeline {
       { pattern: /this helps explain/i, value: 0.1 },
       { pattern: /in other words/i, value: 0.05 },
       { pattern: /analogy|like|similar to/i, value: 0.1 },
-      { pattern: /practice|exercise/i, value: 0.1 }
+      { pattern: /practice|exercise/i, value: 0.1 },
     ]
 
     for (const indicator of learningIndicators) {
@@ -357,7 +360,7 @@ export class QualityAssurancePipeline {
       'class-10': { vocabulary: 'intermediate', concepts: 'foundational' },
       'class-11': { vocabulary: 'advanced', concepts: 'detailed' },
       'class-12': { vocabulary: 'sophisticated', concepts: 'comprehensive' },
-      'neet-dropper': { vocabulary: 'expert', concepts: 'exam-focused' }
+      'neet-dropper': { vocabulary: 'expert', concepts: 'exam-focused' },
     }
 
     const studentLevel = context.studentLevel
@@ -393,9 +396,7 @@ export class QualityAssurancePipeline {
         const relatedTerms = this.biologyConcepts.get(concept) || []
 
         // Check if concept is used with correct related terms
-        const hasCorrectContext = relatedTerms.some(term =>
-          response.includes(term.toLowerCase())
-        )
+        const hasCorrectContext = relatedTerms.some((term) => response.includes(term.toLowerCase()))
 
         if (hasCorrectContext) {
           correctUsage++
@@ -411,7 +412,7 @@ export class QualityAssurancePipeline {
     const biologyErrors = [
       { pattern: /plants.*don't.*breathe/i, penalty: -0.3 },
       { pattern: /oxygen.*photosynthesis.*product/i, penalty: -0.2 },
-      { pattern: /mitochondria.*plant.*only/i, penalty: -0.3 }
+      { pattern: /mitochondria.*plant.*only/i, penalty: -0.3 },
     ]
 
     for (const error of biologyErrors) {
@@ -434,8 +435,8 @@ export class QualityAssurancePipeline {
 
     // Check for NEET-specific topic coverage
     const neetTopics = Array.from(this.neetTopics)
-    const relevantTopics = neetTopics.filter(topic =>
-      prompt.includes(topic) || response.includes(topic)
+    const relevantTopics = neetTopics.filter(
+      (topic) => prompt.includes(topic) || response.includes(topic)
     )
 
     if (relevantTopics.length > 0) {
@@ -448,7 +449,7 @@ export class QualityAssurancePipeline {
       /assertion.*reason/i,
       /match.*following/i,
       /which.*following/i,
-      /ncert|neet|medical entrance/i
+      /ncert|neet|medical entrance/i,
     ]
 
     for (const pattern of neetPatterns) {
@@ -484,7 +485,7 @@ export class QualityAssurancePipeline {
       /sexual|adult content/i,
       /violence|harmful/i,
       /drug.*abuse/i,
-      /suicide|self.*harm/i
+      /suicide|self.*harm/i,
     ]
 
     for (const pattern of inappropriatePatterns) {
@@ -502,30 +503,30 @@ export class QualityAssurancePipeline {
   private calculateOverallScore(metrics: QualityMetrics, taskAnalysis: TaskAnalysis): number {
     const weights = {
       accuracy: 0.25,
-      relevance: 0.20,
+      relevance: 0.2,
       clarity: 0.15,
       completeness: 0.15,
-      educationalValue: 0.10,
+      educationalValue: 0.1,
       biologySpecific: 0.08,
       neetAlignment: 0.05,
-      safety: 0.02
+      safety: 0.02,
     }
 
     // Adjust weights based on task type
     if (taskAnalysis.domain === 'neet-specific') {
       weights.neetAlignment = 0.15
       weights.biologySpecific = 0.15
-      weights.accuracy = 0.20
+      weights.accuracy = 0.2
     }
 
     if (taskAnalysis.questionType === 'factual') {
       weights.accuracy = 0.35
-      weights.completeness = 0.10
+      weights.completeness = 0.1
     }
 
     if (taskAnalysis.complexity === 'high') {
       weights.completeness = 0.25
-      weights.clarity = 0.20
+      weights.clarity = 0.2
     }
 
     let totalScore = 0
@@ -553,7 +554,7 @@ export class QualityAssurancePipeline {
         category: 'accuracy',
         message: 'Response contains potential factual inaccuracies',
         severity: 1 - metrics.accuracy,
-        suggestion: 'Review scientific facts and cross-reference with reliable sources'
+        suggestion: 'Review scientific facts and cross-reference with reliable sources',
       })
     }
 
@@ -564,7 +565,7 @@ export class QualityAssurancePipeline {
         category: 'safety',
         message: 'Response may contain inappropriate content for students',
         severity: 1 - metrics.safety,
-        suggestion: 'Review content for age-appropriateness'
+        suggestion: 'Review content for age-appropriateness',
       })
     }
 
@@ -575,7 +576,7 @@ export class QualityAssurancePipeline {
         category: 'relevance',
         message: 'Response does not adequately address the question',
         severity: 1 - metrics.relevance,
-        suggestion: 'Ensure response directly answers the question asked'
+        suggestion: 'Ensure response directly answers the question asked',
       })
     }
 
@@ -586,7 +587,7 @@ export class QualityAssurancePipeline {
         category: 'structure',
         message: 'Response could be clearer and better structured',
         severity: 1 - metrics.clarity,
-        suggestion: 'Use simpler language and better organization'
+        suggestion: 'Use simpler language and better organization',
       })
     }
 
@@ -600,8 +601,8 @@ export class QualityAssurancePipeline {
     const recommendations: string[] = []
 
     // Priority recommendations based on flags
-    const errorFlags = flags.filter(f => f.type === 'error')
-    const warningFlags = flags.filter(f => f.type === 'warning')
+    const errorFlags = flags.filter((f) => f.type === 'error')
+    const warningFlags = flags.filter((f) => f.type === 'warning')
 
     if (errorFlags.length > 0) {
       recommendations.push('Address critical accuracy issues before using this response')
@@ -653,18 +654,20 @@ export class QualityAssurancePipeline {
         educationalValue: 0,
         biologySpecific: 0,
         neetAlignment: 0,
-        safety: 0
+        safety: 0,
       },
       confidence: 0,
-      flags: [{
-        type: 'error',
-        category: 'accuracy',
-        message: 'Quality assessment failed',
-        severity: 1
-      }],
+      flags: [
+        {
+          type: 'error',
+          category: 'accuracy',
+          message: 'Quality assessment failed',
+          severity: 1,
+        },
+      ],
       recommendations: ['Retry quality assessment'],
       passesThreshold: false,
-      processingTime
+      processingTime,
     }
   }
 
@@ -677,8 +680,22 @@ export class QualityAssurancePipeline {
       .toLowerCase()
       .replace(/[^\w\s]/g, ' ')
       .split(/\s+/)
-      .filter(word => word.length > 3)
-      .filter(word => !['what', 'how', 'why', 'when', 'where', 'which', 'that', 'this', 'with', 'from'].includes(word))
+      .filter((word) => word.length > 3)
+      .filter(
+        (word) =>
+          ![
+            'what',
+            'how',
+            'why',
+            'when',
+            'where',
+            'which',
+            'that',
+            'this',
+            'with',
+            'from',
+          ].includes(word)
+      )
   }
 
   private hasFactualInconsistencies(text: string): boolean {
@@ -686,22 +703,26 @@ export class QualityAssurancePipeline {
     const contradictions = [
       [/plants.*produce.*oxygen/i, /plants.*don't.*produce.*oxygen/i],
       [/dna.*double.*helix/i, /dna.*single.*strand/i],
-      [/mitochondria.*powerhouse/i, /mitochondria.*not.*energy/i]
+      [/mitochondria.*powerhouse/i, /mitochondria.*not.*energy/i],
     ]
 
-    return contradictions.some(([positive, negative]) =>
-      positive.test(text) && negative.test(text)
-    )
+    return contradictions.some(([positive, negative]) => positive.test(text) && negative.test(text))
   }
 
   private isAppropriateForLevel(response: string, studentLevel: string): boolean {
     // Simplified level checking
     const complexWords = [
-      'photosynthesis', 'mitochondria', 'chromosome', 'enzyme',
-      'protein', 'genetics', 'evolution', 'respiration'
+      'photosynthesis',
+      'mitochondria',
+      'chromosome',
+      'enzyme',
+      'protein',
+      'genetics',
+      'evolution',
+      'respiration',
     ]
 
-    const complexWordCount = complexWords.filter(word =>
+    const complexWordCount = complexWords.filter((word) =>
       response.toLowerCase().includes(word)
     ).length
 
@@ -710,7 +731,7 @@ export class QualityAssurancePipeline {
       'class-10': 3,
       'class-11': 5,
       'class-12': 8,
-      'neet-dropper': 10
+      'neet-dropper': 10,
     }
 
     const limit = levelLimits[studentLevel as keyof typeof levelLimits] || 5
@@ -722,16 +743,34 @@ export class QualityAssurancePipeline {
    */
   private initializeBiologyKnowledge(): void {
     this.biologyConcepts.set('photosynthesis', [
-      'chloroplast', 'chlorophyll', 'light', 'carbon dioxide', 'glucose', 'oxygen'
+      'chloroplast',
+      'chlorophyll',
+      'light',
+      'carbon dioxide',
+      'glucose',
+      'oxygen',
     ])
     this.biologyConcepts.set('respiration', [
-      'mitochondria', 'glucose', 'oxygen', 'carbon dioxide', 'atp', 'energy'
+      'mitochondria',
+      'glucose',
+      'oxygen',
+      'carbon dioxide',
+      'atp',
+      'energy',
     ])
     this.biologyConcepts.set('dna', [
-      'nucleotide', 'base pair', 'double helix', 'gene', 'chromosome'
+      'nucleotide',
+      'base pair',
+      'double helix',
+      'gene',
+      'chromosome',
     ])
     this.biologyConcepts.set('enzyme', [
-      'protein', 'catalyst', 'substrate', 'active site', 'reaction'
+      'protein',
+      'catalyst',
+      'substrate',
+      'active site',
+      'reaction',
     ])
   }
 
@@ -740,12 +779,20 @@ export class QualityAssurancePipeline {
    */
   private initializeNEETTopics(): void {
     const topics = [
-      'diversity of living organisms', 'structural organisation', 'cell structure',
-      'plant physiology', 'human physiology', 'reproduction', 'genetics',
-      'evolution', 'biology and human welfare', 'biotechnology', 'ecology'
+      'diversity of living organisms',
+      'structural organisation',
+      'cell structure',
+      'plant physiology',
+      'human physiology',
+      'reproduction',
+      'genetics',
+      'evolution',
+      'biology and human welfare',
+      'biotechnology',
+      'ecology',
     ]
 
-    topics.forEach(topic => this.neetTopics.add(topic))
+    topics.forEach((topic) => this.neetTopics.add(topic))
   }
 
   /**
@@ -755,7 +802,7 @@ export class QualityAssurancePipeline {
     this.unsafePatterns = [
       /hate speech|discrimination/i,
       /violence|harm.*others/i,
-      /inappropriate.*content/i
+      /inappropriate.*content/i,
     ]
   }
 
@@ -770,7 +817,7 @@ export class QualityAssurancePipeline {
     return {
       threshold: this.qualityThreshold,
       averageProcessingTime: 150, // Estimated
-      totalAssessments: 0 // Would track actual count
+      totalAssessments: 0, // Would track actual count
     }
   }
 
@@ -784,3 +831,6 @@ export class QualityAssurancePipeline {
 
 // Export singleton instance
 export const qualityAssurance = new QualityAssurancePipeline()
+
+// Export QualityReport type
+export type { QualityReport }

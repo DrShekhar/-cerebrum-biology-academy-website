@@ -128,7 +128,7 @@ export class PerformanceMonitoringSystem extends EventEmitter {
     const metric: MetricValue = {
       value,
       timestamp: Date.now(),
-      tags
+      tags,
     }
 
     if (!this.metrics.has(name)) {
@@ -139,8 +139,11 @@ export class PerformanceMonitoringSystem extends EventEmitter {
     metricHistory.push(metric)
 
     // Keep only recent metrics (last 24 hours by default)
-    const cutoff = Date.now() - (this.config.metricsRetentionDays * 24 * 60 * 60 * 1000)
-    this.metrics.set(name, metricHistory.filter(m => m.timestamp > cutoff))
+    const cutoff = Date.now() - this.config.metricsRetentionDays * 24 * 60 * 60 * 1000
+    this.metrics.set(
+      name,
+      metricHistory.filter((m) => m.timestamp > cutoff)
+    )
 
     // Emit metric event
     this.emit('metric:recorded', { name, metric })
@@ -171,7 +174,7 @@ export class PerformanceMonitoringSystem extends EventEmitter {
   recordDatabaseQuery(query: string, duration: number, success: boolean): void {
     const tags = {
       query_type: this.extractQueryType(query),
-      success: success.toString()
+      success: success.toString(),
     }
 
     this.recordMetric('db_queries_total', 1, tags)
@@ -211,8 +214,8 @@ export class PerformanceMonitoringSystem extends EventEmitter {
    */
   async getCurrentPerformance(): Promise<PerformanceMetrics> {
     const now = Date.now()
-    const last5Minutes = now - (5 * 60 * 1000)
-    const lastHour = now - (60 * 60 * 1000)
+    const last5Minutes = now - 5 * 60 * 1000
+    const lastHour = now - 60 * 60 * 1000
 
     return {
       responseTime: this.calculateResponseTimeMetrics(last5Minutes),
@@ -222,7 +225,7 @@ export class PerformanceMonitoringSystem extends EventEmitter {
       memory: this.getMemoryMetrics(),
       database: await this.getDatabaseMetrics(),
       network: this.getNetworkMetrics(),
-      business: this.getBusinessMetrics(lastHour)
+      business: this.getBusinessMetrics(lastHour),
     }
   }
 
@@ -237,7 +240,7 @@ export class PerformanceMonitoringSystem extends EventEmitter {
       severity: 'high',
       message: 'High response time detected: P95 is {{ value }}ms',
       evaluationWindow: 5 * 60 * 1000, // 5 minutes
-      threshold: 500
+      threshold: 500,
     })
 
     this.addAlertRule({
@@ -246,7 +249,7 @@ export class PerformanceMonitoringSystem extends EventEmitter {
       severity: 'critical',
       message: 'Very high response time detected: P95 is {{ value }}ms',
       evaluationWindow: 2 * 60 * 1000, // 2 minutes
-      threshold: 1000
+      threshold: 1000,
     })
 
     // Error rate alerts
@@ -256,7 +259,7 @@ export class PerformanceMonitoringSystem extends EventEmitter {
       severity: 'high',
       message: 'High error rate detected: {{ value }}%',
       evaluationWindow: 5 * 60 * 1000,
-      threshold: 5
+      threshold: 5,
     })
 
     this.addAlertRule({
@@ -265,7 +268,7 @@ export class PerformanceMonitoringSystem extends EventEmitter {
       severity: 'critical',
       message: 'Critical error rate detected: {{ value }}%',
       evaluationWindow: 2 * 60 * 1000,
-      threshold: 10
+      threshold: 10,
     })
 
     // System resource alerts
@@ -275,7 +278,7 @@ export class PerformanceMonitoringSystem extends EventEmitter {
       severity: 'medium',
       message: 'High CPU usage detected: {{ value }}%',
       evaluationWindow: 5 * 60 * 1000,
-      threshold: 80
+      threshold: 80,
     })
 
     this.addAlertRule({
@@ -284,7 +287,7 @@ export class PerformanceMonitoringSystem extends EventEmitter {
       severity: 'critical',
       message: 'Critical CPU usage detected: {{ value }}%',
       evaluationWindow: 2 * 60 * 1000,
-      threshold: 95
+      threshold: 95,
     })
 
     this.addAlertRule({
@@ -293,7 +296,7 @@ export class PerformanceMonitoringSystem extends EventEmitter {
       severity: 'medium',
       message: 'High memory usage detected: {{ value }}%',
       evaluationWindow: 5 * 60 * 1000,
-      threshold: 85
+      threshold: 85,
     })
 
     this.addAlertRule({
@@ -302,7 +305,7 @@ export class PerformanceMonitoringSystem extends EventEmitter {
       severity: 'critical',
       message: 'Critical memory usage detected: {{ value }}%',
       evaluationWindow: 2 * 60 * 1000,
-      threshold: 95
+      threshold: 95,
     })
 
     // Database alerts
@@ -312,7 +315,7 @@ export class PerformanceMonitoringSystem extends EventEmitter {
       severity: 'critical',
       message: 'Database connection pool near exhaustion: {{ value }} active connections',
       evaluationWindow: 1 * 60 * 1000,
-      threshold: 180
+      threshold: 180,
     })
 
     this.addAlertRule({
@@ -321,7 +324,7 @@ export class PerformanceMonitoringSystem extends EventEmitter {
       severity: 'medium',
       message: 'High number of slow database queries: {{ value }} per minute',
       evaluationWindow: 5 * 60 * 1000,
-      threshold: 10
+      threshold: 10,
     })
 
     this.addAlertRule({
@@ -330,7 +333,7 @@ export class PerformanceMonitoringSystem extends EventEmitter {
       severity: 'medium',
       message: 'Low database cache hit rate: {{ value }}%',
       evaluationWindow: 10 * 60 * 1000,
-      threshold: 80
+      threshold: 80,
     })
 
     // Business metric alerts
@@ -340,7 +343,7 @@ export class PerformanceMonitoringSystem extends EventEmitter {
       severity: 'medium',
       message: 'Low enrollment rate detected: {{ value }} enrollments per hour',
       evaluationWindow: 60 * 60 * 1000,
-      threshold: 5
+      threshold: 5,
     })
 
     this.addAlertRule({
@@ -349,7 +352,7 @@ export class PerformanceMonitoringSystem extends EventEmitter {
       severity: 'high',
       message: 'Payment failure rate spike: {{ value }}%',
       evaluationWindow: 10 * 60 * 1000,
-      threshold: 10
+      threshold: 10,
     })
   }
 
@@ -413,7 +416,7 @@ export class PerformanceMonitoringSystem extends EventEmitter {
     try {
       // CPU metrics
       const cpuUsage = process.cpuUsage()
-      const cpuPercent = (cpuUsage.user + cpuUsage.system) / 1000000 / 30 * 100 // 30 second interval
+      const cpuPercent = ((cpuUsage.user + cpuUsage.system) / 1000000 / 30) * 100 // 30 second interval
       this.recordMetric('cpu_usage', cpuPercent)
 
       // Memory metrics
@@ -439,7 +442,6 @@ export class PerformanceMonitoringSystem extends EventEmitter {
         const lag = performance.now() - start
         this.recordMetric('event_loop_lag_ms', lag)
       })
-
     } catch (error) {
       console.error('Error collecting system metrics:', error)
     }
@@ -452,7 +454,7 @@ export class PerformanceMonitoringSystem extends EventEmitter {
     try {
       // Calculate derived metrics from recorded data
       const now = Date.now()
-      const last5Minutes = now - (5 * 60 * 1000)
+      const last5Minutes = now - 5 * 60 * 1000
 
       // Request rate metrics
       const totalRequests = this.getMetricSum('http_requests_total', last5Minutes)
@@ -487,7 +489,6 @@ export class PerformanceMonitoringSystem extends EventEmitter {
       this.recordMetric('db_queries_per_second', dbQueries / 300)
       this.recordMetric('db_error_rate', dbQueries > 0 ? (dbErrors / dbQueries) * 100 : 0)
       this.recordMetric('db_slow_queries_per_minute', dbSlowQueries / 5)
-
     } catch (error) {
       console.error('Error collecting application metrics:', error)
     }
@@ -499,7 +500,7 @@ export class PerformanceMonitoringSystem extends EventEmitter {
   private collectBusinessMetrics(): void {
     try {
       const now = Date.now()
-      const lastHour = now - (60 * 60 * 1000)
+      const lastHour = now - 60 * 60 * 1000
 
       // Enrollment metrics
       const enrollments = this.getMetricSum('business_enrollment_created', lastHour)
@@ -523,7 +524,6 @@ export class PerformanceMonitoringSystem extends EventEmitter {
       // Assessment metrics
       const assessments = this.getMetricSum('business_assessment_completed', lastHour)
       this.recordMetric('assessments_per_hour', assessments)
-
     } catch (error) {
       console.error('Error collecting business metrics:', error)
     }
@@ -551,7 +551,10 @@ export class PerformanceMonitoringSystem extends EventEmitter {
   /**
    * Evaluate a condition expression
    */
-  private async evaluateCondition(condition: string, evaluationWindow: number): Promise<number | null> {
+  private async evaluateCondition(
+    condition: string,
+    evaluationWindow: number
+  ): Promise<number | null> {
     const now = Date.now()
     const windowStart = now - evaluationWindow
 
@@ -610,7 +613,7 @@ export class PerformanceMonitoringSystem extends EventEmitter {
       currentValue,
       message: rule.message.replace('{{ value }}', currentValue.toFixed(2)),
       timestamp: Date.now(),
-      acknowledged: false
+      acknowledged: false,
     }
 
     this.alerts.set(ruleName, alert)
@@ -684,8 +687,8 @@ export class PerformanceMonitoringSystem extends EventEmitter {
           current_value: alert.currentValue,
           threshold: alert.threshold,
           timestamp: alert.timestamp,
-          service: 'cerebrum-biology-academy'
-        })
+          service: 'cerebrum-biology-academy',
+        }),
       })
 
       if (!response.ok) {
@@ -706,7 +709,7 @@ export class PerformanceMonitoringSystem extends EventEmitter {
       low: '#36a64f',
       medium: '#ff9500',
       high: '#ff0000',
-      critical: '#8B0000'
+      critical: '#8B0000',
     }[alert.severity]
 
     const payload = {
@@ -718,32 +721,32 @@ export class PerformanceMonitoringSystem extends EventEmitter {
             {
               title: 'Service',
               value: 'Cerebrum Biology Academy',
-              short: true
+              short: true,
             },
             {
               title: 'Severity',
               value: alert.severity.toUpperCase(),
-              short: true
+              short: true,
             },
             {
               title: 'Current Value',
               value: alert.currentValue.toFixed(2),
-              short: true
+              short: true,
             },
             {
               title: 'Threshold',
               value: alert.threshold.toString(),
-              short: true
+              short: true,
             },
             {
               title: 'Message',
               value: alert.message,
-              short: false
-            }
+              short: false,
+            },
           ],
-          ts: Math.floor(alert.timestamp / 1000)
-        }
-      ]
+          ts: Math.floor(alert.timestamp / 1000),
+        },
+      ],
     }
 
     try {
@@ -752,7 +755,7 @@ export class PerformanceMonitoringSystem extends EventEmitter {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(payload)
+        body: JSON.stringify(payload),
       })
 
       if (!response.ok) {
@@ -795,7 +798,7 @@ export class PerformanceMonitoringSystem extends EventEmitter {
       p90: this.calculatePercentile(responseTimes, 90),
       p95: this.calculatePercentile(responseTimes, 95),
       p99: this.calculatePercentile(responseTimes, 99),
-      avg: responseTimes.reduce((sum, val) => sum + val, 0) / responseTimes.length
+      avg: responseTimes.reduce((sum, val) => sum + val, 0) / responseTimes.length,
     }
   }
 
@@ -806,7 +809,7 @@ export class PerformanceMonitoringSystem extends EventEmitter {
     return {
       requestsPerSecond: requests5Min / 300, // 5 minutes = 300 seconds
       requestsPerMinute: requests5Min / 5,
-      requestsPerHour: requestsHour
+      requestsPerHour: requestsHour,
     }
   }
 
@@ -817,7 +820,7 @@ export class PerformanceMonitoringSystem extends EventEmitter {
     const byStatusCode: Record<string, number> = {}
     const errorMetrics = this.getMetricHistory('http_errors_total', since)
 
-    errorMetrics.forEach(metric => {
+    errorMetrics.forEach((metric) => {
       if (metric.tags?.status) {
         byStatusCode[metric.tags.status] = (byStatusCode[metric.tags.status] || 0) + metric.value
       }
@@ -826,14 +829,15 @@ export class PerformanceMonitoringSystem extends EventEmitter {
     return {
       total: totalErrors,
       percentage: totalRequests > 0 ? (totalErrors / totalRequests) * 100 : 0,
-      byStatusCode
+      byStatusCode,
     }
   }
 
   private async getCPUMetrics() {
+    const loadAvg = process.platform !== 'win32' ? require('os').loadavg() : [0, 0, 0]
     return {
       usage: this.getLatestMetricValue('cpu_usage') || 0,
-      loadAverage: process.platform !== 'win32' ? require('os').loadavg() as [number, number, number] : [0, 0, 0]
+      loadAverage: [loadAvg[0] || 0, loadAvg[1] || 0, loadAvg[2] || 0] as [number, number, number],
     }
   }
 
@@ -845,32 +849,32 @@ export class PerformanceMonitoringSystem extends EventEmitter {
       available: memUsage.heapTotal - memUsage.heapUsed,
       total: memUsage.heapTotal,
       heapUsed: memUsage.heapUsed,
-      heapTotal: memUsage.heapTotal
+      heapTotal: memUsage.heapTotal,
     }
   }
 
   private async getDatabaseMetrics() {
     const now = Date.now()
-    const last5Min = now - (5 * 60 * 1000)
+    const last5Min = now - 5 * 60 * 1000
 
     return {
       connections: {
         active: this.getLatestMetricValue('db_connections_active') || 0,
         idle: this.getLatestMetricValue('db_connections_idle') || 0,
         total: this.getLatestMetricValue('db_connections_total') || 0,
-        waiting: this.getLatestMetricValue('db_connections_waiting') || 0
+        waiting: this.getLatestMetricValue('db_connections_waiting') || 0,
       },
       queries: {
         totalExecuted: this.getMetricSum('db_queries_total', last5Min),
         avgExecutionTime: this.getLatestMetricValue('db_avg_query_time') || 0,
         slowQueries: this.getMetricSum('db_slow_queries_total', last5Min),
-        failedQueries: this.getMetricSum('db_errors_total', last5Min)
+        failedQueries: this.getMetricSum('db_errors_total', last5Min),
       },
       cache: {
         hitRate: this.getLatestMetricValue('db_cache_hit_rate') || 0,
         missRate: this.getLatestMetricValue('db_cache_miss_rate') || 0,
-        evictions: this.getMetricSum('db_cache_evictions', last5Min)
-      }
+        evictions: this.getMetricSum('db_cache_evictions', last5Min),
+      },
     }
   }
 
@@ -879,7 +883,7 @@ export class PerformanceMonitoringSystem extends EventEmitter {
       activeConnections: this.getLatestMetricValue('network_active_connections') || 0,
       newConnectionsPerSecond: this.getLatestMetricValue('network_new_connections_per_second') || 0,
       bandwidthIn: this.getLatestMetricValue('network_bandwidth_in') || 0,
-      bandwidthOut: this.getLatestMetricValue('network_bandwidth_out') || 0
+      bandwidthOut: this.getLatestMetricValue('network_bandwidth_out') || 0,
     }
   }
 
@@ -888,7 +892,7 @@ export class PerformanceMonitoringSystem extends EventEmitter {
       activeUsers: this.getLatestMetricValue('active_users_hourly') || 0,
       enrollmentsPerHour: this.getMetricSum('business_enrollment_created', sinceHour),
       assessmentsCompleted: this.getMetricSum('business_assessment_completed', sinceHour),
-      paymentSuccessRate: this.getLatestMetricValue('payment_success_rate') || 0
+      paymentSuccessRate: this.getLatestMetricValue('payment_success_rate') || 0,
     }
   }
 
@@ -896,14 +900,12 @@ export class PerformanceMonitoringSystem extends EventEmitter {
 
   private getMetricValues(name: string, since: number): number[] {
     const metrics = this.metrics.get(name) || []
-    return metrics
-      .filter(m => m.timestamp >= since)
-      .map(m => m.value)
+    return metrics.filter((m) => m.timestamp >= since).map((m) => m.value)
   }
 
   private getMetricHistory(name: string, since: number): MetricValue[] {
     const metrics = this.metrics.get(name) || []
-    return metrics.filter(m => m.timestamp >= since)
+    return metrics.filter((m) => m.timestamp >= since)
   }
 
   private getMetricSum(name: string, since: number): number {
@@ -945,7 +947,7 @@ export class PerformanceMonitoringSystem extends EventEmitter {
    */
   async getDashboardData(): Promise<any> {
     const performance = await this.getCurrentPerformance()
-    const activeAlerts = Array.from(this.alerts.values()).filter(alert => !alert.resolvedAt)
+    const activeAlerts = Array.from(this.alerts.values()).filter((alert) => !alert.resolvedAt)
 
     return {
       timestamp: Date.now(),
@@ -953,11 +955,11 @@ export class PerformanceMonitoringSystem extends EventEmitter {
       alerts: {
         active: activeAlerts,
         total: this.alerts.size,
-        critical: activeAlerts.filter(a => a.severity === 'critical').length,
-        high: activeAlerts.filter(a => a.severity === 'high').length
+        critical: activeAlerts.filter((a) => a.severity === 'critical').length,
+        high: activeAlerts.filter((a) => a.severity === 'high').length,
       },
       systemHealth: this.calculateSystemHealth(performance),
-      recentMetrics: this.getRecentMetrics()
+      recentMetrics: this.getRecentMetrics(),
     }
   }
 
@@ -967,14 +969,27 @@ export class PerformanceMonitoringSystem extends EventEmitter {
     factors: Record<string, number>
   } {
     const factors = {
-      responseTime: performance.responseTime.p95 < 500 ? 100 : Math.max(0, 100 - (performance.responseTime.p95 - 500) / 10),
-      errorRate: performance.errorRate.percentage < 1 ? 100 : Math.max(0, 100 - performance.errorRate.percentage * 20),
+      responseTime:
+        performance.responseTime.p95 < 500
+          ? 100
+          : Math.max(0, 100 - (performance.responseTime.p95 - 500) / 10),
+      errorRate:
+        performance.errorRate.percentage < 1
+          ? 100
+          : Math.max(0, 100 - performance.errorRate.percentage * 20),
       cpu: performance.cpu.usage < 80 ? 100 : Math.max(0, 100 - (performance.cpu.usage - 80) * 5),
-      memory: performance.memory.usage < 85 ? 100 : Math.max(0, 100 - (performance.memory.usage - 85) * 10),
-      database: performance.database.queries.failedQueries === 0 ? 100 : Math.max(0, 100 - performance.database.queries.failedQueries * 10)
+      memory:
+        performance.memory.usage < 85
+          ? 100
+          : Math.max(0, 100 - (performance.memory.usage - 85) * 10),
+      database:
+        performance.database.queries.failedQueries === 0
+          ? 100
+          : Math.max(0, 100 - performance.database.queries.failedQueries * 10),
     }
 
-    const score = Object.values(factors).reduce((sum, val) => sum + val, 0) / Object.keys(factors).length
+    const score =
+      Object.values(factors).reduce((sum, val) => sum + val, 0) / Object.keys(factors).length
 
     let overall: 'healthy' | 'degraded' | 'unhealthy'
     if (score >= 90) overall = 'healthy'
@@ -986,14 +1001,14 @@ export class PerformanceMonitoringSystem extends EventEmitter {
 
   private getRecentMetrics(): Record<string, number[]> {
     const now = Date.now()
-    const last30Min = now - (30 * 60 * 1000)
+    const last30Min = now - 30 * 60 * 1000
 
     return {
       responseTime: this.getMetricValues('response_time_p95', last30Min),
       requestsPerSecond: this.getMetricValues('requests_per_second', last30Min),
       errorRate: this.getMetricValues('error_rate', last30Min),
       cpuUsage: this.getMetricValues('cpu_usage', last30Min),
-      memoryUsage: this.getMetricValues('memory_usage', last30Min)
+      memoryUsage: this.getMetricValues('memory_usage', last30Min),
     }
   }
 
@@ -1022,7 +1037,7 @@ export const performanceMonitor = new PerformanceMonitoringSystem({
   slackWebhookUrl: process.env.SLACK_WEBHOOK_URL,
   emailEnabled: process.env.EMAIL_ALERTS_ENABLED === 'true',
   smsEnabled: process.env.SMS_ALERTS_ENABLED === 'true',
-  samplingRate: 1.0
+  samplingRate: 1.0,
 })
 
 // Setup graceful shutdown

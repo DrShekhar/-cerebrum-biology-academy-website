@@ -11,7 +11,7 @@ export function usePerformanceOptimizations() {
 
     criticalSections.forEach((sectionId) => {
       const element = document.querySelector(`[data-section="${sectionId}"]`)
-      if (element) {
+      if (element instanceof HTMLElement) {
         element.classList.add('critical-loaded')
         // Ensure critical content is visible immediately
         element.style.opacity = '1'

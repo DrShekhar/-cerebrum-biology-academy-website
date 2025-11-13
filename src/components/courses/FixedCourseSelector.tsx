@@ -184,12 +184,6 @@ function EnhancedSeriesCard({
                 <div className={`text-2xl font-bold ${theme.text}`}>
                   ₹{selectedPlanData.price.toLocaleString()}
                 </div>
-                {selectedPlanData.originalPrice &&
-                  selectedPlanData.originalPrice > selectedPlanData.price && (
-                    <div className="text-sm text-gray-500 line-through">
-                      ₹{selectedPlanData.originalPrice.toLocaleString()}
-                    </div>
-                  )}
                 <div className="text-sm text-gray-500">{selectedPlanData.duration}</div>
               </div>
             </div>
@@ -478,16 +472,14 @@ export function FixedCourseSelector({ onCourseSelect, className = '' }: FixedCou
                         classLevel={selectedClass}
                         onBookDemo={() => {
                           // Create a mock course for demo booking
-                          const mockCourse: CourseProgram = {
+                          const mockCourse: Partial<CourseProgram> = {
                             id: `${series.id}-${selectedClass}`,
                             name: `${series.name} - Class ${selectedClass}`,
-                            class: selectedClass as ClassLevel,
-                            tier: series.id,
-                            features: series.plans[0].features,
+                            targetClass: selectedClass as ClassLevel,
                             isFeatured: series.id === 'ascent',
                             isPopular: series.id === 'ascent',
                           }
-                          setSelectedCourse(mockCourse)
+                          setSelectedCourse(mockCourse as CourseProgram)
                           setShowDemoModal(true)
                         }}
                       />

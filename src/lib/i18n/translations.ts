@@ -309,7 +309,11 @@ export function saveLanguagePreference(language: Language) {
 
 // Get translation function
 export function getTranslation(language: Language, key: TranslationKey): string {
-  return translations[language]?.[key] || translations.en[key] || key
+  const value = translations[language]?.[key] || translations.en[key]
+  if (typeof value === 'string') {
+    return value
+  }
+  return key as string
 }
 
 // React hook for translations

@@ -33,7 +33,7 @@ const WaveformVisualizer: React.FC<WaveformProps> = ({
   duration,
 }) => {
   const [waveformData, setWaveformData] = useState<number[]>(new Array(50).fill(0))
-  const intervalRef = useRef<NodeJS.Timeout>()
+  const intervalRef = useRef<NodeJS.Timeout | undefined>(undefined)
 
   useEffect(() => {
     if (isRecording) {

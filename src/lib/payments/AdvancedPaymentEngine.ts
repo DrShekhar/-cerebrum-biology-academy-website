@@ -170,6 +170,15 @@ interface FraudDetectionConfig {
 }
 
 // Billing & Invoicing
+interface SubscriptionHistory {
+  subscription_id: string
+  plan_id: string
+  status: string
+  start_date: Date
+  end_date?: Date
+  amount_paid: number
+}
+
 interface BillingAccount {
   account_id: string
   user_id: string
@@ -836,7 +845,7 @@ export class AdvancedPaymentEngine extends EventEmitter {
       } else {
         return {
           success: false,
-          error: paymentResult.error,
+          error: (paymentResult as any).error || 'Payment failed',
         }
       }
     } catch (error) {

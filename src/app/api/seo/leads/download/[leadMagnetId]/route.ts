@@ -13,7 +13,7 @@ export async function GET(request: NextRequest, { params }: { params: { leadMagn
       return NextResponse.json({ error: 'Lead ID is required' }, { status: 400 })
     }
 
-    const lead = await prisma.contentLead.findUnique({
+    const lead = await prisma.content_leads.findUnique({
       where: { id: leadId },
       select: { id: true, leadMagnetId: true },
     })
@@ -22,7 +22,7 @@ export async function GET(request: NextRequest, { params }: { params: { leadMagn
       return NextResponse.json({ error: 'Invalid lead or download link' }, { status: 403 })
     }
 
-    const leadMagnet = await prisma.leadMagnet.findUnique({
+    const leadMagnet = await prisma.lead_magnets.findUnique({
       where: { id: leadMagnetId },
       select: { id: true, title: true, fileUrl: true, fileType: true },
     })

@@ -2,7 +2,7 @@
 
 import React, { useState, useRef, useEffect } from 'react'
 import { cn } from '@/lib/utils'
-import { DiagramBasedQuestion } from '@/data/neetQuestionBank'
+import type { DiagramBasedQuestion } from '@/data/neetQuestionBank'
 
 interface DiagramBasedQuestionProps {
   question: DiagramBasedQuestion
@@ -27,7 +27,7 @@ const DiagramBasedQuestion: React.FC<DiagramBasedQuestionProps> = ({
   onAnswerSelect,
   showExplanation = false,
   isReviewMode = false,
-  questionNumber = 1
+  questionNumber = 1,
 }) => {
   const [imageLoaded, setImageLoaded] = useState(false)
   const [imageError, setImageError] = useState(false)
@@ -39,12 +39,12 @@ const DiagramBasedQuestion: React.FC<DiagramBasedQuestionProps> = ({
   // Initialize annotations from labelledParts
   useEffect(() => {
     if (question.labelledParts && imageLoaded) {
-      const newAnnotations = question.labelledParts.map(part => ({
+      const newAnnotations = question.labelledParts.map((part) => ({
         id: part.id,
         x: part.position.x,
         y: part.position.y,
         label: part.name,
-        isVisible: showExplanation
+        isVisible: showExplanation,
       }))
       setAnnotations(newAnnotations)
     }
@@ -69,12 +69,8 @@ const DiagramBasedQuestion: React.FC<DiagramBasedQuestionProps> = ({
   // Toggle annotation visibility (for interactive mode)
   const toggleAnnotation = (id: string) => {
     if (!showExplanation && !isReviewMode) {
-      setAnnotations(prev =>
-        prev.map(ann =>
-          ann.id === id
-            ? { ...ann, isVisible: !ann.isVisible }
-            : ann
-        )
+      setAnnotations((prev) =>
+        prev.map((ann) => (ann.id === id ? { ...ann, isVisible: !ann.isVisible } : ann))
       )
     }
   }
@@ -87,17 +83,19 @@ const DiagramBasedQuestion: React.FC<DiagramBasedQuestionProps> = ({
           <span className="bg-cyan-100 text-cyan-800 px-3 py-1 rounded-full text-sm font-medium">
             Diagram Based
           </span>
-          <span className="text-gray-500 text-sm">
-            Question {questionNumber}
-          </span>
+          <span className="text-gray-500 text-sm">Question {questionNumber}</span>
         </div>
         <div className="flex items-center gap-2">
-          <span className={cn(
-            "px-2 py-1 rounded text-xs font-medium",
-            question.difficulty === 'easy' ? "bg-green-100 text-green-800" :
-            question.difficulty === 'medium' ? "bg-yellow-100 text-yellow-800" :
-            "bg-red-100 text-red-800"
-          )}>
+          <span
+            className={cn(
+              'px-2 py-1 rounded text-xs font-medium',
+              question.difficulty === 'easy'
+                ? 'bg-green-100 text-green-800'
+                : question.difficulty === 'medium'
+                  ? 'bg-yellow-100 text-yellow-800'
+                  : 'bg-red-100 text-red-800'
+            )}
+          >
             {question.difficulty.charAt(0).toUpperCase() + question.difficulty.slice(1)}
           </span>
           <span className="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">
@@ -125,9 +123,9 @@ const DiagramBasedQuestion: React.FC<DiagramBasedQuestionProps> = ({
                 onLoad={handleImageLoad}
                 onError={handleImageError}
                 className={cn(
-                  "max-w-full h-auto rounded-lg border border-gray-300 shadow-md transition-opacity duration-300",
-                  imageLoaded ? "opacity-100" : "opacity-0",
-                  "max-h-96 mx-auto"
+                  'max-w-full h-auto rounded-lg border border-gray-300 shadow-md transition-opacity duration-300',
+                  imageLoaded ? 'opacity-100' : 'opacity-0',
+                  'max-h-96 mx-auto'
                 )}
                 style={{ display: imageLoaded ? 'block' : 'none' }}
               />
@@ -152,17 +150,17 @@ const DiagramBasedQuestion: React.FC<DiagramBasedQuestionProps> = ({
                       style={{
                         left: `${annotation.x}%`,
                         top: `${annotation.y}%`,
-                        transform: 'translate(-50%, -50%)'
+                        transform: 'translate(-50%, -50%)',
                       }}
                     >
                       {/* Annotation Point */}
                       <button
                         onClick={() => toggleAnnotation(annotation.id)}
                         className={cn(
-                          "w-4 h-4 rounded-full border-2 border-white shadow-lg transition-all duration-200",
+                          'w-4 h-4 rounded-full border-2 border-white shadow-lg transition-all duration-200',
                           annotation.isVisible
-                            ? "bg-cyan-500 scale-125"
-                            : "bg-red-500 hover:scale-110"
+                            ? 'bg-cyan-500 scale-125'
+                            : 'bg-red-500 hover:scale-110'
                         )}
                         aria-label={`Annotation point: ${annotation.label}`}
                       />
@@ -195,13 +193,9 @@ const DiagramBasedQuestion: React.FC<DiagramBasedQuestionProps> = ({
 
         {/* Diagram Description */}
         <div className="mt-4 text-center">
-          <p className="text-sm text-gray-600 italic">
-            {question.diagramDescription}
-          </p>
+          <p className="text-sm text-gray-600 italic">{question.diagramDescription}</p>
           {question.labelledParts && question.labelledParts.length > 0 && !showExplanation && (
-            <p className="text-xs text-gray-500 mt-2">
-              Click on the colored dots to view labels
-            </p>
+            <p className="text-xs text-gray-500 mt-2">Click on the colored dots to view labels</p>
           )}
         </div>
       </div>
@@ -210,7 +204,8 @@ const DiagramBasedQuestion: React.FC<DiagramBasedQuestionProps> = ({
       {!showExplanation && !isReviewMode && (
         <div className="bg-gray-50 p-4 rounded-lg border border-gray-200 mb-6">
           <p className="text-sm text-gray-600">
-            <strong>Instructions:</strong> Study the diagram carefully and select the correct answer from the options below.
+            <strong>Instructions:</strong> Study the diagram carefully and select the correct answer
+            from the options below.
           </p>
         </div>
       )}
@@ -232,51 +227,49 @@ const DiagramBasedQuestion: React.FC<DiagramBasedQuestionProps> = ({
                 onMouseLeave={() => setHoveredOption(null)}
                 disabled={showExplanation || isReviewMode}
                 className={cn(
-                  "w-full text-left p-4 rounded-lg border-2 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-500",
-                  "hover:shadow-md",
+                  'w-full text-left p-4 rounded-lg border-2 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-500',
+                  'hover:shadow-md',
                   isSelected
                     ? showExplanation
                       ? isCorrect
-                        ? "border-green-500 bg-green-50 text-green-900 shadow-lg"
-                        : "border-red-500 bg-red-50 text-red-900 shadow-lg"
-                      : "border-cyan-500 bg-cyan-50 text-cyan-900 shadow-lg"
+                        ? 'border-green-500 bg-green-50 text-green-900 shadow-lg'
+                        : 'border-red-500 bg-red-50 text-red-900 shadow-lg'
+                      : 'border-cyan-500 bg-cyan-50 text-cyan-900 shadow-lg'
                     : showExplanation && isCorrect
-                      ? "border-green-500 bg-green-50 text-green-900 shadow-lg"
+                      ? 'border-green-500 bg-green-50 text-green-900 shadow-lg'
                       : isHovered
-                        ? "border-cyan-300 bg-cyan-25 shadow-md"
-                        : "border-gray-200 hover:border-cyan-300 hover:bg-gray-50",
-                  (showExplanation || isReviewMode) && "cursor-not-allowed"
+                        ? 'border-cyan-300 bg-cyan-25 shadow-md'
+                        : 'border-gray-200 hover:border-cyan-300 hover:bg-gray-50',
+                  (showExplanation || isReviewMode) && 'cursor-not-allowed'
                 )}
                 aria-label={`Option ${optionLabel}: ${option}`}
                 role="radio"
                 aria-checked={isSelected}
               >
                 <div className="flex items-center gap-3">
-                  <span className={cn(
-                    "w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold",
-                    isSelected
-                      ? showExplanation
-                        ? isCorrect
-                          ? "bg-green-500 text-white"
-                          : "bg-red-500 text-white"
-                        : "bg-cyan-500 text-white"
-                      : showExplanation && isCorrect
-                        ? "bg-green-500 text-white"
-                        : isHovered
-                          ? "bg-cyan-200 text-cyan-800"
-                          : "bg-gray-200 text-gray-700"
-                  )}>
+                  <span
+                    className={cn(
+                      'w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold',
+                      isSelected
+                        ? showExplanation
+                          ? isCorrect
+                            ? 'bg-green-500 text-white'
+                            : 'bg-red-500 text-white'
+                          : 'bg-cyan-500 text-white'
+                        : showExplanation && isCorrect
+                          ? 'bg-green-500 text-white'
+                          : isHovered
+                            ? 'bg-cyan-200 text-cyan-800'
+                            : 'bg-gray-200 text-gray-700'
+                    )}
+                  >
                     {optionLabel}
                   </span>
                   <span className="flex-1">{option}</span>
                   {showExplanation && (
                     <div className="flex-shrink-0">
-                      {isCorrect && (
-                        <span className="text-green-600 text-xl">✓</span>
-                      )}
-                      {isSelected && !isCorrect && (
-                        <span className="text-red-600 text-xl">✗</span>
-                      )}
+                      {isCorrect && <span className="text-green-600 text-xl">✓</span>}
+                      {isSelected && !isCorrect && <span className="text-red-600 text-xl">✗</span>}
                     </div>
                   )}
                 </div>

@@ -172,7 +172,7 @@ class AIConfigManager {
         inputTokenCost: 0.003, // Latest Sonnet 3.5 pricing
         outputTokenCost: 0.015,
         premiumInputCost: 0.006, // Claude 4 pricing (estimated)
-        premiumOutputCost: 0.030,
+        premiumOutputCost: 0.03,
       },
       capabilities: {
         reasoning: ['claude-3-5-sonnet-20250107', 'claude-4'],
@@ -261,47 +261,58 @@ class AIConfigManager {
   }
 
   // Calculate cost estimate with model-specific pricing
-  estimateCost(provider: string, inputTokens: number, outputTokens: number, model?: string): number {
+  estimateCost(
+    provider: string,
+    inputTokens: number,
+    outputTokens: number,
+    model?: string
+  ): number {
     const config = this.getProvider(provider)
     if (!config) return 0
 
     // Use premium pricing for premium models
-    const isPremiumModel = model && (
-      model.includes('gpt-5') ||
-      model.includes('claude-4') ||
-      model.includes('gemini-2.5-pro') ||
-      model.includes('o1-preview')
-    )
+    const isPremiumModel =
+      model &&
+      (model.includes('gpt-5') ||
+        model.includes('claude-4') ||
+        model.includes('gemini-2.5-pro') ||
+        model.includes('o1-preview'))
 
-    const inputCost = (inputTokens / 1000) * (
-      isPremiumModel && config.pricing.premiumInputCost
+    const inputCost =
+      (inputTokens / 1000) *
+      (isPremiumModel && config.pricing.premiumInputCost
         ? config.pricing.premiumInputCost
-        : config.pricing.inputTokenCost
-    )
+        : config.pricing.inputTokenCost)
 
-    const outputCost = (outputTokens / 1000) * (
-      isPremiumModel && config.pricing.premiumOutputCost
+    const outputCost =
+      (outputTokens / 1000) *
+      (isPremiumModel && config.pricing.premiumOutputCost
         ? config.pricing.premiumOutputCost
-        : config.pricing.outputTokenCost
-    )
+        : config.pricing.outputTokenCost)
 
     return inputCost + outputCost
   }
 
   // Get model for specific use case with enhanced capabilities
-  getModelForUseCase(provider: string, useCase: 'fast' | 'default' | 'premium' | 'reasoning' | 'vision' | 'ultrafast'): string {
+  getModelForUseCase(
+    provider: string,
+    useCase: 'fast' | 'default' | 'premium' | 'reasoning' | 'vision' | 'ultrafast'
+  ): string {
     const config = this.getProvider(provider)
     return config?.models[useCase] || config?.models.default || 'gpt-4o-mini'
   }
 
   // Get optimal model based on task characteristics
-  getOptimalModel(provider: string, taskType: {
-    complexity: 'low' | 'medium' | 'high'
-    requiresReasoning: boolean
-    requiresVision: boolean
-    priority: 'low' | 'medium' | 'high' | 'critical'
-    maxLatency: number // milliseconds
-  }): string {
+  getOptimalModel(
+    provider: string,
+    taskType: {
+      complexity: 'low' | 'medium' | 'high'
+      requiresReasoning: boolean
+      requiresVision: boolean
+      priority: 'low' | 'medium' | 'high' | 'critical'
+      maxLatency: number // milliseconds
+    }
+  ): string {
     const config = this.getProvider(provider)
     if (!config?.capabilities) return config?.models.default || 'gpt-4o-mini'
 
@@ -377,9 +388,6 @@ class AIConfigManager {
 
 // Export singleton instance
 export const aiConfig = AIConfigManager.getInstance()
-
-// Export types
-export type { AIProviderConfig, AIServiceConfig }
 
 // Export default
 export default aiConfig

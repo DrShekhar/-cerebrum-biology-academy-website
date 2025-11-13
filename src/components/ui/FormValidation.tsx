@@ -126,7 +126,7 @@ export function useFormValidation(rules: ValidationRules) {
     }
   }
 
-  const setTouched = (name: string) => {
+  const setFieldTouched = (name: string) => {
     setTouched((prev) => ({ ...prev, [name]: true }))
 
     const rule = rules[name]
@@ -178,7 +178,7 @@ export function useFormValidation(rules: ValidationRules) {
     value: values[name] || '',
     onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) =>
       setValue(name, e.target.value),
-    onBlur: () => setTouched(name),
+    onBlur: () => setFieldTouched(name),
     error: touched[name] ? errors[name] : '',
     ref: (el: HTMLElement | null) => {
       errorRefs.current[name] = el
@@ -192,7 +192,7 @@ export function useFormValidation(rules: ValidationRules) {
     isSubmitting,
     setIsSubmitting,
     setValue,
-    setTouched,
+    setTouched: setFieldTouched,
     validateAll,
     beforeSubmit,
     scrollToFirstError,
@@ -549,9 +549,12 @@ export function ValidatedForm({
 
       <form onSubmit={handleSubmit} className={className} noValidate>
         {React.Children.map(children, (child) => {
-          if (React.isValidElement(child) && child.props.name) {
-            const fieldProps = validation.getFieldProps(child.props.name)
-            return React.cloneElement(child, fieldProps)
+          if (React.isValidElement(child)) {
+            const props = child.props as Record<string, any>
+            if ('name' in props && typeof props.name === 'string') {
+              const fieldProps = validation.getFieldProps(props.name)
+              return React.cloneElement(child, fieldProps as any)
+            }
           }
           return child
         })}

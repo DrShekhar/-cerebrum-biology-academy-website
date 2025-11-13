@@ -14,11 +14,15 @@ interface ErrorDetails {
 export function useErrorHandler() {
   const handleError = useCallback((error: Error, details?: ErrorDetails) => {
     logError(error, {
-      ...details,
+      action: details?.action,
+      component: details?.component,
+      userId: details?.userId,
+      severity: details?.severity as 'low' | 'normal' | 'high' | 'critical' | undefined,
       userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : 'unknown',
       url: typeof window !== 'undefined' ? window.location.href : 'unknown',
       timestamp: new Date().toISOString(),
       source: 'useErrorHandler',
+      ...details?.additional,
     })
   }, [])
 

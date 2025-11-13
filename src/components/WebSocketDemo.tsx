@@ -22,7 +22,6 @@ export function WebSocketDemo() {
     enableMockMode: true,
     debug: true,
     reconnect: true,
-    heartbeat: 30000,
     onConnect: () => {
       console.log('🟢 WebSocket Connected')
     },

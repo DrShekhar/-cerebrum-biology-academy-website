@@ -602,13 +602,13 @@ export function CompleteCerebrumCatalog({ className = '' }: CompleteCerebrumCata
                                               {subKey}:{' '}
                                               {typeof subValue === 'number'
                                                 ? `₹${(subValue / 1000).toFixed(0)}K`
-                                                : subValue}
+                                                : String(subValue)}
                                             </div>
                                           ))}
                                         </div>
                                       ) : (
                                         <div>
-                                          {key}: {value}
+                                          {key}: {String(value)}
                                         </div>
                                       )}
                                     </div>

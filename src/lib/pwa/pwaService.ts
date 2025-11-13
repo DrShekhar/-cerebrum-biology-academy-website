@@ -192,9 +192,10 @@ class PWAService {
         // Create new subscription
         const vapidPublicKey = process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY
         if (vapidPublicKey) {
+          const appServerKey = this.urlBase64ToUint8Array(vapidPublicKey)
           subscription = await registration.pushManager.subscribe({
             userVisibleOnly: true,
-            applicationServerKey: this.urlBase64ToUint8Array(vapidPublicKey),
+            applicationServerKey: appServerKey as any,
           })
         }
       }
@@ -254,16 +255,6 @@ class PWAService {
       },
       requireInteraction: payload.type === 'class-reminder',
       vibrate: [200, 100, 200],
-      actions: [
-        {
-          action: 'open',
-          title: 'Open App',
-        },
-        {
-          action: 'close',
-          title: 'Close',
-        },
-      ],
     }
 
     new Notification(payload.title, options)
@@ -456,13 +447,13 @@ class PWAService {
     const base64 = (base64String + padding).replace(/-/g, '+').replace(/_/g, '/')
 
     const rawData = window.atob(base64)
-    const outputArray = new Uint8Array(rawData.length)
+    const outputArray: number[] = []
 
-    for (let i = 0; i < rawData.length; ++i) {
+    for (let i = 0; i < rawData.length; i++) {
       outputArray[i] = rawData.charCodeAt(i)
     }
 
-    return outputArray
+    return new Uint8Array(outputArray)
   }
 
   private dispatchEvent(eventName: string, detail: any) {

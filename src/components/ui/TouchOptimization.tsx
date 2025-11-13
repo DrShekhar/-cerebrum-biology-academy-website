@@ -145,7 +145,9 @@ export function SwipeableCourseCarousel({ courses, onCourseSelect }: CourseCarou
               index === currentIndex ? 'bg-purple-500' : 'bg-slate-300'
             }`}
             onClick={() => setCurrentIndex(index)}
-          />
+          >
+            <span className="sr-only">Go to course {index + 1}</span>
+          </TouchTarget>
         ))}
       </div>
     </div>
@@ -542,7 +544,7 @@ export function useTouchOptimization() {
 
 // Touch Optimization Provider
 interface TouchOptimizationProviderProps {
-  children: ReactNode
+  children?: ReactNode
 }
 
 export function TouchOptimizationProvider({ children }: TouchOptimizationProviderProps) {

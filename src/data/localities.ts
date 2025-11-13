@@ -857,6 +857,7 @@ export const localities: Locality[] = [
     socialProof: {
       studentCount: 124,
       topScore: 356,
+      testimonialIds: [],
       successStories: [
         'Priya from CGHS Kadambari Apartments scored 345/360 in Biology, secured AIIMS Delhi. "Saved 2 hours daily with coaching at DC Chowk vs traveling to Sector 6."',
         'Rahul from Neelgiri Apartments improved from 210 to 338 in just 9 months with hybrid mode. Now at Maulana Azad Medical College. "Hybrid flexibility was game-changer."',
@@ -1137,6 +1138,7 @@ export const localities: Locality[] = [
     socialProof: {
       studentCount: 156,
       topScore: 352,
+      testimonialIds: [],
       successStories: [
         'Priya from Shalimar Apartments scored 352/360 in Biology, secured AIIMS Delhi. "Walking distance from home, saved hours vs traveling to Lajpat Nagar. Small 15-student batch gave me confidence big institutes never could."',
         'Rahul from Noida Sector 62 improved from 245 to 342, now at Maulana Azad Medical College. "40-min metro commute via Pink Line was worth it. Saved ₹2.8L vs Aakash, got 5x better attention. Best decision ever."',

@@ -49,7 +49,14 @@ export interface QuestionMetadata {
   chapterId: string
   topicId: string
   questionText: string
-  questionType: 'single-correct' | 'assertion-reason' | 'match-following' | 'diagram-based' | 'multiple-correct' | 'numerical' | 'statement-based'
+  questionType:
+    | 'single-correct'
+    | 'assertion-reason'
+    | 'match-following'
+    | 'diagram-based'
+    | 'multiple-correct'
+    | 'numerical'
+    | 'statement-based'
   difficulty: 'easy' | 'medium' | 'hard'
   options?: string[]
   correctAnswer: string | string[] | number
@@ -73,7 +80,7 @@ export const class11Chapters: NCERTChapter[] = [
     weightageInNEET: 2.5,
     difficultyLevel: 'Foundation',
     estimatedStudyHours: 15,
-    relatedChapters: ['ch11-2']
+    relatedChapters: ['ch11-2'],
   },
   {
     id: 'ch11-2',
@@ -84,7 +91,7 @@ export const class11Chapters: NCERTChapter[] = [
     weightageInNEET: 4.0,
     difficultyLevel: 'Foundation',
     estimatedStudyHours: 25,
-    prerequisiteChapters: ['ch11-1']
+    prerequisiteChapters: ['ch11-1'],
   },
   {
     id: 'ch11-3',
@@ -95,7 +102,7 @@ export const class11Chapters: NCERTChapter[] = [
     weightageInNEET: 3.5,
     difficultyLevel: 'Intermediate',
     estimatedStudyHours: 30,
-    prerequisiteChapters: ['ch11-2']
+    prerequisiteChapters: ['ch11-2'],
   },
   {
     id: 'ch11-4',
@@ -106,7 +113,7 @@ export const class11Chapters: NCERTChapter[] = [
     weightageInNEET: 4.5,
     difficultyLevel: 'Intermediate',
     estimatedStudyHours: 35,
-    prerequisiteChapters: ['ch11-2']
+    prerequisiteChapters: ['ch11-2'],
   },
   {
     id: 'ch11-5',
@@ -117,7 +124,7 @@ export const class11Chapters: NCERTChapter[] = [
     weightageInNEET: 5.0,
     difficultyLevel: 'Intermediate',
     estimatedStudyHours: 25,
-    relatedChapters: ['ch11-6']
+    relatedChapters: ['ch11-6'],
   },
   {
     id: 'ch11-6',
@@ -128,7 +135,7 @@ export const class11Chapters: NCERTChapter[] = [
     weightageInNEET: 4.0,
     difficultyLevel: 'Intermediate',
     estimatedStudyHours: 30,
-    prerequisiteChapters: ['ch11-5']
+    prerequisiteChapters: ['ch11-5'],
   },
   {
     id: 'ch11-7',
@@ -139,7 +146,7 @@ export const class11Chapters: NCERTChapter[] = [
     weightageInNEET: 3.5,
     difficultyLevel: 'Intermediate',
     estimatedStudyHours: 25,
-    relatedChapters: ['ch11-4']
+    relatedChapters: ['ch11-4'],
   },
   {
     id: 'ch11-8',
@@ -150,7 +157,7 @@ export const class11Chapters: NCERTChapter[] = [
     weightageInNEET: 8.0,
     difficultyLevel: 'Advanced',
     estimatedStudyHours: 40,
-    relatedChapters: ['ch11-9', 'ch11-10']
+    relatedChapters: ['ch11-9', 'ch11-10'],
   },
   {
     id: 'ch11-9',
@@ -161,7 +168,7 @@ export const class11Chapters: NCERTChapter[] = [
     weightageInNEET: 6.5,
     difficultyLevel: 'Advanced',
     estimatedStudyHours: 35,
-    prerequisiteChapters: ['ch11-8']
+    prerequisiteChapters: ['ch11-8'],
   },
   {
     id: 'ch11-10',
@@ -172,7 +179,7 @@ export const class11Chapters: NCERTChapter[] = [
     weightageInNEET: 5.5,
     difficultyLevel: 'Advanced',
     estimatedStudyHours: 30,
-    prerequisiteChapters: ['ch11-8']
+    prerequisiteChapters: ['ch11-8'],
   },
   {
     id: 'ch11-11',
@@ -183,7 +190,7 @@ export const class11Chapters: NCERTChapter[] = [
     weightageInNEET: 4.5,
     difficultyLevel: 'Intermediate',
     estimatedStudyHours: 25,
-    prerequisiteChapters: ['ch11-5', 'ch11-6']
+    prerequisiteChapters: ['ch11-5', 'ch11-6'],
   },
   {
     id: 'ch11-12',
@@ -194,7 +201,7 @@ export const class11Chapters: NCERTChapter[] = [
     weightageInNEET: 3.0,
     difficultyLevel: 'Intermediate',
     estimatedStudyHours: 20,
-    relatedChapters: ['ch11-11']
+    relatedChapters: ['ch11-11'],
   },
   {
     id: 'ch11-13',
@@ -205,7 +212,7 @@ export const class11Chapters: NCERTChapter[] = [
     weightageInNEET: 7.0,
     difficultyLevel: 'Advanced',
     estimatedStudyHours: 35,
-    prerequisiteChapters: ['ch11-9']
+    prerequisiteChapters: ['ch11-9'],
   },
   {
     id: 'ch11-14',
@@ -216,7 +223,7 @@ export const class11Chapters: NCERTChapter[] = [
     weightageInNEET: 5.0,
     difficultyLevel: 'Advanced',
     estimatedStudyHours: 30,
-    prerequisiteChapters: ['ch11-9']
+    prerequisiteChapters: ['ch11-9'],
   },
   {
     id: 'ch11-15',
@@ -226,7 +233,7 @@ export const class11Chapters: NCERTChapter[] = [
     ncertReference: 'Chapter 15',
     weightageInNEET: 4.0,
     difficultyLevel: 'Intermediate',
-    estimatedStudyHours: 25
+    estimatedStudyHours: 25,
   },
   {
     id: 'ch11-16',
@@ -236,7 +243,7 @@ export const class11Chapters: NCERTChapter[] = [
     ncertReference: 'Chapter 16',
     weightageInNEET: 4.5,
     difficultyLevel: 'Intermediate',
-    estimatedStudyHours: 25
+    estimatedStudyHours: 25,
   },
   {
     id: 'ch11-17',
@@ -246,7 +253,7 @@ export const class11Chapters: NCERTChapter[] = [
     ncertReference: 'Chapter 17',
     weightageInNEET: 4.0,
     difficultyLevel: 'Intermediate',
-    estimatedStudyHours: 25
+    estimatedStudyHours: 25,
   },
   {
     id: 'ch11-18',
@@ -256,7 +263,7 @@ export const class11Chapters: NCERTChapter[] = [
     ncertReference: 'Chapter 18',
     weightageInNEET: 5.0,
     difficultyLevel: 'Intermediate',
-    estimatedStudyHours: 30
+    estimatedStudyHours: 30,
   },
   {
     id: 'ch11-19',
@@ -266,7 +273,7 @@ export const class11Chapters: NCERTChapter[] = [
     ncertReference: 'Chapter 19',
     weightageInNEET: 4.5,
     difficultyLevel: 'Intermediate',
-    estimatedStudyHours: 25
+    estimatedStudyHours: 25,
   },
   {
     id: 'ch11-20',
@@ -276,7 +283,7 @@ export const class11Chapters: NCERTChapter[] = [
     ncertReference: 'Chapter 20',
     weightageInNEET: 3.0,
     difficultyLevel: 'Foundation',
-    estimatedStudyHours: 20
+    estimatedStudyHours: 20,
   },
   {
     id: 'ch11-21',
@@ -286,7 +293,7 @@ export const class11Chapters: NCERTChapter[] = [
     ncertReference: 'Chapter 21',
     weightageInNEET: 6.0,
     difficultyLevel: 'Advanced',
-    estimatedStudyHours: 35
+    estimatedStudyHours: 35,
   },
   {
     id: 'ch11-22',
@@ -296,8 +303,8 @@ export const class11Chapters: NCERTChapter[] = [
     ncertReference: 'Chapter 22',
     weightageInNEET: 5.5,
     difficultyLevel: 'Advanced',
-    estimatedStudyHours: 30
-  }
+    estimatedStudyHours: 30,
+  },
 ]
 
 // Class 12 NCERT Biology Chapters
@@ -310,7 +317,7 @@ export const class12Chapters: NCERTChapter[] = [
     ncertReference: 'Chapter 1',
     weightageInNEET: 3.5,
     difficultyLevel: 'Foundation',
-    estimatedStudyHours: 20
+    estimatedStudyHours: 20,
   },
   {
     id: 'ch12-2',
@@ -321,7 +328,7 @@ export const class12Chapters: NCERTChapter[] = [
     weightageInNEET: 5.0,
     difficultyLevel: 'Intermediate',
     estimatedStudyHours: 30,
-    prerequisiteChapters: ['ch11-5', 'ch12-1']
+    prerequisiteChapters: ['ch11-5', 'ch12-1'],
   },
   {
     id: 'ch12-3',
@@ -332,7 +339,7 @@ export const class12Chapters: NCERTChapter[] = [
     weightageInNEET: 6.5,
     difficultyLevel: 'Advanced',
     estimatedStudyHours: 35,
-    prerequisiteChapters: ['ch12-1']
+    prerequisiteChapters: ['ch12-1'],
   },
   {
     id: 'ch12-4',
@@ -343,7 +350,7 @@ export const class12Chapters: NCERTChapter[] = [
     weightageInNEET: 3.0,
     difficultyLevel: 'Foundation',
     estimatedStudyHours: 20,
-    prerequisiteChapters: ['ch12-3']
+    prerequisiteChapters: ['ch12-3'],
   },
   {
     id: 'ch12-5',
@@ -354,7 +361,7 @@ export const class12Chapters: NCERTChapter[] = [
     weightageInNEET: 8.5,
     difficultyLevel: 'Advanced',
     estimatedStudyHours: 40,
-    prerequisiteChapters: ['ch11-10']
+    prerequisiteChapters: ['ch11-10'],
   },
   {
     id: 'ch12-6',
@@ -365,7 +372,7 @@ export const class12Chapters: NCERTChapter[] = [
     weightageInNEET: 7.5,
     difficultyLevel: 'Advanced',
     estimatedStudyHours: 35,
-    prerequisiteChapters: ['ch11-9', 'ch12-5']
+    prerequisiteChapters: ['ch11-9', 'ch12-5'],
   },
   {
     id: 'ch12-7',
@@ -376,7 +383,7 @@ export const class12Chapters: NCERTChapter[] = [
     weightageInNEET: 4.5,
     difficultyLevel: 'Intermediate',
     estimatedStudyHours: 25,
-    prerequisiteChapters: ['ch12-5']
+    prerequisiteChapters: ['ch12-5'],
   },
   {
     id: 'ch12-8',
@@ -386,7 +393,7 @@ export const class12Chapters: NCERTChapter[] = [
     ncertReference: 'Chapter 8',
     weightageInNEET: 5.5,
     difficultyLevel: 'Intermediate',
-    estimatedStudyHours: 30
+    estimatedStudyHours: 30,
   },
   {
     id: 'ch12-9',
@@ -396,7 +403,7 @@ export const class12Chapters: NCERTChapter[] = [
     ncertReference: 'Chapter 9',
     weightageInNEET: 3.5,
     difficultyLevel: 'Foundation',
-    estimatedStudyHours: 20
+    estimatedStudyHours: 20,
   },
   {
     id: 'ch12-10',
@@ -406,7 +413,7 @@ export const class12Chapters: NCERTChapter[] = [
     ncertReference: 'Chapter 10',
     weightageInNEET: 4.0,
     difficultyLevel: 'Intermediate',
-    estimatedStudyHours: 25
+    estimatedStudyHours: 25,
   },
   {
     id: 'ch12-11',
@@ -417,7 +424,7 @@ export const class12Chapters: NCERTChapter[] = [
     weightageInNEET: 4.5,
     difficultyLevel: 'Advanced',
     estimatedStudyHours: 30,
-    prerequisiteChapters: ['ch12-6']
+    prerequisiteChapters: ['ch12-6'],
   },
   {
     id: 'ch12-12',
@@ -428,7 +435,7 @@ export const class12Chapters: NCERTChapter[] = [
     weightageInNEET: 3.5,
     difficultyLevel: 'Intermediate',
     estimatedStudyHours: 25,
-    prerequisiteChapters: ['ch12-11']
+    prerequisiteChapters: ['ch12-11'],
   },
   {
     id: 'ch12-13',
@@ -438,7 +445,7 @@ export const class12Chapters: NCERTChapter[] = [
     ncertReference: 'Chapter 13',
     weightageInNEET: 4.0,
     difficultyLevel: 'Intermediate',
-    estimatedStudyHours: 25
+    estimatedStudyHours: 25,
   },
   {
     id: 'ch12-14',
@@ -449,7 +456,7 @@ export const class12Chapters: NCERTChapter[] = [
     weightageInNEET: 5.0,
     difficultyLevel: 'Intermediate',
     estimatedStudyHours: 30,
-    prerequisiteChapters: ['ch12-13']
+    prerequisiteChapters: ['ch12-13'],
   },
   {
     id: 'ch12-15',
@@ -459,7 +466,7 @@ export const class12Chapters: NCERTChapter[] = [
     ncertReference: 'Chapter 15',
     weightageInNEET: 3.5,
     difficultyLevel: 'Foundation',
-    estimatedStudyHours: 20
+    estimatedStudyHours: 20,
   },
   {
     id: 'ch12-16',
@@ -469,8 +476,8 @@ export const class12Chapters: NCERTChapter[] = [
     ncertReference: 'Chapter 16',
     weightageInNEET: 3.0,
     difficultyLevel: 'Foundation',
-    estimatedStudyHours: 20
-  }
+    estimatedStudyHours: 20,
+  },
 ]
 
 // High-Weightage Topics for Phase 1 Implementation (1000 questions)
@@ -485,21 +492,21 @@ export const phase1PriorityTopics: BiologyTopic[] = [
       'Cell Membrane Structure and Function',
       'Cell Organelles',
       'Nucleus and Chromosomes',
-      'Cell Wall and Cell Inclusions'
+      'Cell Wall and Cell Inclusions',
     ],
     keyTerms: ['cell theory', 'plasma membrane', 'organelles', 'nucleus', 'cytoplasm', 'cell wall'],
     importantDiagrams: ['Cell Structure', 'Membrane Structure', 'Organelle Organization'],
     commonMisconceptions: [
       'Confusing prokaryotic and eukaryotic features',
-      'Misunderstanding membrane permeability'
+      'Misunderstanding membrane permeability',
     ],
     neetFrequency: 'Very High',
     questionTypes: {
       singleCorrect: 75,
       assertionReason: 15,
       matchFollowing: 5,
-      diagramBased: 5
-    }
+      diagramBased: 5,
+    },
   },
   {
     id: 'topic-biomolecules',
@@ -510,21 +517,21 @@ export const phase1PriorityTopics: BiologyTopic[] = [
       'Proteins - Amino Acids and Protein Structure',
       'Lipids - Classification and Functions',
       'Nucleic Acids - DNA and RNA',
-      'Enzymes - Structure and Function'
+      'Enzymes - Structure and Function',
     ],
     keyTerms: ['carbohydrates', 'proteins', 'lipids', 'nucleic acids', 'enzymes', 'biomolecules'],
     importantDiagrams: ['Protein Structure', 'DNA Structure', 'Enzyme Action'],
     commonMisconceptions: [
       'Confusing different levels of protein structure',
-      'Misunderstanding enzyme specificity'
+      'Misunderstanding enzyme specificity',
     ],
     neetFrequency: 'Very High',
     questionTypes: {
       singleCorrect: 70,
       assertionReason: 20,
       matchFollowing: 5,
-      diagramBased: 5
-    }
+      diagramBased: 5,
+    },
   },
   {
     id: 'topic-photosynthesis',
@@ -535,39 +542,39 @@ export const phase1PriorityTopics: BiologyTopic[] = [
       'Calvin Cycle - CO2 Fixation',
       'C3, C4 and CAM Plants',
       'Factors Affecting Photosynthesis',
-      'Photorespiration'
+      'Photorespiration',
     ],
     keyTerms: ['photosynthesis', 'chlorophyll', 'light reactions', 'calvin cycle', 'C4 plants'],
     importantDiagrams: ['Chloroplast Structure', 'Light Reactions', 'Calvin Cycle'],
     commonMisconceptions: [
       'Confusing light and dark reactions',
-      'Misunderstanding C3 vs C4 pathways'
+      'Misunderstanding C3 vs C4 pathways',
     ],
     neetFrequency: 'Very High',
     questionTypes: {
       singleCorrect: 65,
       assertionReason: 20,
       matchFollowing: 10,
-      diagramBased: 5
-    }
+      diagramBased: 5,
+    },
   },
   {
     id: 'topic-genetics',
     name: 'Principles of Inheritance',
     chapterId: 'ch12-5',
     subtopics: [
-      'Mendel\'s Laws of Inheritance',
+      "Mendel's Laws of Inheritance",
       'Monohybrid and Dihybrid Crosses',
       'Incomplete Dominance and Codominance',
       'Multiple Alleles',
       'Sex-linked Inheritance',
-      'Linkage and Recombination'
+      'Linkage and Recombination',
     ],
     keyTerms: ['genetics', 'heredity', 'alleles', 'dominance', 'linkage', 'crossover'],
     importantDiagrams: ['Punnett Squares', 'Genetic Crosses', 'Chromosome Mapping'],
     commonMisconceptions: [
       'Confusing incomplete dominance with codominance',
-      'Misunderstanding sex-linked inheritance'
+      'Misunderstanding sex-linked inheritance',
     ],
     neetFrequency: 'Very High',
     questionTypes: {
@@ -575,8 +582,7 @@ export const phase1PriorityTopics: BiologyTopic[] = [
       assertionReason: 15,
       matchFollowing: 10,
       diagramBased: 15,
-      numericalProblems: 10
-    }
+    },
   },
   {
     id: 'topic-molecular-genetics',
@@ -588,21 +594,21 @@ export const phase1PriorityTopics: BiologyTopic[] = [
       'Protein Synthesis - Transcription and Translation',
       'Genetic Code',
       'Gene Expression and Regulation',
-      'DNA Fingerprinting'
+      'DNA Fingerprinting',
     ],
     keyTerms: ['DNA', 'RNA', 'replication', 'transcription', 'translation', 'genetic code'],
     importantDiagrams: ['DNA Structure', 'Replication Process', 'Protein Synthesis'],
     commonMisconceptions: [
       'Confusing transcription and translation',
-      'Misunderstanding genetic code properties'
+      'Misunderstanding genetic code properties',
     ],
     neetFrequency: 'Very High',
     questionTypes: {
       singleCorrect: 70,
       assertionReason: 20,
       matchFollowing: 5,
-      diagramBased: 5
-    }
+      diagramBased: 5,
+    },
   },
   {
     id: 'topic-human-reproduction',
@@ -614,22 +620,22 @@ export const phase1PriorityTopics: BiologyTopic[] = [
       'Menstrual Cycle',
       'Fertilization and Embryonic Development',
       'Pregnancy and Parturition',
-      'Lactation'
+      'Lactation',
     ],
     keyTerms: ['reproduction', 'gametes', 'fertilization', 'pregnancy', 'hormones'],
     importantDiagrams: ['Reproductive Systems', 'Menstrual Cycle', 'Embryonic Development'],
     commonMisconceptions: [
       'Confusing menstrual cycle phases',
-      'Misunderstanding fertilization process'
+      'Misunderstanding fertilization process',
     ],
     neetFrequency: 'Very High',
     questionTypes: {
       singleCorrect: 75,
       assertionReason: 15,
       matchFollowing: 5,
-      diagramBased: 5
-    }
-  }
+      diagramBased: 5,
+    },
+  },
 ]
 
 // Question Bank Structure for Implementation
@@ -638,18 +644,18 @@ export const questionBankStructure = {
     totalQuestions: 1000,
     distribution: {
       class11: 400,
-      class12: 600
+      class12: 600,
     },
     difficultyDistribution: {
       easy: 400,
       medium: 400,
-      hard: 200
+      hard: 200,
     },
     typeDistribution: {
       singleCorrect: 800,
       assertionReason: 100,
       matchFollowing: 50,
-      diagramBased: 50
+      diagramBased: 50,
     },
     priorityTopics: [
       'Cell Biology (120 questions)',
@@ -661,8 +667,8 @@ export const questionBankStructure = {
       'Evolution (80 questions)',
       'Ecology (70 questions)',
       'Plant Physiology (70 questions)',
-      'Human Physiology (100 questions)'
-    ]
+      'Human Physiology (100 questions)',
+    ],
   },
   phase2: {
     totalQuestions: 2000,
@@ -671,9 +677,9 @@ export const questionBankStructure = {
       'Multi-concept integration',
       'Application-based scenarios',
       'Research-based questions',
-      'Case study analysis'
-    ]
-  }
+      'Case study analysis',
+    ],
+  },
 }
 
 // Content Quality Standards
@@ -682,22 +688,25 @@ export const contentQualityFramework = {
     syllabusCoverage: '100% NCERT alignment',
     questionPatterns: 'Previous year NEET analysis',
     difficultyProgression: 'Foundation to advanced',
-    conceptualDepth: 'Beyond factual recall'
+    conceptualDepth: 'Beyond factual recall',
   },
   scientificAccuracy: {
     factualCorrectness: 'Expert-reviewed content',
     terminologyConsistency: 'Standard scientific terms',
     diagramAccuracy: 'Textbook-aligned illustrations',
-    updatedContent: 'Latest scientific developments'
+    updatedContent: 'Latest scientific developments',
   },
   pedagogicalEffectiveness: {
     conceptualClarity: 'Step-by-step explanations',
     commonMistakeAddress: 'Misconception clarification',
     practicalRelevance: 'Real-world applications',
-    memoryAids: 'Mnemonics and visual cues'
-  }
+    memoryAids: 'Mnemonics and visual cues',
+  },
 }
 
 export const allChapters = [...class11Chapters, ...class12Chapters]
 export const totalNCERTChapters = allChapters.length
-export const estimatedTotalStudyHours = allChapters.reduce((sum, chapter) => sum + chapter.estimatedStudyHours, 0)
+export const estimatedTotalStudyHours = allChapters.reduce(
+  (sum, chapter) => sum + chapter.estimatedStudyHours,
+  0
+)

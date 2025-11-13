@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react'
 import { cn } from '@/lib/utils'
-import { NumericalQuestion } from '@/data/neetQuestionBank'
+import type { NumericalQuestion } from '@/data/neetQuestionBank'
 
 interface NumericalQuestionProps {
   question: NumericalQuestion
@@ -19,7 +19,7 @@ const NumericalQuestion: React.FC<NumericalQuestionProps> = ({
   onAnswerSelect,
   showExplanation = false,
   isReviewMode = false,
-  questionNumber = 1
+  questionNumber = 1,
 }) => {
   const [inputValue, setInputValue] = useState<string>(selectedAnswer?.toString() || '')
   const [isValid, setIsValid] = useState<boolean>(true)
@@ -68,9 +68,8 @@ const NumericalQuestion: React.FC<NumericalQuestionProps> = ({
   const getAnswerStatus = () => {
     if (!showExplanation || inputValue === '') return null
 
-    const userAnswer = question.answerType === 'integer'
-      ? parseInt(inputValue, 10)
-      : parseFloat(inputValue)
+    const userAnswer =
+      question.answerType === 'integer' ? parseInt(inputValue, 10) : parseFloat(inputValue)
 
     if (isNaN(userAnswer)) return null
 
@@ -90,23 +89,29 @@ const NumericalQuestion: React.FC<NumericalQuestionProps> = ({
           <span className="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">
             Numerical
           </span>
-          <span className="text-gray-500 text-sm">
-            Question {questionNumber}
-          </span>
-          <span className={cn(
-            "px-2 py-1 rounded text-xs font-medium",
-            question.answerType === 'integer' ? "bg-blue-100 text-blue-800" : "bg-purple-100 text-purple-800"
-          )}>
+          <span className="text-gray-500 text-sm">Question {questionNumber}</span>
+          <span
+            className={cn(
+              'px-2 py-1 rounded text-xs font-medium',
+              question.answerType === 'integer'
+                ? 'bg-blue-100 text-blue-800'
+                : 'bg-purple-100 text-purple-800'
+            )}
+          >
             {question.answerType === 'integer' ? 'Integer' : 'Decimal'}
           </span>
         </div>
         <div className="flex items-center gap-2">
-          <span className={cn(
-            "px-2 py-1 rounded text-xs font-medium",
-            question.difficulty === 'easy' ? "bg-green-100 text-green-800" :
-            question.difficulty === 'medium' ? "bg-yellow-100 text-yellow-800" :
-            "bg-red-100 text-red-800"
-          )}>
+          <span
+            className={cn(
+              'px-2 py-1 rounded text-xs font-medium',
+              question.difficulty === 'easy'
+                ? 'bg-green-100 text-green-800'
+                : question.difficulty === 'medium'
+                  ? 'bg-yellow-100 text-yellow-800'
+                  : 'bg-red-100 text-red-800'
+            )}
+          >
             {question.difficulty.charAt(0).toUpperCase() + question.difficulty.slice(1)}
           </span>
           <span className="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">
@@ -135,13 +140,13 @@ const NumericalQuestion: React.FC<NumericalQuestionProps> = ({
               disabled={showExplanation || isReviewMode}
               placeholder={question.answerType === 'integer' ? 'Enter integer' : 'Enter decimal'}
               className={cn(
-                "w-48 h-12 text-center text-xl font-semibold rounded-lg border-2 transition-all duration-200",
-                "focus:outline-none focus:ring-2 focus:ring-indigo-500",
-                !isValid && inputValue !== '' && "border-red-500 bg-red-50",
-                answerStatus?.isCorrect && "border-green-500 bg-green-50",
-                answerStatus && !answerStatus.isCorrect && "border-red-500 bg-red-50",
-                !answerStatus && isValid && "border-indigo-300 focus:border-indigo-500",
-                (showExplanation || isReviewMode) && "bg-gray-100 cursor-not-allowed"
+                'w-48 h-12 text-center text-xl font-semibold rounded-lg border-2 transition-all duration-200',
+                'focus:outline-none focus:ring-2 focus:ring-indigo-500',
+                !isValid && inputValue !== '' && 'border-red-500 bg-red-50',
+                answerStatus?.isCorrect && 'border-green-500 bg-green-50',
+                answerStatus && !answerStatus.isCorrect && 'border-red-500 bg-red-50',
+                !answerStatus && isValid && 'border-indigo-300 focus:border-indigo-500',
+                (showExplanation || isReviewMode) && 'bg-gray-100 cursor-not-allowed'
               )}
               step={question.answerType === 'decimal' ? question.precision || 0.01 : 1}
             />
@@ -161,9 +166,7 @@ const NumericalQuestion: React.FC<NumericalQuestionProps> = ({
           </div>
 
           {question.unit && (
-            <span className="text-lg font-medium text-indigo-700">
-              {question.unit}
-            </span>
+            <span className="text-lg font-medium text-indigo-700">{question.unit}</span>
           )}
         </div>
 
@@ -172,8 +175,7 @@ const NumericalQuestion: React.FC<NumericalQuestionProps> = ({
           <p className="text-sm text-indigo-700">
             {question.answerType === 'integer'
               ? 'Enter a whole number'
-              : `Enter a decimal number${question.precision ? ` (precision: ${question.precision})` : ''}`
-            }
+              : `Enter a decimal number${question.precision ? ` (precision: ${question.precision})` : ''}`}
           </p>
           {question.range && (
             <p className="text-xs text-indigo-600">
@@ -223,7 +225,9 @@ const NumericalQuestion: React.FC<NumericalQuestionProps> = ({
         <div className="bg-gray-50 p-4 rounded-lg border border-gray-200 mb-6">
           <p className="text-sm text-gray-600">
             <strong>Instructions:</strong> Calculate the answer and enter the numerical value.
-            {question.answerType === 'integer' ? ' Enter as a whole number.' : ' Use decimal notation if required.'}
+            {question.answerType === 'integer'
+              ? ' Enter as a whole number.'
+              : ' Use decimal notation if required.'}
           </p>
         </div>
       )}
@@ -240,10 +244,12 @@ const NumericalQuestion: React.FC<NumericalQuestionProps> = ({
           </div>
           {answerStatus && (
             <div className="text-center mt-2">
-              <span className={cn(
-                "text-sm font-medium",
-                answerStatus.isCorrect ? "text-green-700" : "text-red-700"
-              )}>
+              <span
+                className={cn(
+                  'text-sm font-medium',
+                  answerStatus.isCorrect ? 'text-green-700' : 'text-red-700'
+                )}
+              >
                 Your answer: {answerStatus.userAnswer}
                 {question.unit && <span className="ml-1">{question.unit}</span>}
                 {answerStatus.isCorrect ? ' ✓ Correct!' : ' ✗ Incorrect'}

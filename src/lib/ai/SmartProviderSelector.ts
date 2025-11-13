@@ -33,9 +33,9 @@ export interface SelectionCriteria {
   maxLatency?: number
   minQuality?: number
   preferProvider?: string
-  costWeight: number    // 0-1, how much to weight cost
+  costWeight: number // 0-1, how much to weight cost
   qualityWeight: number // 0-1, how much to weight quality
-  speedWeight: number   // 0-1, how much to weight speed
+  speedWeight: number // 0-1, how much to weight speed
 }
 
 export class SmartProviderSelector {
@@ -86,7 +86,7 @@ export class SmartProviderSelector {
       estimatedTokens,
       priority,
       maxLatency,
-      studentLevel: context?.studentLevel || 'class-12'
+      studentLevel: context?.studentLevel || 'class-12',
     }
   }
 
@@ -125,7 +125,7 @@ export class SmartProviderSelector {
       requiresReasoning: task.requiresReasoning,
       requiresVision: task.requiresVision,
       priority: task.priority,
-      maxLatency: task.maxLatency
+      maxLatency: task.maxLatency,
     })
 
     // Calculate individual scores
@@ -136,11 +136,11 @@ export class SmartProviderSelector {
     const reliability = this.getReliabilityScore(providerName)
 
     // Weight the scores based on criteria
-    const weightedScore = (
-      qualityScore * criteria.qualityWeight +
-      (1 - costScore) * criteria.costWeight + // Invert cost (lower cost = higher score)
-      speedScore * criteria.speedWeight
-    ) / (criteria.qualityWeight + criteria.costWeight + criteria.speedWeight)
+    const weightedScore =
+      (qualityScore * criteria.qualityWeight +
+        (1 - costScore) * criteria.costWeight + // Invert cost (lower cost = higher score)
+        speedScore * criteria.speedWeight) /
+      (criteria.qualityWeight + criteria.costWeight + criteria.speedWeight)
 
     // Apply preference bonus
     let finalScore = weightedScore
@@ -168,7 +168,7 @@ export class SmartProviderSelector {
       estimatedLatency,
       qualityScore,
       reasoningScore,
-      reliability
+      reliability,
     }
   }
 
@@ -189,16 +189,16 @@ export class SmartProviderSelector {
 
       case 'openai':
         score = 0.85 // Strong general capabilities
-        if (task.requiresVision) score += 0.10
+        if (task.requiresVision) score += 0.1
         if (task.questionType === 'problem-solving') score += 0.05
         if (model.includes('o1')) score += 0.15 // O1 reasoning boost
         break
 
       case 'google':
-        score = 0.80 // Good for factual and fast responses
-        if (task.questionType === 'factual') score += 0.10
+        score = 0.8 // Good for factual and fast responses
+        if (task.questionType === 'factual') score += 0.1
         if (task.complexity === 'low') score += 0.05
-        if (task.maxLatency < 1000) score += 0.10 // Very fast
+        if (task.maxLatency < 1000) score += 0.1 // Very fast
         break
     }
 
@@ -221,8 +221,8 @@ export class SmartProviderSelector {
     )
 
     // Normalize cost score (lower cost = higher score)
-    const maxExpectedCost = 0.10 // $0.10 as reference point
-    return Math.max(0, 1 - (estimatedCost / maxExpectedCost))
+    const maxExpectedCost = 0.1 // $0.10 as reference point
+    return Math.max(0, 1 - estimatedCost / maxExpectedCost)
   }
 
   /**
@@ -233,7 +233,7 @@ export class SmartProviderSelector {
 
     // Normalize speed score (lower latency = higher score)
     const maxAcceptableLatency = 10000 // 10 seconds
-    return Math.max(0, 1 - (estimatedLatency / maxAcceptableLatency))
+    return Math.max(0, 1 - estimatedLatency / maxAcceptableLatency)
   }
 
   /**
@@ -244,8 +244,8 @@ export class SmartProviderSelector {
 
     const reasoningCapabilities = {
       anthropic: 0.95, // Claude excels at reasoning
-      openai: 0.90,    // O1 models are strong
-      google: 0.80     // Good but not specialized
+      openai: 0.9, // O1 models are strong
+      google: 0.8, // Good but not specialized
     }
 
     return reasoningCapabilities[provider as keyof typeof reasoningCapabilities] || 0.5
@@ -266,7 +266,7 @@ export class SmartProviderSelector {
       /derive.*formula/i,
       /prove.*theorem/i,
       /multi.*step/i,
-      /complex.*process/i
+      /complex.*process/i,
     ]
 
     // Low complexity indicators
@@ -277,14 +277,14 @@ export class SmartProviderSelector {
       /name/i,
       /simple.*question/i,
       /true.*false/i,
-      /fill.*blank/i
+      /fill.*blank/i,
     ]
 
-    if (highComplexityPatterns.some(pattern => pattern.test(promptLower))) {
+    if (highComplexityPatterns.some((pattern) => pattern.test(promptLower))) {
       return 'high'
     }
 
-    if (lowComplexityPatterns.some(pattern => pattern.test(promptLower))) {
+    if (lowComplexityPatterns.some((pattern) => pattern.test(promptLower))) {
       return 'low'
     }
 
@@ -331,38 +331,68 @@ export class SmartProviderSelector {
     const promptLower = prompt.toLowerCase()
 
     const biologyTerms = [
-      'cell', 'dna', 'protein', 'enzyme', 'photosynthesis', 'respiration',
-      'genetics', 'evolution', 'ecology', 'anatomy', 'physiology', 'organism',
-      'membrane', 'mitochondria', 'chloroplast', 'nucleus', 'chromosome'
+      'cell',
+      'dna',
+      'protein',
+      'enzyme',
+      'photosynthesis',
+      'respiration',
+      'genetics',
+      'evolution',
+      'ecology',
+      'anatomy',
+      'physiology',
+      'organism',
+      'membrane',
+      'mitochondria',
+      'chloroplast',
+      'nucleus',
+      'chromosome',
     ]
 
     const chemistryTerms = [
-      'molecule', 'atom', 'reaction', 'bond', 'compound', 'element',
-      'acid', 'base', 'ph', 'oxidation', 'reduction', 'catalyst'
+      'molecule',
+      'atom',
+      'reaction',
+      'bond',
+      'compound',
+      'element',
+      'acid',
+      'base',
+      'ph',
+      'oxidation',
+      'reduction',
+      'catalyst',
     ]
 
     const physicsTerms = [
-      'force', 'energy', 'motion', 'wave', 'light', 'electricity',
-      'magnetism', 'quantum', 'relativity', 'thermodynamics'
+      'force',
+      'energy',
+      'motion',
+      'wave',
+      'light',
+      'electricity',
+      'magnetism',
+      'quantum',
+      'relativity',
+      'thermodynamics',
     ]
 
-    const neetTerms = [
-      'neet', 'medical entrance', 'aiims', 'jipmer', 'ncert'
-    ]
+    const neetTerms = ['neet', 'medical entrance', 'aiims', 'jipmer', 'ncert']
 
-    if (neetTerms.some(term => promptLower.includes(term))) {
+    if (neetTerms.some((term) => promptLower.includes(term))) {
       return 'neet-specific'
     }
 
-    if (biologyTerms.some(term => promptLower.includes(term))) {
+    if (biologyTerms.some((term) => promptLower.includes(term))) {
       return 'biology'
     }
 
-    if (chemistryTerms.some(term => promptLower.includes(term))) {
+    if (chemistryTerms.some((term) => promptLower.includes(term))) {
       return 'chemistry'
     }
 
-    if (physicsTerms.some(term => promptLower.includes(term))) {
+    if (physicsTerms.some((term) => promptLower.includes(term))) {
       return 'physics'
     }
 
@@ -387,10 +417,10 @@ export class SmartProviderSelector {
       /logical/i,
       /conclude/i,
       /infer/i,
-      /deduce/i
+      /deduce/i,
     ]
 
-    return reasoningIndicators.some(pattern => pattern.test(prompt))
+    return reasoningIndicators.some((pattern) => pattern.test(prompt))
   }
 
   /**
@@ -407,10 +437,10 @@ export class SmartProviderSelector {
       /visual/i,
       /see.*image/i,
       /look.*at/i,
-      /analyze.*photo/i
+      /analyze.*photo/i,
     ]
 
-    return visionIndicators.some(pattern => pattern.test(prompt))
+    return visionIndicators.some((pattern) => pattern.test(prompt))
   }
 
   /**
@@ -422,7 +452,7 @@ export class SmartProviderSelector {
     const responseMultipliers = {
       low: 1.5,
       medium: 2.5,
-      high: 4.0
+      high: 4.0,
     }
 
     return Math.ceil(inputTokens + inputTokens * responseMultipliers[complexity])
@@ -443,10 +473,10 @@ export class SmartProviderSelector {
    */
   private getMaxLatency(priority: TaskAnalysis['priority']): number {
     const latencyLimits = {
-      critical: 2000,  // 2 seconds
-      high: 5000,      // 5 seconds
-      medium: 10000,   // 10 seconds
-      low: 15000       // 15 seconds
+      critical: 2000, // 2 seconds
+      high: 5000, // 5 seconds
+      medium: 10000, // 10 seconds
+      low: 15000, // 15 seconds
     }
 
     return latencyLimits[priority]
@@ -458,9 +488,9 @@ export class SmartProviderSelector {
   private estimateLatency(provider: string, task: TaskAnalysis): number {
     // Base latencies (milliseconds)
     const baseTimes = {
-      google: 800,    // Fastest
-      openai: 2000,   // Medium
-      anthropic: 3000 // Slower but higher quality
+      google: 800, // Fastest
+      openai: 2000, // Medium
+      anthropic: 3000, // Slower but higher quality
     }
 
     let estimatedTime = baseTimes[provider as keyof typeof baseTimes] || 3000
@@ -469,7 +499,7 @@ export class SmartProviderSelector {
     const complexityMultipliers = {
       low: 0.7,
       medium: 1.0,
-      high: 1.8
+      high: 1.8,
     }
 
     estimatedTime *= complexityMultipliers[task.complexity]
@@ -492,11 +522,11 @@ export class SmartProviderSelector {
     // Default reliability scores
     const defaultScores = {
       anthropic: 0.95,
-      openai: 0.90,
-      google: 0.85
+      openai: 0.9,
+      google: 0.85,
     }
 
-    return defaultScores[provider as keyof typeof defaultScores] || 0.80
+    return defaultScores[provider as keyof typeof defaultScores] || 0.8
   }
 
   /**
@@ -509,12 +539,15 @@ export class SmartProviderSelector {
   /**
    * Update provider performance metrics
    */
-  updatePerformance(provider: string, metrics: {
-    latency: number
-    cost: number
-    success: boolean
-    quality?: number
-  }): void {
+  updatePerformance(
+    provider: string,
+    metrics: {
+      latency: number
+      cost: number
+      success: boolean
+      quality?: number
+    }
+  ): void {
     // Update latency history
     const latencyHistory = this.performanceHistory.get(`${provider}_latency`) || []
     latencyHistory.push(metrics.latency)
@@ -528,7 +561,7 @@ export class SmartProviderSelector {
     this.costHistory.set(provider, costHistory)
 
     // Update reliability score
-    const currentReliability = this.reliabilityScores.get(provider) || 0.80
+    const currentReliability = this.reliabilityScores.get(provider) || 0.8
     const successFactor = metrics.success ? 0.01 : -0.05
     const newReliability = Math.max(0.1, Math.min(1.0, currentReliability + successFactor))
     this.reliabilityScores.set(provider, newReliability)
@@ -538,29 +571,43 @@ export class SmartProviderSelector {
    * Get performance analytics
    */
   getAnalytics(): {
-    providerPerformance: Record<string, {
-      avgLatency: number
-      avgCost: number
-      reliability: number
-      requestCount: number
-    }>
+    providerPerformance: Record<
+      string,
+      {
+        avgLatency: number
+        avgCost: number
+        reliability: number
+        requestCount: number
+      }
+    >
     recommendations: string[]
   } {
-    const analytics: any = { providerPerformance: {}, recommendations: [] }
+    const analytics: {
+      providerPerformance: Record<
+        string,
+        {
+          avgLatency: number
+          avgCost: number
+          reliability: number
+          requestCount: number
+        }
+      >
+      recommendations: string[]
+    } = { providerPerformance: {}, recommendations: [] }
 
     for (const provider of aiConfig.getAvailableProviders()) {
       const latencyHistory = this.performanceHistory.get(`${provider}_latency`) || []
       const costHistory = this.costHistory.get(provider) || []
 
       analytics.providerPerformance[provider] = {
-        avgLatency: latencyHistory.length > 0
-          ? latencyHistory.reduce((a, b) => a + b, 0) / latencyHistory.length
-          : 0,
-        avgCost: costHistory.length > 0
-          ? costHistory.reduce((a, b) => a + b, 0) / costHistory.length
-          : 0,
-        reliability: this.reliabilityScores.get(provider) || 0.80,
-        requestCount: latencyHistory.length
+        avgLatency:
+          latencyHistory.length > 0
+            ? latencyHistory.reduce((a, b) => a + b, 0) / latencyHistory.length
+            : 0,
+        avgCost:
+          costHistory.length > 0 ? costHistory.reduce((a, b) => a + b, 0) / costHistory.length : 0,
+        reliability: this.reliabilityScores.get(provider) || 0.8,
+        requestCount: latencyHistory.length,
       }
     }
 
@@ -578,7 +625,9 @@ export class SmartProviderSelector {
     }
 
     if (minCostProvider) {
-      recommendations.push(`Use ${minCostProvider} for cost optimization (avg: $${minCost.toFixed(4)})`)
+      recommendations.push(
+        `Use ${minCostProvider} for cost optimization (avg: $${minCost.toFixed(4)})`
+      )
     }
 
     analytics.recommendations = recommendations
@@ -591,7 +640,7 @@ export class SmartProviderSelector {
   private initializePerformanceTracking(): void {
     // Set default reliability scores
     this.reliabilityScores.set('anthropic', 0.95)
-    this.reliabilityScores.set('openai', 0.90)
+    this.reliabilityScores.set('openai', 0.9)
     this.reliabilityScores.set('google', 0.85)
   }
 }

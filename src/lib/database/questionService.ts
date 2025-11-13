@@ -1,10 +1,10 @@
 import { prisma, DatabaseUtils } from './connection'
 import { QuestionCacheService } from '../cache/redis'
 import type {
-  Question,
-  QuestionBank,
-  QuestionBankQuestion,
-  UserQuestionResponse,
+  questions,
+  question_banks,
+  question_bank_questions,
+  user_question_responses,
   Prisma,
 } from '@/generated/prisma'
 
@@ -68,9 +68,9 @@ export interface RandomQuestionFilters {
 
 export class QuestionService {
   // Question CRUD Operations
-  static async createQuestion(data: CreateQuestionInput): Promise<Question> {
+  static async createQuestion(data: CreateQuestionInput): Promise<questions> {
     try {
-      const question = await prisma.question.create({
+      const question = await prisma.questions.create({
         data: {
           ...data,
           options: data.options ? JSON.stringify(data.options) : null,
@@ -82,7 +82,7 @@ export class QuestionService {
           isActive: true,
           isVerified: !!data.verifiedBy,
           qualityScore: data.verifiedBy ? 4.0 : null,
-        },
+        } as any,
       })
 
       // Cache the new question
@@ -95,7 +95,7 @@ export class QuestionService {
     }
   }
 
-  static async getQuestionById(id: string): Promise<Question | null> {
+  static async getQuestionById(id: string): Promise<questions | null> {
     try {
       // Try cache first
       const cached = await QuestionCacheService.getQuestion(id)
@@ -103,7 +103,7 @@ export class QuestionService {
         return cached
       }
 
-      const question = await prisma.question.findUnique({
+      const question = await prisma.questions.findUnique({
         where: { id },
       })
 
@@ -121,9 +121,9 @@ export class QuestionService {
   static async updateQuestion(
     id: string,
     data: Partial<CreateQuestionInput>
-  ): Promise<Question | null> {
+  ): Promise<questions | null> {
     try {
-      const question = await prisma.question.update({
+      const question = await prisma.questions.update({
         where: { id },
         data: {
           ...data,
@@ -133,7 +133,7 @@ export class QuestionService {
           relatedConcepts: data.relatedConcepts ? JSON.stringify(data.relatedConcepts) : undefined,
           keywords: data.keywords ? JSON.stringify(data.keywords) : undefined,
           updatedAt: new Date(),
-        },
+        } as any,
       })
 
       // Update cache
@@ -148,7 +148,7 @@ export class QuestionService {
 
   static async deleteQuestion(id: string): Promise<boolean> {
     try {
-      await prisma.question.update({
+      await prisma.questions.update({
         where: { id },
         data: { isActive: false },
       })
@@ -168,10 +168,10 @@ export class QuestionService {
     filters: QuestionFilters = {},
     page: number = 1,
     limit: number = 20
-  ): Promise<{ questions: Question[]; total: number; hasMore: boolean }> {
+  ): Promise<{ questions: questions[]; total: number; hasMore: boolean }> {
     try {
       // Build where clause
-      const where: Prisma.QuestionWhereInput = {
+      const where: Prisma.questionsWhereInput = {
         isActive: filters.isActive ?? true,
       }
 
@@ -220,12 +220,12 @@ export class QuestionService {
 
       // Get paginated results
       const [questions, total] = await Promise.all([
-        prisma.question.findMany({
+        prisma.questions.findMany({
           where,
           orderBy: [{ popularityScore: 'desc' }, { qualityScore: 'desc' }, { createdAt: 'desc' }],
           ...DatabaseUtils.getPaginationParams(page, limit),
         }),
-        prisma.question.count({ where }),
+        prisma.questions.count({ where }),
       ])
 
       return {
@@ -246,7 +246,7 @@ export class QuestionService {
     grade: string = 'CLASS_12',
     page: number = 1,
     limit: number = 20
-  ): Promise<Question[]> {
+  ): Promise<questions[]> {
     try {
       // Try cache first
       const cached = await QuestionCacheService.getQuestionsByTopic(topic, difficulty, page)
@@ -254,7 +254,7 @@ export class QuestionService {
         return cached
       }
 
-      const where: Prisma.QuestionWhereInput = {
+      const where: Prisma.questionsWhereInput = {
         topic,
         curriculum,
         grade,
@@ -266,7 +266,7 @@ export class QuestionService {
         where.difficulty = difficulty as any
       }
 
-      const questions = await prisma.question.findMany({
+      const questions = await prisma.questions.findMany({
         where,
         orderBy: [{ popularityScore: 'desc' }, { totalAttempts: 'desc' }],
         ...DatabaseUtils.getPaginationParams(page, limit),
@@ -282,7 +282,7 @@ export class QuestionService {
     }
   }
 
-  static async getRandomQuestions(filters: RandomQuestionFilters): Promise<Question[]> {
+  static async getRandomQuestions(filters: RandomQuestionFilters): Promise<questions[]> {
     try {
       // Try cache first
       const cached = await QuestionCacheService.getRandomQuestions(filters)
@@ -290,7 +290,7 @@ export class QuestionService {
         return this.shuffleArray(cached).slice(0, filters.count)
       }
 
-      const where: Prisma.QuestionWhereInput = {
+      const where: Prisma.questionsWhereInput = {
         isActive: true,
         isVerified: filters.includeOnlyVerified ?? true,
       }
@@ -312,7 +312,7 @@ export class QuestionService {
       }
 
       // Get more questions than needed to allow for randomization
-      const questions = await prisma.question.findMany({
+      const questions = await prisma.questions.findMany({
         where,
         orderBy: {
           popularityScore: 'desc',
@@ -343,9 +343,9 @@ export class QuestionService {
     topics?: string[]
     isPublic?: boolean
     createdBy?: string
-  }): Promise<QuestionBank> {
+  }): Promise<question_banks> {
     try {
-      const questionBank = await prisma.questionBank.create({
+      const questionBank = await prisma.question_banks.create({
         data: {
           ...data,
           topics: data.topics ? JSON.stringify(data.topics) : null,
@@ -354,7 +354,7 @@ export class QuestionService {
           usageCount: 0,
           isActive: true,
           isPublic: data.isPublic ?? false,
-        },
+        } as any,
       })
 
       return questionBank
@@ -368,11 +368,11 @@ export class QuestionService {
     questionBankId: string,
     questionId: string,
     orderIndex?: number
-  ): Promise<QuestionBankQuestion | null> {
+  ): Promise<question_bank_questions | null> {
     try {
       // Get current max order index if not provided
       if (!orderIndex) {
-        const maxOrder = await prisma.questionBankQuestion.findFirst({
+        const maxOrder = await prisma.question_bank_questions.findFirst({
           where: { questionBankId },
           orderBy: { orderIndex: 'desc' },
           select: { orderIndex: true },
@@ -380,12 +380,12 @@ export class QuestionService {
         orderIndex = (maxOrder?.orderIndex || 0) + 1
       }
 
-      const bankQuestion = await prisma.questionBankQuestion.create({
+      const bankQuestion = await prisma.question_bank_questions.create({
         data: {
           questionBankId,
           questionId,
           orderIndex,
-        },
+        } as any,
       })
 
       // Update question bank totals
@@ -403,7 +403,7 @@ export class QuestionService {
     questionId: string
   ): Promise<boolean> {
     try {
-      await prisma.questionBankQuestion.deleteMany({
+      await prisma.question_bank_questions.deleteMany({
         where: {
           questionBankId,
           questionId,
@@ -420,16 +420,16 @@ export class QuestionService {
     }
   }
 
-  static async getQuestionBank(id: string): Promise<QuestionBank | null> {
+  static async getQuestionBank(id: string): Promise<question_banks | null> {
     try {
       // OPTIMIZED: Single query with selective field loading to prevent N+1
       // This loads all questions in one go instead of separate queries
-      return await prisma.questionBank.findUnique({
+      return await prisma.question_banks.findUnique({
         where: { id },
         include: {
-          questions: {
+          question_bank_questions: {
             include: {
-              question: {
+              questions: {
                 // Select only necessary fields to reduce data transfer
                 select: {
                   id: true,
@@ -474,9 +474,9 @@ export class QuestionService {
     } = {},
     page: number = 1,
     limit: number = 20
-  ): Promise<{ banks: QuestionBank[]; total: number; hasMore: boolean }> {
+  ): Promise<{ banks: question_banks[]; total: number; hasMore: boolean }> {
     try {
-      const where: Prisma.QuestionBankWhereInput = {
+      const where: Prisma.question_banksWhereInput = {
         isActive: filters.isActive ?? true,
       }
 
@@ -487,12 +487,12 @@ export class QuestionService {
       if (filters.isPublic !== undefined) where.isPublic = filters.isPublic
 
       const [banks, total] = await Promise.all([
-        prisma.questionBank.findMany({
+        prisma.question_banks.findMany({
           where,
           orderBy: [{ usageCount: 'desc' }, { createdAt: 'desc' }],
           ...DatabaseUtils.getPaginationParams(page, limit),
         }),
-        prisma.questionBank.count({ where }),
+        prisma.question_banks.count({ where }),
       ])
 
       return {
@@ -508,19 +508,19 @@ export class QuestionService {
 
   private static async updateQuestionBankStats(questionBankId: string): Promise<void> {
     try {
-      const stats = await prisma.questionBankQuestion.aggregate({
+      const stats = await prisma.question_bank_questions.aggregate({
         where: { questionBankId },
         _count: { id: true },
       })
 
-      const activeCount = await prisma.questionBankQuestion.count({
+      const activeCount = await prisma.question_bank_questions.count({
         where: {
           questionBankId,
-          question: { isActive: true },
+          questions: { isActive: true },
         },
       })
 
-      await prisma.questionBank.update({
+      await prisma.question_banks.update({
         where: { id: questionBankId },
         data: {
           totalQuestions: stats._count.id,
@@ -539,7 +539,7 @@ export class QuestionService {
     timeSpent: number
   ): Promise<void> {
     try {
-      const question = await prisma.question.findUnique({
+      const question = await prisma.questions.findUnique({
         where: { id: questionId },
         select: { totalAttempts: true, correctAttempts: true, averageTime: true },
       })
@@ -553,7 +553,7 @@ export class QuestionService {
       const currentTotalTime = (question.averageTime || 0) * question.totalAttempts
       const newAverageTime = Math.round((currentTotalTime + timeSpent) / newTotalAttempts)
 
-      await prisma.question.update({
+      await prisma.questions.update({
         where: { id: questionId },
         data: {
           totalAttempts: newTotalAttempts,
@@ -579,7 +579,7 @@ export class QuestionService {
     recentPerformance: { date: string; attempts: number; accuracy: number }[]
   } | null> {
     try {
-      const question = await prisma.question.findUnique({
+      const question = await prisma.questions.findUnique({
         where: { id: questionId },
       })
 
@@ -592,7 +592,7 @@ export class QuestionService {
       const thirtyDaysAgo = new Date()
       thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30)
 
-      const recentResponses = await prisma.userQuestionResponse.findMany({
+      const recentResponses = await prisma.user_question_responses.findMany({
         where: {
           questionId,
           answeredAt: { gte: thirtyDaysAgo },
@@ -650,7 +650,7 @@ export class QuestionService {
         qualityScore: q.verifiedBy ? 4.0 : null,
       }))
 
-      const result = await DatabaseUtils.bulkCreate('question', questionData)
+      const result = await DatabaseUtils.bulkCreate('questions' as any, questionData)
       return result
     } catch (error) {
       console.error('Failed to bulk create questions:', error)
@@ -662,14 +662,14 @@ export class QuestionService {
     try {
       // OPTIMIZED: Load questions with aggregated response count instead of all responses
       // This prevents loading thousands of response records
-      const questions = await prisma.question.findMany({
+      const questions = await prisma.questions.findMany({
         select: {
           id: true,
           totalAttempts: true,
           qualityScore: true,
           _count: {
             select: {
-              userResponses: {
+              user_question_responses: {
                 where: {
                   answeredAt: {
                     gte: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000),
@@ -683,7 +683,7 @@ export class QuestionService {
 
       // OPTIMIZED: Batch update using transaction for better performance
       const updates = questions.map((question) => {
-        const recentUsage = question._count.userResponses
+        const recentUsage = question._count.user_question_responses
         const totalUsage = question.totalAttempts
         const qualityScore = question.qualityScore || 3.0
 
@@ -702,7 +702,7 @@ export class QuestionService {
         const chunk = updates.slice(i, i + 100)
         await Promise.all(
           chunk.map((update) =>
-            prisma.question.update({
+            prisma.questions.update({
               where: { id: update.id },
               data: { popularityScore: update.popularityScore },
             })
@@ -733,7 +733,7 @@ export class QuestionService {
     reportedBy?: string
   ): Promise<boolean> {
     try {
-      await prisma.question.update({
+      await prisma.questions.update({
         where: { id: questionId },
         data: {
           reportCount: { increment: 1 },
@@ -741,13 +741,13 @@ export class QuestionService {
       })
 
       // If report count exceeds threshold, deactivate question
-      const question = await prisma.question.findUnique({
+      const question = await prisma.questions.findUnique({
         where: { id: questionId },
         select: { reportCount: true },
       })
 
       if (question && question.reportCount >= 5) {
-        await prisma.question.update({
+        await prisma.questions.update({
           where: { id: questionId },
           data: { isActive: false },
         })
@@ -769,7 +769,7 @@ export class QuestionService {
     qualityScore: number = 4.0
   ): Promise<boolean> {
     try {
-      await prisma.question.update({
+      await prisma.questions.update({
         where: { id: questionId },
         data: {
           isVerified: true,

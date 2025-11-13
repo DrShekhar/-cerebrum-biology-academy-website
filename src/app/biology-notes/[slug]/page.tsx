@@ -17,7 +17,7 @@ interface PageProps {
 // Generate static params for all published topics (for ISR)
 export async function generateStaticParams() {
   try {
-    const topics = await prisma.biologyTopic.findMany({
+    const topics = await prisma.biology_topics.findMany({
       where: { isPublished: true },
       select: { slug: true },
       take: 50, // Limit to first 50 for build time
@@ -35,7 +35,7 @@ export async function generateStaticParams() {
 
 // Generate metadata for SEO
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const topic = await prisma.biologyTopic.findUnique({
+  const topic = await prisma.biology_topics.findUnique({
     where: { slug: params.slug },
     select: {
       metaTitle: true,
@@ -75,10 +75,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 export default async function BiologyTopicPage({ params }: PageProps) {
-  const topic = await prisma.biologyTopic.findUnique({
+  const topic = await prisma.biology_topics.findUnique({
     where: { slug: params.slug },
     include: {
-      leadMagnet: true,
+      lead_magnets: true,
     },
   })
 
@@ -87,7 +87,7 @@ export default async function BiologyTopicPage({ params }: PageProps) {
   }
 
   // Increment view count (non-blocking)
-  prisma.biologyTopic
+  prisma.biology_topics
     .update({
       where: { id: topic.id },
       data: { viewCount: { increment: 1 } },
@@ -217,15 +217,15 @@ export default async function BiologyTopicPage({ params }: PageProps) {
         </div>
 
         {/* Lead Magnet CTA */}
-        {topic.leadMagnet && (
+        {topic.lead_magnets && (
           <div className="mt-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
             <div className="flex flex-col md:flex-row items-center justify-between">
               <div className="mb-6 md:mb-0 md:mr-8">
                 <h3 className="text-2xl font-bold mb-2">Want the Complete Study Material?</h3>
-                <p className="text-blue-100 mb-4">{topic.leadMagnet.description}</p>
+                <p className="text-blue-100 mb-4">{topic.lead_magnets.description}</p>
                 <div className="flex items-center text-sm text-blue-100">
                   <Download className="w-4 h-4 mr-2" />
-                  <span>{topic.leadMagnet.downloadCount}+ students downloaded</span>
+                  <span>{topic.lead_magnets.downloadCount}+ students downloaded</span>
                 </div>
               </div>
               <Link

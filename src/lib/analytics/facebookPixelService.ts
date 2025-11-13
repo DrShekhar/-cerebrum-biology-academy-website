@@ -10,17 +10,17 @@ export class FacebookPixelService {
     if (typeof window === 'undefined' || this.isInitialized) return
 
     // Facebook Pixel initialization
-    window.fbq =
-      window.fbq ||
-      function () {
-        ;(window.fbq.q = window.fbq.q || []).push(arguments)
+    const fbq: any =
+      (window as any).fbq ||
+      function (...args: any[]) {
+        ;(fbq.q = fbq.q || []).push(args)
       }
-
-    if (!window._fbq) window._fbq = window.fbq
-    window.fbq.push = window.fbq
-    window.fbq.loaded = true
-    window.fbq.version = '2.0'
-    window.fbq.queue = []
+    fbq.push = fbq
+    fbq.loaded = true
+    fbq.version = '2.0'
+    fbq.queue = []
+    ;(window as any).fbq = fbq
+    if (!(window as any)._fbq) (window as any)._fbq = fbq
 
     // Load Facebook Pixel script
     const script = document.createElement('script')
@@ -29,24 +29,22 @@ export class FacebookPixelService {
     document.head.appendChild(script)
 
     // Initialize pixel
-    window.fbq('init', pixelId)
-    window.fbq('track', 'PageView')
+    ;(window as any).fbq('init', pixelId)
+    ;(window as any).fbq('track', 'PageView')
 
     this.isInitialized = true
     console.log('Facebook Pixel initialized with ID:', pixelId)
   }
 
   static trackEvent(eventName: string, parameters: Record<string, any> = {}) {
-    if (typeof window === 'undefined' || !window.fbq) return
-
-    window.fbq('track', eventName, parameters)
+    if (typeof window === 'undefined' || !(window as any).fbq) return
+    ;(window as any).fbq('track', eventName, parameters)
     console.log('Facebook Pixel Event:', eventName, parameters)
   }
 
   static trackCustomEvent(eventName: string, parameters: Record<string, any> = {}) {
-    if (typeof window === 'undefined' || !window.fbq) return
-
-    window.fbq('trackCustom', eventName, parameters)
+    if (typeof window === 'undefined' || !(window as any).fbq) return
+    ;(window as any).fbq('trackCustom', eventName, parameters)
     console.log('Facebook Pixel Custom Event:', eventName, parameters)
   }
 

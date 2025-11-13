@@ -228,7 +228,7 @@ export function OptimisticTestSubmission({
 
         <button
           onClick={handleSubmit}
-          disabled={isLoading || data.status === 'submitted'}
+          disabled={isLoading || data.status !== 'draft'}
           className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 rounded-xl font-bold text-lg hover:shadow-2xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-3"
         >
           {isLoading ? (

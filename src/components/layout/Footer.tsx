@@ -61,6 +61,7 @@ export const Footer = memo(function Footer() {
   const supportLinks = [
     { name: 'Contact Us', href: '/contact' },
     { name: 'Help Center', href: '/help' },
+    { name: 'Blog', href: '/blog' },
     { name: 'Book Demo Class', href: '/demo-booking' },
     { name: 'Download Brochure', href: '/contact' },
     { name: 'Fee Structure', href: '/courses' },
@@ -277,7 +278,7 @@ export const Footer = memo(function Footer() {
 
             <h4 className="font-semibold text-lg mb-4 text-white">Support</h4>
             <ul className="space-y-2">
-              {supportLinks.slice(0, 3).map((link) => (
+              {supportLinks.slice(0, 4).map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
@@ -380,7 +381,7 @@ export const Footer = memo(function Footer() {
 
       {/* Quick Actions - Floating */}
       <div
-        className="fixed right-4 z-40 flex flex-col space-y-2 bottom-20 md:bottom-4"
+        className="fixed right-4 z-40 flex flex-col space-y-2 bottom-32 md:bottom-24"
         role="complementary"
         aria-label="Quick contact actions"
       >

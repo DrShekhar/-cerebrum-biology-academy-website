@@ -757,15 +757,15 @@ export class SmartSubscriptionTiers {
     return {
       tier1: {
         name: t1.name,
-        price: t1.price,
+        price: 'price' in t1 ? t1.price : 0,
         currency: t1.currency,
       },
       tier2: {
         name: t2.name,
-        price: t2.price,
+        price: 'price' in t2 ? t2.price : 0,
         currency: t2.currency,
       },
-      price_difference: t2.price - t1.price,
+      price_difference: ('price' in t2 ? t2.price : 0) - ('price' in t1 ? t1.price : 0),
       feature_comparison: this.generateFeatureComparison(t1, t2),
       value_proposition: this.generateValueProposition(t1, t2),
     }
@@ -795,7 +795,9 @@ export class SmartSubscriptionTiers {
   }
 
   private generateValueProposition(tier1: any, tier2: any): string {
-    const priceDiff = tier2.price - tier1.price
+    const price1 = 'price' in tier1 ? tier1.price : 0
+    const price2 = 'price' in tier2 ? tier2.price : 0
+    const priceDiff = price2 - price1
     return `For just $${priceDiff} more per month, get 10x more value with advanced features`
   }
 }

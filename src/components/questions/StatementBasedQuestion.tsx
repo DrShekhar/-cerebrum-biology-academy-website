@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 import { cn } from '@/lib/utils'
-import { StatementBasedQuestion } from '@/data/neetQuestionBank'
+import type { StatementBasedQuestion } from '@/data/neetQuestionBank'
 
 interface StatementBasedQuestionProps {
   question: StatementBasedQuestion
@@ -19,7 +19,7 @@ const StatementBasedQuestion: React.FC<StatementBasedQuestionProps> = ({
   onAnswerSelect,
   showExplanation = false,
   isReviewMode = false,
-  questionNumber = 1
+  questionNumber = 1,
 }) => {
   const [hoveredOption, setHoveredOption] = useState<string | null>(null)
   const [hoveredStatement, setHoveredStatement] = useState<string | null>(null)
@@ -43,23 +43,29 @@ const StatementBasedQuestion: React.FC<StatementBasedQuestionProps> = ({
           <span className="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm font-medium">
             Statement Based
           </span>
-          <span className="text-gray-500 text-sm">
-            Question {questionNumber}
-          </span>
-          <span className={cn(
-            "px-2 py-1 rounded text-xs font-medium",
-            question.evaluationType === 'individual' ? "bg-blue-100 text-blue-800" : "bg-purple-100 text-purple-800"
-          )}>
+          <span className="text-gray-500 text-sm">Question {questionNumber}</span>
+          <span
+            className={cn(
+              'px-2 py-1 rounded text-xs font-medium',
+              question.evaluationType === 'individual'
+                ? 'bg-blue-100 text-blue-800'
+                : 'bg-purple-100 text-purple-800'
+            )}
+          >
             {question.evaluationType === 'individual' ? 'Individual' : 'Combined'}
           </span>
         </div>
         <div className="flex items-center gap-2">
-          <span className={cn(
-            "px-2 py-1 rounded text-xs font-medium",
-            question.difficulty === 'easy' ? "bg-green-100 text-green-800" :
-            question.difficulty === 'medium' ? "bg-yellow-100 text-yellow-800" :
-            "bg-red-100 text-red-800"
-          )}>
+          <span
+            className={cn(
+              'px-2 py-1 rounded text-xs font-medium',
+              question.difficulty === 'easy'
+                ? 'bg-green-100 text-green-800'
+                : question.difficulty === 'medium'
+                  ? 'bg-yellow-100 text-yellow-800'
+                  : 'bg-red-100 text-red-800'
+            )}
+          >
             {question.difficulty.charAt(0).toUpperCase() + question.difficulty.slice(1)}
           </span>
           <span className="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">
@@ -77,7 +83,9 @@ const StatementBasedQuestion: React.FC<StatementBasedQuestionProps> = ({
 
       {/* Statements Section */}
       <div className="mb-8 p-6 bg-gradient-to-br from-teal-50 to-teal-100 rounded-lg border border-teal-200">
-        <h3 className="font-semibold text-teal-900 mb-4 text-center">Evaluate the following statements:</h3>
+        <h3 className="font-semibold text-teal-900 mb-4 text-center">
+          Evaluate the following statements:
+        </h3>
 
         <div className="space-y-4">
           {question.statements.map((statement, index) => {
@@ -90,26 +98,28 @@ const StatementBasedQuestion: React.FC<StatementBasedQuestionProps> = ({
                 onMouseEnter={() => setHoveredStatement(statement.id)}
                 onMouseLeave={() => setHoveredStatement(null)}
                 className={cn(
-                  "p-4 rounded-lg border-2 transition-all duration-200",
+                  'p-4 rounded-lg border-2 transition-all duration-200',
                   showStatus
                     ? isCorrect
-                      ? "border-green-500 bg-green-50"
-                      : "border-red-500 bg-red-50"
+                      ? 'border-green-500 bg-green-50'
+                      : 'border-red-500 bg-red-50'
                     : isHovered
-                      ? "border-teal-400 bg-teal-50 shadow-md"
-                      : "border-teal-300 bg-white hover:border-teal-400"
+                      ? 'border-teal-400 bg-teal-50 shadow-md'
+                      : 'border-teal-300 bg-white hover:border-teal-400'
                 )}
               >
                 <div className="flex items-start gap-3">
                   {/* Statement Number */}
-                  <div className={cn(
-                    "w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0",
-                    showStatus
-                      ? isCorrect
-                        ? "bg-green-500 text-white"
-                        : "bg-red-500 text-white"
-                      : "bg-teal-500 text-white"
-                  )}>
+                  <div
+                    className={cn(
+                      'w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0',
+                      showStatus
+                        ? isCorrect
+                          ? 'bg-green-500 text-white'
+                          : 'bg-red-500 text-white'
+                        : 'bg-teal-500 text-white'
+                    )}
+                  >
                     {index + 1}
                   </div>
 
@@ -121,16 +131,17 @@ const StatementBasedQuestion: React.FC<StatementBasedQuestionProps> = ({
                   {/* Status Indicator */}
                   {showStatus && (
                     <div className="flex items-center gap-2 flex-shrink-0">
-                      <span className={cn(
-                        "px-2 py-1 rounded text-xs font-medium",
-                        isCorrect ? "bg-green-100 text-green-800" : "bg-red-100 text-red-800"
-                      )}>
+                      <span
+                        className={cn(
+                          'px-2 py-1 rounded text-xs font-medium',
+                          isCorrect ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
+                        )}
+                      >
                         {isCorrect ? 'True' : 'False'}
                       </span>
-                      <span className={cn(
-                        "text-lg",
-                        isCorrect ? "text-green-600" : "text-red-600"
-                      )}>
+                      <span
+                        className={cn('text-lg', isCorrect ? 'text-green-600' : 'text-red-600')}
+                      >
                         {isCorrect ? '✓' : '✗'}
                       </span>
                     </div>
@@ -146,13 +157,13 @@ const StatementBasedQuestion: React.FC<StatementBasedQuestionProps> = ({
       {!showExplanation && !isReviewMode && (
         <div className="bg-gray-50 p-4 rounded-lg border border-gray-200 mb-6">
           <p className="text-sm text-gray-600 mb-2">
-            <strong>Instructions:</strong> Evaluate each statement and select the correct option below.
+            <strong>Instructions:</strong> Evaluate each statement and select the correct option
+            below.
           </p>
           <p className="text-xs text-gray-500">
             {question.evaluationType === 'individual'
               ? 'Each statement should be evaluated independently.'
-              : 'Consider the statements together when selecting your answer.'
-            }
+              : 'Consider the statements together when selecting your answer.'}
           </p>
         </div>
       )}
@@ -175,51 +186,49 @@ const StatementBasedQuestion: React.FC<StatementBasedQuestionProps> = ({
                 onMouseLeave={() => setHoveredOption(null)}
                 disabled={showExplanation || isReviewMode}
                 className={cn(
-                  "w-full text-left p-4 rounded-lg border-2 transition-all duration-200",
-                  "focus:outline-none focus:ring-2 focus:ring-teal-500 hover:shadow-md",
+                  'w-full text-left p-4 rounded-lg border-2 transition-all duration-200',
+                  'focus:outline-none focus:ring-2 focus:ring-teal-500 hover:shadow-md',
                   isSelected
                     ? showExplanation
                       ? isCorrect
-                        ? "border-green-500 bg-green-50 text-green-900 shadow-lg"
-                        : "border-red-500 bg-red-50 text-red-900 shadow-lg"
-                      : "border-teal-500 bg-teal-50 text-teal-900 shadow-lg"
+                        ? 'border-green-500 bg-green-50 text-green-900 shadow-lg'
+                        : 'border-red-500 bg-red-50 text-red-900 shadow-lg'
+                      : 'border-teal-500 bg-teal-50 text-teal-900 shadow-lg'
                     : showExplanation && isCorrect
-                      ? "border-green-500 bg-green-50 text-green-900 shadow-lg"
+                      ? 'border-green-500 bg-green-50 text-green-900 shadow-lg'
                       : isHovered
-                        ? "border-teal-300 bg-teal-25 shadow-md"
-                        : "border-gray-200 hover:border-teal-300 hover:bg-gray-50",
-                  (showExplanation || isReviewMode) && "cursor-not-allowed"
+                        ? 'border-teal-300 bg-teal-25 shadow-md'
+                        : 'border-gray-200 hover:border-teal-300 hover:bg-gray-50',
+                  (showExplanation || isReviewMode) && 'cursor-not-allowed'
                 )}
                 aria-label={`Option ${optionLabel}: ${option}`}
                 role="radio"
                 aria-checked={isSelected}
               >
                 <div className="flex items-start gap-3">
-                  <span className={cn(
-                    "w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold flex-shrink-0",
-                    isSelected
-                      ? showExplanation
-                        ? isCorrect
-                          ? "bg-green-500 text-white"
-                          : "bg-red-500 text-white"
-                        : "bg-teal-500 text-white"
-                      : showExplanation && isCorrect
-                        ? "bg-green-500 text-white"
-                        : isHovered
-                          ? "bg-teal-200 text-teal-800"
-                          : "bg-gray-200 text-gray-700"
-                  )}>
+                  <span
+                    className={cn(
+                      'w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold flex-shrink-0',
+                      isSelected
+                        ? showExplanation
+                          ? isCorrect
+                            ? 'bg-green-500 text-white'
+                            : 'bg-red-500 text-white'
+                          : 'bg-teal-500 text-white'
+                        : showExplanation && isCorrect
+                          ? 'bg-green-500 text-white'
+                          : isHovered
+                            ? 'bg-teal-200 text-teal-800'
+                            : 'bg-gray-200 text-gray-700'
+                    )}
+                  >
                     {optionLabel}
                   </span>
                   <span className="flex-1 leading-relaxed">{option}</span>
                   {showExplanation && (
                     <div className="flex-shrink-0">
-                      {isCorrect && (
-                        <span className="text-green-600 text-xl">✓</span>
-                      )}
-                      {isSelected && !isCorrect && (
-                        <span className="text-red-600 text-xl">✗</span>
-                      )}
+                      {isCorrect && <span className="text-green-600 text-xl">✓</span>}
+                      {isSelected && !isCorrect && <span className="text-red-600 text-xl">✗</span>}
                     </div>
                   )}
                 </div>
@@ -241,10 +250,14 @@ const StatementBasedQuestion: React.FC<StatementBasedQuestionProps> = ({
                 </span>
                 <div className="flex-1">
                   <span className="text-gray-700">{statement.text}</span>
-                  <span className={cn(
-                    "ml-3 px-2 py-1 rounded text-xs font-medium",
-                    statement.isCorrect ? "bg-green-100 text-green-800" : "bg-red-100 text-red-800"
-                  )}>
+                  <span
+                    className={cn(
+                      'ml-3 px-2 py-1 rounded text-xs font-medium',
+                      statement.isCorrect
+                        ? 'bg-green-100 text-green-800'
+                        : 'bg-red-100 text-red-800'
+                    )}
+                  >
                     {statement.isCorrect ? 'TRUE' : 'FALSE'}
                   </span>
                 </div>

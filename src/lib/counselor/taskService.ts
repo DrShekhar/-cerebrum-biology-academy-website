@@ -56,7 +56,7 @@ export class TaskService {
       },
     },
     {
-      stage: 'CONTACTED',
+      stage: 'NEW_LEAD',
       taskTemplate: {
         title: 'Schedule Demo Class',
         description: 'Coordinate with the student to schedule a convenient demo class time.',
@@ -109,7 +109,7 @@ export class TaskService {
       },
     },
     {
-      stage: 'PAYMENT_PENDING',
+      stage: 'PAYMENT_PLAN_CREATED',
       taskTemplate: {
         title: 'Payment Reminder',
         description: 'Send payment link and remind about down payment to confirm enrollment.',

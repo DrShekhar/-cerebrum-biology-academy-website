@@ -350,28 +350,34 @@ export function EnrollmentModal({ isOpen, onClose, course }: EnrollmentModalProp
                   <div className="border-t pt-6">
                     <h4 className="font-semibold text-gray-900 mb-4">Batch Preference</h4>
                     <div className="grid md:grid-cols-2 gap-4">
-                      {course.schedule?.map((schedule, index) => (
-                        <label
-                          key={index}
-                          className="flex items-center p-4 border border-gray-300 rounded-2xl cursor-pointer hover:border-blue-500 transition-colors"
-                        >
-                          <input
-                            type="radio"
-                            name="preferredBatch"
-                            value={`${schedule.days.join(', ')} - ${schedule.time}`}
-                            checked={
-                              formData.preferredBatch ===
-                              `${schedule.days.join(', ')} - ${schedule.time}`
-                            }
-                            onChange={handleInputChange}
-                            className="mr-3"
-                          />
-                          <div>
-                            <div className="font-medium">{schedule.days.join(', ')}</div>
-                            <div className="text-sm text-gray-600">{schedule.time}</div>
-                          </div>
-                        </label>
-                      ))}
+                      {course.schedule && Array.isArray(course.schedule) ? (
+                        course.schedule.map((schedule, index) => (
+                          <label
+                            key={index}
+                            className="flex items-center p-4 border border-gray-300 rounded-2xl cursor-pointer hover:border-blue-500 transition-colors"
+                          >
+                            <input
+                              type="radio"
+                              name="preferredBatch"
+                              value={`${schedule.days.join(', ')} - ${schedule.time}`}
+                              checked={
+                                formData.preferredBatch ===
+                                `${schedule.days.join(', ')} - ${schedule.time}`
+                              }
+                              onChange={handleInputChange}
+                              className="mr-3"
+                            />
+                            <div>
+                              <div className="font-medium">{schedule.days.join(', ')}</div>
+                              <div className="text-sm text-gray-600">{schedule.time}</div>
+                            </div>
+                          </label>
+                        ))
+                      ) : (
+                        <div className="text-gray-600 col-span-2">
+                          No batch schedules available for this course
+                        </div>
+                      )}
                     </div>
                   </div>
 

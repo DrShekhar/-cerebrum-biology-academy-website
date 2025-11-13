@@ -49,11 +49,10 @@ export function RealTimeWidget({ className }: RealTimeWidgetProps) {
           }, 5000)
         }
 
-        eventSource.onclose = () => {
+        eventSource.addEventListener('close', () => {
           setIsConnected(false)
           console.log('Real-time analytics disconnected')
-        }
-
+        })
       } catch (error) {
         console.error('Error setting up SSE:', error)
         setIsConnected(false)
@@ -82,9 +81,7 @@ export function RealTimeWidget({ className }: RealTimeWidgetProps) {
         </CardHeader>
         <CardContent>
           <div className="flex items-center justify-center h-32">
-            <div className="animate-pulse text-gray-500">
-              Connecting to real-time data...
-            </div>
+            <div className="animate-pulse text-gray-500">Connecting to real-time data...</div>
           </div>
         </CardContent>
       </Card>
@@ -97,14 +94,14 @@ export function RealTimeWidget({ className }: RealTimeWidgetProps) {
         <CardTitle className="flex items-center gap-2">
           <Activity className="w-5 h-5" />
           Real-time Analytics
-          <div className={`w-2 h-2 rounded-full ${
-            isConnected ? 'bg-green-500 animate-pulse' : 'bg-red-500'
-          }`} />
+          <div
+            className={`w-2 h-2 rounded-full ${
+              isConnected ? 'bg-green-500 animate-pulse' : 'bg-red-500'
+            }`}
+          />
         </CardTitle>
         {lastUpdate && (
-          <p className="text-sm text-gray-500">
-            Last updated: {lastUpdate.toLocaleTimeString()}
-          </p>
+          <p className="text-sm text-gray-500">Last updated: {lastUpdate.toLocaleTimeString()}</p>
         )}
       </CardHeader>
       <CardContent>
@@ -116,9 +113,7 @@ export function RealTimeWidget({ className }: RealTimeWidgetProps) {
                 <Users className="w-4 h-4 text-blue-600" />
                 <span className="text-sm text-blue-600">Active Users</span>
               </div>
-              <div className="text-xl font-bold text-blue-900">
-                {data.activeUsers}
-              </div>
+              <div className="text-xl font-bold text-blue-900">{data.activeUsers}</div>
             </div>
 
             <div className="text-center p-3 bg-green-50 rounded-lg">
@@ -126,9 +121,7 @@ export function RealTimeWidget({ className }: RealTimeWidgetProps) {
                 <BookOpen className="w-4 h-4 text-green-600" />
                 <span className="text-sm text-green-600">Tests Today</span>
               </div>
-              <div className="text-xl font-bold text-green-900">
-                {data.completedTestsToday}
-              </div>
+              <div className="text-xl font-bold text-green-900">{data.completedTestsToday}</div>
             </div>
           </div>
 
@@ -152,14 +145,22 @@ export function RealTimeWidget({ className }: RealTimeWidgetProps) {
               </h4>
               <div className="space-y-2 max-h-32 overflow-y-auto">
                 {data.activeSessions.slice(0, 5).map((session, idx) => (
-                  <div key={idx} className="flex items-center justify-between text-sm p-2 bg-gray-50 rounded">
+                  <div
+                    key={idx}
+                    className="flex items-center justify-between text-sm p-2 bg-gray-50 rounded"
+                  >
                     <span className="text-gray-600">
                       Question {session.currentQuestion}/{session.totalQuestions}
                     </span>
-                    <span className={`font-medium ${
-                      session.status === 'active' ? 'text-green-600' :
-                      session.status === 'paused' ? 'text-yellow-600' : 'text-gray-600'
-                    }`}>
+                    <span
+                      className={`font-medium ${
+                        session.status === 'active'
+                          ? 'text-green-600'
+                          : session.status === 'paused'
+                            ? 'text-yellow-600'
+                            : 'text-gray-600'
+                      }`}
+                    >
                       {session.accuracy.toFixed(0)}%
                     </span>
                   </div>
@@ -192,15 +193,11 @@ export function RealTimeWidget({ className }: RealTimeWidgetProps) {
           <div className="pt-4 border-t border-gray-200">
             <div className="grid grid-cols-2 gap-4 text-center">
               <div>
-                <div className="text-lg font-bold text-gray-900">
-                  {data.performance.totalTests}
-                </div>
+                <div className="text-lg font-bold text-gray-900">{data.performance.totalTests}</div>
                 <div className="text-xs text-gray-600">Total Tests</div>
               </div>
               <div>
-                <div className="text-lg font-bold text-gray-900">
-                  {data.performance.totalUsers}
-                </div>
+                <div className="text-lg font-bold text-gray-900">{data.performance.totalUsers}</div>
                 <div className="text-xs text-gray-600">Total Users</div>
               </div>
             </div>
@@ -216,7 +213,7 @@ export function RealTimeStats() {
     activeUsers: 0,
     completedToday: 0,
     averageScore: 0,
-    topPerformers: []
+    topPerformers: [],
   })
 
   useEffect(() => {
@@ -230,7 +227,7 @@ export function RealTimeStats() {
             activeUsers: data.data.activeUsers,
             completedToday: data.data.completedTestsToday,
             averageScore: data.data.averageScoreToday,
-            topPerformers: data.data.dashboard?.topPerformers || []
+            topPerformers: data.data.dashboard?.topPerformers || [],
           })
         }
       } catch (error) {
@@ -250,12 +247,8 @@ export function RealTimeStats() {
         <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
         <span className="text-gray-600">{stats.activeUsers} online</span>
       </div>
-      <div className="text-gray-600">
-        {stats.completedToday} tests today
-      </div>
-      <div className="text-gray-600">
-        {stats.averageScore.toFixed(1)}% avg score
-      </div>
+      <div className="text-gray-600">{stats.completedToday} tests today</div>
+      <div className="text-gray-600">{stats.averageScore.toFixed(1)}% avg score</div>
     </div>
   )
 }

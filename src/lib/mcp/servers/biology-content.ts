@@ -268,7 +268,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
 
         // Execute query with timeout
         const questions = await withTimeout(
-          db.question.findMany({
+          db.questions.findMany({
             where: whereClause,
             take: safeLimit,
             orderBy: {
@@ -438,7 +438,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
 
         // Query ChapterNote table for NCERT-like content
         const ncertContent = await withTimeout(
-          db.chapterNote.findFirst({
+          db.chapter_notes.findFirst({
             where: whereClause,
             orderBy: {
               viewCount: 'desc', // Prefer most viewed content
@@ -581,7 +581,7 @@ Topics covered:
         // Query UserProgress table for weak areas
         // First try to find as regular user, then as free user
         const studentProgress = await withTimeout(
-          db.userProgress.findMany({
+          db.user_progress.findMany({
             where: {
               OR: [{ userId: studentId }, { freeUserId: studentId }],
               accuracy: {
@@ -649,7 +649,7 @@ Topics covered:
 
           // Get recent test performance for additional context
           const recentTests = await withTimeout(
-            db.testSession.findMany({
+            db.test_sessions.findMany({
               where: {
                 OR: [{ userId: studentId }, { freeUserId: studentId }],
                 status: 'COMPLETED',
@@ -659,7 +659,7 @@ Topics covered:
               },
               take: 5,
               select: {
-                testTemplate: {
+                test_templates: {
                   select: {
                     title: true,
                     topics: true,
@@ -686,11 +686,11 @@ Topics covered:
                     totalWeakAreas: weakAreas.length,
                     weakAreas,
                     recentTestPerformance: recentTests.map((test) => ({
-                      title: test.testTemplate?.title || 'Unknown Test',
+                      title: test.test_templates?.title || 'Unknown Test',
                       topics:
-                        typeof test.testTemplate?.topics === 'string'
-                          ? JSON.parse(test.testTemplate.topics)
-                          : test.testTemplate?.topics,
+                        typeof test.test_templates?.topics === 'string'
+                          ? JSON.parse(test.test_templates.topics as string)
+                          : test.test_templates?.topics,
                       score: test.totalScore,
                       percentage: test.percentage
                         ? Math.round(test.percentage * 10) / 10

@@ -24,6 +24,8 @@ export const facultyMembers: Faculty[] = [
     successRate: 98,
     studentTestimonial:
       'Dr. Shekhar Sir made Biology so clear and interesting. His unique teaching methods helped me score 695 marks in NEET. - Sadhna Sirin',
+    studentsGuided: 2500,
+    rating: 4.9,
   },
   {
     id: 'dr-priya-sharma',
@@ -43,6 +45,8 @@ export const facultyMembers: Faculty[] = [
     teachingStyle: 'Uses visual aids and real plant specimens for effective learning',
     successRate: 94,
     studentTestimonial: "Ma'am makes botany interesting with her practical approach and examples.",
+    studentsGuided: 1800,
+    rating: 4.8,
   },
   {
     id: 'dr-amit-singh',
@@ -63,6 +67,8 @@ export const facultyMembers: Faculty[] = [
     successRate: 92,
     studentTestimonial:
       "Sir's medical background helps us understand concepts from exam perspective.",
+    studentsGuided: 1500,
+    rating: 4.7,
   },
   {
     id: 'prof-meera-gupta',
@@ -83,6 +89,8 @@ export const facultyMembers: Faculty[] = [
     successRate: 95,
     studentTestimonial:
       "Ma'am made genetics so easy with her unique teaching methods and examples.",
+    studentsGuided: 1200,
+    rating: 4.8,
   },
   {
     id: 'dr-vikram-joshi',
@@ -103,6 +111,8 @@ export const facultyMembers: Faculty[] = [
     successRate: 93,
     studentTestimonial:
       "Sir's explanations of cell biology are so detailed yet easy to understand.",
+    studentsGuided: 1600,
+    rating: 4.7,
   },
   {
     id: 'dr-anita-verma',
@@ -123,6 +133,8 @@ export const facultyMembers: Faculty[] = [
     successRate: 91,
     studentTestimonial:
       "Ma'am connects environmental topics with current issues, making them memorable.",
+    studentsGuided: 1100,
+    rating: 4.6,
   },
 ]
 

@@ -3,15 +3,15 @@
 import React, { createContext, useContext, useEffect, useState } from 'react'
 import {
   UserPreferences,
-  PersonalizationContext,
+  type PersonalizationContext,
   CourseRecommendation,
   UserPreferenceManager,
 } from '@/lib/personalization/userPreferences'
 
-const PersonalizationContext = createContext<PersonalizationContext | undefined>(undefined)
+const PersonalizationContextInstance = createContext<PersonalizationContext | undefined>(undefined)
 
 export function usePersonalization() {
-  const context = useContext(PersonalizationContext)
+  const context = useContext(PersonalizationContextInstance)
   if (!context) {
     throw new Error('usePersonalization must be used within PersonalizationProvider')
   }
@@ -194,7 +194,11 @@ export function PersonalizationProvider({ children }: PersonalizationProviderPro
     trackBehavior,
   }
 
-  return <PersonalizationContext.Provider value={value}>{children}</PersonalizationContext.Provider>
+  return (
+    <PersonalizationContextInstance.Provider value={value}>
+      {children}
+    </PersonalizationContextInstance.Provider>
+  )
 }
 
 // Personalized content components

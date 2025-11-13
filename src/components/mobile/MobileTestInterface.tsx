@@ -33,7 +33,7 @@ interface MobileTestInterfaceProps {
   onTestExit: () => void
 }
 
-interface Question {
+interface LocalQuestion {
   id: string
   question: string
   options: string[]
@@ -56,7 +56,7 @@ export function MobileTestInterface({
   test,
   userClass,
   onTestComplete,
-  onTestExit
+  onTestExit,
 }: MobileTestInterfaceProps) {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
   const [selectedAnswers, setSelectedAnswers] = useState<{ [key: number]: number }>({})
@@ -69,12 +69,12 @@ export function MobileTestInterface({
   const [testStarted, setTestStarted] = useState(false)
   const [isShaking, setIsShaking] = useState(false)
 
-  const timerRef = useRef<NodeJS.Timeout>()
+  const timerRef = useRef<NodeJS.Timeout | undefined>(undefined)
   const questionRef = useRef<HTMLDivElement>(null)
-  const startTimeRef = useRef<number>()
+  const startTimeRef = useRef<number | undefined>(undefined)
 
   // Mock questions - in real implementation, this would come from props
-  const questions: Question[] = test.questions || []
+  const questions: LocalQuestion[] = []
   const currentQuestion = questions[currentQuestionIndex]
 
   // Touch and gesture handling
@@ -93,7 +93,7 @@ export function MobileTestInterface({
   useEffect(() => {
     if (timeRemaining > 0) {
       timerRef.current = setTimeout(() => {
-        setTimeRemaining(prev => prev - 1)
+        setTimeRemaining((prev) => prev - 1)
       }, 1000)
     } else {
       handleSubmitTest()
@@ -113,8 +113,8 @@ export function MobileTestInterface({
       if (acceleration) {
         const totalAcceleration = Math.sqrt(
           Math.pow(acceleration.x || 0, 2) +
-          Math.pow(acceleration.y || 0, 2) +
-          Math.pow(acceleration.z || 0, 2)
+            Math.pow(acceleration.y || 0, 2) +
+            Math.pow(acceleration.z || 0, 2)
         )
 
         if (totalAcceleration > 20) {
@@ -170,17 +170,20 @@ export function MobileTestInterface({
   }, [touchStart, touchEnd, currentQuestionIndex, questions.length])
 
   // Pan gesture for Framer Motion
-  const handlePan = useCallback((event: any, info: PanInfo) => {
-    const { offset, velocity } = info
+  const handlePan = useCallback(
+    (event: any, info: PanInfo) => {
+      const { offset, velocity } = info
 
-    if (Math.abs(offset.x) > 100 && Math.abs(velocity.x) > 500) {
-      if (offset.x > 0 && currentQuestionIndex > 0) {
-        handlePreviousQuestion()
-      } else if (offset.x < 0 && currentQuestionIndex < questions.length - 1) {
-        handleNextQuestion()
+      if (Math.abs(offset.x) > 100 && Math.abs(velocity.x) > 500) {
+        if (offset.x > 0 && currentQuestionIndex > 0) {
+          handlePreviousQuestion()
+        } else if (offset.x < 0 && currentQuestionIndex < questions.length - 1) {
+          handleNextQuestion()
+        }
       }
-    }
-  }, [currentQuestionIndex, questions.length])
+    },
+    [currentQuestionIndex, questions.length]
+  )
 
   const handleShakeToClear = () => {
     if (selectedAnswers[currentQuestionIndex] !== undefined) {
@@ -199,9 +202,9 @@ export function MobileTestInterface({
   }
 
   const handleAnswerSelect = (optionIndex: number) => {
-    setSelectedAnswers(prev => ({
+    setSelectedAnswers((prev) => ({
       ...prev,
-      [currentQuestionIndex]: optionIndex
+      [currentQuestionIndex]: optionIndex,
     }))
 
     // Haptic feedback
@@ -212,13 +215,13 @@ export function MobileTestInterface({
 
   const handleNextQuestion = () => {
     if (currentQuestionIndex < questions.length - 1) {
-      setCurrentQuestionIndex(prev => prev + 1)
+      setCurrentQuestionIndex((prev) => prev + 1)
     }
   }
 
   const handlePreviousQuestion = () => {
     if (currentQuestionIndex > 0) {
-      setCurrentQuestionIndex(prev => prev - 1)
+      setCurrentQuestionIndex((prev) => prev - 1)
     }
   }
 
@@ -235,10 +238,11 @@ export function MobileTestInterface({
   const handleSubmitTest = () => {
     const responses: TestResponse[] = questions.map((question, index) => ({
       questionId: question.id,
-      selectedAnswer: selectedAnswers[index],
+      selectedAnswer: selectedAnswers[index]?.toString(),
       isCorrect: selectedAnswers[index] === question.correctAnswer,
       timeTaken: 0, // Would track individual question time in real implementation
-      isFlagged: flaggedQuestions.has(index),
+      isMarkedForReview: flaggedQuestions.has(index),
+      confidence: 'medium' as const,
     }))
 
     const totalTime = test.duration * 60 - timeRemaining
@@ -279,10 +283,14 @@ export function MobileTestInterface({
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'answered': return 'bg-green-500 text-white'
-      case 'flagged': return 'bg-yellow-500 text-white'
-      case 'current': return 'bg-blue-500 text-white'
-      default: return 'bg-gray-200 text-gray-700'
+      case 'answered':
+        return 'bg-green-500 text-white'
+      case 'flagged':
+        return 'bg-yellow-500 text-white'
+      case 'current':
+        return 'bg-blue-500 text-white'
+      default:
+        return 'bg-gray-200 text-gray-700'
     }
   }
 
@@ -300,7 +308,9 @@ export function MobileTestInterface({
   }
 
   return (
-    <div className={`mobile-test-interface min-h-screen bg-white flex flex-col ${isFullScreen ? 'fullscreen' : ''}`}>
+    <div
+      className={`mobile-test-interface min-h-screen bg-white flex flex-col ${isFullScreen ? 'fullscreen' : ''}`}
+    >
       {/* Header */}
       <header className="flex items-center justify-between p-4 bg-white border-b border-gray-200 sticky top-0 z-40">
         <div className="flex items-center space-x-3">
@@ -319,20 +329,17 @@ export function MobileTestInterface({
 
         <div className="flex items-center space-x-3">
           {/* Timer */}
-          <div className={`px-3 py-1 rounded-full text-sm font-bold ${
-            timeRemaining < 300 ? 'bg-red-100 text-red-800' : 'bg-blue-100 text-blue-800'
-          }`}>
+          <div
+            className={`px-3 py-1 rounded-full text-sm font-bold ${
+              timeRemaining < 300 ? 'bg-red-100 text-red-800' : 'bg-blue-100 text-blue-800'
+            }`}
+          >
             <Clock className="w-4 h-4 inline mr-1" />
             {formatTime(timeRemaining)}
           </div>
 
           {/* Fullscreen Toggle */}
-          <Button
-            variant="ghost"
-            size="sm"
-            onClick={toggleFullScreen}
-            className="touch-target"
-          >
+          <Button variant="ghost" size="sm" onClick={toggleFullScreen} className="touch-target">
             {isFullScreen ? <Minimize className="w-5 h-5" /> : <Maximize className="w-5 h-5" />}
           </Button>
         </div>
@@ -407,9 +414,11 @@ export function MobileTestInterface({
                 layout
               >
                 <div className="flex items-center">
-                  <div className={`w-6 h-6 rounded-full border-2 mr-3 flex items-center justify-center ${
-                    isSelected ? 'border-blue-500 bg-blue-500' : 'border-gray-300'
-                  }`}>
+                  <div
+                    className={`w-6 h-6 rounded-full border-2 mr-3 flex items-center justify-center ${
+                      isSelected ? 'border-blue-500 bg-blue-500' : 'border-gray-300'
+                    }`}
+                  >
                     {isSelected && <CheckCircle className="w-4 h-4 text-white" />}
                     {!isSelected && <Circle className="w-4 h-4 text-gray-300" />}
                   </div>
@@ -446,21 +455,18 @@ export function MobileTestInterface({
             className="touch-target px-4 py-2"
           >
             <div className="grid grid-cols-4 gap-1">
-              {[0, 1, 2, 3].map(i => {
+              {[0, 1, 2, 3].map((i) => {
                 const status = getQuestionStatus(currentQuestionIndex + i - 2)
-                return (
-                  <div
-                    key={i}
-                    className={`w-2 h-2 rounded-full ${getStatusColor(status)}`}
-                  />
-                )
+                return <div key={i} className={`w-2 h-2 rounded-full ${getStatusColor(status)}`} />
               })}
             </div>
           </Button>
 
           <Button
             variant={currentQuestionIndex === questions.length - 1 ? 'primary' : 'outline'}
-            onClick={currentQuestionIndex === questions.length - 1 ? handleSubmitTest : handleNextQuestion}
+            onClick={
+              currentQuestionIndex === questions.length - 1 ? handleSubmitTest : handleNextQuestion
+            }
             className="touch-target-large"
           >
             {currentQuestionIndex === questions.length - 1 ? (
@@ -496,16 +502,12 @@ export function MobileTestInterface({
               initial={{ x: -320 }}
               animate={{ x: 0 }}
               exit={{ x: -320 }}
-              transition={{ type: "spring", damping: 25, stiffness: 200 }}
+              transition={{ type: 'spring', damping: 25, stiffness: 200 }}
             >
               <div className="p-6">
                 <div className="flex items-center justify-between mb-6">
                   <h3 className="text-lg font-bold">Test Menu</h3>
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    onClick={() => setShowMenu(false)}
-                  >
+                  <Button variant="ghost" size="sm" onClick={() => setShowMenu(false)}>
                     <X className="w-5 h-5" />
                   </Button>
                 </div>
@@ -531,7 +533,11 @@ export function MobileTestInterface({
                       setShowMenu(false)
                     }}
                   >
-                    {audioEnabled ? <Volume2 className="w-5 h-5 mr-2" /> : <VolumeX className="w-5 h-5 mr-2" />}
+                    {audioEnabled ? (
+                      <Volume2 className="w-5 h-5 mr-2" />
+                    ) : (
+                      <VolumeX className="w-5 h-5 mr-2" />
+                    )}
                     {audioEnabled ? 'Disable Audio' : 'Enable Audio'}
                   </Button>
 
@@ -553,7 +559,11 @@ export function MobileTestInterface({
                     variant="outline"
                     className="w-full justify-start text-red-600 border-red-200 hover:bg-red-50"
                     onClick={() => {
-                      if (confirm('Are you sure you want to exit the test? Your progress will be lost.')) {
+                      if (
+                        confirm(
+                          'Are you sure you want to exit the test? Your progress will be lost.'
+                        )
+                      ) {
                         onTestExit()
                       }
                     }}
@@ -586,16 +596,12 @@ export function MobileTestInterface({
               initial={{ y: 400 }}
               animate={{ y: 0 }}
               exit={{ y: 400 }}
-              transition={{ type: "spring", damping: 25, stiffness: 200 }}
+              transition={{ type: 'spring', damping: 25, stiffness: 200 }}
             >
               <div className="p-6">
                 <div className="flex items-center justify-between mb-6">
                   <h3 className="text-lg font-bold">Question Palette</h3>
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    onClick={() => setShowQuestionPalette(false)}
-                  >
+                  <Button variant="ghost" size="sm" onClick={() => setShowQuestionPalette(false)}>
                     <X className="w-5 h-5" />
                   </Button>
                 </div>
