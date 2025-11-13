@@ -24,7 +24,7 @@ export async function GET(request: NextRequest) {
       include: {
         fee_plans: {
           include: {
-            lead: {
+            leads: {
               select: {
                 id: true,
                 studentName: true,
@@ -49,10 +49,10 @@ export async function GET(request: NextRequest) {
         id: inst.fee_plans.id,
         courseName: inst.fee_plans.courseName,
         lead: {
-          id: inst.fee_plans.lead.id,
-          studentName: inst.fee_plans.lead.studentName,
-          phone: inst.fee_plans.lead.phone,
-          email: inst.fee_plans.lead.email,
+          id: inst.fee_plans.leads.id,
+          studentName: inst.fee_plans.leads.studentName,
+          phone: inst.fee_plans.leads.phone,
+          email: inst.fee_plans.leads.email,
         },
       },
     }))
