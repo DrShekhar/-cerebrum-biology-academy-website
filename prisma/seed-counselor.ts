@@ -15,7 +15,7 @@ async function seedCounselorData() {
   console.log('👤 Creating demo counselor...')
   const hashedPassword = await bcrypt.hash('demo123', 10)
 
-  const counselor = await prisma.user.upsert({
+  const counselor = await prisma.users.upsert({
     where: { email: 'counselor@demo.com' },
     update: {},
     create: {
@@ -231,7 +231,7 @@ async function seedCounselorData() {
 
   const createdLeads = []
   for (const data of leadData) {
-    const lead = await prisma.lead.create({
+    const lead = await prisma.leads.create({
       data: {
         ...data,
         assignedToId: counselor.id,
@@ -248,7 +248,7 @@ async function seedCounselorData() {
   let activityCount = 0
   for (const lead of createdLeads) {
     // Initial contact activity
-    await prisma.activity.create({
+    await prisma.activities.create({
       data: {
         leadId: lead.id,
         type: 'STAGE_CHANGED',
@@ -261,7 +261,7 @@ async function seedCounselorData() {
 
     // Add more activities for contacted/advanced leads
     if (['CONTACTED', 'DEMO_SCHEDULED', 'DEMO_COMPLETED', 'OFFER_SENT', 'NEGOTIATING', 'PAYMENT_PENDING', 'ENROLLED', 'ACTIVE_STUDENT'].includes(lead.stage)) {
-      await prisma.activity.create({
+      await prisma.activities.create({
         data: {
           leadId: lead.id,
           type: 'COMMUNICATION_SENT',
@@ -274,7 +274,7 @@ async function seedCounselorData() {
     }
 
     if (['DEMO_COMPLETED', 'OFFER_SENT', 'NEGOTIATING', 'PAYMENT_PENDING', 'ENROLLED', 'ACTIVE_STUDENT'].includes(lead.stage)) {
-      await prisma.activity.create({
+      await prisma.activities.create({
         data: {
           leadId: lead.id,
           type: 'DEMO_CONDUCTED',
@@ -367,7 +367,7 @@ async function seedCounselorData() {
   ]
 
   for (const task of taskData) {
-    await prisma.task.create({
+    await prisma.tasks.create({
       data: {
         ...task,
         assignedToId: counselor.id,
@@ -381,7 +381,7 @@ async function seedCounselorData() {
   console.log('💬 Creating WhatsApp message logs...')
   for (let i = 0; i < 5; i++) {
     const lead = createdLeads[i]
-    await prisma.communication.create({
+    await prisma.communications.create({
       data: {
         leadId: lead.id,
         type: 'WHATSAPP',
@@ -399,7 +399,7 @@ async function seedCounselorData() {
   console.log('💰 Creating fee plans...')
   const enrolledLead = createdLeads.find((l) => l.stage === 'ENROLLED')
   if (enrolledLead) {
-    const feePlan = await prisma.feePlan.create({
+    const feePlan = await prisma.fee_plans.create({
       data: {
         leadId: enrolledLead.id,
         courseName: 'Class 12th Biology - Complete NEET Preparation',
@@ -423,7 +423,7 @@ async function seedCounselorData() {
       const dueDate = new Date()
       dueDate.setDate(dueDate.getDate() + (i * 30))
 
-      await prisma.installment.create({
+      await prisma.installments.create({
         data: {
           feePlanId: feePlan.id,
           installmentNumber: i,
