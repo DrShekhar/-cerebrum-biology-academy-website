@@ -42,17 +42,18 @@ async function main() {
 
   const leadStages = [
     'NEW_LEAD',
-    'CONTACTED',
+    'NEW_LEAD',
     'DEMO_SCHEDULED',
     'DEMO_COMPLETED',
     'OFFER_SENT',
     'NEGOTIATING',
-    'PAYMENT_PENDING',
+    'PAYMENT_PLAN_CREATED',
     'ENROLLED',
+    'ACTIVE_STUDENT',
+    'LOST',
   ]
   const priorities = ['HOT', 'WARM', 'COLD']
-  const sources = ['WEBSITE', 'WHATSAPP', 'REFERRAL', 'SOCIAL_MEDIA', 'GOOGLE_ADS']
-  const grades = ['CLASS_11', 'CLASS_12', 'DROPPER']
+  const sources = ['WEBSITE', 'WHATSAPP', 'REFERRAL', 'SOCIAL_MEDIA', 'ADVERTISEMENT']
 
   const studentNames = [
     'Rahul Sharma',
@@ -81,19 +82,14 @@ async function main() {
         studentName,
         email: `${studentName.toLowerCase().replace(' ', '.')}@example.com`,
         phone: `+919876543${String(i).padStart(3, '0')}`,
-        grade: grades[i % grades.length],
-        city: 'Delhi',
-        school: `School ${i + 1}`,
+        courseInterest: `Class ${11 + (i % 2)}th Biology - NEET Preparation`,
         stage,
         priority,
         source: sources[i % sources.length],
-        interestedCourse: `Class ${11 + (i % 2)}th Biology - NEET Preparation`,
-        parentName: `Parent of ${studentName}`,
-        parentPhone: `+919876544${String(i).padStart(3, '0')}`,
-        followUpDate: new Date(Date.now() + (i + 1) * 24 * 60 * 60 * 1000),
         assignedToId: counselor.id,
         createdAt: new Date(timestamp),
         updatedAt: new Date(),
+        nextFollowUpAt: new Date(Date.now() + (i + 1) * 24 * 60 * 60 * 1000),
       },
     })
 
@@ -107,7 +103,8 @@ async function main() {
   console.log('💰 Creating fee plans and installments...')
 
   const paymentLeads = createdLeads.filter(
-    (l) => l.stage === 'PAYMENT_PENDING' || l.stage === 'ENROLLED'
+    (l) =>
+      l.stage === 'PAYMENT_PLAN_CREATED' || l.stage === 'ENROLLED' || l.stage === 'ACTIVE_STUDENT'
   )
 
   for (const lead of paymentLeads) {
@@ -121,7 +118,7 @@ async function main() {
         id: `feeplan_${Date.now()}_${lead.id}`,
         leadId: lead.id,
         courseId: `course_neet_bio`,
-        courseName: lead.interestedCourse || 'NEET Biology',
+        courseName: lead.courseInterest || 'NEET Biology',
         baseFee,
         discount: 0,
         discountType: 'PERCENTAGE',
