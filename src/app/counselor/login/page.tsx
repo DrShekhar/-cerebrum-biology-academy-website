@@ -42,7 +42,7 @@ function CounselorLoginForm() {
       } else if (result?.ok) {
         // Verify the session and redirect
         const session = await getSession()
-        if (session?.user?.role === 'COUNSELOR') {
+        if (session?.user?.role === 'counselor') {
           router.push(callbackUrl)
           router.refresh()
         } else {
