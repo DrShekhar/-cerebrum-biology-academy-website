@@ -845,7 +845,13 @@ export class AdvancedPaymentEngine extends EventEmitter {
       } else {
         return {
           success: false,
-          error: (paymentResult as any).error || 'Payment failed',
+          error:
+            (paymentResult &&
+            typeof paymentResult === 'object' &&
+            'error' in paymentResult &&
+            typeof paymentResult.error === 'string'
+              ? paymentResult.error
+              : undefined) || 'Payment failed',
         }
       }
     } catch (error) {

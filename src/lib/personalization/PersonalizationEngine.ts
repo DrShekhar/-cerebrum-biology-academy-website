@@ -780,7 +780,7 @@ export class PersonalizationEngine {
 
     // Analyze strong match factors
     Object.entries(matchFactors).forEach(([factor, score]) => {
-      const numScore = Number(score)
+      const numScore = typeof score === 'number' ? score : Number(score) || 0
       if (numScore >= 80) {
         switch (factor) {
           case 'academicFit':
@@ -838,34 +838,56 @@ export class PersonalizationEngine {
 
   // Calculate predicted outcomes
   private calculatePredictedOutcomes(course: CourseData, matchFactors: any): any {
-    const avgMatchScore =
-      Object.values(matchFactors).reduce((a: number, b: unknown) => a + Number(b), 0) /
-      Object.keys(matchFactors).length
+    const totalScore = Object.values(matchFactors).reduce((a: number, b: unknown) => {
+      const numValue = typeof b === 'number' ? b : Number(b) || 0
+      return a + numValue
+    }, 0) as number
+    const avgMatchScore = totalScore / Object.keys(matchFactors).length
 
     // Success probability based on match percentage and course success rate
     const successProbability = Math.min(100, (course.outcomes.successRate * avgMatchScore) / 100)
 
     // Expected improvement
     let expectedImprovement = course.outcomes.averageImprovement
-    if (Number(matchFactors.contentRelevance) > 80) expectedImprovement *= 1.2
-    if (Number(matchFactors.learningStyleFit) > 80) expectedImprovement *= 1.1
-    if (Number(matchFactors.academicFit) < 60) expectedImprovement *= 0.8
+    const contentRelevanceNum =
+      typeof matchFactors.contentRelevance === 'number'
+        ? matchFactors.contentRelevance
+        : Number(matchFactors.contentRelevance) || 0
+    const learningStyleFitNum =
+      typeof matchFactors.learningStyleFit === 'number'
+        ? matchFactors.learningStyleFit
+        : Number(matchFactors.learningStyleFit) || 0
+    const academicFitNum =
+      typeof matchFactors.academicFit === 'number'
+        ? matchFactors.academicFit
+        : Number(matchFactors.academicFit) || 0
+    if (contentRelevanceNum > 80) expectedImprovement *= 1.2
+    if (learningStyleFitNum > 80) expectedImprovement *= 1.1
+    if (academicFitNum < 60) expectedImprovement *= 0.8
 
     // Time to target
     let timeToTarget = course.outcomes.typicalTimeline
-    if (Number(matchFactors.timeConstraintsFit) < 60) timeToTarget *= 1.2
+    const timeConstraintsFitNum =
+      typeof matchFactors.timeConstraintsFit === 'number'
+        ? matchFactors.timeConstraintsFit
+        : Number(matchFactors.timeConstraintsFit) || 0
+    if (timeConstraintsFitNum < 60) timeToTarget *= 1.2
     if (this.profile.academicPerformance.improvementTrend === 'improving') timeToTarget *= 0.9
 
     // Risk factors
     const riskFactors = []
-    if (Number(matchFactors.budgetFit) < 60)
-      riskFactors.push('Budget constraints may affect commitment')
-    if (Number(matchFactors.timeConstraintsFit) < 60)
-      riskFactors.push('Time management challenges possible')
-    if (Number(matchFactors.academicFit) < 70)
-      riskFactors.push('Academic level mismatch may slow progress')
-    if (Number(matchFactors.deliveryPreferenceFit) < 60)
-      riskFactors.push('Delivery format may not be optimal')
+    const budgetFitNum =
+      typeof matchFactors.budgetFit === 'number'
+        ? matchFactors.budgetFit
+        : Number(matchFactors.budgetFit) || 0
+    const deliveryPreferenceFitNum =
+      typeof matchFactors.deliveryPreferenceFit === 'number'
+        ? matchFactors.deliveryPreferenceFit
+        : Number(matchFactors.deliveryPreferenceFit) || 0
+    if (budgetFitNum < 60) riskFactors.push('Budget constraints may affect commitment')
+    if (timeConstraintsFitNum < 60) riskFactors.push('Time management challenges possible')
+    if (academicFitNum < 70) riskFactors.push('Academic level mismatch may slow progress')
+    if (deliveryPreferenceFitNum < 60) riskFactors.push('Delivery format may not be optimal')
 
     return {
       successProbability: Math.round(successProbability),

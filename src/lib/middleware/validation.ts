@@ -414,7 +414,13 @@ export function validatePartialUpdate<T>(
 ): ValidationResult<Partial<T>> {
   try {
     // Create a partial version of the schema
-    const partialSchema = (schema as any).partial ? (schema as any).partial() : schema
+    const partialSchema =
+      schema &&
+      typeof schema === 'object' &&
+      'partial' in schema &&
+      typeof (schema as any).partial === 'function'
+        ? (schema as any).partial()
+        : schema
     const result = partialSchema.parse(data)
 
     return {

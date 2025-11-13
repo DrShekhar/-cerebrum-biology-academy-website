@@ -479,10 +479,14 @@ export class MobileSecurityManager {
   private setupOrientationLock(): void {
     const lockOrientation = () => {
       try {
-        if (screen.orientation && 'lock' in screen.orientation) {
+        if (
+          screen.orientation &&
+          'lock' in screen.orientation &&
+          typeof (screen.orientation as any).lock === 'function'
+        ) {
           const orientation = this.config.allowedOrientations[0]
           const orientationLockType = `${orientation}-primary` as any
-          ;(screen.orientation.lock as any)(orientationLockType).catch((error: any) => {
+          ;(screen.orientation as any).lock(orientationLockType).catch((error: any) => {
             console.warn('Could not lock screen orientation:', error)
           })
         }

@@ -607,8 +607,8 @@ export class BrowserFingerprinting {
     if (gl && gl instanceof WebGLRenderingContext) {
       const RENDERER = 0x1f01
       const VENDOR = 0x1f00
-      const renderer = gl.getParameter(RENDERER)
-      const vendor = gl.getParameter(VENDOR)
+      const renderer = (gl as WebGLRenderingContext).getParameter(RENDERER)
+      const vendor = (gl as WebGLRenderingContext).getParameter(VENDOR)
       components.push(renderer ? String(renderer) : '', vendor ? String(vendor) : '')
     }
 

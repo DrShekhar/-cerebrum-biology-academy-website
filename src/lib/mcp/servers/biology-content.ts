@@ -308,11 +308,13 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
           subtopic: q.subtopic || undefined,
           difficulty: q.difficulty.toLowerCase(),
           question: q.question,
-          options: typeof q.options === 'string' ? JSON.parse(q.options) : q.options,
+          options: typeof q.options === 'string' ? JSON.parse(q.options) : (q.options as unknown),
           correctAnswer: q.correctAnswer,
           explanation: q.explanation || undefined,
           solutionSteps:
-            typeof q.solutionSteps === 'string' ? JSON.parse(q.solutionSteps) : q.solutionSteps,
+            typeof q.solutionSteps === 'string'
+              ? JSON.parse(q.solutionSteps)
+              : (q.solutionSteps as unknown),
           questionImage: q.questionImage || undefined,
           explanationImage: q.explanationImage || undefined,
           videoExplanation: q.videoExplanation || undefined,
@@ -320,11 +322,11 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
           examYear: q.examYear || undefined,
           marks: q.marks,
           timeLimit: q.timeLimit || undefined,
-          tags: typeof q.tags === 'string' ? JSON.parse(q.tags) : q.tags,
+          tags: typeof q.tags === 'string' ? JSON.parse(q.tags) : (q.tags as unknown),
           relatedConcepts:
             typeof q.relatedConcepts === 'string'
               ? JSON.parse(q.relatedConcepts)
-              : q.relatedConcepts,
+              : (q.relatedConcepts as unknown),
           accuracy:
             q.totalAttempts && q.totalAttempts > 0
               ? ((q.correctAttempts || 0) / q.totalAttempts) * 100
@@ -477,11 +479,11 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
             keyPoints:
               typeof ncertContent.keyPoints === 'string'
                 ? JSON.parse(ncertContent.keyPoints)
-                : ncertContent.keyPoints,
+                : (ncertContent.keyPoints as unknown),
             diagrams:
               typeof ncertContent.diagrams === 'string'
                 ? JSON.parse(ncertContent.diagrams)
-                : ncertContent.diagrams,
+                : (ncertContent.diagrams as unknown),
             difficulty: ncertContent.difficulty,
             estimatedReadingTime: ncertContent.estimatedTime
               ? `${ncertContent.estimatedTime} minutes`
@@ -489,7 +491,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
             tags:
               typeof ncertContent.tags === 'string'
                 ? JSON.parse(ncertContent.tags)
-                : ncertContent.tags,
+                : (ncertContent.tags as unknown),
             popularity: {
               views: ncertContent.viewCount,
               rating: ncertContent.rating,
@@ -634,11 +636,11 @@ Topics covered:
             weakAreas:
               typeof progress.weakAreas === 'string'
                 ? JSON.parse(progress.weakAreas)
-                : progress.weakAreas,
+                : (progress.weakAreas as unknown),
             recommendedNext:
               typeof progress.recommendedNext === 'string'
                 ? JSON.parse(progress.recommendedNext)
-                : progress.recommendedNext,
+                : (progress.recommendedNext as unknown),
             recommendation: generateRecommendation(
               progress.topic,
               progress.accuracy,
@@ -690,7 +692,7 @@ Topics covered:
                       topics:
                         typeof test.test_templates?.topics === 'string'
                           ? JSON.parse(test.test_templates.topics as string)
-                          : test.test_templates?.topics,
+                          : (test.test_templates?.topics as unknown),
                       score: test.totalScore,
                       percentage: test.percentage
                         ? Math.round(test.percentage * 10) / 10
