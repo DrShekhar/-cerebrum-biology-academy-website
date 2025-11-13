@@ -71,7 +71,9 @@ export default function LeadsPage() {
   async function fetchLeads() {
     try {
       setLoading(true)
-      const response = await fetch('/api/counselor/leads')
+      const response = await fetch('/api/counselor/leads', {
+        credentials: 'include',
+      })
 
       if (!response.ok) {
         throw new Error('Failed to fetch leads')
@@ -94,6 +96,7 @@ export default function LeadsPage() {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ stage: newStage }),
+        credentials: 'include',
       })
 
       if (!response.ok) {

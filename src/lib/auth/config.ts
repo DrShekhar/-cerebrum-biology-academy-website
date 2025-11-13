@@ -199,49 +199,65 @@ export function hasPermission(userRole: UserRole, permission: string): boolean {
  */
 export async function validateUserSession(request: NextRequest): Promise<UserSession> {
   try {
-    console.log('🔍 validateUserSession() called')
+    console.log('🔍 [NEW] validateUserSession() called - JWT decode version')
     console.log(
       '📋 All cookies:',
       request.cookies.getAll().map((c) => c.name)
     )
 
     // First, try NextAuth session (for counselor/admin login via NextAuth)
-    const nextAuthToken =
-      request.cookies.get('next-auth.session-token')?.value ||
-      request.cookies.get('__Secure-next-auth.session-token')?.value
+    // NextAuth uses JWT strategy with a signed JWT token
+    const nextAuthTokenCookie =
+      request.cookies.get('next-auth.session-token') ||
+      request.cookies.get('__Secure-next-auth.session-token')
 
-    console.log('🔐 NextAuth token found:', !!nextAuthToken)
+    console.log('🔐 NextAuth token cookie found:', !!nextAuthTokenCookie)
 
-    if (nextAuthToken) {
+    if (nextAuthTokenCookie) {
       try {
-        // Look up NextAuth session in database
-        const nextAuthSession = await prisma.sessions.findUnique({
-          where: { sessionToken: nextAuthToken },
-          include: { users: true },
-        })
+        const jwt = await import('jsonwebtoken')
+        const secret = process.env.NEXTAUTH_SECRET || process.env.AUTH_SECRET
 
-        console.log('👤 NextAuth session from DB:', !!nextAuthSession)
-        console.log(
-          '⏰ Session expired:',
-          nextAuthSession ? nextAuthSession.expires < new Date() : 'N/A'
-        )
-
-        if (nextAuthSession && nextAuthSession.users && nextAuthSession.expires > new Date()) {
-          console.log('✅ Valid NextAuth session found for:', nextAuthSession.users.email)
-          return {
-            valid: true,
-            userId: nextAuthSession.users.id,
-            role: nextAuthSession.users.role as UserRole,
-            email: nextAuthSession.users.email,
-            name: nextAuthSession.users.name,
-            expiresAt: nextAuthSession.expires,
-            permissions: getUserPermissions(nextAuthSession.users.role as UserRole),
-          }
+        if (!secret) {
+          console.error('❌ NEXTAUTH_SECRET not configured')
+          console.log('⚠️  Cannot validate NextAuth session without secret')
         } else {
-          console.log('❌ NextAuth session invalid or expired')
+          // Decode and verify the JWT token
+          const decoded = jwt.verify(nextAuthTokenCookie.value, secret) as any
+
+          console.log('✅ NextAuth JWT decoded:', !!decoded)
+          console.log('👤 NextAuth user from JWT:', decoded?.email, decoded?.role)
+
+          if (decoded && decoded.email) {
+            // Get user from database to ensure we have the latest data
+            const user = await prisma.users.findUnique({
+              where: { email: decoded.email },
+            })
+
+            if (user) {
+              console.log('✅ Valid NextAuth session found for:', user.email)
+              return {
+                valid: true,
+                userId: user.id,
+                role: user.role as UserRole,
+                email: user.email,
+                name: user.name,
+                expiresAt: new Date(Date.now() + 8 * 60 * 60 * 1000), // 8 hours from now
+                permissions: getUserPermissions(user.role as UserRole),
+              }
+            } else {
+              console.log('❌ User from JWT not found in database:', decoded.email)
+            }
+          }
         }
-      } catch (nextAuthError) {
-        console.error('NextAuth session validation error:', nextAuthError)
+      } catch (nextAuthError: any) {
+        if (nextAuthError.name === 'TokenExpiredError') {
+          console.log('❌ NextAuth JWT token expired')
+        } else if (nextAuthError.name === 'JsonWebTokenError') {
+          console.log('❌ NextAuth JWT invalid:', nextAuthError.message)
+        } else {
+          console.error('NextAuth JWT validation error:', nextAuthError)
+        }
       }
     } else {
       console.log('⚠️  No NextAuth cookie found')

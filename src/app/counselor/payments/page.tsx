@@ -46,7 +46,9 @@ export default function PaymentsPage() {
           ? '/api/counselor/payments'
           : `/api/counselor/payments?status=${statusFilter}`
 
-      const response = await fetch(url)
+      const response = await fetch(url, {
+        credentials: 'include',
+      })
       if (!response.ok) throw new Error('Failed to fetch payments')
 
       const data = await response.json()
@@ -81,6 +83,7 @@ export default function PaymentsPage() {
       const response = await fetch(`/api/counselor/payments/${payment.id}/mark-paid`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
         body: JSON.stringify({
           paidAmount: payment.amount,
           paymentMethod: 'RAZORPAY_UPI',

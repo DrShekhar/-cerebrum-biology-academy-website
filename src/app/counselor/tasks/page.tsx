@@ -67,7 +67,9 @@ export default function TasksPage() {
         params.append('overdue', 'true')
       }
 
-      const response = await fetch(`/api/counselor/tasks?${params}`)
+      const response = await fetch(`/api/counselor/tasks?${params}`, {
+        credentials: 'include',
+      })
       const data = await response.json()
 
       if (!response.ok) {
@@ -103,6 +105,7 @@ export default function TasksPage() {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(updates),
+        credentials: 'include',
       })
 
       const data = await response.json()
@@ -122,6 +125,7 @@ export default function TasksPage() {
     try {
       const response = await fetch(`/api/counselor/tasks/${taskId}`, {
         method: 'DELETE',
+        credentials: 'include',
       })
 
       if (!response.ok) {
@@ -144,6 +148,7 @@ export default function TasksPage() {
 
       const response = await fetch('/api/counselor/tasks/automation/run', {
         method: 'POST',
+        credentials: 'include',
       })
 
       const data = await response.json()

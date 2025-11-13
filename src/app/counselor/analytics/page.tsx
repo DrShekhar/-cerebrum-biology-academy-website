@@ -51,7 +51,9 @@ export default function AnalyticsPage() {
       setLoading(true)
       setError(null)
 
-      const response = await fetch(`/api/counselor/analytics?range=${timeRange}`)
+      const response = await fetch(`/api/counselor/analytics?range=${timeRange}`, {
+        credentials: 'include',
+      })
       const result = await response.json()
 
       if (!response.ok) {
