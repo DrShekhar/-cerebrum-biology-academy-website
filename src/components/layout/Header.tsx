@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, memo } from 'react'
+import { useState, useEffect, memo, useMemo } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import {
@@ -20,6 +20,7 @@ import {
   Trophy,
   ArrowRight,
   Search,
+  GraduationCap,
 } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { BurgerMenu } from '@/components/navigation/BurgerMenu'
@@ -43,34 +44,41 @@ const Header = () => {
     setIsSearchOpen(false)
   }, [pathname])
 
-  const mainNavigation = [
-    {
-      href: '/results',
-      label: 'Results',
-      icon: Trophy,
-      badge: '98%',
-      priority: 1,
-    },
-    {
-      href: '/courses',
-      label: 'Courses',
-      priority: 2,
-    },
-    {
-      href: '/faculty',
-      label: 'Faculty',
-      icon: Users,
-      priority: 3,
-    },
-  ]
+  const mainNavigation = useMemo(
+    () => [
+      {
+        href: '/results',
+        label: 'Results',
+        icon: Trophy,
+        badge: '98%',
+        priority: 1,
+      },
+      {
+        href: '/courses',
+        label: 'Courses',
+        icon: GraduationCap,
+        priority: 2,
+      },
+      {
+        href: '/faculty',
+        label: 'Faculty',
+        icon: Users,
+        priority: 3,
+      },
+    ],
+    []
+  )
 
-  const primaryCTA = {
-    label: 'Enroll Now',
-    href: '/admissions',
-    variant: 'primary',
-    icon: ArrowRight,
-    className: 'bg-green-600 hover:bg-green-700',
-  }
+  const primaryCTA = useMemo(
+    () => ({
+      label: 'Enroll Now',
+      href: '/admissions',
+      variant: 'primary',
+      icon: ArrowRight,
+      className: 'bg-green-600 hover:bg-green-700',
+    }),
+    []
+  )
 
   // Authentication dropdown items
   const authOptions = [
@@ -85,7 +93,10 @@ const Header = () => {
   }
 
   return (
-    <header className="bg-white shadow-lg sticky top-0 z-50 border-b border-gray-100" role="banner">
+    <header
+      className="bg-white/95 backdrop-blur-sm shadow-md sticky top-0 z-50 border-b border-gray-100"
+      role="banner"
+    >
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Left Section - Burger Menu + Logo */}
@@ -117,11 +128,11 @@ const Header = () => {
 
               {/* Mobile: Compact brand display */}
               <div className="block sm:hidden">
-                <div className="flex flex-col">
-                  <span className="text-xl font-bold text-slate-900 leading-tight tracking-[-0.02em] antialiased">
+                <div className="flex flex-col justify-center">
+                  <span className="text-xl font-bold text-slate-900 leading-none tracking-[-0.02em] antialiased">
                     Cerebrum
                   </span>
-                  <span className="text-xs text-slate-600 font-medium -mt-1 tracking-wide">
+                  <span className="text-xs text-slate-600 font-medium leading-tight tracking-wide">
                     Biology Academy
                   </span>
                 </div>
@@ -129,11 +140,11 @@ const Header = () => {
 
               {/* Desktop: Full brand display */}
               <div className="hidden sm:block">
-                <div className="flex flex-col">
-                  <span className="text-2xl font-bold text-slate-900 leading-tight tracking-[-0.02em] antialiased">
+                <div className="flex flex-col justify-center">
+                  <span className="text-2xl font-bold text-slate-900 leading-none tracking-[-0.02em] antialiased">
                     Cerebrum
                   </span>
-                  <span className="text-sm text-slate-600 font-medium -mt-1 tracking-wide">
+                  <span className="text-sm text-slate-600 font-medium leading-tight tracking-wide">
                     Biology Academy
                   </span>
                 </div>
@@ -143,7 +154,7 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav
-            className="hidden lg:flex items-center space-x-6"
+            className="hidden lg:flex items-center space-x-8"
             role="navigation"
             aria-label="Main navigation"
           >
@@ -152,26 +163,28 @@ const Header = () => {
                 {'highlight' in item && item.highlight ? (
                   <Link
                     href={item.href!}
-                    className={`flex items-center space-x-2 font-semibold px-4 py-2 rounded-lg bg-orange-100 text-orange-700 hover:bg-orange-200 border border-orange-300 transition-all duration-300 ${
+                    className={`flex items-center gap-2 font-semibold px-4 py-2 rounded-lg bg-orange-100 text-orange-700 hover:bg-orange-200 border border-orange-300 transition-all duration-300 hover:scale-105 ${
                       isActive(item.href!) ? 'shadow-md' : ''
                     }`}
                   >
-                    {item.icon && <item.icon className="w-4 h-4" />}
+                    {item.icon && <item.icon className="w-5 h-5" />}
                     <span>{item.label}</span>
                   </Link>
                 ) : (
                   <Link
                     href={item.href!}
-                    className={`flex items-center space-x-1.5 font-medium transition-colors ${
-                      isActive(item.href!) ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'
+                    className={`flex items-center gap-2 font-medium px-3 py-2 rounded-lg transition-all duration-200 ${
+                      isActive(item.href!)
+                        ? 'bg-blue-50 text-blue-600 border-l-2 border-blue-600'
+                        : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
                     }`}
                     aria-current={isActive(item.href!) ? 'page' : undefined}
                   >
-                    {item.icon && <item.icon className="w-4 h-4" aria-hidden="true" />}
+                    {item.icon && <item.icon className="w-5 h-5" aria-hidden="true" />}
                     <span>{item.label}</span>
                     {item.badge && (
                       <span
-                        className="ml-1 bg-green-500 text-white text-xs font-bold px-2 py-0.5 rounded-full"
+                        className="bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-sm"
                         aria-label={`${item.badge} success rate`}
                       >
                         {item.badge}
@@ -184,7 +197,7 @@ const Header = () => {
           </nav>
 
           {/* Right Section - Enhanced CTA Layout */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-4">
             {/* Search Menu */}
             <SearchMenu
               isOpen={isSearchOpen}
@@ -193,12 +206,12 @@ const Header = () => {
             />
 
             {/* Desktop CTA Buttons */}
-            <div className="hidden lg:flex items-center gap-3">
+            <div className="hidden lg:flex items-center gap-6">
               {/* Student Dashboard Button (for authenticated users) */}
               {isAuthenticated ? (
                 <Link
                   href="/student/dashboard"
-                  className="flex items-center gap-2 px-6 py-3 rounded-full font-semibold transition-all duration-300 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white shadow-lg hover:shadow-xl hover:scale-[1.02] whitespace-nowrap"
+                  className="flex items-center gap-1.5 px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white shadow-lg hover:shadow-xl hover:scale-[1.02] whitespace-nowrap"
                 >
                   <BarChart3 className="w-4 h-4" />
                   <span>My Dashboard</span>
@@ -208,7 +221,7 @@ const Header = () => {
                   {/* Free Demo - Ghost Button Style */}
                   <Link
                     href="/demo-booking"
-                    className="flex items-center gap-2 px-5 py-2.5 rounded-full font-medium transition-all duration-300 border-2 border-green-600 text-green-600 hover:bg-green-50 hover:border-green-700 hover:text-green-700 whitespace-nowrap group"
+                    className="flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 border-2 border-green-600 text-green-600 hover:bg-green-50 hover:border-green-700 hover:text-green-700 hover:shadow-md whitespace-nowrap group"
                   >
                     <Play className="w-4 h-4 transition-transform group-hover:scale-110" />
                     <span>Free Demo</span>
@@ -217,16 +230,16 @@ const Header = () => {
                   {/* Primary CTA - Enroll Now (Enhanced) */}
                   <Link
                     href={primaryCTA.href}
-                    className="flex items-center gap-2 px-8 py-3 rounded-full font-bold transition-all duration-300 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white shadow-lg hover:shadow-xl hover:scale-[1.02] whitespace-nowrap group"
+                    className="flex items-center gap-1.5 px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white shadow-lg hover:shadow-xl hover:scale-[1.02] whitespace-nowrap group"
                   >
                     <span>Enroll Now</span>
                     <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                   </Link>
 
-                  {/* Sign In - Minimal Style */}
+                  {/* Sign In - Minimal Text Link */}
                   <Link
                     href="/auth/signin"
-                    className="flex items-center gap-2 px-5 py-2.5 rounded-full font-medium transition-all duration-300 text-blue-700 hover:bg-blue-50 hover:text-blue-800 whitespace-nowrap group"
+                    className="flex items-center gap-1.5 text-sm font-medium text-blue-600 hover:text-blue-800 transition-colors duration-200 group"
                   >
                     <UserPlus className="w-4 h-4 transition-transform group-hover:scale-110" />
                     <span>Sign In</span>
@@ -241,6 +254,9 @@ const Header = () => {
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
+              id="mobile-navigation-menu"
+              role="navigation"
+              aria-label="Mobile navigation"
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
@@ -254,7 +270,7 @@ const Header = () => {
                     {'highlight' in item && item.highlight ? (
                       <Link
                         href={item.href!}
-                        className="flex items-center space-x-2 font-semibold px-4 py-3 rounded-lg bg-orange-100 text-orange-700 hover:bg-orange-200 border border-orange-300 transition-all duration-300 min-h-[48px]"
+                        className="flex items-center gap-2 font-semibold px-4 py-3 rounded-lg bg-orange-100 text-orange-700 hover:bg-orange-200 border border-orange-300 transition-all duration-300 min-h-[48px]"
                       >
                         {item.icon && <item.icon className="w-5 h-5" />}
                         <span>{item.label}</span>
@@ -262,16 +278,16 @@ const Header = () => {
                     ) : (
                       <Link
                         href={item.href!}
-                        className={`flex items-center space-x-2 font-medium py-2 transition-colors ${
+                        className={`flex items-center gap-2 font-medium px-3 py-2 rounded-lg min-h-[48px] transition-all duration-200 ${
                           isActive(item.href!)
-                            ? 'text-blue-600'
-                            : 'text-gray-700 hover:text-blue-600'
+                            ? 'bg-blue-50 text-blue-600 border-l-2 border-blue-600'
+                            : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
                         }`}
                       >
-                        {item.icon && <item.icon className="w-4 h-4" />}
+                        {item.icon && <item.icon className="w-5 h-5" />}
                         <span>{item.label}</span>
                         {item.badge && (
-                          <span className="ml-1 bg-green-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">
+                          <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-sm">
                             {item.badge}
                           </span>
                         )}
@@ -286,7 +302,7 @@ const Header = () => {
                   {isAuthenticated ? (
                     <Link
                       href="/student/dashboard"
-                      className="flex items-center justify-center space-x-2 bg-gradient-to-r from-green-600 to-green-700 text-white px-6 py-4 rounded-full font-bold hover:from-green-700 hover:to-green-800 transition-all duration-300 min-h-[52px] shadow-lg"
+                      className="flex items-center justify-center gap-2 bg-gradient-to-r from-green-600 to-green-700 text-white px-6 py-4 rounded-full font-semibold hover:from-green-700 hover:to-green-800 transition-all duration-300 min-h-[52px] shadow-lg"
                     >
                       <BarChart3 className="w-5 h-5" />
                       <span>My Dashboard</span>
@@ -296,7 +312,7 @@ const Header = () => {
                       {/* Free Demo - Ghost Style */}
                       <Link
                         href="/demo-booking"
-                        className="flex items-center justify-center space-x-2 border-2 border-green-600 text-green-600 px-6 py-4 rounded-full font-bold hover:bg-green-50 transition-all duration-300 min-h-[52px]"
+                        className="flex items-center justify-center gap-2 border-2 border-green-600 text-green-600 px-6 py-4 rounded-full font-semibold hover:bg-green-50 hover:border-green-700 hover:text-green-700 transition-all duration-300 min-h-[52px]"
                       >
                         <Play className="w-5 h-5" />
                         <span>Free Demo</span>
@@ -305,16 +321,16 @@ const Header = () => {
                       {/* Primary CTA - Enroll Now */}
                       <Link
                         href={primaryCTA.href}
-                        className="flex items-center justify-center space-x-2 bg-gradient-to-r from-green-600 to-green-700 text-white px-6 py-4 rounded-full font-bold hover:from-green-700 hover:to-green-800 transition-all duration-300 min-h-[52px] shadow-lg"
+                        className="flex items-center justify-center gap-2 bg-gradient-to-r from-green-600 to-green-700 text-white px-6 py-4 rounded-full font-semibold hover:from-green-700 hover:to-green-800 transition-all duration-300 min-h-[52px] shadow-lg"
                       >
                         <span>{primaryCTA.label}</span>
                         <ArrowRight className="w-5 h-5" />
                       </Link>
 
-                      {/* Sign In - Minimal Style */}
+                      {/* Sign In - Subtle Style (keep button for touch target) */}
                       <Link
                         href="/auth/signin"
-                        className="flex items-center justify-center space-x-2 text-blue-700 hover:bg-blue-50 px-6 py-4 rounded-full font-bold transition-all duration-300 min-h-[52px] border-2 border-blue-700 hover:border-blue-800"
+                        className="flex items-center justify-center gap-2 border border-gray-300 text-gray-700 hover:bg-gray-50 hover:border-gray-400 px-6 py-4 rounded-full font-medium transition-all duration-300 min-h-[52px]"
                       >
                         <UserPlus className="w-5 h-5" />
                         <span>Sign In</span>

@@ -128,6 +128,7 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
         className="flex items-center justify-center w-10 h-10 rounded-xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 group relative z-50"
         aria-label="Toggle navigation menu"
         aria-expanded={isOpen}
+        aria-controls="burger-menu-panel"
       >
         <motion.div animate={isOpen ? 'open' : 'closed'} className="relative w-6 h-6">
           <motion.span
@@ -172,6 +173,9 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
       <AnimatePresence>
         {isOpen && (
           <motion.div
+            id="burger-menu-panel"
+            role="dialog"
+            aria-label="Navigation menu"
             variants={menuVariants}
             initial="closed"
             animate="open"
@@ -206,18 +210,23 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
                   >
                     <button
                       onClick={() => handleSectionToggle(section.id)}
-                      className="w-full p-4 flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors duration-200"
+                      className="w-full p-4 flex items-center justify-between bg-gray-50 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 transition-all duration-300 group relative overflow-hidden before:absolute before:left-0 before:top-0 before:h-full before:w-0 before:bg-blue-600 before:transition-all before:duration-300 hover:before:w-1"
                       aria-expanded={isExpanded}
                     >
-                      <div className="flex items-center space-x-3">
-                        {Icon && <Icon className="w-5 h-5 text-blue-600" />}
-                        <span className="font-semibold text-gray-900">{section.title}</span>
+                      <div className="flex items-center space-x-3 relative z-10">
+                        {Icon && (
+                          <Icon className="w-5 h-5 text-blue-600 group-hover:scale-110 transition-transform duration-300" />
+                        )}
+                        <span className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
+                          {section.title}
+                        </span>
                       </div>
                       <motion.div
                         animate={{ rotate: isExpanded ? 180 : 0 }}
                         transition={{ duration: 0.2 }}
+                        className="relative z-10"
                       >
-                        <ChevronDown className="w-5 h-5 text-gray-500" />
+                        <ChevronDown className="w-5 h-5 text-gray-500 group-hover:text-blue-600 transition-colors duration-300" />
                       </motion.div>
                     </button>
 
@@ -236,11 +245,11 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
                                 key={item.id}
                                 href={item.href}
                                 onClick={handleLinkClick}
-                                className="group flex items-center justify-between p-3 rounded-lg hover:bg-blue-50 transition-all duration-200"
+                                className="group relative flex items-center justify-between p-3 rounded-lg hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 transition-all duration-300 overflow-hidden before:absolute before:left-0 before:top-0 before:h-full before:w-0 before:bg-blue-600 before:transition-all before:duration-300 hover:before:w-1"
                               >
-                                <div className="flex-1">
+                                <div className="flex-1 relative z-10">
                                   <div className="flex items-center space-x-2">
-                                    <span className="font-medium text-gray-900 group-hover:text-blue-600">
+                                    <span className="font-medium text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
                                       {item.title}
                                     </span>
                                     {item.isNew && (
@@ -257,10 +266,12 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
                                     )}
                                   </div>
                                   {item.description && (
-                                    <p className="text-sm text-gray-500 mt-1">{item.description}</p>
+                                    <p className="text-sm text-gray-500 mt-1 group-hover:text-gray-700 transition-colors duration-300">
+                                      {item.description}
+                                    </p>
                                   )}
                                 </div>
-                                <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-blue-600 transform group-hover:translate-x-1 transition-all duration-200" />
+                                <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-blue-600 transform group-hover:translate-x-1 transition-all duration-300 relative z-10" />
                               </Link>
                             ))}
                           </div>
