@@ -1,16 +1,22 @@
 import { NextRequest, NextResponse } from 'next/server'
-import twilio from 'twilio'
 import { prisma } from '@/lib/prisma'
 import { sign } from 'jsonwebtoken'
+import { z } from 'zod'
 
-const accountSid = process.env.TWILIO_ACCOUNT_SID
-const authToken = process.env.TWILIO_AUTH_TOKEN
-const verifyServiceSid = process.env.TWILIO_VERIFY_SERVICE_SID
 const jwtSecret = process.env.NEXTAUTH_SECRET || 'your-secret-key'
+
+const verifyOTPSchema = z.object({
+  phoneNumber: z.string().min(10, 'Phone number must be at least 10 digits'),
+  code: z.string().length(6, 'OTP must be 6 digits'),
+})
+
+// Maximum number of OTP verification attempts
+const MAX_OTP_ATTEMPTS = 5
 
 export async function POST(request: NextRequest) {
   try {
-    const { phoneNumber, code } = await request.json()
+    const body = await request.json()
+    const { phoneNumber, code } = verifyOTPSchema.parse(body)
 
     if (!phoneNumber || !code) {
       return NextResponse.json(
@@ -19,50 +25,124 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    if (!accountSid || !authToken || !verifyServiceSid) {
-      console.error('Missing Twilio credentials')
+    // Format phone number - ensure consistent format
+    let formattedPhone = phoneNumber.replace(/[\s\-\(\)]/g, '')
+    if (!formattedPhone.startsWith('+')) {
+      formattedPhone = formattedPhone.startsWith('91')
+        ? `+${formattedPhone}`
+        : `+91${formattedPhone}`
+    }
+
+    // Find the most recent valid OTP for this phone number
+    const otpRecord = await prisma.whatsapp_otp.findFirst({
+      where: {
+        phone: formattedPhone,
+        verified: false,
+      },
+      orderBy: {
+        createdAt: 'desc',
+      },
+    })
+
+    // Check if OTP exists
+    if (!otpRecord) {
       return NextResponse.json(
-        { error: 'Server configuration error. Please contact support.' },
-        { status: 500 }
+        { error: 'No OTP found. Please request a new one.' },
+        { status: 404 }
       )
     }
 
-    const client = twilio(accountSid, authToken)
-
-    const verificationCheck = await client.verify.v2
-      .services(verifyServiceSid)
-      .verificationChecks.create({
-        to: phoneNumber,
-        code: code,
-      })
-
-    if (verificationCheck.status !== 'approved') {
-      return NextResponse.json({ error: 'Invalid or expired OTP' }, { status: 400 })
+    // Check if OTP has expired
+    if (new Date() > otpRecord.expiresAt) {
+      return NextResponse.json(
+        { error: 'OTP has expired. Please request a new one.' },
+        { status: 400 }
+      )
     }
 
+    // Check if maximum attempts exceeded
+    if (otpRecord.attempts >= MAX_OTP_ATTEMPTS) {
+      return NextResponse.json(
+        { error: 'Maximum verification attempts exceeded. Please request a new OTP.' },
+        { status: 429 }
+      )
+    }
+
+    // Increment attempt counter
+    await prisma.whatsapp_otp.update({
+      where: { id: otpRecord.id },
+      data: { attempts: otpRecord.attempts + 1 },
+    })
+
+    // Verify the OTP
+    if (otpRecord.otp !== code) {
+      const remainingAttempts = MAX_OTP_ATTEMPTS - (otpRecord.attempts + 1)
+      return NextResponse.json(
+        {
+          error: 'Invalid OTP. Please try again.',
+          remainingAttempts: Math.max(0, remainingAttempts),
+        },
+        { status: 400 }
+      )
+    }
+
+    // OTP is valid! Mark it as verified
+    await prisma.whatsapp_otp.update({
+      where: { id: otpRecord.id },
+      data: { verified: true },
+    })
+
+    // Find or create user
     let user = await prisma.users.findFirst({
-      where: { phone: phoneNumber },
+      where: { phone: formattedPhone },
     })
 
     if (!user) {
+      // Create new user with phone authentication
       user = await prisma.users.create({
         data: {
-          phone: phoneNumber,
+          phone: formattedPhone,
+          name: `User ${formattedPhone.slice(-4)}`, // Temporary name
+          email: `${formattedPhone.replace(/\+/g, '')}@temp.cerebrumbiologyacademy.com`, // Temporary email
           role: 'STUDENT',
-          emailVerified: new Date(),
+          phoneVerified: new Date(), // ✅ Correct field for phone auth
+          createdAt: new Date(),
+          updatedAt: new Date(),
         },
       })
+
+      console.log('✅ New user created via WhatsApp:', user.id)
+    } else {
+      // Update existing user's phone verification status
+      user = await prisma.users.update({
+        where: { id: user.id },
+        data: {
+          phoneVerified: new Date(),
+          updatedAt: new Date(),
+        },
+      })
+
+      console.log('✅ Existing user verified via WhatsApp:', user.id)
     }
 
+    // Delete the used OTP (cleanup)
+    await prisma.whatsapp_otp.delete({
+      where: { id: otpRecord.id },
+    })
+
+    // Generate JWT token
     const token = sign(
       {
         userId: user.id,
         phone: user.phone,
         role: user.role,
+        authMethod: 'whatsapp',
       },
       jwtSecret,
       { expiresIn: '7d' }
     )
+
+    console.log('✅ WhatsApp authentication successful for:', formattedPhone)
 
     return NextResponse.json({
       success: true,
@@ -72,11 +152,17 @@ export async function POST(request: NextRequest) {
         email: user.email,
         phone: user.phone,
         role: user.role,
+        phoneVerified: user.phoneVerified,
       },
       token,
+      message: 'Login successful! Welcome to Cerebrum Biology Academy.',
     })
   } catch (error: any) {
-    console.error('Error verifying WhatsApp OTP:', error)
+    console.error('❌ Error verifying WhatsApp OTP:', error)
+
+    if (error instanceof z.ZodError) {
+      return NextResponse.json({ error: error.errors[0].message }, { status: 400 })
+    }
 
     return NextResponse.json(
       {

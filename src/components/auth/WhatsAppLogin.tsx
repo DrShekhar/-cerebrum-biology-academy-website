@@ -1,7 +1,7 @@
 'use client'
 
-import { useState } from 'react'
-import { MessageCircle, Loader2, Check } from 'lucide-react'
+import { useState, useEffect } from 'react'
+import { MessageCircle, Loader2, Check, Clock } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 
 export function WhatsAppLogin() {
@@ -11,6 +11,16 @@ export function WhatsAppLogin() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
   const [success, setSuccess] = useState(false)
+  const [resendCountdown, setResendCountdown] = useState(0)
+  const [remainingAttempts, setRemainingAttempts] = useState<number | null>(null)
+
+  // Countdown timer effect
+  useEffect(() => {
+    if (resendCountdown > 0) {
+      const timer = setTimeout(() => setResendCountdown(resendCountdown - 1), 1000)
+      return () => clearTimeout(timer)
+    }
+  }, [resendCountdown])
 
   const formatPhoneNumber = (value: string) => {
     const cleaned = value.replace(/\D/g, '')
@@ -45,8 +55,39 @@ export function WhatsAppLogin() {
       }
 
       setStep('otp')
+      setResendCountdown(60) // Start 60-second countdown
+      setRemainingAttempts(null)
     } catch (err: any) {
       setError(err.message || 'Failed to send OTP. Please try again.')
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  const handleResendOTP = async () => {
+    setError('')
+    setLoading(true)
+
+    try {
+      const formattedPhone = formatPhoneNumber(phoneNumber)
+
+      const response = await fetch('/api/auth/whatsapp/resend-otp', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ phoneNumber: formattedPhone }),
+      })
+
+      const data = await response.json()
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to resend OTP')
+      }
+
+      setResendCountdown(60) // Reset countdown
+      setError('')
+      setOtp('') // Clear previous OTP input
+    } catch (err: any) {
+      setError(err.message || 'Failed to resend OTP. Please try again.')
     } finally {
       setLoading(false)
     }
@@ -68,14 +109,20 @@ export function WhatsAppLogin() {
       const data = await response.json()
 
       if (!response.ok) {
+        // Handle remaining attempts if provided
+        if (data.remainingAttempts !== undefined) {
+          setRemainingAttempts(data.remainingAttempts)
+        }
         throw new Error(data.error || 'Invalid OTP')
       }
 
       setSuccess(true)
 
+      // Store auth token and user data
       localStorage.setItem('auth_token', data.token)
       localStorage.setItem('user', JSON.stringify(data.user))
 
+      // Redirect to dashboard
       setTimeout(() => {
         window.location.href = '/dashboard'
       }, 1000)
@@ -114,7 +161,10 @@ export function WhatsAppLogin() {
 
       {error && (
         <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg">
-          {error}
+          <p>{error}</p>
+          {remainingAttempts !== null && (
+            <p className="text-sm mt-1">Remaining attempts: {remainingAttempts}</p>
+          )}
         </div>
       )}
 
@@ -191,13 +241,30 @@ export function WhatsAppLogin() {
             )}
           </Button>
 
-          <button
-            onClick={() => setStep('phone')}
-            className="w-full text-sm text-gray-600 hover:text-gray-900"
-            disabled={loading}
-          >
-            Change phone number
-          </button>
+          <div className="flex items-center justify-between gap-4">
+            <button
+              onClick={() => setStep('phone')}
+              className="flex-1 text-sm text-gray-600 hover:text-gray-900 py-2"
+              disabled={loading}
+            >
+              Change number
+            </button>
+
+            {resendCountdown > 0 ? (
+              <div className="flex-1 flex items-center justify-center gap-2 text-sm text-gray-500 py-2">
+                <Clock className="w-4 h-4" />
+                <span>Resend in {resendCountdown}s</span>
+              </div>
+            ) : (
+              <button
+                onClick={handleResendOTP}
+                className="flex-1 text-sm text-green-600 hover:text-green-700 font-medium py-2"
+                disabled={loading}
+              >
+                Resend OTP
+              </button>
+            )}
+          </div>
         </div>
       )}
 
