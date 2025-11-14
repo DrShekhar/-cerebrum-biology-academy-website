@@ -3,9 +3,11 @@
 import { useState, useEffect } from 'react'
 import { MessageCircle, Loader2, Check, Clock } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
+import { SignupForm } from './SignupForm'
 
 export function WhatsAppLogin() {
-  const [step, setStep] = useState<'phone' | 'otp'>('phone')
+  const [step, setStep] = useState<'phone' | 'otp' | 'signup'>('phone')
+  const [userId, setUserId] = useState('')
   const [phoneNumber, setPhoneNumber] = useState('')
   const [otp, setOtp] = useState('')
   const [loading, setLoading] = useState(false)
@@ -116,21 +118,42 @@ export function WhatsAppLogin() {
         throw new Error(data.error || 'Invalid OTP')
       }
 
-      setSuccess(true)
-
       // Store auth token and user data
       localStorage.setItem('auth_token', data.token)
       localStorage.setItem('user', JSON.stringify(data.user))
 
-      // Redirect to dashboard
-      setTimeout(() => {
-        window.location.href = '/dashboard'
-      }, 1000)
+      // Check if new user needs to complete signup
+      if (data.isNewUser) {
+        setUserId(data.user.id)
+        setStep('signup')
+      } else {
+        // Existing user - redirect to dashboard
+        setSuccess(true)
+        setTimeout(() => {
+          window.location.href = '/dashboard'
+        }, 1000)
+      }
     } catch (err: any) {
       setError(err.message || 'Invalid OTP. Please try again.')
     } finally {
       setLoading(false)
     }
+  }
+
+  // Show signup form for new users
+  if (step === 'signup') {
+    return (
+      <SignupForm
+        userId={userId}
+        phone={phoneNumber}
+        onComplete={() => {
+          setSuccess(true)
+          setTimeout(() => {
+            window.location.href = '/dashboard'
+          }, 1000)
+        }}
+      />
+    )
   }
 
   if (success) {
@@ -139,7 +162,9 @@ export function WhatsAppLogin() {
         <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
           <Check className="w-8 h-8 text-green-600" />
         </div>
-        <h3 className="text-xl font-semibold text-gray-900 mb-2">Login Successful!</h3>
+        <h3 className="text-xl font-semibold text-gray-900 mb-2">
+          {step === 'signup' ? 'Registration Complete!' : 'Login Successful!'}
+        </h3>
         <p className="text-gray-600">Redirecting to your dashboard...</p>
       </div>
     )

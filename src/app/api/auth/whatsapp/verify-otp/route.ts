@@ -92,26 +92,28 @@ export async function POST(request: NextRequest) {
       data: { verified: true },
     })
 
-    // Find or create user
+    // Find existing user
     let user = await prisma.users.findFirst({
       where: { phone: formattedPhone },
     })
 
+    const isNewUser = !user
+
     if (!user) {
-      // Create new user with phone authentication
+      // Create minimal user record - they'll complete signup after
       user = await prisma.users.create({
         data: {
           phone: formattedPhone,
-          name: `User ${formattedPhone.slice(-4)}`, // Temporary name
-          email: `${formattedPhone.replace(/\+/g, '')}@temp.cerebrumbiologyacademy.com`, // Temporary email
+          name: `User ${formattedPhone.slice(-4)}`, // Temporary name - to be updated
+          email: `${formattedPhone.replace(/\+/g, '')}@temp.cerebrumbiologyacademy.com`, // Temporary
           role: 'STUDENT',
-          phoneVerified: new Date(), // ✅ Correct field for phone auth
+          phoneVerified: new Date(),
           createdAt: new Date(),
           updatedAt: new Date(),
         },
       })
 
-      console.log('✅ New user created via WhatsApp:', user.id)
+      console.log('✅ New user created via WhatsApp:', user.id, '- needs to complete signup')
     } else {
       // Update existing user's phone verification status
       user = await prisma.users.update({
@@ -142,10 +144,15 @@ export async function POST(request: NextRequest) {
       { expiresIn: '7d' }
     )
 
-    console.log('✅ WhatsApp authentication successful for:', formattedPhone)
+    console.log(
+      '✅ WhatsApp authentication successful for:',
+      formattedPhone,
+      isNewUser ? '(new user)' : '(existing user)'
+    )
 
     return NextResponse.json({
       success: true,
+      isNewUser, // Flag to show signup form
       user: {
         id: user.id,
         name: user.name,
@@ -155,7 +162,9 @@ export async function POST(request: NextRequest) {
         phoneVerified: user.phoneVerified,
       },
       token,
-      message: 'Login successful! Welcome to Cerebrum Biology Academy.',
+      message: isNewUser
+        ? 'Phone verified! Please complete your registration.'
+        : 'Login successful! Welcome back to Cerebrum Biology Academy.',
     })
   } catch (error: any) {
     console.error('❌ Error verifying WhatsApp OTP:', error)
