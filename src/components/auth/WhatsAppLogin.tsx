@@ -13,6 +13,7 @@ export function WhatsAppLogin() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
   const [success, setSuccess] = useState(false)
+  const [isSignupComplete, setIsSignupComplete] = useState(false)
   const [resendCountdown, setResendCountdown] = useState(0)
   const [remainingAttempts, setRemainingAttempts] = useState<number | null>(null)
 
@@ -147,6 +148,7 @@ export function WhatsAppLogin() {
         userId={userId}
         phone={phoneNumber}
         onComplete={() => {
+          setIsSignupComplete(true)
           setSuccess(true)
           setTimeout(() => {
             window.location.href = '/dashboard'
@@ -163,7 +165,7 @@ export function WhatsAppLogin() {
           <Check className="w-8 h-8 text-green-600" />
         </div>
         <h3 className="text-xl font-semibold text-gray-900 mb-2">
-          {step === 'signup' ? 'Registration Complete!' : 'Login Successful!'}
+          {isSignupComplete ? 'Registration Complete!' : 'Login Successful!'}
         </h3>
         <p className="text-gray-600">Redirecting to your dashboard...</p>
       </div>
