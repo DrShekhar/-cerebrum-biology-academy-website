@@ -1,11 +1,11 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, Suspense } from 'react'
 import { signIn } from 'next-auth/react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { Shield, Loader2, AlertCircle } from 'lucide-react'
 
-export default function DirectLoginPage() {
+function DirectLoginForm() {
   const router = useRouter()
   const searchParams = useSearchParams()
   const callbackUrl = searchParams.get('callbackUrl') || '/admin'
@@ -134,5 +134,26 @@ export default function DirectLoginPage() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function DirectLoginPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-2xl shadow-xl w-full max-w-md p-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="w-8 h-8 text-blue-600 animate-pulse" />
+              </div>
+              <p className="text-gray-600">Loading...</p>
+            </div>
+          </div>
+        </div>
+      }
+    >
+      <DirectLoginForm />
+    </Suspense>
   )
 }
