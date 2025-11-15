@@ -453,6 +453,14 @@ Guidelines:
     await this.whatsappService.sendMessage({ phone: phoneNumber, message })
   }
 
+  async sendTextMessage(
+    phoneNumber: string,
+    phoneNumberId: string,
+    message: string
+  ): Promise<void> {
+    await this.whatsappService.sendMessage({ phone: phoneNumber, message })
+  }
+
   private async sendRateLimitMessage(phoneNumber: string, phoneNumberId: string): Promise<void> {
     const message =
       `🚫 *Daily Question Limit Reached*\n\n` +
