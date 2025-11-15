@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { withCounselor } from '@/lib/auth/middleware'
+import { authenticateCounselor } from '@/lib/auth/counselor-auth'
 import { prisma } from '@/lib/prisma'
 import { z } from 'zod'
 
@@ -27,8 +27,12 @@ const updateTaskSchema = z.object({
   dueDate: z.string().optional(),
 })
 
-async function handleGET(request: NextRequest, session: any) {
+export async function GET(request: NextRequest) {
   try {
+    const authResult = await authenticateCounselor()
+    if ('error' in authResult) return authResult.error
+    const { session } = authResult
+
     const { searchParams } = new URL(request.url)
     const status = searchParams.get('status')
     const leadId = searchParams.get('leadId')
@@ -49,9 +53,6 @@ async function handleGET(request: NextRequest, session: any) {
     if (overdue) {
       where.dueDate = {
         lt: new Date(),
-      }
-      where.status = {
-        notIn: ['COMPLETED', 'CANCELLED'],
       }
     }
 
@@ -96,8 +97,12 @@ async function handleGET(request: NextRequest, session: any) {
   }
 }
 
-async function handlePOST(request: NextRequest, session: any) {
+export async function POST(request: NextRequest) {
   try {
+    const authResult = await authenticateCounselor()
+    if ('error' in authResult) return authResult.error
+    const { session } = authResult
+
     const body = await request.json()
     const validatedData = createTaskSchema.parse(body)
 
@@ -187,6 +192,3 @@ async function handlePOST(request: NextRequest, session: any) {
     )
   }
 }
-
-export const GET = withCounselor(handleGET)
-export const POST = withCounselor(handlePOST)

@@ -62,11 +62,37 @@ export default function LeadsPage() {
   const [activeId, setActiveId] = useState<string | null>(null)
   const [searchTerm, setSearchTerm] = useState('')
   const [filterPriority, setFilterPriority] = useState<Priority | 'ALL'>('ALL')
+  const [filterSource, setFilterSource] = useState<string>('ALL')
   const [showCreateModal, setShowCreateModal] = useState(false)
 
   useEffect(() => {
     fetchLeads()
   }, [])
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.ctrlKey || e.metaKey) && e.key === 'n') {
+        e.preventDefault()
+        setShowCreateModal(true)
+      }
+      if ((e.ctrlKey || e.metaKey) && e.key === 'f') {
+        e.preventDefault()
+        document.querySelector<HTMLInputElement>('input[type="text"]')?.focus()
+      }
+      if ((e.ctrlKey || e.metaKey) && e.key === 'e') {
+        e.preventDefault()
+        exportToCSV()
+      }
+      if (e.key === 'Escape') {
+        setShowCreateModal(false)
+        setSearchTerm('')
+        setFilterPriority('ALL')
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [searchTerm])
 
   async function fetchLeads() {
     try {
@@ -144,8 +170,9 @@ export default function LeadsPage() {
       lead.phone.includes(searchTerm)
 
     const matchesPriority = filterPriority === 'ALL' || lead.priority === filterPriority
+    const matchesSource = filterSource === 'ALL' || lead.source === filterSource
 
-    return matchesSearch && matchesPriority
+    return matchesSearch && matchesPriority && matchesSource
   })
 
   const activeLead = leads.find((lead) => lead.id === activeId)
@@ -259,16 +286,32 @@ export default function LeadsPage() {
             </div>
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 flex-wrap">
             <select
               value={filterPriority}
               onChange={(e) => setFilterPriority(e.target.value as Priority | 'ALL')}
-              className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+              className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-sm"
             >
               <option value="ALL">All Priorities</option>
               <option value="HOT">🔥 Hot</option>
               <option value="WARM">⚡ Warm</option>
               <option value="COLD">❄️ Cold</option>
+            </select>
+
+            <select
+              value={filterSource}
+              onChange={(e) => setFilterSource(e.target.value)}
+              className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-sm"
+            >
+              <option value="ALL">All Sources</option>
+              <option value="MANUAL_ENTRY">📝 Manual Entry</option>
+              <option value="WALK_IN">🚶 Walk-in</option>
+              <option value="PHONE_CALL">📞 Phone Call</option>
+              <option value="WEBSITE">🌐 Website</option>
+              <option value="REFERRAL">👥 Referral</option>
+              <option value="SOCIAL_MEDIA">📱 Social Media</option>
+              <option value="EMAIL_CAMPAIGN">📧 Email</option>
+              <option value="OTHER">📋 Other</option>
             </select>
 
             <button

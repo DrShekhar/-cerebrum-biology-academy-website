@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { withCounselor } from '@/lib/auth/middleware'
+import { authenticateCounselor } from '@/lib/auth/counselor-auth'
 import { prisma } from '@/lib/prisma'
 import { z } from 'zod'
 import type { LeadStage, Priority } from '@/generated/prisma'
@@ -37,8 +37,12 @@ const updateLeadSchema = z.object({
   lostReason: z.string().optional(),
 })
 
-async function handleGET(request: NextRequest, session: any) {
+export async function GET(request: NextRequest) {
   try {
+    const authResult = await authenticateCounselor()
+    if ('error' in authResult) return authResult.error
+    const { session } = authResult
+
     const { searchParams } = new URL(request.url)
     const stage = searchParams.get('stage') as LeadStage | null
     const priority = searchParams.get('priority') as Priority | null
@@ -72,27 +76,12 @@ async function handleGET(request: NextRequest, session: any) {
           orderBy: { sentAt: 'desc' },
         },
         offers: {
-          where: {
-            status: {
-              in: ['PENDING', 'SENT'],
-            },
-          },
           orderBy: { createdAt: 'desc' },
         },
         fee_plans: {
-          where: {
-            status: {
-              in: ['PENDING', 'PARTIAL'],
-            },
-          },
           orderBy: { createdAt: 'desc' },
         },
         tasks: {
-          where: {
-            status: {
-              notIn: ['COMPLETED', 'CANCELLED'],
-            },
-          },
           orderBy: { dueDate: 'asc' },
           take: 3,
         },
@@ -125,13 +114,18 @@ async function handleGET(request: NextRequest, session: any) {
   }
 }
 
-async function handlePOST(request: NextRequest, session: any) {
+export async function POST(request: NextRequest) {
   try {
+    const authResult = await authenticateCounselor()
+    if ('error' in authResult) return authResult.error
+    const { session } = authResult
+
     const body = await request.json()
     const validatedData = createLeadSchema.parse(body)
 
     const lead = await prisma.leads.create({
       data: {
+        id: `lead_${Date.now()}_${Math.floor(Math.random() * 1000)}`,
         ...validatedData,
         assignedToId: session.userId,
         stage: 'NEW_LEAD',
@@ -188,6 +182,3 @@ async function handlePOST(request: NextRequest, session: any) {
     )
   }
 }
-
-export const GET = withCounselor(handleGET)
-export const POST = withCounselor(handlePOST)

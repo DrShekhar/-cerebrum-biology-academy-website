@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { withCounselor } from '@/lib/auth/middleware'
+import { authenticateCounselor } from '@/lib/auth/counselor-auth'
 import { prisma } from '@/lib/prisma'
 import { z } from 'zod'
 
@@ -14,8 +14,12 @@ const createCommunicationSchema = z.object({
   attachments: z.array(z.string()).optional(),
 })
 
-async function handleGET(request: NextRequest, session: any) {
+export async function GET(request: NextRequest) {
   try {
+    const authResult = await authenticateCounselor()
+    if ('error' in authResult) return authResult.error
+    const { session } = authResult
+
     const { searchParams } = new URL(request.url)
     const leadId = searchParams.get('leadId')
     const type = searchParams.get('type')
@@ -23,7 +27,7 @@ async function handleGET(request: NextRequest, session: any) {
     const where: any = {}
 
     if (leadId) {
-      const lead = await prisma.lead.findUnique({
+      const lead = await prisma.leads.findUnique({
         where: { id: leadId },
         select: { assignedToId: true },
       })
@@ -50,7 +54,7 @@ async function handleGET(request: NextRequest, session: any) {
 
       where.leadId = leadId
     } else {
-      where.lead = {
+      where.leads = {
         assignedToId: session.userId,
       }
     }
@@ -59,10 +63,10 @@ async function handleGET(request: NextRequest, session: any) {
       where.type = type
     }
 
-    const communications = await prisma.communication.findMany({
+    const communications = await prisma.crm_communications.findMany({
       where,
       include: {
-        lead: {
+        leads: {
           select: {
             id: true,
             studentName: true,
@@ -70,7 +74,7 @@ async function handleGET(request: NextRequest, session: any) {
             phone: true,
           },
         },
-        sentBy: {
+        users: {
           select: {
             id: true,
             name: true,
@@ -100,14 +104,18 @@ async function handleGET(request: NextRequest, session: any) {
   }
 }
 
-async function handlePOST(request: NextRequest, session: any) {
+export async function POST(request: NextRequest) {
   try {
+    const authResult = await authenticateCounselor()
+    if ('error' in authResult) return authResult.error
+    const { session } = authResult
+
     const body = await request.json()
     const validatedData = createCommunicationSchema.parse(body)
 
-    const lead = await prisma.lead.findUnique({
+    const lead = await prisma.leads.findUnique({
       where: { id: validatedData.leadId },
-      select: { assignedToId: true },
+      select: { assignedToId: true, studentName: true },
     })
 
     if (!lead) {
@@ -130,20 +138,20 @@ async function handlePOST(request: NextRequest, session: any) {
       )
     }
 
-    const communication = await prisma.communication.create({
+    const communication = await prisma.crm_communications.create({
       data: {
         ...validatedData,
         sentById: session.userId,
         status: 'SENT',
       },
       include: {
-        lead: {
+        leads: {
           select: {
             id: true,
             studentName: true,
           },
         },
-        sentBy: {
+        users: {
           select: {
             id: true,
             name: true,
@@ -152,19 +160,19 @@ async function handlePOST(request: NextRequest, session: any) {
       },
     })
 
-    await prisma.lead.update({
+    await prisma.leads.update({
       where: { id: validatedData.leadId },
       data: {
         lastContactedAt: new Date(),
       },
     })
 
-    await prisma.activity.create({
+    await prisma.activities.create({
       data: {
         userId: session.userId,
         leadId: validatedData.leadId,
         action: 'COMMUNICATION_SENT',
-        description: `Sent ${validatedData.type} message to ${communication.lead.studentName}`,
+        description: `Sent ${validatedData.type} message to ${lead.studentName}`,
       },
     })
 
@@ -199,6 +207,3 @@ async function handlePOST(request: NextRequest, session: any) {
     )
   }
 }
-
-export const GET = withCounselor(handleGET)
-export const POST = withCounselor(handlePOST)

@@ -24,13 +24,32 @@ export function LeadPipelineColumn({ stage, leads, onRefresh }: LeadPipelineColu
 
   return (
     <div className="flex-shrink-0 w-80">
-      <div className="bg-white rounded-lg shadow-sm border border-gray-200">
-        <div className={`${stage.color} text-white px-4 py-3 rounded-t-lg`}>
-          <div className="flex items-center justify-between">
-            <h3 className="font-semibold text-sm">{stage.title}</h3>
-            <span className="bg-white/20 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">
-              {leads.length}
-            </span>
+      <div className="bg-white rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+        <div
+          className={`${stage.color} text-white px-4 py-3 rounded-t-lg relative overflow-hidden`}
+        >
+          <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent"></div>
+          <div className="relative flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <h3 className="font-semibold text-sm">{stage.title}</h3>
+              <span className="bg-white/30 backdrop-blur-sm px-2.5 py-0.5 rounded-full text-xs font-bold shadow-sm">
+                {leads.length}
+              </span>
+            </div>
+            <button
+              onClick={() => {}}
+              className="opacity-0 hover:opacity-100 transition-opacity bg-white/20 hover:bg-white/30 p-1.5 rounded-lg backdrop-blur-sm"
+              title="Quick add lead"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                />
+              </svg>
+            </button>
           </div>
         </div>
 

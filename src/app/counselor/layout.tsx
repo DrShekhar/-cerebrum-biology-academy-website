@@ -1,11 +1,45 @@
-import { Metadata } from 'next'
+'use client'
 
-export const metadata: Metadata = {
-  title: 'Counselor Dashboard | Cerebrum Biology Academy',
-  description: 'Manage leads, track communications, and convert students',
-}
+import { useSession } from 'next-auth/react'
+import { useRouter, usePathname } from 'next/navigation'
+import { useEffect } from 'react'
+import { SessionProvider } from '@/components/providers/SessionProvider'
+import Link from 'next/link'
 
-export default function CounselorLayout({ children }: { children: React.ReactNode }) {
+function CounselorAuthWrapper({ children }: { children: React.ReactNode }) {
+  const { data: session, status } = useSession()
+  const router = useRouter()
+  const pathname = usePathname()
+
+  useEffect(() => {
+    if (status === 'loading') return
+
+    if (status === 'unauthenticated' || !session?.user || session.user.role !== 'counselor') {
+      router.push(`/auth/direct-login?callbackUrl=${pathname}`)
+      return
+    }
+  }, [status, session, router, pathname])
+
+  if (status === 'loading') {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50 flex items-center justify-center">
+        <div className="text-center">
+          <div className="w-16 h-16 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <div className="w-8 h-8 bg-white rounded-full animate-pulse" />
+          </div>
+          <div className="text-lg font-semibold text-gray-700 mb-2">
+            Checking counselor access...
+          </div>
+          <div className="w-6 h-6 border-2 border-indigo-600 border-t-transparent rounded-full animate-spin mx-auto"></div>
+        </div>
+      </div>
+    )
+  }
+
+  if (status === 'unauthenticated' || !session?.user || session.user.role !== 'counselor') {
+    return null
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
       <nav className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
@@ -19,36 +53,36 @@ export default function CounselorLayout({ children }: { children: React.ReactNod
               </div>
 
               <div className="hidden md:flex items-center gap-1">
-                <a
+                <Link
                   href="/counselor/leads"
                   className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-colors"
                 >
                   Pipeline
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/counselor/tasks"
                   className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-colors"
                 >
                   Tasks
-                </a>
-                <a
+                </Link>
+                <Link
+                  href="/counselor/messages"
+                  className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-colors"
+                >
+                  Messages
+                </Link>
+                <Link
                   href="/counselor/payments"
                   className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-colors"
                 >
                   Payments
-                </a>
-                <a
-                  href="/counselor/communications"
-                  className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-colors"
-                >
-                  Messages
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/counselor/analytics"
                   className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-colors"
                 >
                   Analytics
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -78,7 +112,7 @@ export default function CounselorLayout({ children }: { children: React.ReactNod
 
               <button className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded-lg transition-colors">
                 <div className="w-8 h-8 bg-indigo-600 rounded-full flex items-center justify-center text-white font-semibold text-sm">
-                  CS
+                  {session?.user?.email?.charAt(0).toUpperCase() || 'C'}
                 </div>
               </button>
             </div>
@@ -88,5 +122,13 @@ export default function CounselorLayout({ children }: { children: React.ReactNod
 
       <main className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8 py-6">{children}</main>
     </div>
+  )
+}
+
+export default function CounselorLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <SessionProvider>
+      <CounselorAuthWrapper>{children}</CounselorAuthWrapper>
+    </SessionProvider>
   )
 }

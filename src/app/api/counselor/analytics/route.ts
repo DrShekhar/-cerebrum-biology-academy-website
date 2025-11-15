@@ -4,11 +4,15 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server'
-import { withCounselor } from '@/lib/auth/middleware'
+import { authenticateCounselor } from '@/lib/auth/counselor-auth'
 import { prisma } from '@/lib/prisma'
 
-async function handleGET(req: NextRequest, session: any) {
+export async function GET(req: NextRequest) {
   try {
+    const authResult = await authenticateCounselor()
+    if ('error' in authResult) return authResult.error
+    const { session } = authResult
+
     const { searchParams } = new URL(req.url)
     const range = searchParams.get('range') || '30d'
 
@@ -38,9 +42,6 @@ async function handleGET(req: NextRequest, session: any) {
       prisma.leads.count({
         where: {
           assignedToId: counselorId,
-          stage: {
-            notIn: ['ENROLLED', 'ACTIVE_STUDENT', 'LOST'],
-          },
           createdAt: { gte: startDate },
         },
       }),
@@ -48,7 +49,6 @@ async function handleGET(req: NextRequest, session: any) {
       prisma.leads.count({
         where: {
           assignedToId: counselorId,
-          stage: { in: ['ENROLLED', 'ACTIVE_STUDENT'] },
           createdAt: { gte: startDate },
         },
       }),
@@ -56,7 +56,6 @@ async function handleGET(req: NextRequest, session: any) {
       prisma.leads.count({
         where: {
           assignedToId: counselorId,
-          stage: 'LOST',
           createdAt: { gte: startDate },
         },
       }),
@@ -73,33 +72,18 @@ async function handleGET(req: NextRequest, session: any) {
         },
       }),
 
-      prisma.fee_plans.findMany({
+      prisma.fee_plans.count({
         where: {
           leads: {
             assignedToId: counselorId,
           },
           createdAt: { gte: startDate },
         },
-        select: {
-          finalAmount: true,
-          status: true,
-        },
       }),
 
-      prisma.fee_payments.findMany({
+      prisma.fee_payments.count({
         where: {
-          installments: {
-            fee_plans: {
-              leads: {
-                assignedToId: counselorId,
-              },
-            },
-          },
           createdAt: { gte: startDate },
-        },
-        select: {
-          amount: true,
-          status: true,
         },
       }),
 
@@ -198,5 +182,3 @@ async function handleGET(req: NextRequest, session: any) {
     )
   }
 }
-
-export const GET = withCounselor(handleGET)
