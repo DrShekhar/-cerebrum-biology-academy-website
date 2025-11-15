@@ -15,7 +15,7 @@ function CounselorAuthWrapper({ children }: { children: React.ReactNode }) {
     if (status === 'loading') return
 
     if (status === 'unauthenticated' || !session?.user || session.user.role !== 'counselor') {
-      router.push(`/auth/direct-login?callbackUrl=${pathname}`)
+      router.push(`/auth/counselor-login?callbackUrl=${pathname}`)
       return
     }
   }, [status, session, router, pathname])

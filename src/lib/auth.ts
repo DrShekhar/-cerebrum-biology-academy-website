@@ -55,6 +55,64 @@ if (typeof window === 'undefined' && process.env.NEXT_PHASE !== 'phase-productio
 export const { handlers, auth, signIn, signOut } = NextAuth({
   providers: [
     Credentials({
+      id: 'whatsapp-otp',
+      name: 'WhatsApp OTP',
+      credentials: {
+        phone: { label: 'Phone', type: 'tel' },
+        verificationToken: { label: 'Verification Token', type: 'text' },
+      },
+      async authorize(credentials) {
+        console.log('🚀 WhatsApp OTP authorize() called with phone:', credentials?.phone)
+
+        if (!credentials?.phone || !credentials?.verificationToken) {
+          throw new Error('Phone number and verification token are required')
+        }
+
+        try {
+          const user = await prisma.users.findFirst({
+            where: {
+              phone: credentials.phone as string,
+              verificationToken: credentials.verificationToken as string,
+              verificationTokenExpiry: {
+                gte: new Date(),
+              },
+            },
+          })
+
+          if (!user) {
+            console.log('❌ Invalid or expired verification token')
+            throw new Error('Invalid or expired verification token')
+          }
+
+          await prisma.users.update({
+            where: { id: user.id },
+            data: {
+              verificationToken: null,
+              verificationTokenExpiry: null,
+            },
+          })
+
+          console.log('✅ WhatsApp OTP login successful for:', user.phone, user.role)
+
+          return {
+            id: user.id,
+            email: user.email,
+            name: user.name,
+            role: user.role.toLowerCase() as
+              | 'student'
+              | 'parent'
+              | 'teacher'
+              | 'admin'
+              | 'counselor',
+            profile: user.profile as any,
+          }
+        } catch (error) {
+          console.error('WhatsApp OTP authentication error:', error)
+          throw new Error('Authentication failed')
+        }
+      },
+    }),
+    Credentials({
       name: 'credentials',
       credentials: {
         email: { label: 'Email', type: 'email' },

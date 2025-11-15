@@ -1217,6 +1217,8 @@ model users {
   passwordHash                    String?
   emailVerified                   DateTime?
   phoneVerified                   DateTime?
+  verificationToken               String?
+  verificationTokenExpiry         DateTime?
   profile                         Json?
   createdAt                       DateTime                  @default(now())
   updatedAt                       DateTime
