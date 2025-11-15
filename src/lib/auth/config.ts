@@ -199,7 +199,7 @@ export function hasPermission(userRole: UserRole, permission: string): boolean {
  */
 export async function validateUserSession(request: NextRequest): Promise<UserSession> {
   try {
-    console.log('🔍 [v3] validateUserSession() - Using NextAuth auth() helper')
+    console.log('🔍 [v4] validateUserSession() - Using NextAuth auth() helper')
 
     // IMPORTANT: In Next.js 15 App Router, we should use auth() from NextAuth
     // instead of manually parsing cookies, as it handles the session correctly
@@ -211,14 +211,17 @@ export async function validateUserSession(request: NextRequest): Promise<UserSes
       console.log('👤 User from session:', session?.user?.email, session?.user?.role)
 
       if (session && session.user) {
+        // Normalize role to uppercase for consistency
+        const normalizedRole = session.user.role.toUpperCase() as UserRole
+
         return {
           valid: true,
           userId: session.user.id,
-          role: session.user.role.toUpperCase() as UserRole,
-          email: session.user.email,
-          name: session.user.name,
+          role: normalizedRole,
+          email: session.user.email || '',
+          name: session.user.name || '',
           expiresAt: new Date(Date.now() + 8 * 60 * 60 * 1000),
-          permissions: getUserPermissions(session.user.role.toUpperCase() as UserRole),
+          permissions: getUserPermissions(normalizedRole),
         }
       }
     } catch (authError) {

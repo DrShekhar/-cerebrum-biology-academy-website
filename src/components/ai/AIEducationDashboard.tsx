@@ -315,7 +315,8 @@ export function AIEducationDashboard() {
     if (user?.id || freeUserId) {
       fetchDashboardData()
     }
-  }, [user?.id, freeUserId, fetchDashboardData])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [user?.id, freeUserId])
 
   // Auto-refresh every 5 minutes
   useEffect(() => {
