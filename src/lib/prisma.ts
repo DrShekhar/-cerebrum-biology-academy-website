@@ -1,4 +1,5 @@
 import { PrismaClient } from '../generated/prisma'
+import { logger } from './utils/logger'
 
 // Global variable to store Prisma client in development
 const globalForPrisma = globalThis as unknown as {
@@ -29,13 +30,18 @@ function createPrismaClient() {
       (globalThis as any).EdgeRuntime ||
       typeof process.nextTick !== 'function'
     ) {
-      console.warn('⚠️ Edge Runtime detected, using mock Prisma client')
+      logger.warn('Edge Runtime detected, using mock Prisma client', {
+        runtime: 'edge',
+        fallback: 'mock_client',
+      })
       return new MockPrismaClient() as any
     }
 
     // Check if DATABASE_URL is available
     if (!process.env.DATABASE_URL) {
-      console.warn('DATABASE_URL not found, using mock Prisma client')
+      logger.warn('DATABASE_URL not found, using mock Prisma client', {
+        fallback: 'mock_client',
+      })
       return new MockPrismaClient() as any
     }
 
@@ -61,16 +67,23 @@ function createPrismaClient() {
       Promise.resolve().then(async () => {
         try {
           await client.$queryRaw`SELECT 1`
-          console.log('✅ Prisma client initialized successfully')
+          logger.info('Prisma client initialized successfully', {
+            environment: process.env.NODE_ENV,
+          })
         } catch (error) {
-          console.warn('⚠️ Prisma connection test failed, operations may fallback to mock:', error)
+          logger.warn('Prisma connection test failed, operations may fallback to mock', {
+            error,
+          })
         }
       })
     }
 
     return client
   } catch (error) {
-    console.warn('❌ Prisma client initialization failed, using mock client:', error)
+    logger.error('Prisma client initialization failed, using mock client', {
+      error,
+      fallback: 'mock_client',
+    })
     return new MockPrismaClient() as any
   }
 }
@@ -84,15 +97,19 @@ if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma
 // Database connection helper
 export async function connectToDatabase() {
   if (!prisma) {
-    console.warn('Prisma client not available')
+    logger.warn('Prisma client not available for connection', {
+      action: 'connect_database',
+    })
     return false
   }
   try {
     await prisma.$connect()
-    console.log('Successfully connected to SQLite database')
+    logger.info('Successfully connected to SQLite database', {
+      database: 'sqlite',
+    })
     return true
   } catch (error) {
-    console.error('Failed to connect to database:', error)
+    logger.error('Failed to connect to database', { error })
     return false
   }
 }
@@ -100,14 +117,16 @@ export async function connectToDatabase() {
 // Database disconnection helper
 export async function disconnectFromDatabase() {
   if (!prisma) {
-    console.warn('Prisma client not available for disconnection')
+    logger.warn('Prisma client not available for disconnection', {
+      action: 'disconnect_database',
+    })
     return
   }
   try {
     await prisma.$disconnect()
-    console.log('Successfully disconnected from database')
+    logger.info('Successfully disconnected from database')
   } catch (error) {
-    console.error('Error disconnecting from database:', error)
+    logger.error('Error disconnecting from database', { error })
   }
 }
 
@@ -146,7 +165,9 @@ export async function withTransaction<T>(
 
 // Clean up function for graceful shutdown
 export async function gracefulShutdown() {
-  console.log('Initiating graceful database shutdown...')
+  logger.info('Initiating graceful database shutdown', {
+    action: 'graceful_shutdown',
+  })
   await disconnectFromDatabase()
 }
 

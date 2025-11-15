@@ -4,6 +4,7 @@ import { rateLimit } from '@/lib/rateLimit'
 import { zoomService } from '@/lib/zoom/zoomService'
 import { prisma } from '@/lib/prisma'
 import { notificationService } from '@/lib/notifications/notificationService'
+import { logger } from '@/lib/utils/logger'
 
 const demoBookingSchema = z.object({
   studentName: z.string().min(2).max(100),
@@ -144,7 +145,9 @@ export async function POST(request: NextRequest) {
 
     // If no counselor exists, create a default one for testing
     if (!assignedCounselor) {
-      console.warn('No counselor found, creating default counselor for testing')
+      logger.warn('No counselor found, creating default counselor for testing', {
+        action: 'auto_create_counselor',
+      })
       assignedCounselor = await prisma.user.create({
         data: {
           email: 'counselor@cerebrumbiologyacademy.com',
@@ -259,11 +262,15 @@ export async function POST(request: NextRequest) {
         },
       })
     } catch (error) {
-      console.error('Multi-channel confirmation to student failed:', error)
+      logger.error('Multi-channel confirmation to student failed', {
+        error,
+        leadId: lead.id,
+        studentName: body.studentName,
+      })
     }
 
     // Log successful booking and lead creation
-    console.log('Demo booking successful with auto-lead creation:', {
+    logger.businessEvent('demo_booking_created', {
       demoBookingId: demoBooking.id,
       leadId: lead.id,
       studentName: body.studentName,
@@ -291,7 +298,7 @@ export async function POST(request: NextRequest) {
       },
     })
   } catch (error) {
-    console.error('Demo booking error:', error)
+    logger.error('Demo booking error', { error })
     return NextResponse.json(
       {
         success: false,
@@ -347,7 +354,7 @@ export async function GET(request: NextRequest) {
       }
     )
   } catch (error) {
-    console.error('Error fetching available slots:', error)
+    logger.error('Error fetching available slots', { error })
     return NextResponse.json(
       { success: false, error: 'Failed to fetch available slots' },
       { status: 500 }

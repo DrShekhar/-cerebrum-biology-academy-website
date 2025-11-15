@@ -4,6 +4,7 @@ import bcrypt from 'bcryptjs'
 import { z } from 'zod'
 import { prisma } from './prisma'
 import { logLogin, logFailedLogin, logAdminAccess } from './security/auditLogger'
+import { logger } from './utils/logger'
 
 declare module 'next-auth' {
   interface User {
@@ -41,13 +42,22 @@ const ADMIN_CREDENTIALS = {
 // Validate required admin environment variables (only at runtime, not during build)
 if (typeof window === 'undefined' && process.env.NEXT_PHASE !== 'phase-production-build') {
   if (!ADMIN_CREDENTIALS.email || !ADMIN_CREDENTIALS.passwordHash) {
-    console.error(
-      '❌ SECURITY ERROR: ADMIN_EMAIL and ADMIN_PASSWORD_HASH environment variables are required'
+    logger.securityEvent(
+      'MISSING_ADMIN_CREDENTIALS',
+      {
+        message: 'ADMIN_EMAIL and ADMIN_PASSWORD_HASH environment variables are required',
+        environment: process.env.NODE_ENV,
+      },
+      'high'
     )
     if (process.env.NODE_ENV === 'production') {
-      console.warn('⚠️  Missing admin credentials in production - admin features will be disabled')
+      logger.warn('Missing admin credentials in production - admin features will be disabled', {
+        feature: 'admin_auth',
+      })
     } else {
-      console.warn('⚠️  Running in development mode without proper admin credentials')
+      logger.warn('Running in development mode without proper admin credentials', {
+        feature: 'admin_auth',
+      })
     }
   }
 }
@@ -62,7 +72,10 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         verificationToken: { label: 'Verification Token', type: 'text' },
       },
       async authorize(credentials) {
-        console.log('🚀 WhatsApp OTP authorize() called with phone:', credentials?.phone)
+        logger.debug('WhatsApp OTP authorization attempt', {
+          phone: credentials?.phone,
+          hasToken: !!credentials?.verificationToken,
+        })
 
         if (!credentials?.phone || !credentials?.verificationToken) {
           throw new Error('Phone number and verification token are required')
@@ -80,7 +93,10 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
           })
 
           if (!user) {
-            console.log('❌ Invalid or expired verification token')
+            logger.warn('Invalid or expired verification token', {
+              phone: credentials.phone,
+              authMethod: 'whatsapp_otp',
+            })
             throw new Error('Invalid or expired verification token')
           }
 
@@ -92,7 +108,10 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
             },
           })
 
-          console.log('✅ WhatsApp OTP login successful for:', user.phone, user.role)
+          logger.authentication(user.id, 'whatsapp_otp_login', true, {
+            phone: user.phone,
+            role: user.role,
+          })
 
           return {
             id: user.id,
@@ -107,7 +126,10 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
             profile: user.profile as any,
           }
         } catch (error) {
-          console.error('WhatsApp OTP authentication error:', error)
+          logger.error('WhatsApp OTP authentication error', {
+            error,
+            phone: credentials.phone,
+          })
           throw new Error('Authentication failed')
         }
       },
@@ -119,7 +141,9 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         password: { label: 'Password', type: 'password' },
       },
       async authorize(credentials) {
-        console.log('🚀 authorize() called with email:', credentials?.email)
+        logger.debug('Credentials authorization attempt', {
+          email: credentials?.email,
+        })
 
         if (!credentials?.email || !credentials?.password) {
           throw new Error('Email and password are required')
@@ -132,9 +156,10 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
             password: credentials.password,
           })
 
-          console.log('✅ Credentials validated successfully')
-          console.log('🔧 Prisma available:', !!prisma)
-          console.log('🔧 Admin email from env:', ADMIN_CREDENTIALS.email)
+          logger.debug('Credentials validated successfully', {
+            prismaAvailable: !!prisma,
+            hasAdminCredentials: !!ADMIN_CREDENTIALS.email,
+          })
 
           // First check if it's the hardcoded admin credentials (fallback)
           if (validatedData.email === ADMIN_CREDENTIALS.email) {

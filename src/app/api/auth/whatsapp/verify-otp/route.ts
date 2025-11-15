@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { sign } from 'jsonwebtoken'
 import { z } from 'zod'
+import { logger } from '@/lib/utils/logger'
 
 const jwtSecret = process.env.NEXTAUTH_SECRET || 'your-secret-key'
 
@@ -113,7 +114,11 @@ export async function POST(request: NextRequest) {
         },
       })
 
-      console.log('✅ New user created via WhatsApp:', user.id, '- needs to complete signup')
+      logger.info('New user created via WhatsApp authentication', {
+        userId: user.id,
+        phone: formattedPhone,
+        needsSignupCompletion: true,
+      })
     } else {
       // Update existing user's phone verification status
       user = await prisma.users.update({
@@ -124,7 +129,10 @@ export async function POST(request: NextRequest) {
         },
       })
 
-      console.log('✅ Existing user verified via WhatsApp:', user.id)
+      logger.info('Existing user verified via WhatsApp', {
+        userId: user.id,
+        phone: formattedPhone,
+      })
     }
 
     // Delete the used OTP (cleanup)
@@ -144,11 +152,11 @@ export async function POST(request: NextRequest) {
       { expiresIn: '7d' }
     )
 
-    console.log(
-      '✅ WhatsApp authentication successful for:',
-      formattedPhone,
-      isNewUser ? '(new user)' : '(existing user)'
-    )
+    logger.authentication(user.id, 'whatsapp_login', true, {
+      phone: formattedPhone,
+      isNewUser,
+      method: 'whatsapp_otp',
+    })
 
     return NextResponse.json({
       success: true,
@@ -167,7 +175,7 @@ export async function POST(request: NextRequest) {
         : 'Login successful! Welcome back to Cerebrum Biology Academy.',
     })
   } catch (error: any) {
-    console.error('❌ Error verifying WhatsApp OTP:', error)
+    logger.error('Error verifying WhatsApp OTP', { error })
 
     if (error instanceof z.ZodError) {
       return NextResponse.json({ error: error.errors[0].message }, { status: 400 })

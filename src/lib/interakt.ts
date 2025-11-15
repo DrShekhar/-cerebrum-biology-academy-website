@@ -3,11 +3,16 @@
  * Handles all WhatsApp messaging through Interakt platform
  */
 
+import { logger } from './utils/logger'
+
 const INTERAKT_API_URL = 'https://api.interakt.ai/v1'
 const INTERAKT_API_KEY = process.env.INTERAKT_API_KEY
 
 if (!INTERAKT_API_KEY) {
-  console.warn('⚠️ INTERAKT_API_KEY is not set. WhatsApp functionality will be limited.')
+  logger.warn('INTERAKT_API_KEY is not set. WhatsApp functionality will be limited.', {
+    service: 'interakt',
+    feature: 'whatsapp',
+  })
 }
 
 interface SendMessageParams {
@@ -72,7 +77,7 @@ export async function sendWhatsAppMessage(params: SendMessageParams): Promise<{
     const response = await fetch(`${INTERAKT_API_URL}/public/message/`, {
       method: 'POST',
       headers: {
-        'Authorization': `Basic ${INTERAKT_API_KEY}`,
+        Authorization: `Basic ${INTERAKT_API_KEY}`,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(requestBody),
@@ -81,7 +86,11 @@ export async function sendWhatsAppMessage(params: SendMessageParams): Promise<{
     const data = await response.json()
 
     if (!response.ok) {
-      console.error('Interakt API error:', data)
+      logger.error('Interakt API error', {
+        service: 'interakt',
+        statusCode: response.status,
+        error: data,
+      })
       throw new Error(data.message || 'Failed to send WhatsApp message')
     }
 
@@ -90,7 +99,11 @@ export async function sendWhatsAppMessage(params: SendMessageParams): Promise<{
       messageId: data.result?.messageId,
     }
   } catch (error) {
-    console.error('Error sending WhatsApp message:', error)
+    logger.error('Error sending WhatsApp message', {
+      service: 'interakt',
+      error,
+      phone: params.phone,
+    })
     return {
       success: false,
       error: error instanceof Error ? error.message : 'Unknown error',
@@ -132,7 +145,10 @@ export function isOTPValid(expiresAt: Date): boolean {
 /**
  * Send a welcome message when user first contacts via WhatsApp
  */
-export async function sendWelcomeMessage(phone: string, name?: string): Promise<{
+export async function sendWelcomeMessage(
+  phone: string,
+  name?: string
+): Promise<{
   success: boolean
   error?: string
 }> {
