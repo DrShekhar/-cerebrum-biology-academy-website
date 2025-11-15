@@ -1,5 +1,16 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { z } from 'zod'
+import { auth } from '@/lib/auth'
+import { rateLimit } from '@/lib/rateLimit'
 import { FacultyAvailability, TimeSlot, DemoBookingSlot } from '@/lib/types/calendar'
+
+const availabilityQuerySchema = z.object({
+  facultyId: z.string().optional(),
+  subject: z.string().optional(),
+  grade: z.string().optional(),
+  date: z.string().optional(),
+  type: z.enum(['all', 'available', 'busy']).optional(),
+})
 
 // Mock data - in production, use a real database
 const facultyAvailabilities: FacultyAvailability[] = [
@@ -105,6 +116,21 @@ const facultyAvailabilities: FacultyAvailability[] = [
 
 export async function GET(request: NextRequest) {
   try {
+    const rateLimitResult = await rateLimit(request, { maxRequests: 50, windowMs: 60 * 60 * 1000 })
+    if (!rateLimitResult.success) {
+      return NextResponse.json(
+        { error: 'Too many requests. Please try again later.' },
+        {
+          status: 429,
+          headers: {
+            'X-RateLimit-Limit': rateLimitResult.limit.toString(),
+            'X-RateLimit-Remaining': rateLimitResult.remaining.toString(),
+            'X-RateLimit-Reset': new Date(rateLimitResult.reset).toISOString(),
+          },
+        }
+      )
+    }
+
     const { searchParams } = new URL(request.url)
     const facultyId = searchParams.get('facultyId')
     const subject = searchParams.get('subject')
@@ -169,6 +195,30 @@ export async function GET(request: NextRequest) {
 
 export async function POST(request: NextRequest) {
   try {
+    const rateLimitResult = await rateLimit(request, { maxRequests: 20, windowMs: 60 * 60 * 1000 })
+    if (!rateLimitResult.success) {
+      return NextResponse.json(
+        { error: 'Too many requests. Please try again later.' },
+        {
+          status: 429,
+          headers: {
+            'X-RateLimit-Limit': rateLimitResult.limit.toString(),
+            'X-RateLimit-Remaining': rateLimitResult.remaining.toString(),
+            'X-RateLimit-Reset': new Date(rateLimitResult.reset).toISOString(),
+          },
+        }
+      )
+    }
+
+    const session = await auth()
+    if (!session || !session.user) {
+      return NextResponse.json({ error: 'Unauthorized. Authentication required.' }, { status: 401 })
+    }
+
+    if (!['admin', 'teacher'].includes(session.user.role)) {
+      return NextResponse.json({ error: 'Forbidden. Insufficient permissions.' }, { status: 403 })
+    }
+
     const availabilityData = await request.json()
 
     // Validate required fields
@@ -228,6 +278,30 @@ export async function POST(request: NextRequest) {
 
 export async function PUT(request: NextRequest) {
   try {
+    const rateLimitResult = await rateLimit(request, { maxRequests: 20, windowMs: 60 * 60 * 1000 })
+    if (!rateLimitResult.success) {
+      return NextResponse.json(
+        { error: 'Too many requests. Please try again later.' },
+        {
+          status: 429,
+          headers: {
+            'X-RateLimit-Limit': rateLimitResult.limit.toString(),
+            'X-RateLimit-Remaining': rateLimitResult.remaining.toString(),
+            'X-RateLimit-Reset': new Date(rateLimitResult.reset).toISOString(),
+          },
+        }
+      )
+    }
+
+    const session = await auth()
+    if (!session || !session.user) {
+      return NextResponse.json({ error: 'Unauthorized. Authentication required.' }, { status: 401 })
+    }
+
+    if (!['admin', 'teacher'].includes(session.user.role)) {
+      return NextResponse.json({ error: 'Forbidden. Insufficient permissions.' }, { status: 403 })
+    }
+
     const availabilityData = await request.json()
     const facultyId = availabilityData.facultyId
 
@@ -262,6 +336,33 @@ export async function PUT(request: NextRequest) {
 
 export async function DELETE(request: NextRequest) {
   try {
+    const rateLimitResult = await rateLimit(request, { maxRequests: 10, windowMs: 60 * 60 * 1000 })
+    if (!rateLimitResult.success) {
+      return NextResponse.json(
+        { error: 'Too many requests. Please try again later.' },
+        {
+          status: 429,
+          headers: {
+            'X-RateLimit-Limit': rateLimitResult.limit.toString(),
+            'X-RateLimit-Remaining': rateLimitResult.remaining.toString(),
+            'X-RateLimit-Reset': new Date(rateLimitResult.reset).toISOString(),
+          },
+        }
+      )
+    }
+
+    const session = await auth()
+    if (!session || !session.user) {
+      return NextResponse.json({ error: 'Unauthorized. Authentication required.' }, { status: 401 })
+    }
+
+    if (!['admin'].includes(session.user.role)) {
+      return NextResponse.json(
+        { error: 'Forbidden. Only admins can delete availability.' },
+        { status: 403 }
+      )
+    }
+
     const { searchParams } = new URL(request.url)
     const facultyId = searchParams.get('facultyId')
 

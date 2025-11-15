@@ -5,6 +5,8 @@
 
 import { NextRequest, NextResponse } from 'next/server'
 import { Anthropic } from '@anthropic-ai/sdk'
+import { auth } from '@/lib/auth'
+import { rateLimit } from '@/lib/rateLimit'
 
 const anthropic = new Anthropic({
   apiKey: process.env.ANTHROPIC_API_KEY || '',
@@ -20,14 +22,53 @@ interface BiologyAnalysis {
   studyTips: string[]
 }
 
+const MAX_FILE_SIZE = 5 * 1024 * 1024
+const ALLOWED_MIME_TYPES = ['image/jpeg', 'image/png', 'image/webp', 'image/gif']
+
 export async function POST(request: NextRequest) {
   try {
-    // Get the uploaded image
+    const rateLimitResult = await rateLimit(request, { maxRequests: 10, windowMs: 60 * 60 * 1000 })
+    if (!rateLimitResult.success) {
+      return NextResponse.json(
+        { error: 'Too many requests. Please try again later.' },
+        {
+          status: 429,
+          headers: {
+            'X-RateLimit-Limit': rateLimitResult.limit.toString(),
+            'X-RateLimit-Remaining': rateLimitResult.remaining.toString(),
+            'X-RateLimit-Reset': new Date(rateLimitResult.reset).toISOString(),
+          },
+        }
+      )
+    }
+
+    const session = await auth()
+    if (!session || !session.user) {
+      return NextResponse.json(
+        { error: 'Unauthorized. Please sign in to use this feature.' },
+        { status: 401 }
+      )
+    }
+
     const formData = await request.formData()
     const imageFile = formData.get('image') as File
 
     if (!imageFile) {
       return NextResponse.json({ error: 'No image file provided' }, { status: 400 })
+    }
+
+    if (imageFile.size > MAX_FILE_SIZE) {
+      return NextResponse.json(
+        { error: `File size exceeds maximum limit of ${MAX_FILE_SIZE / (1024 * 1024)}MB` },
+        { status: 400 }
+      )
+    }
+
+    if (!ALLOWED_MIME_TYPES.includes(imageFile.type)) {
+      return NextResponse.json(
+        { error: 'Invalid file type. Only JPEG, PNG, WebP, and GIF images are allowed.' },
+        { status: 400 }
+      )
     }
 
     // Convert image to base64 for Claude Vision

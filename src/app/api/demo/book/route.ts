@@ -1,30 +1,69 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { z } from 'zod'
+import { rateLimit } from '@/lib/rateLimit'
 import { zoomService } from '@/lib/zoom/zoomService'
 import { prisma } from '@/lib/prisma'
 import { notificationService } from '@/lib/notifications/notificationService'
 
-interface DemoBookingRequest {
-  studentName: string
-  email: string
-  phone: string
-  preferredDate: string
-  preferredTime: string
-  courseInterest: string
-  studentClass: string
-  previousKnowledge: string
-  specificTopics?: string[]
-  parentName?: string
-  parentPhone?: string
-  hearAboutUs?: string
-  utmSource?: string
-  utmMedium?: string
-  utmCampaign?: string
-  utmContent?: string
-}
+const demoBookingSchema = z.object({
+  studentName: z.string().min(2).max(100),
+  email: z.string().email(),
+  phone: z.string().regex(/^\+?[1-9]\d{9,14}$/),
+  preferredDate: z.string().regex(/^\d{4}-\d{2}-\d{2}(T\d{2}:\d{2}:\d{2})?/),
+  preferredTime: z.string().regex(/^\d{2}:\d{2}$/),
+  courseInterest: z.string().min(1).max(100),
+  studentClass: z.string().min(1).max(50),
+  previousKnowledge: z.string().max(1000),
+  specificTopics: z.array(z.string()).optional(),
+  parentName: z.string().max(100).optional(),
+  parentPhone: z
+    .string()
+    .regex(/^\+?[1-9]\d{9,14}$/)
+    .optional(),
+  hearAboutUs: z.string().max(200).optional(),
+  utmSource: z.string().max(100).optional(),
+  utmMedium: z.string().max(100).optional(),
+  utmCampaign: z.string().max(100).optional(),
+  utmContent: z.string().max(100).optional(),
+})
+
+type DemoBookingRequest = z.infer<typeof demoBookingSchema>
 
 export async function POST(request: NextRequest) {
   try {
-    const body: DemoBookingRequest = await request.json()
+    const rateLimitResult = await rateLimit(request, { maxRequests: 10, windowMs: 60 * 60 * 1000 })
+    if (!rateLimitResult.success) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: 'Too many requests. Please try again later.',
+        },
+        {
+          status: 429,
+          headers: {
+            'X-RateLimit-Limit': rateLimitResult.limit.toString(),
+            'X-RateLimit-Remaining': rateLimitResult.remaining.toString(),
+            'X-RateLimit-Reset': new Date(rateLimitResult.reset).toISOString(),
+          },
+        }
+      )
+    }
+
+    const rawBody = await request.json()
+    const validationResult = demoBookingSchema.safeParse(rawBody)
+
+    if (!validationResult.success) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: 'Invalid input data',
+          details: validationResult.error.issues,
+        },
+        { status: 400 }
+      )
+    }
+
+    const body = validationResult.data
 
     // Validate required fields
     const requiredFields: (keyof DemoBookingRequest)[] = [
@@ -265,6 +304,21 @@ export async function POST(request: NextRequest) {
 
 export async function GET(request: NextRequest) {
   try {
+    const rateLimitResult = await rateLimit(request, { maxRequests: 30, windowMs: 60 * 60 * 1000 })
+    if (!rateLimitResult.success) {
+      return NextResponse.json(
+        { success: false, error: 'Too many requests. Please try again later.' },
+        {
+          status: 429,
+          headers: {
+            'X-RateLimit-Limit': rateLimitResult.limit.toString(),
+            'X-RateLimit-Remaining': rateLimitResult.remaining.toString(),
+            'X-RateLimit-Reset': new Date(rateLimitResult.reset).toISOString(),
+          },
+        }
+      )
+    }
+
     const { searchParams } = new URL(request.url)
     const date = searchParams.get('date')
 
@@ -278,11 +332,20 @@ export async function GET(request: NextRequest) {
     const selectedDate = new Date(date)
     const availableSlots = await zoomService.getAvailableSlots(selectedDate)
 
-    return NextResponse.json({
-      success: true,
-      availableSlots,
-      date: selectedDate.toISOString(),
-    })
+    return NextResponse.json(
+      {
+        success: true,
+        availableSlots,
+        date: selectedDate.toISOString(),
+      },
+      {
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Methods': 'GET, OPTIONS',
+          'Access-Control-Allow-Headers': 'Content-Type',
+        },
+      }
+    )
   } catch (error) {
     console.error('Error fetching available slots:', error)
     return NextResponse.json(

@@ -1,9 +1,52 @@
 import { NextRequest, NextResponse } from 'next/server'
 import crypto from 'crypto'
+import { z } from 'zod'
+import { rateLimit } from '@/lib/rateLimit'
 import { prisma } from '@/lib/prisma'
+
+const paymentVerificationSchema = z.object({
+  order_id: z.string().optional(),
+  payment_id: z.string().optional(),
+  signature: z.string().optional(),
+  razorpay_order_id: z.string().optional(),
+  razorpay_payment_id: z.string().optional(),
+  razorpay_signature: z.string().optional(),
+})
 
 export async function POST(request: NextRequest) {
   try {
+    const rateLimitResult = await rateLimit(request, { maxRequests: 20, windowMs: 60 * 60 * 1000 })
+    if (!rateLimitResult.success) {
+      return NextResponse.json(
+        {
+          verified: false,
+          error: 'Too many verification requests. Please try again later.',
+        },
+        {
+          status: 429,
+          headers: {
+            'X-RateLimit-Limit': rateLimitResult.limit.toString(),
+            'X-RateLimit-Remaining': rateLimitResult.remaining.toString(),
+            'X-RateLimit-Reset': new Date(rateLimitResult.reset).toISOString(),
+          },
+        }
+      )
+    }
+
+    const rawBody = await request.json()
+    const validationResult = paymentVerificationSchema.safeParse(rawBody)
+
+    if (!validationResult.success) {
+      return NextResponse.json(
+        {
+          verified: false,
+          error: 'Invalid payment verification data',
+          details: validationResult.error.issues,
+        },
+        { status: 400 }
+      )
+    }
+
     const {
       order_id,
       payment_id,
@@ -11,7 +54,7 @@ export async function POST(request: NextRequest) {
       razorpay_order_id,
       razorpay_payment_id,
       razorpay_signature,
-    } = await request.json()
+    } = validationResult.data
 
     // Support both naming conventions
     const orderId = order_id || razorpay_order_id
@@ -208,6 +251,21 @@ export async function POST(request: NextRequest) {
 // GET endpoint for checking payment status
 export async function GET(request: NextRequest) {
   try {
+    const rateLimitResult = await rateLimit(request, { maxRequests: 50, windowMs: 60 * 60 * 1000 })
+    if (!rateLimitResult.success) {
+      return NextResponse.json(
+        { error: 'Too many requests. Please try again later.' },
+        {
+          status: 429,
+          headers: {
+            'X-RateLimit-Limit': rateLimitResult.limit.toString(),
+            'X-RateLimit-Remaining': rateLimitResult.remaining.toString(),
+            'X-RateLimit-Reset': new Date(rateLimitResult.reset).toISOString(),
+          },
+        }
+      )
+    }
+
     const searchParams = request.nextUrl.searchParams
     const orderId = searchParams.get('order_id') || searchParams.get('razorpay_order_id')
 

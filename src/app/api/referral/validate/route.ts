@@ -1,9 +1,54 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { z } from 'zod'
+import { rateLimit } from '@/lib/rateLimit'
 import { prisma } from '@/lib/prisma'
+
+const referralValidationSchema = z.object({
+  code: z.string().min(1).max(50).trim().toUpperCase(),
+})
+
+const referralRedemptionSchema = z.object({
+  code: z.string().min(1).max(50).trim(),
+  redeemedBy: z.string().min(2).max(100),
+  redeemedByEmail: z.string().email(),
+  bookingId: z.string().optional(),
+})
 
 export async function POST(request: NextRequest) {
   try {
-    const { code } = await request.json()
+    const rateLimitResult = await rateLimit(request, { maxRequests: 20, windowMs: 60 * 60 * 1000 })
+    if (!rateLimitResult.success) {
+      return NextResponse.json(
+        {
+          valid: false,
+          message: 'Too many requests. Please try again later.',
+        },
+        {
+          status: 429,
+          headers: {
+            'X-RateLimit-Limit': rateLimitResult.limit.toString(),
+            'X-RateLimit-Remaining': rateLimitResult.remaining.toString(),
+            'X-RateLimit-Reset': new Date(rateLimitResult.reset).toISOString(),
+          },
+        }
+      )
+    }
+
+    const rawBody = await request.json()
+    const validationResult = referralValidationSchema.safeParse(rawBody)
+
+    if (!validationResult.success) {
+      return NextResponse.json(
+        {
+          valid: false,
+          message: 'Invalid referral code format',
+          details: validationResult.error.issues,
+        },
+        { status: 400 }
+      )
+    }
+
+    const { code } = validationResult.data
 
     if (!code) {
       return NextResponse.json(
@@ -59,7 +104,35 @@ export async function POST(request: NextRequest) {
 
 export async function PUT(request: NextRequest) {
   try {
-    const { code, redeemedBy, redeemedByEmail, bookingId } = await request.json()
+    const rateLimitResult = await rateLimit(request, { maxRequests: 10, windowMs: 60 * 60 * 1000 })
+    if (!rateLimitResult.success) {
+      return NextResponse.json(
+        { error: 'Too many redemption requests. Please try again later.' },
+        {
+          status: 429,
+          headers: {
+            'X-RateLimit-Limit': rateLimitResult.limit.toString(),
+            'X-RateLimit-Remaining': rateLimitResult.remaining.toString(),
+            'X-RateLimit-Reset': new Date(rateLimitResult.reset).toISOString(),
+          },
+        }
+      )
+    }
+
+    const rawBody = await request.json()
+    const validationResult = referralRedemptionSchema.safeParse(rawBody)
+
+    if (!validationResult.success) {
+      return NextResponse.json(
+        {
+          error: 'Invalid redemption data',
+          details: validationResult.error.issues,
+        },
+        { status: 400 }
+      )
+    }
+
+    const { code, redeemedBy, redeemedByEmail, bookingId } = validationResult.data
 
     if (!code || !redeemedBy || !redeemedByEmail) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
