@@ -10,6 +10,8 @@ import { Footer } from '@/components/layout/Footer'
 import { TrustSignalsBanner } from '@/components/trust/TrustSignalsBanner'
 import { GoogleReviewsWidget } from '@/components/social-proof/GoogleReviewsWidget'
 import { LiveActivityFeed } from '@/components/social-proof/LiveActivityFeed'
+import { SuccessNotifications } from '@/components/ui/SuccessNotifications'
+import { LiveEnrollmentNotifications } from '@/components/ui/LiveEnrollmentNotifications'
 import { realTestimonials } from '@/data/realTestimonials'
 import Link from 'next/link'
 
@@ -25,6 +27,22 @@ export default function Home() {
 
       {/* Live Activity Feed - Floating */}
       <LiveActivityFeed variant="floating" />
+
+      {/* Success Notifications - Top Right with Coordination */}
+      <SuccessNotifications
+        maxNotifications={5}
+        displayDuration={3}
+        notificationInterval={10}
+        useCoordination={true}
+      />
+
+      {/* Live Enrollment Notifications - Top Left with Coordination */}
+      <LiveEnrollmentNotifications
+        showDuration={5}
+        notificationInterval={15}
+        maxVisible={3}
+        useCoordination={true}
+      />
 
       <CoursesSection />
       <FacultySection />

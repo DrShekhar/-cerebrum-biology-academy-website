@@ -12,6 +12,7 @@ import { MaintenancePopup } from '@/components/ui/MaintenancePopup'
 import { AuthProvider } from '@/contexts/AuthContext'
 import { ToastProvider } from '@/components/ui/Toast'
 import { TrialBannerWrapper } from '@/components/trial/TrialBannerWrapper'
+import { TrustProvider } from '@/components/providers/TrustProvider'
 import { SkipToContent } from '@/components/accessibility/SkipToContent'
 import { FocusVisibleStyles } from '@/components/accessibility/FocusVisibleStyles'
 import { FloatingCTA } from '@/components/common/FloatingCTA'
@@ -133,23 +134,29 @@ export default function RootLayout({
         <FocusVisibleStyles />
         <AuthProvider>
           <ToastProvider>
-            <ErrorBoundary>
-              <SkipToContent />
-              <div data-section="navigation" className="priority-immediate" role="banner">
-                <Header />
-              </div>
-              <TrialBannerWrapper />
-              <main id="main-content" role="main" className="min-h-screen pb-16 md:pb-0">
-                {children}
-              </main>
-              <div data-lazy="footer" className="priority-lazy" role="contentinfo">
-                <Footer />
-              </div>
-              <div data-section="mobile-navigation" className="priority-immediate">
-                <MobileNavigation />
-              </div>
-              <FloatingCTA />
-            </ErrorBoundary>
+            <TrustProvider
+              enableSocialProof={false}
+              enableTrustBadges={true}
+              enableRealTimeUpdates={true}
+            >
+              <ErrorBoundary>
+                <SkipToContent />
+                <div data-section="navigation" className="priority-immediate" role="banner">
+                  <Header />
+                </div>
+                <TrialBannerWrapper />
+                <main id="main-content" role="main" className="min-h-screen pb-16 md:pb-0">
+                  {children}
+                </main>
+                <div data-lazy="footer" className="priority-lazy" role="contentinfo">
+                  <Footer />
+                </div>
+                <div data-section="mobile-navigation" className="priority-immediate">
+                  <MobileNavigation />
+                </div>
+                <FloatingCTA />
+              </ErrorBoundary>
+            </TrustProvider>
           </ToastProvider>
         </AuthProvider>
         {/* <MaintenancePopup /> */}
