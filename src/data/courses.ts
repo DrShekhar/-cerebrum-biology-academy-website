@@ -2,31 +2,50 @@ import { BasicCourse } from '@/types'
 
 export const courses: BasicCourse[] = [
   {
-    id: 'neet-2025-11th',
-    title: 'NEET 2025 - Class 11th',
+    id: 'class-9th-foundation',
+    title: 'Class 9th Foundation Biology',
     description:
-      'Complete foundation course for Class 11th students starting their NEET journey. Covers full syllabus with conceptual clarity.',
-    duration: '2 Years',
-    price: 75000,
-    targetClass: '11th',
+      'Build a strong foundation in Biology for Class 9th students. Early preparation for competitive exams with conceptual clarity.',
+    duration: '1 Year',
+    price: 58000,
+    targetClass: '9th',
     features: [
       'Live Interactive Classes',
       'Complete Study Material',
       'Weekly Tests & Analysis',
       'Doubt Resolution Sessions',
-      'Previous Year Questions',
-      'Mock Tests & Rank Prediction',
-      'Personal Mentorship',
+      'Conceptual Learning Focus',
       'Biology Lab Sessions',
+      'Personal Mentorship',
+      'Foundation for NEET',
     ],
   },
   {
-    id: 'neet-2025-12th',
-    title: 'NEET 2025 - Class 12th',
+    id: 'class-10th-foundation',
+    title: 'Class 10th Foundation Biology',
+    description:
+      'Advanced foundation program for Class 10th students preparing for NEET. Bridge course to competitive exam preparation.',
+    duration: '1 Year',
+    price: 68000,
+    targetClass: '10th',
+    features: [
+      'Live Interactive Classes',
+      'Complete Study Material',
+      'Weekly Tests & Analysis',
+      'Doubt Resolution Sessions',
+      'NEET Pattern Introduction',
+      'Previous Year Questions',
+      'Mock Tests & Analysis',
+      'Career Counseling',
+    ],
+  },
+  {
+    id: 'class-12th-neet-intensive',
+    title: 'Class 12th NEET Intensive',
     description:
       'Intensive program for Class 12th students with focus on both boards and NEET preparation simultaneously.',
     duration: '1 Year',
-    price: 65000,
+    price: 72000,
     targetClass: '12th',
     features: [
       'Dual Preparation (Board + NEET)',
@@ -40,12 +59,12 @@ export const courses: BasicCourse[] = [
     ],
   },
   {
-    id: 'neet-2025-dropper',
-    title: 'NEET 2025 - Dropper Batch',
+    id: 'neet-dropper-year',
+    title: 'NEET Dropper Year Program',
     description:
-      'Specialized crash course for students who want to improve their NEET score. Intensive preparation with proven results.',
+      'Specialized intensive course for students who want to improve their NEET score. Complete preparation with proven results.',
     duration: '1 Year',
-    price: 55000,
+    price: 85000,
     targetClass: 'Dropper',
     features: [
       'Complete Syllabus Revision',
@@ -56,25 +75,6 @@ export const courses: BasicCourse[] = [
       'Time Management Training',
       'Motivational Sessions',
       'Success Guarantee Program',
-    ],
-  },
-  {
-    id: 'neet-2026-early-bird',
-    title: 'NEET 2026 - Early Bird',
-    description:
-      'Get ahead with our early preparation program. Perfect for motivated Class 10th passed students.',
-    duration: '2.5 Years',
-    price: 85000,
-    targetClass: '11th',
-    features: [
-      'Foundation Building',
-      'Conceptual Learning',
-      'Gradual Difficulty Increase',
-      'Long-term Strategy',
-      'Regular Assessments',
-      'Career Counseling',
-      'Biology Olympiad Training',
-      'Research Project Guidance',
     ],
   },
 ]

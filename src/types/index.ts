@@ -5,7 +5,7 @@ export interface BasicCourse {
   duration: string
   price: number
   features: string[]
-  targetClass: '11th' | '12th' | 'Dropper'
+  targetClass: '9th' | '10th' | '11th' | '12th' | 'Dropper'
 }
 
 export interface Course extends BasicCourse {
