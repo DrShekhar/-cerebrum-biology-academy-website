@@ -15,8 +15,19 @@ import {
   ArrowRight,
 } from 'lucide-react'
 import { motion } from 'framer-motion'
+import { useRouter } from 'next/navigation'
 
 export function FacultySection() {
+  const router = useRouter()
+
+  const handleMeetFaculty = () => {
+    router.push('/faculty')
+  }
+
+  const handleBookDemo = () => {
+    router.push('/demo-booking')
+  }
+
   return (
     <section className="py-12 xs:py-16 sm:py-20 bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50">
       <div className="max-w-7xl mx-auto px-4 xs:px-6 lg:px-8">
@@ -227,6 +238,7 @@ export function FacultySection() {
               variant="secondary_cta"
               size="xl"
               className="bg-white text-blue-600 hover:bg-gray-100"
+              onClick={handleMeetFaculty}
             >
               Meet Our Faculty
               <ArrowRight className="w-4 xs:w-5 h-4 xs:h-5 ml-2" />
@@ -235,6 +247,7 @@ export function FacultySection() {
               variant="outline"
               size="xl"
               className="border-white text-white hover:bg-white hover:text-blue-600"
+              onClick={handleBookDemo}
             >
               Book Demo Class
             </Button>

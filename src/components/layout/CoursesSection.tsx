@@ -13,9 +13,12 @@ import {
   BookOpen,
   Award,
   Target,
+  Download,
+  MessageCircle,
 } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 
 const iconMap = {
   Users,
@@ -24,20 +27,26 @@ const iconMap = {
 }
 
 export function CoursesSection() {
+  const router = useRouter()
   const [selectedCategory, setSelectedCategory] = useState('classroom')
 
   const handleEnrollClick = (courseId: string) => {
-    console.log(`Enroll clicked for course: ${courseId}`)
-    // TODO: Implement enrollment system
+    router.push(`/enrollment?course=${courseId}`)
   }
 
   const handleViewDetails = (courseId: string) => {
-    const detailedCourse = detailedCourses.find((course) => course.id === courseId)
-    if (detailedCourse) {
-      window.location.href = `/courses/${detailedCourse.slug}`
-    } else {
-      console.log(`Course details not found for: ${courseId}`)
-    }
+    // Create a slug from the course ID for navigation
+    const slug = courseId.replace(/-/g, '-')
+    router.push(`/courses/${slug}`)
+  }
+
+  const handleCounselingClick = () => {
+    router.push('/demo-booking?type=counseling')
+  }
+
+  const handleBrochureDownload = () => {
+    // Trigger brochure download
+    window.open('/brochure.pdf', '_blank')
   }
 
   return (
@@ -216,14 +225,18 @@ export function CoursesSection() {
               variant="secondary_cta"
               size="xl"
               className="w-full sm:w-auto bg-white text-blue-600 hover:bg-gray-100 whitespace-normal sm:whitespace-nowrap px-4 py-3 text-sm xs:text-base"
+              onClick={handleCounselingClick}
             >
+              <MessageCircle className="w-5 h-5 mr-2" />
               Free Counseling Session
             </Button>
             <Button
               variant="outline"
               size="xl"
               className="w-full sm:w-auto border-white text-white hover:bg-white hover:text-blue-600 whitespace-normal sm:whitespace-nowrap px-4 py-3 text-sm xs:text-base"
+              onClick={handleBrochureDownload}
             >
+              <Download className="w-5 h-5 mr-2" />
               Download Brochure
             </Button>
           </div>

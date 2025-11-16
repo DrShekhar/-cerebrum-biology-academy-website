@@ -1,6 +1,6 @@
 'use client'
 
-import { memo } from 'react'
+import { memo, useState } from 'react'
 import { Button } from '@/components/ui/Button'
 import {
   Phone,
@@ -19,6 +19,31 @@ import Image from 'next/image'
 
 export const Footer = memo(function Footer() {
   const currentYear = new Date().getFullYear()
+  const [email, setEmail] = useState('')
+  const [isSubscribing, setIsSubscribing] = useState(false)
+  const [subscribeMessage, setSubscribeMessage] = useState('')
+
+  const handleNewsletterSubscribe = async (e: React.FormEvent) => {
+    e.preventDefault()
+    if (!email || !email.includes('@')) {
+      setSubscribeMessage('Please enter a valid email address')
+      return
+    }
+
+    setIsSubscribing(true)
+    setSubscribeMessage('')
+
+    try {
+      // TODO: Replace with actual API call
+      await new Promise((resolve) => setTimeout(resolve, 1000))
+      setSubscribeMessage('Thank you for subscribing!')
+      setEmail('')
+    } catch (error) {
+      setSubscribeMessage('Subscription failed. Please try again.')
+    } finally {
+      setIsSubscribing(false)
+    }
+  }
 
   const courseLinks = [
     { name: 'Class 11th Biology', href: '/courses/class-11' },
@@ -309,26 +334,38 @@ export const Footer = memo(function Footer() {
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-3">
+            <form onSubmit={handleNewsletterSubscribe} className="flex flex-col sm:flex-row gap-3">
               <label htmlFor="newsletter-email" className="sr-only">
                 Email address
               </label>
               <input
                 id="newsletter-email"
                 type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20"
                 aria-label="Email address for newsletter"
+                disabled={isSubscribing}
               />
               <Button
+                type="submit"
                 variant="primary"
                 className="whitespace-nowrap"
                 aria-label="Subscribe to newsletter"
+                disabled={isSubscribing}
               >
-                Subscribe
+                {isSubscribing ? 'Subscribing...' : 'Subscribe'}
                 <Send className="w-4 h-4 ml-2" aria-hidden="true" />
               </Button>
-            </div>
+            </form>
+            {subscribeMessage && (
+              <p
+                className={`mt-2 text-sm ${subscribeMessage.includes('Thank') ? 'text-green-400' : 'text-red-400'}`}
+              >
+                {subscribeMessage}
+              </p>
+            )}
           </div>
         </motion.div>
       </div>
