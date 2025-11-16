@@ -163,7 +163,7 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
             initial="closed"
             animate="open"
             exit="closed"
-            className="fixed inset-0 bg-black bg-opacity-50 z-[55] lg:hidden"
+            className="fixed inset-0 bg-black bg-opacity-50 z-[9998] lg:hidden"
             onClick={onClose}
           />
         )}
@@ -180,7 +180,7 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
             initial="closed"
             animate="open"
             exit="closed"
-            className="fixed left-0 top-0 h-full w-80 bg-white shadow-2xl z-[60] overflow-y-auto"
+            className="fixed left-0 top-0 h-full w-80 bg-white shadow-2xl z-[9999] overflow-y-auto"
           >
             {/* Header */}
             <div className="sticky top-0 bg-white border-b border-gray-200 p-6 flex items-center justify-between">
