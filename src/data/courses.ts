@@ -3,7 +3,7 @@ import { BasicCourse } from '@/types'
 export const courses: BasicCourse[] = [
   {
     id: 'class-9th-foundation',
-    title: 'NEET 2026 - Class 9th Foundation',
+    title: 'Class 9th Foundation',
     description:
       'Build a strong foundation in Biology for Class 9th students. Early preparation for competitive exams with conceptual clarity.',
     duration: '1 Year',
@@ -22,7 +22,7 @@ export const courses: BasicCourse[] = [
   },
   {
     id: 'class-10th-foundation',
-    title: 'NEET 2026 - Class 10th Foundation',
+    title: 'Class 10th Foundation',
     description:
       'Advanced foundation program for Class 10th students preparing for NEET. Bridge course to competitive exam preparation.',
     duration: '1 Year',
