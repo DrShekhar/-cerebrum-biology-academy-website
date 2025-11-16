@@ -3,7 +3,7 @@ import { BasicCourse } from '@/types'
 export const courses: BasicCourse[] = [
   {
     id: 'class-9th-foundation',
-    title: 'Class 9th Foundation Biology',
+    title: 'NEET 2026 - Class 9th Foundation',
     description:
       'Build a strong foundation in Biology for Class 9th students. Early preparation for competitive exams with conceptual clarity.',
     duration: '1 Year',
@@ -22,7 +22,7 @@ export const courses: BasicCourse[] = [
   },
   {
     id: 'class-10th-foundation',
-    title: 'Class 10th Foundation Biology',
+    title: 'NEET 2026 - Class 10th Foundation',
     description:
       'Advanced foundation program for Class 10th students preparing for NEET. Bridge course to competitive exam preparation.',
     duration: '1 Year',
@@ -40,8 +40,8 @@ export const courses: BasicCourse[] = [
     ],
   },
   {
-    id: 'class-12th-neet-intensive',
-    title: 'Class 12th NEET Intensive',
+    id: 'class-12th-neet-ascent',
+    title: 'NEET 2026 - Class 12th Ascent',
     description:
       'Intensive program for Class 12th students with focus on both boards and NEET preparation simultaneously.',
     duration: '1 Year',
@@ -60,7 +60,7 @@ export const courses: BasicCourse[] = [
   },
   {
     id: 'neet-dropper-year',
-    title: 'NEET Dropper Year Program',
+    title: 'NEET 2026 - Dropper Batch',
     description:
       'Specialized intensive course for students who want to improve their NEET score. Complete preparation with proven results.',
     duration: '1 Year',
