@@ -183,7 +183,7 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
             className="fixed left-0 top-0 h-full w-80 bg-white shadow-2xl z-[9999] overflow-y-auto"
           >
             {/* Header */}
-            <div className="sticky top-0 bg-white border-b border-gray-200 p-6 flex items-center justify-between">
+            <div className="sticky top-0 z-50 bg-white border-b border-gray-200 p-6 flex items-center justify-between">
               <div>
                 <h2 className="text-xl font-bold text-gray-900">Navigation</h2>
                 <p className="text-sm text-gray-500">Explore our courses & services</p>
@@ -284,7 +284,7 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
             </div>
 
             {/* Footer */}
-            <div className="sticky bottom-0 bg-gradient-to-r from-blue-600 to-purple-600 text-white p-6">
+            <div className="sticky bottom-0 z-40 bg-gradient-to-r from-blue-600 to-purple-600 text-white p-6">
               <div className="text-center">
                 <h3 className="font-bold text-lg mb-2">Ready to Start?</h3>
                 <p className="text-blue-100 text-sm mb-4">
