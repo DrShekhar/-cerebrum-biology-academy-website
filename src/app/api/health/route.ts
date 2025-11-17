@@ -92,10 +92,7 @@ export async function GET(request: NextRequest) {
 
     return NextResponse.json(result, { status: statusCode })
   } catch (error) {
-    logger.error('Health check failed', {
-      error,
-      details: error instanceof Error ? error.message : 'Unknown error',
-    })
+    logger.error('Health check failed', error)
 
     return NextResponse.json(
       {
@@ -133,10 +130,7 @@ async function checkDatabase(): Promise<ServiceStatus> {
       lastCheck: new Date().toISOString(),
     }
   } catch (error) {
-    logger.error('Database health check failed', {
-      error,
-      details: error instanceof Error ? error.message : 'Unknown error',
-    })
+    logger.error('Database health check failed', error)
 
     return {
       status: 'down',
@@ -174,10 +168,7 @@ async function checkRedis(): Promise<ServiceStatus> {
       lastCheck: new Date().toISOString(),
     }
   } catch (error) {
-    logger.error('Redis health check failed', {
-      error,
-      details: error instanceof Error ? error.message : 'Unknown error',
-    })
+    logger.error('Redis health check failed', error)
 
     return {
       status: 'down',
@@ -208,10 +199,7 @@ async function checkAnthropicAI(): Promise<ServiceStatus> {
       lastCheck: new Date().toISOString(),
     }
   } catch (error) {
-    logger.error('Anthropic AI health check failed', {
-      error,
-      details: error instanceof Error ? error.message : 'Unknown error',
-    })
+    logger.error('Anthropic AI health check failed', error)
 
     return {
       status: 'down',
@@ -240,10 +228,7 @@ async function checkWhatsApp(): Promise<ServiceStatus> {
       lastCheck: new Date().toISOString(),
     }
   } catch (error) {
-    logger.error('WhatsApp health check failed', {
-      error,
-      details: error instanceof Error ? error.message : 'Unknown error',
-    })
+    logger.error('WhatsApp health check failed', error)
 
     return {
       status: 'down',
