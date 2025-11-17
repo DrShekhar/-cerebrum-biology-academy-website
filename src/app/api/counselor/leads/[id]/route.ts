@@ -35,7 +35,7 @@ async function handleGET(
   try {
     const { id } = await context.params
 
-    const lead = await prisma.lead.findUnique({
+    const lead = await prisma.leads.findUnique({
       where: { id },
       include: {
         assignedTo: {
@@ -149,7 +149,7 @@ async function handlePATCH(
     const body = await request.json()
     const validatedData = updateLeadSchema.parse(body)
 
-    const existingLead = await prisma.lead.findUnique({
+    const existingLead = await prisma.leads.findUnique({
       where: { id },
     })
 
@@ -189,7 +189,7 @@ async function handlePATCH(
       }
     }
 
-    const lead = await prisma.lead.update({
+    const lead = await prisma.leads.update({
       where: { id },
       data: updateData,
       include: {
@@ -261,7 +261,7 @@ async function handleDELETE(
   try {
     const { id } = await context.params
 
-    const existingLead = await prisma.lead.findUnique({
+    const existingLead = await prisma.leads.findUnique({
       where: { id },
     })
 
@@ -286,7 +286,7 @@ async function handleDELETE(
       )
     }
 
-    await prisma.lead.delete({
+    await prisma.leads.delete({
       where: { id },
     })
 

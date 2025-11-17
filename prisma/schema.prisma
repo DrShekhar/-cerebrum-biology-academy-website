@@ -548,31 +548,31 @@ model lead_magnets {
 }
 
 model leads {
-  id                 String               @id
-  studentName        String
-  email              String?
-  phone              String
-  courseInterest     String
-  stage              LeadStage            @default(NEW_LEAD)
-  priority           Priority             @default(WARM)
-  assignedToId       String
-  createdAt          DateTime             @default(now())
-  updatedAt          DateTime
-  lastContactedAt    DateTime?
-  nextFollowUpAt     DateTime?
-  convertedAt        DateTime?
-  lostAt             DateTime?
-  lostReason         String?
-  demoBookingId      String?              @unique
-  source             LeadSource           @default(MANUAL_ENTRY)
-  activities         activities[]
-  crm_communications crm_communications[]
-  fee_plans          fee_plans[]
-  users              users                      @relation(fields: [assignedToId], references: [id])
-  demo_bookings      demo_bookings?             @relation(fields: [demoBookingId], references: [id])
-  notes              notes[]
-  offers             offers[]
-  tasks              tasks[]
+  id                     String                   @id
+  studentName            String
+  email                  String?
+  phone                  String
+  courseInterest         String
+  stage                  LeadStage                @default(NEW_LEAD)
+  priority               Priority                 @default(WARM)
+  assignedToId           String
+  createdAt              DateTime                 @default(now())
+  updatedAt              DateTime
+  lastContactedAt        DateTime?
+  nextFollowUpAt         DateTime?
+  convertedAt            DateTime?
+  lostAt                 DateTime?
+  lostReason             String?
+  demoBookingId          String?                  @unique
+  source                 LeadSource               @default(MANUAL_ENTRY)
+  activities             activities[]
+  crm_communications     crm_communications[]
+  fee_plans              fee_plans[]
+  users                  users                    @relation(fields: [assignedToId], references: [id])
+  demo_bookings          demo_bookings?           @relation(fields: [demoBookingId], references: [id])
+  notes                  notes[]
+  offers                 offers[]
+  tasks                  tasks[]
   whatsapp_conversations whatsapp_conversations[]
 
   @@index([assignedToId, stage])
@@ -1217,12 +1217,12 @@ model users {
   passwordHash                    String?
   emailVerified                   DateTime?
   phoneVerified                   DateTime?
-  verificationToken               String?
-  verificationTokenExpiry         DateTime?
   profile                         Json?
   createdAt                       DateTime                  @default(now())
   updatedAt                       DateTime
   lastActiveAt                    DateTime?
+  verificationToken               String?
+  verificationTokenExpiry         DateTime?
   activities                      activities[]
   communication_logs              communication_logs[]
   crm_communications              crm_communications[]
@@ -1245,6 +1245,59 @@ model users {
   user_question_responses         user_question_responses[]
   whatsapp_conversations          whatsapp_conversations[]  @relation("AssignedCounselor")
   whatsapp_messages_sent          whatsapp_messages[]       @relation("SentByUser")
+}
+
+model whatsapp_otp {
+  id        String   @id @default(cuid())
+  phone     String
+  otp       String
+  expiresAt DateTime
+  verified  Boolean  @default(false)
+  attempts  Int      @default(0)
+  createdAt DateTime @default(now())
+
+  @@index([phone, expiresAt])
+  @@index([phone, verified])
+}
+
+model whatsapp_conversations {
+  id                  String              @id @default(cuid())
+  phone               String
+  leadId              String?
+  assignedCounselorId String?
+  lastMessageAt       DateTime            @default(now())
+  status              ConversationStatus  @default(ACTIVE)
+  createdAt           DateTime            @default(now())
+  updatedAt           DateTime            @updatedAt
+  users               users?              @relation("AssignedCounselor", fields: [assignedCounselorId], references: [id])
+  leads               leads?              @relation(fields: [leadId], references: [id])
+  messages            whatsapp_messages[]
+
+  @@index([phone])
+  @@index([leadId])
+  @@index([assignedCounselorId])
+  @@index([status, lastMessageAt])
+}
+
+model whatsapp_messages {
+  id             String                 @id @default(cuid())
+  conversationId String
+  messageId      String?                @unique
+  phone          String
+  direction      MessageDirection
+  content        String
+  messageType    String                 @default("text")
+  mediaUrl       String?
+  status         MessageStatus          @default(SENT)
+  sentBy         String?
+  timestamp      DateTime               @default(now())
+  createdAt      DateTime               @default(now())
+  conversation   whatsapp_conversations @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  users          users?                 @relation("SentByUser", fields: [sentBy], references: [id])
+
+  @@index([conversationId, timestamp])
+  @@index([phone])
+  @@index([messageId])
 }
 
 enum AccessLevel {
@@ -1608,60 +1661,6 @@ enum UserRole {
   TEACHER
   ADMIN
   COUNSELOR
-}
-
-// WhatsApp Integration Tables
-model whatsapp_otp {
-  id          String   @id @default(cuid())
-  phone       String
-  otp         String
-  expiresAt   DateTime
-  verified    Boolean  @default(false)
-  attempts    Int      @default(0)
-  createdAt   DateTime @default(now())
-
-  @@index([phone, expiresAt])
-  @@index([phone, verified])
-}
-
-model whatsapp_conversations {
-  id                String                 @id @default(cuid())
-  phone             String
-  leadId            String?
-  assignedCounselorId String?
-  lastMessageAt     DateTime               @default(now())
-  status            ConversationStatus     @default(ACTIVE)
-  createdAt         DateTime               @default(now())
-  updatedAt         DateTime               @updatedAt
-  leads             leads?                 @relation(fields: [leadId], references: [id], onDelete: SetNull)
-  users             users?                 @relation("AssignedCounselor", fields: [assignedCounselorId], references: [id], onDelete: SetNull)
-  messages          whatsapp_messages[]
-
-  @@index([phone])
-  @@index([leadId])
-  @@index([assignedCounselorId])
-  @@index([status, lastMessageAt])
-}
-
-model whatsapp_messages {
-  id             String                @id @default(cuid())
-  conversationId String
-  messageId      String?               @unique
-  phone          String
-  direction      MessageDirection
-  content        String
-  messageType    String                @default("text")
-  mediaUrl       String?
-  status         MessageStatus         @default(SENT)
-  sentBy         String?
-  timestamp      DateTime              @default(now())
-  createdAt      DateTime              @default(now())
-  conversation   whatsapp_conversations @relation(fields: [conversationId], references: [id], onDelete: Cascade)
-  users          users?                @relation("SentByUser", fields: [sentBy], references: [id], onDelete: SetNull)
-
-  @@index([conversationId, timestamp])
-  @@index([phone])
-  @@index([messageId])
 }
 
 enum ConversationStatus {

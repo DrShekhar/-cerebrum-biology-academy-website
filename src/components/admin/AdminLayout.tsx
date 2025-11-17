@@ -235,33 +235,51 @@ export function AdminLayout({ children }: AdminLayoutProps) {
 
     return (
       <div>
-        <button
-          onClick={() => {
-            if (hasChildren) {
-              setIsOpen(!isOpen)
-            }
-          }}
-          className={`w-full flex items-center justify-between px-4 py-3 text-sm font-medium rounded-lg transition-colors ${
-            depth === 0 ? 'mb-1' : 'mb-0.5 ml-4'
-          } ${
-            isActive(item.href)
-              ? 'bg-primary-100 text-primary-700 border-r-2 border-primary-600'
-              : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
-          }`}
-        >
-          <div className="flex items-center">
-            <Icon className={`${depth === 0 ? 'w-5 h-5' : 'w-4 h-4'} mr-3`} />
-            <span>{item.name}</span>
-            {item.badge && (
-              <span className="ml-2 bg-red-500 text-white text-xs px-2 py-0.5 rounded-full">
-                {item.badge}
-              </span>
-            )}
-          </div>
-          {hasChildren && (
+        {hasChildren ? (
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className={`w-full flex items-center justify-between px-4 py-3 text-sm font-medium rounded-lg transition-colors ${
+              depth === 0 ? 'mb-1' : 'mb-0.5 ml-4'
+            } ${
+              isActive(item.href)
+                ? 'bg-primary-100 text-primary-700 border-r-2 border-primary-600'
+                : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
+            }`}
+          >
+            <div className="flex items-center">
+              <Icon className={`${depth === 0 ? 'w-5 h-5' : 'w-4 h-4'} mr-3`} />
+              <span>{item.name}</span>
+              {item.badge && (
+                <span className="ml-2 bg-red-500 text-white text-xs px-2 py-0.5 rounded-full">
+                  {item.badge}
+                </span>
+              )}
+            </div>
             <ChevronDown className={`w-4 h-4 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
-          )}
-        </button>
+          </button>
+        ) : (
+          <Link href={item.href}>
+            <div
+              className={`w-full flex items-center justify-between px-4 py-3 text-sm font-medium rounded-lg transition-colors ${
+                depth === 0 ? 'mb-1' : 'mb-0.5 ml-4'
+              } ${
+                isActive(item.href)
+                  ? 'bg-primary-100 text-primary-700 border-r-2 border-primary-600'
+                  : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
+              }`}
+            >
+              <div className="flex items-center">
+                <Icon className={`${depth === 0 ? 'w-5 h-5' : 'w-4 h-4'} mr-3`} />
+                <span>{item.name}</span>
+                {item.badge && (
+                  <span className="ml-2 bg-red-500 text-white text-xs px-2 py-0.5 rounded-full">
+                    {item.badge}
+                  </span>
+                )}
+              </div>
+            </div>
+          </Link>
+        )}
 
         {hasChildren && (
           <AnimatePresence>
