@@ -1,0 +1,94 @@
+{
+  "runs": [
+    {
+      "timestamp": "2025-11-17T09:43:38.661Z",
+      "metrics": {
+        "avgPageLoad": 0,
+        "avgApiResponse": 0,
+        "passedBenchmarks": 0,
+        "totalBenchmarks": 0
+      }
+    },
+    {
+      "timestamp": "2025-11-17T09:45:49.384Z",
+      "metrics": {
+        "avgPageLoad": 0,
+        "avgApiResponse": 0,
+        "passedBenchmarks": 0,
+        "totalBenchmarks": 0
+      }
+    },
+    {
+      "timestamp": "2025-11-17T10:01:31.424Z",
+      "metrics": {
+        "avgPageLoad": 0,
+        "avgApiResponse": 0,
+        "passedBenchmarks": 0,
+        "totalBenchmarks": 0
+      }
+    },
+    {
+      "timestamp": "2025-11-17T10:11:50.693Z",
+      "metrics": {
+        "avgPageLoad": 0,
+        "avgApiResponse": 0,
+        "passedBenchmarks": 0,
+        "totalBenchmarks": 0
+      }
+    },
+    {
+      "timestamp": "2025-11-17T10:22:09.038Z",
+      "metrics": {
+        "avgPageLoad": 0,
+        "avgApiResponse": 0,
+        "passedBenchmarks": 0,
+        "totalBenchmarks": 0
+      }
+    },
+    {
+      "timestamp": "2025-11-17T14:45:59.313Z",
+      "metrics": {
+        "avgPageLoad": 0,
+        "avgApiResponse": 0,
+        "passedBenchmarks": 0,
+        "totalBenchmarks": 0
+      }
+    },
+    {
+      "timestamp": "2025-11-17T15:04:53.062Z",
+      "metrics": {
+        "avgPageLoad": 0,
+        "avgApiResponse": 0,
+        "passedBenchmarks": 0,
+        "totalBenchmarks": 0
+      }
+    },
+    {
+      "timestamp": "2025-11-17T15:10:42.283Z",
+      "metrics": {
+        "avgPageLoad": 0,
+        "avgApiResponse": 0,
+        "passedBenchmarks": 0,
+        "totalBenchmarks": 0
+      }
+    },
+    {
+      "timestamp": "2025-11-17T15:13:56.795Z",
+      "metrics": {
+        "avgPageLoad": 0,
+        "avgApiResponse": 0,
+        "passedBenchmarks": 0,
+        "totalBenchmarks": 0
+      }
+    },
+    {
+      "timestamp": "2025-11-17T15:14:28.910Z",
+      "metrics": {
+        "avgPageLoad": 0,
+        "avgApiResponse": 0,
+        "passedBenchmarks": 0,
+        "totalBenchmarks": 0
+      }
+    }
+  ]
+}

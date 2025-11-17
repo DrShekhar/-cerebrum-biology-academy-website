@@ -21,13 +21,13 @@ export default defineConfig({
 
   // Output configuration
   reporter: [
-    ['html', { outputFolder: 'test-results/playwright-report' }],
+    ['html', { outputFolder: 'playwright-report' }],
     ['json', { outputFile: 'test-results/playwright-results.json' }],
     ['junit', { outputFile: 'test-results/playwright-junit.xml' }],
     process.env.CI ? ['github'] : ['list']
   ],
 
-  outputDir: 'test-results/',
+  outputDir: 'test-results/artifacts',
 
   use: {
     baseURL: process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',

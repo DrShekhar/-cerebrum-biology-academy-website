@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Maintenance Notice - Auto-dismiss after 8 seconds */}
-      <MaintenanceNotice />
+      {/* <MaintenanceNotice /> */}
 
       <OptimizedHeroSection />
 
