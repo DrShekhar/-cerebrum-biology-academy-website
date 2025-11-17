@@ -266,7 +266,11 @@ export async function GET(request: NextRequest, { params }: { params: { orderId:
 
     // Generate PDF using react-pdf
     const pdfDoc = pdf(createElement(ReceiptPDF, { data: receiptData }))
-    const pdfBuffer = await pdfDoc.toBuffer()
+
+    // Convert blob to buffer
+    const blob = await pdfDoc.toBlob()
+    const arrayBuffer = await blob.arrayBuffer()
+    const pdfBuffer = Buffer.from(arrayBuffer)
 
     // Return PDF
     return new NextResponse(pdfBuffer, {
