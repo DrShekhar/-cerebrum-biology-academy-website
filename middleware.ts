@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { validateUserSession, addSecurityHeaders, UserSession } from '@/lib/auth/config'
 import { addCSPHeaders } from '@/lib/auth/csrf'
+import { compressResponseMiddleware } from '@/lib/middleware/compression'
 
 // Type guard to check if session has role property
 function hasRole(session: UserSession): session is UserSession & { role: string } {
@@ -11,7 +12,7 @@ export default async function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl
 
   // Validate user session for protected routes
-  const session = await validateUserSession(req).catch(() => ({ valid: false } as UserSession))
+  const session = await validateUserSession(req).catch(() => ({ valid: false }) as UserSession)
 
   // Public auth routes
   if (pathname.startsWith('/auth/')) {
@@ -136,7 +137,8 @@ export default async function middleware(req: NextRequest) {
   // NOTE: Disabled middleware auth check for API routes because Next.js 15 Edge Runtime
   // doesn't receive cookies from client fetch() calls even with credentials: 'include'
   // Authentication is handled by the route handlers using withCounselor() middleware
-  if (pathname.startsWith('/api/counselor/') && false) {  // Temporarily disabled
+  if (pathname.startsWith('/api/counselor/') && false) {
+    // Temporarily disabled
     if (!hasRole(session) || (session.role !== 'COUNSELOR' && session.role !== 'ADMIN')) {
       return addSecurityHeaders(
         NextResponse.json(
@@ -208,6 +210,12 @@ export default async function middleware(req: NextRequest) {
         `Admin route accessed: ${pathname} from IP: ${req.headers.get('x-forwarded-for') || 'unknown'} at ${new Date().toISOString()}`
       )
     }
+  }
+
+  // Apply compression to API responses for better performance
+  // Automatically compresses JSON and other compressible content types
+  if (pathname.startsWith('/api/')) {
+    return await compressResponseMiddleware(req, response)
   }
 
   return response

@@ -8,6 +8,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { logger } from '@/lib/monitoring/logger'
 import { performanceMonitor } from '@/lib/monitoring/performance'
+import { CompressionStats } from '@/lib/middleware/compression'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -26,6 +27,14 @@ interface HealthCheckResult {
     requestsPerMinute: number
     errorRate: string
     avgResponseTime: number
+  }
+  compression?: {
+    totalRequests: number
+    compressedRequests: number
+    compressionRatio: string
+    savedBytes: number
+    savedMB: string
+    compressionRate: string
   }
 }
 
@@ -56,6 +65,9 @@ export async function GET(request: NextRequest) {
       avgResponseTime: Math.round(report.metrics.avgResponseTime),
     }
 
+    // Get compression statistics
+    const compressionStats = CompressionStats.getStats()
+
     // Determine overall status
     const services = { database, redis, anthropicAI, whatsapp }
     const status = determineOverallStatus(services)
@@ -66,6 +78,7 @@ export async function GET(request: NextRequest) {
       uptime: process.uptime(),
       services,
       metrics,
+      compression: compressionStats,
     }
 
     // Log health check
