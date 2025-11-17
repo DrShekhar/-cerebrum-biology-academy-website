@@ -10,7 +10,7 @@ interface MaintenanceNoticeProps {
 }
 
 export function MaintenanceNotice({
-  autoHideDuration = 8, // Auto-hide after 8 seconds
+  autoHideDuration = 6, // Auto-hide after 6 seconds
   showCloseButton = true,
 }: MaintenanceNoticeProps) {
   const [isVisible, setIsVisible] = useState(false)

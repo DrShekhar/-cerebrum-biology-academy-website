@@ -13,7 +13,7 @@ interface SuccessTickerProps {
 
 export function SuccessTicker({
   autoHideDuration = 0, // Don't auto-hide (0 = stay visible)
-  scrollSpeed = 120, // 120 seconds for readable scrolling (~2 minutes)
+  scrollSpeed = 200, // 200 seconds for very readable scrolling (~3.3 minutes)
   showCloseButton = true,
 }: SuccessTickerProps) {
   const [isVisible, setIsVisible] = useState(false)
