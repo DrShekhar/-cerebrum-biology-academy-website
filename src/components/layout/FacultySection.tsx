@@ -233,7 +233,7 @@ export function FacultySection() {
           <p className="text-base xs:text-lg sm:text-xl mb-6 xs:mb-8 opacity-90">
             Join thousands of students who achieved NEET success under expert guidance
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <Button
               variant="secondary_cta"
               size="xl"
@@ -241,7 +241,7 @@ export function FacultySection() {
               onClick={handleMeetFaculty}
             >
               Meet Our Faculty
-              <ArrowRight className="w-4 xs:w-5 h-4 xs:h-5 ml-2" />
+              <ArrowRight className="w-3 xs:w-4 h-3 xs:h-4 ml-2" />
             </Button>
             <Button
               variant="outline"

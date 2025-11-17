@@ -85,7 +85,7 @@ export function MobileBottomNav({ className = '' }: MobileBottomNavProps) {
         paddingTop: '8px',
       }}
     >
-      <div className="grid grid-cols-4 gap-0 bg-white">
+      <div className="grid grid-cols-4 gap-1 bg-white">
         {navItems.map((item) => {
           const active = isActive(item.href)
           const IconComponent = active ? item.iconSolid : item.icon
@@ -101,11 +101,11 @@ export function MobileBottomNav({ className = '' }: MobileBottomNavProps) {
                     : item.highlight
                       ? 'text-green-600 bg-green-50 border-t-4 border-green-600 rounded-t-xl scale-105 shadow-lg'
                       : 'text-gray-600 hover:text-gray-800 border-t-4 border-transparent hover:bg-gray-50'
-                } py-2.5 xs:py-3 px-0.5 xs:px-1 min-h-[60px] xs:min-h-[64px] transition-all duration-200`}
+                } py-2.5 xs:py-3 px-2 xs:px-3 min-h-[60px] xs:min-h-[64px] transition-all duration-200`}
                 aria-label={`${item.label} - ${item.isExternal ? 'Call now' : 'Navigate to'}`}
               >
-                <IconComponent className="w-6 xs:w-7 h-6 xs:h-7 mb-0.5 xs:mb-1" />
-                <span className="text-[9px] xs:text-[10px] leading-tight font-semibold">
+                <IconComponent className="w-5 xs:w-6 h-5 xs:h-6 mb-1.5 xs:mb-2" />
+                <span className="text-[10px] xs:text-[11px] leading-tight font-semibold">
                   {item.label}
                 </span>
               </button>
@@ -122,11 +122,11 @@ export function MobileBottomNav({ className = '' }: MobileBottomNavProps) {
                   : item.highlight
                     ? 'text-green-600 bg-green-50 border-t-4 border-green-600 rounded-t-xl scale-105 shadow-lg'
                     : 'text-gray-600 hover:text-gray-800 border-t-4 border-transparent hover:bg-gray-50'
-              } py-2.5 xs:py-3 px-0.5 xs:px-1 min-h-[60px] xs:min-h-[64px] transition-all duration-200`}
+              } py-2.5 xs:py-3 px-2 xs:px-3 min-h-[60px] xs:min-h-[64px] transition-all duration-200`}
               aria-label={`${item.label} - Navigate to ${item.label} page`}
             >
-              <IconComponent className="w-6 xs:w-7 h-6 xs:h-7 mb-0.5 xs:mb-1" />
-              <span className="text-[9px] xs:text-[10px] leading-tight font-semibold">
+              <IconComponent className="w-5 xs:w-6 h-5 xs:h-6 mb-1.5 xs:mb-2" />
+              <span className="text-[10px] xs:text-[11px] leading-tight font-semibold">
                 {item.label}
               </span>
               {item.highlight && (

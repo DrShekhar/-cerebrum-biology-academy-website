@@ -98,12 +98,12 @@ export function HeroSection() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
               <Button variant="primary" size="xl" onClick={handleBookDemo} className="group">
-                <Calendar className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" />
+                <Calendar className="w-4 xs:w-5 h-4 xs:h-5 mr-2 group-hover:rotate-12 transition-transform" />
                 Book Free Demo
               </Button>
 
               <Button variant="secondary_cta" size="xl" onClick={handleCallNow} className="group">
-                <Phone className="w-5 h-5 mr-2 group-hover:ring-2 group-hover:ring-blue-300 rounded-full transition-all" />
+                <Phone className="w-4 xs:w-5 h-4 xs:h-5 mr-2 group-hover:ring-2 group-hover:ring-blue-300 rounded-full transition-all" />
                 Call Now: +91 93119 46297
               </Button>
             </div>

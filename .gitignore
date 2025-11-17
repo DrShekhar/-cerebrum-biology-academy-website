@@ -52,3 +52,6 @@ next-env.d.ts
 # IDE
 .vscode/settings.json
 .env*.local
+
+# Screenshots from visual testing
+/screenshots/*.png

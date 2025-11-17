@@ -27,8 +27,8 @@ export function ClassFilterNav({
   }
 
   return (
-    <div className="bg-white rounded-2xl shadow-lg p-2 mb-8 overflow-x-auto">
-      <div className="flex space-x-2 min-w-max">
+    <div className="bg-white rounded-2xl shadow-lg p-1 xs:p-1.5 sm:p-2 mb-8 overflow-x-auto scrollbar-hide">
+      <div className="flex space-x-1 xs:space-x-1.5 sm:space-x-2 min-w-max">
         {classOptions.map((option) => {
           const courseCount =
             option.value === 'all'
@@ -40,16 +40,16 @@ export function ClassFilterNav({
             <button
               key={option.value}
               onClick={() => onClassSelect(option.value)}
-              className={`flex items-center space-x-2 px-6 py-3 rounded-xl font-semibold transition-all duration-200 whitespace-nowrap ${
+              className={`flex items-center space-x-1 xs:space-x-1.5 sm:space-x-2 px-2 xs:px-3 sm:px-6 py-1.5 xs:py-2 sm:py-3 rounded-lg xs:rounded-xl font-semibold transition-all duration-200 whitespace-nowrap text-xs xs:text-sm sm:text-base ${
                 isSelected
                   ? 'bg-blue-600 text-white shadow-lg transform scale-105'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200 hover:scale-102'
               }`}
             >
-              <span className="text-xl">{option.emoji}</span>
+              <span className="text-sm xs:text-base sm:text-xl">{option.emoji}</span>
               <span>{option.label}</span>
               <span
-                className={`px-2 py-1 rounded-full text-xs ${
+                className={`px-1.5 xs:px-2 py-0.5 xs:py-1 rounded-full text-xxs xs:text-xs ${
                   isSelected ? 'bg-blue-500 text-white' : 'bg-gray-300 text-gray-600'
                 }`}
               >
