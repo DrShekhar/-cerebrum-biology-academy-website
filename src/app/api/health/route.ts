@@ -92,7 +92,10 @@ export async function GET(request: NextRequest) {
 
     return NextResponse.json(result, { status: statusCode })
   } catch (error) {
-    logger.error('Health check failed', error as Error)
+    logger.error('Health check failed', {
+      error,
+      details: error instanceof Error ? error.message : 'Unknown error',
+    })
 
     return NextResponse.json(
       {
@@ -113,12 +116,14 @@ async function checkDatabase(): Promise<ServiceStatus> {
   const startTime = Date.now()
 
   try {
-    // Try to connect to database
-    // In production, this would use Prisma
-    // For now, just check if DATABASE_URL is set
+    // Check if DATABASE_URL is configured
     if (!process.env.DATABASE_URL) {
       throw new Error('DATABASE_URL not configured')
     }
+
+    // Test actual database connection with Prisma
+    const prisma = (await import('@/lib/prisma')).default
+    await prisma.$queryRaw`SELECT 1 as health_check`
 
     const latency = Date.now() - startTime
 
@@ -128,11 +133,14 @@ async function checkDatabase(): Promise<ServiceStatus> {
       lastCheck: new Date().toISOString(),
     }
   } catch (error) {
-    logger.error('Database health check failed', error as Error)
+    logger.error('Database health check failed', {
+      error,
+      details: error instanceof Error ? error.message : 'Unknown error',
+    })
 
     return {
       status: 'down',
-      error: (error as Error).message,
+      error: error instanceof Error ? error.message : 'Database check failed',
       lastCheck: new Date().toISOString(),
     }
   }
@@ -166,11 +174,14 @@ async function checkRedis(): Promise<ServiceStatus> {
       lastCheck: new Date().toISOString(),
     }
   } catch (error) {
-    logger.error('Redis health check failed', error as Error)
+    logger.error('Redis health check failed', {
+      error,
+      details: error instanceof Error ? error.message : 'Unknown error',
+    })
 
     return {
       status: 'down',
-      error: (error as Error).message,
+      error: error instanceof Error ? error.message : 'Redis check failed',
       lastCheck: new Date().toISOString(),
     }
   }
@@ -197,11 +208,14 @@ async function checkAnthropicAI(): Promise<ServiceStatus> {
       lastCheck: new Date().toISOString(),
     }
   } catch (error) {
-    logger.error('Anthropic AI health check failed', error as Error)
+    logger.error('Anthropic AI health check failed', {
+      error,
+      details: error instanceof Error ? error.message : 'Unknown error',
+    })
 
     return {
       status: 'down',
-      error: (error as Error).message,
+      error: error instanceof Error ? error.message : 'AI API check failed',
       lastCheck: new Date().toISOString(),
     }
   }
@@ -226,11 +240,14 @@ async function checkWhatsApp(): Promise<ServiceStatus> {
       lastCheck: new Date().toISOString(),
     }
   } catch (error) {
-    logger.error('WhatsApp health check failed', error as Error)
+    logger.error('WhatsApp health check failed', {
+      error,
+      details: error instanceof Error ? error.message : 'Unknown error',
+    })
 
     return {
       status: 'down',
-      error: (error as Error).message,
+      error: error instanceof Error ? error.message : 'WhatsApp check failed',
       lastCheck: new Date().toISOString(),
     }
   }
