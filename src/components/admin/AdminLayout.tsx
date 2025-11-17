@@ -19,6 +19,9 @@ import {
   LogOut,
   User,
   ChevronDown,
+  FileText,
+  Upload,
+  FolderOpen,
 } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
@@ -203,6 +206,18 @@ export function AdminLayout({ children }: AdminLayoutProps) {
           href: '/admin/analytics/conversion',
         },
         { id: 'reports', name: 'Reports', icon: BarChart3, href: '/admin/analytics/reports' },
+      ],
+    },
+    {
+      id: 'lms',
+      name: 'LMS',
+      icon: FileText,
+      href: '/admin/lms',
+      children: [
+        { id: 'lms-materials', name: 'Materials', icon: FolderOpen, href: '/admin/lms/materials' },
+        { id: 'lms-upload', name: 'Upload', icon: Upload, href: '/admin/lms/materials/upload' },
+        { id: 'lms-chapters', name: 'Chapters', icon: BookOpen, href: '/admin/lms/chapters' },
+        { id: 'lms-analytics', name: 'Analytics', icon: BarChart3, href: '/admin/lms/analytics' },
       ],
     },
     {
