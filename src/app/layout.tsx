@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import Script from 'next/script'
 import { StructuredData } from '@/components/seo/StructuredData'
-import { ErrorBoundary } from '@/components/ErrorBoundary'
+import { PageErrorBoundary } from '@/components/ErrorBoundary'
 import GoogleAnalytics from '@/components/analytics/GoogleAnalytics'
 import Header from '@/components/layout/Header'
 import { MobileNavigation } from '@/components/navigation/MobileNavigation'
@@ -139,7 +139,7 @@ export default function RootLayout({
               enableTrustBadges={true}
               enableRealTimeUpdates={true}
             >
-              <ErrorBoundary>
+              <PageErrorBoundary>
                 <SkipToContent />
                 <div data-section="navigation" className="priority-immediate" role="banner">
                   <Header />
@@ -155,7 +155,7 @@ export default function RootLayout({
                   <MobileNavigation />
                 </div>
                 <FloatingCTA />
-              </ErrorBoundary>
+              </PageErrorBoundary>
             </TrustProvider>
           </ToastProvider>
         </AuthProvider>
