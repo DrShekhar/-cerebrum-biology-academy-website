@@ -1,5 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
+import { renderToStream } from '@react-pdf/renderer'
+import { createElement } from 'react'
+import { ReceiptPDF, ReceiptData } from '@/lib/pdf/ReceiptPDF'
 
 export async function GET(request: NextRequest, { params }: { params: { orderId: string } }) {
   try {
@@ -30,8 +33,8 @@ export async function GET(request: NextRequest, { params }: { params: { orderId:
       return NextResponse.json({ error: 'Payment not completed' }, { status: 400 })
     }
 
-    // Generate PDF content (simplified version - can be enhanced with pdfkit or jspdf)
-    const receiptData = {
+    // Generate PDF receipt data
+    const receiptData: ReceiptData = {
       receiptNumber: `CBA-${payment.id.substring(0, 8).toUpperCase()}`,
       date:
         payment.completedAt?.toLocaleDateString('en-IN') || new Date().toLocaleDateString('en-IN'),
@@ -48,8 +51,12 @@ export async function GET(request: NextRequest, { params }: { params: { orderId:
       subtotal: Math.round((payment.amount / 118) * 100) / 100,
     }
 
-    // Create HTML receipt (can be converted to PDF using puppeteer or similar)
-    const htmlReceipt = `
+    // Check if user wants HTML or PDF
+    const format = request.nextUrl.searchParams.get('format')
+
+    if (format === 'html') {
+      // Create HTML receipt for preview
+      const htmlReceipt = `
 <!DOCTYPE html>
 <html>
 <head>
@@ -248,33 +255,38 @@ export async function GET(request: NextRequest, { params }: { params: { orderId:
 </html>
 `
 
-    // For now, return HTML (can be enhanced to generate PDF using puppeteer or pdfkit)
-    return new NextResponse(htmlReceipt, {
-      headers: {
-        'Content-Type': 'text/html',
-        'Content-Disposition': `inline; filename="Receipt-${receiptData.receiptNumber}.html"`,
-      },
-    })
+      // Return HTML for preview
+      return new NextResponse(htmlReceipt, {
+        headers: {
+          'Content-Type': 'text/html',
+          'Content-Disposition': `inline; filename="Receipt-${receiptData.receiptNumber}.html"`,
+        },
+      })
+    }
 
-    // TODO: Implement actual PDF generation using puppeteer or pdfkit
-    // Example with puppeteer (requires additional setup):
-    /*
-    const browser = await puppeteer.launch()
-    const page = await browser.newPage()
-    await page.setContent(htmlReceipt)
-    const pdfBuffer = await page.pdf({
-      format: 'A4',
-      printBackground: true,
-    })
-    await browser.close()
+    // Generate PDF using react-pdf
+    const pdfStream = await renderToStream(createElement(ReceiptPDF, { data: receiptData }))
 
+    // Convert stream to buffer
+    const chunks: Uint8Array[] = []
+    const reader = pdfStream.getReader()
+
+    while (true) {
+      const { done, value } = await reader.read()
+      if (done) break
+      if (value) chunks.push(value)
+    }
+
+    const pdfBuffer = Buffer.concat(chunks)
+
+    // Return PDF
     return new NextResponse(pdfBuffer, {
       headers: {
         'Content-Type': 'application/pdf',
         'Content-Disposition': `attachment; filename="Receipt-${receiptData.receiptNumber}.pdf"`,
+        'Content-Length': pdfBuffer.length.toString(),
       },
     })
-    */
   } catch (error) {
     console.error('Receipt generation error:', error)
     return NextResponse.json(
