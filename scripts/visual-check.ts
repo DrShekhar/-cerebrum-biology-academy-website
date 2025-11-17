@@ -12,38 +12,63 @@ async function visualCheck() {
   const baseUrl = process.env.BASE_URL || 'http://localhost:3000'
 
   const pages = [
-    { route: '/', name: 'home', description: 'Homepage' },
-    { route: '/courses', name: 'courses', description: 'Courses Page' },
+    // Public-facing pages
+    { route: '/', name: 'home', description: 'Homepage', category: 'public' },
+    { route: '/courses', name: 'courses', description: 'Courses Page', category: 'public' },
+    { route: '/faculty', name: 'faculty', description: 'Faculty Page', category: 'public' },
+    { route: '/about', name: 'about', description: 'About Page', category: 'public' },
+    { route: '/contact', name: 'contact', description: 'Contact Page', category: 'public' },
+
+    // Course detail pages (SEO important)
     {
       route: '/courses/class-9th-foundation',
       name: 'course-detail-9th',
       description: 'Class 9th Course Detail',
+      category: 'seo',
     },
     {
       route: '/courses/class-10th-foundation',
       name: 'course-detail-10th',
       description: 'Class 10th Course Detail',
+      category: 'seo',
+    },
+    {
+      route: '/courses/neet-2025-class-11th-foundation',
+      name: 'course-detail-11th',
+      description: 'Class 11th Course Detail',
+      category: 'seo',
     },
     {
       route: '/courses/class-12th-neet-ascent',
       name: 'course-detail-12th',
       description: 'Class 12th Course Detail',
+      category: 'seo',
     },
     {
       route: '/courses/neet-dropper-year',
       name: 'course-detail-dropper',
       description: 'Dropper Course Detail',
+      category: 'seo',
     },
-    { route: '/faculty', name: 'faculty', description: 'Faculty Page' },
-    { route: '/about', name: 'about', description: 'About Page' },
-    { route: '/contact', name: 'contact', description: 'Contact Page' },
-    { route: '/demo-booking', name: 'demo-booking', description: 'Demo Booking Page' },
-    { route: '/enrollment', name: 'enrollment', description: 'Enrollment Page' },
+
+    // Internal/conversion pages
+    { route: '/demo-booking', name: 'demo-booking', description: 'Demo Booking Page', category: 'internal' },
+    { route: '/enrollment', name: 'enrollment', description: 'Enrollment Page', category: 'internal' },
+    { route: '/results', name: 'results', description: 'Results Page', category: 'internal' },
+    { route: '/tests', name: 'tests', description: 'Tests Page', category: 'internal' },
+
+    // SEO landing pages
+    { route: '/blog', name: 'blog', description: 'Blog Page', category: 'seo' },
   ]
 
-  for (const { route, name, description } of pages) {
+  for (const { route, name, description, category } of pages) {
     try {
-      console.log(`📸 Capturing: ${description} (${route})`)
+      const categoryEmoji = {
+        public: '🌐',
+        seo: '🔍',
+        internal: '🔐',
+      }[category] || '📄'
+      console.log(`${categoryEmoji} Capturing: ${description} (${route})`)
 
       await page.goto(`${baseUrl}${route}`, {
         waitUntil: 'networkidle',
