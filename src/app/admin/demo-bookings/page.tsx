@@ -241,9 +241,22 @@ export default function DemoBookingsPage() {
     <AdminLayout>
       <div className="p-6 max-w-7xl mx-auto">
         {/* Header */}
-        <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">Demo Bookings</h1>
-          <p className="text-gray-600">Manage and track demo class bookings</p>
+        <div className="mb-8 flex justify-between items-center">
+          <div>
+            <h1 className="text-3xl font-bold text-gray-900 mb-2">Demo Bookings</h1>
+            <p className="text-gray-600">Manage and track demo class bookings</p>
+          </div>
+          <Button
+            className="bg-blue-600 hover:bg-blue-700 text-white"
+            onClick={() =>
+              alert(
+                'Schedule Demo form coming soon! This will open a modal to manually schedule a demo class.'
+              )
+            }
+          >
+            <Calendar className="w-4 h-4 mr-2" />
+            Schedule Demo
+          </Button>
         </div>
 
         {/* Stats Cards */}

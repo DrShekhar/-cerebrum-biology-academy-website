@@ -240,15 +240,30 @@ export default function StudentsPage() {
             <p className="text-gray-600 mt-2">Manage students, leads, and customer relationships</p>
           </div>
           <div className="flex space-x-3">
-            <Button variant="outline" className="text-gray-700 border-gray-300">
+            <Button
+              variant="outline"
+              className="text-gray-700 border-gray-300"
+              onClick={() => alert('Import functionality coming soon!')}
+            >
               <Upload className="w-4 h-4 mr-2" />
               Import
             </Button>
-            <Button variant="outline" className="text-gray-700 border-gray-300">
+            <Button
+              variant="outline"
+              className="text-gray-700 border-gray-300"
+              onClick={() => alert('Export functionality coming soon!')}
+            >
               <Download className="w-4 h-4 mr-2" />
               Export
             </Button>
-            <Button className="bg-blue-600 hover:bg-blue-700 text-white">
+            <Button
+              className="bg-blue-600 hover:bg-blue-700 text-white"
+              onClick={() =>
+                alert(
+                  'Add Student form coming soon! This will open a modal to create a new student record.'
+                )
+              }
+            >
               <UserPlus className="w-4 h-4 mr-2" />
               Add Student
             </Button>
