@@ -194,20 +194,19 @@ async function scheduleFollowUpActions(bookingId: string, data: DemoBookingData)
   const preferredDate = new Date(data.preferredDate)
   const reminderTime = new Date(preferredDate.getTime() - 24 * 60 * 60 * 1000)
 
-  // Log scheduled tasks (TODO: implement proper task scheduling)
-  console.log('Scheduled follow-up actions:', {
-    bookingId,
-    confirmationCall: confirmationTime,
-    reminderCall: reminderTime,
-    phone: data.phone,
-    name: data.name,
-  })
-
-  // TODO: Implement proper task scheduling system
-  // Options:
-  // 1. Use a job queue (Bull, Agenda)
-  // 2. Use cron jobs with database
-  // 3. Use external service (Zapier, Airtable automations)
+  // Schedule tasks using BullMQ/fallback scheduler
+  try {
+    const { scheduleDemoBookingTasks } = await import('@/lib/scheduler/taskQueue')
+    await scheduleDemoBookingTasks({
+      id: bookingId,
+      name: data.name,
+      phone: data.phone,
+      preferredDate: data.preferredDate,
+      preferredTime: data.preferredTime,
+    })
+  } catch (error) {
+    console.error('Failed to schedule follow-up tasks:', error)
+  }
 }
 
 // Send immediate notifications to student and admin team
