@@ -66,6 +66,7 @@ export const Footer = memo(function Footer() {
     { name: 'Online Live Classes', href: '/services/online-classes' },
     { name: 'Classroom Programs', href: '/services/classroom' },
     { name: 'NEET Mock Tests', href: '/mock-tests' },
+    { name: 'Study Materials (LMS)', href: '/tests' },
     { name: 'Ceri AI', href: '/ai-education-demo' },
     { name: 'International Students', href: '/services/international' },
     { name: 'Board Exam Preparation', href: '/services/board-prep' },
