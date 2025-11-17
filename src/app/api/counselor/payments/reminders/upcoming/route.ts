@@ -1,11 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { paymentReminderService } from '@/lib/payments/paymentReminderService'
+import { withCounselor } from '@/lib/auth/middleware'
+import type { UserSession } from '@/lib/auth/config'
 
 /**
  * GET /api/counselor/payments/reminders/upcoming?leadId=xxx
  * Get upcoming payment reminders for a specific lead
  */
-export async function GET(request: NextRequest) {
+async function handleGET(request: NextRequest, session: UserSession) {
   try {
     const searchParams = request.nextUrl.searchParams
     const leadId = searchParams.get('leadId')
@@ -37,3 +39,5 @@ export async function GET(request: NextRequest) {
     )
   }
 }
+
+export const GET = withCounselor(handleGET)

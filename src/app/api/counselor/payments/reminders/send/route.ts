@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { paymentReminderService } from '@/lib/payments/paymentReminderService'
 import { z } from 'zod'
+import { withCounselor } from '@/lib/auth/middleware'
+import type { UserSession } from '@/lib/auth/config'
 
 const sendReminderSchema = z.object({
   installmentId: z.string(),
@@ -11,7 +13,7 @@ const sendReminderSchema = z.object({
  * POST /api/counselor/payments/reminders/send
  * Send manual payment reminder for specific installment
  */
-export async function POST(request: NextRequest) {
+async function handlePOST(request: NextRequest, session: UserSession) {
   try {
     const body = await request.json()
 
@@ -61,3 +63,5 @@ export async function POST(request: NextRequest) {
     )
   }
 }
+
+export const POST = withCounselor(handlePOST)

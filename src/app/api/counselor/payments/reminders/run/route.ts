@@ -1,12 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { paymentReminderService } from '@/lib/payments/paymentReminderService'
+import { withCounselor } from '@/lib/auth/middleware'
+import type { UserSession } from '@/lib/auth/config'
 
 /**
  * POST /api/counselor/payments/reminders/run
  * Run payment reminder automation
  * Scans all pending installments and sends reminders
  */
-export async function POST(request: NextRequest) {
+async function handlePOST(request: NextRequest, session: UserSession) {
   try {
     const body = await request.json().catch(() => ({}))
 
@@ -42,7 +44,7 @@ export async function POST(request: NextRequest) {
  * GET /api/counselor/payments/reminders/run
  * Get summary of overdue payments
  */
-export async function GET() {
+async function handleGET(request: NextRequest, session: UserSession) {
   try {
     const summary = await paymentReminderService.getOverdueSummary()
 
@@ -61,3 +63,6 @@ export async function GET() {
     )
   }
 }
+
+export const POST = withCounselor(handlePOST)
+export const GET = withCounselor(handleGET)

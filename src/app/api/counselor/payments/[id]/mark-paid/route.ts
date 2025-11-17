@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
+import { withCounselor } from '@/lib/auth/middleware'
+import type { UserSession } from '@/lib/auth/config'
 
 interface RouteParams {
   params: {
@@ -7,7 +9,7 @@ interface RouteParams {
   }
 }
 
-export async function POST(request: NextRequest, { params }: RouteParams) {
+async function handlePOST(request: NextRequest, session: UserSession, { params }: RouteParams) {
   try {
     const body = await request.json()
     const { paidAmount, paymentMethod, razorpayPaymentId } = body
@@ -138,3 +140,5 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
     )
   }
 }
+
+export const POST = withCounselor(handlePOST)

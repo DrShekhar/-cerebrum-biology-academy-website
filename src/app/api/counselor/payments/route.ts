@@ -1,7 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
+import { withCounselor } from '@/lib/auth/middleware'
+import type { UserSession } from '@/lib/auth/config'
 
-export async function GET(request: NextRequest) {
+async function handleGET(request: NextRequest, session: UserSession) {
   try {
     const searchParams = request.nextUrl.searchParams
     const status = searchParams.get('status')
@@ -56,3 +58,5 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ error: 'Failed to fetch payments' }, { status: 500 })
   }
 }
+
+export const GET = withCounselor(handleGET)
