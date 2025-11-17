@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
-import { renderToStream } from '@react-pdf/renderer'
+import { pdf } from '@react-pdf/renderer'
 import { createElement } from 'react'
 import { ReceiptPDF, ReceiptData } from '@/lib/pdf/ReceiptPDF'
 
@@ -265,19 +265,8 @@ export async function GET(request: NextRequest, { params }: { params: { orderId:
     }
 
     // Generate PDF using react-pdf
-    const pdfStream = await renderToStream(createElement(ReceiptPDF, { data: receiptData }))
-
-    // Convert stream to buffer
-    const chunks: Uint8Array[] = []
-    const reader = pdfStream.getReader()
-
-    while (true) {
-      const { done, value } = await reader.read()
-      if (done) break
-      if (value) chunks.push(value)
-    }
-
-    const pdfBuffer = Buffer.concat(chunks)
+    const pdfDoc = pdf(createElement(ReceiptPDF, { data: receiptData }))
+    const pdfBuffer = await pdfDoc.toBuffer()
 
     // Return PDF
     return new NextResponse(pdfBuffer, {
