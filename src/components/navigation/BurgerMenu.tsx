@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { createPortal } from 'react-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   Menu,
@@ -35,6 +36,11 @@ const iconMap = {
 export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
   const [expandedSection, setExpandedSection] = useState<string | null>(null)
   const [isMobile, setIsMobile] = useState(false)
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   useEffect(() => {
     const checkMobile = () => {
@@ -120,41 +126,8 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
     },
   }
 
-  return (
+  const menuContent = (
     <>
-      {/* Burger Button */}
-      <button
-        onClick={onToggle}
-        className="flex items-center justify-center w-10 h-10 rounded-xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 group relative z-[10000]"
-        aria-label="Toggle navigation menu"
-        aria-expanded={isOpen}
-        aria-controls="burger-menu-panel"
-      >
-        <motion.div animate={isOpen ? 'open' : 'closed'} className="relative w-6 h-6">
-          <motion.span
-            variants={{
-              closed: { rotate: 0, y: 0 },
-              open: { rotate: 45, y: 6 },
-            }}
-            className="absolute left-0 top-0 w-6 h-0.5 bg-blue-600 transform origin-left transition-all duration-300"
-          />
-          <motion.span
-            variants={{
-              closed: { opacity: 1 },
-              open: { opacity: 0 },
-            }}
-            className="absolute left-0 top-2.5 w-6 h-0.5 bg-blue-600 transition-all duration-300"
-          />
-          <motion.span
-            variants={{
-              closed: { rotate: 0, y: 0 },
-              open: { rotate: -45, y: -6 },
-            }}
-            className="absolute left-0 top-5 w-6 h-0.5 bg-blue-600 transform origin-left transition-all duration-300"
-          />
-        </motion.div>
-      </button>
-
       {/* Overlay */}
       <AnimatePresence>
         {isOpen && (
@@ -163,8 +136,9 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
             initial="closed"
             animate="open"
             exit="closed"
-            className="fixed inset-0 bg-black bg-opacity-50 z-[10001] lg:hidden"
+            className="fixed inset-0 bg-black bg-opacity-50 z-[10200]"
             onClick={onClose}
+            style={{ pointerEvents: 'auto' }}
           />
         )}
       </AnimatePresence>
@@ -180,10 +154,10 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
             initial="closed"
             animate="open"
             exit="closed"
-            className="fixed left-0 top-0 h-full w-80 bg-white shadow-2xl z-[10002] overflow-y-auto"
+            className="fixed left-0 top-0 h-full w-80 bg-white shadow-2xl z-[10300] overflow-y-auto"
           >
             {/* Header */}
-            <div className="sticky top-0 z-50 bg-white border-b border-gray-200 p-6 flex items-center justify-between">
+            <div className="sticky top-0 bg-white border-b border-gray-200 p-6 flex items-center justify-between pointer-events-auto">
               <div>
                 <h2 className="text-xl font-bold text-gray-900">Navigation</h2>
                 <p className="text-sm text-gray-500">Explore our courses & services</p>
@@ -283,8 +257,8 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
               })}
             </div>
 
-            {/* Footer */}
-            <div className="sticky bottom-0 z-40 bg-gradient-to-r from-blue-600 to-purple-600 text-white p-6">
+            {/* Footer - Non-sticky to avoid blocking clicks */}
+            <div className="mt-auto bg-gradient-to-r from-blue-600 to-purple-600 text-white p-6">
               <div className="text-center">
                 <h3 className="font-bold text-lg mb-2">Ready to Start?</h3>
                 <p className="text-blue-100 text-sm mb-4">
@@ -303,6 +277,46 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
           </motion.div>
         )}
       </AnimatePresence>
+    </>
+  )
+
+  return (
+    <>
+      {/* Burger Button */}
+      <button
+        onClick={onToggle}
+        className="flex items-center justify-center w-10 h-10 rounded-xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 group relative z-[10100]"
+        aria-label="Toggle navigation menu"
+        aria-expanded={isOpen}
+        aria-controls="burger-menu-panel"
+      >
+        <motion.div animate={isOpen ? 'open' : 'closed'} className="relative w-6 h-6">
+          <motion.span
+            variants={{
+              closed: { rotate: 0, y: 0 },
+              open: { rotate: 45, y: 6 },
+            }}
+            className="absolute left-0 top-0 w-6 h-0.5 bg-blue-600 transform origin-left transition-all duration-300"
+          />
+          <motion.span
+            variants={{
+              closed: { opacity: 1 },
+              open: { opacity: 0 },
+            }}
+            className="absolute left-0 top-2.5 w-6 h-0.5 bg-blue-600 transition-all duration-300"
+          />
+          <motion.span
+            variants={{
+              closed: { rotate: 0, y: 0 },
+              open: { rotate: -45, y: -6 },
+            }}
+            className="absolute left-0 top-5 w-6 h-0.5 bg-blue-600 transform origin-left transition-all duration-300"
+          />
+        </motion.div>
+      </button>
+
+      {/* Portal for overlay and menu panel to escape header stacking context */}
+      {mounted && createPortal(menuContent, document.body)}
     </>
   )
 }
