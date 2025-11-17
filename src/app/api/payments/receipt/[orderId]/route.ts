@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
-import { pdf } from '@react-pdf/renderer'
-import { createElement } from 'react'
+import { renderToBuffer } from '@react-pdf/renderer'
+import React from 'react'
 import { ReceiptPDF, ReceiptData } from '@/lib/pdf/ReceiptPDF'
 
 export async function GET(request: NextRequest, { params }: { params: { orderId: string } }) {
@@ -264,16 +264,13 @@ export async function GET(request: NextRequest, { params }: { params: { orderId:
       })
     }
 
-    // Generate PDF using react-pdf
-    const pdfDoc = pdf(createElement(ReceiptPDF, { data: receiptData }))
-
-    // Convert blob to buffer
-    const blob = await pdfDoc.toBlob()
-    const arrayBuffer = await blob.arrayBuffer()
-    const pdfBuffer = Buffer.from(arrayBuffer)
+    // Generate PDF using react-pdf - ReceiptPDF returns a Document element
+    const pdfBuffer = await renderToBuffer(
+      React.createElement(ReceiptPDF, { data: receiptData }) as React.ReactElement<any>
+    )
 
     // Return PDF
-    return new NextResponse(pdfBuffer, {
+    return new NextResponse(pdfBuffer as unknown as BodyInit, {
       headers: {
         'Content-Type': 'application/pdf',
         'Content-Disposition': `attachment; filename="Receipt-${receiptData.receiptNumber}.pdf"`,
