@@ -108,7 +108,7 @@ const VIDEO_TESTIMONIALS = [
 
 const TOP_COLLEGES = [
   { name: 'AIIMS Delhi', students: 89, color: 'text-blue-600', bgColor: 'bg-blue-50' },
-  { name: 'AIIMS Bombay', students: 67, color: 'text-purple-600', bgColor: 'bg-purple-50' },
+  { name: 'AIIMS Rishikesh', students: 67, color: 'text-purple-600', bgColor: 'bg-purple-50' },
   { name: 'MAMC Delhi', students: 54, color: 'text-green-600', bgColor: 'bg-green-50' },
   { name: 'JIPMER Puducherry', students: 37, color: 'text-orange-600', bgColor: 'bg-orange-50' },
   { name: 'KGMC Lucknow', students: 45, color: 'text-teal-600', bgColor: 'bg-teal-50' },
