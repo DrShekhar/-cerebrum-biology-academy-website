@@ -1,10 +1,13 @@
-// import { registerOTel } from '@vercel/otel';
+import * as Sentry from '@sentry/nextjs'
 
-export function register() {
-  // registerOTel({ serviceName: 'cerebrum-biology-academy' });
-  // Temporarily disabled due to dependency resolution issue
-  // Will re-enable after verifying all OpenTelemetry packages are properly installed
+export async function register() {
+  if (process.env.NEXT_RUNTIME === 'nodejs') {
+    await import('./sentry.server.config')
+  }
+
+  if (process.env.NEXT_RUNTIME === 'edge') {
+    await import('./sentry.edge.config')
+  }
 }
 
-// Constitutional Excellence: Harvard Medical School Performance Monitoring
-// This enables production-grade observability for 50,000+ students
+export const onRequestError = Sentry.captureRequestError
