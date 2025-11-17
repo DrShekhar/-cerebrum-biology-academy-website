@@ -1,6 +1,10 @@
 import { prisma as db } from '@/lib/database'
 import type { ExportOptions, ExportData, ChartData } from '@/lib/types/analytics'
 import { performanceAnalytics } from './performanceService'
+import { renderToBuffer } from '@react-pdf/renderer'
+import React from 'react'
+import { AnalyticsReportPDF } from '@/lib/pdf/AnalyticsReportPDF'
+import ExcelJS from 'exceljs'
 
 export class ExportService {
   /**
@@ -343,16 +347,16 @@ export class ExportService {
   /**
    * Generate PDF report
    */
-  async generatePDFReport(exportData: ExportData): Promise<Buffer> {
-    // This would typically use a library like puppeteer or jsPDF
-    // For now, returning a placeholder
-    const htmlContent = this.generateHTMLReport(exportData)
+  async generatePDFReport(exportData: ExportData, reportTitle?: string): Promise<Buffer> {
+    // Generate PDF using @react-pdf/renderer
+    const pdfBuffer = await renderToBuffer(
+      React.createElement(AnalyticsReportPDF, {
+        data: exportData,
+        reportTitle,
+      }) as React.ReactElement<any>
+    )
 
-    // TODO: Implement PDF generation
-    // const pdf = await generatePDF(htmlContent)
-    // return pdf
-
-    return Buffer.from(htmlContent, 'utf-8')
+    return pdfBuffer as unknown as Buffer
   }
 
   /**
@@ -372,18 +376,133 @@ export class ExportService {
   /**
    * Generate Excel data
    */
-  generateExcel(exportData: ExportData): any {
-    // TODO: Implement Excel generation using a library like exceljs
-    return {
-      sheets: {
-        'Performance Data': exportData.data,
-        Summary: [
-          { field: 'Total Records', value: exportData.summary.totalRecords },
-          { field: 'Date Range', value: exportData.summary.dateRange },
-          { field: 'Generated At', value: exportData.summary.generatedAt.toISOString() },
-        ],
-      },
+  async generateExcel(exportData: ExportData): Promise<Buffer> {
+    const workbook = new ExcelJS.Workbook()
+
+    workbook.creator = 'Cerebrum Biology Academy'
+    workbook.created = new Date()
+    workbook.modified = new Date()
+    workbook.lastPrinted = new Date()
+
+    // Create Summary sheet
+    const summarySheet = workbook.addWorksheet('Summary')
+
+    // Style header
+    summarySheet.columns = [
+      { header: 'Field', key: 'field', width: 25 },
+      { header: 'Value', key: 'value', width: 40 },
+    ]
+
+    // Add header row styling
+    summarySheet.getRow(1).font = { bold: true, size: 12 }
+    summarySheet.getRow(1).fill = {
+      type: 'pattern',
+      pattern: 'solid',
+      fgColor: { argb: 'FF3B82F6' },
     }
+    summarySheet.getRow(1).font = { color: { argb: 'FFFFFFFF' }, bold: true }
+
+    // Add summary data
+    summarySheet.addRow({ field: 'Total Records', value: exportData.summary.totalRecords })
+    summarySheet.addRow({ field: 'Date Range', value: exportData.summary.dateRange })
+    summarySheet.addRow({
+      field: 'Generated At',
+      value: exportData.summary.generatedAt.toLocaleString(),
+    })
+
+    // Create Performance Data sheet
+    const dataSheet = workbook.addWorksheet('Performance Data')
+
+    dataSheet.columns = [
+      { header: 'Section', key: 'section', width: 25 },
+      { header: 'Metric', key: 'metric', width: 40 },
+      { header: 'Value', key: 'value', width: 20 },
+    ]
+
+    // Add header row styling
+    dataSheet.getRow(1).font = { bold: true, size: 12 }
+    dataSheet.getRow(1).fill = {
+      type: 'pattern',
+      pattern: 'solid',
+      fgColor: { argb: 'FF3B82F6' },
+    }
+    dataSheet.getRow(1).font = { color: { argb: 'FFFFFFFF' }, bold: true }
+
+    // Add data rows
+    exportData.data.forEach((row) => {
+      dataSheet.addRow({
+        section: row.section,
+        metric: row.metric,
+        value: row.value,
+      })
+    })
+
+    // Add alternating row colors
+    dataSheet.eachRow((row, rowNumber) => {
+      if (rowNumber > 1 && rowNumber % 2 === 0) {
+        row.fill = {
+          type: 'pattern',
+          pattern: 'solid',
+          fgColor: { argb: 'FFF3F4F6' },
+        }
+      }
+    })
+
+    // Group data by section and create separate sheets for major sections
+    const groupedData = exportData.data.reduce(
+      (acc, row) => {
+        if (!acc[row.section]) {
+          acc[row.section] = []
+        }
+        acc[row.section].push(row)
+        return acc
+      },
+      {} as Record<string, typeof exportData.data>
+    )
+
+    // Create sheets for major sections with more than 5 rows
+    Object.entries(groupedData).forEach(([sectionName, sectionData]) => {
+      if (sectionData.length > 5) {
+        const sectionSheet = workbook.addWorksheet(sectionName.substring(0, 30)) // Excel sheet name limit
+
+        sectionSheet.columns = [
+          { header: 'Metric', key: 'metric', width: 40 },
+          { header: 'Value', key: 'value', width: 20 },
+        ]
+
+        // Header styling
+        sectionSheet.getRow(1).font = { bold: true, size: 12 }
+        sectionSheet.getRow(1).fill = {
+          type: 'pattern',
+          pattern: 'solid',
+          fgColor: { argb: 'FF3B82F6' },
+        }
+        sectionSheet.getRow(1).font = { color: { argb: 'FFFFFFFF' }, bold: true }
+
+        // Add data
+        sectionData.forEach((row) => {
+          sectionSheet.addRow({
+            metric: row.metric,
+            value: row.value,
+          })
+        })
+
+        // Alternating row colors
+        sectionSheet.eachRow((row, rowNumber) => {
+          if (rowNumber > 1 && rowNumber % 2 === 0) {
+            row.fill = {
+              type: 'pattern',
+              pattern: 'solid',
+              fgColor: { argb: 'FFF3F4F6' },
+            }
+          }
+        })
+      }
+    })
+
+    // Generate buffer
+    const buffer = await workbook.xlsx.writeBuffer()
+    return Buffer.from(buffer)
   }
 
   // Chart preparation methods
