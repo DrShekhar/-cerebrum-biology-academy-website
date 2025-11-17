@@ -1,6 +1,7 @@
 import { NextRequest } from 'next/server'
 import { handleError, successResponse, logError } from '@/lib/errors'
 import { withErrorHandling } from '@/lib/errors'
+import prisma from '@/lib/prisma'
 
 // Rate limiting for error reporting API
 const reportCounts = new Map<string, { count: number; resetTime: number }>()
@@ -76,38 +77,68 @@ async function POST(request: NextRequest) {
 
 async function storeErrorReport(errorReport: any, clientIP: string) {
   try {
-    // TODO: Implement database storage or external service integration
-    // Examples:
+    const fingerprint =
+      errorReport.fingerprint ||
+      `${errorReport.error.name}-${errorReport.error.message}`.substring(0, 100)
 
-    // 1. Database storage
-    // await prisma.errorReport.create({
-    //   data: {
-    //     fingerprint: errorReport.fingerprint,
-    //     message: errorReport.error.message,
-    //     stack: errorReport.error.stack,
-    //     severity: errorReport.severity,
-    //     context: errorReport.context,
-    //     clientIP,
-    //     createdAt: new Date(),
-    //   }
-    // })
+    const existingError = await prisma.error_reports.findFirst({
+      where: { fingerprint },
+      orderBy: { lastSeen: 'desc' },
+    })
 
-    // 2. External service (Sentry, DataDog, etc.)
-    // await sendToExternalService(errorReport)
+    if (existingError) {
+      await prisma.error_reports.update({
+        where: { id: existingError.id },
+        data: {
+          occurrences: existingError.occurrences + 1,
+          lastSeen: new Date(),
+          context: errorReport.context || existingError.context,
+          stack: errorReport.error.stack || existingError.stack,
+        },
+      })
+    } else {
+      await prisma.error_reports.create({
+        data: {
+          fingerprint,
+          message: errorReport.error.message,
+          stack: errorReport.error.stack,
+          errorName: errorReport.error.name || 'Error',
+          severity: mapSeverity(errorReport.severity),
+          context: errorReport.context,
+          url: errorReport.context?.url,
+          userAgent: errorReport.context?.userAgent,
+          clientIP,
+          userId: errorReport.context?.userId,
+        },
+      })
+    }
 
-    // 3. Email alerts for critical errors
-    // if (errorReport.severity === 'critical') {
-    //   await sendCriticalErrorAlert(errorReport)
-    // }
+    if (errorReport.severity === 'critical') {
+      console.error('🚨 CRITICAL ERROR REPORTED:', {
+        fingerprint,
+        message: errorReport.error.message,
+        clientIP,
+      })
+    }
 
     console.log('Error report stored:', {
-      fingerprint: errorReport.fingerprint,
+      fingerprint,
       severity: errorReport.severity,
       clientIP,
+      isNew: !existingError,
     })
   } catch (error) {
     console.error('Failed to store error report:', error)
   }
+}
+
+function mapSeverity(severity?: string): 'low' | 'normal' | 'high' | 'critical' {
+  if (!severity) return 'normal'
+  const normalizedSeverity = severity.toLowerCase()
+  if (['low', 'normal', 'high', 'critical'].includes(normalizedSeverity)) {
+    return normalizedSeverity as 'low' | 'normal' | 'high' | 'critical'
+  }
+  return 'normal'
 }
 
 // Health check endpoint

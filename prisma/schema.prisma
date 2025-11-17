@@ -1246,6 +1246,7 @@ model users {
   whatsapp_conversations          whatsapp_conversations[]  @relation("AssignedCounselor")
   whatsapp_messages_sent          whatsapp_messages[]       @relation("SentByUser")
   security_audit_logs             security_audit_logs[]
+  error_reports                   error_reports[]
 }
 
 model whatsapp_otp {
@@ -1717,4 +1718,53 @@ enum SecurityAuditSeverity {
   medium
   high
   critical
+}
+
+model error_reports {
+  id          String              @id @default(cuid())
+  fingerprint String
+  message     String
+  stack       String?             @db.Text
+  errorName   String              @default("Error")
+  severity    ErrorReportSeverity @default(normal)
+  context     Json?
+  url         String?
+  userAgent   String?
+  clientIP    String
+  userId      String?
+  resolved    Boolean             @default(false)
+  resolvedAt  DateTime?
+  resolvedBy  String?
+  occurrences Int                 @default(1)
+  firstSeen   DateTime            @default(now())
+  lastSeen    DateTime            @default(now())
+  createdAt   DateTime            @default(now())
+  updatedAt   DateTime            @updatedAt
+  users       users?              @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  @@index([fingerprint, lastSeen])
+  @@index([severity, resolved, lastSeen])
+  @@index([clientIP, lastSeen])
+  @@index([userId, lastSeen])
+  @@index([createdAt])
+}
+
+enum ErrorReportSeverity {
+  low
+  normal
+  high
+  critical
+}
+
+model error_feedback {
+  id                String   @id @default(cuid())
+  errorId           String
+  description       String   @db.Text
+  email             String?
+  reproductionSteps String?  @db.Text
+  clientIP          String
+  createdAt         DateTime @default(now())
+
+  @@index([errorId, createdAt])
+  @@index([createdAt])
 }

@@ -2,6 +2,7 @@ import { NextRequest } from 'next/server'
 import { handleError, successResponse, ValidationError } from '@/lib/errors'
 import { withErrorHandling } from '@/lib/errors'
 import { z } from 'zod'
+import prisma from '@/lib/prisma'
 
 // Validation schema for user feedback
 const feedbackSchema = z.object({
@@ -51,17 +52,16 @@ async function POST(request: NextRequest) {
 
 async function storeFeedback(feedback: z.infer<typeof feedbackSchema>, clientIP: string) {
   try {
-    // TODO: Store in database
-    // await prisma.errorFeedback.create({
-    //   data: {
-    //     errorId: feedback.errorId,
-    //     description: feedback.feedback.description,
-    //     email: feedback.feedback.email,
-    //     reproductionSteps: feedback.feedback.reproductionSteps,
-    //     clientIP,
-    //     createdAt: new Date(feedback.timestamp),
-    //   }
-    // })
+    await prisma.error_feedback.create({
+      data: {
+        errorId: feedback.errorId,
+        description: feedback.feedback.description,
+        email: feedback.feedback.email,
+        reproductionSteps: feedback.feedback.reproductionSteps,
+        clientIP,
+        createdAt: new Date(feedback.timestamp),
+      },
+    })
 
     console.log('User feedback stored:', {
       errorId: feedback.errorId,
