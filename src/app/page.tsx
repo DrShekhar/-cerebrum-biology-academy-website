@@ -23,8 +23,8 @@ export default function Home() {
       {/* Trust Signals Banner - Compact Version */}
       <TrustSignalsBanner variant="compact" />
 
-      {/* Success Ticker - Bottom of page, non-intrusive */}
-      <SuccessTicker autoHideDuration={5} scrollSpeed={40} showCloseButton={true} />
+      {/* Success Ticker - Bottom of page, auto-dismiss after 12 seconds */}
+      <SuccessTicker />
 
       <CoursesSection />
       <FacultySection />

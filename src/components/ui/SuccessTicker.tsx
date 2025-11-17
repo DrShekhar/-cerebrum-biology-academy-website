@@ -6,27 +6,27 @@ import { X, TrendingUp, Trophy, Star, MapPin } from 'lucide-react'
 import { getRandomSuccessStory } from '@/data/studentSuccessData'
 
 interface SuccessTickerProps {
-  autoHideDuration?: number // Auto-hide after X minutes (0 = never auto-hide)
+  autoHideDuration?: number // Auto-hide after X seconds (0 = never auto-hide)
   scrollSpeed?: number // Speed of scrolling animation in seconds
   showCloseButton?: boolean
 }
 
 export function SuccessTicker({
-  autoHideDuration = 5, // Auto-hide after 5 minutes
-  scrollSpeed = 30, // 30 seconds for full scroll
+  autoHideDuration = 12, // Auto-hide after 12 seconds
+  scrollSpeed = 60, // 60 seconds for full scroll
   showCloseButton = true,
 }: SuccessTickerProps) {
   const [isVisible, setIsVisible] = useState(false)
   const [isDismissed, setIsDismissed] = useState(false)
   const [successStories, setSuccessStories] = useState<string[]>([])
 
-  // Generate success stories (excluding scores > 650)
+  // Generate 50 unique success stories (excluding scores > 650)
   useEffect(() => {
     const stories: string[] = []
     let attempts = 0
-    const maxAttempts = 50 // Prevent infinite loop
+    const maxAttempts = 150 // Prevent infinite loop
 
-    while (stories.length < 10 && attempts < maxAttempts) {
+    while (stories.length < 50 && attempts < maxAttempts) {
       const story = getRandomSuccessStory()
       attempts++
 
@@ -63,15 +63,12 @@ export function SuccessTicker({
       setIsVisible(true)
     }, 3000)
 
-    // Auto-hide after specified duration
+    // Auto-hide after specified duration (in seconds)
     let hideTimer: NodeJS.Timeout
     if (autoHideDuration > 0) {
-      hideTimer = setTimeout(
-        () => {
-          setIsVisible(false)
-        },
-        autoHideDuration * 60 * 1000
-      )
+      hideTimer = setTimeout(() => {
+        setIsVisible(false)
+      }, autoHideDuration * 1000)
     }
 
     return () => {
