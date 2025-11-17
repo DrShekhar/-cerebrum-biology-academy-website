@@ -30,6 +30,7 @@ import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
 import { Modal } from '@/components/ui/Modal'
 import { AddStudentForm } from '@/components/admin/AddStudentForm'
+import { EditStudentForm } from '@/components/admin/EditStudentForm'
 
 interface Student {
   id: string
@@ -141,6 +142,8 @@ export default function StudentsPage() {
   const [priorityFilter, setPriorityFilter] = useState<string>('all')
   const [selectedStudents, setSelectedStudents] = useState<string[]>([])
   const [isAddStudentModalOpen, setIsAddStudentModalOpen] = useState(false)
+  const [isEditStudentModalOpen, setIsEditStudentModalOpen] = useState(false)
+  const [selectedStudent, setSelectedStudent] = useState<Student | null>(null)
 
   useEffect(() => {
     let filtered = students
@@ -454,7 +457,13 @@ export default function StudentsPage() {
                         <button className="text-blue-600 hover:text-blue-900">
                           <Eye className="w-4 h-4" />
                         </button>
-                        <button className="text-gray-600 hover:text-gray-900">
+                        <button
+                          className="text-gray-600 hover:text-gray-900"
+                          onClick={() => {
+                            setSelectedStudent(student)
+                            setIsEditStudentModalOpen(true)
+                          }}
+                        >
                           <Edit className="w-4 h-4" />
                         </button>
                         <button className="text-green-600 hover:text-green-900">
@@ -497,6 +506,30 @@ export default function StudentsPage() {
           onCancel={() => setIsAddStudentModalOpen(false)}
         />
       </Modal>
+
+      {/* Edit Student Modal */}
+      {selectedStudent && (
+        <Modal
+          open={isEditStudentModalOpen}
+          onOpenChange={setIsEditStudentModalOpen}
+          title="Edit Student"
+          description="Update student information and status."
+          size="xl"
+        >
+          <EditStudentForm
+            student={selectedStudent}
+            onSuccess={() => {
+              setIsEditStudentModalOpen(false)
+              setSelectedStudent(null)
+              window.location.reload()
+            }}
+            onCancel={() => {
+              setIsEditStudentModalOpen(false)
+              setSelectedStudent(null)
+            }}
+          />
+        </Modal>
+      )}
     </AdminLayout>
   )
 }

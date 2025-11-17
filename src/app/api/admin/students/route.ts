@@ -23,6 +23,29 @@ const addStudentSchema = z.object({
   notes: z.string().optional(),
 })
 
+const updateStudentSchema = z.object({
+  id: z.string().min(1, 'Student ID is required'),
+  studentName: z.string().min(2, 'Name must be at least 2 characters').max(100),
+  email: z.string().email('Invalid email address'),
+  phone: z
+    .string()
+    .min(10, 'Phone must be at least 10 digits')
+    .regex(/^[+]?[\d\s()-]+$/, 'Invalid phone number format'),
+  whatsappNumber: z.string().optional(),
+  dateOfBirth: z.string().optional(),
+  class: z.string().min(1, 'Class is required'),
+  school: z.string().min(1, 'School name is required'),
+  city: z.string().min(1, 'City is required'),
+  state: z.string().min(1, 'State is required'),
+  status: z.enum(['lead', 'active', 'enrolled', 'paused', 'completed', 'dropped']),
+  leadSource: z.enum(['website', 'referral', 'social_media', 'advertisement', 'direct']),
+  priority: z.enum(['high', 'medium', 'low']),
+  parentName: z.string().optional(),
+  parentPhone: z.string().optional(),
+  notes: z.string().optional(),
+  tags: z.array(z.string()).optional(),
+})
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
@@ -108,6 +131,115 @@ export async function POST(request: NextRequest) {
         {
           success: false,
           error: error.message || 'Failed to create student',
+        },
+        { status: 500 }
+      )
+    }
+
+    return NextResponse.json(
+      {
+        success: false,
+        error: 'An unexpected error occurred',
+      },
+      { status: 500 }
+    )
+  }
+}
+
+export async function PUT(request: NextRequest) {
+  try {
+    const body = await request.json()
+
+    // Validate request body
+    const validatedData = updateStudentSchema.parse(body)
+
+    // Check if student exists
+    const existingStudent = await prisma.leads.findUnique({
+      where: { id: validatedData.id },
+    })
+
+    if (!existingStudent) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: 'Student not found',
+        },
+        { status: 404 }
+      )
+    }
+
+    // Update student in database
+    const updatedStudent = await prisma.leads.update({
+      where: { id: validatedData.id },
+      data: {
+        name: validatedData.studentName,
+        email: validatedData.email,
+        phone: validatedData.phone,
+        whatsappNumber: validatedData.whatsappNumber || null,
+        dateOfBirth: validatedData.dateOfBirth ? new Date(validatedData.dateOfBirth) : null,
+        class: validatedData.class,
+        school: validatedData.school,
+        city: validatedData.city,
+        state: validatedData.state,
+        leadSource: validatedData.leadSource,
+        priority: validatedData.priority.toUpperCase() as any,
+        parentName: validatedData.parentName || null,
+        parentPhone: validatedData.parentPhone || null,
+        notes: validatedData.notes || null,
+        status: validatedData.status.toUpperCase() as any,
+        tags: validatedData.tags || [],
+        updatedAt: new Date(),
+      },
+    })
+
+    // Log activity
+    await prisma.activities.create({
+      data: {
+        entityType: 'lead',
+        entityId: updatedStudent.id,
+        action: 'updated',
+        description: `Student ${validatedData.studentName} updated via admin panel`,
+        performedBy: 'admin',
+        metadata: {
+          source: 'admin_panel',
+          studentName: validatedData.studentName,
+          email: validatedData.email,
+          changes: {
+            status: validatedData.status,
+            priority: validatedData.priority,
+          },
+        },
+      },
+    })
+
+    return NextResponse.json(
+      {
+        success: true,
+        message: 'Student updated successfully',
+        data: updatedStudent,
+      },
+      { status: 200 }
+    )
+  } catch (error) {
+    // Handle Zod validation errors
+    if (error instanceof z.ZodError) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: 'Validation failed',
+          details: error.errors,
+        },
+        { status: 400 }
+      )
+    }
+
+    // Handle Prisma errors
+    if (error instanceof Error) {
+      console.error('Error updating student:', error)
+      return NextResponse.json(
+        {
+          success: false,
+          error: error.message || 'Failed to update student',
         },
         { status: 500 }
       )
