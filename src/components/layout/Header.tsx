@@ -94,7 +94,7 @@ const Header = () => {
 
   return (
     <header
-      className="bg-white/95 backdrop-blur-sm shadow-md sticky top-0 z-50 border-b border-gray-100"
+      className="bg-white/95 backdrop-blur-sm shadow-md sticky top-0 z-[9999] border-b border-gray-100"
       role="banner"
     >
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
