@@ -10,6 +10,7 @@ import { Footer } from '@/components/layout/Footer'
 import { TrustSignalsBanner } from '@/components/trust/TrustSignalsBanner'
 import { GoogleReviewsWidget } from '@/components/social-proof/GoogleReviewsWidget'
 import { SuccessTicker } from '@/components/ui/SuccessTicker'
+import { MaintenanceNotice } from '@/components/ui/MaintenanceNotice'
 import { realTestimonials } from '@/data/realTestimonials'
 import Link from 'next/link'
 
@@ -18,6 +19,9 @@ export const metadata: Metadata = generatePageMetadata('home')
 export default function Home() {
   return (
     <div className="min-h-screen">
+      {/* Maintenance Notice - Auto-dismiss after 8 seconds */}
+      <MaintenanceNotice />
+
       <OptimizedHeroSection />
 
       {/* Trust Signals Banner - Compact Version */}
