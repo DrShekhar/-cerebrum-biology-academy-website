@@ -246,18 +246,107 @@ function verifySignature(
   // Implement signature verification per source
   switch (source) {
     case 'google_ads':
-      // Verify Google's signature
-      // TODO: Implement Google signature verification
-      return true
+      // Verify Google's signature using HMAC SHA-256
+      // Google sends: X-Goog-Signature header with HMAC of request body
+      const googleSecret = process.env.WEBHOOK_SECRET_GOOGLE_ADS
+      if (!googleSecret) {
+        console.warn('WEBHOOK_SECRET_GOOGLE_ADS not configured')
+        return process.env.NODE_ENV === 'development'
+      }
+
+      try {
+        const expectedSignature = crypto
+          .createHmac('sha256', googleSecret)
+          .update(JSON.stringify(payload))
+          .digest('hex')
+
+        const isValidGoogle =
+          signature &&
+          crypto.timingSafeEqual(Buffer.from(signature), Buffer.from(expectedSignature))
+
+        if (!isValidGoogle) {
+          console.error('Invalid Google Ads webhook signature')
+        }
+
+        return isValidGoogle
+      } catch (error) {
+        console.error('Google signature verification error:', error)
+        return false
+      }
 
     case 'meta_ads':
-      // Verify Facebook's signature
-      // TODO: Implement Facebook signature verification
-      return true
+      // Verify Facebook's signature using HMAC SHA-256
+      // Facebook sends: X-Hub-Signature-256 header with sha256=<signature>
+      const metaSecret = process.env.WEBHOOK_SECRET_META_ADS
+      if (!metaSecret) {
+        console.warn('WEBHOOK_SECRET_META_ADS not configured')
+        return process.env.NODE_ENV === 'development'
+      }
+
+      try {
+        // Facebook signature format: "sha256=<signature>"
+        const signatureHash = signature?.replace('sha256=', '') || ''
+
+        const expectedMetaSignature = crypto
+          .createHmac('sha256', metaSecret)
+          .update(JSON.stringify(payload))
+          .digest('hex')
+
+        const isValidMeta =
+          signatureHash &&
+          crypto.timingSafeEqual(Buffer.from(signatureHash), Buffer.from(expectedMetaSignature))
+
+        if (!isValidMeta) {
+          console.error('Invalid Meta Ads webhook signature')
+        }
+
+        return isValidMeta
+      } catch (error) {
+        console.error('Meta signature verification error:', error)
+        return false
+      }
 
     case 'sulekha':
     case 'justdial':
       // These typically use API keys or IP whitelisting
+      // Can add API key verification if provided by these platforms
+      const sulekhaSecret = process.env.WEBHOOK_SECRET_SULEKHA
+      const justdialSecret = process.env.WEBHOOK_SECRET_JUSTDIAL
+
+      if (source === 'sulekha' && sulekhaSecret && signature) {
+        try {
+          const expectedSulekhaSignature = crypto
+            .createHmac('sha256', sulekhaSecret)
+            .update(JSON.stringify(payload))
+            .digest('hex')
+
+          return crypto.timingSafeEqual(
+            Buffer.from(signature),
+            Buffer.from(expectedSulekhaSignature)
+          )
+        } catch (error) {
+          console.error('Sulekha signature verification error:', error)
+          return false
+        }
+      }
+
+      if (source === 'justdial' && justdialSecret && signature) {
+        try {
+          const expectedJustdialSignature = crypto
+            .createHmac('sha256', justdialSecret)
+            .update(JSON.stringify(payload))
+            .digest('hex')
+
+          return crypto.timingSafeEqual(
+            Buffer.from(signature),
+            Buffer.from(expectedJustdialSignature)
+          )
+        } catch (error) {
+          console.error('Justdial signature verification error:', error)
+          return false
+        }
+      }
+
       return true
 
     default:
