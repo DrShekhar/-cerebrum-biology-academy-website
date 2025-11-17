@@ -3,8 +3,7 @@ import { productionLogger, ProductionLogger, type LogContext } from './productio
 
 const isProduction = process.env.NODE_ENV === 'production'
 
-export const logger: Logger | ProductionLogger = isProduction ? productionLogger : simpleLogger
+const logger: Logger | ProductionLogger = isProduction ? productionLogger : simpleLogger
 
-export { ProductionLogger, type LogContext, Logger }
-
+export { logger, ProductionLogger, type LogContext, Logger }
 export default logger
