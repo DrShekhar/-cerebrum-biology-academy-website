@@ -9,9 +9,7 @@ import { BookingSection } from '@/components/layout/BookingSection'
 import { Footer } from '@/components/layout/Footer'
 import { TrustSignalsBanner } from '@/components/trust/TrustSignalsBanner'
 import { GoogleReviewsWidget } from '@/components/social-proof/GoogleReviewsWidget'
-import { LiveActivityFeed } from '@/components/social-proof/LiveActivityFeed'
-import { SuccessNotifications } from '@/components/ui/SuccessNotifications'
-import { LiveEnrollmentNotifications } from '@/components/ui/LiveEnrollmentNotifications'
+import { SuccessTicker } from '@/components/ui/SuccessTicker'
 import { realTestimonials } from '@/data/realTestimonials'
 import Link from 'next/link'
 
@@ -25,24 +23,8 @@ export default function Home() {
       {/* Trust Signals Banner - Compact Version */}
       <TrustSignalsBanner variant="compact" />
 
-      {/* Live Activity Feed - Floating */}
-      <LiveActivityFeed variant="floating" />
-
-      {/* Success Notifications - Top Right with Coordination */}
-      <SuccessNotifications
-        maxNotifications={5}
-        displayDuration={3}
-        notificationInterval={10}
-        useCoordination={true}
-      />
-
-      {/* Live Enrollment Notifications - Top Left with Coordination */}
-      <LiveEnrollmentNotifications
-        showDuration={5}
-        notificationInterval={15}
-        maxVisible={3}
-        useCoordination={true}
-      />
+      {/* Success Ticker - Bottom of page, non-intrusive */}
+      <SuccessTicker autoHideDuration={5} scrollSpeed={40} showCloseButton={true} />
 
       <CoursesSection />
       <FacultySection />

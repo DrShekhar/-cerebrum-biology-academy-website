@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { motion, useInView, useMotionValue, useSpring } from 'framer-motion'
 import { Trophy, Target, Users, Star, TrendingUp, Award, BookOpen, Heart } from 'lucide-react'
+import { successStats } from '@/data/studentSuccessData'
 
 interface MetricCard {
   id: string
@@ -382,14 +383,22 @@ export function SuccessMetrics({ className = '' }: SuccessMetricsProps) {
             <span className="text-xl font-semibold">Built on Trust & Excellence</span>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-6">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-6">
             <div>
-              <div className="text-2xl font-bold mb-1">5+ Years</div>
-              <div className="text-blue-100 text-sm">Teaching Experience</div>
+              <div className="text-2xl font-bold mb-1">
+                {successStats.totalSelections.toLocaleString()}
+              </div>
+              <div className="text-blue-100 text-sm">Total NEET Selections</div>
             </div>
             <div>
-              <div className="text-2xl font-bold mb-1">15+ Faculty</div>
-              <div className="text-blue-100 text-sm">Expert Educators</div>
+              <div className="text-2xl font-bold mb-1">{successStats.successRate}%</div>
+              <div className="text-blue-100 text-sm">Success Rate</div>
+            </div>
+            <div>
+              <div className="text-2xl font-bold mb-1">
+                {successStats.studentsThisYear.toLocaleString()}
+              </div>
+              <div className="text-blue-100 text-sm">Students This Year</div>
             </div>
             <div>
               <div className="text-2xl font-bold mb-1">24/7</div>
