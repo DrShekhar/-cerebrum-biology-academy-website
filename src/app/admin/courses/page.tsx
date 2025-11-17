@@ -25,6 +25,7 @@ import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
 import { Modal } from '@/components/ui/Modal'
 import { CreateCourseForm } from '@/components/admin/CreateCourseForm'
+import { EditCourseForm } from '@/components/admin/EditCourseForm'
 
 interface Course {
   id: string
@@ -146,6 +147,8 @@ export default function CoursesPage() {
   const [typeFilter, setTypeFilter] = useState<string>('all')
   const [statusFilter, setStatusFilter] = useState<string>('all')
   const [isCreateCourseModalOpen, setIsCreateCourseModalOpen] = useState(false)
+  const [isEditCourseModalOpen, setIsEditCourseModalOpen] = useState(false)
+  const [selectedCourse, setSelectedCourse] = useState<Course | null>(null)
 
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -334,7 +337,13 @@ export default function CoursesPage() {
                   <button className="text-blue-600 hover:text-blue-900">
                     <Eye className="w-4 h-4" />
                   </button>
-                  <button className="text-gray-600 hover:text-gray-900">
+                  <button
+                    className="text-gray-600 hover:text-gray-900"
+                    onClick={() => {
+                      setSelectedCourse(course)
+                      setIsEditCourseModalOpen(true)
+                    }}
+                  >
                     <Edit className="w-4 h-4" />
                   </button>
                   <button className="text-gray-600 hover:text-gray-900">
@@ -448,6 +457,51 @@ export default function CoursesPage() {
           onCancel={() => setIsCreateCourseModalOpen(false)}
         />
       </Modal>
+
+      {selectedCourse && (
+        <Modal
+          open={isEditCourseModalOpen}
+          onOpenChange={setIsEditCourseModalOpen}
+          title="Edit Course"
+          description="Update course details, pricing, and curriculum information."
+          size="xl"
+        >
+          <EditCourseForm
+            course={{
+              id: selectedCourse.id,
+              name: selectedCourse.name,
+              description: selectedCourse.description,
+              type: selectedCourse.type.toUpperCase().replace('-', '_') as any,
+              class:
+                selectedCourse.type === 'class-11'
+                  ? 'CLASS_11'
+                  : selectedCourse.type === 'class-12'
+                    ? 'CLASS_12'
+                    : selectedCourse.type === 'dropper'
+                      ? 'DROPPER'
+                      : ('FOUNDATION' as any),
+              duration: parseInt(selectedCourse.duration.split(' ')[0]),
+              totalFees: selectedCourse.price,
+              instructor: selectedCourse.instructor,
+              maxCapacity: selectedCourse.maxCapacity,
+              startDate: selectedCourse.startDate,
+              schedule: selectedCourse.schedule,
+              isActive: selectedCourse.status === 'active',
+              syllabus: selectedCourse.topics,
+              features: ['Live Classes', 'Recorded Lectures', 'Study Material', 'Mock Tests'],
+            }}
+            onSuccess={() => {
+              setIsEditCourseModalOpen(false)
+              setSelectedCourse(null)
+              window.location.reload()
+            }}
+            onCancel={() => {
+              setIsEditCourseModalOpen(false)
+              setSelectedCourse(null)
+            }}
+          />
+        </Modal>
+      )}
     </AdminLayout>
   )
 }

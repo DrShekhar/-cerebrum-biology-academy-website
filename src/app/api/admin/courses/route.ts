@@ -68,3 +68,101 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ success: false, error: 'Failed to create course' }, { status: 500 })
   }
 }
+
+const updateCourseSchema = z.object({
+  id: z.string().min(1, 'Course ID is required'),
+  name: z.string().min(5, 'Course name must be at least 5 characters').max(200),
+  description: z.string().min(20, 'Description must be at least 20 characters'),
+  type: z.enum(['NEET_COMPLETE', 'CLASS_11', 'CLASS_12', 'DROPPER', 'FOUNDATION', 'CRASH_COURSE']),
+  class: z.enum(['CLASS_9', 'CLASS_10', 'CLASS_11', 'CLASS_12', 'DROPPER', 'FOUNDATION']),
+  duration: z.number().min(1, 'Duration must be at least 1 month').max(36),
+  totalFees: z.number().min(1000, 'Fees must be at least 1000'),
+  instructor: z.string().min(2, 'Instructor name is required'),
+  maxCapacity: z.number().min(1, 'Capacity must be at least 1').max(500),
+  startDate: z.string().min(1, 'Start date is required'),
+  schedule: z.string().min(5, 'Schedule details are required'),
+  isActive: z.boolean(),
+  syllabus: z.array(z.string()).nullable().optional(),
+  features: z.array(z.string()).nullable().optional(),
+})
+
+export async function PUT(request: NextRequest) {
+  try {
+    await requireAdminAuth()
+
+    const body = await request.json()
+    const validatedData = updateCourseSchema.parse(body)
+
+    const existingCourse = await prisma.courses.findUnique({
+      where: { id: validatedData.id },
+    })
+
+    if (!existingCourse) {
+      return NextResponse.json({ success: false, error: 'Course not found' }, { status: 404 })
+    }
+
+    const updatedCourse = await prisma.courses.update({
+      where: { id: validatedData.id },
+      data: {
+        name: validatedData.name,
+        description: validatedData.description,
+        type: validatedData.type as any,
+        class: validatedData.class as any,
+        duration: validatedData.duration,
+        totalFees: validatedData.totalFees,
+        syllabus: validatedData.syllabus || null,
+        features: validatedData.features || null,
+        isActive: validatedData.isActive,
+        updatedAt: new Date(),
+      },
+    })
+
+    await prisma.activities.create({
+      data: {
+        id: uuidv4(),
+        userId: 'admin',
+        courseId: updatedCourse.id,
+        action: 'course_updated',
+        description: `Course "${validatedData.name}" updated`,
+        metadata: {
+          changes: {
+            from: {
+              name: existingCourse.name,
+              totalFees: existingCourse.totalFees,
+              isActive: existingCourse.isActive,
+            },
+            to: {
+              name: validatedData.name,
+              totalFees: validatedData.totalFees,
+              isActive: validatedData.isActive,
+            },
+          },
+        },
+      },
+    })
+
+    return NextResponse.json(
+      { success: true, message: 'Course updated successfully', data: updatedCourse },
+      { status: 200 }
+    )
+  } catch (error) {
+    console.error('Update course error:', error)
+
+    if (error instanceof Error && error.message === 'Admin authentication required') {
+      return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
+    }
+
+    if (error instanceof z.ZodError) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: 'Validation failed',
+          details: error.issues,
+        },
+        { status: 400 }
+      )
+    }
+
+    return NextResponse.json({ success: false, error: 'Failed to update course' }, { status: 500 })
+  }
+}
