@@ -1,5 +1,6 @@
 import Redis from 'ioredis'
 import type { questions, test_templates, test_sessions, user_progress } from '@/generated/prisma'
+import { upstashCache, preferUpstash } from './upstash'
 
 // Check if Redis is enabled via environment variable
 const isRedisEnabled = process.env.REDIS_ENABLED === 'true' && process.env.REDIS_URL
@@ -169,13 +170,26 @@ export class QuestionCacheService {
   // Cache a single question
   static async cacheQuestion(question: questions): Promise<void> {
     const key = CacheKeys.question(question.id)
-    await redis.setex(key, CacheTTL.QUESTION, JSON.stringify(question))
+    const value = JSON.stringify(question)
+
+    if (preferUpstash() && upstashCache.isEnabled()) {
+      await upstashCache.set(key, value, CacheTTL.QUESTION)
+    } else {
+      await redis.setex(key, CacheTTL.QUESTION, value)
+    }
   }
 
   // Get cached question
   static async getQuestion(id: string): Promise<questions | null> {
     const key = CacheKeys.question(id)
-    const cached = await redis.get(key)
+
+    let cached: string | null = null
+    if (preferUpstash() && upstashCache.isEnabled()) {
+      cached = await upstashCache.get(key)
+    } else {
+      cached = await redis.get(key)
+    }
+
     return cached ? JSON.parse(cached) : null
   }
 
@@ -513,13 +527,24 @@ export class RateLimitService {
     windowSeconds: number = 3600
   ): Promise<{ allowed: boolean; remaining: number; resetTime: number }> {
     const key = CacheKeys.rateLimitUser(userId)
-    const current = await redis.incr(key)
 
-    if (current === 1) {
-      await redis.expire(key, windowSeconds)
+    let current: number
+    let ttl: number
+
+    if (preferUpstash() && upstashCache.isEnabled()) {
+      current = await upstashCache.incr(key)
+      if (current === 1) {
+        await upstashCache.expire(key, windowSeconds)
+      }
+      ttl = await upstashCache.ttl(key)
+    } else {
+      current = await redis.incr(key)
+      if (current === 1) {
+        await redis.expire(key, windowSeconds)
+      }
+      ttl = await redis.ttl(key)
     }
 
-    const ttl = await redis.ttl(key)
     const resetTime = Date.now() + ttl * 1000
 
     return {
@@ -536,13 +561,24 @@ export class RateLimitService {
     windowSeconds: number = 3600
   ): Promise<{ allowed: boolean; remaining: number; resetTime: number }> {
     const key = CacheKeys.rateLimitIP(ip)
-    const current = await redis.incr(key)
 
-    if (current === 1) {
-      await redis.expire(key, windowSeconds)
+    let current: number
+    let ttl: number
+
+    if (preferUpstash() && upstashCache.isEnabled()) {
+      current = await upstashCache.incr(key)
+      if (current === 1) {
+        await upstashCache.expire(key, windowSeconds)
+      }
+      ttl = await upstashCache.ttl(key)
+    } else {
+      current = await redis.incr(key)
+      if (current === 1) {
+        await redis.expire(key, windowSeconds)
+      }
+      ttl = await redis.ttl(key)
     }
 
-    const ttl = await redis.ttl(key)
     const resetTime = Date.now() + ttl * 1000
 
     return {
