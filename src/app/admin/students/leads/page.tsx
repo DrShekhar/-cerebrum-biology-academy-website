@@ -31,6 +31,7 @@ import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
 import { Modal } from '@/components/ui/Modal'
 import { AddLeadForm } from '@/components/admin/AddLeadForm'
+import { EditLeadForm } from '@/components/admin/EditLeadForm'
 
 interface Lead {
   id: string
@@ -176,6 +177,8 @@ export default function LeadsPage() {
   const [priorityFilter, setPriorityFilter] = useState<string>('all')
   const [sourceFilter, setSourceFilter] = useState<string>('all')
   const [isAddLeadModalOpen, setIsAddLeadModalOpen] = useState(false)
+  const [isEditLeadModalOpen, setIsEditLeadModalOpen] = useState(false)
+  const [selectedLead, setSelectedLead] = useState<Lead | null>(null)
 
   useEffect(() => {
     let filtered = leads
@@ -523,7 +526,13 @@ export default function LeadsPage() {
                         <button className="text-purple-600 hover:text-purple-900">
                           <Eye className="w-4 h-4" />
                         </button>
-                        <button className="text-gray-600 hover:text-gray-900">
+                        <button
+                          className="text-gray-600 hover:text-gray-900"
+                          onClick={() => {
+                            setSelectedLead(lead)
+                            setIsEditLeadModalOpen(true)
+                          }}
+                        >
                           <Edit className="w-4 h-4" />
                         </button>
                         <button className="text-orange-600 hover:text-orange-900">
@@ -561,6 +570,46 @@ export default function LeadsPage() {
           onCancel={() => setIsAddLeadModalOpen(false)}
         />
       </Modal>
+
+      {selectedLead && (
+        <Modal
+          open={isEditLeadModalOpen}
+          onOpenChange={setIsEditLeadModalOpen}
+          title="Edit Lead"
+          description="Update lead information and status."
+          size="xl"
+        >
+          <EditLeadForm
+            lead={{
+              id: selectedLead.id,
+              studentName: selectedLead.name,
+              email: selectedLead.email,
+              phone: selectedLead.phone,
+              courseInterest: selectedLead.courseInterest.join(', '),
+              source: selectedLead.leadSource.toUpperCase().replace(' ', '_'),
+              stage: selectedLead.leadStage.toUpperCase().replace(' ', '_'),
+              priority: selectedLead.priority.toUpperCase(),
+              assignedToId: 'admin-1',
+              nextFollowUpAt: selectedLead.nextFollowUp,
+              lostReason: selectedLead.lostReason,
+            }}
+            counselors={[
+              { id: 'admin-1', name: 'Dr. Priya Sharma' },
+              { id: 'admin-2', name: 'Dr. Rajesh Kumar' },
+              { id: 'admin-3', name: 'Dr. Ananya Patel' },
+            ]}
+            onSuccess={() => {
+              setIsEditLeadModalOpen(false)
+              setSelectedLead(null)
+              window.location.reload()
+            }}
+            onCancel={() => {
+              setIsEditLeadModalOpen(false)
+              setSelectedLead(null)
+            }}
+          />
+        </Modal>
+      )}
     </AdminLayout>
   )
 }

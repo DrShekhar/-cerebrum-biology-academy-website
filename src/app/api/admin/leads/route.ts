@@ -108,3 +108,138 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ success: false, error: 'Failed to create lead' }, { status: 500 })
   }
 }
+
+const updateLeadSchema = z.object({
+  id: z.string().min(1, 'Lead ID is required'),
+  studentName: z.string().min(2, 'Name must be at least 2 characters').max(100),
+  email: z.string().email('Invalid email address').optional().or(z.literal('')),
+  phone: z
+    .string()
+    .min(10, 'Phone must be at least 10 digits')
+    .regex(/^[+]?[\d\s()-]+$/, 'Invalid phone number format'),
+  courseInterest: z.string().min(1, 'Course interest is required'),
+  source: z.enum([
+    'MANUAL_ENTRY',
+    'WALK_IN',
+    'PHONE_CALL',
+    'REFERRAL',
+    'WHATSAPP',
+    'EMAIL',
+    'SOCIAL_MEDIA',
+    'WEBSITE',
+    'ADVERTISEMENT',
+    'EVENT',
+    'OTHER',
+  ]),
+  stage: z.enum([
+    'NEW_LEAD',
+    'CONTACTED',
+    'QUALIFIED',
+    'DEMO_SCHEDULED',
+    'DEMO_COMPLETED',
+    'NEGOTIATION',
+    'CONVERTED',
+    'LOST',
+  ]),
+  priority: z.enum(['HOT', 'WARM', 'COLD']),
+  assignedToId: z.string().min(1, 'Assigned counselor is required'),
+  nextFollowUpAt: z.string().optional(),
+  notes: z.string().optional(),
+  lostReason: z.string().optional(),
+})
+
+export async function PUT(request: NextRequest) {
+  try {
+    await requireAdminAuth()
+
+    const body = await request.json()
+    const validatedData = updateLeadSchema.parse(body)
+
+    const existingLead = await prisma.leads.findUnique({
+      where: { id: validatedData.id },
+    })
+
+    if (!existingLead) {
+      return NextResponse.json({ success: false, error: 'Lead not found' }, { status: 404 })
+    }
+
+    const updatedLead = await prisma.leads.update({
+      where: { id: validatedData.id },
+      data: {
+        studentName: validatedData.studentName,
+        email: validatedData.email || null,
+        phone: validatedData.phone,
+        courseInterest: validatedData.courseInterest,
+        source: validatedData.source as any,
+        stage: validatedData.stage as any,
+        priority: validatedData.priority as any,
+        assignedToId: validatedData.assignedToId,
+        nextFollowUpAt: validatedData.nextFollowUpAt
+          ? new Date(validatedData.nextFollowUpAt)
+          : null,
+        lostReason: validatedData.lostReason || null,
+        updatedAt: new Date(),
+      },
+    })
+
+    if (validatedData.notes) {
+      await prisma.notes.create({
+        data: {
+          id: uuidv4(),
+          leadId: updatedLead.id,
+          content: validatedData.notes,
+          createdById: validatedData.assignedToId,
+          updatedAt: new Date(),
+        },
+      })
+    }
+
+    await prisma.activities.create({
+      data: {
+        id: uuidv4(),
+        userId: validatedData.assignedToId,
+        leadId: updatedLead.id,
+        action: 'lead_updated',
+        description: `Lead "${validatedData.studentName}" updated`,
+        metadata: {
+          stage: validatedData.stage,
+          priority: validatedData.priority,
+          changes: {
+            from: {
+              stage: existingLead.stage,
+              priority: existingLead.priority,
+            },
+            to: {
+              stage: validatedData.stage,
+              priority: validatedData.priority,
+            },
+          },
+        },
+      },
+    })
+
+    return NextResponse.json(
+      { success: true, message: 'Lead updated successfully', data: updatedLead },
+      { status: 200 }
+    )
+  } catch (error) {
+    console.error('Update lead error:', error)
+
+    if (error instanceof Error && error.message === 'Admin authentication required') {
+      return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
+    }
+
+    if (error instanceof z.ZodError) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: 'Validation failed',
+          details: error.issues,
+        },
+        { status: 400 }
+      )
+    }
+
+    return NextResponse.json({ success: false, error: 'Failed to update lead' }, { status: 500 })
+  }
+}
