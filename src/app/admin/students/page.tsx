@@ -28,6 +28,8 @@ import {
 } from 'lucide-react'
 import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
+import { Modal } from '@/components/ui/Modal'
+import { AddStudentForm } from '@/components/admin/AddStudentForm'
 
 interface Student {
   id: string
@@ -138,6 +140,7 @@ export default function StudentsPage() {
   const [statusFilter, setStatusFilter] = useState<string>('all')
   const [priorityFilter, setPriorityFilter] = useState<string>('all')
   const [selectedStudents, setSelectedStudents] = useState<string[]>([])
+  const [isAddStudentModalOpen, setIsAddStudentModalOpen] = useState(false)
 
   useEffect(() => {
     let filtered = students
@@ -258,11 +261,7 @@ export default function StudentsPage() {
             </Button>
             <Button
               className="bg-blue-600 hover:bg-blue-700 text-white"
-              onClick={() =>
-                alert(
-                  'Add Student form coming soon! This will open a modal to create a new student record.'
-                )
-              }
+              onClick={() => setIsAddStudentModalOpen(true)}
             >
               <UserPlus className="w-4 h-4 mr-2" />
               Add Student
@@ -480,6 +479,24 @@ export default function StudentsPage() {
           )}
         </motion.div>
       </div>
+
+      {/* Add Student Modal */}
+      <Modal
+        open={isAddStudentModalOpen}
+        onOpenChange={setIsAddStudentModalOpen}
+        title="Add New Student"
+        description="Fill in the details below to add a new student or lead to the system."
+        size="xl"
+      >
+        <AddStudentForm
+          onSuccess={() => {
+            setIsAddStudentModalOpen(false)
+            // TODO: Refresh student list from API
+            window.location.reload()
+          }}
+          onCancel={() => setIsAddStudentModalOpen(false)}
+        />
+      </Modal>
     </AdminLayout>
   )
 }
