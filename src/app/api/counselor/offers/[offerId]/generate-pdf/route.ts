@@ -78,7 +78,7 @@ async function handlePOST(
         {
           success: false,
           error: 'Invalid request data',
-          details: error.errors,
+          details: error.issues,
         },
         { status: 400 }
       )

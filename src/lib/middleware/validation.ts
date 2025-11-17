@@ -59,7 +59,7 @@ export async function withValidation<T>(
       return {
         success: false,
         error: 'Validation failed',
-        details: error.errors.map((err) => ({
+        details: error.issues.map((err) => ({
           field: err.path.join('.'),
           message: err.message,
           code: err.code,
@@ -114,7 +114,7 @@ export const paginationSchema = z.object({
 export const searchSchema = z
   .object({
     query: z.string().min(1).max(100),
-    filters: z.record(z.any()).optional(),
+    filters: z.record(z.string(), z.any()).optional(),
   })
   .extend(paginationSchema.shape)
 
@@ -383,7 +383,7 @@ export function validateArray<T>(
       if (error instanceof ZodError) {
         errors.push({
           index,
-          errors: error.errors.map((err) => ({
+          errors: error.issues.map((err) => ({
             field: err.path.join('.'),
             message: err.message,
             code: err.code,
@@ -432,7 +432,7 @@ export function validatePartialUpdate<T>(
       return {
         success: false,
         error: 'Validation failed',
-        details: error.errors.map((err) => ({
+        details: error.issues.map((err) => ({
           field: err.path.join('.'),
           message: err.message,
           code: err.code,

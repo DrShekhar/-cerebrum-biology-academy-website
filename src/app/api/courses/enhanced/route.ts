@@ -184,7 +184,7 @@ export async function POST(request: NextRequest) {
       courseId: z.string(),
       action: z.enum(['view', 'hover', 'select', 'compare']),
       userId: z.string().optional(),
-      metadata: z.record(z.unknown()).optional(),
+      metadata: z.record(z.string(), z.unknown()).optional(),
     })
 
     const interaction = InteractionSchema.parse(body)

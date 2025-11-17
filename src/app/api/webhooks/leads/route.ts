@@ -26,7 +26,7 @@ const genericLeadSchema = z.object({
   utmMedium: z.string().optional(),
   utmCampaign: z.string().optional(),
   // Source-specific fields (stored in metadata)
-  metadata: z.record(z.any()).optional(),
+  metadata: z.record(z.string(), z.any()).optional(),
   // Security
   signature: z.string().optional(),
   timestamp: z.string().optional(),

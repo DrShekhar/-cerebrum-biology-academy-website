@@ -4,40 +4,48 @@ import {
   validateUserSession,
   addSecurityHeaders,
   SessionManager,
-  PasswordUtils
+  PasswordUtils,
 } from '@/lib/auth/config'
 import { withAuth } from '@/lib/auth/middleware'
 import { z } from 'zod'
 
 // Settings update validation schema
 const UpdateSettingsSchema = z.object({
-  notifications: z.object({
-    email: z.boolean().optional(),
-    sms: z.boolean().optional(),
-    push: z.boolean().optional(),
-    marketing: z.boolean().optional(),
-    testReminders: z.boolean().optional(),
-    progressReports: z.boolean().optional()
-  }).optional(),
-  privacy: z.object({
-    profileVisible: z.boolean().optional(),
-    progressVisible: z.boolean().optional(),
-    allowContactFromTeachers: z.boolean().optional(),
-    shareDataForImprovement: z.boolean().optional()
-  }).optional(),
-  study: z.object({
-    preferredStudyTime: z.enum(['MORNING', 'AFTERNOON', 'EVENING', 'NIGHT']).optional(),
-    dailyStudyGoal: z.number().min(30).max(480).optional(), // 30 minutes to 8 hours
-    reminderFrequency: z.enum(['NEVER', 'DAILY', 'WEEKLY']).optional(),
-    autoGenerateTests: z.boolean().optional(),
-    difficulty: z.enum(['EASY', 'MEDIUM', 'HARD', 'ADAPTIVE']).optional()
-  }).optional(),
-  accessibility: z.object({
-    highContrast: z.boolean().optional(),
-    largeText: z.boolean().optional(),
-    reducedMotion: z.boolean().optional(),
-    screenReader: z.boolean().optional()
-  }).optional()
+  notifications: z
+    .object({
+      email: z.boolean().optional(),
+      sms: z.boolean().optional(),
+      push: z.boolean().optional(),
+      marketing: z.boolean().optional(),
+      testReminders: z.boolean().optional(),
+      progressReports: z.boolean().optional(),
+    })
+    .optional(),
+  privacy: z
+    .object({
+      profileVisible: z.boolean().optional(),
+      progressVisible: z.boolean().optional(),
+      allowContactFromTeachers: z.boolean().optional(),
+      shareDataForImprovement: z.boolean().optional(),
+    })
+    .optional(),
+  study: z
+    .object({
+      preferredStudyTime: z.enum(['MORNING', 'AFTERNOON', 'EVENING', 'NIGHT']).optional(),
+      dailyStudyGoal: z.number().min(30).max(480).optional(), // 30 minutes to 8 hours
+      reminderFrequency: z.enum(['NEVER', 'DAILY', 'WEEKLY']).optional(),
+      autoGenerateTests: z.boolean().optional(),
+      difficulty: z.enum(['EASY', 'MEDIUM', 'HARD', 'ADAPTIVE']).optional(),
+    })
+    .optional(),
+  accessibility: z
+    .object({
+      highContrast: z.boolean().optional(),
+      largeText: z.boolean().optional(),
+      reducedMotion: z.boolean().optional(),
+      screenReader: z.boolean().optional(),
+    })
+    .optional(),
 })
 
 /**
@@ -57,28 +65,33 @@ export const GET = withAuth(async (request: NextRequest, session) => {
         emailVerified: true,
         phoneVerified: true,
         createdAt: true,
-        lastActiveAt: true
-      }
+        lastActiveAt: true,
+      },
     })
 
     if (!user) {
-      return addSecurityHeaders(NextResponse.json({
-        error: 'User not found',
-        message: 'User settings not found'
-      }, { status: 404 }))
+      return addSecurityHeaders(
+        NextResponse.json(
+          {
+            error: 'User not found',
+            message: 'User settings not found',
+          },
+          { status: 404 }
+        )
+      )
     }
 
     // Get active sessions
     const activeSessions = await prisma.session.findMany({
       where: {
         userId: session.userId,
-        expires: { gt: new Date() }
+        expires: { gt: new Date() },
       },
       select: {
         id: true,
         sessionToken: true,
-        expires: true
-      }
+        expires: true,
+      },
     })
 
     // Extract settings from profile
@@ -90,54 +103,60 @@ export const GET = withAuth(async (request: NextRequest, session) => {
         push: false,
         marketing: false,
         testReminders: true,
-        progressReports: true
+        progressReports: true,
       },
       privacy: profile?.preferences?.privacy || {
         profileVisible: false,
         progressVisible: true,
         allowContactFromTeachers: true,
-        shareDataForImprovement: true
+        shareDataForImprovement: true,
       },
       study: profile?.preferences?.study || {
         preferredStudyTime: 'EVENING',
         dailyStudyGoal: 120, // 2 hours
         reminderFrequency: 'DAILY',
         autoGenerateTests: true,
-        difficulty: 'ADAPTIVE'
+        difficulty: 'ADAPTIVE',
       },
       accessibility: profile?.preferences?.accessibility || {
         highContrast: false,
         largeText: false,
         reducedMotion: false,
-        screenReader: false
-      }
+        screenReader: false,
+      },
     }
 
-    return addSecurityHeaders(NextResponse.json({
-      success: true,
-      user: {
-        id: user.id,
-        email: user.email,
-        name: user.name,
-        role: user.role,
-        emailVerified: user.emailVerified,
-        phoneVerified: user.phoneVerified,
-        createdAt: user.createdAt,
-        lastActiveAt: user.lastActiveAt
-      },
-      settings,
-      security: {
-        activeSessionsCount: activeSessions.length,
-        lastActiveAt: user.lastActiveAt
-      }
-    }))
-
+    return addSecurityHeaders(
+      NextResponse.json({
+        success: true,
+        user: {
+          id: user.id,
+          email: user.email,
+          name: user.name,
+          role: user.role,
+          emailVerified: user.emailVerified,
+          phoneVerified: user.phoneVerified,
+          createdAt: user.createdAt,
+          lastActiveAt: user.lastActiveAt,
+        },
+        settings,
+        security: {
+          activeSessionsCount: activeSessions.length,
+          lastActiveAt: user.lastActiveAt,
+        },
+      })
+    )
   } catch (error) {
     console.error('Get settings error:', error)
-    return addSecurityHeaders(NextResponse.json({
-      error: 'Internal server error',
-      message: 'Failed to retrieve settings'
-    }, { status: 500 }))
+    return addSecurityHeaders(
+      NextResponse.json(
+        {
+          error: 'Internal server error',
+          message: 'Failed to retrieve settings',
+        },
+        { status: 500 }
+      )
+    )
   }
 })
 
@@ -151,10 +170,15 @@ export const PUT = withAuth(async (request: NextRequest, session) => {
     const result = UpdateSettingsSchema.safeParse(body)
 
     if (!result.success) {
-      return addSecurityHeaders(NextResponse.json({
-        error: 'Invalid input',
-        details: result.error.errors
-      }, { status: 400 }))
+      return addSecurityHeaders(
+        NextResponse.json(
+          {
+            error: 'Invalid input',
+            details: result.error.issues,
+          },
+          { status: 400 }
+        )
+      )
     }
 
     const { notifications, privacy, study, accessibility } = result.data
@@ -162,14 +186,19 @@ export const PUT = withAuth(async (request: NextRequest, session) => {
     // Get current user profile
     const currentUser = await prisma.user.findUnique({
       where: { id: session.userId },
-      select: { profile: true }
+      select: { profile: true },
     })
 
     if (!currentUser) {
-      return addSecurityHeaders(NextResponse.json({
-        error: 'User not found',
-        message: 'User not found'
-      }, { status: 404 }))
+      return addSecurityHeaders(
+        NextResponse.json(
+          {
+            error: 'User not found',
+            message: 'User not found',
+          },
+          { status: 404 }
+        )
+      )
     }
 
     // Merge settings with existing profile
@@ -178,11 +207,15 @@ export const PUT = withAuth(async (request: NextRequest, session) => {
       ...currentProfile,
       preferences: {
         ...currentProfile.preferences,
-        ...(notifications && { notifications: { ...currentProfile.preferences?.notifications, ...notifications } }),
+        ...(notifications && {
+          notifications: { ...currentProfile.preferences?.notifications, ...notifications },
+        }),
         ...(privacy && { privacy: { ...currentProfile.preferences?.privacy, ...privacy } }),
         ...(study && { study: { ...currentProfile.preferences?.study, ...study } }),
-        ...(accessibility && { accessibility: { ...currentProfile.preferences?.accessibility, ...accessibility } })
-      }
+        ...(accessibility && {
+          accessibility: { ...currentProfile.preferences?.accessibility, ...accessibility },
+        }),
+      },
     }
 
     // Update user profile
@@ -194,8 +227,8 @@ export const PUT = withAuth(async (request: NextRequest, session) => {
         email: true,
         name: true,
         profile: true,
-        updatedAt: true
-      }
+        updatedAt: true,
+      },
     })
 
     // Track settings update event
@@ -210,35 +243,40 @@ export const PUT = withAuth(async (request: NextRequest, session) => {
             notifications: !!notifications,
             privacy: !!privacy,
             study: !!study,
-            accessibility: !!accessibility
+            accessibility: !!accessibility,
           },
-          ipAddress: request.headers.get('x-forwarded-for') ||
-                    request.headers.get('x-real-ip') ||
-                    'unknown',
-          userAgent: request.headers.get('user-agent')
-        }
+          ipAddress:
+            request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip') || 'unknown',
+          userAgent: request.headers.get('user-agent'),
+        },
       })
     } catch (analyticsError) {
       console.error('Analytics tracking error:', analyticsError)
     }
 
-    return addSecurityHeaders(NextResponse.json({
-      success: true,
-      message: 'Settings updated successfully',
-      settings: {
-        notifications: updatedProfile.preferences?.notifications,
-        privacy: updatedProfile.preferences?.privacy,
-        study: updatedProfile.preferences?.study,
-        accessibility: updatedProfile.preferences?.accessibility
-      }
-    }))
-
+    return addSecurityHeaders(
+      NextResponse.json({
+        success: true,
+        message: 'Settings updated successfully',
+        settings: {
+          notifications: updatedProfile.preferences?.notifications,
+          privacy: updatedProfile.preferences?.privacy,
+          study: updatedProfile.preferences?.study,
+          accessibility: updatedProfile.preferences?.accessibility,
+        },
+      })
+    )
   } catch (error) {
     console.error('Update settings error:', error)
-    return addSecurityHeaders(NextResponse.json({
-      error: 'Internal server error',
-      message: 'Failed to update settings'
-    }, { status: 500 }))
+    return addSecurityHeaders(
+      NextResponse.json(
+        {
+          error: 'Internal server error',
+          message: 'Failed to update settings',
+        },
+        { status: 500 }
+      )
+    )
   }
 })
 
@@ -252,17 +290,27 @@ export const DELETE = withAuth(async (request: NextRequest, session) => {
     const { confirmDelete, password } = body
 
     if (!confirmDelete || confirmDelete !== 'DELETE_MY_ACCOUNT') {
-      return addSecurityHeaders(NextResponse.json({
-        error: 'Confirmation required',
-        message: 'You must type "DELETE_MY_ACCOUNT" to confirm account deletion'
-      }, { status: 400 }))
+      return addSecurityHeaders(
+        NextResponse.json(
+          {
+            error: 'Confirmation required',
+            message: 'You must type "DELETE_MY_ACCOUNT" to confirm account deletion',
+          },
+          { status: 400 }
+        )
+      )
     }
 
     if (!password) {
-      return addSecurityHeaders(NextResponse.json({
-        error: 'Password required',
-        message: 'Password confirmation is required for account deletion'
-      }, { status: 400 }))
+      return addSecurityHeaders(
+        NextResponse.json(
+          {
+            error: 'Password required',
+            message: 'Password confirmation is required for account deletion',
+          },
+          { status: 400 }
+        )
+      )
     }
 
     // Get user with password hash
@@ -270,24 +318,34 @@ export const DELETE = withAuth(async (request: NextRequest, session) => {
       where: { id: session.userId },
       select: {
         email: true,
-        passwordHash: true
-      }
+        passwordHash: true,
+      },
     })
 
     if (!user || !user.passwordHash) {
-      return addSecurityHeaders(NextResponse.json({
-        error: 'User not found',
-        message: 'Unable to verify user account'
-      }, { status: 404 }))
+      return addSecurityHeaders(
+        NextResponse.json(
+          {
+            error: 'User not found',
+            message: 'Unable to verify user account',
+          },
+          { status: 404 }
+        )
+      )
     }
 
     // Verify password
     const isPasswordValid = await PasswordUtils.verify(password, user.passwordHash)
     if (!isPasswordValid) {
-      return addSecurityHeaders(NextResponse.json({
-        error: 'Invalid password',
-        message: 'Password confirmation failed'
-      }, { status: 401 }))
+      return addSecurityHeaders(
+        NextResponse.json(
+          {
+            error: 'Invalid password',
+            message: 'Password confirmation failed',
+          },
+          { status: 401 }
+        )
+      )
     }
 
     // Track account deletion event before deleting
@@ -299,13 +357,12 @@ export const DELETE = withAuth(async (request: NextRequest, session) => {
           eventName: 'account_deleted',
           properties: {
             method: 'user_initiated',
-            reason: 'user_request'
+            reason: 'user_request',
           },
-          ipAddress: request.headers.get('x-forwarded-for') ||
-                    request.headers.get('x-real-ip') ||
-                    'unknown',
-          userAgent: request.headers.get('user-agent')
-        }
+          ipAddress:
+            request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip') || 'unknown',
+          userAgent: request.headers.get('user-agent'),
+        },
       })
     } catch (analyticsError) {
       console.error('Analytics tracking error:', analyticsError)
@@ -325,33 +382,41 @@ export const DELETE = withAuth(async (request: NextRequest, session) => {
         profile: {
           deleted: true,
           deletedAt: new Date().toISOString(),
-          originalEmail: user.email // Keep for potential recovery
-        }
-      }
+          originalEmail: user.email, // Keep for potential recovery
+        },
+      },
     })
 
-    return addSecurityHeaders(NextResponse.json({
-      success: true,
-      message: 'Account deleted successfully. We\'re sorry to see you go!'
-    }))
-
+    return addSecurityHeaders(
+      NextResponse.json({
+        success: true,
+        message: "Account deleted successfully. We're sorry to see you go!",
+      })
+    )
   } catch (error) {
     console.error('Delete account error:', error)
-    return addSecurityHeaders(NextResponse.json({
-      error: 'Internal server error',
-      message: 'Failed to delete account'
-    }, { status: 500 }))
+    return addSecurityHeaders(
+      NextResponse.json(
+        {
+          error: 'Internal server error',
+          message: 'Failed to delete account',
+        },
+        { status: 500 }
+      )
+    )
   }
 })
 
 // OPTIONS for CORS preflight
 export async function OPTIONS(request: NextRequest) {
-  return addSecurityHeaders(new NextResponse(null, {
-    status: 200,
-    headers: {
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'GET, PUT, DELETE, OPTIONS',
-      'Access-Control-Allow-Headers': 'Content-Type, Authorization',
-    },
-  }))
+  return addSecurityHeaders(
+    new NextResponse(null, {
+      status: 200,
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'GET, PUT, DELETE, OPTIONS',
+        'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+      },
+    })
+  )
 }

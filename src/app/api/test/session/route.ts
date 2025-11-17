@@ -14,7 +14,7 @@ const CreateSessionSchema = z.object({
   timeLimit: z.number().min(5).max(300).optional(), // 5 minutes to 5 hours
   curriculum: z.string().optional(),
   grade: z.string().optional(),
-  subject: z.string().default('biology')
+  subject: z.string().default('biology'),
 })
 
 // Test session update schema
@@ -27,7 +27,7 @@ const UpdateSessionSchema = z.object({
   remainingTime: z.number().optional(),
   tabSwitchCount: z.number().min(0).optional(),
   fullscreenExits: z.number().min(0).optional(),
-  suspiciousActivity: z.array(z.any()).optional()
+  suspiciousActivity: z.array(z.any()).optional(),
 })
 
 /**
@@ -40,10 +40,15 @@ export const POST = withAuth(async (request: NextRequest, session) => {
     const result = CreateSessionSchema.safeParse(body)
 
     if (!result.success) {
-      return addSecurityHeaders(NextResponse.json({
-        error: 'Invalid input',
-        details: result.error.errors
-      }, { status: 400 }))
+      return addSecurityHeaders(
+        NextResponse.json(
+          {
+            error: 'Invalid input',
+            details: result.error.issues,
+          },
+          { status: 400 }
+        )
+      )
     }
 
     const {
@@ -55,7 +60,7 @@ export const POST = withAuth(async (request: NextRequest, session) => {
       timeLimit,
       curriculum,
       grade,
-      subject
+      subject,
     } = result.data
 
     // Generate unique session token
@@ -65,12 +70,11 @@ export const POST = withAuth(async (request: NextRequest, session) => {
     const browserInfo = {
       userAgent: request.headers.get('user-agent'),
       acceptLanguage: request.headers.get('accept-language'),
-      acceptEncoding: request.headers.get('accept-encoding')
+      acceptEncoding: request.headers.get('accept-encoding'),
     }
 
-    const ipAddress = request.headers.get('x-forwarded-for') ||
-                     request.headers.get('x-real-ip') ||
-                     'unknown'
+    const ipAddress =
+      request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip') || 'unknown'
 
     // Create test session in database
     const testSession = await prisma.testSession.create({
@@ -84,7 +88,7 @@ export const POST = withAuth(async (request: NextRequest, session) => {
         // Store test configuration in the session
         // You might want to create a separate TestConfiguration model
         // For now, we'll store it in a JSON field or create inline
-      }
+      },
     })
 
     // If using a specific test template, get questions from it
@@ -95,16 +99,16 @@ export const POST = withAuth(async (request: NextRequest, session) => {
         include: {
           questionBank: {
             include: {
-              question: true
+              question: true,
             },
             take: questionCount,
-            orderBy: { orderIndex: 'asc' }
-          }
-        }
+            orderBy: { orderIndex: 'asc' },
+          },
+        },
       })
 
       if (template) {
-        questions = template.questionBank.map(qb => qb.question)
+        questions = template.questionBank.map((qb) => qb.question)
       }
     } else {
       // Generate questions based on criteria
@@ -114,7 +118,7 @@ export const POST = withAuth(async (request: NextRequest, session) => {
         ...(subject && { subject }),
         ...(curriculum && { curriculum }),
         ...(grade && { grade }),
-        ...(topics && topics.length > 0 && { topic: { in: topics } })
+        ...(topics && topics.length > 0 && { topic: { in: topics } }),
       }
 
       if (difficulty !== 'MIXED') {
@@ -124,7 +128,7 @@ export const POST = withAuth(async (request: NextRequest, session) => {
       questions = await prisma.question.findMany({
         where: whereClause,
         take: questionCount,
-        orderBy: { popularityScore: 'desc' }
+        orderBy: { popularityScore: 'desc' },
       })
     }
 
@@ -143,8 +147,8 @@ export const POST = withAuth(async (request: NextRequest, session) => {
         percentage: 0,
         timeSpent: 0,
         topicWiseScore: {},
-        status: 'IN_PROGRESS'
-      }
+        status: 'IN_PROGRESS',
+      },
     })
 
     // Create test question records for tracking individual responses
@@ -154,8 +158,8 @@ export const POST = withAuth(async (request: NextRequest, session) => {
           testAttemptId: testAttempt.id,
           questionId: questions[i].id,
           timeSpent: 0,
-          marksAwarded: 0
-        }
+          marksAwarded: 0,
+        },
       })
     }
 
@@ -172,50 +176,56 @@ export const POST = withAuth(async (request: NextRequest, session) => {
             questionCount: questions.length,
             difficulty,
             timeLimit,
-            hasTemplate: !!testTemplateId
+            hasTemplate: !!testTemplateId,
           },
           ipAddress,
-          userAgent: request.headers.get('user-agent')
-        }
+          userAgent: request.headers.get('user-agent'),
+        },
       })
     } catch (analyticsError) {
       console.error('Analytics tracking error:', analyticsError)
     }
 
-    return addSecurityHeaders(NextResponse.json({
-      success: true,
-      message: 'Test session created successfully',
-      session: {
-        id: testSession.id,
-        sessionToken: testSession.sessionToken,
-        status: testSession.status,
-        createdAt: testSession.createdAt
-      },
-      testAttempt: {
-        id: testAttempt.id,
-        title: testAttempt.title,
-        questionCount: questions.length,
-        totalMarks: testAttempt.totalMarks,
-        timeLimit: testAttempt.timeLimit
-      },
-      questions: questions.map((q, index) => ({
-        id: q.id,
-        index,
-        question: q.question,
-        options: q.options,
-        marks: q.marks || 1,
-        timeLimit: q.timeLimit,
-        type: q.type,
-        questionImage: q.questionImage
-      }))
-    }))
-
+    return addSecurityHeaders(
+      NextResponse.json({
+        success: true,
+        message: 'Test session created successfully',
+        session: {
+          id: testSession.id,
+          sessionToken: testSession.sessionToken,
+          status: testSession.status,
+          createdAt: testSession.createdAt,
+        },
+        testAttempt: {
+          id: testAttempt.id,
+          title: testAttempt.title,
+          questionCount: questions.length,
+          totalMarks: testAttempt.totalMarks,
+          timeLimit: testAttempt.timeLimit,
+        },
+        questions: questions.map((q, index) => ({
+          id: q.id,
+          index,
+          question: q.question,
+          options: q.options,
+          marks: q.marks || 1,
+          timeLimit: q.timeLimit,
+          type: q.type,
+          questionImage: q.questionImage,
+        })),
+      })
+    )
   } catch (error) {
     console.error('Create test session error:', error)
-    return addSecurityHeaders(NextResponse.json({
-      error: 'Internal server error',
-      message: 'Failed to create test session'
-    }, { status: 500 }))
+    return addSecurityHeaders(
+      NextResponse.json(
+        {
+          error: 'Internal server error',
+          message: 'Failed to create test session',
+        },
+        { status: 500 }
+      )
+    )
   }
 })
 
@@ -231,7 +241,7 @@ export const GET = withAuth(async (request: NextRequest, session) => {
     const offset = parseInt(url.searchParams.get('offset') || '0')
 
     const whereClause: any = {
-      userId: session.userId
+      userId: session.userId,
     }
 
     if (status) {
@@ -250,25 +260,25 @@ export const GET = withAuth(async (request: NextRequest, session) => {
             category: true,
             timeLimit: true,
             totalQuestions: true,
-            totalMarks: true
-          }
+            totalMarks: true,
+          },
         },
         analytics: true,
         _count: {
           select: {
-            responses: true
-          }
-        }
+            responses: true,
+          },
+        },
       },
       orderBy: { createdAt: 'desc' },
       take: limit,
-      skip: offset
+      skip: offset,
     })
 
     // Get recent test attempts for progress tracking
     const testAttempts = await prisma.testAttempt.findMany({
       where: {
-        freeUserId: session.userId
+        freeUserId: session.userId,
       },
       orderBy: { startedAt: 'desc' },
       take: 5,
@@ -279,14 +289,14 @@ export const GET = withAuth(async (request: NextRequest, session) => {
         status: true,
         startedAt: true,
         submittedAt: true,
-        timeSpent: true
-      }
+        timeSpent: true,
+      },
     })
 
     // Get progress statistics
     const progressStats = await prisma.userProgress.findMany({
       where: {
-        userId: session.userId
+        userId: session.userId,
       },
       select: {
         topic: true,
@@ -294,39 +304,47 @@ export const GET = withAuth(async (request: NextRequest, session) => {
         totalQuestions: true,
         correctAnswers: true,
         masteryScore: true,
-        lastPracticed: true
-      }
+        lastPracticed: true,
+      },
     })
 
-    return addSecurityHeaders(NextResponse.json({
-      success: true,
-      sessions: testSessions,
-      recentAttempts: testAttempts,
-      progressStats,
-      pagination: {
-        limit,
-        offset,
-        total: testSessions.length
-      }
-    }))
-
+    return addSecurityHeaders(
+      NextResponse.json({
+        success: true,
+        sessions: testSessions,
+        recentAttempts: testAttempts,
+        progressStats,
+        pagination: {
+          limit,
+          offset,
+          total: testSessions.length,
+        },
+      })
+    )
   } catch (error) {
     console.error('Get test sessions error:', error)
-    return addSecurityHeaders(NextResponse.json({
-      error: 'Internal server error',
-      message: 'Failed to retrieve test sessions'
-    }, { status: 500 }))
+    return addSecurityHeaders(
+      NextResponse.json(
+        {
+          error: 'Internal server error',
+          message: 'Failed to retrieve test sessions',
+        },
+        { status: 500 }
+      )
+    )
   }
 })
 
 // OPTIONS for CORS preflight
 export async function OPTIONS(request: NextRequest) {
-  return addSecurityHeaders(new NextResponse(null, {
-    status: 200,
-    headers: {
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
-      'Access-Control-Allow-Headers': 'Content-Type, Authorization',
-    },
-  }))
+  return addSecurityHeaders(
+    new NextResponse(null, {
+      status: 200,
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+        'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+      },
+    })
+  )
 }

@@ -171,7 +171,7 @@ async function handlePOST(request: NextRequest, session: any) {
         {
           success: false,
           error: 'Validation failed',
-          details: error.errors,
+          details: error.issues,
         },
         { status: 400 }
       )

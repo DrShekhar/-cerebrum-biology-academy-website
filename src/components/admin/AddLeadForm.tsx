@@ -28,7 +28,7 @@ const addLeadSchema = z.object({
     'EVENT',
     'OTHER',
   ]),
-  priority: z.enum(['HOT', 'WARM', 'COLD']).default('WARM'),
+  priority: z.enum(['HOT', 'WARM', 'COLD']).optional().default('WARM'),
   assignedToId: z.string().min(1, 'Assigned counselor is required'),
   nextFollowUpAt: z.string().optional(),
   notes: z.string().optional(),

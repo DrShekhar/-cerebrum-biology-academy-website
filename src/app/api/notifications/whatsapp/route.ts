@@ -224,7 +224,7 @@ Happy Learning! 📚`
         {
           success: false,
           error: 'Validation error',
-          details: error.errors,
+          details: error.issues,
         },
         { status: 400 }
       )

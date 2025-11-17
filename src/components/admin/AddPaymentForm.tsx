@@ -22,6 +22,7 @@ const addPaymentSchema = z.object({
   ]),
   status: z
     .enum(['PENDING', 'PROCESSING', 'COMPLETED', 'FAILED', 'CANCELLED'])
+    .optional()
     .default('COMPLETED'),
   transactionId: z.string().optional(),
   installmentNumber: z.number().min(1).optional(),

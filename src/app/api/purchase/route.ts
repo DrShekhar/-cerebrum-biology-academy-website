@@ -8,9 +8,7 @@ import { hashPassword } from '@/lib/auth'
 // Validation schema
 const purchaseSchema = z.object({
   courseId: z.string().min(1, 'Course ID is required'),
-  planType: z.enum(['FULL', 'QUARTERLY', 'MONTHLY'], {
-    required_error: 'Payment plan is required',
-  }),
+  planType: z.enum(['FULL', 'QUARTERLY', 'MONTHLY']),
   amount: z.number().positive('Amount must be positive'),
 
   // User information (required if not authenticated)
@@ -232,7 +230,7 @@ export async function POST(request: NextRequest) {
         {
           success: false,
           error: 'Validation error',
-          details: error.errors.map((e) => ({
+          details: error.issues.map((e) => ({
             field: e.path.join('.'),
             message: e.message,
           })),

@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Ratelimit } from '@upstash/ratelimit'
 import { getRateLimiter, isRateLimitEnabled, type RateLimiterType } from './config'
-import logger from '@/lib/utils'
+import { logger } from '@/lib/utils'
 
 export interface RateLimitResult {
   success: boolean

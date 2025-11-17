@@ -296,7 +296,7 @@ export const GET = withOptionalAuth(async (request: NextRequest, session) => {
       return NextResponse.json(
         {
           error: 'Invalid parameters',
-          details: validationResult.error.errors,
+          details: validationResult.error.issues,
         },
         { status: 400 }
       )

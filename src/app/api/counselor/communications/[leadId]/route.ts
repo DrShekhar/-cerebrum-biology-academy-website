@@ -122,7 +122,7 @@ async function handleGET(req: NextRequest, session: any) {
         {
           success: false,
           error: 'Invalid query parameters',
-          details: error.errors,
+          details: error.issues,
         },
         { status: 400 }
       )

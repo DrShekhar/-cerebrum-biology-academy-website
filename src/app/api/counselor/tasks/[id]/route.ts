@@ -97,7 +97,7 @@ async function handlePATCH(
         {
           success: false,
           error: 'Validation failed',
-          details: error.errors,
+          details: error.issues,
         },
         { status: 400 }
       )

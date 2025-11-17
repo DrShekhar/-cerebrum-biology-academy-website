@@ -333,7 +333,7 @@ export async function GET(request: NextRequest) {
         {
           error: 'Invalid query parameters',
           code: 'VALIDATION_ERROR',
-          details: error.errors,
+          details: error.issues,
         },
         { status: 400 }
       )
@@ -482,7 +482,7 @@ export async function POST(request: NextRequest) {
         {
           error: 'Validation failed',
           code: 'VALIDATION_ERROR',
-          details: error.errors,
+          details: error.issues,
         },
         { status: 400 }
       )

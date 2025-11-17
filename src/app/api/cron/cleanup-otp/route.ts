@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { cleanupExpiredOTPs } from '@/lib/auth/otpCleanup'
-import logger from '@/lib/utils'
+import { logger } from '@/lib/utils'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'

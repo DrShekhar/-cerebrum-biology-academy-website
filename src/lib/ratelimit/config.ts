@@ -1,6 +1,6 @@
 import { Ratelimit } from '@upstash/ratelimit'
 import { Redis } from '@upstash/redis'
-import logger from '@/lib/utils'
+import { logger } from '@/lib/utils'
 
 const redis = process.env.REDIS_URL
   ? new Redis({

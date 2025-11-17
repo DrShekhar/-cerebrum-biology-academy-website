@@ -75,7 +75,7 @@ async function handlePATCH(req: NextRequest, session: any) {
         {
           success: false,
           error: 'Validation error',
-          details: error.errors,
+          details: error.issues,
         },
         { status: 400 }
       )

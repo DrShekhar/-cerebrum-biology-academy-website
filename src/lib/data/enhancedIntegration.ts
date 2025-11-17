@@ -35,7 +35,7 @@ export const UserInteractionSchema = z.object({
   sessionId: z.string(),
   type: z.enum(['view', 'hover', 'click', 'search', 'filter', 'select', 'purchase']),
   target: z.string(),
-  metadata: z.record(z.unknown()),
+  metadata: z.record(z.string(), z.unknown()),
   timestamp: z.string(),
   duration: z.number().optional(),
 })

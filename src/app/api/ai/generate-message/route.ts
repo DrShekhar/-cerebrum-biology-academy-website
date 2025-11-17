@@ -140,7 +140,7 @@ async function handlePOST(req: NextRequest, session: any) {
         {
           success: false,
           error: 'Invalid request data',
-          details: error.errors,
+          details: error.issues,
         },
         { status: 400 }
       )

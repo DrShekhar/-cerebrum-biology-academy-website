@@ -119,7 +119,7 @@ export async function PUT(
           NextResponse.json(
             {
               error: 'Invalid input',
-              details: result.error.errors,
+              details: result.error.issues,
             },
             { status: 400 }
           )
@@ -231,7 +231,7 @@ export async function POST(
           NextResponse.json(
             {
               error: 'Invalid input',
-              details: result.error.errors,
+              details: result.error.issues,
             },
             { status: 400 }
           )
