@@ -95,7 +95,16 @@ export function MaintenanceNotice({
             <div className="flex justify-center mb-4">
               <div className="relative">
                 <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center shadow-lg">
-                  <Settings className="w-8 h-8 text-white animate-spin-slow" />
+                  <motion.div
+                    animate={{ rotate: 360 }}
+                    transition={{
+                      duration: 3,
+                      repeat: Infinity,
+                      ease: 'linear',
+                    }}
+                  >
+                    <Settings className="w-8 h-8 text-white" />
+                  </motion.div>
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full blur-md opacity-50 animate-pulse" />
               </div>
@@ -147,23 +156,4 @@ export function MaintenanceNotice({
       </motion.div>
     </AnimatePresence>
   )
-}
-
-// Custom animation for slow spin
-const style = document.createElement('style')
-style.textContent = `
-  @keyframes spin-slow {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-  .animate-spin-slow {
-    animation: spin-slow 3s linear infinite;
-  }
-`
-if (typeof document !== 'undefined') {
-  document.head.appendChild(style)
 }
