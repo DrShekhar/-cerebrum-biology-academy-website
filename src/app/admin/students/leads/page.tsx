@@ -29,6 +29,8 @@ import {
 } from 'lucide-react'
 import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
+import { Modal } from '@/components/ui/Modal'
+import { AddLeadForm } from '@/components/admin/AddLeadForm'
 
 interface Lead {
   id: string
@@ -173,6 +175,7 @@ export default function LeadsPage() {
   const [stageFilter, setStageFilter] = useState<string>('all')
   const [priorityFilter, setPriorityFilter] = useState<string>('all')
   const [sourceFilter, setSourceFilter] = useState<string>('all')
+  const [isAddLeadModalOpen, setIsAddLeadModalOpen] = useState(false)
 
   useEffect(() => {
     let filtered = leads
@@ -301,7 +304,10 @@ export default function LeadsPage() {
               <Filter className="w-4 h-4 mr-2" />
               Advanced Filter
             </Button>
-            <Button className="bg-blue-600 hover:bg-blue-700 text-white">
+            <Button
+              className="bg-blue-600 hover:bg-blue-700 text-white"
+              onClick={() => setIsAddLeadModalOpen(true)}
+            >
               <UserPlus className="w-4 h-4 mr-2" />
               Add Lead
             </Button>
@@ -539,6 +545,22 @@ export default function LeadsPage() {
           )}
         </motion.div>
       </div>
+
+      <Modal
+        open={isAddLeadModalOpen}
+        onOpenChange={setIsAddLeadModalOpen}
+        title="Add New Lead"
+        description="Capture details of a prospective student interested in our courses."
+        size="lg"
+      >
+        <AddLeadForm
+          onSuccess={() => {
+            setIsAddLeadModalOpen(false)
+            window.location.reload()
+          }}
+          onCancel={() => setIsAddLeadModalOpen(false)}
+        />
+      </Modal>
     </AdminLayout>
   )
 }
