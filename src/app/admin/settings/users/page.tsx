@@ -19,6 +19,8 @@ import {
 } from 'lucide-react'
 import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
+import { Modal } from '@/components/ui/Modal'
+import { AddUserForm } from '@/components/admin/AddUserForm'
 
 interface User {
   id: string
@@ -83,6 +85,7 @@ export default function UsersSettingsPage() {
   const [users, setUsers] = useState<User[]>(mockUsers)
   const [searchTerm, setSearchTerm] = useState('')
   const [roleFilter, setRoleFilter] = useState<string>('all')
+  const [isAddUserModalOpen, setIsAddUserModalOpen] = useState(false)
 
   const getRoleColor = (role: string) => {
     switch (role) {
@@ -131,11 +134,7 @@ export default function UsersSettingsPage() {
           </div>
           <Button
             className="bg-blue-600 hover:bg-blue-700 text-white"
-            onClick={() =>
-              alert(
-                'Add User form coming soon! This will open a modal to create a new admin user with role and permissions.'
-              )
-            }
+            onClick={() => setIsAddUserModalOpen(true)}
           >
             <UserPlus className="w-4 h-4 mr-2" />
             Add User
@@ -370,6 +369,22 @@ export default function UsersSettingsPage() {
           </div>
         </div>
       </div>
+
+      <Modal
+        open={isAddUserModalOpen}
+        onOpenChange={setIsAddUserModalOpen}
+        title="Add New User"
+        description="Create a new admin, counselor, or staff user with specific permissions."
+        size="lg"
+      >
+        <AddUserForm
+          onSuccess={() => {
+            setIsAddUserModalOpen(false)
+            window.location.reload()
+          }}
+          onCancel={() => setIsAddUserModalOpen(false)}
+        />
+      </Modal>
     </AdminLayout>
   )
 }
