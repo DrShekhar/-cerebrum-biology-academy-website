@@ -78,21 +78,93 @@ export class SecurityAuditLogger {
     }
   }
 
-  // Production logging (to be implemented with real services)
+  // Production logging with database persistence
   private async logToProduction(event: SecurityEvent): Promise<void> {
     try {
-      // TODO: Implement database logging
-      // await this.logToDatabase(event)
+      // Log to database for permanent storage
+      await this.logToDatabase(event)
 
-      // TODO: Send to external monitoring service (e.g., DataDog, New Relic)
-      // await this.sendToMonitoring(event)
+      // Send to external monitoring service (Sentry)
+      await this.sendToMonitoring(event)
 
-      // TODO: Send alerts for critical events
+      // Send alerts for critical events
       if (event.severity === 'critical') {
-        // await this.sendCriticalAlert(event)
+        await this.sendCriticalAlert(event)
       }
     } catch (error) {
       console.error('Failed to log security event to production systems:', error)
+    }
+  }
+
+  // Log security event to database
+  private async logToDatabase(event: SecurityEvent): Promise<void> {
+    try {
+      const { default: prisma } = await import('@/lib/prisma')
+
+      await prisma.security_audit_logs.create({
+        data: {
+          eventType: event.eventType as any,
+          userId: event.userId || null,
+          userEmail: event.userEmail || null,
+          userRole: event.userRole || null,
+          ipAddress: event.ipAddress,
+          userAgent: event.userAgent,
+          severity: event.severity as any,
+          pathname: event.location?.pathname || null,
+          query: event.location?.query || null,
+          referrer: event.location?.referrer || null,
+          details: event.details,
+          timestamp: event.timestamp,
+        },
+      })
+    } catch (error) {
+      // Silently fail database logging to prevent disruption
+      console.error('Database logging failed:', error)
+    }
+  }
+
+  // Send to external monitoring (Sentry integration)
+  private async sendToMonitoring(event: SecurityEvent): Promise<void> {
+    try {
+      if (typeof window === 'undefined') {
+        // Server-side: Use Sentry if available
+        const Sentry = await import('@sentry/nextjs').catch(() => null)
+        if (Sentry) {
+          Sentry.captureMessage(`Security Event: ${event.eventType}`, {
+            level: event.severity === 'critical' ? 'error' : 'warning',
+            extra: event,
+            tags: {
+              securityEvent: event.eventType,
+              severity: event.severity,
+              userRole: event.userRole,
+            },
+          })
+        }
+      }
+    } catch (error) {
+      console.error('Monitoring service logging failed:', error)
+    }
+  }
+
+  // Send critical alerts
+  private async sendCriticalAlert(event: SecurityEvent): Promise<void> {
+    try {
+      // Log critical events with maximum visibility
+      console.error('🚨 CRITICAL SECURITY EVENT 🚨', {
+        type: event.eventType,
+        user: event.userEmail,
+        ip: event.ipAddress,
+        details: event.details,
+        timestamp: event.timestamp,
+      })
+
+      // In production, this could:
+      // - Send email to security team
+      // - Trigger PagerDuty/OpsGenie alert
+      // - Send Slack notification to security channel
+      // - Log to dedicated security monitoring platform
+    } catch (error) {
+      console.error('Critical alert failed:', error)
     }
   }
 

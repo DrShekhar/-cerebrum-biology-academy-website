@@ -1245,6 +1245,7 @@ model users {
   user_question_responses         user_question_responses[]
   whatsapp_conversations          whatsapp_conversations[]  @relation("AssignedCounselor")
   whatsapp_messages_sent          whatsapp_messages[]       @relation("SentByUser")
+  security_audit_logs             security_audit_logs[]
 }
 
 model whatsapp_otp {
@@ -1672,4 +1673,48 @@ enum ConversationStatus {
 enum MessageDirection {
   INBOUND
   OUTBOUND
+}
+
+model security_audit_logs {
+  id        String                 @id @default(cuid())
+  eventType SecurityAuditEventType
+  userId    String?
+  userEmail String?
+  userRole  String?
+  ipAddress String
+  userAgent String
+  severity  SecurityAuditSeverity
+  pathname  String?
+  query     Json?
+  referrer  String?
+  details   Json
+  timestamp DateTime               @default(now())
+  users     users?                 @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  @@index([eventType, timestamp])
+  @@index([severity, timestamp])
+  @@index([userId, timestamp])
+  @@index([ipAddress, timestamp])
+  @@index([timestamp])
+}
+
+enum SecurityAuditEventType {
+  login
+  logout
+  admin_access
+  failed_login
+  rate_limit_exceeded
+  password_change
+  account_locked
+  suspicious_activity
+  data_access
+  data_modification
+  permission_change
+}
+
+enum SecurityAuditSeverity {
+  low
+  medium
+  high
+  critical
 }
