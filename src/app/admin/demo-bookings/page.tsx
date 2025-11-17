@@ -21,6 +21,8 @@ import {
 } from 'lucide-react'
 import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
+import { Modal } from '@/components/ui/Modal'
+import { ScheduleDemoForm } from '@/components/admin/ScheduleDemoForm'
 
 interface DemoBooking {
   id: string
@@ -61,6 +63,7 @@ export default function DemoBookingsPage() {
   const [dateFilter, setDateFilter] = useState<string>('all')
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
+  const [isScheduleDemoModalOpen, setIsScheduleDemoModalOpen] = useState(false)
 
   // Fetch bookings from API
   useEffect(() => {
@@ -248,11 +251,7 @@ export default function DemoBookingsPage() {
           </div>
           <Button
             className="bg-blue-600 hover:bg-blue-700 text-white"
-            onClick={() =>
-              alert(
-                'Schedule Demo form coming soon! This will open a modal to manually schedule a demo class.'
-              )
-            }
+            onClick={() => setIsScheduleDemoModalOpen(true)}
           >
             <Calendar className="w-4 h-4 mr-2" />
             Schedule Demo
@@ -492,6 +491,23 @@ export default function DemoBookingsPage() {
           </div>
         )}
       </div>
+
+      {/* Schedule Demo Modal */}
+      <Modal
+        open={isScheduleDemoModalOpen}
+        onOpenChange={setIsScheduleDemoModalOpen}
+        title="Schedule Demo Class"
+        description="Schedule a demo class for a prospective student."
+        size="xl"
+      >
+        <ScheduleDemoForm
+          onSuccess={() => {
+            setIsScheduleDemoModalOpen(false)
+            fetchBookings()
+          }}
+          onCancel={() => setIsScheduleDemoModalOpen(false)}
+        />
+      </Modal>
     </AdminLayout>
   )
 }

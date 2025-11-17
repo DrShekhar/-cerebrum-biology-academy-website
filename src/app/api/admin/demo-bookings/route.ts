@@ -12,13 +12,17 @@ const createDemoBookingSchema = z.object({
   studentName: z.string().min(1, 'Student name is required'),
   email: z.string().email('Valid email is required').optional(),
   phone: z.string().min(10, 'Valid phone number is required'),
+  whatsappNumber: z.string().optional(),
+  courseInterest: z.array(z.string()).min(1, 'At least one course must be selected').optional(),
   courseId: z.string().optional(),
   studentClass: z
     .enum(['CLASS_9', 'CLASS_10', 'CLASS_11', 'CLASS_12', 'DROPPER', 'FOUNDATION'])
     .optional(),
   preferredDate: z.string().min(1, 'Preferred date is required'),
   preferredTime: z.string().min(1, 'Preferred time is required'),
+  assignedTo: z.string().optional(),
   message: z.string().optional(),
+  notes: z.string().optional(),
   source: z.string().optional(),
   utmSource: z.string().optional(),
   utmMedium: z.string().optional(),
@@ -99,8 +103,11 @@ export async function POST(request: NextRequest) {
       ...validatedData,
       studentName: validatedData.studentName || 'Unknown',
       phone: validatedData.phone || '',
+      whatsappNumber: validatedData.whatsappNumber || null,
       preferredDate: validatedData.preferredDate || new Date().toISOString(),
       preferredTime: validatedData.preferredTime || '10:00 AM',
+      assignedTo: validatedData.assignedTo || null,
+      notes: validatedData.notes || validatedData.message || null,
       source: validatedData.source || 'admin',
     })
 
