@@ -1,5 +1,5 @@
 import { prisma } from '@/lib/prisma'
-import { logger } from '@/lib/utils'
+import logger from '@/lib/utils'
 
 export async function cleanupExpiredOTPs() {
   try {

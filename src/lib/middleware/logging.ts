@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { logger } from '@/lib/utils'
+import logger from '@/lib/utils'
 import { nanoid } from 'nanoid'
 
 export interface LoggingMiddlewareOptions {
