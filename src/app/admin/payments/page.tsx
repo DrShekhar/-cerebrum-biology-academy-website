@@ -22,6 +22,8 @@ import {
 } from 'lucide-react'
 import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
+import { Modal } from '@/components/ui/Modal'
+import { AddPaymentForm } from '@/components/admin/AddPaymentForm'
 
 interface Payment {
   id: string
@@ -117,6 +119,7 @@ export default function PaymentsPage() {
   const [statusFilter, setStatusFilter] = useState<string>('all')
   const [methodFilter, setMethodFilter] = useState<string>('all')
   const [dateFilter, setDateFilter] = useState<string>('all')
+  const [isAddPaymentModalOpen, setIsAddPaymentModalOpen] = useState(false)
 
   useEffect(() => {
     let filtered = payments
@@ -253,9 +256,12 @@ export default function PaymentsPage() {
               <RefreshCw className="w-4 h-4 mr-2" />
               Sync
             </Button>
-            <Button className="bg-blue-600 hover:bg-blue-700 text-white">
+            <Button
+              className="bg-blue-600 hover:bg-blue-700 text-white"
+              onClick={() => setIsAddPaymentModalOpen(true)}
+            >
               <Send className="w-4 h-4 mr-2" />
-              Send Invoice
+              Add Payment
             </Button>
           </div>
         </div>
@@ -462,6 +468,22 @@ export default function PaymentsPage() {
           )}
         </motion.div>
       </div>
+
+      <Modal
+        open={isAddPaymentModalOpen}
+        onOpenChange={setIsAddPaymentModalOpen}
+        title="Add Manual Payment"
+        description="Record a payment received offline or outside the system."
+        size="xl"
+      >
+        <AddPaymentForm
+          onSuccess={() => {
+            setIsAddPaymentModalOpen(false)
+            window.location.reload()
+          }}
+          onCancel={() => setIsAddPaymentModalOpen(false)}
+        />
+      </Modal>
     </AdminLayout>
   )
 }
