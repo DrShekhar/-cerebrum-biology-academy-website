@@ -61,7 +61,8 @@ export async function POST(request: NextRequest) {
         })
       } catch (dbError) {
         // Log error but continue processing other events
-        logger.error('Failed to store analytics event', dbError as Error, {
+        logger.error('Failed to store analytics event', {
+          error: dbError,
           activity: activity.type,
           userId: activity.userId,
         })
@@ -75,9 +76,15 @@ export async function POST(request: NextRequest) {
       timestamp: new Date().toISOString(),
     })
   } catch (error) {
-    logger.error('Analytics tracking error', error as Error)
+    logger.error('Analytics tracking error', {
+      error,
+      details: error instanceof Error ? error.message : 'Unknown error',
+    })
     return NextResponse.json(
-      { error: 'Failed to process analytics data', details: (error as Error).message },
+      {
+        error: 'Failed to process analytics data',
+        details: error instanceof Error ? error.message : 'Unknown error',
+      },
       { status: 500 }
     )
   }
@@ -115,9 +122,15 @@ export async function GET(request: NextRequest) {
       filtered: events.length,
     })
   } catch (error) {
-    logger.error('Failed to fetch analytics data', error as Error)
+    logger.error('Failed to fetch analytics data', {
+      error,
+      details: error instanceof Error ? error.message : 'Unknown error',
+    })
     return NextResponse.json(
-      { error: 'Failed to fetch analytics data', details: (error as Error).message },
+      {
+        error: 'Failed to fetch analytics data',
+        details: error instanceof Error ? error.message : 'Unknown error',
+      },
       { status: 500 }
     )
   }
