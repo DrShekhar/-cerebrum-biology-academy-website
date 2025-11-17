@@ -8,10 +8,13 @@ export async function createDemoBooking(data: {
   studentName: string
   email?: string
   phone: string
+  whatsappNumber?: string | null
   studentClass?: StudentClass
   preferredDate: string
   preferredTime: string
+  assignedTo?: string | null
   message?: string
+  notes?: string | null
   source?: string
   utmSource?: string
   utmMedium?: string
@@ -24,9 +27,12 @@ export async function createDemoBooking(data: {
       studentName: data.studentName,
       email: data.email,
       phone: data.phone,
+      whatsappNumber: data.whatsappNumber,
       studentClass: data.studentClass,
       preferredDate: data.preferredDate,
       preferredTime: data.preferredTime,
+      assignedTo: data.assignedTo,
+      notes: data.notes || data.message,
       message: data.message,
       source: data.source || 'website',
       utmSource: data.utmSource,
