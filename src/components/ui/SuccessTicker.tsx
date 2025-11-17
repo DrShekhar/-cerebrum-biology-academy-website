@@ -20,13 +20,37 @@ export function SuccessTicker({
   const [isDismissed, setIsDismissed] = useState(false)
   const [successStories, setSuccessStories] = useState<string[]>([])
 
-  // Generate success stories
+  // Generate success stories (excluding scores > 650)
   useEffect(() => {
     const stories: string[] = []
-    for (let i = 0; i < 10; i++) {
+    let attempts = 0
+    const maxAttempts = 50 // Prevent infinite loop
+
+    while (stories.length < 10 && attempts < maxAttempts) {
       const story = getRandomSuccessStory()
+      attempts++
+
+      // Skip stories that mention scores > 650
+      const scoreMatch = story.message.match(/(\d+)\s*marks?/i)
+      if (scoreMatch) {
+        const score = parseInt(scoreMatch[1])
+        if (score > 650) {
+          continue // Skip this story
+        }
+      }
+
+      // Also check for score patterns like "scored 651"
+      const scoredMatch = story.message.match(/scored?\s+(\d+)/i)
+      if (scoredMatch) {
+        const score = parseInt(scoredMatch[1])
+        if (score > 650) {
+          continue // Skip this story
+        }
+      }
+
       stories.push(story.message)
     }
+
     setSuccessStories(stories)
   }, [])
 
@@ -148,7 +172,31 @@ export function CompactSuccessTicker() {
     if (!isVisible) return
 
     const updateStory = () => {
-      const story = getRandomSuccessStory()
+      let story = getRandomSuccessStory()
+      let attempts = 0
+      const maxAttempts = 20
+
+      // Keep trying until we get a story without high scores
+      while (attempts < maxAttempts) {
+        const scoreMatch = story.message.match(/(\d+)\s*marks?/i)
+        const scoredMatch = story.message.match(/scored?\s+(\d+)/i)
+
+        let hasHighScore = false
+        if (scoreMatch && parseInt(scoreMatch[1]) > 650) {
+          hasHighScore = true
+        }
+        if (scoredMatch && parseInt(scoredMatch[1]) > 650) {
+          hasHighScore = true
+        }
+
+        if (!hasHighScore) {
+          break // Found a valid story
+        }
+
+        story = getRandomSuccessStory()
+        attempts++
+      }
+
       setCurrentStory(story.message)
     }
 
