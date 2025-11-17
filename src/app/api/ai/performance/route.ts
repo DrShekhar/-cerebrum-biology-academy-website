@@ -3,12 +3,26 @@
 
 import { NextRequest, NextResponse } from 'next/server'
 import { performanceMonitor } from '@/lib/ai/performanceMonitor'
+import { verifyAdminAccess } from '@/lib/auth/adminVerification'
 
 // Force Node.js runtime for better compatibility
 export const runtime = 'nodejs'
 
 export async function GET(request: NextRequest) {
   try {
+    // Verify admin access
+    const adminVerification = await verifyAdminAccess(request)
+    if (!adminVerification.authorized) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: 'Unauthorized',
+          message: adminVerification.message || 'Admin access required',
+        },
+        { status: 401 }
+      )
+    }
+
     const url = new URL(request.url)
     const action = url.searchParams.get('action')
 
