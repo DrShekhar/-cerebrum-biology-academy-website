@@ -23,6 +23,8 @@ import {
 } from 'lucide-react'
 import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
+import { Modal } from '@/components/ui/Modal'
+import { CreateCourseForm } from '@/components/admin/CreateCourseForm'
 
 interface Course {
   id: string
@@ -143,6 +145,7 @@ export default function CoursesPage() {
   const [searchTerm, setSearchTerm] = useState('')
   const [typeFilter, setTypeFilter] = useState<string>('all')
   const [statusFilter, setStatusFilter] = useState<string>('all')
+  const [isCreateCourseModalOpen, setIsCreateCourseModalOpen] = useState(false)
 
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -224,11 +227,7 @@ export default function CoursesPage() {
             </Button>
             <Button
               className="bg-blue-600 hover:bg-blue-700 text-white"
-              onClick={() =>
-                alert(
-                  'Create Course form coming soon! This will open a modal to create a new course with curriculum, schedule, and pricing.'
-                )
-              }
+              onClick={() => setIsCreateCourseModalOpen(true)}
             >
               <Plus className="w-4 h-4 mr-2" />
               Create Course
@@ -433,6 +432,22 @@ export default function CoursesPage() {
           </div>
         )}
       </div>
+
+      <Modal
+        open={isCreateCourseModalOpen}
+        onOpenChange={setIsCreateCourseModalOpen}
+        title="Create New Course"
+        description="Fill in the details below to create a new course with curriculum and pricing."
+        size="xl"
+      >
+        <CreateCourseForm
+          onSuccess={() => {
+            setIsCreateCourseModalOpen(false)
+            window.location.reload()
+          }}
+          onCancel={() => setIsCreateCourseModalOpen(false)}
+        />
+      </Modal>
     </AdminLayout>
   )
 }
