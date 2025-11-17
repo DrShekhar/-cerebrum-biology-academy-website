@@ -21,6 +21,8 @@ import {
 } from 'lucide-react'
 import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
+import { Modal } from '@/components/ui/Modal'
+import { AddFacultyForm } from '@/components/admin/AddFacultyForm'
 
 interface Faculty {
   id: string
@@ -90,6 +92,7 @@ export default function FacultySettingsPage() {
   const [faculty, setFaculty] = useState<Faculty[]>(mockFaculty)
   const [searchTerm, setSearchTerm] = useState('')
   const [statusFilter, setStatusFilter] = useState<string>('all')
+  const [isAddFacultyModalOpen, setIsAddFacultyModalOpen] = useState(false)
 
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -127,11 +130,7 @@ export default function FacultySettingsPage() {
           </div>
           <Button
             className="bg-blue-600 hover:bg-blue-700 text-white"
-            onClick={() =>
-              alert(
-                'Add Faculty form coming soon! This will open a modal to onboard a new faculty member.'
-              )
-            }
+            onClick={() => setIsAddFacultyModalOpen(true)}
           >
             <UserPlus className="w-4 h-4 mr-2" />
             Add Faculty
@@ -356,6 +355,22 @@ export default function FacultySettingsPage() {
           </div>
         )}
       </div>
+
+      <Modal
+        open={isAddFacultyModalOpen}
+        onOpenChange={setIsAddFacultyModalOpen}
+        title="Add New Faculty Member"
+        description="Onboard a new faculty member with their credentials and professional details."
+        size="lg"
+      >
+        <AddFacultyForm
+          onSuccess={() => {
+            setIsAddFacultyModalOpen(false)
+            window.location.reload()
+          }}
+          onCancel={() => setIsAddFacultyModalOpen(false)}
+        />
+      </Modal>
     </AdminLayout>
   )
 }
