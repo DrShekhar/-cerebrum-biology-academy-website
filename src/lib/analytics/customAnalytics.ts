@@ -317,9 +317,31 @@ class CustomAnalytics {
    */
   private async storeInDatabase(event: AnalyticsEvent): Promise<void> {
     try {
-      // In production, this would use Prisma to store in database
-      // For now, just log
-      logger.debug('Analytics event would be stored in DB:', event)
+      const prisma = (await import('@/lib/prisma')).default
+      const { nanoid } = await import('nanoid')
+
+      await prisma.analytics_events.create({
+        data: {
+          id: nanoid(),
+          userId: event.userId || null,
+          sessionId: event.sessionId || null,
+          eventType: event.type,
+          eventName: event.type,
+          properties: event.metadata,
+          pagePath: event.metadata.page as string | null,
+          pageTitle: event.metadata.pageTitle as string | null,
+          referrer: event.metadata.referrer as string | null,
+          userAgent: event.metadata.userAgent as string | null,
+          utmSource: event.metadata.utmSource as string | null,
+          utmMedium: event.metadata.utmMedium as string | null,
+          utmCampaign: event.metadata.utmCampaign as string | null,
+          ipAddress: event.metadata.ipAddress as string | null,
+          country: event.metadata.country as string | null,
+          city: event.metadata.city as string | null,
+        },
+      })
+
+      logger.debug('Analytics event stored in database', { eventType: event.type })
     } catch (error) {
       logger.error('Failed to store analytics event', error as Error)
     }

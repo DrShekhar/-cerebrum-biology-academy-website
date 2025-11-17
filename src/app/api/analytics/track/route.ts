@@ -1,10 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { headers } from 'next/headers'
 import { UserActivity } from '@/lib/types/analytics'
-
-// This would normally connect to a real database
-// For now, we'll use in-memory storage as demonstration
-const analyticsData: UserActivity[] = []
+import prisma from '@/lib/prisma'
+import { logger } from '@/lib/utils/logger'
+import { nanoid } from 'nanoid'
 
 export async function POST(request: NextRequest) {
   try {
@@ -17,76 +16,132 @@ export async function POST(request: NextRequest) {
       headersList.get('x-forwarded-for') || headersList.get('x-real-ip') || '127.0.0.1'
     const userAgent = headersList.get('user-agent') || 'unknown'
 
-    // Process each activity
+    // Extract UTM parameters from referrer
+    const referrer = headersList.get('referer') || ''
+    const utmParams = extractUTMParams(referrer)
+
+    // Get geolocation data
+    const location = await getLocationFromIP(clientIP)
+
+    // Store events in database
+    const storedEvents = []
+
     for (const activity of activities) {
-      // Enrich activity data with server-side info
-      activity.metadata.ip = clientIP
-      activity.metadata.userAgent = userAgent
+      try {
+        // Create analytics event in database
+        const event = await prisma.analytics_events.create({
+          data: {
+            id: nanoid(),
+            userId: activity.userId !== 'anonymous' ? activity.userId : null,
+            sessionId: activity.sessionId,
+            eventType: activity.type,
+            eventName: activity.type,
+            properties: activity.metadata || {},
+            pagePath: activity.metadata?.page || null,
+            pageTitle: activity.metadata?.pageTitle || null,
+            referrer: referrer || null,
+            userAgent: userAgent,
+            utmSource: utmParams.utmSource,
+            utmMedium: utmParams.utmMedium,
+            utmCampaign: utmParams.utmCampaign,
+            ipAddress: clientIP,
+            country: location.country,
+            city: location.city,
+          },
+        })
 
-      // Add geolocation data (in production, use a service like MaxMind or ipapi)
-      activity.metadata.location = await getLocationFromIP(clientIP)
+        storedEvents.push(event.id)
 
-      // Store activity (in production, save to database)
-      analyticsData.push(activity)
-
-      // Log for development
-      console.log('Analytics Event:', {
-        type: activity.type,
-        userId: activity.userId,
-        sessionId: activity.sessionId,
-        metadata: activity.metadata,
-      })
+        // Log for monitoring
+        logger.info('Analytics event tracked', {
+          eventId: event.id,
+          type: activity.type,
+          userId: activity.userId,
+          sessionId: activity.sessionId,
+        })
+      } catch (dbError) {
+        // Log error but continue processing other events
+        logger.error('Failed to store analytics event', dbError as Error, {
+          activity: activity.type,
+          userId: activity.userId,
+        })
+      }
     }
-
-    // In production, you might want to:
-    // 1. Save to database (PostgreSQL, MongoDB, etc.)
-    // 2. Send to analytics service (Google Analytics, Mixpanel, etc.)
-    // 3. Queue for batch processing
-    // 4. Send to data warehouse
 
     return NextResponse.json({
       success: true,
-      processed: activities.length,
+      processed: storedEvents.length,
+      total: activities.length,
       timestamp: new Date().toISOString(),
     })
   } catch (error) {
-    console.error('Analytics tracking error:', error)
-    return NextResponse.json({ error: 'Failed to process analytics data' }, { status: 500 })
+    logger.error('Analytics tracking error', error as Error)
+    return NextResponse.json(
+      { error: 'Failed to process analytics data', details: (error as Error).message },
+      { status: 500 }
+    )
   }
 }
 
 export async function GET(request: NextRequest) {
-  // Return recent analytics data (for admin dashboard)
-  const { searchParams } = new URL(request.url)
-  const limit = parseInt(searchParams.get('limit') || '50')
-  const userId = searchParams.get('userId')
-  const sessionId = searchParams.get('sessionId')
-  const type = searchParams.get('type')
+  try {
+    // Return recent analytics data (for admin dashboard)
+    const { searchParams } = new URL(request.url)
+    const limit = parseInt(searchParams.get('limit') || '50')
+    const userId = searchParams.get('userId')
+    const sessionId = searchParams.get('sessionId')
+    const type = searchParams.get('type')
 
-  let filteredData = analyticsData
+    // Build where clause
+    const where: any = {}
+    if (userId) where.userId = userId
+    if (sessionId) where.sessionId = sessionId
+    if (type) where.eventType = type
 
-  if (userId) {
-    filteredData = filteredData.filter((activity) => activity.userId === userId)
+    // Query database
+    const [events, total] = await Promise.all([
+      prisma.analytics_events.findMany({
+        where,
+        orderBy: { createdAt: 'desc' },
+        take: limit,
+      }),
+      prisma.analytics_events.count({ where }),
+    ])
+
+    return NextResponse.json({
+      success: true,
+      activities: events,
+      total,
+      filtered: events.length,
+    })
+  } catch (error) {
+    logger.error('Failed to fetch analytics data', error as Error)
+    return NextResponse.json(
+      { error: 'Failed to fetch analytics data', details: (error as Error).message },
+      { status: 500 }
+    )
   }
+}
 
-  if (sessionId) {
-    filteredData = filteredData.filter((activity) => activity.sessionId === sessionId)
+function extractUTMParams(url: string): {
+  utmSource: string | null
+  utmMedium: string | null
+  utmCampaign: string | null
+} {
+  try {
+    const urlObj = new URL(url)
+    return {
+      utmSource: urlObj.searchParams.get('utm_source'),
+      utmMedium: urlObj.searchParams.get('utm_medium'),
+      utmCampaign: urlObj.searchParams.get('utm_campaign'),
+    }
+  } catch {
+    return {
+      utmSource: null,
+      utmMedium: null,
+      utmCampaign: null,
+    }
   }
-
-  if (type) {
-    filteredData = filteredData.filter((activity) => activity.type === type)
-  }
-
-  // Sort by timestamp (newest first) and limit
-  const recentData = filteredData
-    .sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime())
-    .slice(0, limit)
-
-  return NextResponse.json({
-    activities: recentData,
-    total: filteredData.length,
-    filtered: recentData.length,
-  })
 }
 
 async function getLocationFromIP(ip: string) {
