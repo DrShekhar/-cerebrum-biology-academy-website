@@ -18,6 +18,14 @@ function CounselorLoginForm() {
   const [success, setSuccess] = useState(false)
   const [resendCountdown, setResendCountdown] = useState(0)
 
+  // DEV MODE: Bypass authentication
+  useEffect(() => {
+    if (process.env.NEXT_PUBLIC_BYPASS_CRM_AUTH === 'true') {
+      console.log('[DEV MODE] Bypassing counselor authentication, redirecting to', callbackUrl)
+      router.replace(callbackUrl)
+    }
+  }, [router, callbackUrl])
+
   useEffect(() => {
     if (resendCountdown > 0) {
       const timer = setTimeout(() => setResendCountdown(resendCountdown - 1), 1000)
