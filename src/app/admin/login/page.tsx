@@ -8,6 +8,13 @@ export default function AdminLogin() {
   const router = useRouter()
 
   useEffect(() => {
+    // DEV MODE: Skip authentication and go directly to admin dashboard
+    if (process.env.NEXT_PUBLIC_BYPASS_CRM_AUTH === 'true') {
+      console.log('[DEV MODE] Bypassing admin login, redirecting to students page')
+      router.replace('/admin/students')
+      return
+    }
+
     // Redirect to WhatsApp login
     router.replace('/auth/whatsapp')
   }, [router])

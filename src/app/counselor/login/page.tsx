@@ -8,6 +8,13 @@ export default function CounselorLogin() {
   const router = useRouter()
 
   useEffect(() => {
+    // DEV MODE: Skip authentication and go directly to counselor dashboard
+    if (process.env.NEXT_PUBLIC_BYPASS_CRM_AUTH === 'true') {
+      console.log('[DEV MODE] Bypassing counselor login, redirecting to leads')
+      router.replace('/counselor/leads')
+      return
+    }
+
     // Redirect to WhatsApp login
     router.replace('/auth/whatsapp')
   }, [router])
