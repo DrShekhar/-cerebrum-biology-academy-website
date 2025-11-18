@@ -55,7 +55,10 @@ export default async function middleware(req: NextRequest) {
 
   // Protected counselor routes
   if (pathname.startsWith('/counselor') && pathname !== '/counselor-poc') {
-    if (!hasRole(session) || (session.role !== 'COUNSELOR' && session.role !== 'ADMIN')) {
+    // DEV MODE: Skip authentication check if bypass is enabled
+    if (process.env.BYPASS_CRM_AUTH === 'true') {
+      console.log('[DEV MODE] Bypassing counselor route authentication in middleware')
+    } else if (!hasRole(session) || (session.role !== 'COUNSELOR' && session.role !== 'ADMIN')) {
       const loginUrl = new URL('/auth/signin', req.url)
       loginUrl.searchParams.set('returnUrl', pathname)
       return NextResponse.redirect(loginUrl)

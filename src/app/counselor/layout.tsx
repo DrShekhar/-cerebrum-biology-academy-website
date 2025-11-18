@@ -11,16 +11,24 @@ function CounselorAuthWrapper({ children }: { children: React.ReactNode }) {
   const router = useRouter()
   const pathname = usePathname()
 
+  // DEV MODE: Skip authentication check if bypass is enabled
+  const isBypassEnabled = process.env.NEXT_PUBLIC_BYPASS_CRM_AUTH === 'true'
+
   useEffect(() => {
+    if (isBypassEnabled) {
+      console.log('[DEV MODE] Bypassing counselor layout authentication')
+      return
+    }
+
     if (status === 'loading') return
 
     if (status === 'unauthenticated' || !session?.user || session.user.role !== 'counselor') {
       router.push(`/auth/counselor-login?callbackUrl=${pathname}`)
       return
     }
-  }, [status, session, router, pathname])
+  }, [status, session, router, pathname, isBypassEnabled])
 
-  if (status === 'loading') {
+  if (!isBypassEnabled && status === 'loading') {
     return (
       <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50 flex items-center justify-center">
         <div className="text-center">
@@ -36,7 +44,10 @@ function CounselorAuthWrapper({ children }: { children: React.ReactNode }) {
     )
   }
 
-  if (status === 'unauthenticated' || !session?.user || session.user.role !== 'counselor') {
+  if (
+    !isBypassEnabled &&
+    (status === 'unauthenticated' || !session?.user || session.user.role !== 'counselor')
+  ) {
     return null
   }
 
@@ -112,7 +123,7 @@ function CounselorAuthWrapper({ children }: { children: React.ReactNode }) {
 
               <button className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded-lg transition-colors">
                 <div className="w-8 h-8 bg-indigo-600 rounded-full flex items-center justify-center text-white font-semibold text-sm">
-                  {session?.user?.email?.charAt(0).toUpperCase() || 'C'}
+                  {isBypassEnabled ? 'D' : session?.user?.email?.charAt(0).toUpperCase() || 'C'}
                 </div>
               </button>
             </div>
