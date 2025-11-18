@@ -342,7 +342,7 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
             initial="closed"
             animate="open"
             exit="closed"
-            className={`fixed inset-0 bg-black bg-opacity-50 z-50 flex ${isMobile ? 'items-end' : 'items-start justify-center pt-20'} px-0 md:px-4`}
+            className={`fixed inset-0 bg-black bg-opacity-50 z-[10000] flex ${isMobile ? 'items-end' : 'items-start justify-center pt-20'} px-0 md:px-4`}
             onClick={onClose}
           >
             <motion.div
