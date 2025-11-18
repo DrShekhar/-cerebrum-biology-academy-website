@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 import { prisma } from '@/lib/prisma'
+import { WhatsAppBusinessService } from '@/lib/integrations/whatsappBusinessService'
 
 // Validation schema
 const whatsappNotificationSchema = z.object({
@@ -114,13 +115,11 @@ Happy Learning! 📚`
         message = 'Notification from Cerebrum Biology Academy'
     }
 
-    // TODO: Integrate with WhatsApp Business API
-    // Options: Twilio, WhatsApp Cloud API, or third-party service
+    // Integrate with WhatsApp Business API using WhatsAppBusinessService
+    const whatsappPhoneId = process.env.WHATSAPP_PHONE_NUMBER_ID
+    const whatsappToken = process.env.WHATSAPP_ACCESS_TOKEN
 
-    const whatsappApiKey = process.env.WHATSAPP_API_KEY
-    const whatsappApiUrl = process.env.WHATSAPP_API_URL
-
-    if (!whatsappApiKey || !whatsappApiUrl) {
+    if (!whatsappPhoneId || !whatsappToken) {
       // Log notification but don't fail if WhatsApp is not configured
       console.log('WhatsApp API not configured, logging notification:')
       console.log({
@@ -148,26 +147,12 @@ Happy Learning! 📚`
       })
     }
 
-    // Send WhatsApp message via configured API
+    // Send WhatsApp message via WhatsApp Business API
     try {
-      const whatsappResponse = await fetch(whatsappApiUrl, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${whatsappApiKey}`,
-        },
-        body: JSON.stringify({
-          to: enrollment.user.phone,
-          message,
-          // Additional fields based on your WhatsApp API provider
-        }),
-      })
-
-      if (!whatsappResponse.ok) {
-        throw new Error('WhatsApp API request failed')
-      }
-
-      const whatsappData = await whatsappResponse.json()
+      const whatsappResponse = await WhatsAppBusinessService.sendTextMessage(
+        enrollment.user.phone,
+        message
+      )
 
       // Create communication log
       await prisma.communicationLog.create({
@@ -178,19 +163,19 @@ Happy Learning! 📚`
           content: message,
           status: 'SENT',
           sentAt: new Date(),
-          whatsappMessageId: whatsappData.messageId || whatsappData.id,
+          whatsappMessageId: whatsappResponse.messages?.[0]?.id,
         },
       })
 
       console.log('WhatsApp notification sent successfully:', {
         to: enrollment.user.phone,
-        messageId: whatsappData.messageId || whatsappData.id,
+        messageId: whatsappResponse.messages?.[0]?.id,
       })
 
       return NextResponse.json({
         success: true,
         message: 'WhatsApp notification sent successfully',
-        messageId: whatsappData.messageId || whatsappData.id,
+        messageId: whatsappResponse.messages?.[0]?.id,
       })
     } catch (apiError) {
       console.error('WhatsApp API error:', apiError)
