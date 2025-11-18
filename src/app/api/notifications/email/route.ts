@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 import { prisma } from '@/lib/prisma'
+import { emailService } from '@/lib/email/emailService'
 
 // Validation schema
 const emailNotificationSchema = z.object({
@@ -204,65 +205,39 @@ Thank you for choosing Cerebrum Biology Academy!
         textContent = 'You have a new notification from Cerebrum Biology Academy.'
     }
 
-    // TODO: Integrate with Email Service Provider
-    // Options: SendGrid, Resend, AWS SES, Nodemailer with SMTP
-
-    const emailApiKey = process.env.EMAIL_API_KEY || process.env.RESEND_API_KEY
-    const emailFrom = process.env.EMAIL_FROM || 'noreply@cerebrumbiologyacademy.com'
-
-    if (!emailApiKey) {
-      // Log notification but don't fail if email is not configured
-      console.log('Email API not configured, logging notification:')
-      console.log({
+    // Send email via EmailService (with SendGrid primary and Resend fallback)
+    try {
+      const emailResult = await emailService.send({
         to: enrollment.user.email,
         subject,
-        preview: textContent.substring(0, 100),
+        html: htmlContent,
+        text: textContent,
       })
 
-      // Create communication log
-      await prisma.communicationLog.create({
-        data: {
-          userId: enrollment.userId,
-          type: 'ENROLLMENT_CONFIRMATION',
-          channel: 'EMAIL',
-          subject,
-          content: textContent,
-          status: 'SENT',
-          sentAt: new Date(),
-        },
-      })
+      if (!emailResult.success) {
+        // Create failed communication log
+        await prisma.communicationLog.create({
+          data: {
+            userId: enrollment.userId,
+            type: 'ENROLLMENT_CONFIRMATION',
+            channel: 'EMAIL',
+            subject,
+            content: textContent,
+            status: 'FAILED',
+            sentAt: new Date(),
+          },
+        })
 
-      return NextResponse.json({
-        success: true,
-        message: 'Email notification logged (API not configured)',
-        logged: true,
-      })
-    }
-
-    // Send email via Resend (example implementation)
-    try {
-      const emailResponse = await fetch('https://api.resend.com/emails', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${emailApiKey}`,
-        },
-        body: JSON.stringify({
-          from: emailFrom,
-          to: enrollment.user.email,
-          subject,
-          html: htmlContent,
-          text: textContent,
-        }),
-      })
-
-      if (!emailResponse.ok) {
-        const errorData = await emailResponse.json()
-        throw new Error(`Email API error: ${JSON.stringify(errorData)}`)
+        return NextResponse.json(
+          {
+            success: false,
+            error: 'Failed to send email notification',
+            details: emailResult.error,
+          },
+          { status: 500 }
+        )
       }
 
-      const emailData = await emailResponse.json()
-
       // Create communication log
       await prisma.communicationLog.create({
         data: {
@@ -273,23 +248,25 @@ Thank you for choosing Cerebrum Biology Academy!
           content: textContent,
           status: 'SENT',
           sentAt: new Date(),
-          emailMessageId: emailData.id,
+          emailMessageId: emailResult.messageId,
         },
       })
 
       console.log('Email notification sent successfully:', {
         to: enrollment.user.email,
         subject,
-        messageId: emailData.id,
+        messageId: emailResult.messageId,
+        provider: emailResult.provider,
       })
 
       return NextResponse.json({
         success: true,
         message: 'Email notification sent successfully',
-        messageId: emailData.id,
+        messageId: emailResult.messageId,
+        provider: emailResult.provider,
       })
     } catch (apiError) {
-      console.error('Email API error:', apiError)
+      console.error('Email service error:', apiError)
 
       // Create failed communication log
       await prisma.communicationLog.create({
