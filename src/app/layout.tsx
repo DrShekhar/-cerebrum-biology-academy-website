@@ -34,15 +34,15 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://cerebrumbiologyacademy.com'),
-  title: 'Cerebrum Biology Academy | Best NEET Biology Coaching Institute',
+  title: 'Cerebrum Biology Academy | Best NEET Biology Coaching Institute India',
   description:
-    'Top NEET Biology coaching by AIIMS experts. 98% success rate, 2000+ students mentored. Online & offline classes for Class 11th, 12th & droppers across 50+ countries.',
+    'Top NEET Biology coaching by AIIMS experts. 98% success rate, 2000+ students mentored. Master Zoology, Botany, Human Physiology, Genetics, Ecology. Online & offline classes for Class 11th, 12th & droppers.',
   keywords:
-    'NEET biology coaching, AIIMS faculty, biology coaching institute, NEET preparation, medical entrance coaching, biology classes, NEET 2025, online biology coaching',
+    'NEET biology coaching, AIIMS faculty, biology coaching institute, NEET preparation, medical entrance coaching, biology classes, NEET 2025, online biology coaching, zoology coaching, botany coaching, human physiology, genetics coaching, ecology NEET, cell biology, molecular biology, plant physiology, animal physiology, evolution biology, biotechnology coaching, NEET biology syllabus, NCERT biology, biology for NEET, best biology teacher, biology online classes, biology notes NEET, biology MCQs NEET, NEET biology questions, biology crash course, NEET UG biology, AIIMS biology, JIPMER biology',
   authors: [{ name: 'Cerebrum Biology Academy' }],
   creator: 'Cerebrum Biology Academy',
   publisher: 'Cerebrum Biology Academy',
-  robots: 'index, follow',
+  robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
   openGraph: {
     type: 'website',
     locale: 'en_IN',
