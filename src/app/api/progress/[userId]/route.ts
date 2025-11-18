@@ -27,7 +27,7 @@ const progressFiltersSchema = z.object({
 })
 
 // Helper function to check user access permissions
-function checkUserAccess(requestingUser: any, targetUserId: string): boolean {
+async function checkUserAccess(requestingUser: any, targetUserId: string): Promise<boolean> {
   // Users can access their own progress
   if (requestingUser.id === targetUserId) {
     return true
@@ -38,10 +38,16 @@ function checkUserAccess(requestingUser: any, targetUserId: string): boolean {
     return true
   }
 
-  // Parents can access their children's progress (would need parent-child relationship)
+  // Parents can access their children's progress
   if (requestingUser.role === 'PARENT') {
-    // TODO: Implement parent-child relationship check
-    return false
+    // Check if there's a parent-child relationship
+    const relationship = await prisma.parent_child_relationships.findFirst({
+      where: {
+        parentId: requestingUser.id,
+        childId: targetUserId,
+      },
+    })
+    return !!relationship
   }
 
   return false
@@ -262,7 +268,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
     }
 
     // Check access permissions
-    if (!checkUserAccess(user, userId)) {
+    if (!(await checkUserAccess(user, userId))) {
       return NextResponse.json({ error: 'Access denied', code: 'FORBIDDEN' }, { status: 403 })
     }
 

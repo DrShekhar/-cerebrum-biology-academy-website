@@ -1208,6 +1208,19 @@ model user_question_responses {
   @@index([userId, answeredAt])
 }
 
+model parent_child_relationships {
+  id        String   @id @default(cuid())
+  parentId  String
+  childId   String
+  createdAt DateTime @default(now())
+  parent    users    @relation("ParentRelationship", fields: [parentId], references: [id], onDelete: Cascade)
+  child     users    @relation("ChildRelationship", fields: [childId], references: [id], onDelete: Cascade)
+
+  @@unique([parentId, childId])
+  @@index([parentId])
+  @@index([childId])
+}
+
 model users {
   id                              String                    @id
   email                           String                    @unique
@@ -1243,10 +1256,12 @@ model users {
   test_sessions                   test_sessions[]
   user_progress                   user_progress[]
   user_question_responses         user_question_responses[]
-  whatsapp_conversations          whatsapp_conversations[]  @relation("AssignedCounselor")
-  whatsapp_messages_sent          whatsapp_messages[]       @relation("SentByUser")
+  whatsapp_conversations          whatsapp_conversations[]        @relation("AssignedCounselor")
+  whatsapp_messages_sent          whatsapp_messages[]             @relation("SentByUser")
   security_audit_logs             security_audit_logs[]
   error_reports                   error_reports[]
+  parent_relationships            parent_child_relationships[]    @relation("ParentRelationship")
+  child_relationships             parent_child_relationships[]    @relation("ChildRelationship")
 }
 
 model whatsapp_otp {
