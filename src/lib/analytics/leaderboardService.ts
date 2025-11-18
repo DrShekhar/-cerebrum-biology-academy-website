@@ -17,26 +17,29 @@ export class LeaderboardService {
         ...(timeRange && {
           submittedAt: {
             gte: timeRange.start,
-            lte: timeRange.end
-          }
-        })
+            lte: timeRange.end,
+          },
+        }),
       },
       include: {
-        freeUser: true
-      }
+        freeUser: true,
+      },
     })
 
     // Group by user and calculate metrics
-    const userStats: Record<string, {
-      userId: string
-      name: string
-      totalScore: number
-      testsCompleted: number
-      totalTime: number
-      bestScore: number
-    }> = {}
+    const userStats: Record<
+      string,
+      {
+        userId: string
+        name: string
+        totalScore: number
+        testsCompleted: number
+        totalTime: number
+        bestScore: number
+      }
+    > = {}
 
-    testAttempts.forEach(attempt => {
+    testAttempts.forEach((attempt) => {
       const userId = attempt.freeUserId
       if (!userStats[userId]) {
         userStats[userId] = {
@@ -45,7 +48,7 @@ export class LeaderboardService {
           totalScore: 0,
           testsCompleted: 0,
           totalTime: 0,
-          bestScore: 0
+          bestScore: 0,
         }
       }
 
@@ -55,25 +58,39 @@ export class LeaderboardService {
       userStats[userId].bestScore = Math.max(userStats[userId].bestScore, attempt.percentage)
     })
 
-    // Calculate leaderboard entries
-    const entries: LeaderboardEntry[] = Object.values(userStats)
-      .filter(user => user.testsCompleted > 0)
-      .map(user => {
-        const averageScore = user.totalScore / user.testsCompleted
-        const averageTime = user.totalTime / user.testsCompleted
+    // Get previous period leaderboard for rank change calculation
+    const previousPeriodRanks = await this.getPreviousPeriodRanks(period)
 
-        return {
-          rank: 0, // Will be set after sorting
-          userId: user.userId,
-          name: user.name,
-          score: Math.round(averageScore * 100) / 100,
-          testsCompleted: user.testsCompleted,
-          averageTime: Math.round(averageTime),
-          badgeCount: 0, // TODO: Calculate from achievements
-          streakDays: 0, // TODO: Calculate streak
-          change: 0 // TODO: Calculate from previous period
-        }
-      })
+    // Calculate leaderboard entries
+    const entries: LeaderboardEntry[] = await Promise.all(
+      Object.values(userStats)
+        .filter((user) => user.testsCompleted > 0)
+        .map(async (user) => {
+          const averageScore = user.totalScore / user.testsCompleted
+          const averageTime = user.totalTime / user.testsCompleted
+
+          // Get badge count and streak
+          const [badgeCount, streakDays] = await Promise.all([
+            this.getUserAchievements(user.userId),
+            this.getUserStreak(user.userId),
+          ])
+
+          return {
+            rank: 0, // Will be set after sorting
+            userId: user.userId,
+            name: user.name,
+            score: Math.round(averageScore * 100) / 100,
+            testsCompleted: user.testsCompleted,
+            averageTime: Math.round(averageTime),
+            badgeCount,
+            streakDays,
+            change: 0, // Will be calculated after ranking
+          }
+        })
+    )
+
+    // Sort entries
+    const sortedEntries = entries
       .sort((a, b) => {
         // Primary sort: average score
         if (b.score !== a.score) return b.score - a.score
@@ -84,16 +101,21 @@ export class LeaderboardService {
       })
       .slice(0, limit)
 
-    // Assign ranks
-    entries.forEach((entry, index) => {
+    // Assign ranks and calculate change from previous period
+    sortedEntries.forEach((entry, index) => {
       entry.rank = index + 1
+      const previousRank = previousPeriodRanks.get(entry.userId)
+      if (previousRank) {
+        // Positive change means moved up (lower rank number)
+        entry.change = previousRank - entry.rank
+      }
     })
 
     return {
       type: 'global',
       period,
-      entries,
-      totalParticipants: Object.keys(userStats).length
+      entries: sortedEntries,
+      totalParticipants: Object.keys(userStats).length,
     }
   }
 
@@ -111,18 +133,18 @@ export class LeaderboardService {
       where: {
         status: 'COMPLETED',
         freeUser: {
-          grade
+          grade,
         },
         ...(timeRange && {
           submittedAt: {
             gte: timeRange.start,
-            lte: timeRange.end
-          }
-        })
+            lte: timeRange.end,
+          },
+        }),
       },
       include: {
-        freeUser: true
-      }
+        freeUser: true,
+      },
     })
 
     return this.processLeaderboardData(testAttempts, 'grade', period, limit)
@@ -144,9 +166,9 @@ export class LeaderboardService {
         ...(timeRange && {
           submittedAt: {
             gte: timeRange.start,
-            lte: timeRange.end
-          }
-        })
+            lte: timeRange.end,
+          },
+        }),
       },
       include: {
         freeUser: true,
@@ -154,17 +176,17 @@ export class LeaderboardService {
           include: {
             question: {
               where: {
-                subject
-              }
-            }
-          }
-        }
-      }
+                subject,
+              },
+            },
+          },
+        },
+      },
     })
 
     // Filter attempts that have questions from the specified subject
-    const filteredAttempts = testAttempts.filter(attempt =>
-      attempt.testQuestions.some(tq => tq.question?.subject === subject)
+    const filteredAttempts = testAttempts.filter((attempt) =>
+      attempt.testQuestions.some((tq) => tq.question?.subject === subject)
     )
 
     return this.processLeaderboardData(filteredAttempts, 'subject', period, limit)
@@ -185,14 +207,14 @@ export class LeaderboardService {
         status: 'COMPLETED',
         topics: {
           path: '$',
-          array_contains: topic
+          array_contains: topic,
         },
         ...(timeRange && {
           submittedAt: {
             gte: timeRange.start,
-            lte: timeRange.end
-          }
-        })
+            lte: timeRange.end,
+          },
+        }),
       },
       include: {
         freeUser: true,
@@ -200,12 +222,12 @@ export class LeaderboardService {
           include: {
             question: {
               where: {
-                topic
-              }
-            }
-          }
-        }
-      }
+                topic,
+              },
+            },
+          },
+        },
+      },
     })
 
     return this.processLeaderboardData(testAttempts, 'topic', period, limit)
@@ -242,7 +264,7 @@ export class LeaderboardService {
         throw new Error('Invalid leaderboard type')
     }
 
-    return leaderboard.entries.find(entry => entry.userId === userId) || null
+    return leaderboard.entries.find((entry) => entry.userId === userId) || null
   }
 
   /**
@@ -265,9 +287,9 @@ export class LeaderboardService {
         status: 'COMPLETED',
         submittedAt: {
           gte: new Date(lastWeek.getTime() - 7 * 24 * 60 * 60 * 1000),
-          lt: lastWeek
-        }
-      }
+          lt: lastWeek,
+        },
+      },
     })
 
     let previousWeek: LeaderboardEntry | null = null
@@ -285,40 +307,41 @@ export class LeaderboardService {
         averageTime: totalTime / previousWeekAttempts.length,
         badgeCount: 0,
         streakDays: 0,
-        change: 0
+        change: 0,
       }
     }
 
-    const improvement = currentWeek && previousWeek
-      ? currentWeek.score - previousWeek.score
-      : 0
+    const improvement = currentWeek && previousWeek ? currentWeek.score - previousWeek.score : 0
 
     return {
       currentWeek,
       previousWeek,
-      improvement
+      improvement,
     }
   }
 
   /**
    * Process leaderboard data
    */
-  private processLeaderboardData(
+  private async processLeaderboardData(
     testAttempts: any[],
     type: Leaderboard['type'],
     period: Leaderboard['period'],
     limit: number
-  ): Leaderboard {
-    const userStats: Record<string, {
-      userId: string
-      name: string
-      totalScore: number
-      testsCompleted: number
-      totalTime: number
-      bestScore: number
-    }> = {}
+  ): Promise<Leaderboard> {
+    const userStats: Record<
+      string,
+      {
+        userId: string
+        name: string
+        totalScore: number
+        testsCompleted: number
+        totalTime: number
+        bestScore: number
+      }
+    > = {}
 
-    testAttempts.forEach(attempt => {
+    testAttempts.forEach((attempt) => {
       const userId = attempt.freeUserId
       if (!userStats[userId]) {
         userStats[userId] = {
@@ -327,7 +350,7 @@ export class LeaderboardService {
           totalScore: 0,
           testsCompleted: 0,
           totalTime: 0,
-          bestScore: 0
+          bestScore: 0,
         }
       }
 
@@ -337,24 +360,39 @@ export class LeaderboardService {
       userStats[userId].bestScore = Math.max(userStats[userId].bestScore, attempt.percentage)
     })
 
-    const entries: LeaderboardEntry[] = Object.values(userStats)
-      .filter(user => user.testsCompleted > 0)
-      .map(user => {
-        const averageScore = user.totalScore / user.testsCompleted
-        const averageTime = user.totalTime / user.testsCompleted
+    // Get previous period ranks for comparison
+    const previousPeriodRanks = await this.getPreviousPeriodRanks(period)
 
-        return {
-          rank: 0,
-          userId: user.userId,
-          name: user.name,
-          score: Math.round(averageScore * 100) / 100,
-          testsCompleted: user.testsCompleted,
-          averageTime: Math.round(averageTime),
-          badgeCount: 0,
-          streakDays: 0,
-          change: 0
-        }
-      })
+    // Calculate leaderboard entries with badge count and streak
+    const entries: LeaderboardEntry[] = await Promise.all(
+      Object.values(userStats)
+        .filter((user) => user.testsCompleted > 0)
+        .map(async (user) => {
+          const averageScore = user.totalScore / user.testsCompleted
+          const averageTime = user.totalTime / user.testsCompleted
+
+          // Get badge count and streak
+          const [badgeCount, streakDays] = await Promise.all([
+            this.getUserAchievements(user.userId),
+            this.getUserStreak(user.userId),
+          ])
+
+          return {
+            rank: 0,
+            userId: user.userId,
+            name: user.name,
+            score: Math.round(averageScore * 100) / 100,
+            testsCompleted: user.testsCompleted,
+            averageTime: Math.round(averageTime),
+            badgeCount,
+            streakDays,
+            change: 0,
+          }
+        })
+    )
+
+    // Sort entries
+    const sortedEntries = entries
       .sort((a, b) => {
         if (b.score !== a.score) return b.score - a.score
         if (b.testsCompleted !== a.testsCompleted) return b.testsCompleted - a.testsCompleted
@@ -362,15 +400,20 @@ export class LeaderboardService {
       })
       .slice(0, limit)
 
-    entries.forEach((entry, index) => {
+    // Assign ranks and calculate change
+    sortedEntries.forEach((entry, index) => {
       entry.rank = index + 1
+      const previousRank = previousPeriodRanks.get(entry.userId)
+      if (previousRank) {
+        entry.change = previousRank - entry.rank
+      }
     })
 
     return {
       type,
       period,
-      entries,
-      totalParticipants: Object.keys(userStats).length
+      entries: sortedEntries,
+      totalParticipants: Object.keys(userStats).length,
     }
   }
 
@@ -386,7 +429,7 @@ export class LeaderboardService {
         startOfDay.setHours(0, 0, 0, 0)
         return {
           start: startOfDay,
-          end: now
+          end: now,
         }
 
       case 'weekly':
@@ -395,14 +438,14 @@ export class LeaderboardService {
         startOfWeek.setHours(0, 0, 0, 0)
         return {
           start: startOfWeek,
-          end: now
+          end: now,
         }
 
       case 'monthly':
         const startOfMonth = new Date(now.getFullYear(), now.getMonth(), 1)
         return {
           start: startOfMonth,
-          end: now
+          end: now,
         }
 
       case 'allTime':
@@ -420,8 +463,8 @@ export class LeaderboardService {
     const achievements = await db.achievement.count({
       where: {
         freeUserId: userId,
-        isCompleted: true
-      }
+        isCompleted: true,
+      },
     })
 
     return achievements
@@ -433,7 +476,7 @@ export class LeaderboardService {
   async getUserStreak(userId: string): Promise<number> {
     const user = await db.freeUser.findUnique({
       where: { id: userId },
-      select: { studyStreak: true }
+      select: { studyStreak: true },
     })
 
     return user?.studyStreak || 0
@@ -447,20 +490,142 @@ export class LeaderboardService {
       leaderboard.entries.map(async (entry) => {
         const [badgeCount, streakDays] = await Promise.all([
           this.getUserAchievements(entry.userId),
-          this.getUserStreak(entry.userId)
+          this.getUserStreak(entry.userId),
         ])
 
         return {
           ...entry,
           badgeCount,
-          streakDays
+          streakDays,
         }
       })
     )
 
     return {
       ...leaderboard,
-      entries: enrichedEntries
+      entries: enrichedEntries,
+    }
+  }
+
+  /**
+   * Get previous period ranks for comparison
+   */
+  private async getPreviousPeriodRanks(
+    period: 'daily' | 'weekly' | 'monthly' | 'allTime'
+  ): Promise<Map<string, number>> {
+    const previousTimeRange = this.getPreviousPeriodTimeRange(period)
+
+    if (!previousTimeRange) {
+      return new Map()
+    }
+
+    const previousAttempts = await db.testAttempt.findMany({
+      where: {
+        status: 'COMPLETED',
+        submittedAt: {
+          gte: previousTimeRange.start,
+          lte: previousTimeRange.end,
+        },
+      },
+      include: {
+        freeUser: true,
+      },
+    })
+
+    // Calculate previous period stats
+    const userStats: Record<
+      string,
+      {
+        totalScore: number
+        testsCompleted: number
+        totalTime: number
+      }
+    > = {}
+
+    previousAttempts.forEach((attempt) => {
+      const userId = attempt.freeUserId
+      if (!userStats[userId]) {
+        userStats[userId] = {
+          totalScore: 0,
+          testsCompleted: 0,
+          totalTime: 0,
+        }
+      }
+
+      userStats[userId].totalScore += attempt.percentage
+      userStats[userId].testsCompleted++
+      userStats[userId].totalTime += attempt.timeSpent
+    })
+
+    // Sort users by score
+    const sortedUsers = Object.entries(userStats)
+      .filter(([_, stats]) => stats.testsCompleted > 0)
+      .map(([userId, stats]) => ({
+        userId,
+        score: stats.totalScore / stats.testsCompleted,
+        testsCompleted: stats.testsCompleted,
+        averageTime: stats.totalTime / stats.testsCompleted,
+      }))
+      .sort((a, b) => {
+        if (b.score !== a.score) return b.score - a.score
+        if (b.testsCompleted !== a.testsCompleted) return b.testsCompleted - a.testsCompleted
+        return a.averageTime - b.averageTime
+      })
+
+    // Create rank map
+    const rankMap = new Map<string, number>()
+    sortedUsers.forEach((user, index) => {
+      rankMap.set(user.userId, index + 1)
+    })
+
+    return rankMap
+  }
+
+  /**
+   * Get time range for previous period
+   */
+  private getPreviousPeriodTimeRange(period: 'daily' | 'weekly' | 'monthly' | 'allTime') {
+    const now = new Date()
+
+    switch (period) {
+      case 'daily':
+        const yesterday = new Date(now)
+        yesterday.setDate(now.getDate() - 1)
+        const startOfYesterday = new Date(yesterday)
+        startOfYesterday.setHours(0, 0, 0, 0)
+        const endOfYesterday = new Date(yesterday)
+        endOfYesterday.setHours(23, 59, 59, 999)
+        return {
+          start: startOfYesterday,
+          end: endOfYesterday,
+        }
+
+      case 'weekly':
+        const lastWeekEnd = new Date(now)
+        lastWeekEnd.setDate(now.getDate() - now.getDay() - 1)
+        lastWeekEnd.setHours(23, 59, 59, 999)
+        const lastWeekStart = new Date(lastWeekEnd)
+        lastWeekStart.setDate(lastWeekEnd.getDate() - 6)
+        lastWeekStart.setHours(0, 0, 0, 0)
+        return {
+          start: lastWeekStart,
+          end: lastWeekEnd,
+        }
+
+      case 'monthly':
+        const lastMonth = new Date(now.getFullYear(), now.getMonth() - 1, 1)
+        const lastMonthEnd = new Date(now.getFullYear(), now.getMonth(), 0)
+        lastMonthEnd.setHours(23, 59, 59, 999)
+        return {
+          start: lastMonth,
+          end: lastMonthEnd,
+        }
+
+      case 'allTime':
+        return null
+
+      default:
+        return null
     }
   }
 }
