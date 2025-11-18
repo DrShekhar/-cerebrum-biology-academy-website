@@ -13,6 +13,16 @@ export interface AdminVerificationResult {
 
 export async function verifyAdminAccess(request: NextRequest): Promise<AdminVerificationResult> {
   try {
+    // DEV MODE: Bypass authentication during development
+    if (process.env.BYPASS_CRM_AUTH === 'true') {
+      console.log('[DEV MODE] Bypassing admin verification')
+      return {
+        authorized: true,
+        adminId: 'dev-admin-id',
+        adminEmail: 'dev@cerebrumbiologyacademy.com',
+      }
+    }
+
     const authHeader = request.headers.get('authorization')
     const apiKey = request.headers.get('x-api-key')
 

@@ -20,6 +20,19 @@ export interface CounselorSession {
 export async function authenticateCounselor(): Promise<
   { session: CounselorSession } | { error: NextResponse }
 > {
+  // DEV MODE: Bypass authentication during development
+  if (process.env.BYPASS_CRM_AUTH === 'true') {
+    console.log('[DEV MODE] Bypassing counselor authentication')
+    return {
+      session: {
+        userId: 'dev-user-id',
+        email: 'dev@cerebrumbiologyacademy.com',
+        name: 'Developer',
+        role: 'ADMIN',
+      },
+    }
+  }
+
   const session = await auth()
 
   if (!session || !session.user) {
