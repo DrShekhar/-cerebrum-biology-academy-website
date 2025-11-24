@@ -105,11 +105,18 @@ export async function evaluateRule(leadId: string, ruleId: string): Promise<bool
         return evaluateCustomCondition(lead, conditions)
 
       default:
-        console.warn(`Unknown trigger type: ${rule.triggerType}`)
+        logWarning('evaluateRule', `Unknown trigger type: ${rule.triggerType}`, {
+          ruleId,
+          triggerType: rule.triggerType,
+        })
         return false
     }
   } catch (error) {
-    console.error('Error evaluating rule:', error)
+    logError('evaluateRule', error, {
+      leadId,
+      ruleId,
+      operation: 'rule evaluation',
+    })
     return false
   }
 }
@@ -128,7 +135,10 @@ export async function processLeadRules(leadId: string): Promise<void> {
     })
 
     if (!lead) {
-      console.warn(`Lead ${leadId} not found`)
+      logWarning('processLeadRules', `Lead not found`, {
+        leadId,
+        operation: 'lead rules processing',
+      })
       return
     }
 
@@ -165,14 +175,20 @@ export async function processLeadRules(leadId: string): Promise<void> {
             },
           })
 
-          console.log(
-            `Created queue item for lead ${leadId}, rule ${rule.name}, scheduled for ${scheduledFor.toISOString()}`
-          )
+          logInfo('processLeadRules', `Created queue item for lead`, {
+            leadId,
+            ruleId: rule.id,
+            ruleName: rule.name,
+            scheduledFor: scheduledFor.toISOString(),
+          })
         }
       }
     }
   } catch (error) {
-    console.error('Error processing lead rules:', error)
+    logError('processLeadRules', error, {
+      leadId,
+      operation: 'lead rules processing',
+    })
     throw error
   }
 }
@@ -213,9 +229,14 @@ export async function processTimeTriggers(): Promise<void> {
       }
     }
 
-    console.log(`Processed ${timeBasedRules.length} time-based trigger rules`)
+    logInfo('processTimeTriggers', `Processed time-based trigger rules`, {
+      rulesCount: timeBasedRules.length,
+      operation: 'time-based trigger evaluation',
+    })
   } catch (error) {
-    console.error('Error processing time triggers:', error)
+    logError('processTimeTriggers', error, {
+      operation: 'time-based trigger processing',
+    })
     throw error
   }
 }
@@ -316,7 +337,11 @@ function evaluateCustomCondition(lead: any, conditions: TriggerConditions): bool
     const condition = conditions.customCondition
     return false
   } catch (error) {
-    console.error('Error evaluating custom condition:', error)
+    logError('evaluateCustomCondition', error, {
+      leadId: lead?.id,
+      customCondition: conditions.customCondition,
+      operation: 'custom condition evaluation',
+    })
     return false
   }
 }
