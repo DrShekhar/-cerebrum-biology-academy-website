@@ -117,7 +117,7 @@ function handleConditionals(content: string, variables: TemplateVariables): stri
   return content.replace(conditionalRegex, (match, variableName, conditionalContent) => {
     const value = variables[variableName]
 
-    if (value && value !== '' && value !== 0 && value !== false) {
+    if (value && value !== '' && value !== 0) {
       return conditionalContent
     }
 

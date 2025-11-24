@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { authenticateCounselor } from '@/lib/auth/counselor-auth'
 import { prisma } from '@/lib/prisma'
-import type { FollowupStatus } from '@/generated/prisma'
 
 export async function GET(request: NextRequest) {
   try {
@@ -12,7 +11,7 @@ export async function GET(request: NextRequest) {
     const { searchParams } = new URL(request.url)
     const leadId = searchParams.get('leadId')
     const ruleId = searchParams.get('ruleId')
-    const status = searchParams.get('status') as FollowupStatus | null
+    const status = searchParams.get('status')
     const channel = searchParams.get('channel')
     const startDate = searchParams.get('startDate')
     const endDate = searchParams.get('endDate')
