@@ -218,12 +218,14 @@ export async function GET(request: NextRequest) {
       attendance: {
         overallRate: overallAttendanceRate,
         totalMarked: attendanceData.length,
-        monthlyData: Object.entries(monthlyAttendance).map(([month, data]) => ({
-          month,
-          rate: ((data.present / data.total) * 100).toFixed(1),
-          present: data.present,
-          total: data.total,
-        })),
+        monthlyData: Object.entries(monthlyAttendance).map(
+          ([month, data]: [string, MonthlyData]) => ({
+            month,
+            rate: ((data.present / data.total) * 100).toFixed(1),
+            present: data.present,
+            total: data.total,
+          })
+        ),
       },
       courses: courseDistribution.map((course) => ({
         id: course.id,
