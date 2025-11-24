@@ -8,6 +8,20 @@
 import { prisma } from '@/lib/prisma'
 import { QueueStatus, FollowupAction } from '@/generated/prisma'
 import { renderTemplate } from './templateRenderer'
+import {
+  logError,
+  logWarning,
+  logInfo,
+  validateLeadData,
+  validateQueueItemData,
+  FollowupProcessingError,
+  FollowupValidationError,
+  createTimeoutPromise,
+  retryWithBackoff,
+  globalCircuitBreaker,
+  globalRateLimiter,
+  sanitizeTemplateContent,
+} from './followupErrorHandler'
 
 interface ExecutionResult {
   success: boolean
@@ -44,15 +58,22 @@ export async function processQueue(): Promise<void> {
       orderBy: { scheduledFor: 'asc' },
     })
 
-    console.log(`Processing ${dueItems.length} due follow-up items`)
+    logInfo('processQueue', `Processing ${dueItems.length} due follow-up items`, {
+      dueItemsCount: dueItems.length,
+      now: now.toISOString(),
+    })
 
     for (const item of dueItems) {
       await processQueueItem(item.id)
     }
 
-    console.log(`Completed processing ${dueItems.length} follow-up items`)
+    logInfo('processQueue', `Completed processing ${dueItems.length} follow-up items`, {
+      processedCount: dueItems.length,
+    })
   } catch (error) {
-    console.error('Error processing queue:', error)
+    logError('processQueue', error, {
+      operation: 'batch processing',
+    })
     throw error
   }
 }
@@ -62,6 +83,7 @@ export async function processQueue(): Promise<void> {
  */
 async function processQueueItem(queueItemId: string): Promise<void> {
   try {
+    // Mark as processing
     await prisma.followup_queue.update({
       where: { id: queueItemId },
       data: {
@@ -70,6 +92,7 @@ async function processQueueItem(queueItemId: string): Promise<void> {
       },
     })
 
+    // Fetch queue item with full details
     const queueItem = await prisma.followup_queue.findUnique({
       where: { id: queueItemId },
       include: {
@@ -87,12 +110,45 @@ async function processQueueItem(queueItemId: string): Promise<void> {
     })
 
     if (!queueItem) {
-      throw new Error(`Queue item ${queueItemId} not found`)
+      throw new FollowupProcessingError(`Queue item ${queueItemId} not found`, {
+        queueItemId,
+      })
     }
+
+    // Validate queue item data
+    const queueValidation = validateQueueItemData(queueItem)
+    if (!queueValidation.valid) {
+      throw new FollowupValidationError(
+        `Invalid queue item data: ${queueValidation.errors.join(', ')}`,
+        {
+          queueItemId,
+          errors: queueValidation.errors,
+        }
+      )
+    }
+
+    // Validate lead data
+    if (queueItem.lead) {
+      const leadValidation = validateLeadData(queueItem.lead)
+      if (!leadValidation.valid) {
+        logWarning('processQueueItem', `Lead data validation warnings for ${queueItem.leadId}`, {
+          errors: leadValidation.errors,
+        })
+      }
+    }
+
+    logInfo('processQueueItem', `Processing queue item ${queueItemId}`, {
+      queueItemId,
+      leadId: queueItem.leadId,
+      ruleId: queueItem.ruleId,
+      attempt: queueItem.attempt,
+      maxAttempts: queueItem.maxAttempts,
+    })
 
     const result = await executeFollowup(queueItem)
 
     if (result.success) {
+      // Update queue item to completed
       await prisma.followup_queue.update({
         where: { id: queueItemId },
         data: {
@@ -101,6 +157,7 @@ async function processQueueItem(queueItemId: string): Promise<void> {
         },
       })
 
+      // Create history record
       await prisma.followup_history.create({
         data: {
           leadId: queueItem.leadId,
@@ -118,11 +175,16 @@ async function processQueueItem(queueItemId: string): Promise<void> {
         },
       })
 
-      console.log(`Successfully completed queue item ${queueItemId}`)
+      logInfo('processQueueItem', `Successfully completed queue item ${queueItemId}`, {
+        queueItemId,
+        deliveryId: result.deliveryId,
+      })
     } else {
+      // Handle failure with retry logic
       const newAttempt = queueItem.attempt + 1
 
       if (newAttempt >= queueItem.maxAttempts) {
+        // Max attempts reached - mark as failed
         await prisma.followup_queue.update({
           where: { id: queueItemId },
           data: {
@@ -149,10 +211,21 @@ async function processQueueItem(queueItemId: string): Promise<void> {
           },
         })
 
-        console.error(
-          `Failed queue item ${queueItemId} after ${newAttempt} attempts: ${result.message}`
+        logError(
+          'processQueueItem',
+          new FollowupProcessingError(
+            `Failed queue item after ${newAttempt} attempts`,
+            { queueItemId, attempts: newAttempt, error: result.message },
+            false
+          ),
+          {
+            queueItemId,
+            attempts: newAttempt,
+            maxAttempts: queueItem.maxAttempts,
+          }
         )
       } else {
+        // Schedule retry
         const nextScheduledFor = new Date()
         nextScheduledFor.setMinutes(nextScheduledFor.getMinutes() + 30)
 
@@ -166,14 +239,22 @@ async function processQueueItem(queueItemId: string): Promise<void> {
           },
         })
 
-        console.warn(
-          `Retrying queue item ${queueItemId}, attempt ${newAttempt}/${queueItem.maxAttempts}, scheduled for ${nextScheduledFor.toISOString()}`
-        )
+        logWarning('processQueueItem', `Retrying queue item ${queueItemId}`, {
+          queueItemId,
+          attempt: newAttempt,
+          maxAttempts: queueItem.maxAttempts,
+          nextScheduledFor: nextScheduledFor.toISOString(),
+          error: result.message,
+        })
       }
     }
   } catch (error) {
-    console.error(`Error processing queue item ${queueItemId}:`, error)
+    logError('processQueueItem', error, {
+      queueItemId,
+      operation: 'queue item processing',
+    })
 
+    // Mark as failed in database
     await prisma.followup_queue.update({
       where: { id: queueItemId },
       data: {
@@ -192,17 +273,44 @@ export async function executeFollowup(queueItem: any): Promise<ExecutionResult> 
     const { lead, rule } = queueItem
 
     if (!lead || !rule) {
+      logError('executeFollowup', new FollowupValidationError('Lead or rule not found'), {
+        queueItemId: queueItem.id,
+        hasLead: !!lead,
+        hasRule: !!rule,
+      })
       return {
         success: false,
         message: 'Lead or rule not found',
       }
     }
 
+    // Render and sanitize template content
     let content = ''
     if (rule.template) {
-      content = renderTemplate(rule.template, lead)
+      try {
+        content = renderTemplate(rule.template, lead)
+        content = sanitizeTemplateContent(content)
+      } catch (error) {
+        logError('executeFollowup', error, {
+          operation: 'template rendering',
+          templateId: rule.template.id,
+        })
+        return {
+          success: false,
+          message: 'Failed to render template',
+        }
+      }
     }
 
+    logInfo('executeFollowup', `Executing ${rule.actionType} action`, {
+      queueItemId: queueItem.id,
+      leadId: lead.id,
+      ruleId: rule.id,
+      actionType: rule.actionType,
+      hasContent: !!content,
+    })
+
+    // Execute action based on type
     switch (rule.actionType) {
       case 'EMAIL':
         return await sendEmail(lead, rule, content)
@@ -223,13 +331,24 @@ export async function executeFollowup(queueItem: any): Promise<ExecutionResult> 
         return await createTask(lead, rule, content)
 
       default:
+        logError(
+          'executeFollowup',
+          new FollowupProcessingError(`Unknown action type: ${rule.actionType}`),
+          {
+            queueItemId: queueItem.id,
+            actionType: rule.actionType,
+          }
+        )
         return {
           success: false,
           message: `Unknown action type: ${rule.actionType}`,
         }
     }
   } catch (error) {
-    console.error('Error executing follow-up:', error)
+    logError('executeFollowup', error, {
+      queueItemId: queueItem.id,
+      operation: 'follow-up execution',
+    })
     return {
       success: false,
       message: error instanceof Error ? error.message : 'Unknown error',
