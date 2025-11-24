@@ -10,6 +10,7 @@ import { FeePlanModal } from './FeePlanModal'
 import { SendMessageModal } from './SendMessageModal'
 import { CommunicationHistoryTimeline } from './CommunicationHistoryTimeline'
 import { OfferLetterModal } from './OfferLetterModal'
+import { LeadScoreBadge } from './LeadScoreBadge'
 
 interface LeadCardProps {
   lead: Lead
@@ -171,7 +172,10 @@ export function LeadCard({ lead, isDragging = false, onRefresh }: LeadCardProps)
       <div className="flex items-start justify-between mb-3">
         <div className="flex-1 min-w-0">
           <h3 className="font-semibold text-gray-900 text-sm truncate mb-1">{lead.studentName}</h3>
-          <PriorityBadge priority={lead.priority} />
+          <div className="flex items-center gap-2 flex-wrap">
+            <PriorityBadge priority={lead.priority} />
+            <LeadScoreBadge score={lead.score} showLabel={false} size="sm" />
+          </div>
         </div>
       </div>
 

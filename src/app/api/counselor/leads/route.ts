@@ -70,7 +70,24 @@ export async function GET(request: NextRequest) {
 
     const leads = await prisma.leads.findMany({
       where,
-      include: {
+      select: {
+        id: true,
+        studentName: true,
+        email: true,
+        phone: true,
+        courseInterest: true,
+        source: true,
+        stage: true,
+        priority: true,
+        score: true,
+        scoreUpdatedAt: true,
+        scoreBreakdown: true,
+        nextFollowUpAt: true,
+        lostReason: true,
+        createdAt: true,
+        updatedAt: true,
+        assignedToId: true,
+        demoBookingId: true,
         crm_communications: {
           take: 5,
           orderBy: { sentAt: 'desc' },
@@ -93,7 +110,7 @@ export async function GET(request: NextRequest) {
           },
         },
       },
-      orderBy: [{ nextFollowUpAt: 'asc' }, { createdAt: 'desc' }],
+      orderBy: [{ score: 'desc' }, { nextFollowUpAt: 'asc' }, { createdAt: 'desc' }],
     })
 
     return NextResponse.json({

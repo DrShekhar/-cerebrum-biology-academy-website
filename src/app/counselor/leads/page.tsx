@@ -35,6 +35,9 @@ export interface Lead {
   stage: LeadStage
   priority: Priority
   source?: string | null
+  score?: number | null
+  scoreUpdatedAt?: Date | null
+  scoreBreakdown?: any
   lastContactedAt?: Date | null
   nextFollowUpAt?: Date | null
   createdAt: Date
