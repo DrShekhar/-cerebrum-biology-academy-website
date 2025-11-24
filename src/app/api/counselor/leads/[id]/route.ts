@@ -3,6 +3,7 @@ import { withCounselor } from '@/lib/auth/middleware'
 import { prisma } from '@/lib/prisma'
 import { z } from 'zod'
 import { TaskService } from '@/lib/counselor/taskService'
+import { processLeadRules } from '@/lib/followupEngine'
 
 const updateLeadSchema = z.object({
   studentName: z.string().optional(),
@@ -222,6 +223,12 @@ async function handlePATCH(
       } catch (error) {
         console.error('Error creating automated task:', error)
       }
+    }
+
+    try {
+      await processLeadRules(lead.id)
+    } catch (error) {
+      console.error('Error processing follow-up rules:', error)
     }
 
     return NextResponse.json({
