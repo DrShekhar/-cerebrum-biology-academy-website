@@ -84,24 +84,24 @@ function extractVariables(lead: any): TemplateVariables {
     : null
 
   return {
-    studentName: lead.studentName || 'there',
-    email: lead.email || '',
-    phone: lead.phone || '',
-    courseInterest: lead.courseInterest || '',
+    studentName: lead.studentName ?? 'there',
+    email: lead.email ?? '',
+    phone: lead.phone ?? '',
+    courseInterest: lead.courseInterest ?? '',
     stage: formatStage(lead.stage),
-    priority: lead.priority || 'WARM',
-    score: lead.score || 0,
-    assignedCounselor: counselor?.name || 'Your counselor',
-    counselorEmail: counselor?.email || '',
-    counselorPhone: counselor?.phone || '',
+    priority: lead.priority ?? 'WARM',
+    score: lead.score ?? 0,
+    assignedCounselor: counselor?.name ?? 'Your counselor',
+    counselorEmail: counselor?.email ?? '',
+    counselorPhone: counselor?.phone ?? '',
     source: formatSource(lead.source),
     createdDate: createdDate ? formatDate(createdDate) : '',
     lastContactDate: lastContactDate ? formatDate(lastContactDate) : '',
     nextFollowUpDate: nextFollowUpDate ? formatDate(nextFollowUpDate) : '',
     demoDate: latestDemo?.scheduledAt ? formatDate(new Date(latestDemo.scheduledAt)) : '',
-    offerAmount: latestOffer?.totalAmount || '',
-    communicationCount: lead._count?.crm_communications || lead._count?.communications || 0,
-    taskCount: lead._count?.tasks || 0,
+    offerAmount: latestOffer?.totalAmount ?? '',
+    communicationCount: lead._count?.crm_communications ?? lead._count?.communications ?? 0,
+    taskCount: lead._count?.tasks ?? 0,
     daysSinceCreation,
     daysSinceContact: daysSinceContact ?? '',
   }
@@ -191,8 +191,12 @@ export function validateTemplate(content: string): {
   const foundPlaceholders = matches.map((match) => match[1])
   const validKeys = Object.keys(TEMPLATE_VARIABLES)
 
-  const invalidPlaceholders = foundPlaceholders.filter((p) => !validKeys.includes(p))
-  const validPlaceholders = foundPlaceholders.filter((p) => validKeys.includes(p))
+  const invalidPlaceholders = Array.from(
+    new Set(foundPlaceholders.filter((p) => !validKeys.includes(p)))
+  )
+  const validPlaceholders = Array.from(
+    new Set(foundPlaceholders.filter((p) => validKeys.includes(p)))
+  )
 
   return {
     valid: invalidPlaceholders.length === 0,
