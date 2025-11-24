@@ -449,6 +449,7 @@ export class ExportService {
     })
 
     // Group data by section and create separate sheets for major sections
+    type DataRow = (typeof exportData.data)[number]
     const groupedData = exportData.data.reduce(
       (acc, row) => {
         if (!acc[row.section]) {
@@ -457,11 +458,11 @@ export class ExportService {
         acc[row.section].push(row)
         return acc
       },
-      {} as Record<string, typeof exportData.data>
+      {} as Record<string, DataRow[]>
     )
 
     // Create sheets for major sections with more than 5 rows
-    Object.entries(groupedData).forEach(([sectionName, sectionData]) => {
+    Object.entries(groupedData).forEach(([sectionName, sectionData]: [string, DataRow[]]) => {
       if (sectionData.length > 5) {
         const sectionSheet = workbook.addWorksheet(sectionName.substring(0, 30)) // Excel sheet name limit
 

@@ -22,7 +22,6 @@ const addPaymentSchema = z.object({
   ]),
   status: z
     .enum(['PENDING', 'PROCESSING', 'COMPLETED', 'FAILED', 'CANCELLED'])
-    .optional()
     .default('COMPLETED'),
   transactionId: z.string().optional(),
   installmentNumber: z.number().min(1).optional(),
@@ -42,7 +41,7 @@ export function AddPaymentForm({ onSuccess, onCancel }: AddPaymentFormProps) {
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
-  } = useForm<AddPaymentFormData>({
+  } = useForm({
     resolver: zodResolver(addPaymentSchema),
     defaultValues: {
       status: 'COMPLETED',

@@ -450,6 +450,13 @@ export default function StudentDashboard() {
                 href="/mock-tests"
                 color="from-blue-500 to-blue-600"
               />
+              <ActionButton
+                icon={<MessageCircle className="w-6 h-6" />}
+                title="Ask a Doubt"
+                description="Get expert help"
+                href="/student/doubts"
+                color="from-teal-500 to-teal-600"
+              />
               {isPaidUser ? (
                 <ActionButton
                   icon={<Brain className="w-6 h-6" />}

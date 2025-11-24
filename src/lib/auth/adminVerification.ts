@@ -1,6 +1,5 @@
 import { NextRequest } from 'next/server'
-import { getServerSession } from 'next-auth'
-import { authOptions } from '@/lib/auth'
+import { auth } from '@/lib/auth'
 import { logger } from '@/lib/utils/logger'
 import prisma from '@/lib/prisma'
 
@@ -35,7 +34,7 @@ export async function verifyAdminAccess(request: NextRequest): Promise<AdminVeri
       return await verifyBearerToken(token)
     }
 
-    const session = await getServerSession(authOptions)
+    const session = await auth()
     if (session) {
       return await verifySession(session)
     }

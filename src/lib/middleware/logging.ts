@@ -58,6 +58,7 @@ export function withLogging<T>(
       requestId,
       method,
       path,
+      userId: undefined as string | undefined,
       ip: request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip'),
       userAgent: request.headers.get('user-agent'),
     }
@@ -74,10 +75,7 @@ export function withLogging<T>(
         }
       }
 
-      logger.apiRequest(method, path, {
-        ...requestContext,
-        ...(requestBody && { body: requestBody }),
-      })
+      logger.apiRequest(method, path, requestContext.userId as any)
 
       const response = await handler(request, context)
 
@@ -94,10 +92,7 @@ export function withLogging<T>(
         }
       }
 
-      logger.apiResponse(method, path, response.status, duration, {
-        ...requestContext,
-        ...(responseBody && { body: responseBody }),
-      })
+      logger.apiResponse(method, path, response.status, duration, requestContext.userId as any)
 
       return response
     } catch (error) {
@@ -119,7 +114,7 @@ export function logApiCall(
   userId?: string,
   additionalContext?: Record<string, any>
 ) {
-  logger.apiRequest(method, path, { userId, ...additionalContext })
+  logger.apiRequest(method, path, userId as any)
 }
 
 export function logApiResponse(
@@ -130,7 +125,7 @@ export function logApiResponse(
   userId?: string,
   additionalContext?: Record<string, any>
 ) {
-  logger.apiResponse(method, path, statusCode, duration, { userId, ...additionalContext })
+  logger.apiResponse(method, path, statusCode, duration, userId as any)
 }
 
 export function createRequestLogger(request: NextRequest, userId?: string) {

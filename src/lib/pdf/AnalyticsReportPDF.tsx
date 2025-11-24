@@ -131,6 +131,7 @@ export const AnalyticsReportPDF: React.FC<AnalyticsReportPDFProps> = ({
   reportTitle = 'Performance Analytics Report',
 }) => {
   // Group data by section
+  type DataRow = (typeof data.data)[number]
   const groupedData = data.data.reduce(
     (acc, row) => {
       if (!acc[row.section]) {
@@ -139,7 +140,7 @@ export const AnalyticsReportPDF: React.FC<AnalyticsReportPDFProps> = ({
       acc[row.section].push(row)
       return acc
     },
-    {} as Record<string, typeof data.data>
+    {} as Record<string, DataRow[]>
   )
 
   return (
@@ -168,30 +169,35 @@ export const AnalyticsReportPDF: React.FC<AnalyticsReportPDFProps> = ({
         </View>
 
         {/* Data Sections */}
-        {Object.entries(groupedData).map(([sectionName, sectionData], sectionIndex) => (
-          <View key={sectionIndex} style={styles.section} wrap={false}>
-            <Text style={styles.sectionTitle}>{sectionName}</Text>
-            <View style={styles.table}>
-              {/* Table Header */}
-              <View style={styles.tableHeader}>
-                <Text style={[styles.tableCell, { flex: 3 }]}>Metric</Text>
-                <Text style={[styles.tableCell, { flex: 1, textAlign: 'right' }]}>Value</Text>
-              </View>
-
-              {/* Table Rows */}
-              {sectionData.map((row, rowIndex) => (
-                <View key={rowIndex} style={styles.tableRow}>
-                  <Text style={[styles.tableCell, { flex: 3 }]}>{row.metric}</Text>
-                  <Text
-                    style={[styles.tableCell, { flex: 1, textAlign: 'right', fontWeight: 'bold' }]}
-                  >
-                    {row.value}
-                  </Text>
+        {Object.entries(groupedData).map(
+          ([sectionName, sectionData]: [string, DataRow[]], sectionIndex) => (
+            <View key={sectionIndex} style={styles.section} wrap={false}>
+              <Text style={styles.sectionTitle}>{sectionName}</Text>
+              <View style={styles.table}>
+                {/* Table Header */}
+                <View style={styles.tableHeader}>
+                  <Text style={[styles.tableCell, { flex: 3 }]}>Metric</Text>
+                  <Text style={[styles.tableCell, { flex: 1, textAlign: 'right' }]}>Value</Text>
                 </View>
-              ))}
+
+                {/* Table Rows */}
+                {sectionData.map((row, rowIndex) => (
+                  <View key={rowIndex} style={styles.tableRow}>
+                    <Text style={[styles.tableCell, { flex: 3 }]}>{row.metric}</Text>
+                    <Text
+                      style={[
+                        styles.tableCell,
+                        { flex: 1, textAlign: 'right', fontWeight: 'bold' },
+                      ]}
+                    >
+                      {row.value}
+                    </Text>
+                  </View>
+                ))}
+              </View>
             </View>
-          </View>
-        ))}
+          )
+        )}
 
         {/* Charts Note */}
         {data.charts && (

@@ -151,6 +151,8 @@ model chapters {
   courses         courses           @relation(fields: [courseId], references: [id], onDelete: Cascade)
   study_materials study_materials[]
   topics          topics[]
+  doubt_tickets   doubt_tickets[]
+  assignments     assignments[]
 
   @@index([courseId, orderIndex])
 }
@@ -287,6 +289,9 @@ model courses {
   demo_bookings   demo_bookings[]
   enrollments     enrollments[]
   study_materials study_materials[]
+  doubt_tickets   doubt_tickets[]
+  assignments     assignments[]
+  certificates    certificates[]
 }
 
 model crm_communications {
@@ -376,6 +381,7 @@ model enrollments {
   courses         courses          @relation(fields: [courseId], references: [id])
   users           users            @relation(fields: [userId], references: [id])
   payments        payments[]
+  certificates    certificates[]
 
   @@unique([userId, courseId])
   @@index([courseId, status])
@@ -1151,6 +1157,8 @@ model topics {
   updatedAt       DateTime
   study_materials study_materials[]
   chapters        chapters          @relation(fields: [chapterId], references: [id], onDelete: Cascade)
+  doubt_tickets   doubt_tickets[]
+  assignments     assignments[]
 
   @@index([chapterId, orderIndex])
 }
@@ -1262,6 +1270,12 @@ model users {
   error_reports                   error_reports[]
   parent_relationships            parent_child_relationships[]    @relation("ParentRelationship")
   child_relationships             parent_child_relationships[]    @relation("ChildRelationship")
+  student_doubts                  doubt_tickets[]                 @relation("StudentDoubts")
+  instructor_doubts               doubt_tickets[]                 @relation("InstructorDoubts")
+  doubt_messages_sent             doubt_messages[]                @relation("DoubtMessageSender")
+  teacher_assignments             assignments[]                   @relation("TeacherAssignments")
+  student_submissions             assignment_submissions[]        @relation("StudentSubmissions")
+  certificates                    certificates[]                  @relation("StudentCertificates")
 }
 
 model whatsapp_otp {
@@ -1771,6 +1785,29 @@ enum ErrorReportSeverity {
   critical
 }
 
+enum DoubtStatus {
+  OPEN
+  IN_PROGRESS
+  ANSWERED
+  RESOLVED
+  CLOSED
+}
+
+enum DoubtPriority {
+  LOW
+  MEDIUM
+  HIGH
+  URGENT
+}
+
+enum MessageType {
+  TEXT
+  IMAGE
+  FILE
+  VOICE
+  VIDEO
+}
+
 model error_feedback {
   id                String   @id @default(cuid())
   errorId           String
@@ -1782,4 +1819,245 @@ model error_feedback {
 
   @@index([errorId, createdAt])
   @@index([createdAt])
+}
+
+model doubt_categories {
+  id           String         @id @default(cuid())
+  name         String         @unique
+  description  String?
+  icon         String?
+  color        String?
+  sortOrder    Int            @default(0)
+  isActive     Boolean        @default(true)
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime       @updatedAt
+  doubt_tickets doubt_tickets[]
+
+  @@index([isActive, sortOrder])
+}
+
+model doubt_tickets {
+  id               String              @id @default(cuid())
+  studentId        String
+  instructorId     String?
+  categoryId       String?
+  subject          String
+  description      String              @db.Text
+  priority         DoubtPriority       @default(MEDIUM)
+  status           DoubtStatus         @default(OPEN)
+  attachments      String[]
+  tags             String[]
+  courseId         String?
+  chapterId        String?
+  topicId          String?
+  viewCount        Int                 @default(0)
+  responseTime     Int?
+  resolvedAt       DateTime?
+  lastMessageAt    DateTime            @default(now())
+  studentRating    Int?
+  studentFeedback  String?
+  createdAt        DateTime            @default(now())
+  updatedAt        DateTime            @updatedAt
+  student          users               @relation("StudentDoubts", fields: [studentId], references: [id], onDelete: Cascade)
+  instructor       users?              @relation("InstructorDoubts", fields: [instructorId], references: [id], onDelete: SetNull)
+  category         doubt_categories?   @relation(fields: [categoryId], references: [id], onDelete: SetNull)
+  course           courses?            @relation(fields: [courseId], references: [id], onDelete: SetNull)
+  chapter          chapters?           @relation(fields: [chapterId], references: [id], onDelete: SetNull)
+  topic            topics?             @relation(fields: [topicId], references: [id], onDelete: SetNull)
+  messages         doubt_messages[]
+
+  @@index([studentId, status, createdAt])
+  @@index([instructorId, status])
+  @@index([categoryId, status])
+  @@index([status, priority, createdAt])
+  @@index([courseId])
+  @@index([lastMessageAt])
+}
+
+model doubt_messages {
+  id           String         @id @default(cuid())
+  doubtId      String
+  senderId     String
+  message      String         @db.Text
+  messageType  MessageType    @default(TEXT)
+  attachments  String[]
+  isRead       Boolean        @default(false)
+  readAt       DateTime?
+  metadata     Json?
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime       @updatedAt
+  doubt        doubt_tickets  @relation(fields: [doubtId], references: [id], onDelete: Cascade)
+  sender       users          @relation("DoubtMessageSender", fields: [senderId], references: [id], onDelete: Cascade)
+
+  @@index([doubtId, createdAt])
+  @@index([senderId])
+  @@index([isRead])
+}
+
+model assignments {
+  id                    String                  @id @default(cuid())
+  teacherId             String
+  courseId              String?
+  chapterId             String?
+  topicId               String?
+  title                 String
+  description           String                  @db.Text
+  instructions          String?                 @db.Text
+  maxMarks              Int
+  dueDate               DateTime
+  allowLateSubmission   Boolean                 @default(false)
+  allowResubmission     Boolean                 @default(false)
+  latePenaltyPercentage Int                     @default(0)
+  status                AssignmentStatus        @default(DRAFT)
+  attachments           String[]
+  createdAt             DateTime                @default(now())
+  updatedAt             DateTime                @updatedAt
+  publishedAt           DateTime?
+  teacher               users                   @relation("TeacherAssignments", fields: [teacherId], references: [id], onDelete: Cascade)
+  course                courses?                @relation(fields: [courseId], references: [id], onDelete: SetNull)
+  chapter               chapters?               @relation(fields: [chapterId], references: [id], onDelete: SetNull)
+  topic                 topics?                 @relation(fields: [topicId], references: [id], onDelete: SetNull)
+  submissions           assignment_submissions[]
+
+  @@index([teacherId, status])
+  @@index([courseId, status])
+  @@index([dueDate, status])
+  @@index([status, publishedAt])
+}
+
+model assignment_submissions {
+  id              String             @id @default(cuid())
+  assignmentId    String
+  studentId       String
+  submittedFiles  String[]
+  submittedText   String?            @db.Text
+  status          SubmissionStatus   @default(NOT_SUBMITTED)
+  submittedAt     DateTime?
+  grade           Int?
+  feedback        String?            @db.Text
+  gradedAt        DateTime?
+  isLate          Boolean            @default(false)
+  resubmissionCount Int              @default(0)
+  lastResubmittedAt DateTime?
+  createdAt       DateTime           @default(now())
+  updatedAt       DateTime           @updatedAt
+  assignment      assignments        @relation(fields: [assignmentId], references: [id], onDelete: Cascade)
+  student         users              @relation("StudentSubmissions", fields: [studentId], references: [id], onDelete: Cascade)
+
+  @@unique([assignmentId, studentId])
+  @@index([studentId, status])
+  @@index([assignmentId, status])
+  @@index([submittedAt])
+  @@index([status, gradedAt])
+}
+
+enum AssignmentStatus {
+  DRAFT
+  PUBLISHED
+  CLOSED
+}
+
+enum SubmissionStatus {
+  NOT_SUBMITTED
+  SUBMITTED
+  LATE
+  GRADED
+  RESUBMIT_REQUIRED
+}
+
+model certificate_templates {
+  id               String            @id @default(cuid())
+  name             String
+  description      String?
+  templateType     CertificateType   @default(COURSE_COMPLETION)
+  designType       DesignType        @default(MODERN)
+  primaryColor     String            @default("#2563eb")
+  secondaryColor   String            @default("#1e40af")
+  accentColor      String            @default("#dbeafe")
+  fontFamily       String            @default("Inter")
+  layout           Json              // Layout configuration (borders, header, footer, signature positions)
+  backgroundImage  String?
+  logoUrl          String?
+  signatureFields  Json              // Array of signature positions and names
+  customFields     Json?             // Additional customizable fields
+  isActive         Boolean           @default(true)
+  isDefault        Boolean           @default(false)
+  usageCount       Int               @default(0)
+  createdBy        String?
+  createdAt        DateTime          @default(now())
+  updatedAt        DateTime          @updatedAt
+  certificates     certificates[]
+
+  @@index([templateType, isActive])
+  @@index([isDefault])
+}
+
+model certificates {
+  id                  String              @id @default(cuid())
+  studentId           String
+  courseId            String?
+  enrollmentId        String?
+  templateId          String?
+  certificateType     CertificateType     @default(COURSE_COMPLETION)
+  certificateNumber   String              @unique
+  verificationCode    String              @unique
+  studentName         String
+  courseName          String
+  completionDate      DateTime
+  issueDate           DateTime            @default(now())
+  validUntil          DateTime?
+  grade               String?
+  percentage          Float?
+  duration            String?             // e.g., "6 months", "1 year"
+  instructorNames     Json?               // Array of instructor names
+  achievements        Json?               // Special achievements or honors
+  qrCodeUrl           String?
+  certificatePdfUrl   String?
+  thumbnailUrl        String?
+  status              CertificateStatus   @default(ISSUED)
+  revokedAt           DateTime?
+  revokedBy           String?
+  revokeReason        String?
+  downloadCount       Int                 @default(0)
+  lastDownloadedAt    DateTime?
+  viewCount           Int                 @default(0)
+  shareCount          Int                 @default(0)
+  metadata            Json?               // Additional metadata
+  createdAt           DateTime            @default(now())
+  updatedAt           DateTime            @updatedAt
+  student             users               @relation("StudentCertificates", fields: [studentId], references: [id], onDelete: Cascade)
+  course              courses?            @relation(fields: [courseId], references: [id], onDelete: SetNull)
+  enrollment          enrollments?        @relation(fields: [enrollmentId], references: [id], onDelete: SetNull)
+  template            certificate_templates? @relation(fields: [templateId], references: [id], onDelete: SetNull)
+
+  @@index([studentId, status, issueDate])
+  @@index([courseId, status])
+  @@index([verificationCode])
+  @@index([certificateNumber])
+  @@index([certificateType, status])
+  @@index([status, issueDate])
+}
+
+enum CertificateType {
+  COURSE_COMPLETION
+  EXCELLENCE
+  PARTICIPATION
+  ACHIEVEMENT
+  APPRECIATION
+  SPECIAL_RECOGNITION
+}
+
+enum CertificateStatus {
+  DRAFT
+  ISSUED
+  REVOKED
+  EXPIRED
+}
+
+enum DesignType {
+  MODERN
+  CLASSIC
+  PREMIUM
+  MINIMALIST
+  ELEGANT
 }

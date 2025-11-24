@@ -22,7 +22,7 @@ const addStudentSchema = z.object({
   state: z.string().min(1, 'State is required'),
   courseInterest: z.string().min(1, 'Course interest is required'),
   leadSource: z.enum(['website', 'referral', 'social_media', 'advertisement', 'direct']),
-  priority: z.enum(['HOT', 'WARM', 'COLD']).optional().default('WARM'),
+  priority: z.enum(['HOT', 'WARM', 'COLD']).default('WARM'),
   parentName: z.string().optional(),
   parentPhone: z.string().optional(),
   notes: z.string().optional(),
@@ -41,7 +41,7 @@ export function AddStudentForm({ onSuccess, onCancel }: AddStudentFormProps) {
     handleSubmit,
     formState: { errors, isSubmitting },
     reset,
-  } = useForm<AddStudentFormData>({
+  } = useForm({
     resolver: zodResolver(addStudentSchema),
     defaultValues: {
       priority: 'WARM',

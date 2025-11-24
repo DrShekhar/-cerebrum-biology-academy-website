@@ -183,7 +183,10 @@ export function isVersionSunset(version: ApiVersion): boolean {
 /**
  * Add versioning headers to response
  */
-export function addVersionHeaders(response: NextResponse, version: ApiVersion): NextResponse {
+export function addVersionHeaders<T = any>(
+  response: NextResponse<T>,
+  version: ApiVersion
+): NextResponse<T> {
   const config = getVersionConfig(version)
 
   // Add current version header

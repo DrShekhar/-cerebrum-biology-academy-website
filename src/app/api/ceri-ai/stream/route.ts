@@ -92,7 +92,8 @@ export async function POST(req: NextRequest) {
             // Accumulate response for caching
             if (useCache && preferUpstash() && upstashCache.isEnabled()) {
               try {
-                const chunkText = new TextDecoder().decode(chunk as Uint8Array)
+                const chunkText =
+                  typeof chunk === 'string' ? chunk : new TextDecoder().decode(chunk)
                 const lines = chunkText.split('\n')
                 for (const line of lines) {
                   if (line.startsWith('data: ')) {
