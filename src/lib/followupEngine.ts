@@ -7,6 +7,19 @@
 
 import { prisma } from '@/lib/prisma'
 import { FollowupTrigger, LeadStage, QueueStatus } from '@/generated/prisma'
+import {
+  logError,
+  logWarning,
+  logInfo,
+  validateTriggerConditions,
+  validateLeadData,
+  validateRuleData,
+  FollowupValidationError,
+  FollowupProcessingError,
+  createTimeoutPromise,
+  retryWithBackoff,
+  safeJsonParse,
+} from './followupErrorHandler'
 
 interface TriggerConditions {
   targetStage?: LeadStage
@@ -234,7 +247,7 @@ function evaluateTimeBased(lead: any, conditions: TriggerConditions): boolean {
 }
 
 function evaluateScoreThreshold(lead: any, conditions: TriggerConditions): boolean {
-  if (!lead.score || !conditions.scoreThreshold) return false
+  if (lead.score == null || conditions.scoreThreshold == null) return false
 
   switch (conditions.scoreOperator) {
     case 'GREATER_THAN':
