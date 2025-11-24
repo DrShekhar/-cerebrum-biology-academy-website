@@ -588,6 +588,8 @@ model leads {
   offers                 offers[]
   tasks                  tasks[]
   whatsapp_conversations whatsapp_conversations[]
+  followup_queue         followup_queue[]
+  followup_history       followup_history[]
 
   @@index([assignedToId, stage])
   @@index([assignedToId, score])
@@ -1289,9 +1291,13 @@ model users {
   teacher_sessions                class_sessions[]                @relation("TeacherSessions")
   student_attendance              student_attendance[]            @relation("StudentAttendance")
   marked_attendance               student_attendance[]            @relation("AttendanceMarker")
-  counselor_kpis                  counselor_kpis[]                @relation("CounselorKPIs")
-  counselor_goals                 counselor_goals[]               @relation("CounselorGoals")
-  counselor_leaderboard           counselor_leaderboard[]         @relation("CounselorLeaderboard")
+  counselor_kpis                          counselor_kpis[]                        @relation("CounselorKPIs")
+  counselor_goals                         counselor_goals[]                       @relation("CounselorGoals")
+  counselor_leaderboard                   counselor_leaderboard[]                 @relation("CounselorLeaderboard")
+  followup_rules_created                  followup_rules[]                        @relation("FollowupRuleCreator")
+  followup_rules_updated                  followup_rules[]                        @relation("FollowupRuleUpdater")
+  followup_templates_created              followup_templates[]                    @relation("FollowupTemplateCreator")
+  followup_history_created                followup_history[]                      @relation("FollowupHistoryCreator")
 }
 
 model whatsapp_otp {
@@ -2341,5 +2347,129 @@ enum GoalStatus {
   ACTIVE
   ACHIEVED
   MISSED
+  CANCELLED
+}
+
+// ============================================
+// AUTOMATED FOLLOW-UP SYSTEM TABLES
+// ============================================
+
+model followup_rules {
+  id                String              @id @default(cuid())
+  name              String
+  description       String?             @db.Text
+  isActive          Boolean             @default(true)
+  triggerType       FollowupTrigger
+  triggerConditions Json                // Specific conditions for trigger
+  delayMinutes      Int                 // Delay before follow-up (in minutes)
+  actionType        FollowupAction
+  templateId        String?
+  priority          Priority            @default(WARM)
+  assignToCounselor Boolean             @default(true)
+  createdById       String
+  updatedById       String?
+  createdAt         DateTime            @default(now())
+  updatedAt         DateTime            @updatedAt
+
+  template          followup_templates? @relation(fields: [templateId], references: [id], onDelete: SetNull)
+  createdBy         users               @relation("FollowupRuleCreator", fields: [createdById], references: [id])
+  updatedBy         users?              @relation("FollowupRuleUpdater", fields: [updatedById], references: [id])
+  followup_queue    followup_queue[]
+
+  @@index([isActive, triggerType])
+  @@index([createdById])
+}
+
+model followup_templates {
+  id            String         @id @default(cuid())
+  name          String
+  description   String?        @db.Text
+  channel       FollowupAction
+  subject       String?        // For emails
+  content       String         @db.Text // Template with placeholders
+  variables     Json           // Available variables
+  isActive      Boolean        @default(true)
+  createdById   String
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime       @updatedAt
+
+  createdBy     users          @relation("FollowupTemplateCreator", fields: [createdById], references: [id])
+  rules         followup_rules[]
+
+  @@index([channel, isActive])
+  @@index([createdById])
+}
+
+model followup_queue {
+  id                String         @id @default(cuid())
+  leadId            String
+  ruleId            String
+  scheduledFor      DateTime       // When to execute
+  status            QueueStatus    @default(PENDING)
+  attempt           Int            @default(0)
+  maxAttempts       Int            @default(3)
+  lastAttemptAt     DateTime?
+  completedAt       DateTime?
+  errorMessage      String?        @db.Text
+  metadata          Json?          // Additional context
+  createdAt         DateTime       @default(now())
+  updatedAt         DateTime       @updatedAt
+
+  lead              leads          @relation(fields: [leadId], references: [id], onDelete: Cascade)
+  rule              followup_rules @relation(fields: [ruleId], references: [id])
+
+  @@index([scheduledFor, status])
+  @@index([leadId])
+  @@index([status])
+  @@index([ruleId])
+}
+
+model followup_history {
+  id            String         @id @default(cuid())
+  leadId        String
+  ruleId        String?
+  action        FollowupAction
+  channel       String?        // EMAIL, WHATSAPP, etc.
+  content       String?        @db.Text
+  sentAt        DateTime       @default(now())
+  status        String         // SENT, DELIVERED, FAILED, OPENED, CLICKED
+  metadata      Json?
+  createdById   String?        // If manual
+  isAutomated   Boolean        @default(true)
+
+  lead          leads          @relation(fields: [leadId], references: [id], onDelete: Cascade)
+  createdBy     users?         @relation("FollowupHistoryCreator", fields: [createdById], references: [id])
+
+  @@index([leadId, sentAt])
+  @@index([status])
+  @@index([isAutomated, sentAt])
+}
+
+enum FollowupTrigger {
+  STAGE_CHANGE       // When lead moves to specific stage
+  TIME_BASED         // After X days/hours
+  SCORE_THRESHOLD    // When score reaches threshold
+  INACTIVITY         // No contact for X days
+  DEMO_NO_SHOW       // Demo scheduled but not attended
+  DEMO_COMPLETED     // After demo completion
+  OFFER_SENT         // After offer is sent
+  CUSTOM             // Custom condition
+}
+
+enum FollowupAction {
+  EMAIL              // Send automated email
+  WHATSAPP           // Send WhatsApp message
+  CALL_TASK          // Create task for call
+  SMS                // Send SMS
+  NOTIFICATION       // In-app notification
+  TASK               // Generic task creation
+}
+
+enum QueueStatus {
+  PENDING
+  PROCESSING
+  COMPLETED
+  FAILED
+  SKIPPED
   CANCELLED
 }
