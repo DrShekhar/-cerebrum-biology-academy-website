@@ -289,9 +289,11 @@ model courses {
   demo_bookings   demo_bookings[]
   enrollments     enrollments[]
   study_materials study_materials[]
-  doubt_tickets   doubt_tickets[]
-  assignments     assignments[]
-  certificates    certificates[]
+  doubt_tickets       doubt_tickets[]
+  assignments         assignments[]
+  certificates        certificates[]
+  class_sessions      class_sessions[]
+  attendance_settings attendance_settings[]
 }
 
 model crm_communications {
@@ -379,9 +381,12 @@ model enrollments {
   createdAt       DateTime         @default(now())
   updatedAt       DateTime
   courses         courses          @relation(fields: [courseId], references: [id])
-  users           users            @relation(fields: [userId], references: [id])
-  payments        payments[]
-  certificates    certificates[]
+  users               users                   @relation(fields: [userId], references: [id])
+  payments            payments[]
+  certificates        certificates[]
+  class_sessions      class_sessions[]
+  student_attendance  student_attendance[]
+  attendance_settings attendance_settings[]
 
   @@unique([userId, courseId])
   @@index([courseId, status])
@@ -1276,6 +1281,9 @@ model users {
   teacher_assignments             assignments[]                   @relation("TeacherAssignments")
   student_submissions             assignment_submissions[]        @relation("StudentSubmissions")
   certificates                    certificates[]                  @relation("StudentCertificates")
+  teacher_sessions                class_sessions[]                @relation("TeacherSessions")
+  student_attendance              student_attendance[]            @relation("StudentAttendance")
+  marked_attendance               student_attendance[]            @relation("AttendanceMarker")
 }
 
 model whatsapp_otp {
@@ -2036,6 +2044,140 @@ model certificates {
   @@index([certificateNumber])
   @@index([certificateType, status])
   @@index([status, issueDate])
+}
+
+model class_sessions {
+  id                String              @id @default(cuid())
+  courseId          String
+  enrollmentId      String?
+  title             String
+  description       String?
+  sessionType       SessionType         @default(REGULAR)
+  scheduledDate     DateTime
+  startTime         DateTime
+  endTime           DateTime
+  duration          Int                 // Duration in minutes
+  teacherId         String
+  meetingLink       String?
+  meetingId         String?
+  meetingPassword   String?
+  location          String?
+  topic             String?
+  chapter           String?
+  syllabusCovered   Json?               // Array of topics covered
+  status            SessionStatus       @default(SCHEDULED)
+  cancelledAt       DateTime?
+  cancelReason      String?
+  rescheduledFrom   String?             // Original session ID if rescheduled
+  attendanceMarked  Boolean             @default(false)
+  totalStudents     Int                 @default(0)
+  presentCount      Int                 @default(0)
+  absentCount       Int                 @default(0)
+  lateCount         Int                 @default(0)
+  recordingUrl      String?
+  notesUrl          String?
+  materialsUrl      Json?               // Array of material URLs
+  homeworkAssigned  String?
+  metadata          Json?
+  createdAt         DateTime            @default(now())
+  updatedAt         DateTime            @updatedAt
+  course            courses             @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  teacher           users               @relation("TeacherSessions", fields: [teacherId], references: [id], onDelete: Cascade)
+  enrollment        enrollments?        @relation(fields: [enrollmentId], references: [id], onDelete: SetNull)
+  attendance        student_attendance[]
+
+  @@index([courseId, scheduledDate])
+  @@index([teacherId, scheduledDate])
+  @@index([enrollmentId, scheduledDate])
+  @@index([status, scheduledDate])
+  @@index([scheduledDate])
+}
+
+model student_attendance {
+  id                String             @id @default(cuid())
+  sessionId         String
+  studentId         String
+  enrollmentId      String?
+  status            AttendanceStatus   @default(ABSENT)
+  markedAt          DateTime           @default(now())
+  markedBy          String             // Teacher/Admin who marked attendance
+  checkInTime       DateTime?
+  checkOutTime      DateTime?
+  duration          Int?               // Minutes attended
+  isLate            Boolean            @default(false)
+  lateBy            Int?               // Minutes late
+  notes             String?            // Teacher notes (e.g., sick, excused)
+  isExcused         Boolean            @default(false)
+  participationScore Int?              // 0-10 participation rating
+  deviceInfo        String?
+  ipAddress         String?
+  location          String?
+  metadata          Json?
+  createdAt         DateTime           @default(now())
+  updatedAt         DateTime           @updatedAt
+  session           class_sessions     @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  student           users              @relation("StudentAttendance", fields: [studentId], references: [id], onDelete: Cascade)
+  markedByUser      users              @relation("AttendanceMarker", fields: [markedBy], references: [id])
+  enrollment        enrollments?       @relation(fields: [enrollmentId], references: [id], onDelete: SetNull)
+
+  @@unique([sessionId, studentId])
+  @@index([sessionId, status])
+  @@index([studentId, status])
+  @@index([enrollmentId, status])
+  @@index([markedAt])
+  @@index([status, markedAt])
+}
+
+model attendance_settings {
+  id                      String    @id @default(cuid())
+  courseId                String?   @unique
+  enrollmentId            String?   @unique
+  autoMarkAbsent          Boolean   @default(true)
+  autoMarkAfterMinutes    Int       @default(15)
+  lateThresholdMinutes    Int       @default(10)
+  minAttendancePercentage Float     @default(75.0)
+  allowSelfCheckIn        Boolean   @default(false)
+  requireLocation         Boolean   @default(false)
+  allowedLocations        Json?     // Geofencing coordinates
+  sendAbsentNotifications Boolean   @default(true)
+  sendLateNotifications   Boolean   @default(true)
+  parentNotifications     Boolean   @default(true)
+  metadata                Json?
+  createdAt               DateTime  @default(now())
+  updatedAt               DateTime  @updatedAt
+  course                  courses?  @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  enrollment              enrollments? @relation(fields: [enrollmentId], references: [id], onDelete: Cascade)
+
+  @@index([courseId])
+  @@index([enrollmentId])
+}
+
+enum AttendanceStatus {
+  PRESENT
+  ABSENT
+  LATE
+  EXCUSED
+  HALF_DAY
+}
+
+enum SessionType {
+  REGULAR
+  DOUBT_CLEARING
+  REVISION
+  TEST
+  PRACTICAL
+  WORKSHOP
+  SEMINAR
+  GUEST_LECTURE
+  EXTRA_CLASS
+}
+
+enum SessionStatus {
+  SCHEDULED
+  ONGOING
+  COMPLETED
+  CANCELLED
+  RESCHEDULED
 }
 
 enum CertificateType {
