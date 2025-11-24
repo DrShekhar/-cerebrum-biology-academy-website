@@ -154,21 +154,23 @@ export async function GET(request: NextRequest) {
     const overallAttendanceRate =
       totalPossible > 0 ? ((totalPresent / totalPossible) * 100).toFixed(1) : 0
 
-    const monthlyAttendance = attendanceData.reduce(
-      (acc: Record<string, { present: number; total: number }>, session) => {
-        const month = new Date(session.scheduledDate).toLocaleDateString('en-US', {
-          year: 'numeric',
-          month: 'short',
-        })
-        if (!acc[month]) {
-          acc[month] = { present: 0, total: 0 }
-        }
-        acc[month].present += session.presentCount || 0
-        acc[month].total += session.totalStudents || 0
-        return acc
-      },
-      {}
-    )
+    interface MonthlyData {
+      present: number
+      total: number
+    }
+
+    const monthlyAttendance = attendanceData.reduce((acc: Record<string, MonthlyData>, session) => {
+      const month = new Date(session.scheduledDate).toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'short',
+      })
+      if (!acc[month]) {
+        acc[month] = { present: 0, total: 0 }
+      }
+      acc[month].present += session.presentCount || 0
+      acc[month].total += session.totalStudents || 0
+      return acc
+    }, {})
 
     const assignmentsByStatus = assignmentsData.reduce(
       (acc: Record<string, number>, assignment) => {
