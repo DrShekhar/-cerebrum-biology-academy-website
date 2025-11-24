@@ -576,6 +576,9 @@ model leads {
   lostReason             String?
   demoBookingId          String?                  @unique
   source                 LeadSource               @default(MANUAL_ENTRY)
+  score                  Int?
+  scoreUpdatedAt         DateTime?
+  scoreBreakdown         Json?
   activities             activities[]
   crm_communications     crm_communications[]
   fee_plans              fee_plans[]
@@ -587,10 +590,12 @@ model leads {
   whatsapp_conversations whatsapp_conversations[]
 
   @@index([assignedToId, stage])
+  @@index([assignedToId, score])
   @@index([createdAt])
   @@index([email])
   @@index([nextFollowUpAt])
   @@index([phone])
+  @@index([score])
 }
 
 model material_access {
