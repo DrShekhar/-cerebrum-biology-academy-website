@@ -48,7 +48,7 @@ export function PaymentHistoryCard({ payment, index = 0 }: PaymentHistoryCardPro
     if (isFeePayment) {
       return payment.paidAt || payment.createdAt
     }
-    return payment.createdAt
+    return (payment as StudentPayment).createdAt
   }
 
   const getTransactionId = () => {

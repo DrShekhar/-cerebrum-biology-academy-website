@@ -11,7 +11,7 @@ const createTemplateSchema = z.object({
   channel: z.enum(['EMAIL', 'WHATSAPP', 'CALL_TASK', 'SMS', 'NOTIFICATION', 'TASK']),
   subject: z.string().optional(),
   content: z.string().min(1, 'Template content is required'),
-  variables: z.record(z.any()).optional(),
+  variables: z.record(z.string(), z.any()).optional(),
   isActive: z.boolean().default(true),
 })
 

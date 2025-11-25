@@ -52,7 +52,7 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
         invoiceDate: payment.createdAt,
         studentName: session.user.name || 'Student',
         studentEmail: session.user.email || '',
-        studentPhone: session.user.phone || undefined,
+        studentPhone: session.user.profile?.phone || undefined,
         studentId: session.user.id,
         courseName: payment.enrollments?.courses?.name || 'Course',
         courseType: payment.enrollments?.courses?.type || undefined,

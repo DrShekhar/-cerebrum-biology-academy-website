@@ -18,7 +18,7 @@ const updateRuleSchema = z.object({
       'CUSTOM',
     ])
     .optional(),
-  triggerConditions: z.record(z.any()).optional(),
+  triggerConditions: z.record(z.string(), z.any()).optional(),
   delayMinutes: z.number().min(0).optional(),
   actionType: z.enum(['EMAIL', 'WHATSAPP', 'CALL_TASK', 'SMS', 'NOTIFICATION', 'TASK']).optional(),
   templateId: z.string().nullable().optional(),

@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/Button'
 import { Input } from '@/components/ui/Input'
 import { Textarea } from '@/components/ui/Textarea'
 import { Label } from '@/components/ui/Label'
-import { Select } from '@/components/ui/Select'
+import { NativeSelect } from '@/components/ui/NativeSelect'
 import { AlertCircle, Loader2, Upload, X } from 'lucide-react'
 
 interface CreateDoubtModalProps {
@@ -170,7 +170,7 @@ export function CreateDoubtModal({
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <Label htmlFor="priority">Priority</Label>
-            <Select
+            <NativeSelect
               id="priority"
               value={formData.priority}
               onChange={(e) =>
@@ -184,13 +184,13 @@ export function CreateDoubtModal({
               <option value="MEDIUM">Medium</option>
               <option value="HIGH">High</option>
               <option value="URGENT">Urgent</option>
-            </Select>
+            </NativeSelect>
           </div>
 
           {categories.length > 0 && (
             <div>
               <Label htmlFor="category">Category</Label>
-              <Select
+              <NativeSelect
                 id="category"
                 value={formData.categoryId}
                 onChange={(e) => setFormData({ ...formData, categoryId: e.target.value })}
@@ -201,14 +201,14 @@ export function CreateDoubtModal({
                     {category.name}
                   </option>
                 ))}
-              </Select>
+              </NativeSelect>
             </div>
           )}
 
           {courses.length > 0 && (
             <div>
               <Label htmlFor="course">Related Course</Label>
-              <Select
+              <NativeSelect
                 id="course"
                 value={formData.courseId}
                 onChange={(e) => setFormData({ ...formData, courseId: e.target.value })}
@@ -219,7 +219,7 @@ export function CreateDoubtModal({
                     {course.name}
                   </option>
                 ))}
-              </Select>
+              </NativeSelect>
             </div>
           )}
         </div>

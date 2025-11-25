@@ -17,7 +17,7 @@ const createRuleSchema = z.object({
     'OFFER_SENT',
     'CUSTOM',
   ]),
-  triggerConditions: z.record(z.any()),
+  triggerConditions: z.record(z.string(), z.any()),
   delayMinutes: z.number().min(0).default(0),
   actionType: z.enum(['EMAIL', 'WHATSAPP', 'CALL_TASK', 'SMS', 'NOTIFICATION', 'TASK']),
   templateId: z.string().optional(),

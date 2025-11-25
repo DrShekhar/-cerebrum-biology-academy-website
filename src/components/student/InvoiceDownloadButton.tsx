@@ -12,7 +12,7 @@ import { cn } from '@/lib/utils'
 interface InvoiceDownloadButtonProps {
   paymentId: string
   variant?: 'default' | 'outline' | 'ghost'
-  size?: 'sm' | 'md' | 'lg'
+  size?: 'sm' | 'default' | 'lg'
   showIcon?: boolean
   showLabel?: boolean
   className?: string

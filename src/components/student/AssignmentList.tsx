@@ -5,7 +5,7 @@ import { AssignmentCard } from './AssignmentCard'
 import { Assignment, SubmissionStatus } from '@/types/assignment'
 import { Search, Filter } from 'lucide-react'
 import { Input } from '@/components/ui/Input'
-import { Select } from '@/components/ui/Select'
+import { NativeSelect } from '@/components/ui/NativeSelect'
 import { EmptyState } from '@/components/ui/EmptyState'
 import { FileText } from 'lucide-react'
 
@@ -88,22 +88,22 @@ export function AssignmentList({ assignments, loading }: AssignmentListProps) {
             />
           </div>
 
-          <Select value={statusFilter} onChange={(e) => setStatusFilter(e.target.value)}>
+          <NativeSelect value={statusFilter} onChange={(e) => setStatusFilter(e.target.value)}>
             <option value="all">All Status</option>
             <option value="pending">Pending</option>
             <option value="submitted">Submitted</option>
             <option value="graded">Graded</option>
             <option value="overdue">Overdue</option>
-          </Select>
+          </NativeSelect>
 
-          <Select value={courseFilter} onChange={(e) => setCourseFilter(e.target.value)}>
+          <NativeSelect value={courseFilter} onChange={(e) => setCourseFilter(e.target.value)}>
             <option value="all">All Courses</option>
             {uniqueCourses.map((course) => (
               <option key={course.id} value={course.id}>
                 {course.name}
               </option>
             ))}
-          </Select>
+          </NativeSelect>
         </div>
       </div>
 
