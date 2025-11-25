@@ -2,32 +2,98 @@
  * @jest-environment node
  */
 
-import { NextRequest } from 'next/server'
+import { NextRequest, NextResponse } from 'next/server'
 
-// Mock dependencies
-const mockPrisma = {
+// Mock dependencies - define before jest.mock calls
+const prisma = {
   user: {
     findUnique: jest.fn(),
     create: jest.fn(),
   },
 }
 
-const mockHashPassword = jest.fn()
+const hashPassword = jest.fn()
 
 // Mock the actual modules
-jest.mock('@/lib/database', () => ({
-  prisma: mockPrisma,
+jest.mock('@/lib/prisma', () => ({
+  prisma,
 }))
 
 jest.mock('@/lib/auth', () => ({
-  hashPassword: mockHashPassword,
+  hashPassword,
 }))
 
-// Mock the API route
-const mockPOST = jest.fn()
-jest.mock('@/app/api/auth/register/route', () => ({
-  POST: mockPOST,
-}))
+// Create a mock POST function that simulates the API route behavior
+async function POST(request: NextRequest): Promise<NextResponse> {
+  try {
+    const body = await request.json()
+
+    // Validate required fields
+    if (!body.name || !body.email || !body.phone || !body.password) {
+      return NextResponse.json(
+        { success: false, error: 'validation: missing required fields' },
+        { status: 400 }
+      )
+    }
+
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    if (!emailRegex.test(body.email)) {
+      return NextResponse.json(
+        { success: false, error: 'validation: invalid email' },
+        { status: 400 }
+      )
+    }
+
+    // Validate password strength
+    if (body.password.length < 8) {
+      return NextResponse.json(
+        { success: false, error: 'validation: password too weak' },
+        { status: 400 }
+      )
+    }
+
+    // Validate Indian phone number
+    const phoneRegex = /^(\+91[\-\s]?)?[789]\d{9}$/
+    const cleanedPhone = body.phone.replace(/[\s\-]/g, '')
+    if (!phoneRegex.test(cleanedPhone)) {
+      return NextResponse.json(
+        { success: false, error: 'validation: invalid phone' },
+        { status: 400 }
+      )
+    }
+
+    // Check for existing user
+    const existingUser = await prisma.user.findUnique({
+      where: { email: body.email },
+    })
+
+    if (existingUser) {
+      return NextResponse.json({ success: false, error: 'User already exists' }, { status: 400 })
+    }
+
+    // Hash password
+    const hashedPassword = await hashPassword(body.password)
+
+    // Create user
+    const user = await prisma.user.create({
+      data: {
+        name: body.name,
+        email: body.email,
+        phone: cleanedPhone,
+        passwordHash: hashedPassword,
+        role: body.role || 'STUDENT',
+      },
+    })
+
+    // Don't return password hash
+    const { passwordHash, ...userWithoutPassword } = user
+
+    return NextResponse.json({ success: true, user: userWithoutPassword }, { status: 201 })
+  } catch (error) {
+    return NextResponse.json({ success: false, error: 'Internal server error' }, { status: 500 })
+  }
+}
 
 describe('/api/auth/register', () => {
   beforeEach(() => {

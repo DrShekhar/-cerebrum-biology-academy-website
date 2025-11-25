@@ -38,10 +38,14 @@ describe('AIMessageHandler', () => {
         userId: 'user_123',
         phone: '+919876543210',
         name: 'John Doe',
-        currentFlow: null,
+        conversationContext: {
+          currentFlow: null,
+          messages: [],
+        },
         lastInteraction: new Date(),
       }),
       updateSession: jest.fn(),
+      addToContext: jest.fn(),
     } as any
 
     mockDemoBooking = {
@@ -102,12 +106,14 @@ describe('AIMessageHandler', () => {
         userId: 'user_123',
         phone: '+919876543210',
         name: 'John Doe',
-        currentFlow: null,
+        conversationContext: {
+          currentFlow: null,
+          messages: [
+            { role: 'user', content: 'What is photosynthesis?' },
+            { role: 'assistant', content: 'Photosynthesis is...' },
+          ],
+        },
         lastInteraction: new Date(),
-        conversationHistory: [
-          { role: 'user', content: 'What is photosynthesis?' },
-          { role: 'assistant', content: 'Photosynthesis is...' },
-        ],
       } as any)
 
       const message = {
@@ -161,7 +167,10 @@ describe('AIMessageHandler', () => {
         userId: 'user_123',
         phone: '+919876543210',
         name: 'John Doe',
-        currentFlow: 'demo_booking',
+        conversationContext: {
+          currentFlow: 'demo_booking',
+          messages: [],
+        },
         lastInteraction: new Date(),
       } as any)
 
@@ -175,7 +184,10 @@ describe('AIMessageHandler', () => {
         userId: 'user_123',
         phone: '+919876543210',
         name: 'John Doe',
-        currentFlow: 'enrollment',
+        conversationContext: {
+          currentFlow: 'enrollment',
+          messages: [],
+        },
         lastInteraction: new Date(),
       } as any)
 
@@ -201,8 +213,11 @@ describe('AIMessageHandler', () => {
       mockSessionManager.getOrCreateSession.mockResolvedValue({
         userId: 'user_123',
         phone: '+919876543210',
-        currentFlow: 'demo_booking',
-        flowStep: 'name',
+        conversationContext: {
+          currentFlow: 'demo_booking',
+          flowStep: 'name',
+          messages: [],
+        },
       } as any)
 
       const message = {
@@ -294,12 +309,14 @@ describe('AIMessageHandler', () => {
         userId: 'user_123',
         phone: '+919876543210',
         name: 'John Doe',
-        currentFlow: null,
+        conversationContext: {
+          currentFlow: null,
+          messages: [
+            { role: 'user', content: 'What is mitosis?' },
+            { role: 'assistant', content: 'Mitosis is cell division...' },
+          ],
+        },
         lastInteraction: new Date(),
-        conversationHistory: [
-          { role: 'user', content: 'What is mitosis?' },
-          { role: 'assistant', content: 'Mitosis is cell division...' },
-        ],
       } as any)
 
       const message = {
@@ -316,7 +333,10 @@ describe('AIMessageHandler', () => {
       mockSessionManager.getOrCreateSession.mockResolvedValue({
         userId: 'user_123',
         phone: '+919876543210',
-        conversationHistory: [{ role: 'user', content: 'Explain photosynthesis' }],
+        conversationContext: {
+          currentFlow: null,
+          messages: [{ role: 'user', content: 'Explain photosynthesis' }],
+        },
       } as any)
 
       const message = {
@@ -339,7 +359,10 @@ describe('AIMessageHandler', () => {
         userId: 'user_123',
         phone: '+919876543210',
         name: 'John Doe',
-        currentFlow: null,
+        conversationContext: {
+          currentFlow: null,
+          messages: [],
+        },
         lastInteraction: oldDate,
       } as any)
 
@@ -355,8 +378,11 @@ describe('AIMessageHandler', () => {
       mockSessionManager.getOrCreateSession.mockResolvedValue({
         userId: 'user_123',
         phone: '+919876543210',
-        currentFlow: 'demo_booking',
-        flowStep: 'name',
+        conversationContext: {
+          currentFlow: 'demo_booking',
+          flowStep: 'name',
+          messages: [],
+        },
         lastInteraction: oldDate,
       } as any)
 

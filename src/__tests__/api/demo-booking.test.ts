@@ -20,11 +20,6 @@ jest.mock('@/lib/whatsapp/whatsappService', () => ({
   sendWhatsAppMessage: jest.fn().mockResolvedValue(true),
 }))
 
-// Mock email service
-jest.mock('@/lib/email/sendEmail', () => ({
-  sendEmail: jest.fn().mockResolvedValue(true),
-}))
-
 describe('/api/demo-booking', () => {
   beforeEach(() => {
     jest.clearAllMocks()

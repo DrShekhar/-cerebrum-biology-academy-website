@@ -225,6 +225,26 @@ jest.mock('lucide-react', () => {
   })
 })
 
+// Mock Toast component
+jest.mock('@/components/ui/Toast', () => ({
+  useToast: () => ({
+    toast: jest.fn(),
+    toasts: [],
+    dismiss: jest.fn(),
+  }),
+  ToastProvider: ({ children }) => children,
+  Toast: () => null,
+  ToastTitle: () => null,
+  ToastDescription: () => null,
+  ToastClose: () => null,
+  ToastViewport: () => null,
+}))
+
+// Mock Toaster component
+jest.mock('@/components/ui/Toaster', () => ({
+  Toaster: () => null,
+}))
+
 // Mock environment variables
 process.env.NODE_ENV = 'test'
 process.env.NEXT_PUBLIC_ENV = 'test'
