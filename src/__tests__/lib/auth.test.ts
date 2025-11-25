@@ -14,7 +14,8 @@ describe('Authentication Library', () => {
       expect(hash).toBeDefined()
       expect(hash).not.toBe(password)
       expect(hash.length).toBeGreaterThan(50)
-      expect(hash.startsWith('$2a$12$')).toBe(true)
+      // bcryptjs may use $2a$ or $2b$ prefix depending on version
+      expect(hash.match(/^\$2[ab]\$12\$/)).toBeTruthy()
     })
 
     it('should verify passwords correctly', async () => {

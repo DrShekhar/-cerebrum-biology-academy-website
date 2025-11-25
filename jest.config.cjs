@@ -73,6 +73,9 @@ const customJestConfig = {
     '<rootDir>/node_modules/',
     '<rootDir>/coverage/',
     '<rootDir>/build/',
+    '<rootDir>/src/__tests__/__mocks__/',
+    '<rootDir>/src/__tests__/setup.ts',
+    '<rootDir>/src/__tests__/utils/',
   ],
 
   transformIgnorePatterns: [

@@ -1,8 +1,9 @@
 import { z } from 'zod'
 
-// Mock Indian phone regex
-export const indianPhoneRegex = /^(\+91[\-\s]?)?[0]?(91)?[789]\d{9}$/
-export const phoneRegex = /^(\+91[\-\s]?)?[0]?(91)?[789]\d{9}$/
+// Mock Indian phone regex - allows +91 prefix with optional space/dash, and Indian mobile numbers starting with 7,8,9
+// Strict version: exactly 10 digits after optional +91 prefix, starting with 7, 8, or 9
+export const indianPhoneRegex = /^(\+91[\-\s]?)?[789]\d{4}[\s]?\d{5}$/
+export const phoneRegex = /^(\+91[\-\s]?)?[789]\d{4}[\s]?\d{5}$/
 
 // Mock schemas for testing
 export const userRegistrationSchema = z.object({
@@ -28,6 +29,14 @@ export const userRegistrationSchema = z.object({
       'Password must contain uppercase, lowercase, and number'
     ),
   role: z.enum(['STUDENT', 'PARENT', 'TEACHER', 'ADMIN']).default('STUDENT'),
+  profile: z
+    .object({
+      currentClass: z.enum(['CLASS_11', 'CLASS_12', 'DROPPER']).optional(),
+      city: z.string().optional(),
+      school: z.string().optional(),
+      targetScore: z.number().optional(),
+    })
+    .optional(),
 })
 
 export const userLoginSchema = z.object({
@@ -54,9 +63,9 @@ export const demoBookingSchema = z.object({
   preferredTime: z
     .string()
     .regex(
-      /^(([01]?[0-9]|2[0-3]):[0-5][0-9](\s?(AM|PM))?|([0-9]|1[0-2]):[0-5][0-9]\s?(AM|PM))$/i,
+      /^(([01]?[0-9]|2[0-3]):[0-5][0-9](\s?(AM|PM))?|([1-9]|1[0-2]):[0-5][0-9]\s?(AM|PM))$/i,
       'Invalid time format'
     ),
   message: z.string().max(1000, 'Message must be less than 1000 characters').optional(),
-  studentClass: z.enum(['CLASS_11', 'CLASS_12', 'DROPPER']),
+  studentClass: z.enum(['CLASS_11', 'CLASS_12', 'DROPPER']).optional(),
 })
