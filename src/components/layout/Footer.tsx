@@ -52,6 +52,7 @@ export const Footer = memo(function Footer() {
     { name: 'Foundation Course (9th-10th)', href: '/courses/foundation' },
     { name: 'Class 9th Foundation', href: '/courses/class-9-foundation' },
     { name: 'Class 10th Foundation', href: '/courses/class-10-foundation' },
+    { name: 'Pricing & Fee Structure', href: '/pricing' },
   ]
 
   const boardLinks = [
