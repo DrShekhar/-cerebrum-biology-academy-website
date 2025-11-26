@@ -386,71 +386,93 @@ export default function PricingPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 overflow-x-hidden">
-      <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-purple-700 text-white py-8 sm:py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8 sm:mb-12">
-            <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 sm:px-6 py-2 sm:py-3 mb-4 sm:mb-6">
-              <ShieldCheckIcon className="w-4 sm:w-5 h-4 sm:h-5" />
-              <span className="font-semibold text-xs sm:text-sm">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50/30 overflow-x-hidden">
+      {/* Hero Section with enhanced gradient */}
+      <div className="relative bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700 text-white py-12 sm:py-16 lg:py-20 overflow-hidden">
+        {/* Background decoration */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-white/5 rounded-full blur-3xl" />
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-radial from-white/5 to-transparent rounded-full" />
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            className="text-center mb-10 sm:mb-14"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <motion.div
+              className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-md border border-white/20 rounded-full px-5 sm:px-6 py-2.5 sm:py-3 mb-6 sm:mb-8 shadow-lg"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+            >
+              <ShieldCheckIcon className="w-4 sm:w-5 h-4 sm:h-5 text-green-300" />
+              <span className="font-semibold text-xs sm:text-sm tracking-wide">
                 Trusted by 5,000+ NEET aspirants
               </span>
-            </div>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 sm:mb-6 leading-tight px-4">
+            </motion.div>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-5 sm:mb-6 leading-[1.1] px-4">
               Master NEET Biology
               <br />
-              <span className="bg-gradient-to-r from-yellow-300 via-yellow-200 to-yellow-300 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-yellow-300 via-amber-200 to-yellow-300 bg-clip-text text-transparent drop-shadow-sm">
                 With India&apos;s Best Faculty
               </span>
             </h1>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-blue-100 max-w-3xl mx-auto px-4">
+            <p className="text-base sm:text-lg md:text-xl text-blue-100/90 max-w-2xl mx-auto px-4 leading-relaxed">
               Small batches, personalized attention, and proven results. Choose your path to medical
               college success.
             </p>
-          </div>
+          </motion.div>
 
-          <div
+          <motion.div
             ref={statsRef}
-            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 max-w-5xl mx-auto"
+            className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 max-w-4xl mx-auto"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 0.6 }}
           >
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl sm:rounded-3xl p-4 sm:p-6 text-center">
-              <div className="text-3xl sm:text-4xl font-bold mb-2">{stats.courses}</div>
-              <div className="text-blue-100 text-xs sm:text-sm">Course Programs</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl sm:rounded-3xl p-4 sm:p-6 text-center">
-              <div className="text-3xl sm:text-4xl font-bold mb-2">{stats.tiers}</div>
-              <div className="text-blue-100 text-xs sm:text-sm">Learning Tiers</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl sm:rounded-3xl p-4 sm:p-6 text-center">
-              <div className="text-3xl sm:text-4xl font-bold mb-2">{stats.success}%</div>
-              <div className="text-blue-100 text-xs sm:text-sm">NEET Qualified 2024</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl sm:rounded-3xl p-4 sm:p-6 text-center">
-              <div className="text-3xl sm:text-4xl font-bold mb-2">7-Day</div>
-              <div className="text-blue-100 text-xs sm:text-sm">Money-Back Guarantee</div>
-            </div>
-          </div>
+            {[
+              { value: stats.courses, label: 'Course Programs', suffix: '' },
+              { value: stats.tiers, label: 'Learning Tiers', suffix: '' },
+              { value: stats.success, label: 'NEET Qualified 2024', suffix: '%' },
+              { value: '7', label: 'Day Money-Back', suffix: '-Day', isStatic: true },
+            ].map((stat, idx) => (
+              <div
+                key={idx}
+                className="group bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl p-4 sm:p-5 text-center hover:bg-white/15 transition-all duration-300 hover:scale-[1.02]"
+              >
+                <div className="text-2xl sm:text-3xl font-bold mb-1 tabular-nums">
+                  {stat.isStatic ? stat.suffix : `${stat.value}${stat.suffix}`}
+                </div>
+                <div className="text-blue-100/80 text-xs sm:text-sm font-medium">{stat.label}</div>
+              </div>
+            ))}
+          </motion.div>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-8">
-        <div className="sticky top-0 z-20 bg-gradient-to-br from-blue-50 via-white to-purple-50 pb-3 sm:pb-4 pt-2 shadow-sm">
-          <div className="mb-4 sm:mb-6">
-            <div className="relative max-w-2xl mx-auto">
-              <MagnifyingGlassIcon className="absolute left-3 sm:left-4 top-1/2 transform -translate-y-1/2 w-4 sm:w-5 h-4 sm:h-5 text-gray-400" />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
+        {/* Sticky Filter Section */}
+        <div className="sticky top-0 z-20 bg-white/80 backdrop-blur-xl pb-4 sm:pb-6 pt-4 -mx-4 px-4 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8 border-b border-gray-100 shadow-sm">
+          <div className="mb-5 sm:mb-6">
+            <div className="relative max-w-xl mx-auto">
+              <MagnifyingGlassIcon className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
               <input
                 type="text"
-                placeholder="Search courses by class, tier, or description..."
+                placeholder="Search courses..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 sm:pl-12 pr-10 sm:pr-12 py-3 sm:py-4 rounded-xl sm:rounded-2xl border-2 border-gray-200 focus:border-blue-500 focus:outline-none focus:shadow-[0_0_0_4px_rgba(59,130,246,0.1)] text-sm sm:text-base text-gray-700 shadow-sm transition-shadow duration-200"
+                className="w-full pl-12 pr-12 py-3.5 rounded-xl border border-gray-200 bg-gray-50/50 focus:bg-white focus:border-blue-500 focus:outline-none focus:ring-4 focus:ring-blue-500/10 text-sm text-gray-700 placeholder:text-gray-400 transition-all duration-200"
               />
               {searchQuery && (
                 <button
                   onClick={() => setSearchQuery('')}
-                  className="absolute right-3 sm:right-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                  className="absolute right-3 top-1/2 transform -translate-y-1/2 p-1 rounded-full text-gray-400 hover:text-gray-600 hover:bg-gray-100 transition-colors"
                 >
-                  <XMarkIcon className="w-4 sm:w-5 h-4 sm:h-5" />
+                  <XMarkIcon className="w-5 h-5" />
                 </button>
               )}
             </div>
@@ -1051,148 +1073,174 @@ export default function PricingPage() {
           </div>
         </div>
 
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white mb-16">
-          <h2 className="text-3xl font-bold text-center mb-12">Why Cerebrum Biology Academy?</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
-            <div className="text-center">
-              <TrophyIcon className="w-16 h-16 mx-auto mb-4" />
-              <h3 className="text-xl font-bold mb-2">98% Success Rate</h3>
-              <p className="text-blue-100">
-                27 students in Top 1000 AIR. Proven track record of excellence.
-              </p>
+        <div className="relative bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700 rounded-3xl p-8 sm:p-12 lg:p-16 text-white mb-16 overflow-hidden">
+          {/* Background decoration */}
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute -top-20 -right-20 w-60 h-60 bg-white/5 rounded-full blur-3xl" />
+            <div className="absolute -bottom-20 -left-20 w-60 h-60 bg-purple-500/20 rounded-full blur-3xl" />
+          </div>
+
+          <div className="relative">
+            <div className="text-center mb-10 sm:mb-12">
+              <span className="inline-block px-4 py-1.5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-sm font-medium mb-4">
+                Why Choose Us
+              </span>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold">
+                Why Cerebrum Biology Academy?
+              </h2>
             </div>
-            <div className="text-center">
-              <AcademicCapIcon className="w-16 h-16 mx-auto mb-4" />
-              <h3 className="text-xl font-bold mb-2">AIIMS Faculty</h3>
-              <p className="text-blue-100">
-                Learn from Dr. Shekhar (AIIMS alumnus) - 15+ years experience
-              </p>
-            </div>
-            <div className="text-center">
-              <UserGroupIcon className="w-16 h-16 mx-auto mb-4" />
-              <h3 className="text-xl font-bold mb-2">Small Batch Sizes</h3>
-              <p className="text-blue-100">
-                Choose from Pinnacle (10-12), Ascent (16-25), or Pursuit (30-40) batches. Personal
-                attention at every level.
-              </p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8">
+              {[
+                {
+                  icon: TrophyIcon,
+                  title: '98% Success Rate',
+                  desc: '27 students in Top 1000 AIR. Proven track record of excellence.',
+                },
+                {
+                  icon: AcademicCapIcon,
+                  title: 'AIIMS Faculty',
+                  desc: 'Learn from Dr. Shekhar (AIIMS alumnus) - 15+ years experience',
+                },
+                {
+                  icon: UserGroupIcon,
+                  title: 'Small Batch Sizes',
+                  desc: 'Pinnacle (10-12), Ascent (16-25), or Pursuit (30-40). Personal attention guaranteed.',
+                },
+              ].map((item, idx) => (
+                <div
+                  key={idx}
+                  className="text-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 sm:p-8 hover:bg-white/10 transition-colors duration-300"
+                >
+                  <div className="inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-white/10 rounded-2xl mb-5">
+                    <item.icon className="w-7 h-7 sm:w-8 sm:h-8" />
+                  </div>
+                  <h3 className="text-lg sm:text-xl font-bold mb-2">{item.title}</h3>
+                  <p className="text-blue-100/80 text-sm sm:text-base leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
 
-        <div className="bg-white rounded-2xl shadow-xl p-8">
-          <h2 className="text-3xl font-bold text-center mb-8">Frequently Asked Questions</h2>
-          <div className="space-y-6 max-w-3xl mx-auto">
-            <details className="group">
-              <summary className="cursor-pointer font-semibold text-lg text-gray-900 py-3 border-b border-gray-200">
-                Can I pay in installments?
-              </summary>
-              <p className="text-gray-600 mt-3 pl-4">
-                Yes! We offer flexible installment options - choose 2 or 3 installments based on
-                your preference. Note that lump sum payment offers the best value with maximum
-                savings.
-              </p>
-            </details>
-
-            <details className="group">
-              <summary className="cursor-pointer font-semibold text-lg text-gray-900 py-3 border-b border-gray-200">
-                What's the difference between the tiers?
-              </summary>
-              <p className="text-gray-600 mt-3 pl-4">
-                <strong>Pinnacle (10-12 students):</strong> Premium coaching with maximum personal
-                attention, ideal for top rankers.
-                <br />
-                <strong>Ascent (16-25 students):</strong> Balanced approach with high-quality
-                teaching and good personal attention.
-                <br />
-                <strong>Pursuit (30-40 students):</strong> Quality education at an affordable price,
-                perfect for budget-conscious students.
-              </p>
-            </details>
-
-            <details className="group">
-              <summary className="cursor-pointer font-semibold text-lg text-gray-900 py-3 border-b border-gray-200">
-                Is there a money-back guarantee?
-              </summary>
-              <p className="text-gray-600 mt-3 pl-4">
-                Yes, Pinnacle and Ascent tiers come with a 30-day money-back guarantee if you're not
-                satisfied with the quality of teaching.
-              </p>
-            </details>
-
-            <details className="group">
-              <summary className="cursor-pointer font-semibold text-lg text-gray-900 py-3 border-b border-gray-200">
-                Are study materials included in the price?
-              </summary>
-              <p className="text-gray-600 mt-3 pl-4">
-                Yes! All tiers include comprehensive study materials, downloadable PDFs, practice
-                questions, and mock tests at no extra cost.
-              </p>
-            </details>
-
-            <details className="group">
-              <summary className="cursor-pointer font-semibold text-lg text-gray-900 py-3 border-b border-gray-200">
-                What if I miss a live class?
-              </summary>
-              <p className="text-gray-600 mt-3 pl-4">
-                All live classes are recorded and available for lifetime access. You can watch them
-                anytime from your student dashboard.
-              </p>
-            </details>
-
-            <details className="group">
-              <summary className="cursor-pointer font-semibold text-lg text-gray-900 py-3 border-b border-gray-200">
-                Can I switch tiers after enrollment?
-              </summary>
-              <p className="text-gray-600 mt-3 pl-4">
-                Yes, you can upgrade to a higher tier by paying the price difference within the
-                first 30 days of enrollment, subject to batch availability.
-              </p>
-            </details>
-          </div>
-        </div>
-
-        <div className="mt-16 text-center pb-20 md:pb-0">
-          <div className="bg-gradient-to-r from-yellow-400 to-orange-500 rounded-2xl p-6 sm:p-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
-              Ready to Start Your NEET Journey?
+        <div className="bg-white rounded-3xl shadow-xl border border-gray-100 p-6 sm:p-10">
+          <div className="text-center mb-8 sm:mb-10">
+            <span className="inline-block px-4 py-1.5 bg-blue-50 text-blue-600 rounded-full text-sm font-medium mb-4">
+              FAQ
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
+              Frequently Asked Questions
             </h2>
-            <p className="text-base sm:text-xl text-gray-800 mb-6 sm:mb-8">
-              Join 5,000+ successful students. Limited seats available!
-            </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <Link href="/demo-booking">
-                <Button variant="primary" size="lg" className="bg-gray-900 hover:bg-black">
-                  Book Free Demo Class
-                </Button>
-              </Link>
-              <Link href="/contact">
-                <Button variant="outline" size="lg" className="border-gray-900 text-gray-900">
-                  Talk to Counselor
-                </Button>
-              </Link>
+          </div>
+          <div className="space-y-3 max-w-3xl mx-auto">
+            {[
+              {
+                q: 'Can I pay in installments?',
+                a: 'Yes! We offer flexible installment options - choose 2 or 3 installments based on your preference. Note that lump sum payment offers the best value with maximum savings.',
+              },
+              {
+                q: "What's the difference between the tiers?",
+                a: '<strong>Pinnacle (10-12 students):</strong> Premium coaching with maximum personal attention, ideal for top rankers.<br/><strong>Ascent (16-25 students):</strong> Balanced approach with high-quality teaching and good personal attention.<br/><strong>Pursuit (30-40 students):</strong> Quality education at an affordable price, perfect for budget-conscious students.',
+              },
+              {
+                q: 'Is there a money-back guarantee?',
+                a: "Yes, Pinnacle and Ascent tiers come with a 30-day money-back guarantee if you're not satisfied with the quality of teaching.",
+              },
+              {
+                q: 'Are study materials included in the price?',
+                a: 'Yes! All tiers include comprehensive study materials, downloadable PDFs, practice questions, and mock tests at no extra cost.',
+              },
+              {
+                q: 'What if I miss a live class?',
+                a: 'All live classes are recorded and available for lifetime access. You can watch them anytime from your student dashboard.',
+              },
+              {
+                q: 'Can I switch tiers after enrollment?',
+                a: 'Yes, you can upgrade to a higher tier by paying the price difference within the first 30 days of enrollment, subject to batch availability.',
+              },
+            ].map((faq, idx) => (
+              <details
+                key={idx}
+                className="group bg-gray-50 hover:bg-gray-100/80 rounded-xl transition-colors duration-200"
+              >
+                <summary className="cursor-pointer flex items-center justify-between gap-4 p-4 sm:p-5 font-semibold text-gray-900 text-sm sm:text-base">
+                  <span>{faq.q}</span>
+                  <ChevronDownIcon className="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform duration-200 flex-shrink-0" />
+                </summary>
+                <p
+                  className="text-gray-600 text-sm sm:text-base px-4 sm:px-5 pb-4 sm:pb-5 leading-relaxed"
+                  dangerouslySetInnerHTML={{ __html: faq.a }}
+                />
+              </details>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-12 sm:mt-16 pb-24 md:pb-8">
+          <div className="relative bg-gradient-to-br from-amber-400 via-orange-400 to-orange-500 rounded-3xl p-8 sm:p-12 lg:p-16 overflow-hidden">
+            {/* Background decoration */}
+            <div className="absolute inset-0">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-yellow-300/30 rounded-full blur-3xl" />
+              <div className="absolute bottom-0 left-0 w-64 h-64 bg-orange-600/20 rounded-full blur-3xl" />
             </div>
-            <p className="text-xs sm:text-sm text-gray-700 mt-4">
-              🔒 Secure payment via Razorpay • 📞 Call +91-88264-44334 for queries
-            </p>
+
+            <div className="relative text-center">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
+                Ready to Start Your NEET Journey?
+              </h2>
+              <p className="text-base sm:text-lg text-gray-800/90 mb-8 max-w-xl mx-auto">
+                Join 5,000+ successful students. Limited seats available for the upcoming batch!
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
+                <Link href="/demo-booking">
+                  <button className="w-full sm:w-auto px-8 py-4 bg-gray-900 hover:bg-black text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 text-sm sm:text-base">
+                    Book Free Demo Class
+                  </button>
+                </Link>
+                <Link href="/contact">
+                  <button className="w-full sm:w-auto px-8 py-4 bg-white/90 hover:bg-white text-gray-900 font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 border-2 border-gray-900/10 text-sm sm:text-base">
+                    Talk to Counselor
+                  </button>
+                </Link>
+              </div>
+              <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 mt-8 text-sm text-gray-700">
+                <span className="flex items-center gap-1.5">
+                  <ShieldCheckIcon className="w-4 h-4" />
+                  Secure payment via Razorpay
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                    />
+                  </svg>
+                  Call +91-88264-44334
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Mobile Sticky CTA */}
-      <div className="fixed bottom-0 left-0 right-0 md:hidden bg-white border-t border-gray-200 p-3 shadow-[0_-4px_20px_rgba(0,0,0,0.1)] z-50">
-        <div className="flex gap-2 max-w-lg mx-auto">
+      <div className="fixed bottom-0 left-0 right-0 md:hidden bg-white/95 backdrop-blur-lg border-t border-gray-200/80 px-4 py-3 shadow-[0_-4px_30px_rgba(0,0,0,0.08)] z-50 safe-area-pb">
+        <div className="flex gap-2.5 max-w-lg mx-auto">
           <Link href="/demo-booking" className="flex-1">
-            <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold py-3 rounded-xl text-sm hover:from-blue-700 hover:to-purple-700 transition-all">
+            <button className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold py-3.5 rounded-xl text-sm shadow-lg shadow-blue-500/25 active:scale-[0.98] transition-transform">
               Book Free Demo
             </button>
           </Link>
-          <Link href="tel:+918826444334" className="flex-shrink-0">
-            <button className="bg-green-600 text-white font-bold py-3 px-4 rounded-xl text-sm hover:bg-green-700 transition-all flex items-center gap-2">
+          <Link href="tel:+918826444334">
+            <button className="bg-emerald-500 text-white font-bold py-3.5 px-5 rounded-xl text-sm shadow-lg shadow-emerald-500/25 active:scale-[0.98] transition-transform flex items-center gap-2">
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  strokeWidth={2}
+                  strokeWidth={2.5}
                   d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                 />
               </svg>
