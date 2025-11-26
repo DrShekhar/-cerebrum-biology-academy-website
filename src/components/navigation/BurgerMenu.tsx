@@ -217,35 +217,40 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
               <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">
                 Quick Access
               </h3>
-              <div className="grid grid-cols-2 gap-2">
-                <Link
-                  href="/courses/class-11"
-                  onClick={handleLinkClick}
-                  className="flex items-center justify-center p-3 bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 transition-colors text-sm font-medium"
-                >
-                  Class 11
-                </Link>
-                <Link
-                  href="/courses/class-12"
-                  onClick={handleLinkClick}
-                  className="flex items-center justify-center p-3 bg-green-50 text-green-700 rounded-lg hover:bg-green-100 transition-colors text-sm font-medium"
-                >
-                  Class 12
-                </Link>
-                <Link
-                  href="/courses/neet-dropper"
-                  onClick={handleLinkClick}
-                  className="flex items-center justify-center p-3 bg-purple-50 text-purple-700 rounded-lg hover:bg-purple-100 transition-colors text-sm font-medium"
-                >
-                  Dropper
-                </Link>
+              <div className="space-y-2">
+                {/* All Courses - Prominent Button */}
                 <Link
                   href="/courses"
                   onClick={handleLinkClick}
-                  className="flex items-center justify-center p-3 bg-orange-50 text-orange-700 rounded-lg hover:bg-orange-100 transition-colors text-sm font-medium"
+                  className="flex items-center justify-center gap-2 p-4 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-xl hover:from-orange-600 hover:to-red-600 transition-all shadow-md hover:shadow-lg text-base font-semibold"
                 >
-                  All Courses
+                  <GraduationCap className="w-5 h-5" />
+                  View All Courses
                 </Link>
+                {/* Course Grid */}
+                <div className="grid grid-cols-3 gap-2">
+                  <Link
+                    href="/courses/class-11"
+                    onClick={handleLinkClick}
+                    className="flex items-center justify-center p-3 bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 transition-colors text-sm font-medium"
+                  >
+                    Class 11
+                  </Link>
+                  <Link
+                    href="/courses/class-12"
+                    onClick={handleLinkClick}
+                    className="flex items-center justify-center p-3 bg-green-50 text-green-700 rounded-lg hover:bg-green-100 transition-colors text-sm font-medium"
+                  >
+                    Class 12
+                  </Link>
+                  <Link
+                    href="/courses/neet-dropper"
+                    onClick={handleLinkClick}
+                    className="flex items-center justify-center p-3 bg-purple-50 text-purple-700 rounded-lg hover:bg-purple-100 transition-colors text-sm font-medium"
+                  >
+                    Dropper
+                  </Link>
+                </div>
               </div>
             </div>
 
