@@ -16,6 +16,7 @@ import {
 } from 'lucide-react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import { ReadingProgressBar } from './ReadingProgressBar'
 import { TableOfContents } from './TableOfContents'
@@ -355,6 +356,27 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
                       <td className="px-4 py-3 text-sm text-gray-700 border-t">{children}</td>
                     ),
                     hr: () => <hr className="my-8 border-gray-200" />,
+                    img: ({ src, alt }) => {
+                      const imageSrc = typeof src === 'string' ? src : '/blog/default-image.jpg'
+                      return (
+                        <figure className="my-8">
+                          <div className="relative w-full aspect-video rounded-xl overflow-hidden bg-gray-100">
+                            <Image
+                              src={imageSrc}
+                              alt={alt || 'Blog image'}
+                              fill
+                              className="object-cover"
+                              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 800px"
+                            />
+                          </div>
+                          {alt && (
+                            <figcaption className="mt-2 text-center text-sm text-gray-500 italic">
+                              {alt}
+                            </figcaption>
+                          )}
+                        </figure>
+                      )
+                    },
                     a: ({ href, children }) => (
                       <a
                         href={href}
