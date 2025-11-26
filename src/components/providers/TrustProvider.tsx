@@ -192,7 +192,7 @@ function FloatingTrustIndicators() {
       initial={{ opacity: 0, x: 100 }}
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: 100 }}
-      className="fixed right-4 top-1/2 transform -translate-y-1/2 z-30 space-y-2"
+      className="fixed right-2 sm:right-4 top-1/2 transform -translate-y-1/2 z-30 space-y-2 hidden sm:block"
     >
       {trustIndicators.map((indicator, index) => (
         <motion.div

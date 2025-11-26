@@ -18,7 +18,7 @@ export const metadata: Metadata = generatePageMetadata('home')
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-x-hidden">
       {/* Maintenance Notice - Auto-dismiss after 8 seconds */}
       {/* <MaintenanceNotice /> */}
 
