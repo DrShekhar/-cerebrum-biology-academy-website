@@ -1,7 +1,12 @@
 import { withSentryConfig } from '@sentry/nextjs'
+import createMDX from '@next/mdx'
+import remarkGfm from 'remark-gfm'
+import rehypeSlug from 'rehype-slug'
+import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
   // Webpack configuration for polyfills
   webpack: (config, { isServer }) => {
     if (!isServer) {
@@ -228,7 +233,14 @@ const nextConfig = {
   },
 }
 
-export default withSentryConfig(nextConfig, {
+const withMDX = createMDX({
+  options: {
+    remarkPlugins: [remarkGfm],
+    rehypePlugins: [rehypeSlug, [rehypeAutolinkHeadings, { behavior: 'wrap' }]],
+  },
+})
+
+export default withSentryConfig(withMDX(nextConfig), {
   // For all available options, see:
   // https://github.com/getsentry/sentry-webpack-plugin#options
 
