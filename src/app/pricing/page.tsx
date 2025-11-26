@@ -177,8 +177,8 @@ export default function PricingPage() {
         bg: 'from-purple-50 to-pink-50',
         textColor: 'text-purple-900',
         badge: 'bg-purple-100 text-purple-700',
-        floatingBadge: '👑 BEST FOR TOP RANKERS',
-        badgeGradient: 'from-yellow-400 via-yellow-500 to-amber-600',
+        floatingBadge: '🔥 BEST FOR TOP RANKERS',
+        badgeBg: 'bg-amber-500',
         borderColor: 'border-purple-200',
       },
       ascent: {
@@ -186,7 +186,7 @@ export default function PricingPage() {
         textColor: 'text-blue-900',
         badge: 'bg-blue-100 text-blue-700',
         floatingBadge: '🔥 MOST POPULAR',
-        badgeGradient: 'from-orange-500 via-red-500 to-pink-600',
+        badgeBg: 'bg-rose-500',
         borderColor: 'border-blue-200',
       },
       pursuit: {
@@ -194,7 +194,7 @@ export default function PricingPage() {
         textColor: 'text-green-900',
         badge: 'bg-green-100 text-green-700',
         floatingBadge: '💰 BEST VALUE',
-        badgeGradient: 'from-green-400 via-emerald-500 to-teal-600',
+        badgeBg: 'bg-emerald-500',
         borderColor: 'border-green-200',
       },
     }
@@ -207,7 +207,7 @@ export default function PricingPage() {
         className="group relative bg-white rounded-3xl shadow-xl overflow-visible transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_70px_rgba(0,0,0,0.12)] flex flex-col h-full"
       >
         <div
-          className={`absolute -top-3 left-1/2 transform -translate-x-1/2 z-10 px-4 py-2 rounded-full bg-gradient-to-r ${colors.badgeGradient} text-white text-xs font-bold shadow-lg whitespace-nowrap`}
+          className={`absolute -top-3 left-1/2 transform -translate-x-1/2 z-10 px-4 py-2 rounded-full ${colors.badgeBg} text-white text-xs font-bold shadow-lg whitespace-nowrap`}
         >
           {colors.floatingBadge}
         </div>
@@ -220,11 +220,6 @@ export default function PricingPage() {
             >
               {tier.tier}
             </span>
-            {isPopular && (
-              <span className="px-3 sm:px-4 py-1 sm:py-1.5 bg-gradient-to-r from-yellow-400 to-orange-500 text-white rounded-full text-xs font-bold shadow-md">
-                POPULAR
-              </span>
-            )}
           </div>
 
           <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 capitalize leading-tight">
@@ -256,7 +251,9 @@ export default function PricingPage() {
               <div className="text-xs opacity-70 mt-1">Per Week</div>
             </div>
             <div className="bg-white/50 rounded-xl p-2 sm:p-3">
-              <div className="text-lg sm:text-2xl font-bold">{tier.batchSize}</div>
+              <div className="text-lg sm:text-2xl font-bold whitespace-nowrap">
+                {tier.batchSize}
+              </div>
               <div className="text-xs opacity-70 mt-1">Batch Size</div>
             </div>
             <div className="bg-white/50 rounded-xl p-2 sm:p-3">
