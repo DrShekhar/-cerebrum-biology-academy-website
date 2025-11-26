@@ -39,7 +39,7 @@ const PaymentOptionsDisplay = dynamic(
 
 export default function PricingPage() {
   const [selectedClass, setSelectedClass] = useState<ClassLevel | 'all'>('all')
-  const [courseType, setCourseType] = useState<CourseType>('board-neet')
+  const [courseType, setCourseType] = useState<CourseType>('neet')
   const [paymentMode, setPaymentMode] = useState<
     'lumpSum' | 'twoInstallments' | 'threeInstallments'
   >('lumpSum')
@@ -111,7 +111,18 @@ export default function PricingPage() {
   const getFilteredClasses = () => {
     if (selectedClass === 'all') {
       return allClassPricing.filter((classData) => {
-        const hasCourseType = classData.tiers[courseType] && classData.tiers[courseType].length > 0
+        // Check if class has any matching course types
+        // For 'neet', also check 'board-neet' as they are related
+        // For 'board-neet', also check 'neet' as they are related
+        let hasCourseType = classData.tiers[courseType] && classData.tiers[courseType].length > 0
+
+        // Also include classes that have related course types
+        if (!hasCourseType && courseType === 'neet') {
+          hasCourseType = classData.tiers['board-neet'] && classData.tiers['board-neet'].length > 0
+        }
+        if (!hasCourseType && courseType === 'board-neet') {
+          hasCourseType = classData.tiers['neet'] && classData.tiers['neet'].length > 0
+        }
 
         if (!searchQuery && !hasCourseType) return false
         if (!hasCourseType) return false
@@ -532,51 +543,46 @@ export default function PricingPage() {
           <div className="flex flex-col md:flex-row justify-center items-center gap-4 sm:gap-6 mb-6 sm:mb-8">
             <div className="flex items-center gap-2 sm:gap-3">
               <span className="text-xs sm:text-sm font-medium text-gray-700">Focus:</span>
-              <div className="flex gap-1.5 sm:gap-2">
-                <button
-                  onClick={() => setCourseType('board-only')}
-                  className={`relative px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium text-xs sm:text-sm transition-colors ${
-                    courseType === 'board-only'
-                      ? 'text-white'
-                      : 'bg-white text-gray-700 hover:bg-gray-50 shadow'
-                  }`}
-                >
-                  {courseType === 'board-only' && (
-                    <motion.div
-                      layoutId="focusTab"
-                      className="absolute inset-0 bg-blue-600 rounded-full shadow-lg"
-                      initial={false}
-                      transition={{
-                        type: 'spring',
-                        stiffness: 500,
-                        damping: 30,
-                      }}
-                    />
-                  )}
-                  <span className="relative z-10">Board Only</span>
-                </button>
-                <button
-                  onClick={() => setCourseType('board-neet')}
-                  className={`relative px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium text-xs sm:text-sm transition-colors ${
-                    courseType === 'board-neet'
-                      ? 'text-white'
-                      : 'bg-white text-gray-700 hover:bg-gray-50 shadow'
-                  }`}
-                >
-                  {courseType === 'board-neet' && (
-                    <motion.div
-                      layoutId="focusTab"
-                      className="absolute inset-0 bg-blue-600 rounded-full shadow-lg"
-                      initial={false}
-                      transition={{
-                        type: 'spring',
-                        stiffness: 500,
-                        damping: 30,
-                      }}
-                    />
-                  )}
-                  <span className="relative z-10">Board + NEET</span>
-                </button>
+              <div className="flex gap-1.5 sm:gap-2 flex-wrap justify-center">
+                {(() => {
+                  const courseTypeLabels: Record<CourseType, string> = {
+                    'board-only': 'Board Only',
+                    'board-neet': 'Board + NEET',
+                    academic: 'Academic',
+                    neet: 'NEET',
+                  }
+
+                  const displayCourseTypes =
+                    selectedClass === 'all'
+                      ? (['board-neet', 'neet'] as CourseType[])
+                      : availableCourseTypes
+
+                  return displayCourseTypes.map((type) => (
+                    <button
+                      key={type}
+                      onClick={() => setCourseType(type)}
+                      className={`relative px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium text-xs sm:text-sm transition-colors ${
+                        courseType === type
+                          ? 'text-white'
+                          : 'bg-white text-gray-700 hover:bg-gray-50 shadow'
+                      }`}
+                    >
+                      {courseType === type && (
+                        <motion.div
+                          layoutId="focusTab"
+                          className="absolute inset-0 bg-blue-600 rounded-full shadow-lg"
+                          initial={false}
+                          transition={{
+                            type: 'spring',
+                            stiffness: 500,
+                            damping: 30,
+                          }}
+                        />
+                      )}
+                      <span className="relative z-10">{courseTypeLabels[type]}</span>
+                    </button>
+                  ))
+                })()}
               </div>
             </div>
 
@@ -720,16 +726,45 @@ export default function PricingPage() {
         {selectedClass === 'all' && hasResults ? (
           <div className="space-y-10 sm:space-y-12 md:space-y-16">
             {filteredClasses.map((classData) => {
-              const allTiers = (classData.tiers[courseType] || []).map((tier) => ({
+              // Find the best matching course type for this class
+              let effectiveType = courseType
+              if (!classData.tiers[courseType] || classData.tiers[courseType].length === 0) {
+                // Try to find a matching type
+                if (courseType === 'neet' && classData.tiers['board-neet']) {
+                  effectiveType = 'board-neet'
+                } else if (courseType === 'board-neet' && classData.tiers['neet']) {
+                  effectiveType = 'neet'
+                } else {
+                  // Use the first available type
+                  effectiveType = classData.availableCourseTypes[0]
+                }
+              }
+
+              const allTiers = (classData.tiers[effectiveType] || []).map((tier) => ({
                 ...tier,
-                courseType: courseType,
+                courseType: effectiveType,
               }))
+
+              if (allTiers.length === 0) return null
 
               return (
                 <div key={classData.class}>
                   <div className="mb-4 sm:mb-6 px-2">
                     <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
                       {classData.displayName}
+                      {effectiveType !== courseType && (
+                        <span className="ml-2 text-sm font-normal text-blue-600">
+                          (
+                          {effectiveType === 'neet'
+                            ? 'NEET'
+                            : effectiveType === 'board-neet'
+                              ? 'Board + NEET'
+                              : effectiveType === 'academic'
+                                ? 'Academic'
+                                : 'Board Only'}
+                          )
+                        </span>
+                      )}
                     </h2>
                     <p className="text-sm sm:text-base text-gray-600">{classData.description}</p>
                   </div>
