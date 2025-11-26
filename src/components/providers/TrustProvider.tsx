@@ -129,9 +129,10 @@ export function TrustProvider({
   )
 }
 
-// Floating trust indicators that appear on scroll
+// Floating trust indicators that appear on scroll and auto-hide after 7 seconds
 function FloatingTrustIndicators() {
   const [isVisible, setIsVisible] = useState(false)
+  const [hasAutoHidden, setHasAutoHidden] = useState(false)
   const { metrics, trustLevel } = useTrust()
 
   useEffect(() => {
@@ -139,13 +140,26 @@ function FloatingTrustIndicators() {
       const scrollPosition = window.scrollY
       const windowHeight = window.innerHeight
 
-      // Show after scrolling 50% of the viewport
-      setIsVisible(scrollPosition > windowHeight * 0.5)
+      // Show after scrolling 50% of the viewport (only if not auto-hidden)
+      if (!hasAutoHidden) {
+        setIsVisible(scrollPosition > windowHeight * 0.5)
+      }
     }
 
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+  }, [hasAutoHidden])
+
+  // Auto-hide after 7 seconds of being visible
+  useEffect(() => {
+    if (isVisible && !hasAutoHidden) {
+      const timer = setTimeout(() => {
+        setIsVisible(false)
+        setHasAutoHidden(true)
+      }, 7000)
+      return () => clearTimeout(timer)
+    }
+  }, [isVisible, hasAutoHidden])
 
   if (!isVisible) return null
 
