@@ -1,14 +1,41 @@
 <svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg12" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#ea580c;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#dc2626;stop-opacity:1" />
     </linearGradient>
   </defs>
-  <rect width="100%" height="100%" fill="url(#bg12)"/>
-  <text x="600" y="220" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="white" text-anchor="middle">Top 10 NEET Biology</text>
-  <text x="600" y="300" font-family="Arial, sans-serif" font-size="56" font-weight="bold" fill="white" text-anchor="middle">Coaching in Delhi</text>
-  <text x="600" y="380" font-family="Arial, sans-serif" font-size="28" fill="rgba(255,255,255,0.9)" text-anchor="middle">Comprehensive Review 2025</text>
-  <text x="600" y="550" font-family="Arial, sans-serif" font-size="24" fill="rgba(255,255,255,0.7)" text-anchor="middle">Cerebrum Biology Academy</text>
-  <text x="600" y="470" font-family="Arial" font-size="64" fill="white" text-anchor="middle">🥇</text>
+  <rect width="100%" height="100%" fill="url(#bg)"/>
+
+  <!-- Medal/Ranking icon -->
+  <g transform="translate(450, 100)">
+    <!-- Medal ribbon -->
+    <polygon points="100,0 50,80 100,60 150,80" fill="#dc2626"/>
+    <polygon points="200,0 150,80 200,60 250,80" fill="#dc2626"/>
+
+    <!-- Medal circle -->
+    <circle cx="150" cy="200" r="130" fill="#fbbf24"/>
+    <circle cx="150" cy="200" r="110" fill="#f59e0b"/>
+    <circle cx="150" cy="200" r="90" fill="#fbbf24"/>
+
+    <!-- Star in medal -->
+    <polygon points="150,130 165,170 210,175 178,205 188,250 150,225 112,250 122,205 90,175 135,170" fill="#f59e0b"/>
+
+    <!-- Number 1 badge -->
+    <circle cx="150" cy="200" r="40" fill="rgba(255,255,255,0.9)"/>
+  </g>
+
+  <!-- Podium representation -->
+  <g transform="translate(200, 420)">
+    <rect x="0" y="60" width="200" height="100" fill="rgba(255,255,255,0.3)" rx="4"/>
+    <rect x="250" y="0" width="200" height="160" fill="rgba(255,255,255,0.4)" rx="4"/>
+    <rect x="500" y="80" width="200" height="80" fill="rgba(255,255,255,0.25)" rx="4"/>
+  </g>
+
+  <!-- Decorative elements -->
+  <circle cx="100" cy="120" r="45" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="1100" cy="150" r="55" fill="rgba(255,255,255,0.1)"/>
+
+  <!-- Bottom branding bar -->
+  <rect x="0" y="580" width="1200" height="50" fill="rgba(0,0,0,0.2)"/>
 </svg>

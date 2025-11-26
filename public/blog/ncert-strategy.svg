@@ -1,15 +1,50 @@
 <svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg7" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#1d4ed8;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#4f46e5;stop-opacity:1" />
     </linearGradient>
   </defs>
-  <rect width="100%" height="100%" fill="url(#bg7)"/>
-  <text x="600" y="220" font-family="Arial, sans-serif" font-size="56" font-weight="bold" fill="white" text-anchor="middle">NCERT Reading</text>
-  <text x="600" y="300" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="white" text-anchor="middle">Strategy</text>
-  <text x="600" y="380" font-family="Arial, sans-serif" font-size="28" fill="rgba(255,255,255,0.9)" text-anchor="middle">Line-by-Line Mastery for 340+ in Biology</text>
-  <text x="600" y="550" font-family="Arial, sans-serif" font-size="24" fill="rgba(255,255,255,0.7)" text-anchor="middle">Cerebrum Biology Academy</text>
-  <rect x="480" y="420" width="240" height="80" rx="8" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.5)" stroke-width="2"/>
-  <text x="600" y="470" font-family="Arial" font-size="24" fill="white" text-anchor="middle">📖 NCERT</text>
+  <rect width="100%" height="100%" fill="url(#bg)"/>
+
+  <!-- Open book icon -->
+  <g transform="translate(400, 150)">
+    <!-- Left page -->
+    <path d="M200 0 L200 250 Q100 235, 0 250 L0 15 Q100 0, 200 15 Z" fill="rgba(255,255,255,0.95)"/>
+    <!-- Right page -->
+    <path d="M200 0 L200 250 Q300 235, 400 250 L400 15 Q300 0, 200 15 Z" fill="rgba(255,255,255,0.85)"/>
+    <!-- Spine -->
+    <line x1="200" y1="15" x2="200" y2="250" stroke="#1d4ed8" stroke-width="4"/>
+
+    <!-- Lines on left page -->
+    <g stroke="#cbd5e1" stroke-width="2">
+      <line x1="30" y1="50" x2="170" y2="50"/>
+      <line x1="30" y1="80" x2="170" y2="80"/>
+      <line x1="30" y1="110" x2="170" y2="110"/>
+      <line x1="30" y1="140" x2="150" y2="140"/>
+      <line x1="30" y1="170" x2="160" y2="170"/>
+      <line x1="30" y1="200" x2="140" y2="200"/>
+    </g>
+
+    <!-- Lines on right page -->
+    <g stroke="#cbd5e1" stroke-width="2">
+      <line x1="230" y1="50" x2="370" y2="50"/>
+      <line x1="230" y1="80" x2="370" y2="80"/>
+      <line x1="230" y1="110" x2="370" y2="110"/>
+      <line x1="230" y1="140" x2="350" y2="140"/>
+      <line x1="230" y1="170" x2="360" y2="170"/>
+      <line x1="230" y1="200" x2="340" y2="200"/>
+    </g>
+
+    <!-- Highlight/bookmark -->
+    <rect x="30" y="45" width="80" height="25" fill="#fbbf24" opacity="0.5" rx="2"/>
+    <rect x="230" y="105" width="100" height="25" fill="#10b981" opacity="0.5" rx="2"/>
+  </g>
+
+  <!-- Decorative elements -->
+  <circle cx="130" cy="130" r="50" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="1070" cy="500" r="65" fill="rgba(255,255,255,0.1)"/>
+
+  <!-- Bottom branding bar -->
+  <rect x="0" y="580" width="1200" height="50" fill="rgba(0,0,0,0.2)"/>
 </svg>

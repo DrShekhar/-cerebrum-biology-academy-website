@@ -1,16 +1,59 @@
 <svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg10" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#15803d;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#0f766e;stop-opacity:1" />
     </linearGradient>
   </defs>
-  <rect width="100%" height="100%" fill="url(#bg10)"/>
-  <text x="600" y="220" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="white" text-anchor="middle">Photosynthesis vs</text>
-  <text x="600" y="300" font-family="Arial, sans-serif" font-size="56" font-weight="bold" fill="white" text-anchor="middle">Respiration</text>
-  <text x="600" y="380" font-family="Arial, sans-serif" font-size="28" fill="rgba(255,255,255,0.9)" text-anchor="middle">Complete Comparison for NEET</text>
-  <text x="600" y="550" font-family="Arial, sans-serif" font-size="24" fill="rgba(255,255,255,0.7)" text-anchor="middle">Cerebrum Biology Academy</text>
-  <text x="400" y="470" font-family="Arial" font-size="64" fill="white" text-anchor="middle">🌱</text>
-  <text x="600" y="470" font-family="Arial" font-size="48" fill="rgba(255,255,255,0.8)" text-anchor="middle">⇄</text>
-  <text x="800" y="470" font-family="Arial" font-size="64" fill="white" text-anchor="middle">🔬</text>
+  <rect width="100%" height="100%" fill="url(#bg)"/>
+
+  <!-- Left side: Plant/Leaf (Photosynthesis) -->
+  <g transform="translate(200, 180)">
+    <!-- Leaf shape -->
+    <ellipse cx="100" cy="120" rx="80" ry="120" fill="#22c55e"/>
+    <line x1="100" y1="40" x2="100" y2="240" stroke="#15803d" stroke-width="4"/>
+    <!-- Leaf veins -->
+    <path d="M100 80 Q60 100 40 80" fill="none" stroke="#15803d" stroke-width="2"/>
+    <path d="M100 80 Q140 100 160 80" fill="none" stroke="#15803d" stroke-width="2"/>
+    <path d="M100 120 Q60 140 30 120" fill="none" stroke="#15803d" stroke-width="2"/>
+    <path d="M100 120 Q140 140 170 120" fill="none" stroke="#15803d" stroke-width="2"/>
+    <path d="M100 160 Q60 180 45 160" fill="none" stroke="#15803d" stroke-width="2"/>
+    <path d="M100 160 Q140 180 155 160" fill="none" stroke="#15803d" stroke-width="2"/>
+
+    <!-- Sun rays -->
+    <circle cx="100" cy="-20" r="25" fill="#fbbf24"/>
+    <g stroke="#fbbf24" stroke-width="4" stroke-linecap="round">
+      <line x1="100" y1="-60" x2="100" y2="-50"/>
+      <line x1="130" y1="-50" x2="140" y2="-60"/>
+      <line x1="70" y1="-50" x2="60" y2="-60"/>
+      <line x1="145" y1="-20" x2="155" y2="-20"/>
+      <line x1="55" y1="-20" x2="45" y2="-20"/>
+    </g>
+  </g>
+
+  <!-- Center: Arrows -->
+  <g transform="translate(500, 280)">
+    <polygon points="0,0 40,-20 40,-10 100,-10 100,10 40,10 40,20" fill="rgba(255,255,255,0.8)"/>
+    <polygon points="200,0 160,-20 160,-10 100,-10 100,10 160,10 160,20" fill="rgba(255,255,255,0.8)"/>
+  </g>
+
+  <!-- Right side: Mitochondria (Respiration) -->
+  <g transform="translate(800, 180)">
+    <!-- Outer membrane -->
+    <ellipse cx="100" cy="120" rx="100" ry="70" fill="#ef4444"/>
+    <!-- Inner membrane folds (cristae) -->
+    <ellipse cx="100" cy="120" rx="80" ry="55" fill="#fca5a5"/>
+    <path d="M40 120 Q60 90 80 120 Q100 150 120 120 Q140 90 160 120" fill="none" stroke="#ef4444" stroke-width="8"/>
+    <path d="M50 100 Q70 80 90 100" fill="none" stroke="#ef4444" stroke-width="6"/>
+    <path d="M110 100 Q130 80 150 100" fill="none" stroke="#ef4444" stroke-width="6"/>
+    <path d="M50 140 Q70 160 90 140" fill="none" stroke="#ef4444" stroke-width="6"/>
+    <path d="M110 140 Q130 160 150 140" fill="none" stroke="#ef4444" stroke-width="6"/>
+  </g>
+
+  <!-- Decorative elements -->
+  <circle cx="100" cy="120" r="45" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="1100" cy="510" r="55" fill="rgba(255,255,255,0.1)"/>
+
+  <!-- Bottom branding bar -->
+  <rect x="0" y="580" width="1200" height="50" fill="rgba(0,0,0,0.2)"/>
 </svg>

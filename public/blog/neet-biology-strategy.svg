@@ -1,14 +1,47 @@
 <svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg9" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#16a34a;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#0d9488;stop-opacity:1" />
     </linearGradient>
   </defs>
-  <rect width="100%" height="100%" fill="url(#bg9)"/>
-  <text x="600" y="220" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="white" text-anchor="middle">NEET Biology</text>
-  <text x="600" y="300" font-family="Arial, sans-serif" font-size="56" font-weight="bold" fill="white" text-anchor="middle">Preparation Strategy</text>
-  <text x="600" y="380" font-family="Arial, sans-serif" font-size="28" fill="rgba(255,255,255,0.9)" text-anchor="middle">Score 180+ in 6 Months</text>
-  <text x="600" y="550" font-family="Arial, sans-serif" font-size="24" fill="rgba(255,255,255,0.7)" text-anchor="middle">Cerebrum Biology Academy</text>
-  <text x="600" y="470" font-family="Arial" font-size="64" fill="white" text-anchor="middle">🧬</text>
+  <rect width="100%" height="100%" fill="url(#bg)"/>
+
+  <!-- DNA Helix icon -->
+  <g transform="translate(450, 120)">
+    <!-- DNA strand 1 -->
+    <path d="M100 0 Q150 50 100 100 Q50 150 100 200 Q150 250 100 300 Q50 350 100 380"
+          fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="12" stroke-linecap="round"/>
+    <!-- DNA strand 2 -->
+    <path d="M200 0 Q150 50 200 100 Q250 150 200 200 Q150 250 200 300 Q250 350 200 380"
+          fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="12" stroke-linecap="round"/>
+
+    <!-- Base pairs -->
+    <g stroke="#fbbf24" stroke-width="6" stroke-linecap="round">
+      <line x1="110" y1="50" x2="190" y2="50"/>
+      <line x1="90" y1="100" x2="210" y2="100"/>
+      <line x1="110" y1="150" x2="190" y2="150"/>
+      <line x1="90" y1="200" x2="210" y2="200"/>
+      <line x1="110" y1="250" x2="190" y2="250"/>
+      <line x1="90" y1="300" x2="210" y2="300"/>
+      <line x1="110" y1="350" x2="190" y2="350"/>
+    </g>
+
+    <!-- Nucleotide dots -->
+    <g fill="#f59e0b">
+      <circle cx="110" cy="50" r="8"/>
+      <circle cx="190" cy="50" r="8"/>
+      <circle cx="90" cy="100" r="8"/>
+      <circle cx="210" cy="100" r="8"/>
+      <circle cx="110" cy="150" r="8"/>
+      <circle cx="190" cy="150" r="8"/>
+    </g>
+  </g>
+
+  <!-- Decorative elements -->
+  <circle cx="130" cy="130" r="50" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="1070" cy="500" r="65" fill="rgba(255,255,255,0.1)"/>
+
+  <!-- Bottom branding bar -->
+  <rect x="0" y="580" width="1200" height="50" fill="rgba(0,0,0,0.2)"/>
 </svg>

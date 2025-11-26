@@ -1,15 +1,44 @@
 <svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg6" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#b91c1c;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#c2410c;stop-opacity:1" />
     </linearGradient>
   </defs>
-  <rect width="100%" height="100%" fill="url(#bg6)"/>
-  <text x="600" y="220" font-family="Arial, sans-serif" font-size="48" fill="rgba(255,255,255,0.9)" text-anchor="middle">15 Common Mistakes</text>
-  <text x="600" y="300" font-family="Arial, sans-serif" font-size="56" font-weight="bold" fill="white" text-anchor="middle">NEET Aspirants Make</text>
-  <text x="600" y="380" font-family="Arial, sans-serif" font-size="28" fill="rgba(255,255,255,0.9)" text-anchor="middle">And How to Avoid Them</text>
-  <text x="600" y="550" font-family="Arial, sans-serif" font-size="24" fill="rgba(255,255,255,0.7)" text-anchor="middle">Cerebrum Biology Academy</text>
-  <circle cx="600" cy="470" r="45" fill="rgba(255,255,255,0.2)" stroke="white" stroke-width="3"/>
-  <text x="600" y="485" font-family="Arial" font-size="48" fill="white" text-anchor="middle">⚠</text>
+  <rect width="100%" height="100%" fill="url(#bg)"/>
+
+  <!-- Warning triangle icon -->
+  <g transform="translate(450, 140)">
+    <!-- Main triangle -->
+    <polygon points="150,0 0,260 300,260" fill="#fbbf24" stroke="#fcd34d" stroke-width="8"/>
+
+    <!-- Inner shadow triangle -->
+    <polygon points="150,30 30,240 270,240" fill="#f59e0b"/>
+
+    <!-- Exclamation mark -->
+    <rect x="135" y="80" width="30" height="100" fill="#b91c1c" rx="4"/>
+    <circle cx="150" cy="210" r="18" fill="#b91c1c"/>
+  </g>
+
+  <!-- X marks around -->
+  <g stroke="#fca5a5" stroke-width="8" stroke-linecap="round">
+    <line x1="200" y1="180" x2="240" y2="220"/>
+    <line x1="240" y1="180" x2="200" y2="220"/>
+
+    <line x1="960" y1="200" x2="1000" y2="240"/>
+    <line x1="1000" y1="200" x2="960" y2="240"/>
+
+    <line x1="180" y1="400" x2="220" y2="440"/>
+    <line x1="220" y1="400" x2="180" y2="440"/>
+
+    <line x1="980" y1="380" x2="1020" y2="420"/>
+    <line x1="1020" y1="380" x2="980" y2="420"/>
+  </g>
+
+  <!-- Decorative elements -->
+  <circle cx="100" cy="100" r="45" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="1100" cy="530" r="55" fill="rgba(255,255,255,0.1)"/>
+
+  <!-- Bottom branding bar -->
+  <rect x="0" y="580" width="1200" height="50" fill="rgba(0,0,0,0.2)"/>
 </svg>
