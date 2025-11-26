@@ -328,7 +328,7 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
       {/* Search Button */}
       <button
         onClick={onToggle}
-        className="flex items-center justify-center w-10 h-10 rounded-xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 group"
+        className="flex items-center justify-center w-10 h-10 rounded-xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 group flex-shrink-0"
         aria-label="Open search menu"
       >
         <Search className="w-5 h-5 text-blue-600 group-hover:scale-110 transition-transform duration-200" />

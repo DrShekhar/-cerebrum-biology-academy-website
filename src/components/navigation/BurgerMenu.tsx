@@ -15,9 +15,14 @@ import {
   Users,
   Building,
   HelpCircle,
+  LayoutDashboard,
+  ClipboardList,
+  UserCircle,
+  Settings,
 } from 'lucide-react'
 import Link from 'next/link'
 import { navigationConfig, type NavigationSection } from '@/data/navigationConfig'
+import { useAuth } from '@/hooks/useAuth'
 
 interface BurgerMenuProps {
   isOpen: boolean
@@ -37,6 +42,25 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
   const [expandedSection, setExpandedSection] = useState<string | null>(null)
   const [isMobile, setIsMobile] = useState(false)
   const [mounted, setMounted] = useState(false)
+  const { user, isAuthenticated } = useAuth()
+
+  // Get dashboard link based on user role
+  const getDashboardInfo = () => {
+    if (!isAuthenticated || !user) return null
+
+    switch (user.role) {
+      case 'ADMIN':
+        return { href: '/admin', label: 'Admin Dashboard', icon: Settings }
+      case 'COUNSELOR':
+        return { href: '/counselor/leads', label: 'Counselor Dashboard', icon: ClipboardList }
+      case 'TEACHER':
+        return { href: '/teacher/assignments', label: 'Teacher Dashboard', icon: Users }
+      default:
+        return { href: '/student/dashboard', label: 'My Dashboard', icon: LayoutDashboard }
+    }
+  }
+
+  const dashboardInfo = getDashboardInfo()
 
   useEffect(() => {
     setMounted(true)
@@ -169,6 +193,60 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
               >
                 <X className="w-5 h-5 text-gray-500" />
               </button>
+            </div>
+
+            {/* Dashboard Link (if authenticated) */}
+            {dashboardInfo && (
+              <div className="px-6 pt-4">
+                <Link
+                  href={dashboardInfo.href}
+                  onClick={handleLinkClick}
+                  className="flex items-center justify-between p-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+                >
+                  <div className="flex items-center space-x-3">
+                    <dashboardInfo.icon className="w-5 h-5" />
+                    <span className="font-semibold">{dashboardInfo.label}</span>
+                  </div>
+                  <ChevronRight className="w-5 h-5" />
+                </Link>
+              </div>
+            )}
+
+            {/* Quick Course Links */}
+            <div className="px-6 pt-4">
+              <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">
+                Quick Access
+              </h3>
+              <div className="grid grid-cols-2 gap-2">
+                <Link
+                  href="/courses/class-11"
+                  onClick={handleLinkClick}
+                  className="flex items-center justify-center p-3 bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 transition-colors text-sm font-medium"
+                >
+                  Class 11
+                </Link>
+                <Link
+                  href="/courses/class-12"
+                  onClick={handleLinkClick}
+                  className="flex items-center justify-center p-3 bg-green-50 text-green-700 rounded-lg hover:bg-green-100 transition-colors text-sm font-medium"
+                >
+                  Class 12
+                </Link>
+                <Link
+                  href="/courses/neet-dropper"
+                  onClick={handleLinkClick}
+                  className="flex items-center justify-center p-3 bg-purple-50 text-purple-700 rounded-lg hover:bg-purple-100 transition-colors text-sm font-medium"
+                >
+                  Dropper
+                </Link>
+                <Link
+                  href="/courses"
+                  onClick={handleLinkClick}
+                  className="flex items-center justify-center p-3 bg-orange-50 text-orange-700 rounded-lg hover:bg-orange-100 transition-colors text-sm font-medium"
+                >
+                  All Courses
+                </Link>
+              </div>
             </div>
 
             {/* Navigation Sections */}

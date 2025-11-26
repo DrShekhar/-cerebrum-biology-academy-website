@@ -207,14 +207,30 @@ const Header = () => {
 
             {/* Desktop CTA Buttons */}
             <div className="hidden lg:flex items-center gap-6">
-              {/* Student Dashboard Button (for authenticated users) */}
+              {/* Dashboard Button (for authenticated users - role-based) */}
               {isAuthenticated ? (
                 <Link
-                  href="/student/dashboard"
+                  href={
+                    user?.role === 'ADMIN'
+                      ? '/admin'
+                      : user?.role === 'COUNSELOR'
+                        ? '/counselor/leads'
+                        : user?.role === 'TEACHER'
+                          ? '/teacher/assignments'
+                          : '/student/dashboard'
+                  }
                   className="flex items-center gap-1.5 px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white shadow-lg hover:shadow-xl hover:scale-[1.02] whitespace-nowrap"
                 >
                   <BarChart3 className="w-4 h-4" />
-                  <span>My Dashboard</span>
+                  <span>
+                    {user?.role === 'ADMIN'
+                      ? 'Admin Panel'
+                      : user?.role === 'COUNSELOR'
+                        ? 'CRM Dashboard'
+                        : user?.role === 'TEACHER'
+                          ? 'Teacher Portal'
+                          : 'My Dashboard'}
+                  </span>
                 </Link>
               ) : (
                 <>
@@ -298,14 +314,30 @@ const Header = () => {
 
                 {/* Mobile CTA Buttons */}
                 <div className="pt-3 xs:pt-4 border-t border-gray-200 space-y-3">
-                  {/* Student Dashboard Button (for authenticated users) */}
+                  {/* Dashboard Button (for authenticated users - role-based) */}
                   {isAuthenticated ? (
                     <Link
-                      href="/student/dashboard"
+                      href={
+                        user?.role === 'ADMIN'
+                          ? '/admin'
+                          : user?.role === 'COUNSELOR'
+                            ? '/counselor/leads'
+                            : user?.role === 'TEACHER'
+                              ? '/teacher/assignments'
+                              : '/student/dashboard'
+                      }
                       className="flex items-center justify-center gap-2 bg-gradient-to-r from-green-600 to-green-700 text-white px-6 py-4 rounded-full font-semibold hover:from-green-700 hover:to-green-800 transition-all duration-300 min-h-[52px] shadow-lg"
                     >
                       <BarChart3 className="w-5 h-5" />
-                      <span>My Dashboard</span>
+                      <span>
+                        {user?.role === 'ADMIN'
+                          ? 'Admin Panel'
+                          : user?.role === 'COUNSELOR'
+                            ? 'CRM Dashboard'
+                            : user?.role === 'TEACHER'
+                              ? 'Teacher Portal'
+                              : 'My Dashboard'}
+                      </span>
                     </Link>
                   ) : (
                     <>
