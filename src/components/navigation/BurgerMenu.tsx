@@ -180,8 +180,8 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
             exit="closed"
             className="fixed left-0 top-0 h-full w-80 bg-white shadow-2xl z-[10300] overflow-y-auto"
           >
-            {/* Header */}
-            <div className="sticky top-0 bg-white border-b border-gray-200 p-6 flex items-center justify-between pointer-events-auto">
+            {/* Header - sticky with solid background and z-index to stay above scrolling content */}
+            <div className="sticky top-0 bg-white border-b border-gray-200 p-6 flex items-center justify-between pointer-events-auto z-10 shadow-sm">
               <div>
                 <h2 className="text-xl font-bold text-gray-900">Navigation</h2>
                 <p className="text-sm text-gray-500">Explore our courses & services</p>
