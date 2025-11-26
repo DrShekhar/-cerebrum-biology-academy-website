@@ -193,7 +193,7 @@ export default function PricingPage() {
     return (
       <div
         key={tierKey}
-        className="group relative bg-white rounded-3xl shadow-xl overflow-visible transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_70px_rgba(0,0,0,0.12)]"
+        className="group relative bg-white rounded-3xl shadow-xl overflow-visible transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_70px_rgba(0,0,0,0.12)] flex flex-col h-full"
       >
         <div
           className={`absolute -top-3 left-1/2 transform -translate-x-1/2 z-10 px-4 py-2 rounded-full bg-gradient-to-r ${colors.badgeGradient} text-white text-xs font-bold shadow-lg whitespace-nowrap`}
@@ -257,7 +257,7 @@ export default function PricingPage() {
           </div>
         </div>
 
-        <div className="p-4 sm:p-6 md:p-8">
+        <div className="p-4 sm:p-6 md:p-8 flex flex-col flex-grow">
           <div className="text-center mb-6 sm:mb-8">
             <div className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">
               ₹{price.toLocaleString()}
@@ -273,7 +273,7 @@ export default function PricingPage() {
             </div>
           </div>
 
-          <div className="mb-4 sm:mb-6">
+          <div className="mb-4 sm:mb-6 flex-grow">
             <h4 className="font-semibold text-gray-900 mb-4 text-base">Key Features:</h4>
             <div className="space-y-3">
               {(expandedFeatures.has(tierKey) ? tier.features : tier.features.slice(0, 3)).map(
@@ -445,56 +445,21 @@ export default function PricingPage() {
             </div>
           </div>
 
-          <div className="mb-6 sm:mb-8 overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0">
-            <div className="flex gap-1.5 sm:gap-2 min-w-min sm:min-w-max px-1 pb-2">
-              <button
-                onClick={() => setSelectedClass('all')}
-                className={`relative flex items-center gap-1.5 sm:gap-2 px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium text-xs sm:text-sm transition-colors ${
-                  selectedClass === 'all'
-                    ? 'text-white'
-                    : 'bg-white text-gray-700 hover:bg-gray-50 shadow'
-                }`}
-              >
-                {selectedClass === 'all' && (
-                  <motion.div
-                    layoutId="activeTab"
-                    className="absolute inset-0 bg-blue-600 rounded-full shadow-lg"
-                    initial={false}
-                    transition={{
-                      type: 'spring',
-                      stiffness: 500,
-                      damping: 30,
-                    }}
-                  />
-                )}
-                <span className="relative z-10 text-base sm:text-lg">🎓</span>
-                <span className="relative z-10">All Classes</span>
-                <span
-                  className={`relative z-10 ml-0.5 sm:ml-1 px-1.5 sm:px-2 py-0.5 rounded-full text-xs ${
-                    selectedClass === 'all' ? 'bg-white/20 text-white' : 'bg-gray-200 text-gray-600'
-                  }`}
-                >
-                  6
-                </span>
-              </button>
-              {[
-                { class: 'foundation-9', icon: '🌱', label: 'Class 9th', count: 1 },
-                { class: 'foundation-10', icon: '🍀', label: 'Class 10th', count: 1 },
-                { class: 'class-11', icon: '🎯', label: 'Class 11th', count: 1 },
-                { class: 'class-12', icon: '🏆', label: 'Class 12th', count: 1 },
-                { class: 'dropper', icon: '💪', label: 'Dropper', count: 1 },
-                { class: '2-year', icon: '📚', label: '2-Year', count: 1 },
-              ].map((item) => (
+          <div className="mb-6 sm:mb-8 relative">
+            {/* Scroll indicators */}
+            <div className="absolute left-0 top-0 bottom-2 w-8 bg-gradient-to-r from-blue-50 via-blue-50/80 to-transparent z-10 pointer-events-none sm:hidden" />
+            <div className="absolute right-0 top-0 bottom-2 w-8 bg-gradient-to-l from-purple-50 via-purple-50/80 to-transparent z-10 pointer-events-none sm:hidden" />
+            <div className="overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0 scrollbar-hide">
+              <div className="flex gap-1.5 sm:gap-2 min-w-min sm:min-w-max px-1 pb-2">
                 <button
-                  key={item.class}
-                  onClick={() => setSelectedClass(item.class as ClassLevel)}
+                  onClick={() => setSelectedClass('all')}
                   className={`relative flex items-center gap-1.5 sm:gap-2 px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium text-xs sm:text-sm transition-colors ${
-                    selectedClass === item.class
+                    selectedClass === 'all'
                       ? 'text-white'
                       : 'bg-white text-gray-700 hover:bg-gray-50 shadow'
                   }`}
                 >
-                  {selectedClass === item.class && (
+                  {selectedClass === 'all' && (
                     <motion.div
                       layoutId="activeTab"
                       className="absolute inset-0 bg-blue-600 rounded-full shadow-lg"
@@ -506,19 +471,61 @@ export default function PricingPage() {
                       }}
                     />
                   )}
-                  <span className="relative z-10 text-base sm:text-lg">{item.icon}</span>
-                  <span className="relative z-10">{item.label}</span>
+                  <span className="relative z-10 text-base sm:text-lg">🎓</span>
+                  <span className="relative z-10">All Classes</span>
                   <span
                     className={`relative z-10 ml-0.5 sm:ml-1 px-1.5 sm:px-2 py-0.5 rounded-full text-xs ${
-                      selectedClass === item.class
+                      selectedClass === 'all'
                         ? 'bg-white/20 text-white'
                         : 'bg-gray-200 text-gray-600'
                     }`}
                   >
-                    {item.count}
+                    6
                   </span>
                 </button>
-              ))}
+                {[
+                  { class: 'foundation-9', icon: '🌱', label: 'Class 9th', count: 1 },
+                  { class: 'foundation-10', icon: '🍀', label: 'Class 10th', count: 1 },
+                  { class: 'class-11', icon: '🎯', label: 'Class 11th', count: 1 },
+                  { class: 'class-12', icon: '🏆', label: 'Class 12th', count: 1 },
+                  { class: 'dropper', icon: '💪', label: 'Dropper', count: 1 },
+                  { class: '2-year', icon: '📚', label: '2-Year', count: 1 },
+                ].map((item) => (
+                  <button
+                    key={item.class}
+                    onClick={() => setSelectedClass(item.class as ClassLevel)}
+                    className={`relative flex items-center gap-1.5 sm:gap-2 px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium text-xs sm:text-sm transition-colors ${
+                      selectedClass === item.class
+                        ? 'text-white'
+                        : 'bg-white text-gray-700 hover:bg-gray-50 shadow'
+                    }`}
+                  >
+                    {selectedClass === item.class && (
+                      <motion.div
+                        layoutId="activeTab"
+                        className="absolute inset-0 bg-blue-600 rounded-full shadow-lg"
+                        initial={false}
+                        transition={{
+                          type: 'spring',
+                          stiffness: 500,
+                          damping: 30,
+                        }}
+                      />
+                    )}
+                    <span className="relative z-10 text-base sm:text-lg">{item.icon}</span>
+                    <span className="relative z-10">{item.label}</span>
+                    <span
+                      className={`relative z-10 ml-0.5 sm:ml-1 px-1.5 sm:px-2 py-0.5 rounded-full text-xs ${
+                        selectedClass === item.class
+                          ? 'bg-white/20 text-white'
+                          : 'bg-gray-200 text-gray-600'
+                      }`}
+                    >
+                      {item.count}
+                    </span>
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
 
@@ -726,7 +733,7 @@ export default function PricingPage() {
                     </h2>
                     <p className="text-sm sm:text-base text-gray-600">{classData.description}</p>
                   </div>
-                  <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 md:gap-8 pt-4 sm:pt-6">
+                  <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 md:gap-8 pt-4 sm:pt-6 auto-rows-fr">
                     {allTiers.map((tier) => renderTierCard(tier, classData))}
                   </div>
                 </div>
@@ -735,7 +742,7 @@ export default function PricingPage() {
           </div>
         ) : (
           hasResults && (
-            <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-10 sm:mb-12 md:mb-16 pt-4 sm:pt-6">
+            <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-10 sm:mb-12 md:mb-16 pt-4 sm:pt-6 auto-rows-fr">
               {currentTiers.map((tier) =>
                 currentClassData ? renderTierCard(tier, currentClassData) : null
               )}
@@ -747,14 +754,146 @@ export default function PricingPage() {
           <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-8">
             Tier Comparison
           </h2>
-          <div className="overflow-x-auto -mx-4 sm:mx-0">
+
+          {/* Mobile Card View */}
+          <div className="md:hidden space-y-4">
+            {[
+              {
+                name: 'Pinnacle',
+                color: 'purple',
+                badge: '👑 Premium',
+                batchSize: '10-12',
+                hours: '5-6 hrs',
+                attention: 'Maximum',
+                mentorship: true,
+                oneOnOne: true,
+                bestFor: 'Top rankers seeking premium coaching',
+              },
+              {
+                name: 'Ascent',
+                color: 'blue',
+                badge: '🔥 Popular',
+                batchSize: '16-25',
+                hours: '4-5 hrs',
+                attention: 'High',
+                mentorship: true,
+                oneOnOne: true,
+                bestFor: 'Serious aspirants with balanced approach',
+              },
+              {
+                name: 'Pursuit',
+                color: 'green',
+                badge: '💰 Value',
+                batchSize: '30-40',
+                hours: '3-4 hrs',
+                attention: 'Good',
+                mentorship: false,
+                oneOnOne: false,
+                bestFor: 'Budget-conscious students seeking quality',
+              },
+            ].map((tier) => (
+              <div
+                key={tier.name}
+                className={`border-2 rounded-2xl p-4 ${
+                  tier.color === 'purple'
+                    ? 'border-purple-200 bg-purple-50/50'
+                    : tier.color === 'blue'
+                      ? 'border-blue-200 bg-blue-50/50'
+                      : 'border-green-200 bg-green-50/50'
+                }`}
+              >
+                <div className="flex items-center justify-between mb-4">
+                  <h3
+                    className={`text-lg font-bold ${
+                      tier.color === 'purple'
+                        ? 'text-purple-700'
+                        : tier.color === 'blue'
+                          ? 'text-blue-700'
+                          : 'text-green-700'
+                    }`}
+                  >
+                    {tier.name}
+                  </h3>
+                  <span
+                    className={`text-xs px-2 py-1 rounded-full ${
+                      tier.color === 'purple'
+                        ? 'bg-purple-100 text-purple-700'
+                        : tier.color === 'blue'
+                          ? 'bg-blue-100 text-blue-700'
+                          : 'bg-green-100 text-green-700'
+                    }`}
+                  >
+                    {tier.badge}
+                  </span>
+                </div>
+                <div className="grid grid-cols-2 gap-3 text-sm">
+                  <div>
+                    <span className="text-gray-500">Batch Size</span>
+                    <p className="font-semibold">{tier.batchSize}</p>
+                  </div>
+                  <div>
+                    <span className="text-gray-500">Weekly Hours</span>
+                    <p className="font-semibold">{tier.hours}</p>
+                  </div>
+                  <div>
+                    <span className="text-gray-500">Attention</span>
+                    <p
+                      className={`font-semibold ${
+                        tier.attention === 'Maximum'
+                          ? 'text-green-600'
+                          : tier.attention === 'High'
+                            ? 'text-blue-600'
+                            : 'text-gray-600'
+                      }`}
+                    >
+                      {tier.attention}
+                    </p>
+                  </div>
+                  <div>
+                    <span className="text-gray-500">Mentorship</span>
+                    <p className="font-semibold flex items-center gap-1">
+                      {tier.mentorship ? (
+                        <>
+                          <CheckCircleIcon className="w-4 h-4 text-green-500" /> Yes
+                        </>
+                      ) : (
+                        <>
+                          <XCircleIcon className="w-4 h-4 text-gray-300" /> No
+                        </>
+                      )}
+                    </p>
+                  </div>
+                </div>
+                <div className="mt-3 pt-3 border-t border-gray-200">
+                  <span className="text-xs text-gray-500">Best For:</span>
+                  <p className="text-sm text-gray-700">{tier.bestFor}</p>
+                </div>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {['AIIMS Faculty', 'Study Materials', 'Mock Tests', 'AI Doubts'].map(
+                    (feature) => (
+                      <span
+                        key={feature}
+                        className="inline-flex items-center gap-1 text-xs bg-white px-2 py-1 rounded-full border"
+                      >
+                        <CheckCircleIcon className="w-3 h-3 text-green-500" />
+                        {feature}
+                      </span>
+                    )
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Desktop Table View */}
+          <div className="hidden md:block overflow-x-auto">
             <table className="w-full text-left">
               <thead>
                 <tr className="border-b-2 border-gray-200">
                   <th className="pb-4 font-semibold">Feature</th>
-                  <th className="pb-4 text-center font-semibold">Pinnacle</th>
-                  <th className="pb-4 text-center font-semibold">Ascent</th>
-                  <th className="pb-4 text-center font-semibold">Pursuit</th>
+                  <th className="pb-4 text-center font-semibold text-purple-700">Pinnacle</th>
+                  <th className="pb-4 text-center font-semibold text-blue-700">Ascent</th>
+                  <th className="pb-4 text-center font-semibold text-green-700">Pursuit</th>
                 </tr>
               </thead>
               <tbody>
@@ -977,12 +1116,12 @@ export default function PricingPage() {
           </div>
         </div>
 
-        <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-yellow-400 to-orange-500 rounded-2xl p-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+        <div className="mt-16 text-center pb-20 md:pb-0">
+          <div className="bg-gradient-to-r from-yellow-400 to-orange-500 rounded-2xl p-6 sm:p-12">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
               Ready to Start Your NEET Journey?
             </h2>
-            <p className="text-xl text-gray-800 mb-8">
+            <p className="text-base sm:text-xl text-gray-800 mb-6 sm:mb-8">
               Join 5,000+ successful students. Limited seats available!
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
@@ -997,10 +1136,34 @@ export default function PricingPage() {
                 </Button>
               </Link>
             </div>
-            <p className="text-sm text-gray-700 mt-4">
+            <p className="text-xs sm:text-sm text-gray-700 mt-4">
               🔒 Secure payment via Razorpay • 📞 Call +91-88264-44334 for queries
             </p>
           </div>
+        </div>
+      </div>
+
+      {/* Mobile Sticky CTA */}
+      <div className="fixed bottom-0 left-0 right-0 md:hidden bg-white border-t border-gray-200 p-3 shadow-[0_-4px_20px_rgba(0,0,0,0.1)] z-50">
+        <div className="flex gap-2 max-w-lg mx-auto">
+          <Link href="/demo-booking" className="flex-1">
+            <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold py-3 rounded-xl text-sm hover:from-blue-700 hover:to-purple-700 transition-all">
+              Book Free Demo
+            </button>
+          </Link>
+          <Link href="tel:+918826444334" className="flex-shrink-0">
+            <button className="bg-green-600 text-white font-bold py-3 px-4 rounded-xl text-sm hover:bg-green-700 transition-all flex items-center gap-2">
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                />
+              </svg>
+              Call
+            </button>
+          </Link>
         </div>
       </div>
     </div>

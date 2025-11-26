@@ -22,6 +22,9 @@ import {
   globalRateLimiter,
   sanitizeTemplateContent,
 } from './followupErrorHandler'
+import { emailService } from './email/emailService'
+import { smsService } from './sms/smsService'
+import { sendWhatsAppMessage, sendFollowUpMessage } from './interakt'
 
 interface ExecutionResult {
   success: boolean
@@ -358,14 +361,55 @@ export async function executeFollowup(queueItem: any): Promise<ExecutionResult> 
 
 async function sendEmail(lead: any, rule: any, content: string): Promise<ExecutionResult> {
   try {
-    console.log(`Sending email to ${lead.email} for lead ${lead.id}`)
+    const email = lead.email || lead.users?.email
+    if (!email) {
+      logWarning('sendEmail', 'No email address found for lead', { leadId: lead.id })
+      return {
+        success: false,
+        message: 'No email address found for lead',
+      }
+    }
 
-    return {
-      success: true,
-      message: `Email sent successfully to ${lead.email}`,
-      deliveryId: `email_${Date.now()}`,
+    const subject = rule.template?.subject || `Follow-up: ${rule.name}`
+    const htmlContent =
+      content ||
+      `<p>Hello ${lead.studentName || 'there'},</p><p>This is a follow-up regarding your inquiry at Cerebrum Biology Academy.</p>`
+
+    logInfo('sendEmail', `Sending email to ${email}`, {
+      leadId: lead.id,
+      ruleId: rule.id,
+      subject,
+    })
+
+    const result = await emailService.send({
+      to: email,
+      subject,
+      html: htmlContent,
+      text: content.replace(/<[^>]*>/g, ''),
+    })
+
+    if (result.success) {
+      logInfo('sendEmail', `Email sent successfully via ${result.provider}`, {
+        leadId: lead.id,
+        messageId: result.messageId,
+      })
+      return {
+        success: true,
+        message: `Email sent successfully to ${email}`,
+        deliveryId: result.messageId || `email_${Date.now()}`,
+      }
+    } else {
+      logError('sendEmail', new Error(result.error || 'Email sending failed'), {
+        leadId: lead.id,
+        email,
+      })
+      return {
+        success: false,
+        message: result.error || 'Failed to send email',
+      }
     }
   } catch (error) {
+    logError('sendEmail', error, { leadId: lead?.id })
     return {
       success: false,
       message: error instanceof Error ? error.message : 'Failed to send email',
@@ -375,14 +419,71 @@ async function sendEmail(lead: any, rule: any, content: string): Promise<Executi
 
 async function sendWhatsApp(lead: any, rule: any, content: string): Promise<ExecutionResult> {
   try {
-    console.log(`Sending WhatsApp to ${lead.phone} for lead ${lead.id}`)
+    const phone = lead.phone || lead.whatsappNumber || lead.users?.phone
+    if (!phone) {
+      logWarning('sendWhatsApp', 'No phone number found for lead', { leadId: lead.id })
+      return {
+        success: false,
+        message: 'No phone number found for lead',
+      }
+    }
 
-    return {
-      success: true,
-      message: `WhatsApp sent successfully to ${lead.phone}`,
-      deliveryId: `whatsapp_${Date.now()}`,
+    logInfo('sendWhatsApp', `Sending WhatsApp to ${phone}`, {
+      leadId: lead.id,
+      ruleId: rule.id,
+      ruleName: rule.name,
+    })
+
+    const templateName = rule.template?.whatsappTemplateName
+
+    let result
+    if (templateName) {
+      result = await sendWhatsAppMessage({
+        phone,
+        templateName,
+        templateParams: {
+          name: lead.studentName || lead.name || 'Student',
+          courseName: lead.courseInterest || 'NEET Biology',
+          counselorName: lead.assignedTo?.name || 'Cerebrum Team',
+        },
+      })
+    } else if (content) {
+      result = await sendWhatsAppMessage({
+        phone,
+        message: content,
+      })
+    } else {
+      result = await sendFollowUpMessage({
+        phone,
+        name: lead.studentName || lead.name || 'Student',
+        courseName: lead.courseInterest || 'NEET Biology',
+        counselorName: lead.assignedTo?.name || 'Cerebrum Team',
+        bookingLink: `https://cerebrumbiologyacademy.com/book-demo?lead=${lead.id}`,
+      })
+    }
+
+    if (result.success) {
+      logInfo('sendWhatsApp', 'WhatsApp sent successfully', {
+        leadId: lead.id,
+        messageId: result.messageId,
+      })
+      return {
+        success: true,
+        message: `WhatsApp sent successfully to ${phone}`,
+        deliveryId: result.messageId || `whatsapp_${Date.now()}`,
+      }
+    } else {
+      logError('sendWhatsApp', new Error(result.error || 'WhatsApp sending failed'), {
+        leadId: lead.id,
+        phone,
+      })
+      return {
+        success: false,
+        message: result.error || 'Failed to send WhatsApp',
+      }
     }
   } catch (error) {
+    logError('sendWhatsApp', error, { leadId: lead?.id })
     return {
       success: false,
       message: error instanceof Error ? error.message : 'Failed to send WhatsApp',
@@ -422,14 +523,52 @@ async function createCallTask(lead: any, rule: any, content: string): Promise<Ex
 
 async function sendSMS(lead: any, rule: any, content: string): Promise<ExecutionResult> {
   try {
-    console.log(`Sending SMS to ${lead.phone} for lead ${lead.id}`)
+    const phone = lead.phone || lead.users?.phone
+    if (!phone) {
+      logWarning('sendSMS', 'No phone number found for lead', { leadId: lead.id })
+      return {
+        success: false,
+        message: 'No phone number found for lead',
+      }
+    }
 
-    return {
-      success: true,
-      message: `SMS sent successfully to ${lead.phone}`,
-      deliveryId: `sms_${Date.now()}`,
+    const formattedPhone = smsService.formatPhoneNumber(phone)
+    const message =
+      content ||
+      `Hi ${lead.studentName || 'there'}, this is a follow-up from Cerebrum Biology Academy regarding your inquiry. Reply to connect with our team.`
+
+    logInfo('sendSMS', `Sending SMS to ${formattedPhone}`, {
+      leadId: lead.id,
+      ruleId: rule.id,
+    })
+
+    const result = await smsService.send({
+      to: formattedPhone,
+      message,
+    })
+
+    if (result.success) {
+      logInfo('sendSMS', `SMS sent successfully via ${result.provider}`, {
+        leadId: lead.id,
+        messageId: result.messageId,
+      })
+      return {
+        success: true,
+        message: `SMS sent successfully to ${formattedPhone}`,
+        deliveryId: result.messageId || `sms_${Date.now()}`,
+      }
+    } else {
+      logError('sendSMS', new Error(result.error || 'SMS sending failed'), {
+        leadId: lead.id,
+        phone: formattedPhone,
+      })
+      return {
+        success: false,
+        message: result.error || 'Failed to send SMS',
+      }
     }
   } catch (error) {
+    logError('sendSMS', error, { leadId: lead?.id })
     return {
       success: false,
       message: error instanceof Error ? error.message : 'Failed to send SMS',
@@ -439,14 +578,47 @@ async function sendSMS(lead: any, rule: any, content: string): Promise<Execution
 
 async function createNotification(lead: any, rule: any, content: string): Promise<ExecutionResult> {
   try {
-    console.log(`Creating in-app notification for lead ${lead.id}`)
+    const notificationId = `notif_${Date.now()}_${lead.id.slice(0, 8)}`
+    const title = rule.template?.notificationTitle || `Follow-up: ${lead.studentName || 'Lead'}`
+    const message =
+      content || `Follow-up notification for ${lead.studentName || 'lead'} regarding ${rule.name}`
+
+    logInfo('createNotification', `Creating notification for lead`, {
+      leadId: lead.id,
+      ruleId: rule.id,
+      notificationId,
+    })
+
+    await prisma.content_notifications.create({
+      data: {
+        id: notificationId,
+        title,
+        message,
+        type: 'FOLLOW_UP',
+        targetUserIds: lead.assignedToId ? [lead.assignedToId] : null,
+        isActive: true,
+        metadata: {
+          leadId: lead.id,
+          ruleId: rule.id,
+          ruleName: rule.name,
+          leadName: lead.studentName,
+          leadPhone: lead.phone,
+        },
+      },
+    })
+
+    logInfo('createNotification', 'Notification created successfully', {
+      leadId: lead.id,
+      notificationId,
+    })
 
     return {
       success: true,
       message: `Notification created successfully`,
-      deliveryId: `notification_${Date.now()}`,
+      deliveryId: notificationId,
     }
   } catch (error) {
+    logError('createNotification', error, { leadId: lead?.id })
     return {
       success: false,
       message: error instanceof Error ? error.message : 'Failed to create notification',

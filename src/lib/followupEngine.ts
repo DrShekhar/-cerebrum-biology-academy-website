@@ -330,11 +330,107 @@ function evaluateOfferSent(lead: any, conditions: TriggerConditions): boolean {
   return daysSinceOffer >= followUpAfterDays
 }
 
+/**
+ * Evaluate custom conditions using a simple expression language
+ * Supports: lead.field == value, lead.field != value, lead.field > value, lead.field < value
+ * Logical operators: AND, OR (case insensitive)
+ * Examples:
+ *   - "lead.score > 50"
+ *   - "lead.stage == 'DEMO_SCHEDULED' AND lead.score >= 70"
+ *   - "lead.courseInterest == 'NEET' OR lead.courseInterest == 'Class 12'"
+ */
 function evaluateCustomCondition(lead: any, conditions: TriggerConditions): boolean {
   if (!conditions.customCondition) return false
 
   try {
-    const condition = conditions.customCondition
+    const condition = conditions.customCondition.trim()
+
+    const evaluateSingleCondition = (expr: string): boolean => {
+      expr = expr.trim()
+
+      const operators = ['===', '!==', '==', '!=', '>=', '<=', '>', '<']
+      let operator = ''
+      let operatorIndex = -1
+
+      for (const op of operators) {
+        const idx = expr.indexOf(op)
+        if (idx !== -1) {
+          operator = op
+          operatorIndex = idx
+          break
+        }
+      }
+
+      if (!operator || operatorIndex === -1) {
+        logWarning('evaluateCustomCondition', `Invalid expression format: ${expr}`, {
+          leadId: lead?.id,
+        })
+        return false
+      }
+
+      const leftPart = expr.substring(0, operatorIndex).trim()
+      const rightPart = expr.substring(operatorIndex + operator.length).trim()
+
+      let leftValue: any
+      if (leftPart.startsWith('lead.')) {
+        const fieldPath = leftPart.substring(5)
+        leftValue = getNestedValue(lead, fieldPath)
+      } else {
+        leftValue = parseValue(leftPart)
+      }
+
+      const rightValue = parseValue(rightPart)
+
+      switch (operator) {
+        case '===':
+        case '==':
+          return leftValue === rightValue || String(leftValue) === String(rightValue)
+        case '!==':
+        case '!=':
+          return leftValue !== rightValue && String(leftValue) !== String(rightValue)
+        case '>=':
+          return Number(leftValue) >= Number(rightValue)
+        case '<=':
+          return Number(leftValue) <= Number(rightValue)
+        case '>':
+          return Number(leftValue) > Number(rightValue)
+        case '<':
+          return Number(leftValue) < Number(rightValue)
+        default:
+          return false
+      }
+    }
+
+    const getNestedValue = (obj: any, path: string): any => {
+      return path.split('.').reduce((current, key) => current?.[key], obj)
+    }
+
+    const parseValue = (val: string): any => {
+      val = val.trim()
+      if (val.startsWith("'") && val.endsWith("'")) {
+        return val.slice(1, -1)
+      }
+      if (val.startsWith('"') && val.endsWith('"')) {
+        return val.slice(1, -1)
+      }
+      if (val === 'true') return true
+      if (val === 'false') return false
+      if (val === 'null') return null
+      if (val === 'undefined') return undefined
+      const num = Number(val)
+      if (!isNaN(num)) return num
+      return val
+    }
+
+    const orParts = condition.split(/\s+OR\s+/i)
+    for (const orPart of orParts) {
+      const andParts = orPart.split(/\s+AND\s+/i)
+      const allAndConditionsTrue = andParts.every((andPart) => evaluateSingleCondition(andPart))
+      if (allAndConditionsTrue) {
+        return true
+      }
+    }
+
     return false
   } catch (error) {
     logError('evaluateCustomCondition', error, {
