@@ -1,57 +1,78 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { blogPosts } from '@/data/blog'
+import { getPostBySlug, getAllPostSlugs, getRelatedPosts, getCategoryBySlug } from '@/lib/blog/mdx'
 import { BlogPostPage } from '@/components/blog/BlogPostPage'
 
 interface Props {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const post = blogPosts.find((post) => post.slug === params.slug)
+  const { slug } = await params
+  const postData = getPostBySlug(slug)
 
-  if (!post) {
+  if (!postData) {
     return {
       title: 'Article Not Found',
     }
   }
 
+  const { meta } = postData
+  const category = getCategoryBySlug(meta.category)
+
   return {
-    title: post.seoTitle || post.title,
-    description: post.seoDescription || post.excerpt,
-    keywords: post.tags.join(', '),
-    authors: [{ name: post.author.name }],
+    title: meta.seoTitle || meta.title,
+    description: meta.seoDescription || meta.excerpt,
+    keywords: meta.tags.join(', '),
+    authors: [{ name: meta.author.name }],
     openGraph: {
-      title: post.seoTitle || post.title,
-      description: post.seoDescription || post.excerpt,
-      images: [post.featuredImage],
+      title: meta.seoTitle || meta.title,
+      description: meta.seoDescription || meta.excerpt,
+      images: [meta.featuredImage],
       type: 'article',
-      publishedTime: post.publishedAt,
-      modifiedTime: post.updatedAt,
-      authors: [post.author.name],
-      tags: post.tags,
+      publishedTime: meta.publishedAt,
+      modifiedTime: meta.updatedAt,
+      authors: [meta.author.name],
+      tags: meta.tags,
+      section: category?.name,
     },
     twitter: {
       card: 'summary_large_image',
-      title: post.seoTitle || post.title,
-      description: post.seoDescription || post.excerpt,
-      images: [post.featuredImage],
+      title: meta.seoTitle || meta.title,
+      description: meta.seoDescription || meta.excerpt,
+      images: [meta.featuredImage],
+    },
+    alternates: {
+      canonical: `https://cerebrumbiologyacademy.com/blog/${slug}`,
     },
   }
 }
 
 export async function generateStaticParams() {
-  return blogPosts.map((post) => ({
-    slug: post.slug,
+  const slugs = getAllPostSlugs()
+  return slugs.map((slug) => ({
+    slug,
   }))
 }
 
-export default function BlogPost({ params }: Props) {
-  const post = blogPosts.find((post) => post.slug === params.slug)
+export default async function BlogPost({ params }: Props) {
+  const { slug } = await params
+  const postData = getPostBySlug(slug)
 
-  if (!post || !post.isPublished) {
+  if (!postData || !postData.meta.isPublished) {
     notFound()
   }
 
-  return <BlogPostPage post={post} />
+  const relatedPosts = getRelatedPosts(slug, 3)
+  const category = getCategoryBySlug(postData.meta.category)
+
+  return (
+    <BlogPostPage
+      meta={postData.meta}
+      content={postData.content}
+      toc={postData.toc}
+      relatedPosts={relatedPosts}
+      category={category}
+    />
+  )
 }
