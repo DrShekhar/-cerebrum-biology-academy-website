@@ -149,6 +149,14 @@ export const navigationConfig: NavigationSection[] = [
         description: '24/7 doubt clearing and academic support',
         keywords: ['doubt clearing', 'support', 'help', 'academic assistance'],
       },
+      {
+        id: 'adaptive-testing',
+        title: 'Adaptive Testing',
+        href: '/adaptive-testing',
+        description: 'AI-powered personalized assessment system',
+        keywords: ['adaptive', 'testing', 'assessment', 'ai', 'personalized', 'practice'],
+        isNew: true,
+      },
     ],
   },
   {
@@ -320,6 +328,21 @@ export const searchableContent = [
     description: 'Premium intensive course for serious NEET aspirants',
     category: 'Courses',
     keywords: ['intensive', 'premium', 'neet biology', 'exclusive', 'high-ticket'],
+  },
+  {
+    id: 'adaptive-testing',
+    title: 'Adaptive Testing',
+    href: '/adaptive-testing',
+    description: 'AI-powered personalized assessment that adapts to your skill level',
+    category: 'Services',
+    keywords: [
+      'adaptive testing',
+      'ai assessment',
+      'personalized tests',
+      'practice',
+      'smart testing',
+    ],
+    isNew: true,
   },
 ]
 
