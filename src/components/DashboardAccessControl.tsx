@@ -22,7 +22,7 @@ interface DashboardAccessControlProps {
 export function DashboardAccessControl({
   dashboardType,
   children,
-  fallbackRoute = '/student/dashboard',
+  fallbackRoute = '/dashboard',
 }: DashboardAccessControlProps) {
   const router = useRouter()
   const { checkDashboardAccess, isLoading, isPaidUser, isGuestUser, user } = useUserFlow()

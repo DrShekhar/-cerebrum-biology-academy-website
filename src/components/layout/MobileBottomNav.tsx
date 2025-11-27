@@ -105,9 +105,7 @@ export function MobileBottomNav({ className = '' }: MobileBottomNavProps) {
                 aria-label={`${item.label} - ${item.isExternal ? 'Call now' : 'Navigate to'}`}
               >
                 <IconComponent className="w-5 xs:w-6 h-5 xs:h-6 mb-1.5 xs:mb-2" />
-                <span className="text-[10px] xs:text-[11px] leading-tight font-semibold">
-                  {item.label}
-                </span>
+                <span className="text-xs leading-tight font-semibold">{item.label}</span>
               </button>
             )
           }
@@ -126,9 +124,7 @@ export function MobileBottomNav({ className = '' }: MobileBottomNavProps) {
               aria-label={`${item.label} - Navigate to ${item.label} page`}
             >
               <IconComponent className="w-5 xs:w-6 h-5 xs:h-6 mb-1.5 xs:mb-2" />
-              <span className="text-[10px] xs:text-[11px] leading-tight font-semibold">
-                {item.label}
-              </span>
+              <span className="text-xs leading-tight font-semibold">{item.label}</span>
               {item.highlight && (
                 <span className="absolute top-1 right-1 flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>

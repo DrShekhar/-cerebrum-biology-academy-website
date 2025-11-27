@@ -5,6 +5,26 @@ import { MessageCircle, Loader2, Check, Clock } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { SignupForm } from './SignupForm'
 
+/**
+ * Get redirect URL based on user role
+ */
+function getRedirectByRole(role?: string): string {
+  switch (role?.toUpperCase()) {
+    case 'ADMIN':
+    case 'SUPERADMIN':
+      return '/admin'
+    case 'COUNSELOR':
+      return '/counselor/leads'
+    case 'TEACHER':
+      return '/teacher/dashboard'
+    case 'PARENT':
+      return '/parent/dashboard'
+    case 'STUDENT':
+    default:
+      return '/dashboard'
+  }
+}
+
 export function WhatsAppLogin() {
   const [step, setStep] = useState<'phone' | 'otp' | 'signup'>('phone')
   const [userId, setUserId] = useState('')
@@ -128,10 +148,11 @@ export function WhatsAppLogin() {
         setUserId(data.user.id)
         setStep('signup')
       } else {
-        // Existing user - redirect to dashboard
+        // Existing user - redirect based on role
         setSuccess(true)
+        const redirectUrl = getRedirectByRole(data.user.role)
         setTimeout(() => {
-          window.location.href = '/dashboard'
+          window.location.href = redirectUrl
         }, 1000)
       }
     } catch (err: any) {
@@ -147,11 +168,12 @@ export function WhatsAppLogin() {
       <SignupForm
         userId={userId}
         phone={phoneNumber}
-        onComplete={() => {
+        onComplete={(userRole?: string) => {
           setIsSignupComplete(true)
           setSuccess(true)
+          const redirectUrl = getRedirectByRole(userRole || 'STUDENT')
           setTimeout(() => {
-            window.location.href = '/dashboard'
+            window.location.href = redirectUrl
           }, 1000)
         }}
       />

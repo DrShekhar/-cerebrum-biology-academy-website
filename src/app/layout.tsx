@@ -160,7 +160,7 @@ export default function RootLayout({
           </ToastProvider>
         </AuthProvider>
         {/* <MaintenancePopup /> */}
-        <Script src="https://checkout.razorpay.com/v1/checkout.js" strategy="lazyOnload" />
+        {/* Razorpay script moved to payment-specific layouts for better performance */}
       </body>
     </html>
   )

@@ -1,18 +1,46 @@
 import type { Metadata } from 'next'
+import dynamic from 'next/dynamic'
 import { generatePageMetadata } from '@/lib/seo/metadata'
 import { OptimizedHeroSection } from '@/components/layout/OptimizedHeroSection'
 import { CoursesSection } from '@/components/layout/CoursesSection'
-import { FacultySection } from '@/components/layout/FacultySection'
-import { RealStudentTestimonials } from '@/components/testimonials/RealStudentTestimonials'
-import { LocationsSection } from '@/components/locations/LocationsSection'
-import { BookingSection } from '@/components/layout/BookingSection'
 import { Footer } from '@/components/layout/Footer'
 import { TrustSignalsBanner } from '@/components/trust/TrustSignalsBanner'
-import { GoogleReviewsWidget } from '@/components/social-proof/GoogleReviewsWidget'
-import { SuccessTicker } from '@/components/ui/SuccessTicker'
-import { MaintenanceNotice } from '@/components/ui/MaintenanceNotice'
 import { realTestimonials } from '@/data/realTestimonials'
 import Link from 'next/link'
+
+// Dynamic imports for below-the-fold components (performance optimization)
+const FacultySection = dynamic(
+  () => import('@/components/layout/FacultySection').then((mod) => mod.FacultySection),
+  { loading: () => <div className="h-96 bg-gray-50 animate-pulse" /> }
+)
+
+const RealStudentTestimonials = dynamic(
+  () =>
+    import('@/components/testimonials/RealStudentTestimonials').then(
+      (mod) => mod.RealStudentTestimonials
+    ),
+  { loading: () => <div className="h-96 bg-gray-50 animate-pulse" /> }
+)
+
+const LocationsSection = dynamic(
+  () => import('@/components/locations/LocationsSection').then((mod) => mod.LocationsSection),
+  { loading: () => <div className="h-64 bg-gray-50 animate-pulse" /> }
+)
+
+const BookingSection = dynamic(
+  () => import('@/components/layout/BookingSection').then((mod) => mod.BookingSection),
+  { loading: () => <div className="h-96 bg-gray-50 animate-pulse" /> }
+)
+
+const GoogleReviewsWidget = dynamic(
+  () =>
+    import('@/components/social-proof/GoogleReviewsWidget').then((mod) => mod.GoogleReviewsWidget),
+  { loading: () => <div className="h-64 bg-gray-50 animate-pulse" /> }
+)
+
+const SuccessTicker = dynamic(() =>
+  import('@/components/ui/SuccessTicker').then((mod) => mod.SuccessTicker)
+)
 
 export const metadata: Metadata = generatePageMetadata('home')
 
