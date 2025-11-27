@@ -137,7 +137,7 @@ export default function RootLayout({
             <TrustProvider
               enableSocialProof={false}
               enableTrustBadges={true}
-              enableRealTimeUpdates={true}
+              enableRealTimeUpdates={false}
             >
               <PageErrorBoundary>
                 <SkipToContent />

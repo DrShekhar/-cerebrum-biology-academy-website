@@ -192,15 +192,46 @@ export default async function middleware(req: NextRequest) {
     'camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), gyroscope=()'
   )
 
-  // CRITICAL: Prevent homepage and all pages from being cached to fix stuck loading screen
-  // This ensures users always get the latest version
-  response.headers.set(
-    'Cache-Control',
-    'no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0'
-  )
-  response.headers.set('Pragma', 'no-cache')
-  response.headers.set('Expires', '0')
-  response.headers.set('Surrogate-Control', 'no-store')
+  // PERFORMANCE: Smart caching strategy - allow short-term caching for static pages
+  // while keeping dynamic/admin routes fresh
+  const isStaticPage =
+    pathname === '/' ||
+    pathname.startsWith('/courses') ||
+    pathname.startsWith('/about') ||
+    pathname.startsWith('/contact') ||
+    pathname.startsWith('/blog') ||
+    pathname.startsWith('/gallery') ||
+    pathname.startsWith('/pricing')
+
+  const isProtectedRoute =
+    pathname.startsWith('/admin') ||
+    pathname.startsWith('/dashboard') ||
+    pathname.startsWith('/student') ||
+    pathname.startsWith('/teacher') ||
+    pathname.startsWith('/counselor') ||
+    pathname.startsWith('/api/')
+
+  if (isProtectedRoute) {
+    // No caching for protected/dynamic routes
+    response.headers.set(
+      'Cache-Control',
+      'no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0'
+    )
+    response.headers.set('Pragma', 'no-cache')
+    response.headers.set('Expires', '0')
+  } else if (isStaticPage) {
+    // Allow short caching for public pages with stale-while-revalidate
+    // max-age=60: Cache for 1 minute
+    // s-maxage=300: CDN caches for 5 minutes
+    // stale-while-revalidate=86400: Serve stale while fetching fresh (24h)
+    response.headers.set(
+      'Cache-Control',
+      'public, max-age=60, s-maxage=300, stale-while-revalidate=86400'
+    )
+  } else {
+    // Default: minimal caching for other pages
+    response.headers.set('Cache-Control', 'public, max-age=30, stale-while-revalidate=60')
+  }
 
   // Prevent admin routes from being cached with stronger directives
   if (pathname.startsWith('/admin') || pathname.startsWith('/api/admin')) {

@@ -61,12 +61,32 @@ interface AuthProviderProps {
 
 export function AuthProvider({ children }: AuthProviderProps) {
   const [user, setUser] = useState<User | null>(null)
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(false)
   const [permissions, setPermissions] = useState<string[]>([])
 
-  // Initialize auth state
+  // PERFORMANCE: Defer auth initialization to avoid blocking initial render
+  // Only check auth immediately on protected routes, defer on public pages
   useEffect(() => {
-    initializeAuth()
+    const isProtectedRoute =
+      typeof window !== 'undefined' &&
+      (window.location.pathname.startsWith('/dashboard') ||
+        window.location.pathname.startsWith('/student') ||
+        window.location.pathname.startsWith('/admin') ||
+        window.location.pathname.startsWith('/teacher') ||
+        window.location.pathname.startsWith('/counselor') ||
+        window.location.pathname.startsWith('/profile') ||
+        window.location.pathname.startsWith('/test/'))
+
+    if (isProtectedRoute) {
+      // Protected route: check auth immediately
+      initializeAuth()
+    } else {
+      // Public page: defer auth check by 1 second to prioritize rendering
+      const timer = setTimeout(() => {
+        initializeAuth()
+      }, 1000)
+      return () => clearTimeout(timer)
+    }
   }, [])
 
   // Auto-refresh tokens
