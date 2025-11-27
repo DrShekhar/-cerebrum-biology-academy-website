@@ -381,7 +381,7 @@ export default function StudentDashboard() {
                   title="Practice Questions"
                   description="50 new questions available"
                   action="Practice Now"
-                  href="/practice"
+                  href="/tests"
                   color="bg-purple-50"
                 />
               </div>

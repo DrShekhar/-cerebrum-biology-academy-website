@@ -70,7 +70,7 @@ export const Footer = memo(function Footer() {
     { name: 'Study Materials (LMS)', href: '/tests' },
     { name: 'Ceri AI', href: '/ai-education-demo' },
     { name: 'International Students', href: '/services/international' },
-    { name: 'Board Exam Preparation', href: '/services/board-prep' },
+    { name: 'Board Exam Preparation', href: '/courses' },
     { name: 'Doubt Resolution', href: '/services/doubt-resolution' },
   ]
 

@@ -16,7 +16,7 @@ function getRedirectByRole(role?: string): string {
     case 'COUNSELOR':
       return '/counselor/leads'
     case 'TEACHER':
-      return '/teacher/dashboard'
+      return '/teacher/assignments'
     case 'PARENT':
       return '/parent/dashboard'
     case 'STUDENT':
