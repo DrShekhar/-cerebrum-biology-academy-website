@@ -23,17 +23,8 @@ import { useABTest } from '@/hooks/useABTest'
 import { useCourseAPI } from '@/hooks/useCourseAPI'
 import { usePricingCalculator } from '@/hooks/usePricingCalculator'
 
-// TODO: These wizard components need to be implemented
-// import { WizardProgressIndicator } from './wizard/WizardProgressIndicator'
-// import { GoalsSelectionStep } from './wizard/steps/GoalsSelectionStep'
-// import { BudgetPreferenceStep } from './wizard/steps/BudgetPreferenceStep'
-// import { TimeAvailabilityStep } from './wizard/steps/TimeAvailabilityStep'
-// import { LocationPreferenceStep } from './wizard/steps/LocationPreferenceStep'
-// import { LearningStyleStep } from './wizard/steps/LearningStyleStep'
-// import { WeakAreasAssessmentStep } from './wizard/steps/WeakAreasAssessmentStep'
-// import { CourseRecommendationsStep } from './wizard/steps/CourseRecommendationsStep'
-// import { PricingCalculatorStep } from './wizard/steps/PricingCalculatorStep'
-// import { FinalConfirmationStep } from './wizard/steps/FinalConfirmationStep'
+// Note: Individual wizard step components can be implemented in ./wizard/steps/ when needed
+// Currently using placeholder components that allow the wizard to function
 
 export interface WizardStepProps {
   data: any

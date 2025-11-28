@@ -4,8 +4,11 @@ import { Button } from '@/components/ui/Button'
 import { Phone, Calendar, Star, Users, BookOpen, Trophy } from 'lucide-react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
 export function HeroSection() {
+  const router = useRouter()
+
   const stats = [
     { icon: BookOpen, label: '10k+', subtitle: 'NEET Questions Solved' },
     { icon: Users, label: '500+', subtitle: 'Expert Faculty' },
@@ -13,8 +16,7 @@ export function HeroSection() {
   ]
 
   const handleBookDemo = () => {
-    // TODO: Implement booking system
-    console.log('Book demo clicked')
+    router.push('/demo-booking')
   }
 
   const handleCallNow = () => {

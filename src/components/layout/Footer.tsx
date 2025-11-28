@@ -34,10 +34,22 @@ export const Footer = memo(function Footer() {
     setSubscribeMessage('')
 
     try {
-      // TODO: Replace with actual API call
-      await new Promise((resolve) => setTimeout(resolve, 1000))
-      setSubscribeMessage('Thank you for subscribing!')
-      setEmail('')
+      const response = await fetch('/api/newsletter/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      })
+
+      const data = await response.json()
+
+      if (response.ok) {
+        setSubscribeMessage(data.message || 'Thank you for subscribing!')
+        if (!data.alreadySubscribed) {
+          setEmail('')
+        }
+      } else {
+        setSubscribeMessage(data.error || 'Subscription failed. Please try again.')
+      }
     } catch (error) {
       setSubscribeMessage('Subscription failed. Please try again.')
     } finally {

@@ -31,9 +31,6 @@ export function useAuth() {
   const [currentUser, setCurrentUser] = useState<User | null>(null)
   const [isSubmitting, setIsSubmitting] = useState(false)
 
-  // Debug log to verify new version is loading
-  console.log('🔧 useAuth v2.0 loaded with OTP support!')
-
   // Try to use real InstantDB auth, fallback to demo mode
   let authData
   try {
@@ -48,11 +45,9 @@ export function useAuth() {
     try {
       // Try real InstantDB auth first
       if (db.auth && db.auth.sendMagicCode) {
-        console.log('Using real InstantDB auth for:', email)
         return await db.auth.sendMagicCode({ email })
       } else {
         // Fallback to demo mode
-        console.log('Demo mode: Simulating magic link for:', email)
         // Simulate successful user creation
         const newUser: User = {
           id: id(),
@@ -96,7 +91,6 @@ export function useAuth() {
         createdAt: Date.now(),
       }
 
-      console.log('Creating user profile:', newUser)
       setCurrentUser(newUser)
       return newUser
     } catch (error) {
@@ -203,7 +197,7 @@ export function useAuth() {
 
   const isAuthenticated = useMemo(() => !!(currentUser || instantUser), [currentUser, instantUser])
 
-  const authReturn = {
+  return {
     user,
     isLoading,
     error,
@@ -215,7 +209,4 @@ export function useAuth() {
     sendOtp,
     verifyOtp,
   }
-
-  console.log('✅ useAuth returning methods:', Object.keys(authReturn))
-  return authReturn
 }

@@ -55,3 +55,8 @@ next-env.d.ts
 
 # Screenshots from visual testing
 /screenshots/*.png
+/test-screenshots/
+
+# Temporary analysis scripts
+analyze-homepage.js
+scripts/analyze-homepage.ts

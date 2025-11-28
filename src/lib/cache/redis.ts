@@ -42,7 +42,10 @@ const createMockRedisClient = () => {
 // Redis configuration optimized for high concurrency (only created if enabled)
 const createRedisClient = () => {
   if (!isRedisEnabled) {
-    console.log('ℹ️  Redis is disabled - using mock client for graceful degradation')
+    // Only log in development to keep build output clean
+    if (process.env.NODE_ENV === 'development') {
+      console.info('Redis: Using mock client (REDIS_ENABLED not set)')
+    }
     return createMockRedisClient()
   }
 

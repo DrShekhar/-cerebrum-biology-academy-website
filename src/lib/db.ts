@@ -86,10 +86,8 @@ const isValidUuid = (str: string) => {
 
 const APP_ID = isValidUuid(rawAppId) ? rawAppId : undefined
 
-if (!APP_ID) {
-  console.warn(
-    'NEXT_PUBLIC_INSTANT_APP_ID environment variable is not set or invalid. InstantDB features will be limited.'
-  )
+if (!APP_ID && process.env.NODE_ENV === 'development') {
+  console.info('InstantDB: NEXT_PUBLIC_INSTANT_APP_ID not configured. Using fallback mode.')
 }
 
 // Create a mock db object when APP_ID is not available
