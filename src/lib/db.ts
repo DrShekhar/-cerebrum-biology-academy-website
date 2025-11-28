@@ -1,4 +1,4 @@
-import { init, tx, id } from '@instantdb/react'
+import { tx, id } from '@instantdb/react'
 
 // Define your database schema
 export interface User {
@@ -73,10 +73,6 @@ export interface MarketingLead {
   updatedAt: number
 }
 
-// Initialize the database
-// You'll need to get your app ID from InstantDB dashboard
-const rawAppId = process.env.NEXT_PUBLIC_INSTANT_APP_ID as string
-
 // Validate that APP_ID is a valid UUID format
 // InstantDB requires a valid UUID, not a placeholder string
 const isValidUuid = (str: string) => {
@@ -84,21 +80,42 @@ const isValidUuid = (str: string) => {
   return str && uuidRegex.test(str)
 }
 
-const APP_ID = isValidUuid(rawAppId) ? rawAppId : undefined
-
-if (!APP_ID && process.env.NODE_ENV === 'development') {
-  console.info('InstantDB: NEXT_PUBLIC_INSTANT_APP_ID not configured. Using fallback mode.')
+// Mock db object for SSR and when InstantDB is not configured
+const mockDb = {
+  useAuth: () => ({ user: null, isLoading: false, error: null }),
+  auth: null,
 }
 
-// Create a mock db object when APP_ID is not available
-// This prevents crashes while allowing the app to function with Prisma
-export const db: any = APP_ID
-  ? init({ appId: APP_ID })
-  : {
-      // Mock object for when InstantDB is not configured
-      useAuth: () => ({ user: null, isLoading: false, error: null }),
-      auth: null,
+// Lazy initialization of InstantDB to avoid SSR issues
+// InstantDB accesses browser-only APIs like `location` during init
+let _db: any = null
+
+export const db: any = new Proxy(mockDb, {
+  get(target, prop) {
+    // Only initialize on client side
+    if (typeof window !== 'undefined' && !_db) {
+      const rawAppId = process.env.NEXT_PUBLIC_INSTANT_APP_ID as string
+      const APP_ID = isValidUuid(rawAppId) ? rawAppId : undefined
+
+      if (APP_ID) {
+        try {
+          const { init } = require('@instantdb/react')
+          _db = init({ appId: APP_ID })
+        } catch (e) {
+          console.error('Failed to initialize InstantDB:', e)
+          _db = mockDb
+        }
+      } else {
+        _db = mockDb
+      }
     }
+
+    // Return from initialized db if available, otherwise from mock
+    const source = _db || target
+    const value = source[prop]
+    return typeof value === 'function' ? value.bind(source) : value
+  },
+})
 
 // Export utilities
 export { tx, id }

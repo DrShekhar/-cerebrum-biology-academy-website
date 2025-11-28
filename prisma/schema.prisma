@@ -855,6 +855,7 @@ model questions {
   question_bank_questions question_bank_questions[]
   test_questions          test_questions[]
   user_question_responses user_question_responses[]
+  test_assignment_questions test_assignment_questions[]
 
   @@index([curriculum, grade])
   @@index([isActive, isVerified])
@@ -1151,6 +1152,7 @@ model test_templates {
   question_bank_questions question_bank_questions[]
   test_attempts           test_attempts[]
   test_sessions           test_sessions[]
+  test_assignments        test_assignments[]        @relation("AssignmentTemplate")
 
   @@index([curriculum, grade])
   @@index([isActive, isPublished])
@@ -1298,6 +1300,8 @@ model users {
   followup_rules_updated                  followup_rules[]                        @relation("FollowupRuleUpdater")
   followup_templates_created              followup_templates[]                    @relation("FollowupTemplateCreator")
   followup_history_created                followup_history[]                      @relation("FollowupHistoryCreator")
+  teacher_test_assignments                test_assignments[]                      @relation("TeacherTestAssignments")
+  student_test_submissions                test_assignment_submissions[]           @relation("StudentTestSubmissions")
 }
 
 model whatsapp_otp {
@@ -2484,4 +2488,170 @@ model newsletterSubscriber {
 
   @@index([status])
   @@index([createdAt])
+}
+
+// ============================================
+// TEST ASSIGNMENT SYSTEM
+// ============================================
+
+model test_assignments {
+  id                String                 @id @default(cuid())
+  teacherId         String
+  testTemplateId    String?                // Optional - can link to existing template
+  title             String
+  description       String?                @db.Text
+  instructions      String?                @db.Text
+  difficulty        DifficultyLevel        @default(MEDIUM)
+  totalQuestions    Int
+  totalMarks        Int
+  duration          Int                    // Duration in minutes
+  negativeMarking   Boolean                @default(false)
+  negativeMarkValue Decimal?               @db.Decimal(3, 2) // e.g., 0.25
+  shuffleQuestions  Boolean                @default(false)
+  showResults       ShowResultsType        @default(IMMEDIATELY)
+  passingMarks      Int?
+
+  // Assignment target
+  assignToType      AssignToType           @default(ALL_STUDENTS)
+  assignedClassIds  String[]               // Array of class IDs
+  assignedBatchIds  String[]               // Array of batch IDs
+  assignedStudentIds String[]              // Array of individual student IDs
+  courseId          String?
+
+  // Schedule
+  dueDate           DateTime
+  availableFrom     DateTime?              // When test becomes available
+
+  // Status
+  status            TestAssignmentStatus   @default(DRAFT)
+  publishedAt       DateTime?
+
+  // Configuration
+  selectedChapters  String[]               // NCERT chapter IDs
+  selectedTopics    String[]               // Topic IDs
+  questionSource    QuestionSourceType     @default(QUESTION_BANK)
+  useAI             Boolean                @default(false)
+
+  // Stats (updated when submissions come in)
+  totalAssigned     Int                    @default(0)
+  totalSubmitted    Int                    @default(0)
+  totalGraded       Int                    @default(0)
+  averageScore      Decimal?               @db.Decimal(5, 2)
+
+  // Metadata
+  metadata          Json?
+  createdAt         DateTime               @default(now())
+  updatedAt         DateTime               @updatedAt
+
+  // Relations
+  teacher           users                  @relation("TeacherTestAssignments", fields: [teacherId], references: [id], onDelete: Cascade)
+  testTemplate      test_templates?        @relation("AssignmentTemplate", fields: [testTemplateId], references: [id], onDelete: SetNull)
+  submissions       test_assignment_submissions[]
+  questions         test_assignment_questions[]
+
+  @@index([teacherId, status])
+  @@index([status, dueDate])
+  @@index([courseId])
+  @@index([dueDate])
+}
+
+model test_assignment_questions {
+  id                String              @id @default(cuid())
+  testAssignmentId  String
+  questionId        String
+  orderIndex        Int
+  marks             Int                 @default(4)
+  negativeMarks     Decimal?            @db.Decimal(3, 2)
+
+  testAssignment    test_assignments    @relation(fields: [testAssignmentId], references: [id], onDelete: Cascade)
+  question          questions           @relation(fields: [questionId], references: [id], onDelete: Cascade)
+
+  @@unique([testAssignmentId, questionId])
+  @@index([testAssignmentId, orderIndex])
+}
+
+model test_assignment_submissions {
+  id                String              @id @default(cuid())
+  testAssignmentId  String
+  studentId         String
+
+  // Test taking status
+  status            SubmissionTestStatus @default(NOT_STARTED)
+  startedAt         DateTime?
+  submittedAt       DateTime?
+
+  // Time tracking
+  timeSpent         Int                 @default(0) // Seconds
+  remainingTime     Int?
+
+  // Proctoring
+  tabSwitchCount    Int                 @default(0)
+  fullscreenExits   Int                 @default(0)
+  browserInfo       Json?
+
+  // Results
+  totalScore        Int?
+  percentage        Decimal?            @db.Decimal(5, 2)
+  questionsAttempted Int                @default(0)
+  questionsCorrect  Int                 @default(0)
+  questionsWrong    Int                 @default(0)
+  questionsSkipped  Int                 @default(0)
+
+  // Grading
+  isGraded          Boolean             @default(false)
+  gradedAt          DateTime?
+  gradedBy          String?
+  teacherFeedback   String?             @db.Text
+
+  // Answers
+  answers           Json?               // Array of {questionId, selectedAnswer, timeSpent}
+
+  metadata          Json?
+  createdAt         DateTime            @default(now())
+  updatedAt         DateTime            @updatedAt
+
+  testAssignment    test_assignments    @relation(fields: [testAssignmentId], references: [id], onDelete: Cascade)
+  student           users               @relation("StudentTestSubmissions", fields: [studentId], references: [id], onDelete: Cascade)
+
+  @@unique([testAssignmentId, studentId])
+  @@index([studentId, status])
+  @@index([testAssignmentId, status])
+  @@index([submittedAt])
+}
+
+enum TestAssignmentStatus {
+  DRAFT
+  PUBLISHED
+  ACTIVE      // Currently available for taking
+  COMPLETED   // Past due date
+  ARCHIVED
+}
+
+enum AssignToType {
+  ALL_STUDENTS
+  SPECIFIC_CLASS
+  SPECIFIC_BATCH
+  INDIVIDUAL_STUDENTS
+}
+
+enum ShowResultsType {
+  IMMEDIATELY
+  AFTER_DEADLINE
+  MANUAL_RELEASE
+  NEVER
+}
+
+enum QuestionSourceType {
+  QUESTION_BANK
+  AI_GENERATED
+  MANUAL
+  TEMPLATE
+}
+
+enum SubmissionTestStatus {
+  NOT_STARTED
+  IN_PROGRESS
+  PAUSED
+  SUBMITTED
+  GRADED
 }

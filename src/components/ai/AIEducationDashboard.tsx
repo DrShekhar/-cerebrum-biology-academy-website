@@ -3,11 +3,6 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { EnhancedChatInterface } from './EnhancedChatInterface'
-import { TestCreationInterface } from './TestCreationInterface'
-import { ViewAnalytics } from './ViewAnalytics'
-import { RealTimeMetrics } from './RealTimeMetrics'
-import AITestGeneration from './AITestGeneration'
-import { DashboardSkeleton } from '../ui/LoadingSkeleton'
 import { useToast } from '../ui/Toast'
 import { SyllabusCard, StudyHoursCard, TestScoreCard, StreakCard } from './ProgressCard'
 import { ActivityHistoryModal } from './ActivityHistoryModal'
@@ -16,7 +11,6 @@ import { fetchWithRetry } from '@/lib/utils/fetchWithRetry'
 import { ProgressCardSkeleton } from './skeletons/ProgressCardSkeleton'
 import { MetricCardSkeleton } from './skeletons/MetricsSkeleton'
 import { useAuth } from '@/hooks/useAuth'
-import { BiologyScoreDisplay } from '@/components/ui/BiologyScoreDisplay'
 import { EmptyState } from '@/components/ui/EmptyState'
 import {
   Brain,
@@ -79,9 +73,7 @@ interface RecentActivity {
 export function AIEducationDashboard() {
   const { showToast } = useToast()
   const { user, isAuthenticated } = useAuth()
-  const [activeTab, setActiveTab] = useState<
-    'overview' | 'tutor' | 'assessment' | 'testgen' | 'analytics' | 'metrics'
-  >('overview')
+  const [activeTab, setActiveTab] = useState<'overview' | 'tutor'>('overview')
   const [timeFilter, setTimeFilter] = useState<'week' | 'month'>('week')
   const [notifications, setNotifications] = useState(3)
   const [isInitialLoading, setIsInitialLoading] = useState(true)
@@ -151,9 +143,6 @@ export function AIEducationDashboard() {
   ])
 
   const [showChatInterface, setShowChatInterface] = useState(false)
-  const [showTestCreation, setShowTestCreation] = useState(false)
-  const [showAnalytics, setShowAnalytics] = useState(false)
-  const [showRealTimeMetrics, setShowRealTimeMetrics] = useState(false)
   const [showActivityHistory, setShowActivityHistory] = useState(false)
   const [showSettings, setShowSettings] = useState(false)
   const [chatMessages, setChatMessages] = useState<
@@ -347,8 +336,12 @@ export function AIEducationDashboard() {
   }
 
   const handleViewDetails = () => {
-    showToast('info', 'Analytics', 'Opening detailed performance analytics...', 3000)
-    setTimeout(() => setActiveTab('analytics'), 500)
+    showToast(
+      'info',
+      'Full Analytics',
+      'Enroll to access detailed performance analytics and AI-powered insights.',
+      4000
+    )
   }
 
   const handleViewAll = () => {
@@ -606,84 +599,9 @@ export function AIEducationDashboard() {
     }
   }
 
-  const handleCreateTest = () => {
-    console.log('Create Test button clicked - Opening test creation interface')
-    setShowTestCreation(true)
-  }
-
-  const handleTestCreationSubmit = async (testConfig: any) => {
-    setIsLoading(true)
-    setShowTestCreation(false)
-
-    try {
-      console.log('🧪 Generating test with configuration:', testConfig)
-
-      showToast(
-        'info',
-        'Creating AI Test',
-        `Generating ${testConfig.totalQuestions} questions across ${testConfig.selectedTopics.length} topics...`,
-        4000
-      )
-
-      // Call the test generation API
-      const response = await fetch('/api/ai/test-generation', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(testConfig),
-      })
-
-      const result = await response.json()
-
-      if (result.success) {
-        const generatedTest = result.data
-
-        showToast(
-          'success',
-          'Test Generated Successfully!',
-          `${generatedTest.title} - ${generatedTest.questions.length} questions ready!`,
-          6000
-        )
-
-        // Update metrics
-        setMetrics((prev) => ({
-          ...prev,
-          totalQuestions: prev.totalQuestions + generatedTest.questions.length,
-        }))
-
-        console.log('Generated test stored:', generatedTest)
-      } else {
-        showToast(
-          'error',
-          'Test Generation Failed',
-          result.error || 'Unknown error occurred. Please try again.',
-          5000
-        )
-      }
-    } catch (error) {
-      console.error('Test generation error:', error)
-      showToast(
-        'error',
-        'Network Error',
-        'Failed to generate test. Please check your connection.',
-        5000
-      )
-    } finally {
-      setIsLoading(false)
-    }
-  }
-
-  const handleViewAnalytics = () => {
-    console.log('Opening comprehensive analytics dashboard')
-    setShowAnalytics(true)
-  }
-
   const tabColors = {
     overview: 'from-purple-500 to-pink-500',
     tutor: 'from-blue-500 to-cyan-500',
-    assessment: 'from-green-500 to-emerald-500',
-    testgen: 'from-indigo-500 to-purple-500',
-    analytics: 'from-orange-500 to-red-500',
-    metrics: 'from-teal-500 to-cyan-500',
   }
 
   // Helper function to get time since last update
@@ -793,10 +711,6 @@ export function AIEducationDashboard() {
             {[
               { id: 'overview', label: 'Overview', icon: BarChart3 },
               { id: 'tutor', label: 'AI Tutor', icon: Brain },
-              { id: 'assessment', label: 'Assessment', icon: FileText },
-              { id: 'testgen', label: 'Test Generation', icon: Zap },
-              { id: 'analytics', label: 'Analytics', icon: TrendingUp },
-              { id: 'metrics', label: 'Live Metrics', icon: Activity },
             ].map((tab) => (
               <button
                 key={tab.id}
@@ -829,10 +743,6 @@ export function AIEducationDashboard() {
                   [
                     { id: 'overview', label: 'Overview' },
                     { id: 'tutor', label: 'AI Tutor' },
-                    { id: 'assessment', label: 'Assessment' },
-                    { id: 'testgen', label: 'Test Generation' },
-                    { id: 'analytics', label: 'Analytics' },
-                    { id: 'metrics', label: 'Live Metrics' },
                   ].find((t) => t.id === activeTab)?.label
                 }
               </span>
@@ -846,10 +756,6 @@ export function AIEducationDashboard() {
                 {[
                   { id: 'overview', label: 'Overview', icon: BarChart3 },
                   { id: 'tutor', label: 'AI Tutor', icon: Brain },
-                  { id: 'assessment', label: 'Assessment', icon: FileText },
-                  { id: 'testgen', label: 'Test Generation', icon: Zap },
-                  { id: 'analytics', label: 'Analytics', icon: TrendingUp },
-                  { id: 'metrics', label: 'Live Metrics', icon: Activity },
                 ].map((tab) => (
                   <button
                     key={tab.id}
@@ -946,15 +852,15 @@ export function AIEducationDashboard() {
                 <div className="backdrop-blur-xl bg-white/10 rounded-2xl p-8 border border-white/20 shadow-xl">
                   <EmptyState
                     icon={BookOpen}
-                    title="Welcome to AI Education Dashboard"
-                    description="This is your personalized learning hub. Start by asking questions, taking assessments, or generating practice tests to see your progress here."
+                    title="Welcome to Cerebrum Biology Academy"
+                    description="Experience our AI-powered learning platform. Try our AI Tutor for free or book a demo to see the full range of features."
                     primaryAction={{
-                      label: 'Ask AI Tutor',
+                      label: 'Try AI Tutor',
                       onClick: () => setActiveTab('tutor'),
                     }}
                     secondaryAction={{
-                      label: 'Take Assessment',
-                      onClick: () => setActiveTab('assessment'),
+                      label: 'Book Free Demo',
+                      href: '/demo-booking',
                     }}
                     size="lg"
                     variant="default"
@@ -1061,46 +967,48 @@ export function AIEducationDashboard() {
                     })}
                   </div>
 
-                  {/* Quick Actions */}
+                  {/* Quick Actions - Marketing CTAs */}
                   <div className="mt-6 sm:mt-8 flex flex-wrap gap-2 sm:gap-3">
-                    {[
-                      {
-                        label: 'Ask AI Tutor',
-                        icon: MessageCircle,
-                        colorClass: 'bg-gradient-to-r from-blue-500 to-blue-600',
-                        onClick: () => setActiveTab('tutor'),
-                      },
-                      {
-                        label: 'Take Practice Test',
-                        icon: FileText,
-                        colorClass: 'bg-gradient-to-r from-green-500 to-green-600',
-                        onClick: () => setActiveTab('testgen'),
-                      },
-                      {
-                        label: 'Study Materials',
-                        icon: BookOpen,
-                        colorClass: 'bg-gradient-to-r from-purple-500 to-purple-600',
-                        onClick: () => showToast('info', 'Study Materials', 'Coming soon!', 3000),
-                      },
-                      {
-                        label: 'Performance Analysis',
-                        icon: BarChart3,
-                        colorClass: 'bg-gradient-to-r from-orange-500 to-orange-600',
-                        onClick: () => setActiveTab('analytics'),
-                      },
-                    ].map((action) => (
-                      <motion.button
-                        key={action.label}
-                        onClick={action.onClick}
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.98 }}
-                        className={`flex items-center space-x-2 px-3 py-2 sm:px-4 sm:py-3 ${action.colorClass} text-white rounded-lg hover:shadow-lg transition-all duration-200 text-sm font-medium min-h-[44px]`}
-                        aria-label={action.label}
-                      >
-                        <action.icon className="w-4 h-4" />
-                        <span>{action.label}</span>
-                      </motion.button>
-                    ))}
+                    <motion.button
+                      onClick={() => setActiveTab('tutor')}
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.98 }}
+                      className="flex items-center space-x-2 px-3 py-2 sm:px-4 sm:py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg hover:shadow-lg transition-all duration-200 text-sm font-medium min-h-[44px]"
+                      aria-label="Try AI Tutor"
+                    >
+                      <MessageCircle className="w-4 h-4" />
+                      <span>Try AI Tutor</span>
+                    </motion.button>
+                    <motion.a
+                      href="/demo-booking"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.98 }}
+                      className="flex items-center space-x-2 px-3 py-2 sm:px-4 sm:py-3 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-lg hover:shadow-lg transition-all duration-200 text-sm font-medium min-h-[44px]"
+                      aria-label="Book Free Demo"
+                    >
+                      <Calendar className="w-4 h-4" />
+                      <span>Book Free Demo</span>
+                    </motion.a>
+                    <motion.a
+                      href="/courses"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.98 }}
+                      className="flex items-center space-x-2 px-3 py-2 sm:px-4 sm:py-3 bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-200 text-sm font-medium min-h-[44px]"
+                      aria-label="View Courses"
+                    >
+                      <BookOpen className="w-4 h-4" />
+                      <span>View Courses</span>
+                    </motion.a>
+                    <motion.a
+                      href="/auth/signup"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.98 }}
+                      className="flex items-center space-x-2 px-3 py-2 sm:px-4 sm:py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-lg hover:shadow-lg transition-all duration-200 text-sm font-medium min-h-[44px]"
+                      aria-label="Enroll Now"
+                    >
+                      <GraduationCap className="w-4 h-4" />
+                      <span>Enroll Now</span>
+                    </motion.a>
                   </div>
                 </div>
 
@@ -1168,14 +1076,14 @@ export function AIEducationDashboard() {
                     <EmptyState
                       icon={TrendingUp}
                       title="Your learning journey begins here"
-                      description="Start answering questions, taking tests, and using the AI tutor to unlock insights about your strengths and areas for improvement."
+                      description="Try our AI Tutor for instant Biology help or enroll to unlock the full personalized learning experience."
                       primaryAction={{
-                        label: 'Start Learning',
+                        label: 'Try AI Tutor',
                         onClick: () => setActiveTab('tutor'),
                       }}
                       secondaryAction={{
-                        label: 'Take a Test',
-                        onClick: () => setActiveTab('assessment'),
+                        label: 'Enroll Now',
+                        href: '/auth/signup',
                       }}
                       size="md"
                       variant="info"
@@ -1286,134 +1194,7 @@ export function AIEducationDashboard() {
               />
             </motion.div>
           )}
-
-          {activeTab === 'assessment' && (
-            <motion.div
-              key="assessment"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.3 }}
-              className="backdrop-blur-xl bg-white/10 rounded-2xl p-8 border border-white/20 shadow-xl"
-              style={{ pointerEvents: 'all' }}
-            >
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <FileText className="w-8 h-8 text-white" />
-                </div>
-                <h2 className="text-2xl font-bold text-gray-800 mb-2">Smart Assessment</h2>
-                <p className="text-gray-600 mb-8">
-                  AI-generated tests adapted to your learning level
-                </p>
-
-                <motion.button
-                  onClick={(e) => {
-                    e.preventDefault()
-                    e.stopPropagation()
-                    console.log(
-                      'Assessment tab Create Test button clicked - Generating real AI test'
-                    )
-                    handleCreateTest()
-                  }}
-                  disabled={isLoading}
-                  whileHover={isLoading ? {} : { scale: 1.05 }}
-                  whileTap={isLoading ? {} : { scale: 0.98 }}
-                  className={`bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-3 rounded-xl font-medium hover:shadow-lg transition-all duration-200 cursor-pointer ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
-                  style={{ pointerEvents: 'all', zIndex: 10 }}
-                >
-                  {isLoading ? 'Generating Test...' : 'Create Test'}
-                </motion.button>
-              </div>
-            </motion.div>
-          )}
-
-          {activeTab === 'testgen' && (
-            <motion.div
-              key="testgen"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.3 }}
-              style={{ pointerEvents: 'all' }}
-            >
-              <AITestGeneration />
-            </motion.div>
-          )}
-
-          {activeTab === 'analytics' && (
-            <motion.div
-              key="analytics"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.3 }}
-              className="backdrop-blur-xl bg-white/10 rounded-2xl p-8 border border-white/20 shadow-xl"
-              style={{ pointerEvents: 'all' }}
-            >
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <TrendingUp className="w-8 h-8 text-white" />
-                </div>
-                <h2 className="text-2xl font-bold text-gray-800 mb-2">Performance Analytics</h2>
-                <p className="text-gray-600 mb-8">
-                  Deep insights into your learning patterns and progress
-                </p>
-
-                <motion.button
-                  onClick={(e) => {
-                    e.preventDefault()
-                    e.stopPropagation()
-                    console.log(
-                      'Analytics View Analytics button clicked - Generating real AI analytics'
-                    )
-                    handleViewAnalytics()
-                  }}
-                  disabled={isLoading}
-                  whileHover={isLoading ? {} : { scale: 1.05 }}
-                  whileTap={isLoading ? {} : { scale: 0.98 }}
-                  className={`bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-3 rounded-xl font-medium hover:shadow-lg transition-all duration-200 cursor-pointer ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
-                  style={{ pointerEvents: 'all', zIndex: 10 }}
-                >
-                  {isLoading ? 'Analyzing Data...' : 'View Analytics'}
-                </motion.button>
-              </div>
-            </motion.div>
-          )}
-
-          {activeTab === 'metrics' && (
-            <motion.div
-              key="metrics"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.3 }}
-              className="backdrop-blur-xl bg-white/10 rounded-2xl p-8 border border-white/20 shadow-xl"
-              style={{ pointerEvents: 'all' }}
-            >
-              <div className="mb-6">
-                <h2 className="text-2xl font-bold text-gray-800 mb-2 flex items-center">
-                  <Activity className="w-6 h-6 mr-3 text-teal-500" />
-                  Real-Time Performance Metrics
-                </h2>
-                <p className="text-gray-600">
-                  Live monitoring of system performance, user activity, and learning analytics
-                </p>
-              </div>
-
-              <RealTimeMetrics />
-            </motion.div>
-          )}
         </AnimatePresence>
-
-        {/* Test Creation Interface */}
-        <TestCreationInterface
-          isOpen={showTestCreation}
-          onClose={() => setShowTestCreation(false)}
-          onCreateTest={handleTestCreationSubmit}
-        />
-
-        {/* View Analytics Interface */}
-        <ViewAnalytics isOpen={showAnalytics} onClose={() => setShowAnalytics(false)} />
 
         {/* Activity History Modal */}
         <ActivityHistoryModal

@@ -94,8 +94,58 @@ export default function TeacherTestAssignmentPage() {
 
         if (response.ok) {
           const data = await response.json()
-          setTestAssignments(data.testAssignments || [])
-          setStats(data.stats || stats)
+          const mappedAssignments = (data.assignments || []).map((a: any) => ({
+            id: a.id,
+            title: a.title,
+            description: a.description || '',
+            status: a.status,
+            totalQuestions: a.totalQuestions,
+            duration: a.duration,
+            totalMarks: a.totalMarks,
+            difficulty: a.difficulty?.toLowerCase() || 'medium',
+            dueDate: a.dueDate,
+            createdAt: a.createdAt,
+            assignedTo: {
+              type:
+                a.assignToType === 'ALL_STUDENTS'
+                  ? 'ALL'
+                  : a.assignToType === 'SPECIFIC_CLASS'
+                    ? 'CLASS'
+                    : a.assignToType === 'SPECIFIC_BATCH'
+                      ? 'BATCH'
+                      : 'INDIVIDUAL',
+              studentCount: a.submissionStats?.total || 0,
+            },
+            submissionStats: a.submissionStats
+              ? {
+                  total: a.submissionStats.total,
+                  submitted: a.submissionStats.submitted,
+                  graded: a.submissionStats.graded,
+                  pending: a.submissionStats.pending,
+                  averageScore: parseFloat(a.submissionStats.averageScore) || 0,
+                }
+              : undefined,
+          }))
+          setTestAssignments(mappedAssignments)
+          setStats({
+            totalTests: data.stats?.totalAssignments || 0,
+            draftTests: data.stats?.draftAssignments || 0,
+            activeTests: data.stats?.activeAssignments || 0,
+            completedTests: data.stats?.completedAssignments || 0,
+            avgCompletion:
+              mappedAssignments.length > 0
+                ? Math.round(
+                    mappedAssignments.reduce(
+                      (acc: number, a: any) =>
+                        acc +
+                        ((a.submissionStats?.submitted || 0) /
+                          Math.max(a.submissionStats?.total || 1, 1)) *
+                          100,
+                      0
+                    ) / mappedAssignments.length
+                  )
+                : 0,
+          })
         } else {
           setTestAssignments(getMockData())
           setStats({
@@ -211,7 +261,7 @@ export default function TeacherTestAssignmentPage() {
   const handleStatusChange = async (testId: string, newStatus: TestAssignmentStatus) => {
     try {
       const response = await fetch(`/api/teacher/test-assignments/${testId}`, {
-        method: 'PATCH',
+        method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ status: newStatus }),
       })
