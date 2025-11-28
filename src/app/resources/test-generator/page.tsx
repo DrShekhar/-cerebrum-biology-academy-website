@@ -486,17 +486,26 @@ export default function TestGeneratorPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
+      {/* Self-Practice Notice */}
+      <div className="bg-gradient-to-r from-green-500 to-teal-500 text-white py-2 px-4 text-center text-sm">
+        <span className="font-medium">Self-Practice Mode</span> - Practice at your own pace. For
+        official tests assigned by your teacher, check your{' '}
+        <a href="/student/dashboard" className="underline hover:no-underline">
+          Student Dashboard
+        </a>
+      </div>
+
       {/* Header */}
       <div className="bg-white border-b shadow-sm">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center">
+              <div className="w-12 h-12 bg-gradient-to-r from-green-600 to-teal-600 rounded-xl flex items-center justify-center">
                 <Brain className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h1 className="text-2xl font-bold text-gray-900">🧬 NEET Biology Test Generator</h1>
-                <p className="text-gray-600">AI-powered personalized test creation</p>
+                <h1 className="text-2xl font-bold text-gray-900">Practice Test Generator</h1>
+                <p className="text-gray-600">Create unlimited practice tests for self-study</p>
               </div>
             </div>
 
