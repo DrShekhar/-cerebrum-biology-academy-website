@@ -31,6 +31,18 @@ import {
   type ClassPricing,
 } from '@/data/pricing'
 
+const getCourseDetailUrl = (classLevel: ClassLevel): string => {
+  const urlMap: Record<ClassLevel, string> = {
+    'foundation-9': '/courses/class-9-foundation',
+    'foundation-10': '/courses/class-10-foundation',
+    'class-11': '/courses/class-11',
+    'class-12': '/courses/class-12',
+    dropper: '/courses/dropper',
+    '2-year': '/courses/neet-complete',
+  }
+  return urlMap[classLevel] || '/courses'
+}
+
 const PaymentOptionsDisplay = dynamic(
   () =>
     import('@/components/pricing/PaymentOptionsDisplay').then((mod) => mod.PaymentOptionsDisplay),
@@ -343,7 +355,7 @@ export default function PricingPage() {
           )}
 
           <div className="grid grid-cols-2 gap-4 mb-6">
-            <Link href={`/courses#${classData.class}`}>
+            <Link href={getCourseDetailUrl(classData.class)}>
               <button className="w-full bg-gray-200 hover:bg-gray-300 text-gray-700 font-medium py-3 rounded-xl transition-all duration-200 hover:shadow-lg">
                 View Details
               </button>
