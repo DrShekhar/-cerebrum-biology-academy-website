@@ -127,6 +127,8 @@ export default function TestGeneratorPage() {
   const [generationProgress, setGenerationProgress] = useState(0)
   const [generatedTest, setGeneratedTest] = useState<MockTest | null>(null)
   const [testAttempt, setTestAttempt] = useState<TestAttempt | null>(null)
+  const [useAIMode, setUseAIMode] = useState(false)
+  const [generationError, setGenerationError] = useState<string | null>(null)
 
   // Configuration state
   const [testConfig, setTestConfig] = useState<TestConfiguration>({
@@ -235,65 +237,123 @@ export default function TestGeneratorPage() {
 
     setIsGenerating(true)
     setGenerationProgress(0)
+    setGenerationError(null)
 
     try {
-      // Simulate AI generation with progress
-      for (let i = 0; i <= 100; i += 10) {
-        await new Promise((resolve) => setTimeout(resolve, 300))
-        setGenerationProgress(i)
+      let generatedTestData: any = null
+
+      if (useAIMode) {
+        // Try AI-powered generation first
+        setGenerationProgress(10)
+
+        try {
+          const aiResponse = await fetch('/api/ai/generate-test', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              studentId: 'guest_user_' + Date.now(),
+              testType: 'practice',
+              config: {
+                totalQuestions: testConfig.totalQuestions,
+                topics: testConfig.topics,
+                difficulty: testConfig.difficulty,
+                duration: testConfig.duration,
+                includeWeakAreas: true,
+                examPattern: 'neet',
+              },
+            }),
+          })
+
+          setGenerationProgress(50)
+
+          if (aiResponse.ok) {
+            const aiData = await aiResponse.json()
+            generatedTestData = {
+              questions: aiData.questions,
+              title: aiData.title,
+              description: aiData.description,
+              instructions: aiData.instructions,
+            }
+            setGenerationProgress(100)
+          } else {
+            const errorData = await aiResponse.json()
+            console.warn('AI generation failed, falling back to static:', errorData)
+            setGenerationError('AI generation unavailable, using standard generation')
+          }
+        } catch (aiError) {
+          console.warn('AI generation error, falling back to static:', aiError)
+          setGenerationError('AI generation unavailable, using standard generation')
+        }
       }
 
-      // Call the API to generate test data
-      const response = await fetch('/api/generate-test', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(testConfig),
-      })
+      // Fall back to static generation if AI failed or not enabled
+      if (!generatedTestData) {
+        for (let i = 0; i <= 100; i += 10) {
+          await new Promise((resolve) => setTimeout(resolve, 200))
+          setGenerationProgress(i)
+        }
 
-      if (!response.ok) {
-        throw new Error('Failed to generate test')
+        const response = await fetch('/api/generate-test', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(testConfig),
+        })
+
+        if (!response.ok) {
+          const errorData = await response.json()
+          throw new Error(errorData.error || 'Failed to generate test')
+        }
+
+        generatedTestData = await response.json()
       }
 
-      const generatedTestData = await response.json()
+      // Get questions array from response (handle both API formats)
+      const questionsArray = generatedTestData.questions || []
+      const isAIGenerated = useAIMode && generatedTestData.title
 
       // Convert to MockTest format
       const mockTest: MockTest = {
         id: `generated_${Date.now()}`,
-        title: testConfig.title,
-        description: testConfig.description,
-        slug: testConfig.title.toLowerCase().replace(/\s+/g, '-'),
+        title: generatedTestData.title || testConfig.title,
+        description: generatedTestData.description || testConfig.description,
+        slug: (generatedTestData.title || testConfig.title).toLowerCase().replace(/\s+/g, '-'),
         category: 'custom',
         subject: testConfig.subject,
         duration: testConfig.duration,
-        totalQuestions: testConfig.totalQuestions,
-        totalMarks: testConfig.totalMarks,
-        questions: generatedTestData.questions.map((q) => ({
+        totalQuestions: questionsArray.length || testConfig.totalQuestions,
+        totalMarks: (questionsArray.length || testConfig.totalQuestions) * 4,
+        questions: questionsArray.map((q: any) => ({
           id: q.id,
-          questionText: q.question,
-          options:
-            q.options?.map((opt, idx) => ({
-              id: String.fromCharCode(97 + idx), // a, b, c, d
-              text: opt,
-            })) || [],
+          questionText: q.question || q.questionText || '',
+          options: Array.isArray(q.options)
+            ? typeof q.options[0] === 'string'
+              ? q.options.map((opt: string, idx: number) => ({
+                  id: String.fromCharCode(97 + idx),
+                  text: opt,
+                }))
+              : q.options
+            : [],
           correctAnswer: q.correctAnswer,
           explanation: q.explanation || 'Detailed explanation will be provided.',
-          difficulty: q.difficulty,
-          topic: q.topic,
-          subtopic: q.subtopic || '',
+          difficulty: (q.difficulty || 'medium').toLowerCase(),
+          topic: q.topic || q.topicId || 'general',
+          subtopic: q.subtopic || q.chapterId || '',
           subject: 'biology',
           examYear: '2024',
-          source: 'AI Generated',
-          marks: q.marks,
-          timeAllocated: q.timeLimit || 120,
+          source: isAIGenerated ? 'AI Generated' : 'Question Bank',
+          marks: q.marks || 4,
+          timeAllocated: q.timeLimit || q.timeEstimate || 120,
           keywords: q.tags || [],
           relatedConcepts: q.relatedConcepts || [],
         })),
         difficulty: testConfig.difficulty,
         topics: testConfig.topics,
-        instructions: [
-          `This test contains ${testConfig.totalQuestions} questions`,
+        instructions: generatedTestData.instructions || [
+          `This test contains ${questionsArray.length || testConfig.totalQuestions} questions`,
           `Time limit: ${testConfig.duration} minutes`,
           'Each question carries 4 marks',
           testConfig.negativeMarking
@@ -319,11 +379,11 @@ export default function TestGeneratorPage() {
         adaptiveSettings: {
           enableAdaptive: testConfig.adaptiveMode,
           questionPoolByClass: {
-            'class-11': generatedTestData.questions
+            'class-11': questionsArray
               .slice(0, Math.floor(testConfig.totalQuestions * 0.6))
-              .map((q) => q.id),
-            'class-12': generatedTestData.questions.map((q) => q.id),
-            dropper: generatedTestData.questions.map((q) => q.id),
+              .map((q: any) => q.id),
+            'class-12': questionsArray.map((q: any) => q.id),
+            dropper: questionsArray.map((q: any) => q.id),
           },
           progressionRules: {
             easyToMediumThreshold: 70,
@@ -674,6 +734,26 @@ export default function TestGeneratorPage() {
                           />
                           <span className="text-gray-700">Include Previous Year Questions</span>
                         </label>
+
+                        <label className="flex items-center space-x-3 col-span-2 mt-4 p-3 bg-gradient-to-r from-purple-50 to-blue-50 rounded-xl border border-purple-200">
+                          <input
+                            type="checkbox"
+                            checked={useAIMode}
+                            onChange={(e) => setUseAIMode(e.target.checked)}
+                            className="w-5 h-5 text-purple-600 rounded focus:ring-purple-500"
+                          />
+                          <div className="flex items-center space-x-2">
+                            <Zap className="w-5 h-5 text-purple-600" />
+                            <div>
+                              <span className="text-gray-900 font-medium">
+                                AI-Powered Generation
+                              </span>
+                              <p className="text-xs text-gray-500">
+                                Uses Claude AI for personalized test creation
+                              </p>
+                            </div>
+                          </div>
+                        </label>
                       </div>
                     </div>
                   </div>
@@ -823,31 +903,54 @@ export default function TestGeneratorPage() {
                   <Button
                     onClick={handleGenerateTest}
                     disabled={isGenerating || testConfig.topics.length === 0}
-                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-4 rounded-xl font-semibold text-lg"
+                    className={`w-full py-4 rounded-xl font-semibold text-lg text-white ${
+                      useAIMode
+                        ? 'bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700'
+                        : 'bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700'
+                    }`}
                   >
                     {isGenerating ? (
                       <>
                         <RefreshCw className="w-5 h-5 mr-2 animate-spin" />
-                        Generating Test... {generationProgress}%
+                        {useAIMode ? 'AI Generating...' : 'Generating...'} {generationProgress}%
                       </>
                     ) : (
                       <>
-                        <Brain className="w-5 h-5 mr-2" />
-                        Generate Test with AI
+                        {useAIMode ? (
+                          <Zap className="w-5 h-5 mr-2" />
+                        ) : (
+                          <Brain className="w-5 h-5 mr-2" />
+                        )}
+                        {useAIMode ? 'Generate with Claude AI' : 'Generate Test'}
                       </>
                     )}
                   </Button>
+
+                  {generationError && (
+                    <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-3 mt-2">
+                      <p className="text-sm text-yellow-800 flex items-center">
+                        <Lightbulb className="w-4 h-4 mr-2 flex-shrink-0" />
+                        {generationError}
+                      </p>
+                    </div>
+                  )}
 
                   {isGenerating && (
                     <div className="bg-white rounded-xl p-4">
                       <div className="w-full bg-gray-200 rounded-full h-3">
                         <div
-                          className="bg-gradient-to-r from-blue-600 to-purple-600 h-3 rounded-full transition-all duration-300"
+                          className={`h-3 rounded-full transition-all duration-300 ${
+                            useAIMode
+                              ? 'bg-gradient-to-r from-purple-600 to-pink-600'
+                              : 'bg-gradient-to-r from-blue-600 to-purple-600'
+                          }`}
                           style={{ width: `${generationProgress}%` }}
                         />
                       </div>
                       <p className="text-sm text-gray-600 mt-2 text-center">
-                        AI is analyzing your selections and creating personalized questions...
+                        {useAIMode
+                          ? 'Claude AI is analyzing your selections and creating personalized questions...'
+                          : 'Selecting questions from question bank...'}
                       </p>
                     </div>
                   )}
