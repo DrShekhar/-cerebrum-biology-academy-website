@@ -19,8 +19,14 @@ import {
   BookOpen,
   CreditCard,
   Home,
+  Clock,
+  Users,
+  Flame,
+  Star,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
+import toast from 'react-hot-toast'
+import { trackFormStep, trackFormSubmission, trackBatchSelection } from '@/lib/analytics'
 import { Input } from '@/components/ui/Input'
 import { Label } from '@/components/ui/Label'
 import {
@@ -75,6 +81,8 @@ const batchOptions = [
     price: '₹1,20,000',
     discount: '20% Early Bird Discount',
     value: 'foundation',
+    seatsLeft: 8,
+    popular: false,
   },
   {
     name: 'Target Batch (Class 12th)',
@@ -82,6 +90,8 @@ const batchOptions = [
     price: '₹85,000',
     discount: '15% Scholarship Available',
     value: 'target',
+    seatsLeft: 5,
+    popular: true,
   },
   {
     name: 'Dropper Batch',
@@ -89,6 +99,8 @@ const batchOptions = [
     price: '₹75,000',
     discount: '10% Previous Student Discount',
     value: 'dropper',
+    seatsLeft: 12,
+    popular: false,
   },
   {
     name: 'Crash Course',
@@ -96,6 +108,8 @@ const batchOptions = [
     price: '₹45,000',
     discount: 'Limited Time Offer',
     value: 'crash',
+    seatsLeft: 3,
+    popular: false,
   },
 ]
 
@@ -154,6 +168,45 @@ export default function ApplicationForm() {
     }
   }, [])
 
+  const [lastSaved, setLastSaved] = useState<Date | null>(null)
+  const [isSaving, setIsSaving] = useState(false)
+  const [pincodeLoading, setPincodeLoading] = useState(false)
+
+  // Pincode autofill function
+  const handlePincodeChange = async (pincode: string) => {
+    setFormData({
+      ...formData,
+      personalInfo: { ...formData.personalInfo, pincode },
+    })
+
+    // Only fetch if pincode is 6 digits
+    if (pincode.length === 6 && /^\d{6}$/.test(pincode)) {
+      setPincodeLoading(true)
+      try {
+        const response = await fetch(`https://api.postalpincode.in/pincode/${pincode}`)
+        const data = await response.json()
+
+        if (data[0]?.Status === 'Success' && data[0]?.PostOffice?.length > 0) {
+          const postOffice = data[0].PostOffice[0]
+          setFormData((prev) => ({
+            ...prev,
+            personalInfo: {
+              ...prev.personalInfo,
+              pincode,
+              city: postOffice.District || prev.personalInfo.city,
+              state: postOffice.State || prev.personalInfo.state,
+            },
+          }))
+          toast.success(`Found: ${postOffice.District}, ${postOffice.State}`)
+        }
+      } catch (error) {
+        console.error('Pincode lookup failed:', error)
+      } finally {
+        setPincodeLoading(false)
+      }
+    }
+  }
+
   useEffect(() => {
     const dataToSave = {
       ...formData,
@@ -164,7 +217,19 @@ export default function ApplicationForm() {
         idProof: null,
       },
     }
-    localStorage.setItem('applicationFormData', JSON.stringify(dataToSave))
+
+    const hasData = formData.personalInfo.firstName || formData.personalInfo.phone
+
+    if (hasData) {
+      setIsSaving(true)
+      const debounceTimer = setTimeout(() => {
+        localStorage.setItem('applicationFormData', JSON.stringify(dataToSave))
+        setLastSaved(new Date())
+        setIsSaving(false)
+      }, 500)
+
+      return () => clearTimeout(debounceTimer)
+    }
   }, [formData])
 
   const validateStep = (step: number): boolean => {
@@ -249,6 +314,7 @@ export default function ApplicationForm() {
 
   const handleNext = () => {
     if (validateStep(currentStep)) {
+      trackFormStep(currentStep)
       setCurrentStep((prev) => Math.min(prev + 1, totalSteps))
     }
   }
@@ -267,13 +333,40 @@ export default function ApplicationForm() {
     }))
   }
 
+  const [submitSuccess, setSubmitSuccess] = useState(false)
+  const [submitError, setSubmitError] = useState('')
+
   const handleSubmit = async () => {
     setIsSubmitting(true)
-    await new Promise((resolve) => setTimeout(resolve, 2000))
-    console.log('Form submitted:', formData)
-    localStorage.removeItem('applicationFormData')
-    setIsSubmitting(false)
-    alert('Application submitted successfully!')
+    setSubmitError('')
+
+    try {
+      const response = await fetch('/api/admission-application', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          personalInfo: formData.personalInfo,
+          academicDetails: formData.academicDetails,
+          courseSelection: formData.courseSelection,
+        }),
+      })
+
+      const data = await response.json()
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to submit application')
+      }
+
+      localStorage.removeItem('applicationFormData')
+      setSubmitSuccess(true)
+      trackFormSubmission.success()
+    } catch (err: any) {
+      const errorMessage = err.message || 'Failed to submit application. Please try again.'
+      setSubmitError(errorMessage)
+      trackFormSubmission.error(errorMessage)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const stepVariants = {
@@ -286,6 +379,66 @@ export default function ApplicationForm() {
     (batch) => batch.value === formData.courseSelection.selectedBatch
   )
 
+  if (submitSuccess) {
+    return (
+      <div className="min-h-screen bg-gray-50 py-8 sm:py-12 px-4 sm:px-6">
+        <div className="max-w-2xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="bg-white rounded-2xl sm:rounded-3xl shadow-xl overflow-hidden text-center p-8 sm:p-12"
+          >
+            <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <CheckCircle className="w-10 h-10 text-green-600" />
+            </div>
+            <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+              Application Submitted Successfully!
+            </h1>
+            <p className="text-gray-600 mb-6">
+              Thank you, {formData.personalInfo.firstName}! Your application has been received.
+            </p>
+            <div className="bg-blue-50 rounded-xl p-6 mb-6 text-left">
+              <h3 className="font-semibold text-gray-900 mb-3">What happens next?</h3>
+              <ul className="space-y-2 text-sm text-gray-700">
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                  <span>You will receive a WhatsApp confirmation shortly</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                  <span>Our counselor will call you within 2 hours</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                  <span>Free diagnostic test will be scheduled</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                  <span>Payment link will be sent after counseling</span>
+                </li>
+              </ul>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <a
+                href="tel:+918826444334"
+                className="inline-flex items-center justify-center gap-2 bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors"
+              >
+                <Phone className="w-5 h-5" />
+                Call Us Now
+              </a>
+              <a
+                href="/"
+                className="inline-flex items-center justify-center gap-2 bg-gray-100 text-gray-700 px-6 py-3 rounded-lg font-medium hover:bg-gray-200 transition-colors"
+              >
+                Back to Home
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    )
+  }
+
   return (
     <div className="min-h-screen bg-gray-50 py-8 sm:py-12 px-4 sm:px-6">
       <div className="max-w-4xl mx-auto">
@@ -294,9 +447,26 @@ export default function ApplicationForm() {
             <h1 className="text-2xl sm:text-3xl font-bold text-white mb-2">
               NEET Admission Application
             </h1>
-            <p className="text-blue-100 text-sm sm:text-base">
-              Step {currentStep} of {totalSteps}
-            </p>
+            <div className="flex items-center justify-between">
+              <p className="text-blue-100 text-sm sm:text-base">
+                Step {currentStep} of {totalSteps}
+              </p>
+              {(lastSaved || isSaving) && (
+                <div className="flex items-center gap-2 text-sm text-blue-100">
+                  {isSaving ? (
+                    <>
+                      <div className="w-3 h-3 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                      <span>Saving...</span>
+                    </>
+                  ) : (
+                    <>
+                      <CheckCircle className="w-4 h-4 text-green-300" />
+                      <span>Draft saved</span>
+                    </>
+                  )}
+                </div>
+              )}
+            </div>
           </div>
 
           <div className="px-4 sm:px-8 py-6">
@@ -563,20 +733,26 @@ export default function ApplicationForm() {
 
                       <div>
                         <Label htmlFor="pincode" className="text-gray-700 mb-2 block">
-                          Pincode *
+                          Pincode *{' '}
+                          <span className="text-xs text-blue-600 font-normal">
+                            (Auto-fills city & state)
+                          </span>
                         </Label>
-                        <Input
-                          id="pincode"
-                          value={formData.personalInfo.pincode}
-                          onChange={(e) =>
-                            setFormData({
-                              ...formData,
-                              personalInfo: { ...formData.personalInfo, pincode: e.target.value },
-                            })
-                          }
-                          placeholder="6-digit pincode"
-                          className={errors.pincode ? 'border-red-500' : ''}
-                        />
+                        <div className="relative">
+                          <Input
+                            id="pincode"
+                            value={formData.personalInfo.pincode}
+                            onChange={(e) => handlePincodeChange(e.target.value)}
+                            placeholder="6-digit pincode"
+                            className={errors.pincode ? 'border-red-500' : ''}
+                            maxLength={6}
+                          />
+                          {pincodeLoading && (
+                            <div className="absolute right-3 top-1/2 -translate-y-1/2">
+                              <div className="w-4 h-4 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
+                            </div>
+                          )}
+                        </div>
                         {errors.pincode && (
                           <p className="text-red-500 text-xs mt-1 flex items-center">
                             <AlertCircle className="w-3 h-3 mr-1" />
@@ -827,7 +1003,7 @@ export default function ApplicationForm() {
                           {batchOptions.map((batch) => (
                             <div
                               key={batch.value}
-                              onClick={() =>
+                              onClick={() => {
                                 setFormData({
                                   ...formData,
                                   courseSelection: {
@@ -835,13 +1011,22 @@ export default function ApplicationForm() {
                                     selectedBatch: batch.value,
                                   },
                                 })
-                              }
-                              className={`p-4 sm:p-6 rounded-xl border-2 cursor-pointer transition-all ${
+                                trackBatchSelection(batch.name, batch.price)
+                              }}
+                              className={`relative p-4 sm:p-6 rounded-xl border-2 cursor-pointer transition-all ${
                                 formData.courseSelection.selectedBatch === batch.value
                                   ? 'border-blue-500 bg-blue-50 ring-2 ring-blue-200'
                                   : 'border-gray-200 hover:border-blue-300'
-                              }`}
+                              } ${batch.popular ? 'ring-2 ring-orange-300' : ''}`}
                             >
+                              {/* Popular Badge */}
+                              {batch.popular && (
+                                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1 shadow-lg">
+                                  <Star className="w-3 h-3" />
+                                  Most Popular
+                                </div>
+                              )}
+
                               <div className="flex items-start justify-between mb-2">
                                 <h3 className="font-bold text-gray-900 text-sm sm:text-base">
                                   {batch.name}
@@ -856,8 +1041,30 @@ export default function ApplicationForm() {
                               <div className="text-lg sm:text-xl font-bold text-gray-900 mb-1">
                                 {batch.price}
                               </div>
-                              <div className="text-xs text-green-600 font-medium">
+                              <div className="text-xs text-green-600 font-medium mb-3">
                                 {batch.discount}
+                              </div>
+
+                              {/* Seats Left Urgency Indicator */}
+                              <div
+                                className={`flex items-center gap-1.5 text-xs font-semibold ${
+                                  batch.seatsLeft <= 5
+                                    ? 'text-red-600'
+                                    : batch.seatsLeft <= 10
+                                      ? 'text-orange-600'
+                                      : 'text-gray-600'
+                                }`}
+                              >
+                                {batch.seatsLeft <= 5 ? (
+                                  <Flame className="w-3.5 h-3.5 animate-pulse" />
+                                ) : (
+                                  <Users className="w-3.5 h-3.5" />
+                                )}
+                                <span>
+                                  {batch.seatsLeft <= 5
+                                    ? `Only ${batch.seatsLeft} seats left!`
+                                    : `${batch.seatsLeft} seats available`}
+                                </span>
                               </div>
                             </div>
                           ))}
@@ -964,8 +1171,26 @@ export default function ApplicationForm() {
                           Document Upload
                         </h2>
                         <p className="text-sm text-gray-600">
-                          Upload required documents (PDF, JPG, PNG - Max 5MB)
+                          Upload documents now or submit later during counseling
                         </p>
+                      </div>
+                    </div>
+
+                    {/* Skip Option */}
+                    <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 mb-6">
+                      <div className="flex items-start gap-3">
+                        <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                          <Clock className="w-4 h-4 text-blue-600" />
+                        </div>
+                        <div>
+                          <p className="text-sm font-medium text-gray-900">
+                            Don't have documents ready?
+                          </p>
+                          <p className="text-xs text-gray-600 mt-1">
+                            You can skip this step and submit documents during your counseling
+                            session. Our team will guide you through the process.
+                          </p>
+                        </div>
                       </div>
                     </div>
 
@@ -974,27 +1199,28 @@ export default function ApplicationForm() {
                         {
                           field: 'class10Marksheet' as keyof FormData['documents'],
                           label: 'Class 10th Marksheet',
-                          required: true,
+                          required: false,
                         },
                         {
                           field: 'class12Marksheet' as keyof FormData['documents'],
                           label: 'Class 12th Marksheet',
-                          required: true,
+                          required: false,
                         },
                         {
                           field: 'photo' as keyof FormData['documents'],
                           label: 'Passport Size Photo',
-                          required: true,
+                          required: false,
                         },
                         {
                           field: 'idProof' as keyof FormData['documents'],
                           label: 'ID Proof (Aadhar/Passport)',
-                          required: true,
+                          required: false,
                         },
                       ].map((doc) => (
                         <div key={doc.field}>
                           <Label className="text-gray-700 mb-2 block">
-                            {doc.label} {doc.required && '*'}
+                            {doc.label}{' '}
+                            <span className="text-xs text-gray-500 font-normal">(Optional)</span>
                           </Label>
                           <div
                             className={`border-2 border-dashed rounded-xl p-6 sm:p-8 text-center transition-all ${

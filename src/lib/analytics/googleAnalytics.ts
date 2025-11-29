@@ -1,10 +1,5 @@
 // Google Analytics 4 configuration for Cerebrum Biology Academy
-declare global {
-  interface Window {
-    gtag: (...args: any[]) => void
-    dataLayer: any[]
-  }
-}
+// Types are declared in src/types/globals.d.ts
 
 export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-XXXXXXXXXX'
 
