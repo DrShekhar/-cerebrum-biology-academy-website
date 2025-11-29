@@ -2249,6 +2249,150 @@ export const localities: Locality[] = [
     ],
   },
 
+  // LAXMI NAGAR - High Volume Locality (East Delhi Hub)
+  {
+    id: 'del-19',
+    name: 'Laxmi Nagar',
+    slug: 'laxmi-nagar',
+    displayName: 'Laxmi Nagar',
+    city: 'Delhi',
+    citySlug: 'delhi',
+    region: 'East Delhi',
+    state: 'Delhi',
+    pincode: ['110092', '110091', '110093', '110096'],
+
+    seo: {
+      title: 'Best NEET Biology Coaching in Laxmi Nagar Delhi | Top Results | Cerebrum Academy',
+      description:
+        'Best NEET Biology coaching in Laxmi Nagar, Delhi. Expert AIIMS trained faculty, 98% success rate, small batches. Serving students from Preet Vihar, Nirman Vihar, Shakarpur. Book free demo!',
+      keywords: [
+        'neet coaching laxmi nagar',
+        'best neet coaching laxmi nagar delhi',
+        'biology coaching laxmi nagar',
+        'neet biology classes laxmi nagar',
+        'medical coaching laxmi nagar',
+        'neet preparation laxmi nagar',
+        'biology tuition laxmi nagar',
+        'neet coaching east delhi',
+        'best biology coaching delhi',
+        'neet 2025 coaching laxmi nagar',
+      ],
+      localKeywords: [
+        'laxmi nagar metro',
+        'nirman vihar',
+        'preet vihar',
+        'shakarpur',
+        'v3s mall',
+        'geeta colony',
+        'krishna nagar',
+      ],
+      h1: 'Best NEET Biology Coaching in Laxmi Nagar, Delhi - 98% Success Rate',
+      metaRobots: 'index,follow',
+    },
+
+    coordinates: { lat: 28.6304, lng: 77.2774 },
+    centerAddress: 'Online live classes with personalized Laxmi Nagar support',
+    nearbyLandmarks: [
+      'Laxmi Nagar Metro Station',
+      'V3S Mall',
+      'Nirman Vihar Metro',
+      'Preet Vihar Market',
+      'Shakarpur Bus Terminal',
+    ],
+    transportLinks: {
+      metros: ['Laxmi Nagar Metro (Blue Line)', 'Nirman Vihar Metro', 'Preet Vihar Metro'],
+      buses: ['DTC Bus 323', 'DTC Bus 534', 'DTC Bus 764', 'DTC Bus 501'],
+      accessibility: 'Excellent Blue Line metro connectivity, major East Delhi hub',
+    },
+
+    demographics: {
+      primarySchools: [
+        'DPS Laxmi Nagar',
+        'SKV Laxmi Nagar',
+        'Sanskriti School',
+        'Modern Public School',
+      ],
+      popularColleges: ['Deshbandhu College', 'Vivekananda College', 'IP College'],
+      coachingHubs: ['Laxmi Nagar coaching hub', 'largest coaching market in East Delhi'],
+      populationType: 'student-heavy',
+      economicProfile: 'middle',
+    },
+
+    competition: {
+      majorInstitutes: ['Aakash Laxmi Nagar', 'Allen Career Institute', 'FIITJEE', 'Resonance'],
+      avgFees: 95000,
+      ourAdvantage: [
+        'Personal attention with 15:1 ratio vs 40:1 at big institutes',
+        'AIIMS trained faculty with 15+ years experience',
+        'Flexible online classes - save 2-3 hours commute daily',
+        '20% lower fees than Aakash/Allen',
+        'Weekly doubt clearing sessions',
+      ],
+      marketGap:
+        'Laxmi Nagar has many coaching institutes but most focus on quantity over quality. Biology needs specialized attention that only focused coaching can provide.',
+    },
+
+    content: {
+      heroTitle: "Laxmi Nagar's Most Trusted NEET Biology Coaching",
+      heroSubtitle: 'Join 800+ Laxmi Nagar students scoring 350+ in Biology',
+      valueProposition:
+        'Expert AIIMS trained faculty, small batches, and proven strategies for East Delhi NEET aspirants',
+      urgencyMessage:
+        'Only 12 seats left in January 2025 batch! Laxmi Nagar students enrolling fast.',
+      localChallenge:
+        'Laxmi Nagar students often struggle with overcrowded coaching centers and generic teaching. Our specialized Biology-only focus ensures concept clarity and better NEET scores.',
+      successMetric: '92% of our Laxmi Nagar students scored above 340 in NEET 2024 Biology',
+    },
+
+    socialProof: {
+      studentCount: 820,
+      topScore: 365,
+      testimonialIds: ['laxmi-001', 'laxmi-002', 'laxmi-003'],
+      successStories: [
+        'Rohit from Laxmi Nagar scored 360/360 in Biology - now at AIIMS Delhi',
+        'Priya from Nirman Vihar improved from 250 to 352 in just 8 months',
+        '45+ Laxmi Nagar students secured MBBS seats in 2024',
+      ],
+    },
+
+    nearbyLocalities: [
+      'nirman-vihar',
+      'preet-vihar',
+      'shakarpur',
+      'geeta-colony',
+      'krishna-nagar',
+      'mayur-vihar',
+    ],
+
+    faqs: [
+      {
+        question: 'Why choose Cerebrum Biology Academy over other Laxmi Nagar coaching institutes?',
+        answer:
+          'Unlike crowded coaching centers in Laxmi Nagar with 40+ students per batch, we maintain small batch sizes (max 15 students) with AIIMS trained faculty. Our exclusive Biology focus ensures deeper concept clarity than generic NEET coaching.',
+      },
+      {
+        question: 'What are the batch timings for Laxmi Nagar students?',
+        answer:
+          'We offer flexible online live classes: Morning (7-9 AM for school students), Afternoon (2-4 PM for droppers), and Evening (6-8 PM for working students). All sessions are recorded for revision.',
+      },
+      {
+        question: 'How much does NEET Biology coaching cost in Laxmi Nagar?',
+        answer:
+          'Our complete NEET Biology course is ₹95,000 for the full year - 20% lower than Aakash or Allen in Laxmi Nagar. We offer EMI options and merit-based scholarships up to 30%.',
+      },
+      {
+        question: 'Is online coaching effective for Laxmi Nagar students?',
+        answer:
+          'Our online live classes provide the same personalized attention as offline coaching, plus you save 2-3 hours daily on Laxmi Nagar traffic! Real-time doubt clearing, interactive sessions, and recorded lectures for revision.',
+      },
+      {
+        question: 'Do you have students from nearby areas like Preet Vihar and Nirman Vihar?',
+        answer:
+          'Yes! We have 800+ students from Laxmi Nagar, Preet Vihar, Nirman Vihar, Shakarpur, Geeta Colony, and Krishna Nagar. Online format makes quality coaching accessible to all East Delhi students.',
+      },
+    ],
+  },
+
   // NOIDA - 8 localities
   {
     id: 'noi-01',

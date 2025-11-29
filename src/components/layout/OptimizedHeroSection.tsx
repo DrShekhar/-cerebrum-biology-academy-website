@@ -100,7 +100,7 @@ export function OptimizedHeroSection({ className = '' }: OptimizedHeroSectionPro
           >
             <TrophyIcon className="w-5 h-5 mr-2 text-green-300" />
             <span className="text-green-100 font-medium text-xs xs:text-sm md:text-base">
-              #1 NEET Biology Coaching in India
+              #1 NEET Biology Coaching in India • Delhi NCR • Pan-India Online
             </span>
           </motion.div>
 
@@ -110,12 +110,21 @@ export function OptimizedHeroSection({ className = '' }: OptimizedHeroSectionPro
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <span className="text-yellow-300">Sadhna Scored 695</span> in NEET 2023
+            <span className="text-yellow-300">Best NEET Biology Coaching</span>
             <br />
-            <span className="text-green-300">100 Percentile</span> in Biology
-            <br />
-            <span className="text-white">You're Next.</span>
+            <span className="text-green-300">Delhi NCR</span> <span className="text-white">&</span>{' '}
+            <span className="text-green-300">Pan-India Online</span>
           </motion.h1>
+
+          {/* H2 for additional location keywords - SEO optimized */}
+          <motion.h2
+            className="text-lg xs:text-xl sm:text-2xl md:text-3xl font-semibold mb-3 text-yellow-200"
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          >
+            Laxmi Nagar • Dwarka • Noida • Gurgaon • Kota • Hyderabad • Bangalore
+          </motion.h2>
 
           <motion.p
             className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl text-blue-100 mb-6 xs:mb-8 max-w-3xl"
@@ -123,8 +132,8 @@ export function OptimizedHeroSection({ className = '' }: OptimizedHeroSectionPro
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            98% Success Rate • 2,500+ Students Mentored • Founded by Dr. Shekhar C Singh (AIIMS New
-            Delhi)
+            <span className="text-yellow-300 font-bold">Sadhna Scored 695 (100 Percentile)</span> •
+            98% Success Rate • 2,500+ Students • AIIMS Trained Faculties
           </motion.p>
 
           <motion.div

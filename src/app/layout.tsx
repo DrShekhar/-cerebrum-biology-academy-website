@@ -34,11 +34,12 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://cerebrumbiologyacademy.com'),
-  title: 'Cerebrum Biology Academy | Best NEET Biology Coaching Institute India',
+  title:
+    'Best NEET Biology Coaching in India | Delhi NCR, Kota, Hyderabad, Bangalore | Cerebrum Academy',
   description:
-    'Top NEET Biology coaching by AIIMS experts. 98% success rate, 2000+ students mentored. Master Zoology, Botany, Human Physiology, Genetics, Ecology. Online & offline classes for Class 11th, 12th & droppers.',
+    'Top NEET biology coaching in India. Expert AIIMS faculty, 98% success rate. Best online & offline classes in Delhi NCR (Laxmi Nagar, Dwarka, Noida, Gurgaon), Kota, Hyderabad, Bangalore, Mumbai, Chennai. Class 11, 12 & droppers. Book free demo!',
   keywords:
-    'NEET biology coaching, AIIMS faculty, biology coaching institute, NEET preparation, medical entrance coaching, biology classes, NEET 2025, online biology coaching, zoology coaching, botany coaching, human physiology, genetics coaching, ecology NEET, cell biology, molecular biology, plant physiology, animal physiology, evolution biology, biotechnology coaching, NEET biology syllabus, NCERT biology, biology for NEET, best biology teacher, biology online classes, biology notes NEET, biology MCQs NEET, NEET biology questions, biology crash course, NEET UG biology, AIIMS biology, JIPMER biology',
+    'NEET biology coaching, NEET coaching India, best NEET coaching Delhi NCR, NEET coaching Laxmi Nagar, NEET coaching Dwarka, NEET coaching Noida, NEET coaching Gurgaon, online NEET coaching India, NEET coaching Kota alternative, NEET coaching Hyderabad, NEET coaching Bangalore, NEET coaching Mumbai, NEET coaching Chennai, AIIMS faculty, biology coaching institute, NEET preparation, medical entrance coaching Delhi, biology classes Delhi, NEET 2025 coaching, NEET 2026 coaching, online biology coaching, zoology coaching, botany coaching, human physiology, genetics coaching, ecology NEET, best biology teacher India, biology online classes India, NEET crash course, NEET dropper batch, Class 11 biology coaching, Class 12 biology coaching, affordable NEET coaching, small batch NEET coaching, NEET mock tests, NEET study material, NCERT biology NEET, NEET coaching near me, top 10 NEET coaching India, best NEET coaching 2025',
   authors: [{ name: 'Cerebrum Biology Academy' }],
   creator: 'Cerebrum Biology Academy',
   publisher: 'Cerebrum Biology Academy',
@@ -48,23 +49,23 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     url: 'https://cerebrumbiologyacademy.com',
     siteName: 'Cerebrum Biology Academy',
-    title: 'Cerebrum Biology Academy | Best NEET Biology Coaching Institute',
+    title: 'Best NEET Biology Coaching India | Delhi NCR, Online Classes | Cerebrum Academy',
     description:
-      'Top NEET Biology coaching by AIIMS experts. 98% success rate, 2000+ students mentored. Online & offline classes for Class 11th, 12th & droppers.',
+      'Top NEET Biology coaching by AIIMS experts. 98% success rate. Best coaching in Delhi NCR (Laxmi Nagar, Dwarka, Noida) + Pan-India online classes. Class 11, 12 & droppers.',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Cerebrum Biology Academy - Best NEET Biology Coaching',
+        alt: 'Cerebrum Biology Academy - Best NEET Biology Coaching India, Delhi NCR',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Cerebrum Biology Academy | Best NEET Biology Coaching Institute',
+    title: 'Best NEET Biology Coaching India | Delhi NCR | Cerebrum Academy',
     description:
-      'Top NEET Biology coaching by AIIMS experts. 98% success rate, 2000+ students mentored worldwide.',
+      'Top NEET Biology coaching by AIIMS experts. 98% success rate. Best coaching in Delhi NCR + Pan-India online classes.',
     images: ['/og-image.jpg'],
     creator: '@cerebrumbiology',
   },
@@ -112,6 +113,12 @@ export default function RootLayout({
 
         <meta httpEquiv="Content-Language" content="en-IN,hi-IN" />
         <meta name="language" content="English,Hindi" />
+
+        {/* hreflang tags for India-specific SEO */}
+        <link rel="alternate" hrefLang="en-IN" href="https://cerebrumbiologyacademy.com" />
+        <link rel="alternate" hrefLang="hi-IN" href="https://cerebrumbiologyacademy.com" />
+        <link rel="alternate" hrefLang="en" href="https://cerebrumbiologyacademy.com" />
+        <link rel="alternate" hrefLang="x-default" href="https://cerebrumbiologyacademy.com" />
         <meta name="theme-color" content="#2563eb" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
