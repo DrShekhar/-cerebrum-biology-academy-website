@@ -329,12 +329,294 @@ export function BreadcrumbSchema({ items }: { items: Array<{ name: string; url: 
   )
 }
 
+export function LocalBusinessSchema() {
+  const localBusinessData = {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    '@id': 'https://cerebrumbiologyacademy.com/#localbusiness',
+    name: 'Cerebrum Biology Academy - Delhi NCR',
+    alternateName: 'Best NEET Coaching in Delhi NCR',
+    description:
+      'Premier NEET Biology coaching in Delhi NCR with AIIMS Trained Faculties. Serving Laxmi Nagar, Dwarka, Noida, Gurgaon with 98% success rate. Small batches, live classes.',
+    url: 'https://cerebrumbiologyacademy.com',
+    telephone: '+91-88264-44334',
+    email: 'info@cerebrumbiologyacademy.com',
+    image: 'https://cerebrumbiologyacademy.com/og-image.jpg',
+    priceRange: '₹₹',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'Online + Delhi NCR Coverage',
+      addressLocality: 'Delhi',
+      addressRegion: 'Delhi NCR',
+      postalCode: '110001',
+      addressCountry: 'IN',
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: 28.6139,
+      longitude: 77.209,
+    },
+    areaServed: [
+      {
+        '@type': 'City',
+        name: 'Delhi',
+        containedIn: {
+          '@type': 'State',
+          name: 'Delhi',
+        },
+      },
+      {
+        '@type': 'City',
+        name: 'Noida',
+        containedIn: {
+          '@type': 'State',
+          name: 'Uttar Pradesh',
+        },
+      },
+      {
+        '@type': 'City',
+        name: 'Gurgaon',
+        containedIn: {
+          '@type': 'State',
+          name: 'Haryana',
+        },
+      },
+      {
+        '@type': 'City',
+        name: 'Ghaziabad',
+        containedIn: {
+          '@type': 'State',
+          name: 'Uttar Pradesh',
+        },
+      },
+      {
+        '@type': 'City',
+        name: 'Faridabad',
+        containedIn: {
+          '@type': 'State',
+          name: 'Haryana',
+        },
+      },
+    ],
+    openingHoursSpecification: [
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+        opens: '07:00',
+        closes: '21:00',
+      },
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: 'Sunday',
+        opens: '09:00',
+        closes: '18:00',
+      },
+    ],
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      reviewCount: '2500',
+      bestRating: '5',
+      worstRating: '1',
+    },
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'NEET Biology Coaching Delhi NCR',
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'NEET Biology Coaching Laxmi Nagar',
+            description: 'Online NEET Biology coaching for Laxmi Nagar, East Delhi students',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'NEET Biology Coaching Dwarka',
+            description: 'Online NEET Biology coaching for Dwarka, West Delhi students',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'NEET Biology Coaching Noida',
+            description: 'Online NEET Biology coaching for Noida, Greater Noida students',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'NEET Biology Coaching Gurgaon',
+            description: 'Online NEET Biology coaching for Gurgaon, Gurugram students',
+          },
+        },
+      ],
+    },
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(localBusinessData),
+      }}
+    />
+  )
+}
+
+export function NationalServiceSchema() {
+  const nationalServiceData = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    '@id': 'https://cerebrumbiologyacademy.com/#nationalservice',
+    name: 'Online NEET Biology Coaching India',
+    alternateName: 'Best NEET Coaching India',
+    description:
+      'Premier online NEET Biology coaching across India with AIIMS Trained Faculties. Kota alternative coaching available pan-India. 98% success rate, small batches, live interactive classes.',
+    provider: {
+      '@type': 'EducationalOrganization',
+      name: 'Cerebrum Biology Academy',
+      sameAs: 'https://cerebrumbiologyacademy.com',
+    },
+    serviceType: 'Online NEET Coaching',
+    category: 'Educational Services',
+    areaServed: {
+      '@type': 'Country',
+      name: 'India',
+    },
+    availableChannel: {
+      '@type': 'ServiceChannel',
+      serviceUrl: 'https://cerebrumbiologyacademy.com',
+      servicePhone: '+91-88264-44334',
+      availableLanguage: ['English', 'Hindi'],
+    },
+    offers: {
+      '@type': 'AggregateOffer',
+      lowPrice: '24000',
+      highPrice: '98000',
+      priceCurrency: 'INR',
+      offerCount: '4',
+      offers: [
+        {
+          '@type': 'Offer',
+          name: 'NEET Foundation Course',
+          price: '24000',
+          priceCurrency: 'INR',
+        },
+        {
+          '@type': 'Offer',
+          name: 'NEET Class 11 Biology',
+          price: '48000',
+          priceCurrency: 'INR',
+        },
+        {
+          '@type': 'Offer',
+          name: 'NEET Class 12 Biology',
+          price: '65000',
+          priceCurrency: 'INR',
+        },
+        {
+          '@type': 'Offer',
+          name: 'NEET Dropper Course',
+          price: '98000',
+          priceCurrency: 'INR',
+        },
+      ],
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      reviewCount: '2500',
+      bestRating: '5',
+    },
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Pan-India NEET Coaching Services',
+      itemListElement: [
+        {
+          '@type': 'OfferCatalog',
+          name: 'North India NEET Coaching',
+          itemListElement: [
+            {
+              '@type': 'Offer',
+              itemOffered: { '@type': 'Service', name: 'NEET Coaching Rajasthan' },
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: { '@type': 'Service', name: 'NEET Coaching Uttar Pradesh' },
+            },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'NEET Coaching Punjab' } },
+            {
+              '@type': 'Offer',
+              itemOffered: { '@type': 'Service', name: 'NEET Coaching Haryana' },
+            },
+          ],
+        },
+        {
+          '@type': 'OfferCatalog',
+          name: 'South India NEET Coaching',
+          itemListElement: [
+            {
+              '@type': 'Offer',
+              itemOffered: { '@type': 'Service', name: 'NEET Coaching Karnataka' },
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: { '@type': 'Service', name: 'NEET Coaching Tamil Nadu' },
+            },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'NEET Coaching Kerala' } },
+            {
+              '@type': 'Offer',
+              itemOffered: { '@type': 'Service', name: 'NEET Coaching Telangana' },
+            },
+          ],
+        },
+        {
+          '@type': 'OfferCatalog',
+          name: 'West & East India NEET Coaching',
+          itemListElement: [
+            {
+              '@type': 'Offer',
+              itemOffered: { '@type': 'Service', name: 'NEET Coaching Maharashtra' },
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: { '@type': 'Service', name: 'NEET Coaching Gujarat' },
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: { '@type': 'Service', name: 'NEET Coaching West Bengal' },
+            },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'NEET Coaching Bihar' } },
+          ],
+        },
+      ],
+    },
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(nationalServiceData),
+      }}
+    />
+  )
+}
+
 export function StructuredData() {
   return (
     <>
       <OrganizationSchema />
       <WebsiteSchema />
       <CourseSchema />
+      <LocalBusinessSchema />
+      <NationalServiceSchema />
     </>
   )
 }

@@ -51,6 +51,57 @@ export class GlobalSEOService {
       'biology competitive exam',
       'medical college preparation',
     ],
+    delhiNCR: [
+      'neet coaching delhi',
+      'best neet coaching delhi ncr',
+      'neet biology coaching delhi',
+      'biology coaching laxmi nagar',
+      'neet coaching noida',
+      'neet coaching gurgaon',
+      'neet coaching dwarka',
+      'medical coaching delhi ncr',
+      'aiims coaching delhi',
+      'neet preparation delhi',
+      'biology classes east delhi',
+      'neet coaching near me delhi',
+      'top neet coaching delhi',
+      'neet dropper course delhi',
+      'best biology teacher delhi',
+    ],
+    panIndia: [
+      'best neet coaching india',
+      'online neet coaching india',
+      'neet biology coaching india',
+      'top neet coaching institute india',
+      'best online medical coaching india',
+      'neet 2025 coaching online',
+      'aiims trained faculty neet',
+      'kota alternative neet coaching',
+      'online neet classes india',
+      'pan india neet coaching',
+      'all india neet preparation',
+      'best neet coaching without kota',
+      'neet coaching from home india',
+      'affordable neet coaching india',
+      'small batch neet coaching india',
+    ],
+    regionalIndia: [
+      'neet coaching rajasthan',
+      'neet coaching uttar pradesh',
+      'neet coaching maharashtra',
+      'neet coaching karnataka',
+      'neet coaching tamil nadu',
+      'neet coaching kerala',
+      'neet coaching gujarat',
+      'neet coaching west bengal',
+      'neet coaching bihar',
+      'neet coaching madhya pradesh',
+      'neet coaching punjab',
+      'neet coaching andhra pradesh',
+      'neet coaching telangana',
+      'neet coaching haryana',
+      'neet coaching jharkhand',
+    ],
   }
 
   generateCoursePageSEO(courseData: CoursePageSEO): SEOData {
@@ -328,6 +379,18 @@ export class GlobalSEOService {
       { url: '/compare/aakash', priority: '0.7', changefreq: 'monthly' },
       { url: '/compare/byjus', priority: '0.7', changefreq: 'monthly' },
       { url: '/compare/unacademy', priority: '0.7', changefreq: 'monthly' },
+
+      // Pan-India landing pages
+      { url: '/online-neet-coaching-india', priority: '0.95', changefreq: 'weekly' },
+      { url: '/best-neet-coaching-india', priority: '0.95', changefreq: 'weekly' },
+      { url: '/neet-biology-coaching-india', priority: '0.95', changefreq: 'weekly' },
+      { url: '/online-medical-coaching-india', priority: '0.95', changefreq: 'weekly' },
+
+      // Delhi NCR high-volume localities
+      { url: '/locations/delhi/laxmi-nagar', priority: '0.9', changefreq: 'weekly' },
+      { url: '/locations/delhi/dwarka', priority: '0.9', changefreq: 'weekly' },
+      { url: '/locations/noida/sector-18', priority: '0.9', changefreq: 'weekly' },
+      { url: '/locations/gurgaon/dlf-phase-3', priority: '0.9', changefreq: 'weekly' },
     ]
 
     return pages
