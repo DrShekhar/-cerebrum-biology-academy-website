@@ -11,18 +11,24 @@ import {
   Mail,
   ArrowRight,
   BookOpen,
-  Play,
+  Clock,
+  Calendar,
+  Users,
+  Phone,
 } from 'lucide-react'
 import Link from 'next/link'
 
 interface OrderDetails {
   orderId: string
   paymentId: string
-  courseId: string
+  enrollmentId: string
   courseName: string
   amount: number
   paidAt: string
-  enrollmentId: string
+  batchName: string
+  batchTiming: string
+  studentName?: string
+  email?: string
 }
 
 function PurchaseSuccessContent() {
@@ -34,72 +40,110 @@ function PurchaseSuccessContent() {
   const [whatsappSent, setWhatsappSent] = useState(false)
   const [emailSent, setEmailSent] = useState(false)
 
-  const orderId = searchParams.get('orderId')
-  const paymentId = searchParams.get('paymentId')
-  const courseId = searchParams.get('courseId')
+  const orderId = searchParams.get('order_id')
+  const paymentId = searchParams.get('payment_id')
+  const enrollmentId = searchParams.get('enrollment_id')
+  const batchName = searchParams.get('batch')
+  const batchTiming = searchParams.get('timing')
 
   useEffect(() => {
-    if (!orderId || !paymentId || !courseId) {
-      router.push('/courses')
+    if (!orderId && !paymentId) {
+      router.push('/admissions')
       return
     }
 
-    // Fetch order details
     const fetchOrderDetails = async () => {
       try {
-        const response = await fetch(`/api/payments/verify?order_id=${orderId}`)
-        if (!response.ok) throw new Error('Failed to fetch order details')
+        if (enrollmentId) {
+          const response = await fetch(`/api/enrollment/verify?enrollmentId=${enrollmentId}`)
+          if (response.ok) {
+            const data = await response.json()
+            setOrderDetails({
+              orderId: orderId || '',
+              paymentId: paymentId || '',
+              enrollmentId: enrollmentId,
+              courseName: data.enrollment?.course?.name || 'NEET Biology Course',
+              amount: data.enrollment?.payments?.[0]?.amount || 0,
+              paidAt: data.enrollment?.payments?.[0]?.completedAt || new Date().toISOString(),
+              batchName: batchName ? decodeURIComponent(batchName) : 'Your Batch',
+              batchTiming: batchTiming ? decodeURIComponent(batchTiming) : '',
+              studentName: data.enrollment?.student?.name,
+              email: data.enrollment?.student?.email,
+            })
 
-        const data = await response.json()
-
-        setOrderDetails({
-          orderId,
-          paymentId,
-          courseId,
-          courseName: data.payment?.notes?.courseName || 'Course',
-          amount: data.payment?.amount || 0,
-          paidAt: data.payment?.completedAt || new Date().toISOString(),
-          enrollmentId: data.payment?.enrollmentId || '',
-        })
-
-        // Trigger notifications
-        triggerNotifications(orderId, data.payment?.enrollmentId)
+            triggerNotifications(data.enrollment?.student?.phone, data.enrollment?.student?.email)
+          } else {
+            setOrderDetails({
+              orderId: orderId || '',
+              paymentId: paymentId || '',
+              enrollmentId: enrollmentId || '',
+              courseName: 'NEET Biology Course',
+              amount: 0,
+              paidAt: new Date().toISOString(),
+              batchName: batchName ? decodeURIComponent(batchName) : 'Your Batch',
+              batchTiming: batchTiming ? decodeURIComponent(batchTiming) : '',
+            })
+          }
+        } else {
+          setOrderDetails({
+            orderId: orderId || '',
+            paymentId: paymentId || '',
+            enrollmentId: '',
+            courseName: 'NEET Biology Course',
+            amount: 0,
+            paidAt: new Date().toISOString(),
+            batchName: batchName ? decodeURIComponent(batchName) : 'Your Batch',
+            batchTiming: batchTiming ? decodeURIComponent(batchTiming) : '',
+          })
+        }
 
         setLoading(false)
       } catch (error) {
         console.error('Error fetching order details:', error)
+        setOrderDetails({
+          orderId: orderId || '',
+          paymentId: paymentId || '',
+          enrollmentId: enrollmentId || '',
+          courseName: 'NEET Biology Course',
+          amount: 0,
+          paidAt: new Date().toISOString(),
+          batchName: batchName ? decodeURIComponent(batchName) : 'Your Batch',
+          batchTiming: batchTiming ? decodeURIComponent(batchTiming) : '',
+        })
         setLoading(false)
       }
     }
 
     fetchOrderDetails()
-  }, [orderId, paymentId, courseId, router])
+  }, [orderId, paymentId, enrollmentId, batchName, batchTiming, router])
 
-  const triggerNotifications = async (orderId: string, enrollmentId: string) => {
+  const triggerNotifications = async (phone?: string, email?: string) => {
     try {
-      // Trigger WhatsApp notification
-      const whatsappResponse = await fetch('/api/notifications/whatsapp', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          orderId,
-          enrollmentId,
-          type: 'enrollment_confirmation',
-        }),
-      })
-      setWhatsappSent(whatsappResponse.ok)
+      if (phone) {
+        const whatsappResponse = await fetch('/api/notifications/whatsapp', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            phone,
+            enrollmentId,
+            type: 'enrollment_confirmation',
+          }),
+        })
+        setWhatsappSent(whatsappResponse.ok)
+      }
 
-      // Trigger email notification
-      const emailResponse = await fetch('/api/notifications/email', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          orderId,
-          enrollmentId,
-          type: 'enrollment_confirmation',
-        }),
-      })
-      setEmailSent(emailResponse.ok)
+      if (email) {
+        const emailResponse = await fetch('/api/notifications/email', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            email,
+            enrollmentId,
+            type: 'enrollment_confirmation',
+          }),
+        })
+        setEmailSent(emailResponse.ok)
+      }
     } catch (error) {
       console.error('Notification error:', error)
     }
@@ -109,7 +153,6 @@ function PurchaseSuccessContent() {
     if (!orderId) return
 
     try {
-      // Open receipt in new window (HTML version)
       window.open(`/api/payments/receipt/${orderId}`, '_blank')
     } catch (error) {
       console.error('Receipt error:', error)
@@ -137,10 +180,10 @@ function PurchaseSuccessContent() {
             We couldn't find your order details. Please contact support.
           </p>
           <Link
-            href="/courses"
+            href="/admissions"
             className="inline-block px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
           >
-            Back to Courses
+            Back to Admissions
           </Link>
         </div>
       </div>
@@ -150,33 +193,81 @@ function PurchaseSuccessContent() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-green-50 to-white py-12">
       <div className="max-w-4xl mx-auto px-4">
-        {/* Success Header */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center justify-center w-20 h-20 bg-green-100 rounded-full mb-6">
             <CheckCircle2 className="w-12 h-12 text-green-600" />
           </div>
-          <h1 className="text-4xl font-bold text-gray-900 mb-3">Enrollment Successful! 🎉</h1>
-          <p className="text-xl text-gray-600">Welcome to {orderDetails.courseName}</p>
+          <h1 className="text-4xl font-bold text-gray-900 mb-3">Enrollment Successful!</h1>
+          <p className="text-xl text-gray-600">
+            Welcome to Cerebrum Biology Academy
+            {orderDetails.studentName && (
+              <span className="font-medium">, {orderDetails.studentName}</span>
+            )}
+          </p>
         </div>
 
-        {/* Order Summary */}
+        {(orderDetails.batchName || orderDetails.batchTiming) && (
+          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 mb-8 text-white">
+            <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+              <Calendar className="w-6 h-6" />
+              Your Batch Details
+            </h2>
+            <div className="grid sm:grid-cols-2 gap-6">
+              <div className="bg-white/10 rounded-xl p-4">
+                <div className="flex items-center gap-3 mb-2">
+                  <Users className="w-5 h-5 text-blue-200" />
+                  <span className="text-sm text-blue-200">Batch</span>
+                </div>
+                <p className="text-xl font-bold">{orderDetails.batchName}</p>
+              </div>
+              {orderDetails.batchTiming && (
+                <div className="bg-white/10 rounded-xl p-4">
+                  <div className="flex items-center gap-3 mb-2">
+                    <Clock className="w-5 h-5 text-blue-200" />
+                    <span className="text-sm text-blue-200">Class Timing</span>
+                  </div>
+                  <p className="text-xl font-bold">{orderDetails.batchTiming}</p>
+                </div>
+              )}
+            </div>
+            <div className="mt-6 p-4 bg-white/10 rounded-xl">
+              <p className="text-blue-100 text-sm">
+                <strong>Classes start soon!</strong> You'll receive a WhatsApp message with your
+                class link and schedule details within 24 hours.
+              </p>
+            </div>
+          </div>
+        )}
+
         <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Order Summary</h2>
           <div className="space-y-4">
-            <div className="flex justify-between items-center pb-4 border-b">
-              <span className="text-gray-600">Order ID</span>
-              <span className="font-mono text-gray-900">{orderDetails.orderId}</span>
-            </div>
-            <div className="flex justify-between items-center pb-4 border-b">
-              <span className="text-gray-600">Payment ID</span>
-              <span className="font-mono text-gray-900">{orderDetails.paymentId}</span>
-            </div>
-            <div className="flex justify-between items-center pb-4 border-b">
-              <span className="text-gray-600">Amount Paid</span>
-              <span className="text-2xl font-bold text-green-600">
-                ₹{(orderDetails.amount / 100).toLocaleString('en-IN')}
-              </span>
-            </div>
+            {orderDetails.orderId && (
+              <div className="flex justify-between items-center pb-4 border-b">
+                <span className="text-gray-600">Order ID</span>
+                <span className="font-mono text-gray-900 text-sm">{orderDetails.orderId}</span>
+              </div>
+            )}
+            {orderDetails.paymentId && (
+              <div className="flex justify-between items-center pb-4 border-b">
+                <span className="text-gray-600">Payment ID</span>
+                <span className="font-mono text-gray-900 text-sm">{orderDetails.paymentId}</span>
+              </div>
+            )}
+            {orderDetails.enrollmentId && (
+              <div className="flex justify-between items-center pb-4 border-b">
+                <span className="text-gray-600">Enrollment ID</span>
+                <span className="font-mono text-gray-900 text-sm">{orderDetails.enrollmentId}</span>
+              </div>
+            )}
+            {orderDetails.amount > 0 && (
+              <div className="flex justify-between items-center pb-4 border-b">
+                <span className="text-gray-600">Amount Paid</span>
+                <span className="text-2xl font-bold text-green-600">
+                  ₹{(orderDetails.amount / 100).toLocaleString('en-IN')}
+                </span>
+              </div>
+            )}
             <div className="flex justify-between items-center">
               <span className="text-gray-600">Payment Date</span>
               <span className="text-gray-900">
@@ -190,11 +281,9 @@ function PurchaseSuccessContent() {
           </div>
         </div>
 
-        {/* Action Cards */}
         <div className="grid md:grid-cols-2 gap-6 mb-8">
-          {/* Access Course */}
           <Link
-            href={`/student/courses/${orderDetails.courseId}`}
+            href="/student/dashboard"
             className="block bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-6 text-white hover:shadow-xl transition-all group"
           >
             <div className="flex items-start justify-between mb-4">
@@ -205,7 +294,6 @@ function PurchaseSuccessContent() {
             <p className="text-green-100">Start learning immediately with full course access</p>
           </Link>
 
-          {/* Download Receipt */}
           <button
             onClick={handleDownloadReceipt}
             className="bg-white border-2 border-gray-200 rounded-2xl p-6 hover:border-green-600 hover:shadow-xl transition-all group text-left"
@@ -219,9 +307,8 @@ function PurchaseSuccessContent() {
           </button>
         </div>
 
-        {/* Notification Status */}
         <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Confirmation Sent</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Confirmation Status</h2>
           <div className="space-y-4">
             <div className="flex items-center gap-4 p-4 bg-green-50 rounded-lg">
               <MessageCircle className="w-6 h-6 text-green-600 flex-shrink-0" />
@@ -229,8 +316,8 @@ function PurchaseSuccessContent() {
                 <h3 className="font-semibold text-gray-900">WhatsApp Confirmation</h3>
                 <p className="text-sm text-gray-600">
                   {whatsappSent
-                    ? 'Confirmation message sent! Check your WhatsApp for course access link.'
-                    : 'Sending confirmation to your WhatsApp...'}
+                    ? 'Confirmation sent! Check your WhatsApp for course access details.'
+                    : 'You will receive batch details and class link on WhatsApp shortly.'}
                 </p>
               </div>
               {whatsappSent && <CheckCircle2 className="w-5 h-5 text-green-600" />}
@@ -242,8 +329,8 @@ function PurchaseSuccessContent() {
                 <h3 className="font-semibold text-gray-900">Email Confirmation</h3>
                 <p className="text-sm text-gray-600">
                   {emailSent
-                    ? 'Welcome email sent! Check your inbox for login credentials and course details.'
-                    : 'Sending welcome email...'}
+                    ? 'Welcome email sent! Check your inbox for login credentials.'
+                    : 'You will receive a welcome email with your login credentials.'}
                 </p>
               </div>
               {emailSent && <CheckCircle2 className="w-5 h-5 text-blue-600" />}
@@ -251,7 +338,6 @@ function PurchaseSuccessContent() {
           </div>
         </div>
 
-        {/* Next Steps */}
         <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-white">
           <h2 className="text-2xl font-bold mb-6">What's Next?</h2>
           <div className="space-y-4">
@@ -260,9 +346,9 @@ function PurchaseSuccessContent() {
                 1
               </div>
               <div>
-                <h3 className="font-semibold mb-1">Access Your Course</h3>
+                <h3 className="font-semibold mb-1">Check WhatsApp</h3>
                 <p className="text-purple-100">
-                  Click the "Access Your Course" button above to start learning
+                  You'll receive your class joining link and schedule within 24 hours
                 </p>
               </div>
             </div>
@@ -271,9 +357,9 @@ function PurchaseSuccessContent() {
                 2
               </div>
               <div>
-                <h3 className="font-semibold mb-1">Check Your Email & WhatsApp</h3>
+                <h3 className="font-semibold mb-1">Access Study Materials</h3>
                 <p className="text-purple-100">
-                  We've sent you login credentials and course access links
+                  Login to your student dashboard to access notes, videos, and practice tests
                 </p>
               </div>
             </div>
@@ -282,25 +368,34 @@ function PurchaseSuccessContent() {
                 3
               </div>
               <div>
-                <h3 className="font-semibold mb-1">Join Our Community</h3>
-                <p className="text-purple-100">Connect with fellow students and mentors</p>
+                <h3 className="font-semibold mb-1">Attend Your First Class</h3>
+                <p className="text-purple-100">
+                  Join your batch on the scheduled day and time. Your journey to NEET success
+                  begins!
+                </p>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Support */}
         <div className="mt-8 text-center">
           <p className="text-gray-600 mb-4">Need help? Our support team is here for you!</p>
-          <div className="flex justify-center gap-4">
+          <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="https://wa.me/919876543210"
+              href="https://wa.me/919311946297"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
             >
               <MessageCircle className="w-5 h-5" />
               WhatsApp Support
+            </a>
+            <a
+              href="tel:+919311946297"
+              className="inline-flex items-center gap-2 px-6 py-3 border-2 border-gray-300 text-gray-700 rounded-lg hover:border-green-600 hover:text-green-600 transition-colors"
+            >
+              <Phone className="w-5 h-5" />
+              Call: +91 93119 46297
             </a>
             <a
               href="mailto:support@cerebrumbiologyacademy.com"

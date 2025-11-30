@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Button } from '@/components/ui/Button'
 import {
   CheckCircle,
@@ -34,16 +34,50 @@ import {
   BadgeCheck,
   RefreshCw,
   Mail,
+  Flame,
+  Timer,
 } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
 import ApplicationForm from '@/components/admissions/ApplicationForm'
+import { QuickInquiryForm } from '@/components/admissions/QuickInquiryForm'
+import { ExitIntentPopup } from '@/components/admissions/ExitIntentPopup'
+import { LiveChatWidget } from '@/components/admissions/LiveChatWidget'
+import { allClassPricing, getTierDetails } from '@/data/pricing'
 
 export default function AdmissionsPage() {
   const [activeStep, setActiveStep] = useState(0)
   const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null)
   const [showDocSpecs, setShowDocSpecs] = useState(false)
   const [selectedBatch, setSelectedBatch] = useState<string | null>(null)
+  const [countdown, setCountdown] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 })
+  const [showBanner, setShowBanner] = useState(true)
+
+  // Countdown timer for early bird discount (ends in 3 days from now)
+  useEffect(() => {
+    const endDate = new Date()
+    endDate.setDate(endDate.getDate() + 3)
+    endDate.setHours(23, 59, 59, 999)
+
+    const timer = setInterval(() => {
+      const now = new Date().getTime()
+      const distance = endDate.getTime() - now
+
+      if (distance < 0) {
+        clearInterval(timer)
+        return
+      }
+
+      setCountdown({
+        days: Math.floor(distance / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+        minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+        seconds: Math.floor((distance % (1000 * 60)) / 1000),
+      })
+    }, 1000)
+
+    return () => clearInterval(timer)
+  }, [])
 
   // WhatsApp Configuration
   const whatsappNumber = '+918826444334'
@@ -214,10 +248,32 @@ export default function AdmissionsPage() {
     },
   ]
 
+  // Helper to get pricing from centralized data
+  const getClassPricing = (classLevel: string) => {
+    const classPricing = allClassPricing.find((c) => c.class === classLevel)
+    if (!classPricing) return { startingPrice: 0, topPrice: 0 }
+
+    const courseTypes = classPricing.availableCourseTypes
+    const firstCourseType = courseTypes[0]
+    const tiers = classPricing.tiers[firstCourseType]
+
+    if (!tiers || !Array.isArray(tiers)) return { startingPrice: 0, topPrice: 0 }
+
+    const pursuitTier = tiers.find((t) => t.tier === 'pursuit')
+    const pinnacleTier = tiers.find((t) => t.tier === 'pinnacle')
+
+    return {
+      startingPrice: pursuitTier?.prices.lumpSum || 0,
+      topPrice: pinnacleTier?.prices.lumpSum || 0,
+    }
+  }
+
+  // Generate batch options from centralized pricing data
   const batchOptions = [
     {
-      name: 'Foundation Batch (Class 11th)',
-      duration: '2 Years',
+      name: 'Foundation Batch (Class 9-10)',
+      classLevel: 'foundation-9' as const,
+      duration: '1 Year',
       description: 'Comprehensive foundation building for early starters',
       features: [
         'Complete syllabus coverage',
@@ -225,21 +281,33 @@ export default function AdmissionsPage() {
         'Doubt sessions',
         'Study materials',
       ],
-      price: '₹1,20,000',
+      ...getClassPricing('foundation-9'),
       discount: '20% Early Bird Discount',
       popular: false,
     },
     {
-      name: 'Target Batch (Class 12th)',
+      name: 'Class 11 - NEET Prep',
+      classLevel: 'class-11' as const,
+      duration: '1 Year',
+      description: 'Strong foundation for NEET aspirants',
+      features: ['Conceptual learning', 'Regular tests', 'Doubt sessions', 'Performance tracking'],
+      ...getClassPricing('class-11'),
+      discount: '15% Scholarship Available',
+      popular: false,
+    },
+    {
+      name: 'Class 12 - NEET Intensive',
+      classLevel: 'class-12' as const,
       duration: '1 Year',
       description: 'Intensive preparation for Class 12th students',
       features: ['Accelerated learning', 'Mock tests', 'Revision sessions', 'Performance tracking'],
-      price: '₹85,000',
+      ...getClassPricing('class-12'),
       discount: '15% Scholarship Available',
       popular: true,
     },
     {
       name: 'Dropper Batch',
+      classLevel: 'dropper' as const,
       duration: '1 Year',
       description: 'Specialized program for NEET repeaters',
       features: [
@@ -248,17 +316,18 @@ export default function AdmissionsPage() {
         'Motivation sessions',
         'Individual attention',
       ],
-      price: '₹75,000',
+      ...getClassPricing('dropper'),
       discount: '10% Previous Student Discount',
       popular: false,
     },
     {
-      name: 'Crash Course',
-      duration: '6 Months',
-      description: 'High-intensity last-minute preparation',
-      features: ['Quick revision', 'Important topics', 'Test series', 'Strategy sessions'],
-      price: '₹45,000',
-      discount: 'Limited Time Offer',
+      name: '2-Year NEET Program',
+      classLevel: '2-year' as const,
+      duration: '2 Years',
+      description: 'Complete Class 11+12 NEET preparation',
+      features: ['Full syllabus coverage', 'Test series', 'Revision sessions', 'Expert mentoring'],
+      ...getClassPricing('2-year'),
+      discount: 'Best Value',
       popular: false,
     },
   ]
@@ -459,52 +528,157 @@ export default function AdmissionsPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
+      {/* Early Bird Discount Banner with Countdown */}
+      <AnimatePresence>
+        {showBanner && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            className="bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 text-white overflow-hidden"
+          >
+            <div className="max-w-7xl mx-auto px-4 py-3 sm:py-4 relative">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 text-center sm:text-left">
+                <div className="flex items-center gap-2">
+                  <Flame className="w-5 h-5 animate-pulse" />
+                  <span className="font-bold text-sm sm:text-base">Early Bird Offer!</span>
+                </div>
+
+                <div className="flex items-center gap-2 text-sm sm:text-base">
+                  <span>Get</span>
+                  <span className="bg-white text-red-600 font-bold px-2 py-0.5 rounded">
+                    20% OFF
+                  </span>
+                  <span>on all batches</span>
+                </div>
+
+                <div className="flex items-center gap-2">
+                  <Timer className="w-4 h-4" />
+                  <span className="text-xs sm:text-sm">Ends in:</span>
+                  <div className="flex items-center gap-1 font-mono font-bold">
+                    <span className="bg-white/20 px-2 py-1 rounded text-sm">{countdown.days}d</span>
+                    <span>:</span>
+                    <span className="bg-white/20 px-2 py-1 rounded text-sm">
+                      {String(countdown.hours).padStart(2, '0')}h
+                    </span>
+                    <span>:</span>
+                    <span className="bg-white/20 px-2 py-1 rounded text-sm">
+                      {String(countdown.minutes).padStart(2, '0')}m
+                    </span>
+                    <span>:</span>
+                    <span className="bg-white/20 px-2 py-1 rounded text-sm">
+                      {String(countdown.seconds).padStart(2, '0')}s
+                    </span>
+                  </div>
+                </div>
+
+                <button
+                  onClick={() => setShowBanner(false)}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white hidden sm:block"
+                  aria-label="Close banner"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Hero Section with Quick Inquiry Form */}
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-12 sm:py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center">
-            <motion.h1
-              className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              Admission Process
-            </motion.h1>
-            <motion.p
-              className="text-base sm:text-lg md:text-xl text-blue-100 max-w-3xl mx-auto mb-6 sm:mb-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              Your journey to medical college admission starts here. Follow our simple 5-step
-              admission process and join thousands of successful NEET aspirants.
-            </motion.p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            {/* Left Column - Hero Content */}
+            <div className="text-center lg:text-left">
+              <motion.div
+                className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-4"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+              >
+                <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+                <span className="text-sm font-medium">2,847+ Students Enrolled</span>
+              </motion.div>
 
+              <motion.h1
+                className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+              >
+                Start Your NEET Journey Today
+              </motion.h1>
+
+              <motion.p
+                className="text-base sm:text-lg md:text-xl text-blue-100 mb-6"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
+                Join India's top Biology coaching with AIIMS trained faculty. Get personalized
+                guidance and crack NEET with confidence.
+              </motion.p>
+
+              {/* Trust Badges */}
+              <motion.div
+                className="flex flex-wrap justify-center lg:justify-start gap-4 mb-6"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+              >
+                <div className="flex items-center gap-2 bg-white/10 rounded-lg px-3 py-2">
+                  <Award className="w-5 h-5 text-yellow-400" />
+                  <span className="text-sm font-medium">AIIMS Trained Faculty</span>
+                </div>
+                <div className="flex items-center gap-2 bg-white/10 rounded-lg px-3 py-2">
+                  <Trophy className="w-5 h-5 text-yellow-400" />
+                  <span className="text-sm font-medium">94% Success Rate</span>
+                </div>
+              </motion.div>
+
+              <motion.div
+                className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+              >
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="border-white text-white hover:bg-white hover:text-blue-600 w-full sm:w-auto"
+                  onClick={handleBrochureDownload}
+                >
+                  <Download className="w-5 h-5 mr-2" />
+                  Download Brochure
+                </Button>
+                <Button
+                  variant="primary"
+                  size="lg"
+                  className="bg-white text-blue-600 hover:bg-gray-100 w-full sm:w-auto"
+                  onClick={scrollToApplicationForm}
+                >
+                  <Phone className="w-5 h-5 mr-2" />
+                  Full Application
+                </Button>
+              </motion.div>
+            </div>
+
+            {/* Right Column - Quick Inquiry Form */}
             <motion.div
-              className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="lg:pl-8"
             >
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-white text-white hover:bg-white hover:text-blue-600 w-full sm:w-auto"
-                onClick={handleBrochureDownload}
-              >
-                <Download className="w-5 h-5 mr-2" />
-                Download Brochure
-              </Button>
-              <Button
-                variant="primary"
-                size="lg"
-                className="bg-white text-blue-600 hover:bg-gray-100 w-full sm:w-auto"
-                onClick={scrollToApplicationForm}
-              >
-                <Phone className="w-5 h-5 mr-2" />
-                Start Application
-              </Button>
+              <QuickInquiryForm variant="hero" />
             </motion.div>
           </div>
         </div>
@@ -756,11 +930,11 @@ export default function AdmissionsPage() {
               Choose Your Batch
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-gray-600">
-              Tailored programs for different student needs
+              Tailored programs for different student needs - Enroll directly online!
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {batchOptions.map((batch, index) => (
               <motion.div
                 key={index}
@@ -790,10 +964,16 @@ export default function AdmissionsPage() {
                 </p>
 
                 <div className="mb-4 sm:mb-6">
+                  <div className="text-xs text-gray-500 mb-1">Starting from</div>
                   <div className="text-2xl sm:text-3xl font-bold text-gray-900 mb-1">
-                    {batch.price}
+                    ₹{batch.startingPrice.toLocaleString('en-IN')}
                   </div>
-                  <div className="text-xs sm:text-sm text-green-600 font-medium">
+                  {batch.topPrice > batch.startingPrice && (
+                    <div className="text-xs text-gray-500">
+                      Up to ₹{batch.topPrice.toLocaleString('en-IN')} for Pinnacle tier
+                    </div>
+                  )}
+                  <div className="text-xs sm:text-sm text-green-600 font-medium mt-2">
                     {batch.discount}
                   </div>
                 </div>
@@ -807,15 +987,39 @@ export default function AdmissionsPage() {
                   ))}
                 </ul>
 
-                <Button
-                  variant={batch.popular ? 'primary' : 'outline'}
-                  className="w-full text-sm sm:text-base"
-                  onClick={() => handleBatchSelection(batch.name)}
-                >
-                  Choose This Batch
-                </Button>
+                <div className="space-y-2">
+                  <Link
+                    href={`/checkout?class=${batch.classLevel}`}
+                    className={`flex items-center justify-center w-full px-4 py-3 rounded-lg font-semibold transition-all text-sm sm:text-base ${
+                      batch.popular
+                        ? 'bg-blue-600 text-white hover:bg-blue-700'
+                        : 'bg-green-600 text-white hover:bg-green-700'
+                    }`}
+                  >
+                    <CreditCard className="w-4 h-4 mr-2" />
+                    Enroll Now
+                  </Link>
+                  <Button
+                    variant="outline"
+                    className="w-full text-sm sm:text-base"
+                    onClick={() => handleBatchSelection(batch.name)}
+                  >
+                    Talk to Counselor
+                  </Button>
+                </div>
               </motion.div>
             ))}
+          </div>
+
+          <div className="mt-10 text-center">
+            <p className="text-gray-600 mb-4">Not sure which batch is right for you?</p>
+            <Link
+              href="/checkout"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all"
+            >
+              <ArrowRight className="w-5 h-5" />
+              Start Self-Service Enrollment
+            </Link>
           </div>
         </div>
       </section>
@@ -1305,10 +1509,10 @@ export default function AdmissionsPage() {
         </div>
       </section>
 
-      {/* Floating WhatsApp Button */}
+      {/* Floating WhatsApp Button - Hidden on mobile when sticky bar is visible */}
       <motion.button
         onClick={() => handleWhatsAppContact()}
-        className="fixed bottom-6 right-6 w-14 h-14 sm:w-16 sm:h-16 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-2xl flex items-center justify-center z-50 group transition-all duration-300"
+        className="fixed bottom-6 right-6 w-14 h-14 sm:w-16 sm:h-16 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-2xl flex items-center justify-center z-40 group transition-all duration-300 hidden sm:flex"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         initial={{ opacity: 0, y: 100 }}
@@ -1320,6 +1524,44 @@ export default function AdmissionsPage() {
           Chat on WhatsApp
         </span>
       </motion.button>
+
+      {/* Sticky CTA Bar for Mobile */}
+      <motion.div
+        className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-2xl z-50 sm:hidden"
+        initial={{ y: 100 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+      >
+        <div className="px-4 py-3 flex items-center justify-between gap-3">
+          <div className="flex-1">
+            <p className="text-xs text-gray-600">Limited seats available</p>
+            <p className="text-sm font-bold text-gray-900">Apply for NEET 2025</p>
+          </div>
+          <div className="flex gap-2">
+            <button
+              onClick={() => handleWhatsAppContact()}
+              className="w-10 h-10 bg-green-500 text-white rounded-full flex items-center justify-center"
+              aria-label="WhatsApp"
+            >
+              <MessageSquare className="w-5 h-5" />
+            </button>
+            <Button
+              variant="primary"
+              size="sm"
+              onClick={scrollToApplicationForm}
+              className="whitespace-nowrap"
+            >
+              Apply Now
+            </Button>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Live Chat Widget with FAQ */}
+      <LiveChatWidget whatsappNumber={whatsappNumber} />
+
+      {/* Exit Intent Popup */}
+      <ExitIntentPopup />
     </div>
   )
 }
