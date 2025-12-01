@@ -569,29 +569,52 @@ export default function PricingPage() {
               <span className="text-xs sm:text-sm font-medium text-gray-700">Focus:</span>
               <div className="flex gap-1.5 sm:gap-2 flex-wrap justify-center">
                 {(() => {
-                  const courseTypeLabels: Record<CourseType, string> = {
-                    'board-only': 'Board Only',
-                    'board-neet': 'Board + NEET',
-                    academic: 'Academic',
-                    neet: 'NEET',
+                  // Get Focus options based on selected class
+                  const getFocusOptions = (): { type: CourseType; label: string }[] => {
+                    // Dropper: NEET only
+                    if (selectedClass === 'dropper') {
+                      return [{ type: 'neet', label: 'NEET' }]
+                    }
+                    // 2-Year: NEET only
+                    if (selectedClass === '2-year') {
+                      return [{ type: 'neet', label: 'NEET' }]
+                    }
+                    // Class 9 & 11: Academic terminology
+                    if (selectedClass === 'foundation-9' || selectedClass === 'class-11') {
+                      return [
+                        { type: 'academic', label: 'Academic' },
+                        { type: 'neet', label: 'NEET' },
+                        { type: 'board-neet', label: 'NEET + Academic' },
+                      ]
+                    }
+                    // Class 10 & 12: Boards terminology
+                    if (selectedClass === 'foundation-10' || selectedClass === 'class-12') {
+                      return [
+                        { type: 'board-only', label: 'Boards' },
+                        { type: 'neet', label: 'NEET' },
+                        { type: 'board-neet', label: 'NEET + Boards' },
+                      ]
+                    }
+                    // All Classes: Show combined options
+                    return [
+                      { type: 'board-neet', label: 'Board + NEET' },
+                      { type: 'neet', label: 'NEET' },
+                    ]
                   }
 
-                  const displayCourseTypes =
-                    selectedClass === 'all'
-                      ? (['board-neet', 'neet'] as CourseType[])
-                      : availableCourseTypes
+                  const focusOptions = getFocusOptions()
 
-                  return displayCourseTypes.map((type) => (
+                  return focusOptions.map((option) => (
                     <button
-                      key={type}
-                      onClick={() => setCourseType(type)}
+                      key={option.type}
+                      onClick={() => setCourseType(option.type)}
                       className={`relative px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium text-xs sm:text-sm transition-colors ${
-                        courseType === type
+                        courseType === option.type
                           ? 'text-white'
                           : 'bg-white text-gray-700 hover:bg-gray-50 shadow'
                       }`}
                     >
-                      {courseType === type && (
+                      {courseType === option.type && (
                         <motion.div
                           layoutId="focusTab"
                           className="absolute inset-0 bg-blue-600 rounded-full shadow-lg"
@@ -603,7 +626,7 @@ export default function PricingPage() {
                           }}
                         />
                       )}
-                      <span className="relative z-10">{courseTypeLabels[type]}</span>
+                      <span className="relative z-10">{option.label}</span>
                     </button>
                   ))
                 })()}
