@@ -175,7 +175,7 @@ export function PaymentOptionsDisplay({
         <p className="text-sm opacity-90 mb-4">
           Convert to easy EMIs through your credit card or personal loan
         </p>
-        <div className="grid grid-cols-3 gap-4 text-center">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-4 text-center">
           <div>
             <div className="font-bold text-lg">{formatCurrency(Math.round(lumpSum / 6))}</div>
             <div className="text-xs opacity-75">6 months</div>

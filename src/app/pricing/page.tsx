@@ -224,9 +224,9 @@ export default function PricingPage() {
           {colors.floatingBadge}
         </div>
         <div
-          className={`bg-gradient-to-r ${colors.bg} ${colors.textColor} p-4 sm:p-6 md:p-8 border-b-2 ${colors.borderColor} rounded-t-3xl`}
+          className={`bg-gradient-to-r ${colors.bg} ${colors.textColor} p-3 sm:p-4 md:p-5 border-b-2 ${colors.borderColor} rounded-t-3xl`}
         >
-          <div className="flex items-center gap-2 mb-4 sm:mb-6 flex-wrap">
+          <div className="flex items-center gap-2 mb-2 sm:mb-3 flex-wrap">
             <span
               className={`px-3 sm:px-4 py-1 sm:py-1.5 ${colors.badge} rounded-full text-xs sm:text-sm font-semibold capitalize`}
             >
@@ -234,68 +234,62 @@ export default function PricingPage() {
             </span>
           </div>
 
-          <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 capitalize leading-tight">
+          <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 capitalize leading-tight">
             {classData.displayName} - {tier.tier}
           </h3>
 
-          <p className="text-gray-600 text-sm mb-4 sm:mb-6 leading-relaxed">
+          <p className="text-gray-600 text-sm mb-2 sm:mb-3 leading-relaxed">
             {classData.description}
           </p>
 
-          <div className="mb-4 sm:mb-6">
-            <div className="space-y-1">
+          <div className="mb-2 sm:mb-3">
+            <div className="space-y-0.5">
               <div className="text-xs font-semibold uppercase tracking-wider text-gray-500">
                 Best For:
               </div>
-              <div className="text-sm text-gray-700 leading-relaxed">
+              <div className="text-xs sm:text-sm text-gray-700 leading-relaxed">
                 {bestForDescriptions[tier.tier]}
               </div>
             </div>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-4 text-center">
-            <div className="bg-white/50 rounded-xl p-2 sm:p-3">
-              <div className="text-lg sm:text-2xl font-bold">{classData.duration}</div>
-              <div className="text-xs opacity-70 mt-1">Duration</div>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-1.5 sm:gap-2 text-center">
+            <div className="bg-white/50 rounded-lg p-1.5 sm:p-2">
+              <div className="text-base sm:text-lg font-bold">{classData.duration}</div>
+              <div className="text-[10px] sm:text-xs opacity-70">Duration</div>
             </div>
-            <div className="bg-white/50 rounded-xl p-2 sm:p-3">
-              <div className="text-lg sm:text-2xl font-bold">{tier.hours}</div>
-              <div className="text-xs opacity-70 mt-1">Per Week</div>
+            <div className="bg-white/50 rounded-lg p-1.5 sm:p-2">
+              <div className="text-base sm:text-lg font-bold">{tier.hours}</div>
+              <div className="text-[10px] sm:text-xs opacity-70">Per Week</div>
             </div>
-            <div className="bg-white/50 rounded-xl p-2 sm:p-3">
-              <div className="text-lg sm:text-2xl font-bold whitespace-nowrap">
+            <div className="bg-white/50 rounded-lg p-1.5 sm:p-2">
+              <div className="text-base sm:text-lg font-bold whitespace-nowrap">
                 {tier.batchSize}
               </div>
-              <div className="text-xs opacity-70 mt-1">Batch Size</div>
+              <div className="text-[10px] sm:text-xs opacity-70">Batch Size</div>
             </div>
-            <div className="bg-white/50 rounded-xl p-2 sm:p-3">
-              <div className="text-lg sm:text-2xl font-bold text-green-600">
+            <div className="bg-white/50 rounded-lg p-1.5 sm:p-2">
+              <div className="text-base sm:text-lg font-bold text-green-600">
                 {tier.tier === 'pinnacle' ? '55' : tier.tier === 'ascent' ? '120' : '160'}
               </div>
-              <div className="text-xs opacity-70 mt-1">Enrolled</div>
+              <div className="text-[10px] sm:text-xs opacity-70">Enrolled</div>
             </div>
           </div>
         </div>
 
-        <div className="p-4 sm:p-6 md:p-8 flex flex-col flex-grow">
-          <div className="text-center mb-6 sm:mb-8">
-            <div className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">
+        <div className="p-3 sm:p-4 md:p-5 flex flex-col flex-grow">
+          <div className="text-center mb-3 sm:mb-4">
+            <div className="text-2xl sm:text-3xl font-bold text-gray-900 mb-1">
               ₹{price.toLocaleString()}
             </div>
-            <div className="text-sm text-blue-600 font-medium mb-3 sm:mb-4">
+            <div className="text-xs sm:text-sm text-blue-600 font-medium">
               Approx. ₹{Math.round(price / 12).toLocaleString()}/month
-            </div>
-            <div className="text-sm text-gray-500 line-through mb-2">
-              ₹{(price + Math.round(price * 0.05)).toLocaleString()}
-            </div>
-            <div className="text-xs text-green-600 font-medium">
-              Save ₹{Math.round(price * 0.05).toLocaleString()} (5% off)
             </div>
           </div>
 
-          <div className="mb-4 sm:mb-6 flex-grow">
-            <h4 className="font-semibold text-gray-900 mb-4 text-base">Key Features:</h4>
-            <div className="space-y-3">
+          <div className="mb-3 sm:mb-4 flex-grow">
+            <h4 className="font-semibold text-gray-900 mb-2 text-sm">Key Features:</h4>
+            <div className="space-y-2">
               {(expandedFeatures.has(tierKey) ? tier.features : tier.features.slice(0, 3)).map(
                 (feature, idx) => (
                   <div key={idx} className="flex items-start gap-3">
@@ -335,7 +329,7 @@ export default function PricingPage() {
 
           <button
             onClick={() => setExpandedTier(isExpanded ? null : tierKey)}
-            className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium py-3 rounded-xl mb-6 transition-colors flex items-center justify-center gap-2"
+            className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium py-2.5 rounded-xl mb-3 transition-colors flex items-center justify-center gap-2 text-sm"
           >
             <span>View Payment Options</span>
             <ChevronDownIcon
@@ -344,7 +338,7 @@ export default function PricingPage() {
           </button>
 
           {isExpanded && (
-            <div className="mb-6 animate-fadeIn">
+            <div className="mb-3 animate-fadeIn">
               <PaymentOptionsDisplay
                 lumpSum={tier.prices.lumpSum}
                 twoInstallments={tier.prices.twoInstallments}
@@ -354,15 +348,15 @@ export default function PricingPage() {
             </div>
           )}
 
-          <div className="grid grid-cols-2 gap-4 mb-6">
+          <div className="grid grid-cols-2 gap-2 mb-3">
             <Link href={getCourseDetailUrl(classData.class)}>
-              <button className="w-full bg-gray-200 hover:bg-gray-300 text-gray-700 font-medium py-3 rounded-xl transition-all duration-200 hover:shadow-lg">
+              <button className="w-full bg-gray-200 hover:bg-gray-300 text-gray-700 font-medium py-2.5 rounded-xl transition-all duration-200 hover:shadow-lg text-sm">
                 View Details
               </button>
             </Link>
             <Link href={`/demo-booking?tier=${tier.tier}&class=${classData.class}`}>
               <button
-                className={`w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold py-3 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-200 hover:shadow-xl`}
+                className={`w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold py-2.5 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-200 hover:shadow-xl text-sm`}
               >
                 Enroll Now
               </button>
@@ -370,7 +364,7 @@ export default function PricingPage() {
           </div>
 
           <Link href="/demo-booking">
-            <button className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-xl transition-all duration-200 hover:shadow-xl mb-6">
+            <button className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-2.5 rounded-xl transition-all duration-200 hover:shadow-xl mb-3 text-sm">
               Book Free Demo Class
             </button>
           </Link>
@@ -487,7 +481,7 @@ export default function PricingPage() {
             </div>
           </div>
 
-          <div className="mb-6 sm:mb-8 relative">
+          <div className="mb-3 sm:mb-4 relative">
             {/* Scroll indicators */}
             <div className="absolute left-0 top-0 bottom-2 w-8 bg-gradient-to-r from-blue-50 via-blue-50/80 to-transparent z-10 pointer-events-none sm:hidden" />
             <div className="absolute right-0 top-0 bottom-2 w-8 bg-gradient-to-l from-purple-50 via-purple-50/80 to-transparent z-10 pointer-events-none sm:hidden" />
@@ -571,7 +565,7 @@ export default function PricingPage() {
             </div>
           </div>
 
-          <div className="flex flex-col md:flex-row justify-center items-center gap-4 sm:gap-6 mb-6 sm:mb-8">
+          <div className="flex flex-col md:flex-row justify-center items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
             <div className="flex items-center gap-2 sm:gap-3">
               <span className="text-xs sm:text-sm font-medium text-gray-700">Focus:</span>
               <div className="flex gap-1.5 sm:gap-2 flex-wrap justify-center">
