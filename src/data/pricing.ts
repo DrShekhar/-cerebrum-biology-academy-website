@@ -374,7 +374,7 @@ const class12: ClassPricing = {
         tier: 'ascent',
         batchSize: '16-18',
         hours: '4-5 hrs/week',
-        prices: { lumpSum: 70000, twoInstallments: 72000, threeInstallments: 73000 },
+        prices: { lumpSum: 76000, twoInstallments: 78000, threeInstallments: 79000 },
         features: class12AscentFeatures,
       },
       {
@@ -389,10 +389,36 @@ const class12: ClassPricing = {
 }
 
 const dropper: ClassPricing = {
-  ...class12,
   class: 'dropper',
   displayName: 'Dropper/Repeater Batch',
+  duration: '1 Year',
   description: 'Intensive preparation for NEET retakers',
+  availableCourseTypes: ['neet'],
+  tiers: {
+    neet: [
+      {
+        tier: 'pinnacle',
+        batchSize: '10-12',
+        hours: '5-6 hrs/week',
+        prices: { lumpSum: 156000, twoInstallments: 158000, threeInstallments: 159000 },
+        features: class12PinnacleFeatures,
+      },
+      {
+        tier: 'ascent',
+        batchSize: '16-18',
+        hours: '4-5 hrs/week',
+        prices: { lumpSum: 90000, twoInstallments: 92000, threeInstallments: 94000 },
+        features: class12AscentFeatures,
+      },
+      {
+        tier: 'pursuit',
+        batchSize: '30-40',
+        hours: '3-4 hrs/week',
+        prices: { lumpSum: 70000, twoInstallments: 72000, threeInstallments: 75000 },
+        features: class12PursuitFeatures,
+      },
+    ],
+  },
 }
 
 //=============================================================================
