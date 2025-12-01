@@ -192,7 +192,7 @@ function FloatingTrustIndicators() {
       initial={{ opacity: 0, x: 100 }}
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: 100 }}
-      className="fixed right-2 sm:right-4 top-1/2 transform -translate-y-1/2 z-30 space-y-2 hidden sm:block"
+      className="fixed right-1 top-1/3 transform -translate-y-1/2 z-20 space-y-1.5 hidden lg:block"
     >
       {trustIndicators.map((indicator, index) => (
         <motion.div
@@ -200,13 +200,13 @@ function FloatingTrustIndicators() {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: index * 0.1 }}
-          className={`${indicator.bgColor} border border-gray-200 rounded-xl p-3 shadow-lg backdrop-blur-sm bg-opacity-95`}
+          className={`${indicator.bgColor} border border-gray-200 rounded-lg p-2 shadow-md backdrop-blur-sm bg-opacity-95`}
         >
-          <div className="flex items-center space-x-2">
-            <indicator.icon className={`w-4 h-4 ${indicator.color}`} />
+          <div className="flex items-center space-x-1.5">
+            <indicator.icon className={`w-3 h-3 ${indicator.color}`} />
             <div>
-              <div className={`font-bold ${indicator.color} text-sm`}>{indicator.value}</div>
-              <div className="text-xs text-gray-600">{indicator.label}</div>
+              <div className={`font-bold ${indicator.color} text-xs`}>{indicator.value}</div>
+              <div className="text-[10px] text-gray-600">{indicator.label}</div>
             </div>
           </div>
         </motion.div>

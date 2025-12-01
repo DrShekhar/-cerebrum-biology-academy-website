@@ -389,7 +389,7 @@ export default function PricingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50/30 overflow-x-hidden">
       {/* Hero Section with enhanced gradient */}
-      <div className="relative bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700 text-white py-12 sm:py-16 lg:py-20 overflow-hidden">
+      <div className="relative bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700 text-white py-8 sm:py-10 lg:py-12 overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-white/5 rounded-full blur-3xl" />
@@ -399,13 +399,13 @@ export default function PricingPage() {
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            className="text-center mb-10 sm:mb-14"
+            className="text-center mb-6 sm:mb-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
             <motion.div
-              className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-md border border-white/20 rounded-full px-5 sm:px-6 py-2.5 sm:py-3 mb-6 sm:mb-8 shadow-lg"
+              className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-md border border-white/20 rounded-full px-4 sm:px-5 py-2 sm:py-2.5 mb-4 sm:mb-5 shadow-lg"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2, duration: 0.5 }}
@@ -415,16 +415,15 @@ export default function PricingPage() {
                 Trusted by 5,000+ NEET aspirants
               </span>
             </motion.div>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-5 sm:mb-6 leading-[1.1] px-4">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-3 sm:mb-4 leading-[1.1] px-4">
               Master NEET Biology
               <br />
               <span className="bg-gradient-to-r from-yellow-300 via-amber-200 to-yellow-300 bg-clip-text text-transparent drop-shadow-sm">
                 With India&apos;s Best Faculty
               </span>
             </h1>
-            <p className="text-base sm:text-lg md:text-xl text-blue-100/90 max-w-2xl mx-auto px-4 leading-relaxed">
-              Small batches, personalized attention, and proven results. Choose your path to medical
-              college success.
+            <p className="text-sm sm:text-base md:text-lg text-blue-100/90 max-w-2xl mx-auto px-4 leading-relaxed">
+              Small batches, personalized attention, and proven results.
             </p>
           </motion.div>
 
@@ -443,12 +442,14 @@ export default function PricingPage() {
             ].map((stat, idx) => (
               <div
                 key={idx}
-                className="group bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl p-4 sm:p-5 text-center hover:bg-white/15 transition-all duration-300 hover:scale-[1.02]"
+                className="group bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl p-3 sm:p-4 text-center hover:bg-white/15 transition-all duration-300 hover:scale-[1.02]"
               >
-                <div className="text-2xl sm:text-3xl font-bold mb-1 tabular-nums">
-                  {stat.isStatic ? stat.suffix : `${stat.value}${stat.suffix}`}
+                <div className="text-xl sm:text-2xl font-bold mb-0.5 tabular-nums">
+                  {stat.isStatic ? `${stat.value}${stat.suffix}` : `${stat.value}${stat.suffix}`}
                 </div>
-                <div className="text-blue-100/80 text-xs sm:text-sm font-medium">{stat.label}</div>
+                <div className="text-blue-100/80 text-[10px] sm:text-xs font-medium">
+                  {stat.label}
+                </div>
               </div>
             ))}
           </motion.div>
