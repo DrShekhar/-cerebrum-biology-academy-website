@@ -8,7 +8,6 @@ import Header from '@/components/layout/Header'
 import { MobileNavigation } from '@/components/navigation/MobileNavigation'
 import { Footer } from '@/components/layout/Footer'
 import { PWAProvider } from '@/components/pwa/PWAProvider'
-import { MaintenancePopup } from '@/components/ui/MaintenancePopup'
 import { AuthProvider } from '@/contexts/AuthContext'
 import { ToastProvider } from '@/components/ui/Toast'
 import { TrialBannerWrapper } from '@/components/trial/TrialBannerWrapper'
@@ -166,7 +165,6 @@ export default function RootLayout({
             </TrustProvider>
           </ToastProvider>
         </AuthProvider>
-        <MaintenancePopup />
         {/* Razorpay script moved to payment-specific layouts for better performance */}
       </body>
     </html>
