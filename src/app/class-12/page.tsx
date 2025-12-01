@@ -165,11 +165,11 @@ export default function Class12Page() {
                 Class 12 Biology + NEET Program
               </div>
 
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
                 Crack NEET 2025 with <span className="text-yellow-300">Class 12 Biology</span>
               </h1>
 
-              <p className="text-xl md:text-2xl opacity-90 mb-8">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl opacity-90 mb-8">
                 The most critical year of your medical journey! Master Class 12 Biology concepts
                 while simultaneously preparing for NEET 2025. Time is running out!
               </p>
