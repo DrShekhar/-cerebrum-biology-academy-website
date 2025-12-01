@@ -253,37 +253,35 @@ export default function PricingPage() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-1.5 sm:gap-2 text-center">
-            <div className="bg-white/50 rounded-lg p-1.5 sm:p-2">
-              <div className="text-base sm:text-lg font-bold">{classData.duration}</div>
-              <div className="text-[10px] sm:text-xs opacity-70">Duration</div>
+          <div className="grid grid-cols-4 gap-1 text-center">
+            <div className="bg-white/50 rounded-md p-1 sm:p-1.5 min-w-0">
+              <div className="text-sm sm:text-base font-bold truncate">{classData.duration}</div>
+              <div className="text-[9px] sm:text-[10px] opacity-70 truncate">Duration</div>
             </div>
-            <div className="bg-white/50 rounded-lg p-1.5 sm:p-2">
-              <div className="text-base sm:text-lg font-bold">{tier.hours}</div>
-              <div className="text-[10px] sm:text-xs opacity-70">Per Week</div>
+            <div className="bg-white/50 rounded-md p-1 sm:p-1.5 min-w-0">
+              <div className="text-sm sm:text-base font-bold truncate">{tier.hours}</div>
+              <div className="text-[9px] sm:text-[10px] opacity-70 truncate">Per Week</div>
             </div>
-            <div className="bg-white/50 rounded-lg p-1.5 sm:p-2">
-              <div className="text-base sm:text-lg font-bold whitespace-nowrap">
-                {tier.batchSize}
-              </div>
-              <div className="text-[10px] sm:text-xs opacity-70">Batch Size</div>
+            <div className="bg-white/50 rounded-md p-1 sm:p-1.5 min-w-0">
+              <div className="text-sm sm:text-base font-bold truncate">{tier.batchSize}</div>
+              <div className="text-[9px] sm:text-[10px] opacity-70 truncate">Batch</div>
             </div>
-            <div className="bg-white/50 rounded-lg p-1.5 sm:p-2">
-              <div className="text-base sm:text-lg font-bold text-green-600">
+            <div className="bg-white/50 rounded-md p-1 sm:p-1.5 min-w-0">
+              <div className="text-sm sm:text-base font-bold text-green-600 truncate">
                 {tier.tier === 'pinnacle' ? '55' : tier.tier === 'ascent' ? '120' : '160'}
               </div>
-              <div className="text-[10px] sm:text-xs opacity-70">Enrolled</div>
+              <div className="text-[9px] sm:text-[10px] opacity-70 truncate">Enrolled</div>
             </div>
           </div>
         </div>
 
-        <div className="p-3 sm:p-4 md:p-5 flex flex-col flex-grow">
-          <div className="text-center mb-3 sm:mb-4">
-            <div className="text-2xl sm:text-3xl font-bold text-gray-900 mb-1">
+        <div className="p-2 sm:p-3 md:p-4 flex flex-col flex-grow">
+          <div className="text-center mb-2 sm:mb-3">
+            <div className="text-xl sm:text-2xl font-bold text-gray-900">
               ₹{price.toLocaleString()}
             </div>
-            <div className="text-xs sm:text-sm text-blue-600 font-medium">
-              Approx. ₹{Math.round(price / 12).toLocaleString()}/month
+            <div className="text-[10px] sm:text-xs text-blue-600 font-medium">
+              ~₹{Math.round(price / 12).toLocaleString()}/mo
             </div>
           </div>
 
