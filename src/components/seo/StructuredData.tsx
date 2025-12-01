@@ -609,6 +609,149 @@ export function NationalServiceSchema() {
   )
 }
 
+export function GurugramServiceSchema() {
+  const gurugramServiceData = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    '@id': 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram#service',
+    name: 'NEET Biology Coaching Gurugram',
+    alternateName: ['NEET Coaching Gurgaon', 'Best NEET Coaching Gurugram'],
+    description:
+      'Premier NEET Biology coaching in Gurugram with AIIMS Trained Faculties. Serving DLF Phase 1-4, Golf Course Road, Sushant Lok, Sector 14, 43, 51, 56, 57, South City, New Gurugram. 98% success rate, no Delhi travel needed.',
+    provider: {
+      '@type': 'EducationalOrganization',
+      name: 'Cerebrum Biology Academy',
+      sameAs: 'https://cerebrumbiologyacademy.com',
+    },
+    serviceType: 'Online NEET Coaching',
+    category: 'Educational Services',
+    areaServed: {
+      '@type': 'City',
+      name: 'Gurugram',
+      alternateName: 'Gurgaon',
+      containedIn: {
+        '@type': 'State',
+        name: 'Haryana',
+      },
+    },
+    availableChannel: {
+      '@type': 'ServiceChannel',
+      serviceUrl: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram',
+      servicePhone: '+91-88264-44334',
+      availableLanguage: ['English', 'Hindi'],
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      reviewCount: '1800',
+      bestRating: '5',
+    },
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Gurugram NEET Coaching Services',
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'NEET Coaching DLF Phase 1 Gurugram',
+            description: 'Online NEET Biology coaching for DLF Phase 1, Cyber City students',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'NEET Coaching Golf Course Road Gurugram',
+            description: 'Online NEET Biology coaching for Golf Course Road residents',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'NEET Coaching Sushant Lok Gurugram',
+            description: 'Online NEET Biology coaching for Sushant Lok area students',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'NEET Coaching Sector 56 Gurugram',
+            description: 'Online NEET Biology coaching for Sector 56 students',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'NEET Coaching Sector 14 Gurugram',
+            description: 'Online NEET Biology coaching for Old Gurugram Sector 14 students',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'NEET Coaching Sector 43 Gurugram',
+            description: 'Online NEET Biology coaching for Sector 43 students',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'NEET Coaching Sector 51 Gurugram',
+            description: 'Online NEET Biology coaching for Sector 51 students',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'NEET Coaching Sector 57 Gurugram',
+            description: 'Online NEET Biology coaching for Sector 57, Sohna Road students',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'NEET Coaching South City Gurugram',
+            description: 'Online NEET Biology coaching for South City 1 & 2 students',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'NEET Coaching New Gurugram',
+            description: 'Online NEET Biology coaching for New Gurugram sector students',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'NEET Coaching DLF Phase 4 Gurugram',
+            description: 'Online NEET Biology coaching for DLF Phase 4, Galleria Market students',
+          },
+        },
+      ],
+    },
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(gurugramServiceData),
+      }}
+    />
+  )
+}
+
 export function StructuredData() {
   return (
     <>
@@ -617,6 +760,7 @@ export function StructuredData() {
       <CourseSchema />
       <LocalBusinessSchema />
       <NationalServiceSchema />
+      <GurugramServiceSchema />
     </>
   )
 }

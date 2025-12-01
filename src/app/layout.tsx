@@ -166,7 +166,7 @@ export default function RootLayout({
             </TrustProvider>
           </ToastProvider>
         </AuthProvider>
-        {/* <MaintenancePopup /> */}
+        <MaintenancePopup />
         {/* Razorpay script moved to payment-specific layouts for better performance */}
       </body>
     </html>

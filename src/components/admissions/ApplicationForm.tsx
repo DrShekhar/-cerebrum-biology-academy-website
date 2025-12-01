@@ -474,7 +474,7 @@ export default function ApplicationForm() {
               {[1, 2, 3, 4, 5].map((step) => (
                 <div key={step} className="flex flex-col items-center flex-1">
                   <div
-                    className={`w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-xs sm:text-sm font-semibold transition-all ${
+                    className={`w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-full flex items-center justify-center text-xs sm:text-sm font-semibold transition-all ${
                       step < currentStep
                         ? 'bg-green-500 text-white'
                         : step === currentStep

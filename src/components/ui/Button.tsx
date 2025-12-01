@@ -35,11 +35,11 @@ const buttonVariants = cva(
           'bg-teal-600 text-white hover:bg-teal-700 shadow-sm hover:shadow-lg font-semibold',
       },
       size: {
-        default: 'h-10 px-4 py-2',
-        sm: 'h-9 rounded-md px-3',
-        lg: 'h-10 px-4 text-sm xs:h-11 xs:px-6 sm:h-12 sm:px-8 sm:text-base rounded-md font-semibold',
+        default: 'h-11 px-4 py-2',
+        sm: 'h-11 rounded-md px-3',
+        lg: 'h-11 px-4 text-sm xs:h-11 xs:px-6 sm:h-12 sm:px-8 sm:text-base rounded-md font-semibold',
         xl: 'h-11 px-6 text-base xs:h-12 xs:px-8 sm:h-14 sm:px-10 sm:text-lg rounded-lg font-semibold',
-        icon: 'h-10 w-10',
+        icon: 'h-11 w-11',
       },
     },
     defaultVariants: {

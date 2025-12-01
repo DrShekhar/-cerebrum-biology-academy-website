@@ -431,6 +431,41 @@ export const pageMetadata: Record<string, PageMetadata> = {
     ],
     canonical: '/online-medical-coaching-india',
   },
+  // GURUGRAM SEO PAGES
+  neetCoachingGurugram: {
+    title:
+      'Best NEET Coaching in Gurugram 2025 | DLF, Golf Course Road, Sushant Lok | Cerebrum Academy',
+    description:
+      'Best NEET coaching in Gurugram - DLF Phase 1-4, Golf Course Road, Sushant Lok, Sector 14, 43, 51, 56, 57, South City. AIIMS trained faculties, 98% success rate. No Delhi travel needed. Online live classes from home. Book free demo!',
+    keywords: [
+      'neet coaching gurugram',
+      'neet coaching gurgaon',
+      'best neet coaching gurugram',
+      'neet coaching dlf gurugram',
+      'neet coaching golf course road',
+      'neet coaching sushant lok',
+      'biology coaching gurugram',
+      'neet coaching sector 56 gurugram',
+      'neet coaching sector 14 gurugram',
+      'neet coaching sector 43 gurugram',
+      'neet coaching sector 51 gurugram',
+      'neet coaching sector 57 gurugram',
+      'neet coaching south city gurugram',
+      'neet coaching new gurugram',
+      'neet coaching dlf phase 1',
+      'neet coaching dlf phase 4',
+      'online neet coaching gurugram',
+      'medical coaching gurugram',
+      'neet preparation gurugram',
+      'best biology coaching gurgaon',
+      'neet classes gurugram',
+      'neet institute gurugram',
+      'neet tuition gurugram',
+      'neet 2025 coaching gurugram',
+      'neet 2026 coaching gurugram',
+    ],
+    canonical: '/neet-coaching-gurugram',
+  },
 }
 
 export function generateMetadata(pageKey: string): PageMetadata {

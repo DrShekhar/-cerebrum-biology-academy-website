@@ -76,7 +76,7 @@ export function ExitIntentPopup({ isVisible, onClose, onDownload }: ExitIntentPo
 
           {/* Popup Content */}
           <motion.div
-            className="relative bg-white rounded-3xl shadow-2xl max-w-2xl w-full mx-4 overflow-hidden"
+            className="relative bg-white rounded-3xl shadow-2xl max-w-[calc(100vw-2rem)] sm:max-w-md md:max-w-2xl w-full mx-4 overflow-hidden"
             initial={{ scale: 0.9, opacity: 0, y: 20 }}
             animate={{ scale: 1, opacity: 1, y: 0 }}
             exit={{ scale: 0.9, opacity: 0, y: 20 }}

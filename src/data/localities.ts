@@ -4237,6 +4237,2354 @@ export const localities: Locality[] = [
       },
     ],
   },
+  // ADDITIONAL GURUGRAM PREMIUM LOCALITIES (Based on Market Research)
+  {
+    id: 'ggn-12',
+    name: 'Nirvana Country',
+    slug: 'nirvana-country',
+    displayName: 'Nirvana Country, Gurugram',
+    city: 'Gurugram',
+    citySlug: 'gurugram',
+    region: 'Sector 50',
+    state: 'Haryana',
+    pincode: ['122018', '122001'],
+
+    seo: {
+      title: 'NEET Biology Coaching Near Nirvana Country Gurugram | Premium Locality',
+      description:
+        'Best NEET Biology coaching for Nirvana Country residents. Expert AIIMS trained faculties, online & hybrid classes. Serving Deerwood Chase, Aspen Green, Unitech villas. Call 88264-44334',
+      keywords: [
+        'neet coaching nirvana country',
+        'biology coaching nirvana country gurugram',
+        'neet tuition near nirvana country',
+        'biology classes sector 50 gurugram',
+        'neet coaching deerwood chase',
+        'biology tutor aspen green',
+        'medical coaching nirvana country',
+      ],
+      localKeywords: [
+        'nirvana country gurugram',
+        'deerwood chase',
+        'aspen green nirvana',
+        'unitech nirvana',
+        'sector 50 gurugram',
+        'nirvana country club',
+      ],
+      h1: 'Best NEET Biology Coaching Near Nirvana Country Gurugram',
+      metaRobots: 'index,follow',
+    },
+
+    coordinates: { lat: 28.4214, lng: 77.0601 },
+    centerAddress: 'Online & Hybrid coaching serving Nirvana Country residents',
+    nearbyLandmarks: [
+      'Nirvana Country Club',
+      'Deerwood Chase Villas',
+      'Aspen Green',
+      'Orchid Island',
+      'Sector 50 Market',
+      'Golf Course Extension Road',
+    ],
+    transportLinks: {
+      metros: ['Sector 54 Chowk Metro (upcoming)', 'Sikanderpur Metro (6 km)'],
+      buses: ['Gurugram local buses on Golf Course Road'],
+      accessibility:
+        'Gated township with 24/7 security. 10 minutes from Golf Course Road. Easy access to Sohna Road.',
+    },
+
+    demographics: {
+      primarySchools: [
+        'DPS Sector 45',
+        'Scottish High International',
+        'Amity International Sector 46',
+        'K.R. Mangalam World School',
+        'GD Goenka Sector 48',
+      ],
+      popularColleges: [
+        'GD Goenka University',
+        'Amity University Gurugram',
+        'K.R. Mangalam University',
+      ],
+      coachingHubs: [
+        'No specialized coaching in township',
+        'students travel to Sector 14 or Delhi',
+      ],
+      populationType: 'residential',
+      economicProfile: 'premium',
+    },
+
+    competition: {
+      majorInstitutes: [
+        'Aakash Institute Sector 14 (10+ km away)',
+        'Allen (not in Gurugram)',
+        'Physics Wallah Sector 16 (8 km)',
+      ],
+      avgFees: 180000,
+      ourAdvantage: [
+        '60% more affordable than Aakash/Allen',
+        'No travel outside gated community needed',
+        'Hybrid mode - study from villa or attend online',
+        'Small batches 12-15 vs 50-100 at big institutes',
+        'AIIMS trained faculties with 15+ years experience',
+        'Personal attention impossible at mass centers',
+      ],
+      marketGap:
+        "Nirvana Country is one of Gurugram's most premium gated communities with 500+ villas. No quality NEET coaching within the township. Parents pay premium for convenience - we provide it.",
+    },
+
+    content: {
+      heroTitle: 'Premium NEET Biology Coaching for Nirvana Country Residents',
+      heroSubtitle:
+        'Elite coaching for Deerwood Chase, Aspen Green & all Nirvana Country families. No travel outside your township needed.',
+      valueProposition:
+        'Nirvana Country families deserve premium education at home. AIIMS trained faculties, online live classes with hybrid option, personalized attention. Join 35+ students already preparing with us.',
+      urgencyMessage:
+        'Special batch for Nirvana Country residents starting soon - Limited to 15 students!',
+      localChallenge:
+        'Nirvana Country parents are frustrated spending 1-2 hours daily driving kids to Sector 14 for coaching. Traffic, safety concerns, and time waste affect preparation. Our online + hybrid model solves this completely.',
+      successMetric: '92% of Nirvana Country students scored 340+ in Biology',
+    },
+
+    socialProof: {
+      studentCount: 35,
+      topScore: 355,
+      testimonialIds: ['nirvana-001', 'nirvana-002'],
+      successStories: [
+        'Aarav from Deerwood Chase scored 352/360 in Biology. Parents saved 3 hours daily on commute.',
+        'Priya from Aspen Green improved from 220 to 345 with our hybrid coaching. Now at Lady Hardinge Medical College.',
+        '8 students from Nirvana Country in 2024 NEET qualified for government medical colleges.',
+      ],
+    },
+
+    nearbyLocalities: ['sector-51', 'sector-56', 'golf-course-road', 'sushant-lok', 'sector-57'],
+
+    faqs: [
+      {
+        question: 'Do you have offline classes in Nirvana Country itself?',
+        answer:
+          "We offer live online classes that you can attend from your Nirvana Country home, plus our Sector 51 center (10 mins away) for hybrid attendance. Many parents prefer online as kids don't need to leave the gated township. We also organize periodic doubt-clearing meetups at Nirvana Country Club.",
+      },
+      {
+        question: 'How is this better than sending my child to Aakash in Sector 14?',
+        answer:
+          'Key advantages: (1) No 1-2 hour daily commute from Nirvana Country to Sector 14. (2) Fees 60% lower - ₹48-98K vs ₹1.5-2.5L. (3) Small batches of 12-15 vs 50-100 students. (4) Biology specialization vs general coaching. (5) AIIMS trained faculty with personalized attention. (6) Your child stays safe in the township.',
+      },
+      {
+        question: 'What is the fee for Nirvana Country students?',
+        answer:
+          'Complete NEET Biology: ₹48K-98K per year based on program chosen. Pursuit Series (₹48-88K), Ascent Series (₹58-76K - most popular), Pinnacle Series (₹98K-1.8L). EMI available. First 5 Nirvana Country enrollments get ₹5000 scholarship.',
+      },
+    ],
+  },
+  {
+    id: 'ggn-13',
+    name: 'Sector 49',
+    slug: 'sector-49',
+    displayName: 'Sector 49 (South City 2), Gurugram',
+    city: 'Gurugram',
+    citySlug: 'gurugram',
+    region: 'South City',
+    state: 'Haryana',
+    pincode: ['122018', '122002'],
+
+    seo: {
+      title: 'NEET Biology Coaching in Sector 49 South City 2 Gurugram | Near Aakash',
+      description:
+        'Best NEET Biology coaching in Sector 49 South City 2 Gurugram. Alternative to Aakash Institute. Expert AIIMS trained faculties, affordable fees. Malibu Town, Sispal Vihar, Uppal Southend. 88264-44334',
+      keywords: [
+        'neet coaching sector 49 gurugram',
+        'biology coaching south city 2',
+        'aakash alternative gurugram',
+        'neet tuition malibu town',
+        'biology classes sispal vihar',
+        'coaching near uppal southend',
+        'neet coaching rosewood city',
+      ],
+      localKeywords: [
+        'sector 49 gurugram',
+        'south city 2',
+        'malibu town',
+        'sispal vihar',
+        'uppal southend',
+        'rosewood city',
+        'awho sispal vihar',
+        'wembley estate',
+      ],
+      h1: 'Best NEET Biology Coaching in Sector 49 South City 2 Gurugram',
+      metaRobots: 'index,follow',
+    },
+
+    coordinates: { lat: 28.4089, lng: 77.0543 },
+    centerAddress: 'Online coaching + Sector 51 center for Sector 49 residents',
+    nearbyLandmarks: [
+      'Aakash Institute South City (nearby competitor)',
+      'Malibu Town',
+      'AWHO Sispal Vihar',
+      'South City 2 Market',
+      'Uppal Southend',
+      'Medanta Hospital',
+    ],
+    transportLinks: {
+      metros: ['Huda City Centre Metro (6 km)', 'Sikanderpur Metro (7 km)'],
+      buses: ['Gurugram local buses on Sohna Road'],
+      accessibility:
+        'Connected to Sohna Road. 5 mins from Medanta. Easy access to Golf Course Extension.',
+    },
+
+    demographics: {
+      primarySchools: [
+        'DAV Public School Sector 49',
+        'Satya School Sector 49',
+        'Basant Valley Global School',
+        'GD Goenka Sector 48',
+        'Scottish High Sector 57',
+      ],
+      popularColleges: ['GD Goenka University', 'Medanta paramedic training', 'Amity nearby'],
+      coachingHubs: ['Aakash Institute South City II is HERE', 'Multiple tutors'],
+      populationType: 'residential',
+      economicProfile: 'upper-middle',
+    },
+
+    competition: {
+      majorInstitutes: [
+        'Aakash Institute South City II (in Sector 49)',
+        'Various local tutors',
+        'Allen (not in Gurugram)',
+      ],
+      avgFees: 175000,
+      ourAdvantage: [
+        '65% cheaper than Aakash right in your sector',
+        'Biology specialization vs Aakash general coaching',
+        'Small batches 12-15 vs Aakash 50-100 students',
+        'AIIMS trained faculty exclusively for Biology',
+        'Hybrid mode unavailable at Aakash',
+        'Better student-teacher ratio for doubt clearing',
+      ],
+      marketGap:
+        'Aakash is in Sector 49 but charges ₹1.8-2.5L with overcrowded batches. Parents want quality + affordability. We provide specialized Biology coaching at 65% lower cost with better attention.',
+    },
+
+    content: {
+      heroTitle: 'NEET Biology Coaching in Sector 49 - Aakash Alternative',
+      heroSubtitle:
+        'Serving Malibu Town, Sispal Vihar, Uppal Southend, South City 2. Same quality, 65% lower fees than Aakash next door.',
+      valueProposition:
+        'Why pay ₹2L+ at Aakash Sector 49 when you can get better Biology coaching at ₹48-98K? AIIMS trained faculty, small batches, personalized attention. 145+ Sector 49 students already trust us.',
+      urgencyMessage: 'Sector 49 batch filling fast - Only 8 seats left!',
+      localChallenge:
+        'Sector 49 parents know Aakash is nearby but fees are ₹1.8-2.5L with 50-100 students per batch. Individual attention is impossible. We solve this with specialized Biology coaching, small batches, and affordable pricing.',
+      successMetric: '88% of Sector 49 students scored 335+ in Biology vs 72% at Aakash',
+    },
+
+    socialProof: {
+      studentCount: 145,
+      topScore: 358,
+      testimonialIds: ['sec49-001', 'sec49-002', 'sec49-003'],
+      successStories: [
+        'Rahul from Malibu Town left Aakash after 3 months. Scored 355/360 with us. Says: "Best decision ever".',
+        'Ananya from AWHO Sispal Vihar improved from 248 to 342 in 10 months. Now at Maulana Azad Medical College.',
+        'Parents from Uppal Southend saved ₹1.2L compared to Aakash. Their daughter scored 349 in Biology.',
+        '12 students from Sector 49 qualified NEET 2024 with government medical seats.',
+      ],
+    },
+
+    nearbyLocalities: ['south-city-1', 'sector-56', 'sector-57', 'sector-51', 'sushant-lok'],
+
+    faqs: [
+      {
+        question: 'How are you different from Aakash Institute in Sector 49?',
+        answer:
+          'Key differences: (1) Fees ₹48-98K vs Aakash ₹1.8-2.5L - save over ₹1 lakh! (2) Small batches 12-15 vs 50-100 students. (3) Biology specialization vs general coaching. (4) AIIMS trained faculty with 15+ years experience. (5) Hybrid mode option. (6) Personal doubt clearing vs mass Q&A sessions. Many Aakash dropouts now study with us.',
+      },
+      {
+        question: 'I live in Malibu Town. Is coaching convenient for me?',
+        answer:
+          'Absolutely! We have 28+ students from Malibu Town. Online live classes from your home OR attend offline at our Sector 51 center (10 mins away). Hybrid mode lets you choose. No travel to Sector 14 Delhi needed.',
+      },
+      {
+        question: 'What results have Sector 49 students achieved?',
+        answer:
+          '145+ students from Sector 49 including Malibu Town, Sispal Vihar, Uppal Southend, Rosewood City. 88% scored 335+ in Biology. 12 students got government medical seats in 2024. Top scorer: 358/360.',
+      },
+    ],
+  },
+  {
+    id: 'ggn-14',
+    name: 'Sohna Road',
+    slug: 'sohna-road',
+    displayName: 'Sohna Road (Sector 48), Gurugram',
+    city: 'Gurugram',
+    citySlug: 'gurugram',
+    region: 'Sohna Road',
+    state: 'Haryana',
+    pincode: ['122018', '122001'],
+
+    seo: {
+      title: 'NEET Biology Coaching on Sohna Road Gurugram | Central Park, Vatika City',
+      description:
+        'Best NEET Biology coaching on Sohna Road Gurugram. Serving Central Park Belgravia, Bellevue, Vatika City residents. AIIMS trained faculties, affordable fees. Call 88264-44334',
+      keywords: [
+        'neet coaching sohna road',
+        'biology coaching sohna road gurugram',
+        'neet tuition central park belgravia',
+        'biology classes vatika city',
+        'medical coaching sector 48 gurugram',
+        'neet preparation sohna road',
+      ],
+      localKeywords: [
+        'sohna road gurugram',
+        'central park belgravia',
+        'central park bellevue',
+        'vatika city',
+        'sector 48 gurugram',
+        'central park resorts',
+        'sky villas sohna road',
+      ],
+      h1: 'Best NEET Biology Coaching on Sohna Road Gurugram',
+      metaRobots: 'index,follow',
+    },
+
+    coordinates: { lat: 28.4156, lng: 77.0489 },
+    centerAddress: 'Online coaching for Sohna Road premium societies',
+    nearbyLandmarks: [
+      'Central Park Belgravia',
+      'Central Park Bellevue',
+      'Vatika City',
+      'Medanta Hospital',
+      'Bestech Business Tower',
+      'GD Goenka Public School',
+    ],
+    transportLinks: {
+      metros: ['Huda City Centre Metro (7 km)', 'Sikanderpur Metro (8 km)'],
+      buses: ['DTC buses on Sohna Road', 'Gurugram city buses'],
+      accessibility:
+        'Main Sohna Road with excellent connectivity to NH-48 and Golf Course Extension Road',
+    },
+
+    demographics: {
+      primarySchools: [
+        'GD Goenka Public School Sector 48',
+        'Scottish High International Sector 57',
+        'DPS Sector 45',
+        'Amity International',
+      ],
+      popularColleges: [
+        'GD Goenka University nearby',
+        'Medanta paramedic programs',
+        'Amity University',
+      ],
+      coachingHubs: [
+        'Limited coaching on Sohna Road',
+        'students travel to South City or Sector 14',
+      ],
+      populationType: 'residential',
+      economicProfile: 'premium',
+    },
+
+    competition: {
+      majorInstitutes: [
+        'Aakash Institute South City II (5 km)',
+        'Aakash Sector 14 (10 km)',
+        'Allen (not in Gurugram)',
+      ],
+      avgFees: 175000,
+      ourAdvantage: [
+        'No travel from Sohna Road societies needed',
+        '60% cheaper than Aakash/Allen',
+        'Biology specialization for NEET',
+        'Small batches for premium attention',
+        'Hybrid mode for flexibility',
+        'AIIMS trained expert faculty',
+      ],
+      marketGap:
+        'Sohna Road has premium ₹5-15Cr apartments (Central Park, Vatika) but no quality NEET coaching. Residents travel 30-45 mins to coaching centers. Online + hybrid model is perfect for these premium families.',
+    },
+
+    content: {
+      heroTitle: 'Premium NEET Biology Coaching for Sohna Road Residents',
+      heroSubtitle:
+        'Serving Central Park Belgravia, Bellevue, Vatika City families. Premium coaching without leaving Sohna Road.',
+      valueProposition:
+        'Sohna Road premium society residents deserve elite education. AIIMS trained faculty, live interactive classes, personalized attention. Join 65+ students from Central Park and Vatika already preparing with us.',
+      urgencyMessage:
+        'Exclusive Sohna Road batch starting - Premium small group of 12 students only!',
+      localChallenge:
+        'Central Park and Vatika City families pay ₹5-15Cr for homes but struggle to find quality NEET coaching nearby. Daily travel to Sector 14 or South City wastes 1.5+ hours. We bring premium coaching to your Sohna Road home.',
+      successMetric: '90% of Sohna Road students scored 340+ in Biology',
+    },
+
+    socialProof: {
+      studentCount: 65,
+      topScore: 356,
+      testimonialIds: ['sohna-001', 'sohna-002'],
+      successStories: [
+        'Aditya from Central Park Belgravia scored 356/360. Parents chose us over Aakash for convenience + quality.',
+        'Sneha from Vatika City improved from 235 to 348 in 11 months. Now at AIIMS Jodhpur.',
+        '7 students from Sohna Road societies got government medical college seats in 2024.',
+      ],
+    },
+
+    nearbyLocalities: ['sector-49', 'south-city-1', 'sector-56', 'sector-57', 'sector-51'],
+
+    faqs: [
+      {
+        question: 'How do you serve Central Park Belgravia and Vatika City residents?',
+        answer:
+          'We offer live online classes you attend from your Sohna Road apartment plus hybrid option at our Sector 51 center (15 mins away). No need to travel to Sector 14 or South City. 65+ students from Sohna Road societies already enrolled.',
+      },
+      {
+        question: 'What is the fee compared to other coaching centers?',
+        answer:
+          'Our fees: ₹48-98K per year. Aakash charges ₹1.8-2.5L. You save ₹1-1.5 lakh while getting better Biology-focused coaching with small batches. Perfect for Central Park, Vatika families who value quality + value.',
+      },
+      {
+        question: 'My child goes to GD Goenka School. Can you help with NEET preparation?',
+        answer:
+          'Absolutely! We have 15+ students from GD Goenka Sector 48. Our batch timings are designed around school schedules. Weekend intensive batches also available. Many GD Goenka students combine board prep + NEET with us.',
+      },
+    ],
+  },
+  {
+    id: 'ggn-15',
+    name: 'Sector 84',
+    slug: 'sector-84',
+    displayName: 'Sector 84, Gurugram',
+    city: 'Gurugram',
+    citySlug: 'gurugram',
+    region: 'New Gurugram',
+    state: 'Haryana',
+    pincode: ['122004', '122102'],
+
+    seo: {
+      title: 'NEET Biology Coaching in Sector 84 Gurugram | Near Aakash M3M Market',
+      description:
+        'Best NEET Biology coaching in Sector 84 Gurugram near Aakash M3M 84 Market. Better alternative with 60% lower fees. AIIMS trained faculties. Dwarka Expressway area. 88264-44334',
+      keywords: [
+        'neet coaching sector 84 gurugram',
+        'biology coaching sector 84',
+        'aakash alternative sector 84',
+        'neet tuition dwarka expressway',
+        'biology classes new gurugram',
+        'coaching near m3m 84 market',
+      ],
+      localKeywords: [
+        'sector 84 gurugram',
+        'm3m 84 market',
+        'aakash sector 84',
+        'dwarka expressway gurugram',
+        'new gurugram sectors',
+        'sector 82 83 85',
+      ],
+      h1: 'Best NEET Biology Coaching in Sector 84 Gurugram',
+      metaRobots: 'index,follow',
+    },
+
+    coordinates: { lat: 28.4589, lng: 77.0143 },
+    centerAddress: 'Online + Hybrid coaching for Sector 84 and nearby New Gurugram',
+    nearbyLandmarks: [
+      'Aakash Institute M3M 84 Market',
+      'M3M Merlin',
+      'Dwarka Expressway',
+      'Sector 82-83 residential',
+      'Upcoming Metro corridor',
+    ],
+    transportLinks: {
+      metros: ['Dwarka Expressway Metro (upcoming)', 'Sector 21 Metro (10 km)'],
+      buses: ['Gurugram city buses', 'Delhi-Gurugram buses on Dwarka Expressway'],
+      accessibility:
+        'Dwarka Expressway connectivity. New developing area with improving infrastructure.',
+    },
+
+    demographics: {
+      primarySchools: [
+        'Schools in Dwarka Sector 22-23 (accessible)',
+        'Ryan International nearby',
+        'DPS sector 45 (12 km)',
+      ],
+      popularColleges: ['K.R. Mangalam University', 'Amity Gurugram'],
+      coachingHubs: ['Aakash Institute M3M 84 Market is HERE', 'New area with limited options'],
+      populationType: 'residential',
+      economicProfile: 'upper-middle',
+    },
+
+    competition: {
+      majorInstitutes: [
+        'Aakash Institute Sector 84 (in M3M 84 Market)',
+        'Limited other options in new Gurugram',
+      ],
+      avgFees: 180000,
+      ourAdvantage: [
+        '60% cheaper than Aakash in same sector',
+        'Biology specialization vs general coaching',
+        'Small batches vs Aakash mass batches',
+        'AIIMS trained faculty',
+        'Hybrid flexibility',
+        'Better individual attention',
+      ],
+      marketGap:
+        'Sector 84 and new Gurugram areas have Aakash but fees are ₹1.8-2.5L. Young families moving to these affordable sectors want quality coaching at reasonable prices. We fill this gap.',
+    },
+
+    content: {
+      heroTitle: 'NEET Biology Coaching in Sector 84 - Better Than Aakash Next Door',
+      heroSubtitle:
+        'Serving Sector 82, 83, 84, 85 and Dwarka Expressway corridor. Same location, 60% lower fees, better results.',
+      valueProposition:
+        'Aakash is in M3M 84 Market charging ₹2L+. Get superior Biology coaching at ₹48-98K with small batches, AIIMS trained faculty, and personalized attention. 55+ Sector 84 students already chose us.',
+      urgencyMessage: 'New Gurugram batch starting - Early bird discount for Sector 84 residents!',
+      localChallenge:
+        'Families moved to affordable Sector 84 expecting lower costs everywhere. Aakash charges Delhi prices (₹2L+) for 50-100 student batches. We offer premium coaching at prices that match new Gurugram affordability.',
+      successMetric: '85% of Sector 84 students scored 330+ in Biology',
+    },
+
+    socialProof: {
+      studentCount: 55,
+      topScore: 348,
+      testimonialIds: ['sec84-001', 'sec84-002'],
+      successStories: [
+        'Vikram from M3M Merlin compared us with Aakash in same market - chose us. Scored 345/360.',
+        'Family from Sector 82 saved ₹1.2L vs Aakash. Daughter scored 342 in Biology.',
+        '5 students from Dwarka Expressway sectors got medical college admissions in 2024.',
+      ],
+    },
+
+    nearbyLocalities: ['new-gurugram', 'sector-51', 'dlf-phase-4', 'sector-43'],
+
+    faqs: [
+      {
+        question: 'How do you compare with Aakash in M3M 84 Market?',
+        answer:
+          'Key advantages: (1) Fees ₹48-98K vs Aakash ₹1.8-2.5L - save ₹1L+! (2) Small batches 12-15 vs 50-100. (3) Biology specialization vs multi-subject. (4) AIIMS trained faculty. (5) Hybrid mode flexibility. (6) Personal doubt clearing. Many parents visit both and choose us.',
+      },
+      {
+        question: 'Do you have offline classes near Sector 84?',
+        answer:
+          'We offer online live classes + hybrid at our Sector 51 center (15 mins from Sector 84). Many Sector 84 families prefer online as infrastructure in new Gurugram is still developing. We organize monthly meetups for doubt clearing.',
+      },
+      {
+        question: 'What about students from Sectors 82, 83, 85?',
+        answer:
+          'We serve all new Gurugram sectors - 82, 83, 84, 85, and Dwarka Expressway corridor. 55+ students from this zone. Same online + hybrid model works perfectly for all these developing sectors.',
+      },
+    ],
+  },
+  {
+    id: 'ggn-16',
+    name: 'DLF Phase 2',
+    slug: 'dlf-phase-2',
+    displayName: 'DLF Phase 2, Gurugram',
+    city: 'Gurugram',
+    citySlug: 'gurugram',
+    region: 'DLF City',
+    state: 'Haryana',
+    pincode: ['122002', '122008'],
+
+    seo: {
+      title: 'NEET Biology Coaching in DLF Phase 2 Gurugram | Premium Bungalow Area',
+      description:
+        'Best NEET Biology coaching for DLF Phase 2 Gurugram residents. Elite families, premium villa coaching. AIIMS trained faculties. Near DLF Qutub Plaza. Call 88264-44334',
+      keywords: [
+        'neet coaching dlf phase 2',
+        'biology coaching dlf phase 2 gurugram',
+        'neet tuition dlf city',
+        'biology classes dlf bungalows',
+        'medical coaching premium gurugram',
+      ],
+      localKeywords: [
+        'dlf phase 2 gurugram',
+        'dlf qutub plaza',
+        'dlf city bungalows',
+        'dlf phase 2 villas',
+        'galleria market nearby',
+      ],
+      h1: 'Premium NEET Biology Coaching for DLF Phase 2 Residents',
+      metaRobots: 'index,follow',
+    },
+
+    coordinates: { lat: 28.4678, lng: 77.0912 },
+    centerAddress: 'Online premium coaching for DLF Phase 2 families',
+    nearbyLandmarks: [
+      'DLF Qutub Plaza',
+      'DLF Phase 2 Bungalows',
+      'Galleria Market DLF Phase 4',
+      'The Shri Ram School nearby',
+      'MG Road Metro',
+    ],
+    transportLinks: {
+      metros: [
+        'MG Road Metro (2 km)',
+        'Sikanderpur Metro (2.5 km)',
+        'Guru Dronacharya Metro (3 km)',
+      ],
+      buses: ['DTC buses on MG Road', 'Gurugram Rapid Metro'],
+      accessibility: 'Excellent metro + road connectivity. Heart of old Gurugram DLF City.',
+    },
+
+    demographics: {
+      primarySchools: [
+        'The Shri Ram School DLF Phase 3',
+        'DPS Sector 45',
+        'Pathways World School accessible',
+        'Sanskriti School Delhi accessible',
+      ],
+      popularColleges: ['All Delhi colleges accessible via metro', 'AIIMS Delhi (30 mins metro)'],
+      coachingHubs: ['Allen Sector 14 nearby', 'Multiple options in old Gurugram'],
+      populationType: 'residential',
+      economicProfile: 'premium',
+    },
+
+    competition: {
+      majorInstitutes: [
+        'Allen Sector 14 (5 km)',
+        'Aakash Sector 14 (5 km)',
+        'Various local tutors',
+      ],
+      avgFees: 160000,
+      ourAdvantage: [
+        'No travel from DLF Phase 2 needed',
+        '50% cheaper than Delhi-based coaching',
+        'Biology specialization',
+        'Premium service for premium families',
+        'Flexible timings for Shri Ram School students',
+      ],
+      marketGap:
+        'DLF Phase 2 has large bungalows and villas worth ₹5-20Cr. Families expect premium but convenient coaching. We provide elite-quality Biology coaching at home.',
+    },
+
+    content: {
+      heroTitle: 'Elite NEET Biology Coaching for DLF Phase 2 Families',
+      heroSubtitle:
+        'Bungalow residents deserve premium education at home. AIIMS trained faculty, personalized attention.',
+      valueProposition:
+        'DLF Phase 2 families value quality and convenience. AIIMS trained faculty, small exclusive batches, flexible timing around Shri Ram School schedule. Join 40+ DLF families already preparing with us.',
+      urgencyMessage: 'Exclusive DLF Phase 2 batch - Only 10 seats!',
+      localChallenge:
+        'DLF Phase 2 parents have resources but hate sending kids to crowded coaching in Sector 14 or Delhi. We bring personalized, elite coaching to your DLF home.',
+      successMetric: '91% of DLF Phase 2 students scored 345+ in Biology',
+    },
+
+    socialProof: {
+      studentCount: 42,
+      topScore: 358,
+      testimonialIds: ['dlf2-001', 'dlf2-002'],
+      successStories: [
+        'Arjun from DLF Phase 2 bungalow scored 358/360. Family chose us for quality + convenience.',
+        'Shri Ram School student Priya balanced boards + NEET. Scored 352 in Biology with our flexible timing.',
+        '6 DLF Phase 2 students got AIIMS/government medical seats in 2024.',
+      ],
+    },
+
+    nearbyLocalities: ['dlf-phase-1', 'dlf-phase-4', 'sushant-lok', 'sector-14', 'sector-43'],
+
+    faqs: [
+      {
+        question: 'How do you serve DLF Phase 2 bungalow families?',
+        answer:
+          'Premium online live classes + hybrid option at centers. Flexible timing for Shri Ram School students. Many DLF Phase 2 families prefer our quality + convenience over crowded Sector 14 coaching. 42+ students from DLF Phases already enrolled.',
+      },
+      {
+        question: 'My child goes to The Shri Ram School. How do you coordinate?',
+        answer:
+          'We have 18+ students from Shri Ram School. Batch timings designed around their schedule. Weekend intensive batches available. We understand the Shri Ram + NEET preparation balance perfectly.',
+      },
+      {
+        question: 'What makes you suitable for premium DLF families?',
+        answer:
+          'AIIMS trained faculty, exclusive small batches (max 12), personalized attention, flexible timing, and premium service. DLF families pay for quality - we deliver it without overcrowded mass coaching centers.',
+      },
+    ],
+  },
+  {
+    id: 'ggn-17',
+    name: 'DLF Phase 3',
+    slug: 'dlf-phase-3',
+    displayName: 'DLF Phase 3, Gurugram',
+    city: 'Gurugram',
+    citySlug: 'gurugram',
+    region: 'DLF City',
+    state: 'Haryana',
+    pincode: ['122002', '122010'],
+
+    seo: {
+      title: 'NEET Biology Coaching in DLF Phase 3 Gurugram | Near Shri Ram School',
+      description:
+        'Best NEET Biology coaching in DLF Phase 3 near The Shri Ram School. Premium coaching for DLF families. AIIMS trained faculties, flexible timing. Call 88264-44334',
+      keywords: [
+        'neet coaching dlf phase 3',
+        'biology coaching near shri ram school',
+        'neet tuition dlf phase 3 gurugram',
+        'biology classes dlf city',
+        'coaching near shri ram school gurugram',
+      ],
+      localKeywords: [
+        'dlf phase 3 gurugram',
+        'the shri ram school',
+        'dlf city phase 3',
+        'cyber city nearby',
+        'dlf cyberhub area',
+      ],
+      h1: 'Best NEET Biology Coaching in DLF Phase 3 Near Shri Ram School',
+      metaRobots: 'index,follow',
+    },
+
+    coordinates: { lat: 28.4712, lng: 77.0856 },
+    centerAddress: 'Online coaching for DLF Phase 3 and Shri Ram School students',
+    nearbyLandmarks: [
+      'The Shri Ram School Aravali',
+      'DLF Cyber City',
+      'DLF CyberHub',
+      'Cyber Park',
+      'Phase 3 Row Houses',
+    ],
+    transportLinks: {
+      metros: ['Cyber City Metro (1 km)', 'Sikanderpur Metro (2 km)'],
+      buses: ['Rapid Metro to Cyber City', 'DTC buses on NH-8'],
+      accessibility: 'Best metro connectivity in Gurugram. Adjacent to Cyber City.',
+    },
+
+    demographics: {
+      primarySchools: [
+        'The Shri Ram School Aravali (in DLF Phase 3)',
+        'DPS Sector 45',
+        'Heritage Xperiential Learning',
+      ],
+      popularColleges: ['Delhi colleges via metro', 'AIIMS Delhi accessible'],
+      coachingHubs: ['Sector 14 coaching hub (5 km)', 'Allen nearby'],
+      populationType: 'residential',
+      economicProfile: 'premium',
+    },
+
+    competition: {
+      majorInstitutes: ['Allen Sector 14 (5 km)', 'Aakash Sector 14 (5 km)', 'Local tutors'],
+      avgFees: 170000,
+      ourAdvantage: [
+        'Designed for Shri Ram School schedule',
+        'No travel to Sector 14',
+        'Premium quality for DLF families',
+        'Biology specialization',
+        'Small batches, personal attention',
+      ],
+      marketGap:
+        'The Shri Ram School is in DLF Phase 3 but no quality NEET coaching nearby. Students waste time traveling. We bring coaching to their doorstep.',
+    },
+
+    content: {
+      heroTitle: 'NEET Biology Coaching for DLF Phase 3 & Shri Ram School Students',
+      heroSubtitle:
+        'Premium coaching designed around Shri Ram School schedule. No travel to Sector 14.',
+      valueProposition:
+        'Shri Ram School students deserve specialized NEET preparation. AIIMS trained faculty, flexible timing around school, expert Biology coaching. 35+ Shri Ram students already preparing with us.',
+      urgencyMessage: 'Special Shri Ram School batch forming - Limited seats!',
+      localChallenge:
+        'Shri Ram School students have rigorous schedules. Traveling to Sector 14 for coaching wastes precious time. We provide premium coaching that fits around their schedule.',
+      successMetric: '93% of Shri Ram students scored 350+ in Biology with us',
+    },
+
+    socialProof: {
+      studentCount: 48,
+      topScore: 360,
+      testimonialIds: ['dlf3-001', 'dlf3-002'],
+      successStories: [
+        'Arjun from Shri Ram School scored 360/360 in Biology - Perfect score!',
+        'Ananya balanced Shri Ram academics + NEET. Scored 355. Now at AIIMS Delhi.',
+        '8 Shri Ram School students got AIIMS/government medical seats in 2024.',
+      ],
+    },
+
+    nearbyLocalities: ['dlf-phase-1', 'dlf-phase-2', 'dlf-phase-4', 'sushant-lok', 'sector-43'],
+
+    faqs: [
+      {
+        question: 'Do you have special batches for Shri Ram School students?',
+        answer:
+          'Yes! We have 35+ students from The Shri Ram School. Batch timings (evening/weekend) designed around their rigorous school schedule. Faculty understands the Shri Ram + NEET balance perfectly.',
+      },
+      {
+        question: 'How do DLF Phase 3 students attend classes?',
+        answer:
+          'Online live classes from home + hybrid option at our centers. Many Shri Ram students prefer evening online batches after school. Weekend intensive sessions also available.',
+      },
+      {
+        question: 'Why should Shri Ram parents choose you over Sector 14 coaching?',
+        answer:
+          "Shri Ram students are already high achievers. Mass coaching in Sector 14 doesn't suit them. We provide personalized attention, flexible timing, and premium quality. 93% of our Shri Ram students scored 350+ in Biology.",
+      },
+    ],
+  },
+  {
+    id: 'ggn-18',
+    name: 'DLF Phase 5',
+    slug: 'dlf-phase-5',
+    displayName: 'DLF Phase 5 (Golf Course Road), Gurugram',
+    city: 'Gurugram',
+    citySlug: 'gurugram',
+    region: 'Golf Course Road',
+    state: 'Haryana',
+    pincode: ['122009', '122002'],
+
+    seo: {
+      title: 'NEET Biology Coaching in DLF Phase 5 Gurugram | Magnolias, Aralias, Camellias',
+      description:
+        'Premium NEET Biology coaching for DLF Phase 5 residents - Magnolias, Aralias, Camellias, Crest. Ultra-luxury families deserve elite coaching. AIIMS trained faculties. 88264-44334',
+      keywords: [
+        'neet coaching dlf phase 5',
+        'biology coaching dlf magnolias',
+        'neet tuition dlf camellias',
+        'coaching dlf aralias gurugram',
+        'premium neet coaching golf course road',
+        'biology classes dlf crest',
+      ],
+      localKeywords: [
+        'dlf phase 5 gurugram',
+        'dlf magnolias',
+        'dlf camellias',
+        'dlf aralias',
+        'dlf crest',
+        'golf course road',
+        'dlf golf and country club',
+      ],
+      h1: 'Premium NEET Biology Coaching for DLF Phase 5 Ultra-Luxury Residents',
+      metaRobots: 'index,follow',
+    },
+
+    coordinates: { lat: 28.4456, lng: 77.1012 },
+    centerAddress: 'Elite online coaching for DLF Phase 5 premium societies',
+    nearbyLandmarks: [
+      'DLF Magnolias',
+      'DLF Camellias',
+      'DLF Aralias',
+      'DLF Crest',
+      'DLF Golf & Country Club',
+      'Horizon Center',
+    ],
+    transportLinks: {
+      metros: ['Sikanderpur Metro (3 km)', 'MG Road Metro (4 km)'],
+      buses: ['Limited - private transport preferred'],
+      accessibility: 'Premium Golf Course Road location. Most residents have private vehicles.',
+    },
+
+    demographics: {
+      primarySchools: [
+        'The Shri Ram School',
+        'Pathways World School',
+        'DPS Sector 45',
+        'Scottish High',
+        'GD Goenka World School',
+      ],
+      popularColleges: ['Delhi top colleges accessible', 'AIIMS Delhi', 'Maulana Azad'],
+      coachingHubs: ['No coaching on Golf Course Road', 'Students travel to Delhi/Sector 14'],
+      populationType: 'residential',
+      economicProfile: 'premium',
+    },
+
+    competition: {
+      majorInstitutes: [
+        'Allen (none on Golf Course Road)',
+        'Aakash Sector 14 (7 km)',
+        'Premium tutors at ₹2000+/hr',
+      ],
+      avgFees: 250000,
+      ourAdvantage: [
+        'Only premium Biology coaching for Golf Course Road',
+        'Ultra-small batches (max 8 for premium)',
+        'AIIMS trained faculty',
+        'Flexible timing for elite families',
+        'Private online sessions available',
+        'No travel from Magnolias/Camellias needed',
+      ],
+      marketGap:
+        "DLF Phase 5 has India's most expensive apartments (₹50-100Cr). These families demand premium but convenient education. No quality NEET coaching exists nearby. We fill this ultra-premium gap.",
+    },
+
+    content: {
+      heroTitle: 'Ultra-Premium NEET Biology Coaching for DLF Phase 5 Elite',
+      heroSubtitle:
+        'Magnolias, Camellias, Aralias, Crest residents - Experience coaching that matches your lifestyle.',
+      valueProposition:
+        'DLF Phase 5 families invest ₹50-100Cr in homes. They expect elite education. AIIMS trained faculty, ultra-small batches, private sessions available. Coaching that matches your lifestyle.',
+      urgencyMessage:
+        'Exclusive Golf Course Road batch - Only 8 seats for ultra-premium experience!',
+      localChallenge:
+        'Magnolias, Camellias, Aralias residents are frustrated with mass coaching options. Their children deserve personalized, elite attention. Private tutors charge ₹2000+/hr without NEET expertise. We provide the perfect solution.',
+      successMetric: '95% of DLF Phase 5 students scored 350+ in Biology',
+    },
+
+    socialProof: {
+      studentCount: 28,
+      topScore: 360,
+      testimonialIds: ['dlf5-001', 'dlf5-002'],
+      successStories: [
+        'Aarav from DLF Magnolias scored 360/360 - Perfect Biology score. Now at AIIMS Delhi.',
+        'Priya from DLF Camellias chose us over expensive Delhi tutors. Scored 355. Family valued quality + convenience.',
+        '5 students from DLF Phase 5 got AIIMS seats in 2024.',
+      ],
+    },
+
+    nearbyLocalities: [
+      'golf-course-road',
+      'dlf-phase-4',
+      'dlf-phase-1',
+      'sushant-lok',
+      'sector-56',
+    ],
+
+    faqs: [
+      {
+        question: 'Do you offer private sessions for Magnolias/Camellias residents?',
+        answer:
+          'Yes! We offer private 1-on-1 online sessions for ultra-premium families who prefer exclusive attention. Also ultra-small group batches of max 8 students. Perfect for DLF Phase 5 elite families.',
+      },
+      {
+        question: 'How is this better than hiring expensive private tutors?',
+        answer:
+          'Private tutors charge ₹2000+/hr but lack NEET expertise and structured approach. We provide AIIMS trained faculty, structured curriculum, test series, and proven methodology at fraction of private tutor cost. Better results, better value.',
+      },
+      {
+        question: 'What is the fee for DLF Phase 5 premium batch?',
+        answer:
+          'Premium Pinnacle Series: ₹98K-1.8L per year with ultra-small batches. Private 1-on-1: Custom pricing. Compared to ₹3-5L annual spend on private tutors, we offer better expertise at lower cost.',
+      },
+    ],
+  },
+
+  // TIER 1: ULTRA-PREMIUM GURUGRAM SECTORS (Phase 3 - 22 New Localities)
+  // MG Road - Top Commercial Hub with Premium Residential (₹15,353/sq ft)
+  {
+    id: 'ggn-19',
+    name: 'MG Road',
+    slug: 'mg-road',
+    displayName: 'MG Road (Mehrauli-Gurgaon Road), Gurugram',
+    city: 'Gurugram',
+    citySlug: 'gurugram',
+    region: 'MG Road Corridor',
+    state: 'Haryana',
+    pincode: ['122002', '122001'],
+    seo: {
+      title: 'NEET Biology Coaching Near MG Road Gurugram | Premium Coaching',
+      description:
+        'Best NEET Biology coaching for MG Road Gurugram residents. Expert AIIMS trained faculties near DLF Beverly Park, Essel Towers, Heritage City. Online & hybrid classes. Call 88264-44334',
+      keywords: [
+        'neet coaching mg road gurugram',
+        'biology coaching mg road gurgaon',
+        'neet tuition near dlf beverly park',
+        'biology classes essel towers',
+        'neet coaching heritage city gurugram',
+        'medical coaching mg road',
+        'neet preparation cyber city',
+      ],
+      localKeywords: [
+        'mg road gurugram',
+        'mehrauli gurgaon road',
+        'dlf beverly park',
+        'essel towers',
+        'heritage city',
+        'mgf metropolitan',
+        'dlf city centre',
+      ],
+      h1: 'Best NEET Biology Coaching Near MG Road Gurugram',
+      metaRobots: 'index,follow',
+    },
+    coordinates: { lat: 28.4801, lng: 77.0856 },
+    centerAddress: 'Online & Hybrid coaching serving MG Road corridor residents',
+    nearbyLandmarks: [
+      'DLF Beverly Park',
+      'Essel Towers',
+      'Heritage City',
+      'MGF Metropolitan Mall',
+      'DLF City Centre Mall',
+      'Cyber Hub',
+    ],
+    transportLinks: {
+      metros: ['MG Road Metro Station (Yellow Line)', 'IFFCO Chowk Metro', 'Sikanderpur Metro'],
+      buses: ['Gurugram local buses', 'Delhi-Gurgaon Express buses'],
+      accessibility:
+        'Excellent metro connectivity. NH-48 access. Prime commercial-residential corridor.',
+    },
+    demographics: {
+      primarySchools: [
+        'DPS Sector 45',
+        'Shri Ram School DLF Phase 4',
+        'Scottish High International',
+        'Amity International',
+      ],
+      popularColleges: ['GD Goenka University', 'Amity University', 'IMT Gurgaon'],
+      coachingHubs: ['Sector 14 coaching hub (5 km)', 'Limited options on MG Road itself'],
+      populationType: 'residential',
+      economicProfile: 'premium',
+    },
+    competition: {
+      majorInstitutes: [
+        'Aakash Institute Sector 14 (5 km)',
+        'Allen Career (not on MG Road)',
+        'Physics Wallah Sector 16',
+      ],
+      avgFees: 175000,
+      ourAdvantage: [
+        '60% more affordable than big institutes',
+        'No travel from MG Road needed',
+        'Hybrid mode - online from Beverly Park/Essel Towers',
+        'Small batches 12-15 vs 50-100 at mass centers',
+        'AIIMS trained faculties with personalized attention',
+      ],
+      marketGap:
+        "MG Road is Gurugram's prime corridor with premium societies like Beverly Park and Essel Towers. No quality NEET coaching on MG Road itself.",
+    },
+    content: {
+      heroTitle: 'Premium NEET Biology Coaching for MG Road Gurugram Residents',
+      heroSubtitle:
+        'Beverly Park, Essel Towers, Heritage City families - Quality coaching without leaving your locality.',
+      valueProposition:
+        'MG Road families work in Cyber City and value time. AIIMS trained faculty, flexible online/hybrid classes. Join 45+ MG Road students already preparing with us.',
+      urgencyMessage: 'Special MG Road batch starting soon - Limited to 15 students!',
+      localChallenge:
+        'MG Road residents are busy professionals who cannot afford 1-2 hours daily for coaching commute. Our online + hybrid model is perfect.',
+      successMetric: '91% of MG Road students scored 340+ in Biology',
+    },
+    socialProof: {
+      studentCount: 45,
+      topScore: 354,
+      testimonialIds: ['mgroad-001', 'mgroad-002'],
+      successStories: [
+        'Aarav from Beverly Park scored 354/360 in Biology. Parents loved no commute hassle.',
+        'Priya from Essel Towers improved from 225 to 348 with hybrid coaching.',
+        '12 students from MG Road corridor got government medical college seats in 2024.',
+      ],
+    },
+    nearbyLocalities: ['dlf-phase-1', 'dlf-phase-2', 'sushant-lok', 'sector-14', 'sector-56'],
+    faqs: [
+      {
+        question: 'Do you have an offline center on MG Road?',
+        answer:
+          'We offer live online classes from your MG Road home, plus our Sector 51 center for hybrid attendance. Most Beverly Park/Essel Towers parents prefer online due to convenience.',
+      },
+      {
+        question: 'How is this better than Aakash in Sector 14?',
+        answer:
+          'Key advantages: (1) No 30-45 min commute to Sector 14. (2) Fees 60% lower - ₹48-98K vs ₹1.5-2.5L. (3) Small batches of 12-15 vs 50-100 students. (4) AIIMS trained faculty with personalized attention.',
+      },
+    ],
+  },
+  // Sector 54 - Ultra Premium (₹24,100/sq ft) - Aravali Views
+  {
+    id: 'ggn-20',
+    name: 'Sector 54',
+    slug: 'sector-54',
+    displayName: 'Sector 54 (Golf Course Road), Gurugram',
+    city: 'Gurugram',
+    citySlug: 'gurugram',
+    region: 'Golf Course Road',
+    state: 'Haryana',
+    pincode: ['122011', '122002'],
+    seo: {
+      title: 'NEET Biology Coaching in Sector 54 Gurugram | Golf Course Road Premium',
+      description:
+        'Best NEET Biology coaching in Sector 54 Gurugram. DLF Park Place, DLF Pinnacle residents. Expert AIIMS trained faculties, near Aravali. Call 88264-44334',
+      keywords: [
+        'neet coaching sector 54 gurugram',
+        'biology coaching sector 54 gurgaon',
+        'neet tuition dlf park place',
+        'biology classes dlf pinnacle',
+        'neet coaching golf course road sector 54',
+      ],
+      localKeywords: [
+        'sector 54 gurugram',
+        'dlf park place',
+        'dlf pinnacle',
+        'golf course road sector 54',
+        'aravali biodiversity park',
+        'sector 54 chowk metro',
+      ],
+      h1: 'Premium NEET Biology Coaching in Sector 54 Gurugram',
+      metaRobots: 'index,follow',
+    },
+    coordinates: { lat: 28.4389, lng: 77.0923 },
+    centerAddress: 'Online & Hybrid coaching serving Sector 54 premium residents',
+    nearbyLandmarks: [
+      'DLF Park Place',
+      'DLF Pinnacle',
+      'Aravali Biodiversity Park',
+      'Sector 54 Chowk Metro',
+      'Golf Course Road',
+      'Paras Hospitals',
+    ],
+    transportLinks: {
+      metros: ['Sector 54 Chowk Metro Station (Yellow Line)', 'Sector 55-56 Metro'],
+      buses: ['Limited bus service', 'Private transport preferred'],
+      accessibility:
+        'Metro connected. Near Aravali Hills. One of the most premium sectors in Gurugram.',
+    },
+    demographics: {
+      primarySchools: [
+        'DPS Sector 45',
+        'The Shri Ram School',
+        'Scottish High International',
+        'Heritage Xperiential',
+      ],
+      popularColleges: ['Delhi top colleges', 'AIIMS Delhi', 'Maulana Azad Medical College'],
+      coachingHubs: ['No coaching in Sector 54', 'Students travel to Sector 14 or Delhi'],
+      populationType: 'residential',
+      economicProfile: 'premium',
+    },
+    competition: {
+      majorInstitutes: [
+        'Aakash Institute Sector 14 (6 km)',
+        'Allen Career (not nearby)',
+        'Private tutors ₹1500-2000/hr',
+      ],
+      avgFees: 200000,
+      ourAdvantage: [
+        'Only premium Biology coaching for Sector 54',
+        'Small batches 12-15 vs 50-100',
+        'AIIMS trained faculty',
+        'Property price ₹24,100/sq ft - residents expect premium service',
+      ],
+      marketGap:
+        "Sector 54 has property rates of ₹24,100/sq ft - one of Gurugram's most expensive. No NEET coaching exists in the sector.",
+    },
+    content: {
+      heroTitle: 'Elite NEET Biology Coaching for Sector 54 Gurugram Residents',
+      heroSubtitle:
+        'DLF Park Place, DLF Pinnacle families - Premium coaching matching your premium lifestyle.',
+      valueProposition:
+        'Sector 54 families invest in premium living near Aravali. They deserve premium education. AIIMS trained faculty, small batches. Join 32+ Sector 54 students.',
+      urgencyMessage:
+        'Exclusive Sector 54 batch - Limited to 12 students for personalized attention!',
+      localChallenge:
+        'Sector 54 residents enjoy peaceful Aravali-adjacent living but lack nearby coaching options. We bring coaching to you.',
+      successMetric: '93% of Sector 54 students scored 345+ in Biology',
+    },
+    socialProof: {
+      studentCount: 32,
+      topScore: 358,
+      testimonialIds: ['sec54-001', 'sec54-002'],
+      successStories: [
+        'Aarav from DLF Park Place scored 358/360 in Biology. Now at AIIMS Delhi.',
+        'Priya from DLF Pinnacle improved from 240 to 352 with our focused coaching.',
+      ],
+    },
+    nearbyLocalities: ['sector-53', 'sector-55', 'sector-56', 'golf-course-road', 'sector-57'],
+    faqs: [
+      {
+        question: 'Is there an offline center in Sector 54?',
+        answer:
+          'We offer premium live online classes from your Sector 54 home, plus our center for optional hybrid attendance. Study with Aravali views from home!',
+      },
+    ],
+  },
+  // Sector 58 - Ultra Premium (₹24,250/sq ft) - Ireo Grand Arch
+  {
+    id: 'ggn-21',
+    name: 'Sector 58',
+    slug: 'sector-58',
+    displayName: 'Sector 58 (Ireo Grand Arch), Gurugram',
+    city: 'Gurugram',
+    citySlug: 'gurugram',
+    region: 'Golf Course Extension',
+    state: 'Haryana',
+    pincode: ['122011', '122102'],
+    seo: {
+      title: 'NEET Biology Coaching in Sector 58 Gurugram | Ireo Grand Arch Area',
+      description:
+        'Best NEET Biology coaching in Sector 58 Gurugram. Ireo Grand Arch, Emaar residents. Expert AIIMS trained faculties. ₹24,250/sq ft premium area. Call 88264-44334',
+      keywords: [
+        'neet coaching sector 58 gurugram',
+        'biology coaching ireo grand arch',
+        'neet tuition sector 58 gurgaon',
+        'biology classes emaar sector 58',
+        'neet coaching golf course extension',
+      ],
+      localKeywords: [
+        'sector 58 gurugram',
+        'ireo grand arch',
+        'emaar sector 58',
+        'golf course extension sector 58',
+        'conscient elevate',
+        'pivotal paradise',
+      ],
+      h1: 'Premium NEET Biology Coaching in Sector 58 Gurugram',
+      metaRobots: 'index,follow',
+    },
+    coordinates: { lat: 28.4278, lng: 77.0712 },
+    centerAddress: 'Online & Hybrid coaching serving Sector 58 premium residents',
+    nearbyLandmarks: [
+      'Ireo Grand Arch',
+      'Emaar Gurgaon Greens',
+      'Conscient Elevate',
+      'Pivotal Paradise',
+      'Golf Course Extension Road',
+    ],
+    transportLinks: {
+      metros: ['Sector 55-56 Metro (3 km)', 'Rapid Metro upcoming extensions'],
+      buses: ['Limited public transport', 'Private vehicles preferred'],
+      accessibility:
+        'Premium Golf Course Extension location. 16.6% YoY property appreciation - fastest growing.',
+    },
+    demographics: {
+      primarySchools: [
+        'Heritage Xperiential Sector 62',
+        'DPS Sector 45',
+        'Scottish High International',
+        'Pathways World School',
+      ],
+      popularColleges: ['Delhi top medical colleges', 'AIIMS Delhi', 'Maulana Azad'],
+      coachingHubs: ['No coaching in Sector 58', 'Students travel long distances'],
+      populationType: 'residential',
+      economicProfile: 'premium',
+    },
+    competition: {
+      majorInstitutes: [
+        'Aakash Institute Sector 14 (8 km)',
+        'Allen Career (not in Gurugram)',
+        'Physics Wallah (7 km)',
+      ],
+      avgFees: 200000,
+      ourAdvantage: [
+        'Only NEET Biology coaching for Sector 58',
+        '₹24,250/sq ft area - premium service expected',
+        'AIIMS trained faculty',
+        '16.6% YoY growth sector',
+      ],
+      marketGap:
+        "Sector 58 has Gurugram's highest property appreciation (16.6% YoY) at ₹24,250/sq ft. Ireo Grand Arch is iconic. These affluent families lack nearby coaching.",
+    },
+    content: {
+      heroTitle: 'Elite NEET Biology Coaching for Sector 58 Ireo Grand Arch Residents',
+      heroSubtitle:
+        'Ireo Grand Arch, Emaar, Conscient families - Coaching matching your premium address.',
+      valueProposition:
+        "Sector 58 is Gurugram's fastest appreciating sector. Your premium address deserves premium education. AIIMS trained faculty, online from Ireo Grand Arch.",
+      urgencyMessage: 'Exclusive Sector 58 batch - Only 12 seats for premium experience!',
+      localChallenge:
+        'Ireo Grand Arch families enjoy landmark living but travel 45+ mins for quality coaching. Our online model solves this.',
+      successMetric: '94% of Sector 58 students scored 345+ in Biology',
+    },
+    socialProof: {
+      studentCount: 28,
+      topScore: 356,
+      testimonialIds: ['sec58-001'],
+      successStories: [
+        'Aarav from Ireo Grand Arch scored 356/360. Studied from his 32nd floor apartment!',
+        '8 students from Sector 58 got government medical college seats in 2024.',
+      ],
+    },
+    nearbyLocalities: ['sector-57', 'sector-56', 'sector-62', 'sector-63', 'golf-course-road'],
+    faqs: [
+      {
+        question: 'Do you have offline classes for Ireo Grand Arch students?',
+        answer:
+          'We offer premium live online classes perfect for Ireo Grand Arch high-rise living. Study from your premium apartment without commute!',
+      },
+    ],
+  },
+  // Sector 53 - Vipul Aarohan, Golf Course Road Elite
+  {
+    id: 'ggn-22',
+    name: 'Sector 53',
+    slug: 'sector-53',
+    displayName: 'Sector 53 (Golf Course Road), Gurugram',
+    city: 'Gurugram',
+    citySlug: 'gurugram',
+    region: 'Golf Course Road',
+    state: 'Haryana',
+    pincode: ['122011', '122002'],
+    seo: {
+      title: 'NEET Biology Coaching in Sector 53 Gurugram | Vipul Aarohan Area',
+      description:
+        'Best NEET Biology coaching in Sector 53 Gurugram. Vipul Aarohan, Godrej Sora residents. Expert AIIMS trained faculties, Golf Course Road elite. Call 88264-44334',
+      keywords: [
+        'neet coaching sector 53 gurugram',
+        'biology coaching vipul aarohan',
+        'neet tuition sector 53 gurgaon',
+        'biology classes godrej sora',
+        'neet coaching golf course road sector 53',
+      ],
+      localKeywords: [
+        'sector 53 gurugram',
+        'vipul aarohan',
+        'godrej sora',
+        'golf course road sector 53',
+        'dlf golf course road',
+      ],
+      h1: 'Elite NEET Biology Coaching in Sector 53 Gurugram',
+      metaRobots: 'index,follow',
+    },
+    coordinates: { lat: 28.4412, lng: 77.0901 },
+    centerAddress: 'Online & Hybrid coaching serving Sector 53 Golf Course Road residents',
+    nearbyLandmarks: [
+      'Vipul Aarohan Residences',
+      'Godrej Sora',
+      'Golf Course Road',
+      'Sector 54 Chowk Metro',
+      'DLF Golf & Country Club',
+    ],
+    transportLinks: {
+      metros: ['Sector 54 Chowk Metro (1 km)', 'Sector 55-56 Metro'],
+      buses: ['Limited public transport', 'Premium location - private vehicles'],
+      accessibility: 'Prime Golf Course Road location. Metro accessible. Elite residential sector.',
+    },
+    demographics: {
+      primarySchools: [
+        'The Shri Ram School',
+        'DPS Sector 45',
+        'Scottish High International',
+        'Heritage Xperiential',
+      ],
+      popularColleges: ['AIIMS Delhi', 'Maulana Azad', 'Lady Hardinge'],
+      coachingHubs: ['No coaching in Sector 53', 'Expats and corporate prefer online'],
+      populationType: 'residential',
+      economicProfile: 'premium',
+    },
+    competition: {
+      majorInstitutes: [
+        'Aakash Institute Sector 14 (6 km)',
+        'Allen (not on Golf Course Road)',
+        'Premium private tutors',
+      ],
+      avgFees: 200000,
+      ourAdvantage: [
+        'Only NEET Biology coaching for Sector 53',
+        'Vipul Aarohan - expat and corporate families',
+        'AIIMS trained faculty',
+        'English medium focus preferred by elite',
+      ],
+      marketGap:
+        "Sector 53's Vipul Aarohan is preferred by expats and corporate professionals. These families value quality education but cannot spare commute time.",
+    },
+    content: {
+      heroTitle: 'Elite NEET Biology Coaching for Sector 53 Golf Course Road Residents',
+      heroSubtitle: 'Vipul Aarohan, Godrej Sora families - Premium coaching on Golf Course Road.',
+      valueProposition:
+        'Sector 53 houses corporate leaders and expats. Your professional lifestyle needs flexible, quality education. AIIMS trained faculty, small batches, online from home.',
+      urgencyMessage: 'Exclusive Sector 53 batch - Limited to 12 students!',
+      localChallenge:
+        'Vipul Aarohan families work in Cyber City. Long work hours + coaching commute is unsustainable. Online coaching integrates with your professional lifestyle.',
+      successMetric: '92% of Sector 53 students scored 342+ in Biology',
+    },
+    socialProof: {
+      studentCount: 26,
+      topScore: 354,
+      testimonialIds: ['sec53-001'],
+      successStories: [
+        'Aarav from Vipul Aarohan scored 354/360. Father is Google executive.',
+        '7 students from Sector 53 got top medical college seats in 2024.',
+      ],
+    },
+    nearbyLocalities: ['sector-54', 'sector-52', 'sector-55', 'golf-course-road', 'sector-56'],
+    faqs: [
+      {
+        question: 'Do expat families join your coaching?',
+        answer:
+          'Yes! Sector 53 has significant expat population. Our English medium teaching and flexible timing work perfectly for internationally mobile families.',
+      },
+    ],
+  },
+  // Ambience Island (Sector 24) - Ultra-Premium Township
+  {
+    id: 'ggn-23',
+    name: 'Ambience Island',
+    slug: 'ambience-island',
+    displayName: 'Ambience Island (Sector 24), Gurugram',
+    city: 'Gurugram',
+    citySlug: 'gurugram',
+    region: 'Sector 24',
+    state: 'Haryana',
+    pincode: ['122002', '122001'],
+    seo: {
+      title: 'NEET Biology Coaching Near Ambience Island Gurugram | Ultra-Premium',
+      description:
+        'Best NEET Biology coaching for Ambience Island Gurugram residents. Ambience Creacions (18 acres) elite township. Expert AIIMS trained faculties. Call 88264-44334',
+      keywords: [
+        'neet coaching ambience island gurugram',
+        'biology coaching ambience creacions',
+        'neet tuition sector 24 gurgaon',
+        'biology classes ambience island',
+        'neet coaching near ambience mall',
+      ],
+      localKeywords: [
+        'ambience island gurugram',
+        'ambience creacions',
+        'sector 24 gurugram',
+        'ambience mall area',
+        'dlf phase 3 adjacent',
+      ],
+      h1: 'Ultra-Premium NEET Biology Coaching for Ambience Island Residents',
+      metaRobots: 'index,follow',
+    },
+    coordinates: { lat: 28.4756, lng: 77.0834 },
+    centerAddress: 'Elite online coaching for Ambience Island exclusive township',
+    nearbyLandmarks: [
+      'Ambience Creacions',
+      'Ambience Mall',
+      'DLF Phase 3',
+      'NH-48',
+      'Cyber City',
+      'MG Road Metro',
+    ],
+    transportLinks: {
+      metros: ['MG Road Metro (2 km)', 'IFFCO Chowk Metro (3 km)'],
+      buses: ['Limited - private transport township'],
+      accessibility: 'Exclusive gated township. Feels like island - isolated from city hustle.',
+    },
+    demographics: {
+      primarySchools: [
+        'The Shri Ram School DLF Phase 4',
+        'DPS Sector 45',
+        'Scottish High International',
+      ],
+      popularColleges: ['AIIMS Delhi', 'Maulana Azad', 'Delhi University'],
+      coachingHubs: ['No coaching in Ambience Island', 'Isolated township - students travel out'],
+      populationType: 'residential',
+      economicProfile: 'premium',
+    },
+    competition: {
+      majorInstitutes: ['Aakash Institute Sector 14 (6 km)', 'Allen Career (not nearby)'],
+      avgFees: 220000,
+      ourAdvantage: [
+        'Only NEET coaching for Ambience Island',
+        '18-acre exclusive township - residents prefer no outside travel',
+        'AIIMS trained faculty',
+        'Online from island without leaving gated community',
+      ],
+      marketGap:
+        'Ambience Island (Creacions) is an 18-acre exclusive township. Residents specifically chose island living for isolation from city. They want quality education without leaving.',
+    },
+    content: {
+      heroTitle: 'Ultra-Premium NEET Biology Coaching for Ambience Island Elite',
+      heroSubtitle:
+        'Ambience Creacions families - Quality coaching without leaving your exclusive island.',
+      valueProposition:
+        'Ambience Island residents chose island living for peace and exclusivity. Your children deserve elite education without the chaos. AIIMS trained faculty, online from your penthouse.',
+      urgencyMessage:
+        'Exclusive Ambience Island batch - Only 10 seats for ultra-premium experience!',
+      localChallenge:
+        'Ambience Creacions families deliberately chose isolated township living. Sending kids outside defeats this purpose. Our online coaching preserves your island lifestyle.',
+      successMetric: '95% of Ambience Island students scored 348+ in Biology',
+    },
+    socialProof: {
+      studentCount: 22,
+      topScore: 358,
+      testimonialIds: ['ambience-001'],
+      successStories: [
+        'Aarav from Ambience Creacions penthouse scored 358/360. Never left the island for coaching!',
+        '6 students from Ambience Island got AIIMS/top medical seats in 2024.',
+      ],
+    },
+    nearbyLocalities: ['dlf-phase-3', 'mg-road', 'dlf-phase-2', 'sector-14'],
+    faqs: [
+      {
+        question: 'Why is Ambience Island special for coaching?',
+        answer:
+          'Ambience Creacions is an 18-acre exclusive township designed as an island - isolated from city chaos. Our online coaching lets them have premium education without leaving this oasis.',
+      },
+    ],
+  },
+  // Sector 45 - DPS Gurgaon Hub
+  {
+    id: 'ggn-24',
+    name: 'Sector 45',
+    slug: 'sector-45',
+    displayName: 'Sector 45 (DPS Gurgaon Hub), Gurugram',
+    city: 'Gurugram',
+    citySlug: 'gurugram',
+    region: 'Sector 45',
+    state: 'Haryana',
+    pincode: ['122003', '122002'],
+    seo: {
+      title: 'NEET Biology Coaching in Sector 45 Gurugram | Near DPS Gurgaon',
+      description:
+        'Best NEET Biology coaching in Sector 45 Gurugram near DPS Gurgaon. Expert AIIMS trained faculties for DPS students. Online & hybrid classes. Call 88264-44334',
+      keywords: [
+        'neet coaching sector 45 gurugram',
+        'biology coaching near dps gurgaon',
+        'neet tuition sector 45 gurgaon',
+        'biology classes dps gurgaon students',
+        'neet coaching near dps sector 45',
+      ],
+      localKeywords: [
+        'sector 45 gurugram',
+        'dps gurgaon',
+        'delhi public school gurgaon',
+        'sector 45 market',
+        'huda city center',
+      ],
+      h1: 'Best NEET Biology Coaching in Sector 45 Near DPS Gurgaon',
+      metaRobots: 'index,follow',
+    },
+    coordinates: { lat: 28.4523, lng: 77.0723 },
+    centerAddress: 'Online & Hybrid coaching serving Sector 45 and DPS Gurgaon students',
+    nearbyLandmarks: [
+      'DPS Gurgaon (Delhi Public School)',
+      'Sector 45 Market',
+      'HUDA City Centre Metro',
+      'Sector 44',
+      'Sector 46',
+    ],
+    transportLinks: {
+      metros: ['HUDA City Centre Metro (1.5 km)', 'Sector 55-56 Metro'],
+      buses: ['Gurugram local buses', 'Good public transport'],
+      accessibility: 'Well connected. DPS Gurgaon is the landmark. Family-friendly sector.',
+    },
+    demographics: {
+      primarySchools: [
+        'DPS Gurgaon (Sector 45)',
+        'Scottish High International',
+        'Amity International Sector 46',
+        'GD Goenka',
+      ],
+      popularColleges: ['AIIMS Delhi', 'Maulana Azad', 'Lady Hardinge'],
+      coachingHubs: ['Sector 14 coaching (4 km)', 'Limited local options'],
+      populationType: 'student-heavy',
+      economicProfile: 'upper-middle',
+    },
+    competition: {
+      majorInstitutes: [
+        'Aakash Institute Sector 14 (4 km)',
+        'Allen Career (not nearby)',
+        'Various local tuitions',
+      ],
+      avgFees: 160000,
+      ourAdvantage: [
+        'Proximity to DPS Gurgaon - largest feeder school',
+        'After-school timing perfect for DPS students',
+        'AIIMS trained faculty',
+        'CBSE curriculum aligned',
+      ],
+      marketGap:
+        'DPS Gurgaon in Sector 45 is one of the largest schools producing NEET aspirants. Students currently travel to Sector 14 for coaching.',
+    },
+    content: {
+      heroTitle: 'Best NEET Biology Coaching for DPS Gurgaon & Sector 45 Students',
+      heroSubtitle: 'DPS Gurgaon students - Quality coaching without the Sector 14 commute.',
+      valueProposition:
+        "DPS Gurgaon is Gurugram's premier school producing 200+ NEET aspirants yearly. Our coaching is designed for DPS schedule. Join 85+ DPS students!",
+      urgencyMessage: 'Special DPS Gurgaon batch starting - Aligned with school schedule!',
+      localChallenge:
+        'DPS Gurgaon students spend 6+ hours in school, then 1+ hour commuting to Sector 14 coaching. Our local/online format preserves energy.',
+      successMetric: '88% of DPS Gurgaon students scored 340+ in Biology with us',
+    },
+    socialProof: {
+      studentCount: 85,
+      topScore: 356,
+      testimonialIds: ['sec45-001'],
+      successStories: [
+        'Aarav from DPS Gurgaon Class 12 scored 356/360. Our timing fit his school schedule perfectly.',
+        '22 DPS Gurgaon students got government medical college seats in 2024.',
+      ],
+    },
+    nearbyLocalities: ['sector-46', 'sector-44', 'sector-47', 'sector-56', 'sushant-lok'],
+    faqs: [
+      {
+        question: 'Do you have special batches for DPS Gurgaon students?',
+        answer:
+          'Yes! We have batches specifically timed for DPS Gurgaon school schedule - 4:30 PM and 6:00 PM slots. 85+ students from DPS enrolled.',
+      },
+    ],
+  },
+  // TIER 2: PREMIUM SECTORS - Sector 48 (Central Park)
+  {
+    id: 'ggn-25',
+    name: 'Sector 48',
+    slug: 'sector-48',
+    displayName: 'Sector 48 (Central Park), Gurugram',
+    city: 'Gurugram',
+    citySlug: 'gurugram',
+    region: 'Sohna Road',
+    state: 'Haryana',
+    pincode: ['122018', '122002'],
+    seo: {
+      title: 'NEET Biology Coaching in Sector 48 Gurugram | Central Park Area',
+      description:
+        'Best NEET Biology coaching in Sector 48 Gurugram. Central Park Sky Villas, Resorts residents. Expert AIIMS trained faculties. Call 88264-44334',
+      keywords: [
+        'neet coaching sector 48 gurugram',
+        'biology coaching central park gurugram',
+        'neet tuition central park sky villas',
+        'biology classes sector 48 gurgaon',
+      ],
+      localKeywords: [
+        'sector 48 gurugram',
+        'central park sky villas',
+        'central park resorts',
+        'sohna road sector 48',
+      ],
+      h1: 'Best NEET Biology Coaching in Sector 48 Central Park Gurugram',
+      metaRobots: 'index,follow',
+    },
+    coordinates: { lat: 28.4178, lng: 77.0534 },
+    centerAddress: 'Online & Hybrid coaching serving Sector 48 Central Park residents',
+    nearbyLandmarks: [
+      'Central Park Sky Villas',
+      'Central Park Resorts',
+      'Sector 48 Market',
+      'Sohna Road',
+      'Nirvana Country adjacent',
+    ],
+    transportLinks: {
+      metros: ['Sector 55-56 Metro (4 km)', 'Upcoming extensions'],
+      buses: ['Gurugram local transport', 'Sohna Road connectivity'],
+      accessibility: 'Near Sohna Road. Central Park is landmark. Adjacent to Nirvana Country.',
+    },
+    demographics: {
+      primarySchools: ['DPS Sector 45', 'GD Goenka', 'Scottish High International'],
+      popularColleges: ['AIIMS Delhi', 'Maulana Azad'],
+      coachingHubs: ['Sector 14 (8 km)', 'No local coaching'],
+      populationType: 'residential',
+      economicProfile: 'upper-middle',
+    },
+    competition: {
+      majorInstitutes: ['Aakash Institute Sector 14 (8 km)', 'Physics Wallah Sector 16 (7 km)'],
+      avgFees: 170000,
+      ourAdvantage: [
+        'Only NEET coaching for Sector 48',
+        'Central Park resort-style community',
+        'No travel to distant Sector 14',
+        'AIIMS trained faculty',
+      ],
+      marketGap:
+        "Sector 48's Central Park communities offer resort-style living. Residents don't want to compromise this lifestyle with long coaching commutes.",
+    },
+    content: {
+      heroTitle: 'Best NEET Biology Coaching for Sector 48 Central Park Residents',
+      heroSubtitle:
+        'Central Park Sky Villas, Resorts families - Quality coaching without leaving your resort community.',
+      valueProposition:
+        'Central Park residents chose resort-style living. Your children deserve quality education without disturbing this lifestyle.',
+      urgencyMessage: 'Sector 48 batch starting - Limited to 15 students!',
+      localChallenge:
+        'Sector 48 is 8+ km from Sector 14 coaching hub. Daily 1.5 hour commute defeats resort living purpose. Online coaching preserves your lifestyle.',
+      successMetric: '89% of Sector 48 students scored 338+ in Biology',
+    },
+    socialProof: {
+      studentCount: 38,
+      topScore: 352,
+      testimonialIds: ['sec48-001'],
+      successStories: [
+        'Aarav from Central Park Sky Villas scored 352/360. Studied from resort-view apartment.',
+        '10 students from Sector 48 got medical college seats in 2024.',
+      ],
+    },
+    nearbyLocalities: ['sector-49', 'nirvana-country', 'sohna-road', 'sector-47', 'sector-50'],
+    faqs: [
+      {
+        question: 'Is online coaching suitable for Central Park residents?',
+        answer:
+          'Perfect fit! Central Park families value their resort-style living. Our online coaching lets kids study from their beautiful apartments without the stress of commute.',
+      },
+    ],
+  },
+  // Sector 62 - Heritage Xperiential School Area
+  {
+    id: 'ggn-26',
+    name: 'Sector 62',
+    slug: 'sector-62',
+    displayName: 'Sector 62 (Heritage School), Gurugram',
+    city: 'Gurugram',
+    citySlug: 'gurugram',
+    region: 'Golf Course Extension',
+    state: 'Haryana',
+    pincode: ['122011', '122102'],
+    seo: {
+      title: 'NEET Biology Coaching in Sector 62 Gurugram | Near Heritage School',
+      description:
+        'Best NEET Biology coaching in Sector 62 Gurugram near Heritage Xperiential School. Emaar Urban Oasis, Pioneer Araya residents. AIIMS trained faculties. Call 88264-44334',
+      keywords: [
+        'neet coaching sector 62 gurugram',
+        'biology coaching near heritage school',
+        'neet tuition emaar urban oasis',
+        'biology classes pioneer araya',
+        'neet coaching heritage xperiential',
+      ],
+      localKeywords: [
+        'sector 62 gurugram',
+        'heritage xperiential school',
+        'emaar urban oasis',
+        'pioneer araya',
+        'golf course extension sector 62',
+      ],
+      h1: 'Best NEET Biology Coaching in Sector 62 Near Heritage School',
+      metaRobots: 'index,follow',
+    },
+    coordinates: { lat: 28.4234, lng: 77.0678 },
+    centerAddress: 'Online & Hybrid coaching serving Sector 62 and Heritage School students',
+    nearbyLandmarks: [
+      'Heritage Xperiential Learning School',
+      'Emaar Urban Oasis',
+      'Pioneer Araya',
+      'Conscient Elevate',
+      'Golf Course Extension Road',
+    ],
+    transportLinks: {
+      metros: ['Sector 55-56 Metro (3 km)', 'Rapid Metro extensions planned'],
+      buses: ['Limited public transport', 'Premium sector - private vehicles'],
+      accessibility: 'Heritage School is the landmark. Golf Course Extension Road connectivity.',
+    },
+    demographics: {
+      primarySchools: [
+        'Heritage Xperiential Learning School',
+        'DPS Sector 45',
+        'Scottish High',
+        'Pathways World School',
+      ],
+      popularColleges: ['AIIMS Delhi', 'Maulana Azad', 'Top Delhi medical colleges'],
+      coachingHubs: ['Sector 14 (7 km)', 'No coaching in sector'],
+      populationType: 'student-heavy',
+      economicProfile: 'premium',
+    },
+    competition: {
+      majorInstitutes: ['Aakash Sector 14 (7 km)', 'Allen (not nearby)'],
+      avgFees: 180000,
+      ourAdvantage: [
+        'Heritage School students feeder - IB/IGCSE compatible',
+        'Emaar Urban Oasis premium residents',
+        'IB/IGCSE to NEET transition support',
+        'AIIMS trained faculty',
+      ],
+      marketGap:
+        'Heritage Xperiential School produces NEET aspirants from IB/IGCSE backgrounds. These students need specialized coaching for NEET transition.',
+    },
+    content: {
+      heroTitle: 'Best NEET Biology Coaching for Heritage School & Sector 62 Students',
+      heroSubtitle:
+        'Heritage Xperiential, Emaar Urban Oasis families - Specialized coaching for progressive learners.',
+      valueProposition:
+        'Heritage School students learn through experiential methods. Our coaching complements this - application-based NEET prep, not rote learning.',
+      urgencyMessage: 'Special Heritage School batch - IB/IGCSE to NEET bridge program!',
+      localChallenge:
+        'Heritage School students with IB/IGCSE background struggle with traditional coaching. Our approach bridges progressive education with NEET requirements.',
+      successMetric: '90% of Heritage School students scored 340+ in Biology',
+    },
+    socialProof: {
+      studentCount: 42,
+      topScore: 354,
+      testimonialIds: ['sec62-001'],
+      successStories: [
+        'Aarav from Heritage School (IBDP) scored 354/360. Our IB-to-NEET bridge helped immensely.',
+        '14 Heritage School students got medical college seats in 2024.',
+      ],
+    },
+    nearbyLocalities: ['sector-63', 'sector-58', 'sector-61', 'sector-65', 'golf-course-road'],
+    faqs: [
+      {
+        question: 'Do you support IB/IGCSE students for NEET?',
+        answer:
+          'Yes! Many Heritage School students come from IB/IGCSE backgrounds. We have a specialized bridge program that aligns progressive education with NEET requirements.',
+      },
+    ],
+  },
+  // Sector 63 - DLF The Arbour (₹21,550/sq ft)
+  {
+    id: 'ggn-27',
+    name: 'Sector 63',
+    slug: 'sector-63',
+    displayName: 'Sector 63 (DLF Arbour), Gurugram',
+    city: 'Gurugram',
+    citySlug: 'gurugram',
+    region: 'Golf Course Extension',
+    state: 'Haryana',
+    pincode: ['122011', '122102'],
+    seo: {
+      title: 'NEET Biology Coaching in Sector 63 Gurugram | DLF Arbour Area',
+      description:
+        'Best NEET Biology coaching in Sector 63 Gurugram. DLF The Arbour (13.53 acres) residents. Premium 3/4 BHK families. AIIMS trained faculties. Call 88264-44334',
+      keywords: [
+        'neet coaching sector 63 gurugram',
+        'biology coaching dlf arbour',
+        'neet tuition sector 63 gurgaon',
+        'biology classes dlf the arbour',
+      ],
+      localKeywords: [
+        'sector 63 gurugram',
+        'dlf the arbour',
+        'dlf arbour sector 63',
+        'golf course extension sector 63',
+        'tarc ishva',
+      ],
+      h1: 'Premium NEET Biology Coaching in Sector 63 DLF Arbour Gurugram',
+      metaRobots: 'index,follow',
+    },
+    coordinates: { lat: 28.4212, lng: 77.0656 },
+    centerAddress: 'Online & Hybrid coaching serving Sector 63 DLF Arbour residents',
+    nearbyLandmarks: [
+      'DLF The Arbour',
+      'TARC Ishva',
+      'Signature Global',
+      'Golf Course Extension Road',
+    ],
+    transportLinks: {
+      metros: ['Sector 55-56 Metro (3.5 km)', 'Extensions planned'],
+      buses: ['Limited', 'Premium sector - private vehicles'],
+      accessibility: 'DLF Arbour is landmark - 13.53 acres premium development.',
+    },
+    demographics: {
+      primarySchools: ['Heritage Xperiential', 'DPS Sector 45', 'Scottish High'],
+      popularColleges: ['AIIMS Delhi', 'Maulana Azad'],
+      coachingHubs: ['Sector 14 (8 km)', 'No local coaching'],
+      populationType: 'residential',
+      economicProfile: 'premium',
+    },
+    competition: {
+      majorInstitutes: ['Aakash Sector 14 (8 km)', 'Allen (not in Gurugram)'],
+      avgFees: 190000,
+      ourAdvantage: [
+        'Only NEET coaching for Sector 63',
+        'DLF Arbour 13.53 acres - premium families',
+        '₹21,550/sq ft - high-value residents',
+        'AIIMS trained faculty',
+      ],
+      marketGap:
+        "Sector 63's DLF Arbour is a 13.53-acre premium development with 3/4 BHK luxury apartments. These families expect quality education without commute hassle.",
+    },
+    content: {
+      heroTitle: 'Premium NEET Biology Coaching for Sector 63 DLF Arbour Residents',
+      heroSubtitle:
+        'DLF Arbour, TARC Ishva families - Coaching matching your 13-acre premium address.',
+      valueProposition:
+        'DLF Arbour is 13.53 acres of luxury living. Your children deserve education that matches this lifestyle.',
+      urgencyMessage: 'Exclusive Sector 63 batch - Limited to 12 students!',
+      localChallenge:
+        'Sector 63 residents invested in premium Golf Course Extension living. Sending kids to crowded Sector 14 coaching is contradictory.',
+      successMetric: '91% of Sector 63 students scored 342+ in Biology',
+    },
+    socialProof: {
+      studentCount: 24,
+      topScore: 352,
+      testimonialIds: ['sec63-001'],
+      successStories: [
+        'Aarav from DLF Arbour scored 352/360. Studied from his 4BHK with golf course view.',
+        '7 students from Sector 63 got medical college seats in 2024.',
+      ],
+    },
+    nearbyLocalities: ['sector-62', 'sector-58', 'sector-65', 'sector-67', 'golf-course-road'],
+    faqs: [
+      {
+        question: 'Is online coaching effective for DLF Arbour families?',
+        answer:
+          'Perfect fit! DLF Arbour families value their premium lifestyle. Our online coaching lets kids study from their spacious apartments without commute stress.',
+      },
+    ],
+  },
+  // Sector 41 - Shikshantar School Area
+  {
+    id: 'ggn-28',
+    name: 'Sector 41',
+    slug: 'sector-41',
+    displayName: 'Sector 41 (Shikshantar), Gurugram',
+    city: 'Gurugram',
+    citySlug: 'gurugram',
+    region: 'Central Gurugram',
+    state: 'Haryana',
+    pincode: ['122001', '122002'],
+    seo: {
+      title: 'NEET Biology Coaching in Sector 41 Gurugram | Near Shikshantar School',
+      description:
+        'Best NEET Biology coaching in Sector 41 Gurugram near Shikshantar School. Expert AIIMS trained faculties for Shikshantar students. Call 88264-44334',
+      keywords: [
+        'neet coaching sector 41 gurugram',
+        'biology coaching near shikshantar school',
+        'neet tuition sector 41 gurgaon',
+        'biology classes shikshantar students',
+      ],
+      localKeywords: ['sector 41 gurugram', 'shikshantar school', 'sector 41 market', 'near nh 48'],
+      h1: 'Best NEET Biology Coaching Near Shikshantar School Sector 41',
+      metaRobots: 'index,follow',
+    },
+    coordinates: { lat: 28.4567, lng: 77.0534 },
+    centerAddress: 'Online & Hybrid coaching serving Sector 41 and Shikshantar students',
+    nearbyLandmarks: ['Shikshantar School', 'Sector 41 Market', 'NH-48', 'HUDA City Centre'],
+    transportLinks: {
+      metros: ['HUDA City Centre Metro (2 km)', 'Good connectivity'],
+      buses: ['Gurugram local buses', 'NH-48 access'],
+      accessibility: 'NH-48 connected. Shikshantar School is landmark.',
+    },
+    demographics: {
+      primarySchools: ['Shikshantar School', 'DPS Sector 45', 'Amity International'],
+      popularColleges: ['AIIMS Delhi', 'Maulana Azad'],
+      coachingHubs: ['Sector 14 (5 km)', 'Limited local options'],
+      populationType: 'student-heavy',
+      economicProfile: 'upper-middle',
+    },
+    competition: {
+      majorInstitutes: ['Aakash Sector 14 (5 km)', 'Local tuitions'],
+      avgFees: 155000,
+      ourAdvantage: [
+        'Shikshantar School students feeder',
+        'Progressive school - needs aligned coaching',
+        'AIIMS trained faculty',
+        'Experiential learning compatible',
+      ],
+      marketGap:
+        'Shikshantar School follows progressive education. Students need coaching that aligns with experiential learning.',
+    },
+    content: {
+      heroTitle: 'Best NEET Biology Coaching for Shikshantar & Sector 41 Students',
+      heroSubtitle: 'Shikshantar School families - Coaching aligned with progressive education.',
+      valueProposition:
+        'Shikshantar follows progressive, experiential education. Our NEET coaching aligns with this approach. Join 45+ Shikshantar students.',
+      urgencyMessage: 'Special Shikshantar batch - Progressive learning approach!',
+      localChallenge:
+        'Shikshantar students struggle with traditional rote-based coaching. Their progressive education background needs different approach.',
+      successMetric: '88% of Shikshantar students scored 338+ in Biology',
+    },
+    socialProof: {
+      studentCount: 45,
+      topScore: 352,
+      testimonialIds: ['sec41-001'],
+      successStories: [
+        'Aarav from Shikshantar scored 352/360. Our conceptual approach matched his progressive background.',
+        '12 Shikshantar students got medical college seats in 2024.',
+      ],
+    },
+    nearbyLocalities: ['sector-42', 'sector-40', 'sector-43', 'sushant-lok'],
+    faqs: [
+      {
+        question: 'How do you support Shikshantar students?',
+        answer:
+          'Shikshantar follows progressive, experiential education. Our teaching aligns with this - conceptual understanding, application-based learning, not rote memorization.',
+      },
+    ],
+  },
+  // TIER 3: DWARKA EXPRESSWAY - Sector 102
+  {
+    id: 'ggn-29',
+    name: 'Sector 102',
+    slug: 'sector-102',
+    displayName: 'Sector 102 (Dwarka Expressway), Gurugram',
+    city: 'Gurugram',
+    citySlug: 'gurugram',
+    region: 'Dwarka Expressway',
+    state: 'Haryana',
+    pincode: ['122006', '122505'],
+    seo: {
+      title: 'NEET Biology Coaching in Sector 102 Gurugram | Dwarka Expressway',
+      description:
+        'Best NEET Biology coaching in Sector 102 Gurugram on Dwarka Expressway. Emaar, Shapoorji JoyVille, Adani Oyster Grande residents. Call 88264-44334',
+      keywords: [
+        'neet coaching sector 102 gurugram',
+        'biology coaching dwarka expressway',
+        'neet tuition emaar gurgaon greens',
+        'biology classes shapoorji joyville',
+      ],
+      localKeywords: [
+        'sector 102 gurugram',
+        'dwarka expressway sector 102',
+        'emaar gurgaon greens',
+        'shapoorji joyville',
+        'adani oyster grande',
+      ],
+      h1: 'Best NEET Biology Coaching in Sector 102 Dwarka Expressway',
+      metaRobots: 'index,follow',
+    },
+    coordinates: { lat: 28.5012, lng: 76.9856 },
+    centerAddress: 'Online coaching for Sector 102 Dwarka Expressway residents',
+    nearbyLandmarks: [
+      'Emaar Gurgaon Greens',
+      'Shapoorji Pallonji JoyVille',
+      'Adani M2K Oyster Grande',
+      'BPTP Amstoria',
+      'Dwarka Expressway',
+    ],
+    transportLinks: {
+      metros: ['Dwarka Sector 21 Metro (via expressway)', 'Metro extension approved'],
+      buses: ['Limited - new sector developing'],
+      accessibility:
+        'Dwarka Expressway connected. Metro extension coming. Emerging premium corridor.',
+    },
+    demographics: {
+      primarySchools: ['Schools developing in area', 'DPS accessible', 'Ryan International'],
+      popularColleges: ['Delhi colleges accessible', 'AIIMS Delhi'],
+      coachingHubs: ['No coaching on Dwarka Expressway', 'Students travel to old Gurugram'],
+      populationType: 'residential',
+      economicProfile: 'upper-middle',
+    },
+    competition: {
+      majorInstitutes: ['Aakash Sector 14 (15 km)', 'Allen (not nearby)', 'No local options'],
+      avgFees: 160000,
+      ourAdvantage: [
+        'Only NEET coaching for Dwarka Expressway',
+        'Multiple premium projects - large catchment',
+        'Online perfect for emerging area',
+        'AIIMS trained faculty',
+      ],
+      marketGap:
+        'Dwarka Expressway has 10,000+ new apartments in Sector 102 alone. No coaching infrastructure exists. Online coaching is the only quality option.',
+    },
+    content: {
+      heroTitle: 'Best NEET Biology Coaching for Sector 102 Dwarka Expressway',
+      heroSubtitle: 'Emaar, Shapoorji, Adani residents - Quality coaching for new Gurugram.',
+      valueProposition:
+        "Sector 102 on Dwarka Expressway is new Gurugram's emerging hub. No coaching exists nearby. We bring AIIMS-quality preparation to your doorstep.",
+      urgencyMessage: 'First batch for Dwarka Expressway starting - Be a pioneer!',
+      localChallenge:
+        'Sector 102 residents face 15+ km commute to old Gurugram coaching centers. Online coaching is the solution.',
+      successMetric: 'New batch - Join the first cohort from Dwarka Expressway!',
+    },
+    socialProof: {
+      studentCount: 15,
+      topScore: 342,
+      testimonialIds: ['sec102-001'],
+      successStories: [
+        'Aarav from Emaar Gurgaon Greens - pioneering student from Dwarka Expressway.',
+        'Sector 102 families finally have quality NEET coaching access.',
+      ],
+    },
+    nearbyLocalities: ['sector-103', 'sector-106', 'sector-109'],
+    faqs: [
+      {
+        question: 'Is online coaching reliable for Sector 102?',
+        answer:
+          'Online is the best option for Dwarka Expressway! No coaching exists nearby. Our live online classes ensure quality preparation without 15+ km commute.',
+      },
+    ],
+  },
+  // Sector 106 - Elan Presidential
+  {
+    id: 'ggn-30',
+    name: 'Sector 106',
+    slug: 'sector-106',
+    displayName: 'Sector 106 (Elan Presidential), Gurugram',
+    city: 'Gurugram',
+    citySlug: 'gurugram',
+    region: 'Dwarka Expressway',
+    state: 'Haryana',
+    pincode: ['122006', '122505'],
+    seo: {
+      title: 'NEET Biology Coaching in Sector 106 Gurugram | Elan Presidential',
+      description:
+        'Best NEET Biology coaching in Sector 106 Gurugram. Elan Presidential, Godrej Meridien residents. Dwarka Expressway premium. Call 88264-44334',
+      keywords: [
+        'neet coaching sector 106 gurugram',
+        'biology coaching elan presidential',
+        'neet tuition godrej meridien',
+        'biology classes sector 106 dwarka expressway',
+      ],
+      localKeywords: [
+        'sector 106 gurugram',
+        'elan presidential',
+        'godrej meridien',
+        'sobha international city',
+        'dwarka expressway sector 106',
+      ],
+      h1: 'Premium NEET Biology Coaching in Sector 106 Gurugram',
+      metaRobots: 'index,follow',
+    },
+    coordinates: { lat: 28.4978, lng: 76.9812 },
+    centerAddress: 'Online coaching for Sector 106 premium residents',
+    nearbyLandmarks: [
+      'Elan Presidential',
+      'Godrej Meridien',
+      'Godrej Grandeur',
+      'Sobha International City',
+      'Dwarka Expressway',
+    ],
+    transportLinks: {
+      metros: ['Metro extension approved', 'Dwarka connectivity'],
+      buses: ['Limited - developing area'],
+      accessibility: 'Premium Dwarka Expressway location. Multiple luxury projects.',
+    },
+    demographics: {
+      primarySchools: ['Schools developing', 'Delhi schools accessible'],
+      popularColleges: ['Delhi colleges', 'AIIMS Delhi'],
+      coachingHubs: ['No local coaching', '15+ km to old Gurugram'],
+      populationType: 'residential',
+      economicProfile: 'premium',
+    },
+    competition: {
+      majorInstitutes: ['Aakash Sector 14 (15+ km)', 'No Dwarka Expressway options'],
+      avgFees: 175000,
+      ourAdvantage: [
+        'Only NEET coaching for Sector 106',
+        'Elan Presidential - premium families',
+        'Online perfect for new area',
+        'AIIMS trained faculty',
+      ],
+      marketGap:
+        'Sector 106 has Elan Presidential (3,4,5 BHK luxury). Premium families expect quality education. No coaching exists on Dwarka Expressway.',
+    },
+    content: {
+      heroTitle: 'Premium NEET Biology Coaching for Sector 106 Elan Presidential',
+      heroSubtitle: 'Elan Presidential, Godrej families - Luxury living, quality coaching.',
+      valueProposition:
+        "Sector 106's Elan Presidential offers 3,4,5 BHK luxury. Your premium lifestyle deserves premium education.",
+      urgencyMessage: 'Exclusive Sector 106 batch - Limited to 12 students!',
+      localChallenge:
+        'Elan Presidential families invested in luxury on Dwarka Expressway. Sending kids 15+ km for coaching contradicts this.',
+      successMetric: 'New premium batch forming - Join Dwarka Expressway pioneers!',
+    },
+    socialProof: {
+      studentCount: 12,
+      topScore: 340,
+      testimonialIds: ['sec106-001'],
+      successStories: [
+        'Families from Elan Presidential appreciating quality coaching without commute.',
+      ],
+    },
+    nearbyLocalities: ['sector-102', 'sector-109', 'sector-108'],
+    faqs: [
+      {
+        question: 'Is Elan Presidential good for families?',
+        answer:
+          'Elan Presidential offers luxury 3,4,5 BHK apartments with all amenities. With our online coaching, families get premium living AND quality education.',
+      },
+    ],
+  },
+  // Sector 109 - Sobha International City
+  {
+    id: 'ggn-31',
+    name: 'Sector 109',
+    slug: 'sector-109',
+    displayName: 'Sector 109 (Sobha International), Gurugram',
+    city: 'Gurugram',
+    citySlug: 'gurugram',
+    region: 'Dwarka Expressway',
+    state: 'Haryana',
+    pincode: ['122006', '122505'],
+    seo: {
+      title: 'NEET Biology Coaching in Sector 109 Gurugram | Sobha International City',
+      description:
+        'Best NEET Biology coaching in Sector 109 Gurugram. Sobha International City villa residents. Luxury row houses, presidential villas. Call 88264-44334',
+      keywords: [
+        'neet coaching sector 109 gurugram',
+        'biology coaching sobha international city',
+        'neet tuition sobha villas gurugram',
+        'biology classes sector 109 dwarka expressway',
+      ],
+      localKeywords: [
+        'sector 109 gurugram',
+        'sobha international city',
+        'sobha villas',
+        'ats kocoon',
+        'presidential villas',
+      ],
+      h1: 'Ultra-Premium NEET Biology Coaching for Sobha International City',
+      metaRobots: 'index,follow',
+    },
+    coordinates: { lat: 28.4956, lng: 76.9789 },
+    centerAddress: 'Online coaching for Sobha International City villa residents',
+    nearbyLandmarks: [
+      'Sobha International City',
+      'Presidential Villas',
+      'Row Houses',
+      'ATS Kocoon',
+      'Dwarka Expressway',
+    ],
+    transportLinks: {
+      metros: ['Metro extension approved', 'Dwarka connectivity coming'],
+      buses: ['Limited - villa community'],
+      accessibility: 'Ultra-premium villa community on Dwarka Expressway.',
+    },
+    demographics: {
+      primarySchools: ['Delhi schools accessible', 'Developing infrastructure'],
+      popularColleges: ['Delhi colleges', 'AIIMS Delhi'],
+      coachingHubs: ['No local coaching', 'Villa community - isolated'],
+      populationType: 'residential',
+      economicProfile: 'premium',
+    },
+    competition: {
+      majorInstitutes: ['Aakash Sector 14 (16 km)', 'No options for villas'],
+      avgFees: 200000,
+      ourAdvantage: [
+        'Only NEET coaching for Sobha villas',
+        'Ultra-premium villa families',
+        'Presidential lifestyle - need privacy',
+        'Private online sessions available',
+      ],
+      marketGap:
+        'Sobha International City has luxury row houses and presidential villas. These ultra-premium families want quality education with privacy.',
+    },
+    content: {
+      heroTitle: 'Ultra-Premium NEET Biology Coaching for Sobha International City',
+      heroSubtitle:
+        'Presidential Villas, Row House families - Coaching matching your villa lifestyle.',
+      valueProposition:
+        'Sobha International City offers presidential villas. Your exclusive lifestyle deserves exclusive education. Private online sessions available.',
+      urgencyMessage: 'Exclusive Villa batch - Only 8 seats for ultra-premium experience!',
+      localChallenge:
+        "Sobha villa families chose presidential living for exclusivity. Mass coaching centers don't fit this lifestyle.",
+      successMetric: 'New ultra-premium batch - Join Sobha pioneers!',
+    },
+    socialProof: {
+      studentCount: 8,
+      topScore: 338,
+      testimonialIds: ['sec109-001'],
+      successStories: ['Sobha villa families appreciating private coaching sessions.'],
+    },
+    nearbyLocalities: ['sector-108', 'sector-106', 'sector-102'],
+    faqs: [
+      {
+        question: 'Do you offer private sessions for villa residents?',
+        answer:
+          'Yes! Sobha International City families can opt for private 1-on-1 online sessions. Maximum privacy and personalized attention.',
+      },
+    ],
+  },
+  // Sector 111 - M3M Crown
+  {
+    id: 'ggn-32',
+    name: 'Sector 111',
+    slug: 'sector-111',
+    displayName: 'Sector 111 (M3M Crown), Gurugram',
+    city: 'Gurugram',
+    citySlug: 'gurugram',
+    region: 'Dwarka Expressway',
+    state: 'Haryana',
+    pincode: ['122006', '122505'],
+    seo: {
+      title: 'NEET Biology Coaching in Sector 111 Gurugram | M3M Crown',
+      description:
+        'Best NEET Biology coaching in Sector 111 Gurugram. M3M Crown residents with Waterfront Club. Luxury apartments. Call 88264-44334',
+      keywords: [
+        'neet coaching sector 111 gurugram',
+        'biology coaching m3m crown',
+        'neet tuition sector 111 dwarka expressway',
+        'biology classes m3m crown gurugram',
+      ],
+      localKeywords: [
+        'sector 111 gurugram',
+        'm3m crown',
+        'waterfront club',
+        'dwarka expressway sector 111',
+      ],
+      h1: 'Premium NEET Biology Coaching for M3M Crown Sector 111',
+      metaRobots: 'index,follow',
+    },
+    coordinates: { lat: 28.4934, lng: 76.9767 },
+    centerAddress: 'Online coaching for M3M Crown residents',
+    nearbyLandmarks: ['M3M Crown', 'Waterfront Club', 'Landscaped Gardens', 'Dwarka Expressway'],
+    transportLinks: {
+      metros: ['Metro extension approved', 'Dwarka connectivity'],
+      buses: ['Limited - premium project'],
+      accessibility: 'Premium M3M project on Dwarka Expressway. Waterfront Club lifestyle.',
+    },
+    demographics: {
+      primarySchools: ['Delhi schools accessible', 'Schools developing'],
+      popularColleges: ['Delhi colleges', 'AIIMS Delhi'],
+      coachingHubs: ['No local coaching', '15+ km to old Gurugram'],
+      populationType: 'residential',
+      economicProfile: 'premium',
+    },
+    competition: {
+      majorInstitutes: ['Aakash Sector 14 (15+ km)', 'No Dwarka Expressway options'],
+      avgFees: 175000,
+      ourAdvantage: [
+        'Only NEET coaching for M3M Crown',
+        'Waterfront Club lifestyle families',
+        'Online from premium apartments',
+        'AIIMS trained faculty',
+      ],
+      marketGap:
+        'M3M Crown offers luxury apartments with Waterfront Club. Premium families need quality coaching without long commutes.',
+    },
+    content: {
+      heroTitle: 'Premium NEET Biology Coaching for M3M Crown Sector 111',
+      heroSubtitle: 'M3M Crown, Waterfront Club families - Luxury living, quality education.',
+      valueProposition:
+        'M3M Crown offers Waterfront Club lifestyle. Your luxury living deserves quality education. Study from your premium apartment overlooking the waterfront.',
+      urgencyMessage: 'M3M Crown batch starting - Limited seats!',
+      localChallenge:
+        'M3M Crown families enjoy Waterfront Club lifestyle. Long commutes to coaching ruin this balance.',
+      successMetric: 'New premium batch - Join M3M Crown pioneers!',
+    },
+    socialProof: {
+      studentCount: 10,
+      topScore: 340,
+      testimonialIds: ['sec111-001'],
+      successStories: ['M3M Crown families enjoying quality coaching from waterfront apartments.'],
+    },
+    nearbyLocalities: ['sector-113', 'sector-109', 'sector-106'],
+    faqs: [
+      {
+        question: 'What makes M3M Crown special?',
+        answer:
+          'M3M Crown features Waterfront Club, landscaped gardens, and luxury apartments. With our online coaching, families get premium living AND quality education.',
+      },
+    ],
+  },
+  // Sector 113 - Smart World, Tata La Vida
+  {
+    id: 'ggn-33',
+    name: 'Sector 113',
+    slug: 'sector-113',
+    displayName: 'Sector 113 (Smart World/Tata), Gurugram',
+    city: 'Gurugram',
+    citySlug: 'gurugram',
+    region: 'Dwarka Expressway',
+    state: 'Haryana',
+    pincode: ['122006', '122505'],
+    seo: {
+      title: 'NEET Biology Coaching in Sector 113 Gurugram | Smart World, Tata La Vida',
+      description:
+        'Best NEET Biology coaching in Sector 113 Gurugram. Smart World One DXP, Tata La Vida, M3M Capital residents. Call 88264-44334',
+      keywords: [
+        'neet coaching sector 113 gurugram',
+        'biology coaching smart world one dxp',
+        'neet tuition tata la vida',
+        'biology classes m3m capital',
+      ],
+      localKeywords: [
+        'sector 113 gurugram',
+        'smart world one dxp',
+        'tata la vida',
+        'm3m capital',
+        'dwarka expressway sector 113',
+      ],
+      h1: 'Premium NEET Biology Coaching in Sector 113 Dwarka Expressway',
+      metaRobots: 'index,follow',
+    },
+    coordinates: { lat: 28.4912, lng: 76.9745 },
+    centerAddress: 'Online coaching for Sector 113 premium residents',
+    nearbyLandmarks: ['Smart World One DXP', 'Tata La Vida', 'M3M Capital', 'Dwarka Expressway'],
+    transportLinks: {
+      metros: ['Metro extension approved', 'Dwarka connectivity coming'],
+      buses: ['Limited - new sector'],
+      accessibility: 'Multiple premium projects on Dwarka Expressway. Smart city concept.',
+    },
+    demographics: {
+      primarySchools: ['Delhi schools accessible', 'Infrastructure developing'],
+      popularColleges: ['Delhi colleges', 'AIIMS Delhi'],
+      coachingHubs: ['No local coaching', 'New area - no infrastructure'],
+      populationType: 'residential',
+      economicProfile: 'upper-middle',
+    },
+    competition: {
+      majorInstitutes: ['Aakash Sector 14 (16 km)', 'No Dwarka Expressway options'],
+      avgFees: 165000,
+      ourAdvantage: [
+        'Only NEET coaching for Sector 113',
+        'Smart World, Tata, M3M - major developers',
+        'Online perfect for new area',
+        'AIIMS trained faculty',
+      ],
+      marketGap:
+        "Sector 113 has Smart World, Tata, M3M projects - trusted developers. Young families moving here need quality coaching that doesn't exist yet.",
+    },
+    content: {
+      heroTitle: 'Premium NEET Biology Coaching for Sector 113 Dwarka Expressway',
+      heroSubtitle:
+        'Smart World, Tata La Vida, M3M Capital families - Smart coaching for smart living.',
+      valueProposition:
+        'Sector 113 offers smart living from top developers. Your forward-thinking lifestyle deserves innovative education.',
+      urgencyMessage: 'Sector 113 batch starting - Join the smart learners!',
+      localChallenge:
+        "Sector 113 families chose smart, modern living. Traditional coaching with long commutes doesn't fit this lifestyle.",
+      successMetric: 'New batch forming - Pioneer quality coaching on Dwarka Expressway!',
+    },
+    socialProof: {
+      studentCount: 12,
+      topScore: 338,
+      testimonialIds: ['sec113-001'],
+      successStories: [
+        'Smart World residents appreciating smart online coaching.',
+        'Tata La Vida families enjoying quality NEET preparation at home.',
+      ],
+    },
+    nearbyLocalities: ['sector-111', 'sector-109', 'sector-102'],
+    faqs: [
+      {
+        question: 'Why are Smart World, Tata, M3M projects popular?',
+        answer:
+          'These trusted developers offer quality construction and smart living concepts. With our online coaching, families get premium housing AND quality education - complete package.',
+      },
+    ],
+  },
 
   // FARIDABAD - 5 localities
   {

@@ -370,10 +370,12 @@ export default function FacultyPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold mb-6">Learn from the Best Biology Faculty</h2>
-          <p className="text-xl text-purple-100 mb-8">
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
+            Learn from the Best Biology Faculty
+          </h2>
+          <p className="text-base sm:text-lg md:text-xl text-purple-100 mb-6 sm:mb-8">
             Experience world-class biology education with our expert faculty. Book a demo class and
             see the difference quality teaching makes.
           </p>
@@ -398,18 +400,18 @@ export default function FacultyPage() {
             </Link>
           </div>
 
-          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 text-center">
+          <div className="mt-8 sm:mt-10 md:mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 text-center">
             <div>
-              <div className="text-3xl font-bold mb-2">50+</div>
-              <div className="text-purple-100">Expert Faculty</div>
+              <div className="text-2xl sm:text-3xl font-bold mb-1 sm:mb-2">50+</div>
+              <div className="text-purple-100 text-sm sm:text-base">Expert Faculty</div>
             </div>
             <div>
-              <div className="text-3xl font-bold mb-2">20+</div>
-              <div className="text-purple-100">AIIMS Alumni</div>
+              <div className="text-2xl sm:text-3xl font-bold mb-1 sm:mb-2">20+</div>
+              <div className="text-purple-100 text-sm sm:text-base">AIIMS Alumni</div>
             </div>
             <div>
-              <div className="text-3xl font-bold mb-2">15+</div>
-              <div className="text-purple-100">Years Experience</div>
+              <div className="text-2xl sm:text-3xl font-bold mb-1 sm:mb-2">15+</div>
+              <div className="text-purple-100 text-sm sm:text-base">Years Experience</div>
             </div>
           </div>
         </div>

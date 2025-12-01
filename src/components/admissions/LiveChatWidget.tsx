@@ -103,7 +103,7 @@ export function LiveChatWidget({ whatsappNumber = '+918826444334' }: LiveChatWid
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed bottom-20 sm:bottom-24 right-4 sm:right-6 w-[calc(100%-2rem)] sm:w-96 bg-white rounded-2xl shadow-2xl z-50 overflow-hidden"
+            className="fixed bottom-20 sm:bottom-24 right-4 sm:right-6 w-[calc(100%-2rem)] max-w-[calc(100vw-2rem)] sm:w-96 sm:max-w-96 bg-white rounded-2xl shadow-2xl z-50 overflow-hidden"
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
@@ -199,7 +199,7 @@ export function LiveChatWidget({ whatsappNumber = '+918826444334' }: LiveChatWid
 
                   <div className="border-t pt-4">
                     <p className="text-xs text-gray-500 mb-3">Can't find your answer?</p>
-                    <div className="grid grid-cols-2 gap-2">
+                    <div className="grid grid-cols-1 xs:grid-cols-2 gap-2">
                       <button
                         onClick={() => {
                           handleWhatsAppRedirect()

@@ -107,7 +107,7 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <motion.h1
-              className="text-3xl sm:text-4xl sm:text-5xl font-bold mb-4 sm:mb-6"
+              className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -115,7 +115,7 @@ export default function ContactPage() {
               Get In Touch With Us
             </motion.h1>
             <motion.p
-              className="text-base sm:text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto mb-6 sm:mb-8"
+              className="text-base sm:text-lg md:text-xl text-blue-100 max-w-3xl mx-auto mb-6 sm:mb-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -152,30 +152,30 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Information */}
-      <section className="py-12 sm:py-16 sm:py-20">
+      <section className="py-12 sm:py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10 sm:mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl sm:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
+          <div className="text-center mb-10 sm:mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
               Contact Information
             </h2>
-            <p className="text-base sm:text-lg sm:text-xl text-gray-600">
+            <p className="text-base sm:text-lg md:text-xl text-gray-600">
               Multiple ways to reach us for your convenience
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-10 sm:mb-12 sm:mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-10 sm:mb-12 md:mb-16">
             {contactInfo.map((info, index) => (
               <motion.div
                 key={index}
-                className="bg-white rounded-2xl sm:rounded-3xl shadow-lg p-5 sm:p-6 sm:p-8 text-center hover:shadow-xl transition-shadow"
+                className="bg-white rounded-2xl sm:rounded-3xl shadow-lg p-5 sm:p-6 md:p-8 text-center hover:shadow-xl transition-shadow"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <div
-                  className={`w-12 sm:w-14 sm:w-16 h-12 sm:h-14 sm:h-16 ${info.color} rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-5 sm:mb-6`}
+                  className={`w-12 sm:w-14 md:w-16 h-12 sm:h-14 md:h-16 ${info.color} rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-5 md:mb-6`}
                 >
-                  <info.icon className="w-6 sm:w-7 sm:w-8 h-6 sm:h-7 sm:h-8 text-white" />
+                  <info.icon className="w-6 sm:w-7 md:w-8 h-6 sm:h-7 md:h-8 text-white" />
                 </div>
                 <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">
                   {info.title}
@@ -192,11 +192,11 @@ export default function ContactPage() {
           </div>
 
           {/* Quick Links */}
-          <div className="bg-white rounded-2xl sm:rounded-3xl shadow-lg p-5 sm:p-6 sm:p-8">
-            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-5 sm:mb-6 text-center">
+          <div className="bg-white rounded-2xl sm:rounded-3xl shadow-lg p-5 sm:p-6 md:p-8">
+            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-5 md:mb-6 text-center">
               Quick Actions
             </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5 sm:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-6">
               {quickLinks.map((link, index) => (
                 <Link key={index} href={link.href}>
                   <motion.div
@@ -219,19 +219,19 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Form */}
-      <section className="py-12 sm:py-16 sm:py-20 bg-white">
+      <section className="py-12 sm:py-16 md:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10 sm:mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl sm:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
+          <div className="text-center mb-10 sm:mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
               Send Us a Message
             </h2>
-            <p className="text-base sm:text-lg sm:text-xl text-gray-600">
+            <p className="text-base sm:text-lg md:text-xl text-gray-600">
               We'll get back to you within 24 hours
             </p>
           </div>
 
           <motion.div
-            className="bg-gray-50 rounded-2xl sm:rounded-3xl shadow-lg p-5 sm:p-6 sm:p-8"
+            className="bg-gray-50 rounded-2xl sm:rounded-3xl shadow-lg p-5 sm:p-6 md:p-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -361,25 +361,25 @@ export default function ContactPage() {
       </section>
 
       {/* Map Section */}
-      <section className="py-12 sm:py-16 sm:py-20">
+      <section className="py-12 sm:py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10 sm:mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl sm:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
+          <div className="text-center mb-10 sm:mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
               Find Us On Map
             </h2>
-            <p className="text-base sm:text-lg sm:text-xl text-gray-600">
+            <p className="text-base sm:text-lg md:text-xl text-gray-600">
               Conveniently located near metro stations
             </p>
           </div>
 
           <div className="bg-white rounded-2xl sm:rounded-3xl shadow-lg overflow-hidden">
             <div className="grid lg:grid-cols-2">
-              <div className="p-5 sm:p-6 sm:p-8">
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-5 sm:mb-6">
+              <div className="p-5 sm:p-6 md:p-8">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-5 md:mb-6">
                   Visit Our Campus
                 </h3>
 
-                <div className="space-y-4 sm:space-y-5 sm:space-y-6">
+                <div className="space-y-4 sm:space-y-5 md:space-y-6">
                   <div className="flex items-start">
                     <Building className="w-5 sm:w-6 h-5 sm:h-6 text-blue-600 mr-3 sm:mr-4 mt-1 flex-shrink-0" />
                     <div>
@@ -417,7 +417,7 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="mt-6 sm:mt-7 sm:mt-8">
+                <div className="mt-6 sm:mt-7 md:mt-8">
                   <Button variant="primary" size="lg" className="w-full min-h-11 sm:min-h-12">
                     <Calendar className="w-5 h-5 mr-2" />
                     Schedule Campus Visit
@@ -425,9 +425,9 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="bg-gray-100 h-64 sm:h-80 sm:h-96 lg:h-full flex items-center justify-center p-4">
+              <div className="bg-gray-100 h-64 sm:h-80 md:h-96 lg:h-full flex items-center justify-center p-4">
                 <div className="text-center">
-                  <MapPin className="w-12 sm:w-14 sm:w-16 h-12 sm:h-14 sm:h-16 text-gray-400 mx-auto mb-3 sm:mb-4" />
+                  <MapPin className="w-12 sm:w-14 md:w-16 h-12 sm:h-14 md:h-16 text-gray-400 mx-auto mb-3 sm:mb-4" />
                   <p className="text-gray-600 text-sm sm:text-base">Interactive Map Coming Soon</p>
                   <p className="text-xs sm:text-sm text-gray-500 mt-2">
                     A-2/45, Sector 16, Noida, UP 201301
@@ -440,12 +440,12 @@ export default function ContactPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 sm:py-16 sm:py-20 bg-gradient-to-r from-green-600 to-blue-600 text-white">
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-r from-green-600 to-blue-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-          <h2 className="text-2xl sm:text-3xl sm:text-4xl font-bold mb-4 sm:mb-5 sm:mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-5 md:mb-6">
             Ready to Start Your NEET Journey?
           </h2>
-          <p className="text-base sm:text-lg sm:text-xl text-green-100 mb-6 sm:mb-7 sm:mb-8">
+          <p className="text-base sm:text-lg md:text-xl text-green-100 mb-6 sm:mb-7 md:mb-8">
             Join thousands of successful students and achieve your medical dreams with expert
             guidance.
           </p>
