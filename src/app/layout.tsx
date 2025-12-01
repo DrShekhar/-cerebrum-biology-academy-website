@@ -142,7 +142,7 @@ export default function RootLayout({
           <ToastProvider>
             <TrustProvider
               enableSocialProof={false}
-              enableTrustBadges={true}
+              enableTrustBadges={false}
               enableRealTimeUpdates={false}
             >
               <PageErrorBoundary>
