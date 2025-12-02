@@ -16,6 +16,7 @@ import {
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
+import { LanguageSwitcher } from '@/components/i18n/LanguageSwitcher'
 
 export const Footer = memo(function Footer() {
   const currentYear = new Date().getFullYear()
@@ -427,6 +428,12 @@ export const Footer = memo(function Footer() {
                 </Link>
               </span>
             </div>
+          </div>
+
+          {/* Language Switcher */}
+          <div className="mt-6 pt-4 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="text-gray-400 text-sm">Choose your language:</div>
+            <LanguageSwitcher variant="footer" />
           </div>
         </div>
       </div>

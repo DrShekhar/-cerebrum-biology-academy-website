@@ -66,6 +66,14 @@ const VideoLectureShowcase = dynamic(
   { loading: () => <LoadingSkeleton />, ssr: true }
 )
 
+const VideoTestimonialsSection = dynamic(
+  () =>
+    import('@/components/testimonials/VideoTestimonialsSection').then(
+      (mod) => mod.VideoTestimonialsSection
+    ),
+  { loading: () => <LoadingSkeleton />, ssr: true }
+)
+
 const SuccessTicker = dynamic(
   () => import('@/components/ui/SuccessTicker').then((mod) => mod.SuccessTicker),
   { loading: () => null }
@@ -109,6 +117,9 @@ export default function Home() {
         title="Real Student Success Stories"
         subtitle="Hear directly from our NEET toppers who achieved their dreams"
       />
+
+      {/* Video Testimonials Section */}
+      <VideoTestimonialsSection />
 
       {/* Success Stories / Transformation Section */}
       <SuccessStoriesSection

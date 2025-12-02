@@ -12,10 +12,12 @@ import { AuthProvider } from '@/contexts/AuthContext'
 import { ToastProvider } from '@/components/ui/Toast'
 import { TrialBannerWrapper } from '@/components/trial/TrialBannerWrapper'
 import { TrustProvider } from '@/components/providers/TrustProvider'
+import { PersonalizationProvider } from '@/components/providers/PersonalizationProvider'
 import { SkipToContent } from '@/components/accessibility/SkipToContent'
 import { FocusVisibleStyles } from '@/components/accessibility/FocusVisibleStyles'
 import { FloatingCTA } from '@/components/common/FloatingCTA'
 import { GlobalExitIntent } from '@/components/conversion/GlobalExitIntent'
+import { ChatbotWrapper } from '@/components/chat/ChatbotWrapper'
 import './globals.css'
 
 const geistSans = Geist({
@@ -146,24 +148,27 @@ export default function RootLayout({
               enableTrustBadges={false}
               enableRealTimeUpdates={false}
             >
-              <PageErrorBoundary>
-                <SkipToContent />
-                <div data-section="navigation" className="priority-immediate" role="banner">
-                  <Header />
-                </div>
-                <TrialBannerWrapper />
-                <main id="main-content" role="main" className="min-h-screen pb-16 md:pb-0">
-                  {children}
-                </main>
-                <div data-lazy="footer" className="priority-lazy" role="contentinfo">
-                  <Footer />
-                </div>
-                <div data-section="mobile-navigation" className="priority-immediate">
-                  <MobileNavigation />
-                </div>
-                <FloatingCTA />
-                <GlobalExitIntent />
-              </PageErrorBoundary>
+              <PersonalizationProvider>
+                <PageErrorBoundary>
+                  <SkipToContent />
+                  <div data-section="navigation" className="priority-immediate" role="banner">
+                    <Header />
+                  </div>
+                  <TrialBannerWrapper />
+                  <main id="main-content" role="main" className="min-h-screen pb-16 md:pb-0">
+                    {children}
+                  </main>
+                  <div data-lazy="footer" className="priority-lazy" role="contentinfo">
+                    <Footer />
+                  </div>
+                  <div data-section="mobile-navigation" className="priority-immediate">
+                    <MobileNavigation />
+                  </div>
+                  <FloatingCTA />
+                  <GlobalExitIntent />
+                  <ChatbotWrapper />
+                </PageErrorBoundary>
+              </PersonalizationProvider>
             </TrustProvider>
           </ToastProvider>
         </AuthProvider>
