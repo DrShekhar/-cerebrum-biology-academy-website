@@ -181,7 +181,7 @@ export function LiveEnrollmentNotifications({
 
     let message = ''
     let urgency: 'low' | 'medium' | 'high' = 'low'
-    let seatsLeft = course.capacity - course.enrolled
+    const seatsLeft = course.capacity - course.enrolled
 
     // Adjust for realistic urgency
     if (seatsLeft < 10) urgency = 'high'

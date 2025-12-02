@@ -29,7 +29,7 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
     const format = searchParams.get('format') || 'html'
 
     // Try to fetch from payments table first
-    let payment = await prisma.payments.findFirst({
+    const payment = await prisma.payments.findFirst({
       where: {
         id: paymentId,
         userId: session.user.id,

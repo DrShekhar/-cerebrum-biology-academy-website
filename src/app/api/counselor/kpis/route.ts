@@ -54,7 +54,7 @@ export async function GET(req: NextRequest) {
     }
 
     let startDate: Date
-    let endDate: Date = endOfDay(new Date())
+    const endDate: Date = endOfDay(new Date())
 
     switch (period) {
       case 'today':

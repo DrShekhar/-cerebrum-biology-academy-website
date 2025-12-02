@@ -83,7 +83,7 @@ interface WebhookEvent {
  */
 function formatPhoneNumber(phone: string): { countryCode: string; phoneNumber: string } {
   // Remove all non-digit characters except +
-  let cleaned = phone.replace(/[^\d+]/g, '')
+  const cleaned = phone.replace(/[^\d+]/g, '')
 
   // Handle different formats
   if (cleaned.startsWith('+91')) {

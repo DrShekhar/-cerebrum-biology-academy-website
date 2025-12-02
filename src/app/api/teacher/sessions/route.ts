@@ -231,7 +231,7 @@ function generateRecurringSessions(data: any, teacherId: string) {
   const startTime = new Date(data.startTime)
   const endTime = new Date(data.endTime)
 
-  let currentDate = new Date(startDate)
+  const currentDate = new Date(startDate)
 
   while (currentDate <= endDate) {
     let shouldCreate = false

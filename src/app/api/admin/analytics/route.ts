@@ -93,7 +93,7 @@ export async function GET(request: NextRequest) {
     // In a real implementation, this would filter data based on timeframe
     // For now, returning mock data with simulated filtering
 
-    let filteredData = { ...mockAnalyticsData }
+    const filteredData = { ...mockAnalyticsData }
 
     // Simulate timeframe filtering
     if (timeframe === '1d') {

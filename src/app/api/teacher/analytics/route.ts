@@ -119,7 +119,7 @@ export async function GET(request: NextRequest) {
       _count: { id: true },
     })
 
-    let totalAssignments = assignmentsData.length
+    const totalAssignments = assignmentsData.length
     let totalSubmissions = 0
     let gradedSubmissions = 0
     let totalGradePoints = 0
