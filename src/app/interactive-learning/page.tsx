@@ -182,14 +182,18 @@ export default function InteractiveLearningPage() {
         </div>
 
         <div className="flex flex-col sm:flex-row gap-6 justify-center">
-          <Button variant="secondary_cta" size="xl">
-            <Play className="w-6 h-6 mr-3" />
-            Try Interactive Demo
-          </Button>
-          <Button variant="premium_cta" size="xl" className="border-2 border-white">
-            <Microscope className="w-6 h-6 mr-3" />
-            Explore Virtual Lab
-          </Button>
+          <Link href="/demo-booking">
+            <Button variant="secondary_cta" size="xl">
+              <Play className="w-6 h-6 mr-3" />
+              Try Interactive Demo
+            </Button>
+          </Link>
+          <Link href="/courses">
+            <Button variant="premium_cta" size="xl" className="border-2 border-white">
+              <Microscope className="w-6 h-6 mr-3" />
+              Explore Virtual Lab
+            </Button>
+          </Link>
         </div>
       </HeroSection>
 
@@ -248,9 +252,11 @@ export default function InteractiveLearningPage() {
               <AcademicList variant="checkmark" items={method.features} className="text-gray-700" />
 
               <div className="mt-6 pt-6 border-t border-gray-100">
-                <Button variant="ghost" className="text-blue-600 hover:text-blue-800 p-0">
-                  Learn More <ArrowRight className="w-4 h-4 ml-2" />
-                </Button>
+                <Link href="/courses">
+                  <Button variant="ghost" className="text-blue-600 hover:text-blue-800 p-0">
+                    Learn More <ArrowRight className="w-4 h-4 ml-2" />
+                  </Button>
+                </Link>
               </div>
             </AcademicCard>
           ))}

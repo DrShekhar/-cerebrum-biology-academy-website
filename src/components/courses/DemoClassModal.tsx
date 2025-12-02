@@ -6,7 +6,13 @@ import { Button } from '@/components/ui/Button'
 import { Card } from '@/components/ui/Card'
 import { Input } from '@/components/ui/Input'
 import { Label } from '@/components/ui/Label'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/Select'
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/Select'
 import { Textarea } from '@/components/ui/Textarea'
 import { X, Calendar, Clock, User, Phone, Mail, CheckCircle } from 'lucide-react'
 
@@ -25,22 +31,22 @@ export function DemoClassModal({ course, onClose }: DemoClassModalProps) {
     parentPhone: '',
     currentClass: '',
     preferredTime: '',
-    questions: ''
+    questions: '',
   })
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    
+
     // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 2000))
-    
+    await new Promise((resolve) => setTimeout(resolve, 2000))
+
     setIsSubmitting(false)
     setIsSuccess(true)
   }
 
   const handleInputChange = (field: string, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }))
+    setFormData((prev) => ({ ...prev, [field]: value }))
   }
 
   if (isSuccess) {
@@ -51,7 +57,8 @@ export function DemoClassModal({ course, onClose }: DemoClassModalProps) {
             <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-green-700 mb-2">Demo Class Booked!</h3>
             <p className="text-gray-600">
-              Thank you for your interest! Our counselor will contact you within 24 hours to schedule your free demo class.
+              Thank you for your interest! Our counselor will contact you within 24 hours to
+              schedule your free demo class.
             </p>
           </div>
           <Button onClick={onClose} className="w-full">
@@ -63,17 +70,18 @@ export function DemoClassModal({ course, onClose }: DemoClassModalProps) {
   }
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm p-4">
-      <Card className="w-full max-w-2xl max-h-[90vh] overflow-y-auto">
-        <div className="p-6">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm p-2 sm:p-4">
+      <Card className="w-full max-w-2xl max-h-[95vh] sm:max-h-[90vh] overflow-y-auto">
+        <div className="p-4 sm:p-6">
           {/* Header */}
-          <div className="flex justify-between items-start mb-6">
+          <div className="flex justify-between items-start mb-4 sm:mb-6">
             <div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-2">
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">
                 Book Free Demo Class
               </h2>
               <p className="text-gray-600">
-                Experience our teaching methodology with a complimentary demo session for {course.name}
+                Experience our teaching methodology with a complimentary demo session for{' '}
+                {course.name}
               </p>
             </div>
             <Button
@@ -87,7 +95,7 @@ export function DemoClassModal({ course, onClose }: DemoClassModalProps) {
           </div>
 
           {/* Course Info */}
-          <Card className="bg-gradient-to-r from-blue-50 to-blue-100 p-4 mb-6 border-blue-200">
+          <Card className="bg-gradient-to-r from-blue-50 to-blue-100 p-3 sm:p-4 mb-4 sm:mb-6 border-blue-200">
             <div className="flex items-center gap-4">
               <div className="bg-blue-500 text-white p-2 rounded-lg">
                 <Calendar className="h-5 w-5" />
@@ -117,7 +125,7 @@ export function DemoClassModal({ course, onClose }: DemoClassModalProps) {
                   required
                 />
               </div>
-              
+
               <div>
                 <Label htmlFor="email" className="flex items-center gap-2">
                   <Mail className="h-4 w-4" />
@@ -148,7 +156,7 @@ export function DemoClassModal({ course, onClose }: DemoClassModalProps) {
                   required
                 />
               </div>
-              
+
               <div>
                 <Label htmlFor="parentPhone">Parent Phone *</Label>
                 <Input
@@ -164,7 +172,10 @@ export function DemoClassModal({ course, onClose }: DemoClassModalProps) {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <Label htmlFor="currentClass">Current Class/Status *</Label>
-                <Select onValueChange={(value) => handleInputChange('currentClass', value)} required>
+                <Select
+                  onValueChange={(value) => handleInputChange('currentClass', value)}
+                  required
+                >
                   <SelectTrigger>
                     <SelectValue placeholder="Select current class" />
                   </SelectTrigger>
@@ -177,7 +188,7 @@ export function DemoClassModal({ course, onClose }: DemoClassModalProps) {
                   </SelectContent>
                 </Select>
               </div>
-              
+
               <div>
                 <Label htmlFor="preferredTime" className="flex items-center gap-2">
                   <Clock className="h-4 w-4" />
@@ -210,7 +221,9 @@ export function DemoClassModal({ course, onClose }: DemoClassModalProps) {
 
             {/* Benefits */}
             <Card className="bg-green-50 border-green-200 p-4">
-              <h4 className="font-semibold text-green-800 mb-2">What to Expect in Your Demo Class:</h4>
+              <h4 className="font-semibold text-green-800 mb-2">
+                What to Expect in Your Demo Class:
+              </h4>
               <ul className="text-sm text-green-700 space-y-1">
                 <li>• Live interactive session with expert faculty</li>
                 <li>• Sample of our teaching methodology</li>
@@ -222,19 +235,10 @@ export function DemoClassModal({ course, onClose }: DemoClassModalProps) {
 
             {/* Submit Button */}
             <div className="flex gap-3 pt-4">
-              <Button
-                type="submit"
-                className="flex-1"
-                disabled={isSubmitting}
-              >
+              <Button type="submit" className="flex-1" disabled={isSubmitting}>
                 {isSubmitting ? 'Booking Demo...' : 'Book Free Demo Class'}
               </Button>
-              <Button
-                type="button"
-                variant="outline"
-                onClick={onClose}
-                disabled={isSubmitting}
-              >
+              <Button type="button" variant="outline" onClick={onClose} disabled={isSubmitting}>
                 Cancel
               </Button>
             </div>
@@ -242,7 +246,8 @@ export function DemoClassModal({ course, onClose }: DemoClassModalProps) {
 
           {/* Footer Note */}
           <p className="text-xs text-gray-500 mt-4 text-center">
-            By booking a demo class, you agree to our terms and conditions. No payment required for demo session.
+            By booking a demo class, you agree to our terms and conditions. No payment required for
+            demo session.
           </p>
         </div>
       </Card>

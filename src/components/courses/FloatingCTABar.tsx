@@ -99,13 +99,21 @@ export function FloatingCTABar({ course }: FloatingCTABarProps) {
               Demo Class
             </Button>
 
-            <Button size="sm" variant="outline" className="flex items-center gap-2">
-              <Phone className="h-4 w-4" />
-              <span className="hidden sm:inline">Call Now</span>
-              <span className="sm:hidden">Call</span>
-            </Button>
+            <a href="tel:+918826444334">
+              <Button size="sm" variant="outline" className="flex items-center gap-2">
+                <Phone className="h-4 w-4" />
+                <span className="hidden sm:inline">Call Now</span>
+                <span className="sm:hidden">Call</span>
+              </Button>
+            </a>
 
-            <Button size="sm" className="bg-blue-600 hover:bg-blue-700 flex items-center gap-2">
+            <Button
+              size="sm"
+              className="bg-blue-600 hover:bg-blue-700 flex items-center gap-2"
+              onClick={() => {
+                window.location.href = `/checkout?course=${encodeURIComponent(course.id)}`
+              }}
+            >
               <CreditCard className="h-4 w-4" />
               <span className="hidden sm:inline">Enroll Now</span>
               <span className="sm:hidden">Enroll</span>

@@ -95,22 +95,26 @@ export default async function FacultyProfilePage({ params }: Props) {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                  <Button
-                    variant="outline"
-                    size="lg"
-                    className="border-white text-white hover:bg-white hover:text-blue-600"
-                  >
-                    <Calendar className="w-5 h-5 mr-2" />
-                    Schedule Meeting
-                  </Button>
-                  <Button
-                    variant="primary"
-                    size="lg"
-                    className="bg-white text-blue-600 hover:bg-gray-100"
-                  >
-                    <MessageSquare className="w-5 h-5 mr-2" />
-                    Ask Question
-                  </Button>
+                  <Link href="/demo-booking">
+                    <Button
+                      variant="outline"
+                      size="lg"
+                      className="border-white text-white hover:bg-white hover:text-blue-600"
+                    >
+                      <Calendar className="w-5 h-5 mr-2" />
+                      Schedule Meeting
+                    </Button>
+                  </Link>
+                  <Link href="/contact">
+                    <Button
+                      variant="primary"
+                      size="lg"
+                      className="bg-white text-blue-600 hover:bg-gray-100"
+                    >
+                      <MessageSquare className="w-5 h-5 mr-2" />
+                      Ask Question
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </motion.div>
@@ -250,18 +254,24 @@ export default async function FacultyProfilePage({ params }: Props) {
               >
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">Get In Touch</h3>
                 <div className="space-y-4">
-                  <Button variant="primary" size="lg" className="w-full">
-                    <Calendar className="w-5 h-5 mr-2" />
-                    Book Demo Class
-                  </Button>
-                  <Button variant="outline" size="lg" className="w-full">
-                    <MessageSquare className="w-5 h-5 mr-2" />
-                    Ask Doubts
-                  </Button>
-                  <Button variant="outline" size="lg" className="w-full">
-                    <Video className="w-5 h-5 mr-2" />
-                    Video Call
-                  </Button>
+                  <Link href="/demo-booking">
+                    <Button variant="primary" size="lg" className="w-full">
+                      <Calendar className="w-5 h-5 mr-2" />
+                      Book Demo Class
+                    </Button>
+                  </Link>
+                  <Link href="/contact">
+                    <Button variant="outline" size="lg" className="w-full">
+                      <MessageSquare className="w-5 h-5 mr-2" />
+                      Ask Doubts
+                    </Button>
+                  </Link>
+                  <Link href="/demo-booking">
+                    <Button variant="outline" size="lg" className="w-full">
+                      <Video className="w-5 h-5 mr-2" />
+                      Video Call
+                    </Button>
+                  </Link>
                 </div>
               </motion.div>
 
@@ -339,14 +349,16 @@ export default async function FacultyProfilePage({ params }: Props) {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              variant="outline"
-              size="xl"
-              className="border-white text-white hover:bg-white hover:text-purple-600"
-            >
-              <Calendar className="w-5 h-5 mr-2" />
-              Book Demo Class
-            </Button>
+            <Link href="/demo-booking">
+              <Button
+                variant="outline"
+                size="xl"
+                className="border-white text-white hover:bg-white hover:text-purple-600"
+              >
+                <Calendar className="w-5 h-5 mr-2" />
+                Book Demo Class
+              </Button>
+            </Link>
             <Link href="/contact">
               <Button
                 variant="primary"

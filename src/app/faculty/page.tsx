@@ -108,14 +108,16 @@ export default function FacultyPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-white text-white hover:bg-white hover:text-green-600 w-full sm:w-auto"
-              >
-                <Calendar className="w-5 h-5 mr-2" />
-                Book Faculty Interaction
-              </Button>
+              <Link href="/demo-booking" className="w-full sm:w-auto">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="border-white text-white hover:bg-white hover:text-green-600 w-full"
+                >
+                  <Calendar className="w-5 h-5 mr-2" />
+                  Book Faculty Interaction
+                </Button>
+              </Link>
               <Link href="/contact" className="w-full sm:w-auto">
                 <Button
                   variant="primary"
@@ -200,9 +202,11 @@ export default function FacultyPage() {
                   </div>
                 </div>
                 <p className="text-gray-600 mb-6">{spec.description}</p>
-                <Button variant="outline" size="sm">
-                  View Faculty <ArrowRight className="w-4 h-4 ml-2" />
-                </Button>
+                <Link href="/faculty">
+                  <Button variant="outline" size="sm">
+                    View Faculty <ArrowRight className="w-4 h-4 ml-2" />
+                  </Button>
+                </Link>
               </motion.div>
             ))}
           </div>
@@ -253,14 +257,18 @@ export default function FacultyPage() {
                   </div>
 
                   <div className="flex gap-3">
-                    <Button variant="outline" size="sm" className="flex-1">
-                      <MessageSquare className="w-4 h-4 mr-2" />
-                      Profile
-                    </Button>
-                    <Button variant="primary" size="sm" className="flex-1">
-                      <Calendar className="w-4 h-4 mr-2" />
-                      Meet
-                    </Button>
+                    <Link href={`/faculty/${faculty.id}`} className="flex-1">
+                      <Button variant="outline" size="sm" className="w-full">
+                        <MessageSquare className="w-4 h-4 mr-2" />
+                        Profile
+                      </Button>
+                    </Link>
+                    <Link href="/demo-booking" className="flex-1">
+                      <Button variant="primary" size="sm" className="w-full">
+                        <Calendar className="w-4 h-4 mr-2" />
+                        Meet
+                      </Button>
+                    </Link>
                   </div>
                 </div>
               </motion.div>
@@ -268,10 +276,12 @@ export default function FacultyPage() {
           </div>
 
           <div className="text-center mt-12">
-            <Button variant="primary" size="lg">
-              View All Faculty Members
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
+            <Link href="/faculty">
+              <Button variant="primary" size="lg">
+                View All Faculty Members
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -356,14 +366,18 @@ export default function FacultyPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="outline" size="lg">
-                <GraduationCap className="w-5 h-5 mr-2" />
-                Faculty Requirements
-              </Button>
-              <Button variant="primary" size="lg">
-                <MessageSquare className="w-5 h-5 mr-2" />
-                Apply Now
-              </Button>
+              <Link href="/about/careers">
+                <Button variant="outline" size="lg">
+                  <GraduationCap className="w-5 h-5 mr-2" />
+                  Faculty Requirements
+                </Button>
+              </Link>
+              <Link href="/about/careers">
+                <Button variant="primary" size="lg">
+                  <MessageSquare className="w-5 h-5 mr-2" />
+                  Apply Now
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -381,14 +395,16 @@ export default function FacultyPage() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              variant="outline"
-              size="xl"
-              className="border-white text-white hover:bg-white hover:text-purple-600"
-            >
-              <Play className="w-5 h-5 mr-2" />
-              Watch Demo Class
-            </Button>
+            <Link href="/demo-booking">
+              <Button
+                variant="outline"
+                size="xl"
+                className="border-white text-white hover:bg-white hover:text-purple-600"
+              >
+                <Play className="w-5 h-5 mr-2" />
+                Watch Demo Class
+              </Button>
+            </Link>
             <Link href="/contact">
               <Button
                 variant="primary"

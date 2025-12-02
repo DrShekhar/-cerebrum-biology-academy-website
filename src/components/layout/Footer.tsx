@@ -433,7 +433,7 @@ export const Footer = memo(function Footer() {
 
       {/* Quick Actions - Floating */}
       <div
-        className="fixed right-4 z-40 flex flex-col space-y-2 bottom-32 md:bottom-24"
+        className="fixed right-4 z-40 flex flex-col space-y-2 bottom-20 md:bottom-6"
         role="complementary"
         aria-label="Quick contact actions"
       >
