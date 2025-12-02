@@ -94,7 +94,8 @@ export function DemoBookingSystem() {
   const [paymentInProgress, setPaymentInProgress] = useState(false)
   const [bookingId, setBookingId] = useState<string>('')
 
-  const disabledDays = [{ dayOfWeek: [0] }]
+  // All days are available for booking (admin can disable specific dates if needed)
+  const disabledDays: { dayOfWeek: number[] }[] = []
   const tomorrow = startOfTomorrow()
   const twoWeeksFromNow = addDays(tomorrow, 14)
 
@@ -706,8 +707,49 @@ export function DemoBookingSystem() {
                     </div>
                   </div>
                   <p className="text-sm text-gray-500 text-center mt-2">
-                    Sundays are not available for booking
+                    Select any date within the next 2 weeks
                   </p>
+
+                  {/* Step 1 Action Buttons - Right below calendar */}
+                  <div className="mt-6 space-y-3">
+                    {/* WhatsApp Quick Booking */}
+                    <a
+                      href={`https://wa.me/918826444334?text=${encodeURIComponent(
+                        `Hi! I'd like to book a free NEET Biology demo class.\n\n${
+                          selectedDate
+                            ? `Preferred Date: ${format(selectedDate, 'MMMM d, yyyy')}\n`
+                            : ''
+                        }${selectedTime ? `Preferred Time: ${selectedTime}` : ''}`
+                      )}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2 w-full bg-green-600 text-white py-3.5 rounded-xl hover:bg-green-700 transition-all duration-200 font-medium shadow-lg shadow-green-600/20 hover:shadow-green-600/30"
+                    >
+                      <MessageSquare className="w-5 h-5" />
+                      <span>Book via WhatsApp</span>
+                    </a>
+
+                    {/* Navigation Buttons */}
+                    <div className="flex gap-3">
+                      <button
+                        onClick={handlePrevStep}
+                        disabled={currentStep === 1}
+                        className="flex-1 flex items-center justify-center gap-2 px-6 py-3.5 text-gray-600 bg-gray-100 rounded-xl hover:bg-gray-200 transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed font-medium"
+                      >
+                        <ArrowLeft className="w-4 h-4" />
+                        <span>Previous</span>
+                      </button>
+
+                      <button
+                        onClick={handleNextStep}
+                        disabled={!selectedDate || !selectedTime}
+                        className="flex-1 flex items-center justify-center gap-2 px-6 py-3.5 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed font-medium shadow-lg shadow-blue-600/20 hover:shadow-blue-600/30"
+                      >
+                        <span>Next</span>
+                        <ArrowRight className="w-4 h-4" />
+                      </button>
+                    </div>
+                  </div>
                 </div>
 
                 {selectedDate && (
@@ -1151,81 +1193,59 @@ export function DemoBookingSystem() {
             )}
           </AnimatePresence>
 
-          {/* WhatsApp Quick Booking */}
-          <div className="border-t border-gray-200 pt-6 mt-6">
-            <p className="text-center text-sm text-gray-600 mb-3">Prefer to book via WhatsApp?</p>
-            <a
-              href={`https://wa.me/918826444334?text=${encodeURIComponent(
-                `Hi! I'd like to book a free NEET Biology demo class.\n\n${
-                  bookingData.studentName ? `Name: ${bookingData.studentName}\n` : ''
-                }${bookingData.currentClass ? `Class: ${bookingData.currentClass}\n` : ''}${
-                  bookingData.courseInterest ? `Interest: ${bookingData.courseInterest}\n` : ''
-                }${selectedDate ? `Preferred Date: ${selectedDate}\n` : ''}${
-                  selectedTime ? `Preferred Time: ${selectedTime}` : ''
-                }`
-              )}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition-colors min-h-[44px] touch-manipulation"
-            >
-              <MessageSquare className="w-5 h-5" />
-              <span>Book via WhatsApp</span>
-            </a>
-          </div>
-
-          {/* Navigation Buttons - Sticky on mobile/tablet, always visible */}
-          <div className="sticky bottom-0 left-0 right-0 z-20 bg-white border-t shadow-lg md:shadow-none md:static md:mt-8">
-            <div className="flex justify-between items-center p-4 md:px-0 md:pt-6">
-              <button
-                onClick={handlePrevStep}
-                disabled={currentStep === 1}
-                className="flex items-center gap-2 px-4 md:px-6 py-3 text-gray-600 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors disabled:opacity-50 disabled:cursor-not-allowed min-h-[44px] touch-manipulation"
-              >
-                <ArrowLeft className="w-4 h-4" />
-                <span className="hidden sm:inline">Previous</span>
-                <span className="sm:hidden">Back</span>
-              </button>
-
-              {currentStep < 4 ? (
+          {/* Navigation Buttons for Steps 2-4 - Sticky on mobile/tablet */}
+          {currentStep > 1 && (
+            <div className="sticky bottom-0 left-0 right-0 z-20 bg-white border-t shadow-lg md:shadow-none md:static md:mt-8">
+              <div className="flex justify-between items-center p-4 md:px-0 md:pt-6">
                 <button
-                  onClick={handleNextStep}
-                  disabled={
-                    (currentStep === 1 && (!selectedDate || !selectedTime)) ||
-                    (currentStep === 2 &&
-                      (!bookingData.studentName ||
-                        !bookingData.email ||
-                        !bookingData.phone ||
-                        !bookingData.currentClass)) ||
-                    (currentStep === 3 &&
-                      (bookingData.courseInterest.length === 0 || !bookingData.hearAboutUs))
-                  }
-                  className="flex items-center gap-2 px-4 md:px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed min-h-[44px] touch-manipulation shadow-md"
+                  onClick={handlePrevStep}
+                  className="flex items-center gap-2 px-4 md:px-6 py-3.5 text-gray-600 bg-gray-100 rounded-xl hover:bg-gray-200 transition-all duration-200 min-h-[44px] touch-manipulation font-medium"
                 >
-                  Next
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowLeft className="w-4 h-4" />
+                  <span className="hidden sm:inline">Previous</span>
+                  <span className="sm:hidden">Back</span>
                 </button>
-              ) : (
-                <button
-                  onClick={handleSubmit}
-                  disabled={isSubmitting}
-                  className="flex items-center gap-2 px-6 md:px-8 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed min-h-[44px] touch-manipulation shadow-md"
-                >
-                  {isSubmitting ? (
-                    <>
-                      <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                      Booking...
-                    </>
-                  ) : (
-                    <>
-                      <CheckCircle className="w-4 h-4" />
-                      <span className="hidden sm:inline">Confirm Booking</span>
-                      <span className="sm:hidden">Confirm</span>
-                    </>
-                  )}
-                </button>
-              )}
+
+                {currentStep < 4 ? (
+                  <button
+                    onClick={handleNextStep}
+                    disabled={
+                      (currentStep === 2 &&
+                        (!bookingData.studentName ||
+                          !bookingData.email ||
+                          !bookingData.phone ||
+                          !bookingData.currentClass)) ||
+                      (currentStep === 3 &&
+                        (bookingData.courseInterest.length === 0 || !bookingData.hearAboutUs))
+                    }
+                    className="flex items-center gap-2 px-4 md:px-6 py-3.5 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed min-h-[44px] touch-manipulation shadow-lg shadow-blue-600/20 hover:shadow-blue-600/30 font-medium"
+                  >
+                    Next
+                    <ArrowRight className="w-4 h-4" />
+                  </button>
+                ) : (
+                  <button
+                    onClick={handleSubmit}
+                    disabled={isSubmitting}
+                    className="flex items-center gap-2 px-6 md:px-8 py-3.5 bg-green-600 text-white rounded-xl hover:bg-green-700 transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed min-h-[44px] touch-manipulation shadow-lg shadow-green-600/20 hover:shadow-green-600/30 font-medium"
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                        Booking...
+                      </>
+                    ) : (
+                      <>
+                        <CheckCircle className="w-4 h-4" />
+                        <span className="hidden sm:inline">Confirm Booking</span>
+                        <span className="sm:hidden">Confirm</span>
+                      </>
+                    )}
+                  </button>
+                )}
+              </div>
             </div>
-          </div>
+          )}
         </div>
 
         {/* FAQ Section */}
