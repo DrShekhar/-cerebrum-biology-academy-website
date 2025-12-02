@@ -1,9 +1,8 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
 import {
-  GraduationCap,
   TrendingUp,
   Calendar,
   CreditCard,
@@ -16,6 +15,7 @@ import {
   Users,
   LogOut,
   User,
+  RefreshCw,
 } from 'lucide-react'
 
 interface Student {
@@ -24,6 +24,8 @@ interface Student {
   class: string
   enrolledCourses: number
   overallProgress: number
+  avgTestScore: number
+  attendanceRate: number
   lastActive: string
 }
 
@@ -33,6 +35,7 @@ interface Payment {
   amount: number
   status: 'paid' | 'pending' | 'overdue'
   description: string
+  studentName?: string
 }
 
 interface Test {
@@ -41,67 +44,116 @@ interface Test {
   date: string
   score?: number
   totalMarks: number
-  status: 'completed' | 'upcoming'
+  status: 'completed' | 'upcoming' | 'in_progress'
+}
+
+interface DashboardData {
+  parent: { id: string; name: string; email: string }
+  students: Student[]
+  recentPayments: Payment[]
+  upcomingTests: Test[]
+  summary: {
+    totalStudents: number
+    totalEnrollments: number
+    pendingPayments: number
+    avgAttendance: number
+  }
 }
 
 export default function ParentDashboard() {
   const [loading, setLoading] = useState(true)
+  const [error, setError] = useState('')
   const [parentName, setParentName] = useState('Parent')
+  const [dashboardData, setDashboardData] = useState<DashboardData | null>(null)
 
-  const [students] = useState<Student[]>([
-    {
-      id: '1',
-      name: 'Student Name',
-      class: 'Class 12',
-      enrolledCourses: 2,
-      overallProgress: 68,
-      lastActive: '2 hours ago',
-    },
-  ])
+  const [students, setStudents] = useState<Student[]>([])
+  const [recentPayments, setRecentPayments] = useState<Payment[]>([])
+  const [upcomingTests, setUpcomingTests] = useState<Test[]>([])
 
-  const [recentPayments] = useState<Payment[]>([
-    {
-      id: '1',
-      date: '2024-11-15',
-      amount: 15000,
-      status: 'paid',
-      description: 'NEET Biology Course - Monthly Fee',
-    },
-    {
-      id: '2',
-      date: '2024-12-15',
-      amount: 15000,
-      status: 'pending',
-      description: 'NEET Biology Course - Monthly Fee',
-    },
-  ])
+  const fetchDashboardData = useCallback(async (email: string) => {
+    try {
+      setLoading(true)
+      const response = await fetch(`/api/parent/dashboard?email=${encodeURIComponent(email)}`)
 
-  const [upcomingTests] = useState<Test[]>([
-    {
-      id: '1',
-      name: 'Weekly Test - Human Physiology',
-      date: '2024-11-30',
-      totalMarks: 100,
-      status: 'upcoming',
-    },
-    {
-      id: '2',
-      name: 'Unit Test - Genetics',
-      date: '2024-11-25',
-      score: 85,
-      totalMarks: 100,
-      status: 'completed',
-    },
-  ])
+      if (response.ok) {
+        const data = await response.json()
+        if (data.success) {
+          setDashboardData(data)
+          setStudents(data.students)
+          setRecentPayments(data.recentPayments)
+          setUpcomingTests(data.upcomingTests)
+          setParentName(data.parent.name || 'Parent')
+        }
+      } else {
+        // Fallback to mock data if API fails
+        setStudents([
+          {
+            id: '1',
+            name: 'Student Name',
+            class: 'Class 12',
+            enrolledCourses: 2,
+            overallProgress: 68,
+            avgTestScore: 85,
+            attendanceRate: 92,
+            lastActive: '2 hours ago',
+          },
+        ])
+        setRecentPayments([
+          {
+            id: '1',
+            date: '2024-11-15',
+            amount: 15000,
+            status: 'paid',
+            description: 'NEET Biology Course - Monthly Fee',
+          },
+          {
+            id: '2',
+            date: '2024-12-15',
+            amount: 15000,
+            status: 'pending',
+            description: 'NEET Biology Course - Monthly Fee',
+          },
+        ])
+        setUpcomingTests([
+          {
+            id: '1',
+            name: 'Weekly Test - Human Physiology',
+            date: '2024-11-30',
+            totalMarks: 100,
+            status: 'upcoming',
+          },
+          {
+            id: '2',
+            name: 'Unit Test - Genetics',
+            date: '2024-11-25',
+            score: 85,
+            totalMarks: 100,
+            status: 'completed',
+          },
+        ])
+      }
+    } catch (err) {
+      console.error('Failed to fetch dashboard data:', err)
+      setError('Failed to load dashboard data')
+    } finally {
+      setLoading(false)
+    }
+  }, [])
 
   useEffect(() => {
     const user = localStorage.getItem('user')
     if (user) {
       const userData = JSON.parse(user)
       setParentName(userData.name || 'Parent')
+      if (userData.email) {
+        fetchDashboardData(userData.email)
+      } else {
+        setLoading(false)
+      }
+    } else {
+      setLoading(false)
     }
-    setLoading(false)
-  }, [])
+  }, [fetchDashboardData])
 
   const handleLogout = () => {
     localStorage.removeItem('auth_token')
