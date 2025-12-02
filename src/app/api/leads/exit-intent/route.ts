@@ -66,6 +66,16 @@ export async function POST(request: NextRequest) {
       // Non-blocking - don't fail the lead creation
     }
 
+    // Calculate initial lead score
+    try {
+      const { updateLeadScore } = await import('@/lib/leads/leadScoring')
+      await updateLeadScore(newLead.id)
+      console.log('Lead score calculated for:', newLead.id)
+    } catch (scoreError) {
+      console.error('Failed to calculate lead score:', scoreError)
+      // Non-blocking
+    }
+
     return NextResponse.json({
       success: true,
       message: 'Lead created successfully',
