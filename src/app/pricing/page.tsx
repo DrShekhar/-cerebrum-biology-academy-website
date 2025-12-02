@@ -115,10 +115,19 @@ export default function PricingPage() {
     : availableCourseTypes[0]
 
   React.useEffect(() => {
-    if (selectedClass !== 'all' && !availableCourseTypes.includes(courseType)) {
-      setCourseType(availableCourseTypes[0])
+    // When class changes, ensure courseType is valid for the new class
+    if (selectedClass !== 'all') {
+      const validTypes = currentClassData?.availableCourseTypes || []
+      if (!validTypes.includes(courseType)) {
+        setCourseType(validTypes[0] || 'neet')
+      }
+    } else {
+      // For "All Classes", default to board-neet or neet
+      if (!['board-neet', 'neet'].includes(courseType)) {
+        setCourseType('board-neet')
+      }
     }
-  }, [selectedClass, availableCourseTypes, courseType])
+  }, [selectedClass, currentClassData])
 
   const getFilteredClasses = () => {
     if (selectedClass === 'all') {
@@ -488,9 +497,9 @@ export default function PricingPage() {
               <div className="flex gap-1.5 sm:gap-2 min-w-min sm:min-w-max px-1 pb-2">
                 <button
                   onClick={() => setSelectedClass('all')}
-                  className={`relative flex items-center gap-1.5 sm:gap-2 px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium text-xs sm:text-sm transition-colors ${
+                  className={`relative flex items-center gap-1.5 sm:gap-2 px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium text-xs sm:text-sm transition-all duration-200 ${
                     selectedClass === 'all'
-                      ? 'text-white'
+                      ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/30'
                       : 'bg-white text-gray-700 hover:bg-gray-50 shadow'
                   }`}
                 >
@@ -529,9 +538,9 @@ export default function PricingPage() {
                   <button
                     key={item.class}
                     onClick={() => setSelectedClass(item.class as ClassLevel)}
-                    className={`relative flex items-center gap-1.5 sm:gap-2 px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium text-xs sm:text-sm transition-colors ${
+                    className={`relative flex items-center gap-1.5 sm:gap-2 px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium text-xs sm:text-sm transition-all duration-200 ${
                       selectedClass === item.class
-                        ? 'text-white'
+                        ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/30'
                         : 'bg-white text-gray-700 hover:bg-gray-50 shadow'
                     }`}
                   >
@@ -608,9 +617,9 @@ export default function PricingPage() {
                     <button
                       key={option.type}
                       onClick={() => setCourseType(option.type)}
-                      className={`relative px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium text-xs sm:text-sm transition-colors ${
+                      className={`relative px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium text-xs sm:text-sm transition-all duration-200 ${
                         courseType === option.type
-                          ? 'text-white'
+                          ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/30'
                           : 'bg-white text-gray-700 hover:bg-gray-50 shadow'
                       }`}
                     >
@@ -638,9 +647,9 @@ export default function PricingPage() {
               <div className="flex gap-1.5 sm:gap-2">
                 <button
                   onClick={() => setPaymentMode('lumpSum')}
-                  className={`relative px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium text-xs sm:text-sm transition-colors ${
+                  className={`relative px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium text-xs sm:text-sm transition-all duration-200 ${
                     paymentMode === 'lumpSum'
-                      ? 'text-white'
+                      ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/30'
                       : 'bg-white text-gray-700 hover:bg-gray-50 shadow'
                   }`}
                 >
@@ -660,9 +669,9 @@ export default function PricingPage() {
                 </button>
                 <button
                   onClick={() => setPaymentMode('twoInstallments')}
-                  className={`relative px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium text-xs sm:text-sm transition-colors ${
+                  className={`relative px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium text-xs sm:text-sm transition-all duration-200 ${
                     paymentMode === 'twoInstallments'
-                      ? 'text-white'
+                      ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/30'
                       : 'bg-white text-gray-700 hover:bg-gray-50 shadow'
                   }`}
                 >
@@ -682,9 +691,9 @@ export default function PricingPage() {
                 </button>
                 <button
                   onClick={() => setPaymentMode('threeInstallments')}
-                  className={`relative px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium text-xs sm:text-sm transition-colors ${
+                  className={`relative px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium text-xs sm:text-sm transition-all duration-200 ${
                     paymentMode === 'threeInstallments'
-                      ? 'text-white'
+                      ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/30'
                       : 'bg-white text-gray-700 hover:bg-gray-50 shadow'
                   }`}
                 >

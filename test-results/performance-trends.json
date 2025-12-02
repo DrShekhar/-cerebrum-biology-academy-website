@@ -1,0 +1,13 @@
+{
+  "runs": [
+    {
+      "timestamp": "2025-12-01T09:02:57.322Z",
+      "metrics": {
+        "avgPageLoad": 0,
+        "avgApiResponse": 0,
+        "passedBenchmarks": 0,
+        "totalBenchmarks": 0
+      }
+    }
+  ]
+}
