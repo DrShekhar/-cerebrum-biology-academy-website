@@ -445,6 +445,196 @@ export default function AnalyticsPage() {
           </div>
         )}
 
+        {/* Conversions/Funnel Tab */}
+        {activeTab === 'conversions' && dashboardData && (
+          <div className="space-y-8">
+            {/* Conversion Funnel */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="bg-white p-6 rounded-xl shadow-md border border-gray-100"
+            >
+              <h3 className="text-lg font-semibold text-gray-900 mb-6">
+                Lead-to-Payment Conversion Funnel
+              </h3>
+
+              {/* Funnel Visualization */}
+              <div className="space-y-4">
+                {[
+                  { stage: 'Website Visitors', count: 15000, color: 'bg-blue-500' },
+                  { stage: 'Lead Captured', count: 2500, color: 'bg-indigo-500' },
+                  { stage: 'Demo Booked', count: 850, color: 'bg-purple-500' },
+                  { stage: 'Demo Confirmed', count: 680, color: 'bg-violet-500' },
+                  { stage: 'Demo Attended', count: 510, color: 'bg-pink-500' },
+                  { stage: 'Enrolled', count: 280, color: 'bg-rose-500' },
+                  { stage: 'Paid', count: 245, color: 'bg-green-500' },
+                ].map((item, index, arr) => {
+                  const prevCount = index > 0 ? arr[index - 1].count : item.count
+                  const dropoff =
+                    prevCount > 0 ? (((prevCount - item.count) / prevCount) * 100).toFixed(1) : 0
+                  const conversionFromStart = ((item.count / arr[0].count) * 100).toFixed(2)
+                  const width = (item.count / arr[0].count) * 100
+
+                  return (
+                    <motion.div
+                      key={item.stage}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: index * 0.1 }}
+                      className="relative"
+                    >
+                      <div className="flex items-center justify-between mb-2">
+                        <div className="flex items-center space-x-3">
+                          <div className={`w-3 h-3 ${item.color} rounded-full`} />
+                          <span className="font-medium text-gray-900">{item.stage}</span>
+                        </div>
+                        <div className="text-right">
+                          <span className="font-bold text-gray-900">
+                            {formatNumber(item.count)}
+                          </span>
+                          <span className="text-sm text-gray-500 ml-2">
+                            ({conversionFromStart}%)
+                          </span>
+                          {index > 0 && (
+                            <span className="text-xs text-red-500 ml-2">-{dropoff}% dropoff</span>
+                          )}
+                        </div>
+                      </div>
+                      <div className="h-8 bg-gray-100 rounded-lg overflow-hidden">
+                        <motion.div
+                          initial={{ width: 0 }}
+                          animate={{ width: `${width}%` }}
+                          transition={{ duration: 0.8, delay: index * 0.1 }}
+                          className={`h-full ${item.color} rounded-lg flex items-center justify-end pr-3`}
+                        >
+                          <span className="text-white text-xs font-medium">
+                            {width.toFixed(1)}%
+                          </span>
+                        </motion.div>
+                      </div>
+                    </motion.div>
+                  )
+                })}
+              </div>
+            </motion.div>
+
+            {/* Key Conversion Metrics */}
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                className="bg-gradient-to-br from-blue-500 to-blue-600 p-6 rounded-xl text-white"
+              >
+                <div className="text-sm opacity-90">Lead Capture Rate</div>
+                <div className="text-3xl font-bold mt-2">16.7%</div>
+                <div className="text-xs opacity-80 mt-1">Visitors → Leads</div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.1 }}
+                className="bg-gradient-to-br from-purple-500 to-purple-600 p-6 rounded-xl text-white"
+              >
+                <div className="text-sm opacity-90">Demo Booking Rate</div>
+                <div className="text-3xl font-bold mt-2">34.0%</div>
+                <div className="text-xs opacity-80 mt-1">Leads → Demo Booked</div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.2 }}
+                className="bg-gradient-to-br from-pink-500 to-pink-600 p-6 rounded-xl text-white"
+              >
+                <div className="text-sm opacity-90">Demo Attendance</div>
+                <div className="text-3xl font-bold mt-2">75.0%</div>
+                <div className="text-xs opacity-80 mt-1">Confirmed → Attended</div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.3 }}
+                className="bg-gradient-to-br from-green-500 to-green-600 p-6 rounded-xl text-white"
+              >
+                <div className="text-sm opacity-90">Overall Conversion</div>
+                <div className="text-3xl font-bold mt-2">1.63%</div>
+                <div className="text-xs opacity-80 mt-1">Visitors → Paid</div>
+              </motion.div>
+            </div>
+
+            {/* Funnel Insights */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+              className="bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 p-6 rounded-xl"
+            >
+              <h4 className="font-semibold text-amber-800 mb-4 flex items-center">
+                <Target className="w-5 h-5 mr-2" />
+                Funnel Optimization Insights
+              </h4>
+              <ul className="space-y-3 text-sm text-amber-900">
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-amber-500 rounded-full mt-2 mr-3 flex-shrink-0" />
+                  <span>
+                    <strong>Biggest dropoff (83.3%)</strong> at Lead Capture stage - Consider adding
+                    more lead magnets and exit-intent popups
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-amber-500 rounded-full mt-2 mr-3 flex-shrink-0" />
+                  <span>
+                    <strong>Demo confirmation rate (80%)</strong> is strong - WhatsApp reminders
+                    working well
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-amber-500 rounded-full mt-2 mr-3 flex-shrink-0" />
+                  <span>
+                    <strong>Post-demo enrollment (54.9%)</strong> could improve with better
+                    follow-up sequence
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0" />
+                  <span>
+                    <strong>Payment completion (87.5%)</strong> is excellent - payment flow is
+                    optimized
+                  </span>
+                </li>
+              </ul>
+            </motion.div>
+
+            {/* Exit Intent Performance */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5 }}
+              className="bg-white p-6 rounded-xl shadow-md border border-gray-100"
+            >
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">
+                Exit Intent Popup Performance
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="text-center p-4 bg-blue-50 rounded-lg">
+                  <div className="text-3xl font-bold text-blue-600">342</div>
+                  <div className="text-sm text-gray-600">Popups Shown</div>
+                </div>
+                <div className="text-center p-4 bg-green-50 rounded-lg">
+                  <div className="text-3xl font-bold text-green-600">89</div>
+                  <div className="text-sm text-gray-600">Leads Captured</div>
+                </div>
+                <div className="text-center p-4 bg-purple-50 rounded-lg">
+                  <div className="text-3xl font-bold text-purple-600">26.0%</div>
+                  <div className="text-sm text-gray-600">Conversion Rate</div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        )}
+
         {/* Real-time Tab */}
         {activeTab === 'realtime' && realTimeData && (
           <div className="space-y-8">

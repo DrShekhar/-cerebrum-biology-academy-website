@@ -15,6 +15,7 @@ import { TrustProvider } from '@/components/providers/TrustProvider'
 import { SkipToContent } from '@/components/accessibility/SkipToContent'
 import { FocusVisibleStyles } from '@/components/accessibility/FocusVisibleStyles'
 import { FloatingCTA } from '@/components/common/FloatingCTA'
+import { GlobalExitIntent } from '@/components/conversion/GlobalExitIntent'
 import './globals.css'
 
 const geistSans = Geist({
@@ -161,6 +162,7 @@ export default function RootLayout({
                   <MobileNavigation />
                 </div>
                 <FloatingCTA />
+                <GlobalExitIntent />
               </PageErrorBoundary>
             </TrustProvider>
           </ToastProvider>

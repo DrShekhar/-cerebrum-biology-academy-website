@@ -61,6 +61,11 @@ const GoogleReviewsWidget = dynamic(
   { loading: () => <LoadingSkeleton height="h-64" />, ssr: true }
 )
 
+const VideoLectureShowcase = dynamic(
+  () => import('@/components/layout/VideoLectureShowcase').then((mod) => mod.VideoLectureShowcase),
+  { loading: () => <LoadingSkeleton />, ssr: true }
+)
+
 const SuccessTicker = dynamic(
   () => import('@/components/ui/SuccessTicker').then((mod) => mod.SuccessTicker),
   { loading: () => null }
@@ -92,6 +97,9 @@ export default function Home() {
 
       <CoursesSection />
       <FacultySection />
+
+      {/* Course Preview Videos Section */}
+      <VideoLectureShowcase />
 
       {/* Trust Signals Full Section */}
       <TrustSignalsBanner variant="full" showVerificationBadges={true} />
