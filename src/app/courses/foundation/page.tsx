@@ -151,7 +151,7 @@ export default function FoundationCoursePage() {
                     Book Free Demo
                   </Link>
                   <Link
-                    href="https://wa.me/919876543210"
+                    href="https://wa.me/918826444334"
                     target="_blank"
                     className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors text-center"
                   >

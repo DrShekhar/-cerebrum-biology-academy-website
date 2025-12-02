@@ -382,7 +382,7 @@ function PurchaseSuccessContent() {
           <p className="text-gray-600 mb-4">Need help? Our support team is here for you!</p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="https://wa.me/919311946297"
+              href="https://wa.me/918826444334"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
@@ -391,11 +391,11 @@ function PurchaseSuccessContent() {
               WhatsApp Support
             </a>
             <a
-              href="tel:+919311946297"
+              href="tel:+918826444334"
               className="inline-flex items-center gap-2 px-6 py-3 border-2 border-gray-300 text-gray-700 rounded-lg hover:border-green-600 hover:text-green-600 transition-colors"
             >
               <Phone className="w-5 h-5" />
-              Call: +91 93119 46297
+              Call: +91 88264 44334
             </a>
             <a
               href="mailto:support@cerebrumbiologyacademy.com"

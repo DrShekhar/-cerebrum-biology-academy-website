@@ -187,7 +187,7 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
       iconBg: 'bg-green-600',
     },
     {
-      href: 'https://wa.me/919311946297?text=Hi%2C%20I%27m%20interested%20in%20your%20courses',
+      href: 'https://wa.me/918826444334?text=Hi%2C%20I%27m%20interested%20in%20your%20courses',
       label: 'WhatsApp',
       icon: MessageSquare,
       gradient: 'from-emerald-500 to-emerald-600',

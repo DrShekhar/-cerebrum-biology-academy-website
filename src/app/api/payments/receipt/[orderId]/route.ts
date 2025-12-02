@@ -239,7 +239,7 @@ export async function GET(request: NextRequest, { params }: { params: { orderId:
 
   <div class="footer">
     <p><strong>Cerebrum Biology Academy</strong></p>
-    <p>Email: support@cerebrumbiologyacademy.com | Phone: +91-9876543210</p>
+    <p>Email: support@cerebrumbiologyacademy.com | Phone: +91-8826444334</p>
     <p>Website: www.cerebrumbiologyacademy.com</p>
     <p style="margin-top: 20px;">Thank you for choosing Cerebrum Biology Academy!</p>
     <p style="margin-top: 10px; font-size: 11px;">

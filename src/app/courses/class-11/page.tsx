@@ -79,7 +79,7 @@ export default function Class11BiologyPage() {
                 {/* Secondary CTAs */}
                 <div className="flex flex-col xs:flex-row gap-3">
                   <Link
-                    href="https://wa.me/919311946297?text=Hi%2C%20I%27m%20interested%20in%20Class%2011th%20Biology%20course"
+                    href="https://wa.me/918826444334?text=Hi%2C%20I%27m%20interested%20in%20Class%2011th%20Biology%20course"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="border-2 border-white/50 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors inline-flex items-center justify-center min-h-[44px] flex-1"

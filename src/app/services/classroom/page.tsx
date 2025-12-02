@@ -1063,20 +1063,12 @@ export default function ClassroomCoachingPage() {
                     </div>
                     <div className="text-xs sm:text-sm text-gray-600">
                       <a
-                        href="tel:+919311946297"
-                        className="hover:text-green-600 transition-colors"
-                      >
-                        +91 93119 46297
-                      </a>{' '}
-                      (Main)
-                      <br />
-                      <a
                         href="tel:+918826444334"
                         className="hover:text-green-600 transition-colors"
                       >
-                        +91 88264 44334
+                        +91 8826444334
                       </a>{' '}
-                      (Admissions)
+                      (Main &amp; Admissions)
                     </div>
                   </div>
                 </div>

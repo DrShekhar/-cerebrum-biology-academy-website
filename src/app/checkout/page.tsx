@@ -883,10 +883,10 @@ function CheckoutContent() {
                     <p className="text-sm text-gray-700">
                       Need help? Call us at{' '}
                       <a
-                        href="tel:+919311946297"
+                        href="tel:+918826444334"
                         className="text-blue-600 font-medium hover:underline"
                       >
-                        +91 93119 46297
+                        +91 88264 44334
                       </a>
                     </p>
                   </div>

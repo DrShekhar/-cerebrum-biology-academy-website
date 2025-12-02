@@ -464,10 +464,10 @@ export default function ContactPage() {
               variant="primary"
               size="xl"
               className="bg-white text-green-600 hover:bg-gray-100 w-full sm:w-auto min-h-11 sm:min-h-12"
-              onClick={() => (window.location.href = 'tel:+919311946297')}
+              onClick={() => (window.location.href = 'tel:+918826444334')}
             >
               <Phone className="w-5 h-5 mr-2" />
-              Call +91 93119 46297
+              Call +91 88264 44334
             </Button>
           </div>
 

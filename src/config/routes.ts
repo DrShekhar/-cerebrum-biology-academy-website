@@ -84,7 +84,7 @@ export const routes = {
 
   // Contact
   phone: {
-    primary: 'tel:+919311946297',
+    primary: 'tel:+918826444334',
     secondary: 'tel:+918826444334',
   },
 

@@ -1453,7 +1453,7 @@ export default function AdmissionsPage() {
               </div>
               <h3 className="text-lg sm:text-xl font-bold text-white mb-2">Call Us</h3>
               <p className="text-blue-100 text-sm sm:text-base mb-2">Speak with our counselors</p>
-              <p className="text-white font-semibold text-base sm:text-lg">+91 9876543210</p>
+              <p className="text-white font-semibold text-base sm:text-lg">+91 8826444334</p>
             </motion.a>
 
             <motion.button

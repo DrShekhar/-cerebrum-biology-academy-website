@@ -104,12 +104,12 @@ function ThankYouContent() {
     ConversionTracker.trackWhatsAppClick()
     const message = 'Hi! I just submitted a form on your website and wanted to follow up.'
     const encodedMessage = encodeURIComponent(message)
-    window.open(`https://wa.me/919311946297?text=${encodedMessage}`, '_blank')
+    window.open(`https://wa.me/918826444334?text=${encodedMessage}`, '_blank')
   }
 
   const handleCallNow = () => {
     ConversionTracker.trackPhoneCall()
-    window.open('tel:+919311946297', '_self')
+    window.open('tel:+918826444334', '_self')
   }
 
   const handleBookCounseling = () => {

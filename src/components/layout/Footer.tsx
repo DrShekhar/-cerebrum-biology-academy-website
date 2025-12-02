@@ -129,7 +129,7 @@ export const Footer = memo(function Footer() {
     { name: 'Twitter', href: 'https://twitter.com/shekharsingh', icon: Twitter },
     {
       name: 'WhatsApp',
-      href: 'https://wa.me/919311946297?text=Hi%2C%20I%27m%20interested%20in%20NEET%20Biology%20coaching',
+      href: 'https://wa.me/918826444334?text=Hi%2C%20I%27m%20interested%20in%20NEET%20Biology%20coaching',
       icon: MessageCircle,
     },
     { name: 'Telegram', href: 'https://t.me/biologyforneetug', icon: Send },
@@ -178,19 +178,11 @@ export const Footer = memo(function Footer() {
                 <Phone className="w-4 h-4 mr-3 text-blue-400" aria-hidden="true" />
                 <div>
                   <a
-                    href="tel:+919311946297"
-                    className="hover:text-white transition-colors"
-                    aria-label="Call us at +91 93119 46297"
-                  >
-                    +91 93119 46297
-                  </a>
-                  {' / '}
-                  <a
                     href="tel:+918826444334"
                     className="hover:text-white transition-colors"
-                    aria-label="Call us at +91 88264 44334"
+                    aria-label="Call us at +91 8826444334"
                   >
-                    +91 88264 44334
+                    +91 8826444334
                   </a>
                   <span className="text-gray-500 text-sm block">Mon-Sat: 8 AM - 8 PM</span>
                 </div>
@@ -446,7 +438,7 @@ export const Footer = memo(function Footer() {
         aria-label="Quick contact actions"
       >
         <a
-          href="https://wa.me/919311946297?text=Hi%2C%20I%27m%20interested%20in%20NEET%20Biology%20coaching"
+          href="https://wa.me/918826444334?text=Hi%2C%20I%27m%20interested%20in%20NEET%20Biology%20coaching"
           target="_blank"
           rel="noopener noreferrer"
           className="w-12 h-12 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg transition-all duration-200 hover:scale-110"
@@ -456,9 +448,9 @@ export const Footer = memo(function Footer() {
         </a>
 
         <a
-          href="tel:+919311946297"
+          href="tel:+918826444334"
           className="w-12 h-12 bg-blue-500 hover:bg-blue-600 rounded-full flex items-center justify-center shadow-lg transition-all duration-200 hover:scale-110"
-          aria-label="Call us at +91 93119 46297"
+          aria-label="Call us at +91 8826444334"
         >
           <Phone className="w-6 h-6 text-white" aria-hidden="true" />
         </a>

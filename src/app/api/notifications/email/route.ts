@@ -104,7 +104,7 @@ export async function POST(request: NextRequest) {
       <p>Our support team is here to help you:</p>
       <ul>
         <li>📧 Email: <a href="mailto:support@cerebrumbiologyacademy.com">support@cerebrumbiologyacademy.com</a></li>
-        <li>💬 WhatsApp: <a href="https://wa.me/919876543210">+91-9876543210</a></li>
+        <li>💬 WhatsApp: <a href="https://wa.me/918826444334">+91-8826444334</a></li>
         <li>⏰ Support Hours: Mon-Sat, 9 AM - 8 PM IST</li>
       </ul>
     </div>
@@ -143,7 +143,7 @@ ${baseUrl}/student/courses/${enrollment.courseId}
 
 Need Help?
 Email: support@cerebrumbiologyacademy.com
-WhatsApp: +91-9876543210
+WhatsApp: +91-8826444334
 Support Hours: Mon-Sat, 9 AM - 8 PM IST
 
 Happy Learning!

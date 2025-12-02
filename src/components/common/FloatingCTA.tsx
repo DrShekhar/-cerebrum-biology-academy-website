@@ -43,14 +43,14 @@ export function FloatingCTA() {
     {
       icon: Phone,
       label: 'Call Now',
-      href: 'tel:+919311946297',
+      href: 'tel:+918826444334',
       color: 'bg-green-500 hover:bg-green-600',
       action: 'call',
     },
     {
       icon: MessageCircle,
       label: 'WhatsApp',
-      href: 'https://wa.me/919311946297?text=Hi!%20I%20want%20to%20know%20more%20about%20NEET%20Biology%20courses.',
+      href: 'https://wa.me/918826444334?text=Hi!%20I%20want%20to%20know%20more%20about%20NEET%20Biology%20courses.',
       color: 'bg-emerald-500 hover:bg-emerald-600',
       action: 'whatsapp',
       external: true,
