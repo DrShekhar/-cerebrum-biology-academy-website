@@ -111,8 +111,10 @@ const nextConfig = {
   output: process.env.NODE_ENV === 'production' ? 'standalone' : undefined,
 
   // Experimental features for better performance
+  // Note: optimizeCss causes worker.js errors in dev mode (Next.js 15.5.x bug)
+  // Only enable in production to avoid dev server instability
   experimental: {
-    optimizeCss: true,
+    optimizeCss: process.env.NODE_ENV === 'production',
     scrollRestoration: true
   },
 

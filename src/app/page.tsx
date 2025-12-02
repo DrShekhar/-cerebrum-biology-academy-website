@@ -4,6 +4,7 @@ import { generatePageMetadata } from '@/lib/seo/metadata'
 import { OptimizedHeroSection } from '@/components/layout/OptimizedHeroSection'
 import { realTestimonials } from '@/data/realTestimonials'
 import Link from 'next/link'
+import { HomePageClient } from '@/components/home/HomePageClient'
 
 // Loading skeleton component for consistent loading states
 const LoadingSkeleton = ({ height = 'h-96' }: { height?: string }) => (
@@ -32,6 +33,14 @@ const RealStudentTestimonials = dynamic(
   () =>
     import('@/components/testimonials/RealStudentTestimonials').then(
       (mod) => mod.RealStudentTestimonials
+    ),
+  { loading: () => <LoadingSkeleton />, ssr: true }
+)
+
+const SuccessStoriesSection = dynamic(
+  () =>
+    import('@/components/testimonials/SuccessStoriesSection').then(
+      (mod) => mod.SuccessStoriesSection
     ),
   { loading: () => <LoadingSkeleton />, ssr: true }
 )
@@ -70,6 +79,9 @@ export default function Home() {
       {/* Maintenance Notice - Auto-dismiss after 8 seconds */}
       {/* <MaintenanceNotice /> */}
 
+      {/* Client-side components (Exit Intent, etc.) */}
+      <HomePageClient />
+
       <OptimizedHeroSection />
 
       {/* Trust Signals Banner - Compact Version */}
@@ -88,6 +100,14 @@ export default function Home() {
         testimonials={realTestimonials}
         title="Real Student Success Stories"
         subtitle="Hear directly from our NEET toppers who achieved their dreams"
+      />
+
+      {/* Success Stories / Transformation Section */}
+      <SuccessStoriesSection
+        title="Transformation Stories"
+        subtitle="See how our students improved their scores dramatically"
+        maxStories={3}
+        showViewAll={true}
       />
 
       {/* Google Reviews Widget */}
