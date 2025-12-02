@@ -783,36 +783,43 @@ export function DemoBookingSystem() {
                       ))}
                     </div>
 
-                    {/* Step 1 Action Buttons - After time slot selection */}
-                    {selectedTime && (
-                      <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        className="mt-6 space-y-3"
+                    {/* Step 1 Action Buttons - Always visible after date selection */}
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      className="mt-6 space-y-3"
+                    >
+                      {/* WhatsApp Quick Booking - Always available */}
+                      <a
+                        href={`https://wa.me/918826444334?text=${encodeURIComponent(
+                          `Hi! I'd like to book a free NEET Biology demo class.\n\nPreferred Date: ${format(selectedDate, 'MMMM d, yyyy')}${selectedTime ? `\nPreferred Time: ${selectedTime}` : ''}`
+                        )}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center gap-2 w-full bg-green-600 text-white py-3.5 rounded-xl hover:bg-green-700 transition-all duration-200 font-medium shadow-lg shadow-green-600/20 hover:shadow-green-600/30"
                       >
-                        {/* WhatsApp Quick Booking */}
-                        <a
-                          href={`https://wa.me/918826444334?text=${encodeURIComponent(
-                            `Hi! I'd like to book a free NEET Biology demo class.\n\nPreferred Date: ${format(selectedDate, 'MMMM d, yyyy')}\nPreferred Time: ${selectedTime}`
-                          )}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center justify-center gap-2 w-full bg-green-600 text-white py-3.5 rounded-xl hover:bg-green-700 transition-all duration-200 font-medium shadow-lg shadow-green-600/20 hover:shadow-green-600/30"
-                        >
-                          <MessageSquare className="w-5 h-5" />
-                          <span>Book via WhatsApp</span>
-                        </a>
+                        <MessageSquare className="w-5 h-5" />
+                        <span>Book via WhatsApp</span>
+                      </a>
 
-                        {/* Next Button */}
-                        <button
-                          onClick={handleNextStep}
-                          className="flex items-center justify-center gap-2 w-full px-6 py-3.5 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition-all duration-200 font-medium shadow-lg shadow-blue-600/20 hover:shadow-blue-600/30"
-                        >
-                          <span>Continue to Next Step</span>
-                          <ArrowRight className="w-4 h-4" />
-                        </button>
-                      </motion.div>
-                    )}
+                      {/* Next Button - Requires time slot selection */}
+                      <button
+                        onClick={handleNextStep}
+                        disabled={!selectedTime}
+                        className={`flex items-center justify-center gap-2 w-full px-6 py-3.5 rounded-xl transition-all duration-200 font-medium shadow-lg ${
+                          selectedTime
+                            ? 'bg-blue-600 text-white hover:bg-blue-700 shadow-blue-600/20 hover:shadow-blue-600/30'
+                            : 'bg-gray-300 text-gray-500 cursor-not-allowed shadow-gray-300/20'
+                        }`}
+                      >
+                        <span>
+                          {selectedTime
+                            ? 'Continue to Next Step'
+                            : 'Select a time slot to continue'}
+                        </span>
+                        <ArrowRight className="w-4 h-4" />
+                      </button>
+                    </motion.div>
                   </motion.div>
                 )}
 
