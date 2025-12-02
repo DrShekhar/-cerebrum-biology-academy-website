@@ -48,7 +48,7 @@ class MockPrismaClient {
   $connect = async () => Promise.resolve()
   $disconnect = async () => Promise.resolve()
   $queryRaw = async () => []
-  $transaction = async (fn: Function) => fn(this)
+  $transaction = async <T>(fn: (client: MockPrismaClient) => Promise<T>): Promise<T> => fn(this)
 }
 
 // Check if we're in Edge Runtime
