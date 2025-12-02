@@ -709,47 +709,6 @@ export function DemoBookingSystem() {
                   <p className="text-sm text-gray-500 text-center mt-2">
                     Select any date within the next 2 weeks
                   </p>
-
-                  {/* Step 1 Action Buttons - Right below calendar */}
-                  <div className="mt-6 space-y-3">
-                    {/* WhatsApp Quick Booking */}
-                    <a
-                      href={`https://wa.me/918826444334?text=${encodeURIComponent(
-                        `Hi! I'd like to book a free NEET Biology demo class.\n\n${
-                          selectedDate
-                            ? `Preferred Date: ${format(selectedDate, 'MMMM d, yyyy')}\n`
-                            : ''
-                        }${selectedTime ? `Preferred Time: ${selectedTime}` : ''}`
-                      )}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-2 w-full bg-green-600 text-white py-3.5 rounded-xl hover:bg-green-700 transition-all duration-200 font-medium shadow-lg shadow-green-600/20 hover:shadow-green-600/30"
-                    >
-                      <MessageSquare className="w-5 h-5" />
-                      <span>Book via WhatsApp</span>
-                    </a>
-
-                    {/* Navigation Buttons */}
-                    <div className="flex gap-3">
-                      <button
-                        onClick={handlePrevStep}
-                        disabled={currentStep === 1}
-                        className="flex-1 flex items-center justify-center gap-2 px-6 py-3.5 text-gray-600 bg-gray-100 rounded-xl hover:bg-gray-200 transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed font-medium"
-                      >
-                        <ArrowLeft className="w-4 h-4" />
-                        <span>Previous</span>
-                      </button>
-
-                      <button
-                        onClick={handleNextStep}
-                        disabled={!selectedDate || !selectedTime}
-                        className="flex-1 flex items-center justify-center gap-2 px-6 py-3.5 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed font-medium shadow-lg shadow-blue-600/20 hover:shadow-blue-600/30"
-                      >
-                        <span>Next</span>
-                        <ArrowRight className="w-4 h-4" />
-                      </button>
-                    </div>
-                  </div>
                 </div>
 
                 {selectedDate && (
@@ -823,6 +782,37 @@ export function DemoBookingSystem() {
                         </div>
                       ))}
                     </div>
+
+                    {/* Step 1 Action Buttons - After time slot selection */}
+                    {selectedTime && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="mt-6 space-y-3"
+                      >
+                        {/* WhatsApp Quick Booking */}
+                        <a
+                          href={`https://wa.me/918826444334?text=${encodeURIComponent(
+                            `Hi! I'd like to book a free NEET Biology demo class.\n\nPreferred Date: ${format(selectedDate, 'MMMM d, yyyy')}\nPreferred Time: ${selectedTime}`
+                          )}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center justify-center gap-2 w-full bg-green-600 text-white py-3.5 rounded-xl hover:bg-green-700 transition-all duration-200 font-medium shadow-lg shadow-green-600/20 hover:shadow-green-600/30"
+                        >
+                          <MessageSquare className="w-5 h-5" />
+                          <span>Book via WhatsApp</span>
+                        </a>
+
+                        {/* Next Button */}
+                        <button
+                          onClick={handleNextStep}
+                          className="flex items-center justify-center gap-2 w-full px-6 py-3.5 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition-all duration-200 font-medium shadow-lg shadow-blue-600/20 hover:shadow-blue-600/30"
+                        >
+                          <span>Continue to Next Step</span>
+                          <ArrowRight className="w-4 h-4" />
+                        </button>
+                      </motion.div>
+                    )}
                   </motion.div>
                 )}
 
