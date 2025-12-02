@@ -644,16 +644,6 @@ export function DemoBookingSystem() {
           </div>
         </div>
 
-        {/* Testimonials */}
-        <div className="px-4 md:px-6 pt-6">
-          <TestimonialCarousel />
-        </div>
-
-        {/* Benefits Grid */}
-        <div className="px-4 md:px-6">
-          <BenefitsGrid />
-        </div>
-
         {/* Content */}
         <div className="p-4 md:p-6">
           {/* Error Display */}
@@ -793,6 +783,16 @@ export function DemoBookingSystem() {
                     </div>
                   </motion.div>
                 )}
+
+                {/* Testimonials - Moved below calendar for better UX */}
+                <div className="mt-8">
+                  <TestimonialCarousel />
+                </div>
+
+                {/* Benefits Grid - Moved below calendar for better UX */}
+                <div className="mt-6">
+                  <BenefitsGrid />
+                </div>
               </motion.div>
             )}
 
