@@ -5,96 +5,62 @@
  * 1. Personalized course recommendations based on lead/student profile
  * 2. Intelligent offer and pricing suggestions
  * 3. Upsell/cross-sell recommendations for enrolled students
+ *
+ * Uses actual courses from the database instead of hardcoded catalog.
  */
 
 import { BaseAgent, AgentContext, AgentResponse, getLeadContext } from './base'
 import { prisma } from '@/lib/prisma'
 import { AgentType } from '@/generated/prisma'
 
-const COURSE_CATALOG = [
-  {
-    id: 'neet-class-11',
-    name: 'NEET Biology Class 11',
-    targetClass: '11',
-    targetExam: 'NEET',
-    level: 'beginner',
-    price: 15000,
-    duration: '12 months',
-    features: ['NCERT focused', 'Foundation building', 'Regular tests', 'Doubt clearing'],
-  },
-  {
-    id: 'neet-class-12',
-    name: 'NEET Biology Class 12',
-    targetClass: '12',
-    targetExam: 'NEET',
-    level: 'intermediate',
-    price: 18000,
-    duration: '12 months',
-    features: ['Board + NEET prep', 'Previous year papers', 'Weekly tests', 'Personal mentoring'],
-  },
-  {
-    id: 'neet-dropper',
-    name: 'NEET Dropper Intensive',
-    targetClass: 'dropper',
-    targetExam: 'NEET',
-    level: 'advanced',
-    price: 25000,
-    duration: '10 months',
-    features: [
-      'Full syllabus revision',
-      'Daily mock tests',
-      'Personal mentoring',
-      'Strategy sessions',
-    ],
-  },
-  {
-    id: 'neet-crash',
-    name: 'NEET Crash Course',
-    targetClass: '12',
-    targetExam: 'NEET',
-    level: 'advanced',
-    price: 8000,
-    duration: '3 months',
-    features: ['Quick revision', 'High-yield topics', 'Test series', 'Last minute tips'],
-  },
-  {
-    id: 'neet-test-series',
-    name: 'NEET Test Series',
-    targetClass: 'any',
-    targetExam: 'NEET',
-    level: 'any',
-    price: 2500,
-    duration: '6 months',
-    features: ['100+ tests', 'Detailed analysis', 'All India rank', 'Performance tracking'],
-  },
-  {
-    id: 'foundation-class-9',
-    name: 'Biology Foundation Class 9',
-    targetClass: '9',
-    targetExam: 'Foundation',
-    level: 'beginner',
-    price: 8000,
-    duration: '12 months',
-    features: ['Early start advantage', 'Strong basics', 'Olympiad prep', 'Fun learning'],
-  },
-  {
-    id: 'foundation-class-10',
-    name: 'Biology Foundation Class 10',
-    targetClass: '10',
-    targetExam: 'Foundation',
-    level: 'beginner',
-    price: 10000,
-    duration: '12 months',
-    features: ['Board focused', 'NEET introduction', 'Concept clarity', 'Regular assessments'],
-  },
-]
+// Course interface matching database schema
+interface DatabaseCourse {
+  id: string
+  name: string
+  description: string | null
+  type: string
+  class: string
+  duration: number
+  totalFees: number
+  syllabus: unknown
+  features: unknown
+  isActive: boolean
+}
 
-const RECOMMENDATION_PROMPT = `You are an AI Product Recommendation Agent for Cerebrum Biology Academy, a premier NEET biology coaching institute in India.
+// Helper function to fetch active courses from database
+async function fetchCourseCatalog(): Promise<DatabaseCourse[]> {
+  const courses = await prisma.courses.findMany({
+    where: { isActive: true },
+    orderBy: { sortOrder: 'asc' },
+  })
+  return courses
+}
+
+// Helper function to format course for AI prompt
+function formatCourseForPrompt(course: DatabaseCourse): object {
+  const features = Array.isArray(course.features) ? course.features : []
+  return {
+    id: course.id,
+    name: course.name,
+    description: course.description,
+    type: course.type,
+    targetClass: course.class,
+    durationMonths: course.duration,
+    price: course.totalFees,
+    features: features,
+  }
+}
+
+// Build recommendation prompt dynamically with actual courses
+function buildRecommendationPrompt(courses: DatabaseCourse[]): string {
+  const formattedCourses = courses.map(formatCourseForPrompt)
+
+  return `You are an AI Product Recommendation Agent for Cerebrum Biology Academy, a premier NEET biology coaching institute in India.
 
 Your role is to analyze student/lead profiles and recommend the most suitable courses from our catalog.
 
-COURSE CATALOG:
-${JSON.stringify(COURSE_CATALOG, null, 2)}
+COURSE CATALOG (from database):
+${JSON.stringify(formattedCourses, null, 2)}
 
 MATCHING CRITERIA (score each 0-100):
 1. CLASS MATCH (30 pts): Does the course target their current class?
@@ -114,7 +80,7 @@ Respond in JSON format:
 {
   "recommendations": [
     {
-      "courseId": "<course-id>",
+      "courseId": "<course-id from catalog>",
       "courseName": "<name>",
       "matchScore": <0-100>,
       "matchReasons": ["<reason1>", "<reason2>", ...],
@@ -126,6 +92,7 @@ Respond in JSON format:
   "primaryRecommendation": "<course-id of top pick>",
   "alternativesReason": "<why the other courses are also good options>"
 }`
+}
 
 const OFFER_PROMPT = `You are an AI Offer Generation Agent for Cerebrum Biology Academy.
 
@@ -246,8 +213,22 @@ export interface UpsellOpportunity {
 }
 
 export class ProductAgent extends BaseAgent {
+  private coursesCache: DatabaseCourse[] | null = null
+
   constructor() {
-    super(AgentType.PRODUCT_AGENT, RECOMMENDATION_PROMPT)
+    // Initialize with a basic prompt - will be updated dynamically with actual courses
+    super(
+      AgentType.PRODUCT_AGENT,
+      'You are an AI Product Recommendation Agent for Cerebrum Biology Academy.'
+    )
+  }
+
+  // Fetch and cache courses from database
+  private async getCourses(): Promise<DatabaseCourse[]> {
+    if (!this.coursesCache) {
+      this.coursesCache = await fetchCourseCatalog()
+    }
+    return this.coursesCache
   }
 
   async execute(context: AgentContext): Promise<AgentResponse> {
@@ -271,6 +252,20 @@ export class ProductAgent extends BaseAgent {
         'info',
         `Generating course recommendations for: ${context.leadId || context.metadata?.userId}`
       )
+
+      // Fetch actual courses from database
+      const courses = await this.getCourses()
+
+      if (courses.length === 0) {
+        return {
+          success: false,
+          message: 'No active courses found in database',
+          error: 'NO_COURSES',
+        }
+      }
+
+      // Update system prompt with actual course catalog
+      this.systemPrompt = buildRecommendationPrompt(courses)
 
       let profileData: Record<string, unknown> = {}
 
@@ -329,9 +324,10 @@ Provide your top 3-4 course recommendations with match scores and reasons.`
         }
       }
 
+      // Map recommendations with actual course prices from database
       const recommendations: CourseRecommendation[] = result.recommendations.map((rec) => {
-        const course = COURSE_CATALOG.find((c) => c.id === rec.courseId)
-        const price = course?.price || 0
+        const course = courses.find((c) => c.id === rec.courseId)
+        const price = course?.totalFees || 0
         const discount = Math.min(rec.suggestedDiscount, 25)
         const finalPrice = Math.round(price * (1 - discount / 100))
 
@@ -404,16 +400,23 @@ Provide your top 3-4 course recommendations with match scores and reasons.`
         }
       }
 
-      const course = COURSE_CATALOG.find((c) => c.id === courseId)
+      // Fetch course from database
+      const course = await prisma.courses.findUnique({
+        where: { id: courseId },
+      })
+
       if (!course) {
         return {
           success: false,
-          message: 'Course not found',
+          message: 'Course not found in database',
           error: 'COURSE_NOT_FOUND',
         }
       }
 
       this.systemPrompt = OFFER_PROMPT
+
+      const features = Array.isArray(course.features) ? course.features : []
+      const durationText = `${course.duration} months`
 
       const userMessage = `Generate a personalized offer for this lead:
 
@@ -426,9 +429,12 @@ LEAD PROFILE:
 
 SELECTED COURSE:
 - Name: ${course.name}
-- Original Price: ₹${course.price.toLocaleString('en-IN')}
-- Duration: ${course.duration}
-- Features: ${course.features.join(', ')}
+- Description: ${course.description || 'N/A'}
+- Type: ${course.type}
+- Target Class: ${course.class}
+- Original Price: ₹${course.totalFees.toLocaleString('en-IN')}
+- Duration: ${durationText}
+- Features: ${features.join(', ') || 'Standard features'}
 
 URGENCY CONTEXT:
 - Urgency level: ${context.metadata?.urgency || 'medium'}
@@ -448,7 +454,7 @@ Create a compelling offer with appropriate discount and payment options.`
       }
 
       result.discountValue = Math.min(result.discountValue, 25)
-      result.finalPrice = Math.round(course.price * (1 - result.discountValue / 100))
+      result.finalPrice = Math.round(course.totalFees * (1 - result.discountValue / 100))
 
       this.log(
         'info',
@@ -463,7 +469,7 @@ Create a compelling offer with appropriate discount and payment options.`
           course: {
             id: course.id,
             name: course.name,
-            originalPrice: course.price,
+            originalPrice: course.totalFees,
           },
         },
         action: 'no_action',
@@ -515,6 +521,10 @@ Create a compelling offer with appropriate discount and payment options.`
         }
       }
 
+      // Fetch actual courses from database for upsell recommendations
+      const courses = await this.getCourses()
+      const formattedCourses = courses.map(formatCourseForPrompt)
+
       this.systemPrompt = UPSELL_PROMPT
 
       const enrollmentData = user.enrollments.map((e) => ({
@@ -535,8 +545,8 @@ STUDENT PROFILE:
 CURRENT ENROLLMENTS:
 ${JSON.stringify(enrollmentData, null, 2)}
 
-AVAILABLE COURSES FOR UPSELL:
-${JSON.stringify(COURSE_CATALOG, null, 2)}
+AVAILABLE COURSES FOR UPSELL (from database):
+${JSON.stringify(formattedCourses, null, 2)}
 
 CURRENT CONTEXT:
 - Current month: ${new Date().toLocaleString('en-US', { month: 'long' })}
