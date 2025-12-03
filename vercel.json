@@ -21,6 +21,14 @@
       "maxDuration": 60,
       "memory": 1024
     },
+    "src/app/api/agents/**/*.ts": {
+      "maxDuration": 60,
+      "memory": 1024
+    },
+    "src/app/api/cron/**/*.ts": {
+      "maxDuration": 60,
+      "memory": 1024
+    },
     "src/app/api/whatsapp/**/*.ts": {
       "maxDuration": 30,
       "memory": 512
@@ -112,6 +120,10 @@
     {
       "path": "/api/cron/cleanup-otp",
       "schedule": "0 */4 * * *"
+    },
+    {
+      "path": "/api/cron/process-agents",
+      "schedule": "*/5 * * * *"
     }
   ]
 }
