@@ -5,6 +5,8 @@ import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { DemoBookingData } from '@/components/admin/DemoBookingModal'
 import { z } from 'zod'
+import { AgentType } from '@/generated/prisma'
+import { AgentTaskManager } from '@/lib/crm-agents/base'
 
 // Input validation schema
 const DemoBookingSchema = z.object({
@@ -165,6 +167,44 @@ export async function POST(request: NextRequest) {
 
     // Send immediate notifications
     await sendImmediateNotifications(demoBooking)
+
+    // Queue AI Product Agent for course match analysis (automatic trigger)
+    try {
+      // First, try to find or create a lead for this demo booking
+      let lead = await prisma.leads.findFirst({
+        where: {
+          OR: [{ email: data.email }, { phone: data.phone.replace(/\D/g, '').slice(-10) }],
+        },
+      })
+
+      if (lead) {
+        // Update existing lead with demo booking
+        await prisma.leads.update({
+          where: { id: lead.id },
+          data: {
+            demoBookingId: demoBooking.id,
+            stage: 'DEMO_SCHEDULED',
+          },
+        })
+
+        // Queue Product Agent for course recommendations
+        await AgentTaskManager.createTask({
+          agentType: AgentType.PRODUCT_AGENT,
+          leadId: lead.id,
+          input: {
+            action: 'recommend',
+            trigger: 'DEMO_BOOKED',
+            profile: {
+              courseInterest: data.courseInterest.join(', '),
+              preferredDate: data.preferredDate,
+              demoType: demoType || 'FREE',
+            },
+          },
+        })
+      }
+    } catch (agentError) {
+      console.error('Failed to queue product agent for demo:', agentError)
+    }
 
     return NextResponse.json({
       success: true,

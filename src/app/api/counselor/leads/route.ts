@@ -185,6 +185,24 @@ export async function POST(request: NextRequest) {
       console.error('Failed to queue lead qualifier agent:', agentError)
     }
 
+    // Queue AI Product Agent for course recommendations (automatic trigger)
+    try {
+      await AgentTaskManager.createTask({
+        agentType: AgentType.PRODUCT_AGENT,
+        leadId: lead.id,
+        input: {
+          action: 'recommend',
+          trigger: 'LEAD_CREATED',
+          profile: {
+            courseInterest: validatedData.courseInterest,
+            source: validatedData.source,
+          },
+        },
+      })
+    } catch (agentError) {
+      console.error('Failed to queue product agent:', agentError)
+    }
+
     return NextResponse.json(
       {
         success: true,

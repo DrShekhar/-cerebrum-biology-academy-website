@@ -12,6 +12,7 @@ import { CallPrepAgent } from './callPrep'
 import { ContentGeneratorAgent } from './contentGenerator'
 import { CallSummaryAgent } from './callSummary'
 import { ActionItemExtractorAgent } from './actionItemExtractor'
+import { ProductAgent } from './productAgent'
 
 // Agent instances cache
 const agentInstances: Map<AgentType, BaseAgent> = new Map()
@@ -50,6 +51,10 @@ export function createAgent(agentType: AgentType): BaseAgent | null {
 
     case AgentType.ACTION_EXTRACTOR:
       agent = new ActionItemExtractorAgent()
+      break
+
+    case AgentType.PRODUCT_AGENT:
+      agent = new ProductAgent()
       break
 
     case AgentType.CALL_TRANSCRIPTION:
@@ -103,6 +108,7 @@ export class AgentFactory {
       AgentType.CONTENT_GENERATOR,
       AgentType.CALL_SUMMARY,
       AgentType.ACTION_EXTRACTOR,
+      AgentType.PRODUCT_AGENT,
     ]
   }
 
@@ -125,6 +131,7 @@ export class AgentFactory {
       CALL_TRANSCRIPTION: 'Transcribes call recordings using OpenAI Whisper',
       CALL_SUMMARY: 'Analyzes call transcripts and generates summaries with insights',
       ACTION_EXTRACTOR: 'Extracts actionable tasks from call transcripts and creates CRM tasks',
+      PRODUCT_AGENT: 'Provides course recommendations, offer generation, and upsell suggestions',
     }
 
     return descriptions[agentType] || 'Unknown agent'

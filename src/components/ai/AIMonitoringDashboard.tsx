@@ -31,6 +31,7 @@ import {
   Phone,
   FileText,
   MessageSquare,
+  ShoppingCart,
 } from 'lucide-react'
 import { useToast } from '@/components/ui/Toast'
 
@@ -1109,6 +1110,7 @@ function formatAgentType(type: string): string {
     CALL_TRANSCRIPTION: 'Transcription',
     CALL_SUMMARY: 'Call Summary',
     ACTION_EXTRACTOR: 'Action Extractor',
+    PRODUCT_AGENT: 'Product Agent',
   }
   return typeMap[type] || type
 }
@@ -1122,6 +1124,7 @@ function getAgentIcon(type: string) {
     CALL_TRANSCRIPTION: <FileText className="w-4 h-4 text-cyan-500" />,
     CALL_SUMMARY: <FileText className="w-4 h-4 text-indigo-500" />,
     ACTION_EXTRACTOR: <CheckCircle className="w-4 h-4 text-pink-500" />,
+    PRODUCT_AGENT: <ShoppingCart className="w-4 h-4 text-emerald-500" />,
   }
   return iconMap[type] || <Bot className="w-4 h-4 text-gray-500" />
 }

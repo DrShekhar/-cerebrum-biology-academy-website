@@ -24,6 +24,8 @@ export { ContentGeneratorAgent } from './contentGenerator'
 export { CallTranscriptionService } from './callTranscription'
 export { CallSummaryAgent } from './callSummary'
 export { ActionItemExtractorAgent } from './actionItemExtractor'
+export { ProductAgent } from './productAgent'
+export type { CourseRecommendation, OfferSuggestion, UpsellOpportunity } from './productAgent'
 
 // Agent factory
 export { createAgent, AgentFactory } from './factory'

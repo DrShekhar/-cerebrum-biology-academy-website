@@ -294,6 +294,33 @@ model courses {
   certificates        certificates[]
   class_sessions      class_sessions[]
   attendance_settings attendance_settings[]
+  product_recommendations product_recommendations[]
+}
+
+model product_recommendations {
+  id              String    @id @default(cuid())
+  leadId          String?
+  userId          String?
+  courseId        String
+  matchScore      Int       // 0-100 match score
+  matchReasons    Json      // Array of match reasons
+  offerSuggestion Json?     // Suggested discount/payment plan
+  recommendedAt   DateTime  @default(now())
+  viewedAt        DateTime?
+  clickedAt       DateTime?
+  convertedAt     DateTime?
+  source          String    @default("AGENT") // AGENT, MANUAL, SYSTEM
+  metadata        Json?     // Additional context
+  createdAt       DateTime  @default(now())
+
+  lead            leads?    @relation(fields: [leadId], references: [id], onDelete: Cascade)
+  user            users?    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  course          courses   @relation(fields: [courseId], references: [id], onDelete: Cascade)
+
+  @@index([leadId])
+  @@index([userId])
+  @@index([courseId])
+  @@index([recommendedAt])
 }
 
 model crm_communications {
@@ -602,6 +629,7 @@ model leads {
   followup_queue         followup_queue[]
   followup_history       followup_history[]
   agent_tasks            agent_tasks[]
+  product_recommendations product_recommendations[]
 
   @@index([assignedToId, stage])
   @@index([assignedToId, score])
@@ -1314,6 +1342,7 @@ model users {
   followup_history_created                followup_history[]                      @relation("FollowupHistoryCreator")
   teacher_test_assignments                test_assignments[]                      @relation("TeacherTestAssignments")
   student_test_submissions                test_assignment_submissions[]           @relation("StudentTestSubmissions")
+  product_recommendations                 product_recommendations[]
 }
 
 model whatsapp_otp {
@@ -2714,6 +2743,7 @@ enum AgentType {
   CALL_TRANSCRIPTION  // Transcribe call recordings
   CALL_SUMMARY        // Summarize call transcripts
   ACTION_EXTRACTOR    // Extract action items from calls
+  PRODUCT_AGENT       // Course recommendations and offer generation
 }
 
 enum AgentTaskStatus {
