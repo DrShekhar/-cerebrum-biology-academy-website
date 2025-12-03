@@ -1132,6 +1132,110 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.85,
     },
+    // Biology Tuition South Delhi - Hub Page
+    {
+      url: `${baseUrl}/biology-tuition-south-delhi`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.95,
+    },
+    // Biology Tuition Area Pages
+    {
+      url: `${baseUrl}/biology-tuition-south-delhi/hauz-khas`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/biology-tuition-south-delhi/kalu-sarai`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/biology-tuition-south-delhi/greater-kailash`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/biology-tuition-south-delhi/defence-colony`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/biology-tuition-south-delhi/vasant-vihar`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/biology-tuition-south-delhi/rk-puram`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/biology-tuition-south-delhi/sarojini-nagar`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/biology-tuition-south-delhi/lodhi-colony`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/biology-tuition-south-delhi/saket`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/biology-tuition-south-delhi/malviya-nagar`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/biology-tuition-south-delhi/green-park`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/biology-tuition-south-delhi/cr-park`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/biology-tuition-south-delhi/munirka`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/biology-tuition-south-delhi/lajpat-nagar`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/biology-tuition-south-delhi/kalkaji`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/biology-tuition-south-delhi/east-of-kailash`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
   ]
 
   return routes
