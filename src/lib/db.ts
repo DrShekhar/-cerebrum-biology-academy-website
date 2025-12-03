@@ -1,5 +1,3 @@
-import { tx, id } from '@instantdb/react'
-
 // Define your database schema
 export interface User {
   id: string
@@ -117,5 +115,36 @@ export const db: any = new Proxy(mockDb, {
   },
 })
 
-// Export utilities
-export { tx, id }
+// Export utilities - dynamically loaded to avoid SSR issues
+let _tx: any = null
+let _id: any = null
+
+// Create proxy functions that lazily load from @instantdb/react
+export const tx = new Proxy(
+  {},
+  {
+    get(target, prop) {
+      if (typeof window !== 'undefined' && !_tx) {
+        try {
+          const instantdb = require('@instantdb/react')
+          _tx = instantdb.tx
+        } catch {
+          _tx = {}
+        }
+      }
+      return _tx?.[prop]
+    },
+  }
+)
+
+export const id = () => {
+  if (typeof window !== 'undefined' && !_id) {
+    try {
+      const instantdb = require('@instantdb/react')
+      _id = instantdb.id
+    } catch {
+      _id = () => `mock-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`
+    }
+  }
+  return _id ? _id() : `mock-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`
+}
