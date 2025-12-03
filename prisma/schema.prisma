@@ -311,8 +311,19 @@ model crm_communications {
   callDuration      Int?
   callRecordingUrl  String?
   attachments       String[]
+
+  // AI-generated call analysis fields
+  callTranscript    String?    @db.Text
+  callSummary       String?    @db.Text
+  actionItems       String[]
+  sentiment         String?    // POSITIVE, NEUTRAL, NEGATIVE
+  keyTopics         String[]
+  transcribedAt     DateTime?
+  summarizedAt      DateTime?
+
   leads             leads      @relation(fields: [leadId], references: [id], onDelete: Cascade)
   users             users      @relation(fields: [sentById], references: [id])
+  agent_tasks       agent_tasks[]
 
   @@index([leadId, sentAt])
   @@index([sentById])
@@ -590,6 +601,7 @@ model leads {
   whatsapp_conversations whatsapp_conversations[]
   followup_queue         followup_queue[]
   followup_history       followup_history[]
+  agent_tasks            agent_tasks[]
 
   @@index([assignedToId, stage])
   @@index([assignedToId, score])
@@ -2654,4 +2666,61 @@ enum SubmissionTestStatus {
   PAUSED
   SUBMITTED
   GRADED
+}
+
+// ============================================
+// AI AGENT SYSTEM TABLES
+// ============================================
+
+model agent_tasks {
+  id            String          @id @default(cuid())
+  agentType     AgentType
+  leadId        String?
+  communicationId String?       // For call-related agents
+
+  status        AgentTaskStatus @default(PENDING)
+  input         Json            // Input data for the agent
+  output        Json?           // Agent's response/output
+  error         String?         @db.Text
+
+  // Scheduling
+  scheduledAt   DateTime?
+  startedAt     DateTime?
+  completedAt   DateTime?
+
+  // Retry logic
+  attempt       Int             @default(0)
+  maxAttempts   Int             @default(3)
+
+  // Metadata
+  metadata      Json?
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime        @updatedAt
+
+  lead          leads?          @relation(fields: [leadId], references: [id], onDelete: Cascade)
+  communication crm_communications? @relation(fields: [communicationId], references: [id], onDelete: Cascade)
+
+  @@index([status, scheduledAt])
+  @@index([agentType, status])
+  @@index([leadId])
+  @@index([communicationId])
+}
+
+enum AgentType {
+  LEAD_QUALIFIER      // Qualify and score leads
+  NURTURE             // Generate nurture messages
+  CALL_PREP           // Prepare counselor for calls
+  CONTENT_GENERATOR   // Generate marketing content
+  CALL_TRANSCRIPTION  // Transcribe call recordings
+  CALL_SUMMARY        // Summarize call transcripts
+  ACTION_EXTRACTOR    // Extract action items from calls
+}
+
+enum AgentTaskStatus {
+  PENDING
+  SCHEDULED
+  RUNNING
+  COMPLETED
+  FAILED
+  CANCELLED
 }

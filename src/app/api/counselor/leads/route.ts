@@ -3,6 +3,8 @@ import { authenticateCounselor } from '@/lib/auth/counselor-auth'
 import { prisma } from '@/lib/prisma'
 import { z } from 'zod'
 import type { LeadStage, Priority } from '@/generated/prisma'
+import { AgentType } from '@/generated/prisma'
+import { AgentTaskManager } from '@/lib/crm-agents/base'
 
 const createLeadSchema = z.object({
   studentName: z.string().min(1, 'Student name is required'),
@@ -167,6 +169,21 @@ export async function POST(request: NextRequest) {
         description: `Created new lead: ${lead.studentName}`,
       },
     })
+
+    // Queue AI Lead Qualifier Agent (automatic trigger)
+    try {
+      await AgentTaskManager.createTask({
+        agentType: AgentType.LEAD_QUALIFIER,
+        leadId: lead.id,
+        input: {
+          trigger: 'LEAD_CREATED',
+          createdBy: session.userId,
+        },
+      })
+    } catch (agentError) {
+      // Don't fail the lead creation if agent queueing fails
+      console.error('Failed to queue lead qualifier agent:', agentError)
+    }
 
     return NextResponse.json(
       {
