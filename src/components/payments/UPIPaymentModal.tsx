@@ -176,7 +176,8 @@ export function UPIPaymentModal({
             </div>
             <button
               onClick={onClose}
-              className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+              className="p-2 min-h-[44px] min-w-[44px] flex items-center justify-center hover:bg-gray-100 rounded-full transition-colors touch-manipulation"
+              aria-label="Close payment modal"
             >
               <X className="w-5 h-5" />
             </button>
@@ -195,7 +196,7 @@ export function UPIPaymentModal({
                   <button
                     key={lang.code}
                     onClick={() => setLanguage(lang.code as any)}
-                    className={`px-3 py-1 rounded-full text-sm font-medium transition-colors ${
+                    className={`px-4 py-2 min-h-[44px] rounded-full text-sm font-medium transition-colors touch-manipulation ${
                       language === lang.code
                         ? 'bg-blue-100 text-blue-800'
                         : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
@@ -441,7 +442,11 @@ function QRCodeFallback({ qrCode, paymentUrl, onClose }: any) {
     <div className="fixed inset-0 bg-white z-10 p-6">
       <div className="flex items-center justify-between mb-6">
         <h3 className="text-lg font-semibold">Scan QR Code to Pay</h3>
-        <button onClick={onClose} className="p-2 hover:bg-gray-100 rounded-full">
+        <button
+          onClick={onClose}
+          className="p-2 min-h-[44px] min-w-[44px] flex items-center justify-center hover:bg-gray-100 rounded-full touch-manipulation"
+          aria-label="Close QR code"
+        >
           <X className="w-5 h-5" />
         </button>
       </div>

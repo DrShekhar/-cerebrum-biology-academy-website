@@ -91,7 +91,7 @@ export const ChatInput = memo(function ChatInput({
           <button
             onClick={handleSubmit}
             disabled={!message.trim() || isLoading || remainingChars < 0}
-            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-primary-500 to-primary-600 text-white shadow-mobile-button transition-all hover:shadow-md active:scale-95 disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:shadow-mobile-button"
+            className="flex min-h-[44px] min-w-[44px] h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-primary-500 to-primary-600 text-white shadow-mobile-button transition-all hover:shadow-md active:scale-95 disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:shadow-mobile-button touch-manipulation"
             aria-label="Send message"
             type="button"
           >

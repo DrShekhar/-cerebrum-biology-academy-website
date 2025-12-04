@@ -419,7 +419,7 @@ export function BlogListingPage({ posts, categories, stats }: BlogListingPagePro
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/demo-booking">
               <Button
-                variant="secondary_cta"
+                variant="secondary"
                 size="xl"
                 className="bg-white text-blue-600 hover:bg-gray-100"
               >

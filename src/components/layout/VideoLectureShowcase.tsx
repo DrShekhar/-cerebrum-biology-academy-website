@@ -416,7 +416,7 @@ export function VideoLectureShowcase() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Button
-              variant="secondary_cta"
+              variant="secondary"
               size="xl"
               className="bg-white text-indigo-600 hover:bg-gray-100"
               onClick={handleDemoBooking}

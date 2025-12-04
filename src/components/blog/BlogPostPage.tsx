@@ -429,7 +429,7 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link href="/demo-booking">
                     <Button
-                      variant="secondary_cta"
+                      variant="secondary"
                       size="lg"
                       className="bg-white text-blue-600 hover:bg-gray-100"
                     >

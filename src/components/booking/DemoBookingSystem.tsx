@@ -171,7 +171,7 @@ export function DemoBookingSystem() {
   }
 
   const handleNextStep = () => {
-    if (currentStep < 4) {
+    if (currentStep < 2) {
       setCurrentStep(currentStep + 1)
     }
   }
@@ -405,12 +405,7 @@ export function DemoBookingSystem() {
   const timeSlots = selectedDate ? getTimeSlots(selectedDate) : []
   const formattedSelectedDate = selectedDate ? format(selectedDate, 'MMMM d, yyyy') : ''
 
-  const stepTitles = [
-    'Select Date & Time',
-    'Your Information',
-    'Course Preferences',
-    'Confirm Booking',
-  ]
+  const stepTitles = ['Schedule Your Demo', 'Confirm Booking']
 
   if (bookingComplete) {
     return (
@@ -671,7 +666,7 @@ export function DemoBookingSystem() {
           )}
 
           <AnimatePresence mode="wait">
-            {/* Step 1: Date & Time Selection */}
+            {/* Step 1: Schedule Your Demo (Date, Time, Name, Email, Phone) */}
             {currentStep === 1 && (
               <motion.div
                 key="step1"
@@ -680,11 +675,11 @@ export function DemoBookingSystem() {
                 exit={{ opacity: 0, x: -20 }}
                 className="space-y-6"
               >
+                {/* Date Selection */}
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-4">
                     Choose Your Preferred Date
                   </h3>
-                  {/* Mobile-responsive calendar wrapper */}
                   <div className="flex justify-center overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0">
                     <div className="inline-block max-w-full">
                       <DayPicker
@@ -782,324 +777,185 @@ export function DemoBookingSystem() {
                         </div>
                       ))}
                     </div>
+                  </motion.div>
+                )}
 
-                    {/* Step 1 Action Buttons - Always visible after date selection */}
-                    <motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      className="mt-6 space-y-3"
-                    >
-                      {/* WhatsApp Quick Booking - Always available */}
+                {/* Personal Information - Only show after time is selected */}
+                {selectedTime && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="space-y-6 pt-4 border-t border-gray-200"
+                  >
+                    <h3 className="text-lg font-semibold text-gray-900">Your Contact Details</h3>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          <User className="w-4 h-4 inline mr-2" />
+                          Full Name *
+                        </label>
+                        <div className="relative">
+                          <input
+                            type="text"
+                            value={bookingData.studentName}
+                            onChange={(e) => handleInputChange('studentName', e.target.value)}
+                            className={`w-full p-3 pr-10 border rounded-lg focus:ring-2 focus:border-transparent text-base ${
+                              validationStates.studentName?.isValid
+                                ? 'border-green-500 focus:ring-green-500'
+                                : validationStates.studentName?.error
+                                  ? 'border-red-500 focus:ring-red-500'
+                                  : 'border-gray-300 focus:ring-blue-500'
+                            }`}
+                            placeholder="Enter your full name"
+                            required
+                            style={{ fontSize: '16px' }}
+                          />
+                          {validationStates.studentName?.isValid && (
+                            <Check className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-green-500" />
+                          )}
+                          {validationStates.studentName?.error && (
+                            <X className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-red-500" />
+                          )}
+                        </div>
+                        {validationStates.studentName?.error && (
+                          <p className="text-xs text-red-600 mt-1">
+                            {validationStates.studentName.error}
+                          </p>
+                        )}
+                      </div>
+
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          <Phone className="w-4 h-4 inline mr-2" />
+                          Phone Number *
+                        </label>
+                        <div className="relative">
+                          <input
+                            type="tel"
+                            value={bookingData.phone}
+                            onChange={(e) => handleInputChange('phone', e.target.value)}
+                            className={`w-full p-3 pr-10 border rounded-lg focus:ring-2 focus:border-transparent text-base ${
+                              validationStates.phone?.isValid
+                                ? 'border-green-500 focus:ring-green-500'
+                                : validationStates.phone?.error
+                                  ? 'border-red-500 focus:ring-red-500'
+                                  : 'border-gray-300 focus:ring-blue-500'
+                            }`}
+                            placeholder="+91 93119 46297"
+                            required
+                            style={{ fontSize: '16px' }}
+                          />
+                          {validationStates.phone?.isValid && (
+                            <Check className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-green-500" />
+                          )}
+                          {validationStates.phone?.error && (
+                            <X className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-red-500" />
+                          )}
+                        </div>
+                        {validationStates.phone?.error && (
+                          <p className="text-xs text-red-600 mt-1">
+                            {validationStates.phone.error}
+                          </p>
+                        )}
+                      </div>
+
+                      <div className="md:col-span-2">
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          <Mail className="w-4 h-4 inline mr-2" />
+                          Email Address *
+                        </label>
+                        <div className="relative">
+                          <input
+                            type="email"
+                            value={bookingData.email}
+                            onChange={(e) => handleInputChange('email', e.target.value)}
+                            className={`w-full p-3 pr-10 border rounded-lg focus:ring-2 focus:border-transparent text-base ${
+                              validationStates.email?.isValid
+                                ? 'border-green-500 focus:ring-green-500'
+                                : validationStates.email?.error
+                                  ? 'border-red-500 focus:ring-red-500'
+                                  : 'border-gray-300 focus:ring-blue-500'
+                            }`}
+                            placeholder="your@email.com"
+                            required
+                            style={{ fontSize: '16px' }}
+                          />
+                          {validationStates.email?.isValid && (
+                            <Check className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-green-500" />
+                          )}
+                          {validationStates.email?.error && (
+                            <X className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-red-500" />
+                          )}
+                        </div>
+                        {validationStates.email?.error && (
+                          <p className="text-xs text-red-600 mt-1">
+                            {validationStates.email.error}
+                          </p>
+                        )}
+                        {validationStates.email?.suggestion && (
+                          <button
+                            onClick={() =>
+                              handleEmailSuggestionAccept(validationStates.email!.suggestion!)
+                            }
+                            className="text-xs text-blue-600 hover:text-blue-700 underline mt-1"
+                          >
+                            Did you mean: {validationStates.email.suggestion}?
+                          </button>
+                        )}
+                      </div>
+                    </div>
+
+                    {/* Action Buttons */}
+                    <div className="space-y-3 pt-2">
+                      <button
+                        onClick={handleNextStep}
+                        disabled={
+                          !bookingData.studentName || !bookingData.email || !bookingData.phone
+                        }
+                        className={`flex items-center justify-center gap-2 w-full px-6 py-3.5 rounded-xl transition-all duration-200 font-medium shadow-lg ${
+                          bookingData.studentName && bookingData.email && bookingData.phone
+                            ? 'bg-blue-600 text-white hover:bg-blue-700 shadow-blue-600/20 hover:shadow-blue-600/30'
+                            : 'bg-gray-300 text-gray-500 cursor-not-allowed shadow-gray-300/20'
+                        }`}
+                      >
+                        <span>Continue to Confirmation</span>
+                        <ArrowRight className="w-4 h-4" />
+                      </button>
+
                       <a
                         href={`https://wa.me/918826444334?text=${encodeURIComponent(
-                          `Hi! I'd like to book a free NEET Biology demo class.\n\nPreferred Date: ${format(selectedDate, 'MMMM d, yyyy')}${selectedTime ? `\nPreferred Time: ${selectedTime}` : ''}`
+                          `Hi! I'd like to book a free NEET Biology demo class.\n\nPreferred Date: ${format(selectedDate!, 'MMMM d, yyyy')}\nPreferred Time: ${selectedTime}${bookingData.studentName ? `\nName: ${bookingData.studentName}` : ''}${bookingData.phone ? `\nPhone: ${bookingData.phone}` : ''}`
                         )}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center justify-center gap-2 w-full bg-green-600 text-white py-3.5 rounded-xl hover:bg-green-700 transition-all duration-200 font-medium shadow-lg shadow-green-600/20 hover:shadow-green-600/30"
                       >
                         <MessageSquare className="w-5 h-5" />
-                        <span>Book via WhatsApp</span>
+                        <span>Or Book via WhatsApp</span>
                       </a>
-
-                      {/* Next Button - Requires time slot selection */}
-                      <button
-                        onClick={handleNextStep}
-                        disabled={!selectedTime}
-                        className={`flex items-center justify-center gap-2 w-full px-6 py-3.5 rounded-xl transition-all duration-200 font-medium shadow-lg ${
-                          selectedTime
-                            ? 'bg-blue-600 text-white hover:bg-blue-700 shadow-blue-600/20 hover:shadow-blue-600/30'
-                            : 'bg-gray-300 text-gray-500 cursor-not-allowed shadow-gray-300/20'
-                        }`}
-                      >
-                        <span>
-                          {selectedTime
-                            ? 'Continue to Next Step'
-                            : 'Select a time slot to continue'}
-                        </span>
-                        <ArrowRight className="w-4 h-4" />
-                      </button>
-                    </motion.div>
+                    </div>
                   </motion.div>
                 )}
 
-                {/* Testimonials - Moved below calendar for better UX */}
-                <div className="mt-8">
-                  <TestimonialCarousel />
-                </div>
-
-                {/* Benefits Grid - Moved below calendar for better UX */}
-                <div className="mt-6">
-                  <BenefitsGrid />
-                </div>
+                {/* Testimonials - Show when no time selected yet */}
+                {!selectedTime && (
+                  <>
+                    <div className="mt-8">
+                      <TestimonialCarousel />
+                    </div>
+                    <div className="mt-6">
+                      <BenefitsGrid />
+                    </div>
+                  </>
+                )}
               </motion.div>
             )}
 
-            {/* Step 2: Personal Information */}
+            {/* Step 2: Confirm Booking (Course Interest + Summary) */}
             {currentStep === 2 && (
               <motion.div
                 key="step2"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
-                className="space-y-6"
-              >
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Tell Us About Yourself</h3>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      <User className="w-4 h-4 inline mr-2" />
-                      Full Name *
-                    </label>
-                    <div className="relative">
-                      <input
-                        type="text"
-                        value={bookingData.studentName}
-                        onChange={(e) => handleInputChange('studentName', e.target.value)}
-                        className={`w-full p-3 pr-10 border rounded-lg focus:ring-2 focus:border-transparent text-base ${
-                          validationStates.studentName?.isValid
-                            ? 'border-green-500 focus:ring-green-500'
-                            : validationStates.studentName?.error
-                              ? 'border-red-500 focus:ring-red-500'
-                              : 'border-gray-300 focus:ring-blue-500'
-                        }`}
-                        placeholder="Enter your full name"
-                        required
-                        style={{ fontSize: '16px' }}
-                      />
-                      {validationStates.studentName?.isValid && (
-                        <Check className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-green-500" />
-                      )}
-                      {validationStates.studentName?.error && (
-                        <X className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-red-500" />
-                      )}
-                    </div>
-                    {validationStates.studentName?.error && (
-                      <p className="text-xs text-red-600 mt-1">
-                        {validationStates.studentName.error}
-                      </p>
-                    )}
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      <Mail className="w-4 h-4 inline mr-2" />
-                      Email Address *
-                    </label>
-                    <div className="relative">
-                      <input
-                        type="email"
-                        value={bookingData.email}
-                        onChange={(e) => handleInputChange('email', e.target.value)}
-                        className={`w-full p-3 pr-10 border rounded-lg focus:ring-2 focus:border-transparent text-base ${
-                          validationStates.email?.isValid
-                            ? 'border-green-500 focus:ring-green-500'
-                            : validationStates.email?.error
-                              ? 'border-red-500 focus:ring-red-500'
-                              : 'border-gray-300 focus:ring-blue-500'
-                        }`}
-                        placeholder="your@email.com"
-                        required
-                        style={{ fontSize: '16px' }}
-                      />
-                      {validationStates.email?.isValid && (
-                        <Check className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-green-500" />
-                      )}
-                      {validationStates.email?.error && (
-                        <X className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-red-500" />
-                      )}
-                    </div>
-                    {validationStates.email?.error && (
-                      <p className="text-xs text-red-600 mt-1">{validationStates.email.error}</p>
-                    )}
-                    {validationStates.email?.suggestion && (
-                      <button
-                        onClick={() =>
-                          handleEmailSuggestionAccept(validationStates.email!.suggestion!)
-                        }
-                        className="text-xs text-blue-600 hover:text-blue-700 underline mt-1"
-                      >
-                        Did you mean: {validationStates.email.suggestion}?
-                      </button>
-                    )}
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      <Phone className="w-4 h-4 inline mr-2" />
-                      Phone Number *
-                    </label>
-                    <div className="relative">
-                      <input
-                        type="tel"
-                        value={bookingData.phone}
-                        onChange={(e) => handleInputChange('phone', e.target.value)}
-                        className={`w-full p-3 pr-10 border rounded-lg focus:ring-2 focus:border-transparent text-base ${
-                          validationStates.phone?.isValid
-                            ? 'border-green-500 focus:ring-green-500'
-                            : validationStates.phone?.error
-                              ? 'border-red-500 focus:ring-red-500'
-                              : 'border-gray-300 focus:ring-blue-500'
-                        }`}
-                        placeholder="+91 93119 46297"
-                        required
-                        style={{ fontSize: '16px' }}
-                      />
-                      {validationStates.phone?.isValid && (
-                        <Check className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-green-500" />
-                      )}
-                      {validationStates.phone?.error && (
-                        <X className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-red-500" />
-                      )}
-                    </div>
-                    {validationStates.phone?.error && (
-                      <p className="text-xs text-red-600 mt-1">{validationStates.phone.error}</p>
-                    )}
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Current Class/Status *
-                    </label>
-                    <select
-                      value={bookingData.currentClass}
-                      onChange={(e) => handleInputChange('currentClass', e.target.value)}
-                      className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      required
-                    >
-                      <option value="">Select your current status</option>
-                      <option value="class-11">Class 11th</option>
-                      <option value="class-12">Class 12th</option>
-                      <option value="dropper-1">1st Year Dropper</option>
-                      <option value="dropper-2">2nd Year Dropper</option>
-                      <option value="working-professional">Working Professional</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Previous NEET Score (if applicable)
-                  </label>
-                  <input
-                    type="text"
-                    value={bookingData.previousScore}
-                    onChange={(e) => handleInputChange('previousScore', e.target.value)}
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="e.g., 520/720 or Not attempted"
-                  />
-                </div>
-              </motion.div>
-            )}
-
-            {/* Step 3: Course Preferences */}
-            {currentStep === 3 && (
-              <motion.div
-                key="step3"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
-                className="space-y-6"
-              >
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                  Your Learning Preferences
-                </h3>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    <BookOpen className="w-4 h-4 inline mr-2" />
-                    Course Interest * (Select 1-3 courses)
-                  </label>
-                  <p className="text-xs text-gray-500 mb-3">
-                    Choose up to 3 courses you are interested in
-                  </p>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                    {[
-                      { id: 'neet-biology', label: 'Complete NEET Biology Course' },
-                      { id: 'class-11-biology', label: 'Class 11th Biology' },
-                      { id: 'class-12-biology', label: 'Class 12th Biology' },
-                      { id: 'crash-course', label: 'NEET Biology Crash Course' },
-                      { id: 'doubt-clearing', label: 'Doubt Clearing Sessions' },
-                      { id: 'test-series', label: 'Biology Test Series' },
-                    ].map((course) => (
-                      <button
-                        key={course.id}
-                        type="button"
-                        onClick={() => handleCourseInterestToggle(course.id)}
-                        disabled={
-                          !bookingData.courseInterest.includes(course.id) &&
-                          bookingData.courseInterest.length >= 3
-                        }
-                        className={`p-4 rounded-lg border-2 text-left transition-all ${
-                          bookingData.courseInterest.includes(course.id)
-                            ? 'border-blue-600 bg-blue-50 text-blue-900'
-                            : 'border-gray-200 hover:border-blue-300 hover:bg-blue-50 disabled:opacity-50 disabled:cursor-not-allowed'
-                        }`}
-                      >
-                        <div className="flex items-center gap-2">
-                          <div
-                            className={`w-5 h-5 rounded border-2 flex items-center justify-center ${
-                              bookingData.courseInterest.includes(course.id)
-                                ? 'bg-blue-600 border-blue-600'
-                                : 'border-gray-300'
-                            }`}
-                          >
-                            {bookingData.courseInterest.includes(course.id) && (
-                              <Check className="w-3 h-3 text-white" />
-                            )}
-                          </div>
-                          <span className="font-medium">{course.label}</span>
-                        </div>
-                      </button>
-                    ))}
-                  </div>
-                  <p className="text-xs text-gray-500 mt-2">
-                    Selected: {bookingData.courseInterest.length}/3
-                  </p>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Specific Topics You Want to Focus On
-                  </label>
-                  <textarea
-                    value={bookingData.specificTopics}
-                    onChange={(e) => handleInputChange('specificTopics', e.target.value)}
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    rows={3}
-                    placeholder="e.g., Genetics, Human Physiology, Plant Biology, or any specific doubts..."
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    How did you hear about us? *
-                  </label>
-                  <select
-                    value={bookingData.hearAboutUs}
-                    onChange={(e) => handleInputChange('hearAboutUs', e.target.value)}
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    required
-                  >
-                    <option value="">Select an option</option>
-                    <option value="google-search">Google Search</option>
-                    <option value="youtube">YouTube</option>
-                    <option value="facebook">Facebook</option>
-                    <option value="instagram">Instagram</option>
-                    <option value="friend-referral">Friend/Family Referral</option>
-                    <option value="coaching-center">Other Coaching Center</option>
-                    <option value="school">School</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-              </motion.div>
-            )}
-
-            {/* Step 4: Confirmation */}
-            {currentStep === 4 && (
-              <motion.div
-                key="step4"
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
@@ -1109,6 +965,7 @@ export function DemoBookingSystem() {
                   Confirm Your Demo Booking
                 </h3>
 
+                {/* Booking Summary */}
                 <div className="bg-blue-50 rounded-lg p-6">
                   <h4 className="font-semibold text-blue-900 mb-4">Booking Summary</h4>
                   <div className="space-y-3 text-sm">
@@ -1130,22 +987,58 @@ export function DemoBookingSystem() {
                         {formattedSelectedDate} at {selectedTime}
                       </span>
                     </div>
-                    <div className="flex flex-col gap-2">
-                      <span className="text-gray-600">Course Interest:</span>
-                      <div className="flex flex-wrap gap-1">
-                        {bookingData.courseInterest.map((course) => (
-                          <span
-                            key={course}
-                            className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full font-medium"
-                          >
-                            {course}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
                   </div>
                 </div>
 
+                {/* Course Interest Selection */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <BookOpen className="w-4 h-4 inline mr-2" />
+                    What are you interested in? (Select 1-3)
+                  </label>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    {[
+                      { id: 'neet-biology', label: 'Complete NEET Biology' },
+                      { id: 'class-11-biology', label: 'Class 11th Biology' },
+                      { id: 'class-12-biology', label: 'Class 12th Biology' },
+                      { id: 'crash-course', label: 'Crash Course' },
+                      { id: 'doubt-clearing', label: 'Doubt Clearing' },
+                      { id: 'test-series', label: 'Test Series' },
+                    ].map((course) => (
+                      <button
+                        key={course.id}
+                        type="button"
+                        onClick={() => handleCourseInterestToggle(course.id)}
+                        disabled={
+                          !bookingData.courseInterest.includes(course.id) &&
+                          bookingData.courseInterest.length >= 3
+                        }
+                        className={`p-3 rounded-lg border-2 text-left transition-all min-h-[44px] touch-manipulation ${
+                          bookingData.courseInterest.includes(course.id)
+                            ? 'border-blue-600 bg-blue-50 text-blue-900'
+                            : 'border-gray-200 hover:border-blue-300 hover:bg-blue-50 disabled:opacity-50 disabled:cursor-not-allowed'
+                        }`}
+                      >
+                        <div className="flex items-center gap-2">
+                          <div
+                            className={`w-5 h-5 rounded border-2 flex items-center justify-center flex-shrink-0 ${
+                              bookingData.courseInterest.includes(course.id)
+                                ? 'bg-blue-600 border-blue-600'
+                                : 'border-gray-300'
+                            }`}
+                          >
+                            {bookingData.courseInterest.includes(course.id) && (
+                              <Check className="w-3 h-3 text-white" />
+                            )}
+                          </div>
+                          <span className="font-medium text-sm">{course.label}</span>
+                        </div>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                {/* What You'll Get */}
                 <div className="bg-green-50 rounded-lg p-6">
                   <h4 className="font-semibold text-green-900 mb-3 flex items-center gap-2">
                     <Gift className="w-5 h-5" />
@@ -1153,37 +1046,33 @@ export function DemoBookingSystem() {
                   </h4>
                   <ul className="space-y-2 text-sm text-green-800">
                     <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4" />
+                      <CheckCircle className="w-4 h-4 flex-shrink-0" />
                       45-minute personalized NEET Biology session
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4" />
+                      <CheckCircle className="w-4 h-4 flex-shrink-0" />
                       Free study material and chapter notes
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4" />
+                      <CheckCircle className="w-4 h-4 flex-shrink-0" />
                       NEET strategy and preparation roadmap
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4" />
-                      Doubt clearing and topic explanation
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4" />
+                      <CheckCircle className="w-4 h-4 flex-shrink-0" />
                       Personalized feedback and guidance
                     </li>
                   </ul>
                 </div>
 
+                {/* Important Notes */}
                 <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
                   <div className="flex items-start gap-3">
-                    <Zap className="w-5 h-5 text-yellow-600 mt-0.5" />
+                    <Zap className="w-5 h-5 text-yellow-600 mt-0.5 flex-shrink-0" />
                     <div>
                       <h5 className="font-medium text-yellow-900">Important Notes:</h5>
                       <ul className="text-sm text-yellow-800 mt-1 space-y-1">
                         <li>• Zoom link will be sent 30 minutes before the session</li>
                         <li>• Please ensure stable internet connection</li>
-                        <li>• Keep a notebook ready for taking notes</li>
                         <li>• No payment required - this demo is completely free</li>
                       </ul>
                     </div>
@@ -1193,8 +1082,8 @@ export function DemoBookingSystem() {
             )}
           </AnimatePresence>
 
-          {/* Navigation Buttons for Steps 2-4 - Sticky on mobile/tablet */}
-          {currentStep > 1 && (
+          {/* Navigation Buttons for Step 2 - Sticky on mobile/tablet */}
+          {currentStep === 2 && (
             <div className="sticky bottom-0 left-0 right-0 z-20 bg-white border-t shadow-lg md:shadow-none md:static md:mt-8">
               <div className="flex justify-between items-center p-4 md:px-0 md:pt-6">
                 <button
@@ -1206,43 +1095,24 @@ export function DemoBookingSystem() {
                   <span className="sm:hidden">Back</span>
                 </button>
 
-                {currentStep < 4 ? (
-                  <button
-                    onClick={handleNextStep}
-                    disabled={
-                      (currentStep === 2 &&
-                        (!bookingData.studentName ||
-                          !bookingData.email ||
-                          !bookingData.phone ||
-                          !bookingData.currentClass)) ||
-                      (currentStep === 3 &&
-                        (bookingData.courseInterest.length === 0 || !bookingData.hearAboutUs))
-                    }
-                    className="flex items-center gap-2 px-4 md:px-6 py-3.5 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed min-h-[44px] touch-manipulation shadow-lg shadow-blue-600/20 hover:shadow-blue-600/30 font-medium"
-                  >
-                    Next
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
-                ) : (
-                  <button
-                    onClick={handleSubmit}
-                    disabled={isSubmitting}
-                    className="flex items-center gap-2 px-6 md:px-8 py-3.5 bg-green-600 text-white rounded-xl hover:bg-green-700 transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed min-h-[44px] touch-manipulation shadow-lg shadow-green-600/20 hover:shadow-green-600/30 font-medium"
-                  >
-                    {isSubmitting ? (
-                      <>
-                        <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                        Booking...
-                      </>
-                    ) : (
-                      <>
-                        <CheckCircle className="w-4 h-4" />
-                        <span className="hidden sm:inline">Confirm Booking</span>
-                        <span className="sm:hidden">Confirm</span>
-                      </>
-                    )}
-                  </button>
-                )}
+                <button
+                  onClick={handleSubmit}
+                  disabled={isSubmitting || bookingData.courseInterest.length === 0}
+                  className="flex items-center gap-2 px-6 md:px-8 py-3.5 bg-green-600 text-white rounded-xl hover:bg-green-700 transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed min-h-[44px] touch-manipulation shadow-lg shadow-green-600/20 hover:shadow-green-600/30 font-medium"
+                >
+                  {isSubmitting ? (
+                    <>
+                      <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                      Booking...
+                    </>
+                  ) : (
+                    <>
+                      <CheckCircle className="w-4 h-4" />
+                      <span className="hidden sm:inline">Confirm Booking</span>
+                      <span className="sm:hidden">Confirm</span>
+                    </>
+                  )}
+                </button>
               </div>
             </div>
           )}

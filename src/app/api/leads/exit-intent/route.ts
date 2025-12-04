@@ -1,12 +1,40 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
+import { rateLimit } from '@/lib/rateLimit'
+
+function generateDiscountCode(): string {
+  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
+  let code = 'CEREBRUM20-'
+  for (let i = 0; i < 6; i++) {
+    code += chars.charAt(Math.floor(Math.random() * chars.length))
+  }
+  return code
+}
 
 export async function POST(request: NextRequest) {
   try {
-    const body = await request.json()
-    const { email, phone, source, variant, page } = body
+    const rateLimitResult = await rateLimit(request, {
+      maxRequests: 3,
+      windowMs: 60 * 60 * 1000,
+    })
 
-    // Validate required fields
+    if (!rateLimitResult.success) {
+      return NextResponse.json(
+        { success: false, error: 'Too many requests. Please try again later.' },
+        {
+          status: 429,
+          headers: {
+            'X-RateLimit-Limit': rateLimitResult.limit.toString(),
+            'X-RateLimit-Remaining': rateLimitResult.remaining.toString(),
+            'X-RateLimit-Reset': new Date(rateLimitResult.reset).toISOString(),
+          },
+        }
+      )
+    }
+
+    const body = await request.json()
+    const { email, phone, name, source, variant, page } = body
+
     if (!email || !phone) {
       return NextResponse.json(
         { success: false, error: 'Email and phone are required' },
@@ -14,73 +42,58 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Check if lead already exists
-    const existingLead = await prisma.lead.findFirst({
+    const existingLead = await prisma.content_leads.findFirst({
       where: {
-        OR: [{ email }, { phone }],
+        OR: [{ email }, { whatsappNumber: phone }],
+        source: { contains: 'exit_intent' },
+        createdAt: {
+          gte: new Date(Date.now() - 24 * 60 * 60 * 1000),
+        },
       },
     })
 
     if (existingLead) {
-      // Update existing lead with exit intent data
-      await prisma.lead.update({
-        where: { id: existingLead.id },
-        data: {
-          source: source || existingLead.source,
-          notes: `${existingLead.notes || ''}\n[Exit Intent] Variant: ${variant}, Page: ${page}`,
-          updatedAt: new Date(),
-        },
-      })
-
       return NextResponse.json({
         success: true,
-        message: 'Lead updated',
-        leadId: existingLead.id,
-        isExisting: true,
+        message: 'You have already claimed this offer recently.',
+        discountCode: existingLead.interestedIn,
+        alreadyClaimed: true,
       })
     }
 
-    // Create new lead
-    const newLead = await prisma.lead.create({
+    const discountCode = generateDiscountCode()
+
+    const newLead = await prisma.content_leads.create({
       data: {
+        id: `exit_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
         email,
-        phone,
-        source: source || 'exit_intent',
-        stage: 'NEW',
-        notes: `[Exit Intent] Variant: ${variant}, Page: ${page}`,
-        metadata: {
-          exitIntentVariant: variant,
-          exitIntentPage: page,
-          capturedAt: new Date().toISOString(),
-        },
+        whatsappNumber: phone,
+        name: name || undefined,
+        source: `exit_intent_${variant || 'discount'}`,
+        landingPage: page || '/',
+        interestedIn: discountCode,
+        leadStage: 'NEW',
+        leadScore: 15,
+        updatedAt: new Date(),
       },
     })
 
-    // Trigger WhatsApp welcome series for new leads
-    try {
-      const { startWelcomeSeries } = await import('@/lib/whatsapp/welcomeSeries')
-      await startWelcomeSeries(newLead.id)
-      console.log('WhatsApp welcome series started for lead:', newLead.id)
-    } catch (welcomeError) {
-      console.error('Failed to start welcome series:', welcomeError)
-      // Non-blocking - don't fail the lead creation
-    }
-
-    // Calculate initial lead score
-    try {
-      const { updateLeadScore } = await import('@/lib/leads/leadScoring')
-      await updateLeadScore(newLead.id)
-      console.log('Lead score calculated for:', newLead.id)
-    } catch (scoreError) {
-      console.error('Failed to calculate lead score:', scoreError)
-      // Non-blocking
-    }
+    console.log('Exit intent lead captured:', {
+      leadId: newLead.id,
+      email,
+      discountCode,
+      variant,
+    })
 
     return NextResponse.json({
       success: true,
-      message: 'Lead created successfully',
+      message:
+        variant === 'catalog'
+          ? 'Your catalog download link has been sent!'
+          : 'Your 20% discount code has been generated!',
       leadId: newLead.id,
-      isExisting: false,
+      discountCode,
+      validUntil: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString(),
     })
   } catch (error) {
     console.error('Exit intent API error:', error)

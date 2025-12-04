@@ -303,7 +303,7 @@ export default function NeetCoachingGurugramPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link href="/demo-booking">
                 <Button
-                  variant="secondary_cta"
+                  variant="secondary"
                   size="xl"
                   onClick={handleDemoBooking}
                   className="bg-yellow-500 text-black hover:bg-yellow-400"
@@ -547,7 +547,7 @@ export default function NeetCoachingGurugramPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link href="/demo-booking">
                 <Button
-                  variant="secondary_cta"
+                  variant="secondary"
                   size="xl"
                   onClick={handleDemoBooking}
                   className="bg-yellow-500 text-black hover:bg-yellow-400"

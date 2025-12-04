@@ -243,7 +243,7 @@ export default function Class9FoundationPage() {
 
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <Button
-                  variant="secondary_cta"
+                  variant="secondary"
                   size="xl"
                   onClick={handleDemoBooking}
                   className="bg-yellow-500 text-black hover:bg-yellow-400"
@@ -555,7 +555,7 @@ export default function Class9FoundationPage() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Button
-                variant="secondary_cta"
+                variant="secondary"
                 size="xl"
                 onClick={handleDemoBooking}
                 className="bg-yellow-500 text-black hover:bg-yellow-400"

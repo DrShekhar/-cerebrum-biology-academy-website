@@ -235,7 +235,7 @@ export function FacultySection() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <Button
-              variant="secondary_cta"
+              variant="secondary"
               size="xl"
               className="bg-white text-blue-600 hover:bg-gray-100"
               onClick={handleMeetFaculty}

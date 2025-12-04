@@ -141,6 +141,7 @@
     "eventsource-parser": "^3.0.6",
     "exceljs": "^4.4.0",
     "express-rate-limit": "^8.1.0",
+    "focus-trap-react": "^11.0.4",
     "form-data": "^4.0.4",
     "framer-motion": "^12.23.24",
     "fuse.js": "^7.1.0",

@@ -319,7 +319,7 @@ export default function Class9VsClass10Page() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link href="/class-9-foundation">
                 <Button
-                  variant="secondary_cta"
+                  variant="secondary"
                   size="xl"
                   className="bg-yellow-500 text-black hover:bg-yellow-400"
                 >
@@ -816,7 +816,7 @@ export default function Class9VsClass10Page() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link href="/class-9-foundation">
                 <Button
-                  variant="secondary_cta"
+                  variant="secondary"
                   size="xl"
                   onClick={handleClass9Demo}
                   className="bg-yellow-500 text-black hover:bg-yellow-400"

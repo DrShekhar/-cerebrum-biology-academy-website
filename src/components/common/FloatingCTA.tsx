@@ -152,11 +152,12 @@ export function FloatingCTA() {
         </div>
       )}
 
-      {/* Desktop Scroll to Top */}
+      {/* Desktop Scroll to Top - positioned on LEFT side to avoid CTA clutter */}
       {scrollProgress > 20 && (
         <button
           onClick={scrollToTop}
-          className="hidden lg:flex fixed bottom-8 right-8 z-[60] w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full shadow-lg items-center justify-center text-white hover:shadow-xl hover:scale-110 active:scale-95 transition-all duration-300 animate-scaleIn"
+          className="hidden lg:flex fixed bottom-8 left-8 z-[60] w-12 h-12 bg-gray-700 hover:bg-gray-800 rounded-full shadow-lg items-center justify-center text-white hover:shadow-xl hover:scale-110 active:scale-95 transition-all duration-300 animate-scaleIn"
+          aria-label="Scroll to top"
         >
           <ChevronUp className="w-6 h-6" />
         </button>

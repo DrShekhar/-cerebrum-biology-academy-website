@@ -549,7 +549,7 @@ export const BrandIdentityGenerator: React.FC<BrandIdentityGeneratorProps> = ({ 
                 Download the complete brand identity package including logos, icons, color palettes,
                 and guidelines
               </p>
-              <Button variant="secondary_cta" size="xl" className="bg-white text-blue-600">
+              <Button variant="secondary" size="xl" className="bg-white text-blue-600">
                 <Download className="w-5 h-5 mr-2" />
                 Download Brand Package (25MB)
               </Button>

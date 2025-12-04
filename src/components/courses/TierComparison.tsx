@@ -66,7 +66,12 @@ const tierConfigs = {
   },
 }
 
-export function TierComparison({ course, onSelectTier, selectedTier, className = '' }: TierComparisonProps) {
+export function TierComparison({
+  course,
+  onSelectTier,
+  selectedTier,
+  className = '',
+}: TierComparisonProps) {
   const featureMatrix = getFeatureMatrix()
   const tiers = Object.keys(course.tiers) as CourseSeries[]
 
@@ -77,20 +82,20 @@ export function TierComparison({ course, onSelectTier, selectedTier, className =
   const getFeatureValue = (tier: CourseSeries, feature: string): boolean => {
     const tierFeatures = course.tiers[tier].features
     const featureKey = feature.toLowerCase().replace(/\s+/g, '') as keyof typeof tierFeatures
-    
+
     // Map feature names to actual feature keys
     const featureMap: Record<string, keyof typeof tierFeatures> = {
-      'liveinteractiveclasses': 'liveClasses',
-      'recordedvideolectures': 'recordedVideos',
-      'personalmentoring': 'personalMentoring',
-      'doubtclearingsessions': 'doubtSessions',
-      'printedstudymaterials': 'printedMaterials',
+      liveinteractiveclasses: 'liveClasses',
+      recordedvideolectures: 'recordedVideos',
+      personalmentoring: 'personalMentoring',
+      doubtclearingsessions: 'doubtSessions',
+      printedstudymaterials: 'printedMaterials',
       'digitalnotes&worksheets': 'digitalNotes',
-      'testseries': 'testSeries',
-      'performancetracking': 'performanceTracking',
-      'allindiaranking': 'allIndiaRanking',
-      'parentcounseling': 'parentCounseling',
-      'careerguidance': 'careerGuidance',
+      testseries: 'testSeries',
+      performancetracking: 'performanceTracking',
+      allindiaranking: 'allIndiaRanking',
+      parentcounseling: 'parentCounseling',
+      careerguidance: 'careerGuidance',
     }
 
     const mappedKey = featureMap[featureKey] || featureKey
@@ -113,9 +118,7 @@ export function TierComparison({ course, onSelectTier, selectedTier, className =
           {/* Features Column Header */}
           <div className="hidden lg:block p-6 bg-gray-50 border-b border-gray-200">
             <h3 className="text-lg font-bold text-gray-900 mb-2">Features & Benefits</h3>
-            <p className="text-sm text-gray-600">
-              Compare what's included in each tier
-            </p>
+            <p className="text-sm text-gray-600">Compare what's included in each tier</p>
           </div>
 
           {/* Tier Headers */}
@@ -156,12 +159,8 @@ export function TierComparison({ course, onSelectTier, selectedTier, className =
 
                 {/* Tier Name & Subtitle */}
                 <div className="mb-4">
-                  <h3 className="text-xl font-bold text-gray-900 mb-1">
-                    {config.name}
-                  </h3>
-                  <p className={`text-sm ${config.textColor} font-medium`}>
-                    {config.subtitle}
-                  </p>
+                  <h3 className="text-xl font-bold text-gray-900 mb-1">{config.name}</h3>
+                  <p className={`text-sm ${config.textColor} font-medium`}>{config.subtitle}</p>
                 </div>
 
                 {/* Pricing */}
@@ -197,9 +196,10 @@ export function TierComparison({ course, onSelectTier, selectedTier, className =
                   onClick={() => handleSelectTier(tier)}
                   className={`
                     w-full transition-all duration-300
-                    ${selectedTier === tier 
-                      ? 'bg-blue-600 text-white ring-2 ring-blue-300' 
-                      : `bg-gradient-to-r ${config.color} text-white hover:opacity-90`
+                    ${
+                      selectedTier === tier
+                        ? 'bg-blue-600 text-white ring-2 ring-blue-300'
+                        : `bg-gradient-to-r ${config.color} text-white hover:opacity-90`
                     }
                   `}
                   size="lg"
@@ -225,12 +225,8 @@ export function TierComparison({ course, onSelectTier, selectedTier, className =
               >
                 {/* Feature Name */}
                 <div className="p-4 lg:p-6 border-b border-gray-100">
-                  <h4 className="font-semibold text-gray-900 mb-1">
-                    {featureItem.feature}
-                  </h4>
-                  <p className="text-sm text-gray-600">
-                    {featureItem.description}
-                  </p>
+                  <h4 className="font-semibold text-gray-900 mb-1">{featureItem.feature}</h4>
+                  <p className="text-sm text-gray-600">{featureItem.description}</p>
                 </div>
 
                 {/* Feature Availability for Each Tier */}
@@ -245,10 +241,12 @@ export function TierComparison({ course, onSelectTier, selectedTier, className =
                     >
                       {hasFeature ? (
                         <div className="flex items-center">
-                          <div className={`
+                          <div
+                            className={`
                             w-6 h-6 rounded-full flex items-center justify-center
                             ${config.badgeColor}
-                          `}>
+                          `}
+                          >
                             <Check className="w-4 h-4" />
                           </div>
                           <span className="ml-2 text-sm font-medium text-gray-900 lg:hidden">
@@ -260,9 +258,7 @@ export function TierComparison({ course, onSelectTier, selectedTier, className =
                           <div className="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center">
                             <X className="w-4 h-4 text-gray-500" />
                           </div>
-                          <span className="ml-2 text-sm text-gray-500 lg:hidden">
-                            Not included
-                          </span>
+                          <span className="ml-2 text-sm text-gray-500 lg:hidden">Not included</span>
                         </div>
                       )}
                     </div>
@@ -282,7 +278,7 @@ export function TierComparison({ course, onSelectTier, selectedTier, className =
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
-                variant="secondary_cta"
+                variant="secondary"
                 size="lg"
                 className="bg-white text-blue-600 hover:bg-gray-100"
               >

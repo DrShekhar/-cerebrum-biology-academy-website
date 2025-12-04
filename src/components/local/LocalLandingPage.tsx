@@ -103,7 +103,7 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
                   onClick={handleBookDemo}
-                  variant="secondary_cta"
+                  variant="secondary"
                   size="xl"
                   className="bg-yellow-400 text-yellow-900 hover:bg-yellow-500 font-bold"
                 >
@@ -501,7 +501,7 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 onClick={handleBookDemo}
-                variant="secondary_cta"
+                variant="secondary"
                 size="xl"
                 className="bg-yellow-400 text-yellow-900 hover:bg-yellow-500"
               >

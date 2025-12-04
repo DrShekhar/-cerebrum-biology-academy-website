@@ -153,7 +153,7 @@ export const InteractiveQuiz: React.FC<QuizProps> = ({
         </div>
 
         <Button
-          variant="premium_cta"
+          variant="primary"
           size="xl"
           onClick={() => setQuizStarted(true)}
           className="w-full md:w-auto"
@@ -214,11 +214,11 @@ export const InteractiveQuiz: React.FC<QuizProps> = ({
         </div>
 
         <div className="flex gap-4 justify-center">
-          <Button variant="premium_cta" size="lg" onClick={restartQuiz}>
+          <Button variant="primary" size="lg" onClick={restartQuiz}>
             <RotateCcw className="w-5 h-5 mr-2" />
             Retake Quiz
           </Button>
-          <Button variant="secondary_cta" size="lg">
+          <Button variant="secondary" size="lg">
             <BookOpen className="w-5 h-5 mr-2" />
             Review Concepts
           </Button>
@@ -394,7 +394,7 @@ export const InteractiveQuiz: React.FC<QuizProps> = ({
           </div>
 
           <Button
-            variant="premium_cta"
+            variant="primary"
             size="lg"
             onClick={nextQuestion}
             disabled={!isAnswered}

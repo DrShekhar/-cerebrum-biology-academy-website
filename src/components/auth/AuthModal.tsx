@@ -1,10 +1,11 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { Button } from '@/components/ui/Button'
 import { useAuth } from '@/hooks/useAuth'
 import { X, Mail, Loader2 } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
+import FocusTrap from 'focus-trap-react'
 
 interface AuthModalProps {
   isOpen: boolean
@@ -19,6 +20,26 @@ export function AuthModal({ isOpen, onClose, title, subtitle }: AuthModalProps) 
   const [isCodeSent, setIsCodeSent] = useState(false)
   const [error, setError] = useState('')
   const { signInWithEmail } = useAuth()
+
+  const handleEscapeKey = useCallback(
+    (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        onClose()
+      }
+    },
+    [onClose]
+  )
+
+  useEffect(() => {
+    if (isOpen) {
+      document.addEventListener('keydown', handleEscapeKey)
+      document.body.style.overflow = 'hidden'
+    }
+    return () => {
+      document.removeEventListener('keydown', handleEscapeKey)
+      document.body.style.overflow = ''
+    }
+  }, [isOpen, handleEscapeKey])
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -56,100 +77,106 @@ export function AuthModal({ isOpen, onClose, title, subtitle }: AuthModalProps) 
         exit={{ opacity: 0 }}
         onClick={handleClose}
       >
-        <motion.div
-          className="bg-white rounded-3xl p-8 max-w-md w-full relative"
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.95 }}
-          onClick={(e) => e.stopPropagation()}
-        >
-          <button
-            onClick={handleClose}
-            className="absolute top-4 right-4 p-2 hover:bg-gray-100 rounded-full transition-colors"
+        <FocusTrap>
+          <motion.div
+            className="bg-white rounded-3xl p-8 max-w-md w-full relative"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.95 }}
+            onClick={(e) => e.stopPropagation()}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="auth-modal-title"
           >
-            <X className="w-5 h-5" />
-          </button>
+            <button
+              onClick={handleClose}
+              className="absolute top-4 right-4 p-2 min-h-[44px] min-w-[44px] flex items-center justify-center hover:bg-gray-100 rounded-full transition-colors touch-manipulation"
+              aria-label="Close modal"
+            >
+              <X className="w-5 h-5" />
+            </button>
 
-          <div className="text-center mb-8">
-            <div className="w-16 h-16 mx-auto bg-blue-100 rounded-full flex items-center justify-center mb-4">
-              <Mail className="w-8 h-8 text-blue-600" />
-            </div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">
-              {title || 'Sign in to continue'}
-            </h2>
-            <p className="text-gray-600">
-              {subtitle || 'We&apos;ll send you a magic link to sign in instantly'}
-            </p>
-          </div>
-
-          {!isCodeSent ? (
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                  Email Address
-                </label>
-                <input
-                  id="email"
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Enter your email"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                  required
-                  disabled={isLoading}
-                />
+            <div className="text-center mb-8">
+              <div className="w-16 h-16 mx-auto bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                <Mail className="w-8 h-8 text-blue-600" />
               </div>
-
-              {error && (
-                <div className="text-red-600 text-sm text-center bg-red-50 p-3 rounded-2xl">
-                  {error}
-                </div>
-              )}
-
-              <Button
-                type="submit"
-                variant="primary"
-                size="lg"
-                className="w-full"
-                disabled={isLoading || !email}
-              >
-                {isLoading ? (
-                  <>
-                    <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-                    Sending Magic Link...
-                  </>
-                ) : (
-                  'Send Magic Link'
-                )}
-              </Button>
-            </form>
-          ) : (
-            <div className="text-center space-y-4">
-              <div className="w-16 h-16 mx-auto bg-green-100 rounded-full flex items-center justify-center mb-4">
-                <Mail className="w-8 h-8 text-green-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900">Check your email!</h3>
+              <h2 id="auth-modal-title" className="text-2xl font-bold text-gray-900 mb-2">
+                {title || 'Sign in to continue'}
+              </h2>
               <p className="text-gray-600">
-                We&apos;ve sent a magic link to <strong>{email}</strong>
+                {subtitle || 'We&apos;ll send you a magic link to sign in instantly'}
               </p>
-              <p className="text-sm text-gray-500">
-                Click the link in your email to sign in. The link will expire in 10 minutes.
-              </p>
-              <Button
-                onClick={() => setIsCodeSent(false)}
-                variant="outline"
-                size="sm"
-                className="mt-4"
-              >
-                Use different email
-              </Button>
             </div>
-          )}
 
-          <div className="text-center text-xs text-gray-500 mt-6">
-            By signing in, you agree to our Terms of Service and Privacy Policy
-          </div>
-        </motion.div>
+            {!isCodeSent ? (
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                    Email Address
+                  </label>
+                  <input
+                    id="email"
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="Enter your email"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                    required
+                    disabled={isLoading}
+                  />
+                </div>
+
+                {error && (
+                  <div className="text-red-600 text-sm text-center bg-red-50 p-3 rounded-2xl">
+                    {error}
+                  </div>
+                )}
+
+                <Button
+                  type="submit"
+                  variant="primary"
+                  size="lg"
+                  className="w-full"
+                  disabled={isLoading || !email}
+                >
+                  {isLoading ? (
+                    <>
+                      <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                      Sending Magic Link...
+                    </>
+                  ) : (
+                    'Send Magic Link'
+                  )}
+                </Button>
+              </form>
+            ) : (
+              <div className="text-center space-y-4">
+                <div className="w-16 h-16 mx-auto bg-green-100 rounded-full flex items-center justify-center mb-4">
+                  <Mail className="w-8 h-8 text-green-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900">Check your email!</h3>
+                <p className="text-gray-600">
+                  We&apos;ve sent a magic link to <strong>{email}</strong>
+                </p>
+                <p className="text-sm text-gray-500">
+                  Click the link in your email to sign in. The link will expire in 10 minutes.
+                </p>
+                <Button
+                  onClick={() => setIsCodeSent(false)}
+                  variant="outline"
+                  size="sm"
+                  className="mt-4"
+                >
+                  Use different email
+                </Button>
+              </div>
+            )}
+
+            <div className="text-center text-xs text-gray-500 mt-6">
+              By signing in, you agree to our Terms of Service and Privacy Policy
+            </div>
+          </motion.div>
+        </FocusTrap>
       </motion.div>
     </AnimatePresence>
   )

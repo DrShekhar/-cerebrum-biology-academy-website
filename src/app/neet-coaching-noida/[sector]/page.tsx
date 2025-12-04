@@ -538,7 +538,7 @@ export default function SectorPage() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/demo-booking">
                 <Button
-                  variant="secondary_cta"
+                  variant="secondary"
                   size="lg"
                   onClick={handleDemoBooking}
                   className="bg-yellow-500 text-black hover:bg-yellow-400 font-bold"
@@ -786,7 +786,7 @@ export default function SectorPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/demo-booking">
                 <Button
-                  variant="secondary_cta"
+                  variant="secondary"
                   size="xl"
                   onClick={handleDemoBooking}
                   className="bg-yellow-500 text-black hover:bg-yellow-400 font-bold"

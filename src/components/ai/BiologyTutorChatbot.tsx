@@ -786,7 +786,8 @@ What would you like to explore today?`,
                           },
                         }))
                       }
-                      className="p-1 hover:bg-white/20 rounded"
+                      className="p-2 min-h-[44px] min-w-[44px] flex items-center justify-center hover:bg-white/20 rounded touch-manipulation"
+                      aria-label={chatState.voiceSettings.autoPlay ? 'Mute voice' : 'Enable voice'}
                     >
                       {chatState.voiceSettings.autoPlay ? (
                         <Volume2 className="w-4 h-4" />
@@ -794,7 +795,11 @@ What would you like to explore today?`,
                         <VolumeX className="w-4 h-4" />
                       )}
                     </button>
-                    <button onClick={toggleChatbot} className="p-1 hover:bg-white/20 rounded">
+                    <button
+                      onClick={toggleChatbot}
+                      className="p-2 min-h-[44px] min-w-[44px] flex items-center justify-center hover:bg-white/20 rounded touch-manipulation"
+                      aria-label="Close chatbot"
+                    >
                       <X className="w-4 h-4" />
                     </button>
                   </div>
@@ -933,11 +938,14 @@ What would you like to explore today?`,
                     {voiceRecognition.isSupported && (
                       <button
                         onClick={handleVoiceToggle}
-                        className={`absolute right-2 top-1/2 transform -translate-y-1/2 p-1 rounded ${
+                        className={`absolute right-2 top-1/2 transform -translate-y-1/2 p-2 min-h-[44px] min-w-[44px] flex items-center justify-center rounded touch-manipulation ${
                           voiceRecognition.isListening
                             ? 'bg-red-100 text-red-500'
                             : 'bg-gray-100 text-gray-500'
                         }`}
+                        aria-label={
+                          voiceRecognition.isListening ? 'Stop voice input' : 'Start voice input'
+                        }
                       >
                         {voiceRecognition.isListening ? (
                           <MicOff className="w-4 h-4" />
@@ -953,7 +961,8 @@ What would you like to explore today?`,
                     disabled={!inputValue.trim() || chatState.isTyping}
                     whileHover={!inputValue.trim() || chatState.isTyping ? {} : { scale: 1.05 }}
                     whileTap={!inputValue.trim() || chatState.isTyping ? {} : { scale: 0.95 }}
-                    className="bg-blue-500 text-white p-2 rounded-lg hover:bg-blue-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                    className="bg-blue-500 text-white p-2 min-h-[44px] min-w-[44px] flex items-center justify-center rounded-lg hover:bg-blue-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors touch-manipulation"
+                    aria-label="Send message"
                   >
                     <Send className="w-4 h-4" />
                   </motion.button>

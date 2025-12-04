@@ -254,7 +254,7 @@ export default function KotaVsOnlinePage() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Button
-                variant="secondary_cta"
+                variant="secondary"
                 size="xl"
                 onClick={handleDemoBooking}
                 className="bg-yellow-500 text-black hover:bg-yellow-400"
@@ -491,7 +491,7 @@ export default function KotaVsOnlinePage() {
                 results, not expensive geography.
               </p>
               <Button
-                variant="secondary_cta"
+                variant="secondary"
                 size="xl"
                 onClick={handleDemoBooking}
                 className="bg-white text-green-600 hover:bg-gray-100"
@@ -685,7 +685,7 @@ export default function KotaVsOnlinePage() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Button
-                variant="secondary_cta"
+                variant="secondary"
                 size="xl"
                 onClick={handleDemoBooking}
                 className="bg-yellow-500 text-black hover:bg-yellow-400"

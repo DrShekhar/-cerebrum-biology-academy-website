@@ -222,7 +222,7 @@ export function CoursesSection() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center max-w-2xl mx-auto px-2">
             <Button
-              variant="secondary_cta"
+              variant="secondary"
               size="xl"
               className="w-full sm:w-auto bg-white text-blue-600 hover:bg-gray-100"
               onClick={handleCounselingClick}

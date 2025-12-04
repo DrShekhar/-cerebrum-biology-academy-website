@@ -104,7 +104,7 @@ export function HeroSection() {
                 Book Free Demo
               </Button>
 
-              <Button variant="secondary_cta" size="xl" onClick={handleCallNow} className="group">
+              <Button variant="secondary" size="xl" onClick={handleCallNow} className="group">
                 <Phone className="w-4 xs:w-5 h-4 xs:h-5 mr-2 group-hover:ring-2 group-hover:ring-blue-300 rounded-full transition-all" />
                 Call Now: +91 8826444334
               </Button>

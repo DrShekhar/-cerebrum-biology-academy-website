@@ -449,7 +449,8 @@ export function AdminLayout({ children }: AdminLayoutProps) {
             <div className="flex items-center space-x-4">
               <button
                 onClick={() => setSidebarOpen(true)}
-                className="lg:hidden p-2 hover:bg-gray-100 rounded-lg"
+                className="lg:hidden p-2 min-h-[44px] min-w-[44px] flex items-center justify-center hover:bg-gray-100 rounded-lg touch-manipulation"
+                aria-label="Open menu"
               >
                 <Menu className="w-5 h-5" />
               </button>
@@ -466,7 +467,10 @@ export function AdminLayout({ children }: AdminLayoutProps) {
 
             <div className="flex items-center space-x-4">
               {/* Notifications */}
-              <button className="relative p-2 hover:bg-gray-100 rounded-lg">
+              <button
+                className="relative p-2 min-h-[44px] min-w-[44px] flex items-center justify-center hover:bg-gray-100 rounded-lg touch-manipulation"
+                aria-label="View notifications"
+              >
                 <Bell className="w-5 h-5" />
                 <span className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center">
                   3

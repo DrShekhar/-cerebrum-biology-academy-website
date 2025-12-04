@@ -10,15 +10,15 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: 'bg-primary text-primary-foreground hover:bg-primary/90',
-        destructive: 'bg-destructive text-destructive-foreground hover:bg-destructive/90',
-        outline:
-          'border-2 border-navy-300 bg-transparent text-navy-700 hover:bg-navy-50 hover:border-navy-400',
+        default: 'bg-teal-600 text-white hover:bg-teal-700 font-semibold shadow-sm hover:shadow-lg',
+        primary: 'bg-teal-600 text-white hover:bg-teal-700 font-semibold shadow-sm hover:shadow-lg',
         secondary:
           'bg-white hover:bg-navy-50 text-navy-700 border-2 border-navy-300 hover:border-navy-400 font-semibold',
+        outline:
+          'border-2 border-navy-300 bg-transparent text-navy-700 hover:bg-navy-50 hover:border-navy-400',
         ghost: 'bg-transparent hover:bg-navy-50 text-navy-700 hover:text-navy-900 font-medium',
-        link: 'text-teal-600 underline-offset-4 hover:underline',
-        primary: 'bg-teal-600 text-white hover:bg-teal-700 font-semibold shadow-sm hover:shadow-lg',
+        destructive: 'bg-destructive text-destructive-foreground hover:bg-destructive/90',
+        // Legacy aliases - map to standard variants (for backwards compatibility during migration)
         success_cta:
           'bg-teal-600 text-white hover:bg-teal-700 shadow-sm hover:shadow-lg font-semibold',
         urgency_cta:
@@ -27,12 +27,13 @@ const buttonVariants = cva(
           'bg-teal-600 text-white hover:bg-teal-700 shadow-sm hover:shadow-lg font-semibold',
         premium_cta:
           'bg-teal-600 text-white hover:bg-teal-700 shadow-sm hover:shadow-lg font-semibold',
-        secondary_cta:
-          'bg-white border-2 border-navy-300 text-navy-700 hover:bg-navy-50 hover:border-navy-400 font-semibold',
         phone_cta:
           'bg-teal-600 text-white hover:bg-teal-700 shadow-sm hover:shadow-lg font-semibold',
         demo_cta:
           'bg-teal-600 text-white hover:bg-teal-700 shadow-sm hover:shadow-lg font-semibold',
+        secondary_cta:
+          'bg-white border-2 border-navy-300 text-navy-700 hover:bg-navy-50 hover:border-navy-400 font-semibold',
+        link: 'text-teal-600 underline-offset-4 hover:underline',
       },
       size: {
         default: 'h-11 px-4 py-2',

@@ -183,13 +183,13 @@ export default function InteractiveLearningPage() {
 
         <div className="flex flex-col sm:flex-row gap-6 justify-center">
           <Link href="/demo-booking">
-            <Button variant="secondary_cta" size="xl">
+            <Button variant="secondary" size="xl">
               <Play className="w-6 h-6 mr-3" />
               Try Interactive Demo
             </Button>
           </Link>
           <Link href="/courses">
-            <Button variant="premium_cta" size="xl" className="border-2 border-white">
+            <Button variant="primary" size="xl" className="border-2 border-white">
               <Microscope className="w-6 h-6 mr-3" />
               Explore Virtual Lab
             </Button>
@@ -364,13 +364,13 @@ export default function InteractiveLearningPage() {
 
         <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
           <Link href="/resources">
-            <Button variant="secondary_cta" size="xl">
+            <Button variant="secondary" size="xl">
               <BookOpen className="w-6 h-6 mr-3" />
               Access Free Resources
             </Button>
           </Link>
           <Link href="/contact">
-            <Button variant="premium_cta" size="xl" className="border-2 border-white">
+            <Button variant="primary" size="xl" className="border-2 border-white">
               <Star className="w-6 h-6 mr-3" />
               Start Premium Learning
             </Button>

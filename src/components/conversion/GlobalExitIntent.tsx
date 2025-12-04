@@ -1,13 +1,20 @@
 'use client'
 
+import { usePathname } from 'next/navigation'
 import { ExitIntentPopup, useExitIntent } from '@/components/ui/ExitIntentPopup'
 
 export function GlobalExitIntent() {
   const { showExitIntent, hideExitIntent } = useExitIntent()
+  const pathname = usePathname()
 
-  const handleDownload = async (email: string, phone: string) => {
+  // Disable exit intent on homepage
+  const isHomepage = pathname === '/'
+
+  const handleDownload = async (
+    email: string,
+    phone: string
+  ): Promise<{ discountCode?: string }> => {
     try {
-      // Submit lead to API
       const response = await fetch('/api/leads/exit-intent', {
         method: 'POST',
         headers: {
@@ -26,6 +33,8 @@ export function GlobalExitIntent() {
         throw new Error('Failed to submit lead')
       }
 
+      const data = await response.json()
+
       // Track conversion event
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('event', 'exit_intent_conversion', {
@@ -34,10 +43,17 @@ export function GlobalExitIntent() {
           value: 1,
         })
       }
+
+      return { discountCode: data.discountCode }
     } catch (error) {
       console.error('Exit intent submission error:', error)
       throw error
     }
+  }
+
+  // Don't render on homepage
+  if (isHomepage) {
+    return null
   }
 
   return (

@@ -116,7 +116,7 @@ export function CourseDetailPage({ course }: CourseDetailPageProps) {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button
                     onClick={handleEnrollNow}
-                    variant="secondary_cta"
+                    variant="secondary"
                     size="xl"
                     className="bg-white text-blue-600 hover:bg-gray-100"
                   >
@@ -506,7 +506,7 @@ export function CourseDetailPage({ course }: CourseDetailPageProps) {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               onClick={handleEnrollNow}
-              variant="secondary_cta"
+              variant="secondary"
               size="xl"
               className="bg-white text-blue-600 hover:bg-gray-100"
             >

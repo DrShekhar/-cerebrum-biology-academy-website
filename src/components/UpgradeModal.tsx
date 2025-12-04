@@ -1,10 +1,11 @@
 'use client'
 
-import React from 'react'
+import React, { useEffect, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X, CheckCircle, Lock, Zap, TrendingUp, Target, Award } from 'lucide-react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/Button'
+import FocusTrap from 'focus-trap-react'
 
 interface UpgradeModalProps {
   isOpen: boolean
@@ -25,6 +26,26 @@ export function UpgradeModal({
   ctaText,
   ctaLink,
 }: UpgradeModalProps) {
+  const handleEscapeKey = useCallback(
+    (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        onClose()
+      }
+    },
+    [onClose]
+  )
+
+  useEffect(() => {
+    if (isOpen) {
+      document.addEventListener('keydown', handleEscapeKey)
+      document.body.style.overflow = 'hidden'
+    }
+    return () => {
+      document.removeEventListener('keydown', handleEscapeKey)
+      document.body.style.overflow = ''
+    }
+  }, [isOpen, handleEscapeKey])
+
   if (!isOpen) return null
 
   const defaultTitle = title || `Upgrade to unlock ${feature}`
@@ -71,122 +92,129 @@ export function UpgradeModal({
 
           {/* Modal */}
           <div className="fixed inset-0 flex items-center justify-center z-50 p-4">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              transition={{ duration: 0.2 }}
-              className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-hidden"
-            >
-              {/* Header */}
-              <div className="relative bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 p-8 text-white">
-                <button
-                  onClick={onClose}
-                  className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-white/20 hover:bg-white/30 transition-colors"
-                  aria-label="Close modal"
-                >
-                  <X className="w-5 h-5" />
-                </button>
+            <FocusTrap>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95, y: 20 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.95, y: 20 }}
+                transition={{ duration: 0.2 }}
+                className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-hidden"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="upgrade-modal-title"
+              >
+                {/* Header */}
+                <div className="relative bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 p-8 text-white">
+                  <button
+                    onClick={onClose}
+                    className="absolute top-4 right-4 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full bg-white/20 hover:bg-white/30 transition-colors touch-manipulation"
+                    aria-label="Close modal"
+                  >
+                    <X className="w-5 h-5" />
+                  </button>
 
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center">
-                    <Lock className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <h2 className="text-2xl font-bold">{defaultTitle}</h2>
-                  </div>
-                </div>
-                <p className="text-blue-100">{defaultDescription}</p>
-              </div>
-
-              {/* Content */}
-              <div className="p-8">
-                {/* Features Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-                  {features.map((item, index) => (
-                    <motion.div
-                      key={index}
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: index * 0.1 }}
-                      className="flex gap-3 p-4 rounded-lg bg-gradient-to-br from-blue-50 to-purple-50 border border-blue-100"
-                    >
-                      <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-blue-600 text-white flex items-center justify-center">
-                        {item.icon}
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-gray-900 text-sm">{item.title}</h3>
-                        <p className="text-xs text-gray-600 mt-1">{item.description}</p>
-                      </div>
-                    </motion.div>
-                  ))}
-                </div>
-
-                {/* Pricing Highlight */}
-                <div className="bg-gradient-to-r from-green-50 to-teal-50 border-2 border-green-200 rounded-xl p-6 mb-6">
-                  <div className="flex items-center justify-between mb-3">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center">
+                      <Lock className="w-6 h-6" />
+                    </div>
                     <div>
-                      <div className="text-sm text-gray-600">Starting from</div>
-                      <div className="text-3xl font-bold text-gray-900">
-                        ₹2,999
-                        <span className="text-lg text-gray-600">/month</span>
-                      </div>
-                    </div>
-                    <div className="text-right">
-                      <div className="inline-flex items-center gap-1 px-3 py-1 bg-green-600 text-white text-sm font-semibold rounded-full">
-                        Save 25%
-                      </div>
-                      <div className="text-xs text-gray-600 mt-1">with yearly plan</div>
+                      <h2 id="upgrade-modal-title" className="text-2xl font-bold">
+                        {defaultTitle}
+                      </h2>
                     </div>
                   </div>
-
-                  <div className="flex flex-wrap gap-2">
-                    <span className="inline-flex items-center gap-1 text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 text-green-600" />
-                      Unlimited tests
-                    </span>
-                    <span className="inline-flex items-center gap-1 text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 text-green-600" />
-                      Full analytics
-                    </span>
-                    <span className="inline-flex items-center gap-1 text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 text-green-600" />
-                      Expert support
-                    </span>
-                  </div>
+                  <p className="text-blue-100">{defaultDescription}</p>
                 </div>
 
-                {/* CTAs */}
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <Link href={defaultCtaLink} className="flex-1">
-                    <Button
-                      variant="primary"
-                      size="lg"
-                      className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
-                    >
-                      {defaultCtaText}
+                {/* Content */}
+                <div className="p-8">
+                  {/* Features Grid */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                    {features.map((item, index) => (
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: index * 0.1 }}
+                        className="flex gap-3 p-4 rounded-lg bg-gradient-to-br from-blue-50 to-purple-50 border border-blue-100"
+                      >
+                        <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-blue-600 text-white flex items-center justify-center">
+                          {item.icon}
+                        </div>
+                        <div>
+                          <h3 className="font-semibold text-gray-900 text-sm">{item.title}</h3>
+                          <p className="text-xs text-gray-600 mt-1">{item.description}</p>
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
+
+                  {/* Pricing Highlight */}
+                  <div className="bg-gradient-to-r from-green-50 to-teal-50 border-2 border-green-200 rounded-xl p-6 mb-6">
+                    <div className="flex items-center justify-between mb-3">
+                      <div>
+                        <div className="text-sm text-gray-600">Starting from</div>
+                        <div className="text-3xl font-bold text-gray-900">
+                          ₹2,999
+                          <span className="text-lg text-gray-600">/month</span>
+                        </div>
+                      </div>
+                      <div className="text-right">
+                        <div className="inline-flex items-center gap-1 px-3 py-1 bg-green-600 text-white text-sm font-semibold rounded-full">
+                          Save 25%
+                        </div>
+                        <div className="text-xs text-gray-600 mt-1">with yearly plan</div>
+                      </div>
+                    </div>
+
+                    <div className="flex flex-wrap gap-2">
+                      <span className="inline-flex items-center gap-1 text-sm text-gray-700">
+                        <CheckCircle className="w-4 h-4 text-green-600" />
+                        Unlimited tests
+                      </span>
+                      <span className="inline-flex items-center gap-1 text-sm text-gray-700">
+                        <CheckCircle className="w-4 h-4 text-green-600" />
+                        Full analytics
+                      </span>
+                      <span className="inline-flex items-center gap-1 text-sm text-gray-700">
+                        <CheckCircle className="w-4 h-4 text-green-600" />
+                        Expert support
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* CTAs */}
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <Link href={defaultCtaLink} className="flex-1">
+                      <Button
+                        variant="primary"
+                        size="lg"
+                        className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
+                      >
+                        {defaultCtaText}
+                      </Button>
+                    </Link>
+                    <Button variant="outline" size="lg" onClick={onClose} className="flex-shrink-0">
+                      Maybe Later
                     </Button>
-                  </Link>
-                  <Button variant="outline" size="lg" onClick={onClose} className="flex-shrink-0">
-                    Maybe Later
-                  </Button>
-                </div>
+                  </div>
 
-                {/* Trust Signals */}
-                <div className="mt-6 pt-6 border-t border-gray-200">
-                  <div className="flex items-center justify-center gap-6 text-sm text-gray-600">
-                    <span className="flex items-center gap-1">
-                      <Award className="w-4 h-4 text-yellow-500" />
-                      98% Success Rate
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <CheckCircle className="w-4 h-4 text-green-500" />
-                      2,500+ Students
-                    </span>
+                  {/* Trust Signals */}
+                  <div className="mt-6 pt-6 border-t border-gray-200">
+                    <div className="flex items-center justify-center gap-6 text-sm text-gray-600">
+                      <span className="flex items-center gap-1">
+                        <Award className="w-4 h-4 text-yellow-500" />
+                        98% Success Rate
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <CheckCircle className="w-4 h-4 text-green-500" />
+                        2,500+ Students
+                      </span>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </motion.div>
+              </motion.div>
+            </FocusTrap>
           </div>
         </>
       )}
