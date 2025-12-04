@@ -88,9 +88,6 @@ export function OptimizedHeroSection({
 }: OptimizedHeroSectionProps) {
   const router = useRouter()
   const containerRef = useRef<HTMLDivElement>(null)
-  const { scrollY } = useScroll()
-  const backgroundY = useTransform(scrollY, [0, 500], [0, 150])
-  const opacity = useTransform(scrollY, [0, 300], [1, 0.5])
 
   const [timeLeft, setTimeLeft] = useState({
     days: 82,
@@ -128,10 +125,9 @@ export function OptimizedHeroSection({
   }, [])
 
   return (
-    <motion.div
+    <div
       ref={containerRef}
       className={`relative min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-blue-900 overflow-hidden -mt-16 lg:-mt-20 ${className}`}
-      style={{ opacity }}
     >
       {/* Video Background (if provided) */}
       {showVideo && videoUrl && (
@@ -150,8 +146,8 @@ export function OptimizedHeroSection({
         </div>
       )}
 
-      {/* Background Image with Parallax */}
-      <motion.div className="absolute inset-0" style={{ y: backgroundY }}>
+      {/* Background Image */}
+      <div className="absolute inset-0">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-15"
           style={{
@@ -197,7 +193,7 @@ export function OptimizedHeroSection({
         <FloatingParticle delay={2.5} duration={4} size={4} left="60%" top="80%" />
         <FloatingParticle delay={3} duration={6} size={6} left="90%" top="50%" />
         <FloatingParticle delay={0.3} duration={5} size={5} left="5%" top="45%" />
-      </motion.div>
+      </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 lg:pt-28 pb-20 flex items-center min-h-screen">
         <div className="w-full">
@@ -364,6 +360,6 @@ export function OptimizedHeroSection({
           </motion.div>
         </div>
       </div>
-    </motion.div>
+    </div>
   )
 }
