@@ -2754,3 +2754,48 @@ enum AgentTaskStatus {
   FAILED
   CANCELLED
 }
+
+// ============================================
+// FREE RESOURCES HUB
+// ============================================
+
+model free_resources {
+  id            String            @id @default(cuid())
+  title         String
+  description   String?
+  type          FreeResourceType
+  fileUrl       String?
+  content       String?           @db.Text
+  thumbnailUrl  String?
+  classCategory FreeResourceClass
+  priority      Int               @default(0)
+  isPublished   Boolean           @default(false)
+  isArchived    Boolean           @default(false)
+  publishedAt   DateTime?
+  expiresAt     DateTime?
+  viewCount     Int               @default(0)
+  createdAt     DateTime          @default(now())
+  updatedAt     DateTime          @updatedAt
+
+  @@index([type, isPublished, isArchived])
+  @@index([classCategory, isPublished])
+  @@index([isPublished, priority])
+  @@index([expiresAt])
+}
+
+enum FreeResourceType {
+  PDF
+  TIMETABLE
+  ANNOUNCEMENT
+  NOTES
+  FORMULA_SHEET
+}
+
+enum FreeResourceClass {
+  CLASS_9
+  CLASS_10
+  CLASS_11
+  CLASS_12
+  DROPPERS
+  ALL
+}
