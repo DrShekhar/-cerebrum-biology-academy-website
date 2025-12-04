@@ -60,6 +60,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/free-resources`,
+      lastModified: now,
+      changeFrequency: 'daily' as const,
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/testimonials`,
       lastModified: now,
       changeFrequency: 'weekly' as const,
@@ -268,6 +274,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: 'monthly' as const,
       priority: 0.8,
+    },
+    // NEET Year-specific Landing Pages - HIGH PRIORITY
+    {
+      url: `${baseUrl}/neet-2026-preparation`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.98,
     },
     // Pan-India SEO Landing Pages - High Priority
     {

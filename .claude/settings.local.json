@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git:*)",
+      "Bash(npm:*)",
+      "Bash(npx:*)",
+      "Bash(vercel:*)",
+      "Bash(cd:*)",
+      "Bash(ls:*)",
+      "Bash(pwd)",
+      "Bash(node:*)",
+      "Bash(pnpm:*)",
+      "Bash(yarn:*)"
+    ],
+    "deny": []
+  }
+}

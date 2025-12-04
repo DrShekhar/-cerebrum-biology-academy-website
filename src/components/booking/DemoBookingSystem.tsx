@@ -857,7 +857,7 @@ export function DemoBookingSystem() {
                         type="text"
                         value={bookingData.studentName}
                         onChange={(e) => handleInputChange('studentName', e.target.value)}
-                        className={`w-full p-3 pr-10 border rounded-lg focus:ring-2 focus:border-transparent ${
+                        className={`w-full p-3 pr-10 border rounded-lg focus:ring-2 focus:border-transparent text-base ${
                           validationStates.studentName?.isValid
                             ? 'border-green-500 focus:ring-green-500'
                             : validationStates.studentName?.error
@@ -866,6 +866,7 @@ export function DemoBookingSystem() {
                         }`}
                         placeholder="Enter your full name"
                         required
+                        style={{ fontSize: '16px' }}
                       />
                       {validationStates.studentName?.isValid && (
                         <Check className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-green-500" />
@@ -891,7 +892,7 @@ export function DemoBookingSystem() {
                         type="email"
                         value={bookingData.email}
                         onChange={(e) => handleInputChange('email', e.target.value)}
-                        className={`w-full p-3 pr-10 border rounded-lg focus:ring-2 focus:border-transparent ${
+                        className={`w-full p-3 pr-10 border rounded-lg focus:ring-2 focus:border-transparent text-base ${
                           validationStates.email?.isValid
                             ? 'border-green-500 focus:ring-green-500'
                             : validationStates.email?.error
@@ -900,6 +901,7 @@ export function DemoBookingSystem() {
                         }`}
                         placeholder="your@email.com"
                         required
+                        style={{ fontSize: '16px' }}
                       />
                       {validationStates.email?.isValid && (
                         <Check className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-green-500" />
@@ -933,7 +935,7 @@ export function DemoBookingSystem() {
                         type="tel"
                         value={bookingData.phone}
                         onChange={(e) => handleInputChange('phone', e.target.value)}
-                        className={`w-full p-3 pr-10 border rounded-lg focus:ring-2 focus:border-transparent ${
+                        className={`w-full p-3 pr-10 border rounded-lg focus:ring-2 focus:border-transparent text-base ${
                           validationStates.phone?.isValid
                             ? 'border-green-500 focus:ring-green-500'
                             : validationStates.phone?.error
@@ -942,6 +944,7 @@ export function DemoBookingSystem() {
                         }`}
                         placeholder="+91 93119 46297"
                         required
+                        style={{ fontSize: '16px' }}
                       />
                       {validationStates.phone?.isValid && (
                         <Check className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-green-500" />

@@ -108,7 +108,7 @@ export function ExitIntentPopup({
   return (
     <AnimatePresence>
       {isVisible && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center p-2 sm:p-4">
           {/* Backdrop */}
           <motion.div
             className="absolute inset-0 bg-black/70 backdrop-blur-sm"
@@ -118,26 +118,27 @@ export function ExitIntentPopup({
             onClick={onClose}
           />
 
-          {/* Popup Content */}
+          {/* Popup Content - mobile optimized */}
           <motion.div
-            className="relative bg-white rounded-3xl shadow-2xl max-w-[calc(100vw-2rem)] sm:max-w-md md:max-w-xl w-full overflow-hidden"
-            initial={{ scale: 0.9, opacity: 0, y: 20 }}
+            className="relative bg-white rounded-2xl sm:rounded-3xl shadow-2xl w-full max-w-[calc(100vw-1rem)] sm:max-w-md md:max-w-lg max-h-[90vh] overflow-y-auto"
+            initial={{ scale: 0.95, opacity: 0, y: 20 }}
             animate={{ scale: 1, opacity: 1, y: 0 }}
-            exit={{ scale: 0.9, opacity: 0, y: 20 }}
-            transition={{ type: 'spring', duration: 0.5 }}
+            exit={{ scale: 0.95, opacity: 0, y: 20 }}
+            transition={{ type: 'spring', duration: 0.4 }}
           >
-            {/* Close Button */}
+            {/* Close Button - larger touch target */}
             <button
               onClick={onClose}
-              className="absolute top-4 right-4 z-10 bg-white/90 hover:bg-white rounded-full p-2 transition-colors shadow-md"
+              className="absolute top-3 right-3 z-10 bg-white/90 hover:bg-white rounded-full p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center transition-colors shadow-md touch-manipulation"
+              aria-label="Close popup"
             >
               <X className="w-5 h-5 text-gray-600" />
             </button>
 
             {variant === 'discount' ? (
               <>
-                {/* Discount Variant Header */}
-                <div className="bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 text-white px-6 py-8 relative overflow-hidden">
+                {/* Discount Variant Header - compact on mobile */}
+                <div className="bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 text-white px-4 sm:px-6 py-5 sm:py-8 relative overflow-hidden">
                   <motion.div
                     className="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full"
                     animate={{ scale: [1, 1.2, 1] }}
@@ -159,16 +160,18 @@ export function ExitIntentPopup({
                       <span>Exclusive Offer</span>
                     </motion.div>
 
-                    <h2 className="text-2xl sm:text-3xl font-bold mb-2">
+                    <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-1 sm:mb-2 pr-8">
                       Wait! Don't Leave Yet...
                     </h2>
-                    <p className="text-orange-100 text-lg">Get 20% OFF + FREE Demo Class!</p>
+                    <p className="text-orange-100 text-base sm:text-lg">
+                      Get 20% OFF + FREE Demo Class!
+                    </p>
 
-                    {/* Countdown Timer */}
-                    <div className="mt-4 flex items-center gap-2">
-                      <Clock className="w-5 h-5 text-yellow-300" />
-                      <span className="text-yellow-100">Offer expires in:</span>
-                      <div className="flex gap-1 font-mono font-bold text-lg">
+                    {/* Countdown Timer - responsive */}
+                    <div className="mt-3 sm:mt-4 flex flex-wrap items-center gap-2">
+                      <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-300" />
+                      <span className="text-yellow-100 text-sm sm:text-base">Expires in:</span>
+                      <div className="flex gap-1 font-mono font-bold text-base sm:text-lg">
                         <span className="bg-white/20 px-2 py-1 rounded">
                           {String(discountTimer.minutes).padStart(2, '0')}
                         </span>
@@ -182,68 +185,73 @@ export function ExitIntentPopup({
                 </div>
 
                 {/* Discount Content */}
-                <div className="px-6 py-6">
+                <div className="px-4 sm:px-6 py-4 sm:py-6">
                   {!isSubmitted ? (
                     <>
-                      {/* Benefits */}
-                      <div className="grid grid-cols-2 gap-3 mb-6">
+                      {/* Benefits - single column on small mobile, 2 cols on larger */}
+                      <div className="grid grid-cols-1 xs:grid-cols-2 gap-2 sm:gap-3 mb-4 sm:mb-6">
                         {discountBenefits.map((benefit, index) => (
                           <motion.div
                             key={index}
-                            className="flex items-center bg-green-50 rounded-lg p-3"
+                            className="flex items-center bg-green-50 rounded-lg p-2.5 sm:p-3"
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: index * 0.1 }}
                           >
-                            <CheckCircle className="w-5 h-5 text-green-500 mr-2 flex-shrink-0" />
-                            <span className="text-sm text-gray-700 font-medium">{benefit}</span>
+                            <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 mr-2 flex-shrink-0" />
+                            <span className="text-xs sm:text-sm text-gray-700 font-medium">
+                              {benefit}
+                            </span>
                           </motion.div>
                         ))}
                       </div>
 
-                      {/* Lead Form */}
-                      <form onSubmit={handleSubmit} className="space-y-4">
+                      {/* Lead Form - optimized for mobile */}
+                      <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
                         <div>
                           <input
                             type="text"
                             value={name}
                             onChange={(e) => setName(e.target.value)}
-                            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all"
+                            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all text-base"
                             placeholder="Your Name"
+                            style={{ fontSize: '16px' }}
                           />
                         </div>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div className="space-y-3">
                           <input
                             type="tel"
                             value={phone}
                             onChange={(e) => setPhone(e.target.value)}
                             required
-                            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all"
+                            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all text-base"
                             placeholder="Phone Number *"
+                            style={{ fontSize: '16px' }}
                           />
                           <input
                             type="email"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             required
-                            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all"
+                            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all text-base"
                             placeholder="Email Address *"
+                            style={{ fontSize: '16px' }}
                           />
                         </div>
 
                         <motion.button
                           type="submit"
                           disabled={isSubmitting || !email || !phone}
-                          className="w-full py-4 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold text-lg rounded-xl shadow-lg hover:shadow-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                          className="w-full py-3.5 sm:py-4 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold text-base sm:text-lg rounded-xl shadow-lg hover:shadow-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 min-h-[48px] touch-manipulation"
                           whileHover={{ scale: 1.02 }}
                           whileTap={{ scale: 0.98 }}
                         >
                           <Percent className="w-5 h-5" />
-                          {isSubmitting ? 'Claiming Offer...' : 'Claim My 20% Discount'}
+                          {isSubmitting ? 'Claiming...' : 'Claim 20% Discount'}
                         </motion.button>
 
                         <p className="text-xs text-gray-500 text-center">
-                          Limited time offer. No spam, we promise!
+                          Limited time offer. No spam!
                         </p>
                       </form>
 
@@ -401,7 +409,7 @@ export function ExitIntentPopup({
   )
 }
 
-// Hook for exit-intent detection
+// Hook for exit-intent detection - improved to reduce accidental triggers
 export function useExitIntent() {
   const [showExitIntent, setShowExitIntent] = useState(false)
   const [hasTriggered, setHasTriggered] = useState(false)
@@ -414,33 +422,55 @@ export function useExitIntent() {
       return
     }
 
+    // Delay before enabling exit intent (don't trigger immediately on page load)
+    let isEnabled = false
+    const enableTimer = setTimeout(() => {
+      isEnabled = true
+    }, 5000) // Wait 5 seconds before enabling
+
     const handleMouseLeave = (e: MouseEvent) => {
       // Only trigger if cursor moves to top of screen (exit intent)
-      if (e.clientY <= 0 && !hasTriggered) {
+      // and user has been on page for a while
+      if (e.clientY <= 0 && !hasTriggered && isEnabled) {
         setShowExitIntent(true)
         setHasTriggered(true)
         sessionStorage.setItem('exitIntentShown', 'true')
       }
     }
 
-    // Also trigger on scroll up near top (mobile behavior)
+    // Mobile: trigger on back button or significant scroll-up at very top
+    // Made much less sensitive to prevent accidental triggers
     let lastScrollY = window.scrollY
+    let scrollUpCount = 0
     const handleScroll = () => {
-      if (window.scrollY < 100 && window.scrollY < lastScrollY && !hasTriggered) {
-        // User scrolled up near the top - likely trying to navigate away
-        setShowExitIntent(true)
-        setHasTriggered(true)
-        sessionStorage.setItem('exitIntentShown', 'true')
+      const currentY = window.scrollY
+
+      // Reset counter if scrolling down or not at very top
+      if (currentY > lastScrollY || currentY > 50) {
+        scrollUpCount = 0
+      } else if (currentY < lastScrollY && currentY < 30 && isEnabled) {
+        // User is scrolling up near the very top
+        scrollUpCount++
+
+        // Only trigger after multiple consecutive scroll-up events at top
+        // This prevents accidental triggers from bounce scrolling
+        if (scrollUpCount >= 3 && !hasTriggered) {
+          setShowExitIntent(true)
+          setHasTriggered(true)
+          sessionStorage.setItem('exitIntentShown', 'true')
+        }
       }
-      lastScrollY = window.scrollY
+
+      lastScrollY = currentY
     }
 
     // Add event listeners
     document.addEventListener('mouseleave', handleMouseLeave)
-    window.addEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', handleScroll, { passive: true })
 
     // Cleanup
     return () => {
+      clearTimeout(enableTimer)
       document.removeEventListener('mouseleave', handleMouseLeave)
       window.removeEventListener('scroll', handleScroll)
     }

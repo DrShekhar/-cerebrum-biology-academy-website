@@ -8,13 +8,13 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicyPage() {
   return (
-    <div className="min-h-screen bg-gray-50 py-8 sm:py-12 md:py-16">
+    <div className="min-h-screen bg-gray-50 py-6 sm:py-12 md:py-16 pb-24 sm:pb-16">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
-        <div className="bg-white rounded-2xl sm:rounded-3xl shadow-lg p-6 sm:p-8 md:p-12">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-6 sm:mb-8">
+        <div className="bg-white rounded-2xl sm:rounded-3xl shadow-lg p-5 sm:p-8 md:p-12">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 sm:mb-8">
             Privacy Policy
           </h1>
-          <p className="text-gray-600 mb-8">
+          <p className="text-gray-600 mb-6 sm:mb-8 text-sm sm:text-base">
             <strong>Last updated:</strong>{' '}
             {new Date().toLocaleDateString('en-IN', {
               year: 'numeric',
@@ -23,7 +23,7 @@ export default function PrivacyPolicyPage() {
             })}
           </p>
 
-          <div className="space-y-6 sm:space-y-8">
+          <div className="space-y-6 sm:space-y-8 text-sm sm:text-base leading-relaxed">
             <section>
               <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">
                 1. Information We Collect

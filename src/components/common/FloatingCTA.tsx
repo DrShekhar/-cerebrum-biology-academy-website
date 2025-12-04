@@ -8,6 +8,7 @@ export function FloatingCTA() {
   const [isVisible, setIsVisible] = useState(false)
   const [isExpanded, setIsExpanded] = useState(false)
   const [scrollProgress, setScrollProgress] = useState(0)
+  const [showFloatingButton, setShowFloatingButton] = useState(true)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,6 +20,11 @@ export function FloatingCTA() {
 
       const progress = scrollTop / (docHeight - windowHeight)
       setScrollProgress(Math.min(progress * 100, 100))
+
+      // Hide floating button near bottom of page to reduce clutter
+      // Show it only in the middle portion of the page
+      const nearBottom = scrollTop > docHeight - windowHeight * 1.5
+      setShowFloatingButton(!nearBottom && scrollTop > windowHeight * 0.3)
     }
 
     window.addEventListener('scroll', handleScroll, { passive: true })
@@ -74,75 +80,77 @@ export function FloatingCTA() {
 
   return (
     <>
-      {/* Mobile Floating CTA */}
-      <div className="fixed bottom-20 right-4 z-[70] lg:hidden">
-        {/* Expanded Actions */}
-        {isExpanded && (
-          <div className="absolute bottom-16 right-0 space-y-3 animate-fadeInUp">
-            {actions.map((action, index) => {
-              const Icon = action.icon
-              const Component = action.external ? 'a' : Link
-              const linkProps = action.external
-                ? { href: action.href, target: '_blank', rel: 'noopener noreferrer' }
-                : { href: action.href }
+      {/* Mobile Floating CTA - Only show when not near bottom and scrolled past hero */}
+      {showFloatingButton && (
+        <div className="fixed bottom-24 right-4 z-[70] lg:hidden">
+          {/* Expanded Actions - positioned higher to avoid bottom bar overlap */}
+          {isExpanded && (
+            <div className="absolute bottom-16 right-0 space-y-3 animate-fadeInUp">
+              {actions.map((action, index) => {
+                const Icon = action.icon
+                const Component = action.external ? 'a' : Link
+                const linkProps = action.external
+                  ? { href: action.href, target: '_blank', rel: 'noopener noreferrer' }
+                  : { href: action.href }
 
-              return (
-                <div
-                  key={action.action}
-                  className="animate-fadeInRight"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <Component
-                    {...linkProps}
-                    onClick={() => handleActionClick(action.action)}
-                    className={`flex items-center space-x-3 px-4 py-3 rounded-full text-white font-medium shadow-lg transition-all duration-300 transform hover:scale-105 min-h-[48px] touch-manipulation ${action.color}`}
+                return (
+                  <div
+                    key={action.action}
+                    className="animate-fadeInRight"
+                    style={{ animationDelay: `${index * 0.1}s` }}
                   >
-                    <Icon className="w-5 h-5" />
-                    <span className="whitespace-nowrap">{action.label}</span>
-                  </Component>
-                </div>
-              )
-            })}
-          </div>
-        )}
+                    <Component
+                      {...linkProps}
+                      onClick={() => {
+                        handleActionClick(action.action)
+                        setIsExpanded(false)
+                      }}
+                      className={`flex items-center space-x-3 px-4 py-3 rounded-full text-white font-medium shadow-lg transition-all duration-300 transform hover:scale-105 min-h-[48px] touch-manipulation ${action.color}`}
+                    >
+                      <Icon className="w-5 h-5" />
+                      <span className="whitespace-nowrap">{action.label}</span>
+                    </Component>
+                  </div>
+                )
+              })}
+            </div>
+          )}
 
-        {/* Main Floating Button */}
-        <button
-          onClick={() => setIsExpanded(!isExpanded)}
-          className="relative w-14 h-14 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full shadow-xl flex items-center justify-center text-white transition-all duration-300 hover:shadow-2xl hover:scale-110 active:scale-95 min-h-[56px] touch-manipulation animate-scaleIn"
-        >
-          {/* Progress Ring */}
-          <svg className="absolute inset-0 w-14 h-14 transform -rotate-90">
-            <circle
-              cx="28"
-              cy="28"
-              r="24"
-              stroke="rgba(255,255,255,0.3)"
-              strokeWidth="2"
-              fill="transparent"
-            />
-            <circle
-              cx="28"
-              cy="28"
-              r="24"
-              stroke="white"
-              strokeWidth="2"
-              fill="transparent"
-              strokeDasharray={`${2 * Math.PI * 24}`}
-              strokeDashoffset={`${2 * Math.PI * 24 * (1 - scrollProgress / 100)}`}
-              className="transition-all duration-300"
-            />
-          </svg>
+          {/* Main Floating Button - smaller and less intrusive */}
+          <button
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="relative w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full shadow-lg flex items-center justify-center text-white transition-all duration-300 hover:shadow-xl hover:scale-105 active:scale-95 min-h-[48px] min-w-[48px] touch-manipulation"
+          >
+            {/* Progress Ring - smaller */}
+            <svg className="absolute inset-0 w-12 h-12 transform -rotate-90">
+              <circle
+                cx="24"
+                cy="24"
+                r="20"
+                stroke="rgba(255,255,255,0.3)"
+                strokeWidth="2"
+                fill="transparent"
+              />
+              <circle
+                cx="24"
+                cy="24"
+                r="20"
+                stroke="white"
+                strokeWidth="2"
+                fill="transparent"
+                strokeDasharray={`${2 * Math.PI * 20}`}
+                strokeDashoffset={`${2 * Math.PI * 20 * (1 - scrollProgress / 100)}`}
+                className="transition-all duration-300"
+              />
+            </svg>
 
-          {/* Icon */}
-          <span className="transition-transform duration-200">
-            {isExpanded ? <X className="w-6 h-6" /> : <Calendar className="w-6 h-6" />}
-          </span>
-
-          {/* Pulse Animation */}
-          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 animate-ping opacity-20" />
-        </button>
-      </div>
+            {/* Icon */}
+            <span className="transition-transform duration-200">
+              {isExpanded ? <X className="w-5 h-5" /> : <Calendar className="w-5 h-5" />}
+            </span>
+          </button>
+        </div>
+      )}
 
       {/* Desktop Scroll to Top */}
       {scrollProgress > 20 && (
@@ -154,8 +162,11 @@ export function FloatingCTA() {
         </button>
       )}
 
-      {/* Fixed Bottom CTA Bar for Mobile */}
-      <div className="fixed bottom-0 left-0 right-0 z-[50] lg:hidden bg-white border-t border-gray-200 shadow-lg animate-slideInFromBottom">
+      {/* Fixed Bottom CTA Bar for Mobile - with safe area support */}
+      <div
+        className="fixed bottom-0 left-0 right-0 z-[50] lg:hidden bg-white border-t border-gray-200 shadow-lg"
+        style={{ paddingBottom: 'env(safe-area-inset-bottom, 0px)' }}
+      >
         <div className="grid grid-cols-3 divide-x divide-gray-200">
           {actions.map((action) => {
             const Icon = action.icon
@@ -169,18 +180,18 @@ export function FloatingCTA() {
                 key={action.action}
                 {...linkProps}
                 onClick={() => handleActionClick(action.action)}
-                className="flex flex-col items-center justify-center py-3 px-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors min-h-[60px] touch-manipulation"
+                className="flex flex-col items-center justify-center py-2.5 px-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors min-h-[56px] touch-manipulation active:bg-blue-100"
               >
-                <Icon className="w-5 h-5 mb-1" />
-                <span className="text-xs font-medium">{action.label}</span>
+                <Icon className="w-5 h-5 mb-0.5" />
+                <span className="text-[11px] font-medium leading-tight">{action.label}</span>
               </Component>
             )
           })}
         </div>
       </div>
 
-      {/* Spacer for fixed bottom bar */}
-      <div className="h-16 lg:hidden" />
+      {/* Spacer for fixed bottom bar - accounts for safe area */}
+      <div className="h-[calc(56px+env(safe-area-inset-bottom,0px))] lg:hidden" />
     </>
   )
 }

@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   Search,
@@ -273,6 +273,7 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
   }
 
   const [isMobile, setIsMobile] = useState(false)
+  const [viewportHeight, setViewportHeight] = useState('85vh')
 
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 768)
@@ -280,6 +281,36 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
     window.addEventListener('resize', checkMobile)
     return () => window.removeEventListener('resize', checkMobile)
   }, [])
+
+  // Handle iOS keyboard - adjust modal height when virtual keyboard appears
+  useEffect(() => {
+    if (!isMobile || !isOpen) return
+
+    const updateViewportHeight = () => {
+      // Use visualViewport API for accurate height with keyboard
+      if (window.visualViewport) {
+        const vh = window.visualViewport.height
+        setViewportHeight(`${vh}px`)
+      } else {
+        setViewportHeight('85vh')
+      }
+    }
+
+    updateViewportHeight()
+
+    // Listen for viewport changes (keyboard open/close)
+    if (window.visualViewport) {
+      window.visualViewport.addEventListener('resize', updateViewportHeight)
+      window.visualViewport.addEventListener('scroll', updateViewportHeight)
+    }
+
+    return () => {
+      if (window.visualViewport) {
+        window.visualViewport.removeEventListener('resize', updateViewportHeight)
+        window.visualViewport.removeEventListener('scroll', updateViewportHeight)
+      }
+    }
+  }, [isMobile, isOpen])
 
   const modalVariants = {
     closed: {
@@ -301,12 +332,14 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
     }
   }
 
-  // Swipe to close on mobile
+  // Swipe to close on mobile - with improved threshold to prevent accidental closes
   const [touchStart, setTouchStart] = useState(0)
   const [touchEnd, setTouchEnd] = useState(0)
+  const [touchStartTime, setTouchStartTime] = useState(0)
 
   const handleTouchStart = (e: React.TouchEvent) => {
     setTouchStart(e.targetTouches[0].clientY)
+    setTouchStartTime(Date.now())
   }
 
   const handleTouchMove = (e: React.TouchEvent) => {
@@ -316,8 +349,12 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
   const handleTouchEnd = () => {
     if (!isMobile) return
     const swipeDistance = touchStart - touchEnd
-    // Swipe down to close (negative distance means swipe down)
-    if (swipeDistance < -50) {
+    const swipeTime = Date.now() - touchStartTime
+    const swipeVelocity = Math.abs(swipeDistance) / swipeTime
+
+    // Only close on intentional swipe down:
+    // Either large distance (100px+) OR fast swipe (velocity > 0.5 with 50px+ distance)
+    if (swipeDistance < -100 || (swipeDistance < -50 && swipeVelocity > 0.5)) {
       triggerHaptic()
       onClose()
     }
@@ -325,10 +362,10 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
 
   return (
     <>
-      {/* Search Button */}
+      {/* Search Button - 44px minimum touch target for iOS accessibility */}
       <button
         onClick={onToggle}
-        className="flex items-center justify-center w-10 h-10 rounded-xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 group flex-shrink-0"
+        className="flex items-center justify-center w-11 h-11 min-w-[44px] min-h-[44px] rounded-xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 group flex-shrink-0 touch-manipulation"
         aria-label="Open search menu"
       >
         <Search className="w-5 h-5 text-blue-600 group-hover:scale-110 transition-transform duration-200" />
@@ -350,7 +387,8 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
               initial="closed"
               animate="open"
               exit="closed"
-              className={`bg-white ${isMobile ? 'rounded-t-3xl' : 'rounded-2xl'} shadow-2xl w-full max-w-2xl max-h-[85vh] md:max-h-[80vh] overflow-hidden`}
+              className={`bg-white ${isMobile ? 'rounded-t-3xl' : 'rounded-2xl'} shadow-2xl w-full max-w-2xl overflow-hidden`}
+              style={{ maxHeight: isMobile ? viewportHeight : '80vh' }}
               onClick={(e) => e.stopPropagation()}
               onTouchStart={handleTouchStart}
               onTouchMove={handleTouchMove}
@@ -363,12 +401,12 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
                 </div>
               )}
               {/* Search Header */}
-              <div className="p-6 border-b border-gray-200">
+              <div className="p-4 sm:p-6 border-b border-gray-200">
                 <div className="flex items-center justify-between mb-4">
                   <h2 className="text-lg font-bold text-gray-900">Search</h2>
                   <button
                     onClick={onClose}
-                    className="p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200"
+                    className="p-2 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg hover:bg-gray-100 transition-colors duration-200 touch-manipulation"
                     aria-label="Close search menu"
                   >
                     <X className="w-5 h-5 text-gray-500" />
@@ -379,7 +417,7 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
                   <input
                     ref={inputRef}
                     type="text"
-                    placeholder="Search courses, services, or help topics..."
+                    placeholder="Search courses, services..."
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
                     onKeyDown={(e) => {
@@ -387,12 +425,13 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
                         handleSearch(query)
                       }
                     }}
-                    className="w-full pl-12 pr-12 py-4 text-lg border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full pl-12 pr-12 py-3 sm:py-4 text-base sm:text-lg border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    style={{ fontSize: '16px' }}
                   />
                   {query && (
                     <button
                       onClick={() => setQuery('')}
-                      className="absolute right-4 top-1/2 transform -translate-y-1/2 p-1 rounded-full hover:bg-gray-100"
+                      className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full hover:bg-gray-100 touch-manipulation"
                       aria-label="Clear search"
                     >
                       <X className="w-4 h-4 text-gray-400" />
@@ -401,8 +440,11 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
                 </div>
               </div>
 
-              {/* Search Results */}
-              <div className="max-h-96 overflow-y-auto">
+              {/* Search Results - flexible height for mobile keyboard */}
+              <div
+                className="flex-1 overflow-y-auto"
+                style={{ maxHeight: isMobile ? 'calc(100% - 180px)' : '400px' }}
+              >
                 {query && results.length > 0 && (
                   <div className="p-6">
                     <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-4">
@@ -591,53 +633,57 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
                       </div>
                     )}
 
-                    {/* Quick Actions */}
+                    {/* Quick Actions - show only 4 on mobile to save space */}
                     <div>
-                      <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-4">
+                      <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3 sm:mb-4">
                         Quick Actions
                       </h3>
-                      <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                        {quickActions.map((action, index) => {
-                          const ActionIcon = action.icon
-                          const LinkComponent = action.external ? 'a' : Link
-                          const linkProps = action.external
-                            ? { href: action.href, target: '_blank', rel: 'noopener noreferrer' }
-                            : { href: action.href }
+                      <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3">
+                        {(isMobile ? quickActions.slice(0, 4) : quickActions).map(
+                          (action, index) => {
+                            const ActionIcon = action.icon
+                            const LinkComponent = action.external ? 'a' : Link
+                            const linkProps = action.external
+                              ? { href: action.href, target: '_blank', rel: 'noopener noreferrer' }
+                              : { href: action.href }
 
-                          return (
-                            <LinkComponent
-                              key={index}
-                              {...linkProps}
-                              onClick={() => {
-                                onClose()
-                                triggerHaptic()
-                              }}
-                              className={`group flex flex-col items-center justify-center gap-2 p-4 bg-gradient-to-br ${action.bgGradient} border border-gray-200 rounded-xl ${action.hoverBg} hover:border-opacity-50 hover:shadow-xl hover:scale-[1.02] transition-all duration-200 min-h-[100px]`}
-                            >
-                              <div
-                                className={`w-12 h-12 ${action.iconBg} rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-200`}
+                            return (
+                              <LinkComponent
+                                key={index}
+                                {...linkProps}
+                                onClick={() => {
+                                  onClose()
+                                  triggerHaptic()
+                                }}
+                                className={`group flex flex-col items-center justify-center gap-1.5 sm:gap-2 p-3 sm:p-4 bg-gradient-to-br ${action.bgGradient} border border-gray-200 rounded-xl ${action.hoverBg} hover:border-opacity-50 hover:shadow-xl hover:scale-[1.02] transition-all duration-200 min-h-[80px] sm:min-h-[100px] touch-manipulation`}
                               >
-                                <ActionIcon className="w-6 h-6 text-white" />
-                              </div>
-                              <span
-                                className={`font-semibold ${action.textColor} text-sm text-center`}
-                              >
-                                {action.label}
-                              </span>
-                            </LinkComponent>
-                          )
-                        })}
+                                <div
+                                  className={`w-10 h-10 sm:w-12 sm:h-12 ${action.iconBg} rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-200`}
+                                >
+                                  <ActionIcon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+                                </div>
+                                <span
+                                  className={`font-semibold ${action.textColor} text-xs sm:text-sm text-center leading-tight`}
+                                >
+                                  {action.label}
+                                </span>
+                              </LinkComponent>
+                            )
+                          }
+                        )}
                       </div>
                     </div>
                   </div>
                 )}
               </div>
 
-              {/* Search Footer */}
-              <div className="border-t border-gray-200 p-4 bg-gray-50">
-                <div className="flex items-center justify-between text-sm text-gray-500">
-                  <span>Press ESC to close</span>
-                  <span>Use ↑↓ to navigate</span>
+              {/* Search Footer - Hide keyboard hints on mobile */}
+              <div className="border-t border-gray-200 p-3 sm:p-4 bg-gray-50">
+                <div className="flex items-center justify-between text-xs sm:text-sm text-gray-500">
+                  <span className="hidden sm:inline">Press ESC to close</span>
+                  <span className="sm:hidden">Swipe down to close</span>
+                  <span className="hidden sm:inline">Use ↑↓ to navigate</span>
+                  <span className="sm:hidden">Tap to select</span>
                 </div>
               </div>
             </motion.div>

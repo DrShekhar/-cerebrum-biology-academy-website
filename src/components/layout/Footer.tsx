@@ -59,6 +59,7 @@ export const Footer = memo(function Footer() {
   }
 
   const courseLinks = [
+    { name: 'NEET 2026 Preparation', href: '/neet-2026-preparation' },
     { name: 'Class 11th Biology', href: '/courses/class-11' },
     { name: 'Class 12th Biology', href: '/courses/class-12' },
     { name: 'NEET Dropper Program', href: '/courses/neet-dropper' },
@@ -81,6 +82,7 @@ export const Footer = memo(function Footer() {
     { name: 'Classroom Programs', href: '/services/classroom' },
     { name: 'NEET Mock Tests', href: '/mock-tests' },
     { name: 'Study Materials (LMS)', href: '/tests' },
+    { name: 'Free Resources', href: '/free-resources' },
     { name: 'Ceri AI', href: '/ai-education-demo' },
     { name: 'International Students', href: '/services/international' },
     { name: 'Board Exam Preparation', href: '/courses' },

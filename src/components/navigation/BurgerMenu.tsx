@@ -178,7 +178,7 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
             initial="closed"
             animate="open"
             exit="closed"
-            className="fixed left-0 top-0 h-full w-80 bg-white shadow-2xl z-[10300] overflow-y-auto"
+            className="fixed left-0 top-0 h-full w-[85vw] max-w-80 bg-white shadow-2xl z-[10300] overflow-y-auto"
           >
             {/* Header - sticky with solid background and z-index to stay above scrolling content */}
             <div className="sticky top-0 bg-white border-b border-gray-200 p-6 flex items-center justify-between pointer-events-auto z-10 shadow-sm">
@@ -188,7 +188,7 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
               </div>
               <button
                 onClick={onClose}
-                className="p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200"
+                className="p-2 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg hover:bg-gray-100 transition-colors duration-200 touch-manipulation"
                 aria-label="Close navigation menu"
               >
                 <X className="w-5 h-5 text-gray-500" />
@@ -227,26 +227,26 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
                   <GraduationCap className="w-5 h-5" />
                   View All Courses
                 </Link>
-                {/* Course Grid */}
-                <div className="grid grid-cols-3 gap-2">
+                {/* Course Grid - responsive for small screens */}
+                <div className="grid grid-cols-2 xs:grid-cols-3 gap-2">
                   <Link
                     href="/courses/class-11"
                     onClick={handleLinkClick}
-                    className="flex items-center justify-center p-3 bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 transition-colors text-sm font-medium"
+                    className="flex items-center justify-center p-3 min-h-[44px] bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 transition-colors text-sm font-medium touch-manipulation"
                   >
                     Class 11
                   </Link>
                   <Link
                     href="/courses/class-12"
                     onClick={handleLinkClick}
-                    className="flex items-center justify-center p-3 bg-green-50 text-green-700 rounded-lg hover:bg-green-100 transition-colors text-sm font-medium"
+                    className="flex items-center justify-center p-3 min-h-[44px] bg-green-50 text-green-700 rounded-lg hover:bg-green-100 transition-colors text-sm font-medium touch-manipulation"
                   >
                     Class 12
                   </Link>
                   <Link
                     href="/courses/neet-dropper"
                     onClick={handleLinkClick}
-                    className="flex items-center justify-center p-3 bg-purple-50 text-purple-700 rounded-lg hover:bg-purple-100 transition-colors text-sm font-medium"
+                    className="flex items-center justify-center p-3 min-h-[44px] bg-purple-50 text-purple-700 rounded-lg hover:bg-purple-100 transition-colors text-sm font-medium col-span-2 xs:col-span-1 touch-manipulation"
                   >
                     Dropper
                   </Link>
@@ -341,7 +341,7 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
             </div>
 
             {/* Footer - Non-sticky to avoid blocking clicks */}
-            <div className="mt-auto bg-gradient-to-r from-blue-600 to-purple-600 text-white p-6">
+            <div className="mt-auto bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 sm:p-6">
               <div className="text-center">
                 <h3 className="font-bold text-lg mb-2">Ready to Start?</h3>
                 <p className="text-blue-100 text-sm mb-4">
@@ -350,7 +350,7 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
                 <Link
                   href="/demo-booking"
                   onClick={handleLinkClick}
-                  className="inline-flex items-center justify-center w-full bg-white text-blue-600 px-4 py-2 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200"
+                  className="inline-flex items-center justify-center w-full bg-white text-blue-600 px-4 py-3 min-h-[48px] rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200 touch-manipulation"
                 >
                   Book Free Demo
                   <ChevronRight className="w-4 h-4 ml-2" />
@@ -365,10 +365,10 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
 
   return (
     <>
-      {/* Burger Button */}
+      {/* Burger Button - 44px minimum touch target for iOS accessibility */}
       <button
         onClick={onToggle}
-        className="flex items-center justify-center w-10 h-10 rounded-xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 group relative z-[10100]"
+        className="flex items-center justify-center w-11 h-11 min-w-[44px] min-h-[44px] rounded-xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 group relative z-[10100] touch-manipulation"
         aria-label="Toggle navigation menu"
         aria-expanded={isOpen}
         aria-controls="burger-menu-panel"

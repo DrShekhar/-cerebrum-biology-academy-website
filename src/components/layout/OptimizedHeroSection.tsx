@@ -101,7 +101,7 @@ export function OptimizedHeroSection({
   const [isVideoLoaded, setIsVideoLoaded] = useState(false)
 
   useEffect(() => {
-    const targetDate = new Date('2025-03-15T00:00:00')
+    const targetDate = new Date('2026-01-15T00:00:00')
 
     const calculateTimeLeft = () => {
       const now = new Date()
@@ -337,7 +337,7 @@ export function OptimizedHeroSection({
           >
             <ClockIcon className="w-4 xs:w-5 h-4 xs:h-5 mr-2 text-red-300 flex-shrink-0" />
             <span className="text-red-100 text-xs xs:text-sm sm:text-base">
-              Next Batch Starting: <span className="font-bold">January 15, 2025</span> • Only 50
+              Next Batch Starting: <span className="font-bold">January 15, 2026</span> • Only 50
               Seats Left
             </span>
           </motion.div>

@@ -8,7 +8,7 @@ import { HomePageClient } from '@/components/home/HomePageClient'
 
 // Loading skeleton component for consistent loading states
 const LoadingSkeleton = ({ height = 'h-96' }: { height?: string }) => (
-  <div className={`${height} bg-gradient-to-r from-gray-50 to-gray-100 animate-pulse rounded-lg`} />
+  <div className={`${height} bg-gradient-to-r from-blue-50/50 to-purple-50/50 animate-pulse`} />
 )
 
 // PERFORMANCE: Lazy load ALL below-fold components to reduce initial bundle

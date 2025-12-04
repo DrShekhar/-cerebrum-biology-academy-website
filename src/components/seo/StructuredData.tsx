@@ -241,23 +241,7 @@ export function FAQSchema() {
         name: 'What is the duration of the NEET biology course?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Our NEET biology course is designed to be completed in 6-12 months, depending on your pace and starting level.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Do you provide study material for NEET biology?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes, we provide comprehensive study material including notes, practice questions, mock tests, and video lectures covering the entire NEET biology syllabus.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Is there a free trial available?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes, we offer a 15-day free trial with access to all features including AI tutor, practice tests, and personalized learning paths.',
+          text: 'Our NEET biology course is designed to be completed in 6-12 months, depending on your pace and starting level. We offer flexible batches for Class 11, Class 12, and dropper students.',
         },
       },
       {
@@ -265,15 +249,55 @@ export function FAQSchema() {
         name: 'What is the success rate of Cerebrum Biology Academy?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Cerebrum Biology Academy has a 98% success rate with 2000+ students mentored successfully for NEET examinations.',
+          text: 'Cerebrum Biology Academy has a 98% success rate with 500+ students selected annually for medical colleges. Over 2000+ students have been mentored successfully for NEET examinations since 2015.',
         },
       },
       {
         '@type': 'Question',
-        name: 'Are classes available online and offline?',
+        name: 'Who are the faculty members at Cerebrum Biology Academy?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes, we offer both online and offline classes to accommodate students from India and 50+ countries worldwide.',
+          text: 'Our faculty comprises AIIMS-trained experts with 10+ years of teaching experience. They have collectively mentored thousands of successful NEET candidates and specialize in making complex biology concepts easy to understand.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Do you offer online NEET biology coaching?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes, we offer both online and offline NEET biology coaching. Our online classes are live interactive sessions with the same quality as offline classes. Students from 50+ countries currently attend our online batches.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What is the fee for NEET biology coaching?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Our NEET biology coaching fees range from Rs 24,000 to Rs 98,000 depending on the course type. Class 11 courses start at Rs 48,000, Class 12 at Rs 65,000, and comprehensive dropper courses at Rs 98,000. EMI options available.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Is there a free demo class available?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes, we offer a FREE demo class for all courses. You can book your free demo on our website or by calling +91-88264-44334. Experience our teaching methodology before enrolling.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What study material is provided for NEET preparation?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'We provide comprehensive study material including detailed notes, NCERT-based content, 10,000+ practice questions, chapter-wise tests, full-length mock tests, previous year papers with solutions, and AI-powered doubt solving.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'When does NEET 2026 preparation batch start?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'NEET 2026 preparation batches are now open for enrollment. Early batches start from April 2025 for Class 11 students and September 2025 for intensive batches. Book your seat early for best results.',
         },
       },
     ],
@@ -758,6 +782,7 @@ export function StructuredData() {
       <OrganizationSchema />
       <WebsiteSchema />
       <CourseSchema />
+      <FAQSchema />
       <LocalBusinessSchema />
       <NationalServiceSchema />
       <GurugramServiceSchema />

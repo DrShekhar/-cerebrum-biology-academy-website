@@ -8,10 +8,10 @@ export const metadata: Metadata = {
 
 export default function TermsOfServicePage() {
   return (
-    <div className="min-h-screen bg-gray-50 py-8 sm:py-12 md:py-16">
+    <div className="min-h-screen bg-gray-50 py-6 sm:py-12 md:py-16 pb-24 sm:pb-16">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
         <div className="bg-white rounded-2xl sm:rounded-3xl shadow-lg p-5 sm:p-8 md:p-12">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-6 sm:mb-8">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 sm:mb-8">
             Terms of Service
           </h1>
           <p className="text-gray-600 mb-6 sm:mb-8 text-sm sm:text-base">
@@ -23,7 +23,7 @@ export default function TermsOfServicePage() {
             })}
           </p>
 
-          <div className="space-y-6 sm:space-y-8">
+          <div className="space-y-6 sm:space-y-8 text-sm sm:text-base leading-relaxed">
             <section>
               <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">
                 1. Acceptance of Terms
@@ -42,8 +42,10 @@ export default function TermsOfServicePage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">2. Description of Services</h2>
-              <div className="space-y-4 text-gray-700">
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">
+                2. Description of Services
+              </h2>
+              <div className="space-y-3 sm:space-y-4 text-gray-700">
                 <p>Cerebrum Biology Academy provides:</p>
                 <ul className="list-disc list-inside space-y-2 ml-4">
                   <li>Online and offline biology coaching for NEET and board examinations</li>
@@ -57,7 +59,7 @@ export default function TermsOfServicePage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">
                 3. User Accounts and Registration
               </h2>
               <div className="space-y-4 text-gray-700">
@@ -77,7 +79,7 @@ export default function TermsOfServicePage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">
                 4. Course Enrollment and Payment
               </h2>
               <div className="space-y-4 text-gray-700">
@@ -102,7 +104,9 @@ export default function TermsOfServicePage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">5. Acceptable Use Policy</h2>
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">
+                5. Acceptable Use Policy
+              </h2>
               <div className="space-y-4 text-gray-700">
                 <p>You agree not to:</p>
                 <ul className="list-disc list-inside space-y-2 ml-4">
@@ -119,7 +123,7 @@ export default function TermsOfServicePage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">
                 6. Intellectual Property Rights
               </h2>
               <div className="space-y-4 text-gray-700">
@@ -141,7 +145,7 @@ export default function TermsOfServicePage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">
                 7. Privacy and Data Protection
               </h2>
               <div className="space-y-4 text-gray-700">
@@ -154,7 +158,7 @@ export default function TermsOfServicePage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">
                 8. Service Availability and Technical Requirements
               </h2>
               <div className="space-y-4 text-gray-700">
@@ -173,7 +177,7 @@ export default function TermsOfServicePage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">
                 9. Disclaimers and Limitations of Liability
               </h2>
               <div className="space-y-4 text-gray-700">
@@ -200,7 +204,9 @@ export default function TermsOfServicePage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">10. Termination</h2>
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">
+                10. Termination
+              </h2>
               <div className="space-y-4 text-gray-700">
                 <p>
                   Either party may terminate this agreement at any time. We reserve the right to
@@ -217,7 +223,7 @@ export default function TermsOfServicePage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">
                 11. Governing Law and Dispute Resolution
               </h2>
               <div className="space-y-4 text-gray-700">
@@ -235,7 +241,9 @@ export default function TermsOfServicePage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">12. Changes to Terms</h2>
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">
+                12. Changes to Terms
+              </h2>
               <div className="space-y-4 text-gray-700">
                 <p>
                   We reserve the right to modify these Terms at any time. We will notify users of
@@ -246,7 +254,9 @@ export default function TermsOfServicePage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">13. Contact Information</h2>
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">
+                13. Contact Information
+              </h2>
               <div className="space-y-4 text-gray-700">
                 <p>For questions about these Terms of Service, please contact us:</p>
                 <div className="bg-gray-50 p-6 rounded-lg">
