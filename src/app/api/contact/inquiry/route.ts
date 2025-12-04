@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { rateLimit } from '@/lib/rateLimit'
 
 interface ContactInquiry {
   name: string
@@ -13,6 +14,24 @@ interface ContactInquiry {
 
 export async function POST(request: NextRequest) {
   try {
+    // Rate limit: 5 inquiries per hour per IP
+    const rateLimitResult = await rateLimit(request, { maxRequests: 5, windowMs: 60 * 60 * 1000 })
+    if (!rateLimitResult.success) {
+      return NextResponse.json(
+        {
+          error: 'Too many inquiries. Please try again later.',
+        },
+        {
+          status: 429,
+          headers: {
+            'X-RateLimit-Limit': rateLimitResult.limit.toString(),
+            'X-RateLimit-Remaining': rateLimitResult.remaining.toString(),
+            'X-RateLimit-Reset': new Date(rateLimitResult.reset).toISOString(),
+          },
+        }
+      )
+    }
+
     const data: ContactInquiry = await request.json()
 
     // Validate required fields

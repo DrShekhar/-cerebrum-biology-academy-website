@@ -55,10 +55,7 @@ export default async function middleware(req: NextRequest) {
 
   // Protected counselor routes
   if (pathname.startsWith('/counselor') && pathname !== '/counselor-poc') {
-    // DEV MODE: Skip authentication check if bypass is enabled
-    if (process.env.BYPASS_CRM_AUTH === 'true') {
-      console.log('[DEV MODE] Bypassing counselor route authentication in middleware')
-    } else if (!hasRole(session) || (session.role !== 'COUNSELOR' && session.role !== 'ADMIN')) {
+    if (!hasRole(session) || (session.role !== 'COUNSELOR' && session.role !== 'ADMIN')) {
       const loginUrl = new URL('/auth/signin', req.url)
       loginUrl.searchParams.set('returnUrl', pathname)
       return NextResponse.redirect(loginUrl)
@@ -137,11 +134,9 @@ export default async function middleware(req: NextRequest) {
   }
 
   // Counselor API protection
-  // NOTE: Disabled middleware auth check for API routes because Next.js 15 Edge Runtime
-  // doesn't receive cookies from client fetch() calls even with credentials: 'include'
-  // Authentication is handled by the route handlers using withCounselor() middleware
-  if (pathname.startsWith('/api/counselor/') && false) {
-    // Temporarily disabled
+  // NOTE: Auth is handled at route level using withCounselor() middleware for better
+  // cookie handling in Next.js 15. This middleware check provides additional security layer.
+  if (pathname.startsWith('/api/counselor/')) {
     if (!hasRole(session) || (session.role !== 'COUNSELOR' && session.role !== 'ADMIN')) {
       return addSecurityHeaders(
         NextResponse.json(

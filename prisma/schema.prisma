@@ -59,6 +59,11 @@ model analytics_events {
   country     String?
   city        String?
   createdAt   DateTime @default(now())
+
+  @@index([eventType, createdAt])
+  @@index([userId, createdAt])
+  @@index([sessionId])
+  @@index([utmSource, utmMedium, utmCampaign])
 }
 
 model biology_topics {
@@ -295,6 +300,10 @@ model courses {
   class_sessions      class_sessions[]
   attendance_settings attendance_settings[]
   product_recommendations product_recommendations[]
+
+  @@index([isActive, sortOrder])
+  @@index([type, isActive])
+  @@index([class, isActive])
 }
 
 model product_recommendations {
@@ -1343,6 +1352,10 @@ model users {
   teacher_test_assignments                test_assignments[]                      @relation("TeacherTestAssignments")
   student_test_submissions                test_assignment_submissions[]           @relation("StudentTestSubmissions")
   product_recommendations                 product_recommendations[]
+
+  @@index([role, createdAt])
+  @@index([lastActiveAt])
+  @@index([emailVerified])
 }
 
 model whatsapp_otp {

@@ -113,6 +113,26 @@ export const rateLimiters = {
         prefix: 'ratelimit:demo:booking',
       })
     : null,
+
+  // Contact form - moderate limits
+  contactForm: redis
+    ? new Ratelimit({
+        redis,
+        limiter: Ratelimit.slidingWindow(5, '1 h'),
+        analytics: true,
+        prefix: 'ratelimit:contact:form',
+      })
+    : null,
+
+  // Newsletter subscription - moderate limits
+  newsletterSubscribe: redis
+    ? new Ratelimit({
+        redis,
+        limiter: Ratelimit.slidingWindow(3, '1 h'),
+        analytics: true,
+        prefix: 'ratelimit:newsletter:subscribe',
+      })
+    : null,
 }
 
 export type RateLimiterType = keyof typeof rateLimiters
