@@ -251,18 +251,13 @@ export function OptimizedHeroSection({
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            {/* Primary CTA with Pulse Animation */}
-            <motion.div
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className="relative"
-            >
-              <div className="absolute -inset-1 bg-gradient-to-r from-green-400 to-emerald-500 rounded-xl opacity-75 blur-sm animate-pulse" />
+            {/* Primary CTA */}
+            <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
               <PremiumButton
                 variant="medical"
                 size="lg"
                 onClick={() => router.push('/demo-booking')}
-                className="relative bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold py-3 xs:py-4 px-6 xs:px-8 rounded-lg xs:rounded-xl shadow-2xl hover:shadow-green-500/40 transition-all duration-300 group text-sm xs:text-base md:text-lg"
+                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold py-3 xs:py-4 px-6 xs:px-8 rounded-lg xs:rounded-xl shadow-xl hover:shadow-green-500/30 transition-all duration-300 group text-sm xs:text-base md:text-lg border border-green-400/30"
               >
                 <motion.div
                   animate={{ rotate: [0, 10, -10, 0] }}
@@ -348,15 +343,24 @@ export function OptimizedHeroSection({
           </motion.div>
 
           <motion.div
-            className="mt-6 xs:mt-8 flex items-center gap-2 text-yellow-200"
+            className="mt-6 xs:mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 1.2 }}
           >
-            <SparklesIcon className="w-4 xs:w-5 h-4 xs:h-5 animate-pulse" />
-            <span className="text-xs xs:text-sm sm:text-base">
-              Join in the next {timeLeft.days} days and get 15% early bird discount
-            </span>
+            <div className="flex items-center gap-2 text-yellow-200">
+              <SparklesIcon className="w-4 xs:w-5 h-4 xs:h-5 animate-pulse" />
+              <span className="text-xs xs:text-sm sm:text-base">
+                Join in the next {timeLeft.days} days and get 15% early bird discount
+              </span>
+            </div>
+            <a
+              href="/neet-2026-preparation"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white text-xs xs:text-sm font-bold px-4 py-2 rounded-full shadow-lg hover:shadow-orange-500/30 transition-all duration-300 animate-pulse"
+            >
+              <AcademicCapIcon className="w-4 h-4" />
+              NEET 2026 Batch Open
+            </a>
           </motion.div>
         </div>
       </div>
