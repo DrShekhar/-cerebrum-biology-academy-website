@@ -32,3 +32,18 @@ export { createAgent, AgentFactory } from './factory'
 
 // Processor
 export { AgentProcessor } from './processor'
+
+// Triggers (automatic agent invocation)
+export {
+  triggerLeadQualification,
+  triggerCallPrep,
+  triggerCallAnalysis,
+  triggerNurtureMessage,
+  triggerStageChange,
+  triggerDemoCompleted,
+  triggerScheduledFollowUps,
+  triggerContentGeneration,
+  triggerProductRecommendation,
+  triggerDemoProductMatch,
+  triggerOfferGeneration,
+} from './triggers'

@@ -259,3 +259,79 @@ export async function triggerContentGeneration(
     return null
   }
 }
+
+/**
+ * Trigger product recommendations when a new lead is created
+ */
+export async function triggerProductRecommendation(
+  leadId: string,
+  source: string = 'LEAD_CREATED'
+): Promise<string | null> {
+  try {
+    const taskId = await AgentTaskManager.createTask({
+      agentType: AgentType.PRODUCT_AGENT,
+      leadId,
+      input: {
+        trigger: source,
+        action: 'RECOMMEND_COURSES',
+      },
+    })
+    console.log(`[TRIGGER] Product recommendation queued: ${taskId}`)
+    return taskId
+  } catch (error) {
+    console.error('[TRIGGER] Failed to queue product recommendation:', error)
+    return null
+  }
+}
+
+/**
+ * Trigger product match analysis for demo booking
+ */
+export async function triggerDemoProductMatch(
+  leadId: string,
+  courseId: string
+): Promise<string | null> {
+  try {
+    const taskId = await AgentTaskManager.createTask({
+      agentType: AgentType.PRODUCT_AGENT,
+      leadId,
+      input: {
+        trigger: 'DEMO_BOOKED',
+        action: 'MATCH_ANALYSIS',
+        courseId,
+      },
+    })
+    console.log(`[TRIGGER] Demo product match queued: ${taskId}`)
+    return taskId
+  } catch (error) {
+    console.error('[TRIGGER] Failed to queue demo product match:', error)
+    return null
+  }
+}
+
+/**
+ * Trigger offer generation for a lead
+ */
+export async function triggerOfferGeneration(
+  leadId: string,
+  courseId: string,
+  urgency: 'low' | 'medium' | 'high' = 'medium'
+): Promise<string | null> {
+  try {
+    const taskId = await AgentTaskManager.createTask({
+      agentType: AgentType.PRODUCT_AGENT,
+      leadId,
+      input: {
+        trigger: 'OFFER_REQUEST',
+        action: 'GENERATE_OFFER',
+        courseId,
+        urgency,
+      },
+    })
+    console.log(`[TRIGGER] Offer generation queued: ${taskId}`)
+    return taskId
+  } catch (error) {
+    console.error('[TRIGGER] Failed to queue offer generation:', error)
+    return null
+  }
+}
