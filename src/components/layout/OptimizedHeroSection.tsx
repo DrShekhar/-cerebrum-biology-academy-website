@@ -13,6 +13,7 @@ import {
   CheckBadgeIcon,
   AcademicCapIcon,
 } from '@heroicons/react/24/outline'
+import { useI18n } from '@/contexts/I18nContext'
 
 interface OptimizedHeroSectionProps {
   className?: string
@@ -88,6 +89,7 @@ export function OptimizedHeroSection({
 }: OptimizedHeroSectionProps) {
   const router = useRouter()
   const containerRef = useRef<HTMLDivElement>(null)
+  const { t } = useI18n()
 
   const [timeLeft, setTimeLeft] = useState({
     days: 82,
@@ -205,7 +207,7 @@ export function OptimizedHeroSection({
           >
             <TrophyIcon className="w-5 h-5 mr-2 text-green-300" />
             <span className="text-green-100 font-medium text-xs xs:text-sm md:text-base">
-              #1 NEET Biology Coaching in India • Delhi NCR • Pan-India Online
+              #1 {t('heroTitle')} • {t('heroSubtitle')}
             </span>
           </motion.div>
 
@@ -215,10 +217,9 @@ export function OptimizedHeroSection({
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <span className="text-yellow-300">Best NEET Biology Coaching</span>
+            <span className="text-yellow-300">{t('heroTitle')}</span>
             <br />
-            <span className="text-green-300">Delhi NCR</span> <span className="text-white">&</span>{' '}
-            <span className="text-green-300">Pan-India Online</span>
+            <span className="text-green-300">{t('heroSubtitle')}</span>
           </motion.h1>
 
           {/* H2 for additional location keywords - SEO optimized */}
@@ -228,7 +229,7 @@ export function OptimizedHeroSection({
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            Laxmi Nagar • Dwarka • Noida • Gurgaon • Kota • Hyderabad • Bangalore
+            {t('locations')}
           </motion.h2>
 
           <motion.p
@@ -237,8 +238,7 @@ export function OptimizedHeroSection({
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <span className="text-yellow-300 font-bold">Sadhna Scored 695 (100 Percentile)</span> •
-            98% Success Rate • 2,500+ Students • AIIMS Trained Faculties
+            <span className="text-yellow-300 font-bold">{t('topperHighlight')}</span> •{t('stats')}
           </motion.p>
 
           <motion.div
@@ -261,7 +261,7 @@ export function OptimizedHeroSection({
                 >
                   <PlayIcon className="h-5 xs:h-6 w-5 xs:w-6 group-hover:scale-110 transition-transform" />
                 </motion.div>
-                Book FREE Demo Class
+                {t('bookDemo')}
               </PremiumButton>
             </motion.div>
 
@@ -274,7 +274,7 @@ export function OptimizedHeroSection({
                 className="bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white hover:bg-white/20 hover:border-white/50 font-semibold py-3 xs:py-4 px-6 xs:px-8 rounded-lg xs:rounded-xl transition-all duration-300 text-sm xs:text-base md:text-lg group"
               >
                 <StarIcon className="h-5 xs:h-6 w-5 xs:w-6 group-hover:text-yellow-300 transition-colors" />
-                See Success Stories
+                {t('seeSuccessStories')}
               </PremiumButton>
             </motion.div>
           </motion.div>
@@ -293,10 +293,10 @@ export function OptimizedHeroSection({
                 <AnimatedCounter value="695" />
               </div>
               <div className="text-[10px] xs:text-xs sm:text-sm text-blue-200 mt-1">
-                Sadhna's Score
+                {t('sadhnasScore')}
               </div>
               <div className="text-[8px] xs:text-[10px] text-green-300/70 mt-0.5">
-                100 Percentile
+                {t('percentile100')}
               </div>
             </motion.div>
             <motion.div
@@ -307,10 +307,10 @@ export function OptimizedHeroSection({
                 <AnimatedCounter value="98" suffix="%" />
               </div>
               <div className="text-[10px] xs:text-xs sm:text-sm text-blue-200 mt-1">
-                Success Rate
+                {t('successRate')}
               </div>
               <div className="text-[8px] xs:text-[10px] text-yellow-300/70 mt-0.5">
-                NEET Qualified
+                {t('neetQualified')}
               </div>
             </motion.div>
             <motion.div
@@ -320,8 +320,12 @@ export function OptimizedHeroSection({
               <div className="text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-purple-400 group-hover:scale-110 transition-transform">
                 <AnimatedCounter value="2500" suffix="+" />
               </div>
-              <div className="text-[10px] xs:text-xs sm:text-sm text-blue-200 mt-1">Students</div>
-              <div className="text-[8px] xs:text-[10px] text-purple-300/70 mt-0.5">& Counting</div>
+              <div className="text-[10px] xs:text-xs sm:text-sm text-blue-200 mt-1">
+                {t('students')}
+              </div>
+              <div className="text-[8px] xs:text-[10px] text-purple-300/70 mt-0.5">
+                {t('andCounting')}
+              </div>
             </motion.div>
           </motion.div>
 
@@ -333,8 +337,8 @@ export function OptimizedHeroSection({
           >
             <ClockIcon className="w-4 xs:w-5 h-4 xs:h-5 mr-2 text-red-300 flex-shrink-0" />
             <span className="text-red-100 text-xs xs:text-sm sm:text-base">
-              Next Batch Starting: <span className="font-bold">January 15, 2026</span> • Only 50
-              Seats Left
+              {t('nextBatchStarting')}: <span className="font-bold">January 15, 2026</span> •{' '}
+              {t('onlySeatsLeft')}
             </span>
           </motion.div>
 
@@ -347,7 +351,7 @@ export function OptimizedHeroSection({
             <div className="flex items-center gap-2 text-yellow-200">
               <SparklesIcon className="w-4 xs:w-5 h-4 xs:h-5 animate-pulse" />
               <span className="text-xs xs:text-sm sm:text-base">
-                Join in the next {timeLeft.days} days and get 15% early bird discount
+                {t('earlyBirdDiscount').replace('{days}', timeLeft.days.toString())}
               </span>
             </div>
             <a
@@ -355,7 +359,7 @@ export function OptimizedHeroSection({
               className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white text-xs xs:text-sm font-bold px-4 py-2 rounded-full shadow-lg hover:shadow-orange-500/30 transition-all duration-300 animate-pulse"
             >
               <AcademicCapIcon className="w-4 h-4" />
-              NEET 2026 Batch Open
+              NEET 2026
             </a>
           </motion.div>
         </div>

@@ -16,9 +16,11 @@ import {
 } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { useRouter } from 'next/navigation'
+import { useI18n } from '@/contexts/I18nContext'
 
 export function FacultySection() {
   const router = useRouter()
+  const { t } = useI18n()
 
   const handleMeetFaculty = () => {
     router.push('/faculty')
@@ -41,16 +43,15 @@ export function FacultySection() {
         >
           <div className="inline-flex items-center bg-blue-100 text-blue-600 px-3 xs:px-4 py-1.5 xs:py-2 rounded-full text-xs xs:text-sm font-medium mb-3 xs:mb-4">
             <GraduationCap className="w-3 xs:w-4 h-3 xs:h-4 mr-2" />
-            Expert Faculty Team
+            {t('faculty')}
           </div>
 
           <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 xs:mb-5 sm:mb-6">
-            Learn From <span className="text-blue-600">AIIMS Experts</span>
+            {t('aiims')} <span className="text-blue-600">{t('trainedFaculty')}</span>
           </h2>
 
           <p className="text-base xs:text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-            Our distinguished faculty comprises AIIMS alumni, PhD holders, and medical professionals
-            with decades of teaching excellence and proven track records.
+            {t('faculty')} - {t('aiims')}
           </p>
         </motion.div>
 

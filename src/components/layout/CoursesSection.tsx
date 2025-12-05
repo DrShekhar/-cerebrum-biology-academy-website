@@ -19,6 +19,7 @@ import {
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
+import { useI18n } from '@/contexts/I18nContext'
 
 const iconMap = {
   Users,
@@ -29,6 +30,7 @@ const iconMap = {
 export function CoursesSection() {
   const router = useRouter()
   const [selectedCategory, setSelectedCategory] = useState('classroom')
+  const { t } = useI18n()
 
   const handleEnrollClick = (courseId: string) => {
     router.push(`/enrollment?course=${courseId}`)
@@ -62,16 +64,15 @@ export function CoursesSection() {
         >
           <div className="inline-flex items-center bg-blue-100 text-blue-600 px-3 xs:px-4 py-1.5 xs:py-2 rounded-full text-xs xs:text-sm font-medium mb-3 xs:mb-4">
             <BookOpen className="w-3 xs:w-4 h-3 xs:h-4 mr-2" />
-            Our Courses
+            {t('ourCourses')}
           </div>
 
           <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 xs:mb-6">
-            Choose Your Path to <span className="text-blue-600">NEET Success</span>
+            {t('courses')} - <span className="text-blue-600">NEET</span>
           </h2>
 
           <p className="text-base xs:text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive biology coaching programs designed for every student&apos;s needs. From
-            foundation building to intensive preparation - we&apos;ve got you covered.
+            {t('viewAllCourses')}
           </p>
         </motion.div>
 
@@ -190,7 +191,7 @@ export function CoursesSection() {
                     className="flex-1"
                     onClick={() => handleEnrollClick(course.id)}
                   >
-                    Enroll Now
+                    {t('enrollNow')}
                   </Button>
                   <Button
                     variant="outline"
@@ -198,7 +199,7 @@ export function CoursesSection() {
                     className="flex-1"
                     onClick={() => handleViewDetails(course.id)}
                   >
-                    View Details
+                    {t('learnMore')}
                   </Button>
                 </div>
               </div>
