@@ -6,6 +6,7 @@ import { generateLocalityMetadata } from '@/lib/seo/localityMetadata'
 import { generateAllSchemas } from '@/lib/seo/localitySchema'
 import LocalityHero from '@/components/localities/LocalityHero'
 import LocalityFAQ from '@/components/localities/LocalityFAQ'
+import { GoogleMapEmbed } from '@/components/maps/GoogleMapEmbed'
 import {
   MapPin,
   Train,
@@ -245,6 +246,15 @@ export default async function LocalityPage({ params }: LocalityPageProps) {
                 ))}
               </ul>
             </div>
+          </div>
+
+          {/* Google Maps Embed */}
+          <div className="mt-8">
+            <GoogleMapEmbed
+              coordinates={locality.coordinates}
+              localityName={locality.displayName}
+              centerAddress={locality.centerAddress}
+            />
           </div>
         </div>
       </section>
