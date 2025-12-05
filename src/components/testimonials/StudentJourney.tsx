@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import { Button } from '@/components/ui/Button'
 import {
   TrendingUp,
@@ -116,8 +117,14 @@ export function StudentJourney({ student }: StudentJourneyProps) {
           </div>
 
           <div className="relative">
-            <div className="aspect-square rounded-full overflow-hidden border-4 border-white/20 bg-white/10 backdrop-blur-sm">
-              <img src={student.image} alt={student.name} className="w-full h-full object-cover" />
+            <div className="aspect-square rounded-full overflow-hidden border-4 border-white/20 bg-white/10 backdrop-blur-sm relative">
+              <Image
+                src={student.image}
+                alt={student.name}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 50vw, 25vw"
+              />
             </div>
 
             {/* Achievement Badges */}

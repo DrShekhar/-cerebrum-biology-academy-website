@@ -75,6 +75,9 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com',
+    types: {
+      'application/rss+xml': '/blog/feed.xml',
+    },
   },
   category: 'Education',
 }

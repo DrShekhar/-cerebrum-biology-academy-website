@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
+import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   CheckCircleIcon,
@@ -76,9 +77,15 @@ function TrustNearPrice() {
         className="flex items-center space-x-2 pt-2 border-t border-slate-100"
       >
         <div className="flex space-x-1">
-          <img src="/icons/razorpay.svg" alt="Razorpay" className="h-4" />
-          <img src="/icons/ssl.svg" alt="SSL" className="h-4" />
-          <img src="/icons/upi.svg" alt="UPI" className="h-4" />
+          <Image
+            src="/icons/razorpay.svg"
+            alt="Razorpay"
+            width={48}
+            height={16}
+            className="h-4 w-auto"
+          />
+          <Image src="/icons/ssl.svg" alt="SSL" width={48} height={16} className="h-4 w-auto" />
+          <Image src="/icons/upi.svg" alt="UPI" width={48} height={16} className="h-4 w-auto" />
         </div>
         <span className="text-xs text-slate-500">Secure payment via Razorpay</span>
       </motion.div>
@@ -289,15 +296,15 @@ function SecurityBadges() {
   return (
     <div className="flex items-center justify-center space-x-4 py-3 border-t border-slate-100">
       {badges.map((badge, index) => (
-        <motion.img
+        <motion.div
           key={index}
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.3, delay: index * 0.1 }}
-          src={badge.icon}
-          alt={badge.alt}
           className="h-6 grayscale hover:grayscale-0 transition-all duration-200"
-        />
+        >
+          <Image src={badge.icon} alt={badge.alt} width={72} height={24} className="h-6 w-auto" />
+        </motion.div>
       ))}
     </div>
   )
