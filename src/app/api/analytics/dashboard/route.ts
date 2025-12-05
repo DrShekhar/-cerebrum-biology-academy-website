@@ -1,5 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { AnalyticsDashboard, RealTimeMetrics, DashboardMetrics, TeacherAnalytics, AdminAnalytics } from '@/lib/types/analytics'
+import {
+  AnalyticsDashboard,
+  RealTimeMetrics,
+  DashboardMetrics,
+  TeacherAnalytics,
+  AdminAnalytics,
+} from '@/lib/types/analytics'
 import { prisma as db } from '@/lib/database'
 
 // Mock data for demonstration - in production, this would come from your database
@@ -131,7 +137,8 @@ const generateMockRealTimeData = (): RealTimeMetrics => {
 export async function GET(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url)
-    const dashboardType = searchParams.get('type') as 'student' | 'teacher' | 'admin' | 'general' || 'general'
+    const dashboardType =
+      (searchParams.get('type') as 'student' | 'teacher' | 'admin' | 'general') || 'general'
     const userId = searchParams.get('userId')
     const grade = searchParams.get('grade')
     const dateRange = searchParams.get('dateRange') || '30d'
@@ -139,14 +146,20 @@ export async function GET(request: NextRequest) {
     switch (dashboardType) {
       case 'student':
         if (!userId) {
-          return NextResponse.json({ error: 'User ID is required for student dashboard' }, { status: 400 })
+          return NextResponse.json(
+            { error: 'User ID is required for student dashboard' },
+            { status: 400 }
+          )
         }
         const studentMetrics = await getStudentDashboardMetrics(userId)
         return NextResponse.json({ success: true, data: studentMetrics })
 
       case 'teacher':
         if (!grade) {
-          return NextResponse.json({ error: 'Grade is required for teacher dashboard' }, { status: 400 })
+          return NextResponse.json(
+            { error: 'Grade is required for teacher dashboard' },
+            { status: 400 }
+          )
         }
         const teacherMetrics = await getTeacherDashboardMetrics(grade)
         return NextResponse.json({ success: true, data: teacherMetrics })
@@ -155,17 +168,24 @@ export async function GET(request: NextRequest) {
         const adminMetrics = await getAdminDashboardMetrics()
         return NextResponse.json({ success: true, data: adminMetrics })
 
+      case 'realtime':
+        const realTimeData = generateMockRealTimeData()
+        return NextResponse.json(realTimeData)
+
+      case 'dashboard':
+        const dashboardData = generateMockDashboardData()
+        return NextResponse.json(dashboardData)
+
       case 'general':
       default:
         if (searchParams.get('realtime') === 'true') {
-          const realTimeData = generateMockRealTimeData()
-          return NextResponse.json(realTimeData)
+          const realTimeDataLegacy = generateMockRealTimeData()
+          return NextResponse.json(realTimeDataLegacy)
         }
 
-        const dashboardData = generateMockDashboardData()
-        return NextResponse.json(dashboardData)
+        const dashboardDataDefault = generateMockDashboardData()
+        return NextResponse.json(dashboardDataDefault)
     }
-
   } catch (error) {
     console.error('Analytics dashboard error:', error)
     return NextResponse.json({ error: 'Failed to fetch analytics data' }, { status: 500 })
@@ -196,7 +216,7 @@ async function getStudentDashboardMetrics(userId: string): Promise<DashboardMetr
   // Get user's grade for class comparison
   const user = await db.freeUser.findUnique({
     where: { id: userId },
-    select: { grade: true }
+    select: { grade: true },
   })
 
   if (!user) {
@@ -205,26 +225,25 @@ async function getStudentDashboardMetrics(userId: string): Promise<DashboardMetr
 
   // Get total students in same grade
   const totalStudents = await db.freeUser.count({
-    where: { grade: user.grade }
+    where: { grade: user.grade },
   })
 
   // Get completed tests for the user
   const userTests = await db.testAttempt.findMany({
     where: {
       freeUserId: userId,
-      status: 'COMPLETED'
+      status: 'COMPLETED',
     },
-    orderBy: { submittedAt: 'desc' }
+    orderBy: { submittedAt: 'desc' },
   })
 
   const totalTests = userTests.length
-  const averageScore = totalTests > 0
-    ? userTests.reduce((sum, test) => sum + test.percentage, 0) / totalTests
-    : 0
+  const averageScore =
+    totalTests > 0 ? userTests.reduce((sum, test) => sum + test.percentage, 0) / totalTests : 0
 
   // Get completion rate (completed vs started)
   const startedTests = await db.testAttempt.count({
-    where: { freeUserId: userId }
+    where: { freeUserId: userId },
   })
   const completionRate = startedTests > 0 ? (totalTests / startedTests) * 100 : 0
 
@@ -236,9 +255,9 @@ async function getStudentDashboardMetrics(userId: string): Promise<DashboardMetr
     where: {
       freeUserId: userId,
       status: 'COMPLETED',
-      submittedAt: { gte: thirtyDaysAgo }
+      submittedAt: { gte: thirtyDaysAgo },
     },
-    select: { submittedAt: true }
+    select: { submittedAt: true },
   })
 
   const dailyActive = generateDailyActivity(dailyTests, 30)
@@ -247,9 +266,9 @@ async function getStudentDashboardMetrics(userId: string): Promise<DashboardMetr
   const gradeTests = await db.testAttempt.findMany({
     where: {
       status: 'COMPLETED',
-      freeUser: { grade: user.grade }
+      freeUser: { grade: user.grade },
     },
-    include: { freeUser: true }
+    include: { freeUser: true },
   })
 
   const topPerformers = calculateTopPerformers(gradeTests)
@@ -259,15 +278,15 @@ async function getStudentDashboardMetrics(userId: string): Promise<DashboardMetr
       totalStudents,
       totalTests,
       averageScore,
-      completionRate
+      completionRate,
     },
     trends: {
       dailyActive,
       weeklyTests: [], // Implement if needed
-      monthlyGrowth: [] // Implement if needed
+      monthlyGrowth: [], // Implement if needed
     },
     topPerformers,
-    popularContent: [] // Implement based on user's test history
+    popularContent: [], // Implement based on user's test history
   }
 }
 
@@ -278,51 +297,59 @@ async function getTeacherDashboardMetrics(grade: string): Promise<TeacherAnalyti
     include: {
       testAttempts: {
         where: { status: 'COMPLETED' },
-        orderBy: { submittedAt: 'desc' }
-      }
-    }
+        orderBy: { submittedAt: 'desc' },
+      },
+    },
   })
 
   const totalStudents = students.length
 
   // Calculate class metrics
-  const allTests = students.flatMap(s => s.testAttempts)
-  const classAverage = allTests.length > 0
-    ? allTests.reduce((sum, test) => sum + test.percentage, 0) / allTests.length
-    : 0
+  const allTests = students.flatMap((s) => s.testAttempts)
+  const classAverage =
+    allTests.length > 0
+      ? allTests.reduce((sum, test) => sum + test.percentage, 0) / allTests.length
+      : 0
 
   // Calculate improvement (compare last 2 weeks)
   const twoWeeksAgo = new Date()
   twoWeeksAgo.setDate(twoWeeksAgo.getDate() - 14)
 
-  const recentTests = allTests.filter(test => test.submittedAt >= twoWeeksAgo)
-  const olderTests = allTests.filter(test => test.submittedAt < twoWeeksAgo)
+  const recentTests = allTests.filter((test) => test.submittedAt >= twoWeeksAgo)
+  const olderTests = allTests.filter((test) => test.submittedAt < twoWeeksAgo)
 
-  const recentAverage = recentTests.length > 0
-    ? recentTests.reduce((sum, test) => sum + test.percentage, 0) / recentTests.length
-    : 0
-  const olderAverage = olderTests.length > 0
-    ? olderTests.reduce((sum, test) => sum + test.percentage, 0) / olderTests.length
-    : 0
+  const recentAverage =
+    recentTests.length > 0
+      ? recentTests.reduce((sum, test) => sum + test.percentage, 0) / recentTests.length
+      : 0
+  const olderAverage =
+    olderTests.length > 0
+      ? olderTests.reduce((sum, test) => sum + test.percentage, 0) / olderTests.length
+      : 0
 
   const improvement = recentAverage - olderAverage
 
   // Get student progress
-  const studentProgress = students.map(student => {
+  const studentProgress = students.map((student) => {
     const studentTests = student.testAttempts
-    const avgScore = studentTests.length > 0
-      ? studentTests.reduce((sum, test) => sum + test.percentage, 0) / studentTests.length
-      : 0
+    const avgScore =
+      studentTests.length > 0
+        ? studentTests.reduce((sum, test) => sum + test.percentage, 0) / studentTests.length
+        : 0
 
-    const recentStudentTests = studentTests.filter(test => test.submittedAt >= twoWeeksAgo)
-    const olderStudentTests = studentTests.filter(test => test.submittedAt < twoWeeksAgo)
+    const recentStudentTests = studentTests.filter((test) => test.submittedAt >= twoWeeksAgo)
+    const olderStudentTests = studentTests.filter((test) => test.submittedAt < twoWeeksAgo)
 
-    const recentStudentAvg = recentStudentTests.length > 0
-      ? recentStudentTests.reduce((sum, test) => sum + test.percentage, 0) / recentStudentTests.length
-      : 0
-    const olderStudentAvg = olderStudentTests.length > 0
-      ? olderStudentTests.reduce((sum, test) => sum + test.percentage, 0) / olderStudentTests.length
-      : 0
+    const recentStudentAvg =
+      recentStudentTests.length > 0
+        ? recentStudentTests.reduce((sum, test) => sum + test.percentage, 0) /
+          recentStudentTests.length
+        : 0
+    const olderStudentAvg =
+      olderStudentTests.length > 0
+        ? olderStudentTests.reduce((sum, test) => sum + test.percentage, 0) /
+          olderStudentTests.length
+        : 0
 
     return {
       studentId: student.id,
@@ -331,7 +358,7 @@ async function getTeacherDashboardMetrics(grade: string): Promise<TeacherAnalyti
       testsTaken: studentTests.length,
       averageScore: avgScore,
       improvement: recentStudentAvg - olderStudentAvg,
-      strugglingTopics: [] // Implement based on test analysis
+      strugglingTopics: [], // Implement based on test analysis
     }
   })
 
@@ -342,8 +369,8 @@ async function getTeacherDashboardMetrics(grade: string): Promise<TeacherAnalyti
   const activeStudents = await db.freeUser.count({
     where: {
       grade,
-      lastActiveDate: { gte: sevenDaysAgo }
-    }
+      lastActiveDate: { gte: sevenDaysAgo },
+    },
   })
 
   // Weekly test completion
@@ -351,8 +378,8 @@ async function getTeacherDashboardMetrics(grade: string): Promise<TeacherAnalyti
     where: {
       status: 'COMPLETED',
       submittedAt: { gte: sevenDaysAgo },
-      freeUser: { grade }
-    }
+      freeUser: { grade },
+    },
   })
 
   return {
@@ -360,7 +387,7 @@ async function getTeacherDashboardMetrics(grade: string): Promise<TeacherAnalyti
       totalStudents,
       averageScore: classAverage,
       classAverage,
-      improvement
+      improvement,
     },
     studentProgress,
     topicPerformance: [], // Implement topic-wise analysis
@@ -368,8 +395,8 @@ async function getTeacherDashboardMetrics(grade: string): Promise<TeacherAnalyti
       dailyActiveStudents: activeStudents,
       weeklyTestCompletion: weeklyTests,
       averageStudyTime: 0, // Calculate from test durations
-      dropoffPoints: [] // Implement analysis
-    }
+      dropoffPoints: [], // Implement analysis
+    },
   }
 }
 
@@ -384,7 +411,7 @@ async function getAdminDashboardMetrics(): Promise<AdminAnalytics> {
   lastMonth.setMonth(lastMonth.getMonth() - 1)
 
   const newUsersThisMonth = await db.freeUser.count({
-    where: { registrationDate: { gte: lastMonth } }
+    where: { registrationDate: { gte: lastMonth } },
   })
 
   const previousMonth = new Date(lastMonth)
@@ -394,14 +421,13 @@ async function getAdminDashboardMetrics(): Promise<AdminAnalytics> {
     where: {
       registrationDate: {
         gte: previousMonth,
-        lt: lastMonth
-      }
-    }
+        lt: lastMonth,
+      },
+    },
   })
 
-  const monthlyGrowth = newUsersLastMonth > 0
-    ? ((newUsersThisMonth - newUsersLastMonth) / newUsersLastMonth) * 100
-    : 0
+  const monthlyGrowth =
+    newUsersLastMonth > 0 ? ((newUsersThisMonth - newUsersLastMonth) / newUsersLastMonth) * 100 : 0
 
   // Content metrics
   const totalQuestions = await db.question.count()
@@ -418,26 +444,26 @@ async function getAdminDashboardMetrics(): Promise<AdminAnalytics> {
       totalTeachers,
       totalStudents,
       monthlyGrowth,
-      churnRate: 0 // Implement churn calculation
+      churnRate: 0, // Implement churn calculation
     },
     contentMetrics: {
       totalQuestions,
       totalTests,
       averageRating: 4.5, // Implement rating system
-      contentGaps: [] // Implement gap analysis
+      contentGaps: [], // Implement gap analysis
     },
     performanceMetrics: {
       systemUptime,
       averageResponseTime,
       errorRate,
-      serverLoad: 65 // Mock data
+      serverLoad: 65, // Mock data
     },
     businessMetrics: {
       revenue: 0, // Implement revenue tracking
       conversionRate: 0, // Implement conversion tracking
       customerLifetimeValue: 0, // Implement CLV calculation
-      costPerAcquisition: 0 // Implement CPA calculation
-    }
+      costPerAcquisition: 0, // Implement CPA calculation
+    },
   }
 }
 
@@ -445,7 +471,7 @@ function generateDailyActivity(tests: any[], days: number): Array<{ date: string
   const activity = []
   const testsByDate: Record<string, number> = {}
 
-  tests.forEach(test => {
+  tests.forEach((test) => {
     const date = test.submittedAt.toISOString().split('T')[0]
     testsByDate[date] = (testsByDate[date] || 0) + 1
   })
@@ -457,23 +483,25 @@ function generateDailyActivity(tests: any[], days: number): Array<{ date: string
 
     activity.push({
       date: dateStr,
-      count: testsByDate[dateStr] || 0
+      count: testsByDate[dateStr] || 0,
     })
   }
 
   return activity
 }
 
-function calculateTopPerformers(tests: any[]): Array<{ userId: string; name: string; score: number; rank: number }> {
+function calculateTopPerformers(
+  tests: any[]
+): Array<{ userId: string; name: string; score: number; rank: number }> {
   const userStats: Record<string, { name: string; totalScore: number; testCount: number }> = {}
 
-  tests.forEach(test => {
+  tests.forEach((test) => {
     const userId = test.freeUserId
     if (!userStats[userId]) {
       userStats[userId] = {
         name: test.freeUser.name || 'Anonymous',
         totalScore: 0,
-        testCount: 0
+        testCount: 0,
       }
     }
     userStats[userId].totalScore += test.percentage
@@ -485,7 +513,7 @@ function calculateTopPerformers(tests: any[]): Array<{ userId: string; name: str
       userId,
       name: stats.name,
       score: stats.testCount > 0 ? stats.totalScore / stats.testCount : 0,
-      rank: 0
+      rank: 0,
     }))
     .sort((a, b) => b.score - a.score)
     .slice(0, 10)
