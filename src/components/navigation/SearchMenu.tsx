@@ -379,7 +379,7 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
             initial="closed"
             animate="open"
             exit="closed"
-            className={`fixed inset-0 bg-black bg-opacity-50 z-[10000] flex ${isMobile ? 'items-end' : 'items-start justify-center pt-20'} px-0 md:px-4`}
+            className={`fixed inset-0 bg-black/50 backdrop-blur-sm z-[10000] flex ${isMobile ? 'items-end' : 'items-start justify-center pt-20'} px-0 md:px-4 overflow-hidden`}
             onClick={onClose}
           >
             <motion.div
@@ -387,7 +387,7 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
               initial="closed"
               animate="open"
               exit="closed"
-              className={`bg-white ${isMobile ? 'rounded-t-3xl' : 'rounded-2xl'} shadow-2xl w-full max-w-2xl overflow-hidden`}
+              className={`bg-white ${isMobile ? 'rounded-t-3xl w-full' : 'rounded-2xl w-full max-w-2xl'} shadow-2xl overflow-hidden flex flex-col`}
               style={{ maxHeight: isMobile ? viewportHeight : '80vh' }}
               onClick={(e) => e.stopPropagation()}
               onTouchStart={handleTouchStart}
@@ -443,11 +443,11 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
               {/* Search Results - flexible height for mobile keyboard */}
               <div
                 className="flex-1 overflow-y-auto"
-                style={{ maxHeight: isMobile ? 'calc(100% - 180px)' : '400px' }}
+                style={{ maxHeight: isMobile ? 'calc(100% - 160px)' : '400px' }}
               >
                 {query && results.length > 0 && (
-                  <div className="p-6">
-                    <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-4">
+                  <div className="p-4 sm:p-6">
+                    <h3 className="text-xs sm:text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3 sm:mb-4">
                       Search Results ({results.length})
                     </h3>
                     <div className="space-y-2">
@@ -459,11 +459,11 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
                             handleSearch(query)
                             onClose()
                           }}
-                          className="group flex items-center justify-between p-4 rounded-xl hover:bg-blue-50 transition-all duration-200"
+                          className="group flex items-center justify-between p-3 sm:p-4 rounded-xl hover:bg-blue-50 transition-all duration-200 min-h-[44px] touch-manipulation"
                         >
-                          <div className="flex-1">
-                            <div className="flex items-center space-x-2 mb-1">
-                              <h4 className="font-semibold text-gray-900 group-hover:text-blue-600">
+                          <div className="flex-1 min-w-0">
+                            <div className="flex items-center flex-wrap gap-1.5 sm:gap-2 mb-1">
+                              <h4 className="font-semibold text-sm sm:text-base text-gray-900 group-hover:text-blue-600">
                                 {item.title}
                               </h4>
                               {item.isNew && (
@@ -479,12 +479,14 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
                                 </span>
                               )}
                             </div>
-                            <p className="text-sm text-gray-600 mb-1">{item.description}</p>
+                            <p className="text-xs sm:text-sm text-gray-600 mb-1 line-clamp-2">
+                              {item.description}
+                            </p>
                             <span className="text-xs text-blue-600 font-medium">
                               {item.category}
                             </span>
                           </div>
-                          <ArrowUpRight className="w-5 h-5 text-gray-400 group-hover:text-blue-600 transform group-hover:scale-110 transition-all duration-200" />
+                          <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400 group-hover:text-blue-600 transform group-hover:scale-110 transition-all duration-200 flex-shrink-0 ml-2" />
                         </Link>
                       ))}
                     </div>
@@ -492,37 +494,39 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
                 )}
 
                 {query && results.length === 0 && !isLoading && (
-                  <div className="p-6 text-center">
+                  <div className="p-4 sm:p-6 text-center">
                     <div className="text-gray-400 mb-2">
                       <Search className="w-8 h-8 mx-auto" />
                     </div>
-                    <h3 className="text-lg font-medium text-gray-900 mb-2">No results found</h3>
-                    <p className="text-gray-600">
+                    <h3 className="text-base sm:text-lg font-medium text-gray-900 mb-2">
+                      No results found
+                    </h3>
+                    <p className="text-sm sm:text-base text-gray-600">
                       Try searching for courses, services, or help topics
                     </p>
                   </div>
                 )}
 
                 {isLoading && (
-                  <div className="p-6 text-center">
+                  <div className="p-4 sm:p-6 text-center">
                     <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto"></div>
-                    <p className="text-gray-600 mt-2">Searching...</p>
+                    <p className="text-sm sm:text-base text-gray-600 mt-2">Searching...</p>
                   </div>
                 )}
 
                 {!query && (
-                  <div className="p-6 space-y-6">
+                  <div className="p-4 sm:p-6 space-y-4 sm:space-y-6">
                     {/* Recent Searches */}
                     {recentSearches.length > 0 && (
                       <div>
-                        <div className="flex items-center justify-between mb-4">
-                          <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide flex items-center">
-                            <Clock className="w-4 h-4 mr-2" />
+                        <div className="flex items-center justify-between mb-3 sm:mb-4">
+                          <h3 className="text-xs sm:text-sm font-semibold text-gray-500 uppercase tracking-wide flex items-center">
+                            <Clock className="w-3 h-3 sm:w-4 sm:h-4 mr-1.5 sm:mr-2" />
                             Recent Searches
                           </h3>
                           <button
                             onClick={clearRecentSearches}
-                            className="text-sm text-blue-600 hover:text-blue-700"
+                            className="text-xs sm:text-sm text-blue-600 hover:text-blue-700 min-h-[44px] flex items-center px-2 touch-manipulation"
                           >
                             Clear
                           </button>
@@ -532,7 +536,7 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
                             <button
                               key={index}
                               onClick={() => setQuery(search)}
-                              className="px-3 py-2 bg-gray-100 text-gray-700 rounded-lg text-sm hover:bg-gray-200 transition-colors duration-200"
+                              className="px-3 py-2 min-h-[44px] bg-gray-100 text-gray-700 rounded-lg text-sm hover:bg-gray-200 transition-colors duration-200 touch-manipulation"
                             >
                               {search}
                             </button>
@@ -543,11 +547,11 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
 
                     {/* Popular Searches */}
                     <div>
-                      <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-4 flex items-center">
-                        <TrendingUp className="w-4 h-4 mr-2" />
+                      <h3 className="text-xs sm:text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3 sm:mb-4 flex items-center">
+                        <TrendingUp className="w-3 h-3 sm:w-4 sm:h-4 mr-1.5 sm:mr-2" />
                         Popular Searches
                       </h3>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
                         {popularSearches.map((search, index) => {
                           const Icon = search.icon
                           return (
@@ -557,14 +561,14 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
                                 setQuery(search.text)
                                 triggerHaptic()
                               }}
-                              className="group relative flex items-center gap-3 px-4 py-3 bg-gradient-to-br from-white to-gray-50 border border-gray-200 rounded-xl text-left hover:border-blue-300 hover:shadow-lg hover:scale-[1.02] transition-all duration-200 min-h-[52px]"
+                              className="group relative flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-2.5 sm:py-3 bg-gradient-to-br from-white to-gray-50 border border-gray-200 rounded-xl text-left hover:border-blue-300 hover:shadow-lg hover:scale-[1.02] transition-all duration-200 min-h-[52px] touch-manipulation"
                             >
-                              <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center shadow-md group-hover:shadow-lg group-hover:scale-110 transition-all duration-200">
-                                <Icon className="w-5 h-5 text-white" />
+                              <div className="flex-shrink-0 w-9 h-9 sm:w-10 sm:h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center shadow-md group-hover:shadow-lg group-hover:scale-110 transition-all duration-200">
+                                <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                               </div>
                               <div className="flex-1 min-w-0">
-                                <div className="flex items-center gap-2">
-                                  <span className="font-medium text-gray-900 text-sm truncate">
+                                <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
+                                  <span className="font-medium text-gray-900 text-xs sm:text-sm truncate">
                                     {search.text}
                                   </span>
                                   {search.trend === 'trending' && (
@@ -597,12 +601,12 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
                     {/* Personalization Section */}
                     {personalizedRecommendations && (
                       <div>
-                        <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-4 flex items-center">
-                          <Sparkles className="w-4 h-4 mr-2" />
+                        <h3 className="text-xs sm:text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3 sm:mb-4 flex items-center">
+                          <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 mr-1.5 sm:mr-2" />
                           For You
                         </h3>
-                        <div className="bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 border border-purple-200 rounded-2xl p-4 shadow-md">
-                          <p className="text-xs text-purple-700 font-medium mb-3">
+                        <div className="bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 border border-purple-200 rounded-2xl p-3 sm:p-4 shadow-md">
+                          <p className="text-xs text-purple-700 font-medium mb-2 sm:mb-3">
                             Based on your class ({userClass}) and goal ({userGoal})
                           </p>
                           <div className="space-y-2">
@@ -635,11 +639,11 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
 
                     {/* Quick Actions - show only 4 on mobile to save space */}
                     <div>
-                      <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3 sm:mb-4">
+                      <h3 className="text-xs sm:text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3 sm:mb-4">
                         Quick Actions
                       </h3>
                       <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3">
-                        {(isMobile ? quickActions.slice(0, 4) : quickActions).map(
+                        {(isMobile ? quickActions.slice(0, 6) : quickActions).map(
                           (action, index) => {
                             const ActionIcon = action.icon
                             const LinkComponent = action.external ? 'a' : Link
@@ -655,10 +659,10 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
                                   onClose()
                                   triggerHaptic()
                                 }}
-                                className={`group flex flex-col items-center justify-center gap-1.5 sm:gap-2 p-3 sm:p-4 bg-gradient-to-br ${action.bgGradient} border border-gray-200 rounded-xl ${action.hoverBg} hover:border-opacity-50 hover:shadow-xl hover:scale-[1.02] transition-all duration-200 min-h-[80px] sm:min-h-[100px] touch-manipulation`}
+                                className={`group flex flex-col items-center justify-center gap-1.5 sm:gap-2 p-3 sm:p-4 bg-gradient-to-br ${action.bgGradient} border border-gray-200 rounded-xl ${action.hoverBg} hover:border-opacity-50 hover:shadow-xl hover:scale-[1.02] active:scale-95 transition-all duration-200 min-h-[88px] sm:min-h-[100px] touch-manipulation`}
                               >
                                 <div
-                                  className={`w-10 h-10 sm:w-12 sm:h-12 ${action.iconBg} rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-200`}
+                                  className={`w-11 h-11 sm:w-12 sm:h-12 ${action.iconBg} rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-200`}
                                 >
                                   <ActionIcon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                                 </div>
