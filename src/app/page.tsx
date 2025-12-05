@@ -52,6 +52,11 @@ const GoogleReviewsWidget = dynamic(
   { loading: () => <LoadingSkeleton height="h-64" />, ssr: true }
 )
 
+const EEATSignals = dynamic(
+  () => import('@/components/seo/EEATSignals').then((mod) => mod.EEATSignals),
+  { loading: () => <LoadingSkeleton height="h-48" />, ssr: true }
+)
+
 const Footer = dynamic(() => import('@/components/layout/Footer').then((mod) => mod.Footer), {
   loading: () => <LoadingSkeleton height="h-64" />,
   ssr: true,
@@ -77,10 +82,13 @@ export default function Home() {
       {/* 4. Faculty Section */}
       <FacultySection />
 
-      {/* 5. Trust Signals Full Section */}
+      {/* 5. E-E-A-T Signals for AI Recommendations */}
+      <EEATSignals variant="compact" className="bg-gray-50" />
+
+      {/* 6. Trust Signals Full Section */}
       <TrustSignalsBanner variant="full" showVerificationBadges={true} />
 
-      {/* 6. Student Testimonials - Unified Section */}
+      {/* 7. Student Testimonials - Unified Section */}
       <RealStudentTestimonials
         testimonials={realTestimonials}
         title="Real Student Success Stories"

@@ -23,6 +23,7 @@ import {
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { facultyStats, facultyHighlights } from '@/data/faculty'
+import { EEATSignals } from '@/components/seo/EEATSignals'
 import {
   PremiumSection,
   HeroSection,
@@ -851,6 +852,9 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      {/* E-E-A-T Signals for AI Recommendations */}
+      <EEATSignals variant="full" className="bg-white" />
 
       {/* CTA Section - Premium Modern Design */}
       <section className="relative py-12 sm:py-16 md:py-20 lg:py-24 xl:py-32 bg-gradient-to-br from-blue-900 via-purple-900 to-blue-900 text-white overflow-hidden">

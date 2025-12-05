@@ -4,6 +4,7 @@ import Script from 'next/script'
 import { StructuredData } from '@/components/seo/StructuredData'
 import { PageErrorBoundary } from '@/components/ErrorBoundary'
 import GoogleAnalytics from '@/components/analytics/GoogleAnalytics'
+import { WebVitalsReporter } from '@/components/analytics/WebVitalsReporter'
 import Header from '@/components/layout/Header'
 import { MobileNavigation } from '@/components/navigation/MobileNavigation'
 import { Footer } from '@/components/layout/Footer'
@@ -147,6 +148,7 @@ export default function RootLayout({
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <GoogleAnalytics />
+        <WebVitalsReporter />
         <PWAProvider />
         <FocusVisibleStyles />
         <I18nProvider>
