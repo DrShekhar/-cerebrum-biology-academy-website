@@ -1,0 +1,73 @@
+/**
+ * Centralized Contact Information
+ * Single source of truth for all phone numbers, emails, and contact details
+ *
+ * IMPORTANT: Update this file when contact information changes.
+ * All pages should import from here rather than hardcoding contact details.
+ */
+
+export const CONTACT_INFO = {
+  // Primary phone number (for tel: links)
+  phone: {
+    primary: '+918826444334',
+    secondary: '+919311946297',
+    // Formatted versions for display
+    display: {
+      primary: '+91 88264 44334',
+      secondary: '+91 93119 46297',
+    },
+    // With dashes for some layouts
+    formatted: {
+      primary: '+91-88264-44334',
+      secondary: '+91-93119-46297',
+    },
+  },
+
+  // WhatsApp - typically uses primary phone
+  whatsapp: {
+    number: '918826444334', // Without + prefix for wa.me links
+    link: 'https://wa.me/918826444334',
+    linkWithMessage: (message: string) =>
+      `https://wa.me/918826444334?text=${encodeURIComponent(message)}`,
+  },
+
+  // Email addresses
+  email: {
+    support: 'support@cerebrumbiologyacademy.com',
+    admissions: 'admissions@cerebrumbiologyacademy.com',
+    info: 'info@cerebrumbiologyacademy.com',
+  },
+
+  // Business information
+  business: {
+    name: 'Cerebrum Biology Academy',
+    shortName: 'Cerebrum',
+    tagline: '#1 NEET Biology Coaching',
+    foundingYear: 2014,
+    website: 'https://cerebrumbiologyacademy.com',
+  },
+
+  // Social media
+  social: {
+    instagram: 'https://instagram.com/cerebrumbiologyacademy',
+    youtube: 'https://youtube.com/@cerebrumbiologyacademy',
+    facebook: 'https://facebook.com/cerebrumbiologyacademy',
+    twitter: 'https://twitter.com/cerebrumbiology',
+  },
+} as const
+
+// Helper functions for common use cases
+export const getPhoneLink = (phone: 'primary' | 'secondary' = 'primary') =>
+  `tel:${CONTACT_INFO.phone[phone]}`
+
+export const getWhatsAppLink = (message?: string) =>
+  message ? CONTACT_INFO.whatsapp.linkWithMessage(message) : CONTACT_INFO.whatsapp.link
+
+export const getDisplayPhone = (phone: 'primary' | 'secondary' = 'primary') =>
+  CONTACT_INFO.phone.display[phone]
+
+export const getFormattedPhone = (phone: 'primary' | 'secondary' = 'primary') =>
+  CONTACT_INFO.phone.formatted[phone]
+
+// Default export for convenience
+export default CONTACT_INFO
