@@ -1,11 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
-import {
-  SessionManager,
-  CookieManager,
-  addSecurityHeaders,
-  TokenUtils
-} from '@/lib/auth/config'
+import { SessionManager, CookieManager, addSecurityHeaders, TokenUtils } from '@/lib/auth/config'
 
 /**
  * POST /api/auth/refresh
@@ -14,14 +9,20 @@ import {
 export async function POST(request: NextRequest) {
   try {
     // Get refresh token from cookies or body
-    const refreshToken = request.cookies.get('refresh-token')?.value ||
-                        (await request.json().catch(() => ({})))?.refreshToken
+    const refreshToken =
+      request.cookies.get('refresh-token')?.value ||
+      (await request.json().catch(() => ({})))?.refreshToken
 
     if (!refreshToken) {
-      return addSecurityHeaders(NextResponse.json({
-        error: 'Refresh token required',
-        message: 'No refresh token provided'
-      }, { status: 401 }))
+      return addSecurityHeaders(
+        NextResponse.json(
+          {
+            error: 'Refresh token required',
+            message: 'No refresh token provided',
+          },
+          { status: 401 }
+        )
+      )
     }
 
     // Refresh the session
@@ -29,10 +30,13 @@ export async function POST(request: NextRequest) {
 
     if (!refreshResult) {
       // Clear invalid cookies
-      const response = NextResponse.json({
-        error: 'Invalid refresh token',
-        message: 'Session has expired. Please sign in again.'
-      }, { status: 401 })
+      const response = NextResponse.json(
+        {
+          error: 'Invalid refresh token',
+          message: 'Session has expired. Please sign in again.',
+        },
+        { status: 401 }
+      )
 
       CookieManager.clearAuthCookies(response)
       return addSecurityHeaders(response)
@@ -43,10 +47,15 @@ export async function POST(request: NextRequest) {
     // Get user info for response
     const payload = TokenUtils.verifyAccessToken(accessToken)
     if (!payload) {
-      return addSecurityHeaders(NextResponse.json({
-        error: 'Token generation failed',
-        message: 'Failed to generate valid access token'
-      }, { status: 500 }))
+      return addSecurityHeaders(
+        NextResponse.json(
+          {
+            error: 'Token generation failed',
+            message: 'Failed to generate valid access token',
+          },
+          { status: 500 }
+        )
+      )
     }
 
     // Get fresh user data
@@ -59,15 +68,20 @@ export async function POST(request: NextRequest) {
         role: true,
         emailVerified: true,
         profile: true,
-        lastActiveAt: true
-      }
+        lastActiveAt: true,
+      },
     })
 
     if (!user) {
-      return addSecurityHeaders(NextResponse.json({
-        error: 'User not found',
-        message: 'Associated user account no longer exists'
-      }, { status: 404 }))
+      return addSecurityHeaders(
+        NextResponse.json(
+          {
+            error: 'User not found',
+            message: 'Associated user account no longer exists',
+          },
+          { status: 404 }
+        )
+      )
     }
 
     // Create response with new tokens
@@ -76,7 +90,7 @@ export async function POST(request: NextRequest) {
       message: 'Tokens refreshed successfully',
       user,
       accessToken,
-      expiresIn: 15 * 60 // 15 minutes in seconds
+      expiresIn: 15 * 60, // 15 minutes in seconds
     })
 
     // Set new cookies
@@ -91,13 +105,12 @@ export async function POST(request: NextRequest) {
           eventName: 'token_refreshed',
           properties: {
             method: 'refresh_token',
-            sessionId: payload.sessionId
+            sessionId: payload.sessionId,
           },
-          ipAddress: request.headers.get('x-forwarded-for') ||
-                    request.headers.get('x-real-ip') ||
-                    'unknown',
-          userAgent: request.headers.get('user-agent')
-        }
+          ipAddress:
+            request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip') || 'unknown',
+          userAgent: request.headers.get('user-agent'),
+        },
       })
     } catch (analyticsError) {
       // Don't fail refresh if analytics fails
@@ -106,15 +119,17 @@ export async function POST(request: NextRequest) {
 
     // Add security headers
     return addSecurityHeaders(response)
-
   } catch (error) {
     console.error('Token refresh error:', error)
 
     // Clear potentially corrupted cookies
-    const response = NextResponse.json({
-      error: 'Token refresh failed',
-      message: 'Failed to refresh authentication tokens. Please sign in again.'
-    }, { status: 500 })
+    const response = NextResponse.json(
+      {
+        error: 'Token refresh failed',
+        message: 'Failed to refresh authentication tokens. Please sign in again.',
+      },
+      { status: 500 }
+    )
 
     CookieManager.clearAuthCookies(response)
     return addSecurityHeaders(response)
@@ -130,19 +145,23 @@ export async function GET(request: NextRequest) {
     const refreshToken = request.cookies.get('refresh-token')?.value
 
     if (!refreshToken) {
-      return addSecurityHeaders(NextResponse.json({
-        valid: false,
-        message: 'No refresh token found'
-      }))
+      return addSecurityHeaders(
+        NextResponse.json({
+          valid: false,
+          message: 'No refresh token found',
+        })
+      )
     }
 
     // Verify refresh token without creating new tokens
     const payload = TokenUtils.verifyRefreshToken(refreshToken)
     if (!payload) {
-      return addSecurityHeaders(NextResponse.json({
-        valid: false,
-        message: 'Refresh token is invalid or expired'
-      }))
+      return addSecurityHeaders(
+        NextResponse.json({
+          valid: false,
+          message: 'Refresh token is invalid or expired',
+        })
+      )
     }
 
     // Check if session exists in database
@@ -150,7 +169,7 @@ export async function GET(request: NextRequest) {
       where: {
         sessionToken: payload.sessionId,
         userId: payload.userId,
-        expires: { gt: new Date() }
+        expires: { gt: new Date() },
       },
       include: {
         user: {
@@ -160,43 +179,59 @@ export async function GET(request: NextRequest) {
             name: true,
             role: true,
             emailVerified: true,
-            lastActiveAt: true
-          }
-        }
-      }
+            lastActiveAt: true,
+          },
+        },
+      },
     })
 
     if (!session || !session.user) {
-      return addSecurityHeaders(NextResponse.json({
-        valid: false,
-        message: 'Session not found or expired'
-      }))
+      return addSecurityHeaders(
+        NextResponse.json({
+          valid: false,
+          message: 'Session not found or expired',
+        })
+      )
     }
 
-    return addSecurityHeaders(NextResponse.json({
-      valid: true,
-      message: 'Refresh token is valid',
-      user: session.user,
-      expiresAt: session.expires
-    }))
-
+    return addSecurityHeaders(
+      NextResponse.json({
+        valid: true,
+        message: 'Refresh token is valid',
+        user: session.user,
+        expiresAt: session.expires,
+      })
+    )
   } catch (error) {
     console.error('Refresh token validation error:', error)
-    return addSecurityHeaders(NextResponse.json({
-      valid: false,
-      message: 'Failed to validate refresh token'
-    }))
+    return addSecurityHeaders(
+      NextResponse.json({
+        valid: false,
+        message: 'Failed to validate refresh token',
+      })
+    )
   }
 }
 
 // OPTIONS for CORS preflight
 export async function OPTIONS(request: NextRequest) {
-  return addSecurityHeaders(new NextResponse(null, {
-    status: 200,
-    headers: {
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
-      'Access-Control-Allow-Headers': 'Content-Type, Authorization',
-    },
-  }))
+  const origin = request.headers.get('origin') || ''
+  const allowedOrigins = [
+    'https://cerebrumbiologyacademy.com',
+    'https://www.cerebrumbiologyacademy.com',
+    ...(process.env.NODE_ENV === 'development' ? ['http://localhost:3000'] : []),
+  ]
+  const corsOrigin = allowedOrigins.includes(origin) ? origin : allowedOrigins[0]
+
+  return addSecurityHeaders(
+    new NextResponse(null, {
+      status: 200,
+      headers: {
+        'Access-Control-Allow-Origin': corsOrigin,
+        'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+        'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+        'Access-Control-Allow-Credentials': 'true',
+      },
+    })
+  )
 }

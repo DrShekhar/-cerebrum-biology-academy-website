@@ -339,6 +339,14 @@ export async function GET(request: NextRequest) {
     const selectedDate = new Date(date)
     const availableSlots = await zoomService.getAvailableSlots(selectedDate)
 
+    const origin = request.headers.get('origin') || ''
+    const allowedOrigins = [
+      'https://cerebrumbiologyacademy.com',
+      'https://www.cerebrumbiologyacademy.com',
+      ...(process.env.NODE_ENV === 'development' ? ['http://localhost:3000'] : []),
+    ]
+    const corsOrigin = allowedOrigins.includes(origin) ? origin : allowedOrigins[0]
+
     return NextResponse.json(
       {
         success: true,
@@ -347,9 +355,10 @@ export async function GET(request: NextRequest) {
       },
       {
         headers: {
-          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Origin': corsOrigin,
           'Access-Control-Allow-Methods': 'GET, OPTIONS',
           'Access-Control-Allow-Headers': 'Content-Type',
+          'Access-Control-Allow-Credentials': 'true',
         },
       }
     )

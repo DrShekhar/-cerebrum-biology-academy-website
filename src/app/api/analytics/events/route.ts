@@ -17,12 +17,10 @@ export async function GET(request: NextRequest) {
             const data = {
               ...liveData,
               dashboard: dashboardStats,
-              timestamp: new Date().toISOString()
+              timestamp: new Date().toISOString(),
             }
 
-            controller.enqueue(
-              encoder.encode(`data: ${JSON.stringify(data)}\n\n`)
-            )
+            controller.enqueue(encoder.encode(`data: ${JSON.stringify(data)}\n\n`))
           } catch (error) {
             console.error('Error sending SSE data:', error)
           }
@@ -34,10 +32,12 @@ export async function GET(request: NextRequest) {
         // Subscribe to real-time updates
         const unsubscribe = realTimeAnalytics.subscribe((data) => {
           controller.enqueue(
-            encoder.encode(`data: ${JSON.stringify({
-              ...data,
-              timestamp: new Date().toISOString()
-            })}\n\n`)
+            encoder.encode(
+              `data: ${JSON.stringify({
+                ...data,
+                timestamp: new Date().toISOString(),
+              })}\n\n`
+            )
           )
         })
 
@@ -56,19 +56,27 @@ export async function GET(request: NextRequest) {
 
         // Handle client disconnect
         request.signal.addEventListener('abort', cleanup)
-      }
+      },
     })
+
+    const origin = request.headers.get('origin') || ''
+    const allowedOrigins = [
+      'https://cerebrumbiologyacademy.com',
+      'https://www.cerebrumbiologyacademy.com',
+      ...(process.env.NODE_ENV === 'development' ? ['http://localhost:3000'] : []),
+    ]
+    const corsOrigin = allowedOrigins.includes(origin) ? origin : allowedOrigins[0]
 
     return new Response(customReadable, {
       headers: {
         'Content-Type': 'text/event-stream',
         'Cache-Control': 'no-cache',
-        'Connection': 'keep-alive',
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Headers': 'Cache-Control'
-      }
+        Connection: 'keep-alive',
+        'Access-Control-Allow-Origin': corsOrigin,
+        'Access-Control-Allow-Headers': 'Cache-Control',
+        'Access-Control-Allow-Credentials': 'true',
+      },
     })
-
   } catch (error) {
     console.error('Error setting up SSE:', error)
     return new Response('Internal Server Error', { status: 500 })

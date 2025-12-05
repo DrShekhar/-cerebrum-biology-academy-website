@@ -99,13 +99,22 @@ export async function GET(request: NextRequest) {
     },
   })
 
+  const origin = request.headers.get('origin') || ''
+  const allowedOrigins = [
+    'https://cerebrumbiologyacademy.com',
+    'https://www.cerebrumbiologyacademy.com',
+    ...(process.env.NODE_ENV === 'development' ? ['http://localhost:3000'] : []),
+  ]
+  const corsOrigin = allowedOrigins.includes(origin) ? origin : allowedOrigins[0]
+
   return new Response(stream, {
     headers: {
       'Content-Type': 'text/event-stream',
       'Cache-Control': 'no-cache',
       Connection: 'keep-alive',
-      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Origin': corsOrigin,
       'Access-Control-Allow-Headers': 'Cache-Control',
+      'Access-Control-Allow-Credentials': 'true',
     },
   })
 }
