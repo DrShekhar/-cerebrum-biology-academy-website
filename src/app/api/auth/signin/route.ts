@@ -165,13 +165,23 @@ export async function GET() {
 
 // OPTIONS for CORS preflight
 export async function OPTIONS(request: NextRequest) {
+  const origin = request.headers.get('origin') || ''
+  const allowedOrigins = [
+    'https://cerebrumbiologyacademy.com',
+    'https://www.cerebrumbiologyacademy.com',
+    process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : '',
+  ].filter(Boolean)
+
+  const corsOrigin = allowedOrigins.includes(origin) ? origin : allowedOrigins[0]
+
   return addSecurityHeaders(
     new NextResponse(null, {
       status: 200,
       headers: {
-        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Origin': corsOrigin,
         'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
         'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+        'Access-Control-Allow-Credentials': 'true',
       },
     })
   )

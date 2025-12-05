@@ -622,6 +622,23 @@ export const authOptions = {
 }
 
 /**
+ * Allowed CORS origins for the application
+ */
+export const ALLOWED_ORIGINS = [
+  'https://cerebrumbiologyacademy.com',
+  'https://www.cerebrumbiologyacademy.com',
+  ...(process.env.NODE_ENV === 'development' ? ['http://localhost:3000'] : []),
+]
+
+/**
+ * Get safe CORS origin from request
+ */
+export function getCorsOrigin(request: NextRequest): string {
+  const origin = request.headers.get('origin') || ''
+  return ALLOWED_ORIGINS.includes(origin) ? origin : ALLOWED_ORIGINS[0]
+}
+
+/**
  * Security headers for authentication responses
  */
 export function addSecurityHeaders(response: NextResponse): NextResponse {

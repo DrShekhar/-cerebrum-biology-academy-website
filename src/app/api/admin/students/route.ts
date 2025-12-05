@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 import prisma from '@/lib/prisma'
+import { requireAdminAuth } from '@/lib/auth'
 
 const addStudentSchema = z.object({
   studentName: z.string().min(2, 'Name must be at least 2 characters').max(100),
@@ -48,6 +49,9 @@ const updateStudentSchema = z.object({
 
 export async function POST(request: NextRequest) {
   try {
+    // Verify admin authentication
+    await requireAdminAuth()
+
     const body = await request.json()
 
     // Validate request body
@@ -148,6 +152,9 @@ export async function POST(request: NextRequest) {
 
 export async function PUT(request: NextRequest) {
   try {
+    // Verify admin authentication
+    await requireAdminAuth()
+
     const body = await request.json()
 
     // Validate request body
