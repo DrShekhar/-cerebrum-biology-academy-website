@@ -15,8 +15,10 @@ import {
   Youtube,
 } from 'lucide-react'
 import { motion } from 'framer-motion'
+import { useI18n } from '@/contexts/I18nContext'
 
 export function TestimonialsSection() {
+  const { t } = useI18n()
   const [currentTestimonial, setCurrentTestimonial] = useState(0)
   const [showVideoModal, setShowVideoModal] = useState(false)
   const [selectedVideo, setSelectedVideo] = useState('')
@@ -52,17 +54,14 @@ export function TestimonialsSection() {
         >
           <div className="inline-flex items-center bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
             <Award className="w-4 h-4 mr-2" />
-            Student Success Stories
+            {t('studentSuccessStories')}
           </div>
 
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Hear From Our <span className="text-blue-600">NEET Achievers</span>
+            {t('hearFromAchievers')}
           </h2>
 
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Real stories from students who transformed their dreams into reality. From struggling
-            with basics to cracking NEET with flying colors.
-          </p>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">{t('realStoriesDescription')}</p>
         </motion.div>
 
         {/* Success Statistics */}
@@ -174,7 +173,7 @@ export function TestimonialsSection() {
                       onClick={() => openVideoModal(testimonials[currentTestimonial].videoId!)}
                     >
                       <Play className="w-4 h-4 mr-2" />
-                      Watch Video
+                      {t('watchVideo')}
                     </Button>
                   )}
                 </div>
@@ -220,7 +219,7 @@ export function TestimonialsSection() {
           viewport={{ once: true }}
         >
           <h3 className="text-3xl font-bold text-center text-gray-900 mb-8">
-            Video Success Stories
+            {t('videoSuccessStories')}
           </h3>
 
           <div className="grid md:grid-cols-3 gap-6 mb-12">
@@ -282,24 +281,22 @@ export function TestimonialsSection() {
           transition={{ duration: 0.6, delay: 0.8 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-3xl font-bold mb-4">Ready to Write Your Success Story?</h3>
-          <p className="text-xl mb-8 opacity-90">
-            Join thousands of students who achieved their NEET dreams with our proven methodology
-          </p>
+          <h3 className="text-3xl font-bold mb-4">{t('readyToWriteStory')}</h3>
+          <p className="text-xl mb-8 opacity-90">{t('joinThousands')}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               variant="secondary"
               size="xl"
               className="bg-white text-blue-600 hover:bg-gray-100"
             >
-              Start Your Journey
+              {t('startYourJourney')}
             </Button>
             <Button
               variant="outline"
               size="xl"
               className="border-white text-white hover:bg-white hover:text-blue-600"
             >
-              Watch More Stories
+              {t('watchMoreStories')}
             </Button>
           </div>
         </motion.div>

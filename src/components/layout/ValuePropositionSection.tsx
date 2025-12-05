@@ -12,8 +12,10 @@ import {
   Trophy,
 } from 'lucide-react'
 import Link from 'next/link'
+import { useI18n } from '@/contexts/I18nContext'
 
 export function ValuePropositionSection() {
+  const { t } = useI18n()
   const successFramework = [
     {
       step: '01',
@@ -98,12 +100,9 @@ export function ValuePropositionSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            The <span className="text-blue-600">NEET Success Framework</span> That Works
+            {t('neetSuccessFramework')}
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Our scientifically-proven 3-step methodology has helped 2,847+ students transform their
-            NEET Biology scores and secure admissions in top medical colleges across India.
-          </p>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">{t('frameworkDescription')}</p>
         </motion.div>
 
         {/* Success Framework Steps */}
@@ -168,11 +167,9 @@ export function ValuePropositionSection() {
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Why Choose Our Academy Over Traditional Coaching?
+              {t('whyChooseOverTraditional')}
             </h3>
-            <p className="text-lg text-gray-600">
-              See the dramatic difference our methodology makes compared to conventional approaches
-            </p>
+            <p className="text-lg text-gray-600">{t('seeDramaticDifference')}</p>
           </div>
 
           <div className="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden">
@@ -220,12 +217,8 @@ export function ValuePropositionSection() {
           className="mb-12"
         >
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Our Commitment to Your Success
-            </h3>
-            <p className="text-lg text-gray-600">
-              We're so confident in our methodology, we guarantee your success
-            </p>
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">{t('ourCommitment')}</h3>
+            <p className="text-lg text-gray-600">{t('confidentInMethodology')}</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -260,16 +253,14 @@ export function ValuePropositionSection() {
         >
           <div className="bg-navy-900 rounded-2xl p-8 text-white">
             <h3 className="text-2xl md:text-3xl font-bold mb-4">
-              Ready to Experience the Difference?
+              {t('readyExperienceDifference')}
             </h3>
-            <p className="text-blue-100 mb-6 text-lg">
-              Join 2,847+ students who transformed their NEET preparation with our proven framework
-            </p>
+            <p className="text-blue-100 mb-6 text-lg">{t('joinThousands')}</p>
             <Link
               href="/demo-booking"
               className="inline-block bg-teal-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-teal-700 transition-all duration-300 transform hover:-translate-y-1 shadow-lg"
             >
-              Book Your Free Strategy Session
+              {t('bookFreeStrategy')}
             </Link>
           </div>
         </motion.div>

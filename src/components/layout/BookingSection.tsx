@@ -4,8 +4,10 @@ import { BookingForm } from '@/components/forms/BookingForm'
 import { ContactForm } from '@/types'
 import { Phone, Calendar, MessageSquare, MapPin, Clock, Shield, Award, Users } from 'lucide-react'
 import { motion } from 'framer-motion'
+import { useI18n } from '@/contexts/I18nContext'
 
 export function BookingSection() {
+  const { t } = useI18n()
   const handleFormSubmit = (data: ContactForm) => {
     console.log('Booking form submitted:', data)
     // Here you would integrate with your backend API
@@ -75,17 +77,14 @@ export function BookingSection() {
         >
           <div className="inline-flex items-center bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
             <Calendar className="w-4 h-4 mr-2" />
-            Get Started Today
+            {t('getStartedToday')}
           </div>
 
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Ready to Begin Your <span className="text-blue-600">NEET Journey?</span>
+            {t('readyToBeginJourney')}
           </h2>
 
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Take the first step towards your medical career. Book a free demo class, request a
-            callback, or visit our academy to learn more about our programs.
-          </p>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">{t('takeFirstStep')}</p>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
@@ -103,9 +102,7 @@ export function BookingSection() {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                Why Choose Cerebrum Biology Academy?
-              </h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">{t('whyChooseCerebrum')}</h3>
 
               <div className="grid gap-4">
                 {features.map((feature, index) => (
@@ -136,7 +133,7 @@ export function BookingSection() {
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Other Ways to Reach Us</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">{t('otherWaysToReach')}</h3>
 
               <div className="space-y-4">
                 {contactMethods.map((method, index) => (
@@ -179,23 +176,23 @@ export function BookingSection() {
               transition={{ duration: 0.6, delay: 0.6 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-xl font-bold mb-4">Join Our Success Story</h3>
+              <h3 className="text-xl font-bold mb-4">{t('joinOurSuccess')}</h3>
               <div className="grid grid-cols-2 gap-4">
                 <div className="text-center">
                   <div className="text-3xl font-bold mb-1">2000+</div>
-                  <div className="text-sm opacity-90">Students Enrolled</div>
+                  <div className="text-sm opacity-90">{t('studentsEnrolled')}</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold mb-1">98%</div>
-                  <div className="text-sm opacity-90">Success Rate</div>
+                  <div className="text-sm opacity-90">{t('successRate')}</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold mb-1">500+</div>
-                  <div className="text-sm opacity-90">Expert Faculty</div>
+                  <div className="text-sm opacity-90">{t('expertFaculty')}</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold mb-1">5+</div>
-                  <div className="text-sm opacity-90">Years Experience</div>
+                  <div className="text-sm opacity-90">{t('yearsExperience')}</div>
                 </div>
               </div>
             </motion.div>
@@ -212,7 +209,7 @@ export function BookingSection() {
         >
           <div className="flex items-center justify-center mb-4">
             <Clock className="w-6 h-6 text-blue-600 mr-2" />
-            <span className="font-semibold text-gray-900">Response Time</span>
+            <span className="font-semibold text-gray-900">{t('responseTime')}</span>
           </div>
           <p className="text-gray-600">
             We typically respond to inquiries within{' '}

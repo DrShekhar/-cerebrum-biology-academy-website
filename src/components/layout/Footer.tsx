@@ -252,7 +252,7 @@ export const Footer = memo(function Footer() {
             viewport={{ once: true }}
             style={{ opacity: 1 }}
           >
-            <h4 className="font-semibold text-lg mb-4 text-white">Board Preparation</h4>
+            <h4 className="font-semibold text-lg mb-4 text-white">{t('boardPreparation')}</h4>
             <ul className="space-y-2">
               {boardLinks.map((link) => (
                 <li key={link.name}>
@@ -275,7 +275,7 @@ export const Footer = memo(function Footer() {
             viewport={{ once: true }}
             style={{ opacity: 1 }}
           >
-            <h4 className="font-semibold text-lg mb-4 text-white">Services</h4>
+            <h4 className="font-semibold text-lg mb-4 text-white">{t('services')}</h4>
             <ul className="space-y-2">
               {servicesLinks.map((link) => (
                 <li key={link.name}>
@@ -298,7 +298,7 @@ export const Footer = memo(function Footer() {
             viewport={{ once: true }}
             style={{ opacity: 1 }}
           >
-            <h4 className="font-semibold text-lg mb-4 text-white">Company</h4>
+            <h4 className="font-semibold text-lg mb-4 text-white">{t('company')}</h4>
             <ul className="space-y-2 mb-6">
               {companyLinks.slice(0, 4).map((link) => (
                 <li key={link.name}>
@@ -339,10 +339,8 @@ export const Footer = memo(function Footer() {
         >
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
-              <h4 className="font-semibold text-lg mb-2 text-white">Stay Updated</h4>
-              <p className="text-gray-300 text-sm">
-                Get latest updates about NEET, board exams, and biology education tips.
-              </p>
+              <h4 className="font-semibold text-lg mb-2 text-white">{t('stayUpdated')}</h4>
+              <p className="text-gray-300 text-sm">{t('getLatestUpdates')}</p>
             </div>
 
             <form onSubmit={handleNewsletterSubscribe} className="flex flex-col sm:flex-row gap-3">
