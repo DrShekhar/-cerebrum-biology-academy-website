@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useCallback } from 'react'
+import FocusTrap from 'focus-trap-react'
 import { FeedbackSurvey, FeedbackQuestion } from '../../lib/feedback/feedbackCollection'
 
 interface FeedbackModalProps {
@@ -54,95 +55,102 @@ export function FeedbackModal({ survey, isOpen, onSubmit, onDismiss }: FeedbackM
   const progress = ((currentQuestionIndex + 1) / survey.questions.length) * 100
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center">
-      {/* Backdrop */}
-      <div className="absolute inset-0 bg-black bg-opacity-50" onClick={onDismiss} />
+    <FocusTrap>
+      <div className="fixed inset-0 z-50 flex items-center justify-center">
+        {/* Backdrop */}
+        <div className="absolute inset-0 bg-black bg-opacity-50" onClick={onDismiss} />
 
-      {/* Modal */}
-      <div
-        className={`relative bg-white rounded-lg shadow-xl max-w-md w-full mx-4 ${
-          survey.style.size === 'small'
-            ? 'max-w-sm'
-            : survey.style.size === 'large'
-              ? 'max-w-2xl'
-              : 'max-w-md'
-        }`}
-      >
-        {/* Header */}
-        <div className="px-6 py-4 border-b border-gray-200">
-          <div className="flex items-center justify-between">
-            <div>
-              <h3 className="text-lg font-semibold text-gray-900">{survey.title}</h3>
-              {survey.description && (
-                <p className="text-sm text-gray-600 mt-1">{survey.description}</p>
-              )}
+        {/* Modal */}
+        <div
+          className={`relative bg-white rounded-lg shadow-xl max-w-md w-full mx-4 ${
+            survey.style.size === 'small'
+              ? 'max-w-sm'
+              : survey.style.size === 'large'
+                ? 'max-w-2xl'
+                : 'max-w-md'
+          }`}
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="feedback-modal-title"
+        >
+          {/* Header */}
+          <div className="px-6 py-4 border-b border-gray-200">
+            <div className="flex items-center justify-between">
+              <div>
+                <h3 id="feedback-modal-title" className="text-lg font-semibold text-gray-900">
+                  {survey.title}
+                </h3>
+                {survey.description && (
+                  <p className="text-sm text-gray-600 mt-1">{survey.description}</p>
+                )}
+              </div>
+              <button
+                onClick={onDismiss}
+                className="text-gray-400 hover:text-gray-600 transition-colors"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
             </div>
-            <button
-              onClick={onDismiss}
-              className="text-gray-400 hover:text-gray-600 transition-colors"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
+
+            {/* Progress bar */}
+            <div className="mt-4">
+              <div className="flex justify-between text-xs text-gray-500 mb-1">
+                <span>
+                  Question {currentQuestionIndex + 1} of {survey.questions.length}
+                </span>
+                <span>{Math.round(progress)}% Complete</span>
+              </div>
+              <div className="w-full bg-gray-200 rounded-full h-1">
+                <div
+                  className="bg-blue-500 h-1 rounded-full transition-all duration-300"
+                  style={{ width: `${progress}%` }}
                 />
-              </svg>
-            </button>
-          </div>
-
-          {/* Progress bar */}
-          <div className="mt-4">
-            <div className="flex justify-between text-xs text-gray-500 mb-1">
-              <span>
-                Question {currentQuestionIndex + 1} of {survey.questions.length}
-              </span>
-              <span>{Math.round(progress)}% Complete</span>
-            </div>
-            <div className="w-full bg-gray-200 rounded-full h-1">
-              <div
-                className="bg-blue-500 h-1 rounded-full transition-all duration-300"
-                style={{ width: `${progress}%` }}
-              />
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* Question Content */}
-        <div className="px-6 py-6">
-          <QuestionRenderer
-            question={currentQuestion}
-            value={responses[currentQuestion.id]}
-            onChange={(value) => handleResponseChange(currentQuestion.id, value)}
-          />
-        </div>
+          {/* Question Content */}
+          <div className="px-6 py-6">
+            <QuestionRenderer
+              question={currentQuestion}
+              value={responses[currentQuestion.id]}
+              onChange={(value) => handleResponseChange(currentQuestion.id, value)}
+            />
+          </div>
 
-        {/* Footer */}
-        <div className="px-6 py-4 border-t border-gray-200 flex justify-between">
-          <button
-            onClick={handlePrevious}
-            disabled={currentQuestionIndex === 0}
-            className="px-4 py-2 text-gray-600 hover:text-gray-800 disabled:text-gray-400 disabled:cursor-not-allowed"
-          >
-            Previous
-          </button>
-
-          <div className="flex space-x-3">
-            <button onClick={onDismiss} className="px-4 py-2 text-gray-600 hover:text-gray-800">
-              Skip
-            </button>
+          {/* Footer */}
+          <div className="px-6 py-4 border-t border-gray-200 flex justify-between">
             <button
-              onClick={handleNext}
-              disabled={!canProceed || isSubmitting}
-              className="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 disabled:bg-gray-300 disabled:cursor-not-allowed"
+              onClick={handlePrevious}
+              disabled={currentQuestionIndex === 0}
+              className="px-4 py-2 text-gray-600 hover:text-gray-800 disabled:text-gray-400 disabled:cursor-not-allowed"
             >
-              {isSubmitting ? 'Submitting...' : isLastQuestion ? 'Submit' : 'Next'}
+              Previous
             </button>
+
+            <div className="flex space-x-3">
+              <button onClick={onDismiss} className="px-4 py-2 text-gray-600 hover:text-gray-800">
+                Skip
+              </button>
+              <button
+                onClick={handleNext}
+                disabled={!canProceed || isSubmitting}
+                className="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 disabled:bg-gray-300 disabled:cursor-not-allowed"
+              >
+                {isSubmitting ? 'Submitting...' : isLastQuestion ? 'Submit' : 'Next'}
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </FocusTrap>
   )
 }
 

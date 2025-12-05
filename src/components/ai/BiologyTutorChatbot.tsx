@@ -73,7 +73,7 @@ interface ChatMessage {
 }
 
 interface ChatAction {
-  type: 'practice' | 'diagram' | 'study_plan' | 'related_topic' | 'human_tutor'
+  type: 'practice' | 'diagram' | 'study_plan' | 'related_topic' | 'human_tutor' | 'link'
   label: string
   data?: any
   icon?: React.ReactNode
@@ -528,6 +528,11 @@ What would you like to explore today?`,
         case 'human_tutor':
           handleHumanTutorConnection(action.data)
           break
+        case 'link':
+          // Open external link (e.g., WhatsApp)
+          window.open(action.data, '_blank', 'noopener,noreferrer')
+          setChatState((prev) => ({ ...prev, isTyping: false }))
+          break
       }
     } catch (error) {
       const errorMessage: ChatMessage = {
@@ -712,12 +717,20 @@ What would you like to explore today?`,
   }
 
   const handleHumanTutorConnection = (data: string) => {
+    const whatsappMessage = encodeURIComponent(
+      `Hi! I need help with Biology${data ? ` - ${data}` : ''}. Can I connect with a tutor?`
+    )
     const tutorMessage: ChatMessage = {
       id: Date.now().toString(),
       type: 'bot',
-      content: `I understand you'd like to connect with a human tutor${data ? ` for ${data}` : ''}. Our expert biology tutors are available for personalized doubt-solving sessions.\n\nPlease contact our support team at:\n📱 WhatsApp: +91-XXXXXXXXXX\n📧 Email: support@cerebrumbiologyacademy.com\n\nOr I can continue helping you with your questions!`,
+      content: `I understand you'd like to connect with a human tutor${data ? ` for ${data}` : ''}. Our expert biology tutors are available for personalized doubt-solving sessions.\n\n📱 WhatsApp: +91-8826-444334\n📧 Email: support@cerebrumbiologyacademy.com\n\nOr I can continue helping you with your questions!`,
       timestamp: new Date(),
       actions: [
+        {
+          type: 'link',
+          label: '💬 Chat on WhatsApp',
+          data: `https://wa.me/918826444334?text=${whatsappMessage}`,
+        },
         {
           type: 'practice',
           label: 'Continue with AI tutor',
