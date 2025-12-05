@@ -15,9 +15,11 @@ import { TrustProvider } from '@/components/providers/TrustProvider'
 import { PersonalizationProvider } from '@/components/providers/PersonalizationProvider'
 import { SkipToContent } from '@/components/accessibility/SkipToContent'
 import { FocusVisibleStyles } from '@/components/accessibility/FocusVisibleStyles'
-import { FloatingCTA } from '@/components/common/FloatingCTA'
-import { GlobalExitIntent } from '@/components/conversion/GlobalExitIntent'
-import { ChatbotWrapper } from '@/components/chat/ChatbotWrapper'
+import {
+  FloatingCTA,
+  GlobalExitIntent,
+  ChatbotWrapper,
+} from '@/components/layout/DynamicComponents'
 import './globals.css'
 
 const geistSans = Geist({

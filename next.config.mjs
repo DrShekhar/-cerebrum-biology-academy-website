@@ -7,7 +7,7 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
-  // Webpack configuration for polyfills
+  // Webpack configuration for polyfills and bundle optimization
   webpack: (config, { isServer }) => {
     if (!isServer) {
       config.resolve.fallback = {
@@ -18,28 +18,68 @@ const nextConfig = {
         tls: false,
       }
 
-      // Production bundle optimization
+      // Production bundle optimization - split large vendor chunks
       if (process.env.NODE_ENV === 'production') {
         config.optimization = {
           ...config.optimization,
           splitChunks: {
             chunks: 'all',
+            maxInitialRequests: 25,
+            minSize: 20000,
             cacheGroups: {
               default: false,
               vendors: false,
-              vendor: {
-                name: 'vendor',
+              // React and core framework
+              framework: {
+                name: 'framework',
                 chunks: 'all',
-                test: /node_modules/,
-                priority: 20
+                test: /[\\/]node_modules[\\/](react|react-dom|scheduler|next)[\\/]/,
+                priority: 40,
+                enforce: true,
               },
+              // Animation libraries (framer-motion is large)
+              animations: {
+                name: 'animations',
+                test: /[\\/]node_modules[\\/](framer-motion|@motionone)[\\/]/,
+                chunks: 'all',
+                priority: 35,
+              },
+              // UI components (Radix, Heroicons)
+              ui: {
+                name: 'ui',
+                test: /[\\/]node_modules[\\/](@radix-ui|@heroicons|lucide-react)[\\/]/,
+                chunks: 'all',
+                priority: 30,
+              },
+              // AI/ML libraries
+              ai: {
+                name: 'ai',
+                test: /[\\/]node_modules[\\/](@anthropic-ai|openai|@google)[\\/]/,
+                chunks: 'all',
+                priority: 25,
+              },
+              // Form and validation
+              forms: {
+                name: 'forms',
+                test: /[\\/]node_modules[\\/](react-hook-form|@hookform|zod)[\\/]/,
+                chunks: 'all',
+                priority: 25,
+              },
+              // Remaining vendor code
+              lib: {
+                name: 'lib',
+                test: /[\\/]node_modules[\\/]/,
+                chunks: 'all',
+                priority: 10,
+                minChunks: 2,
+              },
+              // Common code shared across pages
               common: {
                 name: 'common',
                 minChunks: 2,
                 chunks: 'async',
-                priority: 10,
+                priority: 5,
                 reuseExistingChunk: true,
-                enforce: true
               }
             }
           }

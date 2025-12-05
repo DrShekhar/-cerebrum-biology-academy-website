@@ -8,6 +8,31 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Core Web Vitals: CLS Prevention */
+@layer base {
+  /* Prevent layout shift for images */
+  img,
+  video {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Reserve space for images with known aspect ratios */
+  img[width][height] {
+    aspect-ratio: attr(width) / attr(height);
+  }
+
+  /* Hero section reserved height to prevent CLS */
+  .hero-container {
+    min-height: 60vh;
+  }
+
+  /* Font loading CLS prevention */
+  html {
+    font-size-adjust: 0.5;
+  }
+}
+
 /* Mobile-optimized calendar styles */
 @layer components {
   .rdp-mobile-optimized {
