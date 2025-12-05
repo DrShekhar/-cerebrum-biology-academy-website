@@ -138,7 +138,13 @@ export async function GET(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url)
     const dashboardType =
-      (searchParams.get('type') as 'student' | 'teacher' | 'admin' | 'general') || 'general'
+      (searchParams.get('type') as
+        | 'student'
+        | 'teacher'
+        | 'admin'
+        | 'general'
+        | 'dashboard'
+        | 'realtime') || 'general'
     const userId = searchParams.get('userId')
     const grade = searchParams.get('grade')
     const dateRange = searchParams.get('dateRange') || '30d'
