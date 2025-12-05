@@ -17,12 +17,14 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
 import { LanguageSwitcher } from '@/components/i18n/LanguageSwitcher'
+import { useI18n } from '@/contexts/I18nContext'
 
 export const Footer = memo(function Footer() {
   const currentYear = new Date().getFullYear()
   const [email, setEmail] = useState('')
   const [isSubscribing, setIsSubscribing] = useState(false)
   const [subscribeMessage, setSubscribeMessage] = useState('')
+  const { t } = useI18n()
 
   const handleNewsletterSubscribe = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -227,7 +229,7 @@ export const Footer = memo(function Footer() {
             viewport={{ once: true }}
             style={{ opacity: 1 }}
           >
-            <h4 className="font-semibold text-lg mb-4 text-white">Courses</h4>
+            <h4 className="font-semibold text-lg mb-4 text-white">{t('courses')}</h4>
             <ul className="space-y-2">
               {courseLinks.map((link) => (
                 <li key={link.name}>
@@ -310,7 +312,7 @@ export const Footer = memo(function Footer() {
               ))}
             </ul>
 
-            <h4 className="font-semibold text-lg mb-4 text-white">Support</h4>
+            <h4 className="font-semibold text-lg mb-4 text-white">{t('support')}</h4>
             <ul className="space-y-2">
               {supportLinks.slice(0, 4).map((link) => (
                 <li key={link.name}>
@@ -364,7 +366,7 @@ export const Footer = memo(function Footer() {
                 aria-label="Subscribe to newsletter"
                 disabled={isSubscribing}
               >
-                {isSubscribing ? 'Subscribing...' : 'Subscribe'}
+                {isSubscribing ? '...' : t('subscribe')}
                 <Send className="w-4 h-4 ml-2" aria-hidden="true" />
               </Button>
             </form>
@@ -434,7 +436,7 @@ export const Footer = memo(function Footer() {
 
           {/* Language Switcher */}
           <div className="mt-6 pt-4 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="text-gray-400 text-sm">Choose your language:</div>
+            <div className="text-gray-400 text-sm">{t('chooseLanguage')}:</div>
             <LanguageSwitcher variant="footer" />
           </div>
         </div>

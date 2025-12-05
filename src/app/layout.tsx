@@ -9,6 +9,7 @@ import { MobileNavigation } from '@/components/navigation/MobileNavigation'
 import { Footer } from '@/components/layout/Footer'
 import { PWAProvider } from '@/components/pwa/PWAProvider'
 import { AuthProvider } from '@/contexts/AuthContext'
+import { I18nProvider } from '@/contexts/I18nContext'
 import { ToastProvider } from '@/components/ui/Toast'
 import { TrialBannerWrapper } from '@/components/trial/TrialBannerWrapper'
 import { TrustProvider } from '@/components/providers/TrustProvider'
@@ -148,37 +149,39 @@ export default function RootLayout({
         <GoogleAnalytics />
         <PWAProvider />
         <FocusVisibleStyles />
-        <AuthProvider>
-          <ToastProvider>
-            <TrustProvider
-              enableSocialProof={false}
-              enableTrustBadges={false}
-              enableRealTimeUpdates={false}
-            >
-              <PersonalizationProvider>
-                <PageErrorBoundary>
-                  <SkipToContent />
-                  <div data-section="navigation" className="priority-immediate" role="banner">
-                    <Header />
-                  </div>
-                  <TrialBannerWrapper />
-                  <main id="main-content" role="main" className="min-h-screen pb-16 md:pb-0">
-                    {children}
-                  </main>
-                  <div data-lazy="footer" className="priority-lazy" role="contentinfo">
-                    <Footer />
-                  </div>
-                  <div data-section="mobile-navigation" className="priority-immediate">
-                    <MobileNavigation />
-                  </div>
-                  <FloatingCTA />
-                  <GlobalExitIntent />
-                  <ChatbotWrapper />
-                </PageErrorBoundary>
-              </PersonalizationProvider>
-            </TrustProvider>
-          </ToastProvider>
-        </AuthProvider>
+        <I18nProvider>
+          <AuthProvider>
+            <ToastProvider>
+              <TrustProvider
+                enableSocialProof={false}
+                enableTrustBadges={false}
+                enableRealTimeUpdates={false}
+              >
+                <PersonalizationProvider>
+                  <PageErrorBoundary>
+                    <SkipToContent />
+                    <div data-section="navigation" className="priority-immediate" role="banner">
+                      <Header />
+                    </div>
+                    <TrialBannerWrapper />
+                    <main id="main-content" role="main" className="min-h-screen pb-16 md:pb-0">
+                      {children}
+                    </main>
+                    <div data-lazy="footer" className="priority-lazy" role="contentinfo">
+                      <Footer />
+                    </div>
+                    <div data-section="mobile-navigation" className="priority-immediate">
+                      <MobileNavigation />
+                    </div>
+                    <FloatingCTA />
+                    <GlobalExitIntent />
+                    <ChatbotWrapper />
+                  </PageErrorBoundary>
+                </PersonalizationProvider>
+              </TrustProvider>
+            </ToastProvider>
+          </AuthProvider>
+        </I18nProvider>
         {/* Razorpay script moved to payment-specific layouts for better performance */}
       </body>
     </html>

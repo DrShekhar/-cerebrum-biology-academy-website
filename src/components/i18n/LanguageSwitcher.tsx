@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react'
 import { Globe, Check, ChevronDown } from 'lucide-react'
-import { Language, saveLanguagePreference, detectLanguage } from '@/lib/i18n/translations'
+import { useI18n, Language, languageNames } from '@/contexts/I18nContext'
 
 interface LanguageOption {
   code: Language
@@ -25,12 +25,8 @@ interface LanguageSwitcherProps {
 
 export function LanguageSwitcher({ variant = 'default', onLanguageChange }: LanguageSwitcherProps) {
   const [isOpen, setIsOpen] = useState(false)
-  const [currentLanguage, setCurrentLanguage] = useState<Language>('en')
+  const { language: currentLanguage, setLanguage } = useI18n()
   const dropdownRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    setCurrentLanguage(detectLanguage())
-  }, [])
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -44,11 +40,9 @@ export function LanguageSwitcher({ variant = 'default', onLanguageChange }: Lang
   }, [])
 
   const handleLanguageSelect = (language: Language) => {
-    setCurrentLanguage(language)
-    saveLanguagePreference(language)
+    setLanguage(language)
     setIsOpen(false)
     onLanguageChange?.(language)
-    window.location.reload()
   }
 
   const currentLang = languages.find((l) => l.code === currentLanguage) || languages[0]

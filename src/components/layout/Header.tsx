@@ -27,6 +27,7 @@ import { BurgerMenu } from '@/components/navigation/BurgerMenu'
 import { SearchMenu } from '@/components/navigation/SearchMenu'
 import Image from 'next/image'
 import { useAuth } from '@/hooks/useAuth'
+import { useI18n } from '@/contexts/I18nContext'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -35,6 +36,7 @@ const Header = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false)
   const pathname = usePathname()
   const { user, isAuthenticated } = useAuth()
+  const { t } = useI18n()
 
   // Close mobile menu when route changes
   useEffect(() => {
@@ -48,20 +50,20 @@ const Header = () => {
     () => [
       {
         href: '/results',
-        label: 'Results',
+        labelKey: 'results' as const,
         icon: Trophy,
         badge: '98%',
         priority: 1,
       },
       {
         href: '/courses',
-        label: 'Courses',
+        labelKey: 'courses' as const,
         icon: GraduationCap,
         priority: 2,
       },
       {
         href: '/faculty',
-        label: 'Faculty',
+        labelKey: 'faculty' as const,
         icon: Users,
         priority: 3,
       },
@@ -71,7 +73,7 @@ const Header = () => {
 
   const primaryCTA = useMemo(
     () => ({
-      label: 'Enroll Now',
+      labelKey: 'enrollNow' as const,
       href: '/admissions',
       variant: 'primary',
       icon: ArrowRight,
@@ -169,7 +171,7 @@ const Header = () => {
                     }`}
                   >
                     {item.icon && <item.icon className="w-5 h-5" />}
-                    <span>{item.label}</span>
+                    <span>{t(item.labelKey)}</span>
                   </Link>
                 ) : (
                   <Link
@@ -182,7 +184,7 @@ const Header = () => {
                     aria-current={isActive(item.href!) ? 'page' : undefined}
                   >
                     {item.icon && <item.icon className="w-5 h-5" aria-hidden="true" />}
-                    <span>{item.label}</span>
+                    <span>{t(item.labelKey)}</span>
                     {item.badge && (
                       <span
                         className="bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-sm"
@@ -241,7 +243,7 @@ const Header = () => {
                     className="flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 border-2 border-green-600 text-green-600 hover:bg-green-50 hover:border-green-700 hover:text-green-700 hover:shadow-md whitespace-nowrap group"
                   >
                     <Play className="w-4 h-4 transition-transform group-hover:scale-110" />
-                    <span>Free Demo</span>
+                    <span>{t('demoClasses')}</span>
                   </Link>
 
                   {/* Primary CTA - Enroll Now (Enhanced) */}
@@ -249,7 +251,7 @@ const Header = () => {
                     href={primaryCTA.href}
                     className="flex items-center gap-1.5 px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white shadow-lg hover:shadow-xl hover:scale-[1.02] whitespace-nowrap group"
                   >
-                    <span>Enroll Now</span>
+                    <span>{t(primaryCTA.labelKey)}</span>
                     <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                   </Link>
 
@@ -259,7 +261,7 @@ const Header = () => {
                     className="flex items-center gap-1.5 text-sm font-medium text-blue-600 hover:text-blue-800 transition-colors duration-200 group"
                   >
                     <UserPlus className="w-4 h-4 transition-transform group-hover:scale-110" />
-                    <span>Sign In</span>
+                    <span>{t('login')}</span>
                   </Link>
                 </>
               )}
@@ -290,7 +292,7 @@ const Header = () => {
                         className="flex items-center gap-2 font-semibold px-4 py-3 rounded-lg bg-orange-100 text-orange-700 hover:bg-orange-200 border border-orange-300 transition-all duration-300 min-h-[48px]"
                       >
                         {item.icon && <item.icon className="w-5 h-5" />}
-                        <span>{item.label}</span>
+                        <span>{t(item.labelKey)}</span>
                       </Link>
                     ) : (
                       <Link
@@ -302,7 +304,7 @@ const Header = () => {
                         }`}
                       >
                         {item.icon && <item.icon className="w-5 h-5" />}
-                        <span>{item.label}</span>
+                        <span>{t(item.labelKey)}</span>
                         {item.badge && (
                           <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-sm">
                             {item.badge}
@@ -348,7 +350,7 @@ const Header = () => {
                         className="flex items-center justify-center gap-2 border-2 border-green-600 text-green-600 px-6 py-4 rounded-full font-semibold hover:bg-green-50 hover:border-green-700 hover:text-green-700 transition-all duration-300 min-h-[52px]"
                       >
                         <Play className="w-5 h-5" />
-                        <span>Free Demo</span>
+                        <span>{t('demoClasses')}</span>
                       </Link>
 
                       {/* Primary CTA - Enroll Now */}
@@ -356,7 +358,7 @@ const Header = () => {
                         href={primaryCTA.href}
                         className="flex items-center justify-center gap-2 bg-gradient-to-r from-green-600 to-green-700 text-white px-6 py-4 rounded-full font-semibold hover:from-green-700 hover:to-green-800 transition-all duration-300 min-h-[52px] shadow-lg"
                       >
-                        <span>{primaryCTA.label}</span>
+                        <span>{t(primaryCTA.labelKey)}</span>
                         <ArrowRight className="w-5 h-5" />
                       </Link>
 
@@ -366,7 +368,7 @@ const Header = () => {
                         className="flex items-center justify-center gap-2 border border-gray-300 text-gray-700 hover:bg-gray-50 hover:border-gray-400 px-6 py-4 rounded-full font-medium transition-all duration-300 min-h-[52px]"
                       >
                         <UserPlus className="w-5 h-5" />
-                        <span>Sign In</span>
+                        <span>{t('login')}</span>
                       </Link>
                     </>
                   )}
