@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { useScrollLock } from '@/lib/hooks/useScrollLock'
 import { createPortal } from 'react-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
@@ -62,6 +63,9 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
 
   const dashboardInfo = getDashboardInfo()
 
+  // Use shared scroll lock to prevent race conditions with other modals
+  useScrollLock(isOpen)
+
   useEffect(() => {
     setMounted(true)
   }, [])
@@ -76,16 +80,10 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
     return () => window.removeEventListener('resize', checkMobile)
   }, [])
 
+  // Reset expanded section when menu closes
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden'
-    } else {
-      document.body.style.overflow = 'unset'
+    if (!isOpen) {
       setExpandedSection(null)
-    }
-
-    return () => {
-      document.body.style.overflow = 'unset'
     }
   }, [isOpen])
 
@@ -160,7 +158,7 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
             initial="closed"
             animate="open"
             exit="closed"
-            className="fixed inset-0 bg-black bg-opacity-50 z-[10200]"
+            className="fixed inset-0 bg-black bg-opacity-50 z-[100]"
             onClick={onClose}
             style={{ pointerEvents: 'auto' }}
           />
@@ -178,7 +176,7 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
             initial="closed"
             animate="open"
             exit="closed"
-            className="fixed left-0 top-0 h-full w-[85vw] max-w-80 bg-white shadow-2xl z-[10300] overflow-y-auto"
+            className="fixed left-0 top-0 h-full w-[85vw] max-w-80 bg-white shadow-2xl z-[101] overflow-y-auto"
           >
             {/* Header - sticky with solid background and z-index to stay above scrolling content */}
             <div className="sticky top-0 bg-white border-b border-gray-200 p-6 flex items-center justify-between pointer-events-auto z-10 shadow-sm">
@@ -368,7 +366,7 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
       {/* Burger Button - 44px minimum touch target for iOS accessibility */}
       <button
         onClick={onToggle}
-        className="flex items-center justify-center w-11 h-11 min-w-[44px] min-h-[44px] rounded-xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 group relative z-[10100] touch-manipulation"
+        className="flex items-center justify-center w-11 h-11 min-w-[44px] min-h-[44px] rounded-xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 group relative z-[60] touch-manipulation"
         aria-label="Toggle navigation menu"
         aria-expanded={isOpen}
         aria-controls="burger-menu-panel"

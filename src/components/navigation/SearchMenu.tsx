@@ -1,6 +1,8 @@
 'use client'
 
-import { useState, useEffect, useRef, useCallback } from 'react'
+import { useState, useEffect, useRef, useCallback, useMemo } from 'react'
+import { useScrollLock } from '@/lib/hooks/useScrollLock'
+import { useRouter } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   Search,
@@ -54,8 +56,13 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
   const [results, setResults] = useState<SearchResult[]>([])
   const [recentSearches, setRecentSearches] = useState<string[]>([])
   const [isLoading, setIsLoading] = useState(false)
+  const [selectedIndex, setSelectedIndex] = useState(-1) // For keyboard navigation
   const inputRef = useRef<HTMLInputElement>(null)
-  const fuse = useRef<Fuse<any> | null>(null)
+  const fuse = useRef<Fuse<(typeof searchableContent)[number]> | null>(null)
+  const router = useRouter()
+
+  // Use shared scroll lock to prevent race conditions with other modals
+  useScrollLock(isOpen)
 
   // Initialize Fuse.js
   useEffect(() => {
@@ -113,24 +120,46 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
     return () => clearTimeout(timeoutId)
   }, [query])
 
-  // Handle escape key
+  // Handle escape key and keyboard navigation
   useEffect(() => {
-    const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
-        onClose()
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (!isOpen) return
+
+      switch (e.key) {
+        case 'Escape':
+          onClose()
+          break
+        case 'ArrowDown':
+          if (results.length > 0) {
+            e.preventDefault()
+            setSelectedIndex((prev) => Math.min(prev + 1, results.length - 1))
+          }
+          break
+        case 'ArrowUp':
+          if (results.length > 0) {
+            e.preventDefault()
+            setSelectedIndex((prev) => Math.max(prev - 1, -1))
+          }
+          break
+        case 'Enter':
+          if (selectedIndex >= 0 && results[selectedIndex]) {
+            e.preventDefault()
+            handleSearch(query)
+            router.push(results[selectedIndex].item.href)
+            onClose()
+          }
+          break
       }
     }
 
-    if (isOpen) {
-      document.addEventListener('keydown', handleEscape)
-      document.body.style.overflow = 'hidden'
-    }
+    document.addEventListener('keydown', handleKeyDown)
+    return () => document.removeEventListener('keydown', handleKeyDown)
+  }, [isOpen, onClose, results, selectedIndex, query, router])
 
-    return () => {
-      document.removeEventListener('keydown', handleEscape)
-      document.body.style.overflow = 'unset'
-    }
-  }, [isOpen, onClose])
+  // Reset selected index when results change
+  useEffect(() => {
+    setSelectedIndex(-1)
+  }, [results])
 
   const handleSearch = (searchQuery: string) => {
     if (searchQuery.trim()) {
@@ -154,16 +183,19 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
     localStorage.removeItem('cerebrum-recent-searches')
   }
 
-  const popularSearches = [
-    { text: 'Class 12 Biology', icon: GraduationCap, trend: 'trending', count: '+45%' },
-    { text: 'NEET Mock Tests', icon: FileText, trend: 'hot', count: 'Most viewed' },
-    { text: 'Dropper Batch', icon: RefreshCw, trend: 'rising', count: '+30%' },
-    { text: 'Online Classes', icon: Laptop, trend: null, count: null },
-    { text: 'Free Demo', icon: Target, trend: 'hot', count: '2.5k views' },
-    { text: 'CBSE Biology', icon: BookOpen, trend: null, count: null },
-    { text: 'Admission Process', icon: ChevronRight, trend: 'rising', count: '+20%' },
-    { text: 'Fee Structure', icon: DollarSign, trend: null, count: null },
-  ]
+  const popularSearches = useMemo(
+    () => [
+      { text: 'Class 12 Biology', icon: GraduationCap, trend: 'trending', count: '+45%' },
+      { text: 'NEET Mock Tests', icon: FileText, trend: 'hot', count: 'Most viewed' },
+      { text: 'Dropper Batch', icon: RefreshCw, trend: 'rising', count: '+30%' },
+      { text: 'Online Classes', icon: Laptop, trend: null, count: null },
+      { text: 'Free Demo', icon: Target, trend: 'hot', count: '2.5k views' },
+      { text: 'CBSE Biology', icon: BookOpen, trend: null, count: null },
+      { text: 'Admission Process', icon: ChevronRight, trend: 'rising', count: '+20%' },
+      { text: 'Fee Structure', icon: DollarSign, trend: null, count: null },
+    ],
+    []
+  )
 
   const quickActions = [
     {
@@ -333,28 +365,34 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
   }
 
   // Swipe to close on mobile - with improved threshold to prevent accidental closes
-  const [touchStart, setTouchStart] = useState(0)
-  const [touchEnd, setTouchEnd] = useState(0)
+  const [touchStartY, setTouchStartY] = useState(0)
+  const [touchEndY, setTouchEndY] = useState(0)
+  const [touchStartX, setTouchStartX] = useState(0)
+  const [touchEndX, setTouchEndX] = useState(0)
   const [touchStartTime, setTouchStartTime] = useState(0)
 
   const handleTouchStart = (e: React.TouchEvent) => {
-    setTouchStart(e.targetTouches[0].clientY)
+    setTouchStartY(e.targetTouches[0].clientY)
+    setTouchStartX(e.targetTouches[0].clientX)
     setTouchStartTime(Date.now())
   }
 
   const handleTouchMove = (e: React.TouchEvent) => {
-    setTouchEnd(e.targetTouches[0].clientY)
+    setTouchEndY(e.targetTouches[0].clientY)
+    setTouchEndX(e.targetTouches[0].clientX)
   }
 
   const handleTouchEnd = () => {
     if (!isMobile) return
-    const swipeDistance = touchStart - touchEnd
-    const swipeTime = Date.now() - touchStartTime
-    const swipeVelocity = Math.abs(swipeDistance) / swipeTime
 
-    // Only close on intentional swipe down:
-    // Either large distance (100px+) OR fast swipe (velocity > 0.5 with 50px+ distance)
-    if (swipeDistance < -100 || (swipeDistance < -50 && swipeVelocity > 0.5)) {
+    const deltaY = touchEndY - touchStartY // Positive = swipe down
+    const deltaX = Math.abs(touchEndX - touchStartX)
+    const swipeTime = Date.now() - touchStartTime
+    const swipeVelocity = Math.abs(deltaY) / swipeTime
+
+    // Only close on predominantly vertical downward swipe
+    // Must be more vertical than horizontal to prevent accidental closes during scrolling
+    if (deltaY > deltaX && (deltaY > 100 || (deltaY > 50 && swipeVelocity > 0.5))) {
       triggerHaptic()
       onClose()
     }
@@ -379,7 +417,7 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
             initial="closed"
             animate="open"
             exit="closed"
-            className={`fixed inset-0 bg-black/50 backdrop-blur-sm z-[10000] flex ${isMobile ? 'items-end' : 'items-start justify-center pt-20'} px-0 md:px-4 overflow-hidden`}
+            className={`fixed inset-0 bg-black/50 backdrop-blur-sm z-[100] flex ${isMobile ? 'items-end' : 'items-start justify-center pt-20'} px-0 md:px-4 overflow-hidden`}
             onClick={onClose}
           >
             <motion.div
@@ -426,7 +464,6 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
                       }
                     }}
                     className="w-full pl-12 pr-12 py-3 sm:py-4 text-base sm:text-lg border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    style={{ fontSize: '16px' }}
                   />
                   {query && (
                     <button
@@ -451,7 +488,7 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
                       Search Results ({results.length})
                     </h3>
                     <div className="space-y-2">
-                      {results.map(({ item }) => (
+                      {results.map(({ item }, index) => (
                         <Link
                           key={item.id}
                           href={item.href}
@@ -459,7 +496,11 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
                             handleSearch(query)
                             onClose()
                           }}
-                          className="group flex items-center justify-between p-3 sm:p-4 rounded-xl hover:bg-blue-50 transition-all duration-200 min-h-[44px] touch-manipulation"
+                          className={`group flex items-center justify-between p-3 sm:p-4 rounded-xl transition-all duration-200 min-h-[44px] touch-manipulation ${
+                            selectedIndex === index
+                              ? 'bg-blue-100 ring-2 ring-blue-500'
+                              : 'hover:bg-blue-50'
+                          }`}
                         >
                           <div className="flex-1 min-w-0">
                             <div className="flex items-center flex-wrap gap-1.5 sm:gap-2 mb-1">
