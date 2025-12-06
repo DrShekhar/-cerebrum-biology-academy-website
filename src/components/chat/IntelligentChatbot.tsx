@@ -12,9 +12,17 @@ import {
   Calendar,
   Phone,
   Download,
+  CheckCircle,
 } from 'lucide-react'
 import { usePersonalization } from '@/components/providers/PersonalizationProvider'
 import { AIErrorBoundary } from '@/components/ai/AIErrorBoundary'
+import {
+  calculateLeadScore,
+  shouldCaptureContact,
+  getContactCapturePrompt,
+  type ConversationContext,
+  type LeadQualificationScore,
+} from '@/lib/chat/leadQualification'
 
 interface ChatMessage {
   id: string
@@ -23,12 +31,21 @@ interface ChatMessage {
   timestamp: Date
   suggestions?: string[]
   actions?: ChatAction[]
+  isContactCapture?: boolean
 }
 
 interface ChatAction {
-  type: 'book_demo' | 'call_request' | 'download_brochure' | 'view_course'
+  type: 'book_demo' | 'call_request' | 'download_brochure' | 'view_course' | 'submit_contact'
   label: string
   data?: any
+}
+
+interface LeadData {
+  name?: string
+  phone?: string
+  email?: string
+  class?: string
+  collected: boolean
 }
 
 interface ChatbotState {
@@ -36,12 +53,16 @@ interface ChatbotState {
   messages: ChatMessage[]
   isTyping: boolean
   currentFlow?: string
+  collectingContact: 'name' | 'phone' | 'email' | null
+  leadData: LeadData
+  leadScore: LeadQualificationScore | null
   userContext: {
     hasIntroduced: boolean
     hasSharedClass: boolean
     hasSharedGoal: boolean
     hasSharedBudget: boolean
   }
+  conversationContext: ConversationContext
 }
 
 export function IntelligentChatbot() {
@@ -50,11 +71,18 @@ export function IntelligentChatbot() {
     isOpen: false,
     messages: [],
     isTyping: false,
+    collectingContact: null,
+    leadData: { collected: false },
+    leadScore: null,
     userContext: {
       hasIntroduced: false,
       hasSharedClass: false,
       hasSharedGoal: false,
       hasSharedBudget: false,
+    },
+    conversationContext: {
+      messageCount: 0,
+      intentSignals: [],
     },
   })
   const [inputValue, setInputValue] = useState('')
@@ -110,7 +138,12 @@ export function IntelligentChatbot() {
     return { content, suggestions, actions }
   }
 
-  const addBotMessage = (content: string, suggestions?: string[], actions?: ChatAction[]) => {
+  const addBotMessage = (
+    content: string,
+    suggestions?: string[],
+    actions?: ChatAction[],
+    isContactCapture?: boolean
+  ) => {
     const message: ChatMessage = {
       id: Date.now().toString(),
       type: 'bot',
@@ -118,6 +151,7 @@ export function IntelligentChatbot() {
       timestamp: new Date(),
       suggestions,
       actions,
+      isContactCapture,
     }
 
     setChatState((prev) => ({
@@ -146,8 +180,16 @@ export function IntelligentChatbot() {
   const handleSendMessage = () => {
     if (!inputValue.trim()) return
 
-    addUserMessage(inputValue)
+    const message = inputValue
+    addUserMessage(message)
     setInputValue('')
+
+    // If we're collecting contact info, handle that flow
+    if (chatState.collectingContact) {
+      setChatState((prev) => ({ ...prev, isTyping: true }))
+      setTimeout(() => handleContactCollection(message), 500)
+      return
+    }
 
     // Set typing indicator
     setChatState((prev) => ({ ...prev, isTyping: true }))
@@ -155,14 +197,50 @@ export function IntelligentChatbot() {
     // Process message and respond
     setTimeout(
       () => {
-        processUserMessage(inputValue)
+        processUserMessage(message)
+
+        // Check if we should trigger lead capture after processing
+        setTimeout(() => {
+          if (!chatState.leadData.collected && chatState.messages.length >= 3) {
+            checkAndTriggerLeadCapture()
+          }
+        }, 2000)
       },
       1000 + Math.random() * 1000
-    ) // Simulate realistic response time
+    )
   }
 
   const processUserMessage = (message: string) => {
     const lowerMessage = message.toLowerCase()
+
+    // Update conversation context based on message content
+    setChatState((prev) => {
+      const newContext = { ...prev.conversationContext }
+      newContext.messageCount = (newContext.messageCount || 0) + 1
+
+      if (lowerMessage.includes('demo') || lowerMessage.includes('trial')) {
+        newContext.hasAskedForDemo = true
+      }
+      if (lowerMessage.includes('call') || lowerMessage.includes('phone')) {
+        newContext.hasAskedForCall = true
+      }
+      if (
+        lowerMessage.includes('fee') ||
+        lowerMessage.includes('price') ||
+        lowerMessage.includes('cost')
+      ) {
+        newContext.hasAskedAboutFees = true
+      }
+      if (
+        lowerMessage.includes('class 11') ||
+        lowerMessage.includes('class 12') ||
+        lowerMessage.includes('dropper')
+      ) {
+        newContext.hasSharedClass = true
+      }
+
+      return { ...prev, conversationContext: newContext }
+    })
 
     // Intent detection and personalized responses
     if (lowerMessage.includes('course') || lowerMessage.includes('program')) {
@@ -489,6 +567,159 @@ export function IntelligentChatbot() {
     ]
 
     addBotMessage(response, suggestions)
+  }
+
+  const startLeadCapture = () => {
+    setChatState((prev) => ({ ...prev, collectingContact: 'name' }))
+    const prompt = getContactCapturePrompt(chatState.leadScore!)
+    addBotMessage(
+      prompt + "\n\nLet's start with your name - what should I call you?",
+      undefined,
+      undefined,
+      true
+    )
+  }
+
+  const handleContactCollection = (message: string) => {
+    const { collectingContact, leadData } = chatState
+
+    if (collectingContact === 'name') {
+      setChatState((prev) => ({
+        ...prev,
+        leadData: { ...prev.leadData, name: message },
+        collectingContact: 'phone',
+      }))
+      addBotMessage(
+        `Great to meet you, ${message}! 📱 Could you share your phone number so our counselor can reach you with personalized guidance?`,
+        undefined,
+        undefined,
+        true
+      )
+    } else if (collectingContact === 'phone') {
+      const phoneRegex = /^[6-9]\d{9}$/
+      const cleanPhone = message.replace(/[^\d]/g, '').slice(-10)
+
+      if (!phoneRegex.test(cleanPhone)) {
+        addBotMessage(
+          'Please enter a valid 10-digit Indian mobile number (starting with 6-9).',
+          ['Try again'],
+          undefined,
+          true
+        )
+        return
+      }
+
+      setChatState((prev) => ({
+        ...prev,
+        leadData: { ...prev.leadData, phone: cleanPhone },
+        collectingContact: 'email',
+      }))
+      addBotMessage(
+        `Perfect! ✅ And your email address? (We'll send you course details and study materials)`,
+        ['Skip email'],
+        undefined,
+        true
+      )
+    } else if (collectingContact === 'email') {
+      const isSkip = message.toLowerCase().includes('skip')
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+      const email = isSkip ? undefined : message
+
+      if (!isSkip && !emailRegex.test(message)) {
+        addBotMessage('Please enter a valid email address or say "Skip email".', ['Skip email'])
+        return
+      }
+
+      const finalLeadData = {
+        ...leadData,
+        email,
+        class: preferences.currentClass,
+        collected: true,
+      }
+
+      setChatState((prev) => ({
+        ...prev,
+        leadData: finalLeadData,
+        collectingContact: null,
+      }))
+
+      submitLead(finalLeadData)
+    }
+  }
+
+  const submitLead = async (leadData: LeadData) => {
+    try {
+      const response = await fetch('/api/contact/inquiry', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: leadData.name || 'Chatbot Lead',
+          phone: leadData.phone,
+          email: leadData.email || '',
+          center: 'online',
+          supportType: 'admission',
+          message: `Lead from CERI AI chatbot. Class: ${leadData.class || 'Not specified'}. Lead Score: ${chatState.leadScore?.overall || 'N/A'} (${chatState.leadScore?.classification || 'N/A'})`,
+          timestamp: new Date().toISOString(),
+          source: 'ceri_chatbot',
+        }),
+      })
+
+      if (response.ok) {
+        trackBehavior('lead_captured_chatbot', {
+          score: chatState.leadScore?.overall,
+          classification: chatState.leadScore?.classification,
+        })
+
+        addBotMessage(
+          `🎉 Thank you ${leadData.name}!\n\nYour details have been saved. Our expert counselor will call you within **30 minutes** to:\n\n` +
+            '• Understand your NEET preparation needs\n' +
+            '• Recommend the perfect course for you\n' +
+            '• Answer any questions you have\n' +
+            '• Help you book a FREE demo class\n\n' +
+            'In the meantime, is there anything else I can help you with?',
+          ['Book demo now', 'View course details', 'Download brochure'],
+          [
+            { type: 'book_demo', label: '📅 Book Demo Class' },
+            { type: 'view_course', label: '📚 View Courses' },
+          ]
+        )
+      } else {
+        throw new Error('Failed to submit')
+      }
+    } catch (error) {
+      console.error('Lead submission error:', error)
+      addBotMessage(
+        `Thanks ${leadData.name}! I've noted your details. For immediate assistance, you can:\n\n` +
+          '📞 Call: +91 88264 44334\n' +
+          '💬 WhatsApp: wa.me/918826444334\n\n' +
+          'Our team will reach out to you shortly!',
+        ['Call now', 'WhatsApp now'],
+        [{ type: 'call_request', label: '📞 Call Now' }]
+      )
+    }
+  }
+
+  const checkAndTriggerLeadCapture = () => {
+    if (chatState.leadData.collected) return
+
+    const messages = chatState.messages.filter((m) => m.type === 'user').map((m) => m.content)
+
+    const score = calculateLeadScore(messages, chatState.conversationContext)
+
+    setChatState((prev) => ({
+      ...prev,
+      leadScore: score,
+      conversationContext: {
+        ...prev.conversationContext,
+        messageCount: messages.length,
+      },
+    }))
+
+    if (shouldCaptureContact(score, chatState.conversationContext)) {
+      setTimeout(() => startLeadCapture(), 500)
+      return true
+    }
+    return false
   }
 
   const handleSuggestionClick = (suggestion: string) => {
