@@ -21,6 +21,7 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
+import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'
 
 const chennaiLocalities = [
   {
@@ -488,6 +489,10 @@ export default function NeetCoachingChennaiPage() {
         </div>
       </section>
 
+      {/* Related Cities Section */}
+      <RelatedCityLinks currentCity="chennai" variant="default" />
+
+      {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-red-600 via-rose-600 to-red-700 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
