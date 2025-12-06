@@ -392,24 +392,26 @@ export default function ResultsPage() {
             </p>
           </div>
 
-          <Card className="p-8 bg-white shadow-xl">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <Card className="p-4 sm:p-6 md:p-8 bg-white shadow-xl">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
               <div className="text-center">
-                <div className="text-6xl font-bold text-red-500 mb-2">420</div>
+                <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-red-500 mb-2">
+                  420
+                </div>
                 <div className="text-sm text-gray-600 mb-4">Average Starting Score</div>
                 <div className="h-2 bg-red-200 rounded-full"></div>
               </div>
 
               <div className="flex flex-col items-center justify-center">
-                <ArrowUp className="h-12 w-12 text-green-600 mb-2 animate-bounce" />
-                <div className="text-4xl font-bold text-green-600 mb-2">
+                <ArrowUp className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 text-green-600 mb-2 animate-bounce" />
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-green-600 mb-2">
                   +{NEET_2024_RESULTS.averageImprovement}
                 </div>
                 <div className="text-sm text-gray-600">Points Improvement</div>
               </div>
 
               <div className="text-center">
-                <div className="text-6xl font-bold text-green-600 mb-2">
+                <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-green-600 mb-2">
                   {420 + NEET_2024_RESULTS.averageImprovement}
                 </div>
                 <div className="text-sm text-gray-600 mb-4">Average Final Score</div>

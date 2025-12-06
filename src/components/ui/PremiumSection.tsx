@@ -205,7 +205,7 @@ export const AcademicCard: React.FC<AcademicCardProps> = ({
   className,
 }) => {
   const cardClasses = cn(
-    'bg-white rounded-3xl p-8 transition-all duration-500',
+    'bg-white rounded-3xl p-4 sm:p-6 md:p-8 transition-all duration-500',
     {
       'shadow-lg hover:shadow-2xl border border-gray-100': variant === 'default',
       'shadow-xl hover:shadow-2xl border-l-4 border-blue-600': variant === 'research',

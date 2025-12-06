@@ -113,30 +113,30 @@ const AdaptiveTestingPage: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             className="text-center space-y-8"
           >
-            <div className="flex items-center justify-center gap-4">
-              <div className="p-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl">
-                <Brain className="w-12 h-12 text-white" />
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+              <div className="p-3 sm:p-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl">
+                <Brain className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-white" />
               </div>
-              <h1 className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent text-center sm:text-left">
                 Adaptive Testing System
               </h1>
             </div>
 
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
               Revolutionary AI-powered assessment that adapts to student performance in real-time,
               providing personalized difficulty progression and comprehensive learning analytics.
             </p>
 
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
               <button
                 onClick={handleStartDemo}
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all flex items-center gap-3 text-lg font-medium shadow-lg"
+                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-5 py-3 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all flex items-center justify-center gap-2 sm:gap-3 text-base sm:text-lg font-medium shadow-lg"
               >
-                <Play className="w-5 h-5" />
+                <Play className="w-4 h-4 sm:w-5 sm:h-5" />
                 Try Live Demo
               </button>
-              <button className="border border-gray-300 text-gray-700 px-8 py-4 rounded-xl hover:bg-gray-50 transition-colors flex items-center gap-3 text-lg font-medium">
-                <BookOpen className="w-5 h-5" />
+              <button className="border border-gray-300 text-gray-700 px-5 py-3 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-xl hover:bg-gray-50 transition-colors flex items-center justify-center gap-2 sm:gap-3 text-base sm:text-lg font-medium">
+                <BookOpen className="w-4 h-4 sm:w-5 sm:h-5" />
                 View Documentation
               </button>
             </div>

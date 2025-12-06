@@ -180,7 +180,7 @@ export default function TeacherDashboard() {
 
         {/* Main Dashboard Tabs */}
         <Tabs defaultValue="students" className="space-y-6">
-          <TabsList className="grid w-full grid-cols-4">
+          <TabsList className="grid w-full grid-cols-2 sm:grid-cols-4">
             <TabsTrigger value="students">Students</TabsTrigger>
             <TabsTrigger value="performance">Performance</TabsTrigger>
             <TabsTrigger value="topics">Topics</TabsTrigger>

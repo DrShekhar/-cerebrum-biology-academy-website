@@ -303,20 +303,20 @@ export default function CounselorDemoPage() {
           </div>
 
           {/* Stats Bar */}
-          <div className="grid grid-cols-5 gap-4 mb-4">
-            <div className="bg-blue-50 rounded-lg p-3">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2 sm:gap-4 mb-4">
+            <div className="bg-blue-50 rounded-lg p-2 sm:p-3">
               <div className="text-xs text-blue-600 font-medium">Total Leads</div>
-              <div className="text-2xl font-bold text-blue-900">{stats.total}</div>
+              <div className="text-lg sm:text-2xl font-bold text-blue-900">{stats.total}</div>
             </div>
-            <div className="bg-red-50 rounded-lg p-3">
+            <div className="bg-red-50 rounded-lg p-2 sm:p-3">
               <div className="text-xs text-red-600 font-medium">🔥 Hot Leads</div>
-              <div className="text-2xl font-bold text-red-900">{stats.hot}</div>
+              <div className="text-lg sm:text-2xl font-bold text-red-900">{stats.hot}</div>
             </div>
-            <div className="bg-yellow-50 rounded-lg p-3">
+            <div className="bg-yellow-50 rounded-lg p-2 sm:p-3">
               <div className="text-xs text-yellow-600 font-medium">Due Today</div>
-              <div className="text-2xl font-bold text-yellow-900">{stats.dueToday}</div>
+              <div className="text-lg sm:text-2xl font-bold text-yellow-900">{stats.dueToday}</div>
             </div>
-            <div className="bg-green-50 rounded-lg p-3">
+            <div className="bg-green-50 rounded-lg p-2 sm:p-3">
               <div className="text-xs text-green-600 font-medium">Enrolled</div>
               <div className="text-2xl font-bold text-green-900">{stats.enrolled}</div>
             </div>

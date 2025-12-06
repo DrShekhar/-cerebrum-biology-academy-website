@@ -574,10 +574,13 @@ export default function DrShekharSinghPage() {
               aria-label="Success rate statistics"
             >
               <div className="max-w-4xl mx-auto">
-                <div className="text-6xl font-bold mb-4" aria-label="98 percent success rate">
+                <div
+                  className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4"
+                  aria-label="98 percent success rate"
+                >
                   {drShekhar.successRate}%
                 </div>
-                <p className="text-2xl font-semibold mb-2">NEET Success Rate</p>
+                <p className="text-xl sm:text-2xl font-semibold mb-2">NEET Success Rate</p>
                 <p className="text-green-100 text-lg">
                   Consistently outperforming national average by 4x
                 </p>

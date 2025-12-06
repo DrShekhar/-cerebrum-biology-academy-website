@@ -128,15 +128,17 @@ export default function FoundationCoursePage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-5xl font-bold mb-6">Foundation Course (Classes 9-10)</h1>
-              <p className="text-xl text-green-100 mb-8">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
+                Foundation Course (Classes 9-10)
+              </h1>
+              <p className="text-base sm:text-lg md:text-xl text-green-100 mb-6 sm:mb-8">
                 Build a strong foundation for your medical dreams. Early start advantage with
                 comprehensive Biology concepts and introduction to medical entrance preparation.
               </p>
               <div className="space-y-4">
                 <Link
                   href="/admissions"
-                  className="block w-full bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-green-50 transition-colors text-center"
+                  className="block w-full bg-white text-green-600 px-5 py-3 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-lg font-semibold hover:bg-green-50 transition-colors text-center"
                 >
                   <span className="inline-flex items-center">
                     Join Foundation Program

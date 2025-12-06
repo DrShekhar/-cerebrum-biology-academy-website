@@ -385,22 +385,30 @@ export default function AdminTestsPage() {
                       </div>
                     </div>
 
-                    <div className="bg-gray-50 rounded-lg p-4">
-                      <div className="grid grid-cols-4 gap-4 text-center">
+                    <div className="bg-gray-50 rounded-lg p-3 sm:p-4">
+                      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-4 text-center">
                         <div>
-                          <p className="text-2xl font-bold text-blue-600">{test.timesUsed}</p>
+                          <p className="text-lg sm:text-2xl font-bold text-blue-600">
+                            {test.timesUsed}
+                          </p>
                           <p className="text-xs text-gray-500">Times Used</p>
                         </div>
                         <div>
-                          <p className="text-2xl font-bold text-green-600">{test.totalAttempts}</p>
+                          <p className="text-lg sm:text-2xl font-bold text-green-600">
+                            {test.totalAttempts}
+                          </p>
                           <p className="text-xs text-gray-500">Attempts</p>
                         </div>
                         <div>
-                          <p className="text-2xl font-bold text-purple-600">{test.avgScore}%</p>
+                          <p className="text-lg sm:text-2xl font-bold text-purple-600">
+                            {test.avgScore}%
+                          </p>
                           <p className="text-xs text-gray-500">Avg Score</p>
                         </div>
                         <div>
-                          <p className="text-2xl font-bold text-orange-600">{test.passRate}%</p>
+                          <p className="text-lg sm:text-2xl font-bold text-orange-600">
+                            {test.passRate}%
+                          </p>
                           <p className="text-xs text-gray-500">Pass Rate</p>
                         </div>
                       </div>

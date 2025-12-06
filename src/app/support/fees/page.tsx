@@ -193,7 +193,7 @@ export default function FeesPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center">
             <motion.h1
-              className="text-5xl font-bold mb-6"
+              className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -201,7 +201,7 @@ export default function FeesPage() {
               Fee Structure & Payment Options
             </motion.h1>
             <motion.p
-              className="text-xl text-purple-100 max-w-3xl mx-auto mb-8"
+              className="text-base sm:text-lg md:text-xl text-purple-100 max-w-3xl mx-auto mb-6 sm:mb-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}

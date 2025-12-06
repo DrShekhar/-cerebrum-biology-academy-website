@@ -234,19 +234,19 @@ export default function ReferralPage() {
                     </div>
 
                     {/* Stats */}
-                    <div className="grid grid-cols-3 gap-4 mb-6">
-                      <div className="bg-white/10 rounded-lg p-3">
-                        <p className="text-2xl font-bold">{referralStats.uses}</p>
+                    <div className="grid grid-cols-3 gap-2 sm:gap-4 mb-4 sm:mb-6">
+                      <div className="bg-white/10 rounded-lg p-2 sm:p-3">
+                        <p className="text-lg sm:text-2xl font-bold">{referralStats.uses}</p>
                         <p className="text-xs text-purple-100">Referrals</p>
                       </div>
-                      <div className="bg-white/10 rounded-lg p-3">
-                        <p className="text-2xl font-bold">
+                      <div className="bg-white/10 rounded-lg p-2 sm:p-3">
+                        <p className="text-lg sm:text-2xl font-bold">
                           {referralStats.maxUses - referralStats.uses}
                         </p>
                         <p className="text-xs text-purple-100">Remaining</p>
                       </div>
-                      <div className="bg-white/10 rounded-lg p-3">
-                        <p className="text-2xl font-bold">
+                      <div className="bg-white/10 rounded-lg p-2 sm:p-3">
+                        <p className="text-lg sm:text-2xl font-bold">
                           Rs.{referralStats.uses * referralStats.discount}
                         </p>
                         <p className="text-xs text-purple-100">Earned</p>

@@ -237,18 +237,18 @@ export default function Class12Page() {
               {/* NEET 2025 Countdown */}
               <div className="bg-gradient-to-br from-red-500 to-pink-600 rounded-3xl p-8 text-center mb-6">
                 <h3 className="text-2xl font-bold mb-4">NEET 2025 Countdown</h3>
-                <div className="grid grid-cols-3 gap-4 text-center">
+                <div className="grid grid-cols-3 gap-2 sm:gap-4 text-center">
                   <div>
-                    <div className="text-3xl font-bold">167</div>
-                    <div className="text-sm opacity-80">Days Left</div>
+                    <div className="text-xl sm:text-3xl font-bold">167</div>
+                    <div className="text-xs sm:text-sm opacity-80">Days Left</div>
                   </div>
                   <div>
-                    <div className="text-3xl font-bold">4K</div>
-                    <div className="text-sm opacity-80">Hours Left</div>
+                    <div className="text-xl sm:text-3xl font-bold">4K</div>
+                    <div className="text-xs sm:text-sm opacity-80">Hours Left</div>
                   </div>
                   <div>
-                    <div className="text-3xl font-bold">720</div>
-                    <div className="text-sm opacity-80">Max Marks</div>
+                    <div className="text-xl sm:text-3xl font-bold">720</div>
+                    <div className="text-xs sm:text-sm opacity-80">Max Marks</div>
                   </div>
                 </div>
                 <div className="mt-4 text-sm">

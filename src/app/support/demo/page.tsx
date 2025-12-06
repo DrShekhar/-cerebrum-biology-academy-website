@@ -111,11 +111,11 @@ export default function DemoPage() {
               <Star className="w-5 h-5" />
               <span>Free Demo Class Available</span>
             </div>
-            <h1 className="text-5xl font-bold mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
               Experience Our Teaching
               <span className="block text-yellow-300">Before You Enroll</span>
             </h1>
-            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-blue-100 mb-6 sm:mb-8 max-w-3xl mx-auto">
               Join our free demo class and discover why 98% of our students crack NEET. Experience
               our unique teaching methodology and meet our expert faculty.
             </p>

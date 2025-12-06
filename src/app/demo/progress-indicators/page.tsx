@@ -420,17 +420,21 @@ function BulkOperationsDemo() {
             success={processedCount === totalItems}
           />
 
-          <div className="grid grid-cols-3 gap-4 text-center">
-            <div className="p-3 bg-slate-50 rounded-lg">
-              <p className="text-2xl font-bold text-slate-900">{processedCount}</p>
+          <div className="grid grid-cols-3 gap-2 sm:gap-4 text-center">
+            <div className="p-2 sm:p-3 bg-slate-50 rounded-lg">
+              <p className="text-lg sm:text-2xl font-bold text-slate-900">{processedCount}</p>
               <p className="text-xs text-slate-600">Processed</p>
             </div>
-            <div className="p-3 bg-slate-50 rounded-lg">
-              <p className="text-2xl font-bold text-slate-900">{totalItems - processedCount}</p>
+            <div className="p-2 sm:p-3 bg-slate-50 rounded-lg">
+              <p className="text-lg sm:text-2xl font-bold text-slate-900">
+                {totalItems - processedCount}
+              </p>
               <p className="text-xs text-slate-600">Remaining</p>
             </div>
-            <div className="p-3 bg-slate-50 rounded-lg">
-              <p className="text-2xl font-bold text-slate-900">{Math.round(percentage)}%</p>
+            <div className="p-2 sm:p-3 bg-slate-50 rounded-lg">
+              <p className="text-lg sm:text-2xl font-bold text-slate-900">
+                {Math.round(percentage)}%
+              </p>
               <p className="text-xs text-slate-600">Complete</p>
             </div>
           </div>

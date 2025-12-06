@@ -482,11 +482,11 @@ export default function KotaVsOnlinePage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <div className="bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-xl p-8">
-              <DollarSign className="w-16 h-16 mx-auto mb-4" />
-              <div className="text-5xl font-bold mb-2">₹2,57,000</div>
-              <div className="text-2xl mb-4">Total Annual Savings</div>
-              <p className="text-lg opacity-90 mb-6">
+            <div className="bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-xl p-4 sm:p-6 md:p-8">
+              <DollarSign className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 mx-auto mb-4" />
+              <div className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">₹2,57,000</div>
+              <div className="text-xl sm:text-2xl mb-4">Total Annual Savings</div>
+              <p className="text-base sm:text-lg opacity-90 mb-4 sm:mb-6">
                 That's enough for your child's first year of MBBS! Smart parents invest in better
                 results, not expensive geography.
               </p>

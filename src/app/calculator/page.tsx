@@ -393,19 +393,23 @@ export default function CalculatorPage() {
 
               {/* Quick Stats */}
               <div className="bg-gray-50 rounded-lg p-4">
-                <div className="grid grid-cols-3 gap-4 text-center">
+                <div className="grid grid-cols-3 gap-2 sm:gap-4 text-center">
                   <div>
-                    <div className="text-lg font-bold text-gray-900">{totalAttempted}/180</div>
+                    <div className="text-base sm:text-lg font-bold text-gray-900">
+                      {totalAttempted}/180
+                    </div>
                     <div className="text-xs text-gray-600">Attempted</div>
                   </div>
                   <div>
-                    <div className="text-lg font-bold text-green-600">
+                    <div className="text-base sm:text-lg font-bold text-green-600">
                       {physicsCorrect + chemistryCorrect + biologyCorrect}
                     </div>
                     <div className="text-xs text-gray-600">Correct</div>
                   </div>
                   <div>
-                    <div className="text-lg font-bold text-gray-900">{accuracy.toFixed(1)}%</div>
+                    <div className="text-base sm:text-lg font-bold text-gray-900">
+                      {accuracy.toFixed(1)}%
+                    </div>
                     <div className="text-xs text-gray-600">Accuracy</div>
                   </div>
                 </div>
@@ -417,20 +421,22 @@ export default function CalculatorPage() {
               {/* Score Card */}
               <div className="bg-gradient-to-br from-purple-600 to-indigo-600 rounded-2xl p-6 sm:p-8 text-white shadow-xl">
                 <h2 className="text-lg font-semibold mb-4 opacity-90">Your Estimated Score</h2>
-                <div className="text-5xl sm:text-6xl font-bold mb-2">{calculateScore.total}</div>
-                <div className="text-purple-200 mb-6">out of 720 marks</div>
+                <div className="text-4xl sm:text-5xl md:text-6xl font-bold mb-2">
+                  {calculateScore.total}
+                </div>
+                <div className="text-purple-200 mb-4 sm:mb-6">out of 720 marks</div>
 
-                <div className="grid grid-cols-3 gap-4 pt-4 border-t border-white/20">
+                <div className="grid grid-cols-3 gap-2 sm:gap-4 pt-4 border-t border-white/20">
                   <div>
-                    <div className="text-2xl font-bold">{calculateScore.physics}</div>
+                    <div className="text-lg sm:text-2xl font-bold">{calculateScore.physics}</div>
                     <div className="text-xs opacity-75">Physics</div>
                   </div>
                   <div>
-                    <div className="text-2xl font-bold">{calculateScore.chemistry}</div>
+                    <div className="text-lg sm:text-2xl font-bold">{calculateScore.chemistry}</div>
                     <div className="text-xs opacity-75">Chemistry</div>
                   </div>
                   <div>
-                    <div className="text-2xl font-bold">{calculateScore.biology}</div>
+                    <div className="text-lg sm:text-2xl font-bold">{calculateScore.biology}</div>
                     <div className="text-xs opacity-75">Biology</div>
                   </div>
                 </div>
