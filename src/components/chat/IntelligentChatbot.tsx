@@ -766,10 +766,11 @@ export function IntelligentChatbot() {
         </div>
       }
     >
-      {/* Chat Toggle Button */}
+      {/* Chat Toggle Button - Positioned on LEFT to avoid overlap with FloatingCTA on right */}
+      {/* On mobile: above the fixed bottom bar (56px), on desktop: normal position */}
       <motion.button
         onClick={toggleChat}
-        className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 bg-blue-600 text-white p-3 sm:p-4 rounded-full shadow-lg hover:bg-blue-700 focus:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none transition-colors z-50"
+        className="fixed bottom-20 left-4 lg:bottom-6 lg:left-6 bg-blue-600 text-white p-3 sm:p-4 rounded-full shadow-lg hover:bg-blue-700 focus:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none transition-colors z-50"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         aria-label={
@@ -812,7 +813,7 @@ export function IntelligentChatbot() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 100, scale: 0.8 }}
             transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-            className="fixed bottom-16 right-4 left-4 sm:bottom-24 sm:right-6 sm:left-auto sm:w-96 h-[85vh] sm:h-[32rem] max-h-[600px] bg-white rounded-2xl shadow-2xl border border-gray-200 z-40 flex flex-col"
+            className="fixed bottom-32 left-4 right-4 lg:bottom-24 lg:left-6 lg:right-auto sm:w-96 h-[70vh] sm:h-[32rem] max-h-[600px] bg-white rounded-2xl shadow-2xl border border-gray-200 z-40 flex flex-col"
             role="dialog"
             aria-labelledby="chat-title"
             aria-describedby="chat-description"

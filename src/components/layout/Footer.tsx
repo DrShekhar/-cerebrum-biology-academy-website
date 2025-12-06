@@ -432,38 +432,15 @@ export const Footer = memo(function Footer() {
             </div>
           </div>
 
-          {/* Language Switcher */}
+          {/* Language Switcher - Simplified Dropdown */}
           <div className="mt-6 pt-4 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="text-gray-400 text-sm">{t('chooseLanguage')}:</div>
-            <LanguageSwitcher variant="footer" />
+            <LanguageSwitcher variant="default" />
           </div>
         </div>
       </div>
 
-      {/* Quick Actions - Floating */}
-      <div
-        className="fixed right-4 z-40 flex flex-col space-y-2 bottom-20 md:bottom-6"
-        role="complementary"
-        aria-label="Quick contact actions"
-      >
-        <a
-          href="https://wa.me/918826444334?text=Hi%2C%20I%27m%20interested%20in%20NEET%20Biology%20coaching"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-12 h-12 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg transition-all duration-200 hover:scale-110"
-          aria-label="Chat with us on WhatsApp"
-        >
-          <MessageCircle className="w-6 h-6 text-white" aria-hidden="true" />
-        </a>
-
-        <a
-          href="tel:+918826444334"
-          className="w-12 h-12 bg-blue-500 hover:bg-blue-600 rounded-full flex items-center justify-center shadow-lg transition-all duration-200 hover:scale-110"
-          aria-label="Call us at +91 8826444334"
-        >
-          <Phone className="w-6 h-6 text-white" aria-hidden="true" />
-        </a>
-      </div>
+      {/* Quick Actions moved to FloatingCTA component to avoid duplication */}
     </footer>
   )
 })
