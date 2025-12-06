@@ -22,6 +22,7 @@ import {
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
 import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'
+import { CitySchema } from '@/components/seo/CitySchema'
 
 const puneLocalities = [
   {
@@ -246,6 +247,15 @@ export default function NeetCoachingPunePage() {
 
   return (
     <div className="min-h-screen">
+      <CitySchema
+        cityName="Pune"
+        citySlug="pune"
+        state="Maharashtra"
+        localities={puneLocalities.map((l) => l.name)}
+        faqs={faqs}
+        studentCount="1800"
+        coordinates={{ lat: '18.5204', lng: '73.8567' }}
+      />
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-violet-900 via-purple-800 to-fuchsia-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />

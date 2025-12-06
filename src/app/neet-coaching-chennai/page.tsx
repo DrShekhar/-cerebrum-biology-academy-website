@@ -22,6 +22,7 @@ import {
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
 import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'
+import { CitySchema } from '@/components/seo/CitySchema'
 
 const chennaiLocalities = [
   {
@@ -240,6 +241,15 @@ export default function NeetCoachingChennaiPage() {
 
   return (
     <div className="min-h-screen">
+      <CitySchema
+        cityName="Chennai"
+        citySlug="chennai"
+        state="Tamil Nadu"
+        localities={chennaiLocalities.map((l) => l.name)}
+        faqs={faqs}
+        studentCount="2800"
+        coordinates={{ lat: '13.0827', lng: '80.2707' }}
+      />
       <section className="relative bg-gradient-to-br from-red-900 via-red-800 to-rose-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
