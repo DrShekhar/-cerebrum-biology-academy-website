@@ -72,6 +72,30 @@ const faqStructuredData = {
         text: 'GTB Nagar Metro Station (Yellow Line) is right in the heart of the area. The coaching center is just 5 minutes walk from the metro station.',
       },
     },
+    {
+      '@type': 'Question',
+      name: 'What are the fees for NEET coaching in GTB Nagar?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Cerebrum offers NEET Biology coaching from ₹15,000/month. We provide EMI options and merit scholarships up to 50% for toppers. Demo classes are FREE to help you decide.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is PG accommodation available near GTB Nagar?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'GTB Nagar and nearby Hudson Lane have excellent student accommodations with 200+ PGs and hostels. Rent ranges from ₹7,000-12,000/month. The area is known for safe, student-friendly housing.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What are the batch timings at Cerebrum GTB Nagar?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'We offer morning (7 AM - 10 AM), afternoon (12 PM - 3 PM), and evening (5 PM - 8 PM) batches. Weekend batches available for school-going students. Choose timing that suits your schedule.',
+      },
+    },
   ],
 }
 

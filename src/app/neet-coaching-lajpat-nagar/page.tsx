@@ -81,6 +81,30 @@ const faqStructuredData = {
         text: 'Our center is easily accessible via Lajpat Nagar Metro Station (Pink Line) and Moolchand Metro Station (Violet Line). Multiple bus routes also connect to Lajpat Nagar Central Market.',
       },
     },
+    {
+      '@type': 'Question',
+      name: 'What is the fee for NEET Biology coaching in Lajpat Nagar?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Cerebrum offers comprehensive NEET Biology coaching starting from ₹15,000/month. Flexible payment options, EMI plans, and merit-based scholarships are available. Book a FREE demo first!',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Are there hostels near Lajpat Nagar coaching center?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Lajpat Nagar and nearby Defence Colony have good PG options for students. Rent ranges from ₹10,000-18,000/month in this premium South Delhi area. Safe options for boys and girls available.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What batch timings are available in Lajpat Nagar?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'We offer multiple batches: Morning (8 AM - 11 AM), Afternoon (2 PM - 5 PM), and Evening (6 PM - 9 PM). Weekend batches cater to students attending school on weekdays.',
+      },
+    },
   ],
 }
 

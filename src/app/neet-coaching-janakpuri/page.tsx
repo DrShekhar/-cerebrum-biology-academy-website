@@ -72,6 +72,30 @@ const faqStructuredData = {
         text: 'Janakpuri has excellent metro connectivity with Janakpuri West and East stations on the Blue Line. The area is also well-connected by buses from all parts of West Delhi.',
       },
     },
+    {
+      '@type': 'Question',
+      name: 'What is the fee structure for NEET coaching in Janakpuri?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Cerebrum offers NEET Biology coaching from ₹15,000/month. We have flexible EMI options and scholarship programs for meritorious students. Book a FREE demo class to experience our teaching first.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is accommodation available for outstation students in Janakpuri?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Janakpuri has several PG accommodations and hostels for students. Rent ranges from ₹6,000-12,000/month for shared rooms. The area is safe and has all amenities for comfortable stay.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What are the class timings at Cerebrum Janakpuri?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'We offer Morning (7 AM - 10 AM), Afternoon (12 PM - 3 PM), and Evening (5 PM - 8 PM) batches. Weekend-only batches available for students who attend school during weekdays.',
+      },
+    },
   ],
 }
 

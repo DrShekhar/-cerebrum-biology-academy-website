@@ -76,6 +76,30 @@ const faqStructuredData = {
         text: 'Rajinder Nagar is excellently connected via Rajendra Place Metro (Blue Line) and Karol Bagh Metro (Blue + Red Lines). Multiple bus routes also serve the area.',
       },
     },
+    {
+      '@type': 'Question',
+      name: 'What is the fee structure for NEET Biology coaching in Rajinder Nagar?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Cerebrum offers flexible fee structures starting from ₹15,000 per month for comprehensive NEET Biology coaching. We also offer installment options and merit-based scholarships for deserving students.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Are hostel facilities available near Rajinder Nagar coaching center?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes! Rajinder Nagar has hundreds of hostels and PG accommodations specifically for coaching students. Rent ranges from ₹8,000-15,000/month for shared rooms, with options for boys and girls separately.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What are the batch timings at Cerebrum Rajinder Nagar?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'We offer flexible batch timings: Morning batch (8 AM - 11 AM), Afternoon batch (2 PM - 5 PM), and Evening batch (6 PM - 9 PM). Weekend batches are also available for students attending school on weekdays.',
+      },
+    },
   ],
 }
 

@@ -77,6 +77,30 @@ const faqStructuredData = {
         text: 'Mukherjee Nagar is well-connected via GTB Nagar Metro Station (Yellow Line) which is 10 minutes away. Model Town Metro is also accessible.',
       },
     },
+    {
+      '@type': 'Question',
+      name: 'What is the fee for NEET coaching in Mukherjee Nagar?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Cerebrum offers NEET Biology coaching starting from ₹15,000/month. We provide flexible payment plans including EMI options. Scholarships up to 50% are available based on entrance test performance.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is accommodation available near Mukherjee Nagar coaching center?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Mukherjee Nagar has the best hostel infrastructure in Delhi with 500+ PGs and hostels. Rent ranges from ₹6,000-12,000/month for shared rooms. Safe accommodations for boys and girls with mess facilities.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What are class timings at Cerebrum Mukherjee Nagar?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'We offer multiple batch timings: Morning (7 AM - 10 AM), Day batch (11 AM - 2 PM), and Evening (5 PM - 8 PM). Special weekend batches available for students who attend school on weekdays.',
+      },
+    },
   ],
 }
 

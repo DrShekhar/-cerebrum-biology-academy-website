@@ -81,6 +81,30 @@ const faqStructuredData = {
         text: "Kalu Sarai is well-connected via Hauz Khas Metro Station (Yellow Line) which is just 5 minutes away. It's also accessible from Green Park and AIIMS Metro stations.",
       },
     },
+    {
+      '@type': 'Question',
+      name: 'What is the fee structure for NEET coaching in Kalu Sarai?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Cerebrum offers competitive fees starting from ₹15,000/month for NEET Biology coaching. We offer installment plans and merit scholarships. Sibling discounts and early-bird offers are also available.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Are there hostels available near Kalu Sarai for outstation students?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes! Kalu Sarai and nearby Sarvapriya Vihar have many hostels and PGs catering to coaching students. Rent ranges from ₹8,000-15,000/month. Safe options for boys and girls with 24/7 security and mess.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What batch timings are available at Cerebrum Kalu Sarai?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'We offer flexible batches: Early Morning (6 AM - 9 AM), Morning (9 AM - 12 PM), Afternoon (2 PM - 5 PM), and Evening (6 PM - 9 PM). Weekend-only batches are available for school-going students.',
+      },
+    },
   ],
 }
 
