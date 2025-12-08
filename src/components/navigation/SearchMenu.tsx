@@ -722,8 +722,13 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
                 )}
               </div>
 
-              {/* Search Footer - Hide keyboard hints on mobile */}
-              <div className="border-t border-gray-200 p-3 sm:p-4 bg-gray-50">
+              {/* Search Footer - Hide keyboard hints on mobile, with safe area padding */}
+              <div
+                className="border-t border-gray-200 p-3 sm:p-4 bg-gray-50"
+                style={{
+                  paddingBottom: isMobile ? 'max(12px, env(safe-area-inset-bottom, 12px))' : '16px',
+                }}
+              >
                 <div className="flex items-center justify-between text-xs sm:text-sm text-gray-500">
                   <span className="hidden sm:inline">Press ESC to close</span>
                   <span className="sm:hidden">Swipe down to close</span>

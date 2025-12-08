@@ -163,36 +163,11 @@ export function FloatingCTA() {
         </button>
       )}
 
-      {/* Fixed Bottom CTA Bar for Mobile - with safe area support */}
-      <div
-        className="fixed bottom-0 left-0 right-0 z-[50] lg:hidden bg-white border-t border-gray-200 shadow-lg"
-        style={{ paddingBottom: 'env(safe-area-inset-bottom, 0px)' }}
-      >
-        <div className="grid grid-cols-3 divide-x divide-gray-200">
-          {actions.map((action) => {
-            const Icon = action.icon
-            const Component = action.external ? 'a' : Link
-            const linkProps = action.external
-              ? { href: action.href, target: '_blank', rel: 'noopener noreferrer' }
-              : { href: action.href }
-
-            return (
-              <Component
-                key={action.action}
-                {...linkProps}
-                onClick={() => handleActionClick(action.action)}
-                className="flex flex-col items-center justify-center py-2.5 px-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors min-h-[56px] touch-manipulation active:bg-blue-100"
-              >
-                <Icon className="w-5 h-5 mb-0.5" />
-                <span className="text-[11px] font-medium leading-tight">{action.label}</span>
-              </Component>
-            )
-          })}
-        </div>
-      </div>
-
-      {/* Spacer for fixed bottom bar - accounts for safe area */}
-      <div className="h-[calc(56px+env(safe-area-inset-bottom,0px))] lg:hidden" />
+      {/*
+        Mobile Bottom CTA Bar REMOVED - EnhancedTouchInterface handles this
+        Consolidating CTAs improves mobile UX by reducing visual clutter
+        The EnhancedTouchInterface provides better touch-optimized CTAs
+      */}
     </>
   )
 }

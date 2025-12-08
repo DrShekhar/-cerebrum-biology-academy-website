@@ -72,6 +72,26 @@ export function DemoBookingSystem() {
   const [selectedDate, setSelectedDate] = useState<Date | undefined>(undefined)
   const [selectedTime, setSelectedTime] = useState<string>('')
   const [hoveredInstructor, setHoveredInstructor] = useState<string | null>(null)
+  const [isMobile, setIsMobile] = useState(false)
+
+  // Detect mobile for native date picker
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768 || 'ontouchstart' in window)
+    }
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
+
+  // Scroll input into view when focused (iOS keyboard handling)
+  const handleInputFocus = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    if (isMobile) {
+      setTimeout(() => {
+        e.target.scrollIntoView({ behavior: 'smooth', block: 'center' })
+      }, 300) // Delay to allow keyboard to appear
+    }
+  }
   const [bookingData, setBookingData] = useState<BookingData>({
     studentName: '',
     email: '',
@@ -680,27 +700,57 @@ export function DemoBookingSystem() {
                   <h3 className="text-lg font-semibold text-gray-900 mb-4">
                     Choose Your Preferred Date
                   </h3>
-                  <div className="flex justify-center overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0">
-                    <div className="inline-block max-w-full">
-                      <DayPicker
-                        mode="single"
-                        selected={selectedDate}
-                        onSelect={(date) => {
-                          setSelectedDate(date)
-                          setSelectedTime('')
-                        }}
-                        disabled={disabledDays}
-                        fromDate={tomorrow}
-                        toDate={twoWeeksFromNow}
-                        modifiersClassNames={{
-                          selected: 'bg-blue-600 text-white hover:bg-blue-700',
-                          today: 'font-bold text-blue-600',
-                          disabled: 'text-gray-300 cursor-not-allowed',
-                        }}
-                        className="border border-gray-200 rounded-lg p-2 sm:p-4 rdp-mobile-optimized"
-                      />
+
+                  {/* Mobile: Native date picker for better UX */}
+                  {isMobile ? (
+                    <div className="space-y-3">
+                      <div className="relative">
+                        <input
+                          type="date"
+                          value={selectedDate ? format(selectedDate, 'yyyy-MM-dd') : ''}
+                          onChange={(e) => {
+                            if (e.target.value) {
+                              setSelectedDate(new Date(e.target.value))
+                              setSelectedTime('')
+                            }
+                          }}
+                          min={format(tomorrow, 'yyyy-MM-dd')}
+                          max={format(twoWeeksFromNow, 'yyyy-MM-dd')}
+                          className="w-full p-4 text-lg border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white appearance-none cursor-pointer"
+                          style={{ fontSize: '16px' }}
+                        />
+                        <Calendar className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none" />
+                      </div>
+                      {selectedDate && (
+                        <p className="text-center text-blue-600 font-medium">
+                          Selected: {format(selectedDate, 'EEEE, MMMM d, yyyy')}
+                        </p>
+                      )}
                     </div>
-                  </div>
+                  ) : (
+                    /* Desktop: Full calendar picker */
+                    <div className="flex justify-center overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0">
+                      <div className="inline-block max-w-full">
+                        <DayPicker
+                          mode="single"
+                          selected={selectedDate}
+                          onSelect={(date) => {
+                            setSelectedDate(date)
+                            setSelectedTime('')
+                          }}
+                          disabled={disabledDays}
+                          fromDate={tomorrow}
+                          toDate={twoWeeksFromNow}
+                          modifiersClassNames={{
+                            selected: 'bg-blue-600 text-white hover:bg-blue-700',
+                            today: 'font-bold text-blue-600',
+                            disabled: 'text-gray-300 cursor-not-allowed',
+                          }}
+                          className="border border-gray-200 rounded-lg p-2 sm:p-4 rdp-mobile-optimized"
+                        />
+                      </div>
+                    </div>
+                  )}
                   <p className="text-sm text-gray-500 text-center mt-2">
                     Select any date within the next 2 weeks
                   </p>
@@ -800,6 +850,7 @@ export function DemoBookingSystem() {
                             type="text"
                             value={bookingData.studentName}
                             onChange={(e) => handleInputChange('studentName', e.target.value)}
+                            onFocus={handleInputFocus}
                             className={`w-full p-3 pr-10 border rounded-lg focus:ring-2 focus:border-transparent text-base ${
                               validationStates.studentName?.isValid
                                 ? 'border-green-500 focus:ring-green-500'
@@ -835,6 +886,7 @@ export function DemoBookingSystem() {
                             type="tel"
                             value={bookingData.phone}
                             onChange={(e) => handleInputChange('phone', e.target.value)}
+                            onFocus={handleInputFocus}
                             className={`w-full p-3 pr-10 border rounded-lg focus:ring-2 focus:border-transparent text-base ${
                               validationStates.phone?.isValid
                                 ? 'border-green-500 focus:ring-green-500'
@@ -870,6 +922,7 @@ export function DemoBookingSystem() {
                             type="email"
                             value={bookingData.email}
                             onChange={(e) => handleInputChange('email', e.target.value)}
+                            onFocus={handleInputFocus}
                             className={`w-full p-3 pr-10 border rounded-lg focus:ring-2 focus:border-transparent text-base ${
                               validationStates.email?.isValid
                                 ? 'border-green-500 focus:ring-green-500'
