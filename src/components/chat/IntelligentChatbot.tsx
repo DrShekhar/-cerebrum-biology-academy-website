@@ -86,11 +86,15 @@ export function IntelligentChatbot() {
     },
   })
   const [inputValue, setInputValue] = useState('')
+  const [streamingMessage, setStreamingMessage] = useState('')
   const messagesEndRef = useRef<HTMLDivElement>(null)
+  const abortControllerRef = useRef<AbortController | null>(null)
+  const conversationHistoryRef = useRef<Array<{ role: 'user' | 'assistant'; content: string }>>([])
+  const [useClaudeAI, setUseClaudeAI] = useState(true)
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
-  }, [chatState.messages])
+  }, [chatState.messages, streamingMessage])
 
   useEffect(() => {
     if (chatState.isOpen && chatState.messages.length === 0) {
@@ -210,7 +214,7 @@ export function IntelligentChatbot() {
     )
   }
 
-  const processUserMessage = (message: string) => {
+  const processUserMessage = async (message: string) => {
     const lowerMessage = message.toLowerCase()
 
     // Update conversation context based on message content
@@ -242,42 +246,189 @@ export function IntelligentChatbot() {
       return { ...prev, conversationContext: newContext }
     })
 
-    // Intent detection and personalized responses
-    if (lowerMessage.includes('course') || lowerMessage.includes('program')) {
-      handleCourseInquiry(lowerMessage)
-    } else if (
-      lowerMessage.includes('fee') ||
-      lowerMessage.includes('price') ||
-      lowerMessage.includes('cost')
-    ) {
-      handleFeeInquiry()
-    } else if (lowerMessage.includes('demo') || lowerMessage.includes('trial')) {
-      handleDemoRequest()
-    } else if (
-      lowerMessage.includes('call') ||
-      lowerMessage.includes('phone') ||
-      lowerMessage.includes('speak')
-    ) {
-      handleCallRequest()
-    } else if (
-      lowerMessage.includes('class 11') ||
-      lowerMessage.includes('class 12') ||
-      lowerMessage.includes('dropper')
-    ) {
-      handleClassSpecificInquiry(lowerMessage)
-    } else if (
-      lowerMessage.includes('neet') ||
-      lowerMessage.includes('aiims') ||
-      lowerMessage.includes('medical')
-    ) {
-      handleExamSpecificInquiry(lowerMessage)
-    } else if (lowerMessage.includes('faculty') || lowerMessage.includes('teacher')) {
-      handleFacultyInquiry()
-    } else if (lowerMessage.includes('result') || lowerMessage.includes('success')) {
-      handleResultInquiry()
+    // Use Claude AI for intelligent responses
+    if (useClaudeAI) {
+      await streamClaudeResponse(message)
     } else {
-      handleGeneralInquiry(lowerMessage)
+      // Fallback to rule-based responses
+      if (lowerMessage.includes('course') || lowerMessage.includes('program')) {
+        handleCourseInquiry(lowerMessage)
+      } else if (
+        lowerMessage.includes('fee') ||
+        lowerMessage.includes('price') ||
+        lowerMessage.includes('cost')
+      ) {
+        handleFeeInquiry()
+      } else if (lowerMessage.includes('demo') || lowerMessage.includes('trial')) {
+        handleDemoRequest()
+      } else if (
+        lowerMessage.includes('call') ||
+        lowerMessage.includes('phone') ||
+        lowerMessage.includes('speak')
+      ) {
+        handleCallRequest()
+      } else if (
+        lowerMessage.includes('class 11') ||
+        lowerMessage.includes('class 12') ||
+        lowerMessage.includes('dropper')
+      ) {
+        handleClassSpecificInquiry(lowerMessage)
+      } else if (
+        lowerMessage.includes('neet') ||
+        lowerMessage.includes('aiims') ||
+        lowerMessage.includes('medical')
+      ) {
+        handleExamSpecificInquiry(lowerMessage)
+      } else if (lowerMessage.includes('faculty') || lowerMessage.includes('teacher')) {
+        handleFacultyInquiry()
+      } else if (lowerMessage.includes('result') || lowerMessage.includes('success')) {
+        handleResultInquiry()
+      } else {
+        handleGeneralInquiry(lowerMessage)
+      }
     }
+  }
+
+  const streamClaudeResponse = async (userMessage: string) => {
+    // Add user message to conversation history
+    conversationHistoryRef.current.push({ role: 'user', content: userMessage })
+
+    // Abort any ongoing stream
+    if (abortControllerRef.current) {
+      abortControllerRef.current.abort()
+    }
+    abortControllerRef.current = new AbortController()
+
+    setStreamingMessage('')
+
+    try {
+      const response = await fetch('/api/ceri-ai/stream', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          messages: conversationHistoryRef.current,
+          useCache: true,
+        }),
+        signal: abortControllerRef.current.signal,
+      })
+
+      if (!response.ok) {
+        throw new Error('Failed to get AI response')
+      }
+
+      const reader = response.body?.getReader()
+      if (!reader) throw new Error('No response body')
+
+      const decoder = new TextDecoder()
+      let fullContent = ''
+
+      while (true) {
+        const { done, value } = await reader.read()
+        if (done) break
+
+        const chunk = decoder.decode(value, { stream: true })
+        const lines = chunk.split('\n')
+
+        for (const line of lines) {
+          if (line.startsWith('data: ')) {
+            try {
+              const data = JSON.parse(line.substring(6))
+              if (data.type === 'content_block_delta' && data.delta?.text) {
+                fullContent += data.delta.text
+                setStreamingMessage(fullContent)
+              }
+            } catch {
+              // Skip non-JSON lines
+            }
+          }
+        }
+      }
+
+      // Add assistant response to conversation history
+      conversationHistoryRef.current.push({ role: 'assistant', content: fullContent })
+
+      // Create the final bot message
+      const botMessage: ChatMessage = {
+        id: Date.now().toString(),
+        type: 'bot',
+        content: fullContent,
+        timestamp: new Date(),
+        suggestions: generateSmartSuggestions(fullContent),
+        actions: generateSmartActions(fullContent),
+      }
+
+      setChatState((prev) => ({
+        ...prev,
+        messages: [...prev.messages, botMessage],
+        isTyping: false,
+      }))
+      setStreamingMessage('')
+    } catch (error) {
+      if ((error as Error).name === 'AbortError') {
+        return // User cancelled
+      }
+      console.error('Claude API error:', error)
+      // Fall back to rule-based response on error
+      setUseClaudeAI(false)
+      handleGeneralInquiry(userMessage.toLowerCase())
+      setUseClaudeAI(true) // Re-enable for next message
+    }
+  }
+
+  const generateSmartSuggestions = (response: string): string[] => {
+    const lowerResponse = response.toLowerCase()
+    const suggestions: string[] = []
+
+    if (lowerResponse.includes('course') || lowerResponse.includes('program')) {
+      suggestions.push('Tell me about fees')
+    }
+    if (lowerResponse.includes('demo') || lowerResponse.includes('trial')) {
+      suggestions.push('Book demo now')
+    }
+    if (lowerResponse.includes('fee') || lowerResponse.includes('price')) {
+      suggestions.push('EMI options available?')
+    }
+    if (!lowerResponse.includes('call')) {
+      suggestions.push('Request callback')
+    }
+
+    // Add default suggestions if none matched
+    if (suggestions.length < 2) {
+      if (!suggestions.includes('Book demo now')) suggestions.push('Book demo class')
+      if (!suggestions.includes('Tell me about fees')) suggestions.push('Course details')
+    }
+
+    return suggestions.slice(0, 4)
+  }
+
+  const generateSmartActions = (response: string): ChatAction[] => {
+    const lowerResponse = response.toLowerCase()
+    const actions: ChatAction[] = []
+
+    if (
+      lowerResponse.includes('demo') ||
+      lowerResponse.includes('trial') ||
+      lowerResponse.includes('free class')
+    ) {
+      actions.push({ type: 'book_demo', label: 'Book Demo' })
+    }
+    if (
+      lowerResponse.includes('call') ||
+      lowerResponse.includes('contact') ||
+      lowerResponse.includes('phone')
+    ) {
+      actions.push({ type: 'call_request', label: 'Request Callback' })
+    }
+    if (lowerResponse.includes('course') || lowerResponse.includes('program')) {
+      actions.push({ type: 'view_course', label: 'View Courses' })
+    }
+
+    // Always show at least one action
+    if (actions.length === 0) {
+      actions.push({ type: 'book_demo', label: 'Book Free Demo' })
+    }
+
+    return actions.slice(0, 2)
   }
 
   const handleCourseInquiry = (message: string) => {
@@ -919,23 +1070,30 @@ export function IntelligentChatbot() {
                 </div>
               ))}
 
-              {/* Typing Indicator */}
-              {chatState.isTyping && (
+              {/* Streaming Message or Typing Indicator */}
+              {(chatState.isTyping || streamingMessage) && (
                 <div className="flex justify-start">
-                  <div className="bg-gray-100 px-4 py-2 rounded-2xl">
-                    <div className="flex items-center space-x-1">
-                      <Bot className="w-4 h-4 text-blue-600" />
-                      <div className="flex space-x-1">
-                        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
-                        <div
-                          className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
-                          style={{ animationDelay: '0.1s' }}
-                        ></div>
-                        <div
-                          className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
-                          style={{ animationDelay: '0.2s' }}
-                        ></div>
-                      </div>
+                  <div className="max-w-[80%] sm:max-w-xs lg:max-w-md bg-gray-100 px-3 sm:px-4 py-2 rounded-2xl">
+                    <div className="flex items-start space-x-2">
+                      <Bot className="w-4 h-4 mt-1 text-blue-600 flex-shrink-0" />
+                      {streamingMessage ? (
+                        <div className="whitespace-pre-line text-sm text-gray-900">
+                          {streamingMessage}
+                          <span className="inline-block w-2 h-4 bg-blue-600 ml-1 animate-pulse" />
+                        </div>
+                      ) : (
+                        <div className="flex space-x-1 py-1">
+                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
+                          <div
+                            className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
+                            style={{ animationDelay: '0.1s' }}
+                          ></div>
+                          <div
+                            className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
+                            style={{ animationDelay: '0.2s' }}
+                          ></div>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
