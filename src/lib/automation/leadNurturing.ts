@@ -7,8 +7,12 @@
  * - Enrollment nudges
  * - Payment reminders
  * - Course completion celebrations
+ *
+ * Uses Prisma database for persistence
  */
 
+import { prisma } from '../prisma'
+import { LeadStage as PrismaLeadStage, FollowupAction, QueueStatus } from '../../generated/prisma'
 import {
   sendWhatsAppMessage,
   sendFollowUpMessage,
@@ -17,18 +21,33 @@ import {
   trackEvent,
 } from '../interakt'
 
-// Lead stages
-export type LeadStage =
-  | 'new_inquiry'
-  | 'demo_booked'
-  | 'demo_attended'
-  | 'demo_missed'
-  | 'interested'
-  | 'enrolled'
-  | 'payment_pending'
-  | 'active_student'
-  | 'inactive'
+// Map our workflow stages to Prisma LeadStage enum
+const STAGE_MAPPING: Record<string, PrismaLeadStage> = {
+  new_inquiry: 'NEW_LEAD',
+  demo_booked: 'DEMO_SCHEDULED',
+  demo_attended: 'DEMO_COMPLETED',
+  demo_missed: 'NEW_LEAD', // Treat as new lead needing re-engagement
+  interested: 'OFFER_SENT',
+  enrolled: 'ENROLLED',
+  payment_pending: 'PAYMENT_PLAN_CREATED',
+  active_student: 'ACTIVE_STUDENT',
+  inactive: 'LOST',
+}
 
+// Reverse mapping for workflow lookups
+const REVERSE_STAGE_MAPPING: Record<PrismaLeadStage, string> = {
+  NEW_LEAD: 'new_inquiry',
+  DEMO_SCHEDULED: 'demo_booked',
+  DEMO_COMPLETED: 'demo_attended',
+  OFFER_SENT: 'interested',
+  NEGOTIATING: 'interested',
+  PAYMENT_PLAN_CREATED: 'payment_pending',
+  ENROLLED: 'enrolled',
+  ACTIVE_STUDENT: 'active_student',
+  LOST: 'inactive',
+}
+
+// Lead interface for the service (maps to Prisma leads model)
 export interface Lead {
   id: string
   phone: string
@@ -36,7 +55,7 @@ export interface Lead {
   email?: string
   class?: string
   courseInterest: string
-  stage: LeadStage
+  stage: PrismaLeadStage
   source: string
   createdAt: Date
   lastContactAt?: Date
@@ -44,6 +63,7 @@ export interface Lead {
   demoAttended?: boolean
   enrollmentDate?: Date
   notes?: string
+  assignedToId?: string
 }
 
 interface NurturingAction {
@@ -51,127 +71,127 @@ interface NurturingAction {
   templateName?: string
   message?: string
   params?: Record<string, string>
-  delayHours: number
+  delayMinutes: number
   condition?: (lead: Lead) => boolean
+  triggerType: string
 }
 
 // Nurturing workflows for each stage
-const NURTURING_WORKFLOWS: Record<LeadStage, NurturingAction[]> = {
-  new_inquiry: [
+const NURTURING_WORKFLOWS: Record<string, NurturingAction[]> = {
+  NEW_LEAD: [
     {
       type: 'whatsapp',
       templateName: 'welcome_message',
       params: { '1': '{{name}}' },
-      delayHours: 0,
+      delayMinutes: 0,
+      triggerType: 'STAGE_CHANGE',
     },
     {
       type: 'whatsapp',
       templateName: 'course_information',
-      delayHours: 2,
+      delayMinutes: 120, // 2 hours
+      triggerType: 'TIME_BASED',
     },
     {
       type: 'whatsapp',
       message: 'follow_up',
-      delayHours: 24,
-      condition: (lead) => lead.stage === 'new_inquiry',
+      delayMinutes: 1440, // 24 hours
+      condition: (lead) => lead.stage === 'NEW_LEAD',
+      triggerType: 'TIME_BASED',
     },
     {
       type: 'whatsapp',
       message: 'special_offer',
-      delayHours: 72,
-      condition: (lead) => lead.stage === 'new_inquiry',
+      delayMinutes: 4320, // 72 hours
+      condition: (lead) => lead.stage === 'NEW_LEAD',
+      triggerType: 'TIME_BASED',
     },
   ],
-  demo_booked: [
+  DEMO_SCHEDULED: [
     {
       type: 'whatsapp',
       templateName: 'demo_class_confirmation',
-      delayHours: 0,
+      delayMinutes: 0,
+      triggerType: 'STAGE_CHANGE',
     },
     {
       type: 'whatsapp',
       templateName: 'class_reminder',
-      delayHours: -24, // 24 hours before demo
+      delayMinutes: -1440, // 24 hours before demo
+      triggerType: 'TIME_BASED',
     },
     {
       type: 'whatsapp',
       templateName: 'class_reminder',
-      delayHours: -1, // 1 hour before demo
+      delayMinutes: -60, // 1 hour before demo
+      triggerType: 'TIME_BASED',
     },
   ],
-  demo_attended: [
+  DEMO_COMPLETED: [
     {
       type: 'whatsapp',
       message: 'demo_feedback',
-      delayHours: 1,
+      delayMinutes: 60, // 1 hour after
+      triggerType: 'DEMO_COMPLETED',
     },
     {
       type: 'whatsapp',
       message: 'enrollment_offer',
-      delayHours: 24,
-      condition: (lead) => lead.stage === 'demo_attended',
+      delayMinutes: 1440, // 24 hours
+      condition: (lead) => lead.stage === 'DEMO_COMPLETED',
+      triggerType: 'TIME_BASED',
     },
     {
       type: 'whatsapp',
       message: 'last_chance_offer',
-      delayHours: 72,
-      condition: (lead) => lead.stage === 'demo_attended',
+      delayMinutes: 4320, // 72 hours
+      condition: (lead) => lead.stage === 'DEMO_COMPLETED',
+      triggerType: 'TIME_BASED',
     },
   ],
-  demo_missed: [
-    {
-      type: 'whatsapp',
-      message: 'missed_demo',
-      delayHours: 1,
-    },
-    {
-      type: 'whatsapp',
-      message: 'reschedule_demo',
-      delayHours: 24,
-    },
-    {
-      type: 'whatsapp',
-      message: 'another_chance',
-      delayHours: 72,
-    },
-  ],
-  interested: [
+  OFFER_SENT: [
     {
       type: 'whatsapp',
       message: 'enrollment_benefits',
-      delayHours: 24,
+      delayMinutes: 1440, // 24 hours
+      triggerType: 'OFFER_SENT',
     },
     {
       type: 'whatsapp',
       message: 'limited_seats',
-      delayHours: 72,
+      delayMinutes: 4320, // 72 hours
+      triggerType: 'TIME_BASED',
     },
   ],
-  enrolled: [
+  ENROLLED: [
     {
       type: 'whatsapp',
       templateName: 'welcome_message',
-      delayHours: 0,
+      delayMinutes: 0,
+      triggerType: 'STAGE_CHANGE',
     },
   ],
-  payment_pending: [
+  PAYMENT_PLAN_CREATED: [
     {
       type: 'whatsapp',
       templateName: 'payment_confirmation',
-      delayHours: 24,
+      delayMinutes: 1440, // 24 hours
+      triggerType: 'TIME_BASED',
     },
     {
       type: 'whatsapp',
       message: 'payment_urgent',
-      delayHours: 72,
+      delayMinutes: 4320, // 72 hours
+      triggerType: 'TIME_BASED',
     },
   ],
-  active_student: [],
-  inactive: [
+  ACTIVE_STUDENT: [],
+  LOST: [
     {
       type: 'whatsapp',
       message: 'reactivation',
-      delayHours: 168, // 1 week
+      delayMinutes: 10080, // 1 week
+      triggerType: 'INACTIVITY',
     },
   ],
 }
@@ -319,15 +339,29 @@ export class LeadNurturingService {
   /**
    * Process a new lead and start nurturing workflow
    */
-  async processNewLead(lead: Lead): Promise<void> {
+  async processNewLead(leadData: Omit<Lead, 'id' | 'createdAt' | 'stage'>): Promise<Lead> {
+    // Create lead in database
+    const lead = await prisma.leads.create({
+      data: {
+        id: `lead_${Date.now()}_${Math.random().toString(36).slice(2)}`,
+        studentName: leadData.name,
+        email: leadData.email || null,
+        phone: leadData.phone,
+        courseInterest: leadData.courseInterest,
+        stage: 'NEW_LEAD',
+        source: (leadData.source || 'WEBSITE') as any,
+        assignedToId: leadData.assignedToId || 'system',
+        updatedAt: new Date(),
+      },
+    })
+
     // Track lead in Interakt CRM
     await trackUser({
       phone: lead.phone,
       userId: `lead_${lead.id}`,
       traits: {
-        name: lead.name,
+        name: lead.studentName,
         email: lead.email,
-        class: lead.class,
         courseInterest: lead.courseInterest,
         stage: lead.stage,
         source: lead.source,
@@ -346,20 +380,37 @@ export class LeadNurturingService {
       },
     })
 
-    // Trigger immediate actions
-    await this.executeWorkflowActions(lead, 0)
+    // Schedule immediate and future follow-ups
+    await this.scheduleWorkflowActions(this.mapToLead(lead))
+
+    // Execute immediate actions (delayMinutes = 0)
+    await this.executeImmediateActions(this.mapToLead(lead))
+
+    return this.mapToLead(lead)
   }
 
   /**
    * Update lead stage and trigger relevant workflows
    */
-  async updateLeadStage(lead: Lead, newStage: LeadStage): Promise<void> {
-    const oldStage = lead.stage
-    lead.stage = newStage
+  async updateLeadStage(leadId: string, newStage: PrismaLeadStage): Promise<Lead | null> {
+    const existingLead = await prisma.leads.findUnique({ where: { id: leadId } })
+    if (!existingLead) return null
+
+    const oldStage = existingLead.stage
+
+    // Update lead in database
+    const updatedLead = await prisma.leads.update({
+      where: { id: leadId },
+      data: {
+        stage: newStage,
+        updatedAt: new Date(),
+        lastContactedAt: new Date(),
+      },
+    })
 
     // Track stage change
     await trackEvent({
-      phone: lead.phone,
+      phone: updatedLead.phone,
       eventName: 'lead_stage_changed',
       eventData: {
         oldStage,
@@ -368,29 +419,98 @@ export class LeadNurturingService {
       },
     })
 
-    // Update user traits
+    // Update user traits in CRM
     await trackUser({
-      phone: lead.phone,
-      userId: `lead_${lead.id}`,
+      phone: updatedLead.phone,
+      userId: `lead_${updatedLead.id}`,
       traits: {
         stage: newStage,
         lastStageChange: new Date().toISOString(),
       },
     })
 
-    // Trigger immediate actions for new stage
-    await this.executeWorkflowActions(lead, 0)
+    // Cancel pending follow-ups for old stage
+    await prisma.followup_queue.updateMany({
+      where: {
+        leadId,
+        status: 'PENDING',
+      },
+      data: {
+        status: 'CANCELLED',
+        updatedAt: new Date(),
+      },
+    })
+
+    // Schedule new follow-ups for new stage
+    const lead = this.mapToLead(updatedLead)
+    await this.scheduleWorkflowActions(lead)
+
+    // Execute immediate actions for new stage
+    await this.executeImmediateActions(lead)
+
+    return lead
   }
 
   /**
-   * Execute workflow actions for a lead
+   * Schedule workflow actions in the follow-up queue
    */
-  private async executeWorkflowActions(lead: Lead, delayHours: number): Promise<void> {
+  private async scheduleWorkflowActions(lead: Lead): Promise<void> {
+    const workflow = NURTURING_WORKFLOWS[lead.stage]
+    if (!workflow) return
+
+    // Get or create a default rule for tracking
+    let rule = await prisma.followup_rules.findFirst({
+      where: { name: `auto_${lead.stage}`, isActive: true },
+    })
+
+    if (!rule) {
+      rule = await prisma.followup_rules.create({
+        data: {
+          name: `auto_${lead.stage}`,
+          description: `Automated follow-up rule for ${lead.stage} stage`,
+          isActive: true,
+          triggerType: 'STAGE_CHANGE',
+          triggerConditions: { stage: lead.stage },
+          delayMinutes: 0,
+          actionType: 'WHATSAPP',
+          createdById: 'system',
+          updatedAt: new Date(),
+        },
+      })
+    }
+
+    for (const action of workflow) {
+      if (action.delayMinutes <= 0) continue // Immediate actions handled separately
+
+      const scheduledFor = new Date(Date.now() + action.delayMinutes * 60 * 1000)
+
+      await prisma.followup_queue.create({
+        data: {
+          leadId: lead.id,
+          ruleId: rule.id,
+          scheduledFor,
+          status: 'PENDING',
+          metadata: {
+            actionType: action.type,
+            templateName: action.templateName,
+            message: action.message,
+            params: action.params,
+          },
+          updatedAt: new Date(),
+        },
+      })
+    }
+  }
+
+  /**
+   * Execute immediate actions (delayMinutes = 0)
+   */
+  private async executeImmediateActions(lead: Lead): Promise<void> {
     const workflow = NURTURING_WORKFLOWS[lead.stage]
     if (!workflow) return
 
     for (const action of workflow) {
-      if (action.delayHours !== delayHours) continue
+      if (action.delayMinutes !== 0) continue
       if (action.condition && !action.condition(lead)) continue
 
       await this.executeAction(lead, action)
@@ -402,6 +522,9 @@ export class LeadNurturingService {
    */
   private async executeAction(lead: Lead, action: NurturingAction): Promise<void> {
     try {
+      let success = false
+      let content = ''
+
       if (action.type === 'whatsapp') {
         if (action.templateName) {
           // Use Interakt template
@@ -411,22 +534,52 @@ export class LeadNurturingService {
             if (params[key] === '{{course}}') params[key] = lead.courseInterest
           })
 
-          await sendWhatsAppMessage({
+          const result = await sendWhatsAppMessage({
             phone: lead.phone,
             templateName: action.templateName,
             templateParams: params,
           })
+          success = result.success
+          content = `Template: ${action.templateName}`
         } else if (action.message && CUSTOM_MESSAGES[action.message]) {
           // Use custom message (within 24hr session window)
           const message = CUSTOM_MESSAGES[action.message](lead)
-          await sendWhatsAppMessage({
+          const result = await sendWhatsAppMessage({
             phone: lead.phone,
             message,
           })
+          success = result.success
+          content = message
         }
       }
 
-      // Track action execution
+      // Record in follow-up history
+      await prisma.followup_history.create({
+        data: {
+          leadId: lead.id,
+          action: this.mapActionType(action.type),
+          channel: action.type.toUpperCase(),
+          content,
+          status: success ? 'SENT' : 'FAILED',
+          isAutomated: true,
+          metadata: {
+            templateName: action.templateName,
+            message: action.message,
+            stage: lead.stage,
+          },
+        },
+      })
+
+      // Update lead's last contact time
+      await prisma.leads.update({
+        where: { id: lead.id },
+        data: {
+          lastContactedAt: new Date(),
+          updatedAt: new Date(),
+        },
+      })
+
+      // Track action execution in CRM
       await trackEvent({
         phone: lead.phone,
         eventName: 'nurturing_action_sent',
@@ -435,6 +588,7 @@ export class LeadNurturingService {
           templateName: action.templateName,
           message: action.message,
           stage: lead.stage,
+          success,
         },
       })
     } catch (error) {
@@ -443,22 +597,72 @@ export class LeadNurturingService {
   }
 
   /**
+   * Map action type to Prisma FollowupAction enum
+   */
+  private mapActionType(type: string): FollowupAction {
+    const mapping: Record<string, FollowupAction> = {
+      whatsapp: 'WHATSAPP',
+      email: 'EMAIL',
+      call: 'CALL_TASK',
+      task: 'TASK',
+    }
+    return mapping[type] || 'TASK'
+  }
+
+  /**
+   * Map Prisma lead to our Lead interface
+   */
+  private mapToLead(prismaLead: any): Lead {
+    return {
+      id: prismaLead.id,
+      phone: prismaLead.phone,
+      name: prismaLead.studentName,
+      email: prismaLead.email || undefined,
+      courseInterest: prismaLead.courseInterest,
+      stage: prismaLead.stage,
+      source: prismaLead.source,
+      createdAt: prismaLead.createdAt,
+      lastContactAt: prismaLead.lastContactedAt || undefined,
+      assignedToId: prismaLead.assignedToId,
+    }
+  }
+
+  /**
    * Send manual follow-up message
    */
   async sendManualFollowUp(
-    lead: Lead,
+    leadId: string,
     counselorName: string,
     bookingLink: string
   ): Promise<{ success: boolean; messageId?: string }> {
+    const lead = await prisma.leads.findUnique({ where: { id: leadId } })
+    if (!lead) return { success: false }
+
     const result = await sendFollowUpMessage({
       phone: lead.phone,
-      name: lead.name,
+      name: lead.studentName,
       courseName: lead.courseInterest,
       counselorName,
       bookingLink,
     })
 
     if (result.success) {
+      // Record in history
+      await prisma.followup_history.create({
+        data: {
+          leadId: lead.id,
+          action: 'WHATSAPP',
+          channel: 'WHATSAPP',
+          content: `Manual follow-up by ${counselorName}`,
+          status: 'SENT',
+          isAutomated: false,
+          metadata: {
+            counselor: counselorName,
+            bookingLink,
+          },
+        },
+      })
+
       await trackEvent({
         phone: lead.phone,
         eventName: 'manual_followup_sent',
@@ -476,15 +680,18 @@ export class LeadNurturingService {
    * Send promotional offer to lead
    */
   async sendPromotionalOffer(
-    lead: Lead,
+    leadId: string,
     offerDetails: string,
     validityDate: string,
     promoCode: string,
     enrollLink: string
   ): Promise<{ success: boolean; messageId?: string }> {
+    const lead = await prisma.leads.findUnique({ where: { id: leadId } })
+    if (!lead) return { success: false }
+
     const result = await sendSpecialOffer({
       phone: lead.phone,
-      name: lead.name,
+      name: lead.studentName,
       offerDetails,
       validityDate,
       promoCode,
@@ -492,6 +699,23 @@ export class LeadNurturingService {
     })
 
     if (result.success) {
+      // Record in history
+      await prisma.followup_history.create({
+        data: {
+          leadId: lead.id,
+          action: 'WHATSAPP',
+          channel: 'WHATSAPP',
+          content: `Promo offer: ${promoCode}`,
+          status: 'SENT',
+          isAutomated: false,
+          metadata: {
+            promoCode,
+            validityDate,
+            offerDetails,
+          },
+        },
+      })
+
       await trackEvent({
         phone: lead.phone,
         eventName: 'promo_offer_sent',
@@ -509,44 +733,278 @@ export class LeadNurturingService {
   /**
    * Mark demo as attended and trigger post-demo workflow
    */
-  async markDemoAttended(lead: Lead): Promise<void> {
-    await this.updateLeadStage({ ...lead, demoAttended: true }, 'demo_attended')
+  async markDemoAttended(leadId: string): Promise<Lead | null> {
+    return this.updateLeadStage(leadId, 'DEMO_COMPLETED')
   }
 
   /**
    * Mark demo as missed and trigger recovery workflow
    */
-  async markDemoMissed(lead: Lead): Promise<void> {
-    await this.updateLeadStage({ ...lead, demoAttended: false }, 'demo_missed')
+  async markDemoMissed(leadId: string): Promise<Lead | null> {
+    const lead = await prisma.leads.findUnique({ where: { id: leadId } })
+    if (!lead) return null
+
+    // Send missed demo message
+    const mappedLead = this.mapToLead(lead)
+    await this.executeAction(mappedLead, {
+      type: 'whatsapp',
+      message: 'missed_demo',
+      delayMinutes: 0,
+      triggerType: 'DEMO_NO_SHOW',
+    })
+
+    // Schedule reschedule messages
+    const rescheduleActions: NurturingAction[] = [
+      {
+        type: 'whatsapp',
+        message: 'reschedule_demo',
+        delayMinutes: 1440, // 24 hours
+        triggerType: 'DEMO_NO_SHOW',
+      },
+      {
+        type: 'whatsapp',
+        message: 'another_chance',
+        delayMinutes: 4320, // 72 hours
+        triggerType: 'DEMO_NO_SHOW',
+      },
+    ]
+
+    // Get or create rule for demo no-show
+    let rule = await prisma.followup_rules.findFirst({
+      where: { name: 'demo_no_show', isActive: true },
+    })
+
+    if (!rule) {
+      rule = await prisma.followup_rules.create({
+        data: {
+          name: 'demo_no_show',
+          description: 'Follow-up for missed demo classes',
+          isActive: true,
+          triggerType: 'DEMO_NO_SHOW',
+          triggerConditions: {},
+          delayMinutes: 0,
+          actionType: 'WHATSAPP',
+          createdById: 'system',
+          updatedAt: new Date(),
+        },
+      })
+    }
+
+    for (const action of rescheduleActions) {
+      const scheduledFor = new Date(Date.now() + action.delayMinutes * 60 * 1000)
+      await prisma.followup_queue.create({
+        data: {
+          leadId,
+          ruleId: rule.id,
+          scheduledFor,
+          status: 'PENDING',
+          metadata: {
+            actionType: action.type,
+            message: action.message,
+          },
+          updatedAt: new Date(),
+        },
+      })
+    }
+
+    return mappedLead
   }
 
   /**
    * Get recommended next action for a lead
    */
-  getRecommendedAction(lead: Lead): string {
+  async getRecommendedAction(leadId: string): Promise<string> {
+    const lead = await prisma.leads.findUnique({ where: { id: leadId } })
+    if (!lead) return 'Lead not found'
+
     const workflow = NURTURING_WORKFLOWS[lead.stage]
     if (!workflow || workflow.length === 0) {
       return 'No automated actions scheduled'
     }
 
-    const nextAction = workflow.find((a) => a.delayHours > 0 && (!a.condition || a.condition(lead)))
+    // Check pending queue items
+    const nextQueued = await prisma.followup_queue.findFirst({
+      where: {
+        leadId,
+        status: 'PENDING',
+      },
+      orderBy: { scheduledFor: 'asc' },
+    })
 
-    if (!nextAction) {
-      return 'All automated actions completed'
+    if (nextQueued) {
+      const metadata = nextQueued.metadata as any
+      const minutesUntil = Math.round(
+        (nextQueued.scheduledFor.getTime() - Date.now()) / (60 * 1000)
+      )
+      return `Next: ${metadata?.templateName || metadata?.message || 'follow-up'} in ${minutesUntil} minutes`
     }
 
-    return `Next: ${nextAction.templateName || nextAction.message} in ${nextAction.delayHours} hours`
+    return 'All automated actions completed'
+  }
+
+  /**
+   * Get lead by ID
+   */
+  async getLeadById(leadId: string): Promise<Lead | null> {
+    const lead = await prisma.leads.findUnique({ where: { id: leadId } })
+    return lead ? this.mapToLead(lead) : null
+  }
+
+  /**
+   * Get lead by phone
+   */
+  async getLeadByPhone(phone: string): Promise<Lead | null> {
+    const normalizedPhone = phone.replace(/[^\d]/g, '').slice(-10)
+    const lead = await prisma.leads.findFirst({
+      where: {
+        phone: { contains: normalizedPhone },
+      },
+    })
+    return lead ? this.mapToLead(lead) : null
+  }
+
+  /**
+   * Get all leads for a stage
+   */
+  async getLeadsByStage(stage: PrismaLeadStage): Promise<Lead[]> {
+    const leads = await prisma.leads.findMany({
+      where: { stage },
+      orderBy: { createdAt: 'desc' },
+    })
+    return leads.map((l) => this.mapToLead(l))
   }
 }
 
 // Export singleton instance
 export const leadNurturingService = new LeadNurturingService()
 
-// Utility function to process scheduled nurturing tasks (called by cron job)
-export async function processScheduledNurturing(): Promise<void> {
-  // In production, this would:
-  // 1. Query database for leads that need nurturing
-  // 2. Check which actions are due based on lead creation/stage change time
-  // 3. Execute actions for each lead
-  console.log('Processing scheduled nurturing tasks...')
+/**
+ * Process scheduled nurturing tasks (called by cron job)
+ * This processes the followup_queue table
+ */
+export async function processScheduledNurturing(): Promise<{
+  processed: number
+  success: number
+  failed: number
+}> {
+  const stats = { processed: 0, success: 0, failed: 0 }
+
+  try {
+    // Get all pending queue items that are due
+    const dueItems = await prisma.followup_queue.findMany({
+      where: {
+        status: 'PENDING',
+        scheduledFor: { lte: new Date() },
+      },
+      include: {
+        lead: true,
+      },
+      take: 50, // Process in batches
+    })
+
+    for (const item of dueItems) {
+      stats.processed++
+
+      try {
+        // Mark as processing
+        await prisma.followup_queue.update({
+          where: { id: item.id },
+          data: {
+            status: 'PROCESSING',
+            attempt: item.attempt + 1,
+            lastAttemptAt: new Date(),
+            updatedAt: new Date(),
+          },
+        })
+
+        const metadata = item.metadata as any
+        const lead = leadNurturingService['mapToLead'](item.lead)
+
+        // Check if condition still applies
+        const workflow = NURTURING_WORKFLOWS[lead.stage]
+        const action = workflow?.find(
+          (a) =>
+            (a.templateName === metadata?.templateName || a.message === metadata?.message) &&
+            (!a.condition || a.condition(lead))
+        )
+
+        if (!action) {
+          // Condition no longer applies, skip
+          await prisma.followup_queue.update({
+            where: { id: item.id },
+            data: {
+              status: 'SKIPPED',
+              completedAt: new Date(),
+              updatedAt: new Date(),
+            },
+          })
+          continue
+        }
+
+        // Execute the action
+        await leadNurturingService['executeAction'](lead, action)
+
+        // Mark as completed
+        await prisma.followup_queue.update({
+          where: { id: item.id },
+          data: {
+            status: 'COMPLETED',
+            completedAt: new Date(),
+            updatedAt: new Date(),
+          },
+        })
+
+        stats.success++
+      } catch (error) {
+        console.error('Error processing queue item:', item.id, error)
+
+        // Check if we should retry
+        if (item.attempt < item.maxAttempts) {
+          await prisma.followup_queue.update({
+            where: { id: item.id },
+            data: {
+              status: 'PENDING',
+              errorMessage: error instanceof Error ? error.message : 'Unknown error',
+              updatedAt: new Date(),
+            },
+          })
+        } else {
+          await prisma.followup_queue.update({
+            where: { id: item.id },
+            data: {
+              status: 'FAILED',
+              errorMessage: error instanceof Error ? error.message : 'Unknown error',
+              completedAt: new Date(),
+              updatedAt: new Date(),
+            },
+          })
+        }
+
+        stats.failed++
+      }
+    }
+
+    console.log('Scheduled nurturing processed:', stats)
+  } catch (error) {
+    console.error('Error in processScheduledNurturing:', error)
+  }
+
+  return stats
+}
+
+/**
+ * Clean up old completed/failed queue items (housekeeping)
+ */
+export async function cleanupFollowupQueue(daysOld: number = 30): Promise<number> {
+  const cutoffDate = new Date(Date.now() - daysOld * 24 * 60 * 60 * 1000)
+
+  const result = await prisma.followup_queue.deleteMany({
+    where: {
+      status: { in: ['COMPLETED', 'FAILED', 'SKIPPED', 'CANCELLED'] },
+      completedAt: { lt: cutoffDate },
+    },
+  })
+
+  console.log(`Cleaned up ${result.count} old queue items`)
+  return result.count
 }
