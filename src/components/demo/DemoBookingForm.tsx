@@ -251,7 +251,7 @@ export function DemoBookingForm({ onSuccess, className = '' }: DemoBookingFormPr
         </div>
       </div>
 
-      <form onSubmit={handleSubmit} className="p-6">
+      <form onSubmit={handleSubmit} className="p-4 sm:p-6">
         {error && (
           <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-xl flex items-center mb-6">
             <AlertCircle className="w-5 h-5 mr-2" />
@@ -461,7 +461,7 @@ export function DemoBookingForm({ onSuccess, className = '' }: DemoBookingFormPr
             <button
               type="button"
               onClick={prevStep}
-              className="px-6 py-3 border border-gray-300 text-gray-700 rounded-xl hover:bg-gray-50 transition-colors"
+              className="px-4 sm:px-6 py-3 border border-gray-300 text-gray-700 rounded-xl hover:bg-gray-50 transition-colors text-sm sm:text-base min-h-[44px]"
             >
               Previous
             </button>
@@ -471,7 +471,7 @@ export function DemoBookingForm({ onSuccess, className = '' }: DemoBookingFormPr
             <button
               type="button"
               onClick={nextStep}
-              className="ml-auto px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all"
+              className="ml-auto px-4 sm:px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all text-sm sm:text-base min-h-[44px]"
               disabled={
                 !formData.studentName ||
                 !formData.email ||
@@ -485,7 +485,7 @@ export function DemoBookingForm({ onSuccess, className = '' }: DemoBookingFormPr
             <button
               type="submit"
               disabled={isLoading || !formData.preferredDate || !formData.preferredTime}
-              className="ml-auto px-8 py-3 bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-xl hover:from-green-700 hover:to-blue-700 transform hover:-translate-y-1 transition-all duration-300 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+              className="ml-auto px-4 sm:px-6 md:px-8 py-3 bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-xl hover:from-green-700 hover:to-blue-700 transform hover:-translate-y-1 transition-all duration-300 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed text-sm sm:text-base min-h-[44px]"
             >
               {isLoading ? (
                 <div className="flex items-center">

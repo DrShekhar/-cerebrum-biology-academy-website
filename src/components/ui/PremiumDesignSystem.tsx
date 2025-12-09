@@ -73,10 +73,10 @@ export function PremiumButton({
   const [isPressed, setIsPressed] = useState(false)
 
   const sizeClasses = {
-    sm: 'px-4 py-2 text-sm',
-    md: 'px-6 py-3 text-base',
-    lg: 'px-8 py-4 text-lg',
-    xl: 'px-12 py-6 text-xl',
+    sm: 'px-3 sm:px-4 py-2 text-xs sm:text-sm',
+    md: 'px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base',
+    lg: 'px-4 sm:px-6 md:px-8 py-3 sm:py-4 text-sm sm:text-base md:text-lg',
+    xl: 'px-6 sm:px-8 md:px-12 py-4 sm:py-5 md:py-6 text-sm sm:text-base md:text-lg lg:text-xl',
   }
 
   const variantClasses = {

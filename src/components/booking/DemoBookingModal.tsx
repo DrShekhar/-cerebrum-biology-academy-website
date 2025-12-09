@@ -125,7 +125,7 @@ export function DemoBookingModal({
         >
           <FocusTrap>
             <motion.div
-              className="bg-white rounded-3xl p-8 max-w-md w-full max-h-[90vh] overflow-y-auto relative"
+              className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 max-w-md w-full max-h-[90vh] overflow-y-auto relative"
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
@@ -144,17 +144,17 @@ export function DemoBookingModal({
 
               {!isSubmitted ? (
                 <>
-                  <div className="text-center mb-8">
-                    <div className="w-16 h-16 mx-auto bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                      <Calendar className="w-8 h-8 text-blue-600" />
+                  <div className="text-center mb-6 sm:mb-8">
+                    <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto bg-blue-100 rounded-full flex items-center justify-center mb-3 sm:mb-4">
+                      <Calendar className="w-6 h-6 sm:w-8 sm:h-8 text-blue-600" />
                     </div>
                     <h2
                       id="demo-booking-modal-title"
-                      className="text-2xl font-bold text-gray-900 mb-2"
+                      className="text-xl sm:text-2xl font-bold text-gray-900 mb-2"
                     >
                       Book Free Demo Class
                     </h2>
-                    <p className="text-gray-600">{courseTitle}</p>
+                    <p className="text-gray-600 text-sm sm:text-base">{courseTitle}</p>
                   </div>
 
                   <form onSubmit={handleSubmit} className="space-y-6">
@@ -203,7 +203,7 @@ export function DemoBookingModal({
                       />
                     </div>
 
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
                           <Calendar className="w-4 h-4 inline mr-2" />

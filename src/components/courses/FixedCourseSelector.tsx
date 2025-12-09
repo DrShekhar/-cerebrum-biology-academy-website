@@ -303,7 +303,7 @@ export function FixedCourseSelector({ onCourseSelect, className = '' }: FixedCou
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-5xl font-bold mb-6">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
               Find Your Perfect
               <span className="bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
                 {' '}
@@ -311,7 +311,7 @@ export function FixedCourseSelector({ onCourseSelect, className = '' }: FixedCou
               </span>
               Course
             </h1>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-blue-100 max-w-3xl mx-auto mb-8 px-4">
               Join 10,000+ successful students with our AI-powered course matching and expert
               faculty guidance.
             </p>
@@ -572,13 +572,13 @@ export function FixedCourseSelector({ onCourseSelect, className = '' }: FixedCou
                     handleBookDemo(demoCourse)
                   }
                 }}
-                className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors"
+                className="bg-white text-blue-600 px-4 sm:px-6 md:px-8 py-3 sm:py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors text-sm sm:text-base"
                 disabled={filteredCourses.length === 0}
               >
-                Book FREE Demo & Get NEET Strategy
+                Book FREE Demo
               </button>
-              <button className="bg-blue-500 text-white px-8 py-4 rounded-xl font-semibold hover:bg-blue-400 transition-colors">
-                💬 Talk to NEET Expert Now
+              <button className="bg-blue-500 text-white px-4 sm:px-6 md:px-8 py-3 sm:py-4 rounded-xl font-semibold hover:bg-blue-400 transition-colors text-sm sm:text-base">
+                Talk to Expert
               </button>
             </div>
           </motion.div>

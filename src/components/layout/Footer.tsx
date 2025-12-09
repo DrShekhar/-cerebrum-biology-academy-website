@@ -179,7 +179,7 @@ export const Footer = memo(function Footer() {
               </div>
               <div>
                 <h3 className="text-xl font-bold">Cerebrum Biology Academy</h3>
-                <p className="text-gray-400 text-sm">Excellence in Biology Education</p>
+                <p className="text-gray-300 text-sm">Excellence in Biology Education</p>
               </div>
             </div>
 
@@ -369,7 +369,10 @@ export const Footer = memo(function Footer() {
               <p className="text-gray-300 text-sm">{t('getLatestUpdates')}</p>
             </div>
 
-            <form onSubmit={handleNewsletterSubscribe} className="flex flex-col sm:flex-row gap-3">
+            <form
+              onSubmit={handleNewsletterSubscribe}
+              className="flex flex-col sm:flex-row gap-2 sm:gap-3"
+            >
               <label htmlFor="newsletter-email" className="sr-only">
                 Email address
               </label>
@@ -379,19 +382,19 @@ export const Footer = memo(function Footer() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20"
+                className="flex-1 px-3 sm:px-4 py-2 sm:py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 text-sm sm:text-base min-h-[44px]"
                 aria-label="Email address for newsletter"
                 disabled={isSubscribing}
               />
               <Button
                 type="submit"
                 variant="primary"
-                className="whitespace-nowrap"
+                className="w-full sm:w-auto whitespace-nowrap text-xs sm:text-sm min-h-[44px]"
                 aria-label="Subscribe to newsletter"
                 disabled={isSubscribing}
               >
                 {isSubscribing ? '...' : t('subscribe')}
-                <Send className="w-4 h-4 ml-2" aria-hidden="true" />
+                <Send className="w-3 h-3 sm:w-4 sm:h-4 ml-1 sm:ml-2" aria-hidden="true" />
               </Button>
             </form>
             {subscribeMessage && (
@@ -410,7 +413,7 @@ export const Footer = memo(function Footer() {
         <div className="max-w-7xl mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             {/* Copyright */}
-            <div className="text-gray-400 text-sm text-center md:text-left">
+            <div className="text-gray-300 text-sm text-center md:text-left">
               © {currentYear} Cerebrum Biology Academy. All rights reserved. | Empowering future
               doctors through excellence in biology education.
             </div>
@@ -439,7 +442,7 @@ export const Footer = memo(function Footer() {
                 <span key={link.name} className="flex items-center">
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-gray-300 hover:text-white transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -450,7 +453,7 @@ export const Footer = memo(function Footer() {
                 <span className="text-gray-600 ml-4">|</span>
                 <Link
                   href="/portal"
-                  className="text-gray-400 hover:text-white transition-colors ml-4"
+                  className="text-gray-300 hover:text-white transition-colors ml-4"
                 >
                   Staff Login
                 </Link>
@@ -460,7 +463,7 @@ export const Footer = memo(function Footer() {
 
           {/* Language Switcher - Simplified Dropdown */}
           <div className="mt-6 pt-4 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="text-gray-400 text-sm">{t('chooseLanguage')}:</div>
+            <div className="text-gray-300 text-sm">{t('chooseLanguage')}:</div>
             <LanguageSwitcher variant="default" />
           </div>
         </div>

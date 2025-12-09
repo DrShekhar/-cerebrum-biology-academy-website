@@ -82,7 +82,7 @@ export function FloatingCTA() {
     <>
       {/* Mobile Floating CTA - Only show when not near bottom and scrolled past hero */}
       {showFloatingButton && (
-        <div className="fixed bottom-24 right-4 z-[70] lg:hidden">
+        <div className="fixed bottom-20 sm:bottom-24 right-3 sm:right-4 z-[70] lg:hidden">
           {/* Expanded Actions - positioned higher to avoid bottom bar overlap */}
           {isExpanded && (
             <div className="absolute bottom-16 right-0 space-y-3 animate-fadeInUp">
@@ -108,7 +108,7 @@ export function FloatingCTA() {
                       className={`flex items-center space-x-3 px-4 py-3 rounded-full text-white font-medium shadow-lg transition-all duration-300 transform hover:scale-105 min-h-[48px] touch-manipulation ${action.color}`}
                     >
                       <Icon className="w-5 h-5" />
-                      <span className="whitespace-nowrap">{action.label}</span>
+                      <span className="whitespace-nowrap text-xs sm:text-sm">{action.label}</span>
                     </Component>
                   </div>
                 )
