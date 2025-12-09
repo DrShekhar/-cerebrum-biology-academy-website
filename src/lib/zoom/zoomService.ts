@@ -54,15 +54,80 @@ interface ZoomMeetingResponse {
   uuid: string
 }
 
+// OAuth token cache
+let cachedAccessToken: string | null = null
+let tokenExpiresAt: number = 0
+
 export class ZoomService {
   private apiUrl: string
-  private jwtToken: string
   private userId: string
+  private accountId: string
+  private clientId: string
+  private clientSecret: string
 
   constructor() {
     this.apiUrl = process.env.ZOOM_API_URL || 'https://api.zoom.us/v2'
-    this.jwtToken = process.env.ZOOM_JWT_TOKEN || ''
     this.userId = process.env.ZOOM_USER_ID || 'me'
+    this.accountId = process.env.ZOOM_ACCOUNT_ID || ''
+    this.clientId = process.env.ZOOM_CLIENT_ID || ''
+    this.clientSecret = process.env.ZOOM_CLIENT_SECRET || ''
+  }
+
+  /**
+   * Get OAuth access token using Server-to-Server OAuth
+   * Tokens are valid for 1 hour and cached
+   */
+  private async getAccessToken(): Promise<string | null> {
+    // Return cached token if still valid (with 5 min buffer)
+    if (cachedAccessToken && Date.now() < tokenExpiresAt - 300000) {
+      return cachedAccessToken
+    }
+
+    // Check if OAuth credentials are configured
+    if (!this.accountId || !this.clientId || !this.clientSecret) {
+      console.warn('Zoom OAuth credentials not configured, using simulation mode')
+      return null
+    }
+
+    try {
+      const credentials = Buffer.from(`${this.clientId}:${this.clientSecret}`).toString('base64')
+
+      const response = await fetch('https://zoom.us/oauth/token', {
+        method: 'POST',
+        headers: {
+          Authorization: `Basic ${credentials}`,
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: new URLSearchParams({
+          grant_type: 'account_credentials',
+          account_id: this.accountId,
+        }),
+      })
+
+      if (!response.ok) {
+        const errorText = await response.text()
+        console.error('Zoom OAuth token error:', response.status, errorText)
+        return null
+      }
+
+      const data = await response.json()
+      cachedAccessToken = data.access_token
+      // Token expires in 1 hour (3600 seconds)
+      tokenExpiresAt = Date.now() + data.expires_in * 1000
+
+      console.log('Zoom OAuth token obtained successfully')
+      return cachedAccessToken
+    } catch (error) {
+      console.error('Error getting Zoom OAuth token:', error)
+      return null
+    }
+  }
+
+  /**
+   * Check if Zoom is properly configured
+   */
+  isConfigured(): boolean {
+    return !!(this.accountId && this.clientId && this.clientSecret)
   }
 
   async createDemoMeeting(bookingData: DemoBookingData): Promise<ZoomMeetingResponse | null> {
@@ -91,9 +156,10 @@ export class ZoomService {
         },
       }
 
-      // Use real Zoom API if credentials are available, otherwise simulate
-      const response = this.jwtToken
-        ? await this.createRealZoomMeeting(meetingData)
+      // Use real Zoom API if OAuth credentials are available, otherwise simulate
+      const accessToken = await this.getAccessToken()
+      const response = accessToken
+        ? await this.createRealZoomMeeting(meetingData, accessToken)
         : await this.simulateZoomAPICall(meetingData)
 
       if (response) {
@@ -119,13 +185,14 @@ export class ZoomService {
   }
 
   private async createRealZoomMeeting(
-    meetingData: ZoomMeetingData
+    meetingData: ZoomMeetingData,
+    accessToken: string
   ): Promise<ZoomMeetingResponse | null> {
     try {
       const response = await fetch(`${this.apiUrl}/users/${this.userId}/meetings`, {
         method: 'POST',
         headers: {
-          Authorization: `Bearer ${this.jwtToken}`,
+          Authorization: `Bearer ${accessToken}`,
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(meetingData),
