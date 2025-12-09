@@ -1,8 +1,7 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import FocusTrap from 'focus-trap-react'
 import {
   X,
   Download,
@@ -39,6 +38,12 @@ export function ExitIntentPopup({
   const [discountCode, setDiscountCode] = useState<string | null>(null)
   const [discountTimer, setDiscountTimer] = useState({ minutes: 14, seconds: 59 })
 
+  // Handle close - mark as dismissed so it doesn't reappear
+  const handleClose = useCallback(() => {
+    sessionStorage.setItem('exitIntentDismissed', 'true')
+    onClose()
+  }, [onClose])
+
   useEffect(() => {
     if (!isVisible || variant !== 'discount') return
 
@@ -70,7 +75,7 @@ export function ExitIntentPopup({
 
       // Auto close after 8 seconds (longer to let user copy code)
       setTimeout(() => {
-        onClose()
+        handleClose()
         setIsSubmitted(false)
         setDiscountCode(null)
       }, 8000)
@@ -111,366 +116,378 @@ export function ExitIntentPopup({
     'Exclusive study material access',
   ]
 
+  // Handle escape key to close
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && isVisible) {
+        handleClose()
+      }
+    }
+    document.addEventListener('keydown', handleEscape)
+    return () => document.removeEventListener('keydown', handleEscape)
+  }, [isVisible, handleClose])
+
   return (
     <AnimatePresence>
       {isVisible && (
-        <FocusTrap>
-          <div
-            className="fixed inset-0 z-[9999] flex items-center justify-center p-2 sm:p-4"
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="exit-intent-popup-title"
+        <div
+          className="fixed inset-0 z-[9999] flex items-center justify-center p-2 sm:p-4"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="exit-intent-popup-title"
+        >
+          {/* Backdrop - click to close */}
+          <motion.div
+            className="absolute inset-0 bg-gray-900/50 backdrop-blur-sm cursor-pointer"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={handleClose}
+          />
+
+          {/* Popup Content - mobile optimized */}
+          <motion.div
+            className="relative bg-white rounded-2xl sm:rounded-3xl shadow-2xl w-full max-w-[calc(100vw-1rem)] sm:max-w-md md:max-w-lg max-h-[90vh] overflow-y-auto"
+            initial={{ scale: 0.95, opacity: 0, y: 20 }}
+            animate={{ scale: 1, opacity: 1, y: 0 }}
+            exit={{ scale: 0.95, opacity: 0, y: 20 }}
+            transition={{ type: 'spring', duration: 0.4 }}
           >
-            {/* Backdrop - softer overlay for better UX */}
-            <motion.div
-              className="absolute inset-0 bg-gray-900/50 backdrop-blur-sm"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={onClose}
-            />
-
-            {/* Popup Content - mobile optimized */}
-            <motion.div
-              className="relative bg-white rounded-2xl sm:rounded-3xl shadow-2xl w-full max-w-[calc(100vw-1rem)] sm:max-w-md md:max-w-lg max-h-[90vh] overflow-y-auto"
-              initial={{ scale: 0.95, opacity: 0, y: 20 }}
-              animate={{ scale: 1, opacity: 1, y: 0 }}
-              exit={{ scale: 0.95, opacity: 0, y: 20 }}
-              transition={{ type: 'spring', duration: 0.4 }}
+            {/* Close Button - prominent and easy to tap */}
+            <button
+              onClick={handleClose}
+              className="absolute top-3 right-3 z-20 bg-white hover:bg-gray-100 rounded-full p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center transition-all shadow-lg border border-gray-200 touch-manipulation active:scale-95"
+              aria-label="Close popup"
             >
-              {/* Close Button - larger touch target */}
-              <button
-                onClick={onClose}
-                className="absolute top-3 right-3 z-10 bg-white/90 hover:bg-white rounded-full p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center transition-colors shadow-md touch-manipulation"
-                aria-label="Close popup"
-              >
-                <X className="w-5 h-5 text-gray-600" />
-              </button>
+              <X className="w-5 h-5 text-gray-700" />
+            </button>
 
-              {variant === 'discount' ? (
-                <>
-                  {/* Discount Variant Header - compact on mobile */}
-                  <div className="bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 text-white px-4 sm:px-6 py-5 sm:py-8 relative overflow-hidden">
+            {variant === 'discount' ? (
+              <>
+                {/* Discount Variant Header - compact on mobile */}
+                <div className="bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 text-white px-4 sm:px-6 py-5 sm:py-8 relative overflow-hidden">
+                  <motion.div
+                    className="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full"
+                    animate={{ scale: [1, 1.2, 1] }}
+                    transition={{ duration: 3, repeat: Infinity }}
+                  />
+                  <motion.div
+                    className="absolute -bottom-5 -left-5 w-20 h-20 bg-white/10 rounded-full"
+                    animate={{ scale: [1, 1.3, 1] }}
+                    transition={{ duration: 2.5, repeat: Infinity }}
+                  />
+
+                  <div className="relative z-10">
                     <motion.div
-                      className="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full"
-                      animate={{ scale: [1, 1.2, 1] }}
-                      transition={{ duration: 3, repeat: Infinity }}
-                    />
-                    <motion.div
-                      className="absolute -bottom-5 -left-5 w-20 h-20 bg-white/10 rounded-full"
-                      animate={{ scale: [1, 1.3, 1] }}
-                      transition={{ duration: 2.5, repeat: Infinity }}
-                    />
+                      className="inline-flex items-center bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-sm mb-3"
+                      animate={{ scale: [1, 1.05, 1] }}
+                      transition={{ duration: 1.5, repeat: Infinity }}
+                    >
+                      <Sparkles className="w-4 h-4 mr-1" />
+                      <span>Exclusive Offer</span>
+                    </motion.div>
 
-                    <div className="relative z-10">
-                      <motion.div
-                        className="inline-flex items-center bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-sm mb-3"
-                        animate={{ scale: [1, 1.05, 1] }}
-                        transition={{ duration: 1.5, repeat: Infinity }}
-                      >
-                        <Sparkles className="w-4 h-4 mr-1" />
-                        <span>Exclusive Offer</span>
-                      </motion.div>
+                    <h2
+                      id="exit-intent-popup-title"
+                      className="text-xl sm:text-2xl md:text-3xl font-bold mb-1 sm:mb-2 pr-8"
+                    >
+                      Wait! Don't Leave Yet...
+                    </h2>
+                    <p className="text-orange-100 text-base sm:text-lg">
+                      Get 20% OFF + FREE Demo Class!
+                    </p>
 
-                      <h2
-                        id="exit-intent-popup-title"
-                        className="text-xl sm:text-2xl md:text-3xl font-bold mb-1 sm:mb-2 pr-8"
-                      >
-                        Wait! Don't Leave Yet...
-                      </h2>
-                      <p className="text-orange-100 text-base sm:text-lg">
-                        Get 20% OFF + FREE Demo Class!
-                      </p>
-
-                      {/* Countdown Timer - responsive */}
-                      <div className="mt-3 sm:mt-4 flex flex-wrap items-center gap-2">
-                        <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-300" />
-                        <span className="text-yellow-100 text-sm sm:text-base">Expires in:</span>
-                        <div className="flex gap-1 font-mono font-bold text-base sm:text-lg">
-                          <span className="bg-white/20 px-2 py-1 rounded">
-                            {String(discountTimer.minutes).padStart(2, '0')}
-                          </span>
-                          <span>:</span>
-                          <span className="bg-white/20 px-2 py-1 rounded">
-                            {String(discountTimer.seconds).padStart(2, '0')}
-                          </span>
-                        </div>
+                    {/* Countdown Timer - responsive */}
+                    <div className="mt-3 sm:mt-4 flex flex-wrap items-center gap-2">
+                      <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-300" />
+                      <span className="text-yellow-100 text-sm sm:text-base">Expires in:</span>
+                      <div className="flex gap-1 font-mono font-bold text-base sm:text-lg">
+                        <span className="bg-white/20 px-2 py-1 rounded">
+                          {String(discountTimer.minutes).padStart(2, '0')}
+                        </span>
+                        <span>:</span>
+                        <span className="bg-white/20 px-2 py-1 rounded">
+                          {String(discountTimer.seconds).padStart(2, '0')}
+                        </span>
                       </div>
                     </div>
                   </div>
+                </div>
 
-                  {/* Discount Content */}
-                  <div className="px-4 sm:px-6 py-4 sm:py-6">
-                    {!isSubmitted ? (
-                      <>
-                        {/* Benefits - single column on small mobile, 2 cols on larger */}
-                        <div className="grid grid-cols-1 xs:grid-cols-2 gap-2 sm:gap-3 mb-4 sm:mb-6">
-                          {discountBenefits.map((benefit, index) => (
-                            <motion.div
-                              key={index}
-                              className="flex items-center bg-green-50 rounded-lg p-2.5 sm:p-3"
-                              initial={{ opacity: 0, x: -20 }}
-                              animate={{ opacity: 1, x: 0 }}
-                              transition={{ delay: index * 0.1 }}
-                            >
-                              <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 mr-2 flex-shrink-0" />
-                              <span className="text-xs sm:text-sm text-gray-700 font-medium">
-                                {benefit}
-                              </span>
-                            </motion.div>
-                          ))}
+                {/* Discount Content */}
+                <div className="px-4 sm:px-6 py-4 sm:py-6">
+                  {!isSubmitted ? (
+                    <>
+                      {/* Benefits - single column on small mobile, 2 cols on larger */}
+                      <div className="grid grid-cols-1 xs:grid-cols-2 gap-2 sm:gap-3 mb-4 sm:mb-6">
+                        {discountBenefits.map((benefit, index) => (
+                          <motion.div
+                            key={index}
+                            className="flex items-center bg-green-50 rounded-lg p-2.5 sm:p-3"
+                            initial={{ opacity: 0, x: -20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ delay: index * 0.1 }}
+                          >
+                            <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 mr-2 flex-shrink-0" />
+                            <span className="text-xs sm:text-sm text-gray-700 font-medium">
+                              {benefit}
+                            </span>
+                          </motion.div>
+                        ))}
+                      </div>
+
+                      {/* Lead Form - optimized for mobile */}
+                      <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
+                        <div>
+                          <input
+                            type="text"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all text-base"
+                            placeholder="Your Name"
+                            style={{ fontSize: '16px' }}
+                          />
+                        </div>
+                        <div className="space-y-3">
+                          <input
+                            type="tel"
+                            value={phone}
+                            onChange={(e) => setPhone(e.target.value)}
+                            required
+                            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all text-base"
+                            placeholder="Phone Number *"
+                            style={{ fontSize: '16px' }}
+                          />
+                          <input
+                            type="email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            required
+                            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all text-base"
+                            placeholder="Email Address *"
+                            style={{ fontSize: '16px' }}
+                          />
                         </div>
 
-                        {/* Lead Form - optimized for mobile */}
-                        <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
-                          <div>
-                            <input
-                              type="text"
-                              value={name}
-                              onChange={(e) => setName(e.target.value)}
-                              className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all text-base"
-                              placeholder="Your Name"
-                              style={{ fontSize: '16px' }}
-                            />
-                          </div>
-                          <div className="space-y-3">
-                            <input
-                              type="tel"
-                              value={phone}
-                              onChange={(e) => setPhone(e.target.value)}
-                              required
-                              className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all text-base"
-                              placeholder="Phone Number *"
-                              style={{ fontSize: '16px' }}
-                            />
-                            <input
-                              type="email"
-                              value={email}
-                              onChange={(e) => setEmail(e.target.value)}
-                              required
-                              className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none transition-all text-base"
-                              placeholder="Email Address *"
-                              style={{ fontSize: '16px' }}
-                            />
-                          </div>
-
-                          <motion.button
-                            type="submit"
-                            disabled={isSubmitting || !email || !phone}
-                            className="w-full py-3.5 sm:py-4 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold text-base sm:text-lg rounded-xl shadow-lg hover:shadow-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 min-h-[48px] touch-manipulation"
-                            whileHover={{ scale: 1.02 }}
-                            whileTap={{ scale: 0.98 }}
-                          >
-                            <Percent className="w-5 h-5" />
-                            {isSubmitting ? 'Claiming...' : 'Claim 20% Discount'}
-                          </motion.button>
-
-                          <p className="text-xs text-gray-500 text-center">
-                            Limited time offer. No spam!
-                          </p>
-
-                          <div className="relative my-3">
-                            <div className="absolute inset-0 flex items-center">
-                              <div className="w-full border-t border-gray-200"></div>
-                            </div>
-                            <div className="relative flex justify-center text-xs">
-                              <span className="px-3 bg-white text-gray-500">or</span>
-                            </div>
-                          </div>
-
-                          <a
-                            href="https://wa.me/918826444334?text=Hi!%20I%20saw%20the%20discount%20offer.%20Please%20help%20me%20claim%2020%25%20off."
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center justify-center gap-2 w-full px-4 py-3 bg-[#25D366] hover:bg-[#20BD5A] text-white font-semibold rounded-xl transition-colors min-h-[48px] touch-manipulation text-sm"
-                          >
-                            <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-                            </svg>
-                            Claim via WhatsApp
-                          </a>
-                        </form>
-
-                        {/* Trust Indicators */}
-                        <div className="mt-4 pt-4 border-t border-gray-100">
-                          <div className="flex items-center justify-center gap-4 text-xs text-gray-500">
-                            <div className="flex items-center">
-                              <Trophy className="w-4 h-4 mr-1 text-yellow-500" />
-                              98% Success Rate
-                            </div>
-                            <div className="flex items-center">
-                              <Users className="w-4 h-4 mr-1 text-blue-500" />
-                              2,500+ Students
-                            </div>
-                          </div>
-                        </div>
-                      </>
-                    ) : (
-                      <div className="text-center py-6">
-                        <motion.div
-                          className="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"
-                          initial={{ scale: 0 }}
-                          animate={{ scale: 1 }}
-                          transition={{ type: 'spring' }}
+                        <motion.button
+                          type="submit"
+                          disabled={isSubmitting || !email || !phone}
+                          className="w-full py-3.5 sm:py-4 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold text-base sm:text-lg rounded-xl shadow-lg hover:shadow-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 min-h-[48px] touch-manipulation"
+                          whileHover={{ scale: 1.02 }}
+                          whileTap={{ scale: 0.98 }}
                         >
-                          <CheckCircle className="w-8 h-8 text-green-600" />
-                        </motion.div>
-                        <h3 className="text-2xl font-bold text-gray-900 mb-2">Discount Claimed!</h3>
-                        {discountCode && (
-                          <div className="bg-gradient-to-r from-orange-100 to-red-100 border-2 border-dashed border-orange-400 rounded-xl p-4 mb-4">
-                            <p className="text-sm text-gray-600 mb-1">Your 20% Discount Code:</p>
-                            <p className="text-2xl font-mono font-bold text-orange-600 tracking-wider">
-                              {discountCode}
-                            </p>
-                            <button
-                              onClick={() => {
-                                navigator.clipboard.writeText(discountCode)
-                              }}
-                              className="mt-2 text-sm text-orange-600 hover:text-orange-700 underline"
-                            >
-                              Click to copy
-                            </button>
+                          <Percent className="w-5 h-5" />
+                          {isSubmitting ? 'Claiming...' : 'Claim 20% Discount'}
+                        </motion.button>
+
+                        <p className="text-xs text-gray-500 text-center">
+                          Limited time offer. No spam!
+                        </p>
+
+                        <div className="relative my-3">
+                          <div className="absolute inset-0 flex items-center">
+                            <div className="w-full border-t border-gray-200"></div>
                           </div>
-                        )}
-                        <p className="text-gray-600 mb-2">
-                          Use this code during enrollment to get 20% off!
-                        </p>
-                        <p className="text-sm text-gray-500">
-                          Our counselor will call you shortly to schedule your FREE demo class.
-                        </p>
-                      </div>
-                    )}
-                  </div>
-                </>
-              ) : (
-                <>
-                  {/* Catalog Variant Header */}
-                  <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white px-6 sm:px-8 py-6">
-                    <div className="flex items-center mb-4">
-                      <div className="bg-white/20 rounded-full p-3 mr-4">
-                        <Gift className="w-8 h-8" />
-                      </div>
-                      <div>
-                        <h2 className="text-xl sm:text-2xl font-bold">Wait! Don't Miss This...</h2>
-                        <p className="text-blue-100">
-                          Get Cerebrum's complete NEET Biology guide FREE
-                        </p>
-                      </div>
-                    </div>
+                          <div className="relative flex justify-center text-xs">
+                            <span className="px-3 bg-white text-gray-500">or</span>
+                          </div>
+                        </div>
 
-                    <div className="bg-white/10 rounded-lg p-3 sm:p-4">
-                      <div className="flex flex-wrap items-center justify-center gap-4 text-xs sm:text-sm">
-                        <div className="flex items-center">
-                          <Trophy className="w-4 h-4 mr-2" />
-                          <span>98% Success</span>
-                        </div>
-                        <div className="flex items-center">
-                          <Users className="w-4 h-4 mr-2" />
-                          <span>2,500+ Students</span>
-                        </div>
-                        <div className="flex items-center">
-                          <BookOpen className="w-4 h-4 mr-2" />
-                          <span>AIIMS Faculty</span>
+                        <a
+                          href="https://wa.me/918826444334?text=Hi!%20I%20saw%20the%20discount%20offer.%20Please%20help%20me%20claim%2020%25%20off."
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center justify-center gap-2 w-full px-4 py-3 bg-[#25D366] hover:bg-[#20BD5A] text-white font-semibold rounded-xl transition-colors min-h-[48px] touch-manipulation text-sm"
+                        >
+                          <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                          </svg>
+                          Claim via WhatsApp
+                        </a>
+                      </form>
+
+                      {/* Trust Indicators */}
+                      <div className="mt-4 pt-4 border-t border-gray-100">
+                        <div className="flex items-center justify-center gap-4 text-xs text-gray-500">
+                          <div className="flex items-center">
+                            <Trophy className="w-4 h-4 mr-1 text-yellow-500" />
+                            98% Success Rate
+                          </div>
+                          <div className="flex items-center">
+                            <Users className="w-4 h-4 mr-1 text-blue-500" />
+                            2,500+ Students
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-
-                  {/* Catalog Content */}
-                  <div className="px-6 sm:px-8 py-6">
-                    {!isSubmitted ? (
-                      <>
-                        <div className="text-center mb-6">
-                          <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">
-                            Download Cerebrum's Complete Course Catalog
-                          </h3>
-                          <p className="text-sm sm:text-base text-gray-600">
-                            Everything you need to know about Cerebrum's proven NEET Biology
-                            coaching programs
+                    </>
+                  ) : (
+                    <div className="text-center py-6">
+                      <motion.div
+                        className="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"
+                        initial={{ scale: 0 }}
+                        animate={{ scale: 1 }}
+                        transition={{ type: 'spring' }}
+                      >
+                        <CheckCircle className="w-8 h-8 text-green-600" />
+                      </motion.div>
+                      <h3 className="text-2xl font-bold text-gray-900 mb-2">Discount Claimed!</h3>
+                      {discountCode && (
+                        <div className="bg-gradient-to-r from-orange-100 to-red-100 border-2 border-dashed border-orange-400 rounded-xl p-4 mb-4">
+                          <p className="text-sm text-gray-600 mb-1">Your 20% Discount Code:</p>
+                          <p className="text-2xl font-mono font-bold text-orange-600 tracking-wider">
+                            {discountCode}
                           </p>
-                        </div>
-
-                        {/* Features Grid */}
-                        <div className="grid grid-cols-1 gap-2 mb-6 max-h-40 overflow-y-auto">
-                          {catalogFeatures.map((feature, index) => (
-                            <div key={index} className="flex items-start">
-                              <CheckCircle className="w-4 h-4 text-emerald-500 mr-2 mt-0.5 flex-shrink-0" />
-                              <span className="text-sm text-gray-700">{feature}</span>
-                            </div>
-                          ))}
-                        </div>
-
-                        {/* Lead Form */}
-                        <form onSubmit={handleSubmit} className="space-y-3">
-                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                            <input
-                              type="email"
-                              value={email}
-                              onChange={(e) => setEmail(e.target.value)}
-                              required
-                              className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all text-sm"
-                              placeholder="Email Address *"
-                            />
-                            <input
-                              type="tel"
-                              value={phone}
-                              onChange={(e) => setPhone(e.target.value)}
-                              required
-                              className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all text-sm"
-                              placeholder="Phone Number *"
-                            />
-                          </div>
-
-                          <Button
-                            type="submit"
-                            variant="primary"
-                            size="lg"
-                            disabled={isSubmitting || !email || !phone}
-                            className="w-full py-3 text-base font-semibold"
+                          <button
+                            onClick={() => {
+                              navigator.clipboard.writeText(discountCode)
+                            }}
+                            className="mt-2 text-sm text-orange-600 hover:text-orange-700 underline"
                           >
-                            <Download className="w-5 h-5 mr-2" />
-                            {isSubmitting ? 'Sending...' : 'Download Free Catalog'}
-                          </Button>
-
-                          <p className="text-xs text-gray-500 text-center">
-                            Your information is secure. We respect your privacy.
-                          </p>
-                        </form>
-                      </>
-                    ) : (
-                      <div className="text-center py-6">
-                        <div className="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                          <CheckCircle className="w-8 h-8 text-green-600" />
+                            Click to copy
+                          </button>
                         </div>
-                        <h3 className="text-xl font-bold text-gray-900 mb-2">Catalog Sent!</h3>
-                        <p className="text-gray-600 mb-2">
-                          Check your email for the complete course catalog.
-                        </p>
-                        <p className="text-sm text-gray-500">
-                          Our counselor will call you within 24 hours.
+                      )}
+                      <p className="text-gray-600 mb-2">
+                        Use this code during enrollment to get 20% off!
+                      </p>
+                      <p className="text-sm text-gray-500">
+                        Our counselor will call you shortly to schedule your FREE demo class.
+                      </p>
+                    </div>
+                  )}
+                </div>
+              </>
+            ) : (
+              <>
+                {/* Catalog Variant Header */}
+                <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white px-6 sm:px-8 py-6">
+                  <div className="flex items-center mb-4">
+                    <div className="bg-white/20 rounded-full p-3 mr-4">
+                      <Gift className="w-8 h-8" />
+                    </div>
+                    <div>
+                      <h2 className="text-xl sm:text-2xl font-bold">Wait! Don't Miss This...</h2>
+                      <p className="text-blue-100">
+                        Get Cerebrum's complete NEET Biology guide FREE
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="bg-white/10 rounded-lg p-3 sm:p-4">
+                    <div className="flex flex-wrap items-center justify-center gap-4 text-xs sm:text-sm">
+                      <div className="flex items-center">
+                        <Trophy className="w-4 h-4 mr-2" />
+                        <span>98% Success</span>
+                      </div>
+                      <div className="flex items-center">
+                        <Users className="w-4 h-4 mr-2" />
+                        <span>2,500+ Students</span>
+                      </div>
+                      <div className="flex items-center">
+                        <BookOpen className="w-4 h-4 mr-2" />
+                        <span>AIIMS Faculty</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Catalog Content */}
+                <div className="px-6 sm:px-8 py-6">
+                  {!isSubmitted ? (
+                    <>
+                      <div className="text-center mb-6">
+                        <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">
+                          Download Cerebrum's Complete Course Catalog
+                        </h3>
+                        <p className="text-sm sm:text-base text-gray-600">
+                          Everything you need to know about Cerebrum's proven NEET Biology coaching
+                          programs
                         </p>
                       </div>
-                    )}
-                  </div>
-                </>
-              )}
-            </motion.div>
-          </div>
-        </FocusTrap>
+
+                      {/* Features Grid */}
+                      <div className="grid grid-cols-1 gap-2 mb-6 max-h-40 overflow-y-auto">
+                        {catalogFeatures.map((feature, index) => (
+                          <div key={index} className="flex items-start">
+                            <CheckCircle className="w-4 h-4 text-emerald-500 mr-2 mt-0.5 flex-shrink-0" />
+                            <span className="text-sm text-gray-700">{feature}</span>
+                          </div>
+                        ))}
+                      </div>
+
+                      {/* Lead Form */}
+                      <form onSubmit={handleSubmit} className="space-y-3">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                          <input
+                            type="email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            required
+                            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all text-sm"
+                            placeholder="Email Address *"
+                          />
+                          <input
+                            type="tel"
+                            value={phone}
+                            onChange={(e) => setPhone(e.target.value)}
+                            required
+                            className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all text-sm"
+                            placeholder="Phone Number *"
+                          />
+                        </div>
+
+                        <Button
+                          type="submit"
+                          variant="primary"
+                          size="lg"
+                          disabled={isSubmitting || !email || !phone}
+                          className="w-full py-3 text-base font-semibold"
+                        >
+                          <Download className="w-5 h-5 mr-2" />
+                          {isSubmitting ? 'Sending...' : 'Download Free Catalog'}
+                        </Button>
+
+                        <p className="text-xs text-gray-500 text-center">
+                          Your information is secure. We respect your privacy.
+                        </p>
+                      </form>
+                    </>
+                  ) : (
+                    <div className="text-center py-6">
+                      <div className="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <CheckCircle className="w-8 h-8 text-green-600" />
+                      </div>
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">Catalog Sent!</h3>
+                      <p className="text-gray-600 mb-2">
+                        Check your email for the complete course catalog.
+                      </p>
+                      <p className="text-sm text-gray-500">
+                        Our counselor will call you within 24 hours.
+                      </p>
+                    </div>
+                  )}
+                </div>
+              </>
+            )}
+          </motion.div>
+        </div>
       )}
     </AnimatePresence>
   )
 }
 
-// Hook for exit-intent detection - improved to reduce accidental triggers
+// Hook for exit-intent detection - respects user's dismissal decision
 export function useExitIntent() {
   const [showExitIntent, setShowExitIntent] = useState(false)
   const [hasTriggered, setHasTriggered] = useState(false)
 
   useEffect(() => {
-    // Check if user has already seen the popup in this session
+    // Check if user has already seen OR dismissed the popup in this session
+    // Respect their decision - don't be pushy!
     const hasSeenPopup = sessionStorage.getItem('exitIntentShown')
-    if (hasSeenPopup) {
+    const hasDismissed = sessionStorage.getItem('exitIntentDismissed')
+
+    if (hasSeenPopup || hasDismissed) {
       setHasTriggered(true)
       return
     }
@@ -479,7 +496,7 @@ export function useExitIntent() {
     let isEnabled = false
     const enableTimer = setTimeout(() => {
       isEnabled = true
-    }, 5000) // Wait 5 seconds before enabling
+    }, 8000) // Wait 8 seconds before enabling (increased from 5)
 
     const handleMouseLeave = (e: MouseEvent) => {
       // Only trigger if cursor moves to top of screen (exit intent)
@@ -507,7 +524,7 @@ export function useExitIntent() {
 
         // Only trigger after multiple consecutive scroll-up events at top
         // This prevents accidental triggers from bounce scrolling
-        if (scrollUpCount >= 3 && !hasTriggered) {
+        if (scrollUpCount >= 5 && !hasTriggered) {
           setShowExitIntent(true)
           setHasTriggered(true)
           sessionStorage.setItem('exitIntentShown', 'true')
@@ -531,6 +548,8 @@ export function useExitIntent() {
 
   const hideExitIntent = () => {
     setShowExitIntent(false)
+    // Mark as dismissed so it won't reappear
+    sessionStorage.setItem('exitIntentDismissed', 'true')
   }
 
   return { showExitIntent, hideExitIntent }

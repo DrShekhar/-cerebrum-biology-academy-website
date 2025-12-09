@@ -20,9 +20,11 @@ export function ExitIntentPopup({ onClose }: ExitIntentPopupProps) {
   const [error, setError] = useState('')
 
   useEffect(() => {
-    // Check if popup was already shown in this session
+    // Check if popup was already shown OR dismissed in this session
+    // Respect user's decision - don't be pushy!
     const shown = sessionStorage.getItem('exitIntentShown')
-    if (shown) {
+    const dismissed = sessionStorage.getItem('exitIntentDismissed')
+    if (shown || dismissed) {
       setHasShown(true)
       return
     }
@@ -37,10 +39,10 @@ export function ExitIntentPopup({ onClose }: ExitIntentPopupProps) {
       }
     }
 
-    // Add a delay before enabling exit intent
+    // Add a delay before enabling exit intent (increased to 8 seconds)
     const timer = setTimeout(() => {
       document.addEventListener('mouseleave', handleMouseLeave)
-    }, 5000)
+    }, 8000)
 
     return () => {
       clearTimeout(timer)
@@ -50,6 +52,8 @@ export function ExitIntentPopup({ onClose }: ExitIntentPopupProps) {
 
   const handleClose = () => {
     setIsVisible(false)
+    // Mark as dismissed so it won't reappear in this session
+    sessionStorage.setItem('exitIntentDismissed', 'true')
     onClose?.()
   }
 
@@ -129,13 +133,13 @@ export function ExitIntentPopup({ onClose }: ExitIntentPopupProps) {
             animate={{ scale: 1, y: 0 }}
             exit={{ scale: 0.9, y: 20 }}
           >
-            {/* Close Button */}
+            {/* Close Button - prominent and easy to tap */}
             <button
               onClick={handleClose}
-              className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 z-10"
+              className="absolute top-3 right-3 z-20 bg-white hover:bg-gray-100 rounded-full p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center transition-all shadow-lg border border-gray-200 touch-manipulation active:scale-95"
               aria-label="Close popup"
             >
-              <X className="w-6 h-6" />
+              <X className="w-5 h-5 text-gray-700" />
             </button>
 
             {success ? (
