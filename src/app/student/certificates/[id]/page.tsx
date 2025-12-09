@@ -233,7 +233,7 @@ export default async function CertificateDetailPage({ params }: { params: { id: 
               </div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
               <a
                 href={`/api/student/certificates/${certificate.id}/download`}
                 className="flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"

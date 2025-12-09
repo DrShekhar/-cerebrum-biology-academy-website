@@ -1123,7 +1123,7 @@ export default function PricingPage() {
                 Why Cerebrum Biology Academy?
               </h2>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
               {[
                 {
                   icon: TrophyIcon,
@@ -1143,15 +1143,17 @@ export default function PricingPage() {
               ].map((item, idx) => (
                 <div
                   key={idx}
-                  className="text-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 sm:p-8 hover:bg-white/10 transition-colors duration-300"
+                  className="flex flex-row md:flex-col items-center md:items-center gap-4 md:gap-0 text-left md:text-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-4 md:p-8 hover:bg-white/10 transition-colors duration-300"
                 >
-                  <div className="inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-white/10 rounded-2xl mb-5">
-                    <item.icon className="w-7 h-7 sm:w-8 sm:h-8" />
+                  <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 md:w-16 md:h-16 bg-white/10 rounded-xl md:rounded-2xl md:mb-5">
+                    <item.icon className="w-6 h-6 md:w-8 md:h-8" />
                   </div>
-                  <h3 className="text-lg sm:text-xl font-bold mb-2">{item.title}</h3>
-                  <p className="text-blue-100/80 text-sm sm:text-base leading-relaxed">
-                    {item.desc}
-                  </p>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-base md:text-xl font-bold mb-1 md:mb-2">{item.title}</h3>
+                    <p className="text-blue-100/80 text-sm md:text-base leading-relaxed">
+                      {item.desc}
+                    </p>
+                  </div>
                 </div>
               ))}
             </div>

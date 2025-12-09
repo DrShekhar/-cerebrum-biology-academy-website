@@ -226,7 +226,7 @@ export function SendMessageModal({ lead, isOpen, onClose, onSuccess }: SendMessa
             <label className="block text-sm font-medium text-gray-700 mb-3">
               Select Channels <span className="text-red-500">*</span>
             </label>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
               {(
                 Object.entries(channelConfig) as [
                   CommChannel,

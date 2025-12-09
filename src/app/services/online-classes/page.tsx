@@ -703,18 +703,18 @@ export default function OnlineClassesPage() {
             <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">
               🚀 Special Launch Offer - Limited Time!
             </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mb-6 sm:mb-8">
+            <div className="grid grid-cols-3 gap-2 sm:gap-6 mb-6 sm:mb-8">
               <div className="text-center">
-                <div className="text-2xl sm:text-3xl font-bold mb-1 sm:mb-2">7 Days</div>
-                <div className="text-sm sm:text-base text-blue-100">Free Trial</div>
+                <div className="text-lg sm:text-3xl font-bold mb-1 sm:mb-2">7 Days</div>
+                <div className="text-xs sm:text-base text-blue-100">Free Trial</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl sm:text-3xl font-bold mb-1 sm:mb-2">₹5,000</div>
-                <div className="text-sm sm:text-base text-blue-100">Early Bird Discount</div>
+                <div className="text-lg sm:text-3xl font-bold mb-1 sm:mb-2">₹5,000</div>
+                <div className="text-xs sm:text-base text-blue-100">Early Bird Discount</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl sm:text-3xl font-bold mb-1 sm:mb-2">100%</div>
-                <div className="text-sm sm:text-base text-blue-100">Money Back Guarantee</div>
+                <div className="text-lg sm:text-3xl font-bold mb-1 sm:mb-2">100%</div>
+                <div className="text-xs sm:text-base text-blue-100">Money Back Guarantee</div>
               </div>
             </div>
 

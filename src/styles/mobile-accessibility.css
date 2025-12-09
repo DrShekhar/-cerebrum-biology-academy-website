@@ -430,8 +430,8 @@ html {
     outline-offset: 2px;
   }
 
-  /* External link indicator */
-  a[target='_blank']::after {
+  /* External link indicator - only for text links, not icon buttons */
+  a[target='_blank']:not(.social-link):not([aria-label])::after {
     content: ' ↗';
     font-size: 0.8em;
     opacity: 0.7;

@@ -278,18 +278,18 @@ export default function Class11BiologyPage() {
                 <Award className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-600 mr-2" />
                 Compare with Competition
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-3 text-xs sm:text-sm">
+              <div className="grid grid-cols-3 gap-2 sm:gap-3 text-xs sm:text-sm">
                 <div className="text-center">
-                  <div className="font-bold text-green-600">Cerebrum</div>
-                  <div className="text-gray-600">₹3,500/month</div>
+                  <div className="font-bold text-green-600 text-xs sm:text-sm">Cerebrum</div>
+                  <div className="text-gray-600 text-[10px] sm:text-sm">₹3,500/mo</div>
                 </div>
                 <div className="text-center">
-                  <div className="font-medium text-gray-700">Allen Digital</div>
-                  <div className="text-gray-500">₹5,000/month</div>
+                  <div className="font-medium text-gray-700 text-xs sm:text-sm">Allen</div>
+                  <div className="text-gray-500 text-[10px] sm:text-sm">₹5,000/mo</div>
                 </div>
                 <div className="text-center">
-                  <div className="font-medium text-gray-700">BYJU'S</div>
-                  <div className="text-gray-500">₹7,000/month</div>
+                  <div className="font-medium text-gray-700 text-xs sm:text-sm">BYJU'S</div>
+                  <div className="text-gray-500 text-[10px] sm:text-sm">₹7,000/mo</div>
                 </div>
               </div>
             </div>

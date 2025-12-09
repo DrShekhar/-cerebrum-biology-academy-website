@@ -424,21 +424,21 @@ export default function ResultsPage() {
                 <CheckCircle className="h-6 w-6 text-green-600" />
                 <h3 className="font-bold text-lg text-gray-900">Score Improvement Breakdown</h3>
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 text-sm">
                 <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                  <div className="w-3 h-3 bg-green-500 rounded-full flex-shrink-0"></div>
                   <span className="text-gray-700">
                     <strong>65%</strong> improved by 250+ marks
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                  <div className="w-3 h-3 bg-blue-500 rounded-full flex-shrink-0"></div>
                   <span className="text-gray-700">
                     <strong>25%</strong> improved by 200-250 marks
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
+                  <div className="w-3 h-3 bg-purple-500 rounded-full flex-shrink-0"></div>
                   <span className="text-gray-700">
                     <strong>10%</strong> improved by 150-200 marks
                   </span>
