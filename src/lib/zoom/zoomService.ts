@@ -346,15 +346,46 @@ export class ZoomService {
     bookingData: DemoBookingData,
     meetingData: ZoomMeetingResponse
   ) {
-    // Import WhatsApp service
-    const { whatsappService } = await import('../whatsapp/whatsappService')
+    // Import Interakt service for WhatsApp
+    const { sendWhatsAppMessage, trackUser } = await import('../interakt')
 
-    // Send WhatsApp confirmation
-    await whatsappService.sendDemoBookingConfirmation(
-      bookingData.phone,
-      bookingData.studentName,
-      new Date(meetingData.start_time)
-    )
+    const meetingDate = new Date(meetingData.start_time)
+    const dateStr = meetingDate.toLocaleDateString('en-IN', {
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric',
+    })
+    const timeStr = meetingDate.toLocaleTimeString('en-IN', {
+      hour: '2-digit',
+      minute: '2-digit',
+    })
+
+    // Track user in Interakt CRM
+    await trackUser({
+      phone: bookingData.phone,
+      userId: `demo_${bookingData.email}`,
+      traits: {
+        name: bookingData.studentName,
+        email: bookingData.email,
+        class: bookingData.studentClass,
+        courseInterest: bookingData.courseInterest,
+        demoBooked: true,
+        demoDate: dateStr,
+        source: 'demo_booking',
+      },
+    })
+
+    // Send WhatsApp confirmation using demo_class_confirmation template
+    // Template has 3 params: name, datetime, link
+    await sendWhatsAppMessage({
+      phone: bookingData.phone,
+      templateName: 'demo_class_confirmation',
+      templateParams: {
+        '1': bookingData.studentName,
+        '2': `${dateStr} at ${timeStr}`,
+        '3': meetingData.join_url,
+      },
+    })
 
     // Send email confirmation (to be implemented)
     await this.sendEmailConfirmation(bookingData, meetingData)
@@ -409,61 +440,54 @@ export class ZoomService {
   }
 
   private async send24HourReminder(meeting: any) {
-    const { whatsappService } = await import('../whatsapp/whatsappService')
+    const { sendWhatsAppMessage } = await import('../interakt')
 
-    const message = `🔔 Reminder: Your NEET Biology demo class is tomorrow at ${new Date(meeting.scheduledTime).toLocaleTimeString()}
-    
-📚 Topic: Cell Biology & NEET Strategy
-👩‍🏫 Faculty: Dr. Priya Sharma (AIIMS Graduate)
-
-📱 Join URL: ${meeting.joinUrl}
-🔐 Password: ${meeting.password}
-
-📝 What to prepare:
-• Notebook & pen
-• Basic biology questions
-• NEET preparation doubts
-
-See you tomorrow! 🌟`
-
-    await whatsappService.sendMessage({
+    // Using class_reminder template: name, time_remaining, subject, topic, faculty_name, join_link
+    await sendWhatsAppMessage({
       phone: meeting.phone,
-      message,
+      templateName: 'class_reminder',
+      templateParams: {
+        '1': meeting.studentName,
+        '2': '24 hours',
+        '3': 'Biology',
+        '4': 'Cell Biology & NEET Strategy',
+        '5': 'Dr. Priya Sharma',
+        '6': meeting.joinUrl,
+      },
     })
   }
 
   private async send1HourReminder(meeting: any) {
-    const { whatsappService } = await import('../whatsapp/whatsappService')
+    const { sendWhatsAppMessage } = await import('../interakt')
 
-    const message = `⏰ Your NEET Biology demo class starts in 1 HOUR!
-
-📚 Topic: Cell Biology & NEET Strategy
-🕐 Time: ${new Date(meeting.scheduledTime).toLocaleTimeString()}
-
-📱 Join Now: ${meeting.joinUrl}
-🔐 Password: ${meeting.password}
-
-Ready? Let's crack NEET together! 🚀`
-
-    await whatsappService.sendMessage({
+    await sendWhatsAppMessage({
       phone: meeting.phone,
-      message,
+      templateName: 'class_reminder',
+      templateParams: {
+        '1': meeting.studentName,
+        '2': '1 hour',
+        '3': 'Biology',
+        '4': 'Cell Biology & NEET Strategy',
+        '5': 'Dr. Priya Sharma',
+        '6': meeting.joinUrl,
+      },
     })
   }
 
   private async send15MinuteReminder(meeting: any) {
-    const { whatsappService } = await import('../whatsapp/whatsappService')
+    const { sendWhatsAppMessage } = await import('../interakt')
 
-    const message = `🚨 STARTING SOON! Your demo class begins in 15 minutes!
-
-📱 Join URL: ${meeting.joinUrl}
-🔐 Password: ${meeting.password}
-
-Click the link now to join! 👆`
-
-    await whatsappService.sendMessage({
+    await sendWhatsAppMessage({
       phone: meeting.phone,
-      message,
+      templateName: 'class_reminder',
+      templateParams: {
+        '1': meeting.studentName,
+        '2': '15 minutes',
+        '3': 'Biology',
+        '4': 'NEET Demo Class',
+        '5': 'Dr. Priya Sharma',
+        '6': meeting.joinUrl,
+      },
     })
   }
 }
