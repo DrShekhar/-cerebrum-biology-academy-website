@@ -57,11 +57,6 @@ const EEATSignals = dynamic(
   { loading: () => <LoadingSkeleton height="h-48" />, ssr: true }
 )
 
-const Footer = dynamic(() => import('@/components/layout/Footer').then((mod) => mod.Footer), {
-  loading: () => <LoadingSkeleton height="h-64" />,
-  ssr: true,
-})
-
 export const metadata: Metadata = generatePageMetadata('home')
 
 export default function Home() {
@@ -104,8 +99,7 @@ export default function Home() {
       {/* 9. Booking Section */}
       <BookingSection />
 
-      {/* 10. Footer */}
-      <Footer />
+      {/* Footer is rendered in layout.tsx - no need to duplicate here */}
     </div>
   )
 }
