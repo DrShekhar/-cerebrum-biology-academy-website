@@ -1216,9 +1216,9 @@ export default function PricingPage() {
         <div className="mt-12 sm:mt-16 pb-24 md:pb-8">
           <div className="relative bg-gradient-to-br from-amber-400 via-orange-400 to-orange-500 rounded-3xl p-8 sm:p-12 lg:p-16 overflow-hidden">
             {/* Background decoration */}
-            <div className="absolute inset-0">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-yellow-300/30 rounded-full blur-3xl" />
-              <div className="absolute bottom-0 left-0 w-64 h-64 bg-orange-600/20 rounded-full blur-3xl" />
+            <div className="absolute inset-0 overflow-hidden">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-yellow-300/30 rounded-full blur-3xl hidden sm:block" />
+              <div className="absolute bottom-0 left-0 w-64 h-64 bg-orange-600/20 rounded-full blur-3xl hidden sm:block" />
             </div>
 
             <div className="relative text-center">

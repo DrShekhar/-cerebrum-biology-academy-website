@@ -158,9 +158,9 @@ export function OptimizedHeroSection({
           }}
         />
 
-        {/* Animated Gradient Orbs */}
+        {/* Animated Gradient Orbs - hidden on mobile for performance */}
         <motion.div
-          className="absolute top-1/4 left-1/6 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl"
+          className="hidden md:block absolute top-1/4 left-1/6 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.2, 1],
             x: [0, 50, 0],
@@ -169,7 +169,7 @@ export function OptimizedHeroSection({
           transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
         />
         <motion.div
-          className="absolute bottom-1/4 right-1/6 w-80 h-80 bg-yellow-500/10 rounded-full blur-3xl"
+          className="hidden md:block absolute bottom-1/4 right-1/6 w-80 h-80 bg-yellow-500/10 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.3, 1],
             x: [0, -40, 0],

@@ -279,7 +279,7 @@ export default function AdminDashboard() {
         </div>
 
         {/* Demo Booking Quick Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -432,7 +432,7 @@ export default function AdminDashboard() {
         >
           <h3 className="text-lg font-semibold text-gray-900 mb-6">Quick Actions</h3>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             <button className="flex items-center justify-center space-x-2 p-4 border-2 border-dashed border-gray-200 rounded-xl hover:border-primary-300 hover:bg-primary-50 transition-colors group">
               <UserPlus className="w-5 h-5 text-gray-400 group-hover:text-primary-600" />
               <span className="text-sm font-medium text-gray-600 group-hover:text-primary-700">

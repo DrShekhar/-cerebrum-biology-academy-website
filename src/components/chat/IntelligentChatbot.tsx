@@ -964,7 +964,7 @@ export function IntelligentChatbot() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 100, scale: 0.8 }}
             transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-            className="fixed bottom-32 left-4 right-4 lg:bottom-24 lg:left-6 lg:right-auto sm:w-96 h-[70vh] sm:h-[32rem] max-h-[600px] bg-white rounded-2xl shadow-2xl border border-gray-200 z-40 flex flex-col"
+            className="fixed bottom-32 left-4 right-4 md:left-6 md:right-auto md:w-96 lg:bottom-24 h-[70vh] md:h-[32rem] max-h-[600px] bg-white rounded-2xl shadow-2xl border border-gray-200 z-40 flex flex-col"
             role="dialog"
             aria-labelledby="chat-title"
             aria-describedby="chat-description"

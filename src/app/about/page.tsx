@@ -173,9 +173,9 @@ export default function AboutPage() {
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section - Premium Modern Design */}
       <section className="relative py-12 sm:py-16 md:py-20 lg:py-28 xl:py-40 bg-gradient-to-br from-blue-900 via-purple-900 to-blue-900 text-white overflow-hidden">
-        {/* Animated background blobs */}
+        {/* Animated background blobs - hidden on mobile for performance */}
         <motion.div
-          className="absolute top-1/4 left-1/6 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl"
+          className="hidden md:block absolute top-1/4 left-1/6 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.2, 1],
             x: [0, 50, 0],
@@ -184,7 +184,7 @@ export default function AboutPage() {
           transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
         />
         <motion.div
-          className="absolute bottom-1/4 right-1/6 w-80 h-80 bg-yellow-500/10 rounded-full blur-3xl"
+          className="hidden md:block absolute bottom-1/4 right-1/6 w-80 h-80 bg-yellow-500/10 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.3, 1],
             x: [0, -40, 0],
@@ -193,7 +193,7 @@ export default function AboutPage() {
           transition={{ duration: 25, repeat: Infinity, ease: 'linear' }}
         />
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-4 sm:px-6 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
           <div className="grid lg:grid-cols-5 gap-8 sm:gap-10 lg:gap-16 items-center">
             <div className="lg:col-span-3 space-y-5 sm:space-y-6 md:space-y-8">
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-[-0.02em] leading-[1.05] mb-4 sm:mb-6 md:mb-8 antialiased">
@@ -858,9 +858,9 @@ export default function AboutPage() {
 
       {/* CTA Section - Premium Modern Design */}
       <section className="relative py-12 sm:py-16 md:py-20 lg:py-24 xl:py-32 bg-gradient-to-br from-blue-900 via-purple-900 to-blue-900 text-white overflow-hidden">
-        {/* Animated background blobs */}
+        {/* Animated background blobs - hidden on mobile for performance */}
         <motion.div
-          className="absolute top-1/4 left-1/6 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl"
+          className="hidden md:block absolute top-1/4 left-1/6 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.2, 1],
             x: [0, 50, 0],
@@ -869,7 +869,7 @@ export default function AboutPage() {
           transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
         />
         <motion.div
-          className="absolute bottom-1/4 right-1/6 w-80 h-80 bg-yellow-500/10 rounded-full blur-3xl"
+          className="hidden md:block absolute bottom-1/4 right-1/6 w-80 h-80 bg-yellow-500/10 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.3, 1],
             x: [0, -40, 0],

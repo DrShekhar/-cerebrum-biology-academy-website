@@ -81,7 +81,7 @@ export function CurrencySelector({
 
       {/* Dropdown Menu */}
       {isOpen && (
-        <div className="absolute top-full left-0 mt-1 w-64 bg-white border border-gray-300 rounded-lg shadow-lg z-50">
+        <div className="absolute top-full left-0 mt-1 w-full min-w-[200px] max-w-[256px] bg-white border border-gray-300 rounded-lg shadow-lg z-50">
           <div className="p-2">
             <div className="text-xs text-gray-500 font-medium uppercase tracking-wide px-2 py-1 mb-1">
               Select Currency
