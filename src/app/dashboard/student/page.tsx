@@ -97,7 +97,7 @@ const AchievementsBadge = dynamic(
     })),
   {
     loading: () => (
-      <div className="grid grid-cols-3 gap-2">
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
         {[1, 2, 3].map((i) => (
           <div key={i} className="h-16 bg-gray-100 animate-pulse rounded" />
         ))}
