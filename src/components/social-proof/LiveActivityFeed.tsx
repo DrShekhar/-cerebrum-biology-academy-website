@@ -280,17 +280,17 @@ export function LiveActivityFeed({
       </div>
 
       {/* Current Stats */}
-      <div className="mt-6 grid grid-cols-3 gap-4">
+      <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
         <div className="text-center bg-white rounded-xl p-3 shadow-sm">
-          <div className="text-2xl font-bold text-green-600">127</div>
+          <div className="text-xl sm:text-2xl font-bold text-green-600">127</div>
           <div className="text-xs text-gray-600">Students Online</div>
         </div>
         <div className="text-center bg-white rounded-xl p-3 shadow-sm">
-          <div className="text-2xl font-bold text-blue-600">23</div>
+          <div className="text-xl sm:text-2xl font-bold text-blue-600">23</div>
           <div className="text-xs text-gray-600">Demo Bookings Today</div>
         </div>
         <div className="text-center bg-white rounded-xl p-3 shadow-sm">
-          <div className="text-2xl font-bold text-purple-600">8</div>
+          <div className="text-xl sm:text-2xl font-bold text-purple-600">8</div>
           <div className="text-xs text-gray-600">New Enrollments</div>
         </div>
       </div>

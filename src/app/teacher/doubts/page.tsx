@@ -186,11 +186,11 @@ export default function TeacherDoubtsPage() {
               />
             </div>
           </div>
-          <div className="flex gap-2">
+          <div className="flex flex-wrap gap-2">
             <select
               value={assignedFilter}
               onChange={(e) => setAssignedFilter(e.target.value)}
-              className="min-w-[150px] px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="min-w-[120px] sm:min-w-[150px] px-3 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent min-h-[44px] text-sm"
             >
               <option value="">All Doubts</option>
               <option value="me">Assigned to Me</option>
@@ -199,7 +199,7 @@ export default function TeacherDoubtsPage() {
             <select
               value={statusFilter}
               onChange={(e) => setStatusFilter(e.target.value)}
-              className="min-w-[150px] px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="min-w-[120px] sm:min-w-[150px] px-3 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent min-h-[44px] text-sm"
             >
               <option value="">All Status</option>
               <option value="OPEN">Open</option>
@@ -210,7 +210,7 @@ export default function TeacherDoubtsPage() {
             <select
               value={priorityFilter}
               onChange={(e) => setPriorityFilter(e.target.value)}
-              className="min-w-[150px] px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="min-w-[120px] sm:min-w-[150px] px-3 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent min-h-[44px] text-sm"
             >
               <option value="">All Priorities</option>
               <option value="URGENT">Urgent</option>

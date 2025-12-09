@@ -739,11 +739,11 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                         </span>
                       </div>
                       <div className="flex gap-1 mt-2">
-                        <button className="flex-1 px-2 py-1 text-xs bg-gray-100 hover:bg-gray-200 rounded transition-colors">
+                        <button className="flex-1 px-2 py-2 text-xs bg-gray-100 hover:bg-gray-200 rounded transition-colors min-h-[44px]">
                           <Download className="w-3 h-3 inline mr-1" />
                           Download
                         </button>
-                        <button className="flex-1 px-2 py-1 text-xs bg-gray-100 hover:bg-gray-200 rounded transition-colors">
+                        <button className="flex-1 px-2 py-2 text-xs bg-gray-100 hover:bg-gray-200 rounded transition-colors min-h-[44px]">
                           <Eye className="w-3 h-3 inline mr-1" />
                           View
                         </button>

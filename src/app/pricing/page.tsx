@@ -264,22 +264,26 @@ export default function PricingPage() {
 
           <div className="grid grid-cols-4 gap-1 text-center">
             <div className="bg-white/50 rounded-md p-1 sm:p-1.5 min-w-0">
-              <div className="text-sm sm:text-base font-bold truncate">{classData.duration}</div>
-              <div className="text-[9px] sm:text-[10px] opacity-70 truncate">Duration</div>
+              <div className="text-xs sm:text-sm md:text-base font-bold truncate">
+                {classData.duration}
+              </div>
+              <div className="text-[10px] sm:text-xs opacity-80 truncate">Duration</div>
             </div>
             <div className="bg-white/50 rounded-md p-1 sm:p-1.5 min-w-0">
-              <div className="text-sm sm:text-base font-bold truncate">{tier.hours}</div>
-              <div className="text-[9px] sm:text-[10px] opacity-70 truncate">Per Week</div>
+              <div className="text-xs sm:text-sm md:text-base font-bold truncate">{tier.hours}</div>
+              <div className="text-[10px] sm:text-xs opacity-80 truncate">Per Week</div>
             </div>
             <div className="bg-white/50 rounded-md p-1 sm:p-1.5 min-w-0">
-              <div className="text-sm sm:text-base font-bold truncate">{tier.batchSize}</div>
-              <div className="text-[9px] sm:text-[10px] opacity-70 truncate">Batch</div>
+              <div className="text-xs sm:text-sm md:text-base font-bold truncate">
+                {tier.batchSize}
+              </div>
+              <div className="text-[10px] sm:text-xs opacity-80 truncate">Batch</div>
             </div>
             <div className="bg-white/50 rounded-md p-1 sm:p-1.5 min-w-0">
-              <div className="text-sm sm:text-base font-bold text-green-600 truncate">
+              <div className="text-xs sm:text-sm md:text-base font-bold text-green-600 truncate">
                 {tier.tier === 'pinnacle' ? '55' : tier.tier === 'ascent' ? '120' : '160'}
               </div>
-              <div className="text-[9px] sm:text-[10px] opacity-70 truncate">Enrolled</div>
+              <div className="text-[10px] sm:text-xs opacity-80 truncate">Enrolled</div>
             </div>
           </div>
         </div>

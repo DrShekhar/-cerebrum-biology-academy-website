@@ -521,7 +521,7 @@ export function StudentCommunity() {
                     <h4 className="text-sm font-medium">NEET 2025 Warriors</h4>
                     <p className="text-xs text-gray-500">2,847 members</p>
                   </div>
-                  <button className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">
+                  <button className="text-xs bg-blue-100 text-blue-800 px-3 py-2 rounded min-h-[44px] min-w-[44px]">
                     Join
                   </button>
                 </div>
@@ -530,7 +530,7 @@ export function StudentCommunity() {
                     <h4 className="text-sm font-medium">Biology Doubt Clearers</h4>
                     <p className="text-xs text-gray-500">1,204 members</p>
                   </div>
-                  <button className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">
+                  <button className="text-xs bg-green-100 text-green-800 px-3 py-2 rounded min-h-[44px] min-w-[44px]">
                     Joined
                   </button>
                 </div>

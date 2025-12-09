@@ -74,8 +74,8 @@ export function PricingComparisonTable({
         ))}
       </div>
 
-      <div className="overflow-x-auto -mx-4 px-4">
-        <table className="w-full min-w-[700px] border-collapse">
+      <div className="overflow-x-auto -mx-4 px-4 pb-2">
+        <table className="w-full min-w-[600px] sm:min-w-[700px] border-collapse">
           <thead>
             <tr>
               <th className="p-4 text-left bg-gray-50 rounded-tl-xl"></th>
