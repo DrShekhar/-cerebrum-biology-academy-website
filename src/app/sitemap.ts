@@ -1404,6 +1404,49 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.94,
     },
+    // Biology Teacher SEO Pages - High Traffic Keywords
+    {
+      url: `${baseUrl}/biology-teacher`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.94,
+    },
+    {
+      url: `${baseUrl}/biology-teacher-near-me`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.94,
+    },
+    {
+      url: `${baseUrl}/best-biology-teacher-for-neet`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.94,
+    },
+    {
+      url: `${baseUrl}/best-biology-teacher-class-11-cbse`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.94,
+    },
+    {
+      url: `${baseUrl}/best-biology-teacher-class-12-cbse`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.94,
+    },
+    {
+      url: `${baseUrl}/best-biology-teacher-class-11-icse`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.94,
+    },
+    {
+      url: `${baseUrl}/best-biology-teacher-class-12-icse`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.94,
+    },
   ]
 
   return routes
