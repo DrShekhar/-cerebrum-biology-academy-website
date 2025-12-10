@@ -136,6 +136,17 @@ export const Footer = memo(function Footer() {
     { name: 'NEET Biology Classes', href: '/neet-biology-classes' },
   ]
 
+  const biologyTutoringLinks = [
+    { name: 'Biology Tutor', href: '/biology-tutor' },
+    { name: 'Biology Tutors Near Me', href: '/biology-tutors-near-me' },
+    { name: 'Biology Home Tutor', href: '/biology-home-tutor' },
+    { name: 'Class 11 CBSE', href: '/biology-tutor-class-11-cbse' },
+    { name: 'Class 12 CBSE', href: '/biology-tutor-class-12-cbse' },
+    { name: 'Class 11 ICSE', href: '/biology-tutor-class-11-icse' },
+    { name: 'Class 12 ICSE', href: '/biology-tutor-class-12-icse' },
+    { name: 'State Boards', href: '/biology-tutor-state-boards' },
+  ]
+
   const legalLinks = [
     { name: 'Privacy Policy', href: '/privacy-policy' },
     { name: 'Terms of Service', href: '/terms-of-service' },
@@ -344,6 +355,20 @@ export const Footer = memo(function Footer() {
             <h4 className="font-semibold text-lg mb-4 mt-4 text-white">Explore NEET Coaching</h4>
             <ul className="space-y-2">
               {exploreNeetCoaching.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-gray-300 hover:text-white transition-colors text-sm"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            <h4 className="font-semibold text-lg mb-4 mt-4 text-white">Biology Tutoring</h4>
+            <ul className="space-y-2">
+              {biologyTutoringLinks.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
