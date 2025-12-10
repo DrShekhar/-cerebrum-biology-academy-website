@@ -128,6 +128,10 @@
     {
       "path": "/api/cron/nurturing",
       "schedule": "*/15 * * * *"
+    },
+    {
+      "path": "/api/cron/seo-reminder",
+      "schedule": "0 4 * * 5"
     }
   ]
 }
