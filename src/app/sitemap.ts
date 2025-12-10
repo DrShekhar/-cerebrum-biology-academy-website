@@ -320,6 +320,37 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.96,
     },
+    // Regional Online Service Pages - HIGH PRIORITY
+    {
+      url: `${baseUrl}/neet-coaching-north-india`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-south-india`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-east-india`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-west-india`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-overseas`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.95,
+    },
     // Pan-India SEO Landing Pages - High Priority
     {
       url: `${baseUrl}/online-neet-coaching-india`,

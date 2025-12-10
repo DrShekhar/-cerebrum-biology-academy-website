@@ -112,16 +112,19 @@ export const Footer = memo(function Footer() {
     { name: 'Admission Process', href: '/admissions' },
   ]
 
-  const locationLinks = [
-    { name: 'Delhi NCR', href: '/best-neet-coaching-delhi-ncr' },
-    { name: 'South Delhi', href: '/neet-coaching-south-delhi' },
-    { name: 'Mumbai', href: '/neet-coaching-mumbai' },
-    { name: 'Bangalore', href: '/neet-coaching-bangalore' },
-    { name: 'Hyderabad', href: '/neet-coaching-hyderabad' },
-    { name: 'Chennai', href: '/neet-coaching-chennai' },
-    { name: 'Pune', href: '/neet-coaching-pune' },
-    { name: 'Noida', href: '/neet-coaching-noida' },
-    { name: 'Gurgaon', href: '/neet-coaching-gurgaon' },
+  const offlineCenters = [
+    { name: 'Rohini, Delhi', href: '/neet-coaching-north-delhi' },
+    { name: 'Gurugram', href: '/neet-coaching-gurugram' },
+    { name: 'South Extension', href: '/neet-coaching-south-delhi' },
+    { name: 'Faridabad', href: '/neet-coaching-faridabad' },
+  ]
+
+  const onlineRegions = [
+    { name: 'North India', href: '/neet-coaching-north-india' },
+    { name: 'South India', href: '/neet-coaching-south-india' },
+    { name: 'East India', href: '/neet-coaching-east-india' },
+    { name: 'West India', href: '/neet-coaching-west-india' },
+    { name: 'Overseas (NRI)', href: '/neet-coaching-overseas' },
   ]
 
   const legalLinks = [
@@ -301,9 +304,23 @@ export const Footer = memo(function Footer() {
               ))}
             </ul>
 
-            <h4 className="font-semibold text-lg mb-4 mt-6 text-white">Locations</h4>
+            <h4 className="font-semibold text-lg mb-4 mt-6 text-white">Offline Centers</h4>
             <ul className="space-y-2">
-              {locationLinks.map((link) => (
+              {offlineCenters.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-gray-300 hover:text-white transition-colors text-sm"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            <h4 className="font-semibold text-lg mb-4 mt-4 text-white">Serving Online</h4>
+            <ul className="space-y-2">
+              {onlineRegions.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}

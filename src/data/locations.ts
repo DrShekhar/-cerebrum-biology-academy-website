@@ -9,14 +9,24 @@ export interface Location {
   googleMapsEmbed: string
   features: string[]
   timing: string
+  type: 'offline' | 'online'
 }
 
-export const locations: Location[] = [
+export interface OnlineRegion {
+  id: string
+  name: string
+  slug: string
+  description: string
+  states?: string[]
+  countries?: string[]
+}
+
+export const offlineLocations: Location[] = [
   {
     id: 'rohini',
     name: 'Rohini Center',
     address: '211 Vikas Surya Tower, DC Chauk Sector 9',
-    city: 'Rohini',
+    city: 'Rohini, Delhi',
     pincode: '110085',
     phone: ['+918826444334', '+919311946297'],
     googleMapsUrl:
@@ -25,6 +35,7 @@ export const locations: Location[] = [
       'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.123!2d77.123!3d28.123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDA3JzIzLjAiTiA3N8KwMDcnMjMuMCJF!5e0!3m2!1sen!2sin!4v1234567890',
     features: ['Fully Equipped Classrooms', 'Library', 'Test Series Center'],
     timing: 'Mon-Sat: 8:00 AM - 8:00 PM',
+    type: 'offline',
   },
   {
     id: 'gurugram',
@@ -38,10 +49,11 @@ export const locations: Location[] = [
       'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.123!2d77.123!3d28.456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDE3JzIzLjAiTiA3N8KwMDcnMjMuMCJF!5e0!3m2!1sen!2sin!4v1234567890',
     features: ['Modern Infrastructure', 'Digital Classrooms', 'Student Lounge'],
     timing: 'Mon-Sat: 8:00 AM - 8:00 PM',
+    type: 'offline',
   },
   {
-    id: 'south-delhi',
-    name: 'South Delhi Center',
+    id: 'south-extension',
+    name: 'South Extension Center',
     address: 'Block B, South Extension 2',
     city: 'South Delhi',
     pincode: '110049',
@@ -51,8 +63,72 @@ export const locations: Location[] = [
       'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.123!2d77.223!3d28.566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDMzJzU3LjAiTiA3N8KwMTMnMjMuMCJF!5e0!3m2!1sen!2sin!4v1234567890',
     features: ['Prime Location', 'Well-Connected', 'Spacious Classrooms'],
     timing: 'Mon-Sat: 8:00 AM - 8:00 PM',
+    type: 'offline',
+  },
+  {
+    id: 'faridabad',
+    name: 'Faridabad Center',
+    address: 'Sector 15, Near Crown Interiors Mall',
+    city: 'Faridabad',
+    pincode: '121007',
+    phone: ['+918826444334', '+919311946297'],
+    googleMapsUrl: 'https://maps.google.com/?q=Sector+15+Faridabad+121007',
+    googleMapsEmbed:
+      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3508.123!2d77.310!3d28.380!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDIyJzQ4LjAiTiA3N8KwMTgnMzYuMCJF!5e0!3m2!1sen!2sin!4v1234567890',
+    features: ['Spacious Classrooms', 'Study Material Library', 'Mock Test Center'],
+    timing: 'Mon-Sat: 8:00 AM - 8:00 PM',
+    type: 'offline',
   },
 ]
+
+export const onlineRegions: OnlineRegion[] = [
+  {
+    id: 'north-india',
+    name: 'North India',
+    slug: 'neet-coaching-north-india',
+    description: 'Delhi NCR, UP, Haryana, Punjab, Rajasthan, Uttarakhand',
+    states: [
+      'Delhi',
+      'Uttar Pradesh',
+      'Haryana',
+      'Punjab',
+      'Rajasthan',
+      'Uttarakhand',
+      'HP',
+      'J&K',
+    ],
+  },
+  {
+    id: 'south-india',
+    name: 'South India',
+    slug: 'neet-coaching-south-india',
+    description: 'Karnataka, Tamil Nadu, Kerala, AP, Telangana',
+    states: ['Karnataka', 'Tamil Nadu', 'Kerala', 'Andhra Pradesh', 'Telangana'],
+  },
+  {
+    id: 'east-india',
+    name: 'East India',
+    slug: 'neet-coaching-east-india',
+    description: 'West Bengal, Bihar, Jharkhand, Odisha, Northeast',
+    states: ['West Bengal', 'Bihar', 'Jharkhand', 'Odisha', 'Assam', 'Northeast'],
+  },
+  {
+    id: 'west-india',
+    name: 'West India',
+    slug: 'neet-coaching-west-india',
+    description: 'Maharashtra, Gujarat, MP, Goa, Chhattisgarh',
+    states: ['Maharashtra', 'Gujarat', 'Madhya Pradesh', 'Goa', 'Chhattisgarh'],
+  },
+  {
+    id: 'overseas',
+    name: 'Overseas',
+    slug: 'neet-coaching-overseas',
+    description: 'NRI students in UAE, USA, UK, Singapore & more',
+    countries: ['UAE', 'USA', 'UK', 'Singapore', 'Australia', 'Canada'],
+  },
+]
+
+export const locations: Location[] = offlineLocations
 
 export const primaryContact = {
   phone: ['+918826444334', '+919311946297'],
