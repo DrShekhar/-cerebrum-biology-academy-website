@@ -351,6 +351,43 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.95,
     },
+    // NEET Coaching SEO Pages - High Traffic Keywords
+    {
+      url: `${baseUrl}/best-neet-coaching`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-centre`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-institute`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/neet-classes`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/neet-preparation`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/neet-biology-classes`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.95,
+    },
     // Pan-India SEO Landing Pages - High Priority
     {
       url: `${baseUrl}/online-neet-coaching-india`,

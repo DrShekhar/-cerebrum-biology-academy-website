@@ -127,6 +127,15 @@ export const Footer = memo(function Footer() {
     { name: 'Overseas (NRI)', href: '/neet-coaching-overseas' },
   ]
 
+  const exploreNeetCoaching = [
+    { name: 'Best NEET Coaching', href: '/best-neet-coaching' },
+    { name: 'NEET Coaching Centre', href: '/neet-coaching-centre' },
+    { name: 'NEET Coaching Institute', href: '/neet-coaching-institute' },
+    { name: 'NEET Classes', href: '/neet-classes' },
+    { name: 'NEET Preparation', href: '/neet-preparation' },
+    { name: 'NEET Biology Classes', href: '/neet-biology-classes' },
+  ]
+
   const legalLinks = [
     { name: 'Privacy Policy', href: '/privacy-policy' },
     { name: 'Terms of Service', href: '/terms-of-service' },
@@ -321,6 +330,20 @@ export const Footer = memo(function Footer() {
             <h4 className="font-semibold text-lg mb-4 mt-4 text-white">Serving Online</h4>
             <ul className="space-y-2">
               {onlineRegions.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-gray-300 hover:text-white transition-colors text-sm"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            <h4 className="font-semibold text-lg mb-4 mt-4 text-white">Explore NEET Coaching</h4>
+            <ul className="space-y-2">
+              {exploreNeetCoaching.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
