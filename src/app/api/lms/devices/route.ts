@@ -7,13 +7,13 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server'
-import { getServerSession } from 'next-auth'
+import { auth } from '@/lib/auth/config'
 import { prisma } from '@/lib/prisma'
 import { deviceSecurityService } from '@/lib/lms/deviceSecurity'
 
 export async function GET(request: NextRequest) {
   try {
-    const session = await getServerSession()
+    const session = await auth()
 
     if (!session?.user?.email) {
       return NextResponse.json(
@@ -67,7 +67,7 @@ export async function GET(request: NextRequest) {
 
 export async function POST(request: NextRequest) {
   try {
-    const session = await getServerSession()
+    const session = await auth()
 
     if (!session?.user?.email) {
       return NextResponse.json(
@@ -242,7 +242,7 @@ export async function POST(request: NextRequest) {
 
 export async function DELETE(request: NextRequest) {
   try {
-    const session = await getServerSession()
+    const session = await auth()
 
     if (!session?.user?.email) {
       return NextResponse.json(

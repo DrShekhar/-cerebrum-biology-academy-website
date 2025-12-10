@@ -467,6 +467,18 @@ async function handleChapterListInput(
 }
 
 /**
+ * Handle video list input (alias for chapter list input)
+ */
+async function handleVideoListInput(
+  userId: string,
+  input: string,
+  context: Record<string, unknown>
+): Promise<BotMessage> {
+  // VIDEO_LIST state uses same logic as CHAPTER_LIST
+  return handleChapterListInput(userId, input, context)
+}
+
+/**
  * Video detail and playback link
  */
 async function handleVideoDetail(userId: string, videoLectureId: string): Promise<BotMessage> {

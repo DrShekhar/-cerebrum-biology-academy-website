@@ -6,7 +6,7 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server'
-import { getServerSession } from 'next-auth'
+import { auth } from '@/lib/auth/config'
 import { cloudflareStreamService } from '@/lib/lms/cloudflareStream'
 import { prisma } from '@/lib/prisma'
 
@@ -16,7 +16,7 @@ async function checkUploadPermission(): Promise<{
   userId?: string
   error?: string
 }> {
-  const session = await getServerSession()
+  const session = await auth()
 
   if (!session?.user?.email) {
     return { allowed: false, error: 'Authentication required' }

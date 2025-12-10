@@ -7,11 +7,11 @@
 
 import { NextRequest, NextResponse } from 'next/server'
 import { cloudflareStreamService } from '@/lib/lms/cloudflareStream'
-import { getServerSession } from 'next-auth'
+import { auth } from '@/lib/auth/config'
 
 export async function GET(request: NextRequest) {
   try {
-    const session = await getServerSession()
+    const session = await auth()
     const { searchParams } = new URL(request.url)
     const videoId = searchParams.get('videoId')
     const action = searchParams.get('action') || 'playback'
@@ -65,7 +65,7 @@ export async function GET(request: NextRequest) {
 
 export async function POST(request: NextRequest) {
   try {
-    const session = await getServerSession()
+    const session = await auth()
 
     if (!session?.user?.email) {
       return NextResponse.json(
