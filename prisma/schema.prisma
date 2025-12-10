@@ -434,6 +434,7 @@ model enrollments {
   class_sessions      class_sessions[]
   student_attendance  student_attendance[]
   attendance_settings attendance_settings[]
+  video_progress      video_progress[]
 
   @@unique([userId, courseId])
   @@index([courseId, status])
@@ -994,6 +995,7 @@ model study_materials {
   chapters          chapters?           @relation(fields: [chapterId], references: [id])
   courses           courses?            @relation(fields: [courseId], references: [id])
   topics            topics?             @relation(fields: [topicId], references: [id])
+  video_lecture     video_lectures?
 
   @@index([courseId, isPublished])
   @@index([createdAt])
@@ -1222,6 +1224,7 @@ model topics {
   chapters        chapters          @relation(fields: [chapterId], references: [id], onDelete: Cascade)
   doubt_tickets   doubt_tickets[]
   assignments     assignments[]
+  video_chapters  video_chapters[]
 
   @@index([chapterId, orderIndex])
 }
@@ -1352,6 +1355,14 @@ model users {
   teacher_test_assignments                test_assignments[]                      @relation("TeacherTestAssignments")
   student_test_submissions                test_assignment_submissions[]           @relation("StudentTestSubmissions")
   product_recommendations                 product_recommendations[]
+  // LMS relations
+  video_progress                          video_progress[]
+  video_notes                             video_notes[]
+  lms_device_sessions                     lms_device_sessions[]
+  user_device_limits                      user_device_limits?
+  lms_whatsapp_session                    lms_whatsapp_sessions?
+  lms_progress_notifications              lms_progress_notifications[]
+  lms_security_events                     lms_security_events[]
 
   @@index([role, createdAt])
   @@index([lastActiveAt])
@@ -2811,4 +2822,451 @@ enum FreeResourceClass {
   CLASS_12
   DROPPERS
   ALL
+}
+
+// ============================================
+// LMS VIDEO STREAMING SYSTEM
+// ============================================
+
+model video_lectures {
+  id                  String              @id @default(cuid())
+  studyMaterialId     String              @unique // Links to study_materials
+
+  // Cloudflare Stream data
+  cloudflareVideoId   String              @unique
+  cloudflareStreamUrl String?             // HLS stream URL
+  cloudflareThumbUrl  String?             // Thumbnail URL
+  playbackPolicy      PlaybackPolicy      @default(SIGNED_URL)
+
+  // Video metadata
+  title               String
+  description         String?             @db.Text
+  duration            Int                 // Duration in seconds
+  resolution          String?             // e.g., "1080p", "720p"
+  fileSize            BigInt?             // Original file size in bytes
+
+  // PDF sync configuration
+  hasPdfSync          Boolean             @default(false)
+  syncPdfUrl          String?             // URL to synced PDF
+  syncPdfPageCount    Int?
+
+  // Processing status
+  uploadStatus        VideoUploadStatus   @default(PROCESSING)
+  processingProgress  Int                 @default(0) // 0-100
+  processedAt         DateTime?
+
+  // Engagement stats
+  totalViews          Int                 @default(0)
+  totalWatchTime      Int                 @default(0) // Total seconds watched by all users
+  avgCompletionRate   Decimal             @default(0) @db.Decimal(5, 2)
+  avgRating           Decimal             @default(0) @db.Decimal(3, 2)
+  ratingCount         Int                 @default(0)
+
+  // Access control
+  previewSeconds      Int                 @default(30) // Free preview duration
+  requiresEnrollment  Boolean             @default(true)
+
+  // Metadata
+  metadata            Json?
+  createdAt           DateTime            @default(now())
+  updatedAt           DateTime            @updatedAt
+
+  // Relations
+  studyMaterial       study_materials     @relation(fields: [studyMaterialId], references: [id], onDelete: Cascade)
+  chapters            video_chapters[]
+  progress            video_progress[]
+  notes               video_notes[]
+  pdfSyncData         pdf_sync_data[]
+  securityEvents      lms_security_events[]
+
+  @@index([cloudflareVideoId])
+  @@index([uploadStatus])
+  @@index([totalViews])
+  @@index([avgRating])
+}
+
+model video_chapters {
+  id              String          @id @default(cuid())
+  videoLectureId  String
+  title           String
+  description     String?
+  startTime       Int             // Start time in seconds
+  endTime         Int?            // End time in seconds (optional)
+  orderIndex      Int
+  thumbnailUrl    String?
+
+  // Optional link to course topic
+  topicId         String?
+
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
+
+  videoLecture    video_lectures  @relation(fields: [videoLectureId], references: [id], onDelete: Cascade)
+  topics          topics?         @relation(fields: [topicId], references: [id], onDelete: SetNull)
+
+  @@index([videoLectureId, orderIndex])
+  @@index([topicId])
+}
+
+model video_progress {
+  id                  String          @id @default(cuid())
+  videoLectureId      String
+  userId              String
+  enrollmentId        String?
+
+  // Progress tracking
+  watchedSeconds      Int             @default(0)
+  lastPosition        Int             @default(0) // Resume position in seconds
+  completionPercent   Decimal         @default(0) @db.Decimal(5, 2)
+  isCompleted         Boolean         @default(false)
+  completedAt         DateTime?
+
+  // Watch sessions
+  totalWatchSessions  Int             @default(0)
+  lastWatchedAt       DateTime?
+  firstWatchedAt      DateTime?
+
+  // Engagement
+  pauseCount          Int             @default(0)
+  seekCount           Int             @default(0)
+  replayCount         Int             @default(0)
+  playbackSpeed       Decimal         @default(1.0) @db.Decimal(3, 2) // Last used speed
+
+  // Quality preference
+  preferredQuality    String?         // e.g., "1080p", "720p", "auto"
+
+  // Rating
+  rating              Int?            // 1-5 stars
+  ratedAt             DateTime?
+
+  // Device info (for security)
+  lastDeviceId        String?
+  lastDeviceType      String?
+
+  metadata            Json?
+  createdAt           DateTime        @default(now())
+  updatedAt           DateTime        @updatedAt
+
+  videoLecture        video_lectures  @relation(fields: [videoLectureId], references: [id], onDelete: Cascade)
+  user                users           @relation(fields: [userId], references: [id], onDelete: Cascade)
+  enrollment          enrollments?    @relation(fields: [enrollmentId], references: [id], onDelete: SetNull)
+
+  @@unique([videoLectureId, userId])
+  @@index([userId, lastWatchedAt])
+  @@index([completionPercent])
+  @@index([isCompleted])
+}
+
+model video_notes {
+  id              String          @id @default(cuid())
+  videoLectureId  String
+  userId          String
+
+  // Note content
+  timestamp       Int             // Position in video (seconds)
+  content         String          @db.Text
+
+  // AI-generated summary (optional)
+  aiSummary       String?         @db.Text
+
+  // Organization
+  isHighlighted   Boolean         @default(false)
+  color           String?         // For highlighting
+  tags            String[]
+
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
+
+  videoLecture    video_lectures  @relation(fields: [videoLectureId], references: [id], onDelete: Cascade)
+  user            users           @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([videoLectureId, userId, timestamp])
+  @@index([userId, createdAt])
+}
+
+model pdf_sync_data {
+  id              String          @id @default(cuid())
+  videoLectureId  String
+
+  // Sync points
+  videoTimestamp  Int             // Position in video (seconds)
+  pdfPage         Int             // PDF page number (1-indexed)
+
+  // Optional section info
+  sectionTitle    String?
+  description     String?
+
+  // Auto-generated or manual
+  isAutoGenerated Boolean         @default(false)
+  confidence      Decimal?        @db.Decimal(3, 2) // AI confidence score
+
+  createdAt       DateTime        @default(now())
+
+  videoLecture    video_lectures  @relation(fields: [videoLectureId], references: [id], onDelete: Cascade)
+
+  @@unique([videoLectureId, videoTimestamp])
+  @@index([videoLectureId, pdfPage])
+}
+
+// ============================================
+// LMS DEVICE & SECURITY MANAGEMENT
+// ============================================
+
+model lms_device_sessions {
+  id              String              @id @default(cuid())
+  userId          String
+
+  // Device identification
+  deviceId        String              // Unique device fingerprint
+  deviceName      String?             // e.g., "Chrome on Windows"
+  deviceType      DeviceType
+  browser         String?
+  os              String?
+  ipAddress       String?
+
+  // Location (optional)
+  country         String?
+  city            String?
+
+  // Session status
+  isActive        Boolean             @default(true)
+  lastActiveAt    DateTime            @default(now())
+  firstSeenAt     DateTime            @default(now())
+
+  // Trust level
+  isTrusted       Boolean             @default(false) // User verified this device
+  trustVerifiedAt DateTime?
+
+  // Limits
+  sessionToken    String              @unique
+  expiresAt       DateTime?
+
+  // Revocation
+  isRevoked       Boolean             @default(false)
+  revokedAt       DateTime?
+  revokedReason   String?
+
+  metadata        Json?
+  createdAt       DateTime            @default(now())
+  updatedAt       DateTime            @updatedAt
+
+  user            users               @relation(fields: [userId], references: [id], onDelete: Cascade)
+  securityEvents  lms_security_events[]
+
+  @@index([userId, isActive])
+  @@index([deviceId])
+  @@index([sessionToken])
+  @@index([lastActiveAt])
+}
+
+model lms_security_events {
+  id                  String              @id @default(cuid())
+  userId              String?
+  videoLectureId      String?
+  deviceSessionId     String?
+
+  // Event details
+  eventType           LmsSecurityEvent
+  severity            SecuritySeverity    @default(LOW)
+  description         String
+
+  // Context
+  ipAddress           String?
+  userAgent           String?
+  deviceFingerprint   String?
+
+  // Evidence (for piracy detection)
+  evidence            Json?               // Screenshots, recordings detected, etc.
+
+  // Action taken
+  actionTaken         String?
+  isResolved          Boolean             @default(false)
+  resolvedAt          DateTime?
+  resolvedBy          String?
+
+  createdAt           DateTime            @default(now())
+
+  user                users?              @relation(fields: [userId], references: [id], onDelete: SetNull)
+  videoLecture        video_lectures?     @relation(fields: [videoLectureId], references: [id], onDelete: SetNull)
+  deviceSession       lms_device_sessions? @relation(fields: [deviceSessionId], references: [id], onDelete: SetNull)
+
+  @@index([userId, createdAt])
+  @@index([eventType, severity])
+  @@index([videoLectureId])
+  @@index([createdAt])
+}
+
+model user_device_limits {
+  id              String          @id @default(cuid())
+  userId          String          @unique
+
+  // Device limits
+  maxDevices      Int             @default(2)
+  activeDevices   Int             @default(0)
+
+  // Violation tracking
+  violationCount  Int             @default(0)
+  lastViolationAt DateTime?
+
+  // Restrictions
+  isRestricted    Boolean         @default(false)
+  restrictedUntil DateTime?
+  restrictedReason String?
+
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
+
+  user            users           @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([isRestricted])
+}
+
+// ============================================
+// LMS WHATSAPP BOT SESSIONS
+// ============================================
+
+model lms_whatsapp_sessions {
+  id              String              @id @default(cuid())
+  userId          String
+  phone           String
+
+  // Session state
+  currentState    LmsWhatsAppState    @default(MAIN_MENU)
+  contextData     Json?               // Current context (selected course, chapter, etc.)
+
+  // Navigation history
+  previousState   LmsWhatsAppState?
+  navigationPath  Json?               // Breadcrumb trail
+
+  // Cache
+  lastCourseId    String?
+  lastChapterId   String?
+  lastVideoId     String?
+
+  // Activity
+  lastInteractionAt DateTime          @default(now())
+  totalInteractions Int               @default(0)
+
+  // Preferences
+  preferredLanguage String            @default("en")
+  notificationsEnabled Boolean        @default(true)
+
+  createdAt       DateTime            @default(now())
+  updatedAt       DateTime            @updatedAt
+
+  user            users               @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId])
+  @@index([phone])
+  @@index([currentState])
+  @@index([lastInteractionAt])
+}
+
+model lms_progress_notifications {
+  id              String              @id @default(cuid())
+  userId          String
+
+  // Notification type
+  notificationType LmsNotificationType
+
+  // Content
+  title           String
+  message         String
+
+  // Target
+  courseId        String?
+  videoLectureId  String?
+
+  // Status
+  sentVia         String[]            // ["whatsapp", "email", "push"]
+  sentAt          DateTime?
+  readAt          DateTime?
+  clickedAt       DateTime?
+
+  // Scheduling
+  scheduledFor    DateTime?
+
+  metadata        Json?
+  createdAt       DateTime            @default(now())
+
+  user            users               @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, createdAt])
+  @@index([notificationType, sentAt])
+  @@index([scheduledFor])
+}
+
+// ============================================
+// LMS ENUMS
+// ============================================
+
+enum PlaybackPolicy {
+  PUBLIC          // Anyone can watch
+  SIGNED_URL      // Requires signed URL (default, more secure)
+  TOKEN_AUTH      // Requires auth token
+}
+
+enum VideoUploadStatus {
+  PENDING         // Upload not started
+  UPLOADING       // Currently uploading
+  PROCESSING      // Cloudflare processing
+  READY           // Ready to play
+  FAILED          // Processing failed
+  DELETED         // Soft deleted
+}
+
+enum DeviceType {
+  DESKTOP
+  MOBILE
+  TABLET
+  TV
+  UNKNOWN
+}
+
+enum LmsSecurityEvent {
+  DEVICE_LIMIT_EXCEEDED     // Tried to use more than 2 devices
+  SCREEN_RECORDING_DETECTED // Screen recording attempt
+  SCREENSHOT_DETECTED       // Screenshot attempt
+  SUSPICIOUS_ACTIVITY       // Multiple rapid seeks, unusual patterns
+  VPN_DETECTED              // VPN/proxy usage
+  CONCURRENT_STREAM         // Same video on multiple devices
+  DOWNLOAD_ATTEMPT          // Tried to download video
+  WATERMARK_TAMPER          // Attempted watermark removal
+  GEO_RESTRICTION           // Access from restricted region
+  TOKEN_SHARING             // Same token used from different IPs
+  ACCOUNT_SHARING           // Account used from different locations
+}
+
+enum SecuritySeverity {
+  LOW
+  MEDIUM
+  HIGH
+  CRITICAL
+}
+
+enum LmsWhatsAppState {
+  MAIN_MENU                 // Home menu
+  MY_COURSES                // List enrolled courses
+  COURSE_DETAIL             // Viewing specific course
+  CHAPTER_LIST              // List chapters
+  VIDEO_LIST                // List videos in chapter
+  VIDEO_DETAIL              // Video info & play link
+  MY_PROGRESS               // View progress report
+  CONTINUE_WATCHING         // Resume last video
+  SEARCH                    // Search courses/videos
+  HELP                      // Help menu
+  SETTINGS                  // User settings
+  NOTIFICATIONS             // Notification preferences
+}
+
+enum LmsNotificationType {
+  NEW_VIDEO_ADDED           // New content in enrolled course
+  COURSE_REMINDER           // Haven't watched in X days
+  PROGRESS_MILESTONE        // 25%, 50%, 75%, 100% completion
+  CHAPTER_COMPLETED         // Finished a chapter
+  COURSE_COMPLETED          // Finished entire course
+  CERTIFICATE_READY         // Certificate generated
+  LIVE_CLASS_REMINDER       // Upcoming live class
+  ASSIGNMENT_DUE            // Assignment deadline approaching
+  NEW_ANNOUNCEMENT          // Course announcement
 }
