@@ -282,6 +282,38 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.98,
     },
+    // NEET 2026 SEO Pages - HIGH TRAFFIC KEYWORDS
+    {
+      url: `${baseUrl}/neet-2026-exam-date`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.98,
+    },
+    {
+      url: `${baseUrl}/neet-2026-cutoff`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.97,
+    },
+    {
+      url: `${baseUrl}/neet-biology-syllabus-2026`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.96,
+    },
+    // NEET Free Tools - HIGH ENGAGEMENT
+    {
+      url: `${baseUrl}/neet-rank-predictor`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.97,
+    },
+    {
+      url: `${baseUrl}/neet-college-predictor`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.97,
+    },
     // Pan-India SEO Landing Pages - High Priority
     {
       url: `${baseUrl}/online-neet-coaching-india`,
