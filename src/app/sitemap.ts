@@ -314,6 +314,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.97,
     },
+    {
+      url: `${baseUrl}/neet-biology-mcq`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.96,
+    },
     // Pan-India SEO Landing Pages - High Priority
     {
       url: `${baseUrl}/online-neet-coaching-india`,
