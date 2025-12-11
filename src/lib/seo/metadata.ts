@@ -875,6 +875,32 @@ export const pageMetadata: Record<string, PageMetadata> = {
     ],
     canonical: '/neet-coaching-pune',
   },
+  apBiologyTutor: {
+    title: 'AP Biology Tutor | Score 5 on Your AP Bio Exam | Expert Tutoring',
+    description:
+      'Score 5 on AP Biology with expert tutors. 90% of students score 4-5. Complete College Board curriculum, FRQ mastery, lab investigations. PhD-level tutors. Join 300+ successful students!',
+    keywords: [
+      'ap biology tutor',
+      'ap bio tutor',
+      'ap biology tutoring',
+      'ap bio help',
+      'ap biology exam prep',
+      'ap biology online tutoring',
+      'college board ap biology',
+      'ap biology score 5',
+      'ap biology frq help',
+      'ap biology test prep',
+      'ap bio exam help',
+      'ap biology study guide',
+      'ap bio practice test',
+      'ap biology course help',
+      'best ap biology tutor',
+      'ap biology private tutor',
+      'ap bio tutoring online',
+      'ap biology 1-on-1 tutoring',
+    ],
+    canonical: '/ap-biology-tutor',
+  },
 }
 
 export function generateMetadata(pageKey: string): PageMetadata {
