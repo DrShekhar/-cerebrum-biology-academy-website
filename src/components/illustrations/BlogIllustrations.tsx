@@ -4312,7 +4312,7 @@ export function NEET180StrategyIllustration({ className = '', animate = true }: 
 
       {/* Title */}
       <text x="200" y="35" fontSize="14" fill="#1D4ED8" textAnchor="middle" fontWeight="bold">
-        Score 180+ in NEET Biology
+        Score 320+/360 in NEET Biology
       </text>
 
       {/* Target circle */}
@@ -4335,14 +4335,14 @@ export function NEET180StrategyIllustration({ className = '', animate = true }: 
         <polygon points="88,140 75,135 75,145" fill="#1E293B" />
       </motion.g>
 
-      {/* 180+ Badge */}
+      {/* 320+/360 Badge */}
       <motion.g
         animate={animate ? { y: [-3, 3, -3] } : undefined}
         transition={{ duration: 1.5, repeat: Infinity }}
       >
-        <rect x="55" y="210" width="90" height="40" rx="8" fill="#22C55E" />
-        <text x="100" y="227" fontSize="12" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
-          180+
+        <rect x="45" y="210" width="110" height="40" rx="8" fill="#22C55E" />
+        <text x="100" y="227" fontSize="11" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
+          320+/360
         </text>
         <text x="100" y="242" fontSize="8" fill="#FFFFFF" textAnchor="middle">
           Target Score
