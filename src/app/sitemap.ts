@@ -1447,6 +1447,61 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.94,
     },
+    // Biology Classes SEO Pages - High Traffic Keywords
+    {
+      url: `${baseUrl}/biology-classes`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.94,
+    },
+    {
+      url: `${baseUrl}/biology-classes-near-me`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.94,
+    },
+    {
+      url: `${baseUrl}/biology-coaching`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.94,
+    },
+    {
+      url: `${baseUrl}/home-tuition-for-biology`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.94,
+    },
+    {
+      url: `${baseUrl}/biology-tuition-class-11`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.94,
+    },
+    {
+      url: `${baseUrl}/biology-tuition-class-12`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.94,
+    },
+    {
+      url: `${baseUrl}/biology-neet-preparation`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.94,
+    },
+    {
+      url: `${baseUrl}/pcb-tuition-near-me`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.94,
+    },
+    {
+      url: `${baseUrl}/biology-tuition-near-me`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.94,
+    },
   ]
 
   return routes

@@ -153,6 +153,15 @@ export const Footer = memo(function Footer() {
     { name: 'Class 12 ICSE', href: '/best-biology-teacher-class-12-icse' },
   ]
 
+  const biologyClassesLinks = [
+    { name: 'Biology Classes', href: '/biology-classes' },
+    { name: 'Biology Classes Near Me', href: '/biology-classes-near-me' },
+    { name: 'Biology Coaching', href: '/biology-coaching' },
+    { name: 'Biology Tuition Class 11', href: '/biology-tuition-class-11' },
+    { name: 'Biology Tuition Class 12', href: '/biology-tuition-class-12' },
+    { name: 'Biology for NEET', href: '/biology-neet-preparation' },
+  ]
+
   const legalLinks = [
     { name: 'Privacy Policy', href: '/privacy-policy' },
     { name: 'Terms of Service', href: '/terms-of-service' },
@@ -389,6 +398,20 @@ export const Footer = memo(function Footer() {
             <h4 className="font-semibold text-lg mb-4 mt-4 text-white">Biology Teacher</h4>
             <ul className="space-y-2">
               {biologyTeacherLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-gray-300 hover:text-white transition-colors text-sm"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            <h4 className="font-semibold text-lg mb-4 mt-4 text-white">Biology Classes</h4>
+            <ul className="space-y-2">
+              {biologyClassesLinks.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
