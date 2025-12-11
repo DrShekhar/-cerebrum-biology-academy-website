@@ -1502,6 +1502,56 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.94,
     },
+    // Zoology Teacher SEO Pages
+    {
+      url: `${baseUrl}/zoology-teacher`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.94,
+    },
+    {
+      url: `${baseUrl}/zoology-teacher-near-me`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.94,
+    },
+    {
+      url: `${baseUrl}/best-zoology-teacher-for-neet`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.94,
+    },
+    {
+      url: `${baseUrl}/zoology-classes`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.94,
+    },
+    // Botany Teacher SEO Pages
+    {
+      url: `${baseUrl}/botany-teacher`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.94,
+    },
+    {
+      url: `${baseUrl}/botany-teacher-near-me`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.94,
+    },
+    {
+      url: `${baseUrl}/best-botany-teacher-for-neet`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.94,
+    },
+    {
+      url: `${baseUrl}/botany-classes`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.94,
+    },
   ]
 
   return routes

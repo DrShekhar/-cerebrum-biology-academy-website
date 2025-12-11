@@ -162,6 +162,20 @@ export const Footer = memo(function Footer() {
     { name: 'Biology for NEET', href: '/biology-neet-preparation' },
   ]
 
+  const zoologyTeacherLinks = [
+    { name: 'Zoology Teacher', href: '/zoology-teacher' },
+    { name: 'Zoology Teacher Near Me', href: '/zoology-teacher-near-me' },
+    { name: 'Best for NEET', href: '/best-zoology-teacher-for-neet' },
+    { name: 'Zoology Classes', href: '/zoology-classes' },
+  ]
+
+  const botanyTeacherLinks = [
+    { name: 'Botany Teacher', href: '/botany-teacher' },
+    { name: 'Botany Teacher Near Me', href: '/botany-teacher-near-me' },
+    { name: 'Best for NEET', href: '/best-botany-teacher-for-neet' },
+    { name: 'Botany Classes', href: '/botany-classes' },
+  ]
+
   const legalLinks = [
     { name: 'Privacy Policy', href: '/privacy-policy' },
     { name: 'Terms of Service', href: '/terms-of-service' },
@@ -412,6 +426,34 @@ export const Footer = memo(function Footer() {
             <h4 className="font-semibold text-lg mb-4 mt-4 text-white">Biology Classes</h4>
             <ul className="space-y-2">
               {biologyClassesLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-gray-300 hover:text-white transition-colors text-sm"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            <h4 className="font-semibold text-lg mb-4 mt-4 text-white">Zoology Teacher</h4>
+            <ul className="space-y-2">
+              {zoologyTeacherLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-gray-300 hover:text-white transition-colors text-sm"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            <h4 className="font-semibold text-lg mb-4 mt-4 text-white">Botany Teacher</h4>
+            <ul className="space-y-2">
+              {botanyTeacherLinks.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
