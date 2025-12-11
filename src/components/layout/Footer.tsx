@@ -167,7 +167,7 @@ export const Footer = memo(function Footer() {
     <footer className="bg-gray-900 text-white" role="contentinfo">
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7 gap-8">
           {/* Company Info - Spans 2 columns on larger screens */}
           <motion.div
             className="lg:col-span-2"
@@ -292,6 +292,7 @@ export const Footer = memo(function Footer() {
 
           {/* Services */}
           <motion.div
+            className="xl:col-span-2"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
