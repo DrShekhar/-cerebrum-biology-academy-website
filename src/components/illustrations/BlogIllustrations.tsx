@@ -2398,14 +2398,14 @@ export function CellBiologyIllustration({ className = '', animate = true }: Illu
 
       {/* Endoplasmic Reticulum */}
       <motion.path
-        d="M260 100 Q280 110 270 130 Q260 150 280 160 Q300 170 290 190"
+        d="M260 100 Q275 110 268 130 Q260 150 275 160 Q290 170 283 190"
         stroke="#3B82F6"
         strokeWidth="3"
         fill="none"
         animate={animate ? { pathLength: [0, 1] } : undefined}
         transition={{ duration: 3, repeat: Infinity }}
       />
-      <text x="305" y="150" fontSize="6" fill="#1D4ED8" textAnchor="start">
+      <text x="295" y="145" fontSize="6" fill="#1D4ED8" textAnchor="start">
         ER
       </text>
 
@@ -2414,10 +2414,10 @@ export function CellBiologyIllustration({ className = '', animate = true }: Illu
         animate={animate ? { y: [-3, 3, -3] } : undefined}
         transition={{ duration: 2.5, repeat: Infinity }}
       >
-        <path d="M300 200 Q320 195 300 190" stroke="#F59E0B" strokeWidth="4" fill="none" />
-        <path d="M302 205 Q322 200 302 195" stroke="#F59E0B" strokeWidth="3" fill="none" />
-        <path d="M304 210 Q324 205 304 200" stroke="#F59E0B" strokeWidth="2" fill="none" />
-        <text x="330" y="205" fontSize="6" fill="#B45309" textAnchor="start">
+        <path d="M280 200 Q300 195 280 190" stroke="#F59E0B" strokeWidth="4" fill="none" />
+        <path d="M282 205 Q302 200 282 195" stroke="#F59E0B" strokeWidth="3" fill="none" />
+        <path d="M284 210 Q304 205 284 200" stroke="#F59E0B" strokeWidth="2" fill="none" />
+        <text x="285" y="225" fontSize="6" fill="#B45309" textAnchor="middle">
           Golgi
         </text>
       </motion.g>
@@ -2486,11 +2486,11 @@ export function CellBiologyIllustration({ className = '', animate = true }: Illu
         animate={animate ? { scale: [1, 1.1, 1] } : undefined}
         transition={{ duration: 1.5, repeat: Infinity }}
       >
-        <circle cx="360" cy="265" r="18" fill="#14B8A6" />
-        <text x="360" y="262" fontSize="8" fill="#FFFFFF" textAnchor="middle">
+        <circle cx="330" cy="265" r="18" fill="#14B8A6" />
+        <text x="330" y="262" fontSize="8" fill="#FFFFFF" textAnchor="middle">
           8-10
         </text>
-        <text x="360" y="273" fontSize="6" fill="#FFFFFF" textAnchor="middle">
+        <text x="330" y="273" fontSize="6" fill="#FFFFFF" textAnchor="middle">
           Qs
         </text>
       </motion.g>

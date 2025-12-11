@@ -323,7 +323,7 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
 
               {/* Featured Image */}
               <motion.div
-                className="aspect-[4/3] bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 rounded-3xl mb-12 relative flex items-center justify-center p-4 md:p-8"
+                className="w-full bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 rounded-3xl mb-12 flex items-center justify-center"
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
@@ -332,11 +332,11 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
                   (() => {
                     const IllustrationComponent = illustrationMap[meta.slug]
                     return (
-                      <IllustrationComponent className="w-full h-auto max-w-3xl" animate={true} />
+                      <IllustrationComponent className="w-full h-auto rounded-3xl" animate={true} />
                     )
                   })()
                 ) : (
-                  <div className="flex flex-col items-center justify-center text-gray-400">
+                  <div className="flex flex-col items-center justify-center text-gray-400 py-24">
                     <BookOpen className="w-16 h-16 mb-4" />
                     <span className="text-sm font-medium">
                       {meta.neetChapter || 'NEET Biology'}
