@@ -95,10 +95,10 @@ export const Footer = memo(function Footer() {
     { name: 'About Us', href: '/about' },
     { name: 'Dr. Shekhar Singh', href: '/dr-shekhar-singh' },
     { name: 'Our Faculty', href: '/faculty' },
+    { name: 'Blog', href: '/blog' },
     { name: 'Success Stories', href: '/testimonials' },
     { name: 'Results', href: '/results' },
     { name: 'Photo Gallery', href: '/gallery' },
-    { name: 'Blog', href: '/blog' },
     { name: 'Careers', href: '/contact' },
   ]
 
