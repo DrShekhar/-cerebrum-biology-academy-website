@@ -66,16 +66,24 @@ export function CitySchema({
     review: [
       {
         '@type': 'Review',
+        itemReviewed: {
+          '@type': 'EducationalOrganization',
+          name: `Cerebrum Biology Academy - ${cityName}`,
+        },
         author: { '@type': 'Person', name: 'Parent of NEET Aspirant' },
         datePublished: '2024-08-15',
-        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5', worstRating: '1' },
         reviewBody: `Excellent NEET Biology coaching for ${cityName} students. The faculty is knowledgeable and supportive.`,
       },
       {
         '@type': 'Review',
+        itemReviewed: {
+          '@type': 'EducationalOrganization',
+          name: `Cerebrum Biology Academy - ${cityName}`,
+        },
         author: { '@type': 'Person', name: 'NEET 2024 Student' },
         datePublished: '2024-06-20',
-        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5', worstRating: '1' },
         reviewBody: `Best decision was joining Cerebrum. Scored 680+ in NEET with their guidance from ${cityName}.`,
       },
     ],

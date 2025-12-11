@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { LocalBusinessSchema } from '@/components/seo/LocalBusinessSchema'
 
 export const metadata: Metadata = {
   title:
@@ -27,5 +28,10 @@ export const metadata: Metadata = {
 }
 
 export default function NEETCoachingSouthDelhiLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>
+  return (
+    <>
+      <LocalBusinessSchema locationId="south-extension" />
+      {children}
+    </>
+  )
 }

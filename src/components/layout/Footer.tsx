@@ -86,9 +86,9 @@ export const Footer = memo(function Footer() {
     { name: 'Study Materials (LMS)', href: '/tests' },
     { name: 'Free Resources', href: '/free-resources' },
     { name: 'Ceri AI', href: '/ai-education-demo' },
+    { name: 'AI Features', href: '/ai-features' },
+    { name: 'Mobile App', href: '/mobile-app' },
     { name: 'International Students', href: '/services/international' },
-    { name: 'Board Exam Preparation', href: '/courses' },
-    { name: 'Doubt Resolution', href: '/services/doubt-resolution' },
   ]
 
   const companyLinks = [
@@ -105,10 +105,9 @@ export const Footer = memo(function Footer() {
   const supportLinks = [
     { name: 'Contact Us', href: '/contact' },
     { name: 'Help Center', href: '/help' },
-    { name: 'Blog', href: '/blog' },
     { name: 'Book Demo Class', href: '/demo-booking' },
-    { name: 'Download Brochure', href: '/contact' },
-    { name: 'Fee Structure', href: '/courses' },
+    { name: 'Scholarship', href: '/scholarship' },
+    { name: 'Referral Program', href: '/referral' },
     { name: 'Admission Process', href: '/admissions' },
   ]
 

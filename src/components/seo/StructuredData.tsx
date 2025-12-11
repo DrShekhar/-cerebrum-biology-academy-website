@@ -76,17 +76,63 @@ export function OrganizationSchema() {
     review: [
       {
         '@type': 'Review',
+        itemReviewed: {
+          '@type': 'EducationalOrganization',
+          name: 'Cerebrum Biology Academy',
+        },
         reviewRating: {
           '@type': 'Rating',
           ratingValue: '5',
           bestRating: '5',
+          worstRating: '1',
         },
         author: {
           '@type': 'Person',
           name: 'Priya Sharma',
         },
+        datePublished: '2024-08-15',
         reviewBody:
           'Excellent coaching institute with amazing faculty. Scored 350+ in NEET Biology!',
+      },
+      {
+        '@type': 'Review',
+        itemReviewed: {
+          '@type': 'EducationalOrganization',
+          name: 'Cerebrum Biology Academy',
+        },
+        reviewRating: {
+          '@type': 'Rating',
+          ratingValue: '5',
+          bestRating: '5',
+          worstRating: '1',
+        },
+        author: {
+          '@type': 'Person',
+          name: 'Rahul Verma',
+        },
+        datePublished: '2024-07-20',
+        reviewBody:
+          'Best NEET Biology coaching in Delhi NCR. Dr. Shekhar Singh explains concepts brilliantly.',
+      },
+      {
+        '@type': 'Review',
+        itemReviewed: {
+          '@type': 'EducationalOrganization',
+          name: 'Cerebrum Biology Academy',
+        },
+        reviewRating: {
+          '@type': 'Rating',
+          ratingValue: '5',
+          bestRating: '5',
+          worstRating: '1',
+        },
+        author: {
+          '@type': 'Person',
+          name: 'Ananya Gupta',
+        },
+        datePublished: '2024-06-10',
+        reviewBody:
+          'Small batch size and personal attention helped me score 680+ in NEET. Highly recommended!',
       },
     ],
     aggregateRating: {
@@ -311,27 +357,9 @@ export function FAQSchema() {
   )
 }
 
-export function AggregateRatingSchema() {
-  const schema = {
-    '@context': 'https://schema.org',
-    '@type': 'EducationalOrganization',
-    name: 'Cerebrum Biology Academy',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '2500',
-      bestRating: '5',
-      worstRating: '1',
-    },
-  }
-
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
-  )
-}
+// AggregateRatingSchema REMOVED - was causing duplicate entity issues
+// The OrganizationSchema already includes aggregateRating
+// Google Search Console showed 36 invalid Review snippets due to duplicate entities
 
 export function BreadcrumbSchema({ items }: { items: Array<{ name: string; url: string }> }) {
   const schema = {

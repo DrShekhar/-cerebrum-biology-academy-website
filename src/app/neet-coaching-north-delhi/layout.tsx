@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { LocalBusinessSchema } from '@/components/seo/LocalBusinessSchema'
 
 export const metadata: Metadata = {
   title: 'NEET Coaching in North Delhi | Rohini, Pitampura, Model Town | Cerebrum Academy',
@@ -19,5 +20,10 @@ export const metadata: Metadata = {
 }
 
 export default function NEETCoachingNorthDelhiLayout({ children }: { children: React.ReactNode }) {
-  return children
+  return (
+    <>
+      <LocalBusinessSchema locationId="rohini" />
+      {children}
+    </>
+  )
 }
