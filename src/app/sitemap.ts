@@ -1666,6 +1666,37 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.93,
     },
+    // NCERT Biology Books SEO Pages - High Traffic Keywords
+    {
+      url: `${baseUrl}/ncert-biology-class-11`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/ncert-biology-class-12`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/ncert-fingertips-biology`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.94,
+    },
+    {
+      url: `${baseUrl}/trueman-biology-for-neet`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.94,
+    },
+    {
+      url: `${baseUrl}/best-biology-books-for-neet`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.95,
+    },
   ]
 
   return routes
