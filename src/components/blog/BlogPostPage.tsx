@@ -323,7 +323,7 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
 
               {/* Featured Image */}
               <motion.div
-                className="aspect-video bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 rounded-3xl mb-12 relative overflow-hidden flex items-center justify-center p-8"
+                className="aspect-[4/3] bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 rounded-3xl mb-12 relative flex items-center justify-center p-4 md:p-8"
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
@@ -332,7 +332,7 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
                   (() => {
                     const IllustrationComponent = illustrationMap[meta.slug]
                     return (
-                      <IllustrationComponent className="w-full h-full max-w-2xl" animate={true} />
+                      <IllustrationComponent className="w-full h-auto max-w-3xl" animate={true} />
                     )
                   })()
                 ) : (
