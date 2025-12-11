@@ -190,6 +190,19 @@ export const Footer = memo(function Footer() {
     { name: 'Biology Tutor Online', href: '/biology-tutor-online' },
   ]
 
+  const foundationOlympiadLinks = [
+    { name: 'Class 9 CBSE Biology', href: '/biology-tutor-class-9-cbse' },
+    { name: 'Class 9 ICSE Biology', href: '/biology-tutor-class-9-icse' },
+    { name: 'Class 9 Science Tuition', href: '/class-9-science-tuition' },
+    { name: 'NEET Foundation Class 9', href: '/neet-foundation-class-9' },
+    { name: 'NEET Foundation Class 10', href: '/neet-foundation-class-10' },
+    { name: 'Pre-NEET Coaching', href: '/pre-neet-coaching' },
+    { name: 'NTSE Biology Prep', href: '/ntse-biology-preparation' },
+    { name: 'NTSE Online Classes', href: '/ntse-online-classes' },
+    { name: 'Biology Olympiad', href: '/biology-olympiad-coaching' },
+    { name: 'Olympiad Preparation', href: '/olympiad-preparation' },
+  ]
+
   const legalLinks = [
     { name: 'Privacy Policy', href: '/privacy-policy' },
     { name: 'Terms of Service', href: '/terms-of-service' },
@@ -496,6 +509,20 @@ export const Footer = memo(function Footer() {
             <h4 className="font-semibold text-lg mb-4 mt-4 text-white">Online Biology</h4>
             <ul className="space-y-2">
               {onlineBiologyLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-gray-300 hover:text-white transition-colors text-sm"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            <h4 className="font-semibold text-lg mb-4 mt-4 text-white">Foundation & Olympiad</h4>
+            <ul className="space-y-2">
+              {foundationOlympiadLinks.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}

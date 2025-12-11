@@ -1602,6 +1602,70 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.95,
     },
+    // Class 9 Biology SEO Pages
+    {
+      url: `${baseUrl}/biology-tutor-class-9-cbse`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.93,
+    },
+    {
+      url: `${baseUrl}/biology-tutor-class-9-icse`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.93,
+    },
+    {
+      url: `${baseUrl}/class-9-science-tuition`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.93,
+    },
+    // NEET Foundation SEO Pages
+    {
+      url: `${baseUrl}/neet-foundation-class-9`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.94,
+    },
+    {
+      url: `${baseUrl}/neet-foundation-class-10`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.94,
+    },
+    {
+      url: `${baseUrl}/pre-neet-coaching`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.94,
+    },
+    // NTSE Preparation SEO Pages
+    {
+      url: `${baseUrl}/ntse-biology-preparation`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.93,
+    },
+    {
+      url: `${baseUrl}/ntse-online-classes`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.93,
+    },
+    // Olympiad Preparation SEO Pages
+    {
+      url: `${baseUrl}/biology-olympiad-coaching`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.93,
+    },
+    {
+      url: `${baseUrl}/olympiad-preparation`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.93,
+    },
   ]
 
   return routes
