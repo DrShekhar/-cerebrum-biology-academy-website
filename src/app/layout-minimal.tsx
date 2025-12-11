@@ -70,7 +70,10 @@ export default function RootLayout({
       <head>
         <GoogleAnalytics />
         <StructuredData />
-        <meta name="google-site-verification" content="your-google-verification-code" />
+        <meta
+          name="google-site-verification"
+          content="L6c1LAGqVg_qEAtFGDcbzqeMzqFdEwT7kKFDgfn2-Sc"
+        />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"

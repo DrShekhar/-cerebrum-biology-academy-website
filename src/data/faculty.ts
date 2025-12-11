@@ -5,12 +5,12 @@ export const facultyMembers: Faculty[] = [
     id: 'dr-shekhar-singh',
     name: 'Dr. Shekhar C Singh',
     qualification: 'AIIMS New Delhi',
-    experience: '14+ years',
+    experience: '15+ years',
     specialization: [],
     image:
       'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,h=571,fit=crop/meP3n6VKelS9LnOn/img-0034-meP3pJDRGxsyRZyy.jpg',
     designation: 'Director & Chief Educator',
-    bio: 'Dr. Shekhar C Singh is an AIIMS New Delhi alumnus with over 14 years of specialized experience in NEET Biology coaching. As Director of Cerebrum Biology Academy, he has mentored thousands of top NEET scorers. His student Sadhna Sirin scored 695 marks in NEET 2023 and achieved 100 percentile in Biology, becoming Delhi-NCR topper.',
+    bio: 'Dr. Shekhar C Singh is an AIIMS New Delhi alumnus with over 15 years of specialized experience in NEET Biology coaching. As Director of Cerebrum Biology Academy, he has mentored thousands of top NEET scorers. His student Sadhna Sirin scored 695 marks in NEET 2023 and achieved 100 percentile in Biology, becoming Delhi-NCR topper.',
     achievements: [
       'AIIMS New Delhi Alumnus',
       'Former Academic Head & CO-Campus Faculty at Narayana Group',

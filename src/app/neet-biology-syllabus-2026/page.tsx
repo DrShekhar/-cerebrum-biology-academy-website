@@ -222,12 +222,12 @@ const faqData = [
   {
     question: 'What is the NEET Biology syllabus 2026?',
     answer:
-      'NEET Biology syllabus 2026 covers Class 11 and Class 12 NCERT Biology. It includes Botany (Plant Biology) and Zoology (Animal Biology) with 100 questions worth 400 marks. Key topics include Human Physiology, Plant Physiology, Genetics, Ecology, Cell Biology, and Reproduction.',
+      'NEET Biology syllabus 2026 covers Class 11 and Class 12 NCERT Biology. It includes Botany (Plant Biology) and Zoology (Animal Biology) with 90 questions worth 360 marks. Key topics include Human Physiology, Plant Physiology, Genetics, Ecology, Cell Biology, and Reproduction.',
   },
   {
     question: 'How many questions come from Biology in NEET?',
     answer:
-      'In NEET, 100 questions come from Biology section - 50 from Botany (including 10 optional) and 50 from Zoology (including 10 optional). You need to attempt 90 questions. Total marks for Biology is 360 (out of 720 total).',
+      'In NEET, 90 questions come from Biology section - 45 from Botany and 45 from Zoology. Total marks for Biology is 360 (out of 720 total).',
   },
   {
     question: 'Which chapters are most important for NEET Biology 2026?',

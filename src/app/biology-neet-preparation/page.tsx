@@ -88,7 +88,7 @@ const faqs = [
   {
     question: 'How many questions come from Biology in NEET?',
     answer:
-      'NEET has 200 questions total (180 to attempt), out of which 100 are from Biology - 50 from Botany and 50 from Zoology. Biology carries 360 marks out of 720, making it the highest-weightage subject. Scoring well in Biology is crucial for NEET success.',
+      'NEET has 200 questions total (180 to attempt), out of which 90 are from Biology - 45 from Botany and 45 from Zoology. Biology carries 360 marks out of 720, making it the highest-weightage subject. Scoring well in Biology is crucial for NEET success.',
   },
   {
     question: 'What is the best strategy for NEET Biology preparation?',
@@ -208,7 +208,7 @@ export default function BiologyNeetPreparationPage() {
               NEET Biology Topic-wise Weightage
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              100 questions from Biology (50 Botany + 50 Zoology) = 360 marks
+              90 questions from Biology (45 Botany + 45 Zoology) = 360 marks
             </p>
           </motion.div>
 

@@ -197,7 +197,7 @@ export default function Class12Page() {
                   className="bg-yellow-500 text-black hover:bg-yellow-400 animate-pulse"
                 >
                   <Play className="w-5 h-5 mr-2" />
-                  Book URGENT Demo Class
+                  Book Free Demo Class
                 </Button>
 
                 <Button
@@ -519,7 +519,7 @@ export default function Class12Page() {
                 className="bg-yellow-500 text-black hover:bg-yellow-400 animate-bounce"
               >
                 <Play className="w-5 h-5 mr-2" />
-                URGENT: Book Demo Now
+                Book Free Demo Class
               </Button>
 
               <Button

@@ -213,7 +213,7 @@ export default function NeetClassesPage() {
                   className="bg-yellow-500 text-black hover:bg-yellow-400"
                 >
                   <Play className="w-5 h-5 mr-2" />
-                  Attend Free Demo Class
+                  Book Free Demo Class
                 </Button>
               </Link>
 
@@ -423,7 +423,7 @@ export default function NeetClassesPage() {
                   className="bg-yellow-500 text-black hover:bg-yellow-400"
                 >
                   <Play className="w-5 h-5 mr-2" />
-                  Attend Free Demo Class
+                  Book Free Demo Class
                 </Button>
               </Link>
 

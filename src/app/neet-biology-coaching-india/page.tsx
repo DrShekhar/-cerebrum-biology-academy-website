@@ -152,7 +152,7 @@ export default function NeetBiologyCoachingIndiaPage() {
                   className="bg-yellow-500 text-black hover:bg-yellow-400"
                 >
                   <Play className="w-5 h-5 mr-2" />
-                  Book Free Biology Demo
+                  Book Free Demo Class
                 </Button>
               </Link>
 
@@ -403,7 +403,7 @@ export default function NeetBiologyCoachingIndiaPage() {
                   className="bg-yellow-500 text-black hover:bg-yellow-400"
                 >
                   <Play className="w-5 h-5 mr-2" />
-                  Book Free Biology Demo
+                  Book Free Demo Class
                 </Button>
               </Link>
 

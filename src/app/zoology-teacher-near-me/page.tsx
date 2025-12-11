@@ -92,7 +92,7 @@ export default function ZoologyTeacherNearMePage() {
                 href="/demo"
                 className="rounded-lg bg-white px-8 py-3 font-semibold text-blue-600 shadow-lg transition hover:bg-blue-50"
               >
-                Book Free Demo
+                Book Free Demo Class
               </Link>
               <a
                 href="tel:+918826444334"
@@ -349,7 +349,7 @@ export default function ZoologyTeacherNearMePage() {
                 href="/demo"
                 className="rounded-lg bg-white px-8 py-3 font-semibold text-blue-600 shadow-lg transition hover:bg-blue-50"
               >
-                Book Free Demo
+                Book Free Demo Class
               </Link>
               <a
                 href="tel:+918826444334"

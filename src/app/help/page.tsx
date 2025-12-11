@@ -455,7 +455,7 @@ export default function HelpCenterPage() {
                 href="/demo-booking"
                 className="px-6 py-3 bg-white text-blue-600 rounded-xl font-semibold hover:bg-blue-50 transition-all"
               >
-                Book Free Demo
+                Book Free Demo Class
               </Link>
               <Link
                 href="/contact"

@@ -94,7 +94,7 @@ export default function ZoologyTeacherPage() {
                 href="/demo"
                 className="rounded-lg bg-white px-8 py-3 font-semibold text-indigo-600 shadow-lg transition hover:bg-indigo-50"
               >
-                Book Free Demo
+                Book Free Demo Class
               </Link>
               <Link
                 href="/contact"
