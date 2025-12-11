@@ -176,6 +176,13 @@ export const Footer = memo(function Footer() {
     { name: 'Botany Classes', href: '/botany-classes' },
   ]
 
+  const onlineNeetLinks = [
+    { name: 'Online NEET Coaching', href: '/online-neet-coaching' },
+    { name: 'NEET Online Classes', href: '/neet-online-classes' },
+    { name: 'NEET Online Course', href: '/neet-online-course' },
+    { name: 'NEET Online', href: '/neet-online' },
+  ]
+
   const legalLinks = [
     { name: 'Privacy Policy', href: '/privacy-policy' },
     { name: 'Terms of Service', href: '/terms-of-service' },
@@ -454,6 +461,20 @@ export const Footer = memo(function Footer() {
             <h4 className="font-semibold text-lg mb-4 mt-4 text-white">Botany Teacher</h4>
             <ul className="space-y-2">
               {botanyTeacherLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-gray-300 hover:text-white transition-colors text-sm"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            <h4 className="font-semibold text-lg mb-4 mt-4 text-white">NEET Online</h4>
+            <ul className="space-y-2">
+              {onlineNeetLinks.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
