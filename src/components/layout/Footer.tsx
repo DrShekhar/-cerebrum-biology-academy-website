@@ -96,8 +96,8 @@ export const Footer = memo(function Footer() {
     { name: 'Dr. Shekhar Singh', href: '/dr-shekhar-singh' },
     { name: 'Our Faculty', href: '/faculty' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Success Stories', href: '/testimonials' },
     { name: 'Results', href: '/results' },
+    { name: 'Success Stories', href: '/testimonials' },
     { name: 'Photo Gallery', href: '/gallery' },
     { name: 'Careers', href: '/contact' },
   ]
@@ -365,7 +365,7 @@ export const Footer = memo(function Footer() {
           >
             <h4 className="font-semibold text-lg mb-4 text-white">{t('company')}</h4>
             <ul className="space-y-2 mb-6">
-              {companyLinks.slice(0, 4).map((link) => (
+              {companyLinks.slice(0, 5).map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
