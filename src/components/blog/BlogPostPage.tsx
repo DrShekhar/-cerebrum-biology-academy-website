@@ -30,6 +30,79 @@ import { BlogExitIntentWrapper } from './BlogExitIntentWrapper'
 import { FloatingCTA } from '@/components/common/FloatingCTA'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
+import {
+  KotaVsOnlineIllustration,
+  ClassStartTimeIllustration,
+  DPSStudentIllustration,
+  CoachingCenterIllustration,
+  BooksForNEETIllustration,
+  MistakesToAvoidIllustration,
+  Last6MonthsStrategyIllustration,
+  MockTestIllustration,
+  NCERTReadingIllustration,
+  NEET2026GuideIllustration,
+  ToppersSecretsIllustration,
+  ChapterWeightageIllustration,
+  HumanPhysiologyIllustration,
+  GeneticsIllustration,
+  EcologyIllustration,
+  CellBiologyIllustration,
+  PlantPhysiologyIllustration,
+  HumanReproductionIllustration,
+  BiotechnologyIllustration,
+  AnimalKingdomIllustration,
+  PhotosynthesisVsRespirationIllustration,
+  MolecularBiologyIllustration,
+  PlantKingdomIllustration,
+  EvolutionIllustration,
+  MicrobesIllustration,
+  NEET180StrategyIllustration,
+  DropperStrategyIllustration,
+  Class11FoundationIllustration,
+  Class12BoardBalanceIllustration,
+  FreeResourcesIllustration,
+  ResultsAnalysisIllustration,
+  DelhiNCRGuideIllustration,
+  LaxmiNagarIllustration,
+  NoidaIllustration,
+  DwarkaIllustration,
+  SmallVsLargeBatchIllustration,
+  TwoYearProgramIllustration,
+  SpecializedVsMassIllustration,
+} from '@/components/illustrations/BlogIllustrations'
+
+type IllustrationComponent = React.ComponentType<{ className?: string; animate?: boolean }>
+
+const illustrationMap: Record<string, IllustrationComponent> = {
+  'kota-vs-online-neet-coaching-2025': KotaVsOnlineIllustration,
+  'when-to-start-neet-preparation-class-9-vs-10': ClassStartTimeIllustration,
+  'dps-students-neet-preparation-guide': DPSStudentIllustration,
+  'top-10-neet-biology-coaching-delhi-ncr-2025': CoachingCenterIllustration,
+  'neet-biology-coaching-delhi-ncr-guide': DelhiNCRGuideIllustration,
+  'best-books-for-neet-2026-biology-physics-chemistry': BooksForNEETIllustration,
+  'common-mistakes-neet-aspirants-avoid-2026': MistakesToAvoidIllustration,
+  'last-6-months-neet-2026-preparation-strategy': Last6MonthsStrategyIllustration,
+  'mock-test-strategy-neet-2026-complete-guide': MockTestIllustration,
+  'ncert-reading-strategy-neet-biology-2026': NCERTReadingIllustration,
+  'neet-2026-complete-guide-exam-pattern-syllabus-dates': NEET2026GuideIllustration,
+  'what-neet-toppers-do-differently-secrets-revealed': ToppersSecretsIllustration,
+  'neet-biology-chapter-wise-weightage-2026': ChapterWeightageIllustration,
+  'genetics-heredity-variation-neet': GeneticsIllustration,
+  'cell-structure-function-neet-notes': CellBiologyIllustration,
+  'cell-division-mitosis-meiosis-neet': CellBiologyIllustration,
+  'biomolecules-neet-biology-complete-guide': MolecularBiologyIllustration,
+  'photosynthesis-neet-biology-notes': PlantPhysiologyIllustration,
+  'photosynthesis-vs-respiration-neet-comparison': PhotosynthesisVsRespirationIllustration,
+  'human-digestion-absorption-neet': HumanPhysiologyIllustration,
+  'breathing-gas-exchange-neet-notes': HumanPhysiologyIllustration,
+  'body-fluids-circulation-neet': HumanPhysiologyIllustration,
+  'excretory-system-neet-notes': HumanPhysiologyIllustration,
+  'nervous-system-neet-biology': HumanPhysiologyIllustration,
+  'plant-kingdom-classification-neet': PlantKingdomIllustration,
+  'neet-biology-preparation-strategy-score-180-plus': NEET180StrategyIllustration,
+  'neet-biology-syllabus-2025-complete-guide': ChapterWeightageIllustration,
+  'ultimate-neet-2025-guide-specialized-vs-mass-coaching': SpecializedVsMassIllustration,
+}
 
 interface BlogPostPageProps {
   meta: BlogPostMeta
@@ -250,14 +323,26 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
 
               {/* Featured Image */}
               <motion.div
-                className="aspect-video bg-gradient-to-br from-blue-400 to-purple-500 rounded-3xl mb-12 relative overflow-hidden"
+                className="aspect-video bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 rounded-3xl mb-12 relative overflow-hidden flex items-center justify-center p-8"
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
-                  <BookOpen className="w-16 h-16 text-white opacity-80" />
-                </div>
+                {illustrationMap[meta.slug] ? (
+                  (() => {
+                    const IllustrationComponent = illustrationMap[meta.slug]
+                    return (
+                      <IllustrationComponent className="w-full h-full max-w-2xl" animate={true} />
+                    )
+                  })()
+                ) : (
+                  <div className="flex flex-col items-center justify-center text-gray-400">
+                    <BookOpen className="w-16 h-16 mb-4" />
+                    <span className="text-sm font-medium">
+                      {meta.neetChapter || 'NEET Biology'}
+                    </span>
+                  </div>
+                )}
               </motion.div>
 
               {/* Key Takeaways */}
