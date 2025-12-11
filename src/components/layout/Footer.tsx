@@ -290,12 +290,48 @@ export const Footer = memo(function Footer() {
             </ul>
           </motion.div>
 
-          {/* Services */}
+          {/* Centers */}
           <motion.div
-            className="xl:col-span-2"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true }}
+            style={{ opacity: 1 }}
+          >
+            <h4 className="font-semibold text-lg mb-4 text-white">Offline Centers</h4>
+            <ul className="space-y-2">
+              {offlineCenters.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-gray-300 hover:text-white transition-colors text-sm"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            <h4 className="font-semibold text-lg mb-4 mt-6 text-white">Serving Online</h4>
+            <ul className="space-y-2">
+              {onlineRegions.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-gray-300 hover:text-white transition-colors text-sm"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+
+          {/* Services & Programs */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.35 }}
             viewport={{ once: true }}
             style={{ opacity: 1 }}
           >
@@ -313,35 +349,7 @@ export const Footer = memo(function Footer() {
               ))}
             </ul>
 
-            <h4 className="font-semibold text-lg mb-4 mt-6 text-white">Offline Centers</h4>
-            <ul className="space-y-2">
-              {offlineCenters.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors text-sm"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-
-            <h4 className="font-semibold text-lg mb-4 mt-4 text-white">Serving Online</h4>
-            <ul className="space-y-2">
-              {onlineRegions.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors text-sm"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-
-            <h4 className="font-semibold text-lg mb-4 mt-6 text-white">Explore Our Programs</h4>
+            <h4 className="font-semibold text-lg mb-4 mt-6 text-white">Explore Programs</h4>
             <ul className="space-y-2">
               {hubLinks.map((link) => (
                 <li key={link.name}>
