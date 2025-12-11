@@ -15,12 +15,13 @@ interface BookingFormProps {
 }
 
 export function BookingForm({ type = 'demo', onSubmit }: BookingFormProps) {
-  const [formData, setFormData] = useState<ContactForm>({
+  const [formData, setFormData] = useState<ContactForm & { preferredDate?: string }>({
     name: '',
     email: '',
     phone: '',
     course: '',
     message: '',
+    preferredDate: '',
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [errors, setErrors] = useState<Partial<ContactForm>>({})
@@ -69,6 +70,16 @@ export function BookingForm({ type = 'demo', onSubmit }: BookingFormProps) {
     return Object.keys(newErrors).length === 0
   }
 
+  const mapPreferredTimeToApiFormat = (time: string): string => {
+    const timeMap: Record<string, string> = {
+      morning: '09:00 AM - 12:00 PM',
+      afternoon: '12:00 PM - 04:00 PM',
+      evening: '04:00 PM - 08:00 PM',
+      flexible: '09:00 AM - 08:00 PM',
+    }
+    return timeMap[time] || '09:00 AM - 12:00 PM'
+  }
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
 
@@ -79,28 +90,49 @@ export function BookingForm({ type = 'demo', onSubmit }: BookingFormProps) {
     setIsSubmitting(true)
 
     try {
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1000))
+      const apiPayload = {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        courseInterest: [formData.course],
+        preferredDate: formData.preferredDate || new Date().toISOString().split('T')[0],
+        preferredTime: mapPreferredTimeToApiFormat(formData.preferredTime || 'flexible'),
+        message: formData.message || '',
+      }
 
-      console.log('Form submitted:', formData)
+      const response = await fetch('/api/demo-booking', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(apiPayload),
+      })
+
+      const result = await response.json()
+
+      if (!response.ok) {
+        throw new Error(result.error || 'Failed to submit booking')
+      }
+
+      console.log('Booking created:', result)
 
       if (onSubmit) {
         onSubmit(formData)
       }
 
-      // Reset form
       setFormData({
         name: '',
         email: '',
         phone: '',
         course: '',
         message: '',
+        preferredDate: '',
       })
 
-      alert('Thank you! We will contact you soon.')
+      alert('Thank you! Your demo class has been booked. We will contact you soon.')
     } catch (error) {
       console.error('Form submission error:', error)
-      alert('Something went wrong. Please try again.')
+      alert(error instanceof Error ? error.message : 'Something went wrong. Please try again.')
     } finally {
       setIsSubmitting(false)
     }
@@ -242,27 +274,51 @@ export function BookingForm({ type = 'demo', onSubmit }: BookingFormProps) {
           {errors.course && <p className="text-red-500 text-sm mt-1">{errors.course}</p>}
         </div>
 
-        {/* Preferred Time (for demo bookings) */}
+        {/* Preferred Date and Time (for demo bookings) */}
         {type === 'demo' && (
-          <div>
-            <label htmlFor="preferredTime" className="block text-sm font-medium text-gray-700 mb-2">
-              <Clock className="w-4 h-4 inline mr-2" />
-              Preferred Time
-            </label>
-            <select
-              id="preferredTime"
-              value={formData.preferredTime || ''}
-              onChange={(e) =>
-                handleInputChange('preferredTime' as keyof ContactForm, e.target.value)
-              }
-              className="flex h-12 w-full items-center justify-between rounded-lg border border-gray-200 bg-white px-4 py-3 text-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-200"
-            >
-              {preferredTimeOptions.map((option) => (
-                <option key={option.value} value={option.value}>
-                  {option.label}
-                </option>
-              ))}
-            </select>
+          <div className="grid md:grid-cols-2 gap-4">
+            <div>
+              <label
+                htmlFor="preferredDate"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
+                <Calendar className="w-4 h-4 inline mr-2" />
+                Preferred Date *
+              </label>
+              <input
+                type="date"
+                id="preferredDate"
+                value={formData.preferredDate || ''}
+                min={new Date().toISOString().split('T')[0]}
+                onChange={(e) =>
+                  setFormData((prev) => ({ ...prev, preferredDate: e.target.value }))
+                }
+                className="flex h-12 w-full items-center justify-between rounded-lg border border-gray-200 bg-white px-4 py-3 text-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-200"
+              />
+            </div>
+            <div>
+              <label
+                htmlFor="preferredTime"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
+                <Clock className="w-4 h-4 inline mr-2" />
+                Preferred Time
+              </label>
+              <select
+                id="preferredTime"
+                value={formData.preferredTime || ''}
+                onChange={(e) =>
+                  handleInputChange('preferredTime' as keyof ContactForm, e.target.value)
+                }
+                className="flex h-12 w-full items-center justify-between rounded-lg border border-gray-200 bg-white px-4 py-3 text-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-200"
+              >
+                {preferredTimeOptions.map((option) => (
+                  <option key={option.value} value={option.value}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
+            </div>
           </div>
         )}
 
