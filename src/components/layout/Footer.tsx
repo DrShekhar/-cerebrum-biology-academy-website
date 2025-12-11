@@ -127,80 +127,13 @@ export const Footer = memo(function Footer() {
     { name: 'Overseas (NRI)', href: '/neet-coaching-overseas' },
   ]
 
-  const exploreNeetCoaching = [
-    { name: 'Best NEET Coaching', href: '/best-neet-coaching' },
-    { name: 'NEET Coaching Centre', href: '/neet-coaching-centre' },
-    { name: 'NEET Coaching Institute', href: '/neet-coaching-institute' },
-    { name: 'NEET Classes', href: '/neet-classes' },
-    { name: 'NEET Preparation', href: '/neet-preparation' },
-    { name: 'NEET Biology Classes', href: '/neet-biology-classes' },
-  ]
-
-  const biologyTutoringLinks = [
-    { name: 'Biology Tutor', href: '/biology-tutor' },
-    { name: 'Biology Tutors Near Me', href: '/biology-tutors-near-me' },
-    { name: 'Biology Home Tutor', href: '/biology-home-tutor' },
-    { name: 'State Boards', href: '/biology-tutor-state-boards' },
-  ]
-
-  const biologyTeacherLinks = [
+  const hubLinks = [
+    { name: 'NEET Biology', href: '/neet-biology-coaching' },
     { name: 'Biology Teacher', href: '/biology-teacher' },
-    { name: 'Biology Teacher Near Me', href: '/biology-teacher-near-me' },
-    { name: 'Best for NEET', href: '/best-biology-teacher-for-neet' },
-    { name: 'Class 11 CBSE', href: '/best-biology-teacher-class-11-cbse' },
-    { name: 'Class 12 CBSE', href: '/best-biology-teacher-class-12-cbse' },
-    { name: 'Class 11 ICSE', href: '/best-biology-teacher-class-11-icse' },
-    { name: 'Class 12 ICSE', href: '/best-biology-teacher-class-12-icse' },
-  ]
-
-  const biologyClassesLinks = [
-    { name: 'Biology Classes', href: '/biology-classes' },
-    { name: 'Biology Classes Near Me', href: '/biology-classes-near-me' },
-    { name: 'Biology Coaching', href: '/biology-coaching' },
-    { name: 'Biology Tuition Class 11', href: '/biology-tuition-class-11' },
-    { name: 'Biology Tuition Class 12', href: '/biology-tuition-class-12' },
-    { name: 'Biology for NEET', href: '/biology-neet-preparation' },
-  ]
-
-  const zoologyTeacherLinks = [
-    { name: 'Zoology Teacher', href: '/zoology-teacher' },
-    { name: 'Zoology Teacher Near Me', href: '/zoology-teacher-near-me' },
-    { name: 'Best for NEET', href: '/best-zoology-teacher-for-neet' },
-    { name: 'Zoology Classes', href: '/zoology-classes' },
-  ]
-
-  const botanyTeacherLinks = [
-    { name: 'Botany Teacher', href: '/botany-teacher' },
-    { name: 'Botany Teacher Near Me', href: '/botany-teacher-near-me' },
-    { name: 'Best for NEET', href: '/best-botany-teacher-for-neet' },
-    { name: 'Botany Classes', href: '/botany-classes' },
-  ]
-
-  const onlineNeetLinks = [
-    { name: 'Online NEET Coaching', href: '/online-neet-coaching' },
-    { name: 'NEET Online Classes', href: '/neet-online-classes' },
-    { name: 'NEET Online Course', href: '/neet-online-course' },
-    { name: 'NEET Online', href: '/neet-online' },
-  ]
-
-  const onlineBiologyLinks = [
-    { name: 'Online Biology Classes', href: '/online-biology-classes' },
-    { name: 'Best Biology Teacher Online', href: '/best-biology-teacher-online' },
-    { name: 'Best NEET Biology Teacher', href: '/best-online-biology-teacher-for-neet' },
-    { name: 'Biology Tutor Online', href: '/biology-tutor-online' },
-  ]
-
-  const foundationOlympiadLinks = [
-    { name: 'Class 9 CBSE Biology', href: '/biology-tutor-class-9-cbse' },
-    { name: 'Class 9 ICSE Biology', href: '/biology-tutor-class-9-icse' },
-    { name: 'Class 9 Science Tuition', href: '/class-9-science-tuition' },
-    { name: 'NEET Foundation Class 9', href: '/neet-foundation-class-9' },
-    { name: 'NEET Foundation Class 10', href: '/neet-foundation-class-10' },
-    { name: 'Pre-NEET Coaching', href: '/pre-neet-coaching' },
-    { name: 'NTSE Biology Prep', href: '/ntse-biology-preparation' },
-    { name: 'NTSE Online Classes', href: '/ntse-online-classes' },
-    { name: 'Biology Olympiad', href: '/biology-olympiad-coaching' },
-    { name: 'Olympiad Preparation', href: '/olympiad-preparation' },
+    { name: 'Online Classes', href: '/online-biology-classes' },
+    { name: 'Foundation & Olympiad', href: '/neet-foundation-class-9' },
+    { name: 'International Curriculum', href: '/international-biology-tutor' },
+    { name: 'Best Biology Books', href: '/best-biology-books-for-neet' },
   ]
 
   const legalLinks = [
@@ -408,121 +341,9 @@ export const Footer = memo(function Footer() {
               ))}
             </ul>
 
-            <h4 className="font-semibold text-lg mb-4 mt-4 text-white">Explore NEET Coaching</h4>
+            <h4 className="font-semibold text-lg mb-4 mt-6 text-white">Explore Our Programs</h4>
             <ul className="space-y-2">
-              {exploreNeetCoaching.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors text-sm"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-
-            <h4 className="font-semibold text-lg mb-4 mt-4 text-white">Biology Tutoring</h4>
-            <ul className="space-y-2">
-              {biologyTutoringLinks.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors text-sm"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-
-            <h4 className="font-semibold text-lg mb-4 mt-4 text-white">Biology Teacher</h4>
-            <ul className="space-y-2">
-              {biologyTeacherLinks.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors text-sm"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-
-            <h4 className="font-semibold text-lg mb-4 mt-4 text-white">Biology Classes</h4>
-            <ul className="space-y-2">
-              {biologyClassesLinks.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors text-sm"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-
-            <h4 className="font-semibold text-lg mb-4 mt-4 text-white">Zoology Teacher</h4>
-            <ul className="space-y-2">
-              {zoologyTeacherLinks.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors text-sm"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-
-            <h4 className="font-semibold text-lg mb-4 mt-4 text-white">Botany Teacher</h4>
-            <ul className="space-y-2">
-              {botanyTeacherLinks.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors text-sm"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-
-            <h4 className="font-semibold text-lg mb-4 mt-4 text-white">NEET Online</h4>
-            <ul className="space-y-2">
-              {onlineNeetLinks.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors text-sm"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-
-            <h4 className="font-semibold text-lg mb-4 mt-4 text-white">Online Biology</h4>
-            <ul className="space-y-2">
-              {onlineBiologyLinks.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors text-sm"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-
-            <h4 className="font-semibold text-lg mb-4 mt-4 text-white">Foundation & Olympiad</h4>
-            <ul className="space-y-2">
-              {foundationOlympiadLinks.map((link) => (
+              {hubLinks.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
