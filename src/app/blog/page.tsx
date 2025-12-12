@@ -1,6 +1,26 @@
 import { Metadata } from 'next'
-import { BlogListingPage } from '@/components/blog/BlogListingPage'
+import dynamic from 'next/dynamic'
 import { getAllPosts, getAllCategories, getBlogStats } from '@/lib/blog/mdx'
+
+// Lazy load the heavy blog listing component
+const BlogListingPage = dynamic(
+  () => import('@/components/blog/BlogListingPage').then((mod) => mod.BlogListingPage),
+  {
+    loading: () => (
+      <div className="min-h-screen bg-gradient-to-b from-navy-50 to-white">
+        <div className="max-w-7xl mx-auto px-4 py-12">
+          <div className="h-12 bg-gray-200 animate-pulse rounded-lg mb-8 w-1/2" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[1, 2, 3, 4, 5, 6].map((i) => (
+              <div key={i} className="h-72 bg-gray-100 animate-pulse rounded-xl" />
+            ))}
+          </div>
+        </div>
+      </div>
+    ),
+    ssr: true,
+  }
+)
 
 export const metadata: Metadata = {
   title: 'NEET Biology Blog | Study Tips & Preparation Strategies',

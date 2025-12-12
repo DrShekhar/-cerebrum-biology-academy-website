@@ -7,6 +7,15 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
+
+  // CRITICAL FIX: Remove console.log from production builds
+  // This prevents PII leaks and improves performance
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production' ? {
+      exclude: ['error', 'warn'], // Keep error and warn for debugging
+    } : false,
+  },
+
   // Webpack configuration for polyfills and bundle optimization
   webpack: (config, { isServer }) => {
     if (!isServer) {
@@ -150,12 +159,28 @@ const nextConfig = {
   // Enable standalone output for production (smaller deployments)
   output: process.env.NODE_ENV === 'production' ? 'standalone' : undefined,
 
+  // CRITICAL FIX: Disable source maps in production to reduce build size
+  // Build was 4.6GB, should be <200MB
+  productionBrowserSourceMaps: false,
+
+  // Enable SWC minification for smaller bundles
+  swcMinify: true,
+
   // Experimental features for better performance
   // Note: optimizeCss causes worker.js errors in dev mode (Next.js 15.5.x bug)
   // Only enable in production to avoid dev server instability
   experimental: {
     optimizeCss: process.env.NODE_ENV === 'production',
-    scrollRestoration: true
+    scrollRestoration: true,
+    // Optimize package imports for smaller bundles
+    optimizePackageImports: [
+      'lucide-react',
+      '@heroicons/react',
+      '@radix-ui/react-icons',
+      'framer-motion',
+      'date-fns',
+      'lodash',
+    ],
   },
 
   // Redirects for SEO - Fix 404 errors reported in Google Search Console
@@ -412,6 +437,11 @@ export default withSentryConfig(withMDX(nextConfig), {
 
   // Hides source maps from generated client bundles
   hideSourceMaps: true,
+
+  // Don't upload source maps (reduces build size significantly)
+  sourcemaps: {
+    disable: process.env.NODE_ENV !== 'production',
+  },
 
   // Automatically tree-shake Sentry logger statements to reduce bundle size
   disableLogger: true,
