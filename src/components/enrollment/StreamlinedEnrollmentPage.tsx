@@ -846,7 +846,7 @@ export function StreamlinedEnrollmentPage({
                     Join WhatsApp Group
                   </PremiumButton>
                   <PremiumButton
-                    onClick={() => (window.location.href = '/student-portal')}
+                    onClick={() => (window.location.href = '/student/dashboard')}
                     variant="medical"
                     size="lg"
                   >

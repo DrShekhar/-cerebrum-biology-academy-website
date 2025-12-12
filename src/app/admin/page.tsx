@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { motion } from 'framer-motion'
 import {
   Users,
@@ -18,84 +18,84 @@ import {
   BarChart3,
   Eye,
   UserPlus,
+  RefreshCw,
 } from 'lucide-react'
 import { AdminLayout } from '@/components/admin/AdminLayout'
 
-// Mock data - in real implementation, this would come from your database
-const mockDashboardData = {
+interface DashboardData {
   overview: {
-    totalStudents: 2847,
-    activeStudents: 1923,
-    newRegistrations: 23,
-    totalRevenue: 4250000,
-    conversionRate: 18.5,
-    averageSessionTime: 12.5,
+    totalStudents: number
+    activeStudents: number
+    newRegistrations: number
+    totalRevenue: number
+    conversionRate: number
+    averageSessionTime: number
+  }
+  demos: {
+    totalBookings: number
+    pendingBookings: number
+    completedToday: number
+    conversionRate: number
+    averageRating: number
+  }
+  courses: {
+    totalEnrollments: number
+    popularCourses: Array<{
+      courseId: string
+      courseName: string
+      enrollments: number
+      revenue: number
+    }>
+  }
+  recentActivities: Array<{
+    id: string
+    type: string
+    user: string
+    description: string
+    timestamp: Date
+  }>
+  liveMetrics: {
+    usersOnline: number
+    activeSessions: number
+    currentPageViews: number
+    demoBookingsToday: number
+  }
+  changePercentages?: {
+    totalStudents: number
+    newRegistrations: number
+    totalRevenue: number
+    conversionRate: number
+    demoBookings: number
+  }
+}
+
+// Default data structure (used as fallback)
+const defaultDashboardData: DashboardData = {
+  overview: {
+    totalStudents: 0,
+    activeStudents: 0,
+    newRegistrations: 0,
+    totalRevenue: 0,
+    conversionRate: 0,
+    averageSessionTime: 0,
   },
   demos: {
-    totalBookings: 156,
-    pendingBookings: 8,
-    completedToday: 5,
-    conversionRate: 42.5,
-    averageRating: 4.8,
+    totalBookings: 0,
+    pendingBookings: 0,
+    completedToday: 0,
+    conversionRate: 0,
+    averageRating: 0,
   },
   courses: {
-    totalEnrollments: 1234,
-    popularCourses: [
-      {
-        courseId: 'class-12',
-        courseName: 'Class 12th Biology',
-        enrollments: 456,
-        revenue: 3420000,
-      },
-      {
-        courseId: 'dropper',
-        courseName: 'NEET Dropper Program',
-        enrollments: 234,
-        revenue: 1989000,
-      },
-      {
-        courseId: 'class-11',
-        courseName: 'Class 11th Biology',
-        enrollments: 345,
-        revenue: 2622000,
-      },
-    ],
+    totalEnrollments: 0,
+    popularCourses: [],
   },
-  recentActivities: [
-    {
-      id: 1,
-      type: 'demo_booking',
-      user: 'Rahul Sharma',
-      description: 'booked a demo for Class 12th Biology',
-      timestamp: new Date(Date.now() - 5 * 60 * 1000),
-    },
-    {
-      id: 2,
-      type: 'enrollment',
-      user: 'Priya Patel',
-      description: 'enrolled in NEET Dropper Program',
-      timestamp: new Date(Date.now() - 12 * 60 * 1000),
-    },
-    {
-      id: 3,
-      type: 'payment',
-      user: 'Amit Kumar',
-      description: 'completed payment of ₹75,000',
-      timestamp: new Date(Date.now() - 18 * 60 * 1000),
-    },
-    {
-      id: 4,
-      type: 'cart_abandonment',
-      user: 'Sneha Singh',
-      description: 'abandoned cart with ₹85,000 value',
-      timestamp: new Date(Date.now() - 25 * 60 * 1000),
-    },
-  ],
+  recentActivities: [],
   liveMetrics: {
-    usersOnline: 127,
-    activeSessions: 89,
-    currentPageViews: 45,
-    demoBookingsToday: 12,
+    usersOnline: 0,
+    activeSessions: 0,
+    currentPageViews: 0,
+    demoBookingsToday: 0,
   },
 }
 
@@ -183,28 +183,52 @@ function formatTimeAgo(date: Date): string {
 }
 
 export default function AdminDashboard() {
-  const [data, setData] = useState(mockDashboardData)
+  const [data, setData] = useState<DashboardData>(defaultDashboardData)
   const [isLoading, setIsLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
+  const [lastUpdated, setLastUpdated] = useState<Date | null>(null)
+  const [timeframe, setTimeframe] = useState('7d')
+
+  const fetchDashboardData = useCallback(async () => {
+    try {
+      setError(null)
+      const response = await fetch(`/api/admin/analytics?timeframe=${timeframe}`)
+      const result = await response.json()
+
+      if (result.success && result.data) {
+        const apiData = result.data
+        setData({
+          overview: apiData.overview,
+          demos: apiData.demos,
+          courses: apiData.courses,
+          recentActivities:
+            apiData.recentActivities?.map((a: any) => ({
+              ...a,
+              timestamp: new Date(a.timestamp),
+            })) || [],
+          liveMetrics: apiData.liveMetrics,
+          changePercentages: apiData.changePercentages,
+        })
+        setLastUpdated(new Date(apiData.lastUpdated))
+      } else {
+        setError(result.error || 'Failed to fetch dashboard data')
+      }
+    } catch (err) {
+      console.error('Dashboard fetch error:', err)
+      setError('Failed to connect to server')
+    } finally {
+      setIsLoading(false)
+    }
+  }, [timeframe])
 
   useEffect(() => {
-    // Simulate data loading
-    setTimeout(() => setIsLoading(false), 1000)
+    fetchDashboardData()
 
-    // Simulate real-time updates
-    const interval = setInterval(() => {
-      setData((prev) => ({
-        ...prev,
-        liveMetrics: {
-          ...prev.liveMetrics,
-          usersOnline: prev.liveMetrics.usersOnline + Math.floor(Math.random() * 10) - 5,
-          activeSessions: prev.liveMetrics.activeSessions + Math.floor(Math.random() * 6) - 3,
-          currentPageViews: prev.liveMetrics.currentPageViews + Math.floor(Math.random() * 8) - 4,
-        },
-      }))
-    }, 5000)
+    // Refresh data every 30 seconds
+    const interval = setInterval(fetchDashboardData, 30000)
 
     return () => clearInterval(interval)
-  }, [])
+  }, [fetchDashboardData])
 
   if (isLoading) {
     return (
@@ -216,29 +240,83 @@ export default function AdminDashboard() {
     )
   }
 
+  if (error) {
+    return (
+      <AdminLayout>
+        <div className="flex flex-col items-center justify-center h-full">
+          <AlertCircle className="w-16 h-16 text-red-500 mb-4" />
+          <h2 className="text-xl font-semibold text-gray-900 mb-2">Error Loading Dashboard</h2>
+          <p className="text-gray-600 mb-4">{error}</p>
+          <button
+            onClick={fetchDashboardData}
+            className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 flex items-center gap-2"
+          >
+            <RefreshCw className="w-4 h-4" />
+            Try Again
+          </button>
+        </div>
+      </AdminLayout>
+    )
+  }
+
   return (
     <AdminLayout>
       <div className="p-6 max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900">Dashboard</h1>
-          <p className="text-gray-600 mt-2">
-            Welcome back! Here's what's happening at Cerebrum Biology Academy today.
-          </p>
+          <div className="flex items-center justify-between">
+            <div>
+              <h1 className="text-3xl font-bold text-gray-900">Dashboard</h1>
+              <p className="text-gray-600 mt-2">
+                Welcome back! Here's what's happening at Cerebrum Biology Academy.
+              </p>
+            </div>
+            <div className="flex items-center gap-4">
+              {/* Timeframe selector */}
+              <select
+                value={timeframe}
+                onChange={(e) => setTimeframe(e.target.value)}
+                className="px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-500"
+              >
+                <option value="1d">Last 24 hours</option>
+                <option value="7d">Last 7 days</option>
+                <option value="30d">Last 30 days</option>
+                <option value="90d">Last 90 days</option>
+                <option value="1y">Last year</option>
+              </select>
+              {/* Refresh button */}
+              <button
+                onClick={fetchDashboardData}
+                className="p-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
+                title="Refresh data"
+              >
+                <RefreshCw className="w-5 h-5" />
+              </button>
+            </div>
+          </div>
 
           {/* Live indicators */}
-          <div className="flex items-center space-x-6 mt-4 p-4 bg-white rounded-lg shadow-sm border">
-            <div className="flex items-center space-x-2">
-              <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-              <span className="text-sm font-medium">System Online</span>
+          <div className="flex items-center justify-between mt-4 p-4 bg-white rounded-lg shadow-sm border">
+            <div className="flex items-center space-x-6">
+              <div className="flex items-center space-x-2">
+                <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                <span className="text-sm font-medium">System Online</span>
+              </div>
+              <div className="text-sm text-gray-500">
+                {data.liveMetrics.usersOnline} users online
+              </div>
+              <div className="text-sm text-gray-500">
+                {data.liveMetrics.activeSessions} active sessions
+              </div>
+              <div className="text-sm text-gray-500">
+                {data.liveMetrics.demoBookingsToday} demos today
+              </div>
             </div>
-            <div className="text-sm text-gray-500">{data.liveMetrics.usersOnline} users online</div>
-            <div className="text-sm text-gray-500">
-              {data.liveMetrics.activeSessions} active sessions
-            </div>
-            <div className="text-sm text-gray-500">
-              {data.liveMetrics.demoBookingsToday} demos today
-            </div>
+            {lastUpdated && (
+              <div className="text-xs text-gray-400">
+                Last updated: {lastUpdated.toLocaleTimeString()}
+              </div>
+            )}
           </div>
         </div>
 
@@ -247,32 +325,32 @@ export default function AdminDashboard() {
           <MetricCard
             title="Total Students"
             value={data.overview.totalStudents}
-            change={12.5}
-            changeLabel="vs last month"
+            change={data.changePercentages?.totalStudents || 0}
+            changeLabel="vs previous period"
             icon={Users}
             color="blue"
           />
           <MetricCard
             title="Demo Bookings"
             value={data.demos.totalBookings}
-            change={23.8}
-            changeLabel="vs last month"
+            change={data.changePercentages?.demoBookings || 0}
+            changeLabel="vs previous period"
             icon={Calendar}
             color="green"
           />
           <MetricCard
             title="Total Revenue"
             value={`₹${(data.overview.totalRevenue / 100000).toFixed(1)}L`}
-            change={18.2}
-            changeLabel="vs last month"
+            change={data.changePercentages?.totalRevenue || 0}
+            changeLabel="vs previous period"
             icon={DollarSign}
             color="purple"
           />
           <MetricCard
             title="Conversion Rate"
-            value={`${data.overview.conversionRate}%`}
-            change={3.2}
-            changeLabel="vs last month"
+            value={`${data.overview.conversionRate.toFixed(1)}%`}
+            change={data.changePercentages?.conversionRate || 0}
+            changeLabel="vs previous period"
             icon={TrendingUp}
             color="orange"
           />
