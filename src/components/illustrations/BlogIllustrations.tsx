@@ -4287,13 +4287,13 @@ export function PlantPhysiologyIllustration({ className = '', animate = true }: 
     ? {
         initial: { opacity: 0, scale: 0.95 },
         animate: { opacity: 1, scale: 1 },
-        transition: { duration: 0.8, ease: 'easeOut' },
+        transition: { duration: 0.8, ease: 'easeOut' as const },
       }
     : {}
 
   return (
     <Wrapper
-      viewBox="0 0 520 400"
+      viewBox="0 0 900 700"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
@@ -4302,347 +4302,110 @@ export function PlantPhysiologyIllustration({ className = '', animate = true }: 
     >
       <defs>
         {/* Professional gradients */}
-        <linearGradient id="plantBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <linearGradient id="photoBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
           <stop offset="0%" stopColor="#ECFDF5" />
           <stop offset="50%" stopColor="#D1FAE5" />
-          <stop offset="100%" stopColor="#A7F3D0" />
+          <stop offset="100%" stopColor="#F0FDF4" />
         </linearGradient>
-        <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stopColor="#BFDBFE" />
-          <stop offset="100%" stopColor="#DBEAFE" />
-        </linearGradient>
-        <linearGradient id="soilGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stopColor="#92400E" />
-          <stop offset="100%" stopColor="#78350F" />
-        </linearGradient>
-        <linearGradient id="stemGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stopColor="#16A34A" />
-          <stop offset="50%" stopColor="#22C55E" />
-          <stop offset="100%" stopColor="#16A34A" />
-        </linearGradient>
-        <linearGradient id="leafGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+        <linearGradient id="chloroplastGrad" x1="0%" y1="0%" x2="100%" y2="100%">
           <stop offset="0%" stopColor="#4ADE80" />
           <stop offset="100%" stopColor="#22C55E" />
         </linearGradient>
-        <linearGradient id="leafGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#22C55E" />
-          <stop offset="100%" stopColor="#16A34A" />
+        <linearGradient id="thylakoidGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stopColor="#166534" />
+          <stop offset="50%" stopColor="#22C55E" />
+          <stop offset="100%" stopColor="#166534" />
+        </linearGradient>
+        <linearGradient id="stromaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#BBF7D0" />
+          <stop offset="100%" stopColor="#86EFAC" />
         </linearGradient>
         <linearGradient id="sunGrad" x1="0%" y1="0%" x2="100%" y2="100%">
           <stop offset="0%" stopColor="#FDE047" />
           <stop offset="100%" stopColor="#FBBF24" />
         </linearGradient>
-        <linearGradient id="rootGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stopColor="#A16207" />
-          <stop offset="100%" stopColor="#78350F" />
+        <linearGradient id="atpGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stopColor="#F59E0B" />
+          <stop offset="100%" stopColor="#FBBF24" />
         </linearGradient>
-        <filter id="plantShadow" x="-20%" y="-20%" width="140%" height="140%">
-          <feDropShadow dx="0" dy="6" stdDeviation="8" floodOpacity="0.12" />
+        <linearGradient id="nadphGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stopColor="#8B5CF6" />
+          <stop offset="100%" stopColor="#A78BFA" />
+        </linearGradient>
+        <linearGradient id="c3Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#3B82F6" />
+          <stop offset="100%" stopColor="#60A5FA" />
+        </linearGradient>
+        <linearGradient id="c4Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#F97316" />
+          <stop offset="100%" stopColor="#FB923C" />
+        </linearGradient>
+        <linearGradient id="camGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#14B8A6" />
+          <stop offset="100%" stopColor="#2DD4BF" />
+        </linearGradient>
+        <filter id="photoCardShadow" x="-10%" y="-10%" width="120%" height="130%">
+          <feDropShadow dx="0" dy="4" stdDeviation="5" floodOpacity="0.1" />
         </filter>
-        <filter id="leafShadow" x="-30%" y="-30%" width="160%" height="160%">
-          <feDropShadow dx="0" dy="3" stdDeviation="4" floodOpacity="0.15" />
-        </filter>
-        <filter id="sunGlow" x="-50%" y="-50%" width="200%" height="200%">
-          <feGaussianBlur stdDeviation="8" result="coloredBlur" />
+        <filter id="photoGlow" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="6" result="coloredBlur" />
           <feMerge>
             <feMergeNode in="coloredBlur" />
             <feMergeNode in="SourceGraphic" />
           </feMerge>
         </filter>
-        <filter id="plantCardShadow" x="-10%" y="-10%" width="120%" height="130%">
-          <feDropShadow dx="0" dy="4" stdDeviation="5" floodOpacity="0.1" />
-        </filter>
       </defs>
 
-      {/* Background with sky and soil */}
-      <rect x="0" y="0" width="520" height="400" rx="24" fill="url(#plantBgGrad)" />
-      <rect x="0" y="0" width="520" height="100" rx="24" fill="url(#skyGrad)" fillOpacity="0.5" />
-      <rect x="0" y="320" width="520" height="80" rx="24" fill="url(#soilGrad)" fillOpacity="0.3" />
+      {/* Background */}
+      <rect x="0" y="0" width="900" height="700" rx="24" fill="url(#photoBgGrad)" />
 
-      {/* Title */}
+      {/* Title Section */}
       <text
-        x="260"
-        y="38"
-        fontSize="20"
+        x="450"
+        y="35"
+        fontSize="22"
         fill="#15803D"
         textAnchor="middle"
         fontWeight="bold"
         fontFamily="system-ui, sans-serif"
       >
-        Plant Physiology
+        Photosynthesis in Higher Plants
       </text>
       <text
-        x="260"
-        y="56"
-        fontSize="11"
+        x="450"
+        y="55"
+        fontSize="12"
         fill="#22C55E"
         textAnchor="middle"
         fontFamily="system-ui, sans-serif"
       >
-        Photosynthesis & Transport • 12% NEET Weightage
+        NEET 2026 Chapter Guide • 4-6 Questions • Very High Weightage
       </text>
 
-      {/* Sun with professional glow */}
-      <g filter="url(#sunGlow)">
-        <motion.g
-          animate={animate ? { rotate: [0, 360] } : undefined}
-          transition={{ duration: 40, repeat: Infinity, ease: 'linear' }}
-          style={{ transformOrigin: '75px 95px' }}
+      {/* Overall Equation Banner */}
+      <g filter="url(#photoCardShadow)">
+        <rect x="250" y="70" width="400" height="40" rx="10" fill="#15803D" />
+        <text
+          x="450"
+          y="95"
+          fontSize="13"
+          fill="white"
+          textAnchor="middle"
+          fontWeight="bold"
+          fontFamily="system-ui, sans-serif"
         >
-          <circle cx="75" cy="95" r="32" fill="url(#sunGrad)" />
-          <circle
-            cx="75"
-            cy="95"
-            r="28"
-            fill="none"
-            stroke="#FDE047"
-            strokeWidth="2"
-            strokeOpacity="0.5"
-          />
-          {[0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330].map((angle, i) => (
-            <line
-              key={`ray-${i}`}
-              x1={75 + 38 * Math.cos((angle * Math.PI) / 180)}
-              y1={95 + 38 * Math.sin((angle * Math.PI) / 180)}
-              x2={75 + 52 * Math.cos((angle * Math.PI) / 180)}
-              y2={95 + 52 * Math.sin((angle * Math.PI) / 180)}
-              stroke="#FBBF24"
-              strokeWidth="3"
-              strokeLinecap="round"
-            />
-          ))}
-        </motion.g>
+          6CO₂ + 12H₂O + Light → C₆H₁₂O₆ + 6O₂ + 6H₂O
+        </text>
       </g>
 
-      {/* Light rays hitting plant */}
-      <motion.g
-        animate={animate ? { opacity: [0.3, 0.8, 0.3] } : undefined}
-        transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
-      >
-        {[
-          { x1: 110, y1: 100, x2: 180, y2: 150 },
-          { x1: 100, y1: 115, x2: 170, y2: 165 },
-          { x1: 95, y1: 130, x2: 165, y2: 180 },
-        ].map((ray, i) => (
-          <line
-            key={`light-${i}`}
-            x1={ray.x1}
-            y1={ray.y1}
-            x2={ray.x2}
-            y2={ray.y2}
-            stroke="#FDE047"
-            strokeWidth="4"
-            strokeDasharray="8 4"
-            strokeLinecap="round"
-            strokeOpacity="0.7"
-          />
-        ))}
-      </motion.g>
-
-      {/* Plant structure */}
-      <g filter="url(#plantShadow)">
-        {/* Main Stem with gradient */}
-        <rect x="252" y="170" width="16" height="150" rx="4" fill="url(#stemGrad)" />
-
-        {/* Stem detail lines */}
-        <line
-          x1="256"
-          y1="180"
-          x2="256"
-          y2="310"
-          stroke="#16A34A"
-          strokeWidth="1"
-          strokeOpacity="0.5"
-        />
-        <line
-          x1="264"
-          y1="180"
-          x2="264"
-          y2="310"
-          stroke="#16A34A"
-          strokeWidth="1"
-          strokeOpacity="0.5"
-        />
-      </g>
-
-      {/* Leaves with professional styling */}
-      <motion.g
-        filter="url(#leafShadow)"
-        animate={animate ? { rotate: [-3, 3, -3] } : undefined}
-        transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
-        style={{ transformOrigin: '260px 180px' }}
-      >
-        {/* Upper leaves */}
-        <ellipse
-          cx="195"
-          cy="165"
-          rx="55"
-          ry="25"
-          fill="url(#leafGrad1)"
-          transform="rotate(-35 195 165)"
-        />
-        <ellipse
-          cx="325"
-          cy="165"
-          rx="55"
-          ry="25"
-          fill="url(#leafGrad1)"
-          transform="rotate(35 325 165)"
-        />
-
-        {/* Lower leaves */}
-        <ellipse
-          cx="185"
-          cy="215"
-          rx="50"
-          ry="22"
-          fill="url(#leafGrad2)"
-          transform="rotate(-25 185 215)"
-        />
-        <ellipse
-          cx="335"
-          cy="215"
-          rx="50"
-          ry="22"
-          fill="url(#leafGrad2)"
-          transform="rotate(25 335 215)"
-        />
-
-        {/* Leaf veins */}
-        <path
-          d="M160 155 Q195 165 220 160"
-          stroke="#16A34A"
-          strokeWidth="1.5"
-          fill="none"
-          strokeOpacity="0.5"
-        />
-        <path
-          d="M300 160 Q325 165 360 155"
-          stroke="#16A34A"
-          strokeWidth="1.5"
-          fill="none"
-          strokeOpacity="0.5"
-        />
-      </motion.g>
-
-      {/* Chloroplasts in leaf */}
-      <motion.g
-        animate={animate ? { scale: [1, 1.08, 1] } : undefined}
-        transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
-      >
-        {[
-          { cx: 185, cy: 160 },
-          { cx: 200, cy: 170 },
-          { cx: 175, cy: 175 },
-        ].map((pos, i) => (
-          <g key={`chloro-${i}`}>
-            <ellipse
-              cx={pos.cx}
-              cy={pos.cy}
-              rx="10"
-              ry="5"
-              fill="#4ADE80"
-              stroke="#166534"
-              strokeWidth="1"
-            />
-            <ellipse cx={pos.cx} cy={pos.cy} rx="6" ry="2" fill="#22C55E" />
-          </g>
-        ))}
-      </motion.g>
-
-      {/* Roots with professional styling */}
-      <g filter="url(#leafShadow)">
-        <path
-          d="M260 320 Q220 340 170 365"
-          stroke="url(#rootGrad)"
-          strokeWidth="8"
-          fill="none"
-          strokeLinecap="round"
-        />
-        <path
-          d="M260 320 Q300 340 350 365"
-          stroke="url(#rootGrad)"
-          strokeWidth="8"
-          fill="none"
-          strokeLinecap="round"
-        />
-        <path
-          d="M260 320 Q260 350 260 380"
-          stroke="url(#rootGrad)"
-          strokeWidth="8"
-          fill="none"
-          strokeLinecap="round"
-        />
-
-        {/* Root hairs */}
-        <path
-          d="M200 350 Q185 360 175 375"
-          stroke="#A16207"
-          strokeWidth="3"
-          fill="none"
-          strokeLinecap="round"
-        />
-        <path
-          d="M320 350 Q335 360 345 375"
-          stroke="#A16207"
-          strokeWidth="3"
-          fill="none"
-          strokeLinecap="round"
-        />
-      </g>
-
-      {/* Water uptake animation */}
-      <motion.g
-        animate={animate ? { y: [8, -8, 8] } : undefined}
-        transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
-      >
-        {/* Water droplets */}
-        <ellipse cx="190" cy="355" rx="5" ry="8" fill="#60A5FA" fillOpacity="0.8" />
-        <ellipse cx="260" cy="370" rx="5" ry="8" fill="#60A5FA" fillOpacity="0.8" />
-        <ellipse cx="330" cy="355" rx="5" ry="8" fill="#60A5FA" fillOpacity="0.8" />
-
-        {/* Upward arrows */}
-        <path
-          d="M190 340 L190 320"
-          stroke="#3B82F6"
-          strokeWidth="3"
-          strokeLinecap="round"
-          markerEnd="url(#arrowhead)"
-        />
-        <path d="M330 340 L330 320" stroke="#3B82F6" strokeWidth="3" strokeLinecap="round" />
-      </motion.g>
-
-      {/* Transpiration water vapor */}
-      <motion.g
-        animate={animate ? { y: [-5, -15, -5], opacity: [0.8, 0.2, 0.8] } : undefined}
-        transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-      >
-        {[
-          { cx: 180, cy: 135 },
-          { cx: 200, cy: 128 },
-          { cx: 320, cy: 135 },
-          { cx: 340, cy: 128 },
-        ].map((pos, i) => (
-          <ellipse
-            key={`vapor-${i}`}
-            cx={pos.cx}
-            cy={pos.cy}
-            rx="4"
-            ry="7"
-            fill="#93C5FD"
-            fillOpacity="0.7"
-          />
-        ))}
-      </motion.g>
-
-      {/* Photosynthesis Equation Card */}
-      <g filter="url(#plantCardShadow)">
-        <rect x="350" y="75" width="155" height="110" rx="16" fill="white" fillOpacity="0.95" />
+      {/* Section 1: Chloroplast Structure (Top Left) */}
+      <g filter="url(#photoCardShadow)">
+        <rect x="15" y="125" width="280" height="200" rx="16" fill="white" fillOpacity="0.95" />
         <rect
-          x="350"
-          y="75"
-          width="155"
-          height="110"
+          x="15"
+          y="125"
+          width="280"
+          height="200"
           rx="16"
           fill="none"
           stroke="#22C55E"
@@ -4650,65 +4413,315 @@ export function PlantPhysiologyIllustration({ className = '', animate = true }: 
         />
 
         <text
-          x="427"
-          y="100"
-          fontSize="13"
+          x="155"
+          y="150"
+          fontSize="14"
           fill="#15803D"
           textAnchor="middle"
           fontWeight="bold"
           fontFamily="system-ui, sans-serif"
         >
-          🌱 Photosynthesis
+          Chloroplast Structure
         </text>
 
-        <rect x="360" y="110" width="135" height="32" rx="8" fill="#DCFCE7" />
+        {/* Chloroplast outer shape */}
+        <ellipse
+          cx="155"
+          cy="230"
+          rx="100"
+          ry="55"
+          fill="url(#chloroplastGrad)"
+          stroke="#166534"
+          strokeWidth="2"
+        />
+
+        {/* Outer membrane */}
+        <ellipse
+          cx="155"
+          cy="230"
+          rx="95"
+          ry="50"
+          fill="none"
+          stroke="#16A34A"
+          strokeWidth="1.5"
+          strokeDasharray="4 2"
+        />
+
+        {/* Inner membrane */}
+        <ellipse
+          cx="155"
+          cy="230"
+          rx="85"
+          ry="42"
+          fill="url(#stromaGrad)"
+          stroke="#16A34A"
+          strokeWidth="1"
+        />
+
+        {/* Stroma label */}
         <text
-          x="427"
-          y="127"
-          fontSize="11"
-          fill="#15803D"
-          textAnchor="middle"
+          x="220"
+          y="215"
+          fontSize="8"
+          fill="#166534"
+          fontWeight="bold"
           fontFamily="system-ui, sans-serif"
         >
-          6CO₂ + 6H₂O
+          Stroma
+        </text>
+        <text x="220" y="225" fontSize="7" fill="#166534" fontFamily="system-ui, sans-serif">
+          (Calvin Cycle)
+        </text>
+
+        {/* Thylakoid/Grana Stack */}
+        <g>
+          {[0, 8, 16, 24, 32].map((offset, i) => (
+            <ellipse
+              key={`thylakoid-${i}`}
+              cx="130"
+              cy={210 + offset}
+              rx="40"
+              ry="6"
+              fill="url(#thylakoidGrad)"
+              stroke="#166534"
+              strokeWidth="0.5"
+            />
+          ))}
+          <text
+            x="130"
+            y="260"
+            fontSize="7"
+            fill="#166534"
+            textAnchor="middle"
+            fontWeight="bold"
+            fontFamily="system-ui, sans-serif"
+          >
+            Grana (Thylakoids)
+          </text>
+          <text
+            x="130"
+            y="270"
+            fontSize="6"
+            fill="#166534"
+            textAnchor="middle"
+            fontFamily="system-ui, sans-serif"
+          >
+            Light Reactions
+          </text>
+        </g>
+
+        {/* Stroma Lamellae */}
+        <path
+          d="M170 215 Q195 230 170 250"
+          stroke="#16A34A"
+          strokeWidth="6"
+          fill="none"
+          strokeLinecap="round"
+        />
+        <text x="195" y="255" fontSize="6" fill="#166534" fontFamily="system-ui, sans-serif">
+          Stroma
+        </text>
+        <text x="195" y="263" fontSize="6" fill="#166534" fontFamily="system-ui, sans-serif">
+          Lamellae
+        </text>
+
+        {/* Labels */}
+        <g>
+          <line x1="55" y1="175" x2="75" y2="195" stroke="#666" strokeWidth="1" />
+          <text x="35" y="175" fontSize="7" fill="#666" fontFamily="system-ui, sans-serif">
+            Outer Membrane
+          </text>
+
+          <line x1="75" y1="295" x2="100" y2="270" stroke="#666" strokeWidth="1" />
+          <text x="45" y="305" fontSize="7" fill="#666" fontFamily="system-ui, sans-serif">
+            Inner Membrane
+          </text>
+        </g>
+      </g>
+
+      {/* Section 2: Light Reactions - Z-Scheme (Top Center) */}
+      <g filter="url(#photoCardShadow)">
+        <rect x="310" y="125" width="280" height="200" rx="16" fill="white" fillOpacity="0.95" />
+        <rect
+          x="310"
+          y="125"
+          width="280"
+          height="200"
+          rx="16"
+          fill="none"
+          stroke="#22C55E"
+          strokeWidth="2"
+        />
+
+        <text
+          x="450"
+          y="150"
+          fontSize="14"
+          fill="#15803D"
+          textAnchor="middle"
+          fontWeight="bold"
+          fontFamily="system-ui, sans-serif"
+        >
+          Light Reactions (Z-Scheme)
         </text>
         <text
-          x="427"
-          y="138"
+          x="450"
+          y="163"
           fontSize="9"
           fill="#16A34A"
           textAnchor="middle"
           fontFamily="system-ui, sans-serif"
         >
-          → C₆H₁₂O₆ + 6O₂
+          Thylakoid Membrane
         </text>
 
+        {/* Z-Scheme Diagram */}
+        {/* PS II */}
         <motion.g
-          animate={animate ? { opacity: [0.6, 1, 0.6] } : undefined}
+          animate={animate ? { scale: [1, 1.05, 1] } : undefined}
           transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
         >
-          <rect x="360" y="148" width="135" height="24" rx="8" fill="#FEF3C7" />
+          <rect x="330" y="260" width="50" height="50" rx="8" fill="#3B82F6" />
           <text
-            x="427"
-            y="164"
-            fontSize="9"
-            fill="#B45309"
+            x="355"
+            y="282"
+            fontSize="10"
+            fill="white"
+            textAnchor="middle"
+            fontWeight="bold"
+            fontFamily="system-ui, sans-serif"
+          >
+            PS II
+          </text>
+          <text
+            x="355"
+            y="295"
+            fontSize="7"
+            fill="#BFDBFE"
             textAnchor="middle"
             fontFamily="system-ui, sans-serif"
           >
-            ☀️ Light Energy Required
+            P680
           </text>
         </motion.g>
+
+        {/* PS I */}
+        <motion.g
+          animate={animate ? { scale: [1, 1.05, 1] } : undefined}
+          transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
+        >
+          <rect x="520" y="260" width="50" height="50" rx="8" fill="#8B5CF6" />
+          <text
+            x="545"
+            y="282"
+            fontSize="10"
+            fill="white"
+            textAnchor="middle"
+            fontWeight="bold"
+            fontFamily="system-ui, sans-serif"
+          >
+            PS I
+          </text>
+          <text
+            x="545"
+            y="295"
+            fontSize="7"
+            fill="#DDD6FE"
+            textAnchor="middle"
+            fontFamily="system-ui, sans-serif"
+          >
+            P700
+          </text>
+        </motion.g>
+
+        {/* Electron flow path (Z shape) */}
+        <motion.path
+          d="M355 260 L355 195 L425 220 L425 195 L495 220 L495 195 L545 195 L545 260"
+          stroke="#22C55E"
+          strokeWidth="2"
+          fill="none"
+          strokeDasharray="6 3"
+          animate={animate ? { strokeDashoffset: [0, -18] } : undefined}
+          transition={{ duration: 1.5, repeat: Infinity, ease: 'linear' }}
+        />
+
+        {/* ETC components */}
+        <circle cx="425" cy="220" r="12" fill="#60A5FA" stroke="#3B82F6" strokeWidth="1.5" />
+        <text
+          x="425"
+          y="223"
+          fontSize="6"
+          fill="white"
+          textAnchor="middle"
+          fontWeight="bold"
+          fontFamily="system-ui, sans-serif"
+        >
+          Cyt b6f
+        </text>
+
+        {/* Water splitting */}
+        <g>
+          <text
+            x="335"
+            y="320"
+            fontSize="8"
+            fill="#3B82F6"
+            fontWeight="bold"
+            fontFamily="system-ui, sans-serif"
+          >
+            H₂O
+          </text>
+          <motion.path
+            d="M350 315 L355 300"
+            stroke="#3B82F6"
+            strokeWidth="1.5"
+            animate={animate ? { opacity: [0.3, 1, 0.3] } : undefined}
+            transition={{ duration: 1.5, repeat: Infinity }}
+          />
+          <text x="365" y="320" fontSize="6" fill="#16A34A" fontFamily="system-ui, sans-serif">
+            → O₂ + H⁺
+          </text>
+        </g>
+
+        {/* NADPH production */}
+        <g>
+          <rect x="550" y="175" width="35" height="18" rx="4" fill="url(#nadphGrad)" />
+          <text
+            x="567"
+            y="188"
+            fontSize="7"
+            fill="white"
+            textAnchor="middle"
+            fontWeight="bold"
+            fontFamily="system-ui, sans-serif"
+          >
+            NADPH
+          </text>
+        </g>
+
+        {/* Products summary */}
+        <rect x="325" y="175" width="100" height="15" rx="4" fill="#FEF3C7" />
+        <text
+          x="375"
+          y="186"
+          fontSize="8"
+          fill="#B45309"
+          textAnchor="middle"
+          fontWeight="bold"
+          fontFamily="system-ui, sans-serif"
+        >
+          Products: ATP + NADPH + O₂
+        </text>
       </g>
 
-      {/* Key Topics Card */}
-      <g filter="url(#plantCardShadow)">
-        <rect x="15" y="225" width="130" height="120" rx="16" fill="white" fillOpacity="0.95" />
+      {/* Section 3: Photosynthetic Pigments (Top Right) */}
+      <g filter="url(#photoCardShadow)">
+        <rect x="605" y="125" width="280" height="200" rx="16" fill="white" fillOpacity="0.95" />
         <rect
-          x="15"
-          y="225"
-          width="130"
-          height="120"
+          x="605"
+          y="125"
+          width="280"
+          height="200"
           rx="16"
           fill="none"
           stroke="#22C55E"
@@ -4716,70 +4729,954 @@ export function PlantPhysiologyIllustration({ className = '', animate = true }: 
         />
 
         <text
-          x="80"
-          y="250"
-          fontSize="12"
+          x="745"
+          y="150"
+          fontSize="14"
           fill="#15803D"
           textAnchor="middle"
           fontWeight="bold"
           fontFamily="system-ui, sans-serif"
         >
-          Key Topics
+          Photosynthetic Pigments
+        </text>
+
+        {/* Pigments table */}
+        <rect x="620" y="165" width="250" height="18" rx="4" fill="#15803D" />
+        <text
+          x="660"
+          y="178"
+          fontSize="8"
+          fill="white"
+          fontWeight="bold"
+          fontFamily="system-ui, sans-serif"
+        >
+          Pigment
+        </text>
+        <text
+          x="740"
+          y="178"
+          fontSize="8"
+          fill="white"
+          fontWeight="bold"
+          fontFamily="system-ui, sans-serif"
+        >
+          Color
+        </text>
+        <text
+          x="820"
+          y="178"
+          fontSize="8"
+          fill="white"
+          fontWeight="bold"
+          fontFamily="system-ui, sans-serif"
+        >
+          Peak (nm)
         </text>
 
         {[
-          { label: 'Photosynthesis', y: 270, color: '#22C55E' },
-          { label: 'Respiration', y: 288, color: '#3B82F6' },
-          { label: 'Mineral Nutrition', y: 306, color: '#F59E0B' },
-          { label: 'Transport', y: 324, color: '#8B5CF6' },
-        ].map((topic, i) => (
-          <g key={`topic-${i}`}>
-            <circle cx="30" cy={topic.y - 3} r="4" fill={topic.color} />
-            <text x="40" y={topic.y} fontSize="9" fill="#374151" fontFamily="system-ui, sans-serif">
-              {topic.label}
+          {
+            name: 'Chlorophyll a',
+            color: '#166534',
+            colorName: 'Blue-green',
+            peak: '430, 662',
+            y: 198,
+          },
+          {
+            name: 'Chlorophyll b',
+            color: '#84CC16',
+            colorName: 'Yellow-green',
+            peak: '453, 642',
+            y: 218,
+          },
+          {
+            name: 'Carotenoids',
+            color: '#F97316',
+            colorName: 'Yellow-orange',
+            peak: '400-500',
+            y: 238,
+          },
+          { name: 'Xanthophylls', color: '#FBBF24', colorName: 'Yellow', peak: '400-500', y: 258 },
+        ].map((pigment, i) => (
+          <g key={`pigment-${i}`}>
+            <rect
+              x="620"
+              y={pigment.y - 12}
+              width="250"
+              height="18"
+              rx="0"
+              fill={i % 2 === 0 ? '#F0FDF4' : 'white'}
+            />
+            <circle cx="635" cy={pigment.y - 3} r="6" fill={pigment.color} />
+            <text
+              x="648"
+              y={pigment.y}
+              fontSize="8"
+              fill="#374151"
+              fontFamily="system-ui, sans-serif"
+            >
+              {pigment.name}
+            </text>
+            <text x="740" y={pigment.y} fontSize="7" fill="#666" fontFamily="system-ui, sans-serif">
+              {pigment.colorName}
+            </text>
+            <text x="820" y={pigment.y} fontSize="7" fill="#666" fontFamily="system-ui, sans-serif">
+              {pigment.peak}
+            </text>
+          </g>
+        ))}
+
+        {/* Key fact */}
+        <rect x="620" y="280" width="250" height="30" rx="8" fill="#DCFCE7" />
+        <text
+          x="745"
+          y="295"
+          fontSize="8"
+          fill="#166534"
+          textAnchor="middle"
+          fontFamily="system-ui, sans-serif"
+        >
+          Only Chlorophyll a can directly participate
+        </text>
+        <text
+          x="745"
+          y="307"
+          fontSize="8"
+          fill="#166534"
+          textAnchor="middle"
+          fontWeight="bold"
+          fontFamily="system-ui, sans-serif"
+        >
+          in light reactions (reaction center)
+        </text>
+      </g>
+
+      {/* Section 4: Calvin Cycle (Middle Left) */}
+      <g filter="url(#photoCardShadow)">
+        <rect x="15" y="340" width="280" height="180" rx="16" fill="white" fillOpacity="0.95" />
+        <rect
+          x="15"
+          y="340"
+          width="280"
+          height="180"
+          rx="16"
+          fill="none"
+          stroke="#3B82F6"
+          strokeWidth="2"
+        />
+
+        <text
+          x="155"
+          y="365"
+          fontSize="14"
+          fill="#1D4ED8"
+          textAnchor="middle"
+          fontWeight="bold"
+          fontFamily="system-ui, sans-serif"
+        >
+          Calvin Cycle (C3 Pathway)
+        </text>
+        <text
+          x="155"
+          y="378"
+          fontSize="9"
+          fill="#3B82F6"
+          textAnchor="middle"
+          fontFamily="system-ui, sans-serif"
+        >
+          Stroma of Chloroplast
+        </text>
+
+        {/* Circular cycle diagram */}
+        <circle cx="155" cy="445" r="60" fill="none" stroke="#BFDBFE" strokeWidth="3" />
+
+        {/* Animated cycle arrow */}
+        <motion.circle
+          cx="155"
+          cy="385"
+          r="6"
+          fill="#3B82F6"
+          animate={
+            animate
+              ? {
+                  cx: [155, 215, 215, 95, 95, 155],
+                  cy: [385, 445, 505, 505, 445, 385],
+                }
+              : undefined
+          }
+          transition={{ duration: 4, repeat: Infinity, ease: 'linear' }}
+        />
+
+        {/* Stage 1: Carbon Fixation */}
+        <g>
+          <rect x="125" y="383" width="60" height="24" rx="6" fill="url(#c3Grad)" />
+          <text
+            x="155"
+            y="398"
+            fontSize="8"
+            fill="white"
+            textAnchor="middle"
+            fontWeight="bold"
+            fontFamily="system-ui, sans-serif"
+          >
+            CO₂ + RuBP
+          </text>
+          <text
+            x="155"
+            y="417"
+            fontSize="7"
+            fill="#1D4ED8"
+            textAnchor="middle"
+            fontFamily="system-ui, sans-serif"
+          >
+            3-PGA (3C)
+          </text>
+        </g>
+
+        {/* Stage 2: Reduction */}
+        <g>
+          <rect x="195" y="440" width="55" height="24" rx="6" fill="url(#atpGrad)" />
+          <text
+            x="222"
+            y="455"
+            fontSize="8"
+            fill="white"
+            textAnchor="middle"
+            fontWeight="bold"
+            fontFamily="system-ui, sans-serif"
+          >
+            ATP/NADPH
+          </text>
+          <text
+            x="222"
+            y="478"
+            fontSize="7"
+            fill="#B45309"
+            textAnchor="middle"
+            fontFamily="system-ui, sans-serif"
+          >
+            G3P (Sugar)
+          </text>
+        </g>
+
+        {/* Stage 3: Regeneration */}
+        <g>
+          <rect x="60" y="440" width="55" height="24" rx="6" fill="#22C55E" />
+          <text
+            x="87"
+            y="455"
+            fontSize="8"
+            fill="white"
+            textAnchor="middle"
+            fontWeight="bold"
+            fontFamily="system-ui, sans-serif"
+          >
+            Regenerate
+          </text>
+          <text
+            x="87"
+            y="478"
+            fontSize="7"
+            fill="#166534"
+            textAnchor="middle"
+            fontFamily="system-ui, sans-serif"
+          >
+            RuBP (5C)
+          </text>
+        </g>
+
+        {/* Key enzyme */}
+        <rect x="55" y="395" width="50" height="18" rx="4" fill="#FEE2E2" />
+        <text
+          x="80"
+          y="407"
+          fontSize="7"
+          fill="#DC2626"
+          textAnchor="middle"
+          fontWeight="bold"
+          fontFamily="system-ui, sans-serif"
+        >
+          RuBisCO
+        </text>
+
+        {/* Summary */}
+        <text
+          x="155"
+          y="510"
+          fontSize="7"
+          fill="#374151"
+          textAnchor="middle"
+          fontFamily="system-ui, sans-serif"
+        >
+          1 Glucose = 6 CO₂ + 18 ATP + 12 NADPH
+        </text>
+      </g>
+
+      {/* Section 5: C3 vs C4 vs CAM (Middle Center) */}
+      <g filter="url(#photoCardShadow)">
+        <rect x="310" y="340" width="280" height="180" rx="16" fill="white" fillOpacity="0.95" />
+        <rect
+          x="310"
+          y="340"
+          width="280"
+          height="180"
+          rx="16"
+          fill="none"
+          stroke="#F97316"
+          strokeWidth="2"
+        />
+
+        <text
+          x="450"
+          y="365"
+          fontSize="14"
+          fill="#EA580C"
+          textAnchor="middle"
+          fontWeight="bold"
+          fontFamily="system-ui, sans-serif"
+        >
+          C3 vs C4 vs CAM Pathways
+        </text>
+
+        {/* Comparison table */}
+        <rect x="325" y="380" width="250" height="20" rx="4" fill="#EA580C" />
+        <text
+          x="365"
+          y="394"
+          fontSize="8"
+          fill="white"
+          fontWeight="bold"
+          fontFamily="system-ui, sans-serif"
+        >
+          Feature
+        </text>
+        <text
+          x="420"
+          y="394"
+          fontSize="8"
+          fill="white"
+          fontWeight="bold"
+          fontFamily="system-ui, sans-serif"
+        >
+          C3
+        </text>
+        <text
+          x="480"
+          y="394"
+          fontSize="8"
+          fill="white"
+          fontWeight="bold"
+          fontFamily="system-ui, sans-serif"
+        >
+          C4
+        </text>
+        <text
+          x="540"
+          y="394"
+          fontSize="8"
+          fill="white"
+          fontWeight="bold"
+          fontFamily="system-ui, sans-serif"
+        >
+          CAM
+        </text>
+
+        {[
+          { feature: '1st Product', c3: '3-PGA', c4: 'OAA', cam: 'OAA', y: 415 },
+          { feature: 'CO₂ Acceptor', c3: 'RuBP', c4: 'PEP', cam: 'PEP', y: 432 },
+          { feature: 'Kranz Anatomy', c3: 'No', c4: 'Yes', cam: 'No', y: 449 },
+          { feature: 'Photorespiration', c3: 'High', c4: 'Low', cam: 'Low', y: 466 },
+          { feature: 'Separation', c3: 'None', c4: 'Spatial', cam: 'Temporal', y: 483 },
+          { feature: 'Examples', c3: 'Wheat', c4: 'Maize', cam: 'Cactus', y: 500 },
+        ].map((row, i) => (
+          <g key={`compare-${i}`}>
+            <rect
+              x="325"
+              y={row.y - 12}
+              width="250"
+              height="16"
+              fill={i % 2 === 0 ? '#FFF7ED' : 'white'}
+            />
+            <text x="365" y={row.y} fontSize="7" fill="#374151" fontFamily="system-ui, sans-serif">
+              {row.feature}
+            </text>
+            <text x="420" y={row.y} fontSize="7" fill="#3B82F6" fontFamily="system-ui, sans-serif">
+              {row.c3}
+            </text>
+            <text x="480" y={row.y} fontSize="7" fill="#F97316" fontFamily="system-ui, sans-serif">
+              {row.c4}
+            </text>
+            <text x="540" y={row.y} fontSize="7" fill="#14B8A6" fontFamily="system-ui, sans-serif">
+              {row.cam}
             </text>
           </g>
         ))}
       </g>
 
-      {/* Questions badge with glow */}
-      <motion.g
-        filter="url(#sunGlow)"
-        animate={animate ? { scale: [1, 1.08, 1] } : undefined}
-        transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-      >
-        <circle cx="455" cy="330" r="35" fill="#22C55E" />
-        <circle
-          cx="455"
-          cy="330"
-          r="30"
+      {/* Section 6: Kranz Anatomy (Middle Right) */}
+      <g filter="url(#photoCardShadow)">
+        <rect x="605" y="340" width="280" height="180" rx="16" fill="white" fillOpacity="0.95" />
+        <rect
+          x="605"
+          y="340"
+          width="280"
+          height="180"
+          rx="16"
           fill="none"
-          stroke="white"
+          stroke="#F97316"
           strokeWidth="2"
-          strokeOpacity="0.3"
         />
+
         <text
-          x="455"
-          y="325"
-          fontSize="16"
-          fill="#FFFFFF"
+          x="745"
+          y="365"
+          fontSize="14"
+          fill="#EA580C"
           textAnchor="middle"
           fontWeight="bold"
           fontFamily="system-ui, sans-serif"
         >
-          10-12
+          Kranz Anatomy (C4 Plants)
+        </text>
+
+        {/* Cross-section of C4 leaf */}
+        {/* Vascular bundle (center) */}
+        <ellipse cx="745" cy="440" r="25" ry="30" fill="#FED7AA" stroke="#F97316" strokeWidth="2" />
+        <text
+          x="745"
+          y="435"
+          fontSize="7"
+          fill="#EA580C"
+          textAnchor="middle"
+          fontWeight="bold"
+          fontFamily="system-ui, sans-serif"
+        >
+          Vascular
         </text>
         <text
-          x="455"
-          y="345"
-          fontSize="10"
-          fill="#FFFFFF"
+          x="745"
+          y="445"
+          fontSize="7"
+          fill="#EA580C"
+          textAnchor="middle"
+          fontFamily="system-ui, sans-serif"
+        >
+          Bundle
+        </text>
+
+        {/* Bundle sheath cells */}
+        <ellipse cx="745" cy="440" r="50" ry="55" fill="none" stroke="#22C55E" strokeWidth="8" />
+        <text
+          x="665"
+          y="440"
+          fontSize="7"
+          fill="#166534"
+          fontWeight="bold"
+          fontFamily="system-ui, sans-serif"
+        >
+          Bundle
+        </text>
+        <text x="665" y="450" fontSize="7" fill="#166534" fontFamily="system-ui, sans-serif">
+          Sheath
+        </text>
+
+        {/* Mesophyll cells */}
+        {[
+          { cx: 680, cy: 390 },
+          { cx: 810, cy: 390 },
+          { cx: 660, cy: 440 },
+          { cx: 830, cy: 440 },
+          { cx: 680, cy: 490 },
+          { cx: 810, cy: 490 },
+        ].map((pos, i) => (
+          <ellipse
+            key={`mesophyll-${i}`}
+            cx={pos.cx}
+            cy={pos.cy}
+            rx="20"
+            ry="15"
+            fill="#BBF7D0"
+            stroke="#22C55E"
+            strokeWidth="1"
+          />
+        ))}
+        <text x="665" y="502" fontSize="7" fill="#166534" fontFamily="system-ui, sans-serif">
+          Mesophyll
+        </text>
+
+        {/* Function labels */}
+        <g>
+          <rect x="620" y="510" width="110" height="35" rx="6" fill="#DCFCE7" />
+          <text
+            x="675"
+            y="525"
+            fontSize="7"
+            fill="#166534"
+            textAnchor="middle"
+            fontWeight="bold"
+            fontFamily="system-ui, sans-serif"
+          >
+            Mesophyll:
+          </text>
+          <text
+            x="675"
+            y="538"
+            fontSize="7"
+            fill="#166534"
+            textAnchor="middle"
+            fontFamily="system-ui, sans-serif"
+          >
+            CO₂ → OAA (PEPcase)
+          </text>
+        </g>
+        <g>
+          <rect x="740" y="510" width="130" height="35" rx="6" fill="#FEF3C7" />
+          <text
+            x="805"
+            y="525"
+            fontSize="7"
+            fill="#B45309"
+            textAnchor="middle"
+            fontWeight="bold"
+            fontFamily="system-ui, sans-serif"
+          >
+            Bundle Sheath:
+          </text>
+          <text
+            x="805"
+            y="538"
+            fontSize="7"
+            fill="#B45309"
+            textAnchor="middle"
+            fontFamily="system-ui, sans-serif"
+          >
+            Calvin Cycle (RuBisCO)
+          </text>
+        </g>
+      </g>
+
+      {/* Section 7: Photophosphorylation Types (Bottom Left) */}
+      <g filter="url(#photoCardShadow)">
+        <rect x="15" y="535" width="280" height="150" rx="16" fill="white" fillOpacity="0.95" />
+        <rect
+          x="15"
+          y="535"
+          width="280"
+          height="150"
+          rx="16"
+          fill="none"
+          stroke="#8B5CF6"
+          strokeWidth="2"
+        />
+
+        <text
+          x="155"
+          y="560"
+          fontSize="14"
+          fill="#7C3AED"
+          textAnchor="middle"
+          fontWeight="bold"
+          fontFamily="system-ui, sans-serif"
+        >
+          Photophosphorylation
+        </text>
+
+        {/* Types comparison */}
+        <g>
+          <rect x="30" y="575" width="120" height="95" rx="10" fill="#EDE9FE" />
+          <text
+            x="90"
+            y="595"
+            fontSize="10"
+            fill="#7C3AED"
+            textAnchor="middle"
+            fontWeight="bold"
+            fontFamily="system-ui, sans-serif"
+          >
+            Non-Cyclic
+          </text>
+          <text
+            x="90"
+            y="612"
+            fontSize="8"
+            fill="#374151"
+            textAnchor="middle"
+            fontFamily="system-ui, sans-serif"
+          >
+            PS II → PS I
+          </text>
+          <text
+            x="90"
+            y="628"
+            fontSize="8"
+            fill="#374151"
+            textAnchor="middle"
+            fontFamily="system-ui, sans-serif"
+          >
+            ATP + NADPH
+          </text>
+          <text
+            x="90"
+            y="644"
+            fontSize="8"
+            fill="#22C55E"
+            textAnchor="middle"
+            fontWeight="bold"
+            fontFamily="system-ui, sans-serif"
+          >
+            O₂ Released ✓
+          </text>
+          <text
+            x="90"
+            y="660"
+            fontSize="7"
+            fill="#666"
+            textAnchor="middle"
+            fontFamily="system-ui, sans-serif"
+          >
+            (Water Splitting)
+          </text>
+        </g>
+
+        <g>
+          <rect x="160" y="575" width="120" height="95" rx="10" fill="#FEF3C7" />
+          <text
+            x="220"
+            y="595"
+            fontSize="10"
+            fill="#B45309"
+            textAnchor="middle"
+            fontWeight="bold"
+            fontFamily="system-ui, sans-serif"
+          >
+            Cyclic
+          </text>
+          <text
+            x="220"
+            y="612"
+            fontSize="8"
+            fill="#374151"
+            textAnchor="middle"
+            fontFamily="system-ui, sans-serif"
+          >
+            PS I only
+          </text>
+          <text
+            x="220"
+            y="628"
+            fontSize="8"
+            fill="#374151"
+            textAnchor="middle"
+            fontFamily="system-ui, sans-serif"
+          >
+            ATP only
+          </text>
+          <text
+            x="220"
+            y="644"
+            fontSize="8"
+            fill="#DC2626"
+            textAnchor="middle"
+            fontWeight="bold"
+            fontFamily="system-ui, sans-serif"
+          >
+            No O₂ ✗
+          </text>
+          <text
+            x="220"
+            y="660"
+            fontSize="7"
+            fill="#666"
+            textAnchor="middle"
+            fontFamily="system-ui, sans-serif"
+          >
+            (Stroma Lamellae)
+          </text>
+        </g>
+      </g>
+
+      {/* Section 8: Photorespiration (Bottom Center) */}
+      <g filter="url(#photoCardShadow)">
+        <rect x="310" y="535" width="280" height="150" rx="16" fill="white" fillOpacity="0.95" />
+        <rect
+          x="310"
+          y="535"
+          width="280"
+          height="150"
+          rx="16"
+          fill="none"
+          stroke="#DC2626"
+          strokeWidth="2"
+        />
+
+        <text
+          x="450"
+          y="560"
+          fontSize="14"
+          fill="#DC2626"
+          textAnchor="middle"
+          fontWeight="bold"
+          fontFamily="system-ui, sans-serif"
+        >
+          Photorespiration
+        </text>
+        <text
+          x="450"
+          y="575"
+          fontSize="9"
+          fill="#EF4444"
+          textAnchor="middle"
+          fontFamily="system-ui, sans-serif"
+        >
+          Wasteful Process in C3 Plants
+        </text>
+
+        {/* Process flow */}
+        <g>
+          <rect x="325" y="590" width="70" height="35" rx="8" fill="#FEE2E2" />
+          <text
+            x="360"
+            y="605"
+            fontSize="8"
+            fill="#DC2626"
+            textAnchor="middle"
+            fontWeight="bold"
+            fontFamily="system-ui, sans-serif"
+          >
+            RuBisCO
+          </text>
+          <text
+            x="360"
+            y="617"
+            fontSize="7"
+            fill="#DC2626"
+            textAnchor="middle"
+            fontFamily="system-ui, sans-serif"
+          >
+            fixes O₂
+          </text>
+        </g>
+
+        <path d="M395 607 L415 607" stroke="#DC2626" strokeWidth="2" markerEnd="url(#arrowhead)" />
+
+        <g>
+          <rect x="420" y="590" width="75" height="35" rx="8" fill="#FEE2E2" />
+          <text
+            x="457"
+            y="605"
+            fontSize="7"
+            fill="#DC2626"
+            textAnchor="middle"
+            fontWeight="bold"
+            fontFamily="system-ui, sans-serif"
+          >
+            Phosphoglycolate
+          </text>
+          <text
+            x="457"
+            y="617"
+            fontSize="7"
+            fill="#DC2626"
+            textAnchor="middle"
+            fontFamily="system-ui, sans-serif"
+          >
+            (2C)
+          </text>
+        </g>
+
+        <path d="M495 607 L515 607" stroke="#DC2626" strokeWidth="2" />
+
+        <g>
+          <rect x="520" y="590" width="55" height="35" rx="8" fill="#FEE2E2" />
+          <text
+            x="547"
+            y="605"
+            fontSize="8"
+            fill="#DC2626"
+            textAnchor="middle"
+            fontWeight="bold"
+            fontFamily="system-ui, sans-serif"
+          >
+            CO₂
+          </text>
+          <text
+            x="547"
+            y="617"
+            fontSize="7"
+            fill="#DC2626"
+            textAnchor="middle"
+            fontFamily="system-ui, sans-serif"
+          >
+            Released
+          </text>
+        </g>
+
+        {/* Pathway */}
+        <text
+          x="450"
+          y="645"
+          fontSize="8"
+          fill="#374151"
+          textAnchor="middle"
+          fontFamily="system-ui, sans-serif"
+        >
+          Chloroplast → Peroxisome → Mitochondria
+        </text>
+
+        {/* Key points */}
+        <rect x="325" y="655" width="250" height="20" rx="6" fill="#DCFCE7" />
+        <text
+          x="450"
+          y="669"
+          fontSize="8"
+          fill="#166534"
+          textAnchor="middle"
+          fontWeight="bold"
+          fontFamily="system-ui, sans-serif"
+        >
+          C4 plants avoid this via PEP carboxylase (no oxygenase!)
+        </text>
+      </g>
+
+      {/* Section 9: Factors Affecting & Key Facts (Bottom Right) */}
+      <g filter="url(#photoCardShadow)">
+        <rect x="605" y="535" width="280" height="150" rx="16" fill="white" fillOpacity="0.95" />
+        <rect
+          x="605"
+          y="535"
+          width="280"
+          height="150"
+          rx="16"
+          fill="none"
+          stroke="#22C55E"
+          strokeWidth="2"
+        />
+
+        <text
+          x="745"
+          y="560"
+          fontSize="14"
+          fill="#15803D"
+          textAnchor="middle"
+          fontWeight="bold"
+          fontFamily="system-ui, sans-serif"
+        >
+          Factors & Key Facts
+        </text>
+
+        {/* Blackman's Law */}
+        <rect x="620" y="575" width="250" height="25" rx="6" fill="#DCFCE7" />
+        <text
+          x="745"
+          y="591"
+          fontSize="9"
+          fill="#166534"
+          textAnchor="middle"
+          fontWeight="bold"
+          fontFamily="system-ui, sans-serif"
+        >
+          Blackman's Law of Limiting Factors
+        </text>
+
+        {/* Factors */}
+        <g>
+          {[
+            { icon: '☀️', factor: 'Light Intensity', effect: 'Rate ↑ then plateaus' },
+            { icon: '💨', factor: 'CO₂ Concentration', effect: 'Rate ↑ up to 0.05%' },
+            { icon: '🌡️', factor: 'Temperature', effect: 'Optimum varies by plant' },
+            { icon: '💧', factor: 'Water', effect: 'Stomatal opening, e⁻ donor' },
+          ].map((item, i) => (
+            <g key={`factor-${i}`}>
+              <text x="630" y={620 + i * 18} fontSize="10" fontFamily="system-ui, sans-serif">
+                {item.icon}
+              </text>
+              <text
+                x="650"
+                y={620 + i * 18}
+                fontSize="8"
+                fill="#374151"
+                fontFamily="system-ui, sans-serif"
+              >
+                {item.factor}
+              </text>
+              <text
+                x="760"
+                y={620 + i * 18}
+                fontSize="7"
+                fill="#666"
+                fontFamily="system-ui, sans-serif"
+              >
+                {item.effect}
+              </text>
+            </g>
+          ))}
+        </g>
+      </g>
+
+      {/* NEET Questions Badge */}
+      <motion.g
+        filter="url(#photoGlow)"
+        animate={animate ? { scale: [1, 1.08, 1] } : undefined}
+        transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+      >
+        <circle cx="850" cy="50" r="35" fill="#15803D" />
+        <text
+          x="850"
+          y="45"
+          fontSize="14"
+          fill="white"
+          textAnchor="middle"
+          fontWeight="bold"
+          fontFamily="system-ui, sans-serif"
+        >
+          4-6
+        </text>
+        <text
+          x="850"
+          y="60"
+          fontSize="8"
+          fill="#BBF7D0"
           textAnchor="middle"
           fontFamily="system-ui, sans-serif"
         >
           Questions
         </text>
       </motion.g>
+
+      {/* NEET Tip */}
+      <g filter="url(#photoCardShadow)">
+        <rect x="650" y="68" width="150" height="42" rx="10" fill="#FEF3C7" />
+        <text
+          x="725"
+          y="85"
+          fontSize="8"
+          fill="#B45309"
+          textAnchor="middle"
+          fontWeight="bold"
+          fontFamily="system-ui, sans-serif"
+        >
+          NEET TIP
+        </text>
+        <text
+          x="725"
+          y="98"
+          fontSize="7"
+          fill="#92400E"
+          textAnchor="middle"
+          fontFamily="system-ui, sans-serif"
+        >
+          PS II acts first but was
+        </text>
+        <text
+          x="725"
+          y="108"
+          fontSize="7"
+          fill="#92400E"
+          textAnchor="middle"
+          fontFamily="system-ui, sans-serif"
+        >
+          discovered after PS I!
+        </text>
+      </g>
     </Wrapper>
   )
 }
