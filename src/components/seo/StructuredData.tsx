@@ -76,10 +76,6 @@ export function OrganizationSchema() {
     review: [
       {
         '@type': 'Review',
-        itemReviewed: {
-          '@type': 'EducationalOrganization',
-          name: 'Cerebrum Biology Academy',
-        },
         reviewRating: {
           '@type': 'Rating',
           ratingValue: '5',
@@ -96,10 +92,6 @@ export function OrganizationSchema() {
       },
       {
         '@type': 'Review',
-        itemReviewed: {
-          '@type': 'EducationalOrganization',
-          name: 'Cerebrum Biology Academy',
-        },
         reviewRating: {
           '@type': 'Rating',
           ratingValue: '5',
@@ -116,10 +108,6 @@ export function OrganizationSchema() {
       },
       {
         '@type': 'Review',
-        itemReviewed: {
-          '@type': 'EducationalOrganization',
-          name: 'Cerebrum Biology Academy',
-        },
         reviewRating: {
           '@type': 'Rating',
           ratingValue: '5',
@@ -805,15 +793,14 @@ export function GurugramServiceSchema() {
 }
 
 export function StructuredData() {
+  // Note: FAQSchema is NOT included globally to prevent duplicate FAQ errors in Google Search Console
+  // Include FAQSchema only on specific pages that have FAQ content
   return (
     <>
       <OrganizationSchema />
       <WebsiteSchema />
       <CourseSchema />
-      <FAQSchema />
       <LocalBusinessSchema />
-      <NationalServiceSchema />
-      <GurugramServiceSchema />
     </>
   )
 }

@@ -1,4 +1,5 @@
 import { Faculty } from '@/types'
+import { getPlaceholderAvatar } from '@/lib/images/imageUtils'
 
 export const facultyMembers: Faculty[] = [
   {
@@ -33,7 +34,7 @@ export const facultyMembers: Faculty[] = [
     qualification: 'MSc Botany (JNU), PhD Plant Physiology (IISc)',
     experience: '12+ years',
     specialization: ['Plant Biology', 'Ecology', 'Genetics'],
-    image: '/faculty/dr-priya-sharma.jpg',
+    image: getPlaceholderAvatar('Priya Sharma', 200, '7C3AED', 'fff'),
     designation: 'Senior Faculty - Botany',
     bio: 'Dr. Priya Sharma is a renowned botanist with expertise in plant sciences. Her research background from IISc brings cutting-edge knowledge to NEET preparation.',
     achievements: [
@@ -54,7 +55,7 @@ export const facultyMembers: Faculty[] = [
     qualification: 'MBBS (AIIMS Rishikesh), MS Surgery',
     experience: '10+ years',
     specialization: ['Animal Physiology', 'Human Biology', 'Surgery Basics'],
-    image: '/faculty/dr-amit-singh.jpg',
+    image: getPlaceholderAvatar('Amit Singh', 200, '2563EB', 'fff'),
     designation: 'Senior Faculty - Zoology',
     bio: 'Dr. Amit Singh combines his medical practice experience with teaching excellence, providing students with practical insights into human biology and physiology.',
     achievements: [
@@ -76,7 +77,7 @@ export const facultyMembers: Faculty[] = [
     qualification: 'MSc Genetics (DU), PhD Molecular Biology (JNU)',
     experience: '8+ years',
     specialization: ['Genetics', 'Molecular Biology', 'Evolution', 'Biotechnology'],
-    image: '/faculty/prof-meera-gupta.jpg',
+    image: getPlaceholderAvatar('Meera Gupta', 200, 'DC2626', 'fff'),
     designation: 'Associate Professor - Genetics',
     bio: 'Prof. Meera Gupta is a molecular biology expert who simplifies complex genetic concepts for NEET aspirants with her research-backed teaching approach.',
     achievements: [
@@ -98,7 +99,7 @@ export const facultyMembers: Faculty[] = [
     qualification: 'MSc Biochemistry (BHU), PhD Cell Biology (TIFR)',
     experience: '11+ years',
     specialization: ['Cell Biology', 'Biochemistry', 'Biophysics', 'Molecular Processes'],
-    image: '/faculty/dr-vikram-joshi.jpg',
+    image: getPlaceholderAvatar('Vikram Joshi', 200, '059669', 'fff'),
     designation: 'Senior Faculty - Cell Biology',
     bio: 'Dr. Vikram Joshi brings cutting-edge research experience from TIFR to make cell biology and biochemistry concepts crystal clear for NEET aspirants.',
     achievements: [
@@ -120,7 +121,7 @@ export const facultyMembers: Faculty[] = [
     qualification: 'MSc Environmental Science (JNU), PhD Ecology (IIT Delhi)',
     experience: '9+ years',
     specialization: ['Environmental Biology', 'Biodiversity', 'Ecosystem Ecology'],
-    image: '/faculty/dr-anita-verma.jpg',
+    image: getPlaceholderAvatar('Anita Verma', 200, 'EA580C', 'fff'),
     designation: 'Faculty - Environmental Biology',
     bio: 'Dr. Anita Verma is an environmental scientist who makes ecology and environmental biology engaging through field examples and current environmental issues.',
     achievements: [

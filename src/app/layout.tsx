@@ -116,14 +116,7 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="//checkout.razorpay.com" />
         <link rel="dns-prefetch" href="//www.googletagmanager.com" />
 
-        {/* Performance: Preload critical resources */}
-        <link
-          rel="preload"
-          href="/fonts/geist-sans.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
+        {/* Fonts are handled by next/font/google - no manual preload needed */}
 
         <meta httpEquiv="Content-Language" content="en-IN,hi-IN" />
         <meta name="language" content="English,Hindi" />
