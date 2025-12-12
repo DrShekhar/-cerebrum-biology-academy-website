@@ -1,6 +1,13 @@
 // Comprehensive Course System Data for Cerebrum Biology Academy
 
-import { CourseSystem, CourseTier, CourseCategory, CourseProgram, CourseFeatures, PaymentOptions } from '@/types/courseSystem'
+import {
+  CourseSystem,
+  CourseTier,
+  CourseCategory,
+  CourseProgram,
+  CourseFeatures,
+  PaymentOptions,
+} from '@/types/courseSystem'
 
 // Define the three tiers based on biologyforneetug.com structure
 export const courseTiers: CourseTier[] = [
@@ -9,7 +16,7 @@ export const courseTiers: CourseTier[] = [
     name: 'Pinnacle Series',
     description: 'Premium tier with maximum personalization and comprehensive support',
     batchSize: 12,
-    priceRange: { min: 98000, max: 180000 },
+    priceRange: { min: 65000, max: 180000 },
     features: {
       liveClasses: true,
       recordedVideos: true,
@@ -46,7 +53,7 @@ export const courseTiers: CourseTier[] = [
     name: 'Ascent Series',
     description: 'Standard tier with balanced features and regular mentoring',
     batchSize: 20,
-    priceRange: { min: 58000, max: 76000 },
+    priceRange: { min: 60000, max: 140000 },
     features: {
       liveClasses: true,
       recordedVideos: true,
@@ -82,8 +89,8 @@ export const courseTiers: CourseTier[] = [
     series: 'pursuit',
     name: 'Pursuit Series',
     description: 'Value tier with essential features and self-paced learning support',
-    batchSize: 25,
-    priceRange: { min: 48000, max: 88000 },
+    batchSize: 30,
+    priceRange: { min: 45000, max: 85000 },
     features: {
       liveClasses: true,
       recordedVideos: true,
@@ -121,7 +128,7 @@ export const courseTiers: CourseTier[] = [
 const calculatePaymentOptions = (basePrice: number): PaymentOptions => {
   const oneTimeDiscount = 0.05 // 5% discount
   const discountedAmount = Math.round(basePrice * (1 - oneTimeDiscount))
-  
+
   return {
     oneTime: {
       amount: basePrice,
@@ -157,17 +164,18 @@ export const coursePrograms: CourseProgram[] = [
   {
     id: 'class-9-foundation-biology',
     name: 'Class 9th Foundation Biology',
-    description: 'Strong foundation in biology concepts to prepare for advanced NEET studies. Focus on building conceptual clarity and scientific temperament.',
+    description:
+      'Strong foundation in biology concepts to prepare for advanced NEET studies. Focus on building conceptual clarity and scientific temperament.',
     targetClass: '9th',
     duration: '1 year',
     teachingHours: 6,
     learningMode: ['Online', 'Offline', 'Hybrid'],
     tiers: {
       pinnacle: {
-        price: 98000,
+        price: 90000,
         batchSize: 12,
         features: courseTiers[0].features,
-        payment: calculatePaymentOptions(98000),
+        payment: calculatePaymentOptions(90000),
         additionalBenefits: [
           'Personal academic counselor',
           'Monthly parent meetings',
@@ -181,10 +189,10 @@ export const coursePrograms: CourseProgram[] = [
         ],
       },
       ascent: {
-        price: 58000,
+        price: 60000,
         batchSize: 20,
         features: courseTiers[1].features,
-        payment: calculatePaymentOptions(58000),
+        payment: calculatePaymentOptions(60000),
         additionalBenefits: [
           'Regular progress reports',
           'Group study sessions',
@@ -192,14 +200,11 @@ export const coursePrograms: CourseProgram[] = [
         ],
       },
       pursuit: {
-        price: 48000,
-        batchSize: 25,
+        price: 45000,
+        batchSize: 30,
         features: courseTiers[2].features,
-        payment: calculatePaymentOptions(48000),
-        additionalBenefits: [
-          'Basic study materials',
-          'Self-assessment tools',
-        ],
+        payment: calculatePaymentOptions(45000),
+        additionalBenefits: ['Basic study materials', 'Self-assessment tools'],
       },
     },
     curriculum: {
@@ -214,7 +219,11 @@ export const coursePrograms: CourseProgram[] = [
           description: 'Cell structure, organelles, and basic functions',
           duration: 30,
           topics: ['Cell theory', 'Plant and animal cells', 'Cell organelles', 'Cell division'],
-          learningObjectives: ['Understand cell structure', 'Identify organelles', 'Compare plant and animal cells'],
+          learningObjectives: [
+            'Understand cell structure',
+            'Identify organelles',
+            'Compare plant and animal cells',
+          ],
           practicalWork: ['Microscopy', 'Cell observation', 'Staining techniques'],
         },
         {
@@ -222,8 +231,17 @@ export const coursePrograms: CourseProgram[] = [
           title: 'Tissues',
           description: 'Plant and animal tissue systems',
           duration: 30,
-          topics: ['Meristematic tissues', 'Permanent tissues', 'Animal tissues', 'Tissue functions'],
-          learningObjectives: ['Classify tissue types', 'Understand tissue functions', 'Relate structure to function'],
+          topics: [
+            'Meristematic tissues',
+            'Permanent tissues',
+            'Animal tissues',
+            'Tissue functions',
+          ],
+          learningObjectives: [
+            'Classify tissue types',
+            'Understand tissue functions',
+            'Relate structure to function',
+          ],
           practicalWork: ['Tissue identification', 'Microscopic studies'],
         },
         // Additional modules would be defined similarly...
@@ -246,7 +264,10 @@ export const coursePrograms: CourseProgram[] = [
         specialization: ['Cell Biology', 'Plant Sciences', 'Foundation Teaching'],
         rating: 4.8,
         teachingExperience: '8 years in NEET foundation',
-        achievementHighlights: ['100+ students qualified NEET', 'Research publications in plant biology'],
+        achievementHighlights: [
+          '100+ students qualified NEET',
+          'Research publications in plant biology',
+        ],
       },
     ],
     prerequisites: ['Basic science knowledge', 'Interest in biology'],
@@ -261,7 +282,8 @@ export const coursePrograms: CourseProgram[] = [
       {
         id: 'faq-1',
         question: 'Is this course suitable for beginners?',
-        answer: 'Yes, this course is specifically designed for Class 9th students starting their biology journey.',
+        answer:
+          'Yes, this course is specifically designed for Class 9th students starting their biology journey.',
         category: 'general',
         order: 1,
       },
@@ -273,17 +295,18 @@ export const coursePrograms: CourseProgram[] = [
   {
     id: 'class-10-foundation-biology',
     name: 'Class 10th Foundation Biology',
-    description: 'Advanced foundation course building upon Class 9th concepts. Prepares students for Class 11th NEET courses with strong conceptual base.',
+    description:
+      'Advanced foundation course building upon Class 9th concepts. Prepares students for Class 11th NEET courses with strong conceptual base.',
     targetClass: '10th',
     duration: '1 year',
     teachingHours: 8,
     learningMode: ['Online', 'Offline', 'Hybrid'],
     tiers: {
       pinnacle: {
-        price: 110000,
+        price: 90000,
         batchSize: 12,
         features: courseTiers[0].features,
-        payment: calculatePaymentOptions(110000),
+        payment: calculatePaymentOptions(90000),
         additionalBenefits: [
           'Advanced lab experiments',
           'Research project guidance',
@@ -297,10 +320,10 @@ export const coursePrograms: CourseProgram[] = [
         ],
       },
       ascent: {
-        price: 68000,
+        price: 60000,
         batchSize: 20,
         features: courseTiers[1].features,
-        payment: calculatePaymentOptions(68000),
+        payment: calculatePaymentOptions(60000),
         additionalBenefits: [
           'Enhanced study materials',
           'Practical lab sessions',
@@ -308,14 +331,11 @@ export const coursePrograms: CourseProgram[] = [
         ],
       },
       pursuit: {
-        price: 56000,
-        batchSize: 25,
+        price: 45000,
+        batchSize: 30,
         features: courseTiers[2].features,
-        payment: calculatePaymentOptions(56000),
-        additionalBenefits: [
-          'Standard study materials',
-          'Basic lab access',
-        ],
+        payment: calculatePaymentOptions(45000),
+        additionalBenefits: ['Standard study materials', 'Basic lab access'],
       },
     },
     curriculum: {
@@ -329,8 +349,17 @@ export const coursePrograms: CourseProgram[] = [
           title: 'Life Processes - Nutrition',
           description: 'Understanding nutrition in plants and animals',
           duration: 32,
-          topics: ['Autotrophic nutrition', 'Heterotrophic nutrition', 'Digestive system', 'Photosynthesis'],
-          learningObjectives: ['Understand nutrition types', 'Explain digestive processes', 'Analyze photosynthesis'],
+          topics: [
+            'Autotrophic nutrition',
+            'Heterotrophic nutrition',
+            'Digestive system',
+            'Photosynthesis',
+          ],
+          learningObjectives: [
+            'Understand nutrition types',
+            'Explain digestive processes',
+            'Analyze photosynthesis',
+          ],
           practicalWork: ['Photosynthesis experiments', 'Digestive enzyme tests'],
         },
         // Additional modules...
@@ -372,17 +401,18 @@ export const coursePrograms: CourseProgram[] = [
   {
     id: 'class-11-neet-comprehensive',
     name: 'Class 11th NEET Comprehensive',
-    description: 'Complete NEET preparation for Class 11th students. Covers entire syllabus with intensive practice and conceptual mastery.',
+    description:
+      'Complete NEET preparation for Class 11th students. Covers entire syllabus with intensive practice and conceptual mastery.',
     targetClass: '11th',
-    duration: '2 years',
+    duration: '1 year',
     teachingHours: 12,
     learningMode: ['Online', 'Offline', 'Hybrid'],
     tiers: {
       pinnacle: {
-        price: 180000,
+        price: 98000,
         batchSize: 12,
         features: courseTiers[0].features,
-        payment: calculatePaymentOptions(180000),
+        payment: calculatePaymentOptions(98000),
         additionalBenefits: [
           'Elite faculty access',
           'IIT/AIIMS alumni mentoring',
@@ -407,14 +437,11 @@ export const coursePrograms: CourseProgram[] = [
         ],
       },
       pursuit: {
-        price: 88000,
-        batchSize: 25,
+        price: 48000,
+        batchSize: 30,
         features: courseTiers[2].features,
-        payment: calculatePaymentOptions(88000),
-        additionalBenefits: [
-          'Core curriculum focus',
-          'Essential test practice',
-        ],
+        payment: calculatePaymentOptions(48000),
+        additionalBenefits: ['Core curriculum focus', 'Essential test practice'],
       },
     },
     curriculum: {
@@ -472,17 +499,18 @@ export const coursePrograms: CourseProgram[] = [
   {
     id: 'class-12-neet-intensive',
     name: 'Class 12th NEET Intensive',
-    description: 'Final year intensive NEET preparation. Dual focus on board exams and NEET with strategic time management.',
+    description:
+      'Final year intensive NEET preparation. Dual focus on board exams and NEET with strategic time management.',
     targetClass: '12th',
     duration: '1 year',
     teachingHours: 15,
     learningMode: ['Online', 'Offline', 'Hybrid'],
     tiers: {
       pinnacle: {
-        price: 150000,
+        price: 156000,
         batchSize: 12,
         features: courseTiers[0].features,
-        payment: calculatePaymentOptions(150000),
+        payment: calculatePaymentOptions(156000),
         additionalBenefits: [
           'Board + NEET dual preparation',
           'Time management coaching',
@@ -496,10 +524,10 @@ export const coursePrograms: CourseProgram[] = [
         ],
       },
       ascent: {
-        price: 72000,
+        price: 76000,
         batchSize: 20,
         features: courseTiers[1].features,
-        payment: calculatePaymentOptions(72000),
+        payment: calculatePaymentOptions(76000),
         additionalBenefits: [
           'Integrated board preparation',
           'Regular mock tests',
@@ -507,14 +535,11 @@ export const coursePrograms: CourseProgram[] = [
         ],
       },
       pursuit: {
-        price: 65000,
-        batchSize: 25,
+        price: 70000,
+        batchSize: 30,
         features: courseTiers[2].features,
-        payment: calculatePaymentOptions(65000),
-        additionalBenefits: [
-          'Essential NEET preparation',
-          'Board exam support',
-        ],
+        payment: calculatePaymentOptions(70000),
+        additionalBenefits: ['Essential NEET preparation', 'Board exam support'],
       },
     },
     curriculum: {
@@ -528,7 +553,12 @@ export const coursePrograms: CourseProgram[] = [
           title: 'Human Physiology',
           description: 'Detailed study of human body systems',
           duration: 40,
-          topics: ['Digestive system', 'Respiratory system', 'Circulatory system', 'Excretory system'],
+          topics: [
+            'Digestive system',
+            'Respiratory system',
+            'Circulatory system',
+            'Excretory system',
+          ],
           learningObjectives: ['Master human physiology', 'Understand system interactions'],
           practicalWork: ['Physiological experiments', 'System studies'],
         },
@@ -570,18 +600,19 @@ export const coursePrograms: CourseProgram[] = [
   // NEET Dropper Course
   {
     id: 'neet-dropper-intensive',
-    name: 'NEET Dropper Year Program',
-    description: 'Intensive 1-year crash course for NEET droppers. Complete syllabus revision with advanced problem-solving and exam strategy. Designed for students who want to improve their NEET rank significantly.',
+    name: 'NEET Dropper/Repeater Batch',
+    description:
+      'Intensive 1-year crash course for NEET droppers. Complete syllabus revision with advanced problem-solving and exam strategy. Designed for students who want to improve their NEET rank significantly.',
     targetClass: 'Dropper',
     duration: '1 year',
     teachingHours: 18,
     learningMode: ['Online', 'Offline', 'Hybrid'],
     tiers: {
       pinnacle: {
-        price: 165000,
+        price: 156000,
         batchSize: 10,
         features: courseTiers[0].features,
-        payment: calculatePaymentOptions(165000),
+        payment: calculatePaymentOptions(156000),
         additionalBenefits: [
           'Personal NEET rank improvement strategist',
           'Individual weakness analysis and remediation',
@@ -598,10 +629,10 @@ export const coursePrograms: CourseProgram[] = [
         ],
       },
       ascent: {
-        price: 85000,
+        price: 90000,
         batchSize: 18,
         features: courseTiers[1].features,
-        payment: calculatePaymentOptions(85000),
+        payment: calculatePaymentOptions(90000),
         additionalBenefits: [
           'Intensive daily mock tests',
           'Rank improvement tracking',
@@ -616,19 +647,16 @@ export const coursePrograms: CourseProgram[] = [
         ],
       },
       pursuit: {
-        price: 72000,
-        batchSize: 25,
+        price: 70000,
+        batchSize: 30,
         features: courseTiers[2].features,
-        payment: calculatePaymentOptions(72000),
+        payment: calculatePaymentOptions(70000),
         additionalBenefits: [
           'Complete syllabus quick revision',
           'Regular assessment tests',
           'Basic rank improvement guidance',
         ],
-        enrollmentBonus: [
-          'Standard study materials',
-          'Basic test series access',
-        ],
+        enrollmentBonus: ['Standard study materials', 'Basic test series access'],
       },
     },
     curriculum: {
@@ -642,8 +670,17 @@ export const coursePrograms: CourseProgram[] = [
           title: 'Biology Quick Revision - Diversity of Living World',
           description: 'Fast-track revision of classification and biodiversity',
           duration: 25,
-          topics: ['Taxonomy principles', 'Five kingdom classification', 'Biodiversity conservation', 'Systematics'],
-          learningObjectives: ['Master taxonomic hierarchy', 'Quick recall of classification systems', 'Biodiversity importance'],
+          topics: [
+            'Taxonomy principles',
+            'Five kingdom classification',
+            'Biodiversity conservation',
+            'Systematics',
+          ],
+          learningObjectives: [
+            'Master taxonomic hierarchy',
+            'Quick recall of classification systems',
+            'Biodiversity importance',
+          ],
           practicalWork: ['Specimen identification', 'Classification exercises'],
           assignments: ['Daily practice MCQs', 'Previous year questions'],
         },
@@ -682,8 +719,20 @@ export const coursePrograms: CourseProgram[] = [
           title: 'Human Physiology - Comprehensive',
           description: 'All body systems with medical applications',
           duration: 50,
-          topics: ['Digestive system', 'Breathing and gas exchange', 'Body fluids and circulation', 'Excretory system', 'Locomotion and movement', 'Neural control', 'Chemical coordination', 'Reproduction'],
-          learningObjectives: ['Master human anatomy and physiology', 'Understand disease mechanisms'],
+          topics: [
+            'Digestive system',
+            'Breathing and gas exchange',
+            'Body fluids and circulation',
+            'Excretory system',
+            'Locomotion and movement',
+            'Neural control',
+            'Chemical coordination',
+            'Reproduction',
+          ],
+          learningObjectives: [
+            'Master human anatomy and physiology',
+            'Understand disease mechanisms',
+          ],
           practicalWork: ['Physiological experiments', 'Medical case studies'],
           assignments: ['Clinical correlations', 'Applied physiology questions'],
         },
@@ -702,7 +751,12 @@ export const coursePrograms: CourseProgram[] = [
           title: 'Genetics and Evolution - Master Class',
           description: 'Heredity, variation, and evolutionary concepts',
           duration: 40,
-          topics: ['Mendelian genetics', 'Molecular basis of inheritance', 'Evolution theories', 'Human evolution'],
+          topics: [
+            'Mendelian genetics',
+            'Molecular basis of inheritance',
+            'Evolution theories',
+            'Human evolution',
+          ],
           learningObjectives: ['Master genetic principles', 'Understand evolutionary concepts'],
           practicalWork: ['Genetic crosses', 'Evolution evidences'],
           assignments: ['Pedigree analysis', 'Evolution timeline'],
@@ -712,7 +766,11 @@ export const coursePrograms: CourseProgram[] = [
           title: 'Biology and Human Welfare',
           description: 'Health, disease, and food production',
           duration: 30,
-          topics: ['Human health and disease', 'Microbes in human welfare', 'Food production strategies'],
+          topics: [
+            'Human health and disease',
+            'Microbes in human welfare',
+            'Food production strategies',
+          ],
           learningObjectives: ['Understand health concepts', 'Know beneficial microbes'],
           practicalWork: ['Microbiology experiments', 'Food technology'],
           assignments: ['Disease case studies', 'Technology applications'],
@@ -722,7 +780,11 @@ export const coursePrograms: CourseProgram[] = [
           title: 'Biotechnology - Applications',
           description: 'Modern biotechnology and its applications',
           duration: 35,
-          topics: ['Biotechnology principles', 'Applications in health and agriculture', 'Ethical issues'],
+          topics: [
+            'Biotechnology principles',
+            'Applications in health and agriculture',
+            'Ethical issues',
+          ],
           learningObjectives: ['Understand biotechnology principles', 'Know current applications'],
           practicalWork: ['DNA technology simulations', 'Case studies'],
           assignments: ['Technology analysis', 'Ethical debates'],
@@ -742,7 +804,12 @@ export const coursePrograms: CourseProgram[] = [
           title: 'NEET Pattern Analysis and Strategy',
           description: 'Exam pattern understanding and solving strategies',
           duration: 25,
-          topics: ['NEET syllabus analysis', 'Question pattern study', 'Time management', 'Marking scheme'],
+          topics: [
+            'NEET syllabus analysis',
+            'Question pattern study',
+            'Time management',
+            'Marking scheme',
+          ],
           learningObjectives: ['Master NEET pattern', 'Develop exam strategy'],
           practicalWork: ['Mock test analysis', 'Strategy development'],
           assignments: ['Pattern practice', 'Strategy implementation'],
@@ -752,7 +819,12 @@ export const coursePrograms: CourseProgram[] = [
           title: 'Speed Enhancement and Accuracy',
           description: 'Advanced problem-solving techniques',
           duration: 30,
-          topics: ['Speed building techniques', 'Accuracy improvement', 'Error analysis', 'Short-cut methods'],
+          topics: [
+            'Speed building techniques',
+            'Accuracy improvement',
+            'Error analysis',
+            'Short-cut methods',
+          ],
           learningObjectives: ['Increase solving speed', 'Minimize errors'],
           practicalWork: ['Timed practice sessions', 'Error pattern analysis'],
           assignments: ['Speed tests', 'Accuracy tracking'],
@@ -762,7 +834,12 @@ export const coursePrograms: CourseProgram[] = [
           title: 'Advanced Biology for High Scorers',
           description: 'Beyond NCERT concepts for top ranks',
           duration: 35,
-          topics: ['Advanced concepts', 'Research-based questions', 'Latest discoveries', 'Medical applications'],
+          topics: [
+            'Advanced concepts',
+            'Research-based questions',
+            'Latest discoveries',
+            'Medical applications',
+          ],
           learningObjectives: ['Master advanced concepts', 'Stay updated with current research'],
           practicalWork: ['Research paper studies', 'Advanced experiments'],
           assignments: ['Research-based questions', 'Current science integration'],
@@ -772,7 +849,12 @@ export const coursePrograms: CourseProgram[] = [
           title: 'Memory Techniques and Mnemonics',
           description: 'Effective memorization strategies for biology',
           duration: 20,
-          topics: ['Memory palace technique', 'Biology-specific mnemonics', 'Visual learning', 'Association methods'],
+          topics: [
+            'Memory palace technique',
+            'Biology-specific mnemonics',
+            'Visual learning',
+            'Association methods',
+          ],
           learningObjectives: ['Master memory techniques', 'Improve retention'],
           practicalWork: ['Memory exercises', 'Mnemonic creation'],
           assignments: ['Memory practice', 'Technique application'],
@@ -782,7 +864,12 @@ export const coursePrograms: CourseProgram[] = [
           title: 'Final Revision and Problem Solving',
           description: 'Intensive final preparation phase',
           duration: 40,
-          topics: ['Complete syllabus revision', 'Problem-solving practice', 'Doubt clearing', 'Confidence building'],
+          topics: [
+            'Complete syllabus revision',
+            'Problem-solving practice',
+            'Doubt clearing',
+            'Confidence building',
+          ],
           learningObjectives: ['Complete revision', 'Peak performance preparation'],
           practicalWork: ['Comprehensive tests', 'Individual doubt sessions'],
           assignments: ['Final practice sets', 'Revision schedules'],
@@ -803,10 +890,18 @@ export const coursePrograms: CourseProgram[] = [
         name: 'Dr. Kavita Reddy',
         qualification: ['M.Sc Biotechnology', 'Ph.D Molecular Biology', 'NEET Coaching Specialist'],
         experience: '12 years',
-        specialization: ['NEET Dropper Mentoring', 'Rank Improvement Strategies', 'Advanced Biology'],
+        specialization: [
+          'NEET Dropper Mentoring',
+          'Rank Improvement Strategies',
+          'Advanced Biology',
+        ],
         rating: 4.97,
         teachingExperience: '12 years specialized in dropper batch coaching',
-        achievementHighlights: ['200+ droppers improved rank by 50,000+', 'AIIMS Delhi selections', 'Average rank improvement: 60,000'],
+        achievementHighlights: [
+          '200+ droppers improved rank by 50,000+',
+          'AIIMS Delhi selections',
+          'Average rank improvement: 60,000',
+        ],
       },
       {
         id: 'fac-006',
@@ -816,10 +911,18 @@ export const coursePrograms: CourseProgram[] = [
         specialization: ['Human Physiology', 'Animal Behavior', 'Medical Entrance Strategy'],
         rating: 4.93,
         teachingExperience: '20 years in medical entrance coaching',
-        achievementHighlights: ['500+ NEET selections', 'Top 100 NEET rank producers', 'Medical college curriculum expert'],
+        achievementHighlights: [
+          '500+ NEET selections',
+          'Top 100 NEET rank producers',
+          'Medical college curriculum expert',
+        ],
       },
     ],
-    prerequisites: ['12th pass with Biology', 'Previous NEET attempt', 'Strong determination to improve'],
+    prerequisites: [
+      '12th pass with Biology',
+      'Previous NEET attempt',
+      'Strong determination to improve',
+    ],
     learningOutcomes: [
       'Significant NEET rank improvement (average 50,000+ rank jump)',
       'Government medical college admission potential',
@@ -837,19 +940,21 @@ export const coursePrograms: CourseProgram[] = [
         previousRank: 'NEET AIR 89,234',
         improvement: '86,387 rank improvement',
         college: 'AIIMS Rishikesh',
-        feedback: 'Cerebrum\'s dropper program transformed my NEET journey. The personalized attention and advanced problem-solving techniques helped me jump from 89K to under 3K rank!',
+        feedback:
+          "Cerebrum's dropper program transformed my NEET journey. The personalized attention and advanced problem-solving techniques helped me jump from 89K to under 3K rank!",
         rating: 5,
       },
       {
         id: 'test-002',
         studentName: 'Rahul Patel',
-        course: 'NEET Dropper Intensive', 
+        course: 'NEET Dropper Intensive',
         year: '2023',
         rank: 'NEET AIR 5,234',
         previousRank: 'NEET AIR 156,789',
         improvement: '151,555 rank improvement',
         college: 'GMC Surat',
-        feedback: 'The intensive schedule and expert faculty guidance made all the difference. From a hopeless situation to government medical college - thank you Cerebrum!',
+        feedback:
+          'The intensive schedule and expert faculty guidance made all the difference. From a hopeless situation to government medical college - thank you Cerebrum!',
         rating: 5,
       },
     ],
@@ -857,35 +962,40 @@ export const coursePrograms: CourseProgram[] = [
       {
         id: 'faq-dropper-1',
         question: 'What is the average rank improvement in the dropper program?',
-        answer: 'Our dropper students typically see a rank improvement of 50,000+ positions, with many students improving by over 1 lakh ranks. Individual results depend on dedication and consistency.',
+        answer:
+          'Our dropper students typically see a rank improvement of 50,000+ positions, with many students improving by over 1 lakh ranks. Individual results depend on dedication and consistency.',
         category: 'performance',
         order: 1,
       },
       {
-        id: 'faq-dropper-2', 
+        id: 'faq-dropper-2',
         question: 'How is the dropper program different from regular NEET coaching?',
-        answer: 'Our dropper program is intensive with 18 hours/week, focuses on rank improvement strategies, includes advanced problem-solving, speed enhancement, and personalized weakness analysis.',
+        answer:
+          'Our dropper program is intensive with 18 hours/week, focuses on rank improvement strategies, includes advanced problem-solving, speed enhancement, and personalized weakness analysis.',
         category: 'program',
         order: 2,
       },
       {
         id: 'faq-dropper-3',
         question: 'Is there any age restriction for the dropper program?',
-        answer: 'No specific age restriction. However, the program is designed for students who have attempted NEET at least once and are serious about significant rank improvement.',
-        category: 'eligibility', 
+        answer:
+          'No specific age restriction. However, the program is designed for students who have attempted NEET at least once and are serious about significant rank improvement.',
+        category: 'eligibility',
         order: 3,
       },
       {
         id: 'faq-dropper-4',
         question: 'What support is provided for handling exam pressure and motivation?',
-        answer: 'We provide regular counseling sessions, motivational workshops, stress management techniques, and peer support groups specifically for dropper students.',
+        answer:
+          'We provide regular counseling sessions, motivational workshops, stress management techniques, and peer support groups specifically for dropper students.',
         category: 'support',
         order: 4,
       },
       {
         id: 'faq-dropper-5',
         question: 'Can I join mid-session if I decide to take a drop after results?',
-        answer: 'Yes, we have multiple intake batches throughout the year. However, early joining is recommended for maximum benefit and complete coverage.',
+        answer:
+          'Yes, we have multiple intake batches throughout the year. However, early joining is recommended for maximum benefit and complete coverage.',
         category: 'admission',
         order: 5,
       },
@@ -904,7 +1014,7 @@ export const courseCategories: CourseCategory[] = [
     description: 'Building strong fundamentals for future NEET success',
     targetClass: ['9th'],
     icon: 'BookOpen',
-    courses: coursePrograms.filter(course => course.targetClass === '9th'),
+    courses: coursePrograms.filter((course) => course.targetClass === '9th'),
   },
   {
     id: 'foundation-10th',
@@ -912,7 +1022,7 @@ export const courseCategories: CourseCategory[] = [
     description: 'Advanced foundation preparing for NEET journey',
     targetClass: ['10th'],
     icon: 'GraduationCap',
-    courses: coursePrograms.filter(course => course.targetClass === '10th'),
+    courses: coursePrograms.filter((course) => course.targetClass === '10th'),
   },
   {
     id: 'neet-11th',
@@ -920,7 +1030,7 @@ export const courseCategories: CourseCategory[] = [
     description: 'Comprehensive NEET preparation starting from Class 11th',
     targetClass: ['11th'],
     icon: 'Target',
-    courses: coursePrograms.filter(course => course.targetClass === '11th'),
+    courses: coursePrograms.filter((course) => course.targetClass === '11th'),
   },
   {
     id: 'neet-12th',
@@ -928,7 +1038,7 @@ export const courseCategories: CourseCategory[] = [
     description: 'Final year intensive NEET preparation with board integration',
     targetClass: ['12th'],
     icon: 'Award',
-    courses: coursePrograms.filter(course => course.targetClass === '12th'),
+    courses: coursePrograms.filter((course) => course.targetClass === '12th'),
   },
   {
     id: 'neet-dropper',
@@ -936,7 +1046,7 @@ export const courseCategories: CourseCategory[] = [
     description: 'Intensive rank improvement program for NEET droppers',
     targetClass: ['Dropper'],
     icon: 'TrendingUp',
-    courses: coursePrograms.filter(course => course.targetClass === 'Dropper'),
+    courses: coursePrograms.filter((course) => course.targetClass === 'Dropper'),
   },
 ]
 

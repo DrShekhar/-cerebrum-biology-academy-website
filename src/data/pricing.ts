@@ -366,7 +366,7 @@ const class11: ClassPricing = {
         tier: 'pinnacle',
         batchSize: '10-12',
         hours: '10-12 hrs/week',
-        prices: { lumpSum: 65000, twoInstallments: 69000, threeInstallments: 72000 },
+        prices: { lumpSum: 98000, twoInstallments: 102000, threeInstallments: 105000 },
         features: class11PinnacleFeatures.filter((f) => !f.includes('NEET')),
       },
       {
@@ -389,7 +389,7 @@ const class11: ClassPricing = {
         tier: 'pinnacle',
         batchSize: '10-12',
         hours: '10-12 hrs/week',
-        prices: { lumpSum: 65000, twoInstallments: 69000, threeInstallments: 72000 },
+        prices: { lumpSum: 98000, twoInstallments: 102000, threeInstallments: 105000 },
         features: class11PinnacleFeatures,
       },
       {

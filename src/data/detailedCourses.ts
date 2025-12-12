@@ -5,9 +5,9 @@ export const detailedCourses: Course[] = [
     id: 'neet-2025-11th',
     title: 'NEET 2025 - Class 11th Foundation',
     description:
-      'Comprehensive 2-year foundation program for Class 11th students targeting NEET 2025. Build strong conceptual foundation with AIIMS expert faculty.',
-    duration: '2 Years',
-    price: 75000,
+      'Comprehensive 1-year foundation program for Class 11th students targeting NEET 2025. Build strong conceptual foundation with AIIMS expert faculty.',
+    duration: '1 Year',
+    price: 98000,
     features: [
       'Live Interactive Classes',
       'Complete Study Material',
@@ -185,9 +185,9 @@ export const detailedCourses: Course[] = [
       'Join our NEET 2025 Class 11th foundation course. 2-year comprehensive program with AIIMS faculty, small batches, and proven results. Enroll now!',
     isPopular: true,
     discount: {
-      percentage: 15,
+      percentage: 10,
       validUntil: '2024-03-31',
-      originalPrice: 88250,
+      originalPrice: 109000,
     },
   },
   {
@@ -196,7 +196,7 @@ export const detailedCourses: Course[] = [
     description:
       'Intensive program for Class 12th students with focus on both boards and NEET preparation simultaneously. Master advanced concepts and exam strategies.',
     duration: '1 Year',
-    price: 65000,
+    price: 156000,
     features: [
       'Dual Preparation (Board + NEET)',
       'Advanced Biology Concepts',
@@ -371,11 +371,11 @@ export const detailedCourses: Course[] = [
   },
   {
     id: 'neet-2025-dropper',
-    title: 'NEET 2025 - Dropper Batch',
+    title: 'NEET 2025 - Dropper/Repeater Batch',
     description:
       'Specialized intensive course for dropper students targeting NEET 2025. Comprehensive revision, advanced problem solving, and strategic preparation for improved scores.',
-    duration: '10 Months',
-    price: 55000,
+    duration: '1 Year',
+    price: 156000,
     features: [
       'Intensive Revision Sessions',
       'Advanced Problem Solving',
@@ -539,7 +539,7 @@ export const detailedCourses: Course[] = [
     description:
       'Build a strong foundation in Biology for Class 9th students. Early preparation for competitive exams with conceptual clarity and hands-on learning approach.',
     duration: '1 Year',
-    price: 58000,
+    price: 90000,
     features: [
       'Live Interactive Classes',
       'Complete Study Material',
@@ -676,7 +676,7 @@ export const detailedCourses: Course[] = [
     description:
       'Advanced foundation program for Class 10th students preparing for NEET. Bridge course to competitive exam preparation with focus on both boards and foundation.',
     duration: '1 Year',
-    price: 68000,
+    price: 90000,
     features: [
       'Live Interactive Classes',
       'Complete Study Material',
@@ -809,7 +809,7 @@ export const detailedCourses: Course[] = [
     description:
       'Intensive program for Class 12th students with focus on both boards and NEET preparation simultaneously. Achieve excellence in both with our proven dual preparation strategy.',
     duration: '1 Year',
-    price: 72000,
+    price: 76000,
     features: [
       'Dual Preparation (Board + NEET)',
       'Advanced Biology Concepts',
@@ -943,11 +943,11 @@ export const detailedCourses: Course[] = [
   },
   {
     id: 'neet-dropper-year',
-    title: 'NEET 2026 - Dropper Batch',
+    title: 'NEET 2026 - Dropper/Repeater Batch',
     description:
       'Specialized intensive course for students who want to improve their NEET score. Complete preparation with proven results, expert mentorship, and success guarantee program.',
     duration: '1 Year',
-    price: 85000,
+    price: 156000,
     features: [
       'Complete Syllabus Revision',
       'High-Yield Topics Focus',
