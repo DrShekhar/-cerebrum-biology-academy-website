@@ -2057,20 +2057,20 @@ export function HumanPhysiologyIllustration({ className = '', animate = true }: 
   )
 }
 
-// 14. Genetics & Evolution - DNA Helix with chromosomes
+// 14. Genetics - Principles of Inheritance and Variation (Professional Detailed Illustration)
 export function GeneticsIllustration({ className = '', animate = true }: IllustrationProps) {
   const Wrapper = animate ? motion.svg : 'svg'
   const wrapperProps = animate
     ? {
         initial: { opacity: 0, scale: 0.95 },
         animate: { opacity: 1, scale: 1 },
-        transition: { duration: 0.8, ease: 'easeOut' },
+        transition: { duration: 0.8, ease: 'easeOut' as const },
       }
     : {}
 
   return (
     <Wrapper
-      viewBox="0 0 520 400"
+      viewBox="0 0 900 650"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
@@ -2078,12 +2078,18 @@ export function GeneticsIllustration({ className = '', animate = true }: Illustr
       {...wrapperProps}
     >
       <defs>
-        {/* Professional gradients */}
+        {/* Background gradients */}
         <linearGradient id="genBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#EDE9FE" />
-          <stop offset="50%" stopColor="#DDD6FE" />
-          <stop offset="100%" stopColor="#C4B5FD" />
+          <stop offset="0%" stopColor="#FAF5FF" />
+          <stop offset="50%" stopColor="#F3E8FF" />
+          <stop offset="100%" stopColor="#EDE9FE" />
         </linearGradient>
+        <linearGradient id="genHeaderGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stopColor="#7C3AED" />
+          <stop offset="100%" stopColor="#8B5CF6" />
+        </linearGradient>
+
+        {/* DNA strand gradients */}
         <linearGradient id="dnaStrand1" x1="0%" y1="0%" x2="0%" y2="100%">
           <stop offset="0%" stopColor="#8B5CF6" />
           <stop offset="100%" stopColor="#6D28D9" />
@@ -2092,6 +2098,8 @@ export function GeneticsIllustration({ className = '', animate = true }: Illustr
           <stop offset="0%" stopColor="#A78BFA" />
           <stop offset="100%" stopColor="#8B5CF6" />
         </linearGradient>
+
+        {/* Chromosome gradients */}
         <linearGradient id="xChromoGrad" x1="0%" y1="0%" x2="0%" y2="100%">
           <stop offset="0%" stopColor="#F472B6" />
           <stop offset="100%" stopColor="#EC4899" />
@@ -2100,219 +2108,219 @@ export function GeneticsIllustration({ className = '', animate = true }: Illustr
           <stop offset="0%" stopColor="#60A5FA" />
           <stop offset="100%" stopColor="#3B82F6" />
         </linearGradient>
+        <linearGradient id="autoChromoGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stopColor="#A78BFA" />
+          <stop offset="100%" stopColor="#7C3AED" />
+        </linearGradient>
+
+        {/* Card gradients */}
+        <linearGradient id="mendelCardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stopColor="#FFFFFF" />
+          <stop offset="100%" stopColor="#FAFAFA" />
+        </linearGradient>
+        <linearGradient id="punnettGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#10B981" />
+          <stop offset="100%" stopColor="#059669" />
+        </linearGradient>
+        <linearGradient id="disorderCardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stopColor="#FEF3C7" />
+          <stop offset="100%" stopColor="#FDE68A" />
+        </linearGradient>
+
+        {/* Filters */}
         <filter id="genShadow" x="-20%" y="-20%" width="140%" height="140%">
-          <feDropShadow dx="0" dy="6" stdDeviation="8" floodOpacity="0.12" />
+          <feDropShadow dx="0" dy="4" stdDeviation="8" floodOpacity="0.15" />
         </filter>
         <filter id="genCardShadow" x="-10%" y="-10%" width="120%" height="130%">
-          <feDropShadow dx="0" dy="4" stdDeviation="5" floodOpacity="0.1" />
+          <feDropShadow dx="0" dy="3" stdDeviation="6" floodOpacity="0.12" />
         </filter>
         <filter id="genGlow" x="-50%" y="-50%" width="200%" height="200%">
-          <feGaussianBlur stdDeviation="4" result="coloredBlur" />
+          <feGaussianBlur stdDeviation="3" result="coloredBlur" />
           <feMerge>
             <feMergeNode in="coloredBlur" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+        <filter id="genInnerGlow" x="-30%" y="-30%" width="160%" height="160%">
+          <feGaussianBlur stdDeviation="2" result="blur" />
+          <feMerge>
+            <feMergeNode in="blur" />
             <feMergeNode in="SourceGraphic" />
           </feMerge>
         </filter>
       </defs>
 
       {/* Background */}
-      <rect x="0" y="0" width="520" height="400" rx="24" fill="url(#genBgGrad)" />
+      <rect x="0" y="0" width="900" height="650" rx="24" fill="url(#genBgGrad)" />
 
-      {/* Decorative elements */}
-      <circle cx="480" cy="60" r="100" fill="#8B5CF6" fillOpacity="0.08" />
-      <circle cx="40" cy="350" r="80" fill="#EC4899" fillOpacity="0.06" />
+      {/* Decorative background elements */}
+      <circle cx="850" cy="80" r="120" fill="#8B5CF6" fillOpacity="0.06" />
+      <circle cx="50" cy="600" r="100" fill="#EC4899" fillOpacity="0.05" />
+      <circle cx="450" cy="325" r="200" fill="#A78BFA" fillOpacity="0.03" />
 
-      {/* Title */}
+      {/* Header */}
+      <rect
+        x="20"
+        y="15"
+        width="860"
+        height="50"
+        rx="12"
+        fill="url(#genHeaderGrad)"
+        filter="url(#genShadow)"
+      />
       <text
-        x="260"
-        y="38"
-        fontSize="20"
-        fill="#5B21B6"
+        x="450"
+        y="48"
+        fontSize="22"
+        fill="#FFFFFF"
         textAnchor="middle"
         fontWeight="bold"
         fontFamily="system-ui, sans-serif"
       >
-        Genetics & Evolution
+        Principles of Inheritance and Variation
       </text>
-      <text
-        x="260"
-        y="56"
-        fontSize="11"
-        fill="#7C3AED"
-        textAnchor="middle"
-        fontFamily="system-ui, sans-serif"
+
+      {/* NEET Badge */}
+      <motion.g
+        filter="url(#genGlow)"
+        animate={animate ? { scale: [1, 1.05, 1] } : undefined}
+        transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
       >
-        Principles of Inheritance • 18% NEET Weightage
-      </text>
-
-      {/* DNA Double Helix - Professional 3D-style */}
-      <g filter="url(#genShadow)">
-        <motion.g
-          animate={animate ? { rotate: [0, 360] } : undefined}
-          transition={{ duration: 25, repeat: Infinity, ease: 'linear' }}
-          style={{ transformOrigin: '100px 220px' }}
-        >
-          {/* Left strand with gradient */}
-          <motion.path
-            d="M50 80 Q75 115 50 150 Q25 185 50 220 Q75 255 50 290 Q25 325 50 360"
-            stroke="url(#dnaStrand1)"
-            strokeWidth="6"
-            fill="none"
-            strokeLinecap="round"
-          />
-          {/* Right strand with gradient */}
-          <motion.path
-            d="M150 80 Q125 115 150 150 Q175 185 150 220 Q125 255 150 290 Q175 325 150 360"
-            stroke="url(#dnaStrand2)"
-            strokeWidth="6"
-            fill="none"
-            strokeLinecap="round"
-          />
-          {/* Base pairs with enhanced colors */}
-          {[
-            { y: 95, color: '#F472B6', label: 'A-T' },
-            { y: 130, color: '#34D399', label: 'G-C' },
-            { y: 165, color: '#FBBF24', label: 'T-A' },
-            { y: 200, color: '#60A5FA', label: 'C-G' },
-            { y: 235, color: '#F472B6', label: 'A-T' },
-            { y: 270, color: '#34D399', label: 'G-C' },
-            { y: 305, color: '#FBBF24', label: 'T-A' },
-            { y: 340, color: '#60A5FA', label: 'C-G' },
-          ].map((pair, i) => (
-            <g key={`pair-${i}`}>
-              <line
-                x1="50"
-                y1={pair.y}
-                x2="150"
-                y2={pair.y}
-                stroke={pair.color}
-                strokeWidth="4"
-                strokeLinecap="round"
-              />
-              <rect x="80" y={pair.y - 8} width="40" height="16" rx="8" fill={pair.color} />
-              <text
-                x="100"
-                y={pair.y + 4}
-                fontSize="9"
-                fill="white"
-                textAnchor="middle"
-                fontWeight="600"
-                fontFamily="system-ui, sans-serif"
-              >
-                {pair.label}
-              </text>
-            </g>
-          ))}
-        </motion.g>
-      </g>
-
-      {/* Chromosomes Section */}
-      <g filter="url(#genCardShadow)">
-        <rect x="200" y="75" width="150" height="130" rx="16" fill="white" fillOpacity="0.95" />
-        <rect
-          x="200"
-          y="75"
-          width="150"
-          height="130"
-          rx="16"
-          fill="none"
-          stroke="#A78BFA"
-          strokeWidth="2"
-        />
-
+        <circle cx="820" cy="40" r="28" fill="#FBBF24" />
         <text
-          x="275"
-          y="98"
+          x="820"
+          y="36"
           fontSize="12"
-          fill="#5B21B6"
+          fill="#78350F"
           textAnchor="middle"
           fontWeight="bold"
           fontFamily="system-ui, sans-serif"
         >
-          Sex Chromosomes
-        </text>
-
-        {/* X Chromosome - Professional */}
-        <motion.g
-          animate={animate ? { y: [-3, 3, -3] } : undefined}
-          transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
-        >
-          <path
-            d="M225 115 L250 175 M250 115 L225 175"
-            stroke="url(#xChromoGrad)"
-            strokeWidth="10"
-            strokeLinecap="round"
-          />
-          <circle cx="237" cy="145" r="6" fill="#FDF2F8" stroke="#EC4899" strokeWidth="2" />
-        </motion.g>
-
-        {/* Y Chromosome - Professional */}
-        <motion.g
-          animate={animate ? { y: [3, -3, 3] } : undefined}
-          transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
-        >
-          <path
-            d="M300 115 L300 150"
-            stroke="url(#yChromoGrad)"
-            strokeWidth="10"
-            strokeLinecap="round"
-          />
-          <path
-            d="M285 165 L300 150 L315 165"
-            stroke="url(#yChromoGrad)"
-            strokeWidth="8"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </motion.g>
-
-        <text
-          x="237"
-          y="192"
-          fontSize="11"
-          fill="#EC4899"
-          textAnchor="middle"
-          fontWeight="600"
-          fontFamily="system-ui, sans-serif"
-        >
-          Female (XX)
+          8-12
         </text>
         <text
-          x="300"
-          y="192"
-          fontSize="11"
-          fill="#3B82F6"
+          x="820"
+          y="50"
+          fontSize="9"
+          fill="#78350F"
           textAnchor="middle"
-          fontWeight="600"
           fontFamily="system-ui, sans-serif"
         >
-          Male (XY)
+          Qs
+        </text>
+      </motion.g>
+
+      {/* ============ SECTION 1: DNA Double Helix (Left) ============ */}
+      <g filter="url(#genCardShadow)">
+        <rect x="30" y="80" width="180" height="280" rx="16" fill="white" fillOpacity="0.95" />
+        <rect x="30" y="80" width="180" height="30" rx="16" fill="#8B5CF6" />
+        <rect x="30" y="95" width="180" height="15" fill="#8B5CF6" />
+        <text
+          x="120"
+          y="100"
+          fontSize="12"
+          fill="white"
+          textAnchor="middle"
+          fontWeight="bold"
+          fontFamily="system-ui, sans-serif"
+        >
+          DNA Structure
+        </text>
+
+        {/* DNA Double Helix Animation */}
+        <motion.g
+          animate={animate ? { rotate: [0, 360] } : undefined}
+          transition={{ duration: 30, repeat: Infinity, ease: 'linear' }}
+          style={{ transformOrigin: '120px 230px' }}
+        >
+          {/* Left strand */}
+          <motion.path
+            d="M70 130 Q100 155 70 180 Q40 205 70 230 Q100 255 70 280 Q40 305 70 330"
+            stroke="url(#dnaStrand1)"
+            strokeWidth="5"
+            fill="none"
+            strokeLinecap="round"
+          />
+          {/* Right strand */}
+          <motion.path
+            d="M170 130 Q140 155 170 180 Q200 205 170 230 Q140 255 170 280 Q200 305 170 330"
+            stroke="url(#dnaStrand2)"
+            strokeWidth="5"
+            fill="none"
+            strokeLinecap="round"
+          />
+
+          {/* Base pairs with labels */}
+          {[
+            { y: 145, color: '#F472B6', left: 'A', right: 'T' },
+            { y: 170, color: '#34D399', left: 'G', right: 'C' },
+            { y: 195, color: '#FBBF24', left: 'T', right: 'A' },
+            { y: 220, color: '#60A5FA', left: 'C', right: 'G' },
+            { y: 245, color: '#F472B6', left: 'A', right: 'T' },
+            { y: 270, color: '#34D399', left: 'G', right: 'C' },
+            { y: 295, color: '#FBBF24', left: 'T', right: 'A' },
+            { y: 320, color: '#60A5FA', left: 'C', right: 'G' },
+          ].map((pair, i) => (
+            <g key={`bp-${i}`}>
+              <line
+                x1="70"
+                y1={pair.y}
+                x2="170"
+                y2={pair.y}
+                stroke={pair.color}
+                strokeWidth="3"
+                strokeLinecap="round"
+              />
+              <circle cx="85" cy={pair.y} r="8" fill={pair.color} />
+              <text
+                x="85"
+                y={pair.y + 4}
+                fontSize="8"
+                fill="white"
+                textAnchor="middle"
+                fontWeight="bold"
+              >
+                {pair.left}
+              </text>
+              <circle cx="155" cy={pair.y} r="8" fill={pair.color} />
+              <text
+                x="155"
+                y={pair.y + 4}
+                fontSize="8"
+                fill="white"
+                textAnchor="middle"
+                fontWeight="bold"
+              >
+                {pair.right}
+              </text>
+            </g>
+          ))}
+        </motion.g>
+
+        {/* Legend */}
+        <rect x="45" y="340" width="150" height="15" rx="4" fill="#F3E8FF" />
+        <text
+          x="120"
+          y="351"
+          fontSize="8"
+          fill="#6D28D9"
+          textAnchor="middle"
+          fontFamily="system-ui, sans-serif"
+        >
+          A-T (2 H-bonds) • G-C (3 H-bonds)
         </text>
       </g>
 
-      {/* Mendel's Laws Card */}
-      <motion.g
-        filter="url(#genCardShadow)"
-        animate={animate ? { scale: [1, 1.02, 1] } : undefined}
-        transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
-      >
-        <rect x="365" y="75" width="140" height="130" rx="16" fill="white" fillOpacity="0.95" />
-        <rect
-          x="365"
-          y="75"
-          width="140"
-          height="130"
-          rx="16"
-          fill="none"
-          stroke="#8B5CF6"
-          strokeWidth="2"
-        />
-
+      {/* ============ SECTION 2: Mendel's Laws (Center-Left) ============ */}
+      <g filter="url(#genCardShadow)">
+        <rect x="225" y="80" width="200" height="175" rx="16" fill="url(#mendelCardGrad)" />
+        <rect x="225" y="80" width="200" height="30" rx="16" fill="#7C3AED" />
+        <rect x="225" y="95" width="200" height="15" fill="#7C3AED" />
         <text
-          x="435"
-          y="98"
+          x="325"
+          y="100"
           fontSize="12"
-          fill="#5B21B6"
+          fill="white"
           textAnchor="middle"
           fontWeight="bold"
           fontFamily="system-ui, sans-serif"
@@ -2320,212 +2328,940 @@ export function GeneticsIllustration({ className = '', animate = true }: Illustr
           Mendel's Laws
         </text>
 
-        {/* Law icons */}
-        <circle cx="385" cy="118" r="8" fill="#DDD6FE" />
-        <text x="385" y="122" fontSize="10" fill="#7C3AED" textAnchor="middle" fontWeight="bold">
-          1
-        </text>
-        <text x="395" y="122" fontSize="9" fill="#6B7280" fontFamily="system-ui, sans-serif">
-          Segregation
-        </text>
+        {/* Law 1: Dominance */}
+        <motion.g
+          animate={animate ? { x: [-2, 2, -2] } : undefined}
+          transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+        >
+          <circle cx="250" cy="130" r="12" fill="#DDD6FE" />
+          <text x="250" y="135" fontSize="11" fill="#6D28D9" textAnchor="middle" fontWeight="bold">
+            1
+          </text>
+          <text
+            x="270"
+            y="128"
+            fontSize="10"
+            fill="#374151"
+            fontWeight="600"
+            fontFamily="system-ui, sans-serif"
+          >
+            Law of Dominance
+          </text>
+          <text x="270" y="140" fontSize="8" fill="#6B7280" fontFamily="system-ui, sans-serif">
+            F1 shows dominant trait only
+          </text>
+        </motion.g>
 
-        <circle cx="385" cy="143" r="8" fill="#DDD6FE" />
-        <text x="385" y="147" fontSize="10" fill="#7C3AED" textAnchor="middle" fontWeight="bold">
-          2
-        </text>
-        <text x="395" y="147" fontSize="9" fill="#6B7280" fontFamily="system-ui, sans-serif">
-          Independent
-        </text>
+        {/* Law 2: Segregation */}
+        <motion.g
+          animate={animate ? { x: [2, -2, 2] } : undefined}
+          transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
+        >
+          <circle cx="250" cy="165" r="12" fill="#C4B5FD" />
+          <text x="250" y="170" fontSize="11" fill="#6D28D9" textAnchor="middle" fontWeight="bold">
+            2
+          </text>
+          <text
+            x="270"
+            y="163"
+            fontSize="10"
+            fill="#374151"
+            fontWeight="600"
+            fontFamily="system-ui, sans-serif"
+          >
+            Law of Segregation
+          </text>
+          <text x="270" y="175" fontSize="8" fill="#6B7280" fontFamily="system-ui, sans-serif">
+            Alleles separate in gametes
+          </text>
+        </motion.g>
 
-        <circle cx="385" cy="168" r="8" fill="#DDD6FE" />
-        <text x="385" y="172" fontSize="10" fill="#7C3AED" textAnchor="middle" fontWeight="bold">
-          3
-        </text>
-        <text x="395" y="172" fontSize="9" fill="#6B7280" fontFamily="system-ui, sans-serif">
-          Dominance
-        </text>
+        {/* Law 3: Independent Assortment */}
+        <motion.g
+          animate={animate ? { x: [-2, 2, -2] } : undefined}
+          transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
+        >
+          <circle cx="250" cy="200" r="12" fill="#A78BFA" />
+          <text x="250" y="205" fontSize="11" fill="white" textAnchor="middle" fontWeight="bold">
+            3
+          </text>
+          <text
+            x="270"
+            y="198"
+            fontSize="10"
+            fill="#374151"
+            fontWeight="600"
+            fontFamily="system-ui, sans-serif"
+          >
+            Independent Assortment
+          </text>
+          <text x="270" y="210" fontSize="8" fill="#6B7280" fontFamily="system-ui, sans-serif">
+            Genes assort independently
+          </text>
+        </motion.g>
 
-        <rect x="375" y="183" width="120" height="16" rx="8" fill="#F3E8FF" />
+        {/* Pea plant traits */}
+        <rect x="235" y="225" width="180" height="22" rx="6" fill="#F3E8FF" />
         <text
-          x="435"
-          y="194"
-          fontSize="8"
+          x="325"
+          y="240"
+          fontSize="9"
           fill="#7C3AED"
           textAnchor="middle"
+          fontWeight="500"
           fontFamily="system-ui, sans-serif"
         >
-          Pea Plant Experiments
+          7 Contrasting Traits in Pea Plant
         </text>
-      </motion.g>
+      </g>
 
-      {/* Punnett Square */}
+      {/* ============ SECTION 3: Monohybrid Cross / Punnett Square ============ */}
       <g filter="url(#genCardShadow)">
-        <rect x="200" y="220" width="130" height="130" rx="16" fill="white" fillOpacity="0.95" />
+        <rect x="440" y="80" width="200" height="175" rx="16" fill="white" fillOpacity="0.95" />
+        <rect x="440" y="80" width="200" height="30" rx="16" fill="#10B981" />
+        <rect x="440" y="95" width="200" height="15" fill="#10B981" />
+        <text
+          x="540"
+          y="100"
+          fontSize="12"
+          fill="white"
+          textAnchor="middle"
+          fontWeight="bold"
+          fontFamily="system-ui, sans-serif"
+        >
+          Monohybrid Cross (Tt × Tt)
+        </text>
+
+        {/* Punnett Square Grid */}
         <rect
-          x="200"
-          y="220"
-          width="130"
-          height="130"
-          rx="16"
-          fill="none"
+          x="470"
+          y="115"
+          width="140"
+          height="110"
+          rx="8"
+          fill="#ECFDF5"
           stroke="#10B981"
           strokeWidth="2"
         />
 
+        {/* Grid lines */}
+        <line x1="540" y1="115" x2="540" y2="225" stroke="#A7F3D0" strokeWidth="2" />
+        <line x1="470" y1="145" x2="610" y2="145" stroke="#A7F3D0" strokeWidth="2" />
+        <line x1="470" y1="170" x2="610" y2="170" stroke="#A7F3D0" strokeWidth="2" />
+        <line x1="470" y1="195" x2="610" y2="195" stroke="#A7F3D0" strokeWidth="2" />
+
+        {/* Headers */}
+        <text x="505" y="138" fontSize="11" fill="#059669" textAnchor="middle" fontWeight="bold">
+          T
+        </text>
+        <text x="575" y="138" fontSize="11" fill="#059669" textAnchor="middle" fontWeight="bold">
+          t
+        </text>
+        <text x="480" y="160" fontSize="11" fill="#059669" fontWeight="bold">
+          T
+        </text>
+        <text x="480" y="188" fontSize="11" fill="#059669" fontWeight="bold">
+          t
+        </text>
+
+        {/* Results with animation */}
+        <motion.g
+          animate={animate ? { opacity: [0.7, 1, 0.7] } : undefined}
+          transition={{ duration: 2, repeat: Infinity }}
+        >
+          <rect x="490" y="148" width="40" height="20" rx="4" fill="#059669" />
+          <text x="510" y="162" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">
+            TT
+          </text>
+        </motion.g>
+
+        <motion.g
+          animate={animate ? { opacity: [1, 0.7, 1] } : undefined}
+          transition={{ duration: 2, repeat: Infinity, delay: 0.3 }}
+        >
+          <rect x="550" y="148" width="40" height="20" rx="4" fill="#10B981" />
+          <text x="570" y="162" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">
+            Tt
+          </text>
+        </motion.g>
+
+        <motion.g
+          animate={animate ? { opacity: [0.7, 1, 0.7] } : undefined}
+          transition={{ duration: 2, repeat: Infinity, delay: 0.6 }}
+        >
+          <rect x="490" y="173" width="40" height="20" rx="4" fill="#10B981" />
+          <text x="510" y="187" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">
+            Tt
+          </text>
+        </motion.g>
+
+        <motion.g
+          animate={animate ? { opacity: [1, 0.7, 1] } : undefined}
+          transition={{ duration: 2, repeat: Infinity, delay: 0.9 }}
+        >
+          <rect x="550" y="173" width="40" height="20" rx="4" fill="#6EE7B7" />
+          <text x="570" y="187" fontSize="10" fill="#065F46" textAnchor="middle" fontWeight="bold">
+            tt
+          </text>
+        </motion.g>
+
+        {/* Ratio */}
+        <rect x="460" y="230" width="160" height="18" rx="6" fill="#D1FAE5" />
         <text
-          x="265"
+          x="540"
           y="243"
-          fontSize="11"
-          fill="#059669"
+          fontSize="9"
+          fill="#047857"
           textAnchor="middle"
-          fontWeight="bold"
+          fontWeight="600"
           fontFamily="system-ui, sans-serif"
         >
-          Punnett Square
-        </text>
-
-        {/* Grid */}
-        <line x1="230" y1="258" x2="230" y2="340" stroke="#D1FAE5" strokeWidth="2" />
-        <line x1="270" y1="258" x2="270" y2="340" stroke="#D1FAE5" strokeWidth="2" />
-        <line x1="210" y1="280" x2="320" y2="280" stroke="#D1FAE5" strokeWidth="2" />
-        <line x1="210" y1="310" x2="320" y2="310" stroke="#D1FAE5" strokeWidth="2" />
-
-        {/* Alleles */}
-        <text x="250" y="272" fontSize="10" fill="#059669" textAnchor="middle" fontWeight="bold">
-          A
-        </text>
-        <text x="295" y="272" fontSize="10" fill="#059669" textAnchor="middle" fontWeight="bold">
-          a
-        </text>
-        <text x="220" y="297" fontSize="10" fill="#059669" textAnchor="middle" fontWeight="bold">
-          A
-        </text>
-        <text x="220" y="330" fontSize="10" fill="#059669" textAnchor="middle" fontWeight="bold">
-          a
-        </text>
-
-        {/* Results */}
-        <text x="250" y="297" fontSize="9" fill="#10B981" textAnchor="middle">
-          AA
-        </text>
-        <text x="295" y="297" fontSize="9" fill="#10B981" textAnchor="middle">
-          Aa
-        </text>
-        <text x="250" y="330" fontSize="9" fill="#10B981" textAnchor="middle">
-          Aa
-        </text>
-        <text x="295" y="330" fontSize="9" fill="#10B981" textAnchor="middle">
-          aa
+          F2 Ratio: 3 Tall : 1 Dwarf (3:1)
         </text>
       </g>
 
-      {/* Evolution Card */}
-      <motion.g
-        filter="url(#genCardShadow)"
-        animate={animate ? { x: [-2, 2, -2] } : undefined}
-        transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-      >
-        <rect x="345" y="220" width="160" height="130" rx="16" fill="white" fillOpacity="0.95" />
-        <rect
-          x="345"
-          y="220"
-          width="160"
-          height="130"
-          rx="16"
-          fill="none"
-          stroke="#F59E0B"
-          strokeWidth="2"
-        />
-
+      {/* ============ SECTION 4: Dihybrid Cross ============ */}
+      <g filter="url(#genCardShadow)">
+        <rect x="655" y="80" width="220" height="175" rx="16" fill="white" fillOpacity="0.95" />
+        <rect x="655" y="80" width="220" height="30" rx="16" fill="#3B82F6" />
+        <rect x="655" y="95" width="220" height="15" fill="#3B82F6" />
         <text
-          x="425"
-          y="243"
-          fontSize="11"
-          fill="#B45309"
+          x="765"
+          y="100"
+          fontSize="12"
+          fill="white"
           textAnchor="middle"
           fontWeight="bold"
           fontFamily="system-ui, sans-serif"
         >
-          Evolution
+          Dihybrid Cross (9:3:3:1)
         </text>
 
-        {/* Darwin icon */}
-        <circle cx="385" cy="275" r="20" fill="#FEF3C7" stroke="#F59E0B" strokeWidth="2" />
-        <text x="385" y="280" fontSize="16" textAnchor="middle">
-          🧬
-        </text>
+        {/* Phenotype boxes */}
+        <motion.g
+          animate={animate ? { scale: [1, 1.02, 1] } : undefined}
+          transition={{ duration: 3, repeat: Infinity }}
+        >
+          <rect
+            x="670"
+            y="120"
+            width="90"
+            height="35"
+            rx="8"
+            fill="#DBEAFE"
+            stroke="#3B82F6"
+            strokeWidth="1"
+          />
+          <text x="715" y="135" fontSize="9" fill="#1E40AF" textAnchor="middle" fontWeight="bold">
+            Round Yellow
+          </text>
+          <text x="715" y="148" fontSize="14" fill="#2563EB" textAnchor="middle" fontWeight="bold">
+            9
+          </text>
+        </motion.g>
 
-        <text x="440" y="268" fontSize="9" fill="#92400E" fontFamily="system-ui, sans-serif">
-          Darwin's Theory
-        </text>
-        <text x="440" y="282" fontSize="8" fill="#B45309" fontFamily="system-ui, sans-serif">
-          Natural Selection
-        </text>
+        <motion.g
+          animate={animate ? { scale: [1.02, 1, 1.02] } : undefined}
+          transition={{ duration: 3, repeat: Infinity, delay: 0.5 }}
+        >
+          <rect
+            x="770"
+            y="120"
+            width="90"
+            height="35"
+            rx="8"
+            fill="#FEF3C7"
+            stroke="#F59E0B"
+            strokeWidth="1"
+          />
+          <text x="815" y="135" fontSize="9" fill="#B45309" textAnchor="middle" fontWeight="bold">
+            Round Green
+          </text>
+          <text x="815" y="148" fontSize="14" fill="#D97706" textAnchor="middle" fontWeight="bold">
+            3
+          </text>
+        </motion.g>
 
-        {/* Evolution timeline */}
-        <line
-          x1="360"
-          y1="310"
-          x2="490"
-          y2="310"
-          stroke="#FCD34D"
-          strokeWidth="3"
-          strokeLinecap="round"
-        />
-        <circle cx="380" cy="310" r="6" fill="#F59E0B" />
-        <circle cx="425" cy="310" r="6" fill="#FBBF24" />
-        <circle cx="470" cy="310" r="6" fill="#FCD34D" />
+        <motion.g
+          animate={animate ? { scale: [1, 1.02, 1] } : undefined}
+          transition={{ duration: 3, repeat: Infinity, delay: 1 }}
+        >
+          <rect
+            x="670"
+            y="162"
+            width="90"
+            height="35"
+            rx="8"
+            fill="#FCE7F3"
+            stroke="#EC4899"
+            strokeWidth="1"
+          />
+          <text x="715" y="177" fontSize="9" fill="#BE185D" textAnchor="middle" fontWeight="bold">
+            Wrinkled Yellow
+          </text>
+          <text x="715" y="190" fontSize="14" fill="#DB2777" textAnchor="middle" fontWeight="bold">
+            3
+          </text>
+        </motion.g>
 
+        <motion.g
+          animate={animate ? { scale: [1.02, 1, 1.02] } : undefined}
+          transition={{ duration: 3, repeat: Infinity, delay: 1.5 }}
+        >
+          <rect
+            x="770"
+            y="162"
+            width="90"
+            height="35"
+            rx="8"
+            fill="#E0E7FF"
+            stroke="#6366F1"
+            strokeWidth="1"
+          />
+          <text x="815" y="177" fontSize="9" fill="#4338CA" textAnchor="middle" fontWeight="bold">
+            Wrinkled Green
+          </text>
+          <text x="815" y="190" fontSize="14" fill="#4F46E5" textAnchor="middle" fontWeight="bold">
+            1
+          </text>
+        </motion.g>
+
+        {/* Cross notation */}
+        <rect x="675" y="205" width="180" height="18" rx="6" fill="#EFF6FF" />
         <text
-          x="425"
-          y="335"
+          x="765"
+          y="218"
+          fontSize="9"
+          fill="#1D4ED8"
+          textAnchor="middle"
+          fontFamily="system-ui, sans-serif"
+        >
+          RrYy × RrYy → 16 combinations
+        </text>
+
+        {/* Genotypic ratio */}
+        <text
+          x="765"
+          y="245"
           fontSize="8"
-          fill="#92400E"
+          fill="#6B7280"
           textAnchor="middle"
           fontFamily="system-ui, sans-serif"
         >
-          Adaptation → Speciation
+          Genotypic: 1:2:1:2:4:2:1:2:1
         </text>
-      </motion.g>
+      </g>
 
-      {/* Questions badge with glow */}
-      <motion.g
-        filter="url(#genGlow)"
-        animate={animate ? { scale: [1, 1.08, 1] } : undefined}
-        transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-      >
-        <circle cx="55" cy="55" r="35" fill="#7C3AED" />
-        <circle
-          cx="55"
-          cy="55"
-          r="30"
-          fill="none"
-          stroke="white"
-          strokeWidth="2"
-          strokeOpacity="0.3"
-        />
+      {/* ============ SECTION 5: Sex Determination & Chromosomes ============ */}
+      <g filter="url(#genCardShadow)">
+        <rect x="30" y="375" width="255" height="255" rx="16" fill="white" fillOpacity="0.95" />
+        <rect x="30" y="375" width="255" height="30" rx="16" fill="#EC4899" />
+        <rect x="30" y="390" width="255" height="15" fill="#EC4899" />
         <text
-          x="55"
-          y="50"
-          fontSize="16"
-          fill="#FFFFFF"
+          x="157"
+          y="395"
+          fontSize="12"
+          fill="white"
           textAnchor="middle"
           fontWeight="bold"
           fontFamily="system-ui, sans-serif"
         >
-          16-18
+          Sex Determination (XX-XY System)
+        </text>
+
+        {/* Sex chromosomes diagram */}
+        <g>
+          {/* Female XX */}
+          <motion.g
+            animate={animate ? { y: [-3, 3, -3] } : undefined}
+            transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+          >
+            <text x="85" y="425" fontSize="10" fill="#BE185D" textAnchor="middle" fontWeight="bold">
+              Female (XX)
+            </text>
+            <path
+              d="M55 440 L80 500 M80 440 L55 500"
+              stroke="url(#xChromoGrad)"
+              strokeWidth="8"
+              strokeLinecap="round"
+            />
+            <circle cx="67" cy="470" r="5" fill="#FDF2F8" stroke="#EC4899" strokeWidth="2" />
+            <path
+              d="M95 440 L120 500 M120 440 L95 500"
+              stroke="url(#xChromoGrad)"
+              strokeWidth="8"
+              strokeLinecap="round"
+            />
+            <circle cx="107" cy="470" r="5" fill="#FDF2F8" stroke="#EC4899" strokeWidth="2" />
+            <text x="85" y="520" fontSize="9" fill="#9D174D" textAnchor="middle">
+              44 + XX
+            </text>
+          </motion.g>
+
+          {/* Male XY */}
+          <motion.g
+            animate={animate ? { y: [3, -3, 3] } : undefined}
+            transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+          >
+            <text
+              x="200"
+              y="425"
+              fontSize="10"
+              fill="#1E40AF"
+              textAnchor="middle"
+              fontWeight="bold"
+            >
+              Male (XY)
+            </text>
+            <path
+              d="M165 440 L190 500 M190 440 L165 500"
+              stroke="url(#xChromoGrad)"
+              strokeWidth="8"
+              strokeLinecap="round"
+            />
+            <circle cx="177" cy="470" r="5" fill="#FDF2F8" stroke="#EC4899" strokeWidth="2" />
+            <path
+              d="M215 440 L215 475"
+              stroke="url(#yChromoGrad)"
+              strokeWidth="8"
+              strokeLinecap="round"
+            />
+            <path
+              d="M200 490 L215 475 L230 490"
+              stroke="url(#yChromoGrad)"
+              strokeWidth="6"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <text x="200" y="520" fontSize="9" fill="#1E3A8A" textAnchor="middle">
+              44 + XY
+            </text>
+          </motion.g>
+        </g>
+
+        {/* Gametes arrow */}
+        <motion.g
+          animate={animate ? { opacity: [0.5, 1, 0.5] } : undefined}
+          transition={{ duration: 2, repeat: Infinity }}
+        >
+          <line
+            x1="85"
+            y1="535"
+            x2="85"
+            y2="555"
+            stroke="#EC4899"
+            strokeWidth="2"
+            markerEnd="url(#arrow)"
+          />
+          <text x="85" y="570" fontSize="8" fill="#BE185D" textAnchor="middle">
+            All X
+          </text>
+
+          <line x1="200" y1="535" x2="200" y2="555" stroke="#3B82F6" strokeWidth="2" />
+          <text x="200" y="570" fontSize="8" fill="#1E40AF" textAnchor="middle">
+            X or Y
+          </text>
+        </motion.g>
+
+        {/* Key point */}
+        <rect x="50" y="590" width="215" height="30" rx="8" fill="#FDF2F8" />
+        <text
+          x="157"
+          y="605"
+          fontSize="9"
+          fill="#BE185D"
+          textAnchor="middle"
+          fontWeight="500"
+          fontFamily="system-ui, sans-serif"
+        >
+          Father determines sex of offspring
         </text>
         <text
-          x="55"
-          y="68"
-          fontSize="10"
-          fill="#FFFFFF"
+          x="157"
+          y="616"
+          fontSize="8"
+          fill="#9D174D"
           textAnchor="middle"
           fontFamily="system-ui, sans-serif"
         >
-          Questions
+          (by contributing X or Y sperm)
         </text>
-      </motion.g>
+      </g>
+
+      {/* ============ SECTION 6: Sex-Linked Inheritance ============ */}
+      <g filter="url(#genCardShadow)">
+        <rect x="300" y="270" width="280" height="150" rx="16" fill="white" fillOpacity="0.95" />
+        <rect x="300" y="270" width="280" height="30" rx="16" fill="#F59E0B" />
+        <rect x="300" y="285" width="280" height="15" fill="#F59E0B" />
+        <text
+          x="440"
+          y="290"
+          fontSize="12"
+          fill="white"
+          textAnchor="middle"
+          fontWeight="bold"
+          fontFamily="system-ui, sans-serif"
+        >
+          X-Linked Inheritance (Color Blindness)
+        </text>
+
+        {/* Criss-cross inheritance diagram */}
+        <g>
+          {/* Carrier mother */}
+          <circle cx="350" cy="330" r="18" fill="#FDF2F8" stroke="#EC4899" strokeWidth="2" />
+          <text x="350" y="327" fontSize="8" fill="#BE185D" textAnchor="middle" fontWeight="bold">
+            X
+          </text>
+          <text x="350" y="338" fontSize="7" fill="#BE185D" textAnchor="middle">
+            Carrier
+          </text>
+          <text x="350" y="360" fontSize="8" fill="#6B7280" textAnchor="middle">
+            XᶜX
+          </text>
+
+          {/* Normal father */}
+          <rect
+            x="498"
+            y="312"
+            width="36"
+            height="36"
+            rx="4"
+            fill="#DBEAFE"
+            stroke="#3B82F6"
+            strokeWidth="2"
+          />
+          <text x="516" y="327" fontSize="8" fill="#1E40AF" textAnchor="middle" fontWeight="bold">
+            XY
+          </text>
+          <text x="516" y="338" fontSize="7" fill="#1E40AF" textAnchor="middle">
+            Normal
+          </text>
+          <text x="516" y="360" fontSize="8" fill="#6B7280" textAnchor="middle">
+            XY
+          </text>
+
+          {/* Arrows */}
+          <motion.path
+            d="M368 330 L420 370"
+            stroke="#EC4899"
+            strokeWidth="2"
+            strokeDasharray="5,3"
+            fill="none"
+            animate={animate ? { strokeDashoffset: [0, -16] } : undefined}
+            transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
+          />
+          <motion.path
+            d="M498 330 L450 370"
+            stroke="#3B82F6"
+            strokeWidth="2"
+            strokeDasharray="5,3"
+            fill="none"
+            animate={animate ? { strokeDashoffset: [0, -16] } : undefined}
+            transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
+          />
+
+          {/* Offspring */}
+          <circle cx="390" y="395" r="14" fill="#FDF2F8" stroke="#EC4899" strokeWidth="1.5" />
+          <text x="390" y="399" fontSize="7" fill="#BE185D" textAnchor="middle">
+            XX
+          </text>
+
+          <circle
+            cx="420"
+            y="395"
+            r="14"
+            fill="#FCE7F3"
+            stroke="#EC4899"
+            strokeWidth="1.5"
+            strokeDasharray="3,2"
+          />
+          <text x="420" y="399" fontSize="7" fill="#BE185D" textAnchor="middle">
+            XᶜX
+          </text>
+
+          <rect
+            x="438"
+            y="381"
+            width="28"
+            height="28"
+            rx="3"
+            fill="#DBEAFE"
+            stroke="#3B82F6"
+            strokeWidth="1.5"
+          />
+          <text x="452" y="399" fontSize="7" fill="#1E40AF" textAnchor="middle">
+            XY
+          </text>
+
+          <rect
+            x="472"
+            y="381"
+            width="28"
+            height="28"
+            rx="3"
+            fill="#FEF2F2"
+            stroke="#EF4444"
+            strokeWidth="2"
+          />
+          <text x="486" y="395" fontSize="6" fill="#DC2626" textAnchor="middle" fontWeight="bold">
+            XᶜY
+          </text>
+          <text x="486" y="404" fontSize="5" fill="#DC2626" textAnchor="middle">
+            CB
+          </text>
+        </g>
+
+        {/* Legend */}
+        <text
+          x="440"
+          y="415"
+          fontSize="7"
+          fill="#6B7280"
+          textAnchor="middle"
+          fontFamily="system-ui, sans-serif"
+        >
+          Criss-cross: Father→Daughter→Grandson
+        </text>
+      </g>
+
+      {/* ============ SECTION 7: Chromosomal Disorders ============ */}
+      <g filter="url(#genCardShadow)">
+        <rect x="300" y="435" width="280" height="195" rx="16" fill="white" fillOpacity="0.95" />
+        <rect x="300" y="435" width="280" height="30" rx="16" fill="#EF4444" />
+        <rect x="300" y="450" width="280" height="15" fill="#EF4444" />
+        <text
+          x="440"
+          y="455"
+          fontSize="12"
+          fill="white"
+          textAnchor="middle"
+          fontWeight="bold"
+          fontFamily="system-ui, sans-serif"
+        >
+          Chromosomal Disorders
+        </text>
+
+        {/* Down Syndrome */}
+        <motion.g
+          animate={animate ? { x: [-2, 2, -2] } : undefined}
+          transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+        >
+          <rect
+            x="315"
+            y="475"
+            width="120"
+            height="45"
+            rx="8"
+            fill="#FEF2F2"
+            stroke="#FECACA"
+            strokeWidth="1"
+          />
+          <text x="375" y="490" fontSize="9" fill="#DC2626" textAnchor="middle" fontWeight="bold">
+            Down Syndrome
+          </text>
+          <text x="375" y="503" fontSize="10" fill="#7F1D1D" textAnchor="middle" fontWeight="bold">
+            47, +21
+          </text>
+          <text x="375" y="515" fontSize="7" fill="#991B1B" textAnchor="middle">
+            Trisomy 21
+          </text>
+        </motion.g>
+
+        {/* Turner Syndrome */}
+        <motion.g
+          animate={animate ? { x: [2, -2, 2] } : undefined}
+          transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
+        >
+          <rect
+            x="445"
+            y="475"
+            width="120"
+            height="45"
+            rx="8"
+            fill="#FCE7F3"
+            stroke="#FBCFE8"
+            strokeWidth="1"
+          />
+          <text x="505" y="490" fontSize="9" fill="#BE185D" textAnchor="middle" fontWeight="bold">
+            Turner Syndrome
+          </text>
+          <text x="505" y="503" fontSize="10" fill="#831843" textAnchor="middle" fontWeight="bold">
+            45, X
+          </text>
+          <text x="505" y="515" fontSize="7" fill="#9D174D" textAnchor="middle">
+            Female, Monosomy X
+          </text>
+        </motion.g>
+
+        {/* Klinefelter Syndrome */}
+        <motion.g
+          animate={animate ? { x: [-2, 2, -2] } : undefined}
+          transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
+        >
+          <rect
+            x="315"
+            y="530"
+            width="120"
+            height="45"
+            rx="8"
+            fill="#DBEAFE"
+            stroke="#BFDBFE"
+            strokeWidth="1"
+          />
+          <text x="375" y="545" fontSize="9" fill="#1E40AF" textAnchor="middle" fontWeight="bold">
+            Klinefelter
+          </text>
+          <text x="375" y="558" fontSize="10" fill="#1E3A8A" textAnchor="middle" fontWeight="bold">
+            47, XXY
+          </text>
+          <text x="375" y="570" fontSize="7" fill="#1D4ED8" textAnchor="middle">
+            Male, sterile
+          </text>
+        </motion.g>
+
+        {/* Super Female */}
+        <motion.g
+          animate={animate ? { x: [2, -2, 2] } : undefined}
+          transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 1.5 }}
+        >
+          <rect
+            x="445"
+            y="530"
+            width="120"
+            height="45"
+            rx="8"
+            fill="#F3E8FF"
+            stroke="#E9D5FF"
+            strokeWidth="1"
+          />
+          <text x="505" y="545" fontSize="9" fill="#7C3AED" textAnchor="middle" fontWeight="bold">
+            Super Female
+          </text>
+          <text x="505" y="558" fontSize="10" fill="#5B21B6" textAnchor="middle" fontWeight="bold">
+            47, XXX
+          </text>
+          <text x="505" y="570" fontSize="7" fill="#6D28D9" textAnchor="middle">
+            Female, usually normal
+          </text>
+        </motion.g>
+
+        {/* Cause */}
+        <rect x="330" y="585" width="220" height="20" rx="6" fill="#FEE2E2" />
+        <text
+          x="440"
+          y="599"
+          fontSize="8"
+          fill="#B91C1C"
+          textAnchor="middle"
+          fontWeight="500"
+          fontFamily="system-ui, sans-serif"
+        >
+          Cause: Non-disjunction during meiosis
+        </text>
+        <text
+          x="440"
+          y="620"
+          fontSize="7"
+          fill="#6B7280"
+          textAnchor="middle"
+          fontFamily="system-ui, sans-serif"
+        >
+          Risk increases with maternal age
+        </text>
+      </g>
+
+      {/* ============ SECTION 8: Extensions of Mendelian Genetics ============ */}
+      <g filter="url(#genCardShadow)">
+        <rect x="595" y="270" width="280" height="150" rx="16" fill="white" fillOpacity="0.95" />
+        <rect x="595" y="270" width="280" height="30" rx="16" fill="#8B5CF6" />
+        <rect x="595" y="285" width="280" height="15" fill="#8B5CF6" />
+        <text
+          x="735"
+          y="290"
+          fontSize="12"
+          fill="white"
+          textAnchor="middle"
+          fontWeight="bold"
+          fontFamily="system-ui, sans-serif"
+        >
+          Extensions of Mendelian Genetics
+        </text>
+
+        {/* Incomplete Dominance */}
+        <g>
+          <rect x="610" y="310" width="125" height="50" rx="8" fill="#FCE7F3" />
+          <text x="672" y="325" fontSize="9" fill="#BE185D" textAnchor="middle" fontWeight="bold">
+            Incomplete Dominance
+          </text>
+          <circle cx="630" cy="345" r="8" fill="#DC2626" />
+          <text x="652" y="348" fontSize="10" fill="#374151">
+            +
+          </text>
+          <circle cx="672" cy="345" r="8" fill="white" stroke="#9CA3AF" strokeWidth="1" />
+          <text x="692" y="348" fontSize="10" fill="#374151">
+            =
+          </text>
+          <circle cx="712" cy="345" r="8" fill="#F472B6" />
+          <text x="672" y="358" fontSize="7" fill="#9D174D" textAnchor="middle">
+            1:2:1 (Snapdragon)
+          </text>
+        </g>
+
+        {/* Co-dominance */}
+        <g>
+          <rect x="745" y="310" width="120" height="50" rx="8" fill="#FEF3C7" />
+          <text x="805" y="325" fontSize="9" fill="#B45309" textAnchor="middle" fontWeight="bold">
+            Co-dominance
+          </text>
+          <text x="805" y="345" fontSize="10" fill="#92400E" textAnchor="middle" fontWeight="bold">
+            ABO Blood Groups
+          </text>
+          <text x="805" y="358" fontSize="7" fill="#B45309" textAnchor="middle">
+            Iᴬ Iᴮ = AB (both express)
+          </text>
+        </g>
+
+        {/* Multiple Alleles & Pleiotropy */}
+        <g>
+          <rect x="610" y="368" width="85" height="42" rx="6" fill="#ECFDF5" />
+          <text x="652" y="383" fontSize="8" fill="#047857" textAnchor="middle" fontWeight="bold">
+            Multiple Alleles
+          </text>
+          <text x="652" y="396" fontSize="7" fill="#059669" textAnchor="middle">
+            ABO: Iᴬ, Iᴮ, i
+          </text>
+          <text x="652" y="406" fontSize="6" fill="#6B7280" textAnchor="middle">
+            3 alleles, 6 genotypes
+          </text>
+        </g>
+
+        <g>
+          <rect x="705" y="368" width="75" height="42" rx="6" fill="#EDE9FE" />
+          <text x="742" y="383" fontSize="8" fill="#6D28D9" textAnchor="middle" fontWeight="bold">
+            Pleiotropy
+          </text>
+          <text x="742" y="396" fontSize="7" fill="#7C3AED" textAnchor="middle">
+            1 gene →
+          </text>
+          <text x="742" y="406" fontSize="6" fill="#6B7280" textAnchor="middle">
+            multiple effects
+          </text>
+        </g>
+
+        <g>
+          <rect x="790" y="368" width="75" height="42" rx="6" fill="#DBEAFE" />
+          <text x="827" y="383" fontSize="8" fill="#1E40AF" textAnchor="middle" fontWeight="bold">
+            Epistasis
+          </text>
+          <text x="827" y="396" fontSize="7" fill="#2563EB" textAnchor="middle">
+            Gene masks
+          </text>
+          <text x="827" y="406" fontSize="6" fill="#6B7280" textAnchor="middle">
+            another (9:3:4)
+          </text>
+        </g>
+      </g>
+
+      {/* ============ SECTION 9: Mendelian Disorders ============ */}
+      <g filter="url(#genCardShadow)">
+        <rect x="595" y="435" width="280" height="195" rx="16" fill="white" fillOpacity="0.95" />
+        <rect x="595" y="435" width="280" height="30" rx="16" fill="#F97316" />
+        <rect x="595" y="450" width="280" height="15" fill="#F97316" />
+        <text
+          x="735"
+          y="455"
+          fontSize="12"
+          fill="white"
+          textAnchor="middle"
+          fontWeight="bold"
+          fontFamily="system-ui, sans-serif"
+        >
+          Mendelian Disorders (Single Gene)
+        </text>
+
+        {/* Sickle Cell Anemia - detailed */}
+        <motion.g
+          animate={animate ? { scale: [1, 1.02, 1] } : undefined}
+          transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+        >
+          <rect
+            x="610"
+            y="475"
+            width="250"
+            height="55"
+            rx="8"
+            fill="#FEF2F2"
+            stroke="#FECACA"
+            strokeWidth="1"
+          />
+          <text x="735" y="490" fontSize="10" fill="#DC2626" textAnchor="middle" fontWeight="bold">
+            Sickle Cell Anemia
+          </text>
+          <text x="735" y="505" fontSize="8" fill="#7F1D1D" textAnchor="middle">
+            GAG→GUG (Glu→Val at position 6)
+          </text>
+          <text x="735" y="518" fontSize="7" fill="#991B1B" textAnchor="middle">
+            Autosomal recessive • Malaria resistance in carriers (HbA HbS)
+          </text>
+
+          {/* Normal vs Sickle RBC */}
+          <ellipse cx="640" cy="505" rx="12" ry="8" fill="#EF4444" opacity="0.6" />
+          <text x="660" y="508" fontSize="8" fill="#7F1D1D">
+            →
+          </text>
+          <path d="M675 500 Q680 505 675 510 Q685 505 675 500" fill="#DC2626" />
+        </motion.g>
+
+        {/* Other disorders list */}
+        <g>
+          <rect x="610" y="540" width="120" height="35" rx="6" fill="#FFFBEB" />
+          <text x="670" y="555" fontSize="8" fill="#B45309" textAnchor="middle" fontWeight="bold">
+            Autosomal Dominant
+          </text>
+          <text x="670" y="568" fontSize="7" fill="#92400E" textAnchor="middle">
+            Huntington's, Polydactyly
+          </text>
+        </g>
+
+        <g>
+          <rect x="740" y="540" width="120" height="35" rx="6" fill="#F0FDF4" />
+          <text x="800" y="555" fontSize="8" fill="#047857" textAnchor="middle" fontWeight="bold">
+            Autosomal Recessive
+          </text>
+          <text x="800" y="568" fontSize="7" fill="#059669" textAnchor="middle">
+            PKU, Thalassemia, CF
+          </text>
+        </g>
+
+        {/* Linkage info */}
+        <rect x="610" y="585" width="250" height="40" rx="8" fill="#F3E8FF" />
+        <text x="735" y="600" fontSize="9" fill="#6D28D9" textAnchor="middle" fontWeight="bold">
+          Linkage & Recombination
+        </text>
+        <text x="735" y="613" fontSize="7" fill="#7C3AED" textAnchor="middle">
+          Genes on same chromosome don't assort independently
+        </text>
+        <text x="735" y="623" fontSize="7" fill="#6B7280" textAnchor="middle">
+          1% RF = 1 centiMorgan (cM) = 1 map unit
+        </text>
+      </g>
+
+      {/* Key Facts Panel */}
+      <g filter="url(#genCardShadow)">
+        <rect x="30" y="635" width="840" height="12" rx="6" fill="#7C3AED" />
+        <text
+          x="450"
+          y="644"
+          fontSize="8"
+          fill="white"
+          textAnchor="middle"
+          fontWeight="500"
+          fontFamily="system-ui, sans-serif"
+        >
+          Key: Test Cross (Tt×tt) reveals genotype • Monohybrid 3:1 • Dihybrid 9:3:3:1 • Epistasis
+          9:3:4 or 12:3:1 • Incomplete Dominance 1:2:1
+        </text>
+      </g>
     </Wrapper>
   )
 }
