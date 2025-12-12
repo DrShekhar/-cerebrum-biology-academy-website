@@ -833,7 +833,7 @@ export function MistakesToAvoidIllustration({ className = '', animate = true }: 
     ? {
         initial: { opacity: 0, scale: 0.95 },
         animate: { opacity: 1, scale: 1 },
-        transition: { duration: 0.8, ease: 'easeOut' },
+        transition: { duration: 0.8, ease: 'easeOut' as const },
       }
     : {}
 
@@ -1474,7 +1474,7 @@ export function NCERTReadingIllustration({ className = '', animate = true }: Ill
     ? {
         initial: { opacity: 0, scale: 0.95 },
         animate: { opacity: 1, scale: 1 },
-        transition: { duration: 0.8, ease: 'easeOut' },
+        transition: { duration: 0.8, ease: 'easeOut' as const },
       }
     : {}
 
@@ -2010,7 +2010,7 @@ export function NEET2026GuideIllustration({ className = '', animate = true }: Il
     ? {
         initial: { opacity: 0, scale: 0.95 },
         animate: { opacity: 1, scale: 1 },
-        transition: { duration: 0.8, ease: 'easeOut' },
+        transition: { duration: 0.8, ease: 'easeOut' as const },
       }
     : {}
 
@@ -2495,7 +2495,7 @@ export function ToppersSecretsIllustration({ className = '', animate = true }: I
     ? {
         initial: { opacity: 0, scale: 0.95 },
         animate: { opacity: 1, scale: 1 },
-        transition: { duration: 0.8, ease: 'easeOut' },
+        transition: { duration: 0.8, ease: 'easeOut' as const },
       }
     : {}
 
@@ -2948,7 +2948,7 @@ export function ChapterWeightageIllustration({
     ? {
         initial: { opacity: 0, scale: 0.95 },
         animate: { opacity: 1, scale: 1 },
-        transition: { duration: 0.8, ease: 'easeOut' },
+        transition: { duration: 0.8, ease: 'easeOut' as const },
       }
     : {}
 
@@ -3179,7 +3179,7 @@ export function ChapterWeightageIllustration({
                 fill={chapter.color}
                 initial={animate ? { width: 0 } : undefined}
                 animate={animate ? { width: (chapter.questions / 18) * 130 } : undefined}
-                transition={{ delay: 0.5 + i * 0.1, duration: 0.6, ease: 'easeOut' }}
+                transition={{ delay: 0.5 + i * 0.1, duration: 0.6, ease: 'easeOut' as const }}
               />
 
               {/* Question count */}
@@ -8064,7 +8064,7 @@ export function PhotosynthesisVsRespirationIllustration({
     ? {
         initial: { opacity: 0, scale: 0.95 },
         animate: { opacity: 1, scale: 1 },
-        transition: { duration: 0.8, ease: 'easeOut' },
+        transition: { duration: 0.8, ease: 'easeOut' as const },
       }
     : {}
 
@@ -10465,7 +10465,7 @@ export function NEET180StrategyIllustration({ className = '', animate = true }: 
     ? {
         initial: { opacity: 0, scale: 0.95 },
         animate: { opacity: 1, scale: 1 },
-        transition: { duration: 0.8, ease: 'easeOut' },
+        transition: { duration: 0.8, ease: 'easeOut' as const },
       }
     : {}
 
@@ -10569,7 +10569,7 @@ export function NEET180StrategyIllustration({ className = '', animate = true }: 
       {/* Arrow hitting target */}
       <motion.g
         animate={animate ? { x: [-30, 0], opacity: [0, 1] } : undefined}
-        transition={{ duration: 0.8, repeat: Infinity, repeatDelay: 2.5, ease: 'easeOut' }}
+        transition={{ duration: 0.8, repeat: Infinity, repeatDelay: 2.5, ease: 'easeOut' as const }}
       >
         <line
           x1="20"
@@ -13077,7 +13077,7 @@ export function BiomoleculesIllustration({ className = '', animate = true }: Ill
     ? {
         initial: { opacity: 0, scale: 0.95 },
         animate: { opacity: 1, scale: 1 },
-        transition: { duration: 0.8, ease: 'easeOut' },
+        transition: { duration: 0.8, ease: 'easeOut' as const },
       }
     : {}
 
@@ -13600,7 +13600,7 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
     ? {
         initial: { opacity: 0, scale: 0.95 },
         animate: { opacity: 1, scale: 1 },
-        transition: { duration: 0.8, ease: 'easeOut' },
+        transition: { duration: 0.8, ease: 'easeOut' as const },
       }
     : {}
 
@@ -14432,7 +14432,7 @@ export function HumanDigestionIllustration({ className = '', animate = true }: I
     ? {
         initial: { opacity: 0, scale: 0.95 },
         animate: { opacity: 1, scale: 1 },
-        transition: { duration: 0.8, ease: 'easeOut' },
+        transition: { duration: 0.8, ease: 'easeOut' as const },
       }
     : {}
 
@@ -14970,7 +14970,7 @@ export function RespirationIllustration({ className = '', animate = true }: Illu
     ? {
         initial: { opacity: 0, scale: 0.95 },
         animate: { opacity: 1, scale: 1 },
-        transition: { duration: 0.8, ease: 'easeOut' },
+        transition: { duration: 0.8, ease: 'easeOut' as const },
       }
     : {}
 
@@ -15694,7 +15694,7 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
     ? {
         initial: { opacity: 0, scale: 0.95 },
         animate: { opacity: 1, scale: 1 },
-        transition: { duration: 0.8, ease: 'easeOut' },
+        transition: { duration: 0.8, ease: 'easeOut' as const },
       }
     : {}
 
@@ -16477,7 +16477,7 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
     ? {
         initial: { opacity: 0, scale: 0.95 },
         animate: { opacity: 1, scale: 1 },
-        transition: { duration: 0.8, ease: 'easeOut' },
+        transition: { duration: 0.8, ease: 'easeOut' as const },
       }
     : {}
 
@@ -17267,7 +17267,7 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
     ? {
         initial: { opacity: 0, scale: 0.95 },
         animate: { opacity: 1, scale: 1 },
-        transition: { duration: 0.8, ease: 'easeOut' },
+        transition: { duration: 0.8, ease: 'easeOut' as const },
       }
     : {}
 
