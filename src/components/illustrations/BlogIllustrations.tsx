@@ -16239,7 +16239,7 @@ export function HumanDigestionIllustration({ className = '', animate = true }: I
 
   return (
     <Wrapper
-      viewBox="0 0 520 440"
+      viewBox="0 0 700 520"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
@@ -16337,20 +16337,20 @@ export function HumanDigestionIllustration({ className = '', animate = true }: I
       </defs>
 
       {/* Background */}
-      <rect width="520" height="440" fill="url(#digestBgGrad)" />
+      <rect width="700" height="520" fill="url(#digestBgGrad)" rx="16" />
 
       {/* Decorative background elements */}
-      <circle cx="60" cy="60" r="100" fill="#F97316" opacity="0.05" />
-      <circle cx="460" cy="380" r="120" fill="#8B5CF6" opacity="0.05" />
-      <circle cx="260" cy="220" r="200" fill="#FBBF24" opacity="0.03" />
+      <circle cx="80" cy="70" r="130" fill="#F97316" opacity="0.05" />
+      <circle cx="620" cy="450" r="150" fill="#8B5CF6" opacity="0.05" />
+      <circle cx="350" cy="260" r="260" fill="#FBBF24" opacity="0.03" />
 
       {/* Title */}
       <motion.text
-        x="260"
-        y="26"
+        x="350"
+        y="30"
         textAnchor="middle"
         fill="#1E293B"
-        fontSize="15"
+        fontSize="18"
         fontWeight="700"
         initial={animate ? { opacity: 0, y: -10 } : undefined}
         animate={animate ? { opacity: 1, y: 0 } : undefined}
@@ -16366,37 +16366,37 @@ export function HumanDigestionIllustration({ className = '', animate = true }: I
         transition={{ delay: 0.2, duration: 0.6 }}
       >
         {/* Mouth/Buccal Cavity */}
-        <g transform="translate(40, 45)">
+        <g transform="translate(50, 55)">
           <ellipse
-            cx="45"
-            cy="25"
-            rx="40"
-            ry="22"
+            cx="55"
+            cy="30"
+            rx="50"
+            ry="27"
             fill="url(#mouthGrad)"
             filter="url(#organShadow)"
           />
           {/* Teeth */}
-          <rect x="15" y="18" width="6" height="8" rx="1" fill="white" />
-          <rect x="24" y="18" width="6" height="8" rx="1" fill="white" />
-          <rect x="33" y="18" width="6" height="8" rx="1" fill="white" />
-          <rect x="51" y="18" width="6" height="8" rx="1" fill="white" />
-          <rect x="60" y="18" width="6" height="8" rx="1" fill="white" />
-          <rect x="69" y="18" width="6" height="8" rx="1" fill="white" />
+          <rect x="18" y="22" width="7" height="10" rx="1" fill="white" />
+          <rect x="29" y="22" width="7" height="10" rx="1" fill="white" />
+          <rect x="40" y="22" width="7" height="10" rx="1" fill="white" />
+          <rect x="62" y="22" width="7" height="10" rx="1" fill="white" />
+          <rect x="73" y="22" width="7" height="10" rx="1" fill="white" />
+          <rect x="84" y="22" width="7" height="10" rx="1" fill="white" />
           {/* Tongue */}
-          <ellipse cx="45" cy="32" rx="20" ry="10" fill="#E11D48" opacity="0.7" />
+          <ellipse cx="55" cy="40" rx="25" ry="12" fill="#E11D48" opacity="0.7" />
           {/* Salivary gland indicator */}
           <motion.circle
-            cx="12"
-            cy="25"
-            r="6"
+            cx="15"
+            cy="30"
+            r="7"
             fill="url(#enzymeBlue)"
             animate={animate ? { scale: [1, 1.2, 1] } : undefined}
             transition={{ duration: 2, repeat: Infinity }}
           />
-          <text x="45" y="58" textAnchor="middle" fill="#64748B" fontSize="8" fontWeight="600">
+          <text x="55" y="72" textAnchor="middle" fill="#64748B" fontSize="9" fontWeight="600">
             Mouth
           </text>
-          <text x="45" y="67" textAnchor="middle" fill="#94A3B8" fontSize="6">
+          <text x="55" y="83" textAnchor="middle" fill="#94A3B8" fontSize="7">
             Salivary Amylase
           </text>
         </g>
@@ -16407,39 +16407,39 @@ export function HumanDigestionIllustration({ className = '', animate = true }: I
           transition={{ duration: 1.5, repeat: Infinity }}
         >
           <path
-            d="M85 115 Q85 135 90 155 Q95 175 90 195"
+            d="M105 145 Q105 170 112 195 Q118 220 112 245"
             stroke="url(#esophagusGrad)"
-            strokeWidth="14"
+            strokeWidth="17"
             fill="none"
             strokeLinecap="round"
             filter="url(#organShadow)"
           />
           {/* Peristalsis wave indicator */}
           <motion.circle
-            cx="87"
-            cy="140"
-            r="4"
+            cx="108"
+            cy="175"
+            r="5"
             fill="#FBBF24"
-            animate={animate ? { cy: [130, 180, 130] } : undefined}
+            animate={animate ? { cy: [165, 225, 165] } : undefined}
             transition={{ duration: 2, repeat: Infinity }}
           />
         </motion.g>
-        <text x="115" y="155" fill="#64748B" fontSize="7" fontWeight="500">
+        <text x="145" y="195" fill="#64748B" fontSize="8" fontWeight="500">
           Esophagus
         </text>
-        <text x="115" y="163" fill="#94A3B8" fontSize="5">
+        <text x="145" y="206" fill="#94A3B8" fontSize="6">
           (Peristalsis)
         </text>
 
         {/* Stomach - J-shaped */}
-        <g transform="translate(50, 195)">
+        <g transform="translate(60, 245)">
           <path
-            d="M40 0 Q20 0 15 30 Q10 60 25 90 Q40 115 70 110 Q100 105 110 75 Q115 50 100 30 Q85 10 60 5 Q50 2 40 0 Z"
+            d="M50 0 Q25 0 18 38 Q12 75 31 113 Q50 143 87 138 Q125 131 137 93 Q143 62 125 38 Q106 12 75 6 Q62 2 50 0 Z"
             fill="url(#stomachGrad)"
             filter="url(#organShadow)"
           />
           <path
-            d="M45 15 Q30 18 28 40 Q26 60 38 80 Q50 95 70 92 Q88 89 95 65 Q100 45 88 30 Q75 18 55 15 Q50 14 45 15 Z"
+            d="M56 18 Q37 22 35 50 Q32 75 47 100 Q62 118 87 115 Q110 111 118 81 Q125 56 110 38 Q94 22 68 18 Q62 17 56 18 Z"
             fill="url(#stomachInnerGrad)"
           />
           {/* Gastric glands */}
@@ -16447,50 +16447,50 @@ export function HumanDigestionIllustration({ className = '', animate = true }: I
             animate={animate ? { opacity: [0.6, 1, 0.6] } : undefined}
             transition={{ duration: 2, repeat: Infinity }}
           >
-            <circle cx="45" cy="45" r="3" fill="#DC2626" />
-            <circle cx="60" cy="55" r="3" fill="#DC2626" />
-            <circle cx="75" cy="50" r="3" fill="#DC2626" />
+            <circle cx="56" cy="56" r="4" fill="#DC2626" />
+            <circle cx="75" cy="68" r="4" fill="#DC2626" />
+            <circle cx="93" cy="62" r="4" fill="#DC2626" />
           </motion.g>
           {/* Labels */}
-          <text x="60" y="130" textAnchor="middle" fill="#64748B" fontSize="8" fontWeight="600">
+          <text x="75" y="160" textAnchor="middle" fill="#64748B" fontSize="9" fontWeight="600">
             Stomach
           </text>
-          <text x="60" y="139" textAnchor="middle" fill="#94A3B8" fontSize="5">
+          <text x="75" y="172" textAnchor="middle" fill="#94A3B8" fontSize="6">
             HCl + Pepsin
           </text>
         </g>
 
         {/* Small Intestine - Coiled */}
-        <g transform="translate(80, 340)">
+        <g transform="translate(100, 420)">
           <motion.path
-            d="M60 0 Q30 5 25 25 Q20 45 40 50 Q60 55 80 45 Q100 35 95 55 Q90 75 65 80 Q40 85 35 65"
+            d="M75 0 Q37 6 31 31 Q25 56 50 62 Q75 68 100 56 Q125 43 118 68 Q112 93 81 100 Q50 106 43 81"
             stroke="url(#smallIntestineGrad)"
-            strokeWidth="12"
+            strokeWidth="15"
             fill="none"
             strokeLinecap="round"
             filter="url(#organShadow)"
             animate={animate ? { pathLength: [0.95, 1, 0.95] } : undefined}
             transition={{ duration: 3, repeat: Infinity }}
           />
-          <text x="60" y="98" textAnchor="middle" fill="#64748B" fontSize="7" fontWeight="600">
+          <text x="75" y="122" textAnchor="middle" fill="#64748B" fontSize="8" fontWeight="600">
             Small Intestine
           </text>
-          <text x="60" y="106" textAnchor="middle" fill="#94A3B8" fontSize="5">
+          <text x="75" y="133" textAnchor="middle" fill="#94A3B8" fontSize="6">
             (~6m) Main Absorption
           </text>
         </g>
 
         {/* Large Intestine - Ascending, Transverse, Descending */}
-        <g transform="translate(15, 340)">
+        <g transform="translate(20, 420)">
           <path
-            d="M170 65 L170 30 Q170 10 150 10 L60 10 Q40 10 40 30 L40 75"
+            d="M210 80 L210 37 Q210 12 187 12 L75 12 Q50 12 50 37 L50 93"
             stroke="url(#largeIntestineGrad)"
-            strokeWidth="14"
+            strokeWidth="17"
             fill="none"
             strokeLinecap="round"
             filter="url(#organShadow)"
           />
-          <text x="105" y="-3" textAnchor="middle" fill="#64748B" fontSize="7" fontWeight="600">
+          <text x="130" y="-3" textAnchor="middle" fill="#64748B" fontSize="8" fontWeight="600">
             Large Intestine
           </text>
         </g>
@@ -16503,204 +16503,207 @@ export function HumanDigestionIllustration({ className = '', animate = true }: I
         transition={{ delay: 0.3, duration: 0.6 }}
       >
         {/* Liver */}
-        <g transform="translate(280, 50)">
+        <g transform="translate(360, 60)">
           <rect
             x="0"
             y="0"
-            width="200"
-            height="85"
-            rx="12"
+            width="320"
+            height="100"
+            rx="14"
             fill="url(#digestCardGrad)"
             filter="url(#digestShadow)"
           />
           <path
-            d="M25 25 Q15 30 15 50 Q15 65 30 70 Q50 75 90 70 Q120 65 130 50 Q140 35 130 25 Q115 15 80 15 Q45 15 25 25 Z"
+            d="M31 31 Q18 37 18 62 Q18 81 37 87 Q62 93 112 87 Q150 81 162 62 Q175 43 162 31 Q143 18 100 18 Q56 18 31 31 Z"
             fill="url(#liverGrad)"
             filter="url(#organShadow)"
           />
           {/* Gallbladder */}
           <ellipse
-            cx="115"
-            cy="55"
-            rx="12"
-            ry="18"
+            cx="143"
+            cy="68"
+            rx="15"
+            ry="22"
             fill="url(#gallbladderGrad)"
             filter="url(#organShadow)"
           />
           <motion.path
-            d="M115 73 L115 85"
+            d="M143 90 L143 105"
             stroke="#84CC16"
-            strokeWidth="3"
+            strokeWidth="3.5"
             animate={animate ? { opacity: [0.5, 1, 0.5] } : undefined}
             transition={{ duration: 1.5, repeat: Infinity }}
           />
-          <text x="155" y="30" fill="#78350F" fontSize="10" fontWeight="700">
+          <text x="195" y="35" fill="#78350F" fontSize="12" fontWeight="700">
             Liver
           </text>
-          <text x="155" y="42" fill="#92400E" fontSize="7">
+          <text x="195" y="50" fill="#92400E" fontSize="8">
             Produces Bile
           </text>
-          <text x="155" y="52" fill="#92400E" fontSize="6">
+          <text x="195" y="63" fill="#92400E" fontSize="7">
             (No enzymes)
           </text>
-          <text x="155" y="68" fill="#65A30D" fontSize="8" fontWeight="600">
+          <text x="195" y="82" fill="#65A30D" fontSize="9" fontWeight="600">
             Gallbladder
           </text>
-          <text x="155" y="78" fill="#84CC16" fontSize="6">
+          <text x="195" y="94" fill="#84CC16" fontSize="7">
             Stores Bile
           </text>
         </g>
 
         {/* Pancreas */}
-        <g transform="translate(280, 145)">
+        <g transform="translate(360, 175)">
           <rect
             x="0"
             y="0"
-            width="200"
-            height="85"
-            rx="12"
+            width="320"
+            height="100"
+            rx="14"
             fill="url(#digestCardGrad)"
             filter="url(#digestShadow)"
           />
           <path
-            d="M20 45 Q15 35 25 30 Q40 25 70 30 Q100 35 120 42 Q130 45 128 50 Q125 55 115 55 Q90 55 60 50 Q30 45 20 45 Z"
+            d="M25 55 Q18 43 31 37 Q50 31 87 37 Q125 43 150 52 Q162 55 160 62 Q156 68 143 68 Q112 68 75 62 Q37 55 25 55 Z"
             fill="url(#pancreasGrad)"
             filter="url(#organShadow)"
           />
           {/* Pancreatic duct */}
           <motion.path
-            d="M70 50 Q70 65 60 75"
+            d="M87 62 Q87 81 75 93"
             stroke="#F59E0B"
-            strokeWidth="2"
-            strokeDasharray="3"
+            strokeWidth="2.5"
+            strokeDasharray="4"
             animate={animate ? { opacity: [0.5, 1, 0.5] } : undefined}
             transition={{ duration: 1.5, repeat: Infinity }}
           />
-          <text x="145" y="25" fill="#92400E" fontSize="10" fontWeight="700">
+          <text x="185" y="28" fill="#92400E" fontSize="12" fontWeight="700">
             Pancreas
           </text>
-          <text x="145" y="38" fill="#B45309" fontSize="7">
+          <text x="185" y="44" fill="#B45309" fontSize="8">
             Exocrine:
           </text>
-          <text x="145" y="48" fill="#D97706" fontSize="6">
+          <text x="185" y="57" fill="#D97706" fontSize="7">
             Amylase, Lipase
           </text>
-          <text x="145" y="58" fill="#D97706" fontSize="6">
+          <text x="185" y="69" fill="#D97706" fontSize="7">
             Trypsin, Chymotrypsin
           </text>
-          <text x="145" y="70" fill="#B45309" fontSize="7">
+          <text x="185" y="83" fill="#B45309" fontSize="8">
             Endocrine:
           </text>
-          <text x="145" y="80" fill="#D97706" fontSize="6">
+          <text x="185" y="95" fill="#D97706" fontSize="7">
             Insulin, Glucagon
           </text>
         </g>
 
         {/* Villi Detail Box */}
-        <g transform="translate(280, 240)">
+        <g transform="translate(360, 290)">
           <rect
             x="0"
             y="0"
-            width="200"
-            height="95"
-            rx="12"
+            width="320"
+            height="115"
+            rx="14"
             fill="url(#digestCardGrad)"
             filter="url(#digestShadow)"
           />
-          <text x="100" y="18" textAnchor="middle" fill="#EA580C" fontSize="9" fontWeight="700">
+          <text x="160" y="22" textAnchor="middle" fill="#EA580C" fontSize="11" fontWeight="700">
             Intestinal Villi
           </text>
           {/* Villi illustration */}
-          <g transform="translate(15, 25)">
+          <g transform="translate(20, 32)">
             {/* Villus 1 */}
             <motion.g
               animate={animate ? { y: [0, -2, 0] } : undefined}
               transition={{ duration: 2, repeat: Infinity, delay: 0 }}
             >
-              <path d="M15 50 Q15 20 20 10 Q25 0 30 10 Q35 20 35 50 Z" fill="url(#villiGrad)" />
-              <line x1="25" y1="15" x2="25" y2="45" stroke="#DC2626" strokeWidth="1.5" />
+              <path d="M18 62 Q18 25 25 12 Q31 0 37 12 Q43 25 43 62 Z" fill="url(#villiGrad)" />
+              <line x1="31" y1="18" x2="31" y2="56" stroke="#DC2626" strokeWidth="2" />
             </motion.g>
             {/* Villus 2 */}
             <motion.g
               animate={animate ? { y: [0, -2, 0] } : undefined}
               transition={{ duration: 2, repeat: Infinity, delay: 0.3 }}
             >
-              <path d="M45 50 Q45 20 50 10 Q55 0 60 10 Q65 20 65 50 Z" fill="url(#villiGrad)" />
-              <line x1="55" y1="15" x2="55" y2="45" stroke="#DC2626" strokeWidth="1.5" />
+              <path d="M56 62 Q56 25 62 12 Q68 0 75 12 Q81 25 81 62 Z" fill="url(#villiGrad)" />
+              <line x1="68" y1="18" x2="68" y2="56" stroke="#DC2626" strokeWidth="2" />
             </motion.g>
             {/* Villus 3 */}
             <motion.g
               animate={animate ? { y: [0, -2, 0] } : undefined}
               transition={{ duration: 2, repeat: Infinity, delay: 0.6 }}
             >
-              <path d="M75 50 Q75 20 80 10 Q85 0 90 10 Q95 20 95 50 Z" fill="url(#villiGrad)" />
-              <line x1="85" y1="15" x2="85" y2="45" stroke="#DC2626" strokeWidth="1.5" />
+              <path
+                d="M93 62 Q93 25 100 12 Q106 0 112 12 Q118 25 118 62 Z"
+                fill="url(#villiGrad)"
+              />
+              <line x1="106" y1="18" x2="106" y2="56" stroke="#DC2626" strokeWidth="2" />
             </motion.g>
             {/* Base line */}
-            <rect x="5" y="50" width="100" height="5" rx="2" fill="#FDBA74" />
+            <rect x="6" y="62" width="125" height="6" rx="3" fill="#FDBA74" />
           </g>
-          <text x="125" y="42" fill="#64748B" fontSize="7">
+          <text x="170" y="52" fill="#64748B" fontSize="8">
             Blood Capillary
           </text>
-          <text x="125" y="52" fill="#DC2626" fontSize="6">
+          <text x="170" y="64" fill="#DC2626" fontSize="7">
             (Red line)
           </text>
-          <text x="125" y="66" fill="#64748B" fontSize="7">
+          <text x="170" y="80" fill="#64748B" fontSize="8">
             Microvilli increase
           </text>
-          <text x="125" y="76" fill="#64748B" fontSize="7">
+          <text x="170" y="92" fill="#64748B" fontSize="8">
             surface area 600x
           </text>
-          <text x="100" y="90" textAnchor="middle" fill="#94A3B8" fontSize="6">
+          <text x="160" y="108" textAnchor="middle" fill="#94A3B8" fontSize="7">
             Main site of absorption
           </text>
         </g>
 
         {/* Enzymes Summary */}
-        <g transform="translate(280, 345)">
+        <g transform="translate(360, 420)">
           <rect
             x="0"
             y="0"
-            width="200"
-            height="85"
-            rx="12"
+            width="320"
+            height="90"
+            rx="14"
             fill="url(#digestCardGrad)"
             filter="url(#digestShadow)"
           />
-          <text x="100" y="16" textAnchor="middle" fill="#1E293B" fontSize="9" fontWeight="700">
+          <text x="160" y="20" textAnchor="middle" fill="#1E293B" fontSize="11" fontWeight="700">
             Key Enzymes
           </text>
           {/* Enzyme list */}
-          <g transform="translate(10, 25)">
-            <circle cx="8" cy="6" r="4" fill="#3B82F6" />
-            <text x="18" y="9" fill="#1E293B" fontSize="7" fontWeight="500">
+          <g transform="translate(15, 32)">
+            <circle cx="10" cy="7" r="5" fill="#3B82F6" />
+            <text x="22" y="11" fill="#1E293B" fontSize="8" fontWeight="500">
               Amylase
             </text>
-            <text x="65" y="9" fill="#64748B" fontSize="6">
+            <text x="80" y="11" fill="#64748B" fontSize="7">
               Starch → Maltose
             </text>
 
-            <circle cx="8" cy="22" r="4" fill="#10B981" />
-            <text x="18" y="25" fill="#1E293B" fontSize="7" fontWeight="500">
+            <circle cx="10" cy="27" r="5" fill="#10B981" />
+            <text x="22" y="31" fill="#1E293B" fontSize="8" fontWeight="500">
               Pepsin
             </text>
-            <text x="55" y="25" fill="#64748B" fontSize="6">
+            <text x="68" y="31" fill="#64748B" fontSize="7">
               Proteins → Peptides
             </text>
 
-            <circle cx="8" cy="38" r="4" fill="#F59E0B" />
-            <text x="18" y="41" fill="#1E293B" fontSize="7" fontWeight="500">
+            <circle cx="160" cy="7" r="5" fill="#F59E0B" />
+            <text x="172" y="11" fill="#1E293B" fontSize="8" fontWeight="500">
               Lipase
             </text>
-            <text x="50" y="41" fill="#64748B" fontSize="6">
+            <text x="212" y="11" fill="#64748B" fontSize="7">
               Fats → Fatty Acids
             </text>
 
-            <circle cx="8" cy="54" r="4" fill="#8B5CF6" />
-            <text x="18" y="57" fill="#1E293B" fontSize="7" fontWeight="500">
+            <circle cx="160" cy="27" r="5" fill="#8B5CF6" />
+            <text x="172" y="31" fill="#1E293B" fontSize="8" fontWeight="500">
               Trypsin
             </text>
-            <text x="55" y="57" fill="#64748B" fontSize="6">
+            <text x="218" y="31" fill="#64748B" fontSize="7">
               Proteins → Amino Acids
             </text>
           </g>
@@ -16715,51 +16718,17 @@ export function HumanDigestionIllustration({ className = '', animate = true }: I
       >
         {/* Food flow indicator */}
         <motion.circle
-          cx="85"
-          cy="80"
-          r="5"
+          cx="105"
+          cy="100"
+          r="6"
           fill="#FBBF24"
           filter="url(#softGlow)"
-          animate={animate ? { cy: [80, 320, 80], opacity: [1, 0.8, 1] } : undefined}
+          animate={animate ? { cy: [100, 400, 100], opacity: [1, 0.8, 1] } : undefined}
           transition={{ duration: 6, repeat: Infinity }}
         />
       </motion.g>
 
-      {/* Bottom summary bar */}
-      <motion.g
-        initial={animate ? { opacity: 0, y: 20 } : undefined}
-        animate={animate ? { opacity: 1, y: 0 } : undefined}
-        transition={{ delay: 0.6, duration: 0.5 }}
-      >
-        <rect
-          x="15"
-          y="418"
-          width="490"
-          height="18"
-          rx="6"
-          fill="white"
-          fillOpacity="0.9"
-          filter="url(#digestShadow)"
-        />
-        <text x="260" y="430" textAnchor="middle" fill="#475569" fontSize="7" fontWeight="500">
-          <tspan fill="#F97316" fontWeight="700">
-            Mouth
-          </tspan>{' '}
-          (Carbs) →{' '}
-          <tspan fill="#EA580C" fontWeight="700">
-            Stomach
-          </tspan>{' '}
-          (Proteins) →{' '}
-          <tspan fill="#F97316" fontWeight="700">
-            Small Intestine
-          </tspan>{' '}
-          (All + Absorption) →{' '}
-          <tspan fill="#8B5CF6" fontWeight="700">
-            Large Intestine
-          </tspan>{' '}
-          (Water)
-        </text>
-      </motion.g>
+      {/* Bottom summary bar - removed as illustration now uses full height */}
     </Wrapper>
   )
 }
@@ -17450,7 +17419,7 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
 
   return (
     <Wrapper
-      viewBox="0 0 560 440"
+      viewBox="0 0 700 520"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
@@ -17547,20 +17516,20 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
       </defs>
 
       {/* Background */}
-      <rect width="560" height="440" fill="url(#circBgGrad)" />
+      <rect width="700" height="520" fill="url(#circBgGrad)" rx="16" />
 
       {/* Decorative background elements */}
-      <circle cx="80" cy="80" r="120" fill="#DC2626" opacity="0.03" />
-      <circle cx="480" cy="360" r="100" fill="#3B82F6" opacity="0.03" />
-      <circle cx="280" cy="220" r="180" fill="#EC4899" opacity="0.02" />
+      <circle cx="100" cy="100" r="150" fill="#DC2626" opacity="0.03" />
+      <circle cx="600" cy="430" r="125" fill="#3B82F6" opacity="0.03" />
+      <circle cx="350" cy="260" r="220" fill="#EC4899" opacity="0.02" />
 
       {/* Title */}
       <motion.text
-        x="280"
-        y="24"
+        x="350"
+        y="32"
         textAnchor="middle"
         fill="#1E293B"
-        fontSize="15"
+        fontSize="18"
         fontWeight="700"
         fontFamily="system-ui, sans-serif"
         initial={animate ? { opacity: 0, y: -10 } : undefined}
@@ -17576,7 +17545,7 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
         animate={animate ? { opacity: 1, x: 0 } : undefined}
         transition={{ delay: 0.2, duration: 0.6 }}
       >
-        <g transform="translate(25, 45)">
+        <g transform="translate(30, 55)">
           {/* Heart outline */}
           <path
             d="M100 30 Q60 10 40 40 Q10 80 20 130 Q30 180 100 230 Q170 180 180 130 Q190 80 160 40 Q140 10 100 30 Z"
@@ -17731,89 +17700,96 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
         animate={animate ? { opacity: 1, y: 0 } : undefined}
         transition={{ delay: 0.3, duration: 0.6 }}
       >
-        <g transform="translate(20, 305)">
+        <g transform="translate(25, 370)">
           <rect
             x="0"
             y="0"
-            width="215"
-            height="115"
-            rx="12"
+            width="265"
+            height="130"
+            rx="14"
             fill="url(#circCardGrad)"
             filter="url(#circShadow)"
           />
-          <text x="107" y="18" textAnchor="middle" fill="#1E293B" fontSize="9" fontWeight="700">
+          <text x="132" y="22" textAnchor="middle" fill="#1E293B" fontSize="11" fontWeight="700">
             Double Circulation
           </text>
 
           {/* Pulmonary Circuit */}
-          <g transform="translate(15, 30)">
+          <g transform="translate(18, 35)">
             <rect
               x="0"
               y="0"
-              width="85"
-              height="70"
-              rx="8"
+              width="105"
+              height="80"
+              rx="10"
               fill="#EDE9FE"
               stroke="#8B5CF6"
-              strokeWidth="1"
+              strokeWidth="1.5"
             />
-            <text x="42" y="14" textAnchor="middle" fill="#6D28D9" fontSize="7" fontWeight="600">
+            <text x="52" y="16" textAnchor="middle" fill="#6D28D9" fontSize="9" fontWeight="600">
               Pulmonary
             </text>
-            <text x="42" y="25" textAnchor="middle" fill="#7C3AED" fontSize="6">
+            <text x="52" y="30" textAnchor="middle" fill="#7C3AED" fontSize="8">
               Heart → Lungs
             </text>
-            <text x="42" y="35" textAnchor="middle" fill="#7C3AED" fontSize="6">
+            <text x="52" y="42" textAnchor="middle" fill="#7C3AED" fontSize="8">
               → Heart
             </text>
             {/* Small lung icon */}
-            <ellipse cx="30" cy="52" rx="12" ry="10" fill="#F9A8D4" />
-            <ellipse cx="54" cy="52" rx="12" ry="10" fill="#F9A8D4" />
-            <text x="42" y="55" textAnchor="middle" fill="#BE185D" fontSize="5">
+            <ellipse cx="36" cy="60" rx="14" ry="12" fill="#F9A8D4" />
+            <ellipse cx="68" cy="60" rx="14" ry="12" fill="#F9A8D4" />
+            <text x="52" y="64" textAnchor="middle" fill="#BE185D" fontSize="6">
               O₂↔CO₂
             </text>
           </g>
 
           {/* Systemic Circuit */}
-          <g transform="translate(115, 30)">
+          <g transform="translate(142, 35)">
             <rect
               x="0"
               y="0"
-              width="85"
-              height="70"
-              rx="8"
+              width="105"
+              height="80"
+              rx="10"
               fill="#FEE2E2"
               stroke="#EF4444"
-              strokeWidth="1"
+              strokeWidth="1.5"
             />
-            <text x="42" y="14" textAnchor="middle" fill="#B91C1C" fontSize="7" fontWeight="600">
+            <text x="52" y="16" textAnchor="middle" fill="#B91C1C" fontSize="9" fontWeight="600">
               Systemic
             </text>
-            <text x="42" y="25" textAnchor="middle" fill="#DC2626" fontSize="6">
+            <text x="52" y="30" textAnchor="middle" fill="#DC2626" fontSize="8">
               Heart → Body
             </text>
-            <text x="42" y="35" textAnchor="middle" fill="#DC2626" fontSize="6">
+            <text x="52" y="42" textAnchor="middle" fill="#DC2626" fontSize="8">
               → Heart
             </text>
             {/* Body icon */}
-            <circle cx="42" cy="52" r="10" fill="#FCA5A5" />
-            <text x="42" y="55" textAnchor="middle" fill="#991B1B" fontSize="5">
+            <circle cx="52" cy="60" r="12" fill="#FCA5A5" />
+            <text x="52" y="64" textAnchor="middle" fill="#991B1B" fontSize="6">
               Body
             </text>
           </g>
 
           {/* Connection arrows */}
           <motion.path
-            d="M102 65 L112 65"
+            d="M125 75 L140 75"
             stroke="#DC2626"
-            strokeWidth="2"
+            strokeWidth="2.5"
             markerEnd="url(#circArrow)"
             animate={animate ? { opacity: [0.5, 1, 0.5] } : undefined}
             transition={{ duration: 1.5, repeat: Infinity }}
           />
           <defs>
-            <marker id="circArrow" markerWidth="4" markerHeight="4" refX="3" refY="2" orient="auto">
-              <path d="M0,0 L4,2 L0,4 Z" fill="#DC2626" />
+            <marker
+              id="circArrow"
+              markerWidth="5"
+              markerHeight="5"
+              refX="4"
+              refY="2.5"
+              orient="auto"
+            >
+              <path d="M0,0 L5,2.5 L0,5 Z" fill="#DC2626" />
             </marker>
           </defs>
         </g>
@@ -17825,91 +17801,88 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
         animate={animate ? { opacity: 1, x: 0 } : undefined}
         transition={{ delay: 0.25, duration: 0.6 }}
       >
-        <g transform="translate(260, 42)">
+        <g transform="translate(315, 52)">
           <rect
             x="0"
             y="0"
-            width="285"
-            height="100"
-            rx="12"
+            width="365"
+            height="120"
+            rx="14"
             fill="url(#circCardGrad)"
             filter="url(#circShadow)"
           />
-          <text x="142" y="18" textAnchor="middle" fill="#1E293B" fontSize="10" fontWeight="700">
+          <text x="182" y="22" textAnchor="middle" fill="#1E293B" fontSize="13" fontWeight="700">
             Blood Composition
           </text>
 
           {/* Plasma - 55% */}
-          <g transform="translate(15, 28)">
+          <g transform="translate(18, 35)">
             <rect
               x="0"
               y="0"
-              width="120"
-              height="60"
-              rx="8"
+              width="155"
+              height="72"
+              rx="10"
               fill="#FEF3C7"
               stroke="#F59E0B"
-              strokeWidth="1"
+              strokeWidth="1.5"
             />
-            <text x="60" y="14" textAnchor="middle" fill="#B45309" fontSize="8" fontWeight="600">
+            <text x="77" y="16" textAnchor="middle" fill="#B45309" fontSize="10" fontWeight="600">
               Plasma (55%)
             </text>
-            <text x="60" y="26" textAnchor="middle" fill="#92400E" fontSize="6">
+            <text x="77" y="32" textAnchor="middle" fill="#92400E" fontSize="8">
               Water: 90-92%
             </text>
-            <text x="60" y="36" textAnchor="middle" fill="#92400E" fontSize="6">
+            <text x="77" y="46" textAnchor="middle" fill="#92400E" fontSize="8">
               Proteins: 6-8%
             </text>
-            <text x="60" y="46" textAnchor="middle" fill="#92400E" fontSize="5">
-              Albumin, Globulin
-            </text>
-            <text x="60" y="55" textAnchor="middle" fill="#92400E" fontSize="5">
-              Fibrinogen
+            <text x="77" y="58" textAnchor="middle" fill="#92400E" fontSize="7">
+              Albumin, Globulin, Fibrinogen
             </text>
           </g>
 
           {/* Formed Elements - 45% */}
-          <g transform="translate(150, 28)">
+          <g transform="translate(192, 35)">
             <rect
               x="0"
               y="0"
-              width="120"
-              height="60"
-              rx="8"
+              width="155"
+              height="72"
+              rx="10"
               fill="#FEE2E2"
               stroke="#EF4444"
-              strokeWidth="1"
+              strokeWidth="1.5"
             />
-            <text x="60" y="14" textAnchor="middle" fill="#B91C1C" fontSize="8" fontWeight="600">
+            <text x="77" y="16" textAnchor="middle" fill="#B91C1C" fontSize="10" fontWeight="600">
               Formed Elements (45%)
             </text>
 
             {/* RBC */}
             <motion.ellipse
-              cx="25"
-              cy="38"
-              rx="12"
-              ry="6"
+              cx="32"
+              cy="42"
+              rx="15"
+              ry="8"
               fill="url(#rbcGrad)"
               animate={animate ? { scale: [1, 1.05, 1] } : undefined}
               transition={{ duration: 2, repeat: Infinity }}
             />
-            <text x="25" y="52" textAnchor="middle" fill="#991B1B" fontSize="5">
+            <text x="32" y="60" textAnchor="middle" fill="#991B1B" fontSize="7">
               RBC
             </text>
 
             {/* WBC */}
             <motion.circle
-              cx="60"
-              cy="38"
-              r="8"
+              cx="77"
+              cy="42"
+              r="10"
               fill="#DBEAFE"
               stroke="#3B82F6"
-              strokeWidth="1"
+              strokeWidth="1.5"
               animate={animate ? { scale: [1, 1.1, 1] } : undefined}
               transition={{ duration: 2.5, repeat: Infinity }}
             />
-            <text x="60" y="52" textAnchor="middle" fill="#1D4ED8" fontSize="5">
+            <text x="77" y="60" textAnchor="middle" fill="#1D4ED8" fontSize="7">
               WBC
             </text>
 
@@ -17918,11 +17891,11 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
               animate={animate ? { y: [0, -2, 0] } : undefined}
               transition={{ duration: 1.5, repeat: Infinity }}
             >
-              <circle cx="92" cy="35" r="3" fill="#A78BFA" />
-              <circle cx="98" cy="38" r="3" fill="#A78BFA" />
-              <circle cx="95" cy="42" r="3" fill="#A78BFA" />
+              <circle cx="118" cy="38" r="4" fill="#A78BFA" />
+              <circle cx="126" cy="42" r="4" fill="#A78BFA" />
+              <circle cx="122" cy="48" r="4" fill="#A78BFA" />
             </motion.g>
-            <text x="95" y="52" textAnchor="middle" fill="#6D28D9" fontSize="5">
+            <text x="122" y="60" textAnchor="middle" fill="#6D28D9" fontSize="7">
               Platelets
             </text>
           </g>
@@ -17935,100 +17908,100 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
         animate={animate ? { opacity: 1, x: 0 } : undefined}
         transition={{ delay: 0.35, duration: 0.6 }}
       >
-        <g transform="translate(260, 152)">
+        <g transform="translate(315, 185)">
           <rect
             x="0"
             y="0"
-            width="285"
-            height="95"
-            rx="12"
+            width="365"
+            height="110"
+            rx="14"
             fill="url(#circCardGrad)"
             filter="url(#circShadow)"
           />
-          <text x="142" y="18" textAnchor="middle" fill="#1E293B" fontSize="10" fontWeight="700">
+          <text x="182" y="22" textAnchor="middle" fill="#1E293B" fontSize="13" fontWeight="700">
             Cardiac Cycle (0.8 sec)
           </text>
 
           {/* Timeline bar */}
-          <g transform="translate(15, 30)">
-            <rect x="0" y="0" width="255" height="12" rx="6" fill="#E2E8F0" />
+          <g transform="translate(18, 38)">
+            <rect x="0" y="0" width="330" height="16" rx="8" fill="#E2E8F0" />
 
             {/* Atrial Systole */}
             <motion.rect
               x="0"
               y="0"
-              width="32"
-              height="12"
-              rx="6"
+              width="42"
+              height="16"
+              rx="8"
               fill="#F59E0B"
               animate={animate ? { opacity: [0.7, 1, 0.7] } : undefined}
               transition={{ duration: 0.8, repeat: Infinity, delay: 0 }}
             />
-            <text x="16" y="9" textAnchor="middle" fill="white" fontSize="5" fontWeight="bold">
+            <text x="21" y="12" textAnchor="middle" fill="white" fontSize="7" fontWeight="bold">
               0.1s
             </text>
 
             {/* Ventricular Systole */}
             <motion.rect
-              x="32"
+              x="42"
               y="0"
-              width="96"
-              height="12"
+              width="124"
+              height="16"
               rx="0"
               fill="#EF4444"
               animate={animate ? { opacity: [0.7, 1, 0.7] } : undefined}
               transition={{ duration: 0.8, repeat: Infinity, delay: 0.1 }}
             />
-            <text x="80" y="9" textAnchor="middle" fill="white" fontSize="5" fontWeight="bold">
+            <text x="104" y="12" textAnchor="middle" fill="white" fontSize="7" fontWeight="bold">
               0.3s
             </text>
 
             {/* Joint Diastole */}
             <motion.rect
-              x="128"
+              x="166"
               y="0"
-              width="127"
-              height="12"
-              rx="6"
+              width="164"
+              height="16"
+              rx="8"
               fill="#22C55E"
               animate={animate ? { opacity: [0.7, 1, 0.7] } : undefined}
               transition={{ duration: 0.8, repeat: Infinity, delay: 0.4 }}
             />
-            <text x="192" y="9" textAnchor="middle" fill="white" fontSize="5" fontWeight="bold">
+            <text x="248" y="12" textAnchor="middle" fill="white" fontSize="7" fontWeight="bold">
               0.4s
             </text>
           </g>
 
           {/* Labels */}
-          <g transform="translate(15, 48)">
-            <rect x="0" y="0" width="10" height="10" rx="2" fill="#F59E0B" />
-            <text x="15" y="8" fill="#64748B" fontSize="6">
+          <g transform="translate(18, 62)">
+            <rect x="0" y="0" width="12" height="12" rx="3" fill="#F59E0B" />
+            <text x="18" y="10" fill="#64748B" fontSize="8">
               Atrial Systole
             </text>
 
-            <rect x="85" y="0" width="10" height="10" rx="2" fill="#EF4444" />
-            <text x="100" y="8" fill="#64748B" fontSize="6">
+            <rect x="115" y="0" width="12" height="12" rx="3" fill="#EF4444" />
+            <text x="133" y="10" fill="#64748B" fontSize="8">
               Ventricular Systole
             </text>
 
-            <rect x="185" y="0" width="10" height="10" rx="2" fill="#22C55E" />
-            <text x="200" y="8" fill="#64748B" fontSize="6">
+            <rect x="255" y="0" width="12" height="12" rx="3" fill="#22C55E" />
+            <text x="273" y="10" fill="#64748B" fontSize="8">
               Diastole
             </text>
           </g>
 
           {/* Key metrics */}
-          <g transform="translate(15, 65)">
-            <text x="0" y="8" fill="#1E293B" fontSize="7" fontWeight="600">
+          <g transform="translate(18, 82)">
+            <text x="0" y="10" fill="#1E293B" fontSize="9" fontWeight="600">
               Cardiac Output = HR × SV
             </text>
-            <text x="0" y="20" fill="#64748B" fontSize="6">
+            <text x="0" y="24" fill="#64748B" fontSize="8">
               = 75 × 70mL = ~5 L/min
             </text>
-            <text x="140" y="8" fill="#1E293B" fontSize="7" fontWeight="600">
+            <text x="185" y="10" fill="#1E293B" fontSize="9" fontWeight="600">
               Stroke Volume: 70mL
             </text>
-            <text x="140" y="20" fill="#64748B" fontSize="6">
+            <text x="185" y="24" fill="#64748B" fontSize="8">
               EDV (120) - ESV (50)
             </text>
           </g>
@@ -18041,28 +18014,28 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
         animate={animate ? { opacity: 1, y: 0 } : undefined}
         transition={{ delay: 0.4, duration: 0.6 }}
       >
-        <g transform="translate(260, 257)">
+        <g transform="translate(315, 310)">
           <rect
             x="0"
             y="0"
-            width="285"
-            height="90"
-            rx="12"
+            width="365"
+            height="105"
+            rx="14"
             fill="url(#circCardGrad)"
             filter="url(#circShadow)"
           />
-          <text x="142" y="18" textAnchor="middle" fill="#1E293B" fontSize="10" fontWeight="700">
+          <text x="182" y="22" textAnchor="middle" fill="#1E293B" fontSize="13" fontWeight="700">
             Electrocardiogram (ECG)
           </text>
 
           {/* ECG Grid background */}
-          <rect x="15" y="28" width="255" height="50" rx="4" fill="#ECFDF5" stroke="#D1FAE5" />
+          <rect x="18" y="32" width="330" height="55" rx="6" fill="#ECFDF5" stroke="#D1FAE5" />
 
           {/* ECG Wave */}
           <motion.path
-            d="M25 55 L45 55 Q50 55 52 48 L55 55 L60 55 L65 25 L70 70 L75 45 L80 55 L100 55 Q105 55 108 50 L112 55 L135 55 Q140 55 142 48 L145 55 L150 55 L155 25 L160 70 L165 45 L170 55 L190 55 Q195 55 198 50 L202 55 L225 55 Q230 55 232 48 L235 55 L240 55 L245 25 L250 70 L255 45 L260 55"
+            d="M30 62 L55 62 Q62 62 65 53 L70 62 L78 62 L85 28 L92 78 L98 50 L105 62 L135 62 Q142 62 145 55 L150 62 L180 62 Q187 62 190 53 L195 62 L203 62 L210 28 L217 78 L223 50 L230 62 L260 62 Q267 62 270 55 L275 62 L305 62 Q312 62 315 53 L320 62 L328 62 L335 28 L342 78 L348 50 L355 62"
             stroke="url(#ecgGrad)"
-            strokeWidth="2"
+            strokeWidth="2.5"
             fill="none"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -18078,24 +18051,24 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
           />
 
           {/* Wave labels */}
-          <text x="52" y="42" fill="#6D28D9" fontSize="6" fontWeight="bold">
+          <text x="65" y="48" fill="#6D28D9" fontSize="8" fontWeight="bold">
             P
           </text>
-          <text x="67" y="22" fill="#DC2626" fontSize="6" fontWeight="bold">
+          <text x="88" y="24" fill="#DC2626" fontSize="8" fontWeight="bold">
             QRS
           </text>
-          <text x="108" y="45" fill="#0D9488" fontSize="6" fontWeight="bold">
+          <text x="145" y="50" fill="#0D9488" fontSize="8" fontWeight="bold">
             T
           </text>
 
           {/* Legend */}
-          <text x="25" y="88" fill="#6D28D9" fontSize="6">
+          <text x="30" y="100" fill="#6D28D9" fontSize="8">
             P: Atrial depol.
           </text>
-          <text x="95" y="88" fill="#DC2626" fontSize="6">
+          <text x="130" y="100" fill="#DC2626" fontSize="8">
             QRS: Ventricular depol.
           </text>
-          <text x="195" y="88" fill="#0D9488" fontSize="6">
+          <text x="275" y="100" fill="#0D9488" fontSize="8">
             T: Ventricular repol.
           </text>
         </g>
@@ -18107,88 +18080,88 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
         animate={animate ? { opacity: 1, y: 0 } : undefined}
         transition={{ delay: 0.45, duration: 0.6 }}
       >
-        <g transform="translate(260, 357)">
+        <g transform="translate(315, 430)">
           <rect
             x="0"
             y="0"
-            width="285"
-            height="70"
-            rx="12"
+            width="365"
+            height="78"
+            rx="14"
             fill="url(#circCardGrad)"
             filter="url(#circShadow)"
           />
-          <text x="142" y="16" textAnchor="middle" fill="#1E293B" fontSize="9" fontWeight="700">
+          <text x="182" y="20" textAnchor="middle" fill="#1E293B" fontSize="12" fontWeight="700">
             Blood Groups & Key Facts
           </text>
 
           {/* Blood group circles */}
-          <g transform="translate(15, 25)">
+          <g transform="translate(18, 30)">
             <motion.circle
-              cx="20"
-              cy="20"
-              r="15"
+              cx="25"
+              cy="22"
+              r="18"
               fill="#FEE2E2"
               stroke="#EF4444"
-              strokeWidth="2"
+              strokeWidth="2.5"
               animate={animate ? { scale: [1, 1.05, 1] } : undefined}
               transition={{ duration: 2, repeat: Infinity, delay: 0 }}
             />
-            <text x="20" y="24" textAnchor="middle" fill="#B91C1C" fontSize="10" fontWeight="bold">
+            <text x="25" y="27" textAnchor="middle" fill="#B91C1C" fontSize="12" fontWeight="bold">
               A
             </text>
 
             <motion.circle
-              cx="60"
-              cy="20"
-              r="15"
+              cx="75"
+              cy="22"
+              r="18"
               fill="#DBEAFE"
               stroke="#3B82F6"
-              strokeWidth="2"
+              strokeWidth="2.5"
               animate={animate ? { scale: [1, 1.05, 1] } : undefined}
               transition={{ duration: 2, repeat: Infinity, delay: 0.3 }}
             />
-            <text x="60" y="24" textAnchor="middle" fill="#1D4ED8" fontSize="10" fontWeight="bold">
+            <text x="75" y="27" textAnchor="middle" fill="#1D4ED8" fontSize="12" fontWeight="bold">
               B
             </text>
 
             <motion.circle
-              cx="100"
-              cy="20"
-              r="15"
+              cx="125"
+              cy="22"
+              r="18"
               fill="#F3E8FF"
               stroke="#8B5CF6"
-              strokeWidth="2"
+              strokeWidth="2.5"
               animate={animate ? { scale: [1, 1.05, 1] } : undefined}
               transition={{ duration: 2, repeat: Infinity, delay: 0.6 }}
             />
-            <text x="100" y="24" textAnchor="middle" fill="#6D28D9" fontSize="9" fontWeight="bold">
+            <text x="125" y="27" textAnchor="middle" fill="#6D28D9" fontSize="11" fontWeight="bold">
               AB
             </text>
 
             <motion.circle
-              cx="140"
-              cy="20"
-              r="15"
+              cx="175"
+              cy="22"
+              r="18"
               fill="#F1F5F9"
               stroke="#64748B"
-              strokeWidth="2"
+              strokeWidth="2.5"
               animate={animate ? { scale: [1, 1.05, 1] } : undefined}
               transition={{ duration: 2, repeat: Infinity, delay: 0.9 }}
             />
-            <text x="140" y="24" textAnchor="middle" fill="#334155" fontSize="10" fontWeight="bold">
+            <text x="175" y="27" textAnchor="middle" fill="#334155" fontSize="12" fontWeight="bold">
               O
             </text>
           </g>
 
           {/* Key facts */}
-          <g transform="translate(175, 25)">
-            <text x="0" y="10" fill="#22C55E" fontSize="7" fontWeight="600">
+          <g transform="translate(220, 32)">
+            <text x="0" y="12" fill="#22C55E" fontSize="9" fontWeight="600">
               ● Universal Donor: O
             </text>
-            <text x="0" y="22" fill="#DC2626" fontSize="7" fontWeight="600">
+            <text x="0" y="28" fill="#DC2626" fontSize="9" fontWeight="600">
               ● Universal Recipient: AB
             </text>
-            <text x="0" y="34" fill="#3B82F6" fontSize="7" fontWeight="600">
+            <text x="0" y="44" fill="#3B82F6" fontSize="9" fontWeight="600">
               ● Pacemaker: SA Node
             </text>
           </g>
@@ -18200,8 +18173,8 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
         animate={animate ? { scale: [1, 1.3, 1], opacity: [1, 0.5, 1] } : undefined}
         transition={{ duration: 1, repeat: Infinity }}
       >
-        <circle cx="108" cy="98" r="6" fill="#22C55E" filter="url(#vesselGlow)" />
-        <text x="120" y="95" fill="#166534" fontSize="5" fontWeight="bold">
+        <circle cx="115" cy="108" r="7" fill="#22C55E" filter="url(#vesselGlow)" />
+        <text x="128" y="105" fill="#166534" fontSize="6" fontWeight="bold">
           SA
         </text>
       </motion.g>
@@ -18211,8 +18184,8 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
         animate={animate ? { scale: [1, 1.2, 1], opacity: [1, 0.6, 1] } : undefined}
         transition={{ duration: 1, repeat: Infinity, delay: 0.2 }}
       >
-        <circle cx="118" cy="120" r="5" fill="#FBBF24" />
-        <text x="128" y="118" fill="#92400E" fontSize="5" fontWeight="bold">
+        <circle cx="128" cy="135" r="6" fill="#FBBF24" />
+        <text x="140" y="133" fill="#92400E" fontSize="6" fontWeight="bold">
           AV
         </text>
       </motion.g>
@@ -18233,7 +18206,7 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
 
   return (
     <Wrapper
-      viewBox="0 0 560 440"
+      viewBox="0 0 700 520"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
@@ -18325,20 +18298,20 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
       </defs>
 
       {/* Background */}
-      <rect width="560" height="440" fill="url(#excBgGrad)" />
+      <rect width="700" height="520" fill="url(#excBgGrad)" rx="16" />
 
       {/* Decorative background elements */}
-      <circle cx="70" cy="70" r="100" fill="#F59E0B" opacity="0.05" />
-      <circle cx="490" cy="370" r="120" fill="#8B5CF6" opacity="0.04" />
-      <circle cx="280" cy="220" r="180" fill="#DC2626" opacity="0.03" />
+      <circle cx="90" cy="85" r="125" fill="#F59E0B" opacity="0.05" />
+      <circle cx="610" cy="435" r="150" fill="#8B5CF6" opacity="0.04" />
+      <circle cx="350" cy="260" r="225" fill="#DC2626" opacity="0.03" />
 
       {/* Title */}
       <motion.text
-        x="280"
-        y="24"
+        x="350"
+        y="30"
         textAnchor="middle"
         fill="#1E293B"
-        fontSize="15"
+        fontSize="18"
         fontWeight="700"
         fontFamily="system-ui, sans-serif"
         initial={animate ? { opacity: 0, y: -10 } : undefined}
@@ -18354,7 +18327,7 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
         animate={animate ? { opacity: 1, x: 0 } : undefined}
         transition={{ delay: 0.2, duration: 0.6 }}
       >
-        <g transform="translate(20, 40)">
+        <g transform="translate(25, 50)">
           {/* Kidney outline - bean shape */}
           <path
             d="M90 20 Q140 10 160 40 Q185 80 180 140 Q175 200 140 230 Q100 255 60 230 Q25 200 20 140 Q15 80 40 45 Q60 15 90 20 Z"
@@ -18458,18 +18431,18 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
         animate={animate ? { opacity: 1, scale: 1 } : undefined}
         transition={{ delay: 0.3, duration: 0.6 }}
       >
-        <g transform="translate(200, 40)">
+        <g transform="translate(240, 50)">
           {/* Nephron background card */}
           <rect
             x="0"
             y="0"
-            width="180"
-            height="260"
-            rx="12"
+            width="210"
+            height="310"
+            rx="14"
             fill="url(#excCardGrad)"
             filter="url(#excShadow)"
           />
-          <text x="90" y="18" textAnchor="middle" fill="#1E293B" fontSize="10" fontWeight="700">
+          <text x="105" y="22" textAnchor="middle" fill="#1E293B" fontSize="12" fontWeight="700">
             Nephron Structure
           </text>
 
@@ -18639,17 +18612,17 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
         animate={animate ? { opacity: 1, x: 0 } : undefined}
         transition={{ delay: 0.35, duration: 0.6 }}
       >
-        <g transform="translate(395, 40)">
+        <g transform="translate(470, 50)">
           <rect
             x="0"
             y="0"
-            width="150"
-            height="135"
-            rx="12"
+            width="210"
+            height="160"
+            rx="14"
             fill="url(#excCardGrad)"
             filter="url(#excShadow)"
           />
-          <text x="75" y="18" textAnchor="middle" fill="#1E293B" fontSize="9" fontWeight="700">
+          <text x="105" y="22" textAnchor="middle" fill="#1E293B" fontSize="11" fontWeight="700">
             Urine Formation
           </text>
 
@@ -18658,15 +18631,15 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
             animate={animate ? { x: [0, 2, 0] } : undefined}
             transition={{ duration: 2, repeat: Infinity }}
           >
-            <circle cx="25" cy="40" r="12" fill="#FEE2E2" stroke="#EF4444" strokeWidth="2" />
-            <text x="25" y="44" textAnchor="middle" fill="#DC2626" fontSize="8" fontWeight="bold">
+            <circle cx="30" cy="50" r="15" fill="#FEE2E2" stroke="#EF4444" strokeWidth="2" />
+            <text x="30" y="55" textAnchor="middle" fill="#DC2626" fontSize="10" fontWeight="bold">
               1
             </text>
           </motion.g>
-          <text x="45" y="38" fill="#1E293B" fontSize="7" fontWeight="600">
+          <text x="55" y="47" fill="#1E293B" fontSize="9" fontWeight="600">
             Glomerular
           </text>
-          <text x="45" y="48" fill="#64748B" fontSize="6">
+          <text x="55" y="60" fill="#64748B" fontSize="7">
             Filtration
           </text>
 
@@ -18675,15 +18648,15 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
             animate={animate ? { x: [0, 2, 0] } : undefined}
             transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
           >
-            <circle cx="25" cy="72" r="12" fill="#EDE9FE" stroke="#8B5CF6" strokeWidth="2" />
-            <text x="25" y="76" textAnchor="middle" fill="#7C3AED" fontSize="8" fontWeight="bold">
+            <circle cx="30" cy="90" r="15" fill="#EDE9FE" stroke="#8B5CF6" strokeWidth="2" />
+            <text x="30" y="95" textAnchor="middle" fill="#7C3AED" fontSize="10" fontWeight="bold">
               2
             </text>
           </motion.g>
-          <text x="45" y="70" fill="#1E293B" fontSize="7" fontWeight="600">
+          <text x="55" y="87" fill="#1E293B" fontSize="9" fontWeight="600">
             Tubular
           </text>
-          <text x="45" y="80" fill="#64748B" fontSize="6">
+          <text x="55" y="100" fill="#64748B" fontSize="7">
             Reabsorption
           </text>
 
@@ -18692,32 +18665,39 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
             animate={animate ? { x: [0, 2, 0] } : undefined}
             transition={{ duration: 2, repeat: Infinity, delay: 1 }}
           >
-            <circle cx="25" cy="104" r="12" fill="#D1FAE5" stroke="#10B981" strokeWidth="2" />
-            <text x="25" y="108" textAnchor="middle" fill="#059669" fontSize="8" fontWeight="bold">
+            <circle cx="30" cy="130" r="15" fill="#D1FAE5" stroke="#10B981" strokeWidth="2" />
+            <text x="30" y="135" textAnchor="middle" fill="#059669" fontSize="10" fontWeight="bold">
               3
             </text>
           </motion.g>
-          <text x="45" y="102" fill="#1E293B" fontSize="7" fontWeight="600">
+          <text x="55" y="127" fill="#1E293B" fontSize="9" fontWeight="600">
             Tubular
           </text>
-          <text x="45" y="112" fill="#64748B" fontSize="6">
+          <text x="55" y="140" fill="#64748B" fontSize="7">
             Secretion
           </text>
 
           {/* Arrow indicating flow */}
           <path
-            d="M120 40 L120 110"
+            d="M175 50 L175 135"
             stroke="#94A3B8"
             strokeWidth="2"
-            strokeDasharray="3"
+            strokeDasharray="4"
             markerEnd="url(#excArrow)"
           />
-          <text x="125" y="75" fill="#64748B" fontSize="5" transform="rotate(90 125 75)">
+          <text x="182" y="92" fill="#64748B" fontSize="6" transform="rotate(90 182 92)">
             Flow
           </text>
           <defs>
-            <marker id="excArrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-              <path d="M0,0 L6,3 L0,6 Z" fill="#94A3B8" />
+            <marker
+              id="excArrow"
+              markerWidth="7"
+              markerHeight="7"
+              refX="6"
+              refY="3.5"
+              orient="auto"
+            >
+              <path d="M0,0 L7,3.5 L0,7 Z" fill="#94A3B8" />
             </marker>
           </defs>
         </g>
@@ -18729,31 +18709,31 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
         animate={animate ? { opacity: 1, x: 0 } : undefined}
         transition={{ delay: 0.4, duration: 0.6 }}
       >
-        <g transform="translate(395, 185)">
+        <g transform="translate(470, 225)">
           <rect
             x="0"
             y="0"
-            width="150"
-            height="115"
-            rx="12"
+            width="210"
+            height="135"
+            rx="14"
             fill="url(#excCardGrad)"
             filter="url(#excShadow)"
           />
-          <text x="75" y="18" textAnchor="middle" fill="#1E293B" fontSize="9" fontWeight="700">
+          <text x="105" y="22" textAnchor="middle" fill="#1E293B" fontSize="11" fontWeight="700">
             Key Numbers
           </text>
 
           {/* GFR */}
-          <g transform="translate(10, 28)">
-            <rect x="0" y="0" width="130" height="22" rx="6" fill="#DBEAFE" />
-            <text x="10" y="14" fill="#1D4ED8" fontSize="7" fontWeight="600">
+          <g transform="translate(15, 35)">
+            <rect x="0" y="0" width="180" height="26" rx="6" fill="#DBEAFE" />
+            <text x="12" y="17" fill="#1D4ED8" fontSize="9" fontWeight="600">
               GFR:
             </text>
             <motion.text
-              x="75"
-              y="14"
+              x="100"
+              y="17"
               fill="#1E40AF"
-              fontSize="8"
+              fontSize="10"
               fontWeight="bold"
               animate={animate ? { opacity: [0.7, 1, 0.7] } : undefined}
               transition={{ duration: 2, repeat: Infinity }}
@@ -18763,23 +18743,23 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
           </g>
 
           {/* Daily Filtrate */}
-          <g transform="translate(10, 55)">
-            <rect x="0" y="0" width="130" height="22" rx="6" fill="#FEF3C7" />
-            <text x="10" y="14" fill="#B45309" fontSize="7" fontWeight="600">
+          <g transform="translate(15, 68)">
+            <rect x="0" y="0" width="180" height="26" rx="6" fill="#FEF3C7" />
+            <text x="12" y="17" fill="#B45309" fontSize="9" fontWeight="600">
               Daily Filtrate:
             </text>
-            <text x="85" y="14" fill="#92400E" fontSize="8" fontWeight="bold">
+            <text x="115" y="17" fill="#92400E" fontSize="10" fontWeight="bold">
               180 L
             </text>
           </g>
 
           {/* Urine Output */}
-          <g transform="translate(10, 82)">
-            <rect x="0" y="0" width="130" height="22" rx="6" fill="#DCFCE7" />
-            <text x="10" y="14" fill="#166534" fontSize="7" fontWeight="600">
+          <g transform="translate(15, 101)">
+            <rect x="0" y="0" width="180" height="26" rx="6" fill="#DCFCE7" />
+            <text x="12" y="17" fill="#166534" fontSize="9" fontWeight="600">
               Urine Output:
             </text>
-            <text x="85" y="14" fill="#15803D" fontSize="8" fontWeight="bold">
+            <text x="115" y="17" fill="#15803D" fontSize="10" fontWeight="bold">
               1.5 L/day
             </text>
           </g>
@@ -18792,79 +18772,79 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
         animate={animate ? { opacity: 1, y: 0 } : undefined}
         transition={{ delay: 0.45, duration: 0.6 }}
       >
-        <g transform="translate(20, 310)">
+        <g transform="translate(25, 375)">
           <rect
             x="0"
             y="0"
-            width="175"
-            height="115"
-            rx="12"
+            width="210"
+            height="130"
+            rx="14"
             fill="url(#excCardGrad)"
             filter="url(#excShadow)"
           />
-          <text x="87" y="18" textAnchor="middle" fill="#1E293B" fontSize="9" fontWeight="700">
+          <text x="105" y="22" textAnchor="middle" fill="#1E293B" fontSize="11" fontWeight="700">
             Hormonal Regulation
           </text>
 
           {/* ADH */}
-          <g transform="translate(10, 28)">
+          <g transform="translate(15, 35)">
             <motion.circle
-              cx="15"
-              cy="15"
-              r="12"
+              cx="18"
+              cy="16"
+              r="14"
               fill="#3B82F6"
               animate={animate ? { scale: [1, 1.1, 1] } : undefined}
               transition={{ duration: 2, repeat: Infinity }}
             />
-            <text x="15" y="18" textAnchor="middle" fill="white" fontSize="6" fontWeight="bold">
+            <text x="18" y="20" textAnchor="middle" fill="white" fontSize="7" fontWeight="bold">
               ADH
             </text>
-            <text x="35" y="12" fill="#1E293B" fontSize="6" fontWeight="600">
+            <text x="42" y="13" fill="#1E293B" fontSize="8" fontWeight="600">
               Antidiuretic Hormone
             </text>
-            <text x="35" y="22" fill="#64748B" fontSize="5">
+            <text x="42" y="25" fill="#64748B" fontSize="6">
               ↑ Water reabsorption
             </text>
           </g>
 
           {/* Aldosterone */}
-          <g transform="translate(10, 58)">
+          <g transform="translate(15, 68)">
             <motion.circle
-              cx="15"
-              cy="15"
-              r="12"
+              cx="18"
+              cy="16"
+              r="14"
               fill="#F59E0B"
               animate={animate ? { scale: [1, 1.1, 1] } : undefined}
               transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
             />
-            <text x="15" y="18" textAnchor="middle" fill="white" fontSize="5" fontWeight="bold">
+            <text x="18" y="20" textAnchor="middle" fill="white" fontSize="6" fontWeight="bold">
               ALD
             </text>
-            <text x="35" y="12" fill="#1E293B" fontSize="6" fontWeight="600">
+            <text x="42" y="13" fill="#1E293B" fontSize="8" fontWeight="600">
               Aldosterone
             </text>
-            <text x="35" y="22" fill="#64748B" fontSize="5">
+            <text x="42" y="25" fill="#64748B" fontSize="6">
               ↑ Na⁺ reabsorption
             </text>
           </g>
 
           {/* ANP */}
-          <g transform="translate(10, 88)">
+          <g transform="translate(15, 101)">
             <motion.circle
-              cx="15"
-              cy="15"
-              r="12"
+              cx="18"
+              cy="16"
+              r="14"
               fill="#10B981"
               animate={animate ? { scale: [1, 1.1, 1] } : undefined}
               transition={{ duration: 2, repeat: Infinity, delay: 1 }}
             />
-            <text x="15" y="18" textAnchor="middle" fill="white" fontSize="5" fontWeight="bold">
+            <text x="18" y="20" textAnchor="middle" fill="white" fontSize="6" fontWeight="bold">
               ANP
             </text>
-            <text x="35" y="12" fill="#1E293B" fontSize="6" fontWeight="600">
+            <text x="42" y="13" fill="#1E293B" fontSize="8" fontWeight="600">
               Atrial Natriuretic Peptide
             </text>
-            <text x="35" y="22" fill="#64748B" fontSize="5">
+            <text x="42" y="25" fill="#64748B" fontSize="6">
               ↑ Na⁺ excretion
             </text>
           </g>
@@ -18877,76 +18857,76 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
         animate={animate ? { opacity: 1, y: 0 } : undefined}
         transition={{ delay: 0.5, duration: 0.6 }}
       >
-        <g transform="translate(205, 310)">
+        <g transform="translate(250, 375)">
           <rect
             x="0"
             y="0"
-            width="170"
-            height="115"
-            rx="12"
+            width="205"
+            height="130"
+            rx="14"
             fill="url(#excCardGrad)"
             filter="url(#excShadow)"
           />
-          <text x="85" y="18" textAnchor="middle" fill="#1E293B" fontSize="9" fontWeight="700">
+          <text x="102" y="22" textAnchor="middle" fill="#1E293B" fontSize="11" fontWeight="700">
             Nitrogenous Waste Types
           </text>
 
           {/* Ammonotelic */}
-          <g transform="translate(10, 30)">
+          <g transform="translate(12, 35)">
             <rect
               x="0"
               y="0"
-              width="150"
-              height="24"
+              width="180"
+              height="28"
               rx="6"
               fill="#DBEAFE"
               stroke="#3B82F6"
-              strokeWidth="1"
+              strokeWidth="1.5"
             />
-            <text x="10" y="10" fill="#1D4ED8" fontSize="7" fontWeight="600">
+            <text x="12" y="12" fill="#1D4ED8" fontSize="8" fontWeight="600">
               Ammonotelic
             </text>
-            <text x="10" y="20" fill="#64748B" fontSize="5">
+            <text x="12" y="24" fill="#64748B" fontSize="6">
               Ammonia • Fish, Aquatic
             </text>
           </g>
 
           {/* Ureotelic */}
-          <g transform="translate(10, 58)">
+          <g transform="translate(12, 68)">
             <rect
               x="0"
               y="0"
-              width="150"
-              height="24"
+              width="180"
+              height="28"
               rx="6"
               fill="#FEF3C7"
               stroke="#F59E0B"
-              strokeWidth="1"
+              strokeWidth="1.5"
             />
-            <text x="10" y="10" fill="#B45309" fontSize="7" fontWeight="600">
+            <text x="12" y="12" fill="#B45309" fontSize="8" fontWeight="600">
               Ureotelic
             </text>
-            <text x="10" y="20" fill="#64748B" fontSize="5">
+            <text x="12" y="24" fill="#64748B" fontSize="6">
               Urea • Mammals, Humans
             </text>
           </g>
 
           {/* Uricotelic */}
-          <g transform="translate(10, 86)">
+          <g transform="translate(12, 101)">
             <rect
               x="0"
               y="0"
-              width="150"
-              height="24"
+              width="180"
+              height="28"
               rx="6"
               fill="#F3E8FF"
               stroke="#8B5CF6"
-              strokeWidth="1"
+              strokeWidth="1.5"
             />
-            <text x="10" y="10" fill="#6D28D9" fontSize="7" fontWeight="600">
+            <text x="12" y="12" fill="#6D28D9" fontSize="8" fontWeight="600">
               Uricotelic
             </text>
-            <text x="10" y="20" fill="#64748B" fontSize="5">
+            <text x="12" y="24" fill="#64748B" fontSize="6">
               Uric Acid • Birds, Reptiles
             </text>
           </g>
@@ -18959,48 +18939,48 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
         animate={animate ? { opacity: 1, y: 0 } : undefined}
         transition={{ delay: 0.55, duration: 0.6 }}
       >
-        <g transform="translate(395, 310)">
+        <g transform="translate(470, 375)">
           <rect
             x="0"
             y="0"
-            width="150"
-            height="115"
-            rx="12"
+            width="210"
+            height="130"
+            rx="14"
             fill="url(#excCardGrad)"
             filter="url(#excShadow)"
           />
-          <text x="75" y="18" textAnchor="middle" fill="#1E293B" fontSize="9" fontWeight="700">
+          <text x="105" y="22" textAnchor="middle" fill="#1E293B" fontSize="11" fontWeight="700">
             Countercurrent
           </text>
 
           {/* Osmolarity gradient visualization */}
-          <g transform="translate(15, 30)">
-            <rect x="0" y="0" width="120" height="75" rx="6" fill="#F1F5F9" />
+          <g transform="translate(18, 35)">
+            <rect x="0" y="0" width="175" height="85" rx="6" fill="#F1F5F9" />
 
             {/* Gradient bars */}
-            <rect x="10" y="10" width="20" height="12" rx="2" fill="#BFDBFE" />
-            <text x="35" y="19" fill="#64748B" fontSize="6">
+            <rect x="12" y="10" width="28" height="14" rx="2" fill="#BFDBFE" />
+            <text x="48" y="21" fill="#64748B" fontSize="7">
               300 mOsm/L
             </text>
-            <text x="90" y="19" fill="#94A3B8" fontSize="5">
+            <text x="125" y="21" fill="#94A3B8" fontSize="6">
               Cortex
             </text>
 
-            <rect x="10" y="28" width="35" height="12" rx="2" fill="#93C5FD" />
-            <text x="50" y="37" fill="#64748B" fontSize="6">
+            <rect x="12" y="30" width="50" height="14" rx="2" fill="#93C5FD" />
+            <text x="70" y="41" fill="#64748B" fontSize="7">
               600 mOsm/L
             </text>
 
-            <rect x="10" y="46" width="55" height="12" rx="2" fill="#60A5FA" />
-            <text x="70" y="55" fill="#64748B" fontSize="6">
+            <rect x="12" y="50" width="78" height="14" rx="2" fill="#60A5FA" />
+            <text x="98" y="61" fill="#64748B" fontSize="7">
               900 mOsm/L
             </text>
 
-            <rect x="10" y="64" width="80" height="8" rx="2" fill="#3B82F6" />
-            <text x="95" y="70" fill="#1E40AF" fontSize="6" fontWeight="bold">
+            <rect x="12" y="70" width="110" height="10" rx="2" fill="#3B82F6" />
+            <text x="130" y="78" fill="#1E40AF" fontSize="7" fontWeight="bold">
               1200
             </text>
-            <text x="90" y="78" fill="#94A3B8" fontSize="5">
+            <text x="125" y="88" fill="#94A3B8" fontSize="6">
               Medulla
             </text>
           </g>
@@ -19023,7 +19003,7 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
 
   return (
     <Wrapper
-      viewBox="0 0 560 440"
+      viewBox="0 0 700 520"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
@@ -19114,20 +19094,20 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
       </defs>
 
       {/* Background */}
-      <rect width="560" height="440" fill="url(#nerveBgGrad)" />
+      <rect width="700" height="520" fill="url(#nerveBgGrad)" rx="16" />
 
       {/* Decorative background elements */}
-      <circle cx="100" cy="100" r="150" fill="#8B5CF6" opacity="0.05" />
-      <circle cx="460" cy="340" r="120" fill="#EC4899" opacity="0.04" />
-      <circle cx="280" cy="220" r="200" fill="#6366F1" opacity="0.03" />
+      <circle cx="125" cy="120" r="185" fill="#8B5CF6" opacity="0.05" />
+      <circle cx="575" cy="400" r="150" fill="#EC4899" opacity="0.04" />
+      <circle cx="350" cy="260" r="250" fill="#6366F1" opacity="0.03" />
 
       {/* Title */}
       <motion.text
-        x="280"
-        y="24"
+        x="350"
+        y="30"
         textAnchor="middle"
         fill="#1E293B"
-        fontSize="15"
+        fontSize="18"
         fontWeight="700"
         fontFamily="system-ui, sans-serif"
         initial={animate ? { opacity: 0, y: -10 } : undefined}
@@ -19143,22 +19123,22 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
         animate={animate ? { opacity: 1, x: 0 } : undefined}
         transition={{ delay: 0.2, duration: 0.6 }}
       >
-        <g transform="translate(15, 40)">
+        <g transform="translate(20, 50)">
           <rect
             x="0"
             y="0"
-            width="250"
-            height="155"
-            rx="12"
+            width="310"
+            height="185"
+            rx="14"
             fill="url(#nerveCardGrad)"
             filter="url(#nerveShadow)"
           />
-          <text x="125" y="18" textAnchor="middle" fill="#1E293B" fontSize="10" fontWeight="700">
+          <text x="155" y="22" textAnchor="middle" fill="#1E293B" fontSize="12" fontWeight="700">
             Neuron Structure
           </text>
 
           {/* Dendrites */}
-          <g transform="translate(20, 60)">
+          <g transform="translate(25, 70)">
             <motion.path
               d="M35 40 Q20 30 10 20"
               stroke="url(#dendriteGrad)"
@@ -19283,11 +19263,11 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
           </g>
 
           {/* Speed info */}
-          <g transform="translate(15, 130)">
-            <text x="0" y="10" fill="#22C55E" fontSize="6" fontWeight="600">
+          <g transform="translate(20, 155)">
+            <text x="0" y="12" fill="#22C55E" fontSize="7" fontWeight="600">
               ● Myelinated: 100 m/s
             </text>
-            <text x="100" y="10" fill="#F59E0B" fontSize="6" fontWeight="600">
+            <text x="130" y="12" fill="#F59E0B" fontSize="7" fontWeight="600">
               ● Unmyelinated: 1 m/s
             </text>
           </g>
@@ -19300,83 +19280,83 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
         animate={animate ? { opacity: 1, x: 0 } : undefined}
         transition={{ delay: 0.25, duration: 0.6 }}
       >
-        <g transform="translate(280, 40)">
+        <g transform="translate(350, 50)">
           <rect
             x="0"
             y="0"
-            width="265"
-            height="155"
-            rx="12"
+            width="330"
+            height="185"
+            rx="14"
             fill="url(#nerveCardGrad)"
             filter="url(#nerveShadow)"
           />
-          <text x="132" y="18" textAnchor="middle" fill="#1E293B" fontSize="10" fontWeight="700">
+          <text x="165" y="22" textAnchor="middle" fill="#1E293B" fontSize="12" fontWeight="700">
             Action Potential
           </text>
 
           {/* Graph axes */}
-          <g transform="translate(30, 35)">
+          <g transform="translate(35, 42)">
             {/* Y-axis */}
-            <line x1="0" y1="0" x2="0" y2="100" stroke="#94A3B8" strokeWidth="1" />
-            <text x="-5" y="5" textAnchor="end" fill="#64748B" fontSize="5">
+            <line x1="0" y1="0" x2="0" y2="115" stroke="#94A3B8" strokeWidth="1.5" />
+            <text x="-6" y="6" textAnchor="end" fill="#64748B" fontSize="6">
               +30
             </text>
-            <text x="-5" y="35" textAnchor="end" fill="#64748B" fontSize="5">
+            <text x="-6" y="40" textAnchor="end" fill="#64748B" fontSize="6">
               0
             </text>
-            <text x="-5" y="65" textAnchor="end" fill="#64748B" fontSize="5">
+            <text x="-6" y="75" textAnchor="end" fill="#64748B" fontSize="6">
               -55
             </text>
-            <text x="-5" y="85" textAnchor="end" fill="#64748B" fontSize="5">
+            <text x="-6" y="100" textAnchor="end" fill="#64748B" fontSize="6">
               -70
             </text>
             <text
-              x="-15"
-              y="50"
+              x="-18"
+              y="58"
               textAnchor="middle"
               fill="#64748B"
-              fontSize="5"
-              transform="rotate(-90 -15 50)"
+              fontSize="6"
+              transform="rotate(-90 -18 58)"
             >
               mV
             </text>
 
             {/* X-axis */}
-            <line x1="0" y1="80" x2="200" y2="80" stroke="#94A3B8" strokeWidth="1" />
-            <text x="100" y="95" textAnchor="middle" fill="#64748B" fontSize="5">
+            <line x1="0" y1="95" x2="240" y2="95" stroke="#94A3B8" strokeWidth="1.5" />
+            <text x="120" y="112" textAnchor="middle" fill="#64748B" fontSize="6">
               Time (ms)
             </text>
 
             {/* Threshold line */}
             <line
               x1="0"
-              y1="60"
-              x2="200"
-              y2="60"
+              y1="72"
+              x2="240"
+              y2="72"
               stroke="#F59E0B"
               strokeWidth="1"
-              strokeDasharray="3"
+              strokeDasharray="4"
             />
-            <text x="205" y="63" fill="#F59E0B" fontSize="5">
+            <text x="245" y="75" fill="#F59E0B" fontSize="6">
               Threshold
             </text>
 
             {/* Resting potential line */}
             <line
               x1="0"
-              y1="80"
-              x2="200"
-              y2="80"
+              y1="95"
+              x2="240"
+              y2="95"
               stroke="#3B82F6"
               strokeWidth="1"
-              strokeDasharray="3"
+              strokeDasharray="4"
             />
 
             {/* Action potential curve */}
             <motion.path
-              d="M0 80 L30 80 Q40 80 45 60 Q50 20 55 5 Q60 0 65 5 Q75 30 80 60 Q85 90 90 85 Q95 80 100 80 L200 80"
+              d="M0 95 L36 95 Q48 95 54 72 Q60 24 66 6 Q72 0 78 6 Q90 36 96 72 Q102 108 108 102 Q114 95 120 95 L240 95"
               stroke="url(#apLineGrad)"
-              strokeWidth="2.5"
+              strokeWidth="3"
               fill="none"
               strokeLinecap="round"
               animate={
@@ -19391,30 +19371,30 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
             />
 
             {/* Phase labels */}
-            <text x="35" y="75" fill="#3B82F6" fontSize="5">
+            <text x="42" y="88" fill="#3B82F6" fontSize="6">
               Rest
             </text>
-            <text x="55" y="15" fill="#22C55E" fontSize="5">
+            <text x="66" y="18" fill="#22C55E" fontSize="6">
               Depol.
             </text>
-            <text x="78" y="45" fill="#EF4444" fontSize="5">
+            <text x="94" y="54" fill="#EF4444" fontSize="6">
               Repol.
             </text>
-            <text x="92" y="92" fill="#8B5CF6" fontSize="5">
+            <text x="110" y="110" fill="#8B5CF6" fontSize="6">
               Hyper
             </text>
           </g>
 
           {/* Ion movement legend */}
-          <g transform="translate(155, 100)">
-            <rect x="0" y="0" width="95" height="40" rx="6" fill="#F1F5F9" />
-            <text x="47" y="12" textAnchor="middle" fill="#1E293B" fontSize="6" fontWeight="600">
+          <g transform="translate(195, 120)">
+            <rect x="0" y="0" width="115" height="48" rx="6" fill="#F1F5F9" />
+            <text x="57" y="15" textAnchor="middle" fill="#1E293B" fontSize="7" fontWeight="600">
               Ion Channels
             </text>
-            <text x="10" y="24" fill="#22C55E" fontSize="5">
+            <text x="12" y="30" fill="#22C55E" fontSize="6">
               Depol: Na⁺ in
             </text>
-            <text x="10" y="34" fill="#EF4444" fontSize="5">
+            <text x="12" y="42" fill="#EF4444" fontSize="6">
               Repol: K⁺ out
             </text>
           </g>
@@ -19427,22 +19407,22 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
         animate={animate ? { opacity: 1, y: 0 } : undefined}
         transition={{ delay: 0.3, duration: 0.6 }}
       >
-        <g transform="translate(15, 205)">
+        <g transform="translate(20, 250)">
           <rect
             x="0"
             y="0"
-            width="200"
-            height="220"
-            rx="12"
+            width="240"
+            height="255"
+            rx="14"
             fill="url(#nerveCardGrad)"
             filter="url(#nerveShadow)"
           />
-          <text x="100" y="18" textAnchor="middle" fill="#1E293B" fontSize="10" fontWeight="700">
+          <text x="120" y="22" textAnchor="middle" fill="#1E293B" fontSize="12" fontWeight="700">
             Brain Regions
           </text>
 
           {/* Brain diagram */}
-          <g transform="translate(25, 30)">
+          <g transform="translate(30, 35)">
             {/* Cerebrum */}
             <motion.path
               d="M75 15 Q20 15 15 60 Q10 100 30 120 Q50 135 75 130 Q100 135 120 120 Q140 100 135 60 Q130 15 75 15"
@@ -19509,18 +19489,18 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
           </g>
 
           {/* Function cards */}
-          <g transform="translate(10, 155)">
-            <rect x="0" y="0" width="180" height="55" rx="6" fill="#F1F5F9" />
-            <text x="90" y="12" textAnchor="middle" fill="#1E293B" fontSize="6" fontWeight="600">
+          <g transform="translate(12, 185)">
+            <rect x="0" y="0" width="215" height="60" rx="6" fill="#F1F5F9" />
+            <text x="107" y="14" textAnchor="middle" fill="#1E293B" fontSize="7" fontWeight="600">
               Key Functions
             </text>
-            <text x="10" y="25" fill="#DB2777" fontSize="5">
+            <text x="12" y="28" fill="#DB2777" fontSize="6">
               ● Cerebrum: Higher mental functions
             </text>
-            <text x="10" y="36" fill="#7C3AED" fontSize="5">
+            <text x="12" y="40" fill="#7C3AED" fontSize="6">
               ● Cerebellum: Balance, coordination
             </text>
-            <text x="10" y="47" fill="#4F46E5" fontSize="5">
+            <text x="12" y="52" fill="#4F46E5" fontSize="6">
               ● Medulla: Vital functions (HR, BP)
             </text>
           </g>
@@ -19533,22 +19513,22 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
         animate={animate ? { opacity: 1, scale: 1 } : undefined}
         transition={{ delay: 0.35, duration: 0.6 }}
       >
-        <g transform="translate(225, 205)">
+        <g transform="translate(280, 250)">
           <rect
             x="0"
             y="0"
-            width="160"
-            height="220"
-            rx="12"
+            width="195"
+            height="255"
+            rx="14"
             fill="url(#nerveCardGrad)"
             filter="url(#nerveShadow)"
           />
-          <text x="80" y="18" textAnchor="middle" fill="#1E293B" fontSize="10" fontWeight="700">
+          <text x="97" y="22" textAnchor="middle" fill="#1E293B" fontSize="12" fontWeight="700">
             Synapse
           </text>
 
           {/* Presynaptic terminal */}
-          <g transform="translate(30, 35)">
+          <g transform="translate(40, 42)">
             <path
               d="M50 0 Q80 0 90 30 Q100 60 90 90 Q80 100 50 100 Q20 100 10 70 L10 30 Q10 0 50 0"
               fill="#A78BFA"
@@ -19629,15 +19609,15 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
           </g>
 
           {/* Synaptic cleft */}
-          <g transform="translate(30, 135)">
-            <rect x="10" y="0" width="80" height="15" fill="#E2E8F0" rx="2" />
-            <text x="50" y="10" textAnchor="middle" fill="#64748B" fontSize="5">
+          <g transform="translate(40, 155)">
+            <rect x="10" y="0" width="95" height="18" fill="#E2E8F0" rx="3" />
+            <text x="57" y="12" textAnchor="middle" fill="#64748B" fontSize="6">
               Synaptic Cleft (20-40 nm)
             </text>
           </g>
 
           {/* Postsynaptic membrane */}
-          <g transform="translate(30, 155)">
+          <g transform="translate(40, 180)">
             <path
               d="M10 0 L90 0 Q100 10 90 30 Q80 50 50 50 Q20 50 10 30 Q0 10 10 0"
               fill="#F9A8D4"
@@ -19665,111 +19645,111 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
         animate={animate ? { opacity: 1, x: 0 } : undefined}
         transition={{ delay: 0.4, duration: 0.6 }}
       >
-        <g transform="translate(395, 205)">
+        <g transform="translate(495, 250)">
           <rect
             x="0"
             y="0"
-            width="150"
-            height="220"
-            rx="12"
+            width="185"
+            height="255"
+            rx="14"
             fill="url(#nerveCardGrad)"
             filter="url(#nerveShadow)"
           />
-          <text x="75" y="18" textAnchor="middle" fill="#1E293B" fontSize="9" fontWeight="700">
+          <text x="92" y="22" textAnchor="middle" fill="#1E293B" fontSize="11" fontWeight="700">
             Key Facts
           </text>
 
           {/* Neurotransmitters */}
-          <g transform="translate(10, 28)">
-            <text x="0" y="10" fill="#1E293B" fontSize="7" fontWeight="600">
+          <g transform="translate(12, 35)">
+            <text x="0" y="12" fill="#1E293B" fontSize="8" fontWeight="600">
               Neurotransmitters
             </text>
-            <g transform="translate(0, 15)">
-              <circle cx="8" cy="6" r="5" fill="#22C55E" />
-              <text x="18" y="9" fill="#64748B" fontSize="5">
+            <g transform="translate(0, 18)">
+              <circle cx="10" cy="7" r="6" fill="#22C55E" />
+              <text x="22" y="11" fill="#64748B" fontSize="6">
                 ACh - NMJ, Brain
               </text>
             </g>
-            <g transform="translate(0, 28)">
-              <circle cx="8" cy="6" r="5" fill="#8B5CF6" />
-              <text x="18" y="9" fill="#64748B" fontSize="5">
+            <g transform="translate(0, 34)">
+              <circle cx="10" cy="7" r="6" fill="#8B5CF6" />
+              <text x="22" y="11" fill="#64748B" fontSize="6">
                 Dopamine - Pleasure
               </text>
             </g>
-            <g transform="translate(0, 41)">
-              <circle cx="8" cy="6" r="5" fill="#3B82F6" />
-              <text x="18" y="9" fill="#64748B" fontSize="5">
+            <g transform="translate(0, 50)">
+              <circle cx="10" cy="7" r="6" fill="#3B82F6" />
+              <text x="22" y="11" fill="#64748B" fontSize="6">
                 Serotonin - Mood
               </text>
             </g>
-            <g transform="translate(0, 54)">
-              <circle cx="8" cy="6" r="5" fill="#EF4444" />
-              <text x="18" y="9" fill="#64748B" fontSize="5">
+            <g transform="translate(0, 66)">
+              <circle cx="10" cy="7" r="6" fill="#EF4444" />
+              <text x="22" y="11" fill="#64748B" fontSize="6">
                 GABA - Inhibitory
               </text>
             </g>
           </g>
 
           {/* ANS comparison */}
-          <g transform="translate(10, 115)">
-            <text x="65" y="10" textAnchor="middle" fill="#1E293B" fontSize="7" fontWeight="600">
+          <g transform="translate(12, 130)">
+            <text x="80" y="12" textAnchor="middle" fill="#1E293B" fontSize="8" fontWeight="600">
               Autonomic NS
             </text>
 
             {/* Sympathetic */}
-            <g transform="translate(0, 18)">
+            <g transform="translate(0, 22)">
               <rect
                 x="0"
                 y="0"
-                width="60"
-                height="70"
+                width="78"
+                height="85"
                 rx="6"
                 fill="#FEE2E2"
                 stroke="#EF4444"
-                strokeWidth="1"
+                strokeWidth="1.5"
               />
-              <text x="30" y="12" textAnchor="middle" fill="#B91C1C" fontSize="6" fontWeight="600">
+              <text x="39" y="14" textAnchor="middle" fill="#B91C1C" fontSize="7" fontWeight="600">
                 Sympathetic
               </text>
-              <text x="30" y="24" textAnchor="middle" fill="#64748B" fontSize="5">
+              <text x="39" y="27" textAnchor="middle" fill="#64748B" fontSize="6">
                 Fight or Flight
               </text>
-              <text x="5" y="36" fill="#DC2626" fontSize="5">
+              <text x="6" y="42" fill="#DC2626" fontSize="6">
                 ↑ Heart rate
               </text>
-              <text x="5" y="47" fill="#DC2626" fontSize="5">
+              <text x="6" y="55" fill="#DC2626" fontSize="6">
                 ↑ Pupil dilation
               </text>
-              <text x="5" y="58" fill="#DC2626" fontSize="5">
+              <text x="6" y="68" fill="#DC2626" fontSize="6">
                 ↓ Digestion
               </text>
             </g>
 
             {/* Parasympathetic */}
-            <g transform="translate(70, 18)">
+            <g transform="translate(82, 22)">
               <rect
                 x="0"
                 y="0"
-                width="60"
-                height="70"
+                width="78"
+                height="85"
                 rx="6"
                 fill="#DCFCE7"
                 stroke="#22C55E"
-                strokeWidth="1"
+                strokeWidth="1.5"
               />
-              <text x="30" y="12" textAnchor="middle" fill="#166534" fontSize="5" fontWeight="600">
+              <text x="39" y="14" textAnchor="middle" fill="#166534" fontSize="6" fontWeight="600">
                 Parasympathetic
               </text>
-              <text x="30" y="24" textAnchor="middle" fill="#64748B" fontSize="5">
+              <text x="39" y="27" textAnchor="middle" fill="#64748B" fontSize="6">
                 Rest & Digest
               </text>
-              <text x="5" y="36" fill="#15803D" fontSize="5">
+              <text x="6" y="42" fill="#15803D" fontSize="6">
                 ↓ Heart rate
               </text>
-              <text x="5" y="47" fill="#15803D" fontSize="5">
+              <text x="6" y="55" fill="#15803D" fontSize="6">
                 ↓ Pupil (constr.)
               </text>
-              <text x="5" y="58" fill="#15803D" fontSize="5">
+              <text x="6" y="68" fill="#15803D" fontSize="6">
                 ↑ Digestion
               </text>
             </g>
@@ -19783,15 +19763,15 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
         animate={animate ? { opacity: 1, scale: 1 } : undefined}
         transition={{ delay: 0.5, duration: 0.4 }}
       >
-        <g transform="translate(450, 145)">
-          <rect x="0" y="0" width="95" height="50" rx="8" fill="#1E293B" opacity="0.9" />
-          <text x="47" y="14" textAnchor="middle" fill="white" fontSize="6" fontWeight="600">
+        <g transform="translate(565, 175)">
+          <rect x="0" y="0" width="115" height="58" rx="10" fill="#1E293B" opacity="0.9" />
+          <text x="57" y="17" textAnchor="middle" fill="white" fontSize="7" fontWeight="600">
             Key Potentials
           </text>
-          <text x="10" y="28" fill="#3B82F6" fontSize="6">
+          <text x="12" y="34" fill="#3B82F6" fontSize="7">
             Resting: -70 mV
           </text>
-          <text x="10" y="40" fill="#22C55E" fontSize="6">
+          <text x="12" y="48" fill="#22C55E" fontSize="7">
             Action: +30 mV
           </text>
         </g>
