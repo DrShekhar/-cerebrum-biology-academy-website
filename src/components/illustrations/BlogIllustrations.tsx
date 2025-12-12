@@ -1472,107 +1472,533 @@ export function NCERTReadingIllustration({ className = '', animate = true }: Ill
   const Wrapper = animate ? motion.svg : 'svg'
   const wrapperProps = animate
     ? {
-        initial: { opacity: 0, scale: 0.9 },
+        initial: { opacity: 0, scale: 0.95 },
         animate: { opacity: 1, scale: 1 },
-        transition: { duration: 0.5 },
+        transition: { duration: 0.8, ease: 'easeOut' },
       }
     : {}
 
+  // NCERT chapter data with question counts
+  const class11Chapters = [
+    { name: 'Cell Structure', questions: 8, color: '#10B981' },
+    { name: 'Biomolecules', questions: 6, color: '#3B82F6' },
+    { name: 'Plant Kingdom', questions: 5, color: '#22C55E' },
+    { name: 'Animal Kingdom', questions: 7, color: '#F59E0B' },
+    { name: 'Morphology', questions: 4, color: '#8B5CF6' },
+  ]
+
+  const class12Chapters = [
+    { name: 'Reproduction', questions: 9, color: '#EC4899' },
+    { name: 'Genetics', questions: 12, color: '#EF4444' },
+    { name: 'Evolution', questions: 5, color: '#06B6D4' },
+    { name: 'Ecology', questions: 8, color: '#22C55E' },
+    { name: 'Biotechnology', questions: 6, color: '#8B5CF6' },
+  ]
+
+  const readingStages = [
+    { stage: '1st', title: 'Overview', desc: 'Skim through', color: '#3B82F6', icon: '👁️' },
+    { stage: '2nd', title: 'Deep Read', desc: 'Understand concepts', color: '#10B981', icon: '📖' },
+    { stage: '3rd', title: 'Revision', desc: 'Highlight & memorize', color: '#F59E0B', icon: '✨' },
+  ]
+
   return (
     <Wrapper
-      viewBox="0 0 400 280"
+      viewBox="0 0 650 480"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
+      preserveAspectRatio="xMidYMid meet"
       {...wrapperProps}
     >
-      {/* Open book - left page */}
-      <path d="M200 50 L40 70 L40 230 L200 210 Z" fill="#FFFFFF" stroke="#E2E8F0" strokeWidth="2" />
-      {/* Open book - right page */}
-      <path
-        d="M200 50 L360 70 L360 230 L200 210 Z"
-        fill="#FFFFFF"
-        stroke="#E2E8F0"
-        strokeWidth="2"
-      />
-      {/* Book spine */}
-      <rect x="195" y="50" width="10" height="160" fill="#14B8A6" />
+      <defs>
+        {/* Background gradient */}
+        <linearGradient id="ncertBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#F0FDF4" />
+          <stop offset="50%" stopColor="#ECFDF5" />
+          <stop offset="100%" stopColor="#F0F9FF" />
+        </linearGradient>
+        {/* Book cover gradients */}
+        <linearGradient id="class11BookGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#14B8A6" />
+          <stop offset="100%" stopColor="#0D9488" />
+        </linearGradient>
+        <linearGradient id="class12BookGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#8B5CF6" />
+          <stop offset="100%" stopColor="#7C3AED" />
+        </linearGradient>
+        {/* Highlight gradient */}
+        <linearGradient id="highlightGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stopColor="#FCD34D" />
+          <stop offset="100%" stopColor="#FBBF24" />
+        </linearGradient>
+        {/* Page shadow */}
+        <filter id="ncertBookShadow" x="-20%" y="-20%" width="140%" height="140%">
+          <feDropShadow dx="3" dy="3" stdDeviation="4" floodColor="#000" floodOpacity="0.15" />
+        </filter>
+        {/* Glow effect */}
+        <filter id="ncertGlow">
+          <feGaussianBlur stdDeviation="3" result="glow" />
+          <feMerge>
+            <feMergeNode in="glow" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+      </defs>
 
-      {/* Left page content - Class 11 */}
-      <text x="120" y="90" fontSize="10" fill="#14B8A6" textAnchor="middle" fontWeight="bold">
-        Class 11
-      </text>
-      {[0, 1, 2, 3, 4].map((i) => (
-        <motion.rect
-          key={`left-${i}`}
-          x="55"
-          y={105 + i * 22}
-          width={100 - i * 10}
-          height="8"
-          rx="2"
-          fill={i === 1 ? '#FCD34D' : '#E2E8F0'}
-          animate={animate && i === 1 ? { opacity: [0.5, 1, 0.5] } : undefined}
-          transition={{ duration: 1.5, repeat: Infinity }}
-        />
-      ))}
+      {/* Background */}
+      <rect width="650" height="480" fill="url(#ncertBgGrad)" rx="16" />
 
-      {/* Right page content - Class 12 */}
-      <text x="280" y="90" fontSize="10" fill="#8B5CF6" textAnchor="middle" fontWeight="bold">
-        Class 12
-      </text>
-      {[0, 1, 2, 3, 4].map((i) => (
-        <motion.rect
-          key={`right-${i}`}
-          x="215"
-          y={105 + i * 22}
-          width={100 - i * 10}
-          height="8"
-          rx="2"
-          fill={i === 2 ? '#FCD34D' : '#E2E8F0'}
-          animate={animate && i === 2 ? { opacity: [0.5, 1, 0.5] } : undefined}
-          transition={{ duration: 1.5, repeat: Infinity, delay: 0.5 }}
-        />
-      ))}
+      {/* Decorative patterns */}
+      <g opacity="0.1">
+        {[...Array(8)].map((_, i) => (
+          <circle key={i} cx={50 + i * 80} cy="25" r="15" fill="#14B8A6" />
+        ))}
+        {[...Array(8)].map((_, i) => (
+          <circle key={i} cx={90 + i * 80} cy="460" r="12" fill="#8B5CF6" />
+        ))}
+      </g>
 
-      {/* Highlighter */}
+      {/* Title Section */}
       <motion.g
-        animate={animate ? { x: [-5, 20, -5], rotate: [-10, 10, -10] } : undefined}
-        transition={{ duration: 3, repeat: Infinity }}
-        style={{ transformOrigin: '320px 150px' }}
+        initial={animate ? { opacity: 0, y: -20 } : undefined}
+        animate={animate ? { opacity: 1, y: 0 } : undefined}
+        transition={{ delay: 0.2, duration: 0.6 }}
       >
-        <rect x="310" y="140" width="60" height="15" rx="3" fill="#FCD34D" />
-        <rect x="365" y="143" width="15" height="9" rx="2" fill="#FBBF24" />
-        <rect x="310" y="143" width="8" height="9" fill="#F59E0B" />
+        <rect x="175" y="15" width="300" height="50" rx="25" fill="#14B8A6" opacity="0.1" />
+        <text x="325" y="45" fontSize="20" fill="#0D9488" textAnchor="middle" fontWeight="bold">
+          NCERT READING STRATEGY
+        </text>
+        <text x="325" y="58" fontSize="10" fill="#5EEAD4" textAnchor="middle">
+          The Foundation of NEET Biology
+        </text>
       </motion.g>
 
-      {/* NCERT badge */}
+      {/* === LEFT SECTION: Class 11 Book Stack === */}
       <motion.g
-        animate={animate ? { rotate: [-5, 5, -5] } : undefined}
-        transition={{ duration: 4, repeat: Infinity }}
-        style={{ transformOrigin: '80px 240px' }}
+        initial={animate ? { opacity: 0, x: -30 } : undefined}
+        animate={animate ? { opacity: 1, x: 0 } : undefined}
+        transition={{ delay: 0.3, duration: 0.6 }}
       >
-        <rect x="40" y="225" width="80" height="35" rx="8" fill="#14B8A6" />
-        <text x="80" y="243" fontSize="10" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
+        {/* Class 11 Book */}
+        <g filter="url(#ncertBookShadow)">
+          {/* Book spine */}
+          <rect x="25" y="85" width="20" height="170" fill="#0D9488" rx="2" />
+          {/* Book cover */}
+          <rect x="45" y="80" width="130" height="180" fill="url(#class11BookGrad)" rx="4" />
+          {/* Book pages edge */}
+          <rect x="175" y="85" width="8" height="170" fill="#F5F5F5" />
+          {/* Book page lines */}
+          {[...Array(15)].map((_, i) => (
+            <line
+              key={i}
+              x1="176"
+              y1={90 + i * 11}
+              x2="182"
+              y2={90 + i * 11}
+              stroke="#E5E5E5"
+              strokeWidth="1"
+            />
+          ))}
+        </g>
+
+        {/* NCERT Logo on book */}
+        <circle cx="110" cy="130" r="25" fill="#FFFFFF" opacity="0.9" />
+        <text x="110" y="127" fontSize="9" fill="#0D9488" textAnchor="middle" fontWeight="bold">
           NCERT
         </text>
-        <text x="80" y="255" fontSize="7" fill="#D1FAE5" textAnchor="middle">
+        <text x="110" y="140" fontSize="7" fill="#14B8A6" textAnchor="middle">
           Biology
         </text>
+
+        {/* Class label */}
+        <rect x="60" y="160" width="90" height="28" rx="4" fill="#FFFFFF" opacity="0.95" />
+        <text x="105" y="178" fontSize="14" fill="#0D9488" textAnchor="middle" fontWeight="bold">
+          Class 11
+        </text>
+
+        {/* Book decoration */}
+        <motion.rect
+          x="60"
+          y="200"
+          width="90"
+          height="6"
+          rx="3"
+          fill="#FFFFFF"
+          opacity="0.6"
+          animate={animate ? { opacity: [0.4, 0.8, 0.4] } : undefined}
+          transition={{ duration: 2, repeat: Infinity }}
+        />
+
+        {/* Chapter list for Class 11 */}
+        <g transform="translate(20, 275)">
+          <rect
+            x="0"
+            y="0"
+            width="170"
+            height="130"
+            rx="8"
+            fill="#FFFFFF"
+            stroke="#E2E8F0"
+            strokeWidth="1"
+          />
+          <text x="85" y="20" fontSize="10" fill="#0D9488" textAnchor="middle" fontWeight="bold">
+            Important Chapters
+          </text>
+          {class11Chapters.map((ch, i) => (
+            <g key={i} transform={`translate(10, ${32 + i * 19})`}>
+              <motion.rect
+                x="0"
+                y="0"
+                width={Math.min(ch.questions * 12, 110)}
+                height="14"
+                rx="3"
+                fill={ch.color}
+                opacity="0.8"
+                initial={animate ? { scaleX: 0 } : undefined}
+                animate={animate ? { scaleX: 1 } : undefined}
+                transition={{ delay: 0.5 + i * 0.1, duration: 0.5 }}
+                style={{ transformOrigin: 'left' }}
+              />
+              <text x="5" y="11" fontSize="7" fill="#FFFFFF" fontWeight="500">
+                {ch.name}
+              </text>
+              <text x="145" y="11" fontSize="8" fill="#6B7280" textAnchor="end">
+                {ch.questions}Q
+              </text>
+            </g>
+          ))}
+        </g>
       </motion.g>
 
-      {/* Reading tips */}
-      <g transform="translate(280, 225)">
-        <rect x="0" y="0" width="100" height="40" rx="8" fill="#EDE9FE" />
-        <text x="50" y="15" fontSize="7" fill="#6366F1" textAnchor="middle" fontWeight="bold">
-          3 READINGS
+      {/* === CENTER SECTION: Reading Strategy Flow === */}
+      <motion.g
+        initial={animate ? { opacity: 0, y: 20 } : undefined}
+        animate={animate ? { opacity: 1, y: 0 } : undefined}
+        transition={{ delay: 0.4, duration: 0.6 }}
+      >
+        {/* 3-Stage Reading Process */}
+        <g transform="translate(210, 80)">
+          <rect
+            x="0"
+            y="0"
+            width="230"
+            height="180"
+            rx="12"
+            fill="#FFFFFF"
+            stroke="#E2E8F0"
+            strokeWidth="2"
+          />
+
+          {/* Header */}
+          <rect x="0" y="0" width="230" height="35" rx="12" fill="#F0FDF4" />
+          <text x="115" y="23" fontSize="12" fill="#059669" textAnchor="middle" fontWeight="bold">
+            📚 3-Reading Strategy
+          </text>
+
+          {/* Reading stages */}
+          {readingStages.map((stage, i) => (
+            <motion.g
+              key={i}
+              transform={`translate(15, ${45 + i * 45})`}
+              initial={animate ? { opacity: 0, x: -20 } : undefined}
+              animate={animate ? { opacity: 1, x: 0 } : undefined}
+              transition={{ delay: 0.6 + i * 0.15, duration: 0.4 }}
+            >
+              {/* Stage circle */}
+              <motion.circle
+                cx="20"
+                cy="18"
+                r="18"
+                fill={stage.color}
+                animate={animate ? { scale: [1, 1.1, 1] } : undefined}
+                transition={{ delay: i * 0.5, duration: 1.5, repeat: Infinity }}
+              />
+              <text x="20" y="14" fontSize="10" fill="#FFFFFF" textAnchor="middle">
+                {stage.icon}
+              </text>
+              <text x="20" y="26" fontSize="8" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
+                {stage.stage}
+              </text>
+
+              {/* Stage details */}
+              <text x="50" y="14" fontSize="11" fill="#1F2937" fontWeight="bold">
+                {stage.title}
+              </text>
+              <text x="50" y="28" fontSize="9" fill="#6B7280">
+                {stage.desc}
+              </text>
+
+              {/* Connector arrow */}
+              {i < 2 && (
+                <motion.path
+                  d="M20 38 L20 42"
+                  stroke={stage.color}
+                  strokeWidth="2"
+                  strokeDasharray="3,2"
+                  animate={animate ? { strokeDashoffset: [0, -10] } : undefined}
+                  transition={{ duration: 1, repeat: Infinity }}
+                />
+              )}
+            </motion.g>
+          ))}
+        </g>
+
+        {/* NEET Statistics Card */}
+        <g transform="translate(210, 275)">
+          <rect
+            x="0"
+            y="0"
+            width="230"
+            height="130"
+            rx="12"
+            fill="#FEF3C7"
+            stroke="#FCD34D"
+            strokeWidth="2"
+          />
+
+          {/* Header */}
+          <rect x="0" y="0" width="230" height="32" rx="12" fill="#F59E0B" />
+          <text x="115" y="21" fontSize="11" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
+            🎯 NEET Questions from NCERT
+          </text>
+
+          {/* Stats */}
+          <g transform="translate(15, 45)">
+            <motion.g
+              animate={animate ? { scale: [1, 1.05, 1] } : undefined}
+              transition={{ duration: 2, repeat: Infinity }}
+            >
+              <circle cx="30" cy="25" r="28" fill="#10B981" />
+              <text
+                x="30"
+                y="22"
+                fontSize="16"
+                fill="#FFFFFF"
+                textAnchor="middle"
+                fontWeight="bold"
+              >
+                95%
+              </text>
+              <text x="30" y="35" fontSize="7" fill="#D1FAE5" textAnchor="middle">
+                Direct
+              </text>
+            </motion.g>
+
+            <g transform="translate(75, 0)">
+              <text x="0" y="12" fontSize="9" fill="#92400E" fontWeight="bold">
+                Direct from NCERT:
+              </text>
+              <text x="0" y="28" fontSize="8" fill="#78350F">
+                • Diagrams & flowcharts
+              </text>
+              <text x="0" y="42" fontSize="8" fill="#78350F">
+                • Line-by-line questions
+              </text>
+              <text x="0" y="56" fontSize="8" fill="#78350F">
+                • NCERT examples in MCQs
+              </text>
+            </g>
+          </g>
+
+          {/* Tip badge */}
+          <motion.g
+            animate={animate ? { y: [0, -3, 0] } : undefined}
+            transition={{ duration: 2, repeat: Infinity }}
+          >
+            <rect x="60" y="105" width="110" height="20" rx="10" fill="#059669" />
+            <text x="115" y="118" fontSize="8" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
+              Master NCERT First! 📖
+            </text>
+          </motion.g>
+        </g>
+      </motion.g>
+
+      {/* === RIGHT SECTION: Class 12 Book Stack === */}
+      <motion.g
+        initial={animate ? { opacity: 0, x: 30 } : undefined}
+        animate={animate ? { opacity: 1, x: 0 } : undefined}
+        transition={{ delay: 0.3, duration: 0.6 }}
+      >
+        {/* Class 12 Book */}
+        <g filter="url(#ncertBookShadow)" transform="translate(455, 0)">
+          {/* Book spine */}
+          <rect x="25" y="85" width="20" height="170" fill="#6D28D9" rx="2" />
+          {/* Book cover */}
+          <rect x="45" y="80" width="130" height="180" fill="url(#class12BookGrad)" rx="4" />
+          {/* Book pages edge */}
+          <rect x="175" y="85" width="8" height="170" fill="#F5F5F5" />
+          {/* Book page lines */}
+          {[...Array(15)].map((_, i) => (
+            <line
+              key={i}
+              x1="176"
+              y1={90 + i * 11}
+              x2="182"
+              y2={90 + i * 11}
+              stroke="#E5E5E5"
+              strokeWidth="1"
+            />
+          ))}
+        </g>
+
+        {/* NCERT Logo on book */}
+        <circle cx="565" cy="130" r="25" fill="#FFFFFF" opacity="0.9" />
+        <text x="565" y="127" fontSize="9" fill="#7C3AED" textAnchor="middle" fontWeight="bold">
+          NCERT
         </text>
-        <text x="50" y="28" fontSize="6" fill="#7C3AED" textAnchor="middle">
-          1. Understand 2. Mark
+        <text x="565" y="140" fontSize="7" fill="#8B5CF6" textAnchor="middle">
+          Biology
         </text>
-        <text x="50" y="38" fontSize="6" fill="#7C3AED" textAnchor="middle">
-          3. Memorize
+
+        {/* Class label */}
+        <rect x="515" y="160" width="90" height="28" rx="4" fill="#FFFFFF" opacity="0.95" />
+        <text x="560" y="178" fontSize="14" fill="#7C3AED" textAnchor="middle" fontWeight="bold">
+          Class 12
         </text>
-      </g>
+
+        {/* Book decoration */}
+        <motion.rect
+          x="515"
+          y="200"
+          width="90"
+          height="6"
+          rx="3"
+          fill="#FFFFFF"
+          opacity="0.6"
+          animate={animate ? { opacity: [0.4, 0.8, 0.4] } : undefined}
+          transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
+        />
+
+        {/* Chapter list for Class 12 */}
+        <g transform="translate(455, 275)">
+          <rect
+            x="0"
+            y="0"
+            width="170"
+            height="130"
+            rx="8"
+            fill="#FFFFFF"
+            stroke="#E2E8F0"
+            strokeWidth="1"
+          />
+          <text x="85" y="20" fontSize="10" fill="#7C3AED" textAnchor="middle" fontWeight="bold">
+            High Weightage Topics
+          </text>
+          {class12Chapters.map((ch, i) => (
+            <g key={i} transform={`translate(10, ${32 + i * 19})`}>
+              <motion.rect
+                x="0"
+                y="0"
+                width={Math.min(ch.questions * 10, 110)}
+                height="14"
+                rx="3"
+                fill={ch.color}
+                opacity="0.8"
+                initial={animate ? { scaleX: 0 } : undefined}
+                animate={animate ? { scaleX: 1 } : undefined}
+                transition={{ delay: 0.5 + i * 0.1, duration: 0.5 }}
+                style={{ transformOrigin: 'left' }}
+              />
+              <text x="5" y="11" fontSize="7" fill="#FFFFFF" fontWeight="500">
+                {ch.name}
+              </text>
+              <text x="145" y="11" fontSize="8" fill="#6B7280" textAnchor="end">
+                {ch.questions}Q
+              </text>
+            </g>
+          ))}
+        </g>
+      </motion.g>
+
+      {/* === BOTTOM SECTION: Highlighting Tools === */}
+      <motion.g
+        transform="translate(20, 420)"
+        initial={animate ? { opacity: 0, y: 20 } : undefined}
+        animate={animate ? { opacity: 1, y: 0 } : undefined}
+        transition={{ delay: 0.7, duration: 0.5 }}
+      >
+        {/* Highlighter pens */}
+        <g>
+          {/* Yellow highlighter */}
+          <motion.g
+            animate={animate ? { rotate: [-3, 3, -3], x: [0, 5, 0] } : undefined}
+            transition={{ duration: 2, repeat: Infinity }}
+          >
+            <rect x="0" y="10" width="80" height="18" rx="4" fill="url(#highlightGrad)" />
+            <rect x="75" y="13" width="20" height="12" rx="2" fill="#F59E0B" />
+            <rect x="0" y="13" width="12" height="12" fill="#EAB308" rx="2" />
+          </motion.g>
+
+          {/* Pink highlighter */}
+          <motion.g
+            animate={animate ? { rotate: [3, -3, 3], x: [0, -5, 0] } : undefined}
+            transition={{ duration: 2.5, repeat: Infinity }}
+          >
+            <rect x="110" y="10" width="80" height="18" rx="4" fill="#F9A8D4" />
+            <rect x="185" y="13" width="20" height="12" rx="2" fill="#EC4899" />
+            <rect x="110" y="13" width="12" height="12" fill="#DB2777" rx="2" />
+          </motion.g>
+
+          {/* Green highlighter */}
+          <motion.g
+            animate={animate ? { rotate: [-2, 4, -2], x: [0, 3, 0] } : undefined}
+            transition={{ duration: 2.2, repeat: Infinity }}
+          >
+            <rect x="220" y="10" width="80" height="18" rx="4" fill="#86EFAC" />
+            <rect x="295" y="13" width="20" height="12" rx="2" fill="#22C55E" />
+            <rect x="220" y="13" width="12" height="12" fill="#16A34A" rx="2" />
+          </motion.g>
+        </g>
+
+        {/* Quick tips */}
+        <g transform="translate(330, 0)">
+          <rect x="0" y="5" width="290" height="35" rx="6" fill="#EDE9FE" />
+          <text x="20" y="22" fontSize="9" fill="#7C3AED" fontWeight="bold">
+            💡 Pro Tips:
+          </text>
+          <text x="85" y="22" fontSize="8" fill="#6D28D9">
+            Mark definitions • Underline diagrams • Note NEET PYQs
+          </text>
+          <text x="145" y="34" fontSize="7" fill="#8B5CF6">
+            Read every line - NEET tests exact NCERT wordings!
+          </text>
+        </g>
+      </motion.g>
+
+      {/* Floating elements for visual interest */}
+      {animate && (
+        <>
+          <motion.circle
+            cx="50"
+            cy="50"
+            r="8"
+            fill="#14B8A6"
+            opacity="0.3"
+            animate={{ y: [0, -10, 0], opacity: [0.3, 0.6, 0.3] }}
+            transition={{ duration: 3, repeat: Infinity }}
+          />
+          <motion.circle
+            cx="600"
+            cy="60"
+            r="6"
+            fill="#8B5CF6"
+            opacity="0.3"
+            animate={{ y: [0, -8, 0], opacity: [0.3, 0.5, 0.3] }}
+            transition={{ duration: 2.5, repeat: Infinity, delay: 0.5 }}
+          />
+          <motion.rect
+            x="320"
+            y="440"
+            width="10"
+            height="10"
+            rx="2"
+            fill="#F59E0B"
+            opacity="0.4"
+            animate={{ rotate: [0, 180, 360], scale: [1, 1.2, 1] }}
+            transition={{ duration: 4, repeat: Infinity }}
+          />
+        </>
+      )}
     </Wrapper>
   )
 }
@@ -2067,119 +2493,447 @@ export function ToppersSecretsIllustration({ className = '', animate = true }: I
   const Wrapper = animate ? motion.svg : 'svg'
   const wrapperProps = animate
     ? {
-        initial: { opacity: 0, scale: 0.9 },
+        initial: { opacity: 0, scale: 0.95 },
         animate: { opacity: 1, scale: 1 },
-        transition: { duration: 0.6 },
+        transition: { duration: 0.8, ease: 'easeOut' },
       }
     : {}
 
+  // Topper secrets data
+  const secrets = [
+    { num: '01', title: 'NCERT Mastery', desc: 'Read 3x minimum', icon: '📚', color: '#10B981' },
+    {
+      num: '02',
+      title: 'Consistent Schedule',
+      desc: '6-8 hrs daily',
+      icon: '⏰',
+      color: '#3B82F6',
+    },
+    {
+      num: '03',
+      title: 'Mock Test Practice',
+      desc: '100+ full tests',
+      icon: '📝',
+      color: '#8B5CF6',
+    },
+    { num: '04', title: 'Error Analysis', desc: 'Track mistakes', icon: '🔍', color: '#EF4444' },
+    { num: '05', title: 'Revision Cycles', desc: 'Every 15 days', icon: '🔄', color: '#F59E0B' },
+    { num: '06', title: 'Healthy Lifestyle', desc: 'Sleep 7-8 hrs', icon: '💪', color: '#EC4899' },
+  ]
+
+  // Success metrics
+  const metrics = [
+    { label: 'Study Hours', value: '2000+', sub: 'Total hours', color: '#3B82F6' },
+    { label: 'PYQs Solved', value: '5000+', sub: 'Questions', color: '#10B981' },
+    { label: 'Mock Tests', value: '100+', sub: 'Full-length', color: '#8B5CF6' },
+  ]
+
+  // Top rank achievements
+  const achievements = [
+    { rank: 'AIR 1', name: 'Soyeb Aftab', score: '720/720', year: '2020' },
+    { rank: 'AIR 1', name: 'Mrinal Kutteri', score: '720/720', year: '2021' },
+    { rank: 'AIR 1', name: 'Tanishka', score: '715/720', year: '2022' },
+  ]
+
   return (
     <Wrapper
-      viewBox="0 0 400 280"
+      viewBox="0 0 700 520"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
+      preserveAspectRatio="xMidYMid meet"
       {...wrapperProps}
     >
-      {/* Background glow */}
-      <ellipse cx="200" cy="150" rx="160" ry="120" fill="#FEF3C7" opacity="0.3" />
+      <defs>
+        {/* Background gradient */}
+        <linearGradient id="toppersBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#FEF3C7" />
+          <stop offset="50%" stopColor="#FFFBEB" />
+          <stop offset="100%" stopColor="#FDF4FF" />
+        </linearGradient>
+        {/* Trophy gradient */}
+        <linearGradient id="trophyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stopColor="#FCD34D" />
+          <stop offset="50%" stopColor="#FBBF24" />
+          <stop offset="100%" stopColor="#F59E0B" />
+        </linearGradient>
+        {/* Gold shine */}
+        <linearGradient id="goldShine" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#FEF08A" />
+          <stop offset="50%" stopColor="#FDE047" />
+          <stop offset="100%" stopColor="#EAB308" />
+        </linearGradient>
+        {/* Card shadow */}
+        <filter id="toppersCardShadow" x="-10%" y="-10%" width="120%" height="120%">
+          <feDropShadow dx="2" dy="3" stdDeviation="4" floodColor="#000" floodOpacity="0.1" />
+        </filter>
+        {/* Glow effect */}
+        <filter id="toppersGlow">
+          <feGaussianBlur stdDeviation="6" result="glow" />
+          <feMerge>
+            <feMergeNode in="glow" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+        {/* Star sparkle */}
+        <filter id="starSparkle">
+          <feGaussianBlur stdDeviation="2" result="blur" />
+          <feMerge>
+            <feMergeNode in="blur" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+      </defs>
 
-      {/* Trophy */}
+      {/* Background */}
+      <rect width="700" height="520" fill="url(#toppersBgGrad)" rx="16" />
+
+      {/* Decorative sparkles */}
+      <g opacity="0.15">
+        {[...Array(12)].map((_, i) => (
+          <motion.circle
+            key={i}
+            cx={40 + i * 55}
+            cy={20 + (i % 3) * 10}
+            r={4 + (i % 2) * 2}
+            fill="#F59E0B"
+            animate={animate ? { opacity: [0.3, 0.8, 0.3], scale: [0.8, 1.2, 0.8] } : undefined}
+            transition={{ duration: 2 + i * 0.2, repeat: Infinity, delay: i * 0.15 }}
+          />
+        ))}
+      </g>
+
+      {/* Title Section */}
       <motion.g
-        animate={animate ? { y: [-3, 3, -3] } : undefined}
-        transition={{ duration: 2, repeat: Infinity }}
+        initial={animate ? { opacity: 0, y: -20 } : undefined}
+        animate={animate ? { opacity: 1, y: 0 } : undefined}
+        transition={{ delay: 0.2, duration: 0.6 }}
       >
-        {/* Trophy cup */}
-        <path d="M150 100 L160 180 L240 180 L250 100 Z" fill="#FCD34D" />
-        <ellipse cx="200" cy="100" rx="50" ry="15" fill="#FBBF24" />
-        {/* Trophy handles */}
-        <path d="M150 120 C120 120 120 160 150 160" stroke="#F59E0B" strokeWidth="8" fill="none" />
-        <path d="M250 120 C280 120 280 160 250 160" stroke="#F59E0B" strokeWidth="8" fill="none" />
-        {/* Trophy base */}
-        <rect x="175" y="180" width="50" height="15" fill="#F59E0B" />
-        <rect x="160" y="195" width="80" height="10" rx="2" fill="#D97706" />
-        <rect x="150" y="205" width="100" height="15" rx="4" fill="#92400E" />
+        <rect x="175" y="15" width="350" height="55" rx="27" fill="#F59E0B" opacity="0.15" />
+        <text x="350" y="45" fontSize="24" fill="#92400E" textAnchor="middle" fontWeight="bold">
+          🏆 NEET Toppers Secrets
+        </text>
+        <text x="350" y="62" fontSize="11" fill="#B45309" textAnchor="middle">
+          Proven Strategies from AIR 1-100 Rankers
+        </text>
+      </motion.g>
 
-        {/* Star on trophy */}
-        <motion.text
-          x="200"
-          y="150"
-          fontSize="30"
-          textAnchor="middle"
-          animate={animate ? { opacity: [0.7, 1, 0.7] } : undefined}
-          transition={{ duration: 1.5, repeat: Infinity }}
+      {/* === LEFT SECTION: Trophy & Achievements === */}
+      <motion.g
+        initial={animate ? { opacity: 0, x: -30 } : undefined}
+        animate={animate ? { opacity: 1, x: 0 } : undefined}
+        transition={{ delay: 0.3, duration: 0.6 }}
+      >
+        <g filter="url(#toppersCardShadow)">
+          <rect x="20" y="85" width="200" height="280" rx="16" fill="#FFFFFF" />
+        </g>
+
+        <text x="120" y="108" fontSize="13" fill="#374151" textAnchor="middle" fontWeight="bold">
+          Hall of Fame
+        </text>
+
+        {/* Trophy illustration */}
+        <motion.g
+          animate={animate ? { y: [-3, 3, -3] } : undefined}
+          transition={{ duration: 3, repeat: Infinity }}
         >
-          ⭐
-        </motion.text>
+          {/* Trophy cup */}
+          <path d="M90 130 L100 185 L140 185 L150 130 Z" fill="url(#trophyGrad)" />
+          <ellipse cx="120" cy="130" r="30" ry="10" fill="#FDE047" />
+          {/* Trophy handles */}
+          <path d="M90 145 C65 145 65 175 90 175" stroke="#F59E0B" strokeWidth="6" fill="none" />
+          <path
+            d="M150 145 C175 145 175 175 150 175"
+            stroke="#F59E0B"
+            strokeWidth="6"
+            fill="none"
+          />
+          {/* Trophy base */}
+          <rect x="105" y="185" width="30" height="10" fill="#D97706" />
+          <rect x="95" y="195" width="50" height="8" rx="2" fill="#B45309" />
+          <rect x="85" y="203" width="70" height="12" rx="3" fill="#92400E" />
+
+          {/* Number 1 on trophy */}
+          <motion.text
+            x="120"
+            y="168"
+            fontSize="28"
+            fill="#FFFFFF"
+            textAnchor="middle"
+            fontWeight="bold"
+            animate={animate ? { opacity: [0.8, 1, 0.8] } : undefined}
+            transition={{ duration: 1.5, repeat: Infinity }}
+          >
+            1
+          </motion.text>
+        </motion.g>
+
+        {/* Recent AIR 1 holders */}
+        <g transform="translate(25, 225)">
+          <text x="95" y="0" fontSize="10" fill="#6B7280" textAnchor="middle" fontWeight="600">
+            Recent AIR 1 Holders
+          </text>
+          {achievements.map((ach, i) => (
+            <motion.g
+              key={i}
+              transform={`translate(0, ${18 + i * 35})`}
+              initial={animate ? { opacity: 0, x: -10 } : undefined}
+              animate={animate ? { opacity: 1, x: 0 } : undefined}
+              transition={{ delay: 0.5 + i * 0.15 }}
+            >
+              <rect x="0" y="0" width="170" height="30" rx="8" fill="#FEF3C7" />
+              <text x="10" y="13" fontSize="8" fill="#92400E" fontWeight="bold">
+                {ach.rank}
+              </text>
+              <text x="45" y="13" fontSize="8" fill="#374151">
+                {ach.name}
+              </text>
+              <text x="10" y="24" fontSize="7" fill="#059669" fontWeight="600">
+                {ach.score}
+              </text>
+              <text x="60" y="24" fontSize="7" fill="#6B7280">
+                NEET {ach.year}
+              </text>
+              <motion.circle
+                cx="155"
+                cy="15"
+                r="8"
+                fill="#FCD34D"
+                animate={animate ? { scale: [1, 1.15, 1] } : undefined}
+                transition={{ duration: 1.5, repeat: Infinity, delay: i * 0.3 }}
+              />
+              <text x="155" y="18" fontSize="10" textAnchor="middle">
+                🥇
+              </text>
+            </motion.g>
+          ))}
+        </g>
       </motion.g>
 
-      {/* Light bulbs - secrets */}
+      {/* === CENTER SECTION: 6 Secrets Grid === */}
       <motion.g
-        animate={animate ? { opacity: [0.5, 1, 0.5], scale: [0.95, 1.05, 0.95] } : undefined}
-        transition={{ duration: 2, repeat: Infinity }}
+        initial={animate ? { opacity: 0, y: 20 } : undefined}
+        animate={animate ? { opacity: 1, y: 0 } : undefined}
+        transition={{ delay: 0.4, duration: 0.6 }}
       >
-        <circle cx="80" cy="80" r="25" fill="#FCD34D" />
-        <rect x="72" y="105" width="16" height="10" fill="#94A3B8" />
-        <text x="80" y="85" fontSize="20" textAnchor="middle">
-          💡
+        <g filter="url(#toppersCardShadow)">
+          <rect x="235" y="85" width="310" height="280" rx="16" fill="#FFFFFF" />
+        </g>
+
+        <text x="390" y="108" fontSize="13" fill="#374151" textAnchor="middle" fontWeight="bold">
+          6 Success Secrets
         </text>
-        <text x="80" y="130" fontSize="7" fill="#78350F" textAnchor="middle">
-          Secret 1
-        </text>
+
+        {/* Secrets grid - 2 columns, 3 rows */}
+        <g transform="translate(250, 120)">
+          {secrets.map((secret, i) => (
+            <motion.g
+              key={i}
+              transform={`translate(${(i % 2) * 145}, ${Math.floor(i / 2) * 80})`}
+              initial={animate ? { opacity: 0, scale: 0.9 } : undefined}
+              animate={animate ? { opacity: 1, scale: 1 } : undefined}
+              transition={{ delay: 0.5 + i * 0.1, duration: 0.4 }}
+            >
+              {/* Secret card */}
+              <rect
+                x="0"
+                y="0"
+                width="135"
+                height="70"
+                rx="10"
+                fill={`${secret.color}15`}
+                stroke={secret.color}
+                strokeWidth="1.5"
+              />
+
+              {/* Number badge */}
+              <circle cx="20" cy="20" r="14" fill={secret.color} />
+              <text
+                x="20"
+                y="24"
+                fontSize="10"
+                fill="#FFFFFF"
+                textAnchor="middle"
+                fontWeight="bold"
+              >
+                {secret.num}
+              </text>
+
+              {/* Icon */}
+              <text x="110" y="25" fontSize="20" textAnchor="middle">
+                {secret.icon}
+              </text>
+
+              {/* Title & description */}
+              <text x="42" y="22" fontSize="10" fill="#1F2937" fontWeight="bold">
+                {secret.title}
+              </text>
+              <text x="10" y="50" fontSize="9" fill="#6B7280">
+                {secret.desc}
+              </text>
+
+              {/* Animated glow on hover effect */}
+              <motion.rect
+                x="0"
+                y="0"
+                width="135"
+                height="70"
+                rx="10"
+                fill={secret.color}
+                opacity="0"
+                animate={animate ? { opacity: [0, 0.1, 0] } : undefined}
+                transition={{ duration: 3, repeat: Infinity, delay: i * 0.5 }}
+              />
+            </motion.g>
+          ))}
+        </g>
       </motion.g>
 
+      {/* === RIGHT SECTION: Success Metrics === */}
       <motion.g
-        animate={animate ? { opacity: [0.5, 1, 0.5], scale: [0.95, 1.05, 0.95] } : undefined}
-        transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
+        initial={animate ? { opacity: 0, x: 30 } : undefined}
+        animate={animate ? { opacity: 1, x: 0 } : undefined}
+        transition={{ delay: 0.5, duration: 0.6 }}
       >
-        <circle cx="320" cy="80" r="25" fill="#FCD34D" />
-        <rect x="312" y="105" width="16" height="10" fill="#94A3B8" />
-        <text x="320" y="85" fontSize="20" textAnchor="middle">
-          💡
+        <g filter="url(#toppersCardShadow)">
+          <rect x="560" y="85" width="125" height="280" rx="16" fill="#FFFFFF" />
+        </g>
+
+        <text x="622" y="108" fontSize="12" fill="#374151" textAnchor="middle" fontWeight="bold">
+          Success Metrics
         </text>
-        <text x="320" y="130" fontSize="7" fill="#78350F" textAnchor="middle">
-          Secret 2
-        </text>
+
+        {/* Metrics */}
+        <g transform="translate(570, 125)">
+          {metrics.map((metric, i) => (
+            <motion.g
+              key={i}
+              transform={`translate(0, ${i * 85})`}
+              initial={animate ? { opacity: 0, y: 10 } : undefined}
+              animate={animate ? { opacity: 1, y: 0 } : undefined}
+              transition={{ delay: 0.6 + i * 0.15 }}
+            >
+              <rect x="0" y="0" width="105" height="75" rx="10" fill={`${metric.color}15`} />
+
+              <text
+                x="52"
+                y="20"
+                fontSize="9"
+                fill={metric.color}
+                textAnchor="middle"
+                fontWeight="600"
+              >
+                {metric.label}
+              </text>
+
+              <motion.text
+                x="52"
+                y="48"
+                fontSize="24"
+                fill={metric.color}
+                textAnchor="middle"
+                fontWeight="bold"
+                animate={animate ? { scale: [1, 1.05, 1] } : undefined}
+                transition={{ duration: 2, repeat: Infinity, delay: i * 0.3 }}
+              >
+                {metric.value}
+              </motion.text>
+
+              <text x="52" y="65" fontSize="8" fill="#6B7280" textAnchor="middle">
+                {metric.sub}
+              </text>
+            </motion.g>
+          ))}
+        </g>
       </motion.g>
 
+      {/* === BOTTOM SECTION: Daily Routine Timeline === */}
       <motion.g
-        animate={animate ? { opacity: [0.5, 1, 0.5], scale: [0.95, 1.05, 0.95] } : undefined}
-        transition={{ duration: 2, repeat: Infinity, delay: 1 }}
+        initial={animate ? { opacity: 0, y: 30 } : undefined}
+        animate={animate ? { opacity: 1, y: 0 } : undefined}
+        transition={{ delay: 0.6, duration: 0.6 }}
       >
-        <circle cx="80" cy="200" r="25" fill="#FCD34D" />
-        <rect x="72" y="225" width="16" height="10" fill="#94A3B8" />
-        <text x="80" y="205" fontSize="20" textAnchor="middle">
-          💡
+        <g filter="url(#toppersCardShadow)">
+          <rect x="20" y="380" width="665" height="125" rx="16" fill="#FFFFFF" />
+        </g>
+
+        <text x="350" y="402" fontSize="13" fill="#374151" textAnchor="middle" fontWeight="bold">
+          Ideal Daily Routine of NEET Toppers
         </text>
-        <text x="80" y="250" fontSize="7" fill="#78350F" textAnchor="middle">
-          Secret 3
-        </text>
+
+        {/* Timeline */}
+        <g transform="translate(40, 420)">
+          {/* Timeline line */}
+          <motion.line
+            x1="0"
+            y1="30"
+            x2="620"
+            y2="30"
+            stroke="#E5E7EB"
+            strokeWidth="4"
+            strokeLinecap="round"
+            initial={animate ? { pathLength: 0 } : undefined}
+            animate={animate ? { pathLength: 1 } : undefined}
+            transition={{ delay: 0.8, duration: 1 }}
+          />
+
+          {/* Timeline points */}
+          {[
+            { time: '5 AM', activity: 'Wake Up', icon: '🌅', x: 0 },
+            { time: '5-7 AM', activity: 'Revision', icon: '📖', x: 90 },
+            { time: '8-12', activity: 'New Topics', icon: '📚', x: 180 },
+            { time: '2-5 PM', activity: 'Practice', icon: '✍️', x: 280 },
+            { time: '6-8 PM', activity: 'Mock Test', icon: '📝', x: 380 },
+            { time: '9-10 PM', activity: 'Analysis', icon: '🔍', x: 480 },
+            { time: '10 PM', activity: 'Sleep', icon: '😴', x: 580 },
+          ].map((point, i) => (
+            <motion.g
+              key={i}
+              transform={`translate(${point.x}, 0)`}
+              initial={animate ? { opacity: 0, y: -10 } : undefined}
+              animate={animate ? { opacity: 1, y: 0 } : undefined}
+              transition={{ delay: 0.9 + i * 0.1 }}
+            >
+              <motion.circle
+                cx="20"
+                cy="30"
+                r="12"
+                fill="#F59E0B"
+                animate={animate ? { scale: [1, 1.15, 1] } : undefined}
+                transition={{ duration: 2, repeat: Infinity, delay: i * 0.2 }}
+              />
+              <text x="20" y="34" fontSize="12" textAnchor="middle">
+                {point.icon}
+              </text>
+              <text x="20" y="55" fontSize="8" fill="#374151" textAnchor="middle" fontWeight="600">
+                {point.time}
+              </text>
+              <text x="20" y="68" fontSize="7" fill="#6B7280" textAnchor="middle">
+                {point.activity}
+              </text>
+            </motion.g>
+          ))}
+        </g>
       </motion.g>
 
-      <motion.g
-        animate={animate ? { opacity: [0.5, 1, 0.5], scale: [0.95, 1.05, 0.95] } : undefined}
-        transition={{ duration: 2, repeat: Infinity, delay: 1.5 }}
-      >
-        <circle cx="320" cy="200" r="25" fill="#FCD34D" />
-        <rect x="312" y="225" width="16" height="10" fill="#94A3B8" />
-        <text x="320" y="205" fontSize="20" textAnchor="middle">
-          💡
-        </text>
-        <text x="320" y="250" fontSize="7" fill="#78350F" textAnchor="middle">
-          Secret 4
-        </text>
-      </motion.g>
-
-      {/* Toppers badge */}
-      <motion.g
-        animate={animate ? { scale: [1, 1.1, 1] } : undefined}
-        transition={{ duration: 2, repeat: Infinity }}
-      >
-        <rect x="145" y="235" width="110" height="30" rx="15" fill="#6366F1" />
-        <text x="200" y="255" fontSize="10" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
-          🏆 TOPPERS SECRETS
-        </text>
-      </motion.g>
+      {/* Floating stars decoration */}
+      {animate && (
+        <>
+          {[...Array(5)].map((_, i) => (
+            <motion.text
+              key={i}
+              x={30 + i * 160}
+              y={50 + (i % 2) * 430}
+              fontSize="16"
+              opacity="0.4"
+              animate={{ y: [0, -10, 0], opacity: [0.3, 0.6, 0.3], rotate: [0, 15, 0] }}
+              transition={{ duration: 3 + i * 0.5, repeat: Infinity, delay: i * 0.3 }}
+            >
+              ⭐
+            </motion.text>
+          ))}
+        </>
+      )}
     </Wrapper>
   )
 }
@@ -2192,115 +2946,485 @@ export function ChapterWeightageIllustration({
   const Wrapper = animate ? motion.svg : 'svg'
   const wrapperProps = animate
     ? {
-        initial: { opacity: 0, rotate: -10 },
-        animate: { opacity: 1, rotate: 0 },
-        transition: { duration: 0.6 },
+        initial: { opacity: 0, scale: 0.95 },
+        animate: { opacity: 1, scale: 1 },
+        transition: { duration: 0.8, ease: 'easeOut' },
       }
     : {}
 
+  // Chapter weightage data with NEET-specific information
+  const chapterData = [
+    { name: 'Human Physiology', questions: 18, percentage: 20, color: '#EF4444', priority: 'HIGH' },
+    {
+      name: 'Genetics & Evolution',
+      questions: 16,
+      percentage: 18,
+      color: '#F97316',
+      priority: 'HIGH',
+    },
+    {
+      name: 'Ecology & Environment',
+      questions: 12,
+      percentage: 13,
+      color: '#10B981',
+      priority: 'HIGH',
+    },
+    { name: 'Reproduction', questions: 11, percentage: 12, color: '#3B82F6', priority: 'MED' },
+    { name: 'Cell Biology', questions: 9, percentage: 10, color: '#8B5CF6', priority: 'MED' },
+    { name: 'Plant Physiology', questions: 8, percentage: 9, color: '#EC4899', priority: 'MED' },
+    { name: 'Diversity', questions: 7, percentage: 8, color: '#06B6D4', priority: 'LOW' },
+    { name: 'Biotechnology', questions: 5, percentage: 6, color: '#84CC16', priority: 'MED' },
+    { name: 'Others', questions: 4, percentage: 4, color: '#6366F1', priority: 'LOW' },
+  ]
+
+  // Year-wise trend data
+  const yearData = [
+    { year: '2022', botany: 42, zoology: 48 },
+    { year: '2023', botany: 45, zoology: 45 },
+    { year: '2024', botany: 43, zoology: 47 },
+  ]
+
+  // Pie chart segments (calculated angles)
+  const pieSegments = [
+    { start: 0, end: 72, color: '#EF4444' }, // Human Physiology 20%
+    { start: 72, end: 137, color: '#F97316' }, // Genetics 18%
+    { start: 137, end: 184, color: '#10B981' }, // Ecology 13%
+    { start: 184, end: 227, color: '#3B82F6' }, // Reproduction 12%
+    { start: 227, end: 263, color: '#8B5CF6' }, // Cell Biology 10%
+    { start: 263, end: 295, color: '#EC4899' }, // Plant Physiology 9%
+    { start: 295, end: 324, color: '#06B6D4' }, // Diversity 8%
+    { start: 324, end: 346, color: '#84CC16' }, // Biotechnology 6%
+    { start: 346, end: 360, color: '#6366F1' }, // Others 4%
+  ]
+
+  const polarToCartesian = (
+    centerX: number,
+    centerY: number,
+    radius: number,
+    angleInDegrees: number
+  ) => {
+    const angleInRadians = ((angleInDegrees - 90) * Math.PI) / 180
+    return {
+      x: centerX + radius * Math.cos(angleInRadians),
+      y: centerY + radius * Math.sin(angleInRadians),
+    }
+  }
+
+  const describeArc = (
+    x: number,
+    y: number,
+    radius: number,
+    startAngle: number,
+    endAngle: number
+  ) => {
+    const start = polarToCartesian(x, y, radius, endAngle)
+    const end = polarToCartesian(x, y, radius, startAngle)
+    const largeArcFlag = endAngle - startAngle <= 180 ? '0' : '1'
+    return `M ${x} ${y} L ${start.x} ${start.y} A ${radius} ${radius} 0 ${largeArcFlag} 0 ${end.x} ${end.y} Z`
+  }
+
   return (
     <Wrapper
-      viewBox="0 0 400 280"
+      viewBox="0 0 700 520"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
+      preserveAspectRatio="xMidYMid meet"
       {...wrapperProps}
     >
-      {/* Pie chart */}
-      <motion.g
-        animate={animate ? { rotate: [0, 5, 0] } : undefined}
-        transition={{ duration: 4, repeat: Infinity }}
-        style={{ transformOrigin: '150px 140px' }}
-      >
-        {/* Human Physiology - 20% */}
-        <path d="M150 140 L150 50 A90 90 0 0 1 227 95 Z" fill="#EF4444" />
-        {/* Genetics - 18% */}
-        <path d="M150 140 L227 95 A90 90 0 0 1 240 140 Z" fill="#F97316" />
-        {/* Ecology - 12% */}
-        <path d="M150 140 L240 140 A90 90 0 0 1 210 210 Z" fill="#14B8A6" />
-        {/* Reproduction - 12% */}
-        <path d="M150 140 L210 210 A90 90 0 0 1 120 220 Z" fill="#3B82F6" />
-        {/* Cell Biology - 10% */}
-        <path d="M150 140 L120 220 A90 90 0 0 1 60 160 Z" fill="#8B5CF6" />
-        {/* Others - 28% */}
-        <path d="M150 140 L60 160 A90 90 0 0 1 150 50 Z" fill="#6366F1" />
-      </motion.g>
+      <defs>
+        {/* Background gradient */}
+        <linearGradient id="weightBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#FEF3C7" />
+          <stop offset="50%" stopColor="#FFF7ED" />
+          <stop offset="100%" stopColor="#F0FDF4" />
+        </linearGradient>
+        {/* Card shadow */}
+        <filter id="weightCardShadow" x="-10%" y="-10%" width="120%" height="120%">
+          <feDropShadow dx="2" dy="3" stdDeviation="4" floodColor="#000" floodOpacity="0.1" />
+        </filter>
+        {/* Glow effect */}
+        <filter id="weightGlow">
+          <feGaussianBlur stdDeviation="4" result="glow" />
+          <feMerge>
+            <feMergeNode in="glow" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+        {/* Priority badge gradients */}
+        <linearGradient id="highPriorityGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stopColor="#EF4444" />
+          <stop offset="100%" stopColor="#DC2626" />
+        </linearGradient>
+        <linearGradient id="medPriorityGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stopColor="#F59E0B" />
+          <stop offset="100%" stopColor="#D97706" />
+        </linearGradient>
+        <linearGradient id="lowPriorityGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stopColor="#10B981" />
+          <stop offset="100%" stopColor="#059669" />
+        </linearGradient>
+      </defs>
 
-      {/* Legend */}
-      <g transform="translate(260, 40)">
-        <rect x="0" y="0" width="12" height="12" rx="2" fill="#EF4444" />
-        <text x="18" y="10" fontSize="8" fill="#374151">
-          Human Physiology 20%
-        </text>
+      {/* Background */}
+      <rect width="700" height="520" fill="url(#weightBgGrad)" rx="16" />
 
-        <rect x="0" y="20" width="12" height="12" rx="2" fill="#F97316" />
-        <text x="18" y="30" fontSize="8" fill="#374151">
-          Genetics 18%
-        </text>
-
-        <rect x="0" y="40" width="12" height="12" rx="2" fill="#14B8A6" />
-        <text x="18" y="50" fontSize="8" fill="#374151">
-          Ecology 12%
-        </text>
-
-        <rect x="0" y="60" width="12" height="12" rx="2" fill="#3B82F6" />
-        <text x="18" y="70" fontSize="8" fill="#374151">
-          Reproduction 12%
-        </text>
-
-        <rect x="0" y="80" width="12" height="12" rx="2" fill="#8B5CF6" />
-        <text x="18" y="90" fontSize="8" fill="#374151">
-          Cell Biology 10%
-        </text>
-
-        <rect x="0" y="100" width="12" height="12" rx="2" fill="#6366F1" />
-        <text x="18" y="110" fontSize="8" fill="#374151">
-          Others 28%
-        </text>
+      {/* Decorative patterns */}
+      <g opacity="0.05">
+        {[...Array(10)].map((_, i) => (
+          <circle key={i} cx={35 + i * 70} cy="15" r="20" fill="#F59E0B" />
+        ))}
       </g>
 
-      {/* Center text */}
+      {/* Title Section */}
       <motion.g
-        animate={animate ? { scale: [1, 1.1, 1] } : undefined}
-        transition={{ duration: 2, repeat: Infinity }}
+        initial={animate ? { opacity: 0, y: -20 } : undefined}
+        animate={animate ? { opacity: 1, y: 0 } : undefined}
+        transition={{ delay: 0.2, duration: 0.6 }}
       >
-        <circle cx="150" cy="140" r="35" fill="#FFFFFF" />
-        <text x="150" y="135" fontSize="10" fill="#1E293B" textAnchor="middle">
-          NEET
+        <rect x="175" y="15" width="350" height="55" rx="27" fill="#F59E0B" opacity="0.15" />
+        <text x="350" y="42" fontSize="22" fill="#B45309" textAnchor="middle" fontWeight="bold">
+          NEET Biology Chapter Weightage
         </text>
-        <text x="150" y="150" fontSize="12" fill="#14B8A6" textAnchor="middle" fontWeight="bold">
-          Biology
+        <text x="350" y="60" fontSize="11" fill="#D97706" textAnchor="middle">
+          Based on Last 5 Years Analysis (2020-2024)
         </text>
       </motion.g>
 
-      {/* Questions breakdown */}
+      {/* === LEFT SECTION: Pie Chart === */}
       <motion.g
-        animate={animate ? { y: [-2, 2, -2] } : undefined}
-        transition={{ duration: 2, repeat: Infinity }}
+        initial={animate ? { opacity: 0, x: -30 } : undefined}
+        animate={animate ? { opacity: 1, x: 0 } : undefined}
+        transition={{ delay: 0.3, duration: 0.6 }}
       >
-        <rect
-          x="260"
-          y="170"
-          width="120"
-          height="90"
-          rx="8"
-          fill="#F0FDFA"
-          stroke="#14B8A6"
-          strokeWidth="2"
-        />
-        <text x="320" y="190" fontSize="9" fill="#0F766E" textAnchor="middle" fontWeight="bold">
-          Questions: 90
-        </text>
-        <text x="320" y="210" fontSize="8" fill="#374151" textAnchor="middle">
-          Class 11: 40-45 Qs
-        </text>
-        <text x="320" y="225" fontSize="8" fill="#374151" textAnchor="middle">
-          Class 12: 45-50 Qs
-        </text>
-        <text x="320" y="245" fontSize="9" fill="#14B8A6" textAnchor="middle" fontWeight="bold">
-          Marks: 360
+        <g filter="url(#weightCardShadow)">
+          <rect x="20" y="85" width="250" height="250" rx="16" fill="#FFFFFF" />
+        </g>
+
+        {/* Pie Chart */}
+        <motion.g
+          animate={animate ? { rotate: [0, 3, 0] } : undefined}
+          transition={{ duration: 8, repeat: Infinity }}
+          style={{ transformOrigin: '145px 210px' }}
+        >
+          {pieSegments.map((segment, i) => (
+            <motion.path
+              key={i}
+              d={describeArc(145, 210, 85, segment.start, segment.end)}
+              fill={segment.color}
+              initial={animate ? { scale: 0, opacity: 0 } : undefined}
+              animate={animate ? { scale: 1, opacity: 1 } : undefined}
+              transition={{ delay: 0.4 + i * 0.08, duration: 0.4 }}
+              style={{ transformOrigin: '145px 210px' }}
+            />
+          ))}
+        </motion.g>
+
+        {/* Center circle */}
+        <motion.g
+          animate={animate ? { scale: [1, 1.05, 1] } : undefined}
+          transition={{ duration: 3, repeat: Infinity }}
+        >
+          <circle cx="145" cy="210" r="45" fill="#FFFFFF" stroke="#E5E7EB" strokeWidth="2" />
+          <text x="145" y="200" fontSize="12" fill="#6B7280" textAnchor="middle">
+            Total
+          </text>
+          <text x="145" y="218" fontSize="22" fill="#1F2937" textAnchor="middle" fontWeight="bold">
+            90
+          </text>
+          <text x="145" y="232" fontSize="10" fill="#F59E0B" textAnchor="middle" fontWeight="600">
+            Questions
+          </text>
+        </motion.g>
+
+        {/* Card title */}
+        <text x="145" y="108" fontSize="13" fill="#374151" textAnchor="middle" fontWeight="bold">
+          Topic-wise Distribution
         </text>
       </motion.g>
+
+      {/* === CENTER SECTION: Bar Chart === */}
+      <motion.g
+        initial={animate ? { opacity: 0, y: 20 } : undefined}
+        animate={animate ? { opacity: 1, y: 0 } : undefined}
+        transition={{ delay: 0.4, duration: 0.6 }}
+      >
+        <g filter="url(#weightCardShadow)">
+          <rect x="285" y="85" width="260" height="250" rx="16" fill="#FFFFFF" />
+        </g>
+
+        <text x="415" y="108" fontSize="13" fill="#374151" textAnchor="middle" fontWeight="bold">
+          Questions per Chapter
+        </text>
+
+        {/* Bar chart */}
+        <g transform="translate(300, 125)">
+          {chapterData.slice(0, 7).map((chapter, i) => (
+            <g key={i} transform={`translate(0, ${i * 28})`}>
+              {/* Chapter name */}
+              <text x="0" y="12" fontSize="8" fill="#6B7280">
+                {chapter.name.length > 14 ? chapter.name.slice(0, 14) + '...' : chapter.name}
+              </text>
+
+              {/* Bar background */}
+              <rect x="90" y="2" width="130" height="16" rx="4" fill="#F3F4F6" />
+
+              {/* Animated bar */}
+              <motion.rect
+                x="90"
+                y="2"
+                width={0}
+                height="16"
+                rx="4"
+                fill={chapter.color}
+                initial={animate ? { width: 0 } : undefined}
+                animate={animate ? { width: (chapter.questions / 18) * 130 } : undefined}
+                transition={{ delay: 0.5 + i * 0.1, duration: 0.6, ease: 'easeOut' }}
+              />
+
+              {/* Question count */}
+              <motion.text
+                x={95 + (chapter.questions / 18) * 130}
+                y="14"
+                fontSize="9"
+                fill="#374151"
+                fontWeight="600"
+                initial={animate ? { opacity: 0 } : undefined}
+                animate={animate ? { opacity: 1 } : undefined}
+                transition={{ delay: 1 + i * 0.1 }}
+              >
+                {chapter.questions}Q
+              </motion.text>
+
+              {/* Priority badge */}
+              <rect
+                x="225"
+                y="3"
+                width="28"
+                height="14"
+                rx="7"
+                fill={
+                  chapter.priority === 'HIGH'
+                    ? 'url(#highPriorityGrad)'
+                    : chapter.priority === 'MED'
+                      ? 'url(#medPriorityGrad)'
+                      : 'url(#lowPriorityGrad)'
+                }
+              />
+              <text
+                x="239"
+                y="13"
+                fontSize="6"
+                fill="#FFFFFF"
+                textAnchor="middle"
+                fontWeight="bold"
+              >
+                {chapter.priority}
+              </text>
+            </g>
+          ))}
+        </g>
+
+        {/* Priority legend */}
+        <g transform="translate(300, 315)">
+          <text x="0" y="0" fontSize="8" fill="#6B7280">
+            Priority:
+          </text>
+          <rect x="40" y="-8" width="30" height="12" rx="6" fill="url(#highPriorityGrad)" />
+          <text x="55" y="0" fontSize="7" fill="#FFFFFF" textAnchor="middle">
+            HIGH
+          </text>
+          <rect x="80" y="-8" width="30" height="12" rx="6" fill="url(#medPriorityGrad)" />
+          <text x="95" y="0" fontSize="7" fill="#FFFFFF" textAnchor="middle">
+            MED
+          </text>
+          <rect x="120" y="-8" width="30" height="12" rx="6" fill="url(#lowPriorityGrad)" />
+          <text x="135" y="0" fontSize="7" fill="#FFFFFF" textAnchor="middle">
+            LOW
+          </text>
+        </g>
+      </motion.g>
+
+      {/* === RIGHT SECTION: Key Stats === */}
+      <motion.g
+        initial={animate ? { opacity: 0, x: 30 } : undefined}
+        animate={animate ? { opacity: 1, x: 0 } : undefined}
+        transition={{ delay: 0.5, duration: 0.6 }}
+      >
+        <g filter="url(#weightCardShadow)">
+          <rect x="560" y="85" width="125" height="250" rx="16" fill="#FFFFFF" />
+        </g>
+
+        <text x="622" y="108" fontSize="12" fill="#374151" textAnchor="middle" fontWeight="bold">
+          Key Stats
+        </text>
+
+        {/* Total marks */}
+        <g transform="translate(575, 125)">
+          <rect x="0" y="0" width="95" height="55" rx="10" fill="#FEF3C7" />
+          <text x="47" y="22" fontSize="9" fill="#92400E" textAnchor="middle">
+            Total Marks
+          </text>
+          <motion.text
+            x="47"
+            y="44"
+            fontSize="22"
+            fill="#B45309"
+            textAnchor="middle"
+            fontWeight="bold"
+            animate={animate ? { scale: [1, 1.1, 1] } : undefined}
+            transition={{ duration: 2, repeat: Infinity }}
+          >
+            360
+          </motion.text>
+        </g>
+
+        {/* Class distribution */}
+        <g transform="translate(575, 190)">
+          <rect x="0" y="0" width="95" height="65" rx="10" fill="#ECFDF5" />
+          <text x="47" y="18" fontSize="9" fill="#065F46" textAnchor="middle" fontWeight="600">
+            Class Split
+          </text>
+          <g transform="translate(10, 28)">
+            <rect x="0" y="0" width="35" height="28" rx="6" fill="#10B981" />
+            <text x="17" y="12" fontSize="8" fill="#FFFFFF" textAnchor="middle">
+              11th
+            </text>
+            <text x="17" y="23" fontSize="10" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
+              42
+            </text>
+          </g>
+          <g transform="translate(50, 28)">
+            <rect x="0" y="0" width="35" height="28" rx="6" fill="#8B5CF6" />
+            <text x="17" y="12" fontSize="8" fill="#FFFFFF" textAnchor="middle">
+              12th
+            </text>
+            <text x="17" y="23" fontSize="10" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
+              48
+            </text>
+          </g>
+        </g>
+
+        {/* Top scoring chapter */}
+        <g transform="translate(575, 265)">
+          <rect x="0" y="0" width="95" height="55" rx="10" fill="#FEE2E2" />
+          <text x="47" y="18" fontSize="8" fill="#991B1B" textAnchor="middle" fontWeight="600">
+            Top Scoring
+          </text>
+          <text x="47" y="34" fontSize="9" fill="#B91C1C" textAnchor="middle">
+            Human
+          </text>
+          <text x="47" y="46" fontSize="9" fill="#B91C1C" textAnchor="middle">
+            Physiology
+          </text>
+        </g>
+      </motion.g>
+
+      {/* === BOTTOM SECTION: Year-wise Comparison === */}
+      <motion.g
+        initial={animate ? { opacity: 0, y: 30 } : undefined}
+        animate={animate ? { opacity: 1, y: 0 } : undefined}
+        transition={{ delay: 0.6, duration: 0.6 }}
+      >
+        <g filter="url(#weightCardShadow)">
+          <rect x="20" y="350" width="665" height="155" rx="16" fill="#FFFFFF" />
+        </g>
+
+        <text x="350" y="375" fontSize="13" fill="#374151" textAnchor="middle" fontWeight="bold">
+          Year-wise Distribution (Botany vs Zoology)
+        </text>
+
+        {/* Year comparison bars */}
+        <g transform="translate(60, 400)">
+          {yearData.map((year, i) => (
+            <g key={i} transform={`translate(${i * 200}, 0)`}>
+              {/* Year label */}
+              <text x="75" y="0" fontSize="12" fill="#1F2937" textAnchor="middle" fontWeight="bold">
+                NEET {year.year}
+              </text>
+
+              {/* Botany bar */}
+              <g transform="translate(0, 15)">
+                <text x="0" y="15" fontSize="9" fill="#22C55E">
+                  Botany
+                </text>
+                <rect x="45" y="5" width="100" height="18" rx="4" fill="#DCFCE7" />
+                <motion.rect
+                  x="45"
+                  y="5"
+                  width={0}
+                  height="18"
+                  rx="4"
+                  fill="#22C55E"
+                  initial={animate ? { width: 0 } : undefined}
+                  animate={animate ? { width: year.botany * 2 } : undefined}
+                  transition={{ delay: 0.8 + i * 0.15, duration: 0.5 }}
+                />
+                <text x={50 + year.botany * 2} y="18" fontSize="9" fill="#166534" fontWeight="600">
+                  {year.botany}
+                </text>
+              </g>
+
+              {/* Zoology bar */}
+              <g transform="translate(0, 40)">
+                <text x="0" y="15" fontSize="9" fill="#EF4444">
+                  Zoology
+                </text>
+                <rect x="45" y="5" width="100" height="18" rx="4" fill="#FEE2E2" />
+                <motion.rect
+                  x="45"
+                  y="5"
+                  width={0}
+                  height="18"
+                  rx="4"
+                  fill="#EF4444"
+                  initial={animate ? { width: 0 } : undefined}
+                  animate={animate ? { width: year.zoology * 2 } : undefined}
+                  transition={{ delay: 0.9 + i * 0.15, duration: 0.5 }}
+                />
+                <text x={50 + year.zoology * 2} y="18" fontSize="9" fill="#991B1B" fontWeight="600">
+                  {year.zoology}
+                </text>
+              </g>
+            </g>
+          ))}
+        </g>
+
+        {/* Insight badge */}
+        <motion.g
+          animate={animate ? { y: [0, -3, 0] } : undefined}
+          transition={{ duration: 2.5, repeat: Infinity }}
+        >
+          <rect x="250" y="480" width="200" height="22" rx="11" fill="#F59E0B" />
+          <text x="350" y="494" fontSize="9" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
+            💡 Zoology slightly dominates in NEET
+          </text>
+        </motion.g>
+      </motion.g>
+
+      {/* Floating decorations */}
+      {animate && (
+        <>
+          <motion.circle
+            cx="30"
+            cy="50"
+            r="6"
+            fill="#F59E0B"
+            opacity="0.4"
+            animate={{ y: [0, -8, 0], opacity: [0.4, 0.7, 0.4] }}
+            transition={{ duration: 3, repeat: Infinity }}
+          />
+          <motion.circle
+            cx="670"
+            cy="40"
+            r="5"
+            fill="#10B981"
+            opacity="0.3"
+            animate={{ y: [0, -6, 0], opacity: [0.3, 0.5, 0.3] }}
+            transition={{ duration: 2.5, repeat: Infinity, delay: 0.5 }}
+          />
+        </>
+      )}
     </Wrapper>
   )
 }
