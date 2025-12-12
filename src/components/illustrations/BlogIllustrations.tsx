@@ -831,106 +831,378 @@ export function MistakesToAvoidIllustration({ className = '', animate = true }: 
   const Wrapper = animate ? motion.svg : 'svg'
   const wrapperProps = animate
     ? {
-        initial: { opacity: 0, y: 10 },
-        animate: { opacity: 1, y: 0 },
-        transition: { duration: 0.5 },
+        initial: { opacity: 0, scale: 0.95 },
+        animate: { opacity: 1, scale: 1 },
+        transition: { duration: 0.8, ease: 'easeOut' },
       }
     : {}
 
   return (
     <Wrapper
-      viewBox="0 0 400 280"
+      viewBox="0 0 600 450"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
+      preserveAspectRatio="xMidYMid meet"
       {...wrapperProps}
     >
+      <defs>
+        {/* Background gradient */}
+        <linearGradient id="mistakeBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#FEF2F2" />
+          <stop offset="50%" stopColor="#FFF7ED" />
+          <stop offset="100%" stopColor="#FFFBEB" />
+        </linearGradient>
+        {/* Card gradient */}
+        <linearGradient id="mistakeCardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stopColor="#FFFFFF" />
+          <stop offset="100%" stopColor="#FEF2F2" />
+        </linearGradient>
+        {/* Success card gradient */}
+        <linearGradient id="successCardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stopColor="#FFFFFF" />
+          <stop offset="100%" stopColor="#ECFDF5" />
+        </linearGradient>
+        {/* Warning gradient */}
+        <linearGradient id="warningGrad" x1="50%" y1="0%" x2="50%" y2="100%">
+          <stop offset="0%" stopColor="#FDE68A" />
+          <stop offset="100%" stopColor="#F59E0B" />
+        </linearGradient>
+        {/* Shadow filters */}
+        <filter id="mistakeShadow" x="-20%" y="-20%" width="140%" height="140%">
+          <feDropShadow dx="0" dy="4" stdDeviation="6" floodOpacity="0.15" />
+        </filter>
+        <filter id="errorGlow" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="2" result="blur" />
+          <feMerge>
+            <feMergeNode in="blur" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+      </defs>
+
       {/* Background */}
-      <rect x="20" y="20" width="360" height="240" rx="16" fill="#FEF2F2" opacity="0.5" />
+      <rect width="600" height="450" fill="url(#mistakeBgGrad)" />
 
-      {/* Warning triangle */}
+      {/* Decorative elements */}
+      <circle cx="50" cy="50" r="80" fill="#EF4444" opacity="0.05" />
+      <circle cx="550" cy="400" r="100" fill="#F59E0B" opacity="0.05" />
+
+      {/* Title */}
       <motion.g
-        animate={animate ? { scale: [1, 1.05, 1] } : undefined}
-        transition={{ duration: 2, repeat: Infinity }}
+        initial={animate ? { opacity: 0, y: -20 } : undefined}
+        animate={animate ? { opacity: 1, y: 0 } : undefined}
+        transition={{ delay: 0.1, duration: 0.5 }}
       >
-        <path d="M200 40 L260 140 L140 140 Z" fill="#FCD34D" stroke="#F97316" strokeWidth="3" />
-        <text x="200" y="115" fontSize="40" textAnchor="middle" fill="#1E293B">
-          !
+        <rect
+          x="150"
+          y="12"
+          width="300"
+          height="45"
+          rx="22"
+          fill="#DC2626"
+          filter="url(#mistakeShadow)"
+        />
+        <text x="300" y="42" fontSize="16" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
+          ⚠️ Top 10 NEET Mistakes to Avoid
         </text>
       </motion.g>
 
-      {/* Mistake 1 - No revision */}
+      {/* LEFT COLUMN - DON'T DO */}
       <motion.g
-        animate={animate ? { x: [-2, 2, -2] } : undefined}
-        transition={{ duration: 3, repeat: Infinity }}
+        initial={animate ? { opacity: 0, x: -30 } : undefined}
+        animate={animate ? { opacity: 1, x: 0 } : undefined}
+        transition={{ delay: 0.2, duration: 0.6 }}
       >
-        <circle cx="80" cy="180" r="30" fill="#EF4444" opacity="0.2" />
-        <circle cx="80" cy="180" r="22" fill="#FFFFFF" stroke="#EF4444" strokeWidth="2" />
-        <line x1="65" y1="165" x2="95" y2="195" stroke="#EF4444" strokeWidth="3" />
-        <text x="80" y="225" fontSize="8" fill="#7F1D1D" textAnchor="middle">
-          No Revision
+        <rect
+          x="20"
+          y="70"
+          width="270"
+          height="365"
+          rx="12"
+          fill="url(#mistakeCardGrad)"
+          filter="url(#mistakeShadow)"
+        />
+        <rect x="20" y="70" width="270" height="35" rx="12" fill="#DC2626" />
+        <text x="155" y="93" fontSize="12" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
+          ❌ COMMON MISTAKES
+        </text>
+
+        {/* Mistake 1 */}
+        <g transform="translate(35, 115)">
+          <motion.circle
+            cx="18"
+            cy="18"
+            r="18"
+            fill="#FEE2E2"
+            stroke="#EF4444"
+            strokeWidth="2"
+            animate={animate ? { scale: [1, 1.1, 1] } : undefined}
+            transition={{ duration: 2, repeat: Infinity }}
+          />
+          <text x="18" y="23" fontSize="14" textAnchor="middle" fill="#DC2626" fontWeight="bold">
+            1
+          </text>
+          <text x="50" y="15" fontSize="10" fill="#1E293B" fontWeight="600">
+            Skipping NCERT
+          </text>
+          <text x="50" y="28" fontSize="8" fill="#64748B">
+            85% questions are from NCERT!
+          </text>
+          <rect x="180" y="5" width="60" height="22" rx="4" fill="#FEE2E2" />
+          <text x="210" y="20" fontSize="8" fill="#DC2626" textAnchor="middle" fontWeight="600">
+            FATAL ☠️
+          </text>
+        </g>
+
+        {/* Mistake 2 */}
+        <g transform="translate(35, 165)">
+          <circle cx="18" cy="18" r="18" fill="#FEE2E2" stroke="#EF4444" strokeWidth="2" />
+          <text x="18" y="23" fontSize="14" textAnchor="middle" fill="#DC2626" fontWeight="bold">
+            2
+          </text>
+          <text x="50" y="15" fontSize="10" fill="#1E293B" fontWeight="600">
+            Too Many Books
+          </text>
+          <text x="50" y="28" fontSize="8" fill="#64748B">
+            Stick to 2-3 quality resources
+          </text>
+          <rect x="180" y="5" width="60" height="22" rx="4" fill="#FFEDD5" />
+          <text x="210" y="20" fontSize="8" fill="#EA580C" textAnchor="middle" fontWeight="600">
+            HIGH ⚠️
+          </text>
+        </g>
+
+        {/* Mistake 3 */}
+        <g transform="translate(35, 215)">
+          <circle cx="18" cy="18" r="18" fill="#FEE2E2" stroke="#EF4444" strokeWidth="2" />
+          <text x="18" y="23" fontSize="14" textAnchor="middle" fill="#DC2626" fontWeight="bold">
+            3
+          </text>
+          <text x="50" y="15" fontSize="10" fill="#1E293B" fontWeight="600">
+            No Revision Plan
+          </text>
+          <text x="50" y="28" fontSize="8" fill="#64748B">
+            Forgetting curve is real!
+          </text>
+          <rect x="180" y="5" width="60" height="22" rx="4" fill="#FEE2E2" />
+          <text x="210" y="20" fontSize="8" fill="#DC2626" textAnchor="middle" fontWeight="600">
+            FATAL ☠️
+          </text>
+        </g>
+
+        {/* Mistake 4 */}
+        <g transform="translate(35, 265)">
+          <circle cx="18" cy="18" r="18" fill="#FEE2E2" stroke="#EF4444" strokeWidth="2" />
+          <text x="18" y="23" fontSize="14" textAnchor="middle" fill="#DC2626" fontWeight="bold">
+            4
+          </text>
+          <text x="50" y="15" fontSize="10" fill="#1E293B" fontWeight="600">
+            Ignoring Mock Tests
+          </text>
+          <text x="50" y="28" fontSize="8" fill="#64748B">
+            Practice under exam conditions
+          </text>
+          <rect x="180" y="5" width="60" height="22" rx="4" fill="#FFEDD5" />
+          <text x="210" y="20" fontSize="8" fill="#EA580C" textAnchor="middle" fontWeight="600">
+            HIGH ⚠️
+          </text>
+        </g>
+
+        {/* Mistake 5 */}
+        <g transform="translate(35, 315)">
+          <circle cx="18" cy="18" r="18" fill="#FEE2E2" stroke="#EF4444" strokeWidth="2" />
+          <text x="18" y="23" fontSize="14" textAnchor="middle" fill="#DC2626" fontWeight="bold">
+            5
+          </text>
+          <text x="50" y="15" fontSize="10" fill="#1E293B" fontWeight="600">
+            Selective Study
+          </text>
+          <text x="50" y="28" fontSize="8" fill="#64748B">
+            Every chapter matters in NEET
+          </text>
+          <rect x="180" y="5" width="60" height="22" rx="4" fill="#FEF3C7" />
+          <text x="210" y="20" fontSize="8" fill="#D97706" textAnchor="middle" fontWeight="600">
+            MED ⚡
+          </text>
+        </g>
+
+        {/* Mistake 6 */}
+        <g transform="translate(35, 365)">
+          <circle cx="18" cy="18" r="18" fill="#FEE2E2" stroke="#EF4444" strokeWidth="2" />
+          <text x="18" y="23" fontSize="14" textAnchor="middle" fill="#DC2626" fontWeight="bold">
+            6
+          </text>
+          <text x="50" y="15" fontSize="10" fill="#1E293B" fontWeight="600">
+            Last Minute Panic
+          </text>
+          <text x="50" y="28" fontSize="8" fill="#64748B">
+            Stay calm, trust your prep
+          </text>
+          <rect x="180" y="5" width="60" height="22" rx="4" fill="#FEF3C7" />
+          <text x="210" y="20" fontSize="8" fill="#D97706" textAnchor="middle" fontWeight="600">
+            MED ⚡
+          </text>
+        </g>
+      </motion.g>
+
+      {/* RIGHT COLUMN - DO THIS INSTEAD */}
+      <motion.g
+        initial={animate ? { opacity: 0, x: 30 } : undefined}
+        animate={animate ? { opacity: 1, x: 0 } : undefined}
+        transition={{ delay: 0.3, duration: 0.6 }}
+      >
+        <rect
+          x="310"
+          y="70"
+          width="270"
+          height="280"
+          rx="12"
+          fill="url(#successCardGrad)"
+          filter="url(#mistakeShadow)"
+        />
+        <rect x="310" y="70" width="270" height="35" rx="12" fill="#059669" />
+        <text x="445" y="93" fontSize="12" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
+          ✅ DO THIS INSTEAD
+        </text>
+
+        {/* Correct 1 */}
+        <g transform="translate(325, 115)">
+          <motion.circle
+            cx="18"
+            cy="18"
+            r="18"
+            fill="#DCFCE7"
+            stroke="#22C55E"
+            strokeWidth="2"
+            animate={animate ? { scale: [1, 1.05, 1] } : undefined}
+            transition={{ duration: 2, repeat: Infinity, delay: 0.2 }}
+          />
+          <text x="18" y="24" fontSize="16" textAnchor="middle" fill="#16A34A">
+            ✓
+          </text>
+          <text x="50" y="15" fontSize="10" fill="#1E293B" fontWeight="600">
+            Master NCERT First
+          </text>
+          <text x="50" y="28" fontSize="8" fill="#64748B">
+            Read line-by-line, 3x minimum
+          </text>
+        </g>
+
+        {/* Correct 2 */}
+        <g transform="translate(325, 160)">
+          <circle cx="18" cy="18" r="18" fill="#DCFCE7" stroke="#22C55E" strokeWidth="2" />
+          <text x="18" y="24" fontSize="16" textAnchor="middle" fill="#16A34A">
+            ✓
+          </text>
+          <text x="50" y="15" fontSize="10" fill="#1E293B" fontWeight="600">
+            Quality over Quantity
+          </text>
+          <text x="50" y="28" fontSize="8" fill="#64748B">
+            NCERT + 1 reference = enough
+          </text>
+        </g>
+
+        {/* Correct 3 */}
+        <g transform="translate(325, 205)">
+          <circle cx="18" cy="18" r="18" fill="#DCFCE7" stroke="#22C55E" strokeWidth="2" />
+          <text x="18" y="24" fontSize="16" textAnchor="middle" fill="#16A34A">
+            ✓
+          </text>
+          <text x="50" y="15" fontSize="10" fill="#1E293B" fontWeight="600">
+            Weekly Revision Schedule
+          </text>
+          <text x="50" y="28" fontSize="8" fill="#64748B">
+            Revise every topic 5+ times
+          </text>
+        </g>
+
+        {/* Correct 4 */}
+        <g transform="translate(325, 250)">
+          <circle cx="18" cy="18" r="18" fill="#DCFCE7" stroke="#22C55E" strokeWidth="2" />
+          <text x="18" y="24" fontSize="16" textAnchor="middle" fill="#16A34A">
+            ✓
+          </text>
+          <text x="50" y="15" fontSize="10" fill="#1E293B" fontWeight="600">
+            50+ Full Mock Tests
+          </text>
+          <text x="50" y="28" fontSize="8" fill="#64748B">
+            Analyze every mistake
+          </text>
+        </g>
+
+        {/* Correct 5 */}
+        <g transform="translate(325, 295)">
+          <circle cx="18" cy="18" r="18" fill="#DCFCE7" stroke="#22C55E" strokeWidth="2" />
+          <text x="18" y="24" fontSize="16" textAnchor="middle" fill="#16A34A">
+            ✓
+          </text>
+          <text x="50" y="15" fontSize="10" fill="#1E293B" fontWeight="600">
+            Complete Syllabus Coverage
+          </text>
+          <text x="50" y="28" fontSize="8" fill="#64748B">
+            No chapter is unimportant
+          </text>
+        </g>
+      </motion.g>
+
+      {/* STATISTICS BOX */}
+      <motion.g
+        initial={animate ? { opacity: 0, y: 30 } : undefined}
+        animate={animate ? { opacity: 1, y: 0 } : undefined}
+        transition={{ delay: 0.4, duration: 0.6 }}
+      >
+        <rect
+          x="310"
+          y="360"
+          width="270"
+          height="75"
+          rx="12"
+          fill="#1E293B"
+          filter="url(#mistakeShadow)"
+        />
+        <text x="445" y="385" fontSize="10" fill="#94A3B8" textAnchor="middle">
+          Students who avoid these mistakes
+        </text>
+        <motion.text
+          x="445"
+          y="415"
+          fontSize="28"
+          fill="#22C55E"
+          textAnchor="middle"
+          fontWeight="bold"
+          animate={animate ? { scale: [1, 1.05, 1] } : undefined}
+          transition={{ duration: 2, repeat: Infinity }}
+        >
+          3x More Likely
+        </motion.text>
+        <text x="445" y="430" fontSize="9" fill="#94A3B8" textAnchor="middle">
+          to score 600+ in NEET
         </text>
       </motion.g>
 
-      {/* Mistake 2 - Skipping NCERT */}
+      {/* WARNING TRIANGLE */}
       <motion.g
-        animate={animate ? { x: [2, -2, 2] } : undefined}
-        transition={{ duration: 3, repeat: Infinity, delay: 0.3 }}
+        initial={animate ? { opacity: 0, scale: 0.5 } : undefined}
+        animate={animate ? { opacity: 1, scale: 1 } : undefined}
+        transition={{ delay: 0.5, duration: 0.5, type: 'spring' }}
       >
-        <circle cx="160" cy="200" r="30" fill="#EF4444" opacity="0.2" />
-        <circle cx="160" cy="200" r="22" fill="#FFFFFF" stroke="#EF4444" strokeWidth="2" />
-        <rect x="150" y="190" width="20" height="15" rx="2" fill="#14B8A6" />
-        <line x1="145" y1="185" x2="175" y2="215" stroke="#EF4444" strokeWidth="3" />
-        <text x="160" y="245" fontSize="8" fill="#7F1D1D" textAnchor="middle">
-          Skip NCERT
-        </text>
-      </motion.g>
-
-      {/* Mistake 3 - Too many books */}
-      <motion.g
-        animate={animate ? { x: [-2, 2, -2] } : undefined}
-        transition={{ duration: 3, repeat: Infinity, delay: 0.6 }}
-      >
-        <circle cx="240" cy="200" r="30" fill="#EF4444" opacity="0.2" />
-        <circle cx="240" cy="200" r="22" fill="#FFFFFF" stroke="#EF4444" strokeWidth="2" />
-        <rect x="228" y="192" width="8" height="12" rx="1" fill="#3B82F6" />
-        <rect x="238" y="190" width="8" height="14" rx="1" fill="#8B5CF6" />
-        <rect x="248" y="193" width="8" height="11" rx="1" fill="#F97316" />
-        <line x1="225" y1="185" x2="255" y2="215" stroke="#EF4444" strokeWidth="3" />
-        <text x="240" y="245" fontSize="8" fill="#7F1D1D" textAnchor="middle">
-          Too Many Books
-        </text>
-      </motion.g>
-
-      {/* Mistake 4 - No mock tests */}
-      <motion.g
-        animate={animate ? { x: [2, -2, 2] } : undefined}
-        transition={{ duration: 3, repeat: Infinity, delay: 0.9 }}
-      >
-        <circle cx="320" cy="180" r="30" fill="#EF4444" opacity="0.2" />
-        <circle cx="320" cy="180" r="22" fill="#FFFFFF" stroke="#EF4444" strokeWidth="2" />
-        <rect x="308" y="170" width="24" height="18" rx="2" fill="#E2E8F0" />
-        <text x="320" y="182" fontSize="8" fill="#64748B" textAnchor="middle">
-          TEST
-        </text>
-        <line x1="305" y1="165" x2="335" y2="195" stroke="#EF4444" strokeWidth="3" />
-        <text x="320" y="225" fontSize="8" fill="#7F1D1D" textAnchor="middle">
-          No Mocks
-        </text>
-      </motion.g>
-
-      {/* Correct way badge */}
-      <motion.g
-        animate={animate ? { y: [-3, 3, -3] } : undefined}
-        transition={{ duration: 2, repeat: Infinity }}
-      >
-        <rect x="280" y="50" width="100" height="35" rx="8" fill="#10B981" />
-        <text x="330" y="65" fontSize="8" fill="#FFFFFF" textAnchor="middle">
-          Learn the
-        </text>
-        <text x="330" y="78" fontSize="10" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
-          RIGHT WAY →
-        </text>
+        <motion.g
+          animate={animate ? { y: [-3, 3, -3] } : undefined}
+          transition={{ duration: 2, repeat: Infinity }}
+          style={{ transformOrigin: '155px 440px' }}
+        >
+          <path
+            d="M155 390 L190 440 L120 440 Z"
+            fill="url(#warningGrad)"
+            stroke="#D97706"
+            strokeWidth="3"
+            filter="url(#errorGlow)"
+          />
+          <text x="155" y="430" fontSize="24" textAnchor="middle" fill="#78350F" fontWeight="bold">
+            !
+          </text>
+        </motion.g>
       </motion.g>
     </Wrapper>
   )
@@ -1310,103 +1582,481 @@ export function NEET2026GuideIllustration({ className = '', animate = true }: Il
   const Wrapper = animate ? motion.svg : 'svg'
   const wrapperProps = animate
     ? {
-        initial: { opacity: 0, y: 20 },
-        animate: { opacity: 1, y: 0 },
-        transition: { duration: 0.6 },
+        initial: { opacity: 0, scale: 0.95 },
+        animate: { opacity: 1, scale: 1 },
+        transition: { duration: 0.8, ease: 'easeOut' },
       }
     : {}
 
   return (
     <Wrapper
-      viewBox="0 0 400 280"
+      viewBox="0 0 600 450"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
+      preserveAspectRatio="xMidYMid meet"
       {...wrapperProps}
     >
-      {/* Background badge */}
-      <ellipse cx="200" cy="140" rx="150" ry="120" fill="#F0FDFA" opacity="0.5" />
+      <defs>
+        {/* Background gradient */}
+        <linearGradient id="neet2026BgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#ECFDF5" />
+          <stop offset="50%" stopColor="#F0FDFA" />
+          <stop offset="100%" stopColor="#F0F9FF" />
+        </linearGradient>
+        {/* Card gradient */}
+        <linearGradient id="neetCardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stopColor="#FFFFFF" />
+          <stop offset="100%" stopColor="#F8FAFC" />
+        </linearGradient>
+        {/* Subject gradients */}
+        <linearGradient id="physicsGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stopColor="#3B82F6" />
+          <stop offset="100%" stopColor="#2563EB" />
+        </linearGradient>
+        <linearGradient id="chemistryGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stopColor="#8B5CF6" />
+          <stop offset="100%" stopColor="#7C3AED" />
+        </linearGradient>
+        <linearGradient id="biologyGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stopColor="#10B981" />
+          <stop offset="100%" stopColor="#059669" />
+        </linearGradient>
+        <linearGradient id="botanyGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stopColor="#22C55E" />
+          <stop offset="100%" stopColor="#16A34A" />
+        </linearGradient>
+        <linearGradient id="zoologyGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stopColor="#14B8A6" />
+          <stop offset="100%" stopColor="#0D9488" />
+        </linearGradient>
+        {/* Medal gradient */}
+        <radialGradient id="medalGrad" cx="30%" cy="30%" r="70%">
+          <stop offset="0%" stopColor="#FDE68A" />
+          <stop offset="50%" stopColor="#FBBF24" />
+          <stop offset="100%" stopColor="#F59E0B" />
+        </radialGradient>
+        {/* Shadow filters */}
+        <filter id="neetShadow" x="-20%" y="-20%" width="140%" height="140%">
+          <feDropShadow dx="0" dy="4" stdDeviation="8" floodOpacity="0.15" />
+        </filter>
+        <filter id="neetGlow" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="3" result="blur" />
+          <feMerge>
+            <feMergeNode in="blur" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+      </defs>
 
-      {/* NEET 2026 text */}
+      {/* Background */}
+      <rect width="600" height="450" fill="url(#neet2026BgGrad)" />
+
+      {/* Decorative circles */}
+      <circle cx="50" cy="50" r="80" fill="#10B981" opacity="0.05" />
+      <circle cx="550" cy="400" r="100" fill="#3B82F6" opacity="0.05" />
+      <circle cx="300" cy="225" r="200" fill="#14B8A6" opacity="0.03" />
+
+      {/* Title Banner */}
       <motion.g
-        animate={animate ? { scale: [1, 1.02, 1] } : undefined}
-        transition={{ duration: 2, repeat: Infinity }}
+        initial={animate ? { opacity: 0, y: -20 } : undefined}
+        animate={animate ? { opacity: 1, y: 0 } : undefined}
+        transition={{ delay: 0.1, duration: 0.5 }}
       >
-        <rect x="120" y="30" width="160" height="50" rx="25" fill="#14B8A6" />
-        <text x="200" y="52" fontSize="12" fill="#FFFFFF" textAnchor="middle">
-          NEET
+        <rect
+          x="150"
+          y="15"
+          width="300"
+          height="50"
+          rx="25"
+          fill="#14B8A6"
+          filter="url(#neetShadow)"
+        />
+        <motion.g
+          animate={animate ? { scale: [1, 1.02, 1] } : undefined}
+          transition={{ duration: 2, repeat: Infinity }}
+        >
+          <text x="300" y="35" fontSize="14" fill="#FFFFFF" textAnchor="middle" fontWeight="500">
+            COMPLETE GUIDE
+          </text>
+          <text x="300" y="55" fontSize="20" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
+            NEET 2026
+          </text>
+        </motion.g>
+      </motion.g>
+
+      {/* EXAM PATTERN CARD - Left */}
+      <motion.g
+        initial={animate ? { opacity: 0, x: -30 } : undefined}
+        animate={animate ? { opacity: 1, x: 0 } : undefined}
+        transition={{ delay: 0.2, duration: 0.6 }}
+      >
+        <rect
+          x="20"
+          y="80"
+          width="180"
+          height="250"
+          rx="12"
+          fill="url(#neetCardGrad)"
+          filter="url(#neetShadow)"
+        />
+        <rect x="20" y="80" width="180" height="35" rx="12" fill="#1E293B" />
+        <text x="110" y="103" fontSize="11" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
+          📋 EXAM PATTERN
         </text>
-        <text x="200" y="70" fontSize="18" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
-          2026
+
+        {/* Question breakdown */}
+        <text x="35" y="135" fontSize="9" fill="#64748B" fontWeight="600">
+          Subject Breakdown:
+        </text>
+
+        {/* Physics */}
+        <rect x="35" y="145" width="150" height="22" rx="4" fill="#EFF6FF" />
+        <rect x="35" y="145" width="75" height="22" rx="4" fill="url(#physicsGrad)" />
+        <text x="42" y="160" fontSize="8" fill="#FFFFFF" fontWeight="600">
+          Physics
+        </text>
+        <text x="175" y="160" fontSize="8" fill="#3B82F6" fontWeight="bold" textAnchor="end">
+          45 Qs
+        </text>
+
+        {/* Chemistry */}
+        <rect x="35" y="172" width="150" height="22" rx="4" fill="#F5F3FF" />
+        <rect x="35" y="172" width="75" height="22" rx="4" fill="url(#chemistryGrad)" />
+        <text x="42" y="187" fontSize="8" fill="#FFFFFF" fontWeight="600">
+          Chemistry
+        </text>
+        <text x="175" y="187" fontSize="8" fill="#8B5CF6" fontWeight="bold" textAnchor="end">
+          45 Qs
+        </text>
+
+        {/* Botany */}
+        <rect x="35" y="199" width="150" height="22" rx="4" fill="#ECFDF5" />
+        <rect x="35" y="199" width="75" height="22" rx="4" fill="url(#botanyGrad)" />
+        <text x="42" y="214" fontSize="8" fill="#FFFFFF" fontWeight="600">
+          Botany
+        </text>
+        <text x="175" y="214" fontSize="8" fill="#22C55E" fontWeight="bold" textAnchor="end">
+          45 Qs
+        </text>
+
+        {/* Zoology */}
+        <rect x="35" y="226" width="150" height="22" rx="4" fill="#F0FDFA" />
+        <rect x="35" y="226" width="75" height="22" rx="4" fill="url(#zoologyGrad)" />
+        <text x="42" y="241" fontSize="8" fill="#FFFFFF" fontWeight="600">
+          Zoology
+        </text>
+        <text x="175" y="241" fontSize="8" fill="#14B8A6" fontWeight="bold" textAnchor="end">
+          45 Qs
+        </text>
+
+        {/* Total */}
+        <rect x="35" y="258" width="150" height="2" fill="#E2E8F0" />
+        <text x="35" y="278" fontSize="10" fill="#1E293B" fontWeight="bold">
+          Total: 180 Questions
+        </text>
+        <text x="35" y="295" fontSize="10" fill="#14B8A6" fontWeight="bold">
+          Max Marks: 720
+        </text>
+        <text x="35" y="312" fontSize="9" fill="#64748B">
+          Duration: 3 hrs 20 min
         </text>
       </motion.g>
 
-      {/* Exam paper */}
-      <rect
-        x="80"
-        y="95"
-        width="130"
-        height="160"
-        rx="8"
-        fill="#FFFFFF"
-        stroke="#E2E8F0"
-        strokeWidth="2"
-      />
-      <rect x="90" y="105" width="110" height="20" rx="4" fill="#3B82F6" />
-      <text x="145" y="120" fontSize="9" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
-        QUESTION PAPER
-      </text>
-
-      {/* Paper content */}
-      <text x="100" y="145" fontSize="8" fill="#374151">
-        Physics: 45 Qs
-      </text>
-      <text x="100" y="160" fontSize="8" fill="#374151">
-        Chemistry: 45 Qs
-      </text>
-      <text x="100" y="175" fontSize="8" fill="#14B8A6" fontWeight="bold">
-        Biology: 90 Qs
-      </text>
-      <rect x="90" y="185" width="110" height="1" fill="#E2E8F0" />
-      <text x="100" y="200" fontSize="8" fill="#1E293B" fontWeight="bold">
-        Total: 180 Qs
-      </text>
-      <text x="100" y="215" fontSize="8" fill="#1E293B" fontWeight="bold">
-        Marks: 720
-      </text>
-      <text x="100" y="230" fontSize="8" fill="#64748B">
-        Time: 3 hrs 20 min
-      </text>
-
-      {/* Medal */}
+      {/* MARKING SCHEME CARD - Center */}
       <motion.g
-        animate={animate ? { y: [-5, 5, -5], rotate: [-5, 5, -5] } : undefined}
-        transition={{ duration: 3, repeat: Infinity }}
-        style={{ transformOrigin: '300px 180px' }}
+        initial={animate ? { opacity: 0, y: 30 } : undefined}
+        animate={animate ? { opacity: 1, y: 0 } : undefined}
+        transition={{ delay: 0.3, duration: 0.6 }}
       >
-        <path d="M300 120 L290 140 L300 135 L310 140 Z" fill="#F97316" />
-        <circle cx="300" cy="180" r="45" fill="#FCD34D" stroke="#F97316" strokeWidth="3" />
-        <circle cx="300" cy="180" r="35" fill="#FBBF24" />
-        <text x="300" y="175" fontSize="10" fill="#78350F" textAnchor="middle">
-          AIR
+        <rect
+          x="210"
+          y="80"
+          width="180"
+          height="165"
+          rx="12"
+          fill="url(#neetCardGrad)"
+          filter="url(#neetShadow)"
+        />
+        <rect x="210" y="80" width="180" height="35" rx="12" fill="#059669" />
+        <text x="300" y="103" fontSize="11" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
+          ✅ MARKING SCHEME
         </text>
-        <text x="300" y="192" fontSize="16" fill="#78350F" textAnchor="middle" fontWeight="bold">
-          TOP
+
+        {/* Correct answer */}
+        <g transform="translate(225, 125)">
+          <circle cx="15" cy="12" r="12" fill="#DCFCE7" />
+          <text x="15" y="16" fontSize="12" textAnchor="middle" fill="#16A34A">
+            ✓
+          </text>
+          <text x="40" y="10" fontSize="9" fill="#1E293B" fontWeight="600">
+            Correct Answer
+          </text>
+          <text x="40" y="24" fontSize="14" fill="#16A34A" fontWeight="bold">
+            +4 marks
+          </text>
+        </g>
+
+        {/* Wrong answer */}
+        <g transform="translate(225, 165)">
+          <circle cx="15" cy="12" r="12" fill="#FEE2E2" />
+          <text x="15" y="16" fontSize="12" textAnchor="middle" fill="#DC2626">
+            ✗
+          </text>
+          <text x="40" y="10" fontSize="9" fill="#1E293B" fontWeight="600">
+            Wrong Answer
+          </text>
+          <text x="40" y="24" fontSize="14" fill="#DC2626" fontWeight="bold">
+            -1 mark
+          </text>
+        </g>
+
+        {/* Unanswered */}
+        <g transform="translate(225, 205)">
+          <circle cx="15" cy="12" r="12" fill="#F3F4F6" />
+          <text x="15" y="16" fontSize="12" textAnchor="middle" fill="#6B7280">
+            −
+          </text>
+          <text x="40" y="10" fontSize="9" fill="#1E293B" fontWeight="600">
+            Unanswered
+          </text>
+          <text x="40" y="24" fontSize="14" fill="#6B7280" fontWeight="bold">
+            0 marks
+          </text>
+        </g>
+      </motion.g>
+
+      {/* IMPORTANT DATES CARD */}
+      <motion.g
+        initial={animate ? { opacity: 0, x: 30 } : undefined}
+        animate={animate ? { opacity: 1, x: 0 } : undefined}
+        transition={{ delay: 0.4, duration: 0.6 }}
+      >
+        <rect
+          x="400"
+          y="80"
+          width="180"
+          height="165"
+          rx="12"
+          fill="url(#neetCardGrad)"
+          filter="url(#neetShadow)"
+        />
+        <rect x="400" y="80" width="180" height="35" rx="12" fill="#7C3AED" />
+        <text x="490" y="103" fontSize="11" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
+          📅 KEY DATES 2026
         </text>
-        <text x="300" y="205" fontSize="8" fill="#92400E" textAnchor="middle">
-          100
+
+        {/* Timeline */}
+        <line x1="425" y1="130" x2="425" y2="230" stroke="#E2E8F0" strokeWidth="2" />
+
+        {/* Registration */}
+        <circle cx="425" cy="140" r="6" fill="#3B82F6" />
+        <text x="440" y="138" fontSize="8" fill="#64748B">
+          Registration
+        </text>
+        <text x="440" y="150" fontSize="9" fill="#1E293B" fontWeight="600">
+          Feb 2026
+        </text>
+
+        {/* Admit Card */}
+        <circle cx="425" cy="175" r="6" fill="#8B5CF6" />
+        <text x="440" y="173" fontSize="8" fill="#64748B">
+          Admit Card
+        </text>
+        <text x="440" y="185" fontSize="9" fill="#1E293B" fontWeight="600">
+          Apr 2026
+        </text>
+
+        {/* Exam Date */}
+        <motion.circle
+          cx="425"
+          cy="210"
+          r="8"
+          fill="#EF4444"
+          animate={animate ? { scale: [1, 1.2, 1] } : undefined}
+          transition={{ duration: 1.5, repeat: Infinity }}
+        />
+        <text x="440" y="208" fontSize="8" fill="#64748B">
+          Exam Date
+        </text>
+        <text x="440" y="220" fontSize="10" fill="#EF4444" fontWeight="bold">
+          May 2026
         </text>
       </motion.g>
 
-      {/* Syllabus completion */}
+      {/* SUBJECT DISTRIBUTION PIE CHART */}
       <motion.g
-        animate={animate ? { x: [-2, 2, -2] } : undefined}
-        transition={{ duration: 2, repeat: Infinity }}
+        initial={animate ? { opacity: 0, scale: 0.8 } : undefined}
+        animate={animate ? { opacity: 1, scale: 1 } : undefined}
+        transition={{ delay: 0.5, duration: 0.6 }}
       >
-        <rect x="240" y="240" width="130" height="30" rx="6" fill="#10B981" />
-        <text x="305" y="260" fontSize="9" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
-          Complete Guide Inside →
+        <rect
+          x="210"
+          y="255"
+          width="180"
+          height="180"
+          rx="12"
+          fill="url(#neetCardGrad)"
+          filter="url(#neetShadow)"
+        />
+        <text x="300" y="278" fontSize="10" fill="#1E293B" textAnchor="middle" fontWeight="bold">
+          Subject Distribution
         </text>
+
+        {/* Pie chart */}
+        <g transform="translate(300, 355)">
+          {/* Physics - 25% */}
+          <motion.path
+            d="M0,-45 A45,45 0 0,1 39,22.5 L0,0 Z"
+            fill="#3B82F6"
+            initial={animate ? { opacity: 0 } : undefined}
+            animate={animate ? { opacity: 1 } : undefined}
+            transition={{ delay: 0.6, duration: 0.3 }}
+          />
+          {/* Chemistry - 25% */}
+          <motion.path
+            d="M39,22.5 A45,45 0 0,1 -39,22.5 L0,0 Z"
+            fill="#8B5CF6"
+            initial={animate ? { opacity: 0 } : undefined}
+            animate={animate ? { opacity: 1 } : undefined}
+            transition={{ delay: 0.7, duration: 0.3 }}
+          />
+          {/* Biology - 50% */}
+          <motion.path
+            d="M-39,22.5 A45,45 0 0,1 0,-45 L0,0 Z"
+            fill="#10B981"
+            initial={animate ? { opacity: 0 } : undefined}
+            animate={animate ? { opacity: 1 } : undefined}
+            transition={{ delay: 0.8, duration: 0.3 }}
+          />
+          <circle cx="0" cy="0" r="20" fill="white" />
+          <text x="0" y="5" fontSize="10" fill="#1E293B" textAnchor="middle" fontWeight="bold">
+            720
+          </text>
+        </g>
+
+        {/* Legend */}
+        <g transform="translate(225, 410)">
+          <rect x="0" y="0" width="10" height="10" rx="2" fill="#3B82F6" />
+          <text x="15" y="9" fontSize="7" fill="#64748B">
+            Physics 25%
+          </text>
+          <rect x="65" y="0" width="10" height="10" rx="2" fill="#8B5CF6" />
+          <text x="80" y="9" fontSize="7" fill="#64748B">
+            Chem 25%
+          </text>
+          <rect x="125" y="0" width="10" height="10" rx="2" fill="#10B981" />
+          <text x="140" y="9" fontSize="7" fill="#64748B">
+            Bio 50%
+          </text>
+        </g>
+      </motion.g>
+
+      {/* QUALIFYING CUTOFF CARD */}
+      <motion.g
+        initial={animate ? { opacity: 0, y: 30 } : undefined}
+        animate={animate ? { opacity: 1, y: 0 } : undefined}
+        transition={{ delay: 0.6, duration: 0.6 }}
+      >
+        <rect
+          x="400"
+          y="255"
+          width="180"
+          height="100"
+          rx="12"
+          fill="url(#neetCardGrad)"
+          filter="url(#neetShadow)"
+        />
+        <rect x="400" y="255" width="180" height="30" rx="12" fill="#F59E0B" />
+        <text x="490" y="275" fontSize="10" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
+          🎯 QUALIFYING CUTOFF
+        </text>
+
+        <text x="415" y="305" fontSize="8" fill="#64748B">
+          General Category:
+        </text>
+        <text x="565" y="305" fontSize="9" fill="#1E293B" fontWeight="bold" textAnchor="end">
+          50th %ile
+        </text>
+
+        <text x="415" y="322" fontSize="8" fill="#64748B">
+          OBC/SC/ST:
+        </text>
+        <text x="565" y="322" fontSize="9" fill="#1E293B" fontWeight="bold" textAnchor="end">
+          40th %ile
+        </text>
+
+        <text x="415" y="339" fontSize="8" fill="#64748B">
+          PwD Category:
+        </text>
+        <text x="565" y="339" fontSize="9" fill="#1E293B" fontWeight="bold" textAnchor="end">
+          45th %ile
+        </text>
+      </motion.g>
+
+      {/* SUCCESS MEDAL */}
+      <motion.g
+        initial={animate ? { opacity: 0, scale: 0 } : undefined}
+        animate={animate ? { opacity: 1, scale: 1 } : undefined}
+        transition={{ delay: 0.7, duration: 0.5, type: 'spring' }}
+      >
+        <motion.g
+          animate={animate ? { y: [-3, 3, -3], rotate: [-2, 2, -2] } : undefined}
+          transition={{ duration: 3, repeat: Infinity }}
+          style={{ transformOrigin: '110px 370px' }}
+        >
+          {/* Ribbon */}
+          <path d="M110 300 L90 330 L110 320 L130 330 Z" fill="#DC2626" />
+          <path d="M95 310 L85 340 L100 325 Z" fill="#B91C1C" />
+          <path d="M125 310 L135 340 L120 325 Z" fill="#B91C1C" />
+
+          {/* Medal */}
+          <circle cx="110" cy="370" r="50" fill="url(#medalGrad)" filter="url(#neetGlow)" />
+          <circle cx="110" cy="370" r="42" fill="#FCD34D" stroke="#F59E0B" strokeWidth="2" />
+          <circle cx="110" cy="370" r="35" fill="#FBBF24" />
+
+          {/* Medal content */}
+          <text x="110" y="358" fontSize="8" fill="#92400E" textAnchor="middle" fontWeight="500">
+            TARGET
+          </text>
+          <text x="110" y="378" fontSize="18" fill="#78350F" textAnchor="middle" fontWeight="bold">
+            650+
+          </text>
+          <text x="110" y="395" fontSize="8" fill="#92400E" textAnchor="middle">
+            MARKS
+          </text>
+        </motion.g>
+      </motion.g>
+
+      {/* BOTTOM CTA */}
+      <motion.g
+        initial={animate ? { opacity: 0, y: 20 } : undefined}
+        animate={animate ? { opacity: 1, y: 0 } : undefined}
+        transition={{ delay: 0.8, duration: 0.5 }}
+      >
+        <rect
+          x="400"
+          y="365"
+          width="180"
+          height="70"
+          rx="12"
+          fill="#14B8A6"
+          filter="url(#neetShadow)"
+        />
+        <motion.g
+          animate={animate ? { scale: [1, 1.02, 1] } : undefined}
+          transition={{ duration: 2, repeat: Infinity }}
+        >
+          <text x="490" y="390" fontSize="10" fill="#FFFFFF" textAnchor="middle" fontWeight="500">
+            Start Your Journey
+          </text>
+          <text x="490" y="410" fontSize="14" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
+            NEET 2026 🚀
+          </text>
+          <text x="490" y="428" fontSize="8" fill="#A7F3D0" textAnchor="middle">
+            Complete Guide Inside →
+          </text>
+        </motion.g>
       </motion.g>
     </Wrapper>
   )
