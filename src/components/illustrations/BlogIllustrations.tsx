@@ -15407,7 +15407,7 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
 
   return (
     <Wrapper
-      viewBox="0 0 560 420"
+      viewBox="0 0 700 520"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
@@ -15506,20 +15506,20 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
       </defs>
 
       {/* Background */}
-      <rect width="560" height="420" fill="url(#cellDivBgGrad)" />
+      <rect width="700" height="520" fill="url(#cellDivBgGrad)" rx="16" />
 
       {/* Decorative background elements */}
-      <circle cx="50" cy="50" r="100" fill="#A855F7" opacity="0.04" />
-      <circle cx="510" cy="370" r="120" fill="#3B82F6" opacity="0.04" />
-      <circle cx="280" cy="210" r="180" fill="#EC4899" opacity="0.03" />
+      <circle cx="60" cy="60" r="120" fill="#A855F7" opacity="0.04" />
+      <circle cx="640" cy="460" r="140" fill="#3B82F6" opacity="0.04" />
+      <circle cx="350" cy="260" r="200" fill="#EC4899" opacity="0.03" />
 
       {/* Title */}
       <motion.text
-        x="280"
-        y="28"
+        x="350"
+        y="32"
         textAnchor="middle"
         fill="#1E293B"
-        fontSize="16"
+        fontSize="18"
         fontWeight="700"
         initial={animate ? { opacity: 0, y: -10 } : undefined}
         animate={animate ? { opacity: 1, y: 0 } : undefined}
@@ -15536,72 +15536,72 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
       >
         {/* Mitosis label card */}
         <rect
-          x="15"
-          y="42"
-          width="255"
-          height="32"
-          rx="16"
+          x="20"
+          y="50"
+          width="320"
+          height="40"
+          rx="20"
           fill="url(#mitosisCardGrad)"
           filter="url(#cellDivShadow)"
         />
-        <text x="142" y="63" textAnchor="middle" fill="#1D4ED8" fontSize="13" fontWeight="700">
+        <text x="180" y="75" textAnchor="middle" fill="#1D4ED8" fontSize="15" fontWeight="700">
           MITOSIS
         </text>
-        <text x="142" y="70" textAnchor="middle" fill="#3B82F6" fontSize="7">
+        <text x="180" y="86" textAnchor="middle" fill="#3B82F6" fontSize="9">
           (2n → 2n) Equational Division
         </text>
 
         {/* Interphase cell (top left) */}
-        <g transform="translate(30, 85)">
+        <g transform="translate(35, 105)">
           <ellipse
-            cx="50"
-            cy="45"
-            rx="42"
-            ry="38"
+            cx="60"
+            cy="55"
+            rx="52"
+            ry="48"
             fill="url(#cytoplasmGrad)"
             stroke="url(#cellMembraneGrad)"
-            strokeWidth="2.5"
+            strokeWidth="3"
             filter="url(#cellShadow)"
           />
-          <circle cx="50" cy="45" r="18" fill="url(#nucleusGrad)" />
+          <circle cx="60" cy="55" r="22" fill="url(#nucleusGrad)" />
           {/* Chromatin network */}
           <path
-            d="M42 40 Q50 35 58 40 Q55 48 50 50 Q45 48 42 40"
+            d="M50 50 Q60 42 70 50 Q65 60 60 62 Q55 60 50 50"
             stroke="#E9D5FF"
-            strokeWidth="1.5"
+            strokeWidth="2"
             fill="none"
             opacity="0.8"
           />
-          <text x="50" y="95" textAnchor="middle" fill="#64748B" fontSize="8" fontWeight="500">
+          <text x="60" y="118" textAnchor="middle" fill="#64748B" fontSize="10" fontWeight="500">
             Interphase
           </text>
         </g>
 
         {/* Arrow */}
         <motion.path
-          d="M125 130 L145 130"
+          d="M155 160 L180 160"
           stroke="#94A3B8"
-          strokeWidth="2"
+          strokeWidth="2.5"
           markerEnd="url(#arrowhead)"
           animate={animate ? { opacity: [0.5, 1, 0.5] } : undefined}
           transition={{ duration: 2, repeat: Infinity }}
         />
         <defs>
-          <marker id="arrowhead" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-            <path d="M0,0 L6,3 L0,6 Z" fill="#94A3B8" />
+          <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+            <path d="M0,0 L8,4 L0,8 Z" fill="#94A3B8" />
           </marker>
         </defs>
 
         {/* Prophase cell */}
-        <g transform="translate(150, 85)">
+        <g transform="translate(185, 105)">
           <ellipse
-            cx="50"
-            cy="45"
-            rx="42"
-            ry="38"
+            cx="60"
+            cy="55"
+            rx="52"
+            ry="48"
             fill="url(#cytoplasmGrad)"
             stroke="url(#cellMembraneGrad)"
-            strokeWidth="2.5"
+            strokeWidth="3"
             filter="url(#cellShadow)"
           />
           {/* Chromosomes condensing */}
@@ -15610,184 +15610,184 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
             transition={{ duration: 3, repeat: Infinity }}
           >
             <path
-              d="M40 35 L40 55"
+              d="M45 42 L45 68"
               stroke="url(#chromoBlue)"
-              strokeWidth="4"
+              strokeWidth="5"
               strokeLinecap="round"
             />
             <path
-              d="M48 32 L48 52"
+              d="M55 38 L55 65"
               stroke="url(#chromoRed)"
-              strokeWidth="4"
+              strokeWidth="5"
               strokeLinecap="round"
             />
             <path
-              d="M56 38 L56 58"
+              d="M65 45 L65 72"
               stroke="url(#chromoBlue)"
-              strokeWidth="4"
+              strokeWidth="5"
               strokeLinecap="round"
             />
             <path
-              d="M64 35 L64 55"
+              d="M75 42 L75 68"
               stroke="url(#chromoRed)"
-              strokeWidth="4"
+              strokeWidth="5"
               strokeLinecap="round"
             />
           </motion.g>
           {/* Centrioles */}
-          <rect x="25" y="25" width="6" height="12" rx="2" fill="url(#centrioleGrad)" />
-          <rect x="70" y="58" width="6" height="12" rx="2" fill="url(#centrioleGrad)" />
-          <text x="50" y="95" textAnchor="middle" fill="#64748B" fontSize="8" fontWeight="500">
+          <rect x="28" y="30" width="8" height="15" rx="3" fill="url(#centrioleGrad)" />
+          <rect x="85" y="72" width="8" height="15" rx="3" fill="url(#centrioleGrad)" />
+          <text x="60" y="118" textAnchor="middle" fill="#64748B" fontSize="10" fontWeight="500">
             Prophase
           </text>
         </g>
 
         {/* Metaphase cell */}
-        <g transform="translate(30, 185)">
+        <g transform="translate(35, 235)">
           <ellipse
-            cx="50"
-            cy="45"
-            rx="42"
-            ry="38"
+            cx="60"
+            cy="55"
+            rx="52"
+            ry="48"
             fill="url(#cytoplasmGrad)"
             stroke="url(#cellMembraneGrad)"
-            strokeWidth="2.5"
+            strokeWidth="3"
             filter="url(#cellShadow)"
           />
           {/* Spindle fibers */}
-          <line x1="20" y1="15" x2="50" y2="45" stroke="url(#spindleGrad)" strokeWidth="1" />
-          <line x1="80" y1="15" x2="50" y2="45" stroke="url(#spindleGrad)" strokeWidth="1" />
-          <line x1="20" y1="75" x2="50" y2="45" stroke="url(#spindleGrad)" strokeWidth="1" />
-          <line x1="80" y1="75" x2="50" y2="45" stroke="url(#spindleGrad)" strokeWidth="1" />
+          <line x1="20" y1="15" x2="60" y2="55" stroke="url(#spindleGrad)" strokeWidth="1.5" />
+          <line x1="100" y1="15" x2="60" y2="55" stroke="url(#spindleGrad)" strokeWidth="1.5" />
+          <line x1="20" y1="95" x2="60" y2="55" stroke="url(#spindleGrad)" strokeWidth="1.5" />
+          <line x1="100" y1="95" x2="60" y2="55" stroke="url(#spindleGrad)" strokeWidth="1.5" />
           {/* Chromosomes at metaphase plate */}
           <motion.g
             animate={animate ? { y: [0, -2, 0, 2, 0] } : undefined}
             transition={{ duration: 2, repeat: Infinity }}
           >
             <path
-              d="M38 42 L38 48"
+              d="M44 50 L44 60"
               stroke="url(#chromoBlue)"
-              strokeWidth="4"
+              strokeWidth="5"
               strokeLinecap="round"
             />
             <path
-              d="M46 42 L46 48"
+              d="M54 50 L54 60"
               stroke="url(#chromoRed)"
-              strokeWidth="4"
+              strokeWidth="5"
               strokeLinecap="round"
             />
             <path
-              d="M54 42 L54 48"
+              d="M66 50 L66 60"
               stroke="url(#chromoBlue)"
-              strokeWidth="4"
+              strokeWidth="5"
               strokeLinecap="round"
             />
             <path
-              d="M62 42 L62 48"
+              d="M76 50 L76 60"
               stroke="url(#chromoRed)"
-              strokeWidth="4"
+              strokeWidth="5"
               strokeLinecap="round"
             />
           </motion.g>
           {/* Metaphase plate line */}
           <line
-            x1="30"
-            y1="45"
-            x2="70"
-            y2="45"
+            x1="35"
+            y1="55"
+            x2="85"
+            y2="55"
             stroke="#94A3B8"
-            strokeWidth="1"
-            strokeDasharray="2"
-            opacity="0.5"
+            strokeWidth="1.5"
+            strokeDasharray="3"
+            opacity="0.6"
           />
-          <text x="50" y="95" textAnchor="middle" fill="#64748B" fontSize="8" fontWeight="500">
+          <text x="60" y="118" textAnchor="middle" fill="#64748B" fontSize="10" fontWeight="500">
             Metaphase
           </text>
         </g>
 
         {/* Anaphase cell */}
-        <g transform="translate(150, 185)">
+        <g transform="translate(185, 235)">
           <ellipse
-            cx="50"
-            cy="45"
-            rx="48"
-            ry="35"
+            cx="60"
+            cy="55"
+            rx="60"
+            ry="45"
             fill="url(#cytoplasmGrad)"
             stroke="url(#cellMembraneGrad)"
-            strokeWidth="2.5"
+            strokeWidth="3"
             filter="url(#cellShadow)"
           />
           {/* Spindle fibers pulling */}
-          <line x1="15" y1="45" x2="30" y2="45" stroke="url(#spindleGrad)" strokeWidth="1" />
-          <line x1="70" y1="45" x2="85" y2="45" stroke="url(#spindleGrad)" strokeWidth="1" />
+          <line x1="10" y1="55" x2="35" y2="55" stroke="url(#spindleGrad)" strokeWidth="1.5" />
+          <line x1="85" y1="55" x2="110" y2="55" stroke="url(#spindleGrad)" strokeWidth="1.5" />
           {/* Chromosomes separating */}
           <motion.g
-            animate={animate ? { x: [-2, -5, -2] } : undefined}
+            animate={animate ? { x: [-2, -6, -2] } : undefined}
             transition={{ duration: 2, repeat: Infinity }}
           >
             <path
-              d="M28 38 L28 52"
+              d="M32 45 L32 65"
               stroke="url(#chromoBlue)"
-              strokeWidth="3"
+              strokeWidth="4"
               strokeLinecap="round"
             />
             <path
-              d="M36 38 L36 52"
+              d="M42 45 L42 65"
               stroke="url(#chromoRed)"
-              strokeWidth="3"
+              strokeWidth="4"
               strokeLinecap="round"
             />
           </motion.g>
           <motion.g
-            animate={animate ? { x: [2, 5, 2] } : undefined}
+            animate={animate ? { x: [2, 6, 2] } : undefined}
             transition={{ duration: 2, repeat: Infinity }}
           >
             <path
-              d="M64 38 L64 52"
+              d="M78 45 L78 65"
               stroke="url(#chromoBlue)"
-              strokeWidth="3"
+              strokeWidth="4"
               strokeLinecap="round"
             />
             <path
-              d="M72 38 L72 52"
+              d="M88 45 L88 65"
               stroke="url(#chromoRed)"
-              strokeWidth="3"
+              strokeWidth="4"
               strokeLinecap="round"
             />
           </motion.g>
-          <text x="50" y="92" textAnchor="middle" fill="#64748B" fontSize="8" fontWeight="500">
+          <text x="60" y="115" textAnchor="middle" fill="#64748B" fontSize="10" fontWeight="500">
             Anaphase
           </text>
         </g>
 
         {/* Telophase/Cytokinesis - Two daughter cells */}
-        <g transform="translate(90, 290)">
+        <g transform="translate(50, 370)">
           {/* First daughter cell */}
           <motion.g
             animate={animate ? { x: [-3, 0, -3] } : undefined}
             transition={{ duration: 3, repeat: Infinity }}
           >
             <ellipse
-              cx="30"
-              cy="35"
-              rx="30"
-              ry="28"
+              cx="55"
+              cy="45"
+              rx="45"
+              ry="40"
               fill="url(#cytoplasmGrad)"
               stroke="url(#cellMembraneGrad)"
-              strokeWidth="2"
+              strokeWidth="2.5"
               filter="url(#cellShadow)"
             />
-            <circle cx="30" cy="35" r="12" fill="url(#nucleusGrad)" opacity="0.8" />
+            <circle cx="55" cy="45" r="18" fill="url(#nucleusGrad)" opacity="0.8" />
             <path
-              d="M24 32 L24 38"
+              d="M46 40 L46 50"
               stroke="url(#chromoBlue)"
-              strokeWidth="2"
+              strokeWidth="3"
               strokeLinecap="round"
             />
             <path
-              d="M36 32 L36 38"
+              d="M64 40 L64 50"
               stroke="url(#chromoRed)"
-              strokeWidth="2"
+              strokeWidth="3"
               strokeLinecap="round"
             />
           </motion.g>
@@ -15797,35 +15797,35 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
             transition={{ duration: 3, repeat: Infinity }}
           >
             <ellipse
-              cx="90"
-              cy="35"
-              rx="30"
-              ry="28"
+              cx="165"
+              cy="45"
+              rx="45"
+              ry="40"
               fill="url(#cytoplasmGrad)"
               stroke="url(#cellMembraneGrad)"
-              strokeWidth="2"
+              strokeWidth="2.5"
               filter="url(#cellShadow)"
             />
-            <circle cx="90" cy="35" r="12" fill="url(#nucleusGrad)" opacity="0.8" />
+            <circle cx="165" cy="45" r="18" fill="url(#nucleusGrad)" opacity="0.8" />
             <path
-              d="M84 32 L84 38"
+              d="M156 40 L156 50"
               stroke="url(#chromoBlue)"
-              strokeWidth="2"
+              strokeWidth="3"
               strokeLinecap="round"
             />
             <path
-              d="M96 32 L96 38"
+              d="M174 40 L174 50"
               stroke="url(#chromoRed)"
-              strokeWidth="2"
+              strokeWidth="3"
               strokeLinecap="round"
             />
           </motion.g>
-          <text x="60" y="78" textAnchor="middle" fill="#64748B" fontSize="8" fontWeight="500">
+          <text x="110" y="100" textAnchor="middle" fill="#64748B" fontSize="10" fontWeight="500">
             Telophase & Cytokinesis
           </text>
           {/* Result label */}
-          <rect x="25" y="88" width="70" height="18" rx="9" fill="#DBEAFE" />
-          <text x="60" y="100" textAnchor="middle" fill="#1D4ED8" fontSize="8" fontWeight="600">
+          <rect x="60" y="108" width="100" height="22" rx="11" fill="#DBEAFE" />
+          <text x="110" y="123" textAnchor="middle" fill="#1D4ED8" fontSize="10" fontWeight="600">
             2 Diploid Cells
           </text>
         </g>
@@ -15833,10 +15833,10 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
 
       {/* Divider line */}
       <line
-        x1="280"
+        x1="350"
         y1="50"
-        x2="280"
-        y2="390"
+        x2="350"
+        y2="480"
         stroke="#E2E8F0"
         strokeWidth="2"
         strokeDasharray="6"
@@ -15850,88 +15850,88 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
       >
         {/* Meiosis label card */}
         <rect
-          x="290"
-          y="42"
-          width="255"
-          height="32"
-          rx="16"
+          x="365"
+          y="50"
+          width="320"
+          height="40"
+          rx="20"
           fill="url(#meiosisCardGrad)"
           filter="url(#cellDivShadow)"
         />
-        <text x="417" y="63" textAnchor="middle" fill="#BE185D" fontSize="13" fontWeight="700">
+        <text x="525" y="75" textAnchor="middle" fill="#BE185D" fontSize="15" fontWeight="700">
           MEIOSIS
         </text>
-        <text x="417" y="70" textAnchor="middle" fill="#DB2777" fontSize="7">
+        <text x="525" y="86" textAnchor="middle" fill="#DB2777" fontSize="9">
           (2n → n) Reductional Division
         </text>
 
         {/* Meiosis I - Prophase I with crossing over */}
-        <g transform="translate(300, 85)">
+        <g transform="translate(380, 105)">
           <ellipse
-            cx="45"
-            cy="42"
-            rx="38"
-            ry="35"
+            cx="55"
+            cy="52"
+            rx="48"
+            ry="45"
             fill="url(#cytoplasmGrad)"
             stroke="url(#cellMembraneGrad)"
-            strokeWidth="2"
+            strokeWidth="3"
             filter="url(#cellShadow)"
           />
           {/* Bivalents with crossing over */}
           <motion.g
             animate={animate ? { rotate: [0, 5, 0, -5, 0] } : undefined}
             transition={{ duration: 4, repeat: Infinity }}
-            style={{ transformOrigin: '45px 42px' }}
+            style={{ transformOrigin: '55px 52px' }}
           >
             {/* Homologous pair 1 with chiasma */}
             <path
-              d="M32 30 L32 40 Q40 45 32 50 L32 55"
+              d="M38 35 L38 48 Q48 55 38 62 L38 70"
               stroke="url(#chromoBlue)"
-              strokeWidth="3"
+              strokeWidth="4"
               strokeLinecap="round"
               fill="none"
             />
             <path
-              d="M38 30 L38 40 Q30 45 38 50 L38 55"
+              d="M46 35 L46 48 Q36 55 46 62 L46 70"
               stroke="url(#chromoRed)"
-              strokeWidth="3"
+              strokeWidth="4"
               strokeLinecap="round"
               fill="none"
             />
             {/* Homologous pair 2 */}
             <path
-              d="M52 30 L52 40 Q60 45 52 50 L52 55"
+              d="M64 35 L64 48 Q74 55 64 62 L64 70"
               stroke="url(#chromoGreen)"
-              strokeWidth="3"
+              strokeWidth="4"
               strokeLinecap="round"
               fill="none"
             />
             <path
-              d="M58 30 L58 40 Q50 45 58 50 L58 55"
+              d="M72 35 L72 48 Q62 55 72 62 L72 70"
               stroke="url(#chromoOrange)"
-              strokeWidth="3"
+              strokeWidth="4"
               strokeLinecap="round"
               fill="none"
             />
           </motion.g>
-          <text x="45" y="88" textAnchor="middle" fill="#64748B" fontSize="7" fontWeight="500">
+          <text x="55" y="112" textAnchor="middle" fill="#64748B" fontSize="10" fontWeight="500">
             Prophase I
           </text>
-          <text x="45" y="96" textAnchor="middle" fill="#94A3B8" fontSize="6">
+          <text x="55" y="122" textAnchor="middle" fill="#94A3B8" fontSize="8">
             (Crossing Over)
           </text>
         </g>
 
         {/* Metaphase I */}
-        <g transform="translate(395, 85)">
+        <g transform="translate(510, 105)">
           <ellipse
-            cx="45"
-            cy="42"
-            rx="38"
-            ry="35"
+            cx="55"
+            cy="52"
+            rx="48"
+            ry="45"
             fill="url(#cytoplasmGrad)"
             stroke="url(#cellMembraneGrad)"
-            strokeWidth="2"
+            strokeWidth="3"
             filter="url(#cellShadow)"
           />
           {/* Bivalents aligned */}
@@ -15940,180 +15940,180 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
             transition={{ duration: 2, repeat: Infinity }}
           >
             <path
-              d="M30 38 L30 46"
+              d="M35 46 L35 58"
               stroke="url(#chromoBlue)"
-              strokeWidth="3"
+              strokeWidth="4"
               strokeLinecap="round"
             />
             <path
-              d="M36 38 L36 46"
+              d="M45 46 L45 58"
               stroke="url(#chromoRed)"
-              strokeWidth="3"
+              strokeWidth="4"
               strokeLinecap="round"
             />
             <path
-              d="M54 38 L54 46"
+              d="M65 46 L65 58"
               stroke="url(#chromoGreen)"
-              strokeWidth="3"
+              strokeWidth="4"
               strokeLinecap="round"
             />
             <path
-              d="M60 38 L60 46"
+              d="M75 46 L75 58"
               stroke="url(#chromoOrange)"
-              strokeWidth="3"
+              strokeWidth="4"
               strokeLinecap="round"
             />
           </motion.g>
           <line
-            x1="25"
-            y1="42"
-            x2="65"
-            y2="42"
+            x1="28"
+            y1="52"
+            x2="82"
+            y2="52"
             stroke="#94A3B8"
-            strokeWidth="1"
-            strokeDasharray="2"
+            strokeWidth="1.5"
+            strokeDasharray="3"
             opacity="0.5"
           />
-          <text x="45" y="88" textAnchor="middle" fill="#64748B" fontSize="7" fontWeight="500">
+          <text x="55" y="112" textAnchor="middle" fill="#64748B" fontSize="10" fontWeight="500">
             Metaphase I
           </text>
         </g>
 
         {/* Anaphase I - Homologs separate */}
-        <g transform="translate(300, 175)">
+        <g transform="translate(380, 235)">
           <ellipse
-            cx="45"
-            cy="38"
-            rx="42"
-            ry="32"
+            cx="55"
+            cy="48"
+            rx="55"
+            ry="42"
             fill="url(#cytoplasmGrad)"
             stroke="url(#cellMembraneGrad)"
-            strokeWidth="2"
+            strokeWidth="3"
             filter="url(#cellShadow)"
           />
           <motion.g
-            animate={animate ? { x: [-2, -4, -2] } : undefined}
+            animate={animate ? { x: [-2, -5, -2] } : undefined}
             transition={{ duration: 2, repeat: Infinity }}
           >
             <path
-              d="M22 32 L22 44"
+              d="M25 40 L25 56"
               stroke="url(#chromoBlue)"
-              strokeWidth="2.5"
+              strokeWidth="4"
               strokeLinecap="round"
             />
             <path
-              d="M30 32 L30 44"
+              d="M35 40 L35 56"
               stroke="url(#chromoGreen)"
-              strokeWidth="2.5"
+              strokeWidth="4"
               strokeLinecap="round"
             />
           </motion.g>
           <motion.g
-            animate={animate ? { x: [2, 4, 2] } : undefined}
+            animate={animate ? { x: [2, 5, 2] } : undefined}
             transition={{ duration: 2, repeat: Infinity }}
           >
             <path
-              d="M60 32 L60 44"
+              d="M75 40 L75 56"
               stroke="url(#chromoRed)"
-              strokeWidth="2.5"
+              strokeWidth="4"
               strokeLinecap="round"
             />
             <path
-              d="M68 32 L68 44"
+              d="M85 40 L85 56"
               stroke="url(#chromoOrange)"
-              strokeWidth="2.5"
+              strokeWidth="4"
               strokeLinecap="round"
             />
           </motion.g>
-          <text x="45" y="82" textAnchor="middle" fill="#64748B" fontSize="7" fontWeight="500">
+          <text x="55" y="105" textAnchor="middle" fill="#64748B" fontSize="10" fontWeight="500">
             Anaphase I
           </text>
         </g>
 
         {/* Telophase I - Two haploid cells */}
-        <g transform="translate(395, 175)">
+        <g transform="translate(510, 235)">
           <motion.ellipse
-            cx="25"
-            cy="38"
-            rx="22"
-            ry="25"
+            cx="30"
+            cy="48"
+            rx="28"
+            ry="32"
             fill="url(#cytoplasmGrad)"
             stroke="url(#cellMembraneGrad)"
-            strokeWidth="2"
+            strokeWidth="2.5"
             filter="url(#cellShadow)"
             animate={animate ? { x: [-1, 0, -1] } : undefined}
             transition={{ duration: 2, repeat: Infinity }}
           />
           <motion.ellipse
-            cx="65"
-            cy="38"
-            rx="22"
-            ry="25"
+            cx="85"
+            cy="48"
+            rx="28"
+            ry="32"
             fill="url(#cytoplasmGrad)"
             stroke="url(#cellMembraneGrad)"
-            strokeWidth="2"
+            strokeWidth="2.5"
             filter="url(#cellShadow)"
             animate={animate ? { x: [1, 0, 1] } : undefined}
             transition={{ duration: 2, repeat: Infinity }}
           />
-          <circle cx="25" cy="38" r="8" fill="url(#nucleusGrad)" opacity="0.7" />
-          <circle cx="65" cy="38" r="8" fill="url(#nucleusGrad)" opacity="0.7" />
-          <path d="M22 35 L22 41" stroke="url(#chromoBlue)" strokeWidth="2" strokeLinecap="round" />
+          <circle cx="30" cy="48" r="10" fill="url(#nucleusGrad)" opacity="0.7" />
+          <circle cx="85" cy="48" r="10" fill="url(#nucleusGrad)" opacity="0.7" />
+          <path d="M26 44 L26 52" stroke="url(#chromoBlue)" strokeWidth="3" strokeLinecap="round" />
           <path
-            d="M28 35 L28 41"
+            d="M34 44 L34 52"
             stroke="url(#chromoGreen)"
-            strokeWidth="2"
+            strokeWidth="3"
             strokeLinecap="round"
           />
-          <path d="M62 35 L62 41" stroke="url(#chromoRed)" strokeWidth="2" strokeLinecap="round" />
+          <path d="M81 44 L81 52" stroke="url(#chromoRed)" strokeWidth="3" strokeLinecap="round" />
           <path
-            d="M68 35 L68 41"
+            d="M89 44 L89 52"
             stroke="url(#chromoOrange)"
-            strokeWidth="2"
+            strokeWidth="3"
             strokeLinecap="round"
           />
-          <text x="45" y="75" textAnchor="middle" fill="#64748B" fontSize="7" fontWeight="500">
+          <text x="57" y="98" textAnchor="middle" fill="#64748B" fontSize="10" fontWeight="500">
             Telophase I
           </text>
         </g>
 
         {/* Meiosis II label */}
         <rect
-          x="350"
-          y="250"
-          width="80"
-          height="16"
-          rx="8"
+          x="475"
+          y="340"
+          width="100"
+          height="22"
+          rx="11"
           fill="#FDF2F8"
           stroke="#FBCFE8"
-          strokeWidth="1"
+          strokeWidth="1.5"
         />
-        <text x="390" y="261" textAnchor="middle" fill="#BE185D" fontSize="8" fontWeight="600">
+        <text x="525" y="355" textAnchor="middle" fill="#BE185D" fontSize="10" fontWeight="600">
           Meiosis II
         </text>
 
         {/* Final result - Four haploid cells */}
-        <g transform="translate(305, 275)">
+        <g transform="translate(375, 370)">
           {/* Cell 1 */}
           <motion.g
             animate={animate ? { scale: [1, 1.02, 1] } : undefined}
             transition={{ duration: 2, repeat: Infinity, delay: 0 }}
           >
             <ellipse
-              cx="28"
-              cy="32"
-              rx="22"
-              ry="24"
+              cx="35"
+              cy="40"
+              rx="28"
+              ry="30"
               fill="url(#cytoplasmGrad)"
               stroke="url(#cellMembraneGrad)"
-              strokeWidth="1.5"
+              strokeWidth="2"
               filter="url(#cellShadow)"
             />
-            <circle cx="28" cy="32" r="8" fill="url(#nucleusGrad)" opacity="0.7" />
+            <circle cx="35" cy="40" r="10" fill="url(#nucleusGrad)" opacity="0.7" />
             <path
-              d="M26 30 L26 34"
+              d="M33 37 L33 43"
               stroke="url(#chromoBlue)"
-              strokeWidth="2"
+              strokeWidth="3"
               strokeLinecap="round"
             />
           </motion.g>
@@ -16123,20 +16123,20 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
             transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
           >
             <ellipse
-              cx="78"
-              cy="32"
-              rx="22"
-              ry="24"
+              cx="100"
+              cy="40"
+              rx="28"
+              ry="30"
               fill="url(#cytoplasmGrad)"
               stroke="url(#cellMembraneGrad)"
-              strokeWidth="1.5"
+              strokeWidth="2"
               filter="url(#cellShadow)"
             />
-            <circle cx="78" cy="32" r="8" fill="url(#nucleusGrad)" opacity="0.7" />
+            <circle cx="100" cy="40" r="10" fill="url(#nucleusGrad)" opacity="0.7" />
             <path
-              d="M76 30 L76 34"
+              d="M98 37 L98 43"
               stroke="url(#chromoGreen)"
-              strokeWidth="2"
+              strokeWidth="3"
               strokeLinecap="round"
             />
           </motion.g>
@@ -16146,20 +16146,20 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
             transition={{ duration: 2, repeat: Infinity, delay: 1.0 }}
           >
             <ellipse
-              cx="128"
-              cy="32"
-              rx="22"
-              ry="24"
+              cx="165"
+              cy="40"
+              rx="28"
+              ry="30"
               fill="url(#cytoplasmGrad)"
               stroke="url(#cellMembraneGrad)"
-              strokeWidth="1.5"
+              strokeWidth="2"
               filter="url(#cellShadow)"
             />
-            <circle cx="128" cy="32" r="8" fill="url(#nucleusGrad)" opacity="0.7" />
+            <circle cx="165" cy="40" r="10" fill="url(#nucleusGrad)" opacity="0.7" />
             <path
-              d="M126 30 L126 34"
+              d="M163 37 L163 43"
               stroke="url(#chromoRed)"
-              strokeWidth="2"
+              strokeWidth="3"
               strokeLinecap="round"
             />
           </motion.g>
@@ -16169,27 +16169,27 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
             transition={{ duration: 2, repeat: Infinity, delay: 1.5 }}
           >
             <ellipse
-              cx="178"
-              cy="32"
-              rx="22"
-              ry="24"
+              cx="230"
+              cy="40"
+              rx="28"
+              ry="30"
               fill="url(#cytoplasmGrad)"
               stroke="url(#cellMembraneGrad)"
-              strokeWidth="1.5"
+              strokeWidth="2"
               filter="url(#cellShadow)"
             />
-            <circle cx="178" cy="32" r="8" fill="url(#nucleusGrad)" opacity="0.7" />
+            <circle cx="230" cy="40" r="10" fill="url(#nucleusGrad)" opacity="0.7" />
             <path
-              d="M176 30 L176 34"
+              d="M228 37 L228 43"
               stroke="url(#chromoOrange)"
-              strokeWidth="2"
+              strokeWidth="3"
               strokeLinecap="round"
             />
           </motion.g>
 
           {/* Result label */}
-          <rect x="55" y="70" width="95" height="18" rx="9" fill="#FCE7F3" />
-          <text x="102" y="82" textAnchor="middle" fill="#BE185D" fontSize="8" fontWeight="600">
+          <rect x="70" y="85" width="120" height="24" rx="12" fill="#FCE7F3" />
+          <text x="130" y="101" textAnchor="middle" fill="#BE185D" fontSize="10" fontWeight="600">
             4 Haploid Cells (n)
           </text>
         </g>
@@ -16202,16 +16202,16 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
         transition={{ delay: 0.5, duration: 0.5 }}
       >
         <rect
-          x="15"
-          y="385"
-          width="530"
+          x="20"
+          y="485"
+          width="660"
           height="28"
-          rx="8"
+          rx="10"
           fill="white"
-          fillOpacity="0.9"
+          fillOpacity="0.95"
           filter="url(#cellDivShadow)"
         />
-        <text x="280" y="402" textAnchor="middle" fill="#475569" fontSize="8" fontWeight="500">
+        <text x="350" y="503" textAnchor="middle" fill="#475569" fontSize="10" fontWeight="500">
           <tspan fill="#1D4ED8" fontWeight="700">
             Mitosis:
           </tspan>{' '}
@@ -16777,7 +16777,7 @@ export function RespirationIllustration({ className = '', animate = true }: Illu
 
   return (
     <Wrapper
-      viewBox="0 0 540 420"
+      viewBox="0 0 700 520"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
@@ -16866,20 +16866,20 @@ export function RespirationIllustration({ className = '', animate = true }: Illu
       </defs>
 
       {/* Background */}
-      <rect width="540" height="420" fill="url(#respBgGrad)" />
+      <rect width="700" height="520" fill="url(#respBgGrad)" rx="16" />
 
       {/* Decorative background elements */}
-      <circle cx="80" cy="80" r="120" fill="#3B82F6" opacity="0.04" />
-      <circle cx="460" cy="340" r="100" fill="#EC4899" opacity="0.04" />
-      <circle cx="270" cy="210" r="180" fill="#8B5CF6" opacity="0.03" />
+      <circle cx="100" cy="100" r="150" fill="#3B82F6" opacity="0.04" />
+      <circle cx="600" cy="420" r="130" fill="#EC4899" opacity="0.04" />
+      <circle cx="350" cy="260" r="220" fill="#8B5CF6" opacity="0.03" />
 
       {/* Title */}
       <motion.text
-        x="270"
-        y="24"
+        x="350"
+        y="32"
         textAnchor="middle"
         fill="#1E293B"
-        fontSize="15"
+        fontSize="18"
         fontWeight="700"
         initial={animate ? { opacity: 0, y: -10 } : undefined}
         animate={animate ? { opacity: 1, y: 0 } : undefined}
@@ -16895,72 +16895,72 @@ export function RespirationIllustration({ className = '', animate = true }: Illu
         transition={{ delay: 0.2, duration: 0.6 }}
       >
         {/* Nose/Nasal Cavity */}
-        <g transform="translate(85, 40)">
+        <g transform="translate(100, 50)">
           <path
-            d="M30 0 Q20 5 15 20 Q12 35 20 45 L40 45 Q48 35 45 20 Q40 5 30 0 Z"
+            d="M38 0 Q25 8 18 28 Q14 48 25 60 L50 60 Q62 48 58 28 Q50 8 38 0 Z"
             fill="#FDA4AF"
             filter="url(#organShadow2)"
           />
-          <text x="30" y="58" textAnchor="middle" fill="#64748B" fontSize="7" fontWeight="500">
+          <text x="38" y="78" textAnchor="middle" fill="#64748B" fontSize="9" fontWeight="500">
             Nose
           </text>
         </g>
 
         {/* Pharynx & Larynx */}
         <path
-          d="M115 85 L115 105 Q115 115 110 120 L110 130"
+          d="M138 110 L138 135 Q138 148 132 155 L132 168"
           stroke="url(#tracheaGrad)"
-          strokeWidth="10"
+          strokeWidth="12"
           fill="none"
           strokeLinecap="round"
         />
-        <text x="135" y="108" fill="#64748B" fontSize="6">
+        <text x="165" y="135" fill="#64748B" fontSize="8">
           Pharynx
         </text>
-        <text x="135" y="128" fill="#64748B" fontSize="6">
+        <text x="165" y="162" fill="#64748B" fontSize="8">
           Larynx
         </text>
 
         {/* Trachea with cartilage rings */}
-        <g transform="translate(95, 130)">
+        <g transform="translate(115, 168)">
           <rect
             x="5"
             y="0"
-            width="20"
-            height="50"
-            rx="3"
+            width="26"
+            height="65"
+            rx="4"
             fill="url(#tracheaGrad)"
             filter="url(#organShadow2)"
           />
           {/* Cartilage rings */}
-          <rect x="3" y="5" width="24" height="4" rx="2" fill="#FCA5A5" />
-          <rect x="3" y="15" width="24" height="4" rx="2" fill="#FCA5A5" />
-          <rect x="3" y="25" width="24" height="4" rx="2" fill="#FCA5A5" />
-          <rect x="3" y="35" width="24" height="4" rx="2" fill="#FCA5A5" />
-          <text x="35" y="30" fill="#64748B" fontSize="7" fontWeight="500">
+          <rect x="2" y="8" width="32" height="5" rx="2" fill="#FCA5A5" />
+          <rect x="2" y="20" width="32" height="5" rx="2" fill="#FCA5A5" />
+          <rect x="2" y="32" width="32" height="5" rx="2" fill="#FCA5A5" />
+          <rect x="2" y="44" width="32" height="5" rx="2" fill="#FCA5A5" />
+          <text x="45" y="38" fill="#64748B" fontSize="9" fontWeight="500">
             Trachea
           </text>
         </g>
 
         {/* Bronchi bifurcation */}
-        <g transform="translate(60, 180)">
+        <g transform="translate(70, 232)">
           {/* Left bronchus */}
           <path
-            d="M55 0 Q40 15 25 35"
+            d="M68 0 Q48 20 28 48"
             stroke="url(#tracheaGrad)"
-            strokeWidth="8"
+            strokeWidth="10"
             fill="none"
             strokeLinecap="round"
           />
           {/* Right bronchus */}
           <path
-            d="M55 0 Q70 15 85 35"
+            d="M68 0 Q88 20 108 48"
             stroke="url(#tracheaGrad)"
-            strokeWidth="8"
+            strokeWidth="10"
             fill="none"
             strokeLinecap="round"
           />
-          <text x="55" y="-5" textAnchor="middle" fill="#64748B" fontSize="6">
+          <text x="68" y="-8" textAnchor="middle" fill="#64748B" fontSize="8">
             Bronchi
           </text>
         </g>
@@ -16969,165 +16969,138 @@ export function RespirationIllustration({ className = '', animate = true }: Illu
         <motion.g
           animate={animate ? { scale: [1, 1.02, 1] } : undefined}
           transition={{ duration: 3, repeat: Infinity }}
-          style={{ transformOrigin: '55px 290px' }}
+          style={{ transformOrigin: '75px 360px' }}
         >
           {/* Left lung outer shape - 2 lobes, cardiac notch */}
           <path
-            d="M95 215
-               C85 218 75 225 70 235
-               Q60 250 55 270
-               Q50 295 55 320
-               Q60 345 70 355
-               Q80 365 90 368
-               Q100 370 105 365
-               L105 330
-               Q102 320 100 310
-               Q95 295 98 280
-               Q100 265 105 255
-               L105 230
-               Q100 220 95 215 Z"
+            d="M115 275
+               C102 280 90 290 82 305
+               Q68 325 62 355
+               Q55 390 62 420
+               Q70 450 85 465
+               Q100 480 115 484
+               Q130 488 138 480
+               L138 435
+               Q134 420 130 405
+               Q122 385 126 365
+               Q130 345 138 330
+               L138 295
+               Q130 282 115 275 Z"
             fill="url(#lungGrad)"
             filter="url(#organShadow2)"
           />
           {/* Left lung upper lobe highlight */}
           <path
-            d="M90 225 Q80 235 75 250 Q70 270 75 285 Q80 275 85 265 Q90 250 92 235 Q92 228 90 225 Z"
+            d="M108 288 Q95 302 88 325 Q80 355 88 375 Q96 362 105 345 Q112 320 115 300 Q115 292 108 288 Z"
             fill="url(#lungInnerGrad)"
             opacity="0.7"
           />
           {/* Left lung lower lobe highlight */}
           <path
-            d="M75 300 Q70 315 72 335 Q75 350 85 358 Q95 362 100 355 Q100 340 95 320 Q90 305 80 300 Z"
+            d="M88 395 Q80 418 84 445 Q90 465 105 475 Q120 480 130 470 Q130 450 122 420 Q112 400 98 395 Z"
             fill="url(#lungInnerGrad)"
             opacity="0.7"
           />
           {/* Horizontal fissure line */}
           <path
-            d="M60 290 Q75 285 100 290"
+            d="M68 380 Q95 372 132 380"
             stroke="#DB2777"
-            strokeWidth="1.5"
+            strokeWidth="2"
             fill="none"
-            strokeDasharray="3,2"
+            strokeDasharray="4,3"
           />
           {/* Bronchiole tree */}
-          <path d="M95 220 Q85 245 80 270" stroke="#F9A8D4" strokeWidth="2.5" fill="none" />
-          <path d="M80 270 Q70 285 65 310" stroke="#F9A8D4" strokeWidth="2" fill="none" />
-          <path d="M80 270 Q85 290 90 315" stroke="#F9A8D4" strokeWidth="2" fill="none" />
-          <path d="M65 310 Q58 325 55 340" stroke="#F9A8D4" strokeWidth="1.5" fill="none" />
-          <path d="M65 310 Q70 330 75 350" stroke="#F9A8D4" strokeWidth="1.5" fill="none" />
-          <path d="M90 315 Q95 335 92 355" stroke="#F9A8D4" strokeWidth="1.5" fill="none" />
+          <path d="M115 282 Q102 315 95 355" stroke="#F9A8D4" strokeWidth="3" fill="none" />
+          <path d="M95 355 Q82 378 75 410" stroke="#F9A8D4" strokeWidth="2.5" fill="none" />
+          <path d="M95 355 Q105 385 112 420" stroke="#F9A8D4" strokeWidth="2.5" fill="none" />
+          <path d="M75 410 Q65 435 62 460" stroke="#F9A8D4" strokeWidth="2" fill="none" />
+          <path d="M75 410 Q82 440 90 465" stroke="#F9A8D4" strokeWidth="2" fill="none" />
+          <path d="M112 420 Q120 448 115 472" stroke="#F9A8D4" strokeWidth="2" fill="none" />
           {/* Alveoli clusters (small circles) */}
-          <circle cx="55" cy="345" r="3" fill="#FCE7F3" stroke="#F9A8D4" strokeWidth="0.5" />
-          <circle cx="62" cy="352" r="2.5" fill="#FCE7F3" stroke="#F9A8D4" strokeWidth="0.5" />
-          <circle cx="75" cy="355" r="3" fill="#FCE7F3" stroke="#F9A8D4" strokeWidth="0.5" />
-          <circle cx="90" cy="358" r="2.5" fill="#FCE7F3" stroke="#F9A8D4" strokeWidth="0.5" />
-          <circle cx="68" cy="340" r="2" fill="#FCE7F3" stroke="#F9A8D4" strokeWidth="0.5" />
+          <circle cx="62" cy="465" r="4" fill="#FCE7F3" stroke="#F9A8D4" strokeWidth="0.8" />
+          <circle cx="75" cy="472" r="3.5" fill="#FCE7F3" stroke="#F9A8D4" strokeWidth="0.8" />
+          <circle cx="92" cy="475" r="4" fill="#FCE7F3" stroke="#F9A8D4" strokeWidth="0.8" />
+          <circle cx="112" cy="478" r="3.5" fill="#FCE7F3" stroke="#F9A8D4" strokeWidth="0.8" />
+          <circle cx="80" cy="455" r="3" fill="#FCE7F3" stroke="#F9A8D4" strokeWidth="0.8" />
         </motion.g>
 
         {/* Right Lung - Realistic anatomical shape with 3 lobes */}
         <motion.g
           animate={animate ? { scale: [1, 1.02, 1] } : undefined}
           transition={{ duration: 3, repeat: Infinity, delay: 0.1 }}
-          style={{ transformOrigin: '170px 290px' }}
+          style={{ transformOrigin: '210px 360px' }}
         >
           {/* Right lung outer shape - 3 lobes, larger */}
           <path
-            d="M125 215
-               C135 218 145 225 155 235
-               Q170 250 180 270
-               Q190 295 185 325
-               Q180 350 170 360
-               Q155 370 140 368
-               Q125 365 120 355
-               Q115 340 118 315
-               Q120 290 125 265
-               Q128 240 125 215 Z"
+            d="M155 275
+               C170 280 185 290 200 305
+               Q222 325 235 355
+               Q248 390 242 425
+               Q235 455 218 470
+               Q195 485 172 482
+               Q152 478 145 465
+               Q138 445 142 410
+               Q148 375 155 340
+               Q162 305 155 275 Z"
             fill="url(#lungGrad)"
             filter="url(#organShadow2)"
           />
           {/* Right lung upper lobe highlight */}
           <path
-            d="M135 225 Q145 235 155 250 Q160 265 155 275 Q145 270 140 255 Q135 240 135 225 Z"
+            d="M168 290 Q185 305 200 325 Q210 345 202 362 Q188 355 175 335 Q165 315 168 290 Z"
             fill="url(#lungInnerGrad)"
             opacity="0.7"
           />
           {/* Right lung middle lobe highlight */}
           <path
-            d="M160 285 Q170 295 175 310 Q175 320 168 325 Q158 318 155 305 Q155 292 160 285 Z"
+            d="M208 378 Q222 392 230 415 Q230 432 218 440 Q202 428 198 408 Q198 388 208 378 Z"
             fill="url(#lungInnerGrad)"
             opacity="0.7"
           />
           {/* Right lung lower lobe highlight */}
           <path
-            d="M140 335 Q150 345 160 355 Q155 362 145 362 Q130 358 125 345 Q128 338 140 335 Z"
+            d="M172 445 Q188 458 208 472 Q200 482 185 482 Q162 475 152 458 Q158 448 172 445 Z"
             fill="url(#lungInnerGrad)"
             opacity="0.7"
           />
           {/* Horizontal fissure (upper) */}
           <path
-            d="M125 275 Q145 270 175 280"
+            d="M152 360 Q185 352 228 365"
             stroke="#DB2777"
-            strokeWidth="1.5"
+            strokeWidth="2"
             fill="none"
-            strokeDasharray="3,2"
+            strokeDasharray="4,3"
           />
           {/* Oblique fissure (lower) */}
           <path
-            d="M130 330 Q155 320 180 335"
+            d="M158 435 Q195 420 235 442"
             stroke="#DB2777"
-            strokeWidth="1.5"
+            strokeWidth="2"
             fill="none"
-            strokeDasharray="3,2"
+            strokeDasharray="4,3"
           />
           {/* Bronchiole tree */}
-          <path d="M125 220 Q140 245 150 270" stroke="#F9A8D4" strokeWidth="2.5" fill="none" />
-          <path d="M150 270 Q160 285 170 310" stroke="#F9A8D4" strokeWidth="2" fill="none" />
-          <path d="M150 270 Q145 290 140 320" stroke="#F9A8D4" strokeWidth="2" fill="none" />
-          <path d="M170 310 Q175 330 170 350" stroke="#F9A8D4" strokeWidth="1.5" fill="none" />
-          <path d="M170 310 Q160 330 155 355" stroke="#F9A8D4" strokeWidth="1.5" fill="none" />
-          <path d="M140 320 Q130 340 125 355" stroke="#F9A8D4" strokeWidth="1.5" fill="none" />
+          <path d="M155 282 Q178 315 192 355" stroke="#F9A8D4" strokeWidth="3" fill="none" />
+          <path d="M192 355 Q208 378 220 410" stroke="#F9A8D4" strokeWidth="2.5" fill="none" />
+          <path d="M192 355 Q182 385 175 420" stroke="#F9A8D4" strokeWidth="2.5" fill="none" />
+          <path d="M220 410 Q230 438 222 465" stroke="#F9A8D4" strokeWidth="2" fill="none" />
+          <path d="M220 410 Q205 438 198 470" stroke="#F9A8D4" strokeWidth="2" fill="none" />
+          <path d="M175 420 Q162 448 155 472" stroke="#F9A8D4" strokeWidth="2" fill="none" />
           {/* Alveoli clusters */}
-          <circle cx="170" cy="355" r="3" fill="#FCE7F3" stroke="#F9A8D4" strokeWidth="0.5" />
-          <circle cx="155" cy="360" r="2.5" fill="#FCE7F3" stroke="#F9A8D4" strokeWidth="0.5" />
-          <circle cx="140" cy="358" r="3" fill="#FCE7F3" stroke="#F9A8D4" strokeWidth="0.5" />
-          <circle cx="125" cy="355" r="2.5" fill="#FCE7F3" stroke="#F9A8D4" strokeWidth="0.5" />
-          <circle cx="162" cy="345" r="2" fill="#FCE7F3" stroke="#F9A8D4" strokeWidth="0.5" />
-          <circle cx="132" cy="348" r="2" fill="#FCE7F3" stroke="#F9A8D4" strokeWidth="0.5" />
+          <circle cx="222" cy="470" r="4" fill="#FCE7F3" stroke="#F9A8D4" strokeWidth="0.8" />
+          <circle cx="200" cy="478" r="3.5" fill="#FCE7F3" stroke="#F9A8D4" strokeWidth="0.8" />
+          <circle cx="175" cy="478" r="4" fill="#FCE7F3" stroke="#F9A8D4" strokeWidth="0.8" />
+          <circle cx="155" cy="472" r="3.5" fill="#FCE7F3" stroke="#F9A8D4" strokeWidth="0.8" />
+          <circle cx="212" cy="455" r="3" fill="#FCE7F3" stroke="#F9A8D4" strokeWidth="0.8" />
+          <circle cx="165" cy="462" r="3" fill="#FCE7F3" stroke="#F9A8D4" strokeWidth="0.8" />
         </motion.g>
 
         {/* Labels */}
-        <text x="75" y="385" textAnchor="middle" fill="#64748B" fontSize="8" fontWeight="600">
+        <text x="90" y="500" textAnchor="middle" fill="#64748B" fontSize="10" fontWeight="600">
           Left Lung
         </text>
-        <text x="155" y="385" textAnchor="middle" fill="#64748B" fontSize="8" fontWeight="600">
+        <text x="195" y="500" textAnchor="middle" fill="#64748B" fontSize="10" fontWeight="600">
           Right Lung
-        </text>
-        <text x="115" y="400" textAnchor="middle" fill="#64748B" fontSize="6" fontStyle="italic">
-          Inhale ↔ Exhale
-        </text>
-
-        {/* Diaphragm - curved muscular sheet */}
-        <motion.path
-          d="M45 372 Q75 395 115 380 Q155 395 185 372"
-          stroke="#94A3B8"
-          strokeWidth="6"
-          fill="none"
-          strokeLinecap="round"
-          animate={
-            animate
-              ? {
-                  d: [
-                    'M45 372 Q75 395 115 380 Q155 395 185 372',
-                    'M45 378 Q75 388 115 378 Q155 388 185 378',
-                    'M45 372 Q75 395 115 380 Q155 395 185 372',
-                  ],
-                }
-              : undefined
-          }
-          transition={{ duration: 3, repeat: Infinity }}
-        />
-        <text x="115" y="410" textAnchor="middle" fill="#64748B" fontSize="7" fontWeight="500">
-          Diaphragm
         </text>
       </motion.g>
 
@@ -17137,152 +17110,147 @@ export function RespirationIllustration({ className = '', animate = true }: Illu
         animate={animate ? { opacity: 1, scale: 1 } : undefined}
         transition={{ delay: 0.3, duration: 0.6 }}
       >
-        <g transform="translate(245, 38)">
+        <g transform="translate(290, 50)">
           <rect
             x="0"
             y="0"
-            width="280"
-            height="165"
-            rx="12"
+            width="390"
+            height="200"
+            rx="14"
             fill="url(#respCardGrad)"
             filter="url(#respShadow)"
           />
-          <text x="140" y="18" textAnchor="middle" fill="#BE185D" fontSize="10" fontWeight="700">
+          <text x="195" y="24" textAnchor="middle" fill="#BE185D" fontSize="13" fontWeight="700">
             Gas Exchange at Alveolus
           </text>
 
           {/* Alveolus structure */}
-          <g transform="translate(20, 28)">
+          <g transform="translate(25, 38)">
             {/* Alveolus bubble */}
             <circle
-              cx="65"
-              cy="60"
-              r="50"
+              cx="85"
+              cy="75"
+              r="65"
               fill="url(#alveoliGrad)"
               stroke="#F9A8D4"
-              strokeWidth="2"
+              strokeWidth="2.5"
             />
-            <text x="65" y="60" textAnchor="middle" fill="#BE185D" fontSize="8" fontWeight="600">
+            <text x="85" y="72" textAnchor="middle" fill="#BE185D" fontSize="10" fontWeight="600">
               Alveolus
             </text>
-            <text x="65" y="72" textAnchor="middle" fill="#9D174D" fontSize="6">
+            <text x="85" y="88" textAnchor="middle" fill="#9D174D" fontSize="8">
               (Air space)
             </text>
 
             {/* Capillary wrapping around */}
             <path
-              d="M20 35 Q10 60 20 85 Q30 100 50 105 Q80 110 100 95 Q115 80 115 60 Q115 40 100 30"
+              d="M25 45 Q10 75 25 110 Q40 130 65 135 Q105 142 135 122 Q155 100 155 75 Q155 50 135 35"
               stroke="url(#arteryGrad)"
-              strokeWidth="8"
+              strokeWidth="10"
               fill="none"
               strokeLinecap="round"
             />
 
             {/* O2 molecules moving in */}
             <motion.g
-              animate={animate ? { x: [0, 15, 0], opacity: [1, 0.5, 1] } : undefined}
+              animate={animate ? { x: [0, 18, 0], opacity: [1, 0.5, 1] } : undefined}
               transition={{ duration: 2, repeat: Infinity }}
             >
-              <circle cx="45" cy="45" r="5" fill="url(#oxygenGrad)" filter="url(#gasGlow)" />
-              <text x="45" y="48" textAnchor="middle" fill="white" fontSize="5" fontWeight="bold">
+              <circle cx="55" cy="52" r="7" fill="url(#oxygenGrad)" filter="url(#gasGlow)" />
+              <text x="55" y="56" textAnchor="middle" fill="white" fontSize="6" fontWeight="bold">
                 O₂
               </text>
             </motion.g>
             <motion.g
-              animate={animate ? { x: [0, 15, 0], opacity: [1, 0.5, 1] } : undefined}
+              animate={animate ? { x: [0, 18, 0], opacity: [1, 0.5, 1] } : undefined}
               transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
             >
-              <circle cx="55" cy="35" r="5" fill="url(#oxygenGrad)" filter="url(#gasGlow)" />
-              <text x="55" y="38" textAnchor="middle" fill="white" fontSize="5" fontWeight="bold">
+              <circle cx="70" cy="40" r="7" fill="url(#oxygenGrad)" filter="url(#gasGlow)" />
+              <text x="70" y="44" textAnchor="middle" fill="white" fontSize="6" fontWeight="bold">
                 O₂
               </text>
             </motion.g>
 
             {/* CO2 molecules moving out */}
             <motion.g
-              animate={animate ? { x: [0, -15, 0], opacity: [1, 0.5, 1] } : undefined}
+              animate={animate ? { x: [0, -18, 0], opacity: [1, 0.5, 1] } : undefined}
               transition={{ duration: 2, repeat: Infinity }}
             >
-              <circle cx="85" cy="80" r="5" fill="url(#co2Grad)" filter="url(#gasGlow)" />
-              <text x="85" y="83" textAnchor="middle" fill="white" fontSize="4" fontWeight="bold">
+              <circle cx="115" cy="100" r="7" fill="url(#co2Grad)" filter="url(#gasGlow)" />
+              <text x="115" y="104" textAnchor="middle" fill="white" fontSize="5" fontWeight="bold">
                 CO₂
               </text>
             </motion.g>
             <motion.g
-              animate={animate ? { x: [0, -15, 0], opacity: [1, 0.5, 1] } : undefined}
+              animate={animate ? { x: [0, -18, 0], opacity: [1, 0.5, 1] } : undefined}
               transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
             >
-              <circle cx="75" cy="90" r="5" fill="url(#co2Grad)" filter="url(#gasGlow)" />
-              <text x="75" y="93" textAnchor="middle" fill="white" fontSize="4" fontWeight="bold">
+              <circle cx="100" cy="115" r="7" fill="url(#co2Grad)" filter="url(#gasGlow)" />
+              <text x="100" y="119" textAnchor="middle" fill="white" fontSize="5" fontWeight="bold">
                 CO₂
               </text>
             </motion.g>
 
             {/* Arrows showing diffusion */}
+            <path d="M42 62 L28 70" stroke="#3B82F6" strokeWidth="2" markerEnd="url(#arrowBlue)" />
             <path
-              d="M35 50 L25 55"
-              stroke="#3B82F6"
-              strokeWidth="1.5"
-              markerEnd="url(#arrowBlue)"
-            />
-            <path
-              d="M95 75 L105 70"
+              d="M128 95 L145 88"
               stroke="#8B5CF6"
-              strokeWidth="1.5"
+              strokeWidth="2"
               markerEnd="url(#arrowPurple)"
             />
             <defs>
               <marker
                 id="arrowBlue"
-                markerWidth="4"
-                markerHeight="4"
-                refX="3"
-                refY="2"
+                markerWidth="5"
+                markerHeight="5"
+                refX="4"
+                refY="2.5"
                 orient="auto"
               >
-                <path d="M0,0 L4,2 L0,4 Z" fill="#3B82F6" />
+                <path d="M0,0 L5,2.5 L0,5 Z" fill="#3B82F6" />
               </marker>
               <marker
                 id="arrowPurple"
-                markerWidth="4"
-                markerHeight="4"
-                refX="3"
-                refY="2"
+                markerWidth="5"
+                markerHeight="5"
+                refX="4"
+                refY="2.5"
                 orient="auto"
               >
-                <path d="M0,0 L4,2 L0,4 Z" fill="#8B5CF6" />
+                <path d="M0,0 L5,2.5 L0,5 Z" fill="#8B5CF6" />
               </marker>
             </defs>
           </g>
 
           {/* Legend */}
-          <g transform="translate(155, 35)">
-            <circle cx="10" cy="8" r="6" fill="url(#oxygenGrad)" />
-            <text x="22" y="11" fill="#1E293B" fontSize="7" fontWeight="500">
+          <g transform="translate(210, 45)">
+            <circle cx="12" cy="10" r="8" fill="url(#oxygenGrad)" />
+            <text x="28" y="14" fill="#1E293B" fontSize="9" fontWeight="500">
               O₂ (into blood)
             </text>
 
-            <circle cx="10" cy="28" r="6" fill="url(#co2Grad)" />
-            <text x="22" y="31" fill="#1E293B" fontSize="7" fontWeight="500">
+            <circle cx="12" cy="38" r="8" fill="url(#co2Grad)" />
+            <text x="28" y="42" fill="#1E293B" fontSize="9" fontWeight="500">
               CO₂ (into alveolus)
             </text>
 
-            <rect x="4" y="43" width="12" height="8" rx="2" fill="url(#arteryGrad)" />
-            <text x="22" y="50" fill="#1E293B" fontSize="7" fontWeight="500">
+            <rect x="4" y="56" width="16" height="10" rx="3" fill="url(#arteryGrad)" />
+            <text x="28" y="64" fill="#1E293B" fontSize="9" fontWeight="500">
               Capillary
             </text>
 
-            <text x="0" y="72" fill="#64748B" fontSize="6" fontWeight="600">
+            <text x="0" y="92" fill="#64748B" fontSize="8" fontWeight="600">
               Diffusion Distance:
             </text>
-            <text x="0" y="82" fill="#64748B" fontSize="6">
+            <text x="0" y="106" fill="#64748B" fontSize="8">
               0.2 μm (very thin!)
             </text>
 
-            <text x="0" y="100" fill="#64748B" fontSize="6" fontWeight="600">
+            <text x="0" y="130" fill="#64748B" fontSize="8" fontWeight="600">
               Surface Area:
             </text>
-            <text x="0" y="110" fill="#64748B" fontSize="6">
+            <text x="0" y="144" fill="#64748B" fontSize="8">
               ~70-100 m² (tennis court)
             </text>
           </g>
@@ -17295,98 +17263,95 @@ export function RespirationIllustration({ className = '', animate = true }: Illu
         animate={animate ? { opacity: 1, x: 0 } : undefined}
         transition={{ delay: 0.4, duration: 0.6 }}
       >
-        <g transform="translate(245, 215)">
+        <g transform="translate(290, 265)">
           <rect
             x="0"
             y="0"
-            width="280"
-            height="95"
-            rx="12"
+            width="390"
+            height="115"
+            rx="14"
             fill="url(#respCardGrad)"
             filter="url(#respShadow)"
           />
-          <text x="140" y="16" textAnchor="middle" fill="#DC2626" fontSize="10" fontWeight="700">
+          <text x="195" y="22" textAnchor="middle" fill="#DC2626" fontSize="13" fontWeight="700">
             O₂ Transport in Blood
           </text>
 
           {/* Hemoglobin illustration */}
-          <g transform="translate(15, 28)">
+          <g transform="translate(20, 35)">
             {/* RBC shape */}
             <ellipse
-              cx="40"
-              cy="30"
-              rx="30"
-              ry="18"
+              cx="50"
+              cy="38"
+              rx="40"
+              ry="24"
               fill="url(#hbGrad)"
               filter="url(#organShadow2)"
             />
-            <ellipse cx="40" cy="30" rx="12" ry="8" fill="#FCA5A5" />
+            <ellipse cx="50" cy="38" rx="16" ry="10" fill="#FCA5A5" />
 
             {/* O2 binding sites */}
             <motion.circle
-              cx="20"
-              cy="25"
-              r="4"
+              cx="24"
+              cy="32"
+              r="6"
               fill="url(#oxygenGrad)"
               animate={animate ? { scale: [1, 1.2, 1] } : undefined}
               transition={{ duration: 1.5, repeat: Infinity, delay: 0 }}
             />
             <motion.circle
-              cx="35"
-              cy="18"
-              r="4"
+              cx="42"
+              cy="22"
+              r="6"
               fill="url(#oxygenGrad)"
               animate={animate ? { scale: [1, 1.2, 1] } : undefined}
               transition={{ duration: 1.5, repeat: Infinity, delay: 0.3 }}
             />
             <motion.circle
-              cx="50"
-              cy="18"
-              r="4"
+              cx="62"
+              cy="22"
+              r="6"
               fill="url(#oxygenGrad)"
               animate={animate ? { scale: [1, 1.2, 1] } : undefined}
               transition={{ duration: 1.5, repeat: Infinity, delay: 0.6 }}
             />
             <motion.circle
-              cx="60"
-              cy="28"
-              r="4"
+              cx="76"
+              cy="35"
+              r="6"
               fill="url(#oxygenGrad)"
               animate={animate ? { scale: [1, 1.2, 1] } : undefined}
               transition={{ duration: 1.5, repeat: Infinity, delay: 0.9 }}
             />
 
-            <text x="40" y="60" textAnchor="middle" fill="#64748B" fontSize="7" fontWeight="600">
+            <text x="50" y="75" textAnchor="middle" fill="#64748B" fontSize="9" fontWeight="600">
               Hemoglobin (Hb)
-            </text>
-            <text x="40" y="70" textAnchor="middle" fill="#94A3B8" fontSize="6">
-              4 O₂ binding sites
             </text>
           </g>
 
           {/* Transport percentages */}
-          <g transform="translate(100, 28)">
-            <text x="0" y="10" fill="#1E293B" fontSize="8" fontWeight="600">
+          <g transform="translate(130, 35)">
+            <text x="0" y="10" fill="#1E293B" fontSize="10" fontWeight="600">
               O₂ Transport:
             </text>
-            <rect x="0" y="16" width="160" height="10" rx="3" fill="#E2E8F0" />
-            <rect x="0" y="16" width="155" height="10" rx="3" fill="url(#oxygenGrad)" />
-            <text x="70" y="24" fill="white" fontSize="6" fontWeight="bold">
+            <rect x="0" y="18" width="230" height="14" rx="4" fill="#E2E8F0" />
+            <rect x="0" y="18" width="220" height="14" rx="4" fill="url(#oxygenGrad)" />
+            <text x="100" y="29" fill="white" fontSize="8" fontWeight="bold">
               97% as Oxyhemoglobin
             </text>
-            <text x="165" y="24" fill="#64748B" fontSize="6">
+            <text x="238" y="29" fill="#64748B" fontSize="7">
               3% dissolved
             </text>
 
-            <text x="0" y="45" fill="#1E293B" fontSize="8" fontWeight="600">
+            <text x="0" y="55" fill="#1E293B" fontSize="10" fontWeight="600">
               CO₂ Transport:
             </text>
-            <rect x="0" y="51" width="160" height="10" rx="3" fill="#E2E8F0" />
-            <rect x="0" y="51" width="112" height="10" rx="3" fill="url(#co2Grad)" />
-            <text x="50" y="59" fill="white" fontSize="6" fontWeight="bold">
+            <rect x="0" y="63" width="230" height="14" rx="4" fill="#E2E8F0" />
+            <rect x="0" y="63" width="160" height="14" rx="4" fill="url(#co2Grad)" />
+            <text x="70" y="74" fill="white" fontSize="8" fontWeight="bold">
               70% as HCO₃⁻
             </text>
-            <text x="118" y="59" fill="#64748B" fontSize="5">
+            <text x="170" y="74" fill="#64748B" fontSize="7">
               23% Hb, 7% dissolved
             </text>
           </g>
@@ -17399,90 +17364,74 @@ export function RespirationIllustration({ className = '', animate = true }: Illu
         animate={animate ? { opacity: 1, y: 0 } : undefined}
         transition={{ delay: 0.5, duration: 0.6 }}
       >
-        <g transform="translate(245, 320)">
+        <g transform="translate(290, 395)">
           <rect
             x="0"
             y="0"
-            width="280"
-            height="85"
-            rx="12"
+            width="390"
+            height="108"
+            rx="14"
             fill="url(#respCardGrad)"
             filter="url(#respShadow)"
           />
-          <text x="140" y="16" textAnchor="middle" fill="#0369A1" fontSize="10" fontWeight="700">
+          <text x="195" y="22" textAnchor="middle" fill="#0369A1" fontSize="13" fontWeight="700">
             Lung Volumes & Capacities
           </text>
 
           {/* Volume bars */}
-          <g transform="translate(15, 25)">
-            <text x="0" y="10" fill="#64748B" fontSize="7" fontWeight="500">
+          <g transform="translate(20, 35)">
+            <text x="0" y="12" fill="#64748B" fontSize="9" fontWeight="500">
               TV (Tidal Volume)
             </text>
-            <rect x="85" y="3" width="50" height="10" rx="2" fill="#3B82F6" />
-            <text x="140" y="11" fill="#64748B" fontSize="6">
+            <rect x="110" y="4" width="65" height="14" rx="3" fill="#3B82F6" />
+            <text x="185" y="14" fill="#64748B" fontSize="8">
               ~500 mL
             </text>
 
-            <text x="0" y="26" fill="#64748B" fontSize="7" fontWeight="500">
+            <text x="0" y="32" fill="#64748B" fontSize="9" fontWeight="500">
               IRV
             </text>
-            <rect x="85" y="19" width="100" height="10" rx="2" fill="#60A5FA" />
-            <text x="190" y="27" fill="#64748B" fontSize="6">
+            <rect x="110" y="24" width="130" height="14" rx="3" fill="#60A5FA" />
+            <text x="250" y="34" fill="#64748B" fontSize="8">
               ~3000 mL
             </text>
 
-            <text x="0" y="42" fill="#64748B" fontSize="7" fontWeight="500">
+            <text x="0" y="52" fill="#64748B" fontSize="9" fontWeight="500">
               ERV
             </text>
-            <rect x="85" y="35" width="45" height="10" rx="2" fill="#93C5FD" />
-            <text x="135" y="43" fill="#64748B" fontSize="6">
+            <rect x="110" y="44" width="58" height="14" rx="3" fill="#93C5FD" />
+            <text x="178" y="54" fill="#64748B" fontSize="8">
               ~1100 mL
             </text>
 
-            <text x="0" y="58" fill="#64748B" fontSize="7" fontWeight="500">
+            <text x="0" y="72" fill="#64748B" fontSize="9" fontWeight="500">
               RV (Residual)
             </text>
-            <rect x="85" y="51" width="50" height="10" rx="2" fill="#BFDBFE" />
-            <text x="140" y="59" fill="#64748B" fontSize="6">
+            <rect x="110" y="64" width="65" height="14" rx="3" fill="#BFDBFE" />
+            <text x="185" y="74" fill="#64748B" fontSize="8">
               ~1200 mL
             </text>
           </g>
 
           {/* Vital Capacity */}
-          <g transform="translate(200, 30)">
-            <text x="0" y="0" fill="#1E293B" fontSize="7" fontWeight="600">
+          <g transform="translate(285, 38)">
+            <text x="0" y="0" fill="#1E293B" fontSize="9" fontWeight="600">
               Vital Capacity
             </text>
-            <text x="0" y="12" fill="#0369A1" fontSize="9" fontWeight="700">
+            <text x="0" y="16" fill="#0369A1" fontSize="12" fontWeight="700">
               ~4600 mL
             </text>
-            <text x="0" y="24" fill="#64748B" fontSize="6">
+            <text x="0" y="32" fill="#64748B" fontSize="8">
               (IRV+TV+ERV)
             </text>
-            <text x="0" y="40" fill="#1E293B" fontSize="7" fontWeight="600">
+            <text x="0" y="50" fill="#1E293B" fontSize="9" fontWeight="600">
               Total Lung
             </text>
-            <text x="0" y="52" fill="#0369A1" fontSize="9" fontWeight="700">
+            <text x="0" y="66" fill="#0369A1" fontSize="12" fontWeight="700">
               ~5800 mL
             </text>
           </g>
         </g>
-      </motion.g>
-
-      {/* Breathing indicator */}
-      <motion.g
-        initial={animate ? { opacity: 0 } : undefined}
-        animate={animate ? { opacity: 1 } : undefined}
-        transition={{ delay: 0.6, duration: 0.5 }}
-      >
-        <text x="115" y="410" textAnchor="middle" fill="#64748B" fontSize="7" fontWeight="500">
-          <motion.tspan
-            animate={animate ? { opacity: [1, 0.5, 1] } : undefined}
-            transition={{ duration: 3, repeat: Infinity }}
-          >
-            Inhale ↔ Exhale
-          </motion.tspan>
-        </text>
       </motion.g>
     </Wrapper>
   )
