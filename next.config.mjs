@@ -158,12 +158,107 @@ const nextConfig = {
     scrollRestoration: true
   },
 
-  // Redirects for SEO
+  // Redirects for SEO - Fix 404 errors reported in Google Search Console
   async redirects() {
     return [
       {
         source: '/admin-login',
         destination: '/admin',
+        permanent: false,
+      },
+      // Old blog slugs redirecting to relevant existing content
+      {
+        source: '/blog/neet-preparation-timeline-class-9-to-2028',
+        destination: '/blog/when-to-start-neet-preparation-class-9-vs-10',
+        permanent: true,
+      },
+      {
+        source: '/blog/early-neet-preparation-success-rate-science',
+        destination: '/blog/when-to-start-neet-preparation-class-9-vs-10',
+        permanent: true,
+      },
+      {
+        source: '/blog/international-school-neet-transition-guide',
+        destination: '/blog/dps-students-neet-preparation-guide',
+        permanent: true,
+      },
+      {
+        source: '/blog/online-vs-offline-neet-coaching-data-comparison',
+        destination: '/blog/kota-vs-online-neet-coaching-2025',
+        permanent: true,
+      },
+      {
+        source: '/blog/mumbai-best-neet-biology-coaching-2025',
+        destination: '/blog/top-10-neet-biology-coaching-delhi-ncr-2025',
+        permanent: true,
+      },
+      {
+        source: '/blog/neet-2024-cutoff-analysis',
+        destination: '/blog/neet-2026-complete-guide-exam-pattern-syllabus-dates',
+        permanent: true,
+      },
+      {
+        source: '/blog/neet-repeater-success-stories',
+        destination: '/courses/neet-repeater',
+        permanent: true,
+      },
+      {
+        source: '/blog/how-to-overcome-neet-failure',
+        destination: '/courses/neet-repeater',
+        permanent: true,
+      },
+      // Old location pages redirecting to main location pages
+      {
+        source: '/neet-coaching-jaipur',
+        destination: '/neet-coaching-north-india',
+        permanent: true,
+      },
+      {
+        source: '/neet-coaching-agra',
+        destination: '/neet-coaching-north-india',
+        permanent: true,
+      },
+      {
+        source: '/neet-coaching-indore',
+        destination: '/neet-coaching-centre',
+        permanent: true,
+      },
+      {
+        source: '/neet-coaching-ghaziabad',
+        destination: '/neet-coaching-noida',
+        permanent: true,
+      },
+      {
+        source: '/neet-coaching-kota',
+        destination: '/neet-coaching-north-india',
+        permanent: true,
+      },
+      {
+        source: '/neet-coaching-kanpur',
+        destination: '/neet-coaching-north-india',
+        permanent: true,
+      },
+      {
+        source: '/neet-coaching-raipur',
+        destination: '/neet-coaching-centre',
+        permanent: true,
+      },
+      // Old center pages redirecting to main centers
+      {
+        source: '/centers/rohini',
+        destination: '/neet-coaching-delhi',
+        permanent: true,
+      },
+      // Boards page redirect
+      {
+        source: '/boards/state-boards',
+        destination: '/courses',
+        permanent: true,
+      },
+      // Protected route - redirect to login
+      {
+        source: '/counselor/communications',
+        destination: '/auth/signin',
         permanent: false,
       },
     ]
