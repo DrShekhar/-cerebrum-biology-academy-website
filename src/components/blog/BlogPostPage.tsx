@@ -69,6 +69,7 @@ import {
   SmallVsLargeBatchIllustration,
   TwoYearProgramIllustration,
   SpecializedVsMassIllustration,
+  BiomoleculesIllustration,
 } from '@/components/illustrations/BlogIllustrations'
 
 type IllustrationComponent = React.ComponentType<{ className?: string; animate?: boolean }>
@@ -90,7 +91,7 @@ const illustrationMap: Record<string, IllustrationComponent> = {
   'genetics-heredity-variation-neet': GeneticsIllustration,
   'cell-structure-function-neet-notes': CellBiologyIllustration,
   'cell-division-mitosis-meiosis-neet': CellBiologyIllustration,
-  'biomolecules-neet-biology-complete-guide': MolecularBiologyIllustration,
+  'biomolecules-neet-biology-complete-guide': BiomoleculesIllustration,
   'photosynthesis-neet-biology-notes': PlantPhysiologyIllustration,
   'photosynthesis-vs-respiration-neet-comparison': PhotosynthesisVsRespirationIllustration,
   'human-digestion-absorption-neet': HumanPhysiologyIllustration,
