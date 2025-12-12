@@ -75,6 +75,7 @@ import {
   RespirationIllustration,
   CirculationIllustration,
   ExcretorySystemIllustration,
+  NervousSystemIllustration,
 } from '@/components/illustrations/BlogIllustrations'
 
 type IllustrationComponent = React.ComponentType<{ className?: string; animate?: boolean }>
@@ -103,7 +104,7 @@ const illustrationMap: Record<string, IllustrationComponent> = {
   'breathing-gas-exchange-neet-notes': RespirationIllustration,
   'body-fluids-circulation-neet': CirculationIllustration,
   'excretory-system-neet-notes': ExcretorySystemIllustration,
-  'nervous-system-neet-biology': HumanPhysiologyIllustration,
+  'nervous-system-neet-biology': NervousSystemIllustration,
   'plant-kingdom-classification-neet': PlantKingdomIllustration,
   'neet-biology-preparation-strategy-score-180-plus': NEET180StrategyIllustration,
   'neet-biology-syllabus-2025-complete-guide': ChapterWeightageIllustration,
