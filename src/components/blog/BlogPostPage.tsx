@@ -72,6 +72,7 @@ import {
   BiomoleculesIllustration,
   CellDivisionIllustration,
   HumanDigestionIllustration,
+  RespirationIllustration,
 } from '@/components/illustrations/BlogIllustrations'
 
 type IllustrationComponent = React.ComponentType<{ className?: string; animate?: boolean }>
@@ -97,7 +98,7 @@ const illustrationMap: Record<string, IllustrationComponent> = {
   'photosynthesis-neet-biology-notes': PlantPhysiologyIllustration,
   'photosynthesis-vs-respiration-neet-comparison': PhotosynthesisVsRespirationIllustration,
   'human-digestion-absorption-neet': HumanDigestionIllustration,
-  'breathing-gas-exchange-neet-notes': HumanPhysiologyIllustration,
+  'breathing-gas-exchange-neet-notes': RespirationIllustration,
   'body-fluids-circulation-neet': HumanPhysiologyIllustration,
   'excretory-system-neet-notes': HumanPhysiologyIllustration,
   'nervous-system-neet-biology': HumanPhysiologyIllustration,

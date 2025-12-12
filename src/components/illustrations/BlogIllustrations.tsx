@@ -10045,6 +10045,649 @@ export function HumanDigestionIllustration({ className = '', animate = true }: I
   )
 }
 
+// Professional Respiration/Breathing Illustration - Silicon Valley Quality
+export function RespirationIllustration({ className = '', animate = true }: IllustrationProps) {
+  const Wrapper = animate ? motion.svg : 'svg'
+  const wrapperProps = animate
+    ? {
+        initial: { opacity: 0, scale: 0.95 },
+        animate: { opacity: 1, scale: 1 },
+        transition: { duration: 0.8, ease: 'easeOut' },
+      }
+    : {}
+
+  return (
+    <Wrapper
+      viewBox="0 0 540 420"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      preserveAspectRatio="xMidYMid meet"
+      {...wrapperProps}
+    >
+      <defs>
+        {/* Background gradient */}
+        <linearGradient id="respBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#EFF6FF" />
+          <stop offset="50%" stopColor="#F0F9FF" />
+          <stop offset="100%" stopColor="#ECFEFF" />
+        </linearGradient>
+
+        {/* Lung gradients */}
+        <linearGradient id="lungGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#F472B6" />
+          <stop offset="100%" stopColor="#EC4899" />
+        </linearGradient>
+        <radialGradient id="lungInnerGrad" cx="40%" cy="40%" r="60%">
+          <stop offset="0%" stopColor="#FBCFE8" />
+          <stop offset="100%" stopColor="#F9A8D4" />
+        </radialGradient>
+
+        {/* Trachea/Bronchi gradient */}
+        <linearGradient id="tracheaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#FDA4AF" />
+          <stop offset="100%" stopColor="#FB7185" />
+        </linearGradient>
+
+        {/* Alveoli gradient */}
+        <radialGradient id="alveoliGrad" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stopColor="#FDF2F8" />
+          <stop offset="70%" stopColor="#FCE7F3" />
+          <stop offset="100%" stopColor="#FBCFE8" />
+        </radialGradient>
+
+        {/* Oxygen gradient - Blue */}
+        <linearGradient id="oxygenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#3B82F6" />
+          <stop offset="100%" stopColor="#2563EB" />
+        </linearGradient>
+
+        {/* CO2 gradient - Gray/Purple */}
+        <linearGradient id="co2Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#8B5CF6" />
+          <stop offset="100%" stopColor="#7C3AED" />
+        </linearGradient>
+
+        {/* Blood vessel gradients */}
+        <linearGradient id="arteryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#EF4444" />
+          <stop offset="100%" stopColor="#DC2626" />
+        </linearGradient>
+        <linearGradient id="veinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#6366F1" />
+          <stop offset="100%" stopColor="#4F46E5" />
+        </linearGradient>
+
+        {/* Hemoglobin gradient */}
+        <linearGradient id="hbGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#F87171" />
+          <stop offset="100%" stopColor="#EF4444" />
+        </linearGradient>
+
+        {/* Card gradient */}
+        <linearGradient id="respCardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stopColor="#FFFFFF" />
+          <stop offset="100%" stopColor="#EFF6FF" />
+        </linearGradient>
+
+        {/* Shadow filters */}
+        <filter id="respShadow" x="-20%" y="-20%" width="140%" height="140%">
+          <feDropShadow dx="0" dy="4" stdDeviation="6" floodOpacity="0.15" />
+        </filter>
+        <filter id="organShadow2" x="-15%" y="-15%" width="130%" height="130%">
+          <feDropShadow dx="0" dy="2" stdDeviation="4" floodOpacity="0.2" />
+        </filter>
+        <filter id="gasGlow" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="2" result="blur" />
+          <feMerge>
+            <feMergeNode in="blur" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+      </defs>
+
+      {/* Background */}
+      <rect width="540" height="420" fill="url(#respBgGrad)" />
+
+      {/* Decorative background elements */}
+      <circle cx="80" cy="80" r="120" fill="#3B82F6" opacity="0.04" />
+      <circle cx="460" cy="340" r="100" fill="#EC4899" opacity="0.04" />
+      <circle cx="270" cy="210" r="180" fill="#8B5CF6" opacity="0.03" />
+
+      {/* Title */}
+      <motion.text
+        x="270"
+        y="24"
+        textAnchor="middle"
+        fill="#1E293B"
+        fontSize="15"
+        fontWeight="700"
+        initial={animate ? { opacity: 0, y: -10 } : undefined}
+        animate={animate ? { opacity: 1, y: 0 } : undefined}
+        transition={{ delay: 0.1, duration: 0.4 }}
+      >
+        Breathing & Gas Exchange
+      </motion.text>
+
+      {/* RESPIRATORY SYSTEM - Left side */}
+      <motion.g
+        initial={animate ? { opacity: 0, x: -20 } : undefined}
+        animate={animate ? { opacity: 1, x: 0 } : undefined}
+        transition={{ delay: 0.2, duration: 0.6 }}
+      >
+        {/* Nose/Nasal Cavity */}
+        <g transform="translate(85, 40)">
+          <path
+            d="M30 0 Q20 5 15 20 Q12 35 20 45 L40 45 Q48 35 45 20 Q40 5 30 0 Z"
+            fill="#FDA4AF"
+            filter="url(#organShadow2)"
+          />
+          <text x="30" y="58" textAnchor="middle" fill="#64748B" fontSize="7" fontWeight="500">
+            Nose
+          </text>
+        </g>
+
+        {/* Pharynx & Larynx */}
+        <path
+          d="M115 85 L115 105 Q115 115 110 120 L110 130"
+          stroke="url(#tracheaGrad)"
+          strokeWidth="10"
+          fill="none"
+          strokeLinecap="round"
+        />
+        <text x="135" y="108" fill="#64748B" fontSize="6">
+          Pharynx
+        </text>
+        <text x="135" y="128" fill="#64748B" fontSize="6">
+          Larynx
+        </text>
+
+        {/* Trachea with cartilage rings */}
+        <g transform="translate(95, 130)">
+          <rect
+            x="5"
+            y="0"
+            width="20"
+            height="50"
+            rx="3"
+            fill="url(#tracheaGrad)"
+            filter="url(#organShadow2)"
+          />
+          {/* Cartilage rings */}
+          <rect x="3" y="5" width="24" height="4" rx="2" fill="#FCA5A5" />
+          <rect x="3" y="15" width="24" height="4" rx="2" fill="#FCA5A5" />
+          <rect x="3" y="25" width="24" height="4" rx="2" fill="#FCA5A5" />
+          <rect x="3" y="35" width="24" height="4" rx="2" fill="#FCA5A5" />
+          <text x="35" y="30" fill="#64748B" fontSize="7" fontWeight="500">
+            Trachea
+          </text>
+        </g>
+
+        {/* Bronchi bifurcation */}
+        <g transform="translate(60, 180)">
+          {/* Left bronchus */}
+          <path
+            d="M55 0 Q40 15 25 35"
+            stroke="url(#tracheaGrad)"
+            strokeWidth="8"
+            fill="none"
+            strokeLinecap="round"
+          />
+          {/* Right bronchus */}
+          <path
+            d="M55 0 Q70 15 85 35"
+            stroke="url(#tracheaGrad)"
+            strokeWidth="8"
+            fill="none"
+            strokeLinecap="round"
+          />
+          <text x="55" y="-5" textAnchor="middle" fill="#64748B" fontSize="6">
+            Bronchi
+          </text>
+        </g>
+
+        {/* Left Lung */}
+        <motion.g
+          animate={animate ? { scale: [1, 1.03, 1] } : undefined}
+          transition={{ duration: 3, repeat: Infinity }}
+          style={{ transformOrigin: '60px 280px' }}
+        >
+          <path
+            d="M20 220 Q10 240 15 290 Q20 340 50 360 Q80 375 100 350 Q115 320 110 270 Q105 230 85 215 Q65 200 40 210 Q25 215 20 220 Z"
+            fill="url(#lungGrad)"
+            filter="url(#organShadow2)"
+          />
+          <path
+            d="M30 235 Q25 255 28 290 Q32 325 55 340 Q75 350 90 335 Q100 315 98 275 Q95 245 80 235 Q65 225 45 230 Q35 232 30 235 Z"
+            fill="url(#lungInnerGrad)"
+          />
+          {/* Bronchioles inside */}
+          <path
+            d="M85 215 Q70 240 60 270 Q55 290 58 310"
+            stroke="#F9A8D4"
+            strokeWidth="2"
+            fill="none"
+          />
+          <path d="M60 270 Q45 280 40 300" stroke="#F9A8D4" strokeWidth="1.5" fill="none" />
+          <path d="M60 270 Q75 285 80 305" stroke="#F9A8D4" strokeWidth="1.5" fill="none" />
+        </motion.g>
+
+        {/* Right Lung */}
+        <motion.g
+          animate={animate ? { scale: [1, 1.03, 1] } : undefined}
+          transition={{ duration: 3, repeat: Infinity, delay: 0.1 }}
+          style={{ transformOrigin: '170px 280px' }}
+        >
+          <path
+            d="M210 220 Q220 240 215 290 Q210 340 180 360 Q150 375 130 350 Q115 320 120 270 Q125 230 145 215 Q165 200 190 210 Q205 215 210 220 Z"
+            fill="url(#lungGrad)"
+            filter="url(#organShadow2)"
+          />
+          <path
+            d="M200 235 Q205 255 202 290 Q198 325 175 340 Q155 350 140 335 Q130 315 132 275 Q135 245 150 235 Q165 225 185 230 Q195 232 200 235 Z"
+            fill="url(#lungInnerGrad)"
+          />
+          {/* Bronchioles inside */}
+          <path
+            d="M145 215 Q160 240 170 270 Q175 290 172 310"
+            stroke="#F9A8D4"
+            strokeWidth="2"
+            fill="none"
+          />
+          <path d="M170 270 Q185 280 190 300" stroke="#F9A8D4" strokeWidth="1.5" fill="none" />
+          <path d="M170 270 Q155 285 150 305" stroke="#F9A8D4" strokeWidth="1.5" fill="none" />
+        </motion.g>
+
+        {/* Labels */}
+        <text x="60" y="385" textAnchor="middle" fill="#64748B" fontSize="8" fontWeight="600">
+          Left Lung
+        </text>
+        <text x="170" y="385" textAnchor="middle" fill="#64748B" fontSize="8" fontWeight="600">
+          Right Lung
+        </text>
+
+        {/* Diaphragm */}
+        <motion.path
+          d="M5 365 Q60 390 115 375 Q170 390 225 365"
+          stroke="#94A3B8"
+          strokeWidth="4"
+          fill="none"
+          strokeLinecap="round"
+          animate={
+            animate
+              ? {
+                  d: [
+                    'M5 365 Q60 390 115 375 Q170 390 225 365',
+                    'M5 370 Q60 380 115 370 Q170 380 225 370',
+                    'M5 365 Q60 390 115 375 Q170 390 225 365',
+                  ],
+                }
+              : undefined
+          }
+          transition={{ duration: 3, repeat: Infinity }}
+        />
+        <text x="115" y="400" textAnchor="middle" fill="#64748B" fontSize="7">
+          Diaphragm
+        </text>
+      </motion.g>
+
+      {/* ALVEOLUS DETAIL - Center/Right */}
+      <motion.g
+        initial={animate ? { opacity: 0, scale: 0.9 } : undefined}
+        animate={animate ? { opacity: 1, scale: 1 } : undefined}
+        transition={{ delay: 0.3, duration: 0.6 }}
+      >
+        <g transform="translate(245, 38)">
+          <rect
+            x="0"
+            y="0"
+            width="280"
+            height="165"
+            rx="12"
+            fill="url(#respCardGrad)"
+            filter="url(#respShadow)"
+          />
+          <text x="140" y="18" textAnchor="middle" fill="#BE185D" fontSize="10" fontWeight="700">
+            Gas Exchange at Alveolus
+          </text>
+
+          {/* Alveolus structure */}
+          <g transform="translate(20, 28)">
+            {/* Alveolus bubble */}
+            <circle
+              cx="65"
+              cy="60"
+              r="50"
+              fill="url(#alveoliGrad)"
+              stroke="#F9A8D4"
+              strokeWidth="2"
+            />
+            <text x="65" y="60" textAnchor="middle" fill="#BE185D" fontSize="8" fontWeight="600">
+              Alveolus
+            </text>
+            <text x="65" y="72" textAnchor="middle" fill="#9D174D" fontSize="6">
+              (Air space)
+            </text>
+
+            {/* Capillary wrapping around */}
+            <path
+              d="M20 35 Q10 60 20 85 Q30 100 50 105 Q80 110 100 95 Q115 80 115 60 Q115 40 100 30"
+              stroke="url(#arteryGrad)"
+              strokeWidth="8"
+              fill="none"
+              strokeLinecap="round"
+            />
+
+            {/* O2 molecules moving in */}
+            <motion.g
+              animate={animate ? { x: [0, 15, 0], opacity: [1, 0.5, 1] } : undefined}
+              transition={{ duration: 2, repeat: Infinity }}
+            >
+              <circle cx="45" cy="45" r="5" fill="url(#oxygenGrad)" filter="url(#gasGlow)" />
+              <text x="45" y="48" textAnchor="middle" fill="white" fontSize="5" fontWeight="bold">
+                O₂
+              </text>
+            </motion.g>
+            <motion.g
+              animate={animate ? { x: [0, 15, 0], opacity: [1, 0.5, 1] } : undefined}
+              transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
+            >
+              <circle cx="55" cy="35" r="5" fill="url(#oxygenGrad)" filter="url(#gasGlow)" />
+              <text x="55" y="38" textAnchor="middle" fill="white" fontSize="5" fontWeight="bold">
+                O₂
+              </text>
+            </motion.g>
+
+            {/* CO2 molecules moving out */}
+            <motion.g
+              animate={animate ? { x: [0, -15, 0], opacity: [1, 0.5, 1] } : undefined}
+              transition={{ duration: 2, repeat: Infinity }}
+            >
+              <circle cx="85" cy="80" r="5" fill="url(#co2Grad)" filter="url(#gasGlow)" />
+              <text x="85" y="83" textAnchor="middle" fill="white" fontSize="4" fontWeight="bold">
+                CO₂
+              </text>
+            </motion.g>
+            <motion.g
+              animate={animate ? { x: [0, -15, 0], opacity: [1, 0.5, 1] } : undefined}
+              transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
+            >
+              <circle cx="75" cy="90" r="5" fill="url(#co2Grad)" filter="url(#gasGlow)" />
+              <text x="75" y="93" textAnchor="middle" fill="white" fontSize="4" fontWeight="bold">
+                CO₂
+              </text>
+            </motion.g>
+
+            {/* Arrows showing diffusion */}
+            <path
+              d="M35 50 L25 55"
+              stroke="#3B82F6"
+              strokeWidth="1.5"
+              markerEnd="url(#arrowBlue)"
+            />
+            <path
+              d="M95 75 L105 70"
+              stroke="#8B5CF6"
+              strokeWidth="1.5"
+              markerEnd="url(#arrowPurple)"
+            />
+            <defs>
+              <marker
+                id="arrowBlue"
+                markerWidth="4"
+                markerHeight="4"
+                refX="3"
+                refY="2"
+                orient="auto"
+              >
+                <path d="M0,0 L4,2 L0,4 Z" fill="#3B82F6" />
+              </marker>
+              <marker
+                id="arrowPurple"
+                markerWidth="4"
+                markerHeight="4"
+                refX="3"
+                refY="2"
+                orient="auto"
+              >
+                <path d="M0,0 L4,2 L0,4 Z" fill="#8B5CF6" />
+              </marker>
+            </defs>
+          </g>
+
+          {/* Legend */}
+          <g transform="translate(155, 35)">
+            <circle cx="10" cy="8" r="6" fill="url(#oxygenGrad)" />
+            <text x="22" y="11" fill="#1E293B" fontSize="7" fontWeight="500">
+              O₂ (into blood)
+            </text>
+
+            <circle cx="10" cy="28" r="6" fill="url(#co2Grad)" />
+            <text x="22" y="31" fill="#1E293B" fontSize="7" fontWeight="500">
+              CO₂ (into alveolus)
+            </text>
+
+            <rect x="4" y="43" width="12" height="8" rx="2" fill="url(#arteryGrad)" />
+            <text x="22" y="50" fill="#1E293B" fontSize="7" fontWeight="500">
+              Capillary
+            </text>
+
+            <text x="0" y="72" fill="#64748B" fontSize="6" fontWeight="600">
+              Diffusion Distance:
+            </text>
+            <text x="0" y="82" fill="#64748B" fontSize="6">
+              0.2 μm (very thin!)
+            </text>
+
+            <text x="0" y="100" fill="#64748B" fontSize="6" fontWeight="600">
+              Surface Area:
+            </text>
+            <text x="0" y="110" fill="#64748B" fontSize="6">
+              ~70-100 m² (tennis court)
+            </text>
+          </g>
+        </g>
+      </motion.g>
+
+      {/* OXYGEN TRANSPORT - Right side */}
+      <motion.g
+        initial={animate ? { opacity: 0, x: 20 } : undefined}
+        animate={animate ? { opacity: 1, x: 0 } : undefined}
+        transition={{ delay: 0.4, duration: 0.6 }}
+      >
+        <g transform="translate(245, 215)">
+          <rect
+            x="0"
+            y="0"
+            width="280"
+            height="95"
+            rx="12"
+            fill="url(#respCardGrad)"
+            filter="url(#respShadow)"
+          />
+          <text x="140" y="16" textAnchor="middle" fill="#DC2626" fontSize="10" fontWeight="700">
+            O₂ Transport in Blood
+          </text>
+
+          {/* Hemoglobin illustration */}
+          <g transform="translate(15, 28)">
+            {/* RBC shape */}
+            <ellipse
+              cx="40"
+              cy="30"
+              rx="30"
+              ry="18"
+              fill="url(#hbGrad)"
+              filter="url(#organShadow2)"
+            />
+            <ellipse cx="40" cy="30" rx="12" ry="8" fill="#FCA5A5" />
+
+            {/* O2 binding sites */}
+            <motion.circle
+              cx="20"
+              cy="25"
+              r="4"
+              fill="url(#oxygenGrad)"
+              animate={animate ? { scale: [1, 1.2, 1] } : undefined}
+              transition={{ duration: 1.5, repeat: Infinity, delay: 0 }}
+            />
+            <motion.circle
+              cx="35"
+              cy="18"
+              r="4"
+              fill="url(#oxygenGrad)"
+              animate={animate ? { scale: [1, 1.2, 1] } : undefined}
+              transition={{ duration: 1.5, repeat: Infinity, delay: 0.3 }}
+            />
+            <motion.circle
+              cx="50"
+              cy="18"
+              r="4"
+              fill="url(#oxygenGrad)"
+              animate={animate ? { scale: [1, 1.2, 1] } : undefined}
+              transition={{ duration: 1.5, repeat: Infinity, delay: 0.6 }}
+            />
+            <motion.circle
+              cx="60"
+              cy="28"
+              r="4"
+              fill="url(#oxygenGrad)"
+              animate={animate ? { scale: [1, 1.2, 1] } : undefined}
+              transition={{ duration: 1.5, repeat: Infinity, delay: 0.9 }}
+            />
+
+            <text x="40" y="60" textAnchor="middle" fill="#64748B" fontSize="7" fontWeight="600">
+              Hemoglobin (Hb)
+            </text>
+            <text x="40" y="70" textAnchor="middle" fill="#94A3B8" fontSize="6">
+              4 O₂ binding sites
+            </text>
+          </g>
+
+          {/* Transport percentages */}
+          <g transform="translate(100, 28)">
+            <text x="0" y="10" fill="#1E293B" fontSize="8" fontWeight="600">
+              O₂ Transport:
+            </text>
+            <rect x="0" y="16" width="160" height="10" rx="3" fill="#E2E8F0" />
+            <rect x="0" y="16" width="155" height="10" rx="3" fill="url(#oxygenGrad)" />
+            <text x="70" y="24" fill="white" fontSize="6" fontWeight="bold">
+              97% as Oxyhemoglobin
+            </text>
+            <text x="165" y="24" fill="#64748B" fontSize="6">
+              3% dissolved
+            </text>
+
+            <text x="0" y="45" fill="#1E293B" fontSize="8" fontWeight="600">
+              CO₂ Transport:
+            </text>
+            <rect x="0" y="51" width="160" height="10" rx="3" fill="#E2E8F0" />
+            <rect x="0" y="51" width="112" height="10" rx="3" fill="url(#co2Grad)" />
+            <text x="50" y="59" fill="white" fontSize="6" fontWeight="bold">
+              70% as HCO₃⁻
+            </text>
+            <text x="118" y="59" fill="#64748B" fontSize="5">
+              23% Hb, 7% dissolved
+            </text>
+          </g>
+        </g>
+      </motion.g>
+
+      {/* LUNG VOLUMES - Bottom Right */}
+      <motion.g
+        initial={animate ? { opacity: 0, y: 20 } : undefined}
+        animate={animate ? { opacity: 1, y: 0 } : undefined}
+        transition={{ delay: 0.5, duration: 0.6 }}
+      >
+        <g transform="translate(245, 320)">
+          <rect
+            x="0"
+            y="0"
+            width="280"
+            height="85"
+            rx="12"
+            fill="url(#respCardGrad)"
+            filter="url(#respShadow)"
+          />
+          <text x="140" y="16" textAnchor="middle" fill="#0369A1" fontSize="10" fontWeight="700">
+            Lung Volumes & Capacities
+          </text>
+
+          {/* Volume bars */}
+          <g transform="translate(15, 25)">
+            <text x="0" y="10" fill="#64748B" fontSize="7" fontWeight="500">
+              TV (Tidal Volume)
+            </text>
+            <rect x="85" y="3" width="50" height="10" rx="2" fill="#3B82F6" />
+            <text x="140" y="11" fill="#64748B" fontSize="6">
+              ~500 mL
+            </text>
+
+            <text x="0" y="26" fill="#64748B" fontSize="7" fontWeight="500">
+              IRV
+            </text>
+            <rect x="85" y="19" width="100" height="10" rx="2" fill="#60A5FA" />
+            <text x="190" y="27" fill="#64748B" fontSize="6">
+              ~3000 mL
+            </text>
+
+            <text x="0" y="42" fill="#64748B" fontSize="7" fontWeight="500">
+              ERV
+            </text>
+            <rect x="85" y="35" width="45" height="10" rx="2" fill="#93C5FD" />
+            <text x="135" y="43" fill="#64748B" fontSize="6">
+              ~1100 mL
+            </text>
+
+            <text x="0" y="58" fill="#64748B" fontSize="7" fontWeight="500">
+              RV (Residual)
+            </text>
+            <rect x="85" y="51" width="50" height="10" rx="2" fill="#BFDBFE" />
+            <text x="140" y="59" fill="#64748B" fontSize="6">
+              ~1200 mL
+            </text>
+          </g>
+
+          {/* Vital Capacity */}
+          <g transform="translate(200, 30)">
+            <text x="0" y="0" fill="#1E293B" fontSize="7" fontWeight="600">
+              Vital Capacity
+            </text>
+            <text x="0" y="12" fill="#0369A1" fontSize="9" fontWeight="700">
+              ~4600 mL
+            </text>
+            <text x="0" y="24" fill="#64748B" fontSize="6">
+              (IRV+TV+ERV)
+            </text>
+            <text x="0" y="40" fill="#1E293B" fontSize="7" fontWeight="600">
+              Total Lung
+            </text>
+            <text x="0" y="52" fill="#0369A1" fontSize="9" fontWeight="700">
+              ~5800 mL
+            </text>
+          </g>
+        </g>
+      </motion.g>
+
+      {/* Breathing indicator */}
+      <motion.g
+        initial={animate ? { opacity: 0 } : undefined}
+        animate={animate ? { opacity: 1 } : undefined}
+        transition={{ delay: 0.6, duration: 0.5 }}
+      >
+        <text x="115" y="410" textAnchor="middle" fill="#64748B" fontSize="7" fontWeight="500">
+          <motion.tspan
+            animate={animate ? { opacity: [1, 0.5, 1] } : undefined}
+            transition={{ duration: 3, repeat: Infinity }}
+          >
+            Inhale ↔ Exhale
+          </motion.tspan>
+        </text>
+      </motion.g>
+    </Wrapper>
+  )
+}
+
 // Export all illustrations
 export default {
   KotaVsOnlineIllustration,
@@ -10088,4 +10731,5 @@ export default {
   BiomoleculesIllustration,
   CellDivisionIllustration,
   HumanDigestionIllustration,
+  RespirationIllustration,
 }
