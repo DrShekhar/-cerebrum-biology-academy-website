@@ -1218,123 +1218,487 @@ export function Last6MonthsStrategyIllustration({
     ? {
         initial: { opacity: 0, scale: 0.95 },
         animate: { opacity: 1, scale: 1 },
-        transition: { duration: 0.5 },
+        transition: { duration: 0.8, ease: 'easeOut' as const },
       }
     : {}
 
+  // 6-month strategy phases
+  const phases = [
+    {
+      months: '1-2',
+      title: 'Foundation',
+      focus: 'Complete Syllabus',
+      tasks: ['Finish NCERT', 'Notes preparation', 'Basic MCQs'],
+      color: '#10B981',
+      progress: 100,
+    },
+    {
+      months: '3-4',
+      title: 'Practice',
+      focus: 'Problem Solving',
+      tasks: ['5000+ MCQs', 'Topic-wise tests', 'PYQ practice'],
+      color: '#3B82F6',
+      progress: 75,
+    },
+    {
+      months: '5-6',
+      title: 'Revision',
+      focus: 'Final Polish',
+      tasks: ['Full mocks', 'Weak areas', 'Quick recalls'],
+      color: '#8B5CF6',
+      progress: 50,
+    },
+  ]
+
+  // Weekly schedule
+  const weeklySchedule = [
+    { day: 'Mon', hours: 8, focus: 'Botany' },
+    { day: 'Tue', hours: 8, focus: 'Zoology' },
+    { day: 'Wed', hours: 7, focus: 'Physics' },
+    { day: 'Thu', hours: 7, focus: 'Chemistry' },
+    { day: 'Fri', hours: 8, focus: 'Biology' },
+    { day: 'Sat', hours: 6, focus: 'Mock Test' },
+    { day: 'Sun', hours: 4, focus: 'Analysis' },
+  ]
+
+  // Key milestones
+  const milestones = [
+    { week: 4, task: 'Class 11 Done', icon: '📚' },
+    { week: 8, task: 'Class 12 Done', icon: '✅' },
+    { week: 12, task: '50 Mocks', icon: '📝' },
+    { week: 16, task: '100 Mocks', icon: '🎯' },
+    { week: 20, task: 'Full Revision', icon: '🔄' },
+    { week: 24, task: 'NEET Ready!', icon: '🏆' },
+  ]
+
   return (
     <Wrapper
-      viewBox="0 0 400 280"
+      viewBox="0 0 700 520"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
+      preserveAspectRatio="xMidYMid meet"
       {...wrapperProps}
     >
-      {/* Calendar base */}
-      <rect
-        x="50"
-        y="50"
-        width="180"
-        height="180"
-        rx="12"
-        fill="#FFFFFF"
-        stroke="#E2E8F0"
-        strokeWidth="2"
-      />
-      <rect x="50" y="50" width="180" height="40" rx="12" fill="#EF4444" />
-      <text x="140" y="78" fontSize="14" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
-        6 MONTHS LEFT
-      </text>
+      <defs>
+        {/* Background gradient */}
+        <linearGradient id="last6BgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#FEE2E2" />
+          <stop offset="50%" stopColor="#FEF3C7" />
+          <stop offset="100%" stopColor="#ECFDF5" />
+        </linearGradient>
+        {/* Urgency gradient */}
+        <linearGradient id="urgencyGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stopColor="#EF4444" />
+          <stop offset="100%" stopColor="#DC2626" />
+        </linearGradient>
+        {/* Card shadow */}
+        <filter id="last6CardShadow" x="-10%" y="-10%" width="120%" height="120%">
+          <feDropShadow dx="2" dy="3" stdDeviation="4" floodColor="#000" floodOpacity="0.1" />
+        </filter>
+      </defs>
 
-      {/* Calendar grid */}
-      {[0, 1, 2, 3, 4].map((row) =>
-        [0, 1, 2, 3, 4, 5].map((col) => (
-          <motion.rect
-            key={`${row}-${col}`}
-            x={60 + col * 28}
-            y={100 + row * 25}
-            width={24}
-            height={22}
-            rx={4}
-            fill={row < 2 ? '#10B981' : row < 4 ? '#3B82F6' : '#8B5CF6'}
-            opacity={0.3 + (row + col) * 0.05}
-            animate={
-              animate
-                ? { opacity: [0.3 + (row + col) * 0.05, 0.7, 0.3 + (row + col) * 0.05] }
-                : undefined
-            }
-            transition={{ duration: 2, repeat: Infinity, delay: (row + col) * 0.1 }}
-          />
-        ))
-      )}
+      {/* Background */}
+      <rect width="700" height="520" fill="url(#last6BgGrad)" rx="16" />
 
-      {/* Strategy timeline on right */}
-      <g transform="translate(250, 60)">
-        {/* Month 1-2 */}
-        <motion.g
-          animate={animate ? { x: [-2, 2, -2] } : undefined}
-          transition={{ duration: 3, repeat: Infinity }}
-        >
-          <rect x="0" y="0" width="120" height="45" rx="8" fill="#10B981" opacity="0.2" />
-          <circle cx="20" cy="22" r="12" fill="#10B981" />
-          <text x="20" y="27" fontSize="10" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
-            1-2
-          </text>
-          <text x="45" y="18" fontSize="9" fill="#065F46" fontWeight="bold">
-            Foundation
-          </text>
-          <text x="45" y="32" fontSize="7" fill="#047857">
-            Complete Syllabus
-          </text>
-        </motion.g>
-
-        {/* Month 3-4 */}
-        <motion.g
-          animate={animate ? { x: [2, -2, 2] } : undefined}
-          transition={{ duration: 3, repeat: Infinity, delay: 0.3 }}
-        >
-          <rect x="0" y="55" width="120" height="45" rx="8" fill="#3B82F6" opacity="0.2" />
-          <circle cx="20" cy="77" r="12" fill="#3B82F6" />
-          <text x="20" y="82" fontSize="10" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
-            3-4
-          </text>
-          <text x="45" y="73" fontSize="9" fill="#1E40AF" fontWeight="bold">
-            Practice
-          </text>
-          <text x="45" y="87" fontSize="7" fill="#1D4ED8">
-            MCQs + Mocks
-          </text>
-        </motion.g>
-
-        {/* Month 5-6 */}
-        <motion.g
-          animate={animate ? { x: [-2, 2, -2] } : undefined}
-          transition={{ duration: 3, repeat: Infinity, delay: 0.6 }}
-        >
-          <rect x="0" y="110" width="120" height="45" rx="8" fill="#8B5CF6" opacity="0.2" />
-          <circle cx="20" cy="132" r="12" fill="#8B5CF6" />
-          <text x="20" y="137" fontSize="10" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
-            5-6
-          </text>
-          <text x="45" y="128" fontSize="9" fill="#5B21B6" fontWeight="bold">
-            Revision
-          </text>
-          <text x="45" y="142" fontSize="7" fill="#6D28D9">
-            Quick Recalls
-          </text>
-        </motion.g>
+      {/* Decorative urgency pattern */}
+      <g opacity="0.1">
+        {[...Array(10)].map((_, i) => (
+          <circle key={i} cx={35 + i * 70} cy="15" r="15" fill="#EF4444" />
+        ))}
       </g>
 
-      {/* Countdown timer */}
+      {/* Title Section with Countdown */}
       <motion.g
-        animate={animate ? { scale: [1, 1.05, 1] } : undefined}
-        transition={{ duration: 1.5, repeat: Infinity }}
+        initial={animate ? { opacity: 0, y: -20 } : undefined}
+        animate={animate ? { opacity: 1, y: 0 } : undefined}
+        transition={{ delay: 0.2, duration: 0.6 }}
       >
-        <rect x="100" y="235" width="200" height="35" rx="17" fill="#1E293B" />
-        <text x="200" y="258" fontSize="12" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
-          ⏰ 180 DAYS TO NEET 2026
+        <rect x="150" y="15" width="400" height="55" rx="27" fill="url(#urgencyGrad)" />
+        <text x="350" y="40" fontSize="22" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
+          ⏰ LAST 6 MONTHS STRATEGY
         </text>
+        <motion.text
+          x="350"
+          y="58"
+          fontSize="12"
+          fill="#FEE2E2"
+          textAnchor="middle"
+          animate={animate ? { opacity: [0.7, 1, 0.7] } : undefined}
+          transition={{ duration: 1.5, repeat: Infinity }}
+        >
+          180 Days to Transform Your NEET Score
+        </motion.text>
       </motion.g>
+
+      {/* === LEFT SECTION: Phase Breakdown === */}
+      <motion.g
+        initial={animate ? { opacity: 0, x: -30 } : undefined}
+        animate={animate ? { opacity: 1, x: 0 } : undefined}
+        transition={{ delay: 0.3, duration: 0.6 }}
+      >
+        <g filter="url(#last6CardShadow)">
+          <rect x="20" y="85" width="220" height="320" rx="16" fill="#FFFFFF" />
+        </g>
+
+        <text x="130" y="108" fontSize="13" fill="#374151" textAnchor="middle" fontWeight="bold">
+          3-Phase Strategy
+        </text>
+
+        {/* Phase cards */}
+        <g transform="translate(30, 120)">
+          {phases.map((phase, i) => (
+            <motion.g
+              key={i}
+              transform={`translate(0, ${i * 100})`}
+              initial={animate ? { opacity: 0, x: -20 } : undefined}
+              animate={animate ? { opacity: 1, x: 0 } : undefined}
+              transition={{ delay: 0.4 + i * 0.15, duration: 0.5 }}
+            >
+              {/* Phase card */}
+              <rect
+                x="0"
+                y="0"
+                width="200"
+                height="90"
+                rx="12"
+                fill={`${phase.color}10`}
+                stroke={phase.color}
+                strokeWidth="2"
+              />
+
+              {/* Month badge */}
+              <circle cx="30" cy="25" r="20" fill={phase.color} />
+              <text x="30" y="22" fontSize="10" fill="#FFFFFF" textAnchor="middle">
+                Month
+              </text>
+              <text
+                x="30"
+                y="34"
+                fontSize="12"
+                fill="#FFFFFF"
+                textAnchor="middle"
+                fontWeight="bold"
+              >
+                {phase.months}
+              </text>
+
+              {/* Phase info */}
+              <text x="60" y="22" fontSize="12" fill={phase.color} fontWeight="bold">
+                {phase.title}
+              </text>
+              <text x="60" y="38" fontSize="9" fill="#6B7280">
+                {phase.focus}
+              </text>
+
+              {/* Tasks */}
+              <g transform="translate(60, 48)">
+                {phase.tasks.map((task, j) => (
+                  <g key={j} transform={`translate(0, ${j * 12})`}>
+                    <circle cx="5" cy="5" r="3" fill={phase.color} />
+                    <text x="12" y="8" fontSize="8" fill="#374151">
+                      {task}
+                    </text>
+                  </g>
+                ))}
+              </g>
+
+              {/* Progress bar */}
+              <rect x="60" y="82" width="130" height="4" rx="2" fill="#E5E7EB" />
+              <motion.rect
+                x="60"
+                y="82"
+                width={0}
+                height="4"
+                rx="2"
+                fill={phase.color}
+                initial={animate ? { width: 0 } : undefined}
+                animate={animate ? { width: (phase.progress / 100) * 130 } : undefined}
+                transition={{ delay: 0.6 + i * 0.2, duration: 0.8 }}
+              />
+            </motion.g>
+          ))}
+        </g>
+      </motion.g>
+
+      {/* === CENTER SECTION: Weekly Schedule & Milestones === */}
+      <motion.g
+        initial={animate ? { opacity: 0, y: 20 } : undefined}
+        animate={animate ? { opacity: 1, y: 0 } : undefined}
+        transition={{ delay: 0.4, duration: 0.6 }}
+      >
+        {/* Weekly Schedule */}
+        <g filter="url(#last6CardShadow)">
+          <rect x="255" y="85" width="280" height="150" rx="16" fill="#FFFFFF" />
+        </g>
+
+        <text x="395" y="108" fontSize="13" fill="#374151" textAnchor="middle" fontWeight="bold">
+          Ideal Weekly Schedule
+        </text>
+
+        {/* Schedule bars */}
+        <g transform="translate(270, 125)">
+          {weeklySchedule.map((day, i) => (
+            <g key={i} transform={`translate(${i * 36}, 0)`}>
+              <motion.rect
+                x="0"
+                y={90 - day.hours * 10}
+                width="28"
+                height={day.hours * 10}
+                rx="4"
+                fill={day.day === 'Sat' ? '#8B5CF6' : day.day === 'Sun' ? '#F59E0B' : '#3B82F6'}
+                initial={animate ? { height: 0, y: 90 } : undefined}
+                animate={animate ? { height: day.hours * 10, y: 90 - day.hours * 10 } : undefined}
+                transition={{ delay: 0.5 + i * 0.1, duration: 0.5 }}
+              />
+              <text x="14" y="100" fontSize="8" fill="#6B7280" textAnchor="middle">
+                {day.day}
+              </text>
+              <text
+                x="14"
+                y={85 - day.hours * 10}
+                fontSize="7"
+                fill="#374151"
+                textAnchor="middle"
+                fontWeight="600"
+              >
+                {day.hours}h
+              </text>
+            </g>
+          ))}
+        </g>
+
+        {/* Milestones Timeline */}
+        <g filter="url(#last6CardShadow)">
+          <rect x="255" y="250" width="280" height="155" rx="16" fill="#FFFFFF" />
+        </g>
+
+        <text x="395" y="273" fontSize="12" fill="#374151" textAnchor="middle" fontWeight="bold">
+          Key Milestones (24 Weeks)
+        </text>
+
+        {/* Timeline */}
+        <g transform="translate(275, 295)">
+          {/* Timeline line */}
+          <motion.line
+            x1="0"
+            y1="25"
+            x2="240"
+            y2="25"
+            stroke="#E5E7EB"
+            strokeWidth="4"
+            strokeLinecap="round"
+            initial={animate ? { pathLength: 0 } : undefined}
+            animate={animate ? { pathLength: 1 } : undefined}
+            transition={{ delay: 0.6, duration: 1 }}
+          />
+
+          {/* Milestone points */}
+          {milestones.map((milestone, i) => (
+            <motion.g
+              key={i}
+              transform={`translate(${i * 40}, 0)`}
+              initial={animate ? { opacity: 0, y: -10 } : undefined}
+              animate={animate ? { opacity: 1, y: 0 } : undefined}
+              transition={{ delay: 0.8 + i * 0.1 }}
+            >
+              <motion.circle
+                cx="20"
+                cy="25"
+                r="12"
+                fill={i < 2 ? '#10B981' : i < 4 ? '#3B82F6' : '#8B5CF6'}
+                animate={animate ? { scale: [1, 1.15, 1] } : undefined}
+                transition={{ duration: 2, repeat: Infinity, delay: i * 0.2 }}
+              />
+              <text x="20" y="29" fontSize="12" textAnchor="middle">
+                {milestone.icon}
+              </text>
+              <text x="20" y="50" fontSize="7" fill="#6B7280" textAnchor="middle">
+                W{milestone.week}
+              </text>
+              <text x="20" y="62" fontSize="6" fill="#374151" textAnchor="middle">
+                {milestone.task.split(' ')[0]}
+              </text>
+              <text x="20" y="72" fontSize="6" fill="#374151" textAnchor="middle">
+                {milestone.task.split(' ').slice(1).join(' ')}
+              </text>
+            </motion.g>
+          ))}
+        </g>
+      </motion.g>
+
+      {/* === RIGHT SECTION: Daily Hours & Focus === */}
+      <motion.g
+        initial={animate ? { opacity: 0, x: 30 } : undefined}
+        animate={animate ? { opacity: 1, x: 0 } : undefined}
+        transition={{ delay: 0.5, duration: 0.6 }}
+      >
+        <g filter="url(#last6CardShadow)">
+          <rect x="550" y="85" width="130" height="320" rx="16" fill="#FFFFFF" />
+        </g>
+
+        <text x="615" y="108" fontSize="12" fill="#374151" textAnchor="middle" fontWeight="bold">
+          Daily Targets
+        </text>
+
+        {/* Study hours target */}
+        <g transform="translate(560, 125)">
+          <rect x="0" y="0" width="110" height="70" rx="10" fill="#FEE2E2" />
+          <text x="55" y="22" fontSize="9" fill="#B91C1C" textAnchor="middle" fontWeight="600">
+            Study Hours
+          </text>
+          <motion.text
+            x="55"
+            y="50"
+            fontSize="28"
+            fill="#DC2626"
+            textAnchor="middle"
+            fontWeight="bold"
+            animate={animate ? { scale: [1, 1.1, 1] } : undefined}
+            transition={{ duration: 2, repeat: Infinity }}
+          >
+            8-10
+          </motion.text>
+          <text x="55" y="65" fontSize="8" fill="#EF4444" textAnchor="middle">
+            hrs/day
+          </text>
+        </g>
+
+        {/* MCQs target */}
+        <g transform="translate(560, 205)">
+          <rect x="0" y="0" width="110" height="70" rx="10" fill="#DBEAFE" />
+          <text x="55" y="22" fontSize="9" fill="#1D4ED8" textAnchor="middle" fontWeight="600">
+            Daily MCQs
+          </text>
+          <motion.text
+            x="55"
+            y="50"
+            fontSize="28"
+            fill="#2563EB"
+            textAnchor="middle"
+            fontWeight="bold"
+            animate={animate ? { scale: [1, 1.08, 1] } : undefined}
+            transition={{ duration: 2.5, repeat: Infinity }}
+          >
+            200+
+          </motion.text>
+          <text x="55" y="65" fontSize="8" fill="#3B82F6" textAnchor="middle">
+            questions
+          </text>
+        </g>
+
+        {/* Revision cycles */}
+        <g transform="translate(560, 285)">
+          <rect x="0" y="0" width="110" height="70" rx="10" fill="#EDE9FE" />
+          <text x="55" y="22" fontSize="9" fill="#6D28D9" textAnchor="middle" fontWeight="600">
+            Revision Cycles
+          </text>
+          <motion.text
+            x="55"
+            y="50"
+            fontSize="28"
+            fill="#7C3AED"
+            textAnchor="middle"
+            fontWeight="bold"
+            animate={animate ? { scale: [1, 1.08, 1] } : undefined}
+            transition={{ duration: 2.2, repeat: Infinity, delay: 0.3 }}
+          >
+            3x
+          </motion.text>
+          <text x="55" y="65" fontSize="8" fill="#8B5CF6" textAnchor="middle">
+            minimum
+          </text>
+        </g>
+
+        {/* Mock tests */}
+        <g transform="translate(560, 365)">
+          <rect x="0" y="0" width="110" height="35" rx="8" fill="#D1FAE5" />
+          <text x="55" y="15" fontSize="9" fill="#065F46" textAnchor="middle" fontWeight="600">
+            Weekly Mocks
+          </text>
+          <text x="55" y="28" fontSize="11" fill="#059669" textAnchor="middle" fontWeight="bold">
+            2 Full Tests
+          </text>
+        </g>
+      </motion.g>
+
+      {/* === BOTTOM SECTION: Action Items === */}
+      <motion.g
+        initial={animate ? { opacity: 0, y: 30 } : undefined}
+        animate={animate ? { opacity: 1, y: 0 } : undefined}
+        transition={{ delay: 0.6, duration: 0.6 }}
+      >
+        <g filter="url(#last6CardShadow)">
+          <rect x="20" y="420" width="665" height="85" rx="16" fill="#FFFFFF" />
+        </g>
+
+        <text x="350" y="442" fontSize="13" fill="#374151" textAnchor="middle" fontWeight="bold">
+          🔥 Critical Success Actions
+        </text>
+
+        {/* Action items */}
+        <g transform="translate(35, 455)">
+          {[
+            { icon: '📚', text: 'NCERT 3x', color: '#10B981' },
+            { icon: '📝', text: '100 Mocks', color: '#3B82F6' },
+            { icon: '🔄', text: 'Daily Revision', color: '#8B5CF6' },
+            { icon: '⚡', text: 'Weak Areas First', color: '#F59E0B' },
+            { icon: '🎯', text: 'PYQ Focus', color: '#EF4444' },
+            { icon: '😴', text: '7hr Sleep', color: '#06B6D4' },
+          ].map((item, i) => (
+            <motion.g
+              key={i}
+              transform={`translate(${i * 105}, 0)`}
+              initial={animate ? { opacity: 0, y: 10 } : undefined}
+              animate={animate ? { opacity: 1, y: 0 } : undefined}
+              transition={{ delay: 0.8 + i * 0.08 }}
+            >
+              <rect
+                x="0"
+                y="0"
+                width="98"
+                height="38"
+                rx="8"
+                fill={`${item.color}15`}
+                stroke={item.color}
+                strokeWidth="1"
+              />
+              <text x="20" y="24" fontSize="16">
+                {item.icon}
+              </text>
+              <text x="42" y="24" fontSize="10" fill={item.color} fontWeight="600">
+                {item.text}
+              </text>
+            </motion.g>
+          ))}
+        </g>
+      </motion.g>
+
+      {/* Floating urgency indicators */}
+      {animate && (
+        <>
+          <motion.text
+            x="30"
+            y="50"
+            fontSize="18"
+            opacity="0.4"
+            animate={{ y: [50, 40, 50], opacity: [0.3, 0.6, 0.3] }}
+            transition={{ duration: 2.5, repeat: Infinity }}
+          >
+            ⏰
+          </motion.text>
+          <motion.text
+            x="670"
+            y="55"
+            fontSize="16"
+            opacity="0.4"
+            animate={{ y: [55, 45, 55], opacity: [0.3, 0.5, 0.3] }}
+            transition={{ duration: 3, repeat: Infinity, delay: 0.5 }}
+          >
+            🔥
+          </motion.text>
+        </>
+      )}
     </Wrapper>
   )
 }
@@ -1344,125 +1708,488 @@ export function MockTestIllustration({ className = '', animate = true }: Illustr
   const Wrapper = animate ? motion.svg : 'svg'
   const wrapperProps = animate
     ? {
-        initial: { opacity: 0, y: 15 },
-        animate: { opacity: 1, y: 0 },
-        transition: { duration: 0.5 },
+        initial: { opacity: 0, scale: 0.95 },
+        animate: { opacity: 1, scale: 1 },
+        transition: { duration: 0.8, ease: 'easeOut' as const },
       }
     : {}
 
+  // Mock test strategy data
+  const testSchedule = [
+    { week: 'Week 1-4', type: 'Chapter Tests', count: 16, color: '#3B82F6' },
+    { week: 'Week 5-8', type: 'Unit Tests', count: 8, color: '#8B5CF6' },
+    { week: 'Week 9-12', type: 'Full Syllabus', count: 12, color: '#10B981' },
+    { week: 'Last 4 Weeks', type: 'Final Mocks', count: 8, color: '#EF4444' },
+  ]
+
+  // Score progression data
+  const scoreProgress = [
+    { month: 'Jan', score: 420 },
+    { month: 'Feb', score: 480 },
+    { month: 'Mar', score: 520 },
+    { month: 'Apr', score: 580 },
+    { month: 'May', score: 640 },
+  ]
+
+  // Question analysis
+  const questionBreakdown = [
+    { status: 'Correct', count: 145, color: '#10B981' },
+    { status: 'Wrong', count: 30, color: '#EF4444' },
+    { status: 'Skipped', count: 5, color: '#F59E0B' },
+  ]
+
   return (
     <Wrapper
-      viewBox="0 0 400 280"
+      viewBox="0 0 700 520"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
+      preserveAspectRatio="xMidYMid meet"
       {...wrapperProps}
     >
+      <defs>
+        {/* Background gradient */}
+        <linearGradient id="mockBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#EDE9FE" />
+          <stop offset="50%" stopColor="#F3E8FF" />
+          <stop offset="100%" stopColor="#FCE7F3" />
+        </linearGradient>
+        {/* Timer gradient */}
+        <linearGradient id="timerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#3B82F6" />
+          <stop offset="100%" stopColor="#6366F1" />
+        </linearGradient>
+        {/* Score gradient */}
+        <linearGradient id="scoreGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stopColor="#10B981" />
+          <stop offset="100%" stopColor="#059669" />
+        </linearGradient>
+        {/* Card shadow */}
+        <filter id="mockCardShadow" x="-10%" y="-10%" width="120%" height="120%">
+          <feDropShadow dx="2" dy="3" stdDeviation="4" floodColor="#000" floodOpacity="0.1" />
+        </filter>
+      </defs>
+
       {/* Background */}
-      <rect x="20" y="20" width="360" height="240" rx="16" fill="#EDE9FE" opacity="0.3" />
+      <rect width="700" height="520" fill="url(#mockBgGrad)" rx="16" />
 
-      {/* Test paper */}
-      <rect
-        x="60"
-        y="50"
-        width="160"
-        height="200"
-        rx="8"
-        fill="#FFFFFF"
-        stroke="#E2E8F0"
-        strokeWidth="2"
-      />
-
-      {/* Paper header */}
-      <rect x="70" y="60" width="140" height="25" rx="4" fill="#6366F1" />
-      <text x="140" y="78" fontSize="10" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
-        MOCK TEST - 01
-      </text>
-
-      {/* Questions */}
-      {[0, 1, 2, 3, 4].map((i) => (
-        <motion.g
-          key={i}
-          animate={animate ? { opacity: [0.5, 1, 0.5] } : undefined}
-          transition={{ duration: 2, repeat: Infinity, delay: i * 0.2 }}
-        >
-          <circle cx="80" cy={100 + i * 28} r="8" fill={i < 3 ? '#10B981' : '#E2E8F0'} />
-          <text x="80" y={104 + i * 28} fontSize="8" fill="#FFFFFF" textAnchor="middle">
-            {i + 1}
-          </text>
-          <rect
-            x="95"
-            y={95 + i * 28}
-            width="110"
-            height="8"
-            rx="2"
-            fill={i < 3 ? '#D1FAE5' : '#F1F5F9'}
-          />
-        </motion.g>
-      ))}
-
-      {/* Timer */}
-      <motion.g
-        animate={animate ? { rotate: [0, 360] } : undefined}
-        transition={{ duration: 60, repeat: Infinity, ease: 'linear' }}
-        style={{ transformOrigin: '300px 100px' }}
-      >
-        <circle cx="300" cy="100" r="50" fill="#FFFFFF" stroke="#3B82F6" strokeWidth="4" />
-        <line x1="300" y1="100" x2="300" y2="65" stroke="#1E293B" strokeWidth="3" />
-        <line x1="300" y1="100" x2="330" y2="100" stroke="#EF4444" strokeWidth="2" />
-        <circle cx="300" cy="100" r="5" fill="#3B82F6" />
-      </motion.g>
-
-      {/* Timer text */}
-      <text x="300" y="165" fontSize="12" fill="#1E293B" textAnchor="middle" fontWeight="bold">
-        3:20:00
-      </text>
-      <text x="300" y="180" fontSize="8" fill="#64748B" textAnchor="middle">
-        Time Remaining
-      </text>
-
-      {/* Score card */}
-      <motion.g
-        animate={animate ? { y: [-3, 3, -3] } : undefined}
-        transition={{ duration: 2, repeat: Infinity }}
-      >
-        <rect x="250" y="195" width="100" height="55" rx="8" fill="#10B981" />
-        <text x="300" y="215" fontSize="8" fill="#FFFFFF" textAnchor="middle">
-          Target Score
-        </text>
-        <text x="300" y="238" fontSize="20" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
-          650+
-        </text>
-      </motion.g>
-
-      {/* Strategy tips */}
-      <g transform="translate(250, 50)">
-        <text x="50" y="0" fontSize="9" fill="#4F46E5" textAnchor="middle" fontWeight="bold">
-          STRATEGY
-        </text>
-        <motion.circle
-          cx="20"
-          cy="20"
-          r="6"
-          fill="#10B981"
-          animate={animate ? { scale: [1, 1.3, 1] } : undefined}
-          transition={{ duration: 1.5, repeat: Infinity }}
-        />
-        <text x="35" y="24" fontSize="7" fill="#374151">
-          Weekly mocks
-        </text>
-        <motion.circle
-          cx="20"
-          cy="40"
-          r="6"
-          fill="#3B82F6"
-          animate={animate ? { scale: [1, 1.3, 1] } : undefined}
-          transition={{ duration: 1.5, repeat: Infinity, delay: 0.3 }}
-        />
-        <text x="35" y="44" fontSize="7" fill="#374151">
-          Analyze errors
-        </text>
+      {/* Decorative elements */}
+      <g opacity="0.1">
+        {[...Array(10)].map((_, i) => (
+          <circle key={i} cx={35 + i * 70} cy="15" r="15" fill="#6366F1" />
+        ))}
       </g>
+
+      {/* Title Section */}
+      <motion.g
+        initial={animate ? { opacity: 0, y: -20 } : undefined}
+        animate={animate ? { opacity: 1, y: 0 } : undefined}
+        transition={{ delay: 0.2, duration: 0.6 }}
+      >
+        <rect x="175" y="15" width="350" height="55" rx="27" fill="#6366F1" opacity="0.15" />
+        <text x="350" y="45" fontSize="24" fill="#4F46E5" textAnchor="middle" fontWeight="bold">
+          📝 Mock Test Strategy
+        </text>
+        <text x="350" y="62" fontSize="11" fill="#7C3AED" textAnchor="middle">
+          The Key to NEET Success - Practice Makes Perfect
+        </text>
+      </motion.g>
+
+      {/* === LEFT SECTION: Test Paper & Timer === */}
+      <motion.g
+        initial={animate ? { opacity: 0, x: -30 } : undefined}
+        animate={animate ? { opacity: 1, x: 0 } : undefined}
+        transition={{ delay: 0.3, duration: 0.6 }}
+      >
+        <g filter="url(#mockCardShadow)">
+          <rect x="20" y="85" width="200" height="300" rx="16" fill="#FFFFFF" />
+        </g>
+
+        <text x="120" y="108" fontSize="13" fill="#374151" textAnchor="middle" fontWeight="bold">
+          Live Test Mode
+        </text>
+
+        {/* Mock test paper */}
+        <g transform="translate(35, 120)">
+          <rect
+            x="0"
+            y="0"
+            width="170"
+            height="180"
+            rx="8"
+            fill="#FFFFFF"
+            stroke="#E2E8F0"
+            strokeWidth="2"
+          />
+
+          {/* Paper header */}
+          <rect x="0" y="0" width="170" height="30" rx="8" fill="#6366F1" />
+          <text x="85" y="20" fontSize="10" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
+            NEET MOCK TEST - 01
+          </text>
+
+          {/* Question grid */}
+          <g transform="translate(10, 40)">
+            {[...Array(20)].map((_, i) => {
+              const row = Math.floor(i / 5)
+              const col = i % 5
+              const status = i < 12 ? '#10B981' : i < 17 ? '#EF4444' : '#F59E0B'
+              return (
+                <motion.g key={i}>
+                  <motion.rect
+                    x={col * 30}
+                    y={row * 32}
+                    width="25"
+                    height="25"
+                    rx="4"
+                    fill={status}
+                    opacity="0.8"
+                    animate={animate ? { opacity: [0.6, 1, 0.6] } : undefined}
+                    transition={{ duration: 2, repeat: Infinity, delay: i * 0.05 }}
+                  />
+                  <text
+                    x={col * 30 + 12.5}
+                    y={row * 32 + 17}
+                    fontSize="9"
+                    fill="#FFFFFF"
+                    textAnchor="middle"
+                    fontWeight="600"
+                  >
+                    {i + 1}
+                  </text>
+                </motion.g>
+              )
+            })}
+          </g>
+
+          {/* Legend */}
+          <g transform="translate(10, 175)">
+            <circle cx="8" cy="-8" r="5" fill="#10B981" />
+            <text x="18" y="-5" fontSize="7" fill="#374151">
+              Correct
+            </text>
+            <circle cx="58" cy="-8" r="5" fill="#EF4444" />
+            <text x="68" y="-5" fontSize="7" fill="#374151">
+              Wrong
+            </text>
+            <circle cx="108" cy="-8" r="5" fill="#F59E0B" />
+            <text x="118" y="-5" fontSize="7" fill="#374151">
+              Skip
+            </text>
+          </g>
+        </g>
+
+        {/* Timer */}
+        <g transform="translate(55, 315)">
+          <motion.g
+            animate={animate ? { scale: [1, 1.02, 1] } : undefined}
+            transition={{ duration: 1, repeat: Infinity }}
+          >
+            <rect x="0" y="0" width="130" height="55" rx="10" fill="url(#timerGrad)" />
+            <text x="65" y="22" fontSize="10" fill="#FFFFFF" textAnchor="middle">
+              Time Remaining
+            </text>
+            <motion.text
+              x="65"
+              y="45"
+              fontSize="20"
+              fill="#FFFFFF"
+              textAnchor="middle"
+              fontWeight="bold"
+              animate={animate ? { opacity: [1, 0.7, 1] } : undefined}
+              transition={{ duration: 1, repeat: Infinity }}
+            >
+              2:45:32
+            </motion.text>
+          </motion.g>
+        </g>
+      </motion.g>
+
+      {/* === CENTER SECTION: Progress Graph & Schedule === */}
+      <motion.g
+        initial={animate ? { opacity: 0, y: 20 } : undefined}
+        animate={animate ? { opacity: 1, y: 0 } : undefined}
+        transition={{ delay: 0.4, duration: 0.6 }}
+      >
+        {/* Score Progress Graph */}
+        <g filter="url(#mockCardShadow)">
+          <rect x="235" y="85" width="280" height="175" rx="16" fill="#FFFFFF" />
+        </g>
+
+        <text x="375" y="108" fontSize="13" fill="#374151" textAnchor="middle" fontWeight="bold">
+          Score Progression (Jan - May)
+        </text>
+
+        {/* Graph */}
+        <g transform="translate(260, 125)">
+          {/* Y-axis */}
+          <line x1="0" y1="0" x2="0" y2="110" stroke="#E5E7EB" strokeWidth="1" />
+          {/* X-axis */}
+          <line x1="0" y1="110" x2="230" y2="110" stroke="#E5E7EB" strokeWidth="1" />
+
+          {/* Y-axis labels */}
+          <text x="-10" y="5" fontSize="7" fill="#6B7280" textAnchor="end">
+            700
+          </text>
+          <text x="-10" y="55" fontSize="7" fill="#6B7280" textAnchor="end">
+            550
+          </text>
+          <text x="-10" y="105" fontSize="7" fill="#6B7280" textAnchor="end">
+            400
+          </text>
+
+          {/* Score line */}
+          <motion.path
+            d="M 10 95 L 55 78 L 100 65 L 145 48 L 190 25"
+            fill="none"
+            stroke="url(#scoreGrad)"
+            strokeWidth="3"
+            strokeLinecap="round"
+            initial={animate ? { pathLength: 0 } : undefined}
+            animate={animate ? { pathLength: 1 } : undefined}
+            transition={{ delay: 0.6, duration: 1.5 }}
+          />
+
+          {/* Data points */}
+          {scoreProgress.map((point, i) => (
+            <motion.g key={i} transform={`translate(${10 + i * 45}, 0)`}>
+              <motion.circle
+                cy={110 - ((point.score - 400) / 300) * 110}
+                cx="0"
+                r="6"
+                fill="#10B981"
+                initial={animate ? { scale: 0 } : undefined}
+                animate={animate ? { scale: 1 } : undefined}
+                transition={{ delay: 0.8 + i * 0.15 }}
+              />
+              <text y="125" x="0" fontSize="8" fill="#6B7280" textAnchor="middle">
+                {point.month}
+              </text>
+              <text
+                y={105 - ((point.score - 400) / 300) * 110}
+                x="0"
+                fontSize="8"
+                fill="#10B981"
+                textAnchor="middle"
+                fontWeight="600"
+              >
+                {point.score}
+              </text>
+            </motion.g>
+          ))}
+
+          {/* Target line */}
+          <line
+            x1="0"
+            y1="30"
+            x2="230"
+            y2="30"
+            stroke="#EF4444"
+            strokeWidth="1"
+            strokeDasharray="5,3"
+          />
+          <text x="235" y="33" fontSize="7" fill="#EF4444">
+            650 Target
+          </text>
+        </g>
+
+        {/* Mock Test Schedule */}
+        <g filter="url(#mockCardShadow)">
+          <rect x="235" y="275" width="280" height="110" rx="16" fill="#FFFFFF" />
+        </g>
+
+        <text x="375" y="298" fontSize="12" fill="#374151" textAnchor="middle" fontWeight="bold">
+          Recommended Mock Test Schedule
+        </text>
+
+        <g transform="translate(250, 310)">
+          {testSchedule.map((item, i) => (
+            <g key={i} transform={`translate(${i * 65}, 0)`}>
+              <rect
+                x="0"
+                y="0"
+                width="60"
+                height="60"
+                rx="8"
+                fill={`${item.color}15`}
+                stroke={item.color}
+                strokeWidth="1"
+              />
+              <text
+                x="30"
+                y="15"
+                fontSize="7"
+                fill={item.color}
+                textAnchor="middle"
+                fontWeight="600"
+              >
+                {item.week}
+              </text>
+              <motion.text
+                x="30"
+                y="38"
+                fontSize="18"
+                fill={item.color}
+                textAnchor="middle"
+                fontWeight="bold"
+                animate={animate ? { scale: [1, 1.1, 1] } : undefined}
+                transition={{ duration: 2, repeat: Infinity, delay: i * 0.2 }}
+              >
+                {item.count}
+              </motion.text>
+              <text x="30" y="52" fontSize="6" fill="#6B7280" textAnchor="middle">
+                {item.type}
+              </text>
+            </g>
+          ))}
+        </g>
+      </motion.g>
+
+      {/* === RIGHT SECTION: Analysis & Tips === */}
+      <motion.g
+        initial={animate ? { opacity: 0, x: 30 } : undefined}
+        animate={animate ? { opacity: 1, x: 0 } : undefined}
+        transition={{ delay: 0.5, duration: 0.6 }}
+      >
+        <g filter="url(#mockCardShadow)">
+          <rect x="530" y="85" width="150" height="300" rx="16" fill="#FFFFFF" />
+        </g>
+
+        <text x="605" y="108" fontSize="12" fill="#374151" textAnchor="middle" fontWeight="bold">
+          Test Analysis
+        </text>
+
+        {/* Question breakdown */}
+        <g transform="translate(545, 125)">
+          {questionBreakdown.map((item, i) => (
+            <motion.g
+              key={i}
+              transform={`translate(0, ${i * 55})`}
+              initial={animate ? { opacity: 0, x: 10 } : undefined}
+              animate={animate ? { opacity: 1, x: 0 } : undefined}
+              transition={{ delay: 0.6 + i * 0.1 }}
+            >
+              <rect x="0" y="0" width="120" height="45" rx="8" fill={`${item.color}15`} />
+              <circle cx="25" cy="22" r="15" fill={item.color} />
+              <text
+                x="25"
+                y="27"
+                fontSize="12"
+                fill="#FFFFFF"
+                textAnchor="middle"
+                fontWeight="bold"
+              >
+                {item.count}
+              </text>
+              <text x="70" y="18" fontSize="10" fill={item.color} fontWeight="600">
+                {item.status}
+              </text>
+              <text x="70" y="32" fontSize="8" fill="#6B7280">
+                Questions
+              </text>
+            </motion.g>
+          ))}
+        </g>
+
+        {/* Accuracy meter */}
+        <g transform="translate(545, 300)">
+          <rect x="0" y="0" width="120" height="70" rx="10" fill="#EDE9FE" />
+          <text x="60" y="20" fontSize="9" fill="#6366F1" textAnchor="middle" fontWeight="600">
+            Accuracy Rate
+          </text>
+          <motion.text
+            x="60"
+            y="50"
+            fontSize="28"
+            fill="#4F46E5"
+            textAnchor="middle"
+            fontWeight="bold"
+            animate={animate ? { scale: [1, 1.05, 1] } : undefined}
+            transition={{ duration: 2, repeat: Infinity }}
+          >
+            80.5%
+          </motion.text>
+        </g>
+      </motion.g>
+
+      {/* === BOTTOM SECTION: Strategy Tips === */}
+      <motion.g
+        initial={animate ? { opacity: 0, y: 30 } : undefined}
+        animate={animate ? { opacity: 1, y: 0 } : undefined}
+        transition={{ delay: 0.6, duration: 0.6 }}
+      >
+        <g filter="url(#mockCardShadow)">
+          <rect x="20" y="400" width="665" height="105" rx="16" fill="#FFFFFF" />
+        </g>
+
+        <text x="350" y="422" fontSize="13" fill="#374151" textAnchor="middle" fontWeight="bold">
+          🎯 Mock Test Success Formula
+        </text>
+
+        {/* Tips */}
+        <g transform="translate(40, 440)">
+          {[
+            { icon: '📅', tip: 'Weekly full mocks', desc: 'Every Sunday', color: '#3B82F6' },
+            { icon: '⏱️', tip: 'Strict timing', desc: '3 hrs 20 min', color: '#F59E0B' },
+            { icon: '🔍', tip: 'Error analysis', desc: 'Same day review', color: '#EF4444' },
+            { icon: '📊', tip: 'Track progress', desc: 'Score trends', color: '#10B981' },
+            { icon: '🎯', tip: 'Target 650+', desc: 'Consistent practice', color: '#8B5CF6' },
+          ].map((item, i) => (
+            <motion.g
+              key={i}
+              transform={`translate(${i * 125}, 0)`}
+              initial={animate ? { opacity: 0, y: 10 } : undefined}
+              animate={animate ? { opacity: 1, y: 0 } : undefined}
+              transition={{ delay: 0.8 + i * 0.1 }}
+            >
+              <rect
+                x="0"
+                y="0"
+                width="115"
+                height="50"
+                rx="8"
+                fill={`${item.color}10`}
+                stroke={item.color}
+                strokeWidth="1"
+              />
+              <text x="18" y="22" fontSize="18">
+                {item.icon}
+              </text>
+              <text x="40" y="18" fontSize="9" fill={item.color} fontWeight="600">
+                {item.tip}
+              </text>
+              <text x="40" y="32" fontSize="8" fill="#6B7280">
+                {item.desc}
+              </text>
+            </motion.g>
+          ))}
+        </g>
+      </motion.g>
+
+      {/* Floating decorations */}
+      {animate && (
+        <>
+          <motion.circle
+            cx="50"
+            cy="50"
+            r="6"
+            fill="#6366F1"
+            opacity="0.3"
+            animate={{ y: [0, -8, 0], opacity: [0.3, 0.5, 0.3] }}
+            transition={{ duration: 3, repeat: Infinity }}
+          />
+          <motion.text
+            x="650"
+            y="60"
+            fontSize="16"
+            opacity="0.5"
+            animate={{ y: [0, -6, 0], rotate: [0, 10, 0] }}
+            transition={{ duration: 2.5, repeat: Infinity }}
+          >
+            📝
+          </motion.text>
+        </>
+      )}
     </Wrapper>
   )
 }
