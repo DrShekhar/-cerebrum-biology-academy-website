@@ -9507,6 +9507,544 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
   )
 }
 
+// Professional Human Digestion Illustration - Silicon Valley Quality
+export function HumanDigestionIllustration({ className = '', animate = true }: IllustrationProps) {
+  const Wrapper = animate ? motion.svg : 'svg'
+  const wrapperProps = animate
+    ? {
+        initial: { opacity: 0, scale: 0.95 },
+        animate: { opacity: 1, scale: 1 },
+        transition: { duration: 0.8, ease: 'easeOut' },
+      }
+    : {}
+
+  return (
+    <Wrapper
+      viewBox="0 0 520 440"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      preserveAspectRatio="xMidYMid meet"
+      {...wrapperProps}
+    >
+      <defs>
+        {/* Background gradient */}
+        <linearGradient id="digestBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#FFF7ED" />
+          <stop offset="50%" stopColor="#FEF3C7" />
+          <stop offset="100%" stopColor="#FFEDD5" />
+        </linearGradient>
+
+        {/* Organ gradients */}
+        <linearGradient id="mouthGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#FDA4AF" />
+          <stop offset="100%" stopColor="#FB7185" />
+        </linearGradient>
+
+        <linearGradient id="esophagusGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#FCA5A5" />
+          <stop offset="100%" stopColor="#F87171" />
+        </linearGradient>
+
+        <linearGradient id="stomachGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#F97316" />
+          <stop offset="100%" stopColor="#EA580C" />
+        </linearGradient>
+        <radialGradient id="stomachInnerGrad" cx="40%" cy="40%" r="60%">
+          <stop offset="0%" stopColor="#FFEDD5" />
+          <stop offset="100%" stopColor="#FED7AA" />
+        </radialGradient>
+
+        <linearGradient id="liverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#92400E" />
+          <stop offset="100%" stopColor="#78350F" />
+        </linearGradient>
+
+        <linearGradient id="gallbladderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#84CC16" />
+          <stop offset="100%" stopColor="#65A30D" />
+        </linearGradient>
+
+        <linearGradient id="pancreasGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#FBBF24" />
+          <stop offset="100%" stopColor="#F59E0B" />
+        </linearGradient>
+
+        <linearGradient id="smallIntestineGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#FB923C" />
+          <stop offset="100%" stopColor="#F97316" />
+        </linearGradient>
+
+        <linearGradient id="largeIntestineGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#A78BFA" />
+          <stop offset="100%" stopColor="#8B5CF6" />
+        </linearGradient>
+
+        <linearGradient id="villiGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stopColor="#FDBA74" />
+          <stop offset="100%" stopColor="#FB923C" />
+        </linearGradient>
+
+        {/* Card gradients */}
+        <linearGradient id="digestCardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stopColor="#FFFFFF" />
+          <stop offset="100%" stopColor="#FEF3C7" />
+        </linearGradient>
+
+        {/* Enzyme colors */}
+        <linearGradient id="enzymeBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#3B82F6" />
+          <stop offset="100%" stopColor="#2563EB" />
+        </linearGradient>
+        <linearGradient id="enzymeGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#10B981" />
+          <stop offset="100%" stopColor="#059669" />
+        </linearGradient>
+
+        {/* Shadow filters */}
+        <filter id="digestShadow" x="-20%" y="-20%" width="140%" height="140%">
+          <feDropShadow dx="0" dy="4" stdDeviation="6" floodOpacity="0.15" />
+        </filter>
+        <filter id="organShadow" x="-15%" y="-15%" width="130%" height="130%">
+          <feDropShadow dx="0" dy="2" stdDeviation="4" floodOpacity="0.2" />
+        </filter>
+        <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+          <feGaussianBlur stdDeviation="2" result="blur" />
+          <feMerge>
+            <feMergeNode in="blur" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+      </defs>
+
+      {/* Background */}
+      <rect width="520" height="440" fill="url(#digestBgGrad)" />
+
+      {/* Decorative background elements */}
+      <circle cx="60" cy="60" r="100" fill="#F97316" opacity="0.05" />
+      <circle cx="460" cy="380" r="120" fill="#8B5CF6" opacity="0.05" />
+      <circle cx="260" cy="220" r="200" fill="#FBBF24" opacity="0.03" />
+
+      {/* Title */}
+      <motion.text
+        x="260"
+        y="26"
+        textAnchor="middle"
+        fill="#1E293B"
+        fontSize="15"
+        fontWeight="700"
+        initial={animate ? { opacity: 0, y: -10 } : undefined}
+        animate={animate ? { opacity: 1, y: 0 } : undefined}
+        transition={{ delay: 0.1, duration: 0.4 }}
+      >
+        Human Digestive System
+      </motion.text>
+
+      {/* MAIN DIGESTIVE TRACT - Left side */}
+      <motion.g
+        initial={animate ? { opacity: 0, x: -20 } : undefined}
+        animate={animate ? { opacity: 1, x: 0 } : undefined}
+        transition={{ delay: 0.2, duration: 0.6 }}
+      >
+        {/* Mouth/Buccal Cavity */}
+        <g transform="translate(40, 45)">
+          <ellipse
+            cx="45"
+            cy="25"
+            rx="40"
+            ry="22"
+            fill="url(#mouthGrad)"
+            filter="url(#organShadow)"
+          />
+          {/* Teeth */}
+          <rect x="15" y="18" width="6" height="8" rx="1" fill="white" />
+          <rect x="24" y="18" width="6" height="8" rx="1" fill="white" />
+          <rect x="33" y="18" width="6" height="8" rx="1" fill="white" />
+          <rect x="51" y="18" width="6" height="8" rx="1" fill="white" />
+          <rect x="60" y="18" width="6" height="8" rx="1" fill="white" />
+          <rect x="69" y="18" width="6" height="8" rx="1" fill="white" />
+          {/* Tongue */}
+          <ellipse cx="45" cy="32" rx="20" ry="10" fill="#E11D48" opacity="0.7" />
+          {/* Salivary gland indicator */}
+          <motion.circle
+            cx="12"
+            cy="25"
+            r="6"
+            fill="url(#enzymeBlue)"
+            animate={animate ? { scale: [1, 1.2, 1] } : undefined}
+            transition={{ duration: 2, repeat: Infinity }}
+          />
+          <text x="45" y="58" textAnchor="middle" fill="#64748B" fontSize="8" fontWeight="600">
+            Mouth
+          </text>
+          <text x="45" y="67" textAnchor="middle" fill="#94A3B8" fontSize="6">
+            Salivary Amylase
+          </text>
+        </g>
+
+        {/* Esophagus */}
+        <motion.g
+          animate={animate ? { y: [0, 2, 0] } : undefined}
+          transition={{ duration: 1.5, repeat: Infinity }}
+        >
+          <path
+            d="M85 115 Q85 135 90 155 Q95 175 90 195"
+            stroke="url(#esophagusGrad)"
+            strokeWidth="14"
+            fill="none"
+            strokeLinecap="round"
+            filter="url(#organShadow)"
+          />
+          {/* Peristalsis wave indicator */}
+          <motion.circle
+            cx="87"
+            cy="140"
+            r="4"
+            fill="#FBBF24"
+            animate={animate ? { cy: [130, 180, 130] } : undefined}
+            transition={{ duration: 2, repeat: Infinity }}
+          />
+        </motion.g>
+        <text x="115" y="155" fill="#64748B" fontSize="7" fontWeight="500">
+          Esophagus
+        </text>
+        <text x="115" y="163" fill="#94A3B8" fontSize="5">
+          (Peristalsis)
+        </text>
+
+        {/* Stomach - J-shaped */}
+        <g transform="translate(50, 195)">
+          <path
+            d="M40 0 Q20 0 15 30 Q10 60 25 90 Q40 115 70 110 Q100 105 110 75 Q115 50 100 30 Q85 10 60 5 Q50 2 40 0 Z"
+            fill="url(#stomachGrad)"
+            filter="url(#organShadow)"
+          />
+          <path
+            d="M45 15 Q30 18 28 40 Q26 60 38 80 Q50 95 70 92 Q88 89 95 65 Q100 45 88 30 Q75 18 55 15 Q50 14 45 15 Z"
+            fill="url(#stomachInnerGrad)"
+          />
+          {/* Gastric glands */}
+          <motion.g
+            animate={animate ? { opacity: [0.6, 1, 0.6] } : undefined}
+            transition={{ duration: 2, repeat: Infinity }}
+          >
+            <circle cx="45" cy="45" r="3" fill="#DC2626" />
+            <circle cx="60" cy="55" r="3" fill="#DC2626" />
+            <circle cx="75" cy="50" r="3" fill="#DC2626" />
+          </motion.g>
+          {/* Labels */}
+          <text x="60" y="130" textAnchor="middle" fill="#64748B" fontSize="8" fontWeight="600">
+            Stomach
+          </text>
+          <text x="60" y="139" textAnchor="middle" fill="#94A3B8" fontSize="5">
+            HCl + Pepsin
+          </text>
+        </g>
+
+        {/* Small Intestine - Coiled */}
+        <g transform="translate(80, 340)">
+          <motion.path
+            d="M60 0 Q30 5 25 25 Q20 45 40 50 Q60 55 80 45 Q100 35 95 55 Q90 75 65 80 Q40 85 35 65"
+            stroke="url(#smallIntestineGrad)"
+            strokeWidth="12"
+            fill="none"
+            strokeLinecap="round"
+            filter="url(#organShadow)"
+            animate={animate ? { pathLength: [0.95, 1, 0.95] } : undefined}
+            transition={{ duration: 3, repeat: Infinity }}
+          />
+          <text x="60" y="98" textAnchor="middle" fill="#64748B" fontSize="7" fontWeight="600">
+            Small Intestine
+          </text>
+          <text x="60" y="106" textAnchor="middle" fill="#94A3B8" fontSize="5">
+            (~6m) Main Absorption
+          </text>
+        </g>
+
+        {/* Large Intestine - Ascending, Transverse, Descending */}
+        <g transform="translate(15, 340)">
+          <path
+            d="M170 65 L170 30 Q170 10 150 10 L60 10 Q40 10 40 30 L40 75"
+            stroke="url(#largeIntestineGrad)"
+            strokeWidth="14"
+            fill="none"
+            strokeLinecap="round"
+            filter="url(#organShadow)"
+          />
+          <text x="105" y="-3" textAnchor="middle" fill="#64748B" fontSize="7" fontWeight="600">
+            Large Intestine
+          </text>
+        </g>
+      </motion.g>
+
+      {/* ASSOCIATED GLANDS - Right side */}
+      <motion.g
+        initial={animate ? { opacity: 0, x: 20 } : undefined}
+        animate={animate ? { opacity: 1, x: 0 } : undefined}
+        transition={{ delay: 0.3, duration: 0.6 }}
+      >
+        {/* Liver */}
+        <g transform="translate(280, 50)">
+          <rect
+            x="0"
+            y="0"
+            width="200"
+            height="85"
+            rx="12"
+            fill="url(#digestCardGrad)"
+            filter="url(#digestShadow)"
+          />
+          <path
+            d="M25 25 Q15 30 15 50 Q15 65 30 70 Q50 75 90 70 Q120 65 130 50 Q140 35 130 25 Q115 15 80 15 Q45 15 25 25 Z"
+            fill="url(#liverGrad)"
+            filter="url(#organShadow)"
+          />
+          {/* Gallbladder */}
+          <ellipse
+            cx="115"
+            cy="55"
+            rx="12"
+            ry="18"
+            fill="url(#gallbladderGrad)"
+            filter="url(#organShadow)"
+          />
+          <motion.path
+            d="M115 73 L115 85"
+            stroke="#84CC16"
+            strokeWidth="3"
+            animate={animate ? { opacity: [0.5, 1, 0.5] } : undefined}
+            transition={{ duration: 1.5, repeat: Infinity }}
+          />
+          <text x="155" y="30" fill="#78350F" fontSize="10" fontWeight="700">
+            Liver
+          </text>
+          <text x="155" y="42" fill="#92400E" fontSize="7">
+            Produces Bile
+          </text>
+          <text x="155" y="52" fill="#92400E" fontSize="6">
+            (No enzymes)
+          </text>
+          <text x="155" y="68" fill="#65A30D" fontSize="8" fontWeight="600">
+            Gallbladder
+          </text>
+          <text x="155" y="78" fill="#84CC16" fontSize="6">
+            Stores Bile
+          </text>
+        </g>
+
+        {/* Pancreas */}
+        <g transform="translate(280, 145)">
+          <rect
+            x="0"
+            y="0"
+            width="200"
+            height="85"
+            rx="12"
+            fill="url(#digestCardGrad)"
+            filter="url(#digestShadow)"
+          />
+          <path
+            d="M20 45 Q15 35 25 30 Q40 25 70 30 Q100 35 120 42 Q130 45 128 50 Q125 55 115 55 Q90 55 60 50 Q30 45 20 45 Z"
+            fill="url(#pancreasGrad)"
+            filter="url(#organShadow)"
+          />
+          {/* Pancreatic duct */}
+          <motion.path
+            d="M70 50 Q70 65 60 75"
+            stroke="#F59E0B"
+            strokeWidth="2"
+            strokeDasharray="3"
+            animate={animate ? { opacity: [0.5, 1, 0.5] } : undefined}
+            transition={{ duration: 1.5, repeat: Infinity }}
+          />
+          <text x="145" y="25" fill="#92400E" fontSize="10" fontWeight="700">
+            Pancreas
+          </text>
+          <text x="145" y="38" fill="#B45309" fontSize="7">
+            Exocrine:
+          </text>
+          <text x="145" y="48" fill="#D97706" fontSize="6">
+            Amylase, Lipase
+          </text>
+          <text x="145" y="58" fill="#D97706" fontSize="6">
+            Trypsin, Chymotrypsin
+          </text>
+          <text x="145" y="70" fill="#B45309" fontSize="7">
+            Endocrine:
+          </text>
+          <text x="145" y="80" fill="#D97706" fontSize="6">
+            Insulin, Glucagon
+          </text>
+        </g>
+
+        {/* Villi Detail Box */}
+        <g transform="translate(280, 240)">
+          <rect
+            x="0"
+            y="0"
+            width="200"
+            height="95"
+            rx="12"
+            fill="url(#digestCardGrad)"
+            filter="url(#digestShadow)"
+          />
+          <text x="100" y="18" textAnchor="middle" fill="#EA580C" fontSize="9" fontWeight="700">
+            Intestinal Villi
+          </text>
+          {/* Villi illustration */}
+          <g transform="translate(15, 25)">
+            {/* Villus 1 */}
+            <motion.g
+              animate={animate ? { y: [0, -2, 0] } : undefined}
+              transition={{ duration: 2, repeat: Infinity, delay: 0 }}
+            >
+              <path d="M15 50 Q15 20 20 10 Q25 0 30 10 Q35 20 35 50 Z" fill="url(#villiGrad)" />
+              <line x1="25" y1="15" x2="25" y2="45" stroke="#DC2626" strokeWidth="1.5" />
+            </motion.g>
+            {/* Villus 2 */}
+            <motion.g
+              animate={animate ? { y: [0, -2, 0] } : undefined}
+              transition={{ duration: 2, repeat: Infinity, delay: 0.3 }}
+            >
+              <path d="M45 50 Q45 20 50 10 Q55 0 60 10 Q65 20 65 50 Z" fill="url(#villiGrad)" />
+              <line x1="55" y1="15" x2="55" y2="45" stroke="#DC2626" strokeWidth="1.5" />
+            </motion.g>
+            {/* Villus 3 */}
+            <motion.g
+              animate={animate ? { y: [0, -2, 0] } : undefined}
+              transition={{ duration: 2, repeat: Infinity, delay: 0.6 }}
+            >
+              <path d="M75 50 Q75 20 80 10 Q85 0 90 10 Q95 20 95 50 Z" fill="url(#villiGrad)" />
+              <line x1="85" y1="15" x2="85" y2="45" stroke="#DC2626" strokeWidth="1.5" />
+            </motion.g>
+            {/* Base line */}
+            <rect x="5" y="50" width="100" height="5" rx="2" fill="#FDBA74" />
+          </g>
+          <text x="125" y="42" fill="#64748B" fontSize="7">
+            Blood Capillary
+          </text>
+          <text x="125" y="52" fill="#DC2626" fontSize="6">
+            (Red line)
+          </text>
+          <text x="125" y="66" fill="#64748B" fontSize="7">
+            Microvilli increase
+          </text>
+          <text x="125" y="76" fill="#64748B" fontSize="7">
+            surface area 600x
+          </text>
+          <text x="100" y="90" textAnchor="middle" fill="#94A3B8" fontSize="6">
+            Main site of absorption
+          </text>
+        </g>
+
+        {/* Enzymes Summary */}
+        <g transform="translate(280, 345)">
+          <rect
+            x="0"
+            y="0"
+            width="200"
+            height="85"
+            rx="12"
+            fill="url(#digestCardGrad)"
+            filter="url(#digestShadow)"
+          />
+          <text x="100" y="16" textAnchor="middle" fill="#1E293B" fontSize="9" fontWeight="700">
+            Key Enzymes
+          </text>
+          {/* Enzyme list */}
+          <g transform="translate(10, 25)">
+            <circle cx="8" cy="6" r="4" fill="#3B82F6" />
+            <text x="18" y="9" fill="#1E293B" fontSize="7" fontWeight="500">
+              Amylase
+            </text>
+            <text x="65" y="9" fill="#64748B" fontSize="6">
+              Starch → Maltose
+            </text>
+
+            <circle cx="8" cy="22" r="4" fill="#10B981" />
+            <text x="18" y="25" fill="#1E293B" fontSize="7" fontWeight="500">
+              Pepsin
+            </text>
+            <text x="55" y="25" fill="#64748B" fontSize="6">
+              Proteins → Peptides
+            </text>
+
+            <circle cx="8" cy="38" r="4" fill="#F59E0B" />
+            <text x="18" y="41" fill="#1E293B" fontSize="7" fontWeight="500">
+              Lipase
+            </text>
+            <text x="50" y="41" fill="#64748B" fontSize="6">
+              Fats → Fatty Acids
+            </text>
+
+            <circle cx="8" cy="54" r="4" fill="#8B5CF6" />
+            <text x="18" y="57" fill="#1E293B" fontSize="7" fontWeight="500">
+              Trypsin
+            </text>
+            <text x="55" y="57" fill="#64748B" fontSize="6">
+              Proteins → Amino Acids
+            </text>
+          </g>
+        </g>
+      </motion.g>
+
+      {/* Flow arrows connecting organs */}
+      <motion.g
+        initial={animate ? { opacity: 0 } : undefined}
+        animate={animate ? { opacity: 1 } : undefined}
+        transition={{ delay: 0.5, duration: 0.5 }}
+      >
+        {/* Food flow indicator */}
+        <motion.circle
+          cx="85"
+          cy="80"
+          r="5"
+          fill="#FBBF24"
+          filter="url(#softGlow)"
+          animate={animate ? { cy: [80, 320, 80], opacity: [1, 0.8, 1] } : undefined}
+          transition={{ duration: 6, repeat: Infinity }}
+        />
+      </motion.g>
+
+      {/* Bottom summary bar */}
+      <motion.g
+        initial={animate ? { opacity: 0, y: 20 } : undefined}
+        animate={animate ? { opacity: 1, y: 0 } : undefined}
+        transition={{ delay: 0.6, duration: 0.5 }}
+      >
+        <rect
+          x="15"
+          y="418"
+          width="490"
+          height="18"
+          rx="6"
+          fill="white"
+          fillOpacity="0.9"
+          filter="url(#digestShadow)"
+        />
+        <text x="260" y="430" textAnchor="middle" fill="#475569" fontSize="7" fontWeight="500">
+          <tspan fill="#F97316" fontWeight="700">
+            Mouth
+          </tspan>{' '}
+          (Carbs) →{' '}
+          <tspan fill="#EA580C" fontWeight="700">
+            Stomach
+          </tspan>{' '}
+          (Proteins) →{' '}
+          <tspan fill="#F97316" fontWeight="700">
+            Small Intestine
+          </tspan>{' '}
+          (All + Absorption) →{' '}
+          <tspan fill="#8B5CF6" fontWeight="700">
+            Large Intestine
+          </tspan>{' '}
+          (Water)
+        </text>
+      </motion.g>
+    </Wrapper>
+  )
+}
+
 // Export all illustrations
 export default {
   KotaVsOnlineIllustration,
@@ -9549,4 +10087,5 @@ export default {
   SpecializedVsMassIllustration,
   BiomoleculesIllustration,
   CellDivisionIllustration,
+  HumanDigestionIllustration,
 }
