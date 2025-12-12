@@ -10688,6 +10688,789 @@ export function RespirationIllustration({ className = '', animate = true }: Illu
   )
 }
 
+// Professional Body Fluids & Circulation Illustration - Silicon Valley Quality
+export function CirculationIllustration({ className = '', animate = true }: IllustrationProps) {
+  const Wrapper = animate ? motion.svg : 'svg'
+  const wrapperProps = animate
+    ? {
+        initial: { opacity: 0, scale: 0.95 },
+        animate: { opacity: 1, scale: 1 },
+        transition: { duration: 0.8, ease: 'easeOut' },
+      }
+    : {}
+
+  return (
+    <Wrapper
+      viewBox="0 0 560 440"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      preserveAspectRatio="xMidYMid meet"
+      {...wrapperProps}
+    >
+      <defs>
+        {/* Background gradient */}
+        <linearGradient id="circBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#FEF2F2" />
+          <stop offset="50%" stopColor="#FFF1F2" />
+          <stop offset="100%" stopColor="#FCE7F3" />
+        </linearGradient>
+
+        {/* Heart gradients */}
+        <linearGradient id="heartGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#DC2626" />
+          <stop offset="100%" stopColor="#991B1B" />
+        </linearGradient>
+        <radialGradient id="heartInnerGrad" cx="40%" cy="40%" r="60%">
+          <stop offset="0%" stopColor="#FCA5A5" />
+          <stop offset="100%" stopColor="#EF4444" />
+        </radialGradient>
+
+        {/* Chamber colors */}
+        <linearGradient id="atriumRightGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#3B82F6" />
+          <stop offset="100%" stopColor="#1D4ED8" />
+        </linearGradient>
+        <linearGradient id="ventricleRightGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#2563EB" />
+          <stop offset="100%" stopColor="#1E40AF" />
+        </linearGradient>
+        <linearGradient id="atriumLeftGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#EF4444" />
+          <stop offset="100%" stopColor="#DC2626" />
+        </linearGradient>
+        <linearGradient id="ventricleLeftGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#DC2626" />
+          <stop offset="100%" stopColor="#B91C1C" />
+        </linearGradient>
+
+        {/* Blood vessel gradients */}
+        <linearGradient id="arteryGradCirc" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#EF4444" />
+          <stop offset="100%" stopColor="#DC2626" />
+        </linearGradient>
+        <linearGradient id="veinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#3B82F6" />
+          <stop offset="100%" stopColor="#2563EB" />
+        </linearGradient>
+        <linearGradient id="pulmonaryArteryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#6366F1" />
+          <stop offset="100%" stopColor="#4F46E5" />
+        </linearGradient>
+        <linearGradient id="pulmonaryVeinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#F472B6" />
+          <stop offset="100%" stopColor="#EC4899" />
+        </linearGradient>
+
+        {/* RBC gradient */}
+        <radialGradient id="rbcGrad" cx="30%" cy="30%" r="70%">
+          <stop offset="0%" stopColor="#FCA5A5" />
+          <stop offset="100%" stopColor="#DC2626" />
+        </radialGradient>
+
+        {/* ECG gradient */}
+        <linearGradient id="ecgGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stopColor="#22C55E" />
+          <stop offset="50%" stopColor="#10B981" />
+          <stop offset="100%" stopColor="#22C55E" />
+        </linearGradient>
+
+        {/* Card gradient */}
+        <linearGradient id="circCardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stopColor="#FFFFFF" />
+          <stop offset="100%" stopColor="#FEF2F2" />
+        </linearGradient>
+
+        {/* Shadow filters */}
+        <filter id="circShadow" x="-20%" y="-20%" width="140%" height="140%">
+          <feDropShadow dx="0" dy="4" stdDeviation="6" floodOpacity="0.15" />
+        </filter>
+        <filter id="heartShadow" x="-15%" y="-15%" width="130%" height="130%">
+          <feDropShadow dx="0" dy="3" stdDeviation="5" floodOpacity="0.25" />
+        </filter>
+        <filter id="vesselGlow" x="-30%" y="-30%" width="160%" height="160%">
+          <feGaussianBlur stdDeviation="2" result="blur" />
+          <feMerge>
+            <feMergeNode in="blur" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+      </defs>
+
+      {/* Background */}
+      <rect width="560" height="440" fill="url(#circBgGrad)" />
+
+      {/* Decorative background elements */}
+      <circle cx="80" cy="80" r="120" fill="#DC2626" opacity="0.03" />
+      <circle cx="480" cy="360" r="100" fill="#3B82F6" opacity="0.03" />
+      <circle cx="280" cy="220" r="180" fill="#EC4899" opacity="0.02" />
+
+      {/* Title */}
+      <motion.text
+        x="280"
+        y="24"
+        textAnchor="middle"
+        fill="#1E293B"
+        fontSize="15"
+        fontWeight="700"
+        fontFamily="system-ui, sans-serif"
+        initial={animate ? { opacity: 0, y: -10 } : undefined}
+        animate={animate ? { opacity: 1, y: 0 } : undefined}
+        transition={{ delay: 0.1, duration: 0.4 }}
+      >
+        Human Heart & Circulatory System
+      </motion.text>
+
+      {/* HEART DIAGRAM - Left side */}
+      <motion.g
+        initial={animate ? { opacity: 0, x: -20 } : undefined}
+        animate={animate ? { opacity: 1, x: 0 } : undefined}
+        transition={{ delay: 0.2, duration: 0.6 }}
+      >
+        <g transform="translate(25, 45)">
+          {/* Heart outline */}
+          <path
+            d="M100 30 Q60 10 40 40 Q10 80 20 130 Q30 180 100 230 Q170 180 180 130 Q190 80 160 40 Q140 10 100 30 Z"
+            fill="url(#heartGrad)"
+            filter="url(#heartShadow)"
+          />
+
+          {/* Septum - vertical divider */}
+          <line x1="100" y1="50" x2="100" y2="200" stroke="#7F1D1D" strokeWidth="3" />
+
+          {/* Right Atrium (upper left in viewer's perspective) */}
+          <path
+            d="M40 55 Q35 50 50 45 Q65 40 80 48 Q90 55 90 75 L40 75 Q35 65 40 55 Z"
+            fill="url(#atriumRightGrad)"
+          />
+          <text x="65" y="65" textAnchor="middle" fill="white" fontSize="7" fontWeight="600">
+            RA
+          </text>
+
+          {/* Right Ventricle (lower left in viewer's perspective) */}
+          <path
+            d="M40 85 Q35 80 40 80 L90 80 L90 160 Q70 175 40 155 Q25 140 30 115 Q35 90 40 85 Z"
+            fill="url(#ventricleRightGrad)"
+          />
+          <text x="58" y="125" textAnchor="middle" fill="white" fontSize="7" fontWeight="600">
+            RV
+          </text>
+
+          {/* Left Atrium (upper right in viewer's perspective) */}
+          <path
+            d="M110 48 Q125 40 145 45 Q165 50 160 60 Q158 75 160 75 L110 75 Q110 60 110 48 Z"
+            fill="url(#atriumLeftGrad)"
+          />
+          <text x="135" y="65" textAnchor="middle" fill="white" fontSize="7" fontWeight="600">
+            LA
+          </text>
+
+          {/* Left Ventricle (lower right - thicker wall!) */}
+          <path
+            d="M110 80 L160 80 Q165 85 170 115 Q175 145 160 165 Q130 190 110 175 L110 80 Z"
+            fill="url(#ventricleLeftGrad)"
+          />
+          <text x="138" y="130" textAnchor="middle" fill="white" fontSize="7" fontWeight="600">
+            LV
+          </text>
+
+          {/* Superior Vena Cava */}
+          <motion.path
+            d="M50 45 Q50 20 65 10 L75 10 Q75 20 75 35"
+            stroke="url(#veinGrad)"
+            strokeWidth="10"
+            fill="none"
+            strokeLinecap="round"
+            animate={animate ? { opacity: [0.7, 1, 0.7] } : undefined}
+            transition={{ duration: 2, repeat: Infinity }}
+          />
+          <text x="62" y="6" textAnchor="middle" fill="#2563EB" fontSize="6" fontWeight="500">
+            SVC
+          </text>
+
+          {/* Inferior Vena Cava */}
+          <motion.path
+            d="M55 85 Q40 100 35 130 L35 155"
+            stroke="url(#veinGrad)"
+            strokeWidth="8"
+            fill="none"
+            strokeLinecap="round"
+            animate={animate ? { opacity: [0.7, 1, 0.7] } : undefined}
+            transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
+          />
+          <text x="22" y="145" fill="#2563EB" fontSize="6" fontWeight="500">
+            IVC
+          </text>
+
+          {/* Pulmonary Artery */}
+          <motion.path
+            d="M65 82 Q55 70 45 50 Q35 30 25 25"
+            stroke="url(#pulmonaryArteryGrad)"
+            strokeWidth="9"
+            fill="none"
+            strokeLinecap="round"
+            animate={animate ? { strokeDashoffset: [0, -10] } : undefined}
+            transition={{ duration: 1, repeat: Infinity }}
+            strokeDasharray="5 3"
+          />
+          <text x="15" y="22" fill="#6366F1" fontSize="6" fontWeight="500">
+            PA
+          </text>
+
+          {/* Pulmonary Veins */}
+          <motion.path
+            d="M135 48 Q145 30 160 20 L175 20"
+            stroke="url(#pulmonaryVeinGrad)"
+            strokeWidth="7"
+            fill="none"
+            strokeLinecap="round"
+            animate={animate ? { opacity: [0.7, 1, 0.7] } : undefined}
+            transition={{ duration: 2, repeat: Infinity }}
+          />
+          <text x="180" y="22" fill="#EC4899" fontSize="6" fontWeight="500">
+            PV
+          </text>
+
+          {/* Aorta */}
+          <motion.path
+            d="M135 82 Q155 60 165 40 Q175 25 190 20"
+            stroke="url(#arteryGradCirc)"
+            strokeWidth="11"
+            fill="none"
+            strokeLinecap="round"
+            animate={animate ? { strokeDashoffset: [0, -10] } : undefined}
+            transition={{ duration: 1, repeat: Infinity }}
+            strokeDasharray="5 3"
+          />
+          <text x="192" y="15" fill="#DC2626" fontSize="7" fontWeight="600">
+            Aorta
+          </text>
+
+          {/* Heartbeat animation - pulsing */}
+          <motion.circle
+            cx="100"
+            cy="120"
+            r="8"
+            fill="#EF4444"
+            opacity="0.5"
+            animate={animate ? { scale: [1, 1.5, 1], opacity: [0.5, 0, 0.5] } : undefined}
+            transition={{ duration: 0.8, repeat: Infinity }}
+          />
+
+          {/* Labels */}
+          <text x="100" y="250" textAnchor="middle" fill="#64748B" fontSize="9" fontWeight="600">
+            Human Heart (4-chambered)
+          </text>
+        </g>
+
+        {/* Valve labels */}
+        <g transform="translate(25, 45)">
+          <circle cx="90" cy="78" r="3" fill="#FBBF24" />
+          <text x="78" y="95" fill="#92400E" fontSize="5">
+            Tricuspid
+          </text>
+          <circle cx="110" cy="78" r="3" fill="#FBBF24" />
+          <text x="112" y="95" fill="#92400E" fontSize="5">
+            Bicuspid
+          </text>
+        </g>
+      </motion.g>
+
+      {/* DOUBLE CIRCULATION DIAGRAM */}
+      <motion.g
+        initial={animate ? { opacity: 0, y: 20 } : undefined}
+        animate={animate ? { opacity: 1, y: 0 } : undefined}
+        transition={{ delay: 0.3, duration: 0.6 }}
+      >
+        <g transform="translate(20, 305)">
+          <rect
+            x="0"
+            y="0"
+            width="215"
+            height="115"
+            rx="12"
+            fill="url(#circCardGrad)"
+            filter="url(#circShadow)"
+          />
+          <text x="107" y="18" textAnchor="middle" fill="#1E293B" fontSize="9" fontWeight="700">
+            Double Circulation
+          </text>
+
+          {/* Pulmonary Circuit */}
+          <g transform="translate(15, 30)">
+            <rect
+              x="0"
+              y="0"
+              width="85"
+              height="70"
+              rx="8"
+              fill="#EDE9FE"
+              stroke="#8B5CF6"
+              strokeWidth="1"
+            />
+            <text x="42" y="14" textAnchor="middle" fill="#6D28D9" fontSize="7" fontWeight="600">
+              Pulmonary
+            </text>
+            <text x="42" y="25" textAnchor="middle" fill="#7C3AED" fontSize="6">
+              Heart → Lungs
+            </text>
+            <text x="42" y="35" textAnchor="middle" fill="#7C3AED" fontSize="6">
+              → Heart
+            </text>
+            {/* Small lung icon */}
+            <ellipse cx="30" cy="52" rx="12" ry="10" fill="#F9A8D4" />
+            <ellipse cx="54" cy="52" rx="12" ry="10" fill="#F9A8D4" />
+            <text x="42" y="55" textAnchor="middle" fill="#BE185D" fontSize="5">
+              O₂↔CO₂
+            </text>
+          </g>
+
+          {/* Systemic Circuit */}
+          <g transform="translate(115, 30)">
+            <rect
+              x="0"
+              y="0"
+              width="85"
+              height="70"
+              rx="8"
+              fill="#FEE2E2"
+              stroke="#EF4444"
+              strokeWidth="1"
+            />
+            <text x="42" y="14" textAnchor="middle" fill="#B91C1C" fontSize="7" fontWeight="600">
+              Systemic
+            </text>
+            <text x="42" y="25" textAnchor="middle" fill="#DC2626" fontSize="6">
+              Heart → Body
+            </text>
+            <text x="42" y="35" textAnchor="middle" fill="#DC2626" fontSize="6">
+              → Heart
+            </text>
+            {/* Body icon */}
+            <circle cx="42" cy="52" r="10" fill="#FCA5A5" />
+            <text x="42" y="55" textAnchor="middle" fill="#991B1B" fontSize="5">
+              Body
+            </text>
+          </g>
+
+          {/* Connection arrows */}
+          <motion.path
+            d="M102 65 L112 65"
+            stroke="#DC2626"
+            strokeWidth="2"
+            markerEnd="url(#circArrow)"
+            animate={animate ? { opacity: [0.5, 1, 0.5] } : undefined}
+            transition={{ duration: 1.5, repeat: Infinity }}
+          />
+          <defs>
+            <marker id="circArrow" markerWidth="4" markerHeight="4" refX="3" refY="2" orient="auto">
+              <path d="M0,0 L4,2 L0,4 Z" fill="#DC2626" />
+            </marker>
+          </defs>
+        </g>
+      </motion.g>
+
+      {/* BLOOD COMPOSITION - Right Top */}
+      <motion.g
+        initial={animate ? { opacity: 0, x: 20 } : undefined}
+        animate={animate ? { opacity: 1, x: 0 } : undefined}
+        transition={{ delay: 0.25, duration: 0.6 }}
+      >
+        <g transform="translate(260, 42)">
+          <rect
+            x="0"
+            y="0"
+            width="285"
+            height="100"
+            rx="12"
+            fill="url(#circCardGrad)"
+            filter="url(#circShadow)"
+          />
+          <text x="142" y="18" textAnchor="middle" fill="#1E293B" fontSize="10" fontWeight="700">
+            Blood Composition
+          </text>
+
+          {/* Plasma - 55% */}
+          <g transform="translate(15, 28)">
+            <rect
+              x="0"
+              y="0"
+              width="120"
+              height="60"
+              rx="8"
+              fill="#FEF3C7"
+              stroke="#F59E0B"
+              strokeWidth="1"
+            />
+            <text x="60" y="14" textAnchor="middle" fill="#B45309" fontSize="8" fontWeight="600">
+              Plasma (55%)
+            </text>
+            <text x="60" y="26" textAnchor="middle" fill="#92400E" fontSize="6">
+              Water: 90-92%
+            </text>
+            <text x="60" y="36" textAnchor="middle" fill="#92400E" fontSize="6">
+              Proteins: 6-8%
+            </text>
+            <text x="60" y="46" textAnchor="middle" fill="#92400E" fontSize="5">
+              Albumin, Globulin
+            </text>
+            <text x="60" y="55" textAnchor="middle" fill="#92400E" fontSize="5">
+              Fibrinogen
+            </text>
+          </g>
+
+          {/* Formed Elements - 45% */}
+          <g transform="translate(150, 28)">
+            <rect
+              x="0"
+              y="0"
+              width="120"
+              height="60"
+              rx="8"
+              fill="#FEE2E2"
+              stroke="#EF4444"
+              strokeWidth="1"
+            />
+            <text x="60" y="14" textAnchor="middle" fill="#B91C1C" fontSize="8" fontWeight="600">
+              Formed Elements (45%)
+            </text>
+
+            {/* RBC */}
+            <motion.ellipse
+              cx="25"
+              cy="38"
+              rx="12"
+              ry="6"
+              fill="url(#rbcGrad)"
+              animate={animate ? { scale: [1, 1.05, 1] } : undefined}
+              transition={{ duration: 2, repeat: Infinity }}
+            />
+            <text x="25" y="52" textAnchor="middle" fill="#991B1B" fontSize="5">
+              RBC
+            </text>
+
+            {/* WBC */}
+            <motion.circle
+              cx="60"
+              cy="38"
+              r="8"
+              fill="#DBEAFE"
+              stroke="#3B82F6"
+              strokeWidth="1"
+              animate={animate ? { scale: [1, 1.1, 1] } : undefined}
+              transition={{ duration: 2.5, repeat: Infinity }}
+            />
+            <text x="60" y="52" textAnchor="middle" fill="#1D4ED8" fontSize="5">
+              WBC
+            </text>
+
+            {/* Platelets */}
+            <motion.g
+              animate={animate ? { y: [0, -2, 0] } : undefined}
+              transition={{ duration: 1.5, repeat: Infinity }}
+            >
+              <circle cx="92" cy="35" r="3" fill="#A78BFA" />
+              <circle cx="98" cy="38" r="3" fill="#A78BFA" />
+              <circle cx="95" cy="42" r="3" fill="#A78BFA" />
+            </motion.g>
+            <text x="95" y="52" textAnchor="middle" fill="#6D28D9" fontSize="5">
+              Platelets
+            </text>
+          </g>
+        </g>
+      </motion.g>
+
+      {/* CARDIAC CYCLE - Right Middle */}
+      <motion.g
+        initial={animate ? { opacity: 0, x: 20 } : undefined}
+        animate={animate ? { opacity: 1, x: 0 } : undefined}
+        transition={{ delay: 0.35, duration: 0.6 }}
+      >
+        <g transform="translate(260, 152)">
+          <rect
+            x="0"
+            y="0"
+            width="285"
+            height="95"
+            rx="12"
+            fill="url(#circCardGrad)"
+            filter="url(#circShadow)"
+          />
+          <text x="142" y="18" textAnchor="middle" fill="#1E293B" fontSize="10" fontWeight="700">
+            Cardiac Cycle (0.8 sec)
+          </text>
+
+          {/* Timeline bar */}
+          <g transform="translate(15, 30)">
+            <rect x="0" y="0" width="255" height="12" rx="6" fill="#E2E8F0" />
+
+            {/* Atrial Systole */}
+            <motion.rect
+              x="0"
+              y="0"
+              width="32"
+              height="12"
+              rx="6"
+              fill="#F59E0B"
+              animate={animate ? { opacity: [0.7, 1, 0.7] } : undefined}
+              transition={{ duration: 0.8, repeat: Infinity, delay: 0 }}
+            />
+            <text x="16" y="9" textAnchor="middle" fill="white" fontSize="5" fontWeight="bold">
+              0.1s
+            </text>
+
+            {/* Ventricular Systole */}
+            <motion.rect
+              x="32"
+              y="0"
+              width="96"
+              height="12"
+              rx="0"
+              fill="#EF4444"
+              animate={animate ? { opacity: [0.7, 1, 0.7] } : undefined}
+              transition={{ duration: 0.8, repeat: Infinity, delay: 0.1 }}
+            />
+            <text x="80" y="9" textAnchor="middle" fill="white" fontSize="5" fontWeight="bold">
+              0.3s
+            </text>
+
+            {/* Joint Diastole */}
+            <motion.rect
+              x="128"
+              y="0"
+              width="127"
+              height="12"
+              rx="6"
+              fill="#22C55E"
+              animate={animate ? { opacity: [0.7, 1, 0.7] } : undefined}
+              transition={{ duration: 0.8, repeat: Infinity, delay: 0.4 }}
+            />
+            <text x="192" y="9" textAnchor="middle" fill="white" fontSize="5" fontWeight="bold">
+              0.4s
+            </text>
+          </g>
+
+          {/* Labels */}
+          <g transform="translate(15, 48)">
+            <rect x="0" y="0" width="10" height="10" rx="2" fill="#F59E0B" />
+            <text x="15" y="8" fill="#64748B" fontSize="6">
+              Atrial Systole
+            </text>
+
+            <rect x="85" y="0" width="10" height="10" rx="2" fill="#EF4444" />
+            <text x="100" y="8" fill="#64748B" fontSize="6">
+              Ventricular Systole
+            </text>
+
+            <rect x="185" y="0" width="10" height="10" rx="2" fill="#22C55E" />
+            <text x="200" y="8" fill="#64748B" fontSize="6">
+              Diastole
+            </text>
+          </g>
+
+          {/* Key metrics */}
+          <g transform="translate(15, 65)">
+            <text x="0" y="8" fill="#1E293B" fontSize="7" fontWeight="600">
+              Cardiac Output = HR × SV
+            </text>
+            <text x="0" y="20" fill="#64748B" fontSize="6">
+              = 75 × 70mL = ~5 L/min
+            </text>
+            <text x="140" y="8" fill="#1E293B" fontSize="7" fontWeight="600">
+              Stroke Volume: 70mL
+            </text>
+            <text x="140" y="20" fill="#64748B" fontSize="6">
+              EDV (120) - ESV (50)
+            </text>
+          </g>
+        </g>
+      </motion.g>
+
+      {/* ECG - Right Bottom */}
+      <motion.g
+        initial={animate ? { opacity: 0, y: 20 } : undefined}
+        animate={animate ? { opacity: 1, y: 0 } : undefined}
+        transition={{ delay: 0.4, duration: 0.6 }}
+      >
+        <g transform="translate(260, 257)">
+          <rect
+            x="0"
+            y="0"
+            width="285"
+            height="90"
+            rx="12"
+            fill="url(#circCardGrad)"
+            filter="url(#circShadow)"
+          />
+          <text x="142" y="18" textAnchor="middle" fill="#1E293B" fontSize="10" fontWeight="700">
+            Electrocardiogram (ECG)
+          </text>
+
+          {/* ECG Grid background */}
+          <rect x="15" y="28" width="255" height="50" rx="4" fill="#ECFDF5" stroke="#D1FAE5" />
+
+          {/* ECG Wave */}
+          <motion.path
+            d="M25 55 L45 55 Q50 55 52 48 L55 55 L60 55 L65 25 L70 70 L75 45 L80 55 L100 55 Q105 55 108 50 L112 55 L135 55 Q140 55 142 48 L145 55 L150 55 L155 25 L160 70 L165 45 L170 55 L190 55 Q195 55 198 50 L202 55 L225 55 Q230 55 232 48 L235 55 L240 55 L245 25 L250 70 L255 45 L260 55"
+            stroke="url(#ecgGrad)"
+            strokeWidth="2"
+            fill="none"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            animate={
+              animate
+                ? {
+                    pathLength: [0, 1],
+                    opacity: [0.5, 1],
+                  }
+                : undefined
+            }
+            transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
+          />
+
+          {/* Wave labels */}
+          <text x="52" y="42" fill="#6D28D9" fontSize="6" fontWeight="bold">
+            P
+          </text>
+          <text x="67" y="22" fill="#DC2626" fontSize="6" fontWeight="bold">
+            QRS
+          </text>
+          <text x="108" y="45" fill="#0D9488" fontSize="6" fontWeight="bold">
+            T
+          </text>
+
+          {/* Legend */}
+          <text x="25" y="88" fill="#6D28D9" fontSize="6">
+            P: Atrial depol.
+          </text>
+          <text x="95" y="88" fill="#DC2626" fontSize="6">
+            QRS: Ventricular depol.
+          </text>
+          <text x="195" y="88" fill="#0D9488" fontSize="6">
+            T: Ventricular repol.
+          </text>
+        </g>
+      </motion.g>
+
+      {/* BLOOD GROUPS & KEY FACTS - Bottom Right */}
+      <motion.g
+        initial={animate ? { opacity: 0, y: 20 } : undefined}
+        animate={animate ? { opacity: 1, y: 0 } : undefined}
+        transition={{ delay: 0.45, duration: 0.6 }}
+      >
+        <g transform="translate(260, 357)">
+          <rect
+            x="0"
+            y="0"
+            width="285"
+            height="70"
+            rx="12"
+            fill="url(#circCardGrad)"
+            filter="url(#circShadow)"
+          />
+          <text x="142" y="16" textAnchor="middle" fill="#1E293B" fontSize="9" fontWeight="700">
+            Blood Groups & Key Facts
+          </text>
+
+          {/* Blood group circles */}
+          <g transform="translate(15, 25)">
+            <motion.circle
+              cx="20"
+              cy="20"
+              r="15"
+              fill="#FEE2E2"
+              stroke="#EF4444"
+              strokeWidth="2"
+              animate={animate ? { scale: [1, 1.05, 1] } : undefined}
+              transition={{ duration: 2, repeat: Infinity, delay: 0 }}
+            />
+            <text x="20" y="24" textAnchor="middle" fill="#B91C1C" fontSize="10" fontWeight="bold">
+              A
+            </text>
+
+            <motion.circle
+              cx="60"
+              cy="20"
+              r="15"
+              fill="#DBEAFE"
+              stroke="#3B82F6"
+              strokeWidth="2"
+              animate={animate ? { scale: [1, 1.05, 1] } : undefined}
+              transition={{ duration: 2, repeat: Infinity, delay: 0.3 }}
+            />
+            <text x="60" y="24" textAnchor="middle" fill="#1D4ED8" fontSize="10" fontWeight="bold">
+              B
+            </text>
+
+            <motion.circle
+              cx="100"
+              cy="20"
+              r="15"
+              fill="#F3E8FF"
+              stroke="#8B5CF6"
+              strokeWidth="2"
+              animate={animate ? { scale: [1, 1.05, 1] } : undefined}
+              transition={{ duration: 2, repeat: Infinity, delay: 0.6 }}
+            />
+            <text x="100" y="24" textAnchor="middle" fill="#6D28D9" fontSize="9" fontWeight="bold">
+              AB
+            </text>
+
+            <motion.circle
+              cx="140"
+              cy="20"
+              r="15"
+              fill="#F1F5F9"
+              stroke="#64748B"
+              strokeWidth="2"
+              animate={animate ? { scale: [1, 1.05, 1] } : undefined}
+              transition={{ duration: 2, repeat: Infinity, delay: 0.9 }}
+            />
+            <text x="140" y="24" textAnchor="middle" fill="#334155" fontSize="10" fontWeight="bold">
+              O
+            </text>
+          </g>
+
+          {/* Key facts */}
+          <g transform="translate(175, 25)">
+            <text x="0" y="10" fill="#22C55E" fontSize="7" fontWeight="600">
+              ● Universal Donor: O
+            </text>
+            <text x="0" y="22" fill="#DC2626" fontSize="7" fontWeight="600">
+              ● Universal Recipient: AB
+            </text>
+            <text x="0" y="34" fill="#3B82F6" fontSize="7" fontWeight="600">
+              ● Pacemaker: SA Node
+            </text>
+          </g>
+        </g>
+      </motion.g>
+
+      {/* SA Node indicator on heart */}
+      <motion.g
+        animate={animate ? { scale: [1, 1.3, 1], opacity: [1, 0.5, 1] } : undefined}
+        transition={{ duration: 1, repeat: Infinity }}
+      >
+        <circle cx="108" cy="98" r="6" fill="#22C55E" filter="url(#vesselGlow)" />
+        <text x="120" y="95" fill="#166534" fontSize="5" fontWeight="bold">
+          SA
+        </text>
+      </motion.g>
+
+      {/* AV Node indicator */}
+      <motion.g
+        animate={animate ? { scale: [1, 1.2, 1], opacity: [1, 0.6, 1] } : undefined}
+        transition={{ duration: 1, repeat: Infinity, delay: 0.2 }}
+      >
+        <circle cx="118" cy="120" r="5" fill="#FBBF24" />
+        <text x="128" y="118" fill="#92400E" fontSize="5" fontWeight="bold">
+          AV
+        </text>
+      </motion.g>
+    </Wrapper>
+  )
+}
+
 // Export all illustrations
 export default {
   KotaVsOnlineIllustration,
@@ -10732,4 +11515,5 @@ export default {
   CellDivisionIllustration,
   HumanDigestionIllustration,
   RespirationIllustration,
+  CirculationIllustration,
 }
