@@ -163,9 +163,33 @@ export default async function middleware(req: NextRequest) {
   addSecurityHeaders(response)
   addCSPHeaders(response)
 
+  // PERFORMANCE: Smart caching strategy - allow short-term caching for static pages
+  // while keeping dynamic/admin routes fresh
+  const isStaticPage =
+    pathname === '/' ||
+    pathname.startsWith('/courses') ||
+    pathname.startsWith('/about') ||
+    pathname.startsWith('/contact') ||
+    pathname.startsWith('/blog') ||
+    pathname.startsWith('/gallery') ||
+    pathname.startsWith('/pricing')
+
+  const isProtectedRoute =
+    pathname.startsWith('/admin') ||
+    pathname.startsWith('/dashboard') ||
+    pathname.startsWith('/student') ||
+    pathname.startsWith('/teacher') ||
+    pathname.startsWith('/counselor') ||
+    pathname.startsWith('/api/')
+
   // Additional security headers
   response.headers.set('X-DNS-Prefetch-Control', 'on')
-  response.headers.set('X-Robots-Tag', 'noindex, nofollow, nosnippet, noarchive, noimageindex')
+
+  // Only apply noindex to protected routes, NOT public pages
+  // Public pages should be indexed by search engines for SEO
+  if (isProtectedRoute) {
+    response.headers.set('X-Robots-Tag', 'noindex, nofollow, nosnippet, noarchive, noimageindex')
+  }
 
   // Development vs Production headers
   if (process.env.NODE_ENV === 'production') {
@@ -186,25 +210,6 @@ export default async function middleware(req: NextRequest) {
     'Permissions-Policy',
     'camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), gyroscope=()'
   )
-
-  // PERFORMANCE: Smart caching strategy - allow short-term caching for static pages
-  // while keeping dynamic/admin routes fresh
-  const isStaticPage =
-    pathname === '/' ||
-    pathname.startsWith('/courses') ||
-    pathname.startsWith('/about') ||
-    pathname.startsWith('/contact') ||
-    pathname.startsWith('/blog') ||
-    pathname.startsWith('/gallery') ||
-    pathname.startsWith('/pricing')
-
-  const isProtectedRoute =
-    pathname.startsWith('/admin') ||
-    pathname.startsWith('/dashboard') ||
-    pathname.startsWith('/student') ||
-    pathname.startsWith('/teacher') ||
-    pathname.startsWith('/counselor') ||
-    pathname.startsWith('/api/')
 
   if (isProtectedRoute) {
     // No caching for protected/dynamic routes
