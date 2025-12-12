@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <defs>
+    <linearGradient id="docBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ECFDF5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#D1FAE5;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="skinTone3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFDAB9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E8B89C;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="hairBlack" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1F2937;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="coatGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F3F4F6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Circle -->
+  <circle cx="100" cy="100" r="95" fill="url(#docBg)"/>
+  <circle cx="100" cy="100" r="90" stroke="#10B981" stroke-width="2" fill="none" opacity="0.4"/>
+
+  <!-- White Coat Body -->
+  <ellipse cx="100" cy="185" rx="55" ry="45" fill="url(#coatGrad)"/>
+  <ellipse cx="100" cy="185" rx="55" ry="45" stroke="#E5E7EB" stroke-width="1" fill="none"/>
+
+  <!-- Coat Collar/V-neck -->
+  <path d="M65 145 L85 165 L100 155 L115 165 L135 145" stroke="#E5E7EB" stroke-width="2" fill="none"/>
+
+  <!-- Scrub/Inner shirt visible -->
+  <path d="M85 155 L100 148 L115 155" fill="#10B981"/>
+
+  <!-- Neck -->
+  <rect x="90" y="125" width="20" height="18" fill="url(#skinTone3)"/>
+
+  <!-- Face -->
+  <ellipse cx="100" cy="92" rx="36" ry="40" fill="url(#skinTone3)"/>
+
+  <!-- Hair -->
+  <ellipse cx="100" cy="58" rx="38" ry="24" fill="url(#hairBlack)"/>
+
+  <!-- Hair detail/style -->
+  <path d="M62 70 Q70 55 100 52 Q130 55 138 70" fill="url(#hairBlack)"/>
+
+  <!-- Eyes (bright, happy) -->
+  <ellipse cx="85" cy="88" rx="5" ry="4" fill="#1E293B"/>
+  <ellipse cx="115" cy="88" rx="5" ry="4" fill="#1E293B"/>
+  <circle cx="86" cy="87" r="1.5" fill="white"/>
+  <circle cx="116" cy="87" r="1.5" fill="white"/>
+
+  <!-- Eyebrows -->
+  <path d="M76 80 Q85 75 94 80" stroke="#1F2937" stroke-width="2" fill="none"/>
+  <path d="M106 80 Q115 75 124 80" stroke="#1F2937" stroke-width="2" fill="none"/>
+
+  <!-- Nose -->
+  <path d="M100 90 Q103 98 100 104 Q97 98 100 90" fill="#E8B89C"/>
+
+  <!-- Big Happy Smile -->
+  <path d="M82 112 Q100 128 118 112" stroke="#DC2626" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M85 114 Q100 124 115 114" fill="#FEE2E2"/>
+
+  <!-- Ears -->
+  <ellipse cx="64" cy="90" rx="5" ry="9" fill="url(#skinTone3)"/>
+  <ellipse cx="136" cy="90" rx="5" ry="9" fill="url(#skinTone3)"/>
+
+  <!-- Stethoscope -->
+  <path d="M75 155 Q70 165 72 178" stroke="#1E293B" stroke-width="3" fill="none"/>
+  <path d="M125 155 Q130 165 128 178" stroke="#1E293B" stroke-width="3" fill="none"/>
+  <circle cx="72" cy="182" r="6" fill="#6B7280"/>
+  <circle cx="72" cy="182" r="3" fill="#1E293B"/>
+  <circle cx="128" cy="182" r="4" fill="#6B7280"/>
+
+  <!-- ID Badge -->
+  <rect x="125" y="158" width="25" height="32" rx="3" fill="white" stroke="#E5E7EB"/>
+  <rect x="128" y="161" width="19" height="12" fill="#3B82F6" opacity="0.3"/>
+  <rect x="128" y="176" width="14" height="2" fill="#9CA3AF"/>
+  <rect x="128" y="181" width="10" height="2" fill="#9CA3AF"/>
+
+  <!-- Coat Pocket -->
+  <rect x="60" y="170" width="25" height="8" rx="2" stroke="#E5E7EB" stroke-width="1" fill="none"/>
+
+  <!-- Celebratory Stars -->
+  <text x="45" y="55" font-family="system-ui" font-size="16" fill="#FCD34D">&#x2B50;</text>
+  <text x="150" y="50" font-family="system-ui" font-size="12" fill="#FCD34D">&#x2B50;</text>
+  <text x="165" y="75" font-family="system-ui" font-size="10" fill="#FCD34D">&#x2B50;</text>
+</svg>

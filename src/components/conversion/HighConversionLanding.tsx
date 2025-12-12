@@ -16,6 +16,7 @@ import {
   ChatBubbleLeftRightIcon,
 } from '@heroicons/react/24/outline'
 import { StarIcon as StarSolid } from '@heroicons/react/24/solid'
+import { getPlaceholderAvatar } from '@/lib/images/imageUtils'
 
 interface QuizResult {
   studentType: 'foundation' | 'class11' | 'class12' | 'dropper'
@@ -83,7 +84,7 @@ export function HighConversionLanding({ className = '' }: HighConversionLandingP
       name: 'Arjun Patel',
       score: '358/360',
       college: 'AIIMS Delhi',
-      image: '/api/placeholder/60/60',
+      image: getPlaceholderAvatar('Arjun Patel', 60, '4F46E5', 'fff'),
       quote: 'The quiz helped me find the perfect course. Enrolled in 3 minutes!',
       rating: 5,
     },
@@ -91,7 +92,7 @@ export function HighConversionLanding({ className = '' }: HighConversionLandingP
       name: 'Priya Sharma',
       score: '342/360',
       college: 'JIPMER',
-      image: '/api/placeholder/60/60',
+      image: getPlaceholderAvatar('Priya Sharma', 60, '059669', 'fff'),
       quote: 'Super fast enrollment process. Started studying the same day!',
       rating: 5,
     },
@@ -99,7 +100,7 @@ export function HighConversionLanding({ className = '' }: HighConversionLandingP
       name: 'Rohit Kumar',
       score: '355/360',
       college: 'AIIMS Rishikesh',
-      image: '/api/placeholder/60/60',
+      image: getPlaceholderAvatar('Rohit Kumar', 60, '7C3AED', 'fff'),
       quote: 'Found my ideal course in 2 minutes. Best decision ever!',
       rating: 5,
     },

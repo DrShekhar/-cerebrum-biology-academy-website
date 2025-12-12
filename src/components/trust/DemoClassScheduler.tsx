@@ -25,6 +25,7 @@ import {
   Globe,
   Monitor,
 } from 'lucide-react'
+import { getPlaceholderAvatar } from '@/lib/images/imageUtils'
 
 interface DemoClass {
   id: string
@@ -74,7 +75,7 @@ const DEMO_CLASSES: DemoClass[] = [
     subject: 'Biology',
     faculty: {
       name: 'Dr. Rajesh Kumar Singh',
-      photo: '/api/placeholder/100/100',
+      photo: getPlaceholderAvatar('Dr. Rajesh Kumar Singh', 100, '1E40AF', 'fff'),
       qualification: 'Ph.D. Molecular Biology, AIIMS',
       experience: 12,
       rating: 4.9,
@@ -105,7 +106,7 @@ const DEMO_CLASSES: DemoClass[] = [
     subject: 'Botany',
     faculty: {
       name: 'Dr. Priya Mehta',
-      photo: '/api/placeholder/100/100',
+      photo: getPlaceholderAvatar('Dr. Priya Mehta', 100, '059669', 'fff'),
       qualification: 'Ph.D. Plant Physiology, JNU',
       experience: 14,
       rating: 4.8,
@@ -135,7 +136,7 @@ const DEMO_CLASSES: DemoClass[] = [
     subject: 'Zoology',
     faculty: {
       name: 'Dr. Amit Sharma',
-      photo: '/api/placeholder/100/100',
+      photo: getPlaceholderAvatar('Dr. Amit Sharma', 100, '7C3AED', 'fff'),
       qualification: 'Ph.D. Zoology, University of Delhi',
       experience: 15,
       rating: 4.9,

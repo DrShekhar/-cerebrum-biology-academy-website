@@ -22,6 +22,7 @@ import {
   TrendingUp,
   User,
 } from 'lucide-react'
+import { getPlaceholderAvatar } from '@/lib/images/imageUtils'
 
 interface FacultyMember {
   id: string
@@ -99,7 +100,7 @@ const FACULTY_MEMBERS: FacultyMember[] = [
   {
     id: '1',
     name: 'Dr. Rajesh Kumar Singh',
-    photo: '/api/placeholder/200/200',
+    photo: getPlaceholderAvatar('Dr. Rajesh Kumar Singh', 200, '1E40AF', 'fff'),
     designation: 'Head of Biology Department',
     specialization: ['Molecular Biology', 'Genetics', 'Cell Biology'],
 
@@ -199,7 +200,7 @@ const FACULTY_MEMBERS: FacultyMember[] = [
   {
     id: '2',
     name: 'Dr. Priya Mehta',
-    photo: '/api/placeholder/200/200',
+    photo: getPlaceholderAvatar('Dr. Priya Mehta', 200, '059669', 'fff'),
     designation: 'Senior Botany Faculty',
     specialization: ['Plant Physiology', 'Plant Anatomy', 'Ecology'],
 
@@ -283,7 +284,7 @@ const FACULTY_MEMBERS: FacultyMember[] = [
   {
     id: '3',
     name: 'Dr. Amit Sharma',
-    photo: '/api/placeholder/200/200',
+    photo: getPlaceholderAvatar('Dr. Amit Sharma', 200, '7C3AED', 'fff'),
     designation: 'Zoology & Human Physiology Expert',
     specialization: ['Human Physiology', 'Animal Behavior', 'Evolution'],
 

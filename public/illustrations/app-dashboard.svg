@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 600" fill="none">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E40AF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3730A3;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.15" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.05" />
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#10B981" />
+      <stop offset="100%" style="stop-color:#059669" />
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8B5CF6" />
+      <stop offset="100%" style="stop-color:#7C3AED" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="300" height="600" fill="url(#bgGrad)"/>
+
+  <!-- Status Bar -->
+  <rect x="20" y="15" width="40" height="6" rx="3" fill="white" opacity="0.8"/>
+  <text x="150" y="20" font-family="system-ui" font-size="11" fill="white" text-anchor="middle" opacity="0.9">9:41</text>
+  <rect x="240" y="13" width="22" height="10" rx="2" stroke="white" stroke-width="1" fill="none" opacity="0.8"/>
+  <rect x="242" y="15" width="16" height="6" rx="1" fill="white" opacity="0.8"/>
+
+  <!-- Header -->
+  <text x="20" y="60" font-family="system-ui" font-weight="600" font-size="22" fill="white">Good Morning!</text>
+  <text x="20" y="82" font-family="system-ui" font-size="14" fill="white" opacity="0.8">Continue your NEET preparation</text>
+
+  <!-- Profile Avatar -->
+  <circle cx="260" cy="62" r="22" fill="url(#greenGrad)"/>
+  <text x="260" y="68" font-family="system-ui" font-weight="600" font-size="14" fill="white" text-anchor="middle">AS</text>
+
+  <!-- Stats Cards Row -->
+  <rect x="20" y="110" width="125" height="80" rx="12" fill="url(#cardGrad)"/>
+  <text x="35" y="138" font-family="system-ui" font-size="11" fill="white" opacity="0.8">Today's Progress</text>
+  <text x="35" y="165" font-family="system-ui" font-weight="700" font-size="28" fill="white">75%</text>
+  <rect x="35" y="175" width="95" height="4" rx="2" fill="white" opacity="0.2"/>
+  <rect x="35" y="175" width="71" height="4" rx="2" fill="url(#greenGrad)"/>
+
+  <rect x="155" y="110" width="125" height="80" rx="12" fill="url(#cardGrad)"/>
+  <text x="170" y="138" font-family="system-ui" font-size="11" fill="white" opacity="0.8">Questions Solved</text>
+  <text x="170" y="165" font-family="system-ui" font-weight="700" font-size="28" fill="white">247</text>
+  <text x="213" y="165" font-family="system-ui" font-size="12" fill="#10B981">/300</text>
+
+  <!-- Study Streak Card -->
+  <rect x="20" y="205" width="260" height="70" rx="12" fill="url(#cardGrad)"/>
+  <circle cx="50" cy="240" r="20" fill="#FCD34D"/>
+  <text x="50" y="246" font-family="system-ui" font-size="16" text-anchor="middle">&#x1F525;</text>
+  <text x="85" y="232" font-family="system-ui" font-weight="600" font-size="14" fill="white">Study Streak</text>
+  <text x="85" y="252" font-family="system-ui" font-size="12" fill="white" opacity="0.8">Keep it up! You're on fire!</text>
+  <text x="245" y="245" font-family="system-ui" font-weight="700" font-size="22" fill="#FCD34D" text-anchor="middle">21</text>
+  <text x="245" y="258" font-family="system-ui" font-size="10" fill="white" opacity="0.7" text-anchor="middle">days</text>
+
+  <!-- Today's Schedule -->
+  <text x="20" y="310" font-family="system-ui" font-weight="600" font-size="16" fill="white">Today's Schedule</text>
+
+  <!-- Schedule Items -->
+  <rect x="20" y="325" width="260" height="60" rx="10" fill="url(#cardGrad)"/>
+  <rect x="30" y="335" width="4" height="40" rx="2" fill="url(#greenGrad)"/>
+  <text x="50" y="352" font-family="system-ui" font-weight="500" font-size="13" fill="white">Cell Biology - Live Class</text>
+  <text x="50" y="370" font-family="system-ui" font-size="11" fill="white" opacity="0.7">10:00 AM - 11:30 AM</text>
+  <rect x="220" y="340" width="50" height="24" rx="12" fill="url(#greenGrad)"/>
+  <text x="245" y="356" font-family="system-ui" font-size="10" fill="white" text-anchor="middle">Join</text>
+
+  <rect x="20" y="395" width="260" height="60" rx="10" fill="url(#cardGrad)"/>
+  <rect x="30" y="405" width="4" height="40" rx="2" fill="url(#purpleGrad)"/>
+  <text x="50" y="422" font-family="system-ui" font-weight="500" font-size="13" fill="white">Genetics Practice Test</text>
+  <text x="50" y="440" font-family="system-ui" font-size="11" fill="white" opacity="0.7">2:00 PM - 3:00 PM</text>
+  <text x="245" y="430" font-family="system-ui" font-size="11" fill="white" opacity="0.6" text-anchor="middle">In 3 hrs</text>
+
+  <rect x="20" y="465" width="260" height="60" rx="10" fill="url(#cardGrad)"/>
+  <rect x="30" y="475" width="4" height="40" rx="2" fill="#F59E0B"/>
+  <text x="50" y="492" font-family="system-ui" font-weight="500" font-size="13" fill="white">Doubt Clearing Session</text>
+  <text x="50" y="510" font-family="system-ui" font-size="11" fill="white" opacity="0.7">5:00 PM - 6:00 PM</text>
+
+  <!-- Bottom Navigation -->
+  <rect x="0" y="545" width="300" height="55" fill="#1E3A8A"/>
+  <circle cx="45" cy="572" r="4" fill="white"/>
+  <text x="45" y="588" font-family="system-ui" font-size="9" fill="white" text-anchor="middle" opacity="0.9">Home</text>
+
+  <circle cx="110" cy="572" r="4" fill="white" opacity="0.5"/>
+  <text x="110" y="588" font-family="system-ui" font-size="9" fill="white" text-anchor="middle" opacity="0.5">Courses</text>
+
+  <circle cx="175" cy="572" r="4" fill="white" opacity="0.5"/>
+  <text x="175" y="588" font-family="system-ui" font-size="9" fill="white" text-anchor="middle" opacity="0.5">Tests</text>
+
+  <circle cx="240" cy="572" r="4" fill="white" opacity="0.5"/>
+  <text x="240" y="588" font-family="system-ui" font-size="9" fill="white" text-anchor="middle" opacity="0.5">Profile</text>
+</svg>

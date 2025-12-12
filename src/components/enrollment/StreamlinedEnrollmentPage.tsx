@@ -299,7 +299,7 @@ export function StreamlinedEnrollmentPage({
             >
               <PremiumCard variant="luxury" size="lg">
                 <div className="text-center mb-8">
-                  <AcademicCapSolid className="w-16 h-16 text-blue-500 mx-auto mb-4" />
+                  <AcademicCapSolid className="w-12 h-12 sm:w-16 sm:h-16 text-blue-500 mx-auto mb-4" />
                   <h2 className="text-3xl font-bold text-gray-900 mb-4">
                     Free NEET Biology Assessment
                   </h2>
@@ -382,7 +382,7 @@ export function StreamlinedEnrollmentPage({
               {assessmentResult && (
                 <PremiumCard variant="premium" size="lg" className="mb-8">
                   <div className="text-center mb-6">
-                    <TrophyIcon className="w-12 h-12 text-yellow-500 mx-auto mb-3" />
+                    <TrophyIcon className="w-10 h-10 sm:w-12 sm:h-12 text-yellow-500 mx-auto mb-3" />
                     <h3 className="text-2xl font-bold text-gray-900">Your Assessment Results</h3>
                   </div>
 
@@ -432,7 +432,7 @@ export function StreamlinedEnrollmentPage({
 
               <PremiumCard variant="luxury" size="lg">
                 <div className="text-center mb-8">
-                  <UserGroupSolid className="w-16 h-16 text-purple-500 mx-auto mb-4" />
+                  <UserGroupSolid className="w-12 h-12 sm:w-16 sm:h-16 text-purple-500 mx-auto mb-4" />
                   <h2 className="text-3xl font-bold text-gray-900 mb-4">
                     Book Your Counseling Session
                   </h2>
@@ -516,7 +516,7 @@ export function StreamlinedEnrollmentPage({
               className="max-w-6xl mx-auto"
             >
               <div className="text-center mb-8">
-                <CheckCircleSolid className="w-16 h-16 text-green-500 mx-auto mb-4" />
+                <CheckCircleSolid className="w-12 h-12 sm:w-16 sm:h-16 text-green-500 mx-auto mb-4" />
                 <h2 className="text-3xl font-bold text-gray-900 mb-4">Choose Your Success Plan</h2>
                 <p className="text-gray-600 text-lg">
                   Customized plans based on your assessment results
@@ -632,7 +632,7 @@ export function StreamlinedEnrollmentPage({
             >
               <PremiumCard variant="luxury" size="lg">
                 <div className="text-center mb-8">
-                  <ClockSolid className="w-16 h-16 text-blue-500 mx-auto mb-4" />
+                  <ClockSolid className="w-12 h-12 sm:w-16 sm:h-16 text-blue-500 mx-auto mb-4" />
                   <h2 className="text-3xl font-bold text-gray-900 mb-4">
                     Complete Your Enrollment
                   </h2>
@@ -808,7 +808,7 @@ export function StreamlinedEnrollmentPage({
                   animate={{ scale: 1 }}
                   transition={{ delay: 0.3, type: 'spring', stiffness: 200 }}
                 >
-                  <TrophyIcon className="w-24 h-24 text-yellow-500 mx-auto mb-6" />
+                  <TrophyIcon className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 text-yellow-500 mx-auto mb-6" />
                 </motion.div>
 
                 <h2 className="text-4xl font-bold text-gray-900 mb-4">🎉 Enrollment Successful!</h2>

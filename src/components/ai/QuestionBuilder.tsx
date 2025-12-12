@@ -36,9 +36,12 @@ import {
   Play,
   Pause,
   RotateCcw,
-  Settings
+  Settings,
 } from 'lucide-react'
-import { QuestionProperties, type QuestionProperties as QuestionPropertiesType } from './QuestionProperties'
+import {
+  QuestionProperties,
+  type QuestionProperties as QuestionPropertiesType,
+} from './QuestionProperties'
 
 interface QuestionBuilderProps {
   isOpen: boolean
@@ -49,7 +52,15 @@ interface QuestionBuilderProps {
 
 interface QuestionData {
   id?: string
-  type: 'mcq' | 'trueFalse' | 'fillInBlanks' | 'shortAnswer' | 'longAnswer' | 'matching' | 'ordering' | 'diagram'
+  type:
+    | 'mcq'
+    | 'trueFalse'
+    | 'fillInBlanks'
+    | 'shortAnswer'
+    | 'longAnswer'
+    | 'matching'
+    | 'ordering'
+    | 'diagram'
   difficulty: 'easy' | 'medium' | 'hard'
   subject: string
   chapter: string
@@ -94,30 +105,37 @@ const defaultQuestion: QuestionData = {
     equations: [],
     formulas: [],
     diagrams: [],
-    tables: []
+    tables: [],
   },
   options: [
     { text: '', isCorrect: false },
     { text: '', isCorrect: false },
     { text: '', isCorrect: false },
-    { text: '', isCorrect: false }
+    { text: '', isCorrect: false },
   ],
   explanation: {
     content: '',
     images: [],
     equations: [],
-    references: []
+    references: [],
   },
   tags: [],
   estimatedTime: 2,
-  marks: 4
+  marks: 4,
 }
 
-export function QuestionBuilder({ isOpen, onClose, onSave, initialQuestion }: QuestionBuilderProps) {
+export function QuestionBuilder({
+  isOpen,
+  onClose,
+  onSave,
+  initialQuestion,
+}: QuestionBuilderProps) {
   const [question, setQuestion] = useState<QuestionData>(initialQuestion || defaultQuestion)
   const [activeEditor, setActiveEditor] = useState<'question' | 'explanation'>('question')
   const [showPreview, setShowPreview] = useState(false)
-  const [selectedFormat, setSelectedFormat] = useState<'text' | 'equation' | 'formula' | 'table'>('text')
+  const [selectedFormat, setSelectedFormat] = useState<'text' | 'equation' | 'formula' | 'table'>(
+    'text'
+  )
   const [isDrawingMode, setIsDrawingMode] = useState(false)
   const [showProperties, setShowProperties] = useState(false)
   const [activeTab, setActiveTab] = useState<'content' | 'properties'>('content')
@@ -138,12 +156,12 @@ export function QuestionBuilder({ isOpen, onClose, onSave, initialQuestion }: Qu
   const insertEquation = () => {
     const equation = prompt('Enter LaTeX equation:')
     if (equation) {
-      setQuestion(prev => ({
+      setQuestion((prev) => ({
         ...prev,
         question: {
           ...prev.question,
-          equations: [...prev.question.equations, equation]
-        }
+          equations: [...prev.question.equations, equation],
+        },
       }))
     }
   }
@@ -151,12 +169,12 @@ export function QuestionBuilder({ isOpen, onClose, onSave, initialQuestion }: Qu
   const insertFormula = () => {
     const formula = prompt('Enter chemical formula (e.g., H₂SO₄):')
     if (formula) {
-      setQuestion(prev => ({
+      setQuestion((prev) => ({
         ...prev,
         question: {
           ...prev.question,
-          formulas: [...prev.question.formulas, formula]
-        }
+          formulas: [...prev.question.formulas, formula],
+        },
       }))
     }
   }
@@ -164,16 +182,16 @@ export function QuestionBuilder({ isOpen, onClose, onSave, initialQuestion }: Qu
   const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files
     if (files) {
-      Array.from(files).forEach(file => {
+      Array.from(files).forEach((file) => {
         const reader = new FileReader()
         reader.onload = () => {
           const imageUrl = reader.result as string
-          setQuestion(prev => ({
+          setQuestion((prev) => ({
             ...prev,
             question: {
               ...prev.question,
-              images: [...prev.question.images, imageUrl]
-            }
+              images: [...prev.question.images, imageUrl],
+            },
           }))
         }
         reader.readAsDataURL(file)
@@ -186,12 +204,12 @@ export function QuestionBuilder({ isOpen, onClose, onSave, initialQuestion }: Qu
     if (file) {
       const reader = new FileReader()
       reader.onload = () => {
-        setQuestion(prev => ({
+        setQuestion((prev) => ({
           ...prev,
           question: {
             ...prev.question,
-            audio: reader.result as string
-          }
+            audio: reader.result as string,
+          },
         }))
       }
       reader.readAsDataURL(file)
@@ -203,12 +221,12 @@ export function QuestionBuilder({ isOpen, onClose, onSave, initialQuestion }: Qu
     if (file) {
       const reader = new FileReader()
       reader.onload = () => {
-        setQuestion(prev => ({
+        setQuestion((prev) => ({
           ...prev,
           question: {
             ...prev.question,
-            video: reader.result as string
-          }
+            video: reader.result as string,
+          },
         }))
       }
       reader.readAsDataURL(file)
@@ -229,12 +247,12 @@ export function QuestionBuilder({ isOpen, onClose, onSave, initialQuestion }: Qu
     }
     tableHTML += '</table>'
 
-    setQuestion(prev => ({
+    setQuestion((prev) => ({
       ...prev,
       question: {
         ...prev.question,
-        tables: [...prev.question.tables, tableHTML]
-      }
+        tables: [...prev.question.tables, tableHTML],
+      },
     }))
   }
 
@@ -256,37 +274,37 @@ export function QuestionBuilder({ isOpen, onClose, onSave, initialQuestion }: Qu
     const canvas = canvasRef.current
     if (canvas) {
       const imageData = canvas.toDataURL()
-      setQuestion(prev => ({
+      setQuestion((prev) => ({
         ...prev,
         question: {
           ...prev.question,
-          diagrams: [...prev.question.diagrams, imageData]
-        }
+          diagrams: [...prev.question.diagrams, imageData],
+        },
       }))
       setIsDrawingMode(false)
     }
   }
 
   const addOption = () => {
-    setQuestion(prev => ({
+    setQuestion((prev) => ({
       ...prev,
-      options: [...(prev.options || []), { text: '', isCorrect: false }]
+      options: [...(prev.options || []), { text: '', isCorrect: false }],
     }))
   }
 
   const removeOption = (index: number) => {
-    setQuestion(prev => ({
+    setQuestion((prev) => ({
       ...prev,
-      options: prev.options?.filter((_, i) => i !== index)
+      options: prev.options?.filter((_, i) => i !== index),
     }))
   }
 
   const updateOption = (index: number, field: 'text' | 'isCorrect', value: string | boolean) => {
-    setQuestion(prev => ({
+    setQuestion((prev) => ({
       ...prev,
       options: prev.options?.map((option, i) =>
         i === index ? { ...option, [field]: value } : option
-      )
+      ),
     }))
   }
 
@@ -296,14 +314,14 @@ export function QuestionBuilder({ isOpen, onClose, onSave, initialQuestion }: Qu
   }
 
   const handlePropertiesChange = (properties: QuestionPropertiesType) => {
-    setQuestion(prev => ({
+    setQuestion((prev) => ({
       ...prev,
       properties,
       // Sync basic properties with the question data
       difficulty: properties.difficulty,
       topic: properties.topic,
       estimatedTime: properties.estimatedTime,
-      marks: properties.markAllocation
+      marks: properties.markAllocation,
     }))
   }
 
@@ -315,18 +333,18 @@ export function QuestionBuilder({ isOpen, onClose, onSave, initialQuestion }: Qu
   const undo = () => {
     if (undoStack.length > 0) {
       const previousState = undoStack[undoStack.length - 1]
-      setRedoStack(prev => [...prev, question])
+      setRedoStack((prev) => [...prev, question])
       setQuestion(previousState)
-      setUndoStack(prev => prev.slice(0, -1))
+      setUndoStack((prev) => prev.slice(0, -1))
     }
   }
 
   const redo = () => {
     if (redoStack.length > 0) {
       const nextState = redoStack[redoStack.length - 1]
-      setUndoStack(prev => [...prev, question])
+      setUndoStack((prev) => [...prev, question])
       setQuestion(nextState)
-      setRedoStack(prev => prev.slice(0, -1))
+      setRedoStack((prev) => prev.slice(0, -1))
     }
   }
 
@@ -342,7 +360,9 @@ export function QuestionBuilder({ isOpen, onClose, onSave, initialQuestion }: Qu
               <FileText className="w-8 h-8" />
               <div>
                 <h2 className="text-2xl font-bold">Question Builder</h2>
-                <p className="text-purple-100">Create comprehensive biology questions with rich content</p>
+                <p className="text-purple-100">
+                  Create comprehensive biology questions with rich content
+                </p>
               </div>
             </div>
             <div className="flex items-center space-x-3">
@@ -386,7 +406,7 @@ export function QuestionBuilder({ isOpen, onClose, onSave, initialQuestion }: Qu
               <label className="block text-sm font-medium text-gray-700 mb-2">Question Type</label>
               <select
                 value={question.type}
-                onChange={(e) => setQuestion(prev => ({ ...prev, type: e.target.value as any }))}
+                onChange={(e) => setQuestion((prev) => ({ ...prev, type: e.target.value as any }))}
                 className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
                 <option value="mcq">Multiple Choice</option>
@@ -404,15 +424,17 @@ export function QuestionBuilder({ isOpen, onClose, onSave, initialQuestion }: Qu
             <div className="mb-4">
               <label className="block text-sm font-medium text-gray-700 mb-2">Difficulty</label>
               <div className="flex space-x-2">
-                {(['easy', 'medium', 'hard'] as const).map(level => (
+                {(['easy', 'medium', 'hard'] as const).map((level) => (
                   <button
                     key={level}
-                    onClick={() => setQuestion(prev => ({ ...prev, difficulty: level }))}
+                    onClick={() => setQuestion((prev) => ({ ...prev, difficulty: level }))}
                     className={`flex-1 py-2 px-3 rounded-lg text-sm font-medium transition-colors ${
                       question.difficulty === level
-                        ? level === 'easy' ? 'bg-green-100 text-green-700 border border-green-300'
-                        : level === 'medium' ? 'bg-yellow-100 text-yellow-700 border border-yellow-300'
-                        : 'bg-red-100 text-red-700 border border-red-300'
+                        ? level === 'easy'
+                          ? 'bg-green-100 text-green-700 border border-green-300'
+                          : level === 'medium'
+                            ? 'bg-yellow-100 text-yellow-700 border border-yellow-300'
+                            : 'bg-red-100 text-red-700 border border-red-300'
                         : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                     }`}
                   >
@@ -429,7 +451,7 @@ export function QuestionBuilder({ isOpen, onClose, onSave, initialQuestion }: Qu
                 <input
                   type="text"
                   value={question.subject}
-                  onChange={(e) => setQuestion(prev => ({ ...prev, subject: e.target.value }))}
+                  onChange={(e) => setQuestion((prev) => ({ ...prev, subject: e.target.value }))}
                   className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
@@ -438,7 +460,7 @@ export function QuestionBuilder({ isOpen, onClose, onSave, initialQuestion }: Qu
                 <input
                   type="text"
                   value={question.chapter}
-                  onChange={(e) => setQuestion(prev => ({ ...prev, chapter: e.target.value }))}
+                  onChange={(e) => setQuestion((prev) => ({ ...prev, chapter: e.target.value }))}
                   className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
@@ -447,7 +469,7 @@ export function QuestionBuilder({ isOpen, onClose, onSave, initialQuestion }: Qu
                 <input
                   type="text"
                   value={question.topic}
-                  onChange={(e) => setQuestion(prev => ({ ...prev, topic: e.target.value }))}
+                  onChange={(e) => setQuestion((prev) => ({ ...prev, topic: e.target.value }))}
                   className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
@@ -460,7 +482,9 @@ export function QuestionBuilder({ isOpen, onClose, onSave, initialQuestion }: Qu
                 <input
                   type="number"
                   value={question.marks}
-                  onChange={(e) => setQuestion(prev => ({ ...prev, marks: parseInt(e.target.value) || 1 }))}
+                  onChange={(e) =>
+                    setQuestion((prev) => ({ ...prev, marks: parseInt(e.target.value) || 1 }))
+                  }
                   className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   min="1"
                   max="20"
@@ -471,7 +495,12 @@ export function QuestionBuilder({ isOpen, onClose, onSave, initialQuestion }: Qu
                 <input
                   type="number"
                   value={question.estimatedTime}
-                  onChange={(e) => setQuestion(prev => ({ ...prev, estimatedTime: parseInt(e.target.value) || 1 }))}
+                  onChange={(e) =>
+                    setQuestion((prev) => ({
+                      ...prev,
+                      estimatedTime: parseInt(e.target.value) || 1,
+                    }))
+                  }
                   className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   min="1"
                   max="60"
@@ -486,10 +515,15 @@ export function QuestionBuilder({ isOpen, onClose, onSave, initialQuestion }: Qu
                 type="text"
                 placeholder="Enter tags separated by commas"
                 value={question.tags.join(', ')}
-                onChange={(e) => setQuestion(prev => ({
-                  ...prev,
-                  tags: e.target.value.split(',').map(tag => tag.trim()).filter(tag => tag)
-                }))}
+                onChange={(e) =>
+                  setQuestion((prev) => ({
+                    ...prev,
+                    tags: e.target.value
+                      .split(',')
+                      .map((tag) => tag.trim())
+                      .filter((tag) => tag),
+                  }))
+                }
                 className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
@@ -717,186 +751,208 @@ export function QuestionBuilder({ isOpen, onClose, onSave, initialQuestion }: Qu
                     <>
                       {/* Question Editor */}
                       {activeEditor === 'question' && (
-                    <div>
-                      <div
-                        contentEditable
-                        className="min-h-[200px] p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        onBlur={(e) => setQuestion(prev => ({
-                          ...prev,
-                          question: { ...prev.question, content: e.currentTarget.innerHTML }
-                        }))}
-                        dangerouslySetInnerHTML={{ __html: question.question.content }}
-                      />
+                        <div>
+                          <div
+                            contentEditable
+                            className="min-h-[200px] p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            onBlur={(e) =>
+                              setQuestion((prev) => ({
+                                ...prev,
+                                question: { ...prev.question, content: e.currentTarget.innerHTML },
+                              }))
+                            }
+                            dangerouslySetInnerHTML={{ __html: question.question.content }}
+                          />
 
-                      {/* Attached Media Display */}
-                      {question.question.images.length > 0 && (
-                        <div className="mt-4">
-                          <h4 className="font-medium text-gray-700 mb-2">Images:</h4>
-                          <div className="grid grid-cols-3 gap-4">
-                            {question.question.images.map((img, index) => (
-                              <div key={index} className="relative">
-                                <img src={img} alt="" className="w-full h-24 object-cover rounded" />
-                                <button
-                                  onClick={() => setQuestion(prev => ({
-                                    ...prev,
-                                    question: {
-                                      ...prev.question,
-                                      images: prev.question.images.filter((_, i) => i !== index)
-                                    }
-                                  }))}
-                                  className="absolute top-1 right-1 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs"
-                                >
-                                  <X className="w-3 h-3" />
-                                </button>
+                          {/* Attached Media Display */}
+                          {question.question.images.length > 0 && (
+                            <div className="mt-4">
+                              <h4 className="font-medium text-gray-700 mb-2">Images:</h4>
+                              <div className="grid grid-cols-3 gap-4">
+                                {question.question.images.map((img, index) => (
+                                  <div key={index} className="relative">
+                                    <img
+                                      src={img}
+                                      alt={`Question image ${index + 1}`}
+                                      className="w-full h-24 object-cover rounded"
+                                    />
+                                    <button
+                                      onClick={() =>
+                                        setQuestion((prev) => ({
+                                          ...prev,
+                                          question: {
+                                            ...prev.question,
+                                            images: prev.question.images.filter(
+                                              (_, i) => i !== index
+                                            ),
+                                          },
+                                        }))
+                                      }
+                                      className="absolute top-1 right-1 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs"
+                                    >
+                                      <X className="w-3 h-3" />
+                                    </button>
+                                  </div>
+                                ))}
                               </div>
-                            ))}
-                          </div>
-                        </div>
-                      )}
+                            </div>
+                          )}
 
-                      {/* Equations */}
-                      {question.question.equations.length > 0 && (
-                        <div className="mt-4">
-                          <h4 className="font-medium text-gray-700 mb-2">Equations:</h4>
-                          <div className="space-y-2">
-                            {question.question.equations.map((eq, index) => (
-                              <div key={index} className="flex items-center space-x-2 bg-gray-50 p-2 rounded">
-                                <code className="flex-1">{eq}</code>
-                                <button
-                                  onClick={() => setQuestion(prev => ({
-                                    ...prev,
-                                    question: {
-                                      ...prev.question,
-                                      equations: prev.question.equations.filter((_, i) => i !== index)
-                                    }
-                                  }))}
-                                  className="text-red-500 hover:text-red-700"
-                                >
-                                  <X className="w-4 h-4" />
-                                </button>
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                      )}
-
-                      {/* Options for MCQ */}
-                      {question.type === 'mcq' && question.options && (
-                        <div className="mt-6">
-                          <h4 className="font-medium text-gray-700 mb-4">Answer Options:</h4>
-                          <div className="space-y-3">
-                            {question.options.map((option, index) => (
-                              <div key={index} className="flex items-center space-x-3">
-                                <input
-                                  type="radio"
-                                  name="correctAnswer"
-                                  checked={option.isCorrect}
-                                  onChange={() => {
-                                    setQuestion(prev => ({
-                                      ...prev,
-                                      options: prev.options?.map((opt, i) => ({
-                                        ...opt,
-                                        isCorrect: i === index
-                                      }))
-                                    }))
-                                  }}
-                                  className="w-4 h-4 text-blue-600"
-                                />
-                                <input
-                                  type="text"
-                                  value={option.text}
-                                  onChange={(e) => updateOption(index, 'text', e.target.value)}
-                                  placeholder={`Option ${String.fromCharCode(65 + index)}`}
-                                  className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                />
-                                {question.options && question.options.length > 2 && (
-                                  <button
-                                    onClick={() => removeOption(index)}
-                                    className="text-red-500 hover:text-red-700"
+                          {/* Equations */}
+                          {question.question.equations.length > 0 && (
+                            <div className="mt-4">
+                              <h4 className="font-medium text-gray-700 mb-2">Equations:</h4>
+                              <div className="space-y-2">
+                                {question.question.equations.map((eq, index) => (
+                                  <div
+                                    key={index}
+                                    className="flex items-center space-x-2 bg-gray-50 p-2 rounded"
                                   >
-                                    <X className="w-4 h-4" />
-                                  </button>
-                                )}
+                                    <code className="flex-1">{eq}</code>
+                                    <button
+                                      onClick={() =>
+                                        setQuestion((prev) => ({
+                                          ...prev,
+                                          question: {
+                                            ...prev.question,
+                                            equations: prev.question.equations.filter(
+                                              (_, i) => i !== index
+                                            ),
+                                          },
+                                        }))
+                                      }
+                                      className="text-red-500 hover:text-red-700"
+                                    >
+                                      <X className="w-4 h-4" />
+                                    </button>
+                                  </div>
+                                ))}
                               </div>
-                            ))}
-                          </div>
-                          {question.options.length < 6 && (
-                            <button
-                              onClick={addOption}
-                              className="mt-3 flex items-center space-x-2 text-blue-600 hover:text-blue-800"
-                            >
-                              <Plus className="w-4 h-4" />
-                              <span>Add Option</span>
-                            </button>
+                            </div>
+                          )}
+
+                          {/* Options for MCQ */}
+                          {question.type === 'mcq' && question.options && (
+                            <div className="mt-6">
+                              <h4 className="font-medium text-gray-700 mb-4">Answer Options:</h4>
+                              <div className="space-y-3">
+                                {question.options.map((option, index) => (
+                                  <div key={index} className="flex items-center space-x-3">
+                                    <input
+                                      type="radio"
+                                      name="correctAnswer"
+                                      checked={option.isCorrect}
+                                      onChange={() => {
+                                        setQuestion((prev) => ({
+                                          ...prev,
+                                          options: prev.options?.map((opt, i) => ({
+                                            ...opt,
+                                            isCorrect: i === index,
+                                          })),
+                                        }))
+                                      }}
+                                      className="w-4 h-4 text-blue-600"
+                                    />
+                                    <input
+                                      type="text"
+                                      value={option.text}
+                                      onChange={(e) => updateOption(index, 'text', e.target.value)}
+                                      placeholder={`Option ${String.fromCharCode(65 + index)}`}
+                                      className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    />
+                                    {question.options && question.options.length > 2 && (
+                                      <button
+                                        onClick={() => removeOption(index)}
+                                        className="text-red-500 hover:text-red-700"
+                                      >
+                                        <X className="w-4 h-4" />
+                                      </button>
+                                    )}
+                                  </div>
+                                ))}
+                              </div>
+                              {question.options.length < 6 && (
+                                <button
+                                  onClick={addOption}
+                                  className="mt-3 flex items-center space-x-2 text-blue-600 hover:text-blue-800"
+                                >
+                                  <Plus className="w-4 h-4" />
+                                  <span>Add Option</span>
+                                </button>
+                              )}
+                            </div>
                           )}
                         </div>
                       )}
-                    </div>
-                  )}
 
-                  {/* Explanation Editor */}
-                  {activeEditor === 'explanation' && (
-                    <div>
-                      <div
-                        contentEditable
-                        className="min-h-[200px] p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        onBlur={(e) => setQuestion(prev => ({
-                          ...prev,
-                          explanation: { ...prev.explanation, content: e.currentTarget.innerHTML }
-                        }))}
-                        dangerouslySetInnerHTML={{ __html: question.explanation.content }}
-                      />
-                    </div>
-                  )}
-
-                  {/* Drawing Canvas */}
-                  {isDrawingMode && (
-                    <div className="mt-6">
-                      <div className="flex items-center justify-between mb-4">
-                        <h4 className="font-medium text-gray-700">Draw Diagram:</h4>
-                        <div className="flex space-x-2">
-                          <button
-                            onClick={saveDrawing}
-                            className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
-                          >
-                            Save Drawing
-                          </button>
-                          <button
-                            onClick={() => setIsDrawingMode(false)}
-                            className="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600"
-                          >
-                            Cancel
-                          </button>
-                        </div>
-                      </div>
-                      <canvas
-                        ref={canvasRef}
-                        width={600}
-                        height={400}
-                        className="border border-gray-300 rounded-lg cursor-crosshair"
-                        onMouseDown={(e) => {
-                          const canvas = canvasRef.current
-                          const ctx = canvas?.getContext('2d')
-                          if (ctx && canvas) {
-                            const rect = canvas.getBoundingClientRect()
-                            ctx.beginPath()
-                            ctx.moveTo(e.clientX - rect.left, e.clientY - rect.top)
-                          }
-                        }}
-                        onMouseMove={(e) => {
-                          if (e.buttons === 1) {
-                            const canvas = canvasRef.current
-                            const ctx = canvas?.getContext('2d')
-                            if (ctx && canvas) {
-                              const rect = canvas.getBoundingClientRect()
-                              ctx.lineTo(e.clientX - rect.left, e.clientY - rect.top)
-                              ctx.stroke()
+                      {/* Explanation Editor */}
+                      {activeEditor === 'explanation' && (
+                        <div>
+                          <div
+                            contentEditable
+                            className="min-h-[200px] p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            onBlur={(e) =>
+                              setQuestion((prev) => ({
+                                ...prev,
+                                explanation: {
+                                  ...prev.explanation,
+                                  content: e.currentTarget.innerHTML,
+                                },
+                              }))
                             }
-                          }
-                        }}
-                      />
-                    </div>
-                  )}
+                            dangerouslySetInnerHTML={{ __html: question.explanation.content }}
+                          />
+                        </div>
+                      )}
+
+                      {/* Drawing Canvas */}
+                      {isDrawingMode && (
+                        <div className="mt-6">
+                          <div className="flex items-center justify-between mb-4">
+                            <h4 className="font-medium text-gray-700">Draw Diagram:</h4>
+                            <div className="flex space-x-2">
+                              <button
+                                onClick={saveDrawing}
+                                className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
+                              >
+                                Save Drawing
+                              </button>
+                              <button
+                                onClick={() => setIsDrawingMode(false)}
+                                className="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600"
+                              >
+                                Cancel
+                              </button>
+                            </div>
+                          </div>
+                          <canvas
+                            ref={canvasRef}
+                            width={600}
+                            height={400}
+                            className="border border-gray-300 rounded-lg cursor-crosshair"
+                            onMouseDown={(e) => {
+                              const canvas = canvasRef.current
+                              const ctx = canvas?.getContext('2d')
+                              if (ctx && canvas) {
+                                const rect = canvas.getBoundingClientRect()
+                                ctx.beginPath()
+                                ctx.moveTo(e.clientX - rect.left, e.clientY - rect.top)
+                              }
+                            }}
+                            onMouseMove={(e) => {
+                              if (e.buttons === 1) {
+                                const canvas = canvasRef.current
+                                const ctx = canvas?.getContext('2d')
+                                if (ctx && canvas) {
+                                  const rect = canvas.getBoundingClientRect()
+                                  ctx.lineTo(e.clientX - rect.left, e.clientY - rect.top)
+                                  ctx.stroke()
+                                }
+                              }
+                            }}
+                          />
+                        </div>
+                      )}
                     </>
                   )}
                 </div>
@@ -911,7 +967,12 @@ export function QuestionBuilder({ isOpen, onClose, onSave, initialQuestion }: Qu
                     />
 
                     {question.question.images.map((img, index) => (
-                      <img key={index} src={img} alt="" className="max-w-md mt-4 rounded" />
+                      <img
+                        key={index}
+                        src={img}
+                        alt={`Question diagram ${index + 1}`}
+                        className="max-w-md mt-4 rounded"
+                      />
                     ))}
 
                     {question.type === 'mcq' && question.options && (
@@ -920,7 +981,9 @@ export function QuestionBuilder({ isOpen, onClose, onSave, initialQuestion }: Qu
                           <div key={index} className="flex items-center space-x-3">
                             <span className="font-medium">{String.fromCharCode(65 + index)}.</span>
                             <span>{option.text}</span>
-                            {option.isCorrect && <span className="text-green-600 font-medium">(Correct)</span>}
+                            {option.isCorrect && (
+                              <span className="text-green-600 font-medium">(Correct)</span>
+                            )}
                           </div>
                         ))}
                       </div>

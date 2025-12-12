@@ -28,6 +28,7 @@ import {
   ChevronRightIcon,
 } from '@heroicons/react/24/outline'
 import { HeartIcon as HeartSolid, StarIcon as StarSolid } from '@heroicons/react/24/solid'
+import { getPlaceholderAvatar } from '@/lib/images/imageUtils'
 
 interface SuccessStoriesSectionProps {
   onContactStudent?: (studentId: string) => void
@@ -86,8 +87,8 @@ export function SuccessStoriesSection({
     {
       id: 'sadhna-sirin',
       name: 'Sadhna Sirin',
-      profilePhoto: '/api/placeholder/150/150',
-      doctorPhoto: '/api/placeholder/150/150',
+      profilePhoto: getPlaceholderAvatar('Sadhna Sirin', 150, '4F46E5', 'fff'),
+      doctorPhoto: '/illustrations/doctor-success.svg',
       beforeScore: 298,
       afterScore: 695,
       attempts: 2,
@@ -147,8 +148,8 @@ export function SuccessStoriesSection({
     {
       id: 'abhisek-afmc',
       name: 'Abhisek Kumar',
-      profilePhoto: '/api/placeholder/150/150',
-      doctorPhoto: '/api/placeholder/150/150',
+      profilePhoto: getPlaceholderAvatar('Abhisek Kumar', 150, '059669', 'fff'),
+      doctorPhoto: '/illustrations/doctor-success.svg',
       beforeScore: 421,
       afterScore: 648,
       attempts: 3,
@@ -192,7 +193,7 @@ export function SuccessStoriesSection({
     {
       id: 'nishita-quick',
       name: 'Nishita Sharma',
-      profilePhoto: '/api/placeholder/150/150',
+      profilePhoto: getPlaceholderAvatar('Nishita Sharma', 150, '7C3AED', 'fff'),
       beforeScore: 445,
       afterScore: 612,
       attempts: 1,
@@ -250,8 +251,8 @@ export function SuccessStoriesSection({
     {
       id: 'priya-sehgal',
       name: 'Priya Sehgal',
-      profilePhoto: '/api/placeholder/150/150',
-      doctorPhoto: '/api/placeholder/150/150',
+      profilePhoto: getPlaceholderAvatar('Priya Sehgal', 150, 'DC2626', 'fff'),
+      doctorPhoto: '/illustrations/doctor-success.svg',
       beforeScore: 523,
       afterScore: 678,
       attempts: 2,
@@ -313,7 +314,7 @@ export function SuccessStoriesSection({
     {
       id: 'dattatreya',
       name: 'Dattatreya Singh',
-      profilePhoto: '/api/placeholder/150/150',
+      profilePhoto: getPlaceholderAvatar('Dattatreya Singh', 150, '0891B2', 'fff'),
       beforeScore: 387,
       afterScore: 589,
       attempts: 2,

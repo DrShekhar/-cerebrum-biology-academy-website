@@ -30,6 +30,7 @@ import {
   CheckCircleIcon as CheckCircleSolid,
 } from '@heroicons/react/24/solid'
 import { PremiumCard, PremiumButton } from '@/components/ui/PremiumDesignSystem'
+import { getPlaceholderAvatar } from '@/lib/images/imageUtils'
 
 interface ComprehensiveContactPageProps {
   onCallCenter?: (centerPhone: string) => void
@@ -105,7 +106,7 @@ export function ComprehensiveContactPage({
       email: 'southdelhi@cerebrumbiologyacademy.com',
       timings: '7:00 AM - 9:00 PM (Mon-Sun)',
       centerHead: 'Dr. Priya Sharma',
-      headImage: '/api/placeholder/100/100',
+      headImage: getPlaceholderAvatar('Dr. Priya Sharma', 100, '059669', 'fff'),
       specialNote: 'Main Campus - Premium facilities with 24/7 security',
       coordinates: { lat: 28.5661, lng: 77.2431 },
       features: ['Smart Classrooms', 'Library', 'Hostel Facility', 'Cafeteria', 'Lab'],
@@ -121,7 +122,7 @@ export function ComprehensiveContactPage({
       email: 'rohini@cerebrumbiologyacademy.com',
       timings: '7:00 AM - 9:00 PM (Mon-Sun)',
       centerHead: 'Dr. Raj Kumar',
-      headImage: '/api/placeholder/100/100',
+      headImage: getPlaceholderAvatar('Dr. Raj Kumar', 100, '1E40AF', 'fff'),
       specialNote: 'Just 500m from JPT Academy - Easy comparison visits',
       coordinates: { lat: 28.7041, lng: 77.1025 },
       features: ['AC Classrooms', 'Parking', 'Metro Connectivity', 'Food Court'],
@@ -137,7 +138,7 @@ export function ComprehensiveContactPage({
       email: 'gurugram@cerebrumbiologyacademy.com',
       timings: '7:00 AM - 9:00 PM (Mon-Sun)',
       centerHead: 'Dr. Anjali Singh',
-      headImage: '/api/placeholder/100/100',
+      headImage: getPlaceholderAvatar('Dr. Anjali Singh', 100, '7C3AED', 'fff'),
       specialNote: 'Easy access from Cyber City - Perfect for working parents',
       coordinates: { lat: 28.4595, lng: 77.0266 },
       features: ['Mall Location', 'Valet Parking', 'Food Court', 'Shopping'],

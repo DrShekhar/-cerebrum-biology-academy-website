@@ -18,6 +18,7 @@ import {
   ChartBarIcon,
   GlobeAltIcon,
 } from '@heroicons/react/24/outline'
+import { getPlaceholderAvatar } from '@/lib/images/imageUtils'
 import { StarIcon } from '@heroicons/react/24/solid'
 
 interface SophisticatedHeroProps {
@@ -50,7 +51,7 @@ export function SophisticatedHero({
       college: 'AIIMS Delhi',
       quote:
         "Dr. Shekhar's methodology transformed my understanding of cellular biology. The systematic approach to NEET preparation is unparalleled.",
-      image: '/api/placeholder/60/60',
+      image: getPlaceholderAvatar('Ananya Sharma', 60, '4F46E5', 'fff'),
     },
     {
       name: 'Arjun Patel',
@@ -59,7 +60,7 @@ export function SophisticatedHero({
       college: 'JIPMER Puducherry',
       quote:
         'The depth of knowledge and clarity in explanation helped me master complex concepts in genetics and molecular biology.',
-      image: '/api/placeholder/60/60',
+      image: getPlaceholderAvatar('Arjun Patel', 60, '059669', 'fff'),
     },
     {
       name: 'Priya Mehta',
@@ -68,7 +69,7 @@ export function SophisticatedHero({
       college: 'AIIMS Rishikesh',
       quote:
         'From struggling with biology to securing AIIMS admission - Cerebrum Academy made the impossible possible.',
-      image: '/api/placeholder/60/60',
+      image: getPlaceholderAvatar('Priya Mehta', 60, '7C3AED', 'fff'),
     },
   ]
 

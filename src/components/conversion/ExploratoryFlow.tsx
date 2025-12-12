@@ -20,6 +20,7 @@ import {
   HeartIcon,
 } from '@heroicons/react/24/outline'
 import { StarIcon as StarSolid } from '@heroicons/react/24/solid'
+import { getPlaceholderAvatar } from '@/lib/images/imageUtils'
 
 interface ExploratoryFlowProps {
   onCounselingBook?: () => void
@@ -163,7 +164,7 @@ export function ExploratoryFlow({ onCounselingBook, className = '' }: Explorator
       college: 'AIIMS Delhi',
       course: 'Dropper Success Intensive',
       year: '2024',
-      image: '/api/placeholder/120/120',
+      image: getPlaceholderAvatar('Arjun Patel', 120, '4F46E5', 'fff'),
       videoUrl: 'https://youtube.com/watch?v=example1',
       beforeScore: '245/360',
       improvement: '+113 points',
@@ -179,7 +180,7 @@ export function ExploratoryFlow({ onCounselingBook, className = '' }: Explorator
       college: 'JIPMER',
       course: 'Class 12 Final Sprint',
       year: '2024',
-      image: '/api/placeholder/120/120',
+      image: getPlaceholderAvatar('Priya Sharma', 120, '059669', 'fff'),
       videoUrl: 'https://youtube.com/watch?v=example2',
       beforeScore: '280/360',
       improvement: '+62 points',
@@ -195,7 +196,7 @@ export function ExploratoryFlow({ onCounselingBook, className = '' }: Explorator
       college: 'AIIMS Rishikesh',
       course: 'Class 11 NEET Mastery',
       year: '2024',
-      image: '/api/placeholder/120/120',
+      image: getPlaceholderAvatar('Rohit Kumar', 120, '7C3AED', 'fff'),
       videoUrl: 'https://youtube.com/watch?v=example3',
       beforeScore: '190/360',
       improvement: '+165 points',

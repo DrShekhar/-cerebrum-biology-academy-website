@@ -22,6 +22,7 @@ import {
   CheckCircle,
   BookOpen,
 } from 'lucide-react'
+import { getPlaceholderAvatar } from '@/lib/images/imageUtils'
 
 interface ParentTestimonial {
   id: string
@@ -104,10 +105,10 @@ const PARENT_TESTIMONIALS: ParentTestimonial[] = [
   {
     id: '1',
     parentName: 'Mrs. Sunita Sharma',
-    parentPhoto: '/api/placeholder/100/100',
+    parentPhoto: '/illustrations/parent-mother.svg',
     parentRole: 'Mother',
     studentName: 'Priya Sharma',
-    studentPhoto: '/api/placeholder/80/80',
+    studentPhoto: getPlaceholderAvatar('Priya Sharma', 80, '4F46E5', 'fff'),
 
     achievement: {
       neetRank: 42,
@@ -127,7 +128,7 @@ const PARENT_TESTIMONIALS: ParentTestimonial[] = [
     testimonial: {
       text: "When Priya was struggling with biology concepts in her first attempt, we were heartbroken. Cerebrum not only restored her confidence but transformed her into a NEET topper. The personal attention and systematic approach made all the difference. Today, seeing her at AIIMS, we can't thank Cerebrum enough.",
       videoUrl: 'https://youtube.com/watch?v=parent1',
-      videoThumbnail: '/api/placeholder/300/200',
+      videoThumbnail: '/illustrations/video-thumbnail.svg',
       highlights: [
         'Personal attention from faculty',
         'Systematic teaching approach',
@@ -182,10 +183,10 @@ const PARENT_TESTIMONIALS: ParentTestimonial[] = [
   {
     id: '2',
     parentName: 'Mr. Rajesh Patel',
-    parentPhoto: '/api/placeholder/100/100',
+    parentPhoto: '/illustrations/parent-father.svg',
     parentRole: 'Father',
     studentName: 'Arjun Patel',
-    studentPhoto: '/api/placeholder/80/80',
+    studentPhoto: getPlaceholderAvatar('Arjun Patel', 80, '059669', 'fff'),
 
     achievement: {
       neetRank: 156,
@@ -252,10 +253,10 @@ const PARENT_TESTIMONIALS: ParentTestimonial[] = [
   {
     id: '3',
     parentName: 'Mrs. Lakshmi Reddy',
-    parentPhoto: '/api/placeholder/100/100',
+    parentPhoto: '/illustrations/parent-mother.svg',
     parentRole: 'Mother',
     studentName: 'Sneha Reddy',
-    studentPhoto: '/api/placeholder/80/80',
+    studentPhoto: getPlaceholderAvatar('Sneha Reddy', 80, '7C3AED', 'fff'),
 
     achievement: {
       neetRank: 289,
@@ -328,10 +329,10 @@ const PARENT_TESTIMONIALS: ParentTestimonial[] = [
   {
     id: '4',
     parentName: 'Mrs. Geeta Kumar',
-    parentPhoto: '/api/placeholder/100/100',
+    parentPhoto: '/illustrations/parent-mother.svg',
     parentRole: 'Mother',
     studentName: 'Rahul Kumar',
-    studentPhoto: '/api/placeholder/80/80',
+    studentPhoto: getPlaceholderAvatar('Rahul Kumar', 80, 'DC2626', 'fff'),
 
     achievement: {
       neetRank: 523,
@@ -407,7 +408,7 @@ function VideoTestimonialCard({
     <div className="relative group">
       <div className="relative overflow-hidden rounded-xl">
         <img
-          src={testimonial.testimonial.videoThumbnail || '/api/placeholder/300/200'}
+          src={testimonial.testimonial.videoThumbnail || '/illustrations/video-thumbnail.svg'}
           alt={`Video testimonial by ${testimonial.parentName}`}
           className="w-full h-48 object-cover"
         />
@@ -435,7 +436,7 @@ function VideoTestimonialCard({
       <div className="mt-3">
         <div className="flex items-center space-x-2">
           <img
-            src={testimonial.parentPhoto || '/api/placeholder/40/40'}
+            src={testimonial.parentPhoto || '/illustrations/parent-mother.svg'}
             alt={testimonial.parentName}
             className="w-8 h-8 rounded-full"
           />
@@ -502,7 +503,7 @@ function TestimonialCard({ testimonial }: { testimonial: ParentTestimonial }) {
         {/* Parent & Student Info */}
         <div className="flex items-start space-x-4">
           <img
-            src={testimonial.parentPhoto || '/api/placeholder/80/80'}
+            src={testimonial.parentPhoto || '/illustrations/parent-mother.svg'}
             alt={testimonial.parentName}
             className="w-16 h-16 rounded-full object-cover border-4 border-white shadow-lg"
           />
@@ -868,7 +869,7 @@ export default function ParentTestimonialsSection({
               <div className="border-t pt-4">
                 <div className="flex items-center space-x-4">
                   <img
-                    src={selectedTestimonial.parentPhoto || '/api/placeholder/60/60'}
+                    src={selectedTestimonial.parentPhoto || '/illustrations/parent-mother.svg'}
                     alt={selectedTestimonial.parentName}
                     className="w-12 h-12 rounded-full"
                   />

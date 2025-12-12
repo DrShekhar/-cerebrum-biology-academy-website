@@ -21,7 +21,7 @@ export const metadata: Metadata = {
       'Quiz → Course Match → Instant Enrollment. Join 5000+ students who achieved their medical dreams with our personalized approach.',
     images: [
       {
-        url: '/api/placeholder/1200/630',
+        url: '/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Quick Enrollment Process - Cerebrum Biology Academy',

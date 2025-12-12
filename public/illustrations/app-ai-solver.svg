@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 600" fill="none">
+  <defs>
+    <linearGradient id="aiBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4C1D95;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5B21B6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="aiGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#A78BFA" />
+      <stop offset="100%" style="stop-color:#8B5CF6" />
+    </linearGradient>
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#14B8A6" />
+      <stop offset="100%" style="stop-color:#0D9488" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="300" height="600" fill="url(#aiBg)"/>
+
+  <!-- Status Bar -->
+  <rect x="20" y="15" width="40" height="6" rx="3" fill="white" opacity="0.8"/>
+  <text x="150" y="20" font-family="system-ui" font-size="11" fill="white" text-anchor="middle" opacity="0.9">9:41</text>
+  <rect x="240" y="13" width="22" height="10" rx="2" stroke="white" stroke-width="1" fill="none" opacity="0.8"/>
+  <rect x="242" y="15" width="16" height="6" rx="1" fill="white" opacity="0.8"/>
+
+  <!-- Header -->
+  <text x="20" y="60" font-family="system-ui" font-weight="600" font-size="20" fill="white">AI Doubt Solver</text>
+  <text x="20" y="80" font-family="system-ui" font-size="12" fill="white" opacity="0.7">Get instant answers to any Biology question</text>
+
+  <!-- AI Brain Icon -->
+  <circle cx="260" cy="55" r="20" fill="url(#aiGlow)" opacity="0.3"/>
+  <text x="260" y="62" font-family="system-ui" font-size="20" text-anchor="middle">&#x1F9E0;</text>
+
+  <!-- Question Image Area -->
+  <rect x="20" y="100" width="260" height="150" rx="12" fill="white"/>
+  <rect x="30" y="110" width="240" height="90" rx="8" fill="#F1F5F9"/>
+
+  <!-- Sample Biology Question -->
+  <text x="40" y="135" font-family="system-ui" font-size="11" fill="#1E293B" font-weight="500">Q. Which of the following is NOT a</text>
+  <text x="40" y="150" font-family="system-ui" font-size="11" fill="#1E293B" font-weight="500">function of Golgi apparatus?</text>
+  <text x="40" y="175" font-family="system-ui" font-size="10" fill="#64748B">(a) Formation of lysosomes</text>
+  <text x="40" y="188" font-family="system-ui" font-size="10" fill="#64748B">(b) Protein synthesis</text>
+
+  <!-- Camera button -->
+  <rect x="95" y="210" width="110" height="32" rx="16" fill="url(#aiGlow)"/>
+  <text x="150" y="231" font-family="system-ui" font-size="11" fill="white" text-anchor="middle">&#x1F4F7; Take Photo</text>
+
+  <!-- AI Processing Animation -->
+  <rect x="20" y="265" width="260" height="50" rx="10" fill="white" opacity="0.1"/>
+  <circle cx="50" cy="290" r="15" fill="url(#aiGlow)">
+    <animate attributeName="opacity" values="1;0.5;1" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  <text x="50" y="296" font-family="system-ui" font-size="14" text-anchor="middle">&#x2728;</text>
+  <text x="80" y="286" font-family="system-ui" font-size="12" fill="white">Analyzing your question...</text>
+  <text x="80" y="302" font-family="system-ui" font-size="10" fill="white" opacity="0.7">AI is finding the best explanation</text>
+
+  <!-- AI Answer Section -->
+  <rect x="20" y="330" width="260" height="180" rx="12" fill="white"/>
+
+  <!-- Answer Header -->
+  <rect x="30" y="340" width="70" height="22" rx="11" fill="url(#tealGrad)"/>
+  <text x="65" y="355" font-family="system-ui" font-size="10" fill="white" text-anchor="middle">&#x2705; Answer</text>
+
+  <text x="30" y="385" font-family="system-ui" font-weight="600" font-size="13" fill="#1E293B">(b) Protein synthesis</text>
+
+  <!-- Explanation -->
+  <text x="30" y="410" font-family="system-ui" font-weight="500" font-size="11" fill="#4C1D95">Explanation:</text>
+  <text x="30" y="428" font-family="system-ui" font-size="10" fill="#475569">The Golgi apparatus (Golgi complex)</text>
+  <text x="30" y="443" font-family="system-ui" font-size="10" fill="#475569">modifies, packages, and transports</text>
+  <text x="30" y="458" font-family="system-ui" font-size="10" fill="#475569">proteins and lipids. It forms lysosomes</text>
+  <text x="30" y="473" font-family="system-ui" font-size="10" fill="#475569">but protein synthesis occurs at</text>
+  <text x="30" y="488" font-family="system-ui" font-size="10" fill="#1E40AF" font-weight="500">ribosomes (not Golgi).</text>
+
+  <!-- Related Topics -->
+  <rect x="20" y="520" width="260" height="35" rx="8" fill="white" opacity="0.1"/>
+  <text x="35" y="542" font-family="system-ui" font-size="10" fill="white" opacity="0.8">Related: Cell Organelles | Lysosomes</text>
+
+  <!-- Bottom Action Bar -->
+  <rect x="0" y="560" width="300" height="40" fill="#3B0764"/>
+
+  <rect x="20" y="570" width="80" height="24" rx="12" fill="url(#aiGlow)"/>
+  <text x="60" y="586" font-family="system-ui" font-size="10" fill="white" text-anchor="middle">Ask Follow-up</text>
+
+  <rect x="110" y="570" width="80" height="24" rx="12" fill="white" opacity="0.15"/>
+  <text x="150" y="586" font-family="system-ui" font-size="10" fill="white" text-anchor="middle">Save Answer</text>
+
+  <rect x="200" y="570" width="80" height="24" rx="12" fill="white" opacity="0.15"/>
+  <text x="240" y="586" font-family="system-ui" font-size="10" fill="white" text-anchor="middle">Share</text>
+</svg>

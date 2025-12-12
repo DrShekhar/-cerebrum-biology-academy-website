@@ -293,9 +293,7 @@ export function OptimizedHeroSection({
                 <AnimatedCounter value="695" />
               </div>
               <div className="text-xs sm:text-sm text-blue-200 mt-1">{t('sadhnasScore')}</div>
-              <div className="text-[10px] xs:text-xs text-green-300 mt-0.5">
-                {t('percentile100')}
-              </div>
+              <div className="text-xs text-green-300 mt-0.5">{t('percentile100')}</div>
             </motion.div>
             <motion.div
               className="text-center bg-white/5 backdrop-blur-sm rounded-lg xs:rounded-xl p-3 xs:p-4 border border-white/10 hover:bg-white/10 hover:border-yellow-400/30 transition-all duration-300 group cursor-default"
@@ -305,9 +303,7 @@ export function OptimizedHeroSection({
                 <AnimatedCounter value="98" suffix="%" />
               </div>
               <div className="text-xs sm:text-sm text-blue-200 mt-1">{t('successRate')}</div>
-              <div className="text-[10px] xs:text-xs text-yellow-300 mt-0.5">
-                {t('neetQualified')}
-              </div>
+              <div className="text-xs text-yellow-300 mt-0.5">{t('neetQualified')}</div>
             </motion.div>
             <motion.div
               className="text-center bg-white/5 backdrop-blur-sm rounded-lg xs:rounded-xl p-3 xs:p-4 border border-white/10 hover:bg-white/10 hover:border-purple-400/30 transition-all duration-300 group cursor-default"
@@ -317,9 +313,7 @@ export function OptimizedHeroSection({
                 <AnimatedCounter value="2500" suffix="+" />
               </div>
               <div className="text-xs sm:text-sm text-blue-200 mt-1">{t('students')}</div>
-              <div className="text-[10px] xs:text-xs text-purple-300 mt-0.5">
-                {t('andCounting')}
-              </div>
+              <div className="text-xs text-purple-300 mt-0.5">{t('andCounting')}</div>
             </motion.div>
           </motion.div>
 

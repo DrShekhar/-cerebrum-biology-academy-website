@@ -62,3 +62,26 @@ export const BIOLOGY_PROMPT_TEMPLATES = {
 }
 
 export type BiologyPromptTemplate = keyof typeof BIOLOGY_PROMPT_TEMPLATES
+
+/**
+ * Generate a placeholder avatar URL using UI Avatars service
+ * Falls back gracefully and works without external dependencies
+ */
+export function getPlaceholderAvatar(
+  name: string,
+  size: number = 100,
+  background: string = '0D8ABC',
+  color: string = 'fff'
+): string {
+  const encodedName = encodeURIComponent(name)
+  return `https://ui-avatars.com/api/?name=${encodedName}&size=${size}&background=${background}&color=${color}&bold=true`
+}
+
+/**
+ * Generate a placeholder image URL using a reliable service
+ */
+export function getPlaceholderImage(width: number, height: number, text?: string): string {
+  // Use placeholder.com for generic placeholders
+  const textParam = text ? `?text=${encodeURIComponent(text)}` : ''
+  return `https://via.placeholder.com/${width}x${height}/e2e8f0/64748b${textParam}`
+}

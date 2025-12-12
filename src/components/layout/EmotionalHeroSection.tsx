@@ -22,6 +22,7 @@ import {
   BookOpenIcon,
 } from '@heroicons/react/24/outline'
 import { HeartIcon as HeartSolid, StarIcon as StarSolid } from '@heroicons/react/24/solid'
+import { getPlaceholderAvatar } from '@/lib/images/imageUtils'
 
 interface EmotionalHeroSectionProps {
   onDemoBooking?: () => void
@@ -51,7 +52,7 @@ export function EmotionalHeroSection({
       name: 'Priya Sharma',
       before: 'Failed NEET 2023 with 280 marks',
       after: 'NEET 2024: 355/360 • AIIMS Delhi',
-      image: '/api/placeholder/80/80',
+      image: getPlaceholderAvatar('Priya Sharma', 80, '4F46E5', 'fff'),
       quote:
         "I thought my dream was over. Dr. Shekhar didn't just teach me Biology - he gave me hope again.",
       emotion: 'hope',
@@ -60,7 +61,7 @@ export function EmotionalHeroSection({
       name: 'Rohit Gupta',
       before: 'Two failures • Depression • Lost confidence',
       after: 'NEET 2024: 348/360 • JIPMER',
-      image: '/api/placeholder/80/80',
+      image: getPlaceholderAvatar('Rohit Gupta', 80, '059669', 'fff'),
       quote: 'From feeling worthless to wearing a white coat. This is my second chance at life.',
       emotion: 'transformation',
     },
@@ -68,7 +69,7 @@ export function EmotionalHeroSection({
       name: 'Ananya Patel',
       before: 'Parents disappointed • Self-doubt',
       after: 'NEET 2024: 342/360 • AIIMS Rishikesh',
-      image: '/api/placeholder/80/80',
+      image: getPlaceholderAvatar('Ananya Patel', 80, '7C3AED', 'fff'),
       quote:
         'My parents cried when I failed. They cried again when I succeeded - but this time, with joy.',
       emotion: 'redemption',

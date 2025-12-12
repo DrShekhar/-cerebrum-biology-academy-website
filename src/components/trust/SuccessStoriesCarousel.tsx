@@ -18,6 +18,7 @@ import {
   Target,
   BookOpen,
 } from 'lucide-react'
+import { getPlaceholderAvatar } from '@/lib/images/imageUtils'
 
 interface SuccessStory {
   id: string
@@ -65,7 +66,7 @@ const SUCCESS_STORIES: SuccessStory[] = [
   {
     id: '1',
     name: 'Priya Sharma',
-    photo: '/api/placeholder/150/150',
+    photo: getPlaceholderAvatar('Priya Sharma', 150, '4F46E5', 'fff'),
     neetRank: 42,
     previousRank: 2341,
     improvementPoints: 2299,
@@ -99,7 +100,7 @@ const SUCCESS_STORIES: SuccessStory[] = [
   {
     id: '2',
     name: 'Arjun Patel',
-    photo: '/api/placeholder/150/150',
+    photo: getPlaceholderAvatar('Arjun Patel', 150, '059669', 'fff'),
     neetRank: 156,
     collegeName: 'JIPMER Puducherry',
     location: 'Ahmedabad, Gujarat',
@@ -127,7 +128,7 @@ const SUCCESS_STORIES: SuccessStory[] = [
   {
     id: '3',
     name: 'Sneha Reddy',
-    photo: '/api/placeholder/150/150',
+    photo: getPlaceholderAvatar('Sneha Reddy', 150, '7C3AED', 'fff'),
     neetRank: 289,
     previousRank: 8934,
     improvementPoints: 8645,
@@ -159,7 +160,7 @@ const SUCCESS_STORIES: SuccessStory[] = [
   {
     id: '4',
     name: 'Rahul Kumar',
-    photo: '/api/placeholder/150/150',
+    photo: getPlaceholderAvatar('Rahul Kumar', 150, 'DC2626', 'fff'),
     neetRank: 523,
     collegeName: 'Maulana Azad Medical College',
     location: 'Patna, Bihar',
@@ -187,7 +188,7 @@ const SUCCESS_STORIES: SuccessStory[] = [
   {
     id: '5',
     name: 'Ananya Gupta',
-    photo: '/api/placeholder/150/150',
+    photo: getPlaceholderAvatar('Ananya Gupta', 150, '0891B2', 'fff'),
     neetRank: 1247,
     collegeName: 'Seth GS Medical College',
     location: 'Mumbai, Maharashtra',
@@ -215,7 +216,7 @@ const SUCCESS_STORIES: SuccessStory[] = [
   {
     id: '6',
     name: 'Vikram Singh',
-    photo: '/api/placeholder/150/150',
+    photo: getPlaceholderAvatar('Vikram Singh', 150, 'CA8A04', 'fff'),
     neetRank: 2156,
     previousRank: 15623,
     improvementPoints: 13467,

@@ -21,7 +21,7 @@ export const metadata: Metadata = {
       'Detailed exploration of our NEET Biology courses with comparisons, success stories, and free counseling. Make an informed decision for your medical career.',
     images: [
       {
-        url: '/api/placeholder/1200/630',
+        url: '/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Course Exploration - Cerebrum Biology Academy',

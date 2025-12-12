@@ -85,7 +85,7 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
 
       {/* Toast Container */}
       <div
-        className="fixed top-4 right-4 z-50 space-y-2 max-w-sm w-full pointer-events-none"
+        className="fixed top-4 right-4 z-[20000] space-y-2 max-w-sm w-full pointer-events-none"
         aria-live="polite"
         aria-atomic="true"
         role="region"

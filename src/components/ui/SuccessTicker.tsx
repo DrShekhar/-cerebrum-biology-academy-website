@@ -94,7 +94,7 @@ export function SuccessTicker({
         animate={{ y: 0, opacity: 1 }}
         exit={{ y: 100, opacity: 0 }}
         transition={{ duration: 0.5, ease: 'easeOut' }}
-        className="fixed bottom-0 left-0 right-0 z-50 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white shadow-lg border-t border-white/20"
+        className="fixed bottom-16 sm:bottom-0 left-0 right-0 z-40 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white shadow-lg border-t border-white/20"
       >
         <div className="relative overflow-hidden h-14 flex items-center">
           {/* Icon */}
@@ -215,7 +215,7 @@ export function CompactSuccessTicker() {
       initial={{ y: 50, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       exit={{ y: 50, opacity: 0 }}
-      className="lg:hidden fixed bottom-4 left-4 right-4 z-40 bg-gradient-to-r from-green-500 to-emerald-600 text-white p-3 rounded-lg shadow-lg"
+      className="lg:hidden fixed bottom-20 left-4 right-4 z-40 bg-gradient-to-r from-green-500 to-emerald-600 text-white p-3 rounded-lg shadow-lg"
     >
       <div className="flex items-start gap-2">
         <div className="flex-shrink-0 mt-0.5">
