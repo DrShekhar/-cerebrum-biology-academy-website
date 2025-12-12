@@ -70,6 +70,7 @@ import {
   TwoYearProgramIllustration,
   SpecializedVsMassIllustration,
   BiomoleculesIllustration,
+  CellDivisionIllustration,
 } from '@/components/illustrations/BlogIllustrations'
 
 type IllustrationComponent = React.ComponentType<{ className?: string; animate?: boolean }>
@@ -90,7 +91,7 @@ const illustrationMap: Record<string, IllustrationComponent> = {
   'neet-biology-chapter-wise-weightage-2026': ChapterWeightageIllustration,
   'genetics-heredity-variation-neet': GeneticsIllustration,
   'cell-structure-function-neet-notes': CellBiologyIllustration,
-  'cell-division-mitosis-meiosis-neet': CellBiologyIllustration,
+  'cell-division-mitosis-meiosis-neet': CellDivisionIllustration,
   'biomolecules-neet-biology-complete-guide': BiomoleculesIllustration,
   'photosynthesis-neet-biology-notes': PlantPhysiologyIllustration,
   'photosynthesis-vs-respiration-neet-comparison': PhotosynthesisVsRespirationIllustration,

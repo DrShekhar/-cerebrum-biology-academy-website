@@ -8675,6 +8675,838 @@ export function BiomoleculesIllustration({ className = '', animate = true }: Ill
   )
 }
 
+// Professional Cell Division Illustration - Mitosis & Meiosis - Silicon Valley Quality
+export function CellDivisionIllustration({ className = '', animate = true }: IllustrationProps) {
+  const Wrapper = animate ? motion.svg : 'svg'
+  const wrapperProps = animate
+    ? {
+        initial: { opacity: 0, scale: 0.95 },
+        animate: { opacity: 1, scale: 1 },
+        transition: { duration: 0.8, ease: 'easeOut' },
+      }
+    : {}
+
+  return (
+    <Wrapper
+      viewBox="0 0 560 420"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      preserveAspectRatio="xMidYMid meet"
+      {...wrapperProps}
+    >
+      <defs>
+        {/* Background gradient */}
+        <linearGradient id="cellDivBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#F0F9FF" />
+          <stop offset="50%" stopColor="#F5F3FF" />
+          <stop offset="100%" stopColor="#FDF4FF" />
+        </linearGradient>
+
+        {/* Cell membrane gradient */}
+        <linearGradient id="cellMembraneGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#E879F9" />
+          <stop offset="100%" stopColor="#A855F7" />
+        </linearGradient>
+
+        {/* Cytoplasm gradient */}
+        <radialGradient id="cytoplasmGrad" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stopColor="#FDF4FF" />
+          <stop offset="70%" stopColor="#FAE8FF" />
+          <stop offset="100%" stopColor="#F5D0FE" />
+        </radialGradient>
+
+        {/* Nucleus gradient */}
+        <radialGradient id="nucleusGrad" cx="40%" cy="40%" r="60%">
+          <stop offset="0%" stopColor="#C084FC" />
+          <stop offset="100%" stopColor="#9333EA" />
+        </radialGradient>
+
+        {/* Chromosome gradients */}
+        <linearGradient id="chromoBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#3B82F6" />
+          <stop offset="100%" stopColor="#1D4ED8" />
+        </linearGradient>
+        <linearGradient id="chromoRed" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#EF4444" />
+          <stop offset="100%" stopColor="#DC2626" />
+        </linearGradient>
+        <linearGradient id="chromoGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#10B981" />
+          <stop offset="100%" stopColor="#059669" />
+        </linearGradient>
+        <linearGradient id="chromoOrange" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#F59E0B" />
+          <stop offset="100%" stopColor="#D97706" />
+        </linearGradient>
+
+        {/* Spindle fiber gradient */}
+        <linearGradient id="spindleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stopColor="#94A3B8" stopOpacity="0.3" />
+          <stop offset="50%" stopColor="#64748B" stopOpacity="0.6" />
+          <stop offset="100%" stopColor="#94A3B8" stopOpacity="0.3" />
+        </linearGradient>
+
+        {/* Label card gradients */}
+        <linearGradient id="mitosisCardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stopColor="#DBEAFE" />
+          <stop offset="100%" stopColor="#BFDBFE" />
+        </linearGradient>
+        <linearGradient id="meiosisCardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stopColor="#FCE7F3" />
+          <stop offset="100%" stopColor="#FBCFE8" />
+        </linearGradient>
+
+        {/* Centriole gradient */}
+        <linearGradient id="centrioleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#6366F1" />
+          <stop offset="100%" stopColor="#4F46E5" />
+        </linearGradient>
+
+        {/* Shadow filters */}
+        <filter id="cellDivShadow" x="-20%" y="-20%" width="140%" height="140%">
+          <feDropShadow dx="0" dy="4" stdDeviation="8" floodOpacity="0.12" />
+        </filter>
+        <filter id="cellShadow" x="-15%" y="-15%" width="130%" height="130%">
+          <feDropShadow dx="0" dy="2" stdDeviation="4" floodOpacity="0.15" />
+        </filter>
+        <filter id="chromoGlow" x="-30%" y="-30%" width="160%" height="160%">
+          <feGaussianBlur stdDeviation="2" result="blur" />
+          <feMerge>
+            <feMergeNode in="blur" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+        <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="3" result="blur" />
+          <feMerge>
+            <feMergeNode in="blur" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+      </defs>
+
+      {/* Background */}
+      <rect width="560" height="420" fill="url(#cellDivBgGrad)" />
+
+      {/* Decorative background elements */}
+      <circle cx="50" cy="50" r="100" fill="#A855F7" opacity="0.04" />
+      <circle cx="510" cy="370" r="120" fill="#3B82F6" opacity="0.04" />
+      <circle cx="280" cy="210" r="180" fill="#EC4899" opacity="0.03" />
+
+      {/* Title */}
+      <motion.text
+        x="280"
+        y="28"
+        textAnchor="middle"
+        fill="#1E293B"
+        fontSize="16"
+        fontWeight="700"
+        initial={animate ? { opacity: 0, y: -10 } : undefined}
+        animate={animate ? { opacity: 1, y: 0 } : undefined}
+        transition={{ delay: 0.1, duration: 0.4 }}
+      >
+        Cell Division: Mitosis vs Meiosis
+      </motion.text>
+
+      {/* MITOSIS SECTION (Left) */}
+      <motion.g
+        initial={animate ? { opacity: 0, x: -20 } : undefined}
+        animate={animate ? { opacity: 1, x: 0 } : undefined}
+        transition={{ delay: 0.2, duration: 0.6 }}
+      >
+        {/* Mitosis label card */}
+        <rect
+          x="15"
+          y="42"
+          width="255"
+          height="32"
+          rx="16"
+          fill="url(#mitosisCardGrad)"
+          filter="url(#cellDivShadow)"
+        />
+        <text x="142" y="63" textAnchor="middle" fill="#1D4ED8" fontSize="13" fontWeight="700">
+          MITOSIS
+        </text>
+        <text x="142" y="70" textAnchor="middle" fill="#3B82F6" fontSize="7">
+          (2n → 2n) Equational Division
+        </text>
+
+        {/* Interphase cell (top left) */}
+        <g transform="translate(30, 85)">
+          <ellipse
+            cx="50"
+            cy="45"
+            rx="42"
+            ry="38"
+            fill="url(#cytoplasmGrad)"
+            stroke="url(#cellMembraneGrad)"
+            strokeWidth="2.5"
+            filter="url(#cellShadow)"
+          />
+          <circle cx="50" cy="45" r="18" fill="url(#nucleusGrad)" />
+          {/* Chromatin network */}
+          <path
+            d="M42 40 Q50 35 58 40 Q55 48 50 50 Q45 48 42 40"
+            stroke="#E9D5FF"
+            strokeWidth="1.5"
+            fill="none"
+            opacity="0.8"
+          />
+          <text x="50" y="95" textAnchor="middle" fill="#64748B" fontSize="8" fontWeight="500">
+            Interphase
+          </text>
+        </g>
+
+        {/* Arrow */}
+        <motion.path
+          d="M125 130 L145 130"
+          stroke="#94A3B8"
+          strokeWidth="2"
+          markerEnd="url(#arrowhead)"
+          animate={animate ? { opacity: [0.5, 1, 0.5] } : undefined}
+          transition={{ duration: 2, repeat: Infinity }}
+        />
+        <defs>
+          <marker id="arrowhead" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+            <path d="M0,0 L6,3 L0,6 Z" fill="#94A3B8" />
+          </marker>
+        </defs>
+
+        {/* Prophase cell */}
+        <g transform="translate(150, 85)">
+          <ellipse
+            cx="50"
+            cy="45"
+            rx="42"
+            ry="38"
+            fill="url(#cytoplasmGrad)"
+            stroke="url(#cellMembraneGrad)"
+            strokeWidth="2.5"
+            filter="url(#cellShadow)"
+          />
+          {/* Chromosomes condensing */}
+          <motion.g
+            animate={animate ? { scale: [1, 1.05, 1] } : undefined}
+            transition={{ duration: 3, repeat: Infinity }}
+          >
+            <path
+              d="M40 35 L40 55"
+              stroke="url(#chromoBlue)"
+              strokeWidth="4"
+              strokeLinecap="round"
+            />
+            <path
+              d="M48 32 L48 52"
+              stroke="url(#chromoRed)"
+              strokeWidth="4"
+              strokeLinecap="round"
+            />
+            <path
+              d="M56 38 L56 58"
+              stroke="url(#chromoBlue)"
+              strokeWidth="4"
+              strokeLinecap="round"
+            />
+            <path
+              d="M64 35 L64 55"
+              stroke="url(#chromoRed)"
+              strokeWidth="4"
+              strokeLinecap="round"
+            />
+          </motion.g>
+          {/* Centrioles */}
+          <rect x="25" y="25" width="6" height="12" rx="2" fill="url(#centrioleGrad)" />
+          <rect x="70" y="58" width="6" height="12" rx="2" fill="url(#centrioleGrad)" />
+          <text x="50" y="95" textAnchor="middle" fill="#64748B" fontSize="8" fontWeight="500">
+            Prophase
+          </text>
+        </g>
+
+        {/* Metaphase cell */}
+        <g transform="translate(30, 185)">
+          <ellipse
+            cx="50"
+            cy="45"
+            rx="42"
+            ry="38"
+            fill="url(#cytoplasmGrad)"
+            stroke="url(#cellMembraneGrad)"
+            strokeWidth="2.5"
+            filter="url(#cellShadow)"
+          />
+          {/* Spindle fibers */}
+          <line x1="20" y1="15" x2="50" y2="45" stroke="url(#spindleGrad)" strokeWidth="1" />
+          <line x1="80" y1="15" x2="50" y2="45" stroke="url(#spindleGrad)" strokeWidth="1" />
+          <line x1="20" y1="75" x2="50" y2="45" stroke="url(#spindleGrad)" strokeWidth="1" />
+          <line x1="80" y1="75" x2="50" y2="45" stroke="url(#spindleGrad)" strokeWidth="1" />
+          {/* Chromosomes at metaphase plate */}
+          <motion.g
+            animate={animate ? { y: [0, -2, 0, 2, 0] } : undefined}
+            transition={{ duration: 2, repeat: Infinity }}
+          >
+            <path
+              d="M38 42 L38 48"
+              stroke="url(#chromoBlue)"
+              strokeWidth="4"
+              strokeLinecap="round"
+            />
+            <path
+              d="M46 42 L46 48"
+              stroke="url(#chromoRed)"
+              strokeWidth="4"
+              strokeLinecap="round"
+            />
+            <path
+              d="M54 42 L54 48"
+              stroke="url(#chromoBlue)"
+              strokeWidth="4"
+              strokeLinecap="round"
+            />
+            <path
+              d="M62 42 L62 48"
+              stroke="url(#chromoRed)"
+              strokeWidth="4"
+              strokeLinecap="round"
+            />
+          </motion.g>
+          {/* Metaphase plate line */}
+          <line
+            x1="30"
+            y1="45"
+            x2="70"
+            y2="45"
+            stroke="#94A3B8"
+            strokeWidth="1"
+            strokeDasharray="2"
+            opacity="0.5"
+          />
+          <text x="50" y="95" textAnchor="middle" fill="#64748B" fontSize="8" fontWeight="500">
+            Metaphase
+          </text>
+        </g>
+
+        {/* Anaphase cell */}
+        <g transform="translate(150, 185)">
+          <ellipse
+            cx="50"
+            cy="45"
+            rx="48"
+            ry="35"
+            fill="url(#cytoplasmGrad)"
+            stroke="url(#cellMembraneGrad)"
+            strokeWidth="2.5"
+            filter="url(#cellShadow)"
+          />
+          {/* Spindle fibers pulling */}
+          <line x1="15" y1="45" x2="30" y2="45" stroke="url(#spindleGrad)" strokeWidth="1" />
+          <line x1="70" y1="45" x2="85" y2="45" stroke="url(#spindleGrad)" strokeWidth="1" />
+          {/* Chromosomes separating */}
+          <motion.g
+            animate={animate ? { x: [-2, -5, -2] } : undefined}
+            transition={{ duration: 2, repeat: Infinity }}
+          >
+            <path
+              d="M28 38 L28 52"
+              stroke="url(#chromoBlue)"
+              strokeWidth="3"
+              strokeLinecap="round"
+            />
+            <path
+              d="M36 38 L36 52"
+              stroke="url(#chromoRed)"
+              strokeWidth="3"
+              strokeLinecap="round"
+            />
+          </motion.g>
+          <motion.g
+            animate={animate ? { x: [2, 5, 2] } : undefined}
+            transition={{ duration: 2, repeat: Infinity }}
+          >
+            <path
+              d="M64 38 L64 52"
+              stroke="url(#chromoBlue)"
+              strokeWidth="3"
+              strokeLinecap="round"
+            />
+            <path
+              d="M72 38 L72 52"
+              stroke="url(#chromoRed)"
+              strokeWidth="3"
+              strokeLinecap="round"
+            />
+          </motion.g>
+          <text x="50" y="92" textAnchor="middle" fill="#64748B" fontSize="8" fontWeight="500">
+            Anaphase
+          </text>
+        </g>
+
+        {/* Telophase/Cytokinesis - Two daughter cells */}
+        <g transform="translate(90, 290)">
+          {/* First daughter cell */}
+          <motion.g
+            animate={animate ? { x: [-3, 0, -3] } : undefined}
+            transition={{ duration: 3, repeat: Infinity }}
+          >
+            <ellipse
+              cx="30"
+              cy="35"
+              rx="30"
+              ry="28"
+              fill="url(#cytoplasmGrad)"
+              stroke="url(#cellMembraneGrad)"
+              strokeWidth="2"
+              filter="url(#cellShadow)"
+            />
+            <circle cx="30" cy="35" r="12" fill="url(#nucleusGrad)" opacity="0.8" />
+            <path
+              d="M24 32 L24 38"
+              stroke="url(#chromoBlue)"
+              strokeWidth="2"
+              strokeLinecap="round"
+            />
+            <path
+              d="M36 32 L36 38"
+              stroke="url(#chromoRed)"
+              strokeWidth="2"
+              strokeLinecap="round"
+            />
+          </motion.g>
+          {/* Second daughter cell */}
+          <motion.g
+            animate={animate ? { x: [3, 0, 3] } : undefined}
+            transition={{ duration: 3, repeat: Infinity }}
+          >
+            <ellipse
+              cx="90"
+              cy="35"
+              rx="30"
+              ry="28"
+              fill="url(#cytoplasmGrad)"
+              stroke="url(#cellMembraneGrad)"
+              strokeWidth="2"
+              filter="url(#cellShadow)"
+            />
+            <circle cx="90" cy="35" r="12" fill="url(#nucleusGrad)" opacity="0.8" />
+            <path
+              d="M84 32 L84 38"
+              stroke="url(#chromoBlue)"
+              strokeWidth="2"
+              strokeLinecap="round"
+            />
+            <path
+              d="M96 32 L96 38"
+              stroke="url(#chromoRed)"
+              strokeWidth="2"
+              strokeLinecap="round"
+            />
+          </motion.g>
+          <text x="60" y="78" textAnchor="middle" fill="#64748B" fontSize="8" fontWeight="500">
+            Telophase & Cytokinesis
+          </text>
+          {/* Result label */}
+          <rect x="25" y="88" width="70" height="18" rx="9" fill="#DBEAFE" />
+          <text x="60" y="100" textAnchor="middle" fill="#1D4ED8" fontSize="8" fontWeight="600">
+            2 Diploid Cells
+          </text>
+        </g>
+      </motion.g>
+
+      {/* Divider line */}
+      <line
+        x1="280"
+        y1="50"
+        x2="280"
+        y2="390"
+        stroke="#E2E8F0"
+        strokeWidth="2"
+        strokeDasharray="6"
+      />
+
+      {/* MEIOSIS SECTION (Right) */}
+      <motion.g
+        initial={animate ? { opacity: 0, x: 20 } : undefined}
+        animate={animate ? { opacity: 1, x: 0 } : undefined}
+        transition={{ delay: 0.3, duration: 0.6 }}
+      >
+        {/* Meiosis label card */}
+        <rect
+          x="290"
+          y="42"
+          width="255"
+          height="32"
+          rx="16"
+          fill="url(#meiosisCardGrad)"
+          filter="url(#cellDivShadow)"
+        />
+        <text x="417" y="63" textAnchor="middle" fill="#BE185D" fontSize="13" fontWeight="700">
+          MEIOSIS
+        </text>
+        <text x="417" y="70" textAnchor="middle" fill="#DB2777" fontSize="7">
+          (2n → n) Reductional Division
+        </text>
+
+        {/* Meiosis I - Prophase I with crossing over */}
+        <g transform="translate(300, 85)">
+          <ellipse
+            cx="45"
+            cy="42"
+            rx="38"
+            ry="35"
+            fill="url(#cytoplasmGrad)"
+            stroke="url(#cellMembraneGrad)"
+            strokeWidth="2"
+            filter="url(#cellShadow)"
+          />
+          {/* Bivalents with crossing over */}
+          <motion.g
+            animate={animate ? { rotate: [0, 5, 0, -5, 0] } : undefined}
+            transition={{ duration: 4, repeat: Infinity }}
+            style={{ transformOrigin: '45px 42px' }}
+          >
+            {/* Homologous pair 1 with chiasma */}
+            <path
+              d="M32 30 L32 40 Q40 45 32 50 L32 55"
+              stroke="url(#chromoBlue)"
+              strokeWidth="3"
+              strokeLinecap="round"
+              fill="none"
+            />
+            <path
+              d="M38 30 L38 40 Q30 45 38 50 L38 55"
+              stroke="url(#chromoRed)"
+              strokeWidth="3"
+              strokeLinecap="round"
+              fill="none"
+            />
+            {/* Homologous pair 2 */}
+            <path
+              d="M52 30 L52 40 Q60 45 52 50 L52 55"
+              stroke="url(#chromoGreen)"
+              strokeWidth="3"
+              strokeLinecap="round"
+              fill="none"
+            />
+            <path
+              d="M58 30 L58 40 Q50 45 58 50 L58 55"
+              stroke="url(#chromoOrange)"
+              strokeWidth="3"
+              strokeLinecap="round"
+              fill="none"
+            />
+          </motion.g>
+          <text x="45" y="88" textAnchor="middle" fill="#64748B" fontSize="7" fontWeight="500">
+            Prophase I
+          </text>
+          <text x="45" y="96" textAnchor="middle" fill="#94A3B8" fontSize="6">
+            (Crossing Over)
+          </text>
+        </g>
+
+        {/* Metaphase I */}
+        <g transform="translate(395, 85)">
+          <ellipse
+            cx="45"
+            cy="42"
+            rx="38"
+            ry="35"
+            fill="url(#cytoplasmGrad)"
+            stroke="url(#cellMembraneGrad)"
+            strokeWidth="2"
+            filter="url(#cellShadow)"
+          />
+          {/* Bivalents aligned */}
+          <motion.g
+            animate={animate ? { y: [0, -1, 0, 1, 0] } : undefined}
+            transition={{ duration: 2, repeat: Infinity }}
+          >
+            <path
+              d="M30 38 L30 46"
+              stroke="url(#chromoBlue)"
+              strokeWidth="3"
+              strokeLinecap="round"
+            />
+            <path
+              d="M36 38 L36 46"
+              stroke="url(#chromoRed)"
+              strokeWidth="3"
+              strokeLinecap="round"
+            />
+            <path
+              d="M54 38 L54 46"
+              stroke="url(#chromoGreen)"
+              strokeWidth="3"
+              strokeLinecap="round"
+            />
+            <path
+              d="M60 38 L60 46"
+              stroke="url(#chromoOrange)"
+              strokeWidth="3"
+              strokeLinecap="round"
+            />
+          </motion.g>
+          <line
+            x1="25"
+            y1="42"
+            x2="65"
+            y2="42"
+            stroke="#94A3B8"
+            strokeWidth="1"
+            strokeDasharray="2"
+            opacity="0.5"
+          />
+          <text x="45" y="88" textAnchor="middle" fill="#64748B" fontSize="7" fontWeight="500">
+            Metaphase I
+          </text>
+        </g>
+
+        {/* Anaphase I - Homologs separate */}
+        <g transform="translate(300, 175)">
+          <ellipse
+            cx="45"
+            cy="38"
+            rx="42"
+            ry="32"
+            fill="url(#cytoplasmGrad)"
+            stroke="url(#cellMembraneGrad)"
+            strokeWidth="2"
+            filter="url(#cellShadow)"
+          />
+          <motion.g
+            animate={animate ? { x: [-2, -4, -2] } : undefined}
+            transition={{ duration: 2, repeat: Infinity }}
+          >
+            <path
+              d="M22 32 L22 44"
+              stroke="url(#chromoBlue)"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+            />
+            <path
+              d="M30 32 L30 44"
+              stroke="url(#chromoGreen)"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+            />
+          </motion.g>
+          <motion.g
+            animate={animate ? { x: [2, 4, 2] } : undefined}
+            transition={{ duration: 2, repeat: Infinity }}
+          >
+            <path
+              d="M60 32 L60 44"
+              stroke="url(#chromoRed)"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+            />
+            <path
+              d="M68 32 L68 44"
+              stroke="url(#chromoOrange)"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+            />
+          </motion.g>
+          <text x="45" y="82" textAnchor="middle" fill="#64748B" fontSize="7" fontWeight="500">
+            Anaphase I
+          </text>
+        </g>
+
+        {/* Telophase I - Two haploid cells */}
+        <g transform="translate(395, 175)">
+          <motion.ellipse
+            cx="25"
+            cy="38"
+            rx="22"
+            ry="25"
+            fill="url(#cytoplasmGrad)"
+            stroke="url(#cellMembraneGrad)"
+            strokeWidth="2"
+            filter="url(#cellShadow)"
+            animate={animate ? { x: [-1, 0, -1] } : undefined}
+            transition={{ duration: 2, repeat: Infinity }}
+          />
+          <motion.ellipse
+            cx="65"
+            cy="38"
+            rx="22"
+            ry="25"
+            fill="url(#cytoplasmGrad)"
+            stroke="url(#cellMembraneGrad)"
+            strokeWidth="2"
+            filter="url(#cellShadow)"
+            animate={animate ? { x: [1, 0, 1] } : undefined}
+            transition={{ duration: 2, repeat: Infinity }}
+          />
+          <circle cx="25" cy="38" r="8" fill="url(#nucleusGrad)" opacity="0.7" />
+          <circle cx="65" cy="38" r="8" fill="url(#nucleusGrad)" opacity="0.7" />
+          <path d="M22 35 L22 41" stroke="url(#chromoBlue)" strokeWidth="2" strokeLinecap="round" />
+          <path
+            d="M28 35 L28 41"
+            stroke="url(#chromoGreen)"
+            strokeWidth="2"
+            strokeLinecap="round"
+          />
+          <path d="M62 35 L62 41" stroke="url(#chromoRed)" strokeWidth="2" strokeLinecap="round" />
+          <path
+            d="M68 35 L68 41"
+            stroke="url(#chromoOrange)"
+            strokeWidth="2"
+            strokeLinecap="round"
+          />
+          <text x="45" y="75" textAnchor="middle" fill="#64748B" fontSize="7" fontWeight="500">
+            Telophase I
+          </text>
+        </g>
+
+        {/* Meiosis II label */}
+        <rect
+          x="350"
+          y="250"
+          width="80"
+          height="16"
+          rx="8"
+          fill="#FDF2F8"
+          stroke="#FBCFE8"
+          strokeWidth="1"
+        />
+        <text x="390" y="261" textAnchor="middle" fill="#BE185D" fontSize="8" fontWeight="600">
+          Meiosis II
+        </text>
+
+        {/* Final result - Four haploid cells */}
+        <g transform="translate(305, 275)">
+          {/* Cell 1 */}
+          <motion.g
+            animate={animate ? { scale: [1, 1.02, 1] } : undefined}
+            transition={{ duration: 2, repeat: Infinity, delay: 0 }}
+          >
+            <ellipse
+              cx="28"
+              cy="32"
+              rx="22"
+              ry="24"
+              fill="url(#cytoplasmGrad)"
+              stroke="url(#cellMembraneGrad)"
+              strokeWidth="1.5"
+              filter="url(#cellShadow)"
+            />
+            <circle cx="28" cy="32" r="8" fill="url(#nucleusGrad)" opacity="0.7" />
+            <path
+              d="M26 30 L26 34"
+              stroke="url(#chromoBlue)"
+              strokeWidth="2"
+              strokeLinecap="round"
+            />
+          </motion.g>
+          {/* Cell 2 */}
+          <motion.g
+            animate={animate ? { scale: [1, 1.02, 1] } : undefined}
+            transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
+          >
+            <ellipse
+              cx="78"
+              cy="32"
+              rx="22"
+              ry="24"
+              fill="url(#cytoplasmGrad)"
+              stroke="url(#cellMembraneGrad)"
+              strokeWidth="1.5"
+              filter="url(#cellShadow)"
+            />
+            <circle cx="78" cy="32" r="8" fill="url(#nucleusGrad)" opacity="0.7" />
+            <path
+              d="M76 30 L76 34"
+              stroke="url(#chromoGreen)"
+              strokeWidth="2"
+              strokeLinecap="round"
+            />
+          </motion.g>
+          {/* Cell 3 */}
+          <motion.g
+            animate={animate ? { scale: [1, 1.02, 1] } : undefined}
+            transition={{ duration: 2, repeat: Infinity, delay: 1.0 }}
+          >
+            <ellipse
+              cx="128"
+              cy="32"
+              rx="22"
+              ry="24"
+              fill="url(#cytoplasmGrad)"
+              stroke="url(#cellMembraneGrad)"
+              strokeWidth="1.5"
+              filter="url(#cellShadow)"
+            />
+            <circle cx="128" cy="32" r="8" fill="url(#nucleusGrad)" opacity="0.7" />
+            <path
+              d="M126 30 L126 34"
+              stroke="url(#chromoRed)"
+              strokeWidth="2"
+              strokeLinecap="round"
+            />
+          </motion.g>
+          {/* Cell 4 */}
+          <motion.g
+            animate={animate ? { scale: [1, 1.02, 1] } : undefined}
+            transition={{ duration: 2, repeat: Infinity, delay: 1.5 }}
+          >
+            <ellipse
+              cx="178"
+              cy="32"
+              rx="22"
+              ry="24"
+              fill="url(#cytoplasmGrad)"
+              stroke="url(#cellMembraneGrad)"
+              strokeWidth="1.5"
+              filter="url(#cellShadow)"
+            />
+            <circle cx="178" cy="32" r="8" fill="url(#nucleusGrad)" opacity="0.7" />
+            <path
+              d="M176 30 L176 34"
+              stroke="url(#chromoOrange)"
+              strokeWidth="2"
+              strokeLinecap="round"
+            />
+          </motion.g>
+
+          {/* Result label */}
+          <rect x="55" y="70" width="95" height="18" rx="9" fill="#FCE7F3" />
+          <text x="102" y="82" textAnchor="middle" fill="#BE185D" fontSize="8" fontWeight="600">
+            4 Haploid Cells (n)
+          </text>
+        </g>
+      </motion.g>
+
+      {/* Key differences box at bottom */}
+      <motion.g
+        initial={animate ? { opacity: 0, y: 20 } : undefined}
+        animate={animate ? { opacity: 1, y: 0 } : undefined}
+        transition={{ delay: 0.5, duration: 0.5 }}
+      >
+        <rect
+          x="15"
+          y="385"
+          width="530"
+          height="28"
+          rx="8"
+          fill="white"
+          fillOpacity="0.9"
+          filter="url(#cellDivShadow)"
+        />
+        <text x="280" y="402" textAnchor="middle" fill="#475569" fontSize="8" fontWeight="500">
+          <tspan fill="#1D4ED8" fontWeight="700">
+            Mitosis:
+          </tspan>{' '}
+          Growth & Repair (2n→2n) |{' '}
+          <tspan fill="#BE185D" fontWeight="700">
+            Meiosis:
+          </tspan>{' '}
+          Gamete Formation (2n→n) with Genetic Variation
+        </text>
+      </motion.g>
+    </Wrapper>
+  )
+}
+
 // Export all illustrations
 export default {
   KotaVsOnlineIllustration,
@@ -8716,4 +9548,5 @@ export default {
   TwoYearProgramIllustration,
   SpecializedVsMassIllustration,
   BiomoleculesIllustration,
+  CellDivisionIllustration,
 }
