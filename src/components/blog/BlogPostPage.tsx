@@ -74,6 +74,7 @@ import {
   HumanDigestionIllustration,
   RespirationIllustration,
   CirculationIllustration,
+  ExcretorySystemIllustration,
 } from '@/components/illustrations/BlogIllustrations'
 
 type IllustrationComponent = React.ComponentType<{ className?: string; animate?: boolean }>
@@ -101,7 +102,7 @@ const illustrationMap: Record<string, IllustrationComponent> = {
   'human-digestion-absorption-neet': HumanDigestionIllustration,
   'breathing-gas-exchange-neet-notes': RespirationIllustration,
   'body-fluids-circulation-neet': CirculationIllustration,
-  'excretory-system-neet-notes': HumanPhysiologyIllustration,
+  'excretory-system-neet-notes': ExcretorySystemIllustration,
   'nervous-system-neet-biology': HumanPhysiologyIllustration,
   'plant-kingdom-classification-neet': PlantKingdomIllustration,
   'neet-biology-preparation-strategy-score-180-plus': NEET180StrategyIllustration,
