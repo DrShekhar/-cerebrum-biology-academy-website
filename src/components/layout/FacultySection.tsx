@@ -187,9 +187,9 @@ export function FacultySection() {
             <div className="w-12 xs:w-14 sm:w-16 h-12 xs:h-14 sm:h-16 mx-auto mb-3 xs:mb-4 bg-blue-100 rounded-full flex items-center justify-center">
               <BookOpen className="w-6 xs:w-7 sm:w-8 h-6 xs:h-7 sm:h-8 text-blue-600" />
             </div>
-            <h4 className="text-base xs:text-lg sm:text-xl font-bold text-gray-900 mb-2 xs:mb-3">
+            <h3 className="text-base xs:text-lg sm:text-xl font-bold text-gray-900 mb-2 xs:mb-3">
               Conceptual Teaching
-            </h4>
+            </h3>
             <p className="text-sm xs:text-base text-gray-600">
               Deep understanding through concept-based learning rather than rote memorization
             </p>
@@ -199,9 +199,9 @@ export function FacultySection() {
             <div className="w-12 xs:w-14 sm:w-16 h-12 xs:h-14 sm:h-16 mx-auto mb-3 xs:mb-4 bg-purple-100 rounded-full flex items-center justify-center">
               <Target className="w-6 xs:w-7 sm:w-8 h-6 xs:h-7 sm:h-8 text-purple-600" />
             </div>
-            <h4 className="text-base xs:text-lg sm:text-xl font-bold text-gray-900 mb-2 xs:mb-3">
+            <h3 className="text-base xs:text-lg sm:text-xl font-bold text-gray-900 mb-2 xs:mb-3">
               NEET Focused
-            </h4>
+            </h3>
             <p className="text-sm xs:text-base text-gray-600">
               Strategic approach aligned with NEET exam patterns and high-yield topics
             </p>
@@ -211,9 +211,9 @@ export function FacultySection() {
             <div className="w-12 xs:w-14 sm:w-16 h-12 xs:h-14 sm:h-16 mx-auto mb-3 xs:mb-4 bg-green-100 rounded-full flex items-center justify-center">
               <Heart className="w-6 xs:w-7 sm:w-8 h-6 xs:h-7 sm:h-8 text-green-600" />
             </div>
-            <h4 className="text-base xs:text-lg sm:text-xl font-bold text-gray-900 mb-2 xs:mb-3">
+            <h3 className="text-base xs:text-lg sm:text-xl font-bold text-gray-900 mb-2 xs:mb-3">
               Personal Mentoring
-            </h4>
+            </h3>
             <p className="text-sm xs:text-base text-gray-600">
               Individual attention and personalized guidance for every student&apos;s success
             </p>

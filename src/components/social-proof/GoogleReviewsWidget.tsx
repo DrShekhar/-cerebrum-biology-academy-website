@@ -260,7 +260,7 @@ export function GoogleReviewsWidget({
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center justify-between mb-1">
-                    <h4 className="font-semibold text-gray-900">{review.authorName}</h4>
+                    <p className="font-semibold text-gray-900">{review.authorName}</p>
                     {review.verified && (
                       <div className="flex items-center bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs font-medium">
                         <ThumbsUp className="w-3 h-3 mr-1" />

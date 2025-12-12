@@ -156,7 +156,7 @@ export function TestimonialCarousel() {
 
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-2">
-                    <h4 className="font-semibold text-gray-900">{currentTestimonial.name}</h4>
+                    <p className="font-semibold text-gray-900">{currentTestimonial.name}</p>
                     {currentTestimonial.verified && (
                       <BadgeCheck className="w-4 h-4 text-blue-600" aria-label="Verified student" />
                     )}
