@@ -323,26 +323,35 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
 
               {/* Featured Image */}
               <motion.div
-                className="w-full bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 rounded-3xl mb-12 flex items-center justify-center"
+                className="relative w-full aspect-[16/10] md:aspect-[16/9] bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 rounded-2xl md:rounded-3xl mb-12 overflow-hidden shadow-lg shadow-blue-100/50"
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                {illustrationMap[meta.slug] ? (
-                  (() => {
-                    const IllustrationComponent = illustrationMap[meta.slug]
-                    return (
-                      <IllustrationComponent className="w-full h-auto rounded-3xl" animate={true} />
-                    )
-                  })()
-                ) : (
-                  <div className="flex flex-col items-center justify-center text-gray-400 py-24">
-                    <BookOpen className="w-16 h-16 mb-4" />
-                    <span className="text-sm font-medium">
-                      {meta.neetChapter || 'NEET Biology'}
-                    </span>
-                  </div>
-                )}
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.08),transparent_50%)]" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(139,92,246,0.06),transparent_50%)]" />
+                <div className="absolute inset-0 p-6 md:p-10 lg:p-12 flex items-center justify-center">
+                  {illustrationMap[meta.slug] ? (
+                    (() => {
+                      const IllustrationComponent = illustrationMap[meta.slug]
+                      return (
+                        <IllustrationComponent
+                          className="w-full h-full max-w-4xl drop-shadow-sm"
+                          animate={true}
+                        />
+                      )
+                    })()
+                  ) : (
+                    <div className="flex flex-col items-center justify-center text-slate-400">
+                      <div className="w-20 h-20 rounded-2xl bg-white/80 shadow-lg flex items-center justify-center mb-4">
+                        <BookOpen className="w-10 h-10 text-blue-500" />
+                      </div>
+                      <span className="text-sm font-medium text-slate-500">
+                        {meta.neetChapter || 'NEET Biology'}
+                      </span>
+                    </div>
+                  )}
+                </div>
               </motion.div>
 
               {/* Key Takeaways */}
