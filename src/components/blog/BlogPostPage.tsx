@@ -28,6 +28,7 @@ import { ArticleSchema, BreadcrumbSchema } from '@/components/seo/ArticleSchema'
 import { BlogLeadCapture } from './BlogLeadCapture'
 import { BlogExitIntentWrapper } from './BlogExitIntentWrapper'
 import { FloatingCTA } from '@/components/common/FloatingCTA'
+import { BlogWhatsAppQuery } from './BlogWhatsAppQuery'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import {
@@ -608,8 +609,12 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
         {relatedPosts.length > 0 && <RelatedPosts posts={relatedPosts} />}
       </div>
 
-      {/* Floating CTA */}
-      <FloatingCTA />
+      {/* WhatsApp Query Button */}
+      <BlogWhatsAppQuery
+        blogTitle={meta.title}
+        blogSlug={meta.slug}
+        neetChapter={meta.neetChapter}
+      />
 
       {/* Exit Intent Popup */}
       <BlogExitIntentWrapper articleSlug={meta.slug} />

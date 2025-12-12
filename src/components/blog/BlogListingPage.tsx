@@ -1,15 +1,32 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useCallback, useEffect } from 'react'
 import { Button } from '@/components/ui/Button'
 import { BlogPostMeta, BlogCategory, Difficulty } from '@/types/blog'
 import { blogCategories } from '@/lib/blog/mdx'
-import { Clock, Eye, Calendar, User, Search, Filter, BookOpen, TrendingUp } from 'lucide-react'
+import { Clock, Eye, Calendar, User, Search, Filter, BookOpen, TrendingUp, X } from 'lucide-react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { DifficultyBadge } from './DifficultyBadge'
 import { NEETTopicBadge } from './NEETTopicBadge'
 import { BlogPagination } from './BlogPagination'
+
+// Debounce hook for search
+function useDebounce<T>(value: T, delay: number): T {
+  const [debouncedValue, setDebouncedValue] = useState<T>(value)
+
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      setDebouncedValue(value)
+    }, delay)
+
+    return () => {
+      clearTimeout(handler)
+    }
+  }, [value, delay])
+
+  return debouncedValue
+}
 
 interface BlogListingPageProps {
   posts: BlogPostMeta[]
@@ -28,17 +45,31 @@ export function BlogListingPage({ posts, categories, stats }: BlogListingPagePro
   const [selectedCategory, setSelectedCategory] = useState<string>('all')
   const [selectedDifficulty, setSelectedDifficulty] = useState<Difficulty | 'all'>('all')
   const [searchTerm, setSearchTerm] = useState('')
+  const [searchInput, setSearchInput] = useState('')
   const [currentPage, setCurrentPage] = useState(1)
+  const [isSearching, setIsSearching] = useState(false)
+
+  // Debounce search input for better performance
+  const debouncedSearch = useDebounce(searchInput, 300)
+
+  // Update search term when debounced value changes
+  useEffect(() => {
+    setSearchTerm(debouncedSearch)
+    setIsSearching(false)
+  }, [debouncedSearch])
 
   const filteredPosts = useMemo(() => {
     return posts.filter((post) => {
       const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory
       const matchesDifficulty =
         selectedDifficulty === 'all' || post.difficulty === selectedDifficulty
+      const searchLower = searchTerm.toLowerCase()
       const matchesSearch =
-        post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        post.tags.some((tag) => tag.toLowerCase().includes(searchTerm.toLowerCase()))
+        searchTerm === '' ||
+        post.title.toLowerCase().includes(searchLower) ||
+        post.excerpt.toLowerCase().includes(searchLower) ||
+        post.tags.some((tag) => tag.toLowerCase().includes(searchLower)) ||
+        (post.neetChapter && post.neetChapter.toLowerCase().includes(searchLower))
       return matchesCategory && matchesDifficulty && matchesSearch && post.isPublished
     })
   }, [posts, selectedCategory, selectedDifficulty, searchTerm])
@@ -120,18 +151,36 @@ export function BlogListingPage({ posts, categories, stats }: BlogListingPagePro
           <div className="bg-white rounded-3xl shadow-lg p-8 mb-12">
             <div className="flex flex-col lg:flex-row gap-6 items-center">
               {/* Search Bar */}
-              <div className="flex-1 relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+              <div className="flex-1 w-full relative">
+                <Search
+                  className={`absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 transition-colors ${isSearching ? 'text-blue-500 animate-pulse' : 'text-gray-400'}`}
+                />
                 <input
                   type="text"
                   placeholder="Search articles, topics, or keywords..."
-                  value={searchTerm}
+                  value={searchInput}
                   onChange={(e) => {
-                    setSearchTerm(e.target.value)
+                    setSearchInput(e.target.value)
+                    setIsSearching(true)
                     handleFilterChange()
                   }}
-                  className="w-full pl-12 pr-4 py-4 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full pl-12 pr-12 py-4 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base"
+                  aria-label="Search blog articles"
+                  autoComplete="off"
                 />
+                {searchInput && (
+                  <button
+                    onClick={() => {
+                      setSearchInput('')
+                      setSearchTerm('')
+                      handleFilterChange()
+                    }}
+                    className="absolute right-4 top-1/2 transform -translate-y-1/2 w-6 h-6 flex items-center justify-center rounded-full bg-gray-200 hover:bg-gray-300 transition-colors"
+                    aria-label="Clear search"
+                  >
+                    <X className="w-4 h-4 text-gray-600" />
+                  </button>
+                )}
               </div>
 
               {/* Category Filter */}
@@ -225,6 +274,7 @@ export function BlogListingPage({ posts, categories, stats }: BlogListingPagePro
               <p className="text-gray-600 mb-6">Try adjusting your search or category filter</p>
               <Button
                 onClick={() => {
+                  setSearchInput('')
                   setSearchTerm('')
                   setSelectedCategory('all')
                   setSelectedDifficulty('all')

@@ -13390,87 +13390,168 @@ export function RespirationIllustration({ className = '', animate = true }: Illu
           </text>
         </g>
 
-        {/* Left Lung */}
+        {/* Left Lung - Realistic anatomical shape with 2 lobes */}
         <motion.g
-          animate={animate ? { scale: [1, 1.03, 1] } : undefined}
+          animate={animate ? { scale: [1, 1.02, 1] } : undefined}
           transition={{ duration: 3, repeat: Infinity }}
-          style={{ transformOrigin: '60px 280px' }}
+          style={{ transformOrigin: '55px 290px' }}
         >
+          {/* Left lung outer shape - 2 lobes, cardiac notch */}
           <path
-            d="M20 220 Q10 240 15 290 Q20 340 50 360 Q80 375 100 350 Q115 320 110 270 Q105 230 85 215 Q65 200 40 210 Q25 215 20 220 Z"
+            d="M95 215
+               C85 218 75 225 70 235
+               Q60 250 55 270
+               Q50 295 55 320
+               Q60 345 70 355
+               Q80 365 90 368
+               Q100 370 105 365
+               L105 330
+               Q102 320 100 310
+               Q95 295 98 280
+               Q100 265 105 255
+               L105 230
+               Q100 220 95 215 Z"
             fill="url(#lungGrad)"
             filter="url(#organShadow2)"
           />
+          {/* Left lung upper lobe highlight */}
           <path
-            d="M30 235 Q25 255 28 290 Q32 325 55 340 Q75 350 90 335 Q100 315 98 275 Q95 245 80 235 Q65 225 45 230 Q35 232 30 235 Z"
+            d="M90 225 Q80 235 75 250 Q70 270 75 285 Q80 275 85 265 Q90 250 92 235 Q92 228 90 225 Z"
             fill="url(#lungInnerGrad)"
+            opacity="0.7"
           />
-          {/* Bronchioles inside */}
+          {/* Left lung lower lobe highlight */}
           <path
-            d="M85 215 Q70 240 60 270 Q55 290 58 310"
-            stroke="#F9A8D4"
-            strokeWidth="2"
-            fill="none"
+            d="M75 300 Q70 315 72 335 Q75 350 85 358 Q95 362 100 355 Q100 340 95 320 Q90 305 80 300 Z"
+            fill="url(#lungInnerGrad)"
+            opacity="0.7"
           />
-          <path d="M60 270 Q45 280 40 300" stroke="#F9A8D4" strokeWidth="1.5" fill="none" />
-          <path d="M60 270 Q75 285 80 305" stroke="#F9A8D4" strokeWidth="1.5" fill="none" />
+          {/* Horizontal fissure line */}
+          <path
+            d="M60 290 Q75 285 100 290"
+            stroke="#DB2777"
+            strokeWidth="1.5"
+            fill="none"
+            strokeDasharray="3,2"
+          />
+          {/* Bronchiole tree */}
+          <path d="M95 220 Q85 245 80 270" stroke="#F9A8D4" strokeWidth="2.5" fill="none" />
+          <path d="M80 270 Q70 285 65 310" stroke="#F9A8D4" strokeWidth="2" fill="none" />
+          <path d="M80 270 Q85 290 90 315" stroke="#F9A8D4" strokeWidth="2" fill="none" />
+          <path d="M65 310 Q58 325 55 340" stroke="#F9A8D4" strokeWidth="1.5" fill="none" />
+          <path d="M65 310 Q70 330 75 350" stroke="#F9A8D4" strokeWidth="1.5" fill="none" />
+          <path d="M90 315 Q95 335 92 355" stroke="#F9A8D4" strokeWidth="1.5" fill="none" />
+          {/* Alveoli clusters (small circles) */}
+          <circle cx="55" cy="345" r="3" fill="#FCE7F3" stroke="#F9A8D4" strokeWidth="0.5" />
+          <circle cx="62" cy="352" r="2.5" fill="#FCE7F3" stroke="#F9A8D4" strokeWidth="0.5" />
+          <circle cx="75" cy="355" r="3" fill="#FCE7F3" stroke="#F9A8D4" strokeWidth="0.5" />
+          <circle cx="90" cy="358" r="2.5" fill="#FCE7F3" stroke="#F9A8D4" strokeWidth="0.5" />
+          <circle cx="68" cy="340" r="2" fill="#FCE7F3" stroke="#F9A8D4" strokeWidth="0.5" />
         </motion.g>
 
-        {/* Right Lung */}
+        {/* Right Lung - Realistic anatomical shape with 3 lobes */}
         <motion.g
-          animate={animate ? { scale: [1, 1.03, 1] } : undefined}
+          animate={animate ? { scale: [1, 1.02, 1] } : undefined}
           transition={{ duration: 3, repeat: Infinity, delay: 0.1 }}
-          style={{ transformOrigin: '170px 280px' }}
+          style={{ transformOrigin: '170px 290px' }}
         >
+          {/* Right lung outer shape - 3 lobes, larger */}
           <path
-            d="M210 220 Q220 240 215 290 Q210 340 180 360 Q150 375 130 350 Q115 320 120 270 Q125 230 145 215 Q165 200 190 210 Q205 215 210 220 Z"
+            d="M125 215
+               C135 218 145 225 155 235
+               Q170 250 180 270
+               Q190 295 185 325
+               Q180 350 170 360
+               Q155 370 140 368
+               Q125 365 120 355
+               Q115 340 118 315
+               Q120 290 125 265
+               Q128 240 125 215 Z"
             fill="url(#lungGrad)"
             filter="url(#organShadow2)"
           />
+          {/* Right lung upper lobe highlight */}
           <path
-            d="M200 235 Q205 255 202 290 Q198 325 175 340 Q155 350 140 335 Q130 315 132 275 Q135 245 150 235 Q165 225 185 230 Q195 232 200 235 Z"
+            d="M135 225 Q145 235 155 250 Q160 265 155 275 Q145 270 140 255 Q135 240 135 225 Z"
             fill="url(#lungInnerGrad)"
+            opacity="0.7"
           />
-          {/* Bronchioles inside */}
+          {/* Right lung middle lobe highlight */}
           <path
-            d="M145 215 Q160 240 170 270 Q175 290 172 310"
-            stroke="#F9A8D4"
-            strokeWidth="2"
-            fill="none"
+            d="M160 285 Q170 295 175 310 Q175 320 168 325 Q158 318 155 305 Q155 292 160 285 Z"
+            fill="url(#lungInnerGrad)"
+            opacity="0.7"
           />
-          <path d="M170 270 Q185 280 190 300" stroke="#F9A8D4" strokeWidth="1.5" fill="none" />
-          <path d="M170 270 Q155 285 150 305" stroke="#F9A8D4" strokeWidth="1.5" fill="none" />
+          {/* Right lung lower lobe highlight */}
+          <path
+            d="M140 335 Q150 345 160 355 Q155 362 145 362 Q130 358 125 345 Q128 338 140 335 Z"
+            fill="url(#lungInnerGrad)"
+            opacity="0.7"
+          />
+          {/* Horizontal fissure (upper) */}
+          <path
+            d="M125 275 Q145 270 175 280"
+            stroke="#DB2777"
+            strokeWidth="1.5"
+            fill="none"
+            strokeDasharray="3,2"
+          />
+          {/* Oblique fissure (lower) */}
+          <path
+            d="M130 330 Q155 320 180 335"
+            stroke="#DB2777"
+            strokeWidth="1.5"
+            fill="none"
+            strokeDasharray="3,2"
+          />
+          {/* Bronchiole tree */}
+          <path d="M125 220 Q140 245 150 270" stroke="#F9A8D4" strokeWidth="2.5" fill="none" />
+          <path d="M150 270 Q160 285 170 310" stroke="#F9A8D4" strokeWidth="2" fill="none" />
+          <path d="M150 270 Q145 290 140 320" stroke="#F9A8D4" strokeWidth="2" fill="none" />
+          <path d="M170 310 Q175 330 170 350" stroke="#F9A8D4" strokeWidth="1.5" fill="none" />
+          <path d="M170 310 Q160 330 155 355" stroke="#F9A8D4" strokeWidth="1.5" fill="none" />
+          <path d="M140 320 Q130 340 125 355" stroke="#F9A8D4" strokeWidth="1.5" fill="none" />
+          {/* Alveoli clusters */}
+          <circle cx="170" cy="355" r="3" fill="#FCE7F3" stroke="#F9A8D4" strokeWidth="0.5" />
+          <circle cx="155" cy="360" r="2.5" fill="#FCE7F3" stroke="#F9A8D4" strokeWidth="0.5" />
+          <circle cx="140" cy="358" r="3" fill="#FCE7F3" stroke="#F9A8D4" strokeWidth="0.5" />
+          <circle cx="125" cy="355" r="2.5" fill="#FCE7F3" stroke="#F9A8D4" strokeWidth="0.5" />
+          <circle cx="162" cy="345" r="2" fill="#FCE7F3" stroke="#F9A8D4" strokeWidth="0.5" />
+          <circle cx="132" cy="348" r="2" fill="#FCE7F3" stroke="#F9A8D4" strokeWidth="0.5" />
         </motion.g>
 
         {/* Labels */}
-        <text x="60" y="385" textAnchor="middle" fill="#64748B" fontSize="8" fontWeight="600">
+        <text x="75" y="385" textAnchor="middle" fill="#64748B" fontSize="8" fontWeight="600">
           Left Lung
         </text>
-        <text x="170" y="385" textAnchor="middle" fill="#64748B" fontSize="8" fontWeight="600">
+        <text x="155" y="385" textAnchor="middle" fill="#64748B" fontSize="8" fontWeight="600">
           Right Lung
         </text>
+        <text x="115" y="400" textAnchor="middle" fill="#64748B" fontSize="6" fontStyle="italic">
+          Inhale ↔ Exhale
+        </text>
 
-        {/* Diaphragm */}
+        {/* Diaphragm - curved muscular sheet */}
         <motion.path
-          d="M5 365 Q60 390 115 375 Q170 390 225 365"
+          d="M45 372 Q75 395 115 380 Q155 395 185 372"
           stroke="#94A3B8"
-          strokeWidth="4"
+          strokeWidth="6"
           fill="none"
           strokeLinecap="round"
           animate={
             animate
               ? {
                   d: [
-                    'M5 365 Q60 390 115 375 Q170 390 225 365',
-                    'M5 370 Q60 380 115 370 Q170 380 225 370',
-                    'M5 365 Q60 390 115 375 Q170 390 225 365',
+                    'M45 372 Q75 395 115 380 Q155 395 185 372',
+                    'M45 378 Q75 388 115 378 Q155 388 185 378',
+                    'M45 372 Q75 395 115 380 Q155 395 185 372',
                   ],
                 }
               : undefined
           }
           transition={{ duration: 3, repeat: Infinity }}
         />
-        <text x="115" y="400" textAnchor="middle" fill="#64748B" fontSize="7">
+        <text x="115" y="410" textAnchor="middle" fill="#64748B" fontSize="7" fontWeight="500">
           Diaphragm
         </text>
       </motion.g>
