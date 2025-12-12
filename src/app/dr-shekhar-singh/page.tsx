@@ -1097,10 +1097,10 @@ export default function DrShekharSinghPage() {
               <div className="text-center mb-8">
                 <Link
                   href="/demo-booking"
-                  className="inline-flex items-center justify-center bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white font-bold px-10 py-5 rounded-xl shadow-2xl transition-all transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-yellow-400 text-lg"
+                  className="inline-flex items-center justify-center bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white font-bold px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-xl shadow-2xl transition-all transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-yellow-400 text-base sm:text-lg w-full sm:w-auto"
                 >
-                  <BookOpen className="w-6 h-6 mr-3" />
-                  Book Free Demo Class Now
+                  <BookOpen className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3 flex-shrink-0" />
+                  <span className="whitespace-nowrap">Book Free Demo</span>
                 </Link>
               </div>
 

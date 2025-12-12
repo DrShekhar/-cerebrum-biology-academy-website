@@ -241,18 +241,18 @@ export default async function BiologyNotesIndexPage() {
                 Join our complete NEET Biology program with live classes, personalized guidance, and
                 proven strategies by Dr. Shekhar C Singh
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
                 <Link
                   href="/demo-booking"
-                  className="inline-block bg-white text-blue-600 px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-colors"
+                  className="inline-block bg-white text-blue-600 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold hover:bg-gray-100 transition-colors text-center"
                 >
-                  Book Free Demo Class
+                  Book Free Demo
                 </Link>
                 <Link
                   href="/courses/neet-dropper"
-                  className="inline-block bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white/10 transition-colors"
+                  className="inline-block bg-transparent border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold hover:bg-white/10 transition-colors text-center"
                 >
-                  View All Courses
+                  View Courses
                 </Link>
               </div>
             </div>

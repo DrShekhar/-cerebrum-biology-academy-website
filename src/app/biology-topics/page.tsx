@@ -171,9 +171,9 @@ export default function BiologyTopicsPage() {
           </p>
           <Link
             href="/demo"
-            className="inline-block bg-white text-green-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors"
+            className="inline-block bg-white text-green-600 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold text-base sm:text-lg hover:bg-gray-100 transition-colors w-full sm:w-auto text-center"
           >
-            Book Free Demo Class
+            Book Free Demo
           </Link>
         </div>
       </section>

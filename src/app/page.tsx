@@ -52,6 +52,11 @@ const GoogleReviewsWidget = dynamic(
   { loading: () => <LoadingSkeleton height="h-64" />, ssr: true }
 )
 
+const HomeFAQSection = dynamic(
+  () => import('@/components/home/HomeFAQSection').then((mod) => mod.HomeFAQSection),
+  { loading: () => <LoadingSkeleton height="h-96" />, ssr: true }
+)
+
 const EEATSignals = dynamic(
   () => import('@/components/seo/EEATSignals').then((mod) => mod.EEATSignals),
   { loading: () => <LoadingSkeleton height="h-48" />, ssr: true }
@@ -93,10 +98,13 @@ export default function Home() {
       {/* 7. Google Reviews Widget */}
       <GoogleReviewsWidget variant="full" maxReviews={4} />
 
-      {/* 8. Locations Section */}
+      {/* 8. FAQ Section */}
+      <HomeFAQSection />
+
+      {/* 9. Locations Section */}
       <LocationsSection />
 
-      {/* 9. Booking Section */}
+      {/* 10. Booking Section */}
       <BookingSection />
 
       {/* Footer is rendered in layout.tsx - no need to duplicate here */}

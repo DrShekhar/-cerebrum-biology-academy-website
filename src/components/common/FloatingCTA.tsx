@@ -81,8 +81,9 @@ export function FloatingCTA() {
   return (
     <>
       {/* Mobile Floating CTA - Only show when not near bottom and scrolled past hero */}
+      {/* Positioned at bottom-24 to clear mobile nav (60px) + safe area inset */}
       {showFloatingButton && (
-        <div className="fixed bottom-20 sm:bottom-24 right-3 sm:right-4 z-[70] lg:hidden">
+        <div className="fixed bottom-24 sm:bottom-28 right-3 sm:right-4 z-[70] lg:hidden">
           {/* Expanded Actions - positioned higher to avoid bottom bar overlap */}
           {isExpanded && (
             <div className="absolute bottom-16 right-0 space-y-3 animate-fadeInUp">

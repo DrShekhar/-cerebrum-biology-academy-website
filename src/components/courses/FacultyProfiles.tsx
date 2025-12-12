@@ -4,17 +4,17 @@ import { CourseProgram, FacultyInfo } from '@/types/courseSystem'
 import { Card } from '@/components/ui/Card'
 import { Badge } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
-import { 
-  GraduationCap, 
-  Star, 
-  Award, 
+import {
+  GraduationCap,
+  Star,
+  Award,
   Clock,
   Users,
   BookOpen,
   Trophy,
   MessageCircle,
   Calendar,
-  Target
+  Target,
 } from 'lucide-react'
 import Image from 'next/image'
 
@@ -23,37 +23,79 @@ interface FacultyProfilesProps {
 }
 
 // Mock student feedback data - in real app, this would come from API
-const mockStudentFeedback = [
-  {
-    id: '1',
-    studentName: 'Arjun M.',
-    rating: 5,
-    comment: 'Exceptional teaching methodology. Made complex topics very easy to understand.',
-    batch: 'NEET 2023',
-    rank: 'AIR 156'
-  },
-  {
-    id: '2', 
-    studentName: 'Priya S.',
-    rating: 5,
-    comment: 'Amazing support throughout the course. Always available for doubt clearance.',
-    batch: 'NEET 2023',
-    rank: 'AIR 289'
-  },
-  {
-    id: '3',
-    studentName: 'Rahul K.',
-    rating: 5,
-    comment: 'The practical sessions were incredibly helpful for conceptual clarity.',
-    batch: 'NEET 2022', 
-    rank: 'AIR 432'
-  }
-]
+// Organized by faculty index to show different feedback for each faculty member
+const mockStudentFeedbackByFaculty: Record<
+  number,
+  Array<{
+    id: string
+    studentName: string
+    rating: number
+    comment: string
+    batch: string
+    rank: string
+  }>
+> = {
+  0: [
+    {
+      id: '1',
+      studentName: 'Arjun M.',
+      rating: 5,
+      comment: 'Exceptional teaching methodology. Made complex topics very easy to understand.',
+      batch: 'NEET 2023',
+      rank: 'AIR 156',
+    },
+    {
+      id: '2',
+      studentName: 'Priya S.',
+      rating: 5,
+      comment: 'Amazing support throughout the course. Always available for doubt clearance.',
+      batch: 'NEET 2023',
+      rank: 'AIR 289',
+    },
+  ],
+  1: [
+    {
+      id: '3',
+      studentName: 'Rahul K.',
+      rating: 5,
+      comment: 'The practical sessions were incredibly helpful for conceptual clarity.',
+      batch: 'NEET 2022',
+      rank: 'AIR 432',
+    },
+    {
+      id: '4',
+      studentName: 'Sneha T.',
+      rating: 5,
+      comment: 'Excellent explanations of difficult concepts. Very patient with doubts.',
+      batch: 'NEET 2023',
+      rank: 'AIR 178',
+    },
+  ],
+  2: [
+    {
+      id: '5',
+      studentName: 'Vikash R.',
+      rating: 5,
+      comment: 'Great focus on NCERT and exam patterns. Helped me score 350+ in Biology.',
+      batch: 'NEET 2023',
+      rank: 'AIR 245',
+    },
+    {
+      id: '6',
+      studentName: 'Ananya G.',
+      rating: 5,
+      comment: 'The revision strategies taught here were game-changers for my preparation.',
+      batch: 'NEET 2022',
+      rank: 'AIR 312',
+    },
+  ],
+}
 
 export function FacultyProfiles({ course }: FacultyProfilesProps) {
   const FacultyCard = ({ faculty, index }: { faculty: FacultyInfo; index: number }) => {
-    // Get feedback for this faculty (mock implementation)
-    const facultyFeedback = mockStudentFeedback.slice(0, 2) // Limit to 2 per faculty
+    // Get unique feedback for this faculty based on their index
+    const facultyFeedback =
+      mockStudentFeedbackByFaculty[index % 3] || mockStudentFeedbackByFaculty[0]
 
     return (
       <Card className="overflow-hidden hover:shadow-lg transition-shadow">
@@ -65,7 +107,10 @@ export function FacultyProfiles({ course }: FacultyProfilesProps) {
               <div className="relative w-32 h-32 mx-auto md:mx-0">
                 <div className="w-full h-full bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center">
                   <div className="text-3xl font-bold text-blue-600">
-                    {faculty.name.split(' ').map(n => n[0]).join('')}
+                    {faculty.name
+                      .split(' ')
+                      .map((n) => n[0])
+                      .join('')}
                   </div>
                 </div>
                 <div className="absolute -bottom-2 -right-2 bg-yellow-400 text-black px-2 py-1 rounded-full text-xs font-semibold flex items-center gap-1">
@@ -140,9 +185,7 @@ export function FacultyProfiles({ course }: FacultyProfilesProps) {
               {facultyFeedback.map((feedback) => (
                 <div key={feedback.id} className="bg-gray-50 rounded-lg p-3">
                   <div className="flex items-center justify-between mb-2">
-                    <div className="font-medium text-sm text-gray-900">
-                      {feedback.studentName}
-                    </div>
+                    <div className="font-medium text-sm text-gray-900">{feedback.studentName}</div>
                     <div className="flex items-center gap-2">
                       <div className="flex items-center">
                         {[...Array(feedback.rating)].map((_, i) => (
@@ -222,7 +265,7 @@ export function FacultyProfiles({ course }: FacultyProfilesProps) {
           {course.faculty.map((faculty, index) => (
             <FacultyCard key={faculty.id} faculty={faculty} index={index} />
           ))}
-          
+
           {/* Additional Faculty Card if only one faculty shown */}
           {course.faculty.length === 1 && <AdditionalFacultyCard />}
         </div>
@@ -230,7 +273,9 @@ export function FacultyProfiles({ course }: FacultyProfilesProps) {
         {/* Faculty Features */}
         <Card className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="p-8">
-            <h3 className="text-2xl font-bold mb-6 text-center">Why Our Faculty Makes the Difference</h3>
+            <h3 className="text-2xl font-bold mb-6 text-center">
+              Why Our Faculty Makes the Difference
+            </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="bg-white/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
