@@ -2062,177 +2062,467 @@ export function GeneticsIllustration({ className = '', animate = true }: Illustr
   const Wrapper = animate ? motion.svg : 'svg'
   const wrapperProps = animate
     ? {
-        initial: { opacity: 0, scale: 0.9 },
+        initial: { opacity: 0, scale: 0.95 },
         animate: { opacity: 1, scale: 1 },
-        transition: { duration: 0.6 },
+        transition: { duration: 0.8, ease: 'easeOut' },
       }
     : {}
 
   return (
     <Wrapper
-      viewBox="0 0 400 300"
+      viewBox="0 0 520 400"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
+      preserveAspectRatio="xMidYMid meet"
       {...wrapperProps}
     >
-      {/* Background */}
       <defs>
-        <linearGradient id="geneticsGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#DDD6FE" />
-          <stop offset="100%" stopColor="#EDE9FE" />
+        {/* Professional gradients */}
+        <linearGradient id="genBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#EDE9FE" />
+          <stop offset="50%" stopColor="#DDD6FE" />
+          <stop offset="100%" stopColor="#C4B5FD" />
         </linearGradient>
+        <linearGradient id="dnaStrand1" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stopColor="#8B5CF6" />
+          <stop offset="100%" stopColor="#6D28D9" />
+        </linearGradient>
+        <linearGradient id="dnaStrand2" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stopColor="#A78BFA" />
+          <stop offset="100%" stopColor="#8B5CF6" />
+        </linearGradient>
+        <linearGradient id="xChromoGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stopColor="#F472B6" />
+          <stop offset="100%" stopColor="#EC4899" />
+        </linearGradient>
+        <linearGradient id="yChromoGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stopColor="#60A5FA" />
+          <stop offset="100%" stopColor="#3B82F6" />
+        </linearGradient>
+        <filter id="genShadow" x="-20%" y="-20%" width="140%" height="140%">
+          <feDropShadow dx="0" dy="6" stdDeviation="8" floodOpacity="0.12" />
+        </filter>
+        <filter id="genCardShadow" x="-10%" y="-10%" width="120%" height="130%">
+          <feDropShadow dx="0" dy="4" stdDeviation="5" floodOpacity="0.1" />
+        </filter>
+        <filter id="genGlow" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="4" result="coloredBlur" />
+          <feMerge>
+            <feMergeNode in="coloredBlur" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
       </defs>
-      <rect
-        x="10"
-        y="10"
-        width="380"
-        height="280"
-        rx="20"
-        fill="url(#geneticsGradient)"
-        opacity="0.4"
-      />
+
+      {/* Background */}
+      <rect x="0" y="0" width="520" height="400" rx="24" fill="url(#genBgGrad)" />
+
+      {/* Decorative elements */}
+      <circle cx="480" cy="60" r="100" fill="#8B5CF6" fillOpacity="0.08" />
+      <circle cx="40" cy="350" r="80" fill="#EC4899" fillOpacity="0.06" />
 
       {/* Title */}
-      <text x="200" y="35" fontSize="14" fill="#7C3AED" textAnchor="middle" fontWeight="bold">
-        Genetics & Evolution - 18% Weightage
+      <text
+        x="260"
+        y="38"
+        fontSize="20"
+        fill="#5B21B6"
+        textAnchor="middle"
+        fontWeight="bold"
+        fontFamily="system-ui, sans-serif"
+      >
+        Genetics & Evolution
+      </text>
+      <text
+        x="260"
+        y="56"
+        fontSize="11"
+        fill="#7C3AED"
+        textAnchor="middle"
+        fontFamily="system-ui, sans-serif"
+      >
+        Principles of Inheritance • 18% NEET Weightage
       </text>
 
-      {/* DNA Double Helix - rotating */}
-      <motion.g
-        animate={animate ? { rotate: [0, 360] } : undefined}
-        transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
-        style={{ transformOrigin: '100px 160px' }}
-      >
-        {/* Left strand */}
-        <path
-          d="M60 60 Q80 90 60 120 Q40 150 60 180 Q80 210 60 240 Q40 270 60 290"
-          stroke="#8B5CF6"
-          strokeWidth="4"
-          fill="none"
-        />
-        {/* Right strand */}
-        <path
-          d="M140 60 Q120 90 140 120 Q160 150 140 180 Q120 210 140 240 Q160 270 140 290"
-          stroke="#A78BFA"
-          strokeWidth="4"
-          fill="none"
-        />
-        {/* Base pairs */}
-        <line x1="60" y1="75" x2="140" y2="75" stroke="#EC4899" strokeWidth="3" />
-        <line x1="60" y1="105" x2="140" y2="105" stroke="#10B981" strokeWidth="3" />
-        <line x1="60" y1="135" x2="140" y2="135" stroke="#F59E0B" strokeWidth="3" />
-        <line x1="60" y1="165" x2="140" y2="165" stroke="#3B82F6" strokeWidth="3" />
-        <line x1="60" y1="195" x2="140" y2="195" stroke="#EC4899" strokeWidth="3" />
-        <line x1="60" y1="225" x2="140" y2="225" stroke="#10B981" strokeWidth="3" />
-        <line x1="60" y1="255" x2="140" y2="255" stroke="#F59E0B" strokeWidth="3" />
-        {/* Base labels */}
-        <text x="100" y="78" fontSize="8" fill="#FFFFFF" textAnchor="middle">
-          A-T
-        </text>
-        <text x="100" y="108" fontSize="8" fill="#FFFFFF" textAnchor="middle">
-          G-C
-        </text>
-        <text x="100" y="138" fontSize="8" fill="#FFFFFF" textAnchor="middle">
-          T-A
-        </text>
-        <text x="100" y="168" fontSize="8" fill="#FFFFFF" textAnchor="middle">
-          C-G
-        </text>
-      </motion.g>
+      {/* DNA Double Helix - Professional 3D-style */}
+      <g filter="url(#genShadow)">
+        <motion.g
+          animate={animate ? { rotate: [0, 360] } : undefined}
+          transition={{ duration: 25, repeat: Infinity, ease: 'linear' }}
+          style={{ transformOrigin: '100px 220px' }}
+        >
+          {/* Left strand with gradient */}
+          <motion.path
+            d="M50 80 Q75 115 50 150 Q25 185 50 220 Q75 255 50 290 Q25 325 50 360"
+            stroke="url(#dnaStrand1)"
+            strokeWidth="6"
+            fill="none"
+            strokeLinecap="round"
+          />
+          {/* Right strand with gradient */}
+          <motion.path
+            d="M150 80 Q125 115 150 150 Q175 185 150 220 Q125 255 150 290 Q175 325 150 360"
+            stroke="url(#dnaStrand2)"
+            strokeWidth="6"
+            fill="none"
+            strokeLinecap="round"
+          />
+          {/* Base pairs with enhanced colors */}
+          {[
+            { y: 95, color: '#F472B6', label: 'A-T' },
+            { y: 130, color: '#34D399', label: 'G-C' },
+            { y: 165, color: '#FBBF24', label: 'T-A' },
+            { y: 200, color: '#60A5FA', label: 'C-G' },
+            { y: 235, color: '#F472B6', label: 'A-T' },
+            { y: 270, color: '#34D399', label: 'G-C' },
+            { y: 305, color: '#FBBF24', label: 'T-A' },
+            { y: 340, color: '#60A5FA', label: 'C-G' },
+          ].map((pair, i) => (
+            <g key={`pair-${i}`}>
+              <line
+                x1="50"
+                y1={pair.y}
+                x2="150"
+                y2={pair.y}
+                stroke={pair.color}
+                strokeWidth="4"
+                strokeLinecap="round"
+              />
+              <rect x="80" y={pair.y - 8} width="40" height="16" rx="8" fill={pair.color} />
+              <text
+                x="100"
+                y={pair.y + 4}
+                fontSize="9"
+                fill="white"
+                textAnchor="middle"
+                fontWeight="600"
+                fontFamily="system-ui, sans-serif"
+              >
+                {pair.label}
+              </text>
+            </g>
+          ))}
+        </motion.g>
+      </g>
 
-      {/* Chromosomes */}
-      <motion.g
-        animate={animate ? { y: [-5, 5, -5] } : undefined}
-        transition={{ duration: 3, repeat: Infinity }}
-      >
-        <text x="280" y="70" fontSize="10" fill="#5B21B6" textAnchor="middle" fontWeight="bold">
-          Chromosomes
-        </text>
-        {/* X chromosome */}
-        <path
-          d="M240 90 L260 140 M260 90 L240 140"
-          stroke="#EC4899"
-          strokeWidth="6"
-          strokeLinecap="round"
-        />
-        {/* Y chromosome */}
-        <path
-          d="M290 90 L290 120 M280 130 L290 120 L300 130"
-          stroke="#3B82F6"
-          strokeWidth="6"
-          strokeLinecap="round"
-        />
-        <text x="250" y="155" fontSize="8" fill="#EC4899" textAnchor="middle">
-          XX
-        </text>
-        <text x="290" y="155" fontSize="8" fill="#3B82F6" textAnchor="middle">
-          XY
-        </text>
-      </motion.g>
-
-      {/* Mendel's Laws box */}
-      <motion.g
-        animate={animate ? { scale: [1, 1.02, 1] } : undefined}
-        transition={{ duration: 2, repeat: Infinity }}
-      >
+      {/* Chromosomes Section */}
+      <g filter="url(#genCardShadow)">
+        <rect x="200" y="75" width="150" height="130" rx="16" fill="white" fillOpacity="0.95" />
         <rect
           x="200"
-          y="170"
-          width="180"
-          height="70"
-          rx="10"
-          fill="#FFFFFF"
+          y="75"
+          width="150"
+          height="130"
+          rx="16"
+          fill="none"
+          stroke="#A78BFA"
+          strokeWidth="2"
+        />
+
+        <text
+          x="275"
+          y="98"
+          fontSize="12"
+          fill="#5B21B6"
+          textAnchor="middle"
+          fontWeight="bold"
+          fontFamily="system-ui, sans-serif"
+        >
+          Sex Chromosomes
+        </text>
+
+        {/* X Chromosome - Professional */}
+        <motion.g
+          animate={animate ? { y: [-3, 3, -3] } : undefined}
+          transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+        >
+          <path
+            d="M225 115 L250 175 M250 115 L225 175"
+            stroke="url(#xChromoGrad)"
+            strokeWidth="10"
+            strokeLinecap="round"
+          />
+          <circle cx="237" cy="145" r="6" fill="#FDF2F8" stroke="#EC4899" strokeWidth="2" />
+        </motion.g>
+
+        {/* Y Chromosome - Professional */}
+        <motion.g
+          animate={animate ? { y: [3, -3, 3] } : undefined}
+          transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+        >
+          <path
+            d="M300 115 L300 150"
+            stroke="url(#yChromoGrad)"
+            strokeWidth="10"
+            strokeLinecap="round"
+          />
+          <path
+            d="M285 165 L300 150 L315 165"
+            stroke="url(#yChromoGrad)"
+            strokeWidth="8"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </motion.g>
+
+        <text
+          x="237"
+          y="192"
+          fontSize="11"
+          fill="#EC4899"
+          textAnchor="middle"
+          fontWeight="600"
+          fontFamily="system-ui, sans-serif"
+        >
+          Female (XX)
+        </text>
+        <text
+          x="300"
+          y="192"
+          fontSize="11"
+          fill="#3B82F6"
+          textAnchor="middle"
+          fontWeight="600"
+          fontFamily="system-ui, sans-serif"
+        >
+          Male (XY)
+        </text>
+      </g>
+
+      {/* Mendel's Laws Card */}
+      <motion.g
+        filter="url(#genCardShadow)"
+        animate={animate ? { scale: [1, 1.02, 1] } : undefined}
+        transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+      >
+        <rect x="365" y="75" width="140" height="130" rx="16" fill="white" fillOpacity="0.95" />
+        <rect
+          x="365"
+          y="75"
+          width="140"
+          height="130"
+          rx="16"
+          fill="none"
           stroke="#8B5CF6"
           strokeWidth="2"
         />
-        <text x="290" y="190" fontSize="9" fill="#5B21B6" textAnchor="middle" fontWeight="bold">
+
+        <text
+          x="435"
+          y="98"
+          fontSize="12"
+          fill="#5B21B6"
+          textAnchor="middle"
+          fontWeight="bold"
+          fontFamily="system-ui, sans-serif"
+        >
           Mendel's Laws
         </text>
-        <text x="290" y="205" fontSize="7" fill="#6B7280" textAnchor="middle">
-          Law of Segregation
+
+        {/* Law icons */}
+        <circle cx="385" cy="118" r="8" fill="#DDD6FE" />
+        <text x="385" y="122" fontSize="10" fill="#7C3AED" textAnchor="middle" fontWeight="bold">
+          1
         </text>
-        <text x="290" y="218" fontSize="7" fill="#6B7280" textAnchor="middle">
-          Law of Independent Assortment
+        <text x="395" y="122" fontSize="9" fill="#6B7280" fontFamily="system-ui, sans-serif">
+          Segregation
         </text>
-        <text x="290" y="231" fontSize="7" fill="#6B7280" textAnchor="middle">
-          Law of Dominance
+
+        <circle cx="385" cy="143" r="8" fill="#DDD6FE" />
+        <text x="385" y="147" fontSize="10" fill="#7C3AED" textAnchor="middle" fontWeight="bold">
+          2
+        </text>
+        <text x="395" y="147" fontSize="9" fill="#6B7280" fontFamily="system-ui, sans-serif">
+          Independent
+        </text>
+
+        <circle cx="385" cy="168" r="8" fill="#DDD6FE" />
+        <text x="385" y="172" fontSize="10" fill="#7C3AED" textAnchor="middle" fontWeight="bold">
+          3
+        </text>
+        <text x="395" y="172" fontSize="9" fill="#6B7280" fontFamily="system-ui, sans-serif">
+          Dominance
+        </text>
+
+        <rect x="375" y="183" width="120" height="16" rx="8" fill="#F3E8FF" />
+        <text
+          x="435"
+          y="194"
+          fontSize="8"
+          fill="#7C3AED"
+          textAnchor="middle"
+          fontFamily="system-ui, sans-serif"
+        >
+          Pea Plant Experiments
         </text>
       </motion.g>
 
-      {/* Evolution Darwin */}
-      <motion.g
-        animate={animate ? { x: [-3, 3, -3] } : undefined}
-        transition={{ duration: 4, repeat: Infinity }}
-      >
+      {/* Punnett Square */}
+      <g filter="url(#genCardShadow)">
+        <rect x="200" y="220" width="130" height="130" rx="16" fill="white" fillOpacity="0.95" />
         <rect
           x="200"
-          y="250"
-          width="180"
-          height="35"
-          rx="8"
-          fill="#FEF3C7"
+          y="220"
+          width="130"
+          height="130"
+          rx="16"
+          fill="none"
+          stroke="#10B981"
+          strokeWidth="2"
+        />
+
+        <text
+          x="265"
+          y="243"
+          fontSize="11"
+          fill="#059669"
+          textAnchor="middle"
+          fontWeight="bold"
+          fontFamily="system-ui, sans-serif"
+        >
+          Punnett Square
+        </text>
+
+        {/* Grid */}
+        <line x1="230" y1="258" x2="230" y2="340" stroke="#D1FAE5" strokeWidth="2" />
+        <line x1="270" y1="258" x2="270" y2="340" stroke="#D1FAE5" strokeWidth="2" />
+        <line x1="210" y1="280" x2="320" y2="280" stroke="#D1FAE5" strokeWidth="2" />
+        <line x1="210" y1="310" x2="320" y2="310" stroke="#D1FAE5" strokeWidth="2" />
+
+        {/* Alleles */}
+        <text x="250" y="272" fontSize="10" fill="#059669" textAnchor="middle" fontWeight="bold">
+          A
+        </text>
+        <text x="295" y="272" fontSize="10" fill="#059669" textAnchor="middle" fontWeight="bold">
+          a
+        </text>
+        <text x="220" y="297" fontSize="10" fill="#059669" textAnchor="middle" fontWeight="bold">
+          A
+        </text>
+        <text x="220" y="330" fontSize="10" fill="#059669" textAnchor="middle" fontWeight="bold">
+          a
+        </text>
+
+        {/* Results */}
+        <text x="250" y="297" fontSize="9" fill="#10B981" textAnchor="middle">
+          AA
+        </text>
+        <text x="295" y="297" fontSize="9" fill="#10B981" textAnchor="middle">
+          Aa
+        </text>
+        <text x="250" y="330" fontSize="9" fill="#10B981" textAnchor="middle">
+          Aa
+        </text>
+        <text x="295" y="330" fontSize="9" fill="#10B981" textAnchor="middle">
+          aa
+        </text>
+      </g>
+
+      {/* Evolution Card */}
+      <motion.g
+        filter="url(#genCardShadow)"
+        animate={animate ? { x: [-2, 2, -2] } : undefined}
+        transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+      >
+        <rect x="345" y="220" width="160" height="130" rx="16" fill="white" fillOpacity="0.95" />
+        <rect
+          x="345"
+          y="220"
+          width="160"
+          height="130"
+          rx="16"
+          fill="none"
           stroke="#F59E0B"
           strokeWidth="2"
         />
-        <text x="290" y="268" fontSize="8" fill="#92400E" textAnchor="middle" fontWeight="bold">
-          Evolution: Darwin's Theory
+
+        <text
+          x="425"
+          y="243"
+          fontSize="11"
+          fill="#B45309"
+          textAnchor="middle"
+          fontWeight="bold"
+          fontFamily="system-ui, sans-serif"
+        >
+          Evolution
         </text>
-        <text x="290" y="280" fontSize="7" fill="#92400E" textAnchor="middle">
-          Natural Selection • Adaptation
+
+        {/* Darwin icon */}
+        <circle cx="385" cy="275" r="20" fill="#FEF3C7" stroke="#F59E0B" strokeWidth="2" />
+        <text x="385" y="280" fontSize="16" textAnchor="middle">
+          🧬
+        </text>
+
+        <text x="440" y="268" fontSize="9" fill="#92400E" fontFamily="system-ui, sans-serif">
+          Darwin's Theory
+        </text>
+        <text x="440" y="282" fontSize="8" fill="#B45309" fontFamily="system-ui, sans-serif">
+          Natural Selection
+        </text>
+
+        {/* Evolution timeline */}
+        <line
+          x1="360"
+          y1="310"
+          x2="490"
+          y2="310"
+          stroke="#FCD34D"
+          strokeWidth="3"
+          strokeLinecap="round"
+        />
+        <circle cx="380" cy="310" r="6" fill="#F59E0B" />
+        <circle cx="425" cy="310" r="6" fill="#FBBF24" />
+        <circle cx="470" cy="310" r="6" fill="#FCD34D" />
+
+        <text
+          x="425"
+          y="335"
+          fontSize="8"
+          fill="#92400E"
+          textAnchor="middle"
+          fontFamily="system-ui, sans-serif"
+        >
+          Adaptation → Speciation
         </text>
       </motion.g>
 
-      {/* Questions badge */}
+      {/* Questions badge with glow */}
       <motion.g
-        animate={animate ? { scale: [1, 1.1, 1] } : undefined}
-        transition={{ duration: 1.5, repeat: Infinity }}
+        filter="url(#genGlow)"
+        animate={animate ? { scale: [1, 1.08, 1] } : undefined}
+        transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
       >
-        <circle cx="100" cy="290" r="20" fill="#7C3AED" />
-        <text x="100" y="287" fontSize="8" fill="#FFFFFF" textAnchor="middle">
+        <circle cx="55" cy="55" r="35" fill="#7C3AED" />
+        <circle
+          cx="55"
+          cy="55"
+          r="30"
+          fill="none"
+          stroke="white"
+          strokeWidth="2"
+          strokeOpacity="0.3"
+        />
+        <text
+          x="55"
+          y="50"
+          fontSize="16"
+          fill="#FFFFFF"
+          textAnchor="middle"
+          fontWeight="bold"
+          fontFamily="system-ui, sans-serif"
+        >
           16-18
         </text>
-        <text x="100" y="297" fontSize="6" fill="#FFFFFF" textAnchor="middle">
+        <text
+          x="55"
+          y="68"
+          fontSize="10"
+          fill="#FFFFFF"
+          textAnchor="middle"
+          fontFamily="system-ui, sans-serif"
+        >
           Questions
         </text>
       </motion.g>
@@ -2427,187 +2717,408 @@ export function CellBiologyIllustration({ className = '', animate = true }: Illu
   const Wrapper = animate ? motion.svg : 'svg'
   const wrapperProps = animate
     ? {
-        initial: { opacity: 0, scale: 0.9 },
+        initial: { opacity: 0, scale: 0.95 },
         animate: { opacity: 1, scale: 1 },
-        transition: { duration: 0.6 },
+        transition: { duration: 0.8, ease: 'easeOut' },
       }
     : {}
 
   return (
     <Wrapper
-      viewBox="0 0 400 300"
+      viewBox="0 0 520 400"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
+      preserveAspectRatio="xMidYMid meet"
       {...wrapperProps}
     >
-      {/* Background */}
-      <rect x="10" y="10" width="380" height="280" rx="20" fill="#ECFDF5" />
+      <defs>
+        {/* Professional gradients */}
+        <linearGradient id="cellBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#ECFDF5" />
+          <stop offset="50%" stopColor="#D1FAE5" />
+          <stop offset="100%" stopColor="#A7F3D0" />
+        </linearGradient>
+        <linearGradient id="cellMembraneGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#E9D5FF" />
+          <stop offset="100%" stopColor="#C4B5FD" />
+        </linearGradient>
+        <linearGradient id="nucleusGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stopColor="#A78BFA" />
+          <stop offset="100%" stopColor="#7C3AED" />
+        </linearGradient>
+        <linearGradient id="mitoGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stopColor="#FCA5A5" />
+          <stop offset="100%" stopColor="#EF4444" />
+        </linearGradient>
+        <linearGradient id="cytoplasmGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#FEF9C3" stopOpacity="0.6" />
+          <stop offset="100%" stopColor="#FDE68A" stopOpacity="0.4" />
+        </linearGradient>
+        <filter id="cellShadow" x="-20%" y="-20%" width="140%" height="140%">
+          <feDropShadow dx="0" dy="6" stdDeviation="8" floodOpacity="0.12" />
+        </filter>
+        <filter id="organelleShadow" x="-30%" y="-30%" width="160%" height="160%">
+          <feDropShadow dx="0" dy="3" stdDeviation="4" floodOpacity="0.15" />
+        </filter>
+        <filter id="glowEffect" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="3" result="coloredBlur" />
+          <feMerge>
+            <feMergeNode in="coloredBlur" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+      </defs>
 
-      {/* Title */}
-      <text x="200" y="35" fontSize="14" fill="#0D9488" textAnchor="middle" fontWeight="bold">
-        Cell Biology - 10% Weightage
+      {/* Background with gradient */}
+      <rect x="0" y="0" width="520" height="400" rx="24" fill="url(#cellBgGrad)" />
+
+      {/* Decorative circles */}
+      <circle cx="50" cy="50" r="80" fill="#10B981" fillOpacity="0.05" />
+      <circle cx="480" cy="360" r="100" fill="#7C3AED" fillOpacity="0.05" />
+
+      {/* Title with professional styling */}
+      <text
+        x="260"
+        y="38"
+        fontSize="20"
+        fill="#0F766E"
+        textAnchor="middle"
+        fontWeight="bold"
+        fontFamily="system-ui, sans-serif"
+      >
+        Cell Biology
+      </text>
+      <text
+        x="260"
+        y="56"
+        fontSize="11"
+        fill="#059669"
+        textAnchor="middle"
+        fontFamily="system-ui, sans-serif"
+      >
+        The Unit of Life • 10% NEET Weightage
       </text>
 
-      {/* Cell membrane (outer) */}
-      <motion.ellipse
-        cx="200"
-        cy="160"
-        rx="150"
-        ry="100"
-        fill="#FDF4FF"
-        stroke="#A855F7"
-        strokeWidth="4"
-        strokeDasharray="15 5"
-        animate={animate ? { strokeDashoffset: [0, 20] } : undefined}
-        transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
-      />
-
-      {/* Cytoplasm */}
-      <ellipse cx="200" cy="160" rx="140" ry="90" fill="#FEF9C3" fillOpacity="0.5" />
-
-      {/* Nucleus */}
-      <motion.g
-        animate={animate ? { scale: [1, 1.05, 1] } : undefined}
-        transition={{ duration: 3, repeat: Infinity }}
-      >
-        <ellipse
-          cx="200"
-          cy="160"
-          rx="45"
-          ry="35"
-          fill="#C4B5FD"
-          stroke="#7C3AED"
-          strokeWidth="3"
+      {/* Main Cell - centered */}
+      <g filter="url(#cellShadow)">
+        {/* Cell membrane (outer) with phospholipid bilayer effect */}
+        <motion.ellipse
+          cx="260"
+          cy="210"
+          rx="175"
+          ry="120"
+          fill="url(#cellMembraneGrad)"
+          stroke="#A855F7"
+          strokeWidth="6"
+          strokeDasharray="18 6"
+          animate={animate ? { strokeDashoffset: [0, 24] } : undefined}
+          transition={{ duration: 3, repeat: Infinity, ease: 'linear' }}
         />
-        <ellipse cx="200" cy="160" rx="15" ry="12" fill="#7C3AED" />
-        <text x="200" y="195" fontSize="8" fill="#5B21B6" textAnchor="middle" fontWeight="bold">
-          Nucleus
-        </text>
-      </motion.g>
 
-      {/* Mitochondria */}
+        {/* Cytoplasm */}
+        <ellipse cx="260" cy="210" rx="165" ry="110" fill="url(#cytoplasmGrad)" />
+      </g>
+
+      {/* Nucleus with professional styling */}
       <motion.g
-        animate={animate ? { rotate: [0, 10, 0, -10, 0] } : undefined}
-        transition={{ duration: 4, repeat: Infinity }}
-        style={{ transformOrigin: '100px 130px' }}
+        filter="url(#organelleShadow)"
+        animate={animate ? { scale: [1, 1.03, 1] } : undefined}
+        transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+        style={{ transformOrigin: '260px 210px' }}
       >
+        <ellipse cx="260" cy="210" rx="55" ry="42" fill="url(#nucleusGrad)" />
         <ellipse
-          cx="100"
-          cy="130"
-          rx="25"
-          ry="12"
-          fill="#FCA5A5"
-          stroke="#EF4444"
+          cx="260"
+          cy="210"
+          rx="50"
+          ry="38"
+          fill="none"
+          stroke="#8B5CF6"
           strokeWidth="2"
+          strokeOpacity="0.5"
         />
+        {/* Nucleolus */}
+        <circle cx="260" cy="210" r="15" fill="#5B21B6" />
+        {/* Nuclear pores */}
+        <circle cx="230" cy="195" r="3" fill="#DDD6FE" />
+        <circle cx="290" cy="195" r="3" fill="#DDD6FE" />
+        <circle cx="230" cy="225" r="3" fill="#DDD6FE" />
+        <circle cx="290" cy="225" r="3" fill="#DDD6FE" />
+      </motion.g>
+      <text
+        x="260"
+        y="268"
+        fontSize="11"
+        fill="#5B21B6"
+        textAnchor="middle"
+        fontWeight="600"
+        fontFamily="system-ui, sans-serif"
+      >
+        Nucleus
+      </text>
+
+      {/* Mitochondria - powerhouse with cristae */}
+      <motion.g
+        filter="url(#organelleShadow)"
+        animate={animate ? { rotate: [0, 5, 0, -5, 0] } : undefined}
+        transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
+        style={{ transformOrigin: '115px 170px' }}
+      >
+        <ellipse cx="115" cy="170" rx="35" ry="18" fill="url(#mitoGrad)" />
+        <ellipse cx="115" cy="170" rx="30" ry="14" fill="none" stroke="#FCA5A5" strokeWidth="1.5" />
+        {/* Cristae (inner membrane folds) */}
         <path
-          d="M80 130 Q90 125 100 130 Q110 135 120 130"
-          stroke="#EF4444"
-          strokeWidth="1"
+          d="M90 170 Q100 163 110 170 Q120 177 130 170"
+          stroke="#FEE2E2"
+          strokeWidth="2"
           fill="none"
         />
-        <text x="100" y="155" fontSize="7" fill="#DC2626" textAnchor="middle">
-          Mitochondria
-        </text>
+        <path
+          d="M95 175 Q105 168 115 175 Q125 182 135 175"
+          stroke="#FEE2E2"
+          strokeWidth="1.5"
+          fill="none"
+        />
       </motion.g>
+      <text
+        x="115"
+        y="200"
+        fontSize="9"
+        fill="#DC2626"
+        textAnchor="middle"
+        fontWeight="500"
+        fontFamily="system-ui, sans-serif"
+      >
+        Mitochondria
+      </text>
 
       {/* Endoplasmic Reticulum */}
-      <motion.path
-        d="M260 100 Q275 110 268 130 Q260 150 275 160 Q290 170 283 190"
-        stroke="#3B82F6"
-        strokeWidth="3"
-        fill="none"
-        animate={animate ? { pathLength: [0, 1] } : undefined}
-        transition={{ duration: 3, repeat: Infinity }}
-      />
-      <text x="295" y="145" fontSize="6" fill="#1D4ED8" textAnchor="start">
+      <motion.g filter="url(#organelleShadow)">
+        <motion.path
+          d="M330 130 Q350 145 340 165 Q330 185 350 200 Q370 215 360 235"
+          stroke="#3B82F6"
+          strokeWidth="5"
+          fill="none"
+          strokeLinecap="round"
+          animate={animate ? { pathLength: [0.3, 1, 0.3] } : undefined}
+          transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+        />
+        <motion.path
+          d="M345 135 Q365 150 355 170 Q345 190 365 205"
+          stroke="#60A5FA"
+          strokeWidth="3"
+          fill="none"
+          strokeLinecap="round"
+          animate={animate ? { pathLength: [0.5, 1, 0.5] } : undefined}
+          transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
+        />
+        {/* Ribosomes on rough ER */}
+        {[
+          { x: 335, y: 145 },
+          { x: 345, y: 175 },
+          { x: 355, y: 210 },
+        ].map((pos, i) => (
+          <motion.circle
+            key={`er-ribo-${i}`}
+            cx={pos.x}
+            cy={pos.y}
+            r="4"
+            fill="#10B981"
+            animate={animate ? { opacity: [0.6, 1, 0.6] } : undefined}
+            transition={{ duration: 2, repeat: Infinity, delay: i * 0.3 }}
+          />
+        ))}
+      </motion.g>
+      <text
+        x="370"
+        y="170"
+        fontSize="9"
+        fill="#1D4ED8"
+        textAnchor="start"
+        fontWeight="500"
+        fontFamily="system-ui, sans-serif"
+      >
         ER
       </text>
 
-      {/* Golgi Apparatus */}
+      {/* Golgi Apparatus with vesicles */}
       <motion.g
-        animate={animate ? { y: [-3, 3, -3] } : undefined}
-        transition={{ duration: 2.5, repeat: Infinity }}
+        filter="url(#organelleShadow)"
+        animate={animate ? { y: [-4, 4, -4] } : undefined}
+        transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
       >
-        <path d="M280 200 Q300 195 280 190" stroke="#F59E0B" strokeWidth="4" fill="none" />
-        <path d="M282 205 Q302 200 282 195" stroke="#F59E0B" strokeWidth="3" fill="none" />
-        <path d="M284 210 Q304 205 284 200" stroke="#F59E0B" strokeWidth="2" fill="none" />
-        <text x="285" y="225" fontSize="6" fill="#B45309" textAnchor="middle">
-          Golgi
-        </text>
-      </motion.g>
-
-      {/* Ribosomes */}
-      {[
-        { cx: 140, cy: 100 },
-        { cx: 150, cy: 115 },
-        { cx: 160, cy: 105 },
-        { cx: 240, cy: 110 },
-        { cx: 250, cy: 125 },
-        { cx: 130, cy: 180 },
-        { cx: 145, cy: 195 },
-        { cx: 255, cy: 190 },
-      ].map((pos, i) => (
-        <motion.circle
-          key={i}
-          cx={pos.cx}
-          cy={pos.cy}
-          r="4"
-          fill="#10B981"
-          animate={animate ? { opacity: [0.5, 1, 0.5] } : undefined}
-          transition={{ duration: 1.5, repeat: Infinity, delay: i * 0.2 }}
+        <path
+          d="M370 270 Q400 262 370 254"
+          stroke="#F59E0B"
+          strokeWidth="6"
+          fill="none"
+          strokeLinecap="round"
         />
-      ))}
-      <text x="175" y="100" fontSize="6" fill="#059669" textAnchor="middle">
-        Ribosomes
+        <path
+          d="M373 278 Q403 270 373 262"
+          stroke="#FBBF24"
+          strokeWidth="5"
+          fill="none"
+          strokeLinecap="round"
+        />
+        <path
+          d="M376 286 Q406 278 376 270"
+          stroke="#FCD34D"
+          strokeWidth="4"
+          fill="none"
+          strokeLinecap="round"
+        />
+        {/* Vesicles */}
+        <circle cx="405" cy="260" r="6" fill="#FDE68A" stroke="#F59E0B" strokeWidth="1.5" />
+        <circle cx="412" cy="275" r="5" fill="#FEF3C7" stroke="#FBBF24" strokeWidth="1" />
+      </motion.g>
+      <text
+        x="385"
+        y="305"
+        fontSize="9"
+        fill="#B45309"
+        textAnchor="middle"
+        fontWeight="500"
+        fontFamily="system-ui, sans-serif"
+      >
+        Golgi
       </text>
 
+      {/* Free Ribosomes scattered */}
+      {[
+        { cx: 150, cy: 135 },
+        { cx: 165, cy: 150 },
+        { cx: 175, cy: 140 },
+        { cx: 315, cy: 145 },
+        { cx: 300, cy: 160 },
+        { cx: 140, cy: 240 },
+        { cx: 160, cy: 255 },
+        { cx: 180, cy: 245 },
+        { cx: 320, cy: 250 },
+        { cx: 340, cy: 240 },
+      ].map((pos, i) => (
+        <motion.circle
+          key={`ribo-${i}`}
+          cx={pos.cx}
+          cy={pos.cy}
+          r="5"
+          fill="#10B981"
+          filter="url(#glowEffect)"
+          animate={animate ? { opacity: [0.5, 1, 0.5], scale: [0.9, 1.1, 0.9] } : undefined}
+          transition={{ duration: 2, repeat: Infinity, delay: i * 0.15, ease: 'easeInOut' }}
+        />
+      ))}
+
       {/* Vacuole */}
-      <motion.ellipse
-        cx="120"
-        cy="200"
-        rx="20"
-        ry="15"
-        fill="#BFDBFE"
-        stroke="#3B82F6"
-        strokeWidth="2"
-        animate={animate ? { rx: [20, 22, 20], ry: [15, 16, 15] } : undefined}
-        transition={{ duration: 2, repeat: Infinity }}
-      />
-      <text x="120" y="225" fontSize="6" fill="#1E40AF" textAnchor="middle">
+      <motion.g filter="url(#organelleShadow)">
+        <motion.ellipse
+          cx="155"
+          cy="270"
+          rx="28"
+          ry="22"
+          fill="#BFDBFE"
+          stroke="#3B82F6"
+          strokeWidth="3"
+          animate={animate ? { rx: [28, 30, 28], ry: [22, 24, 22] } : undefined}
+          transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+        />
+        <ellipse cx="155" cy="270" rx="20" ry="15" fill="#DBEAFE" fillOpacity="0.5" />
+      </motion.g>
+      <text
+        x="155"
+        y="305"
+        fontSize="9"
+        fill="#1E40AF"
+        textAnchor="middle"
+        fontWeight="500"
+        fontFamily="system-ui, sans-serif"
+      >
         Vacuole
       </text>
 
-      {/* Cell type labels */}
-      <rect
-        x="20"
-        y="250"
-        width="170"
-        height="35"
-        rx="6"
-        fill="#FFFFFF"
-        stroke="#14B8A6"
-        strokeWidth="2"
-      />
-      <text x="105" y="268" fontSize="8" fill="#0F766E" textAnchor="middle" fontWeight="bold">
-        Types: Prokaryotic & Eukaryotic
-      </text>
-      <text x="105" y="280" fontSize="7" fill="#6B7280" textAnchor="middle">
-        Plant Cell vs Animal Cell
-      </text>
+      {/* Info Cards - Glass morphism style */}
+      <g filter="url(#organelleShadow)">
+        <rect x="20" y="330" width="230" height="55" rx="12" fill="white" fillOpacity="0.9" />
+        <rect
+          x="20"
+          y="330"
+          width="230"
+          height="55"
+          rx="12"
+          fill="none"
+          stroke="#14B8A6"
+          strokeWidth="2"
+        />
+        <text
+          x="135"
+          y="352"
+          fontSize="12"
+          fill="#0F766E"
+          textAnchor="middle"
+          fontWeight="bold"
+          fontFamily="system-ui, sans-serif"
+        >
+          Cell Types
+        </text>
+        <text
+          x="135"
+          y="368"
+          fontSize="10"
+          fill="#059669"
+          textAnchor="middle"
+          fontFamily="system-ui, sans-serif"
+        >
+          Prokaryotic • Eukaryotic
+        </text>
+        <text
+          x="135"
+          y="382"
+          fontSize="9"
+          fill="#6B7280"
+          textAnchor="middle"
+          fontFamily="system-ui, sans-serif"
+        >
+          Plant Cell vs Animal Cell
+        </text>
+      </g>
 
-      {/* Questions badge */}
+      {/* Questions badge with glow */}
       <motion.g
-        animate={animate ? { scale: [1, 1.1, 1] } : undefined}
-        transition={{ duration: 1.5, repeat: Infinity }}
+        filter="url(#glowEffect)"
+        animate={animate ? { scale: [1, 1.08, 1] } : undefined}
+        transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
       >
-        <circle cx="330" cy="265" r="18" fill="#14B8A6" />
-        <text x="330" y="262" fontSize="8" fill="#FFFFFF" textAnchor="middle">
+        <circle cx="450" cy="360" r="32" fill="#14B8A6" />
+        <circle
+          cx="450"
+          cy="360"
+          r="28"
+          fill="none"
+          stroke="white"
+          strokeWidth="2"
+          strokeOpacity="0.3"
+        />
+        <text
+          x="450"
+          y="355"
+          fontSize="16"
+          fill="#FFFFFF"
+          textAnchor="middle"
+          fontWeight="bold"
+          fontFamily="system-ui, sans-serif"
+        >
           8-10
         </text>
-        <text x="330" y="273" fontSize="6" fill="#FFFFFF" textAnchor="middle">
-          Qs
+        <text
+          x="450"
+          y="372"
+          fontSize="10"
+          fill="#FFFFFF"
+          textAnchor="middle"
+          fontFamily="system-ui, sans-serif"
+        >
+          Questions
         </text>
       </motion.g>
     </Wrapper>
@@ -2619,210 +3130,499 @@ export function PlantPhysiologyIllustration({ className = '', animate = true }: 
   const Wrapper = animate ? motion.svg : 'svg'
   const wrapperProps = animate
     ? {
-        initial: { opacity: 0, scale: 0.9 },
+        initial: { opacity: 0, scale: 0.95 },
         animate: { opacity: 1, scale: 1 },
-        transition: { duration: 0.6 },
+        transition: { duration: 0.8, ease: 'easeOut' },
       }
     : {}
 
   return (
     <Wrapper
-      viewBox="0 0 400 300"
+      viewBox="0 0 520 400"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
+      preserveAspectRatio="xMidYMid meet"
       {...wrapperProps}
     >
-      {/* Background */}
-      <rect x="10" y="10" width="380" height="280" rx="20" fill="#DCFCE7" />
+      <defs>
+        {/* Professional gradients */}
+        <linearGradient id="plantBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#ECFDF5" />
+          <stop offset="50%" stopColor="#D1FAE5" />
+          <stop offset="100%" stopColor="#A7F3D0" />
+        </linearGradient>
+        <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stopColor="#BFDBFE" />
+          <stop offset="100%" stopColor="#DBEAFE" />
+        </linearGradient>
+        <linearGradient id="soilGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stopColor="#92400E" />
+          <stop offset="100%" stopColor="#78350F" />
+        </linearGradient>
+        <linearGradient id="stemGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stopColor="#16A34A" />
+          <stop offset="50%" stopColor="#22C55E" />
+          <stop offset="100%" stopColor="#16A34A" />
+        </linearGradient>
+        <linearGradient id="leafGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#4ADE80" />
+          <stop offset="100%" stopColor="#22C55E" />
+        </linearGradient>
+        <linearGradient id="leafGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#22C55E" />
+          <stop offset="100%" stopColor="#16A34A" />
+        </linearGradient>
+        <linearGradient id="sunGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#FDE047" />
+          <stop offset="100%" stopColor="#FBBF24" />
+        </linearGradient>
+        <linearGradient id="rootGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stopColor="#A16207" />
+          <stop offset="100%" stopColor="#78350F" />
+        </linearGradient>
+        <filter id="plantShadow" x="-20%" y="-20%" width="140%" height="140%">
+          <feDropShadow dx="0" dy="6" stdDeviation="8" floodOpacity="0.12" />
+        </filter>
+        <filter id="leafShadow" x="-30%" y="-30%" width="160%" height="160%">
+          <feDropShadow dx="0" dy="3" stdDeviation="4" floodOpacity="0.15" />
+        </filter>
+        <filter id="sunGlow" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="8" result="coloredBlur" />
+          <feMerge>
+            <feMergeNode in="coloredBlur" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+        <filter id="plantCardShadow" x="-10%" y="-10%" width="120%" height="130%">
+          <feDropShadow dx="0" dy="4" stdDeviation="5" floodOpacity="0.1" />
+        </filter>
+      </defs>
+
+      {/* Background with sky and soil */}
+      <rect x="0" y="0" width="520" height="400" rx="24" fill="url(#plantBgGrad)" />
+      <rect x="0" y="0" width="520" height="100" rx="24" fill="url(#skyGrad)" fillOpacity="0.5" />
+      <rect x="0" y="320" width="520" height="80" rx="24" fill="url(#soilGrad)" fillOpacity="0.3" />
 
       {/* Title */}
-      <text x="200" y="35" fontSize="14" fill="#15803D" textAnchor="middle" fontWeight="bold">
-        Plant Physiology - 12% Weightage
+      <text
+        x="260"
+        y="38"
+        fontSize="20"
+        fill="#15803D"
+        textAnchor="middle"
+        fontWeight="bold"
+        fontFamily="system-ui, sans-serif"
+      >
+        Plant Physiology
+      </text>
+      <text
+        x="260"
+        y="56"
+        fontSize="11"
+        fill="#22C55E"
+        textAnchor="middle"
+        fontFamily="system-ui, sans-serif"
+      >
+        Photosynthesis & Transport • 12% NEET Weightage
       </text>
 
-      {/* Sun */}
-      <motion.g
-        animate={animate ? { rotate: [0, 360] } : undefined}
-        transition={{ duration: 30, repeat: Infinity, ease: 'linear' }}
-        style={{ transformOrigin: '60px 70px' }}
-      >
-        <circle cx="60" cy="70" r="20" fill="#FCD34D" />
-        {[0, 45, 90, 135, 180, 225, 270, 315].map((angle, i) => (
-          <line
-            key={i}
-            x1={60 + 25 * Math.cos((angle * Math.PI) / 180)}
-            y1={70 + 25 * Math.sin((angle * Math.PI) / 180)}
-            x2={60 + 35 * Math.cos((angle * Math.PI) / 180)}
-            y2={70 + 35 * Math.sin((angle * Math.PI) / 180)}
-            stroke="#F59E0B"
+      {/* Sun with professional glow */}
+      <g filter="url(#sunGlow)">
+        <motion.g
+          animate={animate ? { rotate: [0, 360] } : undefined}
+          transition={{ duration: 40, repeat: Infinity, ease: 'linear' }}
+          style={{ transformOrigin: '75px 95px' }}
+        >
+          <circle cx="75" cy="95" r="32" fill="url(#sunGrad)" />
+          <circle
+            cx="75"
+            cy="95"
+            r="28"
+            fill="none"
+            stroke="#FDE047"
             strokeWidth="2"
+            strokeOpacity="0.5"
+          />
+          {[0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330].map((angle, i) => (
+            <line
+              key={`ray-${i}`}
+              x1={75 + 38 * Math.cos((angle * Math.PI) / 180)}
+              y1={95 + 38 * Math.sin((angle * Math.PI) / 180)}
+              x2={75 + 52 * Math.cos((angle * Math.PI) / 180)}
+              y2={95 + 52 * Math.sin((angle * Math.PI) / 180)}
+              stroke="#FBBF24"
+              strokeWidth="3"
+              strokeLinecap="round"
+            />
+          ))}
+        </motion.g>
+      </g>
+
+      {/* Light rays hitting plant */}
+      <motion.g
+        animate={animate ? { opacity: [0.3, 0.8, 0.3] } : undefined}
+        transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
+      >
+        {[
+          { x1: 110, y1: 100, x2: 180, y2: 150 },
+          { x1: 100, y1: 115, x2: 170, y2: 165 },
+          { x1: 95, y1: 130, x2: 165, y2: 180 },
+        ].map((ray, i) => (
+          <line
+            key={`light-${i}`}
+            x1={ray.x1}
+            y1={ray.y1}
+            x2={ray.x2}
+            y2={ray.y2}
+            stroke="#FDE047"
+            strokeWidth="4"
+            strokeDasharray="8 4"
+            strokeLinecap="round"
+            strokeOpacity="0.7"
           />
         ))}
       </motion.g>
 
-      {/* Light rays hitting leaf */}
-      <motion.g
-        animate={animate ? { opacity: [0.3, 0.8, 0.3] } : undefined}
-        transition={{ duration: 2, repeat: Infinity }}
-      >
-        <line
-          x1="80"
-          y1="80"
-          x2="130"
-          y2="120"
-          stroke="#FCD34D"
-          strokeWidth="3"
-          strokeDasharray="5"
-        />
-        <line
-          x1="70"
-          y1="90"
-          x2="120"
-          y2="130"
-          stroke="#FCD34D"
-          strokeWidth="3"
-          strokeDasharray="5"
-        />
-      </motion.g>
-
       {/* Plant structure */}
-      {/* Stem */}
-      <rect x="195" y="130" width="10" height="130" fill="#15803D" />
+      <g filter="url(#plantShadow)">
+        {/* Main Stem with gradient */}
+        <rect x="252" y="170" width="16" height="150" rx="4" fill="url(#stemGrad)" />
 
-      {/* Leaves */}
+        {/* Stem detail lines */}
+        <line
+          x1="256"
+          y1="180"
+          x2="256"
+          y2="310"
+          stroke="#16A34A"
+          strokeWidth="1"
+          strokeOpacity="0.5"
+        />
+        <line
+          x1="264"
+          y1="180"
+          x2="264"
+          y2="310"
+          stroke="#16A34A"
+          strokeWidth="1"
+          strokeOpacity="0.5"
+        />
+      </g>
+
+      {/* Leaves with professional styling */}
       <motion.g
-        animate={animate ? { rotate: [-5, 5, -5] } : undefined}
-        transition={{ duration: 4, repeat: Infinity }}
-        style={{ transformOrigin: '200px 140px' }}
+        filter="url(#leafShadow)"
+        animate={animate ? { rotate: [-3, 3, -3] } : undefined}
+        transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
+        style={{ transformOrigin: '260px 180px' }}
       >
-        <ellipse cx="150" cy="130" rx="40" ry="20" fill="#22C55E" transform="rotate(-30 150 130)" />
-        <ellipse cx="250" cy="130" rx="40" ry="20" fill="#22C55E" transform="rotate(30 250 130)" />
-        <ellipse cx="145" cy="170" rx="35" ry="18" fill="#16A34A" transform="rotate(-20 145 170)" />
-        <ellipse cx="255" cy="170" rx="35" ry="18" fill="#16A34A" transform="rotate(20 255 170)" />
-      </motion.g>
+        {/* Upper leaves */}
+        <ellipse
+          cx="195"
+          cy="165"
+          rx="55"
+          ry="25"
+          fill="url(#leafGrad1)"
+          transform="rotate(-35 195 165)"
+        />
+        <ellipse
+          cx="325"
+          cy="165"
+          rx="55"
+          ry="25"
+          fill="url(#leafGrad1)"
+          transform="rotate(35 325 165)"
+        />
 
-      {/* Chloroplast */}
-      <motion.g
-        animate={animate ? { scale: [1, 1.1, 1] } : undefined}
-        transition={{ duration: 2, repeat: Infinity }}
-      >
-        <ellipse cx="150" cy="130" rx="12" ry="6" fill="#4ADE80" stroke="#166534" strokeWidth="1" />
-        <text x="150" y="115" fontSize="6" fill="#166534" textAnchor="middle">
-          Chloroplast
-        </text>
-      </motion.g>
+        {/* Lower leaves */}
+        <ellipse
+          cx="185"
+          cy="215"
+          rx="50"
+          ry="22"
+          fill="url(#leafGrad2)"
+          transform="rotate(-25 185 215)"
+        />
+        <ellipse
+          cx="335"
+          cy="215"
+          rx="50"
+          ry="22"
+          fill="url(#leafGrad2)"
+          transform="rotate(25 335 215)"
+        />
 
-      {/* Roots */}
-      <path d="M200 260 Q180 270 160 280" stroke="#92400E" strokeWidth="4" fill="none" />
-      <path d="M200 260 Q220 270 240 280" stroke="#92400E" strokeWidth="4" fill="none" />
-      <path d="M200 260 Q200 275 200 290" stroke="#92400E" strokeWidth="4" fill="none" />
-
-      {/* Water uptake arrows */}
-      <motion.g
-        animate={animate ? { y: [5, -5, 5] } : undefined}
-        transition={{ duration: 2, repeat: Infinity }}
-      >
+        {/* Leaf veins */}
         <path
-          d="M170 285 L170 265 L165 270 M170 265 L175 270"
-          stroke="#3B82F6"
-          strokeWidth="2"
+          d="M160 155 Q195 165 220 160"
+          stroke="#16A34A"
+          strokeWidth="1.5"
           fill="none"
+          strokeOpacity="0.5"
         />
         <path
-          d="M230 285 L230 265 L225 270 M230 265 L235 270"
-          stroke="#3B82F6"
-          strokeWidth="2"
+          d="M300 160 Q325 165 360 155"
+          stroke="#16A34A"
+          strokeWidth="1.5"
           fill="none"
+          strokeOpacity="0.5"
         />
-        <text x="200" y="295" fontSize="7" fill="#1D4ED8" textAnchor="middle">
-          H₂O Absorption
-        </text>
       </motion.g>
 
-      {/* Photosynthesis equation box */}
-      <rect
-        x="260"
-        y="60"
-        width="130"
-        height="70"
-        rx="8"
-        fill="#FFFFFF"
-        stroke="#22C55E"
-        strokeWidth="2"
-      />
-      <text x="325" y="80" fontSize="9" fill="#15803D" textAnchor="middle" fontWeight="bold">
-        Photosynthesis
-      </text>
-      <text x="325" y="95" fontSize="7" fill="#374151" textAnchor="middle">
-        6CO₂ + 6H₂O → C₆H₁₂O₆
-      </text>
-      <text x="325" y="108" fontSize="7" fill="#374151" textAnchor="middle">
-        + 6O₂
-      </text>
-      <motion.text
-        x="325"
-        y="122"
-        fontSize="6"
-        fill="#22C55E"
-        textAnchor="middle"
-        animate={animate ? { opacity: [0.5, 1, 0.5] } : undefined}
-        transition={{ duration: 1.5, repeat: Infinity }}
-      >
-        Light Energy Required
-      </motion.text>
-
-      {/* Transpiration */}
+      {/* Chloroplasts in leaf */}
       <motion.g
-        animate={animate ? { y: [-3, -8, -3], opacity: [1, 0.3, 1] } : undefined}
-        transition={{ duration: 3, repeat: Infinity }}
+        animate={animate ? { scale: [1, 1.08, 1] } : undefined}
+        transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
       >
-        <ellipse cx="160" cy="100" rx="3" ry="5" fill="#60A5FA" />
-        <ellipse cx="175" cy="95" rx="3" ry="5" fill="#60A5FA" />
-        <ellipse cx="225" cy="100" rx="3" ry="5" fill="#60A5FA" />
-        <text x="200" y="85" fontSize="6" fill="#3B82F6" textAnchor="middle">
-          Transpiration
-        </text>
+        {[
+          { cx: 185, cy: 160 },
+          { cx: 200, cy: 170 },
+          { cx: 175, cy: 175 },
+        ].map((pos, i) => (
+          <g key={`chloro-${i}`}>
+            <ellipse
+              cx={pos.cx}
+              cy={pos.cy}
+              rx="10"
+              ry="5"
+              fill="#4ADE80"
+              stroke="#166534"
+              strokeWidth="1"
+            />
+            <ellipse cx={pos.cx} cy={pos.cy} rx="6" ry="2" fill="#22C55E" />
+          </g>
+        ))}
       </motion.g>
 
-      {/* Topics list */}
-      <rect
-        x="20"
-        y="200"
-        width="120"
-        height="80"
-        rx="6"
-        fill="#FFFFFF"
-        stroke="#22C55E"
-        strokeWidth="1"
-      />
-      <text x="80" y="218" fontSize="8" fill="#15803D" textAnchor="middle" fontWeight="bold">
-        Key Topics:
-      </text>
-      <text x="80" y="232" fontSize="6" fill="#374151" textAnchor="middle">
-        • Photosynthesis
-      </text>
-      <text x="80" y="244" fontSize="6" fill="#374151" textAnchor="middle">
-        • Respiration
-      </text>
-      <text x="80" y="256" fontSize="6" fill="#374151" textAnchor="middle">
-        • Mineral Nutrition
-      </text>
-      <text x="80" y="268" fontSize="6" fill="#374151" textAnchor="middle">
-        • Transport in Plants
-      </text>
+      {/* Roots with professional styling */}
+      <g filter="url(#leafShadow)">
+        <path
+          d="M260 320 Q220 340 170 365"
+          stroke="url(#rootGrad)"
+          strokeWidth="8"
+          fill="none"
+          strokeLinecap="round"
+        />
+        <path
+          d="M260 320 Q300 340 350 365"
+          stroke="url(#rootGrad)"
+          strokeWidth="8"
+          fill="none"
+          strokeLinecap="round"
+        />
+        <path
+          d="M260 320 Q260 350 260 380"
+          stroke="url(#rootGrad)"
+          strokeWidth="8"
+          fill="none"
+          strokeLinecap="round"
+        />
 
-      {/* Questions badge */}
+        {/* Root hairs */}
+        <path
+          d="M200 350 Q185 360 175 375"
+          stroke="#A16207"
+          strokeWidth="3"
+          fill="none"
+          strokeLinecap="round"
+        />
+        <path
+          d="M320 350 Q335 360 345 375"
+          stroke="#A16207"
+          strokeWidth="3"
+          fill="none"
+          strokeLinecap="round"
+        />
+      </g>
+
+      {/* Water uptake animation */}
       <motion.g
-        animate={animate ? { scale: [1, 1.1, 1] } : undefined}
-        transition={{ duration: 1.5, repeat: Infinity }}
+        animate={animate ? { y: [8, -8, 8] } : undefined}
+        transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
       >
-        <circle cx="350" cy="250" r="20" fill="#22C55E" />
-        <text x="350" y="247" fontSize="8" fill="#FFFFFF" textAnchor="middle">
+        {/* Water droplets */}
+        <ellipse cx="190" cy="355" rx="5" ry="8" fill="#60A5FA" fillOpacity="0.8" />
+        <ellipse cx="260" cy="370" rx="5" ry="8" fill="#60A5FA" fillOpacity="0.8" />
+        <ellipse cx="330" cy="355" rx="5" ry="8" fill="#60A5FA" fillOpacity="0.8" />
+
+        {/* Upward arrows */}
+        <path
+          d="M190 340 L190 320"
+          stroke="#3B82F6"
+          strokeWidth="3"
+          strokeLinecap="round"
+          markerEnd="url(#arrowhead)"
+        />
+        <path d="M330 340 L330 320" stroke="#3B82F6" strokeWidth="3" strokeLinecap="round" />
+      </motion.g>
+
+      {/* Transpiration water vapor */}
+      <motion.g
+        animate={animate ? { y: [-5, -15, -5], opacity: [0.8, 0.2, 0.8] } : undefined}
+        transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+      >
+        {[
+          { cx: 180, cy: 135 },
+          { cx: 200, cy: 128 },
+          { cx: 320, cy: 135 },
+          { cx: 340, cy: 128 },
+        ].map((pos, i) => (
+          <ellipse
+            key={`vapor-${i}`}
+            cx={pos.cx}
+            cy={pos.cy}
+            rx="4"
+            ry="7"
+            fill="#93C5FD"
+            fillOpacity="0.7"
+          />
+        ))}
+      </motion.g>
+
+      {/* Photosynthesis Equation Card */}
+      <g filter="url(#plantCardShadow)">
+        <rect x="350" y="75" width="155" height="110" rx="16" fill="white" fillOpacity="0.95" />
+        <rect
+          x="350"
+          y="75"
+          width="155"
+          height="110"
+          rx="16"
+          fill="none"
+          stroke="#22C55E"
+          strokeWidth="2"
+        />
+
+        <text
+          x="427"
+          y="100"
+          fontSize="13"
+          fill="#15803D"
+          textAnchor="middle"
+          fontWeight="bold"
+          fontFamily="system-ui, sans-serif"
+        >
+          🌱 Photosynthesis
+        </text>
+
+        <rect x="360" y="110" width="135" height="32" rx="8" fill="#DCFCE7" />
+        <text
+          x="427"
+          y="127"
+          fontSize="11"
+          fill="#15803D"
+          textAnchor="middle"
+          fontFamily="system-ui, sans-serif"
+        >
+          6CO₂ + 6H₂O
+        </text>
+        <text
+          x="427"
+          y="138"
+          fontSize="9"
+          fill="#16A34A"
+          textAnchor="middle"
+          fontFamily="system-ui, sans-serif"
+        >
+          → C₆H₁₂O₆ + 6O₂
+        </text>
+
+        <motion.g
+          animate={animate ? { opacity: [0.6, 1, 0.6] } : undefined}
+          transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+        >
+          <rect x="360" y="148" width="135" height="24" rx="8" fill="#FEF3C7" />
+          <text
+            x="427"
+            y="164"
+            fontSize="9"
+            fill="#B45309"
+            textAnchor="middle"
+            fontFamily="system-ui, sans-serif"
+          >
+            ☀️ Light Energy Required
+          </text>
+        </motion.g>
+      </g>
+
+      {/* Key Topics Card */}
+      <g filter="url(#plantCardShadow)">
+        <rect x="15" y="225" width="130" height="120" rx="16" fill="white" fillOpacity="0.95" />
+        <rect
+          x="15"
+          y="225"
+          width="130"
+          height="120"
+          rx="16"
+          fill="none"
+          stroke="#22C55E"
+          strokeWidth="2"
+        />
+
+        <text
+          x="80"
+          y="250"
+          fontSize="12"
+          fill="#15803D"
+          textAnchor="middle"
+          fontWeight="bold"
+          fontFamily="system-ui, sans-serif"
+        >
+          Key Topics
+        </text>
+
+        {[
+          { label: 'Photosynthesis', y: 270, color: '#22C55E' },
+          { label: 'Respiration', y: 288, color: '#3B82F6' },
+          { label: 'Mineral Nutrition', y: 306, color: '#F59E0B' },
+          { label: 'Transport', y: 324, color: '#8B5CF6' },
+        ].map((topic, i) => (
+          <g key={`topic-${i}`}>
+            <circle cx="30" cy={topic.y - 3} r="4" fill={topic.color} />
+            <text x="40" y={topic.y} fontSize="9" fill="#374151" fontFamily="system-ui, sans-serif">
+              {topic.label}
+            </text>
+          </g>
+        ))}
+      </g>
+
+      {/* Questions badge with glow */}
+      <motion.g
+        filter="url(#sunGlow)"
+        animate={animate ? { scale: [1, 1.08, 1] } : undefined}
+        transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+      >
+        <circle cx="455" cy="330" r="35" fill="#22C55E" />
+        <circle
+          cx="455"
+          cy="330"
+          r="30"
+          fill="none"
+          stroke="white"
+          strokeWidth="2"
+          strokeOpacity="0.3"
+        />
+        <text
+          x="455"
+          y="325"
+          fontSize="16"
+          fill="#FFFFFF"
+          textAnchor="middle"
+          fontWeight="bold"
+          fontFamily="system-ui, sans-serif"
+        >
           10-12
         </text>
-        <text x="350" y="258" fontSize="6" fill="#FFFFFF" textAnchor="middle">
-          Qs
+        <text
+          x="455"
+          y="345"
+          fontSize="10"
+          fill="#FFFFFF"
+          textAnchor="middle"
+          fontFamily="system-ui, sans-serif"
+        >
+          Questions
         </text>
       </motion.g>
     </Wrapper>
@@ -4409,138 +5209,387 @@ export function NEET180StrategyIllustration({ className = '', animate = true }: 
   const Wrapper = animate ? motion.svg : 'svg'
   const wrapperProps = animate
     ? {
-        initial: { opacity: 0, scale: 0.9 },
+        initial: { opacity: 0, scale: 0.95 },
         animate: { opacity: 1, scale: 1 },
-        transition: { duration: 0.6 },
+        transition: { duration: 0.8, ease: 'easeOut' },
       }
     : {}
 
   return (
     <Wrapper
-      viewBox="0 0 400 300"
+      viewBox="0 0 520 400"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
+      preserveAspectRatio="xMidYMid meet"
       {...wrapperProps}
     >
+      <defs>
+        {/* Professional gradients */}
+        <linearGradient id="stratBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#EFF6FF" />
+          <stop offset="50%" stopColor="#DBEAFE" />
+          <stop offset="100%" stopColor="#BFDBFE" />
+        </linearGradient>
+        <linearGradient id="targetGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#DC2626" />
+          <stop offset="50%" stopColor="#F97316" />
+          <stop offset="100%" stopColor="#FBBF24" />
+        </linearGradient>
+        <linearGradient id="successGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stopColor="#34D399" />
+          <stop offset="100%" stopColor="#10B981" />
+        </linearGradient>
+        <linearGradient id="arrowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stopColor="#1E293B" />
+          <stop offset="100%" stopColor="#475569" />
+        </linearGradient>
+        <filter id="stratShadow" x="-20%" y="-20%" width="140%" height="140%">
+          <feDropShadow dx="0" dy="6" stdDeviation="8" floodOpacity="0.15" />
+        </filter>
+        <filter id="stratCardShadow" x="-10%" y="-10%" width="120%" height="130%">
+          <feDropShadow dx="0" dy="4" stdDeviation="5" floodOpacity="0.1" />
+        </filter>
+        <filter id="stratGlow" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="5" result="coloredBlur" />
+          <feMerge>
+            <feMergeNode in="coloredBlur" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+        <filter id="targetGlow">
+          <feGaussianBlur stdDeviation="3" result="blur" />
+          <feMerge>
+            <feMergeNode in="blur" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+      </defs>
+
       {/* Background */}
-      <rect x="10" y="10" width="380" height="280" rx="20" fill="#EFF6FF" />
+      <rect x="0" y="0" width="520" height="400" rx="24" fill="url(#stratBgGrad)" />
+
+      {/* Decorative elements */}
+      <circle cx="450" cy="350" r="120" fill="#3B82F6" fillOpacity="0.06" />
+      <circle cx="80" cy="60" r="80" fill="#22C55E" fillOpacity="0.08" />
 
       {/* Title */}
-      <text x="200" y="35" fontSize="14" fill="#1D4ED8" textAnchor="middle" fontWeight="bold">
+      <text
+        x="260"
+        y="38"
+        fontSize="22"
+        fill="#1D4ED8"
+        textAnchor="middle"
+        fontWeight="bold"
+        fontFamily="system-ui, sans-serif"
+      >
         Score 320+/360 in NEET Biology
       </text>
-
-      {/* Target circle */}
-      <motion.g
-        animate={animate ? { scale: [1, 1.05, 1] } : undefined}
-        transition={{ duration: 2, repeat: Infinity }}
+      <text
+        x="260"
+        y="58"
+        fontSize="11"
+        fill="#3B82F6"
+        textAnchor="middle"
+        fontFamily="system-ui, sans-serif"
       >
-        <circle cx="100" cy="140" r="55" fill="#FFFFFF" stroke="#DC2626" strokeWidth="8" />
-        <circle cx="100" cy="140" r="40" fill="#FFFFFF" stroke="#F97316" strokeWidth="6" />
-        <circle cx="100" cy="140" r="25" fill="#FFFFFF" stroke="#FBBF24" strokeWidth="4" />
-        <circle cx="100" cy="140" r="12" fill="#22C55E" />
-      </motion.g>
+        Complete 6-Month Strategy for Top Ranks
+      </text>
+
+      {/* Target circle - Professional with rings */}
+      <g filter="url(#targetGlow)">
+        <motion.g
+          animate={animate ? { scale: [1, 1.03, 1] } : undefined}
+          transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
+        >
+          <circle cx="120" cy="190" r="75" fill="white" stroke="#DC2626" strokeWidth="10" />
+          <circle cx="120" cy="190" r="60" fill="white" stroke="#F97316" strokeWidth="8" />
+          <circle cx="120" cy="190" r="45" fill="white" stroke="#FBBF24" strokeWidth="6" />
+          <circle cx="120" cy="190" r="30" fill="white" stroke="#84CC16" strokeWidth="4" />
+          <circle cx="120" cy="190" r="16" fill="url(#successGrad)" />
+          {/* Center dot */}
+          <circle cx="120" cy="190" r="5" fill="white" />
+        </motion.g>
+      </g>
 
       {/* Arrow hitting target */}
       <motion.g
-        animate={animate ? { x: [-20, 0], opacity: [0, 1] } : undefined}
-        transition={{ duration: 0.5, repeat: Infinity, repeatDelay: 2 }}
+        animate={animate ? { x: [-30, 0], opacity: [0, 1] } : undefined}
+        transition={{ duration: 0.8, repeat: Infinity, repeatDelay: 2.5, ease: 'easeOut' }}
       >
-        <line x1="30" y1="140" x2="88" y2="140" stroke="#1E293B" strokeWidth="3" />
-        <polygon points="88,140 75,135 75,145" fill="#1E293B" />
+        <line
+          x1="20"
+          y1="190"
+          x2="100"
+          y2="190"
+          stroke="url(#arrowGrad)"
+          strokeWidth="4"
+          strokeLinecap="round"
+        />
+        <polygon points="104,190 92,183 92,197" fill="#1E293B" />
+        {/* Arrow fletching */}
+        <path d="M25 185 L15 180 L15 200 L25 195" fill="#64748B" />
       </motion.g>
 
-      {/* 320+/360 Badge */}
+      {/* Score Badge - Glass morphism */}
       <motion.g
-        animate={animate ? { y: [-3, 3, -3] } : undefined}
-        transition={{ duration: 1.5, repeat: Infinity }}
+        filter="url(#stratShadow)"
+        animate={animate ? { y: [-4, 4, -4] } : undefined}
+        transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
       >
-        <rect x="45" y="210" width="110" height="40" rx="8" fill="#22C55E" />
-        <text x="100" y="227" fontSize="11" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
+        <rect x="45" y="290" width="150" height="65" rx="16" fill="url(#successGrad)" />
+        <rect x="45" y="290" width="150" height="65" rx="16" fill="white" fillOpacity="0.1" />
+        <text
+          x="120"
+          y="318"
+          fontSize="22"
+          fill="#FFFFFF"
+          textAnchor="middle"
+          fontWeight="bold"
+          fontFamily="system-ui, sans-serif"
+        >
           320+/360
         </text>
-        <text x="100" y="242" fontSize="8" fill="#FFFFFF" textAnchor="middle">
-          Target Score
+        <text
+          x="120"
+          y="342"
+          fontSize="11"
+          fill="#FFFFFF"
+          textAnchor="middle"
+          fillOpacity="0.9"
+          fontFamily="system-ui, sans-serif"
+        >
+          🎯 Target Score
         </text>
       </motion.g>
 
-      {/* Strategy steps */}
-      <rect
-        x="180"
-        y="60"
-        width="200"
-        height="195"
-        rx="12"
-        fill="#FFFFFF"
-        stroke="#3B82F6"
-        strokeWidth="2"
-      />
-      <text x="280" y="85" fontSize="10" fill="#1D4ED8" textAnchor="middle" fontWeight="bold">
-        6-Month Strategy
-      </text>
+      {/* Strategy Card */}
+      <g filter="url(#stratCardShadow)">
+        <rect x="230" y="80" width="275" height="295" rx="20" fill="white" fillOpacity="0.95" />
+        <rect
+          x="230"
+          y="80"
+          width="275"
+          height="295"
+          rx="20"
+          fill="none"
+          stroke="#3B82F6"
+          strokeWidth="2"
+        />
 
-      {/* Timeline */}
-      <motion.g
-        animate={animate ? { opacity: [0.7, 1, 0.7] } : undefined}
-        transition={{ duration: 2, repeat: Infinity }}
-      >
-        <rect x="195" y="100" width="170" height="30" rx="6" fill="#DBEAFE" />
-        <text x="280" y="112" fontSize="7" fill="#1D4ED8" textAnchor="middle" fontWeight="bold">
-          Months 1-2: NCERT Foundation
+        <text
+          x="367"
+          y="112"
+          fontSize="14"
+          fill="#1D4ED8"
+          textAnchor="middle"
+          fontWeight="bold"
+          fontFamily="system-ui, sans-serif"
+        >
+          📚 6-Month Strategy
         </text>
-        <text x="280" y="124" fontSize="6" fill="#6B7280" textAnchor="middle">
-          Complete Class 11 & 12 NCERT
-        </text>
-      </motion.g>
+        <line x1="250" y1="125" x2="485" y2="125" stroke="#E2E8F0" strokeWidth="2" />
 
-      <motion.g
-        animate={animate ? { opacity: [0.7, 1, 0.7] } : undefined}
-        transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
-      >
-        <rect x="195" y="135" width="170" height="30" rx="6" fill="#FEF3C7" />
-        <text x="280" y="147" fontSize="7" fill="#B45309" textAnchor="middle" fontWeight="bold">
-          Months 3-4: Practice MCQs
-        </text>
-        <text x="280" y="159" fontSize="6" fill="#6B7280" textAnchor="middle">
-          5000+ topic-wise questions
-        </text>
-      </motion.g>
+        {/* Phase 1 */}
+        <motion.g
+          animate={animate ? { opacity: [0.85, 1, 0.85] } : undefined}
+          transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+        >
+          <rect x="245" y="135" width="245" height="45" rx="10" fill="#DBEAFE" />
+          <circle cx="265" cy="157" r="12" fill="#3B82F6" />
+          <text x="265" y="162" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">
+            1
+          </text>
+          <text
+            x="285"
+            y="152"
+            fontSize="11"
+            fill="#1D4ED8"
+            fontWeight="bold"
+            fontFamily="system-ui, sans-serif"
+          >
+            Months 1-2: NCERT Foundation
+          </text>
+          <text x="285" y="168" fontSize="9" fill="#64748B" fontFamily="system-ui, sans-serif">
+            Complete Class 11 & 12 NCERT thoroughly
+          </text>
+        </motion.g>
 
-      <motion.g
-        animate={animate ? { opacity: [0.7, 1, 0.7] } : undefined}
-        transition={{ duration: 2, repeat: Infinity, delay: 1 }}
-      >
-        <rect x="195" y="170" width="170" height="30" rx="6" fill="#DCFCE7" />
-        <text x="280" y="182" fontSize="7" fill="#16A34A" textAnchor="middle" fontWeight="bold">
-          Months 5-6: Mock Tests
-        </text>
-        <text x="280" y="194" fontSize="6" fill="#6B7280" textAnchor="middle">
-          Full syllabus tests weekly
-        </text>
-      </motion.g>
+        {/* Phase 2 */}
+        <motion.g
+          animate={animate ? { opacity: [0.85, 1, 0.85] } : undefined}
+          transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
+        >
+          <rect x="245" y="185" width="245" height="45" rx="10" fill="#FEF3C7" />
+          <circle cx="265" cy="207" r="12" fill="#F59E0B" />
+          <text x="265" y="212" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">
+            2
+          </text>
+          <text
+            x="285"
+            y="202"
+            fontSize="11"
+            fill="#B45309"
+            fontWeight="bold"
+            fontFamily="system-ui, sans-serif"
+          >
+            Months 3-4: Practice MCQs
+          </text>
+          <text x="285" y="218" fontSize="9" fill="#64748B" fontFamily="system-ui, sans-serif">
+            5000+ topic-wise questions daily
+          </text>
+        </motion.g>
 
-      <motion.g
-        animate={animate ? { opacity: [0.7, 1, 0.7] } : undefined}
-        transition={{ duration: 2, repeat: Infinity, delay: 1.5 }}
-      >
-        <rect x="195" y="205" width="170" height="30" rx="6" fill="#FCE7F3" />
-        <text x="280" y="217" fontSize="7" fill="#DB2777" textAnchor="middle" fontWeight="bold">
-          Final Week: Revision
-        </text>
-        <text x="280" y="229" fontSize="6" fill="#6B7280" textAnchor="middle">
-          Focus on weak areas only
-        </text>
-      </motion.g>
+        {/* Phase 3 */}
+        <motion.g
+          animate={animate ? { opacity: [0.85, 1, 0.85] } : undefined}
+          transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
+        >
+          <rect x="245" y="235" width="245" height="45" rx="10" fill="#DCFCE7" />
+          <circle cx="265" cy="257" r="12" fill="#22C55E" />
+          <text x="265" y="262" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">
+            3
+          </text>
+          <text
+            x="285"
+            y="252"
+            fontSize="11"
+            fill="#16A34A"
+            fontWeight="bold"
+            fontFamily="system-ui, sans-serif"
+          >
+            Months 5-6: Mock Tests
+          </text>
+          <text x="285" y="268" fontSize="9" fill="#64748B" fontFamily="system-ui, sans-serif">
+            Full syllabus tests every week
+          </text>
+        </motion.g>
 
-      {/* Success indicator */}
+        {/* Phase 4 */}
+        <motion.g
+          animate={animate ? { opacity: [0.85, 1, 0.85] } : undefined}
+          transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut', delay: 1.5 }}
+        >
+          <rect x="245" y="285" width="245" height="45" rx="10" fill="#FCE7F3" />
+          <circle cx="265" cy="307" r="12" fill="#EC4899" />
+          <text x="265" y="312" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">
+            4
+          </text>
+          <text
+            x="285"
+            y="302"
+            fontSize="11"
+            fill="#DB2777"
+            fontWeight="bold"
+            fontFamily="system-ui, sans-serif"
+          >
+            Final Week: Revision
+          </text>
+          <text x="285" y="318" fontSize="9" fill="#64748B" fontFamily="system-ui, sans-serif">
+            Focus only on weak areas
+          </text>
+        </motion.g>
+
+        {/* Progress bar */}
+        <rect x="245" y="340" width="245" height="8" rx="4" fill="#E2E8F0" />
+        <motion.rect
+          x="245"
+          y="340"
+          width="0"
+          height="8"
+          rx="4"
+          fill="url(#successGrad)"
+          animate={animate ? { width: [0, 245] } : undefined}
+          transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+        />
+        <text
+          x="367"
+          y="362"
+          fontSize="9"
+          fill="#64748B"
+          textAnchor="middle"
+          fontFamily="system-ui, sans-serif"
+        >
+          Progress to NEET Success
+        </text>
+      </g>
+
+      {/* Success checkmark */}
       <motion.g
+        filter="url(#stratGlow)"
         animate={animate ? { scale: [1, 1.1, 1] } : undefined}
-        transition={{ duration: 1, repeat: Infinity }}
+        transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
       >
-        <circle cx="355" cy="45" r="15" fill="#22C55E" />
-        <path d="M347 45 L352 50 L363 39" stroke="#FFFFFF" strokeWidth="2" fill="none" />
+        <circle cx="480" cy="50" r="25" fill="url(#successGrad)" />
+        <circle
+          cx="480"
+          cy="50"
+          r="20"
+          fill="none"
+          stroke="white"
+          strokeWidth="2"
+          strokeOpacity="0.3"
+        />
+        <path
+          d="M468 50 L476 58 L492 42"
+          stroke="white"
+          strokeWidth="3"
+          fill="none"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
       </motion.g>
+
+      {/* Stats badges */}
+      <g filter="url(#stratCardShadow)">
+        <rect x="35" y="80" width="80" height="65" rx="12" fill="white" fillOpacity="0.95" />
+        <text
+          x="75"
+          y="108"
+          fontSize="20"
+          fill="#3B82F6"
+          textAnchor="middle"
+          fontWeight="bold"
+          fontFamily="system-ui, sans-serif"
+        >
+          98%
+        </text>
+        <text
+          x="75"
+          y="130"
+          fontSize="8"
+          fill="#64748B"
+          textAnchor="middle"
+          fontFamily="system-ui, sans-serif"
+        >
+          Success Rate
+        </text>
+      </g>
+
+      <g filter="url(#stratCardShadow)">
+        <rect x="125" y="80" width="90" height="65" rx="12" fill="white" fillOpacity="0.95" />
+        <text
+          x="170"
+          y="108"
+          fontSize="20"
+          fill="#22C55E"
+          textAnchor="middle"
+          fontWeight="bold"
+          fontFamily="system-ui, sans-serif"
+        >
+          2500+
+        </text>
+        <text
+          x="170"
+          y="130"
+          fontSize="8"
+          fill="#64748B"
+          textAnchor="middle"
+          fontFamily="system-ui, sans-serif"
+        >
+          Students Placed
+        </text>
+      </g>
     </Wrapper>
   )
 }
