@@ -242,8 +242,8 @@ export function ExploratoryFlow({ onCounselingBook, className = '' }: Explorator
       <div
         className={`min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 py-12 ${className}`}
       >
-        {/* Progress Tracker */}
-        <div className="fixed top-4 right-4 z-50 bg-white rounded-lg shadow-lg p-4 text-sm">
+        {/* Progress Tracker - hidden on mobile */}
+        <div className="hidden sm:block fixed top-4 right-4 z-50 bg-white rounded-lg shadow-lg p-4 text-sm">
           <div className="flex items-center gap-2 mb-2">
             <ClockIcon className="h-4 w-4 text-blue-600" />
             <span>Time: {formatTime(progressTracking.timeSpent)}</span>
@@ -424,8 +424,8 @@ export function ExploratoryFlow({ onCounselingBook, className = '' }: Explorator
       <div
         className={`min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50 py-12 ${className}`}
       >
-        {/* Progress Tracker */}
-        <div className="fixed top-4 right-4 z-50 bg-white rounded-lg shadow-lg p-4 text-sm">
+        {/* Progress Tracker - hidden on mobile */}
+        <div className="hidden sm:block fixed top-4 right-4 z-50 bg-white rounded-lg shadow-lg p-4 text-sm">
           <div className="flex items-center gap-2 mb-2">
             <ClockIcon className="h-4 w-4 text-green-600" />
             <span>Time: {formatTime(progressTracking.timeSpent)}</span>
@@ -575,8 +575,8 @@ export function ExploratoryFlow({ onCounselingBook, className = '' }: Explorator
       <div
         className={`min-h-screen bg-gradient-to-br from-purple-50 via-white to-pink-50 py-12 ${className}`}
       >
-        {/* Progress Tracker */}
-        <div className="fixed top-4 right-4 z-50 bg-white rounded-lg shadow-lg p-4 text-sm">
+        {/* Progress Tracker - hidden on mobile */}
+        <div className="hidden sm:block fixed top-4 right-4 z-50 bg-white rounded-lg shadow-lg p-4 text-sm">
           <div className="flex items-center gap-2 mb-2">
             <ClockIcon className="h-4 w-4 text-purple-600" />
             <span>Time: {formatTime(progressTracking.timeSpent)}</span>
@@ -740,8 +740,8 @@ export function ExploratoryFlow({ onCounselingBook, className = '' }: Explorator
       <div
         className={`min-h-screen bg-gradient-to-br from-orange-50 via-white to-red-50 py-12 ${className}`}
       >
-        {/* Progress Tracker */}
-        <div className="fixed top-4 right-4 z-50 bg-white rounded-lg shadow-lg p-4 text-sm">
+        {/* Progress Tracker - hidden on mobile */}
+        <div className="hidden sm:block fixed top-4 right-4 z-50 bg-white rounded-lg shadow-lg p-4 text-sm">
           <div className="flex items-center gap-2 mb-2">
             <CheckCircleIcon className="h-4 w-4 text-green-600" />
             <span>Journey Complete: {formatTime(progressTracking.timeSpent)}</span>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="40" viewBox="0 0 80 40">
+  <rect width="80" height="40" rx="4" fill="#10B981"/>
+  <path d="M20 12 L20 28 L60 28 L60 18 L40 18 L40 12 Z" fill="none" stroke="white" stroke-width="2"/>
+  <circle cx="40" cy="23" r="3" fill="white"/>
+  <text x="40" y="36" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="8" font-weight="bold">SSL Secure</text>
+</svg>

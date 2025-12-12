@@ -135,7 +135,7 @@ export function ParentFlow({ isOpen, onClose, onComplete }: ParentFlowProps) {
           initial={{ opacity: 0, scale: 0.9, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.9, y: 20 }}
-          className="bg-slate-900 rounded-2xl shadow-2xl max-w-5xl w-full max-h-[90vh] overflow-hidden border border-slate-700"
+          className="bg-slate-900 rounded-2xl shadow-2xl max-w-full sm:max-w-2xl lg:max-w-4xl xl:max-w-5xl w-full max-h-[90vh] overflow-hidden border border-slate-700"
         >
           {/* Header */}
           <div className="flex justify-between items-center p-6 border-b border-slate-700">

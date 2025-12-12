@@ -504,7 +504,7 @@ const ExitIntentPopup: React.FC<ExitIntentPopupProps> = ({
           animate={{ scale: 1, opacity: 1, y: 0 }}
           exit={{ scale: 0.8, opacity: 0, y: 50 }}
           transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-          className="relative max-w-lg w-full bg-white rounded-2xl shadow-2xl overflow-hidden"
+          className="relative max-w-lg w-full mx-4 sm:mx-0 bg-white rounded-2xl shadow-2xl overflow-hidden"
           onClick={(e) => e.stopPropagation()}
         >
           {/* Close button */}
@@ -517,7 +517,7 @@ const ExitIntentPopup: React.FC<ExitIntentPopupProps> = ({
 
           {/* Header with gradient */}
           <div
-            className={`bg-gradient-to-r ${selectedOffer.visual.gradient} p-6 text-white relative overflow-hidden`}
+            className={`bg-gradient-to-r ${selectedOffer.visual.gradient} p-4 sm:p-6 text-white relative overflow-hidden`}
           >
             <div className="relative z-10">
               <div className="flex items-center gap-3 mb-4">

@@ -133,15 +133,15 @@ export function TrustFlow({ isOpen, onClose, onComplete }: TrustFlowProps) {
           initial={{ opacity: 0, scale: 0.9, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.9, y: 20 }}
-          className="bg-slate-900 rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden border border-slate-700"
+          className="bg-slate-900 rounded-2xl shadow-2xl max-w-full sm:max-w-2xl lg:max-w-4xl w-full mx-4 sm:mx-0 max-h-[90vh] overflow-hidden border border-slate-700"
         >
           {/* Header */}
-          <div className="flex justify-between items-center p-6 border-b border-slate-700">
+          <div className="flex justify-between items-center p-4 sm:p-6 border-b border-slate-700">
             <div>
-              <h2 className="text-2xl font-bold text-white">
+              <h2 className="text-lg sm:text-2xl font-bold text-white">
                 Why Choose Cerebrum Biology Academy?
               </h2>
-              <p className="text-gray-400 text-sm">Discover what makes us different</p>
+              <p className="text-gray-400 text-xs sm:text-sm">Discover what makes us different</p>
             </div>
             <button
               onClick={onClose}
@@ -151,7 +151,7 @@ export function TrustFlow({ isOpen, onClose, onComplete }: TrustFlowProps) {
             </button>
           </div>
 
-          <div className="p-6">
+          <div className="p-4 sm:p-6">
             <AnimatePresence mode="wait">
               {/* Step 0: Key Differentiators */}
               {currentStep === 0 && (
