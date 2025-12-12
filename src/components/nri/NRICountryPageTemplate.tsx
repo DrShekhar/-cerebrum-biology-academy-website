@@ -142,32 +142,32 @@ export function NRICountryPageTemplate({ data }: NRICountryPageTemplateProps) {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col gap-3 sm:gap-4">
-              <div className="flex flex-col xs:flex-row gap-3">
+            <div className="flex flex-col gap-3">
+              <div className="flex flex-col sm:flex-row gap-3">
                 <a
                   href={whatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={handleWhatsAppClick}
-                  className="flex-1 xs:flex-none"
+                  className="w-full sm:w-auto"
                 >
                   <Button
                     variant="secondary"
                     size="lg"
-                    className="bg-green-500 text-white hover:bg-green-600 w-full"
+                    className="bg-green-500 text-white hover:bg-green-600 w-full min-h-[48px] text-sm sm:text-base px-4 sm:px-6"
                   >
                     <MessageCircle className="w-5 h-5 mr-2 flex-shrink-0" />
-                    <span className="whitespace-nowrap">WhatsApp Us</span>
+                    <span className="truncate">WhatsApp Us</span>
                   </Button>
                 </a>
-                <Link href="/demo-booking" className="flex-1 xs:flex-none">
+                <Link href="/demo-booking" className="w-full sm:w-auto">
                   <Button
                     variant="outline"
                     size="lg"
-                    className="border-white text-white hover:bg-white hover:text-indigo-900 w-full"
+                    className="border-white text-white hover:bg-white hover:text-indigo-900 w-full min-h-[48px] text-sm sm:text-base px-4 sm:px-6"
                   >
                     <Play className="w-5 h-5 mr-2 flex-shrink-0" />
-                    <span className="whitespace-nowrap">Book Demo</span>
+                    <span className="truncate">Book Demo</span>
                   </Button>
                 </Link>
               </div>
@@ -470,7 +470,7 @@ export function NRICountryPageTemplate({ data }: NRICountryPageTemplateProps) {
               Join {data.studentCount} students from {data.country} already preparing with us
             </p>
 
-            <div className="flex flex-col gap-3 sm:flex-row sm:gap-4 justify-center mb-8">
+            <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-3 justify-center mb-8">
               <a
                 href={whatsappLink}
                 target="_blank"
@@ -481,30 +481,30 @@ export function NRICountryPageTemplate({ data }: NRICountryPageTemplateProps) {
                 <Button
                   variant="secondary"
                   size="lg"
-                  className="bg-green-500 text-white hover:bg-green-600 w-full"
+                  className="bg-green-500 text-white hover:bg-green-600 w-full min-h-[48px] text-sm sm:text-base px-4 sm:px-6"
                 >
                   <MessageCircle className="w-5 h-5 mr-2 flex-shrink-0" />
-                  <span className="whitespace-nowrap">WhatsApp Us</span>
+                  <span className="truncate">WhatsApp Us</span>
                 </Button>
               </a>
               <Link href="/demo-booking" className="w-full sm:w-auto">
                 <Button
                   variant="outline"
                   size="lg"
-                  className="border-white text-white hover:bg-white hover:text-indigo-600 w-full"
+                  className="border-white text-white hover:bg-white hover:text-indigo-600 w-full min-h-[48px] text-sm sm:text-base px-4 sm:px-6"
                 >
                   <Play className="w-5 h-5 mr-2 flex-shrink-0" />
-                  <span className="whitespace-nowrap">Book Demo</span>
+                  <span className="truncate">Book Demo</span>
                 </Button>
               </Link>
               <a href="tel:+918826444334" className="w-full sm:w-auto">
                 <Button
                   variant="outline"
                   size="lg"
-                  className="border-white text-white hover:bg-white hover:text-indigo-600 w-full"
+                  className="border-white text-white hover:bg-white hover:text-indigo-600 w-full min-h-[48px] text-sm sm:text-base px-4 sm:px-6"
                 >
                   <Phone className="w-5 h-5 mr-2 flex-shrink-0" />
-                  <span className="whitespace-nowrap">Call Now</span>
+                  <span className="truncate">Call Now</span>
                 </Button>
               </a>
             </div>

@@ -56,23 +56,23 @@ export default function DemoCompletePage() {
           <div className="grid gap-3">
             <Link
               href="/courses/neet-biology-pinnacle"
-              className="flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 px-6 py-3 font-semibold text-white transition hover:from-blue-700 hover:to-indigo-700"
+              className="flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 px-4 sm:px-6 py-3 font-semibold text-white transition hover:from-blue-700 hover:to-indigo-700 min-h-[48px] text-sm sm:text-base"
             >
-              <span>🚀</span> Explore Our Courses
+              <span>🚀</span> <span className="truncate">Explore Our Courses</span>
             </Link>
 
             <a
               href="https://wa.me/918826444334?text=Hi!%20I%20just%20attended%20a%20demo%20class%20and%20want%20to%20know%20more%20about%20enrollment."
-              className="flex items-center justify-center gap-2 rounded-lg bg-green-500 px-6 py-3 font-semibold text-white transition hover:bg-green-600"
+              className="flex items-center justify-center gap-2 rounded-lg bg-green-500 px-4 sm:px-6 py-3 font-semibold text-white transition hover:bg-green-600 min-h-[48px] text-sm sm:text-base"
             >
-              <span>📱</span> Chat with Us on WhatsApp
+              <span>📱</span> <span className="truncate">Chat with Us on WhatsApp</span>
             </a>
 
             <Link
               href="/demo"
-              className="flex items-center justify-center gap-2 rounded-lg border-2 border-gray-200 px-6 py-3 font-semibold text-gray-700 transition hover:bg-gray-50"
+              className="flex items-center justify-center gap-2 rounded-lg border-2 border-gray-200 px-4 sm:px-6 py-3 font-semibold text-gray-700 transition hover:bg-gray-50 min-h-[48px] text-sm sm:text-base"
             >
-              <span>📅</span> Book Another Demo
+              <span>📅</span> <span className="truncate">Book Another Demo</span>
             </Link>
           </div>
         </div>

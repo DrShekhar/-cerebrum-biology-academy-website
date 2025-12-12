@@ -564,16 +564,16 @@ export default function NEETRankPredictorPage() {
                   <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
                     <Link
                       href="/demo"
-                      className="inline-flex items-center justify-center gap-2 rounded-lg bg-white px-5 sm:px-6 py-3 font-semibold text-orange-600 transition-colors hover:bg-orange-50 w-full sm:w-auto"
+                      className="inline-flex items-center justify-center gap-2 rounded-lg bg-white px-4 sm:px-6 py-3 font-semibold text-orange-600 transition-colors hover:bg-orange-50 w-full sm:w-auto min-h-[48px] text-sm sm:text-base"
                     >
-                      <span className="whitespace-nowrap">Book Demo</span>
+                      <span className="truncate">Book Demo</span>
                       <ArrowRight className="h-5 w-5 flex-shrink-0" />
                     </Link>
                     <Link
                       href="/courses"
-                      className="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-white px-5 sm:px-6 py-3 font-semibold text-white transition-colors hover:bg-white/10 w-full sm:w-auto"
+                      className="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-white px-4 sm:px-6 py-3 font-semibold text-white transition-colors hover:bg-white/10 w-full sm:w-auto min-h-[48px] text-sm sm:text-base"
                     >
-                      <span className="whitespace-nowrap">View Courses</span>
+                      <span className="truncate">View Courses</span>
                     </Link>
                   </div>
                 </div>

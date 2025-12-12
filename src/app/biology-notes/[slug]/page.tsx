@@ -230,7 +230,7 @@ export default async function BiologyTopicPage({ params }: PageProps) {
               </div>
               <Link
                 href={`/biology-notes/${topic.slug}?download=true#lead-capture`}
-                className="inline-block bg-white text-blue-600 px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-all duration-300 shadow-lg whitespace-nowrap"
+                className="inline-block bg-white text-blue-600 px-4 sm:px-8 py-3 sm:py-4 rounded-full font-bold hover:bg-gray-100 transition-all duration-300 shadow-lg text-sm sm:text-base min-h-[48px]"
               >
                 Download Free PDF
               </Link>
