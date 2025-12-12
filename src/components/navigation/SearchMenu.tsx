@@ -403,10 +403,10 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
       {/* Search Button - 44px minimum touch target for iOS accessibility */}
       <button
         onClick={onToggle}
-        className="flex items-center justify-center w-11 h-11 min-w-[44px] min-h-[44px] rounded-xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 group flex-shrink-0 touch-manipulation"
+        className="flex items-center justify-center w-11 h-11 min-w-[44px] min-h-[44px] rounded-xl bg-gray-100 hover:bg-blue-50 border border-gray-200 hover:border-blue-300 shadow-sm hover:shadow-md transition-all duration-300 group flex-shrink-0 touch-manipulation"
         aria-label="Open search menu"
       >
-        <Search className="w-5 h-5 text-blue-600 group-hover:scale-110 transition-transform duration-200" />
+        <Search className="w-5 h-5 text-gray-600 group-hover:text-blue-600 group-hover:scale-110 transition-all duration-200" />
       </button>
 
       {/* Search Modal */}
