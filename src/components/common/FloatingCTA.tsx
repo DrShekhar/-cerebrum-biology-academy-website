@@ -80,6 +80,22 @@ export function FloatingCTA() {
 
   return (
     <>
+      {/* Always-Visible WhatsApp Button - No expansion needed */}
+      <a
+        href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20know%20more%20about%20NEET%20Biology%20courses."
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={() => handleActionClick('whatsapp-always-visible')}
+        className="fixed bottom-24 left-3 sm:left-4 lg:bottom-8 lg:right-24 lg:left-auto z-[70] w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full shadow-lg flex items-center justify-center text-white transition-all duration-300 hover:scale-110 active:scale-95 animate-pulse-subtle"
+        aria-label="Chat on WhatsApp"
+      >
+        <MessageCircle className="w-6 h-6" />
+        {/* WhatsApp badge */}
+        <span className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full flex items-center justify-center text-[10px] font-bold">
+          1
+        </span>
+      </a>
+
       {/* Mobile Floating CTA - Only show when not near bottom and scrolled past hero */}
       {/* Positioned at bottom-24 to clear mobile nav (60px) + safe area inset */}
       {showFloatingButton && (

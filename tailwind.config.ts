@@ -13,15 +13,15 @@ const config: Config = {
     extend: {
       // Indian mobile-first responsive breakpoints
       screens: {
-        'xs': '320px',   // Small mobile (Android Go devices)
-        'sm': '375px',   // Standard mobile
-        'md': '768px',   // Tablet
-        'lg': '1024px',  // Desktop
-        'xl': '1280px',  // Large desktop
+        xs: '320px', // Small mobile (Android Go devices)
+        sm: '375px', // Standard mobile
+        md: '768px', // Tablet
+        lg: '1024px', // Desktop
+        xl: '1280px', // Large desktop
         '2xl': '1536px', // Extra large
         // Network-aware breakpoints
-        'slow-connection': { 'raw': '(prefers-reduced-data: reduce)' },
-        'fast-connection': { 'raw': '(prefers-reduced-data: no-preference)' },
+        'slow-connection': { raw: '(prefers-reduced-data: reduce)' },
+        'fast-connection': { raw: '(prefers-reduced-data: no-preference)' },
       },
 
       // Performance-optimized fonts for Indian languages
@@ -36,12 +36,7 @@ const config: Config = {
           'Roboto',
           'sans-serif',
         ],
-        hindi: [
-          'Noto Sans Devanagari',
-          'Mangal',
-          'system-ui',
-          'sans-serif',
-        ],
+        hindi: ['Noto Sans Devanagari', 'Mangal', 'system-ui', 'sans-serif'],
         mono: [
           'ui-monospace',
           'SFMono-Regular',
@@ -256,9 +251,9 @@ const config: Config = {
         '112': '28rem',
         '128': '32rem',
         // Touch-friendly sizes for Indian mobile users
-        'touch': '44px',    // Minimum touch target
+        touch: '44px', // Minimum touch target
         'touch-lg': '48px', // Comfortable touch target
-        'thumb': '72px',    // Thumb-friendly target
+        thumb: '72px', // Thumb-friendly target
       },
 
       // Performance-optimized animations
@@ -268,9 +263,10 @@ const config: Config = {
         'slide-down': 'slideDown 0.3s ease-out',
         'bounce-soft': 'bounceSoft 0.6s ease-in-out',
         'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'pulse-subtle': 'pulseSubtle 2s ease-in-out infinite',
         // Network-aware animations
         'loading-skeleton': 'loadingSkeleton 1.2s ease-in-out infinite',
-        'shimmer': 'shimmer 2s linear infinite',
+        shimmer: 'shimmer 2s linear infinite',
       },
 
       keyframes: {
@@ -301,6 +297,10 @@ const config: Config = {
           '0%': { transform: 'translateX(-100%)' },
           '100%': { transform: 'translateX(100%)' },
         },
+        pulseSubtle: {
+          '0%, 100%': { boxShadow: '0 0 0 0 rgba(34, 197, 94, 0.4)' },
+          '50%': { boxShadow: '0 0 0 8px rgba(34, 197, 94, 0)' },
+        },
       },
 
       // Mobile-optimized shadows
@@ -313,9 +313,9 @@ const config: Config = {
 
       // Network-optimized blur effects
       backdropBlur: {
-        'low-data': '2px',  // Minimal blur for performance
-        'standard': '8px',  // Standard blur
-        'enhanced': '16px', // Enhanced blur for fast connections
+        'low-data': '2px', // Minimal blur for performance
+        standard: '8px', // Standard blur
+        enhanced: '16px', // Enhanced blur for fast connections
       },
 
       borderRadius: {
@@ -329,20 +329,20 @@ const config: Config = {
     require('tailwindcss-animate'),
 
     // Performance plugin for Indian mobile optimization
-    function({ addUtilities, addVariant, matchUtilities, theme }) {
+    function ({ addUtilities, addVariant, matchUtilities, theme }) {
       // Add network-aware utilities
       addUtilities({
         '.data-saver': {
-          'transform': 'none',
-          'transition': 'none',
-          'animation': 'none',
+          transform: 'none',
+          transition: 'none',
+          animation: 'none',
           'background-image': 'none',
           'box-shadow': 'none',
         },
         '.gpu-accelerated': {
-          'transform': 'translateZ(0)',
+          transform: 'translateZ(0)',
           'backface-visibility': 'hidden',
-          'perspective': '1000px',
+          perspective: '1000px',
         },
         '.touch-action-manipulation': {
           'touch-action': 'manipulation',

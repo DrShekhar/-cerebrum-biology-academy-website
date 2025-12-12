@@ -52,10 +52,81 @@ export function MyEnrollments() {
 
   if (!isAuthenticated || !user) {
     return (
-      <div className="text-center py-12">
-        <AlertCircle className="w-12 h-12 text-orange-500 mx-auto mb-4" />
-        <h2 className="text-xl font-semibold text-gray-900 mb-2">Please Sign In</h2>
-        <p className="text-gray-600">You need to be signed in to view your enrollments.</p>
+      <div className="max-w-4xl mx-auto p-6">
+        <div className="text-center mb-8">
+          <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <Book className="w-8 h-8 text-blue-600" />
+          </div>
+          <h1 className="text-3xl font-bold text-gray-900 mb-3">Start Your NEET Journey Today</h1>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Join thousands of successful students who have achieved their medical dreams with
+            Cerebrum Biology Academy.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-6 mb-8">
+          <motion.a
+            href="/courses"
+            className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow group"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <div className="flex items-center mb-4">
+              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                <Book className="w-6 h-6 text-blue-600" />
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
+                  Browse Courses
+                </h3>
+                <p className="text-sm text-gray-600">Explore our NEET Biology programs</p>
+              </div>
+            </div>
+            <p className="text-gray-600 text-sm">
+              Find the perfect course for Class 11, 12, or Dropper batches with flexible learning
+              options.
+            </p>
+          </motion.a>
+
+          <motion.a
+            href="/enrollment"
+            className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow group text-white"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
+            <div className="flex items-center mb-4">
+              <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mr-4">
+                <CreditCard className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold group-hover:text-blue-100 transition-colors">
+                  Quick Enrollment
+                </h3>
+                <p className="text-sm text-blue-100">Enroll now and start learning</p>
+              </div>
+            </div>
+            <p className="text-blue-100 text-sm">
+              Complete your enrollment in minutes with multiple payment options available.
+            </p>
+          </motion.a>
+        </div>
+
+        <div className="bg-gray-50 rounded-2xl p-6 text-center">
+          <AlertCircle className="w-8 h-8 text-orange-500 mx-auto mb-3" />
+          <h3 className="text-lg font-semibold text-gray-900 mb-2">Already Enrolled?</h3>
+          <p className="text-gray-600 mb-4">
+            Sign in to track your progress, access study materials, and join live classes.
+          </p>
+          <Button
+            variant="outline"
+            size="default"
+            onClick={() => (window.location.href = '/login')}
+          >
+            Sign In to View Enrollments
+          </Button>
+        </div>
       </div>
     )
   }

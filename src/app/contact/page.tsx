@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { Button } from '@/components/ui/Button'
+import { showToast } from '@/lib/toast'
 import {
   MapPin,
   Phone,
@@ -38,23 +39,48 @@ export default function ContactPage() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000))
-
-    setSubmitted(true)
-    setIsSubmitting(false)
-
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setSubmitted(false)
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        message: '',
-        enquiryType: 'general',
+    try {
+      const response = await fetch('/api/contact/inquiry', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+          supportType: formData.enquiryType,
+          center: 'noida',
+        }),
       })
-    }, 3000)
+
+      const result = await response.json()
+
+      if (response.ok && result.success) {
+        setSubmitted(true)
+        showToast.success('Message sent successfully! We will contact you within 24 hours.')
+
+        // Reset form after 3 seconds
+        setTimeout(() => {
+          setSubmitted(false)
+          setFormData({
+            name: '',
+            email: '',
+            phone: '',
+            message: '',
+            enquiryType: 'general',
+          })
+        }, 3000)
+      } else {
+        showToast.error(result.error || 'Failed to send message. Please try again.')
+      }
+    } catch (error) {
+      console.error('Contact form error:', error)
+      showToast.error('Unable to send message. Please try again or call us directly.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleInputChange = (

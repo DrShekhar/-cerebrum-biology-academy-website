@@ -7,6 +7,7 @@ import { DemoBookingData } from '@/components/admin/DemoBookingModal'
 import { z } from 'zod'
 import { AgentType } from '@/generated/prisma'
 import { AgentTaskManager } from '@/lib/crm-agents/base'
+import { zoomService } from '@/lib/zoom/zoomService'
 
 // Input validation schema
 const DemoBookingSchema = z.object({
@@ -206,10 +207,43 @@ export async function POST(request: NextRequest) {
       console.error('Failed to queue product agent for demo:', agentError)
     }
 
+    // Create Zoom meeting for the demo
+    let zoomMeeting = null
+    try {
+      zoomMeeting = await zoomService.createDemoMeeting({
+        studentName: data.name,
+        email: data.email,
+        phone: data.phone,
+        preferredDate: new Date(data.preferredDate),
+        preferredTime: data.preferredTime,
+        courseInterest: data.courseInterest.join(', '),
+        studentClass: '', // Optional
+        previousKnowledge: '', // Optional
+      })
+
+      if (zoomMeeting) {
+        console.log('✅ Zoom meeting created:', {
+          bookingId: demoBooking.id,
+          meetingId: zoomMeeting.id,
+          joinUrl: zoomMeeting.join_url,
+        })
+      }
+    } catch (zoomError) {
+      // Log but don't fail the booking if Zoom creation fails
+      console.error('Failed to create Zoom meeting (non-blocking):', zoomError)
+    }
+
     return NextResponse.json({
       success: true,
       bookingId: demoBooking.id,
       message: 'Demo booking created successfully',
+      zoomMeeting: zoomMeeting
+        ? {
+            joinUrl: zoomMeeting.join_url,
+            meetingId: zoomMeeting.id,
+            password: zoomMeeting.password,
+          }
+        : null,
     })
   } catch (error) {
     // Log error securely (don't expose internal details)
