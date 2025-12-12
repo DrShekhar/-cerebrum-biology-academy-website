@@ -126,7 +126,11 @@ export function CourseCard({ course, selectedTier = 'ascent' }: CourseCardProps)
             {formatCurrency(tierDetails.payment.oneTime.amount)}
           </div>
           <div className="text-xs sm:text-sm text-green-600 font-medium">
-            Save {formatCurrency(tierDetails.payment.oneTime.discount)} (5% off)
+            Save{' '}
+            {formatCurrency(
+              tierDetails.payment.oneTime.amount - tierDetails.payment.oneTime.discountedAmount
+            )}{' '}
+            ({tierDetails.payment.oneTime.discount}% off)
           </div>
         </div>
 

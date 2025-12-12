@@ -235,16 +235,28 @@ export default function FacultyPage() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <div className="relative h-48 bg-gradient-to-br from-blue-500 to-purple-600">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center">
-                      <GraduationCap className="w-10 h-10 text-white" />
+                  {faculty.image ? (
+                    <Image
+                      src={faculty.image}
+                      alt={faculty.name}
+                      fill
+                      className="object-cover object-top"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center">
+                        <GraduationCap className="w-10 h-10 text-white" />
+                      </div>
                     </div>
-                  </div>
+                  )}
                 </div>
 
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{faculty.name}</h3>
-                  <p className="text-blue-600 font-medium mb-3">{faculty.qualification}</p>
+                  <p className="text-blue-600 font-medium mb-3 text-sm line-clamp-2">
+                    {faculty.qualification}
+                  </p>
                   <p className="text-gray-600 mb-4">{faculty.experience} Experience</p>
 
                   <div className="space-y-2 mb-6">
