@@ -1,6 +1,20 @@
-import { Queue, Worker, Job, QueueEvents } from 'bullmq'
-import { getRedisClient } from '@/lib/cache/redis'
 import { logger } from '@/lib/utils/logger'
+
+// Dynamic imports to avoid bundler warnings with BullMQ
+// BullMQ uses dynamic requires for worker processes which triggers webpack warnings
+type BullMQTypes = typeof import('bullmq')
+let bullmq: BullMQTypes | null = null
+
+const getBullMQ = async (): Promise<BullMQTypes | null> => {
+  if (bullmq) return bullmq
+  if (typeof window !== 'undefined') return null // Don't load on client
+  try {
+    bullmq = await import('bullmq')
+    return bullmq
+  } catch {
+    return null
+  }
+}
 
 const isRedisEnabled = process.env.REDIS_ENABLED === 'true' && process.env.REDIS_URL
 
@@ -18,9 +32,9 @@ interface TaskPayload {
 }
 
 export class TaskScheduler {
-  private static queue: Queue | null = null
-  private static worker: Worker | null = null
-  private static queueEvents: QueueEvents | null = null
+  private static queue: InstanceType<BullMQTypes['Queue']> | null = null
+  private static worker: InstanceType<BullMQTypes['Worker']> | null = null
+  private static queueEvents: InstanceType<BullMQTypes['QueueEvents']> | null = null
   private static fallbackTasks: Map<string, NodeJS.Timeout> = new Map()
 
   static async initialize() {
@@ -28,6 +42,14 @@ export class TaskScheduler {
       logger.info('Task scheduler initialized in fallback mode (no Redis)')
       return
     }
+
+    const bullmqModule = await getBullMQ()
+    if (!bullmqModule) {
+      logger.info('Task scheduler initialized in fallback mode (BullMQ not available)')
+      return
+    }
+
+    const { Queue, Worker, QueueEvents } = bullmqModule
 
     try {
       const connection = {
@@ -66,8 +88,8 @@ export class TaskScheduler {
 
       this.worker = new Worker(
         'cerebrum-tasks',
-        async (job: Job) => {
-          return await this.processTask(job)
+        async (job) => {
+          return await this.processTask(job as any)
         },
         {
           connection,
@@ -149,7 +171,7 @@ export class TaskScheduler {
 
     const timeout = setTimeout(async () => {
       try {
-        await this.processTask({ name, data: payload } as Job)
+        await this.processTask({ name, data: payload })
         this.fallbackTasks.delete(taskId)
       } catch (error) {
         logger.error('Fallback task execution failed', { taskId, name, error })
@@ -168,7 +190,7 @@ export class TaskScheduler {
     return taskId
   }
 
-  private static async processTask(job: Job): Promise<any> {
+  private static async processTask(job: { name: string; data: TaskPayload }): Promise<any> {
     const { name, data } = job
 
     logger.info('Processing task', { name, data })
