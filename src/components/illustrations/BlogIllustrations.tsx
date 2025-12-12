@@ -47,161 +47,513 @@ export function KotaVsOnlineIllustration({ className = '', animate = true }: Ill
   const Wrapper = animate ? motion.svg : 'svg'
   const wrapperProps = animate
     ? {
-        initial: { opacity: 0, scale: 0.9 },
+        initial: { opacity: 0, scale: 0.95 },
         animate: { opacity: 1, scale: 1 },
-        transition: { duration: 0.6 },
+        transition: { duration: 0.8, ease: 'easeOut' as const },
       }
     : {}
 
+  // Comparison metrics data
+  const comparisonData = [
+    { factor: 'Annual Cost', kota: '₹3-5 Lakh', online: '₹50K-1.5L', winner: 'online' },
+    { factor: 'Living Expenses', kota: '₹1.5-2L/yr', online: '₹0 (Home)', winner: 'online' },
+    { factor: 'Travel Time', kota: '2-3 hrs daily', online: 'Zero', winner: 'online' },
+    { factor: 'Batch Size', kota: '100-500', online: '20-50', winner: 'online' },
+    { factor: 'Faculty Access', kota: 'Limited', online: '1-on-1', winner: 'online' },
+  ]
+
+  // Pros and cons
+  const kotaPros = ['Peer Competition', 'Focused Environment', 'Library Access']
+  const onlinePros = ['Flexible Schedule', 'Recorded Classes', 'Cost Effective', 'Home Comfort']
+
   return (
     <Wrapper
-      viewBox="0 0 400 300"
+      viewBox="0 0 700 520"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
+      preserveAspectRatio="xMidYMid meet"
       {...wrapperProps}
     >
-      {/* Divider line */}
-      <line
-        x1="200"
-        y1="20"
-        x2="200"
-        y2="280"
-        stroke="#E2E8F0"
-        strokeWidth="3"
-        strokeDasharray="8"
-      />
+      <defs>
+        {/* Background gradients */}
+        <linearGradient id="kotaBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#FEF3C7" />
+          <stop offset="100%" stopColor="#FDE68A" />
+        </linearGradient>
+        <linearGradient id="onlineBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#D1FAE5" />
+          <stop offset="100%" stopColor="#A7F3D0" />
+        </linearGradient>
+        {/* Card shadow */}
+        <filter id="kotaCardShadow" x="-20%" y="-20%" width="140%" height="140%">
+          <feDropShadow dx="0" dy="4" stdDeviation="6" floodColor="#F97316" floodOpacity="0.15" />
+        </filter>
+        <filter id="onlineCardShadow" x="-20%" y="-20%" width="140%" height="140%">
+          <feDropShadow dx="0" dy="4" stdDeviation="6" floodColor="#14B8A6" floodOpacity="0.15" />
+        </filter>
+      </defs>
 
-      {/* Left side - Kota (Physical Coaching) */}
-      <rect x="10" y="30" width="175" height="240" rx="12" fill="#FEF3C7" opacity="0.5" />
+      {/* Background */}
+      <rect width="700" height="520" fill="#F8FAFC" rx="16" />
 
-      {/* Kota building */}
-      <rect x="40" y="100" width="120" height="100" rx="6" fill="#F97316" />
-      <rect x="55" y="115" width="25" height="25" rx="3" fill="#FFFFFF" />
-      <rect x="95" y="115" width="25" height="25" rx="3" fill="#FFFFFF" />
-      <rect x="55" y="155" width="25" height="25" rx="3" fill="#FFFFFF" />
-      <rect x="95" y="155" width="25" height="25" rx="3" fill="#FFFFFF" />
-      <rect x="70" y="170" width="30" height="30" rx="2" fill="#7C2D12" />
-
-      {/* Kota sign */}
-      <rect x="50" y="70" width="100" height="25" rx="4" fill="#DC2626" />
-      <text x="100" y="88" fontSize="12" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
-        KOTA
-      </text>
-
-      {/* Students walking */}
+      {/* Title Section */}
       <motion.g
-        animate={animate ? { x: [-5, 5, -5] } : undefined}
-        transition={{ duration: 3, repeat: Infinity }}
+        initial={animate ? { opacity: 0, y: -20 } : undefined}
+        animate={animate ? { opacity: 1, y: 0 } : undefined}
+        transition={{ delay: 0.2, duration: 0.6, ease: 'easeOut' as const }}
       >
-        <circle cx="45" cy="220" r="8" fill="#FBBF24" />
-        <rect x="41" y="230" width="8" height="15" rx="2" fill="#3B82F6" />
-      </motion.g>
-      <motion.g
-        animate={animate ? { x: [5, -5, 5] } : undefined}
-        transition={{ duration: 3, repeat: Infinity, delay: 0.5 }}
-      >
-        <circle cx="70" cy="225" r="8" fill="#FBBF24" />
-        <rect x="66" y="235" width="8" height="15" rx="2" fill="#8B5CF6" />
-      </motion.g>
-
-      {/* Travel icon */}
-      <motion.g
-        animate={animate ? { y: [-3, 3, -3] } : undefined}
-        transition={{ duration: 2, repeat: Infinity }}
-      >
-        <ellipse cx="140" cy="220" rx="20" ry="8" fill="#94A3B8" />
-        <rect x="125" y="205" width="30" height="15" rx="3" fill="#64748B" />
-        <circle cx="130" cy="220" r="4" fill="#1E293B" />
-        <circle cx="150" cy="220" r="4" fill="#1E293B" />
+        <rect
+          x="175"
+          y="10"
+          width="350"
+          height="50"
+          rx="25"
+          fill="#6366F1"
+          filter="url(#kotaCardShadow)"
+        />
+        <text x="350" y="28" fontSize="10" fill="#C7D2FE" textAnchor="middle">
+          NEET Coaching Decision Guide
+        </text>
+        <text x="350" y="45" fontSize="14" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
+          🏛️ Kota vs 💻 Online Coaching Comparison
+        </text>
       </motion.g>
 
-      {/* Right side - Online Learning */}
-      <rect x="215" y="30" width="175" height="240" rx="12" fill="#D1FAE5" opacity="0.5" />
-
-      {/* Laptop */}
-      <rect x="240" y="100" width="120" height="80" rx="8" fill="#1E293B" />
-      <rect x="248" y="108" width="104" height="64" rx="4" fill="#3B82F6" />
-
-      {/* Screen content - live class */}
-      <circle cx="300" cy="130" r="15" fill="#FBBF24" />
-      <circle cx="295" cy="127" r="2" fill="#1E293B" />
-      <circle cx="305" cy="127" r="2" fill="#1E293B" />
-      <path d="M297 136 Q300 140 303 136" stroke="#1E293B" strokeWidth="1.5" fill="none" />
-
-      {/* Live indicator */}
-      <motion.circle
-        cx="340"
-        cy="115"
-        r="5"
-        fill="#EF4444"
-        animate={animate ? { opacity: [1, 0.3, 1] } : undefined}
-        transition={{ duration: 1, repeat: Infinity }}
-      />
-      <text x="333" y="130" fontSize="6" fill="#FFFFFF" fontWeight="bold">
-        LIVE
-      </text>
-
-      {/* Chat bubbles */}
+      {/* Left Section - Kota Coaching */}
       <motion.g
-        animate={animate ? { y: [-2, 2, -2] } : undefined}
-        transition={{ duration: 2, repeat: Infinity, delay: 0.3 }}
+        initial={animate ? { opacity: 0, x: -30 } : undefined}
+        animate={animate ? { opacity: 1, x: 0 } : undefined}
+        transition={{ delay: 0.3, duration: 0.6, ease: 'easeOut' as const }}
       >
-        <rect x="255" y="145" width="35" height="12" rx="4" fill="#FFFFFF" opacity="0.9" />
-        <rect x="310" y="155" width="30" height="10" rx="4" fill="#10B981" opacity="0.9" />
+        <rect
+          x="20"
+          y="70"
+          width="220"
+          height="280"
+          rx="12"
+          fill="url(#kotaBgGrad)"
+          filter="url(#kotaCardShadow)"
+        />
+        <rect x="20" y="70" width="220" height="35" rx="12" fill="#F97316" />
+        <text x="130" y="93" fontSize="12" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
+          🏛️ Kota Coaching
+        </text>
+
+        {/* Kota Building Illustration */}
+        <motion.g
+          animate={animate ? { y: [0, -2, 0] } : undefined}
+          transition={{ duration: 3, repeat: Infinity }}
+        >
+          {/* Building */}
+          <rect x="60" y="115" width="120" height="80" rx="6" fill="#EA580C" />
+          <rect x="70" y="125" width="20" height="20" rx="3" fill="#FFFFFF" />
+          <rect x="100" y="125" width="20" height="20" rx="3" fill="#FFFFFF" />
+          <rect x="130" y="125" width="20" height="20" rx="3" fill="#FFFFFF" />
+          <rect x="70" y="155" width="20" height="20" rx="3" fill="#FFFFFF" />
+          <rect x="100" y="155" width="20" height="20" rx="3" fill="#FFFFFF" />
+          <rect x="130" y="155" width="20" height="20" rx="3" fill="#FFFFFF" />
+          <rect x="95" y="175" width="30" height="20" rx="2" fill="#7C2D12" />
+
+          {/* Kota Banner */}
+          <rect x="75" y="100" width="90" height="18" rx="4" fill="#DC2626" />
+          <text x="120" y="113" fontSize="10" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
+            KOTA
+          </text>
+        </motion.g>
+
+        {/* Walking students */}
+        <motion.g
+          animate={animate ? { x: [-3, 3, -3] } : undefined}
+          transition={{ duration: 2.5, repeat: Infinity }}
+        >
+          <circle cx="50" cy="210" r="8" fill="#FBBF24" />
+          <rect x="46" y="220" width="8" height="12" rx="2" fill="#3B82F6" />
+        </motion.g>
+        <motion.g
+          animate={animate ? { x: [3, -3, 3] } : undefined}
+          transition={{ duration: 2.5, repeat: Infinity, delay: 0.3 }}
+        >
+          <circle cx="75" cy="215" r="8" fill="#FBBF24" />
+          <rect x="71" y="225" width="8" height="12" rx="2" fill="#8B5CF6" />
+        </motion.g>
+
+        {/* Auto/Taxi */}
+        <motion.g
+          animate={animate ? { x: [-5, 5, -5] } : undefined}
+          transition={{ duration: 3, repeat: Infinity }}
+        >
+          <rect x="140" y="205" width="35" height="18" rx="4" fill="#FCD34D" />
+          <circle cx="148" cy="223" r="5" fill="#1E293B" />
+          <circle cx="167" cy="223" r="5" fill="#1E293B" />
+          <text x="157" y="217" fontSize="6" fill="#78350F" textAnchor="middle" fontWeight="bold">
+            AUTO
+          </text>
+        </motion.g>
+
+        {/* Kota Pros List */}
+        <rect x="35" y="245" width="190" height="95" rx="8" fill="#FFFFFF" opacity="0.8" />
+        <text x="130" y="262" fontSize="9" fill="#B45309" textAnchor="middle" fontWeight="bold">
+          ✓ Advantages
+        </text>
+        {kotaPros.map((pro, index) => (
+          <g key={pro}>
+            <circle cx="50" cy={280 + index * 18} r="4" fill="#22C55E" />
+            <text x="60" y={284 + index * 18} fontSize="8" fill="#374151">
+              {pro}
+            </text>
+          </g>
+        ))}
       </motion.g>
 
-      {/* Laptop base */}
-      <rect x="230" y="180" width="140" height="8" rx="4" fill="#334155" />
+      {/* Center Section - Comparison Chart */}
+      <motion.g
+        initial={animate ? { opacity: 0, y: 20 } : undefined}
+        animate={animate ? { opacity: 1, y: 0 } : undefined}
+        transition={{ delay: 0.4, duration: 0.6, ease: 'easeOut' as const }}
+      >
+        <rect
+          x="250"
+          y="70"
+          width="200"
+          height="280"
+          rx="12"
+          fill="#FFFFFF"
+          filter="url(#kotaCardShadow)"
+        />
+        <rect x="250" y="70" width="200" height="35" rx="12" fill="#6366F1" />
+        <text x="350" y="93" fontSize="11" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
+          📊 Comparison Chart
+        </text>
 
-      {/* Person at home */}
-      <ellipse cx="300" cy="230" rx="25" ry="30" fill="#14B8A6" />
-      <circle cx="300" cy="195" r="18" fill="#FBBF24" opacity="0.9" />
-      <circle cx="295" cy="192" r="2" fill="#1E293B" />
-      <circle cx="305" cy="192" r="2" fill="#1E293B" />
-      <path d="M297 200 Q300 204 303 200" stroke="#1E293B" strokeWidth="1.5" fill="none" />
+        {/* Comparison rows */}
+        {comparisonData.map((item, index) => (
+          <motion.g
+            key={item.factor}
+            initial={animate ? { opacity: 0, x: -10 } : undefined}
+            animate={animate ? { opacity: 1, x: 0 } : undefined}
+            transition={{ delay: 0.5 + index * 0.1, duration: 0.4, ease: 'easeOut' as const }}
+          >
+            {/* Row background */}
+            <rect
+              x="260"
+              y={115 + index * 48}
+              width="180"
+              height="42"
+              rx="6"
+              fill={index % 2 === 0 ? '#F8FAFC' : '#F1F5F9'}
+            />
 
-      {/* Home icon */}
-      <path d="M360 220 L375 205 L390 220 L390 245 L360 245 Z" fill="#6366F1" opacity="0.3" />
-      <rect x="370" y="230" width="10" height="15" fill="#6366F1" opacity="0.5" />
+            {/* Factor label */}
+            <text
+              x="350"
+              y={128 + index * 48}
+              fontSize="8"
+              fill="#6366F1"
+              textAnchor="middle"
+              fontWeight="bold"
+            >
+              {item.factor}
+            </text>
 
-      {/* VS text */}
+            {/* Kota value */}
+            <rect x="265" y={132 + index * 48} width="70" height="18" rx="4" fill="#FEF3C7" />
+            <text x="300" y={144 + index * 48} fontSize="7" fill="#B45309" textAnchor="middle">
+              {item.kota}
+            </text>
+
+            {/* Online value - with winner highlight */}
+            <rect
+              x="365"
+              y={132 + index * 48}
+              width="70"
+              height="18"
+              rx="4"
+              fill={item.winner === 'online' ? '#D1FAE5' : '#F1F5F9'}
+              stroke={item.winner === 'online' ? '#10B981' : 'none'}
+              strokeWidth="1"
+            />
+            <text
+              x="400"
+              y={144 + index * 48}
+              fontSize="7"
+              fill={item.winner === 'online' ? '#059669' : '#6B7280'}
+              textAnchor="middle"
+              fontWeight={item.winner === 'online' ? 'bold' : 'normal'}
+            >
+              {item.online}
+            </text>
+
+            {/* Winner indicator */}
+            {item.winner === 'online' && (
+              <motion.text
+                x="440"
+                y={144 + index * 48}
+                fontSize="10"
+                animate={animate ? { scale: [1, 1.2, 1] } : undefined}
+                transition={{ duration: 1.5, repeat: Infinity }}
+              >
+                ✓
+              </motion.text>
+            )}
+          </motion.g>
+        ))}
+      </motion.g>
+
+      {/* Right Section - Online Coaching */}
+      <motion.g
+        initial={animate ? { opacity: 0, x: 30 } : undefined}
+        animate={animate ? { opacity: 1, x: 0 } : undefined}
+        transition={{ delay: 0.5, duration: 0.6, ease: 'easeOut' as const }}
+      >
+        <rect
+          x="460"
+          y="70"
+          width="220"
+          height="280"
+          rx="12"
+          fill="url(#onlineBgGrad)"
+          filter="url(#onlineCardShadow)"
+        />
+        <rect x="460" y="70" width="220" height="35" rx="12" fill="#14B8A6" />
+        <text x="570" y="93" fontSize="12" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
+          💻 Online Coaching
+        </text>
+
+        {/* Laptop with Live Class */}
+        <motion.g
+          animate={animate ? { y: [0, -3, 0] } : undefined}
+          transition={{ duration: 2.5, repeat: Infinity }}
+        >
+          <rect x="495" y="115" width="150" height="90" rx="8" fill="#1E293B" />
+          <rect x="503" y="123" width="134" height="74" rx="4" fill="#3B82F6" />
+
+          {/* Teacher on screen */}
+          <circle cx="570" cy="145" r="18" fill="#FBBF24" />
+          <circle cx="565" cy="142" r="2.5" fill="#1E293B" />
+          <circle cx="575" cy="142" r="2.5" fill="#1E293B" />
+          <path d="M567 152 Q570 156 573 152" stroke="#1E293B" strokeWidth="2" fill="none" />
+
+          {/* Whiteboard content */}
+          <rect x="510" y="165" width="50" height="25" rx="3" fill="#FFFFFF" opacity="0.9" />
+          <text x="535" y="175" fontSize="5" fill="#1E293B" textAnchor="middle">
+            DNA Structure
+          </text>
+          <text x="535" y="185" fontSize="4" fill="#6B7280" textAnchor="middle">
+            NCERT Ch.6
+          </text>
+
+          {/* Live indicator */}
+          <motion.circle
+            cx="625"
+            cy="130"
+            r="6"
+            fill="#EF4444"
+            animate={animate ? { opacity: [1, 0.4, 1] } : undefined}
+            transition={{ duration: 1, repeat: Infinity }}
+          />
+          <text x="625" y="145" fontSize="6" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
+            LIVE
+          </text>
+
+          {/* Chat bubbles */}
+          <motion.g
+            animate={animate ? { y: [-2, 2, -2] } : undefined}
+            transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
+          >
+            <rect x="595" y="165" width="35" height="10" rx="3" fill="#FFFFFF" />
+            <rect x="600" y="178" width="28" height="8" rx="3" fill="#10B981" />
+          </motion.g>
+
+          {/* Laptop base */}
+          <rect x="485" y="205" width="170" height="10" rx="5" fill="#334155" />
+        </motion.g>
+
+        {/* Student at home */}
+        <motion.g
+          animate={animate ? { scale: [1, 1.02, 1] } : undefined}
+          transition={{ duration: 3, repeat: Infinity }}
+        >
+          <ellipse cx="570" cy="250" rx="25" ry="20" fill="#0D9488" />
+          <circle cx="570" cy="228" r="15" fill="#FBBF24" />
+          <circle cx="566" cy="225" r="2" fill="#1E293B" />
+          <circle cx="574" cy="225" r="2" fill="#1E293B" />
+          <path d="M567 232 Q570 235 573 232" stroke="#1E293B" strokeWidth="1.5" fill="none" />
+        </motion.g>
+
+        {/* Home comfort icon */}
+        <path d="M620 230 L635 218 L650 230 L650 255 L620 255 Z" fill="#8B5CF6" opacity="0.3" />
+        <rect x="632" y="242" width="10" height="13" fill="#8B5CF6" opacity="0.5" />
+
+        {/* Online Pros List */}
+        <rect x="475" y="275" width="190" height="65" rx="8" fill="#FFFFFF" opacity="0.8" />
+        <text x="570" y="290" fontSize="9" fill="#059669" textAnchor="middle" fontWeight="bold">
+          ✓ Advantages
+        </text>
+        {onlinePros.map((pro, index) => (
+          <g key={pro}>
+            <circle
+              cx={490 + (index % 2) * 95}
+              cy={305 + Math.floor(index / 2) * 15}
+              r="4"
+              fill="#22C55E"
+            />
+            <text
+              x={500 + (index % 2) * 95}
+              y={309 + Math.floor(index / 2) * 15}
+              fontSize="7"
+              fill="#374151"
+            >
+              {pro}
+            </text>
+          </g>
+        ))}
+      </motion.g>
+
+      {/* VS Badge */}
       <motion.g
         animate={animate ? { scale: [1, 1.1, 1] } : undefined}
         transition={{ duration: 2, repeat: Infinity }}
       >
-        <circle cx="200" cy="150" r="20" fill="#EF4444" />
-        <text x="200" y="155" fontSize="12" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
+        <circle cx="350" cy="360" r="25" fill="#EF4444" />
+        <text x="350" y="365" fontSize="14" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
           VS
         </text>
       </motion.g>
 
-      {/* Labels */}
-      <text x="97" y="55" fontSize="11" fill="#B45309" textAnchor="middle" fontWeight="bold">
-        Traditional Kota
-      </text>
-      <text x="302" y="55" fontSize="11" fill="#059669" textAnchor="middle" fontWeight="bold">
-        Online Learning
-      </text>
+      {/* Bottom Section - Final Verdict */}
+      <motion.g
+        initial={animate ? { opacity: 0, y: 30 } : undefined}
+        animate={animate ? { opacity: 1, y: 0 } : undefined}
+        transition={{ delay: 0.7, duration: 0.6, ease: 'easeOut' as const }}
+      >
+        <rect
+          x="20"
+          y="395"
+          width="660"
+          height="110"
+          rx="12"
+          fill="#FFFFFF"
+          filter="url(#kotaCardShadow)"
+        />
+        <rect x="20" y="395" width="660" height="30" rx="12" fill="#6366F1" />
+        <text x="350" y="415" fontSize="11" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
+          📈 Success Rate & Final Verdict
+        </text>
 
-      {/* Floating elements */}
+        {/* Success stats */}
+        <rect
+          x="40"
+          y="435"
+          width="145"
+          height="60"
+          rx="8"
+          fill="#FEF3C7"
+          stroke="#F97316"
+          strokeWidth="1"
+        />
+        <text x="112" y="455" fontSize="18" fill="#F97316" textAnchor="middle" fontWeight="bold">
+          15-20%
+        </text>
+        <text x="112" y="472" fontSize="8" fill="#B45309" textAnchor="middle">
+          Kota Success Rate
+        </text>
+        <text x="112" y="485" fontSize="6" fill="#6B7280" textAnchor="middle">
+          (Large batches, high dropout)
+        </text>
+
+        <rect
+          x="195"
+          y="435"
+          width="145"
+          height="60"
+          rx="8"
+          fill="#D1FAE5"
+          stroke="#10B981"
+          strokeWidth="2"
+        />
+        <text x="267" y="455" fontSize="18" fill="#10B981" textAnchor="middle" fontWeight="bold">
+          35-45%
+        </text>
+        <text x="267" y="472" fontSize="8" fill="#059669" textAnchor="middle">
+          Online Success Rate
+        </text>
+        <text x="267" y="485" fontSize="6" fill="#6B7280" textAnchor="middle">
+          (Small batches, personalized)
+        </text>
+
+        {/* Cost comparison */}
+        <rect
+          x="350"
+          y="435"
+          width="145"
+          height="60"
+          rx="8"
+          fill="#EDE9FE"
+          stroke="#8B5CF6"
+          strokeWidth="1"
+        />
+        <text x="422" y="455" fontSize="18" fill="#8B5CF6" textAnchor="middle" fontWeight="bold">
+          60-70%
+        </text>
+        <text x="422" y="472" fontSize="8" fill="#6D28D9" textAnchor="middle">
+          Cost Savings
+        </text>
+        <text x="422" y="485" fontSize="6" fill="#6B7280" textAnchor="middle">
+          Online vs Kota
+        </text>
+
+        {/* Verdict */}
+        <rect
+          x="505"
+          y="435"
+          width="160"
+          height="60"
+          rx="8"
+          fill="#DCFCE7"
+          stroke="#22C55E"
+          strokeWidth="2"
+        />
+        <text x="585" y="452" fontSize="9" fill="#166534" textAnchor="middle" fontWeight="bold">
+          🏆 Winner: Online
+        </text>
+        <text x="585" y="468" fontSize="7" fill="#15803D" textAnchor="middle">
+          Better ROI, Flexibility
+        </text>
+        <text x="585" y="482" fontSize="7" fill="#15803D" textAnchor="middle">
+          & Personalized Learning
+        </text>
+      </motion.g>
+
+      {/* Floating decorative elements */}
       <motion.circle
-        cx="30"
-        cy="50"
+        cx="15"
+        cy="55"
         r="8"
         fill="#F97316"
-        opacity="0.4"
+        opacity="0.3"
         animate={animate ? { y: [-5, 5, -5] } : undefined}
         transition={{ duration: 3, repeat: Infinity }}
       />
       <motion.circle
-        cx="370"
-        cy="60"
+        cx="685"
+        cy="45"
         r="6"
         fill="#14B8A6"
-        opacity="0.4"
+        opacity="0.3"
         animate={animate ? { y: [5, -5, 5] } : undefined}
         transition={{ duration: 2.5, repeat: Infinity }}
+      />
+      <motion.rect
+        x="660"
+        y="380"
+        width="15"
+        height="10"
+        rx="2"
+        fill="#6366F1"
+        opacity="0.3"
+        animate={animate ? { rotate: [-5, 5, -5] } : undefined}
+        transition={{ duration: 4, repeat: Infinity }}
       />
     </Wrapper>
   )
@@ -657,170 +1009,591 @@ export function BooksForNEETIllustration({ className = '', animate = true }: Ill
   const Wrapper = animate ? motion.svg : 'svg'
   const wrapperProps = animate
     ? {
-        initial: { opacity: 0, scale: 0.9 },
+        initial: { opacity: 0, scale: 0.95 },
         animate: { opacity: 1, scale: 1 },
-        transition: { duration: 0.5 },
+        transition: { duration: 0.8, ease: 'easeOut' as const },
       }
     : {}
 
+  // Book recommendations data
+  const biologyBooks = [
+    { name: 'NCERT Class 11 & 12', rating: 5, priority: 'ESSENTIAL', color: '#14B8A6' },
+    { name: 'MTG Fingertips', rating: 4.5, priority: 'HIGH', color: '#2DD4BF' },
+    { name: 'Trueman Biology', rating: 4, priority: 'MEDIUM', color: '#5EEAD4' },
+    { name: 'Dinesh Objective', rating: 3.5, priority: 'OPTIONAL', color: '#99F6E4' },
+  ]
+
+  // Reading phases
+  const readingPhases = [
+    { phase: 'Phase 1', focus: 'NCERT Only', months: 'Month 1-3', progress: 100 },
+    { phase: 'Phase 2', focus: 'Reference Books', months: 'Month 4-6', progress: 75 },
+    { phase: 'Phase 3', focus: 'PYQ Practice', months: 'Month 7-10', progress: 50 },
+    { phase: 'Phase 4', focus: 'Revision', months: 'Month 11-12', progress: 25 },
+  ]
+
   return (
     <Wrapper
-      viewBox="0 0 400 280"
+      viewBox="0 0 700 520"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
+      preserveAspectRatio="xMidYMid meet"
       {...wrapperProps}
     >
-      {/* Shadow */}
-      <ellipse cx="200" cy="250" rx="150" ry="15" fill="#E8F4FC" />
+      <defs>
+        {/* Background gradient */}
+        <linearGradient id="booksBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#F0FDFA" />
+          <stop offset="50%" stopColor="#ECFDF5" />
+          <stop offset="100%" stopColor="#F0FDF4" />
+        </linearGradient>
+        {/* Card shadow */}
+        <filter id="booksCardShadow" x="-20%" y="-20%" width="140%" height="140%">
+          <feDropShadow dx="0" dy="4" stdDeviation="6" floodColor="#14B8A6" floodOpacity="0.15" />
+        </filter>
+        {/* Book spine gradient */}
+        <linearGradient id="bookSpineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stopColor="#0D9488" />
+          <stop offset="100%" stopColor="#14B8A6" />
+        </linearGradient>
+        {/* Gold gradient for ratings */}
+        <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#FCD34D" />
+          <stop offset="100%" stopColor="#F59E0B" />
+        </linearGradient>
+      </defs>
 
-      {/* Physics Books Stack */}
+      {/* Background */}
+      <rect width="700" height="520" fill="url(#booksBgGrad)" rx="16" />
+
+      {/* Title Section */}
       <motion.g
-        animate={animate ? { y: [0, -3, 0] } : undefined}
-        transition={{ duration: 2.5, repeat: Infinity }}
+        initial={animate ? { opacity: 0, y: -20 } : undefined}
+        animate={animate ? { opacity: 1, y: 0 } : undefined}
+        transition={{ delay: 0.2, duration: 0.6, ease: 'easeOut' as const }}
       >
-        <rect x="40" y="160" width="90" height="25" rx="4" fill="#3B82F6" />
-        <rect x="45" y="165" width="5" height="15" fill="#1D4ED8" />
-        <text x="60" y="177" fontSize="8" fill="#FFFFFF" fontWeight="bold">
-          HC Verma
+        <rect
+          x="200"
+          y="15"
+          width="300"
+          height="45"
+          rx="22"
+          fill="#14B8A6"
+          filter="url(#booksCardShadow)"
+        />
+        <text x="350" y="32" fontSize="10" fill="#CCFBF1" textAnchor="middle">
+          NEET 2026 Biology
         </text>
-
-        <rect x="45" y="135" width="85" height="23" rx="4" fill="#60A5FA" />
-        <rect x="50" y="140" width="5" height="13" fill="#3B82F6" />
-        <text x="65" y="151" fontSize="7" fill="#FFFFFF" fontWeight="bold">
-          DC Pandey
-        </text>
-
-        <text x="85" y="125" fontSize="10" fill="#1E40AF" textAnchor="middle" fontWeight="bold">
-          Physics
-        </text>
-        <text x="85" y="115" fontSize="16" textAnchor="middle">
-          ⚡
+        <text x="350" y="48" fontSize="14" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
+          📚 Best Books & Reading Strategy
         </text>
       </motion.g>
 
-      {/* Chemistry Books Stack */}
+      {/* Left Section - Book Stack Visualization */}
       <motion.g
-        animate={animate ? { y: [0, -3, 0] } : undefined}
-        transition={{ duration: 2.5, repeat: Infinity, delay: 0.3 }}
+        initial={animate ? { opacity: 0, x: -30 } : undefined}
+        animate={animate ? { opacity: 1, x: 0 } : undefined}
+        transition={{ delay: 0.3, duration: 0.6, ease: 'easeOut' as const }}
       >
-        <rect x="155" y="150" width="90" height="25" rx="4" fill="#F97316" />
-        <rect x="160" y="155" width="5" height="15" fill="#EA580C" />
-        <text x="180" y="167" fontSize="7" fill="#FFFFFF" fontWeight="bold">
-          NCERT Chem
+        {/* Bookshelf background */}
+        <rect
+          x="20"
+          y="75"
+          width="220"
+          height="280"
+          rx="12"
+          fill="#FFFFFF"
+          filter="url(#booksCardShadow)"
+        />
+        <rect x="20" y="75" width="220" height="35" rx="12" fill="#0D9488" />
+        <text x="130" y="98" fontSize="12" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
+          📖 Biology Book Stack
         </text>
 
-        <rect x="160" y="125" width="85" height="23" rx="4" fill="#FB923C" />
-        <rect x="165" y="130" width="5" height="13" fill="#F97316" />
-        <text x="182" y="141" fontSize="7" fill="#FFFFFF" fontWeight="bold">
-          OP Tandon
+        {/* NCERT Books - Essential */}
+        <motion.g
+          animate={animate ? { y: [0, -3, 0] } : undefined}
+          transition={{ duration: 3, repeat: Infinity }}
+        >
+          {/* Book 1 - NCERT Class 11 */}
+          <rect x="40" y="125" width="180" height="35" rx="4" fill="#14B8A6" />
+          <rect x="40" y="125" width="12" height="35" fill="url(#bookSpineGrad)" />
+          <text x="135" y="140" fontSize="9" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
+            NCERT Biology Class 11
+          </text>
+          <text x="135" y="152" fontSize="7" fill="#CCFBF1" textAnchor="middle">
+            Foundation & Diversity
+          </text>
+          <rect x="190" y="130" width="25" height="12" rx="2" fill="#FCD34D" />
+          <text x="202" y="139" fontSize="6" fill="#78350F" textAnchor="middle" fontWeight="bold">
+            ⭐ 5.0
+          </text>
+
+          {/* Book 2 - NCERT Class 12 */}
+          <rect x="45" y="165" width="175" height="35" rx="4" fill="#0D9488" />
+          <rect x="45" y="165" width="12" height="35" fill="#0F766E" />
+          <text x="138" y="180" fontSize="9" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
+            NCERT Biology Class 12
+          </text>
+          <text x="138" y="192" fontSize="7" fill="#99F6E4" textAnchor="middle">
+            Genetics & Human Bio
+          </text>
+          <rect x="185" y="170" width="25" height="12" rx="2" fill="#FCD34D" />
+          <text x="197" y="179" fontSize="6" fill="#78350F" textAnchor="middle" fontWeight="bold">
+            ⭐ 5.0
+          </text>
+        </motion.g>
+
+        {/* Reference Books */}
+        <motion.g
+          animate={animate ? { y: [0, -2, 0] } : undefined}
+          transition={{ duration: 2.5, repeat: Infinity, delay: 0.3 }}
+        >
+          {/* MTG Fingertips */}
+          <rect x="50" y="210" width="170" height="30" rx="4" fill="#2DD4BF" />
+          <rect x="50" y="210" width="10" height="30" fill="#14B8A6" />
+          <text x="140" y="223" fontSize="8" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
+            MTG Fingertips Biology
+          </text>
+          <text x="140" y="233" fontSize="6" fill="#F0FDFA" textAnchor="middle">
+            MCQ Practice
+          </text>
+
+          {/* Trueman */}
+          <rect x="55" y="245" width="165" height="28" rx="4" fill="#5EEAD4" />
+          <rect x="55" y="245" width="10" height="28" fill="#2DD4BF" />
+          <text x="142" y="258" fontSize="8" fill="#0F766E" textAnchor="middle" fontWeight="bold">
+            Trueman's Biology Vol 1&2
+          </text>
+          <text x="142" y="267" fontSize="6" fill="#115E59" textAnchor="middle">
+            Detailed Theory
+          </text>
+
+          {/* Dinesh */}
+          <rect x="60" y="278" width="160" height="26" rx="4" fill="#99F6E4" />
+          <rect x="60" y="278" width="10" height="26" fill="#5EEAD4" />
+          <text x="145" y="290" fontSize="8" fill="#0F766E" textAnchor="middle" fontWeight="bold">
+            Dinesh Objective Biology
+          </text>
+          <text x="145" y="299" fontSize="6" fill="#115E59" textAnchor="middle">
+            Advanced MCQs
+          </text>
+        </motion.g>
+
+        {/* Bookshelf base */}
+        <rect x="30" y="315" width="200" height="8" rx="2" fill="#78716C" />
+        <rect x="30" y="323" width="10" height="25" fill="#57534E" />
+        <rect x="220" y="323" width="10" height="25" fill="#57534E" />
+      </motion.g>
+
+      {/* Center Section - Book Rating Chart */}
+      <motion.g
+        initial={animate ? { opacity: 0, y: 20 } : undefined}
+        animate={animate ? { opacity: 1, y: 0 } : undefined}
+        transition={{ delay: 0.4, duration: 0.6, ease: 'easeOut' as const }}
+      >
+        <rect
+          x="250"
+          y="75"
+          width="200"
+          height="195"
+          rx="12"
+          fill="#FFFFFF"
+          filter="url(#booksCardShadow)"
+        />
+        <rect x="250" y="75" width="200" height="30" rx="12" fill="#0D9488" />
+        <text x="350" y="95" fontSize="11" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
+          📊 Book Priority Rating
         </text>
 
-        <rect x="158" y="102" width="82" height="21" rx="4" fill="#FDBA74" />
-        <rect x="163" y="106" width="5" height="13" fill="#FB923C" />
-        <text x="180" y="117" fontSize="6" fill="#7C2D12" fontWeight="bold">
-          MS Chauhan
+        {/* Rating bars */}
+        {biologyBooks.map((book, index) => (
+          <motion.g
+            key={book.name}
+            initial={animate ? { opacity: 0, x: -20 } : undefined}
+            animate={animate ? { opacity: 1, x: 0 } : undefined}
+            transition={{ delay: 0.5 + index * 0.1, duration: 0.5, ease: 'easeOut' as const }}
+          >
+            <text x="260" y={123 + index * 40} fontSize="8" fill="#374151" fontWeight="bold">
+              {book.name}
+            </text>
+            {/* Rating bar background */}
+            <rect x="260" y={128 + index * 40} width="120" height="12" rx="6" fill="#E5E7EB" />
+            {/* Rating bar fill */}
+            <motion.rect
+              x="260"
+              y={128 + index * 40}
+              width={120 * (book.rating / 5)}
+              height="12"
+              rx="6"
+              fill={book.color}
+              initial={animate ? { width: 0 } : undefined}
+              animate={animate ? { width: 120 * (book.rating / 5) } : undefined}
+              transition={{ delay: 0.6 + index * 0.1, duration: 0.8, ease: 'easeOut' as const }}
+            />
+            {/* Stars */}
+            <text x="390" y={137 + index * 40} fontSize="8" fill="#F59E0B">
+              {'★'.repeat(Math.floor(book.rating))}
+              {book.rating % 1 !== 0 ? '½' : ''}
+            </text>
+            {/* Priority badge */}
+            <rect
+              x="420"
+              y={125 + index * 40}
+              width="22"
+              height="14"
+              rx="3"
+              fill={
+                book.priority === 'ESSENTIAL'
+                  ? '#DC2626'
+                  : book.priority === 'HIGH'
+                    ? '#F59E0B'
+                    : book.priority === 'MEDIUM'
+                      ? '#3B82F6'
+                      : '#6B7280'
+              }
+            />
+            <text
+              x="431"
+              y={135 + index * 40}
+              fontSize="5"
+              fill="#FFFFFF"
+              textAnchor="middle"
+              fontWeight="bold"
+            >
+              {book.priority.slice(0, 3)}
+            </text>
+          </motion.g>
+        ))}
+      </motion.g>
+
+      {/* Right Section - Reading Strategy */}
+      <motion.g
+        initial={animate ? { opacity: 0, x: 30 } : undefined}
+        animate={animate ? { opacity: 1, x: 0 } : undefined}
+        transition={{ delay: 0.5, duration: 0.6, ease: 'easeOut' as const }}
+      >
+        <rect
+          x="460"
+          y="75"
+          width="220"
+          height="280"
+          rx="12"
+          fill="#FFFFFF"
+          filter="url(#booksCardShadow)"
+        />
+        <rect x="460" y="75" width="220" height="35" rx="12" fill="#0D9488" />
+        <text x="570" y="98" fontSize="11" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
+          📅 12-Month Reading Plan
         </text>
 
-        <text x="200" y="90" fontSize="10" fill="#C2410C" textAnchor="middle" fontWeight="bold">
-          Chemistry
+        {/* Reading phases */}
+        {readingPhases.map((phase, index) => (
+          <motion.g
+            key={phase.phase}
+            initial={animate ? { opacity: 0, y: 10 } : undefined}
+            animate={animate ? { opacity: 1, y: 0 } : undefined}
+            transition={{ delay: 0.6 + index * 0.15, duration: 0.5, ease: 'easeOut' as const }}
+          >
+            {/* Phase card */}
+            <rect
+              x="475"
+              y={120 + index * 55}
+              width="190"
+              height="48"
+              rx="8"
+              fill="#F0FDFA"
+              stroke="#14B8A6"
+              strokeWidth="1"
+            />
+
+            {/* Phase number */}
+            <circle cx="495" y={144 + index * 55} r="12" fill="#14B8A6" />
+            <text
+              x="495"
+              y={148 + index * 55}
+              fontSize="9"
+              fill="#FFFFFF"
+              textAnchor="middle"
+              fontWeight="bold"
+            >
+              {index + 1}
+            </text>
+
+            {/* Phase details */}
+            <text x="515" y={137 + index * 55} fontSize="9" fill="#0F766E" fontWeight="bold">
+              {phase.phase}: {phase.focus}
+            </text>
+            <text x="515" y={150 + index * 55} fontSize="7" fill="#6B7280">
+              {phase.months}
+            </text>
+
+            {/* Progress indicator */}
+            <rect x="515" y={155 + index * 55} width="80" height="6" rx="3" fill="#E5E7EB" />
+            <motion.rect
+              x="515"
+              y={155 + index * 55}
+              width={80 * (phase.progress / 100)}
+              height="6"
+              rx="3"
+              fill={
+                index === 0
+                  ? '#14B8A6'
+                  : index === 1
+                    ? '#2DD4BF'
+                    : index === 2
+                      ? '#5EEAD4'
+                      : '#99F6E4'
+              }
+              initial={animate ? { width: 0 } : undefined}
+              animate={animate ? { width: 80 * (phase.progress / 100) } : undefined}
+              transition={{ delay: 0.8 + index * 0.15, duration: 0.6, ease: 'easeOut' as const }}
+            />
+            <text x="600" y={161 + index * 55} fontSize="6" fill="#6B7280">
+              {phase.progress}%
+            </text>
+          </motion.g>
+        ))}
+      </motion.g>
+
+      {/* Bottom Section - Key Statistics */}
+      <motion.g
+        initial={animate ? { opacity: 0, y: 30 } : undefined}
+        animate={animate ? { opacity: 1, y: 0 } : undefined}
+        transition={{ delay: 0.7, duration: 0.6, ease: 'easeOut' as const }}
+      >
+        <rect
+          x="20"
+          y="365"
+          width="660"
+          height="140"
+          rx="12"
+          fill="#FFFFFF"
+          filter="url(#booksCardShadow)"
+        />
+        <rect x="20" y="365" width="660" height="35" rx="12" fill="#0D9488" />
+        <text x="350" y="388" fontSize="12" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
+          📈 NEET Biology Book Strategy - Key Statistics
         </text>
-        <text x="200" y="80" fontSize="16" textAnchor="middle">
-          ⚗️
+
+        {/* Stat cards */}
+        {/* NCERT Coverage */}
+        <rect
+          x="40"
+          y="410"
+          width="145"
+          height="80"
+          rx="8"
+          fill="#F0FDFA"
+          stroke="#14B8A6"
+          strokeWidth="1"
+        />
+        <text x="112" y="435" fontSize="24" fill="#14B8A6" textAnchor="middle" fontWeight="bold">
+          95%
+        </text>
+        <text x="112" y="452" fontSize="9" fill="#0F766E" textAnchor="middle" fontWeight="bold">
+          Questions from
+        </text>
+        <text x="112" y="465" fontSize="9" fill="#0F766E" textAnchor="middle" fontWeight="bold">
+          NCERT Content
+        </text>
+        <text x="112" y="480" fontSize="7" fill="#6B7280" textAnchor="middle">
+          Master NCERT First!
+        </text>
+
+        {/* Chapters to Cover */}
+        <rect
+          x="195"
+          y="410"
+          width="145"
+          height="80"
+          rx="8"
+          fill="#ECFDF5"
+          stroke="#10B981"
+          strokeWidth="1"
+        />
+        <text x="267" y="435" fontSize="24" fill="#10B981" textAnchor="middle" fontWeight="bold">
+          38
+        </text>
+        <text x="267" y="452" fontSize="9" fill="#059669" textAnchor="middle" fontWeight="bold">
+          Total Chapters
+        </text>
+        <text x="267" y="465" fontSize="8" fill="#059669" textAnchor="middle">
+          (16 Botany + 22 Zoology)
+        </text>
+        <text x="267" y="480" fontSize="7" fill="#6B7280" textAnchor="middle">
+          Class 11 & 12 Combined
+        </text>
+
+        {/* Questions in NEET */}
+        <rect
+          x="350"
+          y="410"
+          width="145"
+          height="80"
+          rx="8"
+          fill="#FEF3C7"
+          stroke="#F59E0B"
+          strokeWidth="1"
+        />
+        <text x="422" y="435" fontSize="24" fill="#F59E0B" textAnchor="middle" fontWeight="bold">
+          90
+        </text>
+        <text x="422" y="452" fontSize="9" fill="#B45309" textAnchor="middle" fontWeight="bold">
+          Biology MCQs
+        </text>
+        <text x="422" y="465" fontSize="8" fill="#B45309" textAnchor="middle">
+          360 Marks Total
+        </text>
+        <text x="422" y="480" fontSize="7" fill="#6B7280" textAnchor="middle">
+          Highest Weightage Subject
+        </text>
+
+        {/* Recommended Books */}
+        <rect
+          x="505"
+          y="410"
+          width="160"
+          height="80"
+          rx="8"
+          fill="#EDE9FE"
+          stroke="#8B5CF6"
+          strokeWidth="1"
+        />
+        <text x="585" y="435" fontSize="24" fill="#8B5CF6" textAnchor="middle" fontWeight="bold">
+          4-5
+        </text>
+        <text x="585" y="452" fontSize="9" fill="#6D28D9" textAnchor="middle" fontWeight="bold">
+          Books Sufficient
+        </text>
+        <text x="585" y="465" fontSize="8" fill="#6D28D9" textAnchor="middle">
+          NCERT + 2-3 Reference
+        </text>
+        <text x="585" y="480" fontSize="7" fill="#6B7280" textAnchor="middle">
+          Quality over Quantity
         </text>
       </motion.g>
 
-      {/* Biology Books Stack - Highlighted */}
+      {/* Animated book floating */}
       <motion.g
-        animate={animate ? { y: [0, -4, 0], scale: [1, 1.02, 1] } : undefined}
-        transition={{ duration: 2, repeat: Infinity, delay: 0.6 }}
+        animate={animate ? { y: [-5, 5, -5], rotate: [-2, 2, -2] } : undefined}
+        transition={{ duration: 4, repeat: Infinity }}
       >
-        <rect x="270" y="140" width="95" height="28" rx="4" fill="#14B8A6" />
-        <rect x="275" y="146" width="6" height="16" fill="#0D9488" />
-        <text x="295" y="159" fontSize="8" fill="#FFFFFF" fontWeight="bold">
-          NCERT Bio
+        <rect x="255" y="285" width="40" height="55" rx="4" fill="#14B8A6" />
+        <rect x="255" y="285" width="8" height="55" fill="#0D9488" />
+        <text x="280" y="308" fontSize="8" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
+          NCERT
         </text>
-
-        <rect x="275" y="112" width="90" height="26" rx="4" fill="#2DD4BF" />
-        <rect x="280" y="117" width="5" height="16" fill="#14B8A6" />
-        <text x="300" y="130" fontSize="7" fill="#FFFFFF" fontWeight="bold">
-          Fingertips
-        </text>
-
-        <rect x="278" y="86" width="85" height="24" rx="4" fill="#5EEAD4" />
-        <rect x="283" y="91" width="5" height="14" fill="#2DD4BF" />
-        <text x="300" y="102" fontSize="7" fill="#0F766E" fontWeight="bold">
-          Trueman
-        </text>
-
-        <rect x="280" y="62" width="80" height="22" rx="4" fill="#99F6E4" />
-        <rect x="285" y="66" width="5" height="14" fill="#5EEAD4" />
-        <text x="298" y="77" fontSize="6" fill="#0F766E" fontWeight="bold">
-          Dinesh
-        </text>
-
-        <text x="320" y="50" fontSize="10" fill="#0F766E" textAnchor="middle" fontWeight="bold">
+        <text x="280" y="320" fontSize="6" fill="#CCFBF1" textAnchor="middle">
           Biology
         </text>
-        <text x="320" y="40" fontSize="16" textAnchor="middle">
-          🧬
-        </text>
-
-        {/* Star highlight for Biology */}
-        <motion.circle
-          cx="375"
-          cy="100"
-          r="15"
-          fill="#FCD34D"
-          opacity="0.8"
-          animate={animate ? { scale: [1, 1.2, 1] } : undefined}
-          transition={{ duration: 1.5, repeat: Infinity }}
-        />
-        <text x="375" y="105" fontSize="12" textAnchor="middle">
-          ⭐
+        <text x="280" y="332" fontSize="6" fill="#CCFBF1" textAnchor="middle">
+          Class 11
         </text>
       </motion.g>
 
-      {/* Floor line */}
-      <rect x="30" y="185" width="340" height="3" rx="1" fill="#CBD5E1" />
-
-      {/* Bookshelf supports */}
-      <rect x="30" y="188" width="8" height="50" fill="#78716C" />
-      <rect x="362" y="188" width="8" height="50" fill="#78716C" />
-
-      {/* Best Books badge */}
+      {/* Must Read Badge */}
       <motion.g
-        animate={animate ? { rotate: [-5, 5, -5] } : undefined}
-        transition={{ duration: 3, repeat: Infinity }}
-        style={{ transformOrigin: '200px 220px' }}
+        animate={animate ? { scale: [1, 1.05, 1] } : undefined}
+        transition={{ duration: 2, repeat: Infinity }}
       >
-        <rect x="140" y="205" width="120" height="35" rx="17" fill="#EF4444" />
-        <text x="200" y="220" fontSize="8" fill="#FFFFFF" textAnchor="middle">
-          NEET 2026
-        </text>
-        <text x="200" y="232" fontSize="10" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
-          Must-Have Books
+        <rect x="310" y="280" width="80" height="25" rx="12" fill="#DC2626" />
+        <text x="350" y="297" fontSize="9" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
+          MUST READ!
         </text>
       </motion.g>
 
-      {/* Floating elements */}
+      {/* Pro Tips Section */}
+      <motion.g
+        initial={animate ? { opacity: 0 } : undefined}
+        animate={animate ? { opacity: 1 } : undefined}
+        transition={{ delay: 0.9, duration: 0.6, ease: 'easeOut' as const }}
+      >
+        <rect
+          x="405"
+          y="280"
+          width="145"
+          height="70"
+          rx="8"
+          fill="#FEF3C7"
+          stroke="#F59E0B"
+          strokeWidth="1"
+        />
+        <text x="477" y="298" fontSize="9" fill="#B45309" textAnchor="middle" fontWeight="bold">
+          💡 Pro Tip
+        </text>
+        <text x="477" y="312" fontSize="7" fill="#78350F" textAnchor="middle">
+          Read NCERT 3 times:
+        </text>
+        <text x="477" y="324" fontSize="6" fill="#92400E" textAnchor="middle">
+          1st - Understand concepts
+        </text>
+        <text x="477" y="336" fontSize="6" fill="#92400E" textAnchor="middle">
+          2nd - Note key points
+        </text>
+        <text x="477" y="348" fontSize="6" fill="#92400E" textAnchor="middle">
+          3rd - Memorize diagrams
+        </text>
+      </motion.g>
+
+      {/* Success Formula */}
+      <motion.g
+        animate={animate ? { opacity: [0.8, 1, 0.8] } : undefined}
+        transition={{ duration: 3, repeat: Infinity }}
+      >
+        <rect
+          x="560"
+          y="280"
+          width="120"
+          height="70"
+          rx="8"
+          fill="#DCFCE7"
+          stroke="#22C55E"
+          strokeWidth="1"
+        />
+        <text x="620" y="298" fontSize="9" fill="#166534" textAnchor="middle" fontWeight="bold">
+          ✅ Success Formula
+        </text>
+        <text x="620" y="315" fontSize="7" fill="#15803D" textAnchor="middle">
+          NCERT + MTG + PYQs
+        </text>
+        <text x="620" y="330" fontSize="7" fill="#15803D" textAnchor="middle">
+          = 340+ in Biology
+        </text>
+        <text x="620" y="345" fontSize="6" fill="#6B7280" textAnchor="middle">
+          Followed by NEET Toppers
+        </text>
+      </motion.g>
+
+      {/* Floating decorative elements */}
       <motion.circle
-        cx="30"
+        cx="15"
         cy="60"
         r="8"
-        fill="#3B82F6"
-        opacity="0.4"
+        fill="#14B8A6"
+        opacity="0.3"
         animate={animate ? { y: [-5, 5, -5] } : undefined}
         transition={{ duration: 3, repeat: Infinity }}
       />
       <motion.circle
-        cx="140"
-        cy="40"
+        cx="685"
+        cy="45"
         r="6"
-        fill="#F97316"
-        opacity="0.4"
+        fill="#2DD4BF"
+        opacity="0.3"
         animate={animate ? { y: [5, -5, 5] } : undefined}
         transition={{ duration: 2.5, repeat: Infinity }}
+      />
+      <motion.rect
+        x="660"
+        y="500"
+        width="15"
+        height="10"
+        rx="2"
+        fill="#5EEAD4"
+        opacity="0.4"
+        animate={animate ? { rotate: [-5, 5, -5] } : undefined}
+        transition={{ duration: 4, repeat: Infinity }}
       />
     </Wrapper>
   )
@@ -13608,191 +14381,492 @@ export function SpecializedVsMassIllustration({
   const Wrapper = animate ? motion.svg : 'svg'
   const wrapperProps = animate
     ? {
-        initial: { opacity: 0, scale: 0.9 },
+        initial: { opacity: 0, scale: 0.95 },
         animate: { opacity: 1, scale: 1 },
-        transition: { duration: 0.6 },
+        transition: { duration: 0.8, ease: 'easeOut' as const },
       }
     : {}
 
+  // Comparison data
+  const comparisonMetrics = [
+    { metric: 'Batch Size', specialized: '15-25', mass: '100-500', winner: 'specialized' },
+    { metric: 'Faculty Ratio', specialized: '1:15', mass: '1:100+', winner: 'specialized' },
+    {
+      metric: 'Doubt Sessions',
+      specialized: 'Daily 1-on-1',
+      mass: 'Weekly Group',
+      winner: 'specialized',
+    },
+    { metric: 'Focus Area', specialized: 'Biology Only', mass: 'PCB Mixed', winner: 'specialized' },
+  ]
+
+  // Success indicators
+  const specializedFeatures = [
+    { icon: '🎯', text: 'NEET Biology Expert Faculty' },
+    { icon: '📚', text: 'Deep Conceptual Teaching' },
+    { icon: '💬', text: 'Personal Doubt Resolution' },
+    { icon: '📊', text: 'Individual Progress Tracking' },
+  ]
+
+  const massDrawbacks = [
+    { icon: '⚠️', text: 'One-size-fits-all Approach' },
+    { icon: '😰', text: 'Easy to Get Lost in Crowd' },
+    { icon: '📉', text: 'Generic Teaching Style' },
+    { icon: '⏰', text: 'Limited Personal Attention' },
+  ]
+
   return (
     <Wrapper
-      viewBox="0 0 400 300"
+      viewBox="0 0 700 520"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
+      preserveAspectRatio="xMidYMid meet"
       {...wrapperProps}
     >
-      {/* Background */}
-      <rect width="400" height="300" fill="#FAFAFA" />
+      <defs>
+        {/* Background gradient */}
+        <linearGradient id="specVsMassBg" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#F0FDF4" />
+          <stop offset="50%" stopColor="#FAFAFA" />
+          <stop offset="100%" stopColor="#FEF2F2" />
+        </linearGradient>
+        {/* Card shadows */}
+        <filter id="specCardShadow" x="-20%" y="-20%" width="140%" height="140%">
+          <feDropShadow dx="0" dy="4" stdDeviation="6" floodColor="#22C55E" floodOpacity="0.15" />
+        </filter>
+        <filter id="massCardShadow" x="-20%" y="-20%" width="140%" height="140%">
+          <feDropShadow dx="0" dy="4" stdDeviation="6" floodColor="#EF4444" floodOpacity="0.15" />
+        </filter>
+        {/* Specialized gradient */}
+        <linearGradient id="specGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#22C55E" />
+          <stop offset="100%" stopColor="#16A34A" />
+        </linearGradient>
+        {/* Mass gradient */}
+        <linearGradient id="massGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#EF4444" />
+          <stop offset="100%" stopColor="#DC2626" />
+        </linearGradient>
+      </defs>
 
-      {/* Left - Specialized Biology Coaching */}
+      {/* Background */}
+      <rect width="700" height="520" fill="url(#specVsMassBg)" rx="16" />
+
+      {/* Title Section */}
       <motion.g
-        initial={animate ? { x: -30, opacity: 0 } : undefined}
-        animate={animate ? { x: 0, opacity: 1 } : undefined}
-        transition={{ delay: 0.2, duration: 0.5 }}
+        initial={animate ? { opacity: 0, y: -20 } : undefined}
+        animate={animate ? { opacity: 1, y: 0 } : undefined}
+        transition={{ delay: 0.2, duration: 0.6, ease: 'easeOut' as const }}
       >
         <rect
-          x="15"
-          y="35"
-          width="170"
-          height="220"
-          rx="10"
+          x="150"
+          y="10"
+          width="400"
+          height="50"
+          rx="25"
+          fill="#1F2937"
+          filter="url(#specCardShadow)"
+        />
+        <text x="350" y="28" fontSize="10" fill="#9CA3AF" textAnchor="middle">
+          NEET Biology Coaching Decision
+        </text>
+        <text x="350" y="45" fontSize="14" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
+          🎯 Specialized vs 🏭 Mass Coaching Comparison
+        </text>
+      </motion.g>
+
+      {/* Left Section - Specialized Coaching */}
+      <motion.g
+        initial={animate ? { opacity: 0, x: -30 } : undefined}
+        animate={animate ? { opacity: 1, x: 0 } : undefined}
+        transition={{ delay: 0.3, duration: 0.6, ease: 'easeOut' as const }}
+      >
+        <rect
+          x="20"
+          y="70"
+          width="220"
+          height="295"
+          rx="12"
           fill="#F0FDF4"
           stroke="#22C55E"
           strokeWidth="2"
+          filter="url(#specCardShadow)"
         />
-
-        {/* Header */}
-        <rect x="15" y="35" width="170" height="40" rx="10" fill="#22C55E" />
-        <text x="100" y="60" textAnchor="middle" fill="#FFF" fontSize="11" fontWeight="700">
-          SPECIALIZED
+        <rect x="20" y="70" width="220" height="40" rx="12" fill="url(#specGrad)" />
+        <text x="130" y="95" fontSize="12" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
+          🎯 SPECIALIZED COACHING
         </text>
 
-        {/* Biology focus icon */}
+        {/* DNA/Biology Icon */}
         <motion.g
-          initial={animate ? { scale: 0 } : undefined}
-          animate={animate ? { scale: 1 } : undefined}
-          transition={{ delay: 0.4, duration: 0.4 }}
+          animate={animate ? { rotate: [0, 360] } : undefined}
+          transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
+          style={{ transformOrigin: '130px 145px' }}
         >
-          <circle cx="100" cy="105" r="25" fill="#86EFAC" />
-          {/* DNA helix simplified */}
+          <circle cx="130" cy="145" r="30" fill="#86EFAC" opacity="0.5" />
+        </motion.g>
+        <motion.g
+          animate={animate ? { y: [0, -3, 0] } : undefined}
+          transition={{ duration: 2, repeat: Infinity }}
+        >
+          {/* DNA Helix */}
           <path
-            d="M90 95 Q 100 90 110 95 Q 100 100 90 105 Q 100 110 110 115"
+            d="M115 130 Q130 125 145 130 Q130 140 115 145 Q130 155 145 160"
             stroke="#166534"
             strokeWidth="3"
             fill="none"
           />
-          <circle cx="90" cy="95" r="3" fill="#166534" />
-          <circle cx="110" cy="95" r="3" fill="#166534" />
-          <circle cx="90" cy="105" r="3" fill="#166534" />
-          <circle cx="110" cy="115" r="3" fill="#166534" />
+          <circle cx="115" cy="130" r="4" fill="#166534" />
+          <circle cx="145" cy="130" r="4" fill="#166534" />
+          <circle cx="115" cy="145" r="4" fill="#166534" />
+          <circle cx="145" cy="160" r="4" fill="#166534" />
         </motion.g>
 
-        {/* Features */}
-        {[
-          'NEET Biology Expert',
-          'Deep Conceptual Focus',
-          'Personal Attention',
-          '15-20 Students',
-        ].map((text, i) => (
+        {/* Features list */}
+        {specializedFeatures.map((feature, index) => (
           <motion.g
-            key={text}
-            initial={animate ? { x: -20, opacity: 0 } : undefined}
-            animate={animate ? { x: 0, opacity: 1 } : undefined}
-            transition={{ delay: 0.5 + i * 0.1, duration: 0.3 }}
+            key={feature.text}
+            initial={animate ? { opacity: 0, x: -20 } : undefined}
+            animate={animate ? { opacity: 1, x: 0 } : undefined}
+            transition={{ delay: 0.5 + index * 0.1, duration: 0.4, ease: 'easeOut' as const }}
           >
-            <circle cx="35" cy={145 + i * 25} r="6" fill="#22C55E" />
-            <path
-              d="M32 145 L35 148 L40 142"
-              stroke="#FFF"
-              strokeWidth="2"
-              fill="none"
-              transform={`translate(0, ${i * 25})`}
+            <rect
+              x="35"
+              y={185 + index * 40}
+              width="190"
+              height="32"
+              rx="6"
+              fill="#FFFFFF"
+              stroke="#86EFAC"
+              strokeWidth="1"
             />
-            <text x="50" y={148 + i * 25} fill="#166534" fontSize="9" fontWeight="500">
-              {text}
+            <text x="50" y={205 + index * 40} fontSize="14">
+              {feature.icon}
             </text>
+            <text x="70" y={205 + index * 40} fontSize="8" fill="#166534" fontWeight="bold">
+              {feature.text}
+            </text>
+          </motion.g>
+        ))}
+
+        {/* Success badge */}
+        <motion.g
+          animate={animate ? { scale: [1, 1.05, 1] } : undefined}
+          transition={{ duration: 2, repeat: Infinity }}
+        >
+          <rect x="55" y="335" width="150" height="22" rx="11" fill="#22C55E" />
+          <text x="130" y="350" fontSize="9" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
+            ✓ 40-50% Success Rate
+          </text>
+        </motion.g>
+      </motion.g>
+
+      {/* Center Section - Comparison Metrics */}
+      <motion.g
+        initial={animate ? { opacity: 0, y: 20 } : undefined}
+        animate={animate ? { opacity: 1, y: 0 } : undefined}
+        transition={{ delay: 0.4, duration: 0.6, ease: 'easeOut' as const }}
+      >
+        <rect
+          x="250"
+          y="70"
+          width="200"
+          height="295"
+          rx="12"
+          fill="#FFFFFF"
+          filter="url(#specCardShadow)"
+        />
+        <rect x="250" y="70" width="200" height="35" rx="12" fill="#1F2937" />
+        <text x="350" y="93" fontSize="11" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
+          📊 Head-to-Head Comparison
+        </text>
+
+        {/* Comparison rows */}
+        {comparisonMetrics.map((item, index) => (
+          <motion.g
+            key={item.metric}
+            initial={animate ? { opacity: 0, y: 10 } : undefined}
+            animate={animate ? { opacity: 1, y: 0 } : undefined}
+            transition={{ delay: 0.5 + index * 0.12, duration: 0.4, ease: 'easeOut' as const }}
+          >
+            {/* Row background */}
+            <rect
+              x="260"
+              y={115 + index * 60}
+              width="180"
+              height="52"
+              rx="8"
+              fill={index % 2 === 0 ? '#F8FAFC' : '#FFFFFF'}
+            />
+
+            {/* Metric label */}
+            <text
+              x="350"
+              y={130 + index * 60}
+              fontSize="9"
+              fill="#6366F1"
+              textAnchor="middle"
+              fontWeight="bold"
+            >
+              {item.metric}
+            </text>
+
+            {/* Specialized value - Winner */}
+            <rect
+              x="265"
+              y={135 + index * 60}
+              width="75"
+              height="24"
+              rx="6"
+              fill="#D1FAE5"
+              stroke="#22C55E"
+              strokeWidth="1.5"
+            />
+            <text
+              x="302"
+              y={151 + index * 60}
+              fontSize="8"
+              fill="#166534"
+              textAnchor="middle"
+              fontWeight="bold"
+            >
+              {item.specialized}
+            </text>
+
+            {/* Mass value */}
+            <rect x="355" y={135 + index * 60} width="75" height="24" rx="6" fill="#FEE2E2" />
+            <text x="392" y={151 + index * 60} fontSize="8" fill="#991B1B" textAnchor="middle">
+              {item.mass}
+            </text>
+
+            {/* Winner indicator */}
+            <motion.text
+              x="340"
+              y={151 + index * 60}
+              fontSize="10"
+              fill="#22C55E"
+              animate={animate ? { scale: [1, 1.3, 1] } : undefined}
+              transition={{ duration: 1.5, repeat: Infinity, delay: index * 0.2 }}
+            >
+              ✓
+            </motion.text>
           </motion.g>
         ))}
       </motion.g>
 
-      {/* Right - Mass Coaching */}
+      {/* Right Section - Mass Coaching */}
       <motion.g
-        initial={animate ? { x: 30, opacity: 0 } : undefined}
-        animate={animate ? { x: 0, opacity: 1 } : undefined}
-        transition={{ delay: 0.3, duration: 0.5 }}
+        initial={animate ? { opacity: 0, x: 30 } : undefined}
+        animate={animate ? { opacity: 1, x: 0 } : undefined}
+        transition={{ delay: 0.5, duration: 0.6, ease: 'easeOut' as const }}
       >
         <rect
-          x="215"
-          y="35"
-          width="170"
-          height="220"
-          rx="10"
+          x="460"
+          y="70"
+          width="220"
+          height="295"
+          rx="12"
           fill="#FEF2F2"
           stroke="#EF4444"
           strokeWidth="2"
+          filter="url(#massCardShadow)"
         />
-
-        {/* Header */}
-        <rect x="215" y="35" width="170" height="40" rx="10" fill="#EF4444" />
-        <text x="300" y="60" textAnchor="middle" fill="#FFF" fontSize="11" fontWeight="700">
-          MASS COACHING
+        <rect x="460" y="70" width="220" height="40" rx="12" fill="url(#massGrad)" />
+        <text x="570" y="95" fontSize="12" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
+          🏭 MASS COACHING
         </text>
 
-        {/* Factory icon */}
+        {/* Factory Building Icon */}
         <motion.g
-          initial={animate ? { scale: 0 } : undefined}
-          animate={animate ? { scale: 1 } : undefined}
-          transition={{ delay: 0.4, duration: 0.4 }}
+          animate={animate ? { y: [0, -2, 0] } : undefined}
+          transition={{ duration: 2.5, repeat: Infinity }}
         >
-          <rect x="275" y="90" width="50" height="35" fill="#FECACA" />
-          <rect x="280" y="95" width="10" height="10" fill="#FEE2E2" />
-          <rect x="295" y="95" width="10" height="10" fill="#FEE2E2" />
-          <rect x="310" y="95" width="10" height="10" fill="#FEE2E2" />
-          {/* Chimneys */}
-          <rect x="282" y="80" width="8" height="15" fill="#DC2626" />
-          <rect x="310" y="80" width="8" height="15" fill="#DC2626" />
+          {/* Factory building */}
+          <rect x="530" y="125" width="80" height="50" rx="4" fill="#FECACA" />
+          <rect x="540" y="135" width="15" height="15" rx="2" fill="#FEE2E2" />
+          <rect x="562" y="135" width="15" height="15" rx="2" fill="#FEE2E2" />
+          <rect x="585" y="135" width="15" height="15" rx="2" fill="#FEE2E2" />
+          <rect x="540" y="155" width="55" height="15" rx="2" fill="#7C2D12" />
+          {/* Chimneys with smoke */}
+          <rect x="545" y="110" width="12" height="20" fill="#DC2626" />
+          <rect x="583" y="110" width="12" height="20" fill="#DC2626" />
+          <motion.circle
+            cx="551"
+            cy="105"
+            r="5"
+            fill="#9CA3AF"
+            opacity="0.6"
+            animate={animate ? { y: [-5, -15], opacity: [0.6, 0] } : undefined}
+            transition={{ duration: 2, repeat: Infinity }}
+          />
+          <motion.circle
+            cx="589"
+            cy="105"
+            r="5"
+            fill="#9CA3AF"
+            opacity="0.6"
+            animate={animate ? { y: [-5, -15], opacity: [0.6, 0] } : undefined}
+            transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
+          />
         </motion.g>
 
-        {/* Issues */}
-        {['PCM + Biology Mixed', 'Surface-level Coverage', 'Lost in Crowd', '100+ Students'].map(
-          (text, i) => (
-            <motion.g
-              key={text}
-              initial={animate ? { x: 20, opacity: 0 } : undefined}
-              animate={animate ? { x: 0, opacity: 1 } : undefined}
-              transition={{ delay: 0.5 + i * 0.1, duration: 0.3 }}
-            >
-              <circle cx="235" cy={145 + i * 25} r="6" fill="#EF4444" />
-              <text x="232" y={148 + i * 25} fill="#FFF" fontSize="8" fontWeight="700">
-                !
-              </text>
-              <text x="250" y={148 + i * 25} fill="#991B1B" fontSize="9" fontWeight="500">
-                {text}
-              </text>
-            </motion.g>
-          )
-        )}
+        {/* Drawbacks list */}
+        {massDrawbacks.map((drawback, index) => (
+          <motion.g
+            key={drawback.text}
+            initial={animate ? { opacity: 0, x: 20 } : undefined}
+            animate={animate ? { opacity: 1, x: 0 } : undefined}
+            transition={{ delay: 0.6 + index * 0.1, duration: 0.4, ease: 'easeOut' as const }}
+          >
+            <rect
+              x="475"
+              y={185 + index * 40}
+              width="190"
+              height="32"
+              rx="6"
+              fill="#FFFFFF"
+              stroke="#FECACA"
+              strokeWidth="1"
+            />
+            <text x="490" y={205 + index * 40} fontSize="14">
+              {drawback.icon}
+            </text>
+            <text x="510" y={205 + index * 40} fontSize="8" fill="#991B1B" fontWeight="bold">
+              {drawback.text}
+            </text>
+          </motion.g>
+        ))}
+
+        {/* Low success badge */}
+        <rect x="495" y="335" width="150" height="22" rx="11" fill="#EF4444" />
+        <text x="570" y="350" fontSize="9" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
+          ✗ 10-15% Success Rate
+        </text>
       </motion.g>
 
       {/* VS Badge */}
       <motion.g
-        initial={animate ? { scale: 0 } : undefined}
-        animate={animate ? { scale: 1 } : undefined}
-        transition={{ delay: 0.6, duration: 0.3, type: 'spring' }}
+        animate={animate ? { scale: [1, 1.15, 1] } : undefined}
+        transition={{ duration: 2, repeat: Infinity }}
       >
-        <circle cx="200" cy="145" r="22" fill="#1F2937" />
-        <text x="200" y="150" textAnchor="middle" fill="#FFF" fontSize="12" fontWeight="700">
+        <circle cx="350" cy="380" r="28" fill="#1F2937" />
+        <text x="350" y="386" fontSize="16" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
           VS
         </text>
       </motion.g>
 
-      {/* Bottom recommendation */}
+      {/* Bottom Section - Final Verdict */}
       <motion.g
-        initial={animate ? { y: 20, opacity: 0 } : undefined}
-        animate={animate ? { y: 0, opacity: 1 } : undefined}
-        transition={{ delay: 1.2, duration: 0.4 }}
+        initial={animate ? { opacity: 0, y: 30 } : undefined}
+        animate={animate ? { opacity: 1, y: 0 } : undefined}
+        transition={{ delay: 0.8, duration: 0.6, ease: 'easeOut' as const }}
       >
-        <rect x="80" y="265" width="240" height="30" rx="6" fill="#22C55E" />
-        <text x="200" y="285" textAnchor="middle" fill="#FFF" fontSize="11" fontWeight="600">
-          Choose Specialized for NEET Biology
+        <rect
+          x="20"
+          y="415"
+          width="660"
+          height="90"
+          rx="12"
+          fill="#FFFFFF"
+          filter="url(#specCardShadow)"
+        />
+        <rect x="20" y="415" width="660" height="30" rx="12" fill="#1F2937" />
+        <text x="350" y="435" fontSize="11" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
+          🏆 Why Choose Specialized Biology Coaching?
+        </text>
+
+        {/* Verdict cards */}
+        <rect
+          x="40"
+          y="455"
+          width="145"
+          height="40"
+          rx="8"
+          fill="#D1FAE5"
+          stroke="#22C55E"
+          strokeWidth="1"
+        />
+        <text x="112" y="472" fontSize="9" fill="#166534" textAnchor="middle" fontWeight="bold">
+          3x Better Results
+        </text>
+        <text x="112" y="486" fontSize="7" fill="#15803D" textAnchor="middle">
+          40% vs 15% success
+        </text>
+
+        <rect
+          x="195"
+          y="455"
+          width="145"
+          height="40"
+          rx="8"
+          fill="#DBEAFE"
+          stroke="#3B82F6"
+          strokeWidth="1"
+        />
+        <text x="267" y="472" fontSize="9" fill="#1D4ED8" textAnchor="middle" fontWeight="bold">
+          7x More Attention
+        </text>
+        <text x="267" y="486" fontSize="7" fill="#2563EB" textAnchor="middle">
+          1:15 vs 1:100 ratio
+        </text>
+
+        <rect
+          x="350"
+          y="455"
+          width="145"
+          height="40"
+          rx="8"
+          fill="#FEF3C7"
+          stroke="#F59E0B"
+          strokeWidth="1"
+        />
+        <text x="422" y="472" fontSize="9" fill="#B45309" textAnchor="middle" fontWeight="bold">
+          Deep Conceptual
+        </text>
+        <text x="422" y="486" fontSize="7" fill="#D97706" textAnchor="middle">
+          Biology-only focus
+        </text>
+
+        <rect x="505" y="455" width="160" height="40" rx="8" fill="#22C55E" />
+        <text x="585" y="472" fontSize="10" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
+          🎯 Clear Winner
+        </text>
+        <text x="585" y="486" fontSize="8" fill="#DCFCE7" textAnchor="middle">
+          Specialized Coaching
         </text>
       </motion.g>
 
-      {/* Title */}
-      <motion.text
-        x="200"
-        y="22"
-        textAnchor="middle"
+      {/* Floating decorative elements */}
+      <motion.circle
+        cx="15"
+        cy="55"
+        r="8"
+        fill="#22C55E"
+        opacity="0.3"
+        animate={animate ? { y: [-5, 5, -5] } : undefined}
+        transition={{ duration: 3, repeat: Infinity }}
+      />
+      <motion.circle
+        cx="685"
+        cy="45"
+        r="6"
+        fill="#EF4444"
+        opacity="0.3"
+        animate={animate ? { y: [5, -5, 5] } : undefined}
+        transition={{ duration: 2.5, repeat: Infinity }}
+      />
+      <motion.rect
+        x="660"
+        y="400"
+        width="15"
+        height="10"
+        rx="2"
         fill="#1F2937"
-        fontSize="13"
-        fontWeight="700"
-        initial={animate ? { opacity: 0 } : undefined}
-        animate={animate ? { opacity: 1 } : undefined}
-        transition={{ delay: 0.1 }}
-      >
-        Specialized vs Mass Coaching
-      </motion.text>
+        opacity="0.2"
+        animate={animate ? { rotate: [-5, 5, -5] } : undefined}
+        transition={{ duration: 4, repeat: Infinity }}
+      />
     </Wrapper>
   )
 }
