@@ -223,10 +223,6 @@ export function LocalBusinessSchema({ locationId }: LocalBusinessSchemaProps) {
     },
     review: location.reviews.map((review) => ({
       '@type': 'Review',
-      itemReviewed: {
-        '@type': 'LocalBusiness',
-        name: location.name,
-      },
       author: {
         '@type': 'Person',
         name: review.author,
