@@ -261,6 +261,12 @@ const nextConfig = {
         destination: '/auth/signin',
         permanent: false,
       },
+      // Old blog posts - redirect to relevant content
+      {
+        source: '/blog/bangalore-online-neet-preparation-guide',
+        destination: '/neet-coaching-bangalore',
+        permanent: true,
+      },
     ]
   },
 
