@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect, useState, memo } from 'react'
-import { useRouter } from 'next/navigation'
 import {
   PlayIcon,
   StarIcon,
@@ -48,7 +47,6 @@ const AnimatedCounter = memo(({ value, suffix = '' }: { value: string; suffix?: 
 AnimatedCounter.displayName = 'AnimatedCounter'
 
 export function HeroClientInteractive() {
-  const router = useRouter()
   const { t } = useI18n()
 
   const [timeLeft, setTimeLeft] = useState({
@@ -87,23 +85,23 @@ export function HeroClientInteractive() {
 
   return (
     <>
-      {/* CTAs - Using CSS-only buttons for better LCP (no framer-motion) */}
+      {/* CTAs - Using <a> tags for instant LCP (work before JS loads) */}
       <div className="flex flex-col sm:flex-row gap-3 xs:gap-4 mb-8 xs:mb-12">
-        <button
-          onClick={() => router.push('/demo-booking')}
+        <a
+          href="/demo-booking"
           className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold py-3 xs:py-4 px-6 xs:px-8 rounded-lg xs:rounded-xl shadow-xl hover:shadow-green-500/30 transition-all duration-300 text-sm xs:text-base md:text-lg border border-green-400/30 hover:scale-[1.02] active:scale-[0.98] group"
         >
           <PlayIcon className="h-5 xs:h-6 w-5 xs:w-6 group-hover:scale-110 transition-transform" />
           {t('bookDemo')}
-        </button>
+        </a>
 
-        <button
-          onClick={() => router.push('/success-stories')}
+        <a
+          href="/success-stories"
           className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white hover:bg-white/20 hover:border-white/50 font-semibold py-3 xs:py-4 px-6 xs:px-8 rounded-lg xs:rounded-xl transition-all duration-300 text-sm xs:text-base md:text-lg hover:scale-[1.02] active:scale-[0.98] group"
         >
           <StarIcon className="h-5 xs:h-6 w-5 xs:w-6 group-hover:text-yellow-300 transition-colors" />
           {t('seeSuccessStories')}
-        </button>
+        </a>
       </div>
 
       {/* Stats Grid with Animated Counters */}
