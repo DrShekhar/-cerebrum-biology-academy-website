@@ -73,7 +73,7 @@ export default function Class10FoundationPage() {
         name: 'What is the fee for Class 10 NEET foundation course?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'The annual fee is ₹24,000 for comprehensive Class 10 NEET foundation course including board exam preparation, NEET concept building, live classes, study materials, and regular assessments.',
+          text: 'Class 10 Foundation fees range from ₹45,000 (Pursuit) to ₹90,000 (Pinnacle) per year, including board exam preparation, NEET concept building, live classes, study materials, and regular assessments. EMI and scholarship options available.',
         },
       },
       {
@@ -119,7 +119,7 @@ export default function Class10FoundationPage() {
     timeRequired: 'P3Y',
     offers: {
       '@type': 'Offer',
-      price: '24000',
+      price: '45000',
       priceCurrency: 'INR',
       availability: 'https://schema.org/InStock',
     },

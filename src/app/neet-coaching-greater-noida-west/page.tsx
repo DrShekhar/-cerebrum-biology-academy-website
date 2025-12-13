@@ -155,7 +155,7 @@ const faqs = [
   {
     question: 'What are the fees for NEET coaching in Greater Noida West?',
     answer:
-      'Our fees range from ₹24,000 to ₹48,000 per year - significantly lower than traditional coaching centers. We offer EMI options and scholarships for deserving students from Greater Noida West.',
+      'Our fees range from ₹45,000 to ₹1,56,000 per year depending on course and tier (Pursuit, Ascent, or Pinnacle). Class 9-10: ₹45,000-₹90,000, Class 11: ₹48,000-₹98,000, Class 12: ₹70,000-₹1,56,000. EMI options and scholarships available.',
   },
   {
     question: 'How do students from Greater Noida West attend classes?',

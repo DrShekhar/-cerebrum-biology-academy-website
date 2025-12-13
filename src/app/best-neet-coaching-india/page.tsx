@@ -25,7 +25,7 @@ const comparisonData = [
     institute: 'Cerebrum Academy',
     successRate: '98%',
     batchSize: '15-20',
-    fees: '₹24,000-48,000',
+    fees: '₹45,000-₹1,56,000',
     highlight: true,
   },
   { institute: 'Allen Career', successRate: '65%', batchSize: '200-400', fees: '₹1,50,000+' },
@@ -91,7 +91,7 @@ const faqs = [
   {
     question: 'How does Cerebrum compare with Kota coaching?',
     answer:
-      'While Kota coaching costs ₹2.5L+ annually (including fees, accommodation, food), Cerebrum offers the same quality at ₹24,000-48,000. Our success rate (98%) is higher than Kota average (60%), and students stay safe at home.',
+      'While Kota coaching costs ₹2.5L+ annually (including fees, accommodation, food), Cerebrum offers the same quality at ₹45,000-₹1,56,000. Our success rate (98%) is higher than Kota average (60%), and students stay safe at home.',
   },
   {
     question: 'Is online coaching as effective as classroom coaching?',
@@ -101,7 +101,7 @@ const faqs = [
   {
     question: 'What is the fee structure for NEET coaching?',
     answer:
-      'Our complete NEET Biology course ranges from ₹24,000 to ₹48,000 per year depending on the program. This is 60-70% less than traditional coaching while delivering better results.',
+      'Our NEET Biology courses range from ₹45,000 to ₹1,56,000 per year depending on the program and tier. Class 9-10: ₹45,000-₹90,000, Class 11: ₹48,000-₹98,000, Class 12: ₹70,000-₹1,56,000.',
   },
 ]
 

@@ -66,7 +66,7 @@ export default function NeetFoundationCoursePage() {
         name: 'How much does the NEET foundation course cost?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'The annual fee for NEET foundation course is ₹24,000, which includes comprehensive biology coaching, live classes, study material, regular assessments, doubt clearing sessions, and personalized attention from expert faculty.',
+          text: 'NEET foundation course fees range from ₹45,000 (Pursuit) to ₹90,000 (Pinnacle) per year. This includes comprehensive biology coaching, live classes, study material, regular assessments, doubt clearing sessions, and personalized attention from expert faculty. EMI and scholarship options available.',
         },
       },
       {
@@ -120,7 +120,7 @@ export default function NeetFoundationCoursePage() {
     timeRequired: 'P3Y',
     offers: {
       '@type': 'Offer',
-      price: '24000',
+      price: '45000',
       priceCurrency: 'INR',
       availability: 'https://schema.org/InStock',
     },

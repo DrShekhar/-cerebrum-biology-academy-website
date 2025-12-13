@@ -105,7 +105,7 @@ const faqs = [
   {
     question: 'What is the fee for online NEET coaching?',
     answer:
-      'Our complete NEET Biology course is ₹24,000 - ₹48,000 per year depending on the program. This is 60-70% less than Kota coaching when you include accommodation and living expenses.',
+      'Our NEET Biology courses range from ₹45,000 to ₹1,56,000 per year depending on the program and tier. Class 9-10: ₹45,000-₹90,000, Class 11: ₹48,000-₹98,000, Class 12: ₹70,000-₹1,56,000. Still significantly less than Kota when you include accommodation and living expenses.',
   },
   {
     question: 'How do live classes work?',

@@ -450,7 +450,7 @@ export default function PricingPage() {
             {[
               { value: stats.courses, label: 'Course Programs', suffix: '' },
               { value: stats.tiers, label: 'Learning Tiers', suffix: '' },
-              { value: stats.success, label: 'NEET Qualified 2024', suffix: '%' },
+              { value: stats.success, label: 'NEET Success Rate', suffix: '%' },
               { value: '7', label: 'Day Money-Back', suffix: '-Day', isStatic: true },
             ].map((stat, idx) => (
               <div

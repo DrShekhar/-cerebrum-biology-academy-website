@@ -106,7 +106,7 @@ const faqs = [
   {
     question: 'What is the fee for medical entrance coaching?',
     answer:
-      'Our complete program ranges from ₹24,000 to ₹48,000 per year - 60-70% less than Kota or premium coaching centers. This includes all study materials, mock tests, and doubt sessions.',
+      'Our complete program ranges from ₹45,000 to ₹1,56,000 per year depending on course and tier. Class 9-10: ₹45,000-₹90,000, Class 11: ₹48,000-₹98,000, Class 12/Dropper: ₹70,000-₹1,56,000. All include study materials, mock tests, and doubt sessions.',
   },
 ]
 

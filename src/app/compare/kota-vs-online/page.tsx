@@ -43,7 +43,7 @@ export default function KotaVsOnlinePage() {
     {
       factor: 'Annual Cost',
       kota: '₹1.5L - 3L+',
-      cerebrum: '₹24,000',
+      cerebrum: '₹45,000-₹1,56,000',
       winner: 'cerebrum',
       icon: DollarSign,
     },
@@ -127,17 +127,17 @@ export default function KotaVsOnlinePage() {
   ]
 
   const hiddenCosts = [
-    { item: 'Coaching Fees', kota: '₹1,50,000', online: '₹24,000' },
+    { item: 'Coaching Fees', kota: '₹1,50,000', online: '₹45,000-₹98,000' },
     { item: 'Hostel/PG Rent', kota: '₹60,000', online: '₹0' },
     { item: 'Food Expenses', kota: '₹36,000', online: '₹0' },
     { item: 'Travel (Home visits)', kota: '₹15,000', online: '₹0' },
     { item: 'Study Materials', kota: '₹10,000', online: '₹0 (Included)' },
     { item: 'Miscellaneous', kota: '₹10,000', online: '₹0' },
-    { item: 'Total Annual Cost', kota: '₹2,81,000', online: '₹24,000', highlight: true },
+    { item: 'Total Annual Cost', kota: '₹2,81,000', online: '₹45,000-₹98,000', highlight: true },
     {
       item: 'Total Savings',
       kota: '-',
-      online: '₹2,57,000',
+      online: '₹1,83,000-₹2,36,000',
       highlight: true,
       isProfit: true,
     },
@@ -203,7 +203,7 @@ export default function KotaVsOnlinePage() {
     {
       question: 'How much money will I save?',
       answer:
-        'Parents typically save ₹2L-2.5L annually compared to Kota. This includes coaching fees, accommodation, food, travel, and other expenses. With Cerebrum, you pay only ₹24,000/year with everything included.',
+        'Parents typically save ₹1.5L-2L annually compared to Kota. This includes coaching fees, accommodation, food, travel, and other expenses. With Cerebrum, you pay ₹45,000-₹98,000/year (depending on tier) with everything included.',
     },
     {
       question: 'What about peer competition and motivation?',

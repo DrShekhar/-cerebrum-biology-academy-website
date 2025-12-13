@@ -20,7 +20,7 @@ const homepageFAQs: FAQ[] = [
   {
     question: 'What are the course fees for NEET coaching?',
     answer:
-      'Our fees range from ₹24,000 to ₹98,000 depending on the course. Foundation Course: ₹24,000/year, Class 11: ₹48,000, Class 12: ₹65,000, Dropper Course: ₹98,000. We offer EMI options and merit-based scholarships up to 50%. All study materials are included.',
+      'We offer three tiers - Pinnacle (small batch, personal mentoring), Ascent (balanced features), and Pursuit (affordable quality). Fees range from ₹45,000 to ₹180,000 based on course and tier. Class 9-10: ₹45,000-₹90,000, Class 11: ₹48,000-₹98,000, Class 12: ₹70,000-₹156,000. EMI options and scholarships up to 50% available.',
   },
   {
     question: 'Do you offer online NEET Biology coaching?',

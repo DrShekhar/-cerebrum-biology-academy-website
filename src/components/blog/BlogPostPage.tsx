@@ -6,7 +6,6 @@ import {
   Clock,
   Eye,
   Calendar,
-  BookOpen,
   ArrowLeft,
   Facebook,
   Twitter,
@@ -24,6 +23,8 @@ import { KeyTakeaways } from './KeyTakeaways'
 import { DifficultyBadge } from './DifficultyBadge'
 import { NEETTopicBadge } from './NEETTopicBadge'
 import { RelatedPosts } from './RelatedPosts'
+import { BlogComments } from './BlogComments'
+import { BackToTop } from './BackToTop'
 import { ArticleSchema, BreadcrumbSchema } from '@/components/seo/ArticleSchema'
 import { BlogLeadCapture } from './BlogLeadCapture'
 import { BlogExitIntentWrapper } from './BlogExitIntentWrapper'
@@ -31,86 +32,7 @@ import { FloatingCTA } from '@/components/common/FloatingCTA'
 import { BlogWhatsAppQuery } from './BlogWhatsAppQuery'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
-import {
-  KotaVsOnlineIllustration,
-  ClassStartTimeIllustration,
-  DPSStudentIllustration,
-  CoachingCenterIllustration,
-  BooksForNEETIllustration,
-  MistakesToAvoidIllustration,
-  Last6MonthsStrategyIllustration,
-  MockTestIllustration,
-  NCERTReadingIllustration,
-  NEET2026GuideIllustration,
-  ToppersSecretsIllustration,
-  ChapterWeightageIllustration,
-  HumanPhysiologyIllustration,
-  GeneticsIllustration,
-  EcologyIllustration,
-  CellBiologyIllustration,
-  PlantPhysiologyIllustration,
-  HumanReproductionIllustration,
-  BiotechnologyIllustration,
-  AnimalKingdomIllustration,
-  PhotosynthesisVsRespirationIllustration,
-  MolecularBiologyIllustration,
-  PlantKingdomIllustration,
-  EvolutionIllustration,
-  MicrobesIllustration,
-  NEET180StrategyIllustration,
-  DropperStrategyIllustration,
-  Class11FoundationIllustration,
-  Class12BoardBalanceIllustration,
-  FreeResourcesIllustration,
-  ResultsAnalysisIllustration,
-  DelhiNCRGuideIllustration,
-  LaxmiNagarIllustration,
-  NoidaIllustration,
-  DwarkaIllustration,
-  SmallVsLargeBatchIllustration,
-  TwoYearProgramIllustration,
-  SpecializedVsMassIllustration,
-  BiomoleculesIllustration,
-  CellDivisionIllustration,
-  HumanDigestionIllustration,
-  RespirationIllustration,
-  CirculationIllustration,
-  ExcretorySystemIllustration,
-  NervousSystemIllustration,
-} from '@/components/illustrations/BlogIllustrations'
-
-type IllustrationComponent = React.ComponentType<{ className?: string; animate?: boolean }>
-
-const illustrationMap: Record<string, IllustrationComponent> = {
-  'kota-vs-online-neet-coaching-2025': KotaVsOnlineIllustration,
-  'when-to-start-neet-preparation-class-9-vs-10': ClassStartTimeIllustration,
-  'dps-students-neet-preparation-guide': DPSStudentIllustration,
-  'top-10-neet-biology-coaching-delhi-ncr-2025': CoachingCenterIllustration,
-  'neet-biology-coaching-delhi-ncr-guide': DelhiNCRGuideIllustration,
-  'best-books-for-neet-2026-biology-physics-chemistry': BooksForNEETIllustration,
-  'common-mistakes-neet-aspirants-avoid-2026': MistakesToAvoidIllustration,
-  'last-6-months-neet-2026-preparation-strategy': Last6MonthsStrategyIllustration,
-  'mock-test-strategy-neet-2026-complete-guide': MockTestIllustration,
-  'ncert-reading-strategy-neet-biology-2026': NCERTReadingIllustration,
-  'neet-2026-complete-guide-exam-pattern-syllabus-dates': NEET2026GuideIllustration,
-  'what-neet-toppers-do-differently-secrets-revealed': ToppersSecretsIllustration,
-  'neet-biology-chapter-wise-weightage-2026': ChapterWeightageIllustration,
-  'genetics-heredity-variation-neet': GeneticsIllustration,
-  'cell-structure-function-neet-notes': CellBiologyIllustration,
-  'cell-division-mitosis-meiosis-neet': CellDivisionIllustration,
-  'biomolecules-neet-biology-complete-guide': BiomoleculesIllustration,
-  'photosynthesis-neet-biology-notes': PlantPhysiologyIllustration,
-  'photosynthesis-vs-respiration-neet-comparison': PhotosynthesisVsRespirationIllustration,
-  'human-digestion-absorption-neet': HumanDigestionIllustration,
-  'breathing-gas-exchange-neet-notes': RespirationIllustration,
-  'body-fluids-circulation-neet': CirculationIllustration,
-  'excretory-system-neet-notes': ExcretorySystemIllustration,
-  'nervous-system-neet-biology': NervousSystemIllustration,
-  'plant-kingdom-classification-neet': PlantKingdomIllustration,
-  'neet-biology-preparation-strategy-score-180-plus': NEET180StrategyIllustration,
-  'neet-biology-syllabus-2025-complete-guide': ChapterWeightageIllustration,
-  'ultimate-neet-2025-guide-specialized-vs-mass-coaching': SpecializedVsMassIllustration,
-}
+import { BlogIllustrationLoader } from './BlogIllustrationLoader'
 
 interface BlogPostPageProps {
   meta: BlogPostMeta
@@ -329,7 +251,7 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
                 </div>
               </motion.header>
 
-              {/* Featured Image */}
+              {/* Featured Image - Dynamically loaded for performance */}
               <motion.div
                 className="relative w-full aspect-[16/10] md:aspect-[16/9] bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 rounded-2xl md:rounded-3xl mb-12 overflow-hidden shadow-lg shadow-blue-100/50"
                 initial={{ opacity: 0, scale: 0.95 }}
@@ -339,26 +261,11 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.08),transparent_50%)]" />
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(139,92,246,0.06),transparent_50%)]" />
                 <div className="absolute inset-0 p-6 md:p-10 lg:p-12 flex items-center justify-center">
-                  {illustrationMap[meta.slug] ? (
-                    (() => {
-                      const IllustrationComponent = illustrationMap[meta.slug]
-                      return (
-                        <IllustrationComponent
-                          className="w-full h-full max-w-4xl drop-shadow-sm"
-                          animate={true}
-                        />
-                      )
-                    })()
-                  ) : (
-                    <div className="flex flex-col items-center justify-center text-slate-400">
-                      <div className="w-20 h-20 rounded-2xl bg-white/80 shadow-lg flex items-center justify-center mb-4">
-                        <BookOpen className="w-10 h-10 text-blue-500" />
-                      </div>
-                      <span className="text-sm font-medium text-slate-500">
-                        {meta.neetChapter || 'NEET Biology'}
-                      </span>
-                    </div>
-                  )}
+                  <BlogIllustrationLoader
+                    slug={meta.slug}
+                    neetChapter={meta.neetChapter}
+                    className="w-full h-full max-w-4xl drop-shadow-sm"
+                  />
                 </div>
               </motion.div>
 
@@ -446,26 +353,55 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
                         {children}
                       </blockquote>
                     ),
-                    code: ({ children }) => (
-                      <code className="bg-gray-100 px-2 py-1 rounded text-sm font-mono">
-                        {children}
-                      </code>
-                    ),
-                    table: ({ children }) => (
-                      <div className="overflow-x-auto my-6">
-                        <table className="min-w-full divide-y divide-gray-200 border border-gray-200 rounded-lg">
+                    code: ({ children, className }) => {
+                      // Check if it's a code block (has language class) or inline code
+                      const isCodeBlock = className?.startsWith('language-')
+                      if (isCodeBlock) {
+                        return (
+                          <div className="relative my-4 rounded-xl overflow-hidden bg-gray-900 shadow-lg">
+                            <div className="flex items-center justify-between px-4 py-2 bg-gray-800 border-b border-gray-700">
+                              <span className="text-xs text-gray-400 font-medium uppercase">
+                                {className?.replace('language-', '') || 'code'}
+                              </span>
+                            </div>
+                            <pre className="overflow-x-auto p-4 text-sm">
+                              <code className="text-gray-100 font-mono">{children}</code>
+                            </pre>
+                          </div>
+                        )
+                      }
+                      return (
+                        <code className="bg-blue-50 text-blue-700 px-1.5 py-0.5 rounded text-sm font-mono border border-blue-100">
                           {children}
-                        </table>
+                        </code>
+                      )
+                    },
+                    pre: ({ children }) => <>{children}</>,
+                    table: ({ children }) => (
+                      <div className="overflow-x-auto my-6 rounded-xl border border-gray-200 shadow-sm">
+                        <table className="min-w-full divide-y divide-gray-200">{children}</table>
                       </div>
                     ),
-                    thead: ({ children }) => <thead className="bg-gray-50">{children}</thead>,
+                    thead: ({ children }) => (
+                      <thead className="bg-gradient-to-r from-blue-50 to-indigo-50">
+                        {children}
+                      </thead>
+                    ),
                     th: ({ children }) => (
-                      <th className="px-4 py-3 text-left text-sm font-semibold text-gray-900">
+                      <th className="px-5 py-4 text-left text-sm font-bold text-gray-900 whitespace-nowrap">
                         {children}
                       </th>
                     ),
+                    tbody: ({ children }) => (
+                      <tbody className="divide-y divide-gray-100 bg-white">{children}</tbody>
+                    ),
+                    tr: ({ children }) => (
+                      <tr className="hover:bg-gray-50 transition-colors even:bg-gray-50/50">
+                        {children}
+                      </tr>
+                    ),
                     td: ({ children }) => (
-                      <td className="px-4 py-3 text-sm text-gray-700 border-t">{children}</td>
+                      <td className="px-5 py-4 text-sm text-gray-700">{children}</td>
                     ),
                     hr: () => <hr className="my-8 border-gray-200" />,
                     img: ({ src, alt }) => {
@@ -607,6 +543,9 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
 
         {/* Related Articles */}
         {relatedPosts.length > 0 && <RelatedPosts posts={relatedPosts} />}
+
+        {/* Comments Section */}
+        <BlogComments slug={meta.slug} title={meta.title} />
       </div>
 
       {/* WhatsApp Query Button */}
@@ -618,6 +557,9 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
 
       {/* Exit Intent Popup */}
       <BlogExitIntentWrapper articleSlug={meta.slug} />
+
+      {/* Back to Top Button */}
+      <BackToTop readTime={meta.readTime} />
     </>
   )
 }

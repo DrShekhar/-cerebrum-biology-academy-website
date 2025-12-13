@@ -71,7 +71,7 @@ export default function Class9FoundationPage() {
         name: 'What is the fee for Class 9 NEET foundation course?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'The annual fee for our Class 9 NEET foundation course is ₹24,000, which includes comprehensive biology coaching, live classes, study material, practice tests, and doubt clearing sessions.',
+          text: 'Our Class 9 Foundation course fees range from ₹45,000 (Pursuit) to ₹90,000 (Pinnacle) per year. All tiers include comprehensive biology coaching, live classes, study material, practice tests, and doubt clearing sessions.',
         },
       },
       {

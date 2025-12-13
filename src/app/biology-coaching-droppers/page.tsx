@@ -76,7 +76,7 @@ const courseDetails = {
   duration: '12 months intensive',
   classesPerWeek: '6 classes (12 hours/week)',
   batchSize: '15-20 students',
-  fee: '₹48,000/year',
+  fee: '₹70,000-₹1,56,000/year',
   includes: [
     'Complete Class 11 + 12 revision',
     'NCERT line-by-line notes',
@@ -424,7 +424,7 @@ export default function BiologyDroppersPage() {
             },
             offers: {
               '@type': 'Offer',
-              price: '48000',
+              price: '70000',
               priceCurrency: 'INR',
             },
           }),

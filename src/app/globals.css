@@ -713,3 +713,152 @@ body {
     transform: none;
   }
 }
+
+/* Print Styles for Blog Articles */
+@media print {
+  /* Hide non-essential elements */
+  header,
+  footer,
+  nav,
+  aside,
+  .fixed,
+  .sticky,
+  button,
+  .btn,
+  [role='navigation'],
+  [role='banner'],
+  [role='complementary'],
+  .FloatingCTA,
+  .BackToTop,
+  .BlogWhatsAppQuery,
+  .BlogLeadCapture,
+  .TableOfContents,
+  .BlogExitIntentWrapper,
+  .share-buttons,
+  .social-share,
+  [data-print='hide'] {
+    display: none !important;
+  }
+
+  /* Reset backgrounds and colors */
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 12pt;
+    line-height: 1.6;
+  }
+
+  /* Article content optimizations */
+  article {
+    width: 100% !important;
+    max-width: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Typography for print */
+  h1 {
+    font-size: 24pt !important;
+    margin-bottom: 12pt !important;
+    page-break-after: avoid;
+  }
+
+  h2 {
+    font-size: 18pt !important;
+    margin-top: 18pt !important;
+    margin-bottom: 9pt !important;
+    page-break-after: avoid;
+  }
+
+  h3 {
+    font-size: 14pt !important;
+    margin-top: 14pt !important;
+    margin-bottom: 7pt !important;
+    page-break-after: avoid;
+  }
+
+  p,
+  li {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* Links - show URL */
+  a[href^='http']::after {
+    content: ' (' attr(href) ')';
+    font-size: 10pt;
+    color: #666;
+    word-break: break-all;
+  }
+
+  a[href^='#']::after {
+    content: none;
+  }
+
+  /* Tables */
+  table {
+    border-collapse: collapse !important;
+    width: 100% !important;
+    page-break-inside: avoid;
+  }
+
+  th,
+  td {
+    border: 1px solid #ccc !important;
+    padding: 8pt !important;
+    text-align: left !important;
+  }
+
+  th {
+    background: #f5f5f5 !important;
+    font-weight: bold !important;
+  }
+
+  /* Code blocks */
+  pre,
+  code {
+    background: #f5f5f5 !important;
+    color: black !important;
+    border: 1px solid #ddd !important;
+    page-break-inside: avoid;
+  }
+
+  /* Images */
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+
+  /* Blockquotes */
+  blockquote {
+    border-left: 3pt solid #333 !important;
+    margin: 12pt 0 !important;
+    padding-left: 12pt !important;
+    background: transparent !important;
+  }
+
+  /* Page breaks */
+  .page-break-before {
+    page-break-before: always;
+  }
+
+  .page-break-after {
+    page-break-after: always;
+  }
+
+  .no-page-break {
+    page-break-inside: avoid;
+  }
+
+  /* Header info for print */
+  article::before {
+    content: 'Cerebrum Biology Academy - cerebrumbiologyacademy.com';
+    display: block;
+    text-align: center;
+    font-size: 10pt;
+    color: #666;
+    margin-bottom: 20pt;
+    border-bottom: 1pt solid #ccc;
+    padding-bottom: 10pt;
+  }
+}

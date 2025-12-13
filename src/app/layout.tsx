@@ -113,8 +113,11 @@ export default function RootLayout({
         {/* Performance: Preconnect to critical domains */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://wa.me" />
         <link rel="dns-prefetch" href="//checkout.razorpay.com" />
         <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="//api.whatsapp.com" />
+        <link rel="dns-prefetch" href="//giscus.app" />
 
         {/* Fonts are handled by next/font/google - no manual preload needed */}
 

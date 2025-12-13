@@ -72,7 +72,7 @@ const faqCategories: FAQCategory[] = [
       {
         question: 'What are the course fees?',
         answer:
-          'Our fees range from ₹24,000 to ₹98,000 depending on the course. Foundation Course: ₹24,000/year, Class 11 Course: ₹48,000, Class 12 Course: ₹65,000, Dropper Course: ₹98,000. These are one-time fees with no hidden charges.',
+          'We offer three tiers: Pinnacle (₹65,000-₹180,000), Ascent (₹60,000-₹140,000), and Pursuit (₹45,000-₹85,000). Class 9-10 Foundation: ₹45,000-₹90,000, Class 11: ₹48,000-₹98,000, Class 12: ₹70,000-₹156,000, Dropper: ₹70,000-₹156,000. Fees include all study materials with no hidden charges.',
       },
       {
         question: 'Do you offer EMI or installment options?',

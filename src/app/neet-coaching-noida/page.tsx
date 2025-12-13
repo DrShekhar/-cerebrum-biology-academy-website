@@ -109,7 +109,7 @@ const faqs = [
   {
     question: 'What are the fees for NEET coaching in Noida?',
     answer:
-      'Our NEET Biology coaching fees range from ₹24,000 to ₹48,000 per year depending on the program. This is 40-50% less than other Noida coaching institutes while offering superior quality with AIIMS faculty and smaller batches.',
+      'Our NEET Biology coaching fees range from ₹45,000 to ₹1,56,000 per year depending on the program and tier. Class 9-10: ₹45,000-₹90,000, Class 11: ₹48,000-₹98,000, Class 12: ₹70,000-₹1,56,000. All include AIIMS faculty and smaller batches.',
   },
   {
     question: 'Is online NEET coaching effective for Noida students?',

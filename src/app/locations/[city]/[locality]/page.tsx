@@ -311,7 +311,7 @@ export default async function LocalityPage({ params }: LocalityPageProps) {
           <div className="bg-white rounded-3xl shadow-xl p-8">
             {/* Pricing Overview */}
             <div className="text-center mb-8">
-              <div className="text-4xl font-bold text-blue-600 mb-2">₹48,000 - ₹98,000</div>
+              <div className="text-4xl font-bold text-blue-600 mb-2">₹45,000 - ₹1,56,000</div>
               <p className="text-gray-600 mb-4">
                 Per year • Choose from 3 tiers based on your needs
               </p>
@@ -321,9 +321,7 @@ export default async function LocalityPage({ params }: LocalityPageProps) {
                   <Award className="w-5 h-5 text-green-600 mr-2" />
                   <span className="font-medium text-green-800">Best Value in {locality.city}</span>
                 </div>
-                <p className="text-sm text-green-700">
-                  Starting at ₹48K vs competitors' ₹60K+ for similar programs
-                </p>
+                <p className="text-sm text-green-700">Starting at ₹45K for foundation courses</p>
               </div>
             </div>
 
@@ -331,18 +329,18 @@ export default async function LocalityPage({ params }: LocalityPageProps) {
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               <div className="text-center p-4 bg-blue-50 rounded-lg">
                 <h4 className="font-semibold text-gray-900 mb-2">Pursuit Series</h4>
-                <div className="text-2xl font-bold text-blue-600 mb-2">₹48K - ₹88K</div>
+                <div className="text-2xl font-bold text-blue-600 mb-2">₹45K - ₹70K</div>
                 <p className="text-sm text-gray-600">Essential features • 25 students/batch</p>
               </div>
               <div className="text-center p-4 bg-purple-50 rounded-lg border-2 border-purple-500">
                 <div className="text-xs font-semibold text-purple-600 mb-2">MOST POPULAR</div>
                 <h4 className="font-semibold text-gray-900 mb-2">Ascent Series</h4>
-                <div className="text-2xl font-bold text-purple-600 mb-2">₹58K - ₹76K</div>
+                <div className="text-2xl font-bold text-purple-600 mb-2">₹60K - ₹90K</div>
                 <p className="text-sm text-gray-600">Balanced features • 20 students/batch</p>
               </div>
               <div className="text-center p-4 bg-green-50 rounded-lg">
                 <h4 className="font-semibold text-gray-900 mb-2">Pinnacle Series</h4>
-                <div className="text-2xl font-bold text-green-600 mb-2">₹98K - ₹1.8L</div>
+                <div className="text-2xl font-bold text-green-600 mb-2">₹90K - ₹1.56L</div>
                 <p className="text-sm text-gray-600">Premium features • 12 students/batch</p>
               </div>
             </div>

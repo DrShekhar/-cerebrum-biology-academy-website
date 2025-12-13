@@ -10,6 +10,7 @@ import Link from 'next/link'
 import { DifficultyBadge } from './DifficultyBadge'
 import { NEETTopicBadge } from './NEETTopicBadge'
 import { BlogPagination } from './BlogPagination'
+import { BlogThumbnail } from './BlogThumbnail'
 
 // Debounce hook for search
 function useDebounce<T>(value: T, delay: number): T {
@@ -185,14 +186,19 @@ export function BlogListingPage({ posts, categories, stats }: BlogListingPagePro
 
               {/* Category Filter */}
               <div className="flex items-center gap-2">
-                <Filter className="w-5 h-5 text-gray-600" />
+                <Filter className="w-5 h-5 text-gray-600" aria-hidden="true" />
+                <label htmlFor="category-filter" className="sr-only">
+                  Filter by category
+                </label>
                 <select
+                  id="category-filter"
                   value={selectedCategory}
                   onChange={(e) => {
                     setSelectedCategory(e.target.value)
                     handleFilterChange()
                   }}
                   className="px-4 py-4 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white"
+                  aria-label="Filter articles by category"
                 >
                   <option value="all">All Categories</option>
                   {categories.map((category) => (
@@ -205,13 +211,18 @@ export function BlogListingPage({ posts, categories, stats }: BlogListingPagePro
 
               {/* Difficulty Filter */}
               <div className="flex items-center gap-2">
+                <label htmlFor="difficulty-filter" className="sr-only">
+                  Filter by difficulty level
+                </label>
                 <select
+                  id="difficulty-filter"
                   value={selectedDifficulty}
                   onChange={(e) => {
                     setSelectedDifficulty(e.target.value as Difficulty | 'all')
                     handleFilterChange()
                   }}
                   className="px-4 py-4 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white"
+                  aria-label="Filter articles by difficulty level"
                 >
                   <option value="all">All Levels</option>
                   <option value="Beginner">Beginner</option>
@@ -297,16 +308,22 @@ export function BlogListingPage({ posts, categories, stats }: BlogListingPagePro
                     transition={{ duration: 0.6 }}
                   >
                     <article className="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow h-full">
-                      <div className="aspect-video bg-gradient-to-br from-blue-400 to-purple-500 relative">
+                      <div className="aspect-video relative overflow-hidden">
+                        <BlogThumbnail
+                          slug={paginatedPosts[0].slug}
+                          title={paginatedPosts[0].title}
+                          size="lg"
+                          className="absolute inset-0 w-full h-full rounded-none"
+                        />
                         {/* Featured badge */}
-                        <div className="absolute top-6 left-6 bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-sm font-medium flex items-center">
+                        <div className="absolute top-6 left-6 bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-sm font-medium flex items-center z-10">
                           <TrendingUp className="w-4 h-4 mr-1" />
                           Featured
                         </div>
 
                         {/* Category badge */}
                         <div
-                          className={`absolute top-6 right-6 px-3 py-1 rounded-full text-sm font-medium ${getCategoryInfo(paginatedPosts[0].category).color}`}
+                          className={`absolute top-6 right-6 px-3 py-1 rounded-full text-sm font-medium z-10 ${getCategoryInfo(paginatedPosts[0].category).color}`}
                         >
                           {getCategoryInfo(paginatedPosts[0].category).name}
                         </div>
@@ -392,52 +409,66 @@ export function BlogListingPage({ posts, categories, stats }: BlogListingPagePro
                       (post, index) => (
                         <motion.article
                           key={post.slug}
-                          className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow"
+                          className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
                           initial={{ opacity: 0, y: 20 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ duration: 0.6, delay: 0.1 + index * 0.05 }}
                         >
-                          <div
-                            className={`inline-block px-3 py-1 rounded-full text-xs font-medium mb-3 ${getCategoryInfo(post.category).color}`}
-                          >
-                            {getCategoryInfo(post.category).name}
-                          </div>
+                          {/* Thumbnail */}
+                          <Link href={`/blog/${post.slug}`}>
+                            <BlogThumbnail
+                              slug={post.slug}
+                              title={post.title}
+                              size="sm"
+                              className="rounded-none"
+                            />
+                          </Link>
 
-                          {/* NEET badges */}
-                          <div className="flex flex-wrap gap-2 mb-3">
-                            {post.difficulty && (
-                              <DifficultyBadge difficulty={post.difficulty} size="sm" />
-                            )}
-                            {post.neetChapter && (
-                              <NEETTopicBadge
-                                chapter={post.neetChapter}
-                                weightage={post.neetWeightage}
-                                size="sm"
-                              />
-                            )}
-                          </div>
-
-                          <h3 className="text-lg font-bold text-gray-900 mb-3 hover:text-blue-600 transition-colors line-clamp-2">
-                            <Link href={`/blog/${post.slug}`}>{post.title}</Link>
-                          </h3>
-
-                          <p className="text-gray-600 text-sm mb-4 line-clamp-2">{post.excerpt}</p>
-
-                          <div className="flex items-center justify-between text-xs text-gray-500">
-                            <div className="flex items-center space-x-3">
-                              <div className="flex items-center">
-                                <Clock className="w-3 h-3 mr-1" />
-                                {post.readTime}m
-                              </div>
-                              <div className="flex items-center">
-                                <Eye className="w-3 h-3 mr-1" />
-                                {post.views?.toLocaleString()}
-                              </div>
+                          <div className="p-5">
+                            <div
+                              className={`inline-block px-3 py-1 rounded-full text-xs font-medium mb-3 ${getCategoryInfo(post.category).color}`}
+                            >
+                              {getCategoryInfo(post.category).name}
                             </div>
 
-                            <div className="flex items-center">
-                              <User className="w-3 h-3 mr-1" />
-                              {post.author.name}
+                            {/* NEET badges */}
+                            <div className="flex flex-wrap gap-2 mb-3">
+                              {post.difficulty && (
+                                <DifficultyBadge difficulty={post.difficulty} size="sm" />
+                              )}
+                              {post.neetChapter && (
+                                <NEETTopicBadge
+                                  chapter={post.neetChapter}
+                                  weightage={post.neetWeightage}
+                                  size="sm"
+                                />
+                              )}
+                            </div>
+
+                            <h3 className="text-lg font-bold text-gray-900 mb-3 hover:text-blue-600 transition-colors line-clamp-2">
+                              <Link href={`/blog/${post.slug}`}>{post.title}</Link>
+                            </h3>
+
+                            <p className="text-gray-600 text-sm mb-4 line-clamp-2">
+                              {post.excerpt}
+                            </p>
+
+                            <div className="flex items-center justify-between text-xs text-gray-500">
+                              <div className="flex items-center space-x-3">
+                                <div className="flex items-center">
+                                  <Clock className="w-3 h-3 mr-1" />
+                                  {post.readTime}m
+                                </div>
+                                <div className="flex items-center">
+                                  <Eye className="w-3 h-3 mr-1" />
+                                  {post.views?.toLocaleString()}
+                                </div>
+                              </div>
+
+                              <div className="flex items-center">
+                                <User className="w-3 h-3 mr-1" />
+                                {post.author.name}
+                              </div>
                             </div>
                           </div>
                         </motion.article>

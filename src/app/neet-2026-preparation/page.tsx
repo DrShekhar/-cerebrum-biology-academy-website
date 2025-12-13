@@ -81,7 +81,7 @@ export default function NEET2026PreparationPage() {
       target: 'NEET 2027',
       duration: '2 Years',
       features: ['Board + NEET integrated', 'Strong foundation building', 'Early bird advantage'],
-      price: '₹48,000/year',
+      price: '₹48,000-₹98,000/year',
       color: 'from-blue-500 to-cyan-500',
     },
     {
@@ -89,7 +89,7 @@ export default function NEET2026PreparationPage() {
       target: 'NEET 2026',
       duration: '1 Year',
       features: ['Complete syllabus coverage', '100+ mock tests', 'Daily doubt sessions'],
-      price: '₹65,000/year',
+      price: '₹70,000-₹156,000/year',
       color: 'from-purple-500 to-indigo-500',
       popular: true,
     },

@@ -32,7 +32,7 @@ const classPrograms = [
       'Health & Diseases',
     ],
     duration: '2 hours/week',
-    fee: '₹15,000/year',
+    fee: '₹45,000-₹90,000/year',
   },
   {
     class: 'Class 10',
@@ -40,7 +40,7 @@ const classPrograms = [
     description: 'NCERT mastery with NEET orientation',
     topics: ['Life Processes', 'Control & Coordination', 'Reproduction', 'Heredity & Evolution'],
     duration: '3 hours/week',
-    fee: '₹18,000/year',
+    fee: '₹45,000-₹90,000/year',
   },
   {
     class: 'Class 11',
@@ -53,7 +53,7 @@ const classPrograms = [
       'Plant Physiology',
     ],
     duration: '6 hours/week',
-    fee: '₹36,000/year',
+    fee: '₹48,000-₹98,000/year',
   },
   {
     class: 'Class 12',
@@ -61,7 +61,7 @@ const classPrograms = [
     description: 'Complete Class 12 NCERT + Advanced NEET preparation',
     topics: ['Reproduction', 'Genetics & Evolution', 'Human Health', 'Ecology & Biotechnology'],
     duration: '8 hours/week',
-    fee: '₹42,000/year',
+    fee: '₹70,000-₹1,56,000/year',
   },
   {
     class: 'Droppers',
@@ -69,7 +69,7 @@ const classPrograms = [
     description: 'Intensive revision + gap analysis + test series',
     topics: ['Complete Botany', 'Complete Zoology', 'NCERT Line-by-Line', 'Previous Year Analysis'],
     duration: '12 hours/week',
-    fee: '₹48,000/year',
+    fee: '₹70,000-₹1,56,000/year',
   },
 ]
 
@@ -136,7 +136,7 @@ const faqs = [
   {
     question: 'What are the fees for biology tuition in Ghaziabad?',
     answer:
-      'Our biology tuition fees range from ₹15,000/year for Class 9 to ₹48,000/year for dropper batches. This includes complete study materials, test series, and doubt sessions. Our fees are 40-50% less than other coaching institutes.',
+      'Our biology tuition fees range from ₹45,000-₹90,000/year for Class 9-10 foundation to ₹70,000-₹1,56,000/year for dropper batches (depending on tier). This includes complete study materials, test series, and doubt sessions.',
   },
   {
     question: 'Do you provide home tuition for biology in Ghaziabad?',

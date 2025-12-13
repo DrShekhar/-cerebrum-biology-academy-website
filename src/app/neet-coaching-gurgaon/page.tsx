@@ -88,7 +88,7 @@ const faqStructuredData = {
       name: 'What is the fee structure for NEET coaching?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Our fees start from ₹48,000 for the Pursuit batch. We offer scholarships up to 50% for deserving students based on entrance test. Many Gurgaon students have benefited from our scholarship program.',
+        text: 'Our fees range from ₹45,000 (Pursuit) to ₹1,56,000 (Pinnacle) depending on course and tier. Class 9-10: ₹45,000-₹90,000, Class 11: ₹48,000-₹98,000, Class 12: ₹70,000-₹1,56,000. We offer scholarships up to 50% for deserving students.',
       },
     },
   ],
