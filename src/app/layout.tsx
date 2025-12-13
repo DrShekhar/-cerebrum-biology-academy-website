@@ -7,12 +7,7 @@ import GoogleAnalytics from '@/components/analytics/GoogleAnalytics'
 import { WebVitalsReporter } from '@/components/analytics/WebVitalsReporter'
 import Header from '@/components/layout/Header'
 import { MobileNavigation } from '@/components/navigation/MobileNavigation'
-import dynamic from 'next/dynamic'
-
-// Lazy load Footer since it's below the fold
-const Footer = dynamic(() => import('@/components/layout/Footer').then((mod) => mod.Footer), {
-  ssr: true,
-})
+import { Footer } from '@/components/layout/Footer'
 import { PWAProvider } from '@/components/pwa/PWAProvider'
 import { AuthProvider } from '@/contexts/AuthContext'
 import { I18nProvider } from '@/contexts/I18nContext'
