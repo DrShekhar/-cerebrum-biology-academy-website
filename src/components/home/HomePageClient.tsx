@@ -1,6 +1,14 @@
 'use client'
 
-import { ExitIntentPopup, useExitIntent } from '@/components/ui/ExitIntentPopup'
+import { lazy, Suspense } from 'react'
+import { useExitIntent } from '@/components/ui/ExitIntentPopup'
+
+// Lazy-load ExitIntentPopup to defer framer-motion bundle (~50KB)
+const ExitIntentPopup = lazy(() =>
+  import('@/components/ui/ExitIntentPopup').then((mod) => ({
+    default: mod.ExitIntentPopup,
+  }))
+)
 
 export function HomePageClient() {
   const { showExitIntent, hideExitIntent } = useExitIntent()
@@ -31,11 +39,16 @@ export function HomePageClient() {
     }
   }
 
+  // Only render the popup when needed (defers framer-motion load)
+  if (!showExitIntent) return null
+
   return (
-    <ExitIntentPopup
-      isVisible={showExitIntent}
-      onClose={hideExitIntent}
-      onDownload={handleDownload}
-    />
+    <Suspense fallback={null}>
+      <ExitIntentPopup
+        isVisible={showExitIntent}
+        onClose={hideExitIntent}
+        onDownload={handleDownload}
+      />
+    </Suspense>
   )
 }

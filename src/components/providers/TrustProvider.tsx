@@ -1,9 +1,14 @@
 'use client'
 
-import React, { createContext, useContext, useEffect, useState } from 'react'
-import { RealTimeSocialProof, LiveStatsCounter } from '@/components/trust/RealTimeSocialProof'
-import { motion, AnimatePresence } from 'framer-motion'
+import React, { createContext, useContext, useEffect, useState, lazy, Suspense } from 'react'
 import { Shield, Star, Award, Users, CheckCircle, Trophy, Clock } from 'lucide-react'
+
+// Lazy-load heavy components to reduce initial bundle
+const RealTimeSocialProof = lazy(() =>
+  import('@/components/trust/RealTimeSocialProof').then((mod) => ({
+    default: mod.RealTimeSocialProof,
+  }))
+)
 
 interface TrustMetrics {
   totalStudents: number
@@ -119,8 +124,12 @@ export function TrustProvider({
     <TrustContext.Provider value={value}>
       {children}
 
-      {/* Global Trust Components */}
-      {showSocialProof && <RealTimeSocialProof />}
+      {/* Global Trust Components - Lazy loaded */}
+      {showSocialProof && (
+        <Suspense fallback={null}>
+          <RealTimeSocialProof />
+        </Suspense>
+      )}
       {showTrustBadges && <FloatingTrustIndicators />}
 
       {/* Trust Analytics */}
@@ -188,19 +197,12 @@ function FloatingTrustIndicators() {
   ]
 
   return (
-    <motion.div
-      initial={{ opacity: 0, x: 100 }}
-      animate={{ opacity: 1, x: 0 }}
-      exit={{ opacity: 0, x: 100 }}
-      className="fixed right-1 top-1/3 transform -translate-y-1/2 z-20 space-y-1.5 hidden lg:block"
-    >
+    <div className="fixed right-1 top-1/3 transform -translate-y-1/2 z-20 space-y-1.5 hidden lg:block animate-fade-in-right">
       {trustIndicators.map((indicator, index) => (
-        <motion.div
+        <div
           key={indicator.label}
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: index * 0.1 }}
-          className={`${indicator.bgColor} border border-gray-200 rounded-lg p-2 shadow-md backdrop-blur-sm bg-opacity-95`}
+          className={`${indicator.bgColor} border border-gray-200 rounded-lg p-2 shadow-md backdrop-blur-sm bg-opacity-95 animate-fade-in-right`}
+          style={{ animationDelay: `${index * 100}ms` }}
         >
           <div className="flex items-center space-x-1.5">
             <indicator.icon className={`w-3 h-3 ${indicator.color}`} />
@@ -209,25 +211,23 @@ function FloatingTrustIndicators() {
               <div className="text-[10px] text-gray-600">{indicator.label}</div>
             </div>
           </div>
-        </motion.div>
+        </div>
       ))}
 
       {/* Trust Level Indicator */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 0.3 }}
-        className={`rounded-full p-2 ${
+      <div
+        className={`rounded-full p-2 animate-scale-in ${
           trustLevel === 'high'
             ? 'bg-green-500'
             : trustLevel === 'medium'
               ? 'bg-yellow-500'
               : 'bg-red-500'
         }`}
+        style={{ animationDelay: '300ms' }}
       >
         <Shield className="w-4 h-4 text-white" />
-      </motion.div>
-    </motion.div>
+      </div>
+    </div>
   )
 }
 

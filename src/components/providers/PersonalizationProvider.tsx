@@ -78,27 +78,9 @@ export function PersonalizationProvider({ children }: PersonalizationProviderPro
         updates.referralSource = 'direct'
       }
 
-      // Try to detect location (with permission)
-      if ('geolocation' in navigator && !preferences.location?.city) {
-        try {
-          const position = await new Promise<GeolocationPosition>((resolve, reject) => {
-            navigator.geolocation.getCurrentPosition(resolve, reject, {
-              timeout: 10000,
-              enableHighAccuracy: false,
-            })
-          })
-
-          // In a real app, you'd use a geocoding service here
-          // For now, we'll just store coordinates
-          updates.location = {
-            ...updates.location,
-            // You could integrate with a geocoding API here
-          }
-        } catch (error) {
-          // Geolocation failed or was denied
-          console.log('Geolocation not available or denied')
-        }
-      }
+      // PERFORMANCE: Skip geolocation on initial load to avoid blocking
+      // Geolocation request is deferred and only triggered on user interaction
+      // This reduces initial JS execution time by avoiding permission prompts
 
       updatePreferences(updates)
     }
