@@ -1,5 +1,5 @@
 import { TrophyIcon } from '@heroicons/react/24/outline'
-import { HeroInteractiveWrapper } from './HeroInteractiveWrapper'
+import { HeroClientInteractive } from './HeroClientInteractive'
 
 interface HeroSectionProps {
   className?: string
@@ -79,8 +79,8 @@ export function HeroSection({ className = '' }: HeroSectionProps) {
             500+ Medical Selections
           </p>
 
-          {/* Interactive elements - Lazy loaded client component with static placeholder */}
-          <HeroInteractiveWrapper />
+          {/* Interactive elements - Client component */}
+          <HeroClientInteractive />
         </div>
       </div>
     </div>
