@@ -10,8 +10,59 @@ import { NextRequest, NextResponse } from 'next/server'
 import { parseWebhookPayload, sendWhatsAppMessage, trackUser, trackEvent } from '@/lib/interakt'
 import { logger } from '@/lib/utils/logger'
 import { prisma } from '@/lib/prisma'
+import crypto from 'crypto'
 
 const INTERAKT_WEBHOOK_SECRET = process.env.INTERAKT_WEBHOOK_SECRET
+
+/**
+ * Verify Interakt webhook signature
+ * Interakt uses HMAC-SHA256 signature verification
+ */
+function verifyWebhookSignature(payload: string, signature: string | null): boolean {
+  if (!INTERAKT_WEBHOOK_SECRET) {
+    // In development or if secret not configured, log warning but allow
+    logger.warn('INTERAKT_WEBHOOK_SECRET not configured - skipping signature verification', {
+      service: 'interakt-webhook',
+    })
+    return true
+  }
+
+  if (!signature) {
+    logger.warn('No signature provided in webhook request', { service: 'interakt-webhook' })
+    return false
+  }
+
+  try {
+    // Interakt typically sends signature in format: sha256=<signature>
+    const expectedSignature = signature.startsWith('sha256=') ? signature.slice(7) : signature
+
+    const computedSignature = crypto
+      .createHmac('sha256', INTERAKT_WEBHOOK_SECRET)
+      .update(payload, 'utf8')
+      .digest('hex')
+
+    // Use timing-safe comparison to prevent timing attacks
+    const isValid = crypto.timingSafeEqual(
+      Buffer.from(expectedSignature, 'hex'),
+      Buffer.from(computedSignature, 'hex')
+    )
+
+    if (!isValid) {
+      logger.warn('Webhook signature verification failed', {
+        service: 'interakt-webhook',
+        receivedSignature: expectedSignature.substring(0, 10) + '...',
+      })
+    }
+
+    return isValid
+  } catch (error) {
+    logger.error('Error verifying webhook signature', {
+      service: 'interakt-webhook',
+      error: error instanceof Error ? error.message : 'Unknown error',
+    })
+    return false
+  }
+}
 
 interface InteraktWebhookPayload {
   type: string
@@ -57,6 +108,21 @@ export async function GET(request: NextRequest) {
 export async function POST(request: NextRequest) {
   try {
     const body = await request.text()
+
+    // Verify webhook signature for security
+    const signature =
+      request.headers.get('x-interakt-signature') ||
+      request.headers.get('x-hub-signature-256') ||
+      request.headers.get('x-signature')
+
+    if (!verifyWebhookSignature(body, signature)) {
+      logger.warn('Webhook signature verification failed - rejecting request', {
+        service: 'interakt-webhook',
+        hasSignature: !!signature,
+      })
+      return NextResponse.json({ error: 'Invalid signature' }, { status: 401 })
+    }
+
     let payload: InteraktWebhookPayload
 
     try {
@@ -70,6 +136,7 @@ export async function POST(request: NextRequest) {
       service: 'interakt-webhook',
       type: payload.type,
       timestamp: payload.timestamp,
+      signatureVerified: true,
     })
 
     const parsedEvent = parseWebhookPayload(payload)
