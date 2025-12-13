@@ -22,7 +22,7 @@ import {
   Search,
   GraduationCap,
 } from 'lucide-react'
-import { motion, AnimatePresence } from 'framer-motion'
+// Removed framer-motion - using CSS transitions for better performance
 import { BurgerMenu } from '@/components/navigation/BurgerMenu'
 import { SearchMenu } from '@/components/navigation/SearchMenu'
 import Image from 'next/image'
@@ -269,114 +269,109 @@ const Header = () => {
           </div>
         </div>
 
-        {/* Mobile Menu */}
-        <AnimatePresence>
-          {isMenuOpen && (
-            <motion.div
-              id="mobile-navigation-menu"
-              role="navigation"
-              aria-label="Mobile navigation"
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
-              className="lg:hidden border-t border-gray-200 py-3 xs:py-4"
-            >
-              <div className="space-y-3 xs:space-y-4">
-                {/* Regular Navigation Items */}
-                {mainNavigation.map((item, index) => (
-                  <div key={index}>
-                    {'highlight' in item && item.highlight ? (
-                      <Link
-                        href={item.href!}
-                        className="flex items-center gap-2 font-semibold px-4 py-3 rounded-lg bg-orange-100 text-orange-700 hover:bg-orange-200 border border-orange-300 transition-all duration-300 min-h-[48px]"
-                      >
-                        {item.icon && <item.icon className="w-5 h-5" />}
-                        <span>{t(item.labelKey)}</span>
-                      </Link>
-                    ) : (
-                      <Link
-                        href={item.href!}
-                        className={`flex items-center gap-2 font-medium px-3 py-2 rounded-lg min-h-[48px] transition-all duration-200 ${
-                          isActive(item.href!)
-                            ? 'bg-blue-50 text-blue-600 border-l-2 border-blue-600'
-                            : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
-                        }`}
-                      >
-                        {item.icon && <item.icon className="w-5 h-5" />}
-                        <span>{t(item.labelKey)}</span>
-                        {item.badge && (
-                          <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-sm">
-                            {item.badge}
-                          </span>
-                        )}
-                      </Link>
-                    )}
-                  </div>
-                ))}
-
-                {/* Mobile CTA Buttons */}
-                <div className="pt-3 xs:pt-4 border-t border-gray-200 space-y-3">
-                  {/* Dashboard Button (for authenticated users - role-based) */}
-                  {isAuthenticated ? (
-                    <Link
-                      href={
-                        user?.role === 'ADMIN'
-                          ? '/admin'
-                          : user?.role === 'COUNSELOR'
-                            ? '/counselor/leads'
-                            : user?.role === 'TEACHER'
-                              ? '/teacher/assignments'
-                              : '/student/dashboard'
-                      }
-                      className="flex items-center justify-center gap-2 bg-gradient-to-r from-green-600 to-green-700 text-white px-6 py-4 rounded-full font-semibold hover:from-green-700 hover:to-green-800 transition-all duration-300 min-h-[52px] shadow-lg"
-                    >
-                      <BarChart3 className="w-5 h-5" />
-                      <span>
-                        {user?.role === 'ADMIN'
-                          ? 'Admin Panel'
-                          : user?.role === 'COUNSELOR'
-                            ? 'CRM Dashboard'
-                            : user?.role === 'TEACHER'
-                              ? 'Teacher Portal'
-                              : 'My Dashboard'}
+        {/* Mobile Menu - CSS transitions for performance */}
+        <div
+          id="mobile-navigation-menu"
+          role="navigation"
+          aria-label="Mobile navigation"
+          aria-hidden={!isMenuOpen}
+          className={`lg:hidden border-t border-gray-200 overflow-hidden transition-all duration-300 ease-in-out ${
+            isMenuOpen ? 'max-h-[800px] opacity-100 py-3 xs:py-4' : 'max-h-0 opacity-0 py-0'
+          }`}
+        >
+          <div className="space-y-3 xs:space-y-4">
+            {/* Regular Navigation Items */}
+            {mainNavigation.map((item, index) => (
+              <div key={index}>
+                {'highlight' in item && item.highlight ? (
+                  <Link
+                    href={item.href!}
+                    className="flex items-center gap-2 font-semibold px-4 py-3 rounded-lg bg-orange-100 text-orange-700 hover:bg-orange-200 border border-orange-300 transition-all duration-300 min-h-[48px]"
+                  >
+                    {item.icon && <item.icon className="w-5 h-5" />}
+                    <span>{t(item.labelKey)}</span>
+                  </Link>
+                ) : (
+                  <Link
+                    href={item.href!}
+                    className={`flex items-center gap-2 font-medium px-3 py-2 rounded-lg min-h-[48px] transition-all duration-200 ${
+                      isActive(item.href!)
+                        ? 'bg-blue-50 text-blue-600 border-l-2 border-blue-600'
+                        : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                    }`}
+                  >
+                    {item.icon && <item.icon className="w-5 h-5" />}
+                    <span>{t(item.labelKey)}</span>
+                    {item.badge && (
+                      <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-sm">
+                        {item.badge}
                       </span>
-                    </Link>
-                  ) : (
-                    <>
-                      {/* Free Demo - Ghost Style */}
-                      <Link
-                        href="/demo-booking"
-                        className="flex items-center justify-center gap-2 border-2 border-green-600 text-green-600 px-6 py-4 rounded-full font-semibold hover:bg-green-50 hover:border-green-700 hover:text-green-700 transition-all duration-300 min-h-[52px]"
-                      >
-                        <Play className="w-5 h-5" />
-                        <span>{t('demoClasses')}</span>
-                      </Link>
-
-                      {/* Primary CTA - Enroll Now */}
-                      <Link
-                        href={primaryCTA.href}
-                        className="flex items-center justify-center gap-2 bg-gradient-to-r from-green-600 to-green-700 text-white px-6 py-4 rounded-full font-semibold hover:from-green-700 hover:to-green-800 transition-all duration-300 min-h-[52px] shadow-lg"
-                      >
-                        <span>{t(primaryCTA.labelKey)}</span>
-                        <ArrowRight className="w-5 h-5" />
-                      </Link>
-
-                      {/* Sign In - Subtle Style (keep button for touch target) */}
-                      <Link
-                        href="/auth/whatsapp"
-                        className="flex items-center justify-center gap-2 border border-gray-300 text-gray-700 hover:bg-gray-50 hover:border-gray-400 px-6 py-4 rounded-full font-medium transition-all duration-300 min-h-[52px]"
-                      >
-                        <UserPlus className="w-5 h-5" />
-                        <span>{t('login')}</span>
-                      </Link>
-                    </>
-                  )}
-                </div>
+                    )}
+                  </Link>
+                )}
               </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+            ))}
+
+            {/* Mobile CTA Buttons */}
+            <div className="pt-3 xs:pt-4 border-t border-gray-200 space-y-3">
+              {/* Dashboard Button (for authenticated users - role-based) */}
+              {isAuthenticated ? (
+                <Link
+                  href={
+                    user?.role === 'ADMIN'
+                      ? '/admin'
+                      : user?.role === 'COUNSELOR'
+                        ? '/counselor/leads'
+                        : user?.role === 'TEACHER'
+                          ? '/teacher/assignments'
+                          : '/student/dashboard'
+                  }
+                  className="flex items-center justify-center gap-2 bg-gradient-to-r from-green-600 to-green-700 text-white px-6 py-4 rounded-full font-semibold hover:from-green-700 hover:to-green-800 transition-all duration-300 min-h-[52px] shadow-lg"
+                >
+                  <BarChart3 className="w-5 h-5" />
+                  <span>
+                    {user?.role === 'ADMIN'
+                      ? 'Admin Panel'
+                      : user?.role === 'COUNSELOR'
+                        ? 'CRM Dashboard'
+                        : user?.role === 'TEACHER'
+                          ? 'Teacher Portal'
+                          : 'My Dashboard'}
+                  </span>
+                </Link>
+              ) : (
+                <>
+                  {/* Free Demo - Ghost Style */}
+                  <Link
+                    href="/demo-booking"
+                    className="flex items-center justify-center gap-2 border-2 border-green-600 text-green-600 px-6 py-4 rounded-full font-semibold hover:bg-green-50 hover:border-green-700 hover:text-green-700 transition-all duration-300 min-h-[52px]"
+                  >
+                    <Play className="w-5 h-5" />
+                    <span>{t('demoClasses')}</span>
+                  </Link>
+
+                  {/* Primary CTA - Enroll Now */}
+                  <Link
+                    href={primaryCTA.href}
+                    className="flex items-center justify-center gap-2 bg-gradient-to-r from-green-600 to-green-700 text-white px-6 py-4 rounded-full font-semibold hover:from-green-700 hover:to-green-800 transition-all duration-300 min-h-[52px] shadow-lg"
+                  >
+                    <span>{t(primaryCTA.labelKey)}</span>
+                    <ArrowRight className="w-5 h-5" />
+                  </Link>
+
+                  {/* Sign In - Subtle Style (keep button for touch target) */}
+                  <Link
+                    href="/auth/whatsapp"
+                    className="flex items-center justify-center gap-2 border border-gray-300 text-gray-700 hover:bg-gray-50 hover:border-gray-400 px-6 py-4 rounded-full font-medium transition-all duration-300 min-h-[52px]"
+                  >
+                    <UserPlus className="w-5 h-5" />
+                    <span>{t('login')}</span>
+                  </Link>
+                </>
+              )}
+            </div>
+          </div>
+        </div>
       </div>
     </header>
   )
