@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import dynamic from 'next/dynamic'
 import { generatePageMetadata } from '@/lib/seo/metadata'
-import { OptimizedHeroSection } from '@/components/layout/OptimizedHeroSection'
+import { HeroSection } from '@/components/layout/HeroSection'
 import { realTestimonials } from '@/data/realTestimonials'
 import { HomePageClient } from '@/components/home/HomePageClient'
 
@@ -64,14 +64,17 @@ const EEATSignals = dynamic(
 
 export const metadata: Metadata = generatePageMetadata('home')
 
+// ISR: Revalidate every 1 hour for edge caching
+export const revalidate = 3600
+
 export default function Home() {
   return (
     <div className="min-h-screen overflow-x-hidden">
       {/* Client-side components (Exit Intent disabled on homepage) */}
       <HomePageClient />
 
-      {/* 1. Hero Section */}
-      <OptimizedHeroSection />
+      {/* 1. Hero Section - Server rendered for instant LCP */}
+      <HeroSection />
 
       {/* 2. Trust Signals Banner - Compact Version */}
       <TrustSignalsBanner variant="compact" />

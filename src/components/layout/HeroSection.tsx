@@ -1,188 +1,88 @@
-'use client'
+import { TrophyIcon } from '@heroicons/react/24/outline'
+import { HeroClientInteractive } from './HeroClientInteractive'
 
-import { Button } from '@/components/ui/Button'
-import { Phone, Calendar, Star, Users, BookOpen, Trophy } from 'lucide-react'
-import { motion } from 'framer-motion'
-import Link from 'next/link'
-import { useRouter } from 'next/navigation'
+interface HeroSectionProps {
+  className?: string
+}
 
-export function HeroSection() {
-  const router = useRouter()
-
-  const stats = [
-    { icon: BookOpen, label: '10k+', subtitle: 'NEET Questions Solved' },
-    { icon: Users, label: '500+', subtitle: 'Expert Faculty' },
-    { icon: Trophy, label: '98%', subtitle: 'Success Rate' },
-  ]
-
-  const handleBookDemo = () => {
-    router.push('/demo-booking')
-  }
-
-  const handleCallNow = () => {
-    window.location.href = 'tel:+918826444334'
-  }
-
+function FloatingParticle({
+  size,
+  left,
+  top,
+  delay,
+}: {
+  delay: number
+  size: number
+  left: string
+  top: string
+}) {
   return (
-    <section className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 px-4 py-12">
-      <div className="max-w-7xl mx-auto">
-        {/* Navigation */}
-        <nav className="flex items-center justify-between mb-16">
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">C</span>
-            </div>
-            <span className="text-xl font-bold text-gray-800">Cerebrum</span>
+    <div
+      className="absolute rounded-full bg-white/20 animate-float"
+      style={{
+        width: size,
+        height: size,
+        left,
+        top,
+        animationDelay: `${delay}s`,
+      }}
+    />
+  )
+}
+
+export function HeroSection({ className = '' }: HeroSectionProps) {
+  return (
+    <div
+      className={`relative min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-blue-900 overflow-hidden -mt-16 lg:-mt-20 ${className}`}
+    >
+      {/* Background - CSS only, no external image for faster LCP */}
+      <div className="absolute inset-0">
+        {/* CSS gradient orbs - no JS animation for performance */}
+        <div className="hidden md:block absolute top-1/4 left-[16%] w-96 h-96 bg-teal-500/10 rounded-full blur-3xl animate-pulse-slow" />
+        <div
+          className="hidden md:block absolute bottom-1/4 right-[16%] w-80 h-80 bg-yellow-500/10 rounded-full blur-3xl animate-pulse-slow"
+          style={{ animationDelay: '2s' }}
+        />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-500/5 rounded-full blur-3xl" />
+
+        {/* Floating Particles - CSS animation only */}
+        <FloatingParticle delay={0} size={6} left="10%" top="20%" />
+        <FloatingParticle delay={0.5} size={4} left="20%" top="60%" />
+        <FloatingParticle delay={1} size={8} left="80%" top="30%" />
+        <FloatingParticle delay={1.5} size={5} left="70%" top="70%" />
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 lg:pt-28 pb-20 flex items-center min-h-screen">
+        <div className="w-full animate-fade-in-up">
+          {/* Badge - Server rendered for instant LCP */}
+          <div className="inline-flex items-center bg-green-500/20 backdrop-blur-sm border border-green-300/30 px-4 py-2 rounded-full mb-6">
+            <TrophyIcon className="w-5 h-5 mr-2 text-green-300" />
+            <span className="text-green-100 font-medium text-xs xs:text-sm md:text-base">
+              #1 NEET Biology Coaching • 98% Success Rate
+            </span>
           </div>
 
-          <div className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-gray-600 hover:text-blue-600 transition-colors">
-              Home
-            </Link>
-            <a href="#courses" className="text-gray-600 hover:text-blue-600 transition-colors">
-              Courses
-            </a>
-            <a href="#faculty" className="text-gray-600 hover:text-blue-600 transition-colors">
-              Faculty
-            </a>
-            <Link
-              href="/blog"
-              className="text-gray-600 hover:text-blue-600 transition-colors font-medium"
-            >
-              Blog
-            </Link>
-            <a href="#results" className="text-gray-600 hover:text-blue-600 transition-colors">
-              Results
-            </a>
-          </div>
+          {/* H1 - LCP critical element - Server rendered */}
+          <h1 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 xs:mb-6 leading-tight text-white break-words">
+            <span className="text-yellow-300">NEET Biology Coaching</span>
+            <br />
+            <span className="text-green-300">India&apos;s #1 Institute</span>
+          </h1>
 
-          <div className="flex items-center space-x-4">
-            <Button variant="ghost" className="hidden md:inline-flex">
-              Sign In
-            </Button>
-            <Button variant="primary" size="default">
-              Register
-            </Button>
-          </div>
-        </nav>
+          {/* H2 for additional location keywords - SEO optimized */}
+          <h2 className="text-lg xs:text-xl sm:text-2xl md:text-3xl font-semibold mb-3 text-yellow-200">
+            Delhi NCR • Noida • Laxmi Nagar • Dwarka
+          </h2>
 
-        {/* Hero Content */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Column - Content */}
-          <motion.div
-            className="space-y-8"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <div className="space-y-4">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                Master{' '}
-                <span className="text-blue-600 relative">
-                  NEET Biology
-                  <svg
-                    className="absolute -bottom-2 left-0 w-full h-3 text-blue-200"
-                    viewBox="0 0 100 12"
-                    fill="currentColor"
-                  >
-                    <path d="M0,8 Q50,0 100,8 L100,12 L0,12 Z" />
-                  </svg>
-                </span>{' '}
-                Is Now More <span className="text-indigo-600">Achievable</span>
-              </h1>
+          <p className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl text-blue-100 mb-6 xs:mb-8 max-w-3xl">
+            <span className="text-yellow-300 font-bold">Sadhna scored 695/720 (100%ile)</span> •
+            500+ Medical Selections
+          </p>
 
-              <p className="text-xl text-gray-600 max-w-lg leading-relaxed">
-                Join 10,000+ students who cracked NEET with our proven teaching methodology. Get
-                personalized coaching from AIIMS faculty with 98% success rate.
-              </p>
-            </div>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="primary" size="xl" onClick={handleBookDemo} className="group">
-                <Calendar className="w-4 xs:w-5 h-4 xs:h-5 mr-2 group-hover:rotate-12 transition-transform" />
-                Book Free Demo
-              </Button>
-
-              <Button variant="secondary" size="xl" onClick={handleCallNow} className="group">
-                <Phone className="w-4 xs:w-5 h-4 xs:h-5 mr-2 group-hover:ring-2 group-hover:ring-blue-300 rounded-full transition-all" />
-                Call Now: +91 8826444334
-              </Button>
-            </div>
-
-            {/* Trust Indicators */}
-            <div className="flex items-center space-x-6 pt-4">
-              <div className="flex items-center">
-                <div className="flex -space-x-2">
-                  {[1, 2, 3, 4, 5].map((i) => (
-                    <div
-                      key={i}
-                      className="w-8 h-8 rounded-full bg-gradient-to-r from-blue-400 to-indigo-500 border-2 border-white"
-                    ></div>
-                  ))}
-                </div>
-                <span className="ml-3 text-sm text-gray-600">2000+ Happy Students</span>
-              </div>
-
-              <div className="flex items-center">
-                <div className="flex text-yellow-400">
-                  {[1, 2, 3, 4, 5].map((i) => (
-                    <Star key={i} className="w-4 h-4 fill-current" />
-                  ))}
-                </div>
-                <span className="ml-2 text-sm text-gray-600">4.9/5 Rating</span>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Right Column - Visual & Stats */}
-          <motion.div
-            className="space-y-8"
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            {/* Hero Illustration Placeholder */}
-            <div className="relative">
-              <div className="w-full h-96 bg-gradient-to-br from-blue-500 via-purple-500 to-indigo-600 rounded-3xl flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 via-purple-400/20 to-indigo-400/20"></div>
-                <div className="relative z-10 text-center text-white">
-                  <div className="w-32 h-32 mx-auto mb-6 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
-                    <BookOpen className="w-16 h-16" />
-                  </div>
-                  <p className="text-lg font-medium">NEET Biology Mastery</p>
-                  <p className="text-sm opacity-80">With Expert Faculty</p>
-                </div>
-
-                {/* Floating Elements */}
-                <div className="absolute top-8 left-8 w-16 h-16 bg-white/10 rounded-2xl backdrop-blur-sm flex items-center justify-center">
-                  <Trophy className="w-8 h-8 text-yellow-300" />
-                </div>
-                <div className="absolute bottom-8 right-8 w-20 h-20 bg-white/10 rounded-2xl backdrop-blur-sm flex items-center justify-center">
-                  <Users className="w-10 h-10 text-green-300" />
-                </div>
-              </div>
-            </div>
-
-            {/* Stats Grid */}
-            <div className="grid grid-cols-3 gap-4">
-              {stats.map((stat, index) => (
-                <motion.div
-                  key={stat.label}
-                  className="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
-                >
-                  <stat.icon className="w-8 h-8 text-blue-600 mx-auto mb-3" />
-                  <div className="text-2xl font-bold text-gray-900">{stat.label}</div>
-                  <div className="text-sm text-gray-600 mt-1">{stat.subtitle}</div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
+          {/* Interactive elements - Client component */}
+          <HeroClientInteractive />
         </div>
       </div>
-    </section>
+    </div>
   )
 }

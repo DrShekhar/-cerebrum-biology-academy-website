@@ -111,8 +111,7 @@ export default function RootLayout({
         <meta httpEquiv="Accept-CH" content="DPR, Viewport-Width, Width, Save-Data" />
 
         {/* Performance: Preconnect to critical domains */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* Note: Google Fonts preconnect removed - using next/font which self-hosts */}
         <link rel="preconnect" href="https://wa.me" />
         <link rel="dns-prefetch" href="//checkout.razorpay.com" />
         <link rel="dns-prefetch" href="//www.googletagmanager.com" />
@@ -144,6 +143,25 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="shortcut icon" href="/favicon-32x32.png" />
+
+        {/* Critical CSS for instant LCP - hero above-the-fold styles */}
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `
+              .min-h-screen{min-height:100vh}
+              .bg-gradient-to-br{background-image:linear-gradient(to bottom right,var(--tw-gradient-stops))}
+              .from-blue-900{--tw-gradient-from:#1e3a8a;--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to,#1e3a8a00)}
+              .via-purple-900{--tw-gradient-stops:var(--tw-gradient-from),#581c87,var(--tw-gradient-to,#581c8700)}
+              .to-blue-900{--tw-gradient-to:#1e3a8a}
+              .text-yellow-300{color:#fcd34d}
+              .text-green-300{color:#86efac}
+              .text-white{color:#fff}
+              .font-bold{font-weight:700}
+              @keyframes fade-in-up{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+              .animate-fade-in-up{animation:fade-in-up .5s ease-out forwards}
+            `,
+          }}
+        />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <GoogleAnalytics />

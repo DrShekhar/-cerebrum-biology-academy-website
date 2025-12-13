@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useEffect, useState, useRef, memo } from 'react'
-import dynamic from 'next/dynamic'
 import { useRouter } from 'next/navigation'
 import { PremiumButton } from '@/components/ui/PremiumDesignSystem'
 import {
@@ -13,11 +12,6 @@ import {
   AcademicCapIcon,
 } from '@heroicons/react/24/outline'
 import { useI18n } from '@/contexts/I18nContext'
-
-// Lazy load framer-motion to reduce initial bundle - not needed for LCP
-const MotionDiv = dynamic(() => import('framer-motion').then((mod) => mod.motion.div), {
-  ssr: false,
-})
 
 interface OptimizedHeroSectionProps {
   className?: string
