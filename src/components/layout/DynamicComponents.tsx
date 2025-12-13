@@ -17,3 +17,23 @@ export const ChatbotWrapper = dynamic(
   () => import('@/components/chat/ChatbotWrapper').then((mod) => mod.ChatbotWrapper),
   { ssr: false }
 )
+
+// Lazy-load Footer to defer framer-motion bundle (Footer uses motion components)
+// This reduces initial JS by ~50KB since footer is below the fold
+export const DynamicFooter = dynamic(
+  () => import('@/components/layout/Footer').then((mod) => mod.Footer),
+  {
+    ssr: true, // Keep server rendering for SEO (footer has many links)
+    loading: () => (
+      <footer className="bg-gray-900 text-white min-h-[200px]" role="contentinfo">
+        <div className="max-w-7xl mx-auto px-4 py-16">
+          <div className="animate-pulse">
+            <div className="h-8 bg-gray-800 rounded w-48 mb-4"></div>
+            <div className="h-4 bg-gray-800 rounded w-64 mb-2"></div>
+            <div className="h-4 bg-gray-800 rounded w-52"></div>
+          </div>
+        </div>
+      </footer>
+    ),
+  }
+)

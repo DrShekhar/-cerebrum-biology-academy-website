@@ -7,7 +7,7 @@ import GoogleAnalytics from '@/components/analytics/GoogleAnalytics'
 import { WebVitalsReporter } from '@/components/analytics/WebVitalsReporter'
 import Header from '@/components/layout/Header'
 import { MobileNavigation } from '@/components/navigation/MobileNavigation'
-import { Footer } from '@/components/layout/Footer'
+import { DynamicFooter } from '@/components/layout/DynamicComponents'
 import { PWAProvider } from '@/components/pwa/PWAProvider'
 import { AuthProvider } from '@/contexts/AuthContext'
 import { I18nProvider } from '@/contexts/I18nContext'
@@ -187,7 +187,7 @@ export default function RootLayout({
                       {children}
                     </main>
                     <div data-lazy="footer" className="priority-lazy" role="contentinfo">
-                      <Footer />
+                      <DynamicFooter />
                     </div>
                     <div data-section="mobile-navigation" className="priority-immediate">
                       <MobileNavigation />
