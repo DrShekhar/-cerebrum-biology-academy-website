@@ -59,7 +59,7 @@ export function TableOfContents({ items, title = 'Table of Contents' }: TableOfC
   return (
     <>
       {/* Desktop TOC - Sidebar */}
-      <nav className="hidden lg:block sticky top-24 max-h-[calc(100vh-8rem)] overflow-y-auto pr-4">
+      <nav className="hidden xl:block sticky top-24 max-h-[calc(100vh-8rem)] overflow-y-auto pr-4">
         <h4 className="text-sm font-semibold text-gray-900 mb-4 flex items-center gap-2">
           <ListBulletIcon className="w-4 h-4" />
           {title}
@@ -83,7 +83,7 @@ export function TableOfContents({ items, title = 'Table of Contents' }: TableOfC
       </nav>
 
       {/* Mobile TOC - Floating Button + Drawer */}
-      <div className="lg:hidden">
+      <div className="xl:hidden">
         <button
           onClick={() => setIsOpen(true)}
           className="fixed bottom-24 right-4 z-40 flex items-center gap-2 bg-white shadow-lg rounded-full px-4 py-3 border border-gray-200 hover:shadow-xl transition-shadow"

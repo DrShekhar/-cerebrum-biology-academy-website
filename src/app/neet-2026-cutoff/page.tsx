@@ -219,7 +219,7 @@ export default function NEET2026CutoffPage() {
 
       <main className="min-h-screen bg-gradient-to-b from-green-50 to-white">
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-r from-green-600 to-teal-700 py-16 text-white md:py-24">
+        <section className="relative overflow-hidden bg-gradient-to-r from-green-600 to-teal-700 pt-16 pb-24 text-white md:pt-24 md:pb-32">
           <div className="absolute inset-0 opacity-10">
             <div
               className="absolute inset-0"
@@ -230,7 +230,7 @@ export default function NEET2026CutoffPage() {
             />
           </div>
 
-          <div className="container relative mx-auto px-4">
+          <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <nav className="mb-6 text-sm">
               <Link href="/" className="hover:underline">
                 Home
@@ -263,8 +263,8 @@ export default function NEET2026CutoffPage() {
         </section>
 
         {/* Qualifying Cutoff Cards */}
-        <section className="-mt-8 px-4">
-          <div className="container mx-auto">
+        <section className="-mt-16 md:-mt-20 relative z-10 px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
             <div className="grid gap-4 md:grid-cols-4">
               {qualifyingCutoff.map((cutoff) => (
                 <div key={cutoff.category} className="rounded-xl bg-white p-6 shadow-lg">
@@ -278,8 +278,8 @@ export default function NEET2026CutoffPage() {
         </section>
 
         {/* What is NEET Cutoff */}
-        <section className="py-16 px-4">
-          <div className="container mx-auto">
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
             <div className="mx-auto max-w-4xl">
               <h2 className="mb-6 text-3xl font-bold text-gray-900">What is NEET 2026 Cutoff?</h2>
               <div className="prose prose-lg max-w-none text-gray-600">
@@ -311,8 +311,8 @@ export default function NEET2026CutoffPage() {
         </section>
 
         {/* Previous Year Cutoffs Table */}
-        <section className="bg-gray-50 py-16 px-4">
-          <div className="container mx-auto">
+        <section className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
             <h2 className="mb-8 text-center text-3xl font-bold text-gray-900">
               NEET Cutoff Trends (Previous Years)
             </h2>
@@ -397,8 +397,8 @@ export default function NEET2026CutoffPage() {
         </section>
 
         {/* Top Colleges Cutoff */}
-        <section className="py-16 px-4">
-          <div className="container mx-auto">
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
             <h2 className="mb-8 text-center text-3xl font-bold text-gray-900">
               Expected Cutoff for Top Medical Colleges
             </h2>
@@ -434,8 +434,8 @@ export default function NEET2026CutoffPage() {
         </section>
 
         {/* State-wise Cutoff */}
-        <section className="bg-gray-50 py-16 px-4">
-          <div className="container mx-auto">
+        <section className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
             <h2 className="mb-8 text-center text-3xl font-bold text-gray-900">
               State-wise Expected Cutoff Marks
             </h2>
@@ -472,8 +472,8 @@ export default function NEET2026CutoffPage() {
         </section>
 
         {/* Preparation CTA */}
-        <section className="py-16 px-4">
-          <div className="container mx-auto">
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
             <div className="overflow-hidden rounded-2xl bg-gradient-to-r from-green-600 to-teal-700">
               <div className="grid items-center md:grid-cols-2">
                 <div className="p-8 text-white md:p-12">
@@ -531,8 +531,8 @@ export default function NEET2026CutoffPage() {
         </section>
 
         {/* Tips Section */}
-        <section className="bg-gray-50 py-16 px-4">
-          <div className="container mx-auto">
+        <section className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
             <h2 className="mb-8 text-center text-3xl font-bold text-gray-900">
               Tips to Score Above NEET Cutoff
             </h2>
@@ -590,8 +590,8 @@ export default function NEET2026CutoffPage() {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-16 px-4">
-          <div className="container mx-auto">
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
             <h2 className="mb-8 text-center text-3xl font-bold text-gray-900">
               Frequently Asked Questions - NEET 2026 Cutoff
             </h2>
@@ -625,8 +625,8 @@ export default function NEET2026CutoffPage() {
         </section>
 
         {/* Related Pages */}
-        <section className="bg-gray-50 py-16 px-4">
-          <div className="container mx-auto">
+        <section className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
             <h2 className="mb-8 text-center text-3xl font-bold text-gray-900">Related Resources</h2>
 
             <div className="grid gap-6 md:grid-cols-4">

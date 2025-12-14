@@ -262,7 +262,7 @@ export default function NEET2026ExamDatePage() {
 
       <main className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-700 py-16 text-white md:py-24">
+        <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-700 pt-16 pb-24 text-white md:pt-24 md:pb-32">
           <div className="absolute inset-0 opacity-10">
             <div
               className="absolute inset-0"
@@ -273,7 +273,7 @@ export default function NEET2026ExamDatePage() {
             />
           </div>
 
-          <div className="container relative mx-auto px-4">
+          <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <nav className="mb-6 text-sm">
               <Link href="/" className="hover:underline">
                 Home
@@ -306,8 +306,8 @@ export default function NEET2026ExamDatePage() {
         </section>
 
         {/* Quick Info Cards */}
-        <section className="-mt-8 px-4">
-          <div className="container mx-auto">
+        <section className="-mt-16 md:-mt-20 relative z-10 px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
             <div className="grid gap-4 md:grid-cols-3">
               <div className="rounded-xl bg-white p-6 shadow-lg">
                 <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100">
@@ -340,8 +340,8 @@ export default function NEET2026ExamDatePage() {
         </section>
 
         {/* Important Dates Timeline */}
-        <section className="py-16 px-4">
-          <div className="container mx-auto">
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
             <h2 className="mb-8 text-center text-3xl font-bold text-gray-900">
               NEET 2026 Important Dates & Timeline
             </h2>
@@ -390,8 +390,8 @@ export default function NEET2026ExamDatePage() {
         </section>
 
         {/* Exam Pattern */}
-        <section className="bg-gray-50 py-16 px-4">
-          <div className="container mx-auto">
+        <section className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
             <h2 className="mb-8 text-center text-3xl font-bold text-gray-900">
               NEET 2026 Exam Pattern
             </h2>
@@ -444,8 +444,8 @@ export default function NEET2026ExamDatePage() {
         </section>
 
         {/* Preparation Tips CTA */}
-        <section className="py-16 px-4">
-          <div className="container mx-auto">
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
             <div className="overflow-hidden rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-700">
               <div className="grid items-center md:grid-cols-2">
                 <div className="p-8 text-white md:p-12">
@@ -504,8 +504,8 @@ export default function NEET2026ExamDatePage() {
         </section>
 
         {/* FAQ Section */}
-        <section className="bg-gray-50 py-16 px-4">
-          <div className="container mx-auto">
+        <section className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
             <h2 className="mb-8 text-center text-3xl font-bold text-gray-900">
               Frequently Asked Questions - NEET 2026
             </h2>
@@ -539,8 +539,8 @@ export default function NEET2026ExamDatePage() {
         </section>
 
         {/* Related Pages */}
-        <section className="py-16 px-4">
-          <div className="container mx-auto">
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
             <h2 className="mb-8 text-center text-3xl font-bold text-gray-900">Related Resources</h2>
 
             <div className="grid gap-6 md:grid-cols-4">

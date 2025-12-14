@@ -122,9 +122,9 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
         </div>
 
         <div className="max-w-7xl mx-auto px-4 py-12">
-          <div className="flex flex-col lg:flex-row gap-12">
+          <div className="flex flex-col xl:flex-row gap-8 xl:gap-12">
             {/* Main Content */}
-            <article className="flex-1 max-w-4xl">
+            <article className="flex-1 min-w-0 max-w-4xl">
               {/* Article Header */}
               <motion.header
                 className="mb-12"
@@ -498,12 +498,15 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
             </article>
 
             {/* Sidebar with TOC */}
-            <aside className="hidden lg:block w-80 flex-shrink-0">
-              <div className="sticky top-24 space-y-6">
+            <aside className="hidden xl:block w-72 xl:w-80 flex-shrink-0 relative">
+              <div className="sticky top-24 space-y-6 z-10 max-h-[calc(100vh-8rem)] overflow-y-auto">
                 <TableOfContents items={toc} />
 
                 {/* Sidebar CTA */}
-                <div className="p-6 bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-200 rounded-2xl">
+                <div
+                  className="p-6 bg-white border border-blue-200 rounded-2xl shadow-lg relative z-10"
+                  style={{ background: 'linear-gradient(to bottom right, #eff6ff, #eef2ff)' }}
+                >
                   <h4 className="font-bold text-gray-900 mb-2">Need Expert Guidance?</h4>
                   <p className="text-sm text-gray-600 mb-4">
                     Join 2,500+ students who achieved their NEET dreams with us.
@@ -537,7 +540,7 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
         </div>
 
         {/* Mobile TOC */}
-        <div className="lg:hidden">
+        <div className="xl:hidden">
           <TableOfContents items={toc} />
         </div>
 

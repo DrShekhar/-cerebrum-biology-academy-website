@@ -319,7 +319,7 @@ export default function NEETBiologySyllabusPage() {
 
       <main className="min-h-screen bg-gradient-to-b from-purple-50 to-white">
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-r from-purple-600 to-indigo-700 py-16 text-white md:py-24">
+        <section className="relative overflow-hidden bg-gradient-to-r from-purple-600 to-indigo-700 pt-16 pb-24 text-white md:pt-24 md:pb-32">
           <div className="absolute inset-0 opacity-10">
             <div
               className="absolute inset-0"
@@ -330,7 +330,7 @@ export default function NEETBiologySyllabusPage() {
             />
           </div>
 
-          <div className="container relative mx-auto px-4">
+          <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <nav className="mb-6 text-sm">
               <Link href="/" className="hover:underline">
                 Home
@@ -363,8 +363,8 @@ export default function NEETBiologySyllabusPage() {
         </section>
 
         {/* Quick Stats */}
-        <section className="-mt-8 px-4">
-          <div className="container mx-auto">
+        <section className="-mt-16 md:-mt-20 relative z-10 px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
             <div className="grid gap-4 md:grid-cols-4">
               <div className="rounded-xl bg-white p-6 shadow-lg">
                 <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-lg bg-green-100">
@@ -406,8 +406,8 @@ export default function NEETBiologySyllabusPage() {
         </section>
 
         {/* High Weightage Chapters */}
-        <section className="py-16 px-4">
-          <div className="container mx-auto">
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
             <h2 className="mb-8 text-center text-3xl font-bold text-gray-900">
               High Weightage Chapters - Focus These First
             </h2>
@@ -450,8 +450,8 @@ export default function NEETBiologySyllabusPage() {
         </section>
 
         {/* Class 11 Botany */}
-        <section className="bg-gray-50 py-16 px-4">
-          <div className="container mx-auto">
+        <section className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
             <div className="mb-8 flex items-center gap-3">
               <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-green-100">
                 <Leaf className="h-6 w-6 text-green-600" />
@@ -491,8 +491,8 @@ export default function NEETBiologySyllabusPage() {
         </section>
 
         {/* Class 12 Botany */}
-        <section className="py-16 px-4">
-          <div className="container mx-auto">
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
             <div className="mb-8 flex items-center gap-3">
               <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-green-100">
                 <Leaf className="h-6 w-6 text-green-600" />
@@ -532,8 +532,8 @@ export default function NEETBiologySyllabusPage() {
         </section>
 
         {/* Class 11 Zoology */}
-        <section className="bg-gray-50 py-16 px-4">
-          <div className="container mx-auto">
+        <section className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
             <div className="mb-8 flex items-center gap-3">
               <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-red-100">
                 <HeartPulse className="h-6 w-6 text-red-600" />
@@ -575,8 +575,8 @@ export default function NEETBiologySyllabusPage() {
         </section>
 
         {/* Class 12 Zoology */}
-        <section className="py-16 px-4">
-          <div className="container mx-auto">
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
             <div className="mb-8 flex items-center gap-3">
               <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-red-100">
                 <HeartPulse className="h-6 w-6 text-red-600" />
@@ -618,8 +618,8 @@ export default function NEETBiologySyllabusPage() {
         </section>
 
         {/* Preparation Strategy */}
-        <section className="bg-purple-50 py-16 px-4">
-          <div className="container mx-auto">
+        <section className="bg-purple-50 py-16 px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
             <h2 className="mb-8 text-center text-3xl font-bold text-gray-900">
               NEET Biology Preparation Strategy
             </h2>
@@ -662,8 +662,8 @@ export default function NEETBiologySyllabusPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 px-4">
-          <div className="container mx-auto">
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
             <div className="overflow-hidden rounded-2xl bg-gradient-to-r from-purple-600 to-indigo-700">
               <div className="grid items-center md:grid-cols-2">
                 <div className="p-8 text-white md:p-12">
@@ -721,8 +721,8 @@ export default function NEETBiologySyllabusPage() {
         </section>
 
         {/* FAQ Section */}
-        <section className="bg-gray-50 py-16 px-4">
-          <div className="container mx-auto">
+        <section className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
             <h2 className="mb-8 text-center text-3xl font-bold text-gray-900">
               Frequently Asked Questions - NEET Biology Syllabus
             </h2>
@@ -756,8 +756,8 @@ export default function NEETBiologySyllabusPage() {
         </section>
 
         {/* Related Pages */}
-        <section className="py-16 px-4">
-          <div className="container mx-auto">
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
             <h2 className="mb-8 text-center text-3xl font-bold text-gray-900">Related Resources</h2>
 
             <div className="grid gap-6 md:grid-cols-4">
