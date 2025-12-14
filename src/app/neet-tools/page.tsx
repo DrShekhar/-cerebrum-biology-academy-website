@@ -128,13 +128,13 @@ export default function NEETToolsPage() {
 
       <main className="min-h-screen bg-gradient-to-b from-indigo-50 to-white">
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-r from-indigo-600 to-purple-700 py-16 text-white md:py-24">
+        <section className="relative overflow-hidden bg-gradient-to-r from-indigo-600 to-purple-700 pt-16 pb-24 text-white md:pt-24 md:pb-32">
           <div className="absolute inset-0 overflow-hidden">
             <div className="absolute -right-40 -top-40 h-80 w-80 rounded-full bg-white/10" />
             <div className="absolute -bottom-20 -left-20 h-60 w-60 rounded-full bg-white/10" />
           </div>
 
-          <div className="container relative mx-auto px-4">
+          <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <nav className="mb-6 text-sm">
               <Link href="/" className="hover:underline">
                 Home
@@ -172,8 +172,8 @@ export default function NEETToolsPage() {
         </section>
 
         {/* Tools Grid */}
-        <section className="-mt-12 px-4">
-          <div className="container mx-auto">
+        <section className="-mt-16 md:-mt-20 relative z-10 px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
             <div className="grid gap-6 md:grid-cols-3">
               {tools.map((tool) => (
                 <Link
@@ -214,8 +214,8 @@ export default function NEETToolsPage() {
         </section>
 
         {/* Why Use Our Tools */}
-        <section className="py-16 px-4">
-          <div className="container mx-auto">
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
             <h2 className="mb-8 text-center text-3xl font-bold text-gray-900">
               Why Use Our NEET Tools?
             </h2>
@@ -258,8 +258,8 @@ export default function NEETToolsPage() {
         </section>
 
         {/* Upcoming Tools */}
-        <section className="bg-gray-50 py-16 px-4">
-          <div className="container mx-auto">
+        <section className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
             <h2 className="mb-2 text-center text-3xl font-bold text-gray-900">Coming Soon</h2>
             <p className="mb-8 text-center text-gray-600">
               More powerful tools to supercharge your NEET preparation
@@ -286,8 +286,8 @@ export default function NEETToolsPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 px-4">
-          <div className="container mx-auto">
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
             <div className="overflow-hidden rounded-2xl bg-gradient-to-r from-indigo-600 to-purple-700">
               <div className="grid items-center md:grid-cols-2">
                 <div className="p-8 text-white md:p-12">
@@ -339,8 +339,8 @@ export default function NEETToolsPage() {
         </section>
 
         {/* Related Resources */}
-        <section className="bg-gray-50 py-16 px-4">
-          <div className="container mx-auto">
+        <section className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
             <h2 className="mb-8 text-center text-3xl font-bold text-gray-900">
               Popular Study Resources
             </h2>

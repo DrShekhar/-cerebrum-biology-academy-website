@@ -302,8 +302,8 @@ export default function NEETCollegePredictorPage() {
 
       <main className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-700 py-16 text-white md:py-24">
-          <div className="container relative mx-auto px-4">
+        <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-700 pt-16 pb-24 text-white md:pt-24 md:pb-32">
+          <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <nav className="mb-6 text-sm">
               <Link href="/" className="hover:underline">
                 Home
@@ -336,8 +336,8 @@ export default function NEETCollegePredictorPage() {
         </section>
 
         {/* Calculator Section */}
-        <section className="-mt-8 px-4">
-          <div className="container mx-auto">
+        <section className="-mt-16 md:-mt-20 relative z-10 px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
             <div className="mx-auto max-w-3xl">
               <div className="rounded-2xl bg-white p-8 shadow-xl">
                 <div className="mb-6 text-center">
@@ -464,7 +464,7 @@ export default function NEETCollegePredictorPage() {
         {/* Results Section */}
         {showResults && (
           <section className="py-12 px-4">
-            <div className="container mx-auto">
+            <div className="mx-auto max-w-7xl">
               <div className="mx-auto max-w-5xl">
                 <div className="mb-6 flex items-center justify-between">
                   <h2 className="text-2xl font-bold text-gray-900">
@@ -554,8 +554,8 @@ export default function NEETCollegePredictorPage() {
         )}
 
         {/* How It Works */}
-        <section className="bg-gray-50 py-16 px-4">
-          <div className="container mx-auto">
+        <section className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
             <h2 className="mb-8 text-center text-3xl font-bold text-gray-900">
               How College Predictor Works
             </h2>
@@ -580,8 +580,8 @@ export default function NEETCollegePredictorPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 px-4">
-          <div className="container mx-auto">
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
             <div className="overflow-hidden rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-700">
               <div className="grid items-center md:grid-cols-2">
                 <div className="p-8 text-white md:p-12">
@@ -627,8 +627,8 @@ export default function NEETCollegePredictorPage() {
         </section>
 
         {/* Related Tools */}
-        <section className="bg-gray-50 py-16 px-4">
-          <div className="container mx-auto">
+        <section className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
             <h2 className="mb-8 text-center text-3xl font-bold text-gray-900">
               Related Tools & Resources
             </h2>
