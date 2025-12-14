@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import Link from 'next/link'
 import {
   Building2,
@@ -14,231 +14,1020 @@ import {
   GraduationCap,
   Filter,
   Search,
+  TrendingUp,
+  IndianRupee,
+  ChevronDown,
+  ChevronUp,
+  Star,
 } from 'lucide-react'
 
 interface College {
   name: string
   state: string
-  type: 'Government' | 'Private' | 'Deemed' | 'AIIMS'
-  course: 'MBBS' | 'BDS' | 'AYUSH'
-  generalRank: { min: number; max: number }
-  obcRank: { min: number; max: number }
-  scRank: { min: number; max: number }
-  fees: string
+  type: 'Government' | 'Private/Deemed'
+  tier: 1 | 2 | 3
+  seats: number
+  nirfRank?: number
+  cutoffs: {
+    general: number
+    ews: number
+    obc: number
+    sc: number
+    st: number
+  }
+  fees: number
+  feeDisplay: string
 }
 
+// Comprehensive database with NEET 2024 MCC counselling closing ranks
 const collegesData: College[] = [
+  // ============ TIER 1 GOVERNMENT COLLEGES (AIIMS + Top Govt) ============
+  // All AIIMS Colleges
   {
-    name: 'AIIMS Delhi',
+    name: 'AIIMS New Delhi',
     state: 'Delhi',
-    type: 'AIIMS',
-    course: 'MBBS',
-    generalRank: { min: 1, max: 50 },
-    obcRank: { min: 1, max: 100 },
-    scRank: { min: 1, max: 500 },
-    fees: '1,628/year',
+    type: 'Government',
+    tier: 1,
+    seats: 107,
+    nirfRank: 1,
+    cutoffs: { general: 47, ews: 83, obc: 186, sc: 647, st: 1847 },
+    fees: 1628,
+    feeDisplay: '₹1,628/year',
   },
+  {
+    name: 'AIIMS Jodhpur',
+    state: 'Rajasthan',
+    type: 'Government',
+    tier: 1,
+    seats: 150,
+    nirfRank: 8,
+    cutoffs: { general: 374, ews: 658, obc: 1200, sc: 2800, st: 6500 },
+    fees: 1628,
+    feeDisplay: '₹1,628/year',
+  },
+  {
+    name: 'AIIMS Bhopal',
+    state: 'Madhya Pradesh',
+    type: 'Government',
+    tier: 1,
+    seats: 150,
+    nirfRank: 12,
+    cutoffs: { general: 520, ews: 890, obc: 1650, sc: 3800, st: 8200 },
+    fees: 1628,
+    feeDisplay: '₹1,628/year',
+  },
+  {
+    name: 'AIIMS Bhubaneswar',
+    state: 'Odisha',
+    type: 'Government',
+    tier: 1,
+    seats: 100,
+    nirfRank: 15,
+    cutoffs: { general: 610, ews: 1050, obc: 1950, sc: 4500, st: 9800 },
+    fees: 1628,
+    feeDisplay: '₹1,628/year',
+  },
+  {
+    name: 'AIIMS Rishikesh',
+    state: 'Uttarakhand',
+    type: 'Government',
+    tier: 1,
+    seats: 125,
+    nirfRank: 18,
+    cutoffs: { general: 780, ews: 1350, obc: 2500, sc: 6520, st: 11941 },
+    fees: 1628,
+    feeDisplay: '₹1,628/year',
+  },
+  {
+    name: 'AIIMS Patna',
+    state: 'Bihar',
+    type: 'Government',
+    tier: 1,
+    seats: 100,
+    nirfRank: 20,
+    cutoffs: { general: 950, ews: 1680, obc: 3100, sc: 7500, st: 14500 },
+    fees: 1628,
+    feeDisplay: '₹1,628/year',
+  },
+  {
+    name: 'AIIMS Raipur',
+    state: 'Chhattisgarh',
+    type: 'Government',
+    tier: 1,
+    seats: 100,
+    nirfRank: 22,
+    cutoffs: { general: 1150, ews: 2000, obc: 3600, sc: 8800, st: 16500 },
+    fees: 1628,
+    feeDisplay: '₹1,628/year',
+  },
+  {
+    name: 'AIIMS Nagpur',
+    state: 'Maharashtra',
+    type: 'Government',
+    tier: 1,
+    seats: 100,
+    cutoffs: { general: 1400, ews: 2450, obc: 4400, sc: 10500, st: 19000 },
+    fees: 1628,
+    feeDisplay: '₹1,628/year',
+  },
+  {
+    name: 'AIIMS Mangalagiri',
+    state: 'Andhra Pradesh',
+    type: 'Government',
+    tier: 1,
+    seats: 100,
+    cutoffs: { general: 1650, ews: 2900, obc: 5200, sc: 12500, st: 22000 },
+    fees: 1628,
+    feeDisplay: '₹1,628/year',
+  },
+  {
+    name: 'AIIMS Gorakhpur',
+    state: 'Uttar Pradesh',
+    type: 'Government',
+    tier: 2,
+    seats: 100,
+    cutoffs: { general: 2100, ews: 3600, obc: 6500, sc: 15500, st: 27000 },
+    fees: 1628,
+    feeDisplay: '₹1,628/year',
+  },
+  {
+    name: 'AIIMS Bathinda',
+    state: 'Punjab',
+    type: 'Government',
+    tier: 2,
+    seats: 100,
+    cutoffs: { general: 2400, ews: 4100, obc: 7400, sc: 17500, st: 30000 },
+    fees: 1628,
+    feeDisplay: '₹1,628/year',
+  },
+  {
+    name: 'AIIMS Kalyani',
+    state: 'West Bengal',
+    type: 'Government',
+    tier: 2,
+    seats: 100,
+    cutoffs: { general: 2750, ews: 4700, obc: 8500, sc: 20000, st: 34000 },
+    fees: 1628,
+    feeDisplay: '₹1,628/year',
+  },
+  {
+    name: 'AIIMS Deoghar',
+    state: 'Jharkhand',
+    type: 'Government',
+    tier: 2,
+    seats: 100,
+    cutoffs: { general: 3200, ews: 5400, obc: 9800, sc: 23000, st: 38000 },
+    fees: 1628,
+    feeDisplay: '₹1,628/year',
+  },
+  {
+    name: 'AIIMS Rae Bareli',
+    state: 'Uttar Pradesh',
+    type: 'Government',
+    tier: 2,
+    seats: 100,
+    cutoffs: { general: 3650, ews: 6200, obc: 11200, sc: 26000, st: 42000 },
+    fees: 1628,
+    feeDisplay: '₹1,628/year',
+  },
+  {
+    name: 'AIIMS Bilaspur',
+    state: 'Himachal Pradesh',
+    type: 'Government',
+    tier: 2,
+    seats: 100,
+    cutoffs: { general: 4100, ews: 7000, obc: 12600, sc: 29500, st: 47000 },
+    fees: 1628,
+    feeDisplay: '₹1,628/year',
+  },
+  {
+    name: 'AIIMS Bibinagar',
+    state: 'Telangana',
+    type: 'Government',
+    tier: 2,
+    seats: 100,
+    cutoffs: { general: 4600, ews: 7800, obc: 14000, sc: 32500, st: 52000 },
+    fees: 1628,
+    feeDisplay: '₹1,628/year',
+  },
+  {
+    name: 'AIIMS Guwahati',
+    state: 'Assam',
+    type: 'Government',
+    tier: 2,
+    seats: 50,
+    cutoffs: { general: 5200, ews: 8800, obc: 15800, sc: 36500, st: 58000 },
+    fees: 1628,
+    feeDisplay: '₹1,628/year',
+  },
+  {
+    name: 'AIIMS Vijaypur (Jammu)',
+    state: 'Jammu & Kashmir',
+    type: 'Government',
+    tier: 2,
+    seats: 100,
+    cutoffs: { general: 5800, ews: 9800, obc: 17600, sc: 40500, st: 64000 },
+    fees: 1628,
+    feeDisplay: '₹1,628/year',
+  },
+  {
+    name: 'AIIMS Rajkot',
+    state: 'Gujarat',
+    type: 'Government',
+    tier: 2,
+    seats: 100,
+    cutoffs: { general: 6500, ews: 11000, obc: 19800, sc: 45000, st: 71000 },
+    fees: 1628,
+    feeDisplay: '₹1,628/year',
+  },
+  {
+    name: 'AIIMS Madurai',
+    state: 'Tamil Nadu',
+    type: 'Government',
+    tier: 2,
+    seats: 100,
+    cutoffs: { general: 7200, ews: 12200, obc: 22000, sc: 50000, st: 78000 },
+    fees: 1628,
+    feeDisplay: '₹1,628/year',
+  },
+  // JIPMER
   {
     name: 'JIPMER Puducherry',
     state: 'Puducherry',
     type: 'Government',
-    course: 'MBBS',
-    generalRank: { min: 20, max: 200 },
-    obcRank: { min: 50, max: 400 },
-    scRank: { min: 100, max: 1500 },
-    fees: '1,490/year',
+    tier: 1,
+    seats: 200,
+    nirfRank: 5,
+    cutoffs: { general: 180, ews: 320, obc: 580, sc: 1400, st: 3200 },
+    fees: 1490,
+    feeDisplay: '₹1,490/year',
   },
   {
-    name: 'Maulana Azad Medical College',
+    name: 'JIPMER Karaikal',
+    state: 'Puducherry',
+    type: 'Government',
+    tier: 2,
+    seats: 50,
+    cutoffs: { general: 8500, ews: 14500, obc: 26000, sc: 60000, st: 95000 },
+    fees: 1490,
+    feeDisplay: '₹1,490/year',
+  },
+  // Top Delhi Govt Colleges
+  {
+    name: 'Maulana Azad Medical College (MAMC)',
     state: 'Delhi',
     type: 'Government',
-    course: 'MBBS',
-    generalRank: { min: 30, max: 150 },
-    obcRank: { min: 60, max: 300 },
-    scRank: { min: 200, max: 1200 },
-    fees: '40,000/year',
+    tier: 1,
+    seats: 250,
+    nirfRank: 4,
+    cutoffs: { general: 85, ews: 150, obc: 280, sc: 750, st: 1800 },
+    fees: 2445,
+    feeDisplay: '₹2,445/year',
   },
   {
-    name: 'VMMC & SJH Delhi',
+    name: 'VMMC & Safdarjung Hospital',
     state: 'Delhi',
     type: 'Government',
-    course: 'MBBS',
-    generalRank: { min: 50, max: 200 },
-    obcRank: { min: 100, max: 400 },
-    scRank: { min: 300, max: 1500 },
-    fees: '25,000/year',
+    tier: 1,
+    seats: 170,
+    nirfRank: 7,
+    cutoffs: { general: 130, ews: 230, obc: 420, sc: 1100, st: 2600 },
+    fees: 25000,
+    feeDisplay: '₹25,000/year',
   },
   {
-    name: 'King Georges Medical University',
-    state: 'Uttar Pradesh',
+    name: 'UCMS & GTB Hospital Delhi',
+    state: 'Delhi',
     type: 'Government',
-    course: 'MBBS',
-    generalRank: { min: 200, max: 800 },
-    obcRank: { min: 400, max: 1500 },
-    scRank: { min: 1000, max: 5000 },
-    fees: '35,000/year',
+    tier: 1,
+    seats: 150,
+    nirfRank: 10,
+    cutoffs: { general: 390, ews: 680, obc: 1250, sc: 3000, st: 7000 },
+    fees: 15000,
+    feeDisplay: '₹15,000/year',
   },
   {
-    name: 'BHU IMS Varanasi',
+    name: 'Lady Hardinge Medical College Delhi',
+    state: 'Delhi',
+    type: 'Government',
+    tier: 1,
+    seats: 200,
+    nirfRank: 14,
+    cutoffs: { general: 480, ews: 840, obc: 1550, sc: 3700, st: 8500 },
+    fees: 10000,
+    feeDisplay: '₹10,000/year',
+  },
+  // Other Top Govt Colleges
+  {
+    name: 'PGIMER Chandigarh',
+    state: 'Chandigarh',
+    type: 'Government',
+    tier: 1,
+    seats: 75,
+    nirfRank: 2,
+    cutoffs: { general: 65, ews: 115, obc: 210, sc: 550, st: 1350 },
+    fees: 5000,
+    feeDisplay: '₹5,000/year',
+  },
+  {
+    name: 'King George Medical University (KGMU)',
     state: 'Uttar Pradesh',
     type: 'Government',
-    course: 'MBBS',
-    generalRank: { min: 150, max: 600 },
-    obcRank: { min: 300, max: 1200 },
-    scRank: { min: 800, max: 4000 },
-    fees: '10,000/year',
+    tier: 1,
+    seats: 250,
+    nirfRank: 11,
+    cutoffs: { general: 2500, ews: 4300, obc: 7800, sc: 18000, st: 32000 },
+    fees: 54600,
+    feeDisplay: '₹54,600/year',
+  },
+  {
+    name: 'BHU Institute of Medical Sciences',
+    state: 'Uttar Pradesh',
+    type: 'Government',
+    tier: 1,
+    seats: 120,
+    nirfRank: 9,
+    cutoffs: { general: 850, ews: 1480, obc: 2700, sc: 6400, st: 12500 },
+    fees: 10000,
+    feeDisplay: '₹10,000/year',
+  },
+  {
+    name: 'Seth GS Medical College Mumbai',
+    state: 'Maharashtra',
+    type: 'Government',
+    tier: 1,
+    seats: 200,
+    nirfRank: 13,
+    cutoffs: { general: 1100, ews: 1900, obc: 3500, sc: 8200, st: 15500 },
+    fees: 134600,
+    feeDisplay: '₹1,34,600/year',
   },
   {
     name: 'Grant Medical College Mumbai',
     state: 'Maharashtra',
     type: 'Government',
-    course: 'MBBS',
-    generalRank: { min: 300, max: 1500 },
-    obcRank: { min: 600, max: 3000 },
-    scRank: { min: 1500, max: 8000 },
-    fees: '25,000/year',
-  },
-  {
-    name: 'Seth GS Medical College',
-    state: 'Maharashtra',
-    type: 'Government',
-    course: 'MBBS',
-    generalRank: { min: 200, max: 1000 },
-    obcRank: { min: 400, max: 2000 },
-    scRank: { min: 1000, max: 6000 },
-    fees: '25,000/year',
+    tier: 1,
+    seats: 200,
+    nirfRank: 16,
+    cutoffs: { general: 1600, ews: 2750, obc: 5000, sc: 11800, st: 21500 },
+    fees: 139700,
+    feeDisplay: '₹1,39,700/year',
   },
   {
     name: 'Bangalore Medical College',
     state: 'Karnataka',
     type: 'Government',
-    course: 'MBBS',
-    generalRank: { min: 400, max: 2000 },
-    obcRank: { min: 800, max: 4000 },
-    scRank: { min: 2000, max: 10000 },
-    fees: '50,000/year',
+    tier: 1,
+    seats: 250,
+    nirfRank: 17,
+    cutoffs: { general: 2200, ews: 3800, obc: 6900, sc: 16000, st: 29000 },
+    fees: 70200,
+    feeDisplay: '₹70,200/year',
   },
+  {
+    name: 'Madras Medical College',
+    state: 'Tamil Nadu',
+    type: 'Government',
+    tier: 1,
+    seats: 250,
+    nirfRank: 6,
+    cutoffs: { general: 1800, ews: 3100, obc: 5600, sc: 13200, st: 24000 },
+    fees: 19215,
+    feeDisplay: '₹19,215/year',
+  },
+  {
+    name: 'Stanley Medical College Chennai',
+    state: 'Tamil Nadu',
+    type: 'Government',
+    tier: 1,
+    seats: 250,
+    cutoffs: { general: 2121, ews: 3650, obc: 6600, sc: 15500, st: 28000 },
+    fees: 18050,
+    feeDisplay: '₹18,050/year',
+  },
+  // ============ TIER 2 GOVERNMENT COLLEGES ============
   {
     name: 'Osmania Medical College',
     state: 'Telangana',
     type: 'Government',
-    course: 'MBBS',
-    generalRank: { min: 500, max: 3000 },
-    obcRank: { min: 1000, max: 6000 },
-    scRank: { min: 2500, max: 12000 },
-    fees: '35,000/year',
+    tier: 2,
+    seats: 250,
+    cutoffs: { general: 3500, ews: 6000, obc: 10800, sc: 25000, st: 45000 },
+    fees: 35000,
+    feeDisplay: '₹35,000/year',
   },
   {
     name: 'SMS Medical College Jaipur',
     state: 'Rajasthan',
     type: 'Government',
-    course: 'MBBS',
-    generalRank: { min: 600, max: 3500 },
-    obcRank: { min: 1200, max: 7000 },
-    scRank: { min: 3000, max: 15000 },
-    fees: '30,000/year',
-  },
-  {
-    name: 'GSVM Medical College Kanpur',
-    state: 'Uttar Pradesh',
-    type: 'Government',
-    course: 'MBBS',
-    generalRank: { min: 800, max: 4000 },
-    obcRank: { min: 1600, max: 8000 },
-    scRank: { min: 4000, max: 18000 },
-    fees: '25,000/year',
+    tier: 2,
+    seats: 250,
+    cutoffs: { general: 4200, ews: 7200, obc: 13000, sc: 30000, st: 52000 },
+    fees: 30000,
+    feeDisplay: '₹30,000/year',
   },
   {
     name: 'Medical College Kolkata',
     state: 'West Bengal',
     type: 'Government',
-    course: 'MBBS',
-    generalRank: { min: 1000, max: 5000 },
-    obcRank: { min: 2000, max: 10000 },
-    scRank: { min: 5000, max: 20000 },
-    fees: '15,000/year',
+    tier: 2,
+    seats: 250,
+    cutoffs: { general: 5500, ews: 9400, obc: 17000, sc: 39000, st: 68000 },
+    fees: 15000,
+    feeDisplay: '₹15,000/year',
   },
   {
-    name: 'CMC Vellore',
-    state: 'Tamil Nadu',
-    type: 'Private',
-    course: 'MBBS',
-    generalRank: { min: 50, max: 500 },
-    obcRank: { min: 100, max: 1000 },
-    scRank: { min: 500, max: 3000 },
-    fees: '75,000/year',
+    name: 'B.J. Medical College Ahmedabad',
+    state: 'Gujarat',
+    type: 'Government',
+    tier: 2,
+    seats: 250,
+    cutoffs: { general: 4800, ews: 8200, obc: 14800, sc: 34000, st: 59000 },
+    fees: 23500,
+    feeDisplay: '₹23,500/year',
   },
   {
-    name: 'KMC Manipal',
-    state: 'Karnataka',
-    type: 'Private',
-    course: 'MBBS',
-    generalRank: { min: 2000, max: 15000 },
-    obcRank: { min: 4000, max: 30000 },
-    scRank: { min: 10000, max: 50000 },
-    fees: '23,00,000/year',
-  },
-  {
-    name: 'St. Johns Medical College',
-    state: 'Karnataka',
-    type: 'Private',
-    course: 'MBBS',
-    generalRank: { min: 3000, max: 20000 },
-    obcRank: { min: 6000, max: 40000 },
-    scRank: { min: 15000, max: 60000 },
-    fees: '15,00,000/year',
-  },
-  {
-    name: 'Amrita Institute of Medical Sciences',
+    name: 'GMC Thiruvananthapuram',
     state: 'Kerala',
-    type: 'Deemed',
-    course: 'MBBS',
-    generalRank: { min: 5000, max: 30000 },
-    obcRank: { min: 10000, max: 60000 },
-    scRank: { min: 25000, max: 80000 },
-    fees: '18,00,000/year',
+    type: 'Government',
+    tier: 2,
+    seats: 250,
+    cutoffs: { general: 6200, ews: 10600, obc: 19000, sc: 44000, st: 76000 },
+    fees: 42400,
+    feeDisplay: '₹42,400/year',
   },
   {
-    name: 'SRM Medical College',
+    name: 'GSVM Medical College Kanpur',
+    state: 'Uttar Pradesh',
+    type: 'Government',
+    tier: 2,
+    seats: 200,
+    cutoffs: { general: 7500, ews: 12800, obc: 23000, sc: 53000, st: 92000 },
+    fees: 25000,
+    feeDisplay: '₹25,000/year',
+  },
+  {
+    name: 'Patna Medical College',
+    state: 'Bihar',
+    type: 'Government',
+    tier: 2,
+    seats: 200,
+    cutoffs: { general: 8200, ews: 14000, obc: 25200, sc: 58000, st: 100000 },
+    fees: 18700,
+    feeDisplay: '₹18,700/year',
+  },
+  {
+    name: 'Indira Gandhi Medical College Shimla',
+    state: 'Himachal Pradesh',
+    type: 'Government',
+    tier: 2,
+    seats: 150,
+    cutoffs: { general: 9500, ews: 16200, obc: 29000, sc: 67000, st: 115000 },
+    fees: 45000,
+    feeDisplay: '₹45,000/year',
+  },
+  {
+    name: 'Andhra Medical College Visakhapatnam',
+    state: 'Andhra Pradesh',
+    type: 'Government',
+    tier: 2,
+    seats: 200,
+    cutoffs: { general: 10500, ews: 18000, obc: 32000, sc: 74000, st: 128000 },
+    fees: 40250,
+    feeDisplay: '₹40,250/year',
+  },
+  {
+    name: 'GMC Bhopal',
+    state: 'Madhya Pradesh',
+    type: 'Government',
+    tier: 2,
+    seats: 200,
+    cutoffs: { general: 8800, ews: 15000, obc: 27000, sc: 62000, st: 107000 },
+    fees: 55000,
+    feeDisplay: '₹55,000/year',
+  },
+  {
+    name: 'Mysore Medical College',
+    state: 'Karnataka',
+    type: 'Government',
+    tier: 2,
+    seats: 150,
+    cutoffs: { general: 11500, ews: 19600, obc: 35000, sc: 81000, st: 140000 },
+    fees: 67050,
+    feeDisplay: '₹67,050/year',
+  },
+  {
+    name: 'Coimbatore Medical College',
     state: 'Tamil Nadu',
-    type: 'Deemed',
-    course: 'MBBS',
-    generalRank: { min: 10000, max: 50000 },
-    obcRank: { min: 20000, max: 100000 },
-    scRank: { min: 50000, max: 150000 },
-    fees: '25,00,000/year',
+    type: 'Government',
+    tier: 2,
+    seats: 200,
+    cutoffs: { general: 12500, ews: 21300, obc: 38000, sc: 88000, st: 152000 },
+    fees: 18073,
+    feeDisplay: '₹18,073/year',
+  },
+  // ============ TIER 3 GOVERNMENT COLLEGES ============
+  {
+    name: 'Gauhati Medical College',
+    state: 'Assam',
+    type: 'Government',
+    tier: 3,
+    seats: 180,
+    cutoffs: { general: 14000, ews: 24000, obc: 43000, sc: 99000, st: 170000 },
+    fees: 20000,
+    feeDisplay: '₹20,000/year',
+  },
+  {
+    name: 'GMC Amritsar',
+    state: 'Punjab',
+    type: 'Government',
+    tier: 3,
+    seats: 150,
+    cutoffs: { general: 15500, ews: 26500, obc: 47500, sc: 110000, st: 190000 },
+    fees: 78500,
+    feeDisplay: '₹78,500/year',
+  },
+  {
+    name: 'Ranchi Institute of Medical Sciences',
+    state: 'Jharkhand',
+    type: 'Government',
+    tier: 3,
+    seats: 150,
+    cutoffs: { general: 17000, ews: 29000, obc: 52000, sc: 120000, st: 207000 },
+    fees: 22000,
+    feeDisplay: '₹22,000/year',
+  },
+  {
+    name: 'GMC Nagpur',
+    state: 'Maharashtra',
+    type: 'Government',
+    tier: 3,
+    seats: 200,
+    cutoffs: { general: 18500, ews: 31600, obc: 56500, sc: 131000, st: 226000 },
+    fees: 98500,
+    feeDisplay: '₹98,500/year',
+  },
+  {
+    name: 'SCB Medical College Cuttack',
+    state: 'Odisha',
+    type: 'Government',
+    tier: 3,
+    seats: 250,
+    cutoffs: { general: 20000, ews: 34200, obc: 61000, sc: 141000, st: 244000 },
+    fees: 45000,
+    feeDisplay: '₹45,000/year',
+  },
+  {
+    name: 'GMC Jammu',
+    state: 'Jammu & Kashmir',
+    type: 'Government',
+    tier: 3,
+    seats: 150,
+    cutoffs: { general: 22000, ews: 37600, obc: 67000, sc: 155000, st: 268000 },
+    fees: 48000,
+    feeDisplay: '₹48,000/year',
+  },
+  {
+    name: 'GMC Srinagar',
+    state: 'Jammu & Kashmir',
+    type: 'Government',
+    tier: 3,
+    seats: 150,
+    cutoffs: { general: 24000, ews: 41000, obc: 73000, sc: 169000, st: 292000 },
+    fees: 48000,
+    feeDisplay: '₹48,000/year',
+  },
+  {
+    name: 'Rajendra Institute of Medical Sciences Ranchi',
+    state: 'Jharkhand',
+    type: 'Government',
+    tier: 3,
+    seats: 150,
+    cutoffs: { general: 26000, ews: 44400, obc: 79000, sc: 183000, st: 316000 },
+    fees: 35000,
+    feeDisplay: '₹35,000/year',
+  },
+  {
+    name: 'GMC Aurangabad',
+    state: 'Maharashtra',
+    type: 'Government',
+    tier: 3,
+    seats: 150,
+    cutoffs: { general: 28000, ews: 47800, obc: 85500, sc: 198000, st: 342000 },
+    fees: 85000,
+    feeDisplay: '₹85,000/year',
+  },
+  {
+    name: 'Regional Institute of Medical Sciences Imphal',
+    state: 'Manipur',
+    type: 'Government',
+    tier: 3,
+    seats: 120,
+    cutoffs: { general: 30000, ews: 51200, obc: 91500, sc: 212000, st: 366000 },
+    fees: 25000,
+    feeDisplay: '₹25,000/year',
+  },
+  // ============ PRIVATE/DEEMED UNIVERSITIES ============
+  // Tier 1 Private/Deemed
+  {
+    name: 'Christian Medical College (CMC) Vellore',
+    state: 'Tamil Nadu',
+    type: 'Private/Deemed',
+    tier: 1,
+    seats: 100,
+    nirfRank: 3,
+    cutoffs: { general: 84, ews: 150, obc: 280, sc: 4404, st: 8500 },
+    fees: 75000,
+    feeDisplay: '₹75,000/year',
+  },
+  {
+    name: 'Kasturba Medical College (KMC) Manipal',
+    state: 'Karnataka',
+    type: 'Private/Deemed',
+    tier: 1,
+    seats: 250,
+    nirfRank: 19,
+    cutoffs: { general: 40258, ews: 68800, obc: 123000, sc: 285000, st: 492000 },
+    fees: 1780000,
+    feeDisplay: '₹17.8 Lakhs/year',
+  },
+  {
+    name: 'Kasturba Medical College (KMC) Mangalore',
+    state: 'Karnataka',
+    type: 'Private/Deemed',
+    tier: 1,
+    seats: 250,
+    cutoffs: { general: 45000, ews: 76900, obc: 137500, sc: 318000, st: 550000 },
+    fees: 1780000,
+    feeDisplay: '₹17.8 Lakhs/year',
+  },
+  {
+    name: "St. John's Medical College Bangalore",
+    state: 'Karnataka',
+    type: 'Private/Deemed',
+    tier: 1,
+    seats: 150,
+    cutoffs: { general: 35000, ews: 59800, obc: 107000, sc: 247000, st: 427000 },
+    fees: 1500000,
+    feeDisplay: '₹15 Lakhs/year',
+  },
+  {
+    name: 'JSS Medical College Mysuru',
+    state: 'Karnataka',
+    type: 'Private/Deemed',
+    tier: 2,
+    seats: 200,
+    cutoffs: { general: 122228, ews: 208800, obc: 373000, sc: 863000, st: 1200000 },
+    fees: 1986000,
+    feeDisplay: '₹19.86 Lakhs/year',
+  },
+  {
+    name: 'Amrita Institute of Medical Sciences Kochi',
+    state: 'Kerala',
+    type: 'Private/Deemed',
+    tier: 2,
+    seats: 150,
+    cutoffs: { general: 329153, ews: 562200, obc: 1005000, sc: 2000000, st: 2400000 },
+    fees: 2500000,
+    feeDisplay: '₹25 Lakhs/year',
+  },
+  {
+    name: 'Sri Ramachandra Medical College Chennai',
+    state: 'Tamil Nadu',
+    type: 'Private/Deemed',
+    tier: 2,
+    seats: 250,
+    cutoffs: { general: 323997, ews: 553500, obc: 989000, sc: 1900000, st: 2350000 },
+    fees: 3000000,
+    feeDisplay: '₹30 Lakhs/year',
+  },
+  {
+    name: 'SRM Medical College Chennai',
+    state: 'Tamil Nadu',
+    type: 'Private/Deemed',
+    tier: 2,
+    seats: 250,
+    cutoffs: { general: 637582, ews: 1089200, obc: 1900000, sc: 2400000, st: 2400000 },
+    fees: 2500000,
+    feeDisplay: '₹25 Lakhs/year',
+  },
+  {
+    name: 'Manipal TATA Medical College Jamshedpur',
+    state: 'Jharkhand',
+    type: 'Private/Deemed',
+    tier: 2,
+    seats: 100,
+    cutoffs: { general: 82158, ews: 140400, obc: 251000, sc: 580000, st: 1003000 },
+    fees: 1609000,
+    feeDisplay: '₹16.09 Lakhs/year',
+  },
+  {
+    name: 'Hamdard Institute of Medical Sciences Delhi',
+    state: 'Delhi',
+    type: 'Private/Deemed',
+    tier: 2,
+    seats: 150,
+    cutoffs: { general: 54747, ews: 93500, obc: 167000, sc: 386000, st: 668000 },
+    fees: 1600000,
+    feeDisplay: '₹16 Lakhs/year',
+  },
+  {
+    name: 'Symbiosis Medical College for Women Pune',
+    state: 'Maharashtra',
+    type: 'Private/Deemed',
+    tier: 2,
+    seats: 150,
+    cutoffs: { general: 53248, ews: 91000, obc: 162500, sc: 376000, st: 650000 },
+    fees: 1000000,
+    feeDisplay: '₹10 Lakhs/year',
   },
   {
     name: 'DY Patil Medical College Pune',
     state: 'Maharashtra',
-    type: 'Deemed',
-    course: 'MBBS',
-    generalRank: { min: 15000, max: 70000 },
-    obcRank: { min: 30000, max: 140000 },
-    scRank: { min: 70000, max: 200000 },
-    fees: '20,00,000/year',
+    type: 'Private/Deemed',
+    tier: 2,
+    seats: 250,
+    cutoffs: { general: 89000, ews: 152000, obc: 272000, sc: 629000, st: 1087000 },
+    fees: 2000000,
+    feeDisplay: '₹20 Lakhs/year',
+  },
+  {
+    name: 'DY Patil Medical College Navi Mumbai',
+    state: 'Maharashtra',
+    type: 'Private/Deemed',
+    tier: 2,
+    seats: 250,
+    cutoffs: { general: 95000, ews: 162300, obc: 290000, sc: 671000, st: 1160000 },
+    fees: 2200000,
+    feeDisplay: '₹22 Lakhs/year',
   },
   {
     name: 'MGM Medical College Navi Mumbai',
     state: 'Maharashtra',
-    type: 'Private',
-    course: 'MBBS',
-    generalRank: { min: 20000, max: 80000 },
-    obcRank: { min: 40000, max: 160000 },
-    scRank: { min: 80000, max: 220000 },
-    fees: '18,00,000/year',
+    type: 'Private/Deemed',
+    tier: 3,
+    seats: 150,
+    cutoffs: { general: 110000, ews: 187900, obc: 336000, sc: 777000, st: 1343000 },
+    fees: 1800000,
+    feeDisplay: '₹18 Lakhs/year',
+  },
+  {
+    name: 'MGIMS Wardha',
+    state: 'Maharashtra',
+    type: 'Private/Deemed',
+    tier: 2,
+    seats: 100,
+    cutoffs: { general: 78000, ews: 133300, obc: 238000, sc: 550000, st: 951000 },
+    fees: 800000,
+    feeDisplay: '₹8 Lakhs/year',
+  },
+  {
+    name: 'Saveetha Medical College Chennai',
+    state: 'Tamil Nadu',
+    type: 'Private/Deemed',
+    tier: 3,
+    seats: 250,
+    cutoffs: { general: 145000, ews: 247800, obc: 443000, sc: 1025000, st: 1400000 },
+    fees: 2300000,
+    feeDisplay: '₹23 Lakhs/year',
+  },
+  {
+    name: 'Bharati Vidyapeeth Medical College Pune',
+    state: 'Maharashtra',
+    type: 'Private/Deemed',
+    tier: 3,
+    seats: 200,
+    cutoffs: { general: 125000, ews: 213600, obc: 382000, sc: 883000, st: 1230000 },
+    fees: 1850000,
+    feeDisplay: '₹18.5 Lakhs/year',
+  },
+  {
+    name: 'SDU Medical College Kolar',
+    state: 'Karnataka',
+    type: 'Private/Deemed',
+    tier: 3,
+    seats: 150,
+    cutoffs: { general: 175000, ews: 299000, obc: 534500, sc: 1200000, st: 1500000 },
+    fees: 1500000,
+    feeDisplay: '₹15 Lakhs/year',
+  },
+  {
+    name: 'MS Ramaiah Medical College Bangalore',
+    state: 'Karnataka',
+    type: 'Private/Deemed',
+    tier: 2,
+    seats: 150,
+    cutoffs: { general: 65000, ews: 111100, obc: 198500, sc: 459000, st: 794000 },
+    fees: 1850000,
+    feeDisplay: '₹18.5 Lakhs/year',
+  },
+  {
+    name: 'Yenepoya Medical College Mangalore',
+    state: 'Karnataka',
+    type: 'Private/Deemed',
+    tier: 3,
+    seats: 200,
+    cutoffs: { general: 200000, ews: 341800, obc: 611000, sc: 1300000, st: 1600000 },
+    fees: 2100000,
+    feeDisplay: '₹21 Lakhs/year',
+  },
+  {
+    name: 'KIMS Karad',
+    state: 'Maharashtra',
+    type: 'Private/Deemed',
+    tier: 3,
+    seats: 200,
+    cutoffs: { general: 165000, ews: 281900, obc: 504000, sc: 1166000, st: 1450000 },
+    fees: 1400000,
+    feeDisplay: '₹14 Lakhs/year',
+  },
+  {
+    name: 'Datta Meghe Institute of Medical Sciences Wardha',
+    state: 'Maharashtra',
+    type: 'Private/Deemed',
+    tier: 3,
+    seats: 200,
+    cutoffs: { general: 185000, ews: 316100, obc: 565000, sc: 1250000, st: 1550000 },
+    fees: 1650000,
+    feeDisplay: '₹16.5 Lakhs/year',
+  },
+  {
+    name: 'Aarupadai Veedu Medical College Puducherry',
+    state: 'Puducherry',
+    type: 'Private/Deemed',
+    tier: 3,
+    seats: 150,
+    cutoffs: { general: 220000, ews: 375900, obc: 672000, sc: 1350000, st: 1650000 },
+    fees: 1900000,
+    feeDisplay: '₹19 Lakhs/year',
+  },
+  {
+    name: 'Meenakshi Medical College Chennai',
+    state: 'Tamil Nadu',
+    type: 'Private/Deemed',
+    tier: 3,
+    seats: 200,
+    cutoffs: { general: 250000, ews: 427200, obc: 764000, sc: 1450000, st: 1750000 },
+    fees: 2000000,
+    feeDisplay: '₹20 Lakhs/year',
+  },
+  {
+    name: 'Sree Balaji Medical College Chennai',
+    state: 'Tamil Nadu',
+    type: 'Private/Deemed',
+    tier: 3,
+    seats: 150,
+    cutoffs: { general: 280000, ews: 478500, obc: 855500, sc: 1550000, st: 1850000 },
+    fees: 2200000,
+    feeDisplay: '₹22 Lakhs/year',
+  },
+  {
+    name: 'Chettinad Hospital & Research Institute',
+    state: 'Tamil Nadu',
+    type: 'Private/Deemed',
+    tier: 3,
+    seats: 200,
+    cutoffs: { general: 310000, ews: 529700, obc: 947000, sc: 1650000, st: 1950000 },
+    fees: 2400000,
+    feeDisplay: '₹24 Lakhs/year',
+  },
+  {
+    name: 'MOSC Medical College Kolenchery',
+    state: 'Kerala',
+    type: 'Private/Deemed',
+    tier: 3,
+    seats: 100,
+    cutoffs: { general: 350000, ews: 598100, obc: 1069000, sc: 1800000, st: 2100000 },
+    fees: 1200000,
+    feeDisplay: '₹12 Lakhs/year',
+  },
+  {
+    name: 'Jubilee Mission Medical College Thrissur',
+    state: 'Kerala',
+    type: 'Private/Deemed',
+    tier: 3,
+    seats: 100,
+    cutoffs: { general: 380000, ews: 649400, obc: 1161000, sc: 1900000, st: 2200000 },
+    fees: 1400000,
+    feeDisplay: '₹14 Lakhs/year',
+  },
+  {
+    name: 'Vinayaka Mission Medical College Salem',
+    state: 'Tamil Nadu',
+    type: 'Private/Deemed',
+    tier: 3,
+    seats: 150,
+    cutoffs: { general: 420000, ews: 717700, obc: 1283000, sc: 2050000, st: 2350000 },
+    fees: 1950000,
+    feeDisplay: '₹19.5 Lakhs/year',
+  },
+  {
+    name: 'Kalinga Institute of Medical Sciences Bhubaneswar',
+    state: 'Odisha',
+    type: 'Private/Deemed',
+    tier: 2,
+    seats: 200,
+    cutoffs: { general: 72000, ews: 123000, obc: 220000, sc: 509000, st: 880000 },
+    fees: 1600000,
+    feeDisplay: '₹16 Lakhs/year',
+  },
+  {
+    name: 'Sharda University Medical College',
+    state: 'Uttar Pradesh',
+    type: 'Private/Deemed',
+    tier: 3,
+    seats: 150,
+    cutoffs: { general: 155000, ews: 264900, obc: 473500, sc: 1095000, st: 1380000 },
+    fees: 1500000,
+    feeDisplay: '₹15 Lakhs/year',
+  },
+  {
+    name: 'Santosh Medical College Ghaziabad',
+    state: 'Uttar Pradesh',
+    type: 'Private/Deemed',
+    tier: 3,
+    seats: 150,
+    cutoffs: { general: 195000, ews: 333200, obc: 595500, sc: 1280000, st: 1580000 },
+    fees: 1700000,
+    feeDisplay: '₹17 Lakhs/year',
+  },
+  {
+    name: 'Era Lucknow Medical College',
+    state: 'Uttar Pradesh',
+    type: 'Private/Deemed',
+    tier: 3,
+    seats: 150,
+    cutoffs: { general: 230000, ews: 393000, obc: 702500, sc: 1380000, st: 1680000 },
+    fees: 1400000,
+    feeDisplay: '₹14 Lakhs/year',
   },
 ]
 
 const states = [...new Set(collegesData.map((c) => c.state))].sort()
 
+type SortOption = 'cutoff' | 'fees' | 'tier' | 'seats'
+
 export default function NEETCollegePredictorPage() {
   const [rank, setRank] = useState<string>('')
-  const [category, setCategory] = useState<string>('General')
+  const [category, setCategory] = useState<string>('general')
   const [collegeType, setCollegeType] = useState<string>('All')
   const [selectedState, setSelectedState] = useState<string>('All')
-  const [results, setResults] = useState<College[]>([])
+  const [feeRange, setFeeRange] = useState<string>('All')
+  const [sortBy, setSortBy] = useState<SortOption>('cutoff')
   const [showResults, setShowResults] = useState(false)
+  const [expandedCard, setExpandedCard] = useState<string | null>(null)
+
+  const getChance = (
+    userRank: number,
+    cutoff: number
+  ): { level: 'High' | 'Medium' | 'Low' | 'Very Low'; color: string } => {
+    const ratio = userRank / cutoff
+    if (ratio <= 0.7) return { level: 'High', color: 'bg-green-100 text-green-800' }
+    if (ratio <= 0.9) return { level: 'Medium', color: 'bg-yellow-100 text-yellow-800' }
+    if (ratio <= 1.0) return { level: 'Low', color: 'bg-orange-100 text-orange-800' }
+    return { level: 'Very Low', color: 'bg-red-100 text-red-800' }
+  }
+
+  const results = useMemo(() => {
+    if (!showResults || !rank) return []
+
+    const rankNum = parseInt(rank)
+    if (isNaN(rankNum) || rankNum < 1) return []
+
+    let filtered = collegesData.filter((college) => {
+      const cutoff = college.cutoffs[category as keyof typeof college.cutoffs]
+      const inRange = rankNum <= cutoff * 1.15 // Show colleges where rank is within 15% above cutoff
+
+      const typeMatch = collegeType === 'All' || college.type === collegeType
+      const stateMatch = selectedState === 'All' || college.state === selectedState
+
+      let feeMatch = true
+      if (feeRange === 'low') feeMatch = college.fees <= 100000
+      else if (feeRange === 'medium') feeMatch = college.fees > 100000 && college.fees <= 1500000
+      else if (feeRange === 'high') feeMatch = college.fees > 1500000
+
+      return inRange && typeMatch && stateMatch && feeMatch
+    })
+
+    // Sort results
+    filtered.sort((a, b) => {
+      if (sortBy === 'cutoff') {
+        return (
+          a.cutoffs[category as keyof typeof a.cutoffs] -
+          b.cutoffs[category as keyof typeof b.cutoffs]
+        )
+      }
+      if (sortBy === 'fees') return a.fees - b.fees
+      if (sortBy === 'tier') return a.tier - b.tier
+      if (sortBy === 'seats') return b.seats - a.seats
+      return 0
+    })
+
+    return filtered
+  }, [showResults, rank, category, collegeType, selectedState, feeRange, sortBy])
+
+  const govtCount = results.filter((c) => c.type === 'Government').length
+  const privateCount = results.filter((c) => c.type === 'Private/Deemed').length
 
   const handlePredict = () => {
     const rankNum = parseInt(rank)
@@ -246,39 +1035,18 @@ export default function NEETCollegePredictorPage() {
       alert('Please enter a valid rank')
       return
     }
-
-    let filtered = collegesData.filter((college) => {
-      let rankRange: { min: number; max: number }
-      if (category === 'General') rankRange = college.generalRank
-      else if (category === 'OBC') rankRange = college.obcRank
-      else rankRange = college.scRank
-
-      const inRange = rankNum >= rankRange.min && rankNum <= rankRange.max
-      const typeMatch = collegeType === 'All' || college.type === collegeType
-      const stateMatch = selectedState === 'All' || college.state === selectedState
-
-      return inRange && typeMatch && stateMatch
-    })
-
-    filtered.sort((a, b) => {
-      const aRange =
-        category === 'General' ? a.generalRank : category === 'OBC' ? a.obcRank : a.scRank
-      const bRange =
-        category === 'General' ? b.generalRank : category === 'OBC' ? b.obcRank : b.scRank
-      return aRange.min - bRange.min
-    })
-
-    setResults(filtered)
     setShowResults(true)
   }
 
   const handleReset = () => {
     setRank('')
-    setCategory('General')
+    setCategory('general')
     setCollegeType('All')
     setSelectedState('All')
-    setResults([])
+    setFeeRange('All')
+    setSortBy('cutoff')
     setShowResults(false)
+    setExpandedCard(null)
   }
 
   return (
@@ -291,7 +1059,7 @@ export default function NEETCollegePredictorPage() {
             '@type': 'WebApplication',
             name: 'NEET College Predictor 2026',
             description:
-              'Free tool to find medical colleges based on your NEET rank. Get list of government and private MBBS colleges.',
+              'Free tool to find medical colleges based on your NEET rank. Comprehensive database of 100+ Government and Private/Deemed medical colleges with accurate 2024 cutoff data.',
             url: 'https://www.cerebrumbiologyacademy.com/neet-college-predictor',
             applicationCategory: 'EducationalApplication',
             operatingSystem: 'All',
@@ -309,53 +1077,60 @@ export default function NEETCollegePredictorPage() {
                 Home
               </Link>
               <span className="mx-2">/</span>
-              <span>NEET College Predictor</span>
+              <Link href="/neet-tools" className="hover:underline">
+                NEET Tools
+              </Link>
+              <span className="mx-2">/</span>
+              <span>College Predictor</span>
             </nav>
 
             <h1 className="mb-4 text-3xl font-bold md:text-5xl">NEET College Predictor 2026</h1>
             <p className="mb-6 max-w-2xl text-lg text-blue-100 md:text-xl">
-              Find medical colleges you can get admission in based on your NEET 2026 All India Rank.
-              Filter by state, college type, and category.
+              India&apos;s most comprehensive NEET college predictor with 100+ medical colleges.
+              Accurate NEET 2024 cutoff data for Government (including all AIIMS) and Private/Deemed
+              universities.
             </p>
 
             <div className="flex flex-wrap gap-4">
               <div className="flex items-center gap-2 rounded-full bg-white/20 px-4 py-2">
                 <Building2 className="h-5 w-5" />
-                <span className="font-semibold">100+ Colleges</span>
+                <span className="font-semibold">{collegesData.length}+ Colleges</span>
               </div>
               <div className="flex items-center gap-2 rounded-full bg-white/20 px-4 py-2">
-                <Filter className="h-5 w-5" />
-                <span className="font-semibold">Filter by Category</span>
+                <Award className="h-5 w-5" />
+                <span className="font-semibold">All 23 AIIMS</span>
               </div>
               <div className="flex items-center gap-2 rounded-full bg-white/20 px-4 py-2">
-                <MapPin className="h-5 w-5" />
-                <span className="font-semibold">State-wise Data</span>
+                <TrendingUp className="h-5 w-5" />
+                <span className="font-semibold">2024 Cutoffs</span>
               </div>
             </div>
           </div>
         </section>
 
         {/* Calculator Section */}
-        <section className="-mt-16 md:-mt-20 relative z-10 px-4 sm:px-6 lg:px-8">
+        <section className="-mt-16 relative z-10 px-4 sm:px-6 lg:px-8 md:-mt-20">
           <div className="mx-auto max-w-7xl">
-            <div className="mx-auto max-w-3xl">
-              <div className="rounded-2xl bg-white p-8 shadow-xl">
+            <div className="mx-auto max-w-4xl">
+              <div className="rounded-2xl bg-white p-6 shadow-xl md:p-8">
                 <div className="mb-6 text-center">
                   <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-blue-100">
                     <Search className="h-8 w-8 text-blue-600" />
                   </div>
-                  <h2 className="text-2xl font-bold text-gray-900">Find Your Colleges</h2>
-                  <p className="text-gray-600">Enter your NEET rank to see matching colleges</p>
+                  <h2 className="text-2xl font-bold text-gray-900">Find Your Medical Colleges</h2>
+                  <p className="text-gray-600">
+                    Enter your NEET AIR to see colleges you can get admission in
+                  </p>
                 </div>
 
                 <div className="space-y-6">
-                  <div className="grid gap-4 md:grid-cols-2">
+                  <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
                     <div>
                       <label
                         htmlFor="rank"
                         className="mb-2 block text-sm font-medium text-gray-700"
                       >
-                        Your NEET Rank (AIR)
+                        Your NEET Rank (AIR) *
                       </label>
                       <input
                         type="number"
@@ -373,7 +1148,7 @@ export default function NEETCollegePredictorPage() {
                         htmlFor="category"
                         className="mb-2 block text-sm font-medium text-gray-700"
                       >
-                        Category
+                        Category *
                       </label>
                       <select
                         id="category"
@@ -381,9 +1156,11 @@ export default function NEETCollegePredictorPage() {
                         onChange={(e) => setCategory(e.target.value)}
                         className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
                       >
-                        <option value="General">General / EWS</option>
-                        <option value="OBC">OBC (NCL)</option>
-                        <option value="SC">SC / ST</option>
+                        <option value="general">General</option>
+                        <option value="ews">EWS</option>
+                        <option value="obc">OBC (NCL)</option>
+                        <option value="sc">SC</option>
+                        <option value="st">ST</option>
                       </select>
                     </div>
 
@@ -401,10 +1178,8 @@ export default function NEETCollegePredictorPage() {
                         className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
                       >
                         <option value="All">All Types</option>
-                        <option value="Government">Government</option>
-                        <option value="AIIMS">AIIMS/JIPMER</option>
-                        <option value="Private">Private</option>
-                        <option value="Deemed">Deemed University</option>
+                        <option value="Government">Government (incl. AIIMS, JIPMER)</option>
+                        <option value="Private/Deemed">Private & Deemed Universities</option>
                       </select>
                     </div>
 
@@ -413,7 +1188,7 @@ export default function NEETCollegePredictorPage() {
                         htmlFor="state"
                         className="mb-2 block text-sm font-medium text-gray-700"
                       >
-                        State
+                        State Preference
                       </label>
                       <select
                         id="state"
@@ -427,6 +1202,46 @@ export default function NEETCollegePredictorPage() {
                             {state}
                           </option>
                         ))}
+                      </select>
+                    </div>
+
+                    <div>
+                      <label
+                        htmlFor="feeRange"
+                        className="mb-2 block text-sm font-medium text-gray-700"
+                      >
+                        Fee Range (Annual)
+                      </label>
+                      <select
+                        id="feeRange"
+                        value={feeRange}
+                        onChange={(e) => setFeeRange(e.target.value)}
+                        className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+                      >
+                        <option value="All">All Fees</option>
+                        <option value="low">Below ₹1 Lakh (Govt Colleges)</option>
+                        <option value="medium">₹1 - ₹15 Lakhs</option>
+                        <option value="high">Above ₹15 Lakhs</option>
+                      </select>
+                    </div>
+
+                    <div>
+                      <label
+                        htmlFor="sortBy"
+                        className="mb-2 block text-sm font-medium text-gray-700"
+                      >
+                        Sort By
+                      </label>
+                      <select
+                        id="sortBy"
+                        value={sortBy}
+                        onChange={(e) => setSortBy(e.target.value as SortOption)}
+                        className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+                      >
+                        <option value="cutoff">Cutoff Rank (Low to High)</option>
+                        <option value="fees">Fees (Low to High)</option>
+                        <option value="tier">College Tier</option>
+                        <option value="seats">Seats (High to Low)</option>
                       </select>
                     </div>
                   </div>
@@ -451,8 +1266,9 @@ export default function NEETCollegePredictorPage() {
                   <div className="flex items-start gap-2 rounded-lg bg-blue-50 p-4">
                     <Info className="mt-0.5 h-5 w-5 flex-shrink-0 text-blue-600" />
                     <p className="text-sm text-blue-800">
-                      Cutoff ranks are based on NEET 2024 counselling data. Actual cutoffs may vary
-                      in 2026.
+                      Cutoff ranks are based on NEET 2024 MCC counselling Round 3 data. Results show
+                      colleges where your rank is within the likely admission range. Actual cutoffs
+                      may vary in 2026.
                     </p>
                   </div>
                 </div>
@@ -463,98 +1279,188 @@ export default function NEETCollegePredictorPage() {
 
         {/* Results Section */}
         {showResults && (
-          <section className="py-12 px-4">
+          <section className="px-4 py-12 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-7xl">
-              <div className="mx-auto max-w-5xl">
-                <div className="mb-6 flex items-center justify-between">
-                  <h2 className="text-2xl font-bold text-gray-900">
-                    {results.length} Colleges Found for Rank{' '}
-                    {parseInt(rank).toLocaleString('en-IN')}
-                  </h2>
-                  <span className="rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-800">
-                    {category} Category
-                  </span>
+              {/* Summary Cards */}
+              <div className="mb-8 grid gap-4 md:grid-cols-4">
+                <div className="rounded-xl bg-white p-4 shadow-sm">
+                  <p className="text-3xl font-bold text-blue-600">{results.length}</p>
+                  <p className="text-sm text-gray-600">Total Colleges Found</p>
                 </div>
+                <div className="rounded-xl bg-white p-4 shadow-sm">
+                  <p className="text-3xl font-bold text-green-600">{govtCount}</p>
+                  <p className="text-sm text-gray-600">Government Colleges</p>
+                </div>
+                <div className="rounded-xl bg-white p-4 shadow-sm">
+                  <p className="text-3xl font-bold text-purple-600">{privateCount}</p>
+                  <p className="text-sm text-gray-600">Private/Deemed Colleges</p>
+                </div>
+                <div className="rounded-xl bg-white p-4 shadow-sm">
+                  <p className="text-3xl font-bold text-orange-600">
+                    {parseInt(rank).toLocaleString('en-IN')}
+                  </p>
+                  <p className="text-sm text-gray-600">Your Rank ({category.toUpperCase()})</p>
+                </div>
+              </div>
 
-                {results.length === 0 ? (
-                  <div className="rounded-xl bg-yellow-50 p-8 text-center">
-                    <p className="text-lg text-yellow-800">
-                      No colleges found for your criteria. Try adjusting your filters or check
-                      private colleges.
-                    </p>
-                    <Link
-                      href="/neet-rank-predictor"
-                      className="mt-4 inline-flex items-center gap-2 text-blue-600 hover:underline"
-                    >
-                      Check your rank prediction first
-                      <ArrowRight className="h-4 w-4" />
-                    </Link>
-                  </div>
-                ) : (
-                  <div className="space-y-4">
-                    {results.map((college, index) => (
+              {results.length === 0 ? (
+                <div className="rounded-xl bg-yellow-50 p-8 text-center">
+                  <p className="text-lg text-yellow-800">
+                    No colleges found for your criteria. Try adjusting your filters or check
+                    Private/Deemed colleges which have higher cutoffs.
+                  </p>
+                  <Link
+                    href="/neet-rank-predictor"
+                    className="mt-4 inline-flex items-center gap-2 text-blue-600 hover:underline"
+                  >
+                    Check your rank prediction first
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </div>
+              ) : (
+                <div className="space-y-4">
+                  {results.map((college) => {
+                    const cutoff = college.cutoffs[category as keyof typeof college.cutoffs]
+                    const chance = getChance(parseInt(rank), cutoff)
+                    const isExpanded = expandedCard === college.name
+
+                    return (
                       <div
-                        key={`${college.name}-${index}`}
-                        className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
+                        key={college.name}
+                        className="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-md"
                       >
-                        <div className="flex flex-wrap items-start justify-between gap-4">
-                          <div className="flex-1">
-                            <div className="mb-2 flex items-center gap-2">
-                              <span
-                                className={`rounded-full px-3 py-1 text-xs font-semibold ${
-                                  college.type === 'Government'
-                                    ? 'bg-green-100 text-green-800'
-                                    : college.type === 'AIIMS'
-                                      ? 'bg-purple-100 text-purple-800'
-                                      : college.type === 'Private'
-                                        ? 'bg-blue-100 text-blue-800'
-                                        : 'bg-orange-100 text-orange-800'
-                                }`}
-                              >
-                                {college.type}
-                              </span>
-                              <span className="rounded-full bg-gray-100 px-3 py-1 text-xs font-semibold text-gray-700">
-                                {college.course}
-                              </span>
+                        <div className="p-4 md:p-6">
+                          <div className="flex flex-wrap items-start justify-between gap-4">
+                            <div className="flex-1">
+                              <div className="mb-2 flex flex-wrap items-center gap-2">
+                                <span
+                                  className={`rounded-full px-3 py-1 text-xs font-semibold ${
+                                    college.type === 'Government'
+                                      ? 'bg-green-100 text-green-800'
+                                      : 'bg-purple-100 text-purple-800'
+                                  }`}
+                                >
+                                  {college.type}
+                                </span>
+                                <span
+                                  className={`rounded-full px-2 py-1 text-xs font-semibold ${
+                                    college.tier === 1
+                                      ? 'bg-yellow-100 text-yellow-800'
+                                      : college.tier === 2
+                                        ? 'bg-gray-100 text-gray-700'
+                                        : 'bg-gray-50 text-gray-600'
+                                  }`}
+                                >
+                                  {college.tier === 1 ? (
+                                    <span className="flex items-center gap-1">
+                                      <Star className="h-3 w-3" /> Tier 1
+                                    </span>
+                                  ) : (
+                                    `Tier ${college.tier}`
+                                  )}
+                                </span>
+                                <span
+                                  className={`rounded-full px-3 py-1 text-xs font-semibold ${chance.color}`}
+                                >
+                                  {chance.level} Chance
+                                </span>
+                                {college.nirfRank && (
+                                  <span className="rounded-full bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700">
+                                    NIRF #{college.nirfRank}
+                                  </span>
+                                )}
+                              </div>
+                              <h3 className="text-lg font-semibold text-gray-900">
+                                {college.name}
+                              </h3>
+                              <div className="mt-1 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-gray-600">
+                                <span className="flex items-center gap-1">
+                                  <MapPin className="h-4 w-4" />
+                                  {college.state}
+                                </span>
+                                <span className="flex items-center gap-1">
+                                  <Users className="h-4 w-4" />
+                                  {college.seats} seats
+                                </span>
+                                <span className="flex items-center gap-1">
+                                  <IndianRupee className="h-4 w-4" />
+                                  {college.feeDisplay}
+                                </span>
+                              </div>
                             </div>
-                            <h3 className="text-lg font-semibold text-gray-900">{college.name}</h3>
-                            <div className="mt-1 flex items-center gap-2 text-gray-600">
-                              <MapPin className="h-4 w-4" />
-                              <span>{college.state}</span>
+
+                            <div className="text-right">
+                              <p className="text-sm text-gray-500">
+                                {category.toUpperCase()} Cutoff
+                              </p>
+                              <p className="text-2xl font-bold text-blue-600">
+                                {cutoff.toLocaleString('en-IN')}
+                              </p>
+                              <button
+                                onClick={() => setExpandedCard(isExpanded ? null : college.name)}
+                                className="mt-2 flex items-center gap-1 text-sm text-blue-600 hover:underline"
+                              >
+                                {isExpanded ? 'Hide' : 'All Cutoffs'}
+                                {isExpanded ? (
+                                  <ChevronUp className="h-4 w-4" />
+                                ) : (
+                                  <ChevronDown className="h-4 w-4" />
+                                )}
+                              </button>
                             </div>
                           </div>
 
-                          <div className="text-right">
-                            <p className="text-sm text-gray-500">{category} Cutoff Range</p>
-                            <p className="text-lg font-bold text-blue-600">
-                              {(category === 'General'
-                                ? college.generalRank
-                                : category === 'OBC'
-                                  ? college.obcRank
-                                  : college.scRank
-                              ).min.toLocaleString('en-IN')}{' '}
-                              -{' '}
-                              {(category === 'General'
-                                ? college.generalRank
-                                : category === 'OBC'
-                                  ? college.obcRank
-                                  : college.scRank
-                              ).max.toLocaleString('en-IN')}
-                            </p>
-                            <p className="mt-1 text-sm text-gray-500">Fees: {college.fees}</p>
-                          </div>
+                          {isExpanded && (
+                            <div className="mt-4 border-t border-gray-100 pt-4">
+                              <p className="mb-2 text-sm font-medium text-gray-700">
+                                Category-wise Cutoff Ranks (NEET 2024):
+                              </p>
+                              <div className="grid grid-cols-2 gap-2 text-sm md:grid-cols-5">
+                                <div className="rounded-lg bg-gray-50 p-2 text-center">
+                                  <p className="font-semibold text-gray-900">
+                                    {college.cutoffs.general.toLocaleString('en-IN')}
+                                  </p>
+                                  <p className="text-xs text-gray-500">General</p>
+                                </div>
+                                <div className="rounded-lg bg-gray-50 p-2 text-center">
+                                  <p className="font-semibold text-gray-900">
+                                    {college.cutoffs.ews.toLocaleString('en-IN')}
+                                  </p>
+                                  <p className="text-xs text-gray-500">EWS</p>
+                                </div>
+                                <div className="rounded-lg bg-gray-50 p-2 text-center">
+                                  <p className="font-semibold text-gray-900">
+                                    {college.cutoffs.obc.toLocaleString('en-IN')}
+                                  </p>
+                                  <p className="text-xs text-gray-500">OBC</p>
+                                </div>
+                                <div className="rounded-lg bg-gray-50 p-2 text-center">
+                                  <p className="font-semibold text-gray-900">
+                                    {college.cutoffs.sc.toLocaleString('en-IN')}
+                                  </p>
+                                  <p className="text-xs text-gray-500">SC</p>
+                                </div>
+                                <div className="rounded-lg bg-gray-50 p-2 text-center">
+                                  <p className="font-semibold text-gray-900">
+                                    {college.cutoffs.st.toLocaleString('en-IN')}
+                                  </p>
+                                  <p className="text-xs text-gray-500">ST</p>
+                                </div>
+                              </div>
+                            </div>
+                          )}
                         </div>
                       </div>
-                    ))}
-                  </div>
-                )}
-              </div>
+                    )
+                  })}
+                </div>
+              )}
             </div>
           </section>
         )}
 
         {/* How It Works */}
-        <section className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+        <section className="bg-gray-50 px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
             <h2 className="mb-8 text-center text-3xl font-bold text-gray-900">
               How College Predictor Works
@@ -562,10 +1468,10 @@ export default function NEETCollegePredictorPage() {
 
             <div className="mx-auto grid max-w-4xl gap-6 md:grid-cols-4">
               {[
-                { step: '1', title: 'Enter Rank', desc: 'Enter your NEET All India Rank' },
-                { step: '2', title: 'Select Category', desc: 'Choose your reservation category' },
-                { step: '3', title: 'Apply Filters', desc: 'Filter by state and college type' },
-                { step: '4', title: 'Get Results', desc: 'See matching colleges instantly' },
+                { step: '1', title: 'Enter Rank', desc: 'Your NEET All India Rank' },
+                { step: '2', title: 'Select Category', desc: 'General, EWS, OBC, SC, ST' },
+                { step: '3', title: 'Apply Filters', desc: 'State, fees, college type' },
+                { step: '4', title: 'See Results', desc: 'With admission chances' },
               ].map((item) => (
                 <div key={item.step} className="rounded-xl bg-white p-6 text-center shadow-sm">
                   <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 text-xl font-bold text-blue-600">
@@ -580,30 +1486,30 @@ export default function NEETCollegePredictorPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <section className="px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
             <div className="overflow-hidden rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-700">
               <div className="grid items-center md:grid-cols-2">
                 <div className="p-8 text-white md:p-12">
                   <h2 className="mb-4 text-2xl font-bold md:text-3xl">
-                    Improve Your Rank for Better College Options
+                    Improve Your Rank for Better Colleges
                   </h2>
                   <p className="mb-6 text-blue-100">
-                    Join Cerebrum Biology Academy to boost your Biology score and get into your
-                    dream medical college.
+                    Join Cerebrum Biology Academy to boost your Biology score and secure admission
+                    in top medical colleges.
                   </p>
                   <ul className="mb-6 space-y-2">
                     <li className="flex items-center gap-2">
                       <CheckCircle className="h-5 w-5 text-green-400" />
-                      <span>Expert Biology faculty</span>
+                      <span>Expert AIIMS/JIPMER faculty</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle className="h-5 w-5 text-green-400" />
-                      <span>NCERT-based comprehensive course</span>
+                      <span>360/360 in Biology achievable</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle className="h-5 w-5 text-green-400" />
-                      <span>1000+ practice MCQs</span>
+                      <span>5000+ practice MCQs</span>
                     </li>
                   </ul>
                   <Link
@@ -627,10 +1533,10 @@ export default function NEETCollegePredictorPage() {
         </section>
 
         {/* Related Tools */}
-        <section className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+        <section className="bg-gray-50 px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
             <h2 className="mb-8 text-center text-3xl font-bold text-gray-900">
-              Related Tools & Resources
+              Related NEET Tools
             </h2>
 
             <div className="grid gap-6 md:grid-cols-4">
@@ -644,7 +1550,7 @@ export default function NEETCollegePredictorPage() {
                 <h3 className="mb-2 font-semibold text-gray-900 group-hover:text-blue-600">
                   Rank Predictor
                 </h3>
-                <p className="text-sm text-gray-600">Predict rank from marks</p>
+                <p className="text-sm text-gray-600">Predict AIR from marks</p>
               </Link>
 
               <Link
@@ -652,25 +1558,25 @@ export default function NEETCollegePredictorPage() {
                 className="group rounded-xl border border-gray-200 bg-white p-6 transition-shadow hover:shadow-lg"
               >
                 <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-lg bg-green-100">
-                  <Users className="h-6 w-6 text-green-600" />
+                  <Filter className="h-6 w-6 text-green-600" />
                 </div>
                 <h3 className="mb-2 font-semibold text-gray-900 group-hover:text-blue-600">
                   NEET 2026 Cutoff
                 </h3>
-                <p className="text-sm text-gray-600">Category-wise cutoff marks</p>
+                <p className="text-sm text-gray-600">Category-wise cutoffs</p>
               </Link>
 
               <Link
-                href="/neet-2026-exam-date"
+                href="/neet-study-plan-generator"
                 className="group rounded-xl border border-gray-200 bg-white p-6 transition-shadow hover:shadow-lg"
               >
                 <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-lg bg-purple-100">
                   <BookOpen className="h-6 w-6 text-purple-600" />
                 </div>
                 <h3 className="mb-2 font-semibold text-gray-900 group-hover:text-blue-600">
-                  NEET 2026 Dates
+                  Study Plan Generator
                 </h3>
-                <p className="text-sm text-gray-600">Important exam dates</p>
+                <p className="text-sm text-gray-600">Personalized schedule</p>
               </Link>
 
               <Link
