@@ -122,7 +122,7 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
         </div>
 
         <div className="max-w-7xl mx-auto px-4 py-12">
-          <div className="flex flex-col xl:flex-row gap-8 xl:gap-12">
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
             {/* Main Content */}
             <article className="flex-1 min-w-0 max-w-4xl">
               {/* Article Header */}
@@ -498,7 +498,7 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
             </article>
 
             {/* Sidebar with TOC */}
-            <aside className="hidden xl:block w-72 xl:w-80 flex-shrink-0 relative">
+            <aside className="hidden lg:block w-72 lg:w-80 flex-shrink-0 relative">
               <div className="sticky top-24 space-y-6 z-10 max-h-[calc(100vh-8rem)] overflow-y-auto">
                 <TableOfContents items={toc} />
 
@@ -540,7 +540,7 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
         </div>
 
         {/* Mobile TOC */}
-        <div className="xl:hidden">
+        <div className="lg:hidden">
           <TableOfContents items={toc} />
         </div>
 
