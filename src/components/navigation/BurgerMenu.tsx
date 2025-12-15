@@ -20,6 +20,8 @@ import {
   ClipboardList,
   UserCircle,
   Settings,
+  Calculator,
+  FileText,
 } from 'lucide-react'
 import Link from 'next/link'
 import { navigationConfig, type NavigationSection } from '@/data/navigationConfig'
@@ -37,6 +39,8 @@ const iconMap = {
   Users,
   Building,
   HelpCircle,
+  Calculator,
+  FileText,
 }
 
 export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
