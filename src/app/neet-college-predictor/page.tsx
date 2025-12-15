@@ -102,6 +102,10 @@ export default function NEETCollegePredictorPage() {
   const [domicileState, setDomicileState] = useState<string>('')
   const [isPwD, setIsPwD] = useState(false)
 
+  // Pagination for performance
+  const [visibleCount, setVisibleCount] = useState(12)
+  const RESULTS_PER_PAGE = 12
+
   const resultsRef = useRef<HTMLElement>(null)
 
   const allStates = useMemo(
@@ -281,6 +285,7 @@ export default function NEETCollegePredictorPage() {
     }
 
     setIsLoading(true)
+    setVisibleCount(RESULTS_PER_PAGE) // Reset pagination for new search
     try {
       await loadCollegeData()
       setShowResults(true)
@@ -312,7 +317,16 @@ export default function NEETCollegePredictorPage() {
     setQuotaPreference('all')
     setDomicileState('')
     setIsPwD(false)
+    setVisibleCount(RESULTS_PER_PAGE)
   }
+
+  const loadMore = useCallback(() => {
+    setVisibleCount((prev) => prev + RESULTS_PER_PAGE)
+  }, [])
+
+  const visibleResults = useMemo(() => {
+    return results.slice(0, visibleCount)
+  }, [results, visibleCount])
 
   const getButtonText = () => {
     if (isLoading) {
@@ -819,173 +833,196 @@ export default function NEETCollegePredictorPage() {
                   </p>
                 </div>
               ) : (
-                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                  {results.map((result, index) => {
-                    const { college, quotaType, cutoff, pwdCutoff, seats } = result
-                    const displayCutoff = isPwD ? pwdCutoff : cutoff
-                    const chance = getChance(parseInt(rank), displayCutoff)
-                    const isExpanded = expandedCard === `${college.name}-${quotaType}`
+                <>
+                  <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                    {visibleResults.map((result, index) => {
+                      const { college, quotaType, cutoff, pwdCutoff, seats } = result
+                      const displayCutoff = isPwD ? pwdCutoff : cutoff
+                      const chance = getChance(parseInt(rank), displayCutoff)
+                      const isExpanded = expandedCard === `${college.name}-${quotaType}`
 
-                    return (
-                      <div
-                        key={`${college.name}-${quotaType}-${index}`}
-                        className="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-all hover:shadow-md"
-                      >
-                        <div className="p-6">
-                          <div className="mb-4 flex items-start justify-between">
-                            <div className="flex-1">
-                              <div className="mb-2 flex flex-wrap items-center gap-2">
-                                {/* Quota Badge */}
-                                <span
-                                  className={`flex items-center gap-1 rounded-full px-3 py-1 text-xs font-semibold ${
-                                    quotaType === 'AIQ'
-                                      ? 'bg-blue-100 text-blue-800'
-                                      : 'bg-orange-100 text-orange-800'
-                                  }`}
-                                >
-                                  {quotaType === 'AIQ' ? (
-                                    <Globe className="h-3 w-3" />
-                                  ) : (
-                                    <Home className="h-3 w-3" />
-                                  )}
-                                  {quotaType === 'AIQ' ? 'All India' : 'State Quota'}
-                                </span>
-                                <span
-                                  className={`rounded-full px-3 py-1 text-xs font-semibold ${
-                                    college.type === 'Government'
-                                      ? 'bg-green-100 text-green-800'
-                                      : 'bg-purple-100 text-purple-800'
-                                  }`}
-                                >
-                                  {college.type}
-                                </span>
-                                <span className="rounded-full bg-gray-100 px-3 py-1 text-xs font-semibold text-gray-700">
-                                  Tier {college.tier}
-                                </span>
-                                {college.nirfRank && (
-                                  <span className="flex items-center gap-1 rounded-full bg-amber-100 px-3 py-1 text-xs font-semibold text-amber-800">
-                                    <Star className="h-3 w-3" />
-                                    NIRF #{college.nirfRank}
+                      return (
+                        <div
+                          key={`${college.name}-${quotaType}-${index}`}
+                          className="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-all hover:shadow-md"
+                        >
+                          <div className="p-6">
+                            <div className="mb-4 flex items-start justify-between">
+                              <div className="flex-1">
+                                <div className="mb-2 flex flex-wrap items-center gap-2">
+                                  {/* Quota Badge */}
+                                  <span
+                                    className={`flex items-center gap-1 rounded-full px-3 py-1 text-xs font-semibold ${
+                                      quotaType === 'AIQ'
+                                        ? 'bg-blue-100 text-blue-800'
+                                        : 'bg-orange-100 text-orange-800'
+                                    }`}
+                                  >
+                                    {quotaType === 'AIQ' ? (
+                                      <Globe className="h-3 w-3" />
+                                    ) : (
+                                      <Home className="h-3 w-3" />
+                                    )}
+                                    {quotaType === 'AIQ' ? 'All India' : 'State Quota'}
                                   </span>
+                                  <span
+                                    className={`rounded-full px-3 py-1 text-xs font-semibold ${
+                                      college.type === 'Government'
+                                        ? 'bg-green-100 text-green-800'
+                                        : 'bg-purple-100 text-purple-800'
+                                    }`}
+                                  >
+                                    {college.type}
+                                  </span>
+                                  <span className="rounded-full bg-gray-100 px-3 py-1 text-xs font-semibold text-gray-700">
+                                    Tier {college.tier}
+                                  </span>
+                                  {college.nirfRank && (
+                                    <span className="flex items-center gap-1 rounded-full bg-amber-100 px-3 py-1 text-xs font-semibold text-amber-800">
+                                      <Star className="h-3 w-3" />
+                                      NIRF #{college.nirfRank}
+                                    </span>
+                                  )}
+                                </div>
+                                <h3 className="text-lg font-bold text-gray-900">{college.name}</h3>
+                                <div className="mt-1 flex items-center gap-1 text-gray-600">
+                                  <MapPin className="h-4 w-4" />
+                                  <span className="text-sm">{college.state}</span>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div className="mb-4 grid grid-cols-2 gap-3">
+                              <div className="rounded-lg bg-gray-50 p-3">
+                                <div className="text-xs text-gray-500">
+                                  Cutoff ({category.toUpperCase()}
+                                  {isPwD ? '-PwD' : ''})
+                                </div>
+                                <div className="text-lg font-bold text-gray-900">
+                                  {displayCutoff.toLocaleString()}
+                                </div>
+                              </div>
+                              <div className="rounded-lg bg-gray-50 p-3">
+                                <div className="text-xs text-gray-500">Your Chance</div>
+                                <div
+                                  className={`inline-block rounded-full px-2 py-1 text-sm font-semibold ${chance.color}`}
+                                >
+                                  {chance.level}
+                                </div>
+                              </div>
+                            </div>
+
+                            <div className="mb-4 flex items-center justify-between text-sm">
+                              <div className="flex items-center gap-1 text-gray-600">
+                                <Users className="h-4 w-4" />
+                                <span>
+                                  {seats} {quotaType} seats
+                                </span>
+                              </div>
+                              <div className="flex items-center gap-1 text-gray-600">
+                                <IndianRupee className="h-4 w-4" />
+                                <span>{college.feeDisplay}</span>
+                              </div>
+                            </div>
+
+                            <button
+                              onClick={() =>
+                                setExpandedCard(isExpanded ? null : `${college.name}-${quotaType}`)
+                              }
+                              className="flex w-full items-center justify-center gap-1 rounded-lg border border-gray-200 py-2 text-sm font-medium text-gray-600 transition-colors hover:bg-gray-50"
+                            >
+                              {isExpanded ? (
+                                <>
+                                  Hide Details <ChevronUp className="h-4 w-4" />
+                                </>
+                              ) : (
+                                <>
+                                  Show All Cutoffs <ChevronDown className="h-4 w-4" />
+                                </>
+                              )}
+                            </button>
+
+                            {isExpanded && (
+                              <div className="mt-4 space-y-3 border-t pt-4">
+                                <h4 className="text-sm font-semibold text-gray-700">
+                                  {quotaType} Cutoffs - {isPwD ? 'PwD' : 'Regular'} (2024):
+                                </h4>
+                                <div className="grid grid-cols-2 gap-2 text-sm">
+                                  {['general', 'ews', 'obc', 'sc', 'st'].map((cat) => {
+                                    const cutoffs =
+                                      quotaType === 'AIQ'
+                                        ? college.aiqCutoffs
+                                        : college.stateCutoffs
+                                    if (!cutoffs) return null
+                                    const key = isPwD ? `${cat}_pwd` : cat
+                                    return (
+                                      <div
+                                        key={cat}
+                                        className={`flex justify-between rounded bg-gray-50 px-3 py-2 ${cat === 'st' ? 'col-span-2' : ''}`}
+                                      >
+                                        <span className="text-gray-600">
+                                          {cat.toUpperCase()}
+                                          {isPwD ? '-PwD' : ''}:
+                                        </span>
+                                        <span className="font-semibold">
+                                          {(
+                                            cutoffs[key as keyof typeof cutoffs] as number
+                                          )?.toLocaleString() || 'N/A'}
+                                        </span>
+                                      </div>
+                                    )
+                                  })}
+                                </div>
+                                {!isPwD && (
+                                  <div className="mt-2">
+                                    <p className="text-xs font-semibold text-purple-700">
+                                      PwD Cutoffs:
+                                    </p>
+                                    <div className="mt-1 flex flex-wrap gap-2 text-xs text-purple-600">
+                                      {['general', 'obc', 'sc'].map((cat) => {
+                                        const cutoffs =
+                                          quotaType === 'AIQ'
+                                            ? college.aiqCutoffs
+                                            : college.stateCutoffs
+                                        if (!cutoffs) return null
+                                        const key = `${cat}_pwd` as keyof typeof cutoffs
+                                        return (
+                                          <span
+                                            key={cat}
+                                            className="rounded bg-purple-50 px-2 py-1"
+                                          >
+                                            {cat.toUpperCase()}:{' '}
+                                            {(cutoffs[key] as number)?.toLocaleString()}
+                                          </span>
+                                        )
+                                      })}
+                                    </div>
+                                  </div>
                                 )}
                               </div>
-                              <h3 className="text-lg font-bold text-gray-900">{college.name}</h3>
-                              <div className="mt-1 flex items-center gap-1 text-gray-600">
-                                <MapPin className="h-4 w-4" />
-                                <span className="text-sm">{college.state}</span>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div className="mb-4 grid grid-cols-2 gap-3">
-                            <div className="rounded-lg bg-gray-50 p-3">
-                              <div className="text-xs text-gray-500">
-                                Cutoff ({category.toUpperCase()}
-                                {isPwD ? '-PwD' : ''})
-                              </div>
-                              <div className="text-lg font-bold text-gray-900">
-                                {displayCutoff.toLocaleString()}
-                              </div>
-                            </div>
-                            <div className="rounded-lg bg-gray-50 p-3">
-                              <div className="text-xs text-gray-500">Your Chance</div>
-                              <div
-                                className={`inline-block rounded-full px-2 py-1 text-sm font-semibold ${chance.color}`}
-                              >
-                                {chance.level}
-                              </div>
-                            </div>
-                          </div>
-
-                          <div className="mb-4 flex items-center justify-between text-sm">
-                            <div className="flex items-center gap-1 text-gray-600">
-                              <Users className="h-4 w-4" />
-                              <span>
-                                {seats} {quotaType} seats
-                              </span>
-                            </div>
-                            <div className="flex items-center gap-1 text-gray-600">
-                              <IndianRupee className="h-4 w-4" />
-                              <span>{college.feeDisplay}</span>
-                            </div>
-                          </div>
-
-                          <button
-                            onClick={() =>
-                              setExpandedCard(isExpanded ? null : `${college.name}-${quotaType}`)
-                            }
-                            className="flex w-full items-center justify-center gap-1 rounded-lg border border-gray-200 py-2 text-sm font-medium text-gray-600 transition-colors hover:bg-gray-50"
-                          >
-                            {isExpanded ? (
-                              <>
-                                Hide Details <ChevronUp className="h-4 w-4" />
-                              </>
-                            ) : (
-                              <>
-                                Show All Cutoffs <ChevronDown className="h-4 w-4" />
-                              </>
                             )}
-                          </button>
-
-                          {isExpanded && (
-                            <div className="mt-4 space-y-3 border-t pt-4">
-                              <h4 className="text-sm font-semibold text-gray-700">
-                                {quotaType} Cutoffs - {isPwD ? 'PwD' : 'Regular'} (2024):
-                              </h4>
-                              <div className="grid grid-cols-2 gap-2 text-sm">
-                                {['general', 'ews', 'obc', 'sc', 'st'].map((cat) => {
-                                  const cutoffs =
-                                    quotaType === 'AIQ' ? college.aiqCutoffs : college.stateCutoffs
-                                  if (!cutoffs) return null
-                                  const key = isPwD ? `${cat}_pwd` : cat
-                                  return (
-                                    <div
-                                      key={cat}
-                                      className={`flex justify-between rounded bg-gray-50 px-3 py-2 ${cat === 'st' ? 'col-span-2' : ''}`}
-                                    >
-                                      <span className="text-gray-600">
-                                        {cat.toUpperCase()}
-                                        {isPwD ? '-PwD' : ''}:
-                                      </span>
-                                      <span className="font-semibold">
-                                        {(
-                                          cutoffs[key as keyof typeof cutoffs] as number
-                                        )?.toLocaleString() || 'N/A'}
-                                      </span>
-                                    </div>
-                                  )
-                                })}
-                              </div>
-                              {!isPwD && (
-                                <div className="mt-2">
-                                  <p className="text-xs font-semibold text-purple-700">
-                                    PwD Cutoffs:
-                                  </p>
-                                  <div className="mt-1 flex flex-wrap gap-2 text-xs text-purple-600">
-                                    {['general', 'obc', 'sc'].map((cat) => {
-                                      const cutoffs =
-                                        quotaType === 'AIQ'
-                                          ? college.aiqCutoffs
-                                          : college.stateCutoffs
-                                      if (!cutoffs) return null
-                                      const key = `${cat}_pwd` as keyof typeof cutoffs
-                                      return (
-                                        <span key={cat} className="rounded bg-purple-50 px-2 py-1">
-                                          {cat.toUpperCase()}:{' '}
-                                          {(cutoffs[key] as number)?.toLocaleString()}
-                                        </span>
-                                      )
-                                    })}
-                                  </div>
-                                </div>
-                              )}
-                            </div>
-                          )}
+                          </div>
                         </div>
-                      </div>
-                    )
-                  })}
-                </div>
+                      )
+                    })}
+                  </div>
+
+                  {/* Load More Button */}
+                  {visibleCount < results.length && (
+                    <div className="mt-8 text-center">
+                      <button
+                        onClick={loadMore}
+                        className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 px-8 py-4 font-semibold text-white transition-all hover:from-blue-700 hover:to-indigo-700"
+                      >
+                        <ArrowDown className="h-5 w-5" />
+                        Load More ({results.length - visibleCount} remaining)
+                      </button>
+                      <p className="mt-2 text-sm text-gray-500">
+                        Showing {visibleCount} of {results.length} results
+                      </p>
+                    </div>
+                  )}
+                </>
               )}
             </div>
           </section>
