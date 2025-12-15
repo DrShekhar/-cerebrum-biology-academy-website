@@ -102,11 +102,55 @@ export default function NEETCollegePredictorPage() {
   const [domicileState, setDomicileState] = useState<string>('')
   const [isPwD, setIsPwD] = useState(false)
 
+  // Input mode: rank or marks
+  const [inputMode, setInputMode] = useState<'rank' | 'marks'>('rank')
+  const [marks, setMarks] = useState<string>('')
+
+  // Marks to Rank conversion formula (based on NEET 2024 data)
+  const marksToRank = (score: number): number => {
+    if (score >= 720) return 1
+    if (score >= 715) return Math.round(1 + (720 - score) * 2)
+    if (score >= 700) return Math.round(10 + (715 - score) * 6)
+    if (score >= 680) return Math.round(100 + (700 - score) * 50)
+    if (score >= 650) return Math.round(1100 + (680 - score) * 130)
+    if (score >= 600) return Math.round(5000 + (650 - score) * 400)
+    if (score >= 550) return Math.round(25000 + (600 - score) * 900)
+    if (score >= 500) return Math.round(70000 + (550 - score) * 1600)
+    if (score >= 450) return Math.round(150000 + (500 - score) * 3000)
+    if (score >= 400) return Math.round(300000 + (450 - score) * 4000)
+    if (score >= 350) return Math.round(500000 + (400 - score) * 5000)
+    return Math.round(750000 + (350 - score) * 6000)
+  }
+
+  // Auto-convert marks to rank when marks change
+  useEffect(() => {
+    if (inputMode === 'marks' && marks) {
+      const marksNum = parseInt(marks)
+      if (!isNaN(marksNum) && marksNum >= 0 && marksNum <= 720) {
+        const estimatedRank = marksToRank(marksNum)
+        setRank(estimatedRank.toString())
+      }
+    }
+  }, [marks, inputMode])
+
   // Pagination for performance
   const [visibleCount, setVisibleCount] = useState(12)
   const RESULTS_PER_PAGE = 12
 
   const resultsRef = useRef<HTMLElement>(null)
+
+  // Preload states on mount for dropdown
+  useEffect(() => {
+    const preloadStates = async () => {
+      if (!dataLoaded) {
+        const data = await import('@/data/colleges.json')
+        const colleges = data.default as College[]
+        setCollegesData(colleges)
+        setDataLoaded(true)
+      }
+    }
+    preloadStates()
+  }, [dataLoaded])
 
   const allStates = useMemo(
     () => (dataLoaded ? [...new Set(collegesData.map((c) => c.state))].sort() : []),
@@ -305,6 +349,8 @@ export default function NEETCollegePredictorPage() {
 
   const handleReset = () => {
     setRank('')
+    setMarks('')
+    setInputMode('rank')
     setCategory('general')
     setCollegeType('All')
     setSelectedState('All')
@@ -462,26 +508,77 @@ export default function NEETCollegePredictorPage() {
                 </div>
 
                 <div className="space-y-6">
-                  {/* Primary Inputs */}
-                  <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-                    <div>
-                      <label
-                        htmlFor="rank"
-                        className="mb-2 block text-sm font-medium text-gray-700"
-                      >
-                        Your NEET Rank (AIR) *
+                  {/* Rank/Marks Toggle */}
+                  <div className="rounded-lg border border-gray-200 bg-gray-50 p-4">
+                    <div className="mb-3 flex items-center justify-between">
+                      <label className="text-sm font-semibold text-gray-700">
+                        Enter your NEET Score *
                       </label>
-                      <input
-                        type="number"
-                        id="rank"
-                        value={rank}
-                        onChange={(e) => setRank(e.target.value)}
-                        min="1"
-                        placeholder="Enter your All India Rank"
-                        className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
-                      />
+                      <div className="flex rounded-full bg-white p-1 shadow-sm">
+                        <button
+                          type="button"
+                          onClick={() => setInputMode('rank')}
+                          className={`rounded-full px-4 py-1.5 text-sm font-medium transition-all ${
+                            inputMode === 'rank'
+                              ? 'bg-blue-600 text-white'
+                              : 'text-gray-600 hover:bg-gray-100'
+                          }`}
+                        >
+                          By Rank
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => setInputMode('marks')}
+                          className={`rounded-full px-4 py-1.5 text-sm font-medium transition-all ${
+                            inputMode === 'marks'
+                              ? 'bg-blue-600 text-white'
+                              : 'text-gray-600 hover:bg-gray-100'
+                          }`}
+                        >
+                          By Marks
+                        </button>
+                      </div>
                     </div>
 
+                    {inputMode === 'rank' ? (
+                      <div>
+                        <input
+                          type="number"
+                          id="rank"
+                          value={rank}
+                          onChange={(e) => setRank(e.target.value)}
+                          min="1"
+                          placeholder="Enter your All India Rank (AIR)"
+                          className="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+                        />
+                      </div>
+                    ) : (
+                      <div className="space-y-2">
+                        <input
+                          type="number"
+                          id="marks"
+                          value={marks}
+                          onChange={(e) => setMarks(e.target.value)}
+                          min="0"
+                          max="720"
+                          placeholder="Enter your marks (out of 720)"
+                          className="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+                        />
+                        {marks && parseInt(marks) >= 0 && parseInt(marks) <= 720 && (
+                          <div className="flex items-center gap-2 rounded-lg bg-blue-50 px-3 py-2 text-sm">
+                            <TrendingUp className="h-4 w-4 text-blue-600" />
+                            <span className="text-blue-800">
+                              Estimated Rank: <strong>{parseInt(rank).toLocaleString()}</strong>
+                            </span>
+                            <span className="text-blue-600">(based on NEET 2024)</span>
+                          </div>
+                        )}
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Primary Inputs */}
+                  <div className="grid gap-4 md:grid-cols-2">
                     <div>
                       <label
                         htmlFor="category"
@@ -521,7 +618,7 @@ export default function NEETCollegePredictorPage() {
                         onChange={(e) => setDomicileState(e.target.value)}
                         className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
                       >
-                        <option value="">Select your state (for State Quota)</option>
+                        <option value="">Select domicile state</option>
                         {allStates.map((state) => (
                           <option key={state} value={state}>
                             {state}
