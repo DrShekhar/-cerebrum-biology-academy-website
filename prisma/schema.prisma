@@ -3208,3 +3208,317 @@ model omr_submissions {
   @@index([submittedAt])
   @@index([paperId, percentage])
 }
+
+// ============================================
+// MCQ PRACTICE ENHANCED SYSTEM
+// ============================================
+
+// Enums for MCQ Enhancement
+enum CommunityQuestionStatus {
+  PENDING          // Just submitted
+  AI_SCREENING     // Being analyzed by AI
+  AI_APPROVED      // AI passed, waiting admin
+  AI_REJECTED      // AI flagged issues
+  ADMIN_REVIEW     // In admin queue
+  APPROVED         // Published
+  REJECTED         // Admin rejected
+  DISPUTED         // Has error reports
+}
+
+enum ErrorReportType {
+  WRONG_ANSWER      // Correct answer is incorrect
+  AMBIGUOUS         // Multiple correct answers possible
+  OUTDATED          // Information is outdated
+  TYPO              // Spelling/grammar error
+  INCOMPLETE        // Missing important info
+  OTHER
+}
+
+enum ErrorReportStatus {
+  PENDING
+  UNDER_REVIEW
+  ACCEPTED          // Answer corrected
+  REJECTED          // Report invalid
+  DUPLICATE         // Already reported
+}
+
+enum BadgeCategory {
+  STREAK            // Consistency badges
+  MILESTONE         // Question milestones
+  ACCURACY          // Performance badges
+  CONTRIBUTOR       // Community contribution
+  SPECIAL           // Events, achievements
+  TOPIC_MASTER      // Topic-specific
+}
+
+enum BadgeRarity {
+  COMMON
+  UNCOMMON
+  RARE
+  EPIC
+  LEGENDARY
+}
+
+enum LeaderboardPeriod {
+  DAILY
+  WEEKLY
+  MONTHLY
+  ALL_TIME
+}
+
+// Community-submitted questions
+model community_questions {
+  id                String   @id @default(cuid())
+
+  // Question Content
+  question          String   @db.Text
+  options           Json     // ["Option A", "Option B", "Option C", "Option D"]
+  correctAnswer     String   // "A", "B", "C", or "D"
+  explanation       String?  @db.Text
+
+  // Classification
+  topic             String
+  subtopic          String?
+  chapter           String?
+  difficulty        DifficultyLevel @default(MEDIUM)
+  isPYQ             Boolean  @default(false)
+  pyqYear           Int?     // 2023, 2022, etc.
+
+  // Submission Info
+  submittedBy       String   // free_user ID or user ID
+  submitterName     String
+  submitterPhone    String?
+  submitterEmail    String?
+
+  // AI Pre-screening
+  aiScore           Float?           // 0-100 quality score
+  aiAnalysis        Json?            // {accuracy: 95, clarity: 88, relevance: 92, issues: [...]}
+  aiScreenedAt      DateTime?
+  aiApproved        Boolean?         // AI recommendation
+
+  // Admin Review
+  status            CommunityQuestionStatus @default(PENDING)
+  reviewedBy        String?          // Admin user ID
+  reviewedAt        DateTime?
+  reviewNotes       String?
+  rejectionReason   String?
+
+  // Quality Metrics (post-approval)
+  totalAttempts     Int      @default(0)
+  correctAttempts   Int      @default(0)
+  reportCount       Int      @default(0)
+  qualityScore      Float?
+
+  // Gamification
+  contributorXpAwarded Int   @default(0)
+
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+  publishedAt       DateTime?
+
+  // Relations
+  errorReports      answer_error_reports[]
+
+  @@index([status, aiApproved])
+  @@index([topic, difficulty])
+  @@index([submittedBy])
+  @@index([isPYQ, pyqYear])
+}
+
+// Answer error reports from users
+model answer_error_reports {
+  id                String   @id @default(cuid())
+
+  // Question Reference
+  questionId        String?          // Standard question ID
+  communityQuestionId String?        // Community question ID
+  communityQuestion community_questions? @relation(fields: [communityQuestionId], references: [id])
+
+  // Reporter Info
+  reportedBy        String           // free_user ID
+  reporterName      String?
+  reporterPhone     String?
+  reporterEmail     String?
+
+  // Report Details
+  reportType        ErrorReportType
+  currentAnswer     String           // What's marked as correct
+  suggestedAnswer   String?          // What reporter thinks is correct
+  explanation       String   @db.Text // Why they think it's wrong
+  evidence          String?  @db.Text // Reference/source
+
+  // Review
+  status            ErrorReportStatus @default(PENDING)
+  reviewedBy        String?
+  reviewedAt        DateTime?
+  resolution        String?  @db.Text
+  isValid           Boolean?
+
+  // Gamification
+  reporterXpAwarded Int      @default(0)
+
+  createdAt         DateTime @default(now())
+
+  @@index([status])
+  @@index([questionId])
+  @@index([communityQuestionId])
+}
+
+// Gamification: User achievements & progress for MCQ practice
+model mcq_user_stats {
+  id                String   @id @default(cuid())
+
+  // User Reference
+  freeUserId        String?  @unique
+  userId            String?  @unique
+
+  // Practice Stats
+  totalQuestions    Int      @default(0)
+  correctAnswers    Int      @default(0)
+  accuracy          Float    @default(0)
+
+  // Streaks
+  currentStreak     Int      @default(0)
+  longestStreak     Int      @default(0)
+  lastPracticeDate  DateTime?
+
+  // XP & Levels
+  totalXp           Int      @default(0)
+  currentLevel      Int      @default(1)
+  levelProgress     Float    @default(0)  // 0-100%
+
+  // Daily Challenge
+  dailyChallengeCompleted Boolean @default(false)
+  dailyChallengeDate      DateTime?
+  dailyChallengesTotal    Int      @default(0)
+
+  // Community Contribution
+  questionsSubmitted      Int      @default(0)
+  questionsApproved       Int      @default(0)
+  errorsReported          Int      @default(0)
+  errorsAccepted          Int      @default(0)
+  contributorRank         String?  // BRONZE, SILVER, GOLD, EXPERT
+
+  // Topic Mastery
+  topicMastery      Json?    // {topic: {attempted: 50, correct: 45, mastery: 90}}
+  weakTopics        Json?    // ["Genetics", "Ecology"]
+  strongTopics      Json?    // ["Cell Biology", "Human Physiology"]
+
+  // Badges (JSON array of badge IDs)
+  badges            Json?    // ["first_100", "streak_7", "contributor_gold"]
+
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  @@index([totalXp])
+  @@index([currentStreak])
+}
+
+// Badge definitions
+model mcq_badges {
+  id                String   @id @default(cuid())
+
+  code              String   @unique  // "streak_7", "questions_100"
+  name              String             // "Week Warrior"
+  description       String             // "Maintain 7-day streak"
+  icon              String             // Emoji or icon name
+  category          BadgeCategory
+
+  // Unlock conditions
+  requirement       Json               // {type: "streak", value: 7}
+  xpReward          Int      @default(0)
+
+  // Rarity
+  rarity            BadgeRarity @default(COMMON)
+  totalUnlocked     Int      @default(0)
+
+  isActive          Boolean  @default(true)
+  createdAt         DateTime @default(now())
+}
+
+// Daily challenges
+model daily_challenges {
+  id                String   @id @default(cuid())
+
+  date              DateTime @unique @db.Date
+
+  // Challenge Config
+  topic             String?          // Specific topic or null for random
+  questionCount     Int      @default(5)
+  difficulty        DifficultyLevel?
+  timeLimit         Int?             // Optional time limit in seconds
+
+  // Questions (JSON array of question IDs)
+  questionIds       Json
+
+  // Rewards
+  xpReward          Int      @default(50)
+  bonusXp           Int      @default(25)  // For perfect score
+
+  // Stats
+  participantCount  Int      @default(0)
+  perfectScoreCount Int      @default(0)
+  avgScore          Float?
+
+  createdAt         DateTime @default(now())
+
+  @@index([date])
+}
+
+// Leaderboard snapshots
+model mcq_leaderboard {
+  id                String   @id @default(cuid())
+
+  period            LeaderboardPeriod
+  periodStart       DateTime
+  periodEnd         DateTime
+
+  // Rankings (JSON array)
+  rankings          Json     // [{rank: 1, freeUserId: "...", name: "...", xp: 500, accuracy: 95}]
+
+  // Stats
+  totalParticipants Int
+  topScore          Int
+  avgScore          Float?
+
+  createdAt         DateTime @default(now())
+
+  @@index([period, periodStart])
+}
+
+// MCQ Practice sessions for analytics
+model mcq_practice_sessions {
+  id                String   @id @default(cuid())
+
+  // User
+  freeUserId        String?
+  userId            String?
+  sessionToken      String?  // For anonymous tracking
+
+  // Session Config
+  topic             String?
+  difficulty        DifficultyLevel?
+  isPYQOnly         Boolean  @default(false)
+  pyqYear           Int?
+
+  // Results
+  questionsAttempted Int     @default(0)
+  correctAnswers     Int     @default(0)
+  timeSpent          Int     @default(0)  // Seconds
+  xpEarned           Int     @default(0)
+
+  // Lead Capture
+  leadCaptured       Boolean @default(false)
+  capturedAt         DateTime?
+
+  // Device/Security
+  deviceFingerprint  String?
+  ipAddress          String?
+  userAgent          String?
+
+  startedAt          DateTime @default(now())
+  endedAt            DateTime?
+
+  @@index([freeUserId])
+  @@index([startedAt])
+}

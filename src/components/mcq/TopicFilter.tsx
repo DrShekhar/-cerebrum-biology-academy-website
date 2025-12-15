@@ -1,0 +1,259 @@
+'use client'
+
+import { useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { BIOLOGY_TOPICS, PYQ_YEARS, type BiologyTopic, type PYQYear } from '@/lib/mcq/types'
+import type { DifficultyLevel } from '@/generated/prisma'
+
+interface TopicFilterProps {
+  selectedTopic: string | null
+  selectedDifficulty: DifficultyLevel | null
+  isPYQOnly: boolean
+  selectedPYQYear: number | null
+  onTopicChange: (topic: string | null) => void
+  onDifficultyChange: (difficulty: DifficultyLevel | null) => void
+  onPYQOnlyChange: (isPYQOnly: boolean) => void
+  onPYQYearChange: (year: number | null) => void
+  onApplyFilters: () => void
+}
+
+export function TopicFilter({
+  selectedTopic,
+  selectedDifficulty,
+  isPYQOnly,
+  selectedPYQYear,
+  onTopicChange,
+  onDifficultyChange,
+  onPYQOnlyChange,
+  onPYQYearChange,
+  onApplyFilters,
+}: TopicFilterProps) {
+  const [isExpanded, setIsExpanded] = useState(false)
+
+  const difficulties: { value: DifficultyLevel; label: string; color: string }[] = [
+    { value: 'EASY', label: 'Easy', color: 'bg-green-100 text-green-700 border-green-300' },
+    { value: 'MEDIUM', label: 'Medium', color: 'bg-yellow-100 text-yellow-700 border-yellow-300' },
+    { value: 'HARD', label: 'Hard', color: 'bg-red-100 text-red-700 border-red-300' },
+  ]
+
+  const activeFiltersCount = [selectedTopic, selectedDifficulty, isPYQOnly, selectedPYQYear].filter(
+    Boolean
+  ).length
+
+  const clearAllFilters = () => {
+    onTopicChange(null)
+    onDifficultyChange(null)
+    onPYQOnlyChange(false)
+    onPYQYearChange(null)
+  }
+
+  return (
+    <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+      {/* Header */}
+      <button
+        onClick={() => setIsExpanded(!isExpanded)}
+        className="w-full p-4 flex items-center justify-between hover:bg-gray-50 transition-colors"
+      >
+        <div className="flex items-center gap-3">
+          <span className="text-xl">🔍</span>
+          <span className="font-semibold text-gray-800">Filter Questions</span>
+          {activeFiltersCount > 0 && (
+            <span className="px-2 py-0.5 rounded-full bg-blue-100 text-blue-700 text-xs font-medium">
+              {activeFiltersCount} active
+            </span>
+          )}
+        </div>
+        <motion.span
+          animate={{ rotate: isExpanded ? 180 : 0 }}
+          transition={{ duration: 0.2 }}
+          className="text-gray-400"
+        >
+          ▼
+        </motion.span>
+      </button>
+
+      <AnimatePresence>
+        {isExpanded && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="border-t"
+          >
+            <div className="p-4 space-y-6">
+              {/* Topic Selection */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Topic</label>
+                <div className="flex flex-wrap gap-2">
+                  <button
+                    onClick={() => onTopicChange(null)}
+                    className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
+                      !selectedTopic
+                        ? 'bg-blue-600 text-white'
+                        : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                    }`}
+                  >
+                    All Topics
+                  </button>
+                  {BIOLOGY_TOPICS.map((topic) => (
+                    <button
+                      key={topic}
+                      onClick={() => onTopicChange(topic)}
+                      className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
+                        selectedTopic === topic
+                          ? 'bg-blue-600 text-white'
+                          : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                      }`}
+                    >
+                      {topic}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Difficulty Selection */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Difficulty</label>
+                <div className="flex flex-wrap gap-2">
+                  <button
+                    onClick={() => onDifficultyChange(null)}
+                    className={`px-3 py-1.5 rounded-full text-sm font-medium border transition-colors ${
+                      !selectedDifficulty
+                        ? 'bg-blue-600 text-white border-blue-600'
+                        : 'bg-white text-gray-600 border-gray-300 hover:border-gray-400'
+                    }`}
+                  >
+                    All Levels
+                  </button>
+                  {difficulties.map((diff) => (
+                    <button
+                      key={diff.value}
+                      onClick={() => onDifficultyChange(diff.value)}
+                      className={`px-3 py-1.5 rounded-full text-sm font-medium border transition-colors ${
+                        selectedDifficulty === diff.value
+                          ? diff.color
+                          : 'bg-white text-gray-600 border-gray-300 hover:border-gray-400'
+                      }`}
+                    >
+                      {diff.label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* PYQ Toggle */}
+              <div>
+                <div className="flex items-center justify-between">
+                  <label className="text-sm font-medium text-gray-700">
+                    Previous Year Questions Only
+                  </label>
+                  <button
+                    onClick={() => onPYQOnlyChange(!isPYQOnly)}
+                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                      isPYQOnly ? 'bg-amber-500' : 'bg-gray-200'
+                    }`}
+                  >
+                    <span
+                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                        isPYQOnly ? 'translate-x-6' : 'translate-x-1'
+                      }`}
+                    />
+                  </button>
+                </div>
+
+                {/* PYQ Year Selection */}
+                <AnimatePresence>
+                  {isPYQOnly && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: 'auto', opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      className="mt-3"
+                    >
+                      <label className="block text-sm font-medium text-gray-500 mb-2">
+                        Select Year
+                      </label>
+                      <div className="flex flex-wrap gap-2">
+                        <button
+                          onClick={() => onPYQYearChange(null)}
+                          className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
+                            !selectedPYQYear
+                              ? 'bg-amber-500 text-white'
+                              : 'bg-amber-100 text-amber-700 hover:bg-amber-200'
+                          }`}
+                        >
+                          All Years
+                        </button>
+                        {PYQ_YEARS.map((year) => (
+                          <button
+                            key={year}
+                            onClick={() => onPYQYearChange(year)}
+                            className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
+                              selectedPYQYear === year
+                                ? 'bg-amber-500 text-white'
+                                : 'bg-amber-100 text-amber-700 hover:bg-amber-200'
+                            }`}
+                          >
+                            {year}
+                          </button>
+                        ))}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="flex items-center gap-3 pt-2 border-t">
+                <button
+                  onClick={onApplyFilters}
+                  className="flex-1 py-2 px-4 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors"
+                >
+                  Apply Filters
+                </button>
+                {activeFiltersCount > 0 && (
+                  <button
+                    onClick={clearAllFilters}
+                    className="py-2 px-4 text-gray-600 hover:text-gray-800 font-medium transition-colors"
+                  >
+                    Clear All
+                  </button>
+                )}
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Active Filters Summary (when collapsed) */}
+      {!isExpanded && activeFiltersCount > 0 && (
+        <div className="px-4 pb-4 flex flex-wrap gap-2">
+          {selectedTopic && (
+            <span className="px-2 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-medium">
+              {selectedTopic}
+            </span>
+          )}
+          {selectedDifficulty && (
+            <span
+              className={`px-2 py-1 rounded-full text-xs font-medium ${
+                selectedDifficulty === 'EASY'
+                  ? 'bg-green-100 text-green-700'
+                  : selectedDifficulty === 'HARD'
+                    ? 'bg-red-100 text-red-700'
+                    : 'bg-yellow-100 text-yellow-700'
+              }`}
+            >
+              {selectedDifficulty}
+            </span>
+          )}
+          {isPYQOnly && (
+            <span className="px-2 py-1 rounded-full bg-amber-100 text-amber-700 text-xs font-medium">
+              PYQ {selectedPYQYear || 'All Years'}
+            </span>
+          )}
+        </div>
+      )}
+    </div>
+  )
+}
