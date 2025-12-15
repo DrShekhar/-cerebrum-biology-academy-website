@@ -25,6 +25,11 @@ import {
   Home,
   Accessibility,
   HelpCircle,
+  Share2,
+  Heart,
+  Download,
+  Scale,
+  Calendar,
 } from 'lucide-react'
 
 interface College {
@@ -137,6 +142,32 @@ export default function NEETCollegePredictorPage() {
   const [visibleCount, setVisibleCount] = useState(12)
   const RESULTS_PER_PAGE = 12
 
+  // Phase 1: Saved/Bookmarked colleges (localStorage)
+  const [savedColleges, setSavedColleges] = useState<string[]>([])
+  const [showSavedOnly, setShowSavedOnly] = useState(false)
+
+  // Phase 2: College comparison
+  const [compareList, setCompareList] = useState<CollegeResult[]>([])
+  const [showCompareModal, setShowCompareModal] = useState(false)
+  const MAX_COMPARE = 3
+
+  // Load saved colleges from localStorage on mount
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('neet_saved_colleges')
+      if (saved) {
+        setSavedColleges(JSON.parse(saved))
+      }
+    }
+  }, [])
+
+  // Save to localStorage when savedColleges changes
+  useEffect(() => {
+    if (typeof window !== 'undefined' && savedColleges.length >= 0) {
+      localStorage.setItem('neet_saved_colleges', JSON.stringify(savedColleges))
+    }
+  }, [savedColleges])
+
   const resultsRef = useRef<HTMLElement>(null)
 
   // Preload states on mount for dropdown
@@ -167,6 +198,71 @@ export default function NEETCollegePredictorPage() {
     if (ratio <= 1.0) return { level: 'Low', color: 'bg-orange-100 text-orange-800' }
     return { level: 'Very Low', color: 'bg-red-100 text-red-800' }
   }
+
+  // Phase 1: Toggle bookmark
+  const toggleSaveCollege = useCallback((collegeName: string) => {
+    setSavedColleges((prev) => {
+      if (prev.includes(collegeName)) {
+        return prev.filter((c) => c !== collegeName)
+      }
+      return [...prev, collegeName]
+    })
+  }, [])
+
+  const isCollegeSaved = useCallback(
+    (collegeName: string) => savedColleges.includes(collegeName),
+    [savedColleges]
+  )
+
+  // Phase 2: Toggle compare
+  const toggleCompare = useCallback((result: CollegeResult) => {
+    setCompareList((prev) => {
+      const exists = prev.some(
+        (r) => r.college.name === result.college.name && r.quotaType === result.quotaType
+      )
+      if (exists) {
+        return prev.filter(
+          (r) => !(r.college.name === result.college.name && r.quotaType === result.quotaType)
+        )
+      }
+      if (prev.length >= MAX_COMPARE) {
+        return prev
+      }
+      return [...prev, result]
+    })
+  }, [])
+
+  const isInCompareList = useCallback(
+    (result: CollegeResult) =>
+      compareList.some(
+        (r) => r.college.name === result.college.name && r.quotaType === result.quotaType
+      ),
+    [compareList]
+  )
+
+  // Phase 3: Counselling Round Predictor
+  const predictCounsellingRound = useCallback(
+    (cutoff: number): { round: string; confidence: string; color: string } => {
+      const rankNum = parseInt(rank)
+      if (isNaN(rankNum)) return { round: '-', confidence: '', color: '' }
+
+      const ratio = rankNum / cutoff
+      if (ratio <= 0.5)
+        return { round: 'Round 1', confidence: 'Very High', color: 'bg-green-100 text-green-800' }
+      if (ratio <= 0.7)
+        return { round: 'Round 1-2', confidence: 'High', color: 'bg-green-100 text-green-800' }
+      if (ratio <= 0.85)
+        return { round: 'Round 2', confidence: 'Good', color: 'bg-blue-100 text-blue-800' }
+      if (ratio <= 0.95)
+        return { round: 'Round 2-3', confidence: 'Medium', color: 'bg-yellow-100 text-yellow-800' }
+      if (ratio <= 1.05)
+        return { round: 'Round 3', confidence: 'Possible', color: 'bg-orange-100 text-orange-800' }
+      if (ratio <= 1.15)
+        return { round: 'Mop-up', confidence: 'Low', color: 'bg-red-100 text-red-800' }
+      return { round: 'Unlikely', confidence: 'Very Low', color: 'bg-gray-100 text-gray-600' }
+    },
+    [rank]
+  )
 
   const loadCollegeData = useCallback(async (): Promise<College[]> => {
     if (dataLoaded) return collegesData
@@ -303,6 +399,27 @@ export default function NEETCollegePredictorPage() {
   const govtCount = uniqueColleges.filter((r) => r.college.type === 'Government').length
   const privateCount = uniqueColleges.filter((r) => r.college.type === 'Private/Deemed').length
 
+  // Phase 1: Share via WhatsApp (FREE - uses wa.me link)
+  const shareOnWhatsApp = useCallback(() => {
+    const topColleges = results.slice(0, 5)
+    const message = `🏥 *NEET College Predictor Results*
+
+📊 My Rank: ${parseInt(rank).toLocaleString()}
+📋 Category: ${category.toUpperCase()}${isPwD ? ' (PwD)' : ''}
+🎯 Found ${results.length} colleges!
+
+*Top Matches:*
+${topColleges.map((r, i) => `${i + 1}. ${r.college.name} (${r.quotaType}) - Cutoff: ${(isPwD ? r.pwdCutoff : r.cutoff).toLocaleString()}`).join('\n')}
+
+✨ Check yours free at:
+https://cerebrumbiologyacademy.com/neet-college-predictor
+
+_Powered by Cerebrum Biology Academy_`
+
+    const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(message)}`
+    window.open(whatsappUrl, '_blank')
+  }, [results, rank, category, isPwD])
+
   const scrollToResults = useCallback(() => {
     setTimeout(() => {
       resultsRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
@@ -371,8 +488,12 @@ export default function NEETCollegePredictorPage() {
   }, [])
 
   const visibleResults = useMemo(() => {
-    return results.slice(0, visibleCount)
-  }, [results, visibleCount])
+    let filtered = results
+    if (showSavedOnly) {
+      filtered = results.filter((r) => savedColleges.includes(r.college.name))
+    }
+    return filtered.slice(0, visibleCount)
+  }, [results, visibleCount, showSavedOnly, savedColleges])
 
   const getButtonText = () => {
     if (isLoading) {
@@ -896,27 +1017,71 @@ export default function NEETCollegePredictorPage() {
           <section ref={resultsRef} className="scroll-mt-4 px-4 py-12 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-7xl">
               <div className="mb-8">
-                <h2 className="mb-2 text-2xl font-bold text-gray-900">
-                  {results.length > 0
-                    ? `Found ${results.length} Options in ${uniqueColleges.length} Colleges for Rank ${rank}`
-                    : 'No Colleges Found'}
-                </h2>
-                {results.length > 0 && (
-                  <div className="flex flex-wrap gap-3">
-                    <span className="flex items-center gap-1 rounded-full bg-blue-100 px-4 py-1 text-sm font-medium text-blue-800">
-                      <Globe className="h-4 w-4" /> {aiqCount} AIQ Options
-                    </span>
-                    <span className="flex items-center gap-1 rounded-full bg-orange-100 px-4 py-1 text-sm font-medium text-orange-800">
-                      <Home className="h-4 w-4" /> {stateCount} State Quota
-                    </span>
-                    <span className="rounded-full bg-green-100 px-4 py-1 text-sm font-medium text-green-800">
-                      {govtCount} Government
-                    </span>
-                    <span className="rounded-full bg-purple-100 px-4 py-1 text-sm font-medium text-purple-800">
-                      {privateCount} Private/Deemed
-                    </span>
+                <div className="flex flex-wrap items-start justify-between gap-4">
+                  <div>
+                    <h2 className="mb-2 text-2xl font-bold text-gray-900">
+                      {results.length > 0
+                        ? `Found ${results.length} Options in ${uniqueColleges.length} Colleges for Rank ${rank}`
+                        : 'No Colleges Found'}
+                    </h2>
+                    {results.length > 0 && (
+                      <div className="flex flex-wrap gap-3">
+                        <span className="flex items-center gap-1 rounded-full bg-blue-100 px-4 py-1 text-sm font-medium text-blue-800">
+                          <Globe className="h-4 w-4" /> {aiqCount} AIQ Options
+                        </span>
+                        <span className="flex items-center gap-1 rounded-full bg-orange-100 px-4 py-1 text-sm font-medium text-orange-800">
+                          <Home className="h-4 w-4" /> {stateCount} State Quota
+                        </span>
+                        <span className="rounded-full bg-green-100 px-4 py-1 text-sm font-medium text-green-800">
+                          {govtCount} Government
+                        </span>
+                        <span className="rounded-full bg-purple-100 px-4 py-1 text-sm font-medium text-purple-800">
+                          {privateCount} Private/Deemed
+                        </span>
+                      </div>
+                    )}
                   </div>
-                )}
+
+                  {/* Action Buttons */}
+                  {results.length > 0 && (
+                    <div className="flex flex-wrap items-center gap-2">
+                      {/* Show Saved Only Toggle */}
+                      {savedColleges.length > 0 && (
+                        <button
+                          onClick={() => setShowSavedOnly(!showSavedOnly)}
+                          className={`flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-all ${
+                            showSavedOnly
+                              ? 'bg-red-100 text-red-700'
+                              : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                          }`}
+                        >
+                          <Heart className={`h-4 w-4 ${showSavedOnly ? 'fill-red-500' : ''}`} />
+                          Saved ({savedColleges.length})
+                        </button>
+                      )}
+
+                      {/* Compare Button */}
+                      {compareList.length > 0 && (
+                        <button
+                          onClick={() => setShowCompareModal(true)}
+                          className="flex items-center gap-2 rounded-full bg-indigo-100 px-4 py-2 text-sm font-medium text-indigo-700 transition-all hover:bg-indigo-200"
+                        >
+                          <Scale className="h-4 w-4" />
+                          Compare ({compareList.length})
+                        </button>
+                      )}
+
+                      {/* Share on WhatsApp */}
+                      <button
+                        onClick={shareOnWhatsApp}
+                        className="flex items-center gap-2 rounded-full bg-green-100 px-4 py-2 text-sm font-medium text-green-700 transition-all hover:bg-green-200"
+                      >
+                        <Share2 className="h-4 w-4" />
+                        Share
+                      </button>
+                    </div>
+                  )}
+                </div>
               </div>
 
               {results.length === 0 ? (
@@ -987,9 +1152,52 @@ export default function NEETCollegePredictorPage() {
                                   <span className="text-sm">{college.state}</span>
                                 </div>
                               </div>
+
+                              {/* Action Icons - Bookmark & Compare */}
+                              <div className="flex items-center gap-1">
+                                <button
+                                  onClick={() => toggleSaveCollege(college.name)}
+                                  className={`rounded-full p-2 transition-all ${
+                                    isCollegeSaved(college.name)
+                                      ? 'bg-red-100 text-red-600'
+                                      : 'bg-gray-100 text-gray-400 hover:bg-red-50 hover:text-red-500'
+                                  }`}
+                                  title={
+                                    isCollegeSaved(college.name)
+                                      ? 'Remove from saved'
+                                      : 'Save college'
+                                  }
+                                >
+                                  <Heart
+                                    className={`h-4 w-4 ${isCollegeSaved(college.name) ? 'fill-red-500' : ''}`}
+                                  />
+                                </button>
+                                <button
+                                  onClick={() => toggleCompare(result)}
+                                  disabled={
+                                    !isInCompareList(result) && compareList.length >= MAX_COMPARE
+                                  }
+                                  className={`rounded-full p-2 transition-all ${
+                                    isInCompareList(result)
+                                      ? 'bg-indigo-100 text-indigo-600'
+                                      : compareList.length >= MAX_COMPARE
+                                        ? 'cursor-not-allowed bg-gray-50 text-gray-300'
+                                        : 'bg-gray-100 text-gray-400 hover:bg-indigo-50 hover:text-indigo-500'
+                                  }`}
+                                  title={
+                                    isInCompareList(result)
+                                      ? 'Remove from compare'
+                                      : compareList.length >= MAX_COMPARE
+                                        ? 'Max 3 colleges'
+                                        : 'Add to compare'
+                                  }
+                                >
+                                  <Scale className="h-4 w-4" />
+                                </button>
+                              </div>
                             </div>
 
-                            <div className="mb-4 grid grid-cols-2 gap-3">
+                            <div className="mb-4 grid grid-cols-3 gap-2">
                               <div className="rounded-lg bg-gray-50 p-3">
                                 <div className="text-xs text-gray-500">
                                   Cutoff ({category.toUpperCase()}
@@ -1006,6 +1214,23 @@ export default function NEETCollegePredictorPage() {
                                 >
                                   {chance.level}
                                 </div>
+                              </div>
+                              <div className="rounded-lg bg-gray-50 p-3">
+                                <div className="flex items-center gap-1 text-xs text-gray-500">
+                                  <Calendar className="h-3 w-3" />
+                                  Est. Round
+                                </div>
+                                {(() => {
+                                  const prediction = predictCounsellingRound(displayCutoff)
+                                  return (
+                                    <div
+                                      className={`inline-block rounded-full px-2 py-1 text-sm font-semibold ${prediction.color}`}
+                                      title={`Confidence: ${prediction.confidence}`}
+                                    >
+                                      {prediction.round}
+                                    </div>
+                                  )
+                                })()}
                               </div>
                             </div>
 
@@ -1221,6 +1446,270 @@ export default function NEETCollegePredictorPage() {
             </div>
           </div>
         </section>
+
+        {/* Floating Comparison Bar */}
+        {compareList.length > 0 && !showCompareModal && (
+          <div className="fixed bottom-0 left-0 right-0 z-40 border-t border-indigo-200 bg-gradient-to-r from-indigo-50 to-purple-50 p-4 shadow-lg">
+            <div className="mx-auto flex max-w-7xl items-center justify-between">
+              <div className="flex items-center gap-4">
+                <div className="flex items-center gap-2">
+                  <Scale className="h-5 w-5 text-indigo-600" />
+                  <span className="font-semibold text-indigo-900">
+                    Compare ({compareList.length}/{MAX_COMPARE})
+                  </span>
+                </div>
+                <div className="hidden items-center gap-2 md:flex">
+                  {compareList.map((r) => (
+                    <div
+                      key={`${r.college.name}-${r.quotaType}`}
+                      className="flex items-center gap-1 rounded-full bg-white px-3 py-1 text-sm"
+                    >
+                      <span className="max-w-[150px] truncate font-medium text-gray-700">
+                        {r.college.name.split(',')[0]}
+                      </span>
+                      <button
+                        onClick={() => toggleCompare(r)}
+                        className="ml-1 rounded-full p-0.5 text-gray-400 hover:bg-gray-100 hover:text-gray-600"
+                      >
+                        <X className="h-3 w-3" />
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={() => setCompareList([])}
+                  className="rounded-lg border border-gray-300 px-4 py-2 text-sm font-medium text-gray-600 hover:bg-gray-100"
+                >
+                  Clear
+                </button>
+                <button
+                  onClick={() => setShowCompareModal(true)}
+                  className="rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-700"
+                >
+                  Compare Now
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Compare Modal */}
+        {showCompareModal && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
+            <div className="max-h-[90vh] w-full max-w-5xl overflow-auto rounded-2xl bg-white shadow-2xl">
+              <div className="sticky top-0 z-10 flex items-center justify-between border-b bg-white p-4">
+                <h3 className="flex items-center gap-2 text-xl font-bold text-gray-900">
+                  <Scale className="h-6 w-6 text-indigo-600" />
+                  College Comparison
+                </h3>
+                <button
+                  onClick={() => setShowCompareModal(false)}
+                  className="rounded-full p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-600"
+                >
+                  <X className="h-6 w-6" />
+                </button>
+              </div>
+
+              <div className="p-6">
+                {compareList.length === 0 ? (
+                  <p className="py-8 text-center text-gray-500">
+                    No colleges selected for comparison. Click the compare icon on college cards to
+                    add them.
+                  </p>
+                ) : (
+                  <div className="overflow-x-auto">
+                    <table className="w-full min-w-[600px] border-collapse">
+                      <thead>
+                        <tr className="border-b">
+                          <th className="p-3 text-left text-sm font-semibold text-gray-600">
+                            Feature
+                          </th>
+                          {compareList.map((r) => (
+                            <th
+                              key={`${r.college.name}-${r.quotaType}`}
+                              className="p-3 text-left text-sm font-semibold text-gray-900"
+                            >
+                              <div className="flex items-start justify-between">
+                                <div>
+                                  <div className="max-w-[180px] truncate">{r.college.name}</div>
+                                  <span
+                                    className={`mt-1 inline-block rounded-full px-2 py-0.5 text-xs ${
+                                      r.quotaType === 'AIQ'
+                                        ? 'bg-blue-100 text-blue-700'
+                                        : 'bg-orange-100 text-orange-700'
+                                    }`}
+                                  >
+                                    {r.quotaType}
+                                  </span>
+                                </div>
+                                <button
+                                  onClick={() => toggleCompare(r)}
+                                  className="ml-2 rounded-full p-1 text-gray-400 hover:bg-gray-100"
+                                >
+                                  <X className="h-4 w-4" />
+                                </button>
+                              </div>
+                            </th>
+                          ))}
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr className="border-b">
+                          <td className="p-3 text-sm font-medium text-gray-600">Type</td>
+                          {compareList.map((r) => (
+                            <td
+                              key={`type-${r.college.name}-${r.quotaType}`}
+                              className="p-3 text-sm"
+                            >
+                              <span
+                                className={`rounded-full px-2 py-1 text-xs font-semibold ${
+                                  r.college.type === 'Government'
+                                    ? 'bg-green-100 text-green-800'
+                                    : 'bg-purple-100 text-purple-800'
+                                }`}
+                              >
+                                {r.college.type}
+                              </span>
+                            </td>
+                          ))}
+                        </tr>
+                        <tr className="border-b bg-gray-50">
+                          <td className="p-3 text-sm font-medium text-gray-600">State</td>
+                          {compareList.map((r) => (
+                            <td
+                              key={`state-${r.college.name}-${r.quotaType}`}
+                              className="p-3 text-sm text-gray-900"
+                            >
+                              {r.college.state}
+                            </td>
+                          ))}
+                        </tr>
+                        <tr className="border-b">
+                          <td className="p-3 text-sm font-medium text-gray-600">Tier</td>
+                          {compareList.map((r) => (
+                            <td
+                              key={`tier-${r.college.name}-${r.quotaType}`}
+                              className="p-3 text-sm text-gray-900"
+                            >
+                              Tier {r.college.tier}
+                            </td>
+                          ))}
+                        </tr>
+                        <tr className="border-b bg-gray-50">
+                          <td className="p-3 text-sm font-medium text-gray-600">NIRF Rank</td>
+                          {compareList.map((r) => (
+                            <td
+                              key={`nirf-${r.college.name}-${r.quotaType}`}
+                              className="p-3 text-sm text-gray-900"
+                            >
+                              {r.college.nirfRank ? `#${r.college.nirfRank}` : 'N/A'}
+                            </td>
+                          ))}
+                        </tr>
+                        <tr className="border-b">
+                          <td className="p-3 text-sm font-medium text-gray-600">
+                            Cutoff ({category.toUpperCase()}
+                            {isPwD ? '-PwD' : ''})
+                          </td>
+                          {compareList.map((r) => {
+                            const displayCutoff = isPwD ? r.pwdCutoff : r.cutoff
+                            return (
+                              <td
+                                key={`cutoff-${r.college.name}-${r.quotaType}`}
+                                className="p-3 text-sm font-bold text-gray-900"
+                              >
+                                {displayCutoff.toLocaleString()}
+                              </td>
+                            )
+                          })}
+                        </tr>
+                        <tr className="border-b bg-gray-50">
+                          <td className="p-3 text-sm font-medium text-gray-600">Your Chance</td>
+                          {compareList.map((r) => {
+                            const displayCutoff = isPwD ? r.pwdCutoff : r.cutoff
+                            const chance = getChance(parseInt(rank), displayCutoff)
+                            return (
+                              <td
+                                key={`chance-${r.college.name}-${r.quotaType}`}
+                                className="p-3 text-sm"
+                              >
+                                <span
+                                  className={`rounded-full px-2 py-1 font-semibold ${chance.color}`}
+                                >
+                                  {chance.level}
+                                </span>
+                              </td>
+                            )
+                          })}
+                        </tr>
+                        <tr className="border-b">
+                          <td className="p-3 text-sm font-medium text-gray-600">Est. Round</td>
+                          {compareList.map((r) => {
+                            const displayCutoff = isPwD ? r.pwdCutoff : r.cutoff
+                            const prediction = predictCounsellingRound(displayCutoff)
+                            return (
+                              <td
+                                key={`round-${r.college.name}-${r.quotaType}`}
+                                className="p-3 text-sm"
+                              >
+                                <span
+                                  className={`rounded-full px-2 py-1 font-semibold ${prediction.color}`}
+                                >
+                                  {prediction.round}
+                                </span>
+                              </td>
+                            )
+                          })}
+                        </tr>
+                        <tr className="border-b bg-gray-50">
+                          <td className="p-3 text-sm font-medium text-gray-600">Seats</td>
+                          {compareList.map((r) => (
+                            <td
+                              key={`seats-${r.college.name}-${r.quotaType}`}
+                              className="p-3 text-sm text-gray-900"
+                            >
+                              {r.seats}
+                            </td>
+                          ))}
+                        </tr>
+                        <tr className="border-b">
+                          <td className="p-3 text-sm font-medium text-gray-600">Annual Fees</td>
+                          {compareList.map((r) => (
+                            <td
+                              key={`fees-${r.college.name}-${r.quotaType}`}
+                              className="p-3 text-sm text-gray-900"
+                            >
+                              {r.college.feeDisplay}
+                            </td>
+                          ))}
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                )}
+              </div>
+
+              <div className="sticky bottom-0 border-t bg-gray-50 p-4">
+                <div className="flex justify-end gap-3">
+                  <button
+                    onClick={() => setCompareList([])}
+                    className="rounded-lg border border-gray-300 px-4 py-2 text-sm font-medium text-gray-600 hover:bg-gray-100"
+                  >
+                    Clear All
+                  </button>
+                  <button
+                    onClick={() => setShowCompareModal(false)}
+                    className="rounded-lg bg-indigo-600 px-6 py-2 text-sm font-semibold text-white hover:bg-indigo-700"
+                  >
+                    Done
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </main>
     </>
   )
