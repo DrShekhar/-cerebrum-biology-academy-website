@@ -113,10 +113,14 @@ export default function RootLayout({
         {/* Performance: Preconnect to critical domains */}
         {/* Note: Google Fonts preconnect removed - using next/font which self-hosts */}
         <link rel="preconnect" href="https://wa.me" />
+        <link rel="preconnect" href="https://i.ytimg.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://assets.zyrosite.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="//checkout.razorpay.com" />
         <link rel="dns-prefetch" href="//www.googletagmanager.com" />
         <link rel="dns-prefetch" href="//api.whatsapp.com" />
         <link rel="dns-prefetch" href="//giscus.app" />
+        <link rel="dns-prefetch" href="//i.ytimg.com" />
+        <link rel="dns-prefetch" href="//assets.zyrosite.com" />
 
         {/* Performance: Preload critical images */}
         <link rel="preload" href="/brain-logo.webp" as="image" type="image/webp" />
@@ -147,10 +151,23 @@ export default function RootLayout({
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="shortcut icon" href="/favicon-32x32.png" />
 
-        {/* Critical CSS for instant LCP - hero above-the-fold styles */}
+        {/* Critical CSS for instant LCP - header and hero above-the-fold styles */}
         <style
           dangerouslySetInnerHTML={{
             __html: `
+              /* Header critical styles */
+              header{background:rgba(255,255,255,.95);position:sticky;top:0;z-index:50}
+              .text-slate-900{color:#0f172a}
+              .text-slate-600{color:#475569}
+              .text-2xl{font-size:1.5rem;line-height:2rem}
+              .text-xl{font-size:1.25rem;line-height:1.75rem}
+              .text-sm{font-size:.875rem;line-height:1.25rem}
+              .text-xs{font-size:.75rem;line-height:1rem}
+              .leading-none{line-height:1}
+              .leading-tight{line-height:1.25}
+              .tracking-wide{letter-spacing:.025em}
+              .antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+              /* Hero critical styles */
               .min-h-screen{min-height:100vh}
               .bg-gradient-to-br{background-image:linear-gradient(to bottom right,var(--tw-gradient-stops))}
               .from-blue-900{--tw-gradient-from:#1e3a8a;--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to,#1e3a8a00)}
@@ -160,6 +177,7 @@ export default function RootLayout({
               .text-green-300{color:#86efac}
               .text-white{color:#fff}
               .font-bold{font-weight:700}
+              .font-medium{font-weight:500}
               @keyframes fade-in-up{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
               .animate-fade-in-up{animation:fade-in-up .5s ease-out forwards}
             `,

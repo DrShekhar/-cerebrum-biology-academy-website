@@ -128,6 +128,14 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'vercel.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'assets.zyrosite.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'i.ytimg.com',
+      },
     ],
     // Optimize for modern formats (WebP and AVIF)
     formats: ['image/webp', 'image/avif'],
