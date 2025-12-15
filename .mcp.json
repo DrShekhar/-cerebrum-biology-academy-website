@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "interakt": {
+      "command": "npx",
+      "args": ["tsx", "src/lib/mcp/servers/interakt-server.ts"],
+      "cwd": "/Users/drshekhar/cerebrum-biology-academy-website",
+      "env": {}
+    }
+  }
+}
