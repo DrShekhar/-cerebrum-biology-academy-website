@@ -139,8 +139,8 @@ export function WhatsAppLogin() {
         throw new Error(data.error || 'Invalid OTP')
       }
 
-      // Store auth token and user data
-      localStorage.setItem('auth_token', data.token)
+      // Cookies are automatically set by the server (HTTP-only)
+      // Store user data in localStorage for quick access (non-sensitive data only)
       localStorage.setItem('user', JSON.stringify(data.user))
 
       // Check if new user needs to complete signup

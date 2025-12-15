@@ -19,7 +19,7 @@ import { Button } from '@/components/ui/Button'
 interface SignupFormProps {
   userId: string
   phone: string
-  onComplete: () => void
+  onComplete: (userRole?: string) => void
 }
 
 export function SignupForm({ userId, phone, onComplete }: SignupFormProps) {
@@ -61,8 +61,8 @@ export function SignupForm({ userId, phone, onComplete }: SignupFormProps) {
       // Store updated user data
       localStorage.setItem('user', JSON.stringify(data.user))
 
-      // Call onComplete to redirect to dashboard
-      onComplete()
+      // Call onComplete to redirect to dashboard with user's role
+      onComplete(data.user.role)
     } catch (err: any) {
       setError(err.message || 'Failed to complete registration. Please try again.')
     } finally {

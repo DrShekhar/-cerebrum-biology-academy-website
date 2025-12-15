@@ -1,10 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
-import { sign } from 'jsonwebtoken'
 import { z } from 'zod'
 import { logger } from '@/lib/utils/logger'
-
-const jwtSecret = process.env.NEXTAUTH_SECRET || 'your-secret-key'
+import { SessionManager, CookieManager, addSecurityHeaders } from '@/lib/auth/config'
+import type { UserRole } from '@/generated/prisma'
 
 const verifyOTPSchema = z.object({
   phoneNumber: z.string().min(10, 'Phone number must be at least 10 digits'),
@@ -140,17 +139,13 @@ export async function POST(request: NextRequest) {
       where: { id: otpRecord.id },
     })
 
-    // Generate JWT token
-    const token = sign(
-      {
-        userId: user.id,
-        phone: user.phone,
-        role: user.role,
-        authMethod: 'whatsapp',
-      },
-      jwtSecret,
-      { expiresIn: '7d' }
-    )
+    // Create session and get tokens
+    const { accessToken, refreshToken } = await SessionManager.createSession({
+      id: user.id,
+      email: user.email,
+      role: user.role as UserRole,
+      name: user.name,
+    })
 
     logger.authentication(user.id, 'whatsapp_login', true, {
       phone: formattedPhone,
@@ -158,7 +153,8 @@ export async function POST(request: NextRequest) {
       method: 'whatsapp_otp',
     })
 
-    return NextResponse.json({
+    // Create response with user data
+    const response = NextResponse.json({
       success: true,
       isNewUser, // Flag to show signup form
       user: {
@@ -169,11 +165,15 @@ export async function POST(request: NextRequest) {
         role: user.role,
         phoneVerified: user.phoneVerified,
       },
-      token,
       message: isNewUser
         ? 'Phone verified! Please complete your registration.'
         : 'Login successful! Welcome back to Cerebrum Biology Academy.',
     })
+
+    // Set HTTP-only auth cookies
+    CookieManager.setAuthCookies(response, accessToken, refreshToken)
+
+    return addSecurityHeaders(response)
   } catch (error: any) {
     logger.error('Error verifying WhatsApp OTP', { error })
 
