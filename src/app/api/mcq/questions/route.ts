@@ -10,6 +10,13 @@ export async function GET(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url)
 
+    // Handle fetching by specific IDs (for daily challenges)
+    const idsParam = searchParams.get('ids')
+    if (idsParam) {
+      const ids = idsParam.split(',')
+      return await fetchQuestionsByIds(ids)
+    }
+
     const filters: QuestionFilter = {
       topic: searchParams.get('topic') || undefined,
       chapter: searchParams.get('chapter') || undefined,
@@ -182,4 +189,94 @@ function shuffleArray<T>(array: T[]): T[] {
     ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
   }
   return shuffled
+}
+
+// Fetch questions by specific IDs
+async function fetchQuestionsByIds(ids: string[]) {
+  try {
+    // Fetch from official questions
+    const officialQuestions = await prisma.questions.findMany({
+      where: {
+        id: { in: ids },
+        isActive: true,
+      },
+      select: {
+        id: true,
+        question: true,
+        options: true,
+        correctAnswer: true,
+        explanation: true,
+        topic: true,
+        subject: true,
+        difficulty: true,
+        examYear: true,
+      },
+    })
+
+    // Fetch from community questions
+    const communityQuestions = await prisma.community_questions.findMany({
+      where: {
+        id: { in: ids },
+        status: 'APPROVED',
+      },
+      select: {
+        id: true,
+        question: true,
+        options: true,
+        correctAnswer: true,
+        explanation: true,
+        topic: true,
+        subtopic: true,
+        chapter: true,
+        difficulty: true,
+        isPYQ: true,
+        pyqYear: true,
+      },
+    })
+
+    // Transform to unified format
+    const transformedOfficial: MCQQuestion[] = officialQuestions.map((q) => ({
+      id: q.id,
+      question: q.question,
+      options: Array.isArray(q.options) ? (q.options as string[]) : JSON.parse(q.options as string),
+      correctAnswer: q.correctAnswer as 'A' | 'B' | 'C' | 'D',
+      explanation: q.explanation || undefined,
+      topic: q.topic || 'General',
+      subtopic: undefined,
+      chapter: undefined,
+      difficulty: q.difficulty,
+      isPYQ: !!q.examYear,
+      pyqYear: q.examYear || undefined,
+      source: 'official' as const,
+      sourceId: q.id,
+    }))
+
+    const transformedCommunity: MCQQuestion[] = communityQuestions.map((q) => ({
+      id: q.id,
+      question: q.question,
+      options: Array.isArray(q.options) ? (q.options as string[]) : JSON.parse(q.options as string),
+      correctAnswer: q.correctAnswer as 'A' | 'B' | 'C' | 'D',
+      explanation: q.explanation || undefined,
+      topic: q.topic,
+      subtopic: q.subtopic || undefined,
+      chapter: q.chapter || undefined,
+      difficulty: q.difficulty,
+      isPYQ: q.isPYQ,
+      pyqYear: q.pyqYear || undefined,
+      source: 'community' as const,
+      sourceId: q.id,
+    }))
+
+    const allQuestions = [...transformedOfficial, ...transformedCommunity]
+
+    // Maintain the order of requested IDs
+    const orderedQuestions = ids
+      .map((id) => allQuestions.find((q) => q.id === id))
+      .filter((q): q is MCQQuestion => q !== undefined)
+
+    return NextResponse.json({ questions: orderedQuestions })
+  } catch (error) {
+    console.error('Error fetching questions by IDs:', error)
+    return NextResponse.json({ error: 'Failed to fetch questions' }, { status: 500 })
+  }
 }
