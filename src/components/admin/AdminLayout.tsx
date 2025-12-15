@@ -22,6 +22,8 @@ import {
   FileText,
   Upload,
   FolderOpen,
+  ClipboardCheck,
+  Key,
 } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
@@ -219,6 +221,16 @@ export function AdminLayout({ children }: AdminLayoutProps) {
         { id: 'lms-upload', name: 'Upload', icon: Upload, href: '/admin/lms/materials/upload' },
         { id: 'lms-chapters', name: 'Chapters', icon: BookOpen, href: '/admin/lms/chapters' },
         { id: 'lms-analytics', name: 'Analytics', icon: BarChart3, href: '/admin/lms/analytics' },
+      ],
+    },
+    {
+      id: 'omr',
+      name: 'OMR Evaluation',
+      icon: ClipboardCheck,
+      href: '/admin/omr',
+      children: [
+        { id: 'omr-papers', name: 'Papers', icon: FileText, href: '/admin/omr' },
+        { id: 'omr-results', name: 'Results', icon: BarChart3, href: '/admin/omr/results' },
       ],
     },
     {

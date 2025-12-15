@@ -153,11 +153,11 @@ model chapters {
   isActive        Boolean           @default(true)
   createdAt       DateTime          @default(now())
   updatedAt       DateTime
+  assignments     assignments[]
   courses         courses           @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  doubt_tickets   doubt_tickets[]
   study_materials study_materials[]
   topics          topics[]
-  doubt_tickets   doubt_tickets[]
-  assignments     assignments[]
 
   @@index([courseId, orderIndex])
 }
@@ -277,29 +277,29 @@ model content_notifications {
 }
 
 model courses {
-  id              String            @id
-  name            String
-  description     String?
-  type            CourseType
-  class           StudentClass
-  duration        Int
-  totalFees       Int
-  syllabus        Json?
-  features        Json?
-  isActive        Boolean           @default(true)
-  sortOrder       Int               @default(0)
-  createdAt       DateTime          @default(now())
-  updatedAt       DateTime
-  chapters        chapters[]
-  demo_bookings   demo_bookings[]
-  enrollments     enrollments[]
-  study_materials study_materials[]
-  doubt_tickets       doubt_tickets[]
-  assignments         assignments[]
-  certificates        certificates[]
-  class_sessions      class_sessions[]
-  attendance_settings attendance_settings[]
+  id                      String                    @id
+  name                    String
+  description             String?
+  type                    CourseType
+  class                   StudentClass
+  duration                Int
+  totalFees               Int
+  syllabus                Json?
+  features                Json?
+  isActive                Boolean                   @default(true)
+  sortOrder               Int                       @default(0)
+  createdAt               DateTime                  @default(now())
+  updatedAt               DateTime
+  assignments             assignments[]
+  attendance_settings     attendance_settings?
+  certificates            certificates[]
+  chapters                chapters[]
+  class_sessions          class_sessions[]
+  demo_bookings           demo_bookings[]
+  doubt_tickets           doubt_tickets[]
+  enrollments             enrollments[]
   product_recommendations product_recommendations[]
+  study_materials         study_materials[]
 
   @@index([isActive, sortOrder])
   @@index([type, isActive])
@@ -311,20 +311,19 @@ model product_recommendations {
   leadId          String?
   userId          String?
   courseId        String
-  matchScore      Int       // 0-100 match score
-  matchReasons    Json      // Array of match reasons
-  offerSuggestion Json?     // Suggested discount/payment plan
+  matchScore      Int
+  matchReasons    Json
+  offerSuggestion Json?
   recommendedAt   DateTime  @default(now())
   viewedAt        DateTime?
   clickedAt       DateTime?
   convertedAt     DateTime?
-  source          String    @default("AGENT") // AGENT, MANUAL, SYSTEM
-  metadata        Json?     // Additional context
+  source          String    @default("AGENT")
+  metadata        Json?
   createdAt       DateTime  @default(now())
-
+  course          courses   @relation(fields: [courseId], references: [id], onDelete: Cascade)
   lead            leads?    @relation(fields: [leadId], references: [id], onDelete: Cascade)
   user            users?    @relation(fields: [userId], references: [id], onDelete: Cascade)
-  course          courses   @relation(fields: [courseId], references: [id], onDelete: Cascade)
 
   @@index([leadId])
   @@index([userId])
@@ -333,33 +332,30 @@ model product_recommendations {
 }
 
 model crm_communications {
-  id                String     @id
+  id                String        @id
   leadId            String
   type              CommType
   direction         Direction
   subject           String?
   message           String
-  status            CommStatus @default(PENDING)
+  status            CommStatus    @default(PENDING)
   sentById          String
-  sentAt            DateTime   @default(now())
+  sentAt            DateTime      @default(now())
   whatsappMessageId String?
   templateName      String?
   callDuration      Int?
   callRecordingUrl  String?
   attachments       String[]
-
-  // AI-generated call analysis fields
-  callTranscript    String?    @db.Text
-  callSummary       String?    @db.Text
   actionItems       String[]
-  sentiment         String?    // POSITIVE, NEUTRAL, NEGATIVE
+  callSummary       String?
+  callTranscript    String?
   keyTopics         String[]
-  transcribedAt     DateTime?
+  sentiment         String?
   summarizedAt      DateTime?
-
-  leads             leads      @relation(fields: [leadId], references: [id], onDelete: Cascade)
-  users             users      @relation(fields: [sentById], references: [id])
+  transcribedAt     DateTime?
   agent_tasks       agent_tasks[]
+  leads             leads         @relation(fields: [leadId], references: [id], onDelete: Cascade)
+  users             users         @relation(fields: [sentById], references: [id])
 
   @@index([leadId, sentAt])
   @@index([sentById])
@@ -412,28 +408,28 @@ model demo_bookings {
 }
 
 model enrollments {
-  id              String           @id
-  userId          String
-  courseId        String
-  status          EnrollmentStatus @default(PENDING)
-  enrollmentDate  DateTime         @default(now())
-  startDate       DateTime?
-  endDate         DateTime?
-  totalFees       Int
-  paidAmount      Int              @default(0)
-  pendingAmount   Int              @default(0)
-  paymentPlan     PaymentPlan      @default(FULL)
-  currentProgress Int              @default(0)
-  lastAccessDate  DateTime?
-  createdAt       DateTime         @default(now())
-  updatedAt       DateTime
-  courses         courses          @relation(fields: [courseId], references: [id])
-  users               users                   @relation(fields: [userId], references: [id])
-  payments            payments[]
+  id                  String               @id
+  userId              String
+  courseId            String
+  status              EnrollmentStatus     @default(PENDING)
+  enrollmentDate      DateTime             @default(now())
+  startDate           DateTime?
+  endDate             DateTime?
+  totalFees           Int
+  paidAmount          Int                  @default(0)
+  pendingAmount       Int                  @default(0)
+  paymentPlan         PaymentPlan          @default(FULL)
+  currentProgress     Int                  @default(0)
+  lastAccessDate      DateTime?
+  createdAt           DateTime             @default(now())
+  updatedAt           DateTime
+  attendance_settings attendance_settings?
   certificates        certificates[]
   class_sessions      class_sessions[]
+  courses             courses              @relation(fields: [courseId], references: [id])
+  users               users                @relation(fields: [userId], references: [id])
+  payments            payments[]
   student_attendance  student_attendance[]
-  attendance_settings attendance_settings[]
   video_progress      video_progress[]
 
   @@unique([userId, courseId])
@@ -607,39 +603,39 @@ model lead_magnets {
 }
 
 model leads {
-  id                     String                   @id
-  studentName            String
-  email                  String?
-  phone                  String
-  courseInterest         String
-  stage                  LeadStage                @default(NEW_LEAD)
-  priority               Priority                 @default(WARM)
-  assignedToId           String
-  createdAt              DateTime                 @default(now())
-  updatedAt              DateTime
-  lastContactedAt        DateTime?
-  nextFollowUpAt         DateTime?
-  convertedAt            DateTime?
-  lostAt                 DateTime?
-  lostReason             String?
-  demoBookingId          String?                  @unique
-  source                 LeadSource               @default(MANUAL_ENTRY)
-  score                  Int?
-  scoreUpdatedAt         DateTime?
-  scoreBreakdown         Json?
-  activities             activities[]
-  crm_communications     crm_communications[]
-  fee_plans              fee_plans[]
-  users                  users                    @relation(fields: [assignedToId], references: [id])
-  demo_bookings          demo_bookings?           @relation(fields: [demoBookingId], references: [id])
-  notes                  notes[]
-  offers                 offers[]
-  tasks                  tasks[]
-  whatsapp_conversations whatsapp_conversations[]
-  followup_queue         followup_queue[]
-  followup_history       followup_history[]
-  agent_tasks            agent_tasks[]
+  id                      String                    @id
+  studentName             String
+  email                   String?
+  phone                   String
+  courseInterest          String
+  stage                   LeadStage                 @default(NEW_LEAD)
+  priority                Priority                  @default(WARM)
+  assignedToId            String
+  createdAt               DateTime                  @default(now())
+  updatedAt               DateTime
+  lastContactedAt         DateTime?
+  nextFollowUpAt          DateTime?
+  convertedAt             DateTime?
+  lostAt                  DateTime?
+  lostReason              String?
+  demoBookingId           String?                   @unique
+  source                  LeadSource                @default(MANUAL_ENTRY)
+  score                   Int?
+  scoreBreakdown          Json?
+  scoreUpdatedAt          DateTime?
+  activities              activities[]
+  agent_tasks             agent_tasks[]
+  crm_communications      crm_communications[]
+  fee_plans               fee_plans[]
+  followup_history        followup_history[]
+  followup_queue          followup_queue[]
+  users                   users                     @relation(fields: [assignedToId], references: [id])
+  demo_bookings           demo_bookings?            @relation(fields: [demoBookingId], references: [id])
+  notes                   notes[]
+  offers                  offers[]
   product_recommendations product_recommendations[]
+  tasks                   tasks[]
+  whatsapp_conversations  whatsapp_conversations[]
 
   @@index([assignedToId, stage])
   @@index([assignedToId, score])
@@ -862,50 +858,50 @@ model question_banks {
 }
 
 model questions {
-  id                      String                    @id
-  topic                   String
-  subtopic                String?
-  curriculum              String
-  grade                   String
-  type                    QuestionType
-  question                String
-  options                 Json?
-  correctAnswer           String
-  explanation             String?
-  source                  String?
-  marks                   Int                       @default(1)
-  timeLimit               Int?
-  tags                    Json?
-  totalAttempts           Int                       @default(0)
-  correctAttempts         Int                       @default(0)
-  averageTime             Int?
-  isActive                Boolean                   @default(true)
-  isVerified              Boolean                   @default(false)
-  createdAt               DateTime                  @default(now())
-  updatedAt               DateTime
-  category                QuestionCategory          @default(PRACTICE)
-  conversionRate          Float?
-  difficultyRating        Float?
-  examYear                Int?
-  explanationImage        String?
-  keywords                Json?
-  lastUsed                DateTime?
-  popularityScore         Float                     @default(0)
-  qualityScore            Float?
-  questionImage           String?
-  relatedConcepts         Json?
-  reportCount             Int                       @default(0)
-  slug                    String?                   @unique
-  solutionSteps           Json?
-  subject                 String                    @default("biology")
-  variantId               String?
-  verifiedBy              String?
-  videoExplanation        String?
-  difficulty              DifficultyLevel           @default(MEDIUM)
-  question_bank_questions question_bank_questions[]
-  test_questions          test_questions[]
-  user_question_responses user_question_responses[]
+  id                        String                      @id
+  topic                     String
+  subtopic                  String?
+  curriculum                String
+  grade                     String
+  type                      QuestionType
+  question                  String
+  options                   Json?
+  correctAnswer             String
+  explanation               String?
+  source                    String?
+  marks                     Int                         @default(1)
+  timeLimit                 Int?
+  tags                      Json?
+  totalAttempts             Int                         @default(0)
+  correctAttempts           Int                         @default(0)
+  averageTime               Int?
+  isActive                  Boolean                     @default(true)
+  isVerified                Boolean                     @default(false)
+  createdAt                 DateTime                    @default(now())
+  updatedAt                 DateTime
+  category                  QuestionCategory            @default(PRACTICE)
+  conversionRate            Float?
+  difficultyRating          Float?
+  examYear                  Int?
+  explanationImage          String?
+  keywords                  Json?
+  lastUsed                  DateTime?
+  popularityScore           Float                       @default(0)
+  qualityScore              Float?
+  questionImage             String?
+  relatedConcepts           Json?
+  reportCount               Int                         @default(0)
+  slug                      String?                     @unique
+  solutionSteps             Json?
+  subject                   String                      @default("biology")
+  variantId                 String?
+  verifiedBy                String?
+  videoExplanation          String?
+  difficulty                DifficultyLevel             @default(MEDIUM)
+  question_bank_questions   question_bank_questions[]
   test_assignment_questions test_assignment_questions[]
+  test_questions            test_questions[]
+  user_question_responses   user_question_responses[]
 
   @@index([curriculum, grade])
   @@index([isActive, isVerified])
@@ -1201,9 +1197,9 @@ model test_templates {
   updatedAt               DateTime
   createdBy               String?
   question_bank_questions question_bank_questions[]
+  test_assignments        test_assignments[]        @relation("AssignmentTemplate")
   test_attempts           test_attempts[]
   test_sessions           test_sessions[]
-  test_assignments        test_assignments[]        @relation("AssignmentTemplate")
 
   @@index([curriculum, grade])
   @@index([isActive, isPublished])
@@ -1220,10 +1216,10 @@ model topics {
   isActive        Boolean           @default(true)
   createdAt       DateTime          @default(now())
   updatedAt       DateTime
+  assignments     assignments[]
+  doubt_tickets   doubt_tickets[]
   study_materials study_materials[]
   chapters        chapters          @relation(fields: [chapterId], references: [id], onDelete: Cascade)
-  doubt_tickets   doubt_tickets[]
-  assignments     assignments[]
   video_chapters  video_chapters[]
 
   @@index([chapterId, orderIndex])
@@ -1287,8 +1283,8 @@ model parent_child_relationships {
   parentId  String
   childId   String
   createdAt DateTime @default(now())
-  parent    users    @relation("ParentRelationship", fields: [parentId], references: [id], onDelete: Cascade)
   child     users    @relation("ChildRelationship", fields: [childId], references: [id], onDelete: Cascade)
+  parent    users    @relation("ParentRelationship", fields: [parentId], references: [id], onDelete: Cascade)
 
   @@unique([parentId, childId])
   @@index([parentId])
@@ -1296,73 +1292,72 @@ model parent_child_relationships {
 }
 
 model users {
-  id                              String                    @id
-  email                           String                    @unique
-  phone                           String?                   @unique
+  id                              String                        @id
+  email                           String                        @unique
+  phone                           String?                       @unique
   name                            String
-  role                            UserRole                  @default(STUDENT)
+  role                            UserRole                      @default(STUDENT)
   passwordHash                    String?
   emailVerified                   DateTime?
   phoneVerified                   DateTime?
   profile                         Json?
-  createdAt                       DateTime                  @default(now())
+  createdAt                       DateTime                      @default(now())
   updatedAt                       DateTime
   lastActiveAt                    DateTime?
   verificationToken               String?
   verificationTokenExpiry         DateTime?
   activities                      activities[]
+  student_submissions             assignment_submissions[]      @relation("StudentSubmissions")
+  teacher_assignments             assignments[]                 @relation("TeacherAssignments")
+  certificates                    certificates[]                @relation("StudentCertificates")
+  teacher_sessions                class_sessions[]              @relation("TeacherSessions")
   communication_logs              communication_logs[]
+  counselor_goals                 counselor_goals[]             @relation("CounselorGoals")
+  counselor_kpis                  counselor_kpis[]              @relation("CounselorKPIs")
+  counselor_leaderboard           counselor_leaderboard[]       @relation("CounselorLeaderboard")
   crm_communications              crm_communications[]
   demo_bookings                   demo_bookings[]
+  doubt_messages_sent             doubt_messages[]              @relation("DoubtMessageSender")
+  instructor_doubts               doubt_tickets[]               @relation("InstructorDoubts")
+  student_doubts                  doubt_tickets[]               @relation("StudentDoubts")
   enrollments                     enrollments[]
+  error_reports                   error_reports[]
   fee_plans                       fee_plans[]
+  followup_history_created        followup_history[]            @relation("FollowupHistoryCreator")
+  followup_rules_created          followup_rules[]              @relation("FollowupRuleCreator")
+  followup_rules_updated          followup_rules[]              @relation("FollowupRuleUpdater")
+  followup_templates_created      followup_templates[]          @relation("FollowupTemplateCreator")
   leads                           leads[]
+  lms_device_sessions             lms_device_sessions[]
+  lms_progress_notifications      lms_progress_notifications[]
+  lms_security_events             lms_security_events[]
+  lms_whatsapp_session            lms_whatsapp_sessions?
   material_access                 material_access[]
   material_progress               material_progress[]
   message_templates               message_templates[]
   notes                           notes[]
   offers                          offers[]
+  child_relationships             parent_child_relationships[]  @relation("ChildRelationship")
+  parent_relationships            parent_child_relationships[]  @relation("ParentRelationship")
   payments                        payments[]
   performance_reports             performance_reports[]
+  product_recommendations         product_recommendations[]
+  security_audit_logs             security_audit_logs[]
   sessions                        sessions[]
-  tasks_tasks_assignedToIdTousers tasks[]                   @relation("tasks_assignedToIdTousers")
-  tasks_tasks_createdByIdTousers  tasks[]                   @relation("tasks_createdByIdTousers")
+  marked_attendance               student_attendance[]          @relation("AttendanceMarker")
+  student_attendance              student_attendance[]          @relation("StudentAttendance")
+  tasks_tasks_assignedToIdTousers tasks[]                       @relation("tasks_assignedToIdTousers")
+  tasks_tasks_createdByIdTousers  tasks[]                       @relation("tasks_createdByIdTousers")
+  student_test_submissions        test_assignment_submissions[] @relation("StudentTestSubmissions")
+  teacher_test_assignments        test_assignments[]            @relation("TeacherTestAssignments")
   test_sessions                   test_sessions[]
+  user_device_limits              user_device_limits?
   user_progress                   user_progress[]
   user_question_responses         user_question_responses[]
-  whatsapp_conversations          whatsapp_conversations[]        @relation("AssignedCounselor")
-  whatsapp_messages_sent          whatsapp_messages[]             @relation("SentByUser")
-  security_audit_logs             security_audit_logs[]
-  error_reports                   error_reports[]
-  parent_relationships            parent_child_relationships[]    @relation("ParentRelationship")
-  child_relationships             parent_child_relationships[]    @relation("ChildRelationship")
-  student_doubts                  doubt_tickets[]                 @relation("StudentDoubts")
-  instructor_doubts               doubt_tickets[]                 @relation("InstructorDoubts")
-  doubt_messages_sent             doubt_messages[]                @relation("DoubtMessageSender")
-  teacher_assignments             assignments[]                   @relation("TeacherAssignments")
-  student_submissions             assignment_submissions[]        @relation("StudentSubmissions")
-  certificates                    certificates[]                  @relation("StudentCertificates")
-  teacher_sessions                class_sessions[]                @relation("TeacherSessions")
-  student_attendance              student_attendance[]            @relation("StudentAttendance")
-  marked_attendance               student_attendance[]            @relation("AttendanceMarker")
-  counselor_kpis                          counselor_kpis[]                        @relation("CounselorKPIs")
-  counselor_goals                         counselor_goals[]                       @relation("CounselorGoals")
-  counselor_leaderboard                   counselor_leaderboard[]                 @relation("CounselorLeaderboard")
-  followup_rules_created                  followup_rules[]                        @relation("FollowupRuleCreator")
-  followup_rules_updated                  followup_rules[]                        @relation("FollowupRuleUpdater")
-  followup_templates_created              followup_templates[]                    @relation("FollowupTemplateCreator")
-  followup_history_created                followup_history[]                      @relation("FollowupHistoryCreator")
-  teacher_test_assignments                test_assignments[]                      @relation("TeacherTestAssignments")
-  student_test_submissions                test_assignment_submissions[]           @relation("StudentTestSubmissions")
-  product_recommendations                 product_recommendations[]
-  // LMS relations
-  video_progress                          video_progress[]
-  video_notes                             video_notes[]
-  lms_device_sessions                     lms_device_sessions[]
-  user_device_limits                      user_device_limits?
-  lms_whatsapp_session                    lms_whatsapp_sessions?
-  lms_progress_notifications              lms_progress_notifications[]
-  lms_security_events                     lms_security_events[]
+  video_notes                     video_notes[]
+  video_progress                  video_progress[]
+  whatsapp_conversations          whatsapp_conversations[]      @relation("AssignedCounselor")
+  whatsapp_messages_sent          whatsapp_messages[]           @relation("SentByUser")
 
   @@index([role, createdAt])
   @@index([lastActiveAt])
@@ -1420,6 +1415,968 @@ model whatsapp_messages {
   @@index([conversationId, timestamp])
   @@index([phone])
   @@index([messageId])
+}
+
+model security_audit_logs {
+  id        String                 @id @default(cuid())
+  eventType SecurityAuditEventType
+  userId    String?
+  userEmail String?
+  userRole  String?
+  ipAddress String
+  userAgent String
+  severity  SecurityAuditSeverity
+  pathname  String?
+  query     Json?
+  referrer  String?
+  details   Json
+  timestamp DateTime               @default(now())
+  users     users?                 @relation(fields: [userId], references: [id])
+
+  @@index([eventType, timestamp])
+  @@index([severity, timestamp])
+  @@index([userId, timestamp])
+  @@index([ipAddress, timestamp])
+  @@index([timestamp])
+}
+
+model error_reports {
+  id          String              @id @default(cuid())
+  fingerprint String
+  message     String
+  stack       String?
+  errorName   String              @default("Error")
+  severity    ErrorReportSeverity @default(normal)
+  context     Json?
+  url         String?
+  userAgent   String?
+  clientIP    String
+  userId      String?
+  resolved    Boolean             @default(false)
+  resolvedAt  DateTime?
+  resolvedBy  String?
+  occurrences Int                 @default(1)
+  firstSeen   DateTime            @default(now())
+  lastSeen    DateTime            @default(now())
+  createdAt   DateTime            @default(now())
+  updatedAt   DateTime            @updatedAt
+  users       users?              @relation(fields: [userId], references: [id])
+
+  @@index([fingerprint, lastSeen])
+  @@index([severity, resolved, lastSeen])
+  @@index([clientIP, lastSeen])
+  @@index([userId, lastSeen])
+  @@index([createdAt])
+}
+
+model error_feedback {
+  id                String   @id @default(cuid())
+  errorId           String
+  description       String
+  email             String?
+  reproductionSteps String?
+  clientIP          String
+  createdAt         DateTime @default(now())
+
+  @@index([errorId, createdAt])
+  @@index([createdAt])
+}
+
+model doubt_categories {
+  id            String          @id @default(cuid())
+  name          String          @unique
+  description   String?
+  icon          String?
+  color         String?
+  sortOrder     Int             @default(0)
+  isActive      Boolean         @default(true)
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime        @updatedAt
+  doubt_tickets doubt_tickets[]
+
+  @@index([isActive, sortOrder])
+}
+
+model doubt_tickets {
+  id              String            @id @default(cuid())
+  studentId       String
+  instructorId    String?
+  categoryId      String?
+  subject         String
+  description     String
+  priority        DoubtPriority     @default(MEDIUM)
+  status          DoubtStatus       @default(OPEN)
+  attachments     String[]
+  tags            String[]
+  courseId        String?
+  chapterId       String?
+  topicId         String?
+  viewCount       Int               @default(0)
+  responseTime    Int?
+  resolvedAt      DateTime?
+  lastMessageAt   DateTime          @default(now())
+  studentRating   Int?
+  studentFeedback String?
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  messages        doubt_messages[]
+  category        doubt_categories? @relation(fields: [categoryId], references: [id])
+  chapter         chapters?         @relation(fields: [chapterId], references: [id])
+  course          courses?          @relation(fields: [courseId], references: [id])
+  instructor      users?            @relation("InstructorDoubts", fields: [instructorId], references: [id])
+  student         users             @relation("StudentDoubts", fields: [studentId], references: [id], onDelete: Cascade)
+  topic           topics?           @relation(fields: [topicId], references: [id])
+
+  @@index([studentId, status, createdAt])
+  @@index([instructorId, status])
+  @@index([categoryId, status])
+  @@index([status, priority, createdAt])
+  @@index([courseId])
+  @@index([lastMessageAt])
+}
+
+model doubt_messages {
+  id          String        @id @default(cuid())
+  doubtId     String
+  senderId    String
+  message     String
+  messageType MessageType   @default(TEXT)
+  attachments String[]
+  isRead      Boolean       @default(false)
+  readAt      DateTime?
+  metadata    Json?
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+  doubt       doubt_tickets @relation(fields: [doubtId], references: [id], onDelete: Cascade)
+  sender      users         @relation("DoubtMessageSender", fields: [senderId], references: [id], onDelete: Cascade)
+
+  @@index([doubtId, createdAt])
+  @@index([senderId])
+  @@index([isRead])
+}
+
+model assignments {
+  id                    String                   @id @default(cuid())
+  teacherId             String
+  courseId              String?
+  chapterId             String?
+  topicId               String?
+  title                 String
+  description           String
+  instructions          String?
+  maxMarks              Int
+  dueDate               DateTime
+  allowLateSubmission   Boolean                  @default(false)
+  allowResubmission     Boolean                  @default(false)
+  latePenaltyPercentage Int                      @default(0)
+  status                AssignmentStatus         @default(DRAFT)
+  attachments           String[]
+  createdAt             DateTime                 @default(now())
+  updatedAt             DateTime                 @updatedAt
+  publishedAt           DateTime?
+  submissions           assignment_submissions[]
+  chapter               chapters?                @relation(fields: [chapterId], references: [id])
+  course                courses?                 @relation(fields: [courseId], references: [id])
+  teacher               users                    @relation("TeacherAssignments", fields: [teacherId], references: [id], onDelete: Cascade)
+  topic                 topics?                  @relation(fields: [topicId], references: [id])
+
+  @@index([teacherId, status])
+  @@index([courseId, status])
+  @@index([dueDate, status])
+  @@index([status, publishedAt])
+}
+
+model assignment_submissions {
+  id                String           @id @default(cuid())
+  assignmentId      String
+  studentId         String
+  submittedFiles    String[]
+  submittedText     String?
+  status            SubmissionStatus @default(NOT_SUBMITTED)
+  submittedAt       DateTime?
+  grade             Int?
+  feedback          String?
+  gradedAt          DateTime?
+  isLate            Boolean          @default(false)
+  resubmissionCount Int              @default(0)
+  lastResubmittedAt DateTime?
+  createdAt         DateTime         @default(now())
+  updatedAt         DateTime         @updatedAt
+  assignment        assignments      @relation(fields: [assignmentId], references: [id], onDelete: Cascade)
+  student           users            @relation("StudentSubmissions", fields: [studentId], references: [id], onDelete: Cascade)
+
+  @@unique([assignmentId, studentId])
+  @@index([studentId, status])
+  @@index([assignmentId, status])
+  @@index([submittedAt])
+  @@index([status, gradedAt])
+}
+
+model certificate_templates {
+  id              String          @id @default(cuid())
+  name            String
+  description     String?
+  templateType    CertificateType @default(COURSE_COMPLETION)
+  designType      DesignType      @default(MODERN)
+  primaryColor    String          @default("#2563eb")
+  secondaryColor  String          @default("#1e40af")
+  accentColor     String          @default("#dbeafe")
+  fontFamily      String          @default("Inter")
+  layout          Json
+  backgroundImage String?
+  logoUrl         String?
+  signatureFields Json
+  customFields    Json?
+  isActive        Boolean         @default(true)
+  isDefault       Boolean         @default(false)
+  usageCount      Int             @default(0)
+  createdBy       String?
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
+  certificates    certificates[]
+
+  @@index([templateType, isActive])
+  @@index([isDefault])
+}
+
+model certificates {
+  id                String                 @id @default(cuid())
+  studentId         String
+  courseId          String?
+  enrollmentId      String?
+  templateId        String?
+  certificateType   CertificateType        @default(COURSE_COMPLETION)
+  certificateNumber String                 @unique
+  verificationCode  String                 @unique
+  studentName       String
+  courseName        String
+  completionDate    DateTime
+  issueDate         DateTime               @default(now())
+  validUntil        DateTime?
+  grade             String?
+  percentage        Float?
+  duration          String?
+  instructorNames   Json?
+  achievements      Json?
+  qrCodeUrl         String?
+  certificatePdfUrl String?
+  thumbnailUrl      String?
+  status            CertificateStatus      @default(ISSUED)
+  revokedAt         DateTime?
+  revokedBy         String?
+  revokeReason      String?
+  downloadCount     Int                    @default(0)
+  lastDownloadedAt  DateTime?
+  viewCount         Int                    @default(0)
+  shareCount        Int                    @default(0)
+  metadata          Json?
+  createdAt         DateTime               @default(now())
+  updatedAt         DateTime               @updatedAt
+  course            courses?               @relation(fields: [courseId], references: [id])
+  enrollment        enrollments?           @relation(fields: [enrollmentId], references: [id])
+  student           users                  @relation("StudentCertificates", fields: [studentId], references: [id], onDelete: Cascade)
+  template          certificate_templates? @relation(fields: [templateId], references: [id])
+
+  @@index([studentId, status, issueDate])
+  @@index([courseId, status])
+  @@index([verificationCode])
+  @@index([certificateNumber])
+  @@index([certificateType, status])
+  @@index([status, issueDate])
+}
+
+model class_sessions {
+  id               String               @id @default(cuid())
+  courseId         String
+  enrollmentId     String?
+  title            String
+  description      String?
+  sessionType      SessionType          @default(REGULAR)
+  scheduledDate    DateTime
+  startTime        DateTime
+  endTime          DateTime
+  duration         Int
+  teacherId        String
+  meetingLink      String?
+  meetingId        String?
+  meetingPassword  String?
+  location         String?
+  topic            String?
+  chapter          String?
+  syllabusCovered  Json?
+  status           SessionStatus        @default(SCHEDULED)
+  cancelledAt      DateTime?
+  cancelReason     String?
+  rescheduledFrom  String?
+  attendanceMarked Boolean              @default(false)
+  totalStudents    Int                  @default(0)
+  presentCount     Int                  @default(0)
+  absentCount      Int                  @default(0)
+  lateCount        Int                  @default(0)
+  recordingUrl     String?
+  notesUrl         String?
+  materialsUrl     Json?
+  homeworkAssigned String?
+  metadata         Json?
+  createdAt        DateTime             @default(now())
+  updatedAt        DateTime             @updatedAt
+  course           courses              @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  enrollment       enrollments?         @relation(fields: [enrollmentId], references: [id])
+  teacher          users                @relation("TeacherSessions", fields: [teacherId], references: [id], onDelete: Cascade)
+  attendance       student_attendance[]
+
+  @@index([courseId, scheduledDate])
+  @@index([teacherId, scheduledDate])
+  @@index([enrollmentId, scheduledDate])
+  @@index([status, scheduledDate])
+  @@index([scheduledDate])
+}
+
+model student_attendance {
+  id                 String           @id @default(cuid())
+  sessionId          String
+  studentId          String
+  enrollmentId       String?
+  status             AttendanceStatus @default(ABSENT)
+  markedAt           DateTime         @default(now())
+  markedBy           String
+  checkInTime        DateTime?
+  checkOutTime       DateTime?
+  duration           Int?
+  isLate             Boolean          @default(false)
+  lateBy             Int?
+  notes              String?
+  isExcused          Boolean          @default(false)
+  participationScore Int?
+  deviceInfo         String?
+  ipAddress          String?
+  location           String?
+  metadata           Json?
+  createdAt          DateTime         @default(now())
+  updatedAt          DateTime         @updatedAt
+  enrollment         enrollments?     @relation(fields: [enrollmentId], references: [id])
+  markedByUser       users            @relation("AttendanceMarker", fields: [markedBy], references: [id])
+  session            class_sessions   @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  student            users            @relation("StudentAttendance", fields: [studentId], references: [id], onDelete: Cascade)
+
+  @@unique([sessionId, studentId])
+  @@index([sessionId, status])
+  @@index([studentId, status])
+  @@index([enrollmentId, status])
+  @@index([markedAt])
+  @@index([status, markedAt])
+}
+
+model attendance_settings {
+  id                      String       @id @default(cuid())
+  courseId                String?      @unique
+  enrollmentId            String?      @unique
+  autoMarkAbsent          Boolean      @default(true)
+  autoMarkAfterMinutes    Int          @default(15)
+  lateThresholdMinutes    Int          @default(10)
+  minAttendancePercentage Float        @default(75.0)
+  allowSelfCheckIn        Boolean      @default(false)
+  requireLocation         Boolean      @default(false)
+  allowedLocations        Json?
+  sendAbsentNotifications Boolean      @default(true)
+  sendLateNotifications   Boolean      @default(true)
+  parentNotifications     Boolean      @default(true)
+  metadata                Json?
+  createdAt               DateTime     @default(now())
+  updatedAt               DateTime     @updatedAt
+  course                  courses?     @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  enrollment              enrollments? @relation(fields: [enrollmentId], references: [id], onDelete: Cascade)
+
+  @@index([courseId])
+  @@index([enrollmentId])
+}
+
+model counselor_kpis {
+  id                     String   @id @default(cuid())
+  counselorId            String
+  date                   DateTime @db.Date
+  leadsCreated           Int      @default(0)
+  leadsContacted         Int      @default(0)
+  leadsConverted         Int      @default(0)
+  demosScheduled         Int      @default(0)
+  demosCompleted         Int      @default(0)
+  demosNoShow            Int      @default(0)
+  callsMade              Int      @default(0)
+  callDurationTotal      Int      @default(0)
+  whatsappsSent          Int      @default(0)
+  emailsSent             Int      @default(0)
+  avgResponseTime        Int?
+  conversionRate         Decimal? @db.Decimal(5, 2)
+  followUpsMade          Int      @default(0)
+  tasksCompleted         Int      @default(0)
+  tasksPending           Int      @default(0)
+  revenueGenerated       Decimal  @default(0) @db.Decimal(12, 2)
+  enrollmentsGenerated   Int      @default(0)
+  avgDealValue           Decimal? @db.Decimal(10, 2)
+  newLeads               Int      @default(0)
+  qualifiedLeads         Int      @default(0)
+  demoScheduledLeads     Int      @default(0)
+  demoCompletedLeads     Int      @default(0)
+  offerSentLeads         Int      @default(0)
+  negotiatingLeads       Int      @default(0)
+  enrolledLeads          Int      @default(0)
+  lostLeads              Int      @default(0)
+  dailyLeadTarget        Int      @default(10)
+  weeklyConversionTarget Int      @default(5)
+  monthlyRevenueTarget   Decimal  @default(100000) @db.Decimal(12, 2)
+  notes                  String?
+  metadata               Json?
+  createdAt              DateTime @default(now())
+  updatedAt              DateTime @updatedAt
+  counselor              users    @relation("CounselorKPIs", fields: [counselorId], references: [id], onDelete: Cascade)
+
+  @@unique([counselorId, date])
+  @@index([counselorId, date(sort: Desc)])
+  @@index([date])
+  @@index([conversionRate])
+  @@index([revenueGenerated])
+}
+
+model counselor_goals {
+  id           String            @id @default(cuid())
+  counselorId  String
+  goalType     CounselorGoalType
+  period       GoalPeriod
+  targetValue  Decimal           @db.Decimal(12, 2)
+  currentValue Decimal           @default(0) @db.Decimal(12, 2)
+  startDate    DateTime
+  endDate      DateTime
+  status       GoalStatus        @default(ACTIVE)
+  achievedAt   DateTime?
+  progress     Decimal           @default(0) @db.Decimal(5, 2)
+  metadata     Json?
+  createdAt    DateTime          @default(now())
+  updatedAt    DateTime          @updatedAt
+  counselor    users             @relation("CounselorGoals", fields: [counselorId], references: [id], onDelete: Cascade)
+
+  @@index([counselorId, period, status])
+  @@index([status, endDate])
+  @@index([goalType, period])
+}
+
+model counselor_leaderboard {
+  id              String     @id @default(cuid())
+  counselorId     String
+  period          GoalPeriod
+  periodStart     DateTime
+  periodEnd       DateTime
+  rank            Int
+  totalLeads      Int        @default(0)
+  conversions     Int        @default(0)
+  revenue         Decimal    @default(0) @db.Decimal(12, 2)
+  conversionRate  Decimal    @default(0) @db.Decimal(5, 2)
+  avgResponseTime Int?
+  score           Decimal    @default(0) @db.Decimal(8, 2)
+  createdAt       DateTime   @default(now())
+  updatedAt       DateTime   @updatedAt
+  counselor       users      @relation("CounselorLeaderboard", fields: [counselorId], references: [id], onDelete: Cascade)
+
+  @@unique([counselorId, period, periodStart])
+  @@index([period, periodStart, rank])
+  @@index([score])
+}
+
+model followup_rules {
+  id                String              @id @default(cuid())
+  name              String
+  description       String?
+  isActive          Boolean             @default(true)
+  triggerType       FollowupTrigger
+  triggerConditions Json
+  delayMinutes      Int
+  actionType        FollowupAction
+  templateId        String?
+  priority          Priority            @default(WARM)
+  assignToCounselor Boolean             @default(true)
+  createdById       String
+  updatedById       String?
+  createdAt         DateTime            @default(now())
+  updatedAt         DateTime            @updatedAt
+  followup_queue    followup_queue[]
+  createdBy         users               @relation("FollowupRuleCreator", fields: [createdById], references: [id])
+  template          followup_templates? @relation(fields: [templateId], references: [id])
+  updatedBy         users?              @relation("FollowupRuleUpdater", fields: [updatedById], references: [id])
+
+  @@index([isActive, triggerType])
+  @@index([createdById])
+}
+
+model followup_templates {
+  id          String           @id @default(cuid())
+  name        String
+  description String?
+  channel     FollowupAction
+  subject     String?
+  content     String
+  variables   Json
+  isActive    Boolean          @default(true)
+  createdById String
+  createdAt   DateTime         @default(now())
+  updatedAt   DateTime         @updatedAt
+  rules       followup_rules[]
+  createdBy   users            @relation("FollowupTemplateCreator", fields: [createdById], references: [id])
+
+  @@index([channel, isActive])
+  @@index([createdById])
+}
+
+model followup_queue {
+  id            String         @id @default(cuid())
+  leadId        String
+  ruleId        String
+  scheduledFor  DateTime
+  status        QueueStatus    @default(PENDING)
+  attempt       Int            @default(0)
+  maxAttempts   Int            @default(3)
+  lastAttemptAt DateTime?
+  completedAt   DateTime?
+  errorMessage  String?
+  metadata      Json?
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime       @updatedAt
+  lead          leads          @relation(fields: [leadId], references: [id], onDelete: Cascade)
+  rule          followup_rules @relation(fields: [ruleId], references: [id])
+
+  @@index([scheduledFor, status])
+  @@index([leadId])
+  @@index([status])
+  @@index([ruleId])
+}
+
+model followup_history {
+  id          String         @id @default(cuid())
+  leadId      String
+  ruleId      String?
+  action      FollowupAction
+  channel     String?
+  content     String?
+  sentAt      DateTime       @default(now())
+  status      String
+  metadata    Json?
+  createdById String?
+  isAutomated Boolean        @default(true)
+  createdBy   users?         @relation("FollowupHistoryCreator", fields: [createdById], references: [id])
+  lead        leads          @relation(fields: [leadId], references: [id], onDelete: Cascade)
+
+  @@index([leadId, sentAt])
+  @@index([status])
+  @@index([isAutomated, sentAt])
+}
+
+model newsletterSubscriber {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  status    String   @default("active")
+  source    String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([status])
+  @@index([createdAt])
+}
+
+model test_assignments {
+  id                 String                        @id @default(cuid())
+  teacherId          String
+  testTemplateId     String?
+  title              String
+  description        String?
+  instructions       String?
+  difficulty         DifficultyLevel               @default(MEDIUM)
+  totalQuestions     Int
+  totalMarks         Int
+  duration           Int
+  negativeMarking    Boolean                       @default(false)
+  negativeMarkValue  Decimal?                      @db.Decimal(3, 2)
+  shuffleQuestions   Boolean                       @default(false)
+  showResults        ShowResultsType               @default(IMMEDIATELY)
+  passingMarks       Int?
+  assignToType       AssignToType                  @default(ALL_STUDENTS)
+  assignedClassIds   String[]
+  assignedBatchIds   String[]
+  assignedStudentIds String[]
+  courseId           String?
+  dueDate            DateTime
+  availableFrom      DateTime?
+  status             TestAssignmentStatus          @default(DRAFT)
+  publishedAt        DateTime?
+  selectedChapters   String[]
+  selectedTopics     String[]
+  questionSource     QuestionSourceType            @default(QUESTION_BANK)
+  useAI              Boolean                       @default(false)
+  totalAssigned      Int                           @default(0)
+  totalSubmitted     Int                           @default(0)
+  totalGraded        Int                           @default(0)
+  averageScore       Decimal?                      @db.Decimal(5, 2)
+  metadata           Json?
+  createdAt          DateTime                      @default(now())
+  updatedAt          DateTime                      @updatedAt
+  questions          test_assignment_questions[]
+  submissions        test_assignment_submissions[]
+  teacher            users                         @relation("TeacherTestAssignments", fields: [teacherId], references: [id], onDelete: Cascade)
+  testTemplate       test_templates?               @relation("AssignmentTemplate", fields: [testTemplateId], references: [id])
+
+  @@index([teacherId, status])
+  @@index([status, dueDate])
+  @@index([courseId])
+  @@index([dueDate])
+}
+
+model test_assignment_questions {
+  id               String           @id @default(cuid())
+  testAssignmentId String
+  questionId       String
+  orderIndex       Int
+  marks            Int              @default(4)
+  negativeMarks    Decimal?         @db.Decimal(3, 2)
+  question         questions        @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  testAssignment   test_assignments @relation(fields: [testAssignmentId], references: [id], onDelete: Cascade)
+
+  @@unique([testAssignmentId, questionId])
+  @@index([testAssignmentId, orderIndex])
+}
+
+model test_assignment_submissions {
+  id                 String               @id @default(cuid())
+  testAssignmentId   String
+  studentId          String
+  status             SubmissionTestStatus @default(NOT_STARTED)
+  startedAt          DateTime?
+  submittedAt        DateTime?
+  timeSpent          Int                  @default(0)
+  remainingTime      Int?
+  tabSwitchCount     Int                  @default(0)
+  fullscreenExits    Int                  @default(0)
+  browserInfo        Json?
+  totalScore         Int?
+  percentage         Decimal?             @db.Decimal(5, 2)
+  questionsAttempted Int                  @default(0)
+  questionsCorrect   Int                  @default(0)
+  questionsWrong     Int                  @default(0)
+  questionsSkipped   Int                  @default(0)
+  isGraded           Boolean              @default(false)
+  gradedAt           DateTime?
+  gradedBy           String?
+  teacherFeedback    String?
+  answers            Json?
+  metadata           Json?
+  createdAt          DateTime             @default(now())
+  updatedAt          DateTime             @updatedAt
+  student            users                @relation("StudentTestSubmissions", fields: [studentId], references: [id], onDelete: Cascade)
+  testAssignment     test_assignments     @relation(fields: [testAssignmentId], references: [id], onDelete: Cascade)
+
+  @@unique([testAssignmentId, studentId])
+  @@index([studentId, status])
+  @@index([testAssignmentId, status])
+  @@index([submittedAt])
+}
+
+model agent_tasks {
+  id              String              @id @default(cuid())
+  agentType       AgentType
+  leadId          String?
+  communicationId String?
+  status          AgentTaskStatus     @default(PENDING)
+  input           Json
+  output          Json?
+  error           String?
+  scheduledAt     DateTime?
+  startedAt       DateTime?
+  completedAt     DateTime?
+  attempt         Int                 @default(0)
+  maxAttempts     Int                 @default(3)
+  metadata        Json?
+  createdAt       DateTime            @default(now())
+  updatedAt       DateTime            @updatedAt
+  communication   crm_communications? @relation(fields: [communicationId], references: [id], onDelete: Cascade)
+  lead            leads?              @relation(fields: [leadId], references: [id], onDelete: Cascade)
+
+  @@index([status, scheduledAt])
+  @@index([agentType, status])
+  @@index([leadId])
+  @@index([communicationId])
+}
+
+model free_resources {
+  id            String            @id @default(cuid())
+  title         String
+  description   String?
+  type          FreeResourceType
+  fileUrl       String?
+  content       String?
+  thumbnailUrl  String?
+  classCategory FreeResourceClass
+  priority      Int               @default(0)
+  isPublished   Boolean           @default(false)
+  isArchived    Boolean           @default(false)
+  publishedAt   DateTime?
+  expiresAt     DateTime?
+  viewCount     Int               @default(0)
+  createdAt     DateTime          @default(now())
+  updatedAt     DateTime          @updatedAt
+
+  @@index([type, isPublished, isArchived])
+  @@index([classCategory, isPublished])
+  @@index([isPublished, priority])
+  @@index([expiresAt])
+}
+
+model video_lectures {
+  id                  String                @id @default(cuid())
+  studyMaterialId     String                @unique
+  cloudflareVideoId   String                @unique
+  cloudflareStreamUrl String?
+  cloudflareThumbUrl  String?
+  playbackPolicy      PlaybackPolicy        @default(SIGNED_URL)
+  title               String
+  description         String?
+  duration            Int
+  resolution          String?
+  fileSize            BigInt?
+  hasPdfSync          Boolean               @default(false)
+  syncPdfUrl          String?
+  syncPdfPageCount    Int?
+  uploadStatus        VideoUploadStatus     @default(PROCESSING)
+  processingProgress  Int                   @default(0)
+  processedAt         DateTime?
+  totalViews          Int                   @default(0)
+  totalWatchTime      Int                   @default(0)
+  avgCompletionRate   Decimal               @default(0) @db.Decimal(5, 2)
+  avgRating           Decimal               @default(0) @db.Decimal(3, 2)
+  ratingCount         Int                   @default(0)
+  previewSeconds      Int                   @default(30)
+  requiresEnrollment  Boolean               @default(true)
+  metadata            Json?
+  createdAt           DateTime              @default(now())
+  updatedAt           DateTime              @updatedAt
+  securityEvents      lms_security_events[]
+  pdfSyncData         pdf_sync_data[]
+  chapters            video_chapters[]
+  studyMaterial       study_materials       @relation(fields: [studyMaterialId], references: [id], onDelete: Cascade)
+  notes               video_notes[]
+  progress            video_progress[]
+
+  @@index([cloudflareVideoId])
+  @@index([uploadStatus])
+  @@index([totalViews])
+  @@index([avgRating])
+}
+
+model video_chapters {
+  id             String         @id @default(cuid())
+  videoLectureId String
+  title          String
+  description    String?
+  startTime      Int
+  endTime        Int?
+  orderIndex     Int
+  thumbnailUrl   String?
+  topicId        String?
+  createdAt      DateTime       @default(now())
+  updatedAt      DateTime       @updatedAt
+  topics         topics?        @relation(fields: [topicId], references: [id])
+  videoLecture   video_lectures @relation(fields: [videoLectureId], references: [id], onDelete: Cascade)
+
+  @@index([videoLectureId, orderIndex])
+  @@index([topicId])
+}
+
+model video_progress {
+  id                 String         @id @default(cuid())
+  videoLectureId     String
+  userId             String
+  enrollmentId       String?
+  watchedSeconds     Int            @default(0)
+  lastPosition       Int            @default(0)
+  completionPercent  Decimal        @default(0) @db.Decimal(5, 2)
+  isCompleted        Boolean        @default(false)
+  completedAt        DateTime?
+  totalWatchSessions Int            @default(0)
+  lastWatchedAt      DateTime?
+  firstWatchedAt     DateTime?
+  pauseCount         Int            @default(0)
+  seekCount          Int            @default(0)
+  replayCount        Int            @default(0)
+  playbackSpeed      Decimal        @default(1.0) @db.Decimal(3, 2)
+  preferredQuality   String?
+  rating             Int?
+  ratedAt            DateTime?
+  lastDeviceId       String?
+  lastDeviceType     String?
+  metadata           Json?
+  createdAt          DateTime       @default(now())
+  updatedAt          DateTime       @updatedAt
+  enrollment         enrollments?   @relation(fields: [enrollmentId], references: [id])
+  user               users          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  videoLecture       video_lectures @relation(fields: [videoLectureId], references: [id], onDelete: Cascade)
+
+  @@unique([videoLectureId, userId])
+  @@index([userId, lastWatchedAt])
+  @@index([completionPercent])
+  @@index([isCompleted])
+}
+
+model video_notes {
+  id             String         @id @default(cuid())
+  videoLectureId String
+  userId         String
+  timestamp      Int
+  content        String
+  aiSummary      String?
+  isHighlighted  Boolean        @default(false)
+  color          String?
+  tags           String[]
+  createdAt      DateTime       @default(now())
+  updatedAt      DateTime       @updatedAt
+  user           users          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  videoLecture   video_lectures @relation(fields: [videoLectureId], references: [id], onDelete: Cascade)
+
+  @@index([videoLectureId, userId, timestamp])
+  @@index([userId, createdAt])
+}
+
+model pdf_sync_data {
+  id              String         @id @default(cuid())
+  videoLectureId  String
+  videoTimestamp  Int
+  pdfPage         Int
+  sectionTitle    String?
+  description     String?
+  isAutoGenerated Boolean        @default(false)
+  confidence      Decimal?       @db.Decimal(3, 2)
+  createdAt       DateTime       @default(now())
+  videoLecture    video_lectures @relation(fields: [videoLectureId], references: [id], onDelete: Cascade)
+
+  @@unique([videoLectureId, videoTimestamp])
+  @@index([videoLectureId, pdfPage])
+}
+
+model lms_device_sessions {
+  id              String                @id @default(cuid())
+  userId          String
+  deviceId        String
+  deviceName      String?
+  deviceType      DeviceType
+  browser         String?
+  os              String?
+  ipAddress       String?
+  country         String?
+  city            String?
+  isActive        Boolean               @default(true)
+  lastActiveAt    DateTime              @default(now())
+  firstSeenAt     DateTime              @default(now())
+  isTrusted       Boolean               @default(false)
+  trustVerifiedAt DateTime?
+  sessionToken    String                @unique
+  expiresAt       DateTime?
+  isRevoked       Boolean               @default(false)
+  revokedAt       DateTime?
+  revokedReason   String?
+  metadata        Json?
+  createdAt       DateTime              @default(now())
+  updatedAt       DateTime              @updatedAt
+  user            users                 @relation(fields: [userId], references: [id], onDelete: Cascade)
+  securityEvents  lms_security_events[]
+
+  @@index([userId, isActive])
+  @@index([deviceId])
+  @@index([sessionToken])
+  @@index([lastActiveAt])
+}
+
+model lms_security_events {
+  id                String               @id @default(cuid())
+  userId            String?
+  videoLectureId    String?
+  deviceSessionId   String?
+  eventType         LmsSecurityEvent
+  severity          SecuritySeverity     @default(LOW)
+  description       String
+  ipAddress         String?
+  userAgent         String?
+  deviceFingerprint String?
+  evidence          Json?
+  actionTaken       String?
+  isResolved        Boolean              @default(false)
+  resolvedAt        DateTime?
+  resolvedBy        String?
+  createdAt         DateTime             @default(now())
+  deviceSession     lms_device_sessions? @relation(fields: [deviceSessionId], references: [id])
+  user              users?               @relation(fields: [userId], references: [id])
+  videoLecture      video_lectures?      @relation(fields: [videoLectureId], references: [id])
+
+  @@index([userId, createdAt])
+  @@index([eventType, severity])
+  @@index([videoLectureId])
+  @@index([createdAt])
+}
+
+model user_device_limits {
+  id               String    @id @default(cuid())
+  userId           String    @unique
+  maxDevices       Int       @default(2)
+  activeDevices    Int       @default(0)
+  violationCount   Int       @default(0)
+  lastViolationAt  DateTime?
+  isRestricted     Boolean   @default(false)
+  restrictedUntil  DateTime?
+  restrictedReason String?
+  createdAt        DateTime  @default(now())
+  updatedAt        DateTime  @updatedAt
+  user             users     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([isRestricted])
+}
+
+model lms_whatsapp_sessions {
+  id                   String            @id @default(cuid())
+  userId               String            @unique
+  phone                String
+  currentState         LmsWhatsAppState  @default(MAIN_MENU)
+  contextData          Json?
+  previousState        LmsWhatsAppState?
+  navigationPath       Json?
+  lastCourseId         String?
+  lastChapterId        String?
+  lastVideoId          String?
+  lastInteractionAt    DateTime          @default(now())
+  totalInteractions    Int               @default(0)
+  preferredLanguage    String            @default("en")
+  notificationsEnabled Boolean           @default(true)
+  createdAt            DateTime          @default(now())
+  updatedAt            DateTime          @updatedAt
+  user                 users             @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([phone])
+  @@index([currentState])
+  @@index([lastInteractionAt])
+}
+
+model lms_progress_notifications {
+  id               String              @id @default(cuid())
+  userId           String
+  notificationType LmsNotificationType
+  title            String
+  message          String
+  courseId         String?
+  videoLectureId   String?
+  sentVia          String[]
+  sentAt           DateTime?
+  readAt           DateTime?
+  clickedAt        DateTime?
+  scheduledFor     DateTime?
+  metadata         Json?
+  createdAt        DateTime            @default(now())
+  user             users               @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, createdAt])
+  @@index([notificationType, sentAt])
+  @@index([scheduledFor])
 }
 
 enum AccessLevel {
@@ -1796,29 +2753,6 @@ enum MessageDirection {
   OUTBOUND
 }
 
-model security_audit_logs {
-  id        String                 @id @default(cuid())
-  eventType SecurityAuditEventType
-  userId    String?
-  userEmail String?
-  userRole  String?
-  ipAddress String
-  userAgent String
-  severity  SecurityAuditSeverity
-  pathname  String?
-  query     Json?
-  referrer  String?
-  details   Json
-  timestamp DateTime               @default(now())
-  users     users?                 @relation(fields: [userId], references: [id], onDelete: SetNull)
-
-  @@index([eventType, timestamp])
-  @@index([severity, timestamp])
-  @@index([userId, timestamp])
-  @@index([ipAddress, timestamp])
-  @@index([timestamp])
-}
-
 enum SecurityAuditEventType {
   login
   logout
@@ -1838,35 +2772,6 @@ enum SecurityAuditSeverity {
   medium
   high
   critical
-}
-
-model error_reports {
-  id          String              @id @default(cuid())
-  fingerprint String
-  message     String
-  stack       String?             @db.Text
-  errorName   String              @default("Error")
-  severity    ErrorReportSeverity @default(normal)
-  context     Json?
-  url         String?
-  userAgent   String?
-  clientIP    String
-  userId      String?
-  resolved    Boolean             @default(false)
-  resolvedAt  DateTime?
-  resolvedBy  String?
-  occurrences Int                 @default(1)
-  firstSeen   DateTime            @default(now())
-  lastSeen    DateTime            @default(now())
-  createdAt   DateTime            @default(now())
-  updatedAt   DateTime            @updatedAt
-  users       users?              @relation(fields: [userId], references: [id], onDelete: SetNull)
-
-  @@index([fingerprint, lastSeen])
-  @@index([severity, resolved, lastSeen])
-  @@index([clientIP, lastSeen])
-  @@index([userId, lastSeen])
-  @@index([createdAt])
 }
 
 enum ErrorReportSeverity {
@@ -1899,149 +2804,6 @@ enum MessageType {
   VIDEO
 }
 
-model error_feedback {
-  id                String   @id @default(cuid())
-  errorId           String
-  description       String   @db.Text
-  email             String?
-  reproductionSteps String?  @db.Text
-  clientIP          String
-  createdAt         DateTime @default(now())
-
-  @@index([errorId, createdAt])
-  @@index([createdAt])
-}
-
-model doubt_categories {
-  id           String         @id @default(cuid())
-  name         String         @unique
-  description  String?
-  icon         String?
-  color        String?
-  sortOrder    Int            @default(0)
-  isActive     Boolean        @default(true)
-  createdAt    DateTime       @default(now())
-  updatedAt    DateTime       @updatedAt
-  doubt_tickets doubt_tickets[]
-
-  @@index([isActive, sortOrder])
-}
-
-model doubt_tickets {
-  id               String              @id @default(cuid())
-  studentId        String
-  instructorId     String?
-  categoryId       String?
-  subject          String
-  description      String              @db.Text
-  priority         DoubtPriority       @default(MEDIUM)
-  status           DoubtStatus         @default(OPEN)
-  attachments      String[]
-  tags             String[]
-  courseId         String?
-  chapterId        String?
-  topicId          String?
-  viewCount        Int                 @default(0)
-  responseTime     Int?
-  resolvedAt       DateTime?
-  lastMessageAt    DateTime            @default(now())
-  studentRating    Int?
-  studentFeedback  String?
-  createdAt        DateTime            @default(now())
-  updatedAt        DateTime            @updatedAt
-  student          users               @relation("StudentDoubts", fields: [studentId], references: [id], onDelete: Cascade)
-  instructor       users?              @relation("InstructorDoubts", fields: [instructorId], references: [id], onDelete: SetNull)
-  category         doubt_categories?   @relation(fields: [categoryId], references: [id], onDelete: SetNull)
-  course           courses?            @relation(fields: [courseId], references: [id], onDelete: SetNull)
-  chapter          chapters?           @relation(fields: [chapterId], references: [id], onDelete: SetNull)
-  topic            topics?             @relation(fields: [topicId], references: [id], onDelete: SetNull)
-  messages         doubt_messages[]
-
-  @@index([studentId, status, createdAt])
-  @@index([instructorId, status])
-  @@index([categoryId, status])
-  @@index([status, priority, createdAt])
-  @@index([courseId])
-  @@index([lastMessageAt])
-}
-
-model doubt_messages {
-  id           String         @id @default(cuid())
-  doubtId      String
-  senderId     String
-  message      String         @db.Text
-  messageType  MessageType    @default(TEXT)
-  attachments  String[]
-  isRead       Boolean        @default(false)
-  readAt       DateTime?
-  metadata     Json?
-  createdAt    DateTime       @default(now())
-  updatedAt    DateTime       @updatedAt
-  doubt        doubt_tickets  @relation(fields: [doubtId], references: [id], onDelete: Cascade)
-  sender       users          @relation("DoubtMessageSender", fields: [senderId], references: [id], onDelete: Cascade)
-
-  @@index([doubtId, createdAt])
-  @@index([senderId])
-  @@index([isRead])
-}
-
-model assignments {
-  id                    String                  @id @default(cuid())
-  teacherId             String
-  courseId              String?
-  chapterId             String?
-  topicId               String?
-  title                 String
-  description           String                  @db.Text
-  instructions          String?                 @db.Text
-  maxMarks              Int
-  dueDate               DateTime
-  allowLateSubmission   Boolean                 @default(false)
-  allowResubmission     Boolean                 @default(false)
-  latePenaltyPercentage Int                     @default(0)
-  status                AssignmentStatus        @default(DRAFT)
-  attachments           String[]
-  createdAt             DateTime                @default(now())
-  updatedAt             DateTime                @updatedAt
-  publishedAt           DateTime?
-  teacher               users                   @relation("TeacherAssignments", fields: [teacherId], references: [id], onDelete: Cascade)
-  course                courses?                @relation(fields: [courseId], references: [id], onDelete: SetNull)
-  chapter               chapters?               @relation(fields: [chapterId], references: [id], onDelete: SetNull)
-  topic                 topics?                 @relation(fields: [topicId], references: [id], onDelete: SetNull)
-  submissions           assignment_submissions[]
-
-  @@index([teacherId, status])
-  @@index([courseId, status])
-  @@index([dueDate, status])
-  @@index([status, publishedAt])
-}
-
-model assignment_submissions {
-  id              String             @id @default(cuid())
-  assignmentId    String
-  studentId       String
-  submittedFiles  String[]
-  submittedText   String?            @db.Text
-  status          SubmissionStatus   @default(NOT_SUBMITTED)
-  submittedAt     DateTime?
-  grade           Int?
-  feedback        String?            @db.Text
-  gradedAt        DateTime?
-  isLate          Boolean            @default(false)
-  resubmissionCount Int              @default(0)
-  lastResubmittedAt DateTime?
-  createdAt       DateTime           @default(now())
-  updatedAt       DateTime           @updatedAt
-  assignment      assignments        @relation(fields: [assignmentId], references: [id], onDelete: Cascade)
-  student         users              @relation("StudentSubmissions", fields: [studentId], references: [id], onDelete: Cascade)
-
-  @@unique([assignmentId, studentId])
-  @@index([studentId, status])
-  @@index([assignmentId, status])
-  @@index([submittedAt])
-  @@index([status, gradedAt])
-}
-
 enum AssignmentStatus {
   DRAFT
   PUBLISHED
@@ -2054,185 +2816,6 @@ enum SubmissionStatus {
   LATE
   GRADED
   RESUBMIT_REQUIRED
-}
-
-model certificate_templates {
-  id               String            @id @default(cuid())
-  name             String
-  description      String?
-  templateType     CertificateType   @default(COURSE_COMPLETION)
-  designType       DesignType        @default(MODERN)
-  primaryColor     String            @default("#2563eb")
-  secondaryColor   String            @default("#1e40af")
-  accentColor      String            @default("#dbeafe")
-  fontFamily       String            @default("Inter")
-  layout           Json              // Layout configuration (borders, header, footer, signature positions)
-  backgroundImage  String?
-  logoUrl          String?
-  signatureFields  Json              // Array of signature positions and names
-  customFields     Json?             // Additional customizable fields
-  isActive         Boolean           @default(true)
-  isDefault        Boolean           @default(false)
-  usageCount       Int               @default(0)
-  createdBy        String?
-  createdAt        DateTime          @default(now())
-  updatedAt        DateTime          @updatedAt
-  certificates     certificates[]
-
-  @@index([templateType, isActive])
-  @@index([isDefault])
-}
-
-model certificates {
-  id                  String              @id @default(cuid())
-  studentId           String
-  courseId            String?
-  enrollmentId        String?
-  templateId          String?
-  certificateType     CertificateType     @default(COURSE_COMPLETION)
-  certificateNumber   String              @unique
-  verificationCode    String              @unique
-  studentName         String
-  courseName          String
-  completionDate      DateTime
-  issueDate           DateTime            @default(now())
-  validUntil          DateTime?
-  grade               String?
-  percentage          Float?
-  duration            String?             // e.g., "6 months", "1 year"
-  instructorNames     Json?               // Array of instructor names
-  achievements        Json?               // Special achievements or honors
-  qrCodeUrl           String?
-  certificatePdfUrl   String?
-  thumbnailUrl        String?
-  status              CertificateStatus   @default(ISSUED)
-  revokedAt           DateTime?
-  revokedBy           String?
-  revokeReason        String?
-  downloadCount       Int                 @default(0)
-  lastDownloadedAt    DateTime?
-  viewCount           Int                 @default(0)
-  shareCount          Int                 @default(0)
-  metadata            Json?               // Additional metadata
-  createdAt           DateTime            @default(now())
-  updatedAt           DateTime            @updatedAt
-  student             users               @relation("StudentCertificates", fields: [studentId], references: [id], onDelete: Cascade)
-  course              courses?            @relation(fields: [courseId], references: [id], onDelete: SetNull)
-  enrollment          enrollments?        @relation(fields: [enrollmentId], references: [id], onDelete: SetNull)
-  template            certificate_templates? @relation(fields: [templateId], references: [id], onDelete: SetNull)
-
-  @@index([studentId, status, issueDate])
-  @@index([courseId, status])
-  @@index([verificationCode])
-  @@index([certificateNumber])
-  @@index([certificateType, status])
-  @@index([status, issueDate])
-}
-
-model class_sessions {
-  id                String              @id @default(cuid())
-  courseId          String
-  enrollmentId      String?
-  title             String
-  description       String?
-  sessionType       SessionType         @default(REGULAR)
-  scheduledDate     DateTime
-  startTime         DateTime
-  endTime           DateTime
-  duration          Int                 // Duration in minutes
-  teacherId         String
-  meetingLink       String?
-  meetingId         String?
-  meetingPassword   String?
-  location          String?
-  topic             String?
-  chapter           String?
-  syllabusCovered   Json?               // Array of topics covered
-  status            SessionStatus       @default(SCHEDULED)
-  cancelledAt       DateTime?
-  cancelReason      String?
-  rescheduledFrom   String?             // Original session ID if rescheduled
-  attendanceMarked  Boolean             @default(false)
-  totalStudents     Int                 @default(0)
-  presentCount      Int                 @default(0)
-  absentCount       Int                 @default(0)
-  lateCount         Int                 @default(0)
-  recordingUrl      String?
-  notesUrl          String?
-  materialsUrl      Json?               // Array of material URLs
-  homeworkAssigned  String?
-  metadata          Json?
-  createdAt         DateTime            @default(now())
-  updatedAt         DateTime            @updatedAt
-  course            courses             @relation(fields: [courseId], references: [id], onDelete: Cascade)
-  teacher           users               @relation("TeacherSessions", fields: [teacherId], references: [id], onDelete: Cascade)
-  enrollment        enrollments?        @relation(fields: [enrollmentId], references: [id], onDelete: SetNull)
-  attendance        student_attendance[]
-
-  @@index([courseId, scheduledDate])
-  @@index([teacherId, scheduledDate])
-  @@index([enrollmentId, scheduledDate])
-  @@index([status, scheduledDate])
-  @@index([scheduledDate])
-}
-
-model student_attendance {
-  id                String             @id @default(cuid())
-  sessionId         String
-  studentId         String
-  enrollmentId      String?
-  status            AttendanceStatus   @default(ABSENT)
-  markedAt          DateTime           @default(now())
-  markedBy          String             // Teacher/Admin who marked attendance
-  checkInTime       DateTime?
-  checkOutTime      DateTime?
-  duration          Int?               // Minutes attended
-  isLate            Boolean            @default(false)
-  lateBy            Int?               // Minutes late
-  notes             String?            // Teacher notes (e.g., sick, excused)
-  isExcused         Boolean            @default(false)
-  participationScore Int?              // 0-10 participation rating
-  deviceInfo        String?
-  ipAddress         String?
-  location          String?
-  metadata          Json?
-  createdAt         DateTime           @default(now())
-  updatedAt         DateTime           @updatedAt
-  session           class_sessions     @relation(fields: [sessionId], references: [id], onDelete: Cascade)
-  student           users              @relation("StudentAttendance", fields: [studentId], references: [id], onDelete: Cascade)
-  markedByUser      users              @relation("AttendanceMarker", fields: [markedBy], references: [id])
-  enrollment        enrollments?       @relation(fields: [enrollmentId], references: [id], onDelete: SetNull)
-
-  @@unique([sessionId, studentId])
-  @@index([sessionId, status])
-  @@index([studentId, status])
-  @@index([enrollmentId, status])
-  @@index([markedAt])
-  @@index([status, markedAt])
-}
-
-model attendance_settings {
-  id                      String    @id @default(cuid())
-  courseId                String?   @unique
-  enrollmentId            String?   @unique
-  autoMarkAbsent          Boolean   @default(true)
-  autoMarkAfterMinutes    Int       @default(15)
-  lateThresholdMinutes    Int       @default(10)
-  minAttendancePercentage Float     @default(75.0)
-  allowSelfCheckIn        Boolean   @default(false)
-  requireLocation         Boolean   @default(false)
-  allowedLocations        Json?     // Geofencing coordinates
-  sendAbsentNotifications Boolean   @default(true)
-  sendLateNotifications   Boolean   @default(true)
-  parentNotifications     Boolean   @default(true)
-  metadata                Json?
-  createdAt               DateTime  @default(now())
-  updatedAt               DateTime  @updatedAt
-  course                  courses?  @relation(fields: [courseId], references: [id], onDelete: Cascade)
-  enrollment              enrollments? @relation(fields: [enrollmentId], references: [id], onDelete: Cascade)
-
-  @@index([courseId])
-  @@index([enrollmentId])
 }
 
 enum AttendanceStatus {
@@ -2287,113 +2870,6 @@ enum DesignType {
   ELEGANT
 }
 
-model counselor_kpis {
-  id                     String   @id @default(cuid())
-  counselorId            String
-  date                   DateTime @db.Date
-
-  // Daily metrics - Lead activity
-  leadsCreated           Int      @default(0)
-  leadsContacted         Int      @default(0)
-  leadsConverted         Int      @default(0)
-  demosScheduled         Int      @default(0)
-  demosCompleted         Int      @default(0)
-  demosNoShow            Int      @default(0)
-
-  // Communication metrics
-  callsMade              Int      @default(0)
-  callDurationTotal      Int      @default(0)  // Total minutes on calls
-  whatsappsSent          Int      @default(0)
-  emailsSent             Int      @default(0)
-
-  // Performance metrics
-  avgResponseTime        Int?     // Minutes to first response
-  conversionRate         Decimal? @db.Decimal(5, 2) // Percentage
-  followUpsMade          Int      @default(0)
-  tasksCompleted         Int      @default(0)
-  tasksPending           Int      @default(0)
-
-  // Revenue metrics
-  revenueGenerated       Decimal  @default(0) @db.Decimal(12, 2)
-  enrollmentsGenerated   Int      @default(0)
-  avgDealValue           Decimal? @db.Decimal(10, 2)
-
-  // Lead stage distribution
-  newLeads               Int      @default(0)
-  qualifiedLeads         Int      @default(0)
-  demoScheduledLeads     Int      @default(0)
-  demoCompletedLeads     Int      @default(0)
-  offerSentLeads         Int      @default(0)
-  negotiatingLeads       Int      @default(0)
-  enrolledLeads          Int      @default(0)
-  lostLeads              Int      @default(0)
-
-  // Goals
-  dailyLeadTarget        Int      @default(10)
-  weeklyConversionTarget Int      @default(5)
-  monthlyRevenueTarget   Decimal  @default(100000) @db.Decimal(12, 2)
-
-  // Metadata
-  notes                  String?  @db.Text
-  metadata               Json?
-  createdAt              DateTime @default(now())
-  updatedAt              DateTime @updatedAt
-
-  counselor              users    @relation("CounselorKPIs", fields: [counselorId], references: [id], onDelete: Cascade)
-
-  @@unique([counselorId, date])
-  @@index([counselorId, date(sort: Desc)])
-  @@index([date])
-  @@index([conversionRate])
-  @@index([revenueGenerated])
-}
-
-model counselor_goals {
-  id                String             @id @default(cuid())
-  counselorId       String
-  goalType          CounselorGoalType
-  period            GoalPeriod
-  targetValue       Decimal            @db.Decimal(12, 2)
-  currentValue      Decimal            @default(0) @db.Decimal(12, 2)
-  startDate         DateTime
-  endDate           DateTime
-  status            GoalStatus         @default(ACTIVE)
-  achievedAt        DateTime?
-  progress          Decimal            @default(0) @db.Decimal(5, 2) // Percentage
-  metadata          Json?
-  createdAt         DateTime           @default(now())
-  updatedAt         DateTime           @updatedAt
-
-  counselor         users              @relation("CounselorGoals", fields: [counselorId], references: [id], onDelete: Cascade)
-
-  @@index([counselorId, period, status])
-  @@index([status, endDate])
-  @@index([goalType, period])
-}
-
-model counselor_leaderboard {
-  id                String   @id @default(cuid())
-  counselorId       String
-  period            GoalPeriod
-  periodStart       DateTime
-  periodEnd         DateTime
-  rank              Int
-  totalLeads        Int      @default(0)
-  conversions       Int      @default(0)
-  revenue           Decimal  @default(0) @db.Decimal(12, 2)
-  conversionRate    Decimal  @default(0) @db.Decimal(5, 2)
-  avgResponseTime   Int?
-  score             Decimal  @default(0) @db.Decimal(8, 2) // Composite score
-  createdAt         DateTime @default(now())
-  updatedAt         DateTime @updatedAt
-
-  counselor         users    @relation("CounselorLeaderboard", fields: [counselorId], references: [id], onDelete: Cascade)
-
-  @@unique([counselorId, period, periodStart])
-  @@index([period, periodStart, rank])
-  @@index([score])
-}
-
 enum CounselorGoalType {
   LEADS_CREATED
   CONVERSIONS
@@ -2419,119 +2895,24 @@ enum GoalStatus {
   CANCELLED
 }
 
-// ============================================
-// AUTOMATED FOLLOW-UP SYSTEM TABLES
-// ============================================
-
-model followup_rules {
-  id                String              @id @default(cuid())
-  name              String
-  description       String?             @db.Text
-  isActive          Boolean             @default(true)
-  triggerType       FollowupTrigger
-  triggerConditions Json                // Specific conditions for trigger
-  delayMinutes      Int                 // Delay before follow-up (in minutes)
-  actionType        FollowupAction
-  templateId        String?
-  priority          Priority            @default(WARM)
-  assignToCounselor Boolean             @default(true)
-  createdById       String
-  updatedById       String?
-  createdAt         DateTime            @default(now())
-  updatedAt         DateTime            @updatedAt
-
-  template          followup_templates? @relation(fields: [templateId], references: [id], onDelete: SetNull)
-  createdBy         users               @relation("FollowupRuleCreator", fields: [createdById], references: [id])
-  updatedBy         users?              @relation("FollowupRuleUpdater", fields: [updatedById], references: [id])
-  followup_queue    followup_queue[]
-
-  @@index([isActive, triggerType])
-  @@index([createdById])
-}
-
-model followup_templates {
-  id            String         @id @default(cuid())
-  name          String
-  description   String?        @db.Text
-  channel       FollowupAction
-  subject       String?        // For emails
-  content       String         @db.Text // Template with placeholders
-  variables     Json           // Available variables
-  isActive      Boolean        @default(true)
-  createdById   String
-  createdAt     DateTime       @default(now())
-  updatedAt     DateTime       @updatedAt
-
-  createdBy     users          @relation("FollowupTemplateCreator", fields: [createdById], references: [id])
-  rules         followup_rules[]
-
-  @@index([channel, isActive])
-  @@index([createdById])
-}
-
-model followup_queue {
-  id                String         @id @default(cuid())
-  leadId            String
-  ruleId            String
-  scheduledFor      DateTime       // When to execute
-  status            QueueStatus    @default(PENDING)
-  attempt           Int            @default(0)
-  maxAttempts       Int            @default(3)
-  lastAttemptAt     DateTime?
-  completedAt       DateTime?
-  errorMessage      String?        @db.Text
-  metadata          Json?          // Additional context
-  createdAt         DateTime       @default(now())
-  updatedAt         DateTime       @updatedAt
-
-  lead              leads          @relation(fields: [leadId], references: [id], onDelete: Cascade)
-  rule              followup_rules @relation(fields: [ruleId], references: [id])
-
-  @@index([scheduledFor, status])
-  @@index([leadId])
-  @@index([status])
-  @@index([ruleId])
-}
-
-model followup_history {
-  id            String         @id @default(cuid())
-  leadId        String
-  ruleId        String?
-  action        FollowupAction
-  channel       String?        // EMAIL, WHATSAPP, etc.
-  content       String?        @db.Text
-  sentAt        DateTime       @default(now())
-  status        String         // SENT, DELIVERED, FAILED, OPENED, CLICKED
-  metadata      Json?
-  createdById   String?        // If manual
-  isAutomated   Boolean        @default(true)
-
-  lead          leads          @relation(fields: [leadId], references: [id], onDelete: Cascade)
-  createdBy     users?         @relation("FollowupHistoryCreator", fields: [createdById], references: [id])
-
-  @@index([leadId, sentAt])
-  @@index([status])
-  @@index([isAutomated, sentAt])
-}
-
 enum FollowupTrigger {
-  STAGE_CHANGE       // When lead moves to specific stage
-  TIME_BASED         // After X days/hours
-  SCORE_THRESHOLD    // When score reaches threshold
-  INACTIVITY         // No contact for X days
-  DEMO_NO_SHOW       // Demo scheduled but not attended
-  DEMO_COMPLETED     // After demo completion
-  OFFER_SENT         // After offer is sent
-  CUSTOM             // Custom condition
+  STAGE_CHANGE
+  TIME_BASED
+  SCORE_THRESHOLD
+  INACTIVITY
+  DEMO_NO_SHOW
+  DEMO_COMPLETED
+  OFFER_SENT
+  CUSTOM
 }
 
 enum FollowupAction {
-  EMAIL              // Send automated email
-  WHATSAPP           // Send WhatsApp message
-  CALL_TASK          // Create task for call
-  SMS                // Send SMS
-  NOTIFICATION       // In-app notification
-  TASK               // Generic task creation
+  EMAIL
+  WHATSAPP
+  CALL_TASK
+  SMS
+  NOTIFICATION
+  TASK
 }
 
 enum QueueStatus {
@@ -2543,152 +2924,11 @@ enum QueueStatus {
   CANCELLED
 }
 
-model newsletterSubscriber {
-  id          String   @id @default(cuid())
-  email       String   @unique
-  status      String   @default("active") // active, unsubscribed
-  source      String?  // website_footer, popup, blog, etc.
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-
-  @@index([status])
-  @@index([createdAt])
-}
-
-// ============================================
-// TEST ASSIGNMENT SYSTEM
-// ============================================
-
-model test_assignments {
-  id                String                 @id @default(cuid())
-  teacherId         String
-  testTemplateId    String?                // Optional - can link to existing template
-  title             String
-  description       String?                @db.Text
-  instructions      String?                @db.Text
-  difficulty        DifficultyLevel        @default(MEDIUM)
-  totalQuestions    Int
-  totalMarks        Int
-  duration          Int                    // Duration in minutes
-  negativeMarking   Boolean                @default(false)
-  negativeMarkValue Decimal?               @db.Decimal(3, 2) // e.g., 0.25
-  shuffleQuestions  Boolean                @default(false)
-  showResults       ShowResultsType        @default(IMMEDIATELY)
-  passingMarks      Int?
-
-  // Assignment target
-  assignToType      AssignToType           @default(ALL_STUDENTS)
-  assignedClassIds  String[]               // Array of class IDs
-  assignedBatchIds  String[]               // Array of batch IDs
-  assignedStudentIds String[]              // Array of individual student IDs
-  courseId          String?
-
-  // Schedule
-  dueDate           DateTime
-  availableFrom     DateTime?              // When test becomes available
-
-  // Status
-  status            TestAssignmentStatus   @default(DRAFT)
-  publishedAt       DateTime?
-
-  // Configuration
-  selectedChapters  String[]               // NCERT chapter IDs
-  selectedTopics    String[]               // Topic IDs
-  questionSource    QuestionSourceType     @default(QUESTION_BANK)
-  useAI             Boolean                @default(false)
-
-  // Stats (updated when submissions come in)
-  totalAssigned     Int                    @default(0)
-  totalSubmitted    Int                    @default(0)
-  totalGraded       Int                    @default(0)
-  averageScore      Decimal?               @db.Decimal(5, 2)
-
-  // Metadata
-  metadata          Json?
-  createdAt         DateTime               @default(now())
-  updatedAt         DateTime               @updatedAt
-
-  // Relations
-  teacher           users                  @relation("TeacherTestAssignments", fields: [teacherId], references: [id], onDelete: Cascade)
-  testTemplate      test_templates?        @relation("AssignmentTemplate", fields: [testTemplateId], references: [id], onDelete: SetNull)
-  submissions       test_assignment_submissions[]
-  questions         test_assignment_questions[]
-
-  @@index([teacherId, status])
-  @@index([status, dueDate])
-  @@index([courseId])
-  @@index([dueDate])
-}
-
-model test_assignment_questions {
-  id                String              @id @default(cuid())
-  testAssignmentId  String
-  questionId        String
-  orderIndex        Int
-  marks             Int                 @default(4)
-  negativeMarks     Decimal?            @db.Decimal(3, 2)
-
-  testAssignment    test_assignments    @relation(fields: [testAssignmentId], references: [id], onDelete: Cascade)
-  question          questions           @relation(fields: [questionId], references: [id], onDelete: Cascade)
-
-  @@unique([testAssignmentId, questionId])
-  @@index([testAssignmentId, orderIndex])
-}
-
-model test_assignment_submissions {
-  id                String              @id @default(cuid())
-  testAssignmentId  String
-  studentId         String
-
-  // Test taking status
-  status            SubmissionTestStatus @default(NOT_STARTED)
-  startedAt         DateTime?
-  submittedAt       DateTime?
-
-  // Time tracking
-  timeSpent         Int                 @default(0) // Seconds
-  remainingTime     Int?
-
-  // Proctoring
-  tabSwitchCount    Int                 @default(0)
-  fullscreenExits   Int                 @default(0)
-  browserInfo       Json?
-
-  // Results
-  totalScore        Int?
-  percentage        Decimal?            @db.Decimal(5, 2)
-  questionsAttempted Int                @default(0)
-  questionsCorrect  Int                 @default(0)
-  questionsWrong    Int                 @default(0)
-  questionsSkipped  Int                 @default(0)
-
-  // Grading
-  isGraded          Boolean             @default(false)
-  gradedAt          DateTime?
-  gradedBy          String?
-  teacherFeedback   String?             @db.Text
-
-  // Answers
-  answers           Json?               // Array of {questionId, selectedAnswer, timeSpent}
-
-  metadata          Json?
-  createdAt         DateTime            @default(now())
-  updatedAt         DateTime            @updatedAt
-
-  testAssignment    test_assignments    @relation(fields: [testAssignmentId], references: [id], onDelete: Cascade)
-  student           users               @relation("StudentTestSubmissions", fields: [studentId], references: [id], onDelete: Cascade)
-
-  @@unique([testAssignmentId, studentId])
-  @@index([studentId, status])
-  @@index([testAssignmentId, status])
-  @@index([submittedAt])
-}
-
 enum TestAssignmentStatus {
   DRAFT
   PUBLISHED
-  ACTIVE      // Currently available for taking
-  COMPLETED   // Past due date
+  ACTIVE
+  COMPLETED
   ARCHIVED
 }
 
@@ -2721,53 +2961,15 @@ enum SubmissionTestStatus {
   GRADED
 }
 
-// ============================================
-// AI AGENT SYSTEM TABLES
-// ============================================
-
-model agent_tasks {
-  id            String          @id @default(cuid())
-  agentType     AgentType
-  leadId        String?
-  communicationId String?       // For call-related agents
-
-  status        AgentTaskStatus @default(PENDING)
-  input         Json            // Input data for the agent
-  output        Json?           // Agent's response/output
-  error         String?         @db.Text
-
-  // Scheduling
-  scheduledAt   DateTime?
-  startedAt     DateTime?
-  completedAt   DateTime?
-
-  // Retry logic
-  attempt       Int             @default(0)
-  maxAttempts   Int             @default(3)
-
-  // Metadata
-  metadata      Json?
-  createdAt     DateTime        @default(now())
-  updatedAt     DateTime        @updatedAt
-
-  lead          leads?          @relation(fields: [leadId], references: [id], onDelete: Cascade)
-  communication crm_communications? @relation(fields: [communicationId], references: [id], onDelete: Cascade)
-
-  @@index([status, scheduledAt])
-  @@index([agentType, status])
-  @@index([leadId])
-  @@index([communicationId])
-}
-
 enum AgentType {
-  LEAD_QUALIFIER      // Qualify and score leads
-  NURTURE             // Generate nurture messages
-  CALL_PREP           // Prepare counselor for calls
-  CONTENT_GENERATOR   // Generate marketing content
-  CALL_TRANSCRIPTION  // Transcribe call recordings
-  CALL_SUMMARY        // Summarize call transcripts
-  ACTION_EXTRACTOR    // Extract action items from calls
-  PRODUCT_AGENT       // Course recommendations and offer generation
+  LEAD_QUALIFIER
+  NURTURE
+  CALL_PREP
+  CONTENT_GENERATOR
+  CALL_TRANSCRIPTION
+  CALL_SUMMARY
+  ACTION_EXTRACTOR
+  PRODUCT_AGENT
 }
 
 enum AgentTaskStatus {
@@ -2777,34 +2979,6 @@ enum AgentTaskStatus {
   COMPLETED
   FAILED
   CANCELLED
-}
-
-// ============================================
-// FREE RESOURCES HUB
-// ============================================
-
-model free_resources {
-  id            String            @id @default(cuid())
-  title         String
-  description   String?
-  type          FreeResourceType
-  fileUrl       String?
-  content       String?           @db.Text
-  thumbnailUrl  String?
-  classCategory FreeResourceClass
-  priority      Int               @default(0)
-  isPublished   Boolean           @default(false)
-  isArchived    Boolean           @default(false)
-  publishedAt   DateTime?
-  expiresAt     DateTime?
-  viewCount     Int               @default(0)
-  createdAt     DateTime          @default(now())
-  updatedAt     DateTime          @updatedAt
-
-  @@index([type, isPublished, isArchived])
-  @@index([classCategory, isPublished])
-  @@index([isPublished, priority])
-  @@index([expiresAt])
 }
 
 enum FreeResourceType {
@@ -2824,395 +2998,19 @@ enum FreeResourceClass {
   ALL
 }
 
-// ============================================
-// LMS VIDEO STREAMING SYSTEM
-// ============================================
-
-model video_lectures {
-  id                  String              @id @default(cuid())
-  studyMaterialId     String              @unique // Links to study_materials
-
-  // Cloudflare Stream data
-  cloudflareVideoId   String              @unique
-  cloudflareStreamUrl String?             // HLS stream URL
-  cloudflareThumbUrl  String?             // Thumbnail URL
-  playbackPolicy      PlaybackPolicy      @default(SIGNED_URL)
-
-  // Video metadata
-  title               String
-  description         String?             @db.Text
-  duration            Int                 // Duration in seconds
-  resolution          String?             // e.g., "1080p", "720p"
-  fileSize            BigInt?             // Original file size in bytes
-
-  // PDF sync configuration
-  hasPdfSync          Boolean             @default(false)
-  syncPdfUrl          String?             // URL to synced PDF
-  syncPdfPageCount    Int?
-
-  // Processing status
-  uploadStatus        VideoUploadStatus   @default(PROCESSING)
-  processingProgress  Int                 @default(0) // 0-100
-  processedAt         DateTime?
-
-  // Engagement stats
-  totalViews          Int                 @default(0)
-  totalWatchTime      Int                 @default(0) // Total seconds watched by all users
-  avgCompletionRate   Decimal             @default(0) @db.Decimal(5, 2)
-  avgRating           Decimal             @default(0) @db.Decimal(3, 2)
-  ratingCount         Int                 @default(0)
-
-  // Access control
-  previewSeconds      Int                 @default(30) // Free preview duration
-  requiresEnrollment  Boolean             @default(true)
-
-  // Metadata
-  metadata            Json?
-  createdAt           DateTime            @default(now())
-  updatedAt           DateTime            @updatedAt
-
-  // Relations
-  studyMaterial       study_materials     @relation(fields: [studyMaterialId], references: [id], onDelete: Cascade)
-  chapters            video_chapters[]
-  progress            video_progress[]
-  notes               video_notes[]
-  pdfSyncData         pdf_sync_data[]
-  securityEvents      lms_security_events[]
-
-  @@index([cloudflareVideoId])
-  @@index([uploadStatus])
-  @@index([totalViews])
-  @@index([avgRating])
-}
-
-model video_chapters {
-  id              String          @id @default(cuid())
-  videoLectureId  String
-  title           String
-  description     String?
-  startTime       Int             // Start time in seconds
-  endTime         Int?            // End time in seconds (optional)
-  orderIndex      Int
-  thumbnailUrl    String?
-
-  // Optional link to course topic
-  topicId         String?
-
-  createdAt       DateTime        @default(now())
-  updatedAt       DateTime        @updatedAt
-
-  videoLecture    video_lectures  @relation(fields: [videoLectureId], references: [id], onDelete: Cascade)
-  topics          topics?         @relation(fields: [topicId], references: [id], onDelete: SetNull)
-
-  @@index([videoLectureId, orderIndex])
-  @@index([topicId])
-}
-
-model video_progress {
-  id                  String          @id @default(cuid())
-  videoLectureId      String
-  userId              String
-  enrollmentId        String?
-
-  // Progress tracking
-  watchedSeconds      Int             @default(0)
-  lastPosition        Int             @default(0) // Resume position in seconds
-  completionPercent   Decimal         @default(0) @db.Decimal(5, 2)
-  isCompleted         Boolean         @default(false)
-  completedAt         DateTime?
-
-  // Watch sessions
-  totalWatchSessions  Int             @default(0)
-  lastWatchedAt       DateTime?
-  firstWatchedAt      DateTime?
-
-  // Engagement
-  pauseCount          Int             @default(0)
-  seekCount           Int             @default(0)
-  replayCount         Int             @default(0)
-  playbackSpeed       Decimal         @default(1.0) @db.Decimal(3, 2) // Last used speed
-
-  // Quality preference
-  preferredQuality    String?         // e.g., "1080p", "720p", "auto"
-
-  // Rating
-  rating              Int?            // 1-5 stars
-  ratedAt             DateTime?
-
-  // Device info (for security)
-  lastDeviceId        String?
-  lastDeviceType      String?
-
-  metadata            Json?
-  createdAt           DateTime        @default(now())
-  updatedAt           DateTime        @updatedAt
-
-  videoLecture        video_lectures  @relation(fields: [videoLectureId], references: [id], onDelete: Cascade)
-  user                users           @relation(fields: [userId], references: [id], onDelete: Cascade)
-  enrollment          enrollments?    @relation(fields: [enrollmentId], references: [id], onDelete: SetNull)
-
-  @@unique([videoLectureId, userId])
-  @@index([userId, lastWatchedAt])
-  @@index([completionPercent])
-  @@index([isCompleted])
-}
-
-model video_notes {
-  id              String          @id @default(cuid())
-  videoLectureId  String
-  userId          String
-
-  // Note content
-  timestamp       Int             // Position in video (seconds)
-  content         String          @db.Text
-
-  // AI-generated summary (optional)
-  aiSummary       String?         @db.Text
-
-  // Organization
-  isHighlighted   Boolean         @default(false)
-  color           String?         // For highlighting
-  tags            String[]
-
-  createdAt       DateTime        @default(now())
-  updatedAt       DateTime        @updatedAt
-
-  videoLecture    video_lectures  @relation(fields: [videoLectureId], references: [id], onDelete: Cascade)
-  user            users           @relation(fields: [userId], references: [id], onDelete: Cascade)
-
-  @@index([videoLectureId, userId, timestamp])
-  @@index([userId, createdAt])
-}
-
-model pdf_sync_data {
-  id              String          @id @default(cuid())
-  videoLectureId  String
-
-  // Sync points
-  videoTimestamp  Int             // Position in video (seconds)
-  pdfPage         Int             // PDF page number (1-indexed)
-
-  // Optional section info
-  sectionTitle    String?
-  description     String?
-
-  // Auto-generated or manual
-  isAutoGenerated Boolean         @default(false)
-  confidence      Decimal?        @db.Decimal(3, 2) // AI confidence score
-
-  createdAt       DateTime        @default(now())
-
-  videoLecture    video_lectures  @relation(fields: [videoLectureId], references: [id], onDelete: Cascade)
-
-  @@unique([videoLectureId, videoTimestamp])
-  @@index([videoLectureId, pdfPage])
-}
-
-// ============================================
-// LMS DEVICE & SECURITY MANAGEMENT
-// ============================================
-
-model lms_device_sessions {
-  id              String              @id @default(cuid())
-  userId          String
-
-  // Device identification
-  deviceId        String              // Unique device fingerprint
-  deviceName      String?             // e.g., "Chrome on Windows"
-  deviceType      DeviceType
-  browser         String?
-  os              String?
-  ipAddress       String?
-
-  // Location (optional)
-  country         String?
-  city            String?
-
-  // Session status
-  isActive        Boolean             @default(true)
-  lastActiveAt    DateTime            @default(now())
-  firstSeenAt     DateTime            @default(now())
-
-  // Trust level
-  isTrusted       Boolean             @default(false) // User verified this device
-  trustVerifiedAt DateTime?
-
-  // Limits
-  sessionToken    String              @unique
-  expiresAt       DateTime?
-
-  // Revocation
-  isRevoked       Boolean             @default(false)
-  revokedAt       DateTime?
-  revokedReason   String?
-
-  metadata        Json?
-  createdAt       DateTime            @default(now())
-  updatedAt       DateTime            @updatedAt
-
-  user            users               @relation(fields: [userId], references: [id], onDelete: Cascade)
-  securityEvents  lms_security_events[]
-
-  @@index([userId, isActive])
-  @@index([deviceId])
-  @@index([sessionToken])
-  @@index([lastActiveAt])
-}
-
-model lms_security_events {
-  id                  String              @id @default(cuid())
-  userId              String?
-  videoLectureId      String?
-  deviceSessionId     String?
-
-  // Event details
-  eventType           LmsSecurityEvent
-  severity            SecuritySeverity    @default(LOW)
-  description         String
-
-  // Context
-  ipAddress           String?
-  userAgent           String?
-  deviceFingerprint   String?
-
-  // Evidence (for piracy detection)
-  evidence            Json?               // Screenshots, recordings detected, etc.
-
-  // Action taken
-  actionTaken         String?
-  isResolved          Boolean             @default(false)
-  resolvedAt          DateTime?
-  resolvedBy          String?
-
-  createdAt           DateTime            @default(now())
-
-  user                users?              @relation(fields: [userId], references: [id], onDelete: SetNull)
-  videoLecture        video_lectures?     @relation(fields: [videoLectureId], references: [id], onDelete: SetNull)
-  deviceSession       lms_device_sessions? @relation(fields: [deviceSessionId], references: [id], onDelete: SetNull)
-
-  @@index([userId, createdAt])
-  @@index([eventType, severity])
-  @@index([videoLectureId])
-  @@index([createdAt])
-}
-
-model user_device_limits {
-  id              String          @id @default(cuid())
-  userId          String          @unique
-
-  // Device limits
-  maxDevices      Int             @default(2)
-  activeDevices   Int             @default(0)
-
-  // Violation tracking
-  violationCount  Int             @default(0)
-  lastViolationAt DateTime?
-
-  // Restrictions
-  isRestricted    Boolean         @default(false)
-  restrictedUntil DateTime?
-  restrictedReason String?
-
-  createdAt       DateTime        @default(now())
-  updatedAt       DateTime        @updatedAt
-
-  user            users           @relation(fields: [userId], references: [id], onDelete: Cascade)
-
-  @@index([isRestricted])
-}
-
-// ============================================
-// LMS WHATSAPP BOT SESSIONS
-// ============================================
-
-model lms_whatsapp_sessions {
-  id              String              @id @default(cuid())
-  userId          String
-  phone           String
-
-  // Session state
-  currentState    LmsWhatsAppState    @default(MAIN_MENU)
-  contextData     Json?               // Current context (selected course, chapter, etc.)
-
-  // Navigation history
-  previousState   LmsWhatsAppState?
-  navigationPath  Json?               // Breadcrumb trail
-
-  // Cache
-  lastCourseId    String?
-  lastChapterId   String?
-  lastVideoId     String?
-
-  // Activity
-  lastInteractionAt DateTime          @default(now())
-  totalInteractions Int               @default(0)
-
-  // Preferences
-  preferredLanguage String            @default("en")
-  notificationsEnabled Boolean        @default(true)
-
-  createdAt       DateTime            @default(now())
-  updatedAt       DateTime            @updatedAt
-
-  user            users               @relation(fields: [userId], references: [id], onDelete: Cascade)
-
-  @@unique([userId])
-  @@index([phone])
-  @@index([currentState])
-  @@index([lastInteractionAt])
-}
-
-model lms_progress_notifications {
-  id              String              @id @default(cuid())
-  userId          String
-
-  // Notification type
-  notificationType LmsNotificationType
-
-  // Content
-  title           String
-  message         String
-
-  // Target
-  courseId        String?
-  videoLectureId  String?
-
-  // Status
-  sentVia         String[]            // ["whatsapp", "email", "push"]
-  sentAt          DateTime?
-  readAt          DateTime?
-  clickedAt       DateTime?
-
-  // Scheduling
-  scheduledFor    DateTime?
-
-  metadata        Json?
-  createdAt       DateTime            @default(now())
-
-  user            users               @relation(fields: [userId], references: [id], onDelete: Cascade)
-
-  @@index([userId, createdAt])
-  @@index([notificationType, sentAt])
-  @@index([scheduledFor])
-}
-
-// ============================================
-// LMS ENUMS
-// ============================================
-
 enum PlaybackPolicy {
-  PUBLIC          // Anyone can watch
-  SIGNED_URL      // Requires signed URL (default, more secure)
-  TOKEN_AUTH      // Requires auth token
+  PUBLIC
+  SIGNED_URL
+  TOKEN_AUTH
 }
 
 enum VideoUploadStatus {
-  PENDING         // Upload not started
-  UPLOADING       // Currently uploading
-  PROCESSING      // Cloudflare processing
-  READY           // Ready to play
-  FAILED          // Processing failed
-  DELETED         // Soft deleted
+  PENDING
+  UPLOADING
+  PROCESSING
+  READY
+  FAILED
+  DELETED
 }
 
 enum DeviceType {
@@ -3224,17 +3022,17 @@ enum DeviceType {
 }
 
 enum LmsSecurityEvent {
-  DEVICE_LIMIT_EXCEEDED     // Tried to use more than 2 devices
-  SCREEN_RECORDING_DETECTED // Screen recording attempt
-  SCREENSHOT_DETECTED       // Screenshot attempt
-  SUSPICIOUS_ACTIVITY       // Multiple rapid seeks, unusual patterns
-  VPN_DETECTED              // VPN/proxy usage
-  CONCURRENT_STREAM         // Same video on multiple devices
-  DOWNLOAD_ATTEMPT          // Tried to download video
-  WATERMARK_TAMPER          // Attempted watermark removal
-  GEO_RESTRICTION           // Access from restricted region
-  TOKEN_SHARING             // Same token used from different IPs
-  ACCOUNT_SHARING           // Account used from different locations
+  DEVICE_LIMIT_EXCEEDED
+  SCREEN_RECORDING_DETECTED
+  SCREENSHOT_DETECTED
+  SUSPICIOUS_ACTIVITY
+  VPN_DETECTED
+  CONCURRENT_STREAM
+  DOWNLOAD_ATTEMPT
+  WATERMARK_TAMPER
+  GEO_RESTRICTION
+  TOKEN_SHARING
+  ACCOUNT_SHARING
 }
 
 enum SecuritySeverity {
@@ -3245,28 +3043,168 @@ enum SecuritySeverity {
 }
 
 enum LmsWhatsAppState {
-  MAIN_MENU                 // Home menu
-  MY_COURSES                // List enrolled courses
-  COURSE_DETAIL             // Viewing specific course
-  CHAPTER_LIST              // List chapters
-  VIDEO_LIST                // List videos in chapter
-  VIDEO_DETAIL              // Video info & play link
-  MY_PROGRESS               // View progress report
-  CONTINUE_WATCHING         // Resume last video
-  SEARCH                    // Search courses/videos
-  HELP                      // Help menu
-  SETTINGS                  // User settings
-  NOTIFICATIONS             // Notification preferences
+  MAIN_MENU
+  MY_COURSES
+  COURSE_DETAIL
+  CHAPTER_LIST
+  VIDEO_LIST
+  VIDEO_DETAIL
+  MY_PROGRESS
+  CONTINUE_WATCHING
+  SEARCH
+  HELP
+  SETTINGS
+  NOTIFICATIONS
 }
 
 enum LmsNotificationType {
-  NEW_VIDEO_ADDED           // New content in enrolled course
-  COURSE_REMINDER           // Haven't watched in X days
-  PROGRESS_MILESTONE        // 25%, 50%, 75%, 100% completion
-  CHAPTER_COMPLETED         // Finished a chapter
-  COURSE_COMPLETED          // Finished entire course
-  CERTIFICATE_READY         // Certificate generated
-  LIVE_CLASS_REMINDER       // Upcoming live class
-  ASSIGNMENT_DUE            // Assignment deadline approaching
-  NEW_ANNOUNCEMENT          // Course announcement
+  NEW_VIDEO_ADDED
+  COURSE_REMINDER
+  PROGRESS_MILESTONE
+  CHAPTER_COMPLETED
+  COURSE_COMPLETED
+  CERTIFICATE_READY
+  LIVE_CLASS_REMINDER
+  ASSIGNMENT_DUE
+  NEW_ANNOUNCEMENT
+}
+
+// ============================================
+// OMR EVALUATION SYSTEM
+// ============================================
+
+enum OMRPaperStatus {
+  DRAFT
+  ACTIVE
+  CLOSED
+  ARCHIVED
+}
+
+enum OMRSubjectType {
+  BIOLOGY_XI
+  BIOLOGY_XII
+  BIOLOGY_XI_XII
+  NEET_MOCK
+}
+
+enum OMRAnswerKeyStatus {
+  UNVERIFIED
+  VERIFIED
+  DISPUTED
+}
+
+model omr_papers {
+  id                    String          @id @default(cuid())
+  paperCode             String          @unique
+  title                 String
+  description           String?
+
+  subjectType           OMRSubjectType
+  targetClass           String
+
+  totalQuestions        Int
+  totalMarks            Float
+  marksPerCorrect       Float           @default(4)
+  marksPerWrong         Float           @default(-1)
+  marksPerUnattempted   Float           @default(0)
+
+  sections              Json?
+
+  examDate              DateTime
+  submissionStart       DateTime
+  submissionEnd         DateTime
+
+  hasVerifiedKey        Boolean         @default(false)
+  verifiedKeyUploadedAt DateTime?
+
+  status                OMRPaperStatus  @default(DRAFT)
+  isActive              Boolean         @default(true)
+
+  createdBy             String?
+  createdAt             DateTime        @default(now())
+  updatedAt             DateTime        @updatedAt
+
+  answerKeys            omr_answer_keys[]
+  submissions           omr_submissions[]
+
+  @@index([paperCode])
+  @@index([subjectType, status])
+  @@index([targetClass, status])
+  @@index([examDate])
+}
+
+model omr_answer_keys {
+  id               String              @id @default(cuid())
+  paperId          String
+  paper            omr_papers          @relation(fields: [paperId], references: [id], onDelete: Cascade)
+
+  questionNo       Int
+  section          String?
+
+  correctAnswer    String
+  explanation      String?             @db.Text
+  topic            String?
+  subtopic         String?
+  difficulty       String?
+
+  keyStatus        OMRAnswerKeyStatus  @default(UNVERIFIED)
+  verifiedBy       String?
+  verifiedAt       DateTime?
+  verificationNote String?
+
+  previousAnswer   String?
+  changedAt        DateTime?
+  changedReason    String?
+
+  createdAt        DateTime            @default(now())
+  updatedAt        DateTime            @updatedAt
+
+  @@unique([paperId, questionNo])
+  @@index([paperId])
+  @@index([keyStatus])
+}
+
+model omr_submissions {
+  id                String       @id @default(cuid())
+  paperId           String
+  paper             omr_papers   @relation(fields: [paperId], references: [id])
+
+  studentName       String
+  studentPhone      String
+  studentEmail      String?
+  studentClass      String
+  studentRollNo     String?
+
+  submittedAnswers  Json
+  omrImageUrl       String?
+  useVerifiedKey    Boolean      @default(false)
+
+  totalAttempted    Int          @default(0)
+  totalCorrect      Int          @default(0)
+  totalWrong        Int          @default(0)
+  totalUnattempted  Int          @default(0)
+  marksObtained     Float        @default(0)
+  maxMarks          Float
+  percentage        Float        @default(0)
+
+  sectionResults    Json?
+  questionResults   Json?
+
+  rank              Int?
+  percentile        Float?
+
+  status            String       @default("completed")
+  submittedAt       DateTime     @default(now())
+  recalculatedAt    DateTime?
+
+  ipAddress         String?
+  userAgent         String?
+
+  createdAt         DateTime     @default(now())
+
+  @@index([paperId])
+  @@index([studentPhone])
+  @@index([studentClass])
+  @@index([submittedAt])
+  @@index([paperId, percentage])
 }

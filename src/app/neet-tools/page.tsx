@@ -13,6 +13,7 @@ import {
   Sparkles,
   Clock,
   Users,
+  ClipboardCheck,
 } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -73,6 +74,18 @@ const tools = [
     iconColor: 'text-green-600',
     features: ['Personalized schedule', 'Topic prioritization', 'Downloadable plan'],
     users: '25,000+',
+  },
+  {
+    title: 'OMR Evaluation Tool',
+    description:
+      'Check your test answers against the official answer key. Get instant results with section-wise analysis and explanations.',
+    href: '/neet-tools/omr-checker',
+    icon: ClipboardCheck,
+    color: 'from-purple-500 to-pink-500',
+    bgColor: 'bg-purple-100',
+    iconColor: 'text-purple-600',
+    features: ['Instant results', 'Section-wise analysis', 'Incorrect question explanations'],
+    users: 'New',
   },
 ]
 
