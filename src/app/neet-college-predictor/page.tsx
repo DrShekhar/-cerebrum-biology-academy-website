@@ -420,6 +420,115 @@ _Powered by Cerebrum Biology Academy_`
     window.open(whatsappUrl, '_blank')
   }, [results, rank, category, isPwD])
 
+  // Phase 2: Export to PDF (uses browser print dialog - "Save as PDF")
+  const exportToPDF = useCallback(() => {
+    // Create a printable HTML content
+    const topResults = results.slice(0, 50)
+    const printContent = `
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <title>NEET College Predictor Results - Rank ${rank}</title>
+        <style>
+          body { font-family: Arial, sans-serif; padding: 20px; }
+          h1 { color: #2563eb; text-align: center; margin-bottom: 5px; }
+          h2 { color: #666; text-align: center; font-size: 14px; margin-top: 0; }
+          .info { margin: 20px 0; }
+          .info p { margin: 5px 0; }
+          table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 11px; }
+          th { background: #2563eb; color: white; padding: 8px; text-align: left; }
+          td { padding: 6px 8px; border-bottom: 1px solid #ddd; }
+          tr:nth-child(even) { background: #f9f9f9; }
+          .footer { margin-top: 20px; text-align: center; font-size: 10px; color: #666; }
+          .chance-high { background: #dcfce7; color: #166534; padding: 2px 6px; border-radius: 4px; }
+          .chance-medium { background: #fef9c3; color: #854d0e; padding: 2px 6px; border-radius: 4px; }
+          .chance-low { background: #fed7aa; color: #9a3412; padding: 2px 6px; border-radius: 4px; }
+          .chance-verylow { background: #fecaca; color: #991b1b; padding: 2px 6px; border-radius: 4px; }
+          @media print { body { padding: 10px; } }
+        </style>
+      </head>
+      <body>
+        <h1>NEET College Predictor Results</h1>
+        <h2>Cerebrum Biology Academy</h2>
+        <div class="info">
+          <p><strong>Rank:</strong> ${parseInt(rank).toLocaleString()} | <strong>Category:</strong> ${category.toUpperCase()}${isPwD ? ' (PwD)' : ''}</p>
+          <p><strong>Quota:</strong> ${quotaPreference === 'all' ? 'All Quotas' : quotaPreference === 'aiq' ? 'AIQ Only' : 'State Only'}${domicileState ? ` | <strong>Domicile:</strong> ${domicileState}` : ''}</p>
+          <p><strong>Total Matches:</strong> ${results.length} options in ${uniqueColleges.length} colleges</p>
+          <p style="text-align: right; color: #666; font-size: 11px;">Generated on ${new Date().toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' })}</p>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>College Name</th>
+              <th>State</th>
+              <th>Quota</th>
+              <th>Type</th>
+              <th>Cutoff</th>
+              <th>Chance</th>
+              <th>Est. Round</th>
+              <th>Fees</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${topResults
+              .map((r, i) => {
+                const displayCutoff = isPwD ? r.pwdCutoff : r.cutoff
+                const chance = getChance(parseInt(rank), displayCutoff)
+                const prediction = predictCounsellingRound(displayCutoff)
+                const chanceClass =
+                  chance.level === 'High'
+                    ? 'chance-high'
+                    : chance.level === 'Medium'
+                      ? 'chance-medium'
+                      : chance.level === 'Low'
+                        ? 'chance-low'
+                        : 'chance-verylow'
+                return `<tr>
+                <td>${i + 1}</td>
+                <td>${r.college.name}</td>
+                <td>${r.college.state}</td>
+                <td>${r.quotaType}</td>
+                <td>${r.college.type === 'Government' ? 'Govt' : 'Pvt'}</td>
+                <td>${displayCutoff.toLocaleString()}</td>
+                <td><span class="${chanceClass}">${chance.level}</span></td>
+                <td>${prediction.round}</td>
+                <td>${r.college.feeDisplay}</td>
+              </tr>`
+              })
+              .join('')}
+          </tbody>
+        </table>
+        <div class="footer">
+          <p>Disclaimer: Predictions based on NEET 2024 data. Actual cutoffs may vary.</p>
+          <p>cerebrumbiologyacademy.com</p>
+        </div>
+      </body>
+      </html>
+    `
+
+    // Open print window
+    const printWindow = window.open('', '_blank')
+    if (printWindow) {
+      printWindow.document.write(printContent)
+      printWindow.document.close()
+      printWindow.focus()
+      setTimeout(() => {
+        printWindow.print()
+      }, 250)
+    }
+  }, [
+    results,
+    rank,
+    category,
+    isPwD,
+    quotaPreference,
+    domicileState,
+    uniqueColleges.length,
+    getChance,
+    predictCounsellingRound,
+  ])
+
   const scrollToResults = useCallback(() => {
     setTimeout(() => {
       resultsRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
@@ -1078,6 +1187,15 @@ _Powered by Cerebrum Biology Academy_`
                       >
                         <Share2 className="h-4 w-4" />
                         Share
+                      </button>
+
+                      {/* Export to PDF */}
+                      <button
+                        onClick={exportToPDF}
+                        className="flex items-center gap-2 rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-700 transition-all hover:bg-blue-200"
+                      >
+                        <Download className="h-4 w-4" />
+                        PDF
                       </button>
                     </div>
                   )}
