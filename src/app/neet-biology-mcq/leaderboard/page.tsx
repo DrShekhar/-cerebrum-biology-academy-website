@@ -125,7 +125,9 @@ export default function LeaderboardPage() {
         onClose={() => setShowLeadCapture(false)}
         onSubmit={handleLeadCapture}
         variant="soft"
-        questionsAnswered={0}
+        questionsAnswered={userStats?.totalQuestions || 0}
+        accuracy={userStats?.accuracy || 0}
+        xpEarned={userStats?.totalXp || 0}
       />
     </div>
   )

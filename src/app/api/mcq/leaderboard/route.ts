@@ -135,7 +135,9 @@ export async function GET(request: NextRequest) {
         },
       })
 
-      const userDetailsMap = new Map(userDetails.map((u) => [u.id, u]))
+      const userDetailsMap = new Map<string, { id: string; name: string | null; phone: string }>(
+        userDetails.map((u) => [u.id, u])
+      )
 
       const rankings: LeaderboardEntry[] = sessionStats.map((stat, index) => {
         const user = stat.freeUserId ? userDetailsMap.get(stat.freeUserId) : null
@@ -203,7 +205,9 @@ export async function GET(request: NextRequest) {
       },
     })
 
-    const userDetailsMap = new Map(userDetails.map((u) => [u.id, u]))
+    const userDetailsMap = new Map<string, { id: string; name: string | null; phone: string }>(
+      userDetails.map((u) => [u.id, u])
+    )
 
     const rankings: LeaderboardEntry[] = userStatsQuery.map((stat, index) => {
       const user = stat.freeUserId ? userDetailsMap.get(stat.freeUserId) : null
