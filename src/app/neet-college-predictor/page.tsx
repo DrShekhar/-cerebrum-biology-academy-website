@@ -496,10 +496,9 @@ export default function NEETCollegePredictorPage() {
                       >
                         <span className="flex items-center gap-1">
                           Your Domicile State
-                          <HelpCircle
-                            className="h-4 w-4 text-gray-400"
-                            title="Required for State Quota eligibility"
-                          />
+                          <span title="Required for State Quota eligibility">
+                            <HelpCircle className="h-4 w-4 text-gray-400" />
+                          </span>
                         </span>
                       </label>
                       <select
