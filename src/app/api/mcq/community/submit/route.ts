@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import type { QuestionSubmission } from '@/lib/mcq/types'
 import type { DifficultyLevel } from '@/generated/prisma'
+import { screenQuestion, getScreeningDecision, type QuestionToScreen } from '@/lib/mcq/aiScreening'
 
 export async function POST(request: NextRequest) {
   try {
@@ -128,10 +129,26 @@ export async function POST(request: NextRequest) {
       },
     })
 
+    // Trigger AI screening asynchronously (non-blocking)
+    triggerAIScreening(communityQuestion.id, {
+      question,
+      options,
+      correctAnswer,
+      explanation,
+      topic,
+      subtopic,
+      difficulty,
+      isPYQ,
+      pyqYear,
+    }).catch((error) => {
+      console.error('Background AI screening failed:', error)
+    })
+
     return NextResponse.json({
       success: true,
       questionId: communityQuestion.id,
-      message: 'Question submitted successfully! It will be reviewed before being published.',
+      message:
+        'Question submitted successfully! AI is reviewing it now and it will be published after admin approval.',
     })
   } catch (error) {
     console.error('Community question submission error:', error)
@@ -170,5 +187,77 @@ export async function GET(request: NextRequest) {
   } catch (error) {
     console.error('Error fetching user questions:', error)
     return NextResponse.json({ error: 'Failed to fetch questions' }, { status: 500 })
+  }
+}
+
+async function triggerAIScreening(
+  questionId: string,
+  questionData: {
+    question: string
+    options: string[]
+    correctAnswer: string
+    explanation?: string
+    topic: string
+    subtopic?: string
+    difficulty?: string
+    isPYQ?: boolean
+    pyqYear?: number
+  }
+): Promise<void> {
+  try {
+    await prisma.community_questions.update({
+      where: { id: questionId },
+      data: { status: 'AI_SCREENING' },
+    })
+
+    const screeningData: QuestionToScreen = {
+      question: questionData.question,
+      options: questionData.options,
+      correctAnswer: questionData.correctAnswer,
+      explanation: questionData.explanation,
+      topic: questionData.topic,
+      subtopic: questionData.subtopic,
+      difficulty: questionData.difficulty,
+      isPYQ: questionData.isPYQ,
+      pyqYear: questionData.pyqYear,
+    }
+
+    const screeningResult = await screenQuestion(screeningData)
+    const decision = getScreeningDecision(screeningResult)
+
+    let newStatus: string
+    if (decision.autoApprove) {
+      newStatus = 'AI_APPROVED'
+    } else if (decision.autoReject) {
+      newStatus = 'AI_REJECTED'
+    } else {
+      newStatus = 'ADMIN_REVIEW'
+    }
+
+    await prisma.community_questions.update({
+      where: { id: questionId },
+      data: {
+        aiScore: screeningResult.overallScore,
+        aiAnalysis: screeningResult as unknown as object,
+        aiScreenedAt: new Date(),
+        aiApproved: decision.autoApprove,
+        status: newStatus,
+        rejectionReason: decision.autoReject ? decision.reason : null,
+      },
+    })
+
+    console.log(`AI Screening complete for question ${questionId}: ${newStatus}`)
+  } catch (error) {
+    console.error(`AI Screening failed for question ${questionId}:`, error)
+    await prisma.community_questions.update({
+      where: { id: questionId },
+      data: {
+        status: 'ADMIN_REVIEW',
+        aiAnalysis: {
+          error: 'AI screening failed',
+          message: error instanceof Error ? error.message : 'Unknown error',
+        },
+      },
+    })
   }
 }
