@@ -194,7 +194,7 @@ export const Footer = memo(function Footer() {
             <div className="flex items-center space-x-3 mb-6">
               <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center p-2">
                 <Image
-                  src="/brain-logo.png"
+                  src="/brain-logo.webp"
                   alt="Cerebrum Biology Academy"
                   width={40}
                   height={40}

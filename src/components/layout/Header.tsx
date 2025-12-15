@@ -116,7 +116,7 @@ const Header = () => {
               <div className="relative">
                 <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-md border border-teal-100 group-hover:shadow-xl group-hover:scale-105 transition-all duration-300 overflow-hidden">
                   <Image
-                    src="/brain-logo.png"
+                    src="/brain-logo.webp"
                     alt="Cerebrum Biology Academy Logo"
                     width={40}
                     height={40}

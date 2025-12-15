@@ -118,6 +118,9 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="//api.whatsapp.com" />
         <link rel="dns-prefetch" href="//giscus.app" />
 
+        {/* Performance: Preload critical images */}
+        <link rel="preload" href="/brain-logo.webp" as="image" type="image/webp" />
+
         {/* Fonts are handled by next/font/google - no manual preload needed */}
 
         <meta httpEquiv="Content-Language" content="en-IN,hi-IN" />

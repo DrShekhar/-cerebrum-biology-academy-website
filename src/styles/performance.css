@@ -14,6 +14,15 @@
   transition:
     opacity 0.5s ease-out,
     transform 0.5s ease-out;
+  /* Performance: Skip rendering off-screen content */
+  content-visibility: auto;
+  contain-intrinsic-size: 0 500px;
+}
+
+/* Below-fold sections - skip initial rendering */
+section:nth-of-type(n + 3) {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 400px;
 }
 
 .lazy-section.loaded {
