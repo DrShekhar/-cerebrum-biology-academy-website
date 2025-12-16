@@ -190,6 +190,74 @@ async function migrateQuestions() {
   // Import Chapter 5 (Morphology) question bank
   const { morphologyQuestions } = await import('../src/data/chapter5-morphology')
 
+  // Import Chapter 6 (Anatomy of Flowering Plants) question bank
+  const { anatomyQuestions } = await import('../src/data/chapter6-anatomy')
+
+  // Import Chapter 7 (Structural Organisation in Animals) question bank
+  const { structuralOrgAnimalsQuestions } = await import('../src/data/chapter7-structuralOrgAnimals')
+
+  // Import Chapter 12 (Mineral Nutrition) question bank
+  const { mineralNutritionQuestions } = await import('../src/data/chapter12-mineralNutrition')
+
+  // Import Chapter 20 (Locomotion and Movement) question bank
+  const { locomotionQuestions } = await import('../src/data/chapter20-locomotion')
+
+  // Import Chapter 21 (Neural Control and Coordination) question bank
+  const { neuralControlQuestions } = await import('../src/data/chapter21-neuralControl')
+
+  // Import Chapter 22 (Chemical Coordination and Integration) question bank
+  const { chemicalCoordinationQuestions } = await import('../src/data/chapter22-chemicalCoordination')
+
+  // Import Class 12 Chapter 1 (Reproduction in Organisms) question bank
+  const { reproductionInOrganismsQuestions } = await import('../src/data/chapter12-1-reproduction')
+
+  // Import Class 12 Chapter 2 (Sexual Reproduction in Flowering Plants) question bank
+  const { sexualReproductionPlantsQuestions } = await import(
+    '../src/data/chapter12-2-sexualReproductionPlants'
+  )
+
+  // Import Class 12 Chapter 3 (Human Reproduction) question bank
+  const { humanReproductionQuestions } = await import('../src/data/chapter12-3-humanReproduction')
+
+  // Import Class 12 Chapter 4 (Reproductive Health) question bank
+  const { reproductiveHealthQuestions } = await import('../src/data/chapter12-4-reproductiveHealth')
+
+  // Import Class 12 Chapter 5 (Principles of Inheritance and Variation) question bank
+  const { inheritanceQuestions } = await import('../src/data/chapter12-5-inheritance')
+
+  // Import Class 12 Chapter 6 (Molecular Basis of Inheritance) question bank
+  const { molecularBasisQuestions } = await import('../src/data/chapter12-6-molecularBasis')
+
+  // Import Class 12 Chapter 7 (Evolution) question bank
+  const { evolutionQuestions } = await import('../src/data/chapter12-7-evolution')
+
+  // Import Class 12 Chapter 8 (Human Health and Disease) question bank
+  const { humanHealthQuestions } = await import('../src/data/chapter12-8-humanHealth')
+
+  // Import Class 12 Chapter 9 (Strategies for Enhancement in Food Production) question bank
+  const { foodProductionQuestions } = await import('../src/data/chapter12-9-foodProduction')
+
+  // Import Class 12 Chapter 10 (Microbes in Human Welfare) question bank
+  const { microbesWelfareQuestions } = await import('../src/data/chapter12-10-microbesWelfare')
+
+  // Import Class 12 Chapter 11 (Biotechnology: Principles and Processes) question bank
+  const { biotechPrinciplesQuestions } = await import('../src/data/chapter12-11-biotechPrinciples')
+
+  // Import Class 12 Chapter 12 (Biotechnology and its Applications) question bank
+  const { biotechApplicationsQuestions } = await import('../src/data/chapter12-12-biotechApplications')
+
+  // Import Class 12 Chapter 13 (Organisms and Populations) question bank
+  const { organismsPopulationsQuestions } = await import('../src/data/chapter12-13-organismsPopulations')
+
+  // Import Class 12 Chapter 14 (Ecosystem) question bank
+  const { ecosystemQuestions } = await import('../src/data/chapter12-14-ecosystem')
+
+  // Import Class 12 Chapter 15 (Biodiversity and Conservation) question bank
+  const { biodiversityQuestions } = await import('../src/data/chapter12-15-biodiversity')
+
+  // Import Class 12 Chapter 16 (Environmental Issues) question bank
+  const { environmentalIssuesQuestions } = await import('../src/data/chapter12-16-environmentalIssues')
+
   // Combine all existing questions
   const allExistingQuestions = [
     ...class9Questions,
@@ -213,6 +281,50 @@ async function migrateQuestions() {
     ...biologicalClassificationQuestions,
     // Chapter 5 (Morphology) question bank
     ...morphologyQuestions,
+    // Chapter 6 (Anatomy of Flowering Plants) question bank
+    ...anatomyQuestions,
+    // Chapter 7 (Structural Organisation in Animals) question bank
+    ...structuralOrgAnimalsQuestions,
+    // Chapter 12 (Mineral Nutrition) question bank
+    ...mineralNutritionQuestions,
+    // Chapter 20 (Locomotion and Movement) question bank
+    ...locomotionQuestions,
+    // Chapter 21 (Neural Control and Coordination) question bank
+    ...neuralControlQuestions,
+    // Chapter 22 (Chemical Coordination and Integration) question bank
+    ...chemicalCoordinationQuestions,
+    // Class 12 Chapter 1 (Reproduction in Organisms) question bank
+    ...reproductionInOrganismsQuestions,
+    // Class 12 Chapter 2 (Sexual Reproduction in Flowering Plants) question bank
+    ...sexualReproductionPlantsQuestions,
+    // Class 12 Chapter 3 (Human Reproduction) question bank
+    ...humanReproductionQuestions,
+    // Class 12 Chapter 4 (Reproductive Health) question bank
+    ...reproductiveHealthQuestions,
+    // Class 12 Chapter 5 (Principles of Inheritance and Variation) question bank
+    ...inheritanceQuestions,
+    // Class 12 Chapter 6 (Molecular Basis of Inheritance) question bank
+    ...molecularBasisQuestions,
+    // Class 12 Chapter 7 (Evolution) question bank
+    ...evolutionQuestions,
+    // Class 12 Chapter 8 (Human Health and Disease) question bank
+    ...humanHealthQuestions,
+    // Class 12 Chapter 9 (Strategies for Enhancement in Food Production) question bank
+    ...foodProductionQuestions,
+    // Class 12 Chapter 10 (Microbes in Human Welfare) question bank
+    ...microbesWelfareQuestions,
+    // Class 12 Chapter 11 (Biotechnology: Principles and Processes) question bank
+    ...biotechPrinciplesQuestions,
+    // Class 12 Chapter 12 (Biotechnology and its Applications) question bank
+    ...biotechApplicationsQuestions,
+    // Class 12 Chapter 13 (Organisms and Populations) question bank
+    ...organismsPopulationsQuestions,
+    // Class 12 Chapter 14 (Ecosystem) question bank
+    ...ecosystemQuestions,
+    // Class 12 Chapter 15 (Biodiversity and Conservation) question bank
+    ...biodiversityQuestions,
+    // Class 12 Chapter 16 (Environmental Issues) question bank
+    ...environmentalIssuesQuestions,
   ]
 
   console.log(`📚 Found ${allExistingQuestions.length} existing questions`)
