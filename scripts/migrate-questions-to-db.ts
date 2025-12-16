@@ -4,7 +4,7 @@
  * Includes: Existing questions + Missing chapters + PYQ Collection
  */
 
-import { PrismaClient } from '../src/generated/prisma'
+import { PrismaClient } from '../src/generated/prisma/index.js'
 
 const prisma = new PrismaClient()
 
@@ -177,6 +177,19 @@ async function migrateQuestions() {
   // Import PYQ Collection
   const { allPYQQuestions } = await import('../src/data/neetPYQCollection')
 
+  // Import NEW complete chapter question banks (100 questions each)
+  const { plantKingdomQuestions } = await import('../src/data/chapter3-plantKingdom')
+  const { animalKingdomQuestions } = await import('../src/data/chapter4-animalKingdom')
+
+  // Import Chapter 1 and 2 question banks (100 questions each)
+  const { livingWorldQuestions } = await import('../src/data/chapter1-livingWorld')
+  const { biologicalClassificationQuestions } = await import(
+    '../src/data/chapter2-biologicalClassification'
+  )
+
+  // Import Chapter 5 (Morphology) question bank
+  const { morphologyQuestions } = await import('../src/data/chapter5-morphology')
+
   // Combine all existing questions
   const allExistingQuestions = [
     ...class9Questions,
@@ -192,6 +205,14 @@ async function migrateQuestions() {
     ...class12MissingChaptersQuestions,
     ...class11RemainingQuestions,
     ...class12RemainingQuestions,
+    // NEW: Complete chapter question banks (100 each)
+    ...plantKingdomQuestions,
+    ...animalKingdomQuestions,
+    // Chapter 1 and 2 question banks
+    ...livingWorldQuestions,
+    ...biologicalClassificationQuestions,
+    // Chapter 5 (Morphology) question bank
+    ...morphologyQuestions,
   ]
 
   console.log(`📚 Found ${allExistingQuestions.length} existing questions`)
