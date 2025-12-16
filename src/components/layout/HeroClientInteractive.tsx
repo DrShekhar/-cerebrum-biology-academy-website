@@ -85,8 +85,11 @@ export function HeroClientInteractive() {
 
   return (
     <>
-      {/* CTAs - Using <a> tags for instant LCP (work before JS loads) */}
-      <div className="flex flex-col sm:flex-row gap-3 xs:gap-4 mb-8 xs:mb-12">
+      {/* CTAs - Using <a> tags (work before JS loads), animated after LCP */}
+      <div
+        className="flex flex-col sm:flex-row gap-3 xs:gap-4 mb-8 xs:mb-12 animate-fade-in-up"
+        style={{ animationDelay: '0.3s' }}
+      >
         <a
           href="/demo-booking"
           className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold py-3 xs:py-4 px-6 xs:px-8 rounded-lg xs:rounded-xl shadow-xl hover:shadow-green-500/30 transition-all duration-300 text-sm xs:text-base md:text-lg border border-green-400/30 hover:scale-[1.02] active:scale-[0.98] group"
@@ -104,8 +107,11 @@ export function HeroClientInteractive() {
         </a>
       </div>
 
-      {/* Stats Grid with Animated Counters */}
-      <div className="grid grid-cols-3 gap-3 xs:gap-4 sm:gap-6 max-w-2xl mb-6 xs:mb-8">
+      {/* Stats Grid with Animated Counters - delayed animation */}
+      <div
+        className="grid grid-cols-3 gap-3 xs:gap-4 sm:gap-6 max-w-2xl mb-6 xs:mb-8 animate-fade-in-up"
+        style={{ animationDelay: '0.4s' }}
+      >
         <div className="text-center bg-white/5 backdrop-blur-sm rounded-lg xs:rounded-xl p-3 xs:p-4 border border-white/10 hover:bg-white/10 hover:border-green-400/30 hover:-translate-y-1 transition-all duration-300 group cursor-default">
           <div className="text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-green-400 group-hover:scale-110 transition-transform">
             <AnimatedCounter value="695" />
@@ -129,8 +135,11 @@ export function HeroClientInteractive() {
         </div>
       </div>
 
-      {/* Urgency Banner */}
-      <div className="inline-flex items-center bg-red-500/20 backdrop-blur-sm border border-red-300/30 px-3 xs:px-4 py-2 xs:py-3 rounded-lg">
+      {/* Urgency Banner - delayed animation */}
+      <div
+        className="inline-flex items-center bg-red-500/20 backdrop-blur-sm border border-red-300/30 px-3 xs:px-4 py-2 xs:py-3 rounded-lg animate-fade-in-up"
+        style={{ animationDelay: '0.5s' }}
+      >
         <ClockIcon className="w-4 xs:w-5 h-4 xs:h-5 mr-2 text-red-300 flex-shrink-0" />
         <span className="text-red-100 text-xs xs:text-sm sm:text-base">
           {t('nextBatchStarting')}: <span className="font-bold">January 15, 2026</span> •{' '}
@@ -138,8 +147,11 @@ export function HeroClientInteractive() {
         </span>
       </div>
 
-      {/* Early Bird */}
-      <div className="mt-6 xs:mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
+      {/* Early Bird - delayed animation */}
+      <div
+        className="mt-6 xs:mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 animate-fade-in-up"
+        style={{ animationDelay: '0.6s' }}
+      >
         <div className="flex items-center gap-2 text-yellow-200">
           <SparklesIcon className="w-4 xs:w-5 h-4 xs:h-5 animate-pulse" />
           <span className="text-xs xs:text-sm sm:text-base">

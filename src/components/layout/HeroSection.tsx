@@ -53,33 +53,42 @@ export function HeroSection({ className = '' }: HeroSectionProps) {
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 lg:pt-28 pb-20 flex items-center min-h-screen">
-        <div className="w-full animate-fade-in-up">
-          {/* Badge - Server rendered for instant LCP */}
-          <div className="inline-flex items-center bg-green-500/20 backdrop-blur-sm border border-green-300/30 px-4 py-2 rounded-full mb-6">
+        {/* PERFORMANCE: LCP-critical elements (H1, H2) rendered immediately without animation
+            Non-LCP elements use staggered animations for visual appeal */}
+        <div className="w-full">
+          {/* Badge - Animated (non-LCP element) */}
+          <div
+            className="inline-flex items-center bg-green-500/20 backdrop-blur-sm border border-green-300/30 px-4 py-2 rounded-full mb-6 animate-fade-in-up"
+            style={{ animationDelay: '0.1s' }}
+          >
             <TrophyIcon className="w-5 h-5 mr-2 text-green-300" />
             <span className="text-green-100 font-medium text-xs xs:text-sm md:text-base">
               #1 NEET Biology Coaching • 98% Success Rate
             </span>
           </div>
 
-          {/* H1 - LCP critical element - Server rendered */}
+          {/* H1 - LCP CRITICAL: No animation, visible immediately for fastest LCP */}
           <h1 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 xs:mb-6 leading-tight text-white break-words">
             <span className="text-yellow-300">NEET Biology Coaching</span>
             <br />
             <span className="text-green-300">India&apos;s #1 Institute</span>
           </h1>
 
-          {/* H2 for additional location keywords - SEO optimized */}
+          {/* H2 - Also LCP candidate, no animation */}
           <h2 className="text-lg xs:text-xl sm:text-2xl md:text-3xl font-semibold mb-3 text-yellow-200">
             Delhi NCR • Noida • Laxmi Nagar • Dwarka
           </h2>
 
-          <p className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl text-blue-100 mb-6 xs:mb-8 max-w-3xl">
+          {/* Subtext - Animated with delay (non-LCP) */}
+          <p
+            className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl text-blue-100 mb-6 xs:mb-8 max-w-3xl animate-fade-in-up"
+            style={{ animationDelay: '0.2s' }}
+          >
             <span className="text-yellow-300 font-bold">Sadhna scored 695/720 (100%ile)</span> •
             500+ Medical Selections
           </p>
 
-          {/* Interactive elements - Client component */}
+          {/* Interactive elements - Client component (loads after LCP) */}
           <HeroClientInteractive />
         </div>
       </div>
