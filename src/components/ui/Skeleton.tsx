@@ -213,3 +213,180 @@ export function SkeletonForm({ fields = 4 }: { fields?: number }) {
     </div>
   )
 }
+
+// Project-specific skeletons
+
+export function SkeletonCourseCard({ className }: { className?: string }) {
+  return (
+    <div
+      className={cn(
+        'rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm dark:border-gray-700 dark:bg-gray-800',
+        className
+      )}
+    >
+      <Skeleton className="h-44 w-full rounded-none" />
+      <div className="p-5 space-y-3">
+        <Skeleton className="h-5 w-1/4" />
+        <Skeleton className="h-6 w-full" />
+        <Skeleton lines={2} className="mt-2" />
+        <div className="flex items-center justify-between pt-2">
+          <Skeleton className="h-8 w-24" />
+          <Skeleton className="h-10 w-32" />
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export function SkeletonTestimonialCard({ className }: { className?: string }) {
+  return (
+    <div
+      className={cn(
+        'rounded-xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800',
+        className
+      )}
+    >
+      <div className="flex gap-1 mb-4">
+        {Array.from({ length: 5 }).map((_, i) => (
+          <Skeleton key={i} shape="circular" className="h-5 w-5" />
+        ))}
+      </div>
+      <Skeleton lines={3} className="mb-4" />
+      <div className="flex items-center gap-3">
+        <SkeletonAvatar size="lg" />
+        <div className="space-y-2">
+          <Skeleton className="h-4 w-32" />
+          <Skeleton className="h-3 w-24" />
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export function SkeletonMCQCard({ className }: { className?: string }) {
+  return (
+    <div
+      className={cn(
+        'rounded-xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800',
+        className
+      )}
+    >
+      <div className="flex items-center justify-between mb-4">
+        <Skeleton className="h-6 w-32" />
+        <Skeleton className="h-6 w-20 rounded-full" />
+      </div>
+      <Skeleton lines={2} className="mb-6" />
+      <div className="space-y-3">
+        {Array.from({ length: 4 }).map((_, i) => (
+          <Skeleton key={i} className="h-14 w-full" />
+        ))}
+      </div>
+      <div className="flex justify-between mt-6 pt-4 border-t border-gray-200 dark:border-gray-700">
+        <Skeleton className="h-9 w-28" />
+        <Skeleton className="h-9 w-28" />
+      </div>
+    </div>
+  )
+}
+
+export function SkeletonHero({ className }: { className?: string }) {
+  return (
+    <div className={cn('space-y-6 py-12', className)}>
+      <div className="space-y-4 max-w-2xl">
+        <Skeleton className="h-12 w-3/4" />
+        <Skeleton className="h-12 w-1/2" />
+        <Skeleton lines={3} className="mt-6" />
+      </div>
+      <div className="flex gap-4 mt-8">
+        <Skeleton className="h-12 w-40" />
+        <Skeleton className="h-12 w-40" />
+      </div>
+    </div>
+  )
+}
+
+export function SkeletonNavbar({ className }: { className?: string }) {
+  return (
+    <div className={cn('flex items-center justify-between p-4', className)}>
+      <Skeleton className="h-10 w-40" />
+      <div className="hidden md:flex items-center gap-6">
+        {Array.from({ length: 5 }).map((_, i) => (
+          <Skeleton key={i} className="h-4 w-20" />
+        ))}
+      </div>
+      <Skeleton className="h-10 w-24" />
+    </div>
+  )
+}
+
+export function SkeletonLeaderboard({
+  rows = 10,
+  className,
+}: {
+  rows?: number
+  className?: string
+}) {
+  return (
+    <div
+      className={cn(
+        'rounded-xl border border-gray-200 bg-white overflow-hidden dark:border-gray-700 dark:bg-gray-800',
+        className
+      )}
+    >
+      <div className="border-b border-gray-200 bg-gray-50 p-4 dark:border-gray-700 dark:bg-gray-900">
+        <Skeleton className="h-6 w-40" />
+      </div>
+      <div className="divide-y divide-gray-200 dark:divide-gray-700">
+        {Array.from({ length: rows }).map((_, i) => (
+          <div key={i} className="flex items-center gap-4 p-4">
+            <Skeleton className="h-8 w-8 rounded-full" />
+            <SkeletonAvatar size="md" />
+            <div className="flex-1">
+              <Skeleton className="h-4 w-32 mb-1" />
+              <Skeleton className="h-3 w-20" />
+            </div>
+            <Skeleton className="h-6 w-16" />
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+export function SkeletonStats({ className }: { className?: string }) {
+  return (
+    <div className={cn('grid grid-cols-2 md:grid-cols-4 gap-4', className)}>
+      {Array.from({ length: 4 }).map((_, i) => (
+        <div
+          key={i}
+          className="rounded-xl border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-800"
+        >
+          <Skeleton className="h-8 w-8 rounded-lg mb-3" />
+          <Skeleton className="h-8 w-16 mb-1" />
+          <Skeleton className="h-4 w-24" />
+        </div>
+      ))}
+    </div>
+  )
+}
+
+export function SkeletonDailyChallenge({ className }: { className?: string }) {
+  return (
+    <div
+      className={cn(
+        'rounded-xl border-2 border-dashed border-gray-200 bg-gray-50 p-6 dark:border-gray-700 dark:bg-gray-900',
+        className
+      )}
+    >
+      <div className="flex items-center gap-3 mb-4">
+        <Skeleton className="h-10 w-10 rounded-lg" />
+        <div>
+          <Skeleton className="h-5 w-32 mb-1" />
+          <Skeleton className="h-4 w-24" />
+        </div>
+      </div>
+      <Skeleton lines={2} className="mb-4" />
+      <Skeleton className="h-10 w-full" />
+    </div>
+  )
+}
