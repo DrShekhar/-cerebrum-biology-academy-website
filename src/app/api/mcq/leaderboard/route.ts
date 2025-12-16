@@ -123,25 +123,31 @@ export async function GET(request: NextRequest) {
             take: 100,
           })
 
+          // If no users with XP, return empty leaderboard
+          if (userStatsQuery.length === 0) {
+            return NextResponse.json(getEmptyLeaderboard(period, periodStart, periodEnd))
+          }
+
           const freeUserIds = userStatsQuery
             .map((s) => s.freeUserId)
             .filter((id): id is string => id !== null)
 
-          const userDetails = await prisma.free_users.findMany({
-            where: {
-              id: { in: freeUserIds },
-            },
-            select: {
-              id: true,
-              name: true,
-              phone: true,
-            },
-          })
+          // Only query free_users if we have IDs
+          let userDetailsMap = new Map<string, { id: string; name: string | null; phone: string }>()
 
-          const userDetailsMap = new Map<
-            string,
-            { id: string; name: string | null; phone: string }
-          >(userDetails.map((u) => [u.id, u]))
+          if (freeUserIds.length > 0) {
+            const userDetails = await prisma.free_users.findMany({
+              where: {
+                id: { in: freeUserIds },
+              },
+              select: {
+                id: true,
+                name: true,
+                phone: true,
+              },
+            })
+            userDetailsMap = new Map(userDetails.map((u) => [u.id, u]))
+          }
 
           rankings = userStatsQuery.map((stat, index) => {
             const user = stat.freeUserId ? userDetailsMap.get(stat.freeUserId) : null
@@ -189,26 +195,32 @@ export async function GET(request: NextRequest) {
             take: 100,
           })
 
+          // If no sessions in this period, return empty leaderboard
+          if (sessionStats.length === 0) {
+            return NextResponse.json(getEmptyLeaderboard(period, periodStart, periodEnd))
+          }
+
           // Get user details for the top users
           const freeUserIds = sessionStats
             .map((s) => s.freeUserId)
             .filter((id): id is string => id !== null)
 
-          const userDetails = await prisma.free_users.findMany({
-            where: {
-              id: { in: freeUserIds },
-            },
-            select: {
-              id: true,
-              name: true,
-              phone: true,
-            },
-          })
+          // Only query free_users if we have IDs
+          let userDetailsMap = new Map<string, { id: string; name: string | null; phone: string }>()
 
-          const userDetailsMap = new Map<
-            string,
-            { id: string; name: string | null; phone: string }
-          >(userDetails.map((u) => [u.id, u]))
+          if (freeUserIds.length > 0) {
+            const userDetails = await prisma.free_users.findMany({
+              where: {
+                id: { in: freeUserIds },
+              },
+              select: {
+                id: true,
+                name: true,
+                phone: true,
+              },
+            })
+            userDetailsMap = new Map(userDetails.map((u) => [u.id, u]))
+          }
 
           rankings = sessionStats.map((stat, index) => {
             const user = stat.freeUserId ? userDetailsMap.get(stat.freeUserId) : null
