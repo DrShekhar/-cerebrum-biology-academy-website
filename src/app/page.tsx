@@ -11,21 +11,22 @@ const LoadingSkeleton = ({ height = 'h-96' }: { height?: string }) => (
 )
 
 // PERFORMANCE: Lazy load ALL below-fold components to reduce initial bundle
-// This reduces initial JS by ~800KB and improves FCP by 2-3 seconds
+// TrustSignalsBanner now uses CSS animations instead of framer-motion
 
 const CoursesSection = dynamic(
   () => import('@/components/layout/CoursesSection').then((mod) => mod.CoursesSection),
-  { loading: () => <LoadingSkeleton />, ssr: true }
+  { loading: () => <LoadingSkeleton /> }
 )
 
+// TrustSignalsBanner - uses CSS animations (no framer-motion dependency)
 const TrustSignalsBanner = dynamic(
   () => import('@/components/trust/TrustSignalsBanner').then((mod) => mod.TrustSignalsBanner),
-  { loading: () => <LoadingSkeleton height="h-32" />, ssr: true }
+  { loading: () => <LoadingSkeleton height="h-32" /> }
 )
 
 const FacultySection = dynamic(
   () => import('@/components/layout/FacultySection').then((mod) => mod.FacultySection),
-  { loading: () => <LoadingSkeleton />, ssr: true }
+  { loading: () => <LoadingSkeleton /> }
 )
 
 const RealStudentTestimonials = dynamic(
@@ -33,33 +34,33 @@ const RealStudentTestimonials = dynamic(
     import('@/components/testimonials/RealStudentTestimonials').then(
       (mod) => mod.RealStudentTestimonials
     ),
-  { loading: () => <LoadingSkeleton />, ssr: true }
+  { loading: () => <LoadingSkeleton /> }
 )
 
 const LocationsSection = dynamic(
   () => import('@/components/locations/LocationsSection').then((mod) => mod.LocationsSection),
-  { loading: () => <LoadingSkeleton height="h-64" />, ssr: true }
+  { loading: () => <LoadingSkeleton height="h-64" /> }
 )
 
 const BookingSection = dynamic(
   () => import('@/components/layout/BookingSection').then((mod) => mod.BookingSection),
-  { loading: () => <LoadingSkeleton />, ssr: true }
+  { loading: () => <LoadingSkeleton /> }
 )
 
 const GoogleReviewsWidget = dynamic(
   () =>
     import('@/components/social-proof/GoogleReviewsWidget').then((mod) => mod.GoogleReviewsWidget),
-  { loading: () => <LoadingSkeleton height="h-64" />, ssr: true }
+  { loading: () => <LoadingSkeleton height="h-64" /> }
 )
 
 const HomeFAQSection = dynamic(
   () => import('@/components/home/HomeFAQSection').then((mod) => mod.HomeFAQSection),
-  { loading: () => <LoadingSkeleton height="h-96" />, ssr: true }
+  { loading: () => <LoadingSkeleton height="h-96" /> }
 )
 
 const EEATSignals = dynamic(
   () => import('@/components/seo/EEATSignals').then((mod) => mod.EEATSignals),
-  { loading: () => <LoadingSkeleton height="h-48" />, ssr: true }
+  { loading: () => <LoadingSkeleton height="h-48" /> }
 )
 
 export const metadata: Metadata = generatePageMetadata('home')
