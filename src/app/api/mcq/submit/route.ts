@@ -15,6 +15,32 @@ import type { DifficultyLevel } from '@/generated/prisma'
 
 export const dynamic = 'force-dynamic'
 
+// Helper to check if a table doesn't exist error
+function isTableNotExistError(error: unknown): boolean {
+  return (
+    error instanceof Error &&
+    (error.message.includes('does not exist') ||
+      error.message.includes('relation') ||
+      error.message.includes('table'))
+  )
+}
+
+// Safely run a database operation, returning null if table doesn't exist
+async function safeDbOperation<T>(
+  operation: () => Promise<T>,
+  operationName: string
+): Promise<T | null> {
+  try {
+    return await operation()
+  } catch (error) {
+    if (isTableNotExistError(error)) {
+      console.log(`${operationName}: table not found, skipping`)
+      return null
+    }
+    throw error
+  }
+}
+
 // POST /api/mcq/submit - Submit an answer
 export async function POST(request: NextRequest) {
   try {
@@ -50,18 +76,31 @@ export async function POST(request: NextRequest) {
     let questionTopic = topic || 'General'
     let questionDifficulty: DifficultyLevel = difficulty || 'MEDIUM'
 
+    // Try community questions first if specified
     if (questionSource === 'community') {
-      const communityQuestion = await prisma.community_questions.findUnique({
-        where: { id: questionId },
-        select: { correctAnswer: true, explanation: true, topic: true, difficulty: true },
-      })
+      const communityQuestion = (await safeDbOperation(
+        () =>
+          prisma.community_questions.findUnique({
+            where: { id: questionId },
+            select: { correctAnswer: true, explanation: true, topic: true, difficulty: true },
+          }),
+        'community_questions.findUnique'
+      )) as {
+        correctAnswer: string
+        explanation: string | null
+        topic: string
+        difficulty: DifficultyLevel
+      } | null
       if (communityQuestion) {
         correctAnswer = communityQuestion.correctAnswer
         explanation = communityQuestion.explanation
         questionTopic = communityQuestion.topic
         questionDifficulty = communityQuestion.difficulty
       }
-    } else {
+    }
+
+    // If not found in community or is official, try official questions
+    if (!correctAnswer) {
       const officialQuestion = await prisma.questions.findUnique({
         where: { id: questionId },
         select: { correctAnswer: true, explanation: true, topic: true, difficulty: true },
@@ -83,156 +122,177 @@ export async function POST(request: NextRequest) {
     // Calculate XP earned
     const xpEarned = calculateXPForAnswer(isCorrect, questionDifficulty, true)
 
-    // Update session stats
-    await prisma.mcq_practice_sessions.updateMany({
-      where: {
-        OR: [{ id: sessionId }, { sessionToken: sessionId }],
-      },
-      data: {
-        questionsAttempted: { increment: 1 },
-        correctAnswers: isCorrect ? { increment: 1 } : undefined,
-        timeSpent: { increment: timeSpent || 0 },
-        xpEarned: { increment: xpEarned },
-      },
-    })
+    // Try to update session stats (graceful failure if table doesn't exist)
+    await safeDbOperation(
+      () =>
+        prisma.mcq_practice_sessions.updateMany({
+          where: {
+            OR: [{ id: sessionId }, { sessionToken: sessionId }],
+          },
+          data: {
+            questionsAttempted: { increment: 1 },
+            correctAnswers: isCorrect ? { increment: 1 } : undefined,
+            timeSpent: { increment: timeSpent || 0 },
+            xpEarned: { increment: xpEarned },
+          },
+        }),
+      'mcq_practice_sessions.updateMany'
+    )
 
-    // If we have a freeUserId, update user stats
-    let userStatsUpdate = null
+    // If we have a freeUserId, try to update user stats (graceful failure if table doesn't exist)
     let newBadges: ReturnType<typeof checkBadgeUnlock> = []
     let levelUpInfo = null
     let streakInfo = null
 
     if (freeUserId) {
-      // Get or create user stats
-      let userStats = await prisma.mcq_user_stats.findUnique({
-        where: { freeUserId },
-      })
+      const userStatsResult = await safeDbOperation(async () => {
+        // Get or create user stats
+        let userStats = await prisma.mcq_user_stats.findUnique({
+          where: { freeUserId },
+        })
 
-      if (!userStats) {
-        userStats = await prisma.mcq_user_stats.create({
+        if (!userStats) {
+          userStats = await prisma.mcq_user_stats.create({
+            data: {
+              freeUserId,
+              totalQuestions: 0,
+              correctAnswers: 0,
+              accuracy: 0,
+              currentStreak: 0,
+              longestStreak: 0,
+              totalXp: 0,
+              currentLevel: 1,
+              levelProgress: 0,
+              topicMastery: {},
+              badges: [],
+            },
+          })
+        }
+
+        const previousXp = userStats.totalXp
+        const newXp = previousXp + xpEarned
+
+        // Update topic mastery
+        const currentMastery =
+          (userStats.topicMastery as Record<
+            string,
+            { attempted: number; correct: number; mastery: number }
+          >) || {}
+        const updatedMastery = updateTopicMastery(currentMastery, questionTopic, isCorrect)
+        const { weakTopics, strongTopics } = identifyWeakAndStrongTopics(updatedMastery)
+
+        // Check for streak update
+        const questionsToday = userStats.totalQuestions + 1
+        const localStreakInfo = updateStreak(
+          userStats.lastPracticeDate,
+          userStats.currentStreak,
+          5,
+          questionsToday
+        )
+
+        const newStreak = localStreakInfo.newStreak
+        const longestStreak = Math.max(userStats.longestStreak, newStreak)
+
+        // Calculate new accuracy
+        const newTotalQuestions = userStats.totalQuestions + 1
+        const newCorrectAnswers = userStats.correctAnswers + (isCorrect ? 1 : 0)
+        const newAccuracy = calculateAccuracy(newCorrectAnswers, newTotalQuestions)
+
+        // Check for level up
+        const levelUp = checkLevelUp(previousXp, newXp)
+        const localLevelUpInfo = levelUp.leveledUp
+          ? {
+              newLevel: levelUp.newLevel!.level,
+              xpRequired: levelUp.newLevel!.xpRequired,
+              xpProgress: getLevelProgress(newXp).progress,
+            }
+          : null
+
+        // Update user stats
+        await prisma.mcq_user_stats.update({
+          where: { freeUserId },
           data: {
-            freeUserId,
-            totalQuestions: 0,
-            correctAnswers: 0,
-            accuracy: 0,
-            currentStreak: 0,
-            longestStreak: 0,
-            totalXp: 0,
-            currentLevel: 1,
-            levelProgress: 0,
-            topicMastery: {},
-            badges: [],
+            totalQuestions: newTotalQuestions,
+            correctAnswers: newCorrectAnswers,
+            accuracy: newAccuracy,
+            currentStreak: newStreak,
+            longestStreak,
+            lastPracticeDate: new Date(),
+            totalXp: newXp,
+            currentLevel: getLevelProgress(newXp).currentLevel.level,
+            levelProgress: getLevelProgress(newXp).progress,
+            topicMastery: updatedMastery,
+            weakTopics,
+            strongTopics,
           },
         })
-      }
 
-      const previousXp = userStats.totalXp
-      const newXp = previousXp + xpEarned
-
-      // Update topic mastery
-      const currentMastery =
-        (userStats.topicMastery as Record<
-          string,
-          { attempted: number; correct: number; mastery: number }
-        >) || {}
-      const updatedMastery = updateTopicMastery(currentMastery, questionTopic, isCorrect)
-      const { weakTopics, strongTopics } = identifyWeakAndStrongTopics(updatedMastery)
-
-      // Check for streak update
-      const questionsToday = userStats.totalQuestions + 1
-      streakInfo = updateStreak(
-        userStats.lastPracticeDate,
-        userStats.currentStreak,
-        5,
-        questionsToday
-      )
-
-      const newStreak = streakInfo.newStreak
-      const longestStreak = Math.max(userStats.longestStreak, newStreak)
-
-      // Calculate new accuracy
-      const newTotalQuestions = userStats.totalQuestions + 1
-      const newCorrectAnswers = userStats.correctAnswers + (isCorrect ? 1 : 0)
-      const newAccuracy = calculateAccuracy(newCorrectAnswers, newTotalQuestions)
-
-      // Check for level up
-      const levelUp = checkLevelUp(previousXp, newXp)
-      if (levelUp.leveledUp) {
-        levelUpInfo = {
-          newLevel: levelUp.newLevel!.level,
-          xpRequired: levelUp.newLevel!.xpRequired,
-          xpProgress: getLevelProgress(newXp).progress,
-        }
-      }
-
-      // Update user stats
-      userStatsUpdate = await prisma.mcq_user_stats.update({
-        where: { freeUserId },
-        data: {
+        // Check for new badges
+        const existingBadges = (userStats.badges as string[]) || []
+        const statsForBadgeCheck: UserStats = {
+          id: userStats.id,
+          freeUserId: userStats.freeUserId || undefined,
+          userId: userStats.userId || undefined,
           totalQuestions: newTotalQuestions,
           correctAnswers: newCorrectAnswers,
           accuracy: newAccuracy,
           currentStreak: newStreak,
           longestStreak,
-          lastPracticeDate: new Date(),
           totalXp: newXp,
           currentLevel: getLevelProgress(newXp).currentLevel.level,
           levelProgress: getLevelProgress(newXp).progress,
-          topicMastery: updatedMastery,
-          weakTopics,
-          strongTopics,
-        },
-      })
+          dailyChallengeCompleted: userStats.dailyChallengeCompleted,
+          dailyChallengesTotal: userStats.dailyChallengesTotal,
+          questionsSubmitted: userStats.questionsSubmitted,
+          questionsApproved: userStats.questionsApproved,
+          errorsReported: userStats.errorsReported,
+          errorsAccepted: userStats.errorsAccepted,
+          contributorRank: userStats.contributorRank || undefined,
+        }
 
-      // Check for new badges
-      const existingBadges = (userStats.badges as string[]) || []
-      const statsForBadgeCheck: UserStats = {
-        id: userStats.id,
-        freeUserId: userStats.freeUserId || undefined,
-        userId: userStats.userId || undefined,
-        totalQuestions: newTotalQuestions,
-        correctAnswers: newCorrectAnswers,
-        accuracy: newAccuracy,
-        currentStreak: newStreak,
-        longestStreak,
-        totalXp: newXp,
-        currentLevel: getLevelProgress(newXp).currentLevel.level,
-        levelProgress: getLevelProgress(newXp).progress,
-        dailyChallengeCompleted: userStats.dailyChallengeCompleted,
-        dailyChallengesTotal: userStats.dailyChallengesTotal,
-        questionsSubmitted: userStats.questionsSubmitted,
-        questionsApproved: userStats.questionsApproved,
-        errorsReported: userStats.errorsReported,
-        errorsAccepted: userStats.errorsAccepted,
-        contributorRank: userStats.contributorRank || undefined,
-      }
+        const localNewBadges = checkBadgeUnlock(statsForBadgeCheck, existingBadges)
 
-      newBadges = checkBadgeUnlock(statsForBadgeCheck, existingBadges)
+        if (localNewBadges.length > 0) {
+          const newBadgeCodes = localNewBadges.map((b) => b.code)
+          const allBadges = [...existingBadges, ...newBadgeCodes]
+          const badgeXp = localNewBadges.reduce((sum, b) => sum + b.xpReward, 0)
 
-      if (newBadges.length > 0) {
-        const newBadgeCodes = newBadges.map((b) => b.code)
-        const allBadges = [...existingBadges, ...newBadgeCodes]
-        const badgeXp = newBadges.reduce((sum, b) => sum + b.xpReward, 0)
+          await prisma.mcq_user_stats.update({
+            where: { freeUserId },
+            data: {
+              badges: allBadges,
+              totalXp: { increment: badgeXp },
+            },
+          })
+        }
 
-        await prisma.mcq_user_stats.update({
-          where: { freeUserId },
-          data: {
-            badges: allBadges,
-            totalXp: { increment: badgeXp },
-          },
-        })
+        return {
+          streakInfo: localStreakInfo,
+          levelUpInfo: localLevelUpInfo,
+          badges: localNewBadges,
+        }
+      }, 'mcq_user_stats operations')
+
+      if (userStatsResult) {
+        streakInfo = userStatsResult.streakInfo
+        levelUpInfo = userStatsResult.levelUpInfo
+        newBadges = userStatsResult.badges
       }
     }
 
-    // Update question attempt stats (for community questions)
+    // Update question attempt stats for community questions (graceful failure)
     if (questionSource === 'community') {
-      await prisma.community_questions.update({
-        where: { id: questionId },
-        data: {
-          totalAttempts: { increment: 1 },
-          correctAttempts: isCorrect ? { increment: 1 } : undefined,
-        },
-      })
+      await safeDbOperation(
+        () =>
+          prisma.community_questions.update({
+            where: { id: questionId },
+            data: {
+              totalAttempts: { increment: 1 },
+              correctAttempts: isCorrect ? { increment: 1 } : undefined,
+            },
+          }),
+        'community_questions.update'
+      )
     }
 
     const result: AnswerResult = {
