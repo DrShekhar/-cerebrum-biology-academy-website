@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
+import { useToast } from '@/components/ui/Toast'
 import {
   BookOpen,
   ChevronRight,
@@ -29,6 +30,7 @@ import { BIOLOGY_TOPICS, LEAD_CAPTURE_CONFIG } from '@/lib/mcq/types'
 
 export default function NEETBiologyMCQPage() {
   const router = useRouter()
+  const { showToast } = useToast()
 
   // Session & User State
   const [sessionId, setSessionId] = useState<string | null>(null)
@@ -277,7 +279,7 @@ export default function NEETBiologyMCQPage() {
     }
   }
 
-  // Handle filter application
+  // Handle filter application - now also starts the quiz
   const handleApplyFilters = () => {
     setAnsweredIds(new Set())
     setCurrentQuestionIndex(0)
@@ -287,7 +289,23 @@ export default function NEETBiologyMCQPage() {
       correctAnswers: 0,
       xpEarned: 0,
     })
+    setQuizStarted(true)
     fetchQuestions()
+
+    // Show toast with filter summary
+    const filterParts = [
+      selectedTopic,
+      selectedChapter,
+      selectedDifficulty,
+      isPYQOnly ? `PYQ ${selectedPYQYear || 'All Years'}` : null,
+    ].filter(Boolean)
+
+    showToast(
+      'success',
+      'Quiz Started!',
+      filterParts.length > 0 ? `Filters: ${filterParts.join(' • ')}` : 'Practicing all questions',
+      3000
+    )
   }
 
   // Start quiz
