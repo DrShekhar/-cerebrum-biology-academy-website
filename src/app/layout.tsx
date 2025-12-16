@@ -110,11 +110,15 @@ export default function RootLayout({
         <meta name="apple-touch-fullscreen" content="yes" />
         <meta httpEquiv="Accept-CH" content="DPR, Viewport-Width, Width, Save-Data" />
 
-        {/* Performance: Preconnect to critical domains */}
-        {/* Note: Google Fonts preconnect removed - using next/font which self-hosts */}
+        {/* Performance: Preconnect to critical domains - ORDER MATTERS */}
+        {/* Self-origin preconnect for faster CSS/JS loading */}
+        <link rel="preconnect" href="https://cerebrumbiologyacademy.com" />
+        <link rel="preconnect" href="https://cerebrumbiologyacademy.com" crossOrigin="anonymous" />
+        {/* Vercel CDN for static assets */}
+        <link rel="preconnect" href="https://vercel.live" />
+        {/* Third-party services */}
         <link rel="preconnect" href="https://wa.me" />
-        <link rel="preconnect" href="https://i.ytimg.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://assets.zyrosite.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="//checkout.razorpay.com" />
         <link rel="dns-prefetch" href="//www.googletagmanager.com" />
         <link rel="dns-prefetch" href="//api.whatsapp.com" />
@@ -155,31 +159,84 @@ export default function RootLayout({
         <style
           dangerouslySetInnerHTML={{
             __html: `
+              /* Critical render path - inline essential styles */
+              *,::before,::after{box-sizing:border-box}
+              html{line-height:1.5;-webkit-text-size-adjust:100%;font-family:system-ui,-apple-system,sans-serif}
+              body{margin:0;line-height:inherit}
               /* Header critical styles */
-              header{background:rgba(255,255,255,.95);position:sticky;top:0;z-index:50}
+              header{background:rgba(255,255,255,.95);position:sticky;top:0;z-index:50;backdrop-filter:blur(8px)}
               .text-slate-900{color:#0f172a}
               .text-slate-600{color:#475569}
               .text-2xl{font-size:1.5rem;line-height:2rem}
               .text-xl{font-size:1.25rem;line-height:1.75rem}
+              .text-lg{font-size:1.125rem;line-height:1.75rem}
+              .text-base{font-size:1rem;line-height:1.5rem}
               .text-sm{font-size:.875rem;line-height:1.25rem}
               .text-xs{font-size:.75rem;line-height:1rem}
               .leading-none{line-height:1}
               .leading-tight{line-height:1.25}
               .tracking-wide{letter-spacing:.025em}
               .antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+              /* Layout critical */
+              .flex{display:flex}
+              .items-center{align-items:center}
+              .justify-between{justify-content:space-between}
+              .justify-center{justify-content:center}
+              .max-w-7xl{max-width:80rem}
+              .mx-auto{margin-left:auto;margin-right:auto}
+              .px-4{padding-left:1rem;padding-right:1rem}
+              .py-2{padding-top:.5rem;padding-bottom:.5rem}
+              .py-4{padding-top:1rem;padding-bottom:1rem}
+              .mb-4{margin-bottom:1rem}
+              .mb-6{margin-bottom:1.5rem}
+              .gap-2{gap:.5rem}
+              .gap-4{gap:1rem}
               /* Hero critical styles */
               .min-h-screen{min-height:100vh}
+              .relative{position:relative}
+              .absolute{position:absolute}
+              .inset-0{inset:0}
+              .overflow-hidden{overflow:hidden}
               .bg-gradient-to-br{background-image:linear-gradient(to bottom right,var(--tw-gradient-stops))}
               .from-blue-900{--tw-gradient-from:#1e3a8a;--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to,#1e3a8a00)}
               .via-purple-900{--tw-gradient-stops:var(--tw-gradient-from),#581c87,var(--tw-gradient-to,#581c8700)}
               .to-blue-900{--tw-gradient-to:#1e3a8a}
               .text-yellow-300{color:#fcd34d}
+              .text-yellow-200{color:#fef08a}
               .text-green-300{color:#86efac}
+              .text-green-100{color:#dcfce7}
+              .text-blue-100{color:#dbeafe}
               .text-white{color:#fff}
               .font-bold{font-weight:700}
+              .font-semibold{font-weight:600}
               .font-medium{font-weight:500}
+              .rounded-full{border-radius:9999px}
+              .rounded-lg{border-radius:.5rem}
+              .bg-green-500\\/20{background-color:rgb(34 197 94/.2)}
+              .border{border-width:1px}
+              .border-green-300\\/30{border-color:rgb(134 239 172/.3)}
+              .w-5{width:1.25rem}
+              .h-5{height:1.25rem}
+              .mr-2{margin-right:.5rem}
+              /* Button critical */
+              .bg-yellow-400{background-color:#facc15}
+              .bg-white{background-color:#fff}
+              .text-blue-900{color:#1e3a8a}
+              .hover\\:bg-yellow-300:hover{background-color:#fde047}
+              .px-6{padding-left:1.5rem;padding-right:1.5rem}
+              .px-8{padding-left:2rem;padding-right:2rem}
+              .py-3{padding-top:.75rem;padding-bottom:.75rem}
+              .py-4{padding-top:1rem;padding-bottom:1rem}
+              /* Animation */
               @keyframes fade-in-up{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
               .animate-fade-in-up{animation:fade-in-up .5s ease-out forwards}
+              @keyframes pulse{50%{opacity:.5}}
+              .animate-pulse{animation:pulse 2s cubic-bezier(.4,0,.6,1) infinite}
+              /* Responsive */
+              @media(min-width:640px){.sm\\:text-3xl{font-size:1.875rem;line-height:2.25rem}.sm\\:text-lg{font-size:1.125rem}}
+              @media(min-width:768px){.md\\:text-4xl{font-size:2.25rem;line-height:2.5rem}.md\\:text-xl{font-size:1.25rem}.md\\:pb-0{padding-bottom:0}}
+              @media(min-width:1024px){.lg\\:text-5xl{font-size:3rem;line-height:1}.lg\\:-mt-20{margin-top:-5rem}}
+              @media(min-width:1280px){.xl\\:text-6xl{font-size:3.75rem;line-height:1}}
             `,
           }}
         />

@@ -4,7 +4,13 @@ import { performanceAnalytics } from './performanceService'
 import { renderToBuffer } from '@react-pdf/renderer'
 import React from 'react'
 import { AnalyticsReportPDF } from '@/lib/pdf/AnalyticsReportPDF'
-import ExcelJS from 'exceljs'
+// Dynamic import ExcelJS to avoid bundling 2.8MB on every page
+// ExcelJS is only used for Excel exports in admin pages
+type ExcelJSType = typeof import('exceljs')
+const getExcelJS = async (): Promise<ExcelJSType> => {
+  const ExcelJS = await import('exceljs')
+  return ExcelJS
+}
 
 export class ExportService {
   /**
@@ -377,6 +383,7 @@ export class ExportService {
    * Generate Excel data
    */
   async generateExcel(exportData: ExportData): Promise<Buffer> {
+    const ExcelJS = await getExcelJS()
     const workbook = new ExcelJS.Workbook()
 
     workbook.creator = 'Cerebrum Biology Academy'
