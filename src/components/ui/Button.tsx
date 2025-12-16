@@ -1,9 +1,12 @@
 import * as React from 'react'
 import { Slot } from '@radix-ui/react-slot'
 import { cva, type VariantProps } from 'class-variance-authority'
-import { motion } from 'framer-motion'
 import { cn } from '@/lib/utils'
 import { Loader2 } from 'lucide-react'
+
+// CSS-based animation classes (replaces framer-motion for 90KB bundle savings)
+const animationClasses =
+  'transition-transform duration-150 ease-out hover:scale-[1.02] active:scale-[0.98]'
 
 const buttonVariants = cva(
   'inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
@@ -73,39 +76,23 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     },
     ref
   ) => {
+    // Apply animation classes only when enabled and not disabled/loading
+    const shouldAnimate = animate && !disabled && !loading
+    const classes = cn(
+      buttonVariants({ variant, size, className }),
+      shouldAnimate && animationClasses
+    )
+
     if (asChild) {
       return (
-        <Slot className={cn(buttonVariants({ variant, size, className }))} ref={ref} {...props}>
+        <Slot className={classes} ref={ref} {...props}>
           {children}
         </Slot>
       )
     }
 
-    if (animate) {
-      return (
-        // @ts-expect-error - Framer Motion types are complex with forwarded refs
-        <motion.button
-          {...props}
-          className={cn(buttonVariants({ variant, size, className }))}
-          ref={ref}
-          disabled={disabled || loading}
-          whileHover={disabled || loading ? undefined : { scale: 1.05 }}
-          whileTap={disabled || loading ? undefined : { scale: 0.98 }}
-          transition={{ type: 'spring', stiffness: 400, damping: 17 }}
-        >
-          {loading && <Loader2 className="mr-2 h-4 w-4 animate-spin" aria-hidden="true" />}
-          {children}
-        </motion.button>
-      )
-    }
-
     return (
-      <button
-        className={cn(buttonVariants({ variant, size, className }))}
-        ref={ref}
-        disabled={disabled || loading}
-        {...props}
-      >
+      <button className={classes} ref={ref} disabled={disabled || loading} {...props}>
         {loading && <Loader2 className="mr-2 h-4 w-4 animate-spin" aria-hidden="true" />}
         {children}
       </button>

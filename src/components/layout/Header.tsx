@@ -1,8 +1,9 @@
 'use client'
 
-import { useState, useEffect, memo, useMemo } from 'react'
+import { useState, useEffect, memo, useMemo, Suspense } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import dynamic from 'next/dynamic'
 import {
   Menu,
   X,
@@ -22,12 +23,36 @@ import {
   Search,
   GraduationCap,
 } from 'lucide-react'
-// Removed framer-motion - using CSS transitions for better performance
-import { BurgerMenu } from '@/components/navigation/BurgerMenu'
-import { SearchMenu } from '@/components/navigation/SearchMenu'
 import Image from 'next/image'
 import { useAuth } from '@/hooks/useAuth'
 import { useI18n } from '@/contexts/I18nContext'
+
+// Dynamic imports for BurgerMenu and SearchMenu to defer framer-motion loading
+// These components use framer-motion which adds ~90KB to the bundle
+// By lazy loading them, we reduce initial JS and improve LCP
+const BurgerMenu = dynamic(
+  () => import('@/components/navigation/BurgerMenu').then((mod) => mod.BurgerMenu),
+  {
+    ssr: false,
+    loading: () => (
+      <button className="p-2 rounded-lg hover:bg-gray-100 transition-colors" aria-label="Menu">
+        <Menu className="w-6 h-6 text-gray-700" />
+      </button>
+    ),
+  }
+)
+
+const SearchMenu = dynamic(
+  () => import('@/components/navigation/SearchMenu').then((mod) => mod.SearchMenu),
+  {
+    ssr: false,
+    loading: () => (
+      <button className="p-2 rounded-lg hover:bg-gray-100 transition-colors" aria-label="Search">
+        <Search className="w-5 h-5 text-gray-600" />
+      </button>
+    ),
+  }
+)
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)

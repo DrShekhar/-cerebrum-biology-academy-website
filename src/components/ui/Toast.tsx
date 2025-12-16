@@ -1,8 +1,7 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import { X, CheckCircle2, AlertCircle, Info, AlertTriangle } from 'lucide-react'
-import { motion, AnimatePresence } from 'framer-motion'
 
 export type ToastType = 'success' | 'error' | 'info' | 'warning'
 
@@ -12,6 +11,7 @@ interface Toast {
   title: string
   message?: string
   duration?: number
+  isExiting?: boolean
 }
 
 interface ToastContextValue {
@@ -20,25 +20,68 @@ interface ToastContextValue {
 
 const ToastContext = React.createContext<ToastContextValue | undefined>(undefined)
 
+// CSS-based toast animations (removes framer-motion dependency for 90KB savings)
+const toastStyles = `
+@keyframes toast-enter {
+  from {
+    opacity: 0;
+    transform: translateX(50px) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@keyframes toast-exit {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+}
+
+.toast-enter {
+  animation: toast-enter 0.3s ease-out forwards;
+}
+
+.toast-exit {
+  animation: toast-exit 0.3s ease-out forwards;
+}
+`
+
 export function ToastProvider({ children }: { children: React.ReactNode }) {
   const [toasts, setToasts] = useState<Toast[]>([])
 
-  const showToast = (type: ToastType, title: string, message?: string, duration: number = 5000) => {
-    const id = `toast_${Date.now()}_${Math.random()}`
-    const newToast: Toast = { id, type, title, message, duration }
+  const removeToast = useCallback((id: string) => {
+    // First mark as exiting to trigger exit animation
+    setToasts((prev) =>
+      prev.map((toast) => (toast.id === id ? { ...toast, isExiting: true } : toast))
+    )
+    // Then remove after animation completes
+    setTimeout(() => {
+      setToasts((prev) => prev.filter((toast) => toast.id !== id))
+    }, 300)
+  }, [])
 
-    setToasts((prev) => [...prev, newToast])
+  const showToast = useCallback(
+    (type: ToastType, title: string, message?: string, duration: number = 5000) => {
+      const id = `toast_${Date.now()}_${Math.random()}`
+      const newToast: Toast = { id, type, title, message, duration, isExiting: false }
 
-    if (duration > 0) {
-      setTimeout(() => {
-        removeToast(id)
-      }, duration)
-    }
-  }
+      setToasts((prev) => [...prev, newToast])
 
-  const removeToast = (id: string) => {
-    setToasts((prev) => prev.filter((toast) => toast.id !== id))
-  }
+      if (duration > 0) {
+        setTimeout(() => {
+          removeToast(id)
+        }, duration)
+      }
+    },
+    [removeToast]
+  )
 
   const getIcon = (type: ToastType) => {
     switch (type) {
@@ -83,6 +126,9 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
     <ToastContext.Provider value={{ showToast }}>
       {children}
 
+      {/* Inject animation styles */}
+      <style dangerouslySetInnerHTML={{ __html: toastStyles }} />
+
       {/* Toast Container */}
       <div
         className="fixed top-4 right-4 z-[20000] space-y-2 max-w-sm w-full pointer-events-none"
@@ -91,38 +137,32 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
         role="region"
         aria-label="Notifications"
       >
-        <AnimatePresence>
-          {toasts.map((toast) => (
-            <motion.div
-              key={toast.id}
-              initial={{ opacity: 0, y: -20, x: 50 }}
-              animate={{ opacity: 1, y: 0, x: 0 }}
-              exit={{ opacity: 0, x: 100 }}
-              transition={{ duration: 0.3, ease: 'easeOut' }}
-              className={`${getColors(toast.type)} border rounded-xl shadow-lg p-4 pointer-events-auto backdrop-blur-sm`}
-              role="alert"
-              aria-live={toast.type === 'error' ? 'assertive' : 'polite'}
-            >
-              <div className="flex items-start gap-3">
-                <div className={getIconColor(toast.type)} aria-hidden="true">
-                  {getIcon(toast.type)}
-                </div>
-                <div className="flex-1 min-w-0">
-                  <h4 className="font-semibold text-sm">{toast.title}</h4>
-                  {toast.message && <p className="text-sm mt-1 opacity-90">{toast.message}</p>}
-                </div>
-                <button
-                  onClick={() => removeToast(toast.id)}
-                  className="text-gray-400 hover:text-gray-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded"
-                  aria-label="Close notification"
-                  type="button"
-                >
-                  <X className="w-4 h-4" />
-                </button>
+        {toasts.map((toast) => (
+          <div
+            key={toast.id}
+            className={`${getColors(toast.type)} ${toast.isExiting ? 'toast-exit' : 'toast-enter'} border rounded-xl shadow-lg p-4 pointer-events-auto backdrop-blur-sm`}
+            role="alert"
+            aria-live={toast.type === 'error' ? 'assertive' : 'polite'}
+          >
+            <div className="flex items-start gap-3">
+              <div className={getIconColor(toast.type)} aria-hidden="true">
+                {getIcon(toast.type)}
               </div>
-            </motion.div>
-          ))}
-        </AnimatePresence>
+              <div className="flex-1 min-w-0">
+                <h4 className="font-semibold text-sm">{toast.title}</h4>
+                {toast.message && <p className="text-sm mt-1 opacity-90">{toast.message}</p>}
+              </div>
+              <button
+                onClick={() => removeToast(toast.id)}
+                className="text-gray-400 hover:text-gray-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded"
+                aria-label="Close notification"
+                type="button"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            </div>
+          </div>
+        ))}
       </div>
     </ToastContext.Provider>
   )
