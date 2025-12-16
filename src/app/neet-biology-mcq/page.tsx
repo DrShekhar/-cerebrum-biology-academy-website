@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   BookOpen,
@@ -27,6 +28,8 @@ import type { DifficultyLevel } from '@/generated/prisma'
 import { BIOLOGY_TOPICS, LEAD_CAPTURE_CONFIG } from '@/lib/mcq/types'
 
 export default function NEETBiologyMCQPage() {
+  const router = useRouter()
+
   // Session & User State
   const [sessionId, setSessionId] = useState<string | null>(null)
   const [freeUserId, setFreeUserId] = useState<string | null>(null)
@@ -41,9 +44,11 @@ export default function NEETBiologyMCQPage() {
 
   // Filter State
   const [selectedTopic, setSelectedTopic] = useState<string | null>(null)
+  const [selectedChapter, setSelectedChapter] = useState<string | null>(null)
   const [selectedDifficulty, setSelectedDifficulty] = useState<DifficultyLevel | null>(null)
   const [isPYQOnly, setIsPYQOnly] = useState(false)
   const [selectedPYQYear, setSelectedPYQYear] = useState<number | null>(null)
+  const [questionCount, setQuestionCount] = useState(20)
 
   // Stats State
   const [userStats, setUserStats] = useState<UserStats | null>(null)
@@ -112,10 +117,11 @@ export default function NEETBiologyMCQPage() {
     try {
       const params = new URLSearchParams()
       if (selectedTopic) params.append('topic', selectedTopic)
+      if (selectedChapter) params.append('chapter', selectedChapter)
       if (selectedDifficulty) params.append('difficulty', selectedDifficulty)
       if (isPYQOnly) params.append('isPYQOnly', 'true')
       if (selectedPYQYear) params.append('pyqYear', selectedPYQYear.toString())
-      params.append('limit', '20')
+      params.append('limit', questionCount.toString())
 
       // Exclude already answered questions
       if (answeredIds.size > 0) {
@@ -138,7 +144,15 @@ export default function NEETBiologyMCQPage() {
     } finally {
       setIsLoadingQuestions(false)
     }
-  }, [selectedTopic, selectedDifficulty, isPYQOnly, selectedPYQYear, answeredIds])
+  }, [
+    selectedTopic,
+    selectedChapter,
+    selectedDifficulty,
+    isPYQOnly,
+    selectedPYQYear,
+    questionCount,
+    answeredIds,
+  ])
 
   // Handle answer submission
   const handleAnswer = useCallback(
@@ -268,6 +282,11 @@ export default function NEETBiologyMCQPage() {
     setAnsweredIds(new Set())
     setCurrentQuestionIndex(0)
     setQuestions([])
+    setSessionStats({
+      questionsAttempted: 0,
+      correctAnswers: 0,
+      xpEarned: 0,
+    })
     fetchQuestions()
   }
 
@@ -389,14 +408,18 @@ export default function NEETBiologyMCQPage() {
                   {/* Filter Section */}
                   <TopicFilter
                     selectedTopic={selectedTopic}
+                    selectedChapter={selectedChapter}
                     selectedDifficulty={selectedDifficulty}
                     isPYQOnly={isPYQOnly}
                     selectedPYQYear={selectedPYQYear}
+                    questionCount={questionCount}
                     onTopicChange={setSelectedTopic}
+                    onChapterChange={setSelectedChapter}
                     onDifficultyChange={setSelectedDifficulty}
                     onPYQOnlyChange={setIsPYQOnly}
                     onPYQYearChange={setSelectedPYQYear}
-                    onApplyFilters={() => {}}
+                    onQuestionCountChange={setQuestionCount}
+                    onApplyFilters={handleApplyFilters}
                   />
 
                   {/* Start Quiz Card */}
@@ -517,15 +540,24 @@ export default function NEETBiologyMCQPage() {
 
                   {/* Quick Actions */}
                   <div className="mt-6 flex flex-wrap gap-3 justify-center">
-                    <button className="flex items-center gap-2 bg-white px-4 py-2 rounded-lg shadow-md text-sm font-medium text-gray-700 hover:bg-gray-50">
+                    <button
+                      onClick={() => router.push('/neet-biology-mcq/leaderboard')}
+                      className="flex items-center gap-2 bg-white px-4 py-2 rounded-lg shadow-md text-sm font-medium text-gray-700 hover:bg-gray-50 hover:shadow-lg transition-all"
+                    >
                       <Users className="w-4 h-4 text-blue-500" />
                       Leaderboard
                     </button>
-                    <button className="flex items-center gap-2 bg-white px-4 py-2 rounded-lg shadow-md text-sm font-medium text-gray-700 hover:bg-gray-50">
+                    <button
+                      onClick={() => router.push('/neet-biology-mcq/contribute')}
+                      className="flex items-center gap-2 bg-white px-4 py-2 rounded-lg shadow-md text-sm font-medium text-gray-700 hover:bg-gray-50 hover:shadow-lg transition-all"
+                    >
                       <Send className="w-4 h-4 text-green-500" />
                       Submit Question
                     </button>
-                    <button className="flex items-center gap-2 bg-white px-4 py-2 rounded-lg shadow-md text-sm font-medium text-gray-700 hover:bg-gray-50">
+                    <button
+                      onClick={() => router.push('/neet-biology-mcq/daily-challenge')}
+                      className="flex items-center gap-2 bg-white px-4 py-2 rounded-lg shadow-md text-sm font-medium text-gray-700 hover:bg-gray-50 hover:shadow-lg transition-all"
+                    >
                       <Target className="w-4 h-4 text-amber-500" />
                       Daily Challenge
                     </button>

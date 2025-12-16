@@ -2,30 +2,47 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { BIOLOGY_TOPICS, PYQ_YEARS, type BiologyTopic, type PYQYear } from '@/lib/mcq/types'
+import {
+  BIOLOGY_TOPICS,
+  BIOLOGY_CHAPTERS,
+  PYQ_YEARS,
+  type BiologyTopic,
+  type PYQYear,
+} from '@/lib/mcq/types'
 import type { DifficultyLevel } from '@/generated/prisma'
+
+// Question count options
+const QUESTION_COUNTS = [10, 20, 30, 50, 100] as const
 
 interface TopicFilterProps {
   selectedTopic: string | null
+  selectedChapter: string | null
   selectedDifficulty: DifficultyLevel | null
   isPYQOnly: boolean
   selectedPYQYear: number | null
+  questionCount: number
   onTopicChange: (topic: string | null) => void
+  onChapterChange: (chapter: string | null) => void
   onDifficultyChange: (difficulty: DifficultyLevel | null) => void
   onPYQOnlyChange: (isPYQOnly: boolean) => void
   onPYQYearChange: (year: number | null) => void
+  onQuestionCountChange: (count: number) => void
   onApplyFilters: () => void
 }
 
 export function TopicFilter({
   selectedTopic,
+  selectedChapter,
   selectedDifficulty,
   isPYQOnly,
   selectedPYQYear,
+  questionCount,
   onTopicChange,
+  onChapterChange,
   onDifficultyChange,
   onPYQOnlyChange,
   onPYQYearChange,
+  onQuestionCountChange,
   onApplyFilters,
 }: TopicFilterProps) {
   const [isExpanded, setIsExpanded] = useState(false)
@@ -36,15 +53,31 @@ export function TopicFilter({
     { value: 'HARD', label: 'Hard', color: 'bg-red-100 text-red-700 border-red-300' },
   ]
 
-  const activeFiltersCount = [selectedTopic, selectedDifficulty, isPYQOnly, selectedPYQYear].filter(
-    Boolean
-  ).length
+  // Get chapters for selected topic
+  const availableChapters = selectedTopic
+    ? BIOLOGY_CHAPTERS[selectedTopic as BiologyTopic] || []
+    : []
+
+  const activeFiltersCount = [
+    selectedTopic,
+    selectedChapter,
+    selectedDifficulty,
+    isPYQOnly,
+    selectedPYQYear,
+  ].filter(Boolean).length
 
   const clearAllFilters = () => {
     onTopicChange(null)
+    onChapterChange(null)
     onDifficultyChange(null)
     onPYQOnlyChange(false)
     onPYQYearChange(null)
+  }
+
+  // Reset chapter when topic changes
+  const handleTopicChange = (topic: string | null) => {
+    onTopicChange(topic)
+    onChapterChange(null) // Reset chapter when topic changes
   }
 
   return (
@@ -87,7 +120,7 @@ export function TopicFilter({
                 <label className="block text-sm font-medium text-gray-700 mb-2">Topic</label>
                 <div className="flex flex-wrap gap-2">
                   <button
-                    onClick={() => onTopicChange(null)}
+                    onClick={() => handleTopicChange(null)}
                     className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
                       !selectedTopic
                         ? 'bg-blue-600 text-white'
@@ -99,7 +132,7 @@ export function TopicFilter({
                   {BIOLOGY_TOPICS.map((topic) => (
                     <button
                       key={topic}
-                      onClick={() => onTopicChange(topic)}
+                      onClick={() => handleTopicChange(topic)}
                       className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
                         selectedTopic === topic
                           ? 'bg-blue-600 text-white'
@@ -111,6 +144,45 @@ export function TopicFilter({
                   ))}
                 </div>
               </div>
+
+              {/* Chapter Selection (only shown when topic is selected) */}
+              <AnimatePresence>
+                {selectedTopic && availableChapters.length > 0 && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: 'auto', opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <label className="block text-sm font-medium text-gray-700 mb-2">Chapter</label>
+                    <div className="flex flex-wrap gap-2">
+                      <button
+                        onClick={() => onChapterChange(null)}
+                        className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
+                          !selectedChapter
+                            ? 'bg-purple-600 text-white'
+                            : 'bg-purple-100 text-purple-700 hover:bg-purple-200'
+                        }`}
+                      >
+                        All Chapters
+                      </button>
+                      {availableChapters.map((chapter) => (
+                        <button
+                          key={chapter}
+                          onClick={() => onChapterChange(chapter)}
+                          className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
+                            selectedChapter === chapter
+                              ? 'bg-purple-600 text-white'
+                              : 'bg-purple-100 text-purple-700 hover:bg-purple-200'
+                          }`}
+                        >
+                          {chapter}
+                        </button>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
 
               {/* Difficulty Selection */}
               <div>
@@ -204,6 +276,31 @@ export function TopicFilter({
                 </AnimatePresence>
               </div>
 
+              {/* Number of Questions Selection */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Questions per Session
+                </label>
+                <div className="flex flex-wrap gap-2">
+                  {QUESTION_COUNTS.map((count) => (
+                    <button
+                      key={count}
+                      onClick={() => onQuestionCountChange(count)}
+                      className={`px-4 py-1.5 rounded-full text-sm font-medium transition-colors ${
+                        questionCount === count
+                          ? 'bg-indigo-600 text-white'
+                          : 'bg-indigo-100 text-indigo-700 hover:bg-indigo-200'
+                      }`}
+                    >
+                      {count}
+                    </button>
+                  ))}
+                </div>
+                <p className="text-xs text-gray-500 mt-1">
+                  Select how many questions you want to practice in this session
+                </p>
+              </div>
+
               {/* Action Buttons */}
               <div className="flex items-center gap-3 pt-2 border-t">
                 <button
@@ -232,6 +329,11 @@ export function TopicFilter({
           {selectedTopic && (
             <span className="px-2 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-medium">
               {selectedTopic}
+            </span>
+          )}
+          {selectedChapter && (
+            <span className="px-2 py-1 rounded-full bg-purple-100 text-purple-700 text-xs font-medium">
+              {selectedChapter}
             </span>
           )}
           {selectedDifficulty && (
