@@ -117,7 +117,55 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ success: false, error: 'Question not found' }, { status: 404 })
     }
 
-    const isCorrect = selectedAnswer === correctAnswer
+    // Normalize correctAnswer to letter format (A, B, C, D)
+    // Some questions store the letter directly, others store the option text
+    let normalizedCorrectAnswer = correctAnswer
+    const validLetters = ['A', 'B', 'C', 'D']
+
+    if (!validLetters.includes(correctAnswer)) {
+      // correctAnswer is text, need to find which option it matches
+      // First, fetch the question options
+      let options: string[] = []
+
+      if (questionSource === 'community') {
+        const questionWithOptions = await safeDbOperation(
+          () =>
+            prisma.community_questions.findUnique({
+              where: { id: questionId },
+              select: { options: true },
+            }),
+          'community_questions.findUnique for options'
+        )
+        if (questionWithOptions?.options) {
+          options = Array.isArray(questionWithOptions.options)
+            ? (questionWithOptions.options as string[])
+            : JSON.parse(questionWithOptions.options as string)
+        }
+      }
+
+      if (options.length === 0) {
+        const officialQuestionWithOptions = await prisma.questions.findUnique({
+          where: { id: questionId },
+          select: { options: true },
+        })
+        if (officialQuestionWithOptions?.options) {
+          options = Array.isArray(officialQuestionWithOptions.options)
+            ? (officialQuestionWithOptions.options as string[])
+            : JSON.parse(officialQuestionWithOptions.options as string)
+        }
+      }
+
+      // Find the index of the correct answer text in options
+      const correctIndex = options.findIndex(
+        (opt) => opt.toLowerCase().trim() === correctAnswer.toLowerCase().trim()
+      )
+
+      if (correctIndex !== -1 && correctIndex < 4) {
+        normalizedCorrectAnswer = validLetters[correctIndex]
+      }
+    }
+
+    const isCorrect = selectedAnswer === normalizedCorrectAnswer
 
     // Calculate XP earned
     const xpEarned = calculateXPForAnswer(isCorrect, questionDifficulty, true)
@@ -297,7 +345,7 @@ export async function POST(request: NextRequest) {
 
     const result: AnswerResult = {
       isCorrect,
-      correctAnswer: correctAnswer as 'A' | 'B' | 'C' | 'D',
+      correctAnswer: normalizedCorrectAnswer as 'A' | 'B' | 'C' | 'D',
       explanation: explanation || undefined,
       xpEarned,
       streakUpdated: !!streakInfo?.streakIncreased,
