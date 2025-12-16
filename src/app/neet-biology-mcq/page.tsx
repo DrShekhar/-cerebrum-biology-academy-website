@@ -137,8 +137,18 @@ export default function NEETBiologyMCQPage() {
       if (data.success && data.data.questions.length > 0) {
         setQuestions(data.data.questions)
         setCurrentQuestionIndex(0)
+        // Show info toast if fewer questions than requested
+        if (data.message) {
+          showToast('info', 'Limited Questions', data.message, 5000)
+        }
       } else if (data.data.questions.length === 0) {
         setError('No more questions available with current filters. Try different filters.')
+        showToast(
+          'error',
+          'No Questions',
+          'No questions found for selected filters. Try different options.',
+          4000
+        )
       }
     } catch (err) {
       setError('Failed to load questions. Please try again.')

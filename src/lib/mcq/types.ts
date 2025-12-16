@@ -401,60 +401,90 @@ export interface PaginatedResponse<T> {
 }
 
 // ============================================
-// TOPIC DEFINITIONS
+// TOPIC DEFINITIONS (Based on NCERT Biology Syllabus)
 // ============================================
 
+// Main topics based on NCERT Units (10 Units total: 5 from Class 11, 5 from Class 12)
 export const BIOLOGY_TOPICS = [
-  'Cell Biology',
-  'Biomolecules',
-  'Cell Division',
-  'Plant Anatomy',
+  // Class 11 Units
+  'Diversity in Living World',
+  'Structural Organisation',
+  'Cell Structure and Function',
   'Plant Physiology',
   'Human Physiology',
+  // Class 12 Units
   'Reproduction',
-  'Genetics',
-  'Evolution',
-  'Ecology',
+  'Genetics and Evolution',
+  'Biology and Human Welfare',
   'Biotechnology',
-  'Human Health & Diseases',
+  'Ecology',
 ] as const
 
 export type BiologyTopic = (typeof BIOLOGY_TOPICS)[number]
 
+// Chapters within each topic/unit (Based on NCERT textbooks)
 export const BIOLOGY_CHAPTERS: Record<BiologyTopic, string[]> = {
-  'Cell Biology': ['Cell - The Unit of Life', 'Cell Organelles', 'Cell Membrane', 'Cell Wall'],
-  Biomolecules: ['Carbohydrates', 'Proteins', 'Lipids', 'Nucleic Acids', 'Enzymes'],
-  'Cell Division': ['Cell Cycle', 'Mitosis', 'Meiosis'],
-  'Plant Anatomy': ['Tissues', 'Anatomy of Root', 'Anatomy of Stem', 'Anatomy of Leaf'],
-  'Plant Physiology': ['Photosynthesis', 'Respiration', 'Plant Growth', 'Plant Hormones'],
-  'Human Physiology': [
-    'Digestion',
-    'Breathing',
-    'Body Fluids & Circulation',
-    'Excretion',
-    'Locomotion',
-    'Neural Control',
-    'Chemical Coordination',
+  // Class 11 - Unit 1: Diversity in Living World
+  'Diversity in Living World': [
+    'The Living World',
+    'Biological Classification',
+    'Plant Kingdom',
+    'Animal Kingdom',
   ],
+  // Class 11 - Unit 2: Structural Organisation
+  'Structural Organisation': [
+    'Morphology of Flowering Plants',
+    'Anatomy of Flowering Plants',
+    'Structural Organisation in Animals',
+  ],
+  // Class 11 - Unit 3: Cell Structure and Function
+  'Cell Structure and Function': [
+    'Cell - The Unit of Life',
+    'Biomolecules',
+    'Cell Cycle and Cell Division',
+  ],
+  // Class 11 - Unit 4: Plant Physiology
+  'Plant Physiology': [
+    'Transport in Plants',
+    'Mineral Nutrition',
+    'Photosynthesis in Higher Plants',
+    'Respiration in Plants',
+    'Plant Growth and Development',
+  ],
+  // Class 11 - Unit 5: Human Physiology
+  'Human Physiology': [
+    'Digestion and Absorption',
+    'Breathing and Exchange of Gases',
+    'Body Fluids and Circulation',
+    'Excretory Products and Their Elimination',
+    'Locomotion and Movement',
+    'Neural Control and Coordination',
+    'Chemical Coordination and Integration',
+  ],
+  // Class 12 - Unit 6: Reproduction
   Reproduction: [
     'Reproduction in Organisms',
-    'Sexual Reproduction in Plants',
+    'Sexual Reproduction in Flowering Plants',
     'Human Reproduction',
     'Reproductive Health',
   ],
-  Genetics: [
-    'Principles of Inheritance',
+  // Class 12 - Unit 7: Genetics and Evolution
+  'Genetics and Evolution': [
+    'Principles of Inheritance and Variation',
     'Molecular Basis of Inheritance',
-    'Chromosomal Basis of Inheritance',
+    'Evolution',
   ],
-  Evolution: ['Origin of Life', 'Evolution Theories', 'Human Evolution'],
-  Ecology: ['Organisms & Environment', 'Ecosystem', 'Biodiversity', 'Environmental Issues'],
-  Biotechnology: [
-    'Principles of Biotechnology',
-    'Applications of Biotechnology',
-    'Genetic Engineering',
+  // Class 12 - Unit 8: Biology and Human Welfare
+  'Biology and Human Welfare': ['Human Health and Diseases', 'Microbes in Human Welfare'],
+  // Class 12 - Unit 9: Biotechnology
+  Biotechnology: ['Biotechnology - Principles and Processes', 'Biotechnology and Its Applications'],
+  // Class 12 - Unit 10: Ecology
+  Ecology: [
+    'Organisms and Populations',
+    'Ecosystem',
+    'Biodiversity and Conservation',
+    'Environmental Issues',
   ],
-  'Human Health & Diseases': ['Human Health', 'Common Diseases', 'Immunity', 'AIDS & Cancer'],
 }
 
 // PYQ Years

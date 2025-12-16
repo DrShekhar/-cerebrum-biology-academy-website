@@ -62,6 +62,10 @@ export async function GET(request: NextRequest) {
     if (filters.difficulty) {
       officialWhere.difficulty = filters.difficulty
     }
+    // Add PYQ filtering for official questions using examYear
+    if (filters.isPYQOnly) {
+      officialWhere.examYear = filters.pyqYear ? filters.pyqYear : { not: null } // Any PYQ if no specific year
+    }
     if (filters.excludeIds && filters.excludeIds.length > 0) {
       officialWhere.id = { notIn: filters.excludeIds }
     }
@@ -180,16 +184,28 @@ export async function GET(request: NextRequest) {
 
     const totalCount = officialCount + communityCount
 
+    const requestedCount = filters.limit || 20
+    const availableQuestions = shuffledQuestions.slice(0, requestedCount)
+
+    // Generate message if fewer questions available than requested
+    let message: string | undefined
+    if (totalCount === 0) {
+      message = 'No questions available for the selected filters. Try different filters.'
+    } else if (totalCount < requestedCount) {
+      message = `Only ${totalCount} questions available for these filters (${requestedCount} requested).`
+    }
+
     const response: QuestionResponse = {
-      questions: shuffledQuestions.slice(0, filters.limit || 20),
+      questions: availableQuestions,
       total: totalCount,
-      hasMore: (filters.offset || 0) + shuffledQuestions.length < totalCount,
+      hasMore: (filters.offset || 0) + availableQuestions.length < totalCount,
       filters,
     }
 
     return NextResponse.json({
       success: true,
       data: response,
+      message,
     })
   } catch (error) {
     console.error('Error fetching MCQ questions:', error)
