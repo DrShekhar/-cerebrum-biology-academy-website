@@ -5,6 +5,24 @@ import type { DifficultyLevel } from '@/generated/prisma'
 
 export const dynamic = 'force-dynamic'
 
+// Helper to safely query community_questions (table may not exist yet)
+async function safeCommunityQuery<T>(queryFn: () => Promise<T>, defaultValue: T): Promise<T> {
+  try {
+    return await queryFn()
+  } catch (error) {
+    // If community_questions table doesn't exist, return default value
+    if (
+      error instanceof Error &&
+      error.message.includes('community_questions') &&
+      error.message.includes('does not exist')
+    ) {
+      console.log('community_questions table not found, using official questions only')
+      return defaultValue
+    }
+    throw error
+  }
+}
+
 // GET /api/mcq/questions - Fetch questions with filtering
 export async function GET(request: NextRequest) {
   try {
@@ -75,8 +93,8 @@ export async function GET(request: NextRequest) {
     // Fetch official questions from questions table
     const officialQuestions = await prisma.questions.findMany({
       where: officialWhere,
-      take: Math.ceil((filters.limit || 20) / 2),
-      skip: Math.floor((filters.offset || 0) / 2),
+      take: filters.limit || 20,
+      skip: filters.offset || 0,
       orderBy: { createdAt: 'desc' },
       select: {
         id: true,
@@ -91,26 +109,30 @@ export async function GET(request: NextRequest) {
       },
     })
 
-    // Fetch approved community questions
-    const communityQuestions = await prisma.community_questions.findMany({
-      where: communityWhere,
-      take: Math.ceil((filters.limit || 20) / 2),
-      skip: Math.floor((filters.offset || 0) / 2),
-      orderBy: { publishedAt: 'desc' },
-      select: {
-        id: true,
-        question: true,
-        options: true,
-        correctAnswer: true,
-        explanation: true,
-        topic: true,
-        subtopic: true,
-        chapter: true,
-        difficulty: true,
-        isPYQ: true,
-        pyqYear: true,
-      },
-    })
+    // Fetch approved community questions (safely - table may not exist)
+    const communityQuestions = await safeCommunityQuery(
+      () =>
+        prisma.community_questions.findMany({
+          where: communityWhere,
+          take: Math.ceil((filters.limit || 20) / 2),
+          skip: Math.floor((filters.offset || 0) / 2),
+          orderBy: { publishedAt: 'desc' },
+          select: {
+            id: true,
+            question: true,
+            options: true,
+            correctAnswer: true,
+            explanation: true,
+            topic: true,
+            subtopic: true,
+            chapter: true,
+            difficulty: true,
+            isPYQ: true,
+            pyqYear: true,
+          },
+        }),
+      [] as Awaited<ReturnType<typeof prisma.community_questions.findMany>>
+    )
 
     // Transform to unified MCQQuestion format
     const transformedOfficialQuestions: MCQQuestion[] = officialQuestions.map((q) => ({
@@ -149,11 +171,12 @@ export async function GET(request: NextRequest) {
     const allQuestions = [...transformedOfficialQuestions, ...transformedCommunityQuestions]
     const shuffledQuestions = shuffleArray(allQuestions)
 
-    // Get total count
-    const [officialCount, communityCount] = await Promise.all([
-      prisma.questions.count({ where: officialWhere }),
-      prisma.community_questions.count({ where: communityWhere }),
-    ])
+    // Get total count (safely for community)
+    const officialCount = await prisma.questions.count({ where: officialWhere })
+    const communityCount = await safeCommunityQuery(
+      () => prisma.community_questions.count({ where: communityWhere }),
+      0
+    )
 
     const totalCount = officialCount + communityCount
 
@@ -213,26 +236,30 @@ async function fetchQuestionsByIds(ids: string[]) {
       },
     })
 
-    // Fetch from community questions
-    const communityQuestions = await prisma.community_questions.findMany({
-      where: {
-        id: { in: ids },
-        status: 'APPROVED',
-      },
-      select: {
-        id: true,
-        question: true,
-        options: true,
-        correctAnswer: true,
-        explanation: true,
-        topic: true,
-        subtopic: true,
-        chapter: true,
-        difficulty: true,
-        isPYQ: true,
-        pyqYear: true,
-      },
-    })
+    // Fetch from community questions (safely - table may not exist)
+    const communityQuestions = await safeCommunityQuery(
+      () =>
+        prisma.community_questions.findMany({
+          where: {
+            id: { in: ids },
+            status: 'APPROVED',
+          },
+          select: {
+            id: true,
+            question: true,
+            options: true,
+            correctAnswer: true,
+            explanation: true,
+            topic: true,
+            subtopic: true,
+            chapter: true,
+            difficulty: true,
+            isPYQ: true,
+            pyqYear: true,
+          },
+        }),
+      [] as Awaited<ReturnType<typeof prisma.community_questions.findMany>>
+    )
 
     // Transform to unified format
     const transformedOfficial: MCQQuestion[] = officialQuestions.map((q) => ({
