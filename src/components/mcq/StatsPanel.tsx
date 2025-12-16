@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useRouter } from 'next/navigation'
 import { LEVEL_CONFIG } from '@/lib/mcq/types'
 
 interface StatsPanelProps {
@@ -26,6 +27,7 @@ export function StatsPanel({
   sessionQuestions = 0,
   sessionCorrect = 0,
 }: StatsPanelProps) {
+  const router = useRouter()
   const levelConfig = LEVEL_CONFIG.find((l) => l.level === currentLevel) || LEVEL_CONFIG[0]
   const nextLevel = LEVEL_CONFIG.find((l) => l.level === currentLevel + 1)
 
@@ -124,10 +126,16 @@ export function StatsPanel({
 
       {/* Quick Actions */}
       <div className="mt-6 space-y-2">
-        <button className="w-full py-2 px-4 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors text-sm">
+        <button
+          onClick={() => router.push('/neet-biology-mcq/leaderboard')}
+          className="w-full py-2 px-4 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors text-sm"
+        >
           View Leaderboard
         </button>
-        <button className="w-full py-2 px-4 bg-gray-100 text-gray-700 rounded-lg font-medium hover:bg-gray-200 transition-colors text-sm">
+        <button
+          onClick={() => router.push('/neet-biology-mcq/daily-challenge')}
+          className="w-full py-2 px-4 bg-gray-100 text-gray-700 rounded-lg font-medium hover:bg-gray-200 transition-colors text-sm"
+        >
           Daily Challenge
         </button>
       </div>

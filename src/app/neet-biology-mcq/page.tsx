@@ -65,6 +65,7 @@ export default function NEETBiologyMCQPage() {
   const [showLeadCapture, setShowLeadCapture] = useState(false)
   const [leadCaptureVariant, setLeadCaptureVariant] = useState<'soft' | 'hard'>('soft')
   const [hasLeadCaptured, setHasLeadCaptured] = useState(false)
+  const [showResetConfirm, setShowResetConfirm] = useState(false)
 
   // Initialize session and load user data
   useEffect(() => {
@@ -168,7 +169,7 @@ export default function NEETBiologyMCQPage() {
 
   // Handle answer submission
   const handleAnswer = useCallback(
-    async (selectedAnswer: 'A' | 'B' | 'C' | 'D'): Promise<AnswerResult> => {
+    async (selectedAnswer: 'A' | 'B' | 'C' | 'D', timeSpent: number): Promise<AnswerResult> => {
       const question = questions[currentQuestionIndex]
       if (!question || !sessionId) {
         throw new Error('Question or session not found')
@@ -180,7 +181,7 @@ export default function NEETBiologyMCQPage() {
         body: JSON.stringify({
           questionId: question.id,
           selectedAnswer,
-          timeSpent: 30, // TODO: Track actual time
+          timeSpent,
           sessionId,
           freeUserId,
           questionSource: question.source,
@@ -256,6 +257,15 @@ export default function NEETBiologyMCQPage() {
     }
   }, [currentQuestionIndex, questions.length, fetchQuestions])
 
+  // Handle skip question (moves to next without answering)
+  const handleSkipQuestion = useCallback(() => {
+    if (currentQuestionIndex < questions.length - 1) {
+      setCurrentQuestionIndex((prev) => prev + 1)
+    } else {
+      fetchQuestions()
+    }
+  }, [currentQuestionIndex, questions.length, fetchQuestions])
+
   // Handle lead capture submission
   const handleLeadCapture = async (data: {
     phone: string
@@ -324,7 +334,7 @@ export default function NEETBiologyMCQPage() {
     fetchQuestions()
   }
 
-  // Reset quiz
+  // Reset quiz (called after confirmation)
   const handleResetQuiz = () => {
     setQuizStarted(false)
     setQuestions([])
@@ -335,6 +345,16 @@ export default function NEETBiologyMCQPage() {
       correctAnswers: 0,
       xpEarned: 0,
     })
+    setShowResetConfirm(false)
+  }
+
+  // Show reset confirmation dialog
+  const handleResetClick = () => {
+    if (sessionStats.questionsAttempted > 0) {
+      setShowResetConfirm(true)
+    } else {
+      handleResetQuiz()
+    }
   }
 
   // Schema for SEO
@@ -493,27 +513,38 @@ export default function NEETBiologyMCQPage() {
               ) : (
                 <>
                   {/* Quiz Progress Bar */}
-                  <div className="bg-white rounded-xl shadow-md p-4 mb-4 flex items-center justify-between">
-                    <div className="flex items-center gap-4">
-                      <span className="text-sm font-medium text-gray-500">
-                        Question {currentQuestionIndex + 1}
-                      </span>
-                      <div className="flex items-center gap-2">
-                        <span className="text-green-600 font-bold">
-                          {sessionStats.correctAnswers}
+                  <div className="bg-white rounded-xl shadow-md p-4 mb-4">
+                    <div className="flex items-center justify-between mb-2">
+                      <div className="flex items-center gap-4">
+                        <span className="text-sm font-medium text-gray-700">
+                          Question {currentQuestionIndex + 1} of {questions.length}
                         </span>
-                        <span className="text-gray-400">/</span>
-                        <span className="text-gray-600">{sessionStats.questionsAttempted}</span>
-                        <span className="text-gray-400 text-sm">({sessionAccuracy}%)</span>
+                        <div className="flex items-center gap-2 text-sm">
+                          <span className="text-green-600 font-bold">
+                            {sessionStats.correctAnswers}
+                          </span>
+                          <span className="text-gray-400">/</span>
+                          <span className="text-gray-600">{sessionStats.questionsAttempted}</span>
+                          <span className="text-gray-400">({sessionAccuracy}% accuracy)</span>
+                        </div>
                       </div>
+                      <button
+                        onClick={handleResetClick}
+                        className="flex items-center gap-2 text-gray-500 hover:text-gray-700 text-sm"
+                      >
+                        <RefreshCw className="w-4 h-4" />
+                        Reset
+                      </button>
                     </div>
-                    <button
-                      onClick={handleResetQuiz}
-                      className="flex items-center gap-2 text-gray-500 hover:text-gray-700 text-sm"
-                    >
-                      <RefreshCw className="w-4 h-4" />
-                      Reset
-                    </button>
+                    {/* Progress bar */}
+                    <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
+                      <div
+                        className="h-full bg-gradient-to-r from-green-500 to-emerald-500 rounded-full transition-all duration-300"
+                        style={{
+                          width: `${questions.length > 0 ? ((currentQuestionIndex + 1) / questions.length) * 100 : 0}%`,
+                        }}
+                      />
+                    </div>
                   </div>
 
                   {/* Question Display */}
@@ -545,6 +576,7 @@ export default function NEETBiologyMCQPage() {
                           question={currentQuestion}
                           questionNumber={sessionStats.questionsAttempted + 1}
                           onAnswer={handleAnswer}
+                          onSkip={handleSkipQuestion}
                           showExplanation={hasLeadCaptured}
                           isProtected={true}
                         />
@@ -691,6 +723,53 @@ export default function NEETBiologyMCQPage() {
           xpEarned={sessionStats.xpEarned}
           variant={leadCaptureVariant}
         />
+
+        {/* Reset Confirmation Dialog */}
+        <AnimatePresence>
+          {showResetConfirm && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4"
+              onClick={() => setShowResetConfirm(false)}
+            >
+              <motion.div
+                initial={{ scale: 0.95, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.95, opacity: 0 }}
+                className="bg-white rounded-2xl p-6 max-w-sm w-full shadow-xl"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <AlertTriangle className="w-6 h-6 text-amber-600" />
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">Reset Quiz?</h3>
+                  <p className="text-gray-600 text-sm mb-6">
+                    You&apos;ve answered {sessionStats.questionsAttempted} questions with{' '}
+                    {sessionStats.correctAnswers} correct ({sessionAccuracy}% accuracy). Your
+                    progress will be lost.
+                  </p>
+                  <div className="flex gap-3">
+                    <button
+                      onClick={() => setShowResetConfirm(false)}
+                      className="flex-1 py-2 px-4 border border-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-50 transition-colors"
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      onClick={handleResetQuiz}
+                      className="flex-1 py-2 px-4 bg-red-600 text-white rounded-lg font-medium hover:bg-red-700 transition-colors"
+                    >
+                      Reset
+                    </button>
+                  </div>
+                </div>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </ProtectedContent>
   )
