@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -36,7 +36,11 @@ export default function NEETBiologyMCQPage() {
   const [sessionId, setSessionId] = useState<string | null>(null)
   const [freeUserId, setFreeUserId] = useState<string | null>(null)
   const [isLoading, setIsLoading] = useState(true)
+  const [sessionReady, setSessionReady] = useState(false)
   const [error, setError] = useState<string | null>(null)
+
+  // Ref for accurate tracking (avoids stale closure issues)
+  const questionsAttemptedRef = useRef(0)
 
   // Question State
   const [questions, setQuestions] = useState<MCQQuestion[]>([])
@@ -100,10 +104,19 @@ export default function NEETBiologyMCQPage() {
           const sessionData = await sessionRes.json()
           if (sessionData.success) {
             setSessionId(sessionData.data.sessionId)
+            setSessionReady(true)
+          } else {
+            // Session creation failed but continue without session
+            setSessionReady(true)
           }
+        } else {
+          // API error but continue without session
+          setSessionReady(true)
         }
       } catch (err) {
         console.error('Failed to initialize session:', err)
+        // Continue without session on error
+        setSessionReady(true)
       } finally {
         setIsLoading(false)
       }
@@ -171,80 +184,92 @@ export default function NEETBiologyMCQPage() {
   const handleAnswer = useCallback(
     async (selectedAnswer: 'A' | 'B' | 'C' | 'D', timeSpent: number): Promise<AnswerResult> => {
       const question = questions[currentQuestionIndex]
-      if (!question || !sessionId) {
-        throw new Error('Question or session not found')
+      if (!question) {
+        showToast('error', 'Error', 'Question not found. Please try again.', 3000)
+        throw new Error('Question not found')
       }
 
-      const res = await fetch('/api/mcq/submit', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          questionId: question.id,
-          selectedAnswer,
-          timeSpent,
-          sessionId,
-          freeUserId,
-          questionSource: question.source,
-          topic: question.topic,
-          difficulty: question.difficulty,
-        }),
-      })
+      try {
+        const res = await fetch('/api/mcq/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            questionId: question.id,
+            selectedAnswer,
+            timeSpent,
+            sessionId: sessionId || 'anonymous',
+            freeUserId,
+            questionSource: question.source,
+            topic: question.topic,
+            difficulty: question.difficulty,
+          }),
+        })
 
-      if (!res.ok) throw new Error('Failed to submit answer')
-
-      const data = await res.json()
-      if (!data.success) throw new Error(data.error || 'Submission failed')
-
-      const result: AnswerResult = data.data
-
-      // Update session stats
-      setSessionStats((prev) => ({
-        questionsAttempted: prev.questionsAttempted + 1,
-        correctAnswers: prev.correctAnswers + (result.isCorrect ? 1 : 0),
-        xpEarned: prev.xpEarned + result.xpEarned,
-      }))
-
-      // Mark question as answered
-      setAnsweredIds((prev) => new Set([...prev, question.id]))
-
-      // Update user stats if available
-      if (freeUserId && userStats) {
-        setUserStats((prev) =>
-          prev
-            ? {
-                ...prev,
-                totalXp: prev.totalXp + result.xpEarned,
-                totalQuestions: prev.totalQuestions + 1,
-                correctAnswers: prev.correctAnswers + (result.isCorrect ? 1 : 0),
-                currentStreak: result.newStreak || prev.currentStreak,
-              }
-            : null
-        )
-      }
-
-      // Check for lead capture trigger
-      const totalAnswered = sessionStats.questionsAttempted + 1
-      if (!hasLeadCaptured) {
-        if (totalAnswered === LEAD_CAPTURE_CONFIG.softPromptAfter) {
-          setLeadCaptureVariant('soft')
-          setShowLeadCapture(true)
-        } else if (totalAnswered === LEAD_CAPTURE_CONFIG.hardPromptAfter) {
-          setLeadCaptureVariant('hard')
-          setShowLeadCapture(true)
+        if (!res.ok) {
+          showToast(
+            'error',
+            'Network Error',
+            'Failed to submit answer. Please check your connection.',
+            4000
+          )
+          throw new Error('Failed to submit answer')
         }
-      }
 
-      return result
+        const data = await res.json()
+        if (!data.success) {
+          showToast('error', 'Submission Error', data.error || 'Failed to submit answer', 4000)
+          throw new Error(data.error || 'Submission failed')
+        }
+
+        const result: AnswerResult = data.data
+
+        // Update ref immediately for accurate lead capture tracking
+        questionsAttemptedRef.current += 1
+
+        // Update session stats
+        setSessionStats((prev) => ({
+          questionsAttempted: prev.questionsAttempted + 1,
+          correctAnswers: prev.correctAnswers + (result.isCorrect ? 1 : 0),
+          xpEarned: prev.xpEarned + result.xpEarned,
+        }))
+
+        // Mark question as answered
+        setAnsweredIds((prev) => new Set([...prev, question.id]))
+
+        // Update user stats if available
+        if (freeUserId && userStats) {
+          setUserStats((prev) =>
+            prev
+              ? {
+                  ...prev,
+                  totalXp: prev.totalXp + result.xpEarned,
+                  totalQuestions: prev.totalQuestions + 1,
+                  correctAnswers: prev.correctAnswers + (result.isCorrect ? 1 : 0),
+                  currentStreak: result.newStreak || prev.currentStreak,
+                }
+              : null
+          )
+        }
+
+        // Check for lead capture trigger using ref for accurate count
+        const totalAnswered = questionsAttemptedRef.current
+        if (!hasLeadCaptured) {
+          if (totalAnswered === LEAD_CAPTURE_CONFIG.softPromptAfter) {
+            setLeadCaptureVariant('soft')
+            setShowLeadCapture(true)
+          } else if (totalAnswered === LEAD_CAPTURE_CONFIG.hardPromptAfter) {
+            setLeadCaptureVariant('hard')
+            setShowLeadCapture(true)
+          }
+        }
+
+        return result
+      } catch (error) {
+        // Re-throw to let QuestionCard handle the error display
+        throw error
+      }
     },
-    [
-      questions,
-      currentQuestionIndex,
-      sessionId,
-      freeUserId,
-      userStats,
-      sessionStats,
-      hasLeadCaptured,
-    ]
+    [questions, currentQuestionIndex, sessionId, freeUserId, userStats, hasLeadCaptured, showToast]
   )
 
   // Handle next question
@@ -345,6 +370,7 @@ export default function NEETBiologyMCQPage() {
       correctAnswers: 0,
       xpEarned: 0,
     })
+    questionsAttemptedRef.current = 0
     setShowResetConfirm(false)
   }
 
@@ -564,6 +590,23 @@ export default function NEETBiologyMCQPage() {
                         Try Again
                       </button>
                     </div>
+                  ) : questions.length === 0 ? (
+                    <div className="bg-white rounded-2xl shadow-lg p-8 text-center">
+                      <BookOpen className="w-12 h-12 text-gray-400 mx-auto mb-4" />
+                      <h3 className="text-lg font-semibold text-gray-700 mb-2">
+                        No Questions Available
+                      </h3>
+                      <p className="text-gray-500 mb-6">
+                        No questions found for the current filters. Try adjusting your filter
+                        settings.
+                      </p>
+                      <button
+                        onClick={handleApplyFilters}
+                        className="bg-green-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-green-700"
+                      >
+                        Load Questions
+                      </button>
+                    </div>
                   ) : currentQuestion ? (
                     <AnimatePresence mode="wait">
                       <motion.div
@@ -590,10 +633,19 @@ export default function NEETBiologyMCQPage() {
                       <button
                         onClick={handleNextQuestion}
                         disabled={isLoadingQuestions}
-                        className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all inline-flex items-center gap-2"
+                        className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all inline-flex items-center gap-2 disabled:opacity-70"
                       >
-                        Next Question
-                        <ChevronRight className="w-5 h-5" />
+                        {isLoadingQuestions ? (
+                          <>
+                            <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                            Loading...
+                          </>
+                        ) : (
+                          <>
+                            Next Question
+                            <ChevronRight className="w-5 h-5" />
+                          </>
+                        )}
                       </button>
                     </div>
                   )}

@@ -53,7 +53,7 @@ export function StatsPanel({
         </div>
 
         {/* Progress Bar */}
-        {nextLevel && (
+        {nextLevel ? (
           <div className="mt-3">
             <div className="flex justify-between text-xs text-gray-500 mb-1">
               <span>Progress to Level {nextLevel.level}</span>
@@ -68,8 +68,12 @@ export function StatsPanel({
               />
             </div>
             <p className="text-xs text-gray-400 mt-1">
-              {nextLevel.xpRequired - totalXp} XP to {nextLevel.name}
+              {Math.max(0, nextLevel.xpRequired - totalXp)} XP to {nextLevel.name}
             </p>
+          </div>
+        ) : (
+          <div className="mt-3 text-center">
+            <p className="text-xs text-purple-600 font-medium">Max Level Reached!</p>
           </div>
         )}
       </div>

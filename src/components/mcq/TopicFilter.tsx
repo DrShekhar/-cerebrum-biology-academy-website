@@ -217,12 +217,21 @@ export function TopicFilter({
               {/* PYQ Toggle */}
               <div>
                 <div className="flex items-center justify-between">
-                  <label className="text-sm font-medium text-gray-700">
+                  <label id="pyq-toggle-label" className="text-sm font-medium text-gray-700">
                     Previous Year Questions Only
                   </label>
                   <button
                     onClick={() => onPYQOnlyChange(!isPYQOnly)}
-                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault()
+                        onPYQOnlyChange(!isPYQOnly)
+                      }
+                    }}
+                    role="switch"
+                    aria-checked={isPYQOnly}
+                    aria-labelledby="pyq-toggle-label"
+                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 ${
                       isPYQOnly ? 'bg-amber-500' : 'bg-gray-200'
                     }`}
                   >
@@ -230,6 +239,7 @@ export function TopicFilter({
                       className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                         isPYQOnly ? 'translate-x-6' : 'translate-x-1'
                       }`}
+                      aria-hidden="true"
                     />
                   </button>
                 </div>

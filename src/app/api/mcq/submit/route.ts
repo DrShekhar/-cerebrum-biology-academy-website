@@ -128,18 +128,22 @@ export async function POST(request: NextRequest) {
       let options: string[] = []
 
       if (questionSource === 'community') {
-        const questionWithOptions = await safeDbOperation(
+        const questionWithOptions = (await safeDbOperation(
           () =>
             prisma.community_questions.findUnique({
               where: { id: questionId },
               select: { options: true },
             }),
           'community_questions.findUnique for options'
-        )
+        )) as { options: string[] | string } | null
         if (questionWithOptions?.options) {
-          options = Array.isArray(questionWithOptions.options)
-            ? (questionWithOptions.options as string[])
-            : JSON.parse(questionWithOptions.options as string)
+          try {
+            options = Array.isArray(questionWithOptions.options)
+              ? questionWithOptions.options
+              : JSON.parse(questionWithOptions.options)
+          } catch {
+            console.error('Failed to parse community question options')
+          }
         }
       }
 
@@ -149,9 +153,13 @@ export async function POST(request: NextRequest) {
           select: { options: true },
         })
         if (officialQuestionWithOptions?.options) {
-          options = Array.isArray(officialQuestionWithOptions.options)
-            ? (officialQuestionWithOptions.options as string[])
-            : JSON.parse(officialQuestionWithOptions.options as string)
+          try {
+            options = Array.isArray(officialQuestionWithOptions.options)
+              ? (officialQuestionWithOptions.options as string[])
+              : JSON.parse(officialQuestionWithOptions.options as string)
+          } catch {
+            console.error('Failed to parse official question options')
+          }
         }
       }
 

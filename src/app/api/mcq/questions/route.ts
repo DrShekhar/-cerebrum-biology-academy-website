@@ -5,6 +5,21 @@ import type { DifficultyLevel } from '@/generated/prisma'
 
 export const dynamic = 'force-dynamic'
 
+// Helper to safely parse question options (JSON or array)
+function safeParseOptions(options: unknown): string[] {
+  if (Array.isArray(options)) return options as string[]
+  if (typeof options === 'string') {
+    try {
+      const parsed = JSON.parse(options)
+      return Array.isArray(parsed) ? parsed : []
+    } catch {
+      console.error('Failed to parse question options:', options)
+      return []
+    }
+  }
+  return []
+}
+
 // Helper to safely query community_questions (table may not exist yet)
 async function safeCommunityQuery<T>(queryFn: () => Promise<T>, defaultValue: T): Promise<T> {
   try {
@@ -139,37 +154,49 @@ export async function GET(request: NextRequest) {
     )
 
     // Transform to unified MCQQuestion format
-    const transformedOfficialQuestions: MCQQuestion[] = officialQuestions.map((q) => ({
-      id: q.id,
-      question: q.question,
-      options: Array.isArray(q.options) ? (q.options as string[]) : JSON.parse(q.options as string),
-      correctAnswer: q.correctAnswer as 'A' | 'B' | 'C' | 'D',
-      explanation: q.explanation || undefined,
-      topic: q.topic || 'General',
-      subtopic: undefined,
-      chapter: undefined,
-      difficulty: q.difficulty,
-      isPYQ: !!q.examYear,
-      pyqYear: q.examYear || undefined,
-      source: 'official' as const,
-      sourceId: q.id,
-    }))
+    const transformedOfficialQuestions: MCQQuestion[] = officialQuestions
+      .map((q) => {
+        const options = safeParseOptions(q.options)
+        if (options.length === 0) return null // Skip questions with invalid options
+        return {
+          id: q.id,
+          question: q.question,
+          options,
+          correctAnswer: q.correctAnswer as 'A' | 'B' | 'C' | 'D',
+          explanation: q.explanation || undefined,
+          topic: q.topic || 'General',
+          subtopic: undefined,
+          chapter: undefined,
+          difficulty: q.difficulty,
+          isPYQ: !!q.examYear,
+          pyqYear: q.examYear || undefined,
+          source: 'official' as const,
+          sourceId: q.id,
+        }
+      })
+      .filter((q): q is MCQQuestion => q !== null)
 
-    const transformedCommunityQuestions: MCQQuestion[] = communityQuestions.map((q) => ({
-      id: q.id,
-      question: q.question,
-      options: Array.isArray(q.options) ? (q.options as string[]) : JSON.parse(q.options as string),
-      correctAnswer: q.correctAnswer as 'A' | 'B' | 'C' | 'D',
-      explanation: q.explanation || undefined,
-      topic: q.topic,
-      subtopic: q.subtopic || undefined,
-      chapter: q.chapter || undefined,
-      difficulty: q.difficulty,
-      isPYQ: q.isPYQ,
-      pyqYear: q.pyqYear || undefined,
-      source: 'community' as const,
-      sourceId: q.id,
-    }))
+    const transformedCommunityQuestions: MCQQuestion[] = communityQuestions
+      .map((q) => {
+        const options = safeParseOptions(q.options)
+        if (options.length === 0) return null // Skip questions with invalid options
+        return {
+          id: q.id,
+          question: q.question,
+          options,
+          correctAnswer: q.correctAnswer as 'A' | 'B' | 'C' | 'D',
+          explanation: q.explanation || undefined,
+          topic: q.topic,
+          subtopic: q.subtopic || undefined,
+          chapter: q.chapter || undefined,
+          difficulty: q.difficulty,
+          isPYQ: q.isPYQ,
+          pyqYear: q.pyqYear || undefined,
+          source: 'community' as const,
+          sourceId: q.id,
+        }
+      })
+      .filter((q): q is MCQQuestion => q !== null)
 
     // Combine and shuffle questions
     const allQuestions = [...transformedOfficialQuestions, ...transformedCommunityQuestions]
@@ -277,38 +304,50 @@ async function fetchQuestionsByIds(ids: string[]) {
       [] as Awaited<ReturnType<typeof prisma.community_questions.findMany>>
     )
 
-    // Transform to unified format
-    const transformedOfficial: MCQQuestion[] = officialQuestions.map((q) => ({
-      id: q.id,
-      question: q.question,
-      options: Array.isArray(q.options) ? (q.options as string[]) : JSON.parse(q.options as string),
-      correctAnswer: q.correctAnswer as 'A' | 'B' | 'C' | 'D',
-      explanation: q.explanation || undefined,
-      topic: q.topic || 'General',
-      subtopic: undefined,
-      chapter: undefined,
-      difficulty: q.difficulty,
-      isPYQ: !!q.examYear,
-      pyqYear: q.examYear || undefined,
-      source: 'official' as const,
-      sourceId: q.id,
-    }))
+    // Transform to unified format with safe parsing
+    const transformedOfficial: MCQQuestion[] = officialQuestions
+      .map((q) => {
+        const options = safeParseOptions(q.options)
+        if (options.length === 0) return null
+        return {
+          id: q.id,
+          question: q.question,
+          options,
+          correctAnswer: q.correctAnswer as 'A' | 'B' | 'C' | 'D',
+          explanation: q.explanation || undefined,
+          topic: q.topic || 'General',
+          subtopic: undefined,
+          chapter: undefined,
+          difficulty: q.difficulty,
+          isPYQ: !!q.examYear,
+          pyqYear: q.examYear || undefined,
+          source: 'official' as const,
+          sourceId: q.id,
+        }
+      })
+      .filter((q): q is MCQQuestion => q !== null)
 
-    const transformedCommunity: MCQQuestion[] = communityQuestions.map((q) => ({
-      id: q.id,
-      question: q.question,
-      options: Array.isArray(q.options) ? (q.options as string[]) : JSON.parse(q.options as string),
-      correctAnswer: q.correctAnswer as 'A' | 'B' | 'C' | 'D',
-      explanation: q.explanation || undefined,
-      topic: q.topic,
-      subtopic: q.subtopic || undefined,
-      chapter: q.chapter || undefined,
-      difficulty: q.difficulty,
-      isPYQ: q.isPYQ,
-      pyqYear: q.pyqYear || undefined,
-      source: 'community' as const,
-      sourceId: q.id,
-    }))
+    const transformedCommunity: MCQQuestion[] = communityQuestions
+      .map((q) => {
+        const options = safeParseOptions(q.options)
+        if (options.length === 0) return null
+        return {
+          id: q.id,
+          question: q.question,
+          options,
+          correctAnswer: q.correctAnswer as 'A' | 'B' | 'C' | 'D',
+          explanation: q.explanation || undefined,
+          topic: q.topic,
+          subtopic: q.subtopic || undefined,
+          chapter: q.chapter || undefined,
+          difficulty: q.difficulty,
+          isPYQ: q.isPYQ,
+          pyqYear: q.pyqYear || undefined,
+          source: 'community' as const,
+          sourceId: q.id,
+        }
+      })
+      .filter((q): q is MCQQuestion => q !== null)
 
     const allQuestions = [...transformedOfficial, ...transformedCommunity]
 

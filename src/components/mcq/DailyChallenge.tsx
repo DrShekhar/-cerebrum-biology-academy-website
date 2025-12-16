@@ -25,11 +25,7 @@ export function DailyChallenge({ freeUserId, onRequireLogin }: DailyChallengePro
   const [result, setResult] = useState<DailyChallengeResult | null>(null)
   const [isAlreadyCompleted, setIsAlreadyCompleted] = useState(false)
 
-  useEffect(() => {
-    fetchChallenge()
-  }, [freeUserId])
-
-  const fetchChallenge = async () => {
+  const fetchChallenge = useCallback(async () => {
     setState('loading')
     try {
       const params = freeUserId ? `?freeUserId=${freeUserId}` : ''
@@ -50,7 +46,11 @@ export function DailyChallenge({ freeUserId, onRequireLogin }: DailyChallengePro
       console.error('Error fetching challenge:', error)
       setState('error')
     }
-  }
+  }, [freeUserId])
+
+  useEffect(() => {
+    fetchChallenge()
+  }, [fetchChallenge])
 
   const startChallenge = async () => {
     if (!freeUserId) {

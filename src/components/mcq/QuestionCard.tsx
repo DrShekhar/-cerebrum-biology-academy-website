@@ -242,6 +242,13 @@ export function QuestionCard({
         ))}
       </div>
 
+      {/* Keyboard Shortcut Hint */}
+      {!selectedAnswer && !isSubmitting && (
+        <p className="text-xs text-gray-400 text-center mt-3">
+          Press 1-4 or A-D to quickly select an answer
+        </p>
+      )}
+
       {/* Result Feedback */}
       <AnimatePresence>
         {result && (
