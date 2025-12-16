@@ -15,7 +15,9 @@
  */
 
 import React, { useEffect, useRef, useState, useCallback } from 'react'
-import Hls from 'hls.js'
+// PERFORMANCE: Dynamic import HLS.js - only loaded when video player is used
+// This saves ~200KB from pages that don't have video content
+import type HlsType from 'hls.js'
 
 interface Chapter {
   title: string
@@ -67,7 +69,7 @@ export default function SecureVideoPlayer({
   pdfSyncData = [],
 }: SecureVideoPlayerProps) {
   const videoRef = useRef<HTMLVideoElement>(null)
-  const hlsRef = useRef<Hls | null>(null)
+  const hlsRef = useRef<HlsType | null>(null)
   const containerRef = useRef<HTMLDivElement>(null)
   const progressTimerRef = useRef<NodeJS.Timeout | null>(null)
 
@@ -92,51 +94,63 @@ export default function SecureVideoPlayer({
   // Anti-piracy: Watermark position (changes periodically)
   const [watermarkPosition, setWatermarkPosition] = useState({ top: 10, left: 10 })
 
-  // Initialize HLS player
+  // Initialize HLS player with dynamic import
   useEffect(() => {
     const video = videoRef.current
     if (!video || !videoUrl) return
 
-    if (Hls.isSupported()) {
-      const hls = new Hls({
-        enableWorker: true,
-        lowLatencyMode: false,
-        backBufferLength: 90,
-      })
+    let hls: HlsType | null = null
 
-      hls.loadSource(videoUrl)
-      hls.attachMedia(video)
+    const initHls = async () => {
+      // Dynamic import HLS.js only when needed
+      const HlsModule = await import('hls.js')
+      const Hls = HlsModule.default
 
-      hls.on(Hls.Events.MANIFEST_PARSED, (_event, data) => {
-        setIsLoading(false)
-        // Get available quality levels
-        const qualities = data.levels.map((level) => `${level.height}p`)
-        setAvailableQualities(['auto', ...qualities])
-      })
+      if (Hls.isSupported()) {
+        hls = new Hls({
+          enableWorker: true,
+          lowLatencyMode: false,
+          backBufferLength: 90,
+        })
 
-      hls.on(Hls.Events.ERROR, (_event, data) => {
-        if (data.fatal) {
-          setError('Video playback error. Please refresh the page.')
-          onSecurityEvent?.('PLAYBACK_ERROR', { error: data.type })
+        hls.loadSource(videoUrl)
+        hls.attachMedia(video)
+
+        hls.on(Hls.Events.MANIFEST_PARSED, (_event, data) => {
+          setIsLoading(false)
+          // Get available quality levels
+          const qualities = data.levels.map((level) => `${level.height}p`)
+          setAvailableQualities(['auto', ...qualities])
+        })
+
+        hls.on(Hls.Events.ERROR, (_event, data) => {
+          if (data.fatal) {
+            setError('Video playback error. Please refresh the page.')
+            onSecurityEvent?.('PLAYBACK_ERROR', { error: data.type })
+          }
+        })
+
+        hlsRef.current = hls
+
+        // Seek to initial position
+        if (initialProgress?.lastPosition && initialProgress.lastPosition > 0) {
+          video.currentTime = initialProgress.lastPosition
         }
-      })
-
-      hlsRef.current = hls
-
-      // Seek to initial position
-      if (initialProgress?.lastPosition && initialProgress.lastPosition > 0) {
-        video.currentTime = initialProgress.lastPosition
+      } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+        // Safari native HLS support
+        video.src = videoUrl
+        setIsLoading(false)
+      } else {
+        setError('Your browser does not support video playback.')
       }
+    }
 
-      return () => {
+    initHls()
+
+    return () => {
+      if (hls) {
         hls.destroy()
       }
-    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-      // Safari native HLS support
-      video.src = videoUrl
-      setIsLoading(false)
-    } else {
-      setError('Your browser does not support video playback.')
     }
   }, [videoUrl, initialProgress, onSecurityEvent])
 

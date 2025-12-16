@@ -16,8 +16,8 @@ const IllustrationLoader = () => (
   </div>
 )
 
-// Re-export utility functions directly (small, needed immediately)
-export { ResponsiveIllustrationWrapper, getResponsiveClasses } from './BlogIllustrations'
+// Re-export utility functions from separate file (prevents loading 648KB illustrations)
+export { ResponsiveIllustrationWrapper, getResponsiveClasses } from './IllustrationUtils'
 
 // Lazy-loaded illustration components
 // This reduces initial bundle size by ~500KB

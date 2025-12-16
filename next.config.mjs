@@ -188,6 +188,13 @@ const nextConfig = {
       'framer-motion',
       'date-fns',
       'lodash',
+      'katex',
+      'react-katex',
+      'zod',
+      '@radix-ui/react-dialog',
+      '@radix-ui/react-select',
+      '@radix-ui/react-tabs',
+      'react-hook-form',
     ],
   },
 

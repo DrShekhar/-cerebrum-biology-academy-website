@@ -1,8 +1,31 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
-import katex from 'katex'
-import 'katex/dist/katex.min.css'
+import { useEffect, useRef, useState } from 'react'
+
+// PERFORMANCE: Dynamic import KaTeX only when component is used
+// This saves ~850KB from the initial bundle on pages that don't use LaTeX
+type KaTeXModule = typeof import('katex')
+let katexModule: KaTeXModule | null = null
+let katexStylesLoaded = false
+
+async function loadKatex(): Promise<KaTeXModule> {
+  if (katexModule) return katexModule
+
+  // Load KaTeX module
+  katexModule = await import('katex')
+
+  // Load CSS only once
+  if (!katexStylesLoaded && typeof document !== 'undefined') {
+    const link = document.createElement('link')
+    link.rel = 'stylesheet'
+    link.href = 'https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css'
+    link.crossOrigin = 'anonymous'
+    document.head.appendChild(link)
+    katexStylesLoaded = true
+  }
+
+  return katexModule
+}
 
 interface LatexRendererProps {
   content: string
@@ -16,14 +39,31 @@ export function LatexRenderer({
   className = '',
 }: LatexRendererProps) {
   const containerRef = useRef<HTMLDivElement>(null)
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
     if (!containerRef.current) return
 
+    let isMounted = true
+
     // Parse content and render LaTeX
-    const renderContent = () => {
+    const renderContent = async () => {
       const container = containerRef.current
-      if (!container) return
+      if (!container || !isMounted) return
+
+      // Check if content contains any LaTeX
+      const hasLatex = /\$|\\\[|\\\(/.test(content)
+
+      if (!hasLatex) {
+        // No LaTeX - render as plain text without loading KaTeX
+        container.textContent = content
+        setIsLoading(false)
+        return
+      }
+
+      // Load KaTeX dynamically only when needed
+      const katex = await loadKatex()
+      if (!isMounted) return
 
       // Split content by LaTeX delimiters
       // Inline: $...$  or \(...\)
@@ -36,7 +76,7 @@ export function LatexRenderer({
         if (part.isLatex) {
           try {
             const span = document.createElement('span')
-            katex.render(part.content, span, {
+            katex.default.render(part.content, span, {
               displayMode: part.displayMode || displayMode,
               throwOnError: false,
               strict: false,
@@ -68,9 +108,15 @@ export function LatexRenderer({
           container.appendChild(span)
         }
       })
+
+      setIsLoading(false)
     }
 
     renderContent()
+
+    return () => {
+      isMounted = false
+    }
   }, [content, displayMode])
 
   return (
