@@ -82,30 +82,47 @@ const isValidUuid = (str: string) => {
 const mockDb = {
   useAuth: () => ({ user: null, isLoading: false, error: null }),
   auth: null,
+  transact: () => Promise.resolve(),
+  useQuery: () => ({ data: null, isLoading: false, error: null }),
 }
 
-// Lazy initialization of InstantDB to avoid SSR issues
-// InstantDB accesses browser-only APIs like `location` during init
+// PERFORMANCE: Use dynamic import() for proper code-splitting
+// This creates a separate chunk for InstantDB that only loads when needed
 let _db: any = null
+let _dbPromise: Promise<any> | null = null
 
+async function loadInstantDB() {
+  if (_db) return _db
+  if (_dbPromise) return _dbPromise
+
+  const rawAppId = process.env.NEXT_PUBLIC_INSTANT_APP_ID as string
+  const APP_ID = isValidUuid(rawAppId) ? rawAppId : undefined
+
+  if (!APP_ID) {
+    _db = mockDb
+    return _db
+  }
+
+  _dbPromise = import('@instantdb/react')
+    .then(({ init }) => {
+      _db = init({ appId: APP_ID })
+      return _db
+    })
+    .catch((e) => {
+      console.error('Failed to initialize InstantDB:', e)
+      _db = mockDb
+      return _db
+    })
+
+  return _dbPromise
+}
+
+// Synchronous access for components - returns mock until loaded
 export const db: any = new Proxy(mockDb, {
   get(target, prop) {
     // Only initialize on client side
-    if (typeof window !== 'undefined' && !_db) {
-      const rawAppId = process.env.NEXT_PUBLIC_INSTANT_APP_ID as string
-      const APP_ID = isValidUuid(rawAppId) ? rawAppId : undefined
-
-      if (APP_ID) {
-        try {
-          const { init } = require('@instantdb/react')
-          _db = init({ appId: APP_ID })
-        } catch (e) {
-          console.error('Failed to initialize InstantDB:', e)
-          _db = mockDb
-        }
-      } else {
-        _db = mockDb
-      }
+    if (typeof window !== 'undefined' && !_db && !_dbPromise) {
+      loadInstantDB()
     }
 
     // Return from initialized db if available, otherwise from mock
@@ -115,7 +132,13 @@ export const db: any = new Proxy(mockDb, {
   },
 })
 
-// Export utilities - dynamically loaded to avoid SSR issues
+// Async getter for when you need to ensure DB is loaded
+export const getDb = () => {
+  if (typeof window === 'undefined') return Promise.resolve(mockDb)
+  return loadInstantDB()
+}
+
+// Export utilities - dynamically loaded via import()
 let _tx: any = null
 let _id: any = null
 
@@ -125,12 +148,13 @@ export const tx = new Proxy(
   {
     get(target, prop) {
       if (typeof window !== 'undefined' && !_tx) {
-        try {
-          const instantdb = require('@instantdb/react')
-          _tx = instantdb.tx
-        } catch {
-          _tx = {}
-        }
+        import('@instantdb/react')
+          .then((mod) => {
+            _tx = mod.tx
+          })
+          .catch(() => {
+            _tx = {}
+          })
       }
       return _tx?.[prop]
     },
@@ -139,12 +163,13 @@ export const tx = new Proxy(
 
 export const id = () => {
   if (typeof window !== 'undefined' && !_id) {
-    try {
-      const instantdb = require('@instantdb/react')
-      _id = instantdb.id
-    } catch {
-      _id = () => `mock-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`
-    }
+    import('@instantdb/react')
+      .then((mod) => {
+        _id = mod.id
+      })
+      .catch(() => {
+        _id = () => `mock-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`
+      })
   }
   return _id ? _id() : `mock-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`
 }
