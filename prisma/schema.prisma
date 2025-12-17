@@ -101,6 +101,18 @@ model biology_topics {
   @@index([viewCount])
 }
 
+model blog_views {
+  id        String   @id @default(cuid())
+  slug      String
+  views     Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([slug])
+  @@index([slug])
+  @@index([views])
+}
+
 model bookmarks {
   id            String        @id
   freeUserId    String

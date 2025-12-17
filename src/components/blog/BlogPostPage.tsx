@@ -28,11 +28,12 @@ import { BackToTop } from './BackToTop'
 import { ArticleSchema, BreadcrumbSchema } from '@/components/seo/ArticleSchema'
 import { BlogLeadCapture } from './BlogLeadCapture'
 import { BlogExitIntentWrapper } from './BlogExitIntentWrapper'
-import { FloatingCTA } from '@/components/common/FloatingCTA'
 import { BlogWhatsAppQuery } from './BlogWhatsAppQuery'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { BlogIllustrationLoader } from './BlogIllustrationLoader'
+import { FAQSchema, extractFAQsFromContent, generateTopicFAQs } from './FAQSchema'
+import { useBlogViews } from '@/hooks/useBlogViews'
 
 interface BlogPostPageProps {
   meta: BlogPostMeta
@@ -45,6 +46,18 @@ interface BlogPostPageProps {
 export function BlogPostPage({ meta, content, toc, relatedPosts, category }: BlogPostPageProps) {
   const [copied, setCopied] = useState(false)
   const [showShareMenu, setShowShareMenu] = useState(false)
+
+  // Track views (adds real-time views to viral base count)
+  const { views: totalViews } = useBlogViews({
+    slug: meta.slug,
+    initialViews: meta.views || 0,
+    trackOnMount: true,
+  })
+
+  // Extract FAQs from content and generate topic-specific FAQs
+  const extractedFaqs = extractFAQsFromContent(content)
+  const topicFaqs = generateTopicFAQs(meta.title, meta.category, meta.tags)
+  const allFaqs = [...extractedFaqs, ...topicFaqs].slice(0, 10)
 
   const copyToClipboard = async () => {
     try {
@@ -103,6 +116,7 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
           { name: meta.title, url: `https://cerebrumbiologyacademy.com/blog/${meta.slug}` },
         ]}
       />
+      {allFaqs.length > 0 && <FAQSchema faqs={allFaqs} pageTitle={meta.title} />}
 
       {/* Reading Progress Bar */}
       <ReadingProgressBar showPercentage showTimeRemaining readTime={meta.readTime} />
@@ -188,9 +202,9 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
                         <Clock className="w-4 h-4 mr-1" />
                         {meta.readTime} min read
                       </div>
-                      <div className="flex items-center">
+                      <div className="flex items-center text-orange-600">
                         <Eye className="w-4 h-4 mr-1" />
-                        {meta.views?.toLocaleString()} views
+                        {totalViews.toLocaleString()} views
                       </div>
                     </div>
                   </div>
