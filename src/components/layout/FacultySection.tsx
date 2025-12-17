@@ -14,13 +14,47 @@ import {
   CheckCircle,
   ArrowRight,
 } from 'lucide-react'
-import { motion } from 'framer-motion'
 import { useRouter } from 'next/navigation'
 import { useI18n } from '@/contexts/I18nContext'
+import { useState, useEffect, useRef } from 'react'
+
+// Lightweight scroll animation hook (replaces framer-motion)
+function useScrollAnimation(threshold = 0.1) {
+  const ref = useRef<HTMLDivElement>(null)
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    const element = ref.current
+    if (!element) return
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+          observer.unobserve(element)
+        }
+      },
+      { threshold }
+    )
+
+    observer.observe(element)
+    return () => observer.disconnect()
+  }, [threshold])
+
+  return { ref, isVisible }
+}
 
 export function FacultySection() {
   const router = useRouter()
   const { t } = useI18n()
+
+  // Scroll animation hooks
+  const headerAnim = useScrollAnimation()
+  const statsAnim = useScrollAnimation()
+  const gridAnim = useScrollAnimation()
+  const highlightsAnim = useScrollAnimation()
+  const methodologyAnim = useScrollAnimation()
+  const ctaAnim = useScrollAnimation()
 
   const handleMeetFaculty = () => {
     router.push('/faculty')
@@ -34,12 +68,11 @@ export function FacultySection() {
     <section className="py-12 xs:py-16 sm:py-20 bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50">
       <div className="max-w-7xl mx-auto px-4 xs:px-6 lg:px-8">
         {/* Section Header */}
-        <motion.div
-          className="text-center mb-10 xs:mb-12 sm:mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+        <div
+          ref={headerAnim.ref}
+          className={`text-center mb-10 xs:mb-12 sm:mb-16 transition-all duration-600 ${
+            headerAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+          }`}
         >
           <div className="inline-flex items-center bg-blue-100 text-blue-600 px-3 xs:px-4 py-1.5 xs:py-2 rounded-full text-xs xs:text-sm font-medium mb-3 xs:mb-4">
             <GraduationCap className="w-3 xs:w-4 h-3 xs:h-4 mr-2" />
@@ -53,24 +86,20 @@ export function FacultySection() {
           <p className="text-base xs:text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
             {t('faculty')} - {t('aiims')}
           </p>
-        </motion.div>
+        </div>
 
         {/* Faculty Statistics */}
-        <motion.div
-          className="grid grid-cols-2 md:grid-cols-4 gap-4 xs:gap-5 sm:gap-6 mb-10 xs:mb-12 sm:mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
+        <div
+          ref={statsAnim.ref}
+          className={`grid grid-cols-2 md:grid-cols-4 gap-4 xs:gap-5 sm:gap-6 mb-10 xs:mb-12 sm:mb-16 transition-all duration-600 delay-200 ${
+            statsAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+          }`}
         >
           {facultyStats.map((stat, index) => (
-            <motion.div
+            <div
               key={stat.label}
-              className="text-center p-4 xs:p-5 sm:p-6 bg-white rounded-xl xs:rounded-2xl shadow-sm hover:shadow-md transition-shadow"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
-              viewport={{ once: true }}
+              className="text-center p-4 xs:p-5 sm:p-6 bg-white rounded-xl xs:rounded-2xl shadow-sm hover:shadow-md transition-shadow animate-fade-in-up"
+              style={{ animationDelay: `${300 + index * 100}ms` }}
             >
               <div className="text-2xl xs:text-3xl font-bold text-blue-600 mb-1.5 xs:mb-2">
                 {stat.number}
@@ -79,26 +108,22 @@ export function FacultySection() {
                 {stat.label}
               </div>
               <div className="text-xs xs:text-sm text-gray-600">{stat.description}</div>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Faculty Grid */}
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 xs:gap-6 sm:gap-8 mb-10 xs:mb-12 sm:mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true }}
+        <div
+          ref={gridAnim.ref}
+          className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 xs:gap-6 sm:gap-8 mb-10 xs:mb-12 sm:mb-16 transition-all duration-600 delay-300 ${
+            gridAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+          }`}
         >
           {facultyMembers.map((faculty, index) => (
-            <motion.div
+            <div
               key={faculty.id}
-              className="bg-white rounded-2xl xs:rounded-3xl shadow-lg hover:shadow-xl transition-shadow p-5 xs:p-6 sm:p-8 group"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
-              viewport={{ once: true }}
+              className="bg-white rounded-2xl xs:rounded-3xl shadow-lg hover:shadow-xl transition-shadow p-5 xs:p-6 sm:p-8 group animate-fade-in-up"
+              style={{ animationDelay: `${500 + index * 100}ms` }}
             >
               {/* Faculty Image */}
               <div className="w-20 xs:w-22 sm:w-24 h-20 xs:h-22 sm:h-24 mx-auto mb-4 xs:mb-5 sm:mb-6 rounded-full overflow-hidden border-4 border-blue-100 group-hover:scale-105 transition-transform shadow-lg">
@@ -135,17 +160,16 @@ export function FacultySection() {
                 </div>
                 <span className="text-gray-600 text-xs xs:text-sm">4.9/5</span>
               </div>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Faculty Highlights */}
-        <motion.div
-          className="bg-white rounded-2xl xs:rounded-3xl shadow-xl p-5 xs:p-6 sm:p-8 md:p-12 mb-8 xs:mb-10 sm:mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          viewport={{ once: true }}
+        <div
+          ref={highlightsAnim.ref}
+          className={`bg-white rounded-2xl xs:rounded-3xl shadow-xl p-5 xs:p-6 sm:p-8 md:p-12 mb-8 xs:mb-10 sm:mb-12 transition-all duration-600 ${
+            highlightsAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+          }`}
         >
           <div className="text-center mb-6 xs:mb-7 sm:mb-8">
             <h3 className="text-xl xs:text-2xl sm:text-3xl font-bold text-gray-900 mb-3 xs:mb-4">
@@ -158,30 +182,26 @@ export function FacultySection() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 xs:gap-5 sm:gap-6">
             {facultyHighlights.map((highlight, index) => (
-              <motion.div
+              <div
                 key={index}
-                className="flex items-start space-x-3 xs:space-x-4"
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.9 + index * 0.1 }}
-                viewport={{ once: true }}
+                className="flex items-start space-x-3 xs:space-x-4 animate-fade-in-left"
+                style={{ animationDelay: `${900 + index * 100}ms` }}
               >
                 <div className="flex-shrink-0 w-6 xs:w-7 sm:w-8 h-6 xs:h-7 sm:h-8 bg-green-100 rounded-full flex items-center justify-center">
                   <CheckCircle className="w-4 xs:w-4.5 sm:w-5 h-4 xs:h-4.5 sm:h-5 text-green-600" />
                 </div>
                 <p className="text-sm xs:text-base text-gray-700 font-medium">{highlight}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Teaching Methodology */}
-        <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 xs:gap-6 sm:gap-8 mb-8 xs:mb-10 sm:mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 1.0 }}
-          viewport={{ once: true }}
+        <div
+          ref={methodologyAnim.ref}
+          className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 xs:gap-6 sm:gap-8 mb-8 xs:mb-10 sm:mb-12 transition-all duration-600 ${
+            methodologyAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+          }`}
         >
           <div className="text-center p-5 xs:p-6 sm:p-8 bg-white rounded-xl xs:rounded-2xl shadow-lg">
             <div className="w-12 xs:w-14 sm:w-16 h-12 xs:h-14 sm:h-16 mx-auto mb-3 xs:mb-4 bg-blue-100 rounded-full flex items-center justify-center">
@@ -218,15 +238,14 @@ export function FacultySection() {
               Individual attention and personalized guidance for every student&apos;s success
             </p>
           </div>
-        </motion.div>
+        </div>
 
         {/* Call to Action */}
-        <motion.div
-          className="text-center bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 rounded-2xl xs:rounded-3xl p-6 xs:p-8 sm:p-12 text-white"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 1.2 }}
-          viewport={{ once: true }}
+        <div
+          ref={ctaAnim.ref}
+          className={`text-center bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 rounded-2xl xs:rounded-3xl p-6 xs:p-8 sm:p-12 text-white transition-all duration-600 ${
+            ctaAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+          }`}
         >
           <h3 className="text-xl xs:text-2xl sm:text-3xl font-bold mb-3 xs:mb-4">
             Ready to Learn from the Best?
@@ -253,7 +272,7 @@ export function FacultySection() {
               Book Demo Class
             </Button>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   )

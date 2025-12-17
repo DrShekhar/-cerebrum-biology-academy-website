@@ -16,10 +16,35 @@ import {
   Download,
   MessageCircle,
 } from 'lucide-react'
-import { motion } from 'framer-motion'
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useRouter } from 'next/navigation'
 import { useI18n } from '@/contexts/I18nContext'
+
+// Lightweight scroll animation hook (replaces framer-motion)
+function useScrollAnimation(threshold = 0.1) {
+  const ref = useRef<HTMLDivElement>(null)
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    const element = ref.current
+    if (!element) return
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+          observer.unobserve(element) // Stop observing once visible
+        }
+      },
+      { threshold }
+    )
+
+    observer.observe(element)
+    return () => observer.disconnect()
+  }, [threshold])
+
+  return { ref, isVisible }
+}
 
 const iconMap = {
   Users,
@@ -31,6 +56,11 @@ export function CoursesSection() {
   const router = useRouter()
   const [selectedCategory, setSelectedCategory] = useState('classroom')
   const { t } = useI18n()
+
+  // Scroll animation hooks
+  const headerAnim = useScrollAnimation()
+  const categoriesAnim = useScrollAnimation()
+  const ctaAnim = useScrollAnimation()
 
   const handleEnrollClick = (courseId: string) => {
     router.push(`/enrollment?course=${courseId}`)
@@ -55,12 +85,11 @@ export function CoursesSection() {
     <section className="py-12 xs:py-16 sm:py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 xs:px-6 lg:px-8">
         {/* Section Header */}
-        <motion.div
-          className="text-center mb-10 xs:mb-12 sm:mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+        <div
+          ref={headerAnim.ref}
+          className={`text-center mb-10 xs:mb-12 sm:mb-16 transition-all duration-600 ${
+            headerAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+          }`}
         >
           <div className="inline-flex items-center bg-blue-100 text-blue-600 px-3 xs:px-4 py-1.5 xs:py-2 rounded-full text-xs xs:text-sm font-medium mb-3 xs:mb-4">
             <BookOpen className="w-3 xs:w-4 h-3 xs:h-4 mr-2" />
@@ -74,15 +103,14 @@ export function CoursesSection() {
           <p className="text-base xs:text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
             {t('viewAllCourses')}
           </p>
-        </motion.div>
+        </div>
 
         {/* Course Categories */}
-        <motion.div
-          className="flex flex-wrap justify-center gap-3 xs:gap-4 mb-8 xs:mb-10 sm:mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
+        <div
+          ref={categoriesAnim.ref}
+          className={`flex flex-wrap justify-center gap-3 xs:gap-4 mb-8 xs:mb-10 sm:mb-12 transition-all duration-600 delay-200 ${
+            categoriesAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+          }`}
         >
           {courseCategories.map((category) => {
             const IconComponent = iconMap[category.icon as keyof typeof iconMap]
@@ -104,18 +132,15 @@ export function CoursesSection() {
               </button>
             )
           })}
-        </motion.div>
+        </div>
 
         {/* Courses Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 xs:gap-8 mb-10 xs:mb-12 sm:mb-16">
           {courses.map((course, index) => (
-            <motion.div
+            <div
               key={course.id}
-              className="bg-white rounded-xl xs:rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
+              className="bg-white rounded-xl xs:rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group animate-fade-in-up"
+              style={{ animationDelay: `${index * 100}ms` }}
             >
               {/* Course Header */}
               <div className="p-5 xs:p-6 sm:p-8 border-b border-gray-100">
@@ -203,17 +228,16 @@ export function CoursesSection() {
                   </Button>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* Bottom CTA */}
-        <motion.div
-          className="text-center bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 rounded-2xl xs:rounded-3xl p-6 xs:p-8 sm:p-12 text-white mx-2"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+        <div
+          ref={ctaAnim.ref}
+          className={`text-center bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 rounded-2xl xs:rounded-3xl p-6 xs:p-8 sm:p-12 text-white mx-2 transition-all duration-600 ${
+            ctaAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+          }`}
         >
           <h3 className="text-xl xs:text-2xl sm:text-3xl font-bold mb-3 xs:mb-4">
             Not Sure Which Course is Right for You?
@@ -241,7 +265,7 @@ export function CoursesSection() {
               Download Brochure
             </Button>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   )
