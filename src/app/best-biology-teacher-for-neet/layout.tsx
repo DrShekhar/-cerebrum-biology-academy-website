@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Best Biology Teacher for NEET 2025 | Top NEET Biology Faculty',
+  title: 'Best Biology Teacher for NEET 2025 [2500+ Selections] | Cerebrum',
   description:
-    'Looking for the best biology teacher for NEET? AIIMS-trained faculty with 2500+ NEET selections. Expert teaching methodology for NEET Biology. 98% success rate, proven results.',
+    'Learn NEET Biology from AIIMS-trained faculty who helped 2500+ students crack NEET. 98% success rate, proven results. Book your FREE demo class today!',
   keywords: [
     'best biology teacher for neet',
     'neet biology teacher',
@@ -17,8 +17,8 @@ export const metadata: Metadata = {
     'best neet biology coaching',
   ],
   openGraph: {
-    title: 'Best Biology Teacher for NEET | AIIMS-Trained Faculty',
-    description: 'AIIMS-trained faculty with 2500+ NEET selections. Expert NEET Biology teaching.',
+    title: 'Best Biology Teacher for NEET 2025 [2500+ Selections]',
+    description: 'Learn from AIIMS-trained faculty with 98% success rate. Book FREE demo today!',
     type: 'website',
     locale: 'en_IN',
     url: 'https://www.cerebrumbiologyacademy.com/best-biology-teacher-for-neet',

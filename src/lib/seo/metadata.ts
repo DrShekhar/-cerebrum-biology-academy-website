@@ -373,10 +373,9 @@ export const pageMetadata: Record<string, PageMetadata> = {
     canonical: '/online-neet-coaching-india',
   },
   bestNeetCoachingIndia: {
-    title:
-      'Best NEET Coaching in India 2025 | Top Institutes | 98% Success Rate | Cerebrum Academy',
+    title: 'Best NEET Coaching in India 2025 [Compare Top 10] | 98% Success',
     description:
-      'Best NEET coaching institute in India. Expert AIIMS faculty, 98% success rate, small batches. Compare with Kota, Allen, Aakash. Online + offline classes for Delhi NCR, Kota, Hyderabad, Bangalore, Mumbai. Book free demo!',
+      "Honest comparison of India's top NEET coaching. AIIMS-trained faculty, 2500+ selections, 98% success rate. Compare fees, results vs Kota, Allen. Book FREE demo today!",
     keywords: [
       'best neet coaching india',
       'top neet coaching india',

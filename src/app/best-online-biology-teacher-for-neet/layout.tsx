@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Best Online Biology Teacher for NEET | Best Biology Teacher for NEET Online',
+  title: 'Best Online Biology Teacher for NEET 2025 [2500+ Selections] | Cerebrum',
   description:
-    'Find the best online biology teacher for NEET preparation. AIIMS faculty with 2500+ NEET selections, 98% success rate. Complete NEET Biology coverage with PYQ analysis. Join now!',
+    'Learn NEET Biology online from AIIMS-trained faculty. 2500+ selections, 98% success rate. Complete syllabus with PYQ analysis. Book FREE demo today!',
   keywords: [
     'best biology teacher for neet online',
     'best online biology teacher for neet',

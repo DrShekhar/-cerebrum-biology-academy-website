@@ -1,10 +1,9 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title:
-    'Free Resources Hub - Study Materials, Timetables & Announcements | Cerebrum Biology Academy',
+  title: 'Free NEET Biology Resources [Notes, PYQs, Formulas] | Cerebrum',
   description:
-    'Access free NEET Biology study materials, class timetables, formula sheets, and important announcements. No login required. Download-free PDF viewing for all classes.',
+    'Download FREE NEET Biology notes, PYQs, formula sheets & study materials. Used by 2500+ successful students. No login required - start learning now!',
   keywords: [
     'free NEET biology materials',
     'NEET biology study resources',
@@ -18,9 +17,9 @@ export const metadata: Metadata = {
     'NEET dropper resources',
   ],
   openGraph: {
-    title: 'Free Resources Hub | Cerebrum Biology Academy',
+    title: 'Free NEET Biology Resources [Notes, PYQs, Formulas]',
     description:
-      'Access free NEET Biology study materials, timetables, and announcements. No login required!',
+      'FREE study materials used by 2500+ successful students. Notes, PYQs, formula sheets!',
     type: 'website',
     url: 'https://www.cerebrumbiologyacademy.com/free-resources',
   },

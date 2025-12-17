@@ -22,6 +22,7 @@ import { KeyTakeaways } from './KeyTakeaways'
 import { DifficultyBadge } from './DifficultyBadge'
 import { NEETTopicBadge } from './NEETTopicBadge'
 import { RelatedPosts } from './RelatedPosts'
+import { RelatedResources } from './RelatedResources'
 import { BlogComments } from './BlogComments'
 import { BackToTop } from './BackToTop'
 import { ArticleSchema, BreadcrumbSchema } from '@/components/seo/ArticleSchema'
@@ -541,6 +542,13 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
                   {content}
                 </ReactMarkdown>
               </div>
+
+              {/* Related Resources - Internal Linking for SEO */}
+              <RelatedResources
+                category={meta.category}
+                neetChapter={meta.neetChapter}
+                tags={meta.tags}
+              />
 
               {/* Tags */}
               <div className="mt-12 pt-8 border-t border-gray-200 animate-fade-in">

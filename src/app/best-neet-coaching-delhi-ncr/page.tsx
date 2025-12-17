@@ -2,20 +2,33 @@ import type { Metadata } from 'next'
 import { BestNEETCoachingDelhiNCRClient } from './BestNEETCoachingDelhiNCRClient'
 
 export const metadata: Metadata = {
-  title: 'Best NEET Coaching in Delhi NCR 2025 | #1 Biology Coaching | Cerebrum Academy',
+  title: 'Best NEET Coaching in Delhi NCR 2025 [2500+ Selections] | Cerebrum',
   description:
-    'Looking for the best NEET coaching in Delhi NCR? Cerebrum Biology Academy offers top NEET preparation with AIIMS faculty, 98% success rate, 500+ medical selections. Delhi, Noida, Gurgaon centers.',
-  keywords:
-    'best NEET coaching Delhi NCR, top NEET coaching Delhi, best biology coaching Delhi, NEET coaching Delhi Noida Gurgaon, best NEET institute Delhi, top 10 NEET coaching Delhi, best NEET coaching 2025, NEET biology coaching Delhi NCR',
+    'Top NEET coaching in Delhi NCR with AIIMS-trained faculty. 98% success rate, 2500+ selections. Delhi, Noida, Gurgaon centers. Book FREE demo class today!',
+  keywords: [
+    'best neet coaching delhi ncr',
+    'neet coaching delhi',
+    'neet coaching noida',
+    'neet coaching gurgaon',
+    'top neet institute delhi',
+    'best biology coaching delhi',
+    'neet preparation delhi ncr',
+    'medical coaching delhi',
+  ],
   openGraph: {
-    title: 'Best NEET Coaching in Delhi NCR | #1 Biology Coaching Institute',
-    description:
-      'Top-rated NEET coaching in Delhi NCR with 98% success rate. AIIMS faculty, small batches, 500+ medical selections. Book FREE demo!',
+    title: 'Best NEET Coaching in Delhi NCR 2025 [2500+ Selections]',
+    description: 'AIIMS-trained faculty, 98% success rate. Delhi, Noida, Gurgaon. Book FREE demo!',
     type: 'website',
-    url: 'https://cerebrumbiologyacademy.com/best-neet-coaching-delhi-ncr',
+    locale: 'en_IN',
+    url: 'https://www.cerebrumbiologyacademy.com/best-neet-coaching-delhi-ncr',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Best NEET Coaching Delhi NCR [2500+ Selections]',
+    description: 'AIIMS-trained faculty, 98% success rate, Delhi-Noida-Gurgaon!',
   },
   alternates: {
-    canonical: 'https://cerebrumbiologyacademy.com/best-neet-coaching-delhi-ncr',
+    canonical: 'https://www.cerebrumbiologyacademy.com/best-neet-coaching-delhi-ncr',
   },
 }
 
