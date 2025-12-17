@@ -269,15 +269,17 @@ export function QuestionCard({
         <div className="overflow-hidden">
           {result && (
             <div
-              className={`p-4 rounded-xl animate-scale-in ${
+              className={`p-4 rounded-xl ${
                 result.isCorrect
-                  ? 'bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-300'
-                  : 'bg-gradient-to-r from-red-50 to-orange-50 border-2 border-red-300'
+                  ? 'bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-300 animate-scale-in animate-pulse-glow'
+                  : 'bg-gradient-to-r from-red-50 to-orange-50 border-2 border-red-300 animate-shake-wrong'
               }`}
             >
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <span className={`text-2xl ${result.isCorrect ? 'animate-bounce' : ''}`}>
+                  <span
+                    className={`text-2xl ${result.isCorrect ? 'animate-confetti-burst' : 'animate-scale-in'}`}
+                  >
                     {result.isCorrect ? '🎉' : '😔'}
                   </span>
                   <span
@@ -286,7 +288,7 @@ export function QuestionCard({
                     {result.isCorrect ? 'Correct!' : 'Incorrect'}
                   </span>
                 </div>
-                <span className="px-3 py-1 bg-blue-100 text-blue-700 font-bold text-sm rounded-full animate-pop-in">
+                <span className="px-3 py-1.5 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-bold text-sm rounded-full animate-xp-float shadow-lg">
                   +{result.xpEarned} XP
                 </span>
               </div>
@@ -324,28 +326,34 @@ export function QuestionCard({
                 </div>
               )}
 
-              {/* Streak Update - Compact */}
+              {/* Streak Update - Enhanced */}
               {result.streakUpdated && result.newStreak && (
-                <div className="mt-2 flex items-center gap-1.5 text-orange-600 text-sm animate-fade-in">
-                  <span>🔥</span>
-                  <span className="font-medium">{result.newStreak} day streak!</span>
+                <div className="mt-3 flex items-center gap-2 p-2 bg-gradient-to-r from-orange-50 to-amber-50 rounded-lg border border-orange-200 animate-fade-in-up">
+                  <span className="text-2xl animate-streak-fire">🔥</span>
+                  <div>
+                    <span className="font-bold text-orange-600 text-sm">
+                      {result.newStreak} Day Streak!
+                    </span>
+                    <p className="text-orange-500 text-xs">Keep it going!</p>
+                  </div>
                 </div>
               )}
 
-              {/* Badge Unlocked - Compact */}
+              {/* Badge Unlocked - Enhanced */}
               {result.badgesUnlocked && result.badgesUnlocked.length > 0 && (
-                <div className="mt-2 space-y-1.5">
+                <div className="mt-3 space-y-2">
                   {result.badgesUnlocked.map((badge, idx) => (
                     <div
                       key={badge.code}
-                      className="flex items-center gap-2 p-2 bg-yellow-50 rounded border border-yellow-200 animate-fade-in-up"
-                      style={{ animationDelay: `${idx * 100}ms` }}
+                      className="flex items-center gap-3 p-3 bg-gradient-to-r from-yellow-50 to-amber-50 rounded-lg border border-yellow-300 animate-scale-in shadow-sm"
+                      style={{ animationDelay: `${idx * 150}ms` }}
                     >
-                      <span className="text-lg">{badge.icon}</span>
+                      <span className="text-2xl animate-confetti-burst">{badge.icon}</span>
                       <div className="flex-1 min-w-0">
-                        <p className="font-semibold text-yellow-800 text-xs">Badge: {badge.name}</p>
+                        <p className="font-bold text-yellow-800 text-sm">🏆 Badge Unlocked!</p>
+                        <p className="text-yellow-700 text-xs">{badge.name}</p>
                       </div>
-                      <span className="text-yellow-600 font-medium text-xs">
+                      <span className="px-2 py-1 bg-yellow-200 text-yellow-800 font-bold text-xs rounded-full">
                         +{badge.xpReward} XP
                       </span>
                     </div>
@@ -353,11 +361,13 @@ export function QuestionCard({
                 </div>
               )}
 
-              {/* Level Up - Compact */}
+              {/* Level Up - Enhanced */}
               {result.levelUp && (
-                <div className="mt-2 p-2 bg-purple-50 rounded border border-purple-200 text-center animate-scale-in">
-                  <p className="font-semibold text-purple-800 text-sm">
-                    🎉 Level Up! Now Level {result.levelUp.newLevel}
+                <div className="mt-3 p-3 bg-gradient-to-r from-purple-100 to-indigo-100 rounded-lg border-2 border-purple-300 text-center animate-scale-in animate-pulse-glow">
+                  <span className="text-3xl animate-confetti-burst inline-block">🎊</span>
+                  <p className="font-bold text-purple-800 text-base mt-1">Level Up!</p>
+                  <p className="text-purple-600 text-sm">
+                    You&apos;re now Level {result.levelUp.newLevel}
                   </p>
                 </div>
               )}

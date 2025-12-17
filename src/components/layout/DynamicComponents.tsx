@@ -36,6 +36,12 @@ export const DynamicTrialBanner = dynamic(
   { ssr: false }
 )
 
+// Maintenance popup - shows after page load
+export const DynamicMaintenancePopup = dynamic(
+  () => import('@/components/ui/MaintenancePopup').then((mod) => mod.MaintenancePopup),
+  { ssr: false }
+)
+
 // Lazy-load Footer to defer framer-motion bundle (Footer uses motion components)
 // This reduces initial JS by ~50KB since footer is below the fold
 export const DynamicFooter = dynamic(

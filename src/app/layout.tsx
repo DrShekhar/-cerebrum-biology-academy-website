@@ -20,6 +20,7 @@ import {
   DynamicMobileNavigation,
   DynamicPWAProvider,
   DynamicTrialBanner,
+  DynamicMaintenancePopup,
 } from '@/components/layout/DynamicComponents'
 import './globals.css'
 
@@ -273,6 +274,7 @@ export default function RootLayout({
                     <FloatingCTA />
                     <GlobalExitIntent />
                     <ChatbotWrapper />
+                    <DynamicMaintenancePopup />
                   </PageErrorBoundary>
                 </PersonalizationProvider>
               </TrustProvider>

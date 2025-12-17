@@ -1,0 +1,972 @@
+/**
+ * NCERT Biology Diagrams Seed Data
+ * Comprehensive mapping of all important figures from Class 11 & 12 Biology
+ */
+
+import { PrismaClient, DiagramCategory, DiagramSource } from '../src/generated/prisma'
+
+const prisma = new PrismaClient()
+
+// NCERT Chapter Data with Key Figures
+const ncertChapters = [
+  // ============= CLASS 11 =============
+  // Unit 1: Diversity in Living World
+  {
+    class: 11,
+    unitNo: 1,
+    unitName: 'Diversity in Living World',
+    chapterNo: 1,
+    chapterName: 'The Living World',
+    topics: ['Biodiversity', 'Taxonomy', 'Species', 'Classification'],
+    neetWeightage: 2,
+    keyFigures: []
+  },
+  {
+    class: 11,
+    unitNo: 1,
+    unitName: 'Diversity in Living World',
+    chapterNo: 2,
+    chapterName: 'Biological Classification',
+    topics: ['Five Kingdom Classification', 'Monera', 'Protista', 'Fungi', 'Plantae', 'Animalia'],
+    neetWeightage: 3,
+    keyFigures: [
+      { figNo: '2.1', title: 'Five Kingdom Classification', priority: 4 },
+      { figNo: '2.2', title: 'Bacteria Structure', priority: 5 },
+      { figNo: '2.4', title: 'Virus Structure', priority: 5 }
+    ]
+  },
+  {
+    class: 11,
+    unitNo: 1,
+    unitName: 'Diversity in Living World',
+    chapterNo: 3,
+    chapterName: 'Plant Kingdom',
+    topics: ['Algae', 'Bryophytes', 'Pteridophytes', 'Gymnosperms', 'Angiosperms', 'Life Cycles'],
+    neetWeightage: 4,
+    keyFigures: [
+      { figNo: '3.1', title: 'Life Cycle of Chlamydomonas', priority: 4 },
+      { figNo: '3.2', title: 'Ulothrix', priority: 3 },
+      { figNo: '3.3', title: 'Spirogyra', priority: 4 },
+      { figNo: '3.4', title: 'Funaria (Moss)', priority: 5 },
+      { figNo: '3.5', title: 'Fern Life Cycle', priority: 5 },
+      { figNo: '3.6', title: 'Pinus (Male Cone)', priority: 4 }
+    ]
+  },
+  {
+    class: 11,
+    unitNo: 1,
+    unitName: 'Diversity in Living World',
+    chapterNo: 4,
+    chapterName: 'Animal Kingdom',
+    topics: ['Basis of Classification', 'Phyla', 'Body Plans', 'Symmetry'],
+    neetWeightage: 4,
+    keyFigures: [
+      { figNo: '4.1', title: 'Levels of Organisation', priority: 4 },
+      { figNo: '4.2', title: 'Body Symmetry', priority: 5 },
+      { figNo: '4.3', title: 'Germinal Layers', priority: 5 },
+      { figNo: '4.4', title: 'Coelom Types', priority: 5 },
+      { figNo: '4.8', title: 'Hydra', priority: 4 },
+      { figNo: '4.12', title: 'Earthworm', priority: 4 },
+      { figNo: '4.18', title: 'Frog External Features', priority: 4 }
+    ]
+  },
+  // Unit 2: Structural Organisation
+  {
+    class: 11,
+    unitNo: 2,
+    unitName: 'Structural Organisation in Animals and Plants',
+    chapterNo: 5,
+    chapterName: 'Morphology of Flowering Plants',
+    topics: ['Root', 'Stem', 'Leaf', 'Flower', 'Fruit', 'Seed', 'Modifications'],
+    neetWeightage: 4,
+    keyFigures: [
+      { figNo: '5.1', title: 'Parts of a Typical Flowering Plant', priority: 4 },
+      { figNo: '5.2', title: 'Root Types', priority: 4 },
+      { figNo: '5.5', title: 'Root Modifications', priority: 5 },
+      { figNo: '5.7', title: 'Stem Modifications', priority: 5 },
+      { figNo: '5.8', title: 'Types of Leaves', priority: 4 },
+      { figNo: '5.10', title: 'Leaf Venation', priority: 4 },
+      { figNo: '5.14', title: 'Parts of a Flower', priority: 5 },
+      { figNo: '5.16', title: 'Types of Placentation', priority: 5 },
+      { figNo: '5.17', title: 'Types of Fruits', priority: 4 },
+      { figNo: '5.18', title: 'Seed Structure', priority: 5 }
+    ]
+  },
+  {
+    class: 11,
+    unitNo: 2,
+    unitName: 'Structural Organisation in Animals and Plants',
+    chapterNo: 6,
+    chapterName: 'Anatomy of Flowering Plants',
+    topics: ['Tissues', 'Tissue System', 'Anatomy of Root', 'Anatomy of Stem', 'Anatomy of Leaf', 'Secondary Growth'],
+    neetWeightage: 5,
+    keyFigures: [
+      { figNo: '6.1', title: 'Simple Tissues', priority: 4 },
+      { figNo: '6.2', title: 'Complex Tissues - Xylem', priority: 5 },
+      { figNo: '6.3', title: 'Complex Tissues - Phloem', priority: 5 },
+      { figNo: '6.5', title: 'T.S. of Dicot Root', priority: 5 },
+      { figNo: '6.6', title: 'T.S. of Monocot Root', priority: 5 },
+      { figNo: '6.7', title: 'T.S. of Dicot Stem', priority: 5 },
+      { figNo: '6.8', title: 'T.S. of Monocot Stem', priority: 5 },
+      { figNo: '6.9', title: 'T.S. of Dorsiventral Leaf', priority: 5 },
+      { figNo: '6.10', title: 'T.S. of Isobilateral Leaf', priority: 5 },
+      { figNo: '6.11', title: 'Secondary Growth', priority: 5 }
+    ]
+  },
+  {
+    class: 11,
+    unitNo: 2,
+    unitName: 'Structural Organisation in Animals and Plants',
+    chapterNo: 7,
+    chapterName: 'Structural Organisation in Animals',
+    topics: ['Animal Tissues', 'Frog Morphology', 'Frog Anatomy'],
+    neetWeightage: 4,
+    keyFigures: [
+      { figNo: '7.1', title: 'Types of Epithelial Tissue', priority: 5 },
+      { figNo: '7.2', title: 'Connective Tissue Types', priority: 5 },
+      { figNo: '7.3', title: 'Muscle Tissue Types', priority: 5 },
+      { figNo: '7.4', title: 'Neuron Structure', priority: 5 },
+      { figNo: '7.5', title: 'Frog External Features', priority: 4 },
+      { figNo: '7.8', title: 'Frog Digestive System', priority: 4 }
+    ]
+  },
+  // Unit 3: Cell Structure and Function
+  {
+    class: 11,
+    unitNo: 3,
+    unitName: 'Cell Structure and Function',
+    chapterNo: 8,
+    chapterName: 'Cell: The Unit of Life',
+    topics: ['Cell Theory', 'Prokaryotic Cell', 'Eukaryotic Cell', 'Cell Organelles'],
+    neetWeightage: 5,
+    keyFigures: [
+      { figNo: '8.1', title: 'Prokaryotic Cell', priority: 5 },
+      { figNo: '8.2', title: 'Plant Cell', priority: 5 },
+      { figNo: '8.3', title: 'Animal Cell', priority: 5 },
+      { figNo: '8.4', title: 'Mitochondrion Structure', priority: 5 },
+      { figNo: '8.5', title: 'Chloroplast Structure', priority: 5 },
+      { figNo: '8.6', title: 'Endoplasmic Reticulum', priority: 4 },
+      { figNo: '8.7', title: 'Golgi Apparatus', priority: 4 },
+      { figNo: '8.8', title: 'Nucleus Structure', priority: 5 },
+      { figNo: '8.9', title: 'Fluid Mosaic Model', priority: 5 }
+    ]
+  },
+  {
+    class: 11,
+    unitNo: 3,
+    unitName: 'Cell Structure and Function',
+    chapterNo: 9,
+    chapterName: 'Biomolecules',
+    topics: ['Carbohydrates', 'Proteins', 'Lipids', 'Nucleic Acids', 'Enzymes'],
+    neetWeightage: 4,
+    keyFigures: [
+      { figNo: '9.1', title: 'Structure of Amino Acids', priority: 5 },
+      { figNo: '9.2', title: 'Peptide Bond', priority: 5 },
+      { figNo: '9.3', title: 'Protein Structure Levels', priority: 5 },
+      { figNo: '9.4', title: 'Enzyme Action', priority: 5 },
+      { figNo: '9.5', title: 'DNA Structure', priority: 5 }
+    ]
+  },
+  {
+    class: 11,
+    unitNo: 3,
+    unitName: 'Cell Structure and Function',
+    chapterNo: 10,
+    chapterName: 'Cell Cycle and Cell Division',
+    topics: ['Cell Cycle', 'Mitosis', 'Meiosis'],
+    neetWeightage: 5,
+    keyFigures: [
+      { figNo: '10.1', title: 'Cell Cycle Phases', priority: 5 },
+      { figNo: '10.2', title: 'Stages of Mitosis', priority: 5 },
+      { figNo: '10.3', title: 'Stages of Meiosis I', priority: 5 },
+      { figNo: '10.4', title: 'Stages of Meiosis II', priority: 5 },
+      { figNo: '10.5', title: 'Crossing Over', priority: 5 }
+    ]
+  },
+  // Unit 4: Plant Physiology
+  {
+    class: 11,
+    unitNo: 4,
+    unitName: 'Plant Physiology',
+    chapterNo: 11,
+    chapterName: 'Transport in Plants',
+    topics: ['Diffusion', 'Osmosis', 'Plasmolysis', 'Water Potential', 'Transpiration', 'Translocation'],
+    neetWeightage: 4,
+    keyFigures: [
+      { figNo: '11.1', title: 'Osmosis Experiment', priority: 4 },
+      { figNo: '11.2', title: 'Plasmolysis', priority: 5 },
+      { figNo: '11.3', title: 'Root Pressure', priority: 4 },
+      { figNo: '11.4', title: 'Transpiration Pull', priority: 5 },
+      { figNo: '11.5', title: 'Stomatal Opening Mechanism', priority: 5 },
+      { figNo: '11.6', title: 'Mass Flow Hypothesis', priority: 5 }
+    ]
+  },
+  {
+    class: 11,
+    unitNo: 4,
+    unitName: 'Plant Physiology',
+    chapterNo: 12,
+    chapterName: 'Mineral Nutrition',
+    topics: ['Essential Elements', 'Deficiency Symptoms', 'Nitrogen Cycle', 'Nitrogen Fixation'],
+    neetWeightage: 3,
+    keyFigures: [
+      { figNo: '12.1', title: 'Nitrogen Cycle', priority: 5 },
+      { figNo: '12.2', title: 'Root Nodule', priority: 5 }
+    ]
+  },
+  {
+    class: 11,
+    unitNo: 4,
+    unitName: 'Plant Physiology',
+    chapterNo: 13,
+    chapterName: 'Photosynthesis in Higher Plants',
+    topics: ['Light Reaction', 'Dark Reaction', 'C3 Pathway', 'C4 Pathway', 'Photorespiration'],
+    neetWeightage: 5,
+    keyFigures: [
+      { figNo: '13.1', title: 'Chloroplast Structure', priority: 5 },
+      { figNo: '13.2', title: 'Light Absorption Spectrum', priority: 4 },
+      { figNo: '13.3', title: 'Z-Scheme (Light Reaction)', priority: 5 },
+      { figNo: '13.4', title: 'Calvin Cycle', priority: 5 },
+      { figNo: '13.5', title: 'C4 Pathway (Hatch-Slack)', priority: 5 },
+      { figNo: '13.6', title: 'Kranz Anatomy', priority: 5 }
+    ]
+  },
+  {
+    class: 11,
+    unitNo: 4,
+    unitName: 'Plant Physiology',
+    chapterNo: 14,
+    chapterName: 'Respiration in Plants',
+    topics: ['Glycolysis', 'Krebs Cycle', 'ETC', 'Fermentation', 'Respiratory Quotient'],
+    neetWeightage: 4,
+    keyFigures: [
+      { figNo: '14.1', title: 'Glycolysis', priority: 5 },
+      { figNo: '14.2', title: 'Krebs Cycle (TCA Cycle)', priority: 5 },
+      { figNo: '14.3', title: 'Electron Transport Chain', priority: 5 },
+      { figNo: '14.4', title: 'ATP Synthesis', priority: 5 }
+    ]
+  },
+  {
+    class: 11,
+    unitNo: 4,
+    unitName: 'Plant Physiology',
+    chapterNo: 15,
+    chapterName: 'Plant Growth and Development',
+    topics: ['Growth Phases', 'Plant Hormones', 'Photoperiodism', 'Vernalization'],
+    neetWeightage: 3,
+    keyFigures: [
+      { figNo: '15.1', title: 'Growth Curve', priority: 4 },
+      { figNo: '15.2', title: 'Auxin Distribution', priority: 4 },
+      { figNo: '15.3', title: 'Photoperiodism', priority: 5 }
+    ]
+  },
+  // Unit 5: Human Physiology
+  {
+    class: 11,
+    unitNo: 5,
+    unitName: 'Human Physiology',
+    chapterNo: 16,
+    chapterName: 'Digestion and Absorption',
+    topics: ['Alimentary Canal', 'Digestive Glands', 'Digestion Process', 'Absorption'],
+    neetWeightage: 4,
+    keyFigures: [
+      { figNo: '16.1', title: 'Human Digestive System', priority: 5 },
+      { figNo: '16.2', title: 'Tooth Structure', priority: 4 },
+      { figNo: '16.3', title: 'Small Intestine Structure', priority: 5 },
+      { figNo: '16.4', title: 'Absorption in Intestine', priority: 5 }
+    ]
+  },
+  {
+    class: 11,
+    unitNo: 5,
+    unitName: 'Human Physiology',
+    chapterNo: 17,
+    chapterName: 'Breathing and Exchange of Gases',
+    topics: ['Respiratory System', 'Mechanism of Breathing', 'Gas Exchange', 'Transport of Gases'],
+    neetWeightage: 4,
+    keyFigures: [
+      { figNo: '17.1', title: 'Human Respiratory System', priority: 5 },
+      { figNo: '17.2', title: 'Alveoli Structure', priority: 5 },
+      { figNo: '17.3', title: 'Mechanism of Breathing', priority: 4 },
+      { figNo: '17.4', title: 'Oxygen Dissociation Curve', priority: 5 },
+      { figNo: '17.5', title: 'CO2 Transport', priority: 5 }
+    ]
+  },
+  {
+    class: 11,
+    unitNo: 5,
+    unitName: 'Human Physiology',
+    chapterNo: 18,
+    chapterName: 'Body Fluids and Circulation',
+    topics: ['Blood Composition', 'Blood Groups', 'Coagulation', 'Heart', 'Cardiac Cycle', 'ECG'],
+    neetWeightage: 5,
+    keyFigures: [
+      { figNo: '18.1', title: 'Human Heart (External)', priority: 5 },
+      { figNo: '18.2', title: 'Human Heart (Internal)', priority: 5 },
+      { figNo: '18.3', title: 'Cardiac Cycle', priority: 5 },
+      { figNo: '18.4', title: 'ECG', priority: 5 },
+      { figNo: '18.5', title: 'Double Circulation', priority: 5 },
+      { figNo: '18.6', title: 'Blood Vessel Types', priority: 4 }
+    ]
+  },
+  {
+    class: 11,
+    unitNo: 5,
+    unitName: 'Human Physiology',
+    chapterNo: 19,
+    chapterName: 'Excretory Products and their Elimination',
+    topics: ['Excretory Organs', 'Nephron', 'Urine Formation', 'Regulation'],
+    neetWeightage: 5,
+    keyFigures: [
+      { figNo: '19.1', title: 'Human Excretory System', priority: 5 },
+      { figNo: '19.2', title: 'Nephron Structure', priority: 5 },
+      { figNo: '19.3', title: 'Urine Formation', priority: 5 },
+      { figNo: '19.4', title: 'Counter Current Mechanism', priority: 5 }
+    ]
+  },
+  {
+    class: 11,
+    unitNo: 5,
+    unitName: 'Human Physiology',
+    chapterNo: 20,
+    chapterName: 'Locomotion and Movement',
+    topics: ['Types of Movement', 'Skeletal System', 'Joints', 'Muscles'],
+    neetWeightage: 4,
+    keyFigures: [
+      { figNo: '20.1', title: 'Human Skeleton', priority: 5 },
+      { figNo: '20.2', title: 'Types of Joints', priority: 5 },
+      { figNo: '20.3', title: 'Muscle Structure', priority: 5 },
+      { figNo: '20.4', title: 'Sarcomere Structure', priority: 5 },
+      { figNo: '20.5', title: 'Sliding Filament Theory', priority: 5 }
+    ]
+  },
+  {
+    class: 11,
+    unitNo: 5,
+    unitName: 'Human Physiology',
+    chapterNo: 21,
+    chapterName: 'Neural Control and Coordination',
+    topics: ['Neuron', 'Nerve Impulse', 'CNS', 'PNS', 'Reflex Arc'],
+    neetWeightage: 5,
+    keyFigures: [
+      { figNo: '21.1', title: 'Neuron Structure', priority: 5 },
+      { figNo: '21.2', title: 'Action Potential', priority: 5 },
+      { figNo: '21.3', title: 'Synapse', priority: 5 },
+      { figNo: '21.4', title: 'Human Brain (Sagittal Section)', priority: 5 },
+      { figNo: '21.5', title: 'Reflex Arc', priority: 5 },
+      { figNo: '21.6', title: 'Eye Structure', priority: 5 },
+      { figNo: '21.7', title: 'Ear Structure', priority: 5 }
+    ]
+  },
+  {
+    class: 11,
+    unitNo: 5,
+    unitName: 'Human Physiology',
+    chapterNo: 22,
+    chapterName: 'Chemical Coordination and Integration',
+    topics: ['Endocrine Glands', 'Hormones', 'Hormone Action', 'Feedback Mechanism'],
+    neetWeightage: 4,
+    keyFigures: [
+      { figNo: '22.1', title: 'Endocrine Glands Location', priority: 5 },
+      { figNo: '22.2', title: 'Hypothalamus-Pituitary Axis', priority: 5 },
+      { figNo: '22.3', title: 'Feedback Mechanism', priority: 5 }
+    ]
+  },
+
+  // ============= CLASS 12 =============
+  // Unit 6: Reproduction
+  {
+    class: 12,
+    unitNo: 6,
+    unitName: 'Reproduction',
+    chapterNo: 1,
+    chapterName: 'Reproduction in Organisms',
+    topics: ['Asexual Reproduction', 'Sexual Reproduction', 'Life Cycles'],
+    neetWeightage: 3,
+    keyFigures: [
+      { figNo: '1.1', title: 'Binary Fission in Amoeba', priority: 4 },
+      { figNo: '1.2', title: 'Budding in Yeast', priority: 4 },
+      { figNo: '1.3', title: 'Vegetative Propagation', priority: 4 }
+    ]
+  },
+  {
+    class: 12,
+    unitNo: 6,
+    unitName: 'Reproduction',
+    chapterNo: 2,
+    chapterName: 'Sexual Reproduction in Flowering Plants',
+    topics: ['Flower Structure', 'Microsporogenesis', 'Megasporogenesis', 'Pollination', 'Fertilization', 'Embryo Development'],
+    neetWeightage: 5,
+    keyFigures: [
+      { figNo: '2.1', title: 'Parts of a Flower', priority: 4 },
+      { figNo: '2.2', title: 'T.S. of Anther', priority: 5 },
+      { figNo: '2.3', title: 'Microsporogenesis', priority: 5 },
+      { figNo: '2.4', title: 'Pollen Grain Structure', priority: 5 },
+      { figNo: '2.5', title: 'T.S. of Ovule', priority: 5 },
+      { figNo: '2.6', title: 'Megasporogenesis', priority: 5 },
+      { figNo: '2.7', title: 'Embryo Sac (7-celled 8-nucleate)', priority: 5 },
+      { figNo: '2.8', title: 'Double Fertilization', priority: 5 },
+      { figNo: '2.9', title: 'Embryo Development', priority: 5 },
+      { figNo: '2.10', title: 'Seed Structure', priority: 5 }
+    ]
+  },
+  {
+    class: 12,
+    unitNo: 6,
+    unitName: 'Reproduction',
+    chapterNo: 3,
+    chapterName: 'Human Reproduction',
+    topics: ['Male Reproductive System', 'Female Reproductive System', 'Gametogenesis', 'Menstrual Cycle', 'Fertilization', 'Pregnancy'],
+    neetWeightage: 5,
+    keyFigures: [
+      { figNo: '3.1', title: 'Male Reproductive System', priority: 5 },
+      { figNo: '3.2', title: 'T.S. of Testis', priority: 5 },
+      { figNo: '3.3', title: 'Sperm Structure', priority: 5 },
+      { figNo: '3.4', title: 'Female Reproductive System', priority: 5 },
+      { figNo: '3.5', title: 'T.S. of Ovary', priority: 5 },
+      { figNo: '3.6', title: 'Graafian Follicle', priority: 5 },
+      { figNo: '3.7', title: 'Menstrual Cycle', priority: 5 },
+      { figNo: '3.8', title: 'Fertilization and Implantation', priority: 5 },
+      { figNo: '3.9', title: 'Placenta Structure', priority: 5 }
+    ]
+  },
+  {
+    class: 12,
+    unitNo: 6,
+    unitName: 'Reproduction',
+    chapterNo: 4,
+    chapterName: 'Reproductive Health',
+    topics: ['Birth Control', 'STDs', 'Infertility', 'ART'],
+    neetWeightage: 3,
+    keyFigures: [
+      { figNo: '4.1', title: 'Contraceptive Methods', priority: 4 },
+      { figNo: '4.2', title: 'IVF Process', priority: 4 }
+    ]
+  },
+  // Unit 7: Genetics and Evolution
+  {
+    class: 12,
+    unitNo: 7,
+    unitName: 'Genetics and Evolution',
+    chapterNo: 5,
+    chapterName: 'Principles of Inheritance and Variation',
+    topics: ['Mendel\'s Laws', 'Dominance', 'Linkage', 'Sex Determination', 'Mutation', 'Chromosomal Disorders'],
+    neetWeightage: 5,
+    keyFigures: [
+      { figNo: '5.1', title: 'Monohybrid Cross', priority: 5 },
+      { figNo: '5.2', title: 'Dihybrid Cross', priority: 5 },
+      { figNo: '5.3', title: 'Incomplete Dominance', priority: 5 },
+      { figNo: '5.4', title: 'Linkage', priority: 5 },
+      { figNo: '5.5', title: 'Sex Determination', priority: 5 },
+      { figNo: '5.6', title: 'Pedigree Analysis', priority: 5 },
+      { figNo: '5.7', title: 'Down Syndrome Karyotype', priority: 4 }
+    ]
+  },
+  {
+    class: 12,
+    unitNo: 7,
+    unitName: 'Genetics and Evolution',
+    chapterNo: 6,
+    chapterName: 'Molecular Basis of Inheritance',
+    topics: ['DNA Structure', 'DNA Replication', 'Transcription', 'Translation', 'Gene Regulation', 'Genetic Code'],
+    neetWeightage: 5,
+    keyFigures: [
+      { figNo: '6.1', title: 'DNA Double Helix', priority: 5 },
+      { figNo: '6.2', title: 'Nucleotide Structure', priority: 5 },
+      { figNo: '6.3', title: 'DNA Packaging', priority: 5 },
+      { figNo: '6.4', title: 'DNA Replication', priority: 5 },
+      { figNo: '6.5', title: 'Transcription', priority: 5 },
+      { figNo: '6.6', title: 'Translation', priority: 5 },
+      { figNo: '6.7', title: 'Lac Operon', priority: 5 },
+      { figNo: '6.8', title: 'Genetic Code Table', priority: 5 }
+    ]
+  },
+  {
+    class: 12,
+    unitNo: 7,
+    unitName: 'Genetics and Evolution',
+    chapterNo: 7,
+    chapterName: 'Evolution',
+    topics: ['Origin of Life', 'Evolution Evidence', 'Darwin\'s Theory', 'Hardy-Weinberg', 'Human Evolution'],
+    neetWeightage: 4,
+    keyFigures: [
+      { figNo: '7.1', title: 'Miller-Urey Experiment', priority: 4 },
+      { figNo: '7.2', title: 'Homologous Organs', priority: 5 },
+      { figNo: '7.3', title: 'Analogous Organs', priority: 5 },
+      { figNo: '7.4', title: 'Darwin\'s Finches', priority: 4 },
+      { figNo: '7.5', title: 'Human Evolution Timeline', priority: 5 }
+    ]
+  },
+  // Unit 8: Biology and Human Welfare
+  {
+    class: 12,
+    unitNo: 8,
+    unitName: 'Biology and Human Welfare',
+    chapterNo: 8,
+    chapterName: 'Human Health and Disease',
+    topics: ['Diseases', 'Immunity', 'AIDS', 'Cancer', 'Drugs'],
+    neetWeightage: 4,
+    keyFigures: [
+      { figNo: '8.1', title: 'Life Cycle of Plasmodium', priority: 5 },
+      { figNo: '8.2', title: 'Antibody Structure', priority: 5 },
+      { figNo: '8.3', title: 'Immune Response', priority: 5 },
+      { figNo: '8.4', title: 'HIV Structure', priority: 5 },
+      { figNo: '8.5', title: 'Cancer Cell vs Normal Cell', priority: 4 }
+    ]
+  },
+  {
+    class: 12,
+    unitNo: 8,
+    unitName: 'Biology and Human Welfare',
+    chapterNo: 9,
+    chapterName: 'Strategies for Enhancement in Food Production',
+    topics: ['Plant Breeding', 'Animal Husbandry', 'Tissue Culture', 'SCP'],
+    neetWeightage: 3,
+    keyFigures: [
+      { figNo: '9.1', title: 'Plant Breeding Steps', priority: 4 },
+      { figNo: '9.2', title: 'Tissue Culture', priority: 4 }
+    ]
+  },
+  {
+    class: 12,
+    unitNo: 8,
+    unitName: 'Biology and Human Welfare',
+    chapterNo: 10,
+    chapterName: 'Microbes in Human Welfare',
+    topics: ['Fermentation', 'Biogas', 'Sewage Treatment', 'Biocontrol', 'Biofertilizers'],
+    neetWeightage: 3,
+    keyFigures: [
+      { figNo: '10.1', title: 'Biogas Plant', priority: 4 },
+      { figNo: '10.2', title: 'Sewage Treatment', priority: 4 }
+    ]
+  },
+  // Unit 9: Biotechnology
+  {
+    class: 12,
+    unitNo: 9,
+    unitName: 'Biotechnology',
+    chapterNo: 11,
+    chapterName: 'Biotechnology: Principles and Processes',
+    topics: ['Genetic Engineering', 'Restriction Enzymes', 'Vectors', 'rDNA Technology', 'PCR'],
+    neetWeightage: 5,
+    keyFigures: [
+      { figNo: '11.1', title: 'Restriction Enzyme Action', priority: 5 },
+      { figNo: '11.2', title: 'pBR322 Vector', priority: 5 },
+      { figNo: '11.3', title: 'rDNA Technology Steps', priority: 5 },
+      { figNo: '11.4', title: 'PCR', priority: 5 },
+      { figNo: '11.5', title: 'Gel Electrophoresis', priority: 5 },
+      { figNo: '11.6', title: 'Gene Cloning', priority: 5 }
+    ]
+  },
+  {
+    class: 12,
+    unitNo: 9,
+    unitName: 'Biotechnology',
+    chapterNo: 12,
+    chapterName: 'Biotechnology and its Applications',
+    topics: ['Transgenic Animals', 'GM Crops', 'Gene Therapy', 'ELISA'],
+    neetWeightage: 4,
+    keyFigures: [
+      { figNo: '12.1', title: 'Bt Cotton', priority: 4 },
+      { figNo: '12.2', title: 'Gene Therapy', priority: 5 },
+      { figNo: '12.3', title: 'ELISA', priority: 4 }
+    ]
+  },
+  // Unit 10: Ecology
+  {
+    class: 12,
+    unitNo: 10,
+    unitName: 'Ecology',
+    chapterNo: 13,
+    chapterName: 'Organisms and Populations',
+    topics: ['Abiotic Factors', 'Adaptations', 'Population Attributes', 'Population Growth'],
+    neetWeightage: 4,
+    keyFigures: [
+      { figNo: '13.1', title: 'Population Growth Curves', priority: 5 },
+      { figNo: '13.2', title: 'Age Pyramids', priority: 5 },
+      { figNo: '13.3', title: 'Logistic Growth', priority: 5 }
+    ]
+  },
+  {
+    class: 12,
+    unitNo: 10,
+    unitName: 'Ecology',
+    chapterNo: 14,
+    chapterName: 'Ecosystem',
+    topics: ['Structure', 'Food Chain', 'Energy Flow', 'Ecological Pyramids', 'Nutrient Cycling'],
+    neetWeightage: 5,
+    keyFigures: [
+      { figNo: '14.1', title: 'Food Chain/Food Web', priority: 5 },
+      { figNo: '14.2', title: 'Energy Flow (10% Law)', priority: 5 },
+      { figNo: '14.3', title: 'Ecological Pyramids', priority: 5 },
+      { figNo: '14.4', title: 'Carbon Cycle', priority: 5 },
+      { figNo: '14.5', title: 'Phosphorus Cycle', priority: 4 },
+      { figNo: '14.6', title: 'Decomposition', priority: 4 }
+    ]
+  },
+  {
+    class: 12,
+    unitNo: 10,
+    unitName: 'Ecology',
+    chapterNo: 15,
+    chapterName: 'Biodiversity and Conservation',
+    topics: ['Biodiversity Levels', 'Patterns', 'Loss', 'Conservation'],
+    neetWeightage: 3,
+    keyFigures: [
+      { figNo: '15.1', title: 'Species-Area Relationship', priority: 4 },
+      { figNo: '15.2', title: 'Rivet Popper Hypothesis', priority: 4 }
+    ]
+  },
+  {
+    class: 12,
+    unitNo: 10,
+    unitName: 'Ecology',
+    chapterNo: 16,
+    chapterName: 'Environmental Issues',
+    topics: ['Pollution', 'Ozone Depletion', 'Greenhouse Effect', 'Waste Management'],
+    neetWeightage: 3,
+    keyFigures: [
+      { figNo: '16.1', title: 'Greenhouse Effect', priority: 4 },
+      { figNo: '16.2', title: 'Ozone Hole', priority: 4 },
+      { figNo: '16.3', title: 'Biomagnification', priority: 5 }
+    ]
+  }
+]
+
+// High-priority diagram assets to seed
+const diagramAssets = [
+  // Cell Biology
+  {
+    name: 'Plant Cell Structure',
+    category: 'CELL_BIOLOGY' as DiagramCategory,
+    subcategory: 'cell-structure',
+    source: 'NCERT_REFERENCE' as DiagramSource,
+    license: 'NCERT Fair Use',
+    qualityScore: 5.0,
+    ncertClass: 11,
+    ncertChapter: 8,
+    ncertChapterName: 'Cell: The Unit of Life',
+    ncertFigureNo: '8.2',
+    ncertFigureTitle: 'Plant Cell',
+    tags: ['plant-cell', 'cell-wall', 'vacuole', 'chloroplast', 'organelles'],
+    keywords: ['plant cell', 'cell structure', 'eukaryotic cell'],
+    labeledParts: [
+      { label: 'A', name: 'Cell Wall', function: 'Provides rigidity and protection' },
+      { label: 'B', name: 'Cell Membrane', function: 'Selective permeability' },
+      { label: 'C', name: 'Nucleus', function: 'Contains genetic material' },
+      { label: 'D', name: 'Chloroplast', function: 'Photosynthesis' },
+      { label: 'E', name: 'Vacuole', function: 'Storage and turgor pressure' },
+      { label: 'F', name: 'Mitochondria', function: 'ATP production' },
+      { label: 'G', name: 'Endoplasmic Reticulum', function: 'Protein synthesis' },
+      { label: 'H', name: 'Golgi Apparatus', function: 'Packaging and secretion' }
+    ]
+  },
+  {
+    name: 'Animal Cell Structure',
+    category: 'CELL_BIOLOGY' as DiagramCategory,
+    subcategory: 'cell-structure',
+    source: 'NCERT_REFERENCE' as DiagramSource,
+    license: 'NCERT Fair Use',
+    qualityScore: 5.0,
+    ncertClass: 11,
+    ncertChapter: 8,
+    ncertChapterName: 'Cell: The Unit of Life',
+    ncertFigureNo: '8.3',
+    ncertFigureTitle: 'Animal Cell',
+    tags: ['animal-cell', 'centriole', 'lysosome', 'organelles'],
+    keywords: ['animal cell', 'cell structure', 'eukaryotic cell'],
+    labeledParts: [
+      { label: 'A', name: 'Cell Membrane', function: 'Selective permeability' },
+      { label: 'B', name: 'Nucleus', function: 'Contains genetic material' },
+      { label: 'C', name: 'Mitochondria', function: 'ATP production' },
+      { label: 'D', name: 'Centriole', function: 'Cell division' },
+      { label: 'E', name: 'Lysosome', function: 'Intracellular digestion' },
+      { label: 'F', name: 'Golgi Apparatus', function: 'Packaging and secretion' }
+    ]
+  },
+  {
+    name: 'Mitochondrion Structure',
+    category: 'CELL_BIOLOGY' as DiagramCategory,
+    subcategory: 'organelles',
+    source: 'NCERT_REFERENCE' as DiagramSource,
+    license: 'NCERT Fair Use',
+    qualityScore: 5.0,
+    ncertClass: 11,
+    ncertChapter: 8,
+    ncertChapterName: 'Cell: The Unit of Life',
+    ncertFigureNo: '8.4',
+    ncertFigureTitle: 'Mitochondrion Structure',
+    tags: ['mitochondria', 'cristae', 'matrix', 'atp', 'respiration'],
+    keywords: ['mitochondrion', 'powerhouse', 'cellular respiration'],
+    labeledParts: [
+      { label: 'A', name: 'Outer Membrane', function: 'Boundary, permeable' },
+      { label: 'B', name: 'Inner Membrane', function: 'Contains ETC' },
+      { label: 'C', name: 'Cristae', function: 'Increases surface area for ETC' },
+      { label: 'D', name: 'Matrix', function: 'Contains Krebs cycle enzymes' },
+      { label: 'E', name: 'F1 Particles', function: 'ATP synthase' }
+    ]
+  },
+  // Human Physiology
+  {
+    name: 'Human Heart Structure',
+    category: 'HUMAN_PHYSIOLOGY' as DiagramCategory,
+    subcategory: 'circulatory-system',
+    source: 'NCERT_REFERENCE' as DiagramSource,
+    license: 'NCERT Fair Use',
+    qualityScore: 5.0,
+    ncertClass: 11,
+    ncertChapter: 18,
+    ncertChapterName: 'Body Fluids and Circulation',
+    ncertFigureNo: '18.2',
+    ncertFigureTitle: 'Human Heart (Internal Structure)',
+    tags: ['heart', 'cardiac', 'ventricle', 'atrium', 'circulation'],
+    keywords: ['human heart', 'cardiac cycle', 'blood circulation'],
+    labeledParts: [
+      { label: 'A', name: 'Right Atrium', function: 'Receives deoxygenated blood from body' },
+      { label: 'B', name: 'Right Ventricle', function: 'Pumps blood to lungs' },
+      { label: 'C', name: 'Left Atrium', function: 'Receives oxygenated blood from lungs' },
+      { label: 'D', name: 'Left Ventricle', function: 'Pumps blood to body' },
+      { label: 'E', name: 'Aorta', function: 'Carries oxygenated blood to body' },
+      { label: 'F', name: 'Pulmonary Artery', function: 'Carries deoxygenated blood to lungs' },
+      { label: 'G', name: 'Pulmonary Vein', function: 'Carries oxygenated blood from lungs' },
+      { label: 'H', name: 'Vena Cava', function: 'Carries deoxygenated blood from body' },
+      { label: 'I', name: 'Tricuspid Valve', function: 'Prevents backflow to right atrium' },
+      { label: 'J', name: 'Bicuspid Valve', function: 'Prevents backflow to left atrium' }
+    ]
+  },
+  {
+    name: 'Nephron Structure',
+    category: 'HUMAN_PHYSIOLOGY' as DiagramCategory,
+    subcategory: 'excretory-system',
+    source: 'NCERT_REFERENCE' as DiagramSource,
+    license: 'NCERT Fair Use',
+    qualityScore: 5.0,
+    ncertClass: 11,
+    ncertChapter: 19,
+    ncertChapterName: 'Excretory Products and their Elimination',
+    ncertFigureNo: '19.2',
+    ncertFigureTitle: 'Structure of a Nephron',
+    tags: ['nephron', 'kidney', 'glomerulus', 'tubule', 'excretion'],
+    keywords: ['nephron structure', 'kidney function', 'urine formation'],
+    labeledParts: [
+      { label: 'A', name: 'Afferent Arteriole', function: 'Brings blood to glomerulus' },
+      { label: 'B', name: 'Efferent Arteriole', function: 'Takes blood away from glomerulus' },
+      { label: 'C', name: 'Glomerulus', function: 'Filtration of blood' },
+      { label: 'D', name: 'Bowman\'s Capsule', function: 'Collects filtrate' },
+      { label: 'E', name: 'Proximal Convoluted Tubule', function: 'Reabsorption of nutrients' },
+      { label: 'F', name: 'Loop of Henle', function: 'Concentration of urine' },
+      { label: 'G', name: 'Distal Convoluted Tubule', function: 'Secretion and final reabsorption' },
+      { label: 'H', name: 'Collecting Duct', function: 'Final concentration of urine' }
+    ]
+  },
+  {
+    name: 'Neuron Structure',
+    category: 'HUMAN_PHYSIOLOGY' as DiagramCategory,
+    subcategory: 'nervous-system',
+    source: 'NCERT_REFERENCE' as DiagramSource,
+    license: 'NCERT Fair Use',
+    qualityScore: 5.0,
+    ncertClass: 11,
+    ncertChapter: 21,
+    ncertChapterName: 'Neural Control and Coordination',
+    ncertFigureNo: '21.1',
+    ncertFigureTitle: 'Neuron Structure',
+    tags: ['neuron', 'axon', 'dendrite', 'synapse', 'nerve'],
+    keywords: ['neuron', 'nerve cell', 'nervous system'],
+    labeledParts: [
+      { label: 'A', name: 'Cell Body (Soma)', function: 'Contains nucleus, metabolic center' },
+      { label: 'B', name: 'Dendrites', function: 'Receive signals' },
+      { label: 'C', name: 'Axon', function: 'Transmits signals' },
+      { label: 'D', name: 'Myelin Sheath', function: 'Insulation, speeds transmission' },
+      { label: 'E', name: 'Node of Ranvier', function: 'Gaps for saltatory conduction' },
+      { label: 'F', name: 'Axon Terminal', function: 'Releases neurotransmitters' }
+    ]
+  },
+  // Reproduction
+  {
+    name: 'Embryo Sac Structure',
+    category: 'REPRODUCTION' as DiagramCategory,
+    subcategory: 'plant-reproduction',
+    source: 'NCERT_REFERENCE' as DiagramSource,
+    license: 'NCERT Fair Use',
+    qualityScore: 5.0,
+    ncertClass: 12,
+    ncertChapter: 2,
+    ncertChapterName: 'Sexual Reproduction in Flowering Plants',
+    ncertFigureNo: '2.7',
+    ncertFigureTitle: 'Embryo Sac (7-celled 8-nucleate)',
+    tags: ['embryo-sac', 'ovule', 'megagametophyte', 'synergids', 'antipodals'],
+    keywords: ['embryo sac', 'female gametophyte', 'double fertilization'],
+    labeledParts: [
+      { label: 'A', name: 'Egg Cell', function: 'Female gamete, fuses with sperm' },
+      { label: 'B', name: 'Synergids', function: 'Guide pollen tube entry' },
+      { label: 'C', name: 'Central Cell', function: 'Forms endosperm after fertilization' },
+      { label: 'D', name: 'Polar Nuclei', function: 'Fuse with sperm to form endosperm' },
+      { label: 'E', name: 'Antipodal Cells', function: 'Nutritive function' }
+    ]
+  },
+  {
+    name: 'Sperm Structure',
+    category: 'REPRODUCTION' as DiagramCategory,
+    subcategory: 'human-reproduction',
+    source: 'NCERT_REFERENCE' as DiagramSource,
+    license: 'NCERT Fair Use',
+    qualityScore: 5.0,
+    ncertClass: 12,
+    ncertChapter: 3,
+    ncertChapterName: 'Human Reproduction',
+    ncertFigureNo: '3.3',
+    ncertFigureTitle: 'Structure of Sperm',
+    tags: ['sperm', 'spermatozoa', 'acrosome', 'flagellum', 'male-gamete'],
+    keywords: ['sperm structure', 'male gamete', 'spermatozoon'],
+    labeledParts: [
+      { label: 'A', name: 'Acrosome', function: 'Contains enzymes to penetrate egg' },
+      { label: 'B', name: 'Head', function: 'Contains nucleus with DNA' },
+      { label: 'C', name: 'Middle Piece', function: 'Contains mitochondria for energy' },
+      { label: 'D', name: 'Tail (Flagellum)', function: 'Provides motility' }
+    ]
+  },
+  // Genetics
+  {
+    name: 'DNA Double Helix',
+    category: 'MOLECULAR_BIOLOGY' as DiagramCategory,
+    subcategory: 'nucleic-acids',
+    source: 'NCERT_REFERENCE' as DiagramSource,
+    license: 'NCERT Fair Use',
+    qualityScore: 5.0,
+    ncertClass: 12,
+    ncertChapter: 6,
+    ncertChapterName: 'Molecular Basis of Inheritance',
+    ncertFigureNo: '6.1',
+    ncertFigureTitle: 'DNA Double Helix Structure',
+    tags: ['dna', 'double-helix', 'nucleotide', 'base-pairing', 'genetics'],
+    keywords: ['DNA structure', 'double helix', 'Watson Crick model'],
+    labeledParts: [
+      { label: 'A', name: 'Sugar-Phosphate Backbone', function: 'Structural support' },
+      { label: 'B', name: 'Adenine', function: 'Pairs with Thymine' },
+      { label: 'C', name: 'Thymine', function: 'Pairs with Adenine' },
+      { label: 'D', name: 'Guanine', function: 'Pairs with Cytosine' },
+      { label: 'E', name: 'Cytosine', function: 'Pairs with Guanine' },
+      { label: 'F', name: 'Hydrogen Bonds', function: 'Hold base pairs together' },
+      { label: 'G', name: 'Major Groove', function: 'Protein binding site' },
+      { label: 'H', name: 'Minor Groove', function: 'Protein binding site' }
+    ]
+  },
+  {
+    name: 'Lac Operon Model',
+    category: 'MOLECULAR_BIOLOGY' as DiagramCategory,
+    subcategory: 'gene-regulation',
+    source: 'NCERT_REFERENCE' as DiagramSource,
+    license: 'NCERT Fair Use',
+    qualityScore: 5.0,
+    ncertClass: 12,
+    ncertChapter: 6,
+    ncertChapterName: 'Molecular Basis of Inheritance',
+    ncertFigureNo: '6.7',
+    ncertFigureTitle: 'Lac Operon',
+    tags: ['lac-operon', 'gene-regulation', 'repressor', 'operator', 'promoter'],
+    keywords: ['lac operon', 'gene regulation', 'inducible operon'],
+    labeledParts: [
+      { label: 'A', name: 'Promoter', function: 'RNA polymerase binding site' },
+      { label: 'B', name: 'Operator', function: 'Repressor binding site' },
+      { label: 'C', name: 'Structural Genes (lac Z, Y, A)', function: 'Code for enzymes' },
+      { label: 'D', name: 'Regulator Gene', function: 'Codes for repressor protein' },
+      { label: 'E', name: 'Repressor Protein', function: 'Blocks transcription' },
+      { label: 'F', name: 'Inducer (Lactose)', function: 'Inactivates repressor' }
+    ]
+  }
+]
+
+async function seed() {
+  console.log('🌱 Starting NCERT Diagram System Seed...')
+
+  // Seed NCERT Chapters
+  console.log('\n📚 Seeding NCERT Chapters...')
+  for (const chapter of ncertChapters) {
+    await prisma.ncert_chapters.upsert({
+      where: {
+        class_chapterNo: {
+          class: chapter.class,
+          chapterNo: chapter.chapterNo
+        }
+      },
+      update: {
+        unitNo: chapter.unitNo,
+        unitName: chapter.unitName,
+        chapterName: chapter.chapterName,
+        topics: chapter.topics,
+        neetWeightage: chapter.neetWeightage,
+        keyFigures: chapter.keyFigures
+      },
+      create: {
+        class: chapter.class,
+        unitNo: chapter.unitNo,
+        unitName: chapter.unitName,
+        chapterNo: chapter.chapterNo,
+        chapterName: chapter.chapterName,
+        topics: chapter.topics,
+        neetWeightage: chapter.neetWeightage,
+        keyFigures: chapter.keyFigures
+      }
+    })
+    console.log(`  ✓ Class ${chapter.class} - Ch ${chapter.chapterNo}: ${chapter.chapterName}`)
+  }
+  console.log(`\n✅ Seeded ${ncertChapters.length} NCERT chapters`)
+
+  // Seed Diagram Assets
+  console.log('\n🖼️  Seeding Diagram Assets...')
+  for (const diagram of diagramAssets) {
+    const existing = await prisma.diagram_assets.findFirst({
+      where: {
+        ncertClass: diagram.ncertClass,
+        ncertFigureNo: diagram.ncertFigureNo
+      }
+    })
+
+    if (!existing) {
+      await prisma.diagram_assets.create({
+        data: {
+          name: diagram.name,
+          category: diagram.category,
+          subcategory: diagram.subcategory,
+          source: diagram.source,
+          license: diagram.license,
+          qualityScore: diagram.qualityScore,
+          ncertClass: diagram.ncertClass,
+          ncertChapter: diagram.ncertChapter,
+          ncertChapterName: diagram.ncertChapterName,
+          ncertFigureNo: diagram.ncertFigureNo,
+          ncertFigureTitle: diagram.ncertFigureTitle,
+          tags: diagram.tags,
+          keywords: diagram.keywords,
+          labeledParts: diagram.labeledParts,
+          isVerified: true
+        }
+      })
+      console.log(`  ✓ ${diagram.name} (Fig ${diagram.ncertFigureNo})`)
+    } else {
+      console.log(`  ⏭ ${diagram.name} already exists`)
+    }
+  }
+  console.log(`\n✅ Seeded ${diagramAssets.length} diagram assets`)
+
+  // Summary
+  const totalChapters = await prisma.ncert_chapters.count()
+  const totalDiagrams = await prisma.diagram_assets.count()
+  
+  console.log('\n' + '='.repeat(50))
+  console.log('📊 SEED SUMMARY')
+  console.log('='.repeat(50))
+  console.log(`Total NCERT Chapters: ${totalChapters}`)
+  console.log(`Total Diagram Assets: ${totalDiagrams}`)
+  console.log('='.repeat(50))
+
+  await prisma.$disconnect()
+}
+
+seed()
+  .catch((e) => {
+    console.error('❌ Seed failed:', e)
+    prisma.$disconnect()
+    process.exit(1)
+  })

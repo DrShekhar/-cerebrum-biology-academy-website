@@ -1,0 +1,1115 @@
+[
+  {
+    "topic": "Cell Structure and Function",
+    "subtopic": "Cell Organelles",
+    "question": "Match List-I with List-II:\nList-I (Organelle):\n(A) Mitochondria\n(B) Chloroplast\n(C) Ribosome\n(D) Lysosome\n\nList-II (Function):\n(I) Protein synthesis\n(II) Photosynthesis\n(III) Intracellular digestion\n(IV) Cellular respiration",
+    "options": [
+      "A-IV, B-II, C-I, D-III",
+      "A-II, B-IV, C-I, D-III",
+      "A-IV, B-I, C-II, D-III",
+      "A-III, B-II, C-I, D-IV"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Mitochondria - Cellular respiration (IV), Chloroplast - Photosynthesis (II), Ribosome - Protein synthesis (I), Lysosome - Intracellular digestion (III).",
+    "difficulty": "MEDIUM",
+    "source": "NEET Pattern",
+    "examYear": 2022,
+    "type": "MATCH_FOLLOWING",
+    "tags": ["organelles", "matching"]
+  },
+  {
+    "topic": "Cell Structure and Function",
+    "subtopic": "Cell Types",
+    "question": "Match List-I with List-II:\nList-I (Cell Type):\n(A) Prokaryotic cell\n(B) Eukaryotic cell\n(C) Plant cell\n(D) Animal cell\n\nList-II (Feature):\n(I) Centrioles present\n(II) Cell wall present\n(III) 70S ribosomes\n(IV) Membrane-bound nucleus",
+    "options": [
+      "A-III, B-IV, C-II, D-I",
+      "A-IV, B-III, C-I, D-II",
+      "A-III, B-I, C-II, D-IV",
+      "A-I, B-IV, C-III, D-II"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Prokaryotic - 70S ribosomes, Eukaryotic - membrane-bound nucleus, Plant cell - cell wall, Animal cell - centrioles.",
+    "difficulty": "MEDIUM",
+    "source": "NEET Pattern",
+    "examYear": 2021,
+    "type": "MATCH_FOLLOWING",
+    "tags": ["cell-types", "matching"]
+  },
+  {
+    "topic": "Biomolecules",
+    "subtopic": "Enzymes",
+    "question": "Match List-I with List-II:\nList-I (Enzyme):\n(A) Amylase\n(B) Pepsin\n(C) Lipase\n(D) Trypsin\n\nList-II (Substrate):\n(I) Proteins (acidic pH)\n(II) Starch\n(III) Proteins (alkaline pH)\n(IV) Fats",
+    "options": [
+      "A-II, B-I, C-IV, D-III",
+      "A-I, B-II, C-III, D-IV",
+      "A-II, B-III, C-IV, D-I",
+      "A-IV, B-I, C-II, D-III"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Amylase acts on starch, pepsin on proteins in acidic pH, lipase on fats, trypsin on proteins in alkaline pH.",
+    "difficulty": "MEDIUM",
+    "source": "NEET Pattern",
+    "examYear": 2020,
+    "type": "MATCH_FOLLOWING",
+    "tags": ["enzymes", "matching"]
+  },
+  {
+    "topic": "Biomolecules",
+    "subtopic": "Carbohydrates",
+    "question": "Match List-I with List-II:\nList-I (Polysaccharide):\n(A) Starch\n(B) Cellulose\n(C) Glycogen\n(D) Chitin\n\nList-II (Found in):\n(I) Insect exoskeleton\n(II) Plant cell wall\n(III) Plant storage\n(IV) Animal liver",
+    "options": [
+      "A-III, B-II, C-IV, D-I",
+      "A-II, B-III, C-I, D-IV",
+      "A-IV, B-II, C-III, D-I",
+      "A-III, B-I, C-IV, D-II"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Starch in plant storage, cellulose in cell wall, glycogen in liver/muscles, chitin in insect exoskeleton.",
+    "difficulty": "EASY",
+    "source": "NEET Pattern",
+    "examYear": 2019,
+    "type": "MATCH_FOLLOWING",
+    "tags": ["carbohydrates", "matching"]
+  },
+  {
+    "topic": "Genetics",
+    "subtopic": "Chromosomal Disorders",
+    "question": "Match List-I with List-II:\nList-I (Disorder):\n(A) Down syndrome\n(B) Turner syndrome\n(C) Klinefelter syndrome\n(D) Super female\n\nList-II (Karyotype):\n(I) 45, X0\n(II) 47, XXY\n(III) 47, XXX\n(IV) 47, +21",
+    "options": [
+      "A-IV, B-I, C-II, D-III",
+      "A-I, B-IV, C-II, D-III",
+      "A-IV, B-II, C-I, D-III",
+      "A-III, B-I, C-II, D-IV"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Down syndrome - trisomy 21, Turner - 45 X0, Klinefelter - 47 XXY, Super female - 47 XXX.",
+    "difficulty": "MEDIUM",
+    "source": "NEET Pattern",
+    "examYear": 2021,
+    "type": "MATCH_FOLLOWING",
+    "tags": ["disorders", "matching"]
+  },
+  {
+    "topic": "Genetics",
+    "subtopic": "Scientists",
+    "question": "Match List-I with List-II:\nList-I (Scientist):\n(A) Mendel\n(B) Morgan\n(C) Watson and Crick\n(D) Meselson and Stahl\n\nList-II (Discovery):\n(I) DNA structure\n(II) Laws of inheritance\n(III) Semi-conservative replication\n(IV) Linkage",
+    "options": [
+      "A-II, B-IV, C-I, D-III",
+      "A-I, B-II, C-IV, D-III",
+      "A-II, B-I, C-III, D-IV",
+      "A-IV, B-II, C-I, D-III"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Mendel - Laws of inheritance, Morgan - Linkage, Watson & Crick - DNA structure, Meselson & Stahl - Semi-conservative replication.",
+    "difficulty": "EASY",
+    "source": "NEET Pattern",
+    "examYear": 2018,
+    "type": "MATCH_FOLLOWING",
+    "tags": ["scientists", "matching"]
+  },
+  {
+    "topic": "Human Physiology",
+    "subtopic": "Hormones",
+    "question": "Match List-I with List-II:\nList-I (Hormone):\n(A) Insulin\n(B) Glucagon\n(C) Thyroxine\n(D) Adrenaline\n\nList-II (Function):\n(I) Increases BMR\n(II) Decreases blood glucose\n(III) Fight or flight response\n(IV) Increases blood glucose",
+    "options": [
+      "A-II, B-IV, C-I, D-III",
+      "A-IV, B-II, C-I, D-III",
+      "A-II, B-I, C-IV, D-III",
+      "A-III, B-IV, C-I, D-II"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Insulin decreases glucose, glucagon increases glucose, thyroxine increases BMR, adrenaline causes fight/flight.",
+    "difficulty": "MEDIUM",
+    "source": "NEET Pattern",
+    "examYear": 2020,
+    "type": "MATCH_FOLLOWING",
+    "tags": ["hormones", "matching"]
+  },
+  {
+    "topic": "Human Physiology",
+    "subtopic": "Blood Groups",
+    "question": "Match List-I with List-II:\nList-I (Blood Group):\n(A) A\n(B) B\n(C) AB\n(D) O\n\nList-II (Antigens):\n(I) Both A and B\n(II) Only A\n(III) Only B\n(IV) Neither A nor B",
+    "options": [
+      "A-II, B-III, C-I, D-IV",
+      "A-III, B-II, C-I, D-IV",
+      "A-II, B-I, C-III, D-IV",
+      "A-I, B-III, C-II, D-IV"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Blood group A has antigen A, B has antigen B, AB has both, O has neither.",
+    "difficulty": "EASY",
+    "source": "NEET Pattern",
+    "examYear": 2017,
+    "type": "MATCH_FOLLOWING",
+    "tags": ["blood-groups", "matching"]
+  },
+  {
+    "topic": "Human Physiology",
+    "subtopic": "Digestion",
+    "question": "Match List-I with List-II:\nList-I (Digestive Juice):\n(A) Saliva\n(B) Gastric juice\n(C) Pancreatic juice\n(D) Bile\n\nList-II (Site of Secretion):\n(I) Stomach\n(II) Salivary glands\n(III) Liver\n(IV) Pancreas",
+    "options": [
+      "A-II, B-I, C-IV, D-III",
+      "A-I, B-II, C-III, D-IV",
+      "A-II, B-IV, C-I, D-III",
+      "A-III, B-I, C-IV, D-II"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Saliva from salivary glands, gastric juice from stomach, pancreatic juice from pancreas, bile from liver.",
+    "difficulty": "EASY",
+    "source": "NEET Pattern",
+    "examYear": 2016,
+    "type": "MATCH_FOLLOWING",
+    "tags": ["digestion", "matching"]
+  },
+  {
+    "topic": "Plant Physiology",
+    "subtopic": "Hormones",
+    "question": "Match List-I with List-II:\nList-I (Plant Hormone):\n(A) Auxin\n(B) Gibberellin\n(C) Cytokinin\n(D) Ethylene\n\nList-II (Function):\n(I) Cell division\n(II) Fruit ripening\n(III) Stem elongation\n(IV) Apical dominance",
+    "options": [
+      "A-IV, B-III, C-I, D-II",
+      "A-III, B-IV, C-I, D-II",
+      "A-IV, B-I, C-III, D-II",
+      "A-I, B-III, C-IV, D-II"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Auxin - apical dominance, gibberellin - stem elongation, cytokinin - cell division, ethylene - fruit ripening.",
+    "difficulty": "MEDIUM",
+    "source": "NEET Pattern",
+    "examYear": 2019,
+    "type": "MATCH_FOLLOWING",
+    "tags": ["plant-hormones", "matching"]
+  },
+  {
+    "topic": "Plant Physiology",
+    "subtopic": "Photosynthesis",
+    "question": "Match List-I with List-II:\nList-I (Process):\n(A) Light reaction\n(B) Calvin cycle\n(C) Photorespiration\n(D) C4 pathway\n\nList-II (Location):\n(I) Bundle sheath cells\n(II) Thylakoid membrane\n(III) Stroma\n(IV) Peroxisome",
+    "options": [
+      "A-II, B-III, C-IV, D-I",
+      "A-III, B-II, C-IV, D-I",
+      "A-II, B-I, C-III, D-IV",
+      "A-IV, B-III, C-II, D-I"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Light reaction in thylakoid, Calvin cycle in stroma, photorespiration involves peroxisome, C4 in bundle sheath.",
+    "difficulty": "HARD",
+    "source": "NEET Pattern",
+    "examYear": 2022,
+    "type": "MATCH_FOLLOWING",
+    "tags": ["photosynthesis", "matching"]
+  },
+  {
+    "topic": "Reproduction",
+    "subtopic": "Embryology",
+    "question": "Match List-I with List-II:\nList-I (Structure):\n(A) Embryo sac\n(B) Pollen grain\n(C) Endosperm\n(D) Zygote\n\nList-II (Ploidy):\n(I) Diploid\n(II) Triploid\n(III) Haploid\n(IV) Haploid",
+    "options": [
+      "A-III, B-IV, C-II, D-I",
+      "A-II, B-III, C-IV, D-I",
+      "A-I, B-IV, C-II, D-III",
+      "A-IV, B-III, C-I, D-II"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Embryo sac (n), pollen grain (n), endosperm (3n), zygote (2n).",
+    "difficulty": "MEDIUM",
+    "source": "NEET Pattern",
+    "examYear": 2020,
+    "type": "MATCH_FOLLOWING",
+    "tags": ["embryology", "matching"]
+  },
+  {
+    "topic": "Reproduction",
+    "subtopic": "Human",
+    "question": "Match List-I with List-II:\nList-I (Hormone):\n(A) FSH\n(B) LH\n(C) hCG\n(D) Oxytocin\n\nList-II (Function):\n(I) Triggers ovulation\n(II) Milk ejection\n(III) Pregnancy detection\n(IV) Follicle development",
+    "options": [
+      "A-IV, B-I, C-III, D-II",
+      "A-I, B-IV, C-III, D-II",
+      "A-IV, B-III, C-I, D-II",
+      "A-II, B-I, C-III, D-IV"
+    ],
+    "correctAnswer": "A",
+    "explanation": "FSH stimulates follicle development, LH triggers ovulation, hCG indicates pregnancy, oxytocin causes milk ejection.",
+    "difficulty": "MEDIUM",
+    "source": "NEET Pattern",
+    "examYear": 2021,
+    "type": "MATCH_FOLLOWING",
+    "tags": ["hormones", "matching"]
+  },
+  {
+    "topic": "Ecology",
+    "subtopic": "Ecosystem",
+    "question": "Match List-I with List-II:\nList-I (Ecological Term):\n(A) Primary productivity\n(B) Secondary productivity\n(C) Standing crop\n(D) Biomass\n\nList-II (Definition):\n(I) Dry weight of living matter\n(II) Rate of organic matter formation by producers\n(III) Rate of organic matter formation by consumers\n(IV) Amount of living matter at any time",
+    "options": [
+      "A-II, B-III, C-IV, D-I",
+      "A-III, B-II, C-I, D-IV",
+      "A-II, B-I, C-IV, D-III",
+      "A-IV, B-III, C-II, D-I"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Primary productivity by producers, secondary by consumers, standing crop is living matter amount, biomass is dry weight.",
+    "difficulty": "HARD",
+    "source": "NEET Pattern",
+    "examYear": 2022,
+    "type": "MATCH_FOLLOWING",
+    "tags": ["ecosystem", "matching"]
+  },
+  {
+    "topic": "Ecology",
+    "subtopic": "Interactions",
+    "question": "Match List-I with List-II:\nList-I (Interaction):\n(A) Mutualism\n(B) Parasitism\n(C) Commensalism\n(D) Competition\n\nList-II (Effect on Species):\n(I) +/+ (both benefit)\n(II) +/- (one benefits, one harmed)\n(III) +/0 (one benefits, other neutral)\n(IV) -/- (both harmed)",
+    "options": [
+      "A-I, B-II, C-III, D-IV",
+      "A-II, B-I, C-III, D-IV",
+      "A-I, B-III, C-II, D-IV",
+      "A-IV, B-II, C-III, D-I"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Mutualism: +/+, Parasitism: +/-, Commensalism: +/0, Competition: -/-.",
+    "difficulty": "MEDIUM",
+    "source": "NEET Pattern",
+    "examYear": 2019,
+    "type": "MATCH_FOLLOWING",
+    "tags": ["interactions", "matching"]
+  },
+  {
+    "topic": "Biotechnology",
+    "subtopic": "rDNA Technology",
+    "question": "Match List-I with List-II:\nList-I (Tool):\n(A) Restriction enzyme\n(B) DNA ligase\n(C) DNA polymerase\n(D) Reverse transcriptase\n\nList-II (Function):\n(I) Joins DNA fragments\n(II) Cuts DNA at specific sites\n(III) Synthesizes DNA from RNA\n(IV) Synthesizes DNA from DNA template",
+    "options": [
+      "A-II, B-I, C-IV, D-III",
+      "A-I, B-II, C-IV, D-III",
+      "A-II, B-IV, C-I, D-III",
+      "A-III, B-I, C-IV, D-II"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Restriction enzyme cuts, ligase joins, DNA polymerase replicates DNA, reverse transcriptase makes DNA from RNA.",
+    "difficulty": "MEDIUM",
+    "source": "NEET Pattern",
+    "examYear": 2020,
+    "type": "MATCH_FOLLOWING",
+    "tags": ["rDNA", "matching"]
+  },
+  {
+    "topic": "Biotechnology",
+    "subtopic": "Applications",
+    "question": "Match List-I with List-II:\nList-I (Transgenic Organism):\n(A) Bt cotton\n(B) Golden rice\n(C) Flavr Savr tomato\n(D) Rosie (cow)\n\nList-II (Feature):\n(I) Beta-carotene enriched\n(II) Human alpha-lactalbumin in milk\n(III) Insect resistance\n(IV) Delayed ripening",
+    "options": [
+      "A-III, B-I, C-IV, D-II",
+      "A-I, B-III, C-IV, D-II",
+      "A-III, B-IV, C-I, D-II",
+      "A-II, B-I, C-IV, D-III"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Bt cotton - insect resistant, Golden rice - beta-carotene, Flavr Savr - delayed ripening, Rosie - human protein in milk.",
+    "difficulty": "MEDIUM",
+    "source": "NEET Pattern",
+    "examYear": 2021,
+    "type": "MATCH_FOLLOWING",
+    "tags": ["transgenic", "matching"]
+  },
+  {
+    "topic": "Evolution",
+    "subtopic": "Human Evolution",
+    "question": "Match List-I with List-II:\nList-I (Hominid):\n(A) Australopithecus\n(B) Homo habilis\n(C) Homo erectus\n(D) Homo sapiens\n\nList-II (Feature):\n(I) First to make tools\n(II) First to use fire\n(III) Modern human\n(IV) First bipedal",
+    "options": [
+      "A-IV, B-I, C-II, D-III",
+      "A-I, B-IV, C-II, D-III",
+      "A-IV, B-II, C-I, D-III",
+      "A-III, B-I, C-II, D-IV"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Australopithecus - first bipedal, Homo habilis - first tool maker, Homo erectus - first to use fire, Homo sapiens - modern human.",
+    "difficulty": "MEDIUM",
+    "source": "NEET Pattern",
+    "examYear": 2020,
+    "type": "MATCH_FOLLOWING",
+    "tags": ["human-evolution", "matching"]
+  },
+  {
+    "topic": "Diversity in Living World",
+    "subtopic": "Animal Kingdom",
+    "question": "Match List-I with List-II:\nList-I (Phylum):\n(A) Porifera\n(B) Cnidaria\n(C) Platyhelminthes\n(D) Annelida\n\nList-II (Characteristic):\n(I) First to show true coelom\n(II) First true tissues (diploblastic)\n(III) Cellular level organization\n(IV) First bilateral symmetry (acoelomate)",
+    "options": [
+      "A-III, B-II, C-IV, D-I",
+      "A-II, B-III, C-IV, D-I",
+      "A-III, B-IV, C-II, D-I",
+      "A-I, B-II, C-IV, D-III"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Porifera - cellular level, Cnidaria - tissue level (diploblastic), Platyhelminthes - bilateral acoelomate, Annelida - first coelomate.",
+    "difficulty": "HARD",
+    "source": "NEET Pattern",
+    "examYear": 2022,
+    "type": "MATCH_FOLLOWING",
+    "tags": ["animal-kingdom", "matching"]
+  },
+  {
+    "topic": "Diversity in Living World",
+    "subtopic": "Plant Kingdom",
+    "question": "Match List-I with List-II:\nList-I (Division):\n(A) Bryophyta\n(B) Pteridophyta\n(C) Gymnosperm\n(D) Angiosperm\n\nList-II (Feature):\n(I) Double fertilization\n(II) Naked seeds\n(III) First vascular plants\n(IV) Amphibians of plant kingdom",
+    "options": [
+      "A-IV, B-III, C-II, D-I",
+      "A-III, B-IV, C-II, D-I",
+      "A-IV, B-II, C-III, D-I",
+      "A-I, B-III, C-II, D-IV"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Bryophytes - amphibians of plants, Pteridophytes - first vascular, Gymnosperms - naked seeds, Angiosperms - double fertilization.",
+    "difficulty": "MEDIUM",
+    "source": "NEET Pattern",
+    "examYear": 2019,
+    "type": "MATCH_FOLLOWING",
+    "tags": ["plant-kingdom", "matching"]
+  },
+  {
+    "topic": "Cell Structure and Function",
+    "subtopic": "Peroxisomes",
+    "question": "Assertion (A): Peroxisomes contain catalase enzyme.\nReason (R): Catalase breaks down hydrogen peroxide to water and oxygen.",
+    "options": [
+      "Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+      "Both Assertion and Reason are true but Reason is NOT the correct explanation of Assertion",
+      "Assertion is true but Reason is false",
+      "Both Assertion and Reason are false"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Both true and reason explains. H2O2 is toxic; catalase in peroxisomes detoxifies it.",
+    "difficulty": "MEDIUM",
+    "source": "NCERT Class 11",
+    "examYear": 2019,
+    "type": "MCQ",
+    "tags": ["peroxisomes", "AR-type"]
+  },
+  {
+    "topic": "Cell Structure and Function",
+    "subtopic": "Cell Wall",
+    "question": "Assertion (A): Plant cell wall provides rigidity and shape.\nReason (R): Primary cell wall contains cellulose, hemicellulose, and pectin.",
+    "options": [
+      "Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+      "Both Assertion and Reason are true but Reason is NOT the correct explanation of Assertion",
+      "Assertion is true but Reason is false",
+      "Both Assertion and Reason are false"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Both true and reason explains. These polysaccharides provide structural support.",
+    "difficulty": "EASY",
+    "source": "NCERT Class 11",
+    "examYear": 2017,
+    "type": "MCQ",
+    "tags": ["cell-wall", "AR-type"]
+  },
+  {
+    "topic": "Cell Structure and Function",
+    "subtopic": "Vacuoles",
+    "question": "Assertion (A): Plant cells have large central vacuole.\nReason (R): Vacuole maintains turgor pressure and stores water.",
+    "options": [
+      "Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+      "Both Assertion and Reason are true but Reason is NOT the correct explanation of Assertion",
+      "Assertion is true but Reason is false",
+      "Both Assertion and Reason are false"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Both true and reason explains. Large vacuole is characteristic of mature plant cells.",
+    "difficulty": "EASY",
+    "source": "NCERT Class 11",
+    "examYear": 2016,
+    "type": "MCQ",
+    "tags": ["vacuoles", "AR-type"]
+  },
+  {
+    "topic": "Biomolecules",
+    "subtopic": "Proteins",
+    "question": "Assertion (A): Hemoglobin has quaternary structure.\nReason (R): It consists of four polypeptide chains (2 alpha and 2 beta).",
+    "options": [
+      "Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+      "Both Assertion and Reason are true but Reason is NOT the correct explanation of Assertion",
+      "Assertion is true but Reason is false",
+      "Both Assertion and Reason are false"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Both true and reason explains. Multiple subunits = quaternary structure.",
+    "difficulty": "MEDIUM",
+    "source": "NCERT Class 11",
+    "examYear": 2020,
+    "type": "MCQ",
+    "tags": ["proteins", "AR-type"]
+  },
+  {
+    "topic": "Biomolecules",
+    "subtopic": "Nucleic Acids",
+    "question": "Assertion (A): DNA has double helix structure.\nReason (R): Complementary base pairing holds the two strands together.",
+    "options": [
+      "Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+      "Both Assertion and Reason are true but Reason is NOT the correct explanation of Assertion",
+      "Assertion is true but Reason is false",
+      "Both Assertion and Reason are false"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Both true and reason explains. A-T and G-C pairing stabilizes double helix.",
+    "difficulty": "EASY",
+    "source": "NCERT Class 11",
+    "examYear": 2015,
+    "type": "MCQ",
+    "tags": ["DNA", "AR-type"]
+  },
+  {
+    "topic": "Genetics",
+    "subtopic": "Chromosomes",
+    "question": "Assertion (A): Telomeres protect chromosome ends.\nReason (R): Telomeres prevent chromosome fusion and degradation.",
+    "options": [
+      "Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+      "Both Assertion and Reason are true but Reason is NOT the correct explanation of Assertion",
+      "Assertion is true but Reason is false",
+      "Both Assertion and Reason are false"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Both true and reason explains. Telomeric DNA caps protect chromosomes.",
+    "difficulty": "MEDIUM",
+    "source": "NCERT Class 12",
+    "examYear": 2021,
+    "type": "MCQ",
+    "tags": ["telomeres", "AR-type"]
+  },
+  {
+    "topic": "Genetics",
+    "subtopic": "DNA",
+    "question": "Assertion (A): Okazaki fragments are formed on lagging strand.\nReason (R): DNA polymerase can only synthesize in 5' to 3' direction.",
+    "options": [
+      "Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+      "Both Assertion and Reason are true but Reason is NOT the correct explanation of Assertion",
+      "Assertion is true but Reason is false",
+      "Both Assertion and Reason are false"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Both true and reason explains. Discontinuous synthesis needed due to antiparallel nature.",
+    "difficulty": "MEDIUM",
+    "source": "NCERT Class 12",
+    "examYear": 2019,
+    "type": "MCQ",
+    "tags": ["DNA-replication", "AR-type"]
+  },
+  {
+    "topic": "Genetics",
+    "subtopic": "RNA",
+    "question": "Assertion (A): RNA polymerase does not need primer.\nReason (R): RNA polymerase can initiate synthesis de novo.",
+    "options": [
+      "Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+      "Both Assertion and Reason are true but Reason is NOT the correct explanation of Assertion",
+      "Assertion is true but Reason is false",
+      "Both Assertion and Reason are false"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Both true and reason explains. Unlike DNA polymerase, RNA polymerase starts without primer.",
+    "difficulty": "MEDIUM",
+    "source": "NCERT Class 12",
+    "examYear": 2020,
+    "type": "MCQ",
+    "tags": ["transcription", "AR-type"]
+  },
+  {
+    "topic": "Human Physiology",
+    "subtopic": "Respiration",
+    "question": "Assertion (A): Exchange of gases occurs by diffusion.\nReason (R): Partial pressure gradient drives gas movement across alveolar membrane.",
+    "options": [
+      "Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+      "Both Assertion and Reason are true but Reason is NOT the correct explanation of Assertion",
+      "Assertion is true but Reason is false",
+      "Both Assertion and Reason are false"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Both true and reason explains. Gases move from high to low partial pressure.",
+    "difficulty": "MEDIUM",
+    "source": "NCERT Class 11",
+    "examYear": 2018,
+    "type": "MCQ",
+    "tags": ["respiration", "AR-type"]
+  },
+  {
+    "topic": "Human Physiology",
+    "subtopic": "Circulation",
+    "question": "Assertion (A): Left ventricle has thicker wall than right.\nReason (R): Left ventricle pumps blood to entire body (systemic circulation).",
+    "options": [
+      "Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+      "Both Assertion and Reason are true but Reason is NOT the correct explanation of Assertion",
+      "Assertion is true but Reason is false",
+      "Both Assertion and Reason are false"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Both true and reason explains. Higher pressure needed for systemic circulation.",
+    "difficulty": "EASY",
+    "source": "NCERT Class 11",
+    "examYear": 2017,
+    "type": "MCQ",
+    "tags": ["heart", "AR-type"]
+  },
+  {
+    "topic": "Human Physiology",
+    "subtopic": "Excretion",
+    "question": "Assertion (A): ADH increases water reabsorption.\nReason (R): ADH makes collecting duct permeable to water.",
+    "options": [
+      "Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+      "Both Assertion and Reason are true but Reason is NOT the correct explanation of Assertion",
+      "Assertion is true but Reason is false",
+      "Both Assertion and Reason are false"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Both true and reason explains. ADH (vasopressin) inserts aquaporins in collecting duct.",
+    "difficulty": "MEDIUM",
+    "source": "NCERT Class 11",
+    "examYear": 2019,
+    "type": "MCQ",
+    "tags": ["excretion", "AR-type"]
+  },
+  {
+    "topic": "Human Physiology",
+    "subtopic": "Nervous System",
+    "question": "Assertion (A): Action potential is all-or-none response.\nReason (R): Once threshold is reached, full action potential is generated.",
+    "options": [
+      "Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+      "Both Assertion and Reason are true but Reason is NOT the correct explanation of Assertion",
+      "Assertion is true but Reason is false",
+      "Both Assertion and Reason are false"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Both true and reason explains. No partial action potentials exist.",
+    "difficulty": "MEDIUM",
+    "source": "NCERT Class 11",
+    "examYear": 2020,
+    "type": "MCQ",
+    "tags": ["nerve", "AR-type"]
+  },
+  {
+    "topic": "Plant Physiology",
+    "subtopic": "Mineral Nutrition",
+    "question": "Assertion (A): Nitrogen is a mobile element in plants.\nReason (R): Nitrogen deficiency symptoms appear first in older leaves.",
+    "options": [
+      "Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+      "Both Assertion and Reason are true but Reason is NOT the correct explanation of Assertion",
+      "Assertion is true but Reason is false",
+      "Both Assertion and Reason are false"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Both true and reason explains. Mobile elements are redistributed from old to young leaves.",
+    "difficulty": "MEDIUM",
+    "source": "NCERT Class 11",
+    "examYear": 2018,
+    "type": "MCQ",
+    "tags": ["minerals", "AR-type"]
+  },
+  {
+    "topic": "Plant Physiology",
+    "subtopic": "Respiration",
+    "question": "Assertion (A): Anaerobic respiration produces less ATP than aerobic.\nReason (R): Incomplete oxidation of glucose occurs in anaerobic respiration.",
+    "options": [
+      "Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+      "Both Assertion and Reason are true but Reason is NOT the correct explanation of Assertion",
+      "Assertion is true but Reason is false",
+      "Both Assertion and Reason are false"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Both true and reason explains. Anaerobic yields 2 ATP vs 36-38 ATP in aerobic.",
+    "difficulty": "EASY",
+    "source": "NCERT Class 11",
+    "examYear": 2016,
+    "type": "MCQ",
+    "tags": ["respiration", "AR-type"]
+  },
+  {
+    "topic": "Reproduction",
+    "subtopic": "Flower",
+    "question": "Assertion (A): Apomixis produces seeds without fertilization.\nReason (R): In apomixis, embryo develops from diploid cells without meiosis.",
+    "options": [
+      "Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+      "Both Assertion and Reason are true but Reason is NOT the correct explanation of Assertion",
+      "Assertion is true but Reason is false",
+      "Both Assertion and Reason are false"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Both true and reason explains. Apomixis bypasses normal sexual reproduction.",
+    "difficulty": "HARD",
+    "source": "NCERT Class 12",
+    "examYear": 2022,
+    "type": "MCQ",
+    "tags": ["apomixis", "AR-type"]
+  },
+  {
+    "topic": "Reproduction",
+    "subtopic": "Flower",
+    "question": "Assertion (A): Self-pollination leads to inbreeding depression.\nReason (R): Continuous self-pollination reduces genetic variation.",
+    "options": [
+      "Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+      "Both Assertion and Reason are true but Reason is NOT the correct explanation of Assertion",
+      "Assertion is true but Reason is false",
+      "Both Assertion and Reason are false"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Both true and reason explains. Homozygosity increases, exposing deleterious alleles.",
+    "difficulty": "MEDIUM",
+    "source": "NCERT Class 12",
+    "examYear": 2019,
+    "type": "MCQ",
+    "tags": ["pollination", "AR-type"]
+  },
+  {
+    "topic": "Ecology",
+    "subtopic": "Succession",
+    "question": "Assertion (A): Primary succession starts on bare rock.\nReason (R): Pioneer species like lichens colonize first.",
+    "options": [
+      "Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+      "Both Assertion and Reason are true but Reason is NOT the correct explanation of Assertion",
+      "Assertion is true but Reason is false",
+      "Both Assertion and Reason are false"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Both true and reason explains. Lichens break down rock, enabling soil formation.",
+    "difficulty": "EASY",
+    "source": "NCERT Class 12",
+    "examYear": 2017,
+    "type": "MCQ",
+    "tags": ["succession", "AR-type"]
+  },
+  {
+    "topic": "Ecology",
+    "subtopic": "Population",
+    "question": "Assertion (A): Logistic growth shows S-shaped curve.\nReason (R): Growth rate decreases as population approaches carrying capacity.",
+    "options": [
+      "Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+      "Both Assertion and Reason are true but Reason is NOT the correct explanation of Assertion",
+      "Assertion is true but Reason is false",
+      "Both Assertion and Reason are false"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Both true and reason explains. Resource limitation slows growth near K.",
+    "difficulty": "MEDIUM",
+    "source": "NCERT Class 12",
+    "examYear": 2020,
+    "type": "MCQ",
+    "tags": ["population", "AR-type"]
+  },
+  {
+    "topic": "Cell Structure and Function",
+    "subtopic": "Mitosis",
+    "question": "Statement I: Cytokinesis in plant cells occurs by cell plate formation.\nStatement II: Cytokinesis in animal cells occurs by cleavage furrow.",
+    "options": [
+      "Both statements are correct",
+      "Both statements are incorrect",
+      "Only Statement I is correct",
+      "Only Statement II is correct"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Both correct. Plant cells build cell plate from center outward, animal cells pinch inward.",
+    "difficulty": "MEDIUM",
+    "source": "NCERT Class 11",
+    "examYear": 2020,
+    "type": "MCQ",
+    "tags": ["mitosis", "statement-based"]
+  },
+  {
+    "topic": "Biomolecules",
+    "subtopic": "Lipids",
+    "question": "Statement I: Saturated fats are solid at room temperature.\nStatement II: Unsaturated fats have double bonds in carbon chain.",
+    "options": [
+      "Both statements are correct",
+      "Both statements are incorrect",
+      "Only Statement I is correct",
+      "Only Statement II is correct"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Both correct. Saturated fats pack tightly (solid), unsaturated have kinks from double bonds (liquid).",
+    "difficulty": "EASY",
+    "source": "NCERT Class 11",
+    "examYear": 2018,
+    "type": "MCQ",
+    "tags": ["lipids", "statement-based"]
+  },
+  {
+    "topic": "Genetics",
+    "subtopic": "Mutation",
+    "question": "Statement I: Frameshift mutations change reading frame.\nStatement II: Point mutations always cause frameshift.",
+    "options": [
+      "Both statements are correct",
+      "Both statements are incorrect",
+      "Only Statement I is correct",
+      "Only Statement II is correct"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Only Statement I correct. Point mutations (substitutions) don't cause frameshift; only insertions/deletions do.",
+    "difficulty": "MEDIUM",
+    "source": "NCERT Class 12",
+    "examYear": 2021,
+    "type": "MCQ",
+    "tags": ["mutation", "statement-based"]
+  },
+  {
+    "topic": "Human Physiology",
+    "subtopic": "Immunity",
+    "question": "Statement I: Antibodies are produced by plasma cells.\nStatement II: Plasma cells are derived from T-lymphocytes.",
+    "options": [
+      "Both statements are correct",
+      "Both statements are incorrect",
+      "Only Statement I is correct",
+      "Only Statement II is correct"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Only Statement I correct. Plasma cells come from B-lymphocytes, not T-lymphocytes.",
+    "difficulty": "MEDIUM",
+    "source": "NCERT Class 12",
+    "examYear": 2019,
+    "type": "MCQ",
+    "tags": ["immunity", "statement-based"]
+  },
+  {
+    "topic": "Plant Physiology",
+    "subtopic": "Transport",
+    "question": "Statement I: Xylem transport is unidirectional (upward).\nStatement II: Phloem transport is bidirectional.",
+    "options": [
+      "Both statements are correct",
+      "Both statements are incorrect",
+      "Only Statement I is correct",
+      "Only Statement II is correct"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Both correct. Xylem moves water up only, phloem moves food in both directions (source to sink).",
+    "difficulty": "EASY",
+    "source": "NCERT Class 11",
+    "examYear": 2017,
+    "type": "MCQ",
+    "tags": ["transport", "statement-based"]
+  },
+  {
+    "topic": "Reproduction",
+    "subtopic": "Development",
+    "question": "Statement I: Gastrulation forms three germ layers.\nStatement II: Ectoderm gives rise to nervous system.",
+    "options": [
+      "Both statements are correct",
+      "Both statements are incorrect",
+      "Only Statement I is correct",
+      "Only Statement II is correct"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Both correct. Gastrulation produces ectoderm, mesoderm, endoderm. Ectoderm forms nervous system and epidermis.",
+    "difficulty": "MEDIUM",
+    "source": "NCERT Class 12",
+    "examYear": 2020,
+    "type": "MCQ",
+    "tags": ["development", "statement-based"]
+  },
+  {
+    "topic": "Ecology",
+    "subtopic": "Conservation",
+    "question": "Statement I: Endemic species are found only in specific regions.\nStatement II: All endemic species are endangered.",
+    "options": [
+      "Both statements are correct",
+      "Both statements are incorrect",
+      "Only Statement I is correct",
+      "Only Statement II is correct"
+    ],
+    "correctAnswer": "C",
+    "explanation": "Only Statement I correct. Endemic means restricted distribution, but not all are endangered.",
+    "difficulty": "MEDIUM",
+    "source": "NCERT Class 12",
+    "examYear": 2021,
+    "type": "MCQ",
+    "tags": ["conservation", "statement-based"]
+  },
+  {
+    "topic": "Biotechnology",
+    "subtopic": "PCR",
+    "question": "Statement I: PCR amplifies specific DNA sequences.\nStatement II: PCR requires high temperatures for denaturation.",
+    "options": [
+      "Both statements are correct",
+      "Both statements are incorrect",
+      "Only Statement I is correct",
+      "Only Statement II is correct"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Both correct. PCR uses temperature cycles including 94°C denaturation step.",
+    "difficulty": "EASY",
+    "source": "NCERT Class 12",
+    "examYear": 2018,
+    "type": "MCQ",
+    "tags": ["PCR", "statement-based"]
+  },
+  {
+    "topic": "Human Physiology",
+    "subtopic": "Heart",
+    "question": "In the mammalian heart, the chamber that receives deoxygenated blood from the body is:",
+    "options": ["Right atrium", "Left atrium", "Right ventricle", "Left ventricle"],
+    "correctAnswer": "A",
+    "explanation": "Right atrium receives deoxygenated blood from superior and inferior vena cava.",
+    "difficulty": "EASY",
+    "source": "NEET PYQ 2010",
+    "examYear": 2010,
+    "type": "MCQ",
+    "tags": ["heart", "direct-MCQ"]
+  },
+  {
+    "topic": "Human Physiology",
+    "subtopic": "Nephron",
+    "question": "In nephron, the part impermeable to water in the descending limb is:",
+    "options": ["Ascending limb of Henle", "Descending limb of Henle", "PCT", "DCT"],
+    "correctAnswer": "A",
+    "explanation": "Ascending limb is impermeable to water but actively transports ions; descending is permeable to water.",
+    "difficulty": "MEDIUM",
+    "source": "NEET PYQ 2018",
+    "examYear": 2018,
+    "type": "MCQ",
+    "tags": ["nephron", "direct-MCQ"]
+  },
+  {
+    "topic": "Reproduction",
+    "subtopic": "Embryo Sac",
+    "question": "The egg apparatus in embryo sac consists of:",
+    "options": [
+      "Egg cell and two synergids",
+      "Two eggs and one synergid",
+      "Three eggs",
+      "Egg and antipodals"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Egg apparatus = 1 egg cell + 2 synergids at micropylar end of embryo sac.",
+    "difficulty": "MEDIUM",
+    "source": "NEET PYQ 2017",
+    "examYear": 2017,
+    "type": "MCQ",
+    "tags": ["embryo-sac", "direct-MCQ"]
+  },
+  {
+    "topic": "Plant Physiology",
+    "subtopic": "Photosynthesis",
+    "question": "In chloroplast, photolysis of water occurs in:",
+    "options": ["Grana", "Stroma", "Inner membrane", "Outer membrane"],
+    "correctAnswer": "A",
+    "explanation": "Photolysis (water splitting) occurs in grana thylakoids where PS II is located.",
+    "difficulty": "EASY",
+    "source": "NEET PYQ 2015",
+    "examYear": 2015,
+    "type": "MCQ",
+    "tags": ["photosynthesis", "direct-MCQ"]
+  },
+  {
+    "topic": "Genetics",
+    "subtopic": "Translation",
+    "question": "Wobble hypothesis explains:",
+    "options": [
+      "Degeneracy of genetic code",
+      "Universal nature of code",
+      "Non-overlapping code",
+      "Commaless code"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Wobble allows one tRNA to recognize multiple codons, explaining degeneracy.",
+    "difficulty": "HARD",
+    "source": "NEET PYQ 2020",
+    "examYear": 2020,
+    "type": "MCQ",
+    "tags": ["translation", "direct-MCQ"]
+  },
+  {
+    "topic": "Cell Structure and Function",
+    "subtopic": "Cytoskeleton",
+    "question": "Which cytoskeletal element is involved in muscle contraction?",
+    "options": ["Microfilaments (actin)", "Microtubules", "Intermediate filaments", "All of above"],
+    "correctAnswer": "A",
+    "explanation": "Actin microfilaments interact with myosin for muscle contraction.",
+    "difficulty": "MEDIUM",
+    "source": "NEET PYQ 2019",
+    "examYear": 2019,
+    "type": "MCQ",
+    "tags": ["cytoskeleton", "direct-MCQ"]
+  },
+  {
+    "topic": "Biomolecules",
+    "subtopic": "Vitamins",
+    "question": "Which vitamin deficiency causes night blindness?",
+    "options": ["Vitamin A", "Vitamin B", "Vitamin C", "Vitamin D"],
+    "correctAnswer": "A",
+    "explanation": "Vitamin A (retinol) is needed for rhodopsin synthesis; deficiency causes night blindness.",
+    "difficulty": "EASY",
+    "source": "NEET PYQ 2012",
+    "examYear": 2012,
+    "type": "MCQ",
+    "tags": ["vitamins", "direct-MCQ"]
+  },
+  {
+    "topic": "Human Physiology",
+    "subtopic": "Digestion",
+    "question": "Brunner's glands are found in:",
+    "options": ["Duodenum", "Stomach", "Ileum", "Colon"],
+    "correctAnswer": "A",
+    "explanation": "Brunner's glands in duodenal submucosa secrete alkaline mucus for protection.",
+    "difficulty": "MEDIUM",
+    "source": "NEET PYQ 2016",
+    "examYear": 2016,
+    "type": "MCQ",
+    "tags": ["digestion", "direct-MCQ"]
+  },
+  {
+    "topic": "Human Physiology",
+    "subtopic": "Respiration",
+    "question": "Tidal volume in humans is approximately:",
+    "options": ["500 mL", "1500 mL", "2500 mL", "3000 mL"],
+    "correctAnswer": "A",
+    "explanation": "Tidal volume is about 500 mL - volume inspired/expired in normal breathing.",
+    "difficulty": "EASY",
+    "source": "NEET PYQ 2014",
+    "examYear": 2014,
+    "type": "MCQ",
+    "tags": ["respiration", "direct-MCQ"]
+  },
+  {
+    "topic": "Reproduction",
+    "subtopic": "Human",
+    "question": "Which hormone maintains pregnancy?",
+    "options": ["Progesterone", "Estrogen", "FSH", "LH"],
+    "correctAnswer": "A",
+    "explanation": "Progesterone maintains uterine lining and prevents uterine contractions during pregnancy.",
+    "difficulty": "EASY",
+    "source": "NEET PYQ 2011",
+    "examYear": 2011,
+    "type": "MCQ",
+    "tags": ["pregnancy", "direct-MCQ"]
+  },
+  {
+    "topic": "Ecology",
+    "subtopic": "Pollution",
+    "question": "BOD indicates:",
+    "options": [
+      "Organic matter pollution in water",
+      "Air pollution",
+      "Soil pollution",
+      "Nuclear pollution"
+    ],
+    "correctAnswer": "A",
+    "explanation": "BOD (Biochemical Oxygen Demand) measures organic pollution - more organic matter means higher BOD.",
+    "difficulty": "EASY",
+    "source": "NEET PYQ 2013",
+    "examYear": 2013,
+    "type": "MCQ",
+    "tags": ["pollution", "direct-MCQ"]
+  },
+  {
+    "topic": "Ecology",
+    "subtopic": "Greenhouse",
+    "question": "Major greenhouse gas is:",
+    "options": ["Carbon dioxide", "Oxygen", "Nitrogen", "Argon"],
+    "correctAnswer": "A",
+    "explanation": "CO2 is the major anthropogenic greenhouse gas contributing to global warming.",
+    "difficulty": "EASY",
+    "source": "NEET PYQ 2015",
+    "examYear": 2015,
+    "type": "MCQ",
+    "tags": ["greenhouse", "direct-MCQ"]
+  },
+  {
+    "topic": "Biotechnology",
+    "subtopic": "Cloning",
+    "question": "First cloned mammal was:",
+    "options": ["Dolly the sheep", "Molly the mouse", "Polly the pig", "Holly the horse"],
+    "correctAnswer": "A",
+    "explanation": "Dolly (1996) was first mammal cloned from adult somatic cell (mammary cell).",
+    "difficulty": "EASY",
+    "source": "NEET PYQ 2016",
+    "examYear": 2016,
+    "type": "MCQ",
+    "tags": ["cloning", "direct-MCQ"]
+  },
+  {
+    "topic": "Evolution",
+    "subtopic": "Fossils",
+    "question": "Living fossil is:",
+    "options": ["Sphenodon", "Archaeopteryx", "Trilobite", "Dinosaur"],
+    "correctAnswer": "A",
+    "explanation": "Sphenodon (tuatara) is a living fossil - surviving member of ancient reptile group.",
+    "difficulty": "MEDIUM",
+    "source": "NEET PYQ 2017",
+    "examYear": 2017,
+    "type": "MCQ",
+    "tags": ["fossils", "direct-MCQ"]
+  },
+  {
+    "topic": "Human Health",
+    "subtopic": "Cancer",
+    "question": "Benign tumor is characterized by:",
+    "options": [
+      "Remains confined to site of origin",
+      "Spreads to other parts",
+      "Always fatal",
+      "Cannot be treated"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Benign tumors remain localized, don't metastasize, usually not life-threatening.",
+    "difficulty": "EASY",
+    "source": "NEET PYQ 2018",
+    "examYear": 2018,
+    "type": "MCQ",
+    "tags": ["cancer", "direct-MCQ"]
+  },
+  {
+    "topic": "Diversity in Living World",
+    "subtopic": "Bacteria",
+    "question": "Bacteria lacking cell wall are:",
+    "options": ["Mycoplasma", "E. coli", "Streptococcus", "Bacillus"],
+    "correctAnswer": "A",
+    "explanation": "Mycoplasma (PPLO) are smallest bacteria lacking cell wall.",
+    "difficulty": "EASY",
+    "source": "NEET PYQ 2019",
+    "examYear": 2019,
+    "type": "MCQ",
+    "tags": ["bacteria", "direct-MCQ"]
+  },
+  {
+    "topic": "Diversity in Living World",
+    "subtopic": "Protista",
+    "question": "Amoeba moves by:",
+    "options": ["Pseudopodia", "Cilia", "Flagella", "Muscular movement"],
+    "correctAnswer": "A",
+    "explanation": "Amoeba uses pseudopodia (false feet) - cytoplasmic extensions for movement.",
+    "difficulty": "EASY",
+    "source": "NEET PYQ 2010",
+    "examYear": 2010,
+    "type": "MCQ",
+    "tags": ["protista", "direct-MCQ"]
+  },
+  {
+    "topic": "Structural Organisation",
+    "subtopic": "Connective Tissue",
+    "question": "Blood is a type of:",
+    "options": ["Connective tissue", "Epithelial tissue", "Muscle tissue", "Nervous tissue"],
+    "correctAnswer": "A",
+    "explanation": "Blood is fluid connective tissue with cells in liquid matrix (plasma).",
+    "difficulty": "EASY",
+    "source": "NEET PYQ 2012",
+    "examYear": 2012,
+    "type": "MCQ",
+    "tags": ["connective-tissue", "direct-MCQ"]
+  },
+  {
+    "topic": "Structural Organisation",
+    "subtopic": "Plant Tissues",
+    "question": "Meristematic tissue is characterized by:",
+    "options": ["Actively dividing cells", "Dead cells", "Mature cells", "Specialized cells"],
+    "correctAnswer": "A",
+    "explanation": "Meristems have actively dividing, undifferentiated cells for plant growth.",
+    "difficulty": "EASY",
+    "source": "NEET PYQ 2014",
+    "examYear": 2014,
+    "type": "MCQ",
+    "tags": ["meristem", "direct-MCQ"]
+  },
+  {
+    "topic": "Genetics",
+    "subtopic": "Sex Linkage",
+    "question": "Color blindness is:",
+    "options": [
+      "X-linked recessive",
+      "X-linked dominant",
+      "Autosomal dominant",
+      "Autosomal recessive"
+    ],
+    "correctAnswer": "A",
+    "explanation": "Color blindness gene is on X chromosome and recessive; more common in males.",
+    "difficulty": "EASY",
+    "source": "NEET PYQ 2015",
+    "examYear": 2015,
+    "type": "MCQ",
+    "tags": ["sex-linkage", "direct-MCQ"]
+  }
+]

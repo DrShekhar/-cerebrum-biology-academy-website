@@ -26,6 +26,7 @@ import { StatsPanel, StatsPanelCompact } from '@/components/mcq/StatsPanel'
 import { TopicFilter } from '@/components/mcq/TopicFilter'
 import { LeadCaptureModal } from '@/components/mcq/LeadCaptureModal'
 import { ProtectedContent } from '@/components/mcq/ProtectedContent'
+import { SessionSummary } from '@/components/mcq/SessionSummary'
 import type { MCQQuestion, AnswerResult, UserStats } from '@/lib/mcq/types'
 import type { DifficultyLevel } from '@/generated/prisma'
 import { BIOLOGY_TOPICS, LEAD_CAPTURE_CONFIG } from '@/lib/mcq/types'
@@ -73,6 +74,11 @@ export default function NEETBiologyMCQPage() {
   const [hasLeadCaptured, setHasLeadCaptured] = useState(false)
   const [showResetConfirm, setShowResetConfirm] = useState(false)
   const [focusMode, setFocusMode] = useState(false)
+  const [showSessionSummary, setShowSessionSummary] = useState(false)
+
+  // Session timer tracking
+  const sessionStartTimeRef = useRef<number>(Date.now())
+  const [sessionTimeElapsed, setSessionTimeElapsed] = useState(0)
 
   // Initialize session and load user data
   useEffect(() => {
@@ -127,6 +133,20 @@ export default function NEETBiologyMCQPage() {
 
     initSession()
   }, [])
+
+  // Session timer - tracks total time spent
+  useEffect(() => {
+    if (!quizStarted || showSessionSummary) return
+
+    // Reset start time when quiz starts
+    sessionStartTimeRef.current = Date.now()
+
+    const timer = setInterval(() => {
+      setSessionTimeElapsed(Math.floor((Date.now() - sessionStartTimeRef.current) / 1000))
+    }, 1000)
+
+    return () => clearInterval(timer)
+  }, [quizStarted, showSessionSummary])
 
   // Fetch questions
   const fetchQuestions = useCallback(async () => {
@@ -386,6 +406,28 @@ export default function NEETBiologyMCQPage() {
     }
   }
 
+  // Show session summary
+  const handleEndSession = () => {
+    if (sessionStats.questionsAttempted > 0) {
+      setShowSessionSummary(true)
+    }
+  }
+
+  // Continue from session summary
+  const handleContinueSession = () => {
+    setShowSessionSummary(false)
+    // Fetch more questions if needed
+    if (currentQuestionIndex >= questions.length - 1) {
+      fetchQuestions()
+    }
+  }
+
+  // Start new session from summary
+  const handleNewSessionFromSummary = () => {
+    setShowSessionSummary(false)
+    handleResetQuiz()
+  }
+
   // Schema for SEO
   const faqSchema = {
     '@context': 'https://schema.org',
@@ -579,6 +621,15 @@ export default function NEETBiologyMCQPage() {
                             </>
                           )}
                         </button>
+                        {sessionStats.questionsAttempted >= 5 && (
+                          <button
+                            onClick={handleEndSession}
+                            className="flex items-center gap-1 text-green-600 hover:text-green-700 text-xs font-medium"
+                          >
+                            <Trophy className="w-3 h-3" />
+                            End Session
+                          </button>
+                        )}
                         <button
                           onClick={handleResetClick}
                           className="flex items-center gap-1 text-gray-500 hover:text-gray-700 text-xs"
@@ -599,103 +650,119 @@ export default function NEETBiologyMCQPage() {
                     </div>
                   </div>
 
-                  {/* Question Display - Centered and wider */}
-                  <div className="w-full max-w-3xl">
-                    {isLoadingQuestions ? (
-                      <div className="bg-white rounded-xl shadow-lg p-6 text-center">
-                        <div className="w-10 h-10 border-4 border-green-500 border-t-transparent rounded-full animate-spin mx-auto mb-3"></div>
-                        <p className="text-gray-600 text-sm">Loading questions...</p>
-                      </div>
-                    ) : error ? (
-                      <div className="bg-white rounded-xl shadow-lg p-6 text-center">
-                        <AlertTriangle className="w-10 h-10 text-amber-500 mx-auto mb-3" />
-                        <p className="text-gray-700 text-sm mb-3">{error}</p>
-                        <button
-                          onClick={handleApplyFilters}
-                          className="bg-green-600 text-white px-4 py-1.5 rounded-lg font-medium hover:bg-green-700 text-sm"
-                        >
-                          Try Again
-                        </button>
-                      </div>
-                    ) : questions.length === 0 ? (
-                      <div className="bg-white rounded-xl shadow-lg p-6 text-center">
-                        <BookOpen className="w-10 h-10 text-gray-400 mx-auto mb-3" />
-                        <h3 className="text-base font-semibold text-gray-700 mb-2">
-                          No Questions Available
-                        </h3>
-                        <p className="text-gray-500 text-sm mb-4">
-                          No questions found for the current filters. Try adjusting your filter
-                          settings.
-                        </p>
-                        <button
-                          onClick={handleApplyFilters}
-                          className="bg-green-600 text-white px-4 py-1.5 rounded-lg font-medium hover:bg-green-700 text-sm"
-                        >
-                          Load Questions
-                        </button>
-                      </div>
-                    ) : currentQuestion ? (
-                      <div key={currentQuestion.id} className="animate-fade-in-up">
-                        <QuestionCard
-                          question={currentQuestion}
-                          questionNumber={sessionStats.questionsAttempted + 1}
-                          onAnswer={handleAnswer}
-                          onSkip={handleSkipQuestion}
-                          showExplanation={hasLeadCaptured}
-                          isProtected={true}
-                        />
-                      </div>
-                    ) : null}
-                  </div>
-
-                  {/* Next Question Button - Centered */}
-                  {currentQuestion && answeredIds.has(currentQuestion.id) && (
-                    <div className="mt-4 w-full max-w-3xl">
-                      <button
-                        onClick={handleNextQuestion}
-                        disabled={isLoadingQuestions}
-                        className="w-full bg-gradient-to-r from-green-500 to-emerald-600 text-white px-6 py-2 rounded-lg font-medium hover:shadow-md transition-all inline-flex items-center justify-center gap-2 disabled:opacity-70 text-sm"
-                      >
+                  {/* Session Summary */}
+                  {showSessionSummary ? (
+                    <div className="w-full max-w-3xl">
+                      <SessionSummary
+                        questionsAttempted={sessionStats.questionsAttempted}
+                        correctAnswers={sessionStats.correctAnswers}
+                        xpEarned={sessionStats.xpEarned}
+                        totalTimeSeconds={sessionTimeElapsed}
+                        onContinue={handleContinueSession}
+                        onNewSession={handleNewSessionFromSummary}
+                      />
+                    </div>
+                  ) : (
+                    <>
+                      {/* Question Display - Centered and wider */}
+                      <div className="w-full max-w-3xl">
                         {isLoadingQuestions ? (
-                          <>
-                            <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                            Loading...
-                          </>
-                        ) : (
-                          <>
-                            Next Question
-                            <ChevronRight className="w-4 h-4" />
-                          </>
-                        )}
-                      </button>
-                    </div>
-                  )}
+                          <div className="bg-white rounded-xl shadow-lg p-6 text-center">
+                            <div className="w-10 h-10 border-4 border-green-500 border-t-transparent rounded-full animate-spin mx-auto mb-3"></div>
+                            <p className="text-gray-600 text-sm">Loading questions...</p>
+                          </div>
+                        ) : error ? (
+                          <div className="bg-white rounded-xl shadow-lg p-6 text-center">
+                            <AlertTriangle className="w-10 h-10 text-amber-500 mx-auto mb-3" />
+                            <p className="text-gray-700 text-sm mb-3">{error}</p>
+                            <button
+                              onClick={handleApplyFilters}
+                              className="bg-green-600 text-white px-4 py-1.5 rounded-lg font-medium hover:bg-green-700 text-sm"
+                            >
+                              Try Again
+                            </button>
+                          </div>
+                        ) : questions.length === 0 ? (
+                          <div className="bg-white rounded-xl shadow-lg p-6 text-center">
+                            <BookOpen className="w-10 h-10 text-gray-400 mx-auto mb-3" />
+                            <h3 className="text-base font-semibold text-gray-700 mb-2">
+                              No Questions Available
+                            </h3>
+                            <p className="text-gray-500 text-sm mb-4">
+                              No questions found for the current filters. Try adjusting your filter
+                              settings.
+                            </p>
+                            <button
+                              onClick={handleApplyFilters}
+                              className="bg-green-600 text-white px-4 py-1.5 rounded-lg font-medium hover:bg-green-700 text-sm"
+                            >
+                              Load Questions
+                            </button>
+                          </div>
+                        ) : currentQuestion ? (
+                          <div key={currentQuestion.id} className="animate-fade-in-up">
+                            <QuestionCard
+                              question={currentQuestion}
+                              questionNumber={sessionStats.questionsAttempted + 1}
+                              onAnswer={handleAnswer}
+                              onSkip={handleSkipQuestion}
+                              showExplanation={hasLeadCaptured}
+                              isProtected={true}
+                            />
+                          </div>
+                        ) : null}
+                      </div>
 
-                  {/* Quick Actions - Hidden in Focus Mode */}
-                  {!focusMode && (
-                    <div className="mt-4 flex flex-wrap justify-center gap-2 w-full max-w-3xl">
-                      <button
-                        onClick={() => router.push('/neet-biology-mcq/leaderboard')}
-                        className="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-lg shadow-sm text-xs font-medium text-gray-700 hover:bg-gray-50 transition-all"
-                      >
-                        <Users className="w-3.5 h-3.5 text-blue-500" />
-                        Leaderboard
-                      </button>
-                      <button
-                        onClick={() => router.push('/neet-biology-mcq/contribute')}
-                        className="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-lg shadow-sm text-xs font-medium text-gray-700 hover:bg-gray-50 transition-all"
-                      >
-                        <Send className="w-3.5 h-3.5 text-green-500" />
-                        Submit Question
-                      </button>
-                      <button
-                        onClick={() => router.push('/neet-biology-mcq/daily-challenge')}
-                        className="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-lg shadow-sm text-xs font-medium text-gray-700 hover:bg-gray-50 transition-all"
-                      >
-                        <Target className="w-3.5 h-3.5 text-amber-500" />
-                        Daily Challenge
-                      </button>
-                    </div>
+                      {/* Next Question Button - Centered */}
+                      {currentQuestion && answeredIds.has(currentQuestion.id) && (
+                        <div className="mt-4 w-full max-w-3xl">
+                          <button
+                            onClick={handleNextQuestion}
+                            disabled={isLoadingQuestions}
+                            className="w-full bg-gradient-to-r from-green-500 to-emerald-600 text-white px-6 py-2 rounded-lg font-medium hover:shadow-md transition-all inline-flex items-center justify-center gap-2 disabled:opacity-70 text-sm"
+                          >
+                            {isLoadingQuestions ? (
+                              <>
+                                <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                                Loading...
+                              </>
+                            ) : (
+                              <>
+                                Next Question
+                                <ChevronRight className="w-4 h-4" />
+                              </>
+                            )}
+                          </button>
+                        </div>
+                      )}
+
+                      {/* Quick Actions - Hidden in Focus Mode */}
+                      {!focusMode && (
+                        <div className="mt-4 flex flex-wrap justify-center gap-2 w-full max-w-3xl">
+                          <button
+                            onClick={() => router.push('/neet-biology-mcq/leaderboard')}
+                            className="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-lg shadow-sm text-xs font-medium text-gray-700 hover:bg-gray-50 transition-all"
+                          >
+                            <Users className="w-3.5 h-3.5 text-blue-500" />
+                            Leaderboard
+                          </button>
+                          <button
+                            onClick={() => router.push('/neet-biology-mcq/contribute')}
+                            className="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-lg shadow-sm text-xs font-medium text-gray-700 hover:bg-gray-50 transition-all"
+                          >
+                            <Send className="w-3.5 h-3.5 text-green-500" />
+                            Submit Question
+                          </button>
+                          <button
+                            onClick={() => router.push('/neet-biology-mcq/daily-challenge')}
+                            className="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-lg shadow-sm text-xs font-medium text-gray-700 hover:bg-gray-50 transition-all"
+                          >
+                            <Target className="w-3.5 h-3.5 text-amber-500" />
+                            Daily Challenge
+                          </button>
+                        </div>
+                      )}
+                    </>
                   )}
                 </>
               )}

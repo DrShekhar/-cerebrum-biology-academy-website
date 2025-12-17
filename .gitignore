@@ -60,3 +60,6 @@ next-env.d.ts
 # Temporary analysis scripts
 analyze-homepage.js
 scripts/analyze-homepage.ts
+
+# NCERT textbook resources (too large for git)
+resources/
