@@ -18,6 +18,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q2',
@@ -41,6 +42,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q3',
@@ -58,6 +60,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q4',
@@ -75,6 +78,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q5',
@@ -92,6 +96,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q6',
@@ -114,6 +119,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 6,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q7',
@@ -136,6 +142,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 7,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q8',
@@ -153,6 +160,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 6,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q9',
@@ -170,6 +178,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q10',
@@ -192,6 +201,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q11',
@@ -209,6 +219,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 7,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q12',
@@ -231,6 +242,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q13',
@@ -248,6 +260,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Apply',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q14',
@@ -270,6 +283,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q15',
@@ -287,6 +301,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Apply',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q16',
@@ -305,6 +320,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q17',
@@ -322,6 +338,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 6,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q18',
@@ -339,6 +356,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q19',
@@ -361,6 +379,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 6,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q20',
@@ -378,6 +397,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q21',
@@ -395,6 +415,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q22',
@@ -412,6 +433,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q23',
@@ -434,6 +456,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q24',
@@ -456,6 +479,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q25',
@@ -473,6 +497,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
 
   // SECTION 2: Chromosomal Theory and Linkage (Questions 26-45)
@@ -492,6 +517,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q27',
@@ -509,6 +535,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q28',
@@ -526,6 +553,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q29',
@@ -543,6 +571,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q30',
@@ -565,6 +594,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q31',
@@ -582,6 +612,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q32',
@@ -599,6 +630,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q33',
@@ -616,6 +648,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q34',
@@ -638,6 +671,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q35',
@@ -655,6 +689,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q36',
@@ -672,6 +707,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q37',
@@ -689,6 +725,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q38',
@@ -706,6 +743,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q39',
@@ -723,6 +761,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q40',
@@ -740,6 +779,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 6,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q41',
@@ -757,6 +797,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q42',
@@ -775,6 +816,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Apply',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q43',
@@ -792,6 +834,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Apply',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q44',
@@ -814,6 +857,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Analyze',
     timeEstimate: 90,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q45',
@@ -831,6 +875,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
 
   // SECTION 3: Mutations and Chromosomal Abnormalities (Questions 46-65)
@@ -850,6 +895,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q47',
@@ -872,6 +918,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q48',
@@ -894,6 +941,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 6,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q49',
@@ -911,6 +959,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q50',
@@ -933,6 +982,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 7,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q51',
@@ -955,6 +1005,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 6,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q52',
@@ -972,6 +1023,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 6,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q53',
@@ -989,6 +1041,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q54',
@@ -1006,6 +1059,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q55',
@@ -1028,6 +1082,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q56',
@@ -1045,6 +1100,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q57',
@@ -1067,6 +1123,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q58',
@@ -1084,6 +1141,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q59',
@@ -1101,6 +1159,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q60',
@@ -1123,6 +1182,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q61',
@@ -1140,6 +1200,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q62',
@@ -1162,6 +1223,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q63',
@@ -1179,6 +1241,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q64',
@@ -1201,6 +1264,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q65',
@@ -1223,6 +1287,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
 
   // SECTION 4: Additional Important Questions (Questions 66-100)
@@ -1242,6 +1307,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q67',
@@ -1264,6 +1330,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q68',
@@ -1281,6 +1348,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Apply',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q69',
@@ -1298,6 +1366,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Apply',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q70',
@@ -1320,6 +1389,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q71',
@@ -1337,6 +1407,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q72',
@@ -1354,6 +1425,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q73',
@@ -1372,6 +1444,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Apply',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q74',
@@ -1389,6 +1462,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q75',
@@ -1406,6 +1480,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q76',
@@ -1428,6 +1503,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 2,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q77',
@@ -1450,6 +1526,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q78',
@@ -1467,6 +1544,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q79',
@@ -1484,6 +1562,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q80',
@@ -1501,6 +1580,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q81',
@@ -1519,6 +1599,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Apply',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q82',
@@ -1541,6 +1622,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q83',
@@ -1563,6 +1645,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q84',
@@ -1585,6 +1668,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Analyze',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q85',
@@ -1607,6 +1691,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q86',
@@ -1625,6 +1710,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Apply',
     timeEstimate: 90,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q87',
@@ -1647,6 +1733,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q88',
@@ -1664,6 +1751,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q89',
@@ -1681,6 +1769,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q90',
@@ -1699,6 +1788,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Apply',
     timeEstimate: 90,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q91',
@@ -1721,6 +1811,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q92',
@@ -1743,6 +1834,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q93',
@@ -1765,6 +1857,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q94',
@@ -1782,6 +1875,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q95',
@@ -1799,6 +1893,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q96',
@@ -1821,6 +1916,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q97',
@@ -1838,6 +1934,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Apply',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q98',
@@ -1855,6 +1952,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Apply',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q99',
@@ -1877,6 +1975,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 2,
+    weightage: 2,
   },
   {
     id: 'ch12-5-q100',
@@ -1899,6 +1998,7 @@ export const inheritanceQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
 ]
 

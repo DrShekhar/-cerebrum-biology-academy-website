@@ -24,6 +24,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'env-002',
@@ -41,6 +42,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'env-003',
@@ -63,6 +65,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'env-004',
@@ -85,6 +88,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'env-005',
@@ -107,6 +111,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 30,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'env-006',
@@ -129,6 +134,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'env-007',
@@ -151,6 +157,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'env-008',
@@ -173,6 +180,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'env-009',
@@ -190,6 +198,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'env-010',
@@ -212,6 +221,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'env-011',
@@ -234,6 +244,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'env-012',
@@ -256,6 +267,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'env-013',
@@ -278,6 +290,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'env-014',
@@ -295,6 +308,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'env-015',
@@ -317,6 +331,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'env-016',
@@ -339,6 +354,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'env-017',
@@ -361,6 +377,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'env-018',
@@ -383,6 +400,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'env-019',
@@ -405,6 +423,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 30,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'env-020',
@@ -427,6 +446,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
 
   // SECTION 2: Water Pollution (Questions 21-40)
@@ -451,6 +471,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'env-022',
@@ -473,6 +494,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 6,
+    weightage: 2,
   },
   {
     id: 'env-023',
@@ -495,6 +517,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'env-024',
@@ -517,6 +540,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 6,
+    weightage: 2,
   },
   {
     id: 'env-025',
@@ -539,6 +563,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'env-026',
@@ -561,6 +586,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 6,
+    weightage: 2,
   },
   {
     id: 'env-027',
@@ -583,6 +609,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 75,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'env-028',
@@ -600,6 +627,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 30,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'env-029',
@@ -617,6 +645,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 30,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'env-030',
@@ -639,6 +668,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 30,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'env-031',
@@ -661,6 +691,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'env-032',
@@ -683,6 +714,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'env-033',
@@ -700,6 +732,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'env-034',
@@ -722,6 +755,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'env-035',
@@ -744,6 +778,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'env-036',
@@ -766,6 +801,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'env-037',
@@ -783,6 +819,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'env-038',
@@ -805,6 +842,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'env-039',
@@ -827,6 +865,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'env-040',
@@ -844,6 +883,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 2,
+    weightage: 2,
   },
 
   // SECTION 3: Solid Waste Management (Questions 41-55)
@@ -868,6 +908,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'env-042',
@@ -890,6 +931,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'env-043',
@@ -907,6 +949,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 30,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'env-044',
@@ -924,6 +967,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 30,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'env-045',
@@ -946,6 +990,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 30,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'env-046',
@@ -968,6 +1013,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'env-047',
@@ -990,6 +1036,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'env-048',
@@ -1012,6 +1059,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 30,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'env-049',
@@ -1034,6 +1082,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'env-050',
@@ -1051,6 +1100,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 30,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'env-051',
@@ -1073,6 +1123,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 30,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'env-052',
@@ -1095,6 +1146,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 30,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'env-053',
@@ -1117,6 +1169,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'env-054',
@@ -1139,6 +1192,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'env-055',
@@ -1161,6 +1215,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 2,
+    weightage: 2,
   },
 
   // SECTION 4: Ozone Depletion and Global Warming (Questions 56-75)
@@ -1180,6 +1235,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 30,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'env-057',
@@ -1197,6 +1253,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 30,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'env-058',
@@ -1214,6 +1271,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 6,
+    weightage: 2,
   },
   {
     id: 'env-059',
@@ -1236,6 +1294,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'env-060',
@@ -1253,6 +1312,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 30,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'env-061',
@@ -1275,6 +1335,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'env-062',
@@ -1297,6 +1358,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 30,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'env-063',
@@ -1319,6 +1381,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 6,
+    weightage: 2,
   },
   {
     id: 'env-064',
@@ -1336,6 +1399,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 30,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'env-065',
@@ -1353,6 +1417,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'env-066',
@@ -1375,6 +1440,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'env-067',
@@ -1397,6 +1463,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'env-068',
@@ -1419,6 +1486,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'env-069',
@@ -1441,6 +1509,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'env-070',
@@ -1463,6 +1532,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'env-071',
@@ -1485,6 +1555,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'env-072',
@@ -1507,6 +1578,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'env-073',
@@ -1529,6 +1601,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'env-074',
@@ -1551,6 +1624,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'env-075',
@@ -1568,6 +1642,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 30,
     previousYearFrequency: 4,
+    weightage: 2,
   },
 
   // SECTION 5: Deforestation and Additional Issues (Questions 76-100)
@@ -1592,6 +1667,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'env-077',
@@ -1615,6 +1691,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'env-078',
@@ -1637,6 +1714,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 30,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'env-079',
@@ -1659,6 +1737,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 30,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'env-080',
@@ -1681,6 +1760,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'env-081',
@@ -1698,6 +1778,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 30,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'env-082',
@@ -1720,6 +1801,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'env-083',
@@ -1742,6 +1824,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 30,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'env-084',
@@ -1764,6 +1847,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'env-085',
@@ -1786,6 +1870,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'env-086',
@@ -1808,6 +1893,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'env-087',
@@ -1830,6 +1916,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 2,
+    weightage: 2,
   },
   {
     id: 'env-088',
@@ -1852,6 +1939,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'env-089',
@@ -1874,6 +1962,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'env-090',
@@ -1891,6 +1980,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 30,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'env-091',
@@ -1908,6 +1998,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 30,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'env-092',
@@ -1930,6 +2021,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'env-093',
@@ -1952,6 +2044,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'env-094',
@@ -1975,6 +2068,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'env-095',
@@ -1998,6 +2092,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 2,
+    weightage: 2,
   },
   {
     id: 'env-096',
@@ -2015,6 +2110,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 30,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'env-097',
@@ -2032,6 +2128,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 30,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'env-098',
@@ -2049,6 +2146,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 30,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'env-099',
@@ -2072,6 +2170,7 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'env-100',
@@ -2094,5 +2193,6 @@ export const environmentalIssuesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
 ]

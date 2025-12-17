@@ -1,10 +1,12 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 import { Calendar, Phone, MessageCircle, X, ChevronUp } from 'lucide-react'
 import Link from 'next/link'
 
 export function FloatingCTA() {
+  const pathname = usePathname()
   const [isVisible, setIsVisible] = useState(false)
   const [isExpanded, setIsExpanded] = useState(false)
   const [scrollProgress, setScrollProgress] = useState(0)
@@ -76,7 +78,10 @@ export function FloatingCTA() {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
-  if (!isVisible) return null
+  // Hide on blog pages - they have their own BlogWhatsAppQuery component
+  const isBlogPage = pathname?.startsWith('/blog/')
+
+  if (!isVisible || isBlogPage) return null
 
   return (
     <>

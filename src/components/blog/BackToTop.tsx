@@ -38,7 +38,7 @@ export function BackToTop({ showAfter = 400, readTime }: BackToTopProps) {
   return (
     <button
       onClick={scrollToTop}
-      className={`fixed bottom-24 right-4 z-50 w-12 h-12 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg hover:shadow-xl transition-all flex items-center justify-center group ${
+      className={`fixed bottom-40 right-4 z-50 w-12 h-12 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg hover:shadow-xl transition-all flex items-center justify-center group ${
         isVisible
           ? 'opacity-100 scale-100 translate-y-0'
           : 'opacity-0 scale-75 translate-y-4 pointer-events-none'

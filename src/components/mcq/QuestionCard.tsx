@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useCallback, useEffect, useRef } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import type { MCQQuestion, AnswerResult } from '@/lib/mcq/types'
 
 interface QuestionCardProps {
@@ -118,30 +117,28 @@ export function QuestionCard({
   const getOptionClassName = (index: number) => {
     const option = optionLabels[index]
     const baseClasses =
-      'flex items-center gap-2 p-2.5 rounded-lg border transition-all duration-200 cursor-pointer'
+      'flex items-center gap-3 p-3.5 rounded-xl border-2 transition-all duration-200 cursor-pointer'
 
     if (!selectedAnswer) {
-      return `${baseClasses} border-gray-200 hover:border-blue-400 hover:bg-blue-50`
+      return `${baseClasses} border-gray-200 hover:border-blue-400 hover:bg-blue-50 hover:shadow-sm`
     }
 
     if (result) {
       if (option === result.correctAnswer) {
-        return `${baseClasses} border-green-500 bg-green-50`
+        return `${baseClasses} border-green-500 bg-green-50 shadow-sm`
       }
       if (option === selectedAnswer && !result.isCorrect) {
-        return `${baseClasses} border-red-500 bg-red-50`
+        return `${baseClasses} border-red-500 bg-red-50 shadow-sm`
       }
     }
 
-    return `${baseClasses} border-gray-200 opacity-60 cursor-default`
+    // Non-selected options after answer - keep visible but muted
+    return `${baseClasses} border-gray-200 bg-gray-50 opacity-70 cursor-default`
   }
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 10 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -10 }}
-      className={`bg-white rounded-xl shadow-lg p-4 ${isProtected ? 'select-none' : ''}`}
+    <div
+      className={`bg-white rounded-xl shadow-lg p-4 animate-fade-in-up ${isProtected ? 'select-none' : ''}`}
       onContextMenu={isProtected ? (e) => e.preventDefault() : undefined}
       role="article"
       aria-label={`Question ${questionNumber}`}
@@ -170,18 +167,19 @@ export function QuestionCard({
           )}
         </div>
         <div className="flex items-center gap-2">
-          <span
-            className={`px-2 py-0.5 rounded-full text-xs font-medium ${
+          <div
+            className={`flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-medium ${
               !selectedAnswer ? 'bg-blue-100 text-blue-700' : 'bg-gray-100 text-gray-500'
             }`}
             aria-label={`Time spent: ${formatTime(timeElapsed)}`}
           >
-            ⏱️ {formatTime(timeElapsed)}
-          </span>
+            <span className="text-[10px] opacity-70">Time:</span>
+            <span className="font-semibold tabular-nums">{formatTime(timeElapsed)}</span>
+          </div>
           {!selectedAnswer && onSkip && (
             <button
               onClick={onSkip}
-              className="px-2 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-600 hover:bg-gray-200 transition-colors"
+              className="px-2.5 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-600 hover:bg-gray-200 transition-colors"
               aria-label="Skip this question"
             >
               Skip →
@@ -189,87 +187,108 @@ export function QuestionCard({
           )}
         </div>
       </div>
-      {/* Topic */}
-      <div className="mb-1.5">
-        <span className="text-xs text-gray-500">{question.topic}</span>
+      {/* Topic - More visible */}
+      <div className="mb-2">
+        <span className="inline-flex items-center px-2.5 py-1 rounded-full bg-gray-100 text-gray-600 text-sm font-medium">
+          {question.topic}
+        </span>
       </div>
 
-      {/* Question Text - Compact */}
-      <div className="mb-4">
-        <p className="text-base text-gray-800 leading-relaxed">{question.question}</p>
+      {/* Question Text - Larger for better readability */}
+      <div className="mb-5">
+        <p className="text-lg text-gray-900 leading-relaxed font-medium">{question.question}</p>
       </div>
 
-      {/* Options - Compact with fixed spacing */}
-      <div className="space-y-2" role="radiogroup" aria-label="Answer options">
+      {/* Options - Better spacing and larger text */}
+      <div className="space-y-3" role="radiogroup" aria-label="Answer options">
         {question.options.map((option, index) => (
-          <motion.button
+          <button
             key={index}
             onClick={() => handleOptionClick(optionLabels[index])}
             disabled={!!selectedAnswer || isSubmitting}
-            className={getOptionClassName(index)}
-            whileHover={!selectedAnswer ? { scale: 1.005 } : {}}
-            whileTap={!selectedAnswer ? { scale: 0.995 } : {}}
+            className={`${getOptionClassName(index)} ${!selectedAnswer ? 'hover:scale-[1.01] active:scale-[0.99]' : ''}`}
             role="radio"
             aria-checked={selectedAnswer === optionLabels[index]}
             aria-label={`Option ${optionLabels[index]}: ${option}. Press ${index + 1} to select.`}
           >
             <span
-              className={`flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center font-bold text-xs ${
+              className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm transition-colors ${
                 result && optionLabels[index] === result.correctAnswer
                   ? 'bg-green-500 text-white'
                   : result && optionLabels[index] === selectedAnswer && !result.isCorrect
                     ? 'bg-red-500 text-white'
-                    : 'bg-gray-100 text-gray-700'
+                    : selectedAnswer === optionLabels[index]
+                      ? 'bg-blue-500 text-white'
+                      : 'bg-gray-100 text-gray-700'
               }`}
               aria-hidden="true"
             >
               {optionLabels[index]}
             </span>
-            <span className="text-left text-gray-700 text-sm flex-1">{option}</span>
+            <span className="text-left text-gray-700 text-base flex-1">{option}</span>
             {result && optionLabels[index] === result.correctAnswer && (
-              <span className="text-green-500 text-sm" aria-label="Correct answer">
+              <span className="text-green-500 text-lg font-bold" aria-label="Correct answer">
                 ✓
               </span>
             )}
             {result && optionLabels[index] === selectedAnswer && !result.isCorrect && (
-              <span className="text-red-500 text-sm" aria-label="Incorrect">
+              <span className="text-red-500 text-lg font-bold" aria-label="Incorrect">
                 ✗
               </span>
             )}
-          </motion.button>
+          </button>
         ))}
       </div>
 
-      {/* Keyboard Shortcut Hint */}
+      {/* Keyboard Shortcut Hint - More visible */}
       {!selectedAnswer && !isSubmitting && (
-        <p className="text-[10px] text-gray-400 text-center mt-2">Press 1-4 or A-D to select</p>
+        <div className="flex items-center justify-center gap-2 mt-3 text-gray-400">
+          <span className="text-xs">⌨️</span>
+          <p className="text-xs">
+            Press{' '}
+            <kbd className="px-1.5 py-0.5 bg-gray-100 rounded text-gray-500 font-mono text-xs">
+              1-4
+            </kbd>{' '}
+            or{' '}
+            <kbd className="px-1.5 py-0.5 bg-gray-100 rounded text-gray-500 font-mono text-xs">
+              A-D
+            </kbd>{' '}
+            to select
+          </p>
+        </div>
       )}
 
-      {/* Result Feedback - Compact */}
-      <AnimatePresence>
-        {result && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="mt-4"
-            role="status"
-            aria-live="polite"
-          >
+      {/* Result Feedback - Enhanced with CSS animations */}
+      <div
+        className={`grid transition-all duration-300 ease-out ${
+          result ? 'grid-rows-[1fr] opacity-100 mt-4' : 'grid-rows-[0fr] opacity-0'
+        }`}
+        role="status"
+        aria-live="polite"
+      >
+        <div className="overflow-hidden">
+          {result && (
             <div
-              className={`p-3 rounded-lg ${
+              className={`p-4 rounded-xl animate-scale-in ${
                 result.isCorrect
-                  ? 'bg-green-50 border border-green-200'
-                  : 'bg-red-50 border border-red-200'
+                  ? 'bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-300'
+                  : 'bg-gradient-to-r from-red-50 to-orange-50 border-2 border-red-300'
               }`}
             >
               <div className="flex items-center justify-between">
-                <span
-                  className={`font-semibold text-sm ${result.isCorrect ? 'text-green-700' : 'text-red-700'}`}
-                >
-                  {result.isCorrect ? '✓ Correct!' : '✗ Incorrect'}
+                <div className="flex items-center gap-2">
+                  <span className={`text-2xl ${result.isCorrect ? 'animate-bounce' : ''}`}>
+                    {result.isCorrect ? '🎉' : '😔'}
+                  </span>
+                  <span
+                    className={`font-bold text-base ${result.isCorrect ? 'text-green-700' : 'text-red-700'}`}
+                  >
+                    {result.isCorrect ? 'Correct!' : 'Incorrect'}
+                  </span>
+                </div>
+                <span className="px-3 py-1 bg-blue-100 text-blue-700 font-bold text-sm rounded-full animate-pop-in">
+                  +{result.xpEarned} XP
                 </span>
-                <span className="text-blue-600 font-medium text-sm">+{result.xpEarned} XP</span>
               </div>
 
               {/* Explanation Preview - Compact */}
@@ -307,7 +326,7 @@ export function QuestionCard({
 
               {/* Streak Update - Compact */}
               {result.streakUpdated && result.newStreak && (
-                <div className="mt-2 flex items-center gap-1.5 text-orange-600 text-sm">
+                <div className="mt-2 flex items-center gap-1.5 text-orange-600 text-sm animate-fade-in">
                   <span>🔥</span>
                   <span className="font-medium">{result.newStreak} day streak!</span>
                 </div>
@@ -316,10 +335,11 @@ export function QuestionCard({
               {/* Badge Unlocked - Compact */}
               {result.badgesUnlocked && result.badgesUnlocked.length > 0 && (
                 <div className="mt-2 space-y-1.5">
-                  {result.badgesUnlocked.map((badge) => (
+                  {result.badgesUnlocked.map((badge, idx) => (
                     <div
                       key={badge.code}
-                      className="flex items-center gap-2 p-2 bg-yellow-50 rounded border border-yellow-200"
+                      className="flex items-center gap-2 p-2 bg-yellow-50 rounded border border-yellow-200 animate-fade-in-up"
+                      style={{ animationDelay: `${idx * 100}ms` }}
                     >
                       <span className="text-lg">{badge.icon}</span>
                       <div className="flex-1 min-w-0">
@@ -335,20 +355,16 @@ export function QuestionCard({
 
               {/* Level Up - Compact */}
               {result.levelUp && (
-                <motion.div
-                  initial={{ scale: 0.9, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  className="mt-2 p-2 bg-purple-50 rounded border border-purple-200 text-center"
-                >
+                <div className="mt-2 p-2 bg-purple-50 rounded border border-purple-200 text-center animate-scale-in">
                   <p className="font-semibold text-purple-800 text-sm">
                     🎉 Level Up! Now Level {result.levelUp.newLevel}
                   </p>
-                </motion.div>
+                </div>
               )}
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </motion.div>
+          )}
+        </div>
+      </div>
+    </div>
   )
 }

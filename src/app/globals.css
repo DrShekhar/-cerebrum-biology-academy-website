@@ -1219,6 +1219,55 @@ body {
   animation: fade-in-left 0.4s ease-out forwards;
 }
 
+/* scale-in animation for expanding elements */
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-scale-in {
+  animation: scale-in 0.3s ease-out forwards;
+}
+
+/* pop-in animation for badges and rewards */
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  70% {
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-pop-in {
+  animation: pop-in 0.4s ease-out forwards;
+}
+
+/* Simple fade-in animation */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out forwards;
+}
+
 /* Custom transition duration for scroll animations */
 .duration-600 {
   transition-duration: 600ms;
@@ -1260,7 +1309,12 @@ body {
   .animate-scaleOut,
   .animate-bounce-slow,
   .animate-pulse-ring,
-  .animate-slideInFromBottom {
+  .animate-slideInFromBottom,
+  .animate-fade-in-up,
+  .animate-fade-in-left,
+  .animate-scale-in,
+  .animate-pop-in,
+  .animate-fade-in {
     animation: none;
     opacity: 1;
     transform: none;

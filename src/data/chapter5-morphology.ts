@@ -25,7 +25,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 6,
     conceptualLinks: ['Fibrous root', 'Monocots', 'Root system'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -43,7 +43,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Tap root', 'Dicots', 'Root system'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -61,7 +61,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 6,
     conceptualLinks: ['Adventitious roots', 'Root origin', 'Non-radicle'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -79,7 +79,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Root hairs', 'Region of maturation', 'Absorption'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -97,7 +97,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 7,
     conceptualLinks: ['Pneumatophores', 'Mangroves', 'Respiration'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 4,
   },
   {
@@ -115,7 +115,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Storage roots', 'Food storage', 'Modified roots'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -133,7 +133,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 6,
     conceptualLinks: ['Prop roots', 'Banyan', 'Support'],
     timeEstimate: 60,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 3,
   },
   {
@@ -151,7 +151,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Stilt roots', 'Maize', 'Mechanical support'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -169,7 +169,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Velamen', 'Epiphytic roots', 'Moisture absorption'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -187,7 +187,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 6,
     conceptualLinks: ['Haustoria', 'Cuscuta', 'Parasitic roots'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -205,7 +205,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Napiform', 'Turnip', 'Root modification'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -228,7 +228,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Root cap', 'Root pocket', 'Aquatic plants'],
     timeEstimate: 60,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 2,
   },
   {
@@ -246,7 +246,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Root nodules', 'Legumes', 'Nitrogen fixation'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -264,7 +264,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 3,
     conceptualLinks: ['Climbing roots', 'Support', 'Adventitious'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -282,7 +282,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Foliar roots', 'Bryophyllum', 'Vegetative propagation'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
 
@@ -304,7 +304,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Stem functions', 'Support', 'Conduction'],
     timeEstimate: 45,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 2,
   },
   {
@@ -322,7 +322,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Node', 'Leaf attachment', 'Stem'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -340,7 +340,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 7,
     conceptualLinks: ['Potato', 'Modified stem', 'Tuber'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 4,
   },
   {
@@ -358,7 +358,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 6,
     conceptualLinks: ['Ginger', 'Rhizome', 'Underground stem'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -376,7 +376,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 6,
     conceptualLinks: ['Onion', 'Bulb', 'Scale leaves'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -394,7 +394,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Corm', 'Colocasia', 'Underground stem'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -412,7 +412,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Stem tendrils', 'Climbing', 'Grapevine'],
     timeEstimate: 60,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 3,
   },
   {
@@ -430,7 +430,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 6,
     conceptualLinks: ['Thorns', 'Modified stem', 'Protection'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -448,7 +448,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Phylloclade', 'Photosynthetic stem', 'Xerophytes'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -466,7 +466,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Offset', 'Pistia', 'Aquatic plants'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -484,7 +484,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Sucker', 'Vegetative propagation', 'Underground stem'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -502,7 +502,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Runner', 'Creeping stem', 'Vegetative propagation'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -525,7 +525,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 3,
     conceptualLinks: ['Stolon', 'Runner', 'Difference'],
     timeEstimate: 75,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 2,
   },
   {
@@ -548,7 +548,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Cladode', 'Phylloclade', 'Difference'],
     timeEstimate: 75,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 2,
   },
   {
@@ -566,7 +566,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Opuntia', 'Phylloclade', 'Photosynthesis'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
 
@@ -593,7 +593,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Leaf parts', 'Lamina', 'Petiole'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -611,7 +611,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 6,
     conceptualLinks: ['Reticulate venation', 'Dicots', 'Leaf veins'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -629,7 +629,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Parallel venation', 'Monocots', 'Wheat'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -652,7 +652,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Simple leaf', 'Single lamina', 'Undivided'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -670,7 +670,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Compound leaf', 'Leaflets', 'Divided lamina'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -688,7 +688,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Pinnately compound', 'Neem', 'Rachis'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -706,7 +706,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Palmately compound', 'Silk cotton', 'Common point'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -724,7 +724,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Alternate phyllotaxy', 'China rose', 'Leaf arrangement'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -742,7 +742,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Opposite phyllotaxy', 'Calotropis', 'Paired leaves'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -760,7 +760,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Whorled phyllotaxy', 'Nerium', 'Multiple leaves'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -778,7 +778,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 6,
     conceptualLinks: ['Leaf tendrils', 'Pea', 'Climbing'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -796,7 +796,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Leaf spines', 'Opuntia', 'Water conservation'],
     timeEstimate: 60,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 3,
   },
   {
@@ -814,7 +814,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Pitcher', 'Nepenthes', 'Insectivorous'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -832,7 +832,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Drosera', 'Insect trapping', 'Glandular hairs'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -850,7 +850,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Phyllode', 'Acacia', 'Modified petiole'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -868,7 +868,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Fleshy leaves', 'Water storage', 'Succulents'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -886,7 +886,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 3,
     conceptualLinks: ['Scale leaves', 'Protection', 'Underground stems'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -904,7 +904,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 3,
     conceptualLinks: ['Stipular spines', 'Acacia', 'Protection'],
     timeEstimate: 75,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -922,7 +922,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Sessile', 'No petiole', 'Leaf base'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -940,7 +940,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 3,
     conceptualLinks: ['Lamina', 'Leaf blade', 'Photosynthesis'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
 
@@ -962,7 +962,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Inflorescence', 'Flower arrangement', 'Peduncle'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -980,7 +980,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Racemose', 'Unlimited growth', 'Acropetal'],
     timeEstimate: 60,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 3,
   },
   {
@@ -1003,7 +1003,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Cymose', 'Terminal flower', 'Basipetal'],
     timeEstimate: 60,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 3,
   },
   {
@@ -1021,7 +1021,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Spike', 'Sessile flowers', 'Wheat'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -1039,7 +1039,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 6,
     conceptualLinks: ['Capitulum', 'Sunflower', 'Asteraceae'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -1057,7 +1057,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Umbel', 'Coriander', 'Apiaceae'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -1075,7 +1075,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Catkin', 'Mulberry', 'Pendulous'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -1093,7 +1093,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Spadix', 'Spathe', 'Colocasia'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -1116,7 +1116,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 3,
     conceptualLinks: ['Corymb', 'Raceme', 'Pedicel length'],
     timeEstimate: 75,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 2,
   },
   {
@@ -1139,7 +1139,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 3,
     conceptualLinks: ['Helicoid cyme', 'Cymose', 'Lateral branches'],
     timeEstimate: 75,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
 
@@ -1166,7 +1166,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Complete flower', 'Four whorls', 'Floral parts'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -1184,7 +1184,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Bisexual', 'Both sexes', 'Hermaphrodite'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -1202,7 +1202,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Epipetalous', 'Stamen attachment', 'Petals'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -1220,7 +1220,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 6,
     conceptualLinks: ['Actinomorphic', 'Radial symmetry', 'Multiple planes'],
     timeEstimate: 60,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 3,
   },
   {
@@ -1243,7 +1243,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 6,
     conceptualLinks: ['Zygomorphic', 'Bilateral symmetry', 'One plane'],
     timeEstimate: 60,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 3,
   },
   {
@@ -1266,7 +1266,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 6,
     conceptualLinks: ['Hypogynous', 'Superior ovary', 'Floral position'],
     timeEstimate: 60,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 3,
   },
   {
@@ -1289,7 +1289,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 6,
     conceptualLinks: ['Epigynous', 'Inferior ovary', 'Sunflower'],
     timeEstimate: 60,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 3,
   },
   {
@@ -1312,7 +1312,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Perigynous', 'Cup-shaped thalamus', 'Rose'],
     timeEstimate: 75,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 2,
   },
   {
@@ -1330,7 +1330,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Gamosepalous', 'United sepals', 'Calyx'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -1348,7 +1348,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 6,
     conceptualLinks: ['Valvate', 'Aestivation', 'Calotropis'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -1366,7 +1366,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Twisted aestivation', 'China rose', 'Overlapping'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -1384,7 +1384,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 6,
     conceptualLinks: ['Vexillary', 'Pea', 'Papilionaceous'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -1402,7 +1402,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Androecium', 'Stamens', 'Male part'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -1420,7 +1420,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Monodelphous', 'Fused filaments', 'China rose'],
     timeEstimate: 75,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -1438,7 +1438,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 6,
     conceptualLinks: ['Diadelphous', 'Two bundles', 'Pea'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -1456,7 +1456,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 6,
     conceptualLinks: ['Syngenesious', 'Fused anthers', 'Asteraceae'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -1474,7 +1474,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Gynoecium', 'Carpel', 'Female part'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -1492,7 +1492,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 6,
     conceptualLinks: ['Apocarpous', 'Free carpels', 'Lotus'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -1510,7 +1510,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Marginal placentation', 'Pea', 'Ventral suture'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -1528,7 +1528,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 6,
     conceptualLinks: ['Axile placentation', 'Central axis', 'China rose'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
 
@@ -1550,7 +1550,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Fruit development', 'Ovary', 'Pericarp'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -1568,7 +1568,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 6,
     conceptualLinks: ['Parthenocarpy', 'Seedless', 'Banana'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -1586,7 +1586,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 7,
     conceptualLinks: ['False fruit', 'Apple', 'Thalamus'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 4,
   },
   {
@@ -1609,7 +1609,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Aggregate fruit', 'Apocarpous', 'Raspberry'],
     timeEstimate: 60,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 3,
   },
   {
@@ -1632,7 +1632,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Composite fruit', 'Inflorescence', 'Mulberry'],
     timeEstimate: 60,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 3,
   },
   {
@@ -1650,7 +1650,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Drupe', 'Stony endocarp', 'Mango'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -1668,7 +1668,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Berry', 'Fleshy', 'Tomato'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -1686,7 +1686,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Legume', 'Pod', 'Pea'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -1704,7 +1704,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Siliqua', 'Brassicaceae', 'Replum'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -1722,7 +1722,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Cypsela', 'Asteraceae', 'Sunflower'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
 
@@ -1744,7 +1744,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Seed', 'Ovule', 'Fertilization'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -1767,7 +1767,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Dicot seed', 'No endosperm', 'Cotyledons'],
     timeEstimate: 60,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 2,
   },
   {
@@ -1785,7 +1785,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 6,
     conceptualLinks: ['Endospermic seed', 'Castor', 'Food storage'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -1803,7 +1803,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Embryo axis', 'Plumule', 'Radicle'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -1821,7 +1821,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Hilum', 'Attachment scar', 'Seed coat'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -1839,7 +1839,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Monocot', 'One cotyledon', 'Scutellum'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -1857,7 +1857,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 6,
     conceptualLinks: ['Coleoptile', 'Plumule sheath', 'Maize'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -1875,7 +1875,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Coleorrhiza', 'Radicle sheath', 'Monocot'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -1898,7 +1898,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Aleurone layer', 'Endosperm', 'Enzyme'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -1921,7 +1921,7 @@ export const morphologyQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Micropyle', 'Water entry', 'Germination'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
 ]

@@ -18,6 +18,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q2',
@@ -41,6 +42,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q3',
@@ -63,6 +65,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q4',
@@ -80,6 +83,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q5',
@@ -102,6 +106,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 2,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q6',
@@ -124,6 +129,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q7',
@@ -146,6 +152,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q8',
@@ -168,6 +175,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q9',
@@ -185,6 +193,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 2,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q10',
@@ -207,6 +216,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
 
   // POULTRY FARMING (Questions 11-20)
@@ -226,6 +236,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q12',
@@ -243,6 +254,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q13',
@@ -260,6 +272,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q14',
@@ -282,6 +295,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q15',
@@ -299,6 +313,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q16',
@@ -316,6 +331,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 2,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q17',
@@ -333,6 +349,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q18',
@@ -355,6 +372,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 2,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q19',
@@ -372,6 +390,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 2,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q20',
@@ -394,6 +413,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 2,
+    weightage: 2,
   },
 
   // FISHERIES (Questions 21-30)
@@ -418,6 +438,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q22',
@@ -440,6 +461,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 6,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q23',
@@ -457,6 +479,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q24',
@@ -479,6 +502,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q25',
@@ -501,6 +525,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q26',
@@ -518,6 +543,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q27',
@@ -535,6 +561,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q28',
@@ -557,6 +584,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 2,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q29',
@@ -574,6 +602,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 2,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q30',
@@ -596,6 +625,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
 
   // APICULTURE AND OTHER ANIMAL HUSBANDRY (Questions 31-40)
@@ -615,6 +645,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 6,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q32',
@@ -632,6 +663,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q33',
@@ -649,6 +681,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q34',
@@ -666,6 +699,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q35',
@@ -688,6 +722,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q36',
@@ -710,6 +745,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q37',
@@ -727,6 +763,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q38',
@@ -744,6 +781,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q39',
@@ -761,6 +799,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q40',
@@ -783,6 +822,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 2,
+    weightage: 2,
   },
 
   // PLANT BREEDING - BASICS (Questions 41-50)
@@ -807,6 +847,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q42',
@@ -829,6 +870,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 6,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q43',
@@ -852,6 +894,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 90,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q44',
@@ -874,6 +917,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q45',
@@ -891,6 +935,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q46',
@@ -908,6 +953,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q47',
@@ -930,6 +976,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q48',
@@ -952,6 +999,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q49',
@@ -969,6 +1017,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q50',
@@ -986,6 +1035,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
 
   // BREEDING FOR DISEASE RESISTANCE (Questions 51-60)
@@ -1010,6 +1060,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q52',
@@ -1027,6 +1078,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q53',
@@ -1044,6 +1096,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q54',
@@ -1061,6 +1114,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q55',
@@ -1078,6 +1132,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q56',
@@ -1095,6 +1150,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q57',
@@ -1113,6 +1169,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Apply',
     timeEstimate: 90,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q58',
@@ -1135,6 +1192,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 2,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q59',
@@ -1157,6 +1215,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Analyze',
     timeEstimate: 90,
     previousYearFrequency: 2,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q60',
@@ -1179,6 +1238,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Analyze',
     timeEstimate: 90,
     previousYearFrequency: 2,
+    weightage: 2,
   },
 
   // BREEDING FOR INSECT RESISTANCE (Questions 61-70)
@@ -1203,6 +1263,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q62',
@@ -1220,6 +1281,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q63',
@@ -1242,6 +1304,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q64',
@@ -1259,6 +1322,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 2,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q65',
@@ -1276,6 +1340,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 2,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q66',
@@ -1293,6 +1358,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q67',
@@ -1315,6 +1381,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 90,
     previousYearFrequency: 2,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q68',
@@ -1332,6 +1399,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q69',
@@ -1354,6 +1422,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 90,
     previousYearFrequency: 2,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q70',
@@ -1376,6 +1445,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 2,
+    weightage: 2,
   },
 
   // BREEDING FOR IMPROVED QUALITY (Questions 71-80)
@@ -1400,6 +1470,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q72',
@@ -1417,6 +1488,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 6,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q73',
@@ -1434,6 +1506,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q74',
@@ -1451,6 +1524,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q75',
@@ -1468,6 +1542,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q76',
@@ -1490,6 +1565,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 2,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q77',
@@ -1512,6 +1588,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q78',
@@ -1534,6 +1611,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 90,
     previousYearFrequency: 2,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q79',
@@ -1551,6 +1629,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 2,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q80',
@@ -1573,6 +1652,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
 
   // SINGLE CELL PROTEIN (Questions 81-85)
@@ -1597,6 +1677,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q82',
@@ -1614,6 +1695,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q83',
@@ -1631,6 +1713,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 90,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q84',
@@ -1653,6 +1736,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q85',
@@ -1675,6 +1759,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 2,
+    weightage: 2,
   },
 
   // TISSUE CULTURE (Questions 86-100)
@@ -1700,6 +1785,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q87',
@@ -1722,6 +1808,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 6,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q88',
@@ -1739,6 +1826,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q89',
@@ -1761,6 +1849,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q90',
@@ -1783,6 +1872,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q91',
@@ -1805,6 +1895,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q92',
@@ -1822,6 +1913,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q93',
@@ -1839,6 +1931,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q94',
@@ -1861,6 +1954,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q95',
@@ -1878,6 +1972,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q96',
@@ -1900,6 +1995,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q97',
@@ -1922,6 +2018,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q98',
@@ -1944,6 +2041,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q99',
@@ -1961,6 +2059,7 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-9-q100',
@@ -1983,5 +2082,6 @@ export const foodProductionQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 90,
     previousYearFrequency: 3,
+    weightage: 2,
   },
 ]

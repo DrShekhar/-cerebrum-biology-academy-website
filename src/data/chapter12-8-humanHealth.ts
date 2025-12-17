@@ -23,6 +23,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q2',
@@ -40,6 +41,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 6,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q3',
@@ -57,6 +59,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q4',
@@ -74,6 +77,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 6,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q5',
@@ -91,6 +95,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q6',
@@ -108,6 +113,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q7',
@@ -125,6 +131,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q8',
@@ -142,6 +149,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 7,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q9',
@@ -164,6 +172,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 7,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q10',
@@ -186,6 +195,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 6,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q11',
@@ -203,6 +213,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q12',
@@ -220,6 +231,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q13',
@@ -237,6 +249,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q14',
@@ -254,6 +267,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q15',
@@ -276,6 +290,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q16',
@@ -293,6 +308,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q17',
@@ -310,6 +326,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 6,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q18',
@@ -327,6 +344,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q19',
@@ -344,6 +362,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q20',
@@ -361,6 +380,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q21',
@@ -383,6 +403,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q22',
@@ -400,6 +421,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q23',
@@ -417,6 +439,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q24',
@@ -434,6 +457,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q25',
@@ -451,6 +475,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q26',
@@ -468,6 +493,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q27',
@@ -485,6 +511,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q28',
@@ -507,6 +534,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q29',
@@ -524,6 +552,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q30',
@@ -541,6 +570,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
 
   // SECTION 2: Immunity (Questions 31-55)
@@ -565,6 +595,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q32',
@@ -582,6 +613,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q33',
@@ -599,6 +631,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q34',
@@ -621,6 +654,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q35',
@@ -643,6 +677,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q36',
@@ -660,6 +695,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q37',
@@ -677,6 +713,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q38',
@@ -694,6 +731,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q39',
@@ -716,6 +754,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q40',
@@ -738,6 +777,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q41',
@@ -760,6 +800,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q42',
@@ -782,6 +823,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q43',
@@ -804,6 +846,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q44',
@@ -821,6 +864,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q45',
@@ -843,6 +887,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q46',
@@ -859,6 +904,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q47',
@@ -881,6 +927,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q48',
@@ -898,6 +945,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q49',
@@ -920,6 +968,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q50',
@@ -937,6 +986,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q51',
@@ -959,6 +1009,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q52',
@@ -981,6 +1032,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q53',
@@ -998,6 +1050,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q54',
@@ -1020,6 +1073,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q55',
@@ -1042,6 +1096,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
 
   // SECTION 3: AIDS and Cancer (Questions 56-80)
@@ -1061,6 +1116,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 6,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q57',
@@ -1078,6 +1134,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 6,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q58',
@@ -1095,6 +1152,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q59',
@@ -1112,6 +1170,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q60',
@@ -1129,6 +1188,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q61',
@@ -1151,6 +1211,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q62',
@@ -1173,6 +1234,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q63',
@@ -1190,6 +1252,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q64',
@@ -1212,6 +1275,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q65',
@@ -1229,6 +1293,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q66',
@@ -1251,6 +1316,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q67',
@@ -1273,6 +1339,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q68',
@@ -1295,6 +1362,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q69',
@@ -1312,6 +1380,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q70',
@@ -1334,6 +1403,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q71',
@@ -1351,6 +1421,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q72',
@@ -1368,6 +1439,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q73',
@@ -1384,6 +1456,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q74',
@@ -1406,6 +1479,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q75',
@@ -1423,6 +1497,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q76',
@@ -1440,6 +1515,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q77',
@@ -1457,6 +1533,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q78',
@@ -1479,6 +1556,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q79',
@@ -1501,6 +1579,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q80',
@@ -1518,6 +1597,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
 
   // SECTION 4: Drugs and Alcohol Abuse (Questions 81-100)
@@ -1537,6 +1617,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q82',
@@ -1554,6 +1635,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q83',
@@ -1571,6 +1653,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q84',
@@ -1588,6 +1671,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q85',
@@ -1605,6 +1689,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q86',
@@ -1627,6 +1712,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q87',
@@ -1644,6 +1730,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q88',
@@ -1661,6 +1748,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q89',
@@ -1683,6 +1771,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q90',
@@ -1700,6 +1789,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q91',
@@ -1717,6 +1807,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q92',
@@ -1734,6 +1825,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q93',
@@ -1756,6 +1848,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q94',
@@ -1778,6 +1871,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q95',
@@ -1800,6 +1894,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q96',
@@ -1822,6 +1917,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q97',
@@ -1844,6 +1940,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q98',
@@ -1861,6 +1958,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q99',
@@ -1878,6 +1976,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-8-q100',
@@ -1900,6 +1999,7 @@ export const humanHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
 ]
 

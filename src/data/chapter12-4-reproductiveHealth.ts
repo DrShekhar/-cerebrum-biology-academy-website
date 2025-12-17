@@ -23,6 +23,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q2',
@@ -41,6 +42,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q3',
@@ -64,6 +66,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q4',
@@ -86,6 +89,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q5',
@@ -108,6 +112,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 6,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q6',
@@ -130,6 +135,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q7',
@@ -147,6 +153,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q8',
@@ -164,6 +171,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q9',
@@ -186,6 +194,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 45,
     previousYearFrequency: 2,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q10',
@@ -208,6 +217,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q11',
@@ -226,6 +236,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Analyze',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q12',
@@ -248,6 +259,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q13',
@@ -265,6 +277,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 6,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q14',
@@ -282,6 +295,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q15',
@@ -304,6 +318,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q16',
@@ -321,6 +336,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q17',
@@ -343,6 +359,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q18',
@@ -361,6 +378,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q19',
@@ -378,6 +396,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q20',
@@ -400,6 +419,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
 
   // SECTION 2: Population Explosion and Birth Control (Questions 21-45)
@@ -419,6 +439,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q22',
@@ -436,6 +457,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 2,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q23',
@@ -458,6 +480,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Analyze',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q24',
@@ -480,6 +503,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q25',
@@ -497,6 +521,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q26',
@@ -515,6 +540,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 6,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q27',
@@ -532,6 +558,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q28',
@@ -554,6 +581,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q29',
@@ -571,6 +599,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 45,
     previousYearFrequency: 6,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q30',
@@ -588,6 +617,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q31',
@@ -605,6 +635,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q32',
@@ -627,6 +658,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q33',
@@ -644,6 +676,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q34',
@@ -666,6 +699,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 6,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q35',
@@ -688,6 +722,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q36',
@@ -710,6 +745,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 7,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q37',
@@ -727,6 +763,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q38',
@@ -744,6 +781,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q39',
@@ -766,6 +804,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q40',
@@ -783,6 +822,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q41',
@@ -805,6 +845,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q42',
@@ -822,6 +863,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 6,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q43',
@@ -839,6 +881,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q44',
@@ -856,6 +899,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q45',
@@ -878,6 +922,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
 
   // SECTION 3: Sexually Transmitted Infections (Questions 46-65)
@@ -902,6 +947,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q47',
@@ -919,6 +965,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q48',
@@ -936,6 +983,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q49',
@@ -958,6 +1006,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 6,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q50',
@@ -975,6 +1024,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q51',
@@ -997,6 +1047,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q52',
@@ -1014,6 +1065,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q53',
@@ -1036,6 +1088,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q54',
@@ -1054,6 +1107,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q55',
@@ -1076,6 +1130,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q56',
@@ -1098,6 +1153,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q57',
@@ -1121,6 +1177,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q58',
@@ -1138,6 +1195,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q59',
@@ -1155,6 +1213,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q60',
@@ -1177,6 +1236,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q61',
@@ -1194,6 +1254,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q62',
@@ -1216,6 +1277,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q63',
@@ -1233,6 +1295,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q64',
@@ -1255,6 +1318,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q65',
@@ -1277,6 +1341,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
 
   // SECTION 4: Infertility (Questions 66-85)
@@ -1301,6 +1366,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q67',
@@ -1318,6 +1384,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q68',
@@ -1340,6 +1407,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q69',
@@ -1362,6 +1430,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 6,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q70',
@@ -1379,6 +1448,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q71',
@@ -1401,6 +1471,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 6,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q72',
@@ -1423,6 +1494,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q73',
@@ -1445,6 +1517,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q74',
@@ -1467,6 +1540,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q75',
@@ -1489,6 +1563,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q76',
@@ -1511,6 +1586,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q77',
@@ -1533,6 +1609,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q78',
@@ -1551,6 +1628,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Analyze',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q79',
@@ -1568,6 +1646,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q80',
@@ -1585,6 +1664,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q81',
@@ -1602,6 +1682,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q82',
@@ -1624,6 +1705,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q83',
@@ -1641,6 +1723,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q84',
@@ -1658,6 +1741,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Apply',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q85',
@@ -1680,6 +1764,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
 
   // SECTION 5: Additional Important Questions (Questions 86-100)
@@ -1699,6 +1784,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q87',
@@ -1716,6 +1802,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q88',
@@ -1733,6 +1820,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q89',
@@ -1755,6 +1843,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q90',
@@ -1772,6 +1861,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 6,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q91',
@@ -1789,6 +1879,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q92',
@@ -1811,6 +1902,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q93',
@@ -1828,6 +1920,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q94',
@@ -1845,6 +1938,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q95',
@@ -1862,6 +1956,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q96',
@@ -1879,6 +1974,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q97',
@@ -1901,6 +1997,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q98',
@@ -1923,6 +2020,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q99',
@@ -1940,6 +2038,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-4-q100',
@@ -1962,6 +2061,7 @@ export const reproductiveHealthQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
 ]
 

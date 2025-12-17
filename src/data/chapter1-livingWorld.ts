@@ -27,7 +27,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 2,
     conceptualLinks: ['Living characteristics', 'Consciousness', 'Response to stimuli'],
     timeEstimate: 60,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 2,
   },
   {
@@ -45,7 +45,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 3,
     conceptualLinks: ['Growth', 'Cell division', 'Living vs non-living'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 1,
   },
   {
@@ -63,7 +63,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Living characteristics', 'Growth', 'Non-living'],
     timeEstimate: 60,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 2,
   },
   {
@@ -86,7 +86,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Metabolism', 'In vitro', 'Living characteristics'],
     timeEstimate: 90,
-    bloomsLevel: 'Analysis',
+    bloomsLevel: 'Analyze',
     weightage: 3,
   },
   {
@@ -104,7 +104,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 2,
     conceptualLinks: ['Reproduction', 'Fragmentation', 'Asexual reproduction'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 1,
   },
   {
@@ -122,7 +122,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 6,
     conceptualLinks: ['Reproduction', 'Living characteristics', 'Sterility'],
     timeEstimate: 60,
-    bloomsLevel: 'Application',
+    bloomsLevel: 'Apply',
     weightage: 3,
   },
   {
@@ -140,7 +140,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Metabolism', 'Catabolism', 'Anabolism'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -163,7 +163,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 3,
     conceptualLinks: ['Metabolism', 'In vitro', 'Cell-free system'],
     timeEstimate: 90,
-    bloomsLevel: 'Analysis',
+    bloomsLevel: 'Analyze',
     weightage: 3,
   },
   {
@@ -186,7 +186,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Growth', 'Cell division', 'Plant growth'],
     timeEstimate: 60,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 2,
   },
   {
@@ -204,7 +204,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Cellular organization', 'Cell theory', 'Living characteristics'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -222,7 +222,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 7,
     conceptualLinks: ['Cellular organization', 'Living characteristics', 'Cell theory'],
     timeEstimate: 90,
-    bloomsLevel: 'Evaluation',
+    bloomsLevel: 'Evaluate',
     weightage: 4,
   },
   {
@@ -245,7 +245,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 3,
     conceptualLinks: ['Growth', 'Unicellular organisms', 'Cell division'],
     timeEstimate: 60,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 2,
   },
   {
@@ -263,7 +263,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 2,
     conceptualLinks: ['Irritability', 'Response to stimuli', 'Living characteristics'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 1,
   },
   {
@@ -281,7 +281,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Growth', 'Non-living', 'Crystal growth'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -299,7 +299,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Reproduction', 'Sterility', 'Hybrid'],
     timeEstimate: 60,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 2,
   },
   {
@@ -322,7 +322,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 6,
     conceptualLinks: ['Viruses', 'Living characteristics', 'Host cell'],
     timeEstimate: 60,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 3,
   },
   {
@@ -340,7 +340,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 3,
     conceptualLinks: ['Reproduction', 'Self-replication', 'Living characteristics'],
     timeEstimate: 60,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 2,
   },
   {
@@ -358,7 +358,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Asexual reproduction', 'Sexual reproduction', 'Syngamy'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -381,7 +381,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 3,
     conceptualLinks: ['Homeostasis', 'Internal environment', 'Regulation'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -399,7 +399,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 2,
     conceptualLinks: ['Metabolism', 'Anabolism', 'Catabolism'],
     timeEstimate: 45,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 1,
   },
   {
@@ -422,7 +422,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 2,
     conceptualLinks: ['Life span', 'Birth', 'Death'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 1,
   },
   {
@@ -440,7 +440,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Cellular respiration', 'Metabolism', 'Energy'],
     timeEstimate: 60,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 2,
   },
   {
@@ -458,7 +458,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 3,
     conceptualLinks: ['Metabolism', 'In vitro', 'Enzyme reactions'],
     timeEstimate: 60,
-    bloomsLevel: 'Application',
+    bloomsLevel: 'Apply',
     weightage: 2,
   },
   {
@@ -481,7 +481,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Reproduction', 'Living characteristics', 'Sterility'],
     timeEstimate: 75,
-    bloomsLevel: 'Analysis',
+    bloomsLevel: 'Analyze',
     weightage: 3,
   },
   {
@@ -499,7 +499,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Cellular organization', 'Cell theory', 'Living organisms'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
 
@@ -521,7 +521,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 3,
     conceptualLinks: ['Biodiversity', 'Species', 'Classification'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -539,7 +539,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Systematics', 'Evolution', 'Classification'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -562,7 +562,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 2,
     conceptualLinks: ['Systematics', 'Linnaeus', 'Etymology'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 1,
   },
   {
@@ -580,7 +580,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 3,
     conceptualLinks: ['Biodiversity', 'Hotspot', 'Western Ghats'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -603,7 +603,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 2,
     conceptualLinks: ['Classification', 'Diversity', 'Nomenclature'],
     timeEstimate: 45,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 1,
   },
   {
@@ -622,7 +622,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Taxonomy', 'Classification', 'Nomenclature'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -640,7 +640,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 3,
     conceptualLinks: ['Taxonomy', 'Characterization', 'Steps'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -658,7 +658,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 6,
     conceptualLinks: ['Linnaeus', 'Taxonomy', 'Binomial nomenclature'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -677,7 +677,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 2,
     conceptualLinks: ['Morphology', 'Anatomy', 'Structure'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 1,
   },
   {
@@ -695,7 +695,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Systematics', 'Evolution', 'Phylogeny'],
     timeEstimate: 60,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 2,
   },
   {
@@ -718,7 +718,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Biodiversity hotspot', 'Endemism', 'Species richness'],
     timeEstimate: 60,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 3,
   },
   {
@@ -736,7 +736,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 3,
     conceptualLinks: ['Nomenclature', 'Naming', 'Taxonomy'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -759,7 +759,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 2,
     conceptualLinks: ['Taxonomy', 'Applied biology', 'Practical utility'],
     timeEstimate: 60,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 2,
   },
   {
@@ -777,7 +777,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 3,
     conceptualLinks: ['New Systematics', 'Julian Huxley', 'Evolution'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -795,7 +795,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Biodiversity hotspots', 'India', 'Conservation'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
 
@@ -817,7 +817,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 8,
     conceptualLinks: ['Species', 'Classification', 'Taxonomy'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 4,
   },
   {
@@ -840,7 +840,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 7,
     conceptualLinks: ['Taxonomic hierarchy', 'Classification', 'Categories'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 4,
   },
   {
@@ -858,7 +858,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Genus', 'Species', 'Taxonomy'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -876,7 +876,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Family', 'Genus', 'Taxonomy'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -894,7 +894,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 3,
     conceptualLinks: ['Order', 'Taxonomic hierarchy', 'Classification'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -912,7 +912,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Phylum', 'Division', 'Animals', 'Plants'],
     timeEstimate: 60,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 3,
   },
   {
@@ -930,7 +930,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 6,
     conceptualLinks: ['Division', 'Phylum', 'Plants'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -948,7 +948,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Kingdom', 'Taxonomic hierarchy', 'Classification'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -966,7 +966,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 6,
     conceptualLinks: ['Taxonomic hierarchy', 'Common characters', 'Classification'],
     timeEstimate: 60,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 3,
   },
   {
@@ -984,7 +984,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Taxon', 'Taxa', 'Taxonomic category'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -1002,7 +1002,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Family', 'Suffix', 'Nomenclature'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -1020,7 +1020,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Order', 'Suffix', 'Nomenclature'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -1038,7 +1038,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Poaceae', 'Cereals', 'Family'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -1056,7 +1056,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 6,
     conceptualLinks: ['Solanaceae', 'Solanum', 'Family'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -1074,7 +1074,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 7,
     conceptualLinks: ['Panthera', 'Big cats', 'Genus'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 4,
   },
   {
@@ -1092,7 +1092,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Carnivora', 'Felidae', 'Canidae', 'Order'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -1110,7 +1110,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Genus', 'Panthera', 'Species'],
     timeEstimate: 45,
-    bloomsLevel: 'Application',
+    bloomsLevel: 'Apply',
     weightage: 3,
   },
   {
@@ -1128,7 +1128,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 3,
     conceptualLinks: ['Insecta', 'Class', 'Arthropoda'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -1146,7 +1146,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Kingdom', 'Taxonomic hierarchy', 'Individuals'],
     timeEstimate: 60,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 2,
   },
   {
@@ -1164,7 +1164,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 3,
     conceptualLinks: ['Monotypic genus', 'Species', 'Homo'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -1182,7 +1182,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Mammalia', 'Class', 'Humans'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -1200,7 +1200,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 3,
     conceptualLinks: ['Kingdom', 'Inclusive', 'Taxonomic hierarchy'],
     timeEstimate: 45,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 2,
   },
   {
@@ -1218,7 +1218,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Family suffix', 'Animals', 'Nomenclature'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -1241,7 +1241,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 3,
     conceptualLinks: ['Canidae', 'Common ancestry', 'Classification'],
     timeEstimate: 60,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 2,
   },
   {
@@ -1259,7 +1259,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 3,
     conceptualLinks: ['Taxonomic categories', 'Variety', 'Hierarchy'],
     timeEstimate: 60,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 2,
   },
 
@@ -1281,7 +1281,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 8,
     conceptualLinks: ['Linnaeus', 'Binomial nomenclature', 'Scientific naming'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 4,
   },
   {
@@ -1299,7 +1299,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 6,
     conceptualLinks: ['Genus name', 'Binomial nomenclature', 'Scientific name'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -1322,7 +1322,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Binomial nomenclature', 'Rules', 'Italicization'],
     timeEstimate: 60,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 3,
   },
   {
@@ -1340,7 +1340,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Mango', 'Scientific name', 'Mangifera'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -1358,7 +1358,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 7,
     conceptualLinks: ['Homo sapiens', 'Humans', 'Scientific name'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 4,
   },
   {
@@ -1381,7 +1381,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 6,
     conceptualLinks: ['ICBN', 'Plant nomenclature', 'Rules'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -1404,7 +1404,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['ICZN', 'Animal nomenclature', 'Rules'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -1422,7 +1422,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Latin', 'Scientific names', 'Language'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -1440,7 +1440,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 6,
     conceptualLinks: ['Scientific name', 'Format', 'Rules'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -1458,7 +1458,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Handwritten names', 'Underlining', 'Rules'],
     timeEstimate: 60,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 2,
   },
   {
@@ -1481,7 +1481,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 3,
     conceptualLinks: ['Author name', 'Nomenclature', 'Format'],
     timeEstimate: 60,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 2,
   },
   {
@@ -1504,7 +1504,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Nomenclature rules', 'Scientific name', 'Universality'],
     timeEstimate: 45,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 2,
   },
   {
@@ -1527,7 +1527,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Tautonym', 'Nomenclature', 'Scientific names'],
     timeEstimate: 75,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 2,
   },
   {
@@ -1550,7 +1550,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 3,
     conceptualLinks: ['Priority', 'Nomenclature', 'Rules'],
     timeEstimate: 60,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 2,
   },
   {
@@ -1573,7 +1573,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 3,
     conceptualLinks: ['Synonyms', 'Nomenclature', 'Valid names'],
     timeEstimate: 60,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 2,
   },
   {
@@ -1591,7 +1591,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Scientific name', 'Format', 'Correct writing'],
     timeEstimate: 45,
-    bloomsLevel: 'Application',
+    bloomsLevel: 'Apply',
     weightage: 3,
   },
   {
@@ -1614,7 +1614,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Type specimen', 'Holotype', 'Species description'],
     timeEstimate: 60,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 2,
   },
   {
@@ -1632,7 +1632,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Wheat', 'Scientific name', 'Triticum'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -1655,7 +1655,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 3,
     conceptualLinks: ['Trinomial nomenclature', 'Subspecies', 'Three names'],
     timeEstimate: 60,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 2,
   },
   {
@@ -1673,7 +1673,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['1753', 'Species Plantarum', 'Starting year'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
 
@@ -1700,7 +1700,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 6,
     conceptualLinks: ['Herbarium', 'Plant specimens', 'Preservation'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -1718,7 +1718,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Kew Gardens', 'Largest herbarium', 'London'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -1741,7 +1741,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Botanical garden', 'Living plants', 'Conservation'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -1759,7 +1759,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Indian Botanical Garden', 'Kolkata', 'Howrah'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -1782,7 +1782,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 3,
     conceptualLinks: ['Museum', 'Specimens', 'Preservation'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -1805,7 +1805,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Zoo', 'Ex-situ conservation', 'Wildlife'],
     timeEstimate: 60,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 2,
   },
   {
@@ -1828,7 +1828,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Key', 'Identification', 'Taxonomy'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -1846,7 +1846,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Dichotomous key', 'Identification', 'Contrasting characters'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -1869,7 +1869,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Flora', 'Plants', 'Description'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -1892,7 +1892,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Fauna', 'Animals', 'Description'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -1915,7 +1915,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 3,
     conceptualLinks: ['Manuals', 'Identification', 'Reference'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -1938,7 +1938,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Monograph', 'Single taxon', 'Detailed account'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -1962,7 +1962,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 3,
     conceptualLinks: ['Catalogue', 'Alphabetical list', 'Species'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -1980,7 +1980,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 3,
     conceptualLinks: ['Taxonomic aids', 'Classification', 'Identification'],
     timeEstimate: 45,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 2,
   },
   {
@@ -1998,7 +1998,7 @@ export const livingWorldQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Formalin', 'Preservation', 'Museum specimens'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
 ]

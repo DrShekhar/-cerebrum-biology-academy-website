@@ -24,6 +24,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 6,
+    weightage: 2,
   },
   {
     id: 'eco-002',
@@ -41,6 +42,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 30,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'eco-003',
@@ -58,6 +60,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'eco-004',
@@ -80,6 +83,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'eco-005',
@@ -102,6 +106,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 2,
+    weightage: 2,
   },
   {
     id: 'eco-006',
@@ -124,6 +129,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'eco-007',
@@ -141,6 +147,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 30,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'eco-008',
@@ -158,6 +165,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'eco-009',
@@ -180,6 +188,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'eco-010',
@@ -202,6 +211,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 45,
     previousYearFrequency: 6,
+    weightage: 2,
   },
   {
     id: 'eco-011',
@@ -219,6 +229,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'eco-012',
@@ -236,6 +247,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Apply',
     timeEstimate: 75,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'eco-013',
@@ -258,6 +270,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'eco-014',
@@ -280,6 +293,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'eco-015',
@@ -302,6 +316,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
 
   // SECTION 2: Productivity (Questions 16-30)
@@ -326,6 +341,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 6,
+    weightage: 2,
   },
   {
     id: 'eco-017',
@@ -348,6 +364,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 7,
+    weightage: 2,
   },
   {
     id: 'eco-018',
@@ -365,6 +382,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'eco-019',
@@ -387,6 +405,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'eco-020',
@@ -409,6 +428,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Analyze',
     timeEstimate: 75,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'eco-021',
@@ -431,6 +451,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Analyze',
     timeEstimate: 75,
     previousYearFrequency: 2,
+    weightage: 2,
   },
   {
     id: 'eco-022',
@@ -453,6 +474,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'eco-023',
@@ -471,6 +493,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'eco-024',
@@ -493,6 +516,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Analyze',
     timeEstimate: 75,
     previousYearFrequency: 2,
+    weightage: 2,
   },
   {
     id: 'eco-025',
@@ -515,6 +539,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Analyze',
     timeEstimate: 90,
     previousYearFrequency: 2,
+    weightage: 2,
   },
   {
     id: 'eco-026',
@@ -537,6 +562,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'eco-027',
@@ -559,6 +585,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'eco-028',
@@ -582,6 +609,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 2,
+    weightage: 2,
   },
   {
     id: 'eco-029',
@@ -604,6 +632,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Analyze',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'eco-030',
@@ -626,6 +655,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 75,
     previousYearFrequency: 3,
+    weightage: 2,
   },
 
   // SECTION 3: Decomposition (Questions 31-45)
@@ -645,6 +675,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'eco-032',
@@ -668,6 +699,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 6,
+    weightage: 2,
   },
   {
     id: 'eco-033',
@@ -685,6 +717,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'eco-034',
@@ -707,6 +740,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'eco-035',
@@ -729,6 +763,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'eco-036',
@@ -751,6 +786,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'eco-037',
@@ -773,6 +809,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'eco-038',
@@ -795,6 +832,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Analyze',
     timeEstimate: 75,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'eco-039',
@@ -817,6 +855,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'eco-040',
@@ -839,6 +878,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Apply',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'eco-041',
@@ -861,6 +901,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'eco-042',
@@ -883,6 +924,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'eco-043',
@@ -905,6 +947,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Analyze',
     timeEstimate: 75,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'eco-044',
@@ -922,6 +965,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 2,
+    weightage: 2,
   },
   {
     id: 'eco-045',
@@ -944,6 +988,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Apply',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
 
   // SECTION 4: Energy Flow (Questions 46-60)
@@ -963,6 +1008,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 7,
+    weightage: 2,
   },
   {
     id: 'eco-047',
@@ -980,6 +1026,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 30,
     previousYearFrequency: 6,
+    weightage: 2,
   },
   {
     id: 'eco-048',
@@ -998,6 +1045,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Apply',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'eco-049',
@@ -1020,6 +1068,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'eco-050',
@@ -1042,6 +1091,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Analyze',
     timeEstimate: 75,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'eco-051',
@@ -1064,6 +1114,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'eco-052',
@@ -1086,6 +1137,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'eco-053',
@@ -1103,6 +1155,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Apply',
     timeEstimate: 75,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'eco-054',
@@ -1120,6 +1173,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Apply',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'eco-055',
@@ -1142,6 +1196,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 75,
     previousYearFrequency: 2,
+    weightage: 2,
   },
   {
     id: 'eco-056',
@@ -1164,6 +1219,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Analyze',
     timeEstimate: 75,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'eco-057',
@@ -1181,6 +1237,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 30,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'eco-058',
@@ -1203,6 +1260,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'eco-059',
@@ -1220,6 +1278,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 2,
+    weightage: 2,
   },
   {
     id: 'eco-060',
@@ -1242,6 +1301,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
 
   // SECTION 5: Ecological Pyramids (Questions 61-75)
@@ -1261,6 +1321,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 30,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'eco-062',
@@ -1283,6 +1344,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 7,
+    weightage: 2,
   },
   {
     id: 'eco-063',
@@ -1300,6 +1362,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'eco-064',
@@ -1317,6 +1380,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'eco-065',
@@ -1340,6 +1404,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Analyze',
     timeEstimate: 75,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'eco-066',
@@ -1362,6 +1427,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Analyze',
     timeEstimate: 75,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'eco-067',
@@ -1384,6 +1450,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'eco-068',
@@ -1401,6 +1468,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'eco-069',
@@ -1418,6 +1486,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Evaluate',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'eco-070',
@@ -1440,6 +1509,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Analyze',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'eco-071',
@@ -1457,6 +1527,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 30,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'eco-072',
@@ -1480,6 +1551,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Analyze',
     timeEstimate: 75,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'eco-073',
@@ -1502,6 +1574,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Analyze',
     timeEstimate: 75,
     previousYearFrequency: 2,
+    weightage: 2,
   },
   {
     id: 'eco-074',
@@ -1519,6 +1592,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 2,
+    weightage: 2,
   },
   {
     id: 'eco-075',
@@ -1536,6 +1610,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 2,
+    weightage: 2,
   },
 
   // SECTION 6: Nutrient Cycling (Questions 76-90)
@@ -1555,6 +1630,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 30,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'eco-077',
@@ -1572,6 +1648,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'eco-078',
@@ -1594,6 +1671,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'eco-079',
@@ -1611,6 +1689,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 30,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'eco-080',
@@ -1628,6 +1707,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 30,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'eco-081',
@@ -1645,6 +1725,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'eco-082',
@@ -1662,6 +1743,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 30,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'eco-083',
@@ -1679,6 +1761,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'eco-084',
@@ -1701,6 +1784,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'eco-085',
@@ -1723,6 +1807,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'eco-086',
@@ -1745,6 +1830,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'eco-087',
@@ -1767,6 +1853,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'eco-088',
@@ -1784,6 +1871,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 30,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'eco-089',
@@ -1807,6 +1895,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Analyze',
     timeEstimate: 75,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'eco-090',
@@ -1829,6 +1918,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
 
   // SECTION 7: Ecological Succession and Ecosystem Services (Questions 91-100)
@@ -1853,6 +1943,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'eco-092',
@@ -1875,6 +1966,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'eco-093',
@@ -1892,6 +1984,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 30,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'eco-094',
@@ -1914,6 +2007,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'eco-095',
@@ -1931,6 +2025,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 30,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'eco-096',
@@ -1948,6 +2043,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'eco-097',
@@ -1965,6 +2061,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'eco-098',
@@ -1987,6 +2084,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'eco-099',
@@ -2009,6 +2107,7 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'eco-100',
@@ -2032,5 +2131,6 @@ export const ecosystemQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 2,
+    weightage: 2,
   },
 ]

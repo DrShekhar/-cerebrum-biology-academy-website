@@ -3,7 +3,6 @@
 import { useState, useEffect, useCallback, useRef } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import { motion, AnimatePresence } from 'framer-motion'
 import { useToast } from '@/components/ui/Toast'
 import {
   BookOpen,
@@ -18,6 +17,9 @@ import {
   Users,
   Send,
   AlertTriangle,
+  Focus,
+  Maximize2,
+  Minimize2,
 } from 'lucide-react'
 import { QuestionCard } from '@/components/mcq/QuestionCard'
 import { StatsPanel, StatsPanelCompact } from '@/components/mcq/StatsPanel'
@@ -70,6 +72,7 @@ export default function NEETBiologyMCQPage() {
   const [leadCaptureVariant, setLeadCaptureVariant] = useState<'soft' | 'hard'>('soft')
   const [hasLeadCaptured, setHasLeadCaptured] = useState(false)
   const [showResetConfirm, setShowResetConfirm] = useState(false)
+  const [focusMode, setFocusMode] = useState(false)
 
   // Initialize session and load user data
   useEffect(() => {
@@ -474,9 +477,9 @@ export default function NEETBiologyMCQPage() {
             </div>
           )}
 
-          <div className="flex flex-col lg:flex-row gap-8">
-            {/* Main Content */}
-            <div className="flex-1">
+          <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
+            {/* Main Content - Centered */}
+            <div className="flex-1 flex flex-col items-center">
               {!quizStarted ? (
                 <>
                   {/* Filter Section */}
@@ -539,7 +542,7 @@ export default function NEETBiologyMCQPage() {
               ) : (
                 <>
                   {/* Quiz Progress Bar - Compact */}
-                  <div className="bg-white rounded-lg shadow-sm p-3 mb-3 max-w-2xl">
+                  <div className="bg-white rounded-lg shadow-sm p-3 mb-4 w-full max-w-3xl">
                     <div className="flex items-center justify-between mb-1.5">
                       <div className="flex items-center gap-3">
                         <span className="text-xs font-medium text-gray-700">
@@ -554,13 +557,36 @@ export default function NEETBiologyMCQPage() {
                           <span className="text-gray-400">({sessionAccuracy}%)</span>
                         </div>
                       </div>
-                      <button
-                        onClick={handleResetClick}
-                        className="flex items-center gap-1 text-gray-500 hover:text-gray-700 text-xs"
-                      >
-                        <RefreshCw className="w-3 h-3" />
-                        Reset
-                      </button>
+                      <div className="flex items-center gap-2">
+                        <button
+                          onClick={() => setFocusMode(!focusMode)}
+                          className={`flex items-center gap-1 px-2 py-1 rounded text-xs transition-colors ${
+                            focusMode
+                              ? 'bg-purple-100 text-purple-700'
+                              : 'text-gray-500 hover:text-gray-700 hover:bg-gray-100'
+                          }`}
+                          title={focusMode ? 'Exit Focus Mode' : 'Enter Focus Mode'}
+                        >
+                          {focusMode ? (
+                            <>
+                              <Minimize2 className="w-3 h-3" />
+                              Exit Focus
+                            </>
+                          ) : (
+                            <>
+                              <Maximize2 className="w-3 h-3" />
+                              Focus
+                            </>
+                          )}
+                        </button>
+                        <button
+                          onClick={handleResetClick}
+                          className="flex items-center gap-1 text-gray-500 hover:text-gray-700 text-xs"
+                        >
+                          <RefreshCw className="w-3 h-3" />
+                          Reset
+                        </button>
+                      </div>
                     </div>
                     {/* Progress bar */}
                     <div className="h-1.5 bg-gray-200 rounded-full overflow-hidden">
@@ -573,8 +599,8 @@ export default function NEETBiologyMCQPage() {
                     </div>
                   </div>
 
-                  {/* Question Display - Fixed container to prevent layout dancing */}
-                  <div className="max-w-2xl">
+                  {/* Question Display - Centered and wider */}
+                  <div className="w-full max-w-3xl">
                     {isLoadingQuestions ? (
                       <div className="bg-white rounded-xl shadow-lg p-6 text-center">
                         <div className="w-10 h-10 border-4 border-green-500 border-t-transparent rounded-full animate-spin mx-auto mb-3"></div>
@@ -609,30 +635,22 @@ export default function NEETBiologyMCQPage() {
                         </button>
                       </div>
                     ) : currentQuestion ? (
-                      <AnimatePresence mode="wait">
-                        <motion.div
-                          key={currentQuestion.id}
-                          initial={{ opacity: 0, x: 10 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          exit={{ opacity: 0, x: -10 }}
-                          transition={{ duration: 0.15 }}
-                        >
-                          <QuestionCard
-                            question={currentQuestion}
-                            questionNumber={sessionStats.questionsAttempted + 1}
-                            onAnswer={handleAnswer}
-                            onSkip={handleSkipQuestion}
-                            showExplanation={hasLeadCaptured}
-                            isProtected={true}
-                          />
-                        </motion.div>
-                      </AnimatePresence>
+                      <div key={currentQuestion.id} className="animate-fade-in-up">
+                        <QuestionCard
+                          question={currentQuestion}
+                          questionNumber={sessionStats.questionsAttempted + 1}
+                          onAnswer={handleAnswer}
+                          onSkip={handleSkipQuestion}
+                          showExplanation={hasLeadCaptured}
+                          isProtected={true}
+                        />
+                      </div>
                     ) : null}
                   </div>
 
-                  {/* Next Question Button - Compact */}
+                  {/* Next Question Button - Centered */}
                   {currentQuestion && answeredIds.has(currentQuestion.id) && (
-                    <div className="mt-3 max-w-2xl">
+                    <div className="mt-4 w-full max-w-3xl">
                       <button
                         onClick={handleNextQuestion}
                         disabled={isLoadingQuestions}
@@ -653,30 +671,32 @@ export default function NEETBiologyMCQPage() {
                     </div>
                   )}
 
-                  {/* Quick Actions - Compact */}
-                  <div className="mt-4 flex flex-wrap gap-2 max-w-2xl">
-                    <button
-                      onClick={() => router.push('/neet-biology-mcq/leaderboard')}
-                      className="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-lg shadow-sm text-xs font-medium text-gray-700 hover:bg-gray-50 transition-all"
-                    >
-                      <Users className="w-3.5 h-3.5 text-blue-500" />
-                      Leaderboard
-                    </button>
-                    <button
-                      onClick={() => router.push('/neet-biology-mcq/contribute')}
-                      className="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-lg shadow-sm text-xs font-medium text-gray-700 hover:bg-gray-50 transition-all"
-                    >
-                      <Send className="w-3.5 h-3.5 text-green-500" />
-                      Submit Question
-                    </button>
-                    <button
-                      onClick={() => router.push('/neet-biology-mcq/daily-challenge')}
-                      className="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-lg shadow-sm text-xs font-medium text-gray-700 hover:bg-gray-50 transition-all"
-                    >
-                      <Target className="w-3.5 h-3.5 text-amber-500" />
-                      Daily Challenge
-                    </button>
-                  </div>
+                  {/* Quick Actions - Hidden in Focus Mode */}
+                  {!focusMode && (
+                    <div className="mt-4 flex flex-wrap justify-center gap-2 w-full max-w-3xl">
+                      <button
+                        onClick={() => router.push('/neet-biology-mcq/leaderboard')}
+                        className="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-lg shadow-sm text-xs font-medium text-gray-700 hover:bg-gray-50 transition-all"
+                      >
+                        <Users className="w-3.5 h-3.5 text-blue-500" />
+                        Leaderboard
+                      </button>
+                      <button
+                        onClick={() => router.push('/neet-biology-mcq/contribute')}
+                        className="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-lg shadow-sm text-xs font-medium text-gray-700 hover:bg-gray-50 transition-all"
+                      >
+                        <Send className="w-3.5 h-3.5 text-green-500" />
+                        Submit Question
+                      </button>
+                      <button
+                        onClick={() => router.push('/neet-biology-mcq/daily-challenge')}
+                        className="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-lg shadow-sm text-xs font-medium text-gray-700 hover:bg-gray-50 transition-all"
+                      >
+                        <Target className="w-3.5 h-3.5 text-amber-500" />
+                        Daily Challenge
+                      </button>
+                    </div>
+                  )}
                 </>
               )}
 
@@ -716,9 +736,9 @@ export default function NEETBiologyMCQPage() {
               )}
             </div>
 
-            {/* Sidebar - Stats Panel (Desktop) - Fixed width */}
-            {quizStarted && (
-              <div className="hidden lg:block w-64 flex-shrink-0">
+            {/* Sidebar - Stats Panel (Desktop) - Hidden in Focus Mode */}
+            {quizStarted && !focusMode && (
+              <div className="hidden lg:block w-64 flex-shrink-0 transition-all duration-300">
                 <StatsPanel
                   totalXp={userStats?.totalXp || sessionStats.xpEarned}
                   currentLevel={userStats?.currentLevel || 1}
@@ -780,51 +800,43 @@ export default function NEETBiologyMCQPage() {
         />
 
         {/* Reset Confirmation Dialog */}
-        <AnimatePresence>
-          {showResetConfirm && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4"
-              onClick={() => setShowResetConfirm(false)}
+        {showResetConfirm && (
+          <div
+            className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4 animate-fade-in"
+            onClick={() => setShowResetConfirm(false)}
+          >
+            <div
+              className="bg-white rounded-2xl p-6 max-w-sm w-full shadow-xl animate-scale-in"
+              onClick={(e) => e.stopPropagation()}
             >
-              <motion.div
-                initial={{ scale: 0.95, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0.95, opacity: 0 }}
-                className="bg-white rounded-2xl p-6 max-w-sm w-full shadow-xl"
-                onClick={(e) => e.stopPropagation()}
-              >
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <AlertTriangle className="w-6 h-6 text-amber-600" />
-                  </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">Reset Quiz?</h3>
-                  <p className="text-gray-600 text-sm mb-6">
-                    You&apos;ve answered {sessionStats.questionsAttempted} questions with{' '}
-                    {sessionStats.correctAnswers} correct ({sessionAccuracy}% accuracy). Your
-                    progress will be lost.
-                  </p>
-                  <div className="flex gap-3">
-                    <button
-                      onClick={() => setShowResetConfirm(false)}
-                      className="flex-1 py-2 px-4 border border-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-50 transition-colors"
-                    >
-                      Cancel
-                    </button>
-                    <button
-                      onClick={handleResetQuiz}
-                      className="flex-1 py-2 px-4 bg-red-600 text-white rounded-lg font-medium hover:bg-red-700 transition-colors"
-                    >
-                      Reset
-                    </button>
-                  </div>
+              <div className="text-center">
+                <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <AlertTriangle className="w-6 h-6 text-amber-600" />
                 </div>
-              </motion.div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Reset Quiz?</h3>
+                <p className="text-gray-600 text-sm mb-6">
+                  You&apos;ve answered {sessionStats.questionsAttempted} questions with{' '}
+                  {sessionStats.correctAnswers} correct ({sessionAccuracy}% accuracy). Your progress
+                  will be lost.
+                </p>
+                <div className="flex gap-3">
+                  <button
+                    onClick={() => setShowResetConfirm(false)}
+                    className="flex-1 py-2 px-4 border border-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-50 transition-colors"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    onClick={handleResetQuiz}
+                    className="flex-1 py-2 px-4 bg-red-600 text-white rounded-lg font-medium hover:bg-red-700 transition-colors"
+                  >
+                    Reset
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </ProtectedContent>
   )

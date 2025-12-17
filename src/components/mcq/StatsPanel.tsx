@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import { useRouter } from 'next/navigation'
 import { LEVEL_CONFIG } from '@/lib/mcq/types'
 
@@ -60,11 +59,9 @@ export function StatsPanel({
               <span>{Math.round(levelProgress)}%</span>
             </div>
             <div className="h-1.5 bg-gray-200 rounded-full overflow-hidden">
-              <motion.div
-                initial={{ width: 0 }}
-                animate={{ width: `${levelProgress}%` }}
-                transition={{ duration: 0.5, ease: 'easeOut' }}
-                className="h-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"
+              <div
+                className="h-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-full transition-all duration-500 ease-out"
+                style={{ width: `${levelProgress}%` }}
               />
             </div>
             <p className="text-[10px] text-gray-400 mt-0.5">
@@ -128,19 +125,19 @@ export function StatsPanel({
         </div>
       )}
 
-      {/* Quick Actions - Compact */}
-      <div className="mt-4 space-y-1.5">
+      {/* Quick Actions - Consistent button style */}
+      <div className="mt-4 space-y-2">
         <button
           onClick={() => router.push('/neet-biology-mcq/leaderboard')}
-          className="w-full py-1.5 px-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors text-xs"
+          className="w-full py-2 px-3 bg-white border-2 border-blue-500 text-blue-600 rounded-lg font-medium hover:bg-blue-50 transition-colors text-xs flex items-center justify-center gap-2"
         >
-          View Leaderboard
+          <span>🏆</span> View Leaderboard
         </button>
         <button
           onClick={() => router.push('/neet-biology-mcq/daily-challenge')}
-          className="w-full py-1.5 px-3 bg-gray-100 text-gray-700 rounded-lg font-medium hover:bg-gray-200 transition-colors text-xs"
+          className="w-full py-2 px-3 bg-white border-2 border-amber-500 text-amber-600 rounded-lg font-medium hover:bg-amber-50 transition-colors text-xs flex items-center justify-center gap-2"
         >
-          Daily Challenge
+          <span>🎯</span> Daily Challenge
         </button>
       </div>
     </div>

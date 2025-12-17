@@ -141,20 +141,29 @@ export function requestIdleCallbackPolyfill(
   callback: IdleRequestCallback,
   options?: IdleRequestOptions
 ): number {
-  if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
+  if (typeof window === 'undefined') {
+    return 0
+  }
+  if ('requestIdleCallback' in window) {
     return window.requestIdleCallback(callback, options)
   }
-  return window.setTimeout(() => callback({ didTimeout: false, timeRemaining: () => 50 }), 1)
+  return setTimeout(
+    () => callback({ didTimeout: false, timeRemaining: () => 50 }),
+    1
+  ) as unknown as number
 }
 
 /**
  * Cancel idle callback polyfill
  */
 export function cancelIdleCallbackPolyfill(handle: number): void {
-  if (typeof window !== 'undefined' && 'cancelIdleCallback' in window) {
+  if (typeof window === 'undefined') {
+    return
+  }
+  if ('cancelIdleCallback' in window) {
     window.cancelIdleCallback(handle)
   } else {
-    window.clearTimeout(handle)
+    clearTimeout(handle)
   }
 }
 

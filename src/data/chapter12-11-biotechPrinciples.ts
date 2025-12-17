@@ -23,6 +23,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q2',
@@ -45,6 +46,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q3',
@@ -67,6 +69,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q4',
@@ -89,6 +92,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q5',
@@ -106,6 +110,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q6',
@@ -128,6 +133,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q7',
@@ -145,6 +151,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q8',
@@ -162,6 +169,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q9',
@@ -184,6 +192,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q10',
@@ -201,6 +210,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
 
   // RESTRICTION ENZYMES (Questions 11-25)
@@ -220,6 +230,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 6,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q12',
@@ -237,6 +248,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q13',
@@ -259,6 +271,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q14',
@@ -276,6 +289,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q15',
@@ -293,6 +307,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q16',
@@ -310,6 +325,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q17',
@@ -332,6 +348,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 6,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q18',
@@ -354,6 +371,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q19',
@@ -371,6 +389,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 90,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q20',
@@ -393,6 +412,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q21',
@@ -410,6 +430,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q22',
@@ -427,6 +448,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q23',
@@ -449,6 +471,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q24',
@@ -466,6 +489,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 90,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q25',
@@ -483,6 +507,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 90,
     previousYearFrequency: 3,
+    weightage: 2,
   },
 
   // CLONING VECTORS (Questions 26-40)
@@ -507,6 +532,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q27',
@@ -524,6 +550,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q28',
@@ -546,6 +573,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q29',
@@ -563,6 +591,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q30',
@@ -580,6 +609,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q31',
@@ -602,6 +632,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q32',
@@ -624,6 +655,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q33',
@@ -646,6 +678,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q34',
@@ -668,6 +701,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q35',
@@ -690,6 +724,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q36',
@@ -707,6 +742,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q37',
@@ -724,6 +760,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q38',
@@ -746,6 +783,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q39',
@@ -763,6 +801,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q40',
@@ -785,6 +824,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
 
   // HOST ORGANISMS AND COMPETENT CELLS (Questions 41-50)
@@ -804,6 +844,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q42',
@@ -826,6 +867,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q43',
@@ -843,6 +885,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q44',
@@ -865,6 +908,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q45',
@@ -887,6 +931,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q46',
@@ -909,6 +954,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q47',
@@ -926,6 +972,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q48',
@@ -948,6 +995,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q49',
@@ -970,6 +1018,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q50',
@@ -992,6 +1041,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
 
   // PCR AND DNA ISOLATION (Questions 51-70)
@@ -1016,6 +1066,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 6,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q52',
@@ -1033,6 +1084,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q53',
@@ -1055,6 +1107,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 6,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q54',
@@ -1072,6 +1125,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 6,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q55',
@@ -1089,6 +1143,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q56',
@@ -1111,6 +1166,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q57',
@@ -1128,6 +1184,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q58',
@@ -1145,6 +1202,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q59',
@@ -1162,6 +1220,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Apply',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q60',
@@ -1184,6 +1243,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q61',
@@ -1201,6 +1261,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q62',
@@ -1218,6 +1279,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q63',
@@ -1235,6 +1297,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q64',
@@ -1252,6 +1315,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q65',
@@ -1269,6 +1333,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q66',
@@ -1291,6 +1356,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 2,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q67',
@@ -1308,6 +1374,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q68',
@@ -1330,6 +1397,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q69',
@@ -1347,6 +1415,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q70',
@@ -1369,6 +1438,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
 
   // BIOREACTORS (Questions 71-80)
@@ -1393,6 +1463,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q72',
@@ -1415,6 +1486,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q73',
@@ -1432,6 +1504,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q74',
@@ -1454,6 +1527,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q75',
@@ -1476,6 +1550,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q76',
@@ -1493,6 +1568,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 2,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q77',
@@ -1515,6 +1591,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q78',
@@ -1537,6 +1614,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 2,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q79',
@@ -1559,6 +1637,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 2,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q80',
@@ -1581,6 +1660,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 2,
+    weightage: 2,
   },
 
   // RECOMBINANT DNA TECHNOLOGY PROCESS (Questions 81-100)
@@ -1605,6 +1685,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q82',
@@ -1627,6 +1708,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q83',
@@ -1649,6 +1731,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q84',
@@ -1666,6 +1749,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q85',
@@ -1688,6 +1772,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q86',
@@ -1710,6 +1795,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 2,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q87',
@@ -1727,6 +1813,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 2,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q88',
@@ -1749,6 +1836,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q89',
@@ -1771,6 +1859,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q90',
@@ -1788,6 +1877,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 90,
     previousYearFrequency: 2,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q91',
@@ -1810,6 +1900,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q92',
@@ -1827,6 +1918,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q93',
@@ -1844,6 +1936,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q94',
@@ -1866,6 +1959,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q95',
@@ -1883,6 +1977,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q96',
@@ -1900,6 +1995,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q97',
@@ -1917,6 +2013,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q98',
@@ -1934,6 +2031,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q99',
@@ -1956,6 +2054,7 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'ch12-11-q100',
@@ -1978,5 +2077,6 @@ export const biotechPrinciplesQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 45,
     previousYearFrequency: 2,
+    weightage: 2,
   },
 ]

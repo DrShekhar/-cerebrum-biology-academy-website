@@ -26,7 +26,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 7,
     conceptualLinks: ['Monera', 'Prokaryotes', 'Bacteria'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 4,
   },
   {
@@ -44,7 +44,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 8,
     conceptualLinks: ['Whittaker', 'Five kingdoms', 'Classification'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 4,
   },
   {
@@ -68,7 +68,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Classification criteria', 'Whittaker', 'Five kingdoms'],
     timeEstimate: 60,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 3,
   },
   {
@@ -91,7 +91,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 6,
     conceptualLinks: ['Archaebacteria', 'Cell wall', 'Extremophiles'],
     timeEstimate: 60,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 3,
   },
   {
@@ -109,7 +109,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 7,
     conceptualLinks: ['Methanogens', 'Ruminants', 'Biogas'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 4,
   },
   {
@@ -127,7 +127,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Halophiles', 'Salt lakes', 'Extremophiles'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -145,7 +145,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Thermoacidophiles', 'Hot springs', 'Extremophiles'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -163,7 +163,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 6,
     conceptualLinks: ['Eubacteria', 'Peptidoglycan', 'Cell wall'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -181,7 +181,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 6,
     conceptualLinks: ['Cyanobacteria', 'Blue-green algae', 'Photosynthesis'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -199,7 +199,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Nostoc', 'Nitrogen fixation', 'Heterocyst'],
     timeEstimate: 60,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 3,
   },
   {
@@ -217,7 +217,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 6,
     conceptualLinks: ['Heterocysts', 'Nitrogen fixation', 'Cyanobacteria'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -235,7 +235,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Chemoautotrophs', 'Chemosynthesis', 'Energy'],
     timeEstimate: 60,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 3,
   },
   {
@@ -253,7 +253,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Binary fission', 'Bacteria', 'Asexual reproduction'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -271,7 +271,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 6,
     conceptualLinks: ['Rhizobium', 'Biofertilizer', 'Nitrogen fixation'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -289,7 +289,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 7,
     conceptualLinks: ['Mycoplasma', 'Cell wall', 'PPLO'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 4,
   },
   {
@@ -312,7 +312,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['PPLO', 'Mycoplasma', 'Bacteria'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -330,7 +330,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 6,
     conceptualLinks: ['Lactobacillus', 'Curd', 'Fermentation'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -348,7 +348,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Gram staining', 'Cell wall', 'Bacteria'],
     timeEstimate: 60,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 3,
   },
   {
@@ -366,7 +366,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Photoautotrophs', 'Photosynthesis', 'Bacteria'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -384,7 +384,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Bacillus', 'Bacterial shape', 'Morphology'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -402,7 +402,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Cocci', 'Bacterial shape', 'Spherical'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -420,7 +420,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Vibrio cholerae', 'Cholera', 'Disease'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -438,7 +438,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Conjugation', 'Bacteria', 'Sexual reproduction'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -461,7 +461,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Mycobacterium', 'Tuberculosis', 'Disease'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -479,7 +479,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Saprophytes', 'Decomposition', 'Nutrition'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
 
@@ -506,7 +506,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Protista', 'Eukaryotes', 'Unicellular'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -524,7 +524,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 7,
     conceptualLinks: ['Diatoms', 'Silica', 'Cell wall'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 4,
   },
   {
@@ -547,7 +547,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Diatomaceous earth', 'Diatoms', 'Uses'],
     timeEstimate: 60,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 3,
   },
   {
@@ -565,7 +565,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 6,
     conceptualLinks: ['Red tide', 'Dinoflagellates', 'Toxins'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -583,7 +583,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Dinoflagellates', 'Flagella', 'Locomotion'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -601,7 +601,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 6,
     conceptualLinks: ['Euglenoids', 'Mixotrophic', 'Nutrition'],
     timeEstimate: 60,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 3,
   },
   {
@@ -619,7 +619,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Pellicle', 'Euglena', 'Protein layer'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -637,7 +637,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Slime moulds', 'Fungi', 'Animals'],
     timeEstimate: 60,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 2,
   },
   {
@@ -655,7 +655,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Plasmodium', 'Slime moulds', 'Vegetative body'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -673,7 +673,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Protozoans', 'Locomotion', 'Classification'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -691,7 +691,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Amoeba', 'Pseudopodia', 'Locomotion'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -709,7 +709,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 7,
     conceptualLinks: ['Plasmodium', 'Malaria', 'Sporozoan'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 4,
   },
   {
@@ -727,7 +727,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Paramecium', 'Cilia', 'Protozoan'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -745,7 +745,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Trypanosoma', 'Sleeping sickness', 'Flagellated'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -763,7 +763,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Sporozoans', 'Locomotion', 'Parasites'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -781,7 +781,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Diatoms', 'Golden algae', 'Producers'],
     timeEstimate: 60,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 2,
   },
   {
@@ -799,7 +799,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Gonyaulax', 'Dinoflagellate', 'Red tide'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -817,7 +817,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Entamoeba', 'Amoebic dysentery', 'Protozoan'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -840,7 +840,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Diatoms', 'Chlorophyll', 'Pigments'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -858,7 +858,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 3,
     conceptualLinks: ['Bioluminescence', 'Dinoflagellates', 'Sea'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
 
@@ -880,7 +880,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 8,
     conceptualLinks: ['Fungi', 'Chitin', 'Cell wall'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 4,
   },
   {
@@ -898,7 +898,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 6,
     conceptualLinks: ['Mycelium', 'Fungi', 'Hyphae'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -916,7 +916,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Hyphae', 'Fungi', 'Filaments'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -939,7 +939,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Coenocytic', 'Hyphae', 'Aseptate'],
     timeEstimate: 60,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 3,
   },
   {
@@ -957,7 +957,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Glycogen', 'Fungi', 'Reserve food'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -975,7 +975,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Heterotrophic', 'Fungi', 'Nutrition'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -993,7 +993,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 6,
     conceptualLinks: ['Bread mould', 'Phycomycetes', 'Rhizopus'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -1011,7 +1011,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 6,
     conceptualLinks: ['Yeast', 'Budding', 'Asexual reproduction'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -1029,7 +1029,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 7,
     conceptualLinks: ['Ascomycetes', 'Sac fungi', 'Ascus'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 4,
   },
   {
@@ -1047,7 +1047,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Ascocarp', 'Ascomycetes', 'Fruiting body'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -1065,7 +1065,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 6,
     conceptualLinks: ['Basidiomycetes', 'Club fungi', 'Mushrooms'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -1083,7 +1083,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 7,
     conceptualLinks: ['Mushrooms', 'Basidiomycetes', 'Agaricus'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 4,
   },
   {
@@ -1106,7 +1106,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 6,
     conceptualLinks: ['Deuteromycetes', 'Imperfect fungi', 'Asexual'],
     timeEstimate: 60,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 3,
   },
   {
@@ -1124,7 +1124,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 6,
     conceptualLinks: ['Penicillin', 'Penicillium', 'Antibiotic'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -1142,7 +1142,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Yeast', 'Fermentation', 'Uses'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -1165,7 +1165,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 6,
     conceptualLinks: ['Mycorrhiza', 'Symbiosis', 'Roots'],
     timeEstimate: 60,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 3,
   },
   {
@@ -1183,7 +1183,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Haustoria', 'Parasitic fungi', 'Absorption'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -1201,7 +1201,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Zygospores', 'Phycomycetes', 'Sexual spores'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -1219,7 +1219,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Neurospora', 'Genetics', 'Biochemistry'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -1237,7 +1237,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Rusts', 'Smuts', 'Plant pathogens'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -1255,7 +1255,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Conidia', 'Asexual spores', 'Chains'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -1273,7 +1273,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Ringworm', 'Microsporum', 'Skin infection'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -1291,7 +1291,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Puffballs', 'Bracket fungi', 'Basidiomycetes'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -1309,7 +1309,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Fungi', 'Chloroplasts', 'Characteristics'],
     timeEstimate: 45,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 2,
   },
   {
@@ -1327,7 +1327,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 3,
     conceptualLinks: ['Truffles', 'Ascomycetes', 'Edible fungi'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
 
@@ -1354,7 +1354,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 6,
     conceptualLinks: ['Viruses', 'Living', 'Non-living'],
     timeEstimate: 60,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 3,
   },
   {
@@ -1372,7 +1372,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 7,
     conceptualLinks: ['Viruses', 'DNA', 'RNA'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 4,
   },
   {
@@ -1390,7 +1390,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 6,
     conceptualLinks: ['Capsid', 'Virus', 'Protein coat'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -1408,7 +1408,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 6,
     conceptualLinks: ['Bacteriophage', 'Bacteria', 'Virus'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -1426,7 +1426,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['TMV', 'Stanley', 'Crystallization'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -1444,7 +1444,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 6,
     conceptualLinks: ['AIDS', 'HIV', 'Retrovirus'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -1467,7 +1467,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 6,
     conceptualLinks: ['Viroids', 'RNA', 'No protein'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -1485,7 +1485,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Viroids', 'Diener', 'Discovery'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -1508,7 +1508,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Prions', 'Proteins', 'Infectious'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -1531,7 +1531,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 7,
     conceptualLinks: ['Lichens', 'Symbiosis', 'Algae', 'Fungi'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 4,
   },
   {
@@ -1549,7 +1549,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Phycobiont', 'Lichen', 'Algae'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -1567,7 +1567,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Mycobiont', 'Lichen', 'Fungi'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -1585,7 +1585,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 6,
     conceptualLinks: ['Lichens', 'Air pollution', 'Bioindicator'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -1603,7 +1603,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Lichens', 'Pioneer', 'Succession'],
     timeEstimate: 60,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 2,
   },
   {
@@ -1621,7 +1621,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Prions', 'Mad cow disease', 'BSE'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
 
@@ -1648,7 +1648,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Plantae', 'Autotrophic', 'Multicellular'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -1666,7 +1666,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Cellulose', 'Cell wall', 'Plants'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -1684,7 +1684,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Starch', 'Reserve food', 'Plants'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -1707,7 +1707,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Animalia', 'Heterotrophic', 'Multicellular'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -1725,7 +1725,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Glycogen', 'Reserve food', 'Animals'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -1743,7 +1743,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 5,
     conceptualLinks: ['Two kingdoms', 'Linnaeus', 'Classification'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 3,
   },
   {
@@ -1761,7 +1761,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Three kingdoms', 'Haeckel', 'Protista'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -1779,7 +1779,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 3,
     conceptualLinks: ['Four kingdoms', 'Copeland', 'Monera'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -1797,7 +1797,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Fungi', 'Whittaker', 'Kingdom'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -1820,7 +1820,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Alternation of generations', 'Haploid', 'Diploid'],
     timeEstimate: 60,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 2,
   },
   {
@@ -1838,7 +1838,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Whittaker', 'Classification', 'Criteria'],
     timeEstimate: 60,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 2,
   },
   {
@@ -1856,7 +1856,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Holozoic', 'Nutrition', 'Animals'],
     timeEstimate: 45,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -1874,7 +1874,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Protista', 'Autotrophic', 'Heterotrophic'],
     timeEstimate: 60,
-    bloomsLevel: 'Understanding',
+    bloomsLevel: 'Understand',
     weightage: 2,
   },
   {
@@ -1892,7 +1892,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 4,
     conceptualLinks: ['Carl Woese', 'rRNA', 'Three domains'],
     timeEstimate: 60,
-    bloomsLevel: 'Knowledge',
+    bloomsLevel: 'Remember',
     weightage: 2,
   },
   {
@@ -1915,7 +1915,7 @@ export const biologicalClassificationQuestions: AuthenticQuestion[] = [
     previousYearFrequency: 3,
     conceptualLinks: ['Five kingdoms', 'Limitation', 'Monera'],
     timeEstimate: 75,
-    bloomsLevel: 'Analysis',
+    bloomsLevel: 'Analyze',
     weightage: 2,
   },
 ]

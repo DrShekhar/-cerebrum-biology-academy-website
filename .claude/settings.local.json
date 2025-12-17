@@ -5,13 +5,59 @@
       "Bash(npm:*)",
       "Bash(npx:*)",
       "Bash(vercel:*)",
-      "Bash(cd:*)",
-      "Bash(ls:*)",
-      "Bash(pwd)",
       "Bash(node:*)",
       "Bash(pnpm:*)",
-      "Bash(yarn:*)"
+      "Bash(yarn:*)",
+      "Bash(tsx:*)",
+      "Bash(prisma:*)",
+      "Bash(jest:*)",
+      "Bash(playwright:*)",
+      "Bash(curl:*)",
+      "Bash(cat:*)",
+      "Bash(ls:*)",
+      "Bash(pwd)",
+      "Bash(cd:*)",
+      "Bash(mkdir:*)",
+      "Bash(rm *.log)",
+      "Bash(rm -rf .next)",
+      "Bash(rm -rf node_modules/.cache)",
+      "WebFetch(domain:cerebrumbiologyacademy.com)",
+      "WebFetch(domain:*.vercel.app)",
+      "WebFetch(domain:supabase.com)",
+      "WebFetch(domain:*.supabase.co)",
+      "WebSearch",
+      "mcp__interakt__*",
+      "mcp__biology-content__*",
+      "mcp__postgres__query",
+      "mcp__github__*"
     ],
-    "deny": []
+    "deny": ["Bash(rm -rf /)", "Bash(rm -rf ~)", "Bash(sudo:*)", "Bash(chmod 777:*)"]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": {
+          "tool": "Edit",
+          "path": "*.ts"
+        },
+        "command": "cd /Users/drshekhar/cerebrum-biology-academy-website && npx tsc --noEmit 2>&1 | head -15 || true"
+      },
+      {
+        "matcher": {
+          "tool": "Edit",
+          "path": "*.tsx"
+        },
+        "command": "cd /Users/drshekhar/cerebrum-biology-academy-website && npx tsc --noEmit 2>&1 | head -15 || true"
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": {
+          "tool": "Bash",
+          "command": "git commit*"
+        },
+        "command": "cd /Users/drshekhar/cerebrum-biology-academy-website && npm run type-check 2>&1 | tail -5"
+      }
+    ]
   }
 }

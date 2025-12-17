@@ -5,6 +5,17 @@
       "args": ["tsx", "src/lib/mcp/servers/interakt-server.ts"],
       "cwd": "/Users/drshekhar/cerebrum-biology-academy-website",
       "env": {}
+    },
+    "biology-content": {
+      "command": "npx",
+      "args": ["tsx", "src/lib/mcp/servers/biology-content.ts"],
+      "cwd": "/Users/drshekhar/cerebrum-biology-academy-website",
+      "env": {}
+    },
+    "sequential-thinking": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"],
+      "env": {}
     }
   }
 }

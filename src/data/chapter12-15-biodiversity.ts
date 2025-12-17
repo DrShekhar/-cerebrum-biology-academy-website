@@ -23,6 +23,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 6,
+    weightage: 2,
   },
   {
     id: 'bio-002',
@@ -40,6 +41,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 30,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'bio-003',
@@ -62,6 +64,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'bio-004',
@@ -84,6 +87,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'bio-005',
@@ -106,6 +110,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'bio-006',
@@ -123,6 +128,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'bio-007',
@@ -140,6 +146,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 30,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'bio-008',
@@ -162,6 +169,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'bio-009',
@@ -184,6 +192,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 6,
+    weightage: 2,
   },
   {
     id: 'bio-010',
@@ -201,6 +210,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 30,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'bio-011',
@@ -223,6 +233,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 6,
+    weightage: 2,
   },
   {
     id: 'bio-012',
@@ -240,6 +251,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'bio-013',
@@ -257,6 +269,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'bio-014',
@@ -280,6 +293,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 75,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'bio-015',
@@ -302,6 +316,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'bio-016',
@@ -324,6 +339,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'bio-017',
@@ -346,6 +362,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'bio-018',
@@ -363,6 +380,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'bio-019',
@@ -385,6 +403,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'bio-020',
@@ -402,6 +421,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
 
   // SECTION 2: Importance of Biodiversity (Questions 21-35)
@@ -426,6 +446,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'bio-022',
@@ -444,6 +465,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'bio-023',
@@ -466,6 +488,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'bio-024',
@@ -488,6 +511,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'bio-025',
@@ -510,6 +534,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'bio-026',
@@ -532,6 +557,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'bio-027',
@@ -554,6 +580,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'bio-028',
@@ -576,6 +603,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'bio-029',
@@ -598,6 +626,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'bio-030',
@@ -620,6 +649,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'bio-031',
@@ -642,6 +672,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'bio-032',
@@ -664,6 +695,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'bio-033',
@@ -686,6 +718,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'bio-034',
@@ -708,6 +741,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'bio-035',
@@ -730,6 +764,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 45,
     previousYearFrequency: 2,
+    weightage: 2,
   },
 
   // SECTION 3: Biodiversity Loss (Questions 36-55)
@@ -754,6 +789,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'bio-037',
@@ -776,6 +812,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 6,
+    weightage: 2,
   },
   {
     id: 'bio-038',
@@ -793,6 +830,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 6,
+    weightage: 2,
   },
   {
     id: 'bio-039',
@@ -810,6 +848,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'bio-040',
@@ -832,6 +871,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'bio-041',
@@ -854,6 +894,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'bio-042',
@@ -876,6 +917,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'bio-043',
@@ -898,6 +940,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'bio-044',
@@ -920,6 +963,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'bio-045',
@@ -942,6 +986,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'bio-046',
@@ -964,6 +1009,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'bio-047',
@@ -986,6 +1032,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Apply',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'bio-048',
@@ -1003,6 +1050,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'bio-049',
@@ -1025,6 +1073,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'bio-050',
@@ -1048,6 +1097,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'bio-051',
@@ -1070,6 +1120,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'bio-052',
@@ -1087,6 +1138,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 30,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'bio-053',
@@ -1104,6 +1156,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 2,
+    weightage: 2,
   },
   {
     id: 'bio-054',
@@ -1126,6 +1179,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'bio-055',
@@ -1148,6 +1202,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
 
   // SECTION 4: Conservation of Biodiversity (Questions 56-80)
@@ -1172,6 +1227,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 7,
+    weightage: 2,
   },
   {
     id: 'bio-057',
@@ -1194,6 +1250,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 7,
+    weightage: 2,
   },
   {
     id: 'bio-058',
@@ -1211,6 +1268,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 30,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'bio-059',
@@ -1233,6 +1291,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 6,
+    weightage: 2,
   },
   {
     id: 'bio-060',
@@ -1250,6 +1309,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 30,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'bio-061',
@@ -1267,6 +1327,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 6,
+    weightage: 2,
   },
   {
     id: 'bio-062',
@@ -1284,6 +1345,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'bio-063',
@@ -1306,6 +1368,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Analyze',
     timeEstimate: 75,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'bio-064',
@@ -1323,6 +1386,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'bio-065',
@@ -1345,6 +1409,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'bio-066',
@@ -1367,6 +1432,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'bio-067',
@@ -1389,6 +1455,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'bio-068',
@@ -1411,6 +1478,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'bio-069',
@@ -1428,6 +1496,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 30,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'bio-070',
@@ -1450,6 +1519,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'bio-071',
@@ -1467,6 +1537,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 30,
     previousYearFrequency: 5,
+    weightage: 2,
   },
   {
     id: 'bio-072',
@@ -1489,6 +1560,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 30,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'bio-073',
@@ -1511,6 +1583,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'bio-074',
@@ -1533,6 +1606,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'bio-075',
@@ -1555,6 +1629,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'bio-076',
@@ -1577,6 +1652,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'bio-077',
@@ -1594,6 +1670,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 30,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'bio-078',
@@ -1611,6 +1688,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'bio-079',
@@ -1633,6 +1711,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 30,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'bio-080',
@@ -1655,6 +1734,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
 
   // SECTION 5: Additional Important Questions (Questions 81-100)
@@ -1674,6 +1754,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'bio-082',
@@ -1691,6 +1772,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'bio-083',
@@ -1713,6 +1795,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Analyze',
     timeEstimate: 75,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'bio-084',
@@ -1730,6 +1813,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'bio-085',
@@ -1747,6 +1831,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 30,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'bio-086',
@@ -1769,6 +1854,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'bio-087',
@@ -1787,6 +1873,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'bio-088',
@@ -1804,6 +1891,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'bio-089',
@@ -1826,6 +1914,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'bio-090',
@@ -1849,6 +1938,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 60,
     previousYearFrequency: 2,
+    weightage: 2,
   },
   {
     id: 'bio-091',
@@ -1866,6 +1956,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'bio-092',
@@ -1883,6 +1974,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'bio-093',
@@ -1905,6 +1997,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Analyze',
     timeEstimate: 75,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'bio-094',
@@ -1927,6 +2020,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 60,
     previousYearFrequency: 2,
+    weightage: 2,
   },
   {
     id: 'bio-095',
@@ -1944,6 +2038,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 30,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'bio-096',
@@ -1961,6 +2056,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'bio-097',
@@ -1978,6 +2074,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
   {
     id: 'bio-098',
@@ -2000,6 +2097,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 30,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'bio-099',
@@ -2017,6 +2115,7 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Remember',
     timeEstimate: 30,
     previousYearFrequency: 4,
+    weightage: 2,
   },
   {
     id: 'bio-100',
@@ -2039,5 +2138,6 @@ export const biodiversityQuestions: AuthenticQuestion[] = [
     bloomsLevel: 'Understand',
     timeEstimate: 45,
     previousYearFrequency: 3,
+    weightage: 2,
   },
 ]
