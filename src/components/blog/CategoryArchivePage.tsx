@@ -1,7 +1,6 @@
 'use client'
 
 import { BlogPostMeta, BlogCategory } from '@/types/blog'
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { ArrowLeft, Clock, Eye, User, BookOpen, Folder } from 'lucide-react'
 import { DifficultyBadge } from './DifficultyBadge'
@@ -32,11 +31,7 @@ export function CategoryArchivePage({ category, posts }: CategoryArchivePageProp
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
+          <div className="animate-fade-in-up">
             <div className="inline-flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full mb-6">
               <Folder className="w-5 h-5" />
               <span className="font-medium">Category</span>
@@ -49,7 +44,7 @@ export function CategoryArchivePage({ category, posts }: CategoryArchivePageProp
               <BookOpen className="w-5 h-5" />
               <span className="font-semibold">{posts.length} Articles</span>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -72,13 +67,10 @@ export function CategoryArchivePage({ category, posts }: CategoryArchivePageProp
             </div>
           ) : (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {posts.map((post, index) => (
-                <motion.article
+              {posts.map((post) => (
+                <article
                   key={post.slug}
-                  className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-gray-100"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: index * 0.05 }}
+                  className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-gray-100 animate-fade-in"
                 >
                   {/* Thumbnail */}
                   <Link href={`/blog/${post.slug}`}>
@@ -131,7 +123,7 @@ export function CategoryArchivePage({ category, posts }: CategoryArchivePageProp
                       </span>
                     </div>
                   </div>
-                </motion.article>
+                </article>
               ))}
             </div>
           )}

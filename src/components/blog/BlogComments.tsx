@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from 'react'
 import { MessageSquare, Send, ThumbsUp, Users } from 'lucide-react'
-import { motion } from 'framer-motion'
 
 interface BlogCommentsProps {
   slug: string
@@ -88,11 +87,7 @@ export function BlogComments({ slug, title }: BlogCommentsProps) {
             className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 min-h-[200px]"
           />
         ) : (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="space-y-6"
-          >
+          <div className="space-y-6 animate-fade-in-up">
             {/* Stats bar */}
             <div className="flex items-center justify-center gap-6 py-4 bg-blue-50 rounded-xl">
               <div className="flex items-center gap-2 text-blue-700">
@@ -171,7 +166,7 @@ export function BlogComments({ slug, title }: BlogCommentsProps) {
                 ))}
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
 
         <noscript>

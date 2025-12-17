@@ -2,7 +2,6 @@
 
 import { useState, useEffect, memo } from 'react'
 import { BookOpen } from 'lucide-react'
-import { motion } from 'framer-motion'
 
 type IllustrationComponent = React.ComponentType<{ className?: string; animate?: boolean }>
 

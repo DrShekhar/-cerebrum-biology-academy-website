@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { motion } from 'framer-motion'
 import { Download, CheckCircle, Phone, Mail, User, Sparkles } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 
@@ -76,12 +75,7 @@ export function BlogLeadCapture({ articleSlug, articleTitle, chapterName }: Blog
 
   if (isSubmitted) {
     return (
-      <motion.div
-        className="my-8 p-6 bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 rounded-2xl"
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.3 }}
-      >
+      <div className="my-8 p-6 bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 rounded-2xl animate-fade-in">
         <div className="flex items-center justify-center gap-3 text-green-700">
           <CheckCircle className="w-8 h-8" />
           <div>
@@ -91,27 +85,14 @@ export function BlogLeadCapture({ articleSlug, articleTitle, chapterName }: Blog
             </p>
           </div>
         </div>
-      </motion.div>
+      </div>
     )
   }
 
   return (
-    <motion.div
-      className="my-8 p-6 md:p-8 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 rounded-2xl text-white relative overflow-hidden"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-    >
-      <motion.div
-        className="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full"
-        animate={{ scale: [1, 1.2, 1] }}
-        transition={{ duration: 4, repeat: Infinity }}
-      />
-      <motion.div
-        className="absolute -bottom-5 -left-5 w-24 h-24 bg-white/10 rounded-full"
-        animate={{ scale: [1, 1.3, 1] }}
-        transition={{ duration: 3, repeat: Infinity }}
-      />
+    <div className="my-8 p-6 md:p-8 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 rounded-2xl text-white relative overflow-hidden animate-fade-in-up">
+      <div className="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full animate-pulse" />
+      <div className="absolute -bottom-5 -left-5 w-24 h-24 bg-white/10 rounded-full animate-pulse" />
 
       <div className="relative z-10">
         <div className="flex items-center gap-2 mb-3">
@@ -202,6 +183,6 @@ export function BlogLeadCapture({ articleSlug, articleTitle, chapterName }: Blog
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   )
 }

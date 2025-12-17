@@ -19,7 +19,6 @@ import {
   Bookmark,
   ArrowUpDown,
 } from 'lucide-react'
-import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
 import { DifficultyBadge } from './DifficultyBadge'
 import { NEETTopicBadge } from './NEETTopicBadge'
@@ -207,11 +206,7 @@ export function BlogListingPage({ posts, categories, stats }: BlogListingPagePro
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
+          <div className="animate-fade-in-up">
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mb-6">
               <BookOpen className="w-4 h-4 mr-2" />
               Expert Biology Education
@@ -245,7 +240,7 @@ export function BlogListingPage({ posts, categories, stats }: BlogListingPagePro
                 <div className="text-sm opacity-80">Categories</div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -291,44 +286,37 @@ export function BlogListingPage({ posts, categories, stats }: BlogListingPagePro
                 )}
 
                 {/* Search Preview Dropdown */}
-                <AnimatePresence>
-                  {showSearchPreview && searchInput && searchPreviewResults.length > 0 && (
-                    <motion.div
-                      initial={{ opacity: 0, y: -10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -10 }}
-                      className="absolute top-full left-0 right-0 mt-2 bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden z-50"
-                    >
-                      <div className="p-2">
-                        <p className="text-xs text-gray-500 px-3 py-2">
-                          {searchPreviewResults.length} results found
-                        </p>
-                        {searchPreviewResults.map((post) => (
-                          <Link
-                            key={post.slug}
-                            href={`/blog/${post.slug}`}
-                            onClick={() => setShowSearchPreview(false)}
-                            className="flex items-center gap-3 p-3 rounded-xl hover:bg-blue-50 transition-colors"
-                          >
-                            <div className="w-12 h-12 bg-gradient-to-br from-blue-100 to-purple-100 rounded-lg flex-shrink-0 flex items-center justify-center">
-                              <BookOpen className="w-5 h-5 text-blue-600" />
-                            </div>
-                            <div className="flex-1 min-w-0">
-                              <p className="font-medium text-gray-900 text-sm truncate">
-                                {post.title}
-                              </p>
-                              <p className="text-xs text-gray-500 flex items-center gap-2">
-                                <span>{post.readTime} min read</span>
-                                <span>•</span>
-                                <span>{(post.views || 0).toLocaleString()} views</span>
-                              </p>
-                            </div>
-                          </Link>
-                        ))}
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
+                {showSearchPreview && searchInput && searchPreviewResults.length > 0 && (
+                  <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden z-50 animate-fade-in">
+                    <div className="p-2">
+                      <p className="text-xs text-gray-500 px-3 py-2">
+                        {searchPreviewResults.length} results found
+                      </p>
+                      {searchPreviewResults.map((post) => (
+                        <Link
+                          key={post.slug}
+                          href={`/blog/${post.slug}`}
+                          onClick={() => setShowSearchPreview(false)}
+                          className="flex items-center gap-3 p-3 rounded-xl hover:bg-blue-50 transition-colors"
+                        >
+                          <div className="w-12 h-12 bg-gradient-to-br from-blue-100 to-purple-100 rounded-lg flex-shrink-0 flex items-center justify-center">
+                            <BookOpen className="w-5 h-5 text-blue-600" />
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <p className="font-medium text-gray-900 text-sm truncate">
+                              {post.title}
+                            </p>
+                            <p className="text-xs text-gray-500 flex items-center gap-2">
+                              <span>{post.readTime} min read</span>
+                              <span>•</span>
+                              <span>{(post.views || 0).toLocaleString()} views</span>
+                            </p>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
 
               {/* Sort Dropdown */}
@@ -547,12 +535,7 @@ export function BlogListingPage({ posts, categories, stats }: BlogListingPagePro
               <div className="grid lg:grid-cols-3 gap-8">
                 {/* Featured Post */}
                 {currentPage === 1 && paginatedPosts.length > 0 && (
-                  <motion.div
-                    className="lg:col-span-2"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
-                  >
+                  <div className="lg:col-span-2 animate-fade-in-up">
                     <article className="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 h-full group">
                       <div className="aspect-video relative overflow-hidden">
                         <BlogThumbnail
@@ -664,7 +647,7 @@ export function BlogListingPage({ posts, categories, stats }: BlogListingPagePro
                         </div>
                       </div>
                     </article>
-                  </motion.div>
+                  </div>
                 )}
 
                 {/* Regular Posts */}
@@ -672,97 +655,90 @@ export function BlogListingPage({ posts, categories, stats }: BlogListingPagePro
                   <div
                     className={`grid ${currentPage === 1 ? 'grid-cols-1' : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'} gap-6`}
                   >
-                    {(currentPage === 1 ? paginatedPosts.slice(1) : paginatedPosts).map(
-                      (post, index) => (
-                        <motion.article
-                          key={post.slug}
-                          className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group"
-                          initial={{ opacity: 0, y: 20 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ duration: 0.6, delay: 0.1 + index * 0.05 }}
-                        >
-                          <div className="relative">
-                            <Link href={`/blog/${post.slug}`}>
-                              <BlogThumbnail
-                                slug={post.slug}
-                                title={post.title}
+                    {(currentPage === 1 ? paginatedPosts.slice(1) : paginatedPosts).map((post) => (
+                      <article
+                        key={post.slug}
+                        className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group animate-fade-in"
+                      >
+                        <div className="relative">
+                          <Link href={`/blog/${post.slug}`}>
+                            <BlogThumbnail
+                              slug={post.slug}
+                              title={post.title}
+                              size="sm"
+                              className="rounded-none group-hover:scale-105 transition-transform duration-500"
+                            />
+                          </Link>
+                          <button
+                            onClick={(e) => {
+                              e.preventDefault()
+                              toggleBookmark(post.slug)
+                            }}
+                            className="absolute top-3 right-3 w-8 h-8 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center z-10 hover:bg-white transition-colors shadow"
+                          >
+                            <Bookmark
+                              className={`w-4 h-4 ${
+                                bookmarkedPosts.includes(post.slug)
+                                  ? 'text-blue-600 fill-current'
+                                  : 'text-gray-600'
+                              }`}
+                            />
+                          </button>
+                        </div>
+
+                        <div className="p-5">
+                          <div
+                            className={`inline-block px-3 py-1 rounded-full text-xs font-medium mb-3 ${getCategoryInfo(post.category).color}`}
+                          >
+                            {getCategoryInfo(post.category).name}
+                          </div>
+
+                          <div className="flex flex-wrap gap-2 mb-3">
+                            {post.difficulty && (
+                              <DifficultyBadge difficulty={post.difficulty} size="sm" />
+                            )}
+                            {post.neetChapter && (
+                              <NEETTopicBadge
+                                chapter={post.neetChapter}
+                                weightage={post.neetWeightage}
                                 size="sm"
-                                className="rounded-none group-hover:scale-105 transition-transform duration-500"
                               />
-                            </Link>
+                            )}
+                          </div>
+
+                          <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors line-clamp-2">
+                            <Link href={`/blog/${post.slug}`}>{post.title}</Link>
+                          </h3>
+
+                          <p className="text-gray-600 text-sm mb-4 line-clamp-2">{post.excerpt}</p>
+
+                          <div className="flex items-center justify-between text-xs text-gray-500">
+                            <div className="flex items-center space-x-3">
+                              <div className="flex items-center">
+                                <Clock className="w-3 h-3 mr-1" />
+                                {post.readTime}m
+                              </div>
+                              <div className="flex items-center text-orange-600">
+                                <Eye className="w-3 h-3 mr-1" />
+                                {(post.views || 0).toLocaleString()}
+                              </div>
+                            </div>
+
                             <button
                               onClick={(e) => {
                                 e.preventDefault()
-                                toggleBookmark(post.slug)
+                                setSelectedAuthor(post.author.name)
+                                handleFilterChange()
                               }}
-                              className="absolute top-3 right-3 w-8 h-8 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center z-10 hover:bg-white transition-colors shadow"
+                              className="flex items-center hover:text-blue-600 transition-colors"
                             >
-                              <Bookmark
-                                className={`w-4 h-4 ${
-                                  bookmarkedPosts.includes(post.slug)
-                                    ? 'text-blue-600 fill-current'
-                                    : 'text-gray-600'
-                                }`}
-                              />
+                              <User className="w-3 h-3 mr-1" />
+                              {post.author.name}
                             </button>
                           </div>
-
-                          <div className="p-5">
-                            <div
-                              className={`inline-block px-3 py-1 rounded-full text-xs font-medium mb-3 ${getCategoryInfo(post.category).color}`}
-                            >
-                              {getCategoryInfo(post.category).name}
-                            </div>
-
-                            <div className="flex flex-wrap gap-2 mb-3">
-                              {post.difficulty && (
-                                <DifficultyBadge difficulty={post.difficulty} size="sm" />
-                              )}
-                              {post.neetChapter && (
-                                <NEETTopicBadge
-                                  chapter={post.neetChapter}
-                                  weightage={post.neetWeightage}
-                                  size="sm"
-                                />
-                              )}
-                            </div>
-
-                            <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors line-clamp-2">
-                              <Link href={`/blog/${post.slug}`}>{post.title}</Link>
-                            </h3>
-
-                            <p className="text-gray-600 text-sm mb-4 line-clamp-2">
-                              {post.excerpt}
-                            </p>
-
-                            <div className="flex items-center justify-between text-xs text-gray-500">
-                              <div className="flex items-center space-x-3">
-                                <div className="flex items-center">
-                                  <Clock className="w-3 h-3 mr-1" />
-                                  {post.readTime}m
-                                </div>
-                                <div className="flex items-center text-orange-600">
-                                  <Eye className="w-3 h-3 mr-1" />
-                                  {(post.views || 0).toLocaleString()}
-                                </div>
-                              </div>
-
-                              <button
-                                onClick={(e) => {
-                                  e.preventDefault()
-                                  setSelectedAuthor(post.author.name)
-                                  handleFilterChange()
-                                }}
-                                className="flex items-center hover:text-blue-600 transition-colors"
-                              >
-                                <User className="w-3 h-3 mr-1" />
-                                {post.author.name}
-                              </button>
-                            </div>
-                          </div>
-                        </motion.article>
-                      )
-                    )}
+                        </div>
+                      </article>
+                    ))}
                   </div>
                 </div>
               </div>

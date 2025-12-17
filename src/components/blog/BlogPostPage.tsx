@@ -13,7 +13,6 @@ import {
   Copy,
   Share2,
 } from 'lucide-react'
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
@@ -140,12 +139,7 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
             {/* Main Content */}
             <article className="flex-1 min-w-0 max-w-4xl">
               {/* Article Header */}
-              <motion.header
-                className="mb-12"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-              >
+              <header className="mb-12 animate-fade-in-up">
                 {/* Badges Row */}
                 <div className="flex flex-wrap gap-3 mb-6">
                   {category && (
@@ -223,10 +217,8 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
                     </button>
 
                     {showShareMenu && (
-                      <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        className="absolute right-0 top-full mt-2 bg-white rounded-xl shadow-lg border p-2 z-50"
+                      <div
+                        className="absolute right-0 top-full mt-2 bg-white rounded-xl shadow-lg border p-2 z-50 animate-fade-in"
                         onClick={(e) => e.stopPropagation()}
                       >
                         <div className="flex items-center space-x-2">
@@ -259,19 +251,14 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
                             <Copy className="w-4 h-4" />
                           </button>
                         </div>
-                      </motion.div>
+                      </div>
                     )}
                   </div>
                 </div>
-              </motion.header>
+              </header>
 
               {/* Featured Image - Dynamically loaded for performance */}
-              <motion.div
-                className="relative w-full aspect-[16/10] md:aspect-[16/9] bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 rounded-2xl md:rounded-3xl mb-12 overflow-hidden shadow-lg shadow-blue-100/50"
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-              >
+              <div className="relative w-full aspect-[16/10] md:aspect-[16/9] bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 rounded-2xl md:rounded-3xl mb-12 overflow-hidden shadow-lg shadow-blue-100/50 animate-fade-in">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.08),transparent_50%)]" />
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(139,92,246,0.06),transparent_50%)]" />
                 <div className="absolute inset-0 p-6 md:p-10 lg:p-12 flex items-center justify-center">
@@ -281,17 +268,13 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
                     className="w-full h-full max-w-4xl drop-shadow-sm"
                   />
                 </div>
-              </motion.div>
+              </div>
 
               {/* Key Takeaways */}
               {meta.keyTakeaways && meta.keyTakeaways.length > 0 && (
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.3 }}
-                >
+                <div className="animate-fade-in-up">
                   <KeyTakeaways takeaways={meta.keyTakeaways} />
-                </motion.div>
+                </div>
               )}
 
               {/* Lead Capture Form */}
@@ -302,12 +285,7 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
               />
 
               {/* Article Content */}
-              <motion.div
-                className="prose prose-lg max-w-none prose-headings:scroll-mt-20"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-              >
+              <div className="prose prose-lg max-w-none prose-headings:scroll-mt-20 animate-fade-in-up">
                 <ReactMarkdown
                   remarkPlugins={[remarkGfm]}
                   components={{
@@ -460,15 +438,10 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
                 >
                   {content}
                 </ReactMarkdown>
-              </motion.div>
+              </div>
 
               {/* Tags */}
-              <motion.div
-                className="mt-12 pt-8 border-t border-gray-200"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
-              >
+              <div className="mt-12 pt-8 border-t border-gray-200 animate-fade-in">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Tags:</h3>
                 <div className="flex flex-wrap gap-2">
                   {meta.tags.map((tag, index) => (
@@ -481,15 +454,10 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
                     </Link>
                   ))}
                 </div>
-              </motion.div>
+              </div>
 
               {/* CTA Section */}
-              <motion.div
-                className="mt-16 p-8 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 rounded-3xl text-white text-center"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.8 }}
-              >
+              <div className="mt-16 p-8 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 rounded-3xl text-white text-center animate-fade-in-up">
                 <h3 className="text-2xl font-bold mb-4">Ready to Master NEET Biology?</h3>
                 <p className="text-lg mb-8 opacity-90">
                   Get personalized guidance from AIIMS experts and achieve your medical college
@@ -515,7 +483,7 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
                     </Button>
                   </Link>
                 </div>
-              </motion.div>
+              </div>
             </article>
 
             {/* Sidebar with TOC */}

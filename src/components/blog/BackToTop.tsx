@@ -1,12 +1,11 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { ArrowUp } from 'lucide-react'
 
 interface BackToTopProps {
-  showAfter?: number // pixels scrolled before showing
-  readTime?: number // only show for articles with readTime > this value
+  showAfter?: number
+  readTime?: number
 }
 
 export function BackToTop({ showAfter = 400, readTime }: BackToTopProps) {
@@ -32,26 +31,21 @@ export function BackToTop({ showAfter = 400, readTime }: BackToTopProps) {
     })
   }
 
-  // If readTime is specified and too short, don't render
   if (readTime !== undefined && readTime < 5) {
     return null
   }
 
   return (
-    <AnimatePresence>
-      {isVisible && (
-        <motion.button
-          initial={{ opacity: 0, scale: 0.8, y: 20 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          exit={{ opacity: 0, scale: 0.8, y: 20 }}
-          transition={{ duration: 0.2 }}
-          onClick={scrollToTop}
-          className="fixed bottom-24 right-4 z-50 w-12 h-12 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg hover:shadow-xl transition-all flex items-center justify-center group"
-          aria-label="Scroll to top"
-        >
-          <ArrowUp className="w-5 h-5 group-hover:-translate-y-0.5 transition-transform" />
-        </motion.button>
-      )}
-    </AnimatePresence>
+    <button
+      onClick={scrollToTop}
+      className={`fixed bottom-24 right-4 z-50 w-12 h-12 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg hover:shadow-xl transition-all flex items-center justify-center group ${
+        isVisible
+          ? 'opacity-100 scale-100 translate-y-0'
+          : 'opacity-0 scale-75 translate-y-4 pointer-events-none'
+      }`}
+      aria-label="Scroll to top"
+    >
+      <ArrowUp className="w-5 h-5 group-hover:-translate-y-0.5 transition-transform" />
+    </button>
   )
 }

@@ -1,7 +1,6 @@
 'use client'
 
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 import { ClockIcon, ArrowRightIcon } from '@heroicons/react/24/outline'
 import { BlogPostMeta } from '@/types/blog'
 import { DifficultyBadge } from './DifficultyBadge'
@@ -24,13 +23,7 @@ export function RelatedPosts({ posts, title = 'Continue Reading' }: RelatedPosts
           const category = blogCategories[post.category]
 
           return (
-            <motion.article
-              key={post.slug}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              className="group"
-            >
+            <article key={post.slug} className="group animate-fade-in">
               <Link href={`/blog/${post.slug}`} className="block">
                 <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-lg hover:border-blue-200 transition-all duration-300">
                   {/* Featured Image Placeholder */}
@@ -66,7 +59,7 @@ export function RelatedPosts({ posts, title = 'Continue Reading' }: RelatedPosts
                   </div>
                 </div>
               </Link>
-            </motion.article>
+            </article>
           )
         })}
       </div>
