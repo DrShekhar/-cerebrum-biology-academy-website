@@ -35,31 +35,31 @@ export function StatsPanel({
     sessionQuestions > 0 ? Math.round((sessionCorrect / sessionQuestions) * 100) : 0
 
   return (
-    <div className="bg-white rounded-2xl shadow-lg p-6 sticky top-24">
-      {/* Level & XP */}
-      <div className="mb-6">
-        <div className="flex items-center justify-between mb-2">
-          <div className="flex items-center gap-2">
-            <span className="text-2xl">{levelConfig.icon}</span>
+    <div className="bg-white rounded-xl shadow-lg p-4 sticky top-24">
+      {/* Level & XP - Compact */}
+      <div className="mb-4">
+        <div className="flex items-center justify-between mb-1.5">
+          <div className="flex items-center gap-1.5">
+            <span className="text-lg">{levelConfig.icon}</span>
             <div>
-              <p className="text-sm text-gray-500">Level {currentLevel}</p>
-              <p className="font-bold text-gray-900">{levelConfig.name}</p>
+              <p className="text-xs text-gray-500">Level {currentLevel}</p>
+              <p className="font-semibold text-sm text-gray-900">{levelConfig.name}</p>
             </div>
           </div>
           <div className="text-right">
-            <p className="text-sm text-gray-500">Total XP</p>
-            <p className="font-bold text-blue-600">{totalXp.toLocaleString()}</p>
+            <p className="text-xs text-gray-500">Total XP</p>
+            <p className="font-bold text-sm text-blue-600">{totalXp.toLocaleString()}</p>
           </div>
         </div>
 
         {/* Progress Bar */}
         {nextLevel ? (
-          <div className="mt-3">
-            <div className="flex justify-between text-xs text-gray-500 mb-1">
+          <div className="mt-2">
+            <div className="flex justify-between text-[10px] text-gray-500 mb-0.5">
               <span>Progress to Level {nextLevel.level}</span>
               <span>{Math.round(levelProgress)}%</span>
             </div>
-            <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
+            <div className="h-1.5 bg-gray-200 rounded-full overflow-hidden">
               <motion.div
                 initial={{ width: 0 }}
                 animate={{ width: `${levelProgress}%` }}
@@ -67,78 +67,78 @@ export function StatsPanel({
                 className="h-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"
               />
             </div>
-            <p className="text-xs text-gray-400 mt-1">
+            <p className="text-[10px] text-gray-400 mt-0.5">
               {Math.max(0, nextLevel.xpRequired - totalXp)} XP to {nextLevel.name}
             </p>
           </div>
         ) : (
-          <div className="mt-3 text-center">
-            <p className="text-xs text-purple-600 font-medium">Max Level Reached!</p>
+          <div className="mt-2 text-center">
+            <p className="text-[10px] text-purple-600 font-medium">Max Level Reached!</p>
           </div>
         )}
       </div>
 
-      {/* Stats Grid */}
-      <div className="grid grid-cols-2 gap-4 mb-6">
+      {/* Stats Grid - Compact */}
+      <div className="grid grid-cols-2 gap-2 mb-4">
         {/* Streak */}
-        <div className="bg-orange-50 rounded-xl p-4 text-center">
-          <div className="text-3xl mb-1">🔥</div>
-          <p className="text-2xl font-bold text-orange-600">{currentStreak}</p>
-          <p className="text-xs text-orange-700">Day Streak</p>
+        <div className="bg-orange-50 rounded-lg p-2.5 text-center">
+          <div className="text-xl mb-0.5">🔥</div>
+          <p className="text-lg font-bold text-orange-600">{currentStreak}</p>
+          <p className="text-[10px] text-orange-700">Day Streak</p>
         </div>
 
         {/* Accuracy */}
-        <div className="bg-green-50 rounded-xl p-4 text-center">
-          <div className="text-3xl mb-1">🎯</div>
-          <p className="text-2xl font-bold text-green-600">{accuracy}%</p>
-          <p className="text-xs text-green-700">Accuracy</p>
+        <div className="bg-green-50 rounded-lg p-2.5 text-center">
+          <div className="text-xl mb-0.5">🎯</div>
+          <p className="text-lg font-bold text-green-600">{accuracy}%</p>
+          <p className="text-[10px] text-green-700">Accuracy</p>
         </div>
 
         {/* Total Questions */}
-        <div className="bg-blue-50 rounded-xl p-4 text-center">
-          <div className="text-3xl mb-1">📝</div>
-          <p className="text-2xl font-bold text-blue-600">{totalQuestions}</p>
-          <p className="text-xs text-blue-700">Questions</p>
+        <div className="bg-blue-50 rounded-lg p-2.5 text-center">
+          <div className="text-xl mb-0.5">📝</div>
+          <p className="text-lg font-bold text-blue-600">{totalQuestions}</p>
+          <p className="text-[10px] text-blue-700">Questions</p>
         </div>
 
         {/* Correct Answers */}
-        <div className="bg-purple-50 rounded-xl p-4 text-center">
-          <div className="text-3xl mb-1">✅</div>
-          <p className="text-2xl font-bold text-purple-600">{correctAnswers}</p>
-          <p className="text-xs text-purple-700">Correct</p>
+        <div className="bg-purple-50 rounded-lg p-2.5 text-center">
+          <div className="text-xl mb-0.5">✅</div>
+          <p className="text-lg font-bold text-purple-600">{correctAnswers}</p>
+          <p className="text-[10px] text-purple-700">Correct</p>
         </div>
       </div>
 
-      {/* Session Stats */}
+      {/* Session Stats - Compact */}
       {sessionQuestions > 0 && (
-        <div className="border-t pt-4">
-          <h4 className="text-sm font-medium text-gray-500 mb-3">This Session</h4>
-          <div className="flex items-center justify-between text-sm">
+        <div className="border-t pt-3">
+          <h4 className="text-xs font-medium text-gray-500 mb-2">This Session</h4>
+          <div className="flex items-center justify-between text-xs">
             <span className="text-gray-600">Questions</span>
             <span className="font-medium">{sessionQuestions}</span>
           </div>
-          <div className="flex items-center justify-between text-sm mt-1">
+          <div className="flex items-center justify-between text-xs mt-0.5">
             <span className="text-gray-600">Correct</span>
             <span className="font-medium text-green-600">{sessionCorrect}</span>
           </div>
-          <div className="flex items-center justify-between text-sm mt-1">
+          <div className="flex items-center justify-between text-xs mt-0.5">
             <span className="text-gray-600">Session Accuracy</span>
             <span className="font-medium">{sessionAccuracy}%</span>
           </div>
         </div>
       )}
 
-      {/* Quick Actions */}
-      <div className="mt-6 space-y-2">
+      {/* Quick Actions - Compact */}
+      <div className="mt-4 space-y-1.5">
         <button
           onClick={() => router.push('/neet-biology-mcq/leaderboard')}
-          className="w-full py-2 px-4 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors text-sm"
+          className="w-full py-1.5 px-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors text-xs"
         >
           View Leaderboard
         </button>
         <button
           onClick={() => router.push('/neet-biology-mcq/daily-challenge')}
-          className="w-full py-2 px-4 bg-gray-100 text-gray-700 rounded-lg font-medium hover:bg-gray-200 transition-colors text-sm"
+          className="w-full py-1.5 px-3 bg-gray-100 text-gray-700 rounded-lg font-medium hover:bg-gray-200 transition-colors text-xs"
         >
           Daily Challenge
         </button>

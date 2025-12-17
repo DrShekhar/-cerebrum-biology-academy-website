@@ -18,6 +18,24 @@ export const ChatbotWrapper = dynamic(
   { ssr: false }
 )
 
+// PERFORMANCE: Lazy-load mobile navigation (only needed on mobile, defers lucide-react icons)
+export const DynamicMobileNavigation = dynamic(
+  () => import('@/components/navigation/MobileNavigation').then((mod) => mod.MobileNavigation),
+  { ssr: false }
+)
+
+// PERFORMANCE: Lazy-load PWA provider (service worker registration can wait)
+export const DynamicPWAProvider = dynamic(
+  () => import('@/components/pwa/PWAProvider').then((mod) => mod.PWAProvider),
+  { ssr: false }
+)
+
+// PERFORMANCE: Lazy-load trial banner (not critical for initial render)
+export const DynamicTrialBanner = dynamic(
+  () => import('@/components/trial/TrialBannerWrapper').then((mod) => mod.TrialBannerWrapper),
+  { ssr: false }
+)
+
 // Lazy-load Footer to defer framer-motion bundle (Footer uses motion components)
 // This reduces initial JS by ~50KB since footer is below the fold
 export const DynamicFooter = dynamic(

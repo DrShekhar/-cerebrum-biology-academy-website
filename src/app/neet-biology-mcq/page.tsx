@@ -538,32 +538,32 @@ export default function NEETBiologyMCQPage() {
                 </>
               ) : (
                 <>
-                  {/* Quiz Progress Bar */}
-                  <div className="bg-white rounded-xl shadow-md p-4 mb-4">
-                    <div className="flex items-center justify-between mb-2">
-                      <div className="flex items-center gap-4">
-                        <span className="text-sm font-medium text-gray-700">
-                          Question {currentQuestionIndex + 1} of {questions.length}
+                  {/* Quiz Progress Bar - Compact */}
+                  <div className="bg-white rounded-lg shadow-sm p-3 mb-3 max-w-2xl">
+                    <div className="flex items-center justify-between mb-1.5">
+                      <div className="flex items-center gap-3">
+                        <span className="text-xs font-medium text-gray-700">
+                          Q {currentQuestionIndex + 1}/{questions.length}
                         </span>
-                        <div className="flex items-center gap-2 text-sm">
+                        <div className="flex items-center gap-1 text-xs">
                           <span className="text-green-600 font-bold">
                             {sessionStats.correctAnswers}
                           </span>
                           <span className="text-gray-400">/</span>
                           <span className="text-gray-600">{sessionStats.questionsAttempted}</span>
-                          <span className="text-gray-400">({sessionAccuracy}% accuracy)</span>
+                          <span className="text-gray-400">({sessionAccuracy}%)</span>
                         </div>
                       </div>
                       <button
                         onClick={handleResetClick}
-                        className="flex items-center gap-2 text-gray-500 hover:text-gray-700 text-sm"
+                        className="flex items-center gap-1 text-gray-500 hover:text-gray-700 text-xs"
                       >
-                        <RefreshCw className="w-4 h-4" />
+                        <RefreshCw className="w-3 h-3" />
                         Reset
                       </button>
                     </div>
                     {/* Progress bar */}
-                    <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
+                    <div className="h-1.5 bg-gray-200 rounded-full overflow-hidden">
                       <div
                         className="h-full bg-gradient-to-r from-green-500 to-emerald-500 rounded-full transition-all duration-300"
                         style={{
@@ -573,104 +573,107 @@ export default function NEETBiologyMCQPage() {
                     </div>
                   </div>
 
-                  {/* Question Display */}
-                  {isLoadingQuestions ? (
-                    <div className="bg-white rounded-2xl shadow-lg p-8 text-center">
-                      <div className="w-12 h-12 border-4 border-green-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-                      <p className="text-gray-600">Loading questions...</p>
-                    </div>
-                  ) : error ? (
-                    <div className="bg-white rounded-2xl shadow-lg p-8 text-center">
-                      <AlertTriangle className="w-12 h-12 text-amber-500 mx-auto mb-4" />
-                      <p className="text-gray-700 mb-4">{error}</p>
-                      <button
-                        onClick={handleApplyFilters}
-                        className="bg-green-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-green-700"
-                      >
-                        Try Again
-                      </button>
-                    </div>
-                  ) : questions.length === 0 ? (
-                    <div className="bg-white rounded-2xl shadow-lg p-8 text-center">
-                      <BookOpen className="w-12 h-12 text-gray-400 mx-auto mb-4" />
-                      <h3 className="text-lg font-semibold text-gray-700 mb-2">
-                        No Questions Available
-                      </h3>
-                      <p className="text-gray-500 mb-6">
-                        No questions found for the current filters. Try adjusting your filter
-                        settings.
-                      </p>
-                      <button
-                        onClick={handleApplyFilters}
-                        className="bg-green-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-green-700"
-                      >
-                        Load Questions
-                      </button>
-                    </div>
-                  ) : currentQuestion ? (
-                    <AnimatePresence mode="wait">
-                      <motion.div
-                        key={currentQuestion.id}
-                        initial={{ opacity: 0, x: 20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        exit={{ opacity: 0, x: -20 }}
-                      >
-                        <QuestionCard
-                          question={currentQuestion}
-                          questionNumber={sessionStats.questionsAttempted + 1}
-                          onAnswer={handleAnswer}
-                          onSkip={handleSkipQuestion}
-                          showExplanation={hasLeadCaptured}
-                          isProtected={true}
-                        />
-                      </motion.div>
-                    </AnimatePresence>
-                  ) : null}
+                  {/* Question Display - Fixed container to prevent layout dancing */}
+                  <div className="max-w-2xl">
+                    {isLoadingQuestions ? (
+                      <div className="bg-white rounded-xl shadow-lg p-6 text-center">
+                        <div className="w-10 h-10 border-4 border-green-500 border-t-transparent rounded-full animate-spin mx-auto mb-3"></div>
+                        <p className="text-gray-600 text-sm">Loading questions...</p>
+                      </div>
+                    ) : error ? (
+                      <div className="bg-white rounded-xl shadow-lg p-6 text-center">
+                        <AlertTriangle className="w-10 h-10 text-amber-500 mx-auto mb-3" />
+                        <p className="text-gray-700 text-sm mb-3">{error}</p>
+                        <button
+                          onClick={handleApplyFilters}
+                          className="bg-green-600 text-white px-4 py-1.5 rounded-lg font-medium hover:bg-green-700 text-sm"
+                        >
+                          Try Again
+                        </button>
+                      </div>
+                    ) : questions.length === 0 ? (
+                      <div className="bg-white rounded-xl shadow-lg p-6 text-center">
+                        <BookOpen className="w-10 h-10 text-gray-400 mx-auto mb-3" />
+                        <h3 className="text-base font-semibold text-gray-700 mb-2">
+                          No Questions Available
+                        </h3>
+                        <p className="text-gray-500 text-sm mb-4">
+                          No questions found for the current filters. Try adjusting your filter
+                          settings.
+                        </p>
+                        <button
+                          onClick={handleApplyFilters}
+                          className="bg-green-600 text-white px-4 py-1.5 rounded-lg font-medium hover:bg-green-700 text-sm"
+                        >
+                          Load Questions
+                        </button>
+                      </div>
+                    ) : currentQuestion ? (
+                      <AnimatePresence mode="wait">
+                        <motion.div
+                          key={currentQuestion.id}
+                          initial={{ opacity: 0, x: 10 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          exit={{ opacity: 0, x: -10 }}
+                          transition={{ duration: 0.15 }}
+                        >
+                          <QuestionCard
+                            question={currentQuestion}
+                            questionNumber={sessionStats.questionsAttempted + 1}
+                            onAnswer={handleAnswer}
+                            onSkip={handleSkipQuestion}
+                            showExplanation={hasLeadCaptured}
+                            isProtected={true}
+                          />
+                        </motion.div>
+                      </AnimatePresence>
+                    ) : null}
+                  </div>
 
-                  {/* Next Question Button */}
+                  {/* Next Question Button - Compact */}
                   {currentQuestion && answeredIds.has(currentQuestion.id) && (
-                    <div className="mt-4 text-center">
+                    <div className="mt-3 max-w-2xl">
                       <button
                         onClick={handleNextQuestion}
                         disabled={isLoadingQuestions}
-                        className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all inline-flex items-center gap-2 disabled:opacity-70"
+                        className="w-full bg-gradient-to-r from-green-500 to-emerald-600 text-white px-6 py-2 rounded-lg font-medium hover:shadow-md transition-all inline-flex items-center justify-center gap-2 disabled:opacity-70 text-sm"
                       >
                         {isLoadingQuestions ? (
                           <>
-                            <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                            <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
                             Loading...
                           </>
                         ) : (
                           <>
                             Next Question
-                            <ChevronRight className="w-5 h-5" />
+                            <ChevronRight className="w-4 h-4" />
                           </>
                         )}
                       </button>
                     </div>
                   )}
 
-                  {/* Quick Actions */}
-                  <div className="mt-6 flex flex-wrap gap-3 justify-center">
+                  {/* Quick Actions - Compact */}
+                  <div className="mt-4 flex flex-wrap gap-2 max-w-2xl">
                     <button
                       onClick={() => router.push('/neet-biology-mcq/leaderboard')}
-                      className="flex items-center gap-2 bg-white px-4 py-2 rounded-lg shadow-md text-sm font-medium text-gray-700 hover:bg-gray-50 hover:shadow-lg transition-all"
+                      className="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-lg shadow-sm text-xs font-medium text-gray-700 hover:bg-gray-50 transition-all"
                     >
-                      <Users className="w-4 h-4 text-blue-500" />
+                      <Users className="w-3.5 h-3.5 text-blue-500" />
                       Leaderboard
                     </button>
                     <button
                       onClick={() => router.push('/neet-biology-mcq/contribute')}
-                      className="flex items-center gap-2 bg-white px-4 py-2 rounded-lg shadow-md text-sm font-medium text-gray-700 hover:bg-gray-50 hover:shadow-lg transition-all"
+                      className="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-lg shadow-sm text-xs font-medium text-gray-700 hover:bg-gray-50 transition-all"
                     >
-                      <Send className="w-4 h-4 text-green-500" />
+                      <Send className="w-3.5 h-3.5 text-green-500" />
                       Submit Question
                     </button>
                     <button
                       onClick={() => router.push('/neet-biology-mcq/daily-challenge')}
-                      className="flex items-center gap-2 bg-white px-4 py-2 rounded-lg shadow-md text-sm font-medium text-gray-700 hover:bg-gray-50 hover:shadow-lg transition-all"
+                      className="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-lg shadow-sm text-xs font-medium text-gray-700 hover:bg-gray-50 transition-all"
                     >
-                      <Target className="w-4 h-4 text-amber-500" />
+                      <Target className="w-3.5 h-3.5 text-amber-500" />
                       Daily Challenge
                     </button>
                   </div>
@@ -713,9 +716,9 @@ export default function NEETBiologyMCQPage() {
               )}
             </div>
 
-            {/* Sidebar - Stats Panel (Desktop) */}
+            {/* Sidebar - Stats Panel (Desktop) - Fixed width */}
             {quizStarted && (
-              <div className="hidden lg:block w-80">
+              <div className="hidden lg:block w-64 flex-shrink-0">
                 <StatsPanel
                   totalXp={userStats?.totalXp || sessionStats.xpEarned}
                   currentLevel={userStats?.currentLevel || 1}

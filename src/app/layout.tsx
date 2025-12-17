@@ -1,18 +1,13 @@
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
-import Script from 'next/script'
 import { StructuredData } from '@/components/seo/StructuredData'
 import { PageErrorBoundary } from '@/components/ErrorBoundary'
 import GoogleAnalytics from '@/components/analytics/GoogleAnalytics'
 import { WebVitalsReporter } from '@/components/analytics/WebVitalsReporter'
 import Header from '@/components/layout/Header'
-import { MobileNavigation } from '@/components/navigation/MobileNavigation'
-import { DynamicFooter } from '@/components/layout/DynamicComponents'
-import { PWAProvider } from '@/components/pwa/PWAProvider'
 import { AuthProvider } from '@/contexts/AuthContext'
 import { I18nProvider } from '@/contexts/I18nContext'
 import { ToastProvider } from '@/components/ui/Toast'
-import { TrialBannerWrapper } from '@/components/trial/TrialBannerWrapper'
 import { TrustProvider } from '@/components/providers/TrustProvider'
 import { PersonalizationProvider } from '@/components/providers/PersonalizationProvider'
 import { SkipToContent } from '@/components/accessibility/SkipToContent'
@@ -21,6 +16,10 @@ import {
   FloatingCTA,
   GlobalExitIntent,
   ChatbotWrapper,
+  DynamicFooter,
+  DynamicMobileNavigation,
+  DynamicPWAProvider,
+  DynamicTrialBanner,
 } from '@/components/layout/DynamicComponents'
 import './globals.css'
 
@@ -116,11 +115,9 @@ export default function RootLayout({
         <link rel="preconnect" href="https://cerebrumbiologyacademy.com" crossOrigin="anonymous" />
         {/* Vercel CDN for static assets */}
         <link rel="preconnect" href="https://vercel.live" />
-        {/* Third-party services */}
+        {/* Third-party services - PERFORMANCE: GTM preconnect removed since script uses lazyOnload */}
         <link rel="preconnect" href="https://wa.me" />
-        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="//checkout.razorpay.com" />
-        <link rel="dns-prefetch" href="//www.googletagmanager.com" />
         <link rel="dns-prefetch" href="//api.whatsapp.com" />
         <link rel="dns-prefetch" href="//giscus.app" />
         <link rel="dns-prefetch" href="//i.ytimg.com" />
@@ -227,9 +224,9 @@ export default function RootLayout({
               .px-8{padding-left:2rem;padding-right:2rem}
               .py-3{padding-top:.75rem;padding-bottom:.75rem}
               .py-4{padding-top:1rem;padding-bottom:1rem}
-              /* Animation */
-              @keyframes fade-in-up{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-              .animate-fade-in-up{animation:fade-in-up .5s ease-out forwards}
+              /* Animation - starts mostly visible to avoid LCP delay */
+              @keyframes fade-in-up{from{opacity:.7;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+              .animate-fade-in-up{animation:fade-in-up .4s ease-out forwards}
               @keyframes pulse{50%{opacity:.5}}
               .animate-pulse{animation:pulse 2s cubic-bezier(.4,0,.6,1) infinite}
               /* Responsive */
@@ -244,7 +241,7 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <GoogleAnalytics />
         <WebVitalsReporter />
-        <PWAProvider />
+        <DynamicPWAProvider />
         <FocusVisibleStyles />
         <I18nProvider>
           <AuthProvider>
@@ -260,15 +257,15 @@ export default function RootLayout({
                     <div data-section="navigation" className="priority-immediate" role="banner">
                       <Header />
                     </div>
-                    <TrialBannerWrapper />
+                    <DynamicTrialBanner />
                     <main id="main-content" role="main" className="min-h-screen pb-16 md:pb-0">
                       {children}
                     </main>
                     <div data-lazy="footer" className="priority-lazy" role="contentinfo">
                       <DynamicFooter />
                     </div>
-                    <div data-section="mobile-navigation" className="priority-immediate">
-                      <MobileNavigation />
+                    <div data-section="mobile-navigation" className="priority-deferred">
+                      <DynamicMobileNavigation />
                     </div>
                     <FloatingCTA />
                     <GlobalExitIntent />
@@ -279,7 +276,6 @@ export default function RootLayout({
             </ToastProvider>
           </AuthProvider>
         </I18nProvider>
-        {/* Razorpay script moved to payment-specific layouts for better performance */}
       </body>
     </html>
   )

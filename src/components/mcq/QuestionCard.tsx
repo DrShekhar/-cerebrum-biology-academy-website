@@ -118,7 +118,7 @@ export function QuestionCard({
   const getOptionClassName = (index: number) => {
     const option = optionLabels[index]
     const baseClasses =
-      'flex items-start gap-3 p-4 rounded-xl border-2 transition-all duration-200 cursor-pointer'
+      'flex items-center gap-2 p-2.5 rounded-lg border transition-all duration-200 cursor-pointer'
 
     if (!selectedAnswer) {
       return `${baseClasses} border-gray-200 hover:border-blue-400 hover:bg-blue-50`
@@ -138,27 +138,22 @@ export function QuestionCard({
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -20 }}
-      className={`bg-white rounded-2xl shadow-lg p-6 ${isProtected ? 'select-none' : ''}`}
+      exit={{ opacity: 0, y: -10 }}
+      className={`bg-white rounded-xl shadow-lg p-4 ${isProtected ? 'select-none' : ''}`}
       onContextMenu={isProtected ? (e) => e.preventDefault() : undefined}
       role="article"
       aria-label={`Question ${questionNumber}`}
     >
-      {/* Question Header */}
-      <div className="flex items-start justify-between mb-4">
-        <div className="flex items-center gap-3">
-          <span className="flex items-center justify-center w-8 h-8 rounded-full bg-blue-100 text-blue-700 font-bold text-sm">
+      {/* Question Header - Compact */}
+      <div className="flex items-center justify-between mb-3">
+        <div className="flex items-center gap-2">
+          <span className="flex items-center justify-center w-7 h-7 rounded-full bg-blue-100 text-blue-700 font-bold text-xs">
             {questionNumber}
           </span>
-          {question.isPYQ && question.pyqYear && (
-            <span className="px-2 py-1 rounded-full bg-amber-100 text-amber-700 text-xs font-medium">
-              PYQ {question.pyqYear}
-            </span>
-          )}
           <span
-            className={`px-2 py-1 rounded-full text-xs font-medium ${
+            className={`px-2 py-0.5 rounded-full text-xs font-medium ${
               question.difficulty === 'EASY'
                 ? 'bg-green-100 text-green-700'
                 : question.difficulty === 'HARD'
@@ -168,22 +163,25 @@ export function QuestionCard({
           >
             {question.difficulty}
           </span>
+          {question.isPYQ && question.pyqYear && (
+            <span className="px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 text-xs font-medium">
+              PYQ {question.pyqYear}
+            </span>
+          )}
         </div>
-        <div className="flex items-center gap-3">
-          {/* Timer Display */}
+        <div className="flex items-center gap-2">
           <span
-            className={`px-2 py-1 rounded-full text-xs font-medium ${
+            className={`px-2 py-0.5 rounded-full text-xs font-medium ${
               !selectedAnswer ? 'bg-blue-100 text-blue-700' : 'bg-gray-100 text-gray-500'
             }`}
             aria-label={`Time spent: ${formatTime(timeElapsed)}`}
           >
             ⏱️ {formatTime(timeElapsed)}
           </span>
-          {/* Skip Button */}
           {!selectedAnswer && onSkip && (
             <button
               onClick={onSkip}
-              className="px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-600 hover:bg-gray-200 transition-colors"
+              className="px-2 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-600 hover:bg-gray-200 transition-colors"
               aria-label="Skip this question"
             >
               Skip →
@@ -192,31 +190,31 @@ export function QuestionCard({
         </div>
       </div>
       {/* Topic */}
-      <div className="mb-2">
+      <div className="mb-1.5">
         <span className="text-xs text-gray-500">{question.topic}</span>
       </div>
 
-      {/* Question Text */}
-      <div className="mb-6">
-        <p className="text-lg text-gray-800 leading-relaxed">{question.question}</p>
+      {/* Question Text - Compact */}
+      <div className="mb-4">
+        <p className="text-base text-gray-800 leading-relaxed">{question.question}</p>
       </div>
 
-      {/* Options */}
-      <div className="space-y-3" role="radiogroup" aria-label="Answer options">
+      {/* Options - Compact with fixed spacing */}
+      <div className="space-y-2" role="radiogroup" aria-label="Answer options">
         {question.options.map((option, index) => (
           <motion.button
             key={index}
             onClick={() => handleOptionClick(optionLabels[index])}
             disabled={!!selectedAnswer || isSubmitting}
             className={getOptionClassName(index)}
-            whileHover={!selectedAnswer ? { scale: 1.01 } : {}}
-            whileTap={!selectedAnswer ? { scale: 0.99 } : {}}
+            whileHover={!selectedAnswer ? { scale: 1.005 } : {}}
+            whileTap={!selectedAnswer ? { scale: 0.995 } : {}}
             role="radio"
             aria-checked={selectedAnswer === optionLabels[index]}
             aria-label={`Option ${optionLabels[index]}: ${option}. Press ${index + 1} to select.`}
           >
             <span
-              className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm ${
+              className={`flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center font-bold text-xs ${
                 result && optionLabels[index] === result.correctAnswer
                   ? 'bg-green-500 text-white'
                   : result && optionLabels[index] === selectedAnswer && !result.isCorrect
@@ -227,14 +225,14 @@ export function QuestionCard({
             >
               {optionLabels[index]}
             </span>
-            <span className="text-left text-gray-700 flex-1">{option}</span>
+            <span className="text-left text-gray-700 text-sm flex-1">{option}</span>
             {result && optionLabels[index] === result.correctAnswer && (
-              <span className="text-green-500" aria-label="Correct answer">
+              <span className="text-green-500 text-sm" aria-label="Correct answer">
                 ✓
               </span>
             )}
             {result && optionLabels[index] === selectedAnswer && !result.isCorrect && (
-              <span className="text-red-500" aria-label="Incorrect">
+              <span className="text-red-500 text-sm" aria-label="Incorrect">
                 ✗
               </span>
             )}
@@ -244,93 +242,90 @@ export function QuestionCard({
 
       {/* Keyboard Shortcut Hint */}
       {!selectedAnswer && !isSubmitting && (
-        <p className="text-xs text-gray-400 text-center mt-3">
-          Press 1-4 or A-D to quickly select an answer
-        </p>
+        <p className="text-[10px] text-gray-400 text-center mt-2">Press 1-4 or A-D to select</p>
       )}
 
-      {/* Result Feedback */}
+      {/* Result Feedback - Compact */}
       <AnimatePresence>
         {result && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="mt-6"
+            className="mt-4"
             role="status"
             aria-live="polite"
           >
             <div
-              className={`p-4 rounded-xl ${
+              className={`p-3 rounded-lg ${
                 result.isCorrect
                   ? 'bg-green-50 border border-green-200'
                   : 'bg-red-50 border border-red-200'
               }`}
             >
-              <div className="flex items-center justify-between mb-2">
+              <div className="flex items-center justify-between">
                 <span
-                  className={`font-bold ${result.isCorrect ? 'text-green-700' : 'text-red-700'}`}
+                  className={`font-semibold text-sm ${result.isCorrect ? 'text-green-700' : 'text-red-700'}`}
                 >
                   {result.isCorrect ? '✓ Correct!' : '✗ Incorrect'}
                 </span>
-                <span className="text-blue-600 font-medium">+{result.xpEarned} XP</span>
+                <span className="text-blue-600 font-medium text-sm">+{result.xpEarned} XP</span>
               </div>
 
-              {/* Explanation Preview */}
+              {/* Explanation Preview - Compact */}
               {showExplanation && result.explanation && (
-                <div className="mt-3 pt-3 border-t border-gray-200">
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    {showFullExplanation || result.explanation.length <= 200
+                <div className="mt-2 pt-2 border-t border-gray-200">
+                  <p className="text-gray-600 text-xs leading-relaxed">
+                    {showFullExplanation || result.explanation.length <= 150
                       ? result.explanation
-                      : `${result.explanation.slice(0, result.explanation.lastIndexOf(' ', 200))}...`}
+                      : `${result.explanation.slice(0, result.explanation.lastIndexOf(' ', 150))}...`}
                   </p>
-                  {result.explanation.length > 200 && (
+                  {result.explanation.length > 150 && (
                     <button
                       onClick={() => setShowFullExplanation(!showFullExplanation)}
-                      className="mt-2 text-blue-600 text-sm font-medium hover:underline"
+                      className="mt-1 text-blue-600 text-xs font-medium hover:underline"
                     >
-                      {showFullExplanation ? 'Show less' : 'Read more'}
+                      {showFullExplanation ? 'Less' : 'More'}
                     </button>
                   )}
                 </div>
               )}
 
               {!showExplanation && result.explanation && (
-                <div className="mt-3 pt-3 border-t border-gray-200">
-                  <p className="text-gray-500 text-sm">
+                <div className="mt-2 pt-2 border-t border-gray-200 flex items-center justify-between">
+                  <p className="text-gray-500 text-xs">
                     Full explanation available with course enrollment
                   </p>
                   <a
                     href="/demo"
-                    className="mt-2 px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors inline-block"
+                    className="px-2.5 py-1 bg-blue-600 text-white text-xs font-medium rounded hover:bg-blue-700 transition-colors flex-shrink-0 ml-2"
                   >
                     Unlock Explanations
                   </a>
                 </div>
               )}
 
-              {/* Streak Update */}
+              {/* Streak Update - Compact */}
               {result.streakUpdated && result.newStreak && (
-                <div className="mt-3 flex items-center gap-2 text-orange-600">
-                  <span className="text-xl">🔥</span>
+                <div className="mt-2 flex items-center gap-1.5 text-orange-600 text-sm">
+                  <span>🔥</span>
                   <span className="font-medium">{result.newStreak} day streak!</span>
                 </div>
               )}
 
-              {/* Badge Unlocked */}
+              {/* Badge Unlocked - Compact */}
               {result.badgesUnlocked && result.badgesUnlocked.length > 0 && (
-                <div className="mt-3 space-y-2">
+                <div className="mt-2 space-y-1.5">
                   {result.badgesUnlocked.map((badge) => (
                     <div
                       key={badge.code}
-                      className="flex items-center gap-3 p-3 bg-yellow-50 rounded-lg border border-yellow-200"
+                      className="flex items-center gap-2 p-2 bg-yellow-50 rounded border border-yellow-200"
                     >
-                      <span className="text-2xl">{badge.icon}</span>
-                      <div>
-                        <p className="font-bold text-yellow-800">Badge Unlocked!</p>
-                        <p className="text-sm text-yellow-700">{badge.name}</p>
+                      <span className="text-lg">{badge.icon}</span>
+                      <div className="flex-1 min-w-0">
+                        <p className="font-semibold text-yellow-800 text-xs">Badge: {badge.name}</p>
                       </div>
-                      <span className="ml-auto text-yellow-600 font-medium">
+                      <span className="text-yellow-600 font-medium text-xs">
                         +{badge.xpReward} XP
                       </span>
                     </div>
@@ -338,16 +333,16 @@ export function QuestionCard({
                 </div>
               )}
 
-              {/* Level Up */}
+              {/* Level Up - Compact */}
               {result.levelUp && (
                 <motion.div
-                  initial={{ scale: 0.8, opacity: 0 }}
+                  initial={{ scale: 0.9, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
-                  className="mt-3 p-4 bg-purple-50 rounded-lg border border-purple-200 text-center"
+                  className="mt-2 p-2 bg-purple-50 rounded border border-purple-200 text-center"
                 >
-                  <p className="text-2xl mb-2">🎉</p>
-                  <p className="font-bold text-purple-800">Level Up!</p>
-                  <p className="text-purple-700">You are now Level {result.levelUp.newLevel}</p>
+                  <p className="font-semibold text-purple-800 text-sm">
+                    🎉 Level Up! Now Level {result.levelUp.newLevel}
+                  </p>
                 </motion.div>
               )}
             </div>
