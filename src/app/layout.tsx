@@ -110,6 +110,9 @@ export default function RootLayout({
         <meta httpEquiv="Accept-CH" content="DPR, Viewport-Width, Width, Save-Data" />
 
         {/* Performance: Preconnect to critical domains - ORDER MATTERS */}
+        {/* Google Fonts - CRITICAL for reducing render blocking */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         {/* Self-origin preconnect for faster CSS/JS loading */}
         <link rel="preconnect" href="https://cerebrumbiologyacademy.com" />
         <link rel="preconnect" href="https://cerebrumbiologyacademy.com" crossOrigin="anonymous" />
