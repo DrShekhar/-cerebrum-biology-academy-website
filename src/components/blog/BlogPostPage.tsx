@@ -138,8 +138,8 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
             {/* Main Content */}
             <article className="flex-1 min-w-0 max-w-4xl">
-              {/* Article Header */}
-              <header className="mb-12 animate-fade-in-up">
+              {/* Article Header - using div instead of header to avoid global sticky CSS */}
+              <div className="mb-12 animate-fade-in-up">
                 {/* Badges Row */}
                 <div className="flex flex-wrap gap-3 mb-6">
                   {category && (
@@ -255,7 +255,7 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
                     )}
                   </div>
                 </div>
-              </header>
+              </div>
 
               {/* Featured Image - Dynamically loaded for performance */}
               <div className="relative w-full aspect-[16/10] md:aspect-[16/9] bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 rounded-2xl md:rounded-3xl mb-12 overflow-hidden shadow-lg shadow-blue-100/50 animate-fade-in">
