@@ -1,12 +1,22 @@
 import { MetadataRoute } from 'next'
+import { getAllPosts } from '@/lib/blog/mdx'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.cerebrumbiologyacademy.com'
   // Use a static date representing when site content was last updated
   // This is better for SEO than dynamic dates that change on every build
-  const lastUpdated = new Date('2025-12-01T00:00:00.000Z')
+  const lastUpdated = new Date('2025-12-17T00:00:00.000Z')
 
-  const routes = [
+  // Dynamically generate blog post URLs from MDX files
+  const blogPosts = getAllPosts()
+  const blogRoutes: MetadataRoute.Sitemap = blogPosts.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: new Date(post.updatedAt || post.publishedAt),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }))
+
+  const routes: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
       lastModified: lastUpdated,
@@ -83,196 +93,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/blog`,
       lastModified: lastUpdated,
       changeFrequency: 'daily' as const,
-      priority: 0.6,
+      priority: 0.8,
     },
-    // Blog Posts - 31 total blog entries
-    {
-      url: `${baseUrl}/blog/kota-vs-online-neet-coaching-2025`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog/when-to-start-neet-preparation-class-9-vs-10`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog/dps-students-neet-preparation-guide`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog/top-10-neet-biology-coaching-delhi-ncr-2025`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog/best-books-for-neet-2026-biology-physics-chemistry`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog/common-mistakes-neet-aspirants-avoid-2026`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog/last-6-months-neet-2026-preparation-strategy`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog/mock-test-strategy-neet-2026-complete-guide`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog/ncert-reading-strategy-neet-biology-2026`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog/neet-2026-complete-guide-exam-pattern-syllabus-dates`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog/neet-biology-chapter-wise-weightage-2026`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog/neet-biology-coaching-delhi-ncr-guide`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog/neet-biology-preparation-strategy-score-180-plus`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog/neet-biology-syllabus-2025-complete-guide`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog/photosynthesis-vs-respiration-neet-comparison`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog/ultimate-neet-2025-guide-specialized-vs-mass-coaching`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog/what-neet-toppers-do-differently-secrets-revealed`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    // 14 New Blog Posts
-    {
-      url: `${baseUrl}/blog/human-physiology-neet-complete-guide`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog/genetics-neet-complete-guide`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog/ecology-neet-complete-guide`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog/cell-biology-neet-complete-guide`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog/plant-physiology-neet-complete-guide`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog/molecular-biology-neet-complete-guide`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog/biotechnology-neet-complete-guide`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog/human-reproduction-neet-complete-guide`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog/animal-kingdom-neet-complete-guide`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog/plant-kingdom-neet-complete-guide`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog/evolution-neet-complete-guide`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog/microbes-human-welfare-neet-guide`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog/neet-coaching-laxmi-nagar-east-delhi-guide`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog/best-neet-coaching-noida-sector-wise-guide`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
+    // Blog posts are dynamically generated above
+    ...blogRoutes,
     {
       url: `${baseUrl}/gallery`,
       lastModified: lastUpdated,
