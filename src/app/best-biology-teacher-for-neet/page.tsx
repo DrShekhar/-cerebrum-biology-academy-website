@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { useState, useEffect, useRef } from 'react'
 import {
   Trophy,
   Users,
@@ -21,6 +21,32 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
+
+// Lightweight scroll animation hook (replaces framer-motion)
+function useScrollAnimation(threshold = 0.1) {
+  const ref = useRef<HTMLDivElement>(null)
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    const element = ref.current
+    if (!element) return
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+          observer.unobserve(element)
+        }
+      },
+      { threshold }
+    )
+
+    observer.observe(element)
+    return () => observer.disconnect()
+  }, [threshold])
+
+  return { ref, isVisible }
+}
 
 const neetExpertise = [
   {
@@ -90,6 +116,14 @@ const faqs = [
 ]
 
 export default function BestBiologyTeacherForNeetPage() {
+  // Scroll animation hooks for each section
+  const heroAnim = useScrollAnimation()
+  const expertiseHeaderAnim = useScrollAnimation()
+  const resultsHeaderAnim = useScrollAnimation()
+  const transformHeaderAnim = useScrollAnimation()
+  const faqsHeaderAnim = useScrollAnimation()
+  const ctaAnim = useScrollAnimation()
+
   return (
     <div className="min-h-screen">
       {/* FAQ Schema */}
@@ -115,11 +149,11 @@ export default function BestBiologyTeacherForNeetPage() {
       <section className="relative bg-gradient-to-br from-emerald-900 via-teal-800 to-cyan-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div
+            ref={heroAnim.ref}
+            className={`text-center max-w-4xl mx-auto transition-all duration-700 ${
+              heroAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+            }`}
           >
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <Trophy className="w-5 h-5 mr-2 text-yellow-300" />
@@ -186,19 +220,20 @@ export default function BestBiologyTeacherForNeetPage() {
                 <div className="text-sm opacity-80">Success Rate</div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* NEET Expertise */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            ref={expertiseHeaderAnim.ref}
+            className={`text-center mb-16 transition-all duration-600 ${
+              expertiseHeaderAnim.isVisible
+                ? 'opacity-100 translate-y-0'
+                : 'opacity-0 translate-y-5'
+            }`}
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Why Our Teaching Works for NEET
@@ -206,22 +241,19 @@ export default function BestBiologyTeacherForNeetPage() {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Specialized NEET Biology preparation by faculty who understand the exam inside-out
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {neetExpertise.map((item, index) => (
-              <motion.div
+              <div
                 key={item.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow"
+                className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow animate-fade-in-up"
+                style={{ animationDelay: `${index * 100}ms` }}
               >
                 <item.icon className="w-12 h-12 text-emerald-600 mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
                 <p className="text-gray-600">{item.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -230,27 +262,23 @@ export default function BestBiologyTeacherForNeetPage() {
       {/* Results Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            ref={resultsHeaderAnim.ref}
+            className={`text-center mb-16 transition-all duration-600 ${
+              resultsHeaderAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+            }`}
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Our NEET Results Speak
             </h2>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-4 gap-6">
             {neetResults.map((result, index) => (
-              <motion.div
+              <div
                 key={result.year}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl p-8 text-center border-2 border-emerald-100"
+                className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl p-8 text-center border-2 border-emerald-100 animate-fade-in-up"
+                style={{ animationDelay: `${index * 100}ms` }}
               >
                 <h3 className="text-3xl font-bold text-emerald-600 mb-2">NEET {result.year}</h3>
                 <div className="text-4xl font-bold text-gray-900 mb-1">{result.selections}</div>
@@ -258,7 +286,7 @@ export default function BestBiologyTeacherForNeetPage() {
                 <div className="bg-emerald-600 text-white px-4 py-2 rounded-full inline-block">
                   Top Rank: {result.topRank}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -267,27 +295,22 @@ export default function BestBiologyTeacherForNeetPage() {
       {/* Biology Score Transformation */}
       <section className="py-20 bg-emerald-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            ref={transformHeaderAnim.ref}
+            className={`text-center mb-16 transition-all duration-600 ${
+              transformHeaderAnim.isVisible
+                ? 'opacity-100 translate-y-0'
+                : 'opacity-0 translate-y-5'
+            }`}
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Biology Score Transformation
             </h2>
             <p className="text-xl text-gray-600">Real results from our students</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-xl p-8 shadow-lg"
-            >
+            <div className="bg-white rounded-xl p-8 shadow-lg animate-fade-in-up">
               <div className="flex justify-between items-center mb-4">
                 <span className="text-gray-600">Before Joining</span>
                 <span className="text-2xl font-bold text-red-500">180/360</span>
@@ -303,14 +326,11 @@ export default function BestBiologyTeacherForNeetPage() {
                 <div className="bg-emerald-600 h-4 rounded-full" style={{ width: '89%' }}></div>
               </div>
               <p className="mt-4 text-center text-gray-600 font-medium">+140 marks improvement</p>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-xl p-8 shadow-lg"
+            <div
+              className="bg-white rounded-xl p-8 shadow-lg animate-fade-in-up"
+              style={{ animationDelay: '100ms' }}
             >
               <div className="flex justify-between items-center mb-4">
                 <span className="text-gray-600">Before Joining</span>
@@ -327,14 +347,11 @@ export default function BestBiologyTeacherForNeetPage() {
                 <div className="bg-emerald-600 h-4 rounded-full" style={{ width: '97%' }}></div>
               </div>
               <p className="mt-4 text-center text-gray-600 font-medium">+130 marks improvement</p>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-xl p-8 shadow-lg"
+            <div
+              className="bg-white rounded-xl p-8 shadow-lg animate-fade-in-up"
+              style={{ animationDelay: '200ms' }}
             >
               <div className="flex justify-between items-center mb-4">
                 <span className="text-gray-600">Before Joining</span>
@@ -351,7 +368,7 @@ export default function BestBiologyTeacherForNeetPage() {
                 <div className="bg-emerald-600 h-4 rounded-full" style={{ width: '100%' }}></div>
               </div>
               <p className="mt-4 text-center text-gray-600 font-medium">Perfect Score Achieved!</p>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -359,34 +376,30 @@ export default function BestBiologyTeacherForNeetPage() {
       {/* FAQs Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            ref={faqsHeaderAnim.ref}
+            className={`text-center mb-16 transition-all duration-600 ${
+              faqsHeaderAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+            }`}
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Frequently Asked Questions
             </h2>
-          </motion.div>
+          </div>
 
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <motion.div
+              <div
                 key={faq.question}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl p-8 shadow-lg"
+                className="bg-white rounded-xl p-8 shadow-lg animate-fade-in-up"
+                style={{ animationDelay: `${index * 100}ms` }}
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start">
                   <MessageCircle className="w-6 h-6 mr-3 text-emerald-600 flex-shrink-0 mt-1" />
                   {faq.question}
                 </h3>
                 <p className="text-gray-700 leading-relaxed ml-9">{faq.answer}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -395,11 +408,11 @@ export default function BestBiologyTeacherForNeetPage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            ref={ctaAnim.ref}
+            className={`transition-all duration-600 ${
+              ctaAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+            }`}
           >
             <h2 className="text-3xl md:text-5xl font-bold mb-6">Ready to Master NEET Biology?</h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
@@ -429,7 +442,7 @@ export default function BestBiologyTeacherForNeetPage() {
                 </Button>
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 

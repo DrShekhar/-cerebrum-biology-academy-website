@@ -1,10 +1,35 @@
 'use client'
 
-import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { useState, useEffect, useRef } from 'react'
 import { ChevronDown, HelpCircle, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 import { FAQSchema } from '@/components/seo/FAQSchema'
+
+// Lightweight scroll animation hook (replaces framer-motion)
+function useScrollAnimation(threshold = 0.1) {
+  const ref = useRef<HTMLDivElement>(null)
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    const element = ref.current
+    if (!element) return
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+          observer.unobserve(element)
+        }
+      },
+      { threshold }
+    )
+
+    observer.observe(element)
+    return () => observer.disconnect()
+  }, [threshold])
+
+  return { ref, isVisible }
+}
 
 interface FAQ {
   question: string
@@ -47,6 +72,10 @@ const homepageFAQs: FAQ[] = [
 export function HomeFAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
+  // Scroll animation hooks
+  const headerAnim = useScrollAnimation()
+  const ctaAnim = useScrollAnimation()
+
   const toggleQuestion = (index: number) => {
     setOpenIndex(openIndex === index ? null : index)
   }
@@ -57,12 +86,11 @@ export function HomeFAQSection() {
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <motion.div
-          className="text-center mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+        <div
+          ref={headerAnim.ref}
+          className={`text-center mb-12 transition-all duration-600 ${
+            headerAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+          }`}
         >
           <div className="inline-flex items-center bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
             <HelpCircle className="w-4 h-4 mr-2" />
@@ -74,20 +102,17 @@ export function HomeFAQSection() {
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Get answers to the most common questions about our NEET Biology coaching programs
           </p>
-        </motion.div>
+        </div>
 
         {/* FAQ Accordion */}
         <div className="space-y-4">
           {homepageFAQs.map((faq, index) => {
             const isOpen = openIndex === index
             return (
-              <motion.div
+              <div
                 key={index}
-                className="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                className="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow animate-fade-in-up"
+                style={{ animationDelay: `${index * 100}ms` }}
               >
                 <button
                   onClick={() => toggleQuestion(index)}
@@ -95,41 +120,36 @@ export function HomeFAQSection() {
                   aria-expanded={isOpen}
                 >
                   <span className="font-medium text-gray-900 pr-4">{faq.question}</span>
-                  <motion.div
-                    animate={{ rotate: isOpen ? 180 : 0 }}
-                    transition={{ duration: 0.2 }}
-                    className="flex-shrink-0"
+                  <div
+                    className={`flex-shrink-0 transition-transform duration-200 ${isOpen ? 'rotate-180' : 'rotate-0'}`}
                   >
                     <ChevronDown className="w-5 h-5 text-blue-500" />
-                  </motion.div>
+                  </div>
                 </button>
 
-                <AnimatePresence>
-                  {isOpen && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: 'auto', opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3, ease: 'easeInOut' }}
-                    >
-                      <div className="px-6 pb-5 text-gray-600 leading-relaxed border-t border-gray-100 pt-4">
-                        {faq.answer}
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </motion.div>
+                {/* CSS-only accordion animation using grid trick */}
+                <div
+                  className={`grid transition-all duration-300 ease-in-out ${
+                    isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
+                  }`}
+                >
+                  <div className="overflow-hidden">
+                    <div className="px-6 pb-5 text-gray-600 leading-relaxed border-t border-gray-100 pt-4">
+                      {faq.answer}
+                    </div>
+                  </div>
+                </div>
+              </div>
             )
           })}
         </div>
 
         {/* View All FAQs Link */}
-        <motion.div
-          className="text-center mt-10"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          viewport={{ once: true }}
+        <div
+          ref={ctaAnim.ref}
+          className={`text-center mt-10 transition-all duration-600 delay-500 ${
+            ctaAnim.isVisible ? 'opacity-100' : 'opacity-0'
+          }`}
         >
           <Link
             href="/faq"
@@ -139,7 +159,7 @@ export function HomeFAQSection() {
             <ArrowRight className="w-5 h-5" />
           </Link>
           <p className="mt-3 text-sm text-gray-500">Browse 37+ questions across 8 categories</p>
-        </motion.div>
+        </div>
       </div>
     </section>
   )

@@ -1,11 +1,35 @@
 'use client'
 
-import React from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 import { Star, Quote, Award, TrendingUp, Users, BookOpen, Target, Calendar } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
-import Image from 'next/image'
+
+// Lightweight scroll animation hook (replaces framer-motion)
+function useScrollAnimation(threshold = 0.1) {
+  const ref = useRef<HTMLDivElement>(null)
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    const element = ref.current
+    if (!element) return
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+          observer.unobserve(element)
+        }
+      },
+      { threshold }
+    )
+
+    observer.observe(element)
+    return () => observer.disconnect()
+  }, [threshold])
+
+  return { ref, isVisible }
+}
 
 const testimonials = [
   {
@@ -128,15 +152,23 @@ const stats = [
 ]
 
 export default function TestimonialsPage() {
+  // Scroll animation hooks
+  const heroAnim = useScrollAnimation()
+  const statsAnim = useScrollAnimation()
+  const testimonialsHeaderAnim = useScrollAnimation()
+  const videoCtaAnim = useScrollAnimation()
+  const ctaAnim = useScrollAnimation()
+
   return (
     <div className="min-h-screen bg-gray-50 overflow-x-hidden">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary-600 to-primary-800 text-white py-12 sm:py-14 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-center"
+          <div
+            ref={heroAnim.ref}
+            className={`text-center transition-all duration-700 ${
+              heroAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+            }`}
           >
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
               Success Stories
@@ -152,7 +184,7 @@ export default function TestimonialsPage() {
               <span className="hidden sm:inline">•</span>
               <span className="whitespace-nowrap">186+ AIIMS/JIPMER Selected</span>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -168,14 +200,17 @@ export default function TestimonialsPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
+          <div
+            ref={statsAnim.ref}
+            className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 transition-all duration-700 ${
+              statsAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+            }`}
+          >
             {stats.map((stat, index) => (
-              <motion.div
+              <div
                 key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="text-center"
+                className="text-center animate-fade-in-up"
+                style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div
                   className={`inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl sm:rounded-2xl bg-gray-100 mb-3 sm:mb-4`}
@@ -188,7 +223,7 @@ export default function TestimonialsPage() {
                 <div className="text-gray-600 font-medium text-xs sm:text-sm md:text-base">
                   {stat.label}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -197,7 +232,14 @@ export default function TestimonialsPage() {
       {/* Testimonials Section */}
       <section className="py-10 sm:py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10 sm:mb-12 md:mb-16">
+          <div
+            ref={testimonialsHeaderAnim.ref}
+            className={`text-center mb-10 sm:mb-12 md:mb-16 transition-all duration-700 ${
+              testimonialsHeaderAnim.isVisible
+                ? 'opacity-100 translate-y-0'
+                : 'opacity-0 translate-y-5'
+            }`}
+          >
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
               What Our Students Say
             </h2>
@@ -208,12 +250,10 @@ export default function TestimonialsPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-14 md:mb-16">
             {testimonials.map((testimonial, index) => (
-              <motion.div
+              <div
                 key={testimonial.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-xl sm:rounded-2xl shadow-sm border border-gray-100 p-5 sm:p-6 md:p-8 hover:shadow-lg transition-all duration-300"
+                className="bg-white rounded-xl sm:rounded-2xl shadow-sm border border-gray-100 p-5 sm:p-6 md:p-8 hover:shadow-lg transition-all duration-300 animate-fade-in-up"
+                style={{ animationDelay: `${index * 100}ms` }}
               >
                 {/* Header */}
                 <div className="flex items-start gap-3 sm:gap-4 mb-5 sm:mb-6">
@@ -274,16 +314,17 @@ export default function TestimonialsPage() {
                     <span className="font-semibold text-purple-600">{testimonial.batch}</span>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
 
           {/* Video Testimonials CTA */}
           <div className="text-center mb-12 sm:mb-14 md:mb-16">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="bg-primary-50 rounded-xl sm:rounded-2xl p-6 sm:p-8 max-w-4xl mx-auto"
+            <div
+              ref={videoCtaAnim.ref}
+              className={`bg-primary-50 rounded-xl sm:rounded-2xl p-6 sm:p-8 max-w-4xl mx-auto transition-all duration-700 ${
+                videoCtaAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+              }`}
             >
               <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">
                 Watch Video Testimonials
@@ -297,15 +338,16 @@ export default function TestimonialsPage() {
                 </svg>
                 Watch Success Stories
               </Button>
-            </motion.div>
+            </div>
           </div>
 
           {/* Call to Action */}
           <div className="text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="bg-white rounded-xl sm:rounded-2xl shadow-lg p-6 sm:p-8 max-w-4xl mx-auto"
+            <div
+              ref={ctaAnim.ref}
+              className={`bg-white rounded-xl sm:rounded-2xl shadow-lg p-6 sm:p-8 max-w-4xl mx-auto transition-all duration-700 ${
+                ctaAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+              }`}
             >
               <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
                 Ready to Write Your Success Story?
@@ -331,7 +373,7 @@ export default function TestimonialsPage() {
               <div className="mt-6 text-sm text-gray-500">
                 Join 2,847+ students who trust Cerebrum Biology Academy
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
