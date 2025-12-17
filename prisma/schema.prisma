@@ -910,16 +910,30 @@ model questions {
   verifiedBy                String?
   videoExplanation          String?
   difficulty                DifficultyLevel             @default(MEDIUM)
+
+  // NCERT-specific fields for filtering
+  isNcertBased              Boolean                     @default(false)
+  ncertClass                Int?
+  ncertChapter              Int?
+  ncertChapterName          String?
+  ncertFigure               String?
+  ncertPage                 Int?
+  neetWeightage             String?
+  isNeetImportant           Boolean                     @default(false)
+
   question_bank_questions   question_bank_questions[]
   test_assignment_questions test_assignment_questions[]
   test_questions            test_questions[]
   user_question_responses   user_question_responses[]
+  question_diagrams         question_diagrams[]
 
   @@index([curriculum, grade])
   @@index([isActive, isVerified])
   @@index([popularityScore])
   @@index([subject, type])
   @@index([topic, difficulty])
+  @@index([isNcertBased, ncertClass, ncertChapter])
+  @@index([neetWeightage])
 }
 
 model referral_codes {
@@ -3533,4 +3547,150 @@ model mcq_practice_sessions {
 
   @@index([freeUserId])
   @@index([startedAt])
+}
+
+// ===========================================
+// DIAGRAM MANAGEMENT SYSTEM
+// ===========================================
+
+enum DiagramSource {
+  WIKIMEDIA
+  BIOICONS
+  SERVIER
+  PHYLOPIC
+  AI_GENERATED
+  BIORENDER
+  CUSTOM_UPLOAD
+  NCERT_REFERENCE
+}
+
+enum DiagramCategory {
+  CELL_BIOLOGY
+  MOLECULAR_BIOLOGY
+  GENETICS
+  HUMAN_PHYSIOLOGY
+  PLANT_PHYSIOLOGY
+  REPRODUCTION
+  ECOLOGY
+  EVOLUTION
+  BIOTECHNOLOGY
+  MICROORGANISMS
+  ANIMAL_KINGDOM
+  PLANT_KINGDOM
+}
+
+// Main diagram asset storage
+model diagram_assets {
+  id              String          @id @default(cuid())
+  
+  // Basic Info
+  name            String
+  description     String?
+  category        DiagramCategory
+  subcategory     String?         // e.g., "heart", "nephron", "mitochondria"
+  
+  // Source Tracking
+  source          DiagramSource
+  sourceUrl       String?         // Original URL if from external source
+  license         String          // CC BY, Public Domain, etc.
+  attribution     String?         // Credit text
+  
+  // Storage
+  svgContent      String?         @db.Text  // Inline SVG for fast loading
+  fileUrl         String?         // CDN URL for larger files
+  thumbnailUrl    String?
+  
+  // Quality & Ratings
+  qualityScore    Float           @default(3.0)  // 1-5 rating
+  isVerified      Boolean         @default(false)
+  verifiedBy      String?
+  
+  // NCERT Mapping
+  ncertClass      Int?            // 11 or 12
+  ncertUnit       Int?
+  ncertChapter    Int?
+  ncertChapterName String?
+  ncertFigureNo   String?         // "19.2", "8.4a"
+  ncertFigureTitle String?
+  ncertPageNo     Int?
+  
+  // Labeled Parts (for interactive diagrams)
+  labeledParts    Json?           // [{label: "A", name: "Glomerulus", function: "..."}]
+  
+  // Searchability
+  tags            String[]
+  keywords        String[]
+  
+  // Usage Tracking
+  usageCount      Int             @default(0)
+  lastUsedAt      DateTime?
+  
+  // Metadata
+  width           Int?
+  height          Int?
+  fileSize        Int?            // bytes
+  
+  isActive        Boolean         @default(true)
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
+  
+  // Relations
+  questionDiagrams question_diagrams[]
+  
+  @@index([category, subcategory])
+  @@index([ncertClass, ncertChapter])
+  @@index([source])
+  @@index([isActive, qualityScore])
+  @@index([tags])
+}
+
+// Junction table: Questions <-> Diagrams (many-to-many)
+model question_diagrams {
+  id              String          @id @default(cuid())
+  
+  questionId      String
+  diagramId       String
+  
+  // Positioning in question
+  position        String          @default("inline") // inline, above, below, side
+  caption         String?
+  
+  // For labeled diagram questions
+  highlightedParts String[]       // Parts to highlight/mark
+  markedLabel     String?         // Label to ask about (e.g., "X", "A")
+  
+  createdAt       DateTime        @default(now())
+  
+  // Relations
+  question        questions       @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  diagram         diagram_assets  @relation(fields: [diagramId], references: [id], onDelete: Cascade)
+  
+  @@unique([questionId, diagramId])
+  @@index([diagramId])
+}
+
+// NCERT Chapter reference table (for easy lookup)
+model ncert_chapters {
+  id              String          @id @default(cuid())
+  
+  class           Int             // 11 or 12
+  unitNo          Int
+  unitName        String
+  chapterNo       Int
+  chapterName     String
+  
+  // Important figures in this chapter
+  keyFigures      Json?           // [{figNo: "19.2", title: "Nephron", priority: 5}]
+  
+  // Topics covered
+  topics          String[]
+  
+  // NEET weightage
+  neetWeightage   Int             @default(1)  // 1-5
+  avgQuestionsPerYear Float?
+  
+  createdAt       DateTime        @default(now())
+  
+  @@unique([class, chapterNo])
+  @@index([class])
 }

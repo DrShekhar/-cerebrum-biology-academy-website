@@ -50,7 +50,12 @@ export async function GET(request: NextRequest) {
       return await fetchQuestionsByIds(ids)
     }
 
-    const filters: QuestionFilter = {
+    const filters: QuestionFilter & {
+      isNcertBased?: boolean
+      ncertClass?: number
+      ncertChapter?: number
+      neetWeightage?: string
+    } = {
       topic: searchParams.get('topic') || undefined,
       chapter: searchParams.get('chapter') || undefined,
       difficulty: (searchParams.get('difficulty') as DifficultyLevel) || undefined,
@@ -58,6 +63,15 @@ export async function GET(request: NextRequest) {
       pyqYear: searchParams.get('pyqYear') ? parseInt(searchParams.get('pyqYear')!) : undefined,
       limit: parseInt(searchParams.get('limit') || '20'),
       offset: parseInt(searchParams.get('offset') || '0'),
+      // NCERT filtering
+      isNcertBased: searchParams.get('isNcertBased') === 'true' || undefined,
+      ncertClass: searchParams.get('ncertClass')
+        ? parseInt(searchParams.get('ncertClass')!)
+        : undefined,
+      ncertChapter: searchParams.get('ncertChapter')
+        ? parseInt(searchParams.get('ncertChapter')!)
+        : undefined,
+      neetWeightage: searchParams.get('neetWeightage') || undefined,
     }
 
     const excludeIdsParam = searchParams.get('excludeIds')
@@ -83,6 +97,19 @@ export async function GET(request: NextRequest) {
     }
     if (filters.excludeIds && filters.excludeIds.length > 0) {
       officialWhere.id = { notIn: filters.excludeIds }
+    }
+    // NCERT filtering
+    if (filters.isNcertBased) {
+      officialWhere.isNcertBased = true
+    }
+    if (filters.ncertClass) {
+      officialWhere.ncertClass = filters.ncertClass
+    }
+    if (filters.ncertChapter) {
+      officialWhere.ncertChapter = filters.ncertChapter
+    }
+    if (filters.neetWeightage) {
+      officialWhere.neetWeightage = filters.neetWeightage
     }
 
     // Build where clause for community questions
@@ -125,6 +152,14 @@ export async function GET(request: NextRequest) {
         subject: true,
         difficulty: true,
         examYear: true,
+        // NCERT fields
+        isNcertBased: true,
+        ncertClass: true,
+        ncertChapter: true,
+        ncertChapterName: true,
+        ncertFigure: true,
+        neetWeightage: true,
+        isNeetImportant: true,
       },
     })
 
@@ -153,8 +188,8 @@ export async function GET(request: NextRequest) {
       [] as Awaited<ReturnType<typeof prisma.community_questions.findMany>>
     )
 
-    // Transform to unified MCQQuestion format
-    const transformedOfficialQuestions: MCQQuestion[] = officialQuestions
+    // Transform to unified MCQQuestion format with NCERT info
+    const transformedOfficialQuestions = officialQuestions
       .map((q) => {
         const options = safeParseOptions(q.options)
         if (options.length === 0) return null // Skip questions with invalid options
@@ -172,9 +207,17 @@ export async function GET(request: NextRequest) {
           pyqYear: q.examYear || undefined,
           source: 'official' as const,
           sourceId: q.id,
+          // NCERT info
+          isNcertBased: q.isNcertBased || false,
+          ncertClass: q.ncertClass || undefined,
+          ncertChapter: q.ncertChapter || undefined,
+          ncertChapterName: q.ncertChapterName || undefined,
+          ncertFigure: q.ncertFigure || undefined,
+          neetWeightage: q.neetWeightage || undefined,
+          isNeetImportant: q.isNeetImportant || false,
         }
       })
-      .filter((q): q is MCQQuestion => q !== null)
+      .filter((q): q is NonNullable<typeof q> => q !== null)
 
     const transformedCommunityQuestions: MCQQuestion[] = communityQuestions
       .map((q) => {
