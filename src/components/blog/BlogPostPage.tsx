@@ -15,7 +15,7 @@ import {
 } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 import { ReadingProgressBar } from './ReadingProgressBar'
 import { TableOfContents } from './TableOfContents'
 import { KeyTakeaways } from './KeyTakeaways'
@@ -34,6 +34,51 @@ import { BlogIllustrationLoader } from './BlogIllustrationLoader'
 import { FAQSchema, extractFAQsFromContent, generateTopicFAQs } from './FAQSchema'
 import { useBlogViews } from '@/hooks/useBlogViews'
 
+// Animated counter component for view count
+function AnimatedViewCount({ target }: { target: number }) {
+  const [count, setCount] = useState(0)
+  const [hasAnimated, setHasAnimated] = useState(false)
+  const counterRef = useRef<HTMLSpanElement>(null)
+
+  useEffect(() => {
+    if (hasAnimated || target === 0) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && !hasAnimated) {
+          setHasAnimated(true)
+          const duration = 2000 // 2 seconds
+          const steps = 60
+          const increment = target / steps
+          let current = 0
+          const timer = setInterval(() => {
+            current += increment
+            if (current >= target) {
+              setCount(target)
+              clearInterval(timer)
+            } else {
+              setCount(Math.floor(current))
+            }
+          }, duration / steps)
+        }
+      },
+      { threshold: 0.5 }
+    )
+
+    if (counterRef.current) {
+      observer.observe(counterRef.current)
+    }
+
+    return () => observer.disconnect()
+  }, [target, hasAnimated])
+
+  return (
+    <span ref={counterRef} className="tabular-nums">
+      {count.toLocaleString()}
+    </span>
+  )
+}
+
 interface BlogPostPageProps {
   meta: BlogPostMeta
   content: string
@@ -45,6 +90,9 @@ interface BlogPostPageProps {
 export function BlogPostPage({ meta, content, toc, relatedPosts, category }: BlogPostPageProps) {
   const [copied, setCopied] = useState(false)
   const [showShareMenu, setShowShareMenu] = useState(false)
+  const [headerCollapsed, setHeaderCollapsed] = useState(false)
+  const lastScrollY = useRef(0)
+  const scrollThreshold = 50 // Minimum scroll before triggering collapse
 
   // Track views (adds real-time views to viral base count)
   const { views: totalViews } = useBlogViews({
@@ -52,6 +100,29 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
     initialViews: meta.views || 0,
     trackOnMount: true,
   })
+
+  // Scroll direction detection for collapsible header
+  const handleScroll = useCallback(() => {
+    const currentScrollY = window.scrollY
+    const scrollDiff = currentScrollY - lastScrollY.current
+
+    // Only trigger if scrolled more than threshold
+    if (Math.abs(scrollDiff) > scrollThreshold) {
+      if (scrollDiff > 0 && currentScrollY > 200) {
+        // Scrolling DOWN and past hero area - collapse header
+        setHeaderCollapsed(true)
+      } else if (scrollDiff < 0) {
+        // Scrolling UP - expand header
+        setHeaderCollapsed(false)
+      }
+      lastScrollY.current = currentScrollY
+    }
+  }, [])
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [handleScroll])
 
   // Extract FAQs from content and generate topic-specific FAQs
   const extractedFaqs = extractFAQsFromContent(content)
@@ -138,121 +209,152 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
             {/* Main Content */}
             <article className="flex-1 min-w-0 max-w-4xl">
-              {/* Article Header - using div instead of header to avoid global sticky CSS */}
-              <div className="mb-12 animate-fade-in-up">
-                {/* Badges Row */}
-                <div className="flex flex-wrap gap-3 mb-6">
-                  {category && (
-                    <span
-                      className={`px-4 py-2 rounded-full text-sm font-medium ${category.color}`}
-                    >
-                      {category.name}
-                    </span>
-                  )}
-                  {meta.difficulty && <DifficultyBadge difficulty={meta.difficulty} />}
-                  {meta.neetChapter && (
-                    <NEETTopicBadge chapter={meta.neetChapter} weightage={meta.neetWeightage} />
-                  )}
-                  {meta.targetAudience && meta.targetAudience !== 'Both' && (
-                    <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
-                      For {meta.targetAudience}s
-                    </span>
-                  )}
-                </div>
-
-                {/* Title */}
-                <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                  {meta.title}
-                </h1>
-
-                {/* Excerpt */}
-                <p className="text-xl text-gray-600 mb-8 leading-relaxed">{meta.excerpt}</p>
-
-                {/* Article Meta */}
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 pb-8 border-b border-gray-200">
-                  <div className="flex items-center space-x-6">
-                    {/* Author */}
-                    <div className="flex items-center">
-                      <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center text-white font-medium mr-4">
-                        {meta.author.name.charAt(0)}
-                      </div>
-                      <div>
-                        <div className="font-semibold text-gray-900">{meta.author.name}</div>
-                        <div className="text-gray-500 text-sm">{meta.author.role}</div>
-                      </div>
-                    </div>
-
-                    {/* Article Stats */}
-                    <div className="flex items-center space-x-4 text-sm text-gray-500">
-                      <div className="flex items-center">
-                        <Calendar className="w-4 h-4 mr-1" />
-                        {new Date(meta.publishedAt).toLocaleDateString('en-US', {
-                          month: 'long',
-                          day: 'numeric',
-                          year: 'numeric',
-                        })}
-                      </div>
-                      <div className="flex items-center">
-                        <Clock className="w-4 h-4 mr-1" />
-                        {meta.readTime} min read
-                      </div>
-                      <div className="flex items-center text-orange-600">
-                        <Eye className="w-4 h-4 mr-1" />
-                        {totalViews.toLocaleString()} views
-                      </div>
-                    </div>
+              {/* Article Header - Collapsible on scroll */}
+              <div
+                className={`mb-12 transition-all duration-500 ease-out overflow-hidden ${
+                  headerCollapsed ? 'max-h-0 opacity-0 mb-0' : 'max-h-[800px] opacity-100'
+                }`}
+              >
+                <div className="animate-fade-in-up">
+                  {/* Badges Row */}
+                  <div className="flex flex-wrap gap-3 mb-6">
+                    {category && (
+                      <span
+                        className={`px-4 py-2 rounded-full text-sm font-medium ${category.color}`}
+                      >
+                        {category.name}
+                      </span>
+                    )}
+                    {meta.difficulty && <DifficultyBadge difficulty={meta.difficulty} />}
+                    {meta.neetChapter && (
+                      <NEETTopicBadge chapter={meta.neetChapter} weightage={meta.neetWeightage} />
+                    )}
+                    {meta.targetAudience && meta.targetAudience !== 'Both' && (
+                      <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
+                        For {meta.targetAudience}s
+                      </span>
+                    )}
                   </div>
 
-                  {/* Share Buttons */}
-                  <div className="relative">
-                    <button
-                      onClick={(e) => {
-                        e.stopPropagation()
-                        setShowShareMenu(!showShareMenu)
-                      }}
-                      className="flex items-center gap-2 px-4 py-2 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors"
-                    >
-                      <Share2 className="w-4 h-4" />
-                      Share
-                    </button>
+                  {/* Title */}
+                  <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                    {meta.title}
+                  </h1>
 
-                    {showShareMenu && (
-                      <div
-                        className="absolute right-0 top-full mt-2 bg-white rounded-xl shadow-lg border p-2 z-50 animate-fade-in"
-                        onClick={(e) => e.stopPropagation()}
-                      >
-                        <div className="flex items-center space-x-2">
-                          <button
-                            onClick={() => shareOnSocial('facebook')}
-                            className="p-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-                          >
-                            <Facebook className="w-4 h-4" />
-                          </button>
-                          <button
-                            onClick={() => shareOnSocial('twitter')}
-                            className="p-2 bg-blue-400 text-white rounded-lg hover:bg-blue-500 transition-colors"
-                          >
-                            <Twitter className="w-4 h-4" />
-                          </button>
-                          <button
-                            onClick={() => shareOnSocial('linkedin')}
-                            className="p-2 bg-blue-700 text-white rounded-lg hover:bg-blue-800 transition-colors"
-                          >
-                            <Linkedin className="w-4 h-4" />
-                          </button>
-                          <button
-                            onClick={copyToClipboard}
-                            className={`p-2 rounded-lg transition-colors ${
-                              copied
-                                ? 'bg-green-600 text-white'
-                                : 'bg-gray-200 text-gray-600 hover:bg-gray-300'
-                            }`}
-                          >
-                            <Copy className="w-4 h-4" />
-                          </button>
+                  {/* Excerpt */}
+                  <p className="text-xl text-gray-600 mb-8 leading-relaxed">{meta.excerpt}</p>
+
+                  {/* Article Meta */}
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 pb-8 border-b border-gray-200">
+                    <div className="flex items-center space-x-6">
+                      {/* Author */}
+                      <div className="flex items-center">
+                        <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center text-white font-medium mr-4">
+                          {meta.author.name.charAt(0)}
+                        </div>
+                        <div>
+                          <div className="font-semibold text-gray-900">{meta.author.name}</div>
+                          <div className="text-gray-500 text-sm">{meta.author.role}</div>
                         </div>
                       </div>
-                    )}
+
+                      {/* Article Stats */}
+                      <div className="flex items-center space-x-4 text-sm text-gray-500">
+                        <div className="flex items-center">
+                          <Calendar className="w-4 h-4 mr-1" />
+                          {new Date(meta.publishedAt).toLocaleDateString('en-US', {
+                            month: 'long',
+                            day: 'numeric',
+                            year: 'numeric',
+                          })}
+                        </div>
+                        <div className="flex items-center">
+                          <Clock className="w-4 h-4 mr-1" />
+                          {meta.readTime} min read
+                        </div>
+                        <div className="flex items-center text-orange-600 font-medium">
+                          <Eye className="w-4 h-4 mr-1 animate-pulse" />
+                          <AnimatedViewCount target={totalViews} /> views
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Share Buttons */}
+                    <div className="relative">
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation()
+                          setShowShareMenu(!showShareMenu)
+                        }}
+                        className="flex items-center gap-2 px-4 py-2 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors"
+                      >
+                        <Share2 className="w-4 h-4" />
+                        Share
+                      </button>
+
+                      {showShareMenu && (
+                        <div
+                          className="absolute right-0 top-full mt-2 bg-white rounded-xl shadow-lg border p-2 z-50 animate-fade-in"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          <div className="flex items-center space-x-2">
+                            <button
+                              onClick={() => shareOnSocial('facebook')}
+                              className="p-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                            >
+                              <Facebook className="w-4 h-4" />
+                            </button>
+                            <button
+                              onClick={() => shareOnSocial('twitter')}
+                              className="p-2 bg-blue-400 text-white rounded-lg hover:bg-blue-500 transition-colors"
+                            >
+                              <Twitter className="w-4 h-4" />
+                            </button>
+                            <button
+                              onClick={() => shareOnSocial('linkedin')}
+                              className="p-2 bg-blue-700 text-white rounded-lg hover:bg-blue-800 transition-colors"
+                            >
+                              <Linkedin className="w-4 h-4" />
+                            </button>
+                            <button
+                              onClick={copyToClipboard}
+                              className={`p-2 rounded-lg transition-colors ${
+                                copied
+                                  ? 'bg-green-600 text-white'
+                                  : 'bg-gray-200 text-gray-600 hover:bg-gray-300'
+                              }`}
+                            >
+                              <Copy className="w-4 h-4" />
+                            </button>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Compact Header - Shows when main header is collapsed */}
+              <div
+                className={`sticky top-16 z-40 -mx-4 px-4 py-3 bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm transition-all duration-300 ${
+                  headerCollapsed
+                    ? 'opacity-100 translate-y-0'
+                    : 'opacity-0 -translate-y-full pointer-events-none'
+                }`}
+              >
+                <div className="flex items-center justify-between max-w-4xl">
+                  <div className="flex items-center space-x-3 min-w-0">
+                    <h2 className="text-lg font-semibold text-gray-900 truncate">{meta.title}</h2>
+                  </div>
+                  <div className="flex items-center space-x-4 text-sm text-gray-500 flex-shrink-0">
+                    <span className="hidden sm:flex items-center">
+                      <Clock className="w-4 h-4 mr-1" />
+                      {meta.readTime} min
+                    </span>
+                    <span className="flex items-center text-orange-600 font-medium">
+                      <Eye className="w-4 h-4 mr-1" />
+                      {totalViews.toLocaleString()}
+                    </span>
                   </div>
                 </div>
               </div>
