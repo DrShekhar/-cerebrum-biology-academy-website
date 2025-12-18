@@ -62,6 +62,17 @@
   ],
   "redirects": [
     {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.cerebrumbiologyacademy.com"
+        }
+      ],
+      "destination": "https://cerebrumbiologyacademy.com/",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [
         {
