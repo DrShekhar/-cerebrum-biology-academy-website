@@ -283,10 +283,87 @@ const nextConfig = {
         destination: '/neet-coaching-centre',
         permanent: true,
       },
-      // Old center pages redirecting to main centers
+      // Old center pages redirecting to locations
       {
-        source: '/centers/rohini',
-        destination: '/neet-coaching-delhi',
+        source: '/centers/:city',
+        destination: '/locations/:city',
+        permanent: true,
+      },
+
+      // Biology tuition location redirects (pages don't exist yet)
+      {
+        source: '/biology-tuition-gurgaon/:area*',
+        destination: '/neet-coaching-gurgaon',
+        permanent: true,
+      },
+      {
+        source: '/biology-tuition-gurgaon',
+        destination: '/neet-coaching-gurgaon',
+        permanent: true,
+      },
+      {
+        source: '/biology-tuition-noida/:area*',
+        destination: '/neet-coaching-noida/:area*',
+        permanent: true,
+      },
+      {
+        source: '/biology-tuition-noida',
+        destination: '/neet-coaching-noida',
+        permanent: true,
+      },
+      {
+        source: '/biology-tuition-delhi/:area*',
+        destination: '/biology-tuition-south-delhi/:area*',
+        permanent: true,
+      },
+      {
+        source: '/biology-tuition-delhi',
+        destination: '/biology-tuition-south-delhi',
+        permanent: true,
+      },
+
+      // Biology notes nested → flat structure redirect
+      {
+        source: '/biology-notes/class-11/:slug',
+        destination: '/biology-notes/:slug',
+        permanent: true,
+      },
+      {
+        source: '/biology-notes/class-12/:slug',
+        destination: '/biology-notes/:slug',
+        permanent: true,
+      },
+
+      // Course URL aliases
+      {
+        source: '/courses/class-9',
+        destination: '/courses/class-9-foundation',
+        permanent: true,
+      },
+      {
+        source: '/courses/foundation-course',
+        destination: '/courses/foundation',
+        permanent: true,
+      },
+
+      // Generic NEET coaching redirect
+      {
+        source: '/neet-coaching',
+        destination: '/neet-coaching-institute',
+        permanent: true,
+      },
+
+      // Biology topics subpages redirect to main topics page
+      {
+        source: '/biology-topics/:topic',
+        destination: '/biology-topics',
+        permanent: true,
+      },
+
+      // Biology tutor class redirects
+      {
+        source: '/biology-tutor-class-10',
+        destination: '/biology-tuition-class-9-10',
         permanent: true,
       },
       // Boards page redirect
