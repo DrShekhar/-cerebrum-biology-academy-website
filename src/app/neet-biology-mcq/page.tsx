@@ -20,6 +20,7 @@ import {
   Focus,
   Maximize2,
   Minimize2,
+  BarChart3,
 } from 'lucide-react'
 import { QuestionCard } from '@/components/mcq/QuestionCard'
 import { StatsPanel, StatsPanelCompact } from '@/components/mcq/StatsPanel'
@@ -936,6 +937,13 @@ export default function NEETBiologyMCQPage() {
                       {/* Quick Actions - Hidden in Focus Mode */}
                       {!focusMode && (
                         <div className="mt-4 flex flex-wrap justify-center gap-2 w-full max-w-3xl">
+                          <button
+                            onClick={() => router.push('/neet-biology-mcq/analytics')}
+                            className="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-lg shadow-sm text-xs font-medium text-gray-700 hover:bg-gray-50 transition-all"
+                          >
+                            <BarChart3 className="w-3.5 h-3.5 text-purple-500" />
+                            Analytics
+                          </button>
                           <button
                             onClick={() => router.push('/neet-biology-mcq/leaderboard')}
                             className="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-lg shadow-sm text-xs font-medium text-gray-700 hover:bg-gray-50 transition-all"
