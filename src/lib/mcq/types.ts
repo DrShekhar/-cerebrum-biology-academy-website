@@ -29,6 +29,33 @@ export interface MCQQuestion {
   pyqYear?: number
   source?: 'official' | 'community'
   sourceId?: string
+  // NCERT fields
+  isNcertBased?: boolean
+  ncertClass?: number
+  ncertChapter?: number
+  ncertChapterName?: string
+  ncertFigure?: string
+  ncertPage?: number
+  neetWeightage?: string
+  isNeetImportant?: boolean
+  // Diagram fields
+  diagrams?: QuestionDiagram[]
+}
+
+export interface QuestionDiagram {
+  id: string
+  diagramId: string
+  position: 'above' | 'inline' | 'below' | 'side'
+  caption?: string
+  highlightedParts?: string[]
+  markedLabel?: string
+  diagram: {
+    id: string
+    name: string
+    fileUrl?: string
+    svgContent?: string
+    labeledParts?: { label: string; name: string; function?: string }[]
+  }
 }
 
 export interface QuestionFilter {

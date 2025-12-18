@@ -158,8 +158,29 @@ export async function GET(request: NextRequest) {
         ncertChapter: true,
         ncertChapterName: true,
         ncertFigure: true,
+        ncertPage: true,
         neetWeightage: true,
         isNeetImportant: true,
+        // Diagram relations
+        question_diagrams: {
+          select: {
+            id: true,
+            diagramId: true,
+            position: true,
+            caption: true,
+            highlightedParts: true,
+            markedLabel: true,
+            diagram: {
+              select: {
+                id: true,
+                name: true,
+                fileUrl: true,
+                svgContent: true,
+                labeledParts: true,
+              },
+            },
+          },
+        },
       },
     })
 
@@ -188,11 +209,31 @@ export async function GET(request: NextRequest) {
       [] as Awaited<ReturnType<typeof prisma.community_questions.findMany>>
     )
 
-    // Transform to unified MCQQuestion format with NCERT info
+    // Transform to unified MCQQuestion format with NCERT info and diagrams
     const transformedOfficialQuestions = officialQuestions
       .map((q) => {
         const options = safeParseOptions(q.options)
         if (options.length === 0) return null // Skip questions with invalid options
+
+        // Transform diagram data
+        const diagrams = q.question_diagrams?.map((qd) => ({
+          id: qd.id,
+          diagramId: qd.diagramId,
+          position: (qd.position || 'above') as 'above' | 'inline' | 'below' | 'side',
+          caption: qd.caption || undefined,
+          highlightedParts: qd.highlightedParts || undefined,
+          markedLabel: qd.markedLabel || undefined,
+          diagram: {
+            id: qd.diagram.id,
+            name: qd.diagram.name,
+            fileUrl: qd.diagram.fileUrl || undefined,
+            svgContent: qd.diagram.svgContent || undefined,
+            labeledParts: qd.diagram.labeledParts as
+              | { label: string; name: string; function?: string }[]
+              | undefined,
+          },
+        }))
+
         return {
           id: q.id,
           question: q.question,
@@ -213,8 +254,11 @@ export async function GET(request: NextRequest) {
           ncertChapter: q.ncertChapter || undefined,
           ncertChapterName: q.ncertChapterName || undefined,
           ncertFigure: q.ncertFigure || undefined,
+          ncertPage: q.ncertPage || undefined,
           neetWeightage: q.neetWeightage || undefined,
           isNeetImportant: q.isNeetImportant || false,
+          // Diagrams
+          diagrams: diagrams && diagrams.length > 0 ? diagrams : undefined,
         }
       })
       .filter((q): q is NonNullable<typeof q> => q !== null)

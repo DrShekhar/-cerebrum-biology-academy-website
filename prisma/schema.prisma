@@ -559,6 +559,7 @@ model free_users {
   achievements            achievements[]
   bookmarks               bookmarks[]
   forum_posts             forum_posts[]
+  mcq_bookmarks           mcq_bookmarks[]
   performance_reports     performance_reports[]
   study_plans             study_plans[]
   test_attempts           test_attempts[]
@@ -921,6 +922,7 @@ model questions {
   neetWeightage             String?
   isNeetImportant           Boolean                     @default(false)
 
+  mcq_bookmarks             mcq_bookmarks[]
   question_bank_questions   question_bank_questions[]
   test_assignment_questions test_assignment_questions[]
   test_questions            test_questions[]
@@ -3438,6 +3440,23 @@ model mcq_user_stats {
 
   @@index([totalXp])
   @@index([currentStreak])
+}
+
+// User bookmarked questions
+model mcq_bookmarks {
+  id          String   @id @default(cuid())
+  freeUserId  String
+  questionId  String
+  note        String?  @db.Text // Optional user note
+  createdAt   DateTime @default(now())
+
+  // Relations
+  free_user   free_users @relation(fields: [freeUserId], references: [id], onDelete: Cascade)
+  question    questions  @relation(fields: [questionId], references: [id], onDelete: Cascade)
+
+  @@unique([freeUserId, questionId])
+  @@index([freeUserId])
+  @@index([questionId])
 }
 
 // Badge definitions

@@ -1,7 +1,10 @@
 'use client'
 
 import { useState, useCallback, useEffect, useRef } from 'react'
+import { BookOpen, Flag } from 'lucide-react'
 import type { MCQQuestion, AnswerResult } from '@/lib/mcq/types'
+import { DiagramQuestion } from './DiagramQuestion'
+import { BookmarkButton } from './BookmarkButton'
 
 interface QuestionCardProps {
   question: MCQQuestion
@@ -10,6 +13,8 @@ interface QuestionCardProps {
   showExplanation?: boolean
   isProtected?: boolean
   onSkip?: () => void
+  onReportError?: (questionId: string) => void
+  freeUserId?: string | null
 }
 
 const optionLabels = ['A', 'B', 'C', 'D'] as const
@@ -21,6 +26,8 @@ export function QuestionCard({
   showExplanation = false,
   isProtected = true,
   onSkip,
+  onReportError,
+  freeUserId,
 }: QuestionCardProps) {
   const [selectedAnswer, setSelectedAnswer] = useState<'A' | 'B' | 'C' | 'D' | null>(null)
   const [result, setResult] = useState<AnswerResult | null>(null)
@@ -176,6 +183,7 @@ export function QuestionCard({
             <span className="text-[10px] opacity-70">Time:</span>
             <span className="font-semibold tabular-nums">{formatTime(timeElapsed)}</span>
           </div>
+          {freeUserId && <BookmarkButton questionId={question.id} freeUserId={freeUserId} />}
           {!selectedAnswer && onSkip && (
             <button
               onClick={onSkip}
@@ -187,17 +195,55 @@ export function QuestionCard({
           )}
         </div>
       </div>
-      {/* Topic - More visible */}
-      <div className="mb-2">
+      {/* Topic & NCERT Reference */}
+      <div className="mb-2 flex flex-wrap items-center gap-2">
         <span className="inline-flex items-center px-2.5 py-1 rounded-full bg-gray-100 text-gray-600 text-sm font-medium">
           {question.topic}
         </span>
+        {question.isNcertBased && (question.ncertClass || question.ncertChapter) && (
+          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-gradient-to-r from-emerald-50 to-teal-50 border border-emerald-200 text-emerald-700 text-xs font-medium">
+            <BookOpen className="w-3 h-3" />
+            <span>
+              {question.ncertClass && `Class ${question.ncertClass}`}
+              {question.ncertClass && question.ncertChapter && ' | '}
+              {question.ncertChapter && `Ch.${question.ncertChapter}`}
+              {question.ncertPage && ` | Pg.${question.ncertPage}`}
+            </span>
+          </span>
+        )}
+        {question.isNeetImportant && (
+          <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-red-100 text-red-700 text-xs font-medium">
+            NEET Important
+          </span>
+        )}
       </div>
+
+      {/* Diagram Display (if question has diagrams) */}
+      {question.diagrams && question.diagrams.length > 0 && (
+        <div className="mb-4">
+          {question.diagrams
+            .filter((d) => d.position === 'above' || d.position === 'inline')
+            .map((diagram) => (
+              <DiagramQuestion key={diagram.id} diagram={diagram} />
+            ))}
+        </div>
+      )}
 
       {/* Question Text - Larger for better readability */}
       <div className="mb-5">
         <p className="text-lg text-gray-900 leading-relaxed font-medium">{question.question}</p>
       </div>
+
+      {/* Side-positioned diagrams */}
+      {question.diagrams && question.diagrams.some((d) => d.position === 'side') && (
+        <div className="float-right ml-4 mb-4 w-1/2 max-w-xs">
+          {question.diagrams
+            .filter((d) => d.position === 'side')
+            .map((diagram) => (
+              <DiagramQuestion key={diagram.id} diagram={diagram} />
+            ))}
+        </div>
+      )}
 
       {/* Options - Better spacing and larger text */}
       <div className="space-y-3" role="radiogroup" aria-label="Answer options">
@@ -288,9 +334,21 @@ export function QuestionCard({
                     {result.isCorrect ? 'Correct!' : 'Incorrect'}
                   </span>
                 </div>
-                <span className="px-3 py-1.5 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-bold text-sm rounded-full animate-xp-float shadow-lg">
-                  +{result.xpEarned} XP
-                </span>
+                <div className="flex items-center gap-2">
+                  <span className="px-3 py-1.5 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-bold text-sm rounded-full animate-xp-float shadow-lg">
+                    +{result.xpEarned} XP
+                  </span>
+                  {onReportError && (
+                    <button
+                      onClick={() => onReportError(question.id)}
+                      className="p-1.5 text-gray-400 hover:text-red-500 hover:bg-red-50 rounded-full transition-colors"
+                      title="Report an error with this question"
+                      aria-label="Report error"
+                    >
+                      <Flag className="w-4 h-4" />
+                    </button>
+                  )}
+                </div>
               </div>
 
               {/* Explanation Preview - Compact */}

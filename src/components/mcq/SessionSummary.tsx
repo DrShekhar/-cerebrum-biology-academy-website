@@ -1,7 +1,19 @@
 'use client'
 
+import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { Trophy, Target, Zap, Clock, TrendingUp, RotateCcw, Home, ArrowRight } from 'lucide-react'
+import {
+  Trophy,
+  Target,
+  Zap,
+  Clock,
+  TrendingUp,
+  RotateCcw,
+  Home,
+  ArrowRight,
+  BookX,
+} from 'lucide-react'
+import { WrongAnswersReview, type WrongAnswer } from './WrongAnswersReview'
 
 interface SessionSummaryProps {
   questionsAttempted: number
@@ -10,6 +22,7 @@ interface SessionSummaryProps {
   totalTimeSeconds?: number
   onContinue: () => void
   onNewSession: () => void
+  wrongAnswers?: WrongAnswer[]
 }
 
 export function SessionSummary({
@@ -19,10 +32,13 @@ export function SessionSummary({
   totalTimeSeconds = 0,
   onContinue,
   onNewSession,
+  wrongAnswers = [],
 }: SessionSummaryProps) {
   const router = useRouter()
+  const [showWrongAnswersReview, setShowWrongAnswersReview] = useState(false)
   const accuracy =
     questionsAttempted > 0 ? Math.round((correctAnswers / questionsAttempted) * 100) : 0
+  const wrongCount = questionsAttempted - correctAnswers
 
   // Format time
   const formatTime = (seconds: number) => {
@@ -149,6 +165,17 @@ export function SessionSummary({
         </p>
       </div>
 
+      {/* Review Wrong Answers Button */}
+      {wrongCount > 0 && wrongAnswers.length > 0 && (
+        <button
+          onClick={() => setShowWrongAnswersReview(true)}
+          className="w-full bg-gradient-to-r from-orange-500 to-red-500 text-white py-3 px-6 rounded-xl font-semibold hover:shadow-lg transition-all flex items-center justify-center gap-2 mb-4"
+        >
+          <BookX className="w-5 h-5" />
+          Review {wrongCount} Wrong Answer{wrongCount > 1 ? 's' : ''}
+        </button>
+      )}
+
       {/* Action Buttons */}
       <div className="space-y-3">
         <button
@@ -184,6 +211,14 @@ export function SessionSummary({
           Back to Home
         </button>
       </div>
+
+      {/* Wrong Answers Review Modal */}
+      {showWrongAnswersReview && (
+        <WrongAnswersReview
+          wrongAnswers={wrongAnswers}
+          onClose={() => setShowWrongAnswersReview(false)}
+        />
+      )}
     </div>
   )
 }

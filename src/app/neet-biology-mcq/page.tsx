@@ -27,7 +27,9 @@ import { TopicFilter } from '@/components/mcq/TopicFilter'
 import { LeadCaptureModal } from '@/components/mcq/LeadCaptureModal'
 import { ProtectedContent } from '@/components/mcq/ProtectedContent'
 import { SessionSummary } from '@/components/mcq/SessionSummary'
+import { ReportErrorModal } from '@/components/mcq/ReportErrorModal'
 import type { MCQQuestion, AnswerResult, UserStats } from '@/lib/mcq/types'
+import type { WrongAnswer } from '@/components/mcq/WrongAnswersReview'
 import type { DifficultyLevel } from '@/generated/prisma'
 import { BIOLOGY_TOPICS, LEAD_CAPTURE_CONFIG } from '@/lib/mcq/types'
 
@@ -75,6 +77,9 @@ export default function NEETBiologyMCQPage() {
   const [showResetConfirm, setShowResetConfirm] = useState(false)
   const [focusMode, setFocusMode] = useState(false)
   const [showSessionSummary, setShowSessionSummary] = useState(false)
+  const [showReportError, setShowReportError] = useState(false)
+  const [reportErrorQuestionId, setReportErrorQuestionId] = useState<string | null>(null)
+  const [wrongAnswers, setWrongAnswers] = useState<WrongAnswer[]>([])
 
   // Session timer tracking
   const sessionStartTimeRef = useRef<number>(Date.now())
@@ -256,6 +261,20 @@ export default function NEETBiologyMCQPage() {
           xpEarned: prev.xpEarned + result.xpEarned,
         }))
 
+        // Track wrong answers for review
+        if (!result.isCorrect) {
+          setWrongAnswers((prev) => [
+            ...prev,
+            {
+              question,
+              selectedAnswer,
+              correctAnswer: result.correctAnswer,
+              explanation: result.explanation,
+              timeSpent,
+            },
+          ])
+        }
+
         // Mark question as answered
         setAnsweredIds((prev) => new Set([...prev, question.id]))
 
@@ -394,7 +413,14 @@ export default function NEETBiologyMCQPage() {
       xpEarned: 0,
     })
     questionsAttemptedRef.current = 0
+    setWrongAnswers([])
     setShowResetConfirm(false)
+  }
+
+  // Handle report error
+  const handleReportError = (questionId: string) => {
+    setReportErrorQuestionId(questionId)
+    setShowReportError(true)
   }
 
   // Show reset confirmation dialog
@@ -660,6 +686,7 @@ export default function NEETBiologyMCQPage() {
                         totalTimeSeconds={sessionTimeElapsed}
                         onContinue={handleContinueSession}
                         onNewSession={handleNewSessionFromSummary}
+                        wrongAnswers={wrongAnswers}
                       />
                     </div>
                   ) : (
@@ -708,6 +735,8 @@ export default function NEETBiologyMCQPage() {
                               onSkip={handleSkipQuestion}
                               showExplanation={hasLeadCaptured}
                               isProtected={true}
+                              freeUserId={freeUserId}
+                              onReportError={handleReportError}
                             />
                           </div>
                         ) : null}
@@ -903,6 +932,19 @@ export default function NEETBiologyMCQPage() {
               </div>
             </div>
           </div>
+        )}
+
+        {/* Report Error Modal */}
+        {showReportError && reportErrorQuestionId && currentQuestion && (
+          <ReportErrorModal
+            questionId={reportErrorQuestionId}
+            freeUserId={freeUserId}
+            currentAnswer={currentQuestion.correctAnswer}
+            onClose={() => {
+              setShowReportError(false)
+              setReportErrorQuestionId(null)
+            }}
+          />
         )}
       </div>
     </ProtectedContent>
