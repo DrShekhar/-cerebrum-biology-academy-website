@@ -303,7 +303,7 @@ const nextConfig = {
       },
       {
         source: '/biology-tuition-noida/:area*',
-        destination: '/neet-coaching-noida/:area*',
+        destination: '/neet-coaching-noida',
         permanent: true,
       },
       {
@@ -313,7 +313,7 @@ const nextConfig = {
       },
       {
         source: '/biology-tuition-delhi/:area*',
-        destination: '/biology-tuition-south-delhi/:area*',
+        destination: '/biology-tuition-south-delhi',
         permanent: true,
       },
       {
@@ -383,6 +383,237 @@ const nextConfig = {
         source: '/blog/bangalore-online-neet-preparation-guide',
         destination: '/neet-coaching-bangalore',
         permanent: true,
+      },
+
+      // ============================================
+      // GSC 404 Fixes - December 2025
+      // ============================================
+
+      // Location pages that don't exist
+      {
+        source: '/locations/jaipur',
+        destination: '/neet-coaching-north-india',
+        permanent: true,
+      },
+      {
+        source: '/locations/chennai',
+        destination: '/neet-coaching-south-india',
+        permanent: true,
+      },
+      {
+        source: '/locations/bangalore/:area*',
+        destination: '/neet-coaching-bangalore',
+        permanent: true,
+      },
+      {
+        source: '/locations/:city/:area*',
+        destination: '/locations/:city',
+        permanent: true,
+      },
+      {
+        source: '/laxmi-nagar',
+        destination: '/neet-coaching-east-delhi',
+        permanent: true,
+      },
+      {
+        source: '/neet-coaching-patna',
+        destination: '/neet-coaching-north-india',
+        permanent: true,
+      },
+
+      // Blog NEET topic complete guides - redirect to blog
+      {
+        source: '/blog/molecular-biology-neet-complete-guide',
+        destination: '/blog',
+        permanent: true,
+      },
+      {
+        source: '/blog/ecology-neet-complete-guide',
+        destination: '/blog',
+        permanent: true,
+      },
+      {
+        source: '/blog/genetics-neet-complete-guide',
+        destination: '/blog',
+        permanent: true,
+      },
+      {
+        source: '/blog/plant-physiology-neet-complete-guide',
+        destination: '/blog',
+        permanent: true,
+      },
+      {
+        source: '/blog/biotechnology-neet-complete-guide',
+        destination: '/blog',
+        permanent: true,
+      },
+      {
+        source: '/blog/cell-biology-neet-complete-guide',
+        destination: '/blog',
+        permanent: true,
+      },
+      {
+        source: '/blog/human-physiology-neet-complete-guide',
+        destination: '/blog',
+        permanent: true,
+      },
+      {
+        source: '/blog/evolution-neet-complete-guide',
+        destination: '/blog',
+        permanent: true,
+      },
+      {
+        source: '/blog/animal-kingdom-neet-complete-guide',
+        destination: '/blog',
+        permanent: true,
+      },
+      {
+        source: '/blog/human-reproduction-neet-complete-guide',
+        destination: '/blog',
+        permanent: true,
+      },
+      {
+        source: '/blog/plant-kingdom-neet-complete-guide',
+        destination: '/blog',
+        permanent: true,
+      },
+      {
+        source: '/blog/best-neet-coaching-noida-sector-wise-guide',
+        destination: '/neet-coaching-noida',
+        permanent: true,
+      },
+      {
+        source: '/blog/neet-coaching-laxmi-nagar-east-delhi-guide',
+        destination: '/neet-coaching-east-delhi',
+        permanent: true,
+      },
+
+      // Biology tuition area pages - wildcards
+      {
+        source: '/biology-tuition-west-delhi/:area*',
+        destination: '/biology-tuition-west-delhi',
+        permanent: true,
+      },
+      {
+        source: '/biology-tuition-east-delhi/:area*',
+        destination: '/neet-coaching-east-delhi',
+        permanent: true,
+      },
+      {
+        source: '/biology-tuition-east-delhi',
+        destination: '/neet-coaching-east-delhi',
+        permanent: true,
+      },
+      {
+        source: '/biology-tuition-north-delhi/:area*',
+        destination: '/neet-coaching-north-delhi',
+        permanent: true,
+      },
+      {
+        source: '/biology-tuition-north-delhi',
+        destination: '/neet-coaching-north-delhi',
+        permanent: true,
+      },
+
+      // Course page aliases
+      {
+        source: '/courses/dropper-batch',
+        destination: '/courses/neet-dropper',
+        permanent: true,
+      },
+      {
+        source: '/courses/test-series',
+        destination: '/courses',
+        permanent: true,
+      },
+
+      // Resource and book pages
+      {
+        source: '/errorless-biology-for-neet',
+        destination: '/neet-biology-mcq',
+        permanent: true,
+      },
+      {
+        source: '/mtg-biology-for-neet',
+        destination: '/neet-biology-mcq',
+        permanent: true,
+      },
+      {
+        source: '/book-demo',
+        destination: '/demo',
+        permanent: true,
+      },
+
+      // Biology tutor class variations
+      {
+        source: '/biology-tutor-class-10-cbse',
+        destination: '/biology-tuition-class-9-10',
+        permanent: true,
+      },
+      {
+        source: '/biology-tutor-class-10-icse',
+        destination: '/biology-tuition-class-9-10',
+        permanent: true,
+      },
+      {
+        source: '/biology-tutor-class-9',
+        destination: '/biology-tuition-class-9-10',
+        permanent: true,
+      },
+      {
+        source: '/class-10-science-tuition',
+        destination: '/biology-tuition-class-9-10',
+        permanent: true,
+      },
+
+      // Competitive exam coaching
+      {
+        source: '/nso-coaching',
+        destination: '/courses',
+        permanent: true,
+      },
+      {
+        source: '/ntse-coaching',
+        destination: '/courses',
+        permanent: true,
+      },
+
+      // Services pages
+      {
+        source: '/services/mentorship',
+        destination: '/courses',
+        permanent: true,
+      },
+      {
+        source: '/services/:path*',
+        destination: '/courses',
+        permanent: true,
+      },
+
+      // Misc pages
+      {
+        source: '/360',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/terms',
+        destination: '/privacy-policy',
+        permanent: true,
+      },
+
+      // Font file - return 404 is fine, but let's redirect to avoid GSC errors
+      {
+        source: '/fonts/:file*',
+        destination: '/',
+        permanent: false,
+      },
+
+      // Search template URL - redirect to homepage
+      {
+        source: '/search',
+        destination: '/',
+        permanent: false,
       },
     ]
   },
