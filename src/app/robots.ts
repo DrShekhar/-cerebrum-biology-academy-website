@@ -34,6 +34,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/dashboard/', '/api/', '/auth/', '/admin/', '/student/', '/analytics/'],
       },
     ],
-    sitemap: 'https://www.cerebrumbiologyacademy.com/sitemap.xml',
+    sitemap: 'https://cerebrumbiologyacademy.com/sitemap.xml',
   }
 }
