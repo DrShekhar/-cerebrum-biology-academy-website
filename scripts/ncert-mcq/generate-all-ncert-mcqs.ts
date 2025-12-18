@@ -5,6 +5,10 @@
  * Prioritizes high-weightage chapters and tracks progress for resumable execution.
  */
 
+import * as dotenv from 'dotenv'
+// Load environment variables from .env file
+dotenv.config()
+
 import { PrismaClient } from '../../src/generated/prisma/index.js'
 import { NCERTContentReader, NCERTChapter } from '../../src/lib/ncert/NCERTContentReader'
 import { generateChapterMCQs, GenerationResult, GenerationConfig } from './generate-chapter-mcqs'

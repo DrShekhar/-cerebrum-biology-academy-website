@@ -13,13 +13,16 @@
  * - Generate proper explanations with NCERT page references
  */
 
+import { spawnSync } from 'child_process'
+import * as fs from 'fs'
+import * as path from 'path'
+import * as os from 'os'
 import { QuestionSeed } from '../../../../scripts/question-seeder/types'
 
 export interface ShekharSirConfig {
-  apiKey?: string
   model?: string
-  temperature?: number
-  topP?: number
+  useAPI?: boolean // If true, use Anthropic API; if false, use Claude CLI
+  apiKey?: string
 }
 
 export interface GenerationRequest {
@@ -123,15 +126,12 @@ You speak with authority and confidence, using phrases like:
 `
 
 export class ShekharSirAgent {
-  private apiKey: string
   private model: string
-  private temperature: number
-  private baseURL = 'https://api.openai.com/v1/chat/completions'
+  private useAPI: boolean
 
   constructor(config?: ShekharSirConfig) {
-    this.apiKey = config?.apiKey || process.env.OPENAI_API_KEY || ''
-    this.model = config?.model || 'gpt-4o'
-    this.temperature = config?.temperature || 0.7
+    this.model = config?.model || 'sonnet' // Use 'sonnet' or 'opus' for Claude CLI
+    this.useAPI = config?.useAPI ?? false // Default to CLI mode (uses Claude Max subscription)
   }
 
   /**
@@ -234,11 +234,17 @@ export class ShekharSirAgent {
       MIXED: 'Mix of all difficulty levels',
     }
 
+    const topicsSection =
+      request.topics && request.topics.length > 0
+        ? `- Topics to cover: ${request.topics.join(', ')}`
+        : ''
+
     return `
 Generate ${request.count} NEET Biology MCQ questions for:
 - Class: ${request.ncertClass}
 - Chapter ${request.ncertChapter}: ${request.ncertChapterName}
 - Difficulty: ${request.difficulty || 'MIXED'} (${difficultyGuide[request.difficulty || 'MIXED']})
+${topicsSection}
 
 Requirements:
 1. Follow NEET exam pattern strictly
@@ -247,6 +253,7 @@ Requirements:
 4. Distractors should be plausible but clearly incorrect
 5. Include NCERT page references in explanations
 6. Tag with NEET weightage (HIGH/MEDIUM/LOW)
+7. Base all questions on NCERT Biology textbook content
 
 Output as JSON array with this exact structure:
 [{
@@ -288,34 +295,54 @@ Include "neetYear: null" to indicate these are PYQ-style but new questions.
   }
 
   private async callAPI(prompt: string): Promise<string> {
-    if (!this.apiKey) {
-      throw new Error('OpenAI API key not configured')
-    }
+    // Use Claude CLI (uses Claude Max subscription)
+    return this.callClaudeCLI(prompt)
+  }
 
-    const response = await fetch(this.baseURL, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${this.apiKey}`,
-      },
-      body: JSON.stringify({
-        model: this.model,
-        messages: [
-          { role: 'system', content: SHEKHAR_SIR_SYSTEM_PROMPT },
-          { role: 'user', content: prompt },
-        ],
-        temperature: this.temperature,
-        max_tokens: 4000,
-      }),
+  /**
+   * Call Claude using the CLI (uses Claude Max subscription)
+   */
+  private callClaudeCLI(prompt: string): string {
+    // Combine system context with user prompt for CLI
+    const fullPrompt = `You are "Shekhar Sir", an expert NEET Biology teacher with 20+ years of coaching experience. You deeply understand NCERT Biology and NEET exam patterns.
+
+IMPORTANT INSTRUCTIONS:
+- Generate questions strictly based on NCERT Biology textbook
+- Follow NEET exam pattern and difficulty levels
+- Create clear, unambiguous questions with exactly 4 options
+- Include one commonly confused distractor
+- Write detailed explanations referencing NCERT
+
+${prompt}`
+
+    const args = [
+      '-p', // Print mode (non-interactive)
+      '--output-format',
+      'text',
+      '--model',
+      this.model,
+      '--dangerously-skip-permissions', // Skip any permission prompts
+    ]
+
+    const result = spawnSync('claude', args, {
+      input: fullPrompt,
+      encoding: 'utf-8',
+      maxBuffer: 50 * 1024 * 1024, // 50MB buffer
+      timeout: 300000, // 5 minute timeout
     })
 
-    if (!response.ok) {
-      const error = await response.text()
-      throw new Error(`API call failed: ${error}`)
+    if (result.error) {
+      console.error('Claude CLI error:', result.error)
+      throw result.error
     }
 
-    const data = await response.json()
-    return data.choices[0]?.message?.content || ''
+    if (result.status !== 0) {
+      console.error('Claude CLI stderr:', result.stderr)
+      console.error('Claude CLI stdout:', result.stdout?.slice(0, 500))
+      throw new Error(`Claude CLI exited with status ${result.status}: ${result.stderr}`)
+    }
+
+    return result.stdout || ''
   }
 
   private parseResponse(response: string, request: GenerationRequest): QuestionSeed[] {

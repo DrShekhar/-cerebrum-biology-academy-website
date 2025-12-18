@@ -13,10 +13,10 @@
  * - Identify potential issues with distractors
  */
 
+import { spawnSync } from 'child_process'
 import { QuestionSeed } from '../../../../scripts/question-seeder/types'
 
 export interface ArchanaMaamConfig {
-  apiKey?: string
   model?: string
   strictMode?: boolean
 }
@@ -134,14 +134,11 @@ Quality Standards:
 `
 
 export class ArchanaMaamAgent {
-  private apiKey: string
   private model: string
   private strictMode: boolean
-  private baseURL = 'https://api.openai.com/v1/chat/completions'
 
   constructor(config?: ArchanaMaamConfig) {
-    this.apiKey = config?.apiKey || process.env.OPENAI_API_KEY || ''
-    this.model = config?.model || 'gpt-4o'
+    this.model = config?.model || 'sonnet' // Use 'sonnet' or 'opus' for Claude CLI
     this.strictMode = config?.strictMode ?? true
   }
 
@@ -355,43 +352,50 @@ export class ArchanaMaamAgent {
     corrections: Partial<QuestionSeed> | undefined
     confidence: number
   }> {
-    if (!this.apiKey) {
-      return { issues: [], suggestions: [], corrections: undefined, confidence: 0 }
-    }
-
     const prompt = this.buildVerificationPrompt(request)
 
     try {
-      const response = await fetch(this.baseURL, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${this.apiKey}`,
-        },
-        body: JSON.stringify({
-          model: this.model,
-          messages: [
-            { role: 'system', content: ARCHANA_MAAM_SYSTEM_PROMPT },
-            { role: 'user', content: prompt },
-          ],
-          temperature: 0.3, // Lower temperature for more consistent verification
-          max_tokens: 2000,
-        }),
-      })
-
-      if (!response.ok) {
-        console.error('AI verification failed')
-        return { issues: [], suggestions: [], corrections: undefined, confidence: 0 }
-      }
-
-      const data = await response.json()
-      const content = data.choices[0]?.message?.content || ''
-
+      const content = this.callClaudeCLI(prompt)
       return this.parseAIResponse(content)
     } catch (error) {
       console.error('AI verification error:', error)
       return { issues: [], suggestions: [], corrections: undefined, confidence: 0 }
     }
+  }
+
+  /**
+   * Call Claude CLI to verify questions (uses Claude Max subscription)
+   */
+  private callClaudeCLI(prompt: string): string {
+    const args = [
+      '-p', // Print mode (non-interactive)
+      '--output-format',
+      'text',
+      '--model',
+      this.model,
+      '--system-prompt',
+      ARCHANA_MAAM_SYSTEM_PROMPT,
+      '--dangerously-skip-permissions', // Skip permission prompts for automation
+    ]
+
+    const result = spawnSync('claude', args, {
+      input: prompt,
+      encoding: 'utf-8',
+      maxBuffer: 50 * 1024 * 1024, // 50MB buffer
+      timeout: 300000, // 5 minute timeout
+    })
+
+    if (result.error) {
+      console.error('Claude CLI error:', result.error)
+      throw result.error
+    }
+
+    if (result.status !== 0) {
+      console.error('Claude CLI stderr:', result.stderr)
+      throw new Error(`Claude CLI exited with status ${result.status}: ${result.stderr}`)
+    }
+
+    return result.stdout || ''
   }
 
   private buildVerificationPrompt(request: VerificationRequest): string {

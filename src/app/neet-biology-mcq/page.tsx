@@ -25,6 +25,7 @@ import {
 import { QuestionCard } from '@/components/mcq/QuestionCard'
 import { StatsPanel, StatsPanelCompact } from '@/components/mcq/StatsPanel'
 import { TopicFilter } from '@/components/mcq/TopicFilter'
+import { NcertFilter } from '@/components/mcq/NcertFilter'
 import { LeadCaptureModal } from '@/components/mcq/LeadCaptureModal'
 import { ProtectedContent } from '@/components/mcq/ProtectedContent'
 import { SessionSummary } from '@/components/mcq/SessionSummary'
@@ -66,6 +67,13 @@ export default function NEETBiologyMCQPage() {
   const [isPYQOnly, setIsPYQOnly] = useState(false)
   const [selectedPYQYear, setSelectedPYQYear] = useState<number | null>(null)
   const [questionCount, setQuestionCount] = useState(20)
+
+  // NCERT Filter State
+  const [isNcertOnly, setIsNcertOnly] = useState(false)
+  const [selectedNcertClass, setSelectedNcertClass] = useState<number | null>(null)
+  const [selectedNcertChapter, setSelectedNcertChapter] = useState<number | null>(null)
+  const [selectedNeetWeightage, setSelectedNeetWeightage] = useState<string | null>(null)
+  const [hasDiagramOnly, setHasDiagramOnly] = useState(false)
 
   // Stats State
   const [userStats, setUserStats] = useState<UserStats | null>(null)
@@ -211,6 +219,13 @@ export default function NEETBiologyMCQPage() {
       if (selectedDifficulty) params.append('difficulty', selectedDifficulty)
       if (isPYQOnly) params.append('isPYQOnly', 'true')
       if (selectedPYQYear) params.append('pyqYear', selectedPYQYear.toString())
+      // NCERT filters
+      if (isNcertOnly) params.append('isNcertBased', 'true')
+      if (selectedNcertClass) params.append('ncertClass', selectedNcertClass.toString())
+      if (selectedNcertChapter) params.append('ncertChapter', selectedNcertChapter.toString())
+      if (selectedNeetWeightage) params.append('neetWeightage', selectedNeetWeightage)
+      // Diagram filter
+      if (hasDiagramOnly) params.append('hasDiagram', 'true')
       params.append('limit', questionCount.toString())
 
       // Exclude already answered questions
@@ -253,6 +268,11 @@ export default function NEETBiologyMCQPage() {
     selectedDifficulty,
     isPYQOnly,
     selectedPYQYear,
+    isNcertOnly,
+    selectedNcertClass,
+    selectedNcertChapter,
+    selectedNeetWeightage,
+    hasDiagramOnly,
     questionCount,
     answeredIds,
     showToast,
@@ -510,10 +530,13 @@ export default function NEETBiologyMCQPage() {
 
     // Show toast with filter summary
     const filterParts = [
+      isNcertOnly ? `NCERT ${selectedNcertClass ? `Class ${selectedNcertClass}` : ''}` : null,
+      selectedNcertChapter ? `Ch.${selectedNcertChapter}` : null,
       selectedTopic,
       selectedChapter,
       selectedDifficulty,
       isPYQOnly ? `PYQ ${selectedPYQYear || 'All Years'}` : null,
+      selectedNeetWeightage ? `${selectedNeetWeightage} Priority` : null,
     ].filter(Boolean)
 
     showToast(
@@ -687,6 +710,23 @@ export default function NEETBiologyMCQPage() {
                       selectedMode={quizMode}
                       onModeChange={handleModeChange}
                       reviewDueCount={reviewDueCount}
+                    />
+                  </div>
+
+                  {/* NCERT Filter */}
+                  <div className="w-full max-w-xl mb-4">
+                    <NcertFilter
+                      isNcertOnly={isNcertOnly}
+                      selectedClass={selectedNcertClass}
+                      selectedChapter={selectedNcertChapter}
+                      selectedWeightage={selectedNeetWeightage}
+                      hasDiagramOnly={hasDiagramOnly}
+                      diagramCount={248}
+                      onNcertOnlyChange={setIsNcertOnly}
+                      onClassChange={setSelectedNcertClass}
+                      onChapterChange={setSelectedNcertChapter}
+                      onWeightageChange={setSelectedNeetWeightage}
+                      onDiagramOnlyChange={setHasDiagramOnly}
                     />
                   </div>
 

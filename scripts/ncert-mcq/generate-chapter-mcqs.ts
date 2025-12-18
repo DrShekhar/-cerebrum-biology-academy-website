@@ -6,6 +6,10 @@
  * Applies PYQ framing skills for authentic NEET patterns.
  */
 
+import * as dotenv from 'dotenv'
+// Load environment variables from .env file
+dotenv.config()
+
 import { PrismaClient } from '../../src/generated/prisma/index.js'
 import { ShekharSirAgent, GenerationRequest } from '../../src/lib/ai/agents/ShekharSirAgent'
 import { ArchanaMaamAgent } from '../../src/lib/ai/agents/ArchanaMaamAgent'
@@ -177,16 +181,21 @@ async function generatePageQuestions(
     const difficulty = getDifficultyForBatch(allQuestions.length, config.questionsPerPage, config.difficultyDistribution)
 
     try {
+      console.log(`    Calling Claude API for ${count} ${qType} questions (${difficulty})...`)
+
       const result = await shekharSir.generateQuestions({
         ncertClass: chapter.ncertClass,
         ncertChapter: chapter.number,
         ncertChapterName: chapter.name,
         count,
         difficulty,
+        topics: chapter.topicsCovered, // Add chapter topics for context
         includePYQStyle: true,
         includeNEETImportant: chapter.neetWeightage === 'VERY_HIGH' || chapter.neetWeightage === 'HIGH',
         questionTypes: [qType as 'MCQ' | 'MATCH_FOLLOWING' | 'TRUE_FALSE' | 'DIAGRAM'],
       })
+
+      console.log(`    API returned ${result.questions.length} questions`)
 
       // Add NCERT page reference to each question
       const questionsWithPage = result.questions.map((q) => ({
@@ -200,6 +209,7 @@ async function generatePageQuestions(
       // Small delay between API calls
       await sleep(1000)
     } catch (error) {
+      console.error(`    API Error: ${error}`)
       errors.push(`Failed to generate ${qType} questions: ${error}`)
     }
   }
@@ -349,6 +359,7 @@ async function saveQuestionsToDatabase(questions: QuestionSeed[], chapter: NCERT
 
       await prisma.questions.create({
         data: {
+          id: `ncert_${chapter.ncertClass}_${chapter.number}_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
           question: q.question,
           type: q.type || 'MCQ',
           options: q.options || [],
@@ -356,6 +367,8 @@ async function saveQuestionsToDatabase(questions: QuestionSeed[], chapter: NCERT
           explanation: q.explanation || '',
           difficulty: q.difficulty || 'MEDIUM',
           category: 'PRACTICE',
+          curriculum: 'NCERT',
+          grade: chapter.ncertClass.toString(),
           topic: q.topic || chapter.topicsCovered[0] || chapter.name,
           subtopic: q.subtopic,
           tags: q.tags || [],
@@ -366,7 +379,8 @@ async function saveQuestionsToDatabase(questions: QuestionSeed[], chapter: NCERT
           ncertFigure: q.ncertFigure,
           isNcertBased: true,
           neetWeightage: q.neetWeightage || chapter.neetWeightage,
-          isNEETImportant: chapter.neetWeightage === 'VERY_HIGH' || chapter.neetWeightage === 'HIGH',
+          isNeetImportant: chapter.neetWeightage === 'VERY_HIGH' || chapter.neetWeightage === 'HIGH',
+          updatedAt: new Date(),
         },
       })
 

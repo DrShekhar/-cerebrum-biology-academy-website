@@ -55,6 +55,7 @@ export async function GET(request: NextRequest) {
       ncertClass?: number
       ncertChapter?: number
       neetWeightage?: string
+      hasDiagram?: boolean
     } = {
       topic: searchParams.get('topic') || undefined,
       chapter: searchParams.get('chapter') || undefined,
@@ -72,6 +73,8 @@ export async function GET(request: NextRequest) {
         ? parseInt(searchParams.get('ncertChapter')!)
         : undefined,
       neetWeightage: searchParams.get('neetWeightage') || undefined,
+      // Diagram filtering
+      hasDiagram: searchParams.get('hasDiagram') === 'true' || undefined,
     }
 
     const excludeIdsParam = searchParams.get('excludeIds')
@@ -110,6 +113,12 @@ export async function GET(request: NextRequest) {
     }
     if (filters.neetWeightage) {
       officialWhere.neetWeightage = filters.neetWeightage
+    }
+    // Diagram filtering - only questions that have linked diagrams
+    if (filters.hasDiagram) {
+      officialWhere.question_diagrams = {
+        some: {},
+      }
     }
 
     // Build where clause for community questions

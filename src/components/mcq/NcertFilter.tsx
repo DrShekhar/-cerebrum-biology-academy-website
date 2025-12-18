@@ -15,10 +15,13 @@ interface NcertFilterProps {
   selectedClass: number | null
   selectedChapter: number | null
   selectedWeightage: string | null
+  hasDiagramOnly: boolean
+  diagramCount?: number
   onNcertOnlyChange: (isNcertOnly: boolean) => void
   onClassChange: (ncertClass: number | null) => void
   onChapterChange: (ncertChapter: number | null) => void
   onWeightageChange: (weightage: string | null) => void
+  onDiagramOnlyChange: (hasDiagramOnly: boolean) => void
 }
 
 export function NcertFilter({
@@ -26,10 +29,13 @@ export function NcertFilter({
   selectedClass,
   selectedChapter,
   selectedWeightage,
+  hasDiagramOnly,
+  diagramCount = 248,
   onNcertOnlyChange,
   onClassChange,
   onChapterChange,
   onWeightageChange,
+  onDiagramOnlyChange,
 }: NcertFilterProps) {
   const [chapters, setChapters] = useState<{
     class11: NcertChapter[]
@@ -261,6 +267,42 @@ export function NcertFilter({
               <p className="text-xs text-gray-500 mt-1">
                 Filter by how frequently this topic appears in NEET exams
               </p>
+            </div>
+
+            {/* Diagram Filter */}
+            <div className="flex items-center justify-between bg-gradient-to-r from-amber-50 to-orange-50 rounded-lg p-3 border border-amber-200">
+              <div className="flex items-center gap-2">
+                <span className="text-xl">🖼️</span>
+                <div>
+                  <span className="font-medium text-gray-800">Diagram-Based Questions</span>
+                  <p className="text-xs text-gray-500">Practice with visual diagrams</p>
+                </div>
+                <span className="px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 text-xs font-medium">
+                  {diagramCount} questions
+                </span>
+              </div>
+              <button
+                onClick={() => onDiagramOnlyChange(!hasDiagramOnly)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault()
+                    onDiagramOnlyChange(!hasDiagramOnly)
+                  }
+                }}
+                role="switch"
+                aria-checked={hasDiagramOnly}
+                aria-label="Toggle diagram-only questions"
+                className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 ${
+                  hasDiagramOnly ? 'bg-amber-500' : 'bg-gray-200'
+                }`}
+              >
+                <span
+                  className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                    hasDiagramOnly ? 'translate-x-6' : 'translate-x-1'
+                  }`}
+                  aria-hidden="true"
+                />
+              </button>
             </div>
 
             {/* Info Box */}
