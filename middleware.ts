@@ -10,6 +10,17 @@ function hasRole(session: UserSession): session is UserSession & { role: string 
 
 export default async function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl
+  const hostname = req.headers.get('host') || ''
+
+  // ============================================
+  // SEO: Redirect www to non-www (canonical domain)
+  // This prevents duplicate content issues in Google Search Console
+  // ============================================
+  if (hostname.startsWith('www.')) {
+    const newUrl = new URL(req.url)
+    newUrl.host = hostname.replace('www.', '')
+    return NextResponse.redirect(newUrl, { status: 301 })
+  }
 
   // Validate user session for protected routes
   const session = await validateUserSession(req).catch(() => ({ valid: false }) as UserSession)
