@@ -407,6 +407,203 @@ Include "neetYear: null" to indicate these are PYQ-style but new questions.
   getPatternInsights(): typeof NEET_PATTERN_DATA {
     return NEET_PATTERN_DATA
   }
+
+  /**
+   * Generate questions from NCERT page content
+   * Extracts key concepts and creates targeted questions
+   */
+  async generateFromNCERTPage(
+    ncertClass: 11 | 12,
+    chapterNo: number,
+    chapterName: string,
+    pageContent: string,
+    pageNumber: number,
+    count: number = 10
+  ): Promise<GenerationResult> {
+    const startTime = Date.now()
+
+    const prompt = this.buildNCERTPagePrompt({
+      ncertClass,
+      chapterNo,
+      chapterName,
+      pageContent,
+      pageNumber,
+      count,
+    })
+
+    const response = await this.callAPI(prompt)
+    const questions = this.parseResponse(response, {
+      ncertClass,
+      ncertChapter: chapterNo,
+      ncertChapterName: chapterName,
+      count,
+    })
+
+    // Add page reference to all questions
+    const questionsWithPage = questions.map((q) => ({
+      ...q,
+      ncertPage: pageNumber,
+      isNcertBased: true,
+    }))
+
+    return {
+      questions: questionsWithPage,
+      metadata: {
+        totalGenerated: questionsWithPage.length,
+        generationTime: Date.now() - startTime,
+        confidence: this.calculateConfidence(questionsWithPage),
+        patternMatches: this.identifyPatterns(questionsWithPage),
+      },
+    }
+  }
+
+  private buildNCERTPagePrompt(params: {
+    ncertClass: 11 | 12
+    chapterNo: number
+    chapterName: string
+    pageContent: string
+    pageNumber: number
+    count: number
+  }): string {
+    return `
+Generate ${params.count} NEET Biology MCQ questions based on the following NCERT content:
+
+CLASS: ${params.ncertClass}
+CHAPTER ${params.chapterNo}: ${params.chapterName}
+PAGE: ${params.pageNumber}
+
+NCERT CONTENT:
+---
+${params.pageContent.slice(0, 3000)}
+---
+
+Requirements:
+1. Questions must be directly based on the content above
+2. Follow NEET exam pattern (2008-2025 style)
+3. Each question must have exactly 4 options
+4. Only ONE correct answer
+5. Include NCERT page reference (page ${params.pageNumber})
+6. Mix difficulty levels: 30% EASY, 50% MEDIUM, 20% HARD
+7. Use variety of question types: factual recall, conceptual, application
+
+Question Types to Include:
+- Direct factual recall from the content
+- Conceptual understanding questions
+- "Which of the following" style
+- Statement-based (true/false combinations)
+
+Output as JSON array:
+[{
+  "question": "Question text based on the content",
+  "type": "MCQ",
+  "options": ["Option A", "Option B", "Option C", "Option D"],
+  "correctAnswer": "The exact correct option text",
+  "explanation": "Explanation with reference to NCERT page ${params.pageNumber}",
+  "difficulty": "EASY|MEDIUM|HARD",
+  "topic": "${params.chapterName}",
+  "subtopic": "Specific subtopic",
+  "tags": ["ncert", "class${params.ncertClass}", "ch${params.chapterNo}"],
+  "ncertPage": ${params.pageNumber},
+  "neetWeightage": "HIGH|MEDIUM|LOW",
+  "isNEETImportant": true/false
+}]
+
+Generate questions that test understanding of key concepts from this specific NCERT page.
+`
+  }
+
+  /**
+   * Generate questions with specific PYQ framing skills
+   */
+  async generateWithPYQSkills(
+    ncertClass: 11 | 12,
+    chapterNo: number,
+    chapterName: string,
+    skills: {
+      questionType: string
+      stemTemplate: string
+      distractorStrategy: string[]
+    },
+    count: number = 5
+  ): Promise<GenerationResult> {
+    const startTime = Date.now()
+
+    const prompt = `
+Generate ${count} NEET Biology questions using this specific PYQ framing pattern:
+
+QUESTION TYPE: ${skills.questionType}
+STEM TEMPLATE: ${skills.stemTemplate}
+
+DISTRACTOR STRATEGIES:
+${skills.distractorStrategy.map((s) => `- ${s}`).join('\n')}
+
+CHAPTER: Class ${ncertClass}, Chapter ${chapterNo} - ${chapterName}
+
+Follow the stem template exactly but with content from this chapter.
+Distractors should follow the strategies listed above.
+
+Output as JSON array with standard question structure.
+`
+
+    const response = await this.callAPI(prompt)
+    const questions = this.parseResponse(response, {
+      ncertClass,
+      ncertChapter: chapterNo,
+      ncertChapterName: chapterName,
+      count,
+    })
+
+    return {
+      questions,
+      metadata: {
+        totalGenerated: questions.length,
+        generationTime: Date.now() - startTime,
+        confidence: this.calculateConfidence(questions),
+        patternMatches: [skills.questionType],
+      },
+    }
+  }
+
+  /**
+   * Generate question variants from a base question
+   * Useful for creating similar questions with different focus
+   */
+  async generateQuestionVariants(
+    baseQuestion: QuestionSeed,
+    variantCount: number = 3
+  ): Promise<QuestionSeed[]> {
+    const prompt = `
+Based on this NEET Biology question, generate ${variantCount} similar but distinct questions:
+
+ORIGINAL QUESTION:
+${baseQuestion.question}
+
+OPTIONS:
+A) ${baseQuestion.options?.[0]}
+B) ${baseQuestion.options?.[1]}
+C) ${baseQuestion.options?.[2]}
+D) ${baseQuestion.options?.[3]}
+
+CORRECT ANSWER: ${baseQuestion.correctAnswer}
+
+Requirements for variants:
+1. Same topic and chapter
+2. Same difficulty level (${baseQuestion.difficulty})
+3. Different question stem and focus
+4. Different correct answer among options
+5. Must test related but different concepts
+
+Output as JSON array with standard question structure.
+`
+
+    const response = await this.callAPI(prompt)
+    return this.parseResponse(response, {
+      ncertClass: baseQuestion.ncertClass || 11,
+      ncertChapter: baseQuestion.ncertChapter || 1,
+      ncertChapterName: baseQuestion.ncertChapterName || '',
+      count: variantCount,
+    })
+  }
 }
 
 // Export singleton instance
