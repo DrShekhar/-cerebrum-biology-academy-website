@@ -562,10 +562,11 @@ model free_users {
   mcq_bookmarks           mcq_bookmarks[]
   performance_reports     performance_reports[]
   study_plans             study_plans[]
-  test_attempts           test_attempts[]
-  test_sessions           test_sessions[]
-  user_progress           user_progress[]
-  user_question_responses user_question_responses[]
+  test_attempts              test_attempts[]
+  test_sessions              test_sessions[]
+  user_progress              user_progress[]
+  user_question_responses    user_question_responses[]
+  question_review_schedules  question_review_schedule[]
 
   @@index([deviceId])
   @@index([trialExpiryDate, isTrialExpired])
@@ -922,12 +923,13 @@ model questions {
   neetWeightage             String?
   isNeetImportant           Boolean                     @default(false)
 
-  mcq_bookmarks             mcq_bookmarks[]
-  question_bank_questions   question_bank_questions[]
-  test_assignment_questions test_assignment_questions[]
-  test_questions            test_questions[]
-  user_question_responses   user_question_responses[]
-  question_diagrams         question_diagrams[]
+  mcq_bookmarks              mcq_bookmarks[]
+  question_bank_questions    question_bank_questions[]
+  test_assignment_questions  test_assignment_questions[]
+  test_questions             test_questions[]
+  user_question_responses    user_question_responses[]
+  question_diagrams          question_diagrams[]
+  question_review_schedules  question_review_schedule[]
 
   @@index([curriculum, grade])
   @@index([isActive, isVerified])
@@ -3456,6 +3458,28 @@ model mcq_bookmarks {
 
   @@unique([freeUserId, questionId])
   @@index([freeUserId])
+  @@index([questionId])
+}
+
+// Spaced Repetition Review Schedule
+model question_review_schedule {
+  id            String    @id @default(cuid())
+  freeUserId    String
+  questionId    String
+  easeFactor    Float     @default(2.5) // SM-2 ease factor (min 1.3)
+  interval      Int       @default(1)   // Days until next review
+  repetitions   Int       @default(0)   // Number of successful reviews
+  nextReviewAt  DateTime  // When to review next
+  lastReviewAt  DateTime? // Last review timestamp
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  // Relations
+  free_user     free_users @relation(fields: [freeUserId], references: [id], onDelete: Cascade)
+  question      questions  @relation(fields: [questionId], references: [id], onDelete: Cascade)
+
+  @@unique([freeUserId, questionId])
+  @@index([freeUserId, nextReviewAt])
   @@index([questionId])
 }
 
