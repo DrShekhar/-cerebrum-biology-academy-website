@@ -60,7 +60,19 @@
       "destination": "/api/health"
     }
   ],
-  "redirects": [],
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.cerebrumbiologyacademy.com"
+        }
+      ],
+      "destination": "https://cerebrumbiologyacademy.com/:path*",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
