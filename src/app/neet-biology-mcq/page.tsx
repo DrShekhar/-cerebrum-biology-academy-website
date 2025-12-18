@@ -28,6 +28,8 @@ import { LeadCaptureModal } from '@/components/mcq/LeadCaptureModal'
 import { ProtectedContent } from '@/components/mcq/ProtectedContent'
 import { SessionSummary } from '@/components/mcq/SessionSummary'
 import { ReportErrorModal } from '@/components/mcq/ReportErrorModal'
+import { ModeSelector, type QuizMode } from '@/components/mcq/ModeSelector'
+import { TimedModeTimer } from '@/components/mcq/TimedModeTimer'
 import type { MCQQuestion, AnswerResult, UserStats } from '@/lib/mcq/types'
 import type { WrongAnswer } from '@/components/mcq/WrongAnswersReview'
 import type { DifficultyLevel } from '@/generated/prisma'
@@ -46,6 +48,9 @@ export default function NEETBiologyMCQPage() {
 
   // Ref for accurate tracking (avoids stale closure issues)
   const questionsAttemptedRef = useRef(0)
+
+  // Ref for auto-submit callback (avoids stale closure in timer)
+  const autoSubmitRef = useRef<(() => void) | null>(null)
 
   // Question State
   const [questions, setQuestions] = useState<MCQQuestion[]>([])
@@ -81,6 +86,12 @@ export default function NEETBiologyMCQPage() {
   const [reportErrorQuestionId, setReportErrorQuestionId] = useState<string | null>(null)
   const [wrongAnswers, setWrongAnswers] = useState<WrongAnswer[]>([])
 
+  // Quiz Mode State
+  const [quizMode, setQuizMode] = useState<QuizMode>('practice')
+  const [reviewDueCount, setReviewDueCount] = useState(0)
+  const [isTimerPaused, setIsTimerPaused] = useState(false)
+  const [timerKey, setTimerKey] = useState(0) // Used to reset timer on question change
+
   // Session timer tracking
   const sessionStartTimeRef = useRef<number>(Date.now())
   const [sessionTimeElapsed, setSessionTimeElapsed] = useState(0)
@@ -100,6 +111,14 @@ export default function NEETBiologyMCQPage() {
             const statsData = await statsRes.json()
             if (statsData.success) {
               setUserStats(statsData.data)
+            }
+          }
+          // Fetch review due count
+          const reviewRes = await fetch(`/api/mcq/review?freeUserId=${storedUserId}&limit=1`)
+          if (reviewRes.ok) {
+            const reviewData = await reviewRes.json()
+            if (reviewData.success) {
+              setReviewDueCount(reviewData.data.stats.totalDue || 0)
             }
           }
         }
@@ -159,6 +178,32 @@ export default function NEETBiologyMCQPage() {
     setError(null)
 
     try {
+      // Review mode - fetch from review API
+      if (quizMode === 'review' && freeUserId) {
+        const reviewRes = await fetch(
+          `/api/mcq/review?freeUserId=${freeUserId}&limit=${questionCount}&includeNew=true`
+        )
+        if (!reviewRes.ok) throw new Error('Failed to fetch review questions')
+
+        const reviewData = await reviewRes.json()
+        if (reviewData.success && reviewData.data.questions.length > 0) {
+          setQuestions(reviewData.data.questions)
+          setCurrentQuestionIndex(0)
+          setReviewDueCount(reviewData.data.stats.totalDue || 0)
+          setTimerKey((prev) => prev + 1) // Reset timer
+        } else {
+          setError('No questions due for review. Practice more to build your review queue!')
+          showToast(
+            'info',
+            'No Reviews Due',
+            'Practice more questions to build your review queue.',
+            4000
+          )
+        }
+        return
+      }
+
+      // Practice or Timed mode - fetch from regular questions API
       const params = new URLSearchParams()
       if (selectedTopic) params.append('topic', selectedTopic)
       if (selectedChapter) params.append('chapter', selectedChapter)
@@ -179,6 +224,7 @@ export default function NEETBiologyMCQPage() {
       if (data.success && data.data.questions.length > 0) {
         setQuestions(data.data.questions)
         setCurrentQuestionIndex(0)
+        setTimerKey((prev) => prev + 1) // Reset timer for new questions
         // Show info toast if fewer questions than requested
         if (data.message) {
           showToast('info', 'Limited Questions', data.message, 5000)
@@ -199,6 +245,8 @@ export default function NEETBiologyMCQPage() {
       setIsLoadingQuestions(false)
     }
   }, [
+    quizMode,
+    freeUserId,
     selectedTopic,
     selectedChapter,
     selectedDifficulty,
@@ -206,6 +254,7 @@ export default function NEETBiologyMCQPage() {
     selectedPYQYear,
     questionCount,
     answeredIds,
+    showToast,
   ])
 
   // Handle answer submission
@@ -305,6 +354,21 @@ export default function NEETBiologyMCQPage() {
           }
         }
 
+        // Record review result for spaced repetition (all modes)
+        if (freeUserId) {
+          fetch('/api/mcq/review', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              freeUserId,
+              questionId: question.id,
+              isCorrect: result.isCorrect,
+              timeSpent,
+              avgTimeForQuestion: 30, // Default average time
+            }),
+          }).catch((err) => console.error('Failed to record review:', err))
+        }
+
         return result
       } catch (error) {
         // Re-throw to let QuestionCard handle the error display
@@ -316,6 +380,8 @@ export default function NEETBiologyMCQPage() {
 
   // Handle next question
   const handleNextQuestion = useCallback(() => {
+    setTimerKey((prev) => prev + 1) // Reset timer for next question
+    setIsTimerPaused(false)
     if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex((prev) => prev + 1)
     } else {
@@ -326,12 +392,74 @@ export default function NEETBiologyMCQPage() {
 
   // Handle skip question (moves to next without answering)
   const handleSkipQuestion = useCallback(() => {
+    setTimerKey((prev) => prev + 1) // Reset timer
+    setIsTimerPaused(false)
     if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex((prev) => prev + 1)
     } else {
       fetchQuestions()
     }
   }, [currentQuestionIndex, questions.length, fetchQuestions])
+
+  // Handle timer expiry (timed mode auto-submit)
+  const handleTimeUp = useCallback(() => {
+    if (quizMode !== 'timed') return
+
+    const question = questions[currentQuestionIndex]
+    if (!question || answeredIds.has(question.id)) return
+
+    // Show timeout toast
+    showToast('warning', 'Time Up!', "Time's up! Moving to the next question.", 2000)
+
+    // Submit with no answer (counts as wrong)
+    handleAnswer('A', 60)
+      .then(() => {
+        // Auto-advance to next question
+        setTimeout(() => handleNextQuestion(), 1500)
+      })
+      .catch((err) => {
+        console.error('Auto-submit failed:', err)
+        handleNextQuestion()
+      })
+  }, [
+    quizMode,
+    questions,
+    currentQuestionIndex,
+    answeredIds,
+    showToast,
+    handleAnswer,
+    handleNextQuestion,
+  ])
+
+  // Keep auto-submit ref updated for timer callback
+  useEffect(() => {
+    autoSubmitRef.current = handleTimeUp
+  }, [handleTimeUp])
+
+  // Handle mode change
+  const handleModeChange = useCallback(
+    (mode: QuizMode) => {
+      if (mode === 'review' && !freeUserId) {
+        showToast(
+          'info',
+          'Sign Up Required',
+          'Please complete your profile to use Review Mode.',
+          4000
+        )
+        setLeadCaptureVariant('soft')
+        setShowLeadCapture(true)
+        return
+      }
+      setQuizMode(mode)
+      // If quiz already started, refetch questions for new mode
+      if (quizStarted) {
+        setQuestions([])
+        setCurrentQuestionIndex(0)
+        setTimerKey((prev) => prev + 1)
+      }
+    },
+    [freeUserId, quizStarted, showToast]
+  )
 
   // Handle lead capture submission
   const handleLeadCapture = async (data: {
@@ -415,6 +543,8 @@ export default function NEETBiologyMCQPage() {
     questionsAttemptedRef.current = 0
     setWrongAnswers([])
     setShowResetConfirm(false)
+    setTimerKey(0)
+    setIsTimerPaused(false)
   }
 
   // Handle report error
@@ -550,6 +680,15 @@ export default function NEETBiologyMCQPage() {
             <div className="flex-1 flex flex-col items-center">
               {!quizStarted ? (
                 <>
+                  {/* Mode Selection */}
+                  <div className="w-full max-w-xl mb-6">
+                    <ModeSelector
+                      selectedMode={quizMode}
+                      onModeChange={handleModeChange}
+                      reviewDueCount={reviewDueCount}
+                    />
+                  </div>
+
                   {/* Filter Section */}
                   <TopicFilter
                     selectedTopic={selectedTopic}
@@ -624,6 +763,35 @@ export default function NEETBiologyMCQPage() {
                           <span className="text-gray-600">{sessionStats.questionsAttempted}</span>
                           <span className="text-gray-400">({sessionAccuracy}%)</span>
                         </div>
+                        {/* Timed Mode Timer */}
+                        {quizMode === 'timed' &&
+                          currentQuestion &&
+                          !answeredIds.has(currentQuestion.id) && (
+                            <TimedModeTimer
+                              key={timerKey}
+                              timeLimit={60}
+                              onTimeUp={handleTimeUp}
+                              isPaused={isTimerPaused}
+                              onPauseToggle={() => setIsTimerPaused(!isTimerPaused)}
+                              showWarningAt={10}
+                            />
+                          )}
+                        {/* Mode Indicator Badge */}
+                        <span
+                          className={`px-2 py-0.5 rounded-full text-xs font-medium ${
+                            quizMode === 'practice'
+                              ? 'bg-green-100 text-green-700'
+                              : quizMode === 'timed'
+                                ? 'bg-blue-100 text-blue-700'
+                                : 'bg-purple-100 text-purple-700'
+                          }`}
+                        >
+                          {quizMode === 'practice'
+                            ? 'Practice'
+                            : quizMode === 'timed'
+                              ? 'Timed'
+                              : 'Review'}
+                        </span>
                       </div>
                       <div className="flex items-center gap-2">
                         <button
