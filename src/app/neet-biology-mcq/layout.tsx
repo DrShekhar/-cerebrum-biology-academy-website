@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     'NCERT Biology MCQ',
     'NEET PYQ Biology',
     'Biology MCQ practice online',
-    'NEET 2025 Biology',
+    'NEET 2026 Biology',
     'NEET 2026 Biology preparation',
     'chapter-wise Biology MCQ',
     'Human Physiology MCQ NEET',
@@ -144,10 +144,10 @@ const structuredData = {
         },
         {
           '@type': 'Question',
-          name: 'Are these MCQs aligned with NEET 2025/2026 syllabus?',
+          name: 'Are these MCQs aligned with NEET 2026 syllabus?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Yes, all our MCQs are aligned with the latest NEET 2025/2026 syllabus and NCERT textbooks for Class 11 and 12 Biology. Questions are organized chapter-wise matching the official NCERT curriculum and include NEET weightage indicators.',
+            text: 'Yes, all our MCQs are aligned with the latest NEET 2026 syllabus and NCERT textbooks for Class 11 and 12 Biology. Questions are organized chapter-wise matching the official NCERT curriculum and include NEET weightage indicators.',
           },
         },
         {

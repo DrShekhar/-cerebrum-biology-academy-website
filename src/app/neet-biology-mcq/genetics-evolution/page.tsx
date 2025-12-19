@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import { TopicLandingPage } from '@/components/mcq/TopicLandingPage'
 
 export const metadata: Metadata = {
-  title: 'Genetics & Evolution MCQ for NEET 2025 | Free Practice Questions',
+  title: 'Genetics & Evolution MCQ for NEET 2026 | Free Practice Questions',
   description:
     'Practice 600+ free Genetics & Evolution MCQs for NEET. Mendel laws, molecular genetics, DNA replication, evolution theory questions. NCERT-based with explanations.',
   keywords: [
@@ -52,7 +52,7 @@ export default function GeneticsEvolutionPage() {
       <TopicLandingPage
         topic="Genetics & Evolution"
         topicSlug="genetics-evolution"
-        title="Genetics & Evolution MCQ for NEET 2025"
+        title="Genetics & Evolution MCQ for NEET 2026"
         description="Master Genetics & Evolution with 600+ free MCQs covering Mendelian genetics, molecular basis of inheritance, and evolutionary biology for NEET preparation."
         questionCount={600}
         chapters={[

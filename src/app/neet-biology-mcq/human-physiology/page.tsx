@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import { TopicLandingPage } from '@/components/mcq/TopicLandingPage'
 
 export const metadata: Metadata = {
-  title: 'Human Physiology MCQ for NEET 2025 | Free Practice Questions',
+  title: 'Human Physiology MCQ for NEET 2026 | Free Practice Questions',
   description:
     'Practice 800+ free Human Physiology MCQs for NEET. Digestive, Respiratory, Circulatory, Excretory, Nervous & Muscular system questions. NCERT-based with explanations.',
   keywords: [
@@ -51,7 +51,7 @@ export default function HumanPhysiologyPage() {
       <TopicLandingPage
         topic="Human Physiology"
         topicSlug="human-physiology"
-        title="Human Physiology MCQ for NEET 2025"
+        title="Human Physiology MCQ for NEET 2026"
         description="Master Human Physiology with 800+ free MCQs covering all organ systems. Practice digestive, respiratory, circulatory, excretory, nervous, and musculoskeletal system questions."
         questionCount={800}
         chapters={[

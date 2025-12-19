@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'NEET 2024 Biology PYQ | Previous Year Questions',
     description:
-      'Practice all 90 Biology questions from NEET 2024 with detailed solutions. Free PYQ practice for NEET 2025 preparation.',
+      'Practice all 90 Biology questions from NEET 2024 with detailed solutions. Free PYQ practice for NEET 2026 preparation.',
     url: 'https://cerebrumbiologyacademy.com/neet-biology-mcq/pyq-2024',
   },
   alternates: {
@@ -77,7 +77,7 @@ export default function PYQ2024Page() {
             </h1>
             <p className="text-lg text-stone-600 max-w-2xl mx-auto">
               Practice all 90 Biology questions from NEET 2024 exam with detailed solutions. Master
-              the exam pattern and boost your preparation for NEET 2025.
+              the exam pattern and boost your preparation for NEET 2026.
             </p>
           </header>
 

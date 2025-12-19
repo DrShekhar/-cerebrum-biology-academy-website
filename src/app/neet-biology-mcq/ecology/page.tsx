@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import { TopicLandingPage } from '@/components/mcq/TopicLandingPage'
 
 export const metadata: Metadata = {
-  title: 'Ecology MCQ for NEET 2025 | Free Practice Questions',
+  title: 'Ecology MCQ for NEET 2026 | Free Practice Questions',
   description:
     'Practice 500+ free Ecology MCQs for NEET. Ecosystem, biodiversity, environmental issues, population ecology questions. NCERT-based with detailed explanations.',
   keywords: [
@@ -52,7 +52,7 @@ export default function EcologyPage() {
       <TopicLandingPage
         topic="Ecology"
         topicSlug="ecology"
-        title="Ecology MCQ for NEET 2025"
+        title="Ecology MCQ for NEET 2026"
         description="Master Ecology with 500+ free MCQs covering organisms and populations, ecosystem, biodiversity, and environmental issues for NEET preparation."
         questionCount={500}
         chapters={[

@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import { TopicLandingPage } from '@/components/mcq/TopicLandingPage'
 
 export const metadata: Metadata = {
-  title: 'Reproduction MCQ for NEET 2025 | Free Practice Questions',
+  title: 'Reproduction MCQ for NEET 2026 | Free Practice Questions',
   description:
     'Practice 550+ free Reproduction MCQs for NEET. Human reproduction, reproductive health, plant reproduction questions. NCERT-based with detailed explanations.',
   keywords: [
@@ -52,7 +52,7 @@ export default function ReproductionPage() {
       <TopicLandingPage
         topic="Reproduction"
         topicSlug="reproduction"
-        title="Reproduction MCQ for NEET 2025"
+        title="Reproduction MCQ for NEET 2026"
         description="Master Reproduction with 550+ free MCQs covering sexual reproduction in flowering plants, human reproduction, and reproductive health for NEET."
         questionCount={550}
         chapters={[
