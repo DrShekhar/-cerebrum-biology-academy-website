@@ -1,0 +1,30 @@
+name: Claude Issue Triage
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  triage:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      contents: read
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Triage with Claude
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          model: claude-sonnet-4-20250514
+          timeout_minutes: 10
+          prompt: |
+            Analyze this new issue and:
+            1. Add appropriate labels (bug, enhancement, question, documentation, mcq-tool, lms, etc.)
+            2. Add a brief helpful comment acknowledging the issue
+            3. If it's a bug, ask for reproduction steps if missing
+            4. If it's a feature request, acknowledge and note if it aligns with the educational platform goals
+
+            Be friendly and helpful. This is for a NEET Biology education platform.

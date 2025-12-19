@@ -1,0 +1,52 @@
+name: Claude Code Review
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  issue_comment:
+    types: [created]
+  issues:
+    types: [opened, labeled]
+
+# Only allow one Claude run per PR at a time
+concurrency:
+  group: claude-${{ github.event.pull_request.number || github.event.issue.number }}
+  cancel-in-progress: true
+
+jobs:
+  claude-review:
+    # Run on PR comments with @claude mention, new PRs, or issues assigned to claude
+    if: |
+      (github.event_name == 'pull_request') ||
+      (github.event_name == 'issue_comment' && contains(github.event.comment.body, '@claude')) ||
+      (github.event_name == 'issues' && contains(github.event.issue.labels.*.name, 'claude'))
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run Claude Code Review
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          model: claude-sonnet-4-20250514
+          timeout_minutes: 30
+          # Custom prompt for code review
+          prompt: |
+            You are reviewing code for Cerebrum Biology Academy, a Next.js 15 educational platform.
+
+            Review Guidelines:
+            1. Check for TypeScript type safety
+            2. Verify Prisma/Supabase query patterns
+            3. Check for security issues (SQL injection, XSS, etc.)
+            4. Verify Next.js App Router best practices
+            5. Check for performance issues
+            6. Ensure proper error handling
+
+            Be concise and actionable in your feedback.
