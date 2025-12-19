@@ -58,6 +58,11 @@ const HomeFAQSection = dynamic(
   { loading: () => <LoadingSkeleton height="h-96" /> }
 )
 
+const MCQPromoBanner = dynamic(
+  () => import('@/components/home/MCQPromoBanner').then((mod) => mod.MCQPromoBanner),
+  { loading: () => <LoadingSkeleton height="h-64" /> }
+)
+
 const EEATSignals = dynamic(
   () => import('@/components/seo/EEATSignals').then((mod) => mod.EEATSignals),
   { loading: () => <LoadingSkeleton height="h-48" /> }
@@ -104,6 +109,9 @@ export default function Home() {
 
       {/* 8. FAQ Section */}
       <HomeFAQSection />
+
+      {/* 8.5 MCQ Practice Tool Promotion */}
+      <MCQPromoBanner />
 
       {/* 9. Locations Section */}
       <LocationsSection />

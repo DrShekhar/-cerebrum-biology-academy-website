@@ -83,6 +83,7 @@ export const Footer = memo(function Footer() {
     { name: 'Online Live Classes', href: '/services/online-classes' },
     { name: 'Classroom Programs', href: '/services/classroom' },
     { name: 'NEET Mock Tests', href: '/mock-tests' },
+    { name: 'Free Biology MCQ Practice', href: '/neet-biology-mcq' },
     { name: 'Study Materials (LMS)', href: '/tests' },
     { name: 'Free Resources', href: '/free-resources' },
     { name: 'Ceri AI', href: '/ai-education-demo' },

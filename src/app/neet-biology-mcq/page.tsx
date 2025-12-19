@@ -594,30 +594,6 @@ export default function NEETBiologyMCQPage() {
     handleResetQuiz()
   }
 
-  // Schema for SEO
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'How many questions are asked from Biology in NEET?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'NEET has 90 questions from Biology (45 from Botany and 45 from Zoology). Biology carries 360 marks out of 720 total marks.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Is this MCQ practice free and unlimited?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes! Our NEET Biology MCQ practice is completely free with unlimited questions. Practice as much as you want with PYQs and topic-wise questions.',
-        },
-      },
-    ],
-  }
-
   if (isLoading) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-parchment via-sage-50/30 to-stone-50 flex items-center justify-center">
@@ -638,11 +614,6 @@ export default function NEETBiologyMCQPage() {
   return (
     <ProtectedContent>
       <div className="min-h-screen bg-gradient-to-br from-parchment via-sage-50/30 to-stone-50">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-        />
-
         {/* Breadcrumb - Botanical Scholar */}
         <nav className="bg-white/90 backdrop-blur-md border-b border-stone-200/50 sticky top-0 z-40">
           <div className="max-w-7xl mx-auto px-4 py-4">

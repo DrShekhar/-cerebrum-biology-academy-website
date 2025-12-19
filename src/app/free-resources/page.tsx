@@ -1,7 +1,8 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
-import { Loader2, BookOpen, AlertCircle } from 'lucide-react'
+import { Loader2, BookOpen, AlertCircle, Target, FileText, GraduationCap } from 'lucide-react'
+import Link from 'next/link'
 import ResourceCard from '@/components/free-resources/ResourceCard'
 import ResourceFilter from '@/components/free-resources/ResourceFilter'
 import AnnouncementBanner from '@/components/free-resources/AnnouncementBanner'
@@ -114,6 +115,12 @@ export default function FreeResourcesPage() {
                   Access free study materials, timetables, announcements, and more. No login
                   required!
                 </p>
+                {/* MCQ Tool Buttons - Loading state */}
+                <div className="flex flex-wrap justify-center gap-3">
+                  <div className="bg-white/20 px-5 py-3 rounded-xl w-40 h-12 animate-pulse" />
+                  <div className="bg-white/10 px-5 py-3 rounded-xl w-40 h-12 animate-pulse" />
+                  <div className="bg-white/10 px-5 py-3 rounded-xl w-32 h-12 animate-pulse" />
+                </div>
               </div>
             </div>
           </div>
@@ -141,6 +148,31 @@ export default function FreeResourcesPage() {
               <p className="text-lg text-green-100 mb-8">
                 Access free study materials, timetables, announcements, and more. No login required!
               </p>
+
+              {/* MCQ Tool Buttons */}
+              <div className="flex flex-wrap justify-center gap-3">
+                <Link
+                  href="/neet-biology-mcq"
+                  className="inline-flex items-center gap-2 bg-white text-green-700 px-5 py-3 rounded-xl font-semibold hover:bg-green-50 hover:scale-[1.02] transition-all shadow-lg"
+                >
+                  <Target className="w-5 h-5" />
+                  Try Free MCQ Tool
+                </Link>
+                <Link
+                  href="/neet-biology-mcq?isNcertBased=true"
+                  className="inline-flex items-center gap-2 bg-green-500/20 backdrop-blur-sm text-white px-5 py-3 rounded-xl font-semibold hover:bg-green-500/30 hover:scale-[1.02] transition-all border border-white/20"
+                >
+                  <BookOpen className="w-5 h-5" />
+                  NCERT Based MCQs
+                </Link>
+                <Link
+                  href="/neet-biology-mcq?isPYQOnly=true"
+                  className="inline-flex items-center gap-2 bg-green-500/20 backdrop-blur-sm text-white px-5 py-3 rounded-xl font-semibold hover:bg-green-500/30 hover:scale-[1.02] transition-all border border-white/20"
+                >
+                  <FileText className="w-5 h-5" />
+                  NEET PYQs
+                </Link>
+              </div>
             </div>
           </div>
         </div>
